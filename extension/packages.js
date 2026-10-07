@@ -457,7 +457,7 @@ export async function mergeSessions({ pkgId, subject, gradeNum, driveLink, sessi
   pkg.built = new Date().toISOString();
   let added = 0, replaced = 0;
   for (const l of sessions) {
-    const i = pkg.lessons.findIndex((x) => x.lesson === l.lesson && x.title === l.title);
+    const i = pkg.lessons.findIndex((x) => (x.unit || '') === (l.unit || '') && x.lesson === l.lesson && x.title === l.title);
     if (i >= 0) { l.id = pkg.lessons[i].id; pkg.lessons[i] = l; replaced++; } else { pkg.lessons.push(l); added++; }
   }
   await installPackage(pkg);

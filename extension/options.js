@@ -649,7 +649,7 @@ VIEWS.create = () => {
     if (!sessions.length) {
       $('cPrev').innerHTML = `<div class="empty">${text.trim() ? '<b>لم أجد حصصًا</b>تأكد أن أسماء البنود (المخرجات، الاستراتيجيات…) كلٌّ في سطر مستقل.' : 'اكتب أو الصق النص لتظهر المعاينة هنا.'}</div>`;
     } else {
-      const replaced = t.existing ? sessions.filter((s) => (t.existing.lessons || []).some((x) => x.lesson === s.lesson && x.title === s.title)).length : 0;
+      const replaced = t.existing ? sessions.filter((s) => (t.existing.lessons || []).some((x) => (x.unit || '') === (s.unit || '') && x.lesson === s.lesson && x.title === s.title)).length : 0;
       const groups = [];
       sessions.forEach((s) => { const k = groupKey(s); let g = groups.find((x) => x.k === k); if (!g) { g = { k, unit: s.unit, lesson: s.lesson, list: [] }; groups.push(g); } g.list.push(s); });
       $('cPrev').innerHTML = `<div class="pv-sum">وُجدت ${sessionsWord(sessions.length)} في ${groups.length === 2 ? 'درسين' : lessonsWord(groups.length)}${replaced ? ` — ${toAr(replaced)} منها ستستبدل حصصًا موجودة` : ''}</div>`
@@ -733,7 +733,7 @@ VIEWS.create = () => {
     if (!t.subject) { $('cSubject').focus(); toast('اكتب اسم المادة أولًا'); return; }
     const l = blankLesson('', 'الدرس الأول', 'الحصة الأولى');
     const r = await write(() => mergeSessions({ pkgId: t.existing && t.existing.id, subject: t.subject, gradeNum: t.gn, driveLink: $('cDrive').value.trim(), sessions: [l] }));
-    const saved = r.pkg.lessons.find((x) => x.lesson === l.lesson && x.title === l.title) || l;
+    const saved = r.pkg.lessons.find((x) => (x.unit || '') === (l.unit || '') && x.lesson === l.lesson && x.title === l.title) || l;
     go('edit', r.pkg.id, saved.id);
   };
   renderTarget();

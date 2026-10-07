@@ -13,7 +13,7 @@ const ORD_ANY = '(?:الأول[ىى]?|الاول[ىى]?|الأولى|الثان�
 const deDia = (s) => String(s || '').replace(/[ً-ٰٟـ]/g, '');
 const normA = (s) => deDia(s).replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه').toLowerCase();
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-const inline = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/__(.+?)__/g, '<strong>$1</strong>');
+const inline = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/(?<!_)__(?!_)(.+?)(?<!_)__(?!_)/g, '<strong>$1</strong>');   // «___» فراغ للإكمال لا عريض
 const bare = (s) => String(s).replace(/^\s*([-*•▪◦·]|\d+[.)-]|[٠-٩]+[.)-])\s*/, '').replace(/\*\*|__/g, '').replace(/[.。:：]\s*$/, '').trim();
 
 function toHtml(lines) {
@@ -47,7 +47,7 @@ export function sectionOf(t, loose = false) {
 
 // ---------- مطابقة الاستراتيجيات والمصادر بقوائم نور ----------
 const STRAT_ALIAS = [
-  [/حل المشكلات|problem.?solv/i, 'التعلم المبني على حل المشكلات'], [/المشاريع|project/i, 'التعلم المبني على المشاريع'],
+  [/حل المشكلات|problem.?solv|problem.?based|\bPBL\b/i, 'التعلم المبني على حل المشكلات'], [/المشاريع|project/i, 'التعلم المبني على المشاريع'],
   [/اللعب|الألعاب|العاب|game|play/i, 'التعلم المبني على اللعب'], [/النمذجة|model/i, 'التعلم بالنمذجة'],
   [/الاكتشاف|الاستكشاف|discover|inquiry/i, 'التعلم بالاكتشاف'], [/التعاوني|تعاوني|المجموعات|cooperat|group work/i, 'التعلم التعاوني'],
   [/التشاركي|تشاركي|الأقران|pair|peer|collaborat/i, 'التعلم التشاركي'], [/الذاتي|ذاتي|self/i, 'التعلم الذاتي'],
@@ -82,11 +82,11 @@ export function mapStrategies(items) {
     if (OTHER_RE.test(raw)) { const x = raw.replace(OTHER_RE, '').trim(); if (x && !other.includes(x)) other.push(x); continue; }
     let y = deDia(raw).trim();
     const hits = [];
-    for (const [re, v] of STRAT_ALIAS) if (re.test(y) && !hits.includes(v)) { hits.push(v); y = y.replace(re, ' '); }
+    for (const [re, v] of STRAT_ALIAS) if (re.test(y) && !hits.includes(v)) { hits.push(v); y = y.replace(new RegExp('[^\\s،,]*(?:' + re.source + ')[^\\s،,]*', re.flags), ' '); }   // الكلمة كاملة: «modelling» «Game-based»
     hits.forEach((h) => { if (!strategies.includes(h)) strategies.push(h); });
     // ما تبقى من العبارة (مثل «الحوار والمناقشة») يُكتب في خانة «أخرى»
     // (حدود الكلمات \b لا تعمل مع العربية في JS، لذا نستخدم المسافات)
-    const rest = (' ' + y + ' ').replace(/\s(التعلم|المبني على|المبني|learning|based|on)(?=\s)/gi, ' ')
+    const rest = (' ' + y + ' ').replace(/\s(التعلم|المبني على|المبني|learning|based|on|by|through|classroom)(?=\s)/gi, ' ')
       .replace(/\s+/g, ' ').trim().replace(/^و(?=\S)/, '').replace(/^[\s,،-]+|[\s,،و-]+$/g, '').trim();
     if (!hits.length) { if (raw.trim() && !other.includes(raw.trim())) other.push(raw.trim()); }
     else if (rest.length > 3 && /[؀-ۿa-z]{3}/i.test(rest) && !other.includes(rest)) other.push(rest);
@@ -123,6 +123,14 @@ const RE_SESSION_PLAIN = new RegExp('^(?:الحصة\\s+' + ORD_ANY + '|(?:sessio
 const RE_ORD_ONLY = new RegExp('^' + ORD_ANY + '$');
 // عنوان صريح بلا ترتيب: «## الدرس: الموقع ومظاهر السطح» · «## الحصة: الأولى» · «# الوحدة: عمان»
 const RE_MARK = /^(الوحدة|الدرس|الحصة|unit|lesson|session)\s*[:：]\s*(.*)$/i;
+// تسمية ثم قيمة: «عنوان الدرس» (والقيمة في السطر التالي) أو «عنوان الدرس: …» — كما في مذكرات التحضير المصدّرة من نور
+const RE_LABEL = /^(?:عنوان|اسم)\s+(الوحدة|الدرس|الحصة)\s*(?:[:：\-–]\s*(.*))?$/;
+// أسماء بنود نور الطويلة كما هي (تتجاوز حد الـ40 حرفًا للعناوين)
+const RE_NOOR_LONG = /^(ملاحظات ضمن خطة الدراسة|التهيئة\s*\/|إجراءات سير الدرس|اجراءات سير الدرس)/;
+// «Outcome 1: …» «المخرج 2: …» — بند مرقّم داخل قسم، لا عنوان قسم
+const RE_NUMBERED_ITEM = /^[\p{L}\s]+?\s*[\d٠-٩]+\s*[:：]/u;
+// داخل «سير الدرس»: «- Strategy: …» «الاستراتيجية: …» تفصيل نشاط، لا بند الاستراتيجيات
+const RE_ACTIVITY_DETAIL = /^(?:strategy|resource|material|الاستراتيجية|الإستراتيجية|استراتيجية|إستراتيجية|الوسيلة|المصدر)\s*[:：]/i;
 
 // هل يُقرأ هذا السطر عنوانًا (وحدة/درس/حصة/بند)؟ — من يولّد نصًا يسبق سطور المحتوى بـ«> » إن كانت كذلك
 export function isStructural(line) {
@@ -161,9 +169,32 @@ export function parsePlanText(text, opts = {}) {
     if (m[2] && m[2].trim()) cur.sec[sec].push(m[2].trim());
   };
 
+  let pendingLabel = null;   // «عنوان الدرس» في سطر وقيمته في السطر التالي
+  const setLabel = (kind, val) => {
+    cur = null; sec = null;
+    if (kind === 'الوحدة') { unit = val; return; }
+    lesson = val;
+    // اسم درس نور الكامل «Unit1: It's a happy day!: Lesson1» ← الوحدة ما قبل النقطتين الأخيرتين
+    const cut = val.lastIndexOf(':');
+    if (cut > 0 && val.slice(0, cut).trim()) unit = val.slice(0, cut).trim();
+  };
   for (const raw of lines) {
     const line = raw.trim();
     if (!line || /^[-=_*]{3,}$/.test(line)) continue;
+    if (pendingLabel) {
+      const kind = pendingLabel; pendingLabel = null;
+      if (kind !== 'الحصة') { setLabel(kind, line.replace(/^#+\s*/, '').trim()); continue; }
+      if (cur && !sec) continue;   // عنوان الحصة (موضوعها) لا يقابله بند في نور
+    }
+    {
+      const lb = bare(line.replace(/^#+\s*/, '')).replace(/^\*+|\*+$/g, '').trim().match(RE_LABEL);
+      if (lb) {
+        const val = (lb[2] || '').trim();
+        if (lb[1] === 'الحصة') { if (!val) pendingLabel = 'الحصة'; continue; }
+        if (val) setLabel(lb[1], val); else pendingLabel = lb[1];
+        continue;
+      }
+    }
     // «> نص»: محتوى دائمًا (لا يُقرأ عنوانًا حتى لو بدأ باسم بند)
     if (line.startsWith('>')) { if (cur && sec) cur.sec[sec].push(line.replace(/^>\s?/, '')); continue; }
     const md = line.match(/^#{1,6}\s*(.+)$/);
@@ -186,9 +217,12 @@ export function parsePlanText(text, opts = {}) {
     if (short && (md ? RE_SESSION : RE_SESSION_PLAIN).test(head) && (md || head.length <= 100)) { startSession(head); continue; }
 
     // عنوان قسم: بعلامة # أو سطر قصير يطابق اسم قسم معروف (مثل «المخرجات:»)
-    let k = md ? sectionOf(head, true) : head.length <= 40 ? sectionOf(head) : null;
+    // «- Activities: …» «- Strategy: …» نقطة داخل بند فيها تسمية ونص: محتوى البند، لا بند جديد
+    const bulletPair = /^\s*[-*•▪◦·]\s*\S/.test(line) && !/^\*\*/.test(line) && (/[:：]\s*\S/.test(head) || /[.!?؟]\s*$/.test(line));   // أو جملة «- Activities and days of the week.»
+    const asContent = !md && cur && sec && (RE_NUMBERED_ITEM.test(head) || bulletPair || (sec === 'procedures' && RE_ACTIVITY_DETAIL.test(head)));
+    let k = asContent ? null : md ? sectionOf(head, true) : head.length <= 40 || (head.length <= 90 && RE_NOOR_LONG.test(head)) ? sectionOf(head) : null;
     // «الاستراتيجيات: العصف الذهني، …» — اسم القسم ثم المحتوى في نفس السطر
-    if (!k && /[:：]/.test(head)) { const pre = head.split(/[:：]/)[0]; if (pre.length <= 30) k = sectionOf(pre); }
+    if (!k && !asContent && /[:：]/.test(head)) { const pre = head.split(/[:：]/)[0]; if (pre.length <= 30) k = sectionOf(pre); }
     if (k) {
       if (!cur) { if (!lesson && !unit) lesson = 'الدرس'; cur = newSession('الحصة الأولى', true); }
       sec = k; cur.sec[k] = cur.sec[k] || [];
