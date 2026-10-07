@@ -4,7 +4,7 @@
 
 | المجلد | ما هو | أين يعمل |
 |---|---|---|
-| `site/` | موقع المعلمين ولوحة الإدارة | استضافة مجانية (Netlify) |
+| `site/` | موقع المعلمين ولوحة الإدارة | GitHub Pages (مجاني، يُنشر تلقائيًا) |
 | `site/supabase/schema.sql` | قاعدة البيانات وقواعد الصلاحيات | Supabase |
 | `extension/` | إضافة «حاضر» نسخة الخدمة | متجر كروم |
 | `tests/` | اختبارات (اختيارية) | حاسوبك |
@@ -31,15 +31,21 @@
 
    > لا تضع مفتاح **service_role** في الموقع أو الإضافة أبدًا. مفتاح anon عام بطبيعته، والحماية في قواعد الصلاحيات.
 
-4. من **Authentication ← URL Configuration**: اكتب رابط موقعك في **Site URL** (بعد الخطوة ٢)، وأضفه في **Redirect URLs**.
+4. من **Authentication ← URL Configuration**: اكتب رابط موقعك `https://afuq-edu.github.io/afaq-subscribe/` في **Site URL**، وأضفه في **Redirect URLs**.
 5. تأكيد البريد: من **Authentication ← Providers ← Email** يمكنك إبقاء **Confirm email** مفعّلًا (أكثر أمانًا) أو إيقافه (تسجيل أسرع).
 
-## ٢. الموقع (Netlify)
+## ٢. الموقع (GitHub Pages)
 
-1. افتح `site/config.js` واكتب فيه `SUPABASE_URL` و`SUPABASE_ANON_KEY`. اترك `EXTENSION_ID` الآن.
-2. ادخل app.netlify.com ← **Add new site ← Deploy manually**، واسحب مجلد `site` كاملًا إلى الصفحة.
-3. يعطيك Netlify رابطًا مثل `https://afaq-xxxx.netlify.app`. يمكنك تغييره من **Site configuration ← Change site name**، أو ربط نطاقك الخاص.
-4. ارجع إلى Supabase (الخطوة ١-٤) واكتب هذا الرابط.
+الموقع منشور من هذا المستودع على: **https://afuq-edu.github.io/afaq-subscribe/**
+ولوحة الإدارة على: **https://afuq-edu.github.io/afaq-subscribe/admin.html**
+
+كل تعديل يُحفظ في مجلد `site` يُنشر تلقائيًا خلال دقيقة أو دقيقتين (من تبويب **Actions** في المستودع ترى حالة النشر).
+
+1. افتح في GitHub الملف `site/config.js` ← اضغط أيقونة القلم ✏️ (Edit).
+2. اكتب فيه `SUPABASE_URL` و`SUPABASE_ANON_KEY` اللذين نسختهما من Supabase. اترك `EXTENSION_ID` الآن.
+3. اضغط **Commit changes**. بعد دقيقتين افتح رابط الموقع: يجب أن تختفي رسالة «يحتاج ربطه بقاعدة البيانات» وتظهر الباقات.
+
+> إن نُشر الموقع أول مرة في مستودع جديد: من **Settings ← Pages** اختر **Source: GitHub Actions** (مرة واحدة فقط).
 
 ## ٣. اجعل نفسك مديرًا
 
@@ -55,14 +61,14 @@
 
 ## ٤. الإضافة (متجر كروم)
 
-1. افتح `extension/afaq-config.js` واكتب فيه القيم نفسها: `SUPABASE_URL` و`SUPABASE_ANON_KEY`، ورابط موقعك في `SITE_URL`.
-2. افتح `extension/manifest.json`، وفي `externally_connectable` استبدل `https://YOUR-SITE.netlify.app/*` برابط موقعك، واحذف سطر `http://localhost/*`. هذا يضمن ألا يكلّم الإضافةَ إلا موقعك.
-3. **للتجربة قبل المتجر:** `chrome://extensions` ← فعّل «وضع المطوّر» ← «تحميل إضافة غير مضغوطة» ← اختر مجلد `extension`. انسخ **المعرّف** الظاهر في بطاقتها إلى `EXTENSION_ID` في `site/config.js`، وأعد نشر الموقع.
+1. افتح `extension/afaq-config.js` واكتب فيه القيم نفسها: `SUPABASE_URL` و`SUPABASE_ANON_KEY` (رابط الموقع `SITE_URL` مكتوب فيه مسبقًا).
+2. ملف `extension/manifest.json` مضبوط مسبقًا ليقبل رسائل موقعك فقط (`https://afuq-edu.github.io/afaq-subscribe/*`)، فلا تحتاج تعديله.
+3. **للتجربة قبل المتجر:** `chrome://extensions` ← فعّل «وضع المطوّر» ← «تحميل إضافة غير مضغوطة» ← اختر مجلد `extension`. انسخ **المعرّف** الظاهر في بطاقتها إلى `EXTENSION_ID` في `site/config.js`، واحفظ (Commit) فيُعاد نشر الموقع تلقائيًا.
 4. **النشر:** أنشئ حساب مطوّر في متجر كروم (Chrome Web Store Developer Dashboard، برسوم تسجيل لمرة واحدة)، ثم اضغط مجلد `extension` في ملف zip وارفعه.
    - **Visibility:** «Unlisted» (لا تظهر في البحث، تُثبَّت بالرابط فقط) أو «Public».
    - **Privacy policy:** `رابط-موقعك/privacy.html`.
    - **تبرير الصلاحيات:** الإضافة تعبّئ نموذج «إضافة تحضير» في `lms.moe.gov.om` وتجلب محتوى الحصة من خادم المنصة.
-5. بعد قبولها: انسخ **معرّف الإضافة في المتجر** (32 حرفًا في رابط صفحتها) إلى `EXTENSION_ID` في `site/config.js` وأعد نشر الموقع، واكتب رابط صفحتها في المتجر في لوحة الإدارة ← الإعدادات.
+5. بعد قبولها: انسخ **معرّف الإضافة في المتجر** (32 حرفًا في رابط صفحتها) إلى `EXTENSION_ID` في `site/config.js` واحفظه (يُنشر تلقائيًا)، واكتب رابط صفحتها في المتجر في لوحة الإدارة ← الإعدادات.
 
 > المعلم لا يحصل على أي ملف: يثبّت الإضافة من المتجر بضغطة، والإضافة فارغة. المواد تصلها من اشتراكه فقط، ومحتوى كل حصة يُجلب لحظة تعبئتها ولا يُخزَّن فيها.
 
