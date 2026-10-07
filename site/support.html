@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدعم — منصة أفق التعليمية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="wrap" style="max-width:760px;padding:48px 20px 72px">
+  <a href="index.html" class="small">العودة إلى الموقع</a>
+  <h1 style="margin:14px 0 12px;font-size:34px">الدعم والمساعدة</h1>
+  <p class="muted" style="margin-bottom:24px">لأي سؤال عن اشتراكك أو إضافة «حاضر» تواصل معنا، ونرد عليك في أقرب وقت.</p>
+  <p id="contact" style="margin-bottom:28px"><a class="btn primary" href="index.html#dashboard">حسابي في منصة أفق</a></p>
+  <div style="display:grid;gap:18px">
+    <section><h3>كيف أشترك؟</h3><p class="muted">أنشئ حسابًا في الموقع، واختر الباقات والنوع (فصلي أو سنوي)، ثم أرسل الطلب عبر واتساب. يصلك رمز تفعيل باسمك، فتكتبه في حسابك.</p></section>
+    <section><h3>كيف أربط إضافة «حاضر» بحسابي؟</h3><p class="muted">ثبّت الإضافة في كروم، ثم سجّل الدخول في الموقع واضغط «اربط الإضافة بحسابي» من لوحتك. تصل مواد اشتراكك إلى الإضافة تلقائيًا.</p></section>
+    <section><h3>الإضافة لا تعرض موادي</h3><p class="muted">تأكد أن اشتراكك فعّال في لوحتك، ثم اضغط «حدّث المواد». إن ظهرت «فُصلت الإضافة» فاربطها من جديد.</p></section>
+    <section><h3>كم جهازًا أستطيع ربطه؟</h3><p class="muted">العدد مكتوب في لوحتك تحت «الأجهزة». عند ربط جهاز زائد يُفصل أقدمها تلقائيًا، ويمكنك فصل أي جهاز بنفسك.</p></section>
+    <section><h3>نسيت كلمة المرور</h3><p class="muted">من صفحة الدخول اضغط «نسيت كلمة المرور؟» واكتب بريدك، فيصلك رابط لتعيينها.</p></section>
+    <section><h3>الخصوصية</h3><p class="muted">اقرأ <a href="privacy.html">سياسة الخصوصية</a>.</p></section>
+  </div>
+</main>
+<script src="config.js"></script>
+<script>
+  // زر واتساب من إعدادات لوحة الإدارة (إن كُتب الرقم)
+  (async () => {
+    try {
+      const c = window.AFAQ_CONFIG;
+      const r = await fetch(c.SUPABASE_URL + '/rest/v1/settings?key=eq.whatsapp&select=value', { headers: { apikey: c.SUPABASE_ANON_KEY } });
+      const n = String(((await r.json())[0] || {}).value || '').replace(/[^\d]/g, '');
+      if (!n) return;
+      const a = document.createElement('a');
+      a.className = 'btn'; a.style.marginInlineStart = '8px'; a.target = '_blank'; a.rel = 'noopener';
+      a.href = 'https://wa.me/' + n + '?text=' + encodeURIComponent('السلام عليكم، أحتاج مساعدة في منصة أفق التعليمية.');
+      a.textContent = 'تواصل عبر واتساب';
+      document.getElementById('contact').appendChild(a);
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
