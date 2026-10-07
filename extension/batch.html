@@ -21,6 +21,10 @@
   .term-sel { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin: 4px 2px 10px; padding: 10px 12px; border-radius: 12px; background: var(--brand-soft); }
   .term-sel #termInfo { font-size: 12.5px; font-weight: 700; opacity: .85; }
   .tools { display: flex; gap: 12px; font-size: 12px; margin: 2px 2px 8px; flex-wrap: wrap; }
+  .tools.quick { align-items: center; gap: 10px; }
+  .tools.quick .input { width: auto; padding: 4px 8px; font-size: 12.5px; }
+  .tools.quick label { display: inline-flex; gap: 6px; align-items: center; font-weight: 700; }
+  .row .t small .srcf { color: var(--brand); } .row .t small .srcm { color: var(--warn); }
 
   /* الحصة الحالية */
   .now { border: 2px solid var(--brand); position: sticky; top: 56px; z-index: 4; box-shadow: 0 10px 26px -14px rgba(0,0,0,.45); }
@@ -107,12 +111,14 @@
     <div class="hint">حدّد الحصص بالترتيب الذي ستحضّرها به — من درس واحد أو عدة دروس. بعد كل حصة أنتقل مباشرة إلى التالية؛ وحين تفتح نموذجها في نور أتحقق من التوافق وأعبّئها.</div>
     <div class="term-sel"><button class="btn sm primary" id="selTerm" type="button">تحديد كل حصص الفصل</button><span id="termInfo"></span></div>
     <div class="tools"><button class="lnk" id="selAll">تحديد غير المنجزة في الدروس المفتوحة</button><button class="lnk muted" id="selNone">إلغاء التحديد</button><button class="lnk muted" id="expandAll">عرض كل الدروس</button></div>
+    <div class="tools quick"><select class="input" id="unitPick" aria-label="تحديد وحدة"></select><label>حصص أسبوع: <input type="date" class="input" id="weekPick" aria-label="أي يوم من الأسبوع"></label></div>
     <div id="list"></div>
   </section>
 
   <section class="card">
     <h2><span class="n">٢</span> تواريخ النشر</h2>
     <div class="hint">اختر أيام حصص هذه المادة وتاريخ أول حصة — ولو تاريخًا سابقًا — فتتبعه الحصص الأخرى بالتدريج على أيام حصصك وتُتخطّى التواريخ المستخدمة. وإن غيّرت تاريخ أي حصة تبعتها الحصص التي بعدها.</div>
+    <label class="switch" id="fileRow" hidden><input type="checkbox" id="useFile" checked> استعمل تواريخ النشر المكتوبة في ملف المادة <small class="hint" id="fileN"></small> — ما بلا تاريخ يتبع ما قبله، والتاريخ الواقع في إجازة أو المستعمل يُنقل تلقائيًا</label>
     <div class="days" id="days"></div>
     <div class="line"><label for="start">تاريخ أول حصة</label><input type="date" class="input" id="start" style="width:auto"><span id="startDay" style="font-weight:800"></span></div>
   </section>

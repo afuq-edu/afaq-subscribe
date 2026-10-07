@@ -4,6 +4,7 @@
 // لا يُنفَّذ أي شيء من الملف: الصفحة تُقرأ مستندًا خاملًا (DOMParser)، وبيانات الشيفرة يقرؤها قارئ نصي
 // يفهم الكائنات والمصفوفات والنصوص فقط (بلا eval). الناتج نص بصيغة «حاضر» يمر بمحلل التحضير نفسه.
 import { parsePlanBest, planScore, isStructural, isSessionLine, sectionOf, RE_UNIT, RE_LESSON, RE_SESSION } from './parse.js';
+import { parseAnyDate, weekNo } from './dates.js';
 
 const ORD_F = ['الأولى', 'الثانية', 'الثالثة', 'الرابعة', 'الخامسة', 'السادسة', 'السابعة', 'الثامنة', 'التاسعة', 'العاشرة'];
 const deDia = (s) => String(s || '').replace(/[ً-ٰٟـ]/g, '');
@@ -490,6 +491,8 @@ function candidates(doc) {
 // ===================== ٤) من البيانات إلى دروس وحصص =====================
 const normKey = (k) => normA(String(k).replace(/([a-z])([A-Z])/g, '$1 $2').replace(/[_\-.]+/g, ' ')).replace(/\s+/g, ' ').trim();
 const FIELD_KEYS = [
+  ['pubdate', /^(publish(?:ed|ing)? ?(?:date|on|at)?|pub ?date|publication ?date|date ?(?:of ?)?publish(?:ing)?|تاريخ النشر|موعد النشر|يوم النشر|تاريخ الحصه|تاريخ الدرس|تاريخ التنفيذ|تاريخ التطبيق|النشر|نشر|بتاريخ|تاريخ|التاريخ|date|day|on)$/],
+  ['week', /^(week ?(?:no|number|num)?|الاسبوع|اسبوع|رقم الاسبوع)$/],
   ['formative', /formative|تكويني/],
   ['summative', /summative|closure|closing|plenary|wrap ?up|ختامي/],
   ['levels', /^(levels?|cognitive levels?|blooms?|bloom levels?|thinking levels?|المستوي|المستويات|مستوي|مستويات التفكير|المستوي المعرفي)$/],
@@ -565,12 +568,21 @@ function sessionNum(label) {
 }
 const sessionLabel = (k) => (/^(الحصة|الحصه)/.test(normA(k)) ? squash(k) : 'الحصة ' + (ORD_F[(sessionNum(k) || 1) - 1] || sessionNum(k)));
 
+const EXPLICIT_DATE = /نشر|publish|publication|حصه|درس|تنفيذ|تطبيق/;
 function fieldMap(node) {
   const best = {};
   for (const [k, v] of Object.entries(node)) {
     if (v == null || v === '' || isTitleKey(k)) continue;
     const kind = fieldKind(k);
     if (!kind) continue;
+    if (kind === 'pubdate') {
+      // نص قصير فيه تاريخ فقط؛ المفتاح الصريح («تاريخ النشر») يغلب «date» العام
+      if (typeof v === 'object' || !parseAnyDate(String(v))) continue;
+      const rank = EXPLICIT_DATE.test(normKey(k)) ? 2 : 1;
+      if (!best[kind] || rank > best[kind].len) best[kind] = { v: String(v), len: rank };
+      continue;
+    }
+    if (kind === 'week') { if (typeof v !== 'object' && String(v).trim() && !best[kind]) best[kind] = { v: String(v), len: 1 }; continue; }
     const len = flat(v).length;
     if (!best[kind] || len > best[kind].len) best[kind] = { v, len };
   }
@@ -779,6 +791,12 @@ export function mergeRecords(recs) {
     if (!g.list) return g;
     const fields = {};
     for (const kind of ORDER) {
+      if (kind === 'pubdate' || kind === 'week') {
+        // نموذج واحد للدرس: تاريخ نشره تاريخ أول حصة فيه (وأسبوعها)
+        const first = g.list.find((r) => kind in r.fields && String(r.fields[kind] || '').trim());
+        if (first) fields[kind] = String(first.fields[kind]);
+        continue;
+      }
       if (LIST_KINDS.includes(kind)) {
         const seen = [];
         g.list.forEach((r) => { if (kind in r.fields) linesOf(kind, r.fields[kind]).map(squash).forEach((l) => { if (l && !seen.includes(l)) seen.push(l); }); });
@@ -800,8 +818,9 @@ export function mergeRecords(recs) {
 }
 
 // ===================== ٥) من الحصص إلى نص «حاضر» =====================
-const ORDER = ['outcomes', 'levels', 'strategies', 'resources', 'concepts', 'intro', 'procedures', 'formative', 'summative', 'homework', 'notes'];
+const ORDER = ['pubdate', 'week', 'outcomes', 'levels', 'strategies', 'resources', 'concepts', 'intro', 'procedures', 'formative', 'summative', 'homework', 'notes'];
 const LABELS = {
+  pubdate: 'تاريخ النشر', week: 'الأسبوع',
   outcomes: 'المخرجات التعليمية', levels: 'المستوى', strategies: 'الاستراتيجيات', resources: 'المصادر التعليمية', concepts: 'المفاهيم',
   intro: 'التهيئة', procedures: 'إجراءات سير الدرس', formative: 'التقويم التكويني', summative: 'التقويم الختامي', homework: 'الواجب', notes: 'ملاحظات',
 };
@@ -883,6 +902,8 @@ export function recordsToText(recs) {
     lines.push('## ' + (r.merged ? 'الحصة: تحضير مدمج — ' + (r.merged === 1 ? 'حصة واحدة' : r.merged === 2 ? 'حصتان' : toArDigits(r.merged) + (r.merged <= 10 ? ' حصص' : ' حصة')) : sessionHeading(r.title, p)));
     for (const kind of ORDER) {
       if (!(kind in r.fields)) continue;
+      if (kind === 'pubdate') { const d = parseAnyDate(String(r.fields[kind])); if (d) lines.push('### تاريخ النشر: ' + d); continue; }
+      if (kind === 'week') { const n = weekNo(String(r.fields[kind])) ?? weekNo('الأسبوع ' + String(r.fields[kind]).trim()); if (n != null) lines.push('### الأسبوع: ' + n); continue; }
       const ls = linesOf(kind, r.fields[kind]).map(squash).filter((l) => l && !isNoise(l));
       if (!ls.length) continue;
       lines.push('### ' + LABELS[kind]);

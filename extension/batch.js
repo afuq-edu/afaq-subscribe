@@ -5,6 +5,7 @@ import {
   getPackages, getSettings, patchSettings, fillNoor, selectNoorLesson, pageContext, clickSave, pageAlerts, judgeSave, isoOf, dayLabel, DAY_NAMES,
   bestLesson, stripSessionSuffix, groupKey, lessonGroups, sessionStatus, markSaved, markSaveFailed, unsavedText, daysFor, setPkgDays, suggestDate, usedDates,
   nextSchoolDay, matchVerdict, formUrlFor, getPicks, rememberPick, kwNorm,
+  layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount,
 } from './packages.js';
 import { ic } from './icons.js';
 
@@ -81,6 +82,11 @@ async function init() {
   if (!pkg) { msg('bad', 'لا توجد تحاضير في المكتبة. أضف تحضيرًا أولًا.'); $('startBtn').disabled = true; return; }
   $('pkgName').textContent = pkg.title || [pkg.subject, pkg.grade].filter(Boolean).join(' · ');
   $('autoOpen').checked = settings.batchAutoOpen !== false;
+  // تواريخ النشر المكتوبة في ملف المادة (إن وُجدت): تُستعمل كما هي، وما بلا تاريخ يتبع ما قبله
+  $('fileRow').hidden = !hasFileDates(pkg);
+  $('useFile').checked = settings.fileDates !== false;
+  $('fileN').textContent = hasFileDates(pkg) ? `(${toAr(datedCount(pkg))} من ${toAr((pkg.lessons || []).length)} حصة لها تاريخ)` : '';
+  $('useFile').onchange = () => { if (running) return; autoDates(); };
   days = daysFor(state, settings, pkg.id);
   const c = await ctxOf(tabId);
   setNoorTitle(c.title);
@@ -92,6 +98,8 @@ async function init() {
   const fromIdx = from && groupKey(from) === startGroup ? order.indexOf(from) : -1;
   rows = order.map((l, i) => ({ lesson: l, on: groupKey(l) === startGroup && !done(l) && (fromIdx < 0 || i >= fromIdx), date: '' }));
   openGroups.add(startGroup);
+  const units = [...new Set(lessonGroups(pkg).map((g) => g.unit || ''))];
+  $('unitPick').innerHTML = '<option value="">تحديد وحدة…</option>' + units.map((u) => `<option value="${esc(kwNorm(u))}">${esc(u || 'بلا وحدة')}</option>`).join('');
   const first = rows.find((x) => x.on);
   $('start').value = suggestDate(state, settings, pkg, first ? first.lesson : null).date;
   renderDays();
@@ -119,44 +127,50 @@ function renderDays() {
 // تغيير تاريخ حصة محددة: ما بعدها يتبعها بالتدريج على أيام الحصص (حتى لو كان التاريخ سابقًا)
 // وتغيير تاريخ أول حصة = تغيير «تاريخ أول حصة» نفسه
 let startTouched = false;
+const useFileDates = () => !$('fileRow').hidden && $('useFile').checked;
+// تغيير تاريخ حصة بيدك: يثبت تاريخها (مرساة)، وما بعدها بلا تاريخ ملف يتبعها بالتدريج؛ وتغيير الأولى يغيّر «تاريخ أول حصة»
 function dateChanged(r, value) {
   if (running) return;
-  if (!value) { r.date = ''; renderList(); return; }
+  if (!value) { r.date = ''; r.fixed = ''; renderList(); return; }
   const sel = rows.filter((x) => x.on);
   const i = sel.indexOf(r);
-  if (i <= 0) { $('start').value = value; startTouched = true; autoDates(); }
-  else {
-    r.date = value;
-    const selIds = new Set(sel.map((x) => x.lesson.id));
-    const taken = new Set(Object.entries(usedDates(pkg, state)).filter(([, arr]) => arr.some((u) => !selIds.has(u.lessonId))).map(([d]) => d));
-    sel.slice(0, i + 1).forEach((x) => taken.add(x.date));
-    let cur = nextSchoolDay(value, days, false);
-    sel.slice(i + 1).forEach((x) => {
-      for (let k = 0; k < 60 && taken.has(cur); k++) cur = nextSchoolDay(cur, days, false);
-      x.date = cur; taken.add(cur);
-      cur = nextSchoolDay(cur, days, false);
-    });
-    renderList();
-  }
+  r.fixed = value;
+  if (i <= 0 && !useFileDates()) { $('start').value = value; startTouched = true; }
+  autoDates();
   const after = rows.filter((x) => x.on);
   const j = after.indexOf(r);
   if (j >= 0 && j < after.length - 1) msg('info', `تبعتها ${countWord(after.length - j - 1)} بالتدريج: من ${esc(dayLabel(after[j + 1].date))} إلى ${esc(dayLabel(after[after.length - 1].date))}.`);
 }
 
-// توزيع التواريخ على الحصص المحددة بالترتيب: أيام الحصص فقط، مع تخطي التواريخ المستخدمة لحصص أخرى
+// توزيع التواريخ على الحصص المحددة بالترتيب: تواريخ الملف كما هي (تُنقل إلى يوم الحصة التالي إن كانت إجازة أو مستعملة)،
+// وما بلا تاريخ يتبع ما قبله على أيام الحصص مع تخطي التواريخ المستخدمة لحصص أخرى
 function autoDates() {
   const sel = rows.filter((r) => r.on);
   const selIds = new Set(sel.map((r) => r.lesson.id));
-  const taken = new Set(Object.entries(usedDates(pkg, state)).filter(([, arr]) => arr.some((u) => !selIds.has(u.lessonId))).map(([d]) => d));
-  let cur = nextSchoolDay($('start').value || isoOf(new Date()), days, true);
-  sel.forEach((r) => {
-    for (let i = 0; i < 60 && taken.has(cur); i++) cur = nextSchoolDay(cur, days, false);
-    r.date = cur; taken.add(cur);
-    cur = nextSchoolDay(cur, days, false);
-  });
-  rows.filter((r) => !r.on).forEach((r) => { r.date = ''; });
+  const taken = Object.entries(usedDates(pkg, state)).filter(([, arr]) => arr.some((u) => !selIds.has(u.lessonId))).map(([d]) => d);
+  const uf = useFileDates();
+  const items = sel.map((r) => ({ r, fileDate: uf && isIso(r.lesson.pubDate) ? r.lesson.pubDate : '', fixed: r.fixed || '' }));
+  const notes = layoutDates(items, { start: $('start').value || isoOf(new Date()), days, taken, useFileDates: uf });
+  items.forEach((it) => { it.r.date = it.date; it.r.dateSrc = it.dateSrc; it.r.movedFrom = ''; });
+  notes.forEach((n) => { if (n.src === 'file') items[n.i].r.movedFrom = n.from; });
+  rows.filter((r) => !r.on).forEach((r) => { r.date = ''; r.dateSrc = ''; r.movedFrom = ''; });
   $('startDay').textContent = $('start').value ? dayLabel($('start').value) : '';
   renderList();
+}
+// الحصص التي تقع تواريخها في أسبوع تاريخٍ ما (بعد توزيع التواريخ على كل غير المنجز) — لتحديد «حصص أسبوع»
+function selectWeek(anyDay) {
+  if (running || !anyDay) return;
+  const left = rows.filter((r) => !done(r.lesson));
+  const uf = useFileDates();
+  if (!uf) { $('start').value = nextSchoolDay(weekStart(anyDay), days, true); startTouched = true; }
+  const items = left.map((r) => ({ r, fileDate: uf && isIso(r.lesson.pubDate) ? r.lesson.pubDate : '', fixed: r.fixed || '' }));
+  const taken = Object.entries(usedDates(pkg, state)).filter(([, arr]) => arr.some((u) => !left.some((x) => x.lesson.id === u.lessonId))).map(([d]) => d);
+  layoutDates(items, { start: $('start').value || isoOf(new Date()), days, taken, useFileDates: uf });
+  rows.forEach((r) => { r.on = false; });
+  items.forEach((it) => { if (inWeekOf(it.date, anyDay)) { it.r.on = true; openGroups.add(groupKey(it.r.lesson)); } });
+  autoDates();
+  const sel = rows.filter((r) => r.on);
+  msg(sel.length ? 'info' : 'warn', sel.length ? `حصص أسبوع ${esc(dayLabel(weekStart(anyDay), false))} – ${esc(dayLabel(weekEnd(anyDay), false))}: ${countWord(sel.length)} — راجعها ثم اضغط «ابدأ».` : 'لا حصص تقع في هذا الأسبوع بالتواريخ الحالية.');
 }
 
 function rowHtml(r) {
@@ -167,7 +181,7 @@ function rowHtml(r) {
   const st = stMap[r.lesson.id];
   return `<div class="row ${r.on ? 'on' : ''} ${r.lesson.id === curId ? 'cur' : ''}" data-id="${esc(r.lesson.id)}">
     <input type="checkbox" ${r.on ? 'checked' : ''} ${running ? 'disabled' : ''} aria-label="تحديد الحصة">
-    <div class="t">${esc(r.lesson.title)}${tag}${stat}${r.on && r.date ? `<small>النشر: ${esc(dayLabel(r.date))}</small>` : ''}</div>
+    <div class="t">${esc(r.lesson.title)}${tag}${stat}${r.on && r.date ? `<small>النشر: ${esc(dayLabel(r.date))}${r.dateSrc === 'file' ? ' <b class="srcf">· من الملف</b>' : ''}${r.movedFrom ? ` <b class="srcm">(كان ${esc(dayLabel(r.movedFrom, false))})</b>` : ''}</small>` : !r.on && isIso(r.lesson.pubDate) && useFileDates() ? `<small>في الملف: ${esc(dayLabel(r.lesson.pubDate, false))}</small>` : ''}</div>
     ${r.on ? `<input type="date" class="input" value="${r.date}" ${running ? 'disabled' : ''} aria-label="تاريخ النشر">` : '<span></span>'}
     <div class="st ${st ? 'show ' + st.cls : ''}">${st ? esc(st.text) : ''}</div>
   </div>`;
@@ -706,11 +720,11 @@ async function processItem(r, mode, queue) {
   for (let tries = 0; tries < 5 && !stopFlag; tries++) {
     const pb = rep.find((x) => x.key === 'publish');
     if (!pb || pb.status === 'ok' || !/من قبل|مسبق|مستخدم|مكرر/.test(pb.error || '')) break;
-    const used = new Set(queue.map((x) => x.date));
+    const used = new Set(queue.filter((x) => x !== r).map((x) => x.date));
     let cand = nextSchoolDay(r.date, days, false);
     for (let j = 0; j < 30 && used.has(cand); j++) cand = nextSchoolDay(cand, days, false);
     setSt(r, 'wait', `التاريخ ${fmtDay(r.date)} مستخدم في نور — أجرّب ${fmtDay(cand)}`);
-    r.date = cand;
+    r.date = cand; r.fixed = cand; r.dateSrc = 'fixed';
     $('nowDate').textContent = 'النشر: ' + dayLabel(r.date);
     rep = await fillNoor(tabId, pkg, r.lesson, { publishDate: r.date, skipFilled: false, noLog: true, noorTitle: c.title });
     await filled(r, rep);
@@ -881,6 +895,17 @@ function selectTerm(on) {
 $('selTerm').onclick = () => { const left = rows.filter((r) => !done(r.lesson)); selectTerm(!(left.length && left.every((r) => r.on))); };
 $('selAll').onclick = () => { if (running) return; rows.forEach((r) => { if (openGroups.has(groupKey(r.lesson))) r.on = !done(r.lesson); }); autoDates(); };
 $('selNone').onclick = () => { if (running) return; rows.forEach((r) => { r.on = false; }); autoDates(); };
+$('weekPick').onchange = () => selectWeek($('weekPick').value);
+// «تحديد وحدة»: كل غير المنجز في وحدة واحدة
+$('unitPick').onchange = () => {
+  if (running) return;
+  const u = $('unitPick').value; if (!u) return;
+  rows.forEach((r) => { r.on = kwNorm(r.lesson.unit || '') === u && !done(r.lesson); if (r.on) openGroups.add(groupKey(r.lesson)); });
+  $('unitPick').value = '';
+  autoDates();
+  const sel = rows.filter((r) => r.on);
+  msg(sel.length ? 'info' : 'warn', sel.length ? `حُدِّدت حصص الوحدة غير المنجزة: ${countWord(sel.length)}.` : 'كل حصص هذه الوحدة منجزة ✓');
+};
 $('expandAll').onclick = () => { const all = lessonGroups(pkg).map((g) => g.key); const allOpen = all.every((k) => openGroups.has(k)); all.forEach((k) => (allOpen ? openGroups.delete(k) : openGroups.add(k))); $('expandAll').textContent = allOpen ? 'عرض كل الدروس' : 'طيّ الدروس'; renderList(); };
 $('autoOpen').onchange = () => patchSettings({ batchAutoOpen: $('autoOpen').checked });
 $('startBtn').onclick = run;

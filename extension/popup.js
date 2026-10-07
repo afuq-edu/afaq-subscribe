@@ -83,7 +83,7 @@ function setSuggestedDate() {
     return;
   }
   const r = suggestDate(S.state, S.settings, S.sel.pkg, S.sel.session);
-  S.date = r.date; S.dateWhy = r.why; S.dateLast = r.last;
+  S.date = r.date; S.dateWhy = r.why; S.dateLast = r.last; S.dateFrom = r.from || '';
 }
 
 async function persistChoice() {
@@ -345,6 +345,7 @@ function renderDate() {
   }
   if (!warn && S.date && !S.dateTouched) {
     notes.push(S.dateWhy === 'same' ? 'نفس تاريخ هذه الحصة عند تعبئتها.'
+      : S.dateWhy === 'file' ? (S.dateFrom && S.dateFrom !== S.date ? `📅 تاريخ النشر من ملف المادة (${dayLabel(S.dateFrom, false)}) — نُقل إلى يوم الحصة التالي لأنه إجازة أو مستعمل.` : '📅 تاريخ النشر كما في ملف المادة.')
       : S.dateWhy === 'after' && S.dateLast ? `مقترح: اليوم الدراسي التالي بعد آخر تاريخ استخدمته (${dayLabel(S.dateLast, false)}).` : 'مقترح: أقرب يوم دراسي.');
   }
   $('dateNote').className = 'note' + (warn ? ' warn' : '');

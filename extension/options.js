@@ -7,6 +7,7 @@ import {
   NOOR_LEVELS, NOOR_STRATEGIES, NOOR_RESOURCES, GRADES, DAY_NAMES, SAMPLE_PLAN,
   parsePlanText, parsePlanBest, lessonGroups, groupKey, sessionStatus, packageProgress, driveApplies, daysFor, setPkgDays, gradeNumber, findSubjectPackage,
   getLog, clearLog, dayLabel, isoOf, parseIso, kwNorm, newId, unsavedText,
+  isIso, lintPackage, lintLevel, hasFileDates, datedCount, normalizeLesson,
 } from './packages.js';
 import { docxToText } from './docx.js';
 import { AFAQ } from './afaq-config.js';
@@ -300,6 +301,7 @@ VIEWS.pkg = (id) => {
         </div>
       </div>
     </section>
+    <section class="card" id="pLint" hidden></section>
     <div class="toolbar">
       <input class="input" id="pq" placeholder="ابحث في حصص هذه المادة…">
       <label class="switch"><input type="checkbox" id="hideSaved"> إخفاء المحفوظة</label>
@@ -374,7 +376,7 @@ VIEWS.pkg = (id) => {
           const idx = gr.sessions.indexOf(l);
           return `<div class="srow ${cls}" data-id="${esc(l.id)}">
             <span class="sd">${s.saved ? '✓' : s.filled ? '•' : toAr(idx + 1)}</span>
-            <div class="stt"><b>${esc(l.title || 'حصة')}</b><small>${esc(statusText(s))}</small></div>
+            <div class="stt"><b>${esc(l.title || 'حصة')}</b><small>${esc(statusText(s))}${isIso(l.pubDate) ? ` · <span class="fdate" title="تاريخ النشر كما في الملف">📅 ${esc(dayLabel(l.pubDate, false))}</span>` : ''}${l.week ? ` · ${esc(l.week)}` : ''}</small></div>
             <div class="sacts">
               <button class="ib" data-a="view" title="معاينة">${ic('eye', 16)}</button>
               <button class="ib" data-a="edit" title="تعديل">${ic('edit', 16)}</button>
@@ -436,9 +438,23 @@ VIEWS.pkg = (id) => {
       };
     });
   };
+  const renderLint = () => {
+    const pkg = D.packages.find((x) => x.id === p.id);
+    const box = $('pLint');
+    if (!pkg || !box) return;
+    const r = lintPackage(pkg, { days: daysFor(D.state, D.settings, pkg.id) });
+    const lv = lintLevel(r);
+    box.hidden = !r.warnings.length && !hasFileDates(pkg);
+    if (box.hidden) return;
+    const n = r.warnings.length;
+    box.innerHTML = `<div class="acts" style="align-items:center;gap:10px"><b style="margin-inline-end:auto">${ic(lv === 'ok' ? 'check' : 'help', 16)} فحص المادة: ${lv === 'ok' ? 'سليمة ✓' : `${toAr(n)} ${n === 1 ? 'ملاحظة' : n === 2 ? 'ملاحظتان' : n <= 10 ? 'ملاحظات' : 'ملاحظة'}`}${hasFileDates(pkg) ? ` · 📅 ${toAr(datedCount(pkg))} من ${toAr((pkg.lessons || []).length)} حصة لها تاريخ نشر في الملف` : ''}</b>${n ? `<button class="btn sm" id="pLintT">${(VIEWS.pkg.lintOpen ? 'إخفاء' : 'عرض')} التفاصيل</button>` : ''}</div>
+      <div class="lintlist" ${VIEWS.pkg.lintOpen ? '' : 'hidden'}>${r.warnings.map((w) => `<div class="li ${w.level}">${esc(w.text)}</div>`).join('')}</div>`;
+    const t = $('pLintT'); if (t) t.onclick = () => { VIEWS.pkg.lintOpen = !VIEWS.pkg.lintOpen; renderLint(); };
+  };
   const renderStats = () => {
     const pkg = D.packages.find((x) => x.id === p.id);
     if (!pkg || !$('pStats')) return;
+    renderLint();
     const r = packageProgress(pkg, D.state);
     $('pStats').innerHTML = `<div class="big-num">${toAr(r.saved)}<small> / ${toAr(r.total)} محفوظة</small></div>
       <div class="bar" style="margin-top:6px"><i style="width:${r.total ? r.saved / r.total * 100 : 0}%"></i><i class="f" style="width:${r.total ? r.filled / r.total * 100 : 0}%"></i></div>
@@ -503,6 +519,11 @@ VIEWS.edit = (pkgId, lessonId) => {
       <datalist id="dlU">${units.map((u) => `<option value="${esc(u)}">`).join('')}</datalist>
       <datalist id="dlL">${lessons.map((u) => `<option value="${esc(u)}">`).join('')}</datalist>
       <div class="hint" style="margin-top:6px">يتعرّف «حاضر» على الدرس المفتوح في نور من اسمه ورقمه — اكتب اسم الدرس كما في الكتاب (مثل «الدرس الثاني: …» أو «Lesson 2»).</div>
+      <div class="grid3" style="margin-top:10px">
+        <label class="f">تاريخ النشر (اختياري)<input class="input" type="date" id="eDate" value="${esc(isIso(l.pubDate) ? l.pubDate : '')}"></label>
+        <label class="f">الأسبوع (اختياري)<input class="input" id="eWeek" value="${esc(l.week || '')}" placeholder="مثال: الأسبوع 3"></label>
+        <div class="f"><span class="hint" style="margin-top:22px">يُستعمل التاريخ كما هو عند التعبئة (في «فصل كامل» و«عدة حصص»)؛ وإن تركته فارغًا يتبع الحصة التي قبله.</span></div>
+      </div>
     </section>
     <section class="card">
       ${fieldRow(1, 'المخرجات التعليمية', 'في نور تُحدَّد مربعات المخرجات كلها تلقائيًا؛ هذا النص للمرجع ويُكتب فقط إن لم توجد مربعات.', rich('e_outcomes', l.outcomes, 'مخرج في كل سطر…'))}
@@ -543,7 +564,7 @@ VIEWS.edit = (pkgId, lessonId) => {
     });
   });
   counts();
-  ['eUnit', 'eLesson', 'eTitle', 'eStratOther', 'eResOther'].forEach((k) => { $(k).oninput = mark; });
+  ['eUnit', 'eLesson', 'eTitle', 'eStratOther', 'eResOther', 'eDate', 'eWeek'].forEach((k) => { $(k).oninput = mark; $(k).onchange = mark; });
   bindRich(V(), mark);
 
   const save = async () => {
@@ -555,6 +576,9 @@ VIEWS.edit = (pkgId, lessonId) => {
       concepts: richVal('e_concepts'), intro: richVal('e_intro'), procedures: richVal('e_procedures'),
       formative: richVal('e_formative'), summative: richVal('e_summative'), notes: richVal('e_notes'),
     });
+    if ($('eDate').value) out.pubDate = $('eDate').value; else delete out.pubDate;
+    if ($('eWeek').value.trim()) out.week = $('eWeek').value.trim(); else delete out.week;
+    normalizeLesson(out);
     await write(() => saveLesson(p.id, out));
     setDirty(false);
     toast('✓ حُفظت الحصة');
@@ -575,6 +599,8 @@ const PV_FIELDS = [['outcomes', 'المخرجات'], ['levels', 'المستوى'
 const FORMAT_HELP = `# الوحدة الأولى
 ## الدرس الأول: عنوان الدرس
 ## الحصة الأولى: عنوان الحصة
+### تاريخ النشر
+12/10/2026
 ### المخرجات
 ١. أن يحدد الطالب … — المستوى: تطبيق
 ### الاستراتيجيات
@@ -616,6 +642,7 @@ VIEWS.create = () => {
       <textarea class="input plan" id="cText" placeholder="الصق هنا تحضير الوحدة أو الدرس…"></textarea>
       <details class="fmt"><summary>كيف أكتب التحضير ليُقرأ صحيحًا؟</summary>
         <p class="hint">كل عنوان في سطر مستقل (علامات # اختيارية). الوحدة ثم الدرس ثم الحصة، وتحت كل حصة أسماء البنود. في ملفات Word وHTML تُقرأ العناوين والجداول (عمود للبند وعمود للمحتوى)، وملفات التحضير التفاعلية (المدمج والمنفصل) تُقرأ من بياناتها مباشرة. التحضير المدمج (البند ثم أجزاء الحصص) يُقسَّم على الحصص تلقائيًا. ما لا يوجد في قوائم نور من الاستراتيجيات والمصادر يُكتب في «أخرى».</p>
+        <p class="hint"><b>تاريخ النشر</b> يُكتب بأي صيغة: بندًا «### تاريخ النشر» تحته التاريخ، أو في عنوان الحصة «## الحصة الأولى (12/10/2026)» أو «— تاريخ النشر: 12/10/2026»، أو في عنوان الدرس أو الوحدة (فيأخذه أول حصة بعده وتتبعه البقية)، أو عنوان أسبوع «# الأسبوع 3: 12/10/2026». الصيغ المقبولة: 12/10/2026 · 2026-10-12 · ١٢/١٠/٢٠٢٦ · 12 أكتوبر 2026 · الأحد 12/10 (السنة تُستنتج) · 20/4/1448هـ (يُحوَّل ميلاديًا). ما بلا تاريخ يتبع ما قبله على أيام الحصص.</p>
         <pre>${esc(FORMAT_HELP)}</pre></details>
     </section>
     <section class="card"><h3><span class="n">٣</span> المعاينة</h3><div id="cPrev"><div class="empty">اكتب أو الصق النص لتظهر المعاينة هنا.</div></div></section>
@@ -652,9 +679,13 @@ VIEWS.create = () => {
       const replaced = t.existing ? sessions.filter((s) => (t.existing.lessons || []).some((x) => (x.unit || '') === (s.unit || '') && x.lesson === s.lesson && x.title === s.title)).length : 0;
       const groups = [];
       sessions.forEach((s) => { const k = groupKey(s); let g = groups.find((x) => x.k === k); if (!g) { g = { k, unit: s.unit, lesson: s.lesson, list: [] }; groups.push(g); } g.list.push(s); });
-      $('cPrev').innerHTML = `<div class="pv-sum">وُجدت ${sessionsWord(sessions.length)} في ${groups.length === 2 ? 'درسين' : lessonsWord(groups.length)}${replaced ? ` — ${toAr(replaced)} منها ستستبدل حصصًا موجودة` : ''}</div>`
+      const dated = sessions.filter((s) => isIso(s.pubDate)).length;
+      const lint = lintPackage({ id: 'preview', subject: t.subject || 'x', gradeNum: t.gn || 1, lessons: sessions }, { days: t.existing ? daysFor(D.state, D.settings, t.existing.id) : D.settings.schoolDays });
+      const lw = lint.warnings.filter((w) => !['no-subject', 'no-grade'].includes(w.code));
+      $('cPrev').innerHTML = `<div class="pv-sum">وُجدت ${sessionsWord(sessions.length)} في ${groups.length === 2 ? 'درسين' : lessonsWord(groups.length)}${replaced ? ` — ${toAr(replaced)} منها ستستبدل حصصًا موجودة` : ''}${dated ? ` · 📅 ${toAr(dated)} ${dated === 1 ? 'حصة لها تاريخ نشر' : 'حصص لها تاريخ نشر'} في الملف` : ''}</div>`
+        + (lw.length ? `<div class="lintlist pv-lint">${lw.map((w) => `<div class="li ${w.level}">${esc(w.text)}</div>`).join('')}</div>` : '')
         + groups.map((g) => `<div class="pv-g"><div class="pv-gh">${g.unit ? `<small>${esc(g.unit)}</small>` : ''}${esc(g.lesson)}</div>`
-          + g.list.map((s) => `<div class="pv-s"><b>${esc(s.title)}</b>
+          + g.list.map((s) => `<div class="pv-s"><b>${esc(s.title)}</b>${isIso(s.pubDate) ? ` <span class="chip gold" title="تاريخ النشر من الملف">📅 ${esc(dayLabel(s.pubDate))}</span>` : ''}${s.week ? ` <span class="chip muted">${esc(s.week)}</span>` : ''}
             <div class="pv-f">${PV_FIELDS.map(([k, n]) => { const has = Array.isArray(s[k]) ? s[k].length : textOf(s[k]); return `<span class="chip ${has ? 'ok' : 'muted'}">${has ? '✓' : '—'} ${n}</span>`; }).join('')}</div>
             <div class="pv-note">المستوى: ${esc((s.levels || []).join('، '))} · الاستراتيجيات: ${esc((s.strategies || []).join('، '))}${s.strategiesOther ? ' + أخرى: ' + esc(s.strategiesOther) : ''}</div>
             <div class="pv-note">المصادر: ${esc((s.resources || []).join('، '))}${s.resourcesOther ? ' + أخرى: ' + esc(s.resourcesOther) : ''}</div></div>`).join('') + '</div>').join('');
@@ -922,6 +953,8 @@ VIEWS.settings = async () => {
         ${sw('checkTimeslots', 'حدّد كل الصفوف (الحصص) الظاهرة للتاريخ')}
         ${sw('ensureGlobal', 'علّم «تعميم التحضير على كافة الجداول»')}
         ${sw('setWeek', 'اختر «أسبوع العمل» حسب تاريخ النشر')}
+        ${sw('fileDates', 'استعمل تاريخ النشر المكتوب في ملف المادة لكل حصة', 'وما بلا تاريخ يتبع الحصة التي قبله على أيام الحصص')}
+        ${sw('autoContinue', '«فصل كامل»: لا تتوقف عند تعارضات الربط', 'تبدأ وحدها بعد مهلة وتتخطى ما لم يُربط بدرس في نور وتخبرك في النهاية')}
         ${sw('skipFilled', 'لا تغيّر البنود المكتوبة في الصفحة', 'مفيد إن كتبت جزءًا بنفسك')}
       </div></div>
       <div class="set-row"><b>داخل صفحة نور</b><div class="set-stack">${sw('fab', 'أظهر زر «حاضر» العائم في صفحة «إضافة تحضير»')}${sw('autoOpen', 'افتح النافذة داخل الصفحة تلقائيًا عند متابعة التحضير', 'بعد إنجاز حصة، تُفتح عند فتح نموذج التالية')}</div></div>
@@ -965,6 +998,8 @@ VIEWS.help = () => {
       <details><summary>لم تظهر الصفوف (الحصص)؟</summary><p>تظهر الصفوف في نور حسب جدولك لليوم المختار؛ إن لم تكن لديك حصة لهذه المادة في ذلك اليوم اختر يومًا آخر. اضبط «أيام حصص المادة» من صفحتها في المكتبة لتقترح الإضافة الأيام الصحيحة.</p></details>
       <details><summary>حفظت في نور ولم تُسجَّل الحصة «محفوظة»؟</summary><p>اضغط «حفظتُها ✓» بجانب الحصة في النافذة، أو «تعليم كمحفوظة» من المكتبة. (إن كانت صفحة نور مفتوحة قبل تثبيت الإصدار الجديد فأعد تحميلها.)</p></details>
       <details><summary>كيف أعبّئ عدة حصص دفعة واحدة؟</summary><p>من نافذة «حاضر» اضغط «عدة حصص دفعة واحدة»: اختر الحصص (من درس أو عدة دروس) وأيام حصص المادة وتاريخ أول حصة فتوزَّع التواريخ تلقائيًا. بعد كل حصة تنتقل النافذة مباشرة إلى التالية: يُفتح نموذجها تلقائيًا إن كان معروفًا، وإلا تفتحه أنت في نور فيُفحص التوافق وتُعبّأ. في «أراجع وأحفظ بنفسي» تضغط أنت «حفظ» في نور (أو «حفظتُها — التالي»)، وفي «الحفظ التلقائي» تُحفظ كل حصة وحدها.</p></details>
+      <details><summary>كيف أكتب تاريخ النشر في ملف التحضير؟</summary><p>بأي طريقة من هذه: بندًا مستقلًا في الحصة «<b>تاريخ النشر</b>» وتحته التاريخ (أو في السطر نفسه «تاريخ النشر: 12/10/2026»)، أو في عنوان الحصة «الحصة الأولى (12/10/2026)»، أو في عنوان الدرس أو الوحدة فيأخذه أول حصة بعده وتتبعه بقية الحصص يومًا بعد يوم على أيام حصصك، أو في عنوان أسبوع «الأسبوع 3: 12/10/2026 – 16/10/2026». الصيغ المفهومة: 12/10/2026 · 12-10-2026 · 2026-10-12 · ١٢/١٠/٢٠٢٦ · 12 أكتوبر 2026 · الأحد 12 أكتوبر · 12/10 بلا سنة (تُستنتج من السنة الدراسية) · 20/4/1448هـ (يُحوَّل ميلاديًا). في ملفات HTML التفاعلية يكفي مفتاح <code>publishDate</code> أو <code>date</code> أو «تاريخ النشر» في بيانات الحصة، وفي جداول Word صف «تاريخ النشر | التاريخ». وإن وقع التاريخ في يوم إجازة أو كان مستعملًا في نور يُنقل تلقائيًا إلى يوم الحصة التالي ويُخبرك السجل.</p></details>
+      <details><summary>كيف أعبّئ وحدة واحدة أو أسبوعًا فقط بدل الفصل كله؟</summary><p>في «تحضير فصل كامل» اختر «ما الذي يُعبَّأ؟»: الفصل كاملًا، أو وحدة (واحدة أو أكثر)، أو أسبوع (أي يوم منه فتُعبَّأ الحصص التي تقع تواريخها فيه)، أو من درس إلى درس. وفي «عدة حصص» استعمل «تحديد وحدة…» أو «حصص أسبوع». الحصص خارج النطاق لا تُلمس، وما حُفظ لا يتكرر.</p></details>
       <details><summary>هل يقبل «حاضر» ملفات HTML؟</summary><p>نعم. من «إضافة تحضير» ← «رفع ملف» اختر ملف ‎.html أو ‎.htm أو ‎.mht (أو اسحبه إلى الصفحة): ملف Word المحفوظ «صفحة ويب»، أو صفحة تحضير عادية، أو ملف تحضير تفاعلي يعرض المدمج والمنفصل. يقرأ «حاضر» الدروس والحصص والبنود ويعرض لك معاينة قبل الإضافة، ولا يُشغَّل أي شيء من الملف. إن لم تظهر الحصص فتأكد أن أسماء البنود (المخرجات، الاستراتيجيات…) موجودة في الملف.</p></details>
       <details><summary>ماذا يعني «تأكد من التوافق»؟</summary><p>يتحقق «حاضر» أن الدرس المفتوح في نور هو درس الحصة التي سيعبّئها. إن لم يتوافق تلقائيًا (مثلًا اسم الدرس في نور مختلف عن اسمه في مكتبتك) يعرض لك الدرس المتوقع والأقرب لتؤكده بضغطة — ويتذكر تأكيدك فيتوافق تلقائيًا في المرات القادمة. وإن كانت الصفحة لدرس آخر اضغط «ليست هي» وافتح الصفحة الصحيحة.</p></details>
       <details><summary>كيف أعدّل محتوى حصة؟</summary><p>المكتبة ← المادة ← «تعديل» بجانب الحصة. المستوى والاستراتيجيات والمصادر تُختار من قوائم نور نفسها.</p></details>

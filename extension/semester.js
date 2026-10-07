@@ -8,8 +8,9 @@ import {
   groupKey, lessonGroups, sessionStatus, markSaved, markSaveFailed, daysFor, setPkgDays, usedDates, nextSchoolDay,
   gradeNumber, gradeOfName, sameSubject, unsavedText, kwNorm, ordinalOf, getPicks,
   noorTerms, termAllLessons, pickTreeNode, stripSessionSuffix, sessionSuffix, lessonNum,
+  layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, lintPackage, lintLevel, knownCourse, rememberCourse,
 } from './packages.js';
-import { unitNum, bestTreeLesson, kwScore } from './match.js';
+import { unitNum, bestTreeLesson, kwScore, titleSim } from './match.js';
 import { AFAQ } from './afaq-config.js';
 import { siteUrl, sync as afaqSync } from './remote.js';
 
@@ -37,7 +38,12 @@ let courseCid = '';      // المقرر في نور (من بطاقة الماد
 let semSaved = {};
 let classOk = new Set();   // أيام الأسبوع التي ظهرت فيها صفوف فعلًا (فلا تُستبعد بسبب إجازة)
 let coursePrepUrl = '';    // صفحة «تحضير الدروس» للمقرر (للتحقق من قائمة نور)
-let startTouched = false;  // غيّرتَ «أول تاريخ نشر» بنفسك؟ (وإلا يُكمل بعد آخر تاريخ استُعمل)       // ما حفظه «فصل كامل» في هذا المقرر: { lessonId: تاريخ } — فلا يتكرر حتى لو تأخرت قائمة نور
+let startTouched = false;  // غيّرتَ «أول تاريخ نشر» بنفسك؟ (وإلا يُكمل بعد آخر تاريخ استُعمل)       // semSaved: ما حفظه «فصل كامل» في هذا المقرر: { lessonId: تاريخ } — فلا يتكرر حتى لو تأخرت قائمة نور
+// النطاق: الفصل كاملًا | وحدة (أو أكثر) | أسبوع (الحصص التي تقع تواريخها فيه) | من درس إلى درس — وتواريخ النشر: من الملف أو متتالية
+const scope = { kind: 'term', units: new Set(), weekDay: '', from: '', to: '' };
+let useFile = false;       // تواريخ الملف تُستعمل (المادة فيها تواريخ واخترتَ «كما في الملف»)
+const dateNotes = new Set();   // ملاحظات نقل التواريخ التي سُجّلت (حتى لا تتكرر)
+let lintRes = null;
 let running = false, stopFlag = false;
 const stopHooks = [];
 let askCur = null, logN = 0;
@@ -93,36 +99,54 @@ function renderDays() {
   $('startDay').textContent = $('start').value ? '· يبدأ ' + dayLabel($('start').value) : '';
 }
 
-// تواريخ لا تُستعمل: تواريخ حصص أخرى محفوظة أو معبّأة (ليست في قائمة الانتظار)
-function fixedDates() {
-  const ids = new Set(queue.filter((s) => s.on).map((s) => s.lesson.id));
+// تواريخ لا تُستعمل: تواريخ حصص أخرى محفوظة أو معبّأة (ليست من المرشّحة الآن)
+function fixedDates(cands) {
+  const ids = new Set((cands || []).map((s) => s.lesson.id));
   return new Set(Object.entries(usedDates(pkg, state)).filter(([, arr]) => arr.some((u) => !ids.has(u.lessonId))).map(([d]) => d));
 }
-// الحصص المختارة بترتيب دروس نور (ثم ترتيب الحصص)، وتواريخها متتالية في أيام الحصص مع تخطي المستعمل
+// هل الحصة ضمن النطاق المختار؟
+function inScope(s) {
+  const p = s.p;
+  if (scope.kind === 'unit') return scope.units.size ? scope.units.has(kwNorm(p.group.unit || '')) : true;
+  if (scope.kind === 'week') return scope.weekDay ? inWeekOf(s.date, scope.weekDay) : true;
+  if (scope.kind === 'range') {
+    const keys = plan.map((x) => x.group.key);
+    let a = scope.from ? keys.indexOf(scope.from) : 0, b = scope.to ? keys.indexOf(scope.to) : keys.length - 1;
+    if (a < 0) a = 0; if (b < 0) b = keys.length - 1; if (a > b) [a, b] = [b, a];
+    const i = keys.indexOf(p.group.key);
+    return i >= a && i <= b;
+  }
+  return true;
+}
+// التواريخ: كل حصة مرشّحة (درس مربوط، لم تُنجز، ليست في نور) تأخذ تاريخها — من الملف إن وُجد (مرساة)، وإلا تتبع ما قبلها على أيام الحصص —
+// ثم يُطبَّق النطاق لتحديد ما يُعبَّأ، وتُرتَّب قائمة التنفيذ زمنيًا
 function assignDates() {
   const pos = (p) => (p.node ? treeNodes.indexOf(p.node) : 1e9);
-  queue = plan.slice().sort((a, b) => pos(a) - pos(b) || a.i - b.i).flatMap((p) => p.sessions.filter((s) => s.on));
-  const taken = fixedDates();
-  let cur = nextSchoolDay($('start').value || isoOf(new Date()), days, true);
-  queue.forEach((s) => {
-    for (let i = 0; i < 60 && taken.has(cur); i++) cur = nextSchoolDay(cur, days, false);
-    s.date = cur; taken.add(cur);
-    cur = nextSchoolDay(cur, days, false);
+  const ordered = plan.slice().sort((a, b) => pos(a) - pos(b) || a.i - b.i);
+  const cands = ordered.flatMap((p) => p.sessions.filter((s) => s.eligible));
+  const taken = fixedDates(cands);
+  const items = cands.map((s) => ({ s, fileDate: useFile && isIso(s.lesson.pubDate) ? s.lesson.pubDate : '', fixed: s.fixed || '' }));
+  const notes = layoutDates(items, { start: $('start').value || isoOf(new Date()), days, taken: [...taken], useFileDates: useFile });
+  items.forEach((it) => { it.s.date = it.date; it.s.dateSrc = it.dateSrc; it.s.movedFrom = ''; });
+  notes.forEach((n) => {
+    const s = items[n.i].s;
+    if (n.src === 'file' || n.src === 'fixed') s.movedFrom = n.from;
+    const key = s.lesson.id + '|' + n.from + '|' + n.to;
+    if (n.src === 'file' && !dateNotes.has(key)) { dateNotes.add(key); logLine('info', `تاريخ الملف ${dayLabel(n.from)} لـ«${shortT(s.lesson.title)}» ${n.why === 'offday' ? 'يوم بلا حصص' : 'مستعمل لحصة أخرى'} — نقلته إلى ${dayLabel(n.to)}`); }
   });
-  plan.forEach((p) => p.sessions.filter((s) => !s.on).forEach((s) => { s.date = ''; }));
+  cands.forEach((s) => { s.on = s.manual != null ? s.manual : inScope(s); });
+  plan.forEach((p) => p.sessions.filter((s) => !s.eligible).forEach((s) => { s.on = false; s.date = s.date || ''; }));
+  queue = cands.filter((s) => s.on).sort((a, b) => a.date.localeCompare(b.date) || cands.indexOf(a) - cands.indexOf(b));
+  if (scope.kind === 'week' && scope.weekDay) $('weekHint').textContent = `${dayLabel(weekStart(scope.weekDay))} – ${dayLabel(weekEnd(scope.weekDay))}: ${countWord(queue.length)}`;
 }
-// تأجيل حصة إلى يوم الحصة التالي المتاح، وتأجيل ما بعدها بالتتابع
+// تأجيل حصة إلى يوم الحصة التالي المتاح (رفضت نور تاريخها أو لا صفوف فيه): يثبت تاريخها الجديد، وما بعدها بلا تاريخ ملف يتبعها
 function shiftDate(s) {
-  const fixed = fixedDates();
+  const fixed = fixedDates(plan.flatMap((p) => p.sessions.filter((x) => x.eligible)));
+  queue.forEach((x) => { if (x !== s && x.date && (x.fixed || (useFile && isIso(x.lesson.pubDate)))) fixed.add(x.date); });   // المراسي فقط؛ المتسلسلة تتبع
   let c = nextSchoolDay(s.date, days, false);
   for (let i = 0; i < 60 && fixed.has(c); i++) c = nextSchoolDay(c, days, false);
-  s.date = c;
-  let prev = c;
-  queue.slice(queue.indexOf(s) + 1).filter((x) => x.on).forEach((x) => {
-    let d = nextSchoolDay(prev, days, false);
-    for (let i = 0; i < 60 && fixed.has(d); i++) d = nextSchoolDay(d, days, false);
-    x.date = d; prev = d;
-  });
+  s.fixed = c;
+  assignDates();
   renderPlan();
 }
 // يوم بلا صفوف لهذا المقرر مرتين: لا حصة لك فيه — يُتخطّى في بقية الفصل
@@ -181,16 +205,18 @@ function renderPlan() {
         : s.inNoor ? '<span class="st ok">✓ موجودة في نور</span>'
           : !noorHave && st.saved ? `<span class="st ok">✓ محفوظة${st.savedDate ? ' · ' + dayLabel(st.savedDate, false) : ''}</span>`
             : !noorHave && st.filled ? `<span class="st wait">• عُبّئت — ${esc(unsavedText(st))}</span>` : '<span class="st skip"></span>';
+      const src = s.dateSrc === 'file' ? ' <span class="src">· من الملف</span>' : s.dateSrc === 'fixed' ? ' <span class="mv">· نُقل</span>' : '';
+      const mv = s.movedFrom ? ` <span class="mv">(كان ${esc(dayLabel(s.movedFrom, false))})</span>` : '';
       return `<div class="ses ${s.cur ? 'cur' : ''}" data-id="${esc(s.lesson.id)}">
         <input type="checkbox" ${s.on ? 'checked' : ''} ${!editable || p.miss ? 'disabled' : ''} aria-label="تحديد الحصة">
-        <div>${esc(s.lesson.title)}${s.on && s.date ? `<small>النشر: ${esc(dayLabel(s.date))}</small>` : ''}</div>${stat}</div>`;
+        <div>${esc(s.lesson.title)}${s.on && s.date ? `<small>النشر: ${esc(dayLabel(s.date))}${src}${mv}</small>` : !s.on && s.eligible ? '<small>خارج النطاق المختار</small>' : ''}</div>${stat}</div>`;
     }).join('');
     return `<div class="lesson">${head}${rows}</div>`;
   }).join('');
   $('plan').querySelectorAll('.ses input').forEach((cb) => {
     cb.onchange = () => {
       const s = plan.flatMap((p) => p.sessions).find((x) => x.lesson.id === cb.closest('.ses').dataset.id);
-      if (s) { s.on = cb.checked; assignDates(); renderPlan(); }
+      if (s) { s.manual = cb.checked; assignDates(); renderPlan(); }
     };
   });
   $('plan').querySelectorAll('select.map').forEach((sel) => {
@@ -216,8 +242,10 @@ function setNode(p, node) {
 function presence(p) {
   const have = p.node && noorHave ? (noorHave.get(kwNorm(p.node.text)) || []) : [];
   p.sessions.forEach((s, k) => {
+    s.p = p;
     s.inNoor = have.includes(k + 1) || !!semSaved[s.lesson.id];
-    s.on = !!p.node && !s.inNoor && (noorHave ? true : !done(s.lesson));
+    s.eligible = !!p.node && !s.inNoor && !s.savedNow && (noorHave ? true : !done(s.lesson));
+    if (!s.eligible) s.on = false;
   });
 }
 function setSt(s, cls, text) { s.st = { cls, text }; renderPlan(); }
@@ -371,15 +399,25 @@ async function hideBar() { await exec(pageBar, null); }
 chrome.runtime.onMessage.addListener((m) => {
   if (m && m.type === 'hadirSemReply' && askCur && m.id === askCur.id) askCur.finish(m.btn);
 });
-function ask({ kind = 'info', head = '', text = '', buttons = [], bar = true, poll = null, pollMs = 2500 }) {
+function ask({ kind = 'info', head = '', text = '', buttons = [], bar = true, poll = null, pollMs = 2500, timeoutMs = 0, defaultId = '' }) {
   if (stopFlag) return Promise.resolve('stop');
   return new Promise((resolve) => {
     const id = 'q' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
-    let iv = null;
+    let iv = null, tm = null;
+    // مهلة: إن لم تُجب اختير الافتراضي (في التشغيل التلقائي)
+    if (timeoutMs && defaultId) {
+      const t0 = Date.now();
+      const label = (buttons.find((b) => b.id === defaultId) || {}).label || '';
+      tm = setInterval(() => {
+        const left = Math.max(0, Math.round((timeoutMs - (Date.now() - t0)) / 1000));
+        const el = $('nowText'); if (el) el.textContent = `${text}\n(إن لم تختر: «${label}» تلقائيًا بعد ${toAr(left)} ث)`;
+        if (left <= 0) finish(defaultId);
+      }, 1000);
+    }
     const onStop = () => finish('stop');
     function finish(v) {
       if (!askCur || askCur.id !== id) return;
-      askCur = null; clearInterval(iv);
+      askCur = null; clearInterval(iv); clearInterval(tm);
       const i = stopHooks.indexOf(onStop); if (i >= 0) stopHooks.splice(i, 1);
       if (bar) hideBar();
       resolve(v);
@@ -437,21 +475,33 @@ function gradeOfLevel(t) {
 }
 async function pickCourse(courses) {
   setPhase('course');
+  // بطاقة اخترتها لهذه المادة من قبل: تُستعمل مباشرة
+  const known = knownCourse(state, pkg.id);
+  const kc = known && courses.find((c) => c.cid === known.cid);
+  if (kc) { logLine('info', `بطاقة المادة (اختيارك السابق): «${kc.title} — ${(kc.levels || []).join(' · ')}»`); return kc; }
   const g = gradeNumber(pkg);
   const gradeOf = (c) => (c.levels || []).map(gradeOfLevel).find(Boolean) || 0;
   let cands = courses.filter((c) => sameSubject(pkg.subject || pkg.title, c.title));
   if (g && cands.length > 1) { const byG = cands.filter((c) => gradeOf(c) === g); if (byG.length) cands = byG; }
-  if (cands.length === 1) { logLine('info', `بطاقة المادة: «${cands[0].title} — ${(cands[0].levels || []).join(' · ')}»`); return cands[0]; }
+  // لا تطابق بالاسم: الأقرب لفظًا إن كان قريبًا بوضوح (مثل «دراسات اجتماعية» و«الدراسات الاجتماعية»)
+  if (!cands.length) {
+    const scored = courses.map((c) => ({ c, v: titleSim(pkg.subject || pkg.title, c.title) })).filter((x) => x.v >= 0.6).sort((x, y) => y.v - x.v);
+    if (scored.length === 1 || (scored.length > 1 && scored[0].v - scored[1].v >= 0.25)) { cands = [scored[0].c]; logLine('info', `البطاقة الأقرب لاسم المادة: «${scored[0].c.title}»`); }
+    else if (scored.length) cands = scored.map((x) => x.c);
+  }
+  if (cands.length === 1) { logLine('info', `بطاقة المادة: «${cands[0].title} — ${(cands[0].levels || []).join(' · ')}»`); await rememberCourse(pkg.id, cands[0]).catch(() => {}); return cands[0]; }
   const list = (cands.length ? cands : courses).slice(0, 6);
+  // الاسم مطابق لأكثر من بطاقة (صفوف أو شُعب): نسأل، وفي التشغيل التلقائي تُختار الأولى بعد مهلة
+  const auto = $('optAuto').checked && cands.length > 1;
   const a = await ask({
     kind: 'warn', head: cands.length ? 'أكثر من بطاقة تطابق المادة — اختر' : 'لم أجد بطاقة تطابق المادة — اختر البطاقة الصحيحة',
     text: `مادتك في المكتبة: «${pkg.title}».`,
     buttons: list.map((c, i) => ({ id: 'c' + i, label: `${c.title} — ${(c.levels || []).slice(-1)[0] || ''}`, primary: i === 0 })).concat([{ id: 'stop', label: 'إيقاف', danger: true }]),
-    bar: false,
+    bar: false, timeoutMs: auto ? 30000 : 0, defaultId: auto ? 'c0' : '',
   });
   if (!a || a === 'stop') return null;
   const c = list[+String(a).slice(1)];
-  if (c) logLine('info', `اخترت بطاقة: «${c.title} — ${(c.levels || []).join(' · ')}»`);
+  if (c) { logLine('info', `اخترت بطاقة: «${c.title} — ${(c.levels || []).join(' · ')}»`); await rememberCourse(pkg.id, c).catch(() => {}); }
   return c || null;
 }
 async function stepPrepList(course) {
@@ -545,20 +595,28 @@ function termNumbers(terms) {
   const ok = nos.length && nos.every((n) => n != null) && new Set(nos).size === nos.length;
   return terms.map((t, i) => ({ text: t, no: ok ? nos[i] : i + 1 }));
 }
-async function stepTree() {
+async function stepTree(addUrl) {
   setPhase('tree');
   setBox('run', `أقرأ دروس الفصل ${termName(termNo)} من شجرة نور…`, 'تُفتح وحدات هذا الفصل وحده، واحدةً بعد أخرى.');
-  let t = await noorTerms(tabId).catch(() => ({ tree: false, terms: [] }));
-  for (let i = 0; i < 3 && t.tree && !t.terms.length && !stopFlag; i++) { await sleep(2500); t = await noorTerms(tabId).catch(() => t); }
+  let t = { tree: false, terms: [] }, term = null, lessons = [];
+  // الشجرة قد تتأخر أو تأتي ناقصة: نعيد المحاولة، ثم نعيد فتح النموذج، قبل أن نعلن الفشل
+  for (let round = 0; round < 3 && !stopFlag; round++) {
+    if (round) { await backoff(round, 'شجرة الدروس لم تكتمل — أعيد فتح النموذج وقراءتها'); if (addUrl) await openForm(addUrl); }
+    t = await noorTerms(tabId).catch(() => ({ tree: false, terms: [] }));
+    for (let i = 0; i < 3 && t.tree && !t.terms.length && !stopFlag; i++) { await sleep(2500); t = await noorTerms(tabId).catch(() => t); }
+    if (!t.tree || !t.terms.length) continue;
+    term = termNumbers(t.terms).find((x) => x.no === termNo);
+    if (!term) break;
+    for (let i = 0; i < 3 && !lessons.length && !stopFlag; i++) {
+      if (i) await sleep(3000);
+      lessons = await termAllLessons(tabId, term.text).catch(() => []);
+    }
+    if (lessons.length) break;
+  }
+  if (stopFlag) throw new Error('stop');
   if (!t.tree) throw new Error('لم أجد شجرة الدروس في نموذج «إضافة تحضير».');
   if (!t.terms.length) throw new Error('لم تظهر الفصول الدراسية في شجرة نور — افتح «الكتاب» في الشجرة بنفسك ثم اضغط «ابدأ».');
-  const term = termNumbers(t.terms).find((x) => x.no === termNo);
   if (!term) throw new Error(`لم أجد الفصل ${termName(termNo)} في الشجرة (الموجود: ${t.terms.join('، ')}).`);
-  let lessons = [];
-  for (let i = 0; i < 3 && !lessons.length && !stopFlag; i++) {
-    if (i) await sleep(3000);
-    lessons = await termAllLessons(tabId, term.text).catch(() => []);
-  }
   if (!lessons.length) throw new Error(`لم تظهر دروس تحت الفصل «${term.text}» — ربما بطء في نور. اضغط «ابدأ» مرة أخرى.`);
   const units = [...new Set(lessons.map((l) => l.unit))];
   diag.tree = { term: term.text, terms: t.terms, units: units.map((u) => ({ text: u, lessons: lessons.filter((l) => l.unit === u).map((l) => l.text) })) };
@@ -971,14 +1029,15 @@ function heartbeat(on) {
 }
 // نقطة استئناف: إن أُغلقت النافذة أو تعطّل كروم يُتابَع التشغيل عند فتحها
 async function checkpoint(active) {
-  await chrome.storage.local.set({ semesterRun: active ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched } : null }).catch(() => {});
+  const sc = { kind: scope.kind, units: [...scope.units], weekDay: scope.weekDay, from: scope.from, to: scope.to, dsrc: useFile ? 'file' : 'seq' };
+  await chrome.storage.local.set({ semesterRun: active ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc } : null }).catch(() => {});
 }
 function setRunning(on) {
   running = on;
   $('startBtn').hidden = on; $('stopBtn').hidden = !on; $('stopBtn').disabled = false;
   $('goBtn').hidden = true;
-  ['pkgSel', 'start', 'optReview', 'optStep', 'optNoor'].forEach((id) => { $(id).disabled = on; });
-  document.querySelectorAll('input[name=term]').forEach((r) => { r.disabled = on; });
+  ['pkgSel', 'start', 'optReview', 'optStep', 'optNoor', 'optAuto', 'weekDay', 'fromLesson', 'toLesson'].forEach((id) => { if ($(id)) $(id).disabled = on; });
+  document.querySelectorAll('input[name=term], input[name=scope], input[name=dsrc], #unitChips .day').forEach((r) => { r.disabled = on; });
   if (on) $('topMsg').className = 'msg';
   heartbeat(on);
 }
@@ -996,7 +1055,7 @@ function waitGo(autoMs) {
     $('goBtn').onclick = () => finish(true);
     if (autoMs) {
       $('plan').addEventListener('change', cancel);
-      const tick = () => { $('goBtn').textContent = `${label} (تلقائيًا بعد ${toAr(left)} ث)`; if (left-- <= 0) finish(true); };
+      const tick = () => { $('goBtn').textContent = `${label} (تلقائيًا بعد ${toAr(left)} ث)`; if (left-- <= 0) finish('auto'); };
       tick(); iv = setInterval(tick, 1000);
     }
   });
@@ -1013,9 +1072,9 @@ async function run() {
   if (!pkg) { msg('bad', 'اختر مادة من مكتبتك أولًا.'); return; }
   if (!$('start').value) { msg('bad', 'حدد أول تاريخ نشر.'); return; }
   termNo = +((document.querySelector('input[name=term]:checked') || {}).value) || 1;
-  await chrome.storage.local.set({ semesterOpts: { review: $('optReview').checked, step: $('optStep').checked, noor: $('optNoor').checked, term: termNo } }).catch(() => {});
+  await chrome.storage.local.set({ semesterOpts: { review: $('optReview').checked, step: $('optStep').checked, noor: $('optNoor').checked, auto: $('optAuto').checked, term: termNo, scope: scope.kind, dsrc: useFile ? 'file' : 'seq' } }).catch(() => {});
   stopFlag = false; stopHooks.length = 0;
-  plan = []; queue = []; treeNodes = []; noorHave = null; noClass = new Map(); classOk = new Set(); editable = false; courseCid = ''; coursePrepUrl = ''; semSaved = {}; savedThisRun = [];
+  plan = []; queue = []; treeNodes = []; noorHave = null; noClass = new Map(); classOk = new Set(); editable = false; courseCid = ''; coursePrepUrl = ''; semSaved = {}; savedThisRun = []; dateNotes.clear();
   days = daysFor(state, settings, pkg.id);
   logN = 0; diag.log = []; diag.tree = null; diag.plan = null; diag.failed = null;
   $('log').innerHTML = ''; $('logCard').hidden = true; $('prog').style.width = '0%'; renderPlan();
@@ -1024,47 +1083,67 @@ async function run() {
   let ok = 0, skipped = 0, total = 0, endMsg = null, finished = false;
   const failed = [];
   try {
-    const courses = await stepHome();
-    if (!courses) throw new Error('stop');
-    const course = await pickCourse(courses);
-    if (!course) throw new Error('stop');
-    courseCid = course.cid || '';
-    semSaved = courseCid ? (((await chrome.storage.local.get('semesterSaved').catch(() => ({}))).semesterSaved || {})[courseCid] || {}) : {};
-    // متابعة بعد توقف: تبدأ التواريخ بعد آخر تاريخ استُعمل، ما لم تحدد أنت تاريخًا
-    const lastUsed = [...Object.keys(usedDates(pkg, state)), ...Object.values(semSaved)].filter(Boolean).sort().pop();
-    if (!startTouched && lastUsed && lastUsed >= $('start').value) {
-      $('start').value = nextSchoolDay(lastUsed, days, false);
-      renderDays();
-      logLine('info', `أكمل التواريخ بعد آخر تاريخ مستعمل (${dayLabel(lastUsed, false)}): من ${dayLabel($('start').value)}`);
+    // ما قبل التعبئة (الرئيسية ← البطاقة ← القائمة ← النموذج ← الشجرة): أي عطل فيه يُعاد من أوله حتى ثلاث مرات قبل التوقف
+    let addUrl = '', nodes = null;
+    for (let attempt = 1; attempt <= 3 && !stopFlag; attempt++) {
+      try {
+        const courses = await stepHome();
+        if (!courses) throw new Error('stop');
+        const course = await pickCourse(courses);
+        if (!course) throw new Error('stop');
+        courseCid = course.cid || '';
+        semSaved = courseCid ? (((await chrome.storage.local.get('semesterSaved').catch(() => ({}))).semesterSaved || {})[courseCid] || {}) : {};
+        // متابعة بعد توقف: تبدأ التواريخ بعد آخر تاريخ استُعمل، ما لم تحدد أنت تاريخًا (مع تواريخ الملف لا حاجة لذلك)
+        const lastUsed = [...Object.keys(usedDates(pkg, state)), ...Object.values(semSaved)].filter(Boolean).sort().pop();
+        if (!startTouched && !useFile && scope.kind !== 'week' && lastUsed && lastUsed >= $('start').value) {
+          $('start').value = nextSchoolDay(lastUsed, days, false);
+          renderDays();
+          logLine('info', `أكمل التواريخ بعد آخر تاريخ مستعمل (${dayLabel(lastUsed, false)}): من ${dayLabel($('start').value)}`);
+        }
+        addUrl = await stepPrepList(course);
+        if (!addUrl) throw new Error('stop');
+        setPhase('form');
+        setBox('run', 'أفتح نموذج «إضافة تحضير»…');
+        if (!(await openForm(addUrl))) throw new Error(stopFlag ? 'stop' : 'تعذّر فتح نموذج «إضافة تحضير» بعد عدة محاولات — تأكد من الاتصال ثم اضغط «ابدأ».');
+        nodes = await stepTree(addUrl);
+        break;
+      } catch (e) {
+        const m = String((e && e.message) || e);
+        if (m === 'stop' || stopFlag || attempt === 3) throw e;
+        logLine('info', `تعثّرت الخطوات الأولى (${m}) — أعيدها من البداية (محاولة ${toAr(attempt + 1)} من ٣)`);
+        await backoff(attempt + 1, 'أعيد المحاولة من الصفحة الرئيسية');
+      }
     }
-    const addUrl = await stepPrepList(course);
-    if (!addUrl) throw new Error('stop');
-    setPhase('form');
-    setBox('run', 'أفتح نموذج «إضافة تحضير»…');
-    if (!(await openForm(addUrl))) throw new Error(stopFlag ? 'stop' : 'تعذّر فتح نموذج «إضافة تحضير» بعد عدة محاولات — تأكد من الاتصال ثم اضغط «ابدأ».');
-    const nodes = await stepTree();
-    if (stopFlag) throw new Error('stop');
+    if (stopFlag || !nodes) throw new Error('stop');
     await buildPlan(nodes);
     renderPlan();
-    // تعارض بين ملفك ونور: تُعرض الخطة للمراجعة. إن لم يكن التعارض خطيرًا (صف أو كتاب مختلف) تبدأ وحدها بعد مهلة
+    // تعارض بين ملفك ونور: تُعرض الخطة للمراجعة، وتبدأ وحدها بعد مهلة (أطول كلما كان التعارض أخطر) ما لم تطلب المراجعة اليدوية
     const c = conflicts();
     const nConf = c.miss.length + c.weak.length + c.dup.length;
     if ($('optReview').checked || nConf || plan.mismatch || !queue.length) {
       editable = true; renderPlan();
-      const auto = !$('optReview').checked && !plan.mismatch && queue.length ? 25000 : 0;
+      const autoOn = $('optAuto').checked && !$('optReview').checked && queue.length;
+      const auto = !autoOn ? 0 : (!nConf && !plan.mismatch ? 25000 : plan.mismatch ? 60000 : 40000);
       const parts = [plan.mismatch ? `أسماء وحدات ملفك لا تشبه وحدات هذا المقرر — تأكد أن هذه مادة «${pkg.grade || ''}» فعلًا قبل البدء.` : '',
         c.miss.length ? `${toAr(c.miss.length)} بلا مقابل في نور` : '', c.weak.length ? `${toAr(c.weak.length)} مربوطة بالترتيب أو برقم الوحدة فقط` : '', c.dup.length ? `${toAr(c.dup.length)} على درس واحد في نور` : ''].filter(Boolean);
-      setBox(nConf || plan.mismatch ? 'warn' : 'ok', nConf ? `راجع الربط: ${toAr(nConf)} ${nConf === 1 ? 'درس' : 'دروس'} فيها تعارض` : `الخطة جاهزة: ${countWord(queue.length)}`,
+      setBox(nConf || plan.mismatch || !queue.length ? 'warn' : 'ok', !queue.length ? (scope.kind !== 'term' ? 'لا حصص ضمن النطاق المختار — غيّر الوحدة/الأسبوع/المدى (أو تواريخ النشر) ثم «ابدأ التعبئة»' : 'لا حصص للتعبئة — كلها منجزة أو غير مربوطة') : nConf ? `راجع الربط: ${toAr(nConf)} ${nConf === 1 ? 'درس' : 'دروس'} فيها تعارض` : `الخطة جاهزة: ${countWord(queue.length)}`,
         (parts.length ? parts.join(' · ') + '\n' : '') + 'لكل درس من ملفك قائمة بدروس نور: اختر المقابل الصحيح أو «تخطَّ»، و«↧ ما بعده بالترتيب» يربط ما يليه دفعة واحدة.'
-        + (auto ? ' إن لم تعدّل شيئًا تبدأ التعبئة وحدها بعد ٢٥ ثانية.' : ' ثم اضغط «ابدأ التعبئة».'));
+        + (auto ? ` إن لم تعدّل شيئًا تبدأ التعبئة وحدها بعد ${toAr(Math.round(auto / 1000))} ثانية${nConf ? ' (ما لم يُربط يُتخطّى، والمربوط بالترتيب يُعبَّأ)' : ''}${plan.mismatch ? ' — وبسبب اختلاف الوحدات لن يُعبَّأ إلا المربوط بالاسم أو برقم الدرس' : ''}.` : ' ثم اضغط «ابدأ التعبئة».'));
       running = false;
       const go = await waitGo(auto);
       running = true; editable = false;
       $('goBtn').hidden = true;
       if (!go) throw new Error('stop');
+      if (go === 'auto' && plan.mismatch) {
+        // بدء تلقائي رغم اختلاف الوحدات: الربط الضعيف (بالترتيب/برقم الوحدة فقط) يُستبعد احتياطًا
+        let dropped = 0;
+        plan.forEach((p) => { if (p.node && (p.how === 'order' || p.how === 'number') && !p.edited) { p.node = null; p.miss = true; p.skipped = true; p.why = 'استُبعد: ربط بالترتيب فقط مع اختلاف الوحدات'; presence(p); dropped++; } });
+        if (dropped) logLine('info', `استبعدت ${toAr(dropped)} ${dropped === 1 ? 'درسًا مربوطًا' : 'دروس مربوطة'} بالترتيب فقط لأن وحدات الملف لا تشبه وحدات نور — راجعها لاحقًا`);
+      }
+      if (go === 'auto') { const miss = plan.filter((p) => p.miss && !p.skipped).length; if (miss) logLine('info', `بدأت تلقائيًا: ${toAr(miss)} ${miss === 1 ? 'درس بلا مقابل' : 'دروس بلا مقابل'} في نور تُخطّيت — تظهر في النهاية`); }
       await savePicks();
       assignDates(); renderPlan();
-      if (!queue.length) { finished = true; throw new Error(plan.some((p) => p.sessions.some((s) => s.inNoor)) ? 'كل حصص الدروس المربوطة موجودة في نور — لا ناقص.' : 'لم تحدد أي حصة.'); }
+      if (!queue.length) { finished = true; throw new Error(plan.some((p) => p.sessions.some((s) => s.inNoor)) ? 'كل حصص الدروس المربوطة موجودة في نور — لا ناقص.' : scope.kind !== 'term' ? 'لا حصص ضمن النطاق المختار (الوحدة/الأسبوع/المدى) — غيّر النطاق.' : 'لم تحدد أي حصة.'); }
     }
     // عدد تحاضير كل درس في نور قبل البدء (أساس التحقق)، وما وُجد في نور يُسجَّل «محفوظًا» في مكتبتك
     plan.forEach((p) => { p.initial = noorCount(noorHave, p); p.savedNow = 0; });
@@ -1077,14 +1156,15 @@ async function run() {
       ok++; await recordSaved(item);
       setSt(item.s, 'ok', `✓ حُفظت · ${dayLabel(item.s.date, false)}`);
       logLine('ok', `✓ ${item.s.lesson.title} — ${item.node.text} — ${dayLabel(item.s.date)}${note || ''}`);
-      item.s.on = false;
+      item.s.on = false; item.s.eligible = false; item.s.savedNow = true;
       $('prog').style.width = (Math.min(1, (ok + skipped) / total) * 100) + '%';
       await checkpoint(true);
     };
     // الجولة الأولى
     const deferred = [];
-    for (let k = 0; k < queue.length && !stopFlag; k++) {
-      const item = itemOf(queue[k]);
+    const runList = queue.slice();   // نسخة ثابتة: تعديل التواريخ أثناء التشغيل لا يغيّر ترتيب التنفيذ
+    for (let k = 0; k < runList.length && !stopFlag; k++) {
+      const item = itemOf(runList[k]);
       plan.forEach((x) => x.sessions.forEach((y) => { y.cur = y === item.s; }));
       renderPlan();
       const out = await processItem(item, addUrl, 4);
@@ -1163,7 +1243,8 @@ async function run() {
   else if (total) {
     const miss = plan.filter((p) => p.miss && !p.skipped).length;
     const had = plan.flatMap((p) => p.sessions.filter((s) => s.inNoor)).length;
-    const head = !ok ? 'انتهى دون حفظ أي حصة.' : `✔ انتهى الفصل ${termName(termNo)}: حُفظ ${countWord(ok)} بتواريخ نشر متتالية.`;
+    const what = scope.kind === 'unit' ? 'الوحدة المختارة' : scope.kind === 'week' ? 'الأسبوع المختار' : scope.kind === 'range' ? 'المدى المختار' : `الفصل ${termName(termNo)}`;
+    const head = !ok ? 'انتهى دون حفظ أي حصة.' : `✔ انتهى ${what}: حُفظ ${countWord(ok)} بتواريخ نشر${useFile ? ' كما في الملف' : ' متتالية'}.`;
     const tail = [had ? `كان موجودًا في نور ${countWord(had)}` : '', skipped ? `تُخطّيت ${countWord(skipped)}` : '', failed.length ? `لم تكتمل ${countWord(failed.length)} — اضغط «ابدأ» لإعادتها` : '', miss ? `${toAr(miss)} ${miss === 1 ? 'درس بلا مقابل' : 'دروس بلا مقابل'} في نور` : ''].filter(Boolean).join(' · ');
     msg(ok && !failed.length ? 'ok' : 'warn', head + (tail ? ` (${tail})` : ''));
     setBox(miss || skipped || failed.length || !ok ? 'warn' : 'ok', head, tail ? tail + ' — التفاصيل في السجل.' : '');
@@ -1191,11 +1272,65 @@ async function init() {
   $('optReview').checked = !!o.review;
   $('optStep').checked = !!o.step;
   $('optNoor').checked = o.noor !== false;
+  $('optAuto').checked = o.auto != null ? !!o.auto : settings.autoContinue !== false;
   // الفصل: المحفوظ، وإلا حسب الشهر (من فبراير إلى يونيو = الثاني)
   const m = new Date().getMonth() + 1;
   termNo = o.term || (m >= 2 && m <= 6 ? 2 : 1);
   const radio = document.querySelector(`input[name=term][value="${termNo}"]`);
   if (radio) radio.checked = true;
+  // ---- النطاق وتواريخ الملف ----
+  const scopeUi = () => {
+    $('scopeUnit').hidden = scope.kind !== 'unit';
+    $('scopeWeek').hidden = scope.kind !== 'week';
+    $('scopeRange').hidden = scope.kind !== 'range';
+    $('startLbl').textContent = useFile ? 'أول تاريخ نشر (للحصص التي بلا تاريخ في الملف)' : scope.kind === 'week' ? 'أول تاريخ نشر (أول يوم حصة في الأسبوع)' : 'أول تاريخ نشر';
+    if (plan.length) { assignDates(); renderPlan(); }
+  };
+  const renderUnits = () => {
+    const units = [...new Set(lessonGroups(pkg).map((g) => g.unit || ''))];
+    $('unitChips').innerHTML = units.map((u) => `<button type="button" class="day unit ${scope.units.has(kwNorm(u)) ? 'on' : ''}" data-u="${esc(kwNorm(u))}" title="${esc(u || 'بلا وحدة')}">${esc(u || 'بلا وحدة')}</button>`).join('');
+    $('unitChips').querySelectorAll('.day').forEach((b) => { b.onclick = () => { if (running) return; const k = b.dataset.u; if (scope.units.has(k)) scope.units.delete(k); else scope.units.add(k); renderUnits(); scopeUi(); }; });
+  };
+  const renderRange = () => {
+    const gs = lessonGroups(pkg);
+    const opt = (sel) => gs.map((g) => `<option value="${esc(g.key)}" ${g.key === sel ? 'selected' : ''}>${esc([g.unit, g.lesson].filter(Boolean).join(' / '))}</option>`).join('');
+    if (!gs.some((g) => g.key === scope.from)) scope.from = gs[0] ? gs[0].key : '';
+    if (!gs.some((g) => g.key === scope.to)) scope.to = gs.length ? gs[gs.length - 1].key : '';
+    $('fromLesson').innerHTML = opt(scope.from); $('toLesson').innerHTML = opt(scope.to);
+  };
+  const renderDateSrc = () => {
+    const has = hasFileDates(pkg);
+    $('dateSrcRow').hidden = !has;
+    if (has) { $('datedN').textContent = `— ${toAr(datedCount(pkg))} من ${toAr((pkg.lessons || []).length)} حصة لها تاريخ`; }
+    const want = has && (o.dsrc !== 'seq');
+    useFile = want;
+    const rd = document.querySelector(`input[name=dsrc][value="${useFile ? 'file' : 'seq'}"]`); if (rd) rd.checked = true;
+  };
+  const renderLint = () => {
+    lintRes = lintPackage(pkg, { days });
+    const lv = lintLevel(lintRes);
+    $('lintCard').hidden = !lintRes.warnings.length;
+    const n = lintRes.warnings.length;
+    $('lintHead').textContent = `فحص ملف المادة: ${lv === 'ok' ? 'سليم ✓' : `${toAr(n)} ${n === 1 ? 'ملاحظة' : n === 2 ? 'ملاحظتان' : n <= 10 ? 'ملاحظات' : 'ملاحظة'}${lv === 'warn' || lv === 'bad' ? ' — بعضها قد يؤثر على الربط' : ' (معلومات فقط)'}`}`;
+    $('lint').innerHTML = lintRes.warnings.map((w) => `<div class="${w.level}">${esc(w.text)}</div>`).join('');
+    diag.lint = lintRes.warnings.map((w) => `[${w.level}] ${w.text}`);
+  };
+  $('lintToggle').onclick = () => { $('lint').hidden = !$('lint').hidden; $('lintToggle').textContent = $('lint').hidden ? 'عرض التفاصيل' : 'إخفاء'; };
+  document.querySelectorAll('input[name=scope]').forEach((r) => { r.onchange = () => { if (running) return; scope.kind = r.value; if (scope.kind === 'week' && !scope.weekDay) { scope.weekDay = $('start').value || isoOf(new Date()); $('weekDay').value = scope.weekDay; } syncWeekStart(); scopeUi(); }; });
+  document.querySelectorAll('input[name=dsrc]').forEach((r) => { r.onchange = () => { if (running) return; useFile = r.value === 'file'; o.dsrc = r.value; scopeUi(); }; });
+  // أسبوع: أول تاريخ نشر = أول يوم حصة في ذلك الأسبوع (ما لم تكن التواريخ من الملف)
+  const syncWeekStart = () => {
+    if (scope.kind !== 'week' || !scope.weekDay) return;
+    const ws = weekStart(scope.weekDay);
+    $('weekHint').textContent = `${dayLabel(ws)} – ${dayLabel(weekEnd(scope.weekDay))}`;
+    if (!useFile) { $('start').value = nextSchoolDay(ws, days, true); startTouched = true; renderDays(); }
+  };
+  $('weekDay').onchange = () => { if (running) return; scope.weekDay = $('weekDay').value; syncWeekStart(); scopeUi(); };
+  $('fromLesson').onchange = () => { scope.from = $('fromLesson').value; scopeUi(); };
+  $('toLesson').onchange = () => { scope.to = $('toLesson').value; scopeUi(); };
+  const sk = (o.scope && ['term', 'unit', 'week', 'range'].includes(o.scope)) ? o.scope : 'term';
+  scope.kind = sk; const sr = document.querySelector(`input[name=scope][value="${sk}"]`); if (sr) sr.checked = true;
+
   const onPkg = () => {
     pkg = packages.find((p) => p.id === $('pkgSel').value) || pkg;
     days = daysFor(state, settings, pkg.id);
@@ -1204,18 +1339,29 @@ async function init() {
     if (used && used >= start) start = nextSchoolDay(used, days, false);
     $('start').value = start;
     renderDays();
+    scope.units.clear(); scope.from = ''; scope.to = '';
+    renderUnits(); renderRange(); renderDateSrc(); renderLint(); scopeUi();
     plan = []; renderPlan();
   };
   $('pkgSel').onchange = () => { startTouched = false; onPkg(); };
   onPkg();
   $('start').onchange = () => { startTouched = true; renderDays(); if (plan.length) { assignDates(); renderPlan(); } };
+  // استعادة نطاق تشغيل سابق (من offerResume)
+  init.restoreScope = (sc) => {
+    if (!sc) return;
+    scope.kind = sc.kind || 'term'; scope.units = new Set(sc.units || []); scope.weekDay = sc.weekDay || ''; scope.from = sc.from || ''; scope.to = sc.to || '';
+    const r2 = document.querySelector(`input[name=scope][value="${scope.kind}"]`); if (r2) r2.checked = true;
+    if (scope.weekDay) $('weekDay').value = scope.weekDay;
+    if (sc.dsrc) { useFile = hasFileDates(pkg) && sc.dsrc === 'file'; const rd = document.querySelector(`input[name=dsrc][value="${useFile ? 'file' : 'seq'}"]`); if (rd) rd.checked = true; }
+    renderUnits(); renderRange(); scopeUi();
+  };
   $('startBtn').onclick = run;
   $('stopBtn').onclick = () => { stopFlag = true; stopHooks.splice(0).forEach((f) => f()); $('stopBtn').disabled = true; };
   $('reportBtn').onclick = async () => {
     const rep = {
-      version: chrome.runtime.getManifest().version, term: termNo,
-      pkg: pkg && { title: pkg.title, subject: pkg.subject, grade: pkg.grade, lessons: lessonGroups(pkg).map((g) => ({ unit: g.unit, lesson: g.lesson, sessions: g.sessions.length })) },
-      tree: diag.tree, plan: diag.plan, log: diag.log,
+      version: chrome.runtime.getManifest().version, term: termNo, scope: { kind: scope.kind, units: [...scope.units], weekDay: scope.weekDay, from: scope.from, to: scope.to, fileDates: useFile },
+      pkg: pkg && { title: pkg.title, subject: pkg.subject, grade: pkg.grade, dated: datedCount(pkg), lessons: lessonGroups(pkg).map((g) => ({ unit: g.unit, lesson: g.lesson, sessions: g.sessions.length, dates: g.sessions.map((s) => s.pubDate || '').filter(Boolean) })) },
+      lint: diag.lint || [], tree: diag.tree, plan: diag.plan, failed: diag.failed, log: diag.log,
     };
     const t = JSON.stringify(rep, null, 1);
     try { await navigator.clipboard.writeText(t); } catch (e) { const ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); }
@@ -1224,6 +1370,9 @@ async function init() {
   };
 }
 const endBeat = () => { if (running) { clearInterval(hb); chrome.storage.session.remove('batchRun').catch(() => {}); chrome.storage.local.remove('semesterLock').catch(() => {}); } };
+// خطأ غير متوقع خارج سلّم المعالجة: يُسجَّل ولا يُسقط التشغيل (المحاولة الجارية تعالج أخطاءها بنفسها)
+window.addEventListener('unhandledrejection', (e) => { try { const m = String((e.reason && e.reason.message) || e.reason || '').slice(0, 120); if (m && !/stop/.test(m)) logLine('info', 'خطأ غير متوقع (تم تجاوزه): ' + m); e.preventDefault(); } catch (x) {} });
+window.addEventListener('error', (e) => { try { logLine('info', 'خطأ غير متوقع (تم تجاوزه): ' + String(e.message || '').slice(0, 120)); } catch (x) {} });
 // تنبيه قبل إغلاق النافذة أثناء التشغيل (وإن أُغلقت يُستأنف عند فتحها)
 window.addEventListener('beforeunload', (e) => { if (running) { e.preventDefault(); e.returnValue = ''; } });
 window.addEventListener('pagehide', endBeat);
@@ -1237,6 +1386,7 @@ async function offerResume() {
   $('pkgSel').value = run0.pkgId; $('pkgSel').onchange();
   const radio = document.querySelector(`input[name=term][value="${run0.term}"]`); if (radio) radio.checked = true;
   if (run0.startTouched && run0.start) { $('start').value = run0.start; startTouched = true; renderDays(); }
+  if (run0.scope && init.restoreScope) init.restoreScope(run0.scope);
   let left = 10, cancelled = false;
   const tick = () => {
     if (cancelled) return;
@@ -1247,3 +1397,11 @@ async function offerResume() {
   const iv = setInterval(tick, 1000); tick();
 }
 init().then(offerResume).catch(() => {});
+// للاختبار الآلي فقط (?debug=1): يكشف الحالة الداخلية دون أثر على الاستخدام العادي
+if (q.get('debug') === '1') {
+  window.__hadirSem = {
+    set(o) { if (o.pkg) pkg = o.pkg; if (o.state) state = o.state; if (o.settings) settings = o.settings; if (o.days) days = o.days; if (o.scope) Object.assign(scope, o.scope, o.scope.units ? { units: new Set(o.scope.units) } : {}); if (o.useFile != null) useFile = o.useFile; if (o.start) $('start').value = o.start; },
+    buildPlan, assignDates, shiftDate, conflicts,
+    get plan() { return plan; }, get queue() { return queue; }, get treeNodes() { return treeNodes; }, get log() { return diag.log; },
+  };
+}
