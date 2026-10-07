@@ -4,7 +4,9 @@ import { bestLesson, rankLessons, lessonNum, unitNum, kwNorm, kwScore, bestTreeL
 import { parsePlanText, parsePlanBest, NOOR_STRATEGIES, NOOR_RESOURCES, NOOR_LEVELS, SAMPLE_PLAN, mapStrategies, mapResources } from './parse.js';
 import { AFAQ } from './afaq-config.js';
 import { remoteLesson, isRemote, REMOTE_ERR } from './remote.js';
-export { isRemote, REMOTE_ERR };
+import { layoutDates, isIso, weekStart, weekEnd, inWeekOf, isSchoolDay } from './dates.js';
+import { normalizePackage, normalizeLesson, hasFileDates, datedCount, lintPackage, lintLevel } from './lint.js';
+export { isRemote, REMOTE_ERR, layoutDates, isIso, weekStart, weekEnd, inWeekOf, isSchoolDay, normalizePackage, normalizeLesson, hasFileDates, datedCount, lintPackage, lintLevel };
 export const SERVICE = !!AFAQ.SERVICE;
 const SERVICE_ONLY = 'في نسخة منصة أفق تأتي المواد من اشتراكك فقط — فعّل اشتراكك من موقع المنصة.';
 
@@ -42,6 +44,8 @@ export const DEFAULT_SETTINGS = {
   pickLesson: true,              // اختيار الدرس من شجرة نور تلقائيًا إن لم يكن مختارًا
   titleSuffix: true,             // «(2)» في عنوان الحصة الثانية من الدرس (كما في قائمة التحاضير)
   noorSync: true,                // قراءة قائمة التحاضير في نور لتعليم ما حُفظ
+  fileDates: true,               // تواريخ النشر المكتوبة في ملف المادة تُستعمل كما هي (وما بعدها يتبعها)
+  autoContinue: true,            // «فصل كامل»: لا توقف عند تعارضات الربط — تبدأ وحدها بعد مهلة وتتخطى ما لم يُربط
 };
 export async function getSettings() {
   const r = await chrome.storage.local.get('settings');
@@ -122,6 +126,7 @@ function migrateState(st) {
 export async function getPackages() {
   const r = await chrome.storage.local.get(['packages', 'pkgState']);
   const all = Array.isArray(r.packages) ? r.packages : [];
+  all.forEach(normalizePackage);   // تاريخ النشر في الحصص (من ملف أو من الخادم) بصيغة موحّدة
   return {
     packages: SERVICE ? all.filter((p) => p.remote) : all,   // نسخة الخدمة: مواد الاشتراك فقط
     state: migrateState(Object.assign({ pkgId: null, lessonId: null, sessions: {} }, r.pkgState || {})),
@@ -340,6 +345,16 @@ export async function setPkgDays(pkgId, days) {
   await savePkgState(state);
 }
 
+// بطاقة المادة في نور التي اختيرت لهذه الحزمة (لا يُسأل عنها مرة أخرى): { cid, title, prepUrl, at }
+export function knownCourse(state, pkgId) { const c = state && state.courses && state.courses[pkgId]; return c && c.cid ? c : null; }
+export async function rememberCourse(pkgId, course) {
+  if (!pkgId || !course || !course.cid) return;
+  const { state } = await getPackages();
+  state.courses = Object.assign({}, state.courses || {}, { [pkgId]: { cid: course.cid, title: course.title || '', prepUrl: course.prepUrl || '', at: Date.now() } });
+  await savePkgState(state);
+}
+export async function forgetCourse(pkgId) { const { state } = await getPackages(); if (state.courses) delete state.courses[pkgId]; await savePkgState(state); }
+
 // التواريخ المستخدمة في حصص الحزمة: { 'yyyy-mm-dd': [{lessonId, saved}] }
 export function usedDates(pkg, state) {
   const out = {};
@@ -358,6 +373,13 @@ export function suggestDate(state, settings, pkg, session) {
   if (pkg && session) {
     const s = sessionStatus(state, pkg.id, session.id);
     if (!s.saved && s.date && s.date >= today) return { date: s.date, why: 'same' };
+    // تاريخ مكتوب في ملف المادة لهذه الحصة: هو المقترح (يُنقل إلى يوم الحصة التالي إن لم يكن يوم حصة أو كان مستعملًا)
+    if (!s.saved && isIso(session.pubDate) && (!settings || settings.fileDates !== false)) {
+      const usedF = usedDates(pkg, state);
+      let d = nextSchoolDay(session.pubDate, days, true);
+      for (let i = 0; i < 60 && usedF[d] && !usedF[d].some((u) => u.lessonId === session.id); i++) d = nextSchoolDay(d, days, false);
+      return { date: d, why: 'file', moved: d !== session.pubDate, from: session.pubDate };
+    }
   }
   const used = pkg ? usedDates(pkg, state) : {};
   // آخر تاريخ نشر استخدمته في هذه المادة
@@ -405,6 +427,7 @@ export const newId = (p = 's') => p + Date.now().toString(36) + Math.random().to
 
 export async function installPackage(pkg) {
   if (SERVICE) throw new Error(SERVICE_ONLY);
+  normalizePackage(pkg);
   const { packages } = await getPackages();
   const i = packages.findIndex((p) => p.id === pkg.id);
   pkg.installed = Date.now();

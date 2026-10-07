@@ -1,4 +1,6 @@
 // parse.js — تحويل نص التحضير (Word / Markdown / نص عادي) إلى حصص جاهزة لبنود نور
+// يقرأ أيضًا «تاريخ النشر» المكتوب في الملف (في عنوان الحصة أو الدرس أو الوحدة أو الأسبوع، أو بندًا مستقلًا) — انظر dates.js
+import { findDate, splitDateFromTitle, isPubLabel, isWeekTitle, weekNo, isoOf as isoOfDate, toLatinDigits } from './dates.js';
 
 export const NOOR_STRATEGIES = ['الفصل المقلوب', 'التعلم التعاوني', 'التعلم التشاركي', 'التعلم الذاتي', 'التعلم بالاكتشاف',
   'التعلم المبني على حل المشكلات', 'التعلم المبني على المشاريع', 'التعلم المبني على اللعب', 'التعلم بالنمذجة', 'التعلم المتمايز',
@@ -35,14 +37,29 @@ const SECTIONS = [
   ['homework', /^(الواجب|واجب|الواجبات|homework)/i],
   ['support', /^(الدعم|الإثراء|الاثراء|المعالجة|differentiation|support|extension)/i],
   ['notes', /^(ملاحظات|notes?)/i],
+  ['week', /^(الأسبوع|الاسبوع|أسبوع|اسبوع|week)\s*(?:رقم|no\.?|number)?\s*[:：]?\s*[\d٠-٩]{0,2}\s*$/i],
 ];
 // loose (للعناوين والتسميات فقط): يسمح برقم أو رمز قبل اسم البند «١ المخرجات التعليمية»، «🎯 المخرجات»
+// pubdate: «تاريخ النشر» (أو «التاريخ» / «date» وحدها) — بند خاص يحمل تاريخ نشر الحصة لا نصًا
 export function sectionOf(t, loose = false) {
   let x = bare(t).replace(/^#+\s*/, '').replace(/^\(?[\d٠-٩]+\s*[.)\-–:]\s*/, '');   // «(٣) …» «٣- …»
   if (loose) x = x.replace(/^[^\p{L}\p{N}]+/u, '').replace(/^[\d٠-٩]+\s*/, '').replace(/^[^\p{L}]+/u, '');
   x = x.trim();
+  if (isPubLabel(x)) return 'pubdate';
   for (const [k, re] of SECTIONS) if (re.test(x)) return k;
   return null;
+}
+// سطر هو تاريخ وحده (مع قوسين أو اسم يوم أو تسمية «تاريخ النشر» قبله فقط)
+export function onlyDate(line, ctx) {
+  const t = String(line || '').replace(/^#+\s*/, '').trim();
+  if (!t || t.length > 60) return null;
+  const f = findDate(t, ctx);
+  if (!f) return null;
+  const src = toLatinDigits(t).replace(/[ً-ْٰـ‏‎​‪-‮⁦-⁩﻿]/g, '');
+  const pre = src.slice(0, f.start).trim(), post = src.slice(f.end).trim();
+  const preOk = !pre || /^[(\[\-–—•*]*$/.test(pre) || isPubLabel(pre.replace(/[(\[]+$/, ''));
+  const postOk = !post || /^[)\]\-–—.،,]*$/.test(post) || /^(?:هـ|ه|م|ميلادي|هجري)?\s*[)\]]?$/.test(post);
+  return preOk && postOk ? f.iso : null;
 }
 
 // ---------- مطابقة الاستراتيجيات والمصادر بقوائم نور ----------
@@ -150,28 +167,55 @@ const RE_SESSION_SPLIT = new RegExp('^((?:الحصة\\s+' + ORD_ANY + ')|(?:(?:s
 export const isSessionLine = (l) => RE_SESSION.test(bare(String(l || '').replace(/^#+\s*/, '')).replace(/^\*+|\*+$/g, '').trim());
 
 // fieldMajor: «التحضير المدمج» — كل بند ثم أجزاء الحصص داخله («المخرجات» ← «الحصة الأولى: …» ← «الحصة الثانية: …»)
+// تاريخ النشر يُقرأ من: عنوان الحصة «الحصة الأولى (12/10/2026)» · عنوان الدرس أو الوحدة أو الأسبوع (يُعطى لأول حصة بعده) ·
+// بند «تاريخ النشر» داخل الحصة · سطر فيه تاريخ وحده بعد عنوان الحصة · «تاريخ البداية: …» في أول الملف (لأول حصة)
 export function parsePlanText(text, opts = {}) {
   const fieldMajor = !!(opts && opts.fieldMajor);
-  const lines = String(text || '').replace(/\r/g, '').replace(/ /g, ' ').split('\n');
+  const lines = String(text || '').replace(/\r/g, '').replace(/ /g, ' ').split('\n');
   const created = [];
   const bySess = new Map();
   let unit = '', lesson = '', cur = null, sec = null;
+  let pendingDate = '';        // تاريخ من عنوان درس/وحدة/أسبوع أو «تاريخ البداية»: لأول حصة تُنشأ بعده
+  let week = '';               // الأسبوع الحالي (من عنوان «الأسبوع 3») — يُسجَّل على حصصه
+  let lastDate = '';           // آخر تاريخ قُرئ: مرجع السنة الناقصة «12/10»
+  let awaitDate = false;       // «تاريخ النشر» في سطر وقيمته في السطر التالي
+  let awaitWeek = false;       // «الأسبوع:» في سطر ورقمه في السطر التالي
+  const dctx = () => ({ ref: lastDate || (opts && opts.refDate) || isoOfDate(new Date()) });
   const sk = (t) => unit + '|' + lesson + '|' + normA(bare(t)).replace(/[\s:：.\-–—]+/g, ' ').trim();
-  const newSession = (title, implicit) => { const s = { unit, lesson, title, sec: {}, implicit: !!implicit }; created.push(s); if (!bySess.has(sk(title))) bySess.set(sk(title), s); return s; };
+  const newSession = (title, implicit) => {
+    const s = { unit, lesson, title, sec: {}, implicit: !!implicit, week };
+    if (pendingDate) { s.hdrDate = pendingDate; pendingDate = ''; }
+    created.push(s);
+    if (!bySess.has(sk(title))) bySess.set(sk(title), s);
+    return s;
+  };
   const startSession = (title) => { cur = newSession(title); sec = null; };
+  // تاريخ في عنوان: يُقتطع منه ويُسجَّل (للحصة نفسها، أو للحصة التالية إن كان عنوان درس/وحدة)
+  const takeDate = (t) => { const r = splitDateFromTitle(t, dctx()); if (r.iso) lastDate = r.iso; return r; };
+  const setDate = (iso) => { if (!iso) return; lastDate = iso; if (cur) { cur.sec.pubdate = [iso]; cur.explicitDate = true; } else pendingDate = iso; };
+  // إضافة سطر إلى بند — بند التاريخ يُقرأ تاريخًا لا نصًا
+  const addLine = (c, k, t) => {
+    if (k === 'pubdate') { const f = findDate(t, dctx()); if (f) { c.sec.pubdate = [f.iso]; c.explicitDate = true; lastDate = f.iso; } return; }
+    (c.sec[k] = c.sec[k] || []).push(t);
+  };
   // داخل بند (المدمج): الحصة نفسها تُستكمل من كل بند، ويبقى البند الحالي
   const partKinds = new Set();
   const sessionPart = (m) => {
-    const title = m[1].trim();
+    const t0 = takeDate(m[1].trim());
+    const title = t0.text;
     partKinds.add(sec);
     cur = bySess.get(sk(title)) || newSession(title);
     cur.sec[sec] = cur.sec[sec] || [];
-    if (m[2] && m[2].trim()) cur.sec[sec].push(m[2].trim());
+    if (t0.iso) { cur.sec.pubdate = [t0.iso]; cur.explicitDate = true; }
+    if (m[2] && m[2].trim()) addLine(cur, sec, m[2].trim());
   };
 
   let pendingLabel = null;   // «عنوان الدرس» في سطر وقيمته في السطر التالي
   const setLabel = (kind, val) => {
     cur = null; sec = null;
+    const r = takeDate(val);
+    if (r.iso) pendingDate = r.iso;
+    val = r.text;
     if (kind === 'الوحدة') { unit = val; return; }
     lesson = val;
     // اسم درس نور الكامل «Unit1: It's a happy day!: Lesson1» ← الوحدة ما قبل النقطتين الأخيرتين
@@ -181,70 +225,113 @@ export function parsePlanText(text, opts = {}) {
   for (const raw of lines) {
     const line = raw.trim();
     if (!line || /^[-=_*]{3,}$/.test(line)) continue;
+    if (awaitDate) {
+      awaitDate = false;
+      const d = onlyDate(line, dctx());
+      if (d) { setDate(d); continue; }
+    }
+    if (awaitWeek) {
+      awaitWeek = false;
+      const n = /^[\d٠-٩]{1,2}$/.test(line) ? +toLatinDigits(line) : weekNo(line);
+      if (n != null && n > 0) { week = 'الأسبوع ' + n; if (cur) cur.week = week; continue; }
+    }
     if (pendingLabel) {
       const kind = pendingLabel; pendingLabel = null;
       if (kind !== 'الحصة') { setLabel(kind, line.replace(/^#+\s*/, '').trim()); continue; }
-      if (cur && !sec) continue;   // عنوان الحصة (موضوعها) لا يقابله بند في نور
+      if (cur && !sec) { const r = takeDate(line); if (r.iso) setDate(r.iso); continue; }   // عنوان الحصة (موضوعها) لا يقابله بند في نور
     }
     {
       const lb = bare(line.replace(/^#+\s*/, '')).replace(/^\*+|\*+$/g, '').trim().match(RE_LABEL);
       if (lb) {
         const val = (lb[2] || '').trim();
-        if (lb[1] === 'الحصة') { if (!val) pendingLabel = 'الحصة'; continue; }
+        if (lb[1] === 'الحصة') { if (!val) pendingLabel = 'الحصة'; else { const r = takeDate(val); if (r.iso) setDate(r.iso); } continue; }
         if (val) setLabel(lb[1], val); else pendingLabel = lb[1];
         continue;
       }
     }
     // «> نص»: محتوى دائمًا (لا يُقرأ عنوانًا حتى لو بدأ باسم بند)
-    if (line.startsWith('>')) { if (cur && sec) cur.sec[sec].push(line.replace(/^>\s?/, '')); continue; }
+    if (line.startsWith('>')) { if (cur && sec) addLine(cur, sec, line.replace(/^>\s?/, '')); continue; }
     const md = line.match(/^#{1,6}\s*(.+)$/);
-    const head = bare(md ? md[1] : line).replace(/^\*+|\*+$/g, '').trim();
-    const short = head.length <= 110;
+    const head0 = bare(md ? md[1] : line).replace(/^\*+|\*+$/g, '').trim();
+    const short = head0.length <= 110;
+
+    // سطر تاريخ وحده (بعد عنوان حصة أو درس، قبل أي بند): تاريخ نشر الحصة (أو التالية)
+    if (!sec && short) { const d = onlyDate(head0, dctx()); if (d) { setDate(d); continue; } }
+    // عنوان أسبوع: «# الأسبوع 3: 12/10/2026 – 16/10/2026» — تاريخه لأول حصة بعده، واسمه لكل حصصه
+    if (short && (md || head0.length <= 60) && isWeekTitle(head0)) {
+      const r = takeDate(head0);
+      cur = null; sec = null;
+      const n = weekNo(head0);
+      week = n != null ? 'الأسبوع ' + n : r.text;
+      if (r.iso) pendingDate = r.iso;
+      continue;
+    }
+    // تاريخ مكتوب في عنوان الوحدة/الدرس/الحصة: يُفصل عنه
+    const hd = short && (md || RE_UNIT.test(head0) || RE_LESSON.test(head0) || RE_SESSION.test(head0) || RE_MARK.test(head0)) ? takeDate(head0) : { iso: '', text: head0 };
+    const head = hd.text;
 
     const mk = md && head.match(RE_MARK);
     if (mk) {
       const kind = mk[1].toLowerCase(), name = mk[2].trim();
-      if (kind === 'الوحدة' || kind === 'unit') { cur = null; sec = null; unit = !name ? head : RE_ORD_ONLY.test(name) ? 'الوحدة ' + name : name; continue; }
-      if (kind === 'الدرس' || kind === 'lesson') { cur = null; sec = null; lesson = !name ? head : RE_ORD_ONLY.test(name) ? 'الدرس ' + name : name; continue; }
+      if (kind === 'الوحدة' || kind === 'unit') { cur = null; sec = null; unit = !name ? head : RE_ORD_ONLY.test(name) ? 'الوحدة ' + name : name; if (hd.iso) pendingDate = hd.iso; continue; }
+      if (kind === 'الدرس' || kind === 'lesson') { cur = null; sec = null; lesson = !name ? head : RE_ORD_ONLY.test(name) ? 'الدرس ' + name : name; if (hd.iso) pendingDate = hd.iso; continue; }
       if (!name) { cur = newSession('الحصة الأولى', true); sec = null; } else startSession(RE_ORD_ONLY.test(name) ? 'الحصة ' + name : name);
+      if (hd.iso) { cur.sec.pubdate = [hd.iso]; cur.explicitDate = true; }
       continue;
     }
 
-    if (short && RE_UNIT.test(head) && (md || head.length <= 90)) { cur = null; sec = null; unit = head; continue; }
-    if (short && RE_LESSON.test(head) && (md || head.length <= 100)) { cur = null; sec = null; lesson = head; continue; }
+    if (short && RE_UNIT.test(head) && (md || head.length <= 90)) { cur = null; sec = null; unit = head; if (hd.iso) pendingDate = hd.iso; continue; }
+    if (short && RE_LESSON.test(head) && (md || head.length <= 100)) { cur = null; sec = null; lesson = head; if (hd.iso) pendingDate = hd.iso; continue; }
     // داخل بند (المدمج): سطر «الحصة الأولى: …» جزء من البند الحالي لتلك الحصة — أما العناوين (#) فحصص جديدة
-    if (fieldMajor && sec && !md && head.length <= 400) { const m = head.match(RE_SESSION_SPLIT); if (m) { sessionPart(m); continue; } }
-    if (short && (md ? RE_SESSION : RE_SESSION_PLAIN).test(head) && (md || head.length <= 100)) { startSession(head); continue; }
+    if (fieldMajor && sec && !md && head0.length <= 400) { const m = head0.match(RE_SESSION_SPLIT); if (m) { sessionPart(m); continue; } }
+    if (short && (md ? RE_SESSION : RE_SESSION_PLAIN).test(head) && (md || head.length <= 100)) { startSession(head); if (hd.iso) { cur.sec.pubdate = [hd.iso]; cur.explicitDate = true; } continue; }
 
     // عنوان قسم: بعلامة # أو سطر قصير يطابق اسم قسم معروف (مثل «المخرجات:»)
     // «- Activities: …» «- Strategy: …» نقطة داخل بند فيها تسمية ونص: محتوى البند، لا بند جديد
-    const bulletPair = /^\s*[-*•▪◦·]\s*\S/.test(line) && !/^\*\*/.test(line) && (/[:：]\s*\S/.test(head) || /[.!?؟]\s*$/.test(line));   // أو جملة «- Activities and days of the week.»
-    const asContent = !md && cur && sec && (RE_NUMBERED_ITEM.test(head) || bulletPair || (sec === 'procedures' && RE_ACTIVITY_DETAIL.test(head)));
-    let k = asContent ? null : md ? sectionOf(head, true) : head.length <= 40 || (head.length <= 90 && RE_NOOR_LONG.test(head)) ? sectionOf(head) : null;
+    const bulletPair = /^\s*[-*•▪◦·]\s*\S/.test(line) && !/^\*\*/.test(line) && (/[:：]\s*\S/.test(head0) || /[.!?؟]\s*$/.test(line));   // أو جملة «- Activities and days of the week.»
+    const asContent = !md && cur && sec && (RE_NUMBERED_ITEM.test(head0) || bulletPair || (sec === 'procedures' && RE_ACTIVITY_DETAIL.test(head0)));
+    let k = asContent ? null : md ? sectionOf(head0, true) : head0.length <= 40 || (head0.length <= 90 && RE_NOOR_LONG.test(head0)) ? sectionOf(head0) : null;
     // «الاستراتيجيات: العصف الذهني، …» — اسم القسم ثم المحتوى في نفس السطر
-    if (!k && !asContent && /[:：]/.test(head)) { const pre = head.split(/[:：]/)[0]; if (pre.length <= 30) k = sectionOf(pre); }
+    if (!k && !asContent && /[:：]/.test(head0)) { const pre = head0.split(/[:：]/)[0]; if (pre.length <= 30) k = sectionOf(pre); }
+    if (k === 'pubdate') {
+      // «تاريخ النشر: 12/10/2026» للحصة الحالية (أو التالية إن لم تبدأ حصة بعد — مثل «تاريخ البداية» في أول الملف)
+      const after = line.replace(/^#+\s*/, '').split(/[:：]/).slice(1).join(':').trim();
+      const f = after ? findDate(after, dctx()) : null;
+      if (f) setDate(f.iso);
+      else if (!after) { awaitDate = true; if (cur && fieldMajor) sec = 'pubdate'; }
+      if (cur && fieldMajor) sec = 'pubdate';   // المدمج: «تاريخ النشر» ثم «الحصة الأولى: 12/10» «الحصة الثانية: 14/10»
+      continue;
+    }
+    if (k === 'week') {
+      const after = line.replace(/^#+\s*/, '').split(/[:：]/).slice(1).join(':').trim();
+      const n = weekNo(after || head0) ?? (after ? weekNo('الأسبوع ' + after) : null);
+      if (n != null) { week = 'الأسبوع ' + n; if (cur) cur.week = week; } else if (!after) awaitWeek = true;
+      const r = takeDate(after || ''); if (r.iso) setDate(r.iso);
+      continue;
+    }
     if (k) {
       if (!cur) { if (!lesson && !unit) lesson = 'الدرس'; cur = newSession('الحصة الأولى', true); }
       sec = k; cur.sec[k] = cur.sec[k] || [];
       // نص بعد النقطتين في نفس السطر: «المستوى: تطبيق»
       const after = line.replace(/^#+\s*/, '').split(/[:：]/).slice(1).join(':').trim();
-      if (after) cur.sec[k].push(after);
+      if (after) addLine(cur, k, after);
       continue;
     }
     // عنوان غير معروف داخل بند: يُضاف نصه دون علامات #
-    if (cur && sec) cur.sec[sec].push(md ? md[1] : raw);
+    if (cur && sec) addLine(cur, sec, md ? md[1] : raw);
   }
   if (opts && opts.stats) opts.stats.partKinds = partKinds.size;
-  const filled = (c) => Object.values(c.sec).reduce((n, a) => n + (a.some((l) => l.trim()) ? 1 : 0), 0);
+  const CONTENT_KEYS = (c) => Object.keys(c.sec).filter((k) => k !== 'pubdate' && k !== 'week');
+  const filled = (c) => CONTENT_KEYS(c).reduce((n, k) => n + (c.sec[k].some((l) => l.trim()) ? 1 : 0), 0);
   const txt = (c, k) => (c.sec[k] || []).map((l) => l.replace(/\s+/g, ' ').trim()).filter(Boolean).join(' ');
   // نسخة مكررة فعلًا: كل ما فيها موجود في الأخرى (مثل صفحة فيها المدمج والمنفصل معًا)
-  const within = (small, big) => Object.keys(small.sec).every((k) => !txt(small, k) || txt(big, k).includes(txt(small, k)));
+  const within = (small, big) => CONTENT_KEYS(small).every((k) => !txt(small, k) || txt(big, k).includes(txt(small, k)));
   const out = [], at = new Map();
   for (const c of created.filter((x) => filled(x) > 0)) {
     const key = c.unit + '|' + c.lesson + '|' + normA(bare(c.title));
     const i = at.get(key);
-    if (i != null && within(c, out[i])) continue;
-    if (i != null && within(out[i], c)) { out[i] = c; continue; }
+    if (i != null && within(c, out[i])) { if (!out[i].sec.pubdate && c.sec.pubdate) out[i].sec.pubdate = c.sec.pubdate; continue; }
+    if (i != null && within(out[i], c)) { if (!c.sec.pubdate && out[i].sec.pubdate) c.sec.pubdate = out[i].sec.pubdate; out[i] = c; continue; }
     if (i == null) at.set(key, out.length);
     out.push(c);
   }
@@ -306,11 +393,15 @@ function buildSession(c, i) {
   let notes = hw.length ? '<p><strong>الواجب:</strong> ' + inline(hw.map((l) => l.replace(/^\s*[-*•]\s*/, '').trim()).join(' — ')) + '</p>' : '';
   if (extraNotes.length) notes += toHtml(extraNotes);
 
+  // تاريخ النشر: بند «تاريخ النشر» أو تاريخ في عنوان الحصة، وإلا تاريخ عنوان الدرس/الوحدة/الأسبوع (لأول حصة بعده)
+  const pubDate = (get('pubdate')[0] || '').trim() || c.hdrDate || '';
   return {
     id: 's' + Date.now().toString(36) + i + Math.random().toString(36).slice(2, 5),
     unit: c.unit || '',
     lesson: c.lesson || 'الدرس',
     title: c.title || 'الحصة ' + (ORD_F[i] || i + 1),
+    ...(pubDate ? { pubDate } : {}),
+    ...(c.week ? { week: c.week } : {}),
     outcomes: toHtml(outcomes),
     levels: levels.slice(0, 3),
     strategies: st.strategies, strategiesOther: st.other,
@@ -327,6 +418,8 @@ function buildSession(c, i) {
 export const SAMPLE_PLAN = `# الوحدة الأولى
 ## الدرس الأول: عنوان الدرس
 ## الحصة الأولى: عنوان الحصة
+### تاريخ النشر
+12/10/2026
 ### المخرجات
 ١. أن يحدد الطالب … — المستوى: تطبيق
 ٢. أن يوضح … — المستوى: فهم
