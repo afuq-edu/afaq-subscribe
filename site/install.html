@@ -39,7 +39,7 @@
       const c = window.AFAQ_CONFIG;
       const r = await fetch(c.SUPABASE_URL + '/rest/v1/settings?key=eq.extension_url&select=value', { headers: { apikey: c.SUPABASE_ANON_KEY } });
       const u = String(((await r.json())[0] || {}).value || '').trim();
-      if (!/^https:\/\//.test(u)) return;
+      if (!/^https:\/\/(chromewebstore\.google\.com|chrome\.google\.com\/webstore)\//.test(u)) return;   // رابط متجر كروم فقط
       document.getElementById('storeLink').href = u;
       document.getElementById('store').hidden = false;
       document.getElementById('manual').hidden = true;
