@@ -63,7 +63,8 @@
 
 1. افتح `extension/afaq-config.js` واكتب فيه القيم نفسها: `SUPABASE_URL` و`SUPABASE_ANON_KEY` (رابط الموقع `SITE_URL` مكتوب فيه مسبقًا).
 2. ملف `extension/manifest.json` مضبوط مسبقًا ليقبل رسائل موقعك فقط (`https://afuq-edu.github.io/afaq-subscribe/*`)، فلا تحتاج تعديله.
-3. **للتجربة قبل المتجر:** `chrome://extensions` ← فعّل «وضع المطوّر» ← «تحميل إضافة غير مضغوطة» ← اختر مجلد `extension`. انسخ **المعرّف** الظاهر في بطاقتها إلى `EXTENSION_ID` في `site/config.js`، واحفظ (Commit) فيُعاد نشر الموقع تلقائيًا.
+3. **للتجربة قبل المتجر:** `chrome://extensions` ← فعّل «وضع المطوّر» ← «تحميل إضافة غير مضغوطة» ← اختر مجلد `extension`. معرّفها ثابت (`lakfolcghlefjickbdenpoodilponbkp`) بفضل حقل `key` في `manifest.json`، وهو مكتوب مسبقًا في `EXTENSION_ID` في `site/config.js`، فلا تحتاج نسخه.
+   > **قبل رفعها للمتجر احذف سطر `"key"` من `manifest.json`**، فالمتجر يرفض هذا الحقل ويعطيها معرّفًا جديدًا.
 4. **النشر:** أنشئ حساب مطوّر في متجر كروم (Chrome Web Store Developer Dashboard، برسوم تسجيل لمرة واحدة)، ثم اضغط مجلد `extension` في ملف zip وارفعه.
    - **Visibility:** «Unlisted» (لا تظهر في البحث، تُثبَّت بالرابط فقط) أو «Public».
    - **Privacy policy:** `رابط-موقعك/privacy.html`.
