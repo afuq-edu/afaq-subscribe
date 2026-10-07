@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>لوحة الإدارة — منصة أفق التعليمية</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 22h24' stroke='%2313263F' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M9 22a7 7 0 0 1 14 0' fill='%23D99A2B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 22h26" stroke="#13263F" stroke-width="2.4" stroke-linecap="round"/><path d="M9 22a7 7 0 0 1 14 0" fill="#D99A2B"/><path d="M16 9v3M8.5 12.5l2 2M23.5 12.5l-2 2" stroke="#D99A2B" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>لوحة الإدارة</span>
+    </a>
+    <nav><a class="link" href="index.html">الموقع</a><button class="btn ghost sm" id="logout" type="button" hidden>خروج</button></nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-bottom:64px">
+  <section id="gate" class="panel auth" hidden>
+    <h2>دخول المدير</h2>
+    <form class="form" id="loginForm" novalidate>
+      <label class="field"><span>البريد الإلكتروني</span><input type="email" name="email" dir="ltr" required></label>
+      <label class="field"><span>كلمة المرور</span><input type="password" name="password" dir="ltr" required></label>
+      <div class="msg bad" id="loginMsg" hidden></div>
+      <button class="btn primary" type="submit">دخول</button>
+    </form>
+  </section>
+  <section id="denied" class="panel auth" hidden>
+    <h2>هذا الحساب ليس حساب مدير</h2>
+    <p class="muted" style="margin-top:8px">أنت داخل بحساب معلم. اضغط «خروج» أعلى الصفحة ثم ادخل بحساب المدير. (تُمنح صلاحية المدير من قاعدة البيانات، كما في دليل النشر.)</p>
+  </section>
+
+  <div id="app" hidden>
+    <div class="admin-tabs" role="tablist">
+      <button role="tab" data-tab="home" aria-selected="true">نظرة عامة</button>
+      <button role="tab" data-tab="codes">رموز التفعيل</button>
+      <button role="tab" data-tab="teachers">المعلمون</button>
+      <button role="tab" data-tab="packages">الباقات والتحاضير</button>
+      <button role="tab" data-tab="terms">الفصول</button>
+      <button role="tab" data-tab="settings">الإعدادات</button>
+    </div>
+
+    <!-- نظرة عامة -->
+    <section data-pane="home">
+      <div class="stats" id="stats"></div>
+      <div class="msg warn" id="setupHints" hidden style="margin-top:18px"></div>
+    </section>
+
+    <!-- رموز التفعيل -->
+    <section data-pane="codes" hidden>
+      <div class="cols">
+        <div class="panel">
+          <h2>إصدار رمز</h2>
+          <p class="muted">باسم المعلم كما في حسابه، فصليًا أو سنويًا، لباقة أو أكثر.</p>
+          <form class="form" id="issueForm" novalidate>
+            <label class="field"><span>اسم المعلم</span><input name="teacher_name" required placeholder="الاسم الثلاثي"></label>
+            <label class="field"><span>واتساب المعلم <small>(اختياري)</small></span><input name="phone" dir="ltr" placeholder="9689xxxxxxx"></label>
+            <div class="row2">
+              <label class="field"><span>نوع الاشتراك</span><select name="plan" id="issuePlan"><option value="term">فصلي</option><option value="year">سنوي (الفصلان)</option></select></label>
+              <label class="field"><span id="issueTermLbl">الفصل</span><select name="term" id="issueTerm"></select></label>
+            </div>
+            <div class="field"><span>الباقات</span><div class="pkgpick" id="issuePkgs"></div></div>
+            <div class="row2">
+              <label class="field"><span>ملاحظة <small>(اختياري)</small></span><input name="note" placeholder="مثال: دفع عبر بنك مسقط"></label>
+              <label class="field"><span>عدد الرموز</span><input name="count" type="number" min="1" max="50" value="1"></label>
+            </div>
+            <div class="msg" id="issueMsg" hidden></div>
+            <button class="btn primary" type="submit">أصدر الرمز</button>
+          </form>
+          <div id="issued" style="margin-top:16px"></div>
+        </div>
+        <div>
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+            <h2 style="font-size:20px">آخر الرموز</h2>
+            <input id="codeSearch" placeholder="بحث بالاسم أو الرمز" style="max-width:240px;margin-inline-start:auto">
+          </div>
+          <div class="tablewrap"><table class="grid" id="codesTable"></table></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- المعلمون -->
+    <section data-pane="teachers" hidden>
+      <div class="panel" id="grantPanel" style="margin-bottom:22px">
+        <h2>إنشاء اشتراك لمعلم مسجّل</h2>
+        <p class="muted">يُفعَّل فورًا دون رمز تفعيل. الاشتراك السنوي يشمل الفصلين، ويُضاف إليه الفصل الثاني تلقائيًا عند إنشائه.</p>
+        <form class="form" id="grantForm" novalidate>
+          <label class="field"><span>المعلم</span><select name="user" id="grantUser"></select></label>
+          <div class="row2">
+            <label class="field"><span>نوع الاشتراك</span><select name="plan" id="grantPlan"><option value="term">فصلي</option><option value="year">سنوي (الفصلان)</option></select></label>
+            <label class="field"><span id="grantTermLbl">الفصل</span><select name="term" id="grantTerm"></select></label>
+          </div>
+          <div class="field"><span>الباقات</span><div class="pkgpick" id="grantPkgs"></div></div>
+          <div class="msg" id="grantMsg" hidden></div>
+          <button class="btn primary" type="submit">أنشئ الاشتراك</button>
+        </form>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+        <h2 style="font-size:20px">المعلمون</h2>
+        <input id="tSearch" placeholder="بحث بالاسم أو البريد أو الهاتف" style="max-width:280px;margin-inline-start:auto">
+      </div>
+      <div class="tablewrap"><table class="grid" id="tTable"></table></div>
+    </section>
+
+    <!-- الباقات -->
+    <section data-pane="packages" hidden>
+      <div class="cols">
+        <div class="panel">
+          <h2>باقة جديدة</h2>
+          <p class="muted">كل مادة لكل صف باقة مستقلة.</p>
+          <form class="form" id="pkgForm" novalidate>
+            <div class="row2">
+              <label class="field"><span>المادة</span><input name="subject" list="subjList" required placeholder="اللغة الإنجليزية"></label>
+              <label class="field"><span>الصف</span><select name="grade" id="pkgGrade"></select></label>
+            </div>
+            <label class="field"><span>العنوان الظاهر للمعلمين</span><input name="pkg_title" required></label>
+            <label class="field"><span>الرمز الثابت للباقة</span><input name="pkg_id" dir="ltr" required pattern="[a-z0-9-]+"><small>حروف إنجليزية صغيرة وأرقام وشرطة، مثل en-5. لا يتغير بعد الإنشاء.</small></label>
+            <label class="field"><span>وصف <small>(اختياري)</small></span><input name="description"></label>
+            <div class="msg" id="pkgMsg" hidden></div>
+            <button class="btn primary" type="submit">أضف الباقة</button>
+          </form>
+          <datalist id="subjList"></datalist>
+        </div>
+        <div>
+          <h2 style="font-size:20px;margin-bottom:6px">الباقات</h2>
+          <p class="muted small" style="margin-bottom:12px">ارفع لكل فصل ملف المادة المصدَّر من «حاضر» (صفحة المادة ← تصدير ملف). الرفع يستبدل المحتوى السابق.</p>
+          <div class="tablewrap"><table class="grid" id="pkgTable"></table></div>
+          <input type="file" id="pkgFile" accept=".json,application/json" hidden>
+        </div>
+      </div>
+    </section>
+
+    <!-- الفصول -->
+    <section data-pane="terms" hidden>
+      <div class="cols">
+        <div class="panel">
+          <h2>فصل دراسي</h2>
+          <p class="muted">تنتهي الاشتراكات بنهاية يوم «تاريخ النهاية» بتوقيت مسقط.</p>
+          <form class="form" id="termForm" novalidate>
+            <div class="row2">
+              <label class="field"><span>العام الدراسي</span><input name="year" dir="ltr" placeholder="2026/2027" required></label>
+              <label class="field"><span>الفصل</span><select name="term"><option value="1">الفصل الأول</option><option value="2">الفصل الثاني</option></select></label>
+            </div>
+            <div class="row2">
+              <label class="field"><span>البداية</span><input name="starts_on" type="date" required></label>
+              <label class="field"><span>النهاية</span><input name="ends_on" type="date" required></label>
+            </div>
+            <div class="msg" id="termMsg" hidden></div>
+            <button class="btn primary" type="submit">أضف الفصل</button>
+          </form>
+        </div>
+        <div class="tablewrap"><table class="grid" id="termTable"></table></div>
+      </div>
+    </section>
+
+    <!-- الإعدادات -->
+    <section data-pane="settings" hidden>
+      <div class="panel" style="max-width:640px">
+        <h2>الإعدادات</h2>
+        <form class="form" id="setForm" novalidate>
+          <label class="field"><span>اسم الموقع</span><input name="site_name"></label>
+          <label class="field"><span>رقم واتساب المنصة</span><input name="whatsapp" dir="ltr" placeholder="9689xxxxxxx"><small>بالصيغة الدولية دون + أو مسافات. إليه تُرسل طلبات الرموز.</small></label>
+          <label class="field"><span>رابط الإضافة في متجر كروم</span><input name="extension_url" dir="ltr" placeholder="https://chromewebstore.google.com/detail/..."></label>
+          <label class="field"><span>إعلان أعلى الموقع <small>(اختياري)</small></span><input name="announcement"></label>
+          <div class="row2">
+            <label class="field"><span>سعر الباقة — اشتراك فصلي (ر.ع.)</span><input name="price_term" inputmode="decimal" dir="ltr" placeholder="5"></label>
+            <label class="field"><span>سعر الباقة — اشتراك سنوي (ر.ع.)</span><input name="price_year" inputmode="decimal" dir="ltr" placeholder="9"></label>
+          </div>
+          <small class="muted" style="margin-top:-6px">يظهر السعر للمعلمين في صفحة الباقات وفي رسالة الطلب. اتركه فارغًا لإخفائه.</small>
+          <div class="row2">
+            <label class="field"><span>الحد اليومي للحصص لكل معلم</span><input name="daily_limit" type="number" min="10" dir="ltr"><small>حصص مختلفة في ٢٤ ساعة؛ إعادة المحاولة لا تُحتسب.</small></label>
+            <label class="field"><span>أقصى عدد أجهزة لكل معلم</span><input name="max_devices" type="number" min="1" max="5" dir="ltr"></label>
+          </div>
+          <div class="msg" id="setMsg" hidden></div>
+          <button class="btn primary" type="submit">احفظ الإعدادات</button>
+        </form>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/admin.js"></script>
+</body>
+</html>

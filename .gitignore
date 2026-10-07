@@ -1,0 +1,3 @@
+node_modules/
+tests/ext/
+package-lock.json

@@ -1,0 +1,8 @@
+{
+  "name": "afaq-tests",
+  "private": true,
+  "type": "module",
+  "description": "اختبارات منصة أفق: قاعدة البيانات والدورة كاملة",
+  "scripts": { "test": "node db.test.mjs && node e2e.test.mjs" },
+  "dependencies": { "@electric-sql/pglite": "^0.2.17", "jsdom": "^24.0.0" }
+}

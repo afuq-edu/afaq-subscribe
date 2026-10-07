@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>منصة أفق التعليمية — تحضير الفصل كاملًا في منصة نور</title>
+<meta name="description" content="تحاضير جاهزة لكل مادة وصف، متوافقة مع شجرة الدروس في منصة نور، تُعبّأ وتُحفظ تلقائيًا حتى آخر الفصل الدراسي.">
+<meta name="theme-color" content="#13263F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 22h24' stroke='%2313263F' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M9 22a7 7 0 0 1 14 0' fill='%23D99A2B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="announce" id="announce" hidden></div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 22h26" stroke="#13263F" stroke-width="2.4" stroke-linecap="round"/><path d="M9 22a7 7 0 0 1 14 0" fill="#D99A2B"/><path d="M16 9v3M8.5 12.5l2 2M23.5 12.5l-2 2" stroke="#D99A2B" stroke-width="2" stroke-linecap="round"/></svg>
+      <span id="siteName">منصة أفق التعليمية</span>
+    </a>
+    <nav id="nav">
+      <a class="link" href="#packages" data-home>الباقات</a>
+      <a class="link" href="#faq" data-home>أسئلة شائعة</a>
+      <a class="link" href="admin.html" id="navAdmin" hidden>لوحة الإدارة</a>
+      <a class="btn sm" href="#login" id="navLogin">دخول</a>
+      <a class="btn sm primary" href="#dashboard" id="navDash" hidden>حسابي</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ===== إعداد لم يكتمل ===== -->
+  <section class="wrap" id="view-setup" hidden>
+    <div class="panel setup">
+      <h2>الموقع جاهز ويحتاج ربطه بقاعدة البيانات</h2>
+      <p class="muted" style="margin-top:10px">افتح الملف <code>config.js</code> واكتب فيه عنوان مشروع Supabase ومفتاحه العام ومعرّف الإضافة، ثم أعد نشر الموقع. الخطوات كاملة في دليل النشر.</p>
+    </div>
+  </section>
+
+  <!-- ===== الصفحة الرئيسية ===== -->
+  <div id="view-home">
+    <section class="hero">
+      <div class="wrap">
+        <div class="lead">
+          <h1>الفصل كله في منصة نور، يُحضَّر وحده.</h1>
+          <p class="sub">تحاضير جاهزة لكل مادة وصف، مطابقة لشجرة الدروس في نور. تختار الفصل وأول تاريخ، فتُعبّأ كل حصة وتُحفظ بتاريخها حتى آخر درس.</p>
+          <div class="acts">
+            <a class="btn primary" href="#register" id="heroCta">أنشئ حسابك</a>
+            <a class="btn" href="#packages">اختر باقتك</a>
+          </div>
+        </div>
+        <div class="horizon" id="horizon" role="img" aria-label="رسم يوضح حفظ حصص الفصل واحدة بعد أخرى من بدايته حتى نهايته"></div>
+      </div>
+    </section>
+
+    <section class="block" id="how">
+      <div class="wrap">
+        <h2>من التسجيل إلى أول حصة محفوظة</h2>
+        <p class="intro">ثلاث خطوات مرة واحدة في الفصل، ثم يعمل كل شيء من منصة نور.</p>
+        <ol class="steps">
+          <li><span class="n">١</span><h3>أنشئ حسابك</h3><p>باسمك الثلاثي كما سيُكتب في رمز التفعيل، وبريدك ورقم هاتفك.</p></li>
+          <li><span class="n">٢</span><h3>اطلب رمز التفعيل عبر واتساب</h3><p>اختر الاشتراك الفصلي أو السنوي، والمادة والصف، وأرسل الطلب إلى منصة أفق. يصلك رمز باسمك تفعّله من حسابك.</p></li>
+          <li><span class="n">٣</span><h3>ثبّت الإضافة وابدأ</h3><p>تثبّت إضافة «حاضر» في كروم مرة واحدة، فتُربط بحسابك عند فتح الموقع، ثم تبدأ تعبئة الفصل من نور.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="block" id="packages" style="background:var(--paper)">
+      <div class="wrap">
+        <h2>الباقات</h2>
+        <p class="intro">كل مادة لكل صف باقة مستقلة. اختر نوع الاشتراك، فصليًا أو سنويًا، ثم اختر ما تدرّسه واطلب الرمز.</p>
+        <div class="plans" id="plans" role="group" aria-label="نوع الاشتراك">
+          <button type="button" class="plan" data-plan="term" aria-pressed="true">
+            <span class="pname">اشتراك فصلي</span>
+            <span class="pdesc">فصل دراسي واحد، ينتهي بنهايته.</span>
+            <span class="price" id="priceTerm"></span>
+          </button>
+          <button type="button" class="plan" data-plan="year" aria-pressed="false">
+            <span class="pname">اشتراك سنوي</span>
+            <span class="pdesc">الفصلان الأول والثاني من العام الدراسي، برمز واحد.</span>
+            <span class="price" id="priceYear"></span>
+            <span class="save" id="saveYear" hidden></span>
+          </button>
+        </div>
+        <div class="subjects" id="catalog"><p class="muted">جارٍ تحميل الباقات…</p></div>
+        <div class="basket" id="basket" hidden>
+          <div class="what" id="basketWhat"></div>
+          <label class="small" id="basketTermWrap">الفصل
+            <select id="basketTerm"><option value="1">الفصل الأول</option><option value="2">الفصل الثاني</option></select>
+          </label>
+          <span class="total" id="basketTotal" hidden></span>
+          <button class="btn wa" id="basketSend" type="button">اطلب الرمز عبر واتساب</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="fields">
+      <div class="wrap">
+        <h2>ما الذي يُعبّأ في كل حصة</h2>
+        <p class="intro">بنود نموذج «إضافة تحضير» في منصة نور كلها، بأسماء الاستراتيجيات والمصادر كما في قوائم نور، مع تاريخ النشر واختيار الصفوف.</p>
+        <ul class="fields">
+          <li>الدرس من شجرة الدروس، و«(2)» للحصة الثانية</li>
+          <li>المخرجات التعليمية</li>
+          <li>المستوى</li>
+          <li>الاستراتيجيات</li>
+          <li>المصادر التعليمية</li>
+          <li>المفاهيم</li>
+          <li>التهيئة والتمهيد</li>
+          <li>إجراءات سير الدرس والأنشطة</li>
+          <li>التقويم التكويني والختامي</li>
+          <li>تاريخ النشر والصفوف، ثم الحفظ</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block" id="faq">
+      <div class="wrap">
+        <h2>أسئلة شائعة</h2>
+        <div style="margin-top:18px">
+          <details class="q"><summary>متى ينتهي اشتراكي؟</summary><p>الاشتراك الفصلي ينتهي بنهاية الفصل الدراسي الذي اشتركت فيه، والسنوي يشمل الفصلين الأول والثاني وينتهي بنهاية الفصل الثاني. يظهر التاريخ في حسابك.</p></details>
+          <details class="q"><summary>ما الفرق بين الاشتراك الفصلي والسنوي؟</summary><p>الفصلي لفصل واحد تختاره، وتطلب رمزًا جديدًا للفصل التالي. السنوي برمز واحد للعام كله: يعمل في الفصل الأول، ويُضاف إليه الفصل الثاني تلقائيًا دون رمز جديد، وسعره أقل من فصلين منفصلين.</p></details>
+          <details class="q"><summary>أدرّس الإنجليزي للصفين الأول والثاني، هل تكفي باقة واحدة؟</summary><p>لا، كل صف باقة مستقلة. اختر الصفين من قائمة الباقات ويصلك رمز واحد يفعّلهما معًا.</p></details>
+          <details class="q"><summary>هل أحتاج كلمة مرور منصة نور؟</summary><p>لا. تعمل الأداة داخل متصفحك وأنت مسجّل في نور بنفسك، ولا تُرسل بيانات نور إلى أي مكان.</p></details>
+          <details class="q"><summary>على أي متصفح تعمل؟</summary><p>كروم أو إيدج على الحاسوب. تُثبَّت إضافة «حاضر» مرة واحدة، ويمكن ربط جهازين بالحساب نفسه.</p></details>
+          <details class="q"><summary>ماذا لو كانت بعض الحصص محفوظة في نور من قبل؟</summary><p>تقرأ الأداة قائمة تحاضيرك في نور وتكمل الناقص فقط، ولا تكرر حصة موجودة.</p></details>
+          <details class="q"><summary>كتبت اسمي بشكل مختلف عن الرمز، فرُفض التفعيل.</summary><p>الرمز مرتبط بالاسم الذي أرسلته. تواصل مع منصة أفق عبر واتساب لتصحيحه.</p></details>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== الدخول ===== -->
+  <section class="wrap" id="view-login" hidden>
+    <div class="panel auth">
+      <h2>دخول</h2>
+      <p class="muted">بالبريد وكلمة المرور اللذين سجّلت بهما.</p>
+      <form class="form" id="loginForm" novalidate>
+        <label class="field"><span>البريد الإلكتروني</span><input type="email" name="email" dir="ltr" autocomplete="email" required></label>
+        <label class="field"><span>كلمة المرور</span><input type="password" name="password" dir="ltr" autocomplete="current-password" required></label>
+        <div class="msg bad" id="loginMsg" hidden></div>
+        <button class="btn primary" type="submit">دخول</button>
+      </form>
+      <p class="switch-auth"><a href="#forgot">نسيت كلمة المرور؟</a></p>
+      <p class="switch-auth" style="margin-top:4px">ليس لديك حساب؟ <a href="#register">أنشئ حسابك</a></p>
+    </div>
+  </section>
+
+  <!-- ===== التسجيل ===== -->
+  <section class="wrap" id="view-register" hidden>
+    <div class="panel auth">
+      <h2>إنشاء حساب معلم</h2>
+      <p class="muted">اكتب اسمك الثلاثي كما تريده في رمز التفعيل، فالرمز يُصدر باسمك ولا يعمل لغيرك.</p>
+      <form class="form" id="regForm" novalidate>
+        <label class="field"><span>الاسم الثلاثي</span><input name="full_name" autocomplete="name" required placeholder="مثال: عيسى محمد الحارثي"></label>
+        <div class="row2">
+          <label class="field"><span>رقم الهاتف (واتساب)</span><input name="phone" type="tel" dir="ltr" autocomplete="tel" required placeholder="9xxxxxxx"></label>
+          <label class="field"><span>المدرسة <small>(اختياري)</small></span><input name="school"></label>
+        </div>
+        <label class="field"><span>البريد الإلكتروني</span><input type="email" name="email" dir="ltr" autocomplete="email" required></label>
+        <label class="field"><span>كلمة المرور</span><input type="password" name="password" dir="ltr" autocomplete="new-password" minlength="6" required><small>ستة أحرف على الأقل.</small></label>
+        <div class="msg" id="regMsg" hidden></div>
+        <button class="btn primary" type="submit">إنشاء الحساب</button>
+      </form>
+      <p class="switch-auth">لديك حساب؟ <a href="#login">دخول</a></p>
+    </div>
+  </section>
+
+  <!-- ===== استعادة كلمة المرور ===== -->
+  <section class="wrap" id="view-forgot" hidden>
+    <div class="panel auth">
+      <h2>استعادة كلمة المرور</h2>
+      <p class="muted">نرسل إلى بريدك رابطًا تختار منه كلمة مرور جديدة.</p>
+      <form class="form" id="forgotForm" novalidate>
+        <label class="field"><span>البريد الإلكتروني</span><input type="email" name="email" dir="ltr" required></label>
+        <div class="msg" id="forgotMsg" hidden></div>
+        <button class="btn primary" type="submit">أرسل الرابط</button>
+      </form>
+      <p class="switch-auth"><a href="#login">رجوع إلى الدخول</a></p>
+    </div>
+  </section>
+  <section class="wrap" id="view-newpass" hidden>
+    <div class="panel auth">
+      <h2>كلمة مرور جديدة</h2>
+      <form class="form" id="newpassForm" novalidate>
+        <label class="field"><span>كلمة المرور الجديدة</span><input type="password" name="password" dir="ltr" minlength="6" autocomplete="new-password" required></label>
+        <div class="msg" id="newpassMsg" hidden></div>
+        <button class="btn primary" type="submit">احفظ كلمة المرور</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== لوحة المعلم ===== -->
+  <section class="wrap dash" id="view-dash" hidden>
+    <div class="dash-head">
+      <h1 id="hello">أهلًا</h1>
+      <div class="who"><div id="whoEmail" dir="ltr"></div><button class="btn ghost sm" id="logout" type="button">خروج</button></div>
+    </div>
+    <div class="msg warn" id="dashNotice" hidden></div>
+    <div class="dash-grid">
+      <div style="display:grid;gap:22px">
+        <div class="panel">
+          <h2>اشتراكاتي</h2>
+          <p class="muted">كل باقة لمادة وصف، وتعمل حتى نهاية فصلها.</p>
+          <div class="subs" id="subs"><p class="muted">جارٍ التحميل…</p></div>
+        </div>
+        <div class="panel">
+          <h2>تفعيل رمز</h2>
+          <p class="muted">الرمز الذي وصلك من منصة أفق عبر واتساب، بصيغة AFQ-XXXX-XXXX.</p>
+          <form class="codebox" id="codeForm">
+            <input name="code" placeholder="AFQ-XXXX-XXXX" autocomplete="off" spellcheck="false" maxlength="20" aria-label="رمز التفعيل">
+            <button class="btn primary" type="submit">فعّل الرمز</button>
+          </form>
+          <div class="msg" id="codeMsg" hidden style="margin-top:12px"></div>
+          <p class="small muted" style="margin-top:14px">ليس لديك رمز؟ <a href="#packages">اختر الباقات واطلبه عبر واتساب</a></p>
+        </div>
+      </div>
+      <div style="display:grid;gap:22px">
+        <div class="panel">
+          <h2>إضافة «حاضر»</h2>
+          <p class="muted">هي التي تعبّئ التحاضير داخل منصة نور.</p>
+          <div class="ext-state" id="extState"><p class="muted">أتحقق من الإضافة…</p></div>
+        </div>
+        <div class="panel">
+          <h2>الأجهزة المرتبطة</h2>
+          <p class="muted" id="devHint">يمكن ربط جهازين بحسابك؛ ربط ثالث يفصل أقدمهما.</p>
+          <ul class="devices" id="devices"></ul>
+        </div>
+        <div class="panel">
+          <h2>بياناتي</h2>
+          <p class="small" style="margin-top:6px"><span class="muted">الاسم:</span> <b id="pName"></b></p>
+          <p class="small"><span class="muted">الهاتف:</span> <span id="pPhone" dir="ltr"></span></p>
+          <p class="small"><span class="muted">المدرسة:</span> <span id="pSchool"></span></p>
+          <p class="small muted" style="margin-top:10px" id="nameLock"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span><span id="footName">منصة أفق التعليمية</span> <a href="privacy.html" style="margin-inline-start:12px">سياسة الخصوصية</a></span>
+    <a class="btn wa sm" id="footWa" href="#" hidden>تواصل عبر واتساب</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
