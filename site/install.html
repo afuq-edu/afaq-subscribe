@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تثبيت «حاضر» — منصة أفق التعليمية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="wrap" style="max-width:760px;padding:48px 20px 72px">
+  <a href="index.html" class="small">العودة إلى الموقع</a>
+  <h1 style="margin:14px 0 12px;font-size:34px">تثبيت إضافة «حاضر»</h1>
+  <p class="muted" style="margin-bottom:24px">تعمل على متصفح <b>كروم</b> أو <b>إيدج</b> في الحاسوب. تُثبَّت مرة واحدة، ثم تصلها مواد اشتراكك تلقائيًا.</p>
+
+  <section id="store" hidden style="margin-bottom:28px">
+    <p><a class="btn primary" id="storeLink" href="#" target="_blank" rel="noopener">ثبّت «حاضر» من متجر كروم</a></p>
+    <p class="muted small" style="margin-top:10px">اضغط «إضافة إلى Chrome»، ثم ارجع إلى <a href="index.html#dashboard">حسابك</a> واضغط «اربط الإضافة بحسابي».</p>
+  </section>
+
+  <section id="manual">
+    <p style="margin-bottom:20px"><a class="btn primary" href="hader.zip" download>نزّل ملف الإضافة</a></p>
+    <div style="display:grid;gap:18px">
+      <section><h3>١. فك الضغط</h3><p class="muted">افتح الملف الذي نزّلته (hader.zip) واستخرج ما فيه إلى مجلد ثابت، مثل «المستندات/حاضر». لا تحذف المجلد بعد التثبيت.</p></section>
+      <section><h3>٢. افتح صفحة الإضافات</h3><p class="muted">انسخ هذا العنوان والصقه في شريط العنوان في كروم ثم اضغط Enter: <code dir="ltr">chrome://extensions</code></p></section>
+      <section><h3>٣. فعّل «وضع المطوّر»</h3><p class="muted">من المفتاح في أعلى الصفحة (يمين أو يسار حسب لغة المتصفح).</p></section>
+      <section><h3>٤. حمّل الإضافة</h3><p class="muted">اضغط «تحميل إضافة غير مضغوطة» (Load unpacked) واختر المجلد الذي استخرجته.</p></section>
+      <section><h3>٥. اربطها بحسابك</h3><p class="muted">ارجع إلى <a href="index.html#dashboard">حسابك في الموقع</a> واضغط «اربط الإضافة بحسابي»، فتصلها موادك.</p></section>
+    </div>
+  </section>
+</main>
+<script src="config.js"></script>
+<script>
+  // إن كُتب رابط المتجر في لوحة الإدارة يظهر زر المتجر أولًا
+  (async () => {
+    try {
+      const c = window.AFAQ_CONFIG;
+      const r = await fetch(c.SUPABASE_URL + '/rest/v1/settings?key=eq.extension_url&select=value', { headers: { apikey: c.SUPABASE_ANON_KEY } });
+      const u = String(((await r.json())[0] || {}).value || '').trim();
+      if (!/^https:\/\//.test(u)) return;
+      document.getElementById('storeLink').href = u;
+      document.getElementById('store').hidden = false;
+      document.getElementById('manual').hidden = true;
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
