@@ -92,7 +92,7 @@
     if (!D.packages.length) hints.push('أضف الباقات من «الباقات والتحاضير».');
     else if (!D.content.length) hints.push('ارفع محتوى التحاضير للباقات من «الباقات والتحاضير».');
     if (!st.whatsapp) hints.push('اكتب رقم واتساب المنصة من «الإعدادات».');
-    if (!st.extension_url) hints.push('اكتب رابط الإضافة في متجر كروم من «الإعدادات».');
+    if (!/^https:\/\/(chromewebstore\.google\.com|chrome\.google\.com\/webstore)\//.test(st.extension_url || '')) hints.push('اكتب رابط الإضافة في متجر كروم من «الإعدادات».');
     setMsg($('#setupHints'), 'warn', hints.length ? '<b>لإكمال الإعداد:</b><br>' + hints.map(esc).join('<br>') : '');
   }
 
@@ -343,7 +343,7 @@
     }
     vals.whatsapp = vals.whatsapp.replace(/[^\d]/g, '');
     if (vals.whatsapp && vals.whatsapp.length < 10) { setMsg(msg, 'bad', 'رقم واتساب بالصيغة الدولية، مثل 9689xxxxxxx.'); return; }
-    if (vals.extension_url && !/^https:\/\//.test(vals.extension_url)) { setMsg(msg, 'bad', 'رابط المتجر يبدأ بـ https://'); return; }
+    if (vals.extension_url && !/^https:\/\/(chromewebstore\.google\.com|chrome\.google\.com\/webstore)\//.test(vals.extension_url)) { setMsg(msg, 'bad', 'ضع رابط صفحة الإضافة في متجر كروم (chromewebstore.google.com)، أو اتركه فارغًا ما دامت الإضافة لم تُنشر.'); return; }
     try { await db.upsert('settings', keys.map((k) => ({ key: k, value: vals[k] }))); setMsg(msg, 'ok', 'حُفظت الإعدادات.'); } catch (err) { setMsg(msg, 'bad', esc(A.errText(err))); }
   };
 
