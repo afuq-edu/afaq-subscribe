@@ -1,7 +1,7 @@
 // lint.js — فحص ملف المادة قبل التشغيل: ما الذي قد يعطّل التعبئة أو يضعف التعرّف على الدروس في نور؟
 // لا يمنع شيئًا — يكشف المشكلات ويقترح الحل، وما يمكن إصلاحه تلقائيًا (تاريخ بصيغة غريبة، يوم إجازة…) يُصلَح وقت التشغيل.
 import { lessonNum, unitNum, kwNorm, titleSim, sessionSuffix } from './match.js';
-import { isIso, isSchoolDay, dayLabel, parseAnyDate, toArDigits, isoOf, weekNo } from './dates.js';
+import { isIso, isSchoolDay, dayLabel, parseAnyDate, toArDigits, isoOf, weekNo, rangeStartDate } from './dates.js';
 
 const textOf = (h) => String(h || '').replace(/<[^<>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
 const groupKey = (l) => (l && ((l.unit || '') + '|' + (l.lesson || ''))) || '';
@@ -19,6 +19,9 @@ export function normalizeLesson(l) {
     iso = isIso(s) ? s : parseAnyDate(s);
     if (iso) break;
   }
+  // لا تاريخ للحصة نفسها: تاريخ أسبوعها المكتوب في الخطة (حقل week فيها أو في parts) — أول يوم من مداه
+  const weekTexts = [l.week, l['الأسبوع'], ...(Array.isArray(l.parts) ? l.parts.map((p) => p && (p.week || p['الأسبوع'])) : [])].filter((v) => typeof v === 'string' && v.trim());
+  if (!iso) for (const w of weekTexts) { iso = rangeStartDate(w) || parseAnyDate(w); if (iso) break; }
   if (iso) l.pubDate = iso; else if (l.pubDate) delete l.pubDate;
   for (const k of WEEK_KEYS) {
     const v = l[k];
@@ -26,6 +29,7 @@ export function normalizeLesson(l) {
     const n = typeof v === 'number' ? v : (weekNo(String(v)) ?? weekNo('الأسبوع ' + String(v).trim()));
     if (n != null && n > 0) { l.week = 'الأسبوع ' + n; break; }
   }
+  if (!/^الأسبوع \d+$/.test(l.week || '')) for (const w of weekTexts) { const n = weekNo(w); if (n != null && n > 0) { l.week = 'الأسبوع ' + n; break; } }
   return l;
 }
 export function normalizePackage(pkg) {

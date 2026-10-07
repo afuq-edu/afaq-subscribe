@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "حاضر — منصة أفق التعليمية",
   "short_name": "حاضر",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtuuljr/EwL48b3zR9yoktgd83Fc9ZLoB0gdRzaZUjAsYbOHnHzCi5QA8z3JanHQLsvd2DGrUiaVpiM318msvjQU8dcHe3rivcWhrjJolniHfmKjLvEL898iw415x68mn05nlBOUae53tjGer9EI+oaCD9fy+6CMugPk7Ab8wl78qIsg99+yHQCMVaD+S6D5OSsroXftDTWdk5NJ1hFohI2dtRILT2RlXfqnoUiz6ihchhLfAO+1C7hK4kbamjo0cLgImPXLup+thA+BJkpO4pQyw+6b3ufuAuxY1mJwSD2cEsDq7ziwbEr5GIXThJuIEjA/OSB7ACCBjaQvrCdrUtQIDAQAB",
   "description": "تعبئة تحاضير منصة نور تلقائيًا من اشتراكك في منصة أفق التعليمية: الفصل كاملًا أو وحدة أو أسبوعًا، حصةً حصة، بتواريخ النشر كما في ملفك.",
   "default_locale": "ar",

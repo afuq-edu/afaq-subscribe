@@ -162,6 +162,18 @@ export function findDate(text, ctx = {}) {
 // تاريخ واحد من نص قصير (عمود «تاريخ النشر» مثلًا) — ISO أو ''
 export function parseAnyDate(text, ctx) { const f = findDate(text, ctx); return f ? f.iso : ''; }
 
+// أول يوم في مدى أسبوع مكتوب في الخطة: «الأسبوع الأول (6–10/9/2026م)» ← 2026-09-06 · «(27/9–1/10/2026م)» ← 2026-09-27
+// (findDate وحدها تقرأ آخر المدى، فتنقل الحصة إلى نهاية الأسبوع)
+export function rangeStartDate(text) {
+  const t = toLatinDigits(String(text || '')).replace(STRIP, '');
+  const iso = (y, m, d) => { const v = `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`; return isIso(v) ? v : ''; };
+  let m = t.match(/(\d{1,2})\s*[\/.]\s*(\d{1,2})\s*[–—\-]\s*(\d{1,2})\s*[\/.]\s*(\d{1,2})\s*[\/.]\s*(\d{4})/);
+  if (m) return iso(+m[5] - (+m[2] > +m[4] ? 1 : 0), +m[2], +m[1]);
+  m = t.match(/(\d{1,2})\s*[–—\-]\s*(\d{1,2})\s*[\/.]\s*(\d{1,2})\s*[\/.]\s*(\d{4})/);
+  if (m && +m[1] <= +m[2]) return iso(+m[4], +m[3], +m[1]);
+  return '';
+}
+
 // ---------- «تاريخ النشر» في سطر ----------
 // تسمية تدل على تاريخ النشر — تُقبل أيضًا «التاريخ» وحدها و«date»، لا «تاريخ عُمان» (مادة التاريخ)
 const PUB_WORDS = /^(?:(?:تاريخ|موعد|يوم)\s*(?:ال)?نشر(?:ها|ه)?|(?:ال)?نشر(?:\s*(?:في|يوم|بتاريخ))?|تاريخ\s*(?:ال)?(?:حصه|درس|تحضير|تنفيذ|تطبيق|بدايه|بدء|انطلاق)|(?:ال)?تاريخ|بتاريخ|اول\s*(?:تاريخ\s*)?(?:ال)?نشر|يبدا\s*(?:ال)?نشر(?:\s*(?:من|في))?|publish(?:ing|ed)?\s*(?:date|on)?|pub\.?\s*date|date\s*(?:of\s*)?(?:publish(?:ing)?|publication)?|publication\s*date|start(?:ing)?\s*date|first\s*(?:publish(?:ing)?\s*)?date)$/i;
