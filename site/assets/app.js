@@ -314,8 +314,8 @@
     }
     const p = await A.ext.ping();
     if (!p) {
-      box.innerHTML = `<div class="state"><span class="dot"></span><div><b>الإضافة غير مثبتة في هذا المتصفح.</b><br><span class="muted small">ثبّتها مرة واحدة من متجر كروم، ثم ارجع إلى هذه الصفحة.</span></div></div>
-        <div class="inline-acts">${st.extension_url ? `<a class="btn primary" href="${esc(st.extension_url)}" target="_blank" rel="noopener">ثبّت «حاضر» من المتجر</a>` : ''}<button class="btn" id="extRecheck" type="button">ثبّتُّها، أعد الفحص</button></div>`;
+      box.innerHTML = `<div class="state"><span class="dot"></span><div><b>الإضافة غير مثبتة في هذا المتصفح.</b><br><span class="muted small">ثبّتها مرة واحدة، ثم ارجع إلى هذه الصفحة.</span></div></div>
+        <div class="inline-acts">${st.extension_url ? `<a class="btn primary" href="${esc(st.extension_url)}" target="_blank" rel="noopener">ثبّت «حاضر» من المتجر</a>` : `<a class="btn primary" href="install.html" target="_blank" rel="noopener">ثبّت «حاضر»</a>`}<button class="btn" id="extRecheck" type="button">ثبّتُّها، أعد الفحص</button></div>`;
       $('#extRecheck').onclick = () => renderExt(true);
       return;
     }

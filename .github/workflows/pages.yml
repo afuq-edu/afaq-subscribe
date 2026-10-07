@@ -3,7 +3,7 @@ name: نشر الموقع على GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ['site/**', '.github/workflows/pages.yml']
+    paths: ['site/**', 'extension/**', '.github/workflows/pages.yml']
   workflow_dispatch:
 
 permissions:
@@ -23,6 +23,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: ملف الإضافة للتنزيل من الموقع (install.html)
+        run: cd extension && zip -qr ../site/hader.zip .
       - uses: actions/configure-pages@v5
         with:
           enablement: true
