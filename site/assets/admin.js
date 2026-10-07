@@ -276,13 +276,29 @@
     try { await db.insert('packages', row); setMsg(msg, 'ok', `أُضيفت «${esc(row.title)}». ارفع محتواها من الجدول.`); pf.reset(); idTouched = titleTouched = false; await loadAll(); renderPackages(); }
     catch (err) { setMsg(msg, 'bad', esc(A.errText(err))); }
   };
+  // فك ملف ‎.hadir‎ المشفّر — الخوارزمية نفسها في extension/packages.js (PBKDF2-SHA256 ‏150000 ← AES-GCM 256)
+  const isHadirEncrypted = (x) => !!(x && x.app === 'hadir' && x.type === 'package' && x.data && x.salt && x.iv);
+  async function decryptHadir(file, password) {
+    const unb64 = (b) => Uint8Array.from(atob(b), (c) => c.charCodeAt(0));
+    const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(String(password).normalize('NFKC').trim()), 'PBKDF2', false, ['deriveKey']);
+    const key = await crypto.subtle.deriveKey({ name: 'PBKDF2', salt: unb64(file.salt), iterations: 150000, hash: 'SHA-256' }, base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+    const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: unb64(file.iv) }, key, unb64(file.data));
+    return JSON.parse(new TextDecoder().decode(plain));
+  }
   // رفع ملف المادة المصدَّر من «حاضر»
   let upTarget = null;
   $('#pkgFile').onchange = async () => {
     const file = $('#pkgFile').files[0];
     if (!file || !upTarget) return;
     let data;
-    try { data = JSON.parse(await file.text()); } catch (e) { A.toast('الملف ليس ملف JSON صالحًا.', 'bad'); return; }
+    $('#pkgFile').value = '';   // ليُقبل الملف نفسه مرة أخرى (بعد كلمة سر خاطئة مثلًا)
+    try { data = JSON.parse(await file.text()); } catch (e) { A.toast('الملف ليس ملف حاضر (.hadir) ولا JSON صالحًا.', 'bad'); return; }
+    // ملف ‎.hadir‎: مشفّر بكلمة سر (يُفك هنا في المتصفح كما تفعل «حاضر») أو غير مشفّر
+    if (isHadirEncrypted(data)) {
+      const pw = prompt(`«${(data.meta && data.meta.title) || file.name}» محمي بكلمة سر. اكتب كلمة السر التي صُدّر بها:`);
+      if (pw == null) return;
+      try { data = await decryptHadir(data, pw); } catch (e) { A.toast('كلمة السر غير صحيحة، أو الملف تالف.', 'bad'); return; }
+    }
     const pkg = data && data.package ? data.package : Array.isArray(data && data.packages) ? (data.packages.length === 1 ? data.packages[0] : null) : data;
     if (!pkg || !Array.isArray(pkg.lessons) || !pkg.lessons.length) { A.toast(Array.isArray(data && data.packages) ? 'هذا ملف نسخة احتياطية فيه أكثر من مادة — صدّر المادة وحدها من صفحتها في «حاضر».' : 'لم أجد حصصًا في الملف. صدّر المادة من صفحتها في «حاضر» ← «تصدير ملف».', 'bad'); return; }
     const noId = pkg.lessons.filter((l) => !l.id).length;
