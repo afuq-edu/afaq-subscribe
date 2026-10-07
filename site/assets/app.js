@@ -309,14 +309,16 @@
     const box = $('#extState');
     const st = await A.settings();
     if (!A.ext.supported()) {
-      box.innerHTML = '<div class="state"><span class="dot warn"></span><div>افتح الموقع من متصفح <b>كروم</b> أو <b>إيدج</b> على الحاسوب لتعمل الأداة.</div></div>';
+      box.innerHTML = '<div class="state"><span class="dot warn"></span><div>افتح الموقع من متصفح <b>كروم</b> أو <b>إيدج</b> على الحاسوب لتعمل الأداة.</div></div><div class="inline-acts"><button class="btn" id="extSync" type="button">حدّث المواد</button></div>';
+      $('#extSync').onclick = syncMaterials;
       return;
     }
     const p = await A.ext.ping();
     if (!p) {
       box.innerHTML = `<div class="state"><span class="dot"></span><div><b>الإضافة غير مثبتة في هذا المتصفح.</b><br><span class="muted small">ثبّتها مرة واحدة، ثم ارجع إلى هذه الصفحة.</span></div></div>
-        <div class="inline-acts">${/^https:\/\/(chromewebstore\.google\.com|chrome\.google\.com\/webstore)\//.test(st.extension_url || '') ? `<a class="btn primary" href="${esc(st.extension_url)}" target="_blank" rel="noopener">ثبّت «حاضر» من المتجر</a>` : `<a class="btn primary" href="install.html" target="_blank" rel="noopener">ثبّت «حاضر»</a>`}<button class="btn" id="extRecheck" type="button">ثبّتُّها، أعد الفحص</button></div>`;
+        <div class="inline-acts">${/^https:\/\/(chromewebstore\.google\.com|chrome\.google\.com\/webstore)\//.test(st.extension_url || '') ? `<a class="btn primary" href="${esc(st.extension_url)}" target="_blank" rel="noopener">ثبّت «حاضر» من المتجر</a>` : `<a class="btn primary" href="install.html" target="_blank" rel="noopener">ثبّت «حاضر»</a>`}<button class="btn" id="extRecheck" type="button">ثبّتُّها، أعد الفحص</button><button class="btn" id="extSync" type="button">حدّث المواد</button></div>`;
       $('#extRecheck').onclick = () => renderExt(true);
+      $('#extSync').onclick = syncMaterials;
       return;
     }
     const mine = p.linked && sameName(p.name, S.profile && S.profile.full_name);
@@ -325,18 +327,28 @@
       // فتح الموقع يكفي: تُربط الإضافة بالحساب تلقائيًا مرة واحدة إن كان للمعلم اشتراك فعّال
       if (auto && activeSubs && !S.autoLinked) { S.autoLinked = true; await linkExt(); return; }
       box.innerHTML = `<div class="state"><span class="dot warn"></span><div><b>الإضافة مثبتة${p.linked ? ' ومرتبطة بحساب آخر' : ' وغير مرتبطة بحسابك'}.</b><br><span class="muted small">${activeSubs ? 'اربطها لتصلها موادك.' : 'فعّل اشتراكك أولًا، ثم اربطها.'}</span></div></div>
-        <div class="inline-acts"><button class="btn primary" id="extLink" type="button">اربط الإضافة بحسابي</button></div>`;
+        <div class="inline-acts"><button class="btn primary" id="extLink" type="button">اربط الإضافة بحسابي</button><button class="btn" id="extSync" type="button">حدّث المواد</button></div>`;
       $('#extLink').onclick = linkExt;
+      $('#extSync').onclick = syncMaterials;
       return;
     }
     const n = p.packages || 0;
     box.innerHTML = `<div class="state"><span class="dot ok"></span><div><b>الإضافة مرتبطة بحسابك وجاهزة.</b><br><span class="muted small">${n ? `فيها ${n === 1 ? 'باقة واحدة' : n === 2 ? 'باقتان' : toAr(n) + ' باقات'} من اشتراكك.` : 'لا باقات جاهزة فيها بعد.'} افتح منصة نور واضغط «حاضر» ثم «تحضير فصل كامل».</span></div></div>
       <div class="inline-acts"><a class="btn primary" href="https://lms.moe.gov.om/teacher" target="_blank" rel="noopener">افتح منصة نور</a><button class="btn" id="extSync" type="button">حدّث المواد</button></div>`;
-    $('#extSync').onclick = async () => {
-      const r = await A.ext.sync();
-      if (r && r.ok) { A.toast('حُدّثت المواد في الإضافة.', 'ok'); renderExt(false); }
-      else A.toast(extErr(r), 'bad');
-    };
+    $('#extSync').onclick = syncMaterials;
+  }
+  // «حدّث المواد» ظاهر دائمًا: يحدّث إن كانت الإضافة مرتبطة، وإلا يقول للمعلم ما الذي ينقصه
+  async function syncMaterials() {
+    if (!A.ext.supported()) { A.toast('افتح الموقع من متصفح كروم أو إيدج على الحاسوب، ففيه تعمل الإضافة.', 'bad'); return; }
+    const p = await A.ext.ping();
+    if (!p) { A.toast('الإضافة غير مثبتة في هذا المتصفح. ثبّتها من صفحة «تثبيت الإضافة»، ثم اضغط «اربط الإضافة بحسابي».', 'bad'); return; }
+    if (!(p.linked && sameName(p.name, S.profile && S.profile.full_name))) {
+      if (S.subs.some((s) => s.active)) { await linkExt(); return; }   // الربط يجلب المواد أيضًا
+      A.toast('لا اشتراك فعّال في حسابك بعد. فعّل رمز اشتراكك أولًا، ثم اربط الإضافة.', 'bad'); return;
+    }
+    const r = await A.ext.sync();
+    if (r && r.ok) { A.toast('حُدّثت المواد في الإضافة.', 'ok'); renderExt(false); }
+    else A.toast(extErr(r), 'bad');
   }
   function extErr(r) {
     const e = r && r.error;
