@@ -75,11 +75,21 @@
   const waLink = (number, text) => `https://wa.me/${String(number || '').replace(/[^\d]/g, '')}?text=${encodeURIComponent(text)}`;
 
   // ---------- جسر إضافة «حاضر» (externally_connectable) ----------
-  function extSend(msg, timeout = 2500) {
+  // EXTENSION_ID نص أو قائمة (نسخة المتجر ونسخة التجربة): أول إضافة مثبّتة تردّ هي المعتمدة
+  const extIds = [].concat(CFG.EXTENSION_ID || []).filter((x) => x && !/YOUR-EXT/.test(x));
+  let extId = null;
+  async function extSend(msg, timeout = 2500) {
+    if (extId) return extSendTo(extId, msg, timeout);
+    for (const id of extIds) {
+      const r = await extSendTo(id, msg, timeout);
+      if (r) { extId = id; return r; }
+    }
+    return null;
+  }
+  function extSendTo(id, msg, timeout) {
     return new Promise((res) => {
-      const id = CFG.EXTENSION_ID;
       const rt = window.chrome && window.chrome.runtime;
-      if (!id || /YOUR-EXT/.test(id) || !rt || !rt.sendMessage) { res(null); return; }
+      if (!id || !rt || !rt.sendMessage) { res(null); return; }
       let done = false;
       const t = setTimeout(() => { if (!done) { done = true; res(null); } }, timeout);
       try {
