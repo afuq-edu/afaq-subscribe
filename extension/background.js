@@ -45,7 +45,7 @@ async function fillFromShortcut(tab) {
     const ctx = await pageContext(tab.id);
     if (ctx.isForm) {
       const [{ packages, state }, settings, picks] = await Promise.all([getPackages(), getSettings(), getPicks()]);
-      const sel = suggestSelection({ packages, state, title: ctx.title, picks, mark: ctx.mark });
+      const sel = suggestSelection({ packages, state, title: ctx.title, picks, mark: ctx.mark, settings });
       if (!sel || sel.how === 'nomatch') {
         badge(tab.id, '؟', '#b45309');
         toastOnPage(tab.id, 'لم أتعرّف على هذا الدرس — افتح «حاضر» واختر الدرس بنفسك مرة واحدة.', 'warn');
@@ -117,7 +117,7 @@ async function computeMatch(tab) {
   const ctx = await pageContext(tab.id);
   if (!ctx.isForm) return { ok: false };
   const [{ packages, state }, settings, picks] = await Promise.all([getPackages(), getSettings(), getPicks()]);
-  const sel = suggestSelection({ packages, state, title: ctx.title, picks, mark: ctx.mark });
+  const sel = suggestSelection({ packages, state, title: ctx.title, picks, mark: ctx.mark, settings });
   if (!sel) return { ok: true, empty: true };
   const date = (ctx.mark && ctx.mark.lessonId === sel.session.id && ctx.mark.date) || (state.pubOn === false ? '' : suggestDate(state, settings, sel.pkg, sel.session).date);
   let batch = false;

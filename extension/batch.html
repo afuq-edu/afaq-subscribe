@@ -111,7 +111,8 @@
     <div class="hint">حدّد الحصص بالترتيب الذي ستحضّرها به — من درس واحد أو عدة دروس. بعد كل حصة أنتقل مباشرة إلى التالية؛ وحين تفتح نموذجها في نور أتحقق من التوافق وأعبّئها.</div>
     <div class="term-sel"><button class="btn sm primary" id="selTerm" type="button">تحديد كل حصص الفصل</button><span id="termInfo"></span></div>
     <div class="tools"><button class="lnk" id="selAll">تحديد غير المنجزة في الدروس المفتوحة</button><button class="lnk muted" id="selNone">إلغاء التحديد</button><button class="lnk muted" id="expandAll">عرض كل الدروس</button></div>
-    <div class="tools quick"><select class="input" id="unitPick" aria-label="تحديد وحدة"></select><label>حصص أسبوع: <input type="date" class="input" id="weekPick" aria-label="أي يوم من الأسبوع"></label></div>
+    <div class="tools quick"><select class="input" id="unitPick" aria-label="تحديد وحدة"></select><button class="lnk" id="todayPick">حصة اليوم</button><button class="lnk" id="thisWeekPick">هذا الأسبوع</button><label>أسبوع: <input type="date" class="input" id="weekPick" aria-label="أي يوم من الأسبوع"></label></div>
+    <div class="tools quick"><label>من تاريخ <input type="date" class="input" id="rangeFrom"></label><label>إلى <input type="date" class="input" id="rangeTo"></label><button class="lnk" id="rangePick">تحديد الحصص بينهما</button><span class="hint">بحسب تواريخ النشرة إن وُجدت</span></div>
     <div id="list"></div>
   </section>
 

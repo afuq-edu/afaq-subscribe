@@ -1,12 +1,12 @@
 // packages.js — مكتبة التحاضير: التخزين، التقدم (عُبّئ/حُفظ)، الإعدادات، النسخ الاحتياطي، والتعبئة في نموذج منصة نور
 import { hadirEngine } from './engine.js';
-import { bestLesson, rankLessons, lessonNum, unitNum, kwNorm, kwScore, bestTreeLesson, unitMayHold, stripSessionSuffix, sessionSuffix, ordinalOf } from './match.js';
+import { bestLesson, rankLessons, lessonNum, unitNum, kwNorm, kwScore, bestTreeLesson, unitMayHold, stripSessionSuffix, sessionSuffix } from './match.js';
 import { parsePlanText, parsePlanBest, NOOR_STRATEGIES, NOOR_RESOURCES, NOOR_LEVELS, SAMPLE_PLAN, mapStrategies, mapResources } from './parse.js';
 import { AFAQ } from './afaq-config.js';
 import { remoteLesson, isRemote, REMOTE_ERR } from './remote.js';
-import { layoutDates, isIso, weekStart, weekEnd, inWeekOf, isSchoolDay } from './dates.js';
+import { layoutDates, isIso, weekStart, weekEnd, inWeekOf, isSchoolDay, parseHolidays, countSchoolDays } from './dates.js';
 import { normalizePackage, normalizeLesson, hasFileDates, datedCount, lintPackage, lintLevel } from './lint.js';
-export { isRemote, REMOTE_ERR, layoutDates, isIso, weekStart, weekEnd, inWeekOf, isSchoolDay, normalizePackage, normalizeLesson, hasFileDates, datedCount, lintPackage, lintLevel };
+export { isRemote, REMOTE_ERR, layoutDates, isIso, weekStart, weekEnd, inWeekOf, isSchoolDay, parseHolidays, countSchoolDays, normalizePackage, normalizeLesson, hasFileDates, datedCount, lintPackage, lintLevel };
 export const SERVICE = !!AFAQ.SERVICE;
 const SERVICE_ONLY = 'في نسخة منصة أفق تأتي المواد من اشتراكك فقط — فعّل اشتراكك من موقع المنصة.';
 
@@ -46,7 +46,14 @@ export const DEFAULT_SETTINGS = {
   noorSync: true,                // قراءة قائمة التحاضير في نور لتعليم ما حُفظ
   fileDates: true,               // تواريخ النشر المكتوبة في ملف المادة تُستعمل كما هي (وما بعدها يتبعها)
   autoContinue: true,            // «فصل كامل»: لا توقف عند تعارضات الربط — تبدأ وحدها بعد مهلة وتتخطى ما لم يُربط
+  term1End: '',                  // آخر يوم دراسي في الفصل الأول (ISO) — لميزانية الفصل
+  term2End: '',                  // آخر يوم دراسي في الفصل الثاني (ISO)
+  holidays: '',                  // أيام الإجازات: سطر لكل إجازة (يوم أو «من … إلى …») — تُتخطّى عند توزيع التواريخ
 };
+// أيام الإجازات من الإعدادات مجموعةً (ISO)
+export const holidaySet = (settings) => parseHolidays(settings && settings.holidays);
+// نهاية الفصل المختار من الإعدادات أو ''
+export const termEndOf = (settings, termNo) => { const v = settings && (termNo === 2 ? settings.term2End : settings.term1End); return isIso(v) ? v : ''; };
 export async function getSettings() {
   const r = await chrome.storage.local.get('settings');
   return Object.assign({}, DEFAULT_SETTINGS, r.settings || {});
@@ -200,11 +207,36 @@ export async function setSavedManually(pkgId, lessonId, saved, date) {
   await savePkgState(state);
   return true;
 }
-export async function resetProgress(pkgId) {
-  const { state } = await getPackages();
+// تصفير مادة بالكامل: كل ما يجعل «حاضر» يعدّ حصة مُدخلة يُمسح — حالة الحصص (عُبّئت/حُفظت)، وسلسلة المتابعة، وسجل «فصل كامل»
+// للمقرر (semesterSaved)، وسجل الإدخال (السجل) لهذه المادة، وذاكرة عناوين قائمة نور، ونقطة استئناف تشغيل معلّق —
+// فتعود المادة كأنها لم تُدخل قط (مثلًا بعد حذف التحاضير من نور لإعادة إدخالها). لا يمس محتوى الحصص ولا الربط بدروس نور.
+export async function resetProgress(pkgId, opts = {}) {
+  const { packages, state } = await getPackages();
+  const pkg = packages.find((p) => p.id === pkgId);
+  const ids = new Set(((pkg && pkg.lessons) || []).map((l) => l.id));
   Object.keys(state.sessions).forEach((k) => { if (k.startsWith(pkgId + ':')) delete state.sessions[k]; });
   if (state.lastPub) delete state.lastPub[pkgId];
+  if (state.chain && state.chain.pkgId === pkgId) delete state.chain;
+  // مقررات نور المرتبطة بهذه المادة (من بطاقتها ومن روابط نماذجها)
+  const cids = new Set();
+  const kc = state.courses && state.courses[pkgId]; if (kc && kc.cid) cids.add(kc.cid);
+  Object.entries(state.forms || {}).forEach(([k, u]) => { if (k.startsWith(pkgId + '|')) { const m = String(u || '').match(/cid:([A-Za-z0-9_-]+)/); if (m) cids.add(m[1]); } });
   await savePkgState(state);
+  const r = await chrome.storage.local.get(['semesterSaved', 'semesterRun', 'log', 'lastFill']);
+  const ss = r.semesterSaved || {};
+  Object.keys(ss).forEach((cid) => {
+    if (cids.has(cid)) { delete ss[cid]; return; }
+    Object.keys(ss[cid] || {}).forEach((lid) => { if (ids.has(lid)) delete ss[cid][lid]; });
+    if (!Object.keys(ss[cid] || {}).length) delete ss[cid];
+  });
+  const patch = { semesterSaved: ss };
+  if (r.semesterRun && r.semesterRun.pkgId === pkgId) patch.semesterRun = null;
+  if (opts.log !== false) patch.log = (Array.isArray(r.log) ? r.log : []).filter((e) => e.pkgId !== pkgId);
+  await chrome.storage.local.set(patch);
+  const rm = ['noorList'];   // ذاكرة عناوين قائمة نور تُبنى من جديد عند فتح القائمة (قد تكون التحاضير حُذفت من نور)
+  if (r.lastFill && r.lastFill.pkgId === pkgId) rm.push('lastFill');
+  await chrome.storage.local.remove(rm);
+  return { sessions: ids.size, courses: cids.size };
 }
 
 // ---------- الدروس (تجميع الحصص) ----------
@@ -234,15 +266,35 @@ export async function rememberPick(noorTitle, pkgId, lessonId) {
 const sessionDone = (state, pkgId, l) => { const s = sessionStatus(state, pkgId, l.id); return !!(s.saved || (s.filled && !s.failed)); };
 
 // الحصة المقترحة داخل الدرس:
-// ما عُبّئ في هذه الصفحة ← آخر حصة اخترتها إن لم تُعبّأ ← التالية بعد آخر حصة أنجزتها ← أول حصة لم تُنجز
+// ما عُبّئ في هذه الصفحة ← آخر حصة اخترتها إن لم تُعبّأ ← أقدم حصة لم تُنجز بتاريخ الملف ← التالية بعد آخر حصة أنجزتها ← أول حصة لم تُنجز
 export function pickSession(sessions, state, pkgId, mark) {
   if (!sessions.length) return null;
   if (mark && mark.pkgId === pkgId) { const m = sessions.find((l) => l.id === mark.lessonId); if (m) return m; }
   const done = (l) => sessionDone(state, pkgId, l);
   const i = pkgId === state.pkgId ? sessions.findIndex((l) => l.id === state.lessonId) : -1;
   if (i >= 0 && !done(sessions[i])) return sessions[i];
+  // تواريخ الملف تحكم الترتيب (لا موضع الحصة في الملف): أقدم حصة لم تُنجز بتاريخها
+  const dated = sessions.filter((l) => !done(l) && isIso(l.pubDate)).sort((a, b) => a.pubDate.localeCompare(b.pubDate));
+  if (dated.length) return dated[0];
   if (i >= 0) { const nx = sessions.slice(i + 1).find((l) => !done(l)); if (nx) return nx; }
   return sessions.find((l) => !done(l)) || sessions.find((l) => !sessionStatus(state, pkgId, l.id).saved) || (i >= 0 ? sessions[i] : sessions[0]);
+}
+
+// الحصة المستحقة حسب تواريخ الملف (عبر المواد، والمادة الحالية أولًا): حصة اليوم ← أقرب حصة قادمة (خلال ١٠ أيام) ←
+// أحدث حصة فائتة (خلال ١٤ يومًا) ← أقدم حصة لم تُنجز بتاريخ. null إن لم يكن في المواد تواريخ.
+export function nextByDate(packages, state, today = isoOf(new Date())) {
+  const all = [];
+  for (const p of packages || []) for (const l of p.lessons || []) {
+    if (!isIso(l.pubDate) || sessionDone(state, p.id, l)) continue;
+    const diff = Math.round((parseIso(l.pubDate) - parseIso(today)) / 864e5);
+    all.push({ pkg: p, lesson: l, date: l.pubDate, diff, cur: p.id === state.pkgId ? 0 : 1 });
+  }
+  if (!all.length) return null;
+  const pick = (f, sort) => all.filter(f).sort(sort)[0] || null;
+  return pick((x) => x.diff === 0, (a, b) => a.cur - b.cur)
+    || pick((x) => x.diff > 0 && x.diff <= 10, (a, b) => a.diff - b.diff || a.cur - b.cur)
+    || pick((x) => x.diff < 0 && x.diff >= -14, (a, b) => b.diff - a.diff || a.cur - b.cur)
+    || pick(() => true, (a, b) => a.date.localeCompare(b.date) || a.cur - b.cur);
 }
 
 // الحصة التالية في المادة بعد حصة معينة (بترتيب الدروس ثم الحصص)، متخطيًا ما أُنجز.
@@ -273,7 +325,7 @@ export function activeChain(state, packages, maxAgeMs = 24 * 3600e3) {
 // how: page (عُبّئ في هذه الصفحة) | manual (أكّدت التوافق سابقًا) | auto (توافق تلقائي بالعنوان)
 //      nomatch (لم يتوافق — يحتاج تأكيدًا) | chain (لا عنوان: التالية في خطتك) | last (لا عنوان)
 // candidates: دروس مرشّحة لتأكيد التوافق حين لا يتوافق تلقائيًا
-export function suggestSelection({ packages, state, title, picks, mark }) {
+export function suggestSelection({ packages, state, title, picks, mark, settings }) {
   const withLessons = (packages || []).filter((p) => (p.lessons || []).length);
   if (!withLessons.length) return null;
   let pkg = null, lesson = null, how = 'none', score = 0, candidates = [];
@@ -283,9 +335,14 @@ export function suggestSelection({ packages, state, title, picks, mark }) {
   // عند التساوي تُفضَّل المادة التي تعمل عليها الآن
   const ordered = withLessons.slice().sort((a, b) => (b.id === state.pkgId) - (a.id === state.pkgId));
   if (!pkg && title) { const m = bestLesson(ordered, title); if (m) { pkg = m.pkg; lesson = m.lesson; how = 'auto'; score = m.score; } }
+  let byDate = null;
   if (!pkg) {
     const chain = activeChain(state, withLessons);
-    if (chain) candidates.push({ pkg: chain.pkg, lesson: chain.lesson, why: 'chain', retry: !!chain.retry });
+    // حصة مستحقة بتاريخ الملف: تسبق «التالية في خطتك» (التاريخ المكتوب أصرح من التتابع) ما لم تكن الأخيرة إعادةً لحصة لم تُحفظ
+    byDate = (!settings || settings.fileDates !== false) ? nextByDate(ordered, state) : null;
+    if (chain && chain.retry) candidates.push({ pkg: chain.pkg, lesson: chain.lesson, why: 'chain', retry: true });
+    if (byDate) candidates.push({ pkg: byDate.pkg, lesson: byDate.lesson, why: 'date', date: byDate.date, diff: byDate.diff });
+    if (chain && !chain.retry && !(byDate && byDate.pkg.id === chain.pkg.id && byDate.lesson.id === chain.lesson.id)) candidates.push({ pkg: chain.pkg, lesson: chain.lesson, why: 'chain', retry: false });
     rankLessons(ordered, title, 4).forEach((r) => {
       const same = candidates.find((c) => c.pkg.id === r.pkg.id && groupKey(c.lesson) === groupKey(r.lesson));
       if (same) same.similar = true;   // التالية في خطتك وهي أيضًا الأقرب لعنوان نور
@@ -294,11 +351,11 @@ export function suggestSelection({ packages, state, title, picks, mark }) {
     candidates = candidates.slice(0, 3);
     const base = candidates[0] ? { p: candidates[0].pkg, l: candidates[0].lesson } : (find(state.pkgId, state.lessonId) || { p: withLessons[0], l: withLessons[0].lessons[0] });
     pkg = base.p; lesson = base.l;
-    how = title ? 'nomatch' : (chain ? 'chain' : 'last');
+    how = title ? 'nomatch' : (candidates[0] ? candidates[0].why === 'similar' ? 'last' : candidates[0].why : 'last');
   }
   const sessions = pkg.lessons.filter((l) => groupKey(l) === groupKey(lesson));
-  // مرشّح «التالية في خطتك» يحدد الحصة نفسها لا أول حصة في الدرس
-  const chainPick = candidates[0] && candidates[0].why === 'chain' && sessions.find((l) => l.id === candidates[0].lesson.id);
+  // مرشّح «التالية في خطتك» أو «بتاريخ الملف» يحدد الحصة نفسها لا أول حصة في الدرس
+  const chainPick = candidates[0] && (candidates[0].why === 'chain' || candidates[0].why === 'date') && sessions.find((l) => l.id === candidates[0].lesson.id);
   // «… (2)» في عنوان نور = الحصة الثانية من الدرس
   const nth = (how === 'auto' || how === 'manual') && suffixIsSession([pkg]) ? sessionSuffix(title) : null;
   const suffixPick = nth && !(mark && sessions.some((l) => l.id === mark.lessonId)) ? sessions[nth - 1] : null;
@@ -370,6 +427,7 @@ export function usedDates(pkg, state) {
 export function suggestDate(state, settings, pkg, session) {
   const today = isoOf(new Date());
   const days = daysFor(state, settings, pkg && pkg.id);
+  const hol = holidaySet(settings);
   if (pkg && session) {
     const s = sessionStatus(state, pkg.id, session.id);
     if (!s.saved && s.date && s.date >= today) return { date: s.date, why: 'same' };
@@ -377,7 +435,7 @@ export function suggestDate(state, settings, pkg, session) {
     if (!s.saved && isIso(session.pubDate) && (!settings || settings.fileDates !== false)) {
       const usedF = usedDates(pkg, state);
       let d = nextSchoolDay(session.pubDate, days, true);
-      for (let i = 0; i < 60 && usedF[d] && !usedF[d].some((u) => u.lessonId === session.id); i++) d = nextSchoolDay(d, days, false);
+      for (let i = 0; i < 60 && ((usedF[d] && !usedF[d].some((u) => u.lessonId === session.id)) || hol.has(d)); i++) d = nextSchoolDay(d, days, false);
       return { date: d, why: 'file', moved: d !== session.pubDate, from: session.pubDate };
     }
   }
@@ -387,7 +445,7 @@ export function suggestDate(state, settings, pkg, session) {
   let cand, why;
   if (last && last >= today) { cand = nextSchoolDay(last, days, false); why = 'after'; }
   else { cand = nextSchoolDay(today, days, true); why = 'today'; }
-  for (let i = 0; i < 60 && used[cand]; i++) cand = nextSchoolDay(cand, days, false);
+  for (let i = 0; i < 60 && (used[cand] || hol.has(cand)); i++) cand = nextSchoolDay(cand, days, false);
   return { date: cand, why, last };
 }
 
@@ -564,7 +622,9 @@ export const sessionNo = (pkg, lesson) => {
 
 // ---------- مطابقة الدروس بالترتيب (لأي مادة) ----------
 // اسم ترتيبي مثل «الدرس 4 من 55»: رقم الدرس بين دروس الفصل كلها لا داخل وحدته
-export { ordinalOf };   // انتقل إلى match.js (منطق خالص قابل للاختبار)
+const ORDINAL = /(?:الدرس|درس|lesson)\s*(\d+)\s*(?:من|of|\/)\s*(\d+)/i;
+const toLatin = (x) => String(x || '').replace(/[٠-٩]/g, (d) => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+export function ordinalOf(lesson) { const m = toLatin(lesson && lesson.lesson).match(ORDINAL); return m ? { n: +m[1], of: +m[2] } : null; }
 const pickKeyMatches = (key, text) => { const t = kwNorm(text); return key === t || (key.startsWith(t + ' ') && /^\d+$/.test(key.slice(t.length + 1))); };
 
 // كل دروس الشجرة بالترتيب — تُحفظ لكل مقرر (الرابط) أسبوعًا حتى لا تُفتح الوحدات كلها كل مرة

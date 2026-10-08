@@ -246,11 +246,13 @@ export const shortDate = (iso) => (isIso(iso) ? toArDigits(parseIso(iso).getDate
 // items: [{ fileDate?: ISO, fixed?: ISO }] بترتيب التنفيذ. تواريخ الملف «مراسٍ»: تُحترم كما هي (تُنقل إلى يوم الحصة التالي إن لم تكن
 // يوم حصة أو كانت مستعملة)، وما بعدها بلا تاريخ يتبعها يومًا بعد يوم على أيام الحصص. fixed: تاريخ نُقل أثناء التشغيل (لا يتغيّر).
 // taken: تواريخ لا تُستعمل (محفوظة لحصص أخرى). يعيد ملاحظات التعديل: [{ i, from, to, why: offday|taken, src }]
-export function layoutDates(items, { start, days, taken, useFileDates = true } = {}) {
+// skip: أيام إجازة (مجموعة ISO) لا تُستعمل أبدًا — تُحسب كيوم بلا حصص (why: holiday)
+export function layoutDates(items, { start, days, taken, useFileDates = true, skip } = {}) {
   const used = new Set(taken || []);
+  const hol = skip instanceof Set ? skip : new Set(skip || []);
   const notes = [];
   let prev = null;
-  const free = (iso) => { let d = nextSchoolDay(iso, days, true); for (let i = 0; i < 120 && used.has(d); i++) d = nextSchoolDay(d, days, false); return d; };
+  const free = (iso) => { let d = nextSchoolDay(iso, days, true); for (let i = 0; i < 120 && (used.has(d) || hol.has(d)); i++) d = nextSchoolDay(d, days, false); return d; };
   items.forEach((s, i) => {
     let want, src;
     if (s.fixed && isIso(s.fixed)) { want = s.fixed; src = 'fixed'; }
@@ -258,7 +260,7 @@ export function layoutDates(items, { start, days, taken, useFileDates = true } =
     else if (prev) { want = nextSchoolDay(prev, days, false); src = 'seq'; }
     else { want = nextSchoolDay(start && isIso(start) ? start : isoOf(new Date()), days, true); src = 'start'; }
     const d = free(want);
-    if (d !== want) notes.push({ i, from: want, to: d, why: isSchoolDay(want, days) ? 'taken' : 'offday', src });
+    if (d !== want) notes.push({ i, from: want, to: d, why: hol.has(want) ? 'holiday' : isSchoolDay(want, days) ? 'taken' : 'offday', src });
     s.date = d; s.dateSrc = src;
     used.add(d);
     // التسلسل يتبع آخر تاريخ (الأكبر) حتى لا نعود للخلف بعد مرساة متأخرة
@@ -268,3 +270,30 @@ export function layoutDates(items, { start, days, taken, useFileDates = true } =
 }
 // الحصص التي تقع تواريخها في أسبوع تاريخٍ ما
 export const inWeekOf = (iso, anyDayIso) => isIso(iso) && isIso(anyDayIso) && weekStart(iso) === weekStart(anyDayIso);
+
+// ---------- الإجازات وميزانية الفصل ----------
+// نص الإجازات من الإعدادات: سطر لكل إجازة — «2026-11-18» أو «من 18/11/2026 إلى 19/11/2026 العيد الوطني» أو «18/11 – 22/11» — يعيد مجموعة أيام ISO
+export function parseHolidays(text, ctx = {}) {
+  const out = new Set();
+  String(text || '').split(/\r?\n|[;؛]/).forEach((line) => {
+    const t = line.trim();
+    if (!t) return;
+    const a = findDate(t, ctx);
+    if (!a) return;
+    const rest = toLatinDigits(t).replace(STRIP, '').slice(a.end);
+    const b = findDate(rest, { ref: a.iso });
+    let from = a.iso, to = b ? b.iso : a.iso;
+    if (to < from) [from, to] = [to, from];
+    if (diffDays(from, to) > 120) to = from;   // مدى غير معقول: يوم واحد
+    for (let x = from; x <= to; x = addDays(x, 1)) out.add(x);
+  });
+  return out;
+}
+// عدد أيام الحصص المتاحة بين تاريخين (شاملين) بعد استبعاد الإجازات
+export function countSchoolDays(fromIso, toIso, days, skip) {
+  if (!isIso(fromIso) || !isIso(toIso) || toIso < fromIso) return 0;
+  const hol = skip instanceof Set ? skip : new Set(skip || []);
+  let n = 0;
+  for (let x = fromIso, i = 0; x <= toIso && i < 400; x = addDays(x, 1), i++) if (isSchoolDay(x, days) && !hol.has(x)) n++;
+  return n;
+}
