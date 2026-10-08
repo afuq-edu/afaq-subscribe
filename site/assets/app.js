@@ -3,7 +3,7 @@
   const A = window.Afaq;
   const { $, $$, esc, toAr, db } = A;
   const VIEWS = ['setup', 'home', 'login', 'register', 'forgot', 'newpass', 'dash'];
-  const S = { session: null, profile: null, settings: null, catalog: [], subs: [], picked: new Set(), plan: 'term', recovering: false, autoLinked: false };
+  const S = { session: null, profile: null, settings: null, subs: [], plan: 'term', recovering: false, autoLinked: false };
   const PICKS_KEY = 'afaqPicks';
 
   // ================= التنقل =================
@@ -73,28 +73,6 @@
 
   // ================= الباقات والطلب عبر واتساب =================
   const guessTerm = () => { const m = new Date().getMonth() + 1; return m >= 2 && m <= 6 ? 2 : 1; };
-  async function loadCatalog() {
-    const box = $('#catalog');
-    try { S.catalog = await db.rpc('catalog'); } catch (e) { box.innerHTML = `<p class="msg bad">${esc(A.errText(e))}</p>`; return; }
-    if (!S.catalog.length) { box.innerHTML = '<div class="empty"><b>تُضاف الباقات قريبًا</b>تواصل معنا عبر واتساب لمعرفة المواد المتاحة.</div>'; return; }
-    const bySubject = new Map();
-    S.catalog.forEach((p) => { if (!bySubject.has(p.subject)) bySubject.set(p.subject, []); bySubject.get(p.subject).push(p); });
-    box.innerHTML = [...bySubject].map(([subj, list]) => `<div class="subject"><h3>${esc(subj)}</h3><div class="grades">${
-      list.sort((a, b) => a.grade - b.grade).map((p) => {
-        const ready = (p.terms || []).map((t) => t.term);
-        const t = ready.length ? 'جاهز: ' + ready.map((n) => 'ف' + toAr(n)).join(' و') : 'قيد الإعداد';
-        return `<button type="button" class="grade" data-id="${esc(p.id)}" aria-pressed="${S.picked.has(p.id)}" title="${esc(p.title)}">${esc(A.GRADES[p.grade] || p.grade)}<span class="t ${ready.length ? '' : 'none'}">${t}</span></button>`;
-      }).join('')}</div></div>`).join('');
-    $$('.grade', box).forEach((b) => {
-      b.onclick = () => {
-        const id = b.dataset.id;
-        if (S.picked.has(id)) S.picked.delete(id); else S.picked.add(id);
-        b.setAttribute('aria-pressed', S.picked.has(id));
-        renderBasket();
-      };
-    });
-    renderBasket();
-  }
   // خطط الاشتراك: فصلي أو سنوي، بسعر الباقة الواحدة من الإعدادات
   function renderPlans() {
     const st = S.settings || {};
@@ -107,13 +85,13 @@
     $$('.plan').forEach((b) => { b.setAttribute('aria-pressed', b.dataset.plan === S.plan); });
   }
   $$('.plan').forEach((b) => { b.onclick = () => { S.plan = b.dataset.plan; renderPlans(); renderBasket(); }; });
+  $('#reqWhat').oninput = renderBasket;
   function planPrice(plan) { const st = S.settings || {}; return A.priceNum(plan === 'year' ? st.price_year : st.price_term); }
-  function pickedTitles() { return [...S.picked].map((id) => (S.catalog.find((p) => p.id === id) || {}).title).filter(Boolean); }
+  // لا تُعرض قائمة التحاضير الجاهزة للزوار: المعلم يكتب مواده وصفوفه، سطرًا لكل مادة
+  function pickedTitles() { return $('#reqWhat').value.split(/\n+/).map((x) => x.trim()).filter(Boolean); }
   function renderBasket() {
-    const n = S.picked.size;
-    $('#basket').hidden = !n;
-    if (!n) return;
-    $('#basketWhat').innerHTML = `<b>${A.planName(S.plan)}</b> — ${n === 1 ? 'باقة واحدة' : n === 2 ? 'باقتان' : toAr(n) + ' باقات'}: ${esc(pickedTitles().join('، '))}`;
+    const n = pickedTitles().length;
+    $('#basketWhat').innerHTML = n ? `<b>${A.planName(S.plan)}</b> — ${n === 1 ? 'باقة واحدة' : n === 2 ? 'باقتان' : toAr(n) + ' باقات'}: ${esc(pickedTitles().join('، '))}` : `<b>${A.planName(S.plan)}</b> — اكتب المادة والصف أعلاه.`;
     $('#basketTermWrap').hidden = S.plan === 'year';
     const price = planPrice(S.plan);
     $('#basketTotal').hidden = !price;
@@ -136,9 +114,10 @@
   $('#basketTerm').value = String(guessTerm());
   $('#basketSend').onclick = async () => {
     const term = +$('#basketTerm').value;
+    if (!pickedTitles().length) { A.toast('اكتب المادة والصف أولًا.', 'bad'); $('#reqWhat').focus(); return; }
     if (!S.session) {
       // الرمز يُصدر باسم المعلم: الحساب أولًا، ثم يُرسل الطلب من لوحة المعلم
-      sessionStorage.setItem(PICKS_KEY, JSON.stringify({ ids: [...S.picked], term, plan: S.plan }));
+      sessionStorage.setItem(PICKS_KEY, JSON.stringify({ titles: pickedTitles(), term, plan: S.plan }));
       A.toast('أنشئ حسابك أولًا ليصدر الرمز باسمك، ثم أرسل طلبك من حسابك.');
       location.hash = '#register';
       return;
@@ -223,9 +202,8 @@
     let pend = null;
     try { pend = JSON.parse(sessionStorage.getItem(PICKS_KEY) || 'null'); } catch (e) {}
     const notice = $('#dashNotice');
-    if (pend && pend.ids && pend.ids.length) {
-      if (!S.catalog.length) { try { S.catalog = await db.rpc('catalog'); } catch (e) {} }
-      const titles = pend.ids.map((id) => (S.catalog.find((x) => x.id === id) || {}).title).filter(Boolean);
+    if (pend && Array.isArray(pend.titles) && pend.titles.length) {
+      const titles = pend.titles.map(String);
       notice.hidden = !titles.length;
       notice.className = 'msg ok';
       notice.innerHTML = `طلبك جاهز: ${esc(titles.join('، '))} — ${pend.plan === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي، ' + A.termName(pend.term)}. <button class="btn wa sm" id="sendPend" type="button">أرسله عبر واتساب</button>`;
@@ -376,7 +354,7 @@
     if (st.site_name) { $('#siteName').textContent = st.site_name; $('#footName').textContent = st.site_name; }
     if (st.announcement) { $('#announce').hidden = false; $('#announce').textContent = st.announcement; }
     if (st.whatsapp) { const w = $('#footWa'); w.hidden = false; w.href = A.waLink(st.whatsapp, 'السلام عليكم، لدي استفسار عن منصة أفق التعليمية.'); w.target = '_blank'; w.rel = 'noopener'; }
-    try { const pend = JSON.parse(sessionStorage.getItem(PICKS_KEY) || 'null'); if (pend) { pend.ids.forEach((id) => S.picked.add(id)); $('#basketTerm').value = String(pend.term); if (pend.plan) S.plan = pend.plan; } } catch (e) {}
+    try { const pend = JSON.parse(sessionStorage.getItem(PICKS_KEY) || 'null'); if (pend && Array.isArray(pend.titles)) { $('#reqWhat').value = pend.titles.join('\n'); $('#basketTerm').value = String(pend.term); if (pend.plan) S.plan = pend.plan; } } catch (e) {}
     renderPlans();
     const { data } = await db.client.auth.getSession();
     S.session = data.session;
@@ -389,7 +367,7 @@
       if (changed) { S.profile = null; await loadProfile(); renderNav(); route(); }
     });
     route();
-    loadCatalog();
+    renderBasket();
   }
   boot();
 })();

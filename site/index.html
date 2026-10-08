@@ -71,7 +71,7 @@
     <section class="block" id="packages" style="background:var(--paper)">
       <div class="wrap">
         <h2>الباقات</h2>
-        <p class="intro">كل مادة لكل صف باقة مستقلة. اختر نوع الاشتراك، فصليًا أو سنويًا، ثم اختر ما تدرّسه واطلب الرمز.</p>
+        <p class="intro">كل مادة لكل صف باقة مستقلة. اختر نوع الاشتراك، فصليًا أو سنويًا، واكتب ما تدرّسه، ثم اطلب الرمز.</p>
         <div class="plans" id="plans" role="group" aria-label="نوع الاشتراك">
           <button type="button" class="plan" data-plan="term" aria-pressed="true">
             <span class="pname">اشتراك فصلي</span>
@@ -85,8 +85,8 @@
             <span class="save" id="saveYear" hidden></span>
           </button>
         </div>
-        <div class="subjects" id="catalog"><p class="muted">جارٍ تحميل الباقات…</p></div>
-        <div class="basket" id="basket" hidden>
+        <label class="field" style="display:block;max-width:560px;margin:18px auto 0"><span>المواد والصفوف التي تدرّسها</span><textarea id="reqWhat" rows="3" placeholder="مثال: هذا وطني — الحادي عشر"></textarea><small class="muted">كل مادة وصفها في سطر.</small></label>
+        <div class="basket" id="basket">
           <div class="what" id="basketWhat"></div>
           <label class="small" id="basketTermWrap">الفصل
             <select id="basketTerm"><option value="1">الفصل الأول</option><option value="2">الفصل الثاني</option></select>
@@ -214,7 +214,7 @@
             <button class="btn primary" type="submit">فعّل الرمز</button>
           </form>
           <div class="msg" id="codeMsg" hidden style="margin-top:12px"></div>
-          <p class="small muted" style="margin-top:14px">ليس لديك رمز؟ <a href="#packages">اختر الباقات واطلبه عبر واتساب</a></p>
+          <p class="small muted" style="margin-top:14px">ليس لديك رمز؟ <a href="#packages">اطلبه عبر واتساب</a></p>
         </div>
       </div>
       <div style="display:grid;gap:22px">
