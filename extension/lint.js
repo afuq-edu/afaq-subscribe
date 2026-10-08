@@ -1,6 +1,6 @@
 // lint.js — فحص ملف المادة قبل التشغيل: ما الذي قد يعطّل التعبئة أو يضعف التعرّف على الدروس في نور؟
 // لا يمنع شيئًا — يكشف المشكلات ويقترح الحل، وما يمكن إصلاحه تلقائيًا (تاريخ بصيغة غريبة، يوم إجازة…) يُصلَح وقت التشغيل.
-import { lessonNum, unitNum, kwNorm, titleSim, sessionSuffix } from './match.js';
+import { lessonNum, unitNum, kwNorm, titleSim, sessionSuffix, numberScheme, lessonNumber } from './match.js';
 import { isIso, isSchoolDay, dayLabel, parseAnyDate, toArDigits, isoOf, weekNo, rangeStartDate } from './dates.js';
 
 const textOf = (h) => String(h || '').replace(/<[^<>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
@@ -53,17 +53,21 @@ export function lintPackage(pkg, opts = {}) {
   const groups = new Map();
   lessons.forEach((l) => { const k = groupKey(l); if (!groups.has(k)) groups.set(k, { unit: l.unit || '', lesson: l.lesson || '', sessions: [] }); groups.get(k).sessions.push(l); });
   const gs = [...groups.values()];
-  const nums = gs.map((g) => lessonNum(g.lesson));
+  // رقم الدرس وفق مخطط ترقيم وحدته: «1- 5 الأسس» = الدرس ٥ (لا الدرس ١) — وإلا كل دروس الوحدة «الدرس ١» وتحذيرات كاذبة
+  const schemes = new Map();
+  gs.forEach((g) => { const k = kwNorm(g.unit); if (!schemes.has(k)) schemes.set(k, numberScheme(gs.filter((x) => kwNorm(x.unit) === k).map((x) => x.lesson))); });
+  const numOf = (g) => lessonNumber(g.lesson, schemes.get(kwNorm(g.unit)));
+  const nums = gs.map(numOf);
   const withNum = nums.filter((n) => n != null).length;
   if (withNum && withNum < gs.length && gs.length >= 3) {
-    const bad = gs.filter((g) => lessonNum(g.lesson) == null && !/review|مراجع|project|مشروع|test|اختبار|تقويم|تقييم/i.test(g.lesson));
+    const bad = gs.filter((g) => numOf(g) == null && !/review|مراجع|project|مشروع|test|اختبار|تقويم|تقييم/i.test(g.lesson));
     if (bad.length) add('info', 'no-number', `${toArDigits(bad.length)} ${bad.length === 1 ? 'درس بلا رقم' : 'دروس بلا رقم'} بينما البقية مرقّمة — تُطابَق بالاسم والترتيب: ${bad.slice(0, 3).map((g) => '«' + g.lesson + '»').join('، ')}${bad.length > 3 ? '…' : ''}`, bad.flatMap((g) => g.sessions.map((s) => s.id)));
   }
   // أسماء متشابهة جدًا في الوحدة نفسها (بلا أرقام تفرّق) — قد تختلط في نور
   for (let i = 0; i < gs.length; i++) for (let j = i + 1; j < gs.length; j++) {
     const a = gs[i], b = gs[j];
     if (kwNorm(a.unit) !== kwNorm(b.unit)) continue;
-    const na = lessonNum(a.lesson), nb = lessonNum(b.lesson);
+    const na = numOf(a), nb = numOf(b);
     if (na != null && nb != null && na !== nb) continue;
     const sa = sessionSuffix(a.lesson), sb = sessionSuffix(b.lesson);
     if (sa != null && sb != null && sa !== sb) continue;
@@ -72,32 +76,40 @@ export function lintPackage(pkg, opts = {}) {
   }
   // فجوات الترقيم داخل الوحدة
   const byUnit = new Map(), unitName = new Map();
-  gs.forEach((g) => { const n = lessonNum(g.lesson); if (n != null) { const k = kwNorm(g.unit); if (!byUnit.has(k)) { byUnit.set(k, []); unitName.set(k, g.unit); } byUnit.get(k).push(n); } });
+  gs.forEach((g) => { const n = numOf(g); if (n != null) { const k = kwNorm(g.unit); if (!byUnit.has(k)) { byUnit.set(k, []); unitName.set(k, g.unit); } byUnit.get(k).push(n); } });
   for (const [uk, arr] of byUnit) {
     const u = unitName.get(uk);
     const s = [...new Set(arr)].sort((x, y) => x - y);
     const gaps = []; for (let i = 1; i < s.length; i++) for (let n = s[i - 1] + 1; n < s[i]; n++) gaps.push(n);
     if (gaps.length && gaps.length <= 6) add('info', 'gap', `في «${u || 'الدروس'}» ينقص ${gaps.length === 1 ? 'الدرس' : 'الدروس'} ${gaps.map(toArDigits).join('، ')} — إن كانت في نور فستبقى بلا تحضير.`);
-    const dups = s.filter((n) => arr.filter((x) => x === n).length > 1);
-    if (dups.length) add('warn', 'dup-number', `رقم الدرس مكرر في «${u || 'الدروس'}»: ${[...new Set(dups)].map(toArDigits).join('، ')} — قد يُربط درسان بدرس واحد في نور.`);
+    const dups = [...new Set(s.filter((n) => arr.filter((x) => x === n).length > 1))];
+    if (dups.length) {
+      // الرقم نفسه لدرسين بأسماء مختلفة واضحة (أجزاء أ/ب مثلًا) لا يضر — يُفرَّق بينهما بالاسم؛ الخطر حين تتشابه الأسماء أيضًا
+      const inUnit = gs.filter((g) => kwNorm(g.unit) === uk);
+      const risky = dups.filter((n) => { const same = inUnit.filter((g) => numOf(g) === n); return same.some((a, i) => same.some((b, j) => j > i && titleSim(a.lesson, b.lesson) >= 0.8)); });
+      if (risky.length) add('warn', 'dup-number', `رقم الدرس مكرر مع تشابه الأسماء في «${u || 'الدروس'}»: ${risky.map(toArDigits).join('، ')} — قد يُربط درسان بدرس واحد في نور.`);
+      const soft = dups.filter((n) => !risky.includes(n));
+      if (soft.length) add('info', 'dup-number-soft', `رقم الدرس ${soft.map(toArDigits).join('، ')} يحمله أكثر من درس في «${u || 'الدروس'}» (أجزاء أ/ب غالبًا) — يُفرَّق بينها بالاسم.`);
+    }
   }
   // وحدات: بعض الحصص بلا وحدة وبعضها بوحدة
   const noUnit = lessons.filter((l) => !l.unit).length;
   if (noUnit && noUnit < lessons.length) add('info', 'mixed-unit', `${toArDigits(noUnit)} ${noUnit === 1 ? 'حصة بلا وحدة' : 'حصص بلا وحدة'} والبقية بوحدات — تُطابَق بالاسم عبر الوحدات كلها.`);
   gs.forEach((g) => { if (String(g.lesson).length > 140) add('warn', 'long-title', `اسم درس طويل جدًا (${toArDigits(String(g.lesson).length)} حرفًا): «${String(g.lesson).slice(0, 60)}…» — اجعله كما في الكتاب.`, g.sessions.map((s) => s.id)); });
 
-  // الحصص
-  const empty = lessons.filter((l) => !textOf(l.outcomes) && !textOf(l.procedures) && !textOf(l.intro) && !textOf(l.formative) && !textOf(l.summative));
+  // الحصص — مواد الاشتراك (البعيدة) لا تحمل محتوى البنود محليًا: يُجلب من منصة أفق لحظة التعبئة، فلا معنى لفحص «فارغة» فيها
+  if (pkg.remote) add('info', 'remote-content', 'محتوى البنود (المخرجات، سير الدرس…) يُجلب من منصة أفق لحظة تعبئة كل حصة ولا يُخزَّن في الإضافة — لذا لا يُفحص هنا.');
+  const empty = pkg.remote ? [] : lessons.filter((l) => !textOf(l.outcomes) && !textOf(l.procedures) && !textOf(l.intro) && !textOf(l.formative) && !textOf(l.summative));
   if (empty.length) add('warn', 'empty-session', `${toArDigits(empty.length)} ${empty.length === 1 ? 'حصة فارغة' : 'حصص فارغة'} (لا مخرجات ولا سير درس) — تُعبَّأ خاناتها فارغة في نور: ${empty.slice(0, 3).map((l) => '«' + (l.lesson || '') + ' / ' + l.title + '»').join('، ')}${empty.length > 3 ? '…' : ''}`, empty.map((l) => l.id));
-  const thin = lessons.filter((l) => !empty.includes(l) && !textOf(l.procedures));
+  const thin = pkg.remote ? [] : lessons.filter((l) => !empty.includes(l) && !textOf(l.procedures));
   if (thin.length) add('info', 'no-procedures', `${toArDigits(thin.length)} ${thin.length === 1 ? 'حصة بلا «سير الدرس»' : 'حصص بلا «سير الدرس»'}.`, thin.map((l) => l.id));
-  // عناوين حصص مكررة داخل الدرس
-  gs.forEach((g) => {
+  // عناوين حصص مكررة داخل الدرس — سطر واحد لكل الملف (لا سطر لكل درس)
+  const dupSess = gs.filter((g) => {
     const seen = new Map();
     g.sessions.forEach((s) => { const k = kwNorm(s.title); seen.set(k, (seen.get(k) || 0) + 1); });
-    const d = [...seen].filter(([, n]) => n > 1);
-    if (d.length) add('info', 'dup-session', `في «${g.lesson}» حصتان بالعنوان نفسه — تُرقَّم في نور «(2)» تلقائيًا.`, g.sessions.map((s) => s.id));
+    return [...seen.values()].some((n) => n > 1);
   });
+  if (dupSess.length) add('info', 'dup-session', `${dupSess.length === 1 ? `في «${dupSess[0].lesson}» حصتان بالعنوان نفسه` : `${toArDigits(dupSess.length)} درسًا فيها حصص بالعنوان نفسه`} — تُرقَّم في نور «(2)، (3)…» تلقائيًا.`, dupSess.flatMap((g) => g.sessions.map((s) => s.id)));
 
   // التواريخ
   const dated = lessons.filter((l) => l.pubDate);
