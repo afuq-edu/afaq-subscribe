@@ -7,7 +7,7 @@ import {
   NOOR_LEVELS, NOOR_STRATEGIES, NOOR_RESOURCES, GRADES, DAY_NAMES, SAMPLE_PLAN,
   parsePlanText, parsePlanBest, lessonGroups, groupKey, sessionStatus, packageProgress, driveApplies, daysFor, setPkgDays, gradeNumber, findSubjectPackage,
   getLog, clearLog, dayLabel, isoOf, parseIso, kwNorm, newId, unsavedText,
-  isIso, lintPackage, lintLevel, hasFileDates, datedCount, normalizeLesson,
+  isIso, lintPackage, lintLevel, hasFileDates, datedCount, normalizeLesson, holidaySet, termEndOf, parseHolidays,
 } from './packages.js';
 import { docxToText } from './docx.js';
 import { AFAQ } from './afaq-config.js';
@@ -328,8 +328,8 @@ VIEWS.pkg = (id) => {
   $('pTerm').onclick = () => chrome.windows.create({ url: chrome.runtime.getURL(`semester.html?pkg=${encodeURIComponent(p.id)}`), type: 'popup', width: 560, height: 900 });
   $('pExport').onclick = () => { try { download(`حاضر - ${p.title}.json`, exportPackageFile(p)); } catch (e) { toast(String(e.message || e), 4000); } };
   $('pReset').onclick = async () => {
-    if (!(await confirmBox('تصفير التقدم', `ستعود كل حصص «${p.title}» إلى «لم تُعبّأ» (لا يُحذف شيء من نور ولا من المحتوى).`, 'تصفير'))) return;
-    await write(() => resetProgress(p.id)); route(); toast('✓ صُفّر التقدم');
+    if (!(await confirmBox('تصفير التقدم', `ستعود كل حصص «${p.title}» إلى «لم تُعبّأ»، ويُمسح سجل إدخالها وسجل «فصل كامل» لمقررها، فتُدخل من جديد كأنها لم تُدخل قط (مناسب بعد حذف التحاضير من نور). لا يُحذف شيء من نور ولا من المحتوى.`, 'تصفير'))) return;
+    await write(() => resetProgress(p.id)); route(); toast('✓ صُفّر التقدم وسجل الإدخال — يمكنك إدخال المادة من جديد');
   };
   $('pDel').onclick = async () => {
     if (!(await confirmBox('حذف المادة', `حذف «${p.title}» بكل دروسها وحصصها من المكتبة؟ صدّرها أولًا إن أردت الاحتفاظ بنسخة.`, 'حذف'))) return;
@@ -442,12 +442,14 @@ VIEWS.pkg = (id) => {
     const pkg = D.packages.find((x) => x.id === p.id);
     const box = $('pLint');
     if (!pkg || !box) return;
-    const r = lintPackage(pkg, { days: daysFor(D.state, D.settings, pkg.id) });
+    const termNo = (pkg.remote && pkg.remote.term) || ((new Date().getMonth() + 1) >= 2 && (new Date().getMonth() + 1) <= 6 ? 2 : 1);
+    const r = lintPackage(pkg, { days: daysFor(D.state, D.settings, pkg.id), termEnd: termEndOf(D.settings, termNo), holidays: holidaySet(D.settings), isDone: (l) => sessionStatus(D.state, pkg.id, l.id).saved });
     const lv = lintLevel(r);
-    box.hidden = !r.warnings.length && !hasFileDates(pkg);
+    box.hidden = !r.warnings.length && !hasFileDates(pkg) && !r.budget;
     if (box.hidden) return;
     const n = r.warnings.length;
-    box.innerHTML = `<div class="acts" style="align-items:center;gap:10px"><b style="margin-inline-end:auto">${ic(lv === 'ok' ? 'check' : 'help', 16)} فحص المادة: ${lv === 'ok' ? 'سليمة ✓' : `${toAr(n)} ${n === 1 ? 'ملاحظة' : n === 2 ? 'ملاحظتان' : n <= 10 ? 'ملاحظات' : 'ملاحظة'}`}${hasFileDates(pkg) ? ` · 📅 ${toAr(datedCount(pkg))} من ${toAr((pkg.lessons || []).length)} حصة لها تاريخ نشر في الملف` : ''}</b>${n ? `<button class="btn sm" id="pLintT">${(VIEWS.pkg.lintOpen ? 'إخفاء' : 'عرض')} التفاصيل</button>` : ''}</div>
+    const b = r.budget;
+    box.innerHTML = `<div class="acts" style="align-items:center;gap:10px"><b style="margin-inline-end:auto">${ic(lv === 'ok' ? 'check' : 'help', 16)} فحص المادة: ${lv === 'ok' ? 'سليمة ✓' : `${toAr(n)} ${n === 1 ? 'ملاحظة' : n === 2 ? 'ملاحظتان' : n <= 10 ? 'ملاحظات' : 'ملاحظة'}`}${hasFileDates(pkg) ? ` · 📅 ${toAr(datedCount(pkg))} من ${toAr((pkg.lessons || []).length)} حصة لها تاريخ نشر في الملف` : ''}${b ? ` · <span class="${b.over ? 'fdate' : ''}">ميزانية الفصل: ${sessionsWord(b.need)} متبقية لـ${toAr(b.avail)} يومًا حتى ${esc(dayLabel(b.termEnd, false))}${b.over ? ' — ينقص ' + toAr(b.over) : ' ✓'}</span>` : ' · <a href="#settings">اضبط نهاية الفصل لحساب الميزانية</a>'}</b>${n ? `<button class="btn sm" id="pLintT">${(VIEWS.pkg.lintOpen ? 'إخفاء' : 'عرض')} التفاصيل</button>` : ''}</div>
       <div class="lintlist" ${VIEWS.pkg.lintOpen ? '' : 'hidden'}>${r.warnings.map((w) => `<div class="li ${w.level}">${esc(w.text)}</div>`).join('')}</div>`;
     const t = $('pLintT'); if (t) t.onclick = () => { VIEWS.pkg.lintOpen = !VIEWS.pkg.lintOpen; renderLint(); };
   };
@@ -946,6 +948,10 @@ VIEWS.settings = async () => {
     <section class="card">
       <div class="set-row"><b>أيام الدوام<small>لاقتراح التواريخ (ولكل مادة أيام حصصها من صفحتها)</small></b><div class="days" id="sDays">${dayChips(days)}</div></div>
       <div class="set-row"><b>رابط الدرايف الافتراضي<small>يُقترح للمواد الجديدة</small></b><input class="input" id="sDrive" dir="ltr" value="${esc(s.driveLink || '')}"></div>
+      <div class="set-row"><b>نهاية الفصل الدراسي<small>آخر يوم دراسي — لحساب «ميزانية الفصل»: هل تكفي الأيام المتبقية لكل حصص الملف؟</small></b>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><label class="f">الفصل الأول<input class="input" type="date" id="sT1" value="${esc(s.term1End || '')}"></label><label class="f">الفصل الثاني<input class="input" type="date" id="sT2" value="${esc(s.term2End || '')}"></label></div></div>
+      <div class="set-row"><b>أيام الإجازات<small>سطر لكل إجازة: يوم واحد «18/11/2026» أو مدى «من 18/11/2026 إلى 19/11/2026 العيد الوطني» — تُتخطّى عند توزيع التواريخ ولا تُحسب في الميزانية</small></b>
+        <div><textarea class="input" id="sHol" rows="4" placeholder="18/11/2026 العيد الوطني&#10;من 14/12/2026 إلى 25/12/2026 إجازة منتصف الفصل">${esc(s.holidays || '')}</textarea><div class="hint" id="sHolN" style="margin-top:4px"></div></div></div>
       <div class="set-row"><b>عند التعبئة في نور</b><div class="set-stack">
         ${sw('pickLesson', 'اختر الدرس من شجرة الدروس في نور تلقائيًا', 'إن فتحت «إضافة تحضير» دون اختيار درس')}
         ${sw('titleSuffix', 'أضف «(2)» لعنوان الحصة الثانية من الدرس', 'وهكذا «(3)» للثالثة — كما في قائمة تحاضيرك')}
@@ -963,12 +969,17 @@ VIEWS.settings = async () => {
     </section>`;
   bindDays($('sDays'), days, async (d) => { D.settings = await write(() => patchSettings({ schoolDays: d })); toast('✓ حُفظت أيام الدوام'); });
   $('sDrive').oninput = debounce(async () => { await write(() => patchSettings({ driveLink: $('sDrive').value.trim() })); toast('✓ حُفظ الرابط'); }, 600);
+  $('sT1').onchange = async () => { await write(() => patchSettings({ term1End: $('sT1').value })); toast('✓ حُفظت نهاية الفصل الأول'); };
+  $('sT2').onchange = async () => { await write(() => patchSettings({ term2End: $('sT2').value })); toast('✓ حُفظت نهاية الفصل الثاني'); };
+  const holN = () => { const n = parseHolidays($('sHol').value).size; $('sHolN').textContent = n ? `${toAr(n)} ${n === 1 ? 'يوم إجازة' : n === 2 ? 'يوما إجازة' : n <= 10 ? 'أيام إجازة' : 'يوم إجازة'} مفهومة` : ($('sHol').value.trim() ? 'لم أفهم أي تاريخ — اكتب كل إجازة في سطر' : ''); };
+  holN();
+  $('sHol').oninput = debounce(async () => { await write(() => patchSettings({ holidays: $('sHol').value })); holN(); toast('✓ حُفظت الإجازات'); }, 700);
   V().querySelectorAll('[data-set]').forEach((el) => { el.onchange = async () => { await write(() => patchSettings({ [el.dataset.set]: el.checked })); toast('✓ حُفظ'); }; });
   $('sKeys').onclick = () => chrome.tabs.create({ url: 'chrome://extensions/shortcuts' });
   $('sReset').onclick = async () => {
-    if (!(await confirmBox('تصفير كل التقدم', 'ستعود كل الحصص في كل المواد إلى «لم تُعبّأ». المحتوى لا يُحذف.', 'تصفير'))) return;
+    if (!(await confirmBox('تصفير كل التقدم', 'ستعود كل الحصص في كل المواد إلى «لم تُعبّأ»، ويُمسح سجل الإدخال وسجل «فصل كامل» لكل المواد. المحتوى لا يُحذف.', 'تصفير'))) return;
     await write(async () => { for (const p of D.packages) await resetProgress(p.id); });
-    toast('✓ صُفّر التقدم');
+    toast('✓ صُفّر التقدم وسجل الإدخال لكل المواد');
   };
 };
 
@@ -999,6 +1010,9 @@ VIEWS.help = () => {
       <details><summary>حفظت في نور ولم تُسجَّل الحصة «محفوظة»؟</summary><p>اضغط «حفظتُها ✓» بجانب الحصة في النافذة، أو «تعليم كمحفوظة» من المكتبة. (إن كانت صفحة نور مفتوحة قبل تثبيت الإصدار الجديد فأعد تحميلها.)</p></details>
       <details><summary>كيف أعبّئ عدة حصص دفعة واحدة؟</summary><p>من نافذة «حاضر» اضغط «عدة حصص دفعة واحدة»: اختر الحصص (من درس أو عدة دروس) وأيام حصص المادة وتاريخ أول حصة فتوزَّع التواريخ تلقائيًا. بعد كل حصة تنتقل النافذة مباشرة إلى التالية: يُفتح نموذجها تلقائيًا إن كان معروفًا، وإلا تفتحه أنت في نور فيُفحص التوافق وتُعبّأ. في «أراجع وأحفظ بنفسي» تضغط أنت «حفظ» في نور (أو «حفظتُها — التالي»)، وفي «الحفظ التلقائي» تُحفظ كل حصة وحدها.</p></details>
       <details><summary>كيف أكتب تاريخ النشر في ملف التحضير؟</summary><p>بأي طريقة من هذه: بندًا مستقلًا في الحصة «<b>تاريخ النشر</b>» وتحته التاريخ (أو في السطر نفسه «تاريخ النشر: 12/10/2026»)، أو في عنوان الحصة «الحصة الأولى (12/10/2026)»، أو في عنوان الدرس أو الوحدة فيأخذه أول حصة بعده وتتبعه بقية الحصص يومًا بعد يوم على أيام حصصك، أو في عنوان أسبوع «الأسبوع 3: 12/10/2026 – 16/10/2026». الصيغ المفهومة: 12/10/2026 · 12-10-2026 · 2026-10-12 · ١٢/١٠/٢٠٢٦ · 12 أكتوبر 2026 · الأحد 12 أكتوبر · 12/10 بلا سنة (تُستنتج من السنة الدراسية) · 20/4/1448هـ (يُحوَّل ميلاديًا). في ملفات HTML التفاعلية يكفي مفتاح <code>publishDate</code> أو <code>date</code> أو «تاريخ النشر» في بيانات الحصة، وفي جداول Word صف «تاريخ النشر | التاريخ». وإن وقع التاريخ في يوم إجازة أو كان مستعملًا في نور يُنقل تلقائيًا إلى يوم الحصة التالي ويُخبرك السجل.</p></details>
+      <details><summary>حذفتُ التحاضير من نور وأريد إدخالها من جديد — لكن «حاضر» يعدّها مُدخلة؟</summary><p>اضغط «تصفير التقدم» من صفحة المادة في المكتبة (أو «↺ تصفير تقدم المادة» في نافذة «فصل كامل»). التصفير يمسح كل ما يجعل الحصة تُعدّ مُدخلة: حالتها (عُبّئت/حُفظت)، وسجل إدخالها في «السجل»، وسجل «فصل كامل» لمقررها، وذاكرة عناوين قائمة نور — فتعود المادة كأنها لم تُدخل قط. ثم «ابدأ» فتُدخل كاملة. (إن كانت بعض التحاضير ما زالت في نور فسيقرؤها «أكمل الناقص فقط» ولن يكررها.)</p></details>
+      <details><summary>كيف يختار «حاضر» الحصة المستحقة بتاريخ النشرة؟</summary><p>إن كانت في ملف المادة تواريخ نشر، فالتاريخ هو الذي يحكم لا ترتيب الحصص: في نافذة «حاضر» تُقترح حصة اليوم (أو أقرب قادمة، أو أحدث فائتة لم تُدخل) بعلامة 📅، وفي «فصل كامل» و«عدة حصص» تختار «حصة اليوم» أو «هذا الأسبوع» أو «من تاريخ إلى تاريخ» فتُعبَّأ الحصص التي تقع تواريخ نشرها فيه، وتُرتَّب زمنيًا. الحصة التي بلا تاريخ تتبع التي قبلها على أيام الحصص.</p></details>
+      <details><summary>ما «ميزانية الفصل» و«أيام الإجازات»؟</summary><p>اضبط في الإعدادات آخر يوم دراسي في كل فصل وأيام الإجازات (سطر لكل إجازة). عندها يحسب «حاضر» أيام الحصص المتاحة من أول تاريخ نشر حتى نهاية الفصل بعد استبعاد الإجازات، ويقارنها بعدد الحصص المتبقية في الملف قبل البدء: «٧٥ حصة لـ٧٢ يومًا — ٣ ستقع بعد نهاية الفصل». والإجازات تُتخطّى عند توزيع التواريخ من البداية (لا بعد محاولة فاشلة). وفي فحص الملف يُنبَّه على أي قفزة أكثر من أسبوعين بين تاريخي حصتين متتاليتين، فهي غالبًا خطأ مطبعي.</p></details>
       <details><summary>كيف أعبّئ وحدة واحدة أو أسبوعًا فقط بدل الفصل كله؟</summary><p>في «تحضير فصل كامل» اختر «ما الذي يُعبَّأ؟»: الفصل كاملًا، أو وحدة (واحدة أو أكثر)، أو أسبوع (أي يوم منه فتُعبَّأ الحصص التي تقع تواريخها فيه)، أو من درس إلى درس. وفي «عدة حصص» استعمل «تحديد وحدة…» أو «حصص أسبوع». الحصص خارج النطاق لا تُلمس، وما حُفظ لا يتكرر.</p></details>
       <details><summary>هل يقبل «حاضر» ملفات HTML؟</summary><p>نعم. من «إضافة تحضير» ← «رفع ملف» اختر ملف ‎.html أو ‎.htm أو ‎.mht (أو اسحبه إلى الصفحة): ملف Word المحفوظ «صفحة ويب»، أو صفحة تحضير عادية، أو ملف تحضير تفاعلي يعرض المدمج والمنفصل. يقرأ «حاضر» الدروس والحصص والبنود ويعرض لك معاينة قبل الإضافة، ولا يُشغَّل أي شيء من الملف. إن لم تظهر الحصص فتأكد أن أسماء البنود (المخرجات، الاستراتيجيات…) موجودة في الملف.</p></details>
       <details><summary>ماذا يعني «تأكد من التوافق»؟</summary><p>يتحقق «حاضر» أن الدرس المفتوح في نور هو درس الحصة التي سيعبّئها. إن لم يتوافق تلقائيًا (مثلًا اسم الدرس في نور مختلف عن اسمه في مكتبتك) يعرض لك الدرس المتوقع والأقرب لتؤكده بضغطة — ويتذكر تأكيدك فيتوافق تلقائيًا في المرات القادمة. وإن كانت الصفحة لدرس آخر اضغط «ليست هي» وافتح الصفحة الصحيحة.</p></details>

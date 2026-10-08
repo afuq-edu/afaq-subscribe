@@ -72,7 +72,7 @@ function ensureSelection() {
       return;
     }
   }
-  S.sel = suggestSelection({ packages: S.packages, state: S.state, title: S.ctx.title, picks: S.picks, mark: S.ctx.mark });
+  S.sel = suggestSelection({ packages: S.packages, state: S.state, title: S.ctx.title, picks: S.picks, mark: S.ctx.mark, settings: S.settings });
   if (S.sel && S.sel.how === 'nomatch' && !(S.sel.candidates || []).length) S.pickerOpen = true;
   if (S.sel && !S.dateTouched) setSuggestedDate();
 }
@@ -157,9 +157,9 @@ const HOW = {
 function confirmCardHtml() {
   const cands = S.sel.candidates || [];
   const items = cands.map((c) => {
-    const s = c.why === 'chain' ? c.lesson : null;
+    const s = c.why === 'chain' || c.why === 'date' ? c.lesson : null;
     return `<button class="cand" data-p="${esc(c.pkg.id)}" data-k="${esc(groupKey(c.lesson))}" data-s="${s ? esc(s.id) : ''}">
-      <span class="cw">${c.why === 'chain' ? (c.retry ? 'لم تُحفظ بعد — أعدها' : 'التالية في خطتك') + (c.similar ? '، والأقرب لعنوان نور' : '') + (s ? ': ' + esc(s.title) : '') : 'الأقرب لعنوان نور'}</span>
+      <span class="cw">${c.why === 'date' ? '📅 بتاريخ الملف ' + esc(dayLabel(c.date, false)) + (c.diff === 0 ? ' (اليوم)' : c.diff > 0 ? ' (قادمة)' : ' (فائتة)') + (c.similar ? '، والأقرب لعنوان نور' : '') + (s ? ': ' + esc(s.title) : '') : c.why === 'chain' ? (c.retry ? 'لم تُحفظ بعد — أعدها' : 'التالية في خطتك') + (c.similar ? '، والأقرب لعنوان نور' : '') + (s ? ': ' + esc(s.title) : '') : 'الأقرب لعنوان نور'}</span>
       <b>${esc(c.lesson.lesson || 'درس')}</b><small>${esc([c.lesson.unit, c.pkg.title].filter(Boolean).join(' · '))}</small>
       <span class="go">✓ تأكد من التوافق</span></button>`;
   }).join('');
@@ -182,12 +182,12 @@ function renderLesson() {
     $('pickOther').onclick = () => { S.pickerOpen = true; renderLesson(); setTimeout(() => $('q').focus(), 30); };
   } else {
     const line = how === 'page' ? 'عُبّئت هذه الحصة في هذه الصفحة'
-      : (how === 'chain' || how === 'last') ? (S.ctx && S.ctx.tree ? 'لم يُختر درس في نور بعد — سأختاره من شجرة الدروس عند التعبئة' : 'لا يظهر عنوان الدرس في نور — تأكد أنه الدرس الصحيح')
+      : (how === 'chain' || how === 'last' || how === 'date') ? (S.ctx && S.ctx.tree ? (how === 'date' ? '📅 مقترحة بتاريخها في الملف — ' : '') + 'لم يُختر درس في نور بعد — سأختاره من شجرة الدروس عند التعبئة' : 'لا يظهر عنوان الدرس في نور — تأكد أنه الدرس الصحيح')
         : '⇄ متوافق مع الدرس المفتوح في نور';
     $('lessonBox').innerHTML = `<div class="lesson">
         <div class="l-top"><span class="chip">${esc(pkg.title || pkg.subject || 'مادة')}</span>${first.unit ? `<span class="l-unit">${esc(first.unit)}</span>` : ''}<span class="l-meta" style="margin:0 auto 0 0">${sessionsWord(sessions.length)} · محفوظ ${toAr(saved)}</span></div>
         <div class="l-name">${esc(first.lesson || 'درس بلا عنوان')}</div>
-      </div><div class="mline ${(how === 'chain' || how === 'last') && !(S.ctx && S.ctx.tree) ? 'warn' : ''}"><span>${line}</span><button class="lnk" id="recheck">تأكد من التوافق ⟳</button></div>`;
+      </div><div class="mline ${(how === 'chain' || how === 'last' || how === 'date') && !(S.ctx && S.ctx.tree) ? 'warn' : ''}"><span>${line}</span><button class="lnk" id="recheck">تأكد من التوافق ⟳</button></div>`;
   }
   const rc = $('recheck');
   if (rc) rc.onclick = recheckMatch;

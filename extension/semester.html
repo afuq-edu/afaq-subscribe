@@ -75,6 +75,8 @@
   .lh>div:first-child{flex:1;min-width:0}
   .hint{font-size:12px;color:var(--muted)}
   .radios.scope label{flex:1 1 90px;padding:6px 4px;font-size:12.5px}
+  .quick{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:6px}
+  .quick .day{font-size:11.5px}
   .f.sub,.row.sub{padding:8px 10px;border-radius:10px;background:rgba(15,118,110,.06);border:1px dashed var(--line)}
   .day.unit{font-size:11.5px;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .lint{display:grid;gap:5px;font-size:12.5px}
@@ -105,13 +107,20 @@
         <label><input type="radio" name="scope" value="term" checked><span>الفصل كاملًا</span></label>
         <label><input type="radio" name="scope" value="unit"><span>وحدة</span></label>
         <label><input type="radio" name="scope" value="week"><span>أسبوع</span></label>
+        <label><input type="radio" name="scope" value="dates"><span>من تاريخ إلى تاريخ</span></label>
         <label><input type="radio" name="scope" value="range"><span>من درس إلى درس</span></label>
       </div>
+      <div class="quick"><span class="hint">اختيار سريع بتاريخ النشرة:</span><button type="button" class="day" data-q="today">حصة اليوم</button><button type="button" class="day" data-q="week">هذا الأسبوع</button><button type="button" class="day" data-q="nextweek">الأسبوع القادم</button><button type="button" class="day" data-q="overdue">الفائتة حتى اليوم</button></div>
     </div>
     <div class="f sub" id="scopeUnit" hidden><span>الوحدات — اختر واحدة أو أكثر</span><div class="days" id="unitChips"></div></div>
     <div class="row sub" id="scopeWeek" hidden>
       <label class="f"><span>أي يوم من الأسبوع المطلوب</span><input class="input" type="date" id="weekDay"></label>
       <div class="f"><span>&nbsp;</span><em class="hint" id="weekHint"></em></div>
+    </div>
+    <div class="row sub" id="scopeDates" hidden>
+      <label class="f"><span>من تاريخ</span><input class="input" type="date" id="dateFrom"></label>
+      <label class="f"><span>إلى تاريخ</span><input class="input" type="date" id="dateTo"></label>
+      <div class="f"><span>&nbsp;</span><em class="hint" id="datesHint">الحصص التي تقع تواريخ نشرها (من النشرة) بين التاريخين</em></div>
     </div>
     <div class="row sub" id="scopeRange" hidden>
       <label class="f"><span>من الدرس</span><select id="fromLesson"></select></label>
@@ -138,6 +147,7 @@
       <button class="btn primary" id="startBtn">▶ ابدأ من الصفحة الرئيسية</button>
       <button class="btn danger" id="stopBtn" hidden>■ إيقاف</button>
       <button class="btn" id="goBtn" hidden>✓ الخطة مناسبة — ابدأ التعبئة</button>
+      <button class="btn sm" id="resetBtn" title="تعود المادة كأنها لم تُدخل قط: حالة الحصص وسجل الإدخال وسجل «فصل كامل» — مناسب بعد حذف التحاضير من نور لإعادة إدخالها" style="margin-inline-start:auto">↺ تصفير تقدم المادة</button>
     </div>
     <div class="hint">المسار: الرئيسية ← بطاقة المادة ← «تحضير الدروس» ← «إضافة تحضير» ← دروس الفصل المختار من الشجرة ← تعبئة كل حصة وحفظها بتاريخ نشرها. الفصل الآخر لا يُلمس. كل عطل (بطء، انقطاع، انتهاء الجلسة، تاريخ مرفوض، يوم بلا حصص) يُعالَج وحده ويُستأنف من حيث توقف.</div>
   </section>

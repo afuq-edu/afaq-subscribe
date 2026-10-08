@@ -5,7 +5,7 @@ import {
   getPackages, getSettings, patchSettings, fillNoor, selectNoorLesson, pageContext, clickSave, pageAlerts, judgeSave, isoOf, dayLabel, DAY_NAMES,
   bestLesson, stripSessionSuffix, groupKey, lessonGroups, sessionStatus, markSaved, markSaveFailed, unsavedText, daysFor, setPkgDays, suggestDate, usedDates,
   nextSchoolDay, matchVerdict, formUrlFor, getPicks, rememberPick, kwNorm,
-  layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount,
+  layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, holidaySet,
 } from './packages.js';
 import { ic } from './icons.js';
 
@@ -150,28 +150,29 @@ function autoDates() {
   const taken = Object.entries(usedDates(pkg, state)).filter(([, arr]) => arr.some((u) => !selIds.has(u.lessonId))).map(([d]) => d);
   const uf = useFileDates();
   const items = sel.map((r) => ({ r, fileDate: uf && isIso(r.lesson.pubDate) ? r.lesson.pubDate : '', fixed: r.fixed || '' }));
-  const notes = layoutDates(items, { start: $('start').value || isoOf(new Date()), days, taken, useFileDates: uf });
+  const notes = layoutDates(items, { start: $('start').value || isoOf(new Date()), days, taken, useFileDates: uf, skip: holidaySet(settings) });
   items.forEach((it) => { it.r.date = it.date; it.r.dateSrc = it.dateSrc; it.r.movedFrom = ''; });
   notes.forEach((n) => { if (n.src === 'file') items[n.i].r.movedFrom = n.from; });
   rows.filter((r) => !r.on).forEach((r) => { r.date = ''; r.dateSrc = ''; r.movedFrom = ''; });
   $('startDay').textContent = $('start').value ? dayLabel($('start').value) : '';
   renderList();
 }
-// الحصص التي تقع تواريخها في أسبوع تاريخٍ ما (بعد توزيع التواريخ على كل غير المنجز) — لتحديد «حصص أسبوع»
-function selectWeek(anyDay) {
-  if (running || !anyDay) return;
+// الحصص التي تقع تواريخها (من النشرة، وإلا بالتتابع من أول تاريخ) في مدى زمني — لتحديد «حصص أسبوع» و«حصة اليوم» و«من تاريخ إلى تاريخ»
+function selectByDates(from, to, label) {
+  if (running || (!from && !to)) return;
   const left = rows.filter((r) => !done(r.lesson));
   const uf = useFileDates();
-  if (!uf) { $('start').value = nextSchoolDay(weekStart(anyDay), days, true); startTouched = true; }
+  if (!uf && from) { $('start').value = nextSchoolDay(from, days, true); startTouched = true; }
   const items = left.map((r) => ({ r, fileDate: uf && isIso(r.lesson.pubDate) ? r.lesson.pubDate : '', fixed: r.fixed || '' }));
   const taken = Object.entries(usedDates(pkg, state)).filter(([, arr]) => arr.some((u) => !left.some((x) => x.lesson.id === u.lessonId))).map(([d]) => d);
-  layoutDates(items, { start: $('start').value || isoOf(new Date()), days, taken, useFileDates: uf });
+  layoutDates(items, { start: $('start').value || isoOf(new Date()), days, taken, useFileDates: uf, skip: holidaySet(settings) });
   rows.forEach((r) => { r.on = false; });
-  items.forEach((it) => { if (inWeekOf(it.date, anyDay)) { it.r.on = true; openGroups.add(groupKey(it.r.lesson)); } });
+  items.forEach((it) => { if ((!from || it.date >= from) && (!to || it.date <= to)) { it.r.on = true; openGroups.add(groupKey(it.r.lesson)); } });
   autoDates();
   const sel = rows.filter((r) => r.on);
-  msg(sel.length ? 'info' : 'warn', sel.length ? `حصص أسبوع ${esc(dayLabel(weekStart(anyDay), false))} – ${esc(dayLabel(weekEnd(anyDay), false))}: ${countWord(sel.length)} — راجعها ثم اضغط «ابدأ».` : 'لا حصص تقع في هذا الأسبوع بالتواريخ الحالية.');
+  msg(sel.length ? 'info' : 'warn', sel.length ? `${label}: ${countWord(sel.length)}${uf ? ' (بحسب تواريخ النشرة)' : ''} — راجعها ثم اضغط «ابدأ».` : `لا حصص تقع في ${label} بالتواريخ الحالية${uf ? ' (تواريخ النشرة)' : ''}.`);
 }
+function selectWeek(anyDay) { if (anyDay) selectByDates(weekStart(anyDay), weekEnd(anyDay), `حصص أسبوع ${esc(dayLabel(weekStart(anyDay), false))} – ${esc(dayLabel(weekEnd(anyDay), false))}`); }
 
 function rowHtml(r) {
   const s = sessionStatus(state, pkg.id, r.lesson.id);
@@ -721,8 +722,9 @@ async function processItem(r, mode, queue) {
     const pb = rep.find((x) => x.key === 'publish');
     if (!pb || pb.status === 'ok' || !/من قبل|مسبق|مستخدم|مكرر/.test(pb.error || '')) break;
     const used = new Set(queue.filter((x) => x !== r).map((x) => x.date));
+    const hol = holidaySet(settings);
     let cand = nextSchoolDay(r.date, days, false);
-    for (let j = 0; j < 30 && used.has(cand); j++) cand = nextSchoolDay(cand, days, false);
+    for (let j = 0; j < 30 && (used.has(cand) || hol.has(cand)); j++) cand = nextSchoolDay(cand, days, false);
     setSt(r, 'wait', `التاريخ ${fmtDay(r.date)} مستخدم في نور — أجرّب ${fmtDay(cand)}`);
     r.date = cand; r.fixed = cand; r.dateSrc = 'fixed';
     $('nowDate').textContent = 'النشر: ' + dayLabel(r.date);
@@ -896,6 +898,9 @@ $('selTerm').onclick = () => { const left = rows.filter((r) => !done(r.lesson));
 $('selAll').onclick = () => { if (running) return; rows.forEach((r) => { if (openGroups.has(groupKey(r.lesson))) r.on = !done(r.lesson); }); autoDates(); };
 $('selNone').onclick = () => { if (running) return; rows.forEach((r) => { r.on = false; }); autoDates(); };
 $('weekPick').onchange = () => selectWeek($('weekPick').value);
+$('todayPick').onclick = () => { const t = isoOf(new Date()); selectByDates(t, t, 'حصة اليوم ' + esc(dayLabel(t, false))); };
+$('thisWeekPick').onclick = () => selectWeek(isoOf(new Date()));
+$('rangePick').onclick = () => { const f = $('rangeFrom').value, t = $('rangeTo').value; if (!f && !t) { msg('warn', 'اكتب تاريخ البداية أو النهاية.'); return; } selectByDates(f && t && t < f ? t : f, f && t && t < f ? f : t, `الحصص من ${esc(dayLabel(f || t, false))} إلى ${esc(dayLabel(t || f, false))}`); };
 // «تحديد وحدة»: كل غير المنجز في وحدة واحدة
 $('unitPick').onchange = () => {
   if (running) return;

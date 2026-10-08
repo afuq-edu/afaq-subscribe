@@ -122,7 +122,7 @@
     else if (m.savedBefore) { tag.className = 'tag warn'; tag.textContent = '⚠ متوافق — لكنها محفوظة في نور سابقًا: ' + m.session; }
     else if (m.how === 'auto' || m.how === 'manual') { tag.className = 'tag'; tag.textContent = '✓ متوافق: ' + m.session + when; }
     // لا عنوان درس في الصفحة للتحقق منه: اقتراح فقط، لا «متوافق»
-    else { tag.className = 'tag info'; tag.textContent = (m.how === 'chain' ? 'التالية في خطتك: ' : 'المقترحة: ') + m.session + when; }
+    else { tag.className = 'tag info'; tag.textContent = (m.how === 'chain' ? 'التالية في خطتك: ' : m.how === 'date' ? '📅 بتاريخ الملف: ' : 'المقترحة: ') + m.session + when; }
     tag.title = m.lesson ? 'الدرس: ' + m.lesson : '';
     tag.hidden = false;
     if (m.autoOpen && !autoOpened) { autoOpened = true; open(); }
