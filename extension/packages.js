@@ -1,6 +1,6 @@
 // packages.js — مكتبة التحاضير: التخزين، التقدم (عُبّئ/حُفظ)، الإعدادات، النسخ الاحتياطي، والتعبئة في نموذج منصة نور
 import { hadirEngine } from './engine.js';
-import { bestLesson, rankLessons, lessonNum, unitNum, kwNorm, kwScore, bestTreeLesson, unitMayHold, stripSessionSuffix, sessionSuffix } from './match.js';
+import { bestLesson, rankLessons, lessonNum, unitNum, kwNorm, kwScore, bestTreeLesson, unitMayHold, stripSessionSuffix, sessionSuffix, ordinalOf } from './match.js';
 import { parsePlanText, parsePlanBest, NOOR_STRATEGIES, NOOR_RESOURCES, NOOR_LEVELS, SAMPLE_PLAN, mapStrategies, mapResources } from './parse.js';
 import { AFAQ } from './afaq-config.js';
 import { remoteLesson, isRemote, REMOTE_ERR } from './remote.js';
@@ -564,9 +564,7 @@ export const sessionNo = (pkg, lesson) => {
 
 // ---------- مطابقة الدروس بالترتيب (لأي مادة) ----------
 // اسم ترتيبي مثل «الدرس 4 من 55»: رقم الدرس بين دروس الفصل كلها لا داخل وحدته
-const ORDINAL = /(?:الدرس|درس|lesson)\s*(\d+)\s*(?:من|of|\/)\s*(\d+)/i;
-const toLatin = (x) => String(x || '').replace(/[٠-٩]/g, (d) => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
-export function ordinalOf(lesson) { const m = toLatin(lesson && lesson.lesson).match(ORDINAL); return m ? { n: +m[1], of: +m[2] } : null; }
+export { ordinalOf };   // انتقل إلى match.js (منطق خالص قابل للاختبار)
 const pickKeyMatches = (key, text) => { const t = kwNorm(text); return key === t || (key.startsWith(t + ' ') && /^\d+$/.test(key.slice(t.length + 1))); };
 
 // كل دروس الشجرة بالترتيب — تُحفظ لكل مقرر (الرابط) أسبوعًا حتى لا تُفتح الوحدات كلها كل مرة
