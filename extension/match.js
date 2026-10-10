@@ -31,10 +31,22 @@ function stem(w) {
     .replace(/(ات|ون|ين|ان|ه|ي)$/, (m, _g, _o, str) => (str.length - m.length >= 3 ? '' : m));
 }
 
+// مرادفات شائعة في أسماء الدروس (عربي/إنجليزي) تُوحَّد إلى كلمة واحدة: «Review» = «مراجعة»، «Quiz» = «اختبار»…
+const SYN_GROUPS = [
+  ['review', 'review', 'revision', 'revise', 'مراجعه', 'مراجعات'], ['project', 'project', 'projects', 'مشروع', 'مشاريع'],
+  ['test', 'test', 'quiz', 'exam', 'assessment', 'اختبار', 'اختبارات', 'تقويم', 'تقييم'], ['story', 'story', 'stories', 'قصه', 'قصص'],
+  ['grammar', 'grammar', 'قواعد'], ['vocab', 'vocabulary', 'vocab', 'مفردات'], ['read', 'reading', 'read', 'قراءه'],
+  ['write', 'writing', 'write', 'كتابه'], ['listen', 'listening', 'listen', 'استماع'], ['speak', 'speaking', 'speak', 'تحدث', 'محادثه'],
+  ['song', 'song', 'songs', 'chant', 'انشوده', 'اناشيد'], ['intro', 'introduction', 'intro', 'starter', 'مقدمه', 'تمهيد', 'تمهيديه'],
+  ['practice', 'practice', 'practise', 'تدريب', 'تدريبات', 'تمارين'], ['culture', 'culture', 'ثقافه'], ['phonics', 'phonics', 'اصوات'],
+];
+const SYN = new Map();
+SYN_GROUPS.forEach(([c, ...ws]) => ws.forEach((w) => SYN.set(w, c)));
+const canon = (w) => SYN.get(w) || SYN.get(w.replace(/^(وال|بال|فال|ال|و)(?=..)/, '')) || stem(w);
 export function keywords(s) {
   return [...new Set(kwNorm(s).split(' ')
     .filter((w) => w.length > 1 && !STOP.has(w) && !STOP.has(w.replace(/^ال/, '')))
-    .map(stem).filter((w) => w.length >= 2 && !/^\d+$/.test(w)))];
+    .map(canon).filter((w) => w.length >= 2 && !/^\d+$/.test(w)))];
 }
 
 // نسبة الكلمات المفتاحية المشتركة

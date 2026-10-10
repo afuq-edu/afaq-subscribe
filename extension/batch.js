@@ -5,7 +5,7 @@ import {
   getPackages, getSettings, patchSettings, fillNoor, selectNoorLesson, pageContext, clickSave, pageAlerts, judgeSave, isoOf, dayLabel, DAY_NAMES,
   bestLesson, stripSessionSuffix, groupKey, lessonGroups, sessionStatus, markSaved, markSaveFailed, unsavedText, daysFor, setPkgDays, suggestDate, usedDates,
   nextSchoolDay, matchVerdict, formUrlFor, getPicks, rememberPick, kwNorm,
-  layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, holidaySet,
+  layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, holidaySet, dateOverrides, setDateOverride,
 } from './packages.js';
 import { ic } from './icons.js';
 
@@ -96,7 +96,8 @@ async function init() {
   const startGroup = matchedGroup || (from ? groupKey(from) : groupKey((pkg.lessons || [])[0]));
   const order = orderOf(pkg);
   const fromIdx = from && groupKey(from) === startGroup ? order.indexOf(from) : -1;
-  rows = order.map((l, i) => ({ lesson: l, on: groupKey(l) === startGroup && !done(l) && (fromIdx < 0 || i >= fromIdx), date: '' }));
+  const ov = dateOverrides(state, pkg.id);   // تواريخ حددتها بيدك سابقًا (هنا أو في «فصل كامل»)
+  rows = order.map((l, i) => ({ lesson: l, on: groupKey(l) === startGroup && !done(l) && (fromIdx < 0 || i >= fromIdx), date: '', fixed: isIso(ov[l.id]) ? ov[l.id] : '', manualDate: isIso(ov[l.id]) }));
   openGroups.add(startGroup);
   const units = [...new Set(lessonGroups(pkg).map((g) => g.unit || ''))];
   $('unitPick').innerHTML = '<option value="">تحديد وحدة…</option>' + units.map((u) => `<option value="${esc(kwNorm(u))}">${esc(u || 'بلا وحدة')}</option>`).join('');
@@ -131,10 +132,11 @@ const useFileDates = () => !$('fileRow').hidden && $('useFile').checked;
 // تغيير تاريخ حصة بيدك: يثبت تاريخها (مرساة)، وما بعدها بلا تاريخ ملف يتبعها بالتدريج؛ وتغيير الأولى يغيّر «تاريخ أول حصة»
 function dateChanged(r, value) {
   if (running) return;
-  if (!value) { r.date = ''; r.fixed = ''; renderList(); return; }
+  if (!value) { r.date = ''; r.fixed = ''; r.manualDate = false; setDateOverride(pkg.id, r.lesson.id, '').catch(() => {}); autoDates(); return; }
   const sel = rows.filter((x) => x.on);
   const i = sel.indexOf(r);
-  r.fixed = value;
+  r.fixed = value; r.manualDate = true;
+  setDateOverride(pkg.id, r.lesson.id, value).catch(() => {});
   if (i <= 0 && !useFileDates()) { $('start').value = value; startTouched = true; }
   autoDates();
   const after = rows.filter((x) => x.on);
@@ -182,7 +184,7 @@ function rowHtml(r) {
   const st = stMap[r.lesson.id];
   return `<div class="row ${r.on ? 'on' : ''} ${r.lesson.id === curId ? 'cur' : ''}" data-id="${esc(r.lesson.id)}">
     <input type="checkbox" ${r.on ? 'checked' : ''} ${running ? 'disabled' : ''} aria-label="تحديد الحصة">
-    <div class="t">${esc(r.lesson.title)}${tag}${stat}${r.on && r.date ? `<small>النشر: ${esc(dayLabel(r.date))}${r.dateSrc === 'file' ? ' <b class="srcf">· من الملف</b>' : ''}${r.movedFrom ? ` <b class="srcm">(كان ${esc(dayLabel(r.movedFrom, false))})</b>` : ''}</small>` : !r.on && isIso(r.lesson.pubDate) && useFileDates() ? `<small>في الملف: ${esc(dayLabel(r.lesson.pubDate, false))}</small>` : ''}</div>
+    <div class="t">${esc(r.lesson.title)}${tag}${stat}${r.on && r.date ? `<small>النشر: ${esc(dayLabel(r.date))}${r.manualDate ? ' <b class="srcf">· حددته أنت</b>' : r.dateSrc === 'file' ? ' <b class="srcf">· من الملف</b>' : ''}${r.movedFrom ? ` <b class="srcm">(كان ${esc(dayLabel(r.movedFrom, false))})</b>` : ''}</small>` : !r.on && isIso(r.lesson.pubDate) && useFileDates() ? `<small>في الملف: ${esc(dayLabel(r.lesson.pubDate, false))}</small>` : ''}</div>
     ${r.on ? `<input type="date" class="input" value="${r.date}" ${running ? 'disabled' : ''} aria-label="تاريخ النشر">` : '<span></span>'}
     <div class="st ${st ? 'show ' + st.cls : ''}">${st ? esc(st.text) : ''}</div>
   </div>`;
