@@ -9,7 +9,7 @@ import {
   gradeNumber, gradeOfName, sameSubject, unsavedText, kwNorm, ordinalOf, getPicks,
   noorTerms, termAllLessons, pickTreeNode, stripSessionSuffix, sessionSuffix, lessonNum,
   layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, lintPackage, lintLevel, knownCourse, rememberCourse, resetProgress, packageProgress,
-  holidaySet, termEndOf, countSchoolDays,
+  holidaySet, termEndOf, countSchoolDays, loadNoorTree, storeNoorTree, dateOverrides, setDateOverride,
 } from './packages.js';
 import { unitNum, bestTreeLesson, kwScore, titleSim } from './match.js';
 import { AFAQ } from './afaq-config.js';
@@ -170,7 +170,7 @@ function learnNoClass(iso) {
   }
 }
 
-const HOW = { order: ['warn', 'بالترتيب — تأكد'], ordinal: ['ok', 'بترقيم الدرس'], pick: ['ok', 'اختيارك السابق'], manual: ['ok', 'اخترته أنت'], name: ['ok', ''], number: ['warn', 'برقم الوحدة فقط — تأكد'] };
+const HOW = { fuzzy: ['ok', 'بالتشابه'], order: ['warn', 'بالترتيب — تأكد'], ordinal: ['ok', 'بترقيم الدرس'], pick: ['ok', 'اختيارك السابق'], manual: ['ok', 'اخترته أنت'], name: ['ok', ''], number: ['warn', 'برقم الوحدة فقط — تأكد'] };
 function dupNodes() { const seen = new Map(); plan.forEach((p) => { if (p.node) seen.set(p.node.id, (seen.get(p.node.id) || 0) + 1); }); return new Set([...seen].filter(([, n]) => n > 1).map(([id]) => id)); }
 function conflicts() {
   const dup = dupNodes();
@@ -214,16 +214,36 @@ function renderPlan() {
             : !noorHave && st.filled ? `<span class="st wait">• عُبّئت — ${esc(unsavedText(st))}</span>` : '<span class="st skip"></span>';
       const src = s.dateSrc === 'file' ? ' <span class="src">· من الملف</span>' : s.dateSrc === 'fixed' ? ' <span class="mv">· نُقل</span>' : '';
       const mv = (s.movedFrom ? ` <span class="mv">(كان ${esc(dayLabel(s.movedFrom, false))})</span>` : '') + (s.afterTerm ? ' <span class="mv">⚠ بعد نهاية الفصل</span>' : '');
+      const src2 = s.manualDate ? ' <span class="src">· حددته أنت</span>' : src;
+      const dateIn = editable && s.on && s.date ? `<span class="dwrap"><input type="date" class="sd" value="${esc(s.date)}" aria-label="تاريخ نشر الحصة" title="غيّر تاريخ هذه الحصة — ما بعدها بلا تاريخ يتبعها">${s.manualDate ? '<button type="button" class="undo" title="أعد التاريخ التلقائي">↺</button>' : ''}</span>` : '';
       return `<div class="ses ${s.cur ? 'cur' : ''}" data-id="${esc(s.lesson.id)}">
         <input type="checkbox" ${s.on ? 'checked' : ''} ${!editable || p.miss ? 'disabled' : ''} aria-label="تحديد الحصة">
-        <div>${esc(s.lesson.title)}${s.on && s.date ? `<small>النشر: ${esc(dayLabel(s.date))}${src}${mv}</small>` : !s.on && s.eligible ? '<small>خارج النطاق المختار</small>' : ''}</div>${stat}</div>`;
+        <div>${esc(s.lesson.title)}${s.on && s.date ? `<small>النشر: ${esc(dayLabel(s.date))}${src2}${mv}</small>` : !s.on && s.eligible ? '<small>خارج النطاق المختار</small>' : ''}${dateIn}</div>${stat}</div>`;
     }).join('');
     return `<div class="lesson">${head}${rows}</div>`;
   }).join('');
-  $('plan').querySelectorAll('.ses input').forEach((cb) => {
+  $('plan').querySelectorAll('.ses input[type=checkbox]').forEach((cb) => {
     cb.onchange = () => {
       const s = plan.flatMap((p) => p.sessions).find((x) => x.lesson.id === cb.closest('.ses').dataset.id);
       if (s) { s.manual = cb.checked; assignDates(); renderPlan(); }
+    };
+  });
+  // تاريخ حصة بيدك: يصبح مرساة (تتبعها الحصص التي بعدها)، ويُحفظ للمرات القادمة
+  const sesOf = (el) => plan.flatMap((p) => p.sessions).find((x) => x.lesson.id === el.closest('.ses').dataset.id);
+  $('plan').querySelectorAll('.ses input.sd').forEach((inp) => {
+    inp.onchange = async () => {
+      const s = sesOf(inp); if (!s || !inp.value) return;
+      s.fixed = inp.value; s.manualDate = true;
+      await setDateOverride(pkg.id, s.lesson.id, inp.value).catch(() => {});
+      assignDates(); renderPlan();
+    };
+  });
+  $('plan').querySelectorAll('.ses .undo').forEach((b) => {
+    b.onclick = async () => {
+      const s = sesOf(b); if (!s) return;
+      s.fixed = ''; s.manualDate = false;
+      await setDateOverride(pkg.id, s.lesson.id, '').catch(() => {});
+      assignDates(); renderPlan();
     };
   });
   $('plan').querySelectorAll('select.map').forEach((sel) => {
@@ -624,7 +644,32 @@ async function stepTree(addUrl) {
   if (!t.tree) throw new Error('لم أجد شجرة الدروس في نموذج «إضافة تحضير».');
   if (!t.terms.length) throw new Error('لم تظهر الفصول الدراسية في شجرة نور — افتح «الكتاب» في الشجرة بنفسك ثم اضغط «ابدأ».');
   if (!term) throw new Error(`لم أجد الفصل ${termName(termNo)} في الشجرة (الموجود: ${t.terms.join('، ')}).`);
+  // الشجرة المحفوظة لهذا المقرر: تكشف القراءة الناقصة (بطء نور) وتغيّر الشجرة (دروس أُضيفت أو حُذفت أو تغيّر اسمها)
+  const stored = await loadNoorTree(courseCid, termNo).catch(() => null);
+  if (!lessons.length && stored && stored.lessons.length && Date.now() - stored.at < 120 * 864e5) {
+    lessons = stored.lessons.map((l) => ({ text: l.text, unit: l.unit, term: term.text }));
+    logLine('info', `لم تظهر دروس الشجرة الآن — أعتمد شجرة هذا المقرر المحفوظة (${toAr(lessons.length)} درسًا، ${dayLabel(isoOf(new Date(stored.at)), false)})`);
+  }
   if (!lessons.length) throw new Error(`لم تظهر دروس تحت الفصل «${term.text}» — ربما بطء في نور. اضغط «ابدأ» مرة أخرى.`);
+  if (stored && lessons.length < stored.lessons.length * 0.9 && !stopFlag) {
+    await sleep(3000);
+    const again = await termAllLessons(tabId, term.text).catch(() => []);
+    if (again.length > lessons.length) lessons = again;
+    if (lessons.length < stored.lessons.length * 0.9 && Date.now() - stored.at < 120 * 864e5) {
+      logLine('info', `الشجرة جاءت ناقصة (${toAr(lessons.length)} من ${toAr(stored.lessons.length)} درسًا) — أعتمد النسخة المحفوظة الكاملة لهذا المقرر`);
+      lessons = stored.lessons.map((l) => ({ text: l.text, unit: l.unit, term: term.text }));
+    }
+  }
+  if (!stored || lessons.length >= stored.lessons.length * 0.9) {
+    const sv = await storeNoorTree({ cid: courseCid, termNo, termText: term.text, lessons, pkgId: pkg.id, title: pkg.title }).catch(() => ({}));
+    if (!sv.prev && courseCid) logLine('info', `حفظت شجرة دروس هذا المقرر (الفصل ${termName(termNo)}) — تُستعمل لكشف أي تغيير لاحق فيها`);
+    const d = sv.diff;
+    if (d && d.changed) {
+      const parts = [d.renamed.length ? `تغيّر اسم ${toAr(d.renamed.length)}: ${d.renamed.slice(0, 3).map((x) => `«${x.from.text}» ← «${x.to.text}»`).join('، ')}` : '', d.added.length ? `أُضيف ${toAr(d.added.length)}: ${d.added.slice(0, 3).map((x) => '«' + x.text + '»').join('، ')}` : '', d.removed.length ? `حُذف ${toAr(d.removed.length)}: ${d.removed.slice(0, 3).map((x) => '«' + x.text + '»').join('، ')}` : ''].filter(Boolean);
+      logLine('info', `تغيّرت شجرة نور منذ آخر مرة — ${parts.join(' · ')}. الربط يتكيّف تلقائيًا؛ راجع ما يظهر في «الخطة».`);
+      diag.treeDiff = { renamed: d.renamed.map((x) => [x.from.text, x.to.text]), added: d.added.map((x) => x.text), removed: d.removed.map((x) => x.text) };
+    }
+  }
   const units = [...new Set(lessons.map((l) => l.unit))];
   diag.tree = { term: term.text, terms: t.terms, units: units.map((u) => ({ text: u, lessons: lessons.filter((l) => l.unit === u).map((l) => l.text) })) };
   logLine('info', `شجرة نور — الفصل «${term.text}»: ${toAr(units.length)} وحدة و${toAr(lessons.length)} درسًا: ${units.map((u) => `${u} (${toAr(lessons.filter((l) => l.unit === u).length)})`).join('، ')}`);
@@ -652,6 +697,26 @@ function bookNo(t) {
   return /[a-z]/i.test(n) && n !== toLat(t).trim() ? null : unitNum(t);
 }
 const digitsOf = (t) => new Set((unitName(t).match(/\d+/g) || []).map(Number));
+// محاذاة تحفظ الترتيب (برمجة ديناميكية): أكبر مجموع تشابه بين دروس الملف ودروس نور، مع السماح بتخطي درس من أي جهة.
+// زوج يُقبل فقط إن كان تشابهه ≥ ٠٫٤٥ ولا يناقض رقم الدرس. يعيد [[فهرس درس الملف، فهرس درس نور]]
+function pairScore(g, node) {
+  const a = lessonNum(g.lesson), b = lessonNum(node.text);
+  if (a != null && b != null) return a === b ? 1.5 + titleSim(g.lesson, node.text) : 0;
+  return titleSim(stripSessionSuffix(g.lesson), node.text);
+}
+function alignBySimilarity(gs, ns) {
+  const n = gs.length, m = ns.length;
+  if (!n || !m) return [];
+  const sc = gs.map((g) => ns.map((x) => { const v = pairScore(g, x); return v >= 0.45 ? v : 0; }));
+  const dp = Array.from({ length: n + 1 }, () => new Array(m + 1).fill(0));
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--) dp[i][j] = Math.max(dp[i + 1][j], dp[i][j + 1], sc[i][j] ? sc[i][j] + dp[i + 1][j + 1] : 0);
+  const out = [];
+  for (let i = 0, j = 0; i < n && j < m;) {
+    if (sc[i][j] && dp[i][j] === sc[i][j] + dp[i + 1][j + 1]) { out.push([i, j]); i++; j++; }
+    else if (dp[i][j] === dp[i + 1][j]) i++; else j++;
+  }
+  return out;
+}
 function alignGroups(groups, nodes, known) {
   const res = groups.map(() => ({ node: null, how: '', why: '' }));
   const used = new Set();
@@ -700,6 +765,9 @@ function alignGroups(groups, nodes, known) {
       const gg = gis.slice(k1 + 1, k2), nn = pool.slice(p1 + 1, p2);
       if (!gg.length) continue;
       if (gg.length === nn.length && gg.every((gi, j) => numOk(gi, nn[j]))) { gg.forEach((gi, j) => put(gi, nn[j], 'order')); continue; }
+      // العدد مختلف (درس زائد أو ناقص أو مدموج): محاذاة ذكية بالتشابه مع حفظ الترتيب — كل درس مع أشبه درس بعده، والباقي يُعلَّم
+      const pairs = alignBySimilarity(gg.map((gi) => groups[gi]), nn);
+      pairs.forEach(([a, b]) => put(gg[a], nn[b], 'fuzzy'));
       gg.forEach((gi) => fail(gi, whyMiss(gi, fullPool, gg.length, nn.length)));
     }
   }
@@ -751,12 +819,18 @@ async function buildPlan(nodes) {
     if (n && !known.has(gi) && !usedNode.has(n.id)) { known.set(gi, n); usedNode.add(n.id); }
   });
   const al = alignGroups(groups, nodes, known);
+  const ov = dateOverrides(state, pkg.id);
   plan = groups.map((group, i) => {
     const { node, how, why } = al[i];
-    const p = { i, group, node, how, miss: !node, why, sessions: group.sessions.map((l) => ({ lesson: l, on: false, inNoor: false, date: '', st: null, cur: false })) };
+    const p = { i, group, node, how, miss: !node, why, sessions: group.sessions.map((l) => ({ lesson: l, on: false, inNoor: false, date: '', st: null, cur: false, fixed: isIso(ov[l.id]) ? ov[l.id] : '', manualDate: isIso(ov[l.id]) })) };
     presence(p);
     return p;
   });
+  // دروس في شجرة نور لم يُربط بها أي درس من ملفك (لن تُعبّأ) — للعلم
+  const usedNodes = new Set(plan.filter((p) => p.node).map((p) => p.node.id));
+  const orphans = nodes.filter((n) => !usedNodes.has(n.id));
+  if (orphans.length && orphans.length < nodes.length) logLine('info', `${toAr(orphans.length)} ${orphans.length === 1 ? 'درس في شجرة نور ليس له' : 'دروس في شجرة نور ليس لها'} تحضير في ملفك: ${orphans.slice(0, 5).map((n) => '«' + n.text + '»').join('، ')}${orphans.length > 5 ? '…' : ''} — اربطها يدويًا من «الخطة» إن كانت لدروس ملفك بأسماء مختلفة`);
+  diag.orphans = orphans.map((n) => n.text);
   // أسماء وحدات ملفك لا تشبه وحدات هذا المقرر: غالبًا المادة لصف أو كتاب آخر
   plan.mismatch = al.unitsNamed >= 2 && al.unitsByName / al.unitsNamed < 0.5;
   diag.plan = plan.map((p) => ({ unit: p.group.unit, lesson: p.group.lesson, sessions: p.sessions.length, node: p.node ? p.node.text : null, how: p.how || '', why: p.why || '', inNoor: p.sessions.filter((s) => s.inNoor).length }));
@@ -1412,7 +1486,7 @@ async function init() {
     const rep = {
       version: chrome.runtime.getManifest().version, term: termNo, scope: { kind: scope.kind, units: [...scope.units], weekDay: scope.weekDay, from: scope.from, to: scope.to, fileDates: useFile },
       pkg: pkg && { title: pkg.title, subject: pkg.subject, grade: pkg.grade, dated: datedCount(pkg), lessons: lessonGroups(pkg).map((g) => ({ unit: g.unit, lesson: g.lesson, sessions: g.sessions.length, dates: g.sessions.map((s) => s.pubDate || '').filter(Boolean) })) },
-      lint: diag.lint || [], budget: diag.budget || null, holidays: [...holidaySet(settings)].length, tree: diag.tree, plan: diag.plan, failed: diag.failed, log: diag.log,
+      lint: diag.lint || [], budget: diag.budget || null, treeDiff: diag.treeDiff || null, orphans: diag.orphans || [], holidays: [...holidaySet(settings)].length, tree: diag.tree, plan: diag.plan, failed: diag.failed, log: diag.log,
     };
     const t = JSON.stringify(rep, null, 1);
     try { await navigator.clipboard.writeText(t); } catch (e) { const ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); }
@@ -1451,7 +1525,8 @@ init().then(offerResume).catch(() => {});
 // للاختبار الآلي فقط (?debug=1): يكشف الحالة الداخلية دون أثر على الاستخدام العادي
 if (q.get('debug') === '1') {
   window.__hadirSem = {
-    set(o) { if (o.pkg) pkg = o.pkg; if (o.state) state = o.state; if (o.settings) settings = o.settings; if (o.days) days = o.days; if (o.scope) Object.assign(scope, o.scope, o.scope.units ? { units: new Set(o.scope.units) } : {}); if (o.useFile != null) useFile = o.useFile; if (o.start) $('start').value = o.start; },
+    set(o) { if (o.pkg) pkg = o.pkg; if (o.state) state = o.state; if (o.settings) settings = o.settings; if (o.days) days = o.days; if (o.scope) Object.assign(scope, o.scope, o.scope.units ? { units: new Set(o.scope.units) } : {}); if (o.useFile != null) useFile = o.useFile; if (o.start) $('start').value = o.start; if (o.editable != null) editable = o.editable; },
+    renderPlan,
     buildPlan, assignDates, shiftDate, conflicts,
     get plan() { return plan; }, get queue() { return queue; }, get treeNodes() { return treeNodes; }, get log() { return diag.log; },
   };

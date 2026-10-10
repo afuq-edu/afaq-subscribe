@@ -1,6 +1,6 @@
 // packages.js — مكتبة التحاضير: التخزين، التقدم (عُبّئ/حُفظ)، الإعدادات، النسخ الاحتياطي، والتعبئة في نموذج منصة نور
 import { hadirEngine } from './engine.js';
-import { bestLesson, rankLessons, lessonNum, unitNum, kwNorm, kwScore, bestTreeLesson, unitMayHold, stripSessionSuffix, sessionSuffix } from './match.js';
+import { bestLesson, rankLessons, lessonNum, unitNum, kwNorm, kwScore, titleSim, bestTreeLesson, unitMayHold, stripSessionSuffix, sessionSuffix } from './match.js';
 import { parsePlanText, parsePlanBest, NOOR_STRATEGIES, NOOR_RESOURCES, NOOR_LEVELS, SAMPLE_PLAN, mapStrategies, mapResources } from './parse.js';
 import { AFAQ } from './afaq-config.js';
 import { remoteLesson, isRemote, REMOTE_ERR } from './remote.js';
@@ -402,6 +402,51 @@ export async function setPkgDays(pkgId, days) {
   await savePkgState(state);
 }
 
+// ---------- أشجار دروس نور المحفوظة (لكل مقرر وفصل) ----------
+// تُحفظ عند كل قراءة كاملة؛ تُستعمل لكشف تغيّر الشجرة (إضافة/حذف/إعادة تسمية) ولتعويض قراءة ناقصة
+const treeKey = (cid, termNo) => String(cid || '') + '|t' + (termNo || 1);
+export async function loadNoorTree(cid, termNo) { if (!cid) return null; const r = await chrome.storage.local.get('noorTrees'); return ((r.noorTrees || {})[treeKey(cid, termNo)]) || null; }
+export async function allNoorTrees() { const r = await chrome.storage.local.get('noorTrees'); return r.noorTrees || {}; }
+// الفرق بين شجرتين: added/removed (دروس) و renamed ({ from, to })
+export function treeDiff(oldL, newL) {
+  const k = (x) => kwNorm(x.unit || '') + '|' + kwNorm(x.text || '');
+  const ok = new Set((oldL || []).map(k)), nk = new Set((newL || []).map(k));
+  let removed = (oldL || []).filter((x) => !nk.has(k(x))), added = (newL || []).filter((x) => !ok.has(k(x)));
+  const renamed = [];
+  removed = removed.filter((r) => {
+    const i = added.findIndex((a) => kwNorm(a.unit || '') === kwNorm(r.unit || '') && ((lessonNum(a.text) != null && lessonNum(a.text) === lessonNum(r.text)) || titleSim(a.text, r.text) >= 0.5));
+    if (i < 0) return true;
+    renamed.push({ from: r, to: added[i] }); added.splice(i, 1); return false;
+  });
+  return { added, removed, renamed, changed: !!(added.length || removed.length || renamed.length) };
+}
+export async function storeNoorTree({ cid, termNo, termText, lessons, pkgId, title }) {
+  if (!cid || !(lessons || []).length) return { prev: null, diff: null };
+  const r = await chrome.storage.local.get('noorTrees');
+  const all = r.noorTrees || {};
+  const key = treeKey(cid, termNo);
+  const prev = all[key] || null;
+  const clean = lessons.map((l) => ({ text: l.text, unit: l.unit || '' }));
+  const diff = prev ? treeDiff(prev.lessons, clean) : null;
+  all[key] = { cid, term: termNo, termText: termText || '', title: title || (prev && prev.title) || '', pkgIds: [...new Set([...((prev && prev.pkgIds) || []), pkgId].filter(Boolean))], at: Date.now(), first: (prev && prev.first) || Date.now(), lessons: clean, history: [...((prev && prev.history) || []), ...(diff && diff.changed ? [{ at: Date.now(), added: diff.added.length, removed: diff.removed.length, renamed: diff.renamed.length }] : [])].slice(-10) };
+  const keys = Object.keys(all).sort((a, b) => all[b].at - all[a].at);
+  keys.slice(60).forEach((x) => delete all[x]);
+  await chrome.storage.local.set({ noorTrees: all });
+  return { prev, diff };
+}
+
+// ---------- تواريخ يحددها المعلم بيده لكل حصة (تُحفظ منفصلة عن محتوى المادة — تعمل لمواد الاشتراك أيضًا) ----------
+export function dateOverrides(state, pkgId) { return (state && state.dateOverrides && state.dateOverrides[pkgId]) || {}; }
+export async function setDateOverride(pkgId, lessonId, iso) {
+  const { state } = await getPackages();
+  const all = Object.assign({}, state.dateOverrides || {});
+  const m = Object.assign({}, all[pkgId] || {});
+  if (iso && isIso(iso)) m[lessonId] = iso; else delete m[lessonId];
+  all[pkgId] = m;
+  state.dateOverrides = all;
+  await savePkgState(state);
+}
+
 // بطاقة المادة في نور التي اختيرت لهذه الحزمة (لا يُسأل عنها مرة أخرى): { cid, title, prepUrl, at }
 export function knownCourse(state, pkgId) { const c = state && state.courses && state.courses[pkgId]; return c && c.cid ? c : null; }
 export async function rememberCourse(pkgId, course) {
@@ -633,7 +678,7 @@ async function treeLessons(tabId, url) {
   const r = await chrome.storage.local.get('treeCache');
   const cache = r.treeCache || {};
   const hit = cache[cid];
-  if (hit && Date.now() - hit.at < 7 * 864e5 && (hit.lessons || []).length) return hit.lessons;
+  if (hit && Date.now() - hit.at < 30 * 864e5 && (hit.lessons || []).length) return hit.lessons;   // يُبطَل تلقائيًا إن فشل اختيار درس منه
   const res = await treeOp(tabId, { op: 'allLessons' });
   const lessons = (res.lessons || []).map((x) => ({ text: x.text, unit: x.unit, term: x.term }));
   if (lessons.length) {

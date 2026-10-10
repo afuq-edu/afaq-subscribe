@@ -84,6 +84,10 @@
   .lint .bad{background:#fde4e4;border-color:var(--bad)}.lint .warn{background:#fcefdc;border-color:var(--warn)}.lint .info{background:#f7f5ef;border-color:var(--muted)}
   .ses small .src{color:var(--teal);font-weight:700}.ses small .mv{color:var(--warn);font-weight:700}
   #datedN{font-style:normal;font-weight:500;color:var(--muted)}
+  .dwrap{display:inline-flex;gap:4px;align-items:center;margin-top:3px}
+  .dwrap .sd{all:unset;box-sizing:border-box;background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:2px 6px;font:500 12px Tajawal,'Segoe UI',Tahoma,sans-serif;direction:ltr}
+  .dwrap .sd:focus{border-color:var(--teal)}
+  .dwrap .undo{all:unset;cursor:pointer;color:var(--warn);font-weight:800;padding:0 4px}
 </style>
 </head>
 <body>
@@ -138,7 +142,7 @@
       <div class="f"><span>أيام الحصص <em class="hint" id="startDay"></em></span><div class="days" id="days"></div></div>
     </div>
     <div class="opts">
-      <label><input type="checkbox" id="optReview"> راجع الخطة قبل بدء التعبئة (وإلا تبدأ فور قراءة دروس الفصل)</label>
+      <label><input type="checkbox" id="optReview"> راجع الخطة قبل بدء التعبئة — وعدّل تاريخ أي حصة بيدك (وإلا تبدأ فور قراءة دروس الفصل)</label>
       <label><input type="checkbox" id="optStep"> توقّف قبل كل حفظ لأراجع النموذج بنفسي</label>
       <label><input type="checkbox" id="optNoor" checked> أكمل الناقص فقط: اقرأ قائمة «التحاضير» في نور ولا تكرر حصة موجودة فيها</label>
       <label><input type="checkbox" id="optAuto" checked> لا تتوقف عند تعارضات الربط: ابدأ وحدك بعد مهلة، وتخطَّ ما لم يُربط بدرس في نور وأخبرني في النهاية</label>
