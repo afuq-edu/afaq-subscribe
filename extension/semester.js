@@ -11,7 +11,7 @@ import {
   layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, lintPackage, lintLevel, knownCourse, rememberCourse, resetProgress, packageProgress,
   holidaySet, termEndOf, countSchoolDays, loadNoorTree, storeNoorTree, dateOverrides, setDateOverride,
 } from './packages.js';
-import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair } from './match.js';
+import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { AFAQ } from './afaq-config.js';
 import { siteUrl, sync as afaqSync } from './remote.js';
 
@@ -702,8 +702,14 @@ const digitsOf = (t) => new Set((unitName(t).match(/\d+/g) || []).map(Number));
 // زوج يُقبل فقط إن كان تشابهه ≥ ٠٫٤٥ ولا يناقض رقم الدرس. يعيد [[فهرس درس الملف، فهرس درس نور]]
 function pairScore(g, node) {
   const a = lessonNum(g.lesson), b = lessonNum(node.text);
-  if (a != null && b != null) return a === b ? 1.5 + titleSim(g.lesson, node.text) : 0;
-  return titleSim(stripSessionSuffix(g.lesson), node.text);
+  const sim = titleSim(stripSessionSuffix(g.lesson), node.text);
+  if (a != null && b != null) {
+    if (a === b || swappedPair(g.lesson, node.text)) return 1.5 + sim;
+    // الرقم مختلف لكن الاسم (دون الأرقام) مطابق تقريبًا ومحدَّد: نقبله بدرجة أقل
+    const ns = titleSim(nameOnly(g.lesson) || g.lesson, nameOnly(node.text) || node.text);
+    return ns >= 0.8 && keywords(nameOnly(g.lesson)).length >= 3 ? ns * 0.9 : 0;
+  }
+  return sim;
 }
 function alignBySimilarity(gs, ns) {
   const n = gs.length, m = ns.length;
@@ -740,8 +746,9 @@ function alignGroups(groups, nodes, known) {
     if (m && used.has(m.node.id)) return `مكرر في ملفك — «${m.node.text}» مربوط بدرس قبله`;
     const u = fullPool[0] ? fullPool[0].unit : '';
     const c = closestTreeLesson(fullPool.filter((n) => !used.has(n.id)), { lesson: groups[gi].lesson });
-    const near = c ? ` — الأقرب في نور: «${c.node.text}» (تشابه ${toAr(Math.round(c.sim * 100))}٪${c.sim >= 0.34 ? '، لم أربطه لوجود مرشّح آخر قريب منه أو لاختلاف الرقم' : ''}) — اختره من القائمة إن كان هو` : '';
+    const near = c ? ` — الأقرب في نور: «${c.node.text}» (تشابه ${toAr(Math.round(c.sim * 100))}٪${c.sim >= 0.9 ? '، الاسم مطابق لكن رقم الدرس مختلف' : c.sim >= 0.34 ? '، التشابه غير كافٍ للجزم' : ''}) — اختره من القائمة إن كان هو` : '';
     if (!b) return (u ? `لا يقابله درس في «${u}» بنور` : 'لا دروس متاحة له في الشجرة') + near;
+    if (a === b) return (b === 1 ? 'بقي في نور درس واحد بلا تحضير لكن اسمه لا يشبهه' : `بقي في نور ${toAr(b)} دروس بلا تحضير لكن أسماءها لا تشبهه`) + near;
     return `عدد الدروس هنا لا يتساوى (${toAr(a)} في ملفك و${toAr(b)} في نور)` + near;
   };
   function alignRange(gisIn, fullPool, unitHow) {
@@ -751,28 +758,48 @@ function alignGroups(groups, nodes, known) {
     const gis = nums.every((x) => x != null) ? gisIn.slice().sort((x, y) => lessonNum(groups[x].lesson) - lessonNum(groups[y].lesson) || x - y) : gisIn;
     const pool = fullPool.filter((n) => !used.has(n.id));
     if (!pool.length) { gis.forEach((gi) => fail(gi, whyMiss(gi, fullPool, gis.length, 0))); return; }
-    const anc = new Map(), how = new Map(); let last = -1;
-    gis.forEach((gi) => {
-      const kn = known.get(gi);
-      const ki = kn ? pool.indexOf(kn) : -1;
-      if (ki > last) { last = ki; anc.set(gi, ki); how.set(gi, 'pick'); return; }
-      const g = groups[gi];
-      const m = bestTreeLesson(pool.filter((n, i) => i > last), { unit: unitName(g.unit), lesson: g.lesson });
-      if (m) { last = pool.indexOf(m.node); anc.set(gi, last); how.set(gi, unitHow === 'number' ? 'number' : 'name'); }
-    });
-    if (gis.length === pool.length && gis.every((gi, k) => anc.get(gi) === k || numOk(gi, pool[k]))) { gis.forEach((gi, k) => put(gi, pool[k], anc.get(gi) === k ? how.get(gi) : 'order')); return; }
+    // ١) المراسي — لا تعتمد على الترتيب: اختيارك السابق أولًا، ثم أقوى تطابق بالاسم لكل درس على دروس الوحدة كلها.
+    //    تنازع درسين على درس واحد في نور: الأعلى درجة يأخذه والآخر يبحث عن غيره — فلا يضيع درس مطابق بسبب درس قبله
+    const anc = new Map(), how = new Map(), takenIdx = new Set();
+    const claim = (gi, idx, h) => { anc.set(gi, idx); how.set(gi, h); takenIdx.add(idx); };
+    gis.forEach((gi) => { const kn = known.get(gi); const ki = kn ? pool.indexOf(kn) : -1; if (ki >= 0 && !takenIdx.has(ki)) claim(gi, ki, 'pick'); });
+    let pending = gis.filter((gi) => !anc.has(gi));
+    for (let round = 0; pending.length && round <= gis.length; round++) {
+      const free = pool.filter((n, i) => !takenIdx.has(i));
+      if (!free.length) break;
+      const wants = [];
+      pending.forEach((gi) => {
+        const g = groups[gi];
+        const m = bestTreeLesson(free, { unit: unitName(g.unit), lesson: g.lesson });
+        if (m) wants.push({ gi, idx: pool.indexOf(m.node), score: m.score });
+      });
+      if (!wants.length) break;
+      wants.sort((a, b) => b.score - a.score);
+      const losers = [];
+      wants.forEach((w) => { if (takenIdx.has(w.idx)) losers.push(w.gi); else claim(w.gi, w.idx, unitHow === 'number' ? 'number' : 'name'); });
+      pending = losers;
+    }
+    anc.forEach((idx, gi) => put(gi, pool[idx], how.get(gi)));
+    // ٢) ما بقي: بالترتيب بين المراسي (إن كان ترتيب ملفك كترتيب نور)، وإلا محاذاة ذكية بالتشابه مع حفظ الترتيب
     const bounds = [[-1, -1]].concat(gis.map((gi, k) => (anc.has(gi) ? [k, anc.get(gi)] : null)).filter(Boolean), [[gis.length, pool.length]]);
-    bounds.forEach(([k, p]) => { if (k >= 0 && k < gis.length) put(gis[k], pool[p], how.get(gis[k])); });
+    const left = [];
     for (let i = 0; i + 1 < bounds.length; i++) {
       const [k1, p1] = bounds[i], [k2, p2] = bounds[i + 1];
-      const gg = gis.slice(k1 + 1, k2), nn = pool.slice(p1 + 1, p2);
+      const gg = gis.slice(k1 + 1, k2);
       if (!gg.length) continue;
-      if (gg.length === nn.length && gg.every((gi, j) => numOk(gi, nn[j]))) { gg.forEach((gi, j) => put(gi, nn[j], 'order')); continue; }
-      // العدد مختلف (درس زائد أو ناقص أو مدموج): محاذاة ذكية بالتشابه مع حفظ الترتيب — كل درس مع أشبه درس بعده، والباقي يُعلَّم
+      const nn = p2 > p1 ? pool.slice(p1 + 1, p2).filter((n) => !used.has(n.id)) : [];
+      if (nn.length && gg.length === nn.length && gg.every((gi, j) => numOk(gi, nn[j]))) { gg.forEach((gi, j) => put(gi, nn[j], 'order')); continue; }
       const pairs = alignBySimilarity(gg.map((gi) => groups[gi]), nn);
       pairs.forEach(([a, b]) => put(gg[a], nn[b], 'fuzzy'));
-      gg.forEach((gi) => fail(gi, whyMiss(gi, fullPool, gg.length, nn.length)));
+      gg.forEach((gi) => { if (!res[gi].node) left.push(gi); });
     }
+    // ٣) فرصة أخيرة لما بقي: أشبه درس غير مربوط في الوحدة كلها ولو خالف الترتيب — إن كفى التشابه ولم يناقض الرقم
+    if (!left.length) return;
+    const free = pool.filter((n) => !used.has(n.id));
+    const cand = [];
+    left.forEach((gi) => free.forEach((n) => { const v = pairScore(groups[gi], n); if (v >= 0.45) cand.push({ gi, n, v }); }));
+    cand.sort((a, b) => b.v - a.v).forEach((c) => { if (!res[c.gi].node && !used.has(c.n.id)) put(c.gi, c.n, 'fuzzy'); });
+    left.forEach((gi) => fail(gi, whyMiss(gi, fullPool, left.length, free.length)));
   }
   const unitsOf = (arr, key) => { const m = new Map(); arr.forEach((x, i) => { const k = key(x); if (!m.has(k)) m.set(k, []); m.get(k).push(i); }); return m; };
   const gUnits = unitsOf(groups, (g) => g.unit || '');
@@ -812,15 +839,25 @@ async function buildPlan(nodes) {
   treeNodes = nodes;
   const groups = lessonGroups(pkg);
   // اختياراتك السابقة: عنوان درس نور ← حصة من المادة (الأحدث أولًا)
-  const known = new Map(), usedNode = new Set();
+  const known = new Map(), usedNode = new Set(), stale = [];
   const picks = await getPicks().catch(() => ({}));
+  // تطابق واضح: الاسم شبه مطابق والرقم لا يناقضه
+  const exact = (g, t) => { const a = lessonNum(g.lesson), b = lessonNum(t); return titleSim(stripSessionSuffix(g.lesson), t) >= 0.9 && (a == null || b == null || a === b || swappedPair(g.lesson, t)); };
   Object.entries(picks).sort((x, y) => ((y[1] && y[1].at) || 0) - ((x[1] && x[1].at) || 0)).forEach(([k, v]) => {
     if (!v || v.pkgId !== pkg.id) return;
     const l = (pkg.lessons || []).find((x) => x.id === v.lessonId);
     const gi = l ? groups.findIndex((g) => g.key === groupKey(l)) : -1;
     const n = gi >= 0 ? nodes.find((x) => pickKeyMatches(k, x.text)) : null;
-    if (n && !known.has(gi) && !usedNode.has(n.id)) { known.set(gi, n); usedNode.add(n.id); }
+    if (!n || known.has(gi) || usedNode.has(n.id)) return;
+    // اختيار قديم يناقض الواضح (درس نور هذا هو بالاسم درسٌ آخر في ملفك، أو لدرسك مقابل مطابق غيره): يُهمل ويُحذف حتى لا يُفسد الربط
+    if (!exact(groups[gi], n.text) && (groups.some((g, j) => j !== gi && exact(g, n.text)) || nodes.some((x) => x !== n && exact(groups[gi], x.text)))) { stale.push(k); return; }
+    known.set(gi, n); usedNode.add(n.id);
   });
+  if (stale.length) {
+    stale.forEach((k) => delete picks[k]);
+    chrome.storage.local.set({ picks }).catch(() => {});
+    logLine('info', `أهملتُ ${toAr(stale.length)} ${stale.length === 1 ? 'ربطًا قديمًا يخالف' : 'روابط قديمة تخالف'} أسماء الدروس في نور (من تشغيل سابق) — الربط الآن بالاسم`);
+  }
   const al = alignGroups(groups, nodes, known);
   const ov = dateOverrides(state, pkg.id);
   plan = groups.map((group, i) => {
@@ -843,11 +880,11 @@ async function buildPlan(nodes) {
   c.miss.forEach((p) => logLine('skip', `— «${[p.group.unit, p.group.lesson].filter(Boolean).join(' / ')}»: ${p.why || 'لم أجده في شجرة هذا الفصل'}`));
   assignDates();
 }
-// الربط الذي راجعته يُحفظ ليُستعمل في المرات القادمة (ويُلغى ما يخالفه من اختيارات قديمة لهذه المادة)
+// الربط الذي اخترته يدويًا يُحفظ ليُستعمل في المرات القادمة (ويُلغى ما يخالفه من اختيارات قديمة لهذه المادة)
 async function savePicks() {
   const r = await chrome.storage.local.get('picks').catch(() => ({}));
   const picks = r.picks || {};
-  const touched = plan.filter((p) => p.edited || p.how === 'order' || p.how === 'number');
+  const touched = plan.filter((p) => p.edited);   // ما اخترته بنفسك فقط — الربط التلقائي بالترتيب لا يُحفظ كاختيار
   if (!touched.length) return;
   const ids = new Set(touched.flatMap((p) => p.group.sessions.map((l) => l.id)));
   const keys = new Set(touched.filter((p) => p.node).map((p) => kwNorm(p.node.text)));
