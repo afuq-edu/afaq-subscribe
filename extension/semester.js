@@ -4,14 +4,14 @@
 // ثم يعبّئ كل حصة ويحفظها بتواريخ نشر متتالية من التاريخ المحدد حتى آخر درس — دون أن يلمس الفصل الآخر.
 // اختيار الدرس في نور يتم بنصّه (الفصل ← الوحدة ← الدرس)، لأن نور تعيد إنشاء عقد الوحدات بمعرّفات جديدة عند كل اختيار.
 import {
-  getPackages, getSettings, fillNoor, pageContext, clickSave, pageAlerts, judgeSave, isoOf, parseIso, dayLabel, DAY_NAMES,
+  getPackages, getSettings, patchSettings, fillNoor, pageContext, clickSave, pageAlerts, judgeSave, isoOf, parseIso, dayLabel, DAY_NAMES,
   groupKey, lessonGroups, sessionStatus, markSaved, markSaveFailed, daysFor, setPkgDays, usedDates, nextSchoolDay,
   gradeNumber, gradeOfName, sameSubject, unsavedText, kwNorm, ordinalOf, getPicks,
   noorTerms, termAllLessons, pickTreeNode, stripSessionSuffix, sessionSuffix, lessonNum,
   layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, lintPackage, lintLevel, knownCourse, rememberCourse, resetProgress, packageProgress,
   holidaySet, termEndOf, countSchoolDays, loadNoorTree, storeNoorTree, dateOverrides, setDateOverride,
 } from './packages.js';
-import { unitNum, bestTreeLesson, kwScore, titleSim } from './match.js';
+import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair } from './match.js';
 import { AFAQ } from './afaq-config.js';
 import { siteUrl, sync as afaqSync } from './remote.js';
 
@@ -43,6 +43,7 @@ let startTouched = false;  // غيّرتَ «أول تاريخ نشر» بنفس
 // النطاق: الفصل كاملًا | وحدة (أو أكثر) | أسبوع (الحصص التي تقع تواريخها فيه) | من درس إلى درس — وتواريخ النشر: من الملف أو متتالية
 const scope = { kind: 'term', units: new Set(), weekDay: '', from: '', to: '', dateFrom: '', dateTo: '' };
 let useFile = false;       // تواريخ الملف تُستعمل (المادة فيها تواريخ واخترتَ «كما في الملف»)
+let startAuto = '';        // «أول تاريخ نشر» كما اقترحته الأداة — إن اختلف عنه ما في الخانة فقد حددته أنت
 const dateNotes = new Set();   // ملاحظات نقل التواريخ التي سُجّلت (حتى لا تتكرر)
 let lintRes = null;
 let running = false, stopFlag = false;
@@ -732,14 +733,16 @@ function alignGroups(groups, nodes, known) {
     return res;
   }
   // الربط بالترتيب لا يناقض رقم الدرس: «Lesson 10» لا يُربط بـ«Graded readers» ولا بـ«Lesson9»
-  const numOk = (gi, node) => { const a = lessonNum(groups[gi].lesson); return a == null || lessonNum(node.text) === a; };
+  const numOk = (gi, node) => { const a = lessonNum(groups[gi].lesson); return a == null || lessonNum(node.text) === a || swappedPair(groups[gi].lesson, node.text); };
   // سبب عدم الربط: درس مكرر في ملفك، أو لا مقابل له في وحدته بنور
   const whyMiss = (gi, fullPool, a, b) => {
     const m = bestTreeLesson(fullPool, { unit: unitName(groups[gi].unit), lesson: groups[gi].lesson });
     if (m && used.has(m.node.id)) return `مكرر في ملفك — «${m.node.text}» مربوط بدرس قبله`;
     const u = fullPool[0] ? fullPool[0].unit : '';
-    if (!b) return u ? `لا يقابله درس في «${u}» بنور` : 'لا دروس متاحة له في الشجرة';
-    return `عدد الدروس هنا لا يتساوى (${toAr(a)} في ملفك و${toAr(b)} في نور)`;
+    const c = closestTreeLesson(fullPool.filter((n) => !used.has(n.id)), { lesson: groups[gi].lesson });
+    const near = c ? ` — الأقرب في نور: «${c.node.text}» (تشابه ${toAr(Math.round(c.sim * 100))}٪${c.sim >= 0.34 ? '، لم أربطه لوجود مرشّح آخر قريب منه أو لاختلاف الرقم' : ''}) — اختره من القائمة إن كان هو` : '';
+    if (!b) return (u ? `لا يقابله درس في «${u}» بنور` : 'لا دروس متاحة له في الشجرة') + near;
+    return `عدد الدروس هنا لا يتساوى (${toAr(a)} في ملفك و${toAr(b)} في نور)` + near;
   };
   function alignRange(gisIn, fullPool, unitHow) {
     if (!gisIn.length) return;
@@ -1117,7 +1120,7 @@ function setRunning(on) {
   running = on;
   $('startBtn').hidden = on; $('stopBtn').hidden = !on; $('stopBtn').disabled = false;
   $('goBtn').hidden = true;
-  ['pkgSel', 'start', 'optReview', 'optStep', 'optNoor', 'optAuto', 'weekDay', 'fromLesson', 'toLesson', 'resetBtn', 'dateFrom', 'dateTo'].forEach((id) => { if ($(id)) $(id).disabled = on; });
+  ['pkgSel', 'start', 'optReview', 'optStep', 'optNoor', 'optAuto', 'optWeek', 'weekDay', 'fromLesson', 'toLesson', 'resetBtn', 'dateFrom', 'dateTo'].forEach((id) => { if ($(id)) $(id).disabled = on; });
   document.querySelectorAll('input[name=term], input[name=scope], input[name=dsrc], #unitChips .day').forEach((r) => { r.disabled = on; });
   if (on) $('topMsg').className = 'msg';
   heartbeat(on);
@@ -1153,6 +1156,9 @@ async function run() {
   if (!pkg) { msg('bad', 'اختر مادة من مكتبتك أولًا.'); return; }
   if (!$('start').value) { msg('bad', 'حدد أول تاريخ نشر.'); return; }
   termNo = +((document.querySelector('input[name=term]:checked') || {}).value) || 1;
+  // مصدر التواريخ يُقرأ من الاختيار الظاهر الآن (لا من حالة سابقة)
+  useFile = hasFileDates(pkg) && ((document.querySelector('input[name=dsrc]:checked') || {}).value !== 'seq');
+  if ($('start').value && $('start').value !== startAuto) startTouched = true;
   await chrome.storage.local.set({ semesterOpts: { review: $('optReview').checked, step: $('optStep').checked, noor: $('optNoor').checked, auto: $('optAuto').checked, term: termNo, scope: scope.kind, dsrc: useFile ? 'file' : 'seq' } }).catch(() => {});
   stopFlag = false; stopHooks.length = 0;
   plan = []; queue = []; treeNodes = []; noorHave = null; noClass = new Map(); classOk = new Set(); editable = false; courseCid = ''; coursePrepUrl = ''; semSaved = {}; savedThisRun = []; dateNotes.clear();
@@ -1179,8 +1185,9 @@ async function run() {
         if (!startTouched && !useFile && scope.kind !== 'week' && scope.kind !== 'dates' && lastUsed && lastUsed >= $('start').value) {
           $('start').value = nextSchoolDay(lastUsed, days, false);
           renderDays();
-          logLine('info', `أكمل التواريخ بعد آخر تاريخ مستعمل (${dayLabel(lastUsed, false)}): من ${dayLabel($('start').value)}`);
+          logLine('info', `أكمل التواريخ بعد آخر تاريخ مستعمل (${dayLabel(lastUsed, false)}): من ${dayLabel($('start').value)} — (حدد «أول تاريخ نشر» بنفسك إن أردت غير ذلك)`);
         }
+        logLine('info', useFile ? `التواريخ: كما في ملف المادة (${toAr(datedCount(pkg))} حصة لها تاريخ) — وما بلا تاريخ يتبع ما قبله` : `التواريخ: متتالية من ${dayLabel($('start').value)} على أيام الحصص — تواريخ الملف متجاهَلة`);
         addUrl = await stepPrepList(course);
         if (!addUrl) throw new Error('stop');
         setPhase('form');
@@ -1354,6 +1361,8 @@ async function init() {
   $('optStep').checked = !!o.step;
   $('optNoor').checked = o.noor !== false;
   $('optAuto').checked = o.auto != null ? !!o.auto : settings.autoContinue !== false;
+  $('optWeek').checked = settings.setWeek !== false;
+  $('optWeek').onchange = async () => { settings = await patchSettings({ setWeek: $('optWeek').checked }).catch(() => settings); };
   // الفصل: المحفوظ، وإلا حسب الشهر (من فبراير إلى يونيو = الثاني)
   const m = new Date().getMonth() + 1;
   termNo = o.term || (m >= 2 && m <= 6 ? 2 : 1);
@@ -1447,7 +1456,7 @@ async function init() {
     let start = nextSchoolDay(isoOf(new Date()), days, true);
     const used = Object.keys(usedDates(pkg, state)).sort().pop();
     if (used && used >= start) start = nextSchoolDay(used, days, false);
-    $('start').value = start;
+    $('start').value = start; startAuto = start;
     renderDays();
     scope.units.clear(); scope.from = ''; scope.to = '';
     renderUnits(); renderRange(); renderDateSrc(); renderLint(); scopeUi();

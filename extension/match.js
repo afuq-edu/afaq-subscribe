@@ -55,7 +55,11 @@ export function kwScore(title, target) {
   if (!a.length || !b.length) return 0;
   let hit = 0;
   for (const w of a) if (b.some((x) => x === w || (w.length >= 4 && x.length >= 4 && (x.includes(w) || w.includes(x))))) hit++;
-  return hit / Math.max(a.length, Math.min(b.length, a.length + 2));
+  const base = hit / Math.max(a.length, Math.min(b.length, a.length + 2));
+  // الاسم الأقصر محتوى كله في الأطول («الموقع» ⊂ «الموقع ومظاهر السطح»): تطابق قوي وإن اختلف الطول
+  const short = Math.min(a.length, b.length);
+  const cover = hit / short;
+  return Math.max(base, cover === 1 ? (short >= 2 ? 0.8 : 0.6) : cover * 0.6);
 }
 
 // تشابه حرفي (Dice على ثلاثيات الحروف) — يلتقط الأخطاء الإملائية والاختلافات الصغيرة التي تفوّتها الكلمات
@@ -93,8 +97,18 @@ const digits = (s) => String(s || '').replace(/[٠-٩]/g, (d) => String('٠١٢�
 export const stripSessionSuffix = (s) => String(s || '').replace(/\s*[(（]\s*[0-9٠-٩]{1,2}\s*[)）]\s*$/, '');
 export function sessionSuffix(s) { const m = digits(s).match(/[(（]\s*(\d{1,2})\s*[)）]\s*$/); return m ? +m[1] : null; }
 
+// ترقيم مزدوج في أول العنوان «1 - 4 الصيغة التربيعية» «2.5 …» «3/1 …»: الوحدة ثم الدرس — { u, l } أو null
+export function pairNums(s) {
+  const t = String(digits(stripSessionSuffix(s))).trim();
+  const m = t.match(/^[(\[]?\s*(\d{1,2})\s*[-–—.\/:]\s*(\d{1,2})\s*(?=[^\d\/.\-–—:]|$)/);
+  return m ? { u: +m[1], l: +m[2] } : null;
+}
+// الزوجان نفسهما معكوسين «2 - 5» و«5 - 2» (خطأ شائع في شجرة نور) — يُعدّان الدرس نفسه
+export const swappedPair = (a, b) => { const x = pairNums(a), y = pairNums(b); return !!(x && y && x.u === y.l && x.l === y.u && x.u !== x.l); };
 // رقم في أول العنوان «3- الموقع» «٣. المناخ» «(3) السكان» — شائع في أسماء الدروس العربية (لا في عناوين الوحدات)
 export function leadNum(s) {
+  const pr = pairNums(s);
+  if (pr) return pr.l;
   const t = kwNorm(digits(stripSessionSuffix(s)));
   if (/^(unit|الوحده|وحده|الفصل|فصل|week|الاسبوع)\b/.test(t)) return null;
   const m = String(digits(s)).trim().match(/^[(\[]?\s*(\d{1,2})\s*[)\]\-–—.:،]\s*\S/);
@@ -128,19 +142,31 @@ export function unitNum(s) {
   if (/\b(?:welcome|starter|hello|intro(?:duction|ductory)?)\s+unit\b|\bunit\s+(?:0|zero)\b|الوحده التمهيديه/i.test(t)) return 0;
   m = t.match(new RegExp('(?:الوحده|وحده)\\s+(' + ORDF_RE + ')'));
   if (m) return ORDF[m[1]];
-  return null;
+  const pr = pairNums(s);
+  return pr ? pr.u : null;
 }
+// اسم الدرس دون أرقامه الأولى — للمقارنة الاسمية الصرفة
+export const nameOnly = (s) => String(stripSessionSuffix(s) || '').replace(/^[(\[]?\s*\d{1,2}\s*[-–—.\/:]\s*\d{1,2}\s*[)\]\-–—.:،]?\s*/, '').replace(/^[(\[]?\s*\d{1,2}\s*[)\]\-–—.:،]\s*/, '').trim();
 
 // درجة تشابه عنوان نور مع درس — رقم الدرس فيصل، ثم الكلمات والتشابه الحرفي، ثم الوحدة
-function scoreLesson(title, l, na, ua) {
+// unitTitle: وحدة درس المكتبة (إن عُرفت) — وإلا تُقارن كلمات الوحدة بالعنوان نفسه (عنوان نور قد يحمل اسم الوحدة)
+function scoreLesson(title, l, na, ua, unitTitle) {
   const name = l.lesson || '';
   let sc = titleSim(title, name);
   const nb = lessonNum(name);
-  if (na != null && nb != null) sc = na === nb ? Math.max(sc, 0.5) + 1 : 0;
+  const swapped = swappedPair(title, name);
+  if (na != null && nb != null) {
+    if (na === nb || swapped) sc = Math.max(sc, 0.5) + (swapped ? 0.8 : 1);
+    else {
+      // الرقم مختلف لكن الاسم طويل ومحدد ومتطابق تقريبًا (لا «Grammar» عامة): الرقم هو الخطأ غالبًا
+      const specific = keywords(nameOnly(title)).length >= 3 && keywords(nameOnly(name)).length >= 3;
+      sc = specific && titleSim(nameOnly(title), nameOnly(name)) >= 0.8 ? sc * 0.9 : 0;
+    }
+  }
   // كلمات الوحدة ترجّح بين دروس متشابهة (مثل Lesson 2 في أكثر من وحدة)
-  if (sc > 0) sc += 0.3 * titleSim(title, l.unit || '');
+  if (sc > 0) sc += 0.3 * titleSim(unitTitle != null ? unitTitle : title, l.unit || '');
   const ub = unitNum((l.unit || '') + ' ' + name);
-  if (sc > 0 && ua != null && ub != null) sc = ua === ub ? sc + 0.5 : 0;
+  if (sc > 0 && ua != null && ub != null && !swapped) sc = ua === ub ? sc + 0.5 : (sc >= 1.5 ? sc : 0);
   return sc;
 }
 
@@ -181,18 +207,28 @@ export function bestLesson(pkgs, title) {
 // درس شجرة نور المطابق لدرس في مكتبتك — nodes: [{ id, text, unit }]
 // يُرجع { node, score } أو null إن لم يتضح (لا نخمّن بين درسين متساويين إلا إن فرّقت بينهما الوحدة)
 export function bestTreeLesson(nodes, lesson) {
-  const title = [lesson && lesson.unit, lesson && lesson.lesson].filter(Boolean).join(' — ');
-  if (!title || !(nodes || []).length) return null;
-  const pseudo = [{ id: 'tree', lessons: nodes.map((n) => ({ id: n.id, unit: n.unit || '', lesson: n.text })) }];
-  const top = rankLessons(pseudo, title, 2);
+  const name = stripSessionSuffix((lesson && lesson.lesson) || '').trim();
+  if (!name || !(nodes || []).length) return null;
+  const unit = (lesson && lesson.unit) || '';
+  // اسم الدرس وحده يُقارن بأسماء دروس الشجرة (اسم الوحدة يُقارن بوحدة الشجرة على حدة — فلا تُشوّش كلمات الوحدة على التطابق)
+  const na = lessonNum(name), ua = unitNum(unit + ' ' + name);
+  const top = nodes.map((n) => ({ n, score: scoreLesson(name, { lesson: n.text, unit: n.unit || '' }, na, ua, unit) }))
+    .filter((x) => x.score > 0).sort((a, b) => b.score - a.score).slice(0, 2);
   if (!top[0] || top[0].score < MATCH_MIN) return null;
-  if (top[1] && top[1].score === top[0].score) {
-    // تعادل: الوحدة تفرّق (الأقرب لوحدة درس المكتبة)، وإلا لا نجزم
-    const u0 = titleSim(lesson.unit || '', top[0].lesson.unit || ''), u1 = titleSim(lesson.unit || '', top[1].lesson.unit || '');
-    if (!(lesson.unit && Math.abs(u0 - u1) >= 0.25)) return null;
+  if (top[1] && (top[1].score === top[0].score || (top[0].score < 0.7 && top[0].score - top[1].score < 0.1))) {
+    // تعادل أو تقارب شديد بين مرشّحين ضعيفين: الوحدة تفرّق (الأقرب لوحدة درس المكتبة)، وإلا لا نجزم
+    const u0 = titleSim(unit, top[0].n.unit || ''), u1 = titleSim(unit, top[1].n.unit || '');
+    if (!(unit && Math.abs(u0 - u1) >= 0.25)) return null;
     if (u1 > u0) top[0] = top[1];
   }
-  return { node: nodes.find((n) => n.id === top[0].lesson.id), score: top[0].score };
+  return { node: top[0].n, score: top[0].score, runner: top[1] ? { node: top[1].n, score: top[1].score } : null };
+}
+// أقرب درس في الشجرة مهما كان ضعيفًا (للتشخيص: «الأقرب في نور: … ٤٥٪»)
+export function closestTreeLesson(nodes, lesson) {
+  const name = stripSessionSuffix((lesson && lesson.lesson) || '').trim();
+  if (!name || !(nodes || []).length) return null;
+  const best = nodes.map((n) => ({ node: n, sim: titleSim(nameOnly(name) || name, nameOnly(n.text) || n.text) })).sort((a, b) => b.sim - a.sim)[0];
+  return best && best.sim > 0 ? best : null;
 }
 
 // للتصفية قبل تحميل الدروس: هل تحتمل وحدة الشجرة هذه درسَ المكتبة؟
