@@ -222,14 +222,17 @@ export async function resetProgress(pkgId, opts = {}) {
   const kc = state.courses && state.courses[pkgId]; if (kc && kc.cid) cids.add(kc.cid);
   Object.entries(state.forms || {}).forEach(([k, u]) => { if (k.startsWith(pkgId + '|')) { const m = String(u || '').match(/cid:([A-Za-z0-9_-]+)/); if (m) cids.add(m[1]); } });
   await savePkgState(state);
-  const r = await chrome.storage.local.get(['semesterSaved', 'semesterRun', 'log', 'lastFill']);
+  const r = await chrome.storage.local.get(['semesterSaved', 'semesterRun', 'log', 'lastFill', 'picks']);
   const ss = r.semesterSaved || {};
+  // روابط «درس نور ← حصة» المحفوظة لهذه المادة تُمسح أيضًا (قد تكون من تشغيل قديم خاطئ) — تُبنى من جديد بالاسم
+  const pk = r.picks || {};
+  Object.keys(pk).forEach((k) => { if (pk[k] && pk[k].pkgId === pkgId) delete pk[k]; });
   Object.keys(ss).forEach((cid) => {
     if (cids.has(cid)) { delete ss[cid]; return; }
     Object.keys(ss[cid] || {}).forEach((lid) => { if (ids.has(lid)) delete ss[cid][lid]; });
     if (!Object.keys(ss[cid] || {}).length) delete ss[cid];
   });
-  const patch = { semesterSaved: ss };
+  const patch = { semesterSaved: ss, picks: pk };
   if (r.semesterRun && r.semesterRun.pkgId === pkgId) patch.semesterRun = null;
   if (opts.log !== false) patch.log = (Array.isArray(r.log) ? r.log : []).filter((e) => e.pkgId !== pkgId);
   await chrome.storage.local.set(patch);
