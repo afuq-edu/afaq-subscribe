@@ -1,6 +1,6 @@
 // lint.js — فحص ملف المادة قبل التشغيل: ما الذي قد يعطّل التعبئة أو يضعف التعرّف على الدروس في نور؟
 // لا يمنع شيئًا — يكشف المشكلات ويقترح الحل، وما يمكن إصلاحه تلقائيًا (تاريخ بصيغة غريبة، يوم إجازة…) يُصلَح وقت التشغيل.
-import { lessonNum, unitNum, kwNorm, titleSim, sessionSuffix } from './match.js';
+import { lessonNum, unitNum, kwNorm, titleSim, sessionSuffix, nameOnly, keywords } from './match.js';
 import { isIso, isSchoolDay, dayLabel, parseAnyDate, toArDigits, isoOf, weekNo, diffDays, countSchoolDays, nextSchoolDay, addDays, rangeStartDate } from './dates.js';
 
 const textOf = (h) => String(h || '').replace(/<[^<>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
@@ -78,18 +78,28 @@ export function lintPackage(pkg, opts = {}) {
     const s = [...new Set(arr)].sort((x, y) => x - y);
     const gaps = []; for (let i = 1; i < s.length; i++) for (let n = s[i - 1] + 1; n < s[i]; n++) gaps.push(n);
     if (gaps.length && gaps.length <= 6) add('info', 'gap', `في «${u || 'الدروس'}» ينقص ${gaps.length === 1 ? 'الدرس' : 'الدروس'} ${gaps.map(toArDigits).join('، ')} — إن كانت في نور فستبقى بلا تحضير.`);
-    const dups = s.filter((n) => arr.filter((x) => x === n).length > 1);
-    if (dups.length) add('warn', 'dup-number', `رقم الدرس مكرر في «${u || 'الدروس'}»: ${[...new Set(dups)].map(toArDigits).join('، ')} — قد يُربط درسان بدرس واحد في نور.`);
+    const dups = [...new Set(s.filter((n) => arr.filter((x) => x === n).length > 1))].filter((n) => {
+      // الرقم نفسه لدرسين: مشكلة فقط إن تشابه الاسمان (أما «١ - ١ … أ» و«١ - ١ … ب» أو اسمان مختلفان فدروس فرعية مشروعة)
+      const same = gs.filter((g) => kwNorm(g.unit) === uk && lessonNum(g.lesson) === n);
+      for (let i = 0; i < same.length; i++) for (let j = i + 1; j < same.length; j++) {
+        const a = nameOnly(same[i].lesson), b = nameOnly(same[j].lesson);
+        if (!a || !b || titleSim(a, b) >= 0.85 || (keywords(a).length < 2 && keywords(b).length < 2)) return true;
+      }
+      return false;
+    });
+    if (dups.length) add('warn', 'dup-number', `رقم الدرس مكرر لدرسين بالاسم نفسه تقريبًا في «${u || 'الدروس'}»: ${dups.map(toArDigits).join('، ')} — قد يُربط درسان بدرس واحد في نور.`);
   }
   // وحدات: بعض الحصص بلا وحدة وبعضها بوحدة
   const noUnit = lessons.filter((l) => !l.unit).length;
   if (noUnit && noUnit < lessons.length) add('info', 'mixed-unit', `${toArDigits(noUnit)} ${noUnit === 1 ? 'حصة بلا وحدة' : 'حصص بلا وحدة'} والبقية بوحدات — تُطابَق بالاسم عبر الوحدات كلها.`);
   gs.forEach((g) => { if (String(g.lesson).length > 140) add('warn', 'long-title', `اسم درس طويل جدًا (${toArDigits(String(g.lesson).length)} حرفًا): «${String(g.lesson).slice(0, 60)}…» — اجعله كما في الكتاب.`, g.sessions.map((s) => s.id)); });
 
-  // الحصص
-  const empty = lessons.filter((l) => !textOf(l.outcomes) && !textOf(l.procedures) && !textOf(l.intro) && !textOf(l.formative) && !textOf(l.summative));
+  // الحصص — في مواد الاشتراك (منصة أفق) المحتوى يُجلب لحظة التعبئة فلا تُفحص الخانات هنا
+  const remote = !!(pkg.remote) || (lessons.length >= 3 && lessons.every((l) => !textOf(l.outcomes) && !textOf(l.procedures) && !textOf(l.intro)));
+  if (remote && pkg.remote) add('info', 'remote-content', 'مادة اشتراك: محتوى الحصص يُجلب من منصة أفق لحظة التعبئة (لا يظهر هنا) — هذا طبيعي.');
+  const empty = remote ? [] : lessons.filter((l) => !textOf(l.outcomes) && !textOf(l.procedures) && !textOf(l.intro) && !textOf(l.formative) && !textOf(l.summative));
   if (empty.length) add('warn', 'empty-session', `${toArDigits(empty.length)} ${empty.length === 1 ? 'حصة فارغة' : 'حصص فارغة'} (لا مخرجات ولا سير درس) — تُعبَّأ خاناتها فارغة في نور: ${empty.slice(0, 3).map((l) => '«' + (l.lesson || '') + ' / ' + l.title + '»').join('، ')}${empty.length > 3 ? '…' : ''}`, empty.map((l) => l.id));
-  const thin = lessons.filter((l) => !empty.includes(l) && !textOf(l.procedures));
+  const thin = remote ? [] : lessons.filter((l) => !empty.includes(l) && !textOf(l.procedures));
   if (thin.length) add('info', 'no-procedures', `${toArDigits(thin.length)} ${thin.length === 1 ? 'حصة بلا «سير الدرس»' : 'حصص بلا «سير الدرس»'}.`, thin.map((l) => l.id));
   // عناوين حصص مكررة داخل الدرس
   gs.forEach((g) => {
