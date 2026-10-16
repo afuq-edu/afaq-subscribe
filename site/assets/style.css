@@ -215,3 +215,5 @@ table.grid tr:last-child td { border-bottom: 0; }
 @media (max-width: 900px) { .cols { grid-template-columns: 1fr; } }
 .inline-acts { display: flex; gap: 6px; flex-wrap: wrap; }
 .tag { font-size: 12.5px; background: var(--sky); border-radius: 6px; padding: 1px 8px; margin: 0 0 3px 4px; display: inline-block; }
+.chip.bad { background: var(--bad-bg, #FDE4E4); color: var(--bad, #B91C1C); }
+select.sm { padding: 4px 8px; font-size: 13px; border-radius: 8px; width: auto; }

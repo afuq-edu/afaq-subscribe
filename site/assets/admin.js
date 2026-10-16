@@ -39,7 +39,7 @@
     $$('[data-tab]').forEach((b) => b.setAttribute('aria-selected', b.dataset.tab === t));
     $$('[data-pane]').forEach((p) => { p.hidden = p.dataset.pane !== t; });
     history.replaceState(null, '', '#' + t);
-    ({ home: renderHome, codes: renderCodes, teachers: renderTeachers, packages: renderPackages, terms: renderTerms, settings: renderSettings })[t]();
+    ({ home: renderHome, requests: renderRequests, codes: renderCodes, teachers: renderTeachers, packages: renderPackages, terms: renderTerms, settings: renderSettings })[t]();
   }
   $$('[data-tab]').forEach((b) => { b.onclick = () => showTab(b.dataset.tab); });
 
@@ -87,6 +87,9 @@
     ].map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join('');
     const st = await A.settings();
     const hints = [];
+    try { D.requests = await db.rpc('admin_requests'); } catch (e) { D.requests = null; }
+    reqBadge();
+    if (D.requests && D.requests.some((r) => r.status === 'requested')) hints.push(`${toAr(D.requests.filter((r) => r.status === 'requested').length)} طلب بانتظار التفعيل في «طلبات حاضر».`);
     if (!D.terms.length) hints.push('أضف الفصل الدراسي الحالي من «الفصول».');
     else if (!cur || cur.ends_on < today()) hints.push('لا فصل حالي أو قادم — أضف الفصل التالي من «الفصول».');
     if (!D.packages.length) hints.push('أضف الباقات من «الباقات والتحاضير».');
@@ -95,6 +98,73 @@
     if (!/^https:\/\/(chromewebstore\.google\.com|chrome\.google\.com\/webstore)\//.test(st.extension_url || '')) hints.push('اكتب رابط الإضافة في متجر كروم من «الإعدادات».');
     setMsg($('#setupHints'), 'warn', hints.length ? '<b>لإكمال الإعداد:</b><br>' + hints.map(esc).join('<br>') : '');
   }
+
+  // ================= طلبات «حاضر» =================
+  const SHIFT_AR = { one: 'فترة واحدة', two: 'فترتان' };
+  const REQ_ST = { trial: ['warn', 'يجرّب'], requested: ['bad', 'بانتظار التفعيل'], active: ['ok', 'مفعّل'], cancelled: ['off', 'ملغى'] };
+  function reqBadge() {
+    const n = (D.requests || []).filter((r) => r.status === 'requested').length;
+    $('#reqBadge').hidden = !n; $('#reqBadge').textContent = toAr(n);
+  }
+  async function renderRequests() {
+    try { D.requests = await db.rpc('admin_requests'); } catch (e) { D.requests = []; A.toast(/admin_requests|function/i.test(String(e.message)) ? 'طلبات «حاضر» غير مفعّلة في قاعدة البيانات بعد (hader-direct.sql).' : A.errText(e), 'bad'); }
+    reqBadge();
+    drawRequests();
+  }
+  const ago = (iso) => { if (!iso) return ''; const m = Math.round((Date.now() - new Date(iso).getTime()) / 60000); return m < 2 ? 'الآن' : m < 60 ? `قبل ${toAr(m)} دقيقة` : m < 1440 ? `قبل ${toAr(Math.round(m / 60))} ساعة` : A.dateAr(iso.slice(0, 10)); };
+  function drawRequests() {
+    const q = $('#reqSearch').value.trim().toLowerCase(), f = $('#reqFilter').value;
+    const list = (D.requests || []).filter((r) => (f === 'all' || (f === 'open' ? ['trial', 'requested'].includes(r.status) : r.status === f))
+      && (!q || String(r.id).includes(q) || (r.name || '').toLowerCase().includes(q) || (r.phone || '').includes(q)));
+    $('#reqTable').innerHTML = `<tr><th>الطلب</th><th>المعلم</th><th>المواد (حصص التجربة)</th><th>الحالة</th><th></th></tr>` + (list.length ? list.map((r) => {
+      const [cls, lbl] = REQ_ST[r.status] || ['', r.status];
+      const pend = r.packages.filter((p) => !p.active);
+      return `<tr><td><b style="font-size:18px">${toAr(r.id)}</b><br><small class="muted">${esc(ago(r.requested_at || r.created_at))}</small></td>
+        <td><b>${esc(r.name || '—')}</b>${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}<br><small class="muted">${esc(SHIFT_AR[r.shift] || '')}${r.devices ? ` · ${toAr(r.devices)} جهاز` : ''}${r.last_seen ? ` · آخر نشاط ${esc(ago(r.last_seen))}` : ''}</small></td>
+        <td>${r.packages.map((p) => `<div style="margin-bottom:3px"><span class="tag">${esc(p.title)}</span> ${p.active ? '<span class="chip ok">مشترك</span>' : `<small class="muted">${A.sessionsWord(p.used)}</small>`}</div>`).join('') || '<span class="muted small">—</span>'}</td>
+        <td><span class="chip ${cls}">${lbl}</span></td>
+        <td><div class="inline-acts">
+          ${pend.length && r.status !== 'cancelled' ? `<select class="sm" data-plan="${r.id}" style="max-width:110px"><option value="term">فصلي</option><option value="year">سنوي</option></select><button class="btn sm primary" data-act="${r.id}" type="button">فعّل</button>` : ''}
+          ${r.phone ? `<a class="btn sm wa" target="_blank" rel="noopener" href="${esc(A.waLink(r.phone.replace(/^0+/, '').length === 8 ? '968' + r.phone.replace(/^0+/, '') : r.phone, `السلام عليكم أ. ${r.name}، بخصوص طلبك رقم ${r.id} في «حاضر».`))}">واتساب</a>` : ''}
+          <button class="btn sm" data-dev="${r.id}" type="button" title="لمعلم غيّر جهازه: رمز يكتبه في الإضافة مع اسمه">رمز جهاز جديد</button>
+          ${r.status === 'cancelled' ? `<button class="btn ghost sm" data-rst="${r.id}" data-to="trial" type="button">استعادة</button>` : `<button class="btn ghost sm danger" data-rst="${r.id}" data-to="cancelled" type="button">إلغاء</button>`}
+        </div></td></tr>`;
+    }).join('') : '<tr><td colspan="5" class="empty">لا طلبات هنا.</td></tr>');
+    $$('[data-act]').forEach((b) => {
+      b.onclick = async () => {
+        const r = D.requests.find((x) => x.id === +b.dataset.act);
+        const plan = ($(`[data-plan="${r.id}"]`) || {}).value || 'term';
+        const titles = r.packages.filter((p) => !p.active).map((p) => p.title).join('، ');
+        if (!confirm(`تفعيل طلب ${r.id} — ${r.name}
+${plan === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي'}: ${titles}
+تفتح المواد في إضافته وحدها خلال دقيقة. متابعة؟`)) return;
+        b.disabled = true;
+        try { await db.rpc('admin_activate_request', { p_id: r.id, p_plan: plan, p_package_ids: null }); A.toast(`فُعّل طلب ${toAr(r.id)}.`, 'ok'); renderRequests(); } catch (e) { b.disabled = false; A.toast(A.errText(e), 'bad'); }
+      };
+    });
+    $$('[data-dev]').forEach((b) => {
+      b.onclick = async () => {
+        const r = D.requests.find((x) => x.id === +b.dataset.dev);
+        if (!confirm(`رمز جهاز جديد لـ«${r.name}»؟ يكتبه المعلم في «حاضر» ← «لديّ رمز تفعيل» مع اسمه، فيرتبط الجهاز الجديد بحسابه (ويُفصل أقدم جهاز إن بلغ الحد).`)) return;
+        try {
+          const x = await db.rpc('admin_device_code', { p_id: r.id });
+          const text = `السلام عليكم أ. ${r.name}\nرمز ربط جهازك الجديد في «حاضر»: ${x.code}\nافتح «حاضر» ← «لديّ رمز تفعيل»، واكتب الرمز واسمك.`;
+          await copy(text);
+          if (r.phone && confirm(`الرمز: ${x.code}\nنُسخت الرسالة. أفتح واتساب المعلم لإرسالها؟`)) window.open(A.waLink(r.phone.replace(/^0+/, '').length === 8 ? '968' + r.phone.replace(/^0+/, '') : r.phone, text), '_blank');
+          else if (!r.phone) alert(`الرمز: ${x.code}\n(نُسخت رسالة المعلم)`);
+        } catch (e) { A.toast(A.errText(e), 'bad'); }
+      };
+    });
+    $$('[data-rst]').forEach((b) => {
+      b.onclick = async () => {
+        if (b.dataset.to === 'cancelled' && !confirm('إلغاء الطلب؟ تتوقف تجربته المجانية (ولا تُلغى اشتراكاته المفعّلة).')) return;
+        try { await db.rpc('admin_set_request', { p_id: +b.dataset.rst, p_status: b.dataset.to }); renderRequests(); } catch (e) { A.toast(A.errText(e), 'bad'); }
+      };
+    });
+  }
+  $('#reqSearch').oninput = drawRequests;
+  $('#reqFilter').onchange = drawRequests;
+  setInterval(() => { if (!$('[data-pane="requests"]').hidden) renderRequests(); }, 60000);
 
   // ================= الرموز =================
   function pkgPicker(box, selected) {
@@ -239,9 +309,13 @@
     const cnt = (id, t) => D.content.find((c) => c.package_id === id && c.term === t);
     $('#pkgTable').innerHTML = `<tr><th>الباقة</th><th>الفصل الأول</th><th>الفصل الثاني</th><th></th></tr>` + (D.packages.length ? D.packages.map((p) => {
       const cell = (t) => { const c = cnt(p.id, t); return `${c ? `<b>${A.sessionsWord(c.sessions_count)}</b><br><small class="muted">${toAr(c.lessons_count)} درسًا، رُفع ${A.dateAr(c.updated_at.slice(0, 10))}</small><br>` : '<small class="muted">لم يُرفع</small><br>'}<button class="btn sm" data-up="${esc(p.id)}" data-term="${t}" type="button">${c ? 'استبدل' : 'ارفع'}</button>`; };
-      return `<tr><td><b>${esc(p.title)}</b><br><small class="muted" dir="ltr">${esc(p.id)}</small>${p.active ? '' : ' <span class="chip off">مخفية</span>'}</td><td>${cell(1)}</td><td>${cell(2)}</td>
+      const sh = p.shift || 'both';
+      return `<tr><td><b>${esc(p.title)}</b><br><small class="muted" dir="ltr">${esc(p.id)}</small>${p.active ? '' : ' <span class="chip off">مخفية</span>'}<br><select class="sm" data-shift="${esc(p.id)}" title="نوع المدرسة" style="margin-top:4px;max-width:170px">${[['both', 'كل المدارس'], ['one', 'فترة واحدة (٤٠ د)'], ['two', 'فترتان (٣٥ د)']].map(([v, l]) => `<option value="${v}" ${v === sh ? 'selected' : ''}>${l}</option>`).join('')}</select></td><td>${cell(1)}</td><td>${cell(2)}</td>
         <td><div class="inline-acts"><button class="btn ghost sm" data-toggle="${esc(p.id)}" type="button">${p.active ? 'إخفاء' : 'إظهار'}</button><button class="btn ghost sm danger" data-del="${esc(p.id)}" type="button">حذف</button></div></td></tr>`;
     }).join('') : '<tr><td colspan="4" class="empty">لا باقات بعد.</td></tr>');
+    $$('[data-shift]').forEach((sel) => {
+      sel.onchange = async () => { try { await db.update('packages', { shift: sel.value }, { id: sel.dataset.shift }); A.toast('حُفظ نوع المدرسة.', 'ok'); await loadAll(); } catch (e) { A.toast(A.errText(e), 'bad'); renderPackages(); } };
+    });
     $$('[data-up]').forEach((b) => { b.onclick = () => { upTarget = { id: b.dataset.up, term: +b.dataset.term }; $('#pkgFile').value = ''; $('#pkgFile').click(); }; });
     $$('[data-toggle]').forEach((b) => {
       b.onclick = async () => { const p = D.packages.find((x) => x.id === b.dataset.toggle); try { await db.update('packages', { active: !p.active }, { id: p.id }); await loadAll(); renderPackages(); } catch (e) { A.toast(A.errText(e), 'bad'); } };
@@ -268,11 +342,11 @@
   pf.onsubmit = async (e) => {
     e.preventDefault();
     const msg = $('#pkgMsg');
-    const row = { id: pf.pkg_id.value.trim().toLowerCase(), subject: pf.subject.value.trim(), grade: +pf.grade.value, title: pf.pkg_title.value.trim(), description: pf.description.value.trim() || null };
+    const row = { id: pf.pkg_id.value.trim().toLowerCase(), subject: pf.subject.value.trim(), grade: +pf.grade.value, title: pf.pkg_title.value.trim(), description: pf.description.value.trim() || null, shift: pf.shift.value || 'both' };
     if (!row.subject || !row.title) { setMsg(msg, 'bad', 'اكتب المادة والعنوان.'); return; }
     if (!/^[a-z0-9-]{2,30}$/.test(row.id)) { setMsg(msg, 'bad', 'الرمز الثابت: حروف إنجليزية صغيرة وأرقام وشرطة فقط.'); return; }
     if (D.packages.some((p) => p.id === row.id)) { setMsg(msg, 'bad', 'هذا الرمز مستعمل لباقة أخرى.'); return; }
-    if (D.packages.some((p) => p.subject === row.subject && p.grade === row.grade)) { setMsg(msg, 'bad', 'لهذه المادة والصف باقة من قبل.'); return; }
+    if (D.packages.some((p) => p.subject === row.subject && p.grade === row.grade && ((p.shift || 'both') === 'both' || row.shift === 'both' || p.shift === row.shift))) { setMsg(msg, 'bad', 'لهذه المادة والصف باقة من قبل لنفس نوع المدرسة (غيّر «نوع المدرسة» في الباقة الموجودة من الجدول أولًا).'); return; }
     try { await db.insert('packages', row); setMsg(msg, 'ok', `أُضيفت «${esc(row.title)}». ارفع محتواها من الجدول.`); pf.reset(); idTouched = titleTouched = false; await loadAll(); renderPackages(); }
     catch (err) { setMsg(msg, 'bad', esc(A.errText(err))); }
   };

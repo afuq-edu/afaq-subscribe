@@ -209,7 +209,8 @@ chrome.runtime.onInstalled.addListener(async (d) => {
       } else if (!r.mig361) await chrome.storage.local.set({ mig361: Date.now() });
     } catch (e) {}
   }
-  if (d.reason === 'install') chrome.tabs.create({ url: chrome.runtime.getURL('options.html#welcome') });
+  // أول تثبيت: يفتح «حاضر» مباشرة على الخطوة الأولى (اختيار الصف) — دون موقع ولا تسجيل
+  if (d.reason === 'install') chrome.windows.create({ url: chrome.runtime.getURL('semester.html'), type: 'popup', width: 560, height: 900 }).catch(() => chrome.tabs.create({ url: chrome.runtime.getURL('semester.html') }));
   else if (d.reason === 'update' && d.previousVersion && parseInt(d.previousVersion, 10) < 3) chrome.tabs.create({ url: chrome.runtime.getURL('options.html#whatsnew') });
   // تفعيل الزر العائم في صفحات نور المفتوحة الآن دون الحاجة لإعادة تحميلها
   try {
@@ -241,3 +242,12 @@ try {
   chrome.alarms.onAlarm.addListener((a) => { if (a.name === 'afaqSync') afaqSync().catch(() => {}); });
 } catch (e) {}
 chrome.runtime.onStartup.addListener(() => { afaqSync().catch(() => {}); });
+// طلب ينتظر التفعيل: يُفحص كل دقيقة، فتفتح المواد وحدها بعد أن يضغط المدير «فعّل»
+try {
+  chrome.alarms.create('afaqPoll', { periodInMinutes: 1, delayInMinutes: 1 });
+  chrome.alarms.onAlarm.addListener(async (a) => {
+    if (a.name !== 'afaqPoll') return;
+    const st = await getStatus().catch(() => null);
+    if (st && st.request && st.request.status === 'requested') afaqSync().catch(() => {});
+  });
+} catch (e) {}
