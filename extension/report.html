@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>تقرير التحضير — حاضر</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body{max-width:820px;margin:0 auto;padding:18px 16px 40px;background:#f6f8f7}
+  .rp-top{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+  .rp-top h1{font-size:22px;margin:0 0 0 auto}
+  .rp-card{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:12px}
+  .rp-card h2{font-size:18px;margin:0 0 6px}
+  .rp-meta{color:var(--muted);font-size:13.5px;margin:0}
+  .rp-sum{font-size:16px;font-weight:800;margin:10px 0 0;line-height:1.8}
+  table.rp{width:100%;border-collapse:collapse;font-size:14px}
+  table.rp th,table.rp td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:right;vertical-align:top}
+  table.rp th{color:var(--muted);font-weight:700;font-size:12.5px}
+  table.rp td.n{color:var(--muted);width:32px}
+  table.rp td.d{white-space:nowrap}
+  .rp-empty{color:var(--muted);text-align:center;padding:30px 0}
+  @media print{.rp-top select,.rp-top button{display:none}body{background:#fff;padding:0}.rp-card{border:0;padding:6px 0}}
+</style>
+</head>
+<body>
+  <div class="rp-top"><h1>تقرير التحضير</h1><select class="input" id="rpSel" style="width:auto"></select><button class="btn primary" id="rpPrint">🖨 طباعة</button></div>
+  <div id="rp"><p class="rp-empty">لحظة…</p></div>
+  <script type="module" src="report.js"></script>
+</body>
+</html>

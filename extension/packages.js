@@ -51,12 +51,13 @@ export const DEFAULT_SETTINGS = {
   holidays: '',                  // أيام الإجازات: سطر لكل إجازة (يوم أو «من … إلى …») — تُتخطّى عند توزيع التواريخ
 };
 // أيام الإجازات من الإعدادات مجموعةً (ISO)
-export const holidaySet = (settings) => parseHolidays(settings && settings.holidays);
+// تشمل إجازات التقويم الرسمي التي تضبطها منصة أفق للجميع (afaqHolidays) مع ما يكتبه المعلم بنفسه
+export const holidaySet = (settings) => parseHolidays([settings && settings.holidays, settings && settings.afaqHolidays].filter(Boolean).join('\n'));
 // نهاية الفصل المختار من الإعدادات أو ''
 export const termEndOf = (settings, termNo) => { const v = settings && (termNo === 2 ? settings.term2End : settings.term1End); return isIso(v) ? v : ''; };
 export async function getSettings() {
-  const r = await chrome.storage.local.get('settings');
-  return Object.assign({}, DEFAULT_SETTINGS, r.settings || {});
+  const r = await chrome.storage.local.get(['settings', 'afaqHolidays']);
+  return Object.assign({}, DEFAULT_SETTINGS, r.settings || {}, { afaqHolidays: r.afaqHolidays || '' });
 }
 export async function patchSettings(patch) {
   const cur = await getSettings();

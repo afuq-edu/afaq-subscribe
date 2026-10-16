@@ -425,7 +425,7 @@ ${plan === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي'}: ${titles
   $('#setForm').onsubmit = async (e) => {
     e.preventDefault();
     const f = e.target, msg = $('#setMsg');
-    const keys = ['site_name', 'whatsapp', 'extension_url', 'announcement', 'daily_limit', 'max_devices', 'price_term', 'price_year'];
+    const keys = ['site_name', 'whatsapp', 'extension_url', 'announcement', 'daily_limit', 'max_devices', 'price_term', 'price_year', 'holidays'];
     const vals = Object.fromEntries(keys.map((k) => [k, f[k].value.trim()]));
     for (const k of ['price_term', 'price_year']) {
       if (vals[k] && !A.priceNum(vals[k])) { setMsg(msg, 'bad', 'السعر رقم، مثل 5 أو 4.5'); return; }
