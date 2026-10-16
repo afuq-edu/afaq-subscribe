@@ -47,7 +47,7 @@ let startAuto = '';        // «أول تاريخ نشر» كما اقترحته
 const dateNotes = new Set();   // ملاحظات نقل التواريخ التي سُجّلت (حتى لا تتكرر)
 let lintRes = null;
 // المعالج (الخطوات البسيطة): القاعدة المختارة للتواريخ، وحد التجربة المجانية، وتواريخ التحاضير الموجودة في نور
-const WIZ = { on: false, rule: '', trialCap: null, trialOver: false };
+const WIZ = { on: false, rule: '', trialCap: null, trialOver: false, rid: 0, sum: 0, auto: 0, timer: null };
 let noorDates = new Set();
 let offRule = null;   // قرار «حسب النشرة الرسمية» يُتخذ مرة واحدة لكل تشغيل: { seq, last }
 let running = false, stopFlag = false;
@@ -520,7 +520,7 @@ async function stepHome() {
     for (let j = 0; j < 4 && !stopFlag; j++) {
       const r = await exec(readHomePage);
       if (r && r.login) { if (!(await loginWait(HOME))) return null; j = -1; continue; }
-      if (r && r.courses.length) return r.courses;
+      if (r && r.courses.length) { chrome.storage.local.set({ noorCourses: { at: Date.now(), courses: r.courses } }).catch(() => {}); return r.courses; }
       await sleep(1500);
     }
     await backoff(i + 1, 'لم تظهر بطاقات المواد بعد — أعيد فتح الرئيسية');
@@ -1204,7 +1204,7 @@ function heartbeat(on) {
 // نقطة استئناف: إن أُغلقت النافذة أو تعطّل كروم يُتابَع التشغيل عند فتحها
 async function checkpoint(active) {
   const sc = { kind: scope.kind, picks: [...(scope.picks || [])], units: [...scope.units], weekDay: scope.weekDay, from: scope.from, to: scope.to, dateFrom: scope.dateFrom, dateTo: scope.dateTo, dsrc: useFile ? 'file' : 'seq' };
-  await chrome.storage.local.set({ semesterRun: active ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rule: WIZ.rule, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
+  await chrome.storage.local.set({ semesterRun: active ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
 }
 function setRunning(on) {
   running = on;
@@ -1235,6 +1235,7 @@ function waitGo(autoMs, lbl) {
   });
 }
 let savedThisRun = [];
+let lastVerify = '';   // التحقق النهائي من قائمة نور: ok | loose | none | ''
 async function run() {
   if (running) return;
   // تشغيل آخر في نافذة أخرى؟ (يمنع تعبئتين متزامنتين في نور)
@@ -1254,7 +1255,7 @@ async function run() {
   offRule = null; noorDates = new Set(); WIZ.trialOver = false;
   WIZ.trialCap = pkg.remote && pkg.remote.trial ? Math.max(0, +pkg.remote.left || 0) : null;
   if (WIZ.trialCap === 0) { showPay(pkg); return; }
-  plan = []; queue = []; treeNodes = []; noorHave = null; noClass = new Map(); classOk = new Set(); editable = false; courseCid = ''; coursePrepUrl = ''; semSaved = {}; savedThisRun = []; dateNotes.clear();
+  plan = []; queue = []; treeNodes = []; noorHave = null; noClass = new Map(); classOk = new Set(); editable = false; courseCid = ''; coursePrepUrl = ''; semSaved = {}; savedThisRun = []; lastVerify = ''; dateNotes.clear();
   days = daysFor(state, settings, pkg.id);
   logN = 0; diag.log = []; diag.tree = null; diag.plan = null; diag.failed = null;
   $('log').innerHTML = ''; $('logCard').hidden = true; $('prog').style.width = '0%'; renderPlan();
@@ -1399,6 +1400,7 @@ async function run() {
         if (missing > 0) lost.push(...savedThisRun.filter((it) => it.p === p).slice(-missing));
       });
       const redo = !!h && listReliable(h) && lost.length <= Math.max(3, Math.round(savedThisRun.length * 0.1));
+      lastVerify = !h ? 'none' : !lost.length ? 'ok' : !redo ? 'loose' : 'ok';
       if (!h) logLine('info', 'تعذّر التحقق النهائي من قائمة نور — راجع القائمة بنفسك');
       else if (!lost.length) logLine('ok', `✓ التحقق النهائي: كل ما حُفظ (${countWord(savedThisRun.length)}) ظاهر في قائمة نور`);
       else if (!redo) logLine('info', `التحقق النهائي: أكّد نور حفظ الحصص كلها عند الحفظ، و${countWord(lost.length)} منها تظهر في القائمة بصياغة عنوان مختلفة قليلًا — لا إجراء مطلوب`);
@@ -1410,12 +1412,12 @@ async function run() {
           delete semSaved[item.s.lesson.id]; await semStore((m) => { delete m[item.s.lesson.id]; });
           const out = await processItem(item, addUrl, 3);
           if (out === 'saved') await onSaved(item, ' (بعد التحقق)');
-          else failed.push({ item, why: 'لم تظهر في قائمة نور بعد الحفظ' });
+          else { failed.push({ item, why: 'لم تظهر في قائمة نور بعد الحفظ' }); lastVerify = 'none'; }
         }
       }
     }
     deferred.forEach((item) => failed.push({ item, why: item.why }));
-    failed.forEach(({ item, why }) => { setSt(item.s, 'bad', '✗ ' + why); logLine('bad', `✗ لم تكتمل «${item.s.lesson.title}» (${item.node.text}): ${why}`); });
+    failed.forEach(({ item, why }) => { setSt(item.s, WIZ.on ? 'wait' : 'bad', WIZ.on ? '⏳ تُكمَل لاحقًا' : '✗ ' + why); logLine('bad', `✗ لم تكتمل «${item.s.lesson.title}» (${item.node.text}): ${why}`); });
     diag.failed = failed.map(({ item, why }) => ({ lesson: item.s.lesson.title, node: item.node.text, date: item.s.date, why }));
     finished = !stopFlag;
   } catch (e) {
@@ -1449,7 +1451,31 @@ async function run() {
     msg(ok && !failed.length ? 'ok' : 'warn', head + (tail ? ` (${tail})` : ''));
     setBox(miss || skipped || failed.length || !ok ? 'warn' : 'ok', head, tail ? tail + ' — التفاصيل في السجل.' : '');
   }
-  if (WIZ.on) wizAfterRun({ ok, failed: failed.length, stopped: stopFlag });
+  const had = plan.flatMap((p) => p.sessions.filter((s) => s.inNoor)).length;
+  const report = await saveReport({ failed, had }).catch(() => null);
+  if (WIZ.on) wizAfterRun({ report, ok, failed: failed.length, stopped: stopFlag, error: !!endMsg && endMsg[0] === 'bad' && !WIZ.trialOver ? (diag.log.filter((l) => l.startsWith('[bad] ')).pop() || '[bad]  ').slice(6) || ' ' : '', had });
+}
+
+// ---------- تقرير المعلم: ما نُشر وتواريخه (صفحة قابلة للطباعة) ----------
+// تشغيلات المعالج المتتالية للطلب نفسه (الإكمال التلقائي) تُدمج في تقرير واحد
+async function saveReport({ failed, had }) {
+  if (!pkg) return;
+  const rid = WIZ.on && WIZ.rid ? WIZ.rid : Date.now();
+  const all = (await chrome.storage.local.get('hadirReports').catch(() => ({}))).hadirReports || [];
+  const old = all.find((r) => r.rid === rid);
+  const saved = (old ? old.saved : []).concat(savedThisRun.map((it) => ({ lesson: (it.node && it.node.text) || '', s: it.s.lesson.title, d: it.s.date })));
+  const doneIds = new Set(saved.map((x) => x.s + '|' + x.d));
+  const r = {
+    rid, at: Date.now(), title: pkg.title || pkg.subject || '', subject: pkg.subject || '', grade: pkg.grade || '', shift: pkgShift(pkg),
+    saved, had: Math.max(had || 0, old ? old.had : 0), verify: lastVerify || (old && old.verify) || '',
+    left: failed.map(({ item }) => ({ lesson: (item.node && item.node.text) || '', s: item.s.lesson.title, d: item.s.date })).filter((x) => !doneIds.has(x.s + '|' + x.d)),
+  };
+  if (!r.saved.length && !r.left.length && !old) return null;
+  await chrome.storage.local.set({ hadirReports: [r].concat(all.filter((x) => x.rid !== rid)).slice(0, 30) }).catch(() => {});
+  return r;
+}
+function openReport() {
+  chrome.windows.create({ url: chrome.runtime.getURL('report.html'), type: 'popup', width: 760, height: 900 }).catch(() => chrome.tabs.create({ url: chrome.runtime.getURL('report.html') }));
 }
 
 // ================= التهيئة =================
@@ -1636,7 +1662,7 @@ async function offerResume() {
   const radio = document.querySelector(`input[name=term][value="${run0.term}"]`); if (radio) radio.checked = true;
   if (run0.startTouched && run0.start) { $('start').value = run0.start; startTouched = true; renderDays(); }
   if (run0.scope && init.restoreScope) init.restoreScope(run0.scope);
-  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
+  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; WIZ.rid = run0.wiz.rid || Date.now(); WIZ.sum = run0.wiz.sum || 0; WIZ.auto = run0.wiz.auto || 0; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
   let left = 10, cancelled = false;
   const tick = () => {
     if (cancelled) return;
@@ -1655,6 +1681,7 @@ if (q.get('debug') === '1') {
     renderPlan,
     buildPlan, assignDates, shiftDate, conflicts, completion,
     get plan() { return plan; }, get queue() { return queue; }, get treeNodes() { return treeNodes; }, get log() { return diag.log; },
+    wizAfterRun: (o) => wizAfterRun(o), wizRunning: () => wizRunning(), wzFromNoor: () => wzFromNoor(wzOffers()), get settings() { return settings; }, holidays: () => [...holidaySet(settings)],
   };
 }
 
@@ -1680,6 +1707,31 @@ function wzOffers() {
   });
   return out.filter((o) => o.grade);
 }
+// مواد المعلم في نور (آخر قراءة للصفحة الرئيسية) مقابل المواد المتاحة: [{ grade, subject }]
+let noorCourses = [];
+function wzFromNoor(offers) {
+  const out = [];
+  noorCourses.forEach((c) => {
+    const g = (c.levels || []).map(gradeOfLevel).find(Boolean) || 0;
+    offers.forEach((o) => {
+      if ((g && o.grade !== g) || !sameSubject(o.subject, c.title)) return;
+      if (!g && offers.filter((x) => sameSubject(x.subject, c.title)).length > 1) return;   // بلا صف معروف: فقط إن كانت المادة لصف واحد
+      if (!out.some((x) => x.grade === o.grade && x.subject === o.subject)) out.push({ grade: o.grade, subject: o.subject });
+    });
+  });
+  return out.slice(0, 6);
+}
+async function loadNoorCourses() {
+  noorCourses = ((await chrome.storage.local.get('noorCourses').catch(() => ({}))).noorCourses || {}).courses || [];
+  // نافذة نور مفتوحة على الصفحة الرئيسية؟ نقرأ البطاقات منها مباشرة (قراءة فقط، دون تنقّل)
+  try {
+    const tabs = await chrome.tabs.query({ url: ['https://lms.moe.gov.om/teacher*', 'https://*.moe.gov.om/teacher*'] });
+    for (const t of tabs) {
+      const r = await chrome.scripting.executeScript({ target: { tabId: t.id }, func: readHomePage }).then((x) => x && x[0] && x[0].result).catch(() => null);
+      if (r && !r.login && r.courses && r.courses.length) { noorCourses = r.courses; await chrome.storage.local.set({ noorCourses: { at: Date.now(), courses: r.courses } }).catch(() => {}); break; }
+    }
+  } catch (e) {}
+}
 const wzBadge = (o) => (o.src === 'cat' ? `<em class="bdg free">${toAr((wz.catalog && wz.catalog.trial) || 3)} حصص مجانًا</em>`
   : o.pkg.remote && o.pkg.remote.trial ? `<em class="bdg ${o.pkg.remote.left ? 'free' : 'end'}">${o.pkg.remote.left ? 'تجربة: بقي ' + countWord(o.pkg.remote.left) : 'انتهت التجربة'}</em>`
     : o.pkg.remote ? '<em class="bdg sub">مشترك ✓</em>' : '');
@@ -1691,8 +1743,8 @@ function wzGo(step, push = true) {
   wzRender();
 }
 function wzBack() { const s = wz.hist.pop(); if (s) { wz.step = s; wzMsg('', ''); wzRender(); } }
-function wzCards(list) {
-  return `<div class="wz-cards">${list.map((c, i) => `<button type="button" class="wz-card ${c.on ? 'on' : ''}" data-i="${i}" ${c.disabled ? 'disabled' : ''}><b>${c.title}</b>${c.sub ? `<small>${c.sub}</small>` : ''}</button>`).join('')}</div>`;
+function wzCards(list, from = 0) {
+  return `<div class="wz-cards">${list.map((c, i) => `<button type="button" class="wz-card ${c.on ? 'on' : ''}" data-i="${from + i}" ${c.disabled ? 'disabled' : ''}><b>${c.title}</b>${c.sub ? `<small>${c.sub}</small>` : ''}</button>`).join('')}</div>`;
 }
 function wzBind(list) { $('wzBody').querySelectorAll('.wz-card').forEach((b) => { b.onclick = () => { if (!wz.busy) list[+b.dataset.i].go(); }; }); }
 
@@ -1709,7 +1761,15 @@ function wzRender() {
     if (!gs.length) { body.innerHTML = '<p class="empty">لا مواد جاهزة الآن. تأكد من اتصالك بالإنترنت ثم أعد فتح هذه النافذة.</p>'; return; }
     const nSub = (n) => (n === 1 ? 'مادة واحدة' : n === 2 ? 'مادتان' : n <= 10 ? toAr(n) + ' مواد' : toAr(n) + ' مادة');
     list = gs.map((g) => ({ title: gradeName(g), sub: nSub(new Set(offers.filter((o) => o.grade === g).map((o) => o.subject)).size), on: g === wz.grade, go: () => { wz.grade = g; wzGo('subject'); } }));
-    body.innerHTML = wzCards(list).replace('wz-cards', 'wz-cards grid3');
+    // موادك في نور (من بطاقات الصفحة الرئيسية): اختيار بلمسة واحدة
+    const mine = wzFromNoor(offers).map((m) => ({ title: esc(m.subject), sub: gradeName(m.grade), go: () => {
+      wz.grade = m.grade; wz.subject = m.subject;
+      const fit = offers.some((o) => o.grade === m.grade && o.subject === m.subject && wz.shift && fitsShift(o.shift, wz.shift));
+      if (fit) { wz.hist.push('grade', 'subject'); wz.step = 'shift'; wzSavePrefs(); wzResolve(); } else wzGo('shift');
+    } }));
+    body.innerHTML = (mine.length ? `<p class="wz-note">من حسابك في نور</p>${wzCards(mine)}<p class="wz-unit">أو اختر الصف</p>` : '')
+      + wzCards(list, mine.length).replace('wz-cards', 'wz-cards grid3');
+    list = mine.concat(list);
   } else if (wz.step === 'subject') {
     head.textContent = `اختر المادة — ${gradeName(wz.grade)}`;
     const subs = [...new Set(offers.filter((o) => o.grade === wz.grade).map((o) => o.subject))];
@@ -1880,27 +1940,74 @@ async function wzRun() {
   $('optStep').checked = wz.save === 'review';
   $('optNoor').checked = true; $('optAuto').checked = true;
   WIZ.on = true; WIZ.rule = wz.dates === 'official' ? 'official' : '';
+  WIZ.rid = Date.now(); WIZ.sum = 0; WIZ.auto = 0;
   wizRunning();
   run();
 }
 function wizRunning() {
   document.body.classList.add('wiz-run');
   $('wizCard').hidden = true;
-  $('wzAgain').hidden = true; $('wzResume').hidden = true;
+  $('wzAgain').hidden = true; $('wzResume').hidden = true; $('wzReport').hidden = true;
+  clearTimeout(WIZ.timer);
 }
-// بعد انتهاء التشغيل: ملخص واحد، وزر «تحضير آخر»، وإن انتهت التجربة: واتساب
-async function wizAfterRun({ ok, failed, stopped }) {
+// بعد انتهاء التشغيل: سطر واحد هادئ. ما بقي يُكمَل وحده مرة بعد مهلة، ثم يبقى زر «أكمل الباقي» — دون لغة أخطاء
+const WZ_AUTO_MS = 20000;
+async function wizAfterRun({ report, ok, failed, stopped, error, had }) {
+  error = error ? String(error).replace(/^توقف:\s*/, '').trim() || ' ' : '';
+  WIZ.sum += ok;
+  $('topMsg').className = 'msg';
   $('wzAgain').hidden = false;
-  $('wzResume').hidden = !(stopped || failed) || WIZ.trialOver;
+  $('wzReport').hidden = false;
+  $('wzResume').hidden = true;
   if (pkg && pkg.remote && pkg.remote.trial) {
     await afaqSync({ force: true }).catch(() => {});
     const r = await getPackages(); packages = r.packages; state = r.state;
     const p2 = packages.find((x) => x.id === pkg.id) || pkg;
     if (WIZ.trialOver || (p2.remote && p2.remote.trial && !p2.remote.left)) { wz.pkg = p2; showPay(p2); return; }
   }
-  if (WIZ.trialOver) showPay(pkg);
+  if (WIZ.trialOver) { showPay(pkg); return; }
+  const n = WIZ.sum;
+  const range = wzRange(report);
+  if (stopped) {
+    setBox('ok', n ? `أوقفتَ التحضير — نُشر ${countWord(n)}` : 'أوقفتَ التحضير', 'تكمل الباقي متى شئت، وما نُشر لا يتكرر.');
+    wzResumeBtn('▶ أكمل الباقي');
+    return;
+  }
+  if ((failed || error) && WIZ.auto < 1) {
+    WIZ.auto++;
+    let left = Math.round(WZ_AUTO_MS / 1000);
+    const head = failed ? `بقيت ${countWord(failed)} — أكملها الآن` : 'أكمل التحضير';
+    const tick = () => {
+      setBox('run', head, `أمهل نور قليلًا ثم أكمل وحدي بعد ${toAr(left)} ثانية.${n ? ` نُشر حتى الآن ${countWord(n)}.` : ''}`);
+      if (left-- <= 0) { wizRunning(); run(); return; }
+      WIZ.timer = setTimeout(tick, 1000);
+    };
+    wzResumeBtn('▶ أكمل الآن');
+    tick();
+    return;
+  }
+  if (failed || error) {
+    if (!n) setBox('warn', 'لم يكتمل التحضير بعد', `${error.trim() ? error + ' — ' : 'نور لا يستجيب كما يجب الآن. '}اضغط «أكمل الباقي» بعد قليل وأكمل من حيث توقفت.`);
+    else setBox('ok', `✓ نُشر ${countWord(n)}${range}`, `${failed ? `بقيت ${countWord(failed)}` : 'بقي القليل'} — اضغط «أكمل الباقي» بعد قليل وأنشرها لك دون تكرار.`);
+    wzResumeBtn('▶ أكمل الباقي');
+    return;
+  }
+  if (!n) { setBox('ok', had ? '✓ كل الحصص المختارة موجودة في نور' : '✓ لا شيء ناقص', 'لا حاجة لأي إجراء.'); return; }
+  const sure = (report && (report.verify === 'ok' || report.verify === 'loose'));
+  setBox('ok', `✓ تم نشر ${countWord(n).replace('حصتان', 'حصتين')}${sure ? ' وتأكدت منها كلها في نور' : ''}`, range ? `تواريخ النشر${range}.` : '');
+}
+// مدى تواريخ ما نُشر في هذا الطلب (من التقرير المدمج)
+function wzRange(r) {
+  const ds = ((r && r.saved) || []).map((x) => x.d).filter(isIso).sort();
+  if (!ds.length) return '';
+  return ds[0] === ds[ds.length - 1] ? ` يوم ${dayLabel(ds[0])}` : ` من ${dayLabel(ds[0])} إلى ${dayLabel(ds[ds.length - 1])}`;
+}
+function wzResumeBtn(label) {
+  const b = $('wzResume');
+  b.textContent = label; b.hidden = false;
 }
 function wzAgain() {
+  clearTimeout(WIZ.timer);
   document.body.classList.remove('wiz-run', 'showplan');
   WIZ.on = false; WIZ.rule = ''; WIZ.trialCap = null;
   $('wizCard').hidden = false;
@@ -1976,7 +2083,8 @@ async function wzActivated() {
 async function wizBoot() {
   if (q.get('classic')) { document.body.classList.remove('wiz'); return; }
   document.body.classList.add('wiz');
-  $('wzResume').onclick = () => { $('wzResume').hidden = true; run(); };
+  $('wzResume').onclick = () => { wizRunning(); run(); };
+  $('wzReport').onclick = openReport;
   $('wzBack').onclick = wzBack;
   $('wzAgain').onclick = wzAgain;
   $('wzAdv').onclick = () => { document.body.classList.toggle('details'); };
@@ -1985,7 +2093,8 @@ async function wizBoot() {
   const pf = (await chrome.storage.local.get('wizPrefs').catch(() => ({}))).wizPrefs || {};
   wz.grade = pf.grade || 0; wz.subject = pf.subject || ''; wz.shift = pf.shift || '';
   wzRender();   // المكتبة أولًا (دون انتظار الشبكة)
-  const [cat] = await Promise.all([afaqCatalog().catch(() => null), wz.link ? afaqSync().catch(() => {}) : null]);
+  const [cat] = await Promise.all([afaqCatalog().catch(() => null), wz.link ? afaqSync().catch(() => {}) : null, loadNoorCourses()]);
+  settings = await getSettings();   // إجازات التقويم الرسمي وصلت مع الكتالوج
   wz.catalog = cat && cat.ok !== false ? cat : null;
   const r = await getPackages(); packages = r.packages; state = r.state; wz.status = await getStatus();
   if (q.get('pay')) { const p0 = packages.find((x) => x.id === q.get('pkg')) || packages.find((x) => x.remote && x.remote.trial); if (p0) { showPay(p0); return; } }

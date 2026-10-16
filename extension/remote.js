@@ -51,6 +51,7 @@ export function sync(opts = {}) {
 async function doSync({ force } = {}) {
   const link = await getLink();
   if (!link) return { ok: false, error: 'unlinked' };
+  officialHolidays();
   const me = await rpc('ext_me', { p_token: link.token });
   if (!me || me.ok === false) {
     if (me && me.error === 'unlinked') { await unlink(); return { ok: false, error: 'unlinked' }; }
@@ -131,10 +132,20 @@ export const siteUrl = (hash) => AFAQ.SITE_URL.replace(/#.*$/, '') + (hash || ''
 // ---------- «حاضر» مباشرة دون الموقع ----------
 // كتالوج المواد الجاهزة (للجميع) — يُحفظ آخر كتالوج ليعمل المعالج دون اتصال لحظي
 export async function catalog() {
-  const r = await rpc('ext_catalog', {});
+  const [r] = await Promise.all([rpc('ext_catalog', {}), officialHolidays()]);
   if (r && r.ok) { await chrome.storage.local.set({ afaqCatalog: Object.assign(r, { at: Date.now() }) }); return r; }
   const old = (await chrome.storage.local.get('afaqCatalog')).afaqCatalog;
   return old ? Object.assign({}, old, { stale: true }) : (r || { ok: false, error: 'network' });
+}
+// إجازات التقويم الرسمي (إعداد «holidays» في لوحة الإدارة): تُتخطّى عند توزيع التواريخ لكل المعلمين
+async function officialHolidays() {
+  if (!configured()) return;
+  try {
+    const r = await fetch(`${AFAQ.SUPABASE_URL}/rest/v1/settings?key=eq.holidays&select=value`, { headers: { apikey: AFAQ.SUPABASE_ANON_KEY, Authorization: 'Bearer ' + AFAQ.SUPABASE_ANON_KEY } });
+    if (!r.ok) return;
+    const rows = await r.json();
+    await chrome.storage.local.set({ afaqHolidays: String((rows[0] && rows[0].value) || '') });
+  } catch (e) {}
 }
 const deviceLabel = () => { const ua = navigator.userAgent; const os = /Windows/.test(ua) ? 'Windows' : /Mac OS/.test(ua) ? 'Mac' : /CrOS/.test(ua) ? 'Chromebook' : /Linux/.test(ua) ? 'Linux' : ''; return ['Chrome', os].filter(Boolean).join(' — '); };
 // أول استعمال: يُنشأ للمعلم حساب ورمز جهاز وطلب برقم، وتبدأ تجربته في المواد المختارة
