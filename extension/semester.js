@@ -181,6 +181,16 @@ function conflicts() {
     dup: plan.filter((p) => p.node && dup.has(p.node.id)),
   };
 }
+// الاكتمال: كل درس من ملفك مربوط بدرس في نور، وكل حصصه موجودة في نور (أو محفوظة) — عندها لا مراجعة ولا اقتراحات: «مكتمل» فقط
+function completion() {
+  const linked = plan.filter((p) => p.node);
+  const all = linked.flatMap((p) => p.sessions);
+  const isDone = (s) => s.inNoor || s.savedNow || done(s.lesson);
+  const left = all.filter((s) => !isDone(s)).length;
+  const miss = plan.filter((p) => p.miss && !p.skipped).length;
+  return { total: all.length, left, miss, linkedDone: all.length > 0 && !left, complete: all.length > 0 && !left && !miss };
+}
+const completeText = (c) => `✔ مكتمل: كل حصص «${pkg.title || pkg.subject || 'المادة'}» مُدخلة في نور (${toAr(c.total)} من ${toAr(c.total)})`;
 let editable = false;   // تعديل الربط مسموح أثناء مراجعة الخطة وقبل البدء
 function nodeOptions(sel) {
   const units = [...new Set(treeNodes.map((n) => n.unit))];
@@ -190,18 +200,21 @@ function renderPlan() {
   if (!plan.length) { $('planCard').hidden = true; return; }
   $('planCard').hidden = false;
   const c = conflicts();
+  const cp = completion();
   const matched = plan.filter((p) => !p.miss).length;
   const n = plan.flatMap((p) => p.sessions.filter((s) => s.on)).length;
   const inNoor = plan.flatMap((p) => p.sessions.filter((s) => s.inNoor)).length;
-  $('planSum').textContent = `— ${toAr(plan.length)} درسًا في ملفك، مربوط منها بدروس نور ${toAr(matched)}${noorHave ? ` · موجود في نور ${countWord(inNoor)}` : ''} · سيُعبّأ ${countWord(n)}`
+  $('planSum').textContent = cp.complete ? `— مكتمل ✓: ${toAr(plan.length)} درسًا، ${countWord(cp.total)} كلها في نور` : `— ${toAr(plan.length)} درسًا في ملفك، مربوط منها بدروس نور ${toAr(matched)}${noorHave ? ` · موجود في نور ${countWord(inNoor)}` : ''} · سيُعبّأ ${countWord(n)}`
     + (c.miss.length + c.weak.length + c.dup.length ? ` · للمراجعة: ${toAr(c.miss.length + c.weak.length + c.dup.length)}` : '');
   const dup = dupNodes();
   $('plan').innerHTML = plan.map((p, i) => {
     const h = HOW[p.how] || ['ok', ''];
+    // درس كل حصصه في نور: لا داعي لعلامة «بالترتيب — تأكد» بعد أن حُفظ
+    const settled = p.node && !dup.has(p.node.id) && p.sessions.every((s) => s.inNoor || s.savedNow || done(s.lesson));
     const flag = p.node && dup.has(p.node.id) ? '<span class="flag bad">⚠ درس نور نفسه مربوط بدرس آخر من ملفك</span>'
       : p.miss ? `<span class="flag ${p.skipped ? 'ok' : 'bad'}">${p.skipped ? 'تخطّيته' : '⚠ ' + esc(p.why || 'لم أجده في شجرة هذا الفصل')}</span>`
-        : h[1] ? `<span class="flag ${h[0]}">${h[1]}</span>` : '';
-    const cls = p.node && dup.has(p.node.id) ? 'bad' : p.miss && !p.skipped ? 'bad' : h[0] === 'warn' ? 'warn' : '';
+        : settled ? '' : h[1] ? `<span class="flag ${h[0]}">${h[1]}</span>` : '';
+    const cls = p.node && dup.has(p.node.id) ? 'bad' : p.miss && !p.skipped ? 'bad' : h[0] === 'warn' && !settled ? 'warn' : '';
     const map = editable
       ? `<select class="map ${cls}" data-i="${i}" title="درس نور المقابل">${nodeOptions(p.node)}</select>${p.node ? `<button class="seq" data-seq="${i}" title="اربط الدروس التالية في ملفك بدروس نور التالية لهذا الدرس بالترتيب">↧ ما بعده بالترتيب</button>` : ''}`
       : (p.node ? `<div class="u" dir="ltr" style="text-align:right">في نور: ${esc(p.node.text)}</div>` : '');
@@ -375,7 +388,9 @@ async function readAllPrepTitles() {
   const strip = (h) => { const d = document.createElement('div'); d.innerHTML = String(h == null ? '' : h); return d.textContent.replace(/\s+/g, ' ').trim(); };
   let titles = [];
   try { titles = dt.cells(null, 0).render('display').toArray().map(strip); } catch (e) {}
-  if (!titles.length || titles.some((t) => !t || t === '[object Object]')) titles = Array.from(el.querySelectorAll('tbody tr .title-text')).map((x) => x.textContent.replace(/\s+/g, ' ').trim());
+  // نصّ العنوان كما يراه المعلم (دون شارات أو نصوص مرافقة في الخلية) إن كانت كل الصفوف معروضة
+  const dom = Array.from(el.querySelectorAll('tbody tr .title-text')).map((x) => x.textContent.replace(/\s+/g, ' ').trim());
+  if ((dom.length && dom.length >= titles.length) || !titles.length || titles.some((t) => !t || t === '[object Object]')) titles = dom;
   return { ok: true, total, titles };
 }
 // احتياط (عالم الإضافة): عناوين الصفحة المعروضة فقط
@@ -832,6 +847,15 @@ function alignGroups(groups, nodes, known) {
   const rank = { pick: 0, name: 1, number: 2 };
   pairs.sort((x, y) => rank[x.how] - rank[y.how] || x.ui - y.ui).forEach((p) => alignRange(p.gis, p.t.idx.map((i) => nodes[i]), p.how));
   if (leftovers.length) alignRange(leftovers.sort((x, y) => x - y), nodes, 'order');
+  // فرصة أخيرة عبر الفصل كله: درس بقي بلا رابط واسمه (دون الأرقام) مميّز ويكاد يطابق درسًا حرًّا في وحدة أخرى من نور
+  // (ملفك يضعه في وحدة غير وحدته في نور) — يُقبل إن كان الشبه قويًا وبلا منافس قريب
+  groups.forEach((g, gi) => {
+    if (res[gi].node) return;
+    const nm = nameOnly(g.lesson) || g.lesson;
+    if (keywords(nm).length < 2) return;
+    const sc = nodes.filter((n) => !used.has(n.id)).map((n) => ({ n, v: titleSim(nm, nameOnly(n.text) || n.text) })).sort((a, b) => b.v - a.v);
+    if (sc[0] && sc[0].v >= 0.85 && (!sc[1] || sc[0].v - sc[1].v >= 0.25)) { put(gi, sc[0].n, 'name'); res[gi].cross = true; }
+  });
   res.unitsByName = byName; res.unitsNamed = named;
   return res;
 }
@@ -859,6 +883,7 @@ async function buildPlan(nodes) {
     logLine('info', `أهملتُ ${toAr(stale.length)} ${stale.length === 1 ? 'ربطًا قديمًا يخالف' : 'روابط قديمة تخالف'} أسماء الدروس في نور (من تشغيل سابق) — الربط الآن بالاسم`);
   }
   const al = alignGroups(groups, nodes, known);
+  al.forEach((r, i) => { if (r.cross && r.node) logLine('info', `«${groups[i].lesson}» وجدته في وحدة أخرى بنور: «${r.node.unit}» — رُبط بالاسم`); });
   const ov = dateOverrides(state, pkg.id);
   plan = groups.map((group, i) => {
     const { node, how, why } = al[i];
@@ -869,14 +894,15 @@ async function buildPlan(nodes) {
   // دروس في شجرة نور لم يُربط بها أي درس من ملفك (لن تُعبّأ) — للعلم
   const usedNodes = new Set(plan.filter((p) => p.node).map((p) => p.node.id));
   const orphans = nodes.filter((n) => !usedNodes.has(n.id));
-  if (orphans.length && orphans.length < nodes.length) logLine('info', `${toAr(orphans.length)} ${orphans.length === 1 ? 'درس في شجرة نور ليس له' : 'دروس في شجرة نور ليس لها'} تحضير في ملفك: ${orphans.slice(0, 5).map((n) => '«' + n.text + '»').join('، ')}${orphans.length > 5 ? '…' : ''} — اربطها يدويًا من «الخطة» إن كانت لدروس ملفك بأسماء مختلفة`);
+  const cp0 = completion();
+  if (orphans.length && orphans.length < nodes.length && !cp0.complete) logLine('info', `${toAr(orphans.length)} ${orphans.length === 1 ? 'درس في شجرة نور ليس له' : 'دروس في شجرة نور ليس لها'} تحضير في ملفك: ${orphans.slice(0, 5).map((n) => '«' + n.text + '»').join('، ')}${orphans.length > 5 ? '…' : ''} — اربطها يدويًا من «الخطة» إن كانت لدروس ملفك بأسماء مختلفة`);
   diag.orphans = orphans.map((n) => n.text);
   // أسماء وحدات ملفك لا تشبه وحدات هذا المقرر: غالبًا المادة لصف أو كتاب آخر
   plan.mismatch = al.unitsNamed >= 2 && al.unitsByName / al.unitsNamed < 0.5;
   diag.plan = plan.map((p) => ({ unit: p.group.unit, lesson: p.group.lesson, sessions: p.sessions.length, node: p.node ? p.node.text : null, how: p.how || '', why: p.why || '', inNoor: p.sessions.filter((s) => s.inNoor).length }));
   const c = conflicts();
   if (plan.mismatch) logLine('bad', `أسماء وحدات ملفك لا تشبه وحدات هذا المقرر في نور (طابق بالاسم ${toAr(al.unitsByName)} من ${toAr(al.unitsNamed)}) — تأكد أن الصف في المادة صحيح («${pkg.grade || ''}»)`);
-  if (c.weak.length) logLine('info', `${toAr(c.weak.length)} ${c.weak.length === 1 ? 'درس رُبط' : 'دروس رُبطت'} بالترتيب أو برقم الوحدة فقط — راجعها في «الخطة»`);
+  if (c.weak.length && !cp0.complete) logLine('info', `${toAr(c.weak.length)} ${c.weak.length === 1 ? 'درس رُبط' : 'دروس رُبطت'} بالترتيب أو برقم الوحدة فقط — راجعها في «الخطة»`);
   c.miss.forEach((p) => logLine('skip', `— «${[p.group.unit, p.group.lesson].filter(Boolean).join(' / ')}»: ${p.why || 'لم أجده في شجرة هذا الفصل'}`));
   assignDates();
 }
@@ -923,6 +949,9 @@ async function refreshNoorHave() {
   return h && !h.partial ? h : null;
 }
 const noorCount = (h, p) => (h && p.node ? (h.get(kwNorm(p.node.text)) || []).length : 0);
+// عدّ متسامح (للتحقق النهائي فقط): نور قد يختصر العنوان الطويل أو يضيف إليه، فيُقبل الاحتواء والتشابه الشديد
+const sameTitle = (a, b) => a === b || (a.length >= 15 && b.length >= 15 && (a.includes(b) || b.includes(a))) || titleSim(a, b) >= 0.92;
+const noorCountLoose = (h, p) => { if (!h || !p.node) return 0; const k = kwNorm(p.node.text); let n = 0; for (const [kk, list] of h) if (sameTitle(kk, k)) n += list.length; return n; };
 // هل تُظهر القائمة ما حفظناه فعلًا؟ (عناوين نور بالصيغة التي نتوقعها) — وإلا لا يُبنى عليها أي قرار إعادة،
 // فلا يتكرر الفصل كله لو اختلفت صيغة العناوين
 function listReliable(h) {
@@ -1242,6 +1271,8 @@ async function run() {
     if (stopFlag || !nodes) throw new Error('stop');
     await buildPlan(nodes);
     renderPlan();
+    // المادة مكتملة في نور: لا مراجعة ولا اقتراحات — «مكتمل» فقط
+    { const cp = completion(); if (cp.complete && !queue.length) { finished = true; logLine('ok', completeText(cp)); throw new Error(completeText(cp)); } }
     // تعارض بين ملفك ونور: تُعرض الخطة للمراجعة، وتبدأ وحدها بعد مهلة (أطول كلما كان التعارض أخطر) ما لم تطلب المراجعة اليدوية
     const c = conflicts();
     const nConf = c.miss.length + c.weak.length + c.dup.length;
@@ -1327,13 +1358,13 @@ async function run() {
       const h = await refreshNoorHave();
       const lost = [];
       if (h) plan.filter((p) => p.savedNow).forEach((p) => {
-        const missing = p.initial + p.savedNow - noorCount(h, p);
+        const missing = p.initial + p.savedNow - Math.max(noorCount(h, p), noorCountLoose(h, p));
         if (missing > 0) lost.push(...savedThisRun.filter((it) => it.p === p).slice(-missing));
       });
       const redo = !!h && listReliable(h) && lost.length <= Math.max(3, Math.round(savedThisRun.length * 0.1));
       if (!h) logLine('info', 'تعذّر التحقق النهائي من قائمة نور — راجع القائمة بنفسك');
       else if (!lost.length) logLine('ok', `✓ التحقق النهائي: كل ما حُفظ (${countWord(savedThisRun.length)}) ظاهر في قائمة نور`);
-      else if (!redo) logLine('bad', `التحقق النهائي: ${countWord(lost.length)} لا تظهر في قائمة نور بالعنوان المتوقع — لم أعدها خشية التكرار؛ راجع القائمة (ربما عُدّلت العناوين)`);
+      else if (!redo) logLine('info', `التحقق النهائي: أكّد نور حفظ الحصص كلها عند الحفظ، و${countWord(lost.length)} منها تظهر في القائمة بصياغة عنوان مختلفة قليلًا — لا إجراء مطلوب`);
       if (redo) {
         for (const item of lost) {
           if (stopFlag) break;
@@ -1365,6 +1396,13 @@ async function run() {
   if (total) $('prog').style.width = (Math.min(1, ok / total) * 100) + '%';
   if (endMsg) msg(endMsg[0], endMsg[1]);
   else if (stopFlag) { msg('warn', `أُوقف. حُفظ ${countWord(ok)} من ${toAr(total)}.`); setBox('warn', 'أُوقف', `حُفظ ${countWord(ok)} من ${toAr(total)}. اضغط «ابدأ» ليكمل من حيث توقف.`); }
+  else if (total && !failed.length && completion().complete) {
+    const cp = completion();
+    const t = completeText(cp);
+    logLine('ok', t);
+    msg('ok', `${t} — حُفظ الآن ${countWord(ok)}.`);
+    setBox('ok', t, '');
+  }
   else if (total) {
     const miss = plan.filter((p) => p.miss && !p.skipped).length;
     const had = plan.flatMap((p) => p.sessions.filter((s) => s.inNoor)).length;
@@ -1440,7 +1478,8 @@ async function init() {
     lintRes = lintPackage(pkg, { days, termEnd, holidays: holidaySet(settings), start: $('start').value, isDone: (l) => done(l) });
     const lv = lintLevel(lintRes);
     const b = lintRes.budget;
-    $('lintCard').hidden = !lintRes.warnings.length && !b;
+    const allDone = (pkg.lessons || []).length > 0 && (pkg.lessons || []).every((l) => done(l));
+    $('lintCard').hidden = (!lintRes.warnings.length && !b) || allDone;   // مادة مكتملة: لا ملاحظات ولا ميزانية
     const n = lintRes.warnings.length;
     const budgetTxt = b ? ` · ميزانية الفصل: ${countWord(b.need)} متبقية لـ${toAr(b.avail)} يوم حصة حتى ${dayLabel(b.termEnd, false)}${b.over ? ` — ينقص ${toAr(b.over)}` : ' ✓'}` : (settings.term1End || settings.term2End ? '' : ' · (اضبط «نهاية الفصل» في الإعدادات لحساب الميزانية)');
     $('lintHead').textContent = `فحص ملف المادة: ${lv === 'ok' ? 'سليم ✓' : `${toAr(n)} ${n === 1 ? 'ملاحظة' : n === 2 ? 'ملاحظتان' : n <= 10 ? 'ملاحظات' : 'ملاحظة'}${lv === 'warn' || lv === 'bad' ? ' — راجعها' : ' (معلومات فقط)'}`}${budgetTxt}`;
@@ -1571,9 +1610,9 @@ init().then(offerResume).catch(() => {});
 // للاختبار الآلي فقط (?debug=1): يكشف الحالة الداخلية دون أثر على الاستخدام العادي
 if (q.get('debug') === '1') {
   window.__hadirSem = {
-    set(o) { if (o.pkg) pkg = o.pkg; if (o.state) state = o.state; if (o.settings) settings = o.settings; if (o.days) days = o.days; if (o.scope) Object.assign(scope, o.scope, o.scope.units ? { units: new Set(o.scope.units) } : {}); if (o.useFile != null) useFile = o.useFile; if (o.start) $('start').value = o.start; if (o.editable != null) editable = o.editable; },
+    set(o) { if (o.pkg) pkg = o.pkg; if (o.state) state = o.state; if (o.settings) settings = o.settings; if (o.days) days = o.days; if (o.scope) Object.assign(scope, o.scope, o.scope.units ? { units: new Set(o.scope.units) } : {}); if (o.useFile != null) useFile = o.useFile; if (o.start) $('start').value = o.start; if (o.editable != null) editable = o.editable; if (o.noorHave) { noorHave = new Map(Object.entries(o.noorHave)); } },
     renderPlan,
-    buildPlan, assignDates, shiftDate, conflicts,
+    buildPlan, assignDates, shiftDate, conflicts, completion,
     get plan() { return plan; }, get queue() { return queue; }, get treeNodes() { return treeNodes; }, get log() { return diag.log; },
   };
 }
