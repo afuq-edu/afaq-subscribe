@@ -39,9 +39,17 @@ const subject = parts[1] || '';
 const gradeWord = (parts[2] || '').replace(/^الصف\s+/, '');
 const gradeNum = (GRADES.find(([w]) => gradeWord.startsWith(w)) || [])[1] || null;
 const term = +(opt.term || (/الثاني/.test(parts[3] || '') ? 2 : 1));
+const latin = (s) => String(s || '').replace(/[٠-٩]/g, (d) => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+// نوع المدرسة: فترة واحدة (الحصة ٤٠ دقيقة) أو فترتان (٣٥ دقيقة) — من العنوان، وإلا من «مجموع زمن الحصة» في سير الدرس
+const SHIFT_NAME = { one: 'فترة واحدة', two: 'فترتان' };
+const minutes = [...html.matchAll(/مجموع زمن الحصة\s*[:：]?\s*([0-9٠-٩]+)\s*دقيقة/g)].map((m) => +latin(m[1]));
+const minCount = minutes.reduce((o, n) => ((o[n] = (o[n] || 0) + 1), o), {});
+const byMinutes = minCount[35] > (minCount[40] || 0) ? 'two' : minCount[40] ? 'one' : '';
+const byTitle = /فترتين|فترتان|الفترتين|فترة\s*مسائية/.test(title) ? 'two' : /فترة\s*واحدة|الفترة\s*الواحدة/.test(title) ? 'one' : '';
+const shift = opt.shift || byTitle || byMinutes || '';
+const shiftWarn = byTitle && byMinutes && byTitle !== byMinutes ? `العنوان يقول «${SHIFT_NAME[byTitle]}» لكن زمن الحصص ${byTitle === 'one' ? 35 : 40} دقيقة` : !shift ? 'لم أعرف نوع المدرسة (فترة أو فترتان): أضفه إلى العنوان أو مرّر --shift=one|two' : '';
 
 const MONTHS = { يناير: 1, فبراير: 2, مارس: 3, أبريل: 4, ابريل: 4, مايو: 5, يونيو: 6, يوليو: 7, أغسطس: 8, اغسطس: 8, سبتمبر: 9, أكتوبر: 10, اكتوبر: 10, نوفمبر: 11, ديسمبر: 12 };
-const latin = (s) => String(s || '').replace(/[٠-٩]/g, (d) => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
 const iso = (y, m, d) => `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
 // «الأسبوع 4 (من 27 سبتمبر إلى 1 أكتوبر 2026)» ← 2026-09-27 · «(من 6 إلى 10 سبتمبر 2026)» ← 2026-09-06
 function weekStart(wk) {
@@ -104,14 +112,14 @@ for (const l of D.les) {
     lessons.push(x);
   });
 }
-const pkg = { id: id || `${subject}-${gradeNum}`, term: term === 2 ? 'الفصل الدراسي الثاني' : 'الفصل الدراسي الأول', subject, grade: parts[2] || '', gradeNum, title: [subject, parts[2]].filter(Boolean).join(' — '), lessons };
+const pkg = { id: id || `${subject}-${gradeNum}`, term: term === 2 ? 'الفصل الدراسي الثاني' : 'الفصل الدراسي الأول', subject, grade: parts[2] || '', gradeNum, title: [subject, parts[2]].filter(Boolean).join(' — '), shift, shiftName: SHIFT_NAME[shift] || '', sessionMinutes: shift === 'two' ? 35 : shift === 'one' ? 40 : null, lessons };
 
 const out = outArg || path.join(path.dirname(src), path.basename(src).replace(/\.[^.]+$/, '') + '.hadir.json');
 fs.writeFileSync(out, JSON.stringify(pkg, null, 1));
 const rep = lintPackage(pkg);
 const weeks = new Set(lessons.map((x) => weekNum(x.week)).filter(Boolean));
 console.log(JSON.stringify({
-  out, subject, gradeNum, term, units: new Set(lessons.map((x) => x.unit)).size, lessons: D.les.length, sessions: lessons.length, weeks: weeks.size,
+  out, subject, gradeNum, term, shift: SHIFT_NAME[shift] || '?', minutes: minCount, shiftWarn, units: new Set(lessons.map((x) => x.unit)).size, lessons: D.les.length, sessions: lessons.length, weeks: weeks.size,
   dated: lessons.filter((x) => /^\d{4}-\d\d-\d\d$/.test(x.pubDate || '')).length,
   first: lessons[0] && lessons[0].pubDate, last: lessons.at(-1) && lessons.at(-1).pubDate,
   noLevels: lessons.filter((x) => !x.levels.length).length,
