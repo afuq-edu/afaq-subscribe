@@ -41,6 +41,7 @@
     <div class="admin-tabs" role="tablist">
       <button role="tab" data-tab="home" aria-selected="true">نظرة عامة</button>
       <button role="tab" data-tab="requests">طلبات «حاضر» <span class="chip warn" id="reqBadge" hidden></span></button>
+      <button role="tab" data-tab="stats">الإحصاءات</button>
       <button role="tab" data-tab="codes">رموز التفعيل</button>
       <button role="tab" data-tab="teachers">المعلمون</button>
       <button role="tab" data-tab="packages">الباقات والتحاضير</button>
@@ -52,6 +53,14 @@
     <section data-pane="home">
       <div class="stats" id="stats"></div>
       <div class="msg warn" id="setupHints" hidden style="margin-top:18px"></div>
+    </section>
+
+    <!-- الإحصاءات: المعلمون، المواد الأكثر طلبًا، من توقف بعد التجربة، والدعوات -->
+    <section data-pane="stats" hidden>
+      <div class="stats" id="stStats"></div>
+      <div class="panel" style="margin-top:18px"><h2 style="font-size:19px">المواد الأكثر طلبًا</h2><p class="muted small">جهّز تحاضير المواد في أعلى القائمة أولًا.</p><div class="tablewrap"><table class="grid" id="stSubjects"></table></div></div>
+      <div class="panel" style="margin-top:18px"><h2 style="font-size:19px">أنهوا التجربة ولم يشتركوا</h2><p class="muted small">استعملوا كل حصصهم المجانية في مادة ولم تُفعَّل بعد — تابعهم على واتساب.</p><div class="tablewrap"><table class="grid" id="stStopped"></table></div></div>
+      <div class="panel" style="margin-top:18px"><h2 style="font-size:19px">الدعوات</h2><p class="muted small" id="stRefNote"></p><div class="tablewrap"><table class="grid" id="stRefs"></table></div></div>
     </section>
 
     <!-- طلبات «حاضر»: من جرّب في الإضافة وطلب التفعيل -->
@@ -191,6 +200,7 @@
             <label class="field"><span>الحد اليومي للحصص لكل معلم</span><input name="daily_limit" type="number" min="10" dir="ltr"><small>حصص مختلفة في ٢٤ ساعة؛ إعادة المحاولة لا تُحتسب.</small></label>
             <label class="field"><span>أقصى عدد أجهزة لكل معلم</span><input name="max_devices" type="number" min="1" max="5" dir="ltr"></label>
           </div>
+          <label class="field"><span>خصم دعوة زميل</span><input name="referral_discount" placeholder="20%"><small>نسبة مثل «20%» أو مبلغ مثل «1 ر.ع.». يظهر للمعلم في رابط دعوته، ويحصل عليه هو وزميله إذا اشترك الزميل.</small></label>
           <label class="field"><span>إجازات التقويم الرسمي <small>(لكل المعلمين)</small></span><textarea name="holidays" rows="5" placeholder="18/11/2026 العيد الوطني&#10;من 14/12/2026 إلى 25/12/2026 إجازة منتصف الفصل"></textarea><small>سطر لكل إجازة: يوم واحد أو «من … إلى …». يتخطّاها «حاضر» عند توزيع تواريخ النشر.</small></label>
           <div class="msg" id="setMsg" hidden></div>
           <button class="btn primary" type="submit">احفظ الإعدادات</button>

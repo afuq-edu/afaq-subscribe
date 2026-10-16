@@ -1,7 +1,7 @@
 // background.js — العامل الخلفي: اختصار لوحة المفاتيح، اكتشاف الحفظ في نور، وتهيئة الإضافة
 import { getAll, fillTab, canRunOn } from './lib.js';
 import { getPackages, getSettings, getPicks, pageContext, fillNoor, suggestSelection, suggestDate, activeChain, markSaved, markSaveFailed, getLastFill, clearLastFill, pageAlerts, judgeSave, dayLabel, syncNoorList, sessionStatus } from './packages.js';
-import { linkWith, unlink, sync as afaqSync, getLink, getStatus } from './remote.js';
+import { linkWith, unlink, sync as afaqSync, getLink, getStatus, setRef } from './remote.js';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const shortT = (t) => { const h = String(t || '').split(/[:：]/)[0].trim(); return h.length <= 30 ? h : h.slice(0, 30) + '…'; };
@@ -232,6 +232,7 @@ chrome.runtime.onMessageExternal.addListener((msg, sender, reply) => {
     if (msg.type === 'afaqLink') return linkWith(msg.token, msg.name);
     if (msg.type === 'afaqSync') return afaqSync({ force: true });
     if (msg.type === 'afaqUnlink') return unlink();
+    if (msg.type === 'afaqRef') return setRef(msg.ref);
     return { ok: false, error: 'unknown' };
   })().then(reply).catch((e) => reply({ ok: false, error: String((e && e.message) || e) }));
   return true;

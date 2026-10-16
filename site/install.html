@@ -15,6 +15,17 @@
   <h1 style="margin:14px 0 12px;font-size:34px">تثبيت إضافة «حاضر»</h1>
   <p class="muted" style="margin-bottom:24px">تعمل على متصفح <b>كروم</b> أو <b>إيدج</b> في الحاسوب. تُثبَّت مرة واحدة، ثم تصلها مواد اشتراكك تلقائيًا.</p>
 
+  <section id="update" hidden style="margin-bottom:28px;padding:18px;border:2px solid var(--sea);border-radius:16px">
+    <h2 style="font-size:22px;margin-bottom:10px">تحديث «حاضر» إلى النسخة الجديدة</h2>
+    <p style="margin-bottom:14px"><a class="btn primary" href="hader.zip" download>نزّل النسخة الجديدة</a></p>
+    <div style="display:grid;gap:10px">
+      <p class="muted"><b>١.</b> افتح الملف الذي نزّلته واستخرج ما فيه <b>في المجلد نفسه</b> الذي ثبّتَّ منه «حاضر» أول مرة، واختر «استبدال الملفات».</p>
+      <p class="muted"><b>٢.</b> افتح <code dir="ltr">chrome://extensions</code> واضغط زر التحديث ⟳ في بطاقة «حاضر».</p>
+      <p class="muted">موادك وما حضّرته واشتراكك تبقى كما هي.</p>
+    </div>
+  </section>
+  <p id="refNote" class="msg ok" hidden style="margin-bottom:20px"></p>
+
   <section id="store" hidden style="margin-bottom:28px">
     <p><a class="btn primary" id="storeLink" href="#" target="_blank" rel="noopener">ثبّت «حاضر» من متجر كروم</a></p>
     <p class="muted small" style="margin-top:10px">اضغط «إضافة إلى Chrome»، ثم ارجع إلى <a href="index.html#dashboard">حسابك</a> واضغط «اربط الإضافة بحسابي».</p>
@@ -32,6 +43,29 @@
   </section>
 </main>
 <script src="config.js"></script>
+<script>
+  if (location.hash === '#update') document.getElementById('update').hidden = false;
+  // دعوة زميل: رقم الدعوة يصل إلى «حاضر» بعد تثبيته (تحاول الصفحة كل ٣ ثوانٍ ما دامت مفتوحة)
+  (() => {
+    const q = new URLSearchParams(location.search);
+    let ref = q.get('r');
+    try { if (/^\d{3,9}$/.test(ref || '')) localStorage.setItem('afaqRef', ref); else ref = localStorage.getItem('afaqRef'); } catch (e) {}
+    if (!/^\d{3,9}$/.test(ref || '')) return;
+    const note = document.getElementById('refNote');
+    note.hidden = false; note.textContent = 'دعاك زميلك إلى «حاضر» — ثبّته الآن، وتصل دعوته وحدها.';
+    const ids = [].concat((window.AFAQ_CONFIG || {}).EXTENSION_ID || []);
+    const rt = window.chrome && window.chrome.runtime;
+    if (!rt || !rt.sendMessage || !ids.length) return;
+    let n = 0;
+    const tick = () => {
+      if (n++ > 300) return;
+      let got = false;
+      ids.forEach((id) => { try { rt.sendMessage(id, { type: 'afaqRef', ref: +ref }, (r) => { void rt.lastError; if (r && r.ok && !got) { got = true; note.textContent = '✓ وصلت دعوة زميلك إلى «حاضر».'; try { localStorage.removeItem('afaqRef'); } catch (e) {} } }); } catch (e) {} });
+      setTimeout(() => { if (!got) tick(); }, 3000);
+    };
+    tick();
+  })();
+</script>
 <script>
   // إن كُتب رابط المتجر في لوحة الإدارة يظهر زر المتجر أولًا
   (async () => {
