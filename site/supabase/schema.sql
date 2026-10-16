@@ -520,6 +520,84 @@ begin
 end $$;
 
 
+-- تفعيل رمز من داخل الإضافة مباشرة (دون الموقع): الرمز + اسم المعلم.
+-- • جهاز جديد: يُنشأ حساب للمعلم باسم الرمز (أو يُستعمل حسابه إن فُعّل الرمز من قبل) ويُعاد رمز الجهاز.
+-- • جهاز مربوط (p_token): تُضاف مواد الرمز إلى حساب الجهاز نفسه.
+-- الحماية: ١٠ محاولات فاشلة في الساعة لكل عنوان، والرمز يبقى لصاحبه، وحدّ الأجهزة كما هو.
+create or replace function public.ext_activate(p_code text, p_name text, p_label text default null, p_token text default null)
+returns jsonb language plpgsql security definer set search_path = public as $$
+declare
+  v_code text := public.clean_code(p_code);
+  v_ip text := coalesce(nullif(trim(split_part(coalesce((nullif(current_setting('request.headers', true), '')::json)->>'x-forwarded-for', ''), ',', 1)), ''), 'none');
+  v_key uuid := md5('ext-ip:' || v_ip)::uuid;
+  v_max int := public.setting_int('max_devices', 2);
+  c public.activation_codes;
+  t public.terms;
+  d record;
+  v_uid uuid;
+  v_name text;
+  v_tok text;
+  v_titles jsonb;
+  fails int;
+begin
+  select count(*) into fails from public.redeem_failures where user_id = v_key and at > now() - interval '1 hour';
+  if fails >= 10 then return jsonb_build_object('ok', false, 'error', 'too_many'); end if;
+
+  if nullif(p_token, '') is not null then
+    select * into d from public.ext_device(p_token);
+    if d.user_id is null then return jsonb_build_object('ok', false, 'error', 'unlinked'); end if;
+    v_uid := d.user_id;
+  end if;
+
+  select * into c from public.activation_codes where code = v_code for update;
+  if c.code is null or c.revoked then
+    insert into public.redeem_failures (user_id) values (v_key);
+    return jsonb_build_object('ok', false, 'error', case when c.code is null then 'invalid' else 'revoked' end);
+  end if;
+
+  select * into t from public.terms where id = c.term_id;
+  if public.plan_expired(c.plan, c.term_id) then return jsonb_build_object('ok', false, 'error', 'expired', 'ends_on', t.ends_on); end if;
+
+  if v_uid is not null then
+    -- جهاز مربوط: الرمز لصاحب الحساب نفسه
+    if c.redeemed_by is not null and c.redeemed_by <> v_uid then return jsonb_build_object('ok', false, 'error', 'used'); end if;
+    select full_name into v_name from public.profiles where id = v_uid;
+    if not public.names_match(v_name, c.teacher_name) then
+      insert into public.redeem_failures (user_id) values (v_key);
+      return jsonb_build_object('ok', false, 'error', 'name', 'code_name', c.teacher_name, 'account_name', v_name);
+    end if;
+  else
+    if not public.names_match(p_name, c.teacher_name) then
+      insert into public.redeem_failures (user_id) values (v_key);
+      return jsonb_build_object('ok', false, 'error', 'name');
+    end if;
+    if c.redeemed_by is not null then
+      -- الرمز مفعّل من قبل: جهاز إضافي للمعلم نفسه في حدود عدد الأجهزة
+      v_uid := c.redeemed_by;
+      if (select count(*) from public.devices where user_id = v_uid and revoked_at is null) >= v_max then
+        return jsonb_build_object('ok', false, 'error', 'devices', 'max', v_max);
+      end if;
+    else
+      v_uid := gen_random_uuid();
+      insert into auth.users (instance_id, id, aud, role, is_anonymous, raw_app_meta_data, raw_user_meta_data, created_at, updated_at)
+      values ('00000000-0000-0000-0000-000000000000', v_uid, 'authenticated', 'authenticated', true,
+              '{"provider":"hader"}'::jsonb, jsonb_build_object('full_name', c.teacher_name, 'phone', c.phone), now(), now());
+    end if;
+    v_tok := encode(uuid_send(gen_random_uuid()), 'hex') || encode(uuid_send(gen_random_uuid()), 'hex');
+    insert into public.devices (user_id, token_hash, label, last_seen)
+    values (v_uid, encode(sha256(convert_to(v_tok, 'UTF8')), 'hex'), left(coalesce(p_label, ''), 80), now());
+  end if;
+
+  perform public.grant_subscriptions(v_uid, c.plan, c.term_id, c.package_ids, c.code);
+  update public.activation_codes set redeemed_by = v_uid, redeemed_at = coalesce(redeemed_at, now()) where code = c.code;
+
+  select jsonb_agg(p.title order by p.grade, p.subject) into v_titles from public.packages p where p.id = any (c.package_ids);
+  return jsonb_strip_nulls(jsonb_build_object('ok', true, 'token', v_tok,
+    'name', (select full_name from public.profiles where id = v_uid),
+    'packages', coalesce(v_titles, '[]'::jsonb), 'plan', c.plan, 'year', t.year, 'term', t.term,
+    'ends_on', case when c.plan = 'year' then (select max(x.ends_on) from public.terms x where x.year = t.year) else t.ends_on end));
+end $$;
+
 -- ---------- دوال المدير ----------
 
 -- إصدار رمز (أو عدة رموز بنفس البيانات): فصلي لفصل محدد، أو سنوي لعام الفصل المحدد كله
@@ -616,5 +694,6 @@ grant execute on function public.catalog() to anon, authenticated;
 grant execute on function public.today_muscat(), public.is_admin(), public.setting_int(text, int) to anon, authenticated;
 grant execute on function public.redeem_code(text), public.my_subscriptions(), public.link_device(text), public.unlink_device(uuid) to authenticated;
 grant execute on function public.ext_me(text), public.ext_structure(text, text, smallint), public.ext_session(text, text, smallint, text) to anon, authenticated;
+grant execute on function public.ext_activate(text, text, text, text) to anon, authenticated;
 grant execute on function public.admin_issue_code(text, text, int, text[], text, int, text), public.admin_upload_content(text, smallint, jsonb),
   public.admin_teachers(), public.admin_reset_devices(uuid), public.admin_grant(uuid, text, int, text[]) to authenticated;
