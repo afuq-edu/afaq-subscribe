@@ -53,8 +53,9 @@ const LEVEL = [[/معرف|تذكر/, 'التذكر'], [/فهم/, 'الفهم'], 
 function levelsOf(text) {
   const out = [];
   for (const line of String(text || '').split('\n')) {
-    const tag = (line.match(/(?:[:：]|←)\s*([^:：←]+)$/) || [])[1] || '';
-    const hit = LEVEL.find(([re]) => re.test(tag));
+    // «…: معرفة» · «… ← معرفة» · «… — ( معرفة)»
+    const tags = [(line.match(/\(\s*([^()]+?)\s*\)\s*$/) || [])[1], (line.match(/(?:[:：]|←)\s*([^:：←]+)$/) || [])[1]].filter(Boolean);
+    const hit = tags.map((t) => LEVEL.find(([re]) => re.test(t))).find(Boolean);
     if (hit && !out.includes(hit[1])) out.push(hit[1]);
   }
   return out;
