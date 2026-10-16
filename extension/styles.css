@@ -164,3 +164,8 @@ kbd { font-family: ui-monospace, Consolas, monospace; font-size: 11px; backgroun
 .lintlist .li.info { border-color: var(--ink-3); }
 .pv-lint { margin: 6px 0 10px; }
 .fdate { color: var(--gold); font-weight: 700; }
+
+/* نسخة جديدة من «حاضر» (تثبيت يدوي) */
+.upd-bar{display:flex;gap:10px;align-items:center;justify-content:space-between;background:#fff7e0;border:1.5px solid #f0c75e;border-radius:12px;padding:9px 12px;margin:0 0 10px;font-weight:700;font-size:13.5px;color:#6b4e00}
+.upd-bar[hidden]{display:none}
+.upd-bar a{white-space:nowrap}

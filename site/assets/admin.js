@@ -39,7 +39,7 @@
     $$('[data-tab]').forEach((b) => b.setAttribute('aria-selected', b.dataset.tab === t));
     $$('[data-pane]').forEach((p) => { p.hidden = p.dataset.pane !== t; });
     history.replaceState(null, '', '#' + t);
-    ({ home: renderHome, requests: renderRequests, codes: renderCodes, teachers: renderTeachers, packages: renderPackages, terms: renderTerms, settings: renderSettings })[t]();
+    ({ home: renderHome, stats: renderStats, requests: renderRequests, codes: renderCodes, teachers: renderTeachers, packages: renderPackages, terms: renderTerms, settings: renderSettings })[t]();
   }
   $$('[data-tab]').forEach((b) => { b.onclick = () => showTab(b.dataset.tab); });
 
@@ -99,6 +99,50 @@
     setMsg($('#setupHints'), 'warn', hints.length ? '<b>لإكمال الإعداد:</b><br>' + hints.map(esc).join('<br>') : '');
   }
 
+  // ================= الإحصاءات =================
+  const waPhone = (p) => { const x = String(p || '').replace(/[^\d]/g, '').replace(/^0+/, ''); return x.length === 8 ? '968' + x : x; };
+  async function renderStats() {
+    let reqs = [], teachers = [], st = {};
+    try { [reqs, teachers, st] = await Promise.all([db.rpc('admin_requests'), db.rpc('admin_teachers').catch(() => []), A.settings()]); } catch (e) { A.toast(A.errText(e), 'bad'); }
+    D.requests = reqs; reqBadge();
+    const lim = +st.trial_lessons || 3;
+    const live = reqs.filter((r) => r.status !== 'cancelled');
+    const by = (s) => live.filter((r) => r.status === s).length;
+    const active = by('active');
+    const pct = live.length ? Math.round((active / live.length) * 100) : 0;
+    $('#stStats').innerHTML = [
+      [toAr(Math.max(teachers.filter((t) => !t.is_admin).length, live.length)), 'معلم مسجّل'],
+      [toAr(by('trial')), 'يجرّب الآن'], [toAr(by('requested')), 'بانتظار التفعيل'], [toAr(active), 'اشترك من الإضافة'],
+      [toAr(pct) + '٪', 'نسبة من اشترك بعد التجربة'], [toAr(live.filter((r) => r.referred_by).length), 'جاء بدعوة زميل'],
+    ].map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join('');
+    // المواد: كم معلمًا اختارها، وكم اشترك فيها، وكم أنهى تجربتها
+    const subj = new Map();
+    live.forEach((r) => r.packages.forEach((p) => {
+      const x = subj.get(p.id) || { title: p.title, n: 0, act: 0, done: 0 };
+      x.n++; if (p.active) x.act++; else if (p.used >= lim) x.done++;
+      subj.set(p.id, x);
+    }));
+    const rows = [...subj.values()].sort((a, b) => b.n - a.n || b.act - a.act);
+    $('#stSubjects').innerHTML = '<tr><th>المادة</th><th>اختارها</th><th>اشترك</th><th>أنهى التجربة ولم يشترك</th></tr>' + (rows.length
+      ? rows.map((x) => `<tr><td><b>${esc(x.title)}</b></td><td>${toAr(x.n)}</td><td>${toAr(x.act)}</td><td>${toAr(x.done)}</td></tr>`).join('')
+      : '<tr><td colspan="4" class="empty">لا طلبات بعد.</td></tr>');
+    // أنهوا التجربة ولم يشتركوا
+    const stopped = live.filter((r) => r.status !== 'active' && r.packages.some((p) => !p.active && p.used >= lim))
+      .sort((a, b) => String(b.last_seen || b.created_at).localeCompare(String(a.last_seen || a.created_at)));
+    $('#stStopped').innerHTML = '<tr><th>الطلب</th><th>المعلم</th><th>المواد</th><th>آخر نشاط</th><th></th></tr>' + (stopped.length
+      ? stopped.map((r) => `<tr><td><b>${toAr(r.id)}</b></td><td><b>${esc(r.name || '—')}</b>${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}</td>
+        <td>${r.packages.filter((p) => !p.active && p.used >= lim).map((p) => `<span class="tag">${esc(p.title)}</span>`).join(' ')}</td>
+        <td><small class="muted">${esc(ago(r.last_seen || r.created_at))}</small>${r.status === 'requested' ? '<br><span class="chip bad">راسلك</span>' : ''}</td>
+        <td>${r.phone ? `<a class="btn sm wa" target="_blank" rel="noopener" href="${esc(A.waLink(waPhone(r.phone), `السلام عليكم أ. ${r.name}، جرّبت «حاضر» في ${r.packages.filter((p) => !p.active).map((p) => p.title).join('، ')}. هل تحب أن أفعّل لك الاشتراك لتكمل تحضير الفصل؟ رقم طلبك ${r.id}.`))}">تابِع على واتساب</a>` : '<small class="muted">بلا هاتف</small>'}</td></tr>`).join('')
+      : '<tr><td colspan="5" class="empty">لا أحد حتى الآن.</td></tr>');
+    // الدعوات
+    const inv = live.filter((r) => r.invited > 0).sort((a, b) => b.invited_active - a.invited_active || b.invited - a.invited);
+    $('#stRefNote').textContent = `خصم الدعوة الحالي: ${st.referral_discount || 'غير محدد'} (من «الإعدادات») — لصاحب الدعوة ولزميله عند اشتراك الزميل.`;
+    $('#stRefs').innerHTML = '<tr><th>صاحب الدعوة</th><th>دعا</th><th>اشترك منهم</th><th>خصم مستحق</th></tr>' + (inv.length
+      ? inv.map((r) => `<tr><td><b>${esc(r.name)}</b> <small class="muted">طلب ${toAr(r.id)}</small></td><td>${toAr(r.invited)}</td><td>${toAr(r.invited_active)}</td><td>${r.invited_active ? `<span class="chip ok">${toAr(r.invited_active)} × ${esc(st.referral_discount || '')}</span>` : '<span class="muted small">—</span>'}</td></tr>`).join('')
+      : '<tr><td colspan="4" class="empty">لا دعوات بعد.</td></tr>');
+  }
+
   // ================= طلبات «حاضر» =================
   const SHIFT_AR = { one: 'فترة واحدة', two: 'فترتان' };
   const REQ_ST = { trial: ['warn', 'يجرّب'], requested: ['bad', 'بانتظار التفعيل'], active: ['ok', 'مفعّل'], cancelled: ['off', 'ملغى'] };
@@ -120,7 +164,7 @@
       const [cls, lbl] = REQ_ST[r.status] || ['', r.status];
       const pend = r.packages.filter((p) => !p.active);
       return `<tr><td><b style="font-size:18px">${toAr(r.id)}</b><br><small class="muted">${esc(ago(r.requested_at || r.created_at))}</small></td>
-        <td><b>${esc(r.name || '—')}</b>${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}<br><small class="muted">${esc(SHIFT_AR[r.shift] || '')}${r.devices ? ` · ${toAr(r.devices)} جهاز` : ''}${r.last_seen ? ` · آخر نشاط ${esc(ago(r.last_seen))}` : ''}</small></td>
+        <td><b>${esc(r.name || '—')}</b>${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}${r.referred_by ? `<br><span class="chip ok" title="خصم الدعوة له ولصاحب الدعوة عند الاشتراك">مدعو من ${esc(r.ref_name || '')} (${toAr(r.referred_by)})</span>` : ''}${r.invited ? `<br><span class="chip">دعا ${toAr(r.invited)} · اشترك ${toAr(r.invited_active)}</span>` : ''}<br><small class="muted">${esc(SHIFT_AR[r.shift] || '')}${r.devices ? ` · ${toAr(r.devices)} جهاز` : ''}${r.last_seen ? ` · آخر نشاط ${esc(ago(r.last_seen))}` : ''}</small></td>
         <td>${r.packages.map((p) => `<div style="margin-bottom:3px"><span class="tag">${esc(p.title)}</span> ${p.active ? '<span class="chip ok">مشترك</span>' : `<small class="muted">${A.sessionsWord(p.used)}</small>`}</div>`).join('') || '<span class="muted small">—</span>'}</td>
         <td><span class="chip ${cls}">${lbl}</span></td>
         <td><div class="inline-acts">
@@ -425,7 +469,7 @@ ${plan === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي'}: ${titles
   $('#setForm').onsubmit = async (e) => {
     e.preventDefault();
     const f = e.target, msg = $('#setMsg');
-    const keys = ['site_name', 'whatsapp', 'extension_url', 'announcement', 'daily_limit', 'max_devices', 'price_term', 'price_year', 'holidays'];
+    const keys = ['site_name', 'whatsapp', 'extension_url', 'announcement', 'daily_limit', 'max_devices', 'price_term', 'price_year', 'holidays', 'referral_discount'];
     const vals = Object.fromEntries(keys.map((k) => [k, f[k].value.trim()]));
     for (const k of ['price_term', 'price_year']) {
       if (vals[k] && !A.priceNum(vals[k])) { setMsg(msg, 'bad', 'السعر رقم، مثل 5 أو 4.5'); return; }

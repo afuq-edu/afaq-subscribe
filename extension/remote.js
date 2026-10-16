@@ -153,6 +153,7 @@ export async function startTrial(name, phone, shift, packageIds) {
   const r = await rpc('ext_start', { p_name: name, p_phone: phone || '', p_shift: shift, p_packages: packageIds, p_label: deviceLabel() });
   if (!r || !r.ok) return r || { ok: false, error: 'network' };
   await chrome.storage.local.set({ [LINK]: { token: r.token, name: r.name, at: Date.now(), request: r.request } });
+  await sendRef().catch(() => {});
   const s = await sync({ force: true });
   return Object.assign({ request: r.request, name: r.name }, s, { ok: true });
 }
@@ -182,4 +183,48 @@ export async function activateCode(code, name) {
   if (!r || !r.ok) return r || { ok: false, error: 'network' };
   if (r.token) await chrome.storage.local.set({ [LINK]: { token: r.token, name: r.name || name || '', at: Date.now() } });
   return Object.assign({}, r, await sync({ force: true }), { ok: true });
+}
+
+// ---------- دعوة زميل ----------
+// رقم الدعوة يصل من صفحة الموقع (invite.html ← install.html) أو يكتبه المعلم، ويُسجَّل في طلبه مرة واحدة
+export async function setRef(ref) {
+  const n = +ref;
+  if (!Number.isInteger(n) || n < 100) return { ok: false, error: 'ref' };
+  await chrome.storage.local.set({ afaqRef: n });
+  const link = await getLink();
+  return link ? sendRef() : { ok: true, pending: true };
+}
+async function sendRef() {
+  const { afaqRef } = await chrome.storage.local.get('afaqRef');
+  const link = await getLink();
+  if (!afaqRef || !link) return { ok: false };
+  const r = await rpc('ext_set_ref', { p_token: link.token, p_ref: afaqRef });
+  if (r && (r.ok || r.error === 'ref')) await chrome.storage.local.remove('afaqRef');
+  return r || { ok: false, error: 'network' };
+}
+// رابط دعوتي ومن دعوت (للمعالج)
+export async function referral() {
+  const link = await getLink();
+  if (!link) return { ok: false, error: 'unlinked' };
+  const r = await rpc('ext_referral', { p_token: link.token });
+  if (r && r.ok) r.url = AFAQ.SITE_URL.replace(/#.*$/, '') + 'invite.html?r=' + r.request;
+  return r || { ok: false, error: 'network' };
+}
+
+// ---------- نسخة جديدة ----------
+// حتى يُقبل المتجر: من ثبّت «حاضر» يدويًا (غير مضغوطة) يرى تنبيهًا بزر «حدّث الآن» إن نُشرت نسخة أحدث في الموقع
+const newer = (a, b) => { const x = String(a).split('.').map(Number), y = String(b).split('.').map(Number); for (let i = 0; i < 3; i++) { if ((x[i] || 0) !== (y[i] || 0)) return (x[i] || 0) > (y[i] || 0); } return false; };
+export async function updateInfo(force) {
+  let self = null;
+  try { self = await chrome.management.getSelf(); } catch (e) {}
+  if (!self || self.installType !== 'development') return null;   // من المتجر: يتحدث وحده
+  const cur = chrome.runtime.getManifest().version;
+  let { afaqUpdate: u } = await chrome.storage.local.get('afaqUpdate');
+  if (force || !u || Date.now() - u.at > 6 * 3600e3) {
+    try {
+      const r = await fetch(AFAQ.SITE_URL.replace(/#.*$/, '') + 'hader-version.json?t=' + Date.now(), { cache: 'no-store' });
+      if (r.ok) { const j = await r.json(); u = { latest: String(j.version || ''), at: Date.now() }; await chrome.storage.local.set({ afaqUpdate: u }); }
+    } catch (e) {}
+  }
+  return u && u.latest && newer(u.latest, cur) ? { current: cur, latest: u.latest, url: AFAQ.SITE_URL.replace(/#.*$/, '') + 'install.html#update' } : null;
 }

@@ -9,7 +9,7 @@ import {
 } from './packages.js';
 import { ic } from './icons.js';
 import { AFAQ } from './afaq-config.js';
-import { getLink, getStatus, siteUrl } from './remote.js';
+import { getLink, getStatus, siteUrl, updateInfo } from './remote.js';
 
 const $ = (id) => document.getElementById(id);
 const EMBED = new URLSearchParams(location.search).has('embed');
@@ -825,6 +825,15 @@ async function init() {
   // الإعدادات تأتي مدموجة مع القيم الافتراضية
   document.querySelectorAll('[data-set]').forEach((el) => { el.checked = !!S.settings[el.dataset.set]; });
   await checkPage();
+  showUpdate();
+}
+// نسخة أحدث في الموقع (للتثبيت اليدوي فقط)
+async function showUpdate() {
+  const u = await updateInfo().catch(() => null);
+  if (!u) return;
+  $('updText').textContent = `نسخة جديدة من «حاضر» (${u.latest})`;
+  $('updGo').href = u.url;
+  $('updBar').hidden = false;
 }
 
 init();

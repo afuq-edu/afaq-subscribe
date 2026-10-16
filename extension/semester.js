@@ -13,7 +13,7 @@ import {
 } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { AFAQ } from './afaq-config.js';
-import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, activateCode } from './remote.js';
+import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, activateCode, setRef, referral, updateInfo } from './remote.js';
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -1785,13 +1785,18 @@ function wzRender() {
     body.innerHTML = `<p class="wz-note">تبدأ تجربتك المجانية الآن: أول ${toAr((wz.catalog && wz.catalog.trial) || 3)} حصص في كل مادة تختارها، دون دفع ولا تواصل.</p>
       <input class="input big" id="wzName" placeholder="الاسم الثلاثي" autocomplete="name">
       <input class="input big" id="wzPhone" placeholder="رقم الهاتف (اختياري)" inputmode="tel" dir="ltr" style="text-align:right">
+      <p class="wz-note" id="wzRefNote" hidden>دعاك زميلك ✓ — إذا اشتركت تحصلان كلاكما على خصم.</p>
+      <details class="wz-code" id="wzRefBox"><summary>دعاني زميل (رقم الدعوة)</summary><input class="input big" id="wzRef" placeholder="رقم طلب زميلك، مثل 1003" inputmode="numeric" dir="ltr"></details>
       <button class="btn primary big" id="wzNameGo">ابدأ التجربة المجانية</button>`;
     $('wzName').focus();
+    chrome.storage.local.get('afaqRef').then((v) => { if (v && v.afaqRef) { $('wzRefNote').hidden = false; $('wzRefBox').hidden = true; } }).catch(() => {});
     $('wzNameGo').onclick = async () => {
       const name = $('wzName').value.replace(/\s+/g, ' ').trim();
       if (name.split(' ').length < 2) { wzMsg('bad', 'اكتب اسمك كاملًا (اسمين على الأقل) كما في نور.'); return; }
       const o = wzPickOffer();
       if (!o) return;
+      const ref = ($('wzRef').value || '').replace(/[^\d]/g, '');
+      if (ref) await setRef(ref).catch(() => {});
       await wzBusy('أجهّز تجربتك…', async () => {
         const r = await startTrial(name, $('wzPhone').value.trim(), wz.shift, [o.id]);
         if (!r.ok) { wzMsg('bad', wzErr(r.error)); return; }
@@ -1947,7 +1952,7 @@ async function wzRun() {
 function wizRunning() {
   document.body.classList.add('wiz-run');
   $('wizCard').hidden = true;
-  $('wzAgain').hidden = true; $('wzResume').hidden = true; $('wzReport').hidden = true;
+  $('wzAgain').hidden = true; $('wzResume').hidden = true; $('wzReport').hidden = true; $('wzInvite').hidden = true;
   clearTimeout(WIZ.timer);
 }
 // بعد انتهاء التشغيل: سطر واحد هادئ. ما بقي يُكمَل وحده مرة بعد مهلة، ثم يبقى زر «أكمل الباقي» — دون لغة أخطاء
@@ -1958,6 +1963,7 @@ async function wizAfterRun({ report, ok, failed, stopped, error, had }) {
   $('topMsg').className = 'msg';
   $('wzAgain').hidden = false;
   $('wzReport').hidden = false;
+  $('wzInvite').hidden = !wz.link;
   $('wzResume').hidden = true;
   if (pkg && pkg.remote && pkg.remote.trial) {
     await afaqSync({ force: true }).catch(() => {});
@@ -1994,13 +2000,34 @@ async function wizAfterRun({ report, ok, failed, stopped, error, had }) {
   }
   if (!n) { setBox('ok', had ? '✓ كل الحصص المختارة موجودة في نور' : '✓ لا شيء ناقص', 'لا حاجة لأي إجراء.'); return; }
   const sure = (report && (report.verify === 'ok' || report.verify === 'loose'));
-  setBox('ok', `✓ تم نشر ${countWord(n).replace('حصتان', 'حصتين')}${sure ? ' وتأكدت منها كلها في نور' : ''}`, range ? `تواريخ النشر${range}.` : '');
+  setBox('ok', `✓ تم نشر ${countWord(n).replace('حصتان', 'حصتين')}${sure ? (n === 1 ? ' وتأكدت منها في نور' : ' وتأكدت منها كلها في نور') : ''}`, range ? `تواريخ النشر${range}.` : '');
 }
 // مدى تواريخ ما نُشر في هذا الطلب (من التقرير المدمج)
 function wzRange(r) {
   const ds = ((r && r.saved) || []).map((x) => x.d).filter(isIso).sort();
   if (!ds.length) return '';
   return ds[0] === ds[ds.length - 1] ? ` يوم ${dayLabel(ds[0])}` : ` من ${dayLabel(ds[0])} إلى ${dayLabel(ds[ds.length - 1])}`;
+}
+// «ادعُ زميلًا»: رابط دعوة برقم طلبك، نسخ أو إرسال على واتساب، ومن اشترك بدعوتك
+async function wzInviteFill(el) {
+  if (!el) return;
+  el.innerHTML = '<span class="spin"></span>';
+  const r = await referral().catch(() => null);
+  if (!r || !r.ok) { el.remove(); return; }
+  wz.ref = r;
+  const disc = r.discount ? `خصم ${esc(r.discount)}` : 'خصمًا';
+  el.innerHTML = `<b>🎁 ادعُ زميلًا: إذا اشترك تحصلان كلاكما على ${disc}</b>
+    <div class="row"><input class="input" readonly value="${esc(r.url)}"><button class="btn sm" type="button" data-copy>نسخ</button><button class="btn sm wa" type="button" data-wa>واتساب</button></div>
+    ${r.invited ? `<small class="hint">دعوت ${toAr(r.invited)}${r.invited_active ? `، واشترك ${toAr(r.invited_active)} — خصمك محفوظ لك` : ''}.</small>` : ''}`;
+  el.querySelector('[data-copy]').onclick = async (e) => { try { await navigator.clipboard.writeText(r.url); e.target.textContent = '✓ نُسخ'; } catch (x) { el.querySelector('input').select(); } };
+  el.querySelector('[data-wa]').onclick = () => window.open('https://wa.me/?text=' + encodeURIComponent(`جرّب «حاضر»: يعبّئ تحاضيرك في نور ويحفظها وحده. أول ٣ حصص مجانًا${r.discount ? `، وإذا اشتركت نحصل كلانا على خصم ${r.discount}` : ''}:\n${r.url}`), '_blank');
+}
+async function showUpdate() {
+  const u = await updateInfo().catch(() => null);
+  if (!u) return;
+  $('updText').textContent = `نسخة جديدة من «حاضر» (${u.latest}) — حدّثها لتحصل على آخر الإصلاحات.`;
+  $('updGo').href = u.url;
+  $('updBar').hidden = false;
 }
 function wzResumeBtn(label) {
   const b = $('wzResume');
@@ -2040,14 +2067,16 @@ function wzPayRender() {
       <input class="input big" id="wzCode" placeholder="AFQ-XXXX-XXXX" dir="ltr">
       <input class="input big" id="wzCodeName" placeholder="اسمك كما في الرمز">
       <button class="btn big" id="wzCodeGo">فعّل</button></details>
+    <div class="wz-inv" id="wzPayInv"></div>
     <button class="btn sm" id="wzOther">تحضير مادة أخرى</button>`;
+  wzInviteFill($('wzPayInv'));
   $('wzOther').onclick = () => { clearInterval(payTimer); wzAgain(); };
   $('wzWa').onclick = async () => {
     const r = await contactRequest().catch(() => null);
     const name = (r && r.name) || (wz.link && wz.link.name) || '';
     const subs = (r && r.packages && r.packages.length ? r.packages : trialSubs.map((x) => x.subject + ' — ' + (x.grade || ''))).join('، ');
     const sh = SHIFT[(r && r.shift) || wz.shift];
-    const text = ['السلام عليكم، أرغب بتفعيل اشتراكي في «حاضر».', `الاسم: ${name}`, `المواد: ${subs}`, sh ? `نوع المدرسة: ${sh.name}` : '', `رقم الطلب: ${(r && r.request) || req.id || ''}`].filter(Boolean).join('\n');
+    const text = ['السلام عليكم، أرغب بتفعيل اشتراكي في «حاضر».', `الاسم: ${name}`, `المواد: ${subs}`, sh ? `نوع المدرسة: ${sh.name}` : '', `رقم الطلب: ${(r && r.request) || req.id || ''}`, wz.ref && wz.ref.referred_by ? `مدعو من الطلب: ${wz.ref.referred_by}` : ''].filter(Boolean).join('\n');
     window.open(whatsappUrl((r && r.whatsapp) || st.whatsapp, text), '_blank');
     if (r && r.ok) { wz.status = Object.assign({}, st, { request: Object.assign({}, req, { id: r.request, status: r.status }) }); }
     wzPayRender();
@@ -2085,6 +2114,8 @@ async function wizBoot() {
   document.body.classList.add('wiz');
   $('wzResume').onclick = () => { wizRunning(); run(); };
   $('wzReport').onclick = openReport;
+  $('wzInvite').onclick = () => { const b = $('nowBox'); const old = b.querySelector('.wz-inv'); if (old) { old.remove(); return; } b.insertAdjacentHTML('beforeend', '<div class="wz-inv" id="wzInvBox"></div>'); wzInviteFill($('wzInvBox')); };
+  showUpdate();
   $('wzBack').onclick = wzBack;
   $('wzAgain').onclick = wzAgain;
   $('wzAdv').onclick = () => { document.body.classList.toggle('details'); };

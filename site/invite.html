@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دعوة إلى «حاضر» — منصة أفق التعليمية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="wrap" style="max-width:640px;padding:56px 20px 72px;text-align:center">
+  <h1 style="margin:0 0 14px;font-size:32px">زميلك يدعوك إلى «حاضر»</h1>
+  <p class="muted" style="font-size:18px;margin-bottom:10px">«حاضر» يعبّئ تحاضيرك في منصة نور ويحفظها وحده، حصةً حصة، بتواريخ النشر الصحيحة.</p>
+  <p style="font-size:18px;margin-bottom:26px" id="offer">جرّب أول ٣ حصص مجانًا في أي مادة.</p>
+  <p><a class="btn primary" id="go" href="install.html" style="font-size:18px;padding:14px 28px">ثبّت «حاضر» الآن</a></p>
+  <p class="muted small" style="margin-top:18px">بعد التثبيت اختر صفّك ومادتك وابدأ. تصل دعوة زميلك إلى «حاضر» وحدها.</p>
+</main>
+<script src="config.js"></script>
+<script>
+  (async () => {
+    const r = new URLSearchParams(location.search).get('r');
+    if (!/^\d{3,9}$/.test(r || '')) return;
+    try { localStorage.setItem('afaqRef', r); } catch (e) {}
+    document.getElementById('go').href = 'install.html?r=' + r;
+    try {
+      const c = window.AFAQ_CONFIG;
+      const x = await fetch(c.SUPABASE_URL + '/rest/v1/settings?key=eq.referral_discount&select=value', { headers: { apikey: c.SUPABASE_ANON_KEY } });
+      const d = String(((await x.json())[0] || {}).value || '').trim();
+      if (d) document.getElementById('offer').textContent = `جرّب أول ٣ حصص مجانًا، وإذا اشتركت تحصل أنت وزميلك على خصم ${d}.`;
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
