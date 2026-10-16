@@ -26,7 +26,8 @@ jobs:
       - name: ملف الإضافة للتنزيل من الموقع (install.html)
         run: cd extension && zip -qr ../site/hader.zip .
       - name: رقم آخر إصدار (تنبيه «نسخة جديدة» داخل الإضافة)
-        run: jq -c '{version: .version}' extension/manifest.json > site/hader-version.json
+        run: |
+          jq -c '{version: .version}' extension/manifest.json > site/hader-version.json
       - uses: actions/configure-pages@v5
         with:
           enablement: true
