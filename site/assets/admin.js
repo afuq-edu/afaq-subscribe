@@ -434,6 +434,63 @@ ${plan === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي'}: ${titles
     } catch (e) { A.toast(A.errText(e), 'bad'); }
   };
 
+  // رفع دفعة: ملف ‎.zip‎ أو عدة ملفات ‎.json‎، كل ملف مادة كاملة فيها id وsubject وgradeNum وshift وterm
+  async function unzip(file) {
+    const buf = new Uint8Array(await file.arrayBuffer()), dv = new DataView(buf.buffer);
+    let e = buf.length - 22;
+    while (e >= 0 && dv.getUint32(e, true) !== 0x06054b50) e--;
+    if (e < 0) throw new Error('ملف ‎.zip‎ تالف');
+    const out = [];
+    for (let i = 0, p = dv.getUint32(e + 16, true), n = dv.getUint16(e + 10, true); i < n; i++) {
+      const method = dv.getUint16(p + 10, true), size = dv.getUint32(p + 20, true), nl = dv.getUint16(p + 28, true), xl = dv.getUint16(p + 30, true), cl = dv.getUint16(p + 32, true), off = dv.getUint32(p + 42, true);
+      const name = new TextDecoder().decode(buf.subarray(p + 46, p + 46 + nl));
+      p += 46 + nl + xl + cl;
+      if (!/\.json$/i.test(name) || /(^|\/)\./.test(name)) continue;
+      const start = off + 30 + dv.getUint16(off + 26, true) + dv.getUint16(off + 28, true), raw = buf.subarray(start, start + size);
+      const data = method === 0 ? raw : new Uint8Array(await new Response(new Blob([raw]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer());
+      out.push({ name: name.split('/').pop(), text: new TextDecoder().decode(data) });
+    }
+    return out;
+  }
+  $('#bulkBtn').onclick = () => { $('#bulkFile').value = ''; $('#bulkFile').click(); };
+  $('#bulkFile').onchange = async () => {
+    const msg = $('#bulkMsg'), btn = $('#bulkBtn');
+    const picked = [...$('#bulkFile').files];
+    if (!picked.length) return;
+    let files = [];
+    try { for (const f of picked) files.push(...(/\.zip$/i.test(f.name) ? await unzip(f) : [{ name: f.name, text: await f.text() }])); }
+    catch (e) { setMsg(msg, 'bad', 'تعذّر فتح الملف: ' + esc(e.message || e)); return; }
+    const items = [], bad = [];
+    for (const f of files) {
+      let p; try { p = JSON.parse(f.text); } catch (e) { bad.push(f.name + ': ليس JSON'); continue; }
+      const term = /الثاني/.test(String(p.term || '')) || +p.term === 2 ? 2 : 1;
+      if (!p || !/^[a-z0-9-]{2,30}$/.test(String(p.id || '')) || !p.subject || !(+p.gradeNum >= 1 && +p.gradeNum <= 12) || !['one', 'two'].includes(p.shift) || !Array.isArray(p.lessons) || !p.lessons.length || p.lessons.some((l) => !l.id)) { bad.push(f.name + ': ينقصه رمز الباقة أو المادة أو الصف أو نوع المدرسة أو الحصص'); continue; }
+      items.push({ name: f.name, pkg: p, term });
+    }
+    if (!items.length) { setMsg(msg, 'bad', 'لا ملفات صالحة.' + (bad.length ? '<br>' + bad.map(esc).join('<br>') : '')); return; }
+    const isNew = items.filter((x) => !D.packages.some((p) => p.id === x.pkg.id)).length;
+    if (!confirm(`رفع ${toAr(items.length)} ملفًا: ${toAr(items.length - isNew)} باقة موجودة يُستبدل محتواها، و${toAr(isNew)} باقة جديدة.${bad.length ? `\nسيُتجاوز ${toAr(bad.length)} ملفًا غير صالح.` : ''}\nمتابعة؟`)) return;
+    btn.disabled = true;
+    const done = [], fail = [...bad];
+    for (const [i, x] of items.entries()) {
+      const p = x.pkg, ex = D.packages.find((k) => k.id === p.id);
+      setMsg(msg, '', `جارٍ الرفع ${toAr(i + 1)} من ${toAr(items.length)}: ${esc(p.title || p.id)}…`);
+      try {
+        const title = p.title || `${p.subject} — ${A.GRADES[+p.gradeNum]}`;
+        if (ex) { if (ex.shift !== p.shift) await db.update('packages', { shift: p.shift }, { id: p.id }); }
+        else { await db.insert('packages', { id: p.id, subject: p.subject, grade: +p.gradeNum, title, shift: p.shift }); D.packages.push({ id: p.id, subject: p.subject, grade: +p.gradeNum, title, shift: p.shift, active: true }); }
+        const r = await db.rpc('admin_upload_content', { p_package: p.id, p_term: x.term, p_pkg: p });
+        done.push(`${p.id}: ${A.sessionsWord(r.sessions)}`);
+      } catch (e) { fail.push(`${x.name}: ${A.errText(e)}`); }
+    }
+    // من اشترك في باقة صارت «فترة واحدة» يحصل على نسختها «فترتان» أيضًا (إلا معلم الفترة الواحدة)
+    let copied = 0;
+    try { copied = (await db.rpc('admin_copy_shift_subs', {})).subs || 0; } catch (e) { fail.push('نقل الاشتراكات إلى باقات الفترتين: ' + A.errText(e)); }
+    btn.disabled = false;
+    setMsg(msg, fail.length ? 'bad' : 'ok', `رُفع ${toAr(done.length)} من ${toAr(items.length)}.` + (copied ? ` وأُضيف ${toAr(copied)} اشتراكًا في باقات «فترتان» لمشتركي الباقات القديمة.` : '') + (fail.length ? '<br>لم يُرفع:<br>' + fail.map(esc).join('<br>') : ''));
+    await loadAll(); renderPackages();
+  };
+
   // ================= الفصول =================
   function renderTerms() {
     const t0 = today();

@@ -153,6 +153,13 @@
         <div>
           <h2 style="font-size:20px;margin-bottom:6px">الباقات</h2>
           <p class="muted small" style="margin-bottom:12px">ارفع لكل فصل ملف المادة المصدَّر من «حاضر» (‎.hadir‎ أو ‎.json‎، المشفّر بكلمة سر أو بدونها). الرفع يستبدل المحتوى السابق.</p>
+          <div class="panel" style="margin-bottom:12px">
+            <b>رفع تحاضير كثيرة دفعة واحدة</b>
+            <p class="muted small" style="margin:4px 0 8px">اختر ملف ‎.zip‎ (أو عدة ملفات ‎.json‎) من ملفات المواد الجاهزة. كل ملف يحمل رمز باقته ونوع المدرسة والفصل: الباقة الموجودة يُستبدل محتواها (وتبقى اشتراكاتها)، والباقة الجديدة تُنشأ تلقائيًا.</p>
+            <button class="btn primary sm" id="bulkBtn" type="button">اختر الملفات</button>
+            <input type="file" id="bulkFile" accept=".zip,.json,application/zip,application/json" multiple hidden>
+            <div class="msg" id="bulkMsg" hidden></div>
+          </div>
           <div class="tablewrap"><table class="grid" id="pkgTable"></table></div>
           <input type="file" id="pkgFile" accept=".hadir,.json,application/json" hidden>
         </div>
