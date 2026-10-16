@@ -695,6 +695,7 @@ function setup() {
     await chrome.windows.create({ url: chrome.runtime.getURL('semester.html' + (ps ? '?' + ps : '')), type: 'popup', width: 560, height: 900 });
     closeUi();
   };
+  $('wizBtn').onclick = openSemester;
   [$('openNoor'), $('termBtn')].forEach((after) => {
     const b = document.createElement('button');
     b.type = 'button'; b.id = after.id + 'Semester';
