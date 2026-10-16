@@ -63,7 +63,7 @@ function levelsOf(text) {
 const items = (text) => [...new Set(String(text || '').split('\n').map((s) => s.replace(/^\s*(?:[-–•*]|\d+\s*[.)\-])\s*/, '').replace(/^(?:استراتيجيات|مصادر)\s+أخرى(?:\s+من\s+دليل\s+المعلم)?\s*[:：]/, 'أخرى:').trim()).filter((s) => s && !/^الحصة\s+\S+\s*[:：]/.test(s) && !/[:：]$/.test(s)))];
 const unitName = (u) => String(u || '').trim();
 const posNum = (p) => +((String(p || '').match(/(\d+)/) || [])[1] || 0);
-const sessionTitle = (it) => { const k = posNum(it.pos); return `الحصة ${ORD[k - 1] || k || ''}: ${it.topic || it.lesson}`.replace(/:\s*$/, ''); };
+const sessionTitle = (it) => { const k = posNum(it.pos), t = it.topic || it.lesson || ''; return k ? `الحصة ${ORD[k - 1] || k}: ${t}`.replace(/:\s*$/, '') : t; };
 
 const id = opt.id || `${subject}-${gradeNum}`;
 const lessons = [];
