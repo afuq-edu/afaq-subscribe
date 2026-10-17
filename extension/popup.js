@@ -692,7 +692,8 @@ function setup() {
   const openSemester = async () => {
     const tab = S.tab && isNoorUrl(S.tab.url || (S.ctx && S.ctx.url)) ? S.tab : null;
     const ps = [S.sel ? 'pkg=' + encodeURIComponent(S.sel.pkg.id) : '', tab ? `tab=${tab.id}&win=${tab.windowId}` : ''].filter(Boolean).join('&');
-    await chrome.windows.create({ url: chrome.runtime.getURL('semester.html' + (ps ? '?' + ps : '')), type: 'popup', width: 560, height: 900 });
+    const u = chrome.runtime.getURL('semester.html' + (ps ? '?' + ps : ''));
+    await chrome.windows.create({ url: u, type: 'popup', width: 560, height: 900 }).catch(() => chrome.tabs.create({ url: u })); // الهاتف: تبويب بدل النافذة
     closeUi();
   };
   $('wizBtn').onclick = openSemester;
@@ -759,7 +760,7 @@ function setup() {
   const openBatch = async (all) => {
     if (!S.sel || !S.tab) return;
     const url = chrome.runtime.getURL(`batch.html?tab=${S.tab.id}&win=${S.tab.windowId}&pkg=${encodeURIComponent(S.sel.pkg.id)}&from=${encodeURIComponent(S.sel.session.id)}${all ? '&all=1' : ''}`);
-    await chrome.windows.create({ url, type: 'popup', width: 490, height: 840 });
+    await chrome.windows.create({ url, type: 'popup', width: 490, height: 840 }).catch(() => chrome.tabs.create({ url }));
     closeUi();
   };
   $('batchBtn').onclick = () => openBatch(false);

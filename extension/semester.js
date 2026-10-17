@@ -334,7 +334,8 @@ async function ensureTab() {
   // لا تبويب لنور: نفتحه في نافذة عادية (لا في نافذة «حاضر» المنبثقة)
   let win = noorWin;
   if (!win) { try { const ws = await chrome.windows.getAll({ windowTypes: ['normal'] }); if (ws[0]) win = ws[0].id; } catch (e) {} }
-  const t = win ? await chrome.tabs.create({ url: HOME, active: true, windowId: win }) : (await chrome.windows.create({ url: HOME, type: 'normal' })).tabs[0];
+  const t = win ? await chrome.tabs.create({ url: HOME, active: true, windowId: win })
+    : await chrome.windows.create({ url: HOME, type: 'normal' }).then((w) => w.tabs[0]).catch(() => chrome.tabs.create({ url: HOME, active: true })); // الهاتف: لا نوافذ
   tabId = t.id;
   await waitComplete(25000);
 }
