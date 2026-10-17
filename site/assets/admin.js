@@ -71,6 +71,19 @@
   const currentTerm = () => D.terms.find((t) => t.starts_on <= today() && today() <= t.ends_on) || D.terms.filter((t) => t.ends_on >= today()).sort((a, b) => a.starts_on.localeCompare(b.starts_on))[0] || D.terms[0];
 
   // ================= نظرة عامة =================
+  // حساب المدير: يربط «حاضر» في هذا المتصفح بحساب المدير، فتُفتح فيه كل المواد
+  $('#ownerLink').onclick = async () => {
+    const b = $('#ownerLink');
+    if (!(await A.ext.ping())) { A.toast('لم أجد «حاضر» في هذا المتصفح. ثبّتها من صفحة «تثبيت الإضافة»، ثم اضغط الزر من جديد.', 'bad'); return; }
+    b.disabled = true;
+    try {
+      const r = await db.rpc('link_device', { p_label: A.deviceLabel() });
+      const res = await A.ext.link(r.token, 'المدير');
+      if (res && res.ok) A.toast('تم. افتح «حاضر» واختر أي صف ومادة.', 'ok');
+      else A.toast('رُبطت «حاضر» بحسابك. افتحها واختر أي صف ومادة.', 'ok');
+    } catch (e) { A.toast(A.errText(e), 'bad'); }
+    b.disabled = false;
+  };
   async function renderHome() {
     let teachers = [], usage = [];
     try { [teachers, usage] = await Promise.all([db.rpc('admin_teachers'), db.list('usage_log', { select: 'user_id,at', order: [['at', false]], limit: 5000 })]); } catch (e) { A.toast(A.errText(e), 'bad'); }
