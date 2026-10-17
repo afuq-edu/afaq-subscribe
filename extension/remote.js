@@ -207,7 +207,7 @@ export async function referral() {
   const link = await getLink();
   if (!link) return { ok: false, error: 'unlinked' };
   const r = await rpc('ext_referral', { p_token: link.token });
-  if (r && r.ok) r.url = AFAQ.SITE_URL.replace(/#.*$/, '') + 'invite.html?r=' + r.request;
+  if (r && r.ok) r.url = AFAQ.SITE_URL.replace(/#.*$/, '') + 'install.html?r=' + r.request;
   return r || { ok: false, error: 'network' };
 }
 

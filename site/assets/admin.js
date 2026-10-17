@@ -228,7 +228,8 @@ ${plan === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي'}: ${titles
     } else if (t) valid = `اشتراك فصلي، صالح حتى نهاية ${A.termName(t.term)} (${A.dateAr(t.ends_on)})`;
     return [`السلام عليكم أ. ${c.teacher_name}`, 'رمز تفعيل اشتراكك في منصة أفق التعليمية:', c.code, '',
       `الباقات: ${c.package_ids.map(pkgTitle).join('، ')}`, valid, '',
-      `للتفعيل: ادخل حسابك في ${SITE}#dashboard ثم اكتب الرمز في «تفعيل رمز».`].filter((x) => x !== null).join('\n');
+      `لتثبيت أداة «حاضر» (مرة واحدة): ${SITE}install.html`,
+      'للتفعيل: افتح «حاضر» واضغط «لديّ رمز تفعيل» ثم اكتب الرمز.'].filter((x) => x !== null).join('\n');
   }
   async function copy(text) {
     try { await navigator.clipboard.writeText(text); A.toast('نُسخت الرسالة.', 'ok'); }
