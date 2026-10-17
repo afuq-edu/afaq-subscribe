@@ -1839,6 +1839,13 @@ function wzRender() {
       if (ref) await setRef(ref).catch(() => {});
       await wzBusy('أجهّز تجربتك…', async () => {
         const r = await startTrial(name, $('wzPhone').value.trim(), wz.shift, [o.id]);
+        if (!r.ok && r.error === 'too_many') {
+          // شبكة سجّل منها كثيرون اليوم: مسار هادئ — رسالة واتساب جاهزة باسمه ومادته، ونفتح له من لوحة الإدارة
+          const wa = whatsappUrl('', `السلام عليكم، أنا ${name}، أريد تجربة «حاضر» في ${o.title || o.subject || 'مادتي'}.`);
+          wzMsg('info', `نجهّز لك «حاضر» مباشرة عبر واتساب. <a class="btn wa" href="#" id="wzTooWa">راسلنا على واتساب</a>`);
+          $('wzTooWa').onclick = (e) => { e.preventDefault(); openUrl(wa); };
+          return;
+        }
         if (!r.ok) { wzMsg('bad', wzErr(r.error)); return; }
         await wzReload();
         wzResolve(true);
@@ -1953,7 +1960,7 @@ async function wzResolve(noName) {
     if (o2 && o2.src === 'lib') { wz.pkg = o2.pkg; if (o2.pkg.remote && o2.pkg.remote.trial && !o2.pkg.remote.left) { wzGo('pay'); return; } wzGo('kind'); } else wzMsg('bad', 'لم تظهر المادة في مكتبتك بعد — أعد المحاولة بعد قليل.');
   });
 }
-const wzErr = (e) => ({ name: 'اكتب اسمك كاملًا.', shift: 'اختر نوع المدرسة.', packages: 'المادة غير متاحة الآن.', too_many: 'محاولات كثيرة من هذا الجهاز — حاول غدًا أو راسلنا على واتساب.', unlinked: 'انتهى ربط هذا الجهاز — أعد فتح النافذة.', expired: 'انتهى هذا الاشتراك.', devices: 'بلغت الحد الأقصى للأجهزة (جهازان) — راسلنا على واتساب.', network: 'تعذّر الاتصال بالإنترنت — تحقق ثم أعد المحاولة.', server: 'الخادم لم يستجب — أعد المحاولة بعد قليل.' }[e] || 'تعذّر إكمال الطلب — أعد المحاولة.');
+const wzErr = (e) => ({ name: 'اكتب اسمك كاملًا.', shift: 'اختر نوع المدرسة.', packages: 'المادة غير متاحة الآن.', too_many: 'too_many', unlinked: 'انتهى ربط هذا الجهاز — أعد فتح النافذة.', expired: 'انتهى هذا الاشتراك.', devices: 'بلغت الحد الأقصى للأجهزة (جهازان) — راسلنا على واتساب.', network: 'تعذّر الاتصال بالإنترنت — تحقق ثم أعد المحاولة.', server: 'الخادم لم يستجب — أعد المحاولة بعد قليل.' }[e] || 'تعذّر إكمال الطلب — أعد المحاولة.');
 async function wzBusy(text, fn) {
   wz.busy = true; wzMsg('info', `<span class="spin"></span>${esc(text)}`);
   try { await fn(); if ($('wzMsg').classList.contains('info')) wzMsg('', ''); } catch (e) { wzMsg('bad', wzErr('network')); }

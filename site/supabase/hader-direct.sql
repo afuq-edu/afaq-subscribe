@@ -165,7 +165,8 @@ begin
      or exists (select 1 from unnest(p_packages) x where x not in (select id from public.packages where active)) then
     return jsonb_build_object('ok', false, 'error', 'packages');
   end if;
-  if (select count(*) from public.ext_requests where ip_hash = v_ip and created_at > now() - interval '1 day') >= 6 then
+  -- حد التسجيل من الشبكة نفسها في اليوم (شبكة المدرسة يشترك فيها معلمون كثيرون)
+  if (select count(*) from public.ext_requests where ip_hash = v_ip and created_at > now() - interval '1 day') >= 40 then
     return jsonb_build_object('ok', false, 'error', 'too_many');
   end if;
   insert into auth.users (instance_id, id, aud, role, is_anonymous, raw_app_meta_data, raw_user_meta_data, created_at, updated_at)
@@ -354,6 +355,21 @@ begin
   update public.ext_requests set status = p_status where id = p_id;
   return jsonb_build_object('ok', found);
 end $$;
+
+-- المدير يفتح الشبكة التي بلغت حد التسجيل: يُصفَّر عدّاد اليوم لشبكة هذا الطلب
+create or replace function public.admin_unlock_network(p_id bigint) returns jsonb
+language plpgsql security definer set search_path = public as $$
+declare v_ip text; n int;
+begin
+  if not public.is_admin() then raise exception 'غير مسموح'; end if;
+  select ip_hash into v_ip from public.ext_requests where id = p_id;
+  if v_ip is null then return jsonb_build_object('ok', true, 'cleared', 0); end if;
+  update public.ext_requests set ip_hash = null where ip_hash = v_ip and created_at > now() - interval '1 day';
+  get diagnostics n = row_count;
+  return jsonb_build_object('ok', true, 'cleared', n);
+end $$;
+revoke execute on function public.admin_unlock_network(bigint) from public, anon;
+grant execute on function public.admin_unlock_network(bigint) to authenticated;
 
 -- رمز «جهاز جديد» لمعلم طلبه موجود (يكتبه في الإضافة مع اسمه)
 create or replace function public.admin_device_code(p_id bigint) returns jsonb
