@@ -63,9 +63,9 @@
         <h2>من التسجيل إلى أول حصة محفوظة</h2>
         <p class="intro">ثلاث خطوات مرة واحدة في الفصل، ثم يعمل كل شيء من منصة نور.</p>
         <ol class="steps">
-          <li><span class="n">١</span><h3>أنشئ حسابك</h3><p>باسمك الثلاثي كما سيُكتب في رمز التفعيل، وبريدك ورقم هاتفك.</p></li>
-          <li><span class="n">٢</span><h3>اطلب رمز التفعيل عبر واتساب</h3><p>اختر الاشتراك الفصلي أو السنوي، والمادة والصف، وأرسل الطلب إلى منصة أفق. يصلك رمز باسمك تفعّله من حسابك.</p></li>
-          <li><span class="n">٣</span><h3>ثبّت الإضافة وابدأ</h3><p>تثبّت إضافة «حاضر» في كروم مرة واحدة، فتُربط بحسابك عند فتح الموقع، ثم تبدأ تعبئة الفصل من نور.</p></li>
+          <li><span class="n">١</span><h3>ثبّت «حاضر» وجرّب مجانًا</h3><p>تثبّت الإضافة في كروم مرة واحدة، وتجرّب ثلاث حصص مجانًا.</p></li>
+          <li><span class="n">٢</span><h3>اطلب الاشتراك عبر واتساب</h3><p>تصل رسالتك إلى منصة أفق باسمك ومادتك، وبعد الدفع يُفعَّل اشتراكك مباشرة لفصل كامل.</p></li>
+          <li><span class="n">٣</span><h3>ابدأ من نور</h3><p>تفتح مادتك في «حاضر» خلال دقيقة دون أي خطوة منك، ثم تبدأ تعبئة الفصل من نور.</p></li>
         </ol>
       </div>
     </section>
@@ -73,7 +73,7 @@
     <section class="block" id="packages" style="background:var(--paper)">
       <div class="wrap">
         <h2>الباقات</h2>
-        <p class="intro">كل مادة لكل صف باقة مستقلة. اختر نوع الاشتراك، فصليًا أو سنويًا، واكتب ما تدرّسه، ثم اطلب الرمز.</p>
+        <p class="intro">كل مادة لكل صف باقة مستقلة. اختر نوع الاشتراك، فصليًا أو سنويًا، واكتب ما تدرّسه، ثم اطلب الاشتراك.</p>
         <div class="plans" id="plans" role="group" aria-label="نوع الاشتراك">
           <button type="button" class="plan" data-plan="term" aria-pressed="true">
             <span class="pname">اشتراك فصلي</span>
@@ -82,7 +82,7 @@
           </button>
           <button type="button" class="plan" data-plan="year" aria-pressed="false">
             <span class="pname">اشتراك سنوي</span>
-            <span class="pdesc">الفصلان الأول والثاني من العام الدراسي، برمز واحد.</span>
+            <span class="pdesc">الفصلان الأول والثاني من العام الدراسي.</span>
             <span class="price" id="priceYear"></span>
             <span class="save" id="saveYear" hidden></span>
           </button>
@@ -94,7 +94,7 @@
             <select id="basketTerm"><option value="1">الفصل الأول</option><option value="2">الفصل الثاني</option></select>
           </label>
           <span class="total" id="basketTotal" hidden></span>
-          <button class="btn wa" id="basketSend" type="button">اطلب الرمز عبر واتساب</button>
+          <button class="btn wa" id="basketSend" type="button">اطلب الاشتراك عبر واتساب</button>
         </div>
       </div>
     </section>
@@ -123,12 +123,11 @@
         <h2>أسئلة شائعة</h2>
         <div style="margin-top:18px">
           <details class="q"><summary>متى ينتهي اشتراكي؟</summary><p>الاشتراك الفصلي ينتهي بنهاية الفصل الدراسي الذي اشتركت فيه، والسنوي يشمل الفصلين الأول والثاني وينتهي بنهاية الفصل الثاني. يظهر التاريخ في حسابك.</p></details>
-          <details class="q"><summary>ما الفرق بين الاشتراك الفصلي والسنوي؟</summary><p>الفصلي لفصل واحد تختاره، وتطلب رمزًا جديدًا للفصل التالي. السنوي برمز واحد للعام كله: يعمل في الفصل الأول، ويُضاف إليه الفصل الثاني تلقائيًا دون رمز جديد، وسعره أقل من فصلين منفصلين.</p></details>
-          <details class="q"><summary>أدرّس الإنجليزي للصفين الأول والثاني، هل تكفي باقة واحدة؟</summary><p>لا، كل صف باقة مستقلة. اختر الصفين من قائمة الباقات ويصلك رمز واحد يفعّلهما معًا.</p></details>
+          <details class="q"><summary>ما الفرق بين الاشتراك الفصلي والسنوي؟</summary><p>الفصلي لفصل واحد، وتطلب تجديده للفصل التالي. السنوي للعام كله: يعمل في الفصل الأول، ويُضاف إليه الفصل الثاني تلقائيًا.</p></details>
+          <details class="q"><summary>أدرّس الإنجليزي للصفين الأول والثاني، هل تكفي باقة واحدة؟</summary><p>لا، كل صف باقة مستقلة. اكتب الصفين في طلبك، ويُفعَّلان معًا.</p></details>
           <details class="q"><summary>هل أحتاج كلمة مرور منصة نور؟</summary><p>لا. تعمل الأداة داخل متصفحك وأنت مسجّل في نور بنفسك، ولا تُرسل بيانات نور إلى أي مكان.</p></details>
           <details class="q"><summary>على أي متصفح تعمل؟</summary><p>كروم أو إيدج على الحاسوب. تُثبَّت إضافة «حاضر» مرة واحدة، ويمكن ربط جهازين بالحساب نفسه.</p></details>
           <details class="q"><summary>ماذا لو كانت بعض الحصص محفوظة في نور من قبل؟</summary><p>تقرأ الأداة قائمة تحاضيرك في نور وتكمل الناقص فقط، ولا تكرر حصة موجودة.</p></details>
-          <details class="q"><summary>كتبت اسمي بشكل مختلف عن الرمز، فرُفض التفعيل.</summary><p>الرمز مرتبط بالاسم الذي أرسلته. تواصل مع منصة أفق عبر واتساب لتصحيحه.</p></details>
         </div>
       </div>
     </section>
@@ -154,7 +153,7 @@
   <section class="wrap" id="view-register" hidden>
     <div class="panel auth">
       <h2>إنشاء حساب معلم</h2>
-      <p class="muted">اكتب اسمك الثلاثي كما تريده في رمز التفعيل، فالرمز يُصدر باسمك ولا يعمل لغيرك.</p>
+      <p class="muted">اكتب اسمك الثلاثي، فالاشتراك يُفعَّل باسمك.</p>
       <form class="form" id="regForm" novalidate>
         <label class="field"><span>الاسم الثلاثي</span><input name="full_name" autocomplete="name" required placeholder="مثال: عيسى محمد الحارثي"></label>
         <div class="row2">
@@ -207,16 +206,6 @@
           <h2>اشتراكاتي</h2>
           <p class="muted">كل باقة لمادة وصف، وتعمل حتى نهاية فصلها.</p>
           <div class="subs" id="subs"><p class="muted">جارٍ التحميل…</p></div>
-        </div>
-        <div class="panel">
-          <h2>تفعيل رمز</h2>
-          <p class="muted">الرمز الذي وصلك من منصة أفق عبر واتساب، بصيغة AFQ-XXXX-XXXX.</p>
-          <form class="codebox" id="codeForm">
-            <input name="code" placeholder="AFQ-XXXX-XXXX" autocomplete="off" spellcheck="false" maxlength="20" aria-label="رمز التفعيل">
-            <button class="btn primary" type="submit">فعّل الرمز</button>
-          </form>
-          <div class="msg" id="codeMsg" hidden style="margin-top:12px"></div>
-          <p class="small muted" style="margin-top:14px">ليس لديك رمز؟ <a href="#packages">اطلبه عبر واتساب</a></p>
         </div>
       </div>
       <div style="display:grid;gap:22px">

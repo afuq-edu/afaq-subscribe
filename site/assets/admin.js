@@ -39,7 +39,7 @@
     $$('[data-tab]').forEach((b) => b.setAttribute('aria-selected', b.dataset.tab === t));
     $$('[data-pane]').forEach((p) => { p.hidden = p.dataset.pane !== t; });
     history.replaceState(null, '', '#' + t);
-    ({ home: renderHome, stats: renderStats, requests: renderRequests, codes: renderCodes, teachers: renderTeachers, packages: renderPackages, terms: renderTerms, settings: renderSettings })[t]();
+    ({ home: renderHome, stats: renderStats, requests: renderRequests, teachers: renderTeachers, packages: renderPackages, terms: renderTerms, settings: renderSettings })[t]();
   }
   $$('[data-tab]').forEach((b) => { b.onclick = () => showTab(b.dataset.tab); });
 
@@ -72,8 +72,8 @@
 
   // ================= نظرة عامة =================
   async function renderHome() {
-    let teachers = [], codes = [], usage = [];
-    try { [teachers, codes, usage] = await Promise.all([db.rpc('admin_teachers'), db.list('activation_codes', { select: 'code,redeemed_by,revoked,term_id' }), db.list('usage_log', { select: 'user_id,at', order: [['at', false]], limit: 5000 })]); } catch (e) { A.toast(A.errText(e), 'bad'); }
+    let teachers = [], usage = [];
+    try { [teachers, usage] = await Promise.all([db.rpc('admin_teachers'), db.list('usage_log', { select: 'user_id,at', order: [['at', false]], limit: 5000 })]); } catch (e) { A.toast(A.errText(e), 'bad'); }
     D.teachers = teachers;
     const activeSubs = teachers.reduce((n, t) => n + t.subs.filter((s) => s.active).length, 0);
     const activeTeachers = teachers.filter((t) => t.subs.some((s) => s.active)).length;
@@ -83,7 +83,7 @@
     $('#stats').innerHTML = [
       [toAr(teachers.length), 'معلم مسجّل'], [toAr(activeTeachers), 'معلم مشترك الآن'], [toAr(activeSubs), 'اشتراك فعّال'],
       [toAr(teachers.reduce((n, t) => n + t.subs.filter((s) => s.active && s.plan === 'year').length, 0)), 'منها سنوي'],
-      [toAr(codes.filter((c) => !c.redeemed_by && !c.revoked).length), 'رمز لم يُفعَّل'], [toAr(today24), 'حصة سُلّمت في ٢٤ ساعة'],
+      [toAr(today24), 'حصة سُلّمت في ٢٤ ساعة'],
     ].map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join('');
     const st = await A.settings();
     const hints = [];
@@ -132,7 +132,7 @@
     const stopped = live.filter((r) => r.status !== 'active' && usedAll(r) >= lim)
       .sort((a, b) => String(b.last_seen || b.created_at).localeCompare(String(a.last_seen || a.created_at)));
     $('#stStopped').innerHTML = '<tr><th>الطلب</th><th>المعلم</th><th>المواد</th><th>آخر نشاط</th><th></th></tr>' + (stopped.length
-      ? stopped.map((r) => `<tr><td><b>${toAr(r.id)}</b></td><td><b>${esc(r.name || '—')}</b>${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}</td>
+      ? stopped.map((r) => `<tr><td><b>${toAr(r.id)}</b></td><td><b>${esc(r.name || '—')}</b>${prev ? `<br><span class="chip warn" title="على الأغلب جهاز جديد أو إعادة تثبيت">مُفعَّل له من قبل (${toAr(prev)})</span>` : ''}${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}</td>
         <td>${r.packages.filter((p) => !p.active && p.used).map((p) => `<span class="tag">${esc(p.title)}</span>`).join(' ')}</td>
         <td><small class="muted">${esc(ago(r.last_seen || r.created_at))}</small>${r.status === 'requested' ? '<br><span class="chip bad">راسلك</span>' : ''}</td>
         <td>${r.phone ? `<a class="btn sm wa" target="_blank" rel="noopener" href="${esc(A.waLink(waPhone(r.phone), `السلام عليكم أ. ${r.name}، جرّبت «حاضر» في ${r.packages.filter((p) => !p.active).map((p) => p.title).join('، ')}. هل تحب أن أفعّل لك الاشتراك لتكمل تحضير الفصل؟ رقم طلبك ${r.id}.`))}">تابِع على واتساب</a>` : '<small class="muted">بلا هاتف</small>'}</td></tr>`).join('')
@@ -149,7 +149,7 @@
   const SHIFT_AR = { one: 'فترة واحدة', two: 'فترتان' };
   const REQ_ST = { trial: ['warn', 'يجرّب'], requested: ['bad', 'بانتظار التفعيل'], active: ['ok', 'مفعّل'], cancelled: ['off', 'ملغى'] };
   function reqBadge() {
-    const n = (D.requests || []).filter((r) => r.status === 'requested').length;
+    const n = (D.requests || []).filter((r) => r.status === 'requested' || r.status === 'trial').length;
     $('#reqBadge').hidden = !n; $('#reqBadge').textContent = toAr(n);
   }
   async function renderRequests() {
@@ -165,40 +165,24 @@
     $('#reqTable').innerHTML = `<tr><th>الطلب</th><th>المعلم</th><th>المواد (حصص التجربة)</th><th>الحالة</th><th></th></tr>` + (list.length ? list.map((r) => {
       const [cls, lbl] = REQ_ST[r.status] || ['', r.status];
       const pend = r.packages.filter((p) => !p.active);
+      // جهاز جديد أو إعادة تثبيت = طلب جديد بالاسم نفسه؛ نُظهر ذلك ليقرّر المدير
+      const nm = (r.name || '').replace(/\s+/g, ' ').trim(), prev = nm ? (D.requests || []).filter((x) => x.id !== r.id && x.status === 'active' && (x.name || '').replace(/\s+/g, ' ').trim() === nm).length : 0;
       return `<tr><td><b style="font-size:18px">${toAr(r.id)}</b><br><small class="muted">${esc(ago(r.requested_at || r.created_at))}</small></td>
         <td><b>${esc(r.name || '—')}</b>${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}${r.referred_by ? `<br><span class="chip ok" title="خصم الدعوة له ولصاحب الدعوة عند الاشتراك">مدعو من ${esc(r.ref_name || '')} (${toAr(r.referred_by)})</span>` : ''}${r.invited ? `<br><span class="chip">دعا ${toAr(r.invited)} · اشترك ${toAr(r.invited_active)}</span>` : ''}<br><small class="muted">${esc(SHIFT_AR[r.shift] || '')}${r.devices ? ` · ${toAr(r.devices)} جهاز` : ''}${r.last_seen ? ` · آخر نشاط ${esc(ago(r.last_seen))}` : ''}</small></td>
         <td>${r.packages.map((p) => `<div style="margin-bottom:3px"><span class="tag">${esc(p.title)}</span> ${p.active ? '<span class="chip ok">مشترك</span>' : `<small class="muted">${A.sessionsWord(p.used)}</small>`}</div>`).join('') || '<span class="muted small">—</span>'}</td>
         <td><span class="chip ${cls}">${lbl}</span></td>
         <td><div class="inline-acts">
-          ${pend.length && r.status !== 'cancelled' ? `<select class="sm" data-plan="${r.id}" style="max-width:110px"><option value="term">فصلي</option><option value="year">سنوي</option></select><button class="btn sm primary" data-act="${r.id}" type="button">فعّل</button>` : ''}
+          ${pend.length && r.status !== 'cancelled' ? `<button class="btn sm primary" data-act="${r.id}" type="button">فعّل</button>` : ''}
           ${r.phone ? `<a class="btn sm wa" target="_blank" rel="noopener" href="${esc(A.waLink(r.phone.replace(/^0+/, '').length === 8 ? '968' + r.phone.replace(/^0+/, '') : r.phone, `السلام عليكم أ. ${r.name}، بخصوص طلبك رقم ${r.id} في «حاضر».`))}">واتساب</a>` : ''}
-          <button class="btn sm" data-dev="${r.id}" type="button" title="لمعلم غيّر جهازه: رمز يكتبه في الإضافة مع اسمه">رمز جهاز جديد</button>
           ${r.status === 'cancelled' ? `<button class="btn ghost sm" data-rst="${r.id}" data-to="trial" type="button">استعادة</button>` : `<button class="btn ghost sm danger" data-rst="${r.id}" data-to="cancelled" type="button">إلغاء</button>`}
         </div></td></tr>`;
     }).join('') : '<tr><td colspan="5" class="empty">لا طلبات هنا.</td></tr>');
     $$('[data-act]').forEach((b) => {
       b.onclick = async () => {
         const r = D.requests.find((x) => x.id === +b.dataset.act);
-        const plan = ($(`[data-plan="${r.id}"]`) || {}).value || 'term';
-        const titles = r.packages.filter((p) => !p.active).map((p) => p.title).join('، ');
-        if (!confirm(`تفعيل طلب ${r.id} — ${r.name}
-${plan === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي'}: ${titles}
-تفتح المواد في إضافته وحدها خلال دقيقة. متابعة؟`)) return;
         b.disabled = true;
-        try { await db.rpc('admin_activate_request', { p_id: r.id, p_plan: plan, p_package_ids: null }); A.toast(`فُعّل طلب ${toAr(r.id)}.`, 'ok'); renderRequests(); } catch (e) { b.disabled = false; A.toast(A.errText(e), 'bad'); }
-      };
-    });
-    $$('[data-dev]').forEach((b) => {
-      b.onclick = async () => {
-        const r = D.requests.find((x) => x.id === +b.dataset.dev);
-        if (!confirm(`رمز جهاز جديد لـ«${r.name}»؟ يكتبه المعلم في «حاضر» ← «لديّ رمز تفعيل» مع اسمه، فيرتبط الجهاز الجديد بحسابه (ويُفصل أقدم جهاز إن بلغ الحد).`)) return;
-        try {
-          const x = await db.rpc('admin_device_code', { p_id: r.id });
-          const text = `السلام عليكم أ. ${r.name}\nرمز ربط جهازك الجديد في «حاضر»: ${x.code}\nافتح «حاضر» ← «لديّ رمز تفعيل»، واكتب الرمز واسمك.`;
-          await copy(text);
-          if (r.phone && confirm(`الرمز: ${x.code}\nنُسخت الرسالة. أفتح واتساب المعلم لإرسالها؟`)) window.open(A.waLink(r.phone.replace(/^0+/, '').length === 8 ? '968' + r.phone.replace(/^0+/, '') : r.phone, text), '_blank');
-          else if (!r.phone) alert(`الرمز: ${x.code}\n(نُسخت رسالة المعلم)`);
-        } catch (e) { A.toast(A.errText(e), 'bad'); }
+        // ضغطة واحدة: اشتراك فصل كامل في مواد الطلب، وتفتح في إضافة المعلم وحدها
+        try { await db.rpc('admin_activate_request', { p_id: r.id, p_plan: 'term', p_package_ids: null }); A.toast(`فُعّل اشتراك ${r.name || 'المعلم'} لهذا الفصل.`, 'ok'); renderRequests(); } catch (e) { b.disabled = false; A.toast(A.errText(e), 'bad'); }
       };
     });
     $$('[data-rst]').forEach((b) => {
@@ -212,80 +196,17 @@ ${plan === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي'}: ${titles
   $('#reqFilter').onchange = drawRequests;
   setInterval(() => { if (!$('[data-pane="requests"]').hidden) renderRequests(); }, 60000);
 
-  // ================= الرموز =================
+  // ================= أدوات مشتركة =================
   function pkgPicker(box, selected) {
     const by = new Map();
     D.packages.filter((p) => p.active).forEach((p) => { if (!by.has(p.subject)) by.set(p.subject, []); by.get(p.subject).push(p); });
     box.innerHTML = by.size ? [...by].map(([s, list]) => `<div class="subj"><b>${esc(s)}</b>${list.map((p) => `<label><input type="checkbox" value="${esc(p.id)}" ${selected && selected.includes(p.id) ? 'checked' : ''}>${esc(A.GRADES[p.grade] || p.grade)}${p.shift === 'two' ? ' (فترتان)' : p.shift === 'one' ? ' (فترة واحدة)' : ''}</label>`).join('')}</div>`).join('')
       : '<p class="muted small">أضف الباقات أولًا.</p>';
   }
-  function codeMessage(c) {
-    const t = D.terms.find((x) => x.id === c.term_id);
-    let valid = '';
-    if (t && c.plan === 'year') {
-      const t2 = D.terms.filter((x) => x.year === t.year).sort((a, b) => b.term - a.term)[0];
-      valid = `اشتراك سنوي للعام الدراسي ${t.year} (الفصلان الأول والثاني)` + (t2.term === 2 ? `، صالح حتى ${A.dateAr(t2.ends_on)}` : '');
-    } else if (t) valid = `اشتراك فصلي، صالح حتى نهاية ${A.termName(t.term)} (${A.dateAr(t.ends_on)})`;
-    return [`السلام عليكم أ. ${c.teacher_name}`, 'رمز تفعيل اشتراكك في منصة أفق التعليمية:', c.code, '',
-      `الباقات: ${c.package_ids.map(pkgTitle).join('، ')}`, valid, '',
-      `لتثبيت أداة «حاضر» (مرة واحدة): ${SITE}install.html`,
-      'للتفعيل: افتح «حاضر» واضغط «لديّ رمز تفعيل» ثم اكتب الرمز.'].filter((x) => x !== null).join('\n');
-  }
   async function copy(text) {
     try { await navigator.clipboard.writeText(text); A.toast('نُسخت الرسالة.', 'ok'); }
     catch (e) { const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); A.toast('نُسخت الرسالة.', 'ok'); }
   }
-  async function renderCodes() {
-    fillPeriods($('#issueTerm'), $('#issueTermLbl'), $('#issuePlan').value);
-    pkgPicker($('#issuePkgs'));
-    try { D.codes = await db.list('activation_codes', { order: [['created_at', false]], limit: 300 }); } catch (e) { A.toast(A.errText(e), 'bad'); }
-    if (!D.teachers.length) { try { D.teachers = await db.rpc('admin_teachers'); } catch (e) {} }
-    drawCodes();
-  }
-  function drawCodes() {
-    const q = $('#codeSearch').value.trim().toLowerCase();
-    const list = D.codes.filter((c) => !q || c.code.toLowerCase().includes(q) || c.teacher_name.toLowerCase().includes(q) || (c.phone || '').includes(q)).slice(0, 150);
-    $('#codesTable').innerHTML = `<tr><th>الرمز</th><th>المعلم</th><th>الباقات</th><th>الحالة</th><th></th></tr>` + (list.length ? list.map((c) => {
-      const who = c.redeemed_by ? (D.teachers.find((t) => t.id === c.redeemed_by) || {}).full_name || 'معلم' : '';
-      const stt = c.revoked ? '<span class="chip off">ملغى</span>' : c.redeemed_by ? `<span class="chip ok">مُفعَّل</span><br><small class="muted">${esc(who)}<br>${A.dateAr((c.redeemed_at || '').slice(0, 10))}</small>` : '<span class="chip warn">لم يُفعَّل</span>';
-      return `<tr><td dir="ltr" style="text-align:right;font-weight:600;white-space:nowrap">${esc(c.code)}</td><td>${esc(c.teacher_name)}${c.phone ? `<br><small class="muted" dir="ltr">${esc(c.phone)}</small>` : ''}${c.note ? `<br><small class="muted">${esc(c.note)}</small>` : ''}</td>
-        <td>${c.package_ids.map((id) => `<span class="tag">${esc(pkgTitle(id))}</span>`).join('')}<br><small class="muted">${esc(periodLabel(c.plan, c.term_id))}</small></td>
-        <td>${stt}</td><td><div class="inline-acts"><button class="btn sm" data-copy="${esc(c.code)}" type="button">نسخ الرسالة</button>${!c.redeemed_by && !c.revoked ? `<button class="btn sm danger" data-revoke="${esc(c.code)}" type="button">إلغاء</button>` : ''}</div></td></tr>`;
-    }).join('') : '<tr><td colspan="5" class="empty">لا رموز بعد.</td></tr>');
-    $$('[data-copy]').forEach((b) => { b.onclick = () => copy(codeMessage(D.codes.find((c) => c.code === b.dataset.copy))); });
-    $$('[data-revoke]').forEach((b) => {
-      b.onclick = async () => {
-        if (!confirm(`إلغاء الرمز ${b.dataset.revoke}؟ لن يمكن تفعيله.`)) return;
-        try { await db.update('activation_codes', { revoked: true }, { code: b.dataset.revoke }); A.toast('أُلغي الرمز.'); renderCodes(); } catch (e) { A.toast(A.errText(e), 'bad'); }
-      };
-    });
-  }
-  $('#codeSearch').oninput = drawCodes;
-  $('#issuePlan').onchange = () => fillPeriods($('#issueTerm'), $('#issueTermLbl'), $('#issuePlan').value);
-  $('#issueForm').onsubmit = async (e) => {
-    e.preventDefault();
-    const f = e.target, msg = $('#issueMsg');
-    const ids = $$('#issuePkgs input:checked').map((i) => i.value);
-    const name = f.teacher_name.value.replace(/\s+/g, ' ').trim();
-    if (name.split(' ').length < 2) { setMsg(msg, 'bad', 'اكتب اسم المعلم كما في حسابه (اسمان على الأقل).'); return; }
-    if (!ids.length) { setMsg(msg, 'bad', 'اختر باقة واحدة على الأقل.'); return; }
-    if (!f.term.value) { setMsg(msg, 'bad', 'أضف فصلًا دراسيًا أولًا.'); return; }
-    // تنبيه: المعلم مسجّل باسم مختلف قليلًا؟
-    setMsg(msg);
-    try {
-      const plan = f.plan.value;
-      const r = await db.rpc('admin_issue_code', { p_teacher_name: name, p_phone: f.phone.value.trim(), p_term_id: +f.term.value, p_package_ids: ids, p_note: f.note.value.trim() || null, p_count: +f.count.value || 1, p_plan: plan });
-      const phone = f.phone.value.replace(/[^\d]/g, '');
-      const made = r.codes.map((code) => ({ code, teacher_name: name, term_id: +f.term.value, package_ids: ids, plan }));
-      $('#issued').innerHTML = made.map((c, i) => `<div class="issued"><div class="code">${esc(c.code)}</div>
-        <div class="inline-acts" style="justify-content:center"><button class="btn sm" data-ci="${i}" type="button">نسخ رسالة المعلم</button>${phone ? `<a class="btn wa sm" target="_blank" rel="noopener" href="${esc(A.waLink(phone, codeMessage(c)))}">أرسلها عبر واتساب</a>` : ''}</div></div>`).join('');
-      $$('[data-ci]').forEach((b) => { b.onclick = () => copy(codeMessage(made[+b.dataset.ci])); });
-      f.reset(); f.count.value = 1; pkgPicker($('#issuePkgs')); fillPeriods($('#issueTerm'), $('#issueTermLbl'), 'term');
-      try { D.codes = await db.list('activation_codes', { order: [['created_at', false]], limit: 300 }); } catch (err) {}
-      drawCodes();
-    } catch (err) { setMsg(msg, 'bad', esc(A.errText(err))); }
-  };
-
   // ================= المعلمون =================
   async function renderTeachers() {
     try { D.teachers = await db.rpc('admin_teachers'); } catch (e) { A.toast(A.errText(e), 'bad'); }
