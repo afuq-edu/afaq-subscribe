@@ -28,6 +28,8 @@
   </section>
   <p id="refNote" class="msg ok" hidden style="margin-bottom:20px"></p>
 
+  <p style="margin-bottom:22px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="docs/hader-teacher-guide.pdf" target="_blank" rel="noopener">الدليل المصوّر (PDF)</a>
+    <a class="btn" id="videoLink" href="#" target="_blank" rel="noopener" hidden>▶ شرح بالفيديو</a></p>
   <section id="store" hidden style="margin-bottom:28px">
     <p><a class="btn primary" id="storeLink" href="#" target="_blank" rel="noopener">ثبّت «حاضر» من متجر كروم</a></p>
     <p class="muted small" style="margin-top:10px">اضغط «إضافة إلى Chrome»، فتفتح «حاضر» وحدها على أول خطوة.</p>
@@ -101,6 +103,15 @@
       document.getElementById('storeLink').href = u;
       document.getElementById('store').hidden = false;
       document.getElementById('manual').hidden = true;
+    } catch (e) {}
+  })();
+  (async () => {
+    try {
+      const c = window.AFAQ_CONFIG;
+      const r = await fetch(c.SUPABASE_URL + '/rest/v1/settings?key=eq.youtube_url&select=value', { headers: { apikey: c.SUPABASE_ANON_KEY } });
+      const u = String(((await r.json())[0] || {}).value || '').trim();
+      if (!/^https:\/\/(www\.|m\.)?(youtube\.com|youtu\.be)\//.test(u)) return;
+      const a = document.getElementById('videoLink'); a.href = u; a.hidden = false;
     } catch (e) {}
   })();
 </script>
