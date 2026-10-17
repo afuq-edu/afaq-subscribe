@@ -5,7 +5,7 @@ import { parsePlanText, parsePlanBest, NOOR_STRATEGIES, NOOR_RESOURCES, NOOR_LEV
 import { AFAQ } from './afaq-config.js';
 import { remoteLesson, isRemote, REMOTE_ERR } from './remote.js';
 import { layoutDates, isIso, weekStart, weekEnd, inWeekOf, isSchoolDay, parseHolidays, countSchoolDays } from './dates.js';
-import { normalizePackage, normalizeLesson, hasFileDates, datedCount, lintPackage, lintLevel } from './lint.js';
+import { normalizePackage, normalizeLesson, hasFileDates, datedCount, lintPackage, lintLevel, fitLessonMinutes } from './lint.js';
 export { isRemote, REMOTE_ERR, layoutDates, isIso, weekStart, weekEnd, inWeekOf, isSchoolDay, parseHolidays, countSchoolDays, normalizePackage, normalizeLesson, hasFileDates, datedCount, lintPackage, lintLevel };
 export const SERVICE = !!AFAQ.SERVICE;
 const SERVICE_ONLY = 'المواد تأتي من اشتراكك في «حاضر» — اخترها أو فعّلها من نافذة «حاضر».';
@@ -826,6 +826,8 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
     if (!r.ok) return [{ key: 'remote', name: 'الاشتراك', short: 'الاشتراك', status: 'fail', blocked: true, remoteError: r.error, error: REMOTE_ERR[r.error] || REMOTE_ERR.network, values: [] }];
     lesson = r.lesson;
   }
+  // مدة الحصة حسب نوع المدرسة: فترتان ٣٥ دقيقة، فترة واحدة ٤٠
+  lesson = fitLessonMinutes(lesson, pkg);
   const settings = await getSettings();
   const skipFilled = opts.skipFilled != null ? !!opts.skipFilled : !!settings.skipFilled;
   const items = buildItems(pkg, lesson);
