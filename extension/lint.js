@@ -184,12 +184,24 @@ export function fitMinutes(text, perSession) {
     return a + shown + sp + minWord(n, w) + b;
   });
 }
-// الحصة كلها: «سير الدرس» يُوزَّع على مدة الحصة، وما يُذكر من دقائق في بقية البنود يتبعه بالنسبة نفسها
+// سطر المجموع «المجموع: 40 دقيقة» / «مجموع زمن الحصة: ٤٠ دقيقة» (بلا أقواس، فلا يمسّه MIN_RE): يُكتب بمدة الحصة
+const TOTAL_RE = /((?:ال)?مجموع(?:\s+(?:زمن\s+الحصة|الزمن|الكلي))?|الزمن\s+الكلي|زمن\s+الحصة)(\s*[:：]?\s*)([0-9٠-٩]{1,3})(\s*)(دقيقة|دقيقه|دقائق|د)/g;
+function fitTotals(text, per) {
+  if (typeof text !== 'string' || !per) return text;
+  const other = per === 35 ? 40 : per === 40 ? 35 : 0;
+  return text.replace(TOTAL_RE, (m, a, sp, num, sp2, w) => {
+    if (+latin(num) !== other) return m;
+    const shown = /[٠-٩]/.test(num) ? String(per).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d]) : String(per);
+    return a + sp + shown + sp2 + minWord(per, w);
+  });
+}
+// الحصة كلها: «سير الدرس» يُوزَّع على مدة الحصة، وما يُذكر من دقائق في بقية البنود يتبعه بالنسبة نفسها، وسطر «المجموع» يصير مدة الحصة
 export function fitLessonMinutes(lesson, pkg) {
   const per = sessionMinutesOf(pkg);
   if (!lesson || !per) return lesson;
+  const totals = (l) => { const o = Object.assign({}, l); ['procedures', 'intro', 'notes', 'formative', 'summative', 'outcomes'].forEach((k) => { if (typeof o[k] === 'string') o[k] = fitTotals(o[k], per); }); return o; };
   const proc = fitMinutes(lesson.procedures, per);
-  if (proc === lesson.procedures) return lesson;
+  if (proc === lesson.procedures) return totals(lesson);
   const sum = (t) => [...String(t || '').matchAll(MIN_RE)].reduce((a, m) => a + +latin(m[2]), 0);
   const ratio = sum(proc) / sum(lesson.procedures);
   const scale = (t) => (typeof t === 'string' ? t.replace(MIN_RE, (m, a, num, sp, w, b) => {
@@ -198,5 +210,5 @@ export function fitLessonMinutes(lesson, pkg) {
   }) : t);
   const out = Object.assign({}, lesson, { procedures: proc });
   ['intro', 'notes', 'formative', 'summative', 'outcomes'].forEach((k) => { if (out[k]) out[k] = scale(out[k]); });
-  return out;
+  return totals(out);
 }
