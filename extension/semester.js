@@ -1743,7 +1743,14 @@ async function loadNoorCourses() {
     }
   } catch (e) {}
 }
-const wzBadge = (o) => (o.src === 'cat' ? `<em class="bdg free">${toAr((wz.catalog && wz.catalog.trial) || 3)} حصص مجانًا</em>`
+// التجربة المجانية للمعلم في كل المواد معًا (الخادم يحسبها كذلك): الباقي واحد لكل مواد التجربة
+function wzTrialLeft() {
+  const t = packages.find((x) => x.remote && x.remote.trial);
+  if (t) return Math.max(0, +t.remote.left || 0);
+  if (wz.status && wz.status.trialLeft != null) return wz.status.trialLeft;
+  return (wz.catalog && wz.catalog.trial) || 3;
+}
+const wzBadge = (o) => (o.src === 'cat' ? (wzTrialLeft() ? '<em class="bdg free">ضمن تجربتك المجانية</em>' : '')
   : o.pkg.remote && o.pkg.remote.trial ? `<em class="bdg ${o.pkg.remote.left ? 'free' : 'end'}">${o.pkg.remote.left ? 'تجربة: بقي ' + countWord(o.pkg.remote.left) : 'انتهت التجربة'}</em>`
     : o.pkg.remote ? '<em class="bdg sub">مشترك ✓</em>' : '');
 
@@ -1793,7 +1800,7 @@ function wzRender() {
     body.innerHTML = wzCards(list);
   } else if (wz.step === 'name') {
     head.textContent = 'اسمك كما في نور';
-    body.innerHTML = `<p class="wz-note">تبدأ تجربتك المجانية الآن: أول ${toAr((wz.catalog && wz.catalog.trial) || 3)} حصص في كل مادة تختارها، دون دفع ولا تواصل.</p>
+    body.innerHTML = `<p class="wz-note">تبدأ تجربتك المجانية الآن: ${toAr((wz.catalog && wz.catalog.trial) || 3)} حصص مجانًا في المواد كلها معًا، دون دفع ولا تواصل.</p>
       <input class="input big" id="wzName" placeholder="الاسم الثلاثي" autocomplete="name">
       <input class="input big" id="wzPhone" placeholder="رقم الهاتف (اختياري)" inputmode="tel" dir="ltr" style="text-align:right">
       <p class="wz-note" id="wzRefNote" hidden>دعاك زميلك ✓ — إذا اشتركت تحصلان كلاكما على خصم.</p>
@@ -1890,7 +1897,7 @@ function wzRender() {
 }
 function wzTrialNote() {
   const r = wz.pkg && wz.pkg.remote;
-  return r && r.trial ? `<p class="wz-note">${r.left ? `تجربتك المجانية في هذه المادة: بقي لك ${countWord(r.left)}.` : 'انتهت حصصك المجانية في هذه المادة.'}</p>` : '';
+  return r && r.trial ? `<p class="wz-note">${r.left ? `تجربتك المجانية: بقي لك ${countWord(r.left)} (في كل المواد معًا).` : 'انتهت حصصك المجانية.'}</p>` : '';
 }
 // سطر الخطة قبل البدء (تقديري من ملف المادة؛ الدقيق يظهر بعد قراءة نور)
 function wzEstimate() {
@@ -1898,7 +1905,7 @@ function wzEstimate() {
   let ses = gs.flatMap((g) => g.sessions).filter((l) => !wdone(l));
   const cap = wz.pkg.remote && wz.pkg.remote.trial ? wz.pkg.remote.left : null;
   if (cap != null) ses = ses.slice(0, cap);
-  if (!ses.length) return cap === 0 ? 'انتهت حصصك المجانية في هذه المادة.' : 'كل الحصص المختارة محضّرة من قبل ✓ — سأتحقق من نور.';
+  if (!ses.length) return cap === 0 ? 'انتهت حصصك المجانية.' : 'كل الحصص المختارة محضّرة من قبل ✓ — سأتحقق من نور.';
   const ds = ses.map((l) => l.pubDate).filter(isIso).sort();
   const when = wz.dates === 'official' && ds.length ? ` من ${dayLabel(ds[0])} إلى ${dayLabel(ds[ds.length - 1])}` : wz.dates === 'start' ? ` ابتداءً من ${dayLabel(wz.start)}` : '';
   return `سأنشر ${countWord(ses.length)}${when}${cap != null ? ' (تجربة مجانية)' : ''}.`;
@@ -1921,7 +1928,7 @@ async function wzResolve(noName) {
     if (!r.ok) { wzMsg('bad', wzErr(r.error)); return; }
     await wzReload();
     const o2 = wzPickOffer();
-    if (o2 && o2.src === 'lib') { wz.pkg = o2.pkg; wzGo('kind'); } else wzMsg('bad', 'لم تظهر المادة في مكتبتك بعد — أعد المحاولة بعد قليل.');
+    if (o2 && o2.src === 'lib') { wz.pkg = o2.pkg; if (o2.pkg.remote && o2.pkg.remote.trial && !o2.pkg.remote.left) { wzGo('pay'); return; } wzGo('kind'); } else wzMsg('bad', 'لم تظهر المادة في مكتبتك بعد — أعد المحاولة بعد قليل.');
   });
 }
 const wzErr = (e) => ({ name: 'اكتب اسمك كاملًا.', shift: 'اختر نوع المدرسة.', packages: 'المادة غير متاحة الآن.', too_many: 'محاولات كثيرة من هذا الجهاز — حاول غدًا أو راسلنا على واتساب.', unlinked: 'انتهى ربط هذا الجهاز — أعد فتح النافذة.', invalid: 'رمز التفعيل غير صحيح.', revoked: 'هذا الرمز لم يعد صالحًا.', used: 'هذا الرمز مستعمل لحساب آخر.', expired: 'انتهى هذا الاشتراك.', devices: 'بلغت الحد الأقصى للأجهزة (جهازان) — راسلنا لرمز جهاز جديد.', network: 'تعذّر الاتصال بالإنترنت — تحقق ثم أعد المحاولة.', server: 'الخادم لم يستجب — أعد المحاولة بعد قليل.' }[e] || 'تعذّر إكمال الطلب — أعد المحاولة.');
@@ -2078,7 +2085,7 @@ function wzPayRender() {
   $('wzHead').textContent = req.status === 'requested' ? 'بانتظار تفعيل اشتراكك' : 'انتهت حصصك المجانية';
   $('wzBody').innerHTML = `<p class="wz-note big">${req.status === 'requested'
     ? 'وصلنا طلبك. بعد الدفع نفعّل اشتراكك، وتفتح موادك هنا وحدها خلال دقيقة — لا حاجة لأي رمز.'
-    : `جرّبت ${toAr(st.trialLessons || 3)} حصص مجانًا في «${esc((wz.pkg && wz.pkg.subject) || '')}». لتكمل التحضير فعّل اشتراكك عبر واتساب.`}</p>
+    : `استعملت حصصك المجانية (${toAr(st.trialLessons || 3)}). لتكمل التحضير فعّل اشتراكك عبر واتساب.`}</p>
     ${req.id ? `<p class="wz-line">رقم طلبك: <b>${toAr(req.id)}</b></p>` : ''}
     <button class="btn wa big" id="wzWa">راسلنا على واتساب لتفعيل اشتراكك</button>
     <p class="hint" id="wzWait">${req.status === 'requested' ? '<span class="spin"></span>أتحقق من التفعيل كل ٢٠ ثانية…' : ''}</p>

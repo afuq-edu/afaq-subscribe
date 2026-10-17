@@ -88,7 +88,7 @@ async function doSync({ force } = {}) {
   // مع حذف مواد الاشتراكات المنتهية: تبقى المواد المحلية (إن وُجدت) كما هي
   await chrome.storage.local.set({
     packages: keep.concat(next),
-    [STATUS]: { ok: true, name: me.name, at: Date.now(), subs: me.subs, notes, request: me.request || null, whatsapp: me.whatsapp || '', trialLessons: me.trial_lessons || 3 },
+    [STATUS]: { ok: true, name: me.name, at: Date.now(), subs: me.subs, notes, request: me.request || null, whatsapp: me.whatsapp || '', trialLessons: me.trial_lessons || 3, trialLeft: me.trial_left == null ? null : +me.trial_left },
     [LINK]: Object.assign(link, { name: me.name }),
   });
   memo.clear();
@@ -122,7 +122,7 @@ export const REMOTE_ERR = {
   limit: 'بلغت الحد اليومي لعدد الحصص — أكمل غدًا.',
   not_ready: 'تحاضير هذه المادة قيد الإعداد.',
   no_lesson: 'هذه الحصة لم تعد في المادة — حدّث المواد من موقع منصة أفق.',
-  trial_over: 'انتهت حصصك المجانية في هذه المادة — راسلنا على واتساب لتفعيل اشتراكك.',
+  trial_over: 'انتهت حصصك المجانية — راسلنا على واتساب لتفعيل اشتراكك.',
   network: 'تعذّر الاتصال بخادم منصة أفق — تحقق من الإنترنت.',
   server: 'خادم منصة أفق لم يستجب كما يجب — أعد المحاولة بعد قليل.',
   config: 'الإضافة غير مضبوطة على خادم منصة أفق.',

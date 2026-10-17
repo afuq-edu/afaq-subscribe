@@ -116,10 +116,12 @@
       [toAr(pct) + '٪', 'نسبة من اشترك بعد التجربة'], [toAr(live.filter((r) => r.referred_by).length), 'جاء بدعوة زميل'],
     ].map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join('');
     // المواد: كم معلمًا اختارها، وكم اشترك فيها، وكم أنهى تجربتها
+    // التجربة ٣ حصص للمعلم في كل المواد معًا: أنهاها من بلغ مجموع ما استعمله الحد
+    const usedAll = (r) => r.packages.filter((p) => !p.active).reduce((n, p) => n + (p.used || 0), 0);
     const subj = new Map();
     live.forEach((r) => r.packages.forEach((p) => {
       const x = subj.get(p.id) || { title: p.title, n: 0, act: 0, done: 0 };
-      x.n++; if (p.active) x.act++; else if (p.used >= lim) x.done++;
+      x.n++; if (p.active) x.act++; else if (p.used && usedAll(r) >= lim) x.done++;
       subj.set(p.id, x);
     }));
     const rows = [...subj.values()].sort((a, b) => b.n - a.n || b.act - a.act);
@@ -127,11 +129,11 @@
       ? rows.map((x) => `<tr><td><b>${esc(x.title)}</b></td><td>${toAr(x.n)}</td><td>${toAr(x.act)}</td><td>${toAr(x.done)}</td></tr>`).join('')
       : '<tr><td colspan="4" class="empty">لا طلبات بعد.</td></tr>');
     // أنهوا التجربة ولم يشتركوا
-    const stopped = live.filter((r) => r.status !== 'active' && r.packages.some((p) => !p.active && p.used >= lim))
+    const stopped = live.filter((r) => r.status !== 'active' && usedAll(r) >= lim)
       .sort((a, b) => String(b.last_seen || b.created_at).localeCompare(String(a.last_seen || a.created_at)));
     $('#stStopped').innerHTML = '<tr><th>الطلب</th><th>المعلم</th><th>المواد</th><th>آخر نشاط</th><th></th></tr>' + (stopped.length
       ? stopped.map((r) => `<tr><td><b>${toAr(r.id)}</b></td><td><b>${esc(r.name || '—')}</b>${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}</td>
-        <td>${r.packages.filter((p) => !p.active && p.used >= lim).map((p) => `<span class="tag">${esc(p.title)}</span>`).join(' ')}</td>
+        <td>${r.packages.filter((p) => !p.active && p.used).map((p) => `<span class="tag">${esc(p.title)}</span>`).join(' ')}</td>
         <td><small class="muted">${esc(ago(r.last_seen || r.created_at))}</small>${r.status === 'requested' ? '<br><span class="chip bad">راسلك</span>' : ''}</td>
         <td>${r.phone ? `<a class="btn sm wa" target="_blank" rel="noopener" href="${esc(A.waLink(waPhone(r.phone), `السلام عليكم أ. ${r.name}، جرّبت «حاضر» في ${r.packages.filter((p) => !p.active).map((p) => p.title).join('، ')}. هل تحب أن أفعّل لك الاشتراك لتكمل تحضير الفصل؟ رقم طلبك ${r.id}.`))}">تابِع على واتساب</a>` : '<small class="muted">بلا هاتف</small>'}</td></tr>`).join('')
       : '<tr><td colspan="5" class="empty">لا أحد حتى الآن.</td></tr>');
