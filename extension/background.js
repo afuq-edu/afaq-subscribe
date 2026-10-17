@@ -133,9 +133,19 @@ async function computeMatch(tab) {
   };
 }
 
+// نافذة «حاضر» الرئيسية: تُقدَّم إن كانت مفتوحة، وإلا تُفتح
+async function openWizard() {
+  const u = chrome.runtime.getURL('semester.html');
+  try {
+    const c = (await chrome.runtime.getContexts({ contextTypes: ['TAB'] })).find((x) => String(x.documentUrl || '').startsWith(u));
+    if (c && c.tabId >= 0) { await chrome.windows.update(c.windowId, { focused: true }); await chrome.tabs.update(c.tabId, { active: true }); return; }
+  } catch (e) {}
+  chrome.windows.create({ url: u, type: 'popup', width: 560, height: 900 }).catch(() => chrome.tabs.create({ url: u }));
+}
 chrome.runtime.onMessage.addListener((msg, sender, reply) => {
   if (!msg || !sender.tab || !sender.tab.id) return;
   const tabId = sender.tab.id;
+  if (msg.type === 'hadirOpenWizard') { openWizard(); return; }
   if (msg.type === 'hadirMatch') {
     computeMatch(sender.tab).then(reply).catch(() => reply({ ok: false }));
     return true;

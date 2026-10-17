@@ -2117,7 +2117,7 @@ function wzPayRender() {
     });
   };
   clearInterval(payTimer);
-  if (req.status === 'requested') payTimer = setInterval(wzPoll, 20000);
+  if (req.status !== 'active') payTimer = setInterval(wzPoll, 20000);   // يفتح وحده متى فعّله المشرف (بالطلب أو بمنح اشتراك)
 }
 async function wzPoll() {
   if (wz.step !== 'pay') { clearInterval(payTimer); return; }
