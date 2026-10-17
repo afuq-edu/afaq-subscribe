@@ -19,6 +19,8 @@ const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const toAr = (n) => String(n).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d]);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+// روابط خارجية (واتساب): بتبويب جديد عبر كروم — لا يمنعه حاجب النوافذ المنبثقة
+const openUrl = (u) => { try { chrome.tabs.create({ url: u }).catch(() => window.open(u, '_blank')); } catch (e) { window.open(u, '_blank'); } };
 const shortT = (t) => { const h = String(t || '').split(/[:：]/)[0].trim(); return h && h.length <= 28 ? h : String(t || '').slice(0, 28) + '…'; };
 const countWord = (n) => (n === 1 ? 'حصة واحدة' : n === 2 ? 'حصتان' : n <= 10 ? toAr(n) + ' حصص' : toAr(n) + ' حصة');
 const termName = (n) => (n === 1 ? 'الأول' : 'الثاني');
@@ -2046,7 +2048,7 @@ async function wzInviteFill(el) {
     <div class="row"><input class="input" readonly value="${esc(r.url)}"><button class="btn sm" type="button" data-copy>نسخ</button><button class="btn sm wa" type="button" data-wa>واتساب</button></div>
     ${r.invited ? `<small class="hint">دعوت ${toAr(r.invited)}${r.invited_active ? `، واشترك ${toAr(r.invited_active)} — خصمك محفوظ لك` : ''}.</small>` : ''}`;
   el.querySelector('[data-copy]').onclick = async (e) => { try { await navigator.clipboard.writeText(r.url); e.target.textContent = '✓ نُسخ'; } catch (x) { el.querySelector('input').select(); } };
-  el.querySelector('[data-wa]').onclick = () => window.open('https://wa.me/?text=' + encodeURIComponent(`جرّب «حاضر»: يعبّئ تحاضيرك في نور ويحفظها وحده. أول ٣ حصص مجانًا${r.discount ? `، وإذا اشتركت نحصل كلانا على خصم ${r.discount}` : ''}:\n${r.url}`), '_blank');
+  el.querySelector('[data-wa]').onclick = () => openUrl('https://wa.me/?text=' + encodeURIComponent(`جرّب «حاضر»: يعبّئ تحاضيرك في نور ويحفظها وحده. أول ٣ حصص مجانًا${r.discount ? `، وإذا اشتركت نحصل كلانا على خصم ${r.discount}` : ''}:\n${r.url}`), '_blank');
 }
 async function showUpdate() {
   const u = await updateInfo().catch(() => null);
@@ -2098,12 +2100,13 @@ function wzPayRender() {
   wzInviteFill($('wzPayInv'));
   $('wzOther').onclick = () => { clearInterval(payTimer); wzAgain(); };
   $('wzWa').onclick = async () => {
-    const r = await contactRequest().catch(() => null);
+    // contactRequest يسجّل الطلب؛ ننتظره قليلًا فقط حتى لا يتأخر فتح واتساب
+    const r = await Promise.race([contactRequest().catch(() => null), sleep(4000).then(() => null)]);
     const name = (r && r.name) || (wz.link && wz.link.name) || '';
     const subs = (r && r.packages && r.packages.length ? r.packages : trialSubs.map((x) => x.subject + ' — ' + (x.grade || ''))).join('، ');
     const sh = SHIFT[(r && r.shift) || wz.shift];
     const text = ['السلام عليكم، أرغب بتفعيل اشتراكي في «حاضر».', `الاسم: ${name}`, `المواد: ${subs}`, sh ? `نوع المدرسة: ${sh.name}` : '', `رقم الطلب: ${(r && r.request) || req.id || ''}`, wz.ref && wz.ref.referred_by ? `مدعو من الطلب: ${wz.ref.referred_by}` : ''].filter(Boolean).join('\n');
-    window.open(whatsappUrl((r && r.whatsapp) || st.whatsapp, text), '_blank');
+    openUrl(whatsappUrl((r && r.whatsapp) || st.whatsapp, text));
     if (r && r.ok) { wz.status = Object.assign({}, st, { request: Object.assign({}, req, { id: r.request, status: r.status }) }); }
     wzPayRender();
   };
