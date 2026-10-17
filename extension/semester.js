@@ -63,6 +63,7 @@ function setPhase(p) {
   $('steps').innerHTML = STEPS.map(([, n], i) => `<span class="step ${i < idx ? 'done' : i === idx ? 'on' : ''}">${i < idx ? '✓ ' : ''}${n}</span>`).join('');
 }
 function setBox(kind, head, text, buttons = []) {
+  if (WIZ.on && (kind === 'warn' || kind === 'bad')) kind = buttons.length ? 'info' : 'run';
   $('nowCard').hidden = false;
   $('nowBox').className = 'now ' + kind;
   $('nowHead').innerHTML = (kind === 'run' ? '<span class="spin"></span>' : '') + esc(head);
@@ -491,7 +492,7 @@ function ask({ kind = 'info', head = '', text = '', buttons = [], bar = true, po
     askCur = { id, finish };
     stopHooks.push(onStop);
     setBox(kind, head, text, buttons.map((b) => Object.assign({}, b, { onclick: () => finish(b.id) })));
-    if (bar) { showBar({ id, kind, title: 'حاضر: ' + head, text: String(text || '').split('\n')[0], buttons }); focusNoor(); }
+    if (bar) { showBar({ id, kind: WIZ.on && (kind === 'warn' || kind === 'bad') ? 'info' : kind, title: 'حاضر: ' + head, text: String(text || '').split('\n')[0], buttons }); focusNoor(); }
     else chrome.windows.getCurrent().then((w) => chrome.windows.update(w.id, { focused: true })).catch(() => {});
     if (poll) iv = setInterval(async () => { try { const v = await poll(); if (v) finish(v); } catch (e) {} }, pollMs);
   });
@@ -500,8 +501,8 @@ function ask({ kind = 'info', head = '', text = '', buttons = [], bar = true, po
 // انتهت جلسة نور: ننتظر تسجيل الدخول ثم نكمل
 async function loginWait(url) {
   const a = await ask({
-    kind: 'warn', head: 'يبدو أن جلسة نور انتهت — سجّل الدخول',
-    text: 'بعد تسجيل الدخول أكمل تلقائيًا من حيث توقفت.',
+    kind: 'warn', head: WIZ.on ? 'سجّل دخولك في نور' : 'يبدو أن جلسة نور انتهت — سجّل الدخول',
+    text: WIZ.on ? 'أكمل وحدي فور تسجيل الدخول، من حيث وصلت.' : 'بعد تسجيل الدخول أكمل تلقائيًا من حيث توقفت.',
     buttons: [{ id: 'go', label: '✓ سجّلتُ الدخول — أكمل', primary: true }, { id: 'stop', label: 'إيقاف', danger: true }],
     poll: async () => { const al = await pageAlerts(tabId).catch(() => null); return al && !al.login && /moe\.gov\.om\/teacher/.test(al.url || '') ? 'go' : null; },
   });
@@ -560,7 +561,7 @@ async function pickCourse(courses) {
   // الاسم مطابق لأكثر من بطاقة (صفوف أو شُعب): نسأل، وفي التشغيل التلقائي تُختار الأولى بعد مهلة
   const auto = $('optAuto').checked && cands.length > 1;
   const a = await ask({
-    kind: 'warn', head: cands.length ? 'أكثر من بطاقة تطابق المادة — اختر' : 'لم أجد بطاقة تطابق المادة — اختر البطاقة الصحيحة',
+    kind: 'warn', head: WIZ.on ? 'اختر بطاقة هذه المادة في نور' : cands.length ? 'أكثر من بطاقة تطابق المادة — اختر' : 'لم أجد بطاقة تطابق المادة — اختر البطاقة الصحيحة',
     text: `مادتك في المكتبة: «${pkg.title}».`,
     buttons: list.map((c, i) => ({ id: 'c' + i, label: `${c.title} — ${(c.levels || []).slice(-1)[0] || ''}`, primary: i === 0 })).concat([{ id: 'stop', label: 'إيقاف', danger: true }]),
     bar: false, timeoutMs: auto ? 30000 : 0, defaultId: auto ? 'c0' : '',
@@ -948,7 +949,7 @@ const WATCHDOG = globalThis.__hadirWatchdog || 4 * 60000;   // أقصى مدة �
 let attemptGen = 0;
 async function waitOnline() {
   if (navigator.onLine !== false) return !stopFlag;
-  setBox('warn', 'انقطع الاتصال بالإنترنت — أنتظر عودته', 'أكمل تلقائيًا فور عودة الاتصال، من حيث توقفت.');
+  setBox('warn', WIZ.on ? 'أنتظر عودة الإنترنت' : 'انقطع الاتصال بالإنترنت — أنتظر عودته', WIZ.on ? 'أكمل وحدي فور عودته، من حيث وصلت.' : 'أكمل تلقائيًا فور عودة الاتصال، من حيث توقفت.');
   logLine('info', 'انقطع الاتصال — بانتظار عودته');
   while (navigator.onLine === false && !stopFlag) await sleep(3000);
   if (!stopFlag) { logLine('info', 'عاد الاتصال — أكمل'); await sleep(2000); }
@@ -957,7 +958,8 @@ async function waitOnline() {
 // انتظار متدرّج: ٥ ثم ١٠ ثم ٢٠ ثم ٤٠ ثانية (حتى دقيقة)
 async function backoff(n, why) {
   const ms = Math.min(60000, 5000 * 2 ** Math.max(0, n - 1));
-  setBox('warn', why || 'نور بطيئة — أنتظر قليلًا ثم أعيد المحاولة', `إعادة المحاولة تلقائيًا بعد ${toAr(Math.round(ms / 1000))} ثانية…`);
+  if (WIZ.on) setBox('run', 'أنتظر نور قليلًا', `وأكمل وحدي بعد ${toAr(Math.round(ms / 1000))} ثانية…`);
+  else setBox('warn', why || 'نور بطيئة — أنتظر قليلًا ثم أعيد المحاولة', `إعادة المحاولة تلقائيًا بعد ${toAr(Math.round(ms / 1000))} ثانية…`);
   for (let t = 0; t < ms && !stopFlag; t += 500) await sleep(500);
 }
 function withTimeout(p, ms, fallback) { let t; return Promise.race([p, new Promise((res) => { t = setTimeout(() => res(fallback), ms); })]).finally(() => clearTimeout(t)); }
@@ -1216,6 +1218,22 @@ function setRunning(on) {
   heartbeat(on);
 }
 // انتظار «ابدأ التعبئة» — ومع autoMs يبدأ وحده بعد المهلة ما لم تعدّل شيئًا في الخطة
+// سطر الخطة: «سأنشر ١٢ حصة من الأحد ٦ سبتمبر إلى …»
+function planLine() {
+  const ds = queue.map((q) => q.date).filter(isIso).sort();
+  const when = !ds.length ? '' : ds[0] === ds[ds.length - 1] ? ` بتاريخ ${dayLabel(ds[0])}` : ` من ${dayLabel(ds[0])} إلى ${dayLabel(ds[ds.length - 1])}`;
+  return `سأنشر ${countWord(queue.length).replace('حصتان', 'حصتين')}${when}`;
+}
+// بدء دون مراجعة رغم تعارض الربط: مع اختلاف الوحدات يُستبعد الربط الضعيف (بالترتيب/برقم الوحدة فقط) احتياطًا
+function autoResolve() {
+  if (plan.mismatch) {
+    let dropped = 0;
+    plan.forEach((p) => { if (p.node && (p.how === 'order' || p.how === 'number') && !p.edited) { p.node = null; p.miss = true; p.skipped = true; p.why = 'استُبعد: ربط بالترتيب فقط مع اختلاف الوحدات'; presence(p); dropped++; } });
+    if (dropped) logLine('info', `استبعدت ${toAr(dropped)} ${dropped === 1 ? 'درسًا مربوطًا' : 'دروس مربوطة'} بالترتيب فقط لأن وحدات الملف لا تشبه وحدات نور — راجعها لاحقًا`);
+  }
+  const miss = plan.filter((p) => p.miss && !p.skipped).length;
+  if (miss) logLine('info', `بدأت تلقائيًا: ${toAr(miss)} ${miss === 1 ? 'درس بلا مقابل' : 'دروس بلا مقابل'} في نور تُخطّيت — تظهر في النهاية`);
+}
 function waitGo(autoMs, lbl) {
   return new Promise((res) => {
     let iv = null, left = Math.round((autoMs || 0) / 1000);
@@ -1304,14 +1322,12 @@ async function run() {
     // تعارض بين ملفك ونور: تُعرض الخطة للمراجعة، وتبدأ وحدها بعد مهلة (أطول كلما كان التعارض أخطر) ما لم تطلب المراجعة اليدوية
     const c = conflicts();
     const nConf = c.miss.length + c.weak.length + c.dup.length;
-    // المعالج: سطر واحد بالخطة قبل البدء («سأنشر ١٢ حصة من … إلى …») ثم يبدأ وحده بعد ١٠ ثوانٍ
-    if (WIZ.on && !$('optReview').checked && !nConf && !plan.mismatch && queue.length) {
-      setBox('ok', planLine(), (WIZ.trialCap != null ? `تجربتك المجانية: ${countWord(queue.length)} الآن. ` : '') + 'تبدأ وحدها بعد ١٠ ثوانٍ، أو اضغط «ابدأ الآن».');
-      running = false;
-      const go = await waitGo(10000, '▶ ابدأ الآن');
-      running = true;
-      $('goBtn').hidden = true;
-      if (!go) throw new Error('stop');
+    // المعالج: لا انتظار ولا تأكيد — سطر الخطة («سأنشر ١٢ حصة من … إلى …») يظهر والتعبئة تبدأ فورًا.
+    // التعارض يُحل وحده كما في البدء التلقائي (المربوط بالاسم يُعبَّأ، وما لا مقابل له يُتخطّى ويظهر في التقرير)
+    if (WIZ.on && !$('optReview').checked) {
+      if (nConf || plan.mismatch) { autoResolve(); await savePicks(); assignDates(); renderPlan(); }
+      if (!queue.length) { finished = true; throw new Error(plan.some((p) => p.sessions.some((s) => s.inNoor)) ? 'كل الحصص المختارة موجودة في نور ✓' : 'لا شيء ناقص ✓'); }
+      setBox('run', planLine(), WIZ.trialCap != null ? `من تجربتك المجانية. أبدأ الآن.` : 'أبدأ الآن.');
     } else if ($('optReview').checked || nConf || plan.mismatch || !queue.length) {
       if (WIZ.on) document.body.classList.add('showplan');
       editable = true; renderPlan();
@@ -1327,13 +1343,7 @@ async function run() {
       running = true; editable = false;
       $('goBtn').hidden = true;
       if (!go) throw new Error('stop');
-      if (go === 'auto' && plan.mismatch) {
-        // بدء تلقائي رغم اختلاف الوحدات: الربط الضعيف (بالترتيب/برقم الوحدة فقط) يُستبعد احتياطًا
-        let dropped = 0;
-        plan.forEach((p) => { if (p.node && (p.how === 'order' || p.how === 'number') && !p.edited) { p.node = null; p.miss = true; p.skipped = true; p.why = 'استُبعد: ربط بالترتيب فقط مع اختلاف الوحدات'; presence(p); dropped++; } });
-        if (dropped) logLine('info', `استبعدت ${toAr(dropped)} ${dropped === 1 ? 'درسًا مربوطًا' : 'دروس مربوطة'} بالترتيب فقط لأن وحدات الملف لا تشبه وحدات نور — راجعها لاحقًا`);
-      }
-      if (go === 'auto') { const miss = plan.filter((p) => p.miss && !p.skipped).length; if (miss) logLine('info', `بدأت تلقائيًا: ${toAr(miss)} ${miss === 1 ? 'درس بلا مقابل' : 'دروس بلا مقابل'} في نور تُخطّيت — تظهر في النهاية`); }
+      if (go === 'auto') autoResolve();
       await savePicks();
       assignDates(); renderPlan();
       if (!queue.length) { finished = true; throw new Error(plan.some((p) => p.sessions.some((s) => s.inNoor)) ? 'كل حصص الدروس المربوطة موجودة في نور — لا ناقص.' : scope.kind !== 'term' ? 'لا حصص ضمن النطاق المختار (الوحدة/الأسبوع/المدى) — غيّر النطاق.' : 'لم تحدد أي حصة.'); }
@@ -1422,7 +1432,7 @@ async function run() {
     finished = !stopFlag;
   } catch (e) {
     const m = String((e && e.message) || e);
-    if (m !== 'stop' && !finished) { endMsg = ['bad', `توقف: ${esc(m)}<br>ما حُفظ قبلها بقي محفوظًا. اضغط «ابدأ» ليكمل من حيث توقف (المحفوظ لا يتكرر).`]; logLine('bad', 'توقف: ' + m); setBox('bad', 'توقف', m); }
+    if (m !== 'stop' && !finished) { endMsg = ['bad', `توقف: ${esc(m)}<br>ما حُفظ قبلها بقي محفوظًا. اضغط «ابدأ» ليكمل من حيث توقف (المحفوظ لا يتكرر).`]; logLine('bad', 'توقف: ' + m); if (!WIZ.on) setBox('bad', 'توقف', m); }
     else if (finished && m !== 'stop') { endMsg = ['ok', esc(m)]; setBox('ok', m, ''); }
   }
   await hideBar();
@@ -1681,6 +1691,7 @@ if (q.get('debug') === '1') {
     renderPlan,
     buildPlan, assignDates, shiftDate, conflicts, completion,
     get plan() { return plan; }, get queue() { return queue; }, get treeNodes() { return treeNodes; }, get log() { return diag.log; },
+    planLine: () => planLine(), setQueue(q) { queue = q; },
     wizAfterRun: (o) => wizAfterRun(o), wizRunning: () => wizRunning(), wzFromNoor: () => wzFromNoor(wzOffers()), get settings() { return settings; }, holidays: () => [...holidaySet(settings)],
   };
 }
@@ -1852,8 +1863,8 @@ function wzRender() {
   } else if (wz.step === 'save') {
     head.textContent = 'الحفظ في نور';
     list = [
-      { title: 'تلقائيًا', sub: 'أعبّئ كل حصة وأحفظها وحدي حتى النهاية', on: wz.save === 'auto', go: () => { wz.save = 'auto'; wzGo('go'); } },
-      { title: 'أراجع كل حصة ثم أؤكد الحفظ', sub: 'أعبّئ الحصة وأنتظرك لتراجعها وتضغط «احفظ وتابع»', on: wz.save === 'review', go: () => { wz.save = 'review'; wzGo('go'); } },
+      { title: 'تلقائيًا', sub: 'أعبّئ كل حصة وأحفظها وحدي حتى النهاية', on: wz.save === 'auto', go: () => { wz.save = 'auto'; wzRun(); } },
+      { title: 'أراجع كل حصة ثم أؤكد الحفظ', sub: 'أعبّئ الحصة وأنتظرك لتراجعها وتضغط «احفظ وتابع»', on: wz.save === 'review', go: () => { wz.save = 'review'; wzRun(); } },
     ];
     body.innerHTML = wzCards(list);
   } else if (wz.step === 'go') {
@@ -1993,7 +2004,7 @@ async function wizAfterRun({ report, ok, failed, stopped, error, had }) {
     return;
   }
   if (failed || error) {
-    if (!n) setBox('warn', 'لم يكتمل التحضير بعد', `${error.trim() ? error + ' — ' : 'نور لا يستجيب كما يجب الآن. '}اضغط «أكمل الباقي» بعد قليل وأكمل من حيث توقفت.`);
+    if (!n) setBox('ok', 'التحضير جاهز للإكمال', `${wzHint(error)}اضغط «أكمل الباقي» وأكمل من حيث وصلت.`);
     else setBox('ok', `✓ نُشر ${countWord(n)}${range}`, `${failed ? `بقيت ${countWord(failed)}` : 'بقي القليل'} — اضغط «أكمل الباقي» بعد قليل وأنشرها لك دون تكرار.`);
     wzResumeBtn('▶ أكمل الباقي');
     return;
@@ -2001,6 +2012,14 @@ async function wizAfterRun({ report, ok, failed, stopped, error, had }) {
   if (!n) { setBox('ok', had ? '✓ كل الحصص المختارة موجودة في نور' : '✓ لا شيء ناقص', 'لا حاجة لأي إجراء.'); return; }
   const sure = (report && (report.verify === 'ok' || report.verify === 'loose'));
   setBox('ok', `✓ تم نشر ${countWord(n).replace('حصتان', 'حصتين')}${sure ? (n === 1 ? ' وتأكدت منها في نور' : ' وتأكدت منها كلها في نور') : ''}`, range ? `تواريخ النشر${range}.` : '');
+}
+// ما يفعله المعلم ليكمل، دون عرض نص الخطأ (يبقى في السجل والتقرير)
+function wzHint(e) {
+  e = String(e || '');
+  if (/بطاقات المواد|الصفحة الرئيسية/.test(e)) return 'افتح نور وسجّل دخولك بحساب المعلم، ثم ';
+  if (/الشجرة|الفصل|دروس تحت|إضافة تحضير/.test(e)) return 'افتح «تحضير الدروس» في نور مرة، ثم ';
+  if (/الاتصال|الإنترنت/.test(e)) return 'تأكد من الإنترنت، ثم ';
+  return '';
 }
 // مدى تواريخ ما نُشر في هذا الطلب (من التقرير المدمج)
 function wzRange(r) {
