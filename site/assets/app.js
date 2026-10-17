@@ -353,6 +353,7 @@
     S.settings = st;
     if (st.site_name) { $('#siteName').textContent = st.site_name; $('#footName').textContent = st.site_name; }
     if (st.announcement) { $('#announce').hidden = false; $('#announce').textContent = st.announcement; }
+    { const v = $('#heroVideo'); if (v && /^https:\/\/(www\.|m\.)?(youtube\.com|youtu\.be)\//.test(st.youtube_url || '')) { v.href = st.youtube_url; v.hidden = false; } }
     if (st.whatsapp) { const w = $('#footWa'); w.hidden = false; w.href = A.waLink(st.whatsapp, 'السلام عليكم، لدي استفسار عن منصة أفق التعليمية.'); w.target = '_blank'; w.rel = 'noopener'; }
     try { const pend = JSON.parse(sessionStorage.getItem(PICKS_KEY) || 'null'); if (pend && Array.isArray(pend.titles)) { $('#reqWhat').value = pend.titles.join('\n'); $('#basketTerm').value = String(pend.term); if (pend.plan) S.plan = pend.plan; } } catch (e) {}
     renderPlans();
