@@ -7,7 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { mapStrategies, mapResources } from '../extension/parse.js';
-import { normalizeLesson, lintPackage } from '../extension/lint.js';
+import { normalizeLesson, lintPackage, fitLessonMinutes } from '../extension/lint.js';
 
 const args = process.argv.slice(2);
 const opt = Object.fromEntries(args.filter((a) => a.startsWith('--')).map((a) => a.slice(2).split('=')));
@@ -94,7 +94,7 @@ for (const p of D.plans) {
   };
   normalizeLesson(x);
   if (x.publishDate && x.pubDate !== x.publishDate) x.pubDate = x.publishDate;
-  lessons.push(x);
+  lessons.push(fitLessonMinutes(x, { shift }));   // «فترتين» بتوقيت ٤٠ دقيقة ← ٣٥
 }
 const gradeLabel = gradeWord ? 'الصف ' + gradeWord : '';
 const pkg = { id, term: term === 2 ? 'الفصل الدراسي الثاني' : 'الفصل الدراسي الأول', subject, grade: gradeLabel, gradeNum, title: [subject, gradeWord].filter(Boolean).join(' — '), shift, shiftName: SHIFT_NAME[shift] || '', sessionMinutes: shift === 'two' ? 35 : shift === 'one' ? 40 : null, lessons };

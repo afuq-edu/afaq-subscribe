@@ -151,3 +151,52 @@ export function lintPackage(pkg, opts = {}) {
   return { warnings: out, groups: gs.length, sessions: lessons.length, dated: good.length, budget };
 }
 export const lintLevel = (r) => (r.warnings.some((w) => w.level === 'bad') ? 'bad' : r.warnings.some((w) => w.level === 'warn') ? 'warn' : r.warnings.length ? 'info' : 'ok');
+
+// مدد الأنشطة في «سير الدرس» — «(5 دقائق)» — تُوزَّع على مدة الحصة في نوع المدرسة:
+// فترتان = ٣٥ دقيقة، فترة واحدة = ٤٠. ملفات «فترتين» قد تأتي بتوقيت ٤٠ دقيقة فتُصغَّر بالتناسب (المجموع ٣٥ لكل حصة).
+const MIN_RE = /([(（]\s*)([0-9٠-٩]{1,2})(\s*)(دقائق|دقيقة|دقيقه|دقيقتان|دقيقتين|د)(\s*[)）])/g;
+const latin = (s) => String(s).replace(/[٠-٩]/g, (d) => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+const minWord = (n, w) => (w === 'د' ? 'د' : n === 1 ? 'دقيقة' : n === 2 ? 'دقيقتان' : n <= 10 ? 'دقائق' : 'دقيقة');
+export function sessionMinutesOf(pkg) {
+  const m = +((pkg && pkg.sessionMinutes) || 0);
+  return m || (pkg && pkg.shift === 'two' ? 35 : pkg && pkg.shift === 'one' ? 40 : 0);
+}
+export function fitMinutes(text, perSession) {
+  const s = String(text || '');
+  if (!perSession || !s) return s;
+  const parts = [...s.matchAll(MIN_RE)].map((m) => +latin(m[2]));
+  const total = parts.reduce((a, b) => a + b, 0);
+  if (!total || total % perSession === 0) return s;
+  const base = perSession === 35 ? 40 : perSession === 40 ? 35 : 0;   // التوقيت الآخر
+  if (!base) return s;
+  const target = Math.round((total * perSession) / base);
+  if (total % base !== 0 && Math.abs(total - target) < 3) return s;
+  // توزيع بالتناسب مع أكبر الكسور، دون أن ينزل نشاط عن دقيقة
+  const raw = parts.map((n) => (n * target) / total);
+  const out = raw.map((x) => Math.max(1, Math.floor(x)));
+  let left = target - out.reduce((a, b) => a + b, 0);
+  raw.map((x, i) => [x - Math.floor(x), i]).sort((a, b) => b[0] - a[0]).forEach(([, i]) => { if (left > 0) { out[i]++; left--; } });
+  for (let i = out.length - 1; left < 0 && i >= 0; i--) if (out[i] > 1) { out[i]--; left++; }
+  let k = 0;
+  return s.replace(MIN_RE, (m, a, num, sp, w, b) => {
+    const n = out[k++];
+    const shown = /[٠-٩]/.test(num) ? String(n).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d]) : String(n);
+    return a + shown + sp + minWord(n, w) + b;
+  });
+}
+// الحصة كلها: «سير الدرس» يُوزَّع على مدة الحصة، وما يُذكر من دقائق في بقية البنود يتبعه بالنسبة نفسها
+export function fitLessonMinutes(lesson, pkg) {
+  const per = sessionMinutesOf(pkg);
+  if (!lesson || !per) return lesson;
+  const proc = fitMinutes(lesson.procedures, per);
+  if (proc === lesson.procedures) return lesson;
+  const sum = (t) => [...String(t || '').matchAll(MIN_RE)].reduce((a, m) => a + +latin(m[2]), 0);
+  const ratio = sum(proc) / sum(lesson.procedures);
+  const scale = (t) => (typeof t === 'string' ? t.replace(MIN_RE, (m, a, num, sp, w, b) => {
+    const n = Math.max(1, Math.round(+latin(num) * ratio));
+    return a + (/[٠-٩]/.test(num) ? String(n).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d]) : String(n)) + sp + minWord(n, w) + b;
+  }) : t);
+  const out = Object.assign({}, lesson, { procedures: proc });
+  ['intro', 'notes', 'formative', 'summative', 'outcomes'].forEach((k) => { if (out[k]) out[k] = scale(out[k]); });
+  return out;
+}
