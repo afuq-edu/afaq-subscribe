@@ -49,3 +49,33 @@ begin
     'whatsapp', (select value from public.settings where key = 'whatsapp'),
     'trial_lessons', v_lim));
 end $function$;
+
+-- ext_pick: حساب المدير بلا حد ١٢ مادة، وطلبه يبقى 'active'
+create or replace function public.ext_pick(p_token text, p_packages text[], p_shift text default null)
+returns jsonb language plpgsql security definer set search_path to 'public' as $function$
+declare d record; r public.ext_requests; v_new text[]; v_t smallint := (select term from public.terms where id = public.current_term_id());
+  v_admin boolean; v_cap int;
+begin
+  select * into d from public.ext_device(p_token);
+  if d.user_id is null then return jsonb_build_object('ok', false, 'error', 'unlinked'); end if;
+  if exists (select 1 from unnest(coalesce(p_packages, '{}')) x where x not in (select id from public.packages where active)) then
+    return jsonb_build_object('ok', false, 'error', 'packages');
+  end if;
+  v_admin := coalesce((select pr.is_admin from public.profiles pr where pr.id = d.user_id), false);
+  v_cap := case when v_admin then 400 else 12 end;
+  select * into r from public.ext_requests where user_id = d.user_id for update;
+  if r.id is null then
+    insert into public.ext_requests (user_id, name, phone, shift, package_ids, ip_hash)
+    select d.user_id, coalesce(p.full_name, ''), p.phone, case when p_shift in ('one', 'two') then p_shift end, '{}', public.client_ip_hash()
+    from public.profiles p where p.id = d.user_id
+    returning * into r;
+  end if;
+  select array_agg(distinct x) into v_new from unnest(r.package_ids || coalesce(p_packages, '{}')) x;
+  if cardinality(v_new) > v_cap then return jsonb_build_object('ok', false, 'error', 'packages'); end if;
+  update public.ext_requests set package_ids = v_new,
+    shift = case when p_shift in ('one', 'two') then p_shift else shift end,
+    status = case when v_admin then 'active'
+                  when status in ('active', 'cancelled') and exists (select 1 from unnest(v_new) x where public.active_term(d.user_id, x, v_t) is null) then 'trial' else status end
+  where id = r.id;
+  return jsonb_build_object('ok', true, 'request', r.id);
+end $function$;
