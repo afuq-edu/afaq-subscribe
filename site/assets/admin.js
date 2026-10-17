@@ -174,6 +174,7 @@
         <td><div class="inline-acts">
           ${pend.length && r.status !== 'cancelled' ? `<button class="btn sm primary" data-act="${r.id}" type="button">فعّل</button>` : ''}
           ${r.phone ? `<a class="btn sm wa" target="_blank" rel="noopener" href="${esc(A.waLink(r.phone.replace(/^0+/, '').length === 8 ? '968' + r.phone.replace(/^0+/, '') : r.phone, `السلام عليكم أ. ${r.name}، بخصوص طلبك رقم ${r.id} في «حاضر».`))}">واتساب</a>` : ''}
+          <button class="btn ghost sm" data-unl="${r.id}" type="button" title="يصفّر محاولات التسجيل اليوم لجهاز هذا الطلب وشبكته">تصفير المحاولات</button>
           ${r.status === 'cancelled' ? `<button class="btn ghost sm" data-rst="${r.id}" data-to="trial" type="button">استعادة</button>` : `<button class="btn ghost sm danger" data-rst="${r.id}" data-to="cancelled" type="button">إلغاء</button>`}
         </div></td></tr>`;
     }).join('') : '<tr><td colspan="5" class="empty">لا طلبات هنا.</td></tr>');
@@ -183,6 +184,11 @@
         b.disabled = true;
         // ضغطة واحدة: اشتراك فصل كامل في مواد الطلب، وتفتح في إضافة المعلم وحدها
         try { await db.rpc('admin_activate_request', { p_id: r.id, p_plan: 'term', p_package_ids: null }); A.toast(`فُعّل اشتراك ${r.name || 'المعلم'} لهذا الفصل.`, 'ok'); renderRequests(); } catch (e) { b.disabled = false; A.toast(A.errText(e), 'bad'); }
+      };
+    });
+    $$('[data-unl]').forEach((b) => {
+      b.onclick = async () => {
+        try { await db.rpc('admin_unlock_network', { p_id: +b.dataset.unl }); A.toast('صُفّرت المحاولات، ويمكن التسجيل من هذا الجهاز الآن.', 'ok'); } catch (e) { A.toast(A.errText(e), 'bad'); }
       };
     });
     $$('[data-rst]').forEach((b) => {
