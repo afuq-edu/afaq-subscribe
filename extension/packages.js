@@ -8,7 +8,7 @@ import { layoutDates, isIso, weekStart, weekEnd, inWeekOf, isSchoolDay, parseHol
 import { normalizePackage, normalizeLesson, hasFileDates, datedCount, lintPackage, lintLevel } from './lint.js';
 export { isRemote, REMOTE_ERR, layoutDates, isIso, weekStart, weekEnd, inWeekOf, isSchoolDay, parseHolidays, countSchoolDays, normalizePackage, normalizeLesson, hasFileDates, datedCount, lintPackage, lintLevel };
 export const SERVICE = !!AFAQ.SERVICE;
-const SERVICE_ONLY = 'في نسخة منصة أفق تأتي المواد من اشتراكك فقط — فعّل اشتراكك من موقع المنصة.';
+const SERVICE_ONLY = 'المواد تأتي من اشتراكك في «حاضر» — اخترها أو فعّلها من نافذة «حاضر».';
 
 export { bestLesson, rankLessons, lessonNum, kwNorm, stripSessionSuffix, sessionSuffix, parsePlanText, parsePlanBest, NOOR_STRATEGIES, NOOR_RESOURCES, NOOR_LEVELS, SAMPLE_PLAN, mapStrategies, mapResources };
 

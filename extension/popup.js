@@ -719,11 +719,11 @@ function setup() {
       const [link, st] = await Promise.all([getLink(), getStatus()]);
       const box = $('noLib');
       const h = box.querySelector('h3'), p = box.querySelector('p');
-      if (!link) { h.textContent = 'اربط «حاضر» بحسابك'; p.textContent = 'افتح موقع منصة أفق وسجّل الدخول، فتُربط الإضافة بحسابك وتصلها مواد اشتراكك.'; }
-      else if (st && st.notes && st.notes.length && !(st.subs || []).some((x) => x.ready)) { h.textContent = 'تحاضير اشتراكك قيد الإعداد'; p.textContent = 'ستصل إلى الإضافة فور جاهزيتها. يمكنك تحديثها من حسابك في الموقع.'; }
-      else { h.textContent = 'لا اشتراك فعّال'; p.textContent = 'انتهى اشتراكك أو لم يُفعَّل بعد. اطلب رمز التفعيل من منصة أفق وفعّله من حسابك.'; }
-      $('addPlan').innerHTML = ic('link', 15) + ' افتح موقع منصة أفق';
-      $('addPlan').onclick = () => { chrome.tabs.create({ url: siteUrl('#dashboard') }); };
+      if (!link) { h.textContent = 'ابدأ مع «حاضر»'; p.textContent = 'اختر صفك ومادتك، وتبدأ تجربتك المجانية مباشرة.'; }
+      else if (st && st.notes && st.notes.length && !(st.subs || []).some((x) => x.ready)) { h.textContent = 'تحاضير موادك قيد الإعداد'; p.textContent = 'ستصل إلى الإضافة وحدها فور جاهزيتها.'; }
+      else { h.textContent = 'اختر مادتك'; p.textContent = 'افتح «حاضر» لتختار مادتك أو لتفعيل اشتراكك.'; }
+      $('addPlan').innerHTML = ic('zap', 15) + ' افتح «حاضر»';
+      $('addPlan').onclick = () => { chrome.windows.create({ url: chrome.runtime.getURL('semester.html'), type: 'popup', width: 560, height: 900 }).catch(() => chrome.tabs.create({ url: chrome.runtime.getURL('semester.html') })); window.close(); };
     })().catch(() => {});
   }
 
