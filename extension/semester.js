@@ -8,12 +8,12 @@ import {
   groupKey, lessonGroups, sessionStatus, markSaved, markSaveFailed, daysFor, setPkgDays, usedDates, nextSchoolDay,
   gradeNumber, gradeOfName, sameSubject, unsavedText, kwNorm, ordinalOf, getPicks,
   noorTerms, termAllLessons, pickTreeNode, stripSessionSuffix, sessionSuffix, lessonNum,
-  layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, lintPackage, lintLevel, knownCourse, rememberCourse, resetProgress, packageProgress,
+  layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, lintPackage, lintLevel, knownCourse, rememberCourse, resetProgress, packageProgress, clearSession,
   holidaySet, termEndOf, countSchoolDays, loadNoorTree, storeNoorTree, dateOverrides, setDateOverride, GRADES,
 } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { AFAQ } from './afaq-config.js';
-import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, activateCode, setRef, referral, updateInfo } from './remote.js';
+import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo } from './remote.js';
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -303,12 +303,17 @@ function setNode(p, node) {
   presence(p);
 }
 // الحصص الموجودة في نور لهذا الدرس (بعنوان درس نور، و«(2)» للحصة الثانية)
+// قائمة نور تُصدَّق وحدها متى قُرئت كاملة وكانت عناوينها بصيغة دروس الشجرة (أو كانت فارغة):
+// ما حذفه المعلم من نور يعود حصةً تُعبّأ، ويُمحى من سجل «حاضر» دون سؤال
+let noorTrust = false;
+const forgotten = new Set();
 function presence(p) {
   const have = p.node && noorHave ? (noorHave.get(kwNorm(p.node.text)) || []) : [];
   p.sessions.forEach((s, k) => {
     s.p = p;
-    s.inNoor = have.includes(k + 1) || !!semSaved[s.lesson.id];
-    s.eligible = !!p.node && !s.inNoor && !s.savedNow && (noorHave ? true : !done(s.lesson));
+    if (noorTrust && p.node && !have.includes(k + 1) && (semSaved[s.lesson.id] || done(s.lesson))) { delete semSaved[s.lesson.id]; forgotten.add(s.lesson.id); }
+    s.inNoor = have.includes(k + 1) || (!noorTrust && !!semSaved[s.lesson.id]);
+    s.eligible = !!p.node && !s.inNoor && !s.savedNow && (noorHave || forgotten.has(s.lesson.id) ? true : !done(s.lesson));
     if (!s.eligible) s.on = false;
   });
 }
@@ -917,12 +922,21 @@ async function buildPlan(nodes) {
   const al = alignGroups(groups, nodes, known);
   al.forEach((r, i) => { if (r.cross && r.node) logLine('info', `«${groups[i].lesson}» وجدته في وحدة أخرى بنور: «${r.node.unit}» — رُبط بالاسم`); });
   const ov = dateOverrides(state, pkg.id);
+  noorTrust = !!noorHave && !noorHave.partial && (noorHave.size === 0 || nodes.some((n) => noorHave.has(kwNorm(n.text))));
+  forgotten.clear();
   plan = groups.map((group, i) => {
     const { node, how, why } = al[i];
     const p = { i, group, node, how, miss: !node, why, sessions: group.sessions.map((l) => ({ lesson: l, on: false, inNoor: false, date: '', st: null, cur: false, fixed: isIso(ov[l.id]) ? ov[l.id] : '', manualDate: isIso(ov[l.id]) })) };
     presence(p);
     return p;
   });
+  if (forgotten.size) {
+    const ids = [...forgotten];
+    await semStore((m) => ids.forEach((id) => delete m[id]));
+    for (const id of ids) await clearSession(pkg.id, id).catch(() => {});
+    state = (await getPackages()).state;
+    logLine('info', `${toAr(ids.length)} ${ids.length === 1 ? 'حصة لم تعد في نور — ستُعبّأ من جديد' : 'حصص لم تعد في نور — ستُعبّأ من جديد'}`);
+  }
   // دروس في شجرة نور لم يُربط بها أي درس من ملفك (لن تُعبّأ) — للعلم
   const usedNodes = new Set(plan.filter((p) => p.node).map((p) => p.node.id));
   const orphans = nodes.filter((n) => !usedNodes.has(n.id));
@@ -1939,7 +1953,7 @@ async function wzResolve(noName) {
     if (o2 && o2.src === 'lib') { wz.pkg = o2.pkg; if (o2.pkg.remote && o2.pkg.remote.trial && !o2.pkg.remote.left) { wzGo('pay'); return; } wzGo('kind'); } else wzMsg('bad', 'لم تظهر المادة في مكتبتك بعد — أعد المحاولة بعد قليل.');
   });
 }
-const wzErr = (e) => ({ name: 'اكتب اسمك كاملًا.', shift: 'اختر نوع المدرسة.', packages: 'المادة غير متاحة الآن.', too_many: 'محاولات كثيرة من هذا الجهاز — حاول غدًا أو راسلنا على واتساب.', unlinked: 'انتهى ربط هذا الجهاز — أعد فتح النافذة.', invalid: 'رمز التفعيل غير صحيح.', revoked: 'هذا الرمز لم يعد صالحًا.', used: 'هذا الرمز مستعمل لحساب آخر.', expired: 'انتهى هذا الاشتراك.', devices: 'بلغت الحد الأقصى للأجهزة (جهازان) — راسلنا لرمز جهاز جديد.', network: 'تعذّر الاتصال بالإنترنت — تحقق ثم أعد المحاولة.', server: 'الخادم لم يستجب — أعد المحاولة بعد قليل.' }[e] || 'تعذّر إكمال الطلب — أعد المحاولة.');
+const wzErr = (e) => ({ name: 'اكتب اسمك كاملًا.', shift: 'اختر نوع المدرسة.', packages: 'المادة غير متاحة الآن.', too_many: 'محاولات كثيرة من هذا الجهاز — حاول غدًا أو راسلنا على واتساب.', unlinked: 'انتهى ربط هذا الجهاز — أعد فتح النافذة.', expired: 'انتهى هذا الاشتراك.', devices: 'بلغت الحد الأقصى للأجهزة (جهازان) — راسلنا على واتساب.', network: 'تعذّر الاتصال بالإنترنت — تحقق ثم أعد المحاولة.', server: 'الخادم لم يستجب — أعد المحاولة بعد قليل.' }[e] || 'تعذّر إكمال الطلب — أعد المحاولة.');
 async function wzBusy(text, fn) {
   wz.busy = true; wzMsg('info', `<span class="spin"></span>${esc(text)}`);
   try { await fn(); if ($('wzMsg').classList.contains('info')) wzMsg('', ''); } catch (e) { wzMsg('bad', wzErr('network')); }
@@ -2097,10 +2111,6 @@ function wzPayRender() {
     ${req.id ? `<p class="wz-line">رقم طلبك: <b>${toAr(req.id)}</b></p>` : ''}
     <button class="btn wa big" id="wzWa">راسلنا على واتساب لتفعيل اشتراكك</button>
     <p class="hint" id="wzWait">${req.status === 'requested' ? '<span class="spin"></span>أتحقق من التفعيل كل ٢٠ ثانية…' : ''}</p>
-    <details class="wz-code"><summary>لديّ رمز تفعيل</summary>
-      <input class="input big" id="wzCode" placeholder="AFQ-XXXX-XXXX" dir="ltr">
-      <input class="input big" id="wzCodeName" placeholder="اسمك كما في الرمز">
-      <button class="btn big" id="wzCodeGo">فعّل</button></details>
     <div class="wz-inv" id="wzPayInv"></div>
     <button class="btn sm" id="wzOther">تحضير مادة أخرى</button>`;
   wzInviteFill($('wzPayInv'));
@@ -2115,15 +2125,6 @@ function wzPayRender() {
     openUrl(whatsappUrl((r && r.whatsapp) || st.whatsapp, text));
     if (r && r.ok) { wz.status = Object.assign({}, st, { request: Object.assign({}, req, { id: r.request, status: r.status }) }); }
     wzPayRender();
-  };
-  $('wzCodeGo').onclick = async () => {
-    const code = $('wzCode').value.trim(), name = $('wzCodeName').value.trim();
-    if (!code) { wzMsg('bad', 'اكتب رمز التفعيل.'); return; }
-    await wzBusy('أفعّل الرمز…', async () => {
-      const r = await activateCode(code, name);
-      if (!r.ok) { wzMsg('bad', wzErr(r.error)); return; }
-      await wzActivated();
-    });
   };
   clearInterval(payTimer);
   if (req.status !== 'active') payTimer = setInterval(wzPoll, 20000);   // يفتح وحده متى فعّله المشرف (بالطلب أو بمنح اشتراك)

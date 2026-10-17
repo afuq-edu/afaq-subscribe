@@ -116,9 +116,9 @@
     const term = +$('#basketTerm').value;
     if (!pickedTitles().length) { A.toast('اكتب المادة والصف أولًا.', 'bad'); $('#reqWhat').focus(); return; }
     if (!S.session) {
-      // الرمز يُصدر باسم المعلم: الحساب أولًا، ثم يُرسل الطلب من لوحة المعلم
+      // الاشتراك يُفعَّل باسم المعلم: الحساب أولًا، ثم يُرسل الطلب من لوحة المعلم
       sessionStorage.setItem(PICKS_KEY, JSON.stringify({ titles: pickedTitles(), term, plan: S.plan }));
-      A.toast('أنشئ حسابك أولًا ليصدر الرمز باسمك، ثم أرسل طلبك من حسابك.');
+      A.toast('أنشئ حسابك أولًا ليُفعَّل الاشتراك باسمك، ثم أرسل طلبك من حسابك.');
       location.hash = '#register';
       return;
     }
@@ -142,7 +142,7 @@
     e.preventDefault();
     const f = e.target, msg = $('#regMsg'), btn = $('button[type=submit]', f);
     const name = f.full_name.value.replace(/\s+/g, ' ').trim();
-    if (name.split(' ').length < 3) { setMsg(msg, 'bad', 'اكتب اسمك الثلاثي على الأقل، كما تريده في رمز التفعيل.'); f.full_name.focus(); return; }
+    if (name.split(' ').length < 3) { setMsg(msg, 'bad', 'اكتب اسمك الثلاثي على الأقل، كما تريده في اشتراكك.'); f.full_name.focus(); return; }
     if (!/^\+?[\d\s]{8,15}$/.test(f.phone.value.trim())) { setMsg(msg, 'bad', 'اكتب رقم هاتف صحيحًا (واتساب).'); f.phone.focus(); return; }
     if (!f.email.value.includes('@')) { setMsg(msg, 'bad', 'اكتب بريدًا إلكترونيًا صحيحًا.'); f.email.focus(); return; }
     if (f.password.value.length < 6) { setMsg(msg, 'bad', 'كلمة المرور ستة أحرف على الأقل.'); f.password.focus(); return; }
@@ -217,9 +217,9 @@
   async function renderSubs() {
     const box = $('#subs');
     try { S.subs = await db.rpc('my_subscriptions'); } catch (e) { box.innerHTML = `<p class="msg bad">${esc(A.errText(e))}</p>`; return; }
-    $('#nameLock').textContent = S.subs.length ? 'اسمك مرتبط برموز التفعيل، ولتعديله تواصل مع منصة أفق.' : '';
+    $('#nameLock').textContent = S.subs.length ? 'اسمك مرتبط باشتراكك، ولتعديله تواصل مع منصة أفق.' : '';
     if (!S.subs.length) {
-      box.innerHTML = '<div class="empty"><b>لا اشتراكات بعد</b>اختر باقاتك واطلب رمز التفعيل عبر واتساب، ثم فعّله من هنا.</div>';
+      box.innerHTML = '<div class="empty"><b>لا اشتراكات بعد</b>اختر باقاتك واطلب الاشتراك عبر واتساب، ويظهر هنا فور تفعيله.</div>';
       return;
     }
     const today = new Date();
@@ -234,36 +234,6 @@
       </div>`;
     }).join('');
   }
-
-  const CODE_ERR = {
-    invalid: 'هذا الرمز غير صحيح. تأكد من كتابته كما وصلك.',
-    revoked: 'هذا الرمز أُلغي. تواصل مع منصة أفق.',
-    used: 'هذا الرمز مستعمل في حساب آخر.',
-    expired: 'انتهت مدة هذا الرمز (الفصل أو العام الذي صدر له).',
-    too_many: 'محاولات خاطئة كثيرة. أعد المحاولة بعد ساعة.',
-    login: 'سجّل الدخول أولًا.',
-  };
-  $('#codeForm').onsubmit = async (e) => {
-    e.preventDefault();
-    const f = e.target, msg = $('#codeMsg'), btn = $('button', f);
-    const code = f.code.value.trim();
-    if (!code) { f.code.focus(); return; }
-    btn.disabled = true;
-    try {
-      const r = await db.rpc('redeem_code', { p_code: code });
-      if (r.ok) {
-        setMsg(msg, 'ok', `✓ فُعّل ${r.plan === 'year' ? 'اشتراكك السنوي' : 'اشتراكك'} في: ${esc(r.packages.join('، '))}، حتى ${A.dateAr(r.ends_on)}.`);
-        f.reset();
-        await renderSubs();
-        const p = await A.ext.ping();
-        if (p && p.linked) { const s = await A.ext.sync(); if (s && s.ok) A.toast('حُدّثت المواد في الإضافة.', 'ok'); }
-        renderExt(true);
-      } else if (r.error === 'name') {
-        setMsg(msg, 'bad', `هذا الرمز صادر باسم «${esc(r.code_name)}»، واسم حسابك «${esc(r.account_name)}». إن كان الاسمان لك فتواصل مع منصة أفق لتصحيحه.`);
-      } else setMsg(msg, 'bad', esc(CODE_ERR[r.error] || 'تعذّر التفعيل.'));
-    } catch (err) { setMsg(msg, 'bad', esc(A.errText(err))); }
-    btn.disabled = false;
-  };
 
   async function renderDevices() {
     const ul = $('#devices');
@@ -322,7 +292,7 @@
     if (!p) { A.toast('الإضافة غير مثبتة في هذا المتصفح. ثبّتها من صفحة «تثبيت الإضافة»، ثم اضغط «اربط الإضافة بحسابي».', 'bad'); return; }
     if (!(p.linked && sameName(p.name, S.profile && S.profile.full_name))) {
       if (S.subs.some((s) => s.active)) { await linkExt(); return; }   // الربط يجلب المواد أيضًا
-      A.toast('لا اشتراك فعّال في حسابك بعد. فعّل رمز اشتراكك أولًا، ثم اربط الإضافة.', 'bad'); return;
+      A.toast('لا اشتراك فعّال في حسابك بعد. اطلب اشتراكك عبر واتساب أولًا، ثم اربط الإضافة.', 'bad'); return;
     }
     const r = await A.ext.sync();
     if (r && r.ok) { A.toast('حُدّثت المواد في الإضافة.', 'ok'); renderExt(false); }
