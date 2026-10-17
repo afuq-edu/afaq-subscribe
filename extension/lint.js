@@ -1,6 +1,6 @@
 // lint.js — فحص ملف المادة قبل التشغيل: ما الذي قد يعطّل التعبئة أو يضعف التعرّف على الدروس في نور؟
 // لا يمنع شيئًا — يكشف المشكلات ويقترح الحل، وما يمكن إصلاحه تلقائيًا (تاريخ بصيغة غريبة، يوم إجازة…) يُصلَح وقت التشغيل.
-import { lessonNum, unitNum, kwNorm, titleSim, sessionSuffix, nameOnly, keywords } from './match.js';
+import { lessonNum, unitNum, kwNorm, titleSim, sessionSuffix, nameOnly, keywords, fixPairOrder } from './match.js';
 import { isIso, isSchoolDay, dayLabel, parseAnyDate, toArDigits, isoOf, weekNo, diffDays, countSchoolDays, nextSchoolDay, addDays, rangeStartDate } from './dates.js';
 
 const textOf = (h) => String(h || '').replace(/<[^<>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
@@ -33,7 +33,7 @@ export function normalizeLesson(l) {
   return l;
 }
 export function normalizePackage(pkg) {
-  if (pkg && Array.isArray(pkg.lessons)) pkg.lessons.forEach(normalizeLesson);
+  if (pkg && Array.isArray(pkg.lessons)) { pkg.lessons.forEach(normalizeLesson); fixPairOrder(pkg.lessons); }
   return pkg;
 }
 export const hasFileDates = (pkg) => !!(pkg && (pkg.lessons || []).some((l) => isIso(l.pubDate)));

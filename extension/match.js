@@ -99,9 +99,32 @@ export function sessionSuffix(s) { const m = digits(s).match(/[(（]\s*(\d{1,2})
 
 // ترقيم مزدوج في أول العنوان «1 - 4 الصيغة التربيعية» «2.5 …» «3/1 …»: الوحدة ثم الدرس — { u, l } أو null
 export function pairNums(s) {
-  const t = String(digits(stripSessionSuffix(s))).trim();
-  const m = t.match(/^[(\[]?\s*(\d{1,2})\s*[-–—.\/:]\s*(\d{1,2})\s*(?=[^\d\/.\-–—:]|$)/);
+  let t = String(digits(stripSessionSuffix(s))).trim();
+  // «الدرس 1-2: …»: بعد كلمة الدرس يُقبل «:» بعد الزوج
+  const pre = t.match(/^(?:الدرس|درس|lesson)\s*[:\-–—]?\s*(?=\d{1,2}\s*[-–—.\/:]\s*\d)/i);
+  if (pre) t = t.slice(pre[0].length);
+  const m = pre ? t.match(/^(\d{1,2})\s*[-–—.\/]\s*(\d{1,2})(?=[^\d\/.\-–—]|$)/) : t.match(/^[(\[]?\s*(\d{1,2})\s*[-–—.\/:]\s*(\d{1,2})\s*(?=[^\d\/.\-–—:]|$)/);
   return m ? { u: +m[1], l: +m[2] } : null;
+}
+// ملف يكتب الترقيم «الدرس-الوحدة» («1-1 الجهاز الدوري»، «2-1 القلب»…) بدل «الوحدة-الدرس»: في كل وحدة يثبت الرقم الثاني ويتغيّر الأول.
+// نقلبه إلى «الوحدة-الدرس» ليُقرأ رقم الدرس صحيحًا (والمعكوس في نور يطابقه عبر swappedPair). يغيّر الحصص في مكانها.
+export function fixPairOrder(lessons) {
+  if (!Array.isArray(lessons)) return lessons;
+  const byUnit = new Map();
+  lessons.forEach((l) => { if (!l || !l.lesson) return; const k = kwNorm(l.unit || ''); if (!byUnit.has(k)) byUnit.set(k, new Map()); byUnit.get(k).set(kwNorm(l.lesson), l.lesson); });
+  let swap = 0, keep = 0;
+  for (const names of byUnit.values()) {
+    const ps = [...names.values()].map(pairNums);
+    if (ps.length < 2 || ps.some((x) => !x)) continue;
+    const us = new Set(ps.map((x) => x.u)), ls = new Set(ps.map((x) => x.l));
+    if (ls.size === 1 && us.size === ps.length) swap++; else if (us.size === 1 && ls.size === ps.length) keep++;
+  }
+  if (!swap || keep) return lessons;
+  lessons.forEach((l) => {
+    if (!l || !pairNums(l.lesson)) return;
+    l.lesson = String(l.lesson).replace(/^(\s*(?:الدرس|درس|lesson)?\s*[:\-–—]?\s*[(\[]?\s*)([0-9٠-٩]{1,2})(\s*[-–—.\/:]\s*)([0-9٠-٩]{1,2})/i, (m, a, x, sep, y) => a + y + sep + x);
+  });
+  return lessons;
 }
 // الزوجان نفسهما معكوسين «2 - 5» و«5 - 2» (خطأ شائع في شجرة نور) — يُعدّان الدرس نفسه
 export const swappedPair = (a, b) => { const x = pairNums(a), y = pairNums(b); return !!(x && y && x.u === y.l && x.l === y.u && x.u !== x.l); };
@@ -116,6 +139,8 @@ export function leadNum(s) {
 }
 // رقم الدرس من العنوان: «Lesson 8» أو «Lesson Eight» أو «U1 L3» أو «الدرس 8» أو «الدرس الثامن» أو «درس رقم ٨» — وإلا رقم في أوله «8- …»
 export function lessonNum(s) {
+  // «الدرس 1-2 …» / «Lesson 1-2 …»: ترقيم مزدوج بعد كلمة الدرس — الرقم الثاني هو الدرس، لا رقم الوحدة
+  if (/^\s*(?:الدرس|درس|lesson)/i.test(String(digits(s)))) { const pr = pairNums(s); if (pr) return pr.l; }
   const t = kwNorm(digits(stripSessionSuffix(s)));
   let m = t.match(/(?:(?<![a-z])(?:lesson|les|lsn)|درس|الدرس)\s*(?:رقم\s*|no\s*|number\s*)?(\d+)/i);
   if (m) return +m[1];
