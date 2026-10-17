@@ -35,7 +35,7 @@
       if (!n) return;
       const a = document.createElement('a');
       a.className = 'btn'; a.style.marginInlineStart = '8px'; a.target = '_blank'; a.rel = 'noopener';
-      a.href = 'https://wa.me/' + n + '?text=' + encodeURIComponent('السلام عليكم، أحتاج مساعدة في منصة أفق التعليمية.');
+      a.href = (/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) ? 'https://api.whatsapp.com/send' : 'https://web.whatsapp.com/send') + '?phone=' + n + '&text=' + encodeURIComponent('السلام عليكم، أحتاج مساعدة في منصة أفق التعليمية.');
       a.textContent = 'تواصل عبر واتساب';
       document.getElementById('contact').appendChild(a);
     } catch (e) {}
