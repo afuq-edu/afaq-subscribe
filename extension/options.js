@@ -228,7 +228,7 @@ VIEWS.library = (flag) => {
   } else if (flag === 'welcome') {
     banner = `<section class="card banner"><h3>${ic('zap')} أهلًا بك في «حاضر»</h3>
       <div class="steps" style="margin-top:6px">
-        ${AFAQ.SERVICE ? `<div class="step"><span class="n">١</span><b>افتح حسابك في منصة أفق</b><p>سجّل الدخول في <a href="${esc(siteUrl('#dashboard'))}" target="_blank" rel="noopener">موقع المنصة</a> وفعّل رمزك، فتُربط الإضافة وتصلها موادك.</p></div>` : `<div class="step"><span class="n">١</span><b>جهّز تحضير مادتك</b><p>أضف تحضير مادتك بلصق النص أو رفع ملف Word أو HTML، أو استورد ملف مادة جاهزًا.</p></div>`}
+        ${AFAQ.SERVICE ? `<div class="step"><span class="n">١</span><b>افتح «حاضر»</b><p>اختر صفك ومادتك من <a href="#" data-wizard>نافذة «حاضر»</a>، وتبدأ تجربتك المجانية مباشرة.</p></div>` : `<div class="step"><span class="n">١</span><b>جهّز تحضير مادتك</b><p>أضف تحضير مادتك بلصق النص أو رفع ملف Word أو HTML، أو استورد ملف مادة جاهزًا.</p></div>`}
         <div class="step"><span class="n">٢</span><b>افتح «إضافة تحضير» في نور</b><p>من صفحة المادة اختر الدرس ثم «إضافة تحضير».</p></div>
         <div class="step"><span class="n">٣</span><b>اضغط «حاضر» ← عبّئ</b><p>يتعرّف على الدرس ويقترح الحصة والتاريخ، ويعبّئ البنود كلها.</p></div>
         <div class="step"><span class="n">٤</span><b>راجع واحفظ</b><p>بعد «حفظ» في نور تُسجَّل الحصة محفوظة تلقائيًا.</p></div>
@@ -236,11 +236,11 @@ VIEWS.library = (flag) => {
   }
   V().innerHTML = `
     <div class="page-h"><div><h2>مكتبة التحاضير</h2><p class="sub">موادك ودروسها وحصصها في مكان واحد — افتح مادة لترى حصصها وتعدّلها وتتابع ما حُفظ.</p></div>
-      <div class="acts">${AFAQ.SERVICE ? `<a class="btn primary" href="${esc(siteUrl('#dashboard'))}" target="_blank" rel="noopener">${ic('link', 16)} حسابي في منصة أفق</a>` : `<a class="btn primary" href="#create">${ic('plus', 16)} إضافة تحضير</a><a class="btn" href="#transfer">${ic('upload', 16)} استيراد ملف</a>`}</div></div>
+      <div class="acts">${AFAQ.SERVICE ? `<a class="btn primary" href="#" data-wizard>${ic('zap', 16)} افتح «حاضر»</a>` : `<a class="btn primary" href="#create">${ic('plus', 16)} إضافة تحضير</a><a class="btn" href="#transfer">${ic('upload', 16)} استيراد ملف</a>`}</div></div>
     ${banner}
     ${pk.length ? `<div class="cards">${pk.map(pkgCard).join('')}${AFAQ.SERVICE ? '' : `<a class="card add-card" href="#create"><div>${ic('plus', 26)}<br><b>مادة أو صف جديد</b><br><small>الصق النص أو ارفع ملف Word أو HTML</small></div></a>`}</div>`
       : AFAQ.SERVICE
-        ? `<section class="card empty"><b>لا مواد في اشتراكك بعد</b>موادك تأتي من اشتراكك في منصة أفق: افتح حسابك في الموقع، ففعّل رمزك وتُربط الإضافة تلقائيًا.<div style="margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap"><a class="btn primary" href="${esc(siteUrl('#dashboard'))}" target="_blank" rel="noopener">${ic('link', 15)} افتح حسابي في منصة أفق</a></div></section>`
+        ? `<section class="card empty"><b>لا مواد بعد</b>افتح «حاضر» واختر صفك ومادتك، فتصلك موادها وتبدأ تجربتك المجانية مباشرة.<div style="margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap"><a class="btn primary" href="#" data-wizard>${ic('zap', 15)} افتح «حاضر»</a></div></section>`
         : `<section class="card empty"><b>المكتبة فارغة</b>أضف تحضير مادتك مرة واحدة، ثم عبّئه في نور بضغطة.<div style="margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap"><a class="btn primary" href="#create">${ic('plus', 15)} إضافة تحضير</a><a class="btn" href="#transfer">${ic('upload', 15)} استيراد ملف</a></div></section>`}`;
   current.refresh = () => VIEWS.library(flag);
 };
@@ -1149,3 +1149,11 @@ async function init() {
   route();
 }
 init();
+
+// «افتح حاضر»: نافذة المعالج الرئيسية (لا حساب ولا تسجيل في الموقع)
+document.addEventListener('click', (e) => {
+  const a = e.target.closest && e.target.closest('[data-wizard]');
+  if (!a) return;
+  e.preventDefault();
+  chrome.windows.create({ url: chrome.runtime.getURL('semester.html'), type: 'popup', width: 560, height: 900 }).catch(() => chrome.tabs.create({ url: chrome.runtime.getURL('semester.html') }));
+});

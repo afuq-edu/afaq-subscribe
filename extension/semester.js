@@ -1501,7 +1501,7 @@ async function init() {
   if (!withLessons.length) {
     if (!q.get('classic')) { $('startBtn').disabled = true; return; }
     msg('bad', AFAQ.SERVICE
-      ? `لا مواد في اشتراكك. افتح <a href="${esc(siteUrl('#dashboard'))}" target="_blank" rel="noopener">حسابك في منصة أفق</a> لربط الإضافة أو تفعيل اشتراكك، ثم أعد فتح هذه النافذة.`
+      ? 'لا مواد بعد. افتح هذه النافذة دون «النسخة الكاملة» لتختار صفك ومادتك.'
       : 'المكتبة فارغة. أضف تحضير مادتك أولًا من صفحة «المكتبة» (لصق نص، أو ملف Word أو HTML، أو استيراد ملف مادة).');
     $('startBtn').disabled = true;
     return;
