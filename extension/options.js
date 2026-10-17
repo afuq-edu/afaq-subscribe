@@ -966,7 +966,7 @@ VIEWS.settings = async () => {
         ${sw('autoContinue', '«فصل كامل»: لا تتوقف عند تعارضات الربط', 'تبدأ وحدها بعد مهلة وتتخطى ما لم يُربط بدرس في نور وتخبرك في النهاية')}
         ${sw('skipFilled', 'لا تغيّر البنود المكتوبة في الصفحة', 'مفيد إن كتبت جزءًا بنفسك')}
       </div></div>
-      <div class="set-row"><b>داخل صفحة نور</b><div class="set-stack">${sw('fab', 'أظهر زر «حاضر» العائم في صفحة «إضافة تحضير»')}${sw('autoOpen', 'افتح النافذة داخل الصفحة تلقائيًا عند متابعة التحضير', 'بعد إنجاز حصة، تُفتح عند فتح نموذج التالية')}</div></div>
+      <div class="set-row"><b>داخل صفحة نور</b><div class="set-stack">${sw('fab', 'أظهر زر «افتح حاضر» الصغير في صفحة «إضافة تحضير»')}</div></div>
       <div class="set-row"><b>اختصار لوحة المفاتيح<small>يعبّئ الدرس المفتوح بالحصة والتاريخ المقترحين</small></b><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">${shortcut ? `<kbd>${esc(shortcut)}</kbd>` : '<span class="hint">غير مضبوط</span>'}<button class="btn sm" id="sKeys">تغيير الاختصار</button></div></div>
       <div class="set-row"><b>البيانات<small>صدّر نسخة احتياطية قبل أي حذف</small></b><div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn sm" href="#transfer">${ic('save', 14)} النسخ الاحتياطي</a><button class="btn sm danger" id="sReset">تصفير تقدم كل المواد</button></div></div>
     </section>`;

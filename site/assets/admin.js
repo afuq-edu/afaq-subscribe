@@ -216,7 +216,7 @@ ${plan === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي'}: ${titles
   function pkgPicker(box, selected) {
     const by = new Map();
     D.packages.filter((p) => p.active).forEach((p) => { if (!by.has(p.subject)) by.set(p.subject, []); by.get(p.subject).push(p); });
-    box.innerHTML = by.size ? [...by].map(([s, list]) => `<div class="subj"><b>${esc(s)}</b>${list.map((p) => `<label><input type="checkbox" value="${esc(p.id)}" ${selected && selected.includes(p.id) ? 'checked' : ''}>${esc(A.GRADES[p.grade] || p.grade)}</label>`).join('')}</div>`).join('')
+    box.innerHTML = by.size ? [...by].map(([s, list]) => `<div class="subj"><b>${esc(s)}</b>${list.map((p) => `<label><input type="checkbox" value="${esc(p.id)}" ${selected && selected.includes(p.id) ? 'checked' : ''}>${esc(A.GRADES[p.grade] || p.grade)}${p.shift === 'two' ? ' (فترتان)' : p.shift === 'one' ? ' (فترة واحدة)' : ''}</label>`).join('')}</div>`).join('')
       : '<p class="muted small">أضف الباقات أولًا.</p>';
   }
   function codeMessage(c) {
@@ -478,7 +478,8 @@ ${plan === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي'}: ${titles
       const p = x.pkg, ex = D.packages.find((k) => k.id === p.id);
       setMsg(msg, '', `جارٍ الرفع ${toAr(i + 1)} من ${toAr(items.length)}: ${esc(p.title || p.id)}…`);
       try {
-        const title = p.title || `${p.subject} — ${A.GRADES[+p.gradeNum]}`;
+        const sh = p.shift === 'two' ? ' (فترتان)' : p.shift === 'one' ? ' (فترة واحدة)' : '';
+        const title = (p.title || `${p.subject} — ${A.GRADES[+p.gradeNum]}`).replace(/\s*\((?:فترتان|فترة واحدة)\)$/, '') + sh;
         if (ex) { if (ex.shift !== p.shift) await db.update('packages', { shift: p.shift }, { id: p.id }); }
         else { await db.insert('packages', { id: p.id, subject: p.subject, grade: +p.gradeNum, title, shift: p.shift }); D.packages.push({ id: p.id, subject: p.subject, grade: +p.gradeNum, title, shift: p.shift, active: true }); }
         const r = await db.rpc('admin_upload_content', { p_package: p.id, p_term: x.term, p_pkg: p });
