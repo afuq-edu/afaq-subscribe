@@ -521,12 +521,17 @@ async function stepHome() {
     if (!(await waitOnline())) return null;
     setBox('run', 'أفتح الصفحة الرئيسية في نور…');
     await nav(HOME);
+    let r = null;
     for (let j = 0; j < 4 && !stopFlag; j++) {
-      const r = await exec(readHomePage);
-      if (r && r.login) { if (!(await loginWait(HOME))) return null; j = -1; continue; }
+      r = await exec(readHomePage);
+      if (r && r.login) { await focusNoor(); if (!(await loginWait(HOME))) return null; j = -1; continue; }
       if (r && r.courses.length) { chrome.storage.local.set({ noorCourses: { at: Date.now(), courses: r.courses } }).catch(() => {}); return r.courses; }
       await sleep(1500);
     }
+    if (stopFlag) break;
+    // لم تُفتح صفحة نور الرئيسية (صفحة دخول بشكل آخر، أو تحويل إلى موقع غير نور): غالبًا الدخول مطلوب —
+    // نُظهر نور للمعلم ونكمل وحدنا فور دخوله، بدل انتظار يتكرر
+    if (!r || !/lms\.moe\.gov\.om\/teacher/.test(r.url || '')) { await focusNoor(); if (!(await loginWait(HOME))) return null; continue; }
     await backoff(i + 1, 'لم تظهر بطاقات المواد بعد — أعيد فتح الرئيسية');
   }
   if (stopFlag) return null;
@@ -960,8 +965,8 @@ async function waitOnline() {
 }
 // انتظار متدرّج: ٥ ثم ١٠ ثم ٢٠ ثم ٤٠ ثانية (حتى دقيقة)
 async function backoff(n, why) {
-  const ms = Math.min(60000, 5000 * 2 ** Math.max(0, n - 1));
-  if (WIZ.on) setBox('run', 'أنتظر نور قليلًا', `وأكمل وحدي بعد ${toAr(Math.round(ms / 1000))} ثانية…`);
+  const ms = WIZ.on ? Math.min(15000, 3000 * n) : Math.min(60000, 5000 * 2 ** Math.max(0, n - 1));
+  if (WIZ.on) setBox('run', 'أتابع مع نور…');
   else setBox('warn', why || 'نور بطيئة — أنتظر قليلًا ثم أعيد المحاولة', `إعادة المحاولة تلقائيًا بعد ${toAr(Math.round(ms / 1000))} ثانية…`);
   for (let t = 0; t < ms && !stopFlag; t += 500) await sleep(500);
 }
