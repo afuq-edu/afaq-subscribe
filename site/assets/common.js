@@ -72,12 +72,8 @@
     settingsCache = out;
     return out;
   }
-  // على الحاسوب: واتساب ويب مباشرة (wa.me يتوقف عند صفحة وسيطة إن لم يكن تطبيق واتساب مثبتًا)، وعلى الهاتف: تطبيق واتساب
-  const waLink = (number, text) => {
-    const n = String(number || '').replace(/[^\d]/g, '').replace(/^00/, '');
-    const host = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) ? 'https://api.whatsapp.com/send' : 'https://web.whatsapp.com/send';
-    return `${host}?${n ? 'phone=' + n + '&' : ''}text=${encodeURIComponent(text)}`;
-  };
+  // رابط واتساب بالصيغة التي اعتمدها صاحب المنصة: wa.me/<الرقم>?text=… (يعمل على الهاتف والحاسوب)
+  const waLink = (number, text) => `https://wa.me/${String(number || '').replace(/[^\d]/g, '').replace(/^00/, '')}?text=${encodeURIComponent(text)}`;
 
   // ---------- جسر إضافة «حاضر» (externally_connectable) ----------
   // EXTENSION_ID نص أو قائمة (نسخة المتجر ونسخة التجربة): أول إضافة مثبّتة تردّ هي المعتمدة

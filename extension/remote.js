@@ -174,7 +174,7 @@ export async function contactRequest() {
 }
 export function whatsappUrl(number, text) {
   const n = String(number || '').replace(/\D/g, '').replace(/^00/, '') || '96876506037';
-  return `https://web.whatsapp.com/send?phone=${n}&text=${encodeURIComponent(text)}`;   // الإضافة على الحاسوب: واتساب ويب مباشرة
+  return `https://wa.me/${n}?text=${encodeURIComponent(text)}`;
 }
 // رمز التفعيل (احتياط: جهاز جديد أو رمز قديم) — يربط الجهاز ويجلب المواد
 export async function activateCode(code, name) {
