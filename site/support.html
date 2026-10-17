@@ -31,7 +31,7 @@
     try {
       const c = window.AFAQ_CONFIG;
       const r = await fetch(c.SUPABASE_URL + '/rest/v1/settings?key=eq.whatsapp&select=value', { headers: { apikey: c.SUPABASE_ANON_KEY } });
-      const n = String(((await r.json())[0] || {}).value || '').replace(/[^\d]/g, '');
+      const n = String(((await r.json())[0] || {}).value || '').replace(/[^\d]/g, '').replace(/^00/, '');
       if (!n) return;
       const a = document.createElement('a');
       a.className = 'btn'; a.style.marginInlineStart = '8px'; a.target = '_blank'; a.rel = 'noopener';

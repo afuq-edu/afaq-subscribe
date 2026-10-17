@@ -72,7 +72,7 @@
     settingsCache = out;
     return out;
   }
-  const waLink = (number, text) => `https://wa.me/${String(number || '').replace(/[^\d]/g, '')}?text=${encodeURIComponent(text)}`;
+  const waLink = (number, text) => `https://wa.me/${String(number || '').replace(/[^\d]/g, '').replace(/^00/, '')}?text=${encodeURIComponent(text)}`;
 
   // ---------- جسر إضافة «حاضر» (externally_connectable) ----------
   // EXTENSION_ID نص أو قائمة (نسخة المتجر ونسخة التجربة): أول إضافة مثبّتة تردّ هي المعتمدة

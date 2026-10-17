@@ -228,7 +228,8 @@ ${plan === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي'}: ${titles
     } else if (t) valid = `اشتراك فصلي، صالح حتى نهاية ${A.termName(t.term)} (${A.dateAr(t.ends_on)})`;
     return [`السلام عليكم أ. ${c.teacher_name}`, 'رمز تفعيل اشتراكك في منصة أفق التعليمية:', c.code, '',
       `الباقات: ${c.package_ids.map(pkgTitle).join('، ')}`, valid, '',
-      `للتفعيل: ادخل حسابك في ${SITE}#dashboard ثم اكتب الرمز في «تفعيل رمز».`].filter((x) => x !== null).join('\n');
+      `لتثبيت أداة «حاضر» (مرة واحدة): ${SITE}install.html`,
+      'للتفعيل: افتح «حاضر» واضغط «لديّ رمز تفعيل» ثم اكتب الرمز.'].filter((x) => x !== null).join('\n');
   }
   async function copy(text) {
     try { await navigator.clipboard.writeText(text); A.toast('نُسخت الرسالة.', 'ok'); }
@@ -535,7 +536,7 @@ ${plan === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي'}: ${titles
       if (vals[k] && !A.priceNum(vals[k])) { setMsg(msg, 'bad', 'السعر رقم، مثل 5 أو 4.5'); return; }
       vals[k] = vals[k] ? String(A.priceNum(vals[k])) : '';
     }
-    vals.whatsapp = vals.whatsapp.replace(/[^\d]/g, '');
+    vals.whatsapp = vals.whatsapp.replace(/[^\d]/g, '').replace(/^00/, '');   // wa.me لا يقبل 00 قبل رمز الدولة
     if (vals.whatsapp && vals.whatsapp.length < 10) { setMsg(msg, 'bad', 'رقم واتساب بالصيغة الدولية، مثل 9689xxxxxxx.'); return; }
     if (vals.extension_url && !/^https:\/\/(chromewebstore\.google\.com|chrome\.google\.com\/webstore)\//.test(vals.extension_url)) { setMsg(msg, 'bad', 'ضع رابط صفحة الإضافة في متجر كروم (chromewebstore.google.com)، أو اتركه فارغًا ما دامت الإضافة لم تُنشر.'); return; }
     try { await db.upsert('settings', keys.map((k) => ({ key: k, value: vals[k] }))); setMsg(msg, 'ok', 'حُفظت الإعدادات.'); } catch (err) { setMsg(msg, 'bad', esc(A.errText(err))); }
