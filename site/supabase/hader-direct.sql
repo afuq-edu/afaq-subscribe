@@ -165,8 +165,8 @@ begin
      or exists (select 1 from unnest(p_packages) x where x not in (select id from public.packages where active)) then
     return jsonb_build_object('ok', false, 'error', 'packages');
   end if;
-  -- حد التسجيل من الشبكة نفسها في اليوم (شبكة المدرسة يشترك فيها معلمون كثيرون)
-  if (select count(*) from public.ext_requests where ip_hash = v_ip and created_at > now() - interval '1 day') >= 40 then
+  -- حد التسجيل من الشبكة نفسها في اليوم؛ المدير يصفّره بـ admin_unlock_network
+  if (select count(*) from public.ext_requests where ip_hash = v_ip and created_at > now() - interval '1 day') >= 6 then
     return jsonb_build_object('ok', false, 'error', 'too_many');
   end if;
   insert into auth.users (instance_id, id, aud, role, is_anonymous, raw_app_meta_data, raw_user_meta_data, created_at, updated_at)
