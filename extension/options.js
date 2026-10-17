@@ -328,7 +328,7 @@ VIEWS.pkg = (id) => {
   $('pGrade').onchange = saveMeta;
   bindDays($('pDays'), days, async (d) => { await write(() => setPkgDays(p.id, d)); toast('✓ حُفظت أيام الحصص'); });
 
-  $('pTerm').onclick = () => chrome.windows.create({ url: chrome.runtime.getURL(`semester.html?pkg=${encodeURIComponent(p.id)}`), type: 'popup', width: 560, height: 900 });
+  $('pTerm').onclick = () => { const u = chrome.runtime.getURL(`semester.html?pkg=${encodeURIComponent(p.id)}`); chrome.windows.create({ url: u, type: 'popup', width: 560, height: 900 }).catch(() => chrome.tabs.create({ url: u })); };
   $('pExport').onclick = () => { try { download(`حاضر - ${p.title}.json`, exportPackageFile(p)); } catch (e) { toast(String(e.message || e), 4000); } };
   $('pReset').onclick = async () => {
     if (!(await confirmBox('تصفير التقدم', `ستعود كل حصص «${p.title}» إلى «لم تُعبّأ»، ويُمسح سجل إدخالها وسجل «فصل كامل» لمقررها، فتُدخل من جديد كأنها لم تُدخل قط (مناسب بعد حذف التحاضير من نور). لا يُحذف شيء من نور ولا من المحتوى.`, 'تصفير'))) return;
