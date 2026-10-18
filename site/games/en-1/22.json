@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 3: Our classroom",
+ "lesson": "Lesson 5: Project – A desk tidy + Sound b",
+ "outcomes": [
+  "I can say what I've got: I've got a pen.",
+  "I can name crayon, pen, pencil, eraser and ruler.",
+  "I can hear the b sound in bird, boy and ball."
+ ],
+ "tf": [
+  {
+   "s": "We can say: I've got a ruler.",
+   "t": true,
+   "why": "Yes! I've got a … tells what you have."
+  },
+  {
+   "s": "We keep pens and pencils in a desk tidy.",
+   "t": true,
+   "why": "Great! A desk tidy keeps our things tidy."
+  },
+  {
+   "s": "Ball starts with the b sound.",
+   "t": true,
+   "why": "Yes! B-b-ball."
+  },
+  {
+   "s": "Goat starts with the b sound.",
+   "t": false,
+   "why": "Goat starts with g. Boy starts with b."
+  },
+  {
+   "s": "b – a – t makes the word bat.",
+   "t": true,
+   "why": "Well done! b-a-t is bat."
+  },
+  {
+   "s": "b – i – n makes the word big.",
+   "t": false,
+   "why": "b-i-n makes bin. b-i-g makes big."
+  },
+  {
+   "s": "An eraser is a toy animal.",
+   "t": false,
+   "why": "An eraser is a school thing. It rubs out pencil."
+  },
+  {
+   "s": "Book and bag start with the same letter.",
+   "t": true,
+   "why": "Yes! Both start with b."
+  },
+  {
+   "s": "Shell starts with the letter b.",
+   "t": false,
+   "why": "Shell starts with sh."
+  },
+  {
+   "s": "Crayon, pen and pencil are school things.",
+   "t": true,
+   "why": "Right! We use them in class."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's this? (an eraser)",
+   "o": [
+    "It's an eraser.",
+    "It's a ruler.",
+    "It's a crayon."
+   ],
+   "why": "It's an eraser. Well done!"
+  },
+  {
+   "q": "Which word starts with b?",
+   "o": [
+    "bird",
+    "goat",
+    "fish"
+   ],
+   "why": "B-b-bird starts with b."
+  },
+  {
+   "q": "b – i – g. What's the word?",
+   "o": [
+    "big",
+    "bin",
+    "bat"
+   ],
+   "why": "b-i-g makes big."
+  },
+  {
+   "q": "What's missing? _ird",
+   "o": [
+    "b",
+    "g",
+    "f"
+   ],
+   "why": "b + ird makes bird."
+  },
+  {
+   "q": "You have a pen. What do you say?",
+   "o": [
+    "I've got a pen.",
+    "Who's this?",
+    "It's my turn."
+   ],
+   "why": "I've got a pen. Great!"
+  },
+  {
+   "q": "Where's your desk tidy?",
+   "o": [
+    "It's on the desk.",
+    "It's in the sea.",
+    "It's on the wall."
+   ],
+   "why": "The desk tidy is on the desk."
+  },
+  {
+   "q": "First sound of grapes?",
+   "o": [
+    "g",
+    "b",
+    "sh"
+   ],
+   "why": "Grapes starts with g."
+  },
+  {
+   "q": "f + ig = ?",
+   "o": [
+    "fig",
+    "fog",
+    "big"
+   ],
+   "why": "f and ig make fig."
+  },
+  {
+   "q": "Which picture goes with sh?",
+   "o": [
+    "shell",
+    "book",
+    "orange"
+   ],
+   "why": "Shell starts with sh."
+  },
+  {
+   "q": "We colour with a …",
+   "o": [
+    "crayon",
+    "ruler",
+    "eraser"
+   ],
+   "why": "We colour with crayons."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "It starts with b",
+   "a": "bubble",
+   "d": [
+    "shell",
+    "goat",
+    "fish"
+   ]
+  },
+  {
+   "q": "b – i – n",
+   "a": "bin",
+   "d": [
+    "big",
+    "bat",
+    "fig"
+   ]
+  },
+  {
+   "q": "b – a – t",
+   "a": "bat",
+   "d": [
+    "big",
+    "bin",
+    "fog"
+   ]
+  },
+  {
+   "q": "We colour with a …",
+   "a": "crayon",
+   "d": [
+    "ruler",
+    "eraser",
+    "door"
+   ]
+  },
+  {
+   "q": "We draw lines with a …",
+   "a": "ruler",
+   "d": [
+    "crayon",
+    "eraser",
+    "pot"
+   ]
+  },
+  {
+   "q": "It rubs out pencil",
+   "a": "eraser",
+   "d": [
+    "pen",
+    "ruler",
+    "crayon"
+   ]
+  },
+  {
+   "q": "Say what you have",
+   "a": "I've got a pen.",
+   "d": [
+    "What's this?",
+    "Who's this?",
+    "Goodbye!"
+   ]
+  },
+  {
+   "q": "First letter of octopus",
+   "a": "o",
+   "d": [
+    "b",
+    "g",
+    "f"
+   ]
+  },
+  {
+   "q": "sh + op",
+   "a": "shop",
+   "d": [
+    "ship",
+    "shed",
+    "bin"
+   ]
+  },
+  {
+   "q": "A child that starts with b",
+   "a": "boy",
+   "d": [
+    "girl",
+    "teacher",
+    "Meg"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What sound does the book card show?",
+   "o": [
+    "/b/",
+    "/g/",
+    "/f/",
+    "/ʃ/ (sh)"
+   ],
+   "why": "Book starts with the /b/ sound."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one is a school thing?",
+   "o": [
+    "pencil",
+    "bird",
+    "goat",
+    "bubble"
+   ],
+   "why": "A pencil is a school thing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word starts with the same sound as boy?",
+   "o": [
+    "ball",
+    "goat",
+    "fork",
+    "shop"
+   ],
+   "why": "Boy and ball both start with b."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the first letter of octopus?",
+   "o": [
+    "o",
+    "b",
+    "g",
+    "f"
+   ],
+   "why": "Octopus starts with o."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner holds up a crayon. What's this?",
+   "o": [
+    "It's a crayon.",
+    "It's a pen.",
+    "It's an eraser.",
+    "I've got a ball."
+   ],
+   "why": "It's a crayon. Well done!"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Listen: b – a – t. What's the word?",
+   "o": [
+    "bat",
+    "bin",
+    "big",
+    "fig"
+   ],
+   "why": "b-a-t makes bat."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You show your desk tidy. You have a pen and a ruler. What do you say?",
+   "o": [
+    "I've got a pen and a ruler.",
+    "What's this?",
+    "It's my teacher.",
+    "I don't understand."
+   ],
+   "why": "I've got … tells what is in your desk tidy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT start with b?",
+   "o": [
+    "goat",
+    "bag",
+    "boy",
+    "bird"
+   ],
+   "why": "Goat starts with g. The others start with b."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which words start with sh, g and b?",
+   "o": [
+    "ship, goat, bag",
+    "fish, goat, bag",
+    "ship, fig, bag",
+    "sheep, game, orange"
+   ],
+   "why": "Ship starts with sh, goat with g, bag with b."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is a desk tidy good?",
+   "o": [
+    "It keeps pens and pencils in one place.",
+    "It makes the classroom messy.",
+    "It is a toy to throw.",
+    "It is for food."
+   ],
+   "why": "A desk tidy helps us keep our things tidy."
+  }
+ ]
+}

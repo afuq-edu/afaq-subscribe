@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: Eating Out (Writing)",
+ "lesson": "Planning and writing a narrative essay about an eating-out experience",
+ "outcomes": [
+  "Plan a narrative essay with notes and share ideas with a group",
+  "Write a first draft with a title, introduction, body and conclusion"
+ ],
+ "tf": [
+  {
+   "s": "A narrative essay should begin with an introduction that gives background and catches the reader's attention.",
+   "t": true,
+   "why": "A strong start makes the reader want to continue."
+  },
+  {
+   "s": "Events in a narrative essay should be in order so the essay flows.",
+   "t": true,
+   "why": "A clear sequence makes the story easy to read."
+  },
+  {
+   "s": "'First, then, after that, finally' are linking words that show sequence.",
+   "t": true,
+   "why": "They show the order in which things happened."
+  },
+  {
+   "s": "A narrative essay does not need a title.",
+   "t": false,
+   "why": "A suitable title is part of your essay."
+  },
+  {
+   "s": "Sharing ideas with a group before writing gives you ideas and feedback.",
+   "t": true,
+   "why": "Others can ask questions that help you add details."
+  },
+  {
+   "s": "The conclusion should come at the start of the essay.",
+   "t": false,
+   "why": "The conclusion comes at the end."
+  },
+  {
+   "s": "The body paragraphs tell the main events of the story.",
+   "t": true,
+   "why": "The body is where the story happens."
+  },
+  {
+   "s": "When you plan, you should write the final draft first and the notes later.",
+   "t": false,
+   "why": "Notes and planning come before any draft."
+  },
+  {
+   "s": "'A Nightmare Meal' would be a good title for an essay about a bad meal.",
+   "t": true,
+   "why": "The title shows the meal was terrible."
+  },
+  {
+   "s": "You can only write a narrative essay about your best meal, never your worst.",
+   "t": false,
+   "why": "You can write about the best or the worst meal."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which part comes first in an essay?",
+   "o": [
+    "Introduction",
+    "Conclusion",
+    "Body"
+   ],
+   "why": "The introduction opens the essay."
+  },
+  {
+   "q": "Which part comes last?",
+   "o": [
+    "Conclusion",
+    "Introduction",
+    "Title"
+   ],
+   "why": "The conclusion ends the essay."
+  },
+  {
+   "q": "Where are the main events told?",
+   "o": [
+    "In the body",
+    "In the title",
+    "In the bill"
+   ],
+   "why": "Body paragraphs tell what happened."
+  },
+  {
+   "q": "Which word shows the last event?",
+   "o": [
+    "Finally",
+    "First",
+    "Then"
+   ],
+   "why": "'Finally' introduces the last step."
+  },
+  {
+   "q": "Which word shows the first event?",
+   "o": [
+    "First",
+    "Finally",
+    "After that"
+   ],
+   "why": "'First' begins the sequence."
+  },
+  {
+   "q": "Which is a good title for a bad meal?",
+   "o": [
+    "A Nightmare Meal",
+    "My Best Day",
+    "A Perfect Dinner"
+   ],
+   "why": "'Nightmare' shows something went wrong."
+  },
+  {
+   "q": "What does 'sequence' mean?",
+   "o": [
+    "The order of events",
+    "The price of food",
+    "The length of a title"
+   ],
+   "why": "Sequence is the order things happen in."
+  },
+  {
+   "q": "What do you do before writing a draft?",
+   "o": [
+    "Make notes",
+    "Hand it in",
+    "Proofread it"
+   ],
+   "why": "Notes help you plan your ideas."
+  },
+  {
+   "q": "Why share your story with a group?",
+   "o": [
+    "To get ideas and feedback",
+    "To copy their essay",
+    "To finish faster"
+   ],
+   "why": "Group questions help you add details."
+  },
+  {
+   "q": "What should an introduction give the reader?",
+   "o": [
+    "Background information",
+    "The final ending",
+    "A list of prices"
+   ],
+   "why": "Background tells who, where and when."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "First part of an essay",
+   "a": "introduction",
+   "d": [
+    "conclusion",
+    "body",
+    "proofread"
+   ]
+  },
+  {
+   "q": "Last part of an essay",
+   "a": "conclusion",
+   "d": [
+    "introduction",
+    "title",
+    "notes"
+   ]
+  },
+  {
+   "q": "Middle part with main events",
+   "a": "body",
+   "d": [
+    "title",
+    "conclusion",
+    "introduction"
+   ]
+  },
+  {
+   "q": "Word for the order of events",
+   "a": "sequence",
+   "d": [
+    "menu",
+    "title",
+    "décor"
+   ]
+  },
+  {
+   "q": "Linking word for the last event",
+   "a": "finally",
+   "d": [
+    "first",
+    "then",
+    "next"
+   ]
+  },
+  {
+   "q": "Linking word for the first event",
+   "a": "first",
+   "d": [
+    "finally",
+    "after that",
+    "then"
+   ]
+  },
+  {
+   "q": "Name at the top of an essay",
+   "a": "title",
+   "d": [
+    "body",
+    "conclusion",
+    "draft"
+   ]
+  },
+  {
+   "q": "Type of essay that tells a story",
+   "a": "narrative",
+   "d": [
+    "formal letter",
+    "report",
+    "review list"
+   ]
+  },
+  {
+   "q": "Title for a bad meal: A ... Meal",
+   "a": "Nightmare",
+   "d": [
+    "Perfect",
+    "Lovely",
+    "Delicious"
+   ]
+  },
+  {
+   "q": "What you write before a draft",
+   "a": "notes",
+   "d": [
+    "final draft",
+    "bill",
+    "conclusion"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What should a narrative essay have at the beginning?",
+   "o": [
+    "An introduction that gives background and catches the reader's attention",
+    "The conclusion of the story",
+    "A list of linking words",
+    "The bill from the restaurant"
+   ],
+   "why": "A good opening sets the scene and interests the reader."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which linking words show sequence?",
+   "o": [
+    "First, then, after that, finally",
+    "But, however, although",
+    "Because, so, therefore",
+    "And, also, too"
+   ],
+   "why": "These words show the order of events."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list shows the parts of a narrative essay in the correct order?",
+   "o": [
+    "Title, introduction, body, conclusion",
+    "Conclusion, body, title, introduction",
+    "Body, title, conclusion, introduction",
+    "Introduction, conclusion, title, body"
+   ],
+   "why": "Start with the title and end with the conclusion."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a first draft?",
+   "o": [
+    "Your first full try at writing the essay",
+    "The final essay you hand in",
+    "The title only",
+    "A group discussion"
+   ],
+   "why": "You write the first draft after planning and improve it later."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best opening sentence for an essay about your best meal?",
+   "o": [
+    "I have always loved eating out, but one meal was special.",
+    "Finally, we went home.",
+    "The end.",
+    "After that, we paid the bill."
+   ],
+   "why": "It introduces the topic and makes the reader curious."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put these in order: (a) we paid and left (b) we arrived at the restaurant (c) we ordered our food.",
+   "o": [
+    "b, c, a",
+    "a, b, c",
+    "c, a, b",
+    "a, c, b"
+   ],
+   "why": "Arrive, order, then pay and leave."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best word: '___, the waiter brought the wrong dish.' (the middle of the story)",
+   "o": [
+    "Then",
+    "Finally",
+    "In conclusion",
+    "First of all"
+   ],
+   "why": "'Then' continues the sequence in the middle."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should events in a narrative essay be in order?",
+   "o": [
+    "So the essay flows and is easy to read",
+    "So the essay is longer",
+    "So the teacher cannot follow it",
+    "So you need no title"
+   ],
+   "why": "A logical sequence helps the reader follow the story."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to tell your experience to a group before writing?",
+   "o": [
+    "Their questions show which details to add",
+    "They will write the essay for you",
+    "It means you need no plan",
+    "It replaces the first draft"
+   ],
+   "why": "Sharing gives ideas and feedback for a better essay."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A student's essay begins: 'Finally, we went home.' What is the problem?",
+   "o": [
+    "'Finally' shows the last event, so it belongs near the end",
+    "The sentence is too long",
+    "'Finally' always starts an introduction",
+    "There is no problem at all"
+   ],
+   "why": "Sequence words must match the order of events."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 1: Look at my toys!",
+  "lesson": "Unit 1 – Lesson 1: Vocabulary and Grammar (Indoor toys)",
+  "outcomes": [
+    "I can name ten indoor toys.",
+    "I can ask and answer: What's this? It's a car. It's an action figure.",
+    "I can read ai words like rain and train, and the word his."
+  ],
+  "tf": [
+    {
+      "s": "A teddy is a toy.",
+      "t": true,
+      "why": "Yes! A teddy is an indoor toy."
+    },
+    {
+      "s": "We say It's an action figure.",
+      "t": true,
+      "why": "Great! action starts with a, so we say an."
+    },
+    {
+      "s": "We say It's an car.",
+      "t": false,
+      "why": "car starts with c, so we say It's a car."
+    },
+    {
+      "s": "We say It's a robot.",
+      "t": true,
+      "why": "Yes! robot starts with r, so we use a."
+    },
+    {
+      "s": "The letters ai in rain say /eɪ/.",
+      "t": true,
+      "why": "Well done! ai says /eɪ/ like in rain."
+    },
+    {
+      "s": "The word cat has ai in it.",
+      "t": false,
+      "why": "cat has no ai. tail and train have ai."
+    },
+    {
+      "s": "What's this? asks How old are you?",
+      "t": false,
+      "why": "What's this? asks about a thing."
+    },
+    {
+      "s": "rain can be split as r - ai - n.",
+      "t": true,
+      "why": "Yes! r - ai - n makes rain."
+    },
+    {
+      "s": "A dinosaur toy is a colour.",
+      "t": false,
+      "why": "A dinosaur is a toy, not a colour."
+    },
+    {
+      "s": "ch - ai - n makes the word train.",
+      "t": false,
+      "why": "ch - ai - n makes chain."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "What's this? (a car)",
+      "o": [
+        "It's a car.",
+        "It's an car.",
+        "It's car a."
+      ],
+      "why": "car starts with c, so we use a."
+    },
+    {
+      "q": "What's this? (an action figure)",
+      "o": [
+        "It's an action figure.",
+        "It's a action figure.",
+        "It's action an figure."
+      ],
+      "why": "action starts with a, so we use an."
+    },
+    {
+      "q": "Which one is a toy?",
+      "o": [
+        "puzzle",
+        "seven",
+        "blue"
+      ],
+      "why": "A puzzle is a toy."
+    },
+    {
+      "q": "Which toy can fly?",
+      "o": [
+        "plane",
+        "doll",
+        "teddy"
+      ],
+      "why": "A plane flies in the sky."
+    },
+    {
+      "q": "Which word has ai?",
+      "o": [
+        "tail",
+        "tall",
+        "ten"
+      ],
+      "why": "t - ai - l has ai."
+    },
+    {
+      "q": "Blend: ch - ai - n",
+      "o": [
+        "chain",
+        "rain",
+        "nail"
+      ],
+      "why": "ch - ai - n makes chain."
+    },
+    {
+      "q": "It is ... train. (a boy)",
+      "o": [
+        "his",
+        "her",
+        "an"
+      ],
+      "why": "We use his for a boy."
+    },
+    {
+      "q": "Which toy goes up and down on a string?",
+      "o": [
+        "yo-yo",
+        "building set",
+        "dinosaur"
+      ],
+      "why": "A yo-yo goes up and down."
+    },
+    {
+      "q": "Which one is NOT a toy?",
+      "o": [
+        "rain",
+        "robot",
+        "doll"
+      ],
+      "why": "Rain falls from the sky. It is not a toy."
+    },
+    {
+      "q": "What sound does ai make?",
+      "o": [
+        "/eɪ/",
+        "/əʊ/",
+        "/aɪ/"
+      ],
+      "why": "ai says /eɪ/ as in rain."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "A soft toy bear",
+      "a": "teddy",
+      "d": [
+        "car",
+        "plane",
+        "yo-yo"
+      ]
+    },
+    {
+      "q": "A toy with pieces to fit",
+      "a": "puzzle",
+      "d": [
+        "doll",
+        "teddy",
+        "car"
+      ]
+    },
+    {
+      "q": "A big old animal toy",
+      "a": "dinosaur",
+      "d": [
+        "robot",
+        "plane",
+        "car"
+      ]
+    },
+    {
+      "q": "A toy that flies",
+      "a": "plane",
+      "d": [
+        "doll",
+        "puzzle",
+        "teddy"
+      ]
+    },
+    {
+      "q": "It's ... action figure.",
+      "a": "an",
+      "d": [
+        "a",
+        "his",
+        "her"
+      ]
+    },
+    {
+      "q": "It's ... robot.",
+      "a": "a",
+      "d": [
+        "an",
+        "his",
+        "who"
+      ]
+    },
+    {
+      "q": "Blend: r - ai - n",
+      "a": "rain",
+      "d": [
+        "chain",
+        "nail",
+        "tail"
+      ]
+    },
+    {
+      "q": "Blend: p - ai - n - t",
+      "a": "paint",
+      "d": [
+        "train",
+        "rain",
+        "nail"
+      ]
+    },
+    {
+      "q": "Blend: t - r - ai - n",
+      "a": "train",
+      "d": [
+        "tail",
+        "paint",
+        "chain"
+      ]
+    },
+    {
+      "q": "A boy: It is ... train.",
+      "a": "his",
+      "d": [
+        "her",
+        "an",
+        "a"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which one is an indoor toy?",
+      "o": [
+        "building set",
+        "rain",
+        "orange",
+        "five"
+      ],
+      "why": "A building set is an indoor toy."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word has the sound /eɪ/ with ai?",
+      "o": [
+        "nail",
+        "pen",
+        "dog",
+        "cup"
+      ],
+      "why": "n - ai - l has ai."
+    },
+    {
+      "lv": "التذكر",
+      "q": "How do we ask about a thing?",
+      "o": [
+        "What's this?",
+        "How old are you?",
+        "What's your name?",
+        "Goodbye!"
+      ],
+      "why": "What's this? asks about a thing."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which tricky word do we learn with ai?",
+      "o": [
+        "his",
+        "who",
+        "have",
+        "her"
+      ],
+      "why": "We read his in: It is his train."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your friend shows a doll. You say...",
+      "o": [
+        "It's a doll.",
+        "It's an doll.",
+        "It's a dolls.",
+        "It's doll an."
+      ],
+      "why": "doll starts with d, so we say a doll."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Ali has a train. Which is right?",
+      "o": [
+        "It is his train.",
+        "It is her train.",
+        "It is an train.",
+        "It is who train."
+      ],
+      "why": "Ali is a boy, so we say his."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Segment the word tail.",
+      "o": [
+        "t - ai - l",
+        "t - a - i - l - e",
+        "ta - il",
+        "t - ail - s"
+      ],
+      "why": "tail is t - ai - l."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why do we say an action figure?",
+      "o": [
+        "action starts with a",
+        "action is big",
+        "action is a colour",
+        "action has ai"
+      ],
+      "why": "We use an before words that start with a vowel sound like a."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word does NOT have ai?",
+      "o": [
+        "cake",
+        "rain",
+        "chain",
+        "paint"
+      ],
+      "why": "cake has no ai. rain, chain and paint have ai."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which sentence is right?",
+      "o": [
+        "It's an action figure.",
+        "It's an teddy.",
+        "It's a action figure.",
+        "It's an robot."
+      ],
+      "why": "Only action starts with a, so only it takes an."
+    }
+  ]
+}

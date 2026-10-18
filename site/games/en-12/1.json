@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: A Fair Exchange (Reading)",
+ "lesson": "Lead-in: ‘retail therapy’ and the core words of Theme 1",
+ "outcomes": [
+  "Understand the meaning of 'retail therapy'",
+  "Learn the core words of Theme 1 and their meanings",
+  "Use core words in your own sentences"
+ ],
+ "tf": [
+  {
+   "s": "'Therapy' means the treatment of an illness or a disease over a long period.",
+   "t": true,
+   "why": "Yes, that is the dictionary meaning of therapy."
+  },
+  {
+   "s": "'Retail therapy' is a way to make yourself feel better by shopping.",
+   "t": true,
+   "why": "Right, it is a humorous way to describe shopping to feel happy."
+  },
+  {
+   "s": "'Retail therapy' is a medical treatment that doctors give in hospitals.",
+   "t": false,
+   "why": "The phrase is humorous; it means shopping to feel better."
+  },
+  {
+   "s": "A brand is the name given to a product by the company that makes it.",
+   "t": true,
+   "why": "Correct, a brand helps people know who made the product."
+  },
+  {
+   "s": "Slogans are short, memorable phrases used in advertisements.",
+   "t": true,
+   "why": "Yes, companies use slogans so people remember their products."
+  },
+  {
+   "s": "A logo is a long text that explains how to use a product.",
+   "t": false,
+   "why": "A logo is a small design or symbol of a company."
+  },
+  {
+   "s": "To persuade someone means to make them believe or do something.",
+   "t": true,
+   "why": "Yes, adverts try to persuade people to buy things."
+  },
+  {
+   "s": "Bargaining means paying the first price the seller asks for.",
+   "t": false,
+   "why": "Bargaining means discussing the price to get a better deal."
+  },
+  {
+   "s": "Someone who is addicted to shopping finds it easy to stop shopping.",
+   "t": false,
+   "why": "Addicted means you cannot easily stop doing something."
+  },
+  {
+   "s": "The units of Theme 1 are all about shopping, buying and selling.",
+   "t": true,
+   "why": "Yes, that is why 'retail therapy' is a good title for the theme."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is a short memorable phrase in an advert called?",
+   "o": [
+    "a slogan",
+    "a logo",
+    "a mall"
+   ],
+   "why": "A slogan is a phrase people remember easily."
+  },
+  {
+   "q": "What is a large building with many shops called?",
+   "o": [
+    "a mall",
+    "a brand",
+    "a logo"
+   ],
+   "why": "Malls have lots of shops under one roof."
+  },
+  {
+   "q": "What do companies use to persuade people to buy?",
+   "o": [
+    "advertising",
+    "therapy",
+    "charm"
+   ],
+   "why": "Advertising tells people about products and persuades them."
+  },
+  {
+   "q": "What do we call buying and selling goods?",
+   "o": [
+    "trading",
+    "bargaining",
+    "therapy"
+   ],
+   "why": "Trading is the exchange of goods."
+  },
+  {
+   "q": "Which word means a very strong feeling of liking something?",
+   "o": [
+    "passion",
+    "logo",
+    "mall"
+   ],
+   "why": "A passion is a strong love for something."
+  },
+  {
+   "q": "What does 'retail' relate to?",
+   "o": [
+    "selling goods in shops",
+    "treating illness",
+    "making logos"
+   ],
+   "why": "Retail is the selling of goods to the public."
+  },
+  {
+   "q": "Which word means the power to attract or please people?",
+   "o": [
+    "charm",
+    "trading",
+    "slogan"
+   ],
+   "why": "Charm is a pleasing quality that attracts people."
+  },
+  {
+   "q": "Which is a small design that is a company's symbol?",
+   "o": [
+    "a logo",
+    "a slogan",
+    "a bargain"
+   ],
+   "why": "A logo is a symbol you can see, like a picture."
+  },
+  {
+   "q": "What does 'addicted' mean?",
+   "o": [
+    "unable to stop doing something",
+    "happy to give things away",
+    "good at selling"
+   ],
+   "why": "Addicted people find it very hard to stop."
+  },
+  {
+   "q": "What do you write in a vocabulary entry?",
+   "o": [
+    "word, meaning and a sentence",
+    "only the page number",
+    "only a picture"
+   ],
+   "why": "A full entry helps you remember and use the word."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Short phrase in an advert",
+   "a": "slogan",
+   "d": [
+    "logo",
+    "mall",
+    "brand"
+   ]
+  },
+  {
+   "q": "Company symbol or design",
+   "a": "logo",
+   "d": [
+    "slogan",
+    "passion",
+    "charm"
+   ]
+  },
+  {
+   "q": "Name a company gives a product",
+   "a": "brand",
+   "d": [
+    "mall",
+    "therapy",
+    "trading"
+   ]
+  },
+  {
+   "q": "Building full of shops",
+   "a": "mall",
+   "d": [
+    "brand",
+    "logo",
+    "charm"
+   ]
+  },
+  {
+   "q": "Make someone agree or act",
+   "a": "persuade",
+   "d": [
+    "export",
+    "trade",
+    "bargain"
+   ]
+  },
+  {
+   "q": "Discussing a price to lower it",
+   "a": "bargaining",
+   "d": [
+    "advertising",
+    "trading",
+    "charm"
+   ]
+  },
+  {
+   "q": "Treatment over a long period",
+   "a": "therapy",
+   "d": [
+    "passion",
+    "charm",
+    "retail"
+   ]
+  },
+  {
+   "q": "Strong love for something",
+   "a": "passion",
+   "d": [
+    "therapy",
+    "logo",
+    "mall"
+   ]
+  },
+  {
+   "q": "Cannot stop doing something",
+   "a": "addicted",
+   "d": [
+    "persuaded",
+    "charming",
+    "traded"
+   ]
+  },
+  {
+   "q": "Buying and selling goods",
+   "a": "trading",
+   "d": [
+    "bargaining",
+    "advertising",
+    "therapy"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does 'retail therapy' mean?",
+   "o": [
+    "a way to feel better by shopping",
+    "a treatment for illness in a shop",
+    "a job in a hospital shop",
+    "a long illness caused by shopping"
+   ],
+   "why": "The phrase is a humorous way to say shopping makes you happy."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'the name given to a product by the company that makes it'?",
+   "o": [
+    "brand",
+    "slogan",
+    "mall",
+    "charm"
+   ],
+   "why": "A brand is the product's name from its maker."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which core word means 'to make someone do or believe something'?",
+   "o": [
+    "persuade",
+    "trade",
+    "bargain",
+    "export"
+   ],
+   "why": "Adverts try to persuade us."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why is 'retail therapy' a good title for Theme 1?",
+   "o": [
+    "The units are about shopping, buying and selling",
+    "The units are about hospitals",
+    "The units are about sports",
+    "The units are about history only"
+   ],
+   "why": "Trading, branding, malls and advertising all link to shopping."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Companies spend a lot of money on ______ to persuade people to buy.",
+   "o": [
+    "advertising",
+    "therapy",
+    "passion",
+    "charm"
+   ],
+   "why": "Advertising is how companies tell people about products."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A man in the souq says, 'Can you sell it for 3 rials, not 5?' What is he doing?",
+   "o": [
+    "bargaining",
+    "advertising",
+    "branding",
+    "exporting"
+   ],
+   "why": "He is discussing the price to get a better deal."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'Just do it' is a short phrase used by a company in its adverts. It is a ______.",
+   "o": [
+    "slogan",
+    "logo",
+    "mall",
+    "therapy"
+   ],
+   "why": "A slogan is a short, memorable phrase."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses 'addicted' correctly?",
+   "o": [
+    "She is addicted to shopping and buys things every day.",
+    "He is addicted to his old shoes, so he threw them away.",
+    "They were addicted, so they stopped easily.",
+    "The mall is addicted to many shops."
+   ],
+   "why": "Addicted means you cannot stop doing something."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair of core words fits best in one sentence about adverts?",
+   "o": [
+    "slogans and persuade",
+    "therapy and dhow",
+    "charm and illness",
+    "malls and medicine"
+   ],
+   "why": "Adverts use slogans to persuade people."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the phrase 'retail therapy' funny?",
+   "o": [
+    "Shopping is not a real medical treatment",
+    "Shops are in hospitals",
+    "Doctors sell shoes",
+    "Therapy means shopping"
+   ],
+   "why": "It uses a medical word for something enjoyable like shopping."
+  }
+ ]
+}

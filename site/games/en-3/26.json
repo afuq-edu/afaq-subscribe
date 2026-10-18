@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 2: Let's dress up!",
+ "lesson": "Unit 2 – Revision",
+ "outcomes": [
+  "I can use clothes and possessions words.",
+  "I can choose They're / Their, You're / Your and We're / Our.",
+  "I can ask and answer about a price."
+ ],
+ "tf": [
+  {
+   "s": "Keys are clothes.",
+   "t": false,
+   "why": "Keys are a possession, not clothes."
+  },
+  {
+   "s": "We say: They're wearing coats.",
+   "t": true,
+   "why": "Yes! They're goes before wearing."
+  },
+  {
+   "s": "We say: You're handbag is red.",
+   "t": false,
+   "why": "Handbag is a noun, so we say Your handbag."
+  },
+  {
+   "s": "We're and Our go together: We're wearing jeans. Our jeans are blue.",
+   "t": true,
+   "why": "Great! We're and Our are a pair."
+  },
+  {
+   "s": "We ask about price with How much is this …?",
+   "t": true,
+   "why": "Right! How much is this coat?"
+  },
+  {
+   "s": "A jumper is a possession, like a phone.",
+   "t": false,
+   "why": "A jumper is clothes."
+  },
+  {
+   "s": "Their goes before a noun: Their shoes are black.",
+   "t": true,
+   "why": "Yes! Their + noun."
+  },
+  {
+   "s": "The shopkeeper says: It's 6 rials.",
+   "t": true,
+   "why": "Yes, that tells us the price."
+  },
+  {
+   "s": "Trainers, jeans and shirts are clothes.",
+   "t": true,
+   "why": "Well done! They are all clothes."
+  },
+  {
+   "s": "We say: Our wearing tracksuits.",
+   "t": false,
+   "why": "Before wearing we say We're."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Odd one out: coat, jumper, keys, jeans",
+   "o": [
+    "keys",
+    "coat",
+    "jeans"
+   ],
+   "why": "Keys are not clothes."
+  },
+  {
+   "q": "Choose: ___ wearing coats.",
+   "o": [
+    "They're",
+    "Their",
+    "Our"
+   ],
+   "why": "They're goes before wearing."
+  },
+  {
+   "q": "Choose: ___ handbag is red.",
+   "o": [
+    "Your",
+    "You're",
+    "We're"
+   ],
+   "why": "Your goes before a noun."
+  },
+  {
+   "q": "Complete: We're wearing tracksuits. ___ tracksuits are orange.",
+   "o": [
+    "Our",
+    "Their",
+    "Your"
+   ],
+   "why": "We're goes with Our."
+  },
+  {
+   "q": "Ask the price of a coat:",
+   "o": [
+    "How much is this coat?",
+    "How many coat?",
+    "Where is this coat?"
+   ],
+   "why": "How much asks the price."
+  },
+  {
+   "q": "Which is clothes?",
+   "o": [
+    "tracksuit",
+    "phone",
+    "computer"
+   ],
+   "why": "A tracksuit is clothes."
+  },
+  {
+   "q": "Which is a possession?",
+   "o": [
+    "handbag",
+    "shirt",
+    "jeans"
+   ],
+   "why": "A handbag is a possession."
+  },
+  {
+   "q": "Complete: ___ you are. (giving money)",
+   "o": [
+    "Here",
+    "Have",
+    "Hear"
+   ],
+   "why": "Here you are."
+  },
+  {
+   "q": "The glasses are 6 OMR. The answer is …",
+   "o": [
+    "They're 6 rials.",
+    "They're 6 years.",
+    "Their 6 rials."
+   ],
+   "why": "They're 6 rials gives the price."
+  },
+  {
+   "q": "Choose: ___ keys are yellow. (they)",
+   "o": [
+    "Their",
+    "They're",
+    "You're"
+   ],
+   "why": "Their goes before keys."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Odd one out: hijab, shirt, phone",
+   "a": "phone",
+   "d": [
+    "hijab",
+    "shirt",
+    "coat"
+   ]
+  },
+  {
+   "q": "Odd one out: keys, jeans, phone",
+   "a": "jeans",
+   "d": [
+    "keys",
+    "phone",
+    "computer"
+   ]
+  },
+  {
+   "q": "___ wearing coats. (they)",
+   "a": "They're",
+   "d": [
+    "Their",
+    "Our",
+    "Your"
+   ]
+  },
+  {
+   "q": "___ handbag is red. (you)",
+   "a": "Your",
+   "d": [
+    "You're",
+    "We're",
+    "They're"
+   ]
+  },
+  {
+   "q": "___ wearing jeans. (we)",
+   "a": "We're",
+   "d": [
+    "Our",
+    "Their",
+    "Your"
+   ]
+  },
+  {
+   "q": "___ jeans are blue. (we)",
+   "a": "Our",
+   "d": [
+    "We're",
+    "You're",
+    "They're"
+   ]
+  },
+  {
+   "q": "How ___ is this coat?",
+   "a": "much",
+   "d": [
+    "many",
+    "old",
+    "big"
+   ]
+  },
+  {
+   "q": "OMR means Omani …",
+   "a": "rials",
+   "d": [
+    "shops",
+    "clothes",
+    "days"
+   ]
+  },
+  {
+   "q": "A possession word",
+   "a": "computer",
+   "d": [
+    "jumper",
+    "trainers",
+    "coat"
+   ]
+  },
+  {
+   "q": "A clothes word",
+   "a": "trainers",
+   "d": [
+    "keys",
+    "phone",
+    "handbag"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word goes before wearing?",
+   "o": [
+    "You're",
+    "Your",
+    "Their",
+    "Our"
+   ],
+   "why": "You're = you are, so it goes before wearing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list has only clothes?",
+   "o": [
+    "coat, jeans, shirt",
+    "keys, phone, coat",
+    "computer, jeans, keys",
+    "handbag, phone, keys"
+   ],
+   "why": "Coat, jeans and shirt are all clothes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the shopkeeper say first?",
+   "o": [
+    "Yes, can I help you?",
+    "Here you are.",
+    "Thank you.",
+    "How much is this?"
+   ],
+   "why": "The shopkeeper offers help."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which pair goes together?",
+   "o": [
+    "They're – Their",
+    "They're – Our",
+    "We're – Your",
+    "You're – Their"
+   ],
+   "why": "They're and Their are a pair."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a sentence with We're wearing:",
+   "o": [
+    "We're wearing tracksuits.",
+    "Our wearing tracksuits.",
+    "We wearing tracksuits.",
+    "We're wear tracksuits."
+   ],
+   "why": "We're wearing + clothes."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want glasses for 6 OMR. Choose the right answer from the shopkeeper.",
+   "o": [
+    "They're 6 rials.",
+    "Their 6 rials.",
+    "They're 6 glasses.",
+    "Here you are 6."
+   ],
+   "why": "They're 6 rials."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence about your classmates.",
+   "o": [
+    "They're wearing white dishdashas.",
+    "Their wearing white dishdashas.",
+    "They're wear white dishdashas.",
+    "They wearing white dishdashas."
+   ],
+   "why": "They're wearing … is correct."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say Your handbag, not You're handbag?",
+   "o": [
+    "Handbag is a thing (noun), not wearing.",
+    "Handbag is a colour.",
+    "You're is for numbers.",
+    "Handbag is a person."
+   ],
+   "why": "Your goes before a noun."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Odd one out: jumper, trainers, phone, jeans",
+   "o": [
+    "phone",
+    "jumper",
+    "trainers",
+    "jeans"
+   ],
+   "why": "A phone is a possession; the others are clothes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "Their wearing hijabs.",
+    "They're wearing hijabs.",
+    "Their hijabs are blue.",
+    "Our hijabs are pink."
+   ],
+   "why": "It should be They're wearing hijabs."
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 2: Where’s my pen?",
+  "lesson": "Unit 2 – Lesson 3: Vocabulary and Grammar (Where’s the pencil?)",
+  "outcomes": [
+    "I can name shelf, computer, cupboard, desk, chair and table.",
+    "I can ask Where's the pencil? and say It's in / on / under the desk.",
+    "I can read short oo words like book and cook, and the word why."
+  ],
+  "tf": [
+    { "s": "It's under the chair. means it is below the chair.", "t": true, "why": "Yes! under means below." },
+    { "s": "A pencil in the pencil case is inside it.", "t": true, "why": "Great! in means inside." },
+    { "s": "A book on the shelf is under the shelf.", "t": false, "why": "on means on top of the shelf." },
+    { "s": "A cupboard is a toy.", "t": false, "why": "A cupboard is classroom furniture." },
+    { "s": "We ask Where's the ...? to find a thing.", "t": true, "why": "Yes! Where asks about the place." },
+    { "s": "The oo in book is short /ʊ/.", "t": true, "why": "Well done! b - oo - k has short oo." },
+    { "s": "c - oo - k makes the word cook.", "t": true, "why": "Yes! c - oo - k is cook." },
+    { "s": "Why is a word for a place.", "t": false, "why": "Why asks for a reason: Why is he sad?" },
+    { "s": "Where's the ruler? It's red. is a good answer.", "t": false, "why": "Where asks the place: It's in the cupboard." },
+    { "s": "The word foot has ng in it.", "t": false, "why": "foot has oo: f - oo - t." }
+  ],
+  "boxes": [
+    { "q": "The pencil is inside the box. It's ... the box.", "o": ["in", "on", "under"], "why": "Inside = in." },
+    { "q": "The book is on top of the desk. It's ... the desk.", "o": ["on", "in", "under"], "why": "On top = on." },
+    { "q": "The bag is below the table. It's ... the table.", "o": ["under", "on", "in"], "why": "Below = under." },
+    { "q": "We sit on a...", "o": ["chair", "shelf", "cupboard"], "why": "We sit on a chair." },
+    { "q": "We put books on a...", "o": ["shelf", "chair", "computer"], "why": "Books go on a shelf." },
+    { "q": "Where's the pencil?", "o": ["It's on the desk.", "It's pink.", "It's a pencil."], "why": "Where asks the place." },
+    { "q": "Blend: c - oo - k", "o": ["cook", "book", "hook"], "why": "c - oo - k makes cook." },
+    { "q": "Which word has short oo?", "o": ["foot", "fork", "fan"], "why": "f - oo - t has short oo." },
+    { "q": "... is she sad?", "o": ["Why", "Where", "Who"], "why": "Why asks for a reason." },
+    { "q": "Which is furniture?", "o": ["cupboard", "crayon", "eraser"], "why": "A cupboard is furniture." }
+  ],
+  "hunt": [
+    { "q": "Inside the box", "a": "in", "d": ["on", "under", "at"] },
+    { "q": "On top of the desk", "a": "on", "d": ["in", "under", "at"] },
+    { "q": "Below the chair", "a": "under", "d": ["on", "in", "at"] },
+    { "q": "We sit on it.", "a": "chair", "d": ["shelf", "cupboard", "computer"] },
+    { "q": "Books go on it.", "a": "shelf", "d": ["chair", "computer", "ruler"] },
+    { "q": "A big box with doors", "a": "cupboard", "d": ["chair", "shelf", "desk"] },
+    { "q": "Blend: b - oo - k", "a": "book", "d": ["cook", "hook", "foot"] },
+    { "q": "Blend: w - oo - d", "a": "wood", "d": ["foot", "look", "hook"] },
+    { "q": "Find the short oo word.", "a": "look", "d": ["fork", "ring", "lake"] },
+    { "q": "Tricky word: ... is he sad?", "a": "Why", "d": ["Where", "Who", "What"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Which one is classroom furniture?", "o": ["table", "pen", "crayon", "eraser"], "why": "A table is furniture." },
+    { "lv": "التذكر", "q": "Which word means inside?", "o": ["in", "on", "under", "where"], "why": "in = inside." },
+    { "lv": "التذكر", "q": "Which word has short oo /ʊ/?", "o": ["hook", "corn", "ring", "rain"], "why": "h - oo - k has short oo." },
+    { "lv": "التذكر", "q": "Which question asks about a place?", "o": ["Where's the pencil?", "Why is he sad?", "What colour is it?", "How old are you?"], "why": "Where asks the place." },
+    { "lv": "التطبيق", "q": "The ball is below the chair. Where's the ball?", "o": ["It's under the chair.", "It's on the chair.", "It's in the chair.", "It's a chair."], "why": "Below = under." },
+    { "lv": "التطبيق", "q": "The ruler is inside the cupboard. You say...", "o": ["It's in the cupboard.", "It's on the cupboard.", "It's under the cupboard.", "It's a cupboard."], "why": "Inside = in." },
+    { "lv": "التطبيق", "q": "A book is under a chair. Make the question.", "o": ["Where's the book?", "What's your name?", "Is it a kite?", "Who is it?"], "why": "We ask Where's the book?" },
+    { "lv": "التحليل", "q": "The book is in / on the shelf. Which is right?", "o": ["on", "in", "under", "why"], "why": "Books stand on a shelf." },
+    { "lv": "التحليل", "q": "Which group has only short oo words?", "o": ["book, look, cook", "book, fork, look", "foot, ring, hook", "wood, corn, cook"], "why": "book, look and cook all have short oo." },
+    { "lv": "التحليل", "q": "Which is the odd one out?", "o": ["pencil", "desk", "chair", "shelf"], "why": "A pencil is small. Desk, chair and shelf are furniture." }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Welcome: Hello!",
+  "lesson": "Welcome – Lesson 2: Hello! (Story and meeting new friends)",
+  "outcomes": [
+    "I can name the friends in the Welcome story.",
+    "I can ask and answer: What's your name? How old are you?",
+    "I can write my name and my age."
+  ],
+  "tf": [
+    {
+      "s": "Polly is a parrot in the story.",
+      "t": true,
+      "why": "Yes! Polly is the parrot."
+    },
+    {
+      "s": "It's Sami's birthday in the story.",
+      "t": true,
+      "why": "Great! The story is about Sami's birthday."
+    },
+    {
+      "s": "It's Polly's birthday in the story.",
+      "t": false,
+      "why": "It's Sami's birthday, not Polly's."
+    },
+    {
+      "s": "We say Hello! when we meet a friend.",
+      "t": true,
+      "why": "Yes! Hello! is a greeting."
+    },
+    {
+      "s": "We say Goodbye when we meet a new friend.",
+      "t": false,
+      "why": "We say Hello! when we meet. We say Goodbye when we go."
+    },
+    {
+      "s": "My name's Lily. is an answer to What's your name?",
+      "t": true,
+      "why": "Well done! My name's ... tells your name."
+    },
+    {
+      "s": "I'm seven. is an answer to What's your name?",
+      "t": false,
+      "why": "I'm seven. answers How old are you?"
+    },
+    {
+      "s": "A name starts with a capital letter.",
+      "t": true,
+      "why": "Yes! Sami starts with a big S."
+    },
+    {
+      "s": "Jack says: Hi, I'm Jack. I'm seven. Jack is six.",
+      "t": false,
+      "why": "Jack says he is seven."
+    },
+    {
+      "s": "How old are you? asks about your name.",
+      "t": false,
+      "why": "How old are you? asks about your age."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Who is the parrot?",
+      "o": [
+        "Polly",
+        "Sami",
+        "Fatma"
+      ],
+      "why": "Polly is the parrot in the story."
+    },
+    {
+      "q": "Whose birthday is it?",
+      "o": [
+        "Sami's",
+        "Lily's",
+        "Jack's"
+      ],
+      "why": "It's Sami's birthday."
+    },
+    {
+      "q": "What's your name?",
+      "o": [
+        "My name's Fatma.",
+        "I'm seven.",
+        "Goodbye."
+      ],
+      "why": "My name's ... answers this question."
+    },
+    {
+      "q": "How old are you?",
+      "o": [
+        "I'm seven.",
+        "My name's Jack.",
+        "Hello!"
+      ],
+      "why": "I'm seven. tells your age."
+    },
+    {
+      "q": "Which name starts with S?",
+      "o": [
+        "Sami",
+        "Lily",
+        "Jack"
+      ],
+      "why": "Sami starts with a capital S."
+    },
+    {
+      "q": "Which name starts with L?",
+      "o": [
+        "Lily",
+        "Fatma",
+        "Polly"
+      ],
+      "why": "Lily starts with a capital L."
+    },
+    {
+      "q": "You meet a friend. You say...",
+      "o": [
+        "Hello!",
+        "Goodbye.",
+        "I'm seven."
+      ],
+      "why": "We say Hello! to a friend."
+    },
+    {
+      "q": "You go home. You say...",
+      "o": [
+        "Goodbye.",
+        "Hello!",
+        "What's your name?"
+      ],
+      "why": "We say Goodbye when we go."
+    },
+    {
+      "q": "Sami says: It's my ...!",
+      "o": [
+        "birthday",
+        "book",
+        "pencil"
+      ],
+      "why": "Sami says: It's my birthday!"
+    },
+    {
+      "q": "I'm ... = My name's ...",
+      "o": [
+        "Lily",
+        "seven",
+        "Goodbye"
+      ],
+      "why": "I'm Lily. and My name's Lily. both tell a name."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "The parrot in the story",
+      "a": "Polly",
+      "d": [
+        "Sami",
+        "Jack",
+        "Lily"
+      ]
+    },
+    {
+      "q": "It's his birthday.",
+      "a": "Sami",
+      "d": [
+        "Polly",
+        "Fatma",
+        "Lily"
+      ]
+    },
+    {
+      "q": "Name with a capital F",
+      "a": "Fatma",
+      "d": [
+        "Lily",
+        "Jack",
+        "Sami"
+      ]
+    },
+    {
+      "q": "Name with a capital J",
+      "a": "Jack",
+      "d": [
+        "Polly",
+        "Fatma",
+        "Sami"
+      ]
+    },
+    {
+      "q": "Name with a capital L",
+      "a": "Lily",
+      "d": [
+        "Jack",
+        "Sami",
+        "Fatma"
+      ]
+    },
+    {
+      "q": "Hi, I'm Jack. I'm seven. Age?",
+      "a": "seven",
+      "d": [
+        "six",
+        "five",
+        "ten"
+      ]
+    },
+    {
+      "q": "Say this when you meet.",
+      "a": "Hello!",
+      "d": [
+        "Goodbye",
+        "Seven",
+        "Sit down"
+      ]
+    },
+    {
+      "q": "Say this when you go.",
+      "a": "Goodbye",
+      "d": [
+        "Hello!",
+        "Hi!",
+        "My name's"
+      ]
+    },
+    {
+      "q": "Polly is a ...",
+      "a": "parrot",
+      "d": [
+        "girl",
+        "boy",
+        "teacher"
+      ]
+    },
+    {
+      "q": "Another way to say Hello!",
+      "a": "Hi!",
+      "d": [
+        "Goodbye",
+        "Sit down",
+        "Stand up"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Who is the parrot in the story?",
+      "o": [
+        "Polly",
+        "Fatma",
+        "Jack",
+        "Lily"
+      ],
+      "why": "Polly is the parrot."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Whose birthday is it in the story?",
+      "o": [
+        "Sami's",
+        "Fatma's",
+        "Polly's",
+        "Jack's"
+      ],
+      "why": "The story is Sami's birthday."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which question asks about your age?",
+      "o": [
+        "How old are you?",
+        "What's your name?",
+        "What colour is it?",
+        "Hello!"
+      ],
+      "why": "How old are you? asks your age."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which one is a greeting?",
+      "o": [
+        "Hi!",
+        "Seven",
+        "Book",
+        "Sit down"
+      ],
+      "why": "Hi! is a greeting like Hello!"
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your friend asks: What's your name? You say...",
+      "o": [
+        "My name's Ali.",
+        "I'm seven.",
+        "Goodbye.",
+        "It's my birthday."
+      ],
+      "why": "My name's ... tells your name."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "A girl says: I'm six. How old is she?",
+      "o": [
+        "Six",
+        "Seven",
+        "Ten",
+        "Five"
+      ],
+      "why": "I'm six means she is six."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Which sentence is written correctly?",
+      "o": [
+        "My name's Lily.",
+        "my name's lily.",
+        "My name's lily.",
+        "my name's Lily"
+      ],
+      "why": "We start a sentence and a name with a capital letter."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Sami says: It's my birthday! What do we know?",
+      "o": [
+        "Today is his birthday",
+        "He is the parrot",
+        "He is going home",
+        "It's Lily's birthday"
+      ],
+      "why": "It's my birthday means today is his special day."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which answer goes with How old are you?",
+      "o": [
+        "I'm seven.",
+        "I'm Jack.",
+        "Hello!",
+        "Goodbye."
+      ],
+      "why": "Age answers use a number, like seven."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Put in order: Hello! / What's your name? / My name's Sami.",
+      "o": [
+        "Hello! - What's your name? - My name's Sami.",
+        "My name's Sami. - Hello! - What's your name?",
+        "What's your name? - Hello! - My name's Sami.",
+        "My name's Sami. - What's your name? - Hello!"
+      ],
+      "why": "We greet first, then ask, then answer."
+    }
+  ]
+}

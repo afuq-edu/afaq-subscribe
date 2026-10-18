@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 1: It's a happy day!",
+ "lesson": "Unit 1 – Lesson 4: Skills (listening, speaking, reading, writing)",
+ "outcomes": [
+  "I can listen for times of the day.",
+  "I can ask and answer When do you ...? in a game.",
+  "I can read about a day and write about my day."
+ ],
+ "tf": [
+  {
+   "s": "Jasim and Yasir are brothers.",
+   "t": true,
+   "why": "Yes! The text says We're brothers."
+  },
+  {
+   "s": "Jasim and Yasir are friends, not brothers.",
+   "t": false,
+   "why": "They say We're brothers."
+  },
+  {
+   "s": "Jasim and Yasir have art lessons at school in the morning.",
+   "t": true,
+   "why": "Well done! Art lessons are in the morning."
+  },
+  {
+   "s": "Jasim and Yasir play in the afternoon.",
+   "t": false,
+   "why": "The text says We don't play in the afternoon."
+  },
+  {
+   "s": "Jasim and Yasir do homework in the afternoon.",
+   "t": true,
+   "why": "They do homework in the afternoon."
+  },
+  {
+   "s": "Jasim and Yasir have dinner at night.",
+   "t": false,
+   "why": "They have dinner in the evening."
+  },
+  {
+   "s": "Jasim and Yasir play in the evening.",
+   "t": true,
+   "why": "Great! They play in the evening."
+  },
+  {
+   "s": "In the Snap game, we say Snap! when the routine and the time match.",
+   "t": true,
+   "why": "Then we say the full sentence."
+  },
+  {
+   "s": "We guess the answers before listening to think about the words.",
+   "t": true,
+   "why": "Guessing first helps us listen well."
+  },
+  {
+   "s": "We're means We are not.",
+   "t": false,
+   "why": "We're means We are."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "When do Jasim and Yasir have dinner?",
+   "o": [
+    "in the evening",
+    "in the morning",
+    "at night"
+   ],
+   "why": "They have dinner in the evening."
+  },
+  {
+   "q": "When do Jasim and Yasir play?",
+   "o": [
+    "in the evening",
+    "in the afternoon",
+    "in the morning"
+   ],
+   "why": "They play in the evening."
+  },
+  {
+   "q": "When do Jasim and Yasir do homework?",
+   "o": [
+    "in the afternoon",
+    "in the morning",
+    "at night"
+   ],
+   "why": "They do homework in the afternoon."
+  },
+  {
+   "q": "What does We're mean?",
+   "o": [
+    "We are",
+    "We have",
+    "We do"
+   ],
+   "why": "We're is short for We are."
+  },
+  {
+   "q": "Snap card: have dinner. What do you say?",
+   "o": [
+    "We have dinner in the evening.",
+    "We have dinner in the morning.",
+    "We dinner have evening."
+   ],
+   "why": "Dinner is in the evening."
+  },
+  {
+   "q": "Complete: When do you ___ tennis?",
+   "o": [
+    "play",
+    "do",
+    "have"
+   ],
+   "why": "We play tennis."
+  },
+  {
+   "q": "Complete the frame: I go to bed ___ night.",
+   "o": [
+    "at",
+    "in",
+    "on"
+   ],
+   "why": "Night takes at."
+  },
+  {
+   "q": "Which word asks about time?",
+   "o": [
+    "When",
+    "Who",
+    "What colour"
+   ],
+   "why": "When asks about time."
+  },
+  {
+   "q": "Where do Jasim and Yasir have art lessons?",
+   "o": [
+    "at school",
+    "in the park",
+    "at home"
+   ],
+   "why": "They have art lessons at school."
+  },
+  {
+   "q": "What do we do before listening?",
+   "o": [
+    "guess the answers",
+    "close the book",
+    "go to sleep"
+   ],
+   "why": "We guess first, then check."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Jasim and Yasir are ___",
+   "a": "brothers",
+   "d": [
+    "friends",
+    "sisters",
+    "cousins"
+   ]
+  },
+  {
+   "q": "Their art lessons are in the ___",
+   "a": "morning",
+   "d": [
+    "evening",
+    "night",
+    "afternoon"
+   ]
+  },
+  {
+   "q": "They do homework in the ___",
+   "a": "afternoon",
+   "d": [
+    "morning",
+    "night",
+    "evening"
+   ]
+  },
+  {
+   "q": "They have dinner in the ___",
+   "a": "evening",
+   "d": [
+    "morning",
+    "afternoon",
+    "night"
+   ]
+  },
+  {
+   "q": "They play in the ___",
+   "a": "evening",
+   "d": [
+    "afternoon",
+    "morning",
+    "night"
+   ]
+  },
+  {
+   "q": "We're = ___",
+   "a": "We are",
+   "d": [
+    "We have",
+    "We do",
+    "We were"
+   ]
+  },
+  {
+   "q": "Say it when cards match!",
+   "a": "Snap!",
+   "d": [
+    "Stop!",
+    "Hello!",
+    "Sorry!"
+   ]
+  },
+  {
+   "q": "We go to school in the ___",
+   "a": "morning",
+   "d": [
+    "night",
+    "evening",
+    "afternoon"
+   ]
+  },
+  {
+   "q": "___ do you play?",
+   "a": "When",
+   "d": [
+    "Who",
+    "What",
+    "How many"
+   ]
+  },
+  {
+   "q": "I go to bed ___ night.",
+   "a": "at",
+   "d": [
+    "in",
+    "on",
+    "to"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do Jasim and Yasir do in the morning?",
+   "o": [
+    "They have art lessons at school.",
+    "They have dinner.",
+    "They play.",
+    "They go to bed."
+   ],
+   "why": "Art lessons are in the morning."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is from the text?",
+   "o": [
+    "We don't play in the afternoon.",
+    "We play in the afternoon.",
+    "We don't do homework.",
+    "We play tennis at night."
+   ],
+   "why": "The text says We don't play in the afternoon."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In the Snap game, when do you say Snap!?",
+   "o": [
+    "When the routine and the time match.",
+    "When the cards are red.",
+    "When you lose a card.",
+    "When the game finishes."
+   ],
+   "why": "Snap! is for a match."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the writing frame for your day?",
+   "o": [
+    "I ... in the ... / I ... at night.",
+    "I ... on night.",
+    "In the ... I at ...",
+    "I at the morning ..."
+   ],
+   "why": "We write I ... in the ... and I ... at night."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ask your partner about play. Which question is correct?",
+   "o": [
+    "When do you play?",
+    "When you play?",
+    "When are you play?",
+    "When does you play?"
+   ],
+   "why": "We ask When do you play?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write about your day. Which sentence is correct?",
+   "o": [
+    "I have breakfast in the morning.",
+    "I have breakfast at the morning.",
+    "I have breakfast in night.",
+    "I breakfast have morning."
+   ],
+   "why": "Morning takes in the."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "When do you play tennis? Choose a correct answer.",
+   "o": [
+    "We play tennis in the afternoon.",
+    "We play tennis at the afternoon.",
+    "We tennis play afternoon.",
+    "We play tennis in night."
+   ],
+   "why": "Afternoon takes in the."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Do Jasim and Yasir play in the afternoon? How do you know?",
+   "o": [
+    "No. The text says We don't play in the afternoon.",
+    "Yes. They play tennis.",
+    "Yes. They play after school.",
+    "No. They are at school at night."
+   ],
+   "why": "The text tells us: We don't play in the afternoon."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ali plays in the afternoon. How is his day different from Jasim and Yasir's day?",
+   "o": [
+    "They don't play in the afternoon.",
+    "They play in the afternoon too.",
+    "They don't do homework.",
+    "They don't have dinner."
+   ],
+   "why": "Jasim and Yasir play in the evening, not the afternoon."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we guess the answers before we listen?",
+   "o": [
+    "To think about the words we will hear.",
+    "To finish fast and stop listening.",
+    "Because we don't need to listen.",
+    "To copy a friend."
+   ],
+   "why": "Guessing helps us get ready to listen."
+  }
+ ]
+}

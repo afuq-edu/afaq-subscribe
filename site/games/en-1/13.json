@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الأول",
+  "unit": "Unit 2: My school bag",
+  "lesson": "Lesson 5: Project – A school bag + Sound r",
+  "outcomes": [
+    "I can make a paper school bag and say what is in it.",
+    "I can say I've got … and I haven't got … about my bag.",
+    "I can say the sound /r/ and read rat and rip."
+  ],
+  "tf": [
+    {"s": "Step 1 of the project is: press out the bag.", "t": true, "why": "Yes! First we press out the bag."},
+    {"s": "We put the paper school things in the bag.", "t": true, "why": "Yes! Then we put the things in."},
+    {"s": "We pack our real school bag carefully.", "t": true, "why": "Great! We look after our things."},
+    {"s": "I haven't got a ruler means I have a ruler.", "t": false, "why": "It means there is no ruler."},
+    {"s": "Rabbit starts with the sound /r/.", "t": true, "why": "Yes! r, r, rabbit."},
+    {"s": "Red starts with the letter h.", "t": false, "why": "Red starts with r."},
+    {"s": "r – a – t makes rat.", "t": true, "why": "Well done! r-a-t, rat."},
+    {"s": "r – i – p makes rat.", "t": false, "why": "r-i-p makes rip."},
+    {"s": "Rug starts with /m/.", "t": false, "why": "Rug starts with /r/."},
+    {"s": "A rabbit is a school thing.", "t": false, "why": "A rabbit is an animal."}
+  ],
+  "boxes": [
+    {"q": "What do we make in the project?", "o": ["a school bag", "a finger puppet", "a family photo"], "why": "We make a paper school bag."},
+    {"q": "After we press out the bag, we …", "o": ["colour it", "throw it", "eat it"], "why": "We colour the bag and the things."},
+    {"q": "I've got a book and a …", "o": ["ruler", "rabbit", "rock"], "why": "A ruler is a school thing."},
+    {"q": "No pen in my bag. I … a pen.", "o": ["haven't got", "'ve got", "am"], "why": "I haven't got a pen."},
+    {"q": "Which word starts with /r/?", "o": ["rock", "cat", "hen"], "why": "r, r, rock!"},
+    {"q": "_abbit: which letter is missing?", "o": ["r", "h", "m"], "why": "r + abbit = rabbit."},
+    {"q": "The /r/ Phonics Card shows a …", "o": ["rabbit", "mouse", "king"], "why": "Rabbit starts with /r/."},
+    {"q": "Blend: r – a – t", "o": ["rat", "rip", "hat"], "why": "r-a-t, rat!"},
+    {"q": "Blend: r – i – p", "o": ["rip", "rat", "tip"], "why": "r-i-p, rip!"},
+    {"q": "Which letter makes the sound /r/?", "o": ["r", "h", "n"], "why": "The letter r says /r/."}
+  ],
+  "hunt": [
+    {"q": "Catch the /r/ animal.", "a": "rabbit", "d": ["mouse", "horse", "hen"]},
+    {"q": "Catch the /r/ colour.", "a": "red", "d": ["pink", "blue", "green"]},
+    {"q": "Catch the /r/ word: go fast!", "a": "run", "d": ["sit", "hop", "sing"]},
+    {"q": "Catch the /r/ word.", "a": "rock", "d": ["sock", "duck", "king"]},
+    {"q": "Catch another /r/ word.", "a": "rug", "d": ["mug", "hug", "cup"]},
+    {"q": "Catch the letter for /r/.", "a": "r", "d": ["h", "m", "n"]},
+    {"q": "Blend: r – a – t", "a": "rat", "d": ["cat", "hat", "mat"]},
+    {"q": "Blend: r – i – p", "a": "rip", "d": ["pin", "tip", "hip"]},
+    {"q": "Catch the project name.", "a": "A school bag", "d": ["Finger puppets", "My family", "Hello, Meg!"]},
+    {"q": "Catch a school thing for the bag.", "a": "pencil case", "d": ["rabbit", "rock", "rug"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which of these words starts with /r/?", "o": ["rod", "hot", "mop", "cot"], "why": "r, r, rod!"},
+    {"lv": "التذكر", "q": "What is step 1 of the project?", "o": ["Press out the bag.", "Sing the song.", "Go home.", "Read a book."], "why": "First we press out the bag."},
+    {"lv": "التذكر", "q": "Which one is NOT a school thing?", "o": ["rabbit", "pen", "eraser", "book"], "why": "A rabbit is an animal."},
+    {"lv": "التذكر", "q": "Which sentence is for a thing you do NOT have?", "o": ["I haven't got a crayon.", "I've got a crayon.", "It's a crayon.", "Show me a crayon."], "why": "Haven't got means you don't have it."},
+    {"lv": "التطبيق", "q": "Your bag has a book and a ruler, but no pen. You say …", "o": ["I've got a book and a ruler. I haven't got a pen.", "I've got a pen.", "I haven't got a book.", "I haven't got a ruler."], "why": "Say what is in the bag and what is not."},
+    {"lv": "التطبيق", "q": "The song says crayon. What do you hold up?", "o": ["the crayon", "the pen", "the ruler", "the book"], "why": "Hold up the thing you hear."},
+    {"lv": "التطبيق", "q": "_un: the word is run. Which letter is missing?", "o": ["r", "s", "h", "m"], "why": "r + un = run."},
+    {"lv": "التحليل", "q": "Why do we pack our school bag carefully?", "o": ["To look after our things.", "To lose our things.", "To make it heavy.", "To give it to the cat."], "why": "We look after our things."},
+    {"lv": "التحليل", "q": "Which word does NOT start with /r/?", "o": ["hen", "red", "rug", "rock"], "why": "Hen starts with /h/."},
+    {"lv": "التحليل", "q": "Rat and cat. What is different?", "o": ["The first sound", "The last sound", "The middle sound", "Nothing"], "why": "r-at and c-at: only the first sound changes."}
+  ]
+}

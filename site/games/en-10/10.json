@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "2",
+  "lesson": "Unit 2: Climate Change – Grammar and Vocabulary",
+  "outcomes": [
+    "Find the cause and the effect in sentences about climate change.",
+    "Join causes and effects with connectors like because of, so and therefore.",
+    "Recognise and write compound nouns like greenhouse gas and ice cap."
+  ],
+  "tf": [
+    {
+      "s": "In 'Ice caps melt, so sea levels rise', the melting ice caps are the cause.",
+      "t": true,
+      "why": "Yes! Melting ice causes the sea level to rise."
+    },
+    {
+      "s": "'Because of' comes before the effect.",
+      "t": false,
+      "why": "'Because of' comes before the cause, e.g. 'because of floods'."
+    },
+    {
+      "s": "'Therefore' introduces a result.",
+      "t": true,
+      "why": "Correct: It rained; therefore, the roads closed."
+    },
+    {
+      "s": "'Due to' and 'as a result of' introduce a cause.",
+      "t": true,
+      "why": "Right, they are followed by the cause."
+    },
+    {
+      "s": "'Football' is a compound noun written as two separate words.",
+      "t": false,
+      "why": "'Football' is written as one word; 'ice cap' is two words."
+    },
+    {
+      "s": "'Tea-bag' is an example of a hyphenated compound noun.",
+      "t": true,
+      "why": "Well done, it has a hyphen."
+    },
+    {
+      "s": "A carbon footprint shows how much carbon dioxide we release.",
+      "t": true,
+      "why": "Yes, a smaller footprint is better for the planet."
+    },
+    {
+      "s": "In 'Fossil fuels are burned, so greenhouse gases increase', 'so' introduces the cause.",
+      "t": false,
+      "why": "'So' introduces the effect: greenhouse gases increase."
+    },
+    {
+      "s": "'Consequently' has a similar meaning to 'therefore'.",
+      "t": true,
+      "why": "Yes, both introduce a result."
+    },
+    {
+      "s": "All compound nouns are written as one word.",
+      "t": false,
+      "why": "They can be one word, hyphenated or two separate words."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Sea levels are rising ___ the melting of ice caps.",
+      "o": [
+        "because of",
+        "so",
+        "therefore"
+      ],
+      "why": "'Because of' + the cause."
+    },
+    {
+      "q": "Fossil fuels are burned, ___ greenhouse gases increase.",
+      "o": [
+        "so",
+        "due to",
+        "because of"
+      ],
+      "why": "'So' + the effect."
+    },
+    {
+      "q": "Too much plastic ends up in the ocean. ___, sea animals are in danger.",
+      "o": [
+        "Therefore",
+        "Because of",
+        "Due to"
+      ],
+      "why": "'Therefore' introduces the result."
+    },
+    {
+      "q": "foot + ball = ?",
+      "o": [
+        "football",
+        "foot-ball",
+        "ball foot"
+      ],
+      "why": "This compound is written as one word."
+    },
+    {
+      "q": "Which compound noun is written as two separate words?",
+      "o": [
+        "ice cap",
+        "football",
+        "fireman"
+      ],
+      "why": "'Ice cap' has a space between the two words."
+    },
+    {
+      "q": "Which compound noun has a hyphen?",
+      "o": [
+        "tea-bag",
+        "fireman",
+        "football"
+      ],
+      "why": "'Tea-bag' is joined with a hyphen."
+    },
+    {
+      "q": "Our ___ shows how much carbon dioxide we release.",
+      "o": [
+        "carbon footprint",
+        "ice cap",
+        "tea-bag"
+      ],
+      "why": "A carbon footprint measures our CO2."
+    },
+    {
+      "q": "What is an effect of deforestation?",
+      "o": [
+        "fewer trees to absorb carbon dioxide",
+        "more ice at the poles",
+        "less plastic in the sea"
+      ],
+      "why": "Cutting trees means less CO2 is absorbed."
+    },
+    {
+      "q": "Drought is a ___ of rising temperatures.",
+      "o": [
+        "consequence",
+        "cause",
+        "connector"
+      ],
+      "why": "A consequence is a result."
+    },
+    {
+      "q": "Which is an effect of plastic pollution?",
+      "o": [
+        "marine animals are harmed",
+        "people throw plastic away",
+        "temperatures fall"
+      ],
+      "why": "Throwing plastic away is the cause; harm to animals is the effect."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Connector before a cause",
+      "a": "because of",
+      "d": [
+        "so",
+        "therefore",
+        "consequently"
+      ]
+    },
+    {
+      "q": "Connector before a result",
+      "a": "therefore",
+      "d": [
+        "due to",
+        "because of",
+        "as a result of"
+      ]
+    },
+    {
+      "q": "Another word for 'result'",
+      "a": "effect",
+      "d": [
+        "cause",
+        "reason",
+        "connector"
+      ]
+    },
+    {
+      "q": "The reason something happens",
+      "a": "cause",
+      "d": [
+        "effect",
+        "result",
+        "consequence"
+      ]
+    },
+    {
+      "q": "fire + man",
+      "a": "fireman",
+      "d": [
+        "fire-man",
+        "manfire",
+        "fire man"
+      ]
+    },
+    {
+      "q": "Hyphenated compound noun",
+      "a": "tea-bag",
+      "d": [
+        "fireman",
+        "football",
+        "ice cap"
+      ]
+    },
+    {
+      "q": "Compound noun: two separate words",
+      "a": "ice cap",
+      "d": [
+        "football",
+        "fireman",
+        "tea-bag"
+      ]
+    },
+    {
+      "q": "CO2 we release",
+      "a": "carbon footprint",
+      "d": [
+        "ice cap",
+        "tea-bag",
+        "football"
+      ]
+    },
+    {
+      "q": "Coal, oil or gas",
+      "a": "fossil fuel",
+      "d": [
+        "plastic waste",
+        "ice cap",
+        "tea-bag"
+      ]
+    },
+    {
+      "q": "Plastic in the sea is ...",
+      "a": "plastic pollution",
+      "d": [
+        "global warming",
+        "fossil fuel",
+        "carbon dioxide"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which connectors introduce a cause?",
+      "o": [
+        "because of, due to",
+        "so, therefore",
+        "consequently, so",
+        "therefore, consequently"
+      ],
+      "why": "They are followed by the reason."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What is a compound noun?",
+      "o": [
+        "a noun made of two or more words",
+        "a verb in the past",
+        "an adjective with 'more'",
+        "a connector"
+      ],
+      "why": "Examples are football, tea-bag and ice cap."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What are the three ways to write compound nouns?",
+      "o": [
+        "one word, hyphenated, two separate words",
+        "big, small, medium",
+        "past, present, future",
+        "cause, effect, result"
+      ],
+      "why": "football / tea-bag / ice cap."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which is a climate compound noun?",
+      "o": [
+        "greenhouse gas",
+        "fireman",
+        "tea-bag",
+        "football"
+      ],
+      "why": "Greenhouse gases warm the Earth."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Join: 'Temperatures rise. Many species lose their habitat.' using 'as a result of'.",
+      "o": [
+        "Many species lose their habitat as a result of rising temperatures.",
+        "Temperatures rise as a result of many species.",
+        "As a result of many species, temperatures rise.",
+        "Many species as a result lose of temperatures."
+      ],
+      "why": "'As a result of' + the cause (rising temperatures)."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Put in order: because / sea / rising / are / levels / of / melting ice",
+      "o": [
+        "Sea levels are rising because of melting ice.",
+        "Melting ice is rising because of sea levels.",
+        "Because sea levels of melting ice are rising.",
+        "Sea levels because of are rising melting ice."
+      ],
+      "why": "Effect + because of + cause."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose the correct sentence.",
+      "o": [
+        "Drought is a consequence of rising temperatures.",
+        "Rising temperatures is a consequence of drought.",
+        "Drought is consequence rising temperatures of.",
+        "Drought consequence is of rising temperatures."
+      ],
+      "why": "Rising temperatures cause drought."
+    },
+    {
+      "lv": "التحليل",
+      "q": "What is the difference between 'because of' and 'therefore'?",
+      "o": [
+        "'Because of' comes before the cause; 'therefore' comes before the result.",
+        "They are both before the cause.",
+        "They are both before the result.",
+        "'Therefore' is only used in questions."
+      ],
+      "why": "Example: because of floods… / It rained; therefore, the roads closed."
+    },
+    {
+      "lv": "التحليل",
+      "q": "In 'Plastic ends up in the ocean, so sea animals are in danger', what is the effect?",
+      "o": [
+        "sea animals are in danger",
+        "plastic ends up in the ocean",
+        "the ocean",
+        "so"
+      ],
+      "why": "The effect comes after 'so'."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which sentence has a mistake?",
+      "o": [
+        "Due to the rain, there are floods because.",
+        "There are floods because of the rain.",
+        "It rained; therefore, there are floods.",
+        "Due to the rain, there are floods."
+      ],
+      "why": "Only one connector is needed for one cause."
+    }
+  ]
+}

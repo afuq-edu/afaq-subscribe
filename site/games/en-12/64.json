@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Safety on the Roads (Vocabulary)",
+ "lesson": "Road safety: discussion, vocabulary and multiple-choice strategy",
+ "outcomes": [
+  "Talk about road safety and the work of the Traffic Safety Institute",
+  "Learn road safety words such as fatalities and simulator",
+  "Use a strategy to answer multiple-choice listening questions"
+ ],
+ "tf": [
+  {
+   "s": "The simulator car shows people why wearing a seatbelt is important.",
+   "t": true,
+   "why": "Yes, it lets people feel why a seatbelt matters."
+  },
+  {
+   "s": "'Fatalities' are people who are killed in accidents.",
+   "t": true,
+   "why": "Correct, fatalities means deaths."
+  },
+  {
+   "s": "In 2014 there were 836 road accidents in Oman.",
+   "t": false,
+   "why": "836 was the number of fatalities; there were 6,717 accidents."
+  },
+  {
+   "s": "Qualifying words like 'always' and 'never' can make a correct-looking answer wrong.",
+   "t": true,
+   "why": "Right, one small word can change the whole meaning."
+  },
+  {
+   "s": "In multiple-choice questions, it helps to cross out the options you know are wrong.",
+   "t": true,
+   "why": "Yes, eliminating wrong options leaves you with the best answer."
+  },
+  {
+   "s": "The ROP advises new drivers to practise driving at the busiest times of day.",
+   "t": false,
+   "why": "The advice is to avoid busy times while you are still new."
+  },
+  {
+   "s": "Driving without a licence can lead to a fine and time in jail.",
+   "t": true,
+   "why": "Correct, the fine is 75 rials and at least 48 hours in jail."
+  },
+  {
+   "s": "A speed limit is the lowest speed you are allowed to drive on a road.",
+   "t": false,
+   "why": "A speed limit is the highest speed allowed."
+  },
+  {
+   "s": "The ROP suggests that new drivers go out with an experienced driver.",
+   "t": true,
+   "why": "Yes, an experienced driver can help a new driver stay safe."
+  },
+  {
+   "s": "You should read the multiple-choice options only after the talk has finished.",
+   "t": false,
+   "why": "It is best to read the statements before you listen."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does 'fatalities' mean?",
+   "o": [
+    "deaths",
+    "injuries",
+    "repairs"
+   ],
+   "why": "Fatalities are people who die, for example in accidents."
+  },
+  {
+   "q": "What is a simulator car used for?",
+   "o": [
+    "to show the value of seatbelts",
+    "to race on the road",
+    "to carry police officers"
+   ],
+   "why": "It lets people feel what happens without a seatbelt."
+  },
+  {
+   "q": "How many road accidents were there in Oman in 2014?",
+   "o": [
+    "6,717",
+    "836",
+    "48"
+   ],
+   "why": "The talk gives 6,717 accidents in 2014."
+  },
+  {
+   "q": "Which is a qualifying word?",
+   "o": [
+    "sometimes",
+    "driver",
+    "road"
+   ],
+   "why": "Words like sometimes, never and always qualify a statement."
+  },
+  {
+   "q": "What is the fine for driving without a licence?",
+   "o": [
+    "75 Omani rials",
+    "7 Omani rials",
+    "750 Omani rials"
+   ],
+   "why": "The fine is 75 rials and at least 48 hours in jail."
+  },
+  {
+   "q": "Who gave the talk in Listening 4.3.1?",
+   "o": [
+    "an ROP officer",
+    "a pilot",
+    "a shopkeeper"
+   ],
+   "why": "An officer from the ROP talked about road safety."
+  },
+  {
+   "q": "What should you do first in a multiple-choice listening task?",
+   "o": [
+    "read the statements",
+    "close your book",
+    "write an essay"
+   ],
+   "why": "Reading first tells you what to listen for."
+  },
+  {
+   "q": "What does a seatbelt do?",
+   "o": [
+    "keeps you in your seat in a crash",
+    "makes the car faster",
+    "turns on the lights"
+   ],
+   "why": "A seatbelt holds you safely in your seat."
+  },
+  {
+   "q": "What should new drivers avoid?",
+   "o": [
+    "busy times",
+    "quiet roads",
+    "practising"
+   ],
+   "why": "New drivers are advised to avoid busy times."
+  },
+  {
+   "q": "What is the minimum jail time for driving without a licence?",
+   "o": [
+    "48 hours",
+    "8 hours",
+    "48 days"
+   ],
+   "why": "The minimum is 48 hours in jail."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Road accidents in Oman in 2014",
+   "a": "6,717",
+   "d": [
+    "836",
+    "7,617",
+    "6,177"
+   ]
+  },
+  {
+   "q": "Road deaths in Oman in 2014",
+   "a": "836",
+   "d": [
+    "6,717",
+    "386",
+    "863"
+   ]
+  },
+  {
+   "q": "Fine for no licence (rials)",
+   "a": "75",
+   "d": [
+    "48",
+    "57",
+    "100"
+   ]
+  },
+  {
+   "q": "Minimum jail time for no licence",
+   "a": "48 hours",
+   "d": [
+    "24 hours",
+    "12 hours",
+    "72 hours"
+   ]
+  },
+  {
+   "q": "Word for people killed in accidents",
+   "a": "fatalities",
+   "d": [
+    "injuries",
+    "hazards",
+    "licences"
+   ]
+  },
+  {
+   "q": "Car that shows why seatbelts matter",
+   "a": "simulator car",
+   "d": [
+    "police car",
+    "taxi",
+    "racing car"
+   ]
+  },
+  {
+   "q": "Highest speed allowed on a road",
+   "a": "speed limit",
+   "d": [
+    "seatbelt",
+    "traffic light",
+    "licence"
+   ]
+  },
+  {
+   "q": "A qualifying word",
+   "a": "always",
+   "d": [
+    "car",
+    "officer",
+    "road"
+   ]
+  },
+  {
+   "q": "New drivers should go out with...",
+   "a": "an experienced driver",
+   "d": [
+    "a new driver",
+    "a child",
+    "nobody"
+   ]
+  },
+  {
+   "q": "What new drivers should avoid",
+   "a": "busy times",
+   "d": [
+    "practice",
+    "seatbelts",
+    "licences"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does the Traffic Safety Institute teach people about?",
+   "o": [
+    "road safety",
+    "cooking",
+    "farming",
+    "shopping"
+   ],
+   "why": "The institute teaches people how to be safe on the roads."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'deaths in accidents'?",
+   "o": [
+    "fatalities",
+    "hazards",
+    "simulators",
+    "limits"
+   ],
+   "why": "Fatalities is the word for people who are killed."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the purpose of the simulator car?",
+   "o": [
+    "to show the importance of wearing a seatbelt",
+    "to train racing drivers",
+    "to test new engines",
+    "to sell cars"
+   ],
+   "why": "The simulator lets people feel the effect of a crash safely."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is NOT advice the ROP gives to new drivers?",
+   "o": [
+    "drive fast to gain confidence",
+    "practise what they learned",
+    "avoid busy times",
+    "go out with an experienced driver"
+   ],
+   "why": "Speeding is never good advice; the other three are from the talk."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A statement says: 'New drivers should never drive alone.' Which word could make it wrong?",
+   "o": [
+    "never",
+    "drivers",
+    "drive",
+    "alone"
+   ],
+   "why": "Qualifying words like never can turn a statement false."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are not sure of an answer. Two options are clearly wrong. What should you do?",
+   "o": [
+    "eliminate them and choose from the rest",
+    "choose one of them",
+    "leave the question",
+    "pick the longest option"
+   ],
+   "why": "Eliminating wrong options improves your chance of being right."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A man drives with no licence. What can happen to him?",
+   "o": [
+    "a 75-rial fine and at least 48 hours in jail",
+    "a warning only",
+    "a free driving lesson",
+    "nothing at all"
+   ],
+   "why": "The talk gives both a fine and jail time."
+  },
+  {
+   "lv": "التحليل",
+   "q": "In 2014, 6,717 accidents caused 836 deaths. What does this show?",
+   "o": [
+    "road accidents are a serious problem",
+    "roads in Oman are always safe",
+    "most accidents cause no harm to anyone",
+    "there were more deaths than accidents"
+   ],
+   "why": "Hundreds of deaths show why road safety matters so much."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do qualifying words matter in multiple-choice questions?",
+   "o": [
+    "they can make an otherwise correct answer incorrect",
+    "they make every answer correct",
+    "they are never in exam questions",
+    "they only change the spelling"
+   ],
+   "why": "One word like always or never can change the meaning."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it good for a new driver to go out with an experienced driver?",
+   "o": [
+    "the experienced driver can guide and correct them",
+    "it makes the car go faster",
+    "they can drive without a licence",
+    "it lets them use busy roads at night"
+   ],
+   "why": "Learning from someone with experience makes new drivers safer."
+  }
+ ]
+}

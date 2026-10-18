@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الأول",
+  "unit": "Unit 1: Family and friends",
+  "lesson": "Lesson 7: Get ready for… (Pre A1 Starters) + Unit 1 sounds review",
+  "outcomes": [
+    "I can listen and find the right family picture.",
+    "I can write s, a, t, p, n when I hear the sounds.",
+    "I can write tap, nap, pan and pat."
+  ],
+  "tf": [
+    {"s": "Sing and sun start with the same letter.", "t": true, "why": "Yes! Both start with s."},
+    {"s": "Pie and pen start with the letter p.", "t": true, "why": "Great! p, p, pie and pen."},
+    {"s": "Tree and nose start with the same sound.", "t": false, "why": "Tree starts with /t/, nose with /n/."},
+    {"s": "Mum and dad are friends, not family.", "t": false, "why": "Mum and dad are family."},
+    {"s": "We can say: She's my sister.", "t": true, "why": "Yes! She is for a girl."},
+    {"s": "We say He's my mum.", "t": false, "why": "Mum is a woman, so we say She's my mum."},
+    {"s": "n – a – p makes nap.", "t": true, "why": "Well done! n-a-p, nap."},
+    {"s": "The word pan starts with n.", "t": false, "why": "Pan starts with p."},
+    {"s": "We say Hello, Tom! to greet Tom the cat.", "t": true, "why": "Yes! Hello is a greeting."},
+    {"s": "Ant starts with the letter n.", "t": false, "why": "Ant starts with a."}
+  ],
+  "boxes": [
+    {"q": "Who's this? (a boy in your family)", "o": ["He's my brother.", "She's my sister.", "She's my mum."], "why": "A boy in your family is your brother."},
+    {"q": "Which word is for a girl?", "o": ["she", "he", "dad"], "why": "We say she for a girl."},
+    {"q": "Which word is for a boy?", "o": ["he", "she", "mum"], "why": "We say he for a boy."},
+    {"q": "Write the letter for /t/.", "o": ["t", "p", "s"], "why": "The letter t says /t/."},
+    {"q": "Write the letter for /n/.", "o": ["n", "a", "p"], "why": "The letter n says /n/."},
+    {"q": "Dictation: write pan.", "o": ["pan", "nap", "pat"], "why": "p-a-n, pan."},
+    {"q": "Dictation: write tap.", "o": ["tap", "pat", "nap"], "why": "t-a-p, tap."},
+    {"q": "Sun and sing: same first letter?", "o": ["s", "t", "n"], "why": "Both start with s."},
+    {"q": "Say hello to Meg.", "o": ["Hello, Meg!", "Goodbye, Meg!", "This is my Meg."], "why": "We greet with Hello."},
+    {"q": "Maha is my …", "o": ["friend", "dad", "brother"], "why": "Maha is a friend."}
+  ],
+  "hunt": [
+    {"q": "Catch the letter for /s/.", "a": "s", "d": ["n", "p", "t"]},
+    {"q": "Catch the letter for /æ/.", "a": "a", "d": ["s", "n", "p"]},
+    {"q": "Catch the letter for /p/.", "a": "p", "d": ["a", "t", "n"]},
+    {"q": "Catch the word: n – a – p", "a": "nap", "d": ["pan", "tap", "pat"]},
+    {"q": "Catch the word: p – a – t", "a": "pat", "d": ["tap", "nap", "pan"]},
+    {"q": "Catch the word that starts like sun.", "a": "sing", "d": ["nest", "tree", "pie"]},
+    {"q": "Catch the word that starts like tree.", "a": "teddy", "d": ["nose", "ant", "pen"]},
+    {"q": "Catch the word that starts like nose.", "a": "net", "d": ["pot", "six", "axe"]},
+    {"q": "Catch the woman in the family.", "a": "mum", "d": ["dad", "brother", "boy"]},
+    {"q": "Catch the man in the family.", "a": "dad", "d": ["sister", "mum", "girl"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which sounds are in Unit 1?", "o": ["s, a, t, p, n", "i, m, h, c, r", "b, d, e, f, g", "o, l, u, x, y"], "why": "Unit 1 sounds: s, a, t, p, n."},
+    {"lv": "التذكر", "q": "Which word is a family word?", "o": ["sister", "friend", "cat", "pen"], "why": "Sister is in the family."},
+    {"lv": "التذكر", "q": "Which one is Tom?", "o": ["a cat", "a girl", "a dad", "a sister"], "why": "Tom is a cat."},
+    {"lv": "التذكر", "q": "Which letter starts the word apple?", "o": ["a", "p", "t", "n"], "why": "Apple starts with a."},
+    {"lv": "التطبيق", "q": "Listen: \"This is my sister.\" Which picture do you tick?", "o": ["a girl", "a man", "a cat", "a boy"], "why": "A sister is a girl."},
+    {"lv": "التطبيق", "q": "Order the letters: p, a, t → ?", "o": ["pat", "apt", "tpa", "atp"], "why": "p-a-t makes pat."},
+    {"lv": "التطبيق", "q": "The teacher points to Fatma: Who's this? You say …", "o": ["This is Fatma.", "This is Tom.", "I'm Meg.", "Goodbye, Fatma."], "why": "Say This is Fatma."},
+    {"lv": "التحليل", "q": "\"She's my sister.\" Why are mum and dad pictures wrong?", "o": ["They are not the sister.", "They are cats.", "They are friends.", "They are boys."], "why": "Only the sister picture is right."},
+    {"lv": "التحليل", "q": "Which two pictures start with the same letter?", "o": ["sing and sun", "sun and tree", "pen and nut", "ant and six"], "why": "Sing and sun both start with s."},
+    {"lv": "التحليل", "q": "Tap, nap, pan, pat. What sound is in the middle of all of them?", "o": ["/æ/", "/s/", "/t/", "/n/"], "why": "All of them have a in the middle."}
+  ]
+}

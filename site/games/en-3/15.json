@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 2: Let's dress up!",
+ "lesson": "Unit 2 – Lesson 1: Vocabulary and Grammar (clothes)",
+ "outcomes": [
+  "I can name and spell ten clothes words.",
+  "I can say You're / We're / They're wearing ...",
+  "I can sort clothes for school, sport, bed and cold weather."
+ ],
+ "tf": [
+  {
+   "s": "We wear pyjamas in bed.",
+   "t": true,
+   "why": "Yes! Pyjamas are clothes for bed."
+  },
+  {
+   "s": "Trainers are shoes for sport.",
+   "t": true,
+   "why": "Well done! We wear trainers for sport."
+  },
+  {
+   "s": "We're is the short form of We are.",
+   "t": true,
+   "why": "We are = We're."
+  },
+  {
+   "s": "They're is the short form of They have.",
+   "t": false,
+   "why": "They're = They are."
+  },
+  {
+   "s": "A coat is for hot weather.",
+   "t": false,
+   "why": "A coat keeps us warm in cold weather."
+  },
+  {
+   "s": "We talk to one friend and say You're wearing a coat.",
+   "t": true,
+   "why": "You're is for the person we talk to."
+  },
+  {
+   "s": "Two girls are in red pyjamas. We say We're wearing red pyjamas.",
+   "t": false,
+   "why": "For other people we say They're wearing red pyjamas."
+  },
+  {
+   "s": "Jumper is spelled j-u-m-p-e-r.",
+   "t": true,
+   "why": "Great spelling!"
+  },
+  {
+   "s": "Slippers are shoes for sport.",
+   "t": false,
+   "why": "Slippers are for home and bed. Trainers are for sport."
+  },
+  {
+   "s": "A tracksuit is clothes for sport.",
+   "t": true,
+   "why": "We wear a tracksuit for sport."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do you wear in bed?",
+   "o": [
+    "pyjamas",
+    "trainers",
+    "a coat"
+   ],
+   "why": "Pyjamas are for bed."
+  },
+  {
+   "q": "What is the long form of They're?",
+   "o": [
+    "They are",
+    "They were",
+    "They have"
+   ],
+   "why": "They're = They are."
+  },
+  {
+   "q": "Complete: We're ___ jeans.",
+   "o": [
+    "wearing",
+    "wear",
+    "wears"
+   ],
+   "why": "We say We're wearing ..."
+  },
+  {
+   "q": "Talking to one friend: ___ wearing a coat.",
+   "o": [
+    "You're",
+    "They're",
+    "We're"
+   ],
+   "why": "Use You're for the person you talk to."
+  },
+  {
+   "q": "Me and my friends: ___ wearing hijabs.",
+   "o": [
+    "We're",
+    "They're",
+    "You're"
+   ],
+   "why": "Me and my friends = we."
+  },
+  {
+   "q": "Which word is spelled correctly?",
+   "o": [
+    "trainers",
+    "treiners",
+    "traners"
+   ],
+   "why": "Trainers: t-r-a-i-n-e-r-s."
+  },
+  {
+   "q": "Which is a hat for sport?",
+   "o": [
+    "baseball cap",
+    "hijab",
+    "jumper"
+   ],
+   "why": "A baseball cap is a sport hat."
+  },
+  {
+   "q": "Which clothes are blue trousers?",
+   "o": [
+    "jeans",
+    "slippers",
+    "shirt"
+   ],
+   "why": "Jeans are trousers."
+  },
+  {
+   "q": "Which clothes are for cold weather?",
+   "o": [
+    "coat and jumper",
+    "pyjamas and slippers",
+    "tracksuit and trainers"
+   ],
+   "why": "A coat and a jumper keep us warm."
+  },
+  {
+   "q": "What is the long form of You're?",
+   "o": [
+    "You are",
+    "You were",
+    "Your"
+   ],
+   "why": "You're = You are."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Clothes for bed",
+   "a": "pyjamas",
+   "d": [
+    "trainers",
+    "coat",
+    "jeans"
+   ]
+  },
+  {
+   "q": "Shoes for sport",
+   "a": "trainers",
+   "d": [
+    "slippers",
+    "shirt",
+    "jumper"
+   ]
+  },
+  {
+   "q": "Shoes for home",
+   "a": "slippers",
+   "d": [
+    "trainers",
+    "coat",
+    "jeans"
+   ]
+  },
+  {
+   "q": "Warm, for outside in winter",
+   "a": "coat",
+   "d": [
+    "shirt",
+    "slippers",
+    "pyjamas"
+   ]
+  },
+  {
+   "q": "Sport hat",
+   "a": "baseball cap",
+   "d": [
+    "hijab",
+    "jumper",
+    "coat"
+   ]
+  },
+  {
+   "q": "Clothes for sport",
+   "a": "tracksuit",
+   "d": [
+    "pyjamas",
+    "coat",
+    "slippers"
+   ]
+  },
+  {
+   "q": "We are = ___",
+   "a": "We're",
+   "d": [
+    "Were",
+    "Wear",
+    "We's"
+   ]
+  },
+  {
+   "q": "They are = ___",
+   "a": "They're",
+   "d": [
+    "There",
+    "Their",
+    "They's"
+   ]
+  },
+  {
+   "q": "You are = ___",
+   "a": "You're",
+   "d": [
+    "Your",
+    "You's",
+    "Yore"
+   ]
+  },
+  {
+   "q": "Spell: j-u-m-p-e-r",
+   "a": "jumper",
+   "d": [
+    "jumpar",
+    "jumpur",
+    "jamper"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word is NOT a clothes word?",
+   "o": [
+    "kite",
+    "shirt",
+    "jeans",
+    "coat"
+   ],
+   "why": "A kite is a toy, not clothes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which are the long forms?",
+   "o": [
+    "We are, You are, They are",
+    "We have, You have, They have",
+    "We were, Your, There",
+    "We do, You do, They do"
+   ],
+   "why": "We're, You're, They're use are."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which clothes do we wear in bed?",
+   "o": [
+    "pyjamas",
+    "trainers",
+    "tracksuit",
+    "baseball cap"
+   ],
+   "why": "Pyjamas are for bed."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is correct?",
+   "o": [
+    "They're wearing trainers.",
+    "They wearing trainers.",
+    "They're wear trainers.",
+    "They is wearing trainers."
+   ],
+   "why": "They're + wearing + clothes."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture: two girls in red pyjamas. Which sentence matches?",
+   "o": [
+    "They're wearing red pyjamas.",
+    "We're wearing red pyjamas.",
+    "You're wearing red jeans.",
+    "They're wearing red coats."
+   ],
+   "why": "Two other people: They're."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write: (they) / trainers",
+   "o": [
+    "They're wearing trainers.",
+    "We're wearing trainers.",
+    "They wearing trainers.",
+    "They're trainers wearing."
+   ],
+   "why": "They're wearing trainers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You and your partner are in jeans. What do you say?",
+   "o": [
+    "We're wearing jeans.",
+    "They're wearing jeans.",
+    "You're wearing jeans.",
+    "I wearing jeans."
+   ],
+   "why": "You and me = We."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which clothes are for sport?",
+   "o": [
+    "tracksuit and trainers",
+    "pyjamas and slippers",
+    "coat and jumper",
+    "hijab and coat"
+   ],
+   "why": "We wear a tracksuit and trainers for sport."
+  },
+  {
+   "lv": "التحليل",
+   "q": "It is very cold outside. What do you wear?",
+   "o": [
+    "a coat and a jumper",
+    "pyjamas and slippers",
+    "a shirt only",
+    "slippers and a baseball cap"
+   ],
+   "why": "A coat and a jumper keep you warm."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group has one word that is NOT for sport?",
+   "o": [
+    "tracksuit, trainers, slippers",
+    "tracksuit, trainers, baseball cap",
+    "trainers, tracksuit",
+    "baseball cap, trainers"
+   ],
+   "why": "Slippers are for home, not sport."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: Malls and Markets (Listening & Speaking)",
+ "lesson": "Lead-in, malls and markets, predicting vocabulary / Predicting the content of a talk (Listening 1.4.1)",
+ "outcomes": [
+  "Compare malls and markets (souqs)",
+  "Predict vocabulary and content before listening",
+  "Listen to a tour guide and sort phrases into the correct column"
+ ],
+ "tf": [
+  {
+   "s": "Predicting the content of a talk makes it easier to understand.",
+   "t": true,
+   "why": "Yes, you are ready for the words you will hear."
+  },
+  {
+   "s": "Bargaining is common in souqs.",
+   "t": true,
+   "why": "Correct, you can discuss the price with the shopkeeper."
+  },
+  {
+   "s": "Souqs usually have multi-level car parks and wide walkways.",
+   "t": false,
+   "why": "Those are features of malls; souqs have narrow passages."
+  },
+  {
+   "s": "Shopping malls are best for quick, easy shopping.",
+   "t": true,
+   "why": "Yes, the talk says malls make shopping quick and easy."
+  },
+  {
+   "s": "Tourists love the narrow passages with tiny shops in souqs.",
+   "t": true,
+   "why": "Right, they also like the friendly shopkeepers."
+  },
+  {
+   "s": "All 14 phrases in the list appear in the talk.",
+   "t": false,
+   "why": "Four phrases (1, 5, 7, 11) do not occur."
+  },
+  {
+   "s": "Two of the phrases apply to both malls and markets.",
+   "t": true,
+   "why": "Correct, phrases 2 and 4 apply to both."
+  },
+  {
+   "s": "Phrases in the talk come in exactly the same order as the list.",
+   "t": false,
+   "why": "The order in the talk is different."
+  },
+  {
+   "s": "'Window-shopping' means looking at things in shops without buying them.",
+   "t": true,
+   "why": "Yes, you just look in the windows."
+  },
+  {
+   "s": "A 'souq' is a modern shopping centre with many floors.",
+   "t": false,
+   "why": "A souq is a traditional market."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is a souq?",
+   "o": [
+    "a traditional market",
+    "a car park",
+    "an airport"
+   ],
+   "why": "Souq is the Arabic word for market."
+  },
+  {
+   "q": "Where can you bargain?",
+   "o": [
+    "in a souq",
+    "in a cinema",
+    "in a car park"
+   ],
+   "why": "Bargaining is part of shopping in souqs."
+  },
+  {
+   "q": "What do you find in a mall?",
+   "o": [
+    "a multi-level car park",
+    "narrow passages",
+    "street sellers only"
+   ],
+   "why": "Malls have big car parks."
+  },
+  {
+   "q": "Who gives the talk in Listening 1.4.1?",
+   "o": [
+    "a tour guide",
+    "a pilot",
+    "a police officer"
+   ],
+   "why": "A tour guide talks about shopping."
+  },
+  {
+   "q": "Why do we predict before listening?",
+   "o": [
+    "to make the talk easier to understand",
+    "to finish early",
+    "to avoid listening"
+   ],
+   "why": "Prediction prepares your mind."
+  },
+  {
+   "q": "How many phrases do not occur in the talk?",
+   "o": [
+    "four",
+    "two",
+    "none"
+   ],
+   "why": "Phrases 1, 5, 7 and 11 are not in the talk."
+  },
+  {
+   "q": "What does 'bargain' mean?",
+   "o": [
+    "discuss the price",
+    "steal",
+    "return goods"
+   ],
+   "why": "You bargain to get a lower price."
+  },
+  {
+   "q": "Which place is best for quick, easy shopping?",
+   "o": [
+    "a shopping mall",
+    "a souq",
+    "a village"
+   ],
+   "why": "The talk says malls are quick and easy."
+  },
+  {
+   "q": "What do tourists love about souqs?",
+   "o": [
+    "friendly shopkeepers",
+    "multi-level car parks",
+    "escalators"
+   ],
+   "why": "Friendly shopkeepers are part of the charm."
+  },
+  {
+   "q": "What is 'window-shopping'?",
+   "o": [
+    "looking without buying",
+    "buying windows",
+    "shopping online"
+   ],
+   "why": "You look at goods but don't buy."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Traditional market",
+   "a": "souq",
+   "d": [
+    "mall",
+    "car park",
+    "airport"
+   ]
+  },
+  {
+   "q": "Where you can bargain",
+   "a": "souq",
+   "d": [
+    "mall",
+    "cinema",
+    "bank"
+   ]
+  },
+  {
+   "q": "Best for quick, easy shopping",
+   "a": "mall",
+   "d": [
+    "souq",
+    "village",
+    "farm"
+   ]
+  },
+  {
+   "q": "Speaker of Listening 1.4.1",
+   "a": "tour guide",
+   "d": [
+    "pilot",
+    "teacher",
+    "officer"
+   ]
+  },
+  {
+   "q": "Phrases not in the talk",
+   "a": "four",
+   "d": [
+    "two",
+    "six",
+    "none"
+   ]
+  },
+  {
+   "q": "Phrases for both places",
+   "a": "two",
+   "d": [
+    "four",
+    "one",
+    "six"
+   ]
+  },
+  {
+   "q": "Discuss a lower price",
+   "a": "bargain",
+   "d": [
+    "export",
+    "emit",
+    "predict"
+   ]
+  },
+  {
+   "q": "Looking but not buying",
+   "a": "window-shopping",
+   "d": [
+    "bargaining",
+    "trading",
+    "borrowing"
+   ]
+  },
+  {
+   "q": "Souqs have narrow...",
+   "a": "passages",
+   "d": [
+    "car parks",
+    "runways",
+    "motorways"
+   ]
+  },
+  {
+   "q": "Malls have wide...",
+   "a": "walkways",
+   "d": [
+    "passages",
+    "alleys",
+    "tracks"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which features belong to a mall?",
+   "o": [
+    "fashion shops, a multi-level car park and wide walkways",
+    "narrow passages and tiny shops",
+    "bargaining and street stalls",
+    "friendly shopkeepers in old alleys"
+   ],
+   "why": "These are typical mall features in the talk."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which features belong to a souq?",
+   "o": [
+    "bargaining, narrow passages and friendly shopkeepers",
+    "escalators and a multi-level car park",
+    "wide walkways and fashion chains",
+    "a cinema and a food court"
+   ],
+   "why": "These are typical souq features in the talk."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should you do before listening to a talk?",
+   "o": [
+    "predict its likely content and vocabulary",
+    "write the answers without listening",
+    "close your book",
+    "translate every word"
+   ],
+   "why": "Predicting prepares you for what you will hear."
+  },
+  {
+   "lv": "التذكر",
+   "q": "According to the guide, what kind of shopping do malls offer?",
+   "o": [
+    "quick and easy shopping",
+    "bargaining in narrow passages",
+    "shopping with no parking",
+    "shopping only at night"
+   ],
+   "why": "The guide says malls make shopping quick and easy."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to buy a gift and pay a lower price by discussing it with the seller. Where should you go?",
+   "o": [
+    "a souq",
+    "a mall with fixed prices",
+    "a bank",
+    "an airport"
+   ],
+   "why": "Bargaining is possible in souqs."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You have only 20 minutes to buy everything and need parking. Where is best?",
+   "o": [
+    "a mall",
+    "a souq with narrow passages",
+    "a village market",
+    "a fishing boat"
+   ],
+   "why": "Malls offer quick, easy shopping and big car parks."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You will hear a talk about shopping in Muscat. Which words should you predict?",
+   "o": [
+    "souq, bargaining, parking",
+    "runway, pilot, control tower",
+    "seatbelt, speed limit, fine",
+    "peninsula, monarchy, cape"
+   ],
+   "why": "Predict words that match the topic."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does predicting help with listening?",
+   "o": [
+    "you expect the likely content and vocabulary, so the text is easier",
+    "you don't need to listen",
+    "it gives you the answers",
+    "it makes the recording slower"
+   ],
+   "why": "Prediction prepares you to recognise words."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is one similarity between malls and markets?",
+   "o": [
+    "both sell a great variety of things",
+    "both have narrow passages",
+    "both always have bargaining",
+    "both have multi-level car parks"
+   ],
+   "why": "Both offer many different goods."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might someone say both souqs and malls are a shopper's paradise?",
+   "o": [
+    "each offers variety in its own way",
+    "both are always cheap",
+    "both are the same",
+    "neither has shops"
+   ],
+   "why": "Each place has its own attractions."
+  }
+ ]
+}

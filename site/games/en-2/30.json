@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Sounds and Spelling – Unit 3, Lesson 1: ou",
+ "outcomes": [
+  "I can say the sound ou as in cloud.",
+  "I can blend and write cloud, shout, count, sound and mouth.",
+  "I can read the tricky word all."
+ ],
+ "tf": [
+  {
+   "s": "The letters ou make the sound in \"cloud\".",
+   "t": true,
+   "why": "Cl-ou-d has the ou sound."
+  },
+  {
+   "s": "\"Shout\" has the ou sound.",
+   "t": true,
+   "why": "Sh-ou-t has ou."
+  },
+  {
+   "s": "\"Mouth\" has the oo sound.",
+   "t": false,
+   "why": "M-ou-th has the ou sound."
+  },
+  {
+   "s": "cl + ou + d makes \"cloud\".",
+   "t": true,
+   "why": "Blend: cl-ou-d, cloud."
+  },
+  {
+   "s": "m + ou + th makes \"moth\".",
+   "t": false,
+   "why": "m-ou-th makes mouth."
+  },
+  {
+   "s": "\"Count\" ends with the letters nt.",
+   "t": true,
+   "why": "Cou-nt ends with nt."
+  },
+  {
+   "s": "\"All\" is a tricky word.",
+   "t": true,
+   "why": "We read all in: We are all here."
+  },
+  {
+   "s": "\"Sound\" has the ou sound.",
+   "t": true,
+   "why": "S-ou-n-d has ou."
+  },
+  {
+   "s": "\"Moon\" has the ou sound.",
+   "t": false,
+   "why": "Moon has the long oo sound."
+  },
+  {
+   "s": "The ou sound is like \"ouch!\".",
+   "t": true,
+   "why": "Ouch starts with the ou sound."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Blend: sh + ou + t",
+   "o": [
+    "shout",
+    "shut",
+    "shoot"
+   ],
+   "why": "sh-ou-t makes shout."
+  },
+  {
+   "q": "Blend: cl + ou + d",
+   "o": [
+    "cloud",
+    "cold",
+    "clod"
+   ],
+   "why": "cl-ou-d makes cloud."
+  },
+  {
+   "q": "Order: th / m / ou",
+   "o": [
+    "mouth",
+    "month",
+    "moth"
+   ],
+   "why": "m-ou-th makes mouth."
+  },
+  {
+   "q": "Find the ou word.",
+   "o": [
+    "count",
+    "coat",
+    "cook"
+   ],
+   "why": "C-ou-nt has ou."
+  },
+  {
+   "q": "Pick the ou word.",
+   "o": [
+    "sound",
+    "soon",
+    "sand"
+   ],
+   "why": "S-ou-nd has ou."
+  },
+  {
+   "q": "We can ___ sing.",
+   "o": [
+    "all",
+    "our",
+    "why"
+   ],
+   "why": "We can all sing."
+  },
+  {
+   "q": "Which letters are in \"cloud\"?",
+   "o": [
+    "ou",
+    "oo",
+    "oa"
+   ],
+   "why": "Cloud is spelled c-l-o-u-d."
+  },
+  {
+   "q": "Read: We are ___ here.",
+   "o": [
+    "all",
+    "ou",
+    "shout"
+   ],
+   "why": "We are all here."
+  },
+  {
+   "q": "Which word means to speak very loudly?",
+   "o": [
+    "shout",
+    "count",
+    "cloud"
+   ],
+   "why": "Shout means speak very loudly."
+  },
+  {
+   "q": "Which word starts with cl?",
+   "o": [
+    "cloud",
+    "count",
+    "mouth"
+   ],
+   "why": "Cl-oud starts with cl."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Blend: sh + ou + t",
+   "a": "shout",
+   "d": [
+    "shut",
+    "shoot",
+    "short"
+   ]
+  },
+  {
+   "q": "Blend: cl + ou + d",
+   "a": "cloud",
+   "d": [
+    "cold",
+    "clod",
+    "clap"
+   ]
+  },
+  {
+   "q": "Blend: c + ou + nt",
+   "a": "count",
+   "d": [
+    "cat",
+    "coat",
+    "cent"
+   ]
+  },
+  {
+   "q": "Blend: s + ou + nd",
+   "a": "sound",
+   "d": [
+    "sand",
+    "send",
+    "soon"
+   ]
+  },
+  {
+   "q": "Order: th / m / ou",
+   "a": "mouth",
+   "d": [
+    "moth",
+    "math",
+    "moon"
+   ]
+  },
+  {
+   "q": "Letters in \"cloud\"",
+   "a": "ou",
+   "d": [
+    "oo",
+    "oa",
+    "ai"
+   ]
+  },
+  {
+   "q": "Tricky word: We are ___ here.",
+   "a": "all",
+   "d": [
+    "ou",
+    "shout",
+    "sound"
+   ]
+  },
+  {
+   "q": "It is in the sky",
+   "a": "cloud",
+   "d": [
+    "mouth",
+    "count",
+    "shout"
+   ]
+  },
+  {
+   "q": "You eat with your ...",
+   "a": "mouth",
+   "d": [
+    "cloud",
+    "sound",
+    "count"
+   ]
+  },
+  {
+   "q": "Has the ou sound",
+   "a": "shout",
+   "d": [
+    "moon",
+    "book",
+    "fork"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which letters make the sound in \"shout\"?",
+   "o": [
+    "ou",
+    "oo",
+    "or",
+    "oa"
+   ],
+   "why": "Sh-ou-t has ou."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has the ou sound?",
+   "o": [
+    "mouth",
+    "moon",
+    "more",
+    "meat"
+   ],
+   "why": "M-ou-th has ou."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the tricky word in this lesson?",
+   "o": [
+    "all",
+    "cloud",
+    "count",
+    "sound"
+   ],
+   "why": "All is the tricky word."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word starts with sh?",
+   "o": [
+    "shout",
+    "sound",
+    "count",
+    "cloud"
+   ],
+   "why": "Sh-out starts with sh."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Blend: s + ou + n + d",
+   "o": [
+    "sound",
+    "sand",
+    "send",
+    "soon"
+   ],
+   "why": "s-ou-n-d makes sound."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I can ___ to ten.",
+   "o": [
+    "count",
+    "cloud",
+    "shout",
+    "mouth"
+   ],
+   "why": "We count numbers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Look! A white ___ in the sky.",
+   "o": [
+    "cloud",
+    "mouth",
+    "count",
+    "shout"
+   ],
+   "why": "A cloud is in the sky."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT have the ou sound?",
+   "o": [
+    "book",
+    "cloud",
+    "shout",
+    "count"
+   ],
+   "why": "Book has the oo sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How many ou words? cloud, cat, shout, mouth",
+   "o": [
+    "three",
+    "one",
+    "two",
+    "four"
+   ],
+   "why": "Cloud, shout and mouth have ou."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word has the same sound as \"cloud\" and ends with nt?",
+   "o": [
+    "count",
+    "cent",
+    "coat",
+    "cot"
+   ],
+   "why": "C-ou-nt has ou and ends with nt."
+  }
+ ]
+}

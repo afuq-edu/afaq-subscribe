@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: Goodbye, School! (Reading)",
+ "lesson": "Lead-in: starting university and the core words of Theme 2",
+ "outcomes": [
+  "Talk about options after leaving school",
+  "Learn the core words of Theme 2",
+  "Skim a text to choose the best title"
+ ],
+ "tf": [
+  {
+   "s": "'Apprehensive' means worried or nervous about something.",
+   "t": true,
+   "why": "Many new students feel apprehensive."
+  },
+  {
+   "s": "'Prospects' are future chances of success.",
+   "t": true,
+   "why": "Good grades can improve your prospects."
+  },
+  {
+   "s": "A degree is a qualification you get after finishing a university course.",
+   "t": true,
+   "why": "For example, a degree in engineering."
+  },
+  {
+   "s": "'Rewarding' means boring and useless.",
+   "t": false,
+   "why": "Rewarding means it gives you satisfaction."
+  },
+  {
+   "s": "The boy in the picture is a Grade 12 student about to go to university.",
+   "t": true,
+   "why": "He has questions and decisions to make."
+  },
+  {
+   "s": "When you skim, you should look up every new word.",
+   "t": false,
+   "why": "Looking up every word slows you down."
+  },
+  {
+   "s": "Pictures and sub-headings can help you skim a text.",
+   "t": true,
+   "why": "They show the topic quickly."
+  },
+  {
+   "s": "'Independent' means needing other people to do everything for you.",
+   "t": false,
+   "why": "Independent means able to do things by yourself."
+  },
+  {
+   "s": "Students may feel mixed emotions about leaving school.",
+   "t": true,
+   "why": "They can feel sad and happy at the same time."
+  },
+  {
+   "s": "A faster reading speed can help with essays, research and exams.",
+   "t": true,
+   "why": "Faster reading saves time in all subjects."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word means 'worried or nervous'?",
+   "o": [
+    "apprehensive",
+    "confident",
+    "rewarding"
+   ],
+   "why": "New students often feel apprehensive."
+  },
+  {
+   "q": "What are 'prospects'?",
+   "o": [
+    "future chances of success",
+    "old memories",
+    "school subjects"
+   ],
+   "why": "Prospects look to the future."
+  },
+  {
+   "q": "What is a 'transition'?",
+   "o": [
+    "a change from one stage to another",
+    "a type of exam",
+    "a holiday"
+   ],
+   "why": "Going from school to university is a transition."
+  },
+  {
+   "q": "What does 'foreign' mean?",
+   "o": [
+    "from another country",
+    "very local",
+    "very old"
+   ],
+   "why": "Foreign means from abroad."
+  },
+  {
+   "q": "What does 'challenging' mean?",
+   "o": [
+    "difficult but interesting",
+    "very easy",
+    "very short"
+   ],
+   "why": "Challenges test your abilities."
+  },
+  {
+   "q": "What does 'confident' mean?",
+   "o": [
+    "sure of yourself",
+    "afraid",
+    "angry"
+   ],
+   "why": "Confident people believe in themselves."
+  },
+  {
+   "q": "What does the unit help you improve?",
+   "o": [
+    "reading speed",
+    "drawing",
+    "cooking"
+   ],
+   "why": "The unit is about speed reading."
+  },
+  {
+   "q": "Why is title d the best?",
+   "o": [
+    "it covers challenges and coping",
+    "it is the shortest",
+    "it is about the first year"
+   ],
+   "why": "It fits the whole text."
+  },
+  {
+   "q": "Why not look up every word when skimming?",
+   "o": [
+    "it slows you down",
+    "it is not allowed",
+    "words are easy"
+   ],
+   "why": "Skimming is for the gist."
+  },
+  {
+   "q": "What does 'scary' mean?",
+   "o": [
+    "frightening",
+    "funny",
+    "boring"
+   ],
+   "why": "Scary things make you feel afraid."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Worried or nervous",
+   "a": "apprehensive",
+   "d": [
+    "confident",
+    "independent",
+    "rewarding"
+   ]
+  },
+  {
+   "q": "Future chances of success",
+   "a": "prospects",
+   "d": [
+    "degree",
+    "culture",
+    "transition"
+   ]
+  },
+  {
+   "q": "University qualification",
+   "a": "degree",
+   "d": [
+    "prospects",
+    "culture",
+    "tutor"
+   ]
+  },
+  {
+   "q": "Change from one stage to another",
+   "a": "transition",
+   "d": [
+    "degree",
+    "culture",
+    "prospects"
+   ]
+  },
+  {
+   "q": "Gives satisfaction",
+   "a": "rewarding",
+   "d": [
+    "scary",
+    "foreign",
+    "apprehensive"
+   ]
+  },
+  {
+   "q": "Difficult but interesting",
+   "a": "challenging",
+   "d": [
+    "boring",
+    "easy",
+    "scary"
+   ]
+  },
+  {
+   "q": "Able to do things alone",
+   "a": "independent",
+   "d": [
+    "dependent",
+    "apprehensive",
+    "foreign"
+   ]
+  },
+  {
+   "q": "Sure of yourself",
+   "a": "confident",
+   "d": [
+    "apprehensive",
+    "scary",
+    "foreign"
+   ]
+  },
+  {
+   "q": "From another country",
+   "a": "foreign",
+   "d": [
+    "local",
+    "independent",
+    "confident"
+   ]
+  },
+  {
+   "q": "Frightening",
+   "a": "scary",
+   "d": [
+    "rewarding",
+    "confident",
+    "independent"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does 'apprehensive' mean?",
+   "o": [
+    "worried or nervous about something",
+    "very confident",
+    "happy and relaxed",
+    "tired and hungry"
+   ],
+   "why": "New students often feel apprehensive."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'a qualification obtained after completing a university course'?",
+   "o": [
+    "degree",
+    "prospects",
+    "culture",
+    "transition"
+   ],
+   "why": "You get a degree when you graduate."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the focus of this unit?",
+   "o": [
+    "improving reading speed",
+    "writing letters",
+    "listening to songs",
+    "learning grammar"
+   ],
+   "why": "The unit is about speed reading."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What can help you skim a text?",
+   "o": [
+    "pictures and sub-headings",
+    "looking up every word",
+    "reading backwards",
+    "counting full stops"
+   ],
+   "why": "These show the gist quickly."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: University study can be ______ but rewarding.",
+   "o": [
+    "challenging",
+    "apprehensive",
+    "foreign",
+    "independent"
+   ],
+   "why": "Challenging means difficult but interesting."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ahmed is nervous about his first day at university. How does he feel?",
+   "o": [
+    "apprehensive",
+    "confident",
+    "rewarding",
+    "independent"
+   ],
+   "why": "Apprehensive means worried or nervous."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Mona lives alone abroad, cooks and plans her own studies. She is becoming more ______.",
+   "o": [
+    "independent",
+    "apprehensive",
+    "scary",
+    "foreign"
+   ],
+   "why": "She does things by herself."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is title d the best title for the text?",
+   "o": [
+    "It covers both the challenges of starting university and how to cope with them",
+    "It is about someone's first year",
+    "It is the longest title",
+    "It mentions school only"
+   ],
+   "why": "A good title fits the whole text."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is title a ('first year at university') wrong?",
+   "o": [
+    "The text is not about someone's first year",
+    "It is too short",
+    "It has no verb",
+    "It is in the past tense"
+   ],
+   "why": "The title must match what the text is really about."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How might Grade 12 students feel about leaving school?",
+   "o": [
+    "a mixture of emotions, sad and happy",
+    "only bored",
+    "nothing at all",
+    "only angry"
+   ],
+   "why": "Big changes often bring mixed emotions."
+  }
+ ]
+}

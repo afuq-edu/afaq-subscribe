@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Unit 4 – Lesson 5: Culture and Project (My brother’s birthday)",
+  "outcomes": [
+    "I can read a short text about a family birthday.",
+    "I can find details about Ahmed: his age, present and looks.",
+    "I can draw and label my family at a birthday."
+  ],
+  "tf": [
+    {
+      "s": "It's Eman's brother's birthday.",
+      "t": true,
+      "why": "Yes! It's her brother Ahmed's birthday."
+    },
+    {
+      "s": "Ahmed is 7 today.",
+      "t": true,
+      "why": "Great! He's seven today."
+    },
+    {
+      "s": "Eman's present is a ball.",
+      "t": false,
+      "why": "Eman's present is a yo-yo."
+    },
+    {
+      "s": "Ahmed has got black hair and black eyes.",
+      "t": true,
+      "why": "Well done! He's got black hair and black eyes."
+    },
+    {
+      "s": "Ahmed is Eman's sister.",
+      "t": false,
+      "why": "Ahmed is Eman's brother."
+    },
+    {
+      "s": "Ahmed is 6 today.",
+      "t": false,
+      "why": "Ahmed is 7 today."
+    },
+    {
+      "s": "We can see a cake at a birthday.",
+      "t": true,
+      "why": "Yes! A birthday cake is part of the party."
+    },
+    {
+      "s": "Ahmed has got red hair.",
+      "t": false,
+      "why": "He's got black hair."
+    },
+    {
+      "s": "In my picture I can write: This is my dad.",
+      "t": true,
+      "why": "Great label! This is my … tells who it is."
+    },
+    {
+      "s": "Eman says: It's my birthday today.",
+      "t": false,
+      "why": "She says: It's my brother's birthday today."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Whose birthday is it?",
+      "o": [
+        "Eman's brother's",
+        "Eman's mum's",
+        "Eman's dad's"
+      ],
+      "why": "It's my brother's birthday today."
+    },
+    {
+      "q": "What's Ahmed's present from Eman?",
+      "o": [
+        "a yo-yo",
+        "a ball",
+        "a kite"
+      ],
+      "why": "This is my present. It's a yo-yo."
+    },
+    {
+      "q": "How old is Ahmed today?",
+      "o": [
+        "seven",
+        "six",
+        "eight"
+      ],
+      "why": "He's 7 today."
+    },
+    {
+      "q": "Ahmed has got ___ eyes.",
+      "o": [
+        "black",
+        "blue",
+        "green"
+      ],
+      "why": "He's got black eyes."
+    },
+    {
+      "q": "Label your picture: ___ my mum.",
+      "o": [
+        "This is",
+        "He's got",
+        "Is it"
+      ],
+      "why": "We label with This is my …"
+    },
+    {
+      "q": "We eat it at a birthday.",
+      "o": [
+        "cake",
+        "present",
+        "picture"
+      ],
+      "why": "We eat birthday cake."
+    },
+    {
+      "q": "We give it to a friend on a birthday.",
+      "o": [
+        "present",
+        "cake",
+        "smile"
+      ],
+      "why": "We give a present."
+    },
+    {
+      "q": "Ahmed is Eman's ___.",
+      "o": [
+        "brother",
+        "sister",
+        "uncle"
+      ],
+      "why": "Ahmed is her brother."
+    },
+    {
+      "q": "Describe Ahmed: ___ got black hair.",
+      "o": [
+        "He's",
+        "She's",
+        "It's"
+      ],
+      "why": "Ahmed is a boy: He's got."
+    },
+    {
+      "q": "Present your picture: It's my ___.",
+      "o": [
+        "birthday",
+        "birthdays",
+        "birth"
+      ],
+      "why": "It's my birthday."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Eman's present",
+      "a": "yo-yo",
+      "d": [
+        "ball",
+        "kite",
+        "bike"
+      ]
+    },
+    {
+      "q": "Ahmed's age",
+      "a": "seven",
+      "d": [
+        "six",
+        "five",
+        "eight"
+      ]
+    },
+    {
+      "q": "Ahmed's hair colour",
+      "a": "black",
+      "d": [
+        "red",
+        "fair",
+        "brown"
+      ]
+    },
+    {
+      "q": "Who is Ahmed?",
+      "a": "Eman's brother",
+      "d": [
+        "Eman's dad",
+        "Eman's uncle",
+        "Eman's cousin"
+      ]
+    },
+    {
+      "q": "Eman's brother's name",
+      "a": "Ahmed",
+      "d": [
+        "Sami",
+        "Piers",
+        "Mazin"
+      ]
+    },
+    {
+      "q": "Sweet birthday food",
+      "a": "cake",
+      "d": [
+        "present",
+        "picture",
+        "smile"
+      ]
+    },
+    {
+      "q": "A gift for a birthday",
+      "a": "present",
+      "d": [
+        "cake",
+        "picture",
+        "smile"
+      ]
+    },
+    {
+      "q": "A happy face has a happy ___.",
+      "a": "smile",
+      "d": [
+        "cake",
+        "present",
+        "picture"
+      ]
+    },
+    {
+      "q": "We draw a ___ of our family.",
+      "a": "picture",
+      "d": [
+        "cake",
+        "smile",
+        "present"
+      ]
+    },
+    {
+      "q": "Label: ___ is my sister.",
+      "a": "This",
+      "d": [
+        "Who",
+        "Is",
+        "How"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Read: \"He's 7 today.\" Who is 7?",
+      "o": [
+        "Ahmed",
+        "Eman",
+        "Eman's mum",
+        "Eman's dad"
+      ],
+      "why": "Ahmed is 7 today."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What is Eman's present for Ahmed?",
+      "o": [
+        "a yo-yo",
+        "a cake",
+        "a robot",
+        "a kite"
+      ],
+      "why": "It's a yo-yo."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What colour are Ahmed's eyes?",
+      "o": [
+        "black",
+        "blue",
+        "green",
+        "brown"
+      ],
+      "why": "He's got black eyes."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which words are about a birthday?",
+      "o": [
+        "cake and present",
+        "knee and toes",
+        "coin and soil",
+        "cloud and rain"
+      ],
+      "why": "We have a cake and presents at a birthday."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your sister is in your picture. What label do you write?",
+      "o": [
+        "This is my sister.",
+        "This is my brother.",
+        "He's my sister.",
+        "Is it my sister?"
+      ],
+      "why": "We label with This is my sister."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Who lives in your home? Choose a good answer.",
+      "o": [
+        "My mum and my brother.",
+        "A yo-yo and a cake.",
+        "Black hair.",
+        "It's seven."
+      ],
+      "why": "We answer with people in our family."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Describe Ahmed.",
+      "o": [
+        "He's got black hair and black eyes.",
+        "She's got black hair.",
+        "He's got red hair and blue eyes.",
+        "He's got a yo-yo hair."
+      ],
+      "why": "Ahmed has got black hair and black eyes."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Eman says \"This is my present.\" Who is the present for?",
+      "o": [
+        "Ahmed",
+        "Eman",
+        "Eman's mum",
+        "Eman's grandma"
+      ],
+      "why": "It's Ahmed's birthday, so the present is for him."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which is the best way to present your picture?",
+      "o": [
+        "This is my family. This is my dad. It's my birthday.",
+        "Family. Dad. Cake.",
+        "Is it my birthday? No.",
+        "He's got my mum."
+      ],
+      "why": "Full sentences tell who is in the picture."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Ahmed was 6 last year. How old is he now?",
+      "o": [
+        "7",
+        "6",
+        "5",
+        "8"
+      ],
+      "why": "He's 7 today, one more than 6."
+    }
+  ]
+}

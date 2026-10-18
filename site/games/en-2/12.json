@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 1: Look at my toys!",
+  "lesson": "Unit 1 – Lesson 7: Review and Get ready for Starters",
+  "outcomes": [
+    "I can write toy words from mixed-up letters.",
+    "I can read a sentence and say if it matches the picture.",
+    "I can sort words by ai, oa, ie and a-e and read At the lake."
+  ],
+  "tf": [
+    {
+      "s": "p-l-e-n-a makes the word plane.",
+      "t": true,
+      "why": "Yes! The letters make plane."
+    },
+    {
+      "s": "(a ball) This is a ball. We put a tick.",
+      "t": true,
+      "why": "Great! The sentence matches the picture."
+    },
+    {
+      "s": "(a kite) This is a bike. We put a tick.",
+      "t": false,
+      "why": "It's a kite, so we put a cross."
+    },
+    {
+      "s": "The word cake has a-e.",
+      "t": true,
+      "why": "Yes! c - a - k - e has magic e."
+    },
+    {
+      "s": "The word goat has ie.",
+      "t": false,
+      "why": "goat has oa."
+    },
+    {
+      "s": "The word train has ai.",
+      "t": true,
+      "why": "Well done! t - r - ai - n."
+    },
+    {
+      "s": "In the story, the girl is at the lake.",
+      "t": true,
+      "why": "Yes! The story is At the lake."
+    },
+    {
+      "s": "The word pie has oa.",
+      "t": false,
+      "why": "pie has ie."
+    },
+    {
+      "s": "(a teddy) This is a doll. We put a tick.",
+      "t": false,
+      "why": "It's a teddy, so we put a cross."
+    },
+    {
+      "s": "We count the letters to help us write the word.",
+      "t": true,
+      "why": "Yes! Counting letters helps us check."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Unscramble: z-u-p-z-e-l",
+      "o": [
+        "puzzle",
+        "plane",
+        "doll"
+      ],
+      "why": "The letters make puzzle."
+    },
+    {
+      "q": "Unscramble: l-o-d-l",
+      "o": [
+        "doll",
+        "ball",
+        "slide"
+      ],
+      "why": "The letters make doll."
+    },
+    {
+      "q": "Unscramble: e-i-k-b",
+      "o": [
+        "bike",
+        "kite",
+        "pie"
+      ],
+      "why": "The letters make bike."
+    },
+    {
+      "q": "cake: ai or a-e?",
+      "o": [
+        "a-e",
+        "ai",
+        "oa"
+      ],
+      "why": "cake has a-e."
+    },
+    {
+      "q": "boat: which sound?",
+      "o": [
+        "oa",
+        "ie",
+        "ai"
+      ],
+      "why": "b - oa - t has oa."
+    },
+    {
+      "q": "tie: which sound?",
+      "o": [
+        "ie",
+        "oa",
+        "a-e"
+      ],
+      "why": "t - ie has ie."
+    },
+    {
+      "q": "sail: which sound?",
+      "o": [
+        "ai",
+        "oa",
+        "ie"
+      ],
+      "why": "s - ai - l has ai."
+    },
+    {
+      "q": "(a ball) This is a ball.",
+      "o": [
+        "tick",
+        "cross",
+        "no answer"
+      ],
+      "why": "The sentence matches the picture."
+    },
+    {
+      "q": "Where is the girl in the story?",
+      "o": [
+        "At the lake",
+        "At school",
+        "At the museum"
+      ],
+      "why": "The story is At the lake."
+    },
+    {
+      "q": "You ... got my pie, goat!",
+      "o": [
+        "have",
+        "his",
+        "who"
+      ],
+      "why": "have is a tricky word in the story."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Unscramble: p-l-e-n-a",
+      "a": "plane",
+      "d": [
+        "puzzle",
+        "doll",
+        "slide"
+      ]
+    },
+    {
+      "q": "Unscramble: d-e-i-l-s",
+      "a": "slide",
+      "d": [
+        "plane",
+        "bike",
+        "kite"
+      ]
+    },
+    {
+      "q": "Unscramble: t-i-k-e",
+      "a": "kite",
+      "d": [
+        "bike",
+        "tie",
+        "cake"
+      ]
+    },
+    {
+      "q": "An ai word",
+      "a": "chain",
+      "d": [
+        "coat",
+        "pie",
+        "game"
+      ]
+    },
+    {
+      "q": "An oa word",
+      "a": "float",
+      "d": [
+        "sail",
+        "tie",
+        "gate"
+      ]
+    },
+    {
+      "q": "An ie word",
+      "a": "pie",
+      "d": [
+        "road",
+        "train",
+        "cake"
+      ]
+    },
+    {
+      "q": "An a-e word",
+      "a": "gate",
+      "d": [
+        "goat",
+        "chain",
+        "tie"
+      ]
+    },
+    {
+      "q": "(a kite) This is a bike.",
+      "a": "cross",
+      "d": [
+        "tick",
+        "kite",
+        "bike"
+      ]
+    },
+    {
+      "q": "The story: At the ...",
+      "a": "lake",
+      "d": [
+        "school",
+        "park",
+        "museum"
+      ]
+    },
+    {
+      "q": "Tricky word in the story",
+      "a": "you",
+      "d": [
+        "pie",
+        "goat",
+        "lake"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What is the name of the graded reader?",
+      "o": [
+        "At the lake",
+        "New toys",
+        "The computer",
+        "My school"
+      ],
+      "why": "Graded reader 1 is At the lake."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word has oa?",
+      "o": [
+        "coat",
+        "cake",
+        "chain",
+        "tie"
+      ],
+      "why": "c - oa - t has oa."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word has a-e?",
+      "o": [
+        "game",
+        "goat",
+        "rain",
+        "pie"
+      ],
+      "why": "g - a - m - e has magic e."
+    },
+    {
+      "lv": "التذكر",
+      "q": "In the test, we see a picture and a sentence. What do we put?",
+      "o": [
+        "A tick or a cross",
+        "A colour",
+        "A number",
+        "A name"
+      ],
+      "why": "We tick if it matches and cross if not."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Picture: a teddy. Sentence: This is a doll. What do you put?",
+      "o": [
+        "A cross",
+        "A tick",
+        "A doll",
+        "A teddy"
+      ],
+      "why": "It's a teddy, so the sentence is wrong."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Unscramble: l-a-b-l",
+      "o": [
+        "ball",
+        "doll",
+        "kite",
+        "bike"
+      ],
+      "why": "The letters b-a-l-l make ball."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Read: You have got my pie, goat! Who has got the pie?",
+      "o": [
+        "The goat",
+        "The girl",
+        "The boat",
+        "The lake"
+      ],
+      "why": "The girl says the goat has got her pie."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which group is all ai words?",
+      "o": [
+        "train, chain, sail",
+        "train, coat, sail",
+        "boat, road, goat",
+        "pie, tie, cake"
+      ],
+      "why": "train, chain and sail all have ai."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word is in the wrong group? oa: boat, road, gate",
+      "o": [
+        "gate",
+        "boat",
+        "road",
+        "none"
+      ],
+      "why": "gate has a-e, not oa."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why do we look at the picture first in the test?",
+      "o": [
+        "To check the sentence matches",
+        "To colour it",
+        "To count the pages",
+        "To find the teacher"
+      ],
+      "why": "We check the picture, then read the sentence."
+    }
+  ]
+}

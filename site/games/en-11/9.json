@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 2 - Unit 4: Western Influence",
+ "outcomes": [
+  "Listen to a talk about Western influence on teenagers",
+  "Ask questions to get more information",
+  "Give and explain your opinions"
+ ],
+ "tf": [
+  {
+   "s": "The talk is about changing tastes in eating and shopping.",
+   "t": true,
+   "why": "Yes! Food and shopping are the two areas in the talk."
+  },
+  {
+   "s": "Omani teenagers like fast food because it is tasty, quick and convenient.",
+   "t": true,
+   "why": "Right! They also see the outlets as cool places to meet friends."
+  },
+  {
+   "s": "The speaker says teenagers mostly want rice and fish at fast food outlets.",
+   "t": false,
+   "why": "The speaker mentions pizzas and burgers."
+  },
+  {
+   "s": "Teenagers go to malls to copy Western fashions they see on TV and the Internet.",
+   "t": true,
+   "why": "Correct! TV and the Internet show them new fashions."
+  },
+  {
+   "s": "According to the talk, teenagers are looking for stylish jeans and fashionable shoes.",
+   "t": true,
+   "why": "Yes, and hats too."
+  },
+  {
+   "s": "'How do you mean?' is used to end a conversation.",
+   "t": false,
+   "why": "'How do you mean?' asks for more explanation."
+  },
+  {
+   "s": "'Can you give me some examples?' asks for more information.",
+   "t": true,
+   "why": "Good! It helps the speaker explain more."
+  },
+  {
+   "s": "'Convenient' means difficult and slow.",
+   "t": false,
+   "why": "'Convenient' means easy and suitable for you."
+  },
+  {
+   "s": "'I'm in love with fast food' is a statement about food.",
+   "t": true,
+   "why": "Right! It is one of the four teenage statements."
+  },
+  {
+   "s": "Predicting topics from the title is a waste of time before listening.",
+   "t": false,
+   "why": "Predicting from the title helps you get ready to listen."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What are the two areas of changing tastes in the talk?",
+   "o": [
+    "eating and shopping",
+    "sport and music",
+    "reading and writing"
+   ],
+   "why": "The talk discusses food and shopping."
+  },
+  {
+   "q": "Which two meals does the speaker mention?",
+   "o": [
+    "pizzas and burgers",
+    "rice and fish",
+    "bread and soup"
+   ],
+   "why": "These are popular fast foods."
+  },
+  {
+   "q": "Where do teenagers go to buy Western fashions?",
+   "o": [
+    "shopping malls",
+    "libraries",
+    "mosques"
+   ],
+   "why": "They go to malls to copy fashions."
+  },
+  {
+   "q": "Where do teenagers see Western fashions?",
+   "o": [
+    "on TV and the Internet",
+    "in old books",
+    "on the radio only"
+   ],
+   "why": "TV and the Internet show new fashions."
+  },
+  {
+   "q": "Complete: 'Can you ___ me some examples?'",
+   "o": [
+    "give",
+    "take",
+    "make"
+   ],
+   "why": "'Can you give me some examples?' asks for details."
+  },
+  {
+   "q": "Which question asks for more explanation?",
+   "o": [
+    "How do you mean?",
+    "Goodbye.",
+    "See you later."
+   ],
+   "why": "It asks the speaker to explain."
+  },
+  {
+   "q": "Which word means 'easy and suitable'?",
+   "o": [
+    "convenient",
+    "stylish",
+    "influence"
+   ],
+   "why": "Fast food is quick and convenient."
+  },
+  {
+   "q": "What is a fast food 'outlet'?",
+   "o": [
+    "a place that sells fast food",
+    "a type of burger",
+    "a kind of clothes"
+   ],
+   "why": "An outlet is a shop or restaurant."
+  },
+  {
+   "q": "Which statement is about technology?",
+   "o": [
+    "I can't live without the Internet.",
+    "My life is music.",
+    "I'm in love with fast food."
+   ],
+   "why": "The Internet is technology."
+  },
+  {
+   "q": "Which word means 'fashionable and attractive'?",
+   "o": [
+    "stylish",
+    "convenient",
+    "tasty"
+   ],
+   "why": "Teenagers look for stylish jeans."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Two meals in the talk: pizzas and ___",
+   "a": "burgers",
+   "d": [
+    "rice",
+    "fish",
+    "soup"
+   ]
+  },
+  {
+   "q": "Place teens go to copy fashions",
+   "a": "shopping mall",
+   "d": [
+    "library",
+    "museum",
+    "school"
+   ]
+  },
+  {
+   "q": "Fast food is quick and ___",
+   "a": "convenient",
+   "d": [
+    "boring",
+    "expensive",
+    "slow"
+   ]
+  },
+  {
+   "q": "Teens want stylish ___",
+   "a": "jeans",
+   "d": [
+    "books",
+    "phones",
+    "bikes"
+   ]
+  },
+  {
+   "q": "Complete: 'Can you ___ me examples?'",
+   "a": "give",
+   "d": [
+    "take",
+    "bring",
+    "do"
+   ]
+  },
+  {
+   "q": "Complete: 'How do you ___?'",
+   "a": "mean",
+   "d": [
+    "say",
+    "go",
+    "eat"
+   ]
+  },
+  {
+   "q": "Complete: 'What ___ of changes?'",
+   "a": "kind",
+   "d": [
+    "way",
+    "time",
+    "place"
+   ]
+  },
+  {
+   "q": "Complete: 'I can't live without the ___.'",
+   "a": "Internet",
+   "d": [
+    "food",
+    "school",
+    "sea"
+   ]
+  },
+  {
+   "q": "Complete: 'My life is ___.'",
+   "a": "music",
+   "d": [
+    "fast food",
+    "shopping",
+    "sport"
+   ]
+  },
+  {
+   "q": "Complete: 'My best friend is my ___.'",
+   "a": "mobile phone",
+   "d": [
+    "laptop",
+    "brother",
+    "teacher"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why do teenagers see fast food outlets as attractive?",
+   "o": [
+    "they are cool places to hang out with friends",
+    "they are very quiet",
+    "they sell only traditional food",
+    "they are far away"
+   ],
+   "why": "Teens like to meet friends there."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What kind of clothes are teenagers looking for?",
+   "o": [
+    "stylish jeans, fashionable shoes and hats",
+    "traditional clothes only",
+    "school uniforms",
+    "winter coats"
+   ],
+   "why": "They want Western fashions."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which topics could you predict from the title 'Western Influence – Good or Bad?'",
+   "o": [
+    "food, fashion, music and health",
+    "maths and science",
+    "the weather and seasons",
+    "animals and plants"
+   ],
+   "why": "Predicting topics helps you listen."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is a Soundbite for asking questions?",
+   "o": [
+    "Why do you think…?",
+    "See you soon.",
+    "Take care.",
+    "Thank you."
+   ],
+   "why": "'Why do you think…?' asks for reasons."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct question with 'Why do you think…'.",
+   "o": [
+    "Why do you think teenagers like fast food?",
+    "Why you think teenagers likes fast food?",
+    "Why do you thinking teenagers like fast food?",
+    "Why think you teenagers like fast food?"
+   ],
+   "why": "After 'Why do you think' we use a normal sentence."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner says, 'Clothes are important to me.' Which follow-up question asks for detail?",
+   "o": [
+    "What kind of clothes do you like?",
+    "Goodbye.",
+    "Are you tired?",
+    "What time is it?"
+   ],
+   "why": "'What kind of…' asks for more information."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Someone says, 'Tastes are changing.' You don't understand. What do you say?",
+   "o": [
+    "How do you mean?",
+    "That's the end.",
+    "Bye for now.",
+    "I'm hungry."
+   ],
+   "why": "This question asks the speaker to explain."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the talk link teenagers' shopping to TV and the Internet?",
+   "o": [
+    "Teenagers copy the Western fashions they see there",
+    "TV and the Internet sell food",
+    "Malls are on TV",
+    "Teenagers do not watch TV"
+   ],
+   "why": "Media shows them new fashions to copy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which reason best explains why fast food is popular with busy teenagers?",
+   "o": [
+    "It is quick and convenient",
+    "It is always healthy",
+    "It takes a long time to cook",
+    "It is only sold at home"
+   ],
+   "why": "Quick, convenient food suits busy people."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A student says, 'My best friend is my mobile phone.' What does this suggest?",
+   "o": [
+    "Her phone is very important in her life",
+    "She has a friend called Mobile",
+    "She hates phones",
+    "She has no phone"
+   ],
+   "why": "The statement shows how much she uses her phone."
+  }
+ ]
+}

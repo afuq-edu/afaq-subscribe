@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 2 - Unit 3: Teenage Friendships",
+ "outcomes": [
+  "Describe the qualities of a good friend",
+  "Understand an interview about friends from other cultures",
+  "Give advice using useful phrases"
+ ],
+ "tf": [
+  {
+   "s": "A loyal friend always supports you.",
+   "t": true,
+   "why": "Yes! Loyal friends stay with you."
+  },
+  {
+   "s": "'Dependable' means someone you can rely on.",
+   "t": true,
+   "why": "Right! You can depend on a dependable friend."
+  },
+  {
+   "s": "Emily's closest friends in Oman are from Lebanon, Afghanistan and the UK.",
+   "t": true,
+   "why": "Correct! She has friends from different countries."
+  },
+  {
+   "s": "Emily attends a local village school in Nizwa.",
+   "t": false,
+   "why": "Emily attends an international school in Muscat."
+  },
+  {
+   "s": "Emily says she has had big difficulties because of her friends from other cultures.",
+   "t": false,
+   "why": "She says the only difference is how strict parents are, and that is not a difficulty."
+  },
+  {
+   "s": "Emily says friends from other cultures help her learn about customs in a fun way.",
+   "t": true,
+   "why": "Yes, and she can try food from different countries."
+  },
+  {
+   "s": "The boy who wrote to the problem page feels lonely.",
+   "t": true,
+   "why": "Right! He has nobody to share his problems with."
+  },
+  {
+   "s": "The boy's problem is that he has too many close friends.",
+   "t": false,
+   "why": "His problem is that he cannot maintain friendships."
+  },
+  {
+   "s": "'You should…' is a phrase for giving advice.",
+   "t": true,
+   "why": "Good! We use it to tell someone what is a good idea."
+  },
+  {
+   "s": "'Lazy' is a positive quality of a good friend.",
+   "t": false,
+   "why": "'Lazy' is negative; loyal and honest are positive."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which adjective means 'someone you can rely on'?",
+   "o": [
+    "dependable",
+    "lazy",
+    "rude"
+   ],
+   "why": "A dependable friend is always there for you."
+  },
+  {
+   "q": "Complete: A ___ friend always supports you.",
+   "o": [
+    "loyal",
+    "lazy",
+    "selfish"
+   ],
+   "why": "Loyal friends stand by you."
+  },
+  {
+   "q": "Which school does Emily attend?",
+   "o": [
+    "an international school in Muscat",
+    "a school in London",
+    "a university in Lebanon"
+   ],
+   "why": "She studies at an international school in Muscat."
+  },
+  {
+   "q": "What is the boy's problem in the letter?",
+   "o": [
+    "he cannot maintain friendships",
+    "he has too much homework",
+    "he lost his phone"
+   ],
+   "why": "His friends lose interest in him."
+  },
+  {
+   "q": "Who usually answers letters on a problem page?",
+   "o": [
+    "a counsellor",
+    "a police officer",
+    "a pilot"
+   ],
+   "why": "A counsellor gives advice."
+  },
+  {
+   "q": "Complete: 'A good idea would be ___ talk to him.'",
+   "o": [
+    "to",
+    "for",
+    "at"
+   ],
+   "why": "'A good idea would be to…' + verb."
+  },
+  {
+   "q": "Who wrote the poem 'Change'?",
+   "o": [
+    "Hilary",
+    "Emily",
+    "Nasser"
+   ],
+   "why": "Hilary is a teenage girl."
+  },
+  {
+   "q": "Which is a positive quality?",
+   "o": [
+    "honest",
+    "rude",
+    "lazy"
+   ],
+   "why": "Honest people tell the truth."
+  },
+  {
+   "q": "What is the situation in the poem 'Change'?",
+   "o": [
+    "her best friend spends time with a new friend",
+    "she moves to a new country",
+    "she fails an exam"
+   ],
+   "why": "Hilary feels left out."
+  },
+  {
+   "q": "Which phrase gives advice?",
+   "o": [
+    "We think the best thing for you to do is…",
+    "I went to the shop…",
+    "Yesterday it rained…"
+   ],
+   "why": "This phrase suggests a solution."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Friend who always supports you",
+   "a": "loyal",
+   "d": [
+    "lazy",
+    "rude",
+    "selfish"
+   ]
+  },
+  {
+   "q": "Someone you can rely on",
+   "a": "dependable",
+   "d": [
+    "dishonest",
+    "lazy",
+    "careless"
+   ]
+  },
+  {
+   "q": "Someone who tells the truth",
+   "a": "honest",
+   "d": [
+    "rude",
+    "lazy",
+    "mean"
+   ]
+  },
+  {
+   "q": "Someone happy and positive",
+   "a": "cheerful",
+   "d": [
+    "grumpy",
+    "lazy",
+    "rude"
+   ]
+  },
+  {
+   "q": "Emily's city in Oman",
+   "a": "Muscat",
+   "d": [
+    "Sohar",
+    "Nizwa",
+    "Sur"
+   ]
+  },
+  {
+   "q": "Feeling of having no friends",
+   "a": "lonely",
+   "d": [
+    "cheerful",
+    "loyal",
+    "proud"
+   ]
+  },
+  {
+   "q": "Person who gives advice",
+   "a": "counsellor",
+   "d": [
+    "driver",
+    "cook",
+    "pilot"
+   ]
+  },
+  {
+   "q": "Writer of the poem 'Change'",
+   "a": "Hilary",
+   "d": [
+    "Emily",
+    "Laila",
+    "Nasser"
+   ]
+  },
+  {
+   "q": "Advice: 'You ___ join a club.'",
+   "a": "should",
+   "d": [
+    "did",
+    "was",
+    "are"
+   ]
+  },
+  {
+   "q": "Page for readers' problems",
+   "a": "problem page",
+   "d": [
+    "front page",
+    "title page",
+    "sports page"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What qualities are important to Emily in a friend?",
+   "o": [
+    "similar interests, and being loyal, dependable and honest",
+    "being rich and famous",
+    "living near her house only",
+    "speaking only English"
+   ],
+   "why": "Emily wants friends she can trust."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What benefits does Emily mention of having friends from other cultures?",
+   "o": [
+    "learning about other customs in a fun way and trying new food",
+    "getting free trips",
+    "speaking only one language",
+    "having fewer friends"
+   ],
+   "why": "Different cultures make friendship interesting."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How does the boy in the letter feel?",
+   "o": [
+    "lonely",
+    "excited",
+    "proud",
+    "bored"
+   ],
+   "why": "He has nobody to share problems with."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How long have Hilary and her friend been best friends?",
+   "o": [
+    "since Grade Nine",
+    "since last week",
+    "since Grade One",
+    "for one day"
+   ],
+   "why": "They have been friends for a long time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best advice for 'Lonely'.",
+   "o": [
+    "You should show interest in others and join a club.",
+    "You should stay at home alone.",
+    "You should stop talking to everyone.",
+    "You should be rude to friends."
+   ],
+   "why": "Showing interest helps keep friends."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend says, 'My parents don't like my friends.' What is good advice?",
+   "o": [
+    "Talk calmly with your parents and invite your friend home.",
+    "Never talk to your parents.",
+    "Shout at your parents.",
+    "Stop going to school."
+   ],
+   "why": "Calm talk can help parents know your friends."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the sentence that describes a friend with two positive adjectives.",
+   "o": [
+    "My best friend is honest and cheerful.",
+    "My best friend is lazy and rude.",
+    "My best friend is honest and lazy.",
+    "My best friend is rude and cheerful."
+   ],
+   "why": "Honest and cheerful are both positive qualities."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What could be one reason why the boy loses friends?",
+   "o": [
+    "He talks only about himself and is not interested in others",
+    "He is very kind to everyone",
+    "He listens carefully to his friends",
+    "He asks his friends questions"
+   ],
+   "why": "Friends need to feel you care about them."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Emily says parents in different cultures can be more or less strict. Why does she not see this as a difficulty?",
+   "o": [
+    "It is only a difference, not a real problem",
+    "She does not have friends",
+    "She never meets their parents",
+    "She does not like customs"
+   ],
+   "why": "Differences are not always problems."
+  },
+  {
+   "lv": "التحليل",
+   "q": "In the poem 'Change', why does Hilary feel left out?",
+   "o": [
+    "Her best friend now spends time with a new friend",
+    "She has a new phone",
+    "She moved to another school",
+    "Her friend gave her a gift"
+   ],
+   "why": "Friendships can change, and that can hurt."
+  }
+ ]
+}

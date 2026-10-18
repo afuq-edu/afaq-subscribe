@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "2",
+  "lesson": "Unit 2: Climate Change – Project: Reusable Shopping Bag",
+  "outcomes": [
+    "Know the parts of a good bag design: slogan, image and material.",
+    "Design a reusable shopping bag with my team and explain it in English.",
+    "Give and receive feedback and reflect on our teamwork."
+  ],
+  "tf": [
+    {
+      "s": "A slogan is a short phrase on a bag.",
+      "t": true,
+      "why": "Yes! A good slogan is short and easy to remember."
+    },
+    {
+      "s": "'Material' means a picture on the bag.",
+      "t": false,
+      "why": "Material is what something is made of; the picture is the image."
+    },
+    {
+      "s": "Reusable bags can be used many times.",
+      "t": true,
+      "why": "Correct, that is why they reduce plastic waste."
+    },
+    {
+      "s": "Each bag in Activity 1 has an environmental message.",
+      "t": true,
+      "why": "Right, the designs send a message about the environment."
+    },
+    {
+      "s": "A disposable bag is a bag you use many times.",
+      "t": false,
+      "why": "A disposable bag is used once; a reusable bag is used many times."
+    },
+    {
+      "s": "In the team, the writer explains the design in words.",
+      "t": true,
+      "why": "Well done, the designer makes the illustration."
+    },
+    {
+      "s": "Plastic bags are better for the environment than reusable bags.",
+      "t": false,
+      "why": "Reusable bags reduce plastic waste."
+    },
+    {
+      "s": "Good feedback includes a positive comment and a suggestion.",
+      "t": true,
+      "why": "Yes, it helps the other team improve."
+    },
+    {
+      "s": "Feedback only shows weaknesses, so it cannot improve a project.",
+      "t": false,
+      "why": "Feedback shows strengths and weaknesses, so the product improves."
+    },
+    {
+      "s": "Communication is not important in a team project.",
+      "t": false,
+      "why": "Communication helps the team share roles and finish the work well."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "A short phrase on a bag is a ...",
+      "o": [
+        "slogan",
+        "material",
+        "vote"
+      ],
+      "why": "For example: 'Bag it green!'"
+    },
+    {
+      "q": "What does 'material' mean?",
+      "o": [
+        "what something is made of",
+        "a picture",
+        "a short phrase"
+      ],
+      "why": "Cloth is a material for bags."
+    },
+    {
+      "q": "A bag that can be used many times is ...",
+      "o": [
+        "reusable",
+        "disposable",
+        "broken"
+      ],
+      "why": "Re + use = use again."
+    },
+    {
+      "q": "What message does a good reusable bag have?",
+      "o": [
+        "an environmental message",
+        "a sports score",
+        "a shopping list"
+      ],
+      "why": "For example: 'Reduce plastic'."
+    },
+    {
+      "q": "Who designs the bag and the illustration?",
+      "o": [
+        "the designer",
+        "the consumer",
+        "the reader"
+      ],
+      "why": "The designer creates the look of the bag."
+    },
+    {
+      "q": "The ___ explains the design in words.",
+      "o": [
+        "writer",
+        "consumer",
+        "voter"
+      ],
+      "why": "The writer writes the explanation."
+    },
+    {
+      "q": "We ___ for the best design.",
+      "o": [
+        "vote",
+        "copy",
+        "throw"
+      ],
+      "why": "Each student chooses the best design."
+    },
+    {
+      "q": "Which is a polite suggestion for another team?",
+      "o": [
+        "You could use a bigger slogan.",
+        "Your bag is bad.",
+        "Start again."
+      ],
+      "why": "Polite suggestions help others improve."
+    },
+    {
+      "q": "What are the three elements of the bag design?",
+      "o": [
+        "image, slogan, material",
+        "price, shop, colour",
+        "title, date, name"
+      ],
+      "why": "The recording explains these three elements."
+    },
+    {
+      "q": "Which slogan suits an eco-friendly bag?",
+      "o": [
+        "Bag it green!",
+        "Buy more plastic!",
+        "Throw it away!"
+      ],
+      "why": "It sends a positive environmental message."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "A short phrase on the bag",
+      "a": "slogan",
+      "d": [
+        "material",
+        "image",
+        "vote"
+      ]
+    },
+    {
+      "q": "What the bag is made of",
+      "a": "material",
+      "d": [
+        "slogan",
+        "image",
+        "team"
+      ]
+    },
+    {
+      "q": "The picture on the bag",
+      "a": "image",
+      "d": [
+        "material",
+        "slogan",
+        "vote"
+      ]
+    },
+    {
+      "q": "Can be used many times",
+      "a": "reusable",
+      "d": [
+        "disposable",
+        "plastic",
+        "broken"
+      ]
+    },
+    {
+      "q": "Makes the illustration",
+      "a": "designer",
+      "d": [
+        "writer",
+        "consumer",
+        "voter"
+      ]
+    },
+    {
+      "q": "Writes the explanation",
+      "a": "writer",
+      "d": [
+        "designer",
+        "consumer",
+        "seller"
+      ]
+    },
+    {
+      "q": "Choose the best design",
+      "a": "vote",
+      "d": [
+        "copy",
+        "throw",
+        "delete"
+      ]
+    },
+    {
+      "q": "Comments to help improve",
+      "a": "feedback",
+      "d": [
+        "slogan",
+        "material",
+        "image"
+      ]
+    },
+    {
+      "q": "Think about your own work",
+      "a": "reflect",
+      "d": [
+        "vote",
+        "copy",
+        "throw"
+      ]
+    },
+    {
+      "q": "Working together well",
+      "a": "teamwork",
+      "d": [
+        "homework",
+        "housework",
+        "network"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What is a slogan?",
+      "o": [
+        "a short phrase with a message",
+        "the material of a bag",
+        "a kind of plastic",
+        "the price of a bag"
+      ],
+      "why": "Slogans are short and memorable."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What does a designer do in the team?",
+      "o": [
+        "designs the bag and the illustration",
+        "only votes",
+        "only reads the slogan",
+        "sells the bag"
+      ],
+      "why": "The designer is in charge of the look."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What is an illustration in this project?",
+      "o": [
+        "a drawing that shows the bag design",
+        "a list of prices",
+        "a vote for the best team",
+        "a type of material"
+      ],
+      "why": "The team draws the bag to show its design."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word means 'what something is made of'?",
+      "o": [
+        "material",
+        "slogan",
+        "image",
+        "vote"
+      ],
+      "why": "For example, cloth is a material."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your team needs a slogan for the bag. Which is best?",
+      "o": [
+        "Reduce plastic, save the sea!",
+        "This is a bag.",
+        "Plastic is great!",
+        "Buy one, throw one!"
+      ],
+      "why": "It is short and has an environmental message."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Which sentence explains a design?",
+      "o": [
+        "Our bag is made of cloth and has a picture of a turtle.",
+        "Bag the and turtle.",
+        "We has a bag cloth.",
+        "Turtle is bag."
+      ],
+      "why": "It names the material and the image correctly."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Which sentence describes your contribution to the project?",
+      "o": [
+        "I wrote the explanation.",
+        "I am the explanation.",
+        "I written the explanation.",
+        "Explanation me."
+      ],
+      "why": "It says clearly what you did."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why are reusable bags better than plastic bags?",
+      "o": [
+        "They reduce plastic waste.",
+        "They are thrown away quickly.",
+        "They are made of plastic only.",
+        "They harm sea animals."
+      ],
+      "why": "Using one bag many times means less plastic."
+    },
+    {
+      "lv": "التحليل",
+      "q": "How does feedback improve a project?",
+      "o": [
+        "It shows strengths and weaknesses, so we can improve.",
+        "It ends the project.",
+        "It changes the team members.",
+        "It makes the bag more expensive."
+      ],
+      "why": "Feedback helps us see what to change."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why is communication important in a team?",
+      "o": [
+        "It helps coordinate roles and finish the work well.",
+        "It means only one person works.",
+        "It makes the work slower.",
+        "It is not needed in English."
+      ],
+      "why": "Good communication helps everyone work together."
+    }
+  ]
+}

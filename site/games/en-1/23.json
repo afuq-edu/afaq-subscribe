@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 3: Our classroom",
+ "lesson": "Lesson 6: Review + Sounds review f, o, g, sh, b",
+ "outcomes": [
+  "I can name things in my classroom.",
+  "I can say where things are: The book is on the floor.",
+  "I can blend sounds with f, o, g, sh and b."
+ ],
+ "tf": [
+  {
+   "s": "A desk and a chair are in the classroom.",
+   "t": true,
+   "why": "Yes! We have desks and chairs in class."
+  },
+  {
+   "s": "The pens are on the desk is a sentence with on.",
+   "t": true,
+   "why": "Great! It uses on."
+  },
+  {
+   "s": "f – o – g makes the word fog.",
+   "t": true,
+   "why": "Well done! f-o-g is fog."
+  },
+  {
+   "s": "s – o – ck makes the word shop.",
+   "t": false,
+   "why": "s-o-ck makes sock."
+  },
+  {
+   "s": "Bird starts with the b sound.",
+   "t": true,
+   "why": "Yes! B-b-bird."
+  },
+  {
+   "s": "Fish starts with the letters sh.",
+   "t": false,
+   "why": "Fish starts with f and ends with sh."
+  },
+  {
+   "s": "b – i – n makes bin.",
+   "t": true,
+   "why": "Right! b-i-n is bin."
+  },
+  {
+   "s": "A window is under the floor.",
+   "t": false,
+   "why": "Windows are in the walls."
+  },
+  {
+   "s": "Shop starts with sh.",
+   "t": true,
+   "why": "Yes! Sh-sh-shop."
+  },
+  {
+   "s": "We ask What's this? about a teacher.",
+   "t": false,
+   "why": "For a person, we ask Who's this?"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's the first sound of bird?",
+   "o": [
+    "/b/",
+    "/f/",
+    "/g/"
+   ],
+   "why": "Bird starts with /b/."
+  },
+  {
+   "q": "Put in order: o, f, g",
+   "o": [
+    "fog",
+    "gof",
+    "ofg"
+   ],
+   "why": "f-o-g makes fog."
+  },
+  {
+   "q": "Write the first letter: _ish",
+   "o": [
+    "f",
+    "sh",
+    "b"
+   ],
+   "why": "f + ish makes fish."
+  },
+  {
+   "q": "Blend: s – o – ck",
+   "o": [
+    "sock",
+    "shop",
+    "mop"
+   ],
+   "why": "s-o-ck makes sock."
+  },
+  {
+   "q": "Which thing is part of the room?",
+   "o": [
+    "wall",
+    "bird",
+    "fig"
+   ],
+   "why": "The wall is part of the room."
+  },
+  {
+   "q": "Which word has sh at the end?",
+   "o": [
+    "fish",
+    "ship",
+    "shop"
+   ],
+   "why": "Fi-sh ends with sh."
+  },
+  {
+   "q": "Read: mop",
+   "o": [
+    "mop",
+    "map",
+    "hop"
+   ],
+   "why": "m-o-p says mop."
+  },
+  {
+   "q": "The books are down by your feet. Where are they?",
+   "o": [
+    "On the floor.",
+    "On the wall.",
+    "In the window."
+   ],
+   "why": "Your feet are on the floor."
+  },
+  {
+   "q": "Which word starts with g?",
+   "o": [
+    "game",
+    "bag",
+    "fan"
+   ],
+   "why": "G-g-game starts with g."
+  },
+  {
+   "q": "What's this? (a door)",
+   "o": [
+    "It's a door.",
+    "It's a desk.",
+    "It's a chair."
+   ],
+   "why": "It's a door. Well done!"
+  }
+ ],
+ "hunt": [
+  {
+   "q": "f – i – n",
+   "a": "fin",
+   "d": [
+    "fit",
+    "fig",
+    "bin"
+   ]
+  },
+  {
+   "q": "c – o – t",
+   "a": "cot",
+   "d": [
+    "cat",
+    "sock",
+    "mop"
+   ]
+  },
+  {
+   "q": "sh – e – d",
+   "a": "shed",
+   "d": [
+    "shop",
+    "ship",
+    "fish"
+   ]
+  },
+  {
+   "q": "f – i – sh",
+   "a": "fish",
+   "d": [
+    "fig",
+    "fit",
+    "ship"
+   ]
+  },
+  {
+   "q": "b – i – g",
+   "a": "big",
+   "d": [
+    "bin",
+    "bat",
+    "fig"
+   ]
+  },
+  {
+   "q": "First letter of goat",
+   "a": "g",
+   "d": [
+    "b",
+    "f",
+    "o"
+   ]
+  },
+  {
+   "q": "First sound of ship",
+   "a": "sh",
+   "d": [
+    "s",
+    "ch",
+    "f"
+   ]
+  },
+  {
+   "q": "We sit on a …",
+   "a": "chair",
+   "d": [
+    "wall",
+    "door",
+    "floor"
+   ]
+  },
+  {
+   "q": "The teacher writes on the …",
+   "a": "whiteboard",
+   "d": [
+    "floor",
+    "chair",
+    "door"
+   ]
+  },
+  {
+   "q": "The pens are … the pot.",
+   "a": "in",
+   "d": [
+    "at",
+    "up",
+    "to"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word is a classroom thing?",
+   "o": [
+    "desk",
+    "goat",
+    "bird",
+    "fig"
+   ],
+   "why": "A desk is in the classroom."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which letter starts the word orange?",
+   "o": [
+    "o",
+    "g",
+    "b",
+    "f"
+   ],
+   "why": "Orange starts with o."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word starts with sh?",
+   "o": [
+    "shed",
+    "sock",
+    "bag",
+    "fog"
+   ],
+   "why": "Shed starts with sh."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means below?",
+   "o": [
+    "under",
+    "on",
+    "in",
+    "up"
+   ],
+   "why": "Under means below."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Blend: h – o – p. What's the word?",
+   "o": [
+    "hop",
+    "mop",
+    "shop",
+    "top"
+   ],
+   "why": "h-o-p makes hop."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The books are on the floor. Where do you draw them?",
+   "o": [
+    "On the floor.",
+    "On the wall.",
+    "In the pot.",
+    "On the window."
+   ],
+   "why": "The books are on the floor."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner points to a chair. What's this?",
+   "o": [
+    "It's a chair.",
+    "It's a wall.",
+    "It's a door.",
+    "Who's this?"
+   ],
+   "why": "It's a chair. Great!"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word ends with the sh sound?",
+   "o": [
+    "fish",
+    "shop",
+    "shed",
+    "ship"
+   ],
+   "why": "Fish ends with sh. The others start with sh."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is right for a pen on top of a desk?",
+   "o": [
+    "The pen is on the desk.",
+    "The pen is under the desk.",
+    "The pen is in the desk.",
+    "The desk is on the pen."
+   ],
+   "why": "On top means on."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word has the o sound in the middle?",
+   "o": [
+    "sock",
+    "bin",
+    "fish",
+    "big"
+   ],
+   "why": "S-o-ck has o in the middle."
+  }
+ ]
+}

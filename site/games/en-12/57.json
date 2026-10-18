@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+ "lesson": "Reading for Pleasure: interview with celebrity chef Issa Al Lamki",
+ "outcomes": [
+  "Read an interview and answer questions about a chef's career",
+  "Explain why passion and hard work matter for success"
+ ],
+ "tf": [
+  {
+   "s": "Issa Al Lamki trained at the National Hospitality Institute (NHI) in Muscat.",
+   "t": true,
+   "why": "His training began at the NHI in Muscat."
+  },
+  {
+   "s": "Issa Al Lamki returned to Oman in 2008.",
+   "t": true,
+   "why": "The interview gives 2008 as the year he came back."
+  },
+  {
+   "s": "It took him ten years to become a top executive chef.",
+   "t": false,
+   "why": "He did it in seven years, earlier than his 10-year target."
+  },
+  {
+   "s": "Fusion cooking blends Omani ingredients with classic recipes from other countries.",
+   "t": true,
+   "why": "Fusion mixes cooking traditions together."
+  },
+  {
+   "s": "Issa Al Lamki believes that if you have a passion for your work, nothing is impossible.",
+   "t": true,
+   "why": "This is his main advice in the interview."
+  },
+  {
+   "s": "He became a top executive chef by 2003.",
+   "t": true,
+   "why": "He reached his goal by 2003."
+  },
+  {
+   "s": "Fusion cooking means using only one country's recipes without any changes.",
+   "t": false,
+   "why": "Fusion cooking mixes ingredients and recipes from different places."
+  },
+  {
+   "s": "Issa Al Lamki wanted to hide Omani cooking from the world.",
+   "t": false,
+   "why": "He aimed to promote Omani cooking."
+  },
+  {
+   "s": "Issa Al Lamki reached his goal later than he had planned.",
+   "t": false,
+   "why": "He reached it earlier: seven years instead of ten."
+  },
+  {
+   "s": "Issa Al Lamki is famous as a tour guide.",
+   "t": false,
+   "why": "He is a celebrity chef."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where did Issa Al Lamki train?",
+   "o": [
+    "The NHI in Muscat",
+    "A school in Dublin",
+    "A hotel in Toronto"
+   ],
+   "why": "He trained at the National Hospitality Institute in Muscat."
+  },
+  {
+   "q": "When did he return to Oman?",
+   "o": [
+    "2008",
+    "2003",
+    "1998"
+   ],
+   "why": "He returned in 2008."
+  },
+  {
+   "q": "What kind of cooking did he promote?",
+   "o": [
+    "Omani fusion cooking",
+    "Fast food",
+    "Only French cooking"
+   ],
+   "why": "He promoted Omani fusion cooking."
+  },
+  {
+   "q": "How long did he take to become an executive chef?",
+   "o": [
+    "Seven years",
+    "Ten years",
+    "Two years"
+   ],
+   "why": "Seven years, earlier than his target."
+  },
+  {
+   "q": "What was his original target?",
+   "o": [
+    "Ten years",
+    "Seven years",
+    "One year"
+   ],
+   "why": "He planned ten years but did it in seven."
+  },
+  {
+   "q": "What does he say makes everything possible?",
+   "o": [
+    "Passion",
+    "Luck",
+    "Money"
+   ],
+   "why": "Passion for your work makes nothing impossible."
+  },
+  {
+   "q": "What is an executive chef?",
+   "o": [
+    "The head chef of a kitchen",
+    "A new trainee",
+    "A waiter"
+   ],
+   "why": "The executive chef leads the kitchen."
+  },
+  {
+   "q": "What does fusion cooking mix?",
+   "o": [
+    "Omani ingredients and foreign recipes",
+    "Only sweets",
+    "Only drinks"
+   ],
+   "why": "It blends Omani food with recipes from other countries."
+  },
+  {
+   "q": "What kind of text is the reading?",
+   "o": [
+    "An interview",
+    "A recipe",
+    "A complaint"
+   ],
+   "why": "It is questions and answers with the chef."
+  },
+  {
+   "q": "What does 'cuisine' mean?",
+   "o": [
+    "A style of cooking",
+    "A kitchen tool",
+    "A hotel room"
+   ],
+   "why": "Omani cuisine is the Omani style of cooking."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Where Issa trained (initials)",
+   "a": "NHI",
+   "d": [
+    "CNT",
+    "WTO",
+    "DIT"
+   ]
+  },
+  {
+   "q": "City of the NHI",
+   "a": "Muscat",
+   "d": [
+    "Dublin",
+    "Toronto",
+    "Istanbul"
+   ]
+  },
+  {
+   "q": "Year he returned to Oman",
+   "a": "2008",
+   "d": [
+    "2003",
+    "1998",
+    "2018"
+   ]
+  },
+  {
+   "q": "Year he became executive chef",
+   "a": "2003",
+   "d": [
+    "2008",
+    "2013",
+    "1993"
+   ]
+  },
+  {
+   "q": "Years it actually took him",
+   "a": "seven",
+   "d": [
+    "ten",
+    "two",
+    "twelve"
+   ]
+  },
+  {
+   "q": "His original target in years",
+   "a": "ten",
+   "d": [
+    "seven",
+    "three",
+    "twenty"
+   ]
+  },
+  {
+   "q": "Type of cooking he promoted",
+   "a": "fusion",
+   "d": [
+    "fast food",
+    "frozen",
+    "takeaway"
+   ]
+  },
+  {
+   "q": "Key to success, he says",
+   "a": "passion",
+   "d": [
+    "luck",
+    "money",
+    "fame"
+   ]
+  },
+  {
+   "q": "The top chef in a kitchen",
+   "a": "executive chef",
+   "d": [
+    "waiter",
+    "trainee",
+    "cleaner"
+   ]
+  },
+  {
+   "q": "The cuisine he wants to promote",
+   "a": "Omani",
+   "d": [
+    "French",
+    "Italian",
+    "Turkish"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is fusion cooking?",
+   "o": [
+    "Blending Omani ingredients with classic recipes from other countries",
+    "Cooking food very quickly",
+    "Cooking without any ingredients",
+    "Eating food from one country only"
+   ],
+   "why": "Fusion brings different cooking traditions together."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Issa Al Lamki believe about work?",
+   "o": [
+    "If you have a passion for your work, nothing is impossible",
+    "Work is only about money",
+    "Hard work is not important",
+    "You should change jobs every year"
+   ],
+   "why": "Passion is the centre of his advice."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence best summarises Issa Al Lamki's career?",
+   "o": [
+    "He trained at the NHI, became an executive chef by 2003 and returned to Oman in 2008",
+    "He became a chef in 2008 after ten years of training abroad",
+    "He has never worked outside a small café",
+    "He trained as a pilot and later became a chef"
+   ],
+   "why": "These are the key dates and steps in the interview."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What was Issa Al Lamki's aim when he returned to Oman?",
+   "o": [
+    "To promote Omani cooking",
+    "To stop cooking",
+    "To open a fast-food chain abroad",
+    "To become a tour guide"
+   ],
+   "why": "He wanted to make Omani cooking better known."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A chef serves Omani halwa flavours in a classic French dessert. What is this an example of?",
+   "o": [
+    "Fusion cooking",
+    "Fast food",
+    "A takeaway",
+    "A buffet"
+   ],
+   "why": "It blends Omani ingredients with a recipe from another country."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "He became an executive chef in 2003 after seven years. Around which year did he start his career?",
+   "o": [
+    "1996",
+    "2001",
+    "2010",
+    "1990"
+   ],
+   "why": "2003 minus 7 years is 1996."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your group wants to promote Omani food to tourists, like Issa Al Lamki. Which idea fits best?",
+   "o": [
+    "Offer tourists tasting menus of Omani fusion dishes",
+    "Serve only foreign fast food",
+    "Close Omani restaurants",
+    "Hide Omani recipes"
+   ],
+   "why": "Letting tourists taste Omani dishes promotes Omani food."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What does reaching his goal in seven years instead of ten tell us about Issa Al Lamki?",
+   "o": [
+    "He worked hard and was passionate about cooking",
+    "He did not care about his career",
+    "His target was too easy to reach",
+    "He stopped training early"
+   ],
+   "why": "Reaching a goal early shows hard work and passion."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might fusion cooking help promote Omani cuisine abroad?",
+   "o": [
+    "Foreign visitors taste Omani flavours in recipes they already know",
+    "It removes all Omani ingredients",
+    "It makes the food more expensive only",
+    "It is only for Omani people"
+   ],
+   "why": "Familiar recipes with Omani ingredients make new flavours easier to enjoy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which message from the interview is most useful for students choosing a career?",
+   "o": [
+    "Choose work you are passionate about and work hard",
+    "Choose the job with the shortest training",
+    "Never set targets",
+    "Avoid working in your own country"
+   ],
+   "why": "His story shows passion and effort lead to success."
+  }
+ ]
+}

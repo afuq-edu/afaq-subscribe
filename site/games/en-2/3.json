@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Welcome: Hello!",
+  "lesson": "Welcome – Lesson 3: Numbers and colours",
+  "outcomes": [
+    "I can count and say numbers from one to ten.",
+    "I can name ten colours and answer: What colour is it?",
+    "I can read number words and colour words."
+  ],
+  "tf": [
+    {
+      "s": "Seven comes after six.",
+      "t": true,
+      "why": "Yes! Six, seven, eight."
+    },
+    {
+      "s": "Nine comes after ten.",
+      "t": false,
+      "why": "Nine comes before ten."
+    },
+    {
+      "s": "The word eight means 8.",
+      "t": true,
+      "why": "Great! eight = 8."
+    },
+    {
+      "s": "The word four means 5.",
+      "t": false,
+      "why": "four means 4. five means 5."
+    },
+    {
+      "s": "Pink is a colour.",
+      "t": true,
+      "why": "Yes! Pink is a colour."
+    },
+    {
+      "s": "Ten is a colour.",
+      "t": false,
+      "why": "Ten is a number, not a colour."
+    },
+    {
+      "s": "There are six balloons in the story picture.",
+      "t": true,
+      "why": "Well done! We counted six balloons."
+    },
+    {
+      "s": "What colour is it? asks How many?",
+      "t": false,
+      "why": "What colour is it? asks about the colour."
+    },
+    {
+      "s": "It's green. is an answer to What colour is it?",
+      "t": true,
+      "why": "Yes! It's green. tells the colour."
+    },
+    {
+      "s": "One, two, three, five is the right order.",
+      "t": false,
+      "why": "Four comes after three."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "3 + 2 = ?",
+      "o": [
+        "five",
+        "four",
+        "six"
+      ],
+      "why": "Three and two make five."
+    },
+    {
+      "q": "Which word is 9?",
+      "o": [
+        "nine",
+        "five",
+        "seven"
+      ],
+      "why": "nine = 9."
+    },
+    {
+      "q": "What comes after two?",
+      "o": [
+        "three",
+        "one",
+        "four"
+      ],
+      "why": "One, two, three."
+    },
+    {
+      "q": "The sky is ...",
+      "o": [
+        "blue",
+        "pink",
+        "brown"
+      ],
+      "why": "The sky is blue."
+    },
+    {
+      "q": "A banana is ...",
+      "o": [
+        "yellow",
+        "black",
+        "purple"
+      ],
+      "why": "A banana is yellow."
+    },
+    {
+      "q": "Grass is ...",
+      "o": [
+        "green",
+        "red",
+        "white"
+      ],
+      "why": "Grass is green."
+    },
+    {
+      "q": "Which one is a colour?",
+      "o": [
+        "orange",
+        "six",
+        "listen"
+      ],
+      "why": "Orange is a colour."
+    },
+    {
+      "q": "Which one is a number?",
+      "o": [
+        "eight",
+        "red",
+        "draw"
+      ],
+      "why": "Eight is a number."
+    },
+    {
+      "q": "What colour is it? It's ...",
+      "o": [
+        "red",
+        "ten",
+        "Sami"
+      ],
+      "why": "We answer with a colour."
+    },
+    {
+      "q": "How many fingers on one hand?",
+      "o": [
+        "five",
+        "ten",
+        "three"
+      ],
+      "why": "One hand has five fingers."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Number 6",
+      "a": "six",
+      "d": [
+        "seven",
+        "nine",
+        "two"
+      ]
+    },
+    {
+      "q": "Number 10",
+      "a": "ten",
+      "d": [
+        "one",
+        "eight",
+        "four"
+      ]
+    },
+    {
+      "q": "Number 4",
+      "a": "four",
+      "d": [
+        "five",
+        "three",
+        "nine"
+      ]
+    },
+    {
+      "q": "What comes after seven?",
+      "a": "eight",
+      "d": [
+        "six",
+        "ten",
+        "two"
+      ]
+    },
+    {
+      "q": "How many balloons in the story?",
+      "a": "six",
+      "d": [
+        "four",
+        "ten",
+        "two"
+      ]
+    },
+    {
+      "q": "Colour of milk",
+      "a": "white",
+      "d": [
+        "black",
+        "green",
+        "pink"
+      ]
+    },
+    {
+      "q": "Colour of an orange",
+      "a": "orange",
+      "d": [
+        "blue",
+        "purple",
+        "white"
+      ]
+    },
+    {
+      "q": "Colour of the sun",
+      "a": "yellow",
+      "d": [
+        "black",
+        "blue",
+        "brown"
+      ]
+    },
+    {
+      "q": "Number 3",
+      "a": "three",
+      "d": [
+        "eight",
+        "five",
+        "ten"
+      ]
+    },
+    {
+      "q": "Colour of the night sky",
+      "a": "black",
+      "d": [
+        "yellow",
+        "pink",
+        "orange"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which word is 7?",
+      "o": [
+        "seven",
+        "six",
+        "eight",
+        "one"
+      ],
+      "why": "seven = 7."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which one is NOT a colour?",
+      "o": [
+        "five",
+        "purple",
+        "brown",
+        "pink"
+      ],
+      "why": "Five is a number."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What comes before ten?",
+      "o": [
+        "nine",
+        "eight",
+        "seven",
+        "one"
+      ],
+      "why": "Eight, nine, ten."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which question asks about colour?",
+      "o": [
+        "What colour is it?",
+        "How many?",
+        "How old are you?",
+        "What's your name?"
+      ],
+      "why": "What colour is it? asks the colour."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You see 2 + 1 balls. How many?",
+      "o": [
+        "three",
+        "two",
+        "four",
+        "one"
+      ],
+      "why": "Two and one make three."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your bag is blue. What colour is it?",
+      "o": [
+        "It's blue.",
+        "It's ten.",
+        "It's a bag.",
+        "I'm seven."
+      ],
+      "why": "We say It's and the colour."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Read: two red pencils. What do you see?",
+      "o": [
+        "2 red pencils",
+        "2 blue pencils",
+        "10 red pencils",
+        "1 red pencil"
+      ],
+      "why": "two = 2 and red is the colour."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which list is in the right order?",
+      "o": [
+        "five, six, seven",
+        "six, five, seven",
+        "seven, six, eight",
+        "five, seven, six"
+      ],
+      "why": "Five, six, seven goes up one by one."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which is the odd one out?",
+      "o": [
+        "three",
+        "red",
+        "green",
+        "yellow"
+      ],
+      "why": "Three is a number. The others are colours."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Look: 1, 2, 3, ?, 5. What is missing?",
+      "o": [
+        "four",
+        "six",
+        "two",
+        "ten"
+      ],
+      "why": "Four comes between three and five."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "1",
+  "lesson": "Unit 1: New Media – Project: Design a Blog",
+  "outcomes": [
+    "Know the parts of a blog: homepage, menu, blog post and comments.",
+    "Sort blogging tips into Content, Design and Technical.",
+    "Plan, build and present a blog with my team and give polite feedback."
+  ],
+  "tf": [
+    {"s": "Someone who writes a blog is a blogger.", "t": true, "why": "Yes! A blogger writes blog posts."},
+    {"s": "The blog post page shows the menu and all recent posts.", "t": false, "why": "That is the homepage; the post page shows one post with its comments."},
+    {"s": "A menu helps readers move between pages.", "t": true, "why": "Correct, it is like a map of the blog."},
+    {"s": "'Choose attractive colours' is a Design tip.", "t": true, "why": "Colours are part of how the blog looks."},
+    {"s": "'Blog regularly' is a Technical tip.", "t": false, "why": "It is a Content tip: it is about what and how often you post."},
+    {"s": "Bloggers should post their personal details to make friends.", "t": false, "why": "Don't post personal details, to protect your privacy and stay safe."},
+    {"s": "The homepage is the first page of a blog.", "t": true, "why": "Well done, readers see it first."},
+    {"s": "In the group, the designer is responsible for the look of the blog.", "t": true, "why": "Right, the designer takes care of the creative side."},
+    {"s": "'Your blog is bad' is a polite way to give feedback.", "t": false, "why": "Try: 'Your blog is good, but you could add more photos.'"},
+    {"s": "Feedback from another group cannot help us improve.", "t": false, "why": "Others can see points we cannot see ourselves."}
+  ],
+  "boxes": [
+    {"q": "Someone who writes a blog is a ...", "o": ["blogger", "reporter", "designer"], "why": "A blogger writes and posts on a blog."},
+    {"q": "Which category is 'Choose attractive colours'?", "o": ["Design", "Content", "Technical"], "why": "Colours are about the look of the blog."},
+    {"q": "Which category is 'Blog regularly'?", "o": ["Content", "Design", "Technical"], "why": "It is about posting content often."},
+    {"q": "Which feature helps readers move between pages?", "o": ["menu", "comment", "photo"], "why": "The menu links the pages together."},
+    {"q": "What does the blog post page show?", "o": ["one post with its comments", "only the menu", "a list of bloggers"], "why": "Each post has its own page with comments."},
+    {"q": "Why shouldn't you post personal details?", "o": ["to stay safe online", "to get more likes", "to save time"], "why": "Keeping details private protects you."},
+    {"q": "Which word means 'the way things are arranged on a page'?", "o": ["layout", "content", "follower"], "why": "Layout is how the parts of a page are placed."},
+    {"q": "Which sentence makes a suggestion?", "o": ["Why don't we blog about technology?", "Our blog is blue.", "I wrote a post."], "why": "'Why don't we…?' suggests an idea."},
+    {"q": "Today our group will ___ our blog to the class.", "o": ["present", "delete", "forget"], "why": "We present our work to classmates."},
+    {"q": "Which question helps you reflect on teamwork?", "o": ["How well did you work together as a team?", "What colour is the menu?", "How long is the post?"], "why": "Reflection questions help you think about your work."}
+  ],
+  "hunt": [
+    {"q": "A person who writes a blog", "a": "blogger", "d": ["reporter", "designer", "follower"]},
+    {"q": "The first page of a blog", "a": "homepage", "d": ["menu", "comment", "layout"]},
+    {"q": "Helps readers move between pages", "a": "menu", "d": ["comment", "photo", "post"]},
+    {"q": "One article on a blog", "a": "blog post", "d": ["homepage", "menu", "layout"]},
+    {"q": "Category of 'Choose attractive colours'", "a": "Design", "d": ["Content", "Technical", "Comments"]},
+    {"q": "Category of 'Blog regularly'", "a": "Content", "d": ["Design", "Technical", "Layout"]},
+    {"q": "How a page is arranged", "a": "layout", "d": ["content", "blogger", "feedback"]},
+    {"q": "Team member who makes the look", "a": "designer", "d": ["writer", "reader", "follower"]},
+    {"q": "Comments to help others improve", "a": "feedback", "d": ["menu", "layout", "homepage"]},
+    {"q": "Show your blog to the class", "a": "present", "d": ["delete", "download", "hide"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What does a blog homepage show?", "o": ["the menu and recent posts", "only one comment", "the blogger's address", "nothing but a photo"], "why": "The homepage gives an overview of the blog."},
+    {"lv": "التذكر", "q": "What are the three categories of blogging tips?", "o": ["Content, Design and Technical", "Title, Photo and Video", "Reader, Writer and Speaker", "Past, Present and Future"], "why": "Noora's tips are sorted into these three groups."},
+    {"lv": "التذكر", "q": "What is the designer's role in the group?", "o": ["the creative side and the look of the blog", "only reading the posts", "keeping the time only", "deleting comments"], "why": "The designer makes the blog look good."},
+    {"lv": "التذكر", "q": "Which word means 'what is written and shown on the blog'?", "o": ["content", "menu", "layout", "technical"], "why": "Content is the information in your posts."},
+    {"lv": "التطبيق", "q": "Your group wants to suggest a topic. What do you say?", "o": ["Why don't we blog about robots and technology?", "We blogged robots.", "Robots is a blog.", "Blog about robots is."], "why": "'Why don't we…?' is a clear suggestion."},
+    {"lv": "التطبيق", "q": "Rewrite politely: 'Your blog is bad.'", "o": ["Your blog is good, but you could add more photos.", "Your blog is terrible.", "I don't like anything.", "Delete your blog."], "why": "Polite feedback gives a positive point and a suggestion."},
+    {"lv": "التطبيق", "q": "Which two things does a good presentation need?", "o": ["a clear voice and good timing", "a quiet voice and no eye contact", "reading very fast and no plan", "one person doing everything"], "why": "A clear voice, eye contact and good timing help listeners."},
+    {"lv": "التحليل", "q": "Why is 'Don't post personal details' an important tip?", "o": ["It protects your privacy and keeps you safe.", "It makes the blog more colourful.", "It makes posts longer.", "It gives you more followers."], "why": "Personal details online can be unsafe."},
+    {"lv": "التحليل", "q": "Why is feedback from another group useful?", "o": ["It shows points to improve that we cannot see ourselves.", "It ends the project quickly.", "It means we don't need to plan.", "It changes our topic."], "why": "Fresh eyes help raise the quality of our work."},
+    {"lv": "التحليل", "q": "A blog has many posts but readers can't find the pages. What should the group add?", "o": ["a clear menu", "more colours", "longer posts", "fewer comments"], "why": "A menu helps readers move between pages."}
+  ]
+}

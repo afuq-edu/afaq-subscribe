@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Safety on the Roads (Vocabulary)",
+ "lesson": "Road rage: Listening 4.3.2, advice and role play",
+ "outcomes": [
+  "Understand what road rage is and what makes drivers angry",
+  "Give advice to drivers to help them stay calm",
+  "Role-play a polite dialogue between two drivers"
+ ],
+ "tf": [
+  {
+   "s": "Road rage is violent or aggressive behaviour by drivers.",
+   "t": true,
+   "why": "Yes, road rage means drivers acting angrily and aggressively."
+  },
+  {
+   "s": "Tailgating means driving too close to the car in front.",
+   "t": true,
+   "why": "Correct, tailgating is following too closely."
+  },
+  {
+   "s": "The driver who is tailgated feels relaxed and safe.",
+   "t": false,
+   "why": "Tailgating makes drivers feel nervous because it is dangerous."
+  },
+  {
+   "s": "Flashing your lights at other drivers is seen as rude and aggressive.",
+   "t": true,
+   "why": "Right, it tries to push other drivers out of the way."
+  },
+  {
+   "s": "Not using indicators is confusing for other drivers.",
+   "t": true,
+   "why": "Yes, they don't know if you will go left or right."
+  },
+  {
+   "s": "When someone cuts in, the other driver may have to brake sharply.",
+   "t": true,
+   "why": "Correct, cutting in can force a sudden stop."
+  },
+  {
+   "s": "Good advice for an angry driver is to drive faster than the other car.",
+   "t": false,
+   "why": "The advice is to stay calm and let the other driver pass."
+  },
+  {
+   "s": "'Keep cool' means stay calm.",
+   "t": true,
+   "why": "Yes, keeping cool means not getting angry."
+  },
+  {
+   "s": "Indicators are used to light the road at night.",
+   "t": false,
+   "why": "Indicators show other drivers which way you are turning."
+  },
+  {
+   "s": "'Cutting in' means driving slowly at the back of a long line of cars.",
+   "t": false,
+   "why": "Cutting in means moving suddenly in front of another car."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is 'road rage'?",
+   "o": [
+    "aggressive behaviour by drivers",
+    "a type of road",
+    "a speed limit"
+   ],
+   "why": "Road rage is angry, aggressive driving."
+  },
+  {
+   "q": "What is 'tailgating'?",
+   "o": [
+    "driving too close behind a car",
+    "parking on the road",
+    "driving very slowly"
+   ],
+   "why": "Tailgating means following another car too closely."
+  },
+  {
+   "q": "How does not signalling make other drivers feel?",
+   "o": [
+    "confused",
+    "happy",
+    "sleepy"
+   ],
+   "why": "They don't know which way the driver will turn."
+  },
+  {
+   "q": "How are flashing lights described in the listening?",
+   "o": [
+    "rude and aggressive",
+    "kind and polite",
+    "quiet and calm"
+   ],
+   "why": "Flashing lights try to push drivers out of the way."
+  },
+  {
+   "q": "What must a driver do when someone cuts in?",
+   "o": [
+    "brake sharply",
+    "speed up",
+    "turn on the radio"
+   ],
+   "why": "Cutting in forces the driver to stop suddenly."
+  },
+  {
+   "q": "Which is good advice for an angry driver?",
+   "o": [
+    "stay calm",
+    "flash your lights",
+    "drive closer"
+   ],
+   "why": "Staying calm helps avoid road rage."
+  },
+  {
+   "q": "What do indicators show?",
+   "o": [
+    "which way a car will turn",
+    "how fast a car is",
+    "how much fuel is left"
+   ],
+   "why": "Indicators signal a turn left or right."
+  },
+  {
+   "q": "Which is a polite thing to say to another driver?",
+   "o": [
+    "Sorry, I didn't see you - go ahead.",
+    "Get out of my way!",
+    "Move, you are slow!"
+   ],
+   "why": "Polite words help calm both drivers."
+  },
+  {
+   "q": "What does 'let the other driver pass' mean?",
+   "o": [
+    "allow them to go in front",
+    "block them",
+    "race them"
+   ],
+   "why": "Letting them pass ends the problem calmly."
+  },
+  {
+   "q": "How did Driver 4 feel when someone cut in?",
+   "o": [
+    "scared",
+    "bored",
+    "proud"
+   ],
+   "why": "Driver 4 feared causing an accident."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Driving too close behind",
+   "a": "tailgating",
+   "d": [
+    "cutting in",
+    "parking",
+    "overtaking"
+   ]
+  },
+  {
+   "q": "Angry, aggressive driving",
+   "a": "road rage",
+   "d": [
+    "road safety",
+    "speed limit",
+    "seatbelt"
+   ]
+  },
+  {
+   "q": "Lights that show you will turn",
+   "a": "indicators",
+   "d": [
+    "headlights",
+    "brakes",
+    "mirrors"
+   ]
+  },
+  {
+   "q": "Not signalling is...",
+   "a": "confusing",
+   "d": [
+    "polite",
+    "helpful",
+    "calm"
+   ]
+  },
+  {
+   "q": "Flashing lights is...",
+   "a": "rude",
+   "d": [
+    "kind",
+    "polite",
+    "friendly"
+   ]
+  },
+  {
+   "q": "Tailgating makes drivers feel...",
+   "a": "nervous",
+   "d": [
+    "happy",
+    "relaxed",
+    "sleepy"
+   ]
+  },
+  {
+   "q": "Moving suddenly in front of a car",
+   "a": "cutting in",
+   "d": [
+    "tailgating",
+    "braking",
+    "parking"
+   ]
+  },
+  {
+   "q": "Advice: stay...",
+   "a": "calm",
+   "d": [
+    "angry",
+    "fast",
+    "close"
+   ]
+  },
+  {
+   "q": "Another way to say 'stay calm'",
+   "a": "keep cool",
+   "d": [
+    "speed up",
+    "cut in",
+    "flash lights"
+   ]
+  },
+  {
+   "q": "Let the other driver...",
+   "a": "pass",
+   "d": [
+    "crash",
+    "wait",
+    "stop"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which behaviour is an example of road rage?",
+   "o": [
+    "shouting and flashing lights at drivers",
+    "waiting calmly at a red light",
+    "using your indicators",
+    "letting another car pass"
+   ],
+   "why": "Road rage is angry and aggressive behaviour."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why is tailgating dangerous?",
+   "o": [
+    "the car behind may not be able to stop in time",
+    "it uses less fuel",
+    "it is too slow",
+    "it makes the road wider"
+   ],
+   "why": "Being too close leaves no time to stop."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why are unsignalled turns a problem?",
+   "o": [
+    "drivers don't know if the car will go left or right",
+    "they make the car faster",
+    "they are too noisy",
+    "they waste fuel"
+   ],
+   "why": "Without signals, other drivers must guess."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase means the same as 'stay calm'?",
+   "o": [
+    "keep cool",
+    "cut in",
+    "speed up",
+    "tailgate"
+   ],
+   "why": "Keep cool means don't get angry."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A car is driving very close behind you. What is the best thing to do?",
+   "o": [
+    "stay calm and let it pass",
+    "brake suddenly to scare it",
+    "drive faster",
+    "flash your lights at it"
+   ],
+   "why": "Letting it pass is the safest choice."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You turn without using your indicator and another driver is angry. What could you say?",
+   "o": [
+    "Sorry, I forgot to signal.",
+    "It's your problem.",
+    "Drive better!",
+    "I don't care."
+   ],
+   "why": "An apology helps calm the other driver."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A driver suddenly moves in front of you. What is this called?",
+   "o": [
+    "cutting in",
+    "tailgating",
+    "signalling",
+    "overtaking slowly"
+   ],
+   "why": "Cutting in is moving suddenly in front of another car."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is flashing lights at other drivers described as rude?",
+   "o": [
+    "it tries to push other drivers out of the way",
+    "it helps them see the road",
+    "it is a way to say thank you",
+    "it shows a turn"
+   ],
+   "why": "It is aggressive pressure on other drivers."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is giving calm advice better than getting angry?",
+   "o": [
+    "anger can lead to accidents",
+    "anger makes driving safer",
+    "calm drivers drive too slowly",
+    "advice is not useful"
+   ],
+   "why": "Angry drivers take risks that cause accidents."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What do all four drivers in the listening have in common?",
+   "o": [
+    "another driver's behaviour upset them",
+    "they all drove too fast",
+    "they all had accidents",
+    "they were all police officers"
+   ],
+   "why": "Each one talked about something another driver did."
+  }
+ ]
+}

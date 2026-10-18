@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "4",
+ "lesson": "Unit 4: Civilisation – Listening and Speaking",
+ "outcomes": [
+  "Explain quotes from world leaders and words like equality.",
+  "Listen for details and say them in my own words.",
+  "Talk about what it means to be a global citizen."
+ ],
+ "tf": [
+  {
+   "s": "'Equality' means treating everyone the same and giving them the same rights.",
+   "t": true,
+   "why": "Yes, everyone has equal rights."
+  },
+  {
+   "s": "The United Nations was created to encourage cooperation between countries.",
+   "t": true,
+   "why": "Correct, it helps countries work together."
+  },
+  {
+   "s": "'Diversity' means everyone is exactly the same.",
+   "t": false,
+   "why": "Diversity means many different people and cultures."
+  },
+  {
+   "s": "A global citizen only cares about his or her own town.",
+   "t": false,
+   "why": "A global citizen cares about the whole world."
+  },
+  {
+   "s": "A global citizen shows respect for other cultures.",
+   "t": true,
+   "why": "Well done, respect is key."
+  },
+  {
+   "s": "'Revenge' and 'cooperation' have the same meaning.",
+   "t": false,
+   "why": "Cooperation means working together; revenge means hurting someone back."
+  },
+  {
+   "s": "'Universal' means for everyone.",
+   "t": true,
+   "why": "Yes, 'Education is universal' means everyone should have it."
+  },
+  {
+   "s": "A community is a group of people living together.",
+   "t": true,
+   "why": "Correct, like your neighbourhood."
+  },
+  {
+   "s": "Protecting the environment is one way to be a global citizen.",
+   "t": true,
+   "why": "Right, it helps the whole planet."
+  },
+  {
+   "s": "To rephrase means to copy the exact same words.",
+   "t": false,
+   "why": "Rephrasing means saying it in your own words."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does 'equality' mean?",
+   "o": [
+    "having the same rights",
+    "having more money",
+    "being a leader"
+   ],
+   "why": "Equality is fairness for all."
+  },
+  {
+   "q": "The ___ encourages cooperation between countries.",
+   "o": [
+    "United Nations",
+    "revenge",
+    "war"
+   ],
+   "why": "The UN helps countries work together."
+  },
+  {
+   "q": "A person who guides a group is a…",
+   "o": [
+    "leader",
+    "citizen",
+    "visitor"
+   ],
+   "why": "Leaders guide people."
+  },
+  {
+   "q": "A global citizen shows ___ for other cultures.",
+   "o": [
+    "respect",
+    "revenge",
+    "anger"
+   ],
+   "why": "Global citizens respect others."
+  },
+  {
+   "q": "A group of people living together is a…",
+   "o": [
+    "community",
+    "leader",
+    "rule"
+   ],
+   "why": "A community lives together."
+  },
+  {
+   "q": "Rephrase: 'Education is universal.'",
+   "o": [
+    "Everyone should have an education.",
+    "Education is for no one.",
+    "Only leaders study."
+   ],
+   "why": "Universal means for everyone."
+  },
+  {
+   "q": "A global citizen cares about…",
+   "o": [
+    "the whole world",
+    "only themselves",
+    "only one shop"
+   ],
+   "why": "'Global' means the whole world."
+  },
+  {
+   "q": "Working together is…",
+   "o": [
+    "cooperation",
+    "revenge",
+    "war"
+   ],
+   "why": "Cooperation means teamwork."
+  },
+  {
+   "q": "A good rule for a better world:",
+   "o": [
+    "Everyone must be treated equally.",
+    "Only some people can learn.",
+    "Ignore other people."
+   ],
+   "why": "Equal treatment makes a fairer world."
+  },
+  {
+   "q": "Many different cultures together show…",
+   "o": [
+    "diversity",
+    "war",
+    "revenge"
+   ],
+   "why": "Diversity means variety."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Same rights for all",
+   "a": "equality",
+   "d": [
+    "revenge",
+    "war",
+    "diversity"
+   ]
+  },
+  {
+   "q": "Working together",
+   "a": "cooperation",
+   "d": [
+    "revenge",
+    "war",
+    "conflict"
+   ]
+  },
+  {
+   "q": "For everyone",
+   "a": "universal",
+   "d": [
+    "local",
+    "private",
+    "rare"
+   ]
+  },
+  {
+   "q": "Guides a group",
+   "a": "leader",
+   "d": [
+    "citizen",
+    "follower",
+    "guest"
+   ]
+  },
+  {
+   "q": "People living together",
+   "a": "community",
+   "d": [
+    "leader",
+    "rule",
+    "war"
+   ]
+  },
+  {
+   "q": "Cares about the whole world",
+   "a": "global citizen",
+   "d": [
+    "archaeologist",
+    "pharaoh",
+    "emperor"
+   ]
+  },
+  {
+   "q": "Many different cultures",
+   "a": "diversity",
+   "d": [
+    "equality",
+    "revenge",
+    "war"
+   ]
+  },
+  {
+   "q": "Shown to other cultures",
+   "a": "respect",
+   "d": [
+    "revenge",
+    "anger",
+    "fear"
+   ]
+  },
+  {
+   "q": "Duty to do the right thing",
+   "a": "responsibility",
+   "d": [
+    "revenge",
+    "diversity",
+    "war"
+   ]
+  },
+  {
+   "q": "Helps countries cooperate",
+   "a": "United Nations",
+   "d": [
+    "war",
+    "revenge",
+    "empire"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is a global citizen?",
+   "o": [
+    "a person who cares about the whole world",
+    "a person who travels every day",
+    "a leader of a country",
+    "a person who only cares about one city"
+   ],
+   "why": "'Global' means the whole world."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why was the United Nations created?",
+   "o": [
+    "to encourage cooperation between countries",
+    "to start wars",
+    "to sell goods",
+    "to build pyramids"
+   ],
+   "why": "The UN helps countries work together."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'universal' mean?",
+   "o": [
+    "for everyone",
+    "for one person",
+    "very old",
+    "dangerous"
+   ],
+   "why": "Universal things belong to all people."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'treating everyone the same'?",
+   "o": [
+    "equality",
+    "revenge",
+    "war",
+    "environment"
+   ],
+   "why": "Equality means equal rights."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rephrase in your own words: 'Education is universal.'",
+   "o": [
+    "Everyone should have an education.",
+    "Education is very old.",
+    "Only teachers need education.",
+    "Education is a universe."
+   ],
+   "why": "Rephrasing keeps the meaning in new words."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good rule to make the world a better place?",
+   "o": [
+    "Everyone must be treated equally.",
+    "Only rich people can study.",
+    "We should take revenge.",
+    "Never help others."
+   ],
+   "why": "Equality makes the world fairer."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali picks up rubbish at the beach and learns about other cultures. What is he being?",
+   "o": [
+    "a global citizen",
+    "a leader of an empire",
+    "an archaeologist",
+    "a pharaoh"
+   ],
+   "why": "Caring for the planet and others is global citizenship."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does cooperation between countries help the world?",
+   "o": [
+    "Countries can solve problems together instead of fighting.",
+    "It makes countries take revenge.",
+    "It stops people from travelling.",
+    "It makes war more likely."
+   ],
+   "why": "Working together brings peace."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which answer gives an opinion supported by a reason?",
+   "o": [
+    "Young people can change the world because they can protect the environment.",
+    "Young people.",
+    "The world is big.",
+    "Yes."
+   ],
+   "why": "A strong opinion includes 'because' and a reason."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is respect for other cultures part of being a global citizen?",
+   "o": [
+    "Because people of different cultures share one world.",
+    "Because all cultures are the same.",
+    "Because respect means revenge.",
+    "Because only one culture is important."
+   ],
+   "why": "Respect helps diverse people live together."
+  }
+ ]
+}

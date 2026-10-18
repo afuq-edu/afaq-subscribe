@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Unit 4 – Lesson 4: Skills (Describing family members)",
+  "outcomes": [
+    "I can listen to a description and find the right person.",
+    "I can play Guess who: Is it Sally? Yes, it is.",
+    "I can read and write about a family member."
+  ],
+  "tf": [
+    { "s": "This is my sister, Ana. She's got black hair.", "t": true, "why": "Yes! Ana has got black hair." },
+    { "s": "Ana has got blue eyes.", "t": true, "why": "Great! She's got blue eyes." },
+    { "s": "Ana has got a big nose.", "t": false, "why": "Ana has got a small nose." },
+    { "s": "Ana is my brother.", "t": false, "why": "Ana is my sister." },
+    { "s": "Is it Sally? Yes, it is.", "t": true, "why": "Well done! That is a short answer." },
+    { "s": "We answer Is it Sally? with No, it isn't when it is not Sally.", "t": true, "why": "Yes! No, it isn't means it is not Sally." },
+    { "s": "We say He's got for my aunt.", "t": false, "why": "An aunt is a woman: She's got." },
+    { "s": "She's got red hair and green eyes tells two things.", "t": true, "why": "Great! Hair and eyes are two features." },
+    { "s": "My cousin, my brother and my mum are colour words.", "t": false, "why": "They are family words." },
+    { "s": "We say: She's got a black hair.", "t": false, "why": "We say: She's got black hair." }
+  ],
+  "boxes": [
+    { "q": "Who's Ana?", "o": ["She's my sister.", "He's my brother.", "She's my mum."], "why": "This is my sister, Ana." },
+    { "q": "Is it Sally? (yes)", "o": ["Yes, it is.", "Yes, I am.", "No, it isn't."], "why": "Yes, it is is the short answer." },
+    { "q": "Is it Sally? (no)", "o": ["No, it isn't.", "Yes, it is.", "No, I'm not."], "why": "No, it isn't is the short answer." },
+    { "q": "This is my ___, Ana.", "o": ["sister", "uncle", "dad"], "why": "Ana is a girl in the family: sister." },
+    { "q": "Ana has got a ___ nose.", "o": ["small", "big", "red"], "why": "She's got a small nose." },
+    { "q": "What colour is Ana's hair?", "o": ["black", "red", "fair"], "why": "She's got black hair." },
+    { "q": "My uncle: ___ got big ears.", "o": ["He's", "She's", "I'm"], "why": "An uncle is a man: He's got." },
+    { "q": "Which sentence has two features?", "o": ["She's got red hair and green eyes.", "She's my mum.", "Is it Sally?"], "why": "Hair and eyes are two features." },
+    { "q": "We ask to guess a person: ___ Sally?", "o": ["Is it", "Who's", "How many"], "why": "We guess with Is it …?" },
+    { "q": "Start your writing: ___ my brother.", "o": ["This is", "He's got", "Is it"], "why": "We start with This is my …" }
+  ],
+  "hunt": [
+    { "q": "Ana's hair colour", "a": "black", "d": ["red", "brown", "fair"] },
+    { "q": "Ana's eye colour", "a": "blue", "d": ["green", "brown", "black"] },
+    { "q": "Ana's nose is ___.", "a": "small", "d": ["big", "long", "red"] },
+    { "q": "Ana is my ___.", "a": "sister", "d": ["brother", "uncle", "dad"] },
+    { "q": "Is it Sally? Yes, it ___.", "a": "is", "d": ["am", "are", "isn't"] },
+    { "q": "Is it Sally? No, it ___.", "a": "isn't", "d": ["is", "am", "are"] },
+    { "q": "My aunt: ___ got green eyes.", "a": "She's", "d": ["He's", "It's", "I'm"] },
+    { "q": "My dad: ___ got black hair.", "a": "He's", "d": ["She's", "It's", "I'm"] },
+    { "q": "Find the face word.", "a": "nose", "d": ["aunt", "cousin", "sister"] },
+    { "q": "Find the family word.", "a": "cousin", "d": ["eyes", "hair", "nose"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Read: This is my sister, Ana. Who is Ana?", "o": ["my sister", "my brother", "my aunt", "my mum"], "why": "Ana is my sister." },
+    { "lv": "التذكر", "q": "What colour are Ana's eyes?", "o": ["blue", "green", "brown", "black"], "why": "She's got blue eyes." },
+    { "lv": "التذكر", "q": "Which is a short answer?", "o": ["Yes, it is.", "Is it Sally?", "She's got red hair.", "This is my mum."], "why": "Yes, it is answers a question." },
+    { "lv": "التذكر", "q": "Which word is a family word?", "o": ["aunt", "nose", "hair", "green"], "why": "An aunt is in our family." },
+    { "lv": "التطبيق", "q": "Your partner says: He's got black hair and big ears. Who is it?", "o": ["A boy with black hair and big ears", "A girl with red hair", "A boy with fair hair and small ears", "A girl with black hair"], "why": "He is a boy with black hair and big ears." },
+    { "lv": "التطبيق", "q": "Write about your brother. He has got brown hair.", "o": ["He's got brown hair.", "She's got brown hair.", "He's brown hair.", "He got brown hairs."], "why": "For a brother: He's got brown hair." },
+    { "lv": "التطبيق", "q": "You guess the person is Sally. What do you ask?", "o": ["Is it Sally?", "Who's Sally?", "How many Sally?", "What's Sally?"], "why": "We guess with Is it …?" },
+    { "lv": "التحليل", "q": "A girl has got red hair and green eyes. Which is NOT right?", "o": ["She's got blue eyes.", "She's got red hair.", "She's got green eyes.", "She's got red hair and green eyes."], "why": "Her eyes are green, not blue." },
+    { "lv": "التحليل", "q": "Which is the best three-sentence description?", "o": ["This is my mum. She's got black hair. She's got brown eyes.", "This is my mum. He's got black hair. He's got brown eyes.", "Is it mum? Yes. No.", "My mum. Black. Brown."], "why": "It says who she is and two features, with She's got." },
+    { "lv": "التحليل", "q": "Ana: black hair, blue eyes, small nose. Which picture is Ana?", "o": ["Black hair, blue eyes, small nose", "Red hair, blue eyes, small nose", "Black hair, green eyes, big nose", "Fair hair, brown eyes, small nose"], "why": "Only this picture matches all three features." }
+  ]
+}

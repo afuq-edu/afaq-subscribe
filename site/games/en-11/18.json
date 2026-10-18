@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 4 - Unit 3: The Best and the Worst",
+ "outcomes": [
+  "Read an essay about the most helpful and harmful inventions",
+  "Use word forms like invent, invention and inventor",
+  "Give an argument with reasons about an invention"
+ ],
+ "tf": [
+  {
+   "s": "The writer lists the wheel as a helpful invention.",
+   "t": true,
+   "why": "Yes! The wheel is needed for most types of transportation."
+  },
+  {
+   "s": "The writer lists money as a harmful invention.",
+   "t": false,
+   "why": "Money is on the writer's helpful list; it helps businesses develop."
+  },
+  {
+   "s": "The writer says cars are harmful because they cause global warming and traffic deaths.",
+   "t": true,
+   "why": "Right! The essay gives both reasons."
+  },
+  {
+   "s": "Cigarettes are one of the harmful inventions in the essay.",
+   "t": true,
+   "why": "Correct! The essay says smoking causes millions of deaths a year."
+  },
+  {
+   "s": "The noun of 'invent' is 'invention'.",
+   "t": true,
+   "why": "Good! 'Inventor' is the person."
+  },
+  {
+   "s": "'Harmful' means safe and not dangerous.",
+   "t": false,
+   "why": "'Harmful' means causing harm or damage."
+  },
+  {
+   "s": "'Discovery' is the noun of 'discover'.",
+   "t": true,
+   "why": "Yes! The ending -y makes the noun here."
+  },
+  {
+   "s": "Paper is helpful because it allows us to keep and share information.",
+   "t": true,
+   "why": "Right! Modern technology depends on it too."
+  },
+  {
+   "s": "'Useless' means very helpful.",
+   "t": false,
+   "why": "'Useless' means not useful at all."
+  },
+  {
+   "s": "A good argument gives reasons and an example.",
+   "t": true,
+   "why": "Yes! Reasons make an argument strong."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which is one of the writer's helpful inventions?",
+   "o": [
+    "writing systems",
+    "guns",
+    "cigarettes"
+   ],
+   "why": "Writing systems help people share ideas."
+  },
+  {
+   "q": "Which is one of the harmful inventions in the essay?",
+   "o": [
+    "guns",
+    "medicine",
+    "paper"
+   ],
+   "why": "Guns are on the harmful list."
+  },
+  {
+   "q": "Why does the writer say the wheel is helpful?",
+   "o": [
+    "it is needed for most transportation",
+    "it causes global warming",
+    "it is made of paper"
+   ],
+   "why": "Most vehicles need wheels."
+  },
+  {
+   "q": "What is the noun of 'invent'?",
+   "o": [
+    "invention",
+    "inventive",
+    "invented"
+   ],
+   "why": "An invention is something new that is made."
+  },
+  {
+   "q": "What is the adjective of 'help'?",
+   "o": [
+    "helpful",
+    "helper",
+    "helped"
+   ],
+   "why": "The ending -ful makes an adjective."
+  },
+  {
+   "q": "Who is an 'inventor'?",
+   "o": [
+    "a person who invents things",
+    "a new machine",
+    "a kind of medicine"
+   ],
+   "why": "The ending -or can show a person."
+  },
+  {
+   "q": "Complete: Smoking is very ___ (harm).",
+   "o": [
+    "harmful",
+    "harm",
+    "harmed"
+   ],
+   "why": "Harmful means causing harm."
+  },
+  {
+   "q": "Complete: Money is helpful ___ it helps businesses develop.",
+   "o": [
+    "because",
+    "but",
+    "or"
+   ],
+   "why": "'Because' gives a reason."
+  },
+  {
+   "q": "What is the noun of 'discover'?",
+   "o": [
+    "discovery",
+    "discoverer",
+    "discovered"
+   ],
+   "why": "A discovery is something found."
+  },
+  {
+   "q": "Why are cigarettes harmful?",
+   "o": [
+    "they cause millions of deaths a year",
+    "they help businesses",
+    "they are needed for transport"
+   ],
+   "why": "Smoking damages health."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Noun of 'invent'",
+   "a": "invention",
+   "d": [
+    "inventive",
+    "invents",
+    "invented"
+   ]
+  },
+  {
+   "q": "Person who invents",
+   "a": "inventor",
+   "d": [
+    "invention",
+    "inventive",
+    "invent"
+   ]
+  },
+  {
+   "q": "Noun of 'discover'",
+   "a": "discovery",
+   "d": [
+    "discovers",
+    "discovered",
+    "discovering"
+   ]
+  },
+  {
+   "q": "Adjective of 'harm'",
+   "a": "harmful",
+   "d": [
+    "harms",
+    "harmed",
+    "harming"
+   ]
+  },
+  {
+   "q": "Adjective of 'help'",
+   "a": "helpful",
+   "d": [
+    "helps",
+    "helped",
+    "helping"
+   ]
+  },
+  {
+   "q": "Opposite of 'useful'",
+   "a": "useless",
+   "d": [
+    "helpful",
+    "harmful",
+    "careful"
+   ]
+  },
+  {
+   "q": "Helpful invention for transport",
+   "a": "the wheel",
+   "d": [
+    "cigarettes",
+    "guns",
+    "smoke"
+   ]
+  },
+  {
+   "q": "Harmful invention in the essay",
+   "a": "cigarettes",
+   "d": [
+    "medicine",
+    "paper",
+    "money"
+   ]
+  },
+  {
+   "q": "Word that gives a reason",
+   "a": "because",
+   "d": [
+    "but",
+    "or",
+    "although"
+   ]
+  },
+  {
+   "q": "Cars help cause global ___",
+   "a": "warming",
+   "d": [
+    "cooling",
+    "peace",
+    "trade"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list shows the writer's five helpful inventions?",
+   "o": [
+    "writing systems, paper, money, medicine, the wheel",
+    "cigarettes, cars, guns, paper, money",
+    "cars, guns, medicine, the wheel, phones",
+    "money, cigarettes, paper, guns, cars"
+   ],
+   "why": "These five help people's lives."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which are the harmful inventions in the essay?",
+   "o": [
+    "cigarettes, cars and guns",
+    "paper, money and medicine",
+    "the wheel and writing",
+    "medicine and paper"
+   ],
+   "why": "The writer explains why each is harmful."
+  },
+  {
+   "lv": "التذكر",
+   "q": "According to the essay, how many deaths a year does cigarette smoking cause (WHO)?",
+   "o": [
+    "almost 5.5 million",
+    "about 5,000",
+    "about 55",
+    "none"
+   ],
+   "why": "The essay uses WHO figures."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which ending often makes an adjective?",
+   "o": [
+    "-ful",
+    "-tion",
+    "-or",
+    "-ery"
+   ],
+   "why": "helpful, harmful, useful."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The ___ (invent) of the wheel was very ___ (help).",
+   "o": [
+    "invention; helpful",
+    "inventor; help",
+    "invent; helpfully",
+    "invented; helper"
+   ],
+   "why": "We need a noun, then an adjective."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the sentence that uses word forms correctly.",
+   "o": [
+    "The inventor's invention was very useful.",
+    "The invention's inventor was very use.",
+    "The invent was very useful.",
+    "The inventor was very invention."
+   ],
+   "why": "inventor = person; invention = thing; useful = adjective."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to argue that paper is helpful. Which reason is best?",
+   "o": [
+    "It allows us to keep and share information.",
+    "It is very heavy.",
+    "It causes traffic accidents.",
+    "It is a kind of medicine."
+   ],
+   "why": "Use a reason from the essay."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the writer put cars on the harmful list even though they are useful?",
+   "o": [
+    "They cause global warming and kill many people in traffic accidents",
+    "They are too slow",
+    "They use no fuel",
+    "They are made of paper"
+   ],
+   "why": "An invention can be useful and harmful."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is medicine on the helpful list?",
+   "o": [
+    "It helps people stay healthy and treats illness",
+    "It causes global warming",
+    "It is used in guns",
+    "It is a writing system"
+   ],
+   "why": "Medicine saves lives."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What makes an argument about an invention strong?",
+   "o": [
+    "clear reasons and an example",
+    "only one word",
+    "no reasons at all",
+    "talking about a different topic"
+   ],
+   "why": "Reasons and examples persuade listeners."
+  }
+ ]
+}

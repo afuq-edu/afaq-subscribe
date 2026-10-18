@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+  "lesson": "Review and Reference: Theme 3 learning objectives and core words test",
+  "outcomes": [
+    "Check your progress on the Theme 3 learning objectives",
+    "Spell and use the 13 core words correctly",
+    "Write correct first conditional sentences"
+  ],
+  "tf": [
+    { "s": "'Voyage' means a journey by sea.", "t": true, "why": "A voyage is a long journey, especially by sea." },
+    { "s": "'Trek' means a short, easy walk to the shop.", "t": false, "why": "A trek is a long, difficult walk." },
+    { "s": "'Revise' means to improve the content and organisation of your writing.", "t": true, "why": "Revising makes your ideas clearer and better organised." },
+    { "s": "'Proofread' and 'revise' mean exactly the same thing.", "t": false, "why": "Revise improves content; proofread checks for mistakes." },
+    { "s": "'Amenities' are useful facilities, like a pool and a gym in a hotel.", "t": true, "why": "Amenities make a place comfortable and useful." },
+    { "s": "'If you visit Oman, you should see Nizwa' is a correct first conditional.", "t": true, "why": "If + present simple, should + base verb." },
+    { "s": "'If it will rain, we might stay at home' is correct.", "t": false, "why": "Use the present simple after if: 'If it rains...'" },
+    { "s": "'Massive' and 'huge' have similar meanings.", "t": true, "why": "Both mean very large." },
+    { "s": "A 'canyon' is a tall building in a city.", "t": false, "why": "A canyon is a deep valley with steep sides." },
+    { "s": "'Destination' is the place you are travelling to.", "t": true, "why": "Your destination is the end of your journey." }
+  ],
+  "boxes": [
+    { "q": "Which word means 'journey by sea'?", "o": ["voyage", "trek", "canyon"], "why": "A voyage is a sea journey." },
+    { "q": "Which word means 'long, difficult walk'?", "o": ["trek", "voyage", "draft"], "why": "A trek is a hard walk over a long distance." },
+    { "q": "Which word means 'check writing for mistakes'?", "o": ["proofread", "revise", "trek"], "why": "Proofreading finds errors." },
+    { "q": "Which word means 'protection from danger'?", "o": ["security", "luxury", "architecture"], "why": "Security keeps people safe." },
+    { "q": "Which word means 'great comfort'?", "o": ["luxury", "security", "draft"], "why": "Luxury means great comfort and expensive things." },
+    { "q": "Which word means 'the design of buildings'?", "o": ["architecture", "amenities", "destination"], "why": "Architecture is building design." },
+    { "q": "If you ___ Oman, you should see Nizwa.", "o": ["visit", "will visit", "visited"], "why": "Use the present simple after if." },
+    { "q": "If he likes nature, he ___ love the mountains.", "o": ["will", "would", "did"], "why": "First conditional: will + base verb." },
+    { "q": "Which word means 'extremely impressive'?", "o": ["awesome", "massive", "draft"], "why": "Awesome means amazing and impressive." },
+    { "q": "Which word means 'not the final version'?", "o": ["draft", "voyage", "canyon"], "why": "A draft can still be changed." }
+  ],
+  "hunt": [
+    { "q": "Journey by sea", "a": "voyage", "d": ["trek", "canyon", "draft"] },
+    { "q": "Long, difficult walk", "a": "trek", "d": ["voyage", "luxury", "revise"] },
+    { "q": "Deep valley with steep sides", "a": "canyon", "d": ["destination", "security", "trek"] },
+    { "q": "Place you travel to", "a": "destination", "d": ["amenities", "architecture", "draft"] },
+    { "q": "Hotel pool and gym", "a": "amenities", "d": ["security", "voyage", "canyon"] },
+    { "q": "Very large", "a": "massive", "d": ["awesome", "luxury", "draft"] },
+    { "q": "Extremely impressive", "a": "awesome", "d": ["massive", "security", "revise"] },
+    { "q": "Improve content of writing", "a": "revise", "d": ["proofread", "trek", "voyage"] },
+    { "q": "If you want it, it ___ cost a lot.", "a": "will", "d": ["would", "did", "was"] },
+    { "q": "Number of core words in Theme 3", "a": "13", "d": ["10", "8", "20"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "What is the difference between 'revise' and 'proofread'?", "o": ["Revise improves content and organisation; proofread checks for mistakes", "Revise checks spelling; proofread adds new ideas", "They mean exactly the same", "Both mean handing in your essay"], "why": "They are two different stages of writing." },
+    { "lv": "التذكر", "q": "Which sentence uses 'amenities' correctly?", "o": ["The hotel has excellent amenities, including a pool and a gym.", "We walked through the amenities for five hours.", "The amenities of the canyon were deep.", "He amenities his essay carefully."], "why": "Amenities are useful facilities in a place." },
+    { "lv": "التذكر", "q": "Which word means 'go on a long, difficult walk'?", "o": ["trek", "voyage", "revise", "draft"], "why": "A trek is a long, tiring walk." },
+    { "lv": "التذكر", "q": "Which group contains only Theme 3 core words?", "o": ["canyon, luxury, voyage, security", "canyon, moose, cutlery, buffet", "voyage, congestion, biofuels, menu", "trek, network, statistics, chef"], "why": "These four are on the Theme 3 core word list." },
+    { "lv": "التطبيق", "q": "Write a first conditional with 'might'. Which is correct?", "o": ["If it rains, we might stay at home.", "If it might rain, we stay at home.", "If it rained, we might stayed at home.", "If it rains, we might to stay at home."], "why": "If + present simple, might + base verb." },
+    { "lv": "التطبيق", "q": "Complete: 'If you ___ to the mountains, you could see the canyon.'", "o": ["drive", "will drive", "drove", "driving"], "why": "The if clause uses the present simple." },
+    { "lv": "التطبيق", "q": "Choose the best word: 'Muscat is a popular tourist ___.'", "o": ["destination", "trek", "draft", "proofread"], "why": "A destination is a place people travel to." },
+    { "lv": "التحليل", "q": "Which sentence has a mistake?", "o": ["If you will enjoy hiking, you might like the trek.", "If you enjoy hiking, you might like the trek.", "If he likes nature, he will love the canyon.", "If you visit Oman, you should see Nizwa."], "why": "Do not use 'will' in the if clause." },
+    { "lv": "التحليل", "q": "Why do you rate your progress on the learning objectives before the test?", "o": ["To see which skills you are confident in and which need more practice", "To finish the lesson faster", "To avoid doing the spelling test", "To choose a new theme"], "why": "Self-assessment shows what to review." },
+    { "lv": "التحليل", "q": "Which word is the odd one out?", "o": ["proofread", "canyon", "destination", "voyage"], "why": "'Proofread' is about writing; the others are about travel." }
+  ]
+}

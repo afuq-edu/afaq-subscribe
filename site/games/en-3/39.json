@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 3: Hobbies",
+ "lesson": "Unit 3 – Graded readers",
+ "outcomes": [
+  "I can read 'Fun at the Park' and answer questions.",
+  "I can put the events of 'The Camel Race' in order.",
+  "I can say how a good friend helps."
+ ],
+ "tf": [
+  {
+   "s": "Maryam and Badriya are good friends.",
+   "t": true,
+   "why": "Yes! They are good friends."
+  },
+  {
+   "s": "Badriya has got a basketball.",
+   "t": false,
+   "why": "Maryam has the basketball. Badriya has a tennis racket."
+  },
+  {
+   "s": "Maryam's basketball goes into a big tree.",
+   "t": true,
+   "why": "Right! That is the problem in the story."
+  },
+  {
+   "s": "Badriya uses her tennis racket to get the ball.",
+   "t": true,
+   "why": "Well done! Her racket helps get the ball."
+  },
+  {
+   "s": "'Fun at the Park' happens on a Monday.",
+   "t": false,
+   "why": "The day in the story is Friday."
+  },
+  {
+   "s": "The child never watches camel racing.",
+   "t": false,
+   "why": "The child often watches camel racing with Dad."
+  },
+  {
+   "s": "In the race, Farha stops.",
+   "t": true,
+   "why": "Yes! Farha stops, and then the child helps."
+  },
+  {
+   "s": "The child rides a bike to Farha.",
+   "t": true,
+   "why": "Right! The child rides a bike to Farha."
+  },
+  {
+   "s": "Farha wins the race before she stops.",
+   "t": false,
+   "why": "First she stops, then she runs again and wins."
+  },
+  {
+   "s": "The camels in the story are white.",
+   "t": false,
+   "why": "The camels in the story are brown."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where do Maryam and Badriya go at the weekend?",
+   "o": [
+    "To the park",
+    "To the beach",
+    "To school"
+   ],
+   "why": "They always go to the park at the weekend."
+  },
+  {
+   "q": "What has Maryam got?",
+   "o": [
+    "A basketball",
+    "A tennis racket",
+    "A kite"
+   ],
+   "why": "Maryam has got a basketball."
+  },
+  {
+   "q": "Who helps Maryam?",
+   "o": [
+    "Badriya",
+    "Farha",
+    "Dad"
+   ],
+   "why": "Badriya helps her friend."
+  },
+  {
+   "q": "Who does the child often watch camel racing with?",
+   "o": [
+    "Dad",
+    "Mum",
+    "Badriya"
+   ],
+   "why": "The child watches camel racing with Dad."
+  },
+  {
+   "q": "Who wins the camel race?",
+   "o": [
+    "Farha",
+    "Maryam",
+    "The child"
+   ],
+   "why": "Farha the camel wins the race."
+  },
+  {
+   "q": "What is the problem in 'Fun at the Park'?",
+   "o": [
+    "The ball is in a tree.",
+    "The park is closed.",
+    "Badriya is sad."
+   ],
+   "why": "The basketball is stuck in a big tree."
+  },
+  {
+   "q": "What happens first in 'The Camel Race'?",
+   "o": [
+    "The race starts.",
+    "Farha wins.",
+    "Farha stops."
+   ],
+   "why": "First the race starts."
+  },
+  {
+   "q": "Which word is good for Badriya?",
+   "o": [
+    "helpful",
+    "lazy",
+    "angry"
+   ],
+   "why": "Badriya is helpful. She is a good friend."
+  },
+  {
+   "q": "Why does Farha run again?",
+   "o": [
+    "She sees the peach.",
+    "She is tired.",
+    "The race stops."
+   ],
+   "why": "Farha runs after the peach."
+  },
+  {
+   "q": "Camel racing is a sport in …",
+   "o": [
+    "Oman",
+    "the park",
+    "the classroom"
+   ],
+   "why": "Camel racing is part of Omani culture."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Maryam's ball",
+   "a": "basketball",
+   "d": [
+    "football",
+    "tennis ball",
+    "volleyball"
+   ]
+  },
+  {
+   "q": "Badriya has got a tennis ___.",
+   "a": "racket",
+   "d": [
+    "bike",
+    "kite",
+    "book"
+   ]
+  },
+  {
+   "q": "Where is the basketball?",
+   "a": "in a tree",
+   "d": [
+    "in a box",
+    "on a bike",
+    "in the sea"
+   ]
+  },
+  {
+   "q": "When do they go to the park?",
+   "a": "at the weekend",
+   "d": [
+    "on Mondays",
+    "at night",
+    "on Tuesdays"
+   ]
+  },
+  {
+   "q": "The camel's name",
+   "a": "Farha",
+   "d": [
+    "Maryam",
+    "Badriya",
+    "Polly"
+   ]
+  },
+  {
+   "q": "Camel racing day",
+   "a": "Saturday",
+   "d": [
+    "Friday",
+    "Monday",
+    "Sunday"
+   ]
+  },
+  {
+   "q": "Colour of the camels",
+   "a": "brown",
+   "d": [
+    "green",
+    "blue",
+    "pink"
+   ]
+  },
+  {
+   "q": "Farha runs after a ___.",
+   "a": "peach",
+   "d": [
+    "ball",
+    "bike",
+    "kite"
+   ]
+  },
+  {
+   "q": "They ___ go to the park.",
+   "a": "always",
+   "d": [
+    "never",
+    "don't",
+    "no"
+   ]
+  },
+  {
+   "q": "Farha wins the ___.",
+   "a": "race",
+   "d": [
+    "ball",
+    "park",
+    "peach"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What day is it in 'Fun at the Park'?",
+   "o": [
+    "Friday",
+    "Saturday",
+    "Monday",
+    "Wednesday"
+   ],
+   "why": "The story happens on Friday."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What has Badriya got?",
+   "o": [
+    "A tennis racket and a tennis ball",
+    "A basketball",
+    "A bike",
+    "A peach"
+   ],
+   "why": "Badriya has got a tennis racket and a tennis ball."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How does the child go to Farha?",
+   "o": [
+    "By bike",
+    "By bus",
+    "By car",
+    "On a camel"
+   ],
+   "why": "The child rides a bike to Farha."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What day is camel racing day in the story?",
+   "o": [
+    "Saturday",
+    "Friday",
+    "Sunday",
+    "Tuesday"
+   ],
+   "why": "Camel racing day is Saturday."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put in order: She stops. / She wins. / The race starts. / The child takes a peach.",
+   "o": [
+    "The race starts. She stops. The child takes a peach. She wins.",
+    "She wins. She stops. The race starts. The child takes a peach.",
+    "The child takes a peach. The race starts. She wins. She stops.",
+    "She stops. The race starts. She wins. The child takes a peach."
+   ],
+   "why": "Great ordering! The peach helps Farha run again and win."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Does your camel run fast? Yes, she ___!",
+   "o": [
+    "does",
+    "do",
+    "is",
+    "runs"
+   ],
+   "why": "We answer: Yes, she does!"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence matches 'Fun at the Park'?",
+   "o": [
+    "Maryam has got a basketball.",
+    "Maryam has got a camel.",
+    "Badriya has got a peach.",
+    "Badriya has got a basketball."
+   ],
+   "why": "Maryam has got a basketball."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How does Badriya solve the problem?",
+   "o": [
+    "She uses her tennis racket to get the ball.",
+    "She buys a new ball.",
+    "She goes home.",
+    "She climbs on a camel."
+   ],
+   "why": "Her racket helps get the ball out of the tree."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Badriya a good friend?",
+   "o": [
+    "She helps Maryam get her basketball.",
+    "She takes Maryam's ball.",
+    "She wins a race.",
+    "She goes to school."
+   ],
+   "why": "Good friends help each other."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the child take a peach in 'The Camel Race'?",
+   "o": [
+    "To make Farha run again",
+    "To eat it at home",
+    "To give it to Dad",
+    "To play tennis"
+   ],
+   "why": "Farha runs after the peach and wins the race."
+  }
+ ]
+}

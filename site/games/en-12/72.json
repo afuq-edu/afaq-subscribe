@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+ "lesson": "Review and Reference: Theme 4 learning objectives and core words test",
+ "outcomes": [
+  "Check your progress on the Theme 4 learning objectives",
+  "Spell and use the Theme 4 core words correctly",
+  "Use the present perfect and present perfect continuous correctly"
+ ],
+ "tf": [
+  {
+   "s": "'Freight' means goods carried by trains or lorries.",
+   "t": true,
+   "why": "Yes, freight is goods that are transported."
+  },
+  {
+   "s": "'Emit' means to send out something, such as gas.",
+   "t": true,
+   "why": "Correct, cars emit gases."
+  },
+  {
+   "s": "'Conventional' means new and unusual.",
+   "t": false,
+   "why": "Conventional means usual or traditional."
+  },
+  {
+   "s": "'Inedible' means it cannot be eaten.",
+   "t": true,
+   "why": "Right, in- makes the opposite of edible."
+  },
+  {
+   "s": "A 'campaign' is a planned set of activities to reach a goal.",
+   "t": true,
+   "why": "Yes, like a road safety campaign."
+  },
+  {
+   "s": "'I've been calling you all morning' uses the present perfect continuous.",
+   "t": true,
+   "why": "Correct: have + been + -ing."
+  },
+  {
+   "s": "'I've known him since 2015' is wrong because we must say 'I know him since 2015'.",
+   "t": false,
+   "why": "With since we use the present perfect: I've known him."
+  },
+  {
+   "s": "'Currently' means a long time ago.",
+   "t": false,
+   "why": "Currently means now, at the present time."
+  },
+  {
+   "s": "A 'traffic jam' is a long line of vehicles that cannot move or move very slowly.",
+   "t": true,
+   "why": "Yes, traffic jams happen on busy roads."
+  },
+  {
+   "s": "A 'flyer' is a pilot's uniform.",
+   "t": false,
+   "why": "A flyer is a small printed paper that gives information."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word means 'goods carried by trains or lorries'?",
+   "o": [
+    "freight",
+    "flyer",
+    "pioneer"
+   ],
+   "why": "Freight is transported goods."
+  },
+  {
+   "q": "Which word means 'send out (gas)'?",
+   "o": [
+    "emit",
+    "benefit",
+    "campaign"
+   ],
+   "why": "Engines emit gases."
+  },
+  {
+   "q": "Which word means 'cannot be eaten'?",
+   "o": [
+    "inedible",
+    "conventional",
+    "currently"
+   ],
+   "why": "Inedible is the opposite of edible."
+  },
+  {
+   "q": "Which word means 'usual or traditional'?",
+   "o": [
+    "conventional",
+    "inedible",
+    "freight"
+   ],
+   "why": "Conventional fuel is the usual fuel."
+  },
+  {
+   "q": "Which word means 'at the present time'?",
+   "o": [
+    "currently",
+    "since",
+    "already"
+   ],
+   "why": "Currently means now."
+  },
+  {
+   "q": "Complete: I've ___ (call) you all morning.",
+   "o": [
+    "been calling",
+    "calling",
+    "called been"
+   ],
+   "why": "Present perfect continuous: have been + -ing."
+  },
+  {
+   "q": "Which word goes with a point in time?",
+   "o": [
+    "since",
+    "for",
+    "during"
+   ],
+   "why": "We use since with a starting point, like since 2015."
+  },
+  {
+   "q": "Which word means 'an advantage or good result'?",
+   "o": [
+    "benefit",
+    "traffic jam",
+    "truck"
+   ],
+   "why": "A benefit is something good you get."
+  },
+  {
+   "q": "Which word is another name for a lorry?",
+   "o": [
+    "truck",
+    "flyer",
+    "track"
+   ],
+   "why": "A truck carries goods by road."
+  },
+  {
+   "q": "Where does a train run?",
+   "o": [
+    "on a railway track",
+    "on a runway",
+    "in a traffic jam"
+   ],
+   "why": "Trains run on railway tracks."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Goods carried by trains",
+   "a": "freight",
+   "d": [
+    "flyer",
+    "pioneer",
+    "campaign"
+   ]
+  },
+  {
+   "q": "Send out gas",
+   "a": "emit",
+   "d": [
+    "benefit",
+    "track",
+    "jam"
+   ]
+  },
+  {
+   "q": "Cannot be eaten",
+   "a": "inedible",
+   "d": [
+    "conventional",
+    "edible",
+    "currently"
+   ]
+  },
+  {
+   "q": "Usual or traditional",
+   "a": "conventional",
+   "d": [
+    "inedible",
+    "currently",
+    "pioneer"
+   ]
+  },
+  {
+   "q": "At the present time",
+   "a": "currently",
+   "d": [
+    "since",
+    "already",
+    "before"
+   ]
+  },
+  {
+   "q": "A small printed paper",
+   "a": "flyer",
+   "d": [
+    "truck",
+    "freight",
+    "track"
+   ]
+  },
+  {
+   "q": "Long line of stuck cars",
+   "a": "traffic jam",
+   "d": [
+    "railway track",
+    "campaign",
+    "benefit"
+   ]
+  },
+  {
+   "q": "A large road vehicle for goods",
+   "a": "truck",
+   "d": [
+    "flyer",
+    "pioneer",
+    "track"
+   ]
+  },
+  {
+   "q": "An advantage",
+   "a": "benefit",
+   "d": [
+    "campaign",
+    "freight",
+    "jam"
+   ]
+  },
+  {
+   "q": "I've known him ... 2015",
+   "a": "since",
+   "d": [
+    "for",
+    "during",
+    "ago"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is the correct spelling?",
+   "o": [
+    "freight",
+    "frieght",
+    "fraight",
+    "freigth"
+   ],
+   "why": "Remember the -eigh- pattern, like eight."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'pioneer' mean?",
+   "o": [
+    "a person who is among the first to do something",
+    "a type of fuel",
+    "a traffic sign",
+    "a railway ticket"
+   ],
+   "why": "A pioneer leads the way."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence uses 'campaign' correctly?",
+   "o": [
+    "The police launched a road safety campaign.",
+    "I ate a campaign for lunch.",
+    "The campaign is parked outside.",
+    "She campaign the train."
+   ],
+   "why": "A campaign is a planned set of activities."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is spelled correctly?",
+   "o": [
+    "conventional",
+    "convensional",
+    "conventionel",
+    "conventinal"
+   ],
+   "why": "Convention + -al gives conventional."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: He has ___ (train) for the race for three months.",
+   "o": [
+    "been training",
+    "be training",
+    "trained been",
+    "been train"
+   ],
+   "why": "have/has been + -ing shows an action continuing to now."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I've ___ him since 2015.",
+   "o": [
+    "known",
+    "know",
+    "knowing",
+    "knew"
+   ],
+   "why": "Present perfect uses the past participle: known."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is correct?",
+   "o": [
+    "My car has been getting older, so I've got a new one.",
+    "My car have been get older.",
+    "My car been getting older.",
+    "My car is been getting older."
+   ],
+   "why": "has been + -ing is the correct form."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say 'I've been mending my bike all day' and not 'I mend my bike all day'?",
+   "o": [
+    "the action started in the past and is still continuing",
+    "the action is finished long ago",
+    "it is a future plan",
+    "it happens every day as a habit"
+   ],
+   "why": "The present perfect continuous links past and now."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Petrol is called a 'conventional' fuel. What does this suggest?",
+   "o": [
+    "it is the usual fuel most people use",
+    "it is a new type of fuel",
+    "it cannot be used",
+    "it is made from food"
+   ],
+   "why": "Conventional means usual or traditional."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair of words has opposite meanings?",
+   "o": [
+    "edible and inedible",
+    "freight and goods",
+    "truck and lorry",
+    "currently and now"
+   ],
+   "why": "The prefix in- gives the opposite meaning."
+  }
+ ]
+}

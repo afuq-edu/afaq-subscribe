@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 3: Our classroom",
+ "lesson": "Lesson 7: Get ready for… (Pre A1 Starters) + Units 1–3 sounds review",
+ "outcomes": [
+  "I can talk about a picture: Where's the bag? It's on the floor.",
+  "I can listen and colour school things.",
+  "I can hear first sounds and write short words."
+ ],
+ "tf": [
+  {
+   "s": "We can answer Where's the bag? with It's on the floor.",
+   "t": true,
+   "why": "Yes! It tells where the bag is."
+  },
+  {
+   "s": "We ask Who's this? about a boy or a girl.",
+   "t": true,
+   "why": "Great! Who's this? is for people."
+  },
+  {
+   "s": "Colour the bag red means make the bag red.",
+   "t": true,
+   "why": "Yes! Use your red crayon."
+  },
+  {
+   "s": "Fan, fish and nut all start with f.",
+   "t": false,
+   "why": "Nut starts with n. Fan and fish start with f."
+  },
+  {
+   "s": "Olive and octopus both start with o.",
+   "t": true,
+   "why": "Well done! Both start with o."
+  },
+  {
+   "s": "Teddy starts with the letter t.",
+   "t": true,
+   "why": "Yes! T-t-teddy."
+  },
+  {
+   "s": "On starts with the letter n.",
+   "t": false,
+   "why": "On starts with o."
+  },
+  {
+   "s": "What colour is it? asks where a thing is.",
+   "t": false,
+   "why": "What colour is it? asks about the colour."
+  },
+  {
+   "s": "b – a – t makes the word bat.",
+   "t": true,
+   "why": "Right! b-a-t is bat."
+  },
+  {
+   "s": "A pencil case is a person.",
+   "t": false,
+   "why": "A pencil case is a thing. We keep pencils in it."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where's the bag? (down on the floor)",
+   "o": [
+    "It's on the floor.",
+    "It's a bag.",
+    "It's red."
+   ],
+   "why": "It's on the floor tells where."
+  },
+  {
+   "q": "Odd one out: fan, fish, nut",
+   "o": [
+    "nut",
+    "fan",
+    "fish"
+   ],
+   "why": "Nut starts with n. The others start with f."
+  },
+  {
+   "q": "What's the first letter of on?",
+   "o": [
+    "o",
+    "n",
+    "f"
+   ],
+   "why": "On starts with o."
+  },
+  {
+   "q": "Which question asks about a colour?",
+   "o": [
+    "What colour is it?",
+    "Where's the bag?",
+    "Who's this?"
+   ],
+   "why": "What colour is it? asks for a colour."
+  },
+  {
+   "q": "Write: f – i – g",
+   "o": [
+    "fig",
+    "fog",
+    "big"
+   ],
+   "why": "f-i-g makes fig."
+  },
+  {
+   "q": "Which word starts with t?",
+   "o": [
+    "teddy",
+    "olive",
+    "fan"
+   ],
+   "why": "Teddy starts with t."
+  },
+  {
+   "q": "Is it a girl or a boy? (a girl)",
+   "o": [
+    "A girl.",
+    "A boy.",
+    "A book."
+   ],
+   "why": "She is a girl."
+  },
+  {
+   "q": "What's this? (a pen)",
+   "o": [
+    "It's a pen.",
+    "It's on the floor.",
+    "It's red."
+   ],
+   "why": "It's a pen answers What's this?"
+  },
+  {
+   "q": "Write: sh – i – p",
+   "o": [
+    "ship",
+    "shop",
+    "fish"
+   ],
+   "why": "sh-i-p makes ship."
+  },
+  {
+   "q": "Why are olive and octopus the same?",
+   "o": [
+    "Both start with o.",
+    "Both start with f.",
+    "Both are toys."
+   ],
+   "why": "Olive and octopus both start with o."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Odd one out: fan, fish, nut",
+   "a": "nut",
+   "d": [
+    "fan",
+    "fish",
+    "fig"
+   ]
+  },
+  {
+   "q": "First letter of teddy",
+   "a": "t",
+   "d": [
+    "d",
+    "o",
+    "f"
+   ]
+  },
+  {
+   "q": "First letter of olive",
+   "a": "o",
+   "d": [
+    "l",
+    "f",
+    "n"
+   ]
+  },
+  {
+   "q": "Write: h – o – p",
+   "a": "hop",
+   "d": [
+    "mop",
+    "hip",
+    "shop"
+   ]
+  },
+  {
+   "q": "Write: b – a – t",
+   "a": "bat",
+   "d": [
+    "big",
+    "bin",
+    "fat"
+   ]
+  },
+  {
+   "q": "Write: sh – i – p",
+   "a": "ship",
+   "d": [
+    "shop",
+    "fish",
+    "chip"
+   ]
+  },
+  {
+   "q": "Where's the bag?",
+   "a": "On the floor.",
+   "d": [
+    "It's red.",
+    "A bag.",
+    "Who's this?"
+   ]
+  },
+  {
+   "q": "Ask about a colour",
+   "a": "What colour is it?",
+   "d": [
+    "Where's the bag?",
+    "Who's this?",
+    "What's this?"
+   ]
+  },
+  {
+   "q": "Ask about a person",
+   "a": "Who's this?",
+   "d": [
+    "What's this?",
+    "Where's the bag?",
+    "What colour?"
+   ]
+  },
+  {
+   "q": "Ask where a thing is",
+   "a": "Where's the pen?",
+   "d": [
+    "What's this?",
+    "Who's this?",
+    "What colour?"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word is a school thing?",
+   "o": [
+    "pencil case",
+    "girl",
+    "octopus",
+    "nut"
+   ],
+   "why": "We keep pencils in a pencil case."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question asks where a thing is?",
+   "o": [
+    "Where's the bag?",
+    "What's this?",
+    "Who's this?",
+    "What colour is it?"
+   ],
+   "why": "Where asks about the place."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word starts with f?",
+   "o": [
+    "fish",
+    "nut",
+    "teddy",
+    "on"
+   ],
+   "why": "Fish starts with f."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What letter does octopus start with?",
+   "o": [
+    "o",
+    "c",
+    "t",
+    "p"
+   ],
+   "why": "Octopus starts with o."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The pencil case is below the chair. Where's the pencil case?",
+   "o": [
+    "It's under the chair.",
+    "It's on the chair.",
+    "It's in the chair.",
+    "It's a chair."
+   ],
+   "why": "Below means under."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The teacher says: Colour the ruler orange. What do you do?",
+   "o": [
+    "Colour the ruler orange.",
+    "Colour the bag orange.",
+    "Colour the ruler red.",
+    "Draw a ruler on the floor."
+   ],
+   "why": "Listen for the thing and the colour."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner points to a door in the picture. What's this?",
+   "o": [
+    "It's a door.",
+    "It's a girl.",
+    "It's under the desk.",
+    "It's red."
+   ],
+   "why": "It's a door answers What's this?"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Odd one out: olive, octopus, fish, on",
+   "o": [
+    "fish",
+    "olive",
+    "octopus",
+    "on"
+   ],
+   "why": "Fish starts with f. Olive and octopus start with o."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence tells about the picture?",
+   "o": [
+    "The book is on the desk.",
+    "What's this?",
+    "Who's this?",
+    "Where's the bag?"
+   ],
+   "why": "A sentence tells. The others are questions."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which answer goes with What colour is it?",
+   "o": [
+    "It's blue.",
+    "It's a ruler.",
+    "It's on the desk.",
+    "It's my teacher."
+   ],
+   "why": "What colour is it? needs a colour."
+  }
+ ]
+}

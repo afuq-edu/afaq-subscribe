@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "4",
+ "lesson": "Unit 4: Civilisation – Writing: A Biography",
+ "outcomes": [
+  "Know what a biography is and how it is organised.",
+  "Use biography phrases like 'was born' and 'at a young age'.",
+  "Plan a biography of a famous Omani person."
+ ],
+ "tf": [
+  {
+   "s": "A biography is a written account of someone's life.",
+   "t": true,
+   "why": "Yes, it tells the story of a real person's life."
+  },
+  {
+   "s": "A biography is usually written in chronological order.",
+   "t": true,
+   "why": "Correct, events are told in the order they happened."
+  },
+  {
+   "s": "'Chronological order' means from the newest event to the oldest.",
+   "t": false,
+   "why": "It means in the order the events happened, from first to last."
+  },
+  {
+   "s": "'He was born in Muscat.' uses the past passive.",
+   "t": true,
+   "why": "Right, was + born."
+  },
+  {
+   "s": "'She was knowing for her inventions.' is correct.",
+   "t": false,
+   "why": "The correct phrase is 'was known for'."
+  },
+  {
+   "s": "'At a young age' is a time phrase.",
+   "t": true,
+   "why": "Well done, it tells us when something happened."
+  },
+  {
+   "s": "'His greatest achievement was…' introduces the most important thing a person did.",
+   "t": true,
+   "why": "Yes, it shows their biggest success."
+  },
+  {
+   "s": "Research is not needed before writing a biography.",
+   "t": false,
+   "why": "Research makes sure the information is accurate."
+  },
+  {
+   "s": "A biography plan can include birth, childhood, achievements and importance.",
+   "t": true,
+   "why": "Correct, these are the main parts."
+  },
+  {
+   "s": "'In a young age, he loved reading.' is correct.",
+   "t": false,
+   "why": "We say 'At a young age'."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "A written account of someone's life is…",
+   "o": [
+    "a biography",
+    "a leaflet",
+    "a list of recipes"
+   ],
+   "why": "A biography is about a real person's life."
+  },
+  {
+   "q": "He ___ born in Muscat in 1980.",
+   "o": [
+    "was",
+    "is",
+    "were"
+   ],
+   "why": "Past passive: 'was born'."
+  },
+  {
+   "q": "Chronological order means…",
+   "o": [
+    "the order events happened",
+    "alphabetical order",
+    "random order"
+   ],
+   "why": "First event first, last event last."
+  },
+  {
+   "q": "She was ___ for her inventions.",
+   "o": [
+    "known",
+    "knowing",
+    "know"
+   ],
+   "why": "'Was known for' is the correct phrase."
+  },
+  {
+   "q": "___ a young age, he loved reading.",
+   "o": [
+    "At",
+    "In",
+    "On"
+   ],
+   "why": "We say 'at a young age'."
+  },
+  {
+   "q": "His greatest ___ was…",
+   "o": [
+    "achievement",
+    "achieve",
+    "achieved"
+   ],
+   "why": "We need a noun here."
+  },
+  {
+   "q": "Which phrase shows time?",
+   "o": [
+    "One year later",
+    "was known for",
+    "his greatest achievement"
+   ],
+   "why": "'One year later' tells us when."
+  },
+  {
+   "q": "Why research before writing?",
+   "o": [
+    "to make sure the information is accurate",
+    "to make it longer",
+    "to skip the plan"
+   ],
+   "why": "Facts must be correct."
+  },
+  {
+   "q": "He will be ___ for his kindness.",
+   "o": [
+    "remembered",
+    "remember",
+    "remembering"
+   ],
+   "why": "'Will be remembered for' is the phrase."
+  },
+  {
+   "q": "A businessperson who starts companies is…",
+   "o": [
+    "an entrepreneur",
+    "an ambassador",
+    "an archaeologist"
+   ],
+   "why": "Entrepreneurs start businesses."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Story of a person's life",
+   "a": "biography",
+   "d": [
+    "leaflet",
+    "recipe",
+    "email"
+   ]
+  },
+  {
+   "q": "In the order things happened",
+   "a": "chronological",
+   "d": [
+    "alphabetical",
+    "random",
+    "backwards"
+   ]
+  },
+  {
+   "q": "He ___ born in Muscat",
+   "a": "was",
+   "d": [
+    "is",
+    "were",
+    "be"
+   ]
+  },
+  {
+   "q": "She was ___ for her work",
+   "a": "known",
+   "d": [
+    "knowing",
+    "know",
+    "knew"
+   ]
+  },
+  {
+   "q": "___ a young age",
+   "a": "At",
+   "d": [
+    "In",
+    "On",
+    "By"
+   ]
+  },
+  {
+   "q": "Time phrase",
+   "a": "one year later",
+   "d": [
+    "was known for",
+    "famous because",
+    "greatest achievement"
+   ]
+  },
+  {
+   "q": "Biggest success",
+   "a": "achievement",
+   "d": [
+    "childhood",
+    "birthplace",
+    "research"
+   ]
+  },
+  {
+   "q": "Starts a business",
+   "a": "entrepreneur",
+   "d": [
+    "ambassador",
+    "archaeologist",
+    "citizen"
+   ]
+  },
+  {
+   "q": "Represents a country abroad",
+   "a": "ambassador",
+   "d": [
+    "entrepreneur",
+    "archaeologist",
+    "farmer"
+   ]
+  },
+  {
+   "q": "Will be ___ for",
+   "a": "remembered",
+   "d": [
+    "remember",
+    "remembering",
+    "remembers"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is a biography?",
+   "o": [
+    "a written account of someone's life",
+    "a description of a place",
+    "a formal request email",
+    "a list of facts about energy"
+   ],
+   "why": "Biographies tell a real person's life story."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How is a biography usually organised?",
+   "o": [
+    "in chronological order",
+    "in alphabetical order",
+    "from the end to the start",
+    "in no special order"
+   ],
+   "why": "Events follow the order they happened."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase introduces what a person will be remembered for?",
+   "o": [
+    "will be remembered for…",
+    "at a young age",
+    "one year later",
+    "was born in…"
+   ],
+   "why": "This phrase sums up their importance."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should a biography plan include?",
+   "o": [
+    "birth, childhood, achievements and importance",
+    "only the person's favourite food",
+    "a greeting and a closing",
+    "the weather on the day"
+   ],
+   "why": "These are the main stages of a life."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: She ___ raised in Sohar.",
+   "o": [
+    "was",
+    "is",
+    "were",
+    "has"
+   ],
+   "why": "Past passive: 'was raised'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "One year later, he moved to Muscat.",
+    "One year later, he move to Muscat.",
+    "One year later he moving to Muscat.",
+    "One later year, he moved to Muscat."
+   ],
+   "why": "Use the past simple 'moved' after the time phrase."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to say the most important thing a person did. Which phrase do you use?",
+   "o": [
+    "His greatest achievement was…",
+    "At a young age…",
+    "He was born in…",
+    "One year later…"
+   ],
+   "why": "'Greatest achievement' shows their biggest success."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is chronological order useful in a biography?",
+   "o": [
+    "It makes the events easy to follow.",
+    "It hides the important events.",
+    "It makes the text shorter.",
+    "It removes the dates."
+   ],
+   "why": "Readers follow the life step by step."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is research needed before writing a biography?",
+   "o": [
+    "To make sure the information is accurate.",
+    "To copy someone else's text.",
+    "To avoid using dates.",
+    "To make the biography fiction."
+   ],
+   "why": "A biography must contain true facts."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which set of sentences is in the correct chronological order?",
+   "o": [
+    "He was born in 1980. At a young age, he loved reading. Later, he became an entrepreneur.",
+    "He became an entrepreneur. He was born in 1980. At a young age, he loved reading.",
+    "At a young age, he loved reading. He became an entrepreneur. He was born in 1980.",
+    "He loved reading. He became an entrepreneur. He was born after that."
+   ],
+   "why": "Birth, then childhood, then adult achievements."
+  }
+ ]
+}

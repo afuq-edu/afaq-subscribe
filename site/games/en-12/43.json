@@ -1,0 +1,58 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Unit 1: A Warm Welcome (Reading)",
+  "lesson": "Oman quiz and the dolphin centre narrative",
+  "outcomes": [
+    "Ask and answer quiz questions about Oman and give scores",
+    "Read a narrative text and answer short-answer questions"
+  ],
+  "tf": [
+    { "s": "Oman's coastline is over 3000 kilometres long.", "t": true, "why": "Yes, Oman has a very long coastline of over 3000 km." },
+    { "s": "Oman shares borders with Saudi Arabia, Yemen and the UAE.", "t": true, "why": "Well done: these are Oman's three neighbouring countries." },
+    { "s": "Bears are one of the wild animals found in Oman.", "t": false, "why": "Bears are not found in Oman; this was the reasoning question in the quiz." },
+    { "s": "Bahla Fort became a UNESCO heritage site in 1987.", "t": true, "why": "Correct: Bahla Fort was listed by UNESCO in 1987." },
+    { "s": "Masirah Island is about 150 kilometres from the mainland.", "t": false, "why": "Masirah is only 15 kilometres from the mainland." },
+    { "s": "Oman borders four countries.", "t": false, "why": "Oman borders three countries: Saudi Arabia, Yemen and the UAE." },
+    { "s": "The text about the dolphin centre is a narrative essay.", "t": true, "why": "Yes, it tells a story of an experience, so it is a narrative." },
+    { "s": "In a quiz show, the host is the person who answers the questions.", "t": false, "why": "The host asks the questions; the contestant answers them." },
+    { "s": "A contestant is a person who takes part in a competition or quiz.", "t": true, "why": "Right: contestants compete to win the quiz." },
+    { "s": "A narrative essay mainly gives facts and figures without telling a story.", "t": false, "why": "A narrative essay tells a story about events or an experience." }
+  ],
+  "boxes": [
+    { "q": "Who asks the questions in a quiz show?", "o": ["The host", "The contestant", "The audience"], "why": "The host runs the show and asks the questions." },
+    { "q": "How many countries border Oman?", "o": ["Three", "Two", "Five"], "why": "Saudi Arabia, Yemen and the UAE border Oman." },
+    { "q": "Which fort is a UNESCO heritage site?", "o": ["Bahla Fort", "Nizwa Souq", "Masirah Fort"], "why": "Bahla Fort became a UNESCO site in 1987." },
+    { "q": "How far is Masirah Island from the mainland?", "o": ["15 km", "50 km", "150 km"], "why": "Masirah Island is 15 kilometres from the mainland." },
+    { "q": "What type of text tells the story of a visit to a dolphin centre?", "o": ["A narrative essay", "A shopping list", "A dictionary entry"], "why": "Stories of personal experiences are narrative essays." },
+    { "q": "What does a dolphin eat, according to the reading?", "o": ["Only fish", "Only plants", "Bread and fish"], "why": "The text says the dolphin eats only fish." },
+    { "q": "What is a quiz?", "o": ["A game of questions", "A long journey", "A type of essay"], "why": "A quiz is a test or game with questions to answer." },
+    { "q": "What is the name of the swim in the dolphin text?", "o": ["The Royal Swim", "The Night Swim", "The Fast Swim"], "why": "The text mentions the Royal Swim with the dolphins." },
+    { "q": "In the pair quiz, what is each score out of?", "o": ["10", "50", "100"], "why": "Partners scored each other out of 10." },
+    { "q": "In which year did Bahla Fort join the UNESCO list?", "o": ["1987", "1970", "2007"], "why": "Bahla Fort was listed in 1987." }
+  ],
+  "hunt": [
+    { "q": "Oman's coastline is over ... km.", "a": "3000", "d": ["300", "1000", "30"] },
+    { "q": "Masirah is ... km from the mainland.", "a": "15", "d": ["5", "50", "150"] },
+    { "q": "Bahla Fort: UNESCO site since ...", "a": "1987", "d": ["1977", "1997", "2007"] },
+    { "q": "Animal NOT found in Oman", "a": "Bears", "d": ["Leopards", "Wolves", "Foxes"] },
+    { "q": "The person who asks quiz questions", "a": "host", "d": ["contestant", "winner", "guest"] },
+    { "q": "A person who takes part in a quiz", "a": "contestant", "d": ["host", "author", "guide"] },
+    { "q": "Type of the dolphin-centre text", "a": "narrative essay", "d": ["news report", "recipe", "poem"] },
+    { "q": "The dolphin eats only ...", "a": "fish", "d": ["plants", "bread", "fruit"] },
+    { "q": "A country that borders Oman", "a": "Yemen", "d": ["Egypt", "Jordan", "Iraq"] },
+    { "q": "The famous fort in Bahla is a ... site", "a": "UNESCO", "d": ["NASA", "FIFA", "WHO"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Which countries border Oman?", "o": ["Saudi Arabia, Yemen and the UAE", "Iran, Iraq and Kuwait", "Egypt, Jordan and Qatar", "India, Pakistan and Iran"], "why": "Oman's land neighbours are Saudi Arabia, Yemen and the UAE." },
+    { "lv": "التذكر", "q": "How long is Oman's coastline?", "o": ["Over 3000 kilometres", "About 300 kilometres", "Under 1000 kilometres", "Exactly 15 kilometres"], "why": "Oman has a long coastline of over 3000 km." },
+    { "lv": "التذكر", "q": "Which place became a UNESCO heritage site in 1987?", "o": ["Bahla Fort", "Masirah Island", "The dolphin centre", "Muttrah Corniche"], "why": "Bahla Fort was added to the UNESCO list in 1987." },
+    { "lv": "التذكر", "q": "What is a 'host' in a quiz show?", "o": ["The person who presents the show and asks questions", "The person who answers the questions", "The prize for the winner", "The place where the show is filmed"], "why": "The host presents the quiz and asks the contestants questions." },
+    { "lv": "التطبيق", "q": "Your partner answers 7 of the 10 quiz questions correctly. What score do you give?", "o": ["7 out of 10", "3 out of 10", "10 out of 10", "7 out of 100"], "why": "Each correct answer is one point, so 7 correct answers give 7 out of 10." },
+    { "lv": "التطبيق", "q": "A text begins: 'Last summer my family and I visited a dolphin centre...' What kind of text is it?", "o": ["A narrative essay", "A formal letter of complaint", "A set of instructions", "A dictionary definition"], "why": "It tells a story of past events, which is a narrative." },
+    { "lv": "التطبيق", "q": "Which question would a quiz host ask about Oman's islands?", "o": ["How far is Masirah Island from the mainland?", "What is your favourite colour?", "Can I sit here, please?", "Where did you buy that bag?"], "why": "A quiz asks fact questions, like the distance of Masirah from the mainland." },
+    { "lv": "التحليل", "q": "Leopards, wolves, bears: which animal is NOT found in Oman, and why is it the odd one out?", "o": ["Bears, because the other two live in Oman", "Leopards, because they live only in Africa", "Wolves, because they need snow", "None, all three live in Oman"], "why": "Leopards and wolves are found in Oman, but bears are not." },
+    { "lv": "التحليل", "q": "Why is the dolphin-centre text called a narrative essay?", "o": ["It tells a story of an experience in order", "It lists facts without events", "It argues for and against an idea", "It gives steps to follow"], "why": "Narratives describe events and experiences as a story." },
+    { "lv": "التحليل", "q": "What is the main difference between a host and a contestant?", "o": ["The host asks the questions; the contestant answers them", "The host answers; the contestant asks", "Both of them only watch the show", "The contestant writes the questions for the host"], "why": "Their roles are opposite: one asks, the other answers." }
+  ]
+}

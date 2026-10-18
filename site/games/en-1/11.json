@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الأول",
+  "unit": "Unit 2: My school bag",
+  "lesson": "Lesson 3: Story – I haven't got my bag! + Sound h",
+  "outcomes": [
+    "I can say book, crayon, pencil and pencil case.",
+    "I can say I've got … and I haven't got …, and I look after my things.",
+    "I can say the sound /h/ and read hat and hit."
+  ],
+  "tf": [
+    {"s": "In the story, Fatma hasn't got her school bag at school.", "t": true, "why": "Yes! That is the story title: I haven't got my bag!"},
+    {"s": "In the story, Meg has got the bag.", "t": true, "why": "Yes! Meg the cat has got it."},
+    {"s": "We should leave our things everywhere.", "t": false, "why": "We look after our things."},
+    {"s": "At the end, Fatma says: I look after my things!", "t": true, "why": "Great! That is the story value."},
+    {"s": "A crayon is a family word.", "t": false, "why": "A crayon is a school thing."},
+    {"s": "We put pencils in a pencil case.", "t": true, "why": "Yes! A pencil case keeps pencils safe."},
+    {"s": "House starts with the sound /h/.", "t": true, "why": "Yes! h, h, house."},
+    {"s": "Hen starts with the letter m.", "t": false, "why": "Hen starts with h."},
+    {"s": "h – i – t makes hat.", "t": false, "why": "h-i-t makes hit."},
+    {"s": "Horse starts with /t/.", "t": false, "why": "Horse starts with /h/."}
+  ],
+  "boxes": [
+    {"q": "What is the story called?", "o": ["I haven't got my bag!", "This is my family", "Hello, Meg!"], "why": "The story is I haven't got my bag!"},
+    {"q": "Who has got Fatma's bag?", "o": ["Meg", "Lily", "Mum"], "why": "Meg the cat has got the bag."},
+    {"q": "We colour with a …", "o": ["crayon", "ruler", "bag"], "why": "We colour with crayons."},
+    {"q": "We read a …", "o": ["book", "pencil", "crayon"], "why": "We read books."},
+    {"q": "A tidy bag is …", "o": ["good", "bad", "sad"], "why": "Looking after things is good."},
+    {"q": "Which word starts with /h/?", "o": ["hot", "moon", "ink"], "why": "h, h, hot!"},
+    {"q": "_ouse: which letter is missing?", "o": ["h", "m", "n"], "why": "h + ouse = house."},
+    {"q": "The /h/ Phonics Card shows a boy …", "o": ["hopping", "singing", "sleeping"], "why": "Hop starts with /h/."},
+    {"q": "Blend: h – a – t", "o": ["hat", "hit", "mat"], "why": "h-a-t, hat!"},
+    {"q": "Blend: h – i – t", "o": ["hit", "hat", "sit"], "why": "h-i-t, hit!"}
+  ],
+  "hunt": [
+    {"q": "Catch the school thing we read.", "a": "book", "d": ["crayon", "pencil", "ruler"]},
+    {"q": "Catch the school thing for colouring.", "a": "crayon", "d": ["book", "eraser", "bag"]},
+    {"q": "Catch the thing that holds pencils.", "a": "pencil case", "d": ["book", "crayon", "ruler"]},
+    {"q": "Catch the /h/ home.", "a": "house", "d": ["nest", "igloo", "tree"]},
+    {"q": "Catch the /h/ animal.", "a": "horse", "d": ["monkey", "mouse", "cat"]},
+    {"q": "Catch the /h/ bird.", "a": "hen", "d": ["insect", "snake", "ant"]},
+    {"q": "Catch the /h/ word.", "a": "hill", "d": ["milk", "ink", "mug"]},
+    {"q": "Catch the letter for /h/.", "a": "h", "d": ["m", "n", "i"]},
+    {"q": "Blend: h – a – t", "a": "hat", "d": ["hit", "mat", "sat"]},
+    {"q": "Catch the cat in the story.", "a": "Meg", "d": ["Lily", "Fatma", "Sami"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which one is a new school thing in this story?", "o": ["pencil case", "mum", "moon", "hen"], "why": "Pencil case is a school thing."},
+    {"lv": "التذكر", "q": "What is the story value?", "o": ["Look after your things.", "Eat your food.", "Sing a song.", "Go to bed."], "why": "The value is Look after your things."},
+    {"lv": "التذكر", "q": "Which of these words starts with /h/?", "o": ["hop", "mop", "top", "pop"], "why": "h, h, hop!"},
+    {"lv": "التذكر", "q": "Which letter makes the sound /h/?", "o": ["h", "m", "n", "a"], "why": "The letter h says /h/."},
+    {"lv": "التطبيق", "q": "Your pencil case is open on the floor. What do you do?", "o": ["Pick it up and close it.", "Leave it.", "Kick it.", "Give it to the cat."], "why": "Look after your things."},
+    {"lv": "التطبيق", "q": "You have crayons but no book. You say …", "o": ["I've got crayons. I haven't got a book.", "I haven't got crayons.", "I've got a book.", "This is my book."], "why": "Say what you have and what you don't have."},
+    {"lv": "التطبيق", "q": "_ot: the word is hot. Which letter is missing?", "o": ["h", "m", "p", "n"], "why": "h + ot = hot."},
+    {"lv": "التحليل", "q": "Why is it good to look after your things?", "o": ["So we don't lose them.", "So the cat takes them.", "So the bag is empty.", "So we can't find them."], "why": "When we look after things, we keep them safe."},
+    {"lv": "التحليل", "q": "Which word does NOT start with /h/?", "o": ["mug", "hen", "hill", "house"], "why": "Mug starts with /m/."},
+    {"lv": "التحليل", "q": "Which word does not belong: book, pencil, crayon, horse?", "o": ["horse", "book", "pencil", "crayon"], "why": "A horse is an animal."}
+  ]
+}

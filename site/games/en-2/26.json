@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 2: Where’s my pen?",
+ "lesson": "Sounds and Spelling – Unit 2, Lesson 8: Graded readers",
+ "outcomes": [
+  "I can read words with oo, or, ng and ai in a story.",
+  "I can answer questions about \"My tooth\" and \"Where Is My Food?\".",
+  "I can put story events in order."
+ ],
+ "tf": [
+  {
+   "s": "In \"My tooth\", the boy has got a tooth in his hand.",
+   "t": true,
+   "why": "The story starts with a tooth in his hand."
+  },
+  {
+   "s": "In \"My tooth\", the tooth is small.",
+   "t": false,
+   "why": "The story says: It is a big tooth."
+  },
+  {
+   "s": "The boy puts his tooth on the roof.",
+   "t": true,
+   "why": "He puts the tooth on the roof and sings."
+  },
+  {
+   "s": "The boy waits for the moon.",
+   "t": false,
+   "why": "He waits for the sun."
+  },
+  {
+   "s": "\"Where Is My Food?\" is a story about a king.",
+   "t": true,
+   "why": "The king likes food."
+  },
+  {
+   "s": "In \"Where Is My Food?\", the king is sick.",
+   "t": false,
+   "why": "Cook is sick, not the king."
+  },
+  {
+   "s": "At the end, the king makes popcorn.",
+   "t": true,
+   "why": "Bang! Bang! Popcorn!"
+  },
+  {
+   "s": "\"Roof\" has the oo sound.",
+   "t": true,
+   "why": "R-oo-f has oo."
+  },
+  {
+   "s": "\"Torch\" has the ai sound.",
+   "t": false,
+   "why": "Torch has the or sound."
+  },
+  {
+   "s": "\"King\" ends with the ng sound.",
+   "t": true,
+   "why": "K-i-ng ends with ng."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is in the boy's hand?",
+   "o": [
+    "a tooth",
+    "a torch",
+    "a book"
+   ],
+   "why": "He has got a tooth in his hand."
+  },
+  {
+   "q": "Complete: It is a big ___.",
+   "o": [
+    "tooth",
+    "king",
+    "pot"
+   ],
+   "why": "The story says: It is a big tooth."
+  },
+  {
+   "q": "What does the boy wait for?",
+   "o": [
+    "the sun",
+    "the moon",
+    "his mum"
+   ],
+   "why": "He waits for the sun."
+  },
+  {
+   "q": "Where does the boy put his tooth?",
+   "o": [
+    "on the roof",
+    "in the pot",
+    "under the bed"
+   ],
+   "why": "He puts it on the roof."
+  },
+  {
+   "q": "Who likes food?",
+   "o": [
+    "the king",
+    "the boy",
+    "the sun"
+   ],
+   "why": "The king says: I like food!"
+  },
+  {
+   "q": "Who is sick?",
+   "o": [
+    "Cook",
+    "the king",
+    "the boy"
+   ],
+   "why": "The story says: Cook is sick!"
+  },
+  {
+   "q": "What does the king make?",
+   "o": [
+    "popcorn",
+    "a cake",
+    "soup"
+   ],
+   "why": "Bang! Bang! Popcorn!"
+  },
+  {
+   "q": "Blend: k + i + ng",
+   "o": [
+    "king",
+    "kin",
+    "kick"
+   ],
+   "why": "k-i-ng makes king."
+  },
+  {
+   "q": "Which word has oo?",
+   "o": [
+    "moon",
+    "torch",
+    "corn"
+   ],
+   "why": "M-oo-n has oo."
+  },
+  {
+   "q": "Which word has or?",
+   "o": [
+    "corn",
+    "food",
+    "roof"
+   ],
+   "why": "C-or-n has or."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "In the boy's hand",
+   "a": "a tooth",
+   "d": [
+    "a torch",
+    "a book",
+    "a pen"
+   ]
+  },
+  {
+   "q": "The boy waits for the ___",
+   "a": "sun",
+   "d": [
+    "moon",
+    "king",
+    "cook"
+   ]
+  },
+  {
+   "q": "He puts the tooth on the ___",
+   "a": "roof",
+   "d": [
+    "pot",
+    "bed",
+    "book"
+   ]
+  },
+  {
+   "q": "Who likes food?",
+   "a": "the king",
+   "d": [
+    "the boy",
+    "the mum",
+    "the sun"
+   ]
+  },
+  {
+   "q": "Who is sick?",
+   "a": "Cook",
+   "d": [
+    "King",
+    "Mum",
+    "Boy"
+   ]
+  },
+  {
+   "q": "The king makes ___",
+   "a": "popcorn",
+   "d": [
+    "cake",
+    "soup",
+    "rice"
+   ]
+  },
+  {
+   "q": "Blend: k + i + ng",
+   "a": "king",
+   "d": [
+    "kin",
+    "kid",
+    "sing"
+   ]
+  },
+  {
+   "q": "Blend: t + oo + th",
+   "a": "tooth",
+   "d": [
+    "teeth",
+    "torch",
+    "moon"
+   ]
+  },
+  {
+   "q": "Blend: c + or + n",
+   "a": "corn",
+   "d": [
+    "cook",
+    "cot",
+    "coin"
+   ]
+  },
+  {
+   "q": "Blend: f + oo + d",
+   "a": "food",
+   "d": [
+    "feed",
+    "fold",
+    "fork"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "In \"My tooth\", what does the boy do on the roof?",
+   "o": [
+    "He puts his tooth there and sings.",
+    "He eats popcorn.",
+    "He reads a book.",
+    "He cooks food."
+   ],
+   "why": "Put your tooth on the roof and sing!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has the or sound?",
+   "o": [
+    "torch",
+    "tooth",
+    "moon",
+    "roof"
+   ],
+   "why": "T-or-ch has or."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who is the main person in \"Where Is My Food?\"?",
+   "o": [
+    "the king",
+    "the boy",
+    "the cook's mum",
+    "a robot"
+   ],
+   "why": "The story is about the king."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has the oo sound?",
+   "o": [
+    "food",
+    "corn",
+    "king",
+    "sun"
+   ],
+   "why": "F-oo-d has oo."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Wait for the ___.",
+   "o": [
+    "sun",
+    "moon",
+    "king",
+    "food"
+   ],
+   "why": "The story says: Wait for the sun."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which comes first in \"Where Is My Food?\"?",
+   "o": [
+    "Cook is sick!",
+    "The pot is hot.",
+    "Bang! Bang! Popcorn!",
+    "The king makes popcorn."
+   ],
+   "why": "First Cook is sick, then the king cooks."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which word from the stories ends with ng?",
+   "o": [
+    "king",
+    "cook",
+    "roof",
+    "pot"
+   ],
+   "why": "K-i-ng ends with ng."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Can the king cook at the end of the story? How do you know?",
+   "o": [
+    "Yes, he makes popcorn.",
+    "No, he is sick.",
+    "No, Cook makes the food.",
+    "Yes, he makes a cake."
+   ],
+   "why": "He makes popcorn, so he can cook."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why must the king cook the food?",
+   "o": [
+    "Because Cook is sick.",
+    "Because the king is sick.",
+    "Because the pot is cold.",
+    "Because he has a tooth."
+   ],
+   "why": "Cook is sick, so the king cooks."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the right order for \"My tooth\"?",
+   "o": [
+    "tooth in hand, wait for the sun, put it on the roof",
+    "put it on the roof, tooth in hand, wait for the sun",
+    "wait for the sun, put it on the roof, tooth in hand",
+    "put it on the roof, wait for the sun, tooth in hand"
+   ],
+   "why": "He has a tooth, waits for the sun, then puts it on the roof."
+  }
+ ]
+}

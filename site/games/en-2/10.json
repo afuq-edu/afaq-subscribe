@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 1: Look at my toys!",
+  "lesson": "Unit 1 – Lesson 5: Culture and Project (Oman’s Children Museum)",
+  "outcomes": [
+    "I can read a short text about Oman's Children Museum.",
+    "I can say things we can do at the museum.",
+    "I can talk about my favourite toy: This is my ... It's ..."
+  ],
+  "tf": [
+    {
+      "s": "Oman's Children Museum is in Muscat.",
+      "t": true,
+      "why": "Yes! The museum is in Muscat."
+    },
+    {
+      "s": "Oman's Children Museum is a school.",
+      "t": false,
+      "why": "It isn't a school. It's a museum for children."
+    },
+    {
+      "s": "It's a museum for children.",
+      "t": true,
+      "why": "Great! It is for children."
+    },
+    {
+      "s": "You can make toys at the museum.",
+      "t": true,
+      "why": "Yes! You can make toys there."
+    },
+    {
+      "s": "You can ride a special bike at the museum.",
+      "t": true,
+      "why": "Well done! You can ride a bike there."
+    },
+    {
+      "s": "The museum is in a different country.",
+      "t": false,
+      "why": "The museum is in Muscat, in Oman."
+    },
+    {
+      "s": "This is my teddy. tells about my toy.",
+      "t": true,
+      "why": "Yes! This is my ... shows your toy."
+    },
+    {
+      "s": "It's brown. tells the name of the toy.",
+      "t": false,
+      "why": "It's brown. tells the colour."
+    },
+    {
+      "s": "A puppet is a kind of food.",
+      "t": false,
+      "why": "A puppet is a toy we can make."
+    },
+    {
+      "s": "We can only sit and read at the museum.",
+      "t": false,
+      "why": "We can ride, make and play there too."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Where is Oman's Children Museum?",
+      "o": [
+        "In Muscat",
+        "In the sea",
+        "At the lake"
+      ],
+      "why": "The museum is in Muscat."
+    },
+    {
+      "q": "Is it a school?",
+      "o": [
+        "No, it isn't.",
+        "Yes, it is.",
+        "It's a bike."
+      ],
+      "why": "It's a museum, not a school."
+    },
+    {
+      "q": "What can you make at the museum?",
+      "o": [
+        "toys",
+        "cakes",
+        "boats"
+      ],
+      "why": "You can make toys there."
+    },
+    {
+      "q": "What can you ride at the museum?",
+      "o": [
+        "a bike",
+        "a goat",
+        "a plane"
+      ],
+      "why": "You can ride a special bike."
+    },
+    {
+      "q": "It's a museum for...",
+      "o": [
+        "children",
+        "cars",
+        "goats"
+      ],
+      "why": "It's a museum for children."
+    },
+    {
+      "q": "This is my teddy. It's ...",
+      "o": [
+        "big",
+        "Muscat",
+        "seven"
+      ],
+      "why": "It's big. describes the teddy."
+    },
+    {
+      "q": "Things you can do there: ride, make, ...",
+      "o": [
+        "play",
+        "sleep",
+        "cook"
+      ],
+      "why": "We can ride, make and play."
+    },
+    {
+      "q": "A toy you move with your hand:",
+      "o": [
+        "puppet",
+        "slide",
+        "swing"
+      ],
+      "why": "We move a puppet with our hand."
+    },
+    {
+      "q": "Show your toy. Say...",
+      "o": [
+        "This is my car.",
+        "Is this a school?",
+        "Goodbye."
+      ],
+      "why": "This is my ... shows your toy."
+    },
+    {
+      "q": "In the project we make a...",
+      "o": [
+        "toy museum poster",
+        "cake",
+        "boat"
+      ],
+      "why": "Groups make a toy museum poster."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "The museum is in ...",
+      "a": "Muscat",
+      "d": [
+        "the lake",
+        "the park",
+        "school"
+      ]
+    },
+    {
+      "q": "It's a museum for ...",
+      "a": "children",
+      "d": [
+        "cars",
+        "goats",
+        "teachers"
+      ]
+    },
+    {
+      "q": "You can ... a special bike.",
+      "a": "ride",
+      "d": [
+        "eat",
+        "write",
+        "read"
+      ]
+    },
+    {
+      "q": "You can ... toys.",
+      "a": "make",
+      "d": [
+        "eat",
+        "drink",
+        "sleep"
+      ]
+    },
+    {
+      "q": "Is this a school?",
+      "a": "No, it isn't.",
+      "d": [
+        "Yes, it is.",
+        "It's a bike.",
+        "I'm seven."
+      ]
+    },
+    {
+      "q": "A toy you can make there",
+      "a": "puppet",
+      "d": [
+        "slide",
+        "swing",
+        "road"
+      ]
+    },
+    {
+      "q": "Oman's ... Museum",
+      "a": "Children",
+      "d": [
+        "Toys",
+        "Goats",
+        "Boats"
+      ]
+    },
+    {
+      "q": "This is my ... (a doll)",
+      "a": "doll",
+      "d": [
+        "bike",
+        "kite",
+        "ball"
+      ]
+    },
+    {
+      "q": "Project: make a toy museum ...",
+      "a": "poster",
+      "d": [
+        "cake",
+        "boat",
+        "road"
+      ]
+    },
+    {
+      "q": "Project step 1: draw your ...",
+      "a": "favourite toy",
+      "d": [
+        "house",
+        "teacher",
+        "school"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What is Oman's Children Museum?",
+      "o": [
+        "A museum for children",
+        "A school",
+        "A toy shop",
+        "A park"
+      ],
+      "why": "It's a museum for children."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Where is the museum?",
+      "o": [
+        "In Muscat",
+        "In the lake",
+        "In the classroom",
+        "In the park"
+      ],
+      "why": "The museum is in Muscat."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which three things can you do at the museum?",
+      "o": [
+        "ride, make, play",
+        "sleep, eat, cry",
+        "swim, cook, sleep",
+        "read, sleep, cook"
+      ],
+      "why": "We ride, make and play."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What do we write on our poster?",
+      "o": [
+        "This is my ...",
+        "How old are you?",
+        "Goodbye.",
+        "What's your name?"
+      ],
+      "why": "We write This is my ... about our toy."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You show your pink doll. You say...",
+      "o": [
+        "This is my doll. It's pink.",
+        "This is a school.",
+        "It's in Muscat.",
+        "Is this a school?"
+      ],
+      "why": "Name the toy, then say the colour."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your friend asks: Is this a school? (a museum) You say...",
+      "o": [
+        "No, it isn't. It's a museum.",
+        "Yes, it is.",
+        "It's a doll.",
+        "I'm seven."
+      ],
+      "why": "It's a museum, not a school."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Describe a small teddy.",
+      "o": [
+        "It's small.",
+        "It's Muscat.",
+        "It's seven.",
+        "It's a museum."
+      ],
+      "why": "small tells the size."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why do children like the museum?",
+      "o": [
+        "They can play and make toys",
+        "It is a school",
+        "They can sleep there",
+        "It has no toys"
+      ],
+      "why": "Children can ride, make and play there."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which sentence is about size?",
+      "o": [
+        "It's big.",
+        "It's brown.",
+        "It's my teddy.",
+        "It's in Muscat."
+      ],
+      "why": "Big tells the size."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which one is NOT true about the museum?",
+      "o": [
+        "It's a school.",
+        "It's in Muscat.",
+        "You can make toys.",
+        "You can ride a bike."
+      ],
+      "why": "It isn't a school. It's a museum for children."
+    }
+  ]
+}

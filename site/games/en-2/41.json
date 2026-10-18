@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Unit 3 – Lesson 6: English in action (Paying a compliment)",
+ "outcomes": [
+  "I can pay a compliment: What a cool dinosaur!",
+  "I can answer politely: Thank you.",
+  "I can write and act out a compliment dialogue."
+ ],
+ "tf": [
+  {
+   "s": "\"What a cool dinosaur!\" is a compliment.",
+   "t": true,
+   "why": "A compliment is a nice thing we say."
+  },
+  {
+   "s": "When someone pays you a compliment, you say \"Thank you.\"",
+   "t": true,
+   "why": "Thank you is the polite answer."
+  },
+  {
+   "s": "A good answer to \"What a cool robot!\" is \"Goodbye.\"",
+   "t": false,
+   "why": "We say \"Thank you.\""
+  },
+  {
+   "s": "\"Look at my picture\" asks someone to see your picture.",
+   "t": true,
+   "why": "Look at means see."
+  },
+  {
+   "s": "In the dialogue, it's a dinosaur costume.",
+   "t": true,
+   "why": "It's a dinosaur costume!"
+  },
+  {
+   "s": "In the dialogue, the dinosaur's body is small.",
+   "t": false,
+   "why": "Look at the body. It's big."
+  },
+  {
+   "s": "A compliment makes people feel happy.",
+   "t": true,
+   "why": "Kind words make people happy."
+  },
+  {
+   "s": "\"What a cool kite!\" is rude.",
+   "t": false,
+   "why": "It is a kind compliment."
+  },
+  {
+   "s": "We say \"Wow!\" when we see something we like.",
+   "t": true,
+   "why": "Wow shows we like it."
+  },
+  {
+   "s": "\"I've got one head and two arms\" can describe a costume.",
+   "t": true,
+   "why": "We describe body parts with I've got."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "You like a picture. You say:",
+   "o": [
+    "What a cool picture!",
+    "Here you are.",
+    "Where's my pen?"
+   ],
+   "why": "That is a compliment."
+  },
+  {
+   "q": "What a cool robot! You answer:",
+   "o": [
+    "Thank you.",
+    "Yes, it is.",
+    "Goodbye."
+   ],
+   "why": "Thank you is polite."
+  },
+  {
+   "q": "What a cool ___! (dinosaur)",
+   "o": [
+    "dinosaur",
+    "body",
+    "big"
+   ],
+   "why": "What a cool dinosaur!"
+  },
+  {
+   "q": "Look at the ___. It's big.",
+   "o": [
+    "body",
+    "cool",
+    "thank"
+   ],
+   "why": "Look at the body. It's big."
+  },
+  {
+   "q": "___ at my picture.",
+   "o": [
+    "Look",
+    "Thank",
+    "What"
+   ],
+   "why": "Look at my picture."
+  },
+  {
+   "q": "It's a dinosaur ___!",
+   "o": [
+    "costume",
+    "compliment",
+    "thank"
+   ],
+   "why": "It's a dinosaur costume!"
+  },
+  {
+   "q": "I've got one head and two ___.",
+   "o": [
+    "arms",
+    "arm",
+    "head"
+   ],
+   "why": "Two arms: plural."
+  },
+  {
+   "q": "Wow! What a ___ dinosaur!",
+   "o": [
+    "cool",
+    "sad",
+    "bad"
+   ],
+   "why": "What a cool dinosaur!"
+  },
+  {
+   "q": "A compliment is ...",
+   "o": [
+    "kind words",
+    "a body part",
+    "a colour"
+   ],
+   "why": "A compliment is a nice thing to say."
+  },
+  {
+   "q": "Which is a compliment?",
+   "o": [
+    "What a cool kite!",
+    "Give me the kite!",
+    "It's my kite."
+   ],
+   "why": "It says something nice."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Reply to a compliment",
+   "a": "Thank you.",
+   "d": [
+    "Goodbye.",
+    "Sorry.",
+    "Here you are."
+   ]
+  },
+  {
+   "q": "What a ___ dinosaur!",
+   "a": "cool",
+   "d": [
+    "sad",
+    "bad",
+    "no"
+   ]
+  },
+  {
+   "q": "It's a dinosaur ___!",
+   "a": "costume",
+   "d": [
+    "body",
+    "head",
+    "pen"
+   ]
+  },
+  {
+   "q": "Look at the body. It's ...",
+   "a": "big",
+   "d": [
+    "small",
+    "sad",
+    "blue"
+   ]
+  },
+  {
+   "q": "___ at my picture.",
+   "a": "Look",
+   "d": [
+    "Thank",
+    "What",
+    "Give"
+   ]
+  },
+  {
+   "q": "Word to show you like it",
+   "a": "Wow!",
+   "d": [
+    "Ouch!",
+    "Stop!",
+    "No!"
+   ]
+  },
+  {
+   "q": "I've got one ___.",
+   "a": "head",
+   "d": [
+    "arms",
+    "legs",
+    "hands"
+   ]
+  },
+  {
+   "q": "I've got two ___.",
+   "a": "arms",
+   "d": [
+    "head",
+    "face",
+    "body"
+   ]
+  },
+  {
+   "q": "What a cool ___! (it flies)",
+   "a": "kite",
+   "d": [
+    "desk",
+    "chair",
+    "shelf"
+   ]
+  },
+  {
+   "q": "What a cool ___! (beep)",
+   "a": "robot",
+   "d": [
+    "tooth",
+    "cloud",
+    "coin"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do we say to pay a compliment?",
+   "o": [
+    "What a cool ...!",
+    "Can I borrow it?",
+    "Where's the ...?",
+    "What's your name?"
+   ],
+   "why": "What a cool ...! is a compliment."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the polite answer to a compliment?",
+   "o": [
+    "Thank you.",
+    "No.",
+    "Stop it.",
+    "Goodbye."
+   ],
+   "why": "We say Thank you."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What costume is in the dialogue?",
+   "o": [
+    "a dinosaur",
+    "a robot",
+    "a king",
+    "a cat"
+   ],
+   "why": "It's a dinosaur costume!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the boy say about the body?",
+   "o": [
+    "It's big.",
+    "It's small.",
+    "It's blue.",
+    "It's noisy."
+   ],
+   "why": "Look at the body. It's big."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend shows you a doll. You like it. What do you say?",
+   "o": [
+    "What a cool doll!",
+    "Give me the doll!",
+    "It's not a doll.",
+    "Where's the doll?"
+   ],
+   "why": "Say something kind."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete the dialogue: Look at my picture. – What a cool picture! – ___",
+   "o": [
+    "Thank you.",
+    "Yes, I am.",
+    "Here you are.",
+    "It's under."
+   ],
+   "why": "After a compliment we say Thank you."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a compliment line for a costume.",
+   "o": [
+    "What a cool costume!",
+    "What costume a cool!",
+    "Cool what a costume!",
+    "A costume cool what!"
+   ],
+   "why": "What a cool + thing!"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we pay compliments?",
+   "o": [
+    "To make people feel happy.",
+    "To make people sad.",
+    "To borrow things.",
+    "To say goodbye."
+   ],
+   "why": "Kind words make people happy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which dialogue is polite?",
+   "o": [
+    "What a cool robot! – Thank you.",
+    "What a cool robot! – Go away.",
+    "What a cool robot! – No.",
+    "What a cool robot! – Goodbye."
+   ],
+   "why": "A polite reply is Thank you."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the right order?",
+   "o": [
+    "Look at my picture. – What a cool picture! – Thank you.",
+    "Thank you. – Look at my picture. – What a cool picture!",
+    "What a cool picture! – Thank you. – Look at my picture.",
+    "Thank you. – What a cool picture! – Look at my picture."
+   ],
+   "why": "Show it, get a compliment, then say thank you."
+  }
+ ]
+}

@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Shop Till You Drop (Vocabulary)",
+ "lesson": "Reading in detail: comprehension and reasons for over-shopping",
+ "outcomes": [
+  "Read an article in detail and answer questions",
+  "Evaluate the reasons for over-shopping and its long-term effects"
+ ],
+ "tf": [
+  {
+   "s": "The women can afford to spend a lot because they have very good jobs.",
+   "t": true,
+   "why": "They are a corporate lawyer and an accountant."
+  },
+  {
+   "s": "Katy feels bad about spending because she thinks she does not deserve a treat.",
+   "t": false,
+   "why": "She thinks she deserves a treat for working hard."
+  },
+  {
+   "s": "Clever marketing is one reason people buy things they do not need.",
+   "t": true,
+   "why": "Companies use clever marketing to make us buy."
+  },
+  {
+   "s": "Shopping is a long-term solution to feeling bad.",
+   "t": false,
+   "why": "It is only a short-term fix."
+  },
+  {
+   "s": "Over-shopping can create credit card debt.",
+   "t": true,
+   "why": "Spending too much can lead to debt."
+  },
+  {
+   "s": "Lack of financial self-restraint can result in bankruptcy.",
+   "t": true,
+   "why": "The article says it can even lead to divorce."
+  },
+  {
+   "s": "People who feel lonely or depressed may shop for consolation.",
+   "t": true,
+   "why": "Consolation means comfort when you feel sad."
+  },
+  {
+   "s": "'Affluent' means very poor.",
+   "t": false,
+   "why": "Affluent means rich, having a lot of money."
+  },
+  {
+   "s": "According to the article, shopping always makes people happy for months.",
+   "t": false,
+   "why": "It can make people feel bad for months because of debt."
+  },
+  {
+   "s": "A 'short-term fix' helps only for a short time.",
+   "t": true,
+   "why": "It does not solve the problem for long."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Why can the women spend so much?",
+   "o": [
+    "they have very good jobs",
+    "they won a prize",
+    "they borrow from friends"
+   ],
+   "why": "Their jobs pay well."
+  },
+  {
+   "q": "Why doesn't Katy feel bad?",
+   "o": [
+    "she thinks she deserves a treat",
+    "she never spends money",
+    "she shops for others"
+   ],
+   "why": "She rewards herself for working hard."
+  },
+  {
+   "q": "What feeling can make people shop for comfort?",
+   "o": [
+    "loneliness",
+    "excitement about work",
+    "hunger"
+   ],
+   "why": "Lonely or depressed people may shop for consolation."
+  },
+  {
+   "q": "What is a 'bargain'?",
+   "o": [
+    "something bought cheaply",
+    "a type of debt",
+    "a job"
+   ],
+   "why": "A bargain costs less than usual."
+  },
+  {
+   "q": "What can over-shopping lead to?",
+   "o": [
+    "credit card debt",
+    "more savings",
+    "a better salary"
+   ],
+   "why": "Spending too much causes debt."
+  },
+  {
+   "q": "What is 'bankruptcy'?",
+   "o": [
+    "being unable to pay debts",
+    "earning a lot",
+    "opening a bank"
+   ],
+   "why": "Bankruptcy is a serious money problem."
+  },
+  {
+   "q": "Is shopping a short-term or long-term fix?",
+   "o": [
+    "short-term",
+    "long-term",
+    "permanent"
+   ],
+   "why": "It helps only for a little while."
+  },
+  {
+   "q": "Who uses clever marketing?",
+   "o": [
+    "companies",
+    "doctors",
+    "teachers"
+   ],
+   "why": "Companies market products to persuade us."
+  },
+  {
+   "q": "What does 'affluent' mean?",
+   "o": [
+    "rich",
+    "sad",
+    "busy"
+   ],
+   "why": "Affluent people have plenty of money."
+  },
+  {
+   "q": "What might lonely people shop for?",
+   "o": [
+    "consolation",
+    "exercise",
+    "homework"
+   ],
+   "why": "Shopping can feel comforting at first."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Comfort when you feel sad",
+   "a": "consolation",
+   "d": [
+    "bargain",
+    "debt",
+    "salary"
+   ]
+  },
+  {
+   "q": "Something bought cheaply",
+   "a": "bargain",
+   "d": [
+    "debt",
+    "fix",
+    "treat"
+   ]
+  },
+  {
+   "q": "Unable to pay your debts",
+   "a": "bankruptcy",
+   "d": [
+    "consolation",
+    "salary",
+    "marketing"
+   ]
+  },
+  {
+   "q": "Rich, with lots of money",
+   "a": "affluent",
+   "d": [
+    "afflict",
+    "addicted",
+    "corporate"
+   ]
+  },
+  {
+   "q": "Cause pain or trouble",
+   "a": "afflict",
+   "d": [
+    "affluent",
+    "persuade",
+    "export"
+   ]
+  },
+  {
+   "q": "Money owed on a card",
+   "a": "credit card debt",
+   "d": [
+    "salary",
+    "bargain",
+    "savings"
+   ]
+  },
+  {
+   "q": "Help that lasts briefly",
+   "a": "short-term fix",
+   "d": [
+    "long-term plan",
+    "full cure",
+    "savings"
+   ]
+  },
+  {
+   "q": "Katy's reason to spend",
+   "a": "deserves a treat",
+   "d": [
+    "has no job",
+    "needs food",
+    "hates work"
+   ]
+  },
+  {
+   "q": "Companies' trick to sell",
+   "a": "clever marketing",
+   "d": [
+    "free gifts only",
+    "closing shops",
+    "low salaries"
+   ]
+  },
+  {
+   "q": "Problem besides bankruptcy",
+   "a": "divorce",
+   "d": [
+    "promotion",
+    "holiday",
+    "graduation"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How can the women afford to spend so much money?",
+   "o": [
+    "They have very good jobs",
+    "They found money",
+    "Their shops are free",
+    "They sell their clothes"
+   ],
+   "why": "A corporate lawyer and an accountant earn well."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which are two reasons people buy things they do not need?",
+   "o": [
+    "clever marketing and needing consolation",
+    "low prices and bad weather",
+    "school and homework",
+    "sport and travel"
+   ],
+   "why": "The article gives these two reasons."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What can lack of financial self-restraint result in?",
+   "o": [
+    "bankruptcy and even divorce",
+    "a better job",
+    "more free time",
+    "higher savings"
+   ],
+   "why": "Not controlling spending leads to serious problems."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'consolation' mean?",
+   "o": [
+    "comfort for someone who is sad",
+    "a big discount",
+    "a credit card",
+    "a shopping list"
+   ],
+   "why": "Lonely or depressed people may shop for comfort."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali feels sad, so he buys new shoes. He feels happy for a day, then worries about money. This shows shopping is ______.",
+   "o": [
+    "a short-term fix",
+    "a long-term solution",
+    "a cure for sadness",
+    "a way to save money"
+   ],
+   "why": "The good feeling does not last."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Katy says, 'I work hard, so I deserve a treat.' What is she doing?",
+   "o": [
+    "giving a reason for her spending",
+    "refusing to shop",
+    "saving money",
+    "complaining about her job"
+   ],
+   "why": "She explains why she does not feel bad."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which person is most likely to get credit card debt?",
+   "o": [
+    "someone who buys things they cannot pay for",
+    "someone who saves every month",
+    "someone who never shops",
+    "someone who pays in cash only"
+   ],
+   "why": "Debt comes from spending money you do not have."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Does shopping really improve our mood?",
+   "o": [
+    "Only briefly; debts can make us feel bad for months",
+    "Yes, forever",
+    "No, never at all",
+    "Only for shopkeepers"
+   ],
+   "why": "The article shows a short-term good feeling but long-term problems."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is shopping called a 'short-term fix' for feeling bad?",
+   "o": [
+    "It creates more problems than it solves in the long run",
+    "It is very cheap",
+    "It takes a short time to shop",
+    "Shops close early"
+   ],
+   "why": "Debt and worry come later."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might clever marketing make people buy things they do not need?",
+   "o": [
+    "It persuades people that they want the product",
+    "It makes products disappear",
+    "It lowers people's salaries",
+    "It closes the shops"
+   ],
+   "why": "Marketing is designed to persuade."
+  }
+ ]
+}

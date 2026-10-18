@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: Adverts – Appealing or Appalling? (Writing)",
+ "lesson": "Vocabulary of advertising and evaluating adverts",
+ "outcomes": [
+  "Match advertising adjectives to products",
+  "Understand hard-sell and soft-sell techniques",
+  "Describe and evaluate an advert with reasons"
+ ],
+ "tf": [
+  {
+   "s": "Words like 'stylish', 'refreshing' and 'luxurious' are adjectives.",
+   "t": true,
+   "why": "They describe products in adverts."
+  },
+  {
+   "s": "'Nutritious' is a good adjective for a mobile phone.",
+   "t": false,
+   "why": "Nutritious describes food that is good for your health."
+  },
+  {
+   "s": "'Copy' in advertising means the words in an advert.",
+   "t": true,
+   "why": "Copy is the text of the ad."
+  },
+  {
+   "s": "A hard-sell technique emphasises the features of a product.",
+   "t": true,
+   "why": "It shows what the product can do."
+  },
+  {
+   "s": "A soft-sell technique focuses on how a product makes consumers feel.",
+   "t": true,
+   "why": "Soft-sell works on feelings."
+  },
+  {
+   "s": "A washing machine ad that lists what the machine can do uses soft-sell.",
+   "t": false,
+   "why": "Emphasising features is hard-sell."
+  },
+  {
+   "s": "A misleading advert gives a false impression.",
+   "t": true,
+   "why": "It makes you believe something untrue."
+  },
+  {
+   "s": "An advert can be irritating because it is repetitive or boring.",
+   "t": true,
+   "why": "Repeating the same thing annoys viewers."
+  },
+  {
+   "s": "Adjectives in adverts are not important for persuading people.",
+   "t": false,
+   "why": "Adjectives make products sound attractive."
+  },
+  {
+   "s": "An advert must get its message across slowly.",
+   "t": false,
+   "why": "An ad must get its message across quickly."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which adjective suits a cold drink?",
+   "o": [
+    "refreshing",
+    "long-lasting",
+    "stylish"
+   ],
+   "why": "A cold drink refreshes you."
+  },
+  {
+   "q": "Which adjective suits healthy food?",
+   "o": [
+    "nutritious",
+    "luxurious",
+    "cost-saving"
+   ],
+   "why": "Nutritious food is good for you."
+  },
+  {
+   "q": "Which adjective suits an expensive hotel?",
+   "o": [
+    "luxurious",
+    "nutritious",
+    "refreshing"
+   ],
+   "why": "Luxurious means very comfortable and expensive."
+  },
+  {
+   "q": "Which adjective suits batteries?",
+   "o": [
+    "long-lasting",
+    "tasty",
+    "refreshing"
+   ],
+   "why": "Long-lasting means it works for a long time."
+  },
+  {
+   "q": "What is 'copy' in an advert?",
+   "o": [
+    "the words",
+    "the pictures",
+    "the price"
+   ],
+   "why": "Copy is the written text."
+  },
+  {
+   "q": "What does soft-sell focus on?",
+   "o": [
+    "feelings",
+    "features",
+    "prices only"
+   ],
+   "why": "Soft-sell shows how the product makes you feel."
+  },
+  {
+   "q": "What does hard-sell emphasise?",
+   "o": [
+    "features",
+    "feelings",
+    "music"
+   ],
+   "why": "Hard-sell shows what the product can do."
+  },
+  {
+   "q": "Why can an ad be irritating?",
+   "o": [
+    "it is repetitive",
+    "it is short",
+    "it is funny"
+   ],
+   "why": "Repetition can annoy people."
+  },
+  {
+   "q": "Which word describes an ad that gives a false impression?",
+   "o": [
+    "misleading",
+    "memorable",
+    "stylish"
+   ],
+   "why": "Misleading ads make us believe untrue things."
+  },
+  {
+   "q": "What part of speech is 'fashionable'?",
+   "o": [
+    "adjective",
+    "verb",
+    "adverb"
+   ],
+   "why": "It describes a noun."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Adjective for a cold drink",
+   "a": "refreshing",
+   "d": [
+    "luxurious",
+    "stylish",
+    "cost-saving"
+   ]
+  },
+  {
+   "q": "Adjective for healthy food",
+   "a": "nutritious",
+   "d": [
+    "stylish",
+    "luxurious",
+    "long-lasting"
+   ]
+  },
+  {
+   "q": "Very comfortable and costly",
+   "a": "luxurious",
+   "d": [
+    "nutritious",
+    "refreshing",
+    "cheap"
+   ]
+  },
+  {
+   "q": "Works for a long time",
+   "a": "long-lasting",
+   "d": [
+    "refreshing",
+    "nutritious",
+    "stylish"
+   ]
+  },
+  {
+   "q": "Helps you save money",
+   "a": "cost-saving",
+   "d": [
+    "luxurious",
+    "stylish",
+    "irritating"
+   ]
+  },
+  {
+   "q": "Gives a false impression",
+   "a": "misleading",
+   "d": [
+    "memorable",
+    "refreshing",
+    "stylish"
+   ]
+  },
+  {
+   "q": "The words in an advert",
+   "a": "copy",
+   "d": [
+    "logo",
+    "print",
+    "brand"
+   ]
+  },
+  {
+   "q": "Technique based on features",
+   "a": "hard-sell",
+   "d": [
+    "soft-sell",
+    "slogan",
+    "logo"
+   ]
+  },
+  {
+   "q": "Technique based on feelings",
+   "a": "soft-sell",
+   "d": [
+    "hard-sell",
+    "copy",
+    "print ad"
+   ]
+  },
+  {
+   "q": "Ad on paper, not TV",
+   "a": "print ad",
+   "d": [
+    "TV ad",
+    "radio ad",
+    "soft-sell"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What part of speech are words like 'stylish' and 'nutritious'?",
+   "o": [
+    "adjectives",
+    "verbs",
+    "nouns",
+    "adverbs"
+   ],
+   "why": "They describe products."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is 'copy' in advertising?",
+   "o": [
+    "the words in an advert",
+    "a photo of the product",
+    "a second advert",
+    "the price list"
+   ],
+   "why": "Copy means the text of an ad."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does a soft-sell technique focus on?",
+   "o": [
+    "how a product makes consumers feel",
+    "the technical features",
+    "the price only",
+    "the factory"
+   ],
+   "why": "Soft-sell works on emotions."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which technique is used in a washing machine ad that shows what the machine can do?",
+   "o": [
+    "hard-sell",
+    "soft-sell",
+    "window-shopping",
+    "bargaining"
+   ],
+   "why": "Hard-sell emphasises features."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which two adjectives suit chocolate best?",
+   "o": [
+    "tasty and smooth",
+    "long-lasting and cost-saving",
+    "stylish and powerful",
+    "refreshing and fashionable"
+   ],
+   "why": "Chocolate is described by its taste."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: These trainers are comfortable and ______.",
+   "o": [
+    "long-lasting",
+    "nutritious",
+    "refreshing",
+    "delicious"
+   ],
+   "why": "Good trainers last a long time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is an example of an advert that gives a false impression?",
+   "o": [
+    "A car ad suggesting your life will become more exciting if you buy the car",
+    "A label showing the price",
+    "A list of ingredients",
+    "A timetable of buses"
+   ],
+   "why": "It promises something the car cannot really give."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can a shampoo advert be misleading?",
+   "o": [
+    "It may suggest the shampoo will make you as beautiful as the girl in the ad",
+    "It shows the bottle",
+    "It gives the price",
+    "It uses a slogan"
+   ],
+   "why": "Shampoo cannot change how beautiful you are."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do many ads combine hard-sell and soft-sell?",
+   "o": [
+    "They show features and also how the product makes you feel",
+    "They want to confuse people",
+    "They have no copy",
+    "They are too short"
+   ],
+   "why": "A car ad can show design and the feeling of driving."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are adjectives important in advertisements?",
+   "o": [
+    "They describe features and make the product sound attractive",
+    "They make the ad longer",
+    "They replace the pictures",
+    "They show the price"
+   ],
+   "why": "Adjectives help persuade consumers."
+  }
+ ]
+}

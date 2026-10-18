@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "1",
+  "lesson": "Unit 1: New Media – Writing: Describing Charts",
+  "outcomes": [
+    "Name four types of charts: pie, column, line and bar.",
+    "Read a chart and describe its data with comparing language.",
+    "Write a clear summary of two charts and check it with a checklist."
+  ],
+  "tf": [
+    {"s": "A pie chart is a circle divided into slices.", "t": true, "why": "Yes! Each slice shows a part of the whole."},
+    {"s": "A column chart has horizontal bars.", "t": false, "why": "A column chart has vertical bars; a bar chart has horizontal bars."},
+    {"s": "A chart summary uses the present simple.", "t": true, "why": "Correct, e.g. 'The chart shows…'."},
+    {"s": "A good chart summary includes the writer's personal opinion.", "t": false, "why": "It presents only the data in an objective way."},
+    {"s": "'Illustrate' has a similar meaning to 'show'.", "t": true, "why": "Right, 'The chart illustrates…' = 'The chart shows…'."},
+    {"s": "'However' is a linking word that shows contrast.", "t": true, "why": "Well done, it introduces a different idea."},
+    {"s": "The first sentence of a summary gives the type of chart, its topic, who and when.", "t": true, "why": "Yes, the introduction tells the reader what the chart is about."},
+    {"s": "A chart summary moves from specific details to the general idea.", "t": false, "why": "It moves from general to specific."},
+    {"s": "'The chart show football are popular' is a correct sentence.", "t": false, "why": "The correct sentence is 'The chart shows that football is popular.'"},
+    {"s": "You should write about a chart before you read it carefully.", "t": false, "why": "Read it first so that your information is accurate."}
+  ],
+  "boxes": [
+    {"q": "What is a chart with vertical bars called?", "o": ["a column chart", "a pie chart", "a line graph"], "why": "Columns stand up vertically."},
+    {"q": "Which tense do we use to describe charts?", "o": ["present simple", "past continuous", "future simple"], "why": "We write 'The chart shows…'."},
+    {"q": "Which word is a synonym of 'illustrate'?", "o": ["show", "hide", "count"], "why": "Both mean to present information."},
+    {"q": "Poetry is the ___ popular genre.", "o": ["least", "more", "as"], "why": "'The least popular' has the smallest number."},
+    {"q": "Which linking word shows contrast?", "o": ["However", "Because", "So"], "why": "'However' introduces a different or opposite idea."},
+    {"q": "What are the three parts of a chart summary?", "o": ["introduction, analysis, conclusion", "title, picture, question", "greeting, story, signature"], "why": "A summary has a clear beginning, middle and end."},
+    {"q": "Which chart shows a change over time with a line?", "o": ["a line graph", "a pie chart", "a column chart"], "why": "A line graph connects points over time."},
+    {"q": "What is the purpose of a writing plan?", "o": ["to organise ideas before writing", "to check spelling at the end", "to draw the chart"], "why": "Planning helps you put ideas in order."},
+    {"q": "In peer feedback, you give your partner ...", "o": ["a strength and a point to improve", "only mistakes", "a mark out of ten"], "why": "Good feedback is helpful and balanced."},
+    {"q": "Which word introduces the conclusion?", "o": ["Overall", "Firstly", "Because"], "why": "'Overall' sums up the main idea."}
+  ],
+  "hunt": [
+    {"q": "A circle divided into slices", "a": "pie chart", "d": ["line graph", "column chart", "bar chart"]},
+    {"q": "Chart with vertical bars", "a": "column chart", "d": ["pie chart", "bar chart", "line graph"]},
+    {"q": "Chart with horizontal bars", "a": "bar chart", "d": ["column chart", "pie chart", "line graph"]},
+    {"q": "Synonym of 'illustrate'", "a": "show", "d": ["hide", "count", "draw"]},
+    {"q": "Tense for describing charts", "a": "present simple", "d": ["past simple", "future simple", "past continuous"]},
+    {"q": "Linking word showing contrast", "a": "however", "d": ["because", "so", "and"]},
+    {"q": "Smallest slice: the ___ popular", "a": "least", "d": ["most", "more", "best"]},
+    {"q": "Biggest slice: the ___ popular", "a": "most", "d": ["least", "less", "fewer"]},
+    {"q": "Word to start the conclusion", "a": "overall", "d": ["firstly", "because", "then"]},
+    {"q": "List to check your draft", "a": "Writing Checklist", "d": ["shopping list", "menu", "timetable"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which of these is NOT one of the four chart types in the lesson?", "o": ["a map", "a pie chart", "a line graph", "a column chart"], "why": "The four types are pie, column, line and bar."},
+    {"lv": "التذكر", "q": "Does a chart summary include the writer's opinion?", "o": ["No, it presents only the data.", "Yes, always at the start.", "Yes, in every sentence.", "Only in the title."], "why": "A summary is objective."},
+    {"lv": "التذكر", "q": "Which words can compare two groups in one sentence?", "o": ["whereas / while", "because / so", "firstly / then", "and / also"], "why": "'Whereas' and 'while' show a difference between two things."},
+    {"lv": "التذكر", "q": "What do we write in the first sentence of a chart summary?", "o": ["the type of chart, its topic, who and when", "our favourite sport", "the conclusion", "a question to the reader"], "why": "The introduction tells the reader what the chart shows."},
+    {"lv": "التطبيق", "q": "Choose the best opening sentence for a summary.", "o": ["The two pie charts illustrate the sports played by boys and girls in 2018.", "I love sports very much.", "The charts was about sports.", "Sports is good, I think."], "why": "It gives the chart type, topic, who and when."},
+    {"lv": "التطبيق", "q": "Rewrite: 'Snapchat is popular with women. Twitter is not as popular.'", "o": ["Snapchat is more popular with women than Twitter.", "Twitter is more popular with women than Snapchat.", "Snapchat is as popular as Twitter with women.", "Snapchat is the least popular with women."], "why": "'More … than' shows Snapchat has more users."},
+    {"lv": "التطبيق", "q": "Use 'while' to compare boys and girls correctly.", "o": ["While boys prefer football, girls prefer swimming.", "While boys football, girls swimming prefer.", "Boys while prefer football girls.", "While boys prefers football, girls prefers swimming."], "why": "'While' joins two contrasting ideas in one sentence."},
+    {"lv": "التحليل", "q": "Which sentence is correct for a chart summary?", "o": ["The chart shows that football is popular.", "The chart show football are popular.", "I think the chart is boring.", "The chart showed football will be popular."], "why": "Present simple, correct agreement and no opinion."},
+    {"lv": "التحليل", "q": "Why should you read a chart carefully before writing?", "o": ["To find its type, topic and trend so your facts are accurate.", "To make the summary longer.", "To add your opinion.", "To copy the numbers only."], "why": "Understanding the chart keeps your summary accurate."},
+    {"lv": "التحليل", "q": "Action books have the biggest slice. Which sentence is correct?", "o": ["Action books are more popular than any other books.", "Action books are the least popular.", "Action books are not as popular as poetry.", "All books are as popular as each other."], "why": "The biggest slice means the most popular."}
+  ]
+}

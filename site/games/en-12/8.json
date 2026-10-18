@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Shop Till You Drop (Vocabulary)",
+ "lesson": "Lead-in, prediction and skimming: what is a ‘shopaholic’?",
+ "outcomes": [
+  "Predict what an article is about from its title and photo",
+  "Skim an article to find the meaning of 'shopaholic'"
+ ],
+ "tf": [
+  {
+   "s": "A shopaholic is someone who is addicted to shopping.",
+   "t": true,
+   "why": "Yes, a shopaholic cannot stop shopping."
+  },
+  {
+   "s": "A compulsive buyer can easily control how much they spend.",
+   "t": false,
+   "why": "A compulsive buyer cannot control their spending."
+  },
+  {
+   "s": "The title and photograph can help you predict what an article is about.",
+   "t": true,
+   "why": "They give clues before you read."
+  },
+  {
+   "s": "Vanessa is a corporate lawyer.",
+   "t": true,
+   "why": "That is her job in the article."
+  },
+  {
+   "s": "Katy is a corporate lawyer, too.",
+   "t": false,
+   "why": "Katy is an accountant."
+  },
+  {
+   "s": "Skimming means reading quickly to get the main idea.",
+   "t": true,
+   "why": "You skimmed the article in two minutes."
+  },
+  {
+   "s": "'Corporate' means belonging to a big company.",
+   "t": true,
+   "why": "A corporate lawyer works for a big company."
+  },
+  {
+   "s": "In the lesson, women were said to enjoy only the result of shopping.",
+   "t": false,
+   "why": "Women were said to enjoy the whole experience; men enjoy the result."
+  },
+  {
+   "s": "You must read every word before you can say what an article is about.",
+   "t": false,
+   "why": "Skimming quickly gives you the gist."
+  },
+  {
+   "s": "Over-shopping can be a problem when people cannot control their spending.",
+   "t": true,
+   "why": "That is why the women in the article have a problem."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does '-holic' show in 'shopaholic'?",
+   "o": [
+    "addiction",
+    "a shop",
+    "a price"
+   ],
+   "why": "'-holic' means addicted to something."
+  },
+  {
+   "q": "What is Katy's job?",
+   "o": [
+    "accountant",
+    "lawyer",
+    "teacher"
+   ],
+   "why": "Katy is an accountant."
+  },
+  {
+   "q": "What is Vanessa's job?",
+   "o": [
+    "corporate lawyer",
+    "accountant",
+    "doctor"
+   ],
+   "why": "Vanessa works for a big company as a lawyer."
+  },
+  {
+   "q": "What can help you predict an article's content?",
+   "o": [
+    "title and photograph",
+    "page number",
+    "font size"
+   ],
+   "why": "These give clues to the topic."
+  },
+  {
+   "q": "What does 'addicted' mean?",
+   "o": [
+    "unable to stop",
+    "not interested",
+    "very tired"
+   ],
+   "why": "Addicted people cannot stop doing something."
+  },
+  {
+   "q": "How long did you have to skim the article?",
+   "o": [
+    "2 minutes",
+    "20 minutes",
+    "2 hours"
+   ],
+   "why": "Skimming is fast."
+  },
+  {
+   "q": "Why are the women's shopping habits a problem?",
+   "o": [
+    "they cannot control spending",
+    "they never shop",
+    "they only buy food"
+   ],
+   "why": "They are compulsive buyers."
+  },
+  {
+   "q": "Which is another word for a shopaholic?",
+   "o": [
+    "compulsive buyer",
+    "careful saver",
+    "shop manager"
+   ],
+   "why": "Both mean someone who cannot stop buying."
+  },
+  {
+   "q": "What is a 'salary'?",
+   "o": [
+    "money paid for work",
+    "a type of shop",
+    "a kind of food"
+   ],
+   "why": "A salary is the money you earn from your job."
+  },
+  {
+   "q": "Which title fits the article?",
+   "o": [
+    "The Dangers of Over-Shopping",
+    "How to Bake Bread",
+    "A Trip to the Moon"
+   ],
+   "why": "The article is about shopping too much."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Person addicted to shopping",
+   "a": "shopaholic",
+   "d": [
+    "accountant",
+    "lawyer",
+    "merchant"
+   ]
+  },
+  {
+   "q": "Katy's job",
+   "a": "accountant",
+   "d": [
+    "lawyer",
+    "pilot",
+    "chef"
+   ]
+  },
+  {
+   "q": "Vanessa's job",
+   "a": "corporate lawyer",
+   "d": [
+    "accountant",
+    "shop owner",
+    "teacher"
+   ]
+  },
+  {
+   "q": "Buyer who can't control it",
+   "a": "compulsive buyer",
+   "d": [
+    "careful buyer",
+    "slow buyer",
+    "rare buyer"
+   ]
+  },
+  {
+   "q": "Money you earn from a job",
+   "a": "salary",
+   "d": [
+    "debt",
+    "bargain",
+    "price"
+   ]
+  },
+  {
+   "q": "Belonging to a company",
+   "a": "corporate",
+   "d": [
+    "compulsive",
+    "addicted",
+    "ancient"
+   ]
+  },
+  {
+   "q": "Reading fast for gist",
+   "a": "skimming",
+   "d": [
+    "spelling",
+    "copying",
+    "writing"
+   ]
+  },
+  {
+   "q": "Clues for prediction",
+   "a": "title and photo",
+   "d": [
+    "page numbers",
+    "full stops",
+    "word count"
+   ]
+  },
+  {
+   "q": "Time limit for skimming",
+   "a": "2 minutes",
+   "d": [
+    "20 minutes",
+    "2 hours",
+    "1 day"
+   ]
+  },
+  {
+   "q": "Shopping too much",
+   "a": "over-shopping",
+   "d": [
+    "window-shopping",
+    "bargaining",
+    "saving"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is a shopaholic?",
+   "o": [
+    "someone who is a compulsive buyer and addicted to shopping",
+    "someone who works in a shop",
+    "someone who hates shopping",
+    "someone who sells online"
+   ],
+   "why": "The article defines a shopaholic this way."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two jobs do Vanessa and Katy have?",
+   "o": [
+    "corporate lawyer and accountant",
+    "teacher and doctor",
+    "pilot and chef",
+    "shopkeeper and driver"
+   ],
+   "why": "Vanessa is a lawyer and Katy is an accountant."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do we use to predict an article's content before reading?",
+   "o": [
+    "the title and the photograph",
+    "the last paragraph",
+    "the writer's age",
+    "the price of the magazine"
+   ],
+   "why": "These clues show the topic."
+  },
+  {
+   "lv": "التذكر",
+   "q": "According to the lesson discussion, what do men enjoy about shopping?",
+   "o": [
+    "the result",
+    "the whole experience",
+    "bargaining all day",
+    "window-shopping"
+   ],
+   "why": "Women enjoy the whole experience; men enjoy the result."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: A ______ is someone who is addicted to shopping.",
+   "o": [
+    "shopaholic",
+    "workaholic",
+    "chocoholic",
+    "consumer"
+   ],
+   "why": "'Shop' + '-holic' means addicted to shopping."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Sara buys new clothes every day and cannot stop, even when she has no money. She is a ______.",
+   "o": [
+    "compulsive buyer",
+    "careful shopper",
+    "shop assistant",
+    "bargain hunter"
+   ],
+   "why": "She cannot control her spending."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best way to find the meaning of 'shopaholic' in 2 minutes?",
+   "o": [
+    "skim the article",
+    "read every word twice",
+    "learn the article by heart",
+    "translate every line"
+   ],
+   "why": "Skimming finds the main idea fast."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the writer say shopping is a problem for the women?",
+   "o": [
+    "They cannot control how they spend money",
+    "They have no money at all",
+    "They do not like shopping",
+    "They only shop online"
+   ],
+   "why": "Being compulsive buyers is the problem."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which title would suit the article best?",
+   "o": [
+    "Shopping: A Modern Problem",
+    "The History of Oman Air",
+    "How to Make Jeans",
+    "Trade in Ancient Times"
+   ],
+   "why": "The article is about over-shopping."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What does the title 'Shop Till You Drop' suggest?",
+   "o": [
+    "shopping that is out of control",
+    "shopping only once a year",
+    "dropping prices in shops",
+    "working in a shop"
+   ],
+   "why": "It suggests shopping too much, until you are exhausted."
+  }
+ ]
+}

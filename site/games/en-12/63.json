@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Unit 2: Congestion – A Growing Issue (Grammar)",
+  "lesson": "Grammar Recall: present perfect and present perfect continuous; verb forms",
+  "outcomes": [
+    "Know when to use the present perfect and the present perfect continuous",
+    "Use 'for' with a length of time and 'since' with a starting point",
+    "Use both tenses to talk about congestion and everyday situations"
+  ],
+  "tf": [
+    { "s": "The present perfect continuous is formed with have/has been + verb-ing.", "t": true, "why": "For example: I have been waiting." },
+    { "s": "'I've been waiting for an hour' shows an action that is still continuing.", "t": true, "why": "The waiting started in the past and is still going on." },
+    { "s": "'I've lost my phone' focuses on how long the action lasted.", "t": false, "why": "It focuses on the result now: the phone is lost." },
+    { "s": "We use 'for' with a period of time, like 'for half an hour'.", "t": true, "why": "'For' + length of time." },
+    { "s": "We use 'since' with a period of time, like 'since two hours'.", "t": false, "why": "'Since' needs a starting point: since 3 o'clock." },
+    { "s": "'Where have you been?' is an example of the present perfect.", "t": true, "why": "have + been (past participle)." },
+    { "s": "Car ownership rose by 10% between 2013 and 2014 in the text.", "t": true, "why": "The text gives a 10% increase." },
+    { "s": "The text says there were more than 10,000 cars in 1970.", "t": false, "why": "The text says there were fewer than 1000 cars in 1970." },
+    { "s": "'Traffic has been flooding the city centre for months' shows a situation that started in the past and continues now.", "t": true, "why": "The present perfect continuous shows ongoing actions." },
+    { "s": "'I haven't been to Dubai for 2011' is correct.", "t": false, "why": "2011 is a starting point, so use 'since 2011'." }
+  ],
+  "boxes": [
+    { "q": "I haven't been to Dubai ___ 2011.", "o": ["since", "for", "from"], "why": "2011 is a starting point." },
+    { "q": "I was stuck in traffic ___ half an hour.", "o": ["for", "since", "at"], "why": "Half an hour is a length of time." },
+    { "q": "I've been waiting ___ 3 o'clock.", "o": ["since", "for", "during"], "why": "3 o'clock is when the waiting began." },
+    { "q": "Traffic ___ the city centre for months.", "o": ["has been flooding", "flooded yesterday", "floods tomorrow"], "why": "The action started in the past and continues." },
+    { "q": "Which word goes with a length of time?", "o": ["for", "since", "ago"], "why": "'For' + a period like two hours." },
+    { "q": "Present perfect continuous form:", "o": ["have/has been + -ing", "had + past participle", "will + verb"], "why": "For example: has been growing." },
+    { "q": "Which sentence shows a result now?", "o": ["I've lost my phone.", "I've been waiting for ages.", "I've been running all day."], "why": "The focus is on the result: no phone now." },
+    { "q": "By how much did car ownership rise (2013–2014)?", "o": ["10%", "50%", "1%"], "why": "The text gives a 10% rise." },
+    { "q": "Why do some drivers speed in the text?", "o": ["To make up time", "To save fuel", "To enjoy the view"], "why": "They are late because of traffic." },
+    { "q": "How many cars were there in 1970?", "o": ["Fewer than 1000", "Over 100,000", "Exactly 5000"], "why": "The text says fewer than 1000 cars." }
+  ],
+  "hunt": [
+    { "q": "___ half an hour", "a": "for", "d": ["since", "at", "ago"] },
+    { "q": "___ 3 o'clock", "a": "since", "d": ["for", "during", "ago"] },
+    { "q": "___ a long time", "a": "for", "d": ["since", "at", "on"] },
+    { "q": "___ 2011", "a": "since", "d": ["for", "during", "ago"] },
+    { "q": "I've been ___ all morning!", "a": "packing", "d": ["packed", "pack", "packs"] },
+    { "q": "Traffic has been ___ (flood)", "a": "flooding", "d": ["flooded", "floods", "flood"] },
+    { "q": "Car ownership rise, 2013–2014", "a": "10%", "d": ["1%", "50%", "100%"] },
+    { "q": "Cars in 1970: fewer than ...", "a": "1000", "d": ["100,000", "10,000", "50,000"] },
+    { "q": "Place of the college in the text", "a": "Al Hail", "d": ["Nizwa", "Sur", "Salalah"] },
+    { "q": "Car numbers have been ___", "a": "growing", "d": ["grown", "grow", "grows"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "How do we form the present perfect continuous?", "o": ["have/has been + verb-ing", "have/has + past participle", "was/were + verb-ing", "will have + verb"], "why": "For example: She has been working." },
+    { "lv": "التذكر", "q": "What is the difference between 'for' and 'since'?", "o": ["'For' + length of time; 'since' + starting point", "'For' + starting point; 'since' + length of time", "They mean exactly the same", "'Since' is only used in questions"], "why": "for two hours / since 2 o'clock." },
+    { "lv": "التذكر", "q": "Which example from the cartoon is in the present perfect?", "o": ["Where have you been?", "Where are you going?", "Where did you go?", "Where will you be?"], "why": "'have been' is the present perfect." },
+    { "lv": "التذكر", "q": "What does the text say drivers do to make up time?", "o": ["They speed", "They stop for coffee", "They take a train", "They walk"], "why": "Late drivers speed, which is dangerous." },
+    { "lv": "التطبيق", "q": "Your friend arrives very late. What do you say to show you have waited a long time?", "o": ["I've been waiting for you for over an hour!", "I wait for you yesterday.", "I will wait for you tomorrow.", "I waited you since an hour."], "why": "The present perfect continuous stresses the long, continuing action." },
+    { "lv": "التطبيق", "q": "Someone asks: 'Have you packed yet?' Which reply uses the present perfect continuous?", "o": ["I've been packing all morning!", "I pack every day.", "I packed last year.", "I will pack later."], "why": "have been + packing shows an action continuing up to now." },
+    { "lv": "التطبيق", "q": "Choose the correct sentence.", "o": ["Miss Smith has been getting up earlier for weeks.", "Miss Smith has been getting up earlier since weeks.", "Miss Smith have been get up earlier for weeks.", "Miss Smith is got up earlier since weeks."], "why": "has been + -ing, and 'for' + a length of time." },
+    { "lv": "التحليل", "q": "Why is 'has been growing' used for the number of cars?", "o": ["The growth began in the past and is still continuing", "The growth stopped long ago", "It will start next year", "It happened only once"], "why": "The present perfect continuous shows an ongoing process." },
+    { "lv": "التحليل", "q": "Compare 'I've been waiting for an hour' and 'I've lost my phone'. What is the main difference?", "o": ["The first shows duration; the second shows a result", "Both show only duration", "The first is past simple", "The second is future"], "why": "Continuous focuses on how long; simple focuses on the result." },
+    { "lv": "التحليل", "q": "Fewer than 1000 cars in 1970 and a 10% rise from 2013 to 2014. What do these facts show?", "o": ["The number of cars has been growing, causing more congestion", "Car numbers have been falling", "Congestion has disappeared", "Nobody drives any more"], "why": "More cars on the roads means more congestion." }
+  ]
+}

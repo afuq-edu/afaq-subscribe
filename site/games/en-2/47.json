@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Unit 4 – Lesson 1: Vocabulary and Grammar (The family)",
+  "outcomes": [
+    "I can name ten family words.",
+    "I can ask and answer: Who's this? It's my uncle.",
+    "I can read and write family words."
+  ],
+  "tf": [
+    {
+      "s": "My mum's dad is my grandad.",
+      "t": true,
+      "why": "Yes! Mum's dad is grandad."
+    },
+    {
+      "s": "My mum's sister is my aunt.",
+      "t": true,
+      "why": "Great! Mum's sister is my aunt."
+    },
+    {
+      "s": "My dad's mum is my sister.",
+      "t": false,
+      "why": "Dad's mum is my grandma."
+    },
+    {
+      "s": "We ask Who's this? about a person.",
+      "t": true,
+      "why": "Well done! Who's this? asks about a person."
+    },
+    {
+      "s": "My uncle is a girl.",
+      "t": false,
+      "why": "An uncle is a man. An aunt is a woman."
+    },
+    {
+      "s": "Grandma is spelled g-r-a-n-d-m-a.",
+      "t": true,
+      "why": "Yes! That is the right spelling."
+    },
+    {
+      "s": "My aunt's son is my brother.",
+      "t": false,
+      "why": "My aunt's son is my cousin."
+    },
+    {
+      "s": "We answer Who's this? with It's my dad.",
+      "t": true,
+      "why": "Great! It's my … tells who the person is."
+    },
+    {
+      "s": "Brother and sister are colour words.",
+      "t": false,
+      "why": "They are family words."
+    },
+    {
+      "s": "My grandad is my mum's brother.",
+      "t": false,
+      "why": "Mum's brother is my uncle."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Who is your mum's sister?",
+      "o": [
+        "my aunt",
+        "my uncle",
+        "my cousin"
+      ],
+      "why": "Mum's sister is my aunt."
+    },
+    {
+      "q": "Who is your mum's dad?",
+      "o": [
+        "my grandad",
+        "my brother",
+        "my uncle"
+      ],
+      "why": "Mum's dad is my grandad."
+    },
+    {
+      "q": "Who is your dad's brother?",
+      "o": [
+        "my uncle",
+        "my aunt",
+        "my sister"
+      ],
+      "why": "Dad's brother is my uncle."
+    },
+    {
+      "q": "Who's this? (grandma picture)",
+      "o": [
+        "It's my grandma.",
+        "It's my grandad.",
+        "It's my uncle."
+      ],
+      "why": "The picture shows grandma."
+    },
+    {
+      "q": "Complete: Who's ___? It's my sister.",
+      "o": [
+        "this",
+        "my",
+        "it"
+      ],
+      "why": "We say Who's this?"
+    },
+    {
+      "q": "Which is a family word?",
+      "o": [
+        "cousin",
+        "knee",
+        "clap"
+      ],
+      "why": "A cousin is in our family."
+    },
+    {
+      "q": "Which word is spelled right?",
+      "o": [
+        "aunt",
+        "ant",
+        "aunnt"
+      ],
+      "why": "a-u-n-t spells aunt."
+    },
+    {
+      "q": "Who is your uncle's son?",
+      "o": [
+        "my cousin",
+        "my dad",
+        "my grandad"
+      ],
+      "why": "My uncle's child is my cousin."
+    },
+    {
+      "q": "Who is your dad's mum?",
+      "o": [
+        "my grandma",
+        "my aunt",
+        "my sister"
+      ],
+      "why": "Dad's mum is my grandma."
+    },
+    {
+      "q": "Where's Fatma?",
+      "o": [
+        "With Sami and Jack.",
+        "It's my aunt.",
+        "Yes, it is."
+      ],
+      "why": "In the picture, Fatma is with Sami and Jack."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Mum's dad",
+      "a": "grandad",
+      "d": [
+        "uncle",
+        "brother",
+        "cousin"
+      ]
+    },
+    {
+      "q": "Mum's mum",
+      "a": "grandma",
+      "d": [
+        "aunt",
+        "sister",
+        "cousin"
+      ]
+    },
+    {
+      "q": "Dad's sister",
+      "a": "aunt",
+      "d": [
+        "uncle",
+        "grandad",
+        "brother"
+      ]
+    },
+    {
+      "q": "Mum's brother",
+      "a": "uncle",
+      "d": [
+        "aunt",
+        "grandma",
+        "sister"
+      ]
+    },
+    {
+      "q": "My aunt's child",
+      "a": "cousin",
+      "d": [
+        "uncle",
+        "grandad",
+        "dad"
+      ]
+    },
+    {
+      "q": "Who's ___? It's my mum.",
+      "a": "this",
+      "d": [
+        "my",
+        "it",
+        "he"
+      ]
+    },
+    {
+      "q": "Find the family word (b…).",
+      "a": "brother",
+      "d": [
+        "blue",
+        "bend",
+        "bike"
+      ]
+    },
+    {
+      "q": "Find the family word (s…).",
+      "a": "sister",
+      "d": [
+        "stamp",
+        "seven",
+        "soil"
+      ]
+    },
+    {
+      "q": "Spell it: g-r-a-n-d-m-a",
+      "a": "grandma",
+      "d": [
+        "grandad",
+        "granma",
+        "grandam"
+      ]
+    },
+    {
+      "q": "In the middle of a family tree",
+      "a": "me",
+      "d": [
+        "uncle",
+        "aunt",
+        "cousin"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which word is a family word?",
+      "o": [
+        "uncle",
+        "head",
+        "stretch",
+        "coin"
+      ],
+      "why": "Uncle is a family word."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Who's this? (picture of a grandad)",
+      "o": [
+        "It's my grandad.",
+        "It's my sister.",
+        "It's my aunt.",
+        "It's my cousin."
+      ],
+      "why": "The picture shows grandad."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What do we ask to know a person?",
+      "o": [
+        "Who's this?",
+        "How many?",
+        "What colour?",
+        "Touch your head!"
+      ],
+      "why": "Who's this? asks about a person."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word is for a woman?",
+      "o": [
+        "aunt",
+        "uncle",
+        "grandad",
+        "brother"
+      ],
+      "why": "An aunt is a woman."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your friend points to your brother. What do you say?",
+      "o": [
+        "It's my brother.",
+        "It's my sister.",
+        "It's my grandma.",
+        "It's a brother my."
+      ],
+      "why": "We say It's my brother."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Complete: Who's this? It's my ___. (dad's sister)",
+      "o": [
+        "aunt",
+        "uncle",
+        "cousin",
+        "grandad"
+      ],
+      "why": "Dad's sister is my aunt."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Write the word: He's mum's dad.",
+      "o": [
+        "grandad",
+        "uncle",
+        "brother",
+        "cousin"
+      ],
+      "why": "Mum's dad is grandad."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word is the odd one out?",
+      "o": [
+        "knee",
+        "aunt",
+        "uncle",
+        "cousin"
+      ],
+      "why": "Knee is a body word; the others are family words."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Sara says: It's my uncle. Who is it?",
+      "o": [
+        "Her mum's or dad's brother",
+        "Her mum's sister",
+        "Her grandma",
+        "Her baby sister"
+      ],
+      "why": "An uncle is mum's or dad's brother."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which sentence is right?",
+      "o": [
+        "Who's this? It's my cousin.",
+        "Who's this? It's cousin my.",
+        "Who this? It's my cousin.",
+        "Who's this? My it's cousin."
+      ],
+      "why": "We say Who's this? It's my cousin."
+    }
+  ]
+}

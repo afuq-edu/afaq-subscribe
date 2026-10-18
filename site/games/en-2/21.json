@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 2: Where’s my pen?",
+  "lesson": "Unit 2 – Lesson 5: Culture and Project (My school)",
+  "outcomes": [
+    "I can read a short text about Wafa's school.",
+    "I can name places in a school: classroom, playground, library.",
+    "I can talk about my school: This is the library. This is our classroom."
+  ],
+  "tf": [
+    {
+      "s": "Wafa's teacher is Mrs Asma.",
+      "t": true,
+      "why": "Yes! Mrs Asma is Wafa's teacher."
+    },
+    {
+      "s": "The playground in Wafa's school is big.",
+      "t": true,
+      "why": "Great! This is the playground. It's big!"
+    },
+    {
+      "s": "The playground in Wafa's school is small.",
+      "t": false,
+      "why": "The text says the playground is big."
+    },
+    {
+      "s": "We read books in the library.",
+      "t": true,
+      "why": "Yes! The library has books."
+    },
+    {
+      "s": "In the text, it's break time.",
+      "t": true,
+      "why": "Well done! It's break time!"
+    },
+    {
+      "s": "We play football in the library.",
+      "t": false,
+      "why": "We play in the playground. We read in the library."
+    },
+    {
+      "s": "Wafa's teacher is Mr Sami.",
+      "t": false,
+      "why": "Wafa's teacher is Mrs Asma."
+    },
+    {
+      "s": "A classroom is a place in a school.",
+      "t": true,
+      "why": "Yes! We learn in our classroom."
+    },
+    {
+      "s": "A library is a toy.",
+      "t": false,
+      "why": "A library is a place with books."
+    },
+    {
+      "s": "This is our classroom. talks about one person only.",
+      "t": false,
+      "why": "our is for me and my friends."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Who is Wafa's teacher?",
+      "o": [
+        "Mrs Asma",
+        "Lily",
+        "Fatma"
+      ],
+      "why": "Mrs Asma is her teacher."
+    },
+    {
+      "q": "Is the playground big or small?",
+      "o": [
+        "It's big.",
+        "It's small.",
+        "It's pink."
+      ],
+      "why": "This is the playground. It's big!"
+    },
+    {
+      "q": "Where can you read books at school?",
+      "o": [
+        "in the library",
+        "in the playground",
+        "on the roof"
+      ],
+      "why": "The library has books."
+    },
+    {
+      "q": "What time is it in the text?",
+      "o": [
+        "It's break time.",
+        "It's my birthday.",
+        "It's bedtime."
+      ],
+      "why": "It's break time!"
+    },
+    {
+      "q": "Where do we play at break time?",
+      "o": [
+        "in the playground",
+        "in the library",
+        "in the cupboard"
+      ],
+      "why": "We play in the playground."
+    },
+    {
+      "q": "Where do we learn with our teacher?",
+      "o": [
+        "in the classroom",
+        "in the playground",
+        "in the box"
+      ],
+      "why": "We learn in our classroom."
+    },
+    {
+      "q": "This is ... classroom. (me and my friends)",
+      "o": [
+        "our",
+        "his",
+        "her"
+      ],
+      "why": "our is for us."
+    },
+    {
+      "q": "Which is a place in a school?",
+      "o": [
+        "library",
+        "teddy",
+        "kite"
+      ],
+      "why": "A library is in a school."
+    },
+    {
+      "q": "In the project we make a...",
+      "o": [
+        "plan of our school",
+        "cake",
+        "kite"
+      ],
+      "why": "Groups make a plan of the school."
+    },
+    {
+      "q": "Label the room with books:",
+      "o": [
+        "This is the library.",
+        "This is the playground.",
+        "This is my teddy."
+      ],
+      "why": "The room with books is the library."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Wafa's teacher",
+      "a": "Mrs Asma",
+      "d": [
+        "Mrs Lily",
+        "Mrs Fatma",
+        "Mrs Polly"
+      ]
+    },
+    {
+      "q": "The playground is ...",
+      "a": "big",
+      "d": [
+        "small",
+        "sad",
+        "pink"
+      ]
+    },
+    {
+      "q": "We read books in the ...",
+      "a": "library",
+      "d": [
+        "playground",
+        "cupboard",
+        "roof"
+      ]
+    },
+    {
+      "q": "We play at break in the ...",
+      "a": "playground",
+      "d": [
+        "library",
+        "cupboard",
+        "pencil case"
+      ]
+    },
+    {
+      "q": "We learn in our ...",
+      "a": "classroom",
+      "d": [
+        "playground",
+        "cupboard",
+        "bag"
+      ]
+    },
+    {
+      "q": "It's ... time!",
+      "a": "break",
+      "d": [
+        "birth",
+        "bed",
+        "lake"
+      ]
+    },
+    {
+      "q": "This is ... classroom. (us)",
+      "a": "our",
+      "d": [
+        "his",
+        "her",
+        "their"
+      ]
+    },
+    {
+      "q": "She teaches us.",
+      "a": "teacher",
+      "d": [
+        "library",
+        "playground",
+        "classroom"
+      ]
+    },
+    {
+      "q": "Project: a ... of our school",
+      "a": "plan",
+      "d": [
+        "cake",
+        "kite",
+        "boat"
+      ]
+    },
+    {
+      "q": "Girl in the text",
+      "a": "Wafa",
+      "d": [
+        "Lily",
+        "Polly",
+        "Fatma"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Whose school do we read about?",
+      "o": [
+        "Wafa's school",
+        "Lily's school",
+        "Polly's school",
+        "Jack's school"
+      ],
+      "why": "The text is about Wafa's school."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which three places are in a school?",
+      "o": [
+        "classroom, playground, library",
+        "lake, road, boat",
+        "kite, bike, swing",
+        "cake, pie, soap"
+      ],
+      "why": "These are places in a school."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What does the text say about the playground?",
+      "o": [
+        "It's big!",
+        "It's small.",
+        "It's pink.",
+        "It's under the desk."
+      ],
+      "why": "This is the playground. It's big!"
+    },
+    {
+      "lv": "التذكر",
+      "q": "Who is Mrs Asma?",
+      "o": [
+        "Wafa's teacher",
+        "Wafa's cat",
+        "Wafa's friend Polly",
+        "Wafa's mum"
+      ],
+      "why": "Mrs Asma is Wafa's teacher."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You show your friends the library. You say...",
+      "o": [
+        "This is the library.",
+        "This is the playground.",
+        "It's break time.",
+        "Where's my pen?"
+      ],
+      "why": "This is the ... names a place."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You want to read a book at school. Where do you go?",
+      "o": [
+        "the library",
+        "the playground",
+        "the roof",
+        "the cupboard"
+      ],
+      "why": "Books are in the library."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your group shows your class. You say...",
+      "o": [
+        "This is our classroom.",
+        "This is their classroom.",
+        "These are our classroom.",
+        "This is his classroom."
+      ],
+      "why": "our is for your group."
+    },
+    {
+      "lv": "التحليل",
+      "q": "How is your school like Wafa's school?",
+      "o": [
+        "We have got a playground, too.",
+        "We have got a lake in class.",
+        "We have no classroom.",
+        "We have got a goat."
+      ],
+      "why": "Many schools have a playground."
+    },
+    {
+      "lv": "التحليل",
+      "q": "It's break time! Where are the children?",
+      "o": [
+        "In the playground",
+        "In the pencil case",
+        "Under the desk",
+        "In the cupboard"
+      ],
+      "why": "At break time children play in the playground."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which place is the odd one out?",
+      "o": [
+        "lake",
+        "classroom",
+        "library",
+        "playground"
+      ],
+      "why": "classroom, library and playground are in a school."
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Unit 3 – Lesson 2: Story \"The robot\"",
+ "outcomes": [
+  "I can follow the story \"The robot\" and name body parts.",
+  "I can describe Gymbot: It's got a white head.",
+  "I can say why exercise is good for us."
+ ],
+ "tf": [
+  {
+   "s": "In the story, there is a robot in the box.",
+   "t": true,
+   "why": "The children find robot parts in the box."
+  },
+  {
+   "s": "The robot's name is Gymbot.",
+   "t": true,
+   "why": "The robot is called Gymbot."
+  },
+  {
+   "s": "Gymbot has got a blue head.",
+   "t": false,
+   "why": "Gymbot has got a white head and a blue body."
+  },
+  {
+   "s": "Gymbot has got a blue body.",
+   "t": true,
+   "why": "Here's a white head and a blue body."
+  },
+  {
+   "s": "Gymbot has got ten fingers.",
+   "t": false,
+   "why": "Gymbot has got eight fingers."
+  },
+  {
+   "s": "Gymbot helps children do exercise.",
+   "t": true,
+   "why": "Gymbot says: Stand up! Move your legs!"
+  },
+  {
+   "s": "Watching TV is good exercise.",
+   "t": false,
+   "why": "Watching TV is not exercise; moving is."
+  },
+  {
+   "s": "Exercise is good for our bodies.",
+   "t": true,
+   "why": "Exercise keeps us fit and healthy."
+  },
+  {
+   "s": "\"Bend your knees and touch your toes!\" is an exercise.",
+   "t": true,
+   "why": "Bending and touching are body moves."
+  },
+  {
+   "s": "At the start, the robot is in one piece.",
+   "t": false,
+   "why": "The children put the robot together."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's in the box?",
+   "o": [
+    "a robot",
+    "a ball",
+    "a cat"
+   ],
+   "why": "The box has robot parts."
+  },
+  {
+   "q": "What colour is Gymbot's head?",
+   "o": [
+    "white",
+    "blue",
+    "red"
+   ],
+   "why": "Here's a white head."
+  },
+  {
+   "q": "What colour is Gymbot's body?",
+   "o": [
+    "blue",
+    "white",
+    "green"
+   ],
+   "why": "Here's a blue body."
+  },
+  {
+   "q": "How many fingers has Gymbot got?",
+   "o": [
+    "eight",
+    "ten",
+    "five"
+   ],
+   "why": "Gymbot has got eight fingers."
+  },
+  {
+   "q": "Let's put it ___!",
+   "o": [
+    "together",
+    "under",
+    "here"
+   ],
+   "why": "Let's put it together!"
+  },
+  {
+   "q": "Stamp your ___!",
+   "o": [
+    "feet",
+    "eyes",
+    "nose"
+   ],
+   "why": "Move your legs and stamp your feet!"
+  },
+  {
+   "q": "Bend your ___.",
+   "o": [
+    "knees",
+    "ears",
+    "hair"
+   ],
+   "why": "Bend your knees and touch your toes!"
+  },
+  {
+   "q": "Touch your ___!",
+   "o": [
+    "toes",
+    "cloud",
+    "book"
+   ],
+   "why": "Bend your knees and touch your toes!"
+  },
+  {
+   "q": "Which shows exercise?",
+   "o": [
+    "running",
+    "watching TV",
+    "sleeping"
+   ],
+   "why": "Running moves your body."
+  },
+  {
+   "q": "The value of the story:",
+   "o": [
+    "Do exercise.",
+    "Eat sweets.",
+    "Sleep all day."
+   ],
+   "why": "The story teaches: Do exercise."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The robot's name",
+   "a": "Gymbot",
+   "d": [
+    "Robo",
+    "Lily",
+    "Sami"
+   ]
+  },
+  {
+   "q": "Colour of Gymbot's head",
+   "a": "white",
+   "d": [
+    "blue",
+    "red",
+    "green"
+   ]
+  },
+  {
+   "q": "Colour of Gymbot's body",
+   "a": "blue",
+   "d": [
+    "white",
+    "pink",
+    "black"
+   ]
+  },
+  {
+   "q": "Gymbot's fingers",
+   "a": "eight",
+   "d": [
+    "ten",
+    "five",
+    "two"
+   ]
+  },
+  {
+   "q": "Stamp your ...",
+   "a": "feet",
+   "d": [
+    "eyes",
+    "ears",
+    "nose"
+   ]
+  },
+  {
+   "q": "Bend your ...",
+   "a": "knees",
+   "d": [
+    "eyes",
+    "ears",
+    "nose"
+   ]
+  },
+  {
+   "q": "Touch your ...",
+   "a": "toes",
+   "d": [
+    "sun",
+    "cloud",
+    "sky"
+   ]
+  },
+  {
+   "q": "Move your ...",
+   "a": "legs",
+   "d": [
+    "books",
+    "pens",
+    "bags"
+   ]
+  },
+  {
+   "q": "Robot parts are in the ...",
+   "a": "box",
+   "d": [
+    "bag",
+    "pot",
+    "tree"
+   ]
+  },
+  {
+   "q": "Value: Do ...",
+   "a": "exercise",
+   "d": [
+    "homework",
+    "nothing",
+    "TV"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the robot's name?",
+   "o": [
+    "Gymbot",
+    "Robbie",
+    "Polly",
+    "Jack"
+   ],
+   "why": "The robot is called Gymbot."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which picture comes first in the story?",
+   "o": [
+    "the box with the robot parts",
+    "the children exercise",
+    "Gymbot says Stand up",
+    "they touch their toes"
+   ],
+   "why": "The story starts with the box."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do the children say about the parts?",
+   "o": [
+    "Let's put it together!",
+    "Let's go home!",
+    "Let's eat!",
+    "Let's sleep!"
+   ],
+   "why": "They put the robot together."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the value of the story?",
+   "o": [
+    "Do exercise.",
+    "Share your toys.",
+    "Say sorry.",
+    "Be quiet."
+   ],
+   "why": "The story is about doing exercise."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Gymbot says: Bend your knees. What do you do?",
+   "o": [
+    "bend my knees",
+    "touch my nose",
+    "clap my hands",
+    "close my eyes"
+   ],
+   "why": "Bend your knees means move your knees down."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Describe Gymbot's body.",
+   "o": [
+    "It's got a blue body.",
+    "It's got a white body.",
+    "It's got a red body.",
+    "It's got a green body."
+   ],
+   "why": "Gymbot has got a blue body."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which picture shows healthy exercise?",
+   "o": [
+    "a girl running",
+    "a boy watching TV",
+    "a boy sleeping",
+    "a girl eating sweets"
+   ],
+   "why": "Running is exercise."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Gymbot a good robot for children?",
+   "o": [
+    "It helps them do exercise.",
+    "It watches TV with them.",
+    "It eats their food.",
+    "It sleeps all day."
+   ],
+   "why": "Gymbot helps children move and keep fit."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A boy is watching TV. Is he doing exercise?",
+   "o": [
+    "No, he isn't moving his body.",
+    "Yes, he is running.",
+    "Yes, he is stamping his feet.",
+    "Yes, he is bending his knees."
+   ],
+   "why": "Exercise means moving your body."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is exercise good for us?",
+   "o": [
+    "It keeps our bodies fit.",
+    "It makes us sleepy.",
+    "It makes us sad.",
+    "It hurts our bodies."
+   ],
+   "why": "Exercise helps us stay fit and healthy."
+  }
+ ]
+}

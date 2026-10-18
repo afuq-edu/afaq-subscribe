@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 3 - Unit 3: Destinations",
+ "outcomes": [
+  "Match holiday brochures to the right holidaymakers",
+  "Learn holiday vocabulary in phrases",
+  "Ask and answer questions about a hotel"
+ ],
+ "tf": [
+  {
+   "s": "A honeymoon couple would like a secluded, romantic place.",
+   "t": true,
+   "why": "Yes! They want a quiet, private place."
+  },
+  {
+   "s": "'Lively' suits a brochure for friends in their early twenties in a big city.",
+   "t": true,
+   "why": "Right! Young friends like lively places."
+  },
+  {
+   "s": "'Unspoilt' means damaged by tourism.",
+   "t": false,
+   "why": "'Unspoilt' means natural and not damaged by tourism."
+  },
+  {
+   "s": "A middle-aged professional couple may like first-class, luxurious hotels.",
+   "t": true,
+   "why": "Correct! They want top quality and comfort."
+  },
+  {
+   "s": "'Rolling sand dunes' describes the Wahiba Sands.",
+   "t": true,
+   "why": "Good! The Wahiba Sands have rolling dunes."
+  },
+  {
+   "s": "Wooden dhows are traditional wooden boats.",
+   "t": true,
+   "why": "Yes! Sur is famous for its dhows."
+  },
+  {
+   "s": "Learning a single word is always easier to remember than learning a phrase.",
+   "t": false,
+   "why": "Phrases like 'rolling sand dunes' are easier to remember."
+  },
+  {
+   "s": "'Expert craftsmen' are people with great skill in making things by hand.",
+   "t": true,
+   "why": "Right! They make traditional handicrafts."
+  },
+  {
+   "s": "'Secluded' means busy and crowded.",
+   "t": false,
+   "why": "'Secluded' means quiet and private."
+  },
+  {
+   "s": "A family with children might want a swimming pool and a kids' club.",
+   "t": true,
+   "why": "Yes, these facilities suit families."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which group would like a secluded, romantic place?",
+   "o": [
+    "a honeymoon couple",
+    "friends in their early twenties",
+    "a school class"
+   ],
+   "why": "Honeymoon couples want privacy."
+  },
+  {
+   "q": "Which adjective suits a big city holiday for young friends?",
+   "o": [
+    "lively",
+    "secluded",
+    "unspoilt"
+   ],
+   "why": "Lively places have lots to do."
+  },
+  {
+   "q": "What does 'unspoilt' mean?",
+   "o": [
+    "natural and not damaged by tourism",
+    "very expensive",
+    "busy and noisy"
+   ],
+   "why": "Unspoilt places are still natural."
+  },
+  {
+   "q": "Which phrase describes the Wahiba Sands?",
+   "o": [
+    "rolling sand dunes",
+    "busy souks",
+    "wooden dhows"
+   ],
+   "why": "The Wahiba Sands are a desert."
+  },
+  {
+   "q": "What are 'wooden dhows'?",
+   "o": [
+    "traditional wooden boats",
+    "old forts",
+    "sand dunes"
+   ],
+   "why": "Dhows are traditional boats."
+  },
+  {
+   "q": "Where in Oman can you see old forts?",
+   "o": [
+    "Nizwa",
+    "the Wahiba Sands",
+    "the open sea"
+   ],
+   "why": "Nizwa, Bahla and Nakhal have old forts."
+  },
+  {
+   "q": "Complete: 'Does your hotel have a swimming ___?'",
+   "o": [
+    "pool",
+    "beach",
+    "dune"
+   ],
+   "why": "A swimming pool is a hotel facility."
+  },
+  {
+   "q": "Which phrase suits Muttrah?",
+   "o": [
+    "busy souks",
+    "rolling sand dunes",
+    "high mountains"
+   ],
+   "why": "Muttrah is famous for its souk."
+  },
+  {
+   "q": "What are 'facilities' in a hotel?",
+   "o": [
+    "services like a pool and restaurants",
+    "the hotel's owner",
+    "the guests"
+   ],
+   "why": "Facilities make a stay comfortable."
+  },
+  {
+   "q": "Which question asks about a hotel's location?",
+   "o": [
+    "Is the hotel near the beach?",
+    "How old are you?",
+    "What is your name?"
+   ],
+   "why": "Location means where the hotel is."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Quiet and private",
+   "a": "secluded",
+   "d": [
+    "lively",
+    "vibrant",
+    "busy"
+   ]
+  },
+  {
+   "q": "Natural, not damaged",
+   "a": "unspoilt",
+   "d": [
+    "luxurious",
+    "crowded",
+    "modern"
+   ]
+  },
+  {
+   "q": "Full of life and activity",
+   "a": "lively",
+   "d": [
+    "secluded",
+    "private",
+    "quiet"
+   ]
+  },
+  {
+   "q": "Holiday after a wedding",
+   "a": "honeymoon",
+   "d": [
+    "cruise",
+    "safari",
+    "camping"
+   ]
+  },
+  {
+   "q": "___ sand dunes",
+   "a": "rolling",
+   "d": [
+    "wooden",
+    "busy",
+    "expert"
+   ]
+  },
+  {
+   "q": "Busy ___ in Muttrah",
+   "a": "souks",
+   "d": [
+    "dunes",
+    "dhows",
+    "mountains"
+   ]
+  },
+  {
+   "q": "Wooden ___ in Sur",
+   "a": "dhows",
+   "d": [
+    "forts",
+    "souks",
+    "dunes"
+   ]
+  },
+  {
+   "q": "Expert ___ make handicrafts",
+   "a": "craftsmen",
+   "d": [
+    "tourists",
+    "students",
+    "drivers"
+   ]
+  },
+  {
+   "q": "Place in Oman with sand dunes",
+   "a": "Wahiba Sands",
+   "d": [
+    "Muttrah",
+    "Nakhal",
+    "Bahla"
+   ]
+  },
+  {
+   "q": "Complete: swimming ___",
+   "a": "pool",
+   "d": [
+    "dune",
+    "fort",
+    "souk"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does 'luxurious' describe?",
+   "o": [
+    "something very comfortable and expensive",
+    "something old and broken",
+    "something small and cheap",
+    "something wild and natural"
+   ],
+   "why": "Luxury hotels are top quality."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase from the lesson describes skilled people?",
+   "o": [
+    "expert craftsmen",
+    "rolling sand dunes",
+    "busy souks",
+    "wooden dhows"
+   ],
+   "why": "Craftsmen make things by hand."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which adjectives are in the holiday adjective list?",
+   "o": [
+    "exotic, cosmopolitan and romantic",
+    "angry, lazy and rude",
+    "cold, wet and dark",
+    "slow, boring and noisy"
+   ],
+   "why": "These words make holidays sound attractive."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these are hotel facilities?",
+   "o": [
+    "a swimming pool and sports facilities",
+    "sand dunes and mountains",
+    "wooden dhows and forts",
+    "souks and museums"
+   ],
+   "why": "Facilities are services a hotel offers its guests."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best sentence about Muttrah.",
+   "o": [
+    "Muttrah has busy souks and traditional handicrafts.",
+    "Muttrah has rolling sand dunes and high mountains.",
+    "Muttrah has a variety of wildlife in the desert.",
+    "Muttrah is a secluded honeymoon island."
+   ],
+   "why": "Use phrases that match the place."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "An elderly couple are choosing a hotel. What may they want most?",
+   "o": [
+    "quiet rooms, easy access and local transport",
+    "loud music all night",
+    "bungee jumping",
+    "a kids' club"
+   ],
+   "why": "Older guests often want comfort and easy travel."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which adjective is best in a brochure for an adventure holiday?",
+   "o": [
+    "adventurous",
+    "secluded",
+    "romantic",
+    "first-class"
+   ],
+   "why": "Adventurous suits an exciting holiday."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'rolling sand dunes' easier to remember than 'dunes'?",
+   "o": [
+    "The phrase gives a picture and context",
+    "It is shorter",
+    "It has no adjective",
+    "It is a verb"
+   ],
+   "why": "Phrases help us remember words together."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why would a brochure for two friends seeking an unusual natural environment use 'unspoilt'?",
+   "o": [
+    "They want nature that is not damaged by tourism",
+    "They want a busy city",
+    "They want five-star shopping",
+    "They want a crowded beach"
+   ],
+   "why": "Unspoilt places are natural and unusual."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why would friends in their early twenties prefer a 'vibrant' city to a 'secluded' place?",
+   "o": [
+    "They want lots of activity and fun",
+    "They want to be alone and quiet",
+    "They want to sleep all day",
+    "They want a honeymoon"
+   ],
+   "why": "Vibrant places are full of life."
+  }
+ ]
+}

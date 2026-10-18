@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: A Warm Welcome (Reading)",
+ "lesson": "Vocabulary development and Time to Talk: a place I would like to visit",
+ "outcomes": [
+  "Match new words (wildlife, explore, awesome, canyon, trek, proud) to their meanings",
+  "Use the new words in sentences",
+  "Describe a place you would like to visit and answer questions"
+ ],
+ "tf": [
+  {
+   "s": "'Trek' means to go on a long, difficult walk.",
+   "t": true,
+   "why": "A trek is a hard journey on foot."
+  },
+  {
+   "s": "A 'canyon' is a long deep valley with steep sides.",
+   "t": true,
+   "why": "Canyons have steep rock walls."
+  },
+  {
+   "s": "'Wildlife' means pets that live in people's homes.",
+   "t": false,
+   "why": "Wildlife is animals and plants living in nature."
+  },
+  {
+   "s": "'Explore' means to travel around a place to learn about it.",
+   "t": true,
+   "why": "Explorers discover new places."
+  },
+  {
+   "s": "'Awesome' means very boring.",
+   "t": false,
+   "why": "Awesome means extremely impressive."
+  },
+  {
+   "s": "'Proud' means pleased about something you or others have done.",
+   "t": true,
+   "why": "You feel proud after a success."
+  },
+  {
+   "s": "Taking notes before speaking helps you remember your ideas.",
+   "t": true,
+   "why": "Notes help you speak fluently."
+  },
+  {
+   "s": "In Time to Talk, listeners should stay silent and ask no questions.",
+   "t": false,
+   "why": "Listeners ask questions about the place."
+  },
+  {
+   "s": "You should guess meanings from context before checking a dictionary.",
+   "t": true,
+   "why": "Guess first, then check."
+  },
+  {
+   "s": "A canyon is a tall mountain.",
+   "t": false,
+   "why": "A canyon is a deep valley."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: 'We went on a three-day ___ through the mountains.'",
+   "o": [
+    "trek",
+    "canyon",
+    "wildlife"
+   ],
+   "why": "A trek is a long, difficult walk."
+  },
+  {
+   "q": "Complete: 'The view from Jebel Shams is ___.'",
+   "o": [
+    "awesome",
+    "boring",
+    "tiny"
+   ],
+   "why": "Awesome means extremely impressive."
+  },
+  {
+   "q": "Complete: 'Oman has many kinds of ___, such as turtles and birds.'",
+   "o": [
+    "wildlife",
+    "canyons",
+    "treks"
+   ],
+   "why": "Wildlife means animals in nature."
+  },
+  {
+   "q": "Complete: 'I would love to ___ the old villages.'",
+   "o": [
+    "explore",
+    "ignore",
+    "avoid"
+   ],
+   "why": "Explore means travel around to learn."
+  },
+  {
+   "q": "Complete: 'Her parents were ___ when she won the prize.'",
+   "o": [
+    "proud",
+    "awesome",
+    "wild"
+   ],
+   "why": "Parents feel proud of their children's success."
+  },
+  {
+   "q": "Complete: 'The river cut a deep ___ through the rock.'",
+   "o": [
+    "canyon",
+    "trek",
+    "wildlife"
+   ],
+   "why": "A canyon is a deep valley."
+  },
+  {
+   "q": "Where could you go on a trek?",
+   "o": [
+    "the mountains",
+    "a swimming pool",
+    "a lift"
+   ],
+   "why": "Treks are long walks in nature."
+  },
+  {
+   "q": "Why take notes before speaking?",
+   "o": [
+    "to speak fluently",
+    "to read them word by word",
+    "to avoid speaking"
+   ],
+   "why": "Notes remind you of your ideas."
+  },
+  {
+   "q": "Which is a good question to ask about a place?",
+   "o": [
+    "What can visitors do there?",
+    "What is your name?",
+    "What time is it?"
+   ],
+   "why": "It asks for information about the place."
+  },
+  {
+   "q": "In Time to Talk, how many students are in each group?",
+   "o": [
+    "four",
+    "two",
+    "ten"
+   ],
+   "why": "Students work in groups of four."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "A long, difficult walk",
+   "a": "trek",
+   "d": [
+    "canyon",
+    "wildlife",
+    "view"
+   ]
+  },
+  {
+   "q": "Deep valley with steep sides",
+   "a": "canyon",
+   "d": [
+    "trek",
+    "beach",
+    "plain"
+   ]
+  },
+  {
+   "q": "Animals and plants in nature",
+   "a": "wildlife",
+   "d": [
+    "canyon",
+    "trek",
+    "traffic"
+   ]
+  },
+  {
+   "q": "Travel around to learn about a place",
+   "a": "explore",
+   "d": [
+    "ignore",
+    "stay",
+    "sleep"
+   ]
+  },
+  {
+   "q": "Extremely impressive",
+   "a": "awesome",
+   "d": [
+    "boring",
+    "ugly",
+    "ordinary"
+   ]
+  },
+  {
+   "q": "Pleased with what you did",
+   "a": "proud",
+   "d": [
+    "bored",
+    "ashamed",
+    "tired"
+   ]
+  },
+  {
+   "q": "Past simple of 'explore'",
+   "a": "explored",
+   "d": [
+    "exploded",
+    "explores",
+    "exploring"
+   ]
+  },
+  {
+   "q": "Notes help you speak ...",
+   "a": "fluently",
+   "d": [
+    "slowly",
+    "never",
+    "badly"
+   ]
+  },
+  {
+   "q": "Listeners in Time to Talk ...",
+   "a": "ask questions",
+   "d": [
+    "sleep",
+    "leave",
+    "write essays"
+   ]
+  },
+  {
+   "q": "Students in each group",
+   "a": "four",
+   "d": [
+    "two",
+    "six",
+    "ten"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'a long deep valley with steep sides'?",
+   "o": [
+    "canyon",
+    "trek",
+    "wildlife",
+    "explore"
+   ],
+   "why": "Canyons have steep sides."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'explore' mean?",
+   "o": [
+    "Travel around a place to learn about it",
+    "Stay at home",
+    "Build a house",
+    "Cook a meal"
+   ],
+   "why": "Explorers discover new places."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do students do first in the matching activity?",
+   "o": [
+    "Guess meanings from context, then check in dictionaries",
+    "Copy meanings from friends",
+    "Skip the words",
+    "Draw pictures"
+   ],
+   "why": "Guessing first builds your skills."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do listeners do in Time to Talk?",
+   "o": [
+    "Ask questions about the place",
+    "Leave the room",
+    "Write an essay",
+    "Sleep"
+   ],
+   "why": "Questions keep the talk going."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses 'awesome' correctly?",
+   "o": [
+    "The view from the mountain was awesome.",
+    "I awesome the village.",
+    "She is very awesome tired.",
+    "We awesome to school."
+   ],
+   "why": "Awesome is an adjective describing something impressive."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses 'proud' correctly?",
+   "o": [
+    "I am proud of my brother's success.",
+    "I proud the canyon.",
+    "The canyon was proud deep.",
+    "We proud to the market."
+   ],
+   "why": "We say 'proud of' someone or something."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Sara saw a deep valley with steep rock walls. What did she see?",
+   "o": [
+    "A canyon",
+    "A trek",
+    "Wildlife",
+    "A beach"
+   ],
+   "why": "That is the meaning of canyon."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to guess meanings before using a dictionary?",
+   "o": [
+    "It trains you to use context clues",
+    "Dictionaries are always wrong",
+    "You should never check",
+    "Context never helps"
+   ],
+   "why": "Context skills help you read faster."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do notes help you speak fluently?",
+   "o": [
+    "They remind you of your ideas so you don't stop",
+    "They let you read a full essay",
+    "They make you speak slowly",
+    "They replace speaking"
+   ],
+   "why": "Key words keep your talk moving."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might someone feel proud after a trek?",
+   "o": [
+    "They completed a long, difficult walk",
+    "It was very easy",
+    "They stayed at home",
+    "They gave up halfway"
+   ],
+   "why": "Finishing something hard makes you proud."
+  }
+ ]
+}

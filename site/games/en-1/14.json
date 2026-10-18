@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الأول",
+  "unit": "Unit 2: My school bag",
+  "lesson": "Lesson 6: Review + Sounds review i, m, h, c, k, ck, r",
+  "outcomes": [
+    "I can find the first sound of Unit 2 words.",
+    "I can write i, m, h, c, k, ck and r for pictures.",
+    "I can blend and write cat, map, rip, hat, sock and duck."
+  ],
+  "tf": [
+    {"s": "Mug starts with /m/.", "t": true, "why": "Yes! m, m, mug."},
+    {"s": "Hot, hill and run all start with /h/.", "t": false, "why": "Run starts with /r/. It is the odd one out."},
+    {"s": "Kite starts with the letter k.", "t": true, "why": "Yes! k, k, kite."},
+    {"s": "Igloo starts with the letter i.", "t": true, "why": "Great! i, i, igloo."},
+    {"s": "Sock ends with the letters ck.", "t": true, "why": "Yes! s-o-ck, sock."},
+    {"s": "Red starts with the letter h.", "t": false, "why": "Red starts with r."},
+    {"s": "r – i – p makes rip.", "t": true, "why": "Well done! r-i-p, rip."},
+    {"s": "m – a – p makes mat.", "t": false, "why": "m-a-p makes map."},
+    {"s": "Hen starts with /m/.", "t": false, "why": "Hen starts with /h/."},
+    {"s": "Moon starts with /n/.", "t": false, "why": "Moon starts with /m/."}
+  ],
+  "boxes": [
+    {"q": "First letter of hen?", "o": ["h", "m", "r"], "why": "Hen starts with h."},
+    {"q": "First letter of moon?", "o": ["m", "n", "h"], "why": "Moon starts with m."},
+    {"q": "First letter of ink?", "o": ["i", "a", "k"], "why": "Ink starts with i."},
+    {"q": "First letter of rug?", "o": ["r", "m", "c"], "why": "Rug starts with r."},
+    {"q": "Odd one out: hot, hill, run", "o": ["run", "hot", "hill"], "why": "Run starts with /r/; the others with /h/."},
+    {"q": "Blend: c – a – t", "o": ["cat", "hat", "cap"], "why": "c-a-t, cat!"},
+    {"q": "Blend: h – a – t", "o": ["hat", "hit", "cat"], "why": "h-a-t, hat!"},
+    {"q": "Order the letters: p, r, i", "o": ["rip", "pir", "irp"], "why": "r-i-p, rip!"},
+    {"q": "Which word ends with ck?", "o": ["duck", "cat", "king"], "why": "Duck ends with ck."},
+    {"q": "Write the word: s – o – ck", "o": ["sock", "sack", "rock"], "why": "s-o-ck, sock!"}
+  ],
+  "hunt": [
+    {"q": "Catch the /ɪ/ word.", "a": "insect", "d": ["mouse", "horse", "rug"]},
+    {"q": "Catch the /m/ word.", "a": "milk", "d": ["ink", "hill", "kite"]},
+    {"q": "Catch the /h/ word.", "a": "house", "d": ["moon", "rock", "cap"]},
+    {"q": "Catch the /r/ word.", "a": "rock", "d": ["sock", "duck", "milk"]},
+    {"q": "Catch the word with k first.", "a": "king", "d": ["cap", "cat", "cut"]},
+    {"q": "Catch the word with c first.", "a": "cap", "d": ["kite", "king", "duck"]},
+    {"q": "Catch the word that ends in ck.", "a": "tick", "d": ["tin", "hit", "rip"]},
+    {"q": "Blend: m – a – p", "a": "map", "d": ["cap", "mat", "nap"]},
+    {"q": "Blend: r – i – p", "a": "rip", "d": ["hip", "tip", "rap"]},
+    {"q": "Order the letters: a, t, c", "a": "cat", "d": ["act", "tac", "cta"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which sounds did we learn in Unit 2?", "o": ["i, m, h, c, k, ck, r", "s, a, t, p, n", "b, d, e, f, g", "o, u, l, w, y"], "why": "Unit 2 sounds: i, m, h, c, k, ck, r."},
+    {"lv": "التذكر", "q": "Which of these words starts with /r/?", "o": ["red", "hen", "mug", "ink"], "why": "r, r, red!"},
+    {"lv": "التذكر", "q": "Which letters say /k/?", "o": ["c, k and ck", "h and m", "r and i", "m and n"], "why": "c, k and ck all say /k/."},
+    {"lv": "التذكر", "q": "Which word starts with the letter h?", "o": ["horse", "mouse", "rabbit", "igloo"], "why": "Horse starts with h."},
+    {"lv": "التطبيق", "q": "Write the missing letter: _ilk", "o": ["m", "h", "r", "k"], "why": "m + ilk = milk."},
+    {"lv": "التطبيق", "q": "Write the missing letter: _ouse (a home)", "o": ["h", "m", "r", "c"], "why": "h + ouse = house."},
+    {"lv": "التطبيق", "q": "Blend and choose: s – a – ck", "o": ["sack", "sock", "sick", "tick"], "why": "s-a-ck, sack!"},
+    {"lv": "التحليل", "q": "Odd one out: mug, moon, cap. Which one and why?", "o": ["cap – it starts with /k/", "mug – it starts with /k/", "moon – it starts with /h/", "cap – it starts with /m/"], "why": "Mug and moon start with /m/; cap starts with /k/."},
+    {"lv": "التحليل", "q": "Which two words start with the same sound?", "o": ["kite and cap", "kite and hat", "mug and rug", "ink and hen"], "why": "Kite and cap both start with /k/."},
+    {"lv": "التحليل", "q": "Hat and hit. What is different?", "o": ["The middle sound", "The first sound", "The last sound", "Nothing"], "why": "h-a-t and h-i-t: only the middle sound changes."}
+  ]
+}

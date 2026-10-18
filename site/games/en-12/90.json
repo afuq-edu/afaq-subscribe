@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 2: Work and Travel (Grammar)",
+ "lesson": "Lead-in: jobs in tourism and hospitality; reading five job texts / Grammar Recall: first conditional and first conditional with modals",
+ "outcomes": [
+  "Name skills and responsibilities of jobs in tourism",
+  "Form and use the first conditional",
+  "Use modals like may, might and should in conditionals"
+ ],
+ "tf": [
+  {
+   "s": "Communication and languages are useful skills for a tour guide.",
+   "t": true,
+   "why": "Yes, tour guides talk to many visitors."
+  },
+  {
+   "s": "Every job in tourism needs exactly the same skills.",
+   "t": false,
+   "why": "Each job needs its own skills and qualities."
+  },
+  {
+   "s": "The first conditional talks about possible future situations.",
+   "t": true,
+   "why": "Right, for example: If I study, I will pass."
+  },
+  {
+   "s": "'Might' and 'may' can replace 'will' to show possibility.",
+   "t": true,
+   "why": "Correct, they show something is possible, not certain."
+  },
+  {
+   "s": "'If I get good marks, I will be very happy' is a first conditional sentence.",
+   "t": true,
+   "why": "Yes: if + present simple, will + base verb."
+  },
+  {
+   "s": "A travel agent's main job is cooking meals for hotel guests.",
+   "t": false,
+   "why": "Cooking is a chef's job."
+  },
+  {
+   "s": "A hotel manager must be patient to handle problems pleasantly.",
+   "t": true,
+   "why": "Yes, patience keeps staff and guests happy."
+  },
+  {
+   "s": "A tour guide helps tourists from different countries.",
+   "t": true,
+   "why": "That is why languages are important for guides."
+  },
+  {
+   "s": "'Can' is not a modal verb.",
+   "t": false,
+   "why": "'Can' is a modal verb, like may, might, could and should."
+  },
+  {
+   "s": "In the if clause of a first conditional we use 'will'.",
+   "t": false,
+   "why": "The if clause uses the present simple."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which job needs a passion for food and creating menus?",
+   "o": [
+    "Chef",
+    "Travel agent",
+    "Tour guide"
+   ],
+   "why": "Chefs create menus and cook."
+  },
+  {
+   "q": "Which skill does a travel agent need?",
+   "o": [
+    "Organisational skills",
+    "Cooking skills",
+    "Flying skills"
+   ],
+   "why": "Travel agents organise trips."
+  },
+  {
+   "q": "Complete: If you are tired, you ___ go to bed early.",
+   "o": [
+    "should",
+    "shoulds",
+    "will to"
+   ],
+   "why": "'Should' gives advice."
+  },
+  {
+   "q": "Complete: If he ___ (not work) harder, he will lose his job.",
+   "o": [
+    "doesn't work",
+    "won't work",
+    "didn't work"
+   ],
+   "why": "The if clause uses the present simple."
+  },
+  {
+   "q": "Which modal verb gives advice?",
+   "o": [
+    "should",
+    "might",
+    "will"
+   ],
+   "why": "We use 'should' for advice."
+  },
+  {
+   "q": "Which job is done on planes?",
+   "o": [
+    "Cabin crew",
+    "Hotel manager",
+    "Chef"
+   ],
+   "why": "Cabin crew look after passengers."
+  },
+  {
+   "q": "Which word is a modal verb?",
+   "o": [
+    "might",
+    "happy",
+    "job"
+   ],
+   "why": "'Might' is a modal verb."
+  },
+  {
+   "q": "Why does a tour guide need languages?",
+   "o": [
+    "To talk to tourists from different countries",
+    "To cook meals",
+    "To fly planes"
+   ],
+   "why": "Languages help guides communicate."
+  },
+  {
+   "q": "Which sentence is a first conditional?",
+   "o": [
+    "If it rains, we will stay home.",
+    "If it rained, we would stay home.",
+    "It rains every day."
+   ],
+   "why": "If + present simple, will + verb."
+  },
+  {
+   "q": "Which job books trips and holidays for people?",
+   "o": [
+    "Travel agent",
+    "Chef",
+    "Cabin crew"
+   ],
+   "why": "Travel agents plan and sell trips."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "This job creates menus",
+   "a": "Chef",
+   "d": [
+    "Tour guide",
+    "Travel agent",
+    "Cabin crew"
+   ]
+  },
+  {
+   "q": "This job works on an aircraft",
+   "a": "Cabin crew",
+   "d": [
+    "Chef",
+    "Tour guide",
+    "Hotel manager"
+   ]
+  },
+  {
+   "q": "This job shows tourists around",
+   "a": "Tour guide",
+   "d": [
+    "Chef",
+    "Hotel manager",
+    "Travel agent"
+   ]
+  },
+  {
+   "q": "Modal verb for advice",
+   "a": "should",
+   "d": [
+    "will",
+    "might",
+    "may"
+   ]
+  },
+  {
+   "q": "Modal verb for possibility",
+   "a": "might",
+   "d": [
+    "should",
+    "must",
+    "will"
+   ]
+  },
+  {
+   "q": "Tense in the if clause",
+   "a": "Present simple",
+   "d": [
+    "Past simple",
+    "Future simple",
+    "Past perfect"
+   ]
+  },
+  {
+   "q": "Verb in the main clause",
+   "a": "will + base verb",
+   "d": [
+    "would + verb",
+    "had + verb",
+    "was + verb"
+   ]
+  },
+  {
+   "q": "If it rains, we ___ stay in.",
+   "a": "will",
+   "d": [
+    "would",
+    "did",
+    "are"
+   ]
+  },
+  {
+   "q": "A skill a travel agent needs",
+   "a": "Sales skills",
+   "d": [
+    "Cooking",
+    "Flying",
+    "Swimming"
+   ]
+  },
+  {
+   "q": "This person runs a hotel",
+   "a": "Hotel manager",
+   "d": [
+    "Chef",
+    "Tour guide",
+    "Cabin crew"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How do we form the first conditional?",
+   "o": [
+    "If + present simple, will + base verb",
+    "If + past simple, would + base verb",
+    "If + will, present simple",
+    "If + past perfect, would have"
+   ],
+   "why": "This form talks about real future possibilities."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which job needs 'a mixture of skills' like a nurse, chef, waiter and cleaner?",
+   "o": [
+    "Airline cabin crew",
+    "Travel agent",
+    "Hotel manager",
+    "Tour guide"
+   ],
+   "why": "Cabin crew do many different tasks on a flight."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why must a hotel manager be patient?",
+   "o": [
+    "To handle problems pleasantly and keep staff and guests happy",
+    "To cook faster",
+    "To fly planes safely",
+    "To sell more tickets"
+   ],
+   "why": "Patience helps solve problems calmly."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which modal verbs can replace 'will' in the first conditional?",
+   "o": [
+    "may, might, could and should",
+    "did, does and do",
+    "was, were and been",
+    "had, has and have"
+   ],
+   "why": "Modals change the meaning, e.g. possibility or advice."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: If I study hard, I ___ a chef.",
+   "o": [
+    "will become",
+    "became",
+    "would became",
+    "becoming"
+   ],
+   "why": "Main clause: will + base verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best modal for advice: If you want to be healthy, you ___ eat more vegetables.",
+   "o": [
+    "should",
+    "might",
+    "will to",
+    "did"
+   ],
+   "why": "'Should' gives advice."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: If you visit Muscat next week, where ___ you go?",
+   "o": [
+    "might",
+    "did",
+    "were",
+    "had"
+   ],
+   "why": "'Might' asks about a possible plan."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between 'we will stay home' and 'we might stay home' after 'If it rains'?",
+   "o": [
+    "'Will' is certain; 'might' is only possible",
+    "They mean exactly the same",
+    "'Might' is more certain than 'will'",
+    "'Will' is for the past"
+   ],
+   "why": "'Might' shows possibility, not certainty."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which person would make the best cabin crew member?",
+   "o": [
+    "Someone who can give first aid, serve food and stay calm",
+    "Someone who only likes cooking alone",
+    "Someone who hates travelling",
+    "Someone who cannot talk to people"
+   ],
+   "why": "Cabin crew need a mixture of skills."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is NOT correct?",
+   "o": [
+    "If it will rain, we stay home.",
+    "If it rains, we will stay home.",
+    "If you are hungry, you can eat.",
+    "If she studies, she might pass."
+   ],
+   "why": "Do not use 'will' in the if clause."
+  }
+ ]
+}

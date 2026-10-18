@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Meg's Learning Club 1",
+ "lesson": "Lesson 1: CLIL Maths and Art – Numbers 1–6 and colours",
+ "outcomes": [
+  "I can count and say the numbers 1 to 6.",
+  "I can find the missing number from 1 to 6.",
+  "I can say red, yellow, blue, green, orange and brown."
+ ],
+ "tf": [
+  {
+   "s": "Five comes after four.",
+   "t": true,
+   "why": "Yes! 4, 5."
+  },
+  {
+   "s": "Three comes after five.",
+   "t": false,
+   "why": "Six comes after five."
+  },
+  {
+   "s": "In 1, 2, ?, 4, the missing number is three.",
+   "t": true,
+   "why": "Great! 1, 2, 3, 4."
+  },
+  {
+   "s": "Six is the biggest number from one to six.",
+   "t": true,
+   "why": "Yes! Six is the last one."
+  },
+  {
+   "s": "Two comes before one.",
+   "t": false,
+   "why": "One comes before two."
+  },
+  {
+   "s": "Red, blue and green are colours.",
+   "t": true,
+   "why": "Yes! They are colours."
+  },
+  {
+   "s": "Six is a colour.",
+   "t": false,
+   "why": "Six is a number."
+  },
+  {
+   "s": "A colours board has pictures of one colour.",
+   "t": true,
+   "why": "Yes! All the pictures are the same colour."
+  },
+  {
+   "s": "Brown is a number.",
+   "t": false,
+   "why": "Brown is a colour."
+  },
+  {
+   "s": "Four comes after six.",
+   "t": false,
+   "why": "Four comes after three: 3, 4."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "1, 2, 3, ?",
+   "o": [
+    "four",
+    "six",
+    "two"
+   ],
+   "why": "1, 2, 3, 4!"
+  },
+  {
+   "q": "What comes after five?",
+   "o": [
+    "six",
+    "four",
+    "three"
+   ],
+   "why": "5, 6!"
+  },
+  {
+   "q": "What comes after two?",
+   "o": [
+    "three",
+    "one",
+    "five"
+   ],
+   "why": "2, 3!"
+  },
+  {
+   "q": "4, ?, 6",
+   "o": [
+    "five",
+    "three",
+    "two"
+   ],
+   "why": "4, 5, 6!"
+  },
+  {
+   "q": "Count: ● ● ●",
+   "o": [
+    "three",
+    "two",
+    "four"
+   ],
+   "why": "One, two, three."
+  },
+  {
+   "q": "Count: ● ● ● ● ● ●",
+   "o": [
+    "six",
+    "five",
+    "four"
+   ],
+   "why": "Six dots."
+  },
+  {
+   "q": "Which one is a colour?",
+   "o": [
+    "yellow",
+    "five",
+    "six"
+   ],
+   "why": "Yellow is a colour."
+  },
+  {
+   "q": "Which one is a number?",
+   "o": [
+    "two",
+    "red",
+    "blue"
+   ],
+   "why": "Two is a number."
+  },
+  {
+   "q": "Row 2 says 6. How many cakes do you colour?",
+   "o": [
+    "six",
+    "two",
+    "five"
+   ],
+   "why": "The number tells you: six cakes."
+  },
+  {
+   "q": "Where do you start writing 4?",
+   "o": [
+    "at the top dot",
+    "at the bottom",
+    "in the middle"
+   ],
+   "why": "We start at the top dot."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Catch the number after one.",
+   "a": "two",
+   "d": [
+    "four",
+    "six",
+    "five"
+   ]
+  },
+  {
+   "q": "Catch the number after three.",
+   "a": "four",
+   "d": [
+    "two",
+    "six",
+    "one"
+   ]
+  },
+  {
+   "q": "Catch the number before two.",
+   "a": "one",
+   "d": [
+    "three",
+    "five",
+    "six"
+   ]
+  },
+  {
+   "q": "Catch the number after five.",
+   "a": "six",
+   "d": [
+    "four",
+    "three",
+    "two"
+   ]
+  },
+  {
+   "q": "1, 2, ?, 4, 5, 6",
+   "a": "three",
+   "d": [
+    "six",
+    "one",
+    "five"
+   ]
+  },
+  {
+   "q": "Count: ★ ★ ★ ★ ★",
+   "a": "five",
+   "d": [
+    "four",
+    "six",
+    "three"
+   ]
+  },
+  {
+   "q": "Catch a colour.",
+   "a": "green",
+   "d": [
+    "one",
+    "four",
+    "six"
+   ]
+  },
+  {
+   "q": "Catch another colour.",
+   "a": "orange",
+   "d": [
+    "two",
+    "three",
+    "five"
+   ]
+  },
+  {
+   "q": "Catch the colour word.",
+   "a": "brown",
+   "d": [
+    "pen",
+    "bag",
+    "book"
+   ]
+  },
+  {
+   "q": "Catch the number before six.",
+   "a": "five",
+   "d": [
+    "three",
+    "two",
+    "one"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list is in the right order?",
+   "o": [
+    "one, two, three",
+    "two, one, three",
+    "three, one, two",
+    "one, three, two"
+   ],
+   "why": "One, two, three."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is a colour?",
+   "o": [
+    "blue",
+    "four",
+    "pen",
+    "one"
+   ],
+   "why": "Blue is a colour."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which number is six?",
+   "o": [
+    "6",
+    "5",
+    "3",
+    "2"
+   ],
+   "why": "6 is six."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which number is three?",
+   "o": [
+    "3",
+    "4",
+    "1",
+    "6"
+   ],
+   "why": "3 is three."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "?, 2, 3, ?, 5, 6. Say the missing numbers.",
+   "o": [
+    "one and four",
+    "one and six",
+    "four and six",
+    "two and five"
+   ],
+   "why": "1, 2, 3, 4, 5, 6."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "1, ?, 3, ?, 5, ?. Say the missing numbers.",
+   "o": [
+    "two, four, six",
+    "one, three, five",
+    "two, three, four",
+    "four, five, six"
+   ],
+   "why": "1, 2, 3, 4, 5, 6."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your board has a banana and the sun. It is a … board.",
+   "o": [
+    "yellow",
+    "blue",
+    "green",
+    "brown"
+   ],
+   "why": "Bananas and the sun are yellow."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does not belong: red, blue, green, five?",
+   "o": [
+    "five",
+    "red",
+    "blue",
+    "green"
+   ],
+   "why": "Five is a number; the others are colours."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does not belong: one, two, six, orange?",
+   "o": [
+    "orange",
+    "one",
+    "two",
+    "six"
+   ],
+   "why": "Orange is a colour; the others are numbers."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ali counts: 1, 2, 4, 5, 6. Which number did he forget?",
+   "o": [
+    "three",
+    "four",
+    "six",
+    "one"
+   ],
+   "why": "1, 2, 3, 4, 5, 6: three is missing."
+  }
+ ]
+}

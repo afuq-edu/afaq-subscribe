@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 2: Let's dress up!",
+ "lesson": "Unit 2 – Lesson 8: Review",
+ "outcomes": [
+  "I can find and spell Unit 2 clothes and things words.",
+  "I can use They're, We're, You're and Their, Our, Your.",
+  "I can describe me and a friend: I'm … My … He's … His …"
+ ],
+ "tf": [
+  {
+   "s": "We use They're before wearing: They're wearing pyjamas.",
+   "t": true,
+   "why": "Yes! They're = they are, so it goes before wearing."
+  },
+  {
+   "s": "We use Their before a thing: Their pyjamas are pink.",
+   "t": true,
+   "why": "Right! Their goes before a noun like pyjamas."
+  },
+  {
+   "s": "We say: Our wearing tracksuits.",
+   "t": false,
+   "why": "Before wearing we say We're: We're wearing tracksuits."
+  },
+  {
+   "s": "We carry our books, pens and pencil case in a backpack.",
+   "t": true,
+   "why": "Well done! A backpack carries our school things."
+  },
+  {
+   "s": "We wear trainers in bed.",
+   "t": false,
+   "why": "We wear pyjamas in bed."
+  },
+  {
+   "s": "We wear glasses on our face.",
+   "t": true,
+   "why": "Yes, glasses go on our face."
+  },
+  {
+   "s": "We open the door with keys.",
+   "t": true,
+   "why": "Right! Keys open the door."
+  },
+  {
+   "s": "He's goes with His, and We're goes with Our.",
+   "t": true,
+   "why": "Great! He's–His and We're–Our are pairs."
+  },
+  {
+   "s": "We say: He's shirt is yellow.",
+   "t": false,
+   "why": "Before a noun we say His: His shirt is yellow."
+  },
+  {
+   "s": "Jeans are a possession, like keys.",
+   "t": false,
+   "why": "Jeans are clothes; keys and phones are possessions."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: ___ wearing pyjamas. (they)",
+   "o": [
+    "They're",
+    "Their",
+    "Our"
+   ],
+   "why": "They're goes before wearing."
+  },
+  {
+   "q": "Complete: ___ tracksuits are orange. (we)",
+   "o": [
+    "Our",
+    "We're",
+    "Their"
+   ],
+   "why": "Our goes before a noun."
+  },
+  {
+   "q": "Riddle: You wear these in bed.",
+   "o": [
+    "pyjamas",
+    "trainers",
+    "coats"
+   ],
+   "why": "We wear pyjamas in bed."
+  },
+  {
+   "q": "Riddle: We carry our books in this.",
+   "o": [
+    "backpack",
+    "phone",
+    "hijab"
+   ],
+   "why": "A backpack carries books."
+  },
+  {
+   "q": "Complete: I'm Qais. ___ glasses are green.",
+   "o": [
+    "My",
+    "His",
+    "Our"
+   ],
+   "why": "I'm goes with My."
+  },
+  {
+   "q": "Complete: ___ wearing a shirt. (Ali)",
+   "o": [
+    "He's",
+    "His",
+    "Our"
+   ],
+   "why": "He's goes before wearing."
+  },
+  {
+   "q": "Order: keys / Their / yellow. / are",
+   "o": [
+    "Their keys are yellow.",
+    "Their are keys yellow.",
+    "Keys their yellow are."
+   ],
+   "why": "Their + noun + are + colour."
+  },
+  {
+   "q": "Spell the word: you wear them on your legs.",
+   "o": [
+    "jeans",
+    "jaens",
+    "jens"
+   ],
+   "why": "The spelling is j-e-a-n-s."
+  },
+  {
+   "q": "Talking to two friends in red pyjamas:",
+   "o": [
+    "You're wearing red pyjamas.",
+    "They're wearing red pyjamas.",
+    "We're wearing red pyjamas."
+   ],
+   "why": "We say You're to the people we talk to."
+  },
+  {
+   "q": "Which word is NOT clothes?",
+   "o": [
+    "phone",
+    "coat",
+    "shirt"
+   ],
+   "why": "A phone is a possession, not clothes."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "___ wearing coats. (they)",
+   "a": "They're",
+   "d": [
+    "Their",
+    "Our",
+    "Your"
+   ]
+  },
+  {
+   "q": "___ coats are blue. (they)",
+   "a": "Their",
+   "d": [
+    "They're",
+    "We're",
+    "You're"
+   ]
+  },
+  {
+   "q": "___ wearing jeans. (we)",
+   "a": "We're",
+   "d": [
+    "Our",
+    "Their",
+    "Your"
+   ]
+  },
+  {
+   "q": "___ jeans are blue. (we)",
+   "a": "Our",
+   "d": [
+    "We're",
+    "They're",
+    "You're"
+   ]
+  },
+  {
+   "q": "I'm wearing glasses. ___ glasses …",
+   "a": "My",
+   "d": [
+    "His",
+    "Our",
+    "Their"
+   ]
+  },
+  {
+   "q": "He's wearing a shirt. ___ shirt …",
+   "a": "His",
+   "d": [
+    "My",
+    "Our",
+    "Your"
+   ]
+  },
+  {
+   "q": "You wear these in bed",
+   "a": "pyjamas",
+   "d": [
+    "trainers",
+    "glasses",
+    "coats"
+   ]
+  },
+  {
+   "q": "You open the door with them",
+   "a": "keys",
+   "d": [
+    "jeans",
+    "slippers",
+    "shirts"
+   ]
+  },
+  {
+   "q": "You wear them on your face",
+   "a": "glasses",
+   "d": [
+    "slippers",
+    "jeans",
+    "trainers"
+   ]
+  },
+  {
+   "q": "You carry books in it",
+   "a": "backpack",
+   "d": [
+    "phone",
+    "hijab",
+    "coat"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word goes before wearing?",
+   "o": [
+    "We're",
+    "Our",
+    "Their",
+    "Your"
+   ],
+   "why": "We're = we are, so it goes before wearing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word goes before a thing (noun)?",
+   "o": [
+    "Their",
+    "They're",
+    "You're",
+    "We're"
+   ],
+   "why": "Their goes before a noun: Their keys."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a possession, not clothes?",
+   "o": [
+    "computer",
+    "jumper",
+    "tracksuit",
+    "hijab"
+   ],
+   "why": "A computer is a thing we have, not clothes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which pair is correct?",
+   "o": [
+    "He's – His",
+    "He's – Our",
+    "I'm – His",
+    "We're – My"
+   ],
+   "why": "He's goes with His."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: We're wearing jeans. ___ jeans are blue.",
+   "o": [
+    "Our",
+    "Their",
+    "His",
+    "My"
+   ],
+   "why": "We're goes with Our."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "Your handbag is red.",
+    "You're handbag is red.",
+    "Your is handbag red.",
+    "You handbag is red."
+   ],
+   "why": "Your goes before a noun like handbag."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Order the words: red. / handbag / Your / is",
+   "o": [
+    "Your handbag is red.",
+    "Your is handbag red.",
+    "Handbag your red is.",
+    "Red is your handbag."
+   ],
+   "why": "Your + handbag + is + red."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Odd one out: coat, jumper, keys, jeans",
+   "o": [
+    "keys",
+    "coat",
+    "jumper",
+    "jeans"
+   ],
+   "why": "Keys are not clothes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sara writes: They're wearing coats. Their coats are white. Why does she use Their in the second sentence?",
+   "o": [
+    "Coats is a thing (noun).",
+    "It comes before wearing.",
+    "It is the first word.",
+    "It is about one person."
+   ],
+   "why": "Their goes before a noun."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "We're backpacks are green.",
+    "Our backpacks are green.",
+    "We're wearing tracksuits.",
+    "Their keys are yellow."
+   ],
+   "why": "It should be Our backpacks are green."
+  }
+ ]
+}

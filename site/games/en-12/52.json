@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: Eating Out (Writing)",
+ "lesson": "Lead-in: eating out; Listening 3.5.1 on favourite restaurants",
+ "outcomes": [
+  "Discuss eating-out experiences and changes in eating habits",
+  "Listen to five speakers and note what each one wants in a restaurant",
+  "Know how to organise a narrative essay clearly"
+ ],
+ "tf": [
+  {
+   "s": "Voice A is looking for special food and efficient waiters.",
+   "t": true,
+   "why": "Voice A talks about a French chef, special food and good waiters."
+  },
+  {
+   "s": "Voice B prefers a big, noisy restaurant.",
+   "t": false,
+   "why": "Voice B wants a small, quiet, romantic place."
+  },
+  {
+   "s": "Voice C likes buffet restaurants because they are good value for money.",
+   "t": true,
+   "why": "Children can eat as much as they want."
+  },
+  {
+   "s": "Voice D ate in an ancient cistern in Istanbul built by the Romans.",
+   "t": true,
+   "why": "This unusual place is Voice D's memory."
+  },
+  {
+   "s": "Voice E prefers fast food because of speed.",
+   "t": true,
+   "why": "He thinks restaurants waste time and money."
+  },
+  {
+   "s": "Voice B's favourite restaurant is an Italian place in the mountains.",
+   "t": false,
+   "why": "It is a romantic Italian place by the sea."
+  },
+  {
+   "s": "A good narrative essay tells events in a clear, logical order.",
+   "t": true,
+   "why": "Logical order makes the story easy to follow."
+  },
+  {
+   "s": "The introduction of a narrative essay does not need to interest the reader.",
+   "t": false,
+   "why": "A good introduction catches the reader's attention."
+  },
+  {
+   "s": "A takeaway is food you buy and eat somewhere else.",
+   "t": true,
+   "why": "You take the food away from the restaurant."
+  },
+  {
+   "s": "'Value for money' means something is very expensive and poor.",
+   "t": false,
+   "why": "Value for money means you get a lot for what you pay."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What matters most to Voice B?",
+   "o": [
+    "Atmosphere",
+    "Speed",
+    "Big portions"
+   ],
+   "why": "Voice B wants a small, quiet, romantic place."
+  },
+  {
+   "q": "Which kind of restaurant does Voice C like?",
+   "o": [
+    "Buffet",
+    "Takeaway",
+    "French"
+   ],
+   "why": "Buffets are good value for families."
+  },
+  {
+   "q": "Where did Voice D eat?",
+   "o": [
+    "In an ancient cistern",
+    "On a cruise ship",
+    "In a hotel kitchen"
+   ],
+   "why": "Voice D ate in a Roman cistern in Istanbul."
+  },
+  {
+   "q": "Which city is the cistern in?",
+   "o": [
+    "Istanbul",
+    "Rome",
+    "Paris"
+   ],
+   "why": "The cistern is in Istanbul."
+  },
+  {
+   "q": "Why does Voice E prefer fast food?",
+   "o": [
+    "Speed",
+    "Atmosphere",
+    "Romantic music"
+   ],
+   "why": "He thinks restaurants waste time and money."
+  },
+  {
+   "q": "What is a buffet?",
+   "o": [
+    "Self-service food you choose",
+    "Food delivered home",
+    "A single set meal"
+   ],
+   "why": "At a buffet you serve yourself from many dishes."
+  },
+  {
+   "q": "Who built the cistern Voice D visited?",
+   "o": [
+    "The Romans",
+    "The French",
+    "The Italians"
+   ],
+   "why": "It is an ancient Roman cistern."
+  },
+  {
+   "q": "What does a good introduction do?",
+   "o": [
+    "Catches the reader's attention",
+    "Ends the story",
+    "Lists the menu"
+   ],
+   "why": "It makes the reader want to continue."
+  },
+  {
+   "q": "What kind of chef does Voice A mention?",
+   "o": [
+    "A French chef",
+    "An Italian chef",
+    "A Turkish chef"
+   ],
+   "why": "Voice A talks about a French chef."
+  },
+  {
+   "q": "What does 'atmosphere' mean in a restaurant?",
+   "o": [
+    "The feeling of the place",
+    "The price of food",
+    "The waiter's name"
+   ],
+   "why": "Atmosphere is the mood or feeling of a place."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Voice B's priority",
+   "a": "atmosphere",
+   "d": [
+    "speed",
+    "price",
+    "portions"
+   ]
+  },
+  {
+   "q": "Voice E's priority",
+   "a": "speed",
+   "d": [
+    "atmosphere",
+    "romance",
+    "music"
+   ]
+  },
+  {
+   "q": "Voice C's kind of restaurant",
+   "a": "buffet",
+   "d": [
+    "takeaway",
+    "cistern",
+    "café"
+   ]
+  },
+  {
+   "q": "Voice E's kind of food",
+   "a": "fast food",
+   "d": [
+    "French food",
+    "buffet",
+    "seafood"
+   ]
+  },
+  {
+   "q": "City of the ancient cistern",
+   "a": "Istanbul",
+   "d": [
+    "Rome",
+    "Paris",
+    "Muscat"
+   ]
+  },
+  {
+   "q": "Builders of the cistern",
+   "a": "the Romans",
+   "d": [
+    "the French",
+    "the Greeks",
+    "the Italians"
+   ]
+  },
+  {
+   "q": "Voice A's chef is from ...",
+   "a": "France",
+   "d": [
+    "Italy",
+    "Turkey",
+    "Oman"
+   ]
+  },
+  {
+   "q": "Voice B's restaurant is by the ...",
+   "a": "sea",
+   "d": [
+    "airport",
+    "desert",
+    "mountains"
+   ]
+  },
+  {
+   "q": "Food bought to eat elsewhere",
+   "a": "takeaway",
+   "d": [
+    "buffet",
+    "menu",
+    "atmosphere"
+   ]
+  },
+  {
+   "q": "Order of events in a narrative",
+   "a": "logical",
+   "d": [
+    "random",
+    "backwards",
+    "mixed"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why does Voice C like buffet restaurants?",
+   "o": [
+    "Good value for money; kids can eat as much as they want",
+    "They are quiet and romantic",
+    "They are very fast",
+    "They have a French chef"
+   ],
+   "why": "Buffets suit families on a budget."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is important to Voice B?",
+   "o": [
+    "Atmosphere: a small, quiet, romantic place",
+    "Speed and low prices",
+    "Large buffets for children",
+    "Eating in an ancient building"
+   ],
+   "why": "Voice B values the feeling of the place."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What makes a narrative essay easy to read?",
+   "o": [
+    "Events in a clear, logical order and a good introduction",
+    "Very long sentences",
+    "No paragraphs",
+    "Lots of numbers"
+   ],
+   "why": "This is the Top Tip for organising a narrative."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where did Voice D eat in Istanbul?",
+   "o": [
+    "In an ancient cistern built by the Romans",
+    "In a fast-food takeaway",
+    "On a boat by the sea",
+    "In a French restaurant"
+   ],
+   "why": "It was a special and unusual place."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A family with four hungry children wants a lot of food for a fair price. Which restaurant suits them, like Voice C?",
+   "o": [
+    "A family buffet",
+    "A small romantic restaurant",
+    "An expensive French restaurant",
+    "A quiet café with one dish"
+   ],
+   "why": "Buffets give good value and children can eat a lot."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A busy student has only ten minutes for lunch. Which choice would Voice E agree with?",
+   "o": [
+    "A fast-food takeaway",
+    "A long dinner by the sea",
+    "A five-course French meal",
+    "A trip to Istanbul"
+   ],
+   "why": "Voice E values speed above everything."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best first sentence for a narrative essay about eating out?",
+   "o": [
+    "I will never forget the night our dinner arrived on fire!",
+    "There are many restaurants.",
+    "Food is food.",
+    "This essay is about a restaurant."
+   ],
+   "why": "It catches the reader's attention immediately."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Voice E think restaurants are not worth it?",
+   "o": [
+    "He thinks they waste time and money",
+    "He loves romantic atmosphere",
+    "He wants a French chef",
+    "He prefers ancient buildings"
+   ],
+   "why": "For him, speed and saving money matter most."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Voice A wants efficient waiters. What kind of service would Voice A probably dislike?",
+   "o": [
+    "Slow, disorganised service",
+    "Quick, careful service",
+    "Polite, helpful waiters",
+    "Special food from a good chef"
+   ],
+   "why": "Efficient waiters work quickly and well, so slow service would disappoint Voice A."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should events in a narrative essay be in logical order?",
+   "o": [
+    "So the reader can follow the story easily",
+    "So the essay is shorter",
+    "So there is no introduction",
+    "So the ending comes first"
+   ],
+   "why": "Clear order helps the reader understand what happened."
+  }
+ ]
+}

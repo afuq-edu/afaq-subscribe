@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 2: What’s in a Name? (Grammar)",
+ "lesson": "Branding: discussion and reading ‘A Short History of Branding’ / Grammar Recall: past simple and past simple passive",
+ "outcomes": [
+  "Give your opinion about brand names",
+  "Understand a text about the history of branding",
+  "Use and recognise the past simple and past simple passive"
+ ],
+ "tf": [
+  {
+   "s": "A logo is a small design that is the official symbol of a company.",
+   "t": true,
+   "why": "Yes, a logo is a company's symbol."
+  },
+  {
+   "s": "Oman Air's logo is a swirl of frankincense smoke.",
+   "t": true,
+   "why": "Correct, it shows an important symbol of Oman."
+  },
+  {
+   "s": "The Chevrolet Nova sold very well in Latin America.",
+   "t": false,
+   "why": "It did not sell well because 'no va' means 'it doesn't go' in Spanish."
+  },
+  {
+   "s": "The name 'Adidas' comes from Adolf Dassler's nickname 'Adi' and the first letters of 'Dassler'.",
+   "t": true,
+   "why": "Adi + Das makes Adidas."
+  },
+  {
+   "s": "The past simple passive is formed with was/were + past participle.",
+   "t": true,
+   "why": "For example: was taken, were introduced."
+  },
+  {
+   "s": "'Adidas was taken from the name of its founder' is in the past simple active.",
+   "t": false,
+   "why": "It uses 'was + taken', so it is past simple passive."
+  },
+  {
+   "s": "Juliet's quotation suggests that a name does not change what something is.",
+   "t": true,
+   "why": "That is the main idea of her words."
+  },
+  {
+   "s": "Companies do not care what name they choose for a product.",
+   "t": false,
+   "why": "They spend a lot of money choosing the right brand name."
+  },
+  {
+   "s": "'Did not sell' is a negative past simple verb.",
+   "t": true,
+   "why": "Yes, did not + base verb is the negative past simple."
+  },
+  {
+   "s": "We often use the passive when the doer is more important than the action.",
+   "t": false,
+   "why": "We use the passive when the action matters more or the doer is unknown."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the past simple of 'choose'?",
+   "o": [
+    "chose",
+    "chosen",
+    "choosed"
+   ],
+   "why": "Choose is irregular: choose, chose, chosen."
+  },
+  {
+   "q": "How do we form the past simple passive?",
+   "o": [
+    "was/were + past participle",
+    "did + base verb",
+    "have + past participle"
+   ],
+   "why": "Example: The logo was created."
+  },
+  {
+   "q": "What does 'no va' mean in Spanish?",
+   "o": [
+    "it doesn't go",
+    "it is new",
+    "it is fast"
+   ],
+   "why": "That is why the Nova did not sell well."
+  },
+  {
+   "q": "What is Oman Air's logo?",
+   "o": [
+    "a swirl of frankincense smoke",
+    "a dhow",
+    "a falcon"
+   ],
+   "why": "Frankincense is a symbol of Oman's heritage."
+  },
+  {
+   "q": "Complete: A new logo ___ by Oman Air.",
+   "o": [
+    "was chosen",
+    "chose",
+    "is choose"
+   ],
+   "why": "The logo receives the action, so we use the passive."
+  },
+  {
+   "q": "Which verb is past simple passive?",
+   "o": [
+    "was derived",
+    "burned",
+    "got"
+   ],
+   "why": "Was + derived is passive."
+  },
+  {
+   "q": "Which verb is active past simple?",
+   "o": [
+    "made",
+    "was used",
+    "was created"
+   ],
+   "why": "'Made' has no was/were."
+  },
+  {
+   "q": "In a passive sentence, which word shows the agent?",
+   "o": [
+    "by",
+    "was",
+    "did"
+   ],
+   "why": "'By + agent' tells us who did the action."
+  },
+  {
+   "q": "Who is 'Adi' in the name Adidas?",
+   "o": [
+    "Adolf Dassler",
+    "a city",
+    "a shoe"
+   ],
+   "why": "Adi was Adolf Dassler's nickname."
+  },
+  {
+   "q": "What do customers use a brand name for?",
+   "o": [
+    "to identify and trust a product",
+    "to cook food",
+    "to travel"
+   ],
+   "why": "Brand names help people recognise products."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Past simple of 'choose'",
+   "a": "chose",
+   "d": [
+    "chosen",
+    "choosed",
+    "choose"
+   ]
+  },
+  {
+   "q": "Past simple of 'make'",
+   "a": "made",
+   "d": [
+    "maked",
+    "make",
+    "making"
+   ]
+  },
+  {
+   "q": "Past simple of 'get'",
+   "a": "got",
+   "d": [
+    "getted",
+    "get",
+    "gets"
+   ]
+  },
+  {
+   "q": "Past simple of 'burn'",
+   "a": "burned",
+   "d": [
+    "burn",
+    "burning",
+    "burns"
+   ]
+  },
+  {
+   "q": "Passive form of 'take'",
+   "a": "was taken",
+   "d": [
+    "was took",
+    "taked",
+    "was take"
+   ]
+  },
+  {
+   "q": "Passive form of 'use'",
+   "a": "was used",
+   "d": [
+    "was use",
+    "using",
+    "was using"
+   ]
+  },
+  {
+   "q": "Passive form of 'create'",
+   "a": "was created",
+   "d": [
+    "was create",
+    "creating",
+    "created by"
+   ]
+  },
+  {
+   "q": "Oman Air logo comes from...",
+   "a": "frankincense",
+   "d": [
+    "silk",
+    "oil",
+    "coffee"
+   ]
+  },
+  {
+   "q": "Car that did not sell well",
+   "a": "Nova",
+   "d": [
+    "Adidas",
+    "Cola",
+    "Oman Air"
+   ]
+  },
+  {
+   "q": "Word for a company symbol",
+   "a": "logo",
+   "d": [
+    "route",
+    "agent",
+    "ritual"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does 'logo' mean?",
+   "o": [
+    "a small design that is the official symbol of a company",
+    "a long advert on TV",
+    "the price of a product",
+    "a shop in a mall"
+   ],
+   "why": "A logo is a company's official symbol."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the past simple passive?",
+   "o": [
+    "were introduced",
+    "introduced",
+    "did introduce",
+    "introduces"
+   ],
+   "why": "Were + past participle is the passive."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why did the Chevrolet Nova not sell well in Latin America?",
+   "o": [
+    "'no va' means 'it doesn't go' in Spanish",
+    "It was too expensive",
+    "It had no engine",
+    "It was only sold in Oman"
+   ],
+   "why": "The name had a bad meaning in Spanish."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where does the name 'Adidas' come from?",
+   "o": [
+    "Adi (Adolf Dassler's nickname) + Das from Dassler",
+    "a city in Germany",
+    "a type of shoe",
+    "the Spanish word for sport"
+   ],
+   "why": "The founder's name gave the brand its name."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Branding ______ (not develop) until the 19th century.",
+   "o": [
+    "was not developed",
+    "did not developed",
+    "not was developed",
+    "was not develop"
+   ],
+   "why": "Was not + past participle is the negative passive."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Change to passive: Oman Air chose a new logo.",
+   "o": [
+    "A new logo was chosen by Oman Air.",
+    "A new logo chose Oman Air.",
+    "A new logo was choose by Oman Air.",
+    "Oman Air was chosen a new logo."
+   ],
+   "why": "The object becomes the subject + was + past participle."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence has a negative past simple verb?",
+   "o": [
+    "The car did not sell well.",
+    "The logo was created.",
+    "The name was shortened.",
+    "He made shoes."
+   ],
+   "why": "Did not + base verb is the negative past simple."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Would companies agree with Juliet that a name is not important?",
+   "o": [
+    "No, because customers use brand names to identify and trust products",
+    "Yes, because names cost nothing",
+    "Yes, because products have no names",
+    "No, because Juliet sold cars"
+   ],
+   "why": "Companies spend a lot on choosing the right name."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the passive used in 'Branding was not developed until the 19th century'?",
+   "o": [
+    "The action matters more than who did it",
+    "The doer is very famous",
+    "It is a question",
+    "It talks about the future"
+   ],
+   "why": "We do not need to know who developed branding."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why was frankincense chosen for the Oman Air logo?",
+   "o": [
+    "It is an important symbol of Oman's traditional heritage",
+    "It is cheap to draw",
+    "It is a modern invention",
+    "It was the founder's name"
+   ],
+   "why": "Frankincense is still part of life in Oman today."
+  }
+ ]
+}

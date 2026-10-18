@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: A Helping Hand (Listening & Speaking)",
+ "lesson": "Listening 2.4.2 and Soundbites: asking for, checking and confirming clarification",
+ "outcomes": [
+  "Listen to a conversation and answer questions about it",
+  "Ask for, check and confirm clarification"
+ ],
+ "tf": [
+  {
+   "s": "'I understand.' is a phrase for confirming.",
+   "t": true,
+   "why": "It shows you have understood."
+  },
+  {
+   "s": "Nadia is a first-year student.",
+   "t": false,
+   "why": "Nadia is a third-year student."
+  },
+  {
+   "s": "Nadia is a Rover.",
+   "t": true,
+   "why": "She helps new students."
+  },
+  {
+   "s": "The placement test finds students' level in English, Maths and IT.",
+   "t": true,
+   "why": "It shows which level each student is at."
+  },
+  {
+   "s": "'Got it!' is used to ask for clarification.",
+   "t": false,
+   "why": "'Got it!' confirms that you understand."
+  },
+  {
+   "s": "'Are you with me?' checks that the listener understands.",
+   "t": true,
+   "why": "The speaker checks you are following."
+  },
+  {
+   "s": "'Sorry, I'm not sure I follow you' confirms that you understand.",
+   "t": false,
+   "why": "It asks for clarification."
+  },
+  {
+   "s": "We use Soundbites phrases to ask for, check and confirm clarification.",
+   "t": true,
+   "why": "These are the three groups of phrases."
+  },
+  {
+   "s": "The Rovers help new students find their way.",
+   "t": true,
+   "why": "That is their job on campus."
+  },
+  {
+   "s": "Asking for clarification is rude, so you should never do it.",
+   "t": false,
+   "why": "Asking politely helps you understand."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which phrase confirms understanding?",
+   "o": [
+    "Got it!",
+    "Are you with me?",
+    "Do you mean...?"
+   ],
+   "why": "'Got it!' means I understand."
+  },
+  {
+   "q": "Which phrase checks that the listener understands?",
+   "o": [
+    "Are you clear about that?",
+    "I understand.",
+    "I'm not clear what that is."
+   ],
+   "why": "The speaker checks the listener."
+  },
+  {
+   "q": "Which phrase asks for clarification?",
+   "o": [
+    "Do you mean the door on the right?",
+    "Got it!",
+    "I understand."
+   ],
+   "why": "You ask to make the meaning clear."
+  },
+  {
+   "q": "What does 'clarification' mean?",
+   "o": [
+    "making something clear",
+    "making something longer",
+    "a type of test"
+   ],
+   "why": "Clarification removes confusion."
+  },
+  {
+   "q": "A: 'Turn left at the mosque.' B does not understand. B says:",
+   "o": [
+    "Sorry, I'm not sure I follow you.",
+    "Got it!",
+    "Are you with me?"
+   ],
+   "why": "B asks for clarification."
+  },
+  {
+   "q": "A has explained a long route. To check B understands, A says:",
+   "o": [
+    "Are you with me?",
+    "I understand.",
+    "Do you mean...?"
+   ],
+   "why": "A checks B is following."
+  },
+  {
+   "q": "Which subjects does the placement test check?",
+   "o": [
+    "English, Maths and IT",
+    "Art and Music",
+    "PE only"
+   ],
+   "why": "It finds students' level in these subjects."
+  },
+  {
+   "q": "Where does Fatma need to go?",
+   "o": [
+    "Hall B",
+    "the gym",
+    "the mosque"
+   ],
+   "why": "She is looking for Hall B."
+  },
+  {
+   "q": "In the role play, what does Student B do?",
+   "o": [
+    "interrupts to ask for clarification",
+    "leaves the room",
+    "explains the topic"
+   ],
+   "why": "Student B practises the phrases."
+  },
+  {
+   "q": "What do the Rovers do?",
+   "o": [
+    "help new students find their way",
+    "teach Maths",
+    "give placement tests"
+   ],
+   "why": "They guide new students."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "'Got it!' is for...",
+   "a": "confirming",
+   "d": [
+    "asking",
+    "checking",
+    "apologising"
+   ]
+  },
+  {
+   "q": "'Are you with me?' is for...",
+   "a": "checking",
+   "d": [
+    "confirming",
+    "asking",
+    "thanking"
+   ]
+  },
+  {
+   "q": "'Do you mean...?' is for...",
+   "a": "asking",
+   "d": [
+    "confirming",
+    "checking",
+    "greeting"
+   ]
+  },
+  {
+   "q": "'I understand.' is for...",
+   "a": "confirming",
+   "d": [
+    "checking",
+    "asking",
+    "refusing"
+   ]
+  },
+  {
+   "q": "'Are you clear about...?' is for...",
+   "a": "checking",
+   "d": [
+    "confirming",
+    "asking",
+    "apologising"
+   ]
+  },
+  {
+   "q": "'I'm not clear what that is.' is for...",
+   "a": "asking",
+   "d": [
+    "confirming",
+    "checking",
+    "thanking"
+   ]
+  },
+  {
+   "q": "Fatma is looking for...",
+   "a": "Hall B",
+   "d": [
+    "Hall A",
+    "the gym",
+    "the library"
+   ]
+  },
+  {
+   "q": "Nadia's year at university",
+   "a": "third year",
+   "d": [
+    "first year",
+    "second year",
+    "final exams"
+   ]
+  },
+  {
+   "q": "Making something clear",
+   "a": "clarification",
+   "d": [
+    "confirmation",
+    "registration",
+    "decoration"
+   ]
+  },
+  {
+   "q": "Nadia is a ...",
+   "a": "Rover",
+   "d": [
+    "tutor",
+    "lecturer",
+    "new student"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who is Nadia?",
+   "o": [
+    "A third-year student who is a Rover",
+    "A new student",
+    "A Maths teacher",
+    "A bus driver"
+   ],
+   "why": "Nadia helps new students like Fatma."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the placement test for?",
+   "o": [
+    "To find students' level in English, Maths and IT",
+    "To choose a sports team",
+    "To give students ID cards",
+    "To test driving"
+   ],
+   "why": "It places students at the right level."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Into which three groups were the Soundbites phrases sorted?",
+   "o": [
+    "Asking, checking and confirming",
+    "Greeting, thanking and leaving",
+    "Past, present and future",
+    "Formal, informal and neutral"
+   ],
+   "why": "These are the three kinds of clarification phrases."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase asks someone to say something again?",
+   "o": [
+    "Could you repeat that?",
+    "Got it!",
+    "Are you with me?",
+    "I understand."
+   ],
+   "why": "It is a polite way to ask again."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend says, 'The room is in the old building.' You are not sure which building. You say:",
+   "o": [
+    "Do you mean the building near the gate?",
+    "Got it!",
+    "Are you with me?",
+    "I understand."
+   ],
+   "why": "You ask for clarification."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are giving directions and want to make sure your friend is following. You say:",
+   "o": [
+    "Are you with me?",
+    "Got it!",
+    "Do you mean...?",
+    "I'm not clear what that is."
+   ],
+   "why": "You check their understanding."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "After a clear explanation, you want to show you understand. You say:",
+   "o": [
+    "Got it, thanks!",
+    "Sorry, I'm not sure I follow you.",
+    "Are you clear about that?",
+    "Do you mean the left one?"
+   ],
+   "why": "You confirm you understand."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to ask for clarification?",
+   "o": [
+    "To avoid misunderstanding and get correct information",
+    "To make the speaker angry",
+    "To finish quickly",
+    "To change the topic"
+   ],
+   "why": "Clear information prevents mistakes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A: 'Go through the door.' B: 'Sorry, I'm not sure I follow you.' A: 'The one on the right.' B: 'Got it!' What is B doing at the end?",
+   "o": [
+    "Confirming understanding",
+    "Asking for clarification",
+    "Checking the speaker",
+    "Giving directions"
+   ],
+   "why": "'Got it!' confirms."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why would a new student like Fatma need a Rover's help?",
+   "o": [
+    "The campus is new to her and she cannot find her way",
+    "She is a Rover herself",
+    "She has finished university",
+    "She works in Hall B"
+   ],
+   "why": "Rovers help new students find their way."
+  }
+ ]
+}

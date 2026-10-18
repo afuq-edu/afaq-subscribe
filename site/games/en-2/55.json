@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Unit 4 – Consolidation 2: Communication game \"Draw my monster!\"",
+  "outcomes": [
+    "I can count face and body parts on a monster.",
+    "I can ask and answer: How many eyes has it got?",
+    "I can find differences between two pictures."
+  ],
+  "tf": [
+    {
+      "s": "We ask: How many eyes has it got?",
+      "t": true,
+      "why": "Yes! That is the question we use."
+    },
+    {
+      "s": "We answer: It's got three eyes.",
+      "t": true,
+      "why": "Great! It's got … tells how many."
+    },
+    {
+      "s": "We answer How many …? with a colour.",
+      "t": false,
+      "why": "We answer How many …? with a number."
+    },
+    {
+      "s": "Ears, eyes and noses are face words.",
+      "t": true,
+      "why": "Well done! They are on the face and head."
+    },
+    {
+      "s": "Two noses means one nose.",
+      "t": false,
+      "why": "Two noses means more than one."
+    },
+    {
+      "s": "We say: It's got two foots.",
+      "t": false,
+      "why": "We say feet, not foots."
+    },
+    {
+      "s": "Legs, arms and hands are body words.",
+      "t": true,
+      "why": "Yes! They are parts of the body."
+    },
+    {
+      "s": "My monster has got two noses. Your monster has got one nose. This is a difference.",
+      "t": true,
+      "why": "Great! Two and one are different."
+    },
+    {
+      "s": "We say How many ear has it got?",
+      "t": false,
+      "why": "We say ears: How many ears has it got?"
+    },
+    {
+      "s": "One mouth, two mouths.",
+      "t": true,
+      "why": "Yes! We add s for more than one."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "How many ___ has it got? (eyes)",
+      "o": [
+        "eyes",
+        "eye",
+        "eyess"
+      ],
+      "why": "With How many we use eyes."
+    },
+    {
+      "q": "It's got ___ legs. (4)",
+      "o": [
+        "four",
+        "two",
+        "six"
+      ],
+      "why": "4 is four."
+    },
+    {
+      "q": "One foot, two ___.",
+      "o": [
+        "feet",
+        "foots",
+        "feets"
+      ],
+      "why": "More than one foot is feet."
+    },
+    {
+      "q": "How many noses has it got? (2)",
+      "o": [
+        "It's got two noses.",
+        "It's got two nose.",
+        "It's two noses."
+      ],
+      "why": "It's got two noses."
+    },
+    {
+      "q": "We hear with them.",
+      "o": [
+        "ears",
+        "hands",
+        "feet"
+      ],
+      "why": "We hear with our ears."
+    },
+    {
+      "q": "Ask about arms:",
+      "o": [
+        "How many arms has it got?",
+        "Who's arms?",
+        "What colour arms?"
+      ],
+      "why": "How many asks for a number."
+    },
+    {
+      "q": "Which is a body word?",
+      "o": [
+        "legs",
+        "eyes",
+        "noses"
+      ],
+      "why": "Legs are part of the body, not the face."
+    },
+    {
+      "q": "One mouth, three ___.",
+      "o": [
+        "mouths",
+        "mouth",
+        "mouthes"
+      ],
+      "why": "We add s: mouths."
+    },
+    {
+      "q": "Find the difference: three eyes and ___ eyes.",
+      "o": [
+        "two",
+        "three",
+        "eyes"
+      ],
+      "why": "Two and three are different."
+    },
+    {
+      "q": "It's got five ___ on one hand.",
+      "o": [
+        "fingers",
+        "feet",
+        "ears"
+      ],
+      "why": "A hand has five fingers."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "How many ___ has it got? (ears)",
+      "a": "ears",
+      "d": [
+        "ear",
+        "eares",
+        "earss"
+      ]
+    },
+    {
+      "q": "It's got ___ eyes. (3)",
+      "a": "three",
+      "d": [
+        "two",
+        "four",
+        "ten"
+      ]
+    },
+    {
+      "q": "It's got ___ heads. (2)",
+      "a": "two",
+      "d": [
+        "three",
+        "one",
+        "five"
+      ]
+    },
+    {
+      "q": "It's got ___ arms. (6)",
+      "a": "six",
+      "d": [
+        "four",
+        "two",
+        "ten"
+      ]
+    },
+    {
+      "q": "Stamp your ___!",
+      "a": "feet",
+      "d": [
+        "ears",
+        "eyes",
+        "noses"
+      ]
+    },
+    {
+      "q": "One nose, two ___",
+      "a": "noses",
+      "d": [
+        "nose",
+        "nosies",
+        "nosses"
+      ]
+    },
+    {
+      "q": "One hand, two ___",
+      "a": "hands",
+      "d": [
+        "hand",
+        "handes",
+        "hendes"
+      ]
+    },
+    {
+      "q": "We see with them.",
+      "a": "eyes",
+      "d": [
+        "ears",
+        "legs",
+        "hands"
+      ]
+    },
+    {
+      "q": "We walk with them.",
+      "a": "legs",
+      "d": [
+        "ears",
+        "eyes",
+        "noses"
+      ]
+    },
+    {
+      "q": "We eat with it.",
+      "a": "mouth",
+      "d": [
+        "nose",
+        "ear",
+        "eye"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which question asks for a number?",
+      "o": [
+        "How many eyes has it got?",
+        "Who's this?",
+        "What colour is it?",
+        "Is it Sally?"
+      ],
+      "why": "How many asks for a number."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which is a face word?",
+      "o": [
+        "nose",
+        "leg",
+        "arm",
+        "foot"
+      ],
+      "why": "The nose is on the face."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What is more than one foot?",
+      "o": [
+        "feet",
+        "foots",
+        "footes",
+        "feets"
+      ],
+      "why": "One foot, two feet."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which answer is right? How many mouths has it got?",
+      "o": [
+        "It's got one mouth.",
+        "It's got mouth one.",
+        "It one mouth.",
+        "It's got a mouths."
+      ],
+      "why": "It's got one mouth."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your monster has three eyes. Your partner asks. What do you say?",
+      "o": [
+        "It's got three eyes.",
+        "It's got three ears.",
+        "I've got three eyes.",
+        "It's got two eyes."
+      ],
+      "why": "The monster has got three eyes."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You want to draw your partner's monster's legs. What do you ask?",
+      "o": [
+        "How many legs has it got?",
+        "Who's legs?",
+        "Is it legs?",
+        "What's legs?"
+      ],
+      "why": "How many legs has it got? asks for the number."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Count: a monster has 2 heads and 2 more heads. How many heads?",
+      "o": [
+        "four",
+        "two",
+        "three",
+        "six"
+      ],
+      "why": "Two and two make four."
+    },
+    {
+      "lv": "التحليل",
+      "q": "My monster has got two noses. Your monster has got one nose. What is different?",
+      "o": [
+        "the number of noses",
+        "the colour of noses",
+        "the number of eyes",
+        "nothing"
+      ],
+      "why": "Two noses and one nose are different numbers."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which sentence is NOT right?",
+      "o": [
+        "It's got four foots.",
+        "It's got four feet.",
+        "It's got two ears.",
+        "It's got three eyes."
+      ],
+      "why": "We say feet, not foots."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which is the odd one out?",
+      "o": [
+        "legs",
+        "ears",
+        "eyes",
+        "noses"
+      ],
+      "why": "Legs are on the body; the others are on the face or head."
+    }
+  ]
+}

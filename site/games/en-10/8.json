@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "2",
+  "lesson": "Unit 2: Climate Change – Introducing Climate Change",
+  "outcomes": [
+    "Recognise climate words like drought, floods, heat waves and ice caps.",
+    "Explain the difference between weather and climate.",
+    "Talk about the effects of climate change and how it makes me feel."
+  ],
+  "tf": [
+    {"s": "A drought is a long period without rain.", "t": true, "why": "Yes! The land becomes very dry."},
+    {"s": "Floods happen when water covers the land or streets, often after heavy rain.", "t": true, "why": "Correct, floods are too much water."},
+    {"s": "Weather and climate mean exactly the same thing.", "t": false, "why": "Weather is today's conditions; climate is the pattern over a long time."},
+    {"s": "Climate is the weather in one place over a long period of time.", "t": true, "why": "Right, that is the definition from the interview."},
+    {"s": "Climate change means average global temperatures are falling.", "t": false, "why": "Climate change means average temperatures are rising."},
+    {"s": "A heat wave is a period of very high temperatures.", "t": true, "why": "Well done!"},
+    {"s": "Higher temperatures can cause the ice caps to melt.", "t": true, "why": "Yes, global warming melts the ice."},
+    {"s": "'It is raining today' describes the climate of a place.", "t": false, "why": "That is the weather, because it is only about today."},
+    {"s": "If we do not take action, there will be no consequences for animals and plants.", "t": false, "why": "There may be serious consequences for people, animals and plants."},
+    {"s": "A drought happens because there is too much rain.", "t": false, "why": "Too much rain causes floods; a drought means no rain for a long time."}
+  ],
+  "boxes": [
+    {"q": "Water covers the streets after heavy rain. This is ...", "o": ["floods", "drought", "a heat wave"], "why": "Floods are caused by too much water."},
+    {"q": "A long period without rain is a ...", "o": ["drought", "flood", "sea level"], "why": "In a drought the land is very dry."},
+    {"q": "Very high temperatures for many days is a ...", "o": ["heat wave", "sea level", "flood"], "why": "A heat wave is a period of extreme heat."},
+    {"q": "What melts when temperatures rise?", "o": ["ice caps", "deserts", "mountains of sand"], "why": "Global warming melts the ice caps."},
+    {"q": "Climate is the weather in one place ...", "o": ["over a long time", "only today", "only this hour"], "why": "Climate is a long-term pattern."},
+    {"q": "Climate change means average global temperatures are ...", "o": ["rising", "falling", "staying the same"], "why": "The Earth is getting warmer."},
+    {"q": "Which sentence is about the weather?", "o": ["It is cloudy today.", "Oman has hot, dry summers.", "Summers in Oman are always long."], "why": "Weather is about today's conditions."},
+    {"q": "Which word means 'something that may cause danger'?", "o": ["threat", "climate", "weather"], "why": "Climate change is a threat to many animals."},
+    {"q": "What is one effect of climate change?", "o": ["more heat waves", "fewer hot days everywhere", "more ice at the poles"], "why": "Rising temperatures bring more heat waves."},
+    {"q": "Which describes Oman's climate?", "o": ["very hot and dry", "very cold and snowy", "rainy every day"], "why": "Oman is generally very hot and dry."}
+  ],
+  "hunt": [
+    {"q": "Long period without rain", "a": "drought", "d": ["flood", "heat wave", "ice cap"]},
+    {"q": "Too much water on the land", "a": "floods", "d": ["drought", "heat wave", "sea level"]},
+    {"q": "Many days of very high heat", "a": "heat wave", "d": ["flood", "drought", "ice cap"]},
+    {"q": "Large areas of ice at the poles", "a": "ice caps", "d": ["heat waves", "floods", "deserts"]},
+    {"q": "The height of the sea", "a": "sea level", "d": ["ice cap", "heat wave", "drought"]},
+    {"q": "Conditions outside today", "a": "weather", "d": ["climate", "threat", "sea level"]},
+    {"q": "Weather pattern over a long time", "a": "climate", "d": ["weather", "flood", "threat"]},
+    {"q": "Something that may cause danger", "a": "threat", "d": ["climate", "weather", "ice cap"]},
+    {"q": "Global temperatures are ...", "a": "rising", "d": ["falling", "freezing", "stopping"]},
+    {"q": "The Earth getting warmer", "a": "global warming", "d": ["sea level", "ice caps", "drought"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What is climate?", "o": ["the weather in one place over a long period of time", "today's rain", "the temperature this morning", "a strong wind"], "why": "Climate is the long-term pattern of weather."},
+    {"lv": "التذكر", "q": "What is a drought?", "o": ["a long period without rain", "a lot of rain in one day", "very cold weather", "a high sea level"], "why": "Droughts make the land dry."},
+    {"lv": "التذكر", "q": "What does climate change mean?", "o": ["Average global temperatures are rising.", "It rains every day.", "The sea is getting colder.", "The weather never changes."], "why": "The planet is getting warmer over time."},
+    {"lv": "التذكر", "q": "Which of these is an effect of climate change?", "o": ["melting ice", "more snow in deserts", "colder summers everywhere", "lower temperatures"], "why": "Rising temperatures melt ice."},
+    {"lv": "التطبيق", "q": "Choose the correct sentence with 'threat'.", "o": ["Climate change is a threat to many animals.", "Climate change threat animals is.", "The animals is a threat.", "A threat is sunny today."], "why": "A threat is something that may cause harm."},
+    {"lv": "التطبيق", "q": "A picture shows dry, cracked ground and dead plants. What does it show?", "o": ["a drought", "a flood", "melting ice", "a high sea level"], "why": "Dry, cracked land is a sign of drought."},
+    {"lv": "التطبيق", "q": "Which sentence describes Oman's climate, not today's weather?", "o": ["Summers in Oman are hot and dry.", "It is windy this afternoon.", "It rained in Muscat this morning.", "Today is cloudy."], "why": "Climate is about the usual pattern over a long time."},
+    {"lv": "التحليل", "q": "What probably caused the ice caps to melt?", "o": ["higher temperatures", "too many floods", "more rain in deserts", "a drought"], "why": "Global warming makes the ice melt."},
+    {"lv": "التحليل", "q": "Why are melting ice caps dangerous?", "o": ["The sea level rises and can cause floods.", "The deserts get bigger.", "It makes winters longer.", "It stops all rain."], "why": "More water in the sea raises its level."},
+    {"lv": "التحليل", "q": "Why might the pictures of floods and drought make people feel worried?", "o": ["They show serious damage to people and nature.", "They show a sunny holiday.", "They show new buildings.", "They show a sports match."], "why": "These pictures show how climate change harms our world."}
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 1: Look at my toys!",
+  "lesson": "Unit 1 – Lesson 6: English in action (Sharing your toys)",
+  "outcomes": [
+    "I can ask politely: Can I play with it, please?",
+    "I can answer: Yes, of course. Let's play together.",
+    "I can share my toys with my friends."
+  ],
+  "tf": [
+    { "s": "Can I play with it, please? is a polite question.", "t": true, "why": "Yes! please makes it polite." },
+    { "s": "Sharing toys makes friends happy.", "t": true, "why": "Great! We play together when we share." },
+    { "s": "We say please when we want something.", "t": true, "why": "Yes! please is a polite word." },
+    { "s": "Yes, of course. means No.", "t": false, "why": "Yes, of course. means Yes, happily!" },
+    { "s": "It's good to take a friend's toy without asking.", "t": false, "why": "We ask first: Can I play with it, please?" },
+    { "s": "Let's play together. means we play with each other.", "t": true, "why": "Well done! together means with each other." },
+    { "s": "It's my new scooter. tells about a toy.", "t": true, "why": "Yes! It tells us the scooter is new." },
+    { "s": "Is it a car? (a ball) Yes, it is.", "t": false, "why": "It's a ball, so we say No, it isn't." },
+    { "s": "Can I play with it, ...? The missing word is thank.", "t": false, "why": "The missing word is please." },
+    { "s": "Is it an action figure? (an action figure) No, it isn't.", "t": false, "why": "It is an action figure, so we say Yes, it is." }
+  ],
+  "boxes": [
+    { "q": "Can I play with it, ...?", "o": ["please", "goodbye", "seven"], "why": "Can I play with it, please?" },
+    { "q": "Yes, of ...", "o": ["course", "play", "toys"], "why": "Yes, of course." },
+    { "q": "Let's play ...", "o": ["together", "please", "new"], "why": "Let's play together." },
+    { "q": "What's this? It's my new ...", "o": ["scooter", "please", "course"], "why": "It's my new scooter." },
+    { "q": "Your friend asks to play. You are kind. Say...", "o": ["Yes, of course.", "No! Go away.", "Goodbye."], "why": "Kind friends share." },
+    { "q": "Is sharing good?", "o": ["Yes, it is.", "No, it isn't.", "I'm seven."], "why": "Sharing makes friends happy." },
+    { "q": "What's this? (a yo-yo)", "o": ["It's a yo-yo.", "It's an yo-yo.", "Yes, of course."], "why": "yo-yo starts with y, so we say a." },
+    { "q": "Is it a car? (a ball)", "o": ["No, it isn't.", "Yes, it is.", "It's a car."], "why": "It is a ball, not a car." },
+    { "q": "A friend gives you a toy. You say...", "o": ["Thank you.", "Please.", "Sit down."], "why": "We say thank you when we get something." },
+    { "q": "Which is a toy word?", "o": ["building set", "together", "please"], "why": "A building set is a toy." }
+  ],
+  "hunt": [
+    { "q": "Can I play with it, ...?", "a": "please", "d": ["goodbye", "hello", "sorry"] },
+    { "q": "Yes, of ...", "a": "course", "d": ["please", "play", "toy"] },
+    { "q": "Let's play ...", "a": "together", "d": ["please", "alone", "goodbye"] },
+    { "q": "Ask to play politely.", "a": "Can I play?", "d": ["Give it!", "Go away!", "Sit down!"] },
+    { "q": "It's my ... scooter.", "a": "new", "d": ["please", "of", "who"] },
+    { "q": "The value of this lesson", "a": "Sharing", "d": ["Shouting", "Taking", "Crying"] },
+    { "q": "Say it when you get a toy.", "a": "Thank you", "d": ["Go away", "Sit down", "Stand up"] },
+    { "q": "What's this? (a robot)", "a": "It's a robot.", "d": ["It's an robot.", "Yes, it is.", "Of course."] },
+    { "q": "Is it a kite? (a kite)", "a": "Yes, it is.", "d": ["No, it isn't.", "It's a ball.", "Please."] },
+    { "q": "Is it a car? (a ball)", "a": "No, it isn't.", "d": ["Yes, it is.", "It's a car.", "Of course."] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "How do you ask to play with a friend's toy?", "o": ["Can I play with it, please?", "What's your name?", "How old are you?", "Is it a school?"], "why": "Can I play with it, please? is the polite question." },
+    { "lv": "التذكر", "q": "Which word is polite?", "o": ["please", "car", "seven", "red"], "why": "please is a polite word." },
+    { "lv": "التذكر", "q": "What does the friend answer?", "o": ["Yes, of course.", "No, it isn't.", "It's red.", "I'm seven."], "why": "Yes, of course. Let's play together." },
+    { "lv": "التذكر", "q": "Which toy word is right for the picture of a robot?", "o": ["robot", "rabot", "robat", "rubot"], "why": "r - o - b - o - t spells robot." },
+    { "lv": "التطبيق", "q": "Your friend has a new kite. You want to play. You say...", "o": ["Can I play with it, please?", "It's my kite.", "Goodbye.", "No, it isn't."], "why": "We ask politely to play." },
+    { "lv": "التطبيق", "q": "Your friend asks: Can I play with it, please? You say...", "o": ["Yes, of course. Let's play together.", "No, it isn't.", "What's this?", "It's my birthday."], "why": "We say yes and play together." },
+    { "lv": "التطبيق", "q": "Show your new scooter. You say...", "o": ["It's my new scooter.", "It's my new please.", "It's an scooter.", "Can I scooter?"], "why": "It's my new scooter. tells about your toy." },
+    { "lv": "التحليل", "q": "Why is sharing toys good?", "o": ["We play together and we are happy", "We lose our toys", "Our friends cry", "We can't play"], "why": "Sharing makes friends happy." },
+    { "lv": "التحليل", "q": "Put the dialogue in order.", "o": ["What's this? - It's my new kite. - Can I play with it, please? - Yes, of course.", "Yes, of course. - What's this? - It's my new kite. - Can I play with it, please?", "Can I play with it, please? - What's this? - Yes, of course. - It's my new kite.", "It's my new kite. - Yes, of course. - What's this? - Can I play with it, please?"], "why": "First ask, then answer, then ask to play, then say yes." },
+    { "lv": "التحليل", "q": "Which friend is kind?", "o": ["Ali says: Yes, of course.", "Ali says: No! It's my toy!", "Ali takes the toy.", "Ali runs away."], "why": "Kind friends share their toys." }
+  ]
+}

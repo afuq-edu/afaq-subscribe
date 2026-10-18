@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Welcome: Back to school",
+ "lesson": "Welcome – Lesson 1: Classroom language",
+ "outcomes": [
+  "I can understand and do twelve classroom instructions.",
+  "I can give a friend a classroom instruction.",
+  "I can read and write classroom instructions in the right order."
+ ],
+ "tf": [
+  {
+   "s": "The opposite of Put up your hand is Put down your hand.",
+   "t": true,
+   "why": "Up and down are opposites, so put up and put down are opposites too."
+  },
+  {
+   "s": "The opposite of Turn on the AC is Turn up the AC.",
+   "t": false,
+   "why": "The opposite of turn on is turn off: Turn off the AC."
+  },
+  {
+   "s": "In an instruction, the verb comes first.",
+   "t": true,
+   "why": "Great! We start with the action word, like Go to the board."
+  },
+  {
+   "s": "The opposite of Take out your pencil is Put away your pencil.",
+   "t": true,
+   "why": "Take out and put away are opposites."
+  },
+  {
+   "s": "We say Pay attention when we want everyone to listen and look.",
+   "t": true,
+   "why": "Pay attention means listen and look carefully."
+  },
+  {
+   "s": "Hand out the books means put the books in your bag.",
+   "t": false,
+   "why": "Hand out the books means give a book to each pupil."
+  },
+  {
+   "s": "It is very hot in the classroom. We say Turn off the AC.",
+   "t": false,
+   "why": "When it is hot, we need the AC on: Turn on the AC."
+  },
+  {
+   "s": "Tidy up means put things in the right place.",
+   "t": true,
+   "why": "Yes! When we tidy up, the classroom is neat again."
+  },
+  {
+   "s": "The correct instruction is Go on the board.",
+   "t": false,
+   "why": "We say Go to the board."
+  },
+  {
+   "s": "Hold up your drawing means show your drawing to the class.",
+   "t": true,
+   "why": "We hold up a thing so everyone can see it."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: ___ attention.",
+   "o": [
+    "Pay",
+    "Put",
+    "Take"
+   ],
+   "why": "We say Pay attention."
+  },
+  {
+   "q": "Complete: Go ___ the board.",
+   "o": [
+    "to",
+    "up",
+    "out"
+   ],
+   "why": "We say Go to the board."
+  },
+  {
+   "q": "What is the opposite of Turn on?",
+   "o": [
+    "Turn off",
+    "Put up",
+    "Hand out"
+   ],
+   "why": "On and off are opposites."
+  },
+  {
+   "q": "Which word is a verb?",
+   "o": [
+    "Go",
+    "board",
+    "AC"
+   ],
+   "why": "Go is an action word, so it is a verb."
+  },
+  {
+   "q": "Complete: Hold ___ your drawing.",
+   "o": [
+    "up",
+    "to",
+    "off"
+   ],
+   "why": "We say Hold up your drawing."
+  },
+  {
+   "q": "Complete: Take ___ your pencil.",
+   "o": [
+    "out",
+    "on",
+    "to"
+   ],
+   "why": "We say Take out your pencil."
+  },
+  {
+   "q": "Complete: Hand out the ___.",
+   "o": [
+    "books",
+    "board",
+    "AC"
+   ],
+   "why": "We hand out books to the pupils."
+  },
+  {
+   "q": "What is the opposite of Put up?",
+   "o": [
+    "Put down",
+    "Put away",
+    "Take out"
+   ],
+   "why": "Up and down are opposites."
+  },
+  {
+   "q": "Which instruction is correct?",
+   "o": [
+    "Pay attention.",
+    "Pay a question.",
+    "Ask attention."
+   ],
+   "why": "We pay attention and we ask a question."
+  },
+  {
+   "q": "Which word comes first in an instruction?",
+   "o": [
+    "the verb",
+    "the noun",
+    "the"
+   ],
+   "why": "Instructions start with the action word."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Show your picture to the class",
+   "a": "Hold up",
+   "d": [
+    "Put away",
+    "Turn off",
+    "Go to"
+   ]
+  },
+  {
+   "q": "Give a book to every pupil",
+   "a": "Hand out",
+   "d": [
+    "Take out",
+    "Put down",
+    "Tidy up"
+   ]
+  },
+  {
+   "q": "Listen and look carefully",
+   "a": "Pay attention",
+   "d": [
+    "Tidy up",
+    "Turn off",
+    "Put away"
+   ]
+  },
+  {
+   "q": "Your hand goes down",
+   "a": "Put down",
+   "d": [
+    "Put up",
+    "Hold up",
+    "Hand out"
+   ]
+  },
+  {
+   "q": "Your hand goes up",
+   "a": "Put up",
+   "d": [
+    "Put down",
+    "Put away",
+    "Turn off"
+   ]
+  },
+  {
+   "q": "The room is very hot",
+   "a": "Turn on the AC",
+   "d": [
+    "Turn off the AC",
+    "Tidy up",
+    "Put down"
+   ]
+  },
+  {
+   "q": "Get your pencil from the case",
+   "a": "Take out",
+   "d": [
+    "Put away",
+    "Put down",
+    "Turn off"
+   ]
+  },
+  {
+   "q": "Make the classroom neat",
+   "a": "Tidy up",
+   "d": [
+    "Hand out",
+    "Turn on",
+    "Take out"
+   ]
+  },
+  {
+   "q": "Put your pencil in the case",
+   "a": "Put away",
+   "d": [
+    "Take out",
+    "Hold up",
+    "Turn on"
+   ]
+  },
+  {
+   "q": "You want to know something",
+   "a": "Ask",
+   "d": [
+    "Tidy",
+    "Pay",
+    "Hold"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which instruction means give a book to every pupil?",
+   "o": [
+    "Hand out the books.",
+    "Put away the books.",
+    "Hold up the books.",
+    "Tidy up the books."
+   ],
+   "why": "Hand out means give to each person."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which instruction about the AC is correct?",
+   "o": [
+    "Turn off the AC.",
+    "Turn away the AC.",
+    "Turn down the AC.",
+    "Turn out the AC."
+   ],
+   "why": "We turn on and turn off the AC."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which instruction do we use to show our picture to the class?",
+   "o": [
+    "Hold up your drawing.",
+    "Put down your drawing.",
+    "Put away your drawing.",
+    "Ask a drawing."
+   ],
+   "why": "Hold up means show it so everyone can see."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which pair are opposites?",
+   "o": [
+    "take out / put away",
+    "put up / hold up",
+    "go to / ask",
+    "tidy up / hand out"
+   ],
+   "why": "Take out and put away are opposites."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The teacher says Go to the board. What does Ali do?",
+   "o": [
+    "He walks to the board.",
+    "He sits down.",
+    "He opens his bag.",
+    "He turns on the AC."
+   ],
+   "why": "Go to the board means walk to the board."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: ___ out the books. ___ to the board.",
+   "o": [
+    "Hand / Go",
+    "Go / Hand",
+    "Take / Ask",
+    "Ask / Pay"
+   ],
+   "why": "We say Hand out the books and Go to the board."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence has the right word order?",
+   "o": [
+    "Go to the board.",
+    "To the board go.",
+    "The board go to.",
+    "Go the to board."
+   ],
+   "why": "The verb comes first, then to the board."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which two instructions are best to start an English lesson?",
+   "o": [
+    "Take out your pencil. Pay attention.",
+    "Put away your pencil. Tidy up.",
+    "Turn off the AC. Put away your book.",
+    "Put down your hand. Put away your pencil."
+   ],
+   "why": "At the start we take out our things and listen."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sara puts up her hand and the teacher sees her. What does Sara want to do?",
+   "o": [
+    "Ask a question.",
+    "Tidy up.",
+    "Hand out the books.",
+    "Turn on the AC."
+   ],
+   "why": "We put up a hand when we want to ask or answer."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The room is cold and the AC is on. Which instruction helps?",
+   "o": [
+    "Turn off the AC.",
+    "Turn on the AC.",
+    "Hold up your drawing.",
+    "Go to the board."
+   ],
+   "why": "If it is cold, we turn off the AC."
+  }
+ ]
+}

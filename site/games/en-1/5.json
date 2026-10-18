@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 1: Family and friends",
+ "lesson": "Lesson 4: Language practice – Who's this? + Sound p",
+ "outcomes": [
+  "I can ask Who's this? and answer This is my …",
+  "I can say the sound /p/ and write the letter p.",
+  "I can blend sounds to read tap and pat."
+ ],
+ "tf": [
+  {
+   "s": "Fatma is Sami's sister.",
+   "t": true,
+   "why": "Yes! Sami says: This is my sister, Fatma."
+  },
+  {
+   "s": "We answer Who's this? with This is my mum.",
+   "t": true,
+   "why": "Great! This is my … tells who it is."
+  },
+  {
+   "s": "We answer Who's this? with Goodbye!",
+   "t": false,
+   "why": "We say This is …"
+  },
+  {
+   "s": "Pen starts with the sound /p/.",
+   "t": true,
+   "why": "Yes! p, p, pen."
+  },
+  {
+   "s": "Pie starts with the letter t.",
+   "t": false,
+   "why": "Pie starts with p."
+  },
+  {
+   "s": "t – a – p makes tap.",
+   "t": true,
+   "why": "Well done! t-a-p, tap."
+  },
+  {
+   "s": "p – a – t makes tap.",
+   "t": false,
+   "why": "p-a-t makes pat."
+  },
+  {
+   "s": "Pink starts with /p/.",
+   "t": true,
+   "why": "Yes! p, p, pink."
+  },
+  {
+   "s": "A brother is a girl.",
+   "t": false,
+   "why": "A brother is a boy."
+  },
+  {
+   "s": "Sun starts with /p/.",
+   "t": false,
+   "why": "Sun starts with /s/."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who's this? (Dad's picture)",
+   "o": [
+    "This is my dad.",
+    "This is my sister.",
+    "I'm Dad's cat."
+   ],
+   "why": "It is Dad."
+  },
+  {
+   "q": "Which word starts with /p/?",
+   "o": [
+    "pen",
+    "sun",
+    "tree"
+   ],
+   "why": "p, p, pen!"
+  },
+  {
+   "q": "_en: which letter is missing?",
+   "o": [
+    "p",
+    "t",
+    "s"
+   ],
+   "why": "p + en = pen."
+  },
+  {
+   "q": "_ot: which letter is missing?",
+   "o": [
+    "p",
+    "a",
+    "s"
+   ],
+   "why": "p + ot = pot."
+  },
+  {
+   "q": "The /p/ Phonics Card shows a …",
+   "o": [
+    "pen",
+    "teddy",
+    "snake"
+   ],
+   "why": "Pen starts with /p/."
+  },
+  {
+   "q": "Blend: p – a – t",
+   "o": [
+    "pat",
+    "tap",
+    "sat"
+   ],
+   "why": "p-a-t, pat!"
+  },
+  {
+   "q": "Blend: t – a – p",
+   "o": [
+    "tap",
+    "pat",
+    "pan"
+   ],
+   "why": "t-a-p, tap!"
+  },
+  {
+   "q": "Sami: This is my sister, …",
+   "o": [
+    "Fatma",
+    "Mazin",
+    "Tom"
+   ],
+   "why": "Fatma is Sami's sister."
+  },
+  {
+   "q": "This is my friend, …",
+   "o": [
+    "Lily",
+    "dad",
+    "mum"
+   ],
+   "why": "A friend has a name, like Lily."
+  },
+  {
+   "q": "Which question asks about a person?",
+   "o": [
+    "Who's this?",
+    "Goodbye!",
+    "Sit down!"
+   ],
+   "why": "Who's this? asks about a person."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Catch the /p/ word you write with.",
+   "a": "pen",
+   "d": [
+    "tree",
+    "sun",
+    "apple"
+   ]
+  },
+  {
+   "q": "Catch the /p/ food.",
+   "a": "pie",
+   "d": [
+    "apple",
+    "nut",
+    "tin"
+   ]
+  },
+  {
+   "q": "Catch the /p/ colour.",
+   "a": "pink",
+   "d": [
+    "red",
+    "blue",
+    "green"
+   ]
+  },
+  {
+   "q": "Catch another /p/ word.",
+   "a": "pin",
+   "d": [
+    "tin",
+    "sit",
+    "ant"
+   ]
+  },
+  {
+   "q": "Catch the /p/ word.",
+   "a": "pot",
+   "d": [
+    "sad",
+    "toys",
+    "axe"
+   ]
+  },
+  {
+   "q": "Catch the /p/ word with water.",
+   "a": "pond",
+   "d": [
+    "sun",
+    "tree",
+    "snake"
+   ]
+  },
+  {
+   "q": "Catch the letter for /p/.",
+   "a": "p",
+   "d": [
+    "s",
+    "a",
+    "t"
+   ]
+  },
+  {
+   "q": "Blend: t – a – p",
+   "a": "tap",
+   "d": [
+    "pat",
+    "sat",
+    "pan"
+   ]
+  },
+  {
+   "q": "Blend: p – a – t",
+   "a": "pat",
+   "d": [
+    "tap",
+    "sat",
+    "nap"
+   ]
+  },
+  {
+   "q": "Catch Sami's sister.",
+   "a": "Fatma",
+   "d": [
+    "Mazin",
+    "Jack",
+    "Tom"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these words starts with /p/?",
+   "o": [
+    "pin",
+    "tin",
+    "sit",
+    "ant"
+   ],
+   "why": "p, p, pin!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which letter makes the sound /p/?",
+   "o": [
+    "p",
+    "t",
+    "s",
+    "a"
+   ],
+   "why": "The letter p says /p/."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who's Fatma?",
+   "o": [
+    "Sami's sister",
+    "Sami's mum",
+    "Jack's cat",
+    "Sami's brother"
+   ],
+   "why": "Fatma is Sami's sister."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one is a family word?",
+   "o": [
+    "brother",
+    "pen",
+    "pie",
+    "pot"
+   ],
+   "why": "Brother is in the family."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You show your friend Ali to your mum. You say …",
+   "o": [
+    "This is my friend, Ali.",
+    "This is my sister, Ali.",
+    "I'm Ali.",
+    "Goodbye, Ali."
+   ],
+   "why": "Ali is your friend."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend points to your photo: Who's this? It's your brother. You say …",
+   "o": [
+    "This is my brother.",
+    "This is my mum.",
+    "What's your name?",
+    "This is my cat."
+   ],
+   "why": "Say This is my brother."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "_ink: which letter is missing?",
+   "o": [
+    "p",
+    "s",
+    "t",
+    "a"
+   ],
+   "why": "p + ink = pink."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT start with /p/?",
+   "o": [
+    "tap",
+    "pen",
+    "pie",
+    "pot"
+   ],
+   "why": "Tap starts with /t/."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Tap and pat have the same letters. What is different?",
+   "o": [
+    "The order of the sounds",
+    "The letter s",
+    "The colour",
+    "The letter n"
+   ],
+   "why": "t-a-p and p-a-t: the order changes the word."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does not belong: mum, dad, sister, pen?",
+   "o": [
+    "pen",
+    "mum",
+    "dad",
+    "sister"
+   ],
+   "why": "Pen is not a person."
+  }
+ ]
+}

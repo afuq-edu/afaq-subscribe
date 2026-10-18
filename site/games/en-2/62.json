@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Sounds and Spelling – Unit 4, Lesson 7: Graded readers",
+  "outcomes": [
+    "I can read a story aloud with a partner.",
+    "I can find words with ee, er, ar and o-e in a story.",
+    "I can answer questions about \"The goat herd\" and \"Where Is Our Shark?\"."
+  ],
+  "tf": [
+    { "s": "In \"The goat herd\", the boy puts his boots on his feet.", "t": true, "why": "Yes! I put my boots on my feet." },
+    { "s": "In \"The goat herd\", the boy can see goats and bees.", "t": true, "why": "Great! I can see goats. I can see bees." },
+    { "s": "In \"Where Is Our Shark?\", a girl and her grandma are in the park.", "t": true, "why": "Well done! They are in the park at the start." },
+    { "s": "The note says the shark is in its home in the zoo.", "t": false, "why": "The note says the shark is NOT in its home." },
+    { "s": "There is a shark in the lake.", "t": false, "why": "No! That is a duck!" },
+    { "s": "There is a duck in the ferns.", "t": false, "why": "It is a cat in the ferns." },
+    { "s": "Shark, park and dark have the ar sound.", "t": true, "why": "Yes! They all have ar." },
+    { "s": "Ferns has the er sound.", "t": true, "why": "Great! f-er-ns has er." },
+    { "s": "Note has the ee sound.", "t": false, "why": "Note has o-e." },
+    { "s": "Some and have are tricky words in \"The goat herd\".", "t": true, "why": "Yes! We learn them by heart." }
+  ],
+  "boxes": [
+    { "q": "I put my ___ on my feet.", "o": ["boots", "bees", "goats"], "why": "I put my boots on my feet." },
+    { "q": "Choose: I can see (sheep / goats).", "o": ["goats", "sheep", "sharks"], "why": "In the story: I can see goats." },
+    { "q": "Choose: I can see (bees / boots).", "o": ["bees", "boots", "ducks"], "why": "In the story: I can see bees." },
+    { "q": "Circle the tricky word: I have some goat food.", "o": ["some", "goat", "food"], "why": "Some is a tricky word (have is one too)." },
+    { "q": "Where do the girl and grandma find the note?", "o": ["in the park", "in the zoo", "at home"], "why": "They find the note in the park." },
+    { "q": "Who is with the girl in the park?", "o": ["her grandma", "her uncle", "her cousin"], "why": "A girl and her grandma are in the park." },
+    { "q": "What is in the lake?", "o": ["a duck", "a shark", "a cat"], "why": "No! That is a duck!" },
+    { "q": "Complete: sh_rk", "o": ["ar", "er", "ee"], "why": "sh-ar-k spells shark." },
+    { "q": "Complete: f_rns", "o": ["er", "ar", "oo"], "why": "f-er-ns spells ferns." },
+    { "q": "Complete: n_t_", "o": ["o, e", "a, e", "e, o"], "why": "n-o-t-e spells note." }
+  ],
+  "hunt": [
+    { "q": "On the boy's feet", "a": "boots", "d": ["bees", "goats", "bags"] },
+    { "q": "Animals the boy can see", "a": "goats", "d": ["sharks", "ducks", "cats"] },
+    { "q": "In the bag: some goat ___", "a": "food", "d": ["boots", "bees", "notes"] },
+    { "q": "The girl is in the park with…", "a": "grandma", "d": ["mum", "aunt", "sister"] },
+    { "q": "They find it in the park.", "a": "a note", "d": ["a shark", "a duck", "a boot"] },
+    { "q": "The shark's home is in the…", "a": "zoo", "d": ["park", "lake", "farm"] },
+    { "q": "In the lake there is a…", "a": "duck", "d": ["shark", "goat", "bee"] },
+    { "q": "In the ferns there is a…", "a": "cat", "d": ["duck", "shark", "goat"] },
+    { "q": "Complete: d_rk", "a": "dark", "d": ["derk", "dork", "deek"] },
+    { "q": "Find the o-e word.", "a": "roses", "d": ["ferns", "park", "zoo"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "What does the note say?", "o": ["Our shark is not in its home in the zoo.", "Our duck is in the lake.", "Our cat is in the zoo.", "Come to the farm."], "why": "The note says the shark is not in its home." },
+    { "lv": "التذكر", "q": "Which word from the shark story has ar?", "o": ["park", "ferns", "note", "duck"], "why": "p-ar-k has ar." },
+    { "lv": "التذكر", "q": "Which is a tricky word in \"Where Is Our Shark?\"?", "o": ["our", "shark", "park", "duck"], "why": "Our is a tricky word." },
+    { "lv": "التذكر", "q": "Which animal does the boy see in \"The goat herd\"?", "o": ["bees", "sharks", "ducks", "cats"], "why": "I can see bees." },
+    { "lv": "التطبيق", "q": "True or false: The shark is not in its home.", "o": ["True", "False", "We don't know", "It is a duck"], "why": "The note says it is not in its home." },
+    { "lv": "التطبيق", "q": "Write one sentence from \"The goat herd\".", "o": ["I can see goats.", "I can see a shark.", "That is a duck!", "Our shark is in the zoo."], "why": "I can see goats is from The goat herd." },
+    { "lv": "التطبيق", "q": "Find the word with the same sound as \"shark\" in the story.", "o": ["dark", "duck", "note", "zoo"], "why": "Shark and dark both have ar." },
+    { "lv": "التحليل", "q": "Can you see a shark in the lake? Why do they say No?", "o": ["Because it is a duck", "Because it is a cat", "Because the lake is dark", "Because it is a goat"], "why": "No! That is a duck!" },
+    { "lv": "التحليل", "q": "Why do the girl and grandma look for the shark?", "o": ["It is not in its home in the zoo.", "It is in the lake.", "It is their pet duck.", "It is in a bag."], "why": "The note tells them the shark is not in its home." },
+    { "lv": "التحليل", "q": "Which group has words from both stories with the ee sound?", "o": ["feet and bees", "ferns and park", "note and roses", "duck and zoo"], "why": "Feet and bees both have ee." }
+  ]
+}

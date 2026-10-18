@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 4: My favourite toy",
+ "lesson": "Lesson 5: Project – A toy box + Sound ch",
+ "outcomes": [
+  "I can make a toy box and talk about it.",
+  "I can say: I've got a yo-yo. It's red.",
+  "I can hear the ch sound in chair, cheese and chick."
+ ],
+ "tf": [
+  {
+   "s": "We can say: I've got a train.",
+   "t": true,
+   "why": "Yes! I've got a … tells what you have."
+  },
+  {
+   "s": "We answer What colour is it? with a colour.",
+   "t": true,
+   "why": "Great! It's blue."
+  },
+  {
+   "s": "Chair starts with the ch sound.",
+   "t": true,
+   "why": "Yes! Ch-ch-chair."
+  },
+  {
+   "s": "Lion starts with the ch sound.",
+   "t": false,
+   "why": "Lion starts with l. Chain starts with ch."
+  },
+  {
+   "s": "ch – i – n makes the word chin.",
+   "t": true,
+   "why": "Well done! ch-i-n is chin."
+  },
+  {
+   "s": "ch – o – p makes the word chip.",
+   "t": false,
+   "why": "ch-o-p makes chop. ch-i-p makes chip."
+  },
+  {
+   "s": "Ch is made with the letters c and h.",
+   "t": true,
+   "why": "Right! c and h make ch."
+  },
+  {
+   "s": "A plane is a colour.",
+   "t": false,
+   "why": "A plane is a toy. Blue is a colour."
+  },
+  {
+   "s": "Cherry starts with the sh sound.",
+   "t": false,
+   "why": "Cherry starts with ch."
+  },
+  {
+   "s": "A toy box keeps toys in one place.",
+   "t": true,
+   "why": "Yes! A toy box keeps toys tidy."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "You have a yo-yo in your box. What do you say?",
+   "o": [
+    "I've got a yo-yo.",
+    "Who's this?",
+    "Let's tidy up."
+   ],
+   "why": "I've got a yo-yo. Great!"
+  },
+  {
+   "q": "What colour is your plane? (blue)",
+   "o": [
+    "It's blue.",
+    "It's a plane.",
+    "It's my plane."
+   ],
+   "why": "It's blue tells the colour."
+  },
+  {
+   "q": "Which word starts with ch?",
+   "o": [
+    "chick",
+    "lion",
+    "sheep"
+   ],
+   "why": "Ch-ch-chick starts with ch."
+  },
+  {
+   "q": "ch – i – p. What's the word?",
+   "o": [
+    "chip",
+    "chin",
+    "chop"
+   ],
+   "why": "ch-i-p makes chip."
+  },
+  {
+   "q": "What's missing? _ick",
+   "o": [
+    "ch",
+    "sh",
+    "th"
+   ],
+   "why": "ch + ick makes chick."
+  },
+  {
+   "q": "Which one is a toy?",
+   "o": [
+    "robot",
+    "cheese",
+    "chair"
+   ],
+   "why": "A robot is a toy."
+  },
+  {
+   "q": "What's your favourite toy in your box? (robot)",
+   "o": [
+    "It's my robot.",
+    "It's red.",
+    "I don't understand."
+   ],
+   "why": "It's my robot tells your favourite."
+  },
+  {
+   "q": "Which food starts with ch?",
+   "o": [
+    "cheese",
+    "lemon",
+    "fig"
+   ],
+   "why": "Cheese starts with ch."
+  },
+  {
+   "q": "ch – o – p. What's the word?",
+   "o": [
+    "chop",
+    "chip",
+    "shop"
+   ],
+   "why": "ch-o-p makes chop."
+  },
+  {
+   "q": "Which word is a colour?",
+   "o": [
+    "red",
+    "train",
+    "teddy"
+   ],
+   "why": "Red is a colour."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "It starts with ch",
+   "a": "chain",
+   "d": [
+    "shell",
+    "thumb",
+    "lion"
+   ]
+  },
+  {
+   "q": "ch – i – n",
+   "a": "chin",
+   "d": [
+    "chip",
+    "chop",
+    "shin"
+   ]
+  },
+  {
+   "q": "ch – i – p",
+   "a": "chip",
+   "d": [
+    "chin",
+    "ship",
+    "chop"
+   ]
+  },
+  {
+   "q": "ch – o – p",
+   "a": "chop",
+   "d": [
+    "shop",
+    "chip",
+    "top"
+   ]
+  },
+  {
+   "q": "A fruit that starts with ch",
+   "a": "cherry",
+   "d": [
+    "lemon",
+    "fig",
+    "grapes"
+   ]
+  },
+  {
+   "q": "A baby bird with ch",
+   "a": "chick",
+   "d": [
+    "duck",
+    "lion",
+    "cat"
+   ]
+  },
+  {
+   "q": "You sit on a …",
+   "a": "chair",
+   "d": [
+    "cheese",
+    "chain",
+    "cherry"
+   ]
+  },
+  {
+   "q": "Say what you have",
+   "a": "I've got a ball.",
+   "d": [
+    "What's this?",
+    "It's red.",
+    "Who's this?"
+   ]
+  },
+  {
+   "q": "A toy",
+   "a": "train",
+   "d": [
+    "red",
+    "box",
+    "chair"
+   ]
+  },
+  {
+   "q": "A colour",
+   "a": "yellow",
+   "d": [
+    "yo-yo",
+    "robot",
+    "plane"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What sound does the chop card show?",
+   "o": [
+    "/tʃ/ (ch)",
+    "/ʃ/ (sh)",
+    "/θ/ (th)",
+    "/k/ (c)"
+   ],
+   "why": "Chop starts with the ch sound."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these words starts with ch?",
+   "o": [
+    "cherry",
+    "shell",
+    "thumb",
+    "lemon"
+   ],
+   "why": "Cherry starts with ch."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a toy?",
+   "o": [
+    "teddy",
+    "cheese",
+    "chain",
+    "chick"
+   ],
+   "why": "A teddy is a toy."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence tells what you have?",
+   "o": [
+    "I've got a ball.",
+    "What's this?",
+    "Who's this?",
+    "What colour is it?"
+   ],
+   "why": "I've got … tells what you have."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You present your toy box. Which is a good sentence?",
+   "o": [
+    "I've got a ball. It's red.",
+    "Who's this? It's red.",
+    "What's this? Goodbye.",
+    "It's my turn. It's a door."
+   ],
+   "why": "Say the toy and its colour."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Listen: ch – i – n. What's the word?",
+   "o": [
+    "chin",
+    "chip",
+    "shin",
+    "thin"
+   ],
+   "why": "ch-i-n makes chin."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner asks: What colour is it? Your train is yellow. You say…",
+   "o": [
+    "It's yellow.",
+    "It's a train.",
+    "I've got a train.",
+    "It's my favourite toy."
+   ],
+   "why": "It's yellow tells the colour."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word starts with ch, not sh?",
+   "o": [
+    "chick",
+    "ship",
+    "shop",
+    "shell"
+   ],
+   "why": "Chick starts with ch. The others start with sh."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group of words all start with ch?",
+   "o": [
+    "chop, chain, cheese",
+    "chop, ship, cheese",
+    "chair, lion, chick",
+    "cherry, thumb, chin"
+   ],
+   "why": "Chop, chain and cheese all start with ch."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your friend says: I've got a robot. What can you ask next?",
+   "o": [
+    "What colour is it?",
+    "Who's this?",
+    "Where's the door?",
+    "Can I go to the toilet?"
+   ],
+   "why": "Ask about the robot's colour."
+  }
+ ]
+}

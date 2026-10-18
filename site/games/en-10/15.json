@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "3",
+ "lesson": "Unit 3: Renewable Energy – Introducing Renewable Energy",
+ "outcomes": [
+  "Name renewable and non-renewable energy sources.",
+  "Explain why some energy sources will run out.",
+  "Give my opinion on the best energy for Oman."
+ ],
+ "tf": [
+  {
+   "s": "Solar power comes from the sun.",
+   "t": true,
+   "why": "Yes! Solar panels turn sunlight into electricity."
+  },
+  {
+   "s": "Coal, oil and gas are renewable energy sources.",
+   "t": false,
+   "why": "They are non-renewable because they will run out one day."
+  },
+  {
+   "s": "Wind power uses turbines to generate electricity.",
+   "t": true,
+   "why": "Correct, the wind turns the turbines."
+  },
+  {
+   "s": "Non-renewable energy exists in limited amounts.",
+   "t": true,
+   "why": "Right, that is why it will run out."
+  },
+  {
+   "s": "Biofuel is made from living things or their waste.",
+   "t": true,
+   "why": "Well done, that is what biofuel is."
+  },
+  {
+   "s": "Hydropower is energy that comes from the wind.",
+   "t": false,
+   "why": "Hydropower comes from moving water, not wind."
+  },
+  {
+   "s": "Renewable energy comes from sources that will run out soon.",
+   "t": false,
+   "why": "Renewable sources do not run out, like the sun and wind."
+  },
+  {
+   "s": "Geothermal energy uses heat from inside the ground.",
+   "t": true,
+   "why": "Yes, 'geo' means earth and 'thermal' means heat."
+  },
+  {
+   "s": "Solar panels need wind to make electricity.",
+   "t": false,
+   "why": "Solar panels need sunlight, not wind."
+  },
+  {
+   "s": "Oman is very sunny, so solar power can be a good choice there.",
+   "t": true,
+   "why": "Good thinking, lots of sun means lots of solar energy."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which energy comes from the sun?",
+   "o": [
+    "solar power",
+    "wind power",
+    "hydropower"
+   ],
+   "why": "Solar means 'of the sun'."
+  },
+  {
+   "q": "Which source is non-renewable?",
+   "o": [
+    "coal",
+    "wind",
+    "sunlight"
+   ],
+   "why": "Coal is limited and will run out."
+  },
+  {
+   "q": "What does wind power use to make electricity?",
+   "o": [
+    "turbines",
+    "mirrors",
+    "dams"
+   ],
+   "why": "The wind turns big turbines."
+  },
+  {
+   "q": "Which energy uses moving water?",
+   "o": [
+    "hydropower",
+    "biofuel",
+    "solar power"
+   ],
+   "why": "'Hydro' means water."
+  },
+  {
+   "q": "What does 'run out' mean?",
+   "o": [
+    "be used up completely",
+    "become cheaper",
+    "grow faster"
+   ],
+   "why": "When energy runs out, there is none left."
+  },
+  {
+   "q": "Which is a renewable source?",
+   "o": [
+    "wind",
+    "oil",
+    "gas"
+   ],
+   "why": "The wind never runs out."
+  },
+  {
+   "q": "Fuel made from plants or their waste is…",
+   "o": [
+    "biofuel",
+    "coal",
+    "natural gas"
+   ],
+   "why": "'Bio' means life, so biofuel comes from living things."
+  },
+  {
+   "q": "Geothermal energy comes from…",
+   "o": [
+    "heat in the ground",
+    "the wind",
+    "the sea waves"
+   ],
+   "why": "It uses natural heat under the earth."
+  },
+  {
+   "q": "Oil and gas are ______ energy.",
+   "o": [
+    "non-renewable",
+    "renewable",
+    "endless"
+   ],
+   "why": "They exist in limited amounts."
+  },
+  {
+   "q": "Where does the electricity in our homes come from?",
+   "o": [
+    "energy sources",
+    "light bulbs",
+    "wires only"
+   ],
+   "why": "Electricity is generated from energy sources like gas or the sun."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Energy from the sun",
+   "a": "solar power",
+   "d": [
+    "wind power",
+    "hydropower",
+    "biofuel"
+   ]
+  },
+  {
+   "q": "Energy from moving water",
+   "a": "hydropower",
+   "d": [
+    "solar power",
+    "biofuel",
+    "geothermal"
+   ]
+  },
+  {
+   "q": "Energy from heat in the ground",
+   "a": "geothermal",
+   "d": [
+    "hydropower",
+    "wind power",
+    "solar power"
+   ]
+  },
+  {
+   "q": "Fuel from living things",
+   "a": "biofuel",
+   "d": [
+    "coal",
+    "oil",
+    "gas"
+   ]
+  },
+  {
+   "q": "Wind turns these to make power",
+   "a": "turbines",
+   "d": [
+    "panels",
+    "mirrors",
+    "batteries"
+   ]
+  },
+  {
+   "q": "A non-renewable source",
+   "a": "coal",
+   "d": [
+    "wind",
+    "sunlight",
+    "water"
+   ]
+  },
+  {
+   "q": "A renewable source",
+   "a": "wind",
+   "d": [
+    "oil",
+    "coal",
+    "gas"
+   ]
+  },
+  {
+   "q": "Opposite of renewable",
+   "a": "non-renewable",
+   "d": [
+    "clean",
+    "natural",
+    "endless"
+   ]
+  },
+  {
+   "q": "Become used up completely",
+   "a": "run out",
+   "d": [
+    "turn on",
+    "grow up",
+    "take off"
+   ]
+  },
+  {
+   "q": "Solar panels turn this into power",
+   "a": "sunlight",
+   "d": [
+    "wind",
+    "coal",
+    "water"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a renewable energy source?",
+   "o": [
+    "solar power",
+    "coal",
+    "oil",
+    "natural gas"
+   ],
+   "why": "The sun keeps shining, so solar power is renewable."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is biofuel?",
+   "o": [
+    "fuel made from living things or their waste",
+    "fuel made from rocks",
+    "electricity from the wind",
+    "heat from the sun"
+   ],
+   "why": "Biofuel comes from plants, animals or their waste."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does a solar panel do?",
+   "o": [
+    "It converts sunlight into electricity.",
+    "It turns in the wind.",
+    "It stores water.",
+    "It burns coal."
+   ],
+   "why": "Solar panels capture sunlight and make electricity."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group contains only non-renewable sources?",
+   "o": [
+    "coal, oil, gas",
+    "wind, sun, water",
+    "oil, wind, sun",
+    "biofuel, coal, wind"
+   ],
+   "why": "Coal, oil and gas will all run out."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: A country with strong winds near the coast could build a ______.",
+   "o": [
+    "wind farm",
+    "coal mine",
+    "oil well",
+    "gas station"
+   ],
+   "why": "Strong winds are perfect for wind turbines."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A town is next to a big, fast river. Which energy suits it best?",
+   "o": [
+    "hydropower",
+    "geothermal energy",
+    "coal",
+    "biofuel"
+   ],
+   "why": "Moving water can generate hydropower."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Sara says: 'This energy will never run out.' Which energy is she talking about?",
+   "o": [
+    "solar power",
+    "oil",
+    "coal",
+    "gas"
+   ],
+   "why": "The sun will not run out, so solar power is renewable."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why will non-renewable energy run out?",
+   "o": [
+    "It exists in limited amounts and cannot be renewed.",
+    "It is too clean.",
+    "People do not like it.",
+    "It only works at night."
+   ],
+   "why": "There is only a fixed amount of coal, oil and gas."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is solar power a good choice for Oman?",
+   "o": [
+    "Oman is very sunny.",
+    "Oman has a lot of snow.",
+    "Solar power uses oil.",
+    "Oman has no sunlight in summer."
+   ],
+   "why": "More sunshine means more solar electricity."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the main difference between renewable and non-renewable energy?",
+   "o": [
+    "Renewable energy does not run out; non-renewable energy does.",
+    "Renewable energy is always more expensive.",
+    "Non-renewable energy comes from the sun.",
+    "There is no difference."
+   ],
+   "why": "The key idea is whether the source can run out."
+  }
+ ]
+}

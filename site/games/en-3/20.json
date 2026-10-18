@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 2: Let's dress up!",
+ "lesson": "Unit 2 – Lesson 6: English in action (asking the price)",
+ "outcomes": [
+  "I can name things in a shop.",
+  "I can ask and answer about prices.",
+  "I can act out a shop dialogue politely."
+ ],
+ "tf": [
+  {
+   "s": "We say Excuse me to start talking to the shopkeeper.",
+   "t": true,
+   "why": "Yes! Excuse me is a polite way to start."
+  },
+  {
+   "s": "We ask about the price with How much is this …?",
+   "t": true,
+   "why": "Right! How much is this jumper?"
+  },
+  {
+   "s": "OMR means Omani rials.",
+   "t": true,
+   "why": "Well done! OMR is Omani rials."
+  },
+  {
+   "s": "The shopkeeper says: Yes, can I help you?",
+   "t": true,
+   "why": "Yes, the shopkeeper offers help."
+  },
+  {
+   "s": "The last line of the dialogue is Excuse me.",
+   "t": false,
+   "why": "Excuse me comes first; Thank you comes last."
+  },
+  {
+   "s": "We say Have you are when we give the money.",
+   "t": false,
+   "why": "We say Here you are."
+  },
+  {
+   "s": "We say Thank you at the end of the dialogue.",
+   "t": true,
+   "why": "Good! We say thank you at the end."
+  },
+  {
+   "s": "The shopkeeper answers the price with It's 5 rials.",
+   "t": true,
+   "why": "Yes, It's 5 rials tells us the price."
+  },
+  {
+   "s": "We ask: How old is this jumper? to find the price.",
+   "t": false,
+   "why": "For the price we ask How much is this jumper?"
+  },
+  {
+   "s": "A baseball cap is something we eat.",
+   "t": false,
+   "why": "A baseball cap is something we wear on our head."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do you say first to the shopkeeper?",
+   "o": [
+    "Excuse me.",
+    "Thank you.",
+    "Here you are."
+   ],
+   "why": "We start with Excuse me."
+  },
+  {
+   "q": "Complete: How ___ is this jumper?",
+   "o": [
+    "much",
+    "many",
+    "old"
+   ],
+   "why": "How much asks about the price."
+  },
+  {
+   "q": "Complete: ___ you are.",
+   "o": [
+    "Here",
+    "Have",
+    "Hear"
+   ],
+   "why": "We say Here you are when we give something."
+  },
+  {
+   "q": "Complete: Yes, ___ I help you?",
+   "o": [
+    "can",
+    "do",
+    "am"
+   ],
+   "why": "The shopkeeper says Can I help you?"
+  },
+  {
+   "q": "What does OMR mean?",
+   "o": [
+    "Omani rials",
+    "Old money",
+    "One more rial"
+   ],
+   "why": "OMR means Omani rials."
+  },
+  {
+   "q": "Which line comes last?",
+   "o": [
+    "Thank you.",
+    "Excuse me.",
+    "How much is this jumper?"
+   ],
+   "why": "We say thank you at the end."
+  },
+  {
+   "q": "The handbag is 9 OMR. The shopkeeper says …",
+   "o": [
+    "It's 9 rials.",
+    "It's 9 years.",
+    "It's 9 o'clock."
+   ],
+   "why": "It's 9 rials tells the price."
+  },
+  {
+   "q": "Which item do you wear on your feet?",
+   "o": [
+    "trainers",
+    "backpack",
+    "handbag"
+   ],
+   "why": "We wear trainers on our feet."
+  },
+  {
+   "q": "Which item do you carry books in?",
+   "o": [
+    "backpack",
+    "glasses",
+    "hijab"
+   ],
+   "why": "We carry books in a backpack."
+  },
+  {
+   "q": "Who says Can I help you?",
+   "o": [
+    "The shopkeeper",
+    "The customer",
+    "The teacher"
+   ],
+   "why": "The shopkeeper offers to help."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "First line in a shop",
+   "a": "Excuse me.",
+   "d": [
+    "Thank you.",
+    "Here you are.",
+    "Goodbye."
+   ]
+  },
+  {
+   "q": "Last line in a shop",
+   "a": "Thank you.",
+   "d": [
+    "Excuse me.",
+    "How much?",
+    "Hello."
+   ]
+  },
+  {
+   "q": "OMR means Omani …",
+   "a": "rials",
+   "d": [
+    "shops",
+    "days",
+    "clothes"
+   ]
+  },
+  {
+   "q": "How ___ is this coat?",
+   "a": "much",
+   "d": [
+    "many",
+    "old",
+    "big"
+   ]
+  },
+  {
+   "q": "___ you are.",
+   "a": "Here",
+   "d": [
+    "Have",
+    "Hear",
+    "Her"
+   ]
+  },
+  {
+   "q": "Yes, ___ I help you?",
+   "a": "can",
+   "d": [
+    "do",
+    "am",
+    "is"
+   ]
+  },
+  {
+   "q": "The shirt is 7 OMR. It's …",
+   "a": "7 rials",
+   "d": [
+    "5 rials",
+    "9 rials",
+    "2 rials"
+   ]
+  },
+  {
+   "q": "The jumper card says 2 OMR. It's …",
+   "a": "2 rials",
+   "d": [
+    "7 rials",
+    "9 rials",
+    "5 rials"
+   ]
+  },
+  {
+   "q": "You wear it on your head",
+   "a": "baseball cap",
+   "d": [
+    "trainers",
+    "jumper",
+    "tracksuit"
+   ]
+  },
+  {
+   "q": "You carry books in it",
+   "a": "backpack",
+   "d": [
+    "glasses",
+    "coat",
+    "hijab"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How do we ask about a price?",
+   "o": [
+    "How much is this?",
+    "How old are you?",
+    "Where is it?",
+    "What colour is it?"
+   ],
+   "why": "How much is this? asks about the price."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the customer say when giving the money?",
+   "o": [
+    "Here you are.",
+    "Can I help you?",
+    "Excuse me.",
+    "It's 5 rials."
+   ],
+   "why": "Here you are is said when we give something."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a shop item from the lesson?",
+   "o": [
+    "tracksuit",
+    "vulture",
+    "beard",
+    "picture"
+   ],
+   "why": "A tracksuit is one of the shop items."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the shopkeeper say after Excuse me?",
+   "o": [
+    "Yes, can I help you?",
+    "Thank you.",
+    "Here you are.",
+    "How much is this jumper?"
+   ],
+   "why": "The shopkeeper answers Yes, can I help you?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to buy a backpack. What do you ask?",
+   "o": [
+    "How much is this backpack?",
+    "How many is this backpack?",
+    "What is backpack?",
+    "Is this backpack old?"
+   ],
+   "why": "How much is this backpack? asks the price."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The coat costs 8 OMR. What does the shopkeeper say?",
+   "o": [
+    "It's 8 rials.",
+    "It's 8 coats.",
+    "It's 8 years old.",
+    "Here you are."
+   ],
+   "why": "The price answer is It's 8 rials."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct order.",
+   "o": [
+    "Excuse me. → Yes, can I help you? → How much is this jumper?",
+    "How much is this jumper? → Excuse me. → Yes, can I help you?",
+    "Thank you. → Excuse me. → How much is this jumper?",
+    "Yes, can I help you? → Thank you. → Excuse me."
+   ],
+   "why": "Excuse me first, then the shopkeeper helps, then we ask the price."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say Thank you at the end?",
+   "o": [
+    "To be polite after buying",
+    "To ask the price",
+    "To start talking",
+    "To say the colour"
+   ],
+   "why": "Thank you is polite and comes at the end."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The shopkeeper says It's 5 OMR. Which line came just before?",
+   "o": [
+    "How much is this jumper?",
+    "Thank you.",
+    "Here you are.",
+    "Excuse me."
+   ],
+   "why": "The price answer comes after the question How much …?"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which line is wrong?",
+   "o": [
+    "Have you are.",
+    "Excuse me.",
+    "Yes, can I help you?",
+    "Thank you."
+   ],
+   "why": "The correct line is Here you are."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 3: Our classroom",
+ "lesson": "Lesson 1: In the classroom – What's this? + Sound f",
+ "outcomes": [
+  "I can say teacher, whiteboard, door and window.",
+  "I can ask and answer: What's this? It's a …",
+  "I can hear the f sound in fish, five and fan."
+ ],
+ "tf": [
+  {
+   "s": "Fish starts with the f sound.",
+   "t": true,
+   "why": "Yes! F-f-fish starts with f."
+  },
+  {
+   "s": "Rabbit starts with the f sound.",
+   "t": false,
+   "why": "Rabbit starts with r. Five starts with f."
+  },
+  {
+   "s": "We ask Who's this? about a person.",
+   "t": true,
+   "why": "Great! Who's this? is for people."
+  },
+  {
+   "s": "We ask Who's this? about a door.",
+   "t": false,
+   "why": "For a thing, we ask What's this?"
+  },
+  {
+   "s": "Sami's teacher is Miss Zahra.",
+   "t": true,
+   "why": "Yes! Sami says: It's my teacher, Miss Zahra."
+  },
+  {
+   "s": "There is a dog at the window.",
+   "t": false,
+   "why": "Look again! It's a cat at the window."
+  },
+  {
+   "s": "f – i – t makes the word fit.",
+   "t": true,
+   "why": "Well done! f-i-t is fit."
+  },
+  {
+   "s": "A friend gives you a pen. You say Goodbye!",
+   "t": false,
+   "why": "We say Thank you when a friend gives us something."
+  },
+  {
+   "s": "In the morning we say Good morning.",
+   "t": true,
+   "why": "Yes! Good morning is a nice hello."
+  },
+  {
+   "s": "Four and five start with the letter f.",
+   "t": true,
+   "why": "Right! Four and five both start with f."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's this? We go in and out of the room with it.",
+   "o": [
+    "It's a door.",
+    "It's a window.",
+    "It's a whiteboard."
+   ],
+   "why": "We open the door to go in and out."
+  },
+  {
+   "q": "Who's this? She teaches the class.",
+   "o": [
+    "It's my teacher.",
+    "It's a door.",
+    "It's a window."
+   ],
+   "why": "A teacher teaches the class."
+  },
+  {
+   "q": "Which word starts with f?",
+   "o": [
+    "fan",
+    "cat",
+    "bag"
+   ],
+   "why": "F-f-fan starts with f."
+  },
+  {
+   "q": "What is the first letter of fish?",
+   "o": [
+    "f",
+    "s",
+    "r"
+   ],
+   "why": "Fish starts with f."
+  },
+  {
+   "q": "Your friend helps you. What do you say?",
+   "o": [
+    "Thank you.",
+    "Goodbye!",
+    "I'm ready."
+   ],
+   "why": "Thank you is a kind thing to say."
+  },
+  {
+   "q": "You don't understand. What do you say?",
+   "o": [
+    "I don't understand.",
+    "It's my turn.",
+    "Good morning."
+   ],
+   "why": "It's OK to say I don't understand."
+  },
+  {
+   "q": "f – i – n. What's the word?",
+   "o": [
+    "fin",
+    "fan",
+    "fit"
+   ],
+   "why": "f-i-n makes fin."
+  },
+  {
+   "q": "Which word does NOT start with f?",
+   "o": [
+    "door",
+    "fork",
+    "frog"
+   ],
+   "why": "Door starts with d, not f."
+  },
+  {
+   "q": "What's this? You can see outside through it.",
+   "o": [
+    "It's a window.",
+    "It's a door.",
+    "It's my teacher."
+   ],
+   "why": "We look outside through the window."
+  },
+  {
+   "q": "It's your turn in a game. What do you say?",
+   "o": [
+    "It's my turn.",
+    "I'm sorry.",
+    "See you tomorrow."
+   ],
+   "why": "We say It's my turn when we play."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "It starts with f",
+   "a": "frog",
+   "d": [
+    "rabbit",
+    "cat",
+    "book"
+   ]
+  },
+  {
+   "q": "Who teaches you?",
+   "a": "teacher",
+   "d": [
+    "window",
+    "door",
+    "whiteboard"
+   ]
+  },
+  {
+   "q": "The teacher writes on the …",
+   "a": "whiteboard",
+   "d": [
+    "door",
+    "window",
+    "cat"
+   ]
+  },
+  {
+   "q": "A number that starts with f",
+   "a": "five",
+   "d": [
+    "two",
+    "six",
+    "one"
+   ]
+  },
+  {
+   "q": "f – i – t",
+   "a": "fit",
+   "d": [
+    "fin",
+    "fan",
+    "fig"
+   ]
+  },
+  {
+   "q": "Sami's teacher",
+   "a": "Miss Zahra",
+   "d": [
+    "Mazin",
+    "Meg",
+    "Sami"
+   ]
+  },
+  {
+   "q": "Someone helps you. Say…",
+   "a": "Thank you.",
+   "d": [
+    "Goodbye!",
+    "Hello!",
+    "I'm sorry."
+   ]
+  },
+  {
+   "q": "You go home. Say…",
+   "a": "Goodbye!",
+   "d": [
+    "Good morning.",
+    "Thank you.",
+    "Excuse me?"
+   ]
+  },
+  {
+   "q": "First letter of fork",
+   "a": "f",
+   "d": [
+    "k",
+    "r",
+    "c"
+   ]
+  },
+  {
+   "q": "At the window there is a …",
+   "a": "cat",
+   "d": [
+    "fish",
+    "frog",
+    "teacher"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which one is a person?",
+   "o": [
+    "teacher",
+    "door",
+    "window",
+    "whiteboard"
+   ],
+   "why": "A teacher is a person. The others are things."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What sound does the fish card show?",
+   "o": [
+    "/f/",
+    "/r/",
+    "/k/",
+    "/s/"
+   ],
+   "why": "Fish starts with the /f/ sound."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do we say to the teacher in the morning?",
+   "o": [
+    "Good morning.",
+    "Goodbye!",
+    "I'm sorry.",
+    "It's my turn."
+   ],
+   "why": "Good morning is how we say hello in the morning."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who shows Mazin the classroom?",
+   "o": [
+    "Sami",
+    "Miss Zahra",
+    "the cat",
+    "Meg"
+   ],
+   "why": "Sami shows Mazin his classroom."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The teacher points to the door. What's this?",
+   "o": [
+    "It's a door.",
+    "It's a window.",
+    "Who's this?",
+    "It's my teacher."
+   ],
+   "why": "We answer What's this? with It's a …"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You need help with your work. What do you say?",
+   "o": [
+    "Can you help me?",
+    "It's my turn.",
+    "Goodbye!",
+    "I'm ready."
+   ],
+   "why": "Can you help me? asks for help."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Listen: f – i – g. What's the word?",
+   "o": [
+    "fig",
+    "fin",
+    "fit",
+    "fan"
+   ],
+   "why": "f-i-g makes fig."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your friend points to Miss Zahra. What does your friend ask?",
+   "o": [
+    "Who's this?",
+    "What's this?",
+    "It's a window.",
+    "Thank you."
+   ],
+   "why": "Miss Zahra is a person, so we ask Who's this?"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group of words all start with f?",
+   "o": [
+    "four, five, fish",
+    "four, door, fish",
+    "five, window, fan",
+    "teacher, frog, fork"
+   ],
+   "why": "Four, five and fish all start with f."
+  },
+  {
+   "lv": "التحليل",
+   "q": "You bump into a friend by mistake. What do you say?",
+   "o": [
+    "I'm sorry.",
+    "Thank you.",
+    "It's my turn.",
+    "Good morning."
+   ],
+   "why": "We say I'm sorry when we make a mistake."
+  }
+ ]
+}

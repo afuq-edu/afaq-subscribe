@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 2: Let's dress up!",
+ "lesson": "Unit 2 – Lesson 7: Phonics (ear, ure)",
+ "outcomes": [
+  "I can say the sounds ear and ure in words.",
+  "I can read and use our, your and their."
+ ],
+ "tf": [
+  {
+   "s": "Beard and hear have the sound ear.",
+   "t": true,
+   "why": "Yes! b-ear-d and h-ear both have ear."
+  },
+  {
+   "s": "Picture and vulture end with ure.",
+   "t": true,
+   "why": "Well done! pict-ure and vult-ure end with ure."
+  },
+  {
+   "s": "Year has the sound ure.",
+   "t": false,
+   "why": "Year has ear, like hear."
+  },
+  {
+   "s": "Mixture ends with ure.",
+   "t": true,
+   "why": "Right! mixt-ure ends with ure."
+  },
+  {
+   "s": "A vulture is a big bird.",
+   "t": true,
+   "why": "Yes, a vulture is a big bird that eats meat."
+  },
+  {
+   "s": "A beard is hair on a man's head.",
+   "t": false,
+   "why": "A beard is hair on a man's face."
+  },
+  {
+   "s": "Two children talk about their own picture. They say: This is their picture.",
+   "t": false,
+   "why": "When it is our own picture, we say This is our picture."
+  },
+  {
+   "s": "The teacher gives you a picture. She says: This is your picture.",
+   "t": true,
+   "why": "Good! Your is for the person you talk to."
+  },
+  {
+   "s": "Their is a tricky word.",
+   "t": true,
+   "why": "Yes! our, your and their are tricky words."
+  },
+  {
+   "s": "Hear ends with ure.",
+   "t": false,
+   "why": "Hear ends with ear."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word has ear?",
+   "o": [
+    "beard",
+    "picture",
+    "vulture"
+   ],
+   "why": "b-ear-d has the ear sound."
+  },
+  {
+   "q": "Which word has ure?",
+   "o": [
+    "vulture",
+    "hear",
+    "year"
+   ],
+   "why": "vult-ure has the ure sound."
+  },
+  {
+   "q": "Complete: pict___",
+   "o": [
+    "ure",
+    "ear",
+    "eer"
+   ],
+   "why": "The word is picture."
+  },
+  {
+   "q": "Complete: y___",
+   "o": [
+    "ear",
+    "ure",
+    "air"
+   ],
+   "why": "The word is year."
+  },
+  {
+   "q": "Two children say: ___ mixture is green.",
+   "o": [
+    "Our",
+    "Their",
+    "Your"
+   ],
+   "why": "We use our for me and my friends."
+  },
+  {
+   "q": "Talking about the other children: ___ picture is good.",
+   "o": [
+    "Their",
+    "Our",
+    "My"
+   ],
+   "why": "Their is for other people."
+  },
+  {
+   "q": "Talking to a friend: Where is ___ bag?",
+   "o": [
+    "your",
+    "our",
+    "their"
+   ],
+   "why": "Your is for the person you talk to."
+  },
+  {
+   "q": "Spell the tricky word:",
+   "o": [
+    "their",
+    "thier",
+    "there"
+   ],
+   "why": "The spelling is t-h-e-i-r."
+  },
+  {
+   "q": "Hair on a man's face is a …",
+   "o": [
+    "beard",
+    "picture",
+    "year"
+   ],
+   "why": "A beard grows on a man's face."
+  },
+  {
+   "q": "A big bird that eats meat is a …",
+   "o": [
+    "vulture",
+    "mixture",
+    "beard"
+   ],
+   "why": "A vulture is a big bird that eats meat."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Ending in picture",
+   "a": "ure",
+   "d": [
+    "ear",
+    "air",
+    "are"
+   ]
+  },
+  {
+   "q": "Ending in hear",
+   "a": "ear",
+   "d": [
+    "ure",
+    "air",
+    "are"
+   ]
+  },
+  {
+   "q": "b___d (hair on a face)",
+   "a": "ear",
+   "d": [
+    "ure",
+    "air",
+    "oo"
+   ]
+  },
+  {
+   "q": "mixt___",
+   "a": "ure",
+   "d": [
+    "ear",
+    "air",
+    "eer"
+   ]
+  },
+  {
+   "q": "A big bird that eats meat",
+   "a": "vulture",
+   "d": [
+    "beard",
+    "picture",
+    "mixture"
+   ]
+  },
+  {
+   "q": "A word with ear",
+   "a": "year",
+   "d": [
+    "picture",
+    "vulture",
+    "mixture"
+   ]
+  },
+  {
+   "q": "A word with ure",
+   "a": "picture",
+   "d": [
+    "beard",
+    "hear",
+    "year"
+   ]
+  },
+  {
+   "q": "Me and my friends: ___ class",
+   "a": "our",
+   "d": [
+    "their",
+    "your",
+    "my"
+   ]
+  },
+  {
+   "q": "The other children: ___ bags",
+   "a": "their",
+   "d": [
+    "our",
+    "your",
+    "my"
+   ]
+  },
+  {
+   "q": "Talking to you: ___ book",
+   "a": "your",
+   "d": [
+    "our",
+    "their",
+    "his"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which two words have the same ending sound?",
+   "o": [
+    "hear and beard",
+    "hear and picture",
+    "beard and vulture",
+    "year and mixture"
+   ],
+   "why": "hear and beard both have ear."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word ends with ure?",
+   "o": [
+    "mixture",
+    "year",
+    "hear",
+    "beard"
+   ],
+   "why": "mixt-ure ends with ure."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a tricky word from the lesson?",
+   "o": [
+    "our",
+    "ear",
+    "cap",
+    "hat"
+   ],
+   "why": "our, your and their are the tricky words."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Complete the tongue twister: I can hear a vulture and I can see a ___ of a man with a beard.",
+   "o": [
+    "picture",
+    "mixture",
+    "year",
+    "vulture"
+   ],
+   "why": "I can see a picture of a man with a beard."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You and your friend made a poster. You say: This is ___ poster.",
+   "o": [
+    "our",
+    "their",
+    "your",
+    "her"
+   ],
+   "why": "Our is for me and my friend."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You point to a group of children: ___ bags are red.",
+   "o": [
+    "Their",
+    "Our",
+    "Your",
+    "My"
+   ],
+   "why": "Their is for other people."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which word fits? I can h___ a vulture.",
+   "o": [
+    "ear",
+    "ure",
+    "air",
+    "are"
+   ],
+   "why": "The word is hear."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT belong?",
+   "o": [
+    "picture",
+    "beard",
+    "hear",
+    "year"
+   ],
+   "why": "picture has ure; the others have ear."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the odd one out.",
+   "o": [
+    "year",
+    "vulture",
+    "mixture",
+    "picture"
+   ],
+   "why": "year has ear; the others have ure."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The teacher talks to you and your partner: This is ___ picture. Which word is right?",
+   "o": [
+    "your",
+    "our",
+    "their",
+    "my"
+   ],
+   "why": "The teacher talks to you, so she says your."
+  }
+ ]
+}

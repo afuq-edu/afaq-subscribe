@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: A Fair Exchange (Reading)",
+ "lesson": "Dhow and tanker: comparing pictures; skimming a text",
+ "outcomes": [
+  "Describe and compare a dhow and an oil tanker",
+  "Skim a text quickly to get the gist",
+  "Choose the best title for a text and explain why"
+ ],
+ "tf": [
+  {
+   "s": "The tanker is the ship that carries oil.",
+   "t": true,
+   "why": "Yes, an oil tanker carries oil."
+  },
+  {
+   "s": "The dhow is powered by wind.",
+   "t": true,
+   "why": "Right, a dhow uses a sail and the wind."
+  },
+  {
+   "s": "The tanker is made of wood and has a triangular sail.",
+   "t": false,
+   "why": "That describes the dhow; the tanker is made of steel."
+  },
+  {
+   "s": "Both the dhow and the tanker were used to export goods from Arab lands.",
+   "t": true,
+   "why": "That is the connection between the two ships."
+  },
+  {
+   "s": "Skimming means reading every word slowly and carefully.",
+   "t": false,
+   "why": "Skimming is reading quickly to get the main idea."
+  },
+  {
+   "s": "We skim a text to get the gist, or overall idea.",
+   "t": true,
+   "why": "Yes, skimming gives you the general idea fast."
+  },
+  {
+   "s": "When skimming, you can read the title and the first lines of paragraphs.",
+   "t": true,
+   "why": "These parts often show what the text is about."
+  },
+  {
+   "s": "The best title for a text covers only one small part of it.",
+   "t": false,
+   "why": "A good title covers the whole text."
+  },
+  {
+   "s": "Dhows carried goods such as silk and spices.",
+   "t": true,
+   "why": "Yes, dhows carried a variety of goods."
+  },
+  {
+   "s": "Skimming is never useful when reading a newspaper.",
+   "t": false,
+   "why": "Skimming helps you decide which articles to read in detail."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which ship has powerful engines?",
+   "o": [
+    "the tanker",
+    "the dhow",
+    "neither ship"
+   ],
+   "why": "The modern tanker uses powerful engines."
+  },
+  {
+   "q": "What is the dhow made of?",
+   "o": [
+    "wood",
+    "steel",
+    "plastic"
+   ],
+   "why": "The traditional dhow is made of wood."
+  },
+  {
+   "q": "What does the tanker carry?",
+   "o": [
+    "oil",
+    "silk",
+    "spices"
+   ],
+   "why": "An oil tanker carries oil."
+  },
+  {
+   "q": "What is the gist of a text?",
+   "o": [
+    "its overall idea",
+    "its last word",
+    "its page number"
+   ],
+   "why": "The gist is the main, general idea."
+  },
+  {
+   "q": "Which title best fits the text about trade?",
+   "o": [
+    "Trading in Ancient and Modern Times",
+    "Silk only",
+    "How to build a ship"
+   ],
+   "why": "Title d covers the whole text."
+  },
+  {
+   "q": "What shape is the dhow's sail?",
+   "o": [
+    "triangular",
+    "square",
+    "round"
+   ],
+   "why": "The dhow has a triangular sail."
+  },
+  {
+   "q": "What does 'export' mean?",
+   "o": [
+    "send goods to sell abroad",
+    "buy goods at home",
+    "build ships"
+   ],
+   "why": "Exporting is selling goods to other countries."
+  },
+  {
+   "q": "Why is trade between nations important?",
+   "o": [
+    "countries get goods they cannot produce",
+    "it stops cooperation",
+    "it makes ships slower"
+   ],
+   "why": "Trade brings essential goods and cooperation."
+  },
+  {
+   "q": "Which is ancient: the dhow or the tanker?",
+   "o": [
+    "the dhow",
+    "the tanker",
+    "both are modern"
+   ],
+   "why": "The dhow is the traditional, ancient ship."
+  },
+  {
+   "q": "What is a good reason to skim?",
+   "o": [
+    "to choose articles for a project",
+    "to learn every detail",
+    "to count the words"
+   ],
+   "why": "Skimming helps you pick useful texts quickly."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Ship that carries oil",
+   "a": "tanker",
+   "d": [
+    "dhow",
+    "sail",
+    "merchant"
+   ]
+  },
+  {
+   "q": "Wooden ship with a sail",
+   "a": "dhow",
+   "d": [
+    "tanker",
+    "engine",
+    "train"
+   ]
+  },
+  {
+   "q": "What powers a dhow?",
+   "a": "wind",
+   "d": [
+    "oil",
+    "engines",
+    "electricity"
+   ]
+  },
+  {
+   "q": "Material of the tanker",
+   "a": "steel",
+   "d": [
+    "wood",
+    "cotton",
+    "silk"
+   ]
+  },
+  {
+   "q": "Reading fast for the main idea",
+   "a": "skimming",
+   "d": [
+    "scanning",
+    "writing",
+    "spelling"
+   ]
+  },
+  {
+   "q": "Overall idea of a text",
+   "a": "gist",
+   "d": [
+    "title",
+    "index",
+    "logo"
+   ]
+  },
+  {
+   "q": "Goods carried by dhows",
+   "a": "silk and spices",
+   "d": [
+    "oil and gas",
+    "cars and phones",
+    "steel and coal"
+   ]
+  },
+  {
+   "q": "Sending goods to another country",
+   "a": "export",
+   "d": [
+    "import",
+    "borrow",
+    "build"
+   ]
+  },
+  {
+   "q": "Shape of a dhow's sail",
+   "a": "triangular",
+   "d": [
+    "square",
+    "circular",
+    "oval"
+   ]
+  },
+  {
+   "q": "Another word for goods",
+   "a": "commodities",
+   "d": [
+    "sails",
+    "engines",
+    "headings"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is skimming used for?",
+   "o": [
+    "to get the gist of a text",
+    "to learn every new word",
+    "to write a summary",
+    "to check spelling"
+   ],
+   "why": "Skimming gives the overall idea quickly."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase describes the tanker?",
+   "o": [
+    "has powerful engines",
+    "powered by wind",
+    "made of wood",
+    "has a triangular sail"
+   ],
+   "why": "The tanker is a modern ship with engines."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase describes the dhow?",
+   "o": [
+    "carries silk and spices",
+    "made of steel",
+    "carries oil",
+    "has powerful engines"
+   ],
+   "why": "Dhows carried goods like silk and spices."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What can you look at first when you skim?",
+   "o": [
+    "the title and first lines",
+    "only the last word",
+    "the page numbers",
+    "only the pictures' colours"
+   ],
+   "why": "The title and opening lines show the topic."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You have 2 minutes to find out what an article is about. What should you do?",
+   "o": [
+    "skim it",
+    "read every word slowly",
+    "copy it",
+    "translate every word"
+   ],
+   "why": "Skimming is the fastest way to get the gist."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A text talks about trade long ago and trade today. Which title fits best?",
+   "o": [
+    "Trading in Ancient and Modern Times",
+    "The Silk Road Only",
+    "Modern Oil Tankers",
+    "Ships of Wood"
+   ],
+   "why": "The best title covers both ancient and modern trade."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are looking for articles for a school project. How can skimming help?",
+   "o": [
+    "It helps you choose useful articles fast",
+    "It helps you spell words",
+    "It helps you write faster",
+    "It helps you draw pictures"
+   ],
+   "why": "Skimming lets you check many texts quickly."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the connection between the dhow and the tanker?",
+   "o": [
+    "Both export goods from Arab lands",
+    "Both are made of wood",
+    "Both are powered by wind",
+    "Both carry only oil"
+   ],
+   "why": "Both ships carry important goods to other countries."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are some titles not suitable for the trade text?",
+   "o": [
+    "They cover only part of the text",
+    "They are too short",
+    "They have no verbs",
+    "They are in capital letters"
+   ],
+   "why": "A good title must fit the whole text."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How is the dhow different from the tanker?",
+   "o": [
+    "It is ancient and carried a variety of goods",
+    "It is modern and carries oil",
+    "It is bigger and uses engines",
+    "It is made of steel"
+   ],
+   "why": "The dhow is old and wind-powered; the tanker is modern."
+  }
+ ]
+}

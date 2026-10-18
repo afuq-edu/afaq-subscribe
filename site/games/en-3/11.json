@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 1: It's a happy day!",
+ "lesson": "Unit 1 – Lesson 8: Review",
+ "outcomes": [
+  "I can remember the Unit 1 routines and times of the day.",
+  "I can use I / We, don't and When do you ...?",
+  "I can spell Unit 1 words."
+ ],
+ "tf": [
+  {
+   "s": "Two children are eating breakfast. We say We have breakfast.",
+   "t": true,
+   "why": "More than one person: We."
+  },
+  {
+   "s": "We use I when we talk about two children.",
+   "t": false,
+   "why": "For two children we use We."
+  },
+  {
+   "s": "We go to bed at night.",
+   "t": true,
+   "why": "Yes! At night we go to bed."
+  },
+  {
+   "s": "Night is spelled n-i-t-e.",
+   "t": false,
+   "why": "Night is n-i-g-h-t."
+  },
+  {
+   "s": "I don't have art lessons means no art lessons for me.",
+   "t": true,
+   "why": "Don't makes a no sentence."
+  },
+  {
+   "s": "We have dinner in the morning.",
+   "t": false,
+   "why": "We have dinner in the evening."
+  },
+  {
+   "s": "For one-word answers in the exam, we write only one word.",
+   "t": true,
+   "why": "Write one word, like evening."
+  },
+  {
+   "s": "A picture with the moon shows the morning.",
+   "t": false,
+   "why": "The moon shows night."
+  },
+  {
+   "s": "Afternoon is spelled a-f-t-e-r-n-o-o-n.",
+   "t": true,
+   "why": "Well done! After + noon."
+  },
+  {
+   "s": "Basim has breakfast in the morning.",
+   "t": true,
+   "why": "The text says I have breakfast in the morning."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: I ___ my homework.",
+   "o": [
+    "do",
+    "have",
+    "go"
+   ],
+   "why": "We say do homework."
+  },
+  {
+   "q": "When do you go to bed?",
+   "o": [
+    "At night.",
+    "In the morning.",
+    "At the afternoon."
+   ],
+   "why": "We go to bed at night."
+  },
+  {
+   "q": "Two children eat breakfast. I or We?",
+   "o": [
+    "We",
+    "I",
+    "It"
+   ],
+   "why": "Two people: We."
+  },
+  {
+   "q": "When do you have dinner? In the ___.",
+   "o": [
+    "evening",
+    "morning",
+    "night"
+   ],
+   "why": "Dinner is in the evening."
+  },
+  {
+   "q": "Which word is spelled correctly?",
+   "o": [
+    "night",
+    "nite",
+    "nigt"
+   ],
+   "why": "Night: n-i-g-h-t."
+  },
+  {
+   "q": "A girl paints with a red cross. Which sentence?",
+   "o": [
+    "I don't have art lessons.",
+    "I have art lessons.",
+    "I art lessons don't."
+   ],
+   "why": "The cross means don't."
+  },
+  {
+   "q": "When do you go to school? In the ___.",
+   "o": [
+    "morning",
+    "night",
+    "evening"
+   ],
+   "why": "We go to school in the morning."
+  },
+  {
+   "q": "Which clue shows night in a picture?",
+   "o": [
+    "the moon",
+    "a high sun",
+    "a rising sun"
+   ],
+   "why": "The moon is in the sky at night."
+  },
+  {
+   "q": "Complete: My name is Basim. I have ___ in the morning.",
+   "o": [
+    "breakfast",
+    "dinner",
+    "bed"
+   ],
+   "why": "Basim has breakfast in the morning."
+  },
+  {
+   "q": "How many words do you write in a one-word answer?",
+   "o": [
+    "one",
+    "two",
+    "three"
+   ],
+   "why": "Write just one word."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "I ___ my homework.",
+   "a": "do",
+   "d": [
+    "have",
+    "go",
+    "play"
+   ]
+  },
+  {
+   "q": "We go to bed ___ night.",
+   "a": "at",
+   "d": [
+    "in",
+    "on",
+    "to"
+   ]
+  },
+  {
+   "q": "We have dinner in the ___",
+   "a": "evening",
+   "d": [
+    "morning",
+    "night",
+    "bed"
+   ]
+  },
+  {
+   "q": "Picture with the moon",
+   "a": "night",
+   "d": [
+    "morning",
+    "afternoon",
+    "evening"
+   ]
+  },
+  {
+   "q": "Spell: n-i-g-h-t",
+   "a": "night",
+   "d": [
+    "nice",
+    "nine",
+    "light"
+   ]
+  },
+  {
+   "q": "Spell: a-r-t",
+   "a": "art",
+   "d": [
+    "arm",
+    "ant",
+    "are"
+   ]
+  },
+  {
+   "q": "Two children = ___",
+   "a": "We",
+   "d": [
+    "I",
+    "It",
+    "He"
+   ]
+  },
+  {
+   "q": "No sentence: I ___ play.",
+   "a": "don't",
+   "d": [
+    "do",
+    "not",
+    "no"
+   ]
+  },
+  {
+   "q": "We go to school in the ___",
+   "a": "morning",
+   "d": [
+    "night",
+    "evening",
+    "bed"
+   ]
+  },
+  {
+   "q": "Minute hand on 6",
+   "a": "half past",
+   "d": [
+    "o'clock",
+    "quarter to",
+    "quarter past"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which routine is in the evening?",
+   "o": [
+    "have dinner",
+    "get up",
+    "have breakfast",
+    "go to school"
+   ],
+   "why": "We have dinner in the evening."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means a time of the day?",
+   "o": [
+    "afternoon",
+    "homework",
+    "breakfast",
+    "tennis"
+   ],
+   "why": "Afternoon is a time of the day."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question asks about the time of a routine?",
+   "o": [
+    "When do you have art lessons?",
+    "What's your name?",
+    "How many desks can you see?",
+    "What colour is it?"
+   ],
+   "why": "When asks about time."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word do we spell b-e-d?",
+   "o": [
+    "bed",
+    "bad",
+    "bet",
+    "red"
+   ],
+   "why": "B-e-d spells bed."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write: When do you go to school?",
+   "o": [
+    "We go to school in the morning.",
+    "We go to school at night.",
+    "We school go morning.",
+    "We go to school in night."
+   ],
+   "why": "School is in the morning."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture: two children and tennis with a red cross. Which sentence?",
+   "o": [
+    "We don't play tennis.",
+    "I play tennis.",
+    "We play tennis.",
+    "I don't tennis."
+   ],
+   "why": "Two children and a cross: We don't play tennis."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "When do you have dinner? Write one word: In the ___.",
+   "o": [
+    "evening",
+    "eveninng",
+    "morning",
+    "nights"
+   ],
+   "why": "Dinner is in the evening."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "We go to bed in night.",
+    "We get up in the morning.",
+    "We have lunch in the afternoon.",
+    "We have dinner in the evening."
+   ],
+   "why": "Night takes at: at night."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The sun is high in the sky and children eat lunch. Which time is it?",
+   "o": [
+    "afternoon",
+    "night",
+    "evening",
+    "morning"
+   ],
+   "why": "High sun and lunch: afternoon."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which list is in the right order for a day?",
+   "o": [
+    "get up, go to school, do homework, go to bed",
+    "go to bed, get up, do homework, go to school",
+    "do homework, get up, go to bed, go to school",
+    "go to school, go to bed, get up, do homework"
+   ],
+   "why": "We start with get up and finish with go to bed."
+  }
+ ]
+}

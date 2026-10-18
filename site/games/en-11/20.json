@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 4 - Unit 5: E-Shopping",
+ "outcomes": [
+  "Read and understand the terms and conditions of an online club",
+  "Find the complaints in a formal e-mail",
+  "Write a formal e-mail of complaint"
+ ],
+ "tf": [
+  {
+   "s": "You must be 18 or over to buy DVDs from the Online DVD Club.",
+   "t": true,
+   "why": "Yes! So a 19-year-old can buy DVDs."
+  },
+  {
+   "s": "You can return any DVD after you have watched it.",
+   "t": false,
+   "why": "You can only return DVDs that are faulty."
+  },
+  {
+   "s": "If you pay after three months, 10 percent is added.",
+   "t": true,
+   "why": "Right! You must pay within three months."
+  },
+  {
+   "s": "You have to buy the recommended DVDs.",
+   "t": false,
+   "why": "You do not have to buy the recommended DVDs."
+  },
+  {
+   "s": "Members must buy a minimum of ten DVDs a year for the first two years.",
+   "t": true,
+   "why": "Correct! Ten is the minimum."
+  },
+  {
+   "s": "The complaint e-mail begins with 'Dear Sir or Madam'.",
+   "t": true,
+   "why": "Yes! This is a formal greeting."
+  },
+  {
+   "s": "A formal complaint e-mail ends with 'Take care, speak soon'.",
+   "t": false,
+   "why": "It ends with 'Yours faithfully'."
+  },
+  {
+   "s": "'I am writing to inform you…' is a formal phrase.",
+   "t": true,
+   "why": "Good! It is used to explain why you are writing."
+  },
+  {
+   "s": "'Faulty' means working perfectly.",
+   "t": false,
+   "why": "'Faulty' means not working properly."
+  },
+  {
+   "s": "The customer wants to return the DVDs and not pay the extra 10 percent.",
+   "t": true,
+   "why": "Right! That is his request."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Can you buy DVDs if you are 19?",
+   "o": [
+    "Yes",
+    "No",
+    "Only with a parent"
+   ],
+   "why": "You must be 18 or over."
+  },
+  {
+   "q": "Which DVDs can you return?",
+   "o": [
+    "only faulty DVDs",
+    "any DVD you don't like",
+    "DVDs you watched"
+   ],
+   "why": "Only faulty ones can go back."
+  },
+  {
+   "q": "How long do you have to pay without extra cost?",
+   "o": [
+    "three months",
+    "one week",
+    "two years"
+   ],
+   "why": "After three months, 10 percent is added."
+  },
+  {
+   "q": "How many DVDs must you buy a year for the first two years?",
+   "o": [
+    "a minimum of ten",
+    "a maximum of two",
+    "none"
+   ],
+   "why": "Ten is the minimum."
+  },
+  {
+   "q": "How does the complaint e-mail end?",
+   "o": [
+    "Yours faithfully",
+    "Take care",
+    "See you soon"
+   ],
+   "why": "It is a formal closing."
+  },
+  {
+   "q": "Which opening is correct for a complaint?",
+   "o": [
+    "Dear Sir or Madam",
+    "Hi!",
+    "Hey there"
+   ],
+   "why": "Use a formal greeting."
+  },
+  {
+   "q": "What does 'dissatisfied' mean?",
+   "o": [
+    "not happy with something",
+    "very pleased",
+    "very tired"
+   ],
+   "why": "A dissatisfied customer complains."
+  },
+  {
+   "q": "Is the company wrong about not taking back the DVDs he disliked?",
+   "o": [
+    "No – only faulty DVDs can be returned",
+    "Yes – any DVD can be returned",
+    "Yes – he is 19"
+   ],
+   "why": "Check the complaint against the terms."
+  },
+  {
+   "q": "What does 'as soon as possible' mean?",
+   "o": [
+    "very quickly",
+    "never",
+    "next year"
+   ],
+   "why": "It asks for a fast reply."
+  },
+  {
+   "q": "What are 'terms and conditions'?",
+   "o": [
+    "the rules of a service",
+    "a type of DVD",
+    "a password"
+   ],
+   "why": "Read them before you buy."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Minimum age to join the club",
+   "a": "18",
+   "d": [
+    "19",
+    "16",
+    "21"
+   ]
+  },
+  {
+   "q": "DVDs you can return",
+   "a": "faulty",
+   "d": [
+    "watched",
+    "old",
+    "cheap"
+   ]
+  },
+  {
+   "q": "Time to pay before extra cost",
+   "a": "three months",
+   "d": [
+    "one week",
+    "two years",
+    "ten days"
+   ]
+  },
+  {
+   "q": "Extra added after three months",
+   "a": "10 percent",
+   "d": [
+    "5 percent",
+    "20 percent",
+    "50 percent"
+   ]
+  },
+  {
+   "q": "Minimum DVDs a year",
+   "a": "ten",
+   "d": [
+    "two",
+    "five",
+    "twenty"
+   ]
+  },
+  {
+   "q": "Formal greeting",
+   "a": "Dear Sir or Madam",
+   "d": [
+    "Hi there!",
+    "Hey!",
+    "Hello mate"
+   ]
+  },
+  {
+   "q": "Formal closing",
+   "a": "Yours faithfully",
+   "d": [
+    "Take care",
+    "Speak soon",
+    "Bye!"
+   ]
+  },
+  {
+   "q": "Not working properly",
+   "a": "faulty",
+   "d": [
+    "recommended",
+    "online",
+    "formal"
+   ]
+  },
+  {
+   "q": "Not happy with something",
+   "a": "dissatisfied",
+   "d": [
+    "delighted",
+    "excited",
+    "grateful"
+   ]
+  },
+  {
+   "q": "Rules of a service",
+   "a": "terms",
+   "d": [
+    "jokes",
+    "songs",
+    "titles"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Do you have to buy the recommended DVDs?",
+   "o": [
+    "No",
+    "Yes, always",
+    "Only if you are 19",
+    "Only in the first month"
+   ],
+   "why": "Recommended DVDs are not compulsory."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a complaint in the e-mail?",
+   "o": [
+    "he could not return the DVDs",
+    "he got free DVDs",
+    "he was too young",
+    "he forgot his password"
+   ],
+   "why": "He also complained about the extra 10 percent."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is formal?",
+   "o": [
+    "I am writing to inform you…",
+    "Hey, guess what…",
+    "Take care, speak soon.",
+    "See ya!"
+   ],
+   "why": "Formal phrases suit a complaint."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the customer want?",
+   "o": [
+    "to return the DVDs and not pay the extra 10 percent",
+    "to buy more DVDs",
+    "to become a manager",
+    "to change his password"
+   ],
+   "why": "He asks for these two things."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You waited two months to pay. Do you pay extra?",
+   "o": [
+    "No – you have three months to pay",
+    "Yes – 10 percent",
+    "Yes – 50 percent",
+    "Yes – you must pay double"
+   ],
+   "why": "Extra is added only after three months."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put the e-mail parts in order.",
+   "o": [
+    "I am writing to… / Please reply as soon as possible. / Yours faithfully",
+    "Yours faithfully / I am writing to… / Please reply",
+    "Please reply / Yours faithfully / I am writing to…",
+    "Yours faithfully / Please reply / I am writing to…"
+   ],
+   "why": "Explain, request, then close."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct: 'dear sir i am not happy about you're service'.",
+   "o": [
+    "Dear Sir, I am not happy about your service.",
+    "dear Sir, i am not happy about you're service.",
+    "Dear sir i am not happy about youre service.",
+    "DEAR SIR I AM NOT HAPPY ABOUT YOUR SERVICE"
+   ],
+   "why": "Capitals, a comma and 'your' (not 'you're')."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The customer complains that he could not return DVDs he did not like. Is he right?",
+   "o": [
+    "No – the terms say only faulty DVDs can be returned",
+    "Yes – he can return any DVD",
+    "Yes – because he is over 18",
+    "No – because he paid early"
+   ],
+   "why": "Always check complaints against the terms."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should you read the terms and conditions before you join an online club?",
+   "o": [
+    "To know the rules before you agree to them",
+    "To find the password",
+    "To make the e-mail longer",
+    "To choose a greeting"
+   ],
+   "why": "Terms tell you what you must and must not do."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best first sentence of a complaint about a wrong book?",
+   "o": [
+    "I am writing to inform you that I received the wrong book.",
+    "Hi! Book is bad lol.",
+    "Take care, speak soon.",
+    "Yours faithfully, Ali."
+   ],
+   "why": "Start formally and state the problem."
+  }
+ ]
+}

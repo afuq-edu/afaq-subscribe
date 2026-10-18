@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 2: Where’s my pen?",
+  "lesson": "Unit 2 – Lesson 1: Vocabulary and Grammar (Classroom objects)",
+  "outcomes": [
+    "I can name ten classroom objects.",
+    "I can say This is my pen. and These are my books.",
+    "I can say one bag - two bags."
+  ],
+  "tf": [
+    {
+      "s": "We say This is for one thing.",
+      "t": true,
+      "why": "Yes! This is my pen. is for one pen."
+    },
+    {
+      "s": "We say These are for more than one thing.",
+      "t": true,
+      "why": "Great! These are my books."
+    },
+    {
+      "s": "These are my bag. is correct.",
+      "t": false,
+      "why": "One bag: This is my bag."
+    },
+    {
+      "s": "We cut paper with scissors.",
+      "t": true,
+      "why": "Yes! Scissors cut paper."
+    },
+    {
+      "s": "A ruler is a toy.",
+      "t": false,
+      "why": "A ruler is a classroom object."
+    },
+    {
+      "s": "one crayon - two crayons",
+      "t": true,
+      "why": "Well done! We add s for more than one."
+    },
+    {
+      "s": "We use an eraser to cut paper.",
+      "t": false,
+      "why": "An eraser takes away pencil marks."
+    },
+    {
+      "s": "A pencil sharpener makes a pencil sharp.",
+      "t": true,
+      "why": "Yes! It sharpens pencils."
+    },
+    {
+      "s": "This is my books. is correct.",
+      "t": false,
+      "why": "Two or more books: These are my books."
+    },
+    {
+      "s": "We put pens in a pencil case.",
+      "t": true,
+      "why": "Yes! A pencil case holds pens and pencils."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "What's this? (a ruler)",
+      "o": [
+        "It's a ruler.",
+        "It's a pen.",
+        "It's a bag."
+      ],
+      "why": "The picture shows a ruler."
+    },
+    {
+      "q": "Two books: ... my books.",
+      "o": [
+        "These are",
+        "This is",
+        "It's"
+      ],
+      "why": "These are is for more than one."
+    },
+    {
+      "q": "One pen: ... my pen.",
+      "o": [
+        "This is",
+        "These are",
+        "They"
+      ],
+      "why": "This is is for one thing."
+    },
+    {
+      "q": "one crayon - two ...",
+      "o": [
+        "crayons",
+        "crayon",
+        "crayones"
+      ],
+      "why": "We add s: crayons."
+    },
+    {
+      "q": "We cut with...",
+      "o": [
+        "scissors",
+        "a ruler",
+        "a crayon"
+      ],
+      "why": "Scissors cut paper."
+    },
+    {
+      "q": "We draw straight lines with a...",
+      "o": [
+        "ruler",
+        "bag",
+        "eraser"
+      ],
+      "why": "A ruler helps draw straight lines."
+    },
+    {
+      "q": "We carry our books in a...",
+      "o": [
+        "bag",
+        "pen",
+        "crayon"
+      ],
+      "why": "We carry books in a school bag."
+    },
+    {
+      "q": "We colour with a...",
+      "o": [
+        "crayon",
+        "bag",
+        "pencil case"
+      ],
+      "why": "We colour with crayons."
+    },
+    {
+      "q": "Which is a classroom object?",
+      "o": [
+        "eraser",
+        "kite",
+        "goat"
+      ],
+      "why": "An eraser is a classroom object."
+    },
+    {
+      "q": "one bag - two ...",
+      "o": [
+        "bags",
+        "bag",
+        "bagies"
+      ],
+      "why": "We add s: bags."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "It cuts paper.",
+      "a": "scissors",
+      "d": [
+        "ruler",
+        "eraser",
+        "bag"
+      ]
+    },
+    {
+      "q": "It makes a pencil sharp.",
+      "a": "pencil sharpener",
+      "d": [
+        "pencil case",
+        "eraser",
+        "ruler"
+      ]
+    },
+    {
+      "q": "It takes away pencil marks.",
+      "a": "eraser",
+      "d": [
+        "crayon",
+        "pen",
+        "book"
+      ]
+    },
+    {
+      "q": "Pens go in it.",
+      "a": "pencil case",
+      "d": [
+        "ruler",
+        "crayon",
+        "eraser"
+      ]
+    },
+    {
+      "q": "We read it.",
+      "a": "book",
+      "d": [
+        "ruler",
+        "eraser",
+        "scissors"
+      ]
+    },
+    {
+      "q": "We colour with it.",
+      "a": "crayon",
+      "d": [
+        "ruler",
+        "scissors",
+        "bag"
+      ]
+    },
+    {
+      "q": "One thing: ... my pen.",
+      "a": "This is",
+      "d": [
+        "These are",
+        "They are",
+        "Is it"
+      ]
+    },
+    {
+      "q": "Many things: ... my pens.",
+      "a": "These are",
+      "d": [
+        "This is",
+        "It's",
+        "Is it"
+      ]
+    },
+    {
+      "q": "one pencil - two ...",
+      "a": "pencils",
+      "d": [
+        "pencil",
+        "pencilz",
+        "pencel"
+      ]
+    },
+    {
+      "q": "one book - three ...",
+      "a": "books",
+      "d": [
+        "book",
+        "bookes",
+        "booky"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which one is a classroom object?",
+      "o": [
+        "ruler",
+        "teddy",
+        "kite",
+        "swing"
+      ],
+      "why": "A ruler is used in class."
+    },
+    {
+      "lv": "التذكر",
+      "q": "How many classroom objects do we learn?",
+      "o": [
+        "Ten",
+        "Six",
+        "Two",
+        "Four"
+      ],
+      "why": "We learn ten classroom objects."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What do we add for more than one?",
+      "o": [
+        "s",
+        "a",
+        "an",
+        "e"
+      ],
+      "why": "one bag - two bags: we add s."
+    },
+    {
+      "lv": "التذكر",
+      "q": "We write with a...",
+      "o": [
+        "pen",
+        "bag",
+        "ruler",
+        "eraser"
+      ],
+      "why": "We write with a pen."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You hold up two books. You say...",
+      "o": [
+        "These are my books.",
+        "This is my books.",
+        "These are my book.",
+        "This is my book."
+      ],
+      "why": "Two books: These are my books."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You hold up one ruler. You say...",
+      "o": [
+        "This is my ruler.",
+        "These are my ruler.",
+        "These are my rulers.",
+        "This is my rulers."
+      ],
+      "why": "One ruler: This is my ruler."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose: This is / These are my crayons.",
+      "o": [
+        "These are",
+        "This is",
+        "It's",
+        "Is it"
+      ],
+      "why": "crayons means more than one."
+    },
+    {
+      "lv": "التحليل",
+      "q": "When do we say These are?",
+      "o": [
+        "When there is more than one thing",
+        "When there is one thing",
+        "When we say our age",
+        "When we say hello"
+      ],
+      "why": "These are is for two or more things."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which sentence is right?",
+      "o": [
+        "These are my pencils.",
+        "This is my pencils.",
+        "These are my pencil.",
+        "This are my pencil."
+      ],
+      "why": "These are goes with pencils."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which one does NOT belong?",
+      "o": [
+        "dinosaur",
+        "pen",
+        "ruler",
+        "eraser"
+      ],
+      "why": "A dinosaur is a toy. The others are classroom objects."
+    }
+  ]
+}

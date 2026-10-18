@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "1",
+  "lesson": "Unit 1: New Media – Grammar and Vocabulary",
+  "outcomes": [
+    "Compare things with more … than, the most, as … as and not as … as.",
+    "Decide if a statement about a chart is True, False or Not Given.",
+    "Understand and use phrasal verbs like log in and come across."
+  ],
+  "tf": [
+    {"s": "After 'not as … as' we use the base form of the adjective.", "t": true, "why": "Yes! We say 'not as big as', not 'not as bigger as'."},
+    {"s": "'Ahmed is not as tall as Salim' means Ahmed is taller.", "t": false, "why": "It means Salim is taller than Ahmed."},
+    {"s": "'Not Given' means the chart or text gives no information to decide.", "t": true, "why": "Correct, you cannot say true or false."},
+    {"s": "'I am not as taller as my brother' is a correct sentence.", "t": false, "why": "The correct form is 'not as tall as'."},
+    {"s": "The meaning of a phrasal verb is not always the meaning of its separate words.", "t": true, "why": "Right, phrasal verbs are often idiomatic."},
+    {"s": "In the cartoon, 'bring up' can mean 'raise a child'.", "t": true, "why": "Yes, it can also mean 'take upstairs', which causes the joke."},
+    {"s": "'Hurry up' means go slowly.", "t": false, "why": "'Hurry up' means go faster."},
+    {"s": "'Log in' is a verb + preposition phrasal verb.", "t": false, "why": "'Log in' is verb + adverb; 'go into' is verb + preposition."},
+    {"s": "'Taxis are more expensive than buses' = 'Buses are not as expensive as taxis.'", "t": true, "why": "Well done, both sentences have the same meaning."},
+    {"s": "To change 'more … than' to 'not as … as', we keep the two items in the same order.", "t": false, "why": "We swap the two items: the second one comes first."}
+  ],
+  "boxes": [
+    {"q": "Muscat is bigger than Nizwa. = Nizwa is not as ___ as Muscat.", "o": ["big", "bigger", "biggest"], "why": "Use the base adjective after 'as'."},
+    {"q": "Salim is taller than Ahmed. = Ahmed is ___ as tall as Salim.", "o": ["not", "more", "the most"], "why": "'Not as tall as' shows Ahmed is shorter."},
+    {"q": "Eating fast food is not as ___ as eating salad.", "o": ["healthy", "healthier", "healthiest"], "why": "Base form after 'not as'."},
+    {"q": "I ___ a very interesting website last night.", "o": ["came across", "came with", "came off"], "why": "'Come across' means find by chance."},
+    {"q": "What does 'hurry up' mean?", "o": ["go faster", "go slowly", "go home"], "why": "We say 'hurry up' when someone is late."},
+    {"q": "Which sentence uses a phrasal verb?", "o": ["I click on the link.", "I like links.", "Links are useful."], "why": "'Click on' is a phrasal verb."},
+    {"q": "The chart has no ages. 'It shows ages' is ...", "o": ["Not Given", "True", "False"], "why": "There is no information about ages, so it is NG."},
+    {"q": "'Go into' has which structure?", "o": ["verb + preposition", "verb + adverb", "verb + adverb + preposition"], "why": "'Into' is a preposition."},
+    {"q": "Which structure is 'keep up with'?", "o": ["verb + adverb + preposition", "verb + preposition", "verb + adverb"], "why": "It has three parts: keep + up + with."},
+    {"q": "Which word completes: 'TV is the ___ popular activity'?", "o": ["most", "more", "as"], "why": "'The most' compares one thing with all the others."}
+  ],
+  "hunt": [
+    {"q": "Not as ___ as (big)", "a": "big", "d": ["bigger", "biggest", "more big"]},
+    {"q": "Not as ___ as (tall)", "a": "tall", "d": ["taller", "tallest", "more tall"]},
+    {"q": "Not as ___ as (expensive)", "a": "expensive", "d": ["more expensive", "expensiver", "most expensive"]},
+    {"q": "Find by chance", "a": "come across", "d": ["log in", "hurry up", "make up"]},
+    {"q": "Enter your account", "a": "log in", "d": ["come across", "bring up", "go into"]},
+    {"q": "Go faster", "a": "hurry up", "d": ["log in", "scroll through", "make up"]},
+    {"q": "Raise a child", "a": "bring up", "d": ["log in", "click on", "hurry up"]},
+    {"q": "No information in the chart", "a": "Not Given", "d": ["True", "False", "Correct"]},
+    {"q": "Compare one with all others", "a": "the most", "d": ["as … as", "not as … as", "more … than"]},
+    {"q": "Move down a page of posts", "a": "scroll through", "d": ["bring up", "hurry up", "come across"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What is a phrasal verb?", "o": ["a verb with an adverb or preposition that makes a new meaning", "a verb in the past tense", "a long adjective", "a question word"], "why": "Phrasal verbs like 'log in' have their own meaning."},
+    {"lv": "التذكر", "q": "In the cartoon, what does 'brought you up' mean in the man's answer?", "o": ["raised you as a child", "carried you upstairs", "woke you up", "called you"], "why": "The joke uses the two meanings of 'bring up'."},
+    {"lv": "التذكر", "q": "Which structure shows two things are equal?", "o": ["as … as", "not as … as", "more … than", "the most"], "why": "'As popular as' means equally popular."},
+    {"lv": "التذكر", "q": "What does 'NG' mean in a True/False/Not Given task?", "o": ["There is no information to decide.", "The statement is false.", "The statement is true.", "The chart is wrong."], "why": "Not Given means the information is not there."},
+    {"lv": "التطبيق", "q": "Rewrite: 'My ticket to New York is more expensive than my ticket to Mumbai.'", "o": ["My ticket to Mumbai is not as expensive as my ticket to New York.", "My ticket to New York is not as expensive as my ticket to Mumbai.", "My ticket to Mumbai is not as more expensive as my ticket to New York.", "My ticket to Mumbai is as expensive as my ticket to New York."], "why": "Swap the items and use the base adjective."},
+    {"lv": "التطبيق", "q": "Rewrite: 'Camels are heavier than donkeys.'", "o": ["Donkeys are not as heavy as camels.", "Camels are not as heavy as donkeys.", "Donkeys are not as heavier as camels.", "Donkeys are as heavy as camels."], "why": "The lighter animal comes first with 'not as … as'."},
+    {"lv": "التطبيق", "q": "Choose the correct sentence.", "o": ["Watching swimming is not as exciting as watching football.", "Watching swimming is not as more exciting as watching football.", "Watching swimming is not exciting as as watching football.", "Watching swimming not as exciting than watching football."], "why": "The pattern is not as + adjective + as."},
+    {"lv": "التحليل", "q": "Why is 'not as bigger as' wrong?", "o": ["The adjective after as … as stays in its base form.", "'Bigger' is a noun.", "We must use 'than' after 'as'.", "'Big' cannot compare things."], "why": "We say 'not as big as'."},
+    {"lv": "التحليل", "q": "Why are phrasal verbs hard to understand by translating each word?", "o": ["Their meaning is often idiomatic.", "They are always very long.", "They are only used in writing.", "They have no verb."], "why": "The whole phrase has a new meaning."},
+    {"lv": "التحليل", "q": "Why is the cartoon about 'bring up' funny?", "o": ["The two men understand 'bring up' in different ways.", "The lift is broken.", "One man forgets his name.", "The men speak different languages."], "why": "One means 'take upstairs', the other 'raise a child'."}
+  ]
+}

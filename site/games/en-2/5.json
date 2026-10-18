@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 1: Look at my toys!",
+  "lesson": "Unit 1 – Lesson 2: Story \"New toys\"",
+  "outcomes": [
+    "I can follow the story New toys and name the toys in it.",
+    "I can answer simple questions about the story.",
+    "I can be creative and make a new toy idea."
+  ],
+  "tf": [
+    {
+      "s": "The dinosaur in the story is green.",
+      "t": true,
+      "why": "Yes! The dinosaur is green."
+    },
+    {
+      "s": "Jack says It's a car. Sami says No, it's a plane.",
+      "t": true,
+      "why": "Great! Sami says it's a plane."
+    },
+    {
+      "s": "The dinosaur in the story is pink.",
+      "t": false,
+      "why": "The dinosaur is green."
+    },
+    {
+      "s": "Fatma says This is fun!",
+      "t": true,
+      "why": "Yes! Fatma says This is fun!"
+    },
+    {
+      "s": "The big toy they make is a teddy.",
+      "t": false,
+      "why": "The big toy is a plane."
+    },
+    {
+      "s": "Be creative means make new things and ideas.",
+      "t": true,
+      "why": "Well done! Creative children make new ideas."
+    },
+    {
+      "s": "Be creative means copy your friend.",
+      "t": false,
+      "why": "Being creative is making something new."
+    },
+    {
+      "s": "A teddy robot is a creative toy idea.",
+      "t": true,
+      "why": "Yes! A teddy and a robot together is a new idea."
+    },
+    {
+      "s": "I don't know. means Yes, I know.",
+      "t": false,
+      "why": "I don't know. means I am not sure."
+    },
+    {
+      "s": "This is fun! means I am sad.",
+      "t": false,
+      "why": "This is fun! means we are happy and enjoy it."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "What's this? (a dinosaur)",
+      "o": [
+        "It's a dinosaur.",
+        "It's an dinosaur.",
+        "It's dinosaur a."
+      ],
+      "why": "dinosaur starts with d, so we say a dinosaur."
+    },
+    {
+      "q": "Jack: It's a car. Sami: No, it's a ...",
+      "o": [
+        "plane",
+        "doll",
+        "kite"
+      ],
+      "why": "Sami says: No, it's a plane."
+    },
+    {
+      "q": "Who says This is fun!?",
+      "o": [
+        "Fatma",
+        "Polly",
+        "Jack"
+      ],
+      "why": "Fatma says This is fun!"
+    },
+    {
+      "q": "Which toy is very big in the story?",
+      "o": [
+        "the plane",
+        "the yo-yo",
+        "the dinosaur"
+      ],
+      "why": "They build a big plane."
+    },
+    {
+      "q": "Circle: It's a yo-yo / doll.",
+      "o": [
+        "It's a yo-yo.",
+        "It's a doll.",
+        "It's a teddy."
+      ],
+      "why": "The story says: It's a yo-yo. Look!"
+    },
+    {
+      "q": "The value of the story is...",
+      "o": [
+        "Be creative",
+        "Be quiet",
+        "Be fast"
+      ],
+      "why": "The story shows us how to be creative."
+    },
+    {
+      "q": "Who is the parrot in the story?",
+      "o": [
+        "Polly",
+        "Lily",
+        "Fatma"
+      ],
+      "why": "Polly is the parrot."
+    },
+    {
+      "q": "Is it a building set? You are not sure. Say...",
+      "o": [
+        "I don't know.",
+        "Yes, it is.",
+        "Goodbye."
+      ],
+      "why": "I don't know. means you are not sure."
+    },
+    {
+      "q": "A teddy robot is...",
+      "o": [
+        "a new toy idea",
+        "a colour",
+        "a number"
+      ],
+      "why": "It is a creative new toy."
+    },
+    {
+      "q": "Ready, steady, ...!",
+      "o": [
+        "go",
+        "stop",
+        "sit"
+      ],
+      "why": "We say Ready, steady, go!"
+    }
+  ],
+  "hunt": [
+    {
+      "q": "The dinosaur's colour",
+      "a": "green",
+      "d": [
+        "red",
+        "pink",
+        "white"
+      ]
+    },
+    {
+      "q": "The big toy in the story",
+      "a": "plane",
+      "d": [
+        "teddy",
+        "doll",
+        "puzzle"
+      ]
+    },
+    {
+      "q": "Jack says: It's a ...",
+      "a": "car",
+      "d": [
+        "plane",
+        "kite",
+        "doll"
+      ]
+    },
+    {
+      "q": "Sami says: No, it's a ...",
+      "a": "plane",
+      "d": [
+        "car",
+        "ball",
+        "teddy"
+      ]
+    },
+    {
+      "q": "She says: This is fun!",
+      "a": "Fatma",
+      "d": [
+        "Polly",
+        "Lily",
+        "Jack"
+      ]
+    },
+    {
+      "q": "Look! It's Polly. Polly is a ...",
+      "a": "parrot",
+      "d": [
+        "robot",
+        "doll",
+        "car"
+      ]
+    },
+    {
+      "q": "It's a ... Look! (it goes up and down)",
+      "a": "yo-yo",
+      "d": [
+        "plane",
+        "dinosaur",
+        "car"
+      ]
+    },
+    {
+      "q": "The value: Be ...",
+      "a": "creative",
+      "d": [
+        "sad",
+        "slow",
+        "angry"
+      ]
+    },
+    {
+      "q": "Not sure? I don't ...",
+      "a": "know",
+      "d": [
+        "go",
+        "see",
+        "play"
+      ]
+    },
+    {
+      "q": "Ready, steady, ...!",
+      "a": "go",
+      "d": [
+        "stop",
+        "sit",
+        "close"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What is the name of the story?",
+      "o": [
+        "New toys",
+        "My school",
+        "The computer",
+        "Hello!"
+      ],
+      "why": "The story is New toys."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Who says No, it's a plane.?",
+      "o": [
+        "Sami",
+        "Jack",
+        "Polly",
+        "Lily"
+      ],
+      "why": "Sami says it is a plane."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which toys are in the story?",
+      "o": [
+        "dinosaur, yo-yo, plane",
+        "kite, bike, slide",
+        "ball, swing, scooter",
+        "pen, book, bag"
+      ],
+      "why": "The story has a dinosaur, a yo-yo and a plane."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which sentence is from the story?",
+      "o": [
+        "Is it a building set?",
+        "How old are you?",
+        "Is it a swing?",
+        "What colour is it?"
+      ],
+      "why": "The friends ask: Is it a building set?"
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You show your toy dinosaur. You say...",
+      "o": [
+        "It's my dinosaur.",
+        "It's my birthday.",
+        "I'm seven.",
+        "Goodbye."
+      ],
+      "why": "It's my dinosaur. tells about your toy."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your friend asks: Is it a building set? You don't know. You say...",
+      "o": [
+        "I don't know.",
+        "It's green.",
+        "This is fun!",
+        "Hello!"
+      ],
+      "why": "I don't know. is the right answer when you are not sure."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You play with friends and you are happy. You say...",
+      "o": [
+        "This is fun!",
+        "I don't know.",
+        "Sit down.",
+        "Close your book."
+      ],
+      "why": "This is fun! shows we are happy."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which picture shows Be creative?",
+      "o": [
+        "A child making a new toy",
+        "A child sleeping",
+        "A child crying",
+        "A child sitting down"
+      ],
+      "why": "Making a new toy is being creative."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Jack thinks it's a car. Sami says it's a plane. What happens?",
+      "o": [
+        "Sami says No to Jack",
+        "Jack and Sami say Yes",
+        "Polly says It's a car",
+        "Jack says I'm seven"
+      ],
+      "why": "Sami says No, it's a plane."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why is a teddy robot a good idea?",
+      "o": [
+        "It is creative and fun",
+        "It is a colour",
+        "It is a number",
+        "It is very small"
+      ],
+      "why": "It mixes two toys to make a new one."
+    }
+  ]
+}

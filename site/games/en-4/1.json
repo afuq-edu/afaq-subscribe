@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "W",
+ "lesson": "Welcome Lesson 1: New neighbours – Countries and nationalities",
+ "outcomes": [
+  "Talk about the story New neighbours and its characters.",
+  "Say countries and nationalities: She's from Oman. She's Omani.",
+  "Ask and answer: Where are you from? How old are you?"
+ ],
+ "tf": [
+  {
+   "s": "Lottie is the new neighbour.",
+   "t": true,
+   "why": "Yes! Lottie moves in next door to Fatma and Sami."
+  },
+  {
+   "s": "Lottie is from Britain.",
+   "t": false,
+   "why": "Lottie is from Melbourne, in Australia."
+  },
+  {
+   "s": "Lottie is nine years old.",
+   "t": true,
+   "why": "Great! Lottie says: I'm nine."
+  },
+  {
+   "s": "Lottie's full name is Charlotte.",
+   "t": true,
+   "why": "Right! Lottie is short for Charlotte."
+  },
+  {
+   "s": "A person from China is Chinese.",
+   "t": true,
+   "why": "Well done! China → Chinese."
+  },
+  {
+   "s": "A person from Egypt is Egyptish.",
+   "t": false,
+   "why": "We say Egyptian: Egypt → Egyptian."
+  },
+  {
+   "s": "A person from the USA is American.",
+   "t": true,
+   "why": "Yes! The USA → American."
+  },
+  {
+   "s": "Brazilian is a country.",
+   "t": false,
+   "why": "Brazil is the country. Brazilian is the nationality."
+  },
+  {
+   "s": "Lottie likes basketball and swimming.",
+   "t": true,
+   "why": "Correct! The story tells us she likes them."
+  },
+  {
+   "s": "We ask about age with 'Where are you from?'",
+   "t": false,
+   "why": "For age we ask: How old are you?"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where is Lottie from?",
+   "o": [
+    "Australia",
+    "Oman",
+    "Egypt"
+   ],
+   "why": "Lottie is from Melbourne, in Australia."
+  },
+  {
+   "q": "Oman → ?",
+   "o": [
+    "Omani",
+    "Omanish",
+    "Omanian"
+   ],
+   "why": "A person from Oman is Omani."
+  },
+  {
+   "q": "Britain → ?",
+   "o": [
+    "British",
+    "Britainian",
+    "Britainese"
+   ],
+   "why": "A person from Britain is British."
+  },
+  {
+   "q": "He's from Brazil. He's ___.",
+   "o": [
+    "Brazilian",
+    "Brazil",
+    "Brazilese"
+   ],
+   "why": "Brazil → Brazilian."
+  },
+  {
+   "q": "Which word is a country?",
+   "o": [
+    "Egypt",
+    "Egyptian",
+    "Chinese"
+   ],
+   "why": "Egypt is a country; the others are nationalities."
+  },
+  {
+   "q": "Lottie lives ___ to Fatma and Sami.",
+   "o": [
+    "next door",
+    "far away",
+    "in China"
+   ],
+   "why": "Lottie is their new neighbour, next door."
+  },
+  {
+   "q": "Which question asks about a country?",
+   "o": [
+    "Where are you from?",
+    "How old are you?",
+    "What's your name?"
+   ],
+   "why": "We use 'Where are you from?' to ask about a country."
+  },
+  {
+   "q": "Melbourne is a city in ___.",
+   "o": [
+    "Australia",
+    "Britain",
+    "Brazil"
+   ],
+   "why": "Lottie says: I'm from Melbourne, in Australia."
+  },
+  {
+   "q": "Choose the correct sentence.",
+   "o": [
+    "She's from China.",
+    "She's from Chinese.",
+    "She from China."
+   ],
+   "why": "After 'from' we use the country: She's from China."
+  },
+  {
+   "q": "Who are Lottie's new neighbours?",
+   "o": [
+    "Fatma and Sami",
+    "Ali and Noora",
+    "Maryam and Saif"
+   ],
+   "why": "Fatma and Sami meet Lottie in the story."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "China → nationality?",
+   "a": "Chinese",
+   "d": [
+    "Chinaian",
+    "Chinish",
+    "Chinan"
+   ]
+  },
+  {
+   "q": "Australia → nationality?",
+   "a": "Australian",
+   "d": [
+    "Australish",
+    "Australese",
+    "Australi"
+   ]
+  },
+  {
+   "q": "Egypt → nationality?",
+   "a": "Egyptian",
+   "d": [
+    "Egyptese",
+    "Egyptish",
+    "Egypti"
+   ]
+  },
+  {
+   "q": "the USA → nationality?",
+   "a": "American",
+   "d": [
+    "USAian",
+    "Usish",
+    "Americese"
+   ]
+  },
+  {
+   "q": "Britain → nationality?",
+   "a": "British",
+   "d": [
+    "Britainese",
+    "Britainian",
+    "Brit"
+   ]
+  },
+  {
+   "q": "Brazil → nationality?",
+   "a": "Brazilian",
+   "d": [
+    "Brazilese",
+    "Brazilish",
+    "Brazili"
+   ]
+  },
+  {
+   "q": "Oman → nationality?",
+   "a": "Omani",
+   "d": [
+    "Omanese",
+    "Omanish",
+    "Omanian"
+   ]
+  },
+  {
+   "q": "Omani → country?",
+   "a": "Oman",
+   "d": [
+    "Omania",
+    "Omanland",
+    "Omanistan"
+   ]
+  },
+  {
+   "q": "Lottie's age?",
+   "a": "nine",
+   "d": [
+    "seven",
+    "eleven",
+    "twelve"
+   ]
+  },
+  {
+   "q": "Lottie's city?",
+   "a": "Melbourne",
+   "d": [
+    "Muscat",
+    "Cairo",
+    "London"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who is the new girl in the story?",
+   "o": [
+    "Lottie",
+    "Fatma",
+    "Sami",
+    "Noora"
+   ],
+   "why": "Lottie (Charlotte) is the new neighbour."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which nationality ends in '-ian'?",
+   "o": [
+    "Egyptian",
+    "British",
+    "Chinese",
+    "Omani"
+   ],
+   "why": "Egyptian, Brazilian and Australian end in '-ian'."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is Lottie's nationality?",
+   "o": [
+    "Australian",
+    "British",
+    "American",
+    "Omani"
+   ],
+   "why": "Lottie is from Australia, so she is Australian."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a nationality?",
+   "o": [
+    "Chinese",
+    "China",
+    "Brazil",
+    "Oman"
+   ],
+   "why": "Chinese is a nationality; the others are countries."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: He's from the USA. He's ___.",
+   "o": [
+    "American",
+    "USA",
+    "Americanian",
+    "USAian"
+   ],
+   "why": "A person from the USA is American."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A boy says: 'I'm nine. I'm from Oman.' What is his nationality?",
+   "o": [
+    "Omani",
+    "Egyptian",
+    "British",
+    "Australian"
+   ],
+   "why": "From Oman → Omani."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct answer: 'Where's she from?'",
+   "o": [
+    "She's from Egypt.",
+    "She's Egypt.",
+    "She's nine.",
+    "She's from Egyptian."
+   ],
+   "why": "We answer with 'She's from' + a country."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do Fatma and Sami think the new girl likes swimming and canoeing?",
+   "o": [
+    "They see a canoe and swimming things moving in.",
+    "She tells them on the phone.",
+    "They read it in a book.",
+    "They meet her at school."
+   ],
+   "why": "Good thinking! They use the clues they see."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT belong?",
+   "o": [
+    "Brazil",
+    "British",
+    "Chinese",
+    "Omani"
+   ],
+   "why": "Brazil is a country; the others are nationalities."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Lottie says: 'I'm from Melbourne.' Which sentence is also true?",
+   "o": [
+    "She's Australian.",
+    "She's British.",
+    "She's Brazilian.",
+    "She's Omani."
+   ],
+   "why": "Melbourne is in Australia, so she is Australian."
+  }
+ ]
+}

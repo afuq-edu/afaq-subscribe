@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "2",
+  "lesson": "Unit 2: Climate Change – Listening and Speaking: Debate",
+  "outcomes": [
+    "Understand debate words like policy, emission, consumer and eco-friendly.",
+    "Listen to a debate and sort arguments into for and against.",
+    "Take part in a debate using polite debate expressions."
+  ],
+  "tf": [
+    {"s": "A consumer is a person who buys goods or services.", "t": true, "why": "Yes! When you buy something, you are a consumer."},
+    {"s": "A policy is a set of ideas officially agreed by a government.", "t": true, "why": "Correct, governments make policies."},
+    {"s": "'To regulate' means to ignore something.", "t": false, "why": "'To regulate' means to control something."},
+    {"s": "The topic of the debate in Listening 2.3 is that governments are responsible for stopping global warming.", "t": true, "why": "Well done, you found the topic."},
+    {"s": "'Governments can regulate factories' is an argument against the debate topic.", "t": false, "why": "It supports the topic, so it is an argument for."},
+    {"s": "'You are right to some extent, but…' shows partial agreement.", "t": true, "why": "Right, you agree a little but add a different idea."},
+    {"s": "'To sum up…' is used to start a debate.", "t": false, "why": "'To sum up' is used to finish and summarise."},
+    {"s": "In a debate, we stress important words to make our point stronger.", "t": true, "why": "Yes, e.g. GOVERNMENTS should REGULATE factories."},
+    {"s": "'Switch off' means to start a machine.", "t": false, "why": "'Switch off' means to stop a machine."},
+    {"s": "An eco-friendly product harms the environment.", "t": false, "why": "Eco-friendly means not harmful to the environment."}
+  ],
+  "boxes": [
+    {"q": "Which word means 'to control something'?", "o": ["regulate", "consume", "release"], "why": "Governments regulate factories."},
+    {"q": "We ___ that governments must act.", "o": ["believe", "believes", "believing"], "why": "'We believe that…' presents your team's view."},
+    {"q": "I see your ___, but I disagree.", "o": ["point", "policy", "emission"], "why": "'I see your point' politely accepts an idea before disagreeing."},
+    {"q": "Which phrasal verb means 'stop a machine'?", "o": ["switch off", "find out", "give away"], "why": "Switch off the TV when you leave the room."},
+    {"q": "___ up your water bottle instead of buying a new one.", "o": ["Fill", "Look", "Give"], "why": "'Fill up' means make it full."},
+    {"q": "Why might governments regulate factories?", "o": ["to reduce emissions", "to make more plastic", "to close schools"], "why": "Less emission protects the environment."},
+    {"q": "Which expression shows you disagree politely?", "o": ["I'm sorry but I disagree.", "That's a good point.", "We believe that…"], "why": "It disagrees in a polite way."},
+    {"q": "Which word describes a bag that does not harm nature?", "o": ["eco-friendly", "emission", "policy"], "why": "Eco-friendly things are good for the environment."},
+    {"q": "Which is an idea to reduce your carbon footprint?", "o": ["turn off the lights", "leave the TV on", "buy more plastic bottles"], "why": "Saving energy reduces your footprint."},
+    {"q": "Which phrasal verb means 'learn or discover information'?", "o": ["find out", "turn down", "switch off"], "why": "We find out facts by researching."}
+  ],
+  "hunt": [
+    {"q": "A person who buys goods", "a": "consumer", "d": ["government", "policy", "emission"]},
+    {"q": "To control something", "a": "regulate", "d": ["release", "consume", "debate"]},
+    {"q": "Ideas agreed by a government", "a": "policy", "d": ["emission", "consumer", "debate"]},
+    {"q": "Not harmful to nature", "a": "eco-friendly", "d": ["expensive", "harmful", "polluted"]},
+    {"q": "Stop a machine", "a": "switch off", "d": ["fill up", "find out", "look for"]},
+    {"q": "Give things you don't need", "a": "give away", "d": ["turn off", "fill up", "find out"]},
+    {"q": "Try to find something", "a": "look for", "d": ["give away", "switch off", "turn off"]},
+    {"q": "Expression to finish a debate", "a": "To sum up", "d": ["We believe", "I see your point", "In our opinion"]},
+    {"q": "A formal discussion: for and against", "a": "debate", "d": ["policy", "emission", "consumer"]},
+    {"q": "Partial agreement: right to some ___", "a": "extent", "d": ["point", "policy", "opinion"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What is the topic of the debate in Listening 2.3?", "o": ["Governments are responsible for stopping global warming.", "Plastic bags should be free.", "Students should have more homework.", "Cars are better than buses."], "why": "The speakers argue about governments' responsibility."},
+    {"lv": "التذكر", "q": "Which expression shows partial agreement?", "o": ["You are right to some extent, but…", "I'm sorry but I disagree.", "To sum up…", "We believe that…"], "why": "It agrees a little and then adds a 'but'."},
+    {"lv": "التذكر", "q": "What does 'eco-friendly' mean?", "o": ["not harmful to the environment", "very cheap", "made of plastic", "controlled by a government"], "why": "Eco-friendly products protect nature."},
+    {"lv": "التذكر", "q": "Which expression ends a debate argument?", "o": ["To sum up…", "We believe that…", "I see your point", "That's a good point"], "why": "'To sum up' gives a short summary at the end."},
+    {"lv": "التطبيق", "q": "Which words should we stress in 'Governments should regulate emissions'?", "o": ["Governments, regulate, emissions", "should only", "Governments, should", "none of them"], "why": "We stress the key information words."},
+    {"lv": "التطبيق", "q": "Choose an argument AGAINST 'It is easy to live a more eco-friendly lifestyle'.", "o": ["Eco-friendly products can be expensive.", "We can reuse bags.", "We can turn off the lights.", "We can fill up a water bottle."], "why": "High prices make it harder, so this is against."},
+    {"lv": "التطبيق", "q": "Your opponent makes a strong argument. You agree with it. What do you say?", "o": ["That's a good point.", "I'm sorry but I disagree.", "To sum up…", "Switch off."], "why": "'That's a good point' shows agreement."},
+    {"lv": "التحليل", "q": "Is 'Governments can regulate factories' for or against the debate topic?", "o": ["for, because it shows governments can act", "against, because factories are private", "neither, it is a question", "against, because it is about money"], "why": "It supports the idea that governments are responsible."},
+    {"lv": "التحليل", "q": "Which argument is supported with a reason and an example?", "o": ["I disagree because people also have a responsibility. For example, we can reduce plastic use.", "I disagree.", "People are people.", "Plastic, plastic, plastic."], "why": "A strong argument gives a reason and an example."},
+    {"lv": "التحليل", "q": "Why is stressing important words useful in a debate?", "o": ["It makes the main points clear and strong.", "It makes the speech longer.", "It hides the main idea.", "It means you don't need reasons."], "why": "Listeners notice the key words."}
+  ]
+}

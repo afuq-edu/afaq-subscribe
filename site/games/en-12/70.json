@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: The Train is Approaching! (Writing)",
+ "lesson": "Planning and writing an informative essay; peer editing",
+ "outcomes": [
+  "Plan an informative essay with paragraphs and topic sentences",
+  "Write a first draft using conjunctions for cohesion",
+  "Check a partner's draft with the editing checklist"
+ ],
+ "tf": [
+  {
+   "s": "An informative essay usually has an introduction, three main body paragraphs and a conclusion.",
+   "t": true,
+   "why": "Yes, that makes five paragraphs."
+  },
+  {
+   "s": "When you check a partner's essay, you should check meaning and content first.",
+   "t": true,
+   "why": "Correct, meaning comes before language."
+  },
+  {
+   "s": "When peer editing, you should only look at spelling.",
+   "t": false,
+   "why": "You check meaning first, then the language questions."
+  },
+  {
+   "s": "Your essay should have a suitable title.",
+   "t": true,
+   "why": "Right, a good title tells readers your topic."
+  },
+  {
+   "s": "Conjunctions like 'however' and 'moreover' help cohesion.",
+   "t": true,
+   "why": "Yes, they link ideas smoothly."
+  },
+  {
+   "s": "You should start writing your essay before making a plan.",
+   "t": false,
+   "why": "Planning first helps you organise your ideas."
+  },
+  {
+   "s": "The second draft is written at home and handed in with the first draft.",
+   "t": true,
+   "why": "Correct, attach the first draft to the second."
+  },
+  {
+   "s": "A first draft must be perfect with no mistakes.",
+   "t": false,
+   "why": "A draft is a first try that you improve later."
+  },
+  {
+   "s": "The model essay in this lesson is about submarines.",
+   "t": true,
+   "why": "Yes, the model essay is called 'Submarines'."
+  },
+  {
+   "s": "The conclusion is the first paragraph of the essay.",
+   "t": false,
+   "why": "The conclusion is the last paragraph; the introduction comes first."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How many paragraphs should the essay have?",
+   "o": [
+    "five",
+    "two",
+    "ten"
+   ],
+   "why": "Introduction, three body paragraphs and a conclusion."
+  },
+  {
+   "q": "What do you check first in a partner's essay?",
+   "o": [
+    "meaning and content",
+    "handwriting",
+    "the number of words"
+   ],
+   "why": "Meaning comes first on the checklist."
+  },
+  {
+   "q": "What should you do before writing a draft?",
+   "o": [
+    "make a plan",
+    "hand it in",
+    "peer edit it"
+   ],
+   "why": "Planning organises your ideas."
+  },
+  {
+   "q": "Which paragraph comes last?",
+   "o": [
+    "the conclusion",
+    "the introduction",
+    "the title"
+   ],
+   "why": "The conclusion ends the essay."
+  },
+  {
+   "q": "What tool helps you check a partner's draft?",
+   "o": [
+    "the editing checklist",
+    "a calculator",
+    "a map"
+   ],
+   "why": "The checklist guides your feedback."
+  },
+  {
+   "q": "Where do you write the second draft?",
+   "o": [
+    "at home",
+    "on the board",
+    "in the Student's Book"
+   ],
+   "why": "The second draft is homework."
+  },
+  {
+   "q": "Which word links ideas to show contrast?",
+   "o": [
+    "however",
+    "moreover",
+    "in addition"
+   ],
+   "why": "However shows contrast."
+  },
+  {
+   "q": "Which word links ideas to show a result?",
+   "o": [
+    "therefore",
+    "however",
+    "but"
+   ],
+   "why": "Therefore shows a result."
+  },
+  {
+   "q": "What is a 'draft'?",
+   "o": [
+    "an early version of writing",
+    "a final exam",
+    "a kind of title"
+   ],
+   "why": "You improve a draft into a final piece."
+  },
+  {
+   "q": "What should the model essay help you notice?",
+   "o": [
+    "structure and linking words",
+    "new spelling rules only",
+    "the price of submarines"
+   ],
+   "why": "The teacher highlights topic sentences and conjunctions."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Paragraphs in your essay",
+   "a": "five",
+   "d": [
+    "three",
+    "four",
+    "six"
+   ]
+  },
+  {
+   "q": "Main body paragraphs",
+   "a": "three",
+   "d": [
+    "one",
+    "two",
+    "five"
+   ]
+  },
+  {
+   "q": "First paragraph",
+   "a": "introduction",
+   "d": [
+    "conclusion",
+    "title",
+    "main body"
+   ]
+  },
+  {
+   "q": "Last paragraph",
+   "a": "conclusion",
+   "d": [
+    "introduction",
+    "title",
+    "plan"
+   ]
+  },
+  {
+   "q": "Check this first when editing",
+   "a": "meaning",
+   "d": [
+    "spelling",
+    "handwriting",
+    "length"
+   ]
+  },
+  {
+   "q": "Topic of the model essay",
+   "a": "submarines",
+   "d": [
+    "trains",
+    "airports",
+    "cars"
+   ]
+  },
+  {
+   "q": "List for checking a draft",
+   "a": "editing checklist",
+   "d": [
+    "shopping list",
+    "word list",
+    "timetable"
+   ]
+  },
+  {
+   "q": "Where the second draft is written",
+   "a": "at home",
+   "d": [
+    "in class",
+    "on the bus",
+    "at the library"
+   ]
+  },
+  {
+   "q": "A conjunction of result",
+   "a": "therefore",
+   "d": [
+    "however",
+    "moreover",
+    "although"
+   ]
+  },
+  {
+   "q": "A conjunction of addition",
+   "a": "in addition",
+   "d": [
+    "however",
+    "but",
+    "although"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the correct order of writing steps in this lesson?",
+   "o": [
+    "plan, first draft, peer editing, second draft",
+    "second draft, plan, first draft",
+    "peer editing, plan, title",
+    "first draft, hand in, plan"
+   ],
+   "why": "You plan, draft, get feedback, then rewrite."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What makes writing cohesive?",
+   "o": [
+    "ideas linked smoothly with conjunctions",
+    "very long sentences",
+    "many pictures",
+    "no paragraphs"
+   ],
+   "why": "Linking words help ideas flow as one whole."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you hand in with your second draft?",
+   "o": [
+    "your first draft",
+    "your plan only",
+    "your partner's essay",
+    "nothing"
+   ],
+   "why": "Attach the first draft so the teacher sees your progress."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the introduction of an informative essay do?",
+   "o": [
+    "introduces the topic",
+    "gives the final summary",
+    "lists the references",
+    "asks the reader to buy something"
+   ],
+   "why": "The introduction tells readers what the essay is about."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are writing about trains. Which is the best topic sentence?",
+   "o": [
+    "Trains are a safe and efficient form of transport.",
+    "I went there.",
+    "And trains.",
+    "Yes, of course."
+   ],
+   "why": "It states a clear main idea."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best linking word: 'Trains are expensive to build. ___, they save money over time.'",
+   "o": [
+    "However",
+    "Moreover",
+    "In addition",
+    "Furthermore"
+   ],
+   "why": "However shows a contrast between the two ideas."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner's essay has a good idea in every paragraph but some spelling mistakes. What feedback comes first?",
+   "o": [
+    "comment on the meaning and ideas",
+    "only list the spelling mistakes",
+    "rewrite the essay for them",
+    "give no feedback"
+   ],
+   "why": "Meaning comes first, then language."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it helpful to discuss your plan with a partner?",
+   "o": [
+    "they can suggest ideas and spot problems early",
+    "it means you don't need to write",
+    "they will write it for you",
+    "it makes the essay shorter"
+   ],
+   "why": "Feedback at the planning stage improves the essay."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do writers make a second draft?",
+   "o": [
+    "to improve the essay using feedback",
+    "to make it exactly the same",
+    "to make it longer only",
+    "because the first draft is lost"
+   ],
+   "why": "Feedback helps you fix and improve your writing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does an essay need a suitable title?",
+   "o": [
+    "it tells readers the topic at once",
+    "it replaces the introduction",
+    "it makes the essay longer",
+    "titles are not needed"
+   ],
+   "why": "A clear title prepares the reader."
+  }
+ ]
+}

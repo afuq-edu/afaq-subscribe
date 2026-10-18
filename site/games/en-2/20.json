@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 2: Where’s my pen?",
+  "lesson": "Sounds and Spelling – Unit 2, Lesson 4: long oo",
+  "outcomes": [
+    "I can say the long sound /uː/ for oo, like in moon.",
+    "I can tell long oo (moon) from short oo (book).",
+    "I can read and write a question with the tricky word when."
+  ],
+  "tf": [
+    {
+      "s": "The oo in moon is long /uː/.",
+      "t": true,
+      "why": "Yes! m - oo - n has long oo."
+    },
+    {
+      "s": "The oo in book is long /uː/.",
+      "t": false,
+      "why": "book has short oo /ʊ/."
+    },
+    {
+      "s": "sp - oo - n makes the word spoon.",
+      "t": true,
+      "why": "Great! sp - oo - n is spoon."
+    },
+    {
+      "s": "boot and room have long oo.",
+      "t": true,
+      "why": "Yes! They sound like moon."
+    },
+    {
+      "s": "foot has long oo.",
+      "t": false,
+      "why": "foot has short oo, like book."
+    },
+    {
+      "s": "cook and hook have short oo.",
+      "t": true,
+      "why": "Well done! They sound like book."
+    },
+    {
+      "s": "When asks about time.",
+      "t": true,
+      "why": "Yes! When is it hot? asks about time."
+    },
+    {
+      "s": "When asks about a place.",
+      "t": false,
+      "why": "Where asks about a place. When asks about time."
+    },
+    {
+      "s": "The word roof has or in it.",
+      "t": false,
+      "why": "roof has oo: r - oo - f."
+    },
+    {
+      "s": "A question ends with a full stop.",
+      "t": false,
+      "why": "A question ends with a question mark ?"
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Blend: m - oo - n",
+      "o": [
+        "moon",
+        "room",
+        "spoon"
+      ],
+      "why": "m - oo - n makes moon."
+    },
+    {
+      "q": "Blend: b - r - oo - m",
+      "o": [
+        "broom",
+        "boot",
+        "room"
+      ],
+      "why": "b - r - oo - m makes broom."
+    },
+    {
+      "q": "Is foot short oo or long oo?",
+      "o": [
+        "short oo",
+        "long oo",
+        "no oo"
+      ],
+      "why": "foot sounds like book: short oo."
+    },
+    {
+      "q": "Is boot short oo or long oo?",
+      "o": [
+        "long oo",
+        "short oo",
+        "no oo"
+      ],
+      "why": "boot sounds like moon: long oo."
+    },
+    {
+      "q": "We eat soup with a...",
+      "o": [
+        "spoon",
+        "boot",
+        "roof"
+      ],
+      "why": "We eat with a spoon."
+    },
+    {
+      "q": "The top of a house is the...",
+      "o": [
+        "roof",
+        "room",
+        "moon"
+      ],
+      "why": "The roof is on top of the house."
+    },
+    {
+      "q": "... is it hot?",
+      "o": [
+        "When",
+        "Who",
+        "Their"
+      ],
+      "why": "When asks about time."
+    },
+    {
+      "q": "Which word has no oo?",
+      "o": [
+        "ring",
+        "roof",
+        "room"
+      ],
+      "why": "ring has ng. roof and room have oo."
+    },
+    {
+      "q": "Which word has long oo?",
+      "o": [
+        "room",
+        "cook",
+        "look"
+      ],
+      "why": "r - oo - m has long oo."
+    },
+    {
+      "q": "We sweep the floor with a...",
+      "o": [
+        "broom",
+        "spoon",
+        "boot"
+      ],
+      "why": "A broom sweeps the floor."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Blend: sp - oo - n",
+      "a": "spoon",
+      "d": [
+        "moon",
+        "room",
+        "broom"
+      ]
+    },
+    {
+      "q": "Blend: b - oo - t",
+      "a": "boot",
+      "d": [
+        "book",
+        "roof",
+        "moon"
+      ]
+    },
+    {
+      "q": "Blend: r - oo - f",
+      "a": "roof",
+      "d": [
+        "room",
+        "boot",
+        "spoon"
+      ]
+    },
+    {
+      "q": "We see it in the night sky.",
+      "a": "moon",
+      "d": [
+        "spoon",
+        "boot",
+        "broom"
+      ]
+    },
+    {
+      "q": "Long oo word",
+      "a": "room",
+      "d": [
+        "book",
+        "foot",
+        "hook"
+      ]
+    },
+    {
+      "q": "Short oo word",
+      "a": "cook",
+      "d": [
+        "moon",
+        "boot",
+        "spoon"
+      ]
+    },
+    {
+      "q": "The sound in moon",
+      "a": "/uː/",
+      "d": [
+        "/ʊ/",
+        "/ɔː/",
+        "/ŋ/"
+      ]
+    },
+    {
+      "q": "The sound in book",
+      "a": "/ʊ/",
+      "d": [
+        "/uː/",
+        "/ɔː/",
+        "/ŋ/"
+      ]
+    },
+    {
+      "q": "Tricky word: ... is it hot?",
+      "a": "When",
+      "d": [
+        "Who",
+        "Their",
+        "Our"
+      ]
+    },
+    {
+      "q": "Order: hot / is / When / it / ?",
+      "a": "When is it hot?",
+      "d": [
+        "Is when it hot?",
+        "Hot is it when?",
+        "It is when hot?"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which word has long oo /uː/?",
+      "o": [
+        "moon",
+        "book",
+        "look",
+        "foot"
+      ],
+      "why": "moon has long oo."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which is the tricky word in this lesson?",
+      "o": [
+        "when",
+        "why",
+        "their",
+        "our"
+      ],
+      "why": "We learn when."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word has short oo /ʊ/?",
+      "o": [
+        "hook",
+        "boot",
+        "spoon",
+        "room"
+      ],
+      "why": "hook sounds like book."
+    },
+    {
+      "lv": "التذكر",
+      "q": "How do we split spoon?",
+      "o": [
+        "sp - oo - n",
+        "s - po - on",
+        "spo - on",
+        "s - p - o - o - n - e"
+      ],
+      "why": "spoon is sp - oo - n."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Look at a picture of a spoon. Write the word.",
+      "o": [
+        "spoon",
+        "spon",
+        "spune",
+        "spoun"
+      ],
+      "why": "sp - oo - n spells spoon."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Sort: boot, cook, room, hook. Which are long oo?",
+      "o": [
+        "boot, room",
+        "cook, hook",
+        "boot, cook",
+        "room, hook"
+      ],
+      "why": "boot and room sound like moon."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Change m in moon to sp. What word?",
+      "o": [
+        "spoon",
+        "soon",
+        "room",
+        "boot"
+      ],
+      "why": "sp - oo - n makes spoon."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why are moon and book in different groups?",
+      "o": [
+        "Their oo sounds are different",
+        "They have no oo",
+        "They both have ng",
+        "They have the same sound"
+      ],
+      "why": "moon has long oo. book has short oo."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which is the odd one out?",
+      "o": [
+        "foot",
+        "moon",
+        "spoon",
+        "broom"
+      ],
+      "why": "foot has short oo. The others have long oo."
+    },
+    {
+      "lv": "التحليل",
+      "q": "When is it hot? Which answer fits a When question?",
+      "o": [
+        "In spring.",
+        "On the desk.",
+        "It's pink.",
+        "Yes, it is."
+      ],
+      "why": "When asks about time, so we answer In spring."
+    }
+  ]
+}

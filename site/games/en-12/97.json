@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: Aviation Then and Now (Reading)",
+ "lesson": "Skimming, True/False/Not Given and vocabulary development / Pronouns as cohesive devices, the Wright brothers and timed reading",
+ "outcomes": [
+  "Skim a text and choose the best title",
+  "Answer True / False / Not Given and find what pronouns refer to",
+  "Read against the clock for speed and accuracy"
+ ],
+ "tf": [
+  {
+   "s": "Skimming means reading quickly to get the general idea.",
+   "t": true,
+   "why": "Yes, skimming gives you the main idea."
+  },
+  {
+   "s": "'Not Given' means the text does not give that information.",
+   "t": true,
+   "why": "Correct, the text does not say."
+  },
+  {
+   "s": "The KLM flight carried 117 passengers.",
+   "t": false,
+   "why": "The KLM flight had 171 passengers."
+  },
+  {
+   "s": "Title d covers only one section of the text.",
+   "t": true,
+   "why": "That is why it is not the best title."
+  },
+  {
+   "s": "Scanning is the same as skimming.",
+   "t": false,
+   "why": "Skimming is for the main idea; scanning is for details."
+  },
+  {
+   "s": "Title a was chosen because it is very general.",
+   "t": false,
+   "why": "Titles a and b were rejected because they are too general."
+  },
+  {
+   "s": "A good title should match the whole text.",
+   "t": true,
+   "why": "Yes, it should cover the main idea of all sections."
+  },
+  {
+   "s": "'It' can refer back to a noun in an earlier sentence.",
+   "t": true,
+   "why": "Yes, pronouns link back to nouns."
+  },
+  {
+   "s": "Timed reading measures your reading speed and accuracy.",
+   "t": true,
+   "why": "Right, you record your speed and your score."
+  },
+  {
+   "s": "In a True/False/Not Given task, you correct the statements that are true.",
+   "t": false,
+   "why": "You correct the false statements."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which title was the best?",
+   "o": [
+    "Title c",
+    "Title a",
+    "Title d"
+   ],
+   "why": "Title c covers the whole text."
+  },
+  {
+   "q": "Why was title d rejected?",
+   "o": [
+    "It refers to only one section",
+    "It covers the whole text",
+    "It is the best title"
+   ],
+   "why": "A title must cover the whole text."
+  },
+  {
+   "q": "In the text, what does 'they' refer to?",
+   "o": [
+    "airlines",
+    "biofuels",
+    "passengers"
+   ],
+   "why": "'They' refers back to the airlines."
+  },
+  {
+   "q": "In the text, what does 'them' refer to?",
+   "o": [
+    "biofuels",
+    "airlines",
+    "the Wright brothers"
+   ],
+   "why": "'Them' refers back to biofuels."
+  },
+  {
+   "q": "Which flight carried 171 passengers?",
+   "o": [
+    "The KLM flight",
+    "The Virgin Atlantic flight",
+    "The Wright brothers' flight"
+   ],
+   "why": "Statement d was false because of this detail."
+  },
+  {
+   "q": "Who is the timed reading about?",
+   "o": [
+    "The Wright brothers",
+    "Virgin Atlantic staff",
+    "KLM pilots"
+   ],
+   "why": "The Wright brothers were flying pioneers."
+  },
+  {
+   "q": "What job do pronouns do in a text?",
+   "o": [
+    "They act as cohesive devices",
+    "They are titles",
+    "They are numbers"
+   ],
+   "why": "Cohesive devices connect ideas."
+  },
+  {
+   "q": "What do you work out after timed reading?",
+   "o": [
+    "Words per minute and your score",
+    "The price of fuel",
+    "The number of pictures"
+   ],
+   "why": "You measure speed and accuracy."
+  },
+  {
+   "q": "Which kind of fuel is the text about?",
+   "o": [
+    "biofuel",
+    "coal",
+    "wood"
+   ],
+   "why": "Airlines are testing biofuels."
+  },
+  {
+   "q": "What should you do with false statements?",
+   "o": [
+    "Correct them",
+    "Ignore them",
+    "Copy them"
+   ],
+   "why": "Correcting shows you understood."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Reading fast for the main idea",
+   "a": "Skimming",
+   "d": [
+    "Scanning",
+    "Proofreading",
+    "Dictation"
+   ]
+  },
+  {
+   "q": "Fuel tested by airlines in the text",
+   "a": "Biofuel",
+   "d": [
+    "Petrol",
+    "Coal",
+    "Gas"
+   ]
+  },
+  {
+   "q": "Among the first to do something new",
+   "a": "Pioneer",
+   "d": [
+    "Passenger",
+    "Airline",
+    "Customer"
+   ]
+  },
+  {
+   "q": "Passengers on the KLM flight",
+   "a": "171",
+   "d": [
+    "117",
+    "71",
+    "170"
+   ]
+  },
+  {
+   "q": "The verb of 'invention'",
+   "a": "invent",
+   "d": [
+    "inventor",
+    "inventive",
+    "inventions"
+   ]
+  },
+  {
+   "q": "The best title for the text",
+   "a": "Title c",
+   "d": [
+    "Title a",
+    "Title b",
+    "Title d"
+   ]
+  },
+  {
+   "q": "'they' refers to…",
+   "a": "Airlines",
+   "d": [
+    "Biofuels",
+    "Passengers",
+    "Pilots"
+   ]
+  },
+  {
+   "q": "'them' refers to…",
+   "a": "Biofuels",
+   "d": [
+    "Airlines",
+    "Passengers",
+    "Engines"
+   ]
+  },
+  {
+   "q": "The text says nothing about it",
+   "a": "Not Given",
+   "d": [
+    "True",
+    "False",
+    "Correct"
+   ]
+  },
+  {
+   "q": "Words like 'it' and 'they'",
+   "a": "Pronouns",
+   "d": [
+    "Adverbs",
+    "Titles",
+    "Numbers"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do pronouns do in a text?",
+   "o": [
+    "They link phrases and sentences so the text reads smoothly",
+    "They give the title",
+    "They show numbers",
+    "They end paragraphs"
+   ],
+   "why": "Pronouns connect ideas."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should you note carefully in True/False/Not Given tasks?",
+   "o": [
+    "Adverbs and qualifying words like 'partly' and 'entirely'",
+    "Only the first word",
+    "The length of the text",
+    "The pictures"
+   ],
+   "why": "Small words can change the meaning."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'pioneer' mean?",
+   "o": [
+    "A person who is among the first to do something new",
+    "A passenger on a plane",
+    "A type of fuel",
+    "A person who repairs planes"
+   ],
+   "why": "The Wright brothers were flying pioneers."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What was the Virgin Atlantic flight?",
+   "o": [
+    "The world's first commercial biofuel flight",
+    "The Wright brothers' first flight",
+    "A KLM flight with 171 passengers",
+    "A flight with no fuel"
+   ],
+   "why": "It was partly powered by biofuel."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The text says the plane was partly powered by biofuel. Statement: 'The plane used only biofuel.' What is the answer?",
+   "o": [
+    "False",
+    "True",
+    "Not Given",
+    "Partly true"
+   ],
+   "why": "'Partly' is not the same as 'only'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The text says nothing about the pilot's age. Statement: 'The pilot was 40 years old.' What is the answer?",
+   "o": [
+    "Not Given",
+    "True",
+    "False",
+    "Correct"
+   ],
+   "why": "If the text does not say it, choose Not Given."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which word is the verb of 'invention'?",
+   "o": [
+    "invent",
+    "inventor",
+    "inventive",
+    "inventions"
+   ],
+   "why": "Invent is the verb; inventor is the person."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why were titles a and b rejected?",
+   "o": [
+    "They are too general",
+    "They cover only one section",
+    "They are too short",
+    "They are the same as title c"
+   ],
+   "why": "A good title is specific to the text."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we answer the questions after finishing a timed reading?",
+   "o": [
+    "So the questions do not distract us from reading",
+    "Because the questions are easy",
+    "Because there are no questions",
+    "To read more slowly"
+   ],
+   "why": "You measure pure reading speed first."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is a pronoun often better than repeating 'biofuel' again and again?",
+   "o": [
+    "It makes the text smoother and less repetitive",
+    "It makes the text longer",
+    "It hides the meaning",
+    "It is always more formal"
+   ],
+   "why": "Pronouns avoid boring repetition."
+  }
+ ]
+}

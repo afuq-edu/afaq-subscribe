@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Learning Club 2",
+  "lesson": "Learning Club 2 – Lesson 2: CLIL Social Studies (In my town)",
+  "outcomes": [
+    "I can name places in a town: school, hospital, shops, houses, café.",
+    "I can describe my town with There is a … / There are some …",
+    "I can use words and sentences from Units 1 to 4."
+  ],
+  "tf": [
+    {
+      "s": "Doctors work in a hospital.",
+      "t": true,
+      "why": "Yes! We go to the hospital when we are sick."
+    },
+    {
+      "s": "We learn at school.",
+      "t": true,
+      "why": "Great! School is a place to learn."
+    },
+    {
+      "s": "We buy things at the hospital.",
+      "t": false,
+      "why": "We buy things at the shops."
+    },
+    {
+      "s": "There are some shops is about more than one shop.",
+      "t": true,
+      "why": "Well done! Some shops means more than one."
+    },
+    {
+      "s": "There is some houses in my town.",
+      "t": false,
+      "why": "More than one house: There are some houses."
+    },
+    {
+      "s": "People live in houses.",
+      "t": true,
+      "why": "Yes! A house is a home."
+    },
+    {
+      "s": "We go to the shops when we are sick.",
+      "t": false,
+      "why": "We go to the hospital when we are sick."
+    },
+    {
+      "s": "Is there a café? Yes, there is.",
+      "t": true,
+      "why": "Great short answer!"
+    },
+    {
+      "s": "A map shows places in a town.",
+      "t": true,
+      "why": "Yes! A map helps us find places."
+    },
+    {
+      "s": "School and hospital are family words.",
+      "t": false,
+      "why": "They are places in a town."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Where do doctors work?",
+      "o": [
+        "in a hospital",
+        "in a café",
+        "in a shop"
+      ],
+      "why": "Doctors work in a hospital."
+    },
+    {
+      "q": "Where do you buy things?",
+      "o": [
+        "at the shops",
+        "at school",
+        "at the hospital"
+      ],
+      "why": "We buy things at the shops."
+    },
+    {
+      "q": "Match: learn →",
+      "o": [
+        "school",
+        "café",
+        "hospital"
+      ],
+      "why": "We learn at school."
+    },
+    {
+      "q": "There ___ a school.",
+      "o": [
+        "is",
+        "are",
+        "am"
+      ],
+      "why": "One school: There is a school."
+    },
+    {
+      "q": "There are some ___.",
+      "o": [
+        "shops",
+        "shop",
+        "a shop"
+      ],
+      "why": "Some shops is more than one."
+    },
+    {
+      "q": "Where do you live?",
+      "o": [
+        "in a house",
+        "in a hospital",
+        "in a shop"
+      ],
+      "why": "We live in a house."
+    },
+    {
+      "q": "Is there a café in the picture? (yes)",
+      "o": [
+        "Yes, there is.",
+        "Yes, there are.",
+        "Yes, I am."
+      ],
+      "why": "Is there …? Yes, there is."
+    },
+    {
+      "q": "Present your map: This is my ___.",
+      "o": [
+        "town",
+        "nose",
+        "cousin"
+      ],
+      "why": "This is my town."
+    },
+    {
+      "q": "Write the word for the picture of a doll.",
+      "o": [
+        "doll",
+        "dull",
+        "dol"
+      ],
+      "why": "d-o-l-l spells doll."
+    },
+    {
+      "q": "Write the ar word for a picture of a star.",
+      "o": [
+        "star",
+        "ster",
+        "stor"
+      ],
+      "why": "st-ar spells star."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Doctors work here.",
+      "a": "hospital",
+      "d": [
+        "school",
+        "café",
+        "house"
+      ]
+    },
+    {
+      "q": "Children learn here.",
+      "a": "school",
+      "d": [
+        "hospital",
+        "shops",
+        "café"
+      ]
+    },
+    {
+      "q": "We buy things here.",
+      "a": "shops",
+      "d": [
+        "school",
+        "hospital",
+        "houses"
+      ]
+    },
+    {
+      "q": "Families live in them.",
+      "a": "houses",
+      "d": [
+        "shops",
+        "schools",
+        "hospitals"
+      ]
+    },
+    {
+      "q": "There ___ a hospital.",
+      "a": "is",
+      "d": [
+        "are",
+        "am",
+        "be"
+      ]
+    },
+    {
+      "q": "There ___ some houses.",
+      "a": "are",
+      "d": [
+        "is",
+        "am",
+        "be"
+      ]
+    },
+    {
+      "q": "There are ___ shops.",
+      "a": "some",
+      "d": [
+        "a",
+        "one",
+        "an"
+      ]
+    },
+    {
+      "q": "Is there a school? Yes, there…",
+      "a": "is",
+      "d": [
+        "are",
+        "am",
+        "isn't"
+      ]
+    },
+    {
+      "q": "Have a drink with friends here.",
+      "a": "café",
+      "d": [
+        "hospital",
+        "school",
+        "houses"
+      ]
+    },
+    {
+      "q": "We draw a ___ of our town.",
+      "a": "map",
+      "d": [
+        "shop",
+        "house",
+        "café"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which is a place in a town?",
+      "o": [
+        "hospital",
+        "cousin",
+        "nose",
+        "shark"
+      ],
+      "why": "A hospital is a place in a town."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which sentence is for more than one?",
+      "o": [
+        "There are some shops.",
+        "There is a school.",
+        "There is a café.",
+        "There is a hospital."
+      ],
+      "why": "There are some … is for more than one."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Where do you go when you are sick?",
+      "o": [
+        "to the hospital",
+        "to the shops",
+        "to the café",
+        "to school"
+      ],
+      "why": "Doctors help us at the hospital."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word goes with learn?",
+      "o": [
+        "school",
+        "shops",
+        "café",
+        "houses"
+      ],
+      "why": "We learn at school."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Describe the picture: one school and five houses.",
+      "o": [
+        "There is a school. There are some houses.",
+        "There are a school. There is some houses.",
+        "There is some school. There is houses.",
+        "There are school and house."
+      ],
+      "why": "One school: There is. Many houses: There are some."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Write a sentence about your town.",
+      "o": [
+        "There is a hospital in my town.",
+        "There are a hospital in my town.",
+        "There is hospital my town.",
+        "Hospital is there my town."
+      ],
+      "why": "There is a hospital in my town."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your mum needs food. Where does she go?",
+      "o": [
+        "to the shops",
+        "to the hospital",
+        "to school",
+        "to the zoo"
+      ],
+      "why": "We buy food at the shops."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which is a good thing to say about your town?",
+      "o": [
+        "There is a big hospital to help sick people.",
+        "There is a cousin.",
+        "There are some noses.",
+        "There is a star in the shop."
+      ],
+      "why": "A hospital is a good place that helps people."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word is the odd one out?",
+      "o": [
+        "uncle",
+        "school",
+        "café",
+        "hospital"
+      ],
+      "why": "Uncle is a family word; the others are places."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which sentence is NOT right?",
+      "o": [
+        "There is some shops.",
+        "There are some shops.",
+        "There is a café.",
+        "There are some houses."
+      ],
+      "why": "Shops is more than one: There are some shops."
+    }
+  ]
+}

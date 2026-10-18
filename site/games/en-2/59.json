@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Sounds and Spelling – Unit 4, Lesson 6: Review and dictation",
+  "outcomes": [
+    "I can find the odd one out by its sound.",
+    "I can blend and write words with ee, er, ar and o-e.",
+    "I can write sentences with tricky words."
+  ],
+  "tf": [
+    {
+      "s": "In star, park, bee, the odd one out is bee.",
+      "t": true,
+      "why": "Yes! Bee has ee; star and park have ar."
+    },
+    {
+      "s": "Sl-ee-p makes sleep.",
+      "t": true,
+      "why": "Great blending!"
+    },
+    {
+      "s": "Shark and park have the same sound.",
+      "t": true,
+      "why": "Well done! Both have ar."
+    },
+    {
+      "s": "Dark is spelled d-e-r-k.",
+      "t": false,
+      "why": "Dark is spelled d-ar-k."
+    },
+    {
+      "s": "Stone and cone both have o-e.",
+      "t": true,
+      "why": "Yes! The magic e is in both."
+    },
+    {
+      "s": "Fern has the ar sound.",
+      "t": false,
+      "why": "Fern has er."
+    },
+    {
+      "s": "Said, come, do and so are tricky words.",
+      "t": true,
+      "why": "Great! We learn them by heart."
+    },
+    {
+      "s": "Sweet and herd have the same sound.",
+      "t": false,
+      "why": "Sweet has ee; herd has er."
+    },
+    {
+      "s": "C-o-n-e makes cane.",
+      "t": false,
+      "why": "C-o-n-e makes cone."
+    },
+    {
+      "s": "In sheep, herd, fern, the odd one out is herd.",
+      "t": false,
+      "why": "Sheep is the odd one out; herd and fern have er."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Odd one out: star, park, bee",
+      "o": [
+        "bee",
+        "star",
+        "park"
+      ],
+      "why": "Bee has ee; the others have ar."
+    },
+    {
+      "q": "Blend sh – ar – k.",
+      "o": [
+        "shark",
+        "shirt",
+        "shake"
+      ],
+      "why": "sh-ar-k makes shark."
+    },
+    {
+      "q": "Write: d-ar-k.",
+      "o": [
+        "dark",
+        "derk",
+        "dork"
+      ],
+      "why": "d-ar-k spells dark."
+    },
+    {
+      "q": "Which word pairs with \"shark\"?",
+      "o": [
+        "star",
+        "sheep",
+        "stone"
+      ],
+      "why": "Shark and star both have ar."
+    },
+    {
+      "q": "Blend f – er – n.",
+      "o": [
+        "fern",
+        "fan",
+        "fun"
+      ],
+      "why": "f-er-n makes fern."
+    },
+    {
+      "q": "Which word has the same sound as \"sweet\"?",
+      "o": [
+        "sheep",
+        "shark",
+        "stone"
+      ],
+      "why": "Sweet and sheep both have ee."
+    },
+    {
+      "q": "Odd one out: home, rope, herd",
+      "o": [
+        "herd",
+        "home",
+        "rope"
+      ],
+      "why": "Herd has er; the others have o-e."
+    },
+    {
+      "q": "Which is a tricky word?",
+      "o": [
+        "come",
+        "cone",
+        "card"
+      ],
+      "why": "Come is a tricky word."
+    },
+    {
+      "q": "\"Hello,\" ___ Dad.",
+      "o": [
+        "said",
+        "so",
+        "do"
+      ],
+      "why": "Said tells what Dad says."
+    },
+    {
+      "q": "Which is spelled right?",
+      "o": [
+        "stone",
+        "ston",
+        "stoan"
+      ],
+      "why": "s-t-o-n-e spells stone."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Blend sl – ee – p.",
+      "a": "sleep",
+      "d": [
+        "slip",
+        "slap",
+        "slope"
+      ]
+    },
+    {
+      "q": "Blend c – o – n – e.",
+      "a": "cone",
+      "d": [
+        "can",
+        "cane",
+        "con"
+      ]
+    },
+    {
+      "q": "Blend h – er – d.",
+      "a": "herd",
+      "d": [
+        "had",
+        "hid",
+        "hood"
+      ]
+    },
+    {
+      "q": "Blend st – ar.",
+      "a": "star",
+      "d": [
+        "stir",
+        "store",
+        "stay"
+      ]
+    },
+    {
+      "q": "Odd one: fern, herd, her, cone",
+      "a": "cone",
+      "d": [
+        "fern",
+        "herd",
+        "her"
+      ]
+    },
+    {
+      "q": "Odd one: sheep, sweet, green, dark",
+      "a": "dark",
+      "d": [
+        "sheep",
+        "sweet",
+        "green"
+      ]
+    },
+    {
+      "q": "Odd one: stone, home, rope, star",
+      "a": "star",
+      "d": [
+        "stone",
+        "home",
+        "rope"
+      ]
+    },
+    {
+      "q": "Same sound as \"park\"",
+      "a": "dark",
+      "d": [
+        "perk",
+        "pork",
+        "peek"
+      ]
+    },
+    {
+      "q": "Same sound as \"herd\"",
+      "a": "fern",
+      "d": [
+        "farm",
+        "feet",
+        "fork"
+      ]
+    },
+    {
+      "q": "Find the tricky word.",
+      "a": "so",
+      "d": [
+        "star",
+        "sleep",
+        "stone"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which word has the ar sound?",
+      "o": [
+        "dark",
+        "deep",
+        "dog",
+        "dive"
+      ],
+      "why": "d-ar-k has ar."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word has o-e?",
+      "o": [
+        "cone",
+        "cook",
+        "corn",
+        "coin"
+      ],
+      "why": "c-o-n-e has o-e."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word has er?",
+      "o": [
+        "herd",
+        "heel",
+        "hope",
+        "harm"
+      ],
+      "why": "h-er-d has er."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Write the word for a picture of a stone.",
+      "o": [
+        "stone",
+        "stoon",
+        "stown",
+        "stun"
+      ],
+      "why": "s-t-o-n-e spells stone."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Blend sw – ee – t.",
+      "o": [
+        "sweet",
+        "sweat",
+        "swat",
+        "swept"
+      ],
+      "why": "sw-ee-t makes sweet."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Dictation: \"Come and see!\" Which is right?",
+      "o": [
+        "Come and see!",
+        "Cum and see!",
+        "Come and sea!",
+        "Kom and see!"
+      ],
+      "why": "Come is a tricky word; see has ee."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Complete: What ___ you see?",
+      "o": [
+        "do",
+        "so",
+        "come",
+        "said"
+      ],
+      "why": "What do you see?"
+    },
+    {
+      "lv": "التحليل",
+      "q": "Odd one out: shark, park, sweet, star",
+      "o": [
+        "sweet",
+        "shark",
+        "park",
+        "star"
+      ],
+      "why": "Sweet has ee; the others have ar."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which group has the same sound?",
+      "o": [
+        "sheep, sweet, green",
+        "sheep, shark, stone",
+        "fern, farm, fork",
+        "home, herd, hair"
+      ],
+      "why": "Sheep, sweet and green all have ee."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Ali wrote \"I can see a sterr.\" What is the right word?",
+      "o": [
+        "star",
+        "stir",
+        "store",
+        "stare"
+      ],
+      "why": "st-ar spells star."
+    }
+  ]
+}

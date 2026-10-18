@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Atomic's Learning Club 1",
+ "lesson": "Learning Club 1 – Lesson 2: Maths – How do we measure things?",
+ "outcomes": [
+  "I can name mm, cm and m.",
+  "I know 10 mm = 1 cm and 100 cm = 1 m.",
+  "I can say how long and how wide things are."
+ ],
+ "tf": [
+  {
+   "s": "There are 10 millimetres in 1 centimetre.",
+   "t": true,
+   "why": "Yes! 10 mm = 1 cm."
+  },
+  {
+   "s": "There are 10 centimetres in 1 metre.",
+   "t": false,
+   "why": "There are 100 centimetres in 1 metre."
+  },
+  {
+   "s": "We use a ruler to measure things.",
+   "t": true,
+   "why": "Right! A ruler helps us measure."
+  },
+  {
+   "s": "1 metre is longer than 50 centimetres.",
+   "t": true,
+   "why": "Yes! 1 m = 100 cm, and 100 is more than 50."
+  },
+  {
+   "s": "cm means centimetre.",
+   "t": true,
+   "why": "Well done! cm = centimetre."
+  },
+  {
+   "s": "We use millimetres to measure a classroom.",
+   "t": false,
+   "why": "A classroom is big, so we use metres."
+  },
+  {
+   "s": "When we measure, we put 0 at the edge of the thing.",
+   "t": true,
+   "why": "Great! Start at 0."
+  },
+  {
+   "s": "How long is it? asks about the width.",
+   "t": false,
+   "why": "How long asks about length; How wide asks about width."
+  },
+  {
+   "s": "The book in the lesson is 13 centimetres wide.",
+   "t": true,
+   "why": "Yes! The book is 13 cm wide."
+  },
+  {
+   "s": "We guess after we measure.",
+   "t": false,
+   "why": "We guess (estimate) first, then measure."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How many mm are in 1 cm?",
+   "o": [
+    "10",
+    "100",
+    "1"
+   ],
+   "why": "10 mm = 1 cm."
+  },
+  {
+   "q": "How many cm are in 1 m?",
+   "o": [
+    "100",
+    "10",
+    "1000"
+   ],
+   "why": "100 cm = 1 m."
+  },
+  {
+   "q": "Which is longer?",
+   "o": [
+    "1 metre",
+    "50 centimetres",
+    "5 millimetres"
+   ],
+   "why": "1 m = 100 cm."
+  },
+  {
+   "q": "Complete: It is 19 ___ long. (a spoon)",
+   "o": [
+    "centimetres",
+    "metres",
+    "kilos"
+   ],
+   "why": "A spoon is about 19 cm."
+  },
+  {
+   "q": "Which unit for a classroom?",
+   "o": [
+    "m",
+    "mm",
+    "cm"
+   ],
+   "why": "Big things are measured in metres."
+  },
+  {
+   "q": "What do we use to measure?",
+   "o": [
+    "a ruler",
+    "a dice",
+    "a clock"
+   ],
+   "why": "A ruler measures length."
+  },
+  {
+   "q": "Ask about width:",
+   "o": [
+    "How wide is it?",
+    "How old is it?",
+    "How much is it?"
+   ],
+   "why": "How wide asks about width."
+  },
+  {
+   "q": "The table in the lesson is …",
+   "o": [
+    "1 metre long",
+    "1 millimetre long",
+    "13 metres long"
+   ],
+   "why": "The table is 1 m long."
+  },
+  {
+   "q": "First we guess, then we …",
+   "o": [
+    "measure",
+    "sing",
+    "sleep"
+   ],
+   "why": "Estimate, measure, compare."
+  },
+  {
+   "q": "Where do we put 0?",
+   "o": [
+    "At the edge of the thing",
+    "In the middle",
+    "At the end of the ruler"
+   ],
+   "why": "Start at 0 at the edge."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "mm in 1 cm",
+   "a": "10",
+   "d": [
+    "100",
+    "1",
+    "5"
+   ]
+  },
+  {
+   "q": "cm in 1 m",
+   "a": "100",
+   "d": [
+    "10",
+    "50",
+    "1000"
+   ]
+  },
+  {
+   "q": "cm means …",
+   "a": "centimetre",
+   "d": [
+    "metre",
+    "millimetre",
+    "minute"
+   ]
+  },
+  {
+   "q": "mm means …",
+   "a": "millimetre",
+   "d": [
+    "metre",
+    "centimetre",
+    "month"
+   ]
+  },
+  {
+   "q": "m means …",
+   "a": "metre",
+   "d": [
+    "millimetre",
+    "minute",
+    "centimetre"
+   ]
+  },
+  {
+   "q": "Unit for a classroom",
+   "a": "metres",
+   "d": [
+    "millimetres",
+    "centimetres",
+    "kilos"
+   ]
+  },
+  {
+   "q": "A spoon: 19 ___ long",
+   "a": "centimetres",
+   "d": [
+    "metres",
+    "kilometres",
+    "kilos"
+   ]
+  },
+  {
+   "q": "The book: ___ cm wide",
+   "a": "13",
+   "d": [
+    "20",
+    "80",
+    "100"
+   ]
+  },
+  {
+   "q": "The table: 1 ___ long",
+   "a": "metre",
+   "d": [
+    "millimetre",
+    "centimetre",
+    "kilo"
+   ]
+  },
+  {
+   "q": "We measure with a …",
+   "a": "ruler",
+   "d": [
+    "dice",
+    "clock",
+    "spoon"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do the small lines between 0 and 1 on a ruler show?",
+   "o": [
+    "millimetres",
+    "metres",
+    "minutes",
+    "days"
+   ],
+   "why": "There are 10 small mm lines in 1 cm."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do we ask about the length?",
+   "o": [
+    "How long is it?",
+    "How wide is it?",
+    "How old is it?",
+    "How much is it?"
+   ],
+   "why": "How long asks about length."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which unit is the biggest?",
+   "o": [
+    "metre",
+    "centimetre",
+    "millimetre",
+    "they are the same"
+   ],
+   "why": "1 m = 100 cm = 1000 mm."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the three steps in the project?",
+   "o": [
+    "Estimate, measure, compare",
+    "Draw, colour, cut",
+    "Sing, clap, sit",
+    "Read, write, sleep"
+   ],
+   "why": "We guess, measure, then compare."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The book is 20 cm long and 13 cm wide. How wide is it?",
+   "o": [
+    "13 centimetres",
+    "20 centimetres",
+    "33 centimetres",
+    "7 centimetres"
+   ],
+   "why": "It is 13 centimetres wide."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The table is 1 m long. How many centimetres is that?",
+   "o": [
+    "100",
+    "10",
+    "1",
+    "80"
+   ],
+   "why": "1 m = 100 cm."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A rubber is 3 cm long. How many mm is that?",
+   "o": [
+    "30",
+    "3",
+    "300",
+    "13"
+   ],
+   "why": "1 cm = 10 mm, so 3 cm = 30 mm."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your guess was 50 cm. The desk is 60 cm. Is your guess bigger or smaller?",
+   "o": [
+    "Smaller",
+    "Bigger",
+    "The same",
+    "We can't know"
+   ],
+   "why": "50 is smaller than 60."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The table is 1 m long and 80 cm wide. Which is bigger?",
+   "o": [
+    "The length",
+    "The width",
+    "They are the same",
+    "We can't know"
+   ],
+   "why": "1 m = 100 cm, which is more than 80 cm."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we use metres for a door, not millimetres?",
+   "o": [
+    "The door is big.",
+    "The door is small.",
+    "Doors have no length.",
+    "Millimetres are bigger."
+   ],
+   "why": "Big things are easier to measure in metres."
+  }
+ ]
+}

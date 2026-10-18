@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 2: What’s in a Name? (Grammar)",
+ "lesson": "Activate Your English: asking and answering questions to complete a task",
+ "outcomes": [
+  "Form correct past simple and passive questions",
+  "Ask and answer questions to complete a text about Levi Strauss"
+ ],
+ "tf": [
+  {
+   "s": "In an information-gap task, each partner has information the other needs.",
+   "t": true,
+   "why": "You ask questions to get the missing information."
+  },
+  {
+   "s": "'Where was Levi Strauss born?' is a correct question.",
+   "t": true,
+   "why": "Question word + was + subject + past participle."
+  },
+  {
+   "s": "We use 'did' with passive questions in the past.",
+   "t": false,
+   "why": "Passive questions use was/were; 'did' is for active verbs."
+  },
+  {
+   "s": "'What did he make for the miners?' is a past simple active question.",
+   "t": true,
+   "why": "It uses did + base verb."
+  },
+  {
+   "s": "'What was the cloth coloured with?' is a passive question.",
+   "t": true,
+   "why": "It uses was + past participle."
+  },
+  {
+   "s": "'Where did Levi Strauss born?' is a correct question.",
+   "t": false,
+   "why": "The correct question is 'Where was Levi Strauss born?'"
+  },
+  {
+   "s": "A question usually follows the order: question word + auxiliary + subject.",
+   "t": true,
+   "why": "For example: When was he born?"
+  },
+  {
+   "s": "To ask about time, we start the question with 'Where'.",
+   "t": false,
+   "why": "We use 'When' to ask about time."
+  },
+  {
+   "s": "Checking the auxiliary and the verb form helps you make a correct question.",
+   "t": true,
+   "why": "These are the main things to check."
+  },
+  {
+   "s": "'Who first created jeans?' needs the auxiliary 'did'.",
+   "t": false,
+   "why": "When 'who' is the subject, we do not need 'did'."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which question word asks about a place?",
+   "o": [
+    "Where",
+    "When",
+    "Who"
+   ],
+   "why": "Where asks about place."
+  },
+  {
+   "q": "Which question word asks about a thing?",
+   "o": [
+    "What",
+    "Where",
+    "When"
+   ],
+   "why": "What asks about things."
+  },
+  {
+   "q": "Which auxiliary is used in passive past questions?",
+   "o": [
+    "was/were",
+    "did",
+    "do"
+   ],
+   "why": "Passive questions use was/were."
+  },
+  {
+   "q": "Complete: ___ did he make for the miners?",
+   "o": [
+    "What",
+    "Who",
+    "Where"
+   ],
+   "why": "We are asking about a thing."
+  },
+  {
+   "q": "Correct question: 'Levi Strauss was born in Germany.'",
+   "o": [
+    "Where was Levi Strauss born?",
+    "Where did Levi Strauss born?",
+    "Where Levi Strauss was born?"
+   ],
+   "why": "Question word + was + subject + born."
+  },
+  {
+   "q": "Which question is correct?",
+   "o": [
+    "What was the cloth coloured with?",
+    "What did the cloth coloured with?",
+    "What the cloth was coloured with?"
+   ],
+   "why": "Was + subject + past participle."
+  },
+  {
+   "q": "What did Levi Strauss make clothes for?",
+   "o": [
+    "miners",
+    "pilots",
+    "sailors"
+   ],
+   "why": "He made trousers for the miners."
+  },
+  {
+   "q": "Complete: Who was the brand design left ___?",
+   "o": [
+    "to",
+    "from",
+    "at"
+   ],
+   "why": "Something is 'left to' a person."
+  },
+  {
+   "q": "Who created jeans in the text?",
+   "o": [
+    "Levi Strauss",
+    "Adolf Dassler",
+    "John Pemberton"
+   ],
+   "why": "The text is about Levi Strauss."
+  },
+  {
+   "q": "Which question is active past simple?",
+   "o": [
+    "What did he make?",
+    "When was he born?",
+    "What was it coloured with?"
+   ],
+   "why": "Did + base verb is active."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Asks about a place",
+   "a": "Where",
+   "d": [
+    "When",
+    "Who",
+    "Why"
+   ]
+  },
+  {
+   "q": "Asks about time",
+   "a": "When",
+   "d": [
+    "Where",
+    "What",
+    "Which"
+   ]
+  },
+  {
+   "q": "Asks about a person",
+   "a": "Who",
+   "d": [
+    "Where",
+    "When",
+    "How"
+   ]
+  },
+  {
+   "q": "Auxiliary for active past",
+   "a": "did",
+   "d": [
+    "was",
+    "were",
+    "has"
+   ]
+  },
+  {
+   "q": "Auxiliary: he ___ born",
+   "a": "was",
+   "d": [
+    "did",
+    "were",
+    "does"
+   ]
+  },
+  {
+   "q": "Who first created jeans?",
+   "a": "Levi Strauss",
+   "d": [
+    "Adolf Dassler",
+    "Oman Air",
+    "Chevrolet"
+   ]
+  },
+  {
+   "q": "Workers he made jeans for",
+   "a": "miners",
+   "d": [
+    "pilots",
+    "farmers",
+    "sailors"
+   ]
+  },
+  {
+   "q": "Partners' task type",
+   "a": "information gap",
+   "d": [
+    "spelling test",
+    "drawing task",
+    "poem"
+   ]
+  },
+  {
+   "q": "Auxiliary: they ___ born",
+   "a": "were",
+   "d": [
+    "did",
+    "was",
+    "does"
+   ]
+  },
+  {
+   "q": "Gold search time in the text",
+   "a": "Gold Rush",
+   "d": [
+    "Silk Road",
+    "Oil Boom",
+    "Ice Age"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which auxiliary do we use with active past simple questions?",
+   "o": [
+    "did",
+    "was",
+    "were",
+    "has"
+   ],
+   "why": "Active past questions use did + base verb."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question word asks about time?",
+   "o": [
+    "When",
+    "Where",
+    "Who",
+    "What"
+   ],
+   "why": "When asks about time."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the correct word order in a question?",
+   "o": [
+    "question word + auxiliary + subject",
+    "subject + question word + auxiliary",
+    "auxiliary + subject + question word",
+    "subject + verb + question word"
+   ],
+   "why": "Example: When was he born?"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question is passive?",
+   "o": [
+    "What was the cloth coloured with?",
+    "What did he make for the miners?",
+    "Who first created jeans?",
+    "Where did he go?"
+   ],
+   "why": "Was + coloured is passive."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a question for: 'Levi Strauss was born in Germany.' (Where)",
+   "o": [
+    "Where was Levi Strauss born?",
+    "Where did Levi Strauss born?",
+    "Where Levi Strauss born?",
+    "Where was born Levi Strauss?"
+   ],
+   "why": "Where + was + subject + born."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: ______ was the famous brand design created? (asking about time)",
+   "o": [
+    "When",
+    "Where",
+    "Who",
+    "What"
+   ],
+   "why": "We need a question word for time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner's answer is 'He made trousers for the miners.' What was your question?",
+   "o": [
+    "What did he make for the miners?",
+    "What was he made for the miners?",
+    "What did he made for the miners?",
+    "What he make for the miners?"
+   ],
+   "why": "Did + base verb 'make'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we use 'did' in some questions and 'was' in others?",
+   "o": [
+    "'Did' is for active past verbs; 'was/were' is for the passive",
+    "They mean the same",
+    "'Was' is for the future",
+    "'Did' is only for negatives"
+   ],
+   "why": "The voice of the verb decides the auxiliary."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is wrong with 'When did the brand design created?'",
+   "o": [
+    "It mixes 'did' with a passive meaning; it should be 'When was ... created?'",
+    "The question word should be 'Who'",
+    "It needs 'were'",
+    "Nothing is wrong"
+   ],
+   "why": "The design receives the action, so we need 'was'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How can you check that your question is grammatically correct?",
+   "o": [
+    "Check the auxiliary, the word order and the verb form",
+    "Count the letters",
+    "Make it as long as possible",
+    "Use only capital letters"
+   ],
+   "why": "These three checks catch most mistakes."
+  }
+ ]
+}

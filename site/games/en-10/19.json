@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "3",
+ "lesson": "Unit 3: Renewable Energy – Writing: A Formal Request Email",
+ "outcomes": [
+  "Know the parts of a formal email.",
+  "Use 'would' to make polite requests.",
+  "Change informal sentences into formal ones."
+ ],
+ "tf": [
+  {
+   "s": "'Dear Mr Brown' is a formal greeting.",
+   "t": true,
+   "why": "Yes, it is polite and formal."
+  },
+  {
+   "s": "'Yours sincerely' is an informal closing.",
+   "t": false,
+   "why": "'Yours sincerely' is a formal closing."
+  },
+  {
+   "s": "The first paragraph of a formal email explains why you are writing.",
+   "t": true,
+   "why": "Correct, the purpose comes first."
+  },
+  {
+   "s": "'We would like to request a visit.' is a polite request.",
+   "t": true,
+   "why": "Well done, 'would like' is polite."
+  },
+  {
+   "s": "'Take care' is a formal way to end an email.",
+   "t": false,
+   "why": "'Take care' is informal and friendly."
+  },
+  {
+   "s": "'To whom it may concern' can start a formal email.",
+   "t": true,
+   "why": "Right, we use it when we do not know the name."
+  },
+  {
+   "s": "'Give me the information.' is a polite formal request.",
+   "t": false,
+   "why": "It is too direct; say 'I would like to request some information.'"
+  },
+  {
+   "s": "We use 'would' to make a request polite and indirect.",
+   "t": true,
+   "why": "Yes, 'would' softens the request."
+  },
+  {
+   "s": "A writing checklist helps you check that all parts of the email are included.",
+   "t": true,
+   "why": "Correct, it helps you find what is missing."
+  },
+  {
+   "s": "A formal email should start with 'Hey there!'.",
+   "t": false,
+   "why": "'Hey there' is informal; use 'Dear…'."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which greeting is formal?",
+   "o": [
+    "Dear Mr Brown",
+    "Hi there",
+    "Hey!"
+   ],
+   "why": "'Dear' with a title is formal."
+  },
+  {
+   "q": "We ___ like to request a visit.",
+   "o": [
+    "would",
+    "will",
+    "are"
+   ],
+   "why": "'would like' is the polite form."
+  },
+  {
+   "q": "Which closing is formal?",
+   "o": [
+    "Yours sincerely",
+    "Bye",
+    "See you"
+   ],
+   "why": "'Yours sincerely' is formal."
+  },
+  {
+   "q": "Is 'Take care.' formal or informal?",
+   "o": [
+    "informal",
+    "formal",
+    "both"
+   ],
+   "why": "It is friendly and informal."
+  },
+  {
+   "q": "'___ whom it may concern'",
+   "o": [
+    "To",
+    "For",
+    "At"
+   ],
+   "why": "The phrase is 'To whom it may concern'."
+  },
+  {
+   "q": "'___ writing to request information.'",
+   "o": [
+    "I am",
+    "I will",
+    "I was"
+   ],
+   "why": "Use 'I am writing to…'."
+  },
+  {
+   "q": "What does the first paragraph explain?",
+   "o": [
+    "why you are writing",
+    "your hobbies",
+    "the weather"
+   ],
+   "why": "The purpose comes first."
+  },
+  {
+   "q": "Formal version of 'I need some help.'",
+   "o": [
+    "I would like to request some assistance.",
+    "Help me now.",
+    "Gimme help."
+   ],
+   "why": "'Would like to request' is polite."
+  },
+  {
+   "q": "What comes at the end of an email?",
+   "o": [
+    "the closing",
+    "the greeting",
+    "the subject"
+   ],
+   "why": "The closing ends the email."
+  },
+  {
+   "q": "Why use a checklist?",
+   "o": [
+    "to make sure all parts are included",
+    "to make the email longer",
+    "to skip the greeting"
+   ],
+   "why": "A checklist helps you check your work."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Formal greeting",
+   "a": "Dear Mr Brown",
+   "d": [
+    "Hi there",
+    "Hey you",
+    "Hello mate"
+   ]
+  },
+  {
+   "q": "Formal closing",
+   "a": "Yours sincerely",
+   "d": [
+    "Take care",
+    "See you",
+    "Bye"
+   ]
+  },
+  {
+   "q": "Informal closing",
+   "a": "Take care",
+   "d": [
+    "Yours sincerely",
+    "Kind regards",
+    "Yours faithfully"
+   ]
+  },
+  {
+   "q": "Polite word for requests",
+   "a": "would",
+   "d": [
+    "will",
+    "must",
+    "can't"
+   ]
+  },
+  {
+   "q": "Start when no name is known",
+   "a": "To whom it may concern",
+   "d": [
+    "Hi everyone",
+    "Hey there",
+    "Dear friend"
+   ]
+  },
+  {
+   "q": "We would like to ___ a visit",
+   "a": "request",
+   "d": [
+    "give",
+    "take",
+    "tell"
+   ]
+  },
+  {
+   "q": "I am ___ to request info",
+   "a": "writing",
+   "d": [
+    "reading",
+    "playing",
+    "eating"
+   ]
+  },
+  {
+   "q": "Part that ends an email",
+   "a": "closing",
+   "d": [
+    "greeting",
+    "subject",
+    "purpose"
+   ]
+  },
+  {
+   "q": "Part that starts an email",
+   "a": "greeting",
+   "d": [
+    "closing",
+    "signature",
+    "details"
+   ]
+  },
+  {
+   "q": "List to check your draft",
+   "a": "checklist",
+   "d": [
+    "shopping list",
+    "timetable",
+    "menu"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is the correct order of a formal email?",
+   "o": [
+    "greeting, purpose, details and request, closing",
+    "closing, greeting, purpose, details",
+    "details, closing, greeting, purpose",
+    "purpose, closing, details, greeting"
+   ],
+   "why": "Start with a greeting and end with a closing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which closing should you use in an email to a company manager?",
+   "o": [
+    "Yours sincerely",
+    "Bye",
+    "Take care",
+    "See you later"
+   ],
+   "why": "'Yours sincerely' suits formal emails."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why do we use 'would' in formal emails?",
+   "o": [
+    "To make the request polite and indirect.",
+    "To talk about the past.",
+    "To make the email shorter.",
+    "To show we are angry."
+   ],
+   "why": "'Would' softens a request."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How should a formal email begin?",
+   "o": [
+    "Dear Mr/Ms … or To whom it may concern",
+    "Hey!",
+    "What's up?",
+    "See you soon"
+   ],
+   "why": "These openings are formal."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite politely: 'Give me the information.'",
+   "o": [
+    "I would like to request some information.",
+    "Give information me.",
+    "You give me information now.",
+    "Information, please give fast."
+   ],
+   "why": "'I would like to request' is polite."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put in order: like / We / would / to / request / a visit",
+   "o": [
+    "We would like to request a visit.",
+    "We like would to request a visit.",
+    "Would we like request to a visit.",
+    "We would request like to a visit."
+   ],
+   "why": "Subject + would like to + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: 'i would like request a visit.'",
+   "o": [
+    "I would like to request a visit.",
+    "i would like request a visit.",
+    "I would like requesting visit.",
+    "I like would to request a visit."
+   ],
+   "why": "Use a capital 'I' and 'like to'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'Can you help with the visit?' not suitable for a formal email?",
+   "o": [
+    "It is too direct and informal.",
+    "It is too long.",
+    "It has no verb.",
+    "It is in the past tense."
+   ],
+   "why": "Formal emails use 'I would like to request…'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A student writes to a wind farm manager they do not know. Which opening is best?",
+   "o": [
+    "Dear Sir or Madam / To whom it may concern",
+    "Hi buddy!",
+    "Hey, what's up?",
+    "Yo!"
+   ],
+   "why": "A formal opening shows respect."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A partner's plan has a greeting, a purpose and a closing but no visit date. What is the most useful comment?",
+   "o": [
+    "You could add the date of the visit.",
+    "Remove the greeting.",
+    "Write it in informal language.",
+    "Delete the closing."
+   ],
+   "why": "Adding details makes the request clear."
+  }
+ ]
+}

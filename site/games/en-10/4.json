@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "1",
+  "lesson": "Unit 1: New Media – Listening and Speaking",
+  "outcomes": [
+    "Use journalism words like reporter, source and fake news.",
+    "Listen for key words and say the stressed syllable in words.",
+    "Give opinions and make suggestions with useful expressions."
+  ],
+  "tf": [
+    {"s": "A journalist is a person who reports the news.", "t": true, "why": "Yes! Journalists research and report the news."},
+    {"s": "In the interview, the journalist says journalism is faster than social media at reporting news.", "t": false, "why": "He says social media is often faster at spreading breaking news."},
+    {"s": "Fake news is news that is not based on facts.", "t": true, "why": "Correct, so we must check the source."},
+    {"s": "In 'online', the stress is on the second syllable.", "t": true, "why": "Right: on-LINE."},
+    {"s": "Chart b shows printed newspaper sales going up and online readership going down.", "t": false, "why": "Chart b shows printed sales falling and online readership rising."},
+    {"s": "20K means 20,000.", "t": true, "why": "Well done, K means one thousand."},
+    {"s": "'I'm not sure about it' is a positive answer to a suggestion.", "t": false, "why": "It shows doubt; 'That sounds great' is positive."},
+    {"s": "In the podcast, Mo has the most followers of the three teenagers.", "t": true, "why": "Mo has about 120K followers."},
+    {"s": "'One example of this is…' is used to disagree.", "t": false, "why": "It is used to give an example."},
+    {"s": "In 'participate', the first syllable is stressed.", "t": false, "why": "The stress is on the second syllable: par-TI-ci-pate."}
+  ],
+  "boxes": [
+    {"q": "News that is not based on facts is ...", "o": ["fake news", "digital age", "a source"], "why": "Fake news is not true or not based on facts."},
+    {"q": "Which word completes: '___ don't we start a YouTube channel?'", "o": ["Why", "What", "How"], "why": "'Why don't we…?' makes a suggestion."},
+    {"q": "Which expression gives a reason?", "o": ["I think this is because…", "That sounds great", "How about…?"], "why": "'Because' introduces a reason."},
+    {"q": "How many followers does Rebecca have?", "o": ["20K", "120K", "15K"], "why": "Rebecca has about 20,000 followers."},
+    {"q": "What is Peter good at?", "o": ["tweeting regularly", "making videos", "taking pictures"], "why": "Peter feels successful by tweeting regularly."},
+    {"q": "What is Mo's main skill?", "o": ["making videos", "tweeting", "writing newspapers"], "why": "Mo makes videos and has about 120K followers."},
+    {"q": "How can we check if news is real?", "o": ["check the source", "share it quickly", "read only the title"], "why": "A trusted source helps us know the news is real."},
+    {"q": "Which is a polite way to disagree?", "o": ["I'm sorry but I don't agree", "That sounds great", "One example of this is…"], "why": "This phrase disagrees politely."},
+    {"q": "Which word has the stress on the first syllable?", "o": ["digital", "device", "attention"], "why": "DI-gi-tal is stressed on the first syllable."},
+    {"q": "What does Jack suggest in the dialogue?", "o": ["starting a YouTube channel", "buying a newspaper", "closing his account"], "why": "Jack suggests a YouTube channel to Dan."}
+  ],
+  "hunt": [
+    {"q": "A person who reports the news", "a": "journalist", "d": ["blogger", "follower", "designer"]},
+    {"q": "News not based on facts", "a": "fake news", "d": ["source", "digital age", "podcast"]},
+    {"q": "Where information comes from", "a": "source", "d": ["follower", "syllable", "podcast"]},
+    {"q": "K means ...", "a": "one thousand", "d": ["one hundred", "one million", "ten"]},
+    {"q": "Mo's number of followers", "a": "120K", "d": ["20K", "15K", "12K"]},
+    {"q": "Peter's number of followers", "a": "15K", "d": ["120K", "20K", "50K"]},
+    {"q": "A positive reply to a suggestion", "a": "That sounds great", "d": ["I'm not sure", "I don't agree", "No way"]},
+    {"q": "Chart showing the trend", "a": "chart b", "d": ["chart a", "chart c", "chart d"]},
+    {"q": "Someone who follows your account", "a": "follower", "d": ["reporter", "source", "journalist"]},
+    {"q": "A show you listen to online", "a": "podcast", "d": ["newspaper", "magazine", "blog post"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What does 'trust' mean in 'We trust this news source'?", "o": ["believe it is honest and true", "never read it", "delete it", "print it"], "why": "We trust sources that give true information."},
+    {"lv": "التذكر", "q": "Which expression makes a suggestion?", "o": ["How about…?", "I agree", "For example…", "I think this is because…"], "why": "'How about…?' suggests an idea."},
+    {"lv": "التذكر", "q": "Which chart shows the trend in Listening 1.4?", "o": ["chart b", "chart a", "chart c", "none of them"], "why": "Chart b shows printed sales falling and online readership rising."},
+    {"lv": "التذكر", "q": "According to Dr David, what can journalists do to compete with social media?", "o": ["develop technological skills", "stop using the Internet", "write shorter newspapers", "work only on the radio"], "why": "He also says they can use audio, video and social media."},
+    {"lv": "التطبيق", "q": "Choose the correct stress for 'communicate'.", "o": ["com-MU-ni-cate", "COM-mu-ni-cate", "com-mu-NI-cate", "com-mu-ni-CATE"], "why": "The second syllable is stressed."},
+    {"lv": "التطبيق", "q": "Your friend says, 'How about making a school news podcast?' You like the idea. You say:", "o": ["That sounds great!", "I'm not sure about it.", "I'm sorry but I don't agree.", "One example of this is…"], "why": "'That sounds great' accepts a suggestion."},
+    {"lv": "التطبيق", "q": "Complete: 'Online newspapers are better ___ I can read them anywhere.'", "o": ["because", "but", "so", "or"], "why": "'Because' gives the reason."},
+    {"lv": "التحليل", "q": "Which key words should you listen for in 'Anyone can be a journalist'?", "o": ["anyone, journalist", "can, be", "a, can", "be, a"], "why": "Key words carry the main meaning of the statement."},
+    {"lv": "التحليل", "q": "Mo says you should create content you love. Why does this help?", "o": ["Your passion shows and gives value to followers.", "It is faster to post.", "You need fewer followers.", "You don't need a camera."], "why": "Followers enjoy content made with passion."},
+    {"lv": "التحليل", "q": "Why should you check the source of news on social media?", "o": ["Some news may be fake.", "All news is fake.", "Sources are always printed.", "It makes the news faster."], "why": "Checking sources helps us avoid fake news."}
+  ]
+}

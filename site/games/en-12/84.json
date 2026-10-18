@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: A Helping Hand (Listening & Speaking)",
+ "lesson": "Lead-in and Listening 2.4.1: how the SQU Rovers help new students / Listening 2.4.2 and Soundbites: asking for, checking and confirming clarification",
+ "outcomes": [
+  "Understand how the SQU Rovers help new students",
+  "Listen to an interview and a conversation for main ideas and details",
+  "Use phrases to ask for, check and confirm clarification"
+ ],
+ "tf": [
+  {
+   "s": "The SQU Rovers are a team of students who help new students.",
+   "t": true,
+   "why": "Yes, they help new students at SQU."
+  },
+  {
+   "s": "Nadia is a third-year student who is a Rover.",
+   "t": true,
+   "why": "Correct, she helps Fatma."
+  },
+  {
+   "s": "Fatma is looking for the library.",
+   "t": false,
+   "why": "Fatma is looking for Hall B."
+  },
+  {
+   "s": "A common problem for new students is finding their way around the campus.",
+   "t": true,
+   "why": "Right, the campus can be confusing at first."
+  },
+  {
+   "s": "Students who lose their ID cards should go to the Administration Office.",
+   "t": true,
+   "why": "Yes, they report it and get a replacement."
+  },
+  {
+   "s": "The placement test finds students' level in English, Maths and IT.",
+   "t": true,
+   "why": "Correct, it shows which level they start at."
+  },
+  {
+   "s": "The Rovers tell homesick students that nobody else feels the same.",
+   "t": false,
+   "why": "They say everyone goes through the same thing and it will get better."
+  },
+  {
+   "s": "'Are you with me?' is a phrase for checking clarification.",
+   "t": true,
+   "why": "Yes, it checks the listener understands."
+  },
+  {
+   "s": "'Got it!' is a phrase for asking for clarification.",
+   "t": false,
+   "why": "Got it! confirms that you understand."
+  },
+  {
+   "s": "Rovers can only be found in the library.",
+   "t": false,
+   "why": "They are at stations such as the cafeteria and in front of the mosque."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who are the SQU Rovers?",
+   "o": [
+    "students who help new students",
+    "teachers of maths",
+    "bus drivers"
+   ],
+   "why": "Rovers are student helpers."
+  },
+  {
+   "q": "What is Fatma looking for?",
+   "o": [
+    "Hall B",
+    "the cafeteria",
+    "the car park"
+   ],
+   "why": "She needs to find Hall B."
+  },
+  {
+   "q": "What does the placement test find?",
+   "o": [
+    "students' level in English, Maths and IT",
+    "students' height",
+    "students' home towns"
+   ],
+   "why": "It places students at the right level."
+  },
+  {
+   "q": "Where should you go if you lose your ID card?",
+   "o": [
+    "the Administration Office",
+    "the mosque",
+    "the gym"
+   ],
+   "why": "You report it there and get a new one."
+  },
+  {
+   "q": "Which phrase asks for clarification?",
+   "o": [
+    "Do you mean...?",
+    "Got it!",
+    "I understand."
+   ],
+   "why": "Do you mean...? asks the speaker to explain."
+  },
+  {
+   "q": "Which phrase checks clarification?",
+   "o": [
+    "Are you clear about...?",
+    "I'm not sure I follow you.",
+    "Got it!"
+   ],
+   "why": "The speaker checks you understood."
+  },
+  {
+   "q": "Which phrase confirms understanding?",
+   "o": [
+    "I understand.",
+    "Do you mean...?",
+    "Are you with me?"
+   ],
+   "why": "I understand confirms clarification."
+  },
+  {
+   "q": "How does a new student often feel when far from home?",
+   "o": [
+    "homesick",
+    "bored",
+    "angry"
+   ],
+   "why": "Missing home makes students homesick."
+  },
+  {
+   "q": "Where can you find Rovers?",
+   "o": [
+    "at stations like the cafeteria",
+    "only online",
+    "on the runway"
+   ],
+   "why": "Rovers wait at stations around the university."
+  },
+  {
+   "q": "How does the new student in the picture feel?",
+   "o": [
+    "lost and confused",
+    "calm and relaxed",
+    "angry and loud"
+   ],
+   "why": "He is new and does not know his way."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Team that helps new SQU students",
+   "a": "SQU Rovers",
+   "d": [
+    "tour guides",
+    "tutors",
+    "ROP"
+   ]
+  },
+  {
+   "q": "Place Fatma is looking for",
+   "a": "Hall B",
+   "d": [
+    "Hall A",
+    "the gym",
+    "the library"
+   ]
+  },
+  {
+   "q": "Nadia is a ... year student",
+   "a": "third",
+   "d": [
+    "first",
+    "second",
+    "fourth"
+   ]
+  },
+  {
+   "q": "Where to report a lost ID",
+   "a": "Administration Office",
+   "d": [
+    "cafeteria",
+    "mosque",
+    "car park"
+   ]
+  },
+  {
+   "q": "Missing your home",
+   "a": "homesick",
+   "d": [
+    "apprehensive",
+    "independent",
+    "excited"
+   ]
+  },
+  {
+   "q": "Test that finds your level",
+   "a": "placement test",
+   "d": [
+    "driving test",
+    "blood test",
+    "spelling test"
+   ]
+  },
+  {
+   "q": "Card students often lose",
+   "a": "ID card",
+   "d": [
+    "credit card",
+    "bus card",
+    "birthday card"
+   ]
+  },
+  {
+   "q": "Phrase to confirm",
+   "a": "Got it!",
+   "d": [
+    "Do you mean...?",
+    "Are you with me?",
+    "Pardon?"
+   ]
+  },
+  {
+   "q": "Phrase to check",
+   "a": "Are you with me?",
+   "d": [
+    "Got it!",
+    "I understand.",
+    "Do you mean...?"
+   ]
+  },
+  {
+   "q": "A Rover station",
+   "a": "cafeteria",
+   "d": [
+    "runway",
+    "souq",
+    "beach"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who is Nadia?",
+   "o": [
+    "a third-year student who is a Rover",
+    "a new student",
+    "a maths teacher",
+    "a tour guide"
+   ],
+   "why": "Nadia is an experienced student helper."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why are new students sometimes upset?",
+   "o": [
+    "they lose their ID cards and are homesick",
+    "they have too many friends",
+    "the campus is too small",
+    "they have no classes"
+   ],
+   "why": "Lost IDs and homesickness are common problems."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which three subjects does the placement test cover?",
+   "o": [
+    "English, Maths and IT",
+    "Art, Music and PE",
+    "History, Geography and Science",
+    "Arabic, Islamic Studies and Art"
+   ],
+   "why": "The test finds students' level in these subjects."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence tells the speaker you need an explanation?",
+   "o": [
+    "I'm not clear what that is.",
+    "Got it!",
+    "Are you with me?",
+    "I understand."
+   ],
+   "why": "It tells the speaker you need an explanation."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend gives you directions and you don't follow. What do you say?",
+   "o": [
+    "Sorry, I'm not sure I follow you.",
+    "Got it!",
+    "I understand perfectly.",
+    "Are you with me?"
+   ],
+   "why": "This asks for clarification politely."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are explaining a route and want to check your friend understands. What do you say?",
+   "o": [
+    "Are you with me?",
+    "Do you mean...?",
+    "I'm not clear what that is.",
+    "Got it!"
+   ],
+   "why": "This checks the listener is following."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend explains which door to use and now you understand. What do you say?",
+   "o": [
+    "Got it!",
+    "Do you mean...?",
+    "Are you clear about...?",
+    "I'm not sure I follow you."
+   ],
+   "why": "Got it! confirms you understand."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How do the Rovers help with homesickness?",
+   "o": [
+    "they say everyone goes through the same thing and it will get better",
+    "they send students home",
+    "they ignore the problem",
+    "they give students extra exams"
+   ],
+   "why": "Knowing others feel the same helps."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are Rovers placed at stations like the cafeteria and in front of the mosque?",
+   "o": [
+    "new students can find them easily in busy places",
+    "those places are closed",
+    "to sell food",
+    "to hide from students"
+   ],
+   "why": "Busy, central places make help easy to reach."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is asking for clarification a useful skill for new students?",
+   "o": [
+    "it helps them understand information they need instead of getting lost",
+    "it makes conversations shorter",
+    "it is rude",
+    "it is only for teachers"
+   ],
+   "why": "Asking when unsure prevents mistakes."
+  }
+ ]
+}

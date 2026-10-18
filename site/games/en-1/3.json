@@ -1,59 +1,359 @@
 {
-  "subject": "اللغة الإنجليزية",
-  "grade": "الصف الأول",
-  "unit": "Unit 1: Family and friends",
-  "lesson": "Lesson 2: Language practice (names) + Sound a",
-  "outcomes": [
-    "I can ask What's your name? and answer My name's …",
-    "I can hear and find boy, girl, friend and cat.",
-    "I can say the sound /æ/ and write the letter a."
-  ],
-  "tf": [
-    {"s": "Apple starts with the sound /æ/.", "t": true, "why": "Yes! a, a, apple."},
-    {"s": "Ant starts with the letter a.", "t": true, "why": "Great! a-nt, ant."},
-    {"s": "Alligator starts with /s/.", "t": false, "why": "Alligator starts with /æ/."},
-    {"s": "We answer What's your name? with My name's …", "t": true, "why": "Yes! My name's … tells your name."},
-    {"s": "We answer What's your name? with Goodbye!", "t": false, "why": "We say My name's … or I'm …"},
-    {"s": "My name's Lily means I am Lily.", "t": true, "why": "Yes! My name's Lily = I'm Lily."},
-    {"s": "Sun starts with the letter a.", "t": false, "why": "Sun starts with s."},
-    {"s": "Axe starts with /æ/.", "t": true, "why": "Yes! a, a, axe."},
-    {"s": "Sami is a girl.", "t": false, "why": "Sami is a boy."},
-    {"s": "Teddy starts with /æ/.", "t": false, "why": "Teddy starts with /t/."}
-  ],
-  "boxes": [
-    {"q": "What's your name?", "o": ["My name's Nassra.", "This is Meg.", "Goodbye!"], "why": "My name's … tells your name."},
-    {"q": "Which word starts with /æ/?", "o": ["apple", "sun", "snake"], "why": "a, a, apple!"},
-    {"q": "_pple: which letter is missing?", "o": ["a", "s", "t"], "why": "a + pple = apple."},
-    {"q": "_nt: which letter is missing?", "o": ["a", "s", "p"], "why": "a + nt = ant."},
-    {"q": "The /æ/ Phonics Card shows …", "o": ["an apple", "a snake", "a sun"], "why": "Apple starts with /æ/."},
-    {"q": "Lily is a …", "o": ["girl", "boy", "cat"], "why": "Lily is a girl."},
-    {"q": "Point to yourself and say …", "o": ["My name's …", "Your name's …", "This is Tom."], "why": "My is for me."},
-    {"q": "Ask your friend …", "o": ["What's your name?", "What's my name?", "Goodbye, name!"], "why": "Your is for the other person."},
-    {"q": "Which letter says /æ/?", "o": ["a", "s", "n"], "why": "The letter a says /æ/."},
-    {"q": "Hello. My name's Sami. Sami is a …", "o": ["boy", "girl", "cat"], "why": "Sami is a boy."}
-  ],
-  "hunt": [
-    {"q": "Catch the /æ/ fruit.", "a": "apple", "d": ["sun", "snake", "six"]},
-    {"q": "Catch the /æ/ animal.", "a": "alligator", "d": ["snake", "cat", "teddy"]},
-    {"q": "Catch the small /æ/ animal.", "a": "ant", "d": ["cat", "snake", "tiger"]},
-    {"q": "Catch the /æ/ word.", "a": "axe", "d": ["sit", "sad", "sing"]},
-    {"q": "Catch another /æ/ word.", "a": "arrow", "d": ["six", "sun", "sit"]},
-    {"q": "Catch the letter for /æ/.", "a": "a", "d": ["s", "t", "p"]},
-    {"q": "Catch the answer: What's your name?", "a": "My name's Hamza.", "d": ["Hello, Meg!", "This is Tom.", "Goodbye!"]},
-    {"q": "Catch the word for me.", "a": "my", "d": ["your", "this", "cat"]},
-    {"q": "Catch a girl's name.", "a": "Fatma", "d": ["Sami", "Jack", "Tom"]},
-    {"q": "Catch a boy's name.", "a": "Sami", "d": ["Fatma", "Lily", "Meg"]}
-  ],
-  "mcq": [
-    {"lv": "التذكر", "q": "Which word starts with /æ/?", "o": ["ant", "sun", "six", "sing"], "why": "a, a, ant!"},
-    {"lv": "التذكر", "q": "Which letter makes the sound /æ/?", "o": ["a", "s", "t", "p"], "why": "The letter a says /æ/."},
-    {"lv": "التذكر", "q": "Which one is a cat?", "o": ["Meg", "Lily", "Fatma", "Sami"], "why": "Meg is a cat."},
-    {"lv": "التذكر", "q": "Which is a good answer to What's your name?", "o": ["I'm Ali.", "Hello, cat!", "Point to Sami.", "Goodbye!"], "why": "I'm … tells your name."},
-    {"lv": "التطبيق", "q": "You meet a new friend. You say …", "o": ["Hello. My name's Salim.", "Goodbye. My cat.", "This is my name.", "Sit down."], "why": "Say hello, then your name."},
-    {"lv": "التطبيق", "q": "_xe: which letter is missing?", "o": ["a", "s", "t", "n"], "why": "a + xe = axe."},
-    {"lv": "التطبيق", "q": "Your friend says: My name's Lily. What's your name? You say …", "o": ["I'm Maryam.", "I'm Lily.", "What's your name?", "This is Lily."], "why": "Tell her your own name."},
-    {"lv": "التحليل", "q": "Which word does NOT start with /æ/?", "o": ["snake", "apple", "ant", "axe"], "why": "Snake starts with /s/."},
-    {"lv": "التحليل", "q": "Apple, ant, arrow. What is the same?", "o": ["They start with /æ/.", "They are fruits.", "They start with /s/.", "They are names."], "why": "All of them start with /æ/."},
-    {"lv": "التحليل", "q": "Why do we point to ourselves when we say My name's …?", "o": ["My is about me.", "My is about a friend.", "My is about a cat.", "My means goodbye."], "why": "My is for me, your is for you."}
-  ]
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 1: Family and friends",
+ "lesson": "Lesson 2: Language practice (names) + Sound a",
+ "outcomes": [
+  "I can ask What's your name? and answer My name's …",
+  "I can hear and find boy, girl, friend and cat.",
+  "I can say the sound /æ/ and write the letter a."
+ ],
+ "tf": [
+  {
+   "s": "Apple starts with the sound /æ/.",
+   "t": true,
+   "why": "Yes! a, a, apple."
+  },
+  {
+   "s": "Ant starts with the letter a.",
+   "t": true,
+   "why": "Great! a-nt, ant."
+  },
+  {
+   "s": "Alligator starts with /s/.",
+   "t": false,
+   "why": "Alligator starts with /æ/."
+  },
+  {
+   "s": "We answer What's your name? with My name's …",
+   "t": true,
+   "why": "Yes! My name's … tells your name."
+  },
+  {
+   "s": "We answer What's your name? with Goodbye!",
+   "t": false,
+   "why": "We say My name's … or I'm …"
+  },
+  {
+   "s": "My name's Lily means I am Lily.",
+   "t": true,
+   "why": "Yes! My name's Lily = I'm Lily."
+  },
+  {
+   "s": "Sun starts with the letter a.",
+   "t": false,
+   "why": "Sun starts with s."
+  },
+  {
+   "s": "Axe starts with /æ/.",
+   "t": true,
+   "why": "Yes! a, a, axe."
+  },
+  {
+   "s": "Sami is a girl.",
+   "t": false,
+   "why": "Sami is a boy."
+  },
+  {
+   "s": "Teddy starts with /æ/.",
+   "t": false,
+   "why": "Teddy starts with /t/."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's your name?",
+   "o": [
+    "My name's Nassra.",
+    "This is Meg.",
+    "Goodbye!"
+   ],
+   "why": "My name's … tells your name."
+  },
+  {
+   "q": "Which word starts with /æ/?",
+   "o": [
+    "apple",
+    "sun",
+    "snake"
+   ],
+   "why": "a, a, apple!"
+  },
+  {
+   "q": "_pple: which letter is missing?",
+   "o": [
+    "a",
+    "s",
+    "t"
+   ],
+   "why": "a + pple = apple."
+  },
+  {
+   "q": "_nt: which letter is missing?",
+   "o": [
+    "a",
+    "s",
+    "p"
+   ],
+   "why": "a + nt = ant."
+  },
+  {
+   "q": "The /æ/ Phonics Card shows …",
+   "o": [
+    "an apple",
+    "a snake",
+    "a sun"
+   ],
+   "why": "Apple starts with /æ/."
+  },
+  {
+   "q": "Lily is a …",
+   "o": [
+    "girl",
+    "boy",
+    "cat"
+   ],
+   "why": "Lily is a girl."
+  },
+  {
+   "q": "Point to yourself and say …",
+   "o": [
+    "My name's …",
+    "Your name's …",
+    "This is Tom."
+   ],
+   "why": "My is for me."
+  },
+  {
+   "q": "Ask your friend …",
+   "o": [
+    "What's your name?",
+    "What's my name?",
+    "Goodbye, name!"
+   ],
+   "why": "Your is for the other person."
+  },
+  {
+   "q": "Which letter says /æ/?",
+   "o": [
+    "a",
+    "s",
+    "n"
+   ],
+   "why": "The letter a says /æ/."
+  },
+  {
+   "q": "Hello. My name's Sami. Sami is a …",
+   "o": [
+    "boy",
+    "girl",
+    "cat"
+   ],
+   "why": "Sami is a boy."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Catch the /æ/ fruit.",
+   "a": "apple",
+   "d": [
+    "sun",
+    "snake",
+    "six"
+   ]
+  },
+  {
+   "q": "Catch the /æ/ animal.",
+   "a": "alligator",
+   "d": [
+    "snake",
+    "cat",
+    "teddy"
+   ]
+  },
+  {
+   "q": "Catch the small /æ/ animal.",
+   "a": "ant",
+   "d": [
+    "cat",
+    "snake",
+    "tiger"
+   ]
+  },
+  {
+   "q": "Catch the /æ/ word.",
+   "a": "axe",
+   "d": [
+    "sit",
+    "sad",
+    "sing"
+   ]
+  },
+  {
+   "q": "Catch another /æ/ word.",
+   "a": "arrow",
+   "d": [
+    "six",
+    "sun",
+    "sit"
+   ]
+  },
+  {
+   "q": "Catch the letter for /æ/.",
+   "a": "a",
+   "d": [
+    "s",
+    "t",
+    "p"
+   ]
+  },
+  {
+   "q": "Catch the answer: What's your name?",
+   "a": "My name's Hamza.",
+   "d": [
+    "Hello, Meg!",
+    "This is Tom.",
+    "Goodbye!"
+   ]
+  },
+  {
+   "q": "Catch the word for me.",
+   "a": "my",
+   "d": [
+    "your",
+    "this",
+    "cat"
+   ]
+  },
+  {
+   "q": "Catch a girl's name.",
+   "a": "Fatma",
+   "d": [
+    "Sami",
+    "Jack",
+    "Tom"
+   ]
+  },
+  {
+   "q": "Catch a boy's name.",
+   "a": "Sami",
+   "d": [
+    "Fatma",
+    "Lily",
+    "Meg"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these words starts with /æ/?",
+   "o": [
+    "ant",
+    "sun",
+    "six",
+    "sing"
+   ],
+   "why": "a, a, ant!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which letter makes the sound /æ/?",
+   "o": [
+    "a",
+    "s",
+    "t",
+    "p"
+   ],
+   "why": "The letter a says /æ/."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one is a cat?",
+   "o": [
+    "Meg",
+    "Lily",
+    "Fatma",
+    "Sami"
+   ],
+   "why": "Meg is a cat."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a good answer to What's your name?",
+   "o": [
+    "I'm Ali.",
+    "Hello, cat!",
+    "Point to Sami.",
+    "Goodbye!"
+   ],
+   "why": "I'm … tells your name."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You meet a new friend. You say …",
+   "o": [
+    "Hello. My name's Salim.",
+    "Goodbye. My cat.",
+    "This is my name.",
+    "Sit down."
+   ],
+   "why": "Say hello, then your name."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "_xe: which letter is missing?",
+   "o": [
+    "a",
+    "s",
+    "t",
+    "n"
+   ],
+   "why": "a + xe = axe."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend says: My name's Lily. What's your name? You say …",
+   "o": [
+    "I'm Maryam.",
+    "I'm Lily.",
+    "What's your name?",
+    "This is Lily."
+   ],
+   "why": "Tell her your own name."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT start with /æ/?",
+   "o": [
+    "snake",
+    "apple",
+    "ant",
+    "axe"
+   ],
+   "why": "Snake starts with /s/."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Apple, ant, arrow. What is the same?",
+   "o": [
+    "They start with /æ/.",
+    "They are fruits.",
+    "They start with /s/.",
+    "They are names."
+   ],
+   "why": "All of them start with /æ/."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we point to ourselves when we say My name's …?",
+   "o": [
+    "My is about me.",
+    "My is about a friend.",
+    "My is about a cat.",
+    "My means goodbye."
+   ],
+   "why": "My is for me, your is for you."
+  }
+ ]
 }

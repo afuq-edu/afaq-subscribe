@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 1: Look at my toys!",
+  "lesson": "Sounds and Spelling – Unit 1, Lesson 2: oa",
+  "outcomes": [
+    "I can say the sound /əʊ/ for oa.",
+    "I can read and write boat, coat, goat, road and soap.",
+    "I can use his and her correctly."
+  ],
+  "tf": [
+    {
+      "s": "The letters oa in boat say /əʊ/.",
+      "t": true,
+      "why": "Yes! oa says /əʊ/ like in boat."
+    },
+    {
+      "s": "The word goat has oa in it.",
+      "t": true,
+      "why": "Great! g - oa - t."
+    },
+    {
+      "s": "The word cake has oa in it.",
+      "t": false,
+      "why": "cake has no oa. It is the odd one out."
+    },
+    {
+      "s": "We say her for a girl.",
+      "t": true,
+      "why": "Yes! It is her bag."
+    },
+    {
+      "s": "We say her for a boy.",
+      "t": false,
+      "why": "We say his for a boy."
+    },
+    {
+      "s": "s - oa - p makes soap.",
+      "t": true,
+      "why": "Well done! s - oa - p is soap."
+    },
+    {
+      "s": "The word rain has oa in it.",
+      "t": false,
+      "why": "rain has ai, not oa."
+    },
+    {
+      "s": "c - oa - t makes coat.",
+      "t": true,
+      "why": "Yes! c - oa - t is coat."
+    },
+    {
+      "s": "oa and ai make the same sound.",
+      "t": false,
+      "why": "oa says /əʊ/. ai says /eɪ/."
+    },
+    {
+      "s": "The word coat starts with g.",
+      "t": false,
+      "why": "coat starts with c. goat starts with g."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Blend: g - oa - t",
+      "o": [
+        "goat",
+        "coat",
+        "boat"
+      ],
+      "why": "g - oa - t makes goat."
+    },
+    {
+      "q": "Blend: b - oa - t",
+      "o": [
+        "boat",
+        "road",
+        "soap"
+      ],
+      "why": "b - oa - t makes boat."
+    },
+    {
+      "q": "Which word has oa?",
+      "o": [
+        "road",
+        "rain",
+        "red"
+      ],
+      "why": "r - oa - d has oa."
+    },
+    {
+      "q": "Odd one out: boat, coat, cake",
+      "o": [
+        "cake",
+        "boat",
+        "coat"
+      ],
+      "why": "cake has no oa."
+    },
+    {
+      "q": "It is ... bag. (a girl)",
+      "o": [
+        "her",
+        "his",
+        "an"
+      ],
+      "why": "We use her for a girl."
+    },
+    {
+      "q": "It is ... boat. (a boy)",
+      "o": [
+        "his",
+        "her",
+        "who"
+      ],
+      "why": "We use his for a boy."
+    },
+    {
+      "q": "We wash our hands with...",
+      "o": [
+        "soap",
+        "goat",
+        "road"
+      ],
+      "why": "We wash with soap."
+    },
+    {
+      "q": "We wear it when it is cold.",
+      "o": [
+        "coat",
+        "boat",
+        "soap"
+      ],
+      "why": "A coat keeps us warm."
+    },
+    {
+      "q": "What sound does oa make?",
+      "o": [
+        "/əʊ/",
+        "/eɪ/",
+        "/aɪ/"
+      ],
+      "why": "oa says /əʊ/."
+    },
+    {
+      "q": "A boat goes on the...",
+      "o": [
+        "water",
+        "road",
+        "coat"
+      ],
+      "why": "A boat goes on water."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Blend: c - oa - t",
+      "a": "coat",
+      "d": [
+        "goat",
+        "boat",
+        "road"
+      ]
+    },
+    {
+      "q": "Blend: s - oa - p",
+      "a": "soap",
+      "d": [
+        "coat",
+        "goat",
+        "boat"
+      ]
+    },
+    {
+      "q": "Blend: r - oa - d",
+      "a": "road",
+      "d": [
+        "boat",
+        "soap",
+        "coat"
+      ]
+    },
+    {
+      "q": "An animal with oa",
+      "a": "goat",
+      "d": [
+        "boat",
+        "road",
+        "soap"
+      ]
+    },
+    {
+      "q": "Cars go on the ...",
+      "a": "road",
+      "d": [
+        "soap",
+        "goat",
+        "coat"
+      ]
+    },
+    {
+      "q": "Find the oa word.",
+      "a": "boat",
+      "d": [
+        "cake",
+        "rain",
+        "tail"
+      ]
+    },
+    {
+      "q": "Which one has oa?",
+      "a": "soap",
+      "d": [
+        "train",
+        "pen",
+        "cat"
+      ]
+    },
+    {
+      "q": "A girl: It is ... coat.",
+      "a": "her",
+      "d": [
+        "his",
+        "an",
+        "a"
+      ]
+    },
+    {
+      "q": "A boy: It is ... goat.",
+      "a": "his",
+      "d": [
+        "her",
+        "an",
+        "a"
+      ]
+    },
+    {
+      "q": "The sound of oa",
+      "a": "/əʊ/",
+      "d": [
+        "/eɪ/",
+        "/aɪ/",
+        "/æ/"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which word has the oa sound?",
+      "o": [
+        "coat",
+        "cat",
+        "cake",
+        "car"
+      ],
+      "why": "c - oa - t has oa."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which tricky word do we use for a girl?",
+      "o": [
+        "her",
+        "his",
+        "who",
+        "have"
+      ],
+      "why": "her is for a girl."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word is NOT an oa word?",
+      "o": [
+        "tail",
+        "boat",
+        "goat",
+        "soap"
+      ],
+      "why": "tail has ai, not oa."
+    },
+    {
+      "lv": "التذكر",
+      "q": "How do we split goat?",
+      "o": [
+        "g - oa - t",
+        "go - at",
+        "g - o - a - t - e",
+        "goa - t"
+      ],
+      "why": "goat is g - oa - t."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Look at a picture of a coat. Write the word.",
+      "o": [
+        "coat",
+        "cot",
+        "caot",
+        "coot"
+      ],
+      "why": "c - oa - t spells coat."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Sara has a boat. Which is right?",
+      "o": [
+        "It is her boat.",
+        "It is his boat.",
+        "It is an boat.",
+        "It is her boats."
+      ],
+      "why": "Sara is a girl, so we say her."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Omar has a coat. Which is right?",
+      "o": [
+        "It is his coat.",
+        "It is her coat.",
+        "It is his coats.",
+        "It is a his coat."
+      ],
+      "why": "Omar is a boy, so we say his."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which group has only oa words?",
+      "o": [
+        "boat, road, soap",
+        "boat, rain, soap",
+        "coat, cake, goat",
+        "road, tail, coat"
+      ],
+      "why": "boat, road and soap all have oa."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Change the first sound of boat to g. What word?",
+      "o": [
+        "goat",
+        "coat",
+        "road",
+        "soap"
+      ],
+      "why": "g - oa - t makes goat."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word has the same middle sound as boat?",
+      "o": [
+        "road",
+        "rain",
+        "tail",
+        "cake"
+      ],
+      "why": "boat and road both have oa /əʊ/."
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 1: It's a happy day!",
+ "lesson": "Unit 1 – Lesson 9: Get ready for … Pre A1 Starters",
+ "outcomes": [
+  "I can listen and choose the picture with the correct time.",
+  "I can look at the clocks before I listen.",
+  "I can play a board game and say what time I do things."
+ ],
+ "tf": [
+  {
+   "s": "Before listening, we look at the clocks in the pictures.",
+   "t": true,
+   "why": "Yes! Looking first helps us listen."
+  },
+  {
+   "s": "In the listening test, we listen only one time.",
+   "t": false,
+   "why": "We listen twice."
+  },
+  {
+   "s": "A wrong picture shows a time that is different from the recording.",
+   "t": true,
+   "why": "Well done! We check the time we hear."
+  },
+  {
+   "s": "Miss a turn means you play two times.",
+   "t": false,
+   "why": "Miss a turn means you do not play in the next turn."
+  },
+  {
+   "s": "Go forward two spaces means move your counter two squares ahead.",
+   "t": true,
+   "why": "Forward means ahead."
+  },
+  {
+   "s": "Go back to 5 means move to square 5.",
+   "t": true,
+   "why": "Great! You go back to square 5."
+  },
+  {
+   "s": "Minute hand on 6 and hour hand between 9 and 10 is half past ten.",
+   "t": false,
+   "why": "It's half past nine."
+  },
+  {
+   "s": "We answer What time do you get up? with I get up at quarter to six.",
+   "t": true,
+   "why": "We use at with a time."
+  },
+  {
+   "s": "Whale and phone both start with wh.",
+   "t": false,
+   "why": "Whale starts with wh, phone starts with ph."
+  },
+  {
+   "s": "We say I have dinner at seven o'clock.",
+   "t": true,
+   "why": "At + time: at seven o'clock."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do you look at before listening?",
+   "o": [
+    "the clocks",
+    "the title",
+    "the page number"
+   ],
+   "why": "Look at the clocks first."
+  },
+  {
+   "q": "How many times do you listen?",
+   "o": [
+    "twice",
+    "once",
+    "four times"
+   ],
+   "why": "We listen two times."
+  },
+  {
+   "q": "Complete: Go ___ two spaces.",
+   "o": [
+    "forward",
+    "up",
+    "on"
+   ],
+   "why": "We say Go forward."
+  },
+  {
+   "q": "What does Miss a turn mean?",
+   "o": [
+    "You don't play next turn.",
+    "You play again.",
+    "You win the game."
+   ],
+   "why": "You wait one turn."
+  },
+  {
+   "q": "Minute hand on 6, hour hand between 9 and 10.",
+   "o": [
+    "half past nine",
+    "half past ten",
+    "nine o'clock"
+   ],
+   "why": "It's half past nine."
+  },
+  {
+   "q": "Complete: I get up ___ six o'clock.",
+   "o": [
+    "at",
+    "in",
+    "on"
+   ],
+   "why": "We use at with clock times."
+  },
+  {
+   "q": "Square 8: wh or ph? ___one",
+   "o": [
+    "ph",
+    "wh",
+    "f"
+   ],
+   "why": "Phone starts with ph."
+  },
+  {
+   "q": "Which question asks about time?",
+   "o": [
+    "What time do you have breakfast?",
+    "What's your name?",
+    "Where's Polly?"
+   ],
+   "why": "What time asks for the time."
+  },
+  {
+   "q": "What do you tick in the listening test?",
+   "o": [
+    "the picture with the right time",
+    "all the pictures",
+    "the first picture"
+   ],
+   "why": "Tick the picture that matches what you hear."
+  },
+  {
+   "q": "Minute hand on 12, hour hand on 7.",
+   "o": [
+    "seven o'clock",
+    "twelve o'clock",
+    "half past seven"
+   ],
+   "why": "Minute hand on 12 is o'clock."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Minute hand on 3",
+   "a": "quarter past",
+   "d": [
+    "quarter to",
+    "half past",
+    "o'clock"
+   ]
+  },
+  {
+   "q": "Minute hand on 9",
+   "a": "quarter to",
+   "d": [
+    "quarter past",
+    "half past",
+    "o'clock"
+   ]
+  },
+  {
+   "q": "Minute hand on 12",
+   "a": "o'clock",
+   "d": [
+    "half past",
+    "quarter to",
+    "quarter past"
+   ]
+  },
+  {
+   "q": "Hour hand 9–10, minute on 6",
+   "a": "half past nine",
+   "d": [
+    "half past ten",
+    "nine o'clock",
+    "quarter to nine"
+   ]
+  },
+  {
+   "q": "Go ___ two spaces",
+   "a": "forward",
+   "d": [
+    "up",
+    "on",
+    "off"
+   ]
+  },
+  {
+   "q": "Go ___ to 5",
+   "a": "back",
+   "d": [
+    "up",
+    "on",
+    "off"
+   ]
+  },
+  {
+   "q": "Don't play next turn",
+   "a": "Miss a turn",
+   "d": [
+    "Go back",
+    "Go forward",
+    "Hurry up"
+   ]
+  },
+  {
+   "q": "Listen ___",
+   "a": "twice",
+   "d": [
+    "once",
+    "never",
+    "five times"
+   ]
+  },
+  {
+   "q": "I get up ___ six o'clock",
+   "a": "at",
+   "d": [
+    "in",
+    "on",
+    "to"
+   ]
+  },
+  {
+   "q": "Word that starts with wh",
+   "a": "whale",
+   "d": [
+    "phone",
+    "dolphin",
+    "elephant"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is a good tip before you listen?",
+   "o": [
+    "Look at the clocks in the pictures.",
+    "Close your eyes.",
+    "Write a story.",
+    "Talk to your friend."
+   ],
+   "why": "The clocks show you what to listen for."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is game language from the board game?",
+   "o": [
+    "Miss a turn.",
+    "Turn on the AC.",
+    "Hand out the books.",
+    "Tidy up."
+   ],
+   "why": "Miss a turn is a board game rule."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which answer is correct for What time do you have dinner?",
+   "o": [
+    "I have dinner at seven o'clock.",
+    "I have dinner in seven o'clock.",
+    "I dinner at seven.",
+    "I have dinner on seven o'clock."
+   ],
+   "why": "We use at with a time."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase do we use when the minute hand is on 3?",
+   "o": [
+    "quarter past",
+    "quarter to",
+    "half past",
+    "o'clock"
+   ],
+   "why": "On 3 is quarter past."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are on square 3. The square says Go forward two spaces. Where do you go?",
+   "o": [
+    "square 5",
+    "square 1",
+    "square 2",
+    "square 6"
+   ],
+   "why": "3 + 2 = 5."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are on square 9. The square says Go back to 5. Where do you go?",
+   "o": [
+    "square 5",
+    "square 4",
+    "square 14",
+    "square 9"
+   ],
+   "why": "Go back to 5 means go to square 5."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Minute hand on 9, hour hand just before 8. Which picture do you tick?",
+   "o": [
+    "quarter to eight",
+    "quarter past eight",
+    "quarter to seven",
+    "half past eight"
+   ],
+   "why": "On 9 is quarter to, and the next hour is eight."
+  },
+  {
+   "lv": "التحليل",
+   "q": "You hear half past nine. Picture B shows nine o'clock. Why is B wrong?",
+   "o": [
+    "The time on the clock is different.",
+    "The clock is too big.",
+    "B is not the first picture.",
+    "Nine o'clock is at night."
+   ],
+   "why": "The clock must show the time you hear."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we listen twice?",
+   "o": [
+    "To check our answer.",
+    "Because the first time is a song.",
+    "To learn a new story.",
+    "Because the teacher is late."
+   ],
+   "why": "The second time helps us check."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Square 8 asks wh or ph. Which pair is correct?",
+   "o": [
+    "whale - wh, phone - ph",
+    "whale - ph, phone - wh",
+    "wheel - ph, dolphin - wh",
+    "white - ph, elephant - wh"
+   ],
+   "why": "Whale has wh and phone has ph."
+  }
+ ]
+}

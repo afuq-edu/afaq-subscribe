@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 2: Let's dress up!",
+ "lesson": "Unit 2 – Lesson 10: Fun corner",
+ "outcomes": [
+  "I can play a dice game and say You're wearing …",
+  "I can take turns using game language.",
+  "I can find differences and write sentences about them."
+ ],
+ "tf": [
+  {
+   "s": "We say My turn! before we roll the dice.",
+   "t": true,
+   "why": "Yes! My turn! means it is my go."
+  },
+  {
+   "s": "In the game we say: You're wearing a green T-shirt.",
+   "t": true,
+   "why": "Right! You're wearing … describes clothes."
+  },
+  {
+   "s": "We say Well done! when a friend does well.",
+   "t": true,
+   "why": "Great! Well done! is kind game language."
+  },
+  {
+   "s": "We say: You wearing a hijab.",
+   "t": false,
+   "why": "We need You're: You're wearing a hijab."
+  },
+  {
+   "s": "Keys and phones are possessions.",
+   "t": true,
+   "why": "Yes! They are things we have."
+  },
+  {
+   "s": "A difference is something that is the same in two pictures.",
+   "t": false,
+   "why": "A difference is something that is not the same."
+  },
+  {
+   "s": "In picture A, they're wearing red jackets. In picture B, they're wearing green jackets. This is a difference.",
+   "t": true,
+   "why": "Yes, the colours are different."
+  },
+  {
+   "s": "When it is your partner's go, we say My turn!",
+   "t": false,
+   "why": "We say Your turn! for a partner's go."
+  },
+  {
+   "s": "A tracksuit is clothes for sport.",
+   "t": true,
+   "why": "Right! We wear tracksuits for sport."
+  },
+  {
+   "s": "Slippers are a possession, like a phone.",
+   "t": false,
+   "why": "Slippers are clothes we wear on our feet."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do you say before you roll?",
+   "o": [
+    "My turn!",
+    "Thank you.",
+    "Excuse me."
+   ],
+   "why": "My turn! starts your go."
+  },
+  {
+   "q": "Complete: You're ___ a hijab.",
+   "o": [
+    "wearing",
+    "wear",
+    "wears"
+   ],
+   "why": "You're wearing …"
+  },
+  {
+   "q": "Your partner rolls a six. You say …",
+   "o": [
+    "Six!",
+    "Ten!",
+    "Your keys!"
+   ],
+   "why": "We say the number we see."
+  },
+  {
+   "q": "Your friend does well. You say …",
+   "o": [
+    "Well done!",
+    "My turn!",
+    "How much?"
+   ],
+   "why": "Well done! is a kind word."
+  },
+  {
+   "q": "Complete: In picture B, they're ___ green jackets.",
+   "o": [
+    "wearing",
+    "wear",
+    "wears"
+   ],
+   "why": "They're wearing …"
+  },
+  {
+   "q": "Which word is a possession?",
+   "o": [
+    "handbag",
+    "jumper",
+    "shirt"
+   ],
+   "why": "A handbag is a thing we have."
+  },
+  {
+   "q": "Which word is clothes?",
+   "o": [
+    "coat",
+    "phone",
+    "computer"
+   ],
+   "why": "A coat is clothes."
+  },
+  {
+   "q": "A difference is something that is …",
+   "o": [
+    "not the same",
+    "the same",
+    "very big"
+   ],
+   "why": "Differences are not the same in the two pictures."
+  },
+  {
+   "q": "It is your partner's go. You say …",
+   "o": [
+    "Your turn!",
+    "My turn!",
+    "Six!"
+   ],
+   "why": "Your turn! gives the go to your partner."
+  },
+  {
+   "q": "Picture A: red jackets. Picture B: green jackets. The difference is the …",
+   "o": [
+    "colour",
+    "number",
+    "name"
+   ],
+   "why": "Only the colour changes."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Before you roll, say …",
+   "a": "My turn!",
+   "d": [
+    "Your turn!",
+    "Well done!",
+    "Thank you!"
+   ]
+  },
+  {
+   "q": "For your partner's go",
+   "a": "Your turn!",
+   "d": [
+    "My turn!",
+    "Six!",
+    "Excuse me!"
+   ]
+  },
+  {
+   "q": "Kind words for a friend",
+   "a": "Well done!",
+   "d": [
+    "My turn!",
+    "Six!",
+    "Here you are!"
+   ]
+  },
+  {
+   "q": "You're ___ a hijab.",
+   "a": "wearing",
+   "d": [
+    "wear",
+    "wears",
+    "worn"
+   ]
+  },
+  {
+   "q": "A possession word",
+   "a": "keys",
+   "d": [
+    "jeans",
+    "coat",
+    "jumper"
+   ]
+  },
+  {
+   "q": "A clothes word",
+   "a": "jumper",
+   "d": [
+    "phone",
+    "computer",
+    "keys"
+   ]
+  },
+  {
+   "q": "You wear them in bed",
+   "a": "pyjamas",
+   "d": [
+    "keys",
+    "phone",
+    "handbag"
+   ]
+  },
+  {
+   "q": "Clothes for sport",
+   "a": "tracksuit",
+   "d": [
+    "handbag",
+    "glasses",
+    "computer"
+   ]
+  },
+  {
+   "q": "Not the same in two pictures",
+   "a": "difference",
+   "d": [
+    "dice",
+    "word search",
+    "turn"
+   ]
+  },
+  {
+   "q": "Words hidden in a grid",
+   "a": "word search",
+   "d": [
+    "dice game",
+    "poster",
+    "dialogue"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do you say when you roll and get three?",
+   "o": [
+    "Three!",
+    "My turn!",
+    "Well done!",
+    "Here you are."
+   ],
+   "why": "We say the number we roll."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is game language?",
+   "o": [
+    "Your turn!",
+    "How much is this?",
+    "Can I help you?",
+    "Excuse me."
+   ],
+   "why": "Your turn! is used in games."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is in the word search list?",
+   "o": [
+    "slippers",
+    "vulture",
+    "beard",
+    "picture"
+   ],
+   "why": "Slippers is one of the unit words."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a possession word from the unit?",
+   "o": [
+    "keys",
+    "jeans",
+    "coat",
+    "jumper"
+   ],
+   "why": "Keys are a thing we have, not clothes."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner is wearing a red coat. What do you say?",
+   "o": [
+    "You're wearing a red coat.",
+    "Your wearing a red coat.",
+    "You're wear a red coat.",
+    "They're wearing a red coat."
+   ],
+   "why": "You're wearing … is correct."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture A: purple bags. Picture B: orange bags. Write the difference.",
+   "o": [
+    "In picture A, the bags are purple. In picture B, the bags are orange.",
+    "The bags are the same.",
+    "In picture A, the bags are orange.",
+    "There are no bags."
+   ],
+   "why": "Say what is in A and what is in B."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your teacher puts on glasses. What is different?",
+   "o": [
+    "Now the teacher is wearing glasses.",
+    "The teacher is wearing pyjamas.",
+    "The teacher has keys.",
+    "Nothing"
+   ],
+   "why": "The new thing is the glasses."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Odd one out: phone, computer, handbag, jumper",
+   "o": [
+    "jumper",
+    "phone",
+    "computer",
+    "handbag"
+   ],
+   "why": "A jumper is clothes; the others are possessions."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say Your turn! in the game?",
+   "o": [
+    "To give the go to a partner",
+    "To ask a price",
+    "To say goodbye",
+    "To start a story"
+   ],
+   "why": "Taking turns makes the game fair."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Picture A: white trainers. Picture B: black shoes. How many things are different?",
+   "o": [
+    "Two: the colour and the kind of shoes",
+    "None",
+    "One: only the name",
+    "Three: the price, size and name"
+   ],
+   "why": "White becomes black, and trainers become shoes."
+  }
+ ]
+}

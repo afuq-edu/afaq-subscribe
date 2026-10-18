@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: Eating Out (Writing)",
+ "lesson": "Lead-in: eating out; Listening 3.5.1 on favourite restaurants / Ordering paragraphs of a narrative essay and the stages of essay writing",
+ "outcomes": [
+  "Talk and listen about eating out and restaurants",
+  "Put the paragraphs of a narrative essay in order",
+  "Know the eight stages of writing an essay"
+ ],
+ "tf": [
+  {
+   "s": "'Revise' means to change and improve your writing.",
+   "t": true,
+   "why": "Yes, revising makes a draft better."
+  },
+  {
+   "s": "Voice C dislikes buffet restaurants.",
+   "t": false,
+   "why": "Voice C likes buffets: they are good value and kids can eat a lot."
+  },
+  {
+   "s": "Voice E thinks restaurants waste time and money.",
+   "t": true,
+   "why": "Right, that is why he prefers fast food."
+  },
+  {
+   "s": "A takeaway is food you buy to eat somewhere else.",
+   "t": true,
+   "why": "Yes, you take it away with you."
+  },
+  {
+   "s": "In a narrative essay, events should be in a logical order.",
+   "t": true,
+   "why": "Correct, a clear order makes it easy to read."
+  },
+  {
+   "s": "'Proofread' means reading through to correct mistakes.",
+   "t": true,
+   "why": "Yes, it is one of the last stages."
+  },
+  {
+   "s": "You can hand in your first draft without any changes.",
+   "t": false,
+   "why": "A first draft always needs changes."
+  },
+  {
+   "s": "The first stage of essay writing is proofreading.",
+   "t": false,
+   "why": "First you make sure you understand the title."
+  },
+  {
+   "s": "Linking words can help you put paragraphs in order.",
+   "t": true,
+   "why": "Yes, words like 'He' refer back to earlier ideas."
+  },
+  {
+   "s": "'Draft' means the final, perfect form of a piece of writing.",
+   "t": false,
+   "why": "A draft is not yet in its final form."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is Voice A looking for in a restaurant?",
+   "o": [
+    "Special food and efficient waiters",
+    "Fast food",
+    "A buffet"
+   ],
+   "why": "Voice A wants special food and good service."
+  },
+  {
+   "q": "Where did Voice D eat in Istanbul?",
+   "o": [
+    "In an ancient Roman cistern",
+    "On a cruise ship",
+    "At a buffet"
+   ],
+   "why": "It was an ancient cistern built by the Romans."
+  },
+  {
+   "q": "What does 'value for money' mean?",
+   "o": [
+    "good quality for the price",
+    "very expensive",
+    "free food"
+   ],
+   "why": "You get a lot for what you pay."
+  },
+  {
+   "q": "What is the correct order of the paragraphs?",
+   "o": [
+    "E, C, B, D, A, F",
+    "A, B, C, D, E, F",
+    "F, A, D, B, C, E"
+   ],
+   "why": "Paragraph E gives the background, so it comes first."
+  },
+  {
+   "q": "Which paragraph gives the general background?",
+   "o": [
+    "Paragraph E",
+    "Paragraph A",
+    "Paragraph F"
+   ],
+   "why": "Background comes at the start."
+  },
+  {
+   "q": "What is the last stage of essay writing?",
+   "o": [
+    "Hand in",
+    "Plan",
+    "Gather ideas"
+   ],
+   "why": "You hand in after proofreading."
+  },
+  {
+   "q": "What makes an essay easy to read?",
+   "o": [
+    "Events in a clear, logical order",
+    "Very long sentences",
+    "No paragraphs"
+   ],
+   "why": "Clear organisation helps the reader."
+  },
+  {
+   "q": "Which stage comes right after the first draft?",
+   "o": [
+    "Revise",
+    "Hand in",
+    "Gather ideas"
+   ],
+   "why": "After drafting, you revise."
+  },
+  {
+   "q": "What do groups discuss in Activity 1?",
+   "o": [
+    "Eating out and eating habits",
+    "The history of flying",
+    "Football"
+   ],
+   "why": "They discuss restaurants and ready-made meals."
+  },
+  {
+   "q": "What is Voice B looking for?",
+   "o": [
+    "A small, quiet place",
+    "Fast service",
+    "A cheap buffet"
+   ],
+   "why": "For Voice B, atmosphere matters most."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The feeling or mood of a place",
+   "a": "Atmosphere",
+   "d": [
+    "Buffet",
+    "Takeaway",
+    "Draft"
+   ]
+  },
+  {
+   "q": "Eat as much as you like",
+   "a": "Buffet",
+   "d": [
+    "Takeaway",
+    "Fast food",
+    "Café"
+   ]
+  },
+  {
+   "q": "Food you buy to eat elsewhere",
+   "a": "Takeaway",
+   "d": [
+    "Buffet",
+    "Atmosphere",
+    "Menu"
+   ]
+  },
+  {
+   "q": "Read again to correct mistakes",
+   "a": "Proofread",
+   "d": [
+    "Gather ideas",
+    "Plan",
+    "Hand in"
+   ]
+  },
+  {
+   "q": "Writing not yet in final form",
+   "a": "Draft",
+   "d": [
+    "Title",
+    "Menu",
+    "Report"
+   ]
+  },
+  {
+   "q": "First paragraph in the order",
+   "a": "E",
+   "d": [
+    "A",
+    "B",
+    "F"
+   ]
+  },
+  {
+   "q": "Last paragraph in the order",
+   "a": "F",
+   "d": [
+    "A",
+    "E",
+    "C"
+   ]
+  },
+  {
+   "q": "The first stage of writing",
+   "a": "Understand the title",
+   "d": [
+    "Proofread",
+    "Hand in",
+    "Revise"
+   ]
+  },
+  {
+   "q": "City where Voice D ate",
+   "a": "Istanbul",
+   "d": [
+    "Muscat",
+    "Dubai",
+    "Cairo"
+   ]
+  },
+  {
+   "q": "Food Voice E prefers",
+   "a": "Fast food",
+   "d": [
+    "Home cooking",
+    "Buffet food",
+    "Seafood"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why does Voice C like buffet restaurants?",
+   "o": [
+    "They are good value and kids can eat as much as they want",
+    "They are small and quiet",
+    "They are very fast",
+    "They are in ancient buildings"
+   ],
+   "why": "Buffets suit families."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list shows the stages of essay writing in the correct order?",
+   "o": [
+    "Understand the title, gather ideas, plan, first draft, revise, final draft, proofread, hand in",
+    "Plan, hand in, first draft, understand the title, revise, proofread, gather ideas, final draft",
+    "First draft, hand in, plan, revise, gather ideas, final draft, proofread, understand the title",
+    "Proofread, plan, understand the title, hand in, gather ideas, revise, first draft, final draft"
+   ],
+   "why": "Start with the title and finish by handing in."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should a good introduction to a narrative essay do?",
+   "o": [
+    "Give background and catch the reader's attention",
+    "Tell the ending first",
+    "List all the mistakes",
+    "Be the longest paragraph"
+   ],
+   "why": "A good start makes people want to read."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'proofread' mean?",
+   "o": [
+    "Read through to correct mistakes",
+    "Write the first draft",
+    "Choose a title",
+    "Gather ideas"
+   ],
+   "why": "Proofreading catches small errors."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "In the essay, 'He' refers back to 'the chef'. How does this help you?",
+   "o": [
+    "The paragraph with 'He' comes after the one that mentions the chef",
+    "'He' is always the title",
+    "The paragraph with 'He' must be first",
+    "It shows the essay has no order"
+   ],
+   "why": "Pronouns point back to earlier words."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You have just finished your first draft. What should you do next?",
+   "o": [
+    "Revise it",
+    "Hand it in",
+    "Choose a new title",
+    "Throw it away"
+   ],
+   "why": "Revising comes after the first draft."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A family with many children wants good value. Which restaurant suits them best?",
+   "o": [
+    "A buffet restaurant",
+    "A small, quiet romantic restaurant",
+    "An expensive restaurant with special food",
+    "No restaurant at all"
+   ],
+   "why": "Like Voice C, they can eat as much as they want."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should students never hand in a first draft?",
+   "o": [
+    "It always needs changes; nobody writes a perfect essay first time",
+    "Teachers only read final drafts",
+    "First drafts are too short",
+    "It is against the law"
+   ],
+   "why": "Every writer improves a first draft."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is proofreading near the end of the writing stages?",
+   "o": [
+    "You check small mistakes after the content is finished",
+    "You must proofread before you have ideas",
+    "It is the same as planning",
+    "It is not needed"
+   ],
+   "why": "Fix ideas first, then small errors."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does paragraph E come first in the essay?",
+   "o": [
+    "It gives the general background",
+    "It tells the ending",
+    "It has the most linking words",
+    "It is the shortest"
+   ],
+   "why": "Background sets the scene for the story."
+  }
+ ]
+}

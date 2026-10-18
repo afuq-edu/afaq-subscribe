@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 1 - Unit 5: E-Mail",
+ "outcomes": [
+  "Know the rules for writing good e-mails",
+  "Find the rules that are broken in e-mails",
+  "Plan an informal e-mail with the correct layout"
+ ],
+ "tf": [
+  {
+   "s": "You should include a subject line in an e-mail.",
+   "t": true,
+   "why": "Yes! A subject line tells the reader what the e-mail is about."
+  },
+  {
+   "s": "You should always use smileys in every e-mail.",
+   "t": false,
+   "why": "Use smileys only in the most informal e-mails."
+  },
+  {
+   "s": "Writing in CAPITALS can make the reader think you are shouting.",
+   "t": true,
+   "why": "Right! Avoid writing whole words in capitals."
+  },
+  {
+   "s": "E-mails are private, so it is safe to send a password.",
+   "t": false,
+   "why": "E-mails are not private; don't send confidential information."
+  },
+  {
+   "s": "A good e-mail uses short sentences in one or two paragraphs.",
+   "t": true,
+   "why": "Correct! Keep e-mails short and clear."
+  },
+  {
+   "s": "If a message is really urgent, it is better to use the telephone.",
+   "t": true,
+   "why": "Good! A phone call is faster for urgent messages."
+  },
+  {
+   "s": "'Take care, speak soon' is used at the beginning of an e-mail.",
+   "t": false,
+   "why": "It is a closing phrase, so it goes at the end."
+  },
+  {
+   "s": "'Hi there!' is an informal greeting.",
+   "t": true,
+   "why": "Yes, it is friendly and informal."
+  },
+  {
+   "s": "In an e-mail, the closing comes before the greeting.",
+   "t": false,
+   "why": "The greeting comes first, after the subject line."
+  },
+  {
+   "s": "It is fine to write unkind things about other people in an e-mail.",
+   "t": false,
+   "why": "Think carefully about what you write; be polite."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which part comes first after the subject line?",
+   "o": [
+    "the greeting",
+    "the closing",
+    "the sign-off"
+   ],
+   "why": "We greet the reader first."
+  },
+  {
+   "q": "Which is an informal greeting?",
+   "o": [
+    "Hi there!",
+    "Dear Sir",
+    "To whom it may concern"
+   ],
+   "why": "'Hi there!' is friendly and informal."
+  },
+  {
+   "q": "Why should you not write in CAPITALS?",
+   "o": [
+    "the reader will think you are shouting",
+    "it is too slow",
+    "it uses too much paper"
+   ],
+   "why": "Capitals look like shouting."
+  },
+  {
+   "q": "Which rule is broken when Khadija writes her password?",
+   "o": [
+    "don't send confidential information",
+    "use a subject line",
+    "keep it short"
+   ],
+   "why": "E-mails are not private."
+  },
+  {
+   "q": "Where does 'Take care, speak soon' go?",
+   "o": [
+    "at the end",
+    "at the beginning",
+    "in the subject line"
+   ],
+   "why": "It is a closing phrase."
+  },
+  {
+   "q": "Correct: 'hi everyone, i have now got my internet connection.'",
+   "o": [
+    "Hi everyone, I have now got my Internet connection.",
+    "hi Everyone, i have now got my internet Connection.",
+    "HI EVERYONE, I HAVE NOW GOT MY INTERNET CONNECTION."
+   ],
+   "why": "Use capitals for the first word, 'I' and names."
+  },
+  {
+   "q": "When should you use smileys?",
+   "o": [
+    "only in very informal e-mails",
+    "in every e-mail",
+    "only in e-mails to your boss"
+   ],
+   "why": "Smileys are not suitable for formal e-mails."
+  },
+  {
+   "q": "What is the main part of an e-mail with the news called?",
+   "o": [
+    "the body",
+    "the subject",
+    "the sign-off"
+   ],
+   "why": "The body holds the main message."
+  },
+  {
+   "q": "What does 'confidential' mean?",
+   "o": [
+    "private and secret",
+    "very long",
+    "friendly"
+   ],
+   "why": "Confidential information should not be sent by e-mail."
+  },
+  {
+   "q": "Which phrase is a good opening for an e-mail to a friend?",
+   "o": [
+    "How are you?",
+    "Yours faithfully",
+    "Goodbye"
+   ],
+   "why": "'How are you?' is a friendly opening."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "E-mail part that says the topic",
+   "a": "subject line",
+   "d": [
+    "sign-off",
+    "body",
+    "closing"
+   ]
+  },
+  {
+   "q": "Writing in capitals looks like…",
+   "a": "shouting",
+   "d": [
+    "whispering",
+    "singing",
+    "smiling"
+   ]
+  },
+  {
+   "q": "Informal greeting",
+   "a": "Hi there!",
+   "d": [
+    "Dear Sir",
+    "Yours sincerely",
+    "To whom"
+   ]
+  },
+  {
+   "q": "Closing phrase",
+   "a": "Take care",
+   "d": [
+    "How are you?",
+    "Dear Ali",
+    "Hi there!"
+   ]
+  },
+  {
+   "q": "Use smileys only in ___ e-mails",
+   "a": "informal",
+   "d": [
+    "formal",
+    "business",
+    "urgent"
+   ]
+  },
+  {
+   "q": "Use this for a really urgent message",
+   "a": "telephone",
+   "d": [
+    "e-mail",
+    "letter",
+    "postcard"
+   ]
+  },
+  {
+   "q": "Word meaning 'private and secret'",
+   "a": "confidential",
+   "d": [
+    "priority",
+    "informal",
+    "polite"
+   ]
+  },
+  {
+   "q": "Comes first after the subject",
+   "a": "greeting",
+   "d": [
+    "closing",
+    "sign-off",
+    "signature"
+   ]
+  },
+  {
+   "q": "Main part of an e-mail",
+   "a": "body",
+   "d": [
+    "subject",
+    "greeting",
+    "sign-off"
+   ]
+  },
+  {
+   "q": "Never send this by e-mail",
+   "a": "password",
+   "d": [
+    "greeting",
+    "news",
+    "question"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which rule says to keep e-mails short?",
+   "o": [
+    "Use short sentences in one or two paragraphs",
+    "Always write in capitals",
+    "Use many smileys",
+    "Never use a subject line"
+   ],
+   "why": "Short e-mails are easier to read."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is missing from many of the e-mails with mistakes?",
+   "o": [
+    "a subject line and correct punctuation",
+    "a photo",
+    "a password",
+    "a long story"
+   ],
+   "why": "Good e-mails have a subject line and correct punctuation."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which are parts of an e-mail?",
+   "o": [
+    "subject line, greeting, body and closing",
+    "title, chapter and index",
+    "question, answer and score",
+    "map, key and scale"
+   ],
+   "why": "These parts make a clear e-mail layout."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why should you not send confidential information by e-mail?",
+   "o": [
+    "E-mails are not private",
+    "E-mails are too short",
+    "E-mails are too slow",
+    "E-mails have no subject line"
+   ],
+   "why": "Other people may read e-mails."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "E-mail c says: 'PLEASE send me the MONEY'. What is the problem?",
+   "o": [
+    "It is written in capitals, so it sounds like shouting",
+    "It has a subject line",
+    "It is too polite",
+    "It uses a smiley"
+   ],
+   "why": "Rule 6: don't write in capitals."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best polite rewrite of 'PLEASE send me the MONEY'.",
+   "o": [
+    "Could you please send the payment?",
+    "SEND THE MONEY NOW!",
+    "money please!!!",
+    "You must send money."
+   ],
+   "why": "Polite language and normal letters are better."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are planning an informal e-mail to a friend. Which plan is best?",
+   "o": [
+    "greeting, news, a question, closing",
+    "closing, news, greeting",
+    "subject only",
+    "news only, no greeting"
+   ],
+   "why": "An e-mail has a clear beginning, middle and end."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is e-mail d a problem?",
+   "o": [
+    "It says unkind things about another teacher and shares them",
+    "It is too short",
+    "It has a good subject line",
+    "It uses formal language"
+   ],
+   "why": "Think carefully about what you write before you send it."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your friend wants to send her bank password to her cousin by e-mail. What should you tell her?",
+   "o": [
+    "Don't send it – e-mails are not private",
+    "Send it in capitals",
+    "Add a smiley to it",
+    "Put it in the subject line"
+   ],
+   "why": "Confidential information is not safe in e-mails."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is a subject line useful?",
+   "o": [
+    "It tells the reader what the e-mail is about",
+    "It makes the e-mail longer",
+    "It hides the message",
+    "It replaces the greeting"
+   ],
+   "why": "The reader can see the topic before opening it."
+  }
+ ]
+}

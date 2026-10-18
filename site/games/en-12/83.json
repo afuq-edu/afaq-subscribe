@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Studying Abroad (Vocabulary)",
+ "lesson": "Guessing vocabulary from context (Activity 3) / Listening for specific information; grouping words (Top Tip)",
+ "outcomes": [
+  "Use strategies for dealing with new words",
+  "Guess the meaning of words from context",
+  "Listen for specific information and group words into lexical fields"
+ ],
+ "tf": [
+  {
+   "s": "Guessing from context means using the words around an unknown word.",
+   "t": true,
+   "why": "Yes, the words before and after give clues."
+  },
+  {
+   "s": "Looking up a word in a dictionary is one strategy for new words.",
+   "t": true,
+   "why": "Correct, it is useful when the word is important."
+  },
+  {
+   "s": "Guessing from context wastes time and stops you reading.",
+   "t": false,
+   "why": "It saves time and keeps you reading."
+  },
+  {
+   "s": "Majid is in Grade 12.",
+   "t": true,
+   "why": "Right, the listening says he is in Grade 12."
+  },
+  {
+   "s": "Majid wants to study medicine.",
+   "t": false,
+   "why": "He wants to study airport management."
+  },
+  {
+   "s": "Majid's father prefers London to Chichester.",
+   "t": false,
+   "why": "He prefers Chichester so Majid will speak English with local people."
+  },
+  {
+   "s": "Chichester has a direct rail link to London.",
+   "t": true,
+   "why": "Yes, this is one of its advantages."
+  },
+  {
+   "s": "A lexical field is a group of words with associated meanings.",
+   "t": true,
+   "why": "Correct, like campus, lecturer, degree and tutor."
+  },
+  {
+   "s": "Grouping words by topic makes vocabulary harder to remember.",
+   "t": false,
+   "why": "Grouping helps you remember words by topic."
+  },
+  {
+   "s": "A dictionary is better when the word is essential and the context gives few clues.",
+   "t": true,
+   "why": "Yes, then guessing is not enough."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is one strategy for a new word?",
+   "o": [
+    "guess from context",
+    "stop reading",
+    "skip the whole text"
+   ],
+   "why": "Context clues help you guess."
+  },
+  {
+   "q": "What helps you guess a meaning?",
+   "o": [
+    "the words before and after it",
+    "the page colour",
+    "the title only"
+   ],
+   "why": "Surrounding words give clues."
+  },
+  {
+   "q": "Which grade is Majid in?",
+   "o": [
+    "Grade 12",
+    "Grade 10",
+    "Grade 8"
+   ],
+   "why": "Majid is in Grade 12."
+  },
+  {
+   "q": "What does Majid want to study?",
+   "o": [
+    "airport management",
+    "medicine",
+    "art"
+   ],
+   "why": "He is interested in airport management."
+  },
+  {
+   "q": "Which city does Majid's father prefer?",
+   "o": [
+    "Chichester",
+    "London",
+    "Muscat"
+   ],
+   "why": "He prefers Chichester."
+  },
+  {
+   "q": "Why does his father prefer Chichester?",
+   "o": [
+    "Majid will speak English with locals",
+    "it is the capital",
+    "it has no sea"
+   ],
+   "why": "In London he might speak Arabic with friends."
+  },
+  {
+   "q": "Where would Majid live in Chichester?",
+   "o": [
+    "with an English host family",
+    "in a hotel",
+    "alone in a big flat"
+   ],
+   "why": "A host family helps his English."
+  },
+  {
+   "q": "What field do campus, lecturer, degree and tutor belong to?",
+   "o": [
+    "university life",
+    "shopping",
+    "road safety"
+   ],
+   "why": "They all relate to university."
+  },
+  {
+   "q": "What is a lexical field?",
+   "o": [
+    "a group of words on one topic",
+    "a sports field",
+    "a dictionary page"
+   ],
+   "why": "It groups related words."
+  },
+  {
+   "q": "Where can you record new words?",
+   "o": [
+    "a vocabulary notebook",
+    "a shopping list",
+    "a timetable"
+   ],
+   "why": "A notebook helps you review words."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Majid's grade",
+   "a": "Grade 12",
+   "d": [
+    "Grade 10",
+    "Grade 11",
+    "Grade 9"
+   ]
+  },
+  {
+   "q": "What Majid wants to study",
+   "a": "airport management",
+   "d": [
+    "medicine",
+    "law",
+    "art"
+   ]
+  },
+  {
+   "q": "City Majid's father prefers",
+   "a": "Chichester",
+   "d": [
+    "London",
+    "Manchester",
+    "Oxford"
+   ]
+  },
+  {
+   "q": "City the father does not choose",
+   "a": "London",
+   "d": [
+    "Chichester",
+    "Muscat",
+    "Salalah"
+   ]
+  },
+  {
+   "q": "Chichester is near the...",
+   "a": "sea",
+   "d": [
+    "desert",
+    "mountains",
+    "airport"
+   ]
+  },
+  {
+   "q": "Chichester's link to London",
+   "a": "direct rail link",
+   "d": [
+    "bus only",
+    "no link",
+    "ferry"
+   ]
+  },
+  {
+   "q": "Majid would live with a...",
+   "a": "host family",
+   "d": [
+    "football team",
+    "tour guide",
+    "pilot"
+   ]
+  },
+  {
+   "q": "Field of: campus, tutor, degree",
+   "a": "university life",
+   "d": [
+    "shopping",
+    "road safety",
+    "advertising"
+   ]
+  },
+  {
+   "q": "Group of linked words",
+   "a": "lexical field",
+   "d": [
+    "deadline",
+    "placement",
+    "survey"
+   ]
+  },
+  {
+   "q": "Book for checking meanings",
+   "a": "dictionary",
+   "d": [
+    "novel",
+    "atlas",
+    "diary"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which are strategies for dealing with new words?",
+   "o": [
+    "ignore it, use a dictionary or guess from context",
+    "close the book",
+    "ask the teacher to remove it",
+    "read only the title"
+   ],
+   "why": "These are the strategies the class listed."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What advantages of Chichester does Majid's father give?",
+   "o": [
+    "a small city near the sea with a direct rail link to London",
+    "it is the biggest city in the world",
+    "it has many Arabic-speaking friends",
+    "it has no trains"
+   ],
+   "why": "These make Chichester a good choice."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word belongs to the lexical field 'university life'?",
+   "o": [
+    "lecture",
+    "runway",
+    "bargain",
+    "seatbelt"
+   ],
+   "why": "Lecture is part of university life."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should you do before listening to the father–son dialogue?",
+   "o": [
+    "read the seven statements",
+    "write an essay",
+    "close your book",
+    "guess the answers without reading"
+   ],
+   "why": "Reading first tells you what to listen for."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'The exhausted runner sat down after the long race.' What does 'exhausted' mean?",
+   "o": [
+    "very tired",
+    "very happy",
+    "very fast",
+    "very early"
+   ],
+   "why": "After a long race, the runner would be very tired."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which word does NOT belong with campus, lecturer and degree?",
+   "o": [
+    "speed limit",
+    "tutor",
+    "lecture",
+    "semester"
+   ],
+   "why": "Speed limit belongs to road safety."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You meet a new word, and the sentence still makes sense without it. What is the best strategy?",
+   "o": [
+    "keep reading and guess from context",
+    "stop and look up every word",
+    "stop reading the text",
+    "copy the whole page"
+   ],
+   "why": "Guessing keeps you reading."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Majid's father think Chichester is better than London for him?",
+   "o": [
+    "he will use English with local people instead of Arabic with friends",
+    "London has no schools",
+    "Chichester is bigger",
+    "London has no trains"
+   ],
+   "why": "Speaking English daily improves his language."
+  },
+  {
+   "lv": "التحليل",
+   "q": "When is a dictionary better than guessing from context?",
+   "o": [
+    "when the word is essential and the context gives few clues",
+    "always, for every word",
+    "never",
+    "only for very short words"
+   ],
+   "why": "Use a dictionary when guessing cannot work."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is grouping words into lexical fields helpful?",
+   "o": [
+    "it helps you remember vocabulary by topic",
+    "it makes words longer",
+    "it removes new words",
+    "it changes their meanings"
+   ],
+   "why": "Linked words are easier to remember together."
+  }
+ ]
+}

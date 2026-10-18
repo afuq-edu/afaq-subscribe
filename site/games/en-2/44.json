@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Sounds and Spelling – Unit 3, Lesson 6: Graded readers",
+ "outcomes": [
+  "I can read ou, oi, ue and i-e words in stories.",
+  "I can answer questions about \"The big dig\" and \"My bike\".",
+  "I can find tricky words in a story."
+ ],
+ "tf": [
+  {
+   "s": "In \"The big dig\", the boy and his mum are in a garden.",
+   "t": true,
+   "why": "They are in a garden."
+  },
+  {
+   "s": "In \"The big dig\", there are five coins in the soil.",
+   "t": true,
+   "why": "There are five coins in the soil."
+  },
+  {
+   "s": "In \"The big dig\", there are nine coins.",
+   "t": false,
+   "why": "There are five coins."
+  },
+  {
+   "s": "The boy shouts for his mum.",
+   "t": true,
+   "why": "I shout for my mum!"
+  },
+  {
+   "s": "The boy likes to dig in the soil.",
+   "t": true,
+   "why": "I like to dig in the soil."
+  },
+  {
+   "s": "In \"My bike\", the boy and his dad are in a school.",
+   "t": false,
+   "why": "They are in Dad's shed."
+  },
+  {
+   "s": "In \"My bike\", Dad can fix the bike.",
+   "t": true,
+   "why": "Dad can fix the bike."
+  },
+  {
+   "s": "The boy puts some oil on the chain.",
+   "t": true,
+   "why": "He puts some oil on the chain."
+  },
+  {
+   "s": "\"Coins\" and \"soil\" have the oi sound.",
+   "t": true,
+   "why": "C-oi-ns and s-oi-l have oi."
+  },
+  {
+   "s": "In \"I like to dig\", the tricky word is \"dig\".",
+   "t": false,
+   "why": "The tricky word is \"to\"."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where are the boy and his mum?",
+   "o": [
+    "in a garden",
+    "in a shed",
+    "at school"
+   ],
+   "why": "They are in a garden."
+  },
+  {
+   "q": "How many coins are there?",
+   "o": [
+    "five",
+    "nine",
+    "two"
+   ],
+   "why": "There are five coins."
+  },
+  {
+   "q": "Where are the coins?",
+   "o": [
+    "in the soil",
+    "in the shed",
+    "in a bag"
+   ],
+   "why": "There are five coins in the soil."
+  },
+  {
+   "q": "Who shouts?",
+   "o": [
+    "the boy",
+    "Mum",
+    "Dad"
+   ],
+   "why": "I shout for my mum!"
+  },
+  {
+   "q": "Mum says: Yes, you can! Let's ___!",
+   "o": [
+    "dig",
+    "dive",
+    "fix"
+   ],
+   "why": "Let's dig!"
+  },
+  {
+   "q": "Where are the boy and his dad?",
+   "o": [
+    "in Dad's shed",
+    "in the garden",
+    "in a park"
+   ],
+   "why": "They are in Dad's shed."
+  },
+  {
+   "q": "What can Dad do?",
+   "o": [
+    "fix the bike",
+    "fly a kite",
+    "dig"
+   ],
+   "why": "Dad can fix the bike."
+  },
+  {
+   "q": "What goes on the chain?",
+   "o": [
+    "some oil",
+    "some glue",
+    "some soil"
+   ],
+   "why": "Some oil."
+  },
+  {
+   "q": "Unscramble: v / i / d / e",
+   "o": [
+    "dive",
+    "vide",
+    "devi"
+   ],
+   "why": "d-i-v-e spells dive."
+  },
+  {
+   "q": "Which ue word is in the pictures?",
+   "o": [
+    "glue",
+    "coin",
+    "bike"
+   ],
+   "why": "Glue and blue have ue."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Number of coins",
+   "a": "five",
+   "d": [
+    "nine",
+    "two",
+    "ten"
+   ]
+  },
+  {
+   "q": "Coins are in the ...",
+   "a": "soil",
+   "d": [
+    "shed",
+    "bag",
+    "box"
+   ]
+  },
+  {
+   "q": "The boy shouts for his ...",
+   "a": "mum",
+   "d": [
+    "dad",
+    "cat",
+    "friend"
+   ]
+  },
+  {
+   "q": "Let's ___!",
+   "a": "dig",
+   "d": [
+    "dive",
+    "fly",
+    "fix"
+   ]
+  },
+  {
+   "q": "Boy and dad are in a ...",
+   "a": "shed",
+   "d": [
+    "garden",
+    "school",
+    "shop"
+   ]
+  },
+  {
+   "q": "Dad can fix the ...",
+   "a": "bike",
+   "d": [
+    "kite",
+    "coin",
+    "box"
+   ]
+  },
+  {
+   "q": "On the chain: some ...",
+   "a": "oil",
+   "d": [
+    "glue",
+    "soil",
+    "milk"
+   ]
+  },
+  {
+   "q": "Unscramble: v / i / d / e",
+   "a": "dive",
+   "d": [
+    "vide",
+    "five",
+    "dine"
+   ]
+  },
+  {
+   "q": "Tricky word: I like ___ dig.",
+   "a": "to",
+   "d": [
+    "all",
+    "some",
+    "give"
+   ]
+  },
+  {
+   "q": "Tricky word: I dig ___ the time!",
+   "a": "all",
+   "d": [
+    "to",
+    "some",
+    "give"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is in the soil in \"The big dig\"?",
+   "o": [
+    "five coins",
+    "a bike",
+    "a kite",
+    "a robot"
+   ],
+   "why": "There are five coins in the soil."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word from the stories has oi?",
+   "o": [
+    "soil",
+    "shout",
+    "bike",
+    "glue"
+   ],
+   "why": "S-oi-l has oi."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who is with the boy in \"My bike\"?",
+   "o": [
+    "his dad",
+    "his mum",
+    "the king",
+    "Gymbot"
+   ],
+   "why": "A boy and his dad."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which tricky word is in \"I dig all the time!\"?",
+   "o": [
+    "all",
+    "dig",
+    "time",
+    "I"
+   ],
+   "why": "All is a tricky word."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: The boy likes to (dig / shout) in the soil.",
+   "o": [
+    "dig",
+    "shout",
+    "dive",
+    "fix"
+   ],
+   "why": "I like to dig in the soil."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Read the kite lines: Up, up, up! Zigzag! ___!",
+   "o": [
+    "Dive!",
+    "Dig!",
+    "Fix!",
+    "Shout!"
+   ],
+   "why": "Up, up, up! Zigzag! Dive!"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Unscramble: g / ue / l",
+   "o": [
+    "glue",
+    "gule",
+    "lueg",
+    "gelu"
+   ],
+   "why": "g-l-ue spells glue."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How does the boy feel when he finds the coins?",
+   "o": [
+    "happy, because he finds coins",
+    "sad, because the soil is wet",
+    "angry, because Mum shouts",
+    "sleepy, because it is night"
+   ],
+   "why": "Finding coins makes him happy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the boy shout for his mum?",
+   "o": [
+    "He finds five coins in the soil.",
+    "He is sick.",
+    "His bike is broken.",
+    "He sees a robot."
+   ],
+   "why": "He finds coins and wants to tell Mum."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which two words have the same sound?",
+   "o": [
+    "blue and glue",
+    "bike and oil",
+    "soil and shout",
+    "five and coins"
+   ],
+   "why": "Blue and glue both have ue."
+  }
+ ]
+}

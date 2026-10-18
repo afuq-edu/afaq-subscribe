@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 2: Let's dress up!",
+ "lesson": "Unit 2 – Lesson 5: Culture (special days in Oman)",
+ "outcomes": [
+  "I can name things we have at Eid Al-Fitr.",
+  "I can say how people in Oman celebrate Eid.",
+  "I can talk about clothes for a special day."
+ ],
+ "tf": [
+  {
+   "s": "Eid Al-Fitr is a very special day in Oman.",
+   "t": true,
+   "why": "Yes! Eid Al-Fitr is very special in Oman."
+  },
+  {
+   "s": "Eid Al-Fitr comes after Ramadan.",
+   "t": true,
+   "why": "Right! We celebrate Eid when Ramadan ends."
+  },
+  {
+   "s": "People celebrate Eid Al-Fitr for the first three days of Shawwal.",
+   "t": true,
+   "why": "Well done! Eid is the first three days of Shawwal."
+  },
+  {
+   "s": "People celebrate Eid Al-Fitr for one week.",
+   "t": false,
+   "why": "People celebrate for three days, not one week."
+  },
+  {
+   "s": "At Eid, children get Eidiya, sweets and presents.",
+   "t": true,
+   "why": "Yes! Children love their Eidiya, sweets and presents."
+  },
+  {
+   "s": "Eidiya is a kind of traditional hat.",
+   "t": false,
+   "why": "Eidiya is money that children get at Eid."
+  },
+  {
+   "s": "At Eid, families eat special food.",
+   "t": true,
+   "why": "Great! Families share special food at Eid."
+  },
+  {
+   "s": "At Eid, many people wear traditional clothes.",
+   "t": true,
+   "why": "Yes! Many people wear traditional clothes on special days."
+  },
+  {
+   "s": "Eid Al-Fitr comes before Ramadan.",
+   "t": false,
+   "why": "Eid Al-Fitr comes after Ramadan."
+  },
+  {
+   "s": "We say: They wearing traditional clothes.",
+   "t": false,
+   "why": "We need 're: They're wearing traditional clothes."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "When is Eid Al-Fitr?",
+   "o": [
+    "After Ramadan",
+    "Before Ramadan",
+    "In the middle of Ramadan"
+   ],
+   "why": "Eid Al-Fitr comes after Ramadan."
+  },
+  {
+   "q": "What money do children get at Eid?",
+   "o": [
+    "Eidiya",
+    "Kumma",
+    "Dishdasha"
+   ],
+   "why": "Eidiya is the money children get at Eid."
+  },
+  {
+   "q": "Eid Al-Fitr is in the month of …",
+   "o": [
+    "Shawwal",
+    "Ramadan",
+    "Muharram"
+   ],
+   "why": "Eid is in the first three days of Shawwal."
+  },
+  {
+   "q": "Complete: They're ___ new shoes.",
+   "o": [
+    "wearing",
+    "wear",
+    "wears"
+   ],
+   "why": "We say They're wearing …"
+  },
+  {
+   "q": "Complete: Eid Al-Fitr is a ___ day in Oman.",
+   "o": [
+    "special",
+    "sad",
+    "short"
+   ],
+   "why": "Eid is a special day for everyone."
+  },
+  {
+   "q": "What do families eat at Eid?",
+   "o": [
+    "Special food",
+    "No food",
+    "Only bread"
+   ],
+   "why": "Families eat special food at Eid."
+  },
+  {
+   "q": "What do we write at the top of the poster?",
+   "o": [
+    "The name of the special day",
+    "A price",
+    "A phone number"
+   ],
+   "why": "The name of the special day goes at the top."
+  },
+  {
+   "q": "We celebrate Eid for how many days?",
+   "o": [
+    "Three",
+    "Ten",
+    "Thirty"
+   ],
+   "why": "People celebrate for the first three days of Shawwal."
+  },
+  {
+   "q": "A good poster has pictures, labels and …",
+   "o": [
+    "sentences",
+    "prices",
+    "numbers only"
+   ],
+   "why": "Pictures, labels and sentences make a clear poster."
+  },
+  {
+   "q": "When you present, your voice must be …",
+   "o": [
+    "clear",
+    "very quiet",
+    "angry"
+   ],
+   "why": "A clear voice helps everyone hear you."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Eid Al-Fitr comes after …",
+   "a": "Ramadan",
+   "d": [
+    "Shawwal",
+    "Rajab",
+    "Muharram"
+   ]
+  },
+  {
+   "q": "Eid is in the month of …",
+   "a": "Shawwal",
+   "d": [
+    "Ramadan",
+    "Rajab",
+    "Safar"
+   ]
+  },
+  {
+   "q": "Money children get at Eid",
+   "a": "Eidiya",
+   "d": [
+    "kumma",
+    "hijab",
+    "dishdasha"
+   ]
+  },
+  {
+   "q": "How many days of Eid?",
+   "a": "three",
+   "d": [
+    "one",
+    "seven",
+    "ten"
+   ]
+  },
+  {
+   "q": "Eid is a ___ day.",
+   "a": "special",
+   "d": [
+    "short",
+    "sad",
+    "quiet"
+   ]
+  },
+  {
+   "q": "Families eat special …",
+   "a": "food",
+   "d": [
+    "shoes",
+    "clothes",
+    "posters"
+   ]
+  },
+  {
+   "q": "They're ___ new shoes.",
+   "a": "wearing",
+   "d": [
+    "wear",
+    "wears",
+    "worn"
+   ]
+  },
+  {
+   "q": "People wear traditional …",
+   "a": "clothes",
+   "d": [
+    "food",
+    "sweets",
+    "money"
+   ]
+  },
+  {
+   "q": "Children get Eidiya and …",
+   "a": "presents",
+   "d": [
+    "homework",
+    "tests",
+    "keys"
+   ]
+  },
+  {
+   "q": "A word next to a picture",
+   "a": "label",
+   "d": [
+    "price",
+    "dice",
+    "riddle"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is Eid Al-Fitr?",
+   "o": [
+    "A special day in Oman",
+    "A shop",
+    "A kind of food",
+    "A school subject"
+   ],
+   "why": "Eid Al-Fitr is a very special day in Oman."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these do children get at Eid?",
+   "o": [
+    "Sweets",
+    "Homework",
+    "Glasses",
+    "Keys"
+   ],
+   "why": "Children get sweets, presents and Eidiya."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do many people wear at Eid?",
+   "o": [
+    "Traditional clothes",
+    "Pyjamas",
+    "Tracksuits",
+    "Slippers"
+   ],
+   "why": "Many people wear traditional clothes at Eid."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means a party for a happy day?",
+   "o": [
+    "celebrate",
+    "carry",
+    "listen",
+    "find"
+   ],
+   "why": "We celebrate special days."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct poster sentence.",
+   "o": [
+    "This is Eid Al-Fitr.",
+    "This are Eid Al-Fitr.",
+    "These is Eid Al-Fitr.",
+    "This Eid Al-Fitr is."
+   ],
+   "why": "We say This is Eid Al-Fitr."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend asks: What are they wearing? Choose the best answer.",
+   "o": [
+    "They're wearing traditional clothes.",
+    "They're traditional clothes wearing.",
+    "It's 5 rials.",
+    "They're Eid."
+   ],
+   "why": "They're wearing … tells us their clothes."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Label the white clothes an Omani man wears at Eid.",
+   "o": [
+    "dishdasha",
+    "hijab",
+    "dress",
+    "jumper"
+   ],
+   "why": "A dishdasha is the white traditional clothes for Omani men."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ramadan ends today. What comes next?",
+   "o": [
+    "Eid Al-Fitr",
+    "A school test",
+    "Winter",
+    "National Day"
+   ],
+   "why": "Eid Al-Fitr comes right after Ramadan."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ali has new clothes, sweets and Eidiya. Why?",
+   "o": [
+    "It is Eid.",
+    "It is a school day.",
+    "He is at the doctor.",
+    "It is bedtime."
+   ],
+   "why": "Children get these things at Eid."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which poster is the best?",
+   "o": [
+    "Big pictures, correct labels, clear sentences",
+    "No pictures and no labels",
+    "Labels with spelling mistakes",
+    "Only one word"
+   ],
+   "why": "Pictures, correct labels and sentences make a great poster."
+  }
+ ]
+}

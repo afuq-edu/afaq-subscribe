@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+ "lesson": "Review and Reference: Theme 2 learning objectives and core words test",
+ "outcomes": [
+  "Check how well you achieved the Theme 2 learning objectives",
+  "Spell and use the core words of Theme 2",
+  "Use the past perfect correctly"
+ ],
+ "tf": [
+  {
+   "s": "'Homesick' describes a feeling of missing home.",
+   "t": true,
+   "why": "Yes, homesick students miss home."
+  },
+  {
+   "s": "'Reduce' means make larger.",
+   "t": false,
+   "why": "Reduce means make smaller."
+  },
+  {
+   "s": "'Cope with' means deal successfully with a difficult situation.",
+   "t": true,
+   "why": "New students learn to cope with change."
+  },
+  {
+   "s": "'By the time he arrived, we had left' uses the past perfect.",
+   "t": true,
+   "why": "'Had left' is the past perfect."
+  },
+  {
+   "s": "A 'deadline' is a place on the campus.",
+   "t": false,
+   "why": "A deadline is the last time to finish work."
+  },
+  {
+   "s": "'Terrifying' means very frightening.",
+   "t": true,
+   "why": "Starting university can feel terrifying."
+  },
+  {
+   "s": "To 'edit' writing means to check and correct it.",
+   "t": true,
+   "why": "Editing improves your writing."
+  },
+  {
+   "s": "A 'campus' is a type of test.",
+   "t": false,
+   "why": "A campus is the university's grounds and buildings."
+  },
+  {
+   "s": "The past perfect of 'plan' is 'had planed'.",
+   "t": false,
+   "why": "The correct form is 'had planned'."
+  },
+  {
+   "s": "A placement test finds your level.",
+   "t": true,
+   "why": "It puts you in the right level."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "By the time he arrived, we ___ (leave).",
+   "o": [
+    "had left",
+    "has left",
+    "leaves"
+   ],
+   "why": "We left before he arrived."
+  },
+  {
+   "q": "What is the opposite of 'reduce'?",
+   "o": [
+    "increase",
+    "decrease",
+    "cope"
+   ],
+   "why": "Reduce = smaller, increase = larger."
+  },
+  {
+   "q": "Which spelling of the word for a time limit is correct?",
+   "o": [
+    "deadline",
+    "dedline",
+    "deadlin"
+   ],
+   "why": "Deadline = dead + line."
+  },
+  {
+   "q": "Which word means 'feelings'?",
+   "o": [
+    "emotions",
+    "careers",
+    "campuses"
+   ],
+   "why": "Emotions are feelings."
+  },
+  {
+   "q": "I wish I ___ (not/waste) my time.",
+   "o": [
+    "hadn't wasted",
+    "don't waste",
+    "won't waste"
+   ],
+   "why": "Wish + past perfect for a regret."
+  },
+  {
+   "q": "Someone who organises a course is a course ___.",
+   "o": [
+    "co-ordinator",
+    "campus",
+    "career"
+   ],
+   "why": "The course co-ordinator organises the course."
+  },
+  {
+   "q": "Which spelling of the word for missing home is correct?",
+   "o": [
+    "homesick",
+    "homsick",
+    "homesik"
+   ],
+   "why": "Home + sick."
+  },
+  {
+   "q": "He felt bad because he ___ (not/check) his work.",
+   "o": [
+    "hadn't checked",
+    "doesn't check",
+    "won't check"
+   ],
+   "why": "Not checking happened first."
+  },
+  {
+   "q": "What does 'a positive attitude' mean?",
+   "o": [
+    "thinking in a good, hopeful way",
+    "thinking only badly",
+    "having no ideas"
+   ],
+   "why": "Positive means good and hopeful."
+  },
+  {
+   "q": "Complete: 'New students must learn to ___ living alone.'",
+   "o": [
+    "cope with",
+    "reduce",
+    "edit"
+   ],
+   "why": "Cope with = deal with."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Missing your home",
+   "a": "homesick",
+   "d": [
+    "positive",
+    "terrifying",
+    "skilled"
+   ]
+  },
+  {
+   "q": "Make smaller",
+   "a": "reduce",
+   "d": [
+    "increase",
+    "edit",
+    "cope"
+   ]
+  },
+  {
+   "q": "Last time to finish work",
+   "a": "deadline",
+   "d": [
+    "campus",
+    "career",
+    "emotion"
+   ]
+  },
+  {
+   "q": "Very frightening",
+   "a": "terrifying",
+   "d": [
+    "positive",
+    "homesick",
+    "relaxing"
+   ]
+  },
+  {
+   "q": "The jobs of your working life",
+   "a": "career",
+   "d": [
+    "campus",
+    "deadline",
+    "emotion"
+   ]
+  },
+  {
+   "q": "Check and correct writing",
+   "a": "edit",
+   "d": [
+    "reduce",
+    "cope",
+    "plan"
+   ]
+  },
+  {
+   "q": "University grounds and buildings",
+   "a": "campus",
+   "d": [
+    "career",
+    "deadline",
+    "emotion"
+   ]
+  },
+  {
+   "q": "Past perfect of 'take'",
+   "a": "had taken",
+   "d": [
+    "had took",
+    "has taken",
+    "had taking"
+   ]
+  },
+  {
+   "q": "Past perfect of 'make'",
+   "a": "had made",
+   "d": [
+    "had maked",
+    "has made",
+    "had making"
+   ]
+  },
+  {
+   "q": "Past perfect of 'play'",
+   "a": "had played",
+   "d": [
+    "had plaid",
+    "has played",
+    "had playing"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does 'cope with' mean?",
+   "o": [
+    "Deal successfully with a difficult situation",
+    "Make something smaller",
+    "Check writing",
+    "Miss home"
+   ],
+   "why": "Coping is managing difficulties."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the difference between 'reduce' and 'increase'?",
+   "o": [
+    "Reduce means make smaller; increase means make larger",
+    "They mean the same",
+    "Reduce means make larger",
+    "Both mean stop"
+   ],
+   "why": "They are opposites."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is spelled correctly?",
+   "o": [
+    "co-ordinator",
+    "cordinater",
+    "co-ordinater",
+    "coordinatter"
+   ],
+   "why": "Co-ordinator is the correct spelling."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a placement test?",
+   "o": [
+    "A test that finds your level",
+    "A driving test",
+    "A sports test",
+    "A test after graduation"
+   ],
+   "why": "It places you in the right level."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "By the time the exam started, I ___ (revise) all my notes.",
+   "o": [
+    "had revised",
+    "have revised",
+    "revise",
+    "am revising"
+   ],
+   "why": "Revising came before the exam started."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses 'deadline' correctly?",
+   "o": [
+    "I must finish my essay before the deadline.",
+    "The deadline is a big building.",
+    "I feel deadline today.",
+    "She ate a deadline."
+   ],
+   "why": "A deadline is a time limit."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: 'Before last holiday, Sami ___ the south.'",
+   "o": [
+    "had never visited",
+    "has never visited",
+    "never visits",
+    "is never visiting"
+   ],
+   "why": "The past perfect shows the earlier time."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence shows a regret?",
+   "o": [
+    "If only I hadn't wasted my time.",
+    "I had taken the bus.",
+    "They had played well.",
+    "She had made a cake."
+   ],
+   "why": "'If only' + past perfect shows regret."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should students rate their own progress on the objectives?",
+   "o": [
+    "To see what they have learned and what to review",
+    "To finish quickly",
+    "To avoid the test",
+    "To get more homework"
+   ],
+   "why": "Self-assessment shows what to practise."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Starting university can be terrifying, but a positive attitude helps you cope.' What does this mean?",
+   "o": [
+    "Feeling scared is normal, but a good attitude helps you manage",
+    "University is always easy",
+    "A positive attitude makes you terrified",
+    "You should not go to university"
+   ],
+   "why": "Attitude helps you deal with change."
+  }
+ ]
+}

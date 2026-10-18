@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 2: What’s in a Name? (Grammar)",
+ "lesson": "Past simple and passive practice: irregular verbs and rewriting",
+ "outcomes": [
+  "Give the past simple of irregular verbs",
+  "Rewrite active sentences in the past simple passive",
+  "Choose the past simple or the passive in a text about brands"
+ ],
+ "tf": [
+  {
+   "s": "The past simple of 'tear' is 'tore'.",
+   "t": true,
+   "why": "Tear is irregular: tear, tore, torn."
+  },
+  {
+   "s": "The past simple of 'freeze' is 'freezed'.",
+   "t": false,
+   "why": "The correct past simple is 'froze'."
+  },
+  {
+   "s": "'Stole' is the past simple of 'steal'.",
+   "t": true,
+   "why": "Steal, stole, stolen."
+  },
+  {
+   "s": "'Adidas was founded by Adolf Dassler' is in the passive.",
+   "t": true,
+   "why": "It uses was + past participle + by."
+  },
+  {
+   "s": "In the passive, the object of the active sentence becomes the subject.",
+   "t": true,
+   "why": "For example: Adidas (object) becomes the subject."
+  },
+  {
+   "s": "We must always include 'by + agent' in a passive sentence.",
+   "t": false,
+   "why": "We can leave it out when the agent is unknown, obvious or unimportant."
+  },
+  {
+   "s": "'The first iPad was released in 2010' is a past simple passive sentence.",
+   "t": true,
+   "why": "Was + released is passive."
+  },
+  {
+   "s": "'Apple remained in first place' is a passive sentence.",
+   "t": false,
+   "why": "It is past simple active; there is no was/were + participle."
+  },
+  {
+   "s": "The present form of 'dug' is 'dig'.",
+   "t": true,
+   "why": "Dig, dug, dug."
+  },
+  {
+   "s": "'Samsung entered the market' puts the focus on the market.",
+   "t": false,
+   "why": "The active sentence puts the focus on Samsung, the doer."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the past simple of 'shine'?",
+   "o": [
+    "shone",
+    "shined up",
+    "shiny"
+   ],
+   "why": "Shine, shone, shone."
+  },
+  {
+   "q": "What is the past simple of 'kneel'?",
+   "o": [
+    "knelt",
+    "kneeled up",
+    "kneeling"
+   ],
+   "why": "Kneel has the irregular past 'knelt'."
+  },
+  {
+   "q": "What is the present form of 'rose'?",
+   "o": [
+    "rise",
+    "raise",
+    "rose"
+   ],
+   "why": "Rise, rose, risen."
+  },
+  {
+   "q": "What is the past simple of 'steal'?",
+   "o": [
+    "stole",
+    "stealed",
+    "stolen"
+   ],
+   "why": "Steal, stole, stolen."
+  },
+  {
+   "q": "Complete: The list ___ (publish) in 2013.",
+   "o": [
+    "was published",
+    "published",
+    "is publish"
+   ],
+   "why": "The list receives the action, so we use the passive."
+  },
+  {
+   "q": "Passive: They designed the iPhone in California.",
+   "o": [
+    "The iPhone was designed in California.",
+    "The iPhone designed in California.",
+    "They were designed the iPhone."
+   ],
+   "why": "We use was + designed; 'by them' is not needed."
+  },
+  {
+   "q": "What is the past simple of 'forgive'?",
+   "o": [
+    "forgave",
+    "forgived",
+    "forgiven"
+   ],
+   "why": "Forgive, forgave, forgiven."
+  },
+  {
+   "q": "Why can we omit 'by + agent'?",
+   "o": [
+    "the agent is unknown or unimportant",
+    "the verb is irregular",
+    "the sentence is a question"
+   ],
+   "why": "Sometimes we do not need to say who did it."
+  },
+  {
+   "q": "Which sentence is active?",
+   "o": [
+    "Apple remained in first place.",
+    "Apple was founded in 1976.",
+    "The iPad was released in 2010."
+   ],
+   "why": "'Remained' has no was/were."
+  },
+  {
+   "q": "Present form of 'hurt'?",
+   "o": [
+    "hurt",
+    "hurted",
+    "hurts"
+   ],
+   "why": "Hurt has the same form in present and past."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Past simple of 'tear'",
+   "a": "tore",
+   "d": [
+    "teared",
+    "torn",
+    "tear"
+   ]
+  },
+  {
+   "q": "Past simple of 'freeze'",
+   "a": "froze",
+   "d": [
+    "freezed",
+    "frozen",
+    "froozed"
+   ]
+  },
+  {
+   "q": "Past simple of 'forgive'",
+   "a": "forgave",
+   "d": [
+    "forgived",
+    "forgiven",
+    "forgaved"
+   ]
+  },
+  {
+   "q": "Past simple of 'shine'",
+   "a": "shone",
+   "d": [
+    "shinned",
+    "shined",
+    "shine"
+   ]
+  },
+  {
+   "q": "Past simple of 'kneel'",
+   "a": "knelt",
+   "d": [
+    "kneeled",
+    "knealt",
+    "knolt"
+   ]
+  },
+  {
+   "q": "Present form of 'stole'",
+   "a": "steal",
+   "d": [
+    "stale",
+    "stool",
+    "stell"
+   ]
+  },
+  {
+   "q": "Present form of 'dug'",
+   "a": "dig",
+   "d": [
+    "dag",
+    "dog",
+    "dug"
+   ]
+  },
+  {
+   "q": "Present form of 'rose'",
+   "a": "rise",
+   "d": [
+    "rase",
+    "ruse",
+    "rosen"
+   ]
+  },
+  {
+   "q": "Passive of 'release'",
+   "a": "was released",
+   "d": [
+    "was release",
+    "released by",
+    "is releasing"
+   ]
+  },
+  {
+   "q": "Passive of 'found' (a company)",
+   "a": "was founded",
+   "d": [
+    "was found",
+    "was finded",
+    "founded by"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the past simple of 'freeze'?",
+   "o": [
+    "froze",
+    "freezed",
+    "frozen",
+    "freeze"
+   ],
+   "why": "Freeze, froze, frozen."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the present form of 'stuck'?",
+   "o": [
+    "stick",
+    "stack",
+    "stuke",
+    "stucked"
+   ],
+   "why": "Stick, stuck, stuck."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When can we omit 'by + agent' in a passive sentence?",
+   "o": [
+    "when the agent is unknown, obvious or unimportant",
+    "always",
+    "never",
+    "only in questions"
+   ],
+   "why": "We leave it out when it is not needed."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which tense is 'Apple remained in first place'?",
+   "o": [
+    "past simple active",
+    "past simple passive",
+    "present simple",
+    "present perfect"
+   ],
+   "why": "There is no was/were + past participle."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Change into the passive: People used branding in ancient times.",
+   "o": [
+    "Branding was used by people in ancient times.",
+    "Branding used people in ancient times.",
+    "People were used branding in ancient times.",
+    "Branding is used by people in ancient times."
+   ],
+   "why": "The object 'branding' becomes the subject."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Change into the passive: John S. Pemberton changed 'Kola' to 'Cola'.",
+   "o": [
+    "'Kola' was changed to 'Cola' by John S. Pemberton.",
+    "'Kola' changed to 'Cola' by John S. Pemberton.",
+    "John S. Pemberton was changed 'Kola' to 'Cola'.",
+    "'Kola' were changed to 'Cola' by John S. Pemberton."
+   ],
+   "why": "'Kola' receives the action, so it becomes the subject."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Fill in: The first iPad ______ (release) in 2010.",
+   "o": [
+    "was released",
+    "released",
+    "were released",
+    "is released"
+   ],
+   "why": "Singular subject + was + past participle."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'was founded' used in 'Apple was founded in 1976'?",
+   "o": [
+    "The focus is on the company and the past action, not on who founded it",
+    "Apple founded itself",
+    "It is the future",
+    "It is a negative sentence"
+   ],
+   "why": "The passive puts the company first."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between 'Samsung entered the market' and 'The market was entered by Samsung'?",
+   "o": [
+    "The first emphasises Samsung; the second emphasises the market",
+    "They have different tenses",
+    "The second is in the future",
+    "The first is passive"
+   ],
+   "why": "Active stresses the doer; passive stresses the receiver."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which passive sentence correctly leaves out the agent?",
+   "o": [
+    "The iPhone was designed in California.",
+    "Adidas was founded by.",
+    "by Adolf Dassler was founded.",
+    "The logo chose by Oman Air."
+   ],
+   "why": "'By them' adds nothing, so we omit it."
+  }
+ ]
+}

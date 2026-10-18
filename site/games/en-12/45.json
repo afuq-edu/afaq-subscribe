@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Unit 2: Work and Travel (Grammar)",
+  "lesson": "Grammar Recall: first conditional and first conditional with modals",
+  "outcomes": [
+    "Form the first conditional: if + present simple, will + base verb",
+    "Use modals (may, might, could, should, can) in first conditional sentences",
+    "Talk about future jobs using conditional sentences"
+  ],
+  "tf": [
+    { "s": "The first conditional is formed with if + present simple, will + base verb.", "t": true, "why": "That is the basic pattern of the first conditional." },
+    { "s": "The first conditional talks about real or possible situations in the future.", "t": true, "why": "It describes things that can really happen." },
+    { "s": "'If it will rain tomorrow, we stay at home' is correct.", "t": false, "why": "Use the present simple after if: 'If it rains tomorrow, we will stay at home.'" },
+    { "s": "'Might' and 'may' can replace 'will' to show possibility.", "t": true, "why": "They show the result is possible, not certain." },
+    { "s": "'Will' shows the result is less certain than 'might'.", "t": false, "why": "'Will' is more certain; 'might' only shows possibility." },
+    { "s": "'Should' in the result clause can give advice.", "t": true, "why": "For example: If you feel tired, you should rest." },
+    { "s": "The if clause can come first or second in the sentence.", "t": true, "why": "Both orders are correct; use a comma when the if clause comes first." },
+    { "s": "In the first conditional, the result clause uses the past simple.", "t": false, "why": "The result clause uses will (or a modal) + base verb." },
+    { "s": "'If he doesn't work harder, he will lose his job' is a correct first conditional.", "t": true, "why": "If + present simple (negative), will + base verb." },
+    { "s": "After a modal verb like 'can', we add -s to the verb: 'can goes'.", "t": false, "why": "Modals are followed by the base verb: 'can go'." }
+  ],
+  "boxes": [
+    { "q": "If I get good marks, I ___ very happy.", "o": ["will be", "am being", "was"], "why": "Result clause: will + base verb." },
+    { "q": "If he ___ harder, he will lose his job.", "o": ["doesn't work", "won't work", "didn't worked"], "why": "Use present simple after if." },
+    { "q": "Which modal shows possibility?", "o": ["might", "must", "will"], "why": "'Might' means it is possible but not certain." },
+    { "q": "Which modal gives advice?", "o": ["should", "may", "will"], "why": "'Should' is used for advice." },
+    { "q": "If it rains, we ___ stay at home.", "o": ["will", "would", "did"], "why": "First conditional uses will in the result." },
+    { "q": "Is the first conditional about the past or the future?", "o": ["The future", "The past", "Neither"], "why": "It talks about possible future situations." },
+    { "q": "If you go to Nizwa, you ___ visit the fort.", "o": ["can", "cans", "could to"], "why": "Modal + base verb: can visit." },
+    { "q": "Which verb form follows 'if' in the first conditional?", "o": ["Present simple", "Past perfect", "Future simple"], "why": "If + present simple." },
+    { "q": "If you are hungry, you ___ eat something.", "o": ["should", "shoulds", "should to"], "why": "Should + base verb gives advice." },
+    { "q": "If I finish early, I ___ watch a film.", "o": ["may", "am", "was"], "why": "'May' shows a possible result." }
+  ],
+  "hunt": [
+    { "q": "If it rains, we ___ stay home.", "a": "will", "d": ["would", "did", "had"] },
+    { "q": "If she ___ hard, she will pass.", "a": "studies", "d": ["will study", "studied", "studying"] },
+    { "q": "Modal for advice", "a": "should", "d": ["might", "may", "will"] },
+    { "q": "Modal for possibility", "a": "might", "d": ["should", "must", "will"] },
+    { "q": "Modal for ability", "a": "can", "d": ["should", "might", "will"] },
+    { "q": "If I win, I ___ celebrate.", "a": "will", "d": ["would", "was", "did"] },
+    { "q": "If he ___ (not work), he'll lose.", "a": "doesn't work", "d": ["won't work", "didn't work", "not works"] },
+    { "q": "Verb form after 'if'", "a": "present simple", "d": ["past simple", "future", "past perfect"] },
+    { "q": "First conditional is about the ...", "a": "future", "d": ["past", "history", "yesterday"] },
+    { "q": "If you're tired, you should ___.", "a": "rest", "d": ["rests", "rested", "to rest"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "How do we form the first conditional?", "o": ["If + present simple, will + base verb", "If + past simple, would + base verb", "If + will, present simple", "If + past perfect, would have"], "why": "This is the pattern for real future situations." },
+    { "lv": "التذكر", "q": "Which modal can replace 'will' to show possibility?", "o": ["may / might", "must", "should", "has to"], "why": "May and might show that something is possible." },
+    { "lv": "التذكر", "q": "What kind of situation does the first conditional describe?", "o": ["A real or possible situation in the future", "An imaginary situation in the past", "A finished action in the past", "A general rule that never changes"], "why": "The first conditional is about real future possibilities." },
+    { "lv": "التذكر", "q": "Which form comes after a modal verb?", "o": ["The base verb", "The -ing form", "The past form", "to + verb"], "why": "Modals are followed by the base form, e.g. 'might go'." },
+    { "lv": "التطبيق", "q": "Choose the correct sentence.", "o": ["If you go to Canada, you'll have a great time.", "If you will go to Canada, you have a great time.", "If you went to Canada, you'll have a great time.", "If you go to Canada, you having a great time."], "why": "If + present simple, will + base verb." },
+    { "lv": "التطبيق", "q": "Your friend has a headache. Which first conditional gives advice?", "o": ["If you have a headache, you should rest.", "If you had a headache, you rested.", "If you will have a headache, you rest.", "If you have a headache, you might to rest."], "why": "Should + base verb gives advice in the result clause." },
+    { "lv": "التطبيق", "q": "Complete about your future job: 'If I study hard, I ___ a chef.'", "o": ["will become", "became", "becoming", "would became"], "why": "The result clause uses will + base verb." },
+    { "lv": "التحليل", "q": "What is the difference between 'If I pass, I will go to university' and 'If I pass, I might go to university'?", "o": ["'Will' is certain; 'might' shows it is only possible", "'Might' is more certain than 'will'", "They are about the past", "There is no difference in meaning"], "why": "'Will' shows certainty; 'might' shows possibility." },
+    { "lv": "التحليل", "q": "Which sentence has a mistake?", "o": ["If it will rain tomorrow, we will stay at home.", "If it rains tomorrow, we will stay at home.", "We will stay at home if it rains tomorrow.", "If it rains tomorrow, we may stay at home."], "why": "Do not use 'will' in the if clause; use the present simple." },
+    { "lv": "التحليل", "q": "'If it rains tomorrow, we will stay at home.' Is the situation real or imaginary, present or future?", "o": ["Real and future", "Imaginary and past", "Imaginary and present", "Real and past"], "why": "It is a real possibility about tomorrow." }
+  ]
+}

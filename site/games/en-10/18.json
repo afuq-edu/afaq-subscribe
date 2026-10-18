@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "3",
+ "lesson": "Unit 3: Renewable Energy – Listening and Speaking",
+ "outcomes": [
+  "Predict and listen for details about the Mir'aah solar project.",
+  "Talk about the advantages and disadvantages of solar power.",
+  "Stress words like 'present' correctly as nouns and verbs."
+ ],
+ "tf": [
+  {
+   "s": "The project in the presentation is called Mir'aah.",
+   "t": true,
+   "why": "Yes, Mir'aah is the Omani solar project."
+  },
+  {
+   "s": "In the Mir'aah project, mirrors focus the sun's energy.",
+   "t": true,
+   "why": "Correct, the mirrors concentrate sunlight."
+  },
+  {
+   "s": "A presentation slide is a page that shows key information.",
+   "t": true,
+   "why": "Right, slides help the audience follow."
+  },
+  {
+   "s": "'It is expensive to build' is an advantage of solar power.",
+   "t": false,
+   "why": "High cost is a disadvantage."
+  },
+  {
+   "s": "Advantages are the good points of something.",
+   "t": true,
+   "why": "Well done, disadvantages are the bad points."
+  },
+  {
+   "s": "The noun 'PRESent' has the stress on the second syllable.",
+   "t": false,
+   "why": "Nouns like 'PRESent' are stressed on the first syllable."
+  },
+  {
+   "s": "The verb 'preSENT' has the stress on the second syllable.",
+   "t": true,
+   "why": "Yes, verbs are stressed on the second syllable."
+  },
+  {
+   "s": "Solar power works best at night.",
+   "t": false,
+   "why": "Solar panels need daylight to work."
+  },
+  {
+   "s": "Raya's idea is a solar-powered lunch box.",
+   "t": true,
+   "why": "Correct, her invention uses the sun."
+  },
+  {
+   "s": "The Mir'aah project increases the use of natural gas.",
+   "t": false,
+   "why": "It reduces the use of natural gas by using solar power."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the name of the Omani solar project?",
+   "o": [
+    "Mir'aah",
+    "Aviva",
+    "Mineirão"
+   ],
+   "why": "Mir'aah was in Listening 3.3."
+  },
+  {
+   "q": "What do mirrors do in the project?",
+   "o": [
+    "focus the sun's energy",
+    "store water",
+    "turn turbines"
+   ],
+   "why": "The mirrors concentrate sunlight."
+  },
+  {
+   "q": "'It works only in daylight' is…",
+   "o": [
+    "a disadvantage",
+    "an advantage",
+    "a slide"
+   ],
+   "why": "Not working at night is a bad point."
+  },
+  {
+   "q": "Complete: The main ___ is that it is renewable.",
+   "o": [
+    "benefit",
+    "problem",
+    "disadvantage"
+   ],
+   "why": "Being renewable is a good point."
+  },
+  {
+   "q": "Where is the stress in the noun 'RECord'?",
+   "o": [
+    "first syllable",
+    "second syllable",
+    "third syllable"
+   ],
+   "why": "Nouns stress the first syllable."
+  },
+  {
+   "q": "Where is the stress in the verb 'inCREASE'?",
+   "o": [
+    "second syllable",
+    "first syllable",
+    "no syllable"
+   ],
+   "why": "Verbs stress the second syllable."
+  },
+  {
+   "q": "Good points of an idea are…",
+   "o": [
+    "advantages",
+    "disadvantages",
+    "slides"
+   ],
+   "why": "Advantages are the positive side."
+  },
+  {
+   "q": "What type of competition did the flyer advertise?",
+   "o": [
+    "inventions using renewable energy",
+    "football matches",
+    "cooking"
+   ],
+   "why": "Students designed eco-friendly inventions."
+  },
+  {
+   "q": "Mir'aah reduces the use of…",
+   "o": [
+    "natural gas",
+    "sunlight",
+    "mirrors"
+   ],
+   "why": "Solar energy replaces some gas."
+  },
+  {
+   "q": "Raya's invention is a ___ lunch box.",
+   "o": [
+    "solar-powered",
+    "wind-powered",
+    "gas-powered"
+   ],
+   "why": "Raya's lunch box uses the sun."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Omani solar project",
+   "a": "Mir'aah",
+   "d": [
+    "Aviva",
+    "Mineirão",
+    "ArenA"
+   ]
+  },
+  {
+   "q": "They focus the sun's energy",
+   "a": "mirrors",
+   "d": [
+    "turbines",
+    "dams",
+    "pipes"
+   ]
+  },
+  {
+   "q": "Gas the project helps save",
+   "a": "natural gas",
+   "d": [
+    "oxygen",
+    "steam",
+    "air"
+   ]
+  },
+  {
+   "q": "Good points",
+   "a": "advantages",
+   "d": [
+    "disadvantages",
+    "problems",
+    "costs"
+   ]
+  },
+  {
+   "q": "Bad points",
+   "a": "disadvantages",
+   "d": [
+    "advantages",
+    "benefits",
+    "strengths"
+   ]
+  },
+  {
+   "q": "A page in a presentation",
+   "a": "slide",
+   "d": [
+    "flyer",
+    "email",
+    "chapter"
+   ]
+  },
+  {
+   "q": "Stress in nouns like PRESent",
+   "a": "first syllable",
+   "d": [
+    "second syllable",
+    "last letter",
+    "no stress"
+   ]
+  },
+  {
+   "q": "Stress in verbs like preSENT",
+   "a": "second syllable",
+   "d": [
+    "first syllable",
+    "first letter",
+    "no stress"
+   ]
+  },
+  {
+   "q": "Raya's invention",
+   "a": "lunch box",
+   "d": [
+    "bicycle",
+    "phone",
+    "lamp"
+   ]
+  },
+  {
+   "q": "Disadvantage of solar power",
+   "a": "expensive to build",
+   "d": [
+    "renewable",
+    "clean",
+    "free sunlight"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do mirrors do in a solar power project like Mir'aah?",
+   "o": [
+    "They focus the sun's energy.",
+    "They make wind.",
+    "They store natural gas.",
+    "They cool the water."
+   ],
+   "why": "Mirrors concentrate sunlight to make energy."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase do we use to give a disadvantage?",
+   "o": [
+    "The biggest disadvantage is…",
+    "The main benefit is…",
+    "Good morning, everyone.",
+    "Thank you for listening."
+   ],
+   "why": "This phrase introduces a bad point."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In words used as nouns and verbs, where is the stress in the noun?",
+   "o": [
+    "on the first syllable",
+    "on the second syllable",
+    "on the last letter",
+    "there is no stress"
+   ],
+   "why": "Nouns like PRESent and REcord stress the first syllable."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a disadvantage of solar power?",
+   "o": [
+    "It works only in daylight.",
+    "It is renewable.",
+    "It is clean.",
+    "It uses free sunlight."
+   ],
+   "why": "Solar panels stop at night."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses the verb 'record' correctly with stress?",
+   "o": [
+    "I want to reCORD the speech.",
+    "I want to REcord the speech.",
+    "This is a reCORD of the trip.",
+    "She broke the reCORD."
+   ],
+   "why": "As a verb, the stress is on the second syllable."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Classify: 'Solar power is clean and renewable.'",
+   "o": [
+    "advantage",
+    "disadvantage",
+    "opinion only",
+    "question"
+   ],
+   "why": "Clean and renewable are good points."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Before listening, you see slides with mirrors and the sun. What do you predict?",
+   "o": [
+    "The presentation is about a solar project.",
+    "The presentation is about football.",
+    "The presentation is about coal mines.",
+    "The presentation is about a library."
+   ],
+   "why": "The pictures help us predict the topic."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the Mir'aah project important for Oman?",
+   "o": [
+    "It produces renewable energy and reduces the use of natural gas.",
+    "It uses more natural gas.",
+    "It only works in winter.",
+    "It makes the air dirtier."
+   ],
+   "why": "It saves gas by using the sun."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Oman needs more electricity. Which answer gives a balanced evaluation of solar power?",
+   "o": [
+    "The main benefit is that Oman is sunny. The biggest disadvantage is the cost.",
+    "Solar power is perfect and has no problems.",
+    "Solar power is bad because the sun is renewable.",
+    "Oman has no sun, so it is useless."
+   ],
+   "why": "A good evaluation gives an advantage and a disadvantage."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it important to notice opinions in a listening text?",
+   "o": [
+    "To understand the speaker's position and tell opinion from fact.",
+    "To count the words.",
+    "To ignore the speaker.",
+    "To find the date of the recording."
+   ],
+   "why": "Opinions show what the speaker thinks."
+  }
+ ]
+}

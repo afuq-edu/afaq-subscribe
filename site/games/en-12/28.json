@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Studying Abroad (Vocabulary)",
+ "lesson": "Lead-in and reading for detail: preparing to study abroad",
+ "outcomes": [
+  "Discuss the advantages and disadvantages of studying abroad",
+  "Skim and read a text in detail about preparing to study abroad"
+ ],
+ "tf": [
+  {
+   "s": "Studying abroad can help you improve your language skills.",
+   "t": true,
+   "why": "Yes, using a language every day improves it."
+  },
+  {
+   "s": "Culture shock is an advantage of studying abroad.",
+   "t": false,
+   "why": "Culture shock is a disadvantage."
+  },
+  {
+   "s": "The text says a positive attitude influences how you behave.",
+   "t": true,
+   "why": "Your attitude affects how you act and cope."
+  },
+  {
+   "s": "Studying abroad is always cheap.",
+   "t": false,
+   "why": "Studying abroad can be expensive."
+  },
+  {
+   "s": "Sorting out issues at home before leaving helps you focus on your new life.",
+   "t": true,
+   "why": "Then you have fewer worries while abroad."
+  },
+  {
+   "s": "Doing your own washing and ironing before leaving can make you more confident.",
+   "t": true,
+   "why": "It shows you can cope on your own."
+  },
+  {
+   "s": "Homesickness is one possible disadvantage of studying abroad.",
+   "t": true,
+   "why": "Being far from family can make you miss home."
+  },
+  {
+   "s": "You should find out nothing about the university before you go.",
+   "t": false,
+   "why": "Finding out about the university is part of preparing."
+  },
+  {
+   "s": "Skimming means reading every word slowly.",
+   "t": false,
+   "why": "Skimming is reading quickly for the main idea."
+  },
+  {
+   "s": "A scholarship is money given to help a student pay for studies.",
+   "t": true,
+   "why": "Many students study abroad on a scholarship."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which is an advantage of studying abroad?",
+   "o": [
+    "better job opportunities",
+    "culture shock",
+    "homesickness"
+   ],
+   "why": "Studying abroad can help your future career."
+  },
+  {
+   "q": "Which problem of studying abroad is about money?",
+   "o": [
+    "it is expensive",
+    "learning a new language",
+    "learning about a new culture"
+   ],
+   "why": "The cost can be high."
+  },
+  {
+   "q": "Why is a positive attitude important?",
+   "o": [
+    "it influences how you behave",
+    "it makes study free",
+    "it stops all problems"
+   ],
+   "why": "A positive attitude helps you act well."
+  },
+  {
+   "q": "Feeling confused by a new culture is called...",
+   "o": [
+    "culture shock",
+    "a scholarship",
+    "an attitude"
+   ],
+   "why": "Culture shock happens in a very different culture."
+  },
+  {
+   "q": "Why sort out issues at home before leaving?",
+   "o": [
+    "to focus on your new life",
+    "to stay at home",
+    "to miss your flight"
+   ],
+   "why": "Fewer worries mean better focus."
+  },
+  {
+   "q": "What should you find out about before you go?",
+   "o": [
+    "the university",
+    "your old school",
+    "a football score"
+   ],
+   "why": "Knowing about the university helps you prepare."
+  },
+  {
+   "q": "What can help you feel confident about coping alone?",
+   "o": [
+    "doing your own washing and ironing",
+    "asking others to do everything",
+    "staying in bed"
+   ],
+   "why": "Practising daily jobs builds confidence."
+  },
+  {
+   "q": "What do you do when you skim a text?",
+   "o": [
+    "read quickly for the main idea",
+    "read every word",
+    "read it backwards"
+   ],
+   "why": "Skimming gives you the general idea."
+  },
+  {
+   "q": "Money to help pay for studies is a...",
+   "o": [
+    "scholarship",
+    "deadline",
+    "campus"
+   ],
+   "why": "A scholarship pays for some or all of your studies."
+  },
+  {
+   "q": "Missing your family while abroad is...",
+   "o": [
+    "homesickness",
+    "independence",
+    "a scholarship"
+   ],
+   "why": "Homesickness is a common feeling abroad."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Money to pay for your studies",
+   "a": "scholarship",
+   "d": [
+    "culture shock",
+    "homesickness",
+    "attitude"
+   ]
+  },
+  {
+   "q": "Confusion in a new culture",
+   "a": "culture shock",
+   "d": [
+    "scholarship",
+    "campus",
+    "deadline"
+   ]
+  },
+  {
+   "q": "Missing home",
+   "a": "homesickness",
+   "d": [
+    "scholarship",
+    "attitude",
+    "culture shock"
+   ]
+  },
+  {
+   "q": "Thinking in a good way",
+   "a": "positive attitude",
+   "d": [
+    "negative attitude",
+    "culture shock",
+    "homesickness"
+   ]
+  },
+  {
+   "q": "Get ready before you go",
+   "a": "prepare",
+   "d": [
+    "forget",
+    "ignore",
+    "delay"
+   ]
+  },
+  {
+   "q": "A disadvantage: it is ...",
+   "a": "expensive",
+   "d": [
+    "interesting",
+    "useful",
+    "exciting"
+   ]
+  },
+  {
+   "q": "Reading quickly for the gist",
+   "a": "skimming",
+   "d": [
+    "close reading",
+    "reading aloud",
+    "copying"
+   ]
+  },
+  {
+   "q": "Advantage: better job ...",
+   "a": "opportunities",
+   "d": [
+    "problems",
+    "deadlines",
+    "worries"
+   ]
+  },
+  {
+   "q": "Opposite of 'advantage'",
+   "a": "disadvantage",
+   "d": [
+    "benefit",
+    "plus",
+    "chance"
+   ]
+  },
+  {
+   "q": "Attitude influences how you ...",
+   "a": "behave",
+   "d": [
+    "sleep",
+    "eat",
+    "travel"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is a disadvantage of studying abroad?",
+   "o": [
+    "Culture shock",
+    "Learning about a new culture",
+    "Improving language skills",
+    "Better job opportunities"
+   ],
+   "why": "Culture shock can make the first weeks hard."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is NOT an advantage of studying abroad?",
+   "o": [
+    "Homesickness",
+    "Learning about a foreign culture",
+    "Improving language skills",
+    "Better job opportunities"
+   ],
+   "why": "Homesickness is a disadvantage."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the text advise students to sort out before leaving?",
+   "o": [
+    "Issues at home",
+    "Their old school books",
+    "Next year's holiday",
+    "Their football team"
+   ],
+   "why": "Then they can focus on their new life."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the text say about doing your own washing and ironing before leaving?",
+   "o": [
+    "It helps you feel confident about coping alone",
+    "It is a waste of time",
+    "The university does it for you",
+    "It causes homesickness"
+   ],
+   "why": "Practice at home builds confidence."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Huda will study in the UK next year. What is the best way to prepare?",
+   "o": [
+    "Find out about the university and learn to look after herself",
+    "Wait and do nothing",
+    "Pack on the last day without any plan",
+    "Ignore everything about the country"
+   ],
+   "why": "Good preparation makes the change easier."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Majid arrives abroad and feels confused by the new customs. What is he experiencing?",
+   "o": [
+    "Culture shock",
+    "A scholarship",
+    "Independence",
+    "Skimming"
+   ],
+   "why": "New customs can cause culture shock."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali has one minute to find the main idea of a paragraph. What should he do?",
+   "o": [
+    "Skim it",
+    "Read every word slowly",
+    "Translate every word",
+    "Learn it by heart"
+   ],
+   "why": "Skimming is the quick way to get the main idea."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can a positive attitude help a student abroad?",
+   "o": [
+    "It influences how they behave and cope",
+    "It makes everything free",
+    "It means they never miss home",
+    "It replaces studying"
+   ],
+   "why": "A positive attitude helps you deal with problems."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it wise to sort out issues at home before leaving?",
+   "o": [
+    "You can focus more on your new life",
+    "You will never need to call home",
+    "Your family will move with you",
+    "It makes the flight shorter"
+   ],
+   "why": "Unfinished problems at home can distract you."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can homesickness be a bigger problem when you study abroad?",
+   "o": [
+    "You are far from your family for a long time",
+    "There are no students abroad",
+    "Phones do not work abroad",
+    "Universities abroad have no campus"
+   ],
+   "why": "Distance from family makes missing home stronger."
+  }
+ ]
+}

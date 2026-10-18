@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Unit 5: Eating Out (Writing)",
+  "lesson": "Writing an ending; good and bad restaurants; analysing essay structure",
+  "outcomes": [
+    "Write a suitable ending for a story",
+    "Sort phrases that describe good and bad restaurants",
+    "Recognise the parts of a narrative essay: topic sentences and supporting details"
+  ],
+  "tf": [
+    { "s": "'Delicious food' and 'reasonable prices' describe a good restaurant.", "t": true, "why": "These are positive features of a restaurant." },
+    { "s": "'Attentive service' describes a bad restaurant.", "t": false, "why": "Attentive service means waiters care about you, so it is good." },
+    { "s": "'Dirty cutlery' and 'rude waiters' describe a bad restaurant.", "t": true, "why": "Nobody wants dirty knives and forks or rude staff." },
+    { "s": "The model essay has five paragraphs.", "t": true, "why": "It has an introduction, body paragraphs and a conclusion." },
+    { "s": "A topic sentence is usually the last sentence of a paragraph.", "t": false, "why": "It is usually the first sentence and gives the main idea." },
+    { "s": "Supporting details give more information about the topic sentence.", "t": true, "why": "They explain or give examples of the main idea." },
+    { "s": "'Errors on the bill' is a sign of a good restaurant.", "t": false, "why": "Mistakes on the bill are a sign of a bad restaurant." },
+    { "s": "'Cosy' describes a place that is warm and comfortable.", "t": true, "why": "A cosy restaurant feels friendly and relaxing." },
+    { "s": "When you write an ending, you should copy sentences from the story.", "t": false, "why": "Use your own ideas to write the ending." },
+    { "s": "'Reasonable prices' means the prices are far too high.", "t": false, "why": "Reasonable prices are fair, not too expensive." }
+  ],
+  "boxes": [
+    { "q": "Which phrase describes a good restaurant?", "o": ["Varied menu", "Large cockroaches", "Rude waiters"], "why": "A varied menu gives you many choices." },
+    { "q": "Which phrase describes a bad restaurant?", "o": ["Errors on the bill", "Delicious food", "Attentive service"], "why": "Mistakes on the bill annoy customers." },
+    { "q": "What is 'cutlery'?", "o": ["Knives, forks and spoons", "Tables and chairs", "Plates of food"], "why": "Cutlery is what you eat with." },
+    { "q": "What is 'décor'?", "o": ["The style and decoration of a place", "The price of the meal", "The chef's name"], "why": "Décor is how a place is decorated." },
+    { "q": "Where is the topic sentence usually found?", "o": ["At the start of a paragraph", "In the middle", "In the title"], "why": "It usually opens the paragraph." },
+    { "q": "How many paragraphs are in the model essay?", "o": ["Five", "Three", "Seven"], "why": "The model essay has five paragraphs." },
+    { "q": "What does a conclusion do?", "o": ["Ends the essay", "Starts the essay", "Lists the menu"], "why": "The conclusion closes the story." },
+    { "q": "Which is a supporting detail?", "o": ["Our waiter was efficient and friendly.", "A Nightmare Meal", "The End"], "why": "It adds detail about the service." },
+    { "q": "Which word means 'fair, not too expensive'?", "o": ["Reasonable", "Cosy", "Rude"], "why": "Reasonable prices are fair prices." },
+    { "q": "Which creature in a restaurant is a bad sign?", "o": ["Cockroaches", "Fish on the menu", "A cat picture"], "why": "Cockroaches show the restaurant is dirty." }
+  ],
+  "hunt": [
+    { "q": "Knives, forks and spoons", "a": "cutlery", "d": ["décor", "menu", "bill"] },
+    { "q": "Decoration and style of a place", "a": "décor", "d": ["cutlery", "bill", "service"] },
+    { "q": "Warm and comfortable", "a": "cosy", "d": ["rude", "dirty", "noisy"] },
+    { "q": "Fair price", "a": "reasonable", "d": ["rude", "dirty", "attentive"] },
+    { "q": "Good restaurant: ... food", "a": "delicious", "d": ["cold", "dirty", "burnt"] },
+    { "q": "Bad restaurant: ... waiters", "a": "rude", "d": ["attentive", "efficient", "helpful"] },
+    { "q": "Insects in a bad restaurant", "a": "cockroaches", "d": ["butterflies", "bees", "ladybirds"] },
+    { "q": "Main-idea sentence of a paragraph", "a": "topic sentence", "d": ["conclusion", "title", "bill"] },
+    { "q": "Paragraphs in the model essay", "a": "five", "d": ["two", "three", "nine"] },
+    { "q": "Final part of an essay", "a": "conclusion", "d": ["introduction", "title", "topic"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "What is a topic sentence?", "o": ["Usually the first sentence of a paragraph that gives the main idea", "The title of the essay", "The last word of the essay", "A sentence with no verb"], "why": "The topic sentence tells you what the paragraph is about." },
+    { "lv": "التذكر", "q": "Which list shows only good-restaurant phrases?", "o": ["delicious food, varied menu, attentive service", "rude waiters, dirty cutlery, large cockroaches", "delicious food, rude waiters, errors on the bill", "dirty cutlery, varied menu, cockroaches"], "why": "All three are positive features." },
+    { "lv": "التذكر", "q": "Which list shows only bad-restaurant phrases?", "o": ["rude waiters, dirty cutlery, errors on the bill", "reasonable prices, cosy décor, delicious food", "attentive service, varied menu, rude waiters", "delicious food, large cockroaches, cosy décor"], "why": "All three describe problems." },
+    { "lv": "التذكر", "q": "What are the main parts of a narrative essay?", "o": ["Introduction, body paragraphs and conclusion", "Only a title and a list", "Questions and answers", "A menu and a bill"], "why": "These parts give the essay a clear structure." },
+    { "lv": "التطبيق", "q": "Choose the best supporting detail for the topic sentence 'The service was excellent.'", "o": ["Our waiter was efficient, helpful and friendly.", "The car park was full.", "It was raining outside.", "I live in Sohar."], "why": "This detail explains why the service was excellent." },
+    { "lv": "التطبيق", "q": "Which is the best two-sentence ending for 'A Nightmare Meal'?", "o": ["We never went back. From that day we always read reviews first.", "Once upon a time there was a restaurant.", "The restaurant opened in the morning.", "First we looked at the menu."], "why": "It closes the story and shows a lesson learned." },
+    { "lv": "التطبيق", "q": "You see a small restaurant with soft lights and comfortable chairs. Which word describes it?", "o": ["Cosy", "Rude", "Dirty", "Massive"], "why": "Cosy means warm, comfortable and relaxing." },
+    { "lv": "التحليل", "q": "Why is the topic sentence usually placed first in a paragraph?", "o": ["It tells the reader the main idea before the details", "It is always the shortest sentence", "It contains the ending of the story", "Teachers never read the first sentence"], "why": "Readers understand details better after knowing the main idea." },
+    { "lv": "التحليل", "q": "A paragraph says: 'The meal was terrible. The soup was cold, and the bread was hard.' Which part is the topic sentence?", "o": ["The meal was terrible.", "The soup was cold.", "The bread was hard.", "There is no topic sentence."], "why": "The first sentence gives the main idea; the others support it." },
+    { "lv": "التحليل", "q": "Why would 'large cockroaches' make customers leave a restaurant?", "o": ["They show the restaurant is dirty and unhealthy", "They make the food cheaper", "They show the décor is cosy", "They mean the service is attentive"], "why": "Cleanliness is very important where food is served." }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Learning Club 1",
+ "lesson": "Learning Club 1 – Lesson 2: CLIL Natural Science (Our senses)",
+ "outcomes": [
+  "I can name the five senses.",
+  "I can match each sense with a body part.",
+  "I can say which senses I use with things."
+ ],
+ "tf": [
+  {
+   "s": "We have got five senses.",
+   "t": true,
+   "why": "Sight, hearing, smell, taste and touch."
+  },
+  {
+   "s": "We can hear with our eyes.",
+   "t": false,
+   "why": "We hear with our ears."
+  },
+  {
+   "s": "We can smell with our noses.",
+   "t": true,
+   "why": "The nose is for smell."
+  },
+  {
+   "s": "We can taste with our tongues.",
+   "t": true,
+   "why": "The tongue is for taste."
+  },
+  {
+   "s": "We can touch with our hands and feet.",
+   "t": true,
+   "why": "Hands and feet can touch."
+  },
+  {
+   "s": "Sight is the sense we use with our ears.",
+   "t": false,
+   "why": "Sight is seeing, with our eyes."
+  },
+  {
+   "s": "We use hearing with music.",
+   "t": true,
+   "why": "We hear music with our ears."
+  },
+  {
+   "s": "We have got three senses.",
+   "t": false,
+   "why": "We have got five senses."
+  },
+  {
+   "s": "We can use two senses with one thing.",
+   "t": true,
+   "why": "A drum uses hearing and touch."
+  },
+  {
+   "s": "We use taste to see a picture.",
+   "t": false,
+   "why": "We use sight to see a picture."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How many senses have we got?",
+   "o": [
+    "five",
+    "three",
+    "ten"
+   ],
+   "why": "There are five senses."
+  },
+  {
+   "q": "We see with our ___.",
+   "o": [
+    "eyes",
+    "ears",
+    "nose"
+   ],
+   "why": "Eyes are for sight."
+  },
+  {
+   "q": "We hear with our ___.",
+   "o": [
+    "ears",
+    "eyes",
+    "tongue"
+   ],
+   "why": "Ears are for hearing."
+  },
+  {
+   "q": "Smell → ?",
+   "o": [
+    "nose",
+    "hand",
+    "ear"
+   ],
+   "why": "We smell with our noses."
+  },
+  {
+   "q": "Taste → ?",
+   "o": [
+    "tongue",
+    "eyes",
+    "feet"
+   ],
+   "why": "We taste with our tongues."
+  },
+  {
+   "q": "Which sense do we use with music?",
+   "o": [
+    "hearing",
+    "taste",
+    "smell"
+   ],
+   "why": "We hear music."
+  },
+  {
+   "q": "We see a picture. Which sense?",
+   "o": [
+    "sight",
+    "touch",
+    "smell"
+   ],
+   "why": "Seeing is sight."
+  },
+  {
+   "q": "What can we touch with our feet?",
+   "o": [
+    "a ball",
+    "a song",
+    "a smell"
+   ],
+   "why": "We can kick and touch a ball."
+  },
+  {
+   "q": "A bell: which sense?",
+   "o": [
+    "hearing",
+    "taste",
+    "smell"
+   ],
+   "why": "A bell makes a sound."
+  },
+  {
+   "q": "Touch is with our ...",
+   "o": [
+    "hands and feet",
+    "ears",
+    "nose"
+   ],
+   "why": "We touch with hands and feet."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "We see with our ...",
+   "a": "eyes",
+   "d": [
+    "ears",
+    "nose",
+    "feet"
+   ]
+  },
+  {
+   "q": "We hear with our ...",
+   "a": "ears",
+   "d": [
+    "eyes",
+    "hands",
+    "tongue"
+   ]
+  },
+  {
+   "q": "We smell with our ...",
+   "a": "noses",
+   "d": [
+    "ears",
+    "eyes",
+    "feet"
+   ]
+  },
+  {
+   "q": "We taste with our ...",
+   "a": "tongues",
+   "d": [
+    "ears",
+    "eyes",
+    "hands"
+   ]
+  },
+  {
+   "q": "Sense for music",
+   "a": "hearing",
+   "d": [
+    "taste",
+    "smell",
+    "sight"
+   ]
+  },
+  {
+   "q": "Sense for a picture",
+   "a": "sight",
+   "d": [
+    "taste",
+    "smell",
+    "hearing"
+   ]
+  },
+  {
+   "q": "Sense with the nose",
+   "a": "smell",
+   "d": [
+    "sight",
+    "touch",
+    "hearing"
+   ]
+  },
+  {
+   "q": "Sense with the tongue",
+   "a": "taste",
+   "d": [
+    "sight",
+    "hearing",
+    "smell"
+   ]
+  },
+  {
+   "q": "Sense with hands",
+   "a": "touch",
+   "d": [
+    "taste",
+    "smell",
+    "hearing"
+   ]
+  },
+  {
+   "q": "How many senses?",
+   "a": "five",
+   "d": [
+    "two",
+    "three",
+    "four"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is NOT one of the five senses?",
+   "o": [
+    "sleep",
+    "sight",
+    "taste",
+    "touch"
+   ],
+   "why": "The senses are sight, hearing, smell, taste and touch."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which body part do we use for sight?",
+   "o": [
+    "eyes",
+    "ears",
+    "nose",
+    "tongue"
+   ],
+   "why": "We see with our eyes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sense do we use with our ears?",
+   "o": [
+    "hearing",
+    "sight",
+    "taste",
+    "touch"
+   ],
+   "why": "Ears are for hearing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which body part do we use for taste?",
+   "o": [
+    "tongue",
+    "feet",
+    "ears",
+    "eyes"
+   ],
+   "why": "We taste with our tongues."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which senses do we use with a flower?",
+   "o": [
+    "sight and smell",
+    "taste and hearing",
+    "hearing only",
+    "taste only"
+   ],
+   "why": "We see and smell a flower."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A bell is in a bag. How can you know it is a bell without looking?",
+   "o": [
+    "by hearing it",
+    "by tasting it",
+    "by seeing it",
+    "by smelling it"
+   ],
+   "why": "A bell makes a sound we can hear."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You present your sense box: \"This is a bell. We use ___.\"",
+   "o": [
+    "hearing",
+    "taste",
+    "smell",
+    "sight only"
+   ],
+   "why": "A bell is for hearing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which senses do we use with an orange?",
+   "o": [
+    "sight, smell, taste and touch",
+    "hearing only",
+    "hearing and sight only",
+    "smell only"
+   ],
+   "why": "We see, smell, taste and touch an orange."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The diagram shows hearing and touch together. Which is a good example?",
+   "o": [
+    "a drum",
+    "a picture",
+    "a flower",
+    "a smell"
+   ],
+   "why": "We hear and touch a drum."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we use our noses with a flower?",
+   "o": [
+    "Because flowers can smell nice.",
+    "Because flowers make a sound.",
+    "Because we taste flowers.",
+    "Because flowers are noisy."
+   ],
+   "why": "The nose is for smell."
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Unit 5: Eating Out (Writing)",
+  "lesson": "Ordering paragraphs of a narrative essay and the stages of essay writing",
+  "outcomes": [
+    "Order jumbled paragraphs into a narrative essay using linking words",
+    "Put the eight stages of essay writing in the correct order"
+  ],
+  "tf": [
+    { "s": "The first stage of essay writing is making sure you understand the title.", "t": true, "why": "You need to know what the essay is about before you start." },
+    { "s": "Proofreading means reading through your work to correct mistakes.", "t": true, "why": "Proofreading catches spelling and grammar errors." },
+    { "s": "You should hand in your first draft without changing it.", "t": false, "why": "A first draft always needs changes; nobody writes a perfect essay at first." },
+    { "s": "A draft is a piece of writing that is not yet in its final form.", "t": true, "why": "Drafts are revised before the final version." },
+    { "s": "Linking words like 'He' can refer back to someone already mentioned, like 'the chef'.", "t": true, "why": "This helps you see which paragraph comes next." },
+    { "s": "You should proofread before you write your first draft.", "t": false, "why": "Proofreading comes near the end, after the final draft." },
+    { "s": "In 'A Nightmare Meal', paragraph E gives the general background.", "t": true, "why": "The background usually comes first, so E starts the essay." },
+    { "s": "Planning comes after writing the final draft.", "t": false, "why": "You plan before you write any draft." },
+    { "s": "Handing in the essay is the last stage of essay writing.", "t": true, "why": "You hand in only after proofreading." },
+    { "s": "To revise means to throw your essay away and start a new topic.", "t": false, "why": "To revise means to improve and change your draft." }
+  ],
+  "boxes": [
+    { "q": "What is the first stage of essay writing?", "o": ["Understand the title", "Proofread", "Hand in"], "why": "Start by understanding what the title asks." },
+    { "q": "What is the last stage of essay writing?", "o": ["Hand in", "Gather ideas", "Plan"], "why": "You hand in the essay at the end." },
+    { "q": "What comes straight after the first draft?", "o": ["Revise", "Hand in", "Understand the title"], "why": "You revise the first draft to improve it." },
+    { "q": "What does 'proofread' mean?", "o": ["Read to correct mistakes", "Read for fun", "Read aloud to a friend"], "why": "Proofreading finds and fixes errors." },
+    { "q": "Which paragraph gives the general background?", "o": ["E", "A", "F"], "why": "Paragraph E sets the scene first." },
+    { "q": "Which paragraph comes last in the essay?", "o": ["F", "E", "C"], "why": "The order is E, C, B, D, A, F." },
+    { "q": "In the linking words, who does 'He' refer to?", "o": ["The chef", "The reader", "The teacher"], "why": "'He' points back to 'the chef'." },
+    { "q": "What is a draft?", "o": ["Writing not yet final", "A finished book", "A list of words"], "why": "A draft can still be changed." },
+    { "q": "Which stage comes before planning?", "o": ["Gather ideas", "Final draft", "Proofread"], "why": "You collect ideas, then plan them." },
+    { "q": "What kind of essay is 'A Nightmare Meal'?", "o": ["Narrative", "Formal letter", "Report"], "why": "It tells a story of a bad meal." }
+  ],
+  "hunt": [
+    { "q": "Stage 1 of essay writing", "a": "understand title", "d": ["proofread", "hand in", "final draft"] },
+    { "q": "Stage 8 of essay writing", "a": "hand in", "d": ["plan", "gather ideas", "revise"] },
+    { "q": "Stage after 'gather ideas'", "a": "plan", "d": ["hand in", "proofread", "final draft"] },
+    { "q": "Stage after 'first draft'", "a": "revise", "d": ["plan", "hand in", "gather ideas"] },
+    { "q": "Stage after 'final draft'", "a": "proofread", "d": ["plan", "gather ideas", "first draft"] },
+    { "q": "Read to correct mistakes", "a": "proofread", "d": ["draft", "plan", "gather"] },
+    { "q": "Writing not yet in final form", "a": "draft", "d": ["title", "proofread", "conclusion"] },
+    { "q": "Background paragraph", "a": "E", "d": ["A", "D", "F"] },
+    { "q": "Final paragraph of the essay", "a": "F", "d": ["E", "B", "C"] },
+    { "q": "'He' refers back to ...", "a": "the chef", "d": ["the meal", "the title", "the bill"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "What does 'draft' mean?", "o": ["A piece of writing that is not yet in its final form", "The title of an essay", "A list of mistakes", "The last paragraph"], "why": "A draft is an early version that you improve." },
+    { "lv": "التذكر", "q": "Which is the correct order of the essay paragraphs?", "o": ["E, C, B, D, A, F", "A, B, C, D, E, F", "F, A, D, B, C, E", "E, A, B, C, D, F"], "why": "Paragraph E gives background and F ends the story." },
+    { "lv": "التذكر", "q": "Which stage comes between 'revise' and 'proofread'?", "o": ["Write the final draft", "Gather ideas", "Understand the title", "Hand in"], "why": "Revise, final draft, proofread, hand in." },
+    { "lv": "التذكر", "q": "How many stages of essay writing are there in the lesson?", "o": ["Eight", "Three", "Five", "Twelve"], "why": "Understand, gather, plan, first draft, revise, final draft, proofread, hand in." },
+    { "lv": "التطبيق", "q": "Mona has finished her final draft. What should she do next?", "o": ["Proofread it", "Gather ideas", "Plan the essay", "Understand the title"], "why": "After the final draft, check for mistakes." },
+    { "lv": "التطبيق", "q": "A paragraph starts 'He was very angry...'. What should the paragraph before it mention?", "o": ["The person 'He' refers to, such as the chef", "The end of the story", "Nothing about any person", "The title only"], "why": "Pronouns refer back to someone already introduced." },
+    { "lv": "التطبيق", "q": "Ali finds three spelling mistakes in his finished essay. Which stage is he doing?", "o": ["Proofreading", "Planning", "Gathering ideas", "Understanding the title"], "why": "Checking for mistakes is proofreading." },
+    { "lv": "التحليل", "q": "Why should students never hand in a first draft?", "o": ["It always needs changes; nobody writes a perfect essay at first attempt", "Teachers do not read first drafts", "First drafts are always too short", "The first draft has no title"], "why": "Revising makes the writing clearer and better." },
+    { "lv": "التحليل", "q": "How do linking words help you order jumbled paragraphs?", "o": ["They refer back to earlier ideas, showing what came before", "They tell you the page number", "They are always at the end of the essay", "They show the essay's word count"], "why": "Words like 'He' connect to 'the chef' in an earlier paragraph." },
+    { "lv": "التحليل", "q": "Why does the background paragraph come first in a narrative?", "o": ["It tells the reader who, where and when before the events", "It is the shortest paragraph", "It contains the ending", "It has no linking words"], "why": "Readers need the setting before they can follow the story." }
+  ]
+}

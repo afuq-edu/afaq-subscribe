@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Studying Abroad (Vocabulary)",
+ "lesson": "Grouping lexical items and describing a place",
+ "outcomes": [
+  "Group words into subject areas",
+  "Describe a town or village and ask questions about it",
+  "Understand how the SQU Rovers help new students"
+ ],
+ "tf": [
+  {
+   "s": "When describing a place, you can talk about its location and features.",
+   "t": true,
+   "why": "These are sections of the plan."
+  },
+  {
+   "s": "Asking questions after a talk shows interest.",
+   "t": true,
+   "why": "Questions also check understanding."
+  },
+  {
+   "s": "A plan makes a description less clear.",
+   "t": false,
+   "why": "A plan organises information and makes it clearer."
+  },
+  {
+   "s": "The SQU Rovers are a team of students who help new students.",
+   "t": true,
+   "why": "Yes, they help new students at SQU."
+  },
+  {
+   "s": "A student who loses an ID card should go to the Administration Office.",
+   "t": true,
+   "why": "They report it there and get a replacement."
+  },
+  {
+   "s": "The Rovers can only be found in the library.",
+   "t": false,
+   "why": "They are at stations such as the cafeteria or in front of the mosque."
+  },
+  {
+   "s": "The Rovers tell homesick students that nobody else feels this way.",
+   "t": false,
+   "why": "They say everyone goes through the same thing."
+  },
+  {
+   "s": "Finding their way around campus is a common problem for new students.",
+   "t": true,
+   "why": "A big campus can be confusing."
+  },
+  {
+   "s": "Airport, passport, ticket and flight belong to the field of travel.",
+   "t": true,
+   "why": "They are all travel words."
+  },
+  {
+   "s": "The new student in the picture looks confident and relaxed.",
+   "t": false,
+   "why": "He looks new, lost and confused."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which sentence is about a town's location?",
+   "o": [
+    "It is 20 km from the sea.",
+    "It has a beautiful old fort.",
+    "People can go fishing there."
+   ],
+   "why": "Location tells you where a place is."
+  },
+  {
+   "q": "Who are the SQU Rovers?",
+   "o": [
+    "students who help new students",
+    "teachers who give tests",
+    "bus drivers"
+   ],
+   "why": "They are students helping students."
+  },
+  {
+   "q": "Where do you report a lost ID card?",
+   "o": [
+    "the Administration Office",
+    "the cafeteria",
+    "the gym"
+   ],
+   "why": "You can get a replacement there."
+  },
+  {
+   "q": "How does the student in the picture feel?",
+   "o": [
+    "lost and confused",
+    "happy and calm",
+    "bored"
+   ],
+   "why": "He is new and does not know where to go."
+  },
+  {
+   "q": "Why are questions useful after a talk?",
+   "o": [
+    "they check understanding",
+    "they end the talk",
+    "they waste time"
+   ],
+   "why": "They also show interest."
+  },
+  {
+   "q": "What should you do after your partner's talk?",
+   "o": [
+    "ask questions about the place",
+    "leave the room",
+    "start a new talk"
+   ],
+   "why": "Asking questions keeps the conversation going."
+  },
+  {
+   "q": "Which question asks about location?",
+   "o": [
+    "How far is it from the sea?",
+    "What can you buy there?",
+    "Why do you like it?"
+   ],
+   "why": "Distance tells you where it is."
+  },
+  {
+   "q": "What do the Rovers say to homesick students?",
+   "o": [
+    "everyone goes through it",
+    "go home now",
+    "it never gets better"
+   ],
+   "why": "They reassure them it will get better."
+  },
+  {
+   "q": "How does a plan help a description?",
+   "o": [
+    "it organises information",
+    "it makes it longer",
+    "it hides ideas"
+   ],
+   "why": "Sections make it logical."
+  },
+  {
+   "q": "What is a common problem for new students?",
+   "o": [
+    "finding their way around",
+    "having too few classes",
+    "too much free time"
+   ],
+   "why": "The campus is new to them."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Students who help new SQU students",
+   "a": "SQU Rovers",
+   "d": [
+    "lecturers",
+    "tour guides",
+    "bus drivers"
+   ]
+  },
+  {
+   "q": "Report a lost ID card at the...",
+   "a": "Administration Office",
+   "d": [
+    "cafeteria",
+    "mosque",
+    "gym"
+   ]
+  },
+  {
+   "q": "A Rovers' station example",
+   "a": "cafeteria",
+   "d": [
+    "airport",
+    "beach",
+    "hospital"
+   ]
+  },
+  {
+   "q": "Sad and missing home",
+   "a": "homesick",
+   "d": [
+    "excited",
+    "confident",
+    "relaxed"
+   ]
+  },
+  {
+   "q": "Card that shows you are a student",
+   "a": "ID card",
+   "d": [
+    "menu",
+    "receipt",
+    "postcard"
+   ]
+  },
+  {
+   "q": "Where a place is",
+   "a": "location",
+   "d": [
+    "feature",
+    "question",
+    "plan"
+   ]
+  },
+  {
+   "q": "Something special about a place",
+   "a": "feature",
+   "d": [
+    "location",
+    "deadline",
+    "ticket"
+   ]
+  },
+  {
+   "q": "The student in the picture is...",
+   "a": "lost and confused",
+   "d": [
+    "calm and happy",
+    "proud",
+    "sleepy"
+   ]
+  },
+  {
+   "q": "Test that finds your level",
+   "a": "placement test",
+   "d": [
+    "driving test",
+    "eye test",
+    "final exam"
+   ]
+  },
+  {
+   "q": "A travel word",
+   "a": "passport",
+   "d": [
+    "lecture",
+    "tutor",
+    "degree"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What three things do you mention when describing a place?",
+   "o": [
+    "Location, features and what people can do there",
+    "Price, colour and size",
+    "The names of all the people",
+    "Only the weather"
+   ],
+   "why": "These are the sections of the plan."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why are new students sometimes upset?",
+   "o": [
+    "They lose their ID cards and feel homesick",
+    "They have no lessons",
+    "The campus is too small",
+    "They already know everything"
+   ],
+   "why": "New students face many small problems."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where can the Rovers be found?",
+   "o": [
+    "At stations such as the cafeteria or in front of the mosque",
+    "Only in the library",
+    "Only at the airport",
+    "In the city centre"
+   ],
+   "why": "They wait where new students can find them."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group of words is connected with travel?",
+   "o": [
+    "airport, passport, ticket, flight",
+    "campus, lecture, degree, tutor",
+    "goal, team, match, player",
+    "flour, oven, recipe, cake"
+   ],
+   "why": "These are all travel words."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which question asks about the features of a town?",
+   "o": [
+    "What famous buildings does it have?",
+    "How far is it from the sea?",
+    "Which region is it in?",
+    "How far is it from the capital?"
+   ],
+   "why": "Buildings are features; the others are about location."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A new student loses her ID card. What should she do?",
+   "o": [
+    "Go to the Administration Office and get a replacement",
+    "Stay at home for a week",
+    "Ask the cafeteria for a new card",
+    "Use a friend's card"
+   ],
+   "why": "The Administration Office deals with ID cards."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You say: 'My town is on the coast, 50 km from Muscat.' Which section is this?",
+   "o": [
+    "Location",
+    "Features",
+    "Things to do",
+    "Questions"
+   ],
+   "why": "It tells where the town is."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How do the Rovers help with homesickness?",
+   "o": [
+    "They say everyone goes through it and it will get better",
+    "They send students home",
+    "They give them extra tests",
+    "They ignore them"
+   ],
+   "why": "Knowing others feel the same helps."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does a plan make a description clearer?",
+   "o": [
+    "It organises information into logical sections",
+    "It makes it longer",
+    "It removes all details",
+    "It adds new topics"
+   ],
+   "why": "Listeners can follow organised ideas."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might it help that the Rovers are students themselves?",
+   "o": [
+    "They have had the same experiences as new students",
+    "They know nothing about the university",
+    "They are never busy",
+    "They write the placement test"
+   ],
+   "why": "They understand new students' problems."
+  }
+ ]
+}

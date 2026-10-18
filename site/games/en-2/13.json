@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 1: Look at my toys!",
+  "lesson": "Sounds and Spelling – Unit 1, Lesson 5: Graded readers",
+  "outcomes": [
+    "I can read the stories At the lake and I am six!",
+    "I can read words with ai, oa, ie and a-e.",
+    "I can name the boy's birthday presents."
+  ],
+  "tf": [
+    { "s": "In I am six!, the boy is six.", "t": true, "why": "Yes! The boy is six." },
+    { "s": "There is a boat on the cake.", "t": true, "why": "Great! A boat is on the cake." },
+    { "s": "There is a game in the box.", "t": true, "why": "Yes! It is a game!" },
+    { "s": "In I am six!, the boy is seven.", "t": false, "why": "The story is I am six!, so he is six." },
+    { "s": "The boy is happy because it is his birthday.", "t": true, "why": "Well done! He has got presents." },
+    { "s": "The word sail has ie.", "t": false, "why": "sail has ai." },
+    { "s": "The word soap has oa.", "t": true, "why": "Yes! s - oa - p." },
+    { "s": "The word game has oa.", "t": false, "why": "game has a-e." },
+    { "s": "You and have are tricky words.", "t": true, "why": "Yes! We read them by sight." },
+    { "s": "The word tie has ai.", "t": false, "why": "tie has ie." }
+  ],
+  "boxes": [
+    { "q": "How old is the boy?", "o": ["six", "seven", "ten"], "why": "The story is I am six!" },
+    { "q": "What is on the cake?", "o": ["a boat", "a goat", "a tie"], "why": "There is a boat on the cake." },
+    { "q": "What is in the box?", "o": ["a game", "a goat", "a coat"], "why": "It is a game!" },
+    { "q": "My ... is on the lake.", "o": ["boat", "coat", "cake"], "why": "A boat goes on the lake." },
+    { "q": "Which word has ai: sail or tie?", "o": ["sail", "tie", "both"], "why": "s - ai - l has ai." },
+    { "q": "Blend: s - oa - p", "o": ["soap", "sail", "sport"], "why": "s - oa - p makes soap." },
+    { "q": "My name is on this ...", "o": ["box", "lake", "goat"], "why": "My name is on this box." },
+    { "q": "Find the a-e word.", "o": ["cake", "boat", "tie"], "why": "cake has magic e." },
+    { "q": "Why is the boy happy?", "o": ["It's his birthday.", "He is sad.", "He is at school."], "why": "It's his birthday and he has presents." },
+    { "q": "Tick or cross: It is a cake. (a game)", "o": ["cross", "tick", "cake"], "why": "The picture shows a game, not a cake." }
+  ],
+  "hunt": [
+    { "q": "The boy's age", "a": "six", "d": ["seven", "ten", "five"] },
+    { "q": "On the cake there is a ...", "a": "boat", "d": ["goat", "coat", "tie"] },
+    { "q": "In the box: It is a ...", "a": "game", "d": ["goat", "road", "pie"] },
+    { "q": "Blend: s - ai - l", "a": "sail", "d": ["soap", "tie", "game"] },
+    { "q": "Blend: t - ie", "a": "tie", "d": ["tail", "toe", "cake"] },
+    { "q": "Blend: c - a - k - e", "a": "cake", "d": ["coat", "game", "sail"] },
+    { "q": "An oa word in At the lake", "a": "goat", "d": ["gate", "tie", "game"] },
+    { "q": "An a-e word in At the lake", "a": "gate", "d": ["goat", "coat", "boat"] },
+    { "q": "Tricky word: ... have got my pie.", "a": "You", "d": ["Pie", "Goat", "Lake"] },
+    { "q": "My (coat / boat) is on the gate.", "a": "coat", "d": ["boat", "goat", "cake"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Which is the name of graded reader 2?", "o": ["I am six!", "At the lake", "New toys", "The computer"], "why": "Graded reader 2 is I am six!" },
+    { "lv": "التذكر", "q": "Which word has ie?", "o": ["tie", "sail", "soap", "game"], "why": "t - ie has ie." },
+    { "lv": "التذكر", "q": "Which are tricky words in the readers?", "o": ["you, have", "boat, goat", "cake, game", "sail, tie"], "why": "you and have are the tricky words." },
+    { "lv": "التذكر", "q": "Which is a present in I am six!?", "o": ["a tie", "a goat", "a bike", "a kite"], "why": "The boy gets a tie." },
+    { "lv": "التطبيق", "q": "Choose: You have got my (mat / boat), goat!", "o": ["boat", "mat", "cake", "tie"], "why": "The goat has got the boat." },
+    { "lv": "التطبيق", "q": "Picture of soap. Which sentence matches?", "o": ["It is soap.", "It is a game.", "It is a tie.", "It is a cake."], "why": "The picture shows soap." },
+    { "lv": "التطبيق", "q": "What is in your box? Write a sentence.", "o": ["It is a game.", "It is a game!?", "it is a game", "Is a game it."], "why": "Start with a capital and end with a full stop." },
+    { "lv": "التحليل", "q": "Which group has one word from each sound ai, oa, ie, a-e?", "o": ["sail, boat, tie, cake", "sail, rain, tie, cake", "boat, goat, tie, game", "cake, game, soap, sail"], "why": "sail ai, boat oa, tie ie, cake a-e." },
+    { "lv": "التحليل", "q": "Which word does NOT belong: cake, game, boat?", "o": ["boat", "cake", "game", "none"], "why": "cake and game have a-e. boat has oa." },
+    { "lv": "التحليل", "q": "How do we know the boy is happy?", "o": ["He has got presents for his birthday", "He is at the lake", "He has got no cake", "He is at school"], "why": "Birthday presents make him happy." }
+  ]
+}

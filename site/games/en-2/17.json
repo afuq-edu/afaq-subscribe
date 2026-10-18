@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 2: Where’s my pen?",
+  "lesson": "Sounds and Spelling – Unit 2, Lesson 2: ng",
+  "outcomes": [
+    "I can hear ng at the end of words and say /ŋ/.",
+    "I can read and write ring, sing, long, swing and king.",
+    "I can read the tricky word their."
+  ],
+  "tf": [
+    { "s": "The word ring ends with ng.", "t": true, "why": "Yes! r - i - ng." },
+    { "s": "s - i - ng makes the word sing.", "t": true, "why": "Great! s - i - ng is sing." },
+    { "s": "The word fork has ng in it.", "t": false, "why": "fork has or. ring has ng." },
+    { "s": "We use their for other people.", "t": true, "why": "Yes! It is their torch means it belongs to them." },
+    { "s": "We use their for me and my friends.", "t": false, "why": "For me and my friends we say our." },
+    { "s": "The word king has ng at the end.", "t": true, "why": "Well done! k - i - ng." },
+    { "s": "ng makes two sounds, n and g.", "t": false, "why": "ng makes one sound: /ŋ/." },
+    { "s": "The word swing has ng.", "t": true, "why": "Yes! sw - i - ng." },
+    { "s": "The word long starts with ng.", "t": false, "why": "ng comes at the end: l - o - ng." },
+    { "s": "The word corn has ng.", "t": false, "why": "corn has or, not ng." }
+  ],
+  "boxes": [
+    { "q": "Blend: s - i - ng", "o": ["sing", "ring", "king"], "why": "s - i - ng makes sing." },
+    { "q": "Blend: r - i - ng", "o": ["ring", "sing", "long"], "why": "r - i - ng makes ring." },
+    { "q": "Which word has ng?", "o": ["bang", "boat", "bike"], "why": "b - a - ng has ng." },
+    { "q": "Where is ng in these words?", "o": ["at the end", "at the start", "not there"], "why": "ng comes at the end: ring, sing." },
+    { "q": "It is ... torch. (two children)", "o": ["their", "our", "his"], "why": "their is for other people." },
+    { "q": "It is ... game. (me and you)", "o": ["our", "their", "her"], "why": "our is for us." },
+    { "q": "The last sound in ring is...", "o": ["/ŋ/", "/ɔː/", "/eɪ/"], "why": "ring ends with ng /ŋ/." },
+    { "q": "A man with a crown is a...", "o": ["king", "ring", "swing"], "why": "k - i - ng is king." },
+    { "q": "Which word does NOT have ng?", "o": ["torch", "string", "spring"], "why": "torch has or." },
+    { "q": "Blend: str - i - ng", "o": ["string", "sting", "swing"], "why": "str - i - ng makes string." }
+  ],
+  "hunt": [
+    { "q": "Blend: s - w - i - ng", "a": "swing", "d": ["sting", "sing", "string"] },
+    { "q": "Blend: k - i - ng", "a": "king", "d": ["ring", "long", "bang"] },
+    { "q": "Blend: l - o - ng", "a": "long", "d": ["ring", "sing", "king"] },
+    { "q": "Blend: b - a - ng", "a": "bang", "d": ["sing", "long", "ring"] },
+    { "q": "Blend: st - i - ng", "a": "sting", "d": ["string", "swing", "spring"] },
+    { "q": "Find the ng word.", "a": "ring", "d": ["corn", "fork", "rain"] },
+    { "q": "Which one has ng?", "a": "spring", "d": ["sport", "storm", "soap"] },
+    { "q": "The sound of ng", "a": "/ŋ/", "d": ["/ɔː/", "/eɪ/", "/aɪ/"] },
+    { "q": "Two children: It is ... game.", "a": "their", "d": ["our", "his", "her"] },
+    { "q": "We: It is ... torch.", "a": "our", "d": ["their", "his", "her"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Which word ends with ng?", "o": ["sing", "sit", "sun", "six"], "why": "s - i - ng ends with ng." },
+    { "lv": "التذكر", "q": "Which is the new tricky word?", "o": ["their", "our", "who", "have"], "why": "We learn their. our is revision." },
+    { "lv": "التذكر", "q": "How many sounds does ng make?", "o": ["One", "Two", "Three", "None"], "why": "ng is two letters but one sound." },
+    { "lv": "التذكر", "q": "Where do we hear ng in our words?", "o": ["At the end", "At the start", "In the middle only", "We don't hear it"], "why": "ring, sing, king: ng is at the end." },
+    { "lv": "التطبيق", "q": "Look at a picture of a king. Write the word.", "o": ["king", "kin", "kign", "keng"], "why": "k - i - ng spells king." },
+    { "lv": "التطبيق", "q": "Sara and Omar have a ball. It is ... ball.", "o": ["their", "our", "his", "her"], "why": "Two other people: their." },
+    { "lv": "التطبيق", "q": "Change s in sing to r. What word?", "o": ["ring", "king", "long", "swing"], "why": "r - i - ng makes ring." },
+    { "lv": "التحليل", "q": "Which group has only ng words?", "o": ["ring, long, bang", "ring, corn, bang", "sing, fork, king", "long, boat, swing"], "why": "ring, long and bang all have ng." },
+    { "lv": "التحليل", "q": "What is the difference between our and their?", "o": ["our is for us, their is for others", "our is for others, their is for us", "They are the same", "Both are for one boy"], "why": "our = us, their = them." },
+    { "lv": "التحليل", "q": "Which word is the odd one out?", "o": ["storm", "sing", "swing", "string"], "why": "storm has or. The others have ng." }
+  ]
+}

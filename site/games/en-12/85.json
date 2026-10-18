@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: A Helping Hand (Listening & Speaking)",
+ "lesson": "Verb forms and scanning; listening for true/false (Listening 2.4.4) / Interviewing about future plans and the poem ‘Goodbye, School’",
+ "outcomes": [
+  "Scan texts and decide if statements are true or false",
+  "Interview a partner about future plans with full answers",
+  "Understand the feelings in the poem 'Goodbye, School'"
+ ],
+ "tf": [
+  {
+   "s": "Scanning means reading quickly to find specific information, such as names.",
+   "t": true,
+   "why": "Yes, scanning helps you find details fast."
+  },
+  {
+   "s": "Ali and his father agree about his future job.",
+   "t": false,
+   "why": "They disagree: Ali wants engineering, but his father wants medicine."
+  },
+  {
+   "s": "Ali's father wants him to become a doctor.",
+   "t": true,
+   "why": "Right, that is why Ali is worried."
+  },
+  {
+   "s": "Ali and Maha are in the same grade.",
+   "t": false,
+   "why": "Ali is in Grade 12, but Maha is in Grade 11."
+  },
+  {
+   "s": "The poem 'Goodbye, School' is about leaving school.",
+   "t": true,
+   "why": "Yes, the poet thinks about the end of school life."
+  },
+  {
+   "s": "Maha wants to be an IT programmer who designs smart applications.",
+   "t": true,
+   "why": "Correct, that is Maha's ambition."
+  },
+  {
+   "s": "Interview topics in Activity 3 include university and travel.",
+   "t": true,
+   "why": "Yes, the headings are job, university, travel and ambitions."
+  },
+  {
+   "s": "In the poem, the writer feels only happy about leaving school.",
+   "t": false,
+   "why": "The poet has mixed emotions: hope and affection for school."
+  },
+  {
+   "s": "In the poem, 'patience' refers to the teachers who helped with learning.",
+   "t": true,
+   "why": "Well done, the poet remembers the teachers' patience."
+  },
+  {
+   "s": "The two lines you write about leaving school must rhyme.",
+   "t": false,
+   "why": "Your lines do not need to rhyme."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does Ali want to study?",
+   "o": [
+    "Engineering",
+    "Medicine",
+    "Art"
+   ],
+   "why": "Ali dreams of becoming an engineer."
+  },
+  {
+   "q": "Who is in Grade 12?",
+   "o": [
+    "Ali",
+    "Maha",
+    "Both of them"
+   ],
+   "why": "Ali is in Grade 12; Maha is in Grade 11."
+  },
+  {
+   "q": "In Activity 1, what do you circle in the texts?",
+   "o": [
+    "The correct verb forms",
+    "The pictures",
+    "The titles"
+   ],
+   "why": "You choose the correct verb forms."
+  },
+  {
+   "q": "In the listening task, what do pairs decide?",
+   "o": [
+    "If statements are true or false",
+    "Which poem is best",
+    "Who wins a quiz"
+   ],
+   "why": "Pairs decide true or false and correct the false ones."
+  },
+  {
+   "q": "Which topic is NOT an interview heading in Activity 3?",
+   "o": [
+    "Favourite food",
+    "University",
+    "Ambitions"
+   ],
+   "why": "The headings are job, university, travel and ambitions."
+  },
+  {
+   "q": "What feelings does the poet have about leaving school?",
+   "o": [
+    "Mixed emotions",
+    "Only anger",
+    "No feelings"
+   ],
+   "why": "The poet feels hope and also affection for school."
+  },
+  {
+   "q": "What should a good interview answer include?",
+   "o": [
+    "Details and reasons",
+    "Only yes or no",
+    "One word"
+   ],
+   "why": "Details keep the conversation going."
+  },
+  {
+   "q": "What do you write in the mini project?",
+   "o": [
+    "Two lines about leaving school",
+    "A long essay",
+    "A letter to a friend"
+   ],
+   "why": "You write two short lines about leaving school."
+  },
+  {
+   "q": "What kind of text is 'Goodbye, School'?",
+   "o": [
+    "A poem",
+    "An interview",
+    "A letter"
+   ],
+   "why": "It is a poem you read and listen to."
+  },
+  {
+   "q": "What does Maha want to design?",
+   "o": [
+    "Smart applications",
+    "Buildings",
+    "Hospitals"
+   ],
+   "why": "Maha wants to be an IT programmer."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Calm waiting; teachers show it",
+   "a": "Patience",
+   "d": [
+    "Prospects",
+    "Ambition",
+    "Emotions"
+   ]
+  },
+  {
+   "q": "Chances of future success",
+   "a": "Prospects",
+   "d": [
+    "Patience",
+    "Achievement",
+    "Engineering"
+   ]
+  },
+  {
+   "q": "Something done well with effort",
+   "a": "Achievement",
+   "d": [
+    "Prospects",
+    "Patience",
+    "Emotion"
+   ]
+  },
+  {
+   "q": "The subject Ali wants to study",
+   "a": "Engineering",
+   "d": [
+    "Medicine",
+    "Biology",
+    "History"
+   ]
+  },
+  {
+   "q": "Ali's grade at school",
+   "a": "Grade 12",
+   "d": [
+    "Grade 11",
+    "Grade 10",
+    "Grade 9"
+   ]
+  },
+  {
+   "q": "The job Maha wants",
+   "a": "IT programmer",
+   "d": [
+    "Doctor",
+    "Engineer",
+    "Teacher"
+   ]
+  },
+  {
+   "q": "The job Ali's father wants for him",
+   "a": "Doctor",
+   "d": [
+    "Engineer",
+    "Programmer",
+    "Pilot"
+   ]
+  },
+  {
+   "q": "Reading fast to find names",
+   "a": "Scanning",
+   "d": [
+    "Writing",
+    "Speaking",
+    "Drawing"
+   ]
+  },
+  {
+   "q": "Feelings like hope and sadness",
+   "a": "Emotions",
+   "d": [
+    "Prospects",
+    "Achievements",
+    "Headings"
+   ]
+  },
+  {
+   "q": "Big goals for your future",
+   "a": "Ambitions",
+   "d": [
+    "Emotions",
+    "Memories",
+    "Patience"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is scanning?",
+   "o": [
+    "Reading quickly to find specific information",
+    "Reading every word slowly",
+    "Writing a summary of a text",
+    "Listening for the main idea"
+   ],
+   "why": "Scanning is looking fast for details like names."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What will the poet remember about school?",
+   "o": [
+    "Close friends and the help of teachers",
+    "Only the school building",
+    "Only exam results",
+    "The school bus"
+   ],
+   "why": "The poet remembers friends and helpful teachers."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why is Ali worried?",
+   "o": [
+    "His father wants him to be a doctor, but he wants to be an engineer",
+    "He is only in Grade 11",
+    "He has failed his exams",
+    "He does not like his school"
+   ],
+   "why": "Ali and his father want different futures for him."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why shouldn't you answer only 'yes' or 'no' in an interview?",
+   "o": [
+    "To give more information and keep the conversation going",
+    "To finish the interview quickly",
+    "Because 'yes' and 'no' are rude words",
+    "To avoid answering the question"
+   ],
+   "why": "Full answers make an interview interesting."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The statement 'Ali wants to study medicine' is false. Which correction is right?",
+   "o": [
+    "Ali wants to study engineering.",
+    "Maha wants to study medicine.",
+    "Ali's father wants to study engineering.",
+    "Ali wants to be a doctor."
+   ],
+   "why": "Ali's real wish is engineering."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner asks: 'Which university would you like to go to?' Which is the best answer?",
+   "o": [
+    "I'd like to go to a university with a good engineering college because I love maths.",
+    "Yes.",
+    "University.",
+    "No, thanks."
+   ],
+   "why": "A good answer gives details and a reason."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Maha wants to design smart applications. Which subject fits her plan best?",
+   "o": [
+    "IT",
+    "Medicine",
+    "History",
+    "Cooking"
+   ],
+   "why": "IT programmers design applications."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the poet have mixed emotions?",
+   "o": [
+    "The poet hopes for the future but also loves school",
+    "The poet hates school and is happy to leave",
+    "The poet is afraid of exams only",
+    "The poet doesn't care about the future"
+   ],
+   "why": "Hope and affection together make mixed emotions."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which interview question will get the most information?",
+   "o": [
+    "What are your plans after Grade 12?",
+    "Do you like school?",
+    "Are you in Grade 12?",
+    "Is your name Ali?"
+   ],
+   "why": "Open 'wh-' questions invite long answers."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we rewrite false statements correctly after listening?",
+   "o": [
+    "To show we understood the true information",
+    "To make the text longer",
+    "To practise handwriting only",
+    "To copy the statement again"
+   ],
+   "why": "Correcting shows you really understood what you heard."
+  }
+ ]
+}

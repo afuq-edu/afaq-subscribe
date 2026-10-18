@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Unit 4: Service With a Smile (Listening & Speaking)",
+  "lesson": "Listening 3.4.3 and Soundbites: complaining and responding to complaints",
+  "outcomes": [
+    "Identify a hotel guest's complaints and the receptionist's promises",
+    "Use polite phrases to complain and respond to complaints",
+    "Discuss solutions to problems and the idea 'The customer is always right'"
+  ],
+  "tf": [
+    { "s": "The guest complains that his room has no sea view.", "t": true, "why": "His room looks over the car park instead of the sea." },
+    { "s": "The guest is happy with the towels in his room.", "t": false, "why": "He complains that the towels are dirty." },
+    { "s": "The receptionist promises to call the maintenance department about the air conditioning.", "t": true, "why": "Maintenance fixes broken things like air conditioners." },
+    { "s": "'I can only apologise' is a phrase for complaining.", "t": false, "why": "It is a phrase for responding to a complaint." },
+    { "s": "'It's just not up to standard' is a phrase for complaining.", "t": true, "why": "It says that something is not good enough." },
+    { "s": "The guest says the hotel is supposed to be five-star but feels more like a two-star hotel.", "t": true, "why": "That is why he is so disappointed." },
+    { "s": "The phrase 'The customer is always right' was coined by Harry Gordon Selfridge.", "t": true, "why": "He was the founder of Selfridge's." },
+    { "s": "One criticism of 'The customer is always right' is that some customers can be rude.", "t": true, "why": "Staff may be unhappy when a rude customer is wrong." },
+    { "s": "Intonation does not matter when you complain or apologise.", "t": false, "why": "The right intonation helps you sound polite and sincere." },
+    { "s": "The guest's sandwich from room service was exactly what he ordered.", "t": false, "why": "He received the wrong sandwich." }
+  ],
+  "boxes": [
+    { "q": "What did the guest's window look over?", "o": ["The car park", "The sea", "The garden"], "why": "He wanted a sea view but saw the car park." },
+    { "q": "What was wrong with the towels?", "o": ["They were dirty", "They were too big", "They were missing"], "why": "The guest complains about dirty towels." },
+    { "q": "What was wrong with the food from room service?", "o": ["It was the wrong sandwich", "It was too hot", "It was free"], "why": "He got a sandwich he did not order." },
+    { "q": "Which department will fix the air conditioning?", "o": ["Maintenance", "Kitchen", "Reception"], "why": "The maintenance department repairs equipment." },
+    { "q": "Which phrase responds to a complaint?", "o": ["I'm terribly sorry.", "It's most disappointing.", "I'm not very happy about it."], "why": "'I'm terribly sorry' is an apology." },
+    { "q": "Which phrase makes a complaint?", "o": ["I've got a complaint about my room.", "I can only apologise.", "I'm terribly sorry."], "why": "This phrase starts a complaint." },
+    { "q": "Who coined 'The customer is always right'?", "o": ["Harry Gordon Selfridge", "Hassan the chef", "Salima"], "why": "He founded the Selfridge's store." },
+    { "q": "What does 'apologise' mean?", "o": ["Say sorry", "Say thank you", "Say goodbye"], "why": "To apologise is to say you are sorry." },
+    { "q": "Which phrase introduces a hypothetical solution?", "o": ["The best idea would be to...", "I've got a complaint...", "It's not up to standard."], "why": "'Would' shows an imagined solution." },
+    { "q": "How many stars did the guest say the hotel felt like?", "o": ["Two", "Five", "Four"], "why": "It should be five-star but felt like two-star." }
+  ],
+  "hunt": [
+    { "q": "View from the guest's room", "a": "car park", "d": ["sea", "mountains", "garden"] },
+    { "q": "The towels were ...", "a": "dirty", "d": ["new", "clean", "soft"] },
+    { "q": "Who will fix the air conditioning?", "a": "maintenance", "d": ["the chef", "room service", "the guest"] },
+    { "q": "Room service brought the wrong ...", "a": "sandwich", "d": ["towel", "key", "map"] },
+    { "q": "The hotel felt like a ...-star hotel", "a": "two", "d": ["five", "four", "six"] },
+    { "q": "Word: say you are sorry", "a": "apologise", "d": ["complain", "order", "repair"] },
+    { "q": "Not good enough: not up to ...", "a": "standard", "d": ["date", "time", "speed"] },
+    { "q": "Coined 'customer is always right'", "a": "Selfridge", "d": ["Hassan", "Wright", "Salima"] },
+    { "q": "I'm terribly ...", "a": "sorry", "d": ["happy", "angry", "hungry"] },
+    { "q": "It's most ...", "a": "disappointing", "d": ["delicious", "wonderful", "exciting"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "What does the guest complain about?", "o": ["No sea view, dirty towels, a faulty air conditioner and the wrong sandwich", "The price of the room only", "The noise from the swimming pool", "The rude taxi driver"], "why": "These are the four problems in the listening." },
+    { "lv": "التذكر", "q": "Which pair of phrases is used to respond to complaints?", "o": ["I'm terribly sorry. / I can only apologise.", "It's most disappointing. / I'm not very happy about it.", "It's not up to standard. / I've got a complaint.", "I want my money. / This is terrible."], "why": "These phrases apologise to the customer." },
+    { "lv": "التذكر", "q": "Who was Harry Gordon Selfridge?", "o": ["The founder of Selfridge's, who coined 'The customer is always right'", "The hotel receptionist", "A famous chef in Oman", "The guest who complained"], "why": "He started the store and the famous phrase." },
+    { "lv": "التذكر", "q": "Why do companies use the phrase 'The customer is always right'?", "o": ["To convince customers they will get good service and to encourage staff to give it", "To make customers pay more", "To stop customers complaining", "To make staff work less"], "why": "The phrase promises good service." },
+    { "lv": "التطبيق", "q": "Your meal in a restaurant is cold. Which is the best polite complaint?", "o": ["I'm not very happy about my meal; it's cold.", "Give me another meal now!", "I can only apologise for my meal.", "I'm terribly sorry, it's cold."], "why": "This is a clear, polite complaint." },
+    { "lv": "التطبيق", "q": "A customer says the soup is wrong. What could a waiter say to avoid a scene?", "o": ["I'm sorry, let me fix that for you.", "That's your problem.", "It's just not up to standard.", "I've got a complaint about you."], "why": "An apology and an offer to help calms the customer." },
+    { "lv": "التطبيق", "q": "Your tour group's bus breaks down. Which phrase introduces a hypothetical solution?", "o": ["I think I would call another bus company.", "I've got a complaint about the bus.", "It's most disappointing.", "I can only apologise."], "why": "'I think I would...' suggests an imagined solution." },
+    { "lv": "التحليل", "q": "Why is the guest especially unhappy with this hotel?", "o": ["It is supposed to be five-star but it is more like two-star", "It is too cheap", "It is far from the airport", "He does not like the receptionist's name"], "why": "His expectations of a five-star hotel were not met." },
+    { "lv": "التحليل", "q": "What is one criticism of 'The customer is always right'?", "o": ["It can make employees unhappy when the customer is not right or is rude", "It gives customers bad service", "It means shops never sell anything", "It is too difficult to remember"], "why": "Customers are not always right, and staff may suffer." },
+    { "lv": "التحليل", "q": "Why does the receptionist call the maintenance department and not room service about the air conditioning?", "o": ["Maintenance repairs equipment; room service brings food", "Room service is closed", "Maintenance brings sandwiches", "The guest asked for room service"], "why": "Each department has its own job." }
+  ]
+}

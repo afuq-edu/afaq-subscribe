@@ -1,0 +1,58 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 1: Look at my toys!",
+  "lesson": "Unit 1 – Lesson 3: Vocabulary and Grammar (Outdoor toys)",
+  "outcomes": [
+    "I can name six outdoor toys.",
+    "I can ask: Is it a swing? and answer: Yes, it is. / No, it isn't."
+  ],
+  "tf": [
+    { "s": "A kite flies in the sky.", "t": true, "why": "Yes! A kite flies up high." },
+    { "s": "We ride a bike.", "t": true, "why": "Great! We ride a bike." },
+    { "s": "A slide is an indoor toy.", "t": false, "why": "A slide is an outdoor toy." },
+    { "s": "Is it a ball? (a ball) Yes, it is.", "t": true, "why": "Yes! It is a ball, so we say Yes, it is." },
+    { "s": "Is it a scooter? (a bike) Yes, it is.", "t": false, "why": "It's a bike, so we say No, it isn't." },
+    { "s": "No, it isn't. means it is not the right toy.", "t": true, "why": "Well done! isn't means is not." },
+    { "s": "Yes, it is. is the answer when the toy is wrong.", "t": false, "why": "When it is wrong we say No, it isn't." },
+    { "s": "Kite, bike and swing are outdoor toys.", "t": true, "why": "Yes! We play with them outside." },
+    { "s": "A swing is a colour.", "t": false, "why": "A swing is an outdoor toy." },
+    { "s": "We ask Is it a ...? to tell our age.", "t": false, "why": "Is it a ...? is a guessing question about a thing." }
+  ],
+  "boxes": [
+    { "q": "Which toy flies in the sky?", "o": ["kite", "slide", "bike"], "why": "A kite flies in the sky." },
+    { "q": "Which toy do we kick?", "o": ["ball", "swing", "kite"], "why": "We kick a ball." },
+    { "q": "We go down it in the park.", "o": ["slide", "kite", "ball"], "why": "We go down a slide." },
+    { "q": "Is it a swing? (a slide)", "o": ["No, it isn't.", "Yes, it is.", "It's a swing."], "why": "It's a slide, so the answer is No." },
+    { "q": "Is it a kite? (a kite)", "o": ["Yes, it is.", "No, it isn't.", "It isn't a kite."], "why": "It is a kite, so we say Yes." },
+    { "q": "isn't means...", "o": ["is not", "is new", "is it"], "why": "isn't = is not." },
+    { "q": "Which is an outdoor toy?", "o": ["scooter", "teddy", "puzzle"], "why": "We ride a scooter outside." },
+    { "q": "We go back and forth on a...", "o": ["swing", "ball", "kite"], "why": "A swing goes back and forth." },
+    { "q": "Ask about a toy:", "o": ["Is it a bike?", "How old are you?", "What's your name?"], "why": "Is it a bike? asks about a toy." },
+    { "q": "Which toy has two wheels and pedals?", "o": ["bike", "slide", "kite"], "why": "A bike has wheels and pedals." }
+  ],
+  "hunt": [
+    { "q": "It flies on a string.", "a": "kite", "d": ["slide", "swing", "ball"] },
+    { "q": "You ride it with pedals.", "a": "bike", "d": ["kite", "slide", "ball"] },
+    { "q": "You go down it.", "a": "slide", "d": ["ball", "kite", "bike"] },
+    { "q": "You kick it.", "a": "ball", "d": ["swing", "slide", "kite"] },
+    { "q": "You sit and go back and forth.", "a": "swing", "d": ["ball", "kite", "scooter"] },
+    { "q": "You stand on it and push.", "a": "scooter", "d": ["swing", "slide", "kite"] },
+    { "q": "Is it a ball? (a ball)", "a": "Yes, it is.", "d": ["No, it isn't.", "It's a kite.", "I don't know."] },
+    { "q": "Is it a bike? (a kite)", "a": "No, it isn't.", "d": ["Yes, it is.", "It's a bike.", "It's my bike."] },
+    { "q": "Is it a slide? (a slide)", "a": "Yes, it is.", "d": ["No, it isn't.", "It's a ball.", "It isn't."] },
+    { "q": "Is it a swing? (a scooter)", "a": "No, it isn't.", "d": ["Yes, it is.", "It's a swing.", "It's a slide."] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "How many outdoor toys do we learn?", "o": ["Six", "Ten", "Two", "Four"], "why": "Kite, bike, slide, scooter, ball and swing: six toys." },
+    { "lv": "التذكر", "q": "Which one is an outdoor toy?", "o": ["swing", "doll", "robot", "puzzle"], "why": "A swing is outside in the park." },
+    { "lv": "التذكر", "q": "What is the short way to say is not?", "o": ["isn't", "it's", "I'm", "name's"], "why": "is not = isn't." },
+    { "lv": "التذكر", "q": "Which is a yes answer?", "o": ["Yes, it is.", "No, it isn't.", "I don't know.", "Goodbye."], "why": "Yes, it is. says it is right." },
+    { "lv": "التطبيق", "q": "Your friend mimes riding a bike. You ask...", "o": ["Is it a bike?", "How old are you?", "What colour is it?", "What's your name?"], "why": "We ask Is it a ...? to guess." },
+    { "lv": "التطبيق", "q": "Teacher shows a bike: Is it a scooter? You say...", "o": ["No, it isn't.", "Yes, it is.", "It's a scooter.", "Yes, it isn't."], "why": "It's a bike, not a scooter." },
+    { "lv": "التطبيق", "q": "You see a kite. Teacher: What's this? You say...", "o": ["It's a kite.", "It's an kite.", "Yes, it is.", "No, it isn't."], "why": "What's this? needs It's a ...." },
+    { "lv": "التحليل", "q": "Clues: It's outdoor. You ride it. It's not a scooter. What is it?", "o": ["bike", "slide", "kite", "ball"], "why": "We ride a bike. It is not a scooter." },
+    { "lv": "التحليل", "q": "Which is the odd one out?", "o": ["teddy", "kite", "slide", "swing"], "why": "A teddy is an indoor toy. The others are outdoor toys." },
+    { "lv": "التحليل", "q": "Is it a ball? The answer is No, it isn't. What can the picture be?", "o": ["a kite", "a ball", "two balls", "a red ball"], "why": "No means it is not a ball, so it is a kite." }
+  ]
+}

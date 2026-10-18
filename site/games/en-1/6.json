@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 1: Family and friends",
+ "lesson": "Lesson 5: Project – Finger puppets + Sound n",
+ "outcomes": [
+  "I can say the sound /n/ and write the letter n.",
+  "I can find the first letter of words with s, a, t, p, n.",
+  "I can blend sounds to read nap and pan."
+ ],
+ "tf": [
+  {
+   "s": "Nose starts with the sound /n/.",
+   "t": true,
+   "why": "Yes! n, n, nose."
+  },
+  {
+   "s": "The /n/ action is touching your nose.",
+   "t": true,
+   "why": "Great! Touch your nose for /n/."
+  },
+  {
+   "s": "Nest starts with the letter t.",
+   "t": false,
+   "why": "Nest starts with n."
+  },
+  {
+   "s": "n – a – p makes nap.",
+   "t": true,
+   "why": "Well done! n-a-p, nap."
+  },
+  {
+   "s": "p – a – n makes nap.",
+   "t": false,
+   "why": "p-a-n makes pan."
+  },
+  {
+   "s": "Snake starts with the letter s.",
+   "t": true,
+   "why": "Yes! s, s, snake."
+  },
+  {
+   "s": "Tiger starts with the letter p.",
+   "t": false,
+   "why": "Tiger starts with t."
+  },
+  {
+   "s": "Arrow starts with the letter a.",
+   "t": true,
+   "why": "Yes! a, a, arrow."
+  },
+  {
+   "s": "Pen starts with the letter n.",
+   "t": false,
+   "why": "Pen starts with p."
+  },
+  {
+   "s": "Net and nut start with different sounds.",
+   "t": false,
+   "why": "Both start with /n/."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word starts with /n/?",
+   "o": [
+    "nut",
+    "sun",
+    "pen"
+   ],
+   "why": "n, n, nut!"
+  },
+  {
+   "q": "_ight: which letter is missing?",
+   "o": [
+    "n",
+    "s",
+    "t"
+   ],
+   "why": "n + ight = night."
+  },
+  {
+   "q": "_ose: which letter is missing?",
+   "o": [
+    "n",
+    "p",
+    "a"
+   ],
+   "why": "n + ose = nose."
+  },
+  {
+   "q": "The /n/ Phonics Card shows a …",
+   "o": [
+    "nose",
+    "pen",
+    "teddy"
+   ],
+   "why": "Nose starts with /n/."
+  },
+  {
+   "q": "Blend: p – a – n",
+   "o": [
+    "pan",
+    "nap",
+    "tap"
+   ],
+   "why": "p-a-n, pan!"
+  },
+  {
+   "q": "Blend: n – a – p",
+   "o": [
+    "nap",
+    "pan",
+    "pat"
+   ],
+   "why": "n-a-p, nap!"
+  },
+  {
+   "q": "First letter of pan?",
+   "o": [
+    "p",
+    "n",
+    "a"
+   ],
+   "why": "Pan starts with p."
+  },
+  {
+   "q": "First letter of tree?",
+   "o": [
+    "t",
+    "s",
+    "n"
+   ],
+   "why": "Tree starts with t."
+  },
+  {
+   "q": "First letter of axe?",
+   "o": [
+    "a",
+    "s",
+    "p"
+   ],
+   "why": "Axe starts with a."
+  },
+  {
+   "q": "First letter of sing?",
+   "o": [
+    "s",
+    "n",
+    "t"
+   ],
+   "why": "Sing starts with s."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Catch the /n/ word on your face.",
+   "a": "nose",
+   "d": [
+    "pen",
+    "sun",
+    "tree"
+   ]
+  },
+  {
+   "q": "Catch the /n/ home of a bird.",
+   "a": "nest",
+   "d": [
+    "pot",
+    "tin",
+    "pan"
+   ]
+  },
+  {
+   "q": "Catch the /n/ food.",
+   "a": "nut",
+   "d": [
+    "pie",
+    "apple",
+    "sun"
+   ]
+  },
+  {
+   "q": "Catch the /n/ word.",
+   "a": "night",
+   "d": [
+    "six",
+    "teddy",
+    "ant"
+   ]
+  },
+  {
+   "q": "Catch another /n/ word.",
+   "a": "neck",
+   "d": [
+    "sad",
+    "pot",
+    "axe"
+   ]
+  },
+  {
+   "q": "Catch the /n/ word.",
+   "a": "net",
+   "d": [
+    "tin",
+    "pin",
+    "sit"
+   ]
+  },
+  {
+   "q": "Catch the letter for /n/.",
+   "a": "n",
+   "d": [
+    "s",
+    "t",
+    "p"
+   ]
+  },
+  {
+   "q": "Catch the first letter of snake.",
+   "a": "s",
+   "d": [
+    "n",
+    "a",
+    "t"
+   ]
+  },
+  {
+   "q": "Blend: p – a – n",
+   "a": "pan",
+   "d": [
+    "nap",
+    "tap",
+    "pat"
+   ]
+  },
+  {
+   "q": "Blend: n – a – p",
+   "a": "nap",
+   "d": [
+    "pan",
+    "tap",
+    "sat"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which letter makes the sound /n/?",
+   "o": [
+    "n",
+    "p",
+    "s",
+    "a"
+   ],
+   "why": "The letter n says /n/."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these words starts with /n/?",
+   "o": [
+    "net",
+    "pot",
+    "tin",
+    "six"
+   ],
+   "why": "n, n, net!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which letters did we learn in Unit 1?",
+   "o": [
+    "s, a, t, p, n",
+    "b, c, d, e, f",
+    "g, o, l, f, e",
+    "x, y, z, o, u"
+   ],
+   "why": "Unit 1 sounds are s, a, t, p, n."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word starts with /æ/?",
+   "o": [
+    "alligator",
+    "nut",
+    "pen",
+    "teddy"
+   ],
+   "why": "a, a, alligator!"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Look and write the first letter: _et",
+   "o": [
+    "n",
+    "s",
+    "a",
+    "t"
+   ],
+   "why": "n + et = net."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Look and write the first letter: _in (pin)",
+   "o": [
+    "p",
+    "n",
+    "s",
+    "a"
+   ],
+   "why": "p + in = pin."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your puppet asks: What's your name? You say …",
+   "o": [
+    "I'm Hamad.",
+    "Who's this?",
+    "This is my pen.",
+    "Goodbye, nose!"
+   ],
+   "why": "Answer with I'm and your name."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which two words start with /n/?",
+   "o": [
+    "net and nose",
+    "pan and nut",
+    "six and net",
+    "toys and nose"
+   ],
+   "why": "Net and nose both start with n."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT start with /n/?",
+   "o": [
+    "pan",
+    "nap",
+    "nut",
+    "nest"
+   ],
+   "why": "Pan starts with /p/."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Nap and pan have the same letters. Why are they different words?",
+   "o": [
+    "The sounds are in a different order.",
+    "One has an s.",
+    "One has a t.",
+    "They are the same word."
+   ],
+   "why": "n-a-p and p-a-n: the order changes the word."
+  }
+ ]
+}

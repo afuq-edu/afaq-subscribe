@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: Aviation Then and Now (Reading)",
+ "lesson": "Skimming, True/False/Not Given and vocabulary development",
+ "outcomes": [
+  "Skim a text and choose the best title with reasons",
+  "Decide if statements are True, False or Not Given and correct false ones",
+  "Match new words and phrases from the text with their meanings"
+ ],
+ "tf": [
+  {
+   "s": "Skimming means reading quickly to get the general idea of a text.",
+   "t": true,
+   "why": "You skim for the main idea, not for details."
+  },
+  {
+   "s": "A title that is too general is the best choice for a text.",
+   "t": false,
+   "why": "The best title fits the whole text closely, not too generally."
+  },
+  {
+   "s": "A title that describes only one section of the text is not the best title.",
+   "t": true,
+   "why": "The best title must cover the whole text."
+  },
+  {
+   "s": "'Not Given' means the text does not give that information.",
+   "t": true,
+   "why": "You cannot find it as true or false in the text."
+  },
+  {
+   "s": "'Not Given' means the statement is the opposite of the text.",
+   "t": false,
+   "why": "That would be 'False'; 'Not Given' means the information is missing."
+  },
+  {
+   "s": "The Virgin Atlantic plane was entirely powered by biofuel.",
+   "t": false,
+   "why": "It was only partly powered by biofuel."
+  },
+  {
+   "s": "In T/F/NG tasks, small words like 'partly' and 'entirely' can change the answer.",
+   "t": true,
+   "why": "Adverbs and qualifying words change the meaning."
+  },
+  {
+   "s": "The KLM flight in the text carried 171 passengers.",
+   "t": true,
+   "why": "The corrected statement gives 171 passengers on the KLM flight."
+  },
+  {
+   "s": "When a statement is False, you do not need to correct it.",
+   "t": false,
+   "why": "The task asks you to correct false statements."
+  },
+  {
+   "s": "You must read every word slowly to skim a text.",
+   "t": false,
+   "why": "Skimming is quick reading for the general idea."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does skimming mean?",
+   "o": [
+    "Reading quickly for the main idea",
+    "Reading every word slowly",
+    "Writing a title"
+   ],
+   "why": "Skimming gives the general picture."
+  },
+  {
+   "q": "Which title was best for the text?",
+   "o": [
+    "Title c",
+    "Title a",
+    "Title d"
+   ],
+   "why": "Title c covers the whole text."
+  },
+  {
+   "q": "Why were titles a and b rejected?",
+   "o": [
+    "Too general",
+    "Too short",
+    "Spelled wrongly"
+   ],
+   "why": "They did not fit the text closely enough."
+  },
+  {
+   "q": "Why was title d rejected?",
+   "o": [
+    "It covers only one section",
+    "It is too general",
+    "It is too long"
+   ],
+   "why": "A good title covers the whole text."
+  },
+  {
+   "q": "How was the Virgin Atlantic plane powered?",
+   "o": [
+    "Partly by biofuel",
+    "Entirely by biofuel",
+    "By solar power only"
+   ],
+   "why": "The plane was only partly powered by biofuel."
+  },
+  {
+   "q": "Which airline's flight carried 171 passengers?",
+   "o": [
+    "KLM",
+    "Virgin Atlantic",
+    "Oman Air"
+   ],
+   "why": "The KLM flight carried 171 passengers."
+  },
+  {
+   "q": "What does 'Not Given' mean?",
+   "o": [
+    "The text has no information on it",
+    "The text says the opposite",
+    "The text agrees"
+   ],
+   "why": "The answer is not in the text."
+  },
+  {
+   "q": "What should you note carefully in T/F/NG?",
+   "o": [
+    "Adverbs and qualifying words",
+    "Page numbers",
+    "Font size"
+   ],
+   "why": "Words like 'partly' change the meaning."
+  },
+  {
+   "q": "Which word means 'not completely'?",
+   "o": [
+    "Partly",
+    "Entirely",
+    "Always"
+   ],
+   "why": "'Partly' means only some of it."
+  },
+  {
+   "q": "What must you do with a False statement?",
+   "o": [
+    "Correct it",
+    "Ignore it",
+    "Copy it"
+   ],
+   "why": "Correcting shows you understood the text."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Reading fast for the main idea",
+   "a": "skimming",
+   "d": [
+    "scanning",
+    "proofreading",
+    "drafting"
+   ]
+  },
+  {
+   "q": "Best title of the text",
+   "a": "c",
+   "d": [
+    "a",
+    "b",
+    "d"
+   ]
+  },
+  {
+   "q": "Problem with titles a and b",
+   "a": "too general",
+   "d": [
+    "too funny",
+    "too new",
+    "too short"
+   ]
+  },
+  {
+   "q": "Answer if the text has no info",
+   "a": "Not Given",
+   "d": [
+    "True",
+    "False",
+    "Correct"
+   ]
+  },
+  {
+   "q": "Answer if the text says the opposite",
+   "a": "False",
+   "d": [
+    "True",
+    "Not Given",
+    "Maybe"
+   ]
+  },
+  {
+   "q": "Virgin plane: ... powered by biofuel",
+   "a": "partly",
+   "d": [
+    "entirely",
+    "never",
+    "only"
+   ]
+  },
+  {
+   "q": "Passengers on the KLM flight",
+   "a": "171",
+   "d": [
+    "117",
+    "71",
+    "711"
+   ]
+  },
+  {
+   "q": "Airline with 171 passengers",
+   "a": "KLM",
+   "d": [
+    "Virgin Atlantic",
+    "Oman Air",
+    "Emirates"
+   ]
+  },
+  {
+   "q": "Fuel used by the Virgin plane",
+   "a": "biofuel",
+   "d": [
+    "solar power",
+    "coal",
+    "wind"
+   ]
+  },
+  {
+   "q": "Opposite of 'partly'",
+   "a": "entirely",
+   "d": [
+    "slowly",
+    "quickly",
+    "rarely"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What should you note carefully in True/False/Not Given tasks?",
+   "o": [
+    "Adverbs and qualifying words, like 'partly' and 'entirely'",
+    "The colour of the text",
+    "The number of paragraphs",
+    "The author's name"
+   ],
+   "why": "Small words can change whether a statement is true."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the difference between 'False' and 'Not Given'?",
+   "o": [
+    "False: the text says the opposite; Not Given: the text has no information",
+    "They mean the same",
+    "False: the text agrees; Not Given: the text disagrees",
+    "Not Given means the statement is true"
+   ],
+   "why": "Check whether the text contradicts the statement or says nothing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is skimming used for?",
+   "o": [
+    "Getting the general idea, for example to choose a title",
+    "Finding one exact number",
+    "Checking spelling",
+    "Learning words by heart"
+   ],
+   "why": "Skimming helps you understand what the whole text is about."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which airlines are mentioned in the text?",
+   "o": [
+    "Virgin Atlantic and KLM",
+    "Oman Air and Emirates",
+    "KLM and Qatar Airways",
+    "Only Virgin Atlantic"
+   ],
+   "why": "The text talks about Virgin Atlantic and KLM biofuel flights."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Statement: 'The Virgin Atlantic plane was entirely powered by biofuel.' What is the answer and correction?",
+   "o": [
+    "False: it was partly powered by biofuel",
+    "True: it used only biofuel",
+    "Not Given: the text says nothing",
+    "False: it used solar power"
+   ],
+   "why": "The text says 'partly', not 'entirely'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A statement mentions the colour of the KLM plane, but the text says nothing about colour. What is the answer?",
+   "o": [
+    "Not Given",
+    "True",
+    "False",
+    "Partly true"
+   ],
+   "why": "If the text has no information, the answer is Not Given."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You have one minute to choose a title for a long text. What should you do?",
+   "o": [
+    "Skim the text for the main idea",
+    "Read every word carefully",
+    "Read only the last line",
+    "Look up every word in a dictionary"
+   ],
+   "why": "Skimming quickly shows the overall topic."
+  },
+  {
+   "lv": "التحليل",
+   "q": "One title is too general, one covers only one section, and one covers the whole text. Which should you choose?",
+   "o": [
+    "The title that covers the whole text",
+    "The most general title",
+    "The title about one section",
+    "The longest title"
+   ],
+   "why": "The best title matches the whole text, like title c."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is title d not the best choice?",
+   "o": [
+    "It refers to only one section of the text",
+    "It is too general",
+    "It covers the whole text",
+    "It is the shortest title"
+   ],
+   "why": "The best title must describe the whole text."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do adverbs like 'partly' matter in a T/F/NG task?",
+   "o": [
+    "One adverb can make a statement false even if the rest is correct",
+    "Adverbs are never important",
+    "Adverbs always make a statement true",
+    "They only matter in spelling tests"
+   ],
+   "why": "Reading carefully stops you from choosing the wrong answer."
+  }
+ ]
+}

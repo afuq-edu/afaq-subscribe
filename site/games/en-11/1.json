@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 1 - Unit 1: Body Language",
+ "outcomes": [
+  "Name old and new ways of communicating",
+  "Understand body language and skim a text for the best title",
+  "Find words with similar meanings and name their parts of speech"
+ ],
+ "tf": [
+  {
+   "s": "Body language means sending a message with movements, gestures or facial expressions.",
+   "t": true,
+   "why": "Yes! Our bodies can send messages without words."
+  },
+  {
+   "s": "Printing is one of the new communication technologies in the text.",
+   "t": false,
+   "why": "Printing is an older tool; the Internet and mobile phones are new."
+  },
+  {
+   "s": "Skimming means reading quickly to get the general idea of a text.",
+   "t": true,
+   "why": "Right! When we skim, we look for the main idea."
+  },
+  {
+   "s": "When you skim, you must read every word slowly.",
+   "t": false,
+   "why": "Skimming is fast reading: look at the title, first lines and key words."
+  },
+  {
+   "s": "Police officers and teachers use an understanding of body language in their jobs.",
+   "t": true,
+   "why": "Correct! Many jobs need an understanding of body language."
+  },
+  {
+   "s": "The text says that animals use body language too.",
+   "t": false,
+   "why": "The text does not mention animals, so this is 'No information'."
+  },
+  {
+   "s": "Someone who is interested in what you say often puts their head on one side.",
+   "t": true,
+   "why": "Yes, this is a sign of interest in the text."
+  },
+  {
+   "s": "'Nervously' is an adjective.",
+   "t": false,
+   "why": "'Nervously' is an adverb; it describes how someone does something."
+  },
+  {
+   "s": "'Uninterested' has a similar meaning to 'bored'.",
+   "t": true,
+   "why": "Good! Both are adjectives with a similar meaning."
+  },
+  {
+   "s": "A good title for a text should describe one small detail only.",
+   "t": false,
+   "why": "A good title shows the main idea of the whole text."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the best title for the body language text?",
+   "o": [
+    "Understanding Body Language",
+    "Police Officers Are Doing a Good Job",
+    "Hidden Messages"
+   ],
+   "why": "The text explains what body language is and how it is used."
+  },
+  {
+   "q": "What part of speech is 'gestures'?",
+   "o": [
+    "noun",
+    "verb",
+    "adverb"
+   ],
+   "why": "'Gestures' is a noun: it names things."
+  },
+  {
+   "q": "What part of speech is 'send'?",
+   "o": [
+    "verb",
+    "noun",
+    "adjective"
+   ],
+   "why": "'Send' is an action word, so it is a verb."
+  },
+  {
+   "q": "What part of speech is 'we'?",
+   "o": [
+    "pronoun",
+    "adverb",
+    "noun"
+   ],
+   "why": "'We' takes the place of names, so it is a pronoun."
+  },
+  {
+   "q": "Which word means the same as 'anxiously'?",
+   "o": [
+    "nervously",
+    "bored",
+    "confused"
+   ],
+   "why": "Both are adverbs with a similar meaning."
+  },
+  {
+   "q": "What does NG mean in a True / False task?",
+   "o": [
+    "no information given",
+    "not good",
+    "never false"
+   ],
+   "why": "NG means the text does not say."
+  },
+  {
+   "q": "Which is a new communication technology?",
+   "o": [
+    "e-mail",
+    "printing",
+    "newspapers"
+   ],
+   "why": "E-mail is one of the new technologies in the text."
+  },
+  {
+   "q": "Which is an example of body language?",
+   "o": [
+    "nodding the head",
+    "sending a text",
+    "writing a blog"
+   ],
+   "why": "Nodding sends a message with the body."
+  },
+  {
+   "q": "What part of speech is 'confused'?",
+   "o": [
+    "adjective",
+    "adverb",
+    "verb"
+   ],
+   "why": "'Confused' describes a person, so it is an adjective."
+  },
+  {
+   "q": "When we skim, what do we look for?",
+   "o": [
+    "the main idea",
+    "every small detail",
+    "the page number"
+   ],
+   "why": "Skimming helps us find the general idea quickly."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Part of speech of 'nervously'",
+   "a": "adverb",
+   "d": [
+    "noun",
+    "verb",
+    "pronoun"
+   ]
+  },
+  {
+   "q": "Part of speech of 'interested'",
+   "a": "adjective",
+   "d": [
+    "adverb",
+    "verb",
+    "pronoun"
+   ]
+  },
+  {
+   "q": "Part of speech of 'bodies'",
+   "a": "noun",
+   "d": [
+    "verb",
+    "adverb",
+    "adjective"
+   ]
+  },
+  {
+   "q": "Part of speech of 'you'",
+   "a": "pronoun",
+   "d": [
+    "noun",
+    "adverb",
+    "verb"
+   ]
+  },
+  {
+   "q": "Part of speech of 'use'",
+   "a": "verb",
+   "d": [
+    "adverb",
+    "pronoun",
+    "adjective"
+   ]
+  },
+  {
+   "q": "Similar word for 'bored'",
+   "a": "uninterested",
+   "d": [
+    "nervously",
+    "confident",
+    "excited"
+   ]
+  },
+  {
+   "q": "Similar word for 'anxiously'",
+   "a": "nervously",
+   "d": [
+    "quickly",
+    "happily",
+    "slowly"
+   ]
+  },
+  {
+   "q": "Reading quickly for the main idea",
+   "a": "skimming",
+   "d": [
+    "speaking",
+    "listening",
+    "spelling"
+   ]
+  },
+  {
+   "q": "A new communication tool",
+   "a": "mobile phone",
+   "d": [
+    "printing",
+    "letter",
+    "newspaper"
+   ]
+  },
+  {
+   "q": "Movement of the body to send a message",
+   "a": "gesture",
+   "d": [
+    "title",
+    "blog",
+    "signal light"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these is one of the new communication technologies in the text?",
+   "o": [
+    "wireless systems",
+    "printing",
+    "newspapers",
+    "the telephone"
+   ],
+   "why": "Wireless systems are new; the others are older tools."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is skimming?",
+   "o": [
+    "reading quickly to get the general idea",
+    "reading every word carefully",
+    "reading aloud to a partner",
+    "copying a text into your book"
+   ],
+   "why": "Skimming is fast reading for the main idea."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which jobs does the text say use an understanding of body language?",
+   "o": [
+    "police officers and teachers",
+    "drivers and cooks",
+    "farmers and fishermen",
+    "pilots and doctors only"
+   ],
+   "why": "The text names police officers, teachers and politicians."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is a pronoun?",
+   "o": [
+    "we",
+    "gestures",
+    "send",
+    "nervously"
+   ],
+   "why": "'We' takes the place of a noun."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Statement: 'Animals use body language too.' What is the correct answer?",
+   "o": [
+    "NG – the text does not mention animals",
+    "True",
+    "False",
+    "True and False"
+   ],
+   "why": "If the text does not say it, the answer is NG."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want a word in the text similar to 'anxiously'. What should you look for first?",
+   "o": [
+    "an adverb",
+    "a noun",
+    "a pronoun",
+    "a verb"
+   ],
+   "why": "A similar word must be the same part of speech."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rashid walked in slowly, looked at the floor and crossed his arms. Which title fits best?",
+   "o": [
+    "A Nervous Visitor",
+    "A Confident Speaker",
+    "A Happy Winner",
+    "A Busy Teacher"
+   ],
+   "why": "Walking slowly, no eye contact and crossed arms show nervousness."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'Police Officers Are Doing a Good Job' not a good title for the text?",
+   "o": [
+    "Police officers are mentioned only briefly",
+    "The text is about police uniforms",
+    "The title is too short",
+    "The text does not mention jobs"
+   ],
+   "why": "The text is about body language in general, not just police."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'Hidden Messages' less suitable than 'Understanding Body Language'?",
+   "o": [
+    "It does not describe the real topic of the text",
+    "It is too long",
+    "It uses a pronoun",
+    "It mentions police officers"
+   ],
+   "why": "The best title tells the main topic clearly."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the text say communication tools have moved human development forward?",
+   "o": [
+    "People can share information and interact from every part of the world",
+    "People talk less to each other",
+    "Tools make letters more expensive",
+    "People stop using their bodies"
+   ],
+   "why": "Sharing information around the world helps people develop."
+  }
+ ]
+}

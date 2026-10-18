@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 2: Let's dress up!",
+ "lesson": "Unit 2 – Lesson 3: Vocabulary and Grammar (personal possessions)",
+ "outcomes": [
+  "I can name and spell six personal possessions.",
+  "I can use our, your and their.",
+  "I can ask and answer Is this your ...?"
+ ],
+ "tf": [
+  {
+   "s": "We see with glasses.",
+   "t": true,
+   "why": "Yes! Glasses help us see."
+  },
+  {
+   "s": "We open a door with a phone.",
+   "t": false,
+   "why": "We open a door with keys."
+  },
+  {
+   "s": "we goes with our.",
+   "t": true,
+   "why": "we → our: Our glasses are blue."
+  },
+  {
+   "s": "they goes with your.",
+   "t": false,
+   "why": "they → their. you → your."
+  },
+  {
+   "s": "We say Our bags are red, not We bags are red.",
+   "t": true,
+   "why": "Use our before the thing."
+  },
+  {
+   "s": "Computer has eight letters.",
+   "t": true,
+   "why": "c-o-m-p-u-t-e-r: 8 letters."
+  },
+  {
+   "s": "Keys is spelled k-e-e-s.",
+   "t": false,
+   "why": "Keys is k-e-y-s."
+  },
+  {
+   "s": "We use a phone to call people.",
+   "t": true,
+   "why": "Great! A phone is for calling."
+  },
+  {
+   "s": "Is this your phone? Yes, it is. is a correct answer.",
+   "t": true,
+   "why": "Yes, it is. / No, it isn't."
+  },
+  {
+   "s": "Talking to two girls, we say Their handbags are red.",
+   "t": false,
+   "why": "We talk to them, so we say Your handbags are red."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do you use to open a door?",
+   "o": [
+    "keys",
+    "glasses",
+    "a computer"
+   ],
+   "why": "Keys open doors."
+  },
+  {
+   "q": "Complete: we → ___",
+   "o": [
+    "our",
+    "their",
+    "your"
+   ],
+   "why": "we → our."
+  },
+  {
+   "q": "Complete: they → ___",
+   "o": [
+    "their",
+    "our",
+    "your"
+   ],
+   "why": "they → their."
+  },
+  {
+   "q": "Complete: you → ___",
+   "o": [
+    "your",
+    "our",
+    "their"
+   ],
+   "why": "you → your."
+  },
+  {
+   "q": "My friends and I: ___ keys are grey.",
+   "o": [
+    "Our",
+    "Their",
+    "Your"
+   ],
+   "why": "Me and my friends = we → our."
+  },
+  {
+   "q": "Which do you carry on your back?",
+   "o": [
+    "backpack",
+    "handbag",
+    "keys"
+   ],
+   "why": "A backpack goes on your back."
+  },
+  {
+   "q": "How many letters are in phone?",
+   "o": [
+    "5",
+    "4",
+    "6"
+   ],
+   "why": "p-h-o-n-e: 5 letters."
+  },
+  {
+   "q": "Is this your phone? (yes)",
+   "o": [
+    "Yes, it is.",
+    "Yes, they are.",
+    "Yes, I am."
+   ],
+   "why": "For one thing: Yes, it is."
+  },
+  {
+   "q": "Correct: We bags are red.",
+   "o": [
+    "Our bags are red.",
+    "Their bag are red.",
+    "We's bags are red."
+   ],
+   "why": "Use our: Our bags are red."
+  },
+  {
+   "q": "Which word is spelled correctly?",
+   "o": [
+    "glasses",
+    "glases",
+    "glassis"
+   ],
+   "why": "Glasses: g-l-a-s-s-e-s."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Use it to call people",
+   "a": "phone",
+   "d": [
+    "keys",
+    "glasses",
+    "handbag"
+   ]
+  },
+  {
+   "q": "Use them to open a door",
+   "a": "keys",
+   "d": [
+    "phone",
+    "computer",
+    "backpack"
+   ]
+  },
+  {
+   "q": "Use them to see well",
+   "a": "glasses",
+   "d": [
+    "keys",
+    "handbag",
+    "phone"
+   ]
+  },
+  {
+   "q": "A bag for your back",
+   "a": "backpack",
+   "d": [
+    "handbag",
+    "computer",
+    "glasses"
+   ]
+  },
+  {
+   "q": "we → ___",
+   "a": "our",
+   "d": [
+    "their",
+    "your",
+    "we're"
+   ]
+  },
+  {
+   "q": "they → ___",
+   "a": "their",
+   "d": [
+    "our",
+    "your",
+    "they're"
+   ]
+  },
+  {
+   "q": "you → ___",
+   "a": "your",
+   "d": [
+    "our",
+    "their",
+    "you're"
+   ]
+  },
+  {
+   "q": "Letters in computer",
+   "a": "8",
+   "d": [
+    "7",
+    "6",
+    "9"
+   ]
+  },
+  {
+   "q": "Letters in keys",
+   "a": "4",
+   "d": [
+    "3",
+    "5",
+    "6"
+   ]
+  },
+  {
+   "q": "Spell: h-a-n-d-b-a-g",
+   "a": "handbag",
+   "d": [
+    "backpack",
+    "headbag",
+    "handbig"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which six words are personal possessions?",
+   "o": [
+    "glasses, handbag, phone, keys, backpack, computer",
+    "coat, jeans, shirt, hijab, jumper, slippers",
+    "morning, evening, night, afternoon, lunch, bed",
+    "whale, wheel, phone, dolphin, white, wheat"
+   ],
+   "why": "These are the six possessions."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which pair is correct?",
+   "o": [
+    "they - their",
+    "we - your",
+    "you - our",
+    "they - our"
+   ],
+   "why": "they → their."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means things we wear to see well?",
+   "o": [
+    "glasses",
+    "keys",
+    "computer",
+    "backpack"
+   ],
+   "why": "Glasses help us see."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do you spell keys?",
+   "o": [
+    "k-e-y-s",
+    "k-e-e-s",
+    "k-i-s",
+    "k-a-y-s"
+   ],
+   "why": "Keys: k-e-y-s."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "My brother and I have keys. Complete: These are ___ keys.",
+   "o": [
+    "our",
+    "their",
+    "your",
+    "we"
+   ],
+   "why": "My brother and I = we → our."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your two friends have black glasses. Which sentence is correct?",
+   "o": [
+    "Their glasses are black.",
+    "Our glasses are black.",
+    "They glasses are black.",
+    "Their glasses is black."
+   ],
+   "why": "Two friends = they → their."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You talk to two girls about their red handbags. What do you say?",
+   "o": [
+    "Your handbags are red.",
+    "Their handbags are red.",
+    "Our handbags are red.",
+    "You handbags are red."
+   ],
+   "why": "We talk to them, so we use your."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the mistake: They phones are green.",
+   "o": [
+    "Their phones are green.",
+    "Our phone are green.",
+    "They're phones is green.",
+    "Your phone are green."
+   ],
+   "why": "Before a thing we use their, not they."
+  },
+  {
+   "lv": "التحليل",
+   "q": "At the lost property office: Is this your phone? It isn't. What do you say?",
+   "o": [
+    "No, it isn't.",
+    "Yes, it is.",
+    "No, they aren't.",
+    "Yes, I am."
+   ],
+   "why": "For one thing: No, it isn't."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word has the most letters?",
+   "o": [
+    "computer",
+    "phone",
+    "keys",
+    "glasses"
+   ],
+   "why": "Computer has 8 letters."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+ "lesson": "Reading for Pleasure: The Ethics of Advertising / Review and Reference: Theme 1 learning objectives and core words test",
+ "outcomes": [
+  "Read an article about ethics in advertising for gist and detail",
+  "Decide whether advertising techniques are ethical and give reasons",
+  "Review the Theme 1 core words and the past simple passive"
+ ],
+ "tf": [
+  {
+   "s": "'Caveat emptor' means 'let the buyer beware'.",
+   "t": true,
+   "why": "Yes, buyers must be careful."
+  },
+  {
+   "s": "Campbell's put marbles in soup bowls to push the vegetables to the top.",
+   "t": true,
+   "why": "Correct, the soup looked full of vegetables."
+  },
+  {
+   "s": "A TV advert usually lasts several minutes, so it can give all the information.",
+   "t": false,
+   "why": "A TV ad lasts no more than 30 seconds."
+  },
+  {
+   "s": "'Four out of five doctors recommend Brand X' was meaningless because people did not know how many doctors were asked.",
+   "t": true,
+   "why": "Right, the number of doctors consulted was unknown."
+  },
+  {
+   "s": "After the court case, McDonald's stopped selling food completely.",
+   "t": false,
+   "why": "It added nutritional information and offered healthier food."
+  },
+  {
+   "s": "A 'shopaholic' is someone who is addicted to shopping.",
+   "t": true,
+   "why": "Yes, like an alcoholic, but for shopping."
+  },
+  {
+   "s": "'Excessive' means not enough.",
+   "t": false,
+   "why": "Excessive means too much."
+  },
+  {
+   "s": "'Export' means selling goods to another country.",
+   "t": true,
+   "why": "Correct; import means buying from another country."
+  },
+  {
+   "s": "'Mislead' means to give people the right information.",
+   "t": false,
+   "why": "Mislead means to make people believe something wrong."
+  },
+  {
+   "s": "The past simple passive of 'discover' (singular) is 'was discovered'.",
+   "t": true,
+   "why": "Yes: was + past participle."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does 'caveat emptor' mean?",
+   "o": [
+    "let the buyer beware",
+    "the buyer is always right",
+    "buy one get one free"
+   ],
+   "why": "Buyers should be careful."
+  },
+  {
+   "q": "Why did Campbell's put marbles in the soup?",
+   "o": [
+    "to push the vegetables to the top",
+    "to make it heavier",
+    "to cool it down"
+   ],
+   "why": "It made the soup look full of vegetables."
+  },
+  {
+   "q": "How long does a TV ad usually last?",
+   "o": [
+    "no more than 30 seconds",
+    "about one hour",
+    "five minutes"
+   ],
+   "why": "Ads are very short."
+  },
+  {
+   "q": "What is a 'mock-up' in an advert?",
+   "o": [
+    "a model that looks like the real product",
+    "a true photo of the product",
+    "a price list"
+   ],
+   "why": "Mock-ups, like shaving cream for ice-cream, are not the real thing."
+  },
+  {
+   "q": "What did McDonald's offer after the case?",
+   "o": [
+    "healthier food",
+    "bigger burgers",
+    "free toys"
+   ],
+   "why": "It offered healthier options and nutritional information."
+  },
+  {
+   "q": "What does 'excessive' mean?",
+   "o": [
+    "too much",
+    "too little",
+    "just right"
+   ],
+   "why": "Excessive means more than is reasonable."
+  },
+  {
+   "q": "Which word means 'someone addicted to shopping'?",
+   "o": [
+    "shopaholic",
+    "consumer",
+    "merchant"
+   ],
+   "why": "A shopaholic can't stop shopping."
+  },
+  {
+   "q": "What does 'ethical' mean?",
+   "o": [
+    "morally right",
+    "very expensive",
+    "very fast"
+   ],
+   "why": "Ethical means right and fair."
+  },
+  {
+   "q": "Complete: The company ___ (found) in 1990.",
+   "o": [
+    "was founded",
+    "founded was",
+    "was found"
+   ],
+   "why": "Passive: was + founded."
+  },
+  {
+   "q": "What is the opposite of 'export'?",
+   "o": [
+    "import",
+    "report",
+    "transport"
+   ],
+   "why": "Import means buying from another country."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "'Let the buyer beware'",
+   "a": "caveat emptor",
+   "d": [
+    "retail therapy",
+    "mock-up",
+    "publicity"
+   ]
+  },
+  {
+   "q": "Put in Campbell's soup bowls",
+   "a": "marbles",
+   "d": [
+    "stones",
+    "coins",
+    "spoons"
+   ]
+  },
+  {
+   "q": "Longest TV ad time (seconds)",
+   "a": "30",
+   "d": [
+    "60",
+    "90",
+    "300"
+   ]
+  },
+  {
+   "q": "Year of the McDonald's case",
+   "a": "2002",
+   "d": [
+    "2012",
+    "1992",
+    "2000"
+   ]
+  },
+  {
+   "q": "Addicted to shopping",
+   "a": "shopaholic",
+   "d": [
+    "consumer",
+    "merchant",
+    "tourist"
+   ]
+  },
+  {
+   "q": "Too much",
+   "a": "excessive",
+   "d": [
+    "economic",
+    "ethical",
+    "affluent"
+   ]
+  },
+  {
+   "q": "Morally right",
+   "a": "ethical",
+   "d": [
+    "excessive",
+    "compulsive",
+    "misleading"
+   ]
+  },
+  {
+   "q": "Sell goods abroad",
+   "a": "export",
+   "d": [
+    "import",
+    "mislead",
+    "influence"
+   ]
+  },
+  {
+   "q": "Fake model of a product",
+   "a": "mock-up",
+   "d": [
+    "side-effect",
+    "copy",
+    "ritual"
+   ]
+  },
+  {
+   "q": "Passive: discover (singular)",
+   "a": "was discovered",
+   "d": [
+    "discovered",
+    "was discover",
+    "were discovering"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What are 'side-effects'?",
+   "o": [
+    "unwanted effects of something, such as a medicine",
+    "the main benefits",
+    "the sides of a box",
+    "free gifts"
+   ],
+   "why": "Side-effects are extra, often bad, results."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What did McDonald's do after the 2002 court case?",
+   "o": [
+    "put nutritional information in restaurants and online and offered healthier food",
+    "closed all restaurants",
+    "raised all prices",
+    "stopped advertising"
+   ],
+   "why": "It gave more information and healthier choices."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why is it hard to give a lot of information in an advert?",
+   "o": [
+    "TV ads are short and print space is limited",
+    "ads have no words",
+    "nobody reads ads",
+    "companies don't know their products"
+   ],
+   "why": "Time and space are restricted."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the correct spelling?",
+   "o": [
+    "shopaholic",
+    "shopaholik",
+    "shopperholic",
+    "shopahollic"
+   ],
+   "why": "Shop + -aholic gives shopaholic."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "An ice-cream ad uses shaving cream because real ice-cream melts under the lights. What is this?",
+   "o": [
+    "a mock-up",
+    "a side-effect",
+    "caveat emptor",
+    "a ritual"
+   ],
+   "why": "It is a model that is not the real product."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The mistake ___ (discover) by the teacher.",
+   "o": [
+    "was discovered",
+    "discovered",
+    "was discover",
+    "were discovered"
+   ],
+   "why": "Singular subject + was + past participle."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the sentence that uses 'mislead' correctly.",
+   "o": [
+    "Some adverts mislead customers about what a product can do.",
+    "I mislead my lunch at noon.",
+    "The train misleads at six.",
+    "She misleads very fast in the race."
+   ],
+   "why": "Mislead means give a wrong idea."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why was the claim 'four out of five doctors recommend Brand X' meaningless?",
+   "o": [
+    "the public couldn't know how many doctors were consulted",
+    "doctors don't use products",
+    "five doctors is too many",
+    "it was written in Latin"
+   ],
+   "why": "Without the total number, the claim proves nothing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do many people think the Campbell's marbles were unethical?",
+   "o": [
+    "the soup looked as if it had more vegetables than it really had",
+    "marbles are expensive",
+    "the soup was too hot",
+    "the ad was too short"
+   ],
+   "why": "It gave buyers a false picture of the product."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How does 'caveat emptor' connect to misleading adverts?",
+   "o": [
+    "buyers must be careful because ads may not tell the whole truth",
+    "buyers should trust every ad",
+    "sellers must give free products",
+    "ads are always regulated perfectly"
+   ],
+   "why": "Let the buyer beware means check claims carefully."
+  }
+ ]
+}

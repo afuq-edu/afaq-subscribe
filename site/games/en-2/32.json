@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Sounds and Spelling – Unit 3, Lesson 2: oi",
+ "outcomes": [
+  "I can say the sound oi as in coin.",
+  "I can blend and write coin, oil, boil, point and soil.",
+  "I can read the tricky word some."
+ ],
+ "tf": [
+  {
+   "s": "\"Coin\" has the oi sound.",
+   "t": true,
+   "why": "C-oi-n has oi."
+  },
+  {
+   "s": "\"Oil\" has the oi sound.",
+   "t": true,
+   "why": "Oi-l has oi."
+  },
+  {
+   "s": "\"Cloud\" has the oi sound.",
+   "t": false,
+   "why": "Cloud has the ou sound."
+  },
+  {
+   "s": "c + oi + n makes \"coin\".",
+   "t": true,
+   "why": "Blend: c-oi-n, coin."
+  },
+  {
+   "s": "b + oi + l makes \"bell\".",
+   "t": false,
+   "why": "b-oi-l makes boil."
+  },
+  {
+   "s": "\"Point\" ends with the letters nt.",
+   "t": true,
+   "why": "Poi-nt ends with nt."
+  },
+  {
+   "s": "\"Some\" is a tricky word.",
+   "t": true,
+   "why": "We read some in: Can I have some oil?"
+  },
+  {
+   "s": "s + oi + l makes \"soil\".",
+   "t": true,
+   "why": "Blend: s-oi-l, soil."
+  },
+  {
+   "s": "\"Coat\" has the oi sound.",
+   "t": false,
+   "why": "Coat has the oa sound."
+  },
+  {
+   "s": "\"Can I have some oil?\" is a question.",
+   "t": true,
+   "why": "It asks for something and ends with ?."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Blend: c + oi + n",
+   "o": [
+    "coin",
+    "cone",
+    "can"
+   ],
+   "why": "c-oi-n makes coin."
+  },
+  {
+   "q": "Blend: b + oi + l",
+   "o": [
+    "boil",
+    "bell",
+    "ball"
+   ],
+   "why": "b-oi-l makes boil."
+  },
+  {
+   "q": "Order: s / l / oi",
+   "o": [
+    "soil",
+    "sail",
+    "sell"
+   ],
+   "why": "s-oi-l makes soil."
+  },
+  {
+   "q": "Find the oi word.",
+   "o": [
+    "point",
+    "pond",
+    "paint"
+   ],
+   "why": "P-oi-nt has oi."
+  },
+  {
+   "q": "Can I have ___ water?",
+   "o": [
+    "some",
+    "all",
+    "our"
+   ],
+   "why": "Can I have some water?"
+  },
+  {
+   "q": "Which letters are in \"oil\"?",
+   "o": [
+    "oi",
+    "ou",
+    "oa"
+   ],
+   "why": "Oil is o-i-l."
+  },
+  {
+   "q": "Pick the oi word.",
+   "o": [
+    "oil",
+    "owl",
+    "all"
+   ],
+   "why": "Oi-l has oi."
+  },
+  {
+   "q": "Plants grow in ___.",
+   "o": [
+    "soil",
+    "coin",
+    "oil"
+   ],
+   "why": "Soil is the ground plants grow in."
+  },
+  {
+   "q": "You can buy things with a ___.",
+   "o": [
+    "coin",
+    "soil",
+    "boil"
+   ],
+   "why": "A coin is money."
+  },
+  {
+   "q": "Which tricky word is new in this lesson?",
+   "o": [
+    "some",
+    "all",
+    "our"
+   ],
+   "why": "Some is the new tricky word."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Blend: c + oi + n",
+   "a": "coin",
+   "d": [
+    "cone",
+    "can",
+    "corn"
+   ]
+  },
+  {
+   "q": "Blend: b + oi + l",
+   "a": "boil",
+   "d": [
+    "bell",
+    "ball",
+    "bowl"
+   ]
+  },
+  {
+   "q": "Blend: s + oi + l",
+   "a": "soil",
+   "d": [
+    "sail",
+    "sell",
+    "soul"
+   ]
+  },
+  {
+   "q": "Blend: p + oi + nt",
+   "a": "point",
+   "d": [
+    "paint",
+    "pant",
+    "print"
+   ]
+  },
+  {
+   "q": "Blend: oi + l",
+   "a": "oil",
+   "d": [
+    "owl",
+    "all",
+    "ill"
+   ]
+  },
+  {
+   "q": "Letters in \"coin\"",
+   "a": "oi",
+   "d": [
+    "ou",
+    "oa",
+    "ai"
+   ]
+  },
+  {
+   "q": "Can I have ___ oil?",
+   "a": "some",
+   "d": [
+    "all",
+    "our",
+    "why"
+   ]
+  },
+  {
+   "q": "Money you can hold",
+   "a": "coin",
+   "d": [
+    "soil",
+    "oil",
+    "boil"
+   ]
+  },
+  {
+   "q": "Plants grow in it",
+   "a": "soil",
+   "d": [
+    "coin",
+    "point",
+    "oil"
+   ]
+  },
+  {
+   "q": "Has the oi sound",
+   "a": "boil",
+   "d": [
+    "boat",
+    "book",
+    "bell"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which letters make the sound in \"coin\"?",
+   "o": [
+    "oi",
+    "ou",
+    "oo",
+    "or"
+   ],
+   "why": "C-oi-n has oi."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has the oi sound?",
+   "o": [
+    "point",
+    "shout",
+    "moon",
+    "train"
+   ],
+   "why": "P-oi-nt has oi."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the tricky word in this lesson?",
+   "o": [
+    "some",
+    "coin",
+    "oil",
+    "soil"
+   ],
+   "why": "Some is the tricky word."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word starts with oi?",
+   "o": [
+    "oil",
+    "owl",
+    "oak",
+    "out"
+   ],
+   "why": "Oi-l starts with oi."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Blend: p + oi + n + t",
+   "o": [
+    "point",
+    "paint",
+    "pant",
+    "pint"
+   ],
+   "why": "p-oi-n-t makes point."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Can I have ___ juice, please?",
+   "o": [
+    "some",
+    "all",
+    "oil",
+    "coin"
+   ],
+   "why": "We ask: Can I have some ...?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Order the letters: n / c / oi",
+   "o": [
+    "coin",
+    "cone",
+    "icon",
+    "conn"
+   ],
+   "why": "c-oi-n makes coin."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT have the oi sound?",
+   "o": [
+    "cloud",
+    "coin",
+    "soil",
+    "boil"
+   ],
+   "why": "Cloud has the ou sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How many oi words? coin, boat, oil, soil",
+   "o": [
+    "three",
+    "one",
+    "two",
+    "four"
+   ],
+   "why": "Coin, oil and soil have oi."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which two words have the same middle sound?",
+   "o": [
+    "coin and boil",
+    "coin and cloud",
+    "boil and boat",
+    "soil and sail"
+   ],
+   "why": "Coin and boil both have oi."
+  }
+ ]
+}

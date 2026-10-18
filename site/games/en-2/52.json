@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Unit 4 – Consolidation 1: Family grammar and the song",
+  "outcomes": [
+    "I can say who people are: He's my dad. She's my mum.",
+    "I can read a description and find the right face.",
+    "I can complete the song with the missing words."
+  ],
+  "tf": [
+    { "s": "Who's Ahmed? He's my dad.", "t": true, "why": "Yes! In the family tree, Ahmed is dad." },
+    { "s": "Who's Amna? She's my mum.", "t": true, "why": "Great! Amna is mum." },
+    { "s": "We say He's my mum.", "t": false, "why": "Mum is a woman, so we say She's my mum." },
+    { "s": "Big eyes and small eyes are different.", "t": true, "why": "Well done! Big is the opposite of small." },
+    { "s": "We say She's my brother.", "t": false, "why": "A brother is a boy: He's my brother." },
+    { "s": "In the song: This is my sister. Her name's Claire.", "t": true, "why": "Yes! Claire is the sister in the song." },
+    { "s": "Who's …? asks about a colour.", "t": false, "why": "Who's …? asks about a person." },
+    { "s": "Ears and mouth are face words.", "t": true, "why": "Great! They are on our face and head." },
+    { "s": "Red and black are family words.", "t": false, "why": "Red and black are colours." },
+    { "s": "He's got small eyes is about a girl.", "t": false, "why": "He is for a boy or a man." }
+  ],
+  "boxes": [
+    { "q": "Who's Ahmed?", "o": ["He's my dad.", "She's my mum.", "It's red."], "why": "Ahmed is dad in the family tree." },
+    { "q": "Who's Amna?", "o": ["She's my mum.", "He's my dad.", "She's got big eyes."], "why": "Amna is mum in the family tree." },
+    { "q": "Your sister: ___ my sister.", "o": ["She's", "He's", "I'm"], "why": "A sister is a girl: She's." },
+    { "q": "Your brother: ___ my brother.", "o": ["He's", "She's", "It's"], "why": "A brother is a boy: He's." },
+    { "q": "This is my ___. Her name's Claire.", "o": ["sister", "brother", "dad"], "why": "Her is for a girl: sister." },
+    { "q": "She's got ___ eyes. (not small)", "o": ["big", "red", "black"], "why": "Big is the opposite of small." },
+    { "q": "Which is a face word?", "o": ["mouth", "sister", "black"], "why": "The mouth is on our face." },
+    { "q": "Which is a colour?", "o": ["red", "ears", "brother"], "why": "Red is a colour." },
+    { "q": "Which is a family word?", "o": ["brother", "mouth", "black"], "why": "A brother is in our family." },
+    { "q": "Who's this? (grandma on the poster)", "o": ["She's my grandma.", "He's my grandma.", "She's my grandad."], "why": "Grandma is a woman: She's my grandma." }
+  ],
+  "hunt": [
+    { "q": "Who's Ahmed? He's my ___.", "a": "dad", "d": ["mum", "sister", "aunt"] },
+    { "q": "Who's Amna? She's my ___.", "a": "mum", "d": ["dad", "brother", "uncle"] },
+    { "q": "___ my sister.", "a": "She's", "d": ["He's", "It's", "I'm"] },
+    { "q": "___ my uncle.", "a": "He's", "d": ["She's", "It's", "I'm"] },
+    { "q": "Opposite of small", "a": "big", "d": ["red", "black", "happy"] },
+    { "q": "Find the face word.", "a": "ears", "d": ["red", "sister", "mum"] },
+    { "q": "Find the colour.", "a": "black", "d": ["mouth", "brother", "ears"] },
+    { "q": "Song: This is my ___.", "a": "sister", "d": ["red", "mouth", "big"] },
+    { "q": "Song: Her name's ___.", "a": "Claire", "d": ["Piers", "Ahmed", "Amna"] },
+    { "q": "Find the family word.", "a": "brother", "d": ["black", "big", "ears"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "In the family tree, who is Ahmed?", "o": ["dad", "mum", "sister", "grandma"], "why": "Ahmed is dad." },
+    { "lv": "التذكر", "q": "In the family tree, who is Amna?", "o": ["mum", "dad", "brother", "uncle"], "why": "Amna is mum." },
+    { "lv": "التذكر", "q": "What do we ask to know a person's name in the tree?", "o": ["Who's Ahmed?", "What colour is it?", "How many?", "Where's the ball?"], "why": "Who's …? asks about a person." },
+    { "lv": "التذكر", "q": "Which word is the opposite of big?", "o": ["small", "red", "black", "happy"], "why": "Small is the opposite of big." },
+    { "lv": "التطبيق", "q": "A picture shows a girl with red hair. Which sentence is right?", "o": ["She's got red hair.", "He's got red hair.", "She's got black hair.", "She's my red hair."], "why": "A girl with red hair: She's got red hair." },
+    { "lv": "التطبيق", "q": "Your friend asks: Who's Mazin? (your brother)", "o": ["He's my brother.", "She's my brother.", "He's my sister.", "It's my brother."], "why": "A brother is a boy: He's my brother." },
+    { "lv": "التطبيق", "q": "Describe grandma on the poster.", "o": ["She's got grey hair.", "He's got grey hair.", "She's my grey.", "It's got grey hair."], "why": "Grandma is a woman: She's got grey hair." },
+    { "lv": "التحليل", "q": "Which sentence is NOT right?", "o": ["He's my mum.", "She's my mum.", "He's my dad.", "She's my sister."], "why": "Mum is a woman, so we say She's my mum." },
+    { "lv": "التحليل", "q": "\"She's got big eyes. He's got small eyes.\" What is different?", "o": ["The size of the eyes", "The colour of the eyes", "The number of eyes", "Nothing"], "why": "Big and small tell us the size." },
+    { "lv": "التحليل", "q": "Which word is the odd one out?", "o": ["mouth", "sister", "brother", "mum"], "why": "Mouth is a face word; the others are family words." }
+  ]
+}

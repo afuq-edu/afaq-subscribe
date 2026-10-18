@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 2 - Unit 5: Teenage Angst",
+ "outcomes": [
+  "Match a counsellor's advice to teenagers' problems",
+  "Proofread and edit an informal letter",
+  "Plan a letter to a problem page"
+ ],
+ "tf": [
+  {
+   "s": "A counsellor gives advice to people with problems.",
+   "t": true,
+   "why": "Yes! Teens can write to a counsellor for help."
+  },
+  {
+   "s": "'Give yourself more time to decide' goes with Letter C (Munira).",
+   "t": true,
+   "why": "Right! It matches Munira's letter."
+  },
+  {
+   "s": "'Set yourself time limits for your homework tasks' goes with Letter A (Nabil).",
+   "t": false,
+   "why": "It goes with Letter B (Taha)."
+  },
+  {
+   "s": "'Why don't you just watch your friends play?' goes with Letter A.",
+   "t": true,
+   "why": "Correct! It suits Nabil's letter."
+  },
+  {
+   "s": "Proofreading means looking for errors; editing means correcting them.",
+   "t": true,
+   "why": "Good! First find mistakes, then fix them."
+  },
+  {
+   "s": "'Take care, speak soon' goes at the beginning of a letter.",
+   "t": false,
+   "why": "It is a closing phrase, so it goes at the end."
+  },
+  {
+   "s": "'PS' is an extra message written after you sign your name.",
+   "t": true,
+   "why": "Yes! PS means postscript."
+  },
+  {
+   "s": "In a correction code, 'sp' means spelling.",
+   "t": true,
+   "why": "Right! 'p' is punctuation and 'gr' is grammar."
+  },
+  {
+   "s": "'Self-esteem' means the feeling that you have no value.",
+   "t": false,
+   "why": "Self-esteem is the feeling that you are a person of value or worth."
+  },
+  {
+   "s": "'Emotional' means relating to money.",
+   "t": false,
+   "why": "'Emotional' means relating to feelings."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which letter does 'Give yourself more time to decide' go with?",
+   "o": [
+    "Letter C",
+    "Letter A",
+    "Letter B"
+   ],
+   "why": "It matches Munira's letter."
+  },
+  {
+   "q": "Which letter does 'Set yourself time limits for your homework tasks' go with?",
+   "o": [
+    "Letter B",
+    "Letter A",
+    "Letter C"
+   ],
+   "why": "It matches Taha's letter."
+  },
+  {
+   "q": "What does 'PS' mean?",
+   "o": [
+    "postscript",
+    "private school",
+    "please send"
+   ],
+   "why": "A PS comes after your name."
+  },
+  {
+   "q": "Where does 'Hi there!' go in a letter?",
+   "o": [
+    "at the beginning",
+    "at the end",
+    "after PS"
+   ],
+   "why": "It is a greeting."
+  },
+  {
+   "q": "In the correction code, what does 'p' mean?",
+   "o": [
+    "punctuation",
+    "paragraph",
+    "plural"
+   ],
+   "why": "'p' marks a punctuation mistake."
+  },
+  {
+   "q": "Correct: 'I recieved you're letter yesterday.'",
+   "o": [
+    "I received your letter yesterday.",
+    "I recieved your letter yesterday.",
+    "I received you're letter yesterday."
+   ],
+   "why": "Check spelling and 'your' (not 'you're')."
+  },
+  {
+   "q": "What does 'emotional' mean?",
+   "o": [
+    "relating to feelings",
+    "relating to money",
+    "relating to sport"
+   ],
+   "why": "Emotional problems are about feelings."
+  },
+  {
+   "q": "Which part comes first in a letter to a problem page?",
+   "o": [
+    "the greeting",
+    "the closing",
+    "the PS"
+   ],
+   "why": "Start with a greeting such as 'Dear Auntie'."
+  },
+  {
+   "q": "Which type of sentence is 'Try and introduce your friends to another sport'?",
+   "o": [
+    "an imperative",
+    "a question",
+    "a past tense statement"
+   ],
+   "why": "Imperatives tell someone what to do."
+  },
+  {
+   "q": "What does 'proofread' mean?",
+   "o": [
+    "look for errors",
+    "copy the text",
+    "read aloud fast"
+   ],
+   "why": "Proofreading means checking for mistakes."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Person who gives advice",
+   "a": "counsellor",
+   "d": [
+    "customer",
+    "tourist",
+    "driver"
+   ]
+  },
+  {
+   "q": "Letter for 'more time to decide'",
+   "a": "Letter C",
+   "d": [
+    "Letter A",
+    "Letter B",
+    "Letter D"
+   ]
+  },
+  {
+   "q": "Letter for 'time limits for homework'",
+   "a": "Letter B",
+   "d": [
+    "Letter A",
+    "Letter C",
+    "Letter D"
+   ]
+  },
+  {
+   "q": "Letter for 'watch your friends play'",
+   "a": "Letter A",
+   "d": [
+    "Letter B",
+    "Letter C",
+    "Letter D"
+   ]
+  },
+  {
+   "q": "Code 'sp' means…",
+   "a": "spelling",
+   "d": [
+    "speaking",
+    "space",
+    "sport"
+   ]
+  },
+  {
+   "q": "Code 'gr' means…",
+   "a": "grammar",
+   "d": [
+    "greeting",
+    "group",
+    "great"
+   ]
+  },
+  {
+   "q": "Full form of 'PS'",
+   "a": "postscript",
+   "d": [
+    "post office",
+    "private school",
+    "please say"
+   ]
+  },
+  {
+   "q": "Looking for errors in writing",
+   "a": "proofreading",
+   "d": [
+    "drawing",
+    "listening",
+    "singing"
+   ]
+  },
+  {
+   "q": "Relating to feelings",
+   "a": "emotional",
+   "d": [
+    "physical",
+    "convenient",
+    "stylish"
+   ]
+  },
+  {
+   "q": "Feeling of your own value",
+   "a": "self-esteem",
+   "d": [
+    "acne",
+    "mood swing",
+    "angst"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which sentences go with Letter B (Taha)?",
+   "o": [
+    "1, 6 and 8",
+    "2, 3 and 4",
+    "5, 7 and 9",
+    "1, 2 and 3"
+   ],
+   "why": "These three pieces of advice suit Taha."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the difference between proofreading and editing?",
+   "o": [
+    "Proofreading finds errors; editing corrects them",
+    "They are exactly the same",
+    "Editing finds errors; proofreading draws pictures",
+    "Proofreading means writing a new letter"
+   ],
+   "why": "First find, then fix."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'self-esteem' mean?",
+   "o": [
+    "the feeling that you are a person of value",
+    "a kind of skin problem",
+    "a type of homework",
+    "a closing phrase"
+   ],
+   "why": "Good self-esteem helps teenagers feel confident."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which advice sentence goes with Letter A?",
+   "o": [
+    "Why don't you just watch your friends play?",
+    "Give yourself more time to decide.",
+    "Set yourself time limits for your homework tasks.",
+    "Write a PS at the end."
+   ],
+   "why": "It matches Nabil's letter."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good opening sentence for a letter to a problem page about homework?",
+   "o": [
+    "I'm writing to you about a very worrying problem with my homework.",
+    "Take care, speak soon.",
+    "PS I forgot to tell you.",
+    "See you next week!"
+   ],
+   "why": "The opening should explain why you are writing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which piece of advice would also suit Taha?",
+   "o": [
+    "Turn off your phone while you study.",
+    "Play more football.",
+    "Stop doing homework.",
+    "Go to bed at three o'clock."
+   ],
+   "why": "Taha's advice is about managing homework time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which phrase can go at the end of an informal letter?",
+   "o": [
+    "Take care, speak soon.",
+    "Hi there!",
+    "How are you?",
+    "Dear Auntie"
+   ],
+   "why": "Closing phrases go at the end."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does 'Try and introduce your friends to another sport' suit Nabil?",
+   "o": [
+    "He does not enjoy football and makes mistakes, so another sport may suit him",
+    "He loves football very much",
+    "He has too much homework",
+    "He wants to decide something"
+   ],
+   "why": "The advice matches his problem with football."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What makes a piece of advice useful?",
+   "o": [
+    "It matches the person's problem",
+    "It is very long",
+    "It is about a different problem",
+    "It uses only questions"
+   ],
+   "why": "Good advice suits the problem in the letter."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do counsellors often use imperatives like 'Give yourself more time'?",
+   "o": [
+    "They tell the person clearly what to do",
+    "They ask about the past",
+    "They describe the weather",
+    "They make the letter longer"
+   ],
+   "why": "Imperatives give clear advice."
+  }
+ ]
+}

@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Shop Till You Drop (Vocabulary)",
+ "lesson": "Guessing vocabulary from context and make/do collocations",
+ "outcomes": [
+  "Guess the meaning of new words from context",
+  "Use collocations with 'make' and 'do' correctly"
+ ],
+ "tf": [
+  {
+   "s": "The words before and after an unknown word can help you guess its meaning.",
+   "t": true,
+   "why": "This is called using context clues."
+  },
+  {
+   "s": "In 'a corporate lawyer, who works for a big international company', the clue for 'corporate' is 'company'.",
+   "t": true,
+   "why": "Corporate means belonging to a company."
+  },
+  {
+   "s": "A collocation is a word that has no meaning.",
+   "t": false,
+   "why": "A collocation is a group of words that often go together."
+  },
+  {
+   "s": "We say 'make a mistake'.",
+   "t": true,
+   "why": "Mistake goes with make."
+  },
+  {
+   "s": "We say 'make the washing-up'.",
+   "t": false,
+   "why": "We say 'do the washing-up'."
+  },
+  {
+   "s": "We say 'do someone a favour'.",
+   "t": true,
+   "why": "Favour goes with do."
+  },
+  {
+   "s": "There is a simple rule that tells us when to use make and when to use do.",
+   "t": false,
+   "why": "There is no rule, so we learn them by heart."
+  },
+  {
+   "s": "We say 'make a promise'.",
+   "t": true,
+   "why": "Promise goes with make."
+  },
+  {
+   "s": "We say 'do a joke'.",
+   "t": false,
+   "why": "We say 'make a joke'."
+  },
+  {
+   "s": "We say 'do some exercise'.",
+   "t": true,
+   "why": "Exercise goes with do."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which verb goes with 'a mistake'?",
+   "o": [
+    "make",
+    "do",
+    "have"
+   ],
+   "why": "We make a mistake."
+  },
+  {
+   "q": "Which verb goes with 'the shopping'?",
+   "o": [
+    "do",
+    "make",
+    "take"
+   ],
+   "why": "We do the shopping."
+  },
+  {
+   "q": "Which verb goes with 'dinner'?",
+   "o": [
+    "make",
+    "do",
+    "go"
+   ],
+   "why": "We make dinner."
+  },
+  {
+   "q": "Which verb goes with 'a crossword'?",
+   "o": [
+    "do",
+    "make",
+    "play up"
+   ],
+   "why": "We do a crossword."
+  },
+  {
+   "q": "Which verb goes with 'an impression'?",
+   "o": [
+    "make",
+    "do",
+    "give up"
+   ],
+   "why": "We make an impression."
+  },
+  {
+   "q": "Which verb goes with 'your duty'?",
+   "o": [
+    "do",
+    "make",
+    "get"
+   ],
+   "why": "We do our duty."
+  },
+  {
+   "q": "Words that often go together are called...",
+   "o": [
+    "collocations",
+    "synonyms",
+    "headings"
+   ],
+   "why": "Make a mistake is a collocation."
+  },
+  {
+   "q": "Fill in: She ___ a promise to her mother.",
+   "o": [
+    "made",
+    "did",
+    "does"
+   ],
+   "why": "We make a promise; past = made."
+  },
+  {
+   "q": "Fill in: Please ___ me a favour.",
+   "o": [
+    "do",
+    "make",
+    "made"
+   ],
+   "why": "We do someone a favour."
+  },
+  {
+   "q": "Which verb goes with 'an enemy'?",
+   "o": [
+    "make",
+    "do",
+    "take"
+   ],
+   "why": "We make an enemy."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "___ a mistake",
+   "a": "make",
+   "d": [
+    "do",
+    "take",
+    "have"
+   ]
+  },
+  {
+   "q": "___ the washing-up",
+   "a": "do",
+   "d": [
+    "make",
+    "take",
+    "get"
+   ]
+  },
+  {
+   "q": "___ a promise",
+   "a": "make",
+   "d": [
+    "do",
+    "take",
+    "go"
+   ]
+  },
+  {
+   "q": "___ someone a favour",
+   "a": "do",
+   "d": [
+    "make",
+    "get",
+    "put"
+   ]
+  },
+  {
+   "q": "___ a joke",
+   "a": "make",
+   "d": [
+    "do",
+    "go",
+    "put"
+   ]
+  },
+  {
+   "q": "___ some exercise",
+   "a": "do",
+   "d": [
+    "make",
+    "put",
+    "give"
+   ]
+  },
+  {
+   "q": "___ an impression",
+   "a": "make",
+   "d": [
+    "do",
+    "put",
+    "take"
+   ]
+  },
+  {
+   "q": "___ a crossword",
+   "a": "do",
+   "d": [
+    "make",
+    "give",
+    "put"
+   ]
+  },
+  {
+   "q": "Clue word for 'corporate'",
+   "a": "company",
+   "d": [
+    "lawyer",
+    "big",
+    "works"
+   ]
+  },
+  {
+   "q": "Words that go together",
+   "a": "collocation",
+   "d": [
+    "context",
+    "prediction",
+    "heading"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is a collocation?",
+   "o": [
+    "a group of words that often go together",
+    "a word with no meaning",
+    "a type of punctuation",
+    "a long paragraph"
+   ],
+   "why": "For example: make a mistake."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list has only 'make' collocations?",
+   "o": [
+    "a promise, a mistake, dinner",
+    "the shopping, a crossword, your duty",
+    "some exercise, the washing-up, a favour",
+    "a crossword, dinner, the shopping"
+   ],
+   "why": "These all go with make."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list has only 'do' collocations?",
+   "o": [
+    "a crossword, your duty, the shopping",
+    "a joke, an enemy, dinner",
+    "a mistake, a promise, an impression",
+    "dinner, a crossword, a joke"
+   ],
+   "why": "These all go with do."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why must you learn make/do collocations by heart?",
+   "o": [
+    "There are no rules about which words go with each verb",
+    "They are very long",
+    "They are only used in writing",
+    "They change every year"
+   ],
+   "why": "Without a rule, memory is the best way."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I always ______ my homework before dinner.",
+   "o": [
+    "do",
+    "make",
+    "made",
+    "doing"
+   ],
+   "why": "Homework is work, and 'do' goes with work tasks like this."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Be careful! Don't ______ a mistake.",
+   "o": [
+    "make",
+    "do",
+    "did",
+    "doing"
+   ],
+   "why": "We make a mistake."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: My father ______ the shopping every Thursday.",
+   "o": [
+    "does",
+    "makes",
+    "make",
+    "did made"
+   ],
+   "why": "We do the shopping; he + does."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Vanessa is a corporate lawyer, who works for a big international company.' What does 'corporate' mean?",
+   "o": [
+    "belonging to a company",
+    "very old",
+    "working alone",
+    "very expensive"
+   ],
+   "why": "The word 'company' is the clue."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is correct?",
+   "o": [
+    "He made a joke and everyone laughed.",
+    "He did a joke and everyone laughed.",
+    "He made the washing-up.",
+    "He did a promise."
+   ],
+   "why": "Joke goes with make."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How can you guess the meaning of an unknown word in a text?",
+   "o": [
+    "Look at the words before and after it",
+    "Skip the whole paragraph",
+    "Count its letters",
+    "Look only at the title"
+   ],
+   "why": "Context clues show the meaning."
+  }
+ ]
+}

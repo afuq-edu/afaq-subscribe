@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: A Warm Welcome (Reading)",
+ "lesson": "Reading six tourists’ views and multiple choice",
+ "outcomes": [
+  "Read six tourists' views about Oman",
+  "Suggest a new title for the texts",
+  "Answer multiple-choice questions about the texts"
+ ],
+ "tf": [
+  {
+   "s": "In 2015 the New York Times listed Oman as Number 20 of 52 top destinations.",
+   "t": true,
+   "why": "Yes, Oman was on the list of 52 top destinations."
+  },
+  {
+   "s": "Oman is popular with tourists partly because it is a safe country.",
+   "t": true,
+   "why": "Right, safety is one reason visitors come."
+  },
+  {
+   "s": "The texts give the views of six tourists.",
+   "t": true,
+   "why": "Correct, six tourists share their opinions."
+  },
+  {
+   "s": "Oman has very few things to see and do.",
+   "t": false,
+   "why": "Oman offers a variety of things to see and do."
+  },
+  {
+   "s": "'A Warm Welcome' suggests that visitors are welcomed kindly in Oman.",
+   "t": true,
+   "why": "Yes, it describes Omani hospitality, not the weather."
+  },
+  {
+   "s": "'Scenery' means the people who live in a place.",
+   "t": false,
+   "why": "Scenery is the natural beauty of a place, like mountains."
+  },
+  {
+   "s": "'Destination' means a place people travel to.",
+   "t": true,
+   "why": "Yes, Oman is a popular destination."
+  },
+  {
+   "s": "'Variety' means only one kind of thing.",
+   "t": false,
+   "why": "Variety means many different kinds."
+  },
+  {
+   "s": "'Amenities' are dangers that tourists must avoid.",
+   "t": false,
+   "why": "Amenities are useful services, like hotels and shops."
+  },
+  {
+   "s": "Friendly people are one reason tourists like Oman.",
+   "t": true,
+   "why": "Well done, friendly people make visitors happy."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which is NOT a reason tourists enjoy Oman?",
+   "o": [
+    "Dangerous streets",
+    "Wonderful scenery",
+    "Friendly people"
+   ],
+   "why": "Oman is known for being safe."
+  },
+  {
+   "q": "Which is a good alternative title for the texts?",
+   "o": [
+    "Six Views of Oman",
+    "How to Cook Rice",
+    "My School Day"
+   ],
+   "why": "It matches the six tourists' opinions."
+  },
+  {
+   "q": "Which place did a tourist mention for its scenery?",
+   "o": [
+    "Jebel Shams",
+    "A shopping mall",
+    "An airport"
+   ],
+   "why": "Jebel Shams has amazing mountain views."
+  },
+  {
+   "q": "What shows that tourism in Oman is growing?",
+   "o": [
+    "More hotels and travel agencies",
+    "Fewer visitors",
+    "Closed museums"
+   ],
+   "why": "New businesses open when more tourists come."
+  },
+  {
+   "q": "What did one tourist enjoy about Oman's land?",
+   "o": [
+    "Different kinds of scenery",
+    "Only one kind of beach",
+    "Snowy cities"
+   ],
+   "why": "Oman has mountains, deserts, beaches and more."
+  },
+  {
+   "q": "Who listed Oman as a top destination in 2015?",
+   "o": [
+    "The New York Times",
+    "A school magazine",
+    "A football club"
+   ],
+   "why": "The New York Times put Oman at Number 20."
+  },
+  {
+   "q": "What do you note while reading the six views?",
+   "o": [
+    "What each tourist enjoyed",
+    "The number of words",
+    "The colours of the pictures"
+   ],
+   "why": "Noting key points helps you answer later."
+  },
+  {
+   "q": "What kind of tourist can enjoy Oman?",
+   "o": [
+    "Different types of tourist",
+    "Only young tourists",
+    "Only rich tourists"
+   ],
+   "why": "Oman has something for everyone."
+  },
+  {
+   "q": "What is a tourist?",
+   "o": [
+    "A person who visits a place for pleasure",
+    "A person who builds hotels",
+    "A kind of map"
+   ],
+   "why": "Tourists travel to enjoy new places."
+  },
+  {
+   "q": "Which word means 'free from danger'?",
+   "o": [
+    "safe",
+    "variety",
+    "scenery"
+   ],
+   "why": "A safe country is free from danger."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The natural beauty of a land",
+   "a": "Scenery",
+   "d": [
+    "Variety",
+    "Amenities",
+    "Safety"
+   ]
+  },
+  {
+   "q": "A place people travel to",
+   "a": "Destination",
+   "d": [
+    "Amenity",
+    "Scenery",
+    "Variety"
+   ]
+  },
+  {
+   "q": "Many different kinds",
+   "a": "Variety",
+   "d": [
+    "Scenery",
+    "Destination",
+    "Safety"
+   ]
+  },
+  {
+   "q": "Useful services for visitors",
+   "a": "Amenities",
+   "d": [
+    "Scenery",
+    "Variety",
+    "Destination"
+   ]
+  },
+  {
+   "q": "Free from danger",
+   "a": "Safe",
+   "d": [
+    "Busy",
+    "Noisy",
+    "Crowded"
+   ]
+  },
+  {
+   "q": "Oman's place on the 2015 list",
+   "a": "Number 20",
+   "d": [
+    "Number 1",
+    "Number 52",
+    "Number 10"
+   ]
+  },
+  {
+   "q": "How many tourists give views?",
+   "a": "Six",
+   "d": [
+    "Four",
+    "Five",
+    "Eight"
+   ]
+  },
+  {
+   "q": "Top destinations on the 2015 list",
+   "a": "52",
+   "d": [
+    "20",
+    "25",
+    "100"
+   ]
+  },
+  {
+   "q": "More of these show tourism growth",
+   "a": "Hotels",
+   "d": [
+    "Deserts",
+    "Mountains",
+    "Rivers"
+   ]
+  },
+  {
+   "q": "A person who travels for pleasure",
+   "a": "Tourist",
+   "d": [
+    "Chef",
+    "Pilot",
+    "Farmer"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why is Oman attractive to tourists?",
+   "o": [
+    "Wonderful scenery, friendly people, variety and safety",
+    "Cold weather and snow",
+    "Only its big cities",
+    "Only its shopping malls"
+   ],
+   "why": "These reasons attract many visitors."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do the reading texts give?",
+   "o": [
+    "Six tourists' opinions about Oman",
+    "One tourist's diary",
+    "A history of Oman",
+    "A list of hotel prices"
+   ],
+   "why": "Each text is one tourist's view."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'variety' mean?",
+   "o": [
+    "Many different kinds of things",
+    "A very high mountain",
+    "A safe place",
+    "A hotel service"
+   ],
+   "why": "Oman offers a variety of activities."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do groups suggest after reading the texts?",
+   "o": [
+    "Alternative titles",
+    "New hotel names",
+    "Recipes",
+    "Travel prices"
+   ],
+   "why": "Groups suggest and vote for the best title."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A tourist loves mountains and beautiful views. Which place from the texts suits them best?",
+   "o": [
+    "Jebel Shams",
+    "A shopping mall",
+    "An airport",
+    "A hotel gym"
+   ],
+   "why": "Jebel Shams is famous for its scenery."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses 'scenery' correctly?",
+   "o": [
+    "The scenery in the mountains is beautiful.",
+    "I ate scenery for lunch.",
+    "She drove the scenery to work.",
+    "The scenery called me on the phone."
+   ],
+   "why": "Scenery is what you see in nature."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best alternative title for the six views.",
+   "o": [
+    "Why Visitors Love Oman",
+    "How to Build a Hotel",
+    "Football in Europe",
+    "A Day at School"
+   ],
+   "why": "A good title shows the main idea."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'A Warm Welcome' a good title for this unit?",
+   "o": [
+    "It shows that visitors are treated kindly in Oman",
+    "It shows that Oman is always hot",
+    "It is about cooking warm food",
+    "It tells tourists to stay away"
+   ],
+   "why": "'Warm' here means kind and friendly."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do more hotels and travel agencies show that tourism is growing?",
+   "o": [
+    "More businesses open when more tourists come",
+    "Hotels are cheap to build",
+    "Travel agencies sell food",
+    "Tourists prefer to stay at home"
+   ],
+   "why": "Businesses grow to serve more visitors."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Six different tourists all enjoyed Oman. What does this suggest?",
+   "o": [
+    "Oman has something for different kinds of people",
+    "Only one place in Oman is worth visiting",
+    "The tourists did not enjoy their trips",
+    "Oman is only for young people"
+   ],
+   "why": "Different visitors found different things to enjoy."
+  }
+ ]
+}

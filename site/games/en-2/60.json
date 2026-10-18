@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Unit 4 – Consolidation 3: Phonics practice",
+  "outcomes": [
+    "I can match words to ee, er, ar and o-e.",
+    "I can put letters in order to write a word.",
+    "I can blend new words like queen, garden and joke."
+  ],
+  "tf": [
+    {
+      "s": "Tree has ee.",
+      "t": true,
+      "why": "Yes! tr-ee has ee."
+    },
+    {
+      "s": "Rope has o-e.",
+      "t": true,
+      "why": "Great! r-o-p-e has o-e."
+    },
+    {
+      "s": "Card has er.",
+      "t": false,
+      "why": "Card has ar: c-ar-d."
+    },
+    {
+      "s": "Queen has ee.",
+      "t": true,
+      "why": "Well done! qu-ee-n has ee."
+    },
+    {
+      "s": "Joke has ar.",
+      "t": false,
+      "why": "Joke has o-e: j-o-k-e."
+    },
+    {
+      "s": "Garden has ar.",
+      "t": true,
+      "why": "Yes! g-ar-den has ar."
+    },
+    {
+      "s": "Her has the er sound.",
+      "t": true,
+      "why": "Great! h-er has er."
+    },
+    {
+      "s": "Green has o-e.",
+      "t": false,
+      "why": "Green has ee."
+    },
+    {
+      "s": "The letters t, o, e, n make the word note.",
+      "t": true,
+      "why": "Yes! n-o-t-e spells note."
+    },
+    {
+      "s": "Park and fern have the same sound.",
+      "t": false,
+      "why": "Park has ar; fern has er."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Match \"rope\" to its digraph.",
+      "o": [
+        "o-e",
+        "ee",
+        "ar"
+      ],
+      "why": "r-o-p-e has o-e."
+    },
+    {
+      "q": "Order: t / o / e / n",
+      "o": [
+        "note",
+        "nteo",
+        "neto"
+      ],
+      "why": "We write note: n-o-t-e."
+    },
+    {
+      "q": "Blend qu – ee – n.",
+      "o": [
+        "queen",
+        "quin",
+        "quan"
+      ],
+      "why": "qu-ee-n makes queen."
+    },
+    {
+      "q": "Blend j – o – k – e.",
+      "o": [
+        "joke",
+        "jock",
+        "jake"
+      ],
+      "why": "The magic e makes joke."
+    },
+    {
+      "q": "Which word has ar?",
+      "o": [
+        "card",
+        "cone",
+        "queen"
+      ],
+      "why": "c-ar-d has ar."
+    },
+    {
+      "q": "Which word has er?",
+      "o": [
+        "her",
+        "home",
+        "tree"
+      ],
+      "why": "h-er has er."
+    },
+    {
+      "q": "Which word has ee?",
+      "o": [
+        "sweet",
+        "herd",
+        "park"
+      ],
+      "why": "sw-ee-t has ee."
+    },
+    {
+      "q": "Match \"fern\" to its digraph.",
+      "o": [
+        "er",
+        "ar",
+        "ee"
+      ],
+      "why": "f-er-n has er."
+    },
+    {
+      "q": "Blend g – ar – d – e – n.",
+      "o": [
+        "garden",
+        "girden",
+        "golden"
+      ],
+      "why": "g-ar-d-e-n makes garden."
+    },
+    {
+      "q": "Which word has o-e?",
+      "o": [
+        "home",
+        "herd",
+        "green"
+      ],
+      "why": "h-o-m-e has o-e."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Digraph in \"tree\"",
+      "a": "ee",
+      "d": [
+        "er",
+        "ar",
+        "o-e"
+      ]
+    },
+    {
+      "q": "Digraph in \"herd\"",
+      "a": "er",
+      "d": [
+        "ee",
+        "ar",
+        "o-e"
+      ]
+    },
+    {
+      "q": "Digraph in \"park\"",
+      "a": "ar",
+      "d": [
+        "er",
+        "ee",
+        "o-e"
+      ]
+    },
+    {
+      "q": "Digraph in \"joke\"",
+      "a": "o-e",
+      "d": [
+        "ar",
+        "ee",
+        "er"
+      ]
+    },
+    {
+      "q": "Order: r / a / c / d",
+      "a": "card",
+      "d": [
+        "crad",
+        "darc",
+        "cadr"
+      ]
+    },
+    {
+      "q": "Order: e / m / o / h",
+      "a": "home",
+      "d": [
+        "hoem",
+        "mohe",
+        "ehom"
+      ]
+    },
+    {
+      "q": "Order: e / t / r / e",
+      "a": "tree",
+      "d": [
+        "teer",
+        "rete",
+        "eter"
+      ]
+    },
+    {
+      "q": "Find the ee word.",
+      "a": "green",
+      "d": [
+        "garden",
+        "card",
+        "joke"
+      ]
+    },
+    {
+      "q": "Find the ar word.",
+      "a": "park",
+      "d": [
+        "queen",
+        "rope",
+        "herd"
+      ]
+    },
+    {
+      "q": "Find the er word.",
+      "a": "fern",
+      "d": [
+        "sweet",
+        "home",
+        "card"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which digraph is in \"green\"?",
+      "o": [
+        "ee",
+        "er",
+        "ar",
+        "o-e"
+      ],
+      "why": "gr-ee-n has ee."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word has a magic e?",
+      "o": [
+        "rope",
+        "card",
+        "tree",
+        "her"
+      ],
+      "why": "r-o-p-e has o-e."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Find the word with the same sound as \"card\".",
+      "o": [
+        "garden",
+        "queen",
+        "joke",
+        "herd"
+      ],
+      "why": "g-ar-den has ar."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word has the sound in \"fern\"?",
+      "o": [
+        "herd",
+        "home",
+        "sweet",
+        "card"
+      ],
+      "why": "h-er-d has er."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Write the word for the picture of a herd of cows.",
+      "o": [
+        "herd",
+        "hard",
+        "hord",
+        "hurd"
+      ],
+      "why": "h-er-d spells herd."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Blend sw – ee – t.",
+      "o": [
+        "sweet",
+        "swat",
+        "sweat",
+        "swot"
+      ],
+      "why": "sw-ee-t makes sweet."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Order the letters: p / e / o / r",
+      "o": [
+        "rope",
+        "proe",
+        "repo",
+        "poer"
+      ],
+      "why": "r-o-p-e spells rope."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word is the odd one out?",
+      "o": [
+        "joke",
+        "queen",
+        "tree",
+        "green"
+      ],
+      "why": "Joke has o-e; the others have ee."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which two words have the same digraph?",
+      "o": [
+        "card and garden",
+        "card and queen",
+        "joke and herd",
+        "tree and fern"
+      ],
+      "why": "Card and garden both have ar."
+    },
+    {
+      "lv": "التحليل",
+      "q": "What makes \"joke\" different from \"jock\"?",
+      "o": [
+        "The magic e",
+        "The letter j",
+        "The letter k",
+        "Nothing"
+      ],
+      "why": "The e at the end changes the o sound."
+    }
+  ]
+}

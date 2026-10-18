@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Unit 4 – Lesson 2: Story \"The game\"",
+  "outcomes": [
+    "I can follow the story \"The game\" and name Lily's family.",
+    "I can understand He's got and She's got.",
+    "I can say why we love our family."
+  ],
+  "tf": [
+    {
+      "s": "In the story, Lily's baby cousin has got big blue eyes.",
+      "t": true,
+      "why": "Yes! She's got big blue eyes."
+    },
+    {
+      "s": "Lily's uncle has got the ball.",
+      "t": true,
+      "why": "Great! He's got the ball."
+    },
+    {
+      "s": "Lily's uncle has got red hair.",
+      "t": false,
+      "why": "He's got brown hair."
+    },
+    {
+      "s": "Lily says: Oh! It's my uncle!",
+      "t": true,
+      "why": "Well done! Lily finds her uncle."
+    },
+    {
+      "s": "Polly has got one ball.",
+      "t": false,
+      "why": "Polly has got three balls."
+    },
+    {
+      "s": "The value of the story is Love your family.",
+      "t": true,
+      "why": "Yes! We love our family."
+    },
+    {
+      "s": "We say He's got for a girl.",
+      "t": false,
+      "why": "We say She's got for a girl."
+    },
+    {
+      "s": "Playing with our family makes us happy.",
+      "t": true,
+      "why": "Great! Families are happy together."
+    },
+    {
+      "s": "In the story, the baby is Lily's sister.",
+      "t": false,
+      "why": "The baby is Lily's cousin."
+    },
+    {
+      "s": "Lily says: This is my mum and my cousin.",
+      "t": false,
+      "why": "Lily says: This is my mum and dad."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Who's got big blue eyes?",
+      "o": [
+        "the baby cousin",
+        "the uncle",
+        "Polly"
+      ],
+      "why": "The baby cousin has got big blue eyes."
+    },
+    {
+      "q": "Who has got the ball?",
+      "o": [
+        "the uncle",
+        "the baby cousin",
+        "Lily's mum"
+      ],
+      "why": "Lily's uncle has got the ball."
+    },
+    {
+      "q": "The uncle has got brown ___.",
+      "o": [
+        "hair",
+        "eyes",
+        "balls"
+      ],
+      "why": "He's got brown hair."
+    },
+    {
+      "q": "Complete: It's my baby ___.",
+      "o": [
+        "cousin",
+        "uncle",
+        "grandad"
+      ],
+      "why": "It's my baby cousin."
+    },
+    {
+      "q": "How many balls has Polly got?",
+      "o": [
+        "three",
+        "one",
+        "ten"
+      ],
+      "why": "Polly has got three balls."
+    },
+    {
+      "q": "Who says \"Oh! It's my uncle!\"?",
+      "o": [
+        "Lily",
+        "the uncle",
+        "the baby"
+      ],
+      "why": "Lily says it."
+    },
+    {
+      "q": "The uncle is a man. ___ got brown hair.",
+      "o": [
+        "He's",
+        "She's",
+        "It's"
+      ],
+      "why": "We use He's got for a man or boy."
+    },
+    {
+      "q": "The cousin is a girl. ___ got blue eyes.",
+      "o": [
+        "She's",
+        "He's",
+        "I've"
+      ],
+      "why": "We use She's got for a girl."
+    },
+    {
+      "q": "Families play ___ and are happy.",
+      "o": [
+        "together",
+        "alone",
+        "never"
+      ],
+      "why": "Families have fun when they play together."
+    },
+    {
+      "q": "Who's this? ___ my mum and dad.",
+      "o": [
+        "This is",
+        "He's got",
+        "Where's"
+      ],
+      "why": "Lily says: This is my mum and dad."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "She's got big blue eyes.",
+      "a": "baby cousin",
+      "d": [
+        "uncle",
+        "dad",
+        "Lily's mum"
+      ]
+    },
+    {
+      "q": "Who's got the ball?",
+      "a": "uncle",
+      "d": [
+        "cousin",
+        "mum",
+        "Polly"
+      ]
+    },
+    {
+      "q": "He's got brown ___.",
+      "a": "hair",
+      "d": [
+        "eyes",
+        "ball",
+        "mouth"
+      ]
+    },
+    {
+      "q": "Cousin's eye colour",
+      "a": "blue",
+      "d": [
+        "brown",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "q": "Polly has got ___ balls.",
+      "a": "three",
+      "d": [
+        "one",
+        "two",
+        "five"
+      ]
+    },
+    {
+      "q": "It's my baby ___.",
+      "a": "cousin",
+      "d": [
+        "uncle",
+        "grandad",
+        "dad"
+      ]
+    },
+    {
+      "q": "A girl: ___ got blue eyes.",
+      "a": "She's",
+      "d": [
+        "He's",
+        "It's",
+        "I'm"
+      ]
+    },
+    {
+      "q": "A man: ___ got brown hair.",
+      "a": "He's",
+      "d": [
+        "She's",
+        "It's",
+        "I'm"
+      ]
+    },
+    {
+      "q": "Love your ___.",
+      "a": "family",
+      "d": [
+        "ball",
+        "game",
+        "hair"
+      ]
+    },
+    {
+      "q": "Who finds the uncle?",
+      "a": "Lily",
+      "d": [
+        "Polly",
+        "the baby",
+        "the uncle"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What is the name of the story?",
+      "o": [
+        "The game",
+        "The robot",
+        "The big dig",
+        "My bike"
+      ],
+      "why": "This story is The game."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Lily points to the baby. What does she say?",
+      "o": [
+        "It's my baby cousin.",
+        "It's my uncle.",
+        "This is my mum and dad.",
+        "Where's the ball?"
+      ],
+      "why": "Lily says: It's my baby cousin."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What colour is the uncle's hair?",
+      "o": [
+        "brown",
+        "black",
+        "red",
+        "yellow"
+      ],
+      "why": "He's got brown hair."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What is the value of the story?",
+      "o": [
+        "Love your family.",
+        "Do exercise.",
+        "Share your toys.",
+        "Say thank you."
+      ],
+      "why": "The value is Love your family."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose: Lily's uncle ___ got the ball.",
+      "o": [
+        "He's",
+        "She's",
+        "I've",
+        "It's"
+      ],
+      "why": "The uncle is a man, so we say He's got."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose: The baby cousin ___ got big blue eyes.",
+      "o": [
+        "She's",
+        "He's",
+        "We've",
+        "I've"
+      ],
+      "why": "The baby cousin is a girl, so we say She's got."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Match: Who's this?",
+      "o": [
+        "It's my grandad.",
+        "Yes, I am.",
+        "I'm six.",
+        "It's blue."
+      ],
+      "why": "Who's this? asks about a person."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why is it good to play with your family?",
+      "o": [
+        "We are happy together.",
+        "We can be sad.",
+        "We play alone.",
+        "We don't talk."
+      ],
+      "why": "Playing together makes families happy."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which shows love for your family?",
+      "o": [
+        "Helping grandma",
+        "Shouting at your brother",
+        "Taking your sister's toy",
+        "Not saying hello"
+      ],
+      "why": "Helping our family shows love."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Polly has got three balls. Lily's uncle has got the ball. Who has got more balls?",
+      "o": [
+        "Polly",
+        "Lily's uncle",
+        "Lily",
+        "the baby cousin"
+      ],
+      "why": "Three balls is more than one ball."
+    }
+  ]
+}

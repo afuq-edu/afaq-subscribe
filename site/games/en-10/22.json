@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "4",
+ "lesson": "Unit 4: Civilisation – Introducing Civilisation",
+ "outcomes": [
+  "Explain what 'civilisation' means.",
+  "Use words like ancient, culture, citizen and archaeologist.",
+  "Listen for facts about ancient civilisations."
+ ],
+ "tf": [
+  {
+   "s": "A civilisation is the culture and way of life of a society at a particular time.",
+   "t": true,
+   "why": "Yes, that is the meaning of civilisation."
+  },
+  {
+   "s": "The Ancient Egyptians built the pyramids.",
+   "t": true,
+   "why": "Correct, the pyramids are Egyptian."
+  },
+  {
+   "s": "An archaeologist is a person who studies old objects and buildings.",
+   "t": true,
+   "why": "Right, archaeologists learn about the past."
+  },
+  {
+   "s": "The Majan civilisation was known for copper and shipbuilding.",
+   "t": true,
+   "why": "Well done, Majan was famous for these."
+  },
+  {
+   "s": "'Ancient' means very modern.",
+   "t": false,
+   "why": "'Ancient' means very old."
+  },
+  {
+   "s": "Greek civilisation was known for building the pyramids.",
+   "t": false,
+   "why": "Greek civilisation was known for philosophy and architecture."
+  },
+  {
+   "s": "A citizen is a person who studies old buildings.",
+   "t": false,
+   "why": "That is an archaeologist; a citizen belongs to a country or city."
+  },
+  {
+   "s": "Egyptian civilisation lasted from about 3000 BC to 30 BC.",
+   "t": true,
+   "why": "Correct, this is from the listening."
+  },
+  {
+   "s": "Greek civilisation lasted from about 800 BC to 146 BC.",
+   "t": true,
+   "why": "Yes, that was in the table."
+  },
+  {
+   "s": "A leader is a person who follows everyone else.",
+   "t": false,
+   "why": "A leader guides a group of people."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which civilisation built the pyramids?",
+   "o": [
+    "the Ancient Egyptians",
+    "the Greeks",
+    "the Mayans"
+   ],
+   "why": "The pyramids are in Egypt."
+  },
+  {
+   "q": "Majan was known for…",
+   "o": [
+    "copper and shipbuilding",
+    "pyramids",
+    "philosophy"
+   ],
+   "why": "Majan traded copper and built ships."
+  },
+  {
+   "q": "Greek civilisation was known for…",
+   "o": [
+    "philosophy and architecture",
+    "pyramids",
+    "copper"
+   ],
+   "why": "The Greeks are famous for ideas and buildings."
+  },
+  {
+   "q": "A person who studies old objects and buildings is…",
+   "o": [
+    "an archaeologist",
+    "a citizen",
+    "a leader"
+   ],
+   "why": "Archaeologists study the past."
+  },
+  {
+   "q": "'Ancient' means…",
+   "o": [
+    "very old",
+    "very new",
+    "very big"
+   ],
+   "why": "Ancient things are from long ago."
+  },
+  {
+   "q": "A person who guides a group is…",
+   "o": [
+    "a leader",
+    "a citizen",
+    "a visitor"
+   ],
+   "why": "Leaders guide people."
+  },
+  {
+   "q": "Egyptian civilisation ended in about…",
+   "o": [
+    "30 BC",
+    "146 BC",
+    "800 BC"
+   ],
+   "why": "Egyptian: 3000 BC–30 BC."
+  },
+  {
+   "q": "Greek civilisation began in about…",
+   "o": [
+    "800 BC",
+    "3000 BC",
+    "30 BC"
+   ],
+   "why": "Greek: 800 BC–146 BC."
+  },
+  {
+   "q": "Beliefs and worship of a people are their…",
+   "o": [
+    "religion",
+    "economy",
+    "map"
+   ],
+   "why": "Religion is about beliefs."
+  },
+  {
+   "q": "A civilisation is a society's…",
+   "o": [
+    "culture and way of life",
+    "weather",
+    "football team"
+   ],
+   "why": "Civilisation means a way of life."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Built the pyramids",
+   "a": "Egyptians",
+   "d": [
+    "Greeks",
+    "Mayans",
+    "Romans"
+   ]
+  },
+  {
+   "q": "Known for copper and ships",
+   "a": "Majan",
+   "d": [
+    "Greek",
+    "Mayan",
+    "Roman"
+   ]
+  },
+  {
+   "q": "Known for philosophy",
+   "a": "Greek",
+   "d": [
+    "Majan",
+    "Egyptian",
+    "Mayan"
+   ]
+  },
+  {
+   "q": "Studies old objects",
+   "a": "archaeologist",
+   "d": [
+    "citizen",
+    "leader",
+    "farmer"
+   ]
+  },
+  {
+   "q": "Means 'very old'",
+   "a": "ancient",
+   "d": [
+    "modern",
+    "united",
+    "recent"
+   ]
+  },
+  {
+   "q": "Guides a group",
+   "a": "leader",
+   "d": [
+    "citizen",
+    "visitor",
+    "student"
+   ]
+  },
+  {
+   "q": "Egyptian start date",
+   "a": "3000 BC",
+   "d": [
+    "800 BC",
+    "146 BC",
+    "30 BC"
+   ]
+  },
+  {
+   "q": "Greek end date",
+   "a": "146 BC",
+   "d": [
+    "30 BC",
+    "3000 BC",
+    "800 BC"
+   ]
+  },
+  {
+   "q": "Way of life of a society",
+   "a": "civilisation",
+   "d": [
+    "religion",
+    "citizen",
+    "leader"
+   ]
+  },
+  {
+   "q": "Joined together as one",
+   "a": "united",
+   "d": [
+    "ancient",
+    "divided",
+    "lost"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is a civilisation?",
+   "o": [
+    "the culture and way of life of a society at a particular time",
+    "a type of energy",
+    "a modern machine",
+    "a kind of weather"
+   ],
+   "why": "Civilisation describes how a society lived."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which civilisation was known for copper and shipbuilding?",
+   "o": [
+    "Majan",
+    "Greek",
+    "Egyptian",
+    "Mayan"
+   ],
+   "why": "Majan is linked to Oman's ancient past."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does an archaeologist do?",
+   "o": [
+    "studies old objects and buildings",
+    "leads a country",
+    "builds new roads",
+    "sells copper"
+   ],
+   "why": "Archaeologists learn about the past from objects."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When did Egyptian civilisation last, according to the listening?",
+   "o": [
+    "3000 BC–30 BC",
+    "800 BC–146 BC",
+    "30 BC–3000 BC",
+    "146 BC–800 BC"
+   ],
+   "why": "The Egyptians lasted about 3000 years."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: ______ studied the old tools found in the desert.",
+   "o": [
+    "The archaeologist",
+    "The citizen",
+    "The leader",
+    "The religion"
+   ],
+   "why": "Studying old objects is an archaeologist's job."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A temple shows what people believed. Which word describes this?",
+   "o": [
+    "religion",
+    "economy",
+    "agriculture",
+    "weather"
+   ],
+   "why": "Beliefs and worship are religion."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Greek civilisation was known for ______.",
+   "o": [
+    "philosophy and architecture",
+    "pyramids",
+    "copper",
+    "shipbuilding only"
+   ],
+   "why": "The Greeks are famous for ideas and buildings."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which lasted longer: Egyptian (3000 BC–30 BC) or Greek (800 BC–146 BC) civilisation?",
+   "o": [
+    "Egyptian",
+    "Greek",
+    "They lasted the same time.",
+    "We cannot tell."
+   ],
+   "why": "Egyptian lasted about 2970 years; Greek about 654 years."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which answer gives an opinion with a reason?",
+   "o": [
+    "I find the Sumerians interesting because they invented writing.",
+    "The Sumerians.",
+    "Writing.",
+    "Civilisation is a word."
+   ],
+   "why": "A good opinion gives a reason with 'because'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are the Majan civilisation's copper and ships important for Oman's history?",
+   "o": [
+    "They show that ancient Oman made and traded goods.",
+    "They show Oman had no people.",
+    "They show Oman built pyramids.",
+    "They show Oman was modern."
+   ],
+   "why": "Copper and ships point to trade."
+  }
+ ]
+}

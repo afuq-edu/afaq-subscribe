@@ -1,0 +1,58 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Unit 4: Service With a Smile (Listening & Speaking)",
+  "lesson": "Vocabulary matching and Listening 3.4.2: training to be a chef",
+  "outcomes": [
+    "Match key words such as 'day release' and 'prospects' with their meanings",
+    "Predict information and listen to complete a table about a chef's course"
+  ],
+  "tf": [
+    { "s": "Hassan's appointment is at 9.30.", "t": true, "why": "The listening gives the time as 9.30." },
+    { "s": "Hassan can take the certificate course for advanced chefs.", "t": true, "why": "This is the course that suits his experience." },
+    { "s": "The chef's course lasts three years.", "t": false, "why": "The course lasts eighteen months." },
+    { "s": "'Day release' means attending the Institute one day a week while continuing in a job.", "t": true, "why": "Students keep working and study one day each week." },
+    { "s": "Hassan wants a formal qualification so he can apply for a job in a five-star international hotel.", "t": true, "why": "A qualification helps him get a top hotel job." },
+    { "s": "The prospects for chefs in Oman are poor because restaurants are closing.", "t": false, "why": "Prospects are excellent: new hotels and restaurants open all the time." },
+    { "s": "The training kitchen is one of the facilities at the Institute.", "t": true, "why": "Facilities are the places and equipment for training." },
+    { "s": "'Prospects' means memories of the past.", "t": false, "why": "'Prospects' are chances of success in the future." },
+    { "s": "An 'overview' is a very detailed study of one small point.", "t": false, "why": "An overview is a general description of the whole thing." },
+    { "s": "'Facilities' means the people who teach on a course.", "t": false, "why": "Facilities are the buildings and equipment, like a training kitchen." }
+  ],
+  "boxes": [
+    { "q": "What time is Hassan's appointment?", "o": ["9.30", "10.30", "8.00"], "why": "The appointment is at 9.30." },
+    { "q": "How long is the chef's course?", "o": ["18 months", "6 months", "3 years"], "why": "The course takes eighteen months." },
+    { "q": "Which course can Hassan take?", "o": ["Certificate course for advanced chefs", "Events management degree", "Tour guide diploma"], "why": "He is an experienced cook, so the advanced course fits." },
+    { "q": "How often does a day-release student attend?", "o": ["One day a week", "Every day", "Once a year"], "why": "Day release means one day a week at the Institute." },
+    { "q": "What facility does the Institute have?", "o": ["A training kitchen", "A swimming pool", "A car park only"], "why": "Chefs train in a training kitchen." },
+    { "q": "Why are chef prospects good in Oman?", "o": ["New hotels and restaurants keep opening", "Restaurants are closing", "Nobody eats out"], "why": "New places need more chefs." },
+    { "q": "What kind of hotel does Hassan want to work in?", "o": ["A five-star international hotel", "A small guest house", "A floating hotel"], "why": "He wants a formal qualification for a five-star hotel job." },
+    { "q": "What does 'prospects' mean?", "o": ["Chances of future success", "Past mistakes", "Kitchen tools"], "why": "Prospects are your future chances." },
+    { "q": "What does 'overview' mean?", "o": ["A general description", "A small detail", "A final exam"], "why": "An overview gives the big picture." },
+    { "q": "What does 'experience' mean?", "o": ["Knowledge from doing something", "A new building", "A type of meal"], "why": "Experience comes from practice and work." }
+  ],
+  "hunt": [
+    { "q": "Time of Hassan's appointment", "a": "9.30", "d": ["10.30", "9.00", "3.30"] },
+    { "q": "Length of the chef's course", "a": "18 months", "d": ["8 months", "18 weeks", "3 years"] },
+    { "q": "Study one day a week + job", "a": "day release", "d": ["full-time", "night shift", "holiday"] },
+    { "q": "Chances of future success", "a": "prospects", "d": ["facilities", "overview", "experience"] },
+    { "q": "Buildings and equipment provided", "a": "facilities", "d": ["prospects", "overview", "experience"] },
+    { "q": "A general description", "a": "overview", "d": ["facilities", "prospects", "certificate"] },
+    { "q": "Knowledge from doing a job", "a": "experience", "d": ["overview", "prospects", "facilities"] },
+    { "q": "Where chefs practise at the Institute", "a": "training kitchen", "d": ["car park", "library", "reception"] },
+    { "q": "Hassan's dream hotel: five-...", "a": "star", "d": ["floor", "room", "year"] },
+    { "q": "Hassan's course: certificate for ...", "a": "advanced chefs", "d": ["tour guides", "pilots", "cabin crew"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "What does 'day release' mean?", "o": ["Attending the Institute one day a week while continuing in a job", "Leaving your job for a holiday", "Studying only at night", "Finishing the course in one day"], "why": "Day release lets workers study and keep their jobs." },
+    { "lv": "التذكر", "q": "How long is the certificate course for advanced chefs?", "o": ["Eighteen months", "Eight months", "Two years", "Four years"], "why": "The listening says eighteen months." },
+    { "lv": "التذكر", "q": "Which facility is mentioned for chef training?", "o": ["A training kitchen", "A cinema", "A sports stadium", "A boat"], "why": "Chefs practise in the training kitchen." },
+    { "lv": "التذكر", "q": "What does 'facilities' mean?", "o": ["Buildings and equipment provided for a purpose", "Future chances of success", "A short summary", "Reasons for a choice"], "why": "Facilities are places and equipment you can use." },
+    { "lv": "التطبيق", "q": "Ahmed works in a restaurant and does not want to stop working, but he wants to study. Which option suits him?", "o": ["Day release", "A full-time course abroad", "Leaving his job", "No study at all"], "why": "Day release lets him study one day a week and keep his job." },
+    { "lv": "التطبيق", "q": "A table gap says 'Length of course: ___'. What type of information do you predict?", "o": ["A length of time, like 18 months", "A person's name", "A kind of food", "A colour"], "why": "'Length' tells you to listen for a period of time." },
+    { "lv": "التطبيق", "q": "Choose the best word: 'With so many new hotels, the job ___ for chefs are excellent.'", "o": ["prospects", "facilities", "overview", "release"], "why": "'Prospects' means future chances, here for jobs." },
+    { "lv": "التحليل", "q": "Why does Hassan want a formal qualification?", "o": ["To apply for a job in a five-star international hotel", "Because he has never cooked before", "To become a tour guide", "Because the course is free"], "why": "Top hotels want chefs with formal qualifications." },
+    { "lv": "التحليل", "q": "Why are the prospects for chefs in Oman excellent?", "o": ["New hotels and restaurants open all the time and need chefs", "Hotels are closing down", "People have stopped eating out", "There are too many chefs already"], "why": "Growth in tourism creates demand for chefs." },
+    { "lv": "التحليل", "q": "Why is it useful to predict the type of information before you listen?", "o": ["You know exactly what to listen for, such as a time or a number", "You will not need to listen at all", "It makes the recording slower", "It tells you the speaker's name"], "why": "Predicting helps you focus and catch the answers." }
+  ]
+}

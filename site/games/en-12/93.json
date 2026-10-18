@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: Service With a Smile (Listening & Speaking)",
+ "lesson": "Oman as a tourist destination; Listening 3.4.1: choosing a course / Vocabulary matching and Listening 3.4.2: training to be a chef",
+ "outcomes": [
+  "Talk about tourism in Oman and careers in it",
+  "Listen for details about two training courses",
+  "Predict the type of information before you listen"
+ ],
+ "tf": [
+  {
+   "s": "Over a million tourists visit Oman every year.",
+   "t": true,
+   "why": "Yes, tourism in Oman is big and growing."
+  },
+  {
+   "s": "An events management course teaches planning, designing and organising events.",
+   "t": true,
+   "why": "Correct, that is what the course covers."
+  },
+  {
+   "s": "The events management diploma takes four years.",
+   "t": false,
+   "why": "The diploma takes two years; the degree takes four."
+  },
+  {
+   "s": "The four-year degree is with a partner institute in Ireland.",
+   "t": true,
+   "why": "Yes, it is from the Dublin Institute of Technology."
+  },
+  {
+   "s": "Hassan's appointment is at 9.30.",
+   "t": true,
+   "why": "Right, his appointment is at 9.30."
+  },
+  {
+   "s": "Hassan's chef course lasts three years.",
+   "t": false,
+   "why": "The course lasts 18 months."
+  },
+  {
+   "s": "'Day release' means going to the institute one day a week while you keep your job.",
+   "t": true,
+   "why": "Yes, you study and work at the same time."
+  },
+  {
+   "s": "Hassan does not need any qualification for the job he wants.",
+   "t": false,
+   "why": "He wants a formal qualification for a five-star hotel job."
+  },
+  {
+   "s": "The prospects for chefs in Oman are poor.",
+   "t": false,
+   "why": "Prospects are excellent because new hotels and restaurants open all the time."
+  },
+  {
+   "s": "Exhibitions are a kind of event.",
+   "t": true,
+   "why": "Yes, like conferences, festivals and sporting events."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How long is the events management diploma?",
+   "o": [
+    "Two years",
+    "Four years",
+    "Six months"
+   ],
+   "why": "The diploma takes two years."
+  },
+  {
+   "q": "Which country is the partner institute in?",
+   "o": [
+    "Ireland",
+    "Spain",
+    "China"
+   ],
+   "why": "The partner institute is in Ireland."
+  },
+  {
+   "q": "Which course can Hassan take?",
+   "o": [
+    "The certificate course for advanced chefs",
+    "The events management diploma",
+    "A pilot course"
+   ],
+   "why": "Hassan trains as an advanced chef."
+  },
+  {
+   "q": "How long is Hassan's course?",
+   "o": [
+    "18 months",
+    "2 years",
+    "4 years"
+   ],
+   "why": "It lasts eighteen months."
+  },
+  {
+   "q": "Who is training to be a chef in the listening?",
+   "o": [
+    "Hassan",
+    "Ali",
+    "Maha"
+   ],
+   "why": "Hassan wants a chef's qualification."
+  },
+  {
+   "q": "What facility does the chef course have?",
+   "o": [
+    "A training kitchen",
+    "A swimming pool",
+    "A cinema"
+   ],
+   "why": "Chefs practise in a training kitchen."
+  },
+  {
+   "q": "What do you complete while listening to 3.4.2?",
+   "o": [
+    "A table",
+    "A crossword",
+    "A letter"
+   ],
+   "why": "You fill in a table about the course."
+  },
+  {
+   "q": "What does 'part-time' mean?",
+   "o": [
+    "only some of the day or week",
+    "all day, every day",
+    "never"
+   ],
+   "why": "Part-time work or study is not full-time."
+  },
+  {
+   "q": "What is the topic of Listening 3.4.1?",
+   "o": [
+    "Choosing a course",
+    "Ordering food",
+    "Booking a flight"
+   ],
+   "why": "It is about an events management course."
+  },
+  {
+   "q": "Which phrase means a short course that gives a qualification?",
+   "o": [
+    "certificate course",
+    "overview",
+    "day trip"
+   ],
+   "why": "Hassan can take a certificate course."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Length of the diploma",
+   "a": "2 years",
+   "d": [
+    "4 years",
+    "18 months",
+    "1 year"
+   ]
+  },
+  {
+   "q": "Length of the degree",
+   "a": "4 years",
+   "d": [
+    "2 years",
+    "18 months",
+    "6 months"
+   ]
+  },
+  {
+   "q": "Time of Hassan's appointment",
+   "a": "9.30",
+   "d": [
+    "8.30",
+    "10.30",
+    "9.00"
+   ]
+  },
+  {
+   "q": "Length of Hassan's course",
+   "a": "18 months",
+   "d": [
+    "8 months",
+    "12 months",
+    "24 months"
+   ]
+  },
+  {
+   "q": "Country of the partner institute",
+   "a": "Ireland",
+   "d": [
+    "Scotland",
+    "Spain",
+    "Italy"
+   ]
+  },
+  {
+   "q": "A facility on the chef course",
+   "a": "Training kitchen",
+   "d": [
+    "Swimming pool",
+    "Cinema",
+    "Football pitch"
+   ]
+  },
+  {
+   "q": "One day a week at college",
+   "a": "Day release",
+   "d": [
+    "Full-time",
+    "Diploma",
+    "Overview"
+   ]
+  },
+  {
+   "q": "A type of event",
+   "a": "Conference",
+   "d": [
+    "Kitchen",
+    "Diploma",
+    "Hotel"
+   ]
+  },
+  {
+   "q": "Chances of success in a career",
+   "a": "Prospects",
+   "d": [
+    "Facilities",
+    "Overview",
+    "Experience"
+   ]
+  },
+  {
+   "q": "Tourists visiting Oman each year",
+   "a": "Over a million",
+   "d": [
+    "Over a thousand",
+    "Over a billion",
+    "Over a hundred"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list gives examples of events?",
+   "o": [
+    "Conferences, festivals and sporting events",
+    "Kitchens, ovens and plates",
+    "Diplomas, degrees and certificates",
+    "Hotels, rooms and beds"
+   ],
+   "why": "Events management covers these."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'facilities' mean?",
+   "o": [
+    "Buildings and equipment for a purpose",
+    "Exam results",
+    "Holiday plans",
+    "Job prospects"
+   ],
+   "why": "A training kitchen is one of the facilities."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why does Hassan want a formal qualification?",
+   "o": [
+    "To apply for a job in a five-star international hotel",
+    "To open a shoe shop",
+    "To become a pilot",
+    "To stop working"
+   ],
+   "why": "A qualification helps him get a better job."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'overview' mean?",
+   "o": [
+    "A general description of the main points",
+    "A very small detail",
+    "A final exam",
+    "A part-time job"
+   ],
+   "why": "An overview gives the big picture."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A student wants to keep her job and study at the same time. Which option suits her best?",
+   "o": [
+    "Day release",
+    "A full-time four-year degree",
+    "Stopping work completely",
+    "No course at all"
+   ],
+   "why": "Day release lets you work and study."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Before listening, the table asks for 'length of time'. What kind of answer do you expect?",
+   "o": [
+    "A number of months or years",
+    "A person's name",
+    "A place",
+    "A reason"
+   ],
+   "why": "Predicting the type of answer helps you listen."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A student loves organising festivals and sporting events. Which course suits him best?",
+   "o": [
+    "Events management",
+    "The advanced chef certificate",
+    "A cooking club",
+    "A swimming course"
+   ],
+   "why": "Events management is about organising events."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the tutor say the four-year degree is worth it?",
+   "o": [
+    "Graduates can work anywhere in the world",
+    "It is the shortest course",
+    "It has no lessons",
+    "It is only for chefs"
+   ],
+   "why": "An international degree opens many doors."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are the prospects for chefs in Oman excellent?",
+   "o": [
+    "New hotels and restaurants open all the time and need chefs",
+    "Fewer tourists come to Oman",
+    "Restaurants are closing",
+    "Chefs do not need training"
+   ],
+   "why": "Growing tourism creates more jobs."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to predict the type of information before listening?",
+   "o": [
+    "You know what to listen for",
+    "You do not need to listen",
+    "The answers are given to you",
+    "It makes the recording shorter"
+   ],
+   "why": "Prediction helps you focus."
+  }
+ ]
+}

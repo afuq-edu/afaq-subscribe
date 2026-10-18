@@ -1,0 +1,58 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Unit 3: Popular Destinations (Vocabulary)",
+  "lesson": "Cruises: reading, vocabulary matching and crossword",
+  "outcomes": [
+    "Read a text about cruises and answer comprehension questions",
+    "Match cruise words with their meanings and use them correctly"
+  ],
+  "tf": [
+    { "s": "A cruise is a holiday on a large ship.", "t": true, "why": "Cruise passengers travel and stay on a big ship." },
+    { "s": "Cruise ships are called floating hotels because they offer luxurious accommodation at sea.", "t": true, "why": "They have comfortable rooms and services like a hotel." },
+    { "s": "Shops and fitness centres are examples of amenities on a cruise ship.", "t": true, "why": "Amenities are useful facilities for passengers." },
+    { "s": "'Voyage' means a short walk in a city.", "t": false, "why": "A voyage is a long journey, especially by sea." },
+    { "s": "'Security' means protection from danger.", "t": true, "why": "Security keeps people and things safe." },
+    { "s": "'Massive' means very small.", "t": false, "why": "'Massive' means very large." },
+    { "s": "The 'staff' on a ship are the people who work there.", "t": true, "why": "Staff are the workers of a company or ship." },
+    { "s": "'Superb' means very bad or poor.", "t": false, "why": "'Superb' means excellent." },
+    { "s": "Cruise ships do not need any maintenance.", "t": false, "why": "Big ships need maintenance to keep them working well." },
+    { "s": "Muttrah Corniche in Muscat never receives cruise ships.", "t": false, "why": "Muttrah Corniche often welcomes cruise ships." }
+  ],
+  "boxes": [
+    { "q": "What is a cruise?", "o": ["A holiday on a large ship", "A trip by train", "A type of hotel room"], "why": "A cruise is a holiday at sea on a big ship." },
+    { "q": "Which word means 'journey by sea'?", "o": ["voyage", "staff", "luxury"], "why": "A voyage is a long sea journey." },
+    { "q": "Which word means 'protection from danger'?", "o": ["security", "amenities", "massive"], "why": "Security keeps people safe." },
+    { "q": "Which word means 'very large'?", "o": ["massive", "superb", "staff"], "why": "Massive means huge." },
+    { "q": "Which word means 'excellent'?", "o": ["superb", "massive", "voyage"], "why": "Superb means very, very good." },
+    { "q": "What are the people who work on a ship called?", "o": ["Staff", "Guests", "Tourists"], "why": "Staff are the workers." },
+    { "q": "Which is an amenity on a cruise ship?", "o": ["A fitness centre", "A storm", "The ocean"], "why": "Amenities are useful facilities like gyms and shops." },
+    { "q": "Which word means 'great comfort and expensive things'?", "o": ["luxury", "security", "voyage"], "why": "Luxury means great comfort." },
+    { "q": "Where in Muscat do cruise ships often arrive?", "o": ["Muttrah Corniche", "Bahla Fort", "Masirah Island"], "why": "Muttrah Corniche often welcomes cruise ships." },
+    { "q": "What are cruise ships often called?", "o": ["Floating hotels", "Flying houses", "Moving schools"], "why": "They are like luxurious hotels on the sea." }
+  ],
+  "hunt": [
+    { "q": "Journey by sea", "a": "voyage", "d": ["staff", "luxury", "superb"] },
+    { "q": "Protection from danger", "a": "security", "d": ["amenities", "voyage", "massive"] },
+    { "q": "Very large", "a": "massive", "d": ["superb", "luxury", "staff"] },
+    { "q": "Excellent", "a": "superb", "d": ["massive", "security", "voyage"] },
+    { "q": "People who work on a ship", "a": "staff", "d": ["voyage", "luxury", "amenities"] },
+    { "q": "Great comfort", "a": "luxury", "d": ["security", "staff", "voyage"] },
+    { "q": "Useful facilities like shops", "a": "amenities", "d": ["voyage", "staff", "superb"] },
+    { "q": "Cruise ships: floating ...", "a": "hotels", "d": ["schools", "farms", "offices"] },
+    { "q": "A cruise is a holiday on a ...", "a": "ship", "d": ["train", "plane", "bus"] },
+    { "q": "Keeping a ship in good condition", "a": "maintenance", "d": ["voyage", "luxury", "superb"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Why are cruise ships called floating hotels?", "o": ["They offer luxurious accommodation at sea", "They are made of wood", "They never leave the port", "They are very cheap"], "why": "Like hotels, they give passengers comfortable rooms and services." },
+    { "lv": "التذكر", "q": "Which two amenities on a cruise ship are named in the reading?", "o": ["Shops and fitness centres", "Farms and factories", "Schools and hospitals", "Airports and stations"], "why": "The reading mentions shops and fitness centres." },
+    { "lv": "التذكر", "q": "Which 7-letter word means 'a journey by sea'?", "o": ["voyage", "luxury", "superb", "massive"], "why": "V-O-Y-A-G-E has seven letters." },
+    { "lv": "التذكر", "q": "What does 'staff' mean?", "o": ["The people who work for a company or ship", "The passengers on a cruise", "The rooms on a ship", "The food in a restaurant"], "why": "Staff are the workers." },
+    { "lv": "التطبيق", "q": "Choose the best word: 'The ship has guards and cameras for ___.'", "o": ["security", "voyage", "superb", "massive"], "why": "Guards and cameras protect people from danger." },
+    { "lv": "التطبيق", "q": "Choose the best word: 'The ship is ___; it carries thousands of passengers.'", "o": ["massive", "superb", "staff", "voyage"], "why": "A ship for thousands of people is very large." },
+    { "lv": "التطبيق", "q": "Choose the best word: 'The food was ___; it was the best meal of my life.'", "o": ["superb", "massive", "security", "maintenance"], "why": "'Superb' means excellent." },
+    { "lv": "التحليل", "q": "Which sentence best explains why a cruise is a popular holiday?", "o": ["You travel to new places while enjoying hotel amenities", "You must cook all your own food", "You stay in one place for the whole trip", "There are no staff to help you"], "why": "A cruise combines travel with luxury and amenities." },
+    { "lv": "التحليل", "q": "Which word is the odd one out?", "o": ["voyage", "superb", "massive", "luxurious"], "why": "'Voyage' is a noun; the other three are adjectives." },
+    { "lv": "التحليل", "q": "Why does a cruise ship need many staff?", "o": ["To run its shops, rooms, meals and security for many passengers", "Because passengers must work on the ship", "Because the ship has no amenities", "To make the voyage shorter"], "why": "A floating hotel needs many workers to serve its passengers." }
+  ]
+}

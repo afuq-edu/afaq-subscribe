@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 1: It's a happy day!",
+ "lesson": "Unit 1 – Lesson 3: Vocabulary and Grammar (times of the day)",
+ "outcomes": [
+  "I can name the times of the day.",
+  "I can ask and answer When do you ...?",
+  "I can use in the morning, in the afternoon, in the evening and at night."
+ ],
+ "tf": [
+  {
+   "s": "We say at night, not in night.",
+   "t": true,
+   "why": "Yes! Night is different: at night."
+  },
+  {
+   "s": "We say at the morning.",
+   "t": false,
+   "why": "We say in the morning."
+  },
+  {
+   "s": "We see the moon at night.",
+   "t": true,
+   "why": "The moon is in the sky at night."
+  },
+  {
+   "s": "The sun is setting in the morning.",
+   "t": false,
+   "why": "The sun sets in the evening."
+  },
+  {
+   "s": "We go to school in the morning.",
+   "t": true,
+   "why": "Well done! School starts in the morning."
+  },
+  {
+   "s": "We go to bed in the afternoon.",
+   "t": false,
+   "why": "We go to bed at night."
+  },
+  {
+   "s": "We ask When do you have lunch? to know the time of the day.",
+   "t": true,
+   "why": "When asks about time."
+  },
+  {
+   "s": "We have lunch in the afternoon.",
+   "t": true,
+   "why": "Lunch is in the afternoon when the sun is high."
+  },
+  {
+   "s": "We use in with afternoon: in the afternoon.",
+   "t": true,
+   "why": "Great! In the afternoon."
+  },
+  {
+   "s": "The answer to When do you go to bed? is We go to bed in the evening at night.",
+   "t": false,
+   "why": "Use one time phrase: We go to bed at night."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which time has the moon?",
+   "o": [
+    "night",
+    "morning",
+    "afternoon"
+   ],
+   "why": "We see the moon at night."
+  },
+  {
+   "q": "Complete: We have dinner ___ the evening.",
+   "o": [
+    "in",
+    "at",
+    "on"
+   ],
+   "why": "We say in the evening."
+  },
+  {
+   "q": "Complete: We go to bed ___ night.",
+   "o": [
+    "at",
+    "in",
+    "on"
+   ],
+   "why": "We say at night."
+  },
+  {
+   "q": "Which question asks about time?",
+   "o": [
+    "When do you play?",
+    "What's your name?",
+    "How many pens?"
+   ],
+   "why": "When asks about time."
+  },
+  {
+   "q": "Which is the first time of the day?",
+   "o": [
+    "morning",
+    "evening",
+    "night"
+   ],
+   "why": "The day starts in the morning."
+  },
+  {
+   "q": "The sun is setting. What time of the day is it?",
+   "o": [
+    "evening",
+    "morning",
+    "night"
+   ],
+   "why": "The sun sets in the evening."
+  },
+  {
+   "q": "When do you get up?",
+   "o": [
+    "in the morning",
+    "at night",
+    "in the evening"
+   ],
+   "why": "We get up in the morning."
+  },
+  {
+   "q": "Which phrase is correct?",
+   "o": [
+    "in the afternoon",
+    "at the afternoon",
+    "on the afternoon"
+   ],
+   "why": "We say in the afternoon."
+  },
+  {
+   "q": "Which phrase does not use in?",
+   "o": [
+    "night",
+    "morning",
+    "evening"
+   ],
+   "why": "We say at night."
+  },
+  {
+   "q": "Complete: When ___ you do homework?",
+   "o": [
+    "do",
+    "are",
+    "is"
+   ],
+   "why": "We ask When do you ...?"
+  }
+ ],
+ "hunt": [
+  {
+   "q": "We go to bed ___ night.",
+   "a": "at",
+   "d": [
+    "in",
+    "on",
+    "to"
+   ]
+  },
+  {
+   "q": "We get up ___ the morning.",
+   "a": "in",
+   "d": [
+    "at",
+    "on",
+    "to"
+   ]
+  },
+  {
+   "q": "Time with the moon",
+   "a": "night",
+   "d": [
+    "morning",
+    "afternoon",
+    "evening"
+   ]
+  },
+  {
+   "q": "The sun is setting",
+   "a": "evening",
+   "d": [
+    "morning",
+    "afternoon",
+    "night"
+   ]
+  },
+  {
+   "q": "The sun is rising",
+   "a": "morning",
+   "d": [
+    "evening",
+    "night",
+    "afternoon"
+   ]
+  },
+  {
+   "q": "Time after the morning",
+   "a": "afternoon",
+   "d": [
+    "night",
+    "evening",
+    "morning"
+   ]
+  },
+  {
+   "q": "Time after the evening",
+   "a": "night",
+   "d": [
+    "morning",
+    "afternoon",
+    "evening"
+   ]
+  },
+  {
+   "q": "Question word for time",
+   "a": "When",
+   "d": [
+    "What",
+    "Who",
+    "How many"
+   ]
+  },
+  {
+   "q": "We go to school ___",
+   "a": "in the morning",
+   "d": [
+    "at night",
+    "in the evening",
+    "at the night"
+   ]
+  },
+  {
+   "q": "We have dinner ___",
+   "a": "in the evening",
+   "d": [
+    "in the morning",
+    "at morning",
+    "at the evening"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which are the four times of the day in order?",
+   "o": [
+    "morning, afternoon, evening, night",
+    "night, morning, evening, afternoon",
+    "afternoon, morning, night, evening",
+    "evening, night, morning, afternoon"
+   ],
+   "why": "The day goes morning, afternoon, evening, night."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word do we use with night?",
+   "o": [
+    "at",
+    "in",
+    "on",
+    "to"
+   ],
+   "why": "We say at night."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question is correct?",
+   "o": [
+    "When do you have lunch?",
+    "When you have lunch?",
+    "When does you have lunch?",
+    "When have you lunch do?"
+   ],
+   "why": "We say When do you ...?"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which time of the day do we have lunch?",
+   "o": [
+    "afternoon",
+    "night",
+    "evening",
+    "morning"
+   ],
+   "why": "Lunch is in the afternoon."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "When do you go to school? Choose the full answer.",
+   "o": [
+    "We go to school in the morning.",
+    "In morning.",
+    "We go to school at night.",
+    "We go school morning."
+   ],
+   "why": "A full answer has We go to school in the morning."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the mistake: We go to bed in night.",
+   "o": [
+    "We go to bed at night.",
+    "We go to bed on night.",
+    "We go in bed at night.",
+    "We go to bed in the night at."
+   ],
+   "why": "Night takes at."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: We have art lessons ___ the afternoon.",
+   "o": [
+    "in",
+    "at",
+    "on",
+    "to"
+   ],
+   "why": "Afternoon takes in."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which routine is in the wrong time?",
+   "o": [
+    "We go to bed in the morning.",
+    "We have breakfast in the morning.",
+    "We have dinner in the evening.",
+    "We go to bed at night."
+   ],
+   "why": "We go to bed at night, not in the morning."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which two routines happen in the morning?",
+   "o": [
+    "get up and have breakfast",
+    "have dinner and go to bed",
+    "go to bed and get up",
+    "have dinner and have lunch"
+   ],
+   "why": "We get up and have breakfast in the morning."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is at night different from in the evening?",
+   "o": [
+    "Night uses at, not in.",
+    "Night is in the morning.",
+    "Evening uses at.",
+    "There is no difference."
+   ],
+   "why": "Morning, afternoon and evening use in; night uses at."
+  }
+ ]
+}

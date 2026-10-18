@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Welcome: Back to school",
+ "lesson": "Welcome – Lesson 3: This / These / That / Those and numbers 11–20",
+ "outcomes": [
+  "I can use this, these, that and those for near and far things.",
+  "I can say and write the numbers 11 to 20.",
+  "I can ask and answer How many ... can you see?"
+ ],
+ "tf": [
+  {
+   "s": "We use this for one thing near us.",
+   "t": true,
+   "why": "Yes! This is for one near thing."
+  },
+  {
+   "s": "We use those for one thing far away.",
+   "t": false,
+   "why": "For one far thing we use that. Those is for many far things."
+  },
+  {
+   "s": "These are pencils. The pencils are near me.",
+   "t": true,
+   "why": "These is for many near things."
+  },
+  {
+   "s": "Those is a ball.",
+   "t": false,
+   "why": "For one ball far away we say That is a ball."
+  },
+  {
+   "s": "Fifteen is the number 15.",
+   "t": true,
+   "why": "Well done! 15 is fifteen."
+  },
+  {
+   "s": "Twelve is the number 20.",
+   "t": false,
+   "why": "Twelve is 12. Twenty is 20."
+  },
+  {
+   "s": "We say These are crayons, not These is crayons.",
+   "t": true,
+   "why": "Many things take are: These are crayons."
+  },
+  {
+   "s": "Nineteen comes after eighteen.",
+   "t": true,
+   "why": "18, 19: nineteen comes next."
+  },
+  {
+   "s": "Thirteen comes after fourteen.",
+   "t": false,
+   "why": "Thirteen (13) comes before fourteen (14)."
+  },
+  {
+   "s": "We answer How many desks can you see? with I can see fifteen desks.",
+   "t": true,
+   "why": "Great! We say I can see and the number."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "One pen in my hand. ___ is a pen.",
+   "o": [
+    "This",
+    "These",
+    "Those"
+   ],
+   "why": "One near thing: This."
+  },
+  {
+   "q": "Many books far away. ___ are books.",
+   "o": [
+    "Those",
+    "This",
+    "That"
+   ],
+   "why": "Many far things: Those."
+  },
+  {
+   "q": "One kite far away. ___ is a kite.",
+   "o": [
+    "That",
+    "These",
+    "Those"
+   ],
+   "why": "One far thing: That."
+  },
+  {
+   "q": "Which number is eleven?",
+   "o": [
+    "11",
+    "12",
+    "17"
+   ],
+   "why": "Eleven is 11."
+  },
+  {
+   "q": "Complete: That ___ a pen.",
+   "o": [
+    "is",
+    "are",
+    "am"
+   ],
+   "why": "One thing takes is."
+  },
+  {
+   "q": "Complete: These ___ crayons.",
+   "o": [
+    "are",
+    "is",
+    "am"
+   ],
+   "why": "Many things take are."
+  },
+  {
+   "q": "Which word is 16?",
+   "o": [
+    "sixteen",
+    "sixty",
+    "six"
+   ],
+   "why": "16 is sixteen."
+  },
+  {
+   "q": "What number comes after 19?",
+   "o": [
+    "20",
+    "18",
+    "21"
+   ],
+   "why": "19, 20: twenty comes next."
+  },
+  {
+   "q": "Complete: How ___ desks can you see?",
+   "o": [
+    "many",
+    "much",
+    "old"
+   ],
+   "why": "We ask How many ...?"
+  },
+  {
+   "q": "Which word is spelled correctly?",
+   "o": [
+    "twelve",
+    "twelf",
+    "twelv"
+   ],
+   "why": "Twelve: t-w-e-l-v-e."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Write 12 in words",
+   "a": "twelve",
+   "d": [
+    "twenty",
+    "two",
+    "eleven"
+   ]
+  },
+  {
+   "q": "Write 15 in words",
+   "a": "fifteen",
+   "d": [
+    "fifty",
+    "five",
+    "fourteen"
+   ]
+  },
+  {
+   "q": "Write 18 in words",
+   "a": "eighteen",
+   "d": [
+    "eighty",
+    "eight",
+    "thirteen"
+   ]
+  },
+  {
+   "q": "Write 13 in words",
+   "a": "thirteen",
+   "d": [
+    "thirty",
+    "three",
+    "eighteen"
+   ]
+  },
+  {
+   "q": "Write 17 in words",
+   "a": "seventeen",
+   "d": [
+    "seventy",
+    "seven",
+    "sixteen"
+   ]
+  },
+  {
+   "q": "Write 20 in words",
+   "a": "twenty",
+   "d": [
+    "twelve",
+    "two",
+    "nineteen"
+   ]
+  },
+  {
+   "q": "One thing, near",
+   "a": "this",
+   "d": [
+    "these",
+    "that",
+    "those"
+   ]
+  },
+  {
+   "q": "Many things, near",
+   "a": "these",
+   "d": [
+    "this",
+    "that",
+    "those"
+   ]
+  },
+  {
+   "q": "One thing, far",
+   "a": "that",
+   "d": [
+    "this",
+    "these",
+    "those"
+   ]
+  },
+  {
+   "q": "Many things, far",
+   "a": "those",
+   "d": [
+    "this",
+    "these",
+    "that"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word means more than one thing near you?",
+   "o": [
+    "these",
+    "this",
+    "that",
+    "those"
+   ],
+   "why": "These is for many near things."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means one thing far away?",
+   "o": [
+    "that",
+    "these",
+    "those",
+    "this"
+   ],
+   "why": "That is for one far thing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the number nineteen?",
+   "o": [
+    "19",
+    "9",
+    "90",
+    "18"
+   ],
+   "why": "Nineteen is 19."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which numbers are in the right order?",
+   "o": [
+    "eleven, twelve, thirteen",
+    "twelve, eleven, thirteen",
+    "thirteen, twelve, eleven",
+    "eleven, thirteen, twelve"
+   ],
+   "why": "11, 12, 13 is the right order."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Two kites are far away in the sky. What do you say?",
+   "o": [
+    "Those are kites.",
+    "These are kites.",
+    "This is a kite.",
+    "That are kites."
+   ],
+   "why": "Many far things: Those are kites."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You have one eraser in your hand. What do you say?",
+   "o": [
+    "This is an eraser.",
+    "These are erasers.",
+    "Those are erasers.",
+    "That is erasers."
+   ],
+   "why": "One near thing: This is an eraser."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "There are 14 chairs. Answer: How many chairs can you see?",
+   "o": [
+    "I can see fourteen chairs.",
+    "I can see forty chairs.",
+    "I can see four chairs.",
+    "I can see fifteen chairs."
+   ],
+   "why": "14 is fourteen."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the mistake: Those is a ball. (one ball, far away)",
+   "o": [
+    "That is a ball.",
+    "These is a ball.",
+    "This are a ball.",
+    "Those are a ball."
+   ],
+   "why": "One far ball: That is a ball."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ten pencils and seven pencils. How many pencils?",
+   "o": [
+    "seventeen",
+    "sixteen",
+    "eighteen",
+    "seventy"
+   ],
+   "why": "10 + 7 = 17, seventeen."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is about many things near you?",
+   "o": [
+    "These are bikes.",
+    "That is a bike.",
+    "Those are bikes.",
+    "This is a bike."
+   ],
+   "why": "These are is for many near things."
+  }
+ ]
+}
