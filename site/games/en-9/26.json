@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 3: The future is now",
+ "lesson": "Lesson 8: Unit Check / Review: Units 1-3",
+ "outcomes": [
+  "Revise home technology words and phrasal verbs.",
+  "Use present tenses, future forms and adjective + preposition pairs.",
+  "Choose the right communication verbs like explain, translate and pronounce."
+ ],
+ "tf": [
+  {
+   "s": "Air conditioning keeps you cool in hot weather.",
+   "t": true,
+   "why": "It cools the room."
+  },
+  {
+   "s": "'The TV suddenly went off' means it stopped working.",
+   "t": true,
+   "why": "'Go off' means stop working."
+  },
+  {
+   "s": "'Turn it up!' means 'Make it quieter!'",
+   "t": false,
+   "why": "'Turn it up!' means 'Make it louder!'"
+  },
+  {
+   "s": "You install an app onto a phone.",
+   "t": true,
+   "why": "Apps are installed on phones."
+  },
+  {
+   "s": "'I'm frightened at speaking in public' is correct.",
+   "t": false,
+   "why": "We say 'frightened of'."
+  },
+  {
+   "s": "'His lessons begin on Wednesday' can be used for a timetable.",
+   "t": true,
+   "why": "Timetables use the present simple."
+  },
+  {
+   "s": "'We took never them home' is correct.",
+   "t": false,
+   "why": "'Never' goes before the main verb: 'We never took them home.'"
+  },
+  {
+   "s": "When your battery is low, you need to charge your phone.",
+   "t": true,
+   "why": "Charging fills the battery."
+  },
+  {
+   "s": "'I usually am studying on Friday mornings' is correct for a habit.",
+   "t": false,
+   "why": "Habits use the present simple: 'I usually study.'"
+  },
+  {
+   "s": "We say 'Can you explain what you mean?'",
+   "t": true,
+   "why": "'Explain' and 'mean' fit here."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: I usually ___ on Friday mornings.",
+   "o": [
+    "study",
+    "am studying",
+    "studying"
+   ],
+   "why": "A habit takes the present simple."
+  },
+  {
+   "q": "Complete: This week I ___ extra hours.",
+   "o": [
+    "'m studying",
+    "study",
+    "studies"
+   ],
+   "why": "'This week' is around now, so we use the present continuous."
+  },
+  {
+   "q": "Rewrite with a phrasal verb: Make it louder!",
+   "o": [
+    "Turn it up!",
+    "Turn it down!",
+    "Switch it off!"
+   ],
+   "why": "'Turn up' makes it louder."
+  },
+  {
+   "q": "Complete: You need to ___ the app first.",
+   "o": [
+    "download",
+    "battery",
+    "machine"
+   ],
+   "why": "We download an app."
+  },
+  {
+   "q": "Which item makes coffee?",
+   "o": [
+    "coffee maker",
+    "dishwasher",
+    "TV"
+   ],
+   "why": "A coffee maker makes coffee."
+  },
+  {
+   "q": "Complete the plan: Next year, we ___ learn Chinese.",
+   "o": [
+    "are going to",
+    "going",
+    "were"
+   ],
+   "why": "'Be going to' talks about plans."
+  },
+  {
+   "q": "Choose: Can you ___ what this word means?",
+   "o": [
+    "explain",
+    "pronounce",
+    "speak"
+   ],
+   "why": "We explain what a word means."
+  },
+  {
+   "q": "Which adjective goes with 'of'?",
+   "o": [
+    "frightened",
+    "keen",
+    "good"
+   ],
+   "why": "'Frightened of', 'keen on', 'good at'."
+  },
+  {
+   "q": "Which sentence is correct?",
+   "o": [
+    "We often spent our holidays at the beach.",
+    "We spent often our holidays at the beach.",
+    "Often we our holidays spent at the beach."
+   ],
+   "why": "'Often' goes before the main verb."
+  },
+  {
+   "q": "Which word is a communication verb?",
+   "o": [
+    "pronounce",
+    "download",
+    "charge"
+   ],
+   "why": "We pronounce words when we speak."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "It keeps you cool",
+   "a": "air conditioning",
+   "d": [
+    "kettle",
+    "microwave",
+    "TV"
+   ]
+  },
+  {
+   "q": "The TV stopped working. It went…",
+   "a": "off",
+   "d": [
+    "on",
+    "up",
+    "in"
+   ]
+  },
+  {
+   "q": "Make it louder: Turn it ___!",
+   "a": "up",
+   "d": [
+    "down",
+    "off",
+    "in"
+   ]
+  },
+  {
+   "q": "Install the ___ onto the phone.",
+   "a": "app",
+   "d": [
+    "battery",
+    "click",
+    "kettle"
+   ]
+  },
+  {
+   "q": "Charge it – the ___ is low.",
+   "a": "battery",
+   "d": [
+    "app",
+    "speaker",
+    "kettle"
+   ]
+  },
+  {
+   "q": "I'm frightened ___ heights.",
+   "a": "of",
+   "d": [
+    "at",
+    "on",
+    "with"
+   ]
+  },
+  {
+   "q": "Say a word with the right sounds",
+   "a": "pronounce",
+   "d": [
+    "translate",
+    "explain",
+    "download"
+   ]
+  },
+  {
+   "q": "Change words into another language",
+   "a": "translate",
+   "d": [
+    "pronounce",
+    "explain",
+    "click"
+   ]
+  },
+  {
+   "q": "His lessons ___ next Wednesday.",
+   "a": "begin",
+   "d": [
+    "began",
+    "beginning",
+    "begun"
+   ]
+  },
+  {
+   "q": "Past simple of 'spend'",
+   "a": "spent",
+   "d": [
+    "spended",
+    "spend",
+    "spending"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which item is used to wash plates?",
+   "o": [
+    "dishwasher",
+    "washing machine",
+    "microwave",
+    "speaker"
+   ],
+   "why": "A dishwasher washes plates."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrasal verb means 'start working' for a light or machine?",
+   "o": [
+    "come on",
+    "go off",
+    "turn down",
+    "switch off"
+   ],
+   "why": "The lights come on."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When do we use the present continuous?",
+   "o": [
+    "For actions happening now or around now",
+    "For habits",
+    "For timetables",
+    "For permanent states"
+   ],
+   "why": "Now and around now."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a personality adjective?",
+   "o": [
+    "sociable",
+    "microwave",
+    "download",
+    "battery"
+   ],
+   "why": "Sociable describes a person."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite with a phrasal verb: The heating starts working at 6 a.m.",
+   "o": [
+    "The heating comes on at 6 a.m.",
+    "The heating goes off at 6 a.m.",
+    "The heating turns down at 6 a.m.",
+    "The heating plugs in at 6 a.m."
+   ],
+   "why": "'Come on' means start working."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Order with 'never': we / take / them home (past)",
+   "o": [
+    "We never took them home.",
+    "We took never them home.",
+    "Never we took them home.",
+    "We took them never home."
+   ],
+   "why": "'Never' goes before the main verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I need to ___ this word into Arabic.",
+   "o": [
+    "translate",
+    "pronounce",
+    "say",
+    "tell"
+   ],
+   "why": "We translate into another language."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'begin' correct in 'His lessons begin on Wednesday'?",
+   "o": [
+    "It is a timetable.",
+    "It is an offer.",
+    "It is an action now.",
+    "It is a past habit."
+   ],
+   "why": "Timetables use the present simple."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses a habit and an action around now correctly?",
+   "o": [
+    "I usually study on Fridays, but this week I'm studying every day.",
+    "I'm usually studying on Fridays, but this week I study every day.",
+    "I study usually on Fridays, but this week I studying.",
+    "I usually studying on Fridays, but this week I study."
+   ],
+   "why": "Habit = present simple; around now = present continuous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your phone stopped working because the battery is empty. What should you do?",
+   "o": [
+    "Plug it in to charge it",
+    "Turn it up",
+    "Download the battery",
+    "Switch on the kettle"
+   ],
+   "why": "An empty battery needs charging."
+  }
+ ]
+}

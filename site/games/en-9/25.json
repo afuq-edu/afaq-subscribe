@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 3: The future is now",
+ "lesson": "Lesson 3: Vocabulary – technology in the home",
+ "outcomes": [
+  "Name items of technology in the home.",
+  "Use phrasal verbs like switch off, turn down and plug in correctly.",
+  "Know which phrasal verbs can be separated."
+ ],
+ "tf": [
+  {
+   "s": "A dishwasher cleans dirty plates.",
+   "t": true,
+   "why": "Yes, it washes plates and cups."
+  },
+  {
+   "s": "'Plug in it first' is correct.",
+   "t": false,
+   "why": "With a pronoun we say 'Plug it in first.'"
+  },
+  {
+   "s": "With a separable phrasal verb, a pronoun goes between the verb and the particle.",
+   "t": true,
+   "why": "Like 'Take them off.'"
+  },
+  {
+   "s": "'Go off' and 'come on' can be separated.",
+   "t": false,
+   "why": "They cannot be separated and have no object."
+  },
+  {
+   "s": "'Turn down' means make the sound quieter.",
+   "t": true,
+   "why": "Turn down the TV when it is too loud."
+  },
+  {
+   "s": "'Dishwasher' and 'microwave' are written as one word.",
+   "t": true,
+   "why": "These compound nouns are one word."
+  },
+  {
+   "s": "'Washing machine' is written as one word.",
+   "t": false,
+   "why": "It is two words: washing machine."
+  },
+  {
+   "s": "'Turn up the heating' means make it warmer.",
+   "t": true,
+   "why": "'Turn up' makes it higher or stronger."
+  },
+  {
+   "s": "In the power-cut story, the power went off for two weeks.",
+   "t": false,
+   "why": "It went off for two days."
+  },
+  {
+   "s": "Switching off devices you are not using saves electricity.",
+   "t": true,
+   "why": "Great habit for saving energy!"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which machine heats food quickly?",
+   "o": [
+    "microwave",
+    "kettle",
+    "dishwasher"
+   ],
+   "why": "A microwave heats food fast."
+  },
+  {
+   "q": "It's too loud! Can you ___ the TV?",
+   "o": [
+    "turn down",
+    "turn up",
+    "switch on"
+   ],
+   "why": "'Turn down' makes the sound quieter."
+  },
+  {
+   "q": "I'm cold. Please ___ the heating.",
+   "o": [
+    "turn up",
+    "turn down",
+    "switch off"
+   ],
+   "why": "'Turn up' makes the heating warmer."
+  },
+  {
+   "q": "Which sentence is correct?",
+   "o": [
+    "Take them off.",
+    "Take off them.",
+    "Take them of."
+   ],
+   "why": "The pronoun goes between the verb and the particle."
+  },
+  {
+   "q": "Complete: I was so happy when the power ___ on again.",
+   "o": [
+    "came",
+    "went",
+    "set"
+   ],
+   "why": "'Come on' means start working again."
+  },
+  {
+   "q": "Which phrasal verb means 'connect to the electricity'?",
+   "o": [
+    "plug in",
+    "go off",
+    "turn down"
+   ],
+   "why": "We plug in a phone to charge it."
+  },
+  {
+   "q": "Which phrasal verb means 'get a new device ready to use'?",
+   "o": [
+    "set up",
+    "go off",
+    "come on"
+   ],
+   "why": "We set up a new device."
+  },
+  {
+   "q": "What was Zakeya's main problem during the power cut?",
+   "o": [
+    "She couldn't charge her phone.",
+    "Her TV was too loud.",
+    "Her kettle was broken."
+   ],
+   "why": "She couldn't plug in her phone, so the battery died."
+  },
+  {
+   "q": "Which item keeps a room cool?",
+   "o": [
+    "air conditioning",
+    "coffee maker",
+    "speaker"
+   ],
+   "why": "Air conditioning cools the room."
+  },
+  {
+   "q": "Complete: When we take the last pizza, the freezer will ___ us to buy more.",
+   "o": [
+    "remind",
+    "remember",
+    "forget"
+   ],
+   "why": "'Remind' means help someone remember."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "It makes coffee",
+   "a": "coffee maker",
+   "d": [
+    "kettle",
+    "speaker",
+    "microwave"
+   ]
+  },
+  {
+   "q": "It plays music",
+   "a": "speaker",
+   "d": [
+    "kettle",
+    "fridge-freezer",
+    "dishwasher"
+   ]
+  },
+  {
+   "q": "It washes clothes",
+   "a": "washing machine",
+   "d": [
+    "dishwasher",
+    "microwave",
+    "kettle"
+   ]
+  },
+  {
+   "q": "Make the sound quieter",
+   "a": "turn down",
+   "d": [
+    "turn up",
+    "plug in",
+    "set up"
+   ]
+  },
+  {
+   "q": "Stop a machine",
+   "a": "switch off",
+   "d": [
+    "switch on",
+    "plug in",
+    "come on"
+   ]
+  },
+  {
+   "q": "The lights start working again",
+   "a": "come on",
+   "d": [
+    "go off",
+    "turn down",
+    "set up"
+   ]
+  },
+  {
+   "q": "Stop working suddenly",
+   "a": "go off",
+   "d": [
+    "come on",
+    "plug in",
+    "turn up"
+   ]
+  },
+  {
+   "q": "Plug ___ in first.",
+   "a": "it",
+   "d": [
+    "they",
+    "its",
+    "he"
+   ]
+  },
+  {
+   "q": "A time with no electricity",
+   "a": "power cut",
+   "d": [
+    "smart home",
+    "battery",
+    "app"
+   ]
+  },
+  {
+   "q": "How long did the power go off?",
+   "a": "two days",
+   "d": [
+    "two hours",
+    "two weeks",
+    "two years"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which phrasal verb CANNOT be separated?",
+   "o": [
+    "go off",
+    "switch off",
+    "turn down",
+    "plug in"
+   ],
+   "why": "'Go off' has no object, so we can't separate it."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which items are written as one word?",
+   "o": [
+    "dishwasher and microwave",
+    "washing machine and coffee maker",
+    "air conditioning and coffee maker",
+    "washing machine and air conditioning"
+   ],
+   "why": "Dishwasher and microwave are one word each."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrasal verb means 'start a machine'?",
+   "o": [
+    "switch on",
+    "switch off",
+    "go off",
+    "turn down"
+   ],
+   "why": "Switch on = start."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where does the pronoun go with a separable phrasal verb?",
+   "o": [
+    "Between the verb and the particle",
+    "After the particle",
+    "Before the verb",
+    "At the start of the sentence"
+   ],
+   "why": "Switch it on, plug it in, take them off."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite with 'it': Switch off the light.",
+   "o": [
+    "Switch it off.",
+    "Switch off it.",
+    "It switch off.",
+    "Switch it of."
+   ],
+   "why": "The pronoun goes in the middle."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your phone battery is low. What do you do?",
+   "o": [
+    "Plug it in.",
+    "Turn it down.",
+    "Go it off.",
+    "Set it off."
+   ],
+   "why": "Plug it in to charge it."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The lights suddenly ___ and the room was dark.",
+   "o": [
+    "went off",
+    "came on",
+    "turned up",
+    "plugged in"
+   ],
+   "why": "'Go off' means stop working."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can't we say 'The lights went them off'?",
+   "o": [
+    "'Go off' has no object and cannot be separated.",
+    "'Lights' is singular.",
+    "We need 'come on'.",
+    "'Went' is not a past form."
+   ],
+   "why": "Inseparable phrasal verbs stay together."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Can you ___ the TV? It's too loud.' Why is 'turn down' the right answer?",
+   "o": [
+    "It means make the sound quieter.",
+    "It means switch it on.",
+    "It means make it louder.",
+    "It means plug it in."
+   ],
+   "why": "A loud TV needs to be quieter."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A student invents a smart schoolbag that checks the timetable. How does it make life easier?",
+   "o": [
+    "It reminds you what to take to school.",
+    "It makes the bag heavier.",
+    "It turns up the heating.",
+    "It washes your clothes."
+   ],
+   "why": "A smart device should solve a real problem."
+  }
+ ]
+}
