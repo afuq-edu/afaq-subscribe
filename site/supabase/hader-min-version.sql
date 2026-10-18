@@ -58,6 +58,7 @@ end $function$;
 grant execute on function public.ext_session(text, text, smallint, text, text) to anon, authenticated;
 -- النسخ القديمة: تظهر لها «هذه الحصة لم تعد في المادة — حدّث…» وإشعار التحديث، ولا يُعطى محتوى
 create or replace function public.ext_session(p_token text, p_package text, p_term smallint, p_lesson text) returns jsonb
-language sql stable security definer set search_path = public as $$
-  select jsonb_build_object('ok', false, 'error', 'no_lesson', 'old_version', true)
-$$;
+language plpgsql stable security definer set search_path = public as $$
+begin
+  return jsonb_build_object('ok', false, 'error', 'no_lesson', 'old_version', true);
+end $$;
