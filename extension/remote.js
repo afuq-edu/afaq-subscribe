@@ -126,7 +126,17 @@ export const REMOTE_ERR = {
   network: 'تعذّر الاتصال بخادم منصة أفق — تحقق من الإنترنت.',
   server: 'خادم منصة أفق لم يستجب كما يجب — أعد المحاولة بعد قليل.',
   config: 'الإضافة غير مضبوطة على خادم منصة أفق.',
+  noor_other: 'هذا الاشتراك لحساب نور صاحبه، وحساب نور المفتوح الآن لمعلم آخر. لتحضير حساب آخر يحتاج صاحبه اشتراكه الخاص.',
 };
+// حساب نور الظاهر في الصفحة (بصمة رقمه لا الرقم نفسه): الاشتراك المدفوع يعمل لحساب نور واحد
+export async function noorCheck(who) {
+  const link = await getLink();
+  if (!link || !who || !who.id) return { ok: true };
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode('noor:' + who.id));
+  const hash = [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
+  const r = await rpc('ext_noor', { p_token: link.token, p_noor: hash, p_name: who.name || '' }, 10000);
+  return r && r.ok === false && r.error === 'noor_other' ? r : { ok: true };   // تعذّر الاتصال: لا نوقف المعلم
+}
 export const siteUrl = (hash) => AFAQ.SITE_URL.replace(/#.*$/, '') + (hash || '');
 
 // ---------- «حاضر» مباشرة دون الموقع ----------

@@ -145,7 +145,7 @@
     const stopped = live.filter((r) => r.status !== 'active' && usedAll(r) >= lim)
       .sort((a, b) => String(b.last_seen || b.created_at).localeCompare(String(a.last_seen || a.created_at)));
     $('#stStopped').innerHTML = '<tr><th>الطلب</th><th>المعلم</th><th>المواد</th><th>آخر نشاط</th><th></th></tr>' + (stopped.length
-      ? stopped.map((r) => `<tr><td><b>${toAr(r.id)}</b></td><td><b>${esc(r.name || '—')}</b>${prev ? `<br><span class="chip warn" title="على الأغلب جهاز جديد أو إعادة تثبيت">مُفعَّل له من قبل (${toAr(prev)})</span>` : ''}${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}</td>
+      ? stopped.map((r) => `<tr><td><b>${toAr(r.id)}</b></td><td><b>${esc(r.name || '—')}</b>${r.noor_name ? `<br><small class="muted">حساب نور: ${esc(r.noor_name)}</small>` : ''}${prev ? `<br><span class="chip warn" title="على الأغلب جهاز جديد أو إعادة تثبيت">مُفعَّل له من قبل (${toAr(prev)})</span>` : ''}${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}</td>
         <td>${r.packages.filter((p) => !p.active && p.used).map((p) => `<span class="tag">${esc(p.title)}</span>`).join(' ')}</td>
         <td><small class="muted">${esc(ago(r.last_seen || r.created_at))}</small>${r.status === 'requested' ? '<br><span class="chip bad">راسلك</span>' : ''}</td>
         <td>${r.phone ? `<a class="btn sm wa" target="_blank" rel="noopener" href="${esc(A.waLink(waPhone(r.phone), `السلام عليكم أ. ${r.name}، جرّبت «حاضر» في ${r.packages.filter((p) => !p.active).map((p) => p.title).join('، ')}. هل تحب أن أفعّل لك الاشتراك لتكمل تحضير الفصل؟ رقم طلبك ${r.id}.`))}">تابِع على واتساب</a>` : '<small class="muted">بلا هاتف</small>'}</td></tr>`).join('')
@@ -188,6 +188,7 @@
           ${pend.length && r.status !== 'cancelled' ? `<button class="btn sm primary" data-act="${r.id}" type="button">فعّل</button>` : ''}
           ${r.phone ? `<a class="btn sm wa" target="_blank" rel="noopener" href="${esc(A.waLink(r.phone.replace(/^0+/, '').length === 8 ? '968' + r.phone.replace(/^0+/, '') : r.phone, `السلام عليكم أ. ${r.name}، بخصوص طلبك رقم ${r.id} في «حاضر».`))}">واتساب</a>` : ''}
           <button class="btn ghost sm" data-unl="${r.id}" type="button" title="يصفّر محاولات التسجيل اليوم لجهاز هذا الطلب وشبكته">تصفير المحاولات</button>
+          ${r.noor_name ? `<button class="btn ghost sm" data-noor="${r.id}" type="button" title="غيّر المعلم حسابه في نور: يُربط بأول حساب نور يُعبَّأ له">فكّ ربط نور</button>` : ''}
           ${r.status === 'cancelled' ? `<button class="btn ghost sm" data-rst="${r.id}" data-to="trial" type="button">استعادة</button>` : `<button class="btn ghost sm danger" data-rst="${r.id}" data-to="cancelled" type="button">إلغاء</button>`}
         </div></td></tr>`;
     }).join('') : '<tr><td colspan="5" class="empty">لا طلبات هنا.</td></tr>');
@@ -197,6 +198,11 @@
         b.disabled = true;
         // ضغطة واحدة: اشتراك فصل كامل في مواد الطلب، وتفتح في إضافة المعلم وحدها
         try { await db.rpc('admin_activate_request', { p_id: r.id, p_plan: 'term', p_package_ids: null }); A.toast(`فُعّل اشتراك ${r.name || 'المعلم'} لهذا الفصل.`, 'ok'); renderRequests(); } catch (e) { b.disabled = false; A.toast(A.errText(e), 'bad'); }
+      };
+    });
+    $$('[data-noor]').forEach((b) => {
+      b.onclick = async () => {
+        try { await db.rpc('admin_noor_reset', { p_id: +b.dataset.noor }); A.toast('فُكّ الربط، ويُربط بأول حساب نور يُعبَّأ له.', 'ok'); renderRequests(); } catch (e) { A.toast(A.errText(e), 'bad'); }
       };
     });
     $$('[data-unl]').forEach((b) => {
