@@ -218,8 +218,13 @@
   // ================= أدوات مشتركة =================
   function pkgPicker(box, selected) {
     const by = new Map();
-    D.packages.filter((p) => p.active).forEach((p) => { if (!by.has(p.subject)) by.set(p.subject, []); by.get(p.subject).push(p); });
-    box.innerHTML = by.size ? [...by].map(([s, list]) => `<div class="subj"><b>${esc(s)}</b>${list.map((p) => `<label><input type="checkbox" value="${esc(p.id)}" ${selected && selected.includes(p.id) ? 'checked' : ''}>${esc(A.GRADES[p.grade] || p.grade)}${p.shift === 'two' ? ' (فترتان)' : p.shift === 'one' ? ' (فترة واحدة)' : ''}</label>`).join('')}</div>`).join('')
+    // مربع واحد لكل مادة وصف: الاشتراك يشمل الفترة الواحدة والفترتين معًا (تُضاف الأخرى في القاعدة تلقائيًا)
+    const seen = new Set();
+    D.packages.filter((p) => p.active).sort((a, b) => (a.shift === 'two') - (b.shift === 'two')).forEach((p) => {
+      const k = p.subject + '|' + p.grade; if (seen.has(k)) return; seen.add(k);
+      if (!by.has(p.subject)) by.set(p.subject, []); by.get(p.subject).push(p);
+    });
+    box.innerHTML = by.size ? [...by].map(([s, list]) => `<div class="subj"><b>${esc(s)}</b>${list.map((p) => `<label><input type="checkbox" value="${esc(p.id)}" ${selected && selected.includes(p.id) ? 'checked' : ''}>${esc(A.GRADES[p.grade] || p.grade)}</label>`).join('')}</div>`).join('')
       : '<p class="muted small">أضف الباقات أولًا.</p>';
   }
   async function copy(text) {

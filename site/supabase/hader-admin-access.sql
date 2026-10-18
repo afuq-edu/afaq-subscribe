@@ -79,3 +79,26 @@ begin
   where id = r.id;
   return jsonb_build_object('ok', true, 'request', r.id);
 end $function$;
+
+-- 2026-10-18: اشتراك مادة لصف يشمل نوعي المدرسة معًا (فترة واحدة وفترتان)
+create or replace function public.sub_mirror_shift() returns trigger
+language plpgsql security definer set search_path = public as $$
+begin
+  if pg_trigger_depth() > 1 then return new; end if;
+  if tg_op = 'INSERT' then
+    insert into public.subscriptions (user_id, package_id, term_id, plan, revoked)
+    select new.user_id, q.id, new.term_id, new.plan, new.revoked
+      from public.packages p join public.packages q on q.subject = p.subject and q.grade = p.grade and q.id <> p.id
+     where p.id = new.package_id
+    on conflict (user_id, package_id, term_id) do nothing;
+  elsif tg_op = 'UPDATE' and new.revoked is distinct from old.revoked then
+    update public.subscriptions s set revoked = new.revoked
+      from public.packages p, public.packages q
+     where p.id = new.package_id and q.subject = p.subject and q.grade = p.grade and q.id <> p.id
+       and s.package_id = q.id and s.user_id = new.user_id and s.term_id = new.term_id;
+  end if;
+  return new;
+end $$;
+create trigger sub_mirror_shift after insert or update of revoked on public.subscriptions
+  for each row execute function public.sub_mirror_shift();
+-- (طُبّق مع إضافة النوع الآخر لكل اشتراك موجود)
