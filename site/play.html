@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أنشطة الدرس — منصة أفق</title>
+<meta name="description" content="أربعة أنشطة قصيرة تقيس فهم الدرس، وفي نهايتها شهادة باسم الطالب.">
+<meta name="theme-color" content="#13263F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 22h24' stroke='%2313263F' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M9 22a7 7 0 0 1 14 0' fill='%23D99A2B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #13263F; --sky: #EEF3F7; --paper: #fff; --sea: #1C6E7D; --sea-d: #155763;
+  --amber: #D99A2B; --amber-bg: #FBF1DC; --mist: #5D7083; --line: #D6E0E8;
+  --ok: #2E7D4F; --ok-bg: #E4F2EA;
+  --display: 'Alexandria', 'IBM Plex Sans Arabic', Tahoma, sans-serif;
+  --body: 'IBM Plex Sans Arabic', Tahoma, 'Segoe UI', sans-serif;
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; }
+body { min-height: 100vh; background: var(--sky); color: var(--ink); font: 400 17px/1.7 var(--body); -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.35; margin: 0; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+[hidden] { display: none !important; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 18px 16px 40px; }
+.brand { display: flex; align-items: center; gap: 8px; font: 700 15px var(--display); color: var(--ink); text-decoration: none; margin-bottom: 16px; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 24px 20px; box-shadow: 0 10px 30px -18px rgba(19, 38, 63, .35); }
+.tag { display: inline-block; background: var(--amber-bg); color: #7A5310; font-size: 14px; font-weight: 600; padding: 3px 12px; border-radius: 999px; }
+.muted { color: var(--mist); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; background: var(--sea); color: #fff; font-weight: 600; font-size: 17px;
+  padding: 13px 26px; border-radius: 999px; cursor: pointer; text-decoration: none; transition: background .15s, transform .1s; }
+.btn:hover { background: var(--sea-d); }
+.btn:active { transform: scale(.98); }
+.btn.ghost { background: transparent; color: var(--sea); border: 1.5px solid var(--sea); }
+.btn.ghost:hover { background: #E6F0F2; }
+.btn.wide { width: 100%; }
+.btn[disabled] { opacity: .45; cursor: default; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; }
+.head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.head h2 { font-size: 19px; }
+.back { border: 0; background: none; color: var(--sea); font-weight: 600; cursor: pointer; padding: 4px 0; }
+.score { font: 700 16px var(--display); display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.score svg { color: var(--amber); }
+.path { display: flex; gap: 5px; margin-bottom: 18px; }
+.path i { flex: 1; height: 8px; border-radius: 99px; background: var(--line); transition: background .3s; }
+.path i.ok { background: var(--ok); }
+.path i.no { background: var(--amber); }
+.path i.now { background: var(--sea); }
+.qnum { font-size: 14px; color: var(--mist); font-weight: 600; }
+.qtext { font-size: clamp(19px, 3.6vw, 23px); margin: 4px 0 18px; }
+.fb { margin-top: 16px; border-radius: 16px; padding: 13px 16px; font-size: 16px; animation: up .25s ease; }
+.fb.ok { background: var(--ok-bg); }
+.fb.no { background: var(--amber-bg); }
+.fb strong { font-family: var(--display); display: block; margin-bottom: 2px; }
+.next { margin-top: 16px; display: flex; justify-content: flex-end; }
+@keyframes up { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes pop { 0% { transform: scale(.6); opacity: 0; } 70% { transform: scale(1.12); } 100% { transform: scale(1); opacity: 1; } }
+
+/* البداية */
+.intro h1 { font-size: clamp(24px, 5vw, 32px); margin: 12px 0 4px; }
+.goals { margin: 14px 0 20px; padding: 0; list-style: none; display: grid; gap: 6px; }
+.goals li { display: flex; gap: 10px; align-items: flex-start; font-size: 15.5px; }
+.goals li::before { content: ''; flex: 0 0 8px; height: 8px; margin-top: 10px; border-radius: 50%; background: var(--amber); }
+label.f { display: block; font-weight: 600; margin-bottom: 6px; }
+.input { width: 100%; font: 500 19px var(--body); padding: 12px 16px; border: 1.5px solid var(--line); border-radius: 14px; background: #FAFCFD; color: var(--ink); }
+.input:focus { border-color: var(--sea); outline: none; background: #fff; }
+.seg { display: inline-flex; background: var(--sky); border-radius: 999px; padding: 4px; margin: 12px 0 20px; }
+.seg button { border: 0; background: transparent; padding: 7px 18px; border-radius: 999px; cursor: pointer; color: var(--mist); font-weight: 600; }
+.seg button[aria-pressed="true"] { background: var(--paper); color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+
+/* قائمة الأنشطة */
+.hub-hi { margin-bottom: 14px; }
+.hub-hi h1 { font-size: 22px; }
+.parts { display: grid; gap: 12px; }
+.part { display: flex; align-items: center; gap: 14px; width: 100%; text-align: start; background: var(--paper); border: 1.5px solid var(--line); border-radius: 20px; padding: 16px; cursor: pointer; transition: border-color .15s, transform .1s; }
+.part:hover:not(.done) { border-color: var(--sea); }
+.part:active:not(.done) { transform: scale(.99); }
+.part .ic { flex: 0 0 54px; height: 54px; border-radius: 16px; display: grid; place-items: center; font-size: 28px; background: var(--sky); }
+.part .tx { flex: 1; min-width: 0; }
+.part .tx b { display: block; font: 600 17px var(--display); }
+.part .tx span { display: block; font-size: 14.5px; color: var(--mist); line-height: 1.55; }
+.part .st { font: 700 15px var(--display); color: var(--sea); white-space: nowrap; }
+.part.done { cursor: default; background: #FAFCFD; }
+.part.done .st { color: var(--ok); }
+.part.done .ic { background: var(--ok-bg); }
+.hub-foot { margin-top: 16px; }
+
+/* صح أم خطأ */
+.tf-s { font: 600 clamp(20px, 4vw, 24px)/1.6 var(--display); background: var(--sky); border-radius: 18px; padding: 22px 18px; text-align: center; margin-bottom: 18px; }
+.tf-b { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.tf-b button { border: 2px solid var(--line); background: var(--paper); border-radius: 20px; padding: 14px 8px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 2px; font: 600 17px var(--display); transition: border-color .15s, background .15s, transform .1s; }
+.tf-b button i { font-style: normal; font-size: 40px; line-height: 1.1; }
+.tf-b button.t i { color: var(--ok); }
+.tf-b button.f i { color: #B4532A; }
+.tf-b button:hover:not([disabled]) { border-color: var(--sea); }
+.tf-b button:active:not([disabled]) { transform: scale(.97); }
+.tf-b button[disabled] { cursor: default; }
+.tf-b button.right { border-color: var(--ok); background: var(--ok-bg); }
+.tf-b button.picked:not(.right) { border-color: var(--amber); background: var(--amber-bg); }
+
+/* الصناديق */
+.boxes { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.box { aspect-ratio: 1; border: 0; border-radius: 16px; cursor: pointer; position: relative; display: grid; place-items: center; font: 700 22px var(--display); color: #fff;
+  background: linear-gradient(160deg, #2A8496, var(--sea-d)); box-shadow: inset 0 -6px 0 rgba(0,0,0,.18); transition: transform .12s; }
+.box::before { content: ''; position: absolute; top: 38%; left: 0; right: 0; height: 9%; background: var(--amber); opacity: .9; }
+.box span { position: relative; }
+.box:hover:not([disabled]) { transform: translateY(-3px); }
+.box[disabled] { cursor: default; }
+.box.open { background: var(--ok-bg); color: var(--ok); box-shadow: inset 0 0 0 2px var(--ok); animation: pop .4s ease; }
+.box.open::before, .box.shut::before { display: none; }
+.box.shut { background: #EEF0F2; color: #9AA6B2; box-shadow: inset 0 0 0 2px #DDE2E7; }
+.bq { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 16px; animation: up .25s ease; }
+@media (max-width: 420px) { .boxes { gap: 7px; } .box { font-size: 18px; border-radius: 12px; } }
+
+/* اختيارات */
+.opts { display: grid; gap: 10px; }
+.opt { display: flex; align-items: center; gap: 12px; width: 100%; text-align: start; border: 1.5px solid var(--line); background: #FAFCFD;
+  border-radius: 16px; padding: 13px 15px; cursor: pointer; font-size: 17px; font-weight: 500; transition: border-color .15s, background .15s, transform .1s; }
+.opt:hover:not([disabled]) { border-color: var(--sea); background: #fff; }
+.opt:active:not([disabled]) { transform: scale(.99); }
+.opt b { flex: 0 0 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: var(--sky); font: 700 15px var(--display); color: var(--mist); }
+.opt[disabled] { cursor: default; }
+.opt.right { border-color: var(--ok); background: var(--ok-bg); }
+.opt.right b { background: var(--ok); color: #fff; }
+.opt.picked:not(.right) { border-color: var(--amber); background: var(--amber-bg); }
+.opt.picked:not(.right) b { background: var(--amber); color: #fff; }
+.opt.dim { opacity: .55; }
+
+/* صياد الإجابة */
+.speeds { display: grid; gap: 10px; margin-top: 14px; }
+.speeds button { display: flex; align-items: center; gap: 14px; border: 1.5px solid var(--line); background: #FAFCFD; border-radius: 18px; padding: 14px 16px; cursor: pointer; text-align: start; }
+.speeds button:hover { border-color: var(--sea); background: #fff; }
+.speeds button i { font-style: normal; font-size: 28px; }
+.speeds button b { display: block; font: 600 17px var(--display); }
+.speeds button span { font-size: 14px; color: var(--mist); }
+.hq { font: 600 clamp(18px, 3.8vw, 21px)/1.5 var(--display); text-align: center; background: var(--ink); color: #fff; border-radius: 16px 16px 0 0; padding: 12px 14px; }
+.sky { position: relative; height: min(62vh, 520px); overflow: hidden; border-radius: 0 0 16px 16px; touch-action: manipulation;
+  background: linear-gradient(180deg, #DCEAF2 0%, #F4F8FA 70%, #E8F0D8 100%); }
+.drop { position: absolute; top: 0; left: 0; max-width: 46%; border: 0; border-radius: 999px; padding: 10px 16px; font: 600 16px/1.4 var(--body); text-align: center;
+  background: #fff; color: var(--ink); box-shadow: 0 6px 16px -6px rgba(19,38,63,.45), inset 0 0 0 2px #C9D7E1; cursor: pointer; will-change: transform; user-select: none; }
+.drop.hit { background: var(--ok); color: #fff; box-shadow: none; }
+.drop.miss { background: var(--amber); color: #fff; box-shadow: none; }
+.drop.show { box-shadow: 0 0 0 3px var(--ok); }
+.flash { position: absolute; inset: auto 0 16px; text-align: center; font: 700 20px var(--display); animation: up .25s ease; pointer-events: none; }
+
+/* النتيجة */
+.result { text-align: center; }
+.total { font: 700 48px/1.1 var(--display); margin: 6px 0 2px; }
+.total small { font-size: 20px; color: var(--mist); font-weight: 500; }
+.stars { display: flex; justify-content: center; gap: 6px; margin: 6px 0 8px; }
+.stars svg { animation: pop .5s ease both; }
+.sc { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin: 16px 0 6px; }
+.sc div { background: var(--sky); border-radius: 14px; padding: 10px 6px; font-size: 14px; color: var(--mist); }
+.sc b { display: block; font: 700 20px var(--display); color: var(--ink); }
+.cert { margin: 18px 0 14px; }
+.cert canvas { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 26px -14px rgba(19,38,63,.5); display: block; }
+.review { text-align: start; margin-top: 22px; }
+.review h3 { font-size: 17px; margin-bottom: 10px; }
+.review ol { margin: 0; padding-inline-start: 20px; display: grid; gap: 10px; }
+.review li { font-size: 15.5px; }
+.review li span { display: block; color: var(--ok); font-weight: 600; }
+.foot { text-align: center; font-size: 13px; color: var(--mist); margin-top: 22px; }
+.center { text-align: center; padding: 40px 10px; }
+
+@media print {
+  body { background: #fff; }
+  .wrap > *:not(#res), #res > *:not(.cert), .brand, .foot { display: none !important; }
+  .card { border: 0; box-shadow: none; padding: 0; }
+  .cert canvas { box-shadow: none; }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <a class="brand" href="./" aria-label="منصة أفق التعليمية">
+    <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 22h26" stroke="#13263F" stroke-width="2.4" stroke-linecap="round"/><path d="M9 22a7 7 0 0 1 14 0" fill="#D99A2B"/><path d="M16 9v3M8.5 12.5l2 2M23.5 12.5l-2 2" stroke="#D99A2B" stroke-width="2" stroke-linecap="round"/></svg>
+    منصة أفق التعليمية
+  </a>
+
+  <section class="card center" id="load"><p class="muted">نجهّز أنشطة الدرس…</p></section>
+
+  <!-- البداية -->
+  <section class="card intro" id="start" hidden>
+    <span class="tag" id="sTag"></span>
+    <h1 id="sTitle"></h1>
+    <p class="muted" style="margin:0" id="sSub"></p>
+    <ul class="goals" id="sGoals"></ul>
+    <label class="f" for="name">اكتب اسمك كما تريده في الشهادة</label>
+    <input class="input" id="name" autocomplete="name" maxlength="40" placeholder="الاسم الثلاثي">
+    <div class="seg" role="group" aria-label="طالب أو طالبة">
+      <button type="button" data-g="m" aria-pressed="true">طالب</button>
+      <button type="button" data-g="f" aria-pressed="false">طالبة</button>
+    </div>
+    <div><button class="btn" id="go" disabled>ابدأ</button></div>
+  </section>
+
+  <!-- قائمة الأنشطة -->
+  <section id="hub" hidden>
+    <div class="hub-hi"><span class="tag" id="hTag"></span><h1 id="hTitle" style="margin-top:8px"></h1><p class="muted" style="margin:0" id="hSub"></p></div>
+    <div class="parts" id="parts"></div>
+    <div class="hub-foot" id="hubFoot" hidden><button class="btn wide" id="toCert">اعرض شهادتي</button></div>
+  </section>
+
+  <!-- صح أم خطأ -->
+  <section class="card" id="tf" hidden>
+    <div class="head"><h2>✔ صح أم خطأ</h2><span class="score"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><span class="pts"></span></span></div>
+    <div class="path"></div>
+    <div class="qnum"></div>
+    <div class="tf-s" id="tfS"></div>
+    <div class="tf-b"><button class="t" data-v="1"><i>✔</i>صح</button><button class="f" data-v="0"><i>✖</i>خطأ</button></div>
+    <div class="fbx"></div>
+    <div class="next"><button class="btn nx" hidden></button></div>
+  </section>
+
+  <!-- افتح الصناديق -->
+  <section class="card" id="bx" hidden>
+    <div class="head"><h2>🎁 افتح الصناديق</h2><span class="score"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><span class="pts"></span></span></div>
+    <p class="muted" style="margin:0 0 12px" id="bxHint">اختر صندوقًا، وأجب عن سؤاله ليُفتح.</p>
+    <div class="boxes" id="boxes"></div>
+    <div class="bq" id="bq" hidden>
+      <h2 class="qtext" id="bqT"></h2>
+      <div class="opts" id="bqO"></div>
+      <div class="fbx"></div>
+      <div class="next"><button class="btn nx" hidden></button></div>
+    </div>
+  </section>
+
+  <!-- صياد الإجابة -->
+  <section class="card" id="ht" hidden>
+    <div class="head"><h2>🎯 صياد الإجابة</h2><span class="score"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><span class="pts"></span></span></div>
+    <div id="htPick">
+      <p class="muted" style="margin:0">تتساقط الإجابات من السماء، واحدة منها فقط صحيحة. اضغط على الإجابة التي تختارها. اختر السرعة:</p>
+      <div class="speeds">
+        <button data-s="slow"><i>🐢</i><div><b>بطيء</b><span>وقت كافٍ للقراءة</span></div></button>
+        <button data-s="mid"><i>🐇</i><div><b>متوسط</b><span>تحدٍّ مناسب</span></div></button>
+        <button data-s="fast"><i>🚀</i><div><b>سريع</b><span>للأبطال</span></div></button>
+      </div>
+    </div>
+    <div id="htPlay" hidden>
+      <div class="path"></div>
+      <div class="hq" id="hq"></div>
+      <div class="sky" id="sky"></div>
+    </div>
+  </section>
+
+  <!-- النشاط -->
+  <section class="card" id="mc" hidden>
+    <div class="head"><h2>📝 النشاط</h2><span class="score"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg><span class="pts"></span></span></div>
+    <div class="path"></div>
+    <div class="qnum"></div>
+    <h2 class="qtext" id="mcT"></h2>
+    <div class="opts" id="mcO"></div>
+    <div class="fbx"></div>
+    <div class="next"><button class="btn nx" hidden></button></div>
+  </section>
+
+  <!-- النتيجة والشهادة -->
+  <section class="card result" id="res" hidden>
+    <div class="stars" id="rStars"></div>
+    <h2 id="rHead"></h2>
+    <div class="total" id="rTotal"></div>
+    <div class="sc" id="rSc"></div>
+    <div class="cert"><canvas id="cv" width="1600" height="1130" aria-label="الشهادة"></canvas></div>
+    <div class="row" style="justify-content:center">
+      <button class="btn" id="dl">حفظ الشهادة صورة</button>
+      <button class="btn ghost" id="share" hidden>مشاركة</button>
+      <button class="btn ghost" id="pr">طباعة</button>
+      <button class="btn ghost" id="again">أعد الأنشطة</button>
+    </div>
+    <div class="review" id="rev" hidden><h3>راجع هذه الإجابات</h3><ol id="revList"></ol></div>
+  </section>
+
+  <p class="foot">منصة أفق التعليمية</p>
+</main>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const q$ = (root, sel) => root.querySelector(sel);
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const AR = (n) => Number(n).toLocaleString('ar-EG');
+  const LETTERS = ['أ', 'ب', 'ج', 'د'];
+  const STAR = '<svg width="34" height="34" viewBox="0 0 24 24" fill="#D99A2B" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>';
+  const STAR0 = STAR.replace('#D99A2B', '#D6E0E8');
+  const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
+  const shuffle = (a) => { a = a.slice(); for (let k = a.length - 1; k > 0; k--) { const j = Math.floor(Math.random() * (k + 1)); [a[k], a[j]] = [a[j], a[k]]; } return a; };
+  const cheer = () => ['أحسنت!', 'إجابة صحيحة!', 'رائع!', 'ممتاز!'][Math.floor(Math.random() * 4)];
+
+  // ?d=sc-8/1-1  →  games/sc-8/1-1.json
+  const id = (new URLSearchParams(location.search).get('d') || '').replace(/[^\w\-\/]/g, '');
+  const SCREENS = ['load', 'start', 'hub', 'tf', 'bx', 'ht', 'mc', 'res'];
+  const show = (s) => { SCREENS.forEach((x) => { $(x).hidden = x !== s; }); window.scrollTo({ top: 0 }); };
+  let G, gender = store.get('afaq.g') || 'm', PARTS = [], done = {}, misses = [];
+
+  const lessonName = () => G.lesson.replace(/^الدرس\s*[\d\-–]+\s*[:：]\s*/, '');
+  const soft = (msg) => { $('load').innerHTML = '<p class="muted">' + esc(msg) + '</p>'; show('load'); };
+
+  // ---------- البداية ----------
+  async function boot() {
+    if (!id) return soft('افتح الأنشطة من الرابط الذي أرسله لك معلمك.');
+    try {
+      const r = await fetch('games/' + id + '.json', { cache: 'no-cache' });
+      if (!r.ok) throw 0;
+      G = await r.json();
+    } catch (e) { return soft('أنشطة هذا الدرس تُجهَّز الآن، عد إليها بعد قليل.'); }
+    PARTS = [
+      { key: 'tf', ic: '✔', name: 'صح أم خطأ', how: 'اقرأ العبارة واضغط ✔ إن كانت صحيحة أو ✖ إن كانت خاطئة.', list: G.tf, run: runTF },
+      { key: 'bx', ic: '🎁', name: 'افتح الصناديق', how: 'في كل صندوق سؤال، والإجابة الصحيحة تفتحه.', list: G.boxes, run: runBX },
+      { key: 'ht', ic: '🎯', name: 'صياد الإجابة', how: 'اختر السرعة، ثم اصطد الإجابة الصحيحة وهي تتساقط.', list: G.hunt, run: runHT },
+      { key: 'mc', ic: '📝', name: 'النشاط', how: 'اختر الإجابة الصحيحة من بين الخيارات.', list: G.mcq, run: runMC },
+    ].filter((p) => Array.isArray(p.list) && p.list.length);
+    document.title = 'أنشطة درس ' + lessonName() + ' — منصة أفق';
+    $('sTag').textContent = $('hTag').textContent = G.subject + ' · ' + G.grade;
+    $('sTitle').textContent = $('hTitle').textContent = lessonName();
+    $('sSub').textContent = AR(PARTS.length) + ' أنشطة قصيرة، وفي النهاية شهادة باسمك.';
+    $('sGoals').innerHTML = (G.outcomes || []).map((o) => '<li>' + esc(o) + '</li>').join('');
+    $('name').value = store.get('afaq.name') || '';
+    setGender(gender);
+    $('go').disabled = $('name').value.trim().length < 2;
+    show('start');
+  }
+  function setGender(g) {
+    gender = g;
+    document.querySelectorAll('.seg button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.g === g)));
+  }
+  document.querySelectorAll('.seg button').forEach((b) => (b.onclick = () => setGender(b.dataset.g)));
+  $('name').oninput = () => { $('go').disabled = $('name').value.trim().length < 2; };
+  $('name').onkeydown = (e) => { if (e.key === 'Enter' && !$('go').disabled) $('go').click(); };
+  $('go').onclick = () => { store.set('afaq.name', $('name').value.trim()); store.set('afaq.g', gender); done = {}; misses = []; hub(); };
+
+  // ---------- قائمة الأنشطة ----------
+  function hub() {
+    const left = PARTS.filter((p) => !(p.key in done)).length;
+    $('hSub').textContent = left ? 'أكمل الأنشطة لتحصل على شهادتك. بقي ' + AR(left) + ' من ' + AR(PARTS.length) + '.' : 'أكملت كل الأنشطة، شهادتك جاهزة.';
+    $('parts').innerHTML = PARTS.map((p) => {
+      const d = p.key in done;
+      return '<button class="part' + (d ? ' done' : '') + '" data-k="' + p.key + '"' + (d ? ' disabled' : '') + '><span class="ic">' + p.ic + '</span><span class="tx"><b>' + p.name + '</b><span>' + p.how + '</span></span><span class="st">' + (d ? AR(done[p.key]) + ' من ' + AR(p.list.length) : 'ابدأ') + '</span></button>';
+    }).join('');
+    [...$('parts').children].forEach((b) => (b.onclick = () => { const p = PARTS.find((x) => x.key === b.dataset.k); p.run(p); }));
+    $('hubFoot').hidden = !!left;
+    show('hub');
+  }
+  $('toCert').onclick = () => finish();
+  const endPart = (p, n) => { done[p.key] = n; setTimeout(hub, 300); };
+
+  // أدوات مشتركة لأنشطة السؤال تلو السؤال
+  function stepper(sec, total) {
+    const path = q$(sec, '.path'), pts = q$(sec, '.pts'), num = q$(sec, '.qnum'), fb = q$(sec, '.fbx'), nx = q$(sec, '.nx');
+    if (path) path.innerHTML = '<i></i>'.repeat(total);
+    let right = 0;
+    return {
+      get right() { return right; },
+      at(i) { if (path) path.children[i].className = 'now'; if (num) num.textContent = 'السؤال ' + AR(i + 1) + ' من ' + AR(total); pts.textContent = AR(right * 10); if (fb) fb.innerHTML = ''; if (nx) nx.hidden = true; },
+      mark(i, ok, html) {
+        if (ok) right++;
+        if (path) path.children[i].className = ok ? 'ok' : 'no';
+        pts.textContent = AR(right * 10);
+        if (fb && html != null) fb.innerHTML = '<div class="fb ' + (ok ? 'ok' : 'no') + '">' + html + '</div>';
+      },
+      next(label, fn) { nx.textContent = label; nx.hidden = false; nx.onclick = fn; nx.focus({ preventScroll: true }); },
+    };
+  }
+
+  // ---------- صح أم خطأ ----------
+  function runTF(p) {
+    const list = shuffle(p.list), S = stepper($('tf'), list.length), btns = [...document.querySelectorAll('#tf .tf-b button')];
+    let i = 0;
+    const ask = () => {
+      const it = list[i];
+      S.at(i); $('tfS').textContent = it.s;
+      btns.forEach((b) => { b.disabled = false; b.className = b.className.replace(/ ?(right|picked)/g, ''); b.onclick = () => answer(b, it); });
+    };
+    const answer = (b, it) => {
+      const ok = (b.dataset.v === '1') === !!it.t;
+      btns.forEach((x) => { x.disabled = true; if ((x.dataset.v === '1') === !!it.t) x.classList.add('right'); });
+      b.classList.add('picked');
+      if (!ok) misses.push({ q: it.s, a: it.t ? 'العبارة صحيحة' : 'العبارة خاطئة' });
+      S.mark(i, ok, '<strong>' + (ok ? cheer() : 'العبارة ' + (it.t ? 'صحيحة' : 'خاطئة')) + '</strong>' + esc(it.why || ''));
+      S.next(i + 1 < list.length ? 'التالي' : 'أنهيت هذا النشاط', () => { i++; i < list.length ? ask() : endPart(p, S.right); });
+    };
+    show('tf'); ask();
+  }
+
+  // ---------- افتح الصناديق ----------
+  function runBX(p) {
+    const list = shuffle(p.list), S = stepper($('bx'), list.length);
+    let opened = 0;
+    S.at(0);
+    $('bq').hidden = true; $('bxHint').hidden = false;
+    $('boxes').innerHTML = list.map((_, k) => '<button class="box" data-k="' + k + '"><span>' + AR(k + 1) + '</span></button>').join('');
+    const boxes = [...$('boxes').children];
+    const lock = (v) => boxes.forEach((b) => { if (!b.classList.contains('open') && !b.classList.contains('shut')) b.disabled = v; });
+    boxes.forEach((b) => (b.onclick = () => {
+      const it = list[+b.dataset.k];
+      lock(true); b.style.outline = '3px solid var(--amber)';
+      $('bxHint').hidden = true; $('bq').hidden = false;
+      $('bqT').textContent = it.q;
+      const opts = shuffle(it.o.map((t, k) => ({ t, ok: k === 0 })));
+      $('bqO').innerHTML = opts.map((o, k) => '<button class="opt" data-ok="' + (o.ok ? 1 : 0) + '"><b>' + LETTERS[k] + '</b><span>' + esc(o.t) + '</span></button>').join('');
+      q$($('bx'), '.fbx').innerHTML = ''; q$($('bx'), '.nx').hidden = true;
+      [...$('bqO').children].forEach((o) => (o.onclick = () => {
+        const ok = o.dataset.ok === '1';
+        [...$('bqO').children].forEach((x) => { x.disabled = true; if (x.dataset.ok === '1') x.classList.add('right'); else if (x !== o) x.classList.add('dim'); });
+        o.classList.add('picked');
+        b.style.outline = ''; b.disabled = true;
+        b.classList.add(ok ? 'open' : 'shut'); b.innerHTML = '<span>' + (ok ? '★' : '🔒') + '</span>';
+        if (!ok) misses.push({ q: it.q, a: it.o[0] });
+        S.mark(0, ok, '<strong>' + (ok ? 'فُتح الصندوق! ' + cheer() : 'بقي الصندوق مغلقًا، الإجابة: ' + esc(it.o[0])) + '</strong>' + esc(it.why || ''));
+        opened++;
+        S.next(opened < list.length ? 'صندوق آخر' : 'أنهيت هذا النشاط', () => {
+          if (opened >= list.length) return endPart(p, S.right);
+          $('bq').hidden = true; $('bxHint').hidden = false; lock(false);
+          $('boxes').scrollIntoView({ block: 'nearest' });
+        });
+        $('bq').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }));
+      $('bq').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }));
+    show('bx');
+  }
+
+  // ---------- صياد الإجابة ----------
+  const SPEED = { slow: 38, mid: 62, fast: 95 };   // بكسل في الثانية
+  let raf = 0;
+  function runHT(p) {
+    $('htPick').hidden = false; $('htPlay').hidden = true;
+    q$($('ht'), '.pts').textContent = AR(0);
+    document.querySelectorAll('#htPick .speeds button').forEach((b) => (b.onclick = () => play(p, SPEED[b.dataset.s])));
+    show('ht');
+  }
+  function play(p, speed) {
+    const list = shuffle(p.list), S = stepper($('ht'), list.length), sky = $('sky');
+    $('htPick').hidden = true; $('htPlay').hidden = false;
+    let i = 0, drops = [], busy = false, last = 0;
+    const ask = () => {
+      const it = list[i];
+      S.at(i); $('hq').textContent = it.q; sky.innerHTML = ''; busy = false;
+      const W = sky.clientWidth, items = shuffle([{ t: it.a, ok: true }, ...it.d.slice(0, 3).map((t) => ({ t, ok: false }))]);
+      const lanes = shuffle([0, 1, 2, 3]);
+      drops = items.map((o, k) => {
+        const el = document.createElement('button');
+        el.className = 'drop'; el.textContent = o.t; sky.appendChild(el);
+        const w = el.offsetWidth, h = el.offsetHeight;
+        const slot = W / 4, x = Math.max(4, Math.min(W - w - 4, slot * lanes[k] + slot / 2 - w / 2 + (Math.random() - .5) * slot * .4));
+        const d = { el, ok: o.ok, x, y: -h - k * 70 - Math.random() * 40, h, v: speed * (0.85 + Math.random() * 0.3) };
+        el.onpointerdown = (e) => { e.preventDefault(); hit(d, it); };
+        return d;
+      });
+      // نوزّع العرض حتى لا تتراكب الإجابات أفقيًا عند ضيق الشاشة
+      drops.sort((a, b) => a.x - b.x).forEach((d, k, a) => { if (k && d.x < a[k - 1].x + 6 && Math.abs(d.y - a[k - 1].y) < d.h + 10) d.y = a[k - 1].y - d.h - 30; });
+    };
+    const hit = (d, it) => {
+      if (busy) return; busy = true;
+      d.el.classList.add(d.ok ? 'hit' : 'miss');
+      if (!d.ok) { drops.forEach((x) => x.ok && x.el.classList.add('show')); misses.push({ q: it.q, a: it.a }); }
+      S.mark(i, d.ok);
+      const f = document.createElement('div'); f.className = 'flash'; f.style.color = d.ok ? 'var(--ok)' : '#8A5A0F';
+      f.textContent = d.ok ? cheer() : 'الإجابة: ' + it.a; sky.appendChild(f);
+      setTimeout(() => { i++; if (i < list.length) ask(); else { cancelAnimationFrame(raf); endPart(p, S.right); } }, d.ok ? 900 : 1700);
+    };
+    const tick = (t) => {
+      const dt = last ? Math.min(0.05, (t - last) / 1000) : 0; last = t;
+      const H = sky.clientHeight;
+      drops.forEach((d) => {
+        if (!busy) { d.y += d.v * dt; if (d.y > H + 4) d.y = -d.h - Math.random() * 120; }  // تعود من الأعلى حتى يختار الطالب
+        d.el.style.transform = 'translate(' + d.x + 'px,' + d.y + 'px)';
+      });
+      if (!$('ht').hidden) raf = requestAnimationFrame(tick);
+    };
+    ask(); cancelAnimationFrame(raf); raf = requestAnimationFrame(tick);
+  }
+
+  // ---------- النشاط ----------
+  function runMC(p) {
+    const list = shuffle(p.list), S = stepper($('mc'), list.length);
+    let i = 0;
+    const ask = () => {
+      const it = list[i], opts = shuffle(it.o.map((t, k) => ({ t, ok: k === 0 })));
+      S.at(i); $('mcT').textContent = it.q;
+      $('mcO').innerHTML = opts.map((o, k) => '<button class="opt" data-ok="' + (o.ok ? 1 : 0) + '"><b>' + LETTERS[k] + '</b><span>' + esc(o.t) + '</span></button>').join('');
+      [...$('mcO').children].forEach((b) => (b.onclick = () => {
+        const ok = b.dataset.ok === '1';
+        [...$('mcO').children].forEach((x) => { x.disabled = true; if (x.dataset.ok === '1') x.classList.add('right'); else if (x !== b) x.classList.add('dim'); });
+        b.classList.add('picked');
+        if (!ok) misses.push({ q: it.q, a: it.o[0] });
+        S.mark(i, ok, '<strong>' + (ok ? cheer() : 'الإجابة الصحيحة: ' + esc(it.o[0])) + '</strong>' + esc(it.why || ''));
+        S.next(i + 1 < list.length ? 'السؤال التالي' : 'أنهيت هذا النشاط', () => { i++; i < list.length ? ask() : endPart(p, S.right); });
+      }));
+    };
+    show('mc'); ask();
+  }
+
+  // ---------- النتيجة ----------
+  function rating(p) {
+    if (p >= .9) return { stars: 3, word: 'متميّز', head: 'أداء متميّز' };
+    if (p >= .75) return { stars: 2, word: 'متقن', head: 'أداء رائع' };
+    if (p >= .5) return { stars: 1, word: 'مجتهد', head: 'أحسنت' };
+    return { stars: 1, word: 'مثابر', head: 'بداية جيدة' };
+  }
+  function finish() {
+    const name = store.get('afaq.name') || '';
+    const max = PARTS.reduce((s, p) => s + p.list.length, 0), got = PARTS.reduce((s, p) => s + (done[p.key] || 0), 0), R = rating(got / max);
+    show('res');
+    $('rStars').innerHTML = [0, 1, 2].map((k) => (k < R.stars ? STAR : STAR0).replace('<svg', '<svg style="animation-delay:' + (0.2 + k * 0.15) + 's"')).join('');
+    $('rHead').textContent = R.head + ' يا ' + name.split(/\s+/)[0] + '!';
+    $('rTotal').innerHTML = AR(got) + ' <small>من ' + AR(max) + '</small>';
+    $('rSc').innerHTML = PARTS.map((p) => '<div><b>' + AR(done[p.key] || 0) + ' من ' + AR(p.list.length) + '</b>' + p.name + '</div>').join('');
+    $('rev').hidden = !misses.length;
+    $('revList').innerHTML = misses.map((m) => '<li>' + esc(m.q) + '<span>' + esc(m.a) + '</span></li>').join('');
+    drawCert(name, R, got, max);
+  }
+
+  // ---------- الشهادة ----------
+  async function drawCert(name, R, got, max) {
+    try { await Promise.all(['700 80px Alexandria', '600 40px Alexandria', '500 34px "IBM Plex Sans Arabic"'].map((f) => document.fonts.load(f))); } catch (e) {}
+    const c = $('cv'), x = c.getContext('2d'), W = c.width, H = c.height;
+    x.direction = 'rtl'; x.textAlign = 'center'; x.textBaseline = 'middle';
+    x.fillStyle = '#FFFDF8'; x.fillRect(0, 0, W, H);
+    x.strokeStyle = '#13263F'; x.lineWidth = 10; x.strokeRect(36, 36, W - 72, H - 72);
+    x.strokeStyle = '#D99A2B'; x.lineWidth = 3; x.strokeRect(62, 62, W - 124, H - 124);
+    [[62, 62], [W - 62, 62], [62, H - 62], [W - 62, H - 62]].forEach(([a, b]) => { x.fillStyle = '#D99A2B'; x.beginPath(); x.arc(a, b, 12, 0, 7); x.fill(); });
+    // شعار الأفق
+    x.save(); x.translate(W / 2, 150);
+    x.strokeStyle = '#13263F'; x.lineWidth = 7; x.lineCap = 'round'; x.beginPath(); x.moveTo(-66, 26); x.lineTo(66, 26); x.stroke();
+    x.fillStyle = '#D99A2B'; x.beginPath(); x.arc(0, 26, 36, Math.PI, 0); x.fill();
+    x.strokeStyle = '#D99A2B'; x.lineWidth = 6;
+    [[0, -36, 0, -20], [-38, -16, -28, -6], [38, -16, 28, -6]].forEach(([a, b, d, e]) => { x.beginPath(); x.moveTo(a, b); x.lineTo(d, e); x.stroke(); });
+    x.restore();
+    const T = (txt, y, font, color, cx = W / 2, mw = W - 260) => { x.font = font; x.fillStyle = color; x.fillText(txt, cx, y, mw); };
+    T('شهادة إنجاز', 255, '700 80px Alexandria', '#13263F');
+    T('تشهد منصة أفق التعليمية بأنّ ' + (gender === 'f' ? 'الطالبة' : 'الطالب'), 350, '500 34px "IBM Plex Sans Arabic"', '#5D7083');
+    T(name || '—', 440, '700 86px Alexandria', '#1C6E7D');
+    x.strokeStyle = '#D99A2B'; x.lineWidth = 3; x.beginPath(); x.moveTo(W / 2 - 330, 505); x.lineTo(W / 2 + 330, 505); x.stroke();
+    T((gender === 'f' ? 'أنجزت' : 'أنجز') + ' أنشطة درس «' + lessonName() + '»', 570, '600 42px Alexandria', '#13263F');
+    T(G.subject + ' — ' + G.grade, 630, '500 32px "IBM Plex Sans Arabic"', '#5D7083');
+    // درجة كل جزء
+    const n = PARTS.length, bw = 270, gap = 22, total = n * bw + (n - 1) * gap;
+    PARTS.forEach((p, k) => {
+      const cx = W / 2 + total / 2 - bw / 2 - k * (bw + gap);   // من اليمين إلى اليسار
+      x.fillStyle = '#EEF3F7'; x.beginPath(); x.roundRect ? x.roundRect(cx - bw / 2, 680, bw, 120, 22) : x.rect(cx - bw / 2, 680, bw, 120); x.fill();
+      T(AR(done[p.key] || 0) + ' من ' + AR(p.list.length), 722, '700 40px Alexandria', '#13263F', cx, bw - 20);
+      T(p.name, 772, '500 28px "IBM Plex Sans Arabic"', '#5D7083', cx, bw - 20);
+    });
+    // المجموع
+    x.fillStyle = '#FBF1DC'; x.beginPath(); x.roundRect ? x.roundRect(W / 2 - 330, 835, 660, 96, 48) : x.rect(W / 2 - 330, 835, 660, 96); x.fill();
+    T('المجموع ' + AR(got) + ' من ' + AR(max) + ' — بتقدير «' + R.word + '»', 883, '700 40px Alexandria', '#7A5310');
+    for (let k = 0; k < 3; k++) star(x, W / 2 + (k - 1) * 66, 980, 24, k < R.stars ? '#D99A2B' : '#E5E9EE');
+    const d = new Date().toLocaleDateString('ar-OM', { year: 'numeric', month: 'long', day: 'numeric' });
+    x.font = '500 26px "IBM Plex Sans Arabic"'; x.fillStyle = '#5D7083';
+    x.textAlign = 'right'; x.fillText('التاريخ: ' + d, W - 120, 1040);
+    x.textAlign = 'left'; x.fillText('منصة أفق التعليمية', 120, 1040);
+    x.textAlign = 'center';
+  }
+  function star(x, cx, cy, r, color) {
+    x.fillStyle = color; x.beginPath();
+    for (let k = 0; k < 10; k++) { const a = -Math.PI / 2 + k * Math.PI / 5, rr = k % 2 ? r * .45 : r; x.lineTo(cx + rr * Math.cos(a), cy + rr * Math.sin(a)); }
+    x.closePath(); x.fill();
+  }
+
+  const fileName = () => 'شهادة ' + (store.get('afaq.name') || '') + ' - ' + lessonName() + '.png';
+  $('dl').onclick = () => $('cv').toBlob((b) => {
+    const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = fileName(); document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  });
+  if (navigator.canShare) {
+    $('share').hidden = false;
+    $('share').onclick = () => $('cv').toBlob(async (b) => {
+      const f = new File([b], fileName(), { type: 'image/png' });
+      try { if (navigator.canShare({ files: [f] })) await navigator.share({ files: [f], title: 'شهادتي' }); else $('dl').click(); } catch (e) {}
+    });
+  }
+  $('pr').onclick = () => window.print();
+  $('again').onclick = () => { done = {}; misses = []; hub(); };
+
+  boot();
+})();
+</script>
+</body>
+</html>
