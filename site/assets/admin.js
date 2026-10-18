@@ -145,7 +145,7 @@
     const stopped = live.filter((r) => r.status !== 'active' && usedAll(r) >= lim)
       .sort((a, b) => String(b.last_seen || b.created_at).localeCompare(String(a.last_seen || a.created_at)));
     $('#stStopped').innerHTML = '<tr><th>الطلب</th><th>المعلم</th><th>المواد</th><th>آخر نشاط</th><th></th></tr>' + (stopped.length
-      ? stopped.map((r) => `<tr><td><b>${toAr(r.id)}</b></td><td><b>${esc(r.name || '—')}</b>${r.noor_name ? `<br><small class="muted">حساب نور: ${esc(r.noor_name)}</small>` : ''}${prev ? `<br><span class="chip warn" title="على الأغلب جهاز جديد أو إعادة تثبيت">مُفعَّل له من قبل (${toAr(prev)})</span>` : ''}${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}</td>
+      ? stopped.map((r) => `<tr><td><b>${toAr(r.id)}</b></td><td><b>${esc(r.name || '—')}</b>${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}</td>
         <td>${r.packages.filter((p) => !p.active && p.used).map((p) => `<span class="tag">${esc(p.title)}</span>`).join(' ')}</td>
         <td><small class="muted">${esc(ago(r.last_seen || r.created_at))}</small>${r.status === 'requested' ? '<br><span class="chip bad">راسلك</span>' : ''}</td>
         <td>${r.phone ? `<a class="btn sm wa" target="_blank" rel="noopener" href="${esc(A.waLink(waPhone(r.phone), `السلام عليكم أ. ${r.name}، جرّبت «حاضر» في ${r.packages.filter((p) => !p.active).map((p) => p.title).join('، ')}. هل تحب أن أفعّل لك الاشتراك لتكمل تحضير الفصل؟ رقم طلبك ${r.id}.`))}">تابِع على واتساب</a>` : '<small class="muted">بلا هاتف</small>'}</td></tr>`).join('')
@@ -162,7 +162,7 @@
   const SHIFT_AR = { one: 'فترة واحدة', two: 'فترتان' };
   const REQ_ST = { trial: ['warn', 'يجرّب'], requested: ['bad', 'بانتظار التفعيل'], active: ['ok', 'مفعّل'], cancelled: ['off', 'ملغى'] };
   function reqBadge() {
-    const n = (D.requests || []).filter((r) => r.status === 'requested' || r.status === 'trial').length;
+    const n = (D.requests || []).filter((r) => r.status === 'requested' || r.status === 'trial' || r.noor_wait).length;
     $('#reqBadge').hidden = !n; $('#reqBadge').textContent = toAr(n);
   }
   async function renderRequests() {
@@ -173,7 +173,7 @@
   const ago = (iso) => { if (!iso) return ''; const m = Math.round((Date.now() - new Date(iso).getTime()) / 60000); return m < 2 ? 'الآن' : m < 60 ? `قبل ${toAr(m)} دقيقة` : m < 1440 ? `قبل ${toAr(Math.round(m / 60))} ساعة` : A.dateAr(iso.slice(0, 10)); };
   function drawRequests() {
     const q = $('#reqSearch').value.trim().toLowerCase(), f = $('#reqFilter').value;
-    const list = (D.requests || []).filter((r) => (f === 'all' || (f === 'open' ? ['trial', 'requested'].includes(r.status) : r.status === f))
+    const list = (D.requests || []).filter((r) => (f === 'all' || (f === 'open' ? ['trial', 'requested'].includes(r.status) || !!r.noor_wait : r.status === f))
       && (!q || String(r.id).includes(q) || (r.name || '').toLowerCase().includes(q) || (r.phone || '').includes(q)));
     $('#reqTable').innerHTML = `<tr><th>الطلب</th><th>المعلم</th><th>المواد (حصص التجربة)</th><th>الحالة</th><th></th></tr>` + (list.length ? list.map((r) => {
       const [cls, lbl] = REQ_ST[r.status] || ['', r.status];
@@ -181,14 +181,15 @@
       // جهاز جديد أو إعادة تثبيت = طلب جديد بالاسم نفسه؛ نُظهر ذلك ليقرّر المدير
       const nm = (r.name || '').replace(/\s+/g, ' ').trim(), prev = nm ? (D.requests || []).filter((x) => x.id !== r.id && x.status === 'active' && (x.name || '').replace(/\s+/g, ' ').trim() === nm).length : 0;
       return `<tr><td><b style="font-size:18px">${toAr(r.id)}</b><br><small class="muted">${esc(ago(r.requested_at || r.created_at))}</small></td>
-        <td><b>${esc(r.name || '—')}</b>${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}${r.referred_by ? `<br><span class="chip ok" title="خصم الدعوة له ولصاحب الدعوة عند الاشتراك">مدعو من ${esc(r.ref_name || '')} (${toAr(r.referred_by)})</span>` : ''}${r.invited ? `<br><span class="chip">دعا ${toAr(r.invited)} · اشترك ${toAr(r.invited_active)}</span>` : ''}<br><small class="muted">${esc(SHIFT_AR[r.shift] || '')}${r.devices ? ` · ${toAr(r.devices)} جهاز` : ''}${r.last_seen ? ` · آخر نشاط ${esc(ago(r.last_seen))}` : ''}</small></td>
+        <td><b>${esc(r.name || '—')}</b>${r.noor_name ? `<br><small class="muted">حساب نور: ${esc(r.noor_name)}</small>` : ''}${r.noor_wait ? `<br><span class="chip bad" title="اسم حساب نور يختلف عن اسم المعلم المسجّل، والتعبئة متوقفة حتى تسمح">يطلب حساب نور: ${esc(r.noor_wait)}</span>` : ''}${prev ? `<br><span class="chip warn" title="على الأغلب جهاز جديد أو إعادة تثبيت">مُفعَّل له من قبل (${toAr(prev)})</span>` : ''}${r.phone ? `<br><small class="muted" dir="ltr">${esc(r.phone)}</small>` : ''}${r.referred_by ? `<br><span class="chip ok" title="خصم الدعوة له ولصاحب الدعوة عند الاشتراك">مدعو من ${esc(r.ref_name || '')} (${toAr(r.referred_by)})</span>` : ''}${r.invited ? `<br><span class="chip">دعا ${toAr(r.invited)} · اشترك ${toAr(r.invited_active)}</span>` : ''}<br><small class="muted">${esc(SHIFT_AR[r.shift] || '')}${r.devices ? ` · ${toAr(r.devices)} جهاز` : ''}${r.last_seen ? ` · آخر نشاط ${esc(ago(r.last_seen))}` : ''}</small></td>
         <td>${r.packages.map((p) => `<div style="margin-bottom:3px"><span class="tag">${esc(p.title)}</span> ${p.active ? '<span class="chip ok">مشترك</span>' : `<small class="muted">${A.sessionsWord(p.used)}</small>`}</div>`).join('') || '<span class="muted small">—</span>'}</td>
         <td><span class="chip ${cls}">${lbl}</span></td>
         <td><div class="inline-acts">
           ${pend.length && r.status !== 'cancelled' ? `<button class="btn sm primary" data-act="${r.id}" type="button">فعّل</button>` : ''}
           ${r.phone ? `<a class="btn sm wa" target="_blank" rel="noopener" href="${esc(A.waLink(r.phone.replace(/^0+/, '').length === 8 ? '968' + r.phone.replace(/^0+/, '') : r.phone, `السلام عليكم أ. ${r.name}، بخصوص طلبك رقم ${r.id} في «حاضر».`))}">واتساب</a>` : ''}
           <button class="btn ghost sm" data-unl="${r.id}" type="button" title="يصفّر محاولات التسجيل اليوم لجهاز هذا الطلب وشبكته">تصفير المحاولات</button>
-          ${r.noor_name ? `<button class="btn ghost sm" data-noor="${r.id}" type="button" title="غيّر المعلم حسابه في نور: يُربط بأول حساب نور يُعبَّأ له">فكّ ربط نور</button>` : ''}
+          ${r.noor_wait ? `<button class="btn sm primary" data-noorok="${r.id}" type="button" title="يصير حساب نور هذا هو حساب اشتراك المعلم">اسمح بحساب نور</button>` : ''}
+          ${r.noor_name ? `<button class="btn ghost sm" data-noor="${r.id}" type="button" title="غيّر المعلم حسابه في نور: يُربط بأول حساب نور باسمه يُعبَّأ له">فكّ ربط نور</button>` : ''}
           ${r.status === 'cancelled' ? `<button class="btn ghost sm" data-rst="${r.id}" data-to="trial" type="button">استعادة</button>` : `<button class="btn ghost sm danger" data-rst="${r.id}" data-to="cancelled" type="button">إلغاء</button>`}
         </div></td></tr>`;
     }).join('') : '<tr><td colspan="5" class="empty">لا طلبات هنا.</td></tr>');
@@ -202,7 +203,13 @@
     });
     $$('[data-noor]').forEach((b) => {
       b.onclick = async () => {
-        try { await db.rpc('admin_noor_reset', { p_id: +b.dataset.noor }); A.toast('فُكّ الربط، ويُربط بأول حساب نور يُعبَّأ له.', 'ok'); renderRequests(); } catch (e) { A.toast(A.errText(e), 'bad'); }
+        try { await db.rpc('admin_noor_reset', { p_id: +b.dataset.noor }); A.toast('فُكّ الربط، ويُربط بأول حساب نور باسم المعلم يُعبَّأ له.', 'ok'); renderRequests(); } catch (e) { A.toast(A.errText(e), 'bad'); }
+      };
+    });
+    $$('[data-noorok]').forEach((b) => {
+      b.onclick = async () => {
+        b.disabled = true;
+        try { await db.rpc('admin_noor_allow', { p_id: +b.dataset.noorok }); A.toast('سُمح بحساب نور، وتكمل إضافة المعلم التعبئة وحدها.', 'ok'); renderRequests(); } catch (e) { b.disabled = false; A.toast(A.errText(e), 'bad'); }
       };
     });
     $$('[data-unl]').forEach((b) => {

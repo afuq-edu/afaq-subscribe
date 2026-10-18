@@ -13,7 +13,7 @@ import {
 } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { AFAQ } from './afaq-config.js';
-import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo } from './remote.js';
+import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck } from './remote.js';
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -1041,6 +1041,20 @@ async function selectLesson(node) {
   }
   return r;
 }
+// حساب نور باسم غير اسم المعلم المسجّل: ننتظر سماح المشرف من لوحته، ونكمل وحدنا فور موافقته
+async function noorWait(blk) {
+  const text = `حساب نور المفتوح باسم «${blk.noor || 'آخر'}»، واشتراكك في «حاضر» باسم «${blk.reg || '—'}».\nأرسلت طلب السماح لهذا الحساب إلى المشرف، وأكمل وحدي فور موافقته.`;
+  for (;;) {
+    const a = await ask({
+      kind: 'info', head: 'بانتظار سماح المشرف لحساب نور', text, pollMs: 20000,
+      buttons: [{ id: 'wa', label: 'راسل المشرف على واتساب', primary: true }, { id: 'stop', label: 'إيقاف' }],
+      poll: async () => ((await noorCheck(blk.who)).ok ? 'go' : null),
+    });
+    if (a === 'go') return true;
+    if (a !== 'wa') return false;
+    openUrl(whatsappUrl('', `السلام عليكم، أرجو السماح بحساب نور «${blk.noor || ''}» في اشتراكي في «حاضر».\nاسمي المسجّل: ${blk.reg || ''}`));
+  }
+}
 const BAD = ['nolabel', 'notarget', 'fail', 'miss'];
 // تعبئة النموذج: { ok } أو { ok:false, cls: date|fill, why }
 async function fillOnce(item, c) {
@@ -1049,7 +1063,13 @@ async function fillOnce(item, c) {
   setBox('run', `أعبّئ «${shortT(s.lesson.title)}»…`, `الدرس: ${item.node.text}\nالنشر: ${dayLabel(s.date)}`);
   const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title });
   let rep = await fillNoor(tabId, pkg, s.lesson, opts());
-  const blk = rep.find((x) => x.key === 'remote');
+  let blk = rep.find((x) => x.key === 'remote');
+  if (blk && blk.remoteError === 'noor_wait') {
+    if (!(await noorWait(blk))) return { ok: false, cls: 'stop', why: '' };
+    setSt(s, 'run', 'تعبئة…');
+    rep = await fillNoor(tabId, pkg, s.lesson, opts());
+    blk = rep.find((x) => x.key === 'remote');
+  }
   if (blk && blk.remoteError === 'trial_over') WIZ.trialOver = true;
   if (blk) return { ok: false, cls: blk.remoteError === 'network' || blk.remoteError === 'server' ? 'net' : 'fatal', why: blk.error };
   // تعارض في الجدول: التاريخ مستخدم في نور، أو لا حصة لك (لا صفوف) في ذلك اليوم ← يوم الحصة التالي تلقائيًا
