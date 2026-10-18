@@ -1,0 +1,267 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "3",
+ "lesson": "Unit 3: Renewable Energy – Project: An Invention Powered by Renewable Energy",
+ "outcomes": [
+  "Use presentation language to start and end a talk.",
+  "Plan an invention that uses renewable energy.",
+  "Give polite feedback and ask questions."
+ ],
+ "tf": [
+  {
+   "s": "'Good morning, everyone' is a good way to start a presentation.",
+   "t": true,
+   "why": "Yes, it greets the audience."
+  },
+  {
+   "s": "'Thank you for listening' is used at the start of a presentation.",
+   "t": false,
+   "why": "We say it at the end."
+  },
+  {
+   "s": "In this project, the invention must run on renewable energy.",
+   "t": true,
+   "why": "Correct, the competition asks for an eco-friendly invention."
+  },
+  {
+   "s": "The invention in this project must have two purposes.",
+   "t": true,
+   "why": "Right, that is one of the criteria."
+  },
+  {
+   "s": "A good slide has a lot of long text and no pictures.",
+   "t": false,
+   "why": "Good slides use clear pictures and short text."
+  },
+  {
+   "s": "'Our invention is called…' introduces the name of the invention.",
+   "t": true,
+   "why": "Well done, that is how we name it."
+  },
+  {
+   "s": "Feedback should always be rude so people improve faster.",
+   "t": false,
+   "why": "Polite feedback helps people improve."
+  },
+  {
+   "s": "A poster can include a title, a picture, the advantages and the purpose.",
+   "t": true,
+   "why": "Yes, these make a clear poster."
+  },
+  {
+   "s": "A presentation does not need an introduction.",
+   "t": false,
+   "why": "A clear introduction helps the audience."
+  },
+  {
+   "s": "'What energy does it use?' is a good question about an invention.",
+   "t": true,
+   "why": "Correct, it asks about an important detail."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How do you start a presentation?",
+   "o": [
+    "Good morning, everyone.",
+    "Thank you for listening.",
+    "See you later."
+   ],
+   "why": "Greet the audience first."
+  },
+  {
+   "q": "Our ___ is called SolarBag.",
+   "o": [
+    "invention",
+    "consumer",
+    "audience"
+   ],
+   "why": "SolarBag is the invention."
+  },
+  {
+   "q": "Our invention has two ___.",
+   "o": [
+    "purposes",
+    "purpose",
+    "persons"
+   ],
+   "why": "'Two' needs a plural noun."
+  },
+  {
+   "q": "Thank you for ___.",
+   "o": [
+    "listening",
+    "looking",
+    "sleeping"
+   ],
+   "why": "We thank people for listening."
+  },
+  {
+   "q": "A presentation needs a clear ___.",
+   "o": [
+    "introduction",
+    "secret",
+    "noise"
+   ],
+   "why": "The introduction explains the topic."
+  },
+  {
+   "q": "What energy must the invention use?",
+   "o": [
+    "renewable energy",
+    "coal",
+    "oil"
+   ],
+   "why": "The project is about renewable energy."
+  },
+  {
+   "q": "How can you make slides attractive?",
+   "o": [
+    "clear pictures and short text",
+    "very long paragraphs",
+    "no title"
+   ],
+   "why": "Short text and pictures are easy to follow."
+  },
+  {
+   "q": "Which is polite feedback?",
+   "o": [
+    "Your idea is clear. You could speak louder.",
+    "That was terrible.",
+    "Stop talking."
+   ],
+   "why": "Say a strength, then a suggestion."
+  },
+  {
+   "q": "Which is a good question for a team?",
+   "o": [
+    "What energy does it use?",
+    "Why are you here?",
+    "Can I go home?"
+   ],
+   "why": "Ask about the invention."
+  },
+  {
+   "q": "Why do slides help?",
+   "o": [
+    "The audience can follow the talk.",
+    "They make it longer.",
+    "They hide the speaker."
+   ],
+   "why": "Slides guide the audience."
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which sentence welcomes the audience?",
+   "o": [
+    "Welcome to our presentation about…",
+    "Thank you for listening.",
+    "Any questions?",
+    "Goodbye, everyone."
+   ],
+   "why": "This phrase starts the talk."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase ends a presentation?",
+   "o": [
+    "Thank you for listening.",
+    "Good morning, everyone.",
+    "Our invention is called…",
+    "Welcome to our presentation."
+   ],
+   "why": "We thank the audience at the end."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the two criteria for the invention?",
+   "o": [
+    "It runs on renewable energy and has two purposes.",
+    "It is very big and uses oil.",
+    "It is cheap and uses coal.",
+    "It has no purpose."
+   ],
+   "why": "These are the project rules."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should a poster include?",
+   "o": [
+    "a title, a picture, the advantages and the purpose",
+    "only a long paragraph",
+    "the date of your birthday",
+    "nothing but colours"
+   ],
+   "why": "These help people understand the invention."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: 'The main ___ is that it uses solar power.'",
+   "o": [
+    "advantage",
+    "disadvantage",
+    "problem",
+    "question"
+   ],
+   "why": "Using solar power is a good point."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your team invents a bag that charges phones with sunlight. Which sentence introduces it?",
+   "o": [
+    "Our invention is called SolarBag.",
+    "Thank you for listening.",
+    "Our problem is called SolarBag.",
+    "Good night, SolarBag."
+   ],
+   "why": "'Our invention is called…' gives the name."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You liked a team's idea but they spoke quietly. What do you say?",
+   "o": [
+    "Your idea is clear. You could speak louder.",
+    "Your idea is bad.",
+    "I did not listen.",
+    "You must start again."
+   ],
+   "why": "Give a strength and a polite suggestion."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why must the invention use renewable energy in this project?",
+   "o": [
+    "Because the competition requires an eco-friendly invention.",
+    "Because renewable energy runs out.",
+    "Because coal is not allowed in schools.",
+    "Because it is the cheapest to build always."
+   ],
+   "why": "The project is about clean, renewable energy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which slide is easiest for the audience to follow?",
+   "o": [
+    "a slide with a clear picture and short text",
+    "a slide full of small text",
+    "a slide with no title",
+    "a slide with ten different colours of text"
+   ],
+   "why": "Simple slides help people focus."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to accept feedback after a presentation?",
+   "o": [
+    "It helps you find points to improve.",
+    "It makes the presentation shorter.",
+    "It means you get no questions.",
+    "It is not useful."
+   ],
+   "why": "Feedback shows what to do better next time."
+  }
+ ]
+}

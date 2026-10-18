@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 1: Our planet",
+ "lesson": "Lesson 9: Literacy – Writing a report",
+ "outcomes": [
+  "Read a survey report and understand its diagrams.",
+  "Know what each paragraph of a report does.",
+  "Use while and however to contrast facts in your own report."
+ ],
+ "tf": [
+  {
+   "s": "453 students answered the survey “Young people and the environment”.",
+   "t": true,
+   "why": "Yes, 453 students aged 13–14 answered."
+  },
+  {
+   "s": "Planting trees was the most popular way to help the environment in the survey.",
+   "t": false,
+   "why": "Planting trees was the least popular (9%); recycling was the most popular."
+  },
+  {
+   "s": "Paragraph three of the report explains what the results show.",
+   "t": true,
+   "why": "Correct! Paragraph 3 gives the conclusion."
+  },
+  {
+   "s": "A report should include a lot of the writer’s own opinions.",
+   "t": false,
+   "why": "A report presents only the facts."
+  },
+  {
+   "s": "“However” and “while” are used to contrast information.",
+   "t": true,
+   "why": "Great! They show a difference between two facts."
+  },
+  {
+   "s": "Diagrams help you see the survey answers quickly.",
+   "t": true,
+   "why": "Yes, that is why reports use diagrams."
+  },
+  {
+   "s": "“Firstly, secondly, in conclusion” show the order of information.",
+   "t": true,
+   "why": "Right! They organise the report."
+  },
+  {
+   "s": "In the survey, 24% said recycling and 32% said saving energy.",
+   "t": false,
+   "why": "It was 32% recycling and 24% saving energy."
+  },
+  {
+   "s": "Paragraph one of the report gives the conclusion.",
+   "t": false,
+   "why": "Paragraph one says what the survey was about."
+  },
+  {
+   "s": "In the saving water survey, 386 students answered.",
+   "t": true,
+   "why": "Yes, 386 students aged 11–14 answered."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How old were the students in the first survey?",
+   "o": [
+    "13–14",
+    "8–9",
+    "17–18"
+   ],
+   "why": "The students were aged 13–14."
+  },
+  {
+   "q": "What was the most popular answer in the first survey?",
+   "o": [
+    "recycling (32%)",
+    "planting trees (9%)",
+    "saving energy (24%)"
+   ],
+   "why": "Recycling had the highest percentage."
+  },
+  {
+   "q": "What does paragraph two do?",
+   "o": [
+    "gives the results",
+    "says what the survey was about",
+    "gives the writer’s opinion"
+   ],
+   "why": "Paragraph two shows the results."
+  },
+  {
+   "q": "32% said recycling ___ 24% said saving energy.",
+   "o": [
+    "while",
+    "firstly",
+    "because"
+   ],
+   "why": "While contrasts two facts in one sentence."
+  },
+  {
+   "q": "My sister wants to help the environment. ___, she doesn’t pick up her rubbish.",
+   "o": [
+    "However",
+    "While",
+    "Firstly"
+   ],
+   "why": "However starts a sentence that contrasts."
+  },
+  {
+   "q": "Which word starts the last paragraph?",
+   "o": [
+    "In conclusion",
+    "Firstly",
+    "Secondly"
+   ],
+   "why": "In conclusion introduces the end."
+  },
+  {
+   "q": "What is the most popular way to save water in the AB survey?",
+   "o": [
+    "take a quick shower",
+    "plant trees",
+    "buy bottled water"
+   ],
+   "why": "46% said take a quick shower."
+  },
+  {
+   "q": "What should a report present?",
+   "o": [
+    "only the facts",
+    "only opinions",
+    "a story"
+   ],
+   "why": "Reports give facts, not opinions."
+  },
+  {
+   "q": "Which is a good title for a report?",
+   "o": [
+    "Young people and endangered animals",
+    "My Best Day Ever!",
+    "Dear Ali,"
+   ],
+   "why": "A report title tells the topic clearly."
+  },
+  {
+   "q": "What phrase can introduce what the results mean?",
+   "o": [
+    "This survey shows…",
+    "Once upon a time…",
+    "Dear Sir…"
+   ],
+   "why": "This survey shows… explains the results."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Students in the first survey",
+   "a": "453",
+   "d": [
+    "386",
+    "345",
+    "543"
+   ]
+  },
+  {
+   "q": "Said recycling",
+   "a": "32%",
+   "d": [
+    "24%",
+    "9%",
+    "87%"
+   ]
+  },
+  {
+   "q": "Said saving energy",
+   "a": "24%",
+   "d": [
+    "32%",
+    "9%",
+    "46%"
+   ]
+  },
+  {
+   "q": "Said planting trees",
+   "a": "9%",
+   "d": [
+    "32%",
+    "24%",
+    "42%"
+   ]
+  },
+  {
+   "q": "Students in the water survey",
+   "a": "386",
+   "d": [
+    "453",
+    "368",
+    "836"
+   ]
+  },
+  {
+   "q": "Said take a quick shower",
+   "a": "46%",
+   "d": [
+    "77%",
+    "32%",
+    "9%"
+   ]
+  },
+  {
+   "q": "Contrast word to start a sentence",
+   "a": "However",
+   "d": [
+    "Firstly",
+    "Because",
+    "And"
+   ]
+  },
+  {
+   "q": "Contrast word inside a sentence",
+   "a": "while",
+   "d": [
+    "firstly",
+    "so",
+    "secondly"
+   ]
+  },
+  {
+   "q": "Start of the last paragraph",
+   "a": "In conclusion",
+   "d": [
+    "Firstly",
+    "Secondly",
+    "Once upon a time"
+   ]
+  },
+  {
+   "q": "A report gives only…",
+   "a": "facts",
+   "d": [
+    "opinions",
+    "stories",
+    "jokes"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does paragraph one of the report do?",
+   "o": [
+    "Says what the survey was about",
+    "Gives the results",
+    "Explains what the results show",
+    "Gives the writer’s opinion"
+   ],
+   "why": "Paragraph one introduces the survey."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What was the least popular way to help the environment?",
+   "o": [
+    "Planting trees (9%)",
+    "Recycling (32%)",
+    "Saving energy (24%)",
+    "They were all equal"
+   ],
+   "why": "Only 9% said planting trees."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which words show the order of information in a report?",
+   "o": [
+    "Firstly, secondly, in conclusion",
+    "Dear, love, from",
+    "Once upon a time, the end",
+    "Brilliant, me too, I know"
+   ],
+   "why": "These words organise a report."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why do reports often use diagrams?",
+   "o": [
+    "You can see the answers quickly.",
+    "They make reports longer.",
+    "They replace the title.",
+    "They show the writer’s opinion."
+   ],
+   "why": "Diagrams show information at a glance."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence with “however”.",
+   "o": [
+    "42% said protecting their homes. However, only 9% said not using plastic.",
+    "42% said protecting their homes however only 9% however.",
+    "However 42% said, protecting however.",
+    "42% said however protecting their homes."
+   ],
+   "why": "However starts a new sentence with a comma after it."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses “Most students…” correctly with the survey data?",
+   "o": [
+    "Most students (92%) said it is important to help endangered animals.",
+    "Most students (9%) said it is important.",
+    "Most students (2%) agreed.",
+    "Most students (20%) said yes."
+   ],
+   "why": "Most means more than half, like 92%."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: “Many students said recycling, ___ only a few said planting trees.”",
+   "o": [
+    "while",
+    "however",
+    "firstly",
+    "in conclusion"
+   ],
+   "why": "While joins two contrasting facts in one sentence."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Should your report include your own opinion?",
+   "o": [
+    "No – a report presents only the facts.",
+    "Yes – a report is all about opinions.",
+    "Yes – opinions replace the results.",
+    "No – a report has no facts."
+   ],
+   "why": "Reports stay with the facts."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence belongs in paragraph three?",
+   "o": [
+    "This survey shows that young people care about the environment.",
+    "453 students answered the survey.",
+    "Firstly, 32% said recycling.",
+    "The survey was about the environment."
+   ],
+   "why": "Paragraph three explains what the results show."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is a correct checklist item for a report?",
+   "o": [
+    "It has a good introduction, results and a conclusion.",
+    "It has a story with characters.",
+    "It starts with Dear Sir.",
+    "It has no title."
+   ],
+   "why": "These are the three parts of a report."
+  }
+ ]
+}

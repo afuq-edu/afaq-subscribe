@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 3: The future is now",
+ "lesson": "Lesson 8: Unit Check",
+ "outcomes": [
+  "Match future forms with offers, predictions and arrangements.",
+  "Use home technology words, phrasal verbs and advice phrases.",
+  "Review personality adjectives and present tenses from earlier units."
+ ],
+ "tf": [
+  {
+   "s": "'I'll carry those books for you' is an offer.",
+   "t": true,
+   "why": "Yes! We often use will for offers."
+  },
+  {
+   "s": "'I'm seeing the doctor at four this afternoon' is a prediction.",
+   "t": false,
+   "why": "It is an arrangement: a fixed plan with a time."
+  },
+  {
+   "s": "We can use the present continuous for future arrangements.",
+   "t": true,
+   "why": "Right, like 'I'm meeting Ali on Friday'."
+  },
+  {
+   "s": "We say 'Our electricity often goes off during a storm.'",
+   "t": true,
+   "why": "Yes, 'go off' means stop working here."
+  },
+  {
+   "s": "We use a kettle to wash clothes.",
+   "t": false,
+   "why": "A kettle boils water; a washing machine washes clothes."
+  },
+  {
+   "s": "Stative verbs like 'understand' are usually used in the continuous form.",
+   "t": false,
+   "why": "Stative verbs usually take the present simple: 'Do you understand?'"
+  },
+  {
+   "s": "Adverbs of frequency go after the verb be.",
+   "t": true,
+   "why": "Good: 'Osama is never late for school.'"
+  },
+  {
+   "s": "A sociable person enjoys being with other people.",
+   "t": true,
+   "why": "Yes, a sociable person loves company."
+  },
+  {
+   "s": "The correct phrase is 'keen at football'.",
+   "t": false,
+   "why": "We say 'keen on football'."
+  },
+  {
+   "s": "'Brilliant at' is a correct adjective + preposition pair.",
+   "t": true,
+   "why": "Yes: 'You're brilliant at science!'"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which sentence is an offer?",
+   "o": [
+    "I'll help you with your bag.",
+    "I'm meeting Ali at six.",
+    "It will be sunny tomorrow."
+   ],
+   "why": "An offer is when you say you will do something for someone."
+  },
+  {
+   "q": "Which machine keeps food cold?",
+   "o": [
+    "fridge-freezer",
+    "kettle",
+    "microwave"
+   ],
+   "why": "A fridge-freezer keeps food cold or frozen."
+  },
+  {
+   "q": "Complete: Please switch ___ the TV. I'm going to bed.",
+   "o": [
+    "off",
+    "up",
+    "in"
+   ],
+   "why": "We switch off a machine to stop it."
+  },
+  {
+   "q": "Complete: How ___ watching a film tonight?",
+   "o": [
+    "about",
+    "why",
+    "to"
+   ],
+   "why": "'How about + -ing' makes a suggestion."
+  },
+  {
+   "q": "Which word means 'looking very real, like life'?",
+   "o": [
+    "lifelike",
+    "version",
+    "challenge"
+   ],
+   "why": "Lifelike means it looks real."
+  },
+  {
+   "q": "Choose: That smells nice! What ___?",
+   "o": [
+    "are you cooking",
+    "do you cook",
+    "you cook"
+   ],
+   "why": "The action is happening now, so we use the present continuous."
+  },
+  {
+   "q": "Which preposition goes with 'excited'?",
+   "o": [
+    "about",
+    "at",
+    "on"
+   ],
+   "why": "We say 'excited about'."
+  },
+  {
+   "q": "Which sentence is correct?",
+   "o": [
+    "Osama is never late for school.",
+    "Osama never is late for school.",
+    "Osama is late never for school."
+   ],
+   "why": "'Never' goes after the verb be."
+  },
+  {
+   "q": "Complete the advice: You ___ ask your teacher for help.",
+   "o": [
+    "should",
+    "going to",
+    "are"
+   ],
+   "why": "We use 'should' to give advice."
+  },
+  {
+   "q": "Which word means 'what you like more'?",
+   "o": [
+    "preference",
+    "challenge",
+    "version"
+   ],
+   "why": "Your preference is the thing you like better."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "'I'll carry those books for you' is…",
+   "a": "an offer",
+   "d": [
+    "a prediction",
+    "an arrangement",
+    "a fact"
+   ]
+  },
+  {
+   "q": "Machine that washes plates",
+   "a": "dishwasher",
+   "d": [
+    "kettle",
+    "fridge-freezer",
+    "microwave"
+   ]
+  },
+  {
+   "q": "Machine that boils water",
+   "a": "kettle",
+   "d": [
+    "dishwasher",
+    "washing machine",
+    "TV"
+   ]
+  },
+  {
+   "q": "It keeps a room cool",
+   "a": "air conditioning",
+   "d": [
+    "kettle",
+    "microwave",
+    "plug"
+   ]
+  },
+  {
+   "q": "A strange light c___ on.",
+   "a": "came",
+   "d": [
+    "went",
+    "set",
+    "put"
+   ]
+  },
+  {
+   "q": "The electricity often ___ off.",
+   "a": "goes",
+   "d": [
+    "sets",
+    "puts",
+    "makes"
+   ]
+  },
+  {
+   "q": "I'm keen ___ football.",
+   "a": "on",
+   "d": [
+    "at",
+    "of",
+    "with"
+   ]
+  },
+  {
+   "q": "I'm terrible ___ maths.",
+   "a": "at",
+   "d": [
+    "on",
+    "with",
+    "of"
+   ]
+  },
+  {
+   "q": "She loves being with friends. She's…",
+   "a": "sociable",
+   "d": [
+    "shy",
+    "quiet",
+    "clever"
+   ]
+  },
+  {
+   "q": "I'm not afraid ___ trying!",
+   "a": "of",
+   "d": [
+    "at",
+    "on",
+    "in"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the function of 'I'm meeting my friends at the mall at five'?",
+   "o": [
+    "An arrangement",
+    "An offer",
+    "A prediction",
+    "A request"
+   ],
+   "why": "It is a fixed plan with a time, so it is an arrangement."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'something difficult that tests your skill'?",
+   "o": [
+    "challenge",
+    "preference",
+    "version",
+    "plug"
+   ],
+   "why": "A challenge is a hard task that tests you."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrasal verb means 'start a machine'?",
+   "o": [
+    "switch on",
+    "go off",
+    "come off",
+    "set off"
+   ],
+   "why": "We switch on a machine to start it."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a stative verb?",
+   "o": [
+    "understand",
+    "ride",
+    "cook",
+    "watch"
+   ],
+   "why": "'Understand' describes a state, not an action."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend is carrying a heavy box. What do you say?",
+   "o": [
+    "I'll help you.",
+    "I'm helping you last week.",
+    "I help you every Monday.",
+    "I'm going to helped you."
+   ],
+   "why": "We use will for an offer made at the moment of speaking."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "Fatima and Raya play volleyball now and then.",
+    "Fatima and Raya play now and then volleyball.",
+    "Fatima and Raya now and then volleyball play.",
+    "Now and then volleyball Fatima and Raya play."
+   ],
+   "why": "Time phrases like 'now and then' usually go at the end."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I'm not keen ___ cooking, but I'm brilliant ___ drawing.",
+   "o": [
+    "on / at",
+    "at / on",
+    "of / in",
+    "in / with"
+   ],
+   "why": "We say 'keen on' and 'brilliant at'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'I'm not thinking that's a good idea' wrong?",
+   "o": [
+    "'Think' is an opinion here, so we use the present simple.",
+    "'Think' always needs 'will' before it.",
+    "'Think' can never be negative.",
+    "We must use the past simple."
+   ],
+   "why": "For opinions we say 'I don't think…'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Look at those dark clouds! Which sentence fits best?",
+   "o": [
+    "It's going to rain soon.",
+    "I'll rain soon.",
+    "It rains soon every day.",
+    "I'm raining soon."
+   ],
+   "why": "We use 'going to' when we can see what will happen."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A student writes: 'I learnt phrasal verbs well. I need to revise will and be going to.' What is the student doing?",
+   "o": [
+    "Checking progress and planning revision",
+    "Making an offer",
+    "Predicting the weather",
+    "Making an arrangement"
+   ],
+   "why": "Great! Thinking about what you know helps you plan your revision."
+  }
+ ]
+}

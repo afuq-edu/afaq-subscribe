@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "2",
+  "lesson": "Unit 2: Climate Change – Writing: Opinion Essay",
+  "outcomes": [
+    "Understand the causes and effects of plastic pollution in the ocean.",
+    "Build a paragraph with a topic sentence and supporting sentences.",
+    "Plan and write an opinion essay with clear examples and connectors."
+  ],
+  "tf": [
+    {
+      "s": "Plastic ends up in the ocean because it is lightweight and can be blown or washed there.",
+      "t": true,
+      "why": "Yes! Wind and water carry light plastic into the sea."
+    },
+    {
+      "s": "In the essay, the writer gives his opinion in the last paragraph only.",
+      "t": false,
+      "why": "The writer's opinion is given in paragraph 1."
+    },
+    {
+      "s": "A reusable bottle is a bottle we use many times.",
+      "t": true,
+      "why": "Correct, it reduces plastic waste."
+    },
+    {
+      "s": "A topic sentence states the main idea of a paragraph.",
+      "t": true,
+      "why": "Right, it tells the reader what the paragraph is about."
+    },
+    {
+      "s": "Plastic pollution is dangerous for sea animals but never for people.",
+      "t": false,
+      "why": "We may eat plastic when we eat fish that have swallowed it."
+    },
+    {
+      "s": "'Throw away' means to get rid of something.",
+      "t": true,
+      "why": "Well done, it is a phrasal verb."
+    },
+    {
+      "s": "Supporting sentences give examples and details about the main idea.",
+      "t": true,
+      "why": "Yes, they make the topic sentence convincing."
+    },
+    {
+      "s": "The introduction of an opinion essay should not include the writer's opinion.",
+      "t": false,
+      "why": "The introduction presents the topic and the writer's opinion."
+    },
+    {
+      "s": "Examples make an opinion weaker.",
+      "t": false,
+      "why": "Examples support the opinion and make it more convincing."
+    },
+    {
+      "s": "In 'Plastic is cheap. However, it harms the ocean', 'However' shows contrast.",
+      "t": true,
+      "why": "Right, it introduces a different idea."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "A bottle we use many times is a ___ bottle.",
+      "o": [
+        "reusable",
+        "disposable",
+        "broken"
+      ],
+      "why": "Reusable means you can use it again."
+    },
+    {
+      "q": "Which items cause plastic pollution in the essay?",
+      "o": [
+        "packaging, cups, straws and bottles",
+        "glass, metal and paper",
+        "leaves, sand and stones"
+      ],
+      "why": "These plastic items end up in the ocean."
+    },
+    {
+      "q": "Using reusable bottles will ___ in less plastic in the ocean.",
+      "o": [
+        "result",
+        "cause",
+        "reduce"
+      ],
+      "why": "'Result in' means lead to."
+    },
+    {
+      "q": "Which is a supporting sentence?",
+      "o": [
+        "For example, bottles end up in the sea.",
+        "Plastic is a problem.",
+        "In conclusion, we must act."
+      ],
+      "why": "It gives an example to support the main idea."
+    },
+    {
+      "q": "A good paragraph has a topic sentence and ___ sentences.",
+      "o": [
+        "supporting",
+        "empty",
+        "random"
+      ],
+      "why": "Supporting sentences add details and examples."
+    },
+    {
+      "q": "Plastic is cheap. ___, it harms the ocean.",
+      "o": [
+        "However",
+        "Because",
+        "So"
+      ],
+      "why": "'However' shows contrast."
+    },
+    {
+      "q": "Sea turtles eat plastic, ___ they are in danger.",
+      "o": [
+        "so",
+        "because of",
+        "due to"
+      ],
+      "why": "'So' introduces the effect."
+    },
+    {
+      "q": "After the first draft, we check our work with the ...",
+      "o": [
+        "checklist",
+        "calendar",
+        "dictionary only"
+      ],
+      "why": "The Writing Checklist helps us edit."
+    },
+    {
+      "q": "What goes in the introduction of an opinion essay?",
+      "o": [
+        "the topic and the writer's opinion",
+        "only the conclusion",
+        "a list of words"
+      ],
+      "why": "The reader learns your view from the start."
+    },
+    {
+      "q": "Why do people use plastic so much?",
+      "o": [
+        "for its convenience",
+        "because it is heavy",
+        "because it is eco-friendly"
+      ],
+      "why": "Plastic is easy and convenient to use."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Used many times",
+      "a": "reusable",
+      "d": [
+        "disposable",
+        "plastic",
+        "lightweight"
+      ]
+    },
+    {
+      "q": "Why plastic reaches the ocean",
+      "a": "lightweight",
+      "d": [
+        "heavy",
+        "expensive",
+        "reusable"
+      ]
+    },
+    {
+      "q": "Get rid of something",
+      "a": "throw away",
+      "d": [
+        "end up in",
+        "result in",
+        "fill up"
+      ]
+    },
+    {
+      "q": "Finally arrive in a place",
+      "a": "end up in",
+      "d": [
+        "throw away",
+        "give away",
+        "switch off"
+      ]
+    },
+    {
+      "q": "States the main idea",
+      "a": "topic sentence",
+      "d": [
+        "supporting sentence",
+        "first draft",
+        "checklist"
+      ]
+    },
+    {
+      "q": "Gives an example or detail",
+      "a": "supporting sentence",
+      "d": [
+        "topic sentence",
+        "title",
+        "checklist"
+      ]
+    },
+    {
+      "q": "Used only once, then thrown away",
+      "a": "disposable",
+      "d": [
+        "reusable",
+        "refillable",
+        "long-lasting"
+      ]
+    },
+    {
+      "q": "Make something smaller or less",
+      "a": "reduce",
+      "d": [
+        "throw away",
+        "increase",
+        "release"
+      ]
+    },
+    {
+      "q": "Connector showing contrast",
+      "a": "however",
+      "d": [
+        "so",
+        "because",
+        "therefore"
+      ]
+    },
+    {
+      "q": "Being easy and useful",
+      "a": "convenience",
+      "d": [
+        "pollution",
+        "packaging",
+        "emission"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Why does plastic end up in the ocean?",
+      "o": [
+        "It is lightweight, so wind and water carry it there.",
+        "It is very heavy.",
+        "People throw it into rivers on purpose only.",
+        "It is made in the ocean."
+      ],
+      "why": "Light plastic is easily blown or washed away."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What is a topic sentence?",
+      "o": [
+        "the sentence that states the main idea of the paragraph",
+        "the last word of the essay",
+        "a sentence with an example only",
+        "the title of the essay"
+      ],
+      "why": "It usually comes first in the paragraph."
+    },
+    {
+      "lv": "التذكر",
+      "q": "In which paragraph is the writer's opinion given?",
+      "o": [
+        "paragraph 1",
+        "paragraph 2",
+        "paragraph 3",
+        "paragraph 4"
+      ],
+      "why": "The opinion is in the introduction."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What does 'throw away' mean?",
+      "o": [
+        "get rid of something",
+        "keep something safe",
+        "buy something new",
+        "fill something"
+      ],
+      "why": "We throw away things we don't want."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose the best topic sentence about reducing plastic.",
+      "o": [
+        "Reducing the amount of plastic we use can protect the ocean.",
+        "For example, I have a bottle.",
+        "Plastic plastic plastic.",
+        "In conclusion, bottles."
+      ],
+      "why": "It gives a clear main idea."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose the best topic sentence about plastic bags.",
+      "o": [
+        "Using fewer plastic bags helps the environment.",
+        "Bags are bags.",
+        "My bag is blue.",
+        "Yesterday I bought a bag."
+      ],
+      "why": "It states a clear opinion about the topic."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Join with a connector: 'Plastic ends up in the sea. Fish swallow it.'",
+      "o": [
+        "Plastic ends up in the sea; therefore, fish swallow it.",
+        "Plastic ends up in the sea because of fish swallow it.",
+        "Due to fish, plastic ends up.",
+        "Therefore plastic, fish swallow sea."
+      ],
+      "why": "'Therefore' introduces the result."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why is plastic pollution dangerous for people?",
+      "o": [
+        "We may eat plastic when we eat fish that swallowed it.",
+        "Plastic makes the weather cold.",
+        "Plastic stops the rain.",
+        "People cannot swim in plastic."
+      ],
+      "why": "Plastic can enter our food through fish."
+    },
+    {
+      "lv": "التحليل",
+      "q": "How does an example support a topic sentence?",
+      "o": [
+        "It shows the idea with a real case, so it is more convincing.",
+        "It changes the topic.",
+        "It makes the paragraph shorter.",
+        "It repeats the title."
+      ],
+      "why": "Real cases make your point stronger."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which is the correct order of an opinion essay?",
+      "o": [
+        "introduction, body paragraphs, conclusion",
+        "conclusion, introduction, body",
+        "body, conclusion, introduction",
+        "title, conclusion, nothing else"
+      ],
+      "why": "This order makes the essay clear and logical."
+    }
+  ]
+}

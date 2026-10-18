@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 2: Adventure sports",
+ "lesson": "Lesson 7: English in action – Asking and saying what you prefer",
+ "outcomes": [
+  "Ask and say what you prefer with Would you rather / I'd prefer to.",
+  "Use correct stress in sentences with 'd.",
+  "Make sentences about past events with after + Past perfect."
+ ],
+ "tf": [
+  {
+   "s": "'Would you rather go caving or abseiling?' asks about a preference.",
+   "t": true,
+   "why": "Yes, 'Would you rather...?' asks what someone prefers."
+  },
+  {
+   "s": "We say 'I'd prefer go hiking.'",
+   "t": false,
+   "why": "After prefer we need to: I'd prefer to go hiking."
+  },
+  {
+   "s": "In 'After they'd paraglided', 'd means had.",
+   "t": true,
+   "why": "Correct, 'd is short for had here."
+  },
+  {
+   "s": "On day two of the holiday, Frank chooses diving.",
+   "t": false,
+   "why": "Frank chooses hiking because he is a bit scared of going underwater; Lucas chooses diving."
+  },
+  {
+   "s": "Lucas and Frank choose abseiling on day three.",
+   "t": true,
+   "why": "Right, they both choose abseiling on day three."
+  },
+  {
+   "s": "In Past perfect sentences, the main verb is usually stressed.",
+   "t": true,
+   "why": "Yes, we stress the main verb, like 'finished'."
+  },
+  {
+   "s": "The short form 'd is strongly stressed.",
+   "t": false,
+   "why": "'d is not stressed; the main verb is stressed."
+  },
+  {
+   "s": "'Should we go snorkelling or surfing?' is a way to suggest two choices.",
+   "t": true,
+   "why": "Good, 'Should we ... or ...?' offers two options."
+  },
+  {
+   "s": "After 'I'd rather' we use 'to' + verb.",
+   "t": false,
+   "why": "We say 'I'd rather go', with no 'to'."
+  },
+  {
+   "s": "Lucas and Frank are talking about their adventure holiday.",
+   "t": true,
+   "why": "Yes, they plan activities for their adventure holiday."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: ___ you rather go caving or abseiling?",
+   "o": [
+    "Would",
+    "Did",
+    "Are"
+   ],
+   "why": "We ask preferences with 'Would you rather...?'"
+  },
+  {
+   "q": "Complete: Would you prefer ___ go diving or caving?",
+   "o": [
+    "to",
+    "for",
+    "at"
+   ],
+   "why": "'Prefer' is followed by 'to' + verb."
+  },
+  {
+   "q": "Complete: I'd ___ go hiking.",
+   "o": [
+    "rather",
+    "prefer",
+    "should"
+   ],
+   "why": "I'd rather + verb: I'd rather go hiking."
+  },
+  {
+   "q": "What does Frank prefer on day two?",
+   "o": [
+    "hiking",
+    "diving",
+    "horse riding"
+   ],
+   "why": "Frank prefers hiking on day two."
+  },
+  {
+   "q": "Why doesn't Frank want to go diving?",
+   "o": [
+    "He is scared of going underwater.",
+    "He is tired.",
+    "He has no swimsuit."
+   ],
+   "why": "Frank is a bit scared of going underwater."
+  },
+  {
+   "q": "What do the boys do on day one?",
+   "o": [
+    "horse riding",
+    "abseiling",
+    "diving"
+   ],
+   "why": "Day one's activity is horse riding."
+  },
+  {
+   "q": "In 'After he'd finished his game', which word is stressed?",
+   "o": [
+    "finished",
+    "he'd",
+    "his"
+   ],
+   "why": "The main verb 'finished' takes the stress."
+  },
+  {
+   "q": "What does Lucas choose on day two?",
+   "o": [
+    "diving",
+    "hiking",
+    "caving"
+   ],
+   "why": "Lucas chooses diving on day two."
+  },
+  {
+   "q": "Which phrase gives your opinion about a plan?",
+   "o": [
+    "I think we should ...",
+    "Would you rather ...?",
+    "Should we ... or ...?"
+   ],
+   "why": "'I think we should...' gives your opinion."
+  },
+  {
+   "q": "Continue: After our alarms had gone off, ...",
+   "o": [
+    "we got up.",
+    "we had got up first.",
+    "we get up."
+   ],
+   "why": "The later action uses the Past simple: we got up."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Would you ___ go caving?",
+   "a": "rather",
+   "d": [
+    "prefer",
+    "should",
+    "like to"
+   ]
+  },
+  {
+   "q": "Would you prefer ___ go?",
+   "a": "to",
+   "d": [
+    "for",
+    "at",
+    "of"
+   ]
+  },
+  {
+   "q": "'d in 'they'd gone' means",
+   "a": "had",
+   "d": [
+    "would",
+    "did",
+    "do"
+   ]
+  },
+  {
+   "q": "Frank's choice on day 2",
+   "a": "hiking",
+   "d": [
+    "diving",
+    "caving",
+    "surfing"
+   ]
+  },
+  {
+   "q": "Lucas's choice on day 2",
+   "a": "diving",
+   "d": [
+    "hiking",
+    "abseiling",
+    "riding"
+   ]
+  },
+  {
+   "q": "Activity on day 3",
+   "a": "abseiling",
+   "d": [
+    "diving",
+    "hiking",
+    "sailing"
+   ]
+  },
+  {
+   "q": "Activity on day 1",
+   "a": "horse riding",
+   "d": [
+    "abseiling",
+    "diving",
+    "caving"
+   ]
+  },
+  {
+   "q": "Stressed word: After he'd finished",
+   "a": "finished",
+   "d": [
+    "after",
+    "he'd",
+    "he"
+   ]
+  },
+  {
+   "q": "___ we go surfing or diving?",
+   "a": "Should",
+   "d": [
+    "Rather",
+    "Prefer",
+    "Had"
+   ]
+  },
+  {
+   "q": "Short form of 'I would'",
+   "a": "I'd",
+   "d": [
+    "I'll",
+    "I'm",
+    "I've"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which question asks about a preference?",
+   "o": [
+    "Would you rather watch the sunrise or the sunset?",
+    "Did you watch the sunset?",
+    "Where is the sunset?",
+    "When is the sunrise?"
+   ],
+   "why": "'Would you rather...?' asks someone to choose."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are Lucas and Frank talking about?",
+   "o": [
+    "their adventure holiday",
+    "their school test",
+    "a football match",
+    "a shopping trip"
+   ],
+   "why": "They are choosing adventure holiday activities."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do Lucas and Frank choose on day three?",
+   "o": [
+    "abseiling",
+    "diving",
+    "hiking",
+    "horse riding"
+   ],
+   "why": "They choose abseiling on day three."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which part of a Past perfect sentence with 'd is NOT stressed?",
+   "o": [
+    "'d",
+    "the main verb",
+    "the nouns",
+    "the important words"
+   ],
+   "why": "The short form 'd is weak and not stressed."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend asks: 'Would you prefer to go skateboarding or surfboarding?' Choose the best answer.",
+   "o": [
+    "I'd prefer to go surfboarding.",
+    "I'd prefer go surfboarding.",
+    "I prefer to going surfboarding.",
+    "I'd rather to go surfboarding."
+   ],
+   "why": "Use I'd prefer to + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ask about lunch: pizza or sandwiches?",
+   "o": [
+    "Would you rather take pizza or sandwiches for lunch?",
+    "Would you rather to take pizza or sandwiches?",
+    "Do you rather pizza or sandwiches?",
+    "Would you prefer take pizza or sandwiches?"
+   ],
+   "why": "'Would you rather' + verb, with no 'to'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Join: We ate our breakfast. We showered.",
+   "o": [
+    "After we had eaten our breakfast, we showered.",
+    "After we ate our breakfast, we had showered.",
+    "After we have eaten breakfast, we shower.",
+    "After we had eat our breakfast, we showered."
+   ],
+   "why": "The first action uses the Past perfect: had eaten."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Frank choose hiking on day two?",
+   "o": [
+    "He is a bit scared of going underwater.",
+    "He loves horses.",
+    "Lucas tells him to.",
+    "It is raining."
+   ],
+   "why": "His fear of going underwater makes him choose hiking."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Lucas and Frank choose different things on day two. What does this show?",
+   "o": [
+    "People can have different preferences.",
+    "They are angry.",
+    "They did not listen.",
+    "They chose the same thing."
+   ],
+   "why": "Asking about preferences helps friends plan when they want different things."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'After we'd watched the sunset, we went to bed.' Which words are stressed?",
+   "o": [
+    "watched, sunset, went, bed",
+    "we'd, the, we, to",
+    "after, we'd, we",
+    "all words equally"
+   ],
+   "why": "Main verbs and important nouns are stressed; small words like 'd are weak."
+  }
+ ]
+}

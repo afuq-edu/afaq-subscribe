@@ -1,0 +1,58 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Unit 4: Service With a Smile (Listening & Speaking)",
+  "lesson": "Oman as a tourist destination; Listening 3.4.1: choosing a course",
+  "outcomes": [
+    "Discuss Oman as a tourist destination and careers in tourism",
+    "Listen to a conversation about an events management course and choose answers"
+  ],
+  "tf": [
+    { "s": "Over a million tourists visit Oman every year.", "t": true, "why": "Oman is a popular tourist destination." },
+    { "s": "An events management course teaches planning, designing and organising events.", "t": true, "why": "Events managers plan and organise events from start to finish." },
+    { "s": "The diploma course in the listening lasts four years.", "t": false, "why": "The diploma is two years; the degree takes four years." },
+    { "s": "The four-year degree is with a partner institute in Ireland.", "t": true, "why": "The degree comes from the Dublin Institute of Technology." },
+    { "s": "The tutor says the degree only lets you work in Oman.", "t": false, "why": "The tutor says the degree lets you work anywhere in the world." },
+    { "s": "Conferences, festivals and exhibitions are all kinds of events.", "t": true, "why": "Events managers can organise all of these." },
+    { "s": "A degree usually takes longer to finish than a diploma.", "t": true, "why": "In the listening, the diploma is two years and the degree is four." },
+    { "s": "A tourist destination is a place where tourists work in factories.", "t": false, "why": "A tourist destination is a place tourists travel to and visit." },
+    { "s": "Reading the statements before listening helps you predict information.", "t": true, "why": "Prediction prepares you for what you will hear." },
+    { "s": "A part-time course means you study every hour of every day.", "t": false, "why": "Part-time means you study for only part of the day or week." }
+  ],
+  "boxes": [
+    { "q": "How long is the diploma course?", "o": ["Two years", "Four years", "Six months"], "why": "The diploma takes two years." },
+    { "q": "How long is the degree course?", "o": ["Four years", "Two years", "One year"], "why": "The Bachelor of Science Honours degree takes four years." },
+    { "q": "Which country is the partner institute in?", "o": ["Ireland", "Canada", "Spain"], "why": "The partner is the Dublin Institute of Technology in Ireland." },
+    { "q": "Which of these is a kind of event?", "o": ["A festival", "A towel", "A diploma"], "why": "Festivals are events that need organising." },
+    { "q": "What does an events manager do?", "o": ["Plans and organises events", "Flies planes", "Cooks meals"], "why": "Events managers plan, design and organise events." },
+    { "q": "How many tourists visit Oman every year?", "o": ["Over a million", "About a hundred", "About a thousand"], "why": "Over a million tourists come to Oman each year." },
+    { "q": "Where can you work with the four-year degree?", "o": ["Anywhere in the world", "Only in Dublin", "Only in Muscat"], "why": "The international degree is recognised worldwide." },
+    { "q": "What is a 'tourist destination'?", "o": ["A place tourists visit", "A travel ticket", "A hotel worker"], "why": "A destination is where you travel to." },
+    { "q": "What does 'part-time' mean?", "o": ["For only part of the day or week", "All day and night", "Never"], "why": "Part-time study leaves time for other things." },
+    { "q": "What should you do before the listening?", "o": ["Read the statements", "Close your book", "Write an essay"], "why": "Reading first helps you predict the answers." }
+  ],
+  "hunt": [
+    { "q": "Length of the diploma", "a": "two years", "d": ["four years", "six months", "ten years"] },
+    { "q": "Length of the degree", "a": "four years", "d": ["two years", "one year", "eight years"] },
+    { "q": "Country of the partner institute", "a": "Ireland", "d": ["Canada", "France", "Italy"] },
+    { "q": "City of the partner institute", "a": "Dublin", "d": ["Paris", "Toronto", "Rome"] },
+    { "q": "Tourists to Oman each year: over a ...", "a": "million", "d": ["hundred", "thousand", "dozen"] },
+    { "q": "A kind of event", "a": "conference", "d": ["diploma", "towel", "menu"] },
+    { "q": "Another kind of event", "a": "exhibition", "d": ["programme", "degree", "staff"] },
+    { "q": "Course: planning and organising events", "a": "events management", "d": ["cooking", "aviation", "nursing"] },
+    { "q": "A 4-year university qualification", "a": "degree", "d": ["diploma", "ticket", "menu"] },
+    { "q": "Studying for part of the week", "a": "part-time", "d": ["full-time", "overtime", "all-day"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "What does an events management course teach?", "o": ["Planning, designing and organising events", "Cooking in a hotel kitchen", "Flying aeroplanes", "Repairing cars"], "why": "Events management is about creating and running events." },
+    { "lv": "التذكر", "q": "Which degree takes four years?", "o": ["A Bachelor of Science Honours degree with a partner institute in Ireland", "A one-year certificate in Muscat", "A short summer programme", "A two-year diploma"], "why": "The four-year course is the Honours degree with Ireland." },
+    { "lv": "التذكر", "q": "Which list shows kinds of events?", "o": ["Conferences, festivals, sporting events and exhibitions", "Towels, sandwiches and car parks", "Diplomas, degrees and certificates", "Hotels, ships and planes"], "why": "These are the events mentioned in the listening." },
+    { "lv": "التذكر", "q": "Which institute gives the four-year degree?", "o": ["The Dublin Institute of Technology", "The World Tourism Organisation", "Selfridge's", "The CN Tower"], "why": "The partner institute is in Dublin, Ireland." },
+    { "lv": "التطبيق", "q": "Ali wants a qualification quickly and can study for only two years. Which course suits him?", "o": ["The diploma", "The four-year degree", "No course suits him", "A ten-year programme"], "why": "The diploma takes two years." },
+    { "lv": "التطبيق", "q": "Huda plans a big book fair with stands and visitors. What kind of event is it?", "o": ["An exhibition", "A sandwich", "A diploma", "A cruise"], "why": "A fair with stands for visitors is an exhibition." },
+    { "lv": "التطبيق", "q": "Before Listening 3.4.1 you read the statements. What are you doing?", "o": ["Predicting the information you will hear", "Checking your spelling", "Writing a narrative essay", "Scoring your partner"], "why": "Reading first lets you predict what to listen for." },
+    { "lv": "التحليل", "q": "Why does the tutor say the four-year course is worth it?", "o": ["You get a degree from the Dublin Institute of Technology, so you can work anywhere", "It is shorter than the diploma", "It has no exams", "You only study in the summer"], "why": "An international degree opens jobs around the world." },
+    { "lv": "التحليل", "q": "Over a million tourists visit Oman every year. What does this suggest about careers in tourism in Oman?", "o": ["There are many job opportunities", "There are no jobs in tourism", "Tourism is not important to Oman", "Only foreigners can work in tourism"], "why": "Many visitors means many jobs serving them." },
+    { "lv": "التحليل", "q": "What is the main difference between the diploma and the degree in the listening?", "o": ["The degree is longer and international", "The diploma is longer", "The degree is only for chefs", "They are exactly the same"], "why": "The degree takes four years with an Irish partner; the diploma takes two." }
+  ]
+}

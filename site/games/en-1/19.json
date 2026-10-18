@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 3: Our classroom",
+ "lesson": "Lesson 2: Language practice – What's this? It's a … + Sound o",
+ "outcomes": [
+  "I can ask and answer: What's this? It's a …",
+  "I can name things in my classroom.",
+  "I can hear the o sound in on, octopus and ox."
+ ],
+ "tf": [
+  {
+   "s": "We answer What's this? with It's a …",
+   "t": true,
+   "why": "Yes! What's this? – It's a door."
+  },
+  {
+   "s": "Octopus starts with the o sound.",
+   "t": true,
+   "why": "Great! O-o-octopus starts with o."
+  },
+  {
+   "s": "Fish starts with the o sound.",
+   "t": false,
+   "why": "Fish starts with f. Octopus starts with o."
+  },
+  {
+   "s": "s – o – ck makes the word sock.",
+   "t": true,
+   "why": "Well done! s-o-ck is sock."
+  },
+  {
+   "s": "h – o – p makes the word mop.",
+   "t": false,
+   "why": "h-o-p makes hop. m-o-p makes mop."
+  },
+  {
+   "s": "A window is a person.",
+   "t": false,
+   "why": "A window is a thing. A teacher is a person."
+  },
+  {
+   "s": "On starts with the letter o.",
+   "t": true,
+   "why": "Yes! On starts with o."
+  },
+  {
+   "s": "We answer What's this? with Goodbye.",
+   "t": false,
+   "why": "We answer with It's a … and the thing."
+  },
+  {
+   "s": "A whiteboard is in the classroom.",
+   "t": true,
+   "why": "Yes! The teacher writes on the whiteboard."
+  },
+  {
+   "s": "Ox starts with the letter b.",
+   "t": false,
+   "why": "Ox starts with o."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's this? (a ruler)",
+   "o": [
+    "It's a ruler.",
+    "It's a door.",
+    "It's a window."
+   ],
+   "why": "It's a ruler. Well done!"
+  },
+  {
+   "q": "Which word starts with o?",
+   "o": [
+    "ox",
+    "fan",
+    "sun"
+   ],
+   "why": "O-o-ox starts with o."
+  },
+  {
+   "q": "m – o – p. What's the word?",
+   "o": [
+    "mop",
+    "hop",
+    "sock"
+   ],
+   "why": "m-o-p makes mop."
+  },
+  {
+   "q": "What's missing? _n",
+   "o": [
+    "o",
+    "f",
+    "s"
+   ],
+   "why": "o + n makes on."
+  },
+  {
+   "q": "Which question do we ask about a thing?",
+   "o": [
+    "What's this?",
+    "Who's this?",
+    "How are you?"
+   ],
+   "why": "We ask What's this? about things."
+  },
+  {
+   "q": "What's this? The teacher writes on it.",
+   "o": [
+    "It's a whiteboard.",
+    "It's a door.",
+    "It's a window."
+   ],
+   "why": "The teacher writes on the whiteboard."
+  },
+  {
+   "q": "Which word starts with the same sound as octopus?",
+   "o": [
+    "olive",
+    "fish",
+    "rabbit"
+   ],
+   "why": "Olive and octopus both start with o."
+  },
+  {
+   "q": "Your partner asks: What's this? You see a door. You say…",
+   "o": [
+    "It's a door.",
+    "It's a whiteboard.",
+    "It's my teacher."
+   ],
+   "why": "Say It's a and the name of the thing."
+  },
+  {
+   "q": "h – o – p. What's the word?",
+   "o": [
+    "hop",
+    "mop",
+    "sock"
+   ],
+   "why": "h-o-p makes hop."
+  },
+  {
+   "q": "Which is NOT a classroom thing?",
+   "o": [
+    "octopus",
+    "door",
+    "whiteboard"
+   ],
+   "why": "An octopus lives in the sea, not in the classroom."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "It starts with o",
+   "a": "octopus",
+   "d": [
+    "fish",
+    "rabbit",
+    "frog"
+   ]
+  },
+  {
+   "q": "s – o – ck",
+   "a": "sock",
+   "d": [
+    "mop",
+    "hop",
+    "fig"
+   ]
+  },
+  {
+   "q": "m – o – p",
+   "a": "mop",
+   "d": [
+    "hop",
+    "sock",
+    "fit"
+   ]
+  },
+  {
+   "q": "First letter of olive",
+   "a": "o",
+   "d": [
+    "l",
+    "f",
+    "v"
+   ]
+  },
+  {
+   "q": "We go out through the …",
+   "a": "door",
+   "d": [
+    "whiteboard",
+    "teacher",
+    "ruler"
+   ]
+  },
+  {
+   "q": "Answer: What's this?",
+   "a": "It's a pen.",
+   "d": [
+    "Who's this?",
+    "Goodbye!",
+    "Thank you."
+   ]
+  },
+  {
+   "q": "Ask about a thing",
+   "a": "What's this?",
+   "d": [
+    "Who's this?",
+    "It's a pen.",
+    "How are you?"
+   ]
+  },
+  {
+   "q": "A fruit that starts with o",
+   "a": "orange",
+   "d": [
+    "fig",
+    "grape",
+    "apple"
+   ]
+  },
+  {
+   "q": "An animal that starts with o",
+   "a": "ox",
+   "d": [
+    "cat",
+    "fish",
+    "frog"
+   ]
+  },
+  {
+   "q": "A person in the classroom",
+   "a": "teacher",
+   "d": [
+    "window",
+    "door",
+    "desk"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What sound do we hear at the start of on?",
+   "o": [
+    "/ɒ/ (o)",
+    "/f/ (f)",
+    "/s/ (s)",
+    "/r/ (r)"
+   ],
+   "why": "On starts with the o sound."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one is a word for a classroom thing?",
+   "o": [
+    "whiteboard",
+    "octopus",
+    "ox",
+    "olive"
+   ],
+   "why": "A whiteboard is in the classroom."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these words starts with o?",
+   "o": [
+    "olive",
+    "fork",
+    "sock",
+    "mop"
+   ],
+   "why": "Olive starts with o. Sock and mop have o in the middle."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which answer goes with What's this?",
+   "o": [
+    "It's a window.",
+    "It's my turn.",
+    "Thank you.",
+    "Good morning."
+   ],
+   "why": "It's a … tells what the thing is."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner holds up a book. What's this?",
+   "o": [
+    "It's a book.",
+    "It's a door.",
+    "It's a window.",
+    "Who's this?"
+   ],
+   "why": "It's a book. Great answer!"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Listen: s – o – ck. What's the word?",
+   "o": [
+    "sock",
+    "mop",
+    "hop",
+    "fog"
+   ],
+   "why": "s-o-ck makes sock."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to know what a thing is. What do you ask?",
+   "o": [
+    "What's this?",
+    "Who's this?",
+    "Can I go to the toilet?",
+    "How are you?"
+   ],
+   "why": "What's this? asks about a thing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word has the o sound in the middle?",
+   "o": [
+    "mop",
+    "fan",
+    "fish",
+    "fit"
+   ],
+   "why": "M-o-p has o in the middle."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group of words all start with o?",
+   "o": [
+    "on, ox, octopus",
+    "on, fan, octopus",
+    "ox, door, olive",
+    "fish, ox, on"
+   ],
+   "why": "On, ox and octopus all start with o."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your friend points to the teacher. Which question is right?",
+   "o": [
+    "Who's this?",
+    "What's this?",
+    "It's a door.",
+    "Goodbye!"
+   ],
+   "why": "The teacher is a person, so we ask Who's this?"
+  }
+ ]
+}

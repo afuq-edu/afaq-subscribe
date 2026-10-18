@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 3: Places",
+  "lesson": "Unit 3 – Lesson 8: Literacy – Reading a short story",
+  "outcomes": [
+    "I can understand the story of Rasha and the orange bird.",
+    "I can use the words sketch, zoom, yell, whisper and smile.",
+    "I know the difference between amazed and amazing."
+  ],
+  "tf": [
+    {
+      "s": "At the start, Rasha had no ideas for a story.",
+      "t": true,
+      "why": "That was her problem at the beginning."
+    },
+    {
+      "s": "The bird in the story could speak to Rasha.",
+      "t": true,
+      "why": "That is what made the bird unusual."
+    },
+    {
+      "s": "The story begins and ends in Rasha’s bedroom.",
+      "t": true,
+      "why": "It starts and finishes in the same place."
+    },
+    {
+      "s": "To whisper means to shout very loudly.",
+      "t": false,
+      "why": "To whisper means to say something very quietly."
+    },
+    {
+      "s": "To yell means to shout.",
+      "t": true,
+      "why": "When you yell, you speak very loudly."
+    },
+    {
+      "s": "Rasha sketched a big orange bird with a long blue tail.",
+      "t": true,
+      "why": "Yes, she drew the bird in a quick sketch."
+    },
+    {
+      "s": "“Amazed” describes a thing, and “amazing” describes how a person feels.",
+      "t": false,
+      "why": "It’s the other way: amazed is how you feel; amazing describes a thing."
+    },
+    {
+      "s": "Rasha climbed onto the bird’s back because she was afraid.",
+      "t": false,
+      "why": "She climbed on because she really liked adventures."
+    },
+    {
+      "s": "To zoom means to move very slowly.",
+      "t": false,
+      "why": "To zoom means to move very fast."
+    },
+    {
+      "s": "A sketch is a quick drawing.",
+      "t": true,
+      "why": "Yes, a sketch is a quick, simple drawing."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "What was Rasha’s problem?",
+      "o": [
+        "She had no ideas for a story.",
+        "She lost her bird.",
+        "She was late for school."
+      ],
+      "why": "She needed an idea for a story."
+    },
+    {
+      "q": "What was unusual about the bird?",
+      "o": [
+        "It could speak to Rasha.",
+        "It was very small.",
+        "It couldn’t fly."
+      ],
+      "why": "A talking bird is very unusual!"
+    },
+    {
+      "q": "Which word means “shouted”?",
+      "o": [
+        "yelled",
+        "whispered",
+        "smiled"
+      ],
+      "why": "Yell means shout."
+    },
+    {
+      "q": "Complete: “Goodbye, bird,” she ___ quietly.",
+      "o": [
+        "whispered",
+        "yelled",
+        "zoomed"
+      ],
+      "why": "Quietly fits whispered."
+    },
+    {
+      "q": "Where does the story begin and end?",
+      "o": [
+        "in Rasha’s bedroom",
+        "at school",
+        "in a castle"
+      ],
+      "why": "It begins and ends in her bedroom."
+    },
+    {
+      "q": "Why did Rasha climb onto the bird’s back?",
+      "o": [
+        "She really liked adventures.",
+        "She was tired of walking.",
+        "Her mum told her to."
+      ],
+      "why": "Rasha loves adventures."
+    },
+    {
+      "q": "Complete: The bird ___ over the city.",
+      "o": [
+        "zoomed",
+        "whispered",
+        "sketched"
+      ],
+      "why": "Zoomed means flew very fast."
+    },
+    {
+      "q": "Complete: I was ___ when I saw the talking bird.",
+      "o": [
+        "amazed",
+        "amazing",
+        "amaze"
+      ],
+      "why": "Amazed tells us how a person feels."
+    },
+    {
+      "q": "Complete: It was an ___ adventure!",
+      "o": [
+        "amazing",
+        "amazed",
+        "amaze"
+      ],
+      "why": "Amazing describes the adventure."
+    },
+    {
+      "q": "What colour was the bird’s tail in Rasha’s sketch?",
+      "o": [
+        "blue",
+        "orange",
+        "green"
+      ],
+      "why": "She sketched an orange bird with a long blue tail."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Say very quietly",
+      "a": "whisper",
+      "d": [
+        "yell",
+        "zoom",
+        "sketch"
+      ]
+    },
+    {
+      "q": "Shout loudly",
+      "a": "yell",
+      "d": [
+        "whisper",
+        "smile",
+        "sketch"
+      ]
+    },
+    {
+      "q": "Move very fast",
+      "a": "zoom",
+      "d": [
+        "whisper",
+        "smile",
+        "remember"
+      ]
+    },
+    {
+      "q": "A quick drawing",
+      "a": "sketch",
+      "d": [
+        "yell",
+        "zoom",
+        "smile"
+      ]
+    },
+    {
+      "q": "Make a happy face",
+      "a": "smile",
+      "d": [
+        "yell",
+        "zoom",
+        "sketch"
+      ]
+    },
+    {
+      "q": "How a person feels: very surprised",
+      "a": "amazed",
+      "d": [
+        "amazing",
+        "amaze",
+        "amazes"
+      ]
+    },
+    {
+      "q": "Describes a very surprising thing",
+      "a": "amazing",
+      "d": [
+        "amazed",
+        "amaze",
+        "amazes"
+      ]
+    },
+    {
+      "q": "Colour of the bird",
+      "a": "orange",
+      "d": [
+        "green",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "q": "Where the story begins",
+      "a": "her bedroom",
+      "d": [
+        "a castle",
+        "a stadium",
+        "a mall"
+      ]
+    },
+    {
+      "q": "Rasha really liked…",
+      "a": "adventures",
+      "d": [
+        "vegetables",
+        "rainy days",
+        "homework"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What does “whispered” mean?",
+      "o": [
+        "said very quietly",
+        "shouted loudly",
+        "drew quickly",
+        "flew fast"
+      ],
+      "why": "Whisper means speak very quietly."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What did Rasha sketch?",
+      "o": [
+        "a big orange bird with a long blue tail",
+        "a small green frog",
+        "a tall skyscraper",
+        "a red car"
+      ],
+      "why": "She sketched a big orange bird."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which tenses do we use to tell a story?",
+      "o": [
+        "Past simple and Past continuous",
+        "Present simple only",
+        "Future only",
+        "Present continuous only"
+      ],
+      "why": "Stories use narrative tenses in the past."
+    },
+    {
+      "lv": "التذكر",
+      "q": "How can you guess the meaning of a new word in a story?",
+      "o": [
+        "Look at the pictures and the words around it.",
+        "Skip the whole page.",
+        "Always ask a friend first.",
+        "Close the book."
+      ],
+      "why": "Pictures and context help you guess meanings."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose the correct sentence.",
+      "o": [
+        "Rasha was amazed when the bird spoke.",
+        "Rasha was amazing when the bird spoke.",
+        "The bird was amazed adventure.",
+        "Rasha amazing the bird."
+      ],
+      "why": "Amazed shows how Rasha felt."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Which sentence uses “zoomed” correctly?",
+      "o": [
+        "The bird zoomed over the city.",
+        "The bird zoomed quietly to her ear.",
+        "Rasha zoomed a picture with a pencil.",
+        "She zoomed goodbye."
+      ],
+      "why": "Zoom means move very fast."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose the correct story sentence.",
+      "o": [
+        "The bird was flying over the city when Rasha yelled.",
+        "The bird were flying over the city when Rasha yelled.",
+        "The bird was fly over the city when Rasha yelled.",
+        "The bird flying over the city when Rasha was yell."
+      ],
+      "why": "was + -ing for the longer action; yelled for the shorter one."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why do we say “an amazing adventure” and not “an amazed adventure”?",
+      "o": [
+        "Amazing describes the thing; amazed describes how a person feels.",
+        "Amazed is always wrong.",
+        "Amazing is a verb.",
+        "Adventure is a person."
+      ],
+      "why": "-ing describes the thing; -ed describes the feeling."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Was the orange thing by the window the bird or Rasha’s imagination? Which is a good opinion?",
+      "o": [
+        "I think it was her imagination, because the story ends in her bedroom.",
+        "Orange.",
+        "I think it was a skyscraper.",
+        "Yes, it was."
+      ],
+      "why": "A good opinion gives an idea and a reason from the story."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which pair shows opposites?",
+      "o": [
+        "whisper – yell",
+        "sketch – draw",
+        "zoom – fly fast",
+        "smile – happy face"
+      ],
+      "why": "Whisper is very quiet; yell is very loud."
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Sounds and Spelling – Unit 4, Lesson 2: er",
+  "outcomes": [
+    "I can say the sound of er.",
+    "I can read and write herb, fern, herd, person and perfume.",
+    "I can read sentences with the tricky word come."
+  ],
+  "tf": [
+    {
+      "s": "Herd has the letters er.",
+      "t": true,
+      "why": "Yes! h-er-d has er."
+    },
+    {
+      "s": "Fern and herb have the same sound.",
+      "t": true,
+      "why": "Great! Both have er."
+    },
+    {
+      "s": "Person has the letters ee.",
+      "t": false,
+      "why": "Person has er: p-er-son."
+    },
+    {
+      "s": "Come is a tricky word.",
+      "t": true,
+      "why": "Well done! We learn come by heart."
+    },
+    {
+      "s": "Perfume is spelled p-e-r-f-u-m-e.",
+      "t": true,
+      "why": "Yes! That is the right spelling."
+    },
+    {
+      "s": "Sheep has the er sound.",
+      "t": false,
+      "why": "Sheep has the ee sound."
+    },
+    {
+      "s": "We blend h-er-b to read herb.",
+      "t": true,
+      "why": "Great blending!"
+    },
+    {
+      "s": "Fern is spelled f-u-r-n.",
+      "t": false,
+      "why": "Fern is spelled f-e-r-n."
+    },
+    {
+      "s": "Coin has the er sound.",
+      "t": false,
+      "why": "Coin has the oi sound."
+    },
+    {
+      "s": "Come and see! uses the tricky word see.",
+      "t": false,
+      "why": "The tricky word is come."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Blend h – er – d.",
+      "o": [
+        "herd",
+        "had",
+        "hid"
+      ],
+      "why": "h-er-d makes herd."
+    },
+    {
+      "q": "Which word has er?",
+      "o": [
+        "fern",
+        "feet",
+        "five"
+      ],
+      "why": "f-er-n has er."
+    },
+    {
+      "q": "___ and see!",
+      "o": [
+        "Come",
+        "Said",
+        "Some"
+      ],
+      "why": "Come and see! uses come."
+    },
+    {
+      "q": "Circle er in \"fern\".",
+      "o": [
+        "f-er-n",
+        "fe-r-n",
+        "f-e-rn"
+      ],
+      "why": "e and r go together: f-er-n."
+    },
+    {
+      "q": "Which is the right spelling?",
+      "o": [
+        "person",
+        "pirson",
+        "pursen"
+      ],
+      "why": "p-er-s-o-n spells person."
+    },
+    {
+      "q": "A nice smell in a bottle.",
+      "o": [
+        "perfume",
+        "herb",
+        "fern"
+      ],
+      "why": "Perfume smells nice."
+    },
+    {
+      "q": "Which word has the same sound as fern?",
+      "o": [
+        "herb",
+        "bee",
+        "coin"
+      ],
+      "why": "Herb and fern both have er."
+    },
+    {
+      "q": "___ and play with me!",
+      "o": [
+        "Come",
+        "Said",
+        "All"
+      ],
+      "why": "Come and play with me!"
+    },
+    {
+      "q": "Which word is the odd one out?",
+      "o": [
+        "cheese",
+        "herd",
+        "person"
+      ],
+      "why": "Cheese has ee; the others have er."
+    },
+    {
+      "q": "What are the letters in the middle of \"herb\"?",
+      "o": [
+        "er",
+        "ee",
+        "ou"
+      ],
+      "why": "h-er-b has er."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "A big piece of ice in the sea",
+      "a": "iceberg",
+      "d": [
+        "herb",
+        "fern",
+        "person"
+      ]
+    },
+    {
+      "q": "Blend f – er – n.",
+      "a": "fern",
+      "d": [
+        "fan",
+        "fin",
+        "fun"
+      ]
+    },
+    {
+      "q": "Blend h – er – b.",
+      "a": "herb",
+      "d": [
+        "hub",
+        "hob",
+        "hab"
+      ]
+    },
+    {
+      "q": "Find the er word.",
+      "a": "herb",
+      "d": [
+        "sheep",
+        "coin",
+        "cloud"
+      ]
+    },
+    {
+      "q": "Find the er word (a nice smell).",
+      "a": "perfume",
+      "d": [
+        "feet",
+        "boil",
+        "kite"
+      ]
+    },
+    {
+      "q": "\"___ here!\" said Mum.",
+      "a": "Come",
+      "d": [
+        "Some",
+        "All",
+        "Give"
+      ]
+    },
+    {
+      "q": "Spell it: a group of cows",
+      "a": "herd",
+      "d": [
+        "hurd",
+        "hord",
+        "hird"
+      ]
+    },
+    {
+      "q": "Spell it: a green plant",
+      "a": "fern",
+      "d": [
+        "furn",
+        "firn",
+        "feern"
+      ]
+    },
+    {
+      "q": "Spell it: a nice smell",
+      "a": "perfume",
+      "d": [
+        "purfume",
+        "perfoom",
+        "pefume"
+      ]
+    },
+    {
+      "q": "Find the tricky word.",
+      "a": "come",
+      "d": [
+        "herb",
+        "fern",
+        "herd"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which word has the er sound?",
+      "o": [
+        "fern",
+        "feet",
+        "coin",
+        "kite"
+      ],
+      "why": "f-er-n has er."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which is the tricky word in this lesson?",
+      "o": [
+        "come",
+        "herb",
+        "fern",
+        "person"
+      ],
+      "why": "Come is the tricky word."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which letters make the sound in \"herd\"?",
+      "o": [
+        "er",
+        "ee",
+        "oi",
+        "ou"
+      ],
+      "why": "h-er-d has er."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which long word has er in it?",
+      "o": [
+        "iceberg",
+        "sheep",
+        "cloud",
+        "glue"
+      ],
+      "why": "ice-b-er-g has er."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Blend p – er – s – o – n.",
+      "o": [
+        "person",
+        "parson",
+        "poison",
+        "prison"
+      ],
+      "why": "p-er-s-o-n makes person."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Complete: ___ and play with me!",
+      "o": [
+        "Come",
+        "Said",
+        "Some",
+        "Give"
+      ],
+      "why": "Come and play with me!"
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Write the word for a picture of perfume.",
+      "o": [
+        "perfume",
+        "purfume",
+        "perfum",
+        "pefume"
+      ],
+      "why": "p-er-f-u-m-e spells perfume."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word does NOT have er?",
+      "o": [
+        "sheep",
+        "herb",
+        "fern",
+        "herd"
+      ],
+      "why": "Sheep has ee, not er."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which two words have the same sound?",
+      "o": [
+        "herd and fern",
+        "herd and feet",
+        "fern and coin",
+        "herb and bee"
+      ],
+      "why": "Herd and fern both have er."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Sami wrote \"furn\". What is the right word?",
+      "o": [
+        "fern",
+        "fan",
+        "fin",
+        "farn"
+      ],
+      "why": "The er sound in fern is spelled er."
+    }
+  ]
+}

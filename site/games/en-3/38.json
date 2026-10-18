@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 3: Hobbies",
+ "lesson": "Unit 3 – Lesson 10: Fun corner",
+ "outcomes": [
+  "I can ask and answer: Does … on …?",
+  "I can use the days of the week in a game.",
+  "I can write sentences with always, often and never."
+ ],
+ "tf": [
+  {
+   "s": "We ask: Does Faisal play tennis on Mondays?",
+   "t": true,
+   "why": "Yes! After Does, we say play."
+  },
+  {
+   "s": "We ask: Does Faisal plays tennis on Mondays?",
+   "t": false,
+   "why": "After Does, we say play, not plays."
+  },
+  {
+   "s": "A short answer can be: No, he doesn't.",
+   "t": true,
+   "why": "Great! No, he doesn't. is correct."
+  },
+  {
+   "s": "A short answer can be: No, he don't.",
+   "t": false,
+   "why": "With he, we say doesn't."
+  },
+  {
+   "s": "Days of the week start with a capital letter.",
+   "t": true,
+   "why": "Right! Monday, Friday … start with capitals."
+  },
+  {
+   "s": "This sentence is correct: Faisal often read books on friday.",
+   "t": false,
+   "why": "We write: Faisal often reads books on Friday."
+  },
+  {
+   "s": "There are six days in the letter snake.",
+   "t": true,
+   "why": "Yes! Six days are in the snake and one is missing."
+  },
+  {
+   "s": "Wednesday is the missing day in the snake.",
+   "t": false,
+   "why": "Wednesday is in the snake. Tuesday is missing."
+  },
+  {
+   "s": "In the game, a good question can remove many people.",
+   "t": true,
+   "why": "Yes! Then you find the person faster."
+  },
+  {
+   "s": "'Faisal never plays basketball on Mondays' means he plays every Monday.",
+   "t": false,
+   "why": "Never means he doesn't play on Mondays."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which day is missing in the letter snake?",
+   "o": [
+    "Tuesday",
+    "Monday",
+    "Sunday"
+   ],
+   "why": "The snake has no Tuesday."
+  },
+  {
+   "q": "Complete: Does Samira ___ basketball on Tuesdays?",
+   "o": [
+    "play",
+    "plays",
+    "playing"
+   ],
+   "why": "After Does, we use play."
+  },
+  {
+   "q": "Answer for a girl: Does she read books? (yes)",
+   "o": [
+    "Yes, she does.",
+    "Yes, she do.",
+    "Yes, he does."
+   ],
+   "why": "For a girl: Yes, she does."
+  },
+  {
+   "q": "Complete: Faisal never ___ basketball on Mondays.",
+   "o": [
+    "plays",
+    "play",
+    "playing"
+   ],
+   "why": "With Faisal (he), we say plays."
+  },
+  {
+   "q": "How many days are in a week?",
+   "o": [
+    "7",
+    "6",
+    "5"
+   ],
+   "why": "There are seven days in a week."
+  },
+  {
+   "q": "Which is written correctly?",
+   "o": [
+    "Friday",
+    "friday",
+    "fRIDAY"
+   ],
+   "why": "Days start with a capital letter."
+  },
+  {
+   "q": "Which word means 'not at any time'?",
+   "o": [
+    "never",
+    "always",
+    "often"
+   ],
+   "why": "Never means not at any time."
+  },
+  {
+   "q": "Complete: ___ Hazim play basketball on Fridays?",
+   "o": [
+    "Does",
+    "Do",
+    "Is"
+   ],
+   "why": "With he, we start the question with Does."
+  },
+  {
+   "q": "In the guessing game, a good pair finds the person with …",
+   "o": [
+    "few questions",
+    "many questions",
+    "no questions"
+   ],
+   "why": "Good questions help you find the person fast."
+  },
+  {
+   "q": "Answer: Does Faisal play tennis on Mondays? (no)",
+   "o": [
+    "No, he doesn't.",
+    "No, she doesn't.",
+    "No, he isn't."
+   ],
+   "why": "Faisal is a boy: No, he doesn't."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Days in the letter snake",
+   "a": "6",
+   "d": [
+    "7",
+    "5",
+    "4"
+   ]
+  },
+  {
+   "q": "Does Faisal ___ tennis?",
+   "a": "play",
+   "d": [
+    "plays",
+    "playing",
+    "played"
+   ]
+  },
+  {
+   "q": "Faisal often ___ books.",
+   "a": "reads",
+   "d": [
+    "read",
+    "reading",
+    "to read"
+   ]
+  },
+  {
+   "q": "Day after Wednesday",
+   "a": "Thursday",
+   "d": [
+    "Tuesday",
+    "Friday",
+    "Monday"
+   ]
+  },
+  {
+   "q": "Day before Saturday",
+   "a": "Friday",
+   "d": [
+    "Sunday",
+    "Thursday",
+    "Monday"
+   ]
+  },
+  {
+   "q": "No, he ___.",
+   "a": "doesn't",
+   "d": [
+    "don't",
+    "isn't",
+    "not"
+   ]
+  },
+  {
+   "q": "Yes, he ___.",
+   "a": "does",
+   "d": [
+    "do",
+    "is",
+    "doing"
+   ]
+  },
+  {
+   "q": "Day after Sunday",
+   "a": "Monday",
+   "d": [
+    "Tuesday",
+    "Saturday",
+    "Friday"
+   ]
+  },
+  {
+   "q": "Every time",
+   "a": "always",
+   "d": [
+    "never",
+    "often",
+    "sometimes"
+   ]
+  },
+  {
+   "q": "Last day in the snake",
+   "a": "Thursday",
+   "d": [
+    "Sunday",
+    "Friday",
+    "Saturday"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is a question for the guessing game?",
+   "o": [
+    "Does Areej ride a bike on Fridays?",
+    "Areej rides a bike on Fridays.",
+    "Areej, ride a bike!",
+    "Areej is Friday?"
+   ],
+   "why": "Game questions start with Does … on …?"
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do we start the word Saturday?",
+   "o": [
+    "With a capital S",
+    "With a small s",
+    "With a capital T",
+    "With a small t"
+   ],
+   "why": "Days start with a capital letter."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word goes with he or she?",
+   "o": [
+    "plays",
+    "play",
+    "playing",
+    "to play"
+   ],
+   "why": "With he or she, we add -s: plays."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list has only days?",
+   "o": [
+    "Monday, Friday, Sunday",
+    "Monday, tennis, Sunday",
+    "always, Friday, never",
+    "bike, book, kite"
+   ],
+   "why": "Monday, Friday and Sunday are all days."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct this sentence: Faisal often read books on friday.",
+   "o": [
+    "Faisal often reads books on Friday.",
+    "Faisal often read books on Friday.",
+    "Faisal often reads books on friday.",
+    "Faisal often reading books on Friday."
+   ],
+   "why": "We need reads and a capital F for Friday."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your secret person is Hazim. He plays basketball on Sundays. Your partner asks: Does Hazim play basketball on Sundays?",
+   "o": [
+    "Yes, he does.",
+    "No, he doesn't.",
+    "Yes, she does.",
+    "Yes, he do."
+   ],
+   "why": "Hazim plays on Sundays, so: Yes, he does."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Follow the line: Faisal – always – tennis – Wednesdays. Which sentence is right?",
+   "o": [
+    "Faisal always plays tennis on Wednesdays.",
+    "Faisal always play tennis on Wednesdays.",
+    "Faisal always plays tennis on wednesdays.",
+    "Faisal plays always tennis on Wednesdays."
+   ],
+   "why": "We need plays, the right word order and a capital W."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which question is better in the guessing game?",
+   "o": [
+    "One that removes many people",
+    "One about only one person",
+    "One you asked before",
+    "One with no activity"
+   ],
+   "why": "A question that removes many people helps you find the person faster."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can it help to colour each day in the snake a different colour?",
+   "o": [
+    "You can see where each day starts and ends",
+    "It makes the days longer",
+    "It changes the spelling",
+    "It adds a new day"
+   ],
+   "why": "Colours help you see each day clearly."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Faisal never plays basketball on Mondays. Which is true?",
+   "o": [
+    "He doesn't play basketball on Mondays.",
+    "He plays basketball every Monday.",
+    "He often plays basketball on Mondays.",
+    "He always plays basketball on Mondays."
+   ],
+   "why": "Never means he doesn't do it."
+  }
+ ]
+}

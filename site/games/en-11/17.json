@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 4 - Unit 2: Questions and Answers",
+ "outcomes": [
+  "Answer trivia questions about famous facts",
+  "Form the past passive: was/were + past participle",
+  "Change active sentences into the passive"
+ ],
+ "tf": [
+  {
+   "s": "Romeo and Juliet was written by William Shakespeare.",
+   "t": true,
+   "why": "Yes! Shakespeare wrote many famous plays."
+  },
+  {
+   "s": "The city of Pompeii was destroyed by a volcano.",
+   "t": true,
+   "why": "Right! The volcano destroyed the city."
+  },
+  {
+   "s": "The first modern Olympic Games were held in Athens, Greece.",
+   "t": true,
+   "why": "Correct!"
+  },
+  {
+   "s": "The past passive is formed with 'was/were' + past participle.",
+   "t": true,
+   "why": "Good! For example: 'was written'."
+  },
+  {
+   "s": "'Edison invented the bulb' is a passive sentence.",
+   "t": false,
+   "why": "It is active; the passive is 'The bulb was invented by Edison'."
+  },
+  {
+   "s": "We use the passive when we don't know who did the action.",
+   "t": true,
+   "why": "Yes! 'Three paintings were stolen' – we don't know who stole them."
+  },
+  {
+   "s": "The past participle of 'steal' is 'stealed'.",
+   "t": false,
+   "why": "The past participle of 'steal' is 'stolen'."
+  },
+  {
+   "s": "Potatoes were first grown by South Americans.",
+   "t": true,
+   "why": "Right! This is the passive of 'South Americans first grew potatoes'."
+  },
+  {
+   "s": "The Titanic was sunk by a storm.",
+   "t": false,
+   "why": "The Titanic was sunk by an iceberg."
+  },
+  {
+   "s": "In a passive sentence, 'by' introduces the person or thing that did the action.",
+   "t": true,
+   "why": "Yes! 'by Shakespeare' tells us who wrote it."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who was Romeo and Juliet written by?",
+   "o": [
+    "William Shakespeare",
+    "Alfred Nobel",
+    "Thomas Edison"
+   ],
+   "why": "Shakespeare wrote Romeo and Juliet."
+  },
+  {
+   "q": "How was the city of Pompeii destroyed?",
+   "o": [
+    "by a volcano",
+    "by an iceberg",
+    "by a flood"
+   ],
+   "why": "A volcano destroyed Pompeii."
+  },
+  {
+   "q": "Where were the first modern Olympic Games held?",
+   "o": [
+    "Athens",
+    "Rome",
+    "London"
+   ],
+   "why": "They were held in Athens, Greece."
+  },
+  {
+   "q": "Complete: Julius Caesar was ___ by Shakespeare.",
+   "o": [
+    "written",
+    "wrote",
+    "write"
+   ],
+   "why": "Use the past participle."
+  },
+  {
+   "q": "Which sentence is passive?",
+   "o": [
+    "The bulb was invented by Edison.",
+    "Edison invented the bulb.",
+    "Edison is inventing the bulb."
+   ],
+   "why": "Passive = was + past participle."
+  },
+  {
+   "q": "What is the past participle of 'build'?",
+   "o": [
+    "built",
+    "builded",
+    "building"
+   ],
+   "why": "'Build' is irregular: build – built."
+  },
+  {
+   "q": "Why is the passive used in 'Three paintings were stolen from the museum'?",
+   "o": [
+    "we don't know who stole them",
+    "the paintings stole something",
+    "it is the present tense"
+   ],
+   "why": "The agent is unknown."
+  },
+  {
+   "q": "Rewrite: Alfred Nobel invented dynamite.",
+   "o": [
+    "Dynamite was invented by Alfred Nobel.",
+    "Dynamite invented Alfred Nobel.",
+    "Dynamite were invented by Alfred Nobel."
+   ],
+   "why": "Move the object to the front."
+  },
+  {
+   "q": "Who designed the Taj Mahal?",
+   "o": [
+    "Ustad Ahmad Lahauri",
+    "Marie Curie",
+    "Tim Berners-Lee"
+   ],
+   "why": "The Taj Mahal was designed by Ustad Ahmad Lahauri."
+  },
+  {
+   "q": "Who was radium discovered by?",
+   "o": [
+    "Marie Curie",
+    "Alfred Nobel",
+    "Shakespeare"
+   ],
+   "why": "Marie Curie discovered radium."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Writer of Romeo and Juliet",
+   "a": "Shakespeare",
+   "d": [
+    "Edison",
+    "Nobel",
+    "Curie"
+   ]
+  },
+  {
+   "q": "Destroyed Pompeii",
+   "a": "a volcano",
+   "d": [
+    "an iceberg",
+    "a flood",
+    "a fire"
+   ]
+  },
+  {
+   "q": "First modern Olympics city",
+   "a": "Athens",
+   "d": [
+    "Rome",
+    "Paris",
+    "London"
+   ]
+  },
+  {
+   "q": "Sank the Titanic",
+   "a": "an iceberg",
+   "d": [
+    "a volcano",
+    "a storm",
+    "a whale"
+   ]
+  },
+  {
+   "q": "Inventor of dynamite",
+   "a": "Alfred Nobel",
+   "d": [
+    "Edison",
+    "Shakespeare",
+    "Marie Curie"
+   ]
+  },
+  {
+   "q": "Discoverer of radium",
+   "a": "Marie Curie",
+   "d": [
+    "Alfred Nobel",
+    "Edison",
+    "Shakespeare"
+   ]
+  },
+  {
+   "q": "Past participle of 'write'",
+   "a": "written",
+   "d": [
+    "wrote",
+    "writed",
+    "writing"
+   ]
+  },
+  {
+   "q": "Past participle of 'steal'",
+   "a": "stolen",
+   "d": [
+    "stole",
+    "stealed",
+    "stealing"
+   ]
+  },
+  {
+   "q": "Past participle of 'sink'",
+   "a": "sunk",
+   "d": [
+    "sank",
+    "sinked",
+    "sinking"
+   ]
+  },
+  {
+   "q": "Past participle of 'build'",
+   "a": "built",
+   "d": [
+    "builded",
+    "build",
+    "building"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How is the past passive formed?",
+   "o": [
+    "was/were + past participle",
+    "will + base verb",
+    "is + -ing",
+    "did + base verb"
+   ],
+   "why": "For example: 'The bulb was invented'."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why do we say 'My brother was born in Muscat'?",
+   "o": [
+    "We use was + born for the place or date of birth",
+    "It is a future plan",
+    "It is a present habit",
+    "It is a question"
+   ],
+   "why": "'Born' is a past participle."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who first grew potatoes?",
+   "o": [
+    "South Americans",
+    "the Greeks",
+    "the Romans",
+    "the Omanis"
+   ],
+   "why": "Potatoes were first grown by South Americans."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the passive verbs in the quiz questions?",
+   "o": [
+    "was destroyed, was written, was sent",
+    "destroys, writes, sends",
+    "is destroying, is writing",
+    "will destroy, will write"
+   ],
+   "why": "They are all past passive."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite: An iceberg sank the Titanic.",
+   "o": [
+    "The Titanic was sunk by an iceberg.",
+    "The Titanic was sank by an iceberg.",
+    "An iceberg was sunk by the Titanic.",
+    "The Titanic sunk an iceberg."
+   ],
+   "why": "Use 'was' + the past participle 'sunk'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite: Ustad Ahmad Lahauri designed the Taj Mahal.",
+   "o": [
+    "The Taj Mahal was designed by Ustad Ahmad Lahauri.",
+    "The Taj Mahal designed by Ustad Ahmad Lahauri.",
+    "Ustad Ahmad Lahauri was designed the Taj Mahal.",
+    "The Taj Mahal were designed by Ustad Ahmad Lahauri."
+   ],
+   "why": "Object first, then was + past participle, then by + agent."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite: Tim Berners-Lee invented the world wide web.",
+   "o": [
+    "The world wide web was invented by Tim Berners-Lee.",
+    "The world wide web invented Tim Berners-Lee.",
+    "The world wide web is invent by Tim Berners-Lee.",
+    "Tim Berners-Lee was invented by the world wide web."
+   ],
+   "why": "The thing invented becomes the subject."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What do 'was destroyed' and 'was written' have in common?",
+   "o": [
+    "Both are past passive: was + past participle",
+    "Both are present continuous",
+    "Both are future forms",
+    "Both are active verbs"
+   ],
+   "why": "They follow the same pattern."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence best uses the passive because the agent is unknown?",
+   "o": [
+    "My car was stolen last night.",
+    "Edison invented the bulb.",
+    "I wrote a letter.",
+    "Shakespeare wrote plays."
+   ],
+   "why": "We don't know who stole the car."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Rewrite: Marie Curie discovered radium and Alfred Nobel invented dynamite.",
+   "o": [
+    "Radium was discovered by Marie Curie and dynamite was invented by Alfred Nobel.",
+    "Radium discovered Marie Curie and dynamite invented Alfred Nobel.",
+    "Radium was discover by Marie Curie and dynamite was invent by Alfred Nobel.",
+    "Marie Curie was discovered by radium and Alfred Nobel by dynamite."
+   ],
+   "why": "Each part needs was + past participle + by."
+  }
+ ]
+}

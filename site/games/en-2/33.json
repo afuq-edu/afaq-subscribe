@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Unit 3 – Lesson 3: Vocabulary and Grammar (Move your body!)",
+ "outcomes": [
+  "I can say and do: move, bend, stretch, touch, stamp, clap.",
+  "I can give and follow instructions like Touch your head!",
+  "I can read ue words: glue, tissue, clue, blue."
+ ],
+ "tf": [
+  {
+   "s": "\"Clap your hands!\" is an instruction.",
+   "t": true,
+   "why": "Instructions tell us what to do."
+  },
+  {
+   "s": "We stamp with our feet.",
+   "t": true,
+   "why": "Stamp your feet!"
+  },
+  {
+   "s": "We clap with our toes.",
+   "t": false,
+   "why": "We clap our hands."
+  },
+  {
+   "s": "\"Stretch\" is a movement verb.",
+   "t": true,
+   "why": "Stretch your arms!"
+  },
+  {
+   "s": "\"Glue\" has the same sound as \"moon\".",
+   "t": true,
+   "why": "ue and long oo make the same sound."
+  },
+  {
+   "s": "\"Blue\" is spelled b-l-o-o.",
+   "t": false,
+   "why": "Blue is spelled b-l-u-e."
+  },
+  {
+   "s": "\"Tissue\" has the letters ue.",
+   "t": true,
+   "why": "Tissue ends with ue."
+  },
+  {
+   "s": "\"Give\" is a tricky word.",
+   "t": true,
+   "why": "We read give in: Give her a blue pen!"
+  },
+  {
+   "s": "\"Bend your knees!\" means stand very still.",
+   "t": false,
+   "why": "Bend means move your knees down."
+  },
+  {
+   "s": "\"Touch your head!\" tells you to put your hand on your head.",
+   "t": true,
+   "why": "Touch means put your hand on something."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "___ your hands!",
+   "o": [
+    "Clap",
+    "Stamp",
+    "Bend"
+   ],
+   "why": "We clap our hands."
+  },
+  {
+   "q": "Stamp your ___!",
+   "o": [
+    "feet",
+    "hands",
+    "head"
+   ],
+   "why": "We stamp our feet."
+  },
+  {
+   "q": "___ your knees!",
+   "o": [
+    "Bend",
+    "Clap",
+    "Stamp"
+   ],
+   "why": "We bend our knees."
+  },
+  {
+   "q": "___ your arms! (make them long)",
+   "o": [
+    "Stretch",
+    "Stamp",
+    "Clap"
+   ],
+   "why": "Stretch your arms!"
+  },
+  {
+   "q": "Find the ue word.",
+   "o": [
+    "glue",
+    "goat",
+    "girl"
+   ],
+   "why": "Gl-ue has ue."
+  },
+  {
+   "q": "Do moon and blue have the same sound?",
+   "o": [
+    "Yes",
+    "No",
+    "Only moon"
+   ],
+   "why": "Both have the long oo sound."
+  },
+  {
+   "q": "___ her a blue pen!",
+   "o": [
+    "Give",
+    "Some",
+    "All"
+   ],
+   "why": "Give her a blue pen!"
+  },
+  {
+   "q": "A boy hits the floor with his feet. He ...",
+   "o": [
+    "stamps",
+    "claps",
+    "stretches"
+   ],
+   "why": "Stamping is with the feet."
+  },
+  {
+   "q": "Give me a ___. (for my nose)",
+   "o": [
+    "tissue",
+    "clue",
+    "glue"
+   ],
+   "why": "A tissue is for your nose."
+  },
+  {
+   "q": "Which is a movement verb?",
+   "o": [
+    "move",
+    "blue",
+    "tissue"
+   ],
+   "why": "Move is a movement verb."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "___ your hands!",
+   "a": "Clap",
+   "d": [
+    "Stamp",
+    "Bend",
+    "Read"
+   ]
+  },
+  {
+   "q": "Stamp your ___!",
+   "a": "feet",
+   "d": [
+    "hands",
+    "ears",
+    "eyes"
+   ]
+  },
+  {
+   "q": "Bend your ___!",
+   "a": "knees",
+   "d": [
+    "eyes",
+    "ears",
+    "nose"
+   ]
+  },
+  {
+   "q": "Make arms long",
+   "a": "stretch",
+   "d": [
+    "stamp",
+    "clap",
+    "bend"
+   ]
+  },
+  {
+   "q": "Hit the floor with feet",
+   "a": "stamp",
+   "d": [
+    "clap",
+    "stretch",
+    "touch"
+   ]
+  },
+  {
+   "q": "Letters in \"glue\"",
+   "a": "ue",
+   "d": [
+    "oo",
+    "ou",
+    "oi"
+   ]
+  },
+  {
+   "q": "Colour with ue",
+   "a": "blue",
+   "d": [
+    "red",
+    "green",
+    "pink"
+   ]
+  },
+  {
+   "q": "For your nose",
+   "a": "tissue",
+   "d": [
+    "glue",
+    "clue",
+    "blue"
+   ]
+  },
+  {
+   "q": "Sticks paper together",
+   "a": "glue",
+   "d": [
+    "tissue",
+    "blue",
+    "clue"
+   ]
+  },
+  {
+   "q": "___ her a blue pen!",
+   "a": "Give",
+   "d": [
+    "Some",
+    "All",
+    "Our"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word is a movement verb?",
+   "o": [
+    "stretch",
+    "tummy",
+    "blue",
+    "glue"
+   ],
+   "why": "Stretch is something you do with your body."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which letters make the sound in \"glue\"?",
+   "o": [
+    "ue",
+    "oi",
+    "ou",
+    "ai"
+   ],
+   "why": "Gl-ue has ue."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the tricky word in this lesson?",
+   "o": [
+    "give",
+    "glue",
+    "clap",
+    "blue"
+   ],
+   "why": "Give is the tricky word."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has ue?",
+   "o": [
+    "clue",
+    "cloud",
+    "coin",
+    "clap"
+   ],
+   "why": "Cl-ue has ue."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your teacher claps. What is the instruction?",
+   "o": [
+    "Clap your hands!",
+    "Stamp your feet!",
+    "Bend your knees!",
+    "Touch your toes!"
+   ],
+   "why": "Clapping is with the hands."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a routine for a friend. Which instruction is sensible?",
+   "o": [
+    "Stretch your arms!",
+    "Clap your knees!",
+    "Stamp your head!",
+    "Bend your nose!"
+   ],
+   "why": "We can stretch our arms."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Give me the ___. I want to stick the paper.",
+   "o": [
+    "glue",
+    "tissue",
+    "clue",
+    "blue"
+   ],
+   "why": "Glue sticks paper."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word has the same sound as \"moon\" but is spelled with ue?",
+   "o": [
+    "blue",
+    "book",
+    "boat",
+    "boil"
+   ],
+   "why": "Blue has the long oo sound spelled ue."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which instruction is silly?",
+   "o": [
+    "Clap your toes!",
+    "Clap your hands!",
+    "Touch your toes!",
+    "Bend your knees!"
+   ],
+   "why": "We clap our hands, not our toes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which instruction has a verb and a body part?",
+   "o": [
+    "Move your arms!",
+    "Blue and red!",
+    "Give me!",
+    "I've got two!"
+   ],
+   "why": "Move is a verb and arms is a body part."
+  }
+ ]
+}

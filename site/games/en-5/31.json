@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 3 – Let’s explore!",
+ "lesson": "Lesson 8: Skills – Listening, speaking and writing a blog post",
+ "outcomes": [
+  "Listen for details about an astronaut's life.",
+  "Talk about what you will do on the ISS using will.",
+  "Write a blog post with questions and correct punctuation."
+ ],
+ "tf": [
+  {
+   "s": "Astronaut Ali's blog post is about food on the ISS.",
+   "t": true,
+   "why": "Ali writes about food on the ISS."
+  },
+  {
+   "s": "Astronauts eat a lot of biscuits and cakes on the ISS.",
+   "t": false,
+   "why": "They don't, because crumbs float around."
+  },
+  {
+   "s": "Astronauts have three meals a day.",
+   "t": true,
+   "why": "They have three meals a day."
+  },
+  {
+   "s": "We put a question mark (?) at the end of a question.",
+   "t": true,
+   "why": "Questions end with a question mark."
+  },
+  {
+   "s": "Writers use questions to make a blog post more interesting.",
+   "t": true,
+   "why": "Questions make readers think."
+  },
+  {
+   "s": "Astronauts wear a spacesuit outside the ISS because it is very hot.",
+   "t": false,
+   "why": "They wear it because there is no air to breathe in space."
+  },
+  {
+   "s": "From the ISS, astronauts can see rivers, mountains and oceans on Earth.",
+   "t": true,
+   "why": "They can see them from the window."
+  },
+  {
+   "s": "A blog post has no topic.",
+   "t": false,
+   "why": "A blog post has a topic, like food or clothes."
+  },
+  {
+   "s": "\"What do astronauts eat.\" is correct punctuation.",
+   "t": false,
+   "why": "It is a question, so it needs a question mark: What do astronauts eat?"
+  },
+  {
+   "s": "A blog post can start with: My blog post today is about …",
+   "t": true,
+   "why": "This tells readers the topic."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is Astronaut Ali's blog post about?",
+   "o": [
+    "food on the ISS",
+    "sport on Earth",
+    "a corner shop"
+   ],
+   "why": "Ali's blog post is about food."
+  },
+  {
+   "q": "Why don't astronauts take biscuits?",
+   "o": [
+    "They have a lot of crumbs which float around.",
+    "They are too expensive.",
+    "Astronauts don't like them."
+   ],
+   "why": "Crumbs float in space and cause problems."
+  },
+  {
+   "q": "How many meals a day do astronauts have?",
+   "o": [
+    "three",
+    "one",
+    "six"
+   ],
+   "why": "Astronauts have three meals a day."
+  },
+  {
+   "q": "Which punctuation mark ends a question?",
+   "o": [
+    "?",
+    "!",
+    "."
+   ],
+   "why": "A question ends with a question mark."
+  },
+  {
+   "q": "What can we see from the ISS?",
+   "o": [
+    "rivers, mountains and oceans",
+    "shops and markets",
+    "only the Moon"
+   ],
+   "why": "We can see rivers, mountains and oceans on Earth."
+  },
+  {
+   "q": "Why do astronauts wear a spacesuit outside the ISS?",
+   "o": [
+    "There is no air to breathe.",
+    "It is very wet.",
+    "It is a party."
+   ],
+   "why": "There is no air in space."
+  },
+  {
+   "q": "Complete: What will you do if you need to wash your hair? I ______ use a little water.",
+   "o": [
+    "'ll",
+    "did",
+    "was"
+   ],
+   "why": "I'll = I will."
+  },
+  {
+   "q": "Which is a good topic for an astronaut's blog post?",
+   "o": [
+    "clothes in space",
+    "my new bike",
+    "the corner shop"
+   ],
+   "why": "Topics: food, clothes, repairs, hobbies."
+  },
+  {
+   "q": "Which sentence starts a blog post?",
+   "o": [
+    "Hi, I'm Astronaut Salim.",
+    "Goodbye, everyone.",
+    "The end."
+   ],
+   "why": "Start by saying who you are."
+  },
+  {
+   "q": "Find the question in Ali's blog post.",
+   "o": [
+    "What do astronauts eat?",
+    "We eat three meals a day.",
+    "It's amazing!"
+   ],
+   "why": "It is the sentence with a question mark."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Topic of Ali's blog post",
+   "a": "food",
+   "d": [
+    "clothes",
+    "hobbies",
+    "repairs"
+   ]
+  },
+  {
+   "q": "Meals a day on the ISS",
+   "a": "three",
+   "d": [
+    "one",
+    "two",
+    "five"
+   ]
+  },
+  {
+   "q": "Crumbs ___ around in space",
+   "a": "float",
+   "d": [
+    "sit",
+    "stop",
+    "sink"
+   ]
+  },
+  {
+   "q": "Food with a lot of crumbs",
+   "a": "biscuits",
+   "d": [
+    "soup",
+    "water",
+    "juice"
+   ]
+  },
+  {
+   "q": "Mark at the end of a question",
+   "a": "?",
+   "d": [
+    "!",
+    ".",
+    ","
+   ]
+  },
+  {
+   "q": "Wear outside the ISS",
+   "a": "spacesuit",
+   "d": [
+    "pyjamas",
+    "trainers",
+    "jeans"
+   ]
+  },
+  {
+   "q": "Not in space: no ___",
+   "a": "air",
+   "d": [
+    "light",
+    "stars",
+    "Sun"
+   ]
+  },
+  {
+   "q": "Seen from the ISS",
+   "a": "oceans",
+   "d": [
+    "shops",
+    "cars",
+    "books"
+   ]
+  },
+  {
+   "q": "I ___ use a towel. (future)",
+   "a": "will",
+   "d": [
+    "did",
+    "was",
+    "am"
+   ]
+  },
+  {
+   "q": "Blog post start: My blog post today is ___",
+   "a": "about",
+   "d": [
+    "for",
+    "from",
+    "at"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which features does a blog post have?",
+   "o": [
+    "a topic, questions and information",
+    "only pictures",
+    "a price list",
+    "a phone number"
+   ],
+   "why": "A blog post has a topic, questions and information."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do we use at the end of a question?",
+   "o": [
+    "a question mark",
+    "a full stop",
+    "a comma",
+    "an exclamation mark"
+   ],
+   "why": "Questions end with ?"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which topics can an astronaut write about?",
+   "o": [
+    "food, clothes, repairs, hobbies",
+    "shops, money, prices",
+    "museums, forts, ports",
+    "manners, families, schools"
+   ],
+   "why": "These are the topics in the lesson."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What can astronauts see from the ISS?",
+   "o": [
+    "rivers, mountains and oceans on Earth",
+    "only stars",
+    "only the Moon",
+    "people's faces"
+   ],
+   "why": "They can see these from space."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "What will you do if you need to wash your hair on the ISS?",
+   "o": [
+    "I'll use a little water and a towel.",
+    "I'll use a big bath.",
+    "I washed it yesterday.",
+    "I'll swim in the sea."
+   ],
+   "why": "Water floats, so a little water and a towel is best."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence for a blog post.",
+   "o": [
+    "Did you know that astronauts sleep in bags?",
+    "Did you know that astronauts sleep in bags.",
+    "did you know that astronauts sleep in bags?",
+    "Did you knows that astronauts sleep in bags?"
+   ],
+   "why": "Capital letter at the start and a question mark at the end."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good first sentence for your blog post?",
+   "o": [
+    "Hi, I'm Astronaut Huda. My blog post today is about clothes.",
+    "Clothes.",
+    "Goodbye, see you!",
+    "What clothes?"
+   ],
+   "why": "Say who you are and what the post is about."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why don't astronauts eat biscuits or cakes on the ISS?",
+   "o": [
+    "Crumbs float around and that is a problem.",
+    "They are not hungry.",
+    "Biscuits are too heavy for rockets.",
+    "They only eat fruit."
+   ],
+   "why": "Floating crumbs can cause problems."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do writers use questions in a blog post?",
+   "o": [
+    "To make the writing interesting for readers.",
+    "To make it longer only.",
+    "Because they don't know the answers.",
+    "To finish the post."
+   ],
+   "why": "Questions make readers want to read more."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do astronauts need a spacesuit outside the ISS?",
+   "o": [
+    "There is no air to breathe in space.",
+    "It is raining in space.",
+    "It is a uniform for school.",
+    "It helps them run fast."
+   ],
+   "why": "A spacesuit helps them breathe."
+  }
+ ]
+}

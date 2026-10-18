@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+ "lesson": "Across Cultures: Country Focus – Canada",
+ "outcomes": [
+  "Read about Canada and answer questions about its land, history and wildlife",
+  "Match new words with their meanings and find facts in a text"
+ ],
+ "tf": [
+  {
+   "s": "The capital of Canada is Ottawa.",
+   "t": true,
+   "why": "Ottawa is the capital city of Canada."
+  },
+  {
+   "s": "The CN Tower is in Toronto.",
+   "t": true,
+   "why": "Toronto is home to the CN Tower."
+  },
+  {
+   "s": "The capital of Canada is Toronto.",
+   "t": false,
+   "why": "Toronto is a big city, but the capital is Ottawa."
+  },
+  {
+   "s": "English and French are spoken in Canada.",
+   "t": true,
+   "why": "Canada has two main languages: English and French."
+  },
+  {
+   "s": "The name 'Canada' comes from a word meaning 'village'.",
+   "t": true,
+   "why": "The text says the name comes from a word meaning village."
+  },
+  {
+   "s": "The name 'Canada' comes from a word meaning 'mountain'.",
+   "t": false,
+   "why": "It comes from a word meaning 'village'."
+  },
+  {
+   "s": "Moose and caribou are wild animals found in Canada.",
+   "t": true,
+   "why": "Canada's wildlife includes moose, caribou and black bears."
+  },
+  {
+   "s": "Canada is famous for its hot desert sand.",
+   "t": false,
+   "why": "Canada is famous for ice and snow."
+  },
+  {
+   "s": "Camels are among the wild animals named in the text about Canada.",
+   "t": false,
+   "why": "The text names black bears, caribou, moose, red foxes and Arctic hares."
+  },
+  {
+   "s": "Only Spanish is spoken in Canada.",
+   "t": false,
+   "why": "English and French are spoken in Canada."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the capital of Canada?",
+   "o": [
+    "Ottawa",
+    "Toronto",
+    "Dublin"
+   ],
+   "why": "Ottawa is the capital."
+  },
+  {
+   "q": "Which city has the CN Tower?",
+   "o": [
+    "Toronto",
+    "Ottawa",
+    "Istanbul"
+   ],
+   "why": "The CN Tower is in Toronto."
+  },
+  {
+   "q": "Which languages are spoken in Canada?",
+   "o": [
+    "English and French",
+    "Arabic and Spanish",
+    "Italian and German"
+   ],
+   "why": "Canada uses English and French."
+  },
+  {
+   "q": "The name 'Canada' comes from a word meaning ...",
+   "o": [
+    "village",
+    "river",
+    "forest"
+   ],
+   "why": "The name comes from a word meaning 'village'."
+  },
+  {
+   "q": "Which is a Canadian wild animal?",
+   "o": [
+    "Moose",
+    "Camel",
+    "Kangaroo"
+   ],
+   "why": "Moose live in Canada's forests."
+  },
+  {
+   "q": "What is Canada famous for?",
+   "o": [
+    "Ice and snow",
+    "Hot deserts",
+    "Coral islands"
+   ],
+   "why": "Canada has long, cold winters."
+  },
+  {
+   "q": "Which explorer is mentioned in the history of Canada?",
+   "o": [
+    "A French explorer",
+    "A Japanese explorer",
+    "An Omani explorer"
+   ],
+   "why": "The text mentions a French explorer."
+  },
+  {
+   "q": "Which country is Canada's neighbour?",
+   "o": [
+    "The United States",
+    "Spain",
+    "Italy"
+   ],
+   "why": "The text mentions the United States."
+  },
+  {
+   "q": "Which bears live in Canada, according to the text?",
+   "o": [
+    "Black bears",
+    "Panda bears",
+    "Sun bears"
+   ],
+   "why": "Black bears are named in the text."
+  },
+  {
+   "q": "What did groups prepare in the mini project?",
+   "o": [
+    "A Fact File about a country",
+    "A menu",
+    "A complaint letter"
+   ],
+   "why": "Each group made a Fact File with facts about a country."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Capital of Canada",
+   "a": "Ottawa",
+   "d": [
+    "Toronto",
+    "Dublin",
+    "Paris"
+   ]
+  },
+  {
+   "q": "City of the CN Tower",
+   "a": "Toronto",
+   "d": [
+    "Ottawa",
+    "Istanbul",
+    "Rome"
+   ]
+  },
+  {
+   "q": "'Canada' comes from a word for ...",
+   "a": "village",
+   "d": [
+    "river",
+    "forest",
+    "island"
+   ]
+  },
+  {
+   "q": "A language of Canada",
+   "a": "French",
+   "d": [
+    "Arabic",
+    "Turkish",
+    "Spanish"
+   ]
+  },
+  {
+   "q": "A large Canadian deer",
+   "a": "moose",
+   "d": [
+    "camel",
+    "zebra",
+    "goat"
+   ]
+  },
+  {
+   "q": "Canada's ... hares",
+   "a": "Arctic",
+   "d": [
+    "Desert",
+    "Tropical",
+    "African"
+   ]
+  },
+  {
+   "q": "Canada's black ...",
+   "a": "bears",
+   "d": [
+    "camels",
+    "lions",
+    "tigers"
+   ]
+  },
+  {
+   "q": "Canada is famous for ice and ...",
+   "a": "snow",
+   "d": [
+    "sand",
+    "dust",
+    "palms"
+   ]
+  },
+  {
+   "q": "Nationality of the explorer",
+   "a": "French",
+   "d": [
+    "Omani",
+    "Chinese",
+    "Indian"
+   ]
+  },
+  {
+   "q": "Canada's neighbour",
+   "a": "United States",
+   "d": [
+    "Spain",
+    "Ireland",
+    "Italy"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which wild animals are found in Canada?",
+   "o": [
+    "Black bears, caribou, moose, red foxes and Arctic hares",
+    "Lions, zebras and giraffes",
+    "Camels, goats and oryx",
+    "Kangaroos and koalas"
+   ],
+   "why": "These animals live in Canada's cold forests and north."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the name 'Canada' come from?",
+   "o": [
+    "A word meaning 'village'",
+    "A word meaning 'snow'",
+    "The name of a king",
+    "A word meaning 'tower'"
+   ],
+   "why": "The text says the name comes from a word meaning 'village'."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two languages are spoken in Canada?",
+   "o": [
+    "English and French",
+    "French and Spanish",
+    "English and German",
+    "Arabic and English"
+   ],
+   "why": "Canada is bilingual: English and French."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which tower is in Toronto?",
+   "o": [
+    "The CN Tower",
+    "The Eiffel Tower",
+    "The Burj Khalifa",
+    "Bahla Fort"
+   ],
+   "why": "The CN Tower stands in Toronto."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The question says 'Answer in no more than three words'. Which answer is correct for 'What is Canada famous for?'",
+   "o": [
+    "ice and snow",
+    "it is famous for lots of ice and snow",
+    "Canada is a big cold country with ice",
+    "the very cold snowy weather in winter"
+   ],
+   "why": "'Ice and snow' gives the answer in three words."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A visitor wants to see the CN Tower and then visit the capital. Which two cities should they go to?",
+   "o": [
+    "Toronto, then Ottawa",
+    "Ottawa, then Dublin",
+    "Toronto, then Istanbul",
+    "Ottawa only"
+   ],
+   "why": "The CN Tower is in Toronto and the capital is Ottawa."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are making a Fact File about Canada. Which fact is correct?",
+   "o": [
+    "Capital: Ottawa",
+    "Capital: Toronto",
+    "Language: only Spanish",
+    "Famous for: hot deserts"
+   ],
+   "why": "Ottawa is the capital of Canada."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Canada famous for ice and snow?",
+   "o": [
+    "It has long, cold winters",
+    "It is near the equator",
+    "It has many deserts",
+    "It is a small island"
+   ],
+   "why": "Cold winters bring lots of ice and snow."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A classmate writes: 'Toronto is the capital of Canada because the CN Tower is there.' What is wrong with this?",
+   "o": [
+    "The CN Tower is in Toronto, but the capital is Ottawa",
+    "The CN Tower is in Ottawa",
+    "Canada has no capital",
+    "Nothing is wrong"
+   ],
+   "why": "A famous building does not make a city the capital."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which animal is the odd one out for Canada's wildlife?",
+   "o": [
+    "Camel",
+    "Moose",
+    "Caribou",
+    "Red fox"
+   ],
+   "why": "Camels live in hot deserts, not in Canada's cold climate."
+  }
+ ]
+}

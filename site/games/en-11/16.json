@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 4 - Unit 1: Smart Homes",
+ "outcomes": [
+  "Explain what a smart home is and what it can do",
+  "Read a text to find specific answers",
+  "Discuss the advantages and disadvantages of smart homes"
+ ],
+ "tf": [
+  {
+   "s": "In a smart home, appliances have computers inside and are controlled by a computer.",
+   "t": true,
+   "why": "Yes! That is what makes a home smart."
+  },
+  {
+   "s": "Appliances in a smart home are connected through the home's electrical wires.",
+   "t": true,
+   "why": "Right! The wires connect everything."
+  },
+  {
+   "s": "Electronic cupboards and fridges can talk to shops over the Internet.",
+   "t": true,
+   "why": "Correct! They can help with shopping."
+  },
+  {
+   "s": "You cannot turn things on and off in a smart home when you are away.",
+   "t": false,
+   "why": "You can use a mobile phone or send a message over the Internet."
+  },
+  {
+   "s": "A smart home can save money by turning off lights and air conditioners that are not needed.",
+   "t": true,
+   "why": "Good! It also shows how much money is saved."
+  },
+  {
+   "s": "Many new appliances like washing machines now have computers inside.",
+   "t": true,
+   "why": "Yes, technology is inside many appliances."
+  },
+  {
+   "s": "The Top Tip says you should read for two hours every day.",
+   "t": false,
+   "why": "The Top Tip says fifteen or twenty minutes a day."
+  },
+  {
+   "s": "The Top Tip says reading is like learning a sport.",
+   "t": true,
+   "why": "Right! You improve through regular practice."
+  },
+  {
+   "s": "Smart homes have no disadvantages.",
+   "t": false,
+   "why": "They can be expensive, may break down or can be hacked."
+  },
+  {
+   "s": "When you walk into a room in a smart home, the lights can come on by themselves.",
+   "t": true,
+   "why": "Yes, and the temperature adjusts too."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is a smart home?",
+   "o": [
+    "a home whose appliances are controlled by a computer",
+    "a very old house",
+    "a house with no electricity"
+   ],
+   "why": "Computers connect and control everything."
+  },
+  {
+   "q": "How are appliances connected in a smart home?",
+   "o": [
+    "through the electrical wires",
+    "through water pipes",
+    "through the windows"
+   ],
+   "why": "The home's wires link the appliances."
+  },
+  {
+   "q": "Which appliances can talk to shops?",
+   "o": [
+    "electronic cupboards and fridges",
+    "doors and windows",
+    "chairs and tables"
+   ],
+   "why": "They can order food over the Internet."
+  },
+  {
+   "q": "How can you control your home when you are away?",
+   "o": [
+    "with a mobile phone",
+    "with a pencil",
+    "with a key only"
+   ],
+   "why": "You can also send a message over the Internet."
+  },
+  {
+   "q": "How long should you read each day, according to the Top Tip?",
+   "o": [
+    "fifteen or twenty minutes",
+    "five hours",
+    "one minute"
+   ],
+   "why": "Short regular reading helps a lot."
+  },
+  {
+   "q": "Complete: In smart homes, appliances are controlled by a ___.",
+   "o": [
+    "computer",
+    "person",
+    "clock"
+   ],
+   "why": "A computer controls the appliances."
+  },
+  {
+   "q": "Which is a disadvantage of a smart home?",
+   "o": [
+    "it can be expensive",
+    "it saves money",
+    "it is convenient"
+   ],
+   "why": "Smart technology can cost a lot."
+  },
+  {
+   "q": "What is an 'appliance'?",
+   "o": [
+    "a machine used in the home",
+    "a type of food",
+    "a kind of shop"
+   ],
+   "why": "A washing machine is an appliance."
+  },
+  {
+   "q": "How does a smart home save money?",
+   "o": [
+    "by turning off things not needed",
+    "by buying more lights",
+    "by leaving the air conditioner on"
+   ],
+   "why": "Saving energy saves money."
+  },
+  {
+   "q": "Why is reading like learning a sport?",
+   "o": [
+    "you improve with regular practice",
+    "it needs a ball",
+    "it is done outside"
+   ],
+   "why": "Practise every day to get better."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Home controlled by a computer",
+   "a": "smart home",
+   "d": [
+    "old house",
+    "tent",
+    "hotel"
+   ]
+  },
+  {
+   "q": "Washing machines have ___ inside",
+   "a": "computers",
+   "d": [
+    "toys",
+    "books",
+    "plants"
+   ]
+  },
+  {
+   "q": "Appliances connect through…",
+   "a": "electrical wires",
+   "d": [
+    "water pipes",
+    "windows",
+    "doors"
+   ]
+  },
+  {
+   "q": "Appliance that talks to shops",
+   "a": "fridge",
+   "d": [
+    "chair",
+    "window",
+    "bed"
+   ]
+  },
+  {
+   "q": "Control your home away with a…",
+   "a": "mobile phone",
+   "d": [
+    "pencil",
+    "book",
+    "ruler"
+   ]
+  },
+  {
+   "q": "Daily reading time (Top Tip)",
+   "a": "15–20 minutes",
+   "d": [
+    "2 hours",
+    "1 minute",
+    "5 hours"
+   ]
+  },
+  {
+   "q": "Machine used in the home",
+   "a": "appliance",
+   "d": [
+    "itinerary",
+    "brochure",
+    "souk"
+   ]
+  },
+  {
+   "q": "Smart homes help save…",
+   "a": "money",
+   "d": [
+    "time zones",
+    "homework",
+    "sand"
+   ]
+  },
+  {
+   "q": "A smart home can be…",
+   "a": "hacked",
+   "d": [
+    "eaten",
+    "planted",
+    "painted"
+   ]
+  },
+  {
+   "q": "Reading is like learning a…",
+   "a": "sport",
+   "d": [
+    "song",
+    "recipe",
+    "map"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What happens when you walk into a room in a smart home?",
+   "o": [
+    "the lights come on and the temperature adjusts",
+    "the doors lock forever",
+    "the fridge turns off",
+    "nothing happens"
+   ],
+   "why": "Your favourite song can play and pictures can appear on screens."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the Top Tip say is the way to improve reading?",
+   "o": [
+    "regular practice, reading every day",
+    "reading only once a year",
+    "reading only in exams",
+    "never reading at home"
+   ],
+   "why": "Reading a lot every day helps."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a possible problem with smart homes?",
+   "o": [
+    "they may break down",
+    "they save energy",
+    "they are convenient",
+    "they turn lights off"
+   ],
+   "why": "Technology can fail."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do electronic cupboards and fridges do in a smart home?",
+   "o": [
+    "talk to shops over the Internet",
+    "cook food by themselves",
+    "clean the house",
+    "play football"
+   ],
+   "why": "They can help order what you need."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are at work and forgot to turn off the air conditioner at home. In a smart home, what can you do?",
+   "o": [
+    "turn it off with your mobile phone",
+    "nothing at all",
+    "wait until you get home",
+    "call the shop"
+   ],
+   "why": "You can control appliances when you are away."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which reading strategy helps you answer a focus question?",
+   "o": [
+    "read the question, scan for key words and underline the answer",
+    "read every word slowly many times",
+    "only look at the pictures",
+    "read the last line only"
+   ],
+   "why": "Scanning helps you find specific answers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which smart feature could be most useful in a school?",
+   "o": [
+    "lights that turn off when classrooms are empty",
+    "fridges that order pizza",
+    "beds that make themselves",
+    "doors that never open"
+   ],
+   "why": "Saving energy is useful in schools."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can a smart home help with high energy prices?",
+   "o": [
+    "It turns off lights and air conditioners that are not needed",
+    "It uses more electricity",
+    "It keeps all lights on",
+    "It needs no electricity"
+   ],
+   "why": "Using less energy saves money."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Someone worries that a smart home can be hacked. What does this mean?",
+   "o": [
+    "Someone could break into its computer system",
+    "The house could fall down",
+    "The fridge could get cold",
+    "The lights would be too bright"
+   ],
+   "why": "Connected systems need protection."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is a smart home described as convenient?",
+   "o": [
+    "It does many jobs automatically for you",
+    "It is far from shops",
+    "It has no computers",
+    "It needs more work"
+   ],
+   "why": "Automatic features make life easier."
+  }
+ ]
+}

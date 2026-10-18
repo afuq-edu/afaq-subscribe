@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 2: Let's dress up!",
+ "lesson": "Unit 2 – Lesson 9: Get ready for … Pre A1 Starters",
+ "outcomes": [
+  "I can read a sentence and put a tick or a cross.",
+  "I can listen and find people by their clothes.",
+  "I can say a sentence about a picture."
+ ],
+ "tf": [
+  {
+   "s": "In the reading test, we put a tick for a correct sentence.",
+   "t": true,
+   "why": "Yes! A tick means the sentence is right."
+  },
+  {
+   "s": "We put a cross when the sentence does not match the picture.",
+   "t": true,
+   "why": "Right! A cross means the sentence is wrong."
+  },
+  {
+   "s": "We check the person (I, you, they) and the clothes.",
+   "t": true,
+   "why": "Great tip! Check who and what."
+  },
+  {
+   "s": "Picture: one boy in a cap. They're wearing caps. This is correct.",
+   "t": false,
+   "why": "One boy: He's wearing a cap. So we put a cross."
+  },
+  {
+   "s": "In the listening test, we listen two times.",
+   "t": true,
+   "why": "Yes, we listen twice."
+  },
+  {
+   "s": "Clothes and colours help us find the person.",
+   "t": true,
+   "why": "Well done! Clothes, colours and actions are clues."
+  },
+  {
+   "s": "In the listening test, we draw lines from names to people.",
+   "t": true,
+   "why": "Yes! We draw a line from each name to a person."
+  },
+  {
+   "s": "We only look at the colours, not the person.",
+   "t": false,
+   "why": "We check the person and the clothes too."
+  },
+  {
+   "s": "When we put a cross, we can say the correct sentence.",
+   "t": true,
+   "why": "Good! Saying the correct sentence shows why it is wrong."
+  },
+  {
+   "s": "In Say and find, your partner says a colour and you say a number.",
+   "t": false,
+   "why": "Your partner says a sentence, and you find the picture number."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How do you mark a correct sentence?",
+   "o": [
+    "With a tick",
+    "With a cross",
+    "With a circle"
+   ],
+   "why": "A tick shows the sentence is correct."
+  },
+  {
+   "q": "How many times do you listen?",
+   "o": [
+    "Twice",
+    "Once",
+    "Five times"
+   ],
+   "why": "We listen two times."
+  },
+  {
+   "q": "What do you check first?",
+   "o": [
+    "The person and the clothes",
+    "The page number",
+    "The time"
+   ],
+   "why": "Check who and what they wear."
+  },
+  {
+   "q": "Picture: one girl in a coat. Choose the sentence.",
+   "o": [
+    "She's wearing a coat.",
+    "They're wearing coats.",
+    "I'm wearing a coat."
+   ],
+   "why": "One girl: She's wearing a coat."
+  },
+  {
+   "q": "Picture: two boys in trainers. Choose the sentence.",
+   "o": [
+    "They're wearing trainers.",
+    "He's wearing trainers.",
+    "I'm wearing trainers."
+   ],
+   "why": "Two boys: They're wearing trainers."
+  },
+  {
+   "q": "In the listening test you draw …",
+   "o": [
+    "lines",
+    "pictures",
+    "circles"
+   ],
+   "why": "We draw lines from names to people."
+  },
+  {
+   "q": "What clues help you find the person?",
+   "o": [
+    "Clothes and actions",
+    "Their age",
+    "Their phone number"
+   ],
+   "why": "Listen for clothes, colours and actions."
+  },
+  {
+   "q": "A sentence does not match the picture. You put …",
+   "o": [
+    "a cross",
+    "a tick",
+    "a star"
+   ],
+   "why": "A cross means it does not match."
+  },
+  {
+   "q": "In Say and find, your partner says …",
+   "o": [
+    "the picture number",
+    "the price",
+    "a colour only"
+   ],
+   "why": "Your partner finds the number of the picture."
+  },
+  {
+   "q": "Correct this: They're wearing caps. (one boy)",
+   "o": [
+    "He's wearing a cap.",
+    "They wearing a cap.",
+    "He wearing caps."
+   ],
+   "why": "One boy: He's wearing a cap."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Mark for a correct sentence",
+   "a": "tick",
+   "d": [
+    "cross",
+    "circle",
+    "star"
+   ]
+  },
+  {
+   "q": "Mark for a wrong sentence",
+   "a": "cross",
+   "d": [
+    "tick",
+    "circle",
+    "star"
+   ]
+  },
+  {
+   "q": "How many times do you listen?",
+   "a": "twice",
+   "d": [
+    "once",
+    "three times",
+    "ten times"
+   ]
+  },
+  {
+   "q": "You draw ___ to the people.",
+   "a": "lines",
+   "d": [
+    "circles",
+    "ticks",
+    "stars"
+   ]
+  },
+  {
+   "q": "One boy: ___ wearing a cap.",
+   "a": "He's",
+   "d": [
+    "They're",
+    "We're",
+    "I'm"
+   ]
+  },
+  {
+   "q": "One girl: ___ wearing a coat.",
+   "a": "She's",
+   "d": [
+    "They're",
+    "He's",
+    "We're"
+   ]
+  },
+  {
+   "q": "Two girls: ___ wearing hijabs.",
+   "a": "They're",
+   "d": [
+    "She's",
+    "He's",
+    "I'm"
+   ]
+  },
+  {
+   "q": "Me: ___ wearing a baseball cap.",
+   "a": "I'm",
+   "d": [
+    "They're",
+    "He's",
+    "She's"
+   ]
+  },
+  {
+   "q": "Your friend: ___ wearing jeans.",
+   "a": "You're",
+   "d": [
+    "I'm",
+    "They're",
+    "He's"
+   ]
+  },
+  {
+   "q": "A clue: what they wear",
+   "a": "clothes",
+   "d": [
+    "names",
+    "prices",
+    "numbers"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does a tick mean?",
+   "o": [
+    "The sentence is correct.",
+    "The sentence is wrong.",
+    "Listen again.",
+    "Draw a line."
+   ],
+   "why": "A tick shows a correct sentence."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In Listening Part 1, what do you do?",
+   "o": [
+    "Listen and draw lines",
+    "Read and write a story",
+    "Sing a song",
+    "Count to ten"
+   ],
+   "why": "We listen and draw lines from names to people."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence matches I'm wearing a baseball cap?",
+   "o": [
+    "The speaker has a cap on.",
+    "Two children wear caps.",
+    "A girl has a coat.",
+    "Nobody wears a cap."
+   ],
+   "why": "I'm means the speaker."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the steps for each sentence?",
+   "o": [
+    "Who? What? Tick or cross?",
+    "Colour, draw, cut",
+    "Sing, clap, sit",
+    "Read, sleep, play"
+   ],
+   "why": "Check who, what, then tick or cross."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You talk to a girl in jeans. Sentence: You're wearing jeans. Tick or cross?",
+   "o": [
+    "Tick",
+    "Cross",
+    "Circle",
+    "Line"
+   ],
+   "why": "It matches the picture, so it gets a tick."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture: two children in trainers. Sentence: They're wearing slippers.",
+   "o": [
+    "Cross",
+    "Tick",
+    "Circle",
+    "Star"
+   ],
+   "why": "They wear trainers, not slippers, so cross."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You hear: He's wearing a baseball cap. Who do you look for?",
+   "o": [
+    "A boy with a cap",
+    "A girl with a hijab",
+    "A man in a coat",
+    "Two girls in jeans"
+   ],
+   "why": "He's means a boy or man, with a cap."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the line from Zaid go to the boy near the slide?",
+   "o": [
+    "The recording says what he is wearing or doing.",
+    "He is the tallest.",
+    "He is first in the picture.",
+    "He has the longest name."
+   ],
+   "why": "Clues about clothes and actions tell us who it is."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Picture: one boy in a cap. Sentence: They're wearing caps. What is wrong?",
+   "o": [
+    "The person: it is one boy, not they.",
+    "The colour of the slide",
+    "Nothing is wrong",
+    "The name of the park"
+   ],
+   "why": "They is for two or more people."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we listen two times?",
+   "o": [
+    "To check our answers",
+    "To sing the song",
+    "To draw a new picture",
+    "To count to ten"
+   ],
+   "why": "The second time helps us check."
+  }
+ ]
+}

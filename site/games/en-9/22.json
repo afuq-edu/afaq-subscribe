@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 2: Connections",
+ "lesson": "Lesson 6: Writing – a story",
+ "outcomes": [
+  "Use the past simple and past continuous to tell a story.",
+  "Make my writing stronger with strong adjectives like hilarious and huge.",
+  "Plan and write a story of about 100 words."
+ ],
+ "tf": [
+  {
+   "s": "In a story, we use the past simple for the main events.",
+   "t": true,
+   "why": "Main events are short finished actions."
+  },
+  {
+   "s": "We use the past continuous for background actions in a story.",
+   "t": true,
+   "why": "Like 'We were waiting outside the hall.'"
+  },
+  {
+   "s": "'I'm in holiday again' is correct.",
+   "t": false,
+   "why": "We say 'on holiday'."
+  },
+  {
+   "s": "We say 'proud of myself'.",
+   "t": true,
+   "why": "'Proud' goes with 'of'."
+  },
+  {
+   "s": "We can say 'very fantastic'.",
+   "t": false,
+   "why": "With strong adjectives we use 'absolutely': absolutely fantastic."
+  },
+  {
+   "s": "'Hilarious' means very funny.",
+   "t": true,
+   "why": "Hilarious is a strong adjective for funny."
+  },
+  {
+   "s": "'Huge' means very small.",
+   "t": false,
+   "why": "'Huge' means very big."
+  },
+  {
+   "s": "The given first sentence must come at the beginning of your story.",
+   "t": true,
+   "why": "Start your story with the sentence in the task."
+  },
+  {
+   "s": "'Miserable' means very happy.",
+   "t": false,
+   "why": "'Miserable' means very sad."
+  },
+  {
+   "s": "A good story has a clear ending.",
+   "t": true,
+   "why": "The ending helps the reader enjoy the story."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Replace 'very bad to eat' with a strong adjective.",
+   "o": [
+    "disgusting",
+    "delicious",
+    "hilarious"
+   ],
+   "why": "Disgusting means very bad to eat."
+  },
+  {
+   "q": "Replace 'very angry' with a strong adjective.",
+   "o": [
+    "furious",
+    "miserable",
+    "huge"
+   ],
+   "why": "Furious means very angry."
+  },
+  {
+   "q": "Complete: While she ___, I picked up my laptop.",
+   "o": [
+    "was presenting",
+    "presents",
+    "is presenting"
+   ],
+   "why": "A longer past action in progress takes the past continuous."
+  },
+  {
+   "q": "Which word goes with strong adjectives like 'fantastic'?",
+   "o": [
+    "absolutely",
+    "very",
+    "a bit"
+   ],
+   "why": "We say 'absolutely fantastic'."
+  },
+  {
+   "q": "Replace 'really big' with a strong adjective.",
+   "o": [
+    "huge",
+    "terrible",
+    "furious"
+   ],
+   "why": "Huge means really big."
+  },
+  {
+   "q": "Complete the post: ___ out my new video!",
+   "o": [
+    "Check",
+    "Look",
+    "Take"
+   ],
+   "why": "'Check out' means look at something interesting."
+  },
+  {
+   "q": "Which plan question is about the place?",
+   "o": [
+    "Where did it happen?",
+    "Who was there?",
+    "What happened in the end?"
+   ],
+   "why": "'Where' asks about the place."
+  },
+  {
+   "q": "Replace 'very good to eat' with a strong adjective.",
+   "o": [
+    "delicious",
+    "disgusting",
+    "furious"
+   ],
+   "why": "Delicious means very good to eat."
+  },
+  {
+   "q": "How long should your story be?",
+   "o": [
+    "about 100 words",
+    "about 10 words",
+    "about 500 words"
+   ],
+   "why": "The task asks for about 100 words."
+  },
+  {
+   "q": "Which tense shows a longer action in progress in the past?",
+   "o": [
+    "past continuous",
+    "past simple",
+    "present simple"
+   ],
+   "why": "was/were + -ing shows an action in progress."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Strong word for 'very funny'",
+   "a": "hilarious",
+   "d": [
+    "furious",
+    "huge",
+    "miserable"
+   ]
+  },
+  {
+   "q": "Strong word for 'so sad'",
+   "a": "miserable",
+   "d": [
+    "hilarious",
+    "delicious",
+    "huge"
+   ]
+  },
+  {
+   "q": "Strong word for 'really big'",
+   "a": "huge",
+   "d": [
+    "terrible",
+    "furious",
+    "delicious"
+   ]
+  },
+  {
+   "q": "Strong word for 'really good'",
+   "a": "fantastic",
+   "d": [
+    "disgusting",
+    "miserable",
+    "terrible"
+   ]
+  },
+  {
+   "q": "It was ___ fantastic!",
+   "a": "absolutely",
+   "d": [
+    "very",
+    "a bit",
+    "slightly"
+   ]
+  },
+  {
+   "q": "So proud ___ myself!",
+   "a": "of",
+   "d": [
+    "with",
+    "at",
+    "on"
+   ]
+  },
+  {
+   "q": "Lucky me – I'm ___ holiday!",
+   "a": "on",
+   "d": [
+    "in",
+    "at",
+    "of"
+   ]
+  },
+  {
+   "q": "Tense for main story events",
+   "a": "past simple",
+   "d": [
+    "past continuous",
+    "present simple",
+    "present continuous"
+   ]
+  },
+  {
+   "q": "Tense for background actions",
+   "a": "past continuous",
+   "d": [
+    "past simple",
+    "present simple",
+    "present continuous"
+   ]
+  },
+  {
+   "q": "Past simple of 'speak'",
+   "a": "spoke",
+   "d": [
+    "speaked",
+    "spoken",
+    "speaking"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does 'disgusting' mean?",
+   "o": [
+    "very bad, especially to taste",
+    "very funny",
+    "very big",
+    "very sad"
+   ],
+   "why": "Disgusting food tastes very bad."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which questions help you plan a story?",
+   "o": [
+    "When, where, who, what and the ending",
+    "Only 'how much?'",
+    "Only 'why?'",
+    "Only 'what time?'"
+   ],
+   "why": "These five questions give your story a clear plan."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word can go with both ordinary and strong adjectives?",
+   "o": [
+    "really",
+    "very",
+    "absolutely",
+    "extremely"
+   ],
+   "why": "'Really good' and 'really fantastic' are both correct."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is a strong adjective?",
+   "o": [
+    "hilarious",
+    "funny",
+    "big",
+    "sad"
+   ],
+   "why": "Hilarious means very funny."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: We ___ for the bus when it started to rain.",
+   "o": [
+    "were waiting",
+    "wait",
+    "are waiting",
+    "waits"
+   ],
+   "why": "The waiting was in progress when the rain started."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Improve this sentence: 'The beach was really big and the food was very good.'",
+   "o": [
+    "The beach was huge and the food was delicious.",
+    "The beach was tiny and the food was disgusting.",
+    "The beach was very huge and the food was very delicious.",
+    "The beach was big and the food was good."
+   ],
+   "why": "Strong adjectives make writing more interesting."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct this sentence: 'It was very fantastic!'",
+   "o": [
+    "It was absolutely fantastic!",
+    "It was extremely fantastic!",
+    "It was a very fantastic!",
+    "It was fantastic very!"
+   ],
+   "why": "Use 'absolutely' with strong adjectives."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the story use 'were waiting' and not 'waited'?",
+   "o": [
+    "It is a longer background action in progress when something happened.",
+    "It is a short finished action.",
+    "It is a habit.",
+    "It happens in the future."
+   ],
+   "why": "The past continuous sets the background."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What makes a story more interesting for the reader?",
+   "o": [
+    "Strong adjectives, a clear order of events and a good ending",
+    "Very short sentences only",
+    "No adjectives at all",
+    "Writing it all in the future tense"
+   ],
+   "why": "Good stories are clear and colourful."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to check a partner's story?",
+   "o": [
+    "To suggest ways to improve adjectives and tenses",
+    "To copy it",
+    "To make it under ten words",
+    "To change the first sentence"
+   ],
+   "why": "Helpful feedback makes stories better."
+  }
+ ]
+}

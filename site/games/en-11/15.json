@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 3 - Unit 5: Designing a Tour",
+ "outcomes": [
+  "Read and analyse a description of a tour in Istanbul",
+  "Use sequence words to order events",
+  "Design a tour for visitors to Oman"
+ ],
+ "tf": [
+  {
+   "s": "Sultanahmet is the old part of Istanbul.",
+   "t": true,
+   "why": "Yes! The walking tour visits old Istanbul."
+  },
+  {
+   "s": "The Sultanahmet walking tour starts at 9 a.m.",
+   "t": true,
+   "why": "Right! It starts in the morning."
+  },
+  {
+   "s": "The walking tour starts at the Arasta Bazaar.",
+   "t": false,
+   "why": "The tour starts at Topkapi Palace."
+  },
+  {
+   "s": "The Blue Mosque takes its name from the blue tiles on the inside of its walls.",
+   "t": true,
+   "why": "Correct! The tiles give it its name."
+  },
+  {
+   "s": "The 'Istanbul by night' tour includes dinner and a show of traditional music.",
+   "t": true,
+   "why": "Yes! It is at a Turkish restaurant."
+  },
+  {
+   "s": "You can find carpets, jewellery and ceramics in the Arasta Bazaar.",
+   "t": true,
+   "why": "Right! The bazaar sells many things."
+  },
+  {
+   "s": "'Finally' is used to start a sequence.",
+   "t": false,
+   "why": "'First' starts a sequence; 'finally' ends it."
+  },
+  {
+   "s": "An itinerary is a plan or list of places you will visit on a journey.",
+   "t": true,
+   "why": "Good! Tour designers write itineraries."
+  },
+  {
+   "s": "A sanctuary is a busy market for tourists.",
+   "t": false,
+   "why": "A sanctuary is a protected area for animals or birds."
+  },
+  {
+   "s": "'Our final stop will be…' shows the first place on a tour.",
+   "t": false,
+   "why": "It shows the last place on the tour."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where does the Sultanahmet tour start?",
+   "o": [
+    "Topkapi Palace",
+    "the Blue Mosque",
+    "the Arasta Bazaar"
+   ],
+   "why": "The tour begins at the palace."
+  },
+  {
+   "q": "What time does the Sultanahmet tour start?",
+   "o": [
+    "9 a.m.",
+    "9 p.m.",
+    "12 noon"
+   ],
+   "why": "It is a morning walking tour."
+  },
+  {
+   "q": "What is Sultanahmet?",
+   "o": [
+    "the old part of Istanbul",
+    "a Turkish restaurant",
+    "a new airport"
+   ],
+   "why": "Sultanahmet is old Istanbul."
+  },
+  {
+   "q": "Which tour includes a show of traditional music?",
+   "o": [
+    "Istanbul by night",
+    "walking tour of Sultanahmet",
+    "a desert trip"
+   ],
+   "why": "It also includes dinner."
+  },
+  {
+   "q": "Why is the Blue Mosque called 'blue'?",
+   "o": [
+    "the blue tiles on its inside walls",
+    "its blue doors",
+    "the blue sea outside"
+   ],
+   "why": "The tiles give it its name."
+  },
+  {
+   "q": "Which word starts a sequence?",
+   "o": [
+    "first",
+    "finally",
+    "after that"
+   ],
+   "why": "Start with 'first'."
+  },
+  {
+   "q": "Put in order: finally / first / then",
+   "o": [
+    "first, then, finally",
+    "then, first, finally",
+    "finally, then, first"
+   ],
+   "why": "'First' begins and 'finally' ends."
+  },
+  {
+   "q": "What is an 'itinerary'?",
+   "o": [
+    "a plan of places to visit",
+    "a type of boat",
+    "a hotel room"
+   ],
+   "why": "An itinerary lists your journey's stops."
+  },
+  {
+   "q": "Which phrase begins a tour description?",
+   "o": [
+    "Our tour starts at…",
+    "My name is…",
+    "Goodbye everyone…"
+   ],
+   "why": "It tells visitors where the tour begins."
+  },
+  {
+   "q": "What is a 'sanctuary'?",
+   "o": [
+    "a protected area for animals or birds",
+    "a shop for carpets",
+    "a kind of tour bus"
+   ],
+   "why": "Animals are safe in a sanctuary."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Old part of Istanbul",
+   "a": "Sultanahmet",
+   "d": [
+    "Topkapi",
+    "Arasta",
+    "Salalah"
+   ]
+  },
+  {
+   "q": "Where the walking tour starts",
+   "a": "Topkapi Palace",
+   "d": [
+    "Blue Mosque",
+    "Arasta Bazaar",
+    "Aya Sofia"
+   ]
+  },
+  {
+   "q": "Start time of the walking tour",
+   "a": "9 a.m.",
+   "d": [
+    "9 p.m.",
+    "7 a.m.",
+    "3 p.m."
+   ]
+  },
+  {
+   "q": "Market with carpets and ceramics",
+   "a": "Arasta Bazaar",
+   "d": [
+    "Topkapi Palace",
+    "Blue Mosque",
+    "Aya Sofia"
+   ]
+  },
+  {
+   "q": "Mosque named for its tiles",
+   "a": "Blue Mosque",
+   "d": [
+    "Green Mosque",
+    "Red Mosque",
+    "White Mosque"
+   ]
+  },
+  {
+   "q": "Word that starts a sequence",
+   "a": "first",
+   "d": [
+    "finally",
+    "then",
+    "next"
+   ]
+  },
+  {
+   "q": "Word that ends a sequence",
+   "a": "finally",
+   "d": [
+    "first",
+    "then",
+    "next"
+   ]
+  },
+  {
+   "q": "Plan of places on a journey",
+   "a": "itinerary",
+   "d": [
+    "sanctuary",
+    "bazaar",
+    "palace"
+   ]
+  },
+  {
+   "q": "Protected area for animals",
+   "a": "sanctuary",
+   "d": [
+    "itinerary",
+    "souq",
+    "bazaar"
+   ]
+  },
+  {
+   "q": "Traditional boat in Oman",
+   "a": "dhow",
+   "d": [
+    "yacht",
+    "ferry",
+    "canoe"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Name two reasons why people travel.",
+   "o": [
+    "to relax and to learn about other cultures",
+    "to stay at home and sleep",
+    "to do homework and exams",
+    "to stop seeing new places"
+   ],
+   "why": "Travel helps people relax and learn."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which tour includes a visit to Topkapi Palace?",
+   "o": [
+    "the walking tour of Sultanahmet",
+    "Istanbul by night",
+    "a desert trip",
+    "a dhow cruise"
+   ],
+   "why": "The walking tour starts at the palace."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a sequence word?",
+   "o": [
+    "after that",
+    "beautiful",
+    "palace",
+    "because"
+   ],
+   "why": "Sequence words show the order of events."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a 'package holiday'?",
+   "o": [
+    "a holiday where travel and hotel are arranged together",
+    "a holiday to send parcels",
+    "a holiday at home",
+    "a school trip only"
+   ],
+   "why": "Package holidays include travel and accommodation."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which phrase shows the order of places in the tour description?",
+   "o": [
+    "From Topkapi, it is a short walk to…",
+    "Turkish food is tasty.",
+    "Istanbul is a big city.",
+    "I like carpets."
+   ],
+   "why": "'From… it is a short walk to…' moves to the next place."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct: 'we will visit the fort then we go to the souq'.",
+   "o": [
+    "We will visit the fort, then we will go to the souq.",
+    "we will visit the fort then we will go the souq",
+    "We visit the fort, then we went to the souq.",
+    "We will visit the fort then we goes to the souq."
+   ],
+   "why": "Use a capital letter, a comma and the same future form."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best first sentence for a tour of Nizwa?",
+   "o": [
+    "Our tour starts at Nizwa Fort at 9 a.m.",
+    "Our final stop will be the hotel.",
+    "Finally, we will go home.",
+    "I like Istanbul."
+   ],
+   "why": "Begin with where and when the tour starts."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does a tour description use phrases like 'Our final stop will be…'?",
+   "o": [
+    "To show the order of places clearly",
+    "To give prices",
+    "To describe the weather",
+    "To ask questions"
+   ],
+   "why": "Sequence phrases help visitors follow the tour."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A visitor loves shopping for carpets and jewellery. Which part of the walking tour will they enjoy most?",
+   "o": [
+    "the Arasta Bazaar",
+    "Topkapi Palace",
+    "the Blue Mosque tiles",
+    "Istanbul by night"
+   ],
+   "why": "The bazaar sells carpets, jewellery, pictures and ceramics."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does a good tour of Oman need an itinerary?",
+   "o": [
+    "Visitors know which places they will see and in what order",
+    "It makes the tour longer",
+    "It replaces the tour guide",
+    "It is only for hotels"
+   ],
+   "why": "An itinerary plans the journey clearly."
+  }
+ ]
+}

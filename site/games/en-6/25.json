@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 2: Technology",
+  "lesson": "Unit 2 – Lesson 10: Over to you! and Review",
+  "outcomes": [
+    "I can read comments about technology and give my opinion.",
+    "I can use could/couldn’t, had to/didn’t have to and comparative adverbs.",
+    "I can remember and use the technology words from Unit 2."
+  ],
+  "tf": [
+    {"s": "Nadia’s app tells her if she says a word right.", "t": true, "why": "Yes, she clicks pictures, hears and says words, and the app checks her."},
+    {"s": "Najla downloaded a book onto her e-reader because she reads really slowly.", "t": true, "why": "Now she can listen to the book too."},
+    {"s": "Katya changed the first verse of the poem.", "t": false, "why": "She changed the last verse, about making videos."},
+    {"s": "The part of a tablet that you look at is the screen.", "t": true, "why": "You look at the screen to see pictures and words."},
+    {"s": "“We didn’t had to wear uniform.” is correct.", "t": false, "why": "After didn’t we use the base form: didn’t have to."},
+    {"s": "The comparative adverb of clearly is more clearly.", "t": true, "why": "Long adverbs use more: more clearly."},
+    {"s": "The comparative adverb of fast is more fast.", "t": false, "why": "We say faster, not more fast."},
+    {"s": "“They couldn’t use the computers yesterday.” talks about the past.", "t": true, "why": "Couldn’t is the past of can’t."},
+    {"s": "“He doesn’t have to go to school today” means he must go to school.", "t": false, "why": "Doesn’t have to means it is not necessary."},
+    {"s": "“I liked the poem because it was fun to perform.” gives an opinion and a reason.", "t": true, "why": "I liked … because … gives an opinion with a reason."}
+  ],
+  "boxes": [
+    {"q": "Complete: I read ___ than my sister. (fast)", "o": ["faster", "more fast", "fastly"], "why": "fast becomes faster."},
+    {"q": "Complete: She speaks English ___ than me. (clearly)", "o": ["more clearly", "clearlier", "clearer"], "why": "clearly becomes more clearly."},
+    {"q": "Correct the sentence: “We didn’t had to wear uniform.”", "o": ["We didn’t have to wear uniform.", "We didn’t has to wear uniform.", "We don’t had to wear uniform."], "why": "didn’t + have to."},
+    {"q": "What did Katya change in the poem?", "o": ["the last verse", "the title", "the first line"], "why": "She changed the last verse, about making videos."},
+    {"q": "Why did Najla use an e-reader?", "o": ["She reads really slowly.", "She lost her book.", "Her book was too heavy."], "why": "She can listen to the book as well as read it."},
+    {"q": "Complete: My grandfather ___ walk to school.", "o": ["had to", "has to walking", "have to"], "why": "had to tells us it was necessary in the past."},
+    {"q": "Complete: Yesterday I ___ open the app. It didn’t work.", "o": ["couldn’t", "can’t", "don’t have to"], "why": "Yesterday is the past, so we use couldn’t."},
+    {"q": "Which sentence gives an opinion?", "o": ["I liked the lesson because it was fun.", "The lesson was on Monday.", "The lesson is in Unit 2."], "why": "I liked … because … gives your opinion."},
+    {"q": "Complete: You can find your way ___ on the phone.", "o": ["easily", "easy", "easier"], "why": "We use the adverb easily after the verb."},
+    {"q": "How does Nadia learn English with her app?", "o": ["She clicks pictures and hears and says words.", "She writes letters to friends.", "She watches films at the cinema."], "why": "The app also tells her if she is right."}
+  ],
+  "hunt": [
+    {"q": "Part of a tablet you look at", "a": "screen", "d": ["password", "printer", "icon"]},
+    {"q": "fast → ___", "a": "faster", "d": ["more fast", "fastly", "fastest"]},
+    {"q": "clearly → ___", "a": "more clearly", "d": ["clearlier", "clearer", "most clear"]},
+    {"q": "well → ___", "a": "better", "d": ["weller", "more well", "best"]},
+    {"q": "Past of can’t", "a": "couldn’t", "d": ["can’t", "don’t", "won’t"]},
+    {"q": "Past of have to", "a": "had to", "d": ["has to", "have to", "having to"]},
+    {"q": "We didn’t ___ to wear uniform.", "a": "have", "d": ["had", "has", "having"]},
+    {"q": "Najla reads really…", "a": "slowly", "d": ["quickly", "loudly", "badly"]},
+    {"q": "Najla downloaded the book onto…", "a": "an e-reader", "d": ["a printer", "a camera", "a TV"]},
+    {"q": "Katya changed the ___ verse.", "a": "last", "d": ["first", "second", "third"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What was the last verse of Katya’s poem about?", "o": ["making videos", "playing football", "cooking dinner", "going to the beach"], "why": "Katya wrote a new last verse about making videos."},
+    {"lv": "التذكر", "q": "Which sentence is from the dictation?", "o": ["They couldn’t use the computers yesterday.", "They can’t use computers today.", "They didn’t like the computers.", "They had new computers."], "why": "This is one of the three dictation sentences."},
+    {"lv": "التذكر", "q": "Which phrase do we use to give an opinion?", "o": ["I liked … because …", "Could you …?", "Please can I …?", "Do you have time to …?"], "why": "I liked … because … gives an opinion and a reason."},
+    {"lv": "التذكر", "q": "Which group of words is all devices?", "o": ["tablet, laptop, smartphone", "screen, slowly, faster", "download, upload, print", "football, tennis, volleyball"], "why": "Tablets, laptops and smartphones are devices."},
+    {"lv": "التطبيق", "q": "Choose the correct sentence.", "o": ["I write better than my brother.", "I write gooder than my brother.", "I write more good than my brother.", "I write weller than my brother."], "why": "The comparative of well is better."},
+    {"lv": "التطبيق", "q": "Today is a holiday. Which sentence is correct?", "o": ["He doesn’t have to go to school today.", "He has to go to school today.", "He couldn’t go to school today.", "He had to go to school today."], "why": "On a holiday it is not necessary to go to school."},
+    {"lv": "التطبيق", "q": "In the past, there were no computers at school. Which sentence fits?", "o": ["Students couldn’t use computers.", "Students can use computers.", "Students don’t have to use computers today.", "Students could use computers."], "why": "Couldn’t talks about something that was not possible in the past."},
+    {"lv": "التحليل", "q": "Which is a good point about technology, not a bad one?", "o": ["We can learn quickly with apps.", "We spend too much time on screens.", "Some games are very expensive.", "Apps sometimes open slowly."], "why": "Learning quickly is a benefit of technology."},
+    {"lv": "التحليل", "q": "How does technology help Najla?", "o": ["She can listen to a book because she reads slowly.", "She can play games all day.", "She doesn’t have to read anymore.", "She can take photos of books."], "why": "Listening helps her enjoy books even though she reads slowly."},
+    {"lv": "التحليل", "q": "Which comment is about technology and learning?", "o": ["My app helps me learn new English words.", "I went to the park with my family.", "My favourite food is rice.", "I play football every Friday."], "why": "It shows how an app helps someone learn."}
+  ]
+}

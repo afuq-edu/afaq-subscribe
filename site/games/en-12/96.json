@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: Eating Out (Writing)",
+ "lesson": "Writing an ending; good and bad restaurants; analysing essay structure / Planning and writing a narrative essay about an eating-out experience",
+ "outcomes": [
+  "Describe good and bad restaurants",
+  "Know the parts of a narrative essay and their purpose",
+  "Plan and write a narrative essay about eating out"
+ ],
+ "tf": [
+  {
+   "s": "'Delicious food' and 'reasonable prices' describe a good restaurant.",
+   "t": true,
+   "why": "Yes, these are good points."
+  },
+  {
+   "s": "'Attentive service' describes a bad restaurant.",
+   "t": false,
+   "why": "Attentive service means staff care for you, so it is good."
+  },
+  {
+   "s": "'Dirty cutlery' describes a bad restaurant.",
+   "t": true,
+   "why": "Right, nobody wants dirty knives and forks."
+  },
+  {
+   "s": "The model essay has five paragraphs.",
+   "t": true,
+   "why": "Correct, it has five paragraphs."
+  },
+  {
+   "s": "A topic sentence is usually the last sentence of a paragraph.",
+   "t": false,
+   "why": "It is usually the first sentence and gives the main idea."
+  },
+  {
+   "s": "'First, then, after that, finally' are linking words that show sequence.",
+   "t": true,
+   "why": "Yes, they show the order of events."
+  },
+  {
+   "s": "When you write the story ending, you should copy sentences from the text.",
+   "t": false,
+   "why": "Use your own ideas for the ending."
+  },
+  {
+   "s": "Sharing ideas with a group before writing helps you get ideas and feedback.",
+   "t": true,
+   "why": "Yes, others can help you improve your plan."
+  },
+  {
+   "s": "A narrative essay does not need a title.",
+   "t": false,
+   "why": "Your essay needs a suitable title."
+  },
+  {
+   "s": "'Our waiter was efficient, helpful and friendly' is a supporting detail.",
+   "t": true,
+   "why": "Well done, it supports the main idea."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which phrase describes a bad restaurant?",
+   "o": [
+    "errors on the bill",
+    "varied menu",
+    "delicious food"
+   ],
+   "why": "Mistakes on the bill are a bad sign."
+  },
+  {
+   "q": "What is 'cutlery'?",
+   "o": [
+    "knives, forks and spoons",
+    "chairs and tables",
+    "plates of food"
+   ],
+   "why": "We eat with cutlery."
+  },
+  {
+   "q": "What does 'cosy' mean?",
+   "o": [
+    "warm and comfortable",
+    "cold and empty",
+    "very noisy"
+   ],
+   "why": "A cosy place feels nice and relaxing."
+  },
+  {
+   "q": "What are 'reasonable prices'?",
+   "o": [
+    "fair prices, not too high",
+    "very high prices",
+    "no prices at all"
+   ],
+   "why": "Reasonable prices are fair."
+  },
+  {
+   "q": "Which part comes at the end of an essay?",
+   "o": [
+    "Conclusion",
+    "Introduction",
+    "Title"
+   ],
+   "why": "The conclusion finishes the essay."
+  },
+  {
+   "q": "What gives the main idea of a paragraph?",
+   "o": [
+    "The topic sentence",
+    "A supporting detail",
+    "The title"
+   ],
+   "why": "The topic sentence states the main idea."
+  },
+  {
+   "q": "Which title suits an essay about a bad meal?",
+   "o": [
+    "A Nightmare Meal",
+    "The Perfect Dinner",
+    "My Best Day Ever"
+   ],
+   "why": "'Nightmare' shows the meal was bad."
+  },
+  {
+   "q": "What does 'décor' mean?",
+   "o": [
+    "the decoration and style of a room",
+    "the price of food",
+    "the menu"
+   ],
+   "why": "Décor is how a place looks."
+  },
+  {
+   "q": "What is the 'body' of an essay?",
+   "o": [
+    "The paragraphs between the introduction and conclusion",
+    "The title",
+    "The last sentence"
+   ],
+   "why": "The body tells the main events."
+  },
+  {
+   "q": "Why should events be in order?",
+   "o": [
+    "So the essay flows and is easy to read",
+    "To make it longer",
+    "To confuse the reader"
+   ],
+   "why": "A clear order helps the reader."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Knives, forks and spoons",
+   "a": "Cutlery",
+   "d": [
+    "Décor",
+    "Menu",
+    "Bill"
+   ]
+  },
+  {
+   "q": "Warm and comfortable",
+   "a": "Cosy",
+   "d": [
+    "Rude",
+    "Dirty",
+    "Noisy"
+   ]
+  },
+  {
+   "q": "Fair, not too expensive",
+   "a": "Reasonable",
+   "d": [
+    "Rude",
+    "Dirty",
+    "Massive"
+   ]
+  },
+  {
+   "q": "The style and decoration of a room",
+   "a": "Décor",
+   "d": [
+    "Cutlery",
+    "Bill",
+    "Menu"
+   ]
+  },
+  {
+   "q": "Insects in a dirty kitchen",
+   "a": "Cockroaches",
+   "d": [
+    "Butterflies",
+    "Bees",
+    "Ladybirds"
+   ]
+  },
+  {
+   "q": "Gives the main idea of a paragraph",
+   "a": "Topic sentence",
+   "d": [
+    "Conclusion",
+    "Title",
+    "Body"
+   ]
+  },
+  {
+   "q": "The final paragraph of an essay",
+   "a": "Conclusion",
+   "d": [
+    "Introduction",
+    "Body",
+    "Title"
+   ]
+  },
+  {
+   "q": "Paragraphs in the model essay",
+   "a": "Five",
+   "d": [
+    "Three",
+    "Four",
+    "Seven"
+   ]
+  },
+  {
+   "q": "A word that shows sequence",
+   "a": "Finally",
+   "d": [
+    "Because",
+    "But",
+    "Although"
+   ]
+  },
+  {
+   "q": "A sign of a bad restaurant",
+   "a": "Rude waiters",
+   "d": [
+    "Varied menu",
+    "Delicious food",
+    "Cosy décor"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is a topic sentence?",
+   "o": [
+    "Usually the first sentence of a paragraph that gives the main idea",
+    "The last sentence of the essay",
+    "A sentence that lists prices",
+    "The title of the essay"
+   ],
+   "why": "It tells the reader what the paragraph is about."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should a narrative essay have at the beginning?",
+   "o": [
+    "An introduction that gives background and catches the reader's attention",
+    "The conclusion",
+    "A list of prices",
+    "Only the title"
+   ],
+   "why": "A good start sets the scene."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list contains only phrases for a good restaurant?",
+   "o": [
+    "delicious food, varied menu, reasonable prices, attentive service",
+    "rude waiters, dirty cutlery, large cockroaches, errors on the bill",
+    "delicious food, rude waiters, varied menu, dirty cutlery",
+    "errors on the bill, reasonable prices, large cockroaches, varied menu"
+   ],
+   "why": "All four are positive points."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you do before writing your first draft?",
+   "o": [
+    "Make notes and share ideas with a group",
+    "Hand in the essay",
+    "Proofread the final draft",
+    "Nothing at all"
+   ],
+   "why": "Planning comes before drafting."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Topic sentence: 'The service was terrible.' Which is the best supporting detail?",
+   "o": [
+    "The waiter was rude and forgot our order.",
+    "The restaurant has a varied menu.",
+    "I love eating out.",
+    "The food was delicious."
+   ],
+   "why": "A supporting detail gives an example of the main idea."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good ending for 'A Nightmare Meal'?",
+   "o": [
+    "We never went back, and from that day we always read reviews first.",
+    "The menu had many dishes.",
+    "I have always loved eating out.",
+    "First, we arrived at the restaurant."
+   ],
+   "why": "An ending closes the story."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the linking word: 'First, we found a table. ___, we ordered our food.'",
+   "o": [
+    "Then",
+    "Because",
+    "Although",
+    "Unless"
+   ],
+   "why": "'Then' shows the next event."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'I have always loved eating out, but one meal was special.' a good opening?",
+   "o": [
+    "It gives background and makes the reader want to know more",
+    "It ends the story",
+    "It is a supporting detail about prices",
+    "It is a list of dishes"
+   ],
+   "why": "A good opening catches attention."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A restaurant has cosy décor but errors on the bill. What is the best description?",
+   "o": [
+    "It has good and bad points",
+    "It is perfect",
+    "It is completely bad",
+    "It has no décor"
+   ],
+   "why": "Cosy décor is good; bill errors are bad."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should you write the story ending with your own ideas?",
+   "o": [
+    "To practise creating your own writing instead of copying",
+    "Because the text has no story",
+    "Because endings are not important",
+    "To make the story shorter"
+   ],
+   "why": "Your own ideas show your writing skills."
+  }
+ ]
+}

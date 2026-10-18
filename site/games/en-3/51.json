@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Atomic's Learning Club 2",
+ "lesson": "Learning Club 2 – Lesson 1: Language booster 2 (seasons)",
+ "outcomes": [
+  "I can name the four seasons.",
+  "I can describe each season.",
+  "I can say: My favourite season is …"
+ ],
+ "tf": [
+  {
+   "s": "There are four seasons.",
+   "t": true,
+   "why": "Yes! winter, spring, summer and autumn."
+  },
+  {
+   "s": "Winter is cold.",
+   "t": true,
+   "why": "Right! Winter is cold."
+  },
+  {
+   "s": "In autumn, it is windy and the trees are brown.",
+   "t": true,
+   "why": "Well done! That is autumn."
+  },
+  {
+   "s": "In spring, there are flowers and the trees are green.",
+   "t": true,
+   "why": "Yes! Spring has flowers."
+  },
+  {
+   "s": "Summer is cold and it isn't sunny.",
+   "t": false,
+   "why": "Summer is sunny and hot."
+  },
+  {
+   "s": "In winter, it is sunny and hot.",
+   "t": false,
+   "why": "Winter is cold. It isn't sunny."
+  },
+  {
+   "s": "We spell autumn with a silent n at the end.",
+   "t": true,
+   "why": "Great! a-u-t-u-m-n."
+  },
+  {
+   "s": "We spell autumn: a-u-t-u-m.",
+   "t": false,
+   "why": "Don't forget the silent n: autumn."
+  },
+  {
+   "s": "We ask: What's your favourite season?",
+   "t": true,
+   "why": "Yes! That's the question."
+  },
+  {
+   "s": "Autumn has lots of flowers.",
+   "t": false,
+   "why": "Spring has flowers. Autumn is windy."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which season is cold?",
+   "o": [
+    "winter",
+    "summer",
+    "spring"
+   ],
+   "why": "Winter is cold."
+  },
+  {
+   "q": "Complete: Summer has ___.",
+   "o": [
+    "sun",
+    "snow",
+    "wind"
+   ],
+   "why": "Summer has sun."
+  },
+  {
+   "q": "Which season: It's sunny and it's hot.",
+   "o": [
+    "summer",
+    "winter",
+    "autumn"
+   ],
+   "why": "Summer is sunny and hot."
+  },
+  {
+   "q": "Complete the song: Autumn is ___.",
+   "o": [
+    "windy",
+    "hot",
+    "cold"
+   ],
+   "why": "Autumn is windy."
+  },
+  {
+   "q": "Complete the song: Spring is lots of ___.",
+   "o": [
+    "fun",
+    "snow",
+    "rain"
+   ],
+   "why": "Spring is lots of fun."
+  },
+  {
+   "q": "Complete: My favourite ___ is summer.",
+   "o": [
+    "season",
+    "month",
+    "day"
+   ],
+   "why": "Summer is a season."
+  },
+  {
+   "q": "What colour are the trees in spring?",
+   "o": [
+    "green",
+    "brown",
+    "white"
+   ],
+   "why": "In spring, the trees are green."
+  },
+  {
+   "q": "Which season has brown trees?",
+   "o": [
+    "autumn",
+    "spring",
+    "summer"
+   ],
+   "why": "In autumn, the trees are brown."
+  },
+  {
+   "q": "Which letter is silent in autumn?",
+   "o": [
+    "n",
+    "a",
+    "t"
+   ],
+   "why": "The n at the end is silent."
+  },
+  {
+   "q": "Which season comes after winter?",
+   "o": [
+    "spring",
+    "autumn",
+    "summer"
+   ],
+   "why": "Winter, then spring."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Cold season",
+   "a": "winter",
+   "d": [
+    "summer",
+    "spring",
+    "autumn"
+   ]
+  },
+  {
+   "q": "Sunny and hot",
+   "a": "summer",
+   "d": [
+    "winter",
+    "autumn",
+    "spring"
+   ]
+  },
+  {
+   "q": "Windy, brown trees",
+   "a": "autumn",
+   "d": [
+    "spring",
+    "summer",
+    "winter"
+   ]
+  },
+  {
+   "q": "Flowers, green trees",
+   "a": "spring",
+   "d": [
+    "autumn",
+    "winter",
+    "summer"
+   ]
+  },
+  {
+   "q": "How many seasons?",
+   "a": "four",
+   "d": [
+    "three",
+    "two",
+    "twelve"
+   ]
+  },
+  {
+   "q": "Winter is …",
+   "a": "cold",
+   "d": [
+    "hot",
+    "sunny",
+    "fun"
+   ]
+  },
+  {
+   "q": "Spell the windy season",
+   "a": "autumn",
+   "d": [
+    "autum",
+    "otumn",
+    "autunm"
+   ]
+  },
+  {
+   "q": "Season after spring",
+   "a": "summer",
+   "d": [
+    "winter",
+    "autumn",
+    "spring"
+   ]
+  },
+  {
+   "q": "Season after summer",
+   "a": "autumn",
+   "d": [
+    "spring",
+    "winter",
+    "summer"
+   ]
+  },
+  {
+   "q": "Season before spring",
+   "a": "winter",
+   "d": [
+    "summer",
+    "autumn",
+    "spring"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list has the four seasons?",
+   "o": [
+    "winter, spring, summer, autumn",
+    "winter, Monday, summer, June",
+    "spring, sun, wind, cold",
+    "summer, beach, boat, train"
+   ],
+   "why": "The seasons are winter, spring, summer and autumn."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which season has sun?",
+   "o": [
+    "summer",
+    "winter",
+    "autumn",
+    "Monday"
+   ],
+   "why": "Summer has sun."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word describes autumn?",
+   "o": [
+    "windy",
+    "hot",
+    "snowy",
+    "fun"
+   ],
+   "why": "Autumn is windy."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do you spell autumn?",
+   "o": [
+    "a-u-t-u-m-n",
+    "a-u-t-u-m",
+    "o-t-u-m-n",
+    "a-u-t-m-n"
+   ],
+   "why": "a-u-t-u-m-n, with a silent n."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "It's windy. The trees are brown. What season is it?",
+   "o": [
+    "It's autumn.",
+    "It's spring.",
+    "It's summer.",
+    "It's winter."
+   ],
+   "why": "Windy with brown trees is autumn."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Answer: What's your favourite season?",
+   "o": [
+    "My favourite season is spring.",
+    "My favourite season is Monday.",
+    "My favourite is season spring.",
+    "I favourite season spring."
+   ],
+   "why": "We say: My favourite season is …"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Describe winter in two sentences.",
+   "o": [
+    "It's cold. It isn't sunny.",
+    "It's hot. It's sunny.",
+    "There are flowers. It's fun.",
+    "It's windy. The trees are brown."
+   ],
+   "why": "Winter is cold and not sunny."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A girl loves going to the beach in the sun. Which season is best for her?",
+   "o": [
+    "summer",
+    "winter",
+    "autumn",
+    "spring"
+   ],
+   "why": "Summer has sun, good for the beach."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is wrong?",
+   "o": [
+    "Winter is hot and sunny.",
+    "Summer has sun.",
+    "Autumn is windy.",
+    "Spring is lots of fun."
+   ],
+   "why": "Winter is cold, not hot."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What does a silent n in autumn mean?",
+   "o": [
+    "We write the n but we don't say it.",
+    "We say the n two times.",
+    "There is no n in the word.",
+    "The n is a capital letter."
+   ],
+   "why": "In autumn, we write n but we don't say it."
+  }
+ ]
+}

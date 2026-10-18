@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: A Letter to a Teacher (Writing)",
+ "lesson": "Error correction and planning with notes (Top Tip)",
+ "outcomes": [
+  "Correct capital letters, apostrophes and spelling in a letter",
+  "Plan a letter with key-word notes under four headings",
+  "Use formal language to draft a letter to a teacher"
+ ],
+ "tf": [
+  {
+   "s": "Notes should be written in complete sentences.",
+   "t": false,
+   "why": "Notes are key words, not complete sentences."
+  },
+  {
+   "s": "'Yours faithfully' is a formal ending.",
+   "t": true,
+   "why": "It is used in formal letters."
+  },
+  {
+   "s": "'See ya!' is formal.",
+   "t": false,
+   "why": "'See ya!' is informal."
+  },
+  {
+   "s": "'Dear…' and 'Best wishes' can be used in both formal and informal letters.",
+   "t": true,
+   "why": "These two work in both kinds of letter."
+  },
+  {
+   "s": "'fammily' is the correct spelling.",
+   "t": false,
+   "why": "The correct spelling is 'family'."
+  },
+  {
+   "s": "We use formal language in this letter because it is for a teacher.",
+   "t": true,
+   "why": "A letter to a teacher needs a formal style."
+  },
+  {
+   "s": "'I'm' needs an apostrophe.",
+   "t": true,
+   "why": "I'm = I am."
+  },
+  {
+   "s": "One of the four headings for notes is 'spare time'.",
+   "t": true,
+   "why": "The headings are family, spare time, future plans and learning English."
+  },
+  {
+   "s": "'Love from' is a good ending for a formal letter.",
+   "t": false,
+   "why": "'Love from' is informal."
+  },
+  {
+   "s": "Planning before writing helps you organise your ideas.",
+   "t": true,
+   "why": "Notes help you remember and order your ideas."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Correct: 'english'",
+   "o": [
+    "English",
+    "englisH",
+    "Englsh"
+   ],
+   "why": "Languages need a capital letter."
+  },
+  {
+   "q": "Correct the spelling: 'gim'",
+   "o": [
+    "gym",
+    "jim",
+    "gimm"
+   ],
+   "why": "The correct spelling is 'gym'."
+  },
+  {
+   "q": "'I am week at Maths.' 'Week' should be...",
+   "o": [
+    "weak",
+    "wick",
+    "wek"
+   ],
+   "why": "'Weak' means not good at something."
+  },
+  {
+   "q": "Correct: 'dont'",
+   "o": [
+    "don't",
+    "do'nt",
+    "dont'"
+   ],
+   "why": "The apostrophe replaces the missing 'o'."
+  },
+  {
+   "q": "Which expression is informal?",
+   "o": [
+    "Hi there!",
+    "I would be grateful if...",
+    "Yours faithfully"
+   ],
+   "why": "'Hi there!' is for friends."
+  },
+  {
+   "q": "Which expression is formal?",
+   "o": [
+    "I would like to...",
+    "See ya!",
+    "Love from"
+   ],
+   "why": "'I would like to…' is polite and formal."
+  },
+  {
+   "q": "Which is NOT one of the four headings?",
+   "o": [
+    "the weather",
+    "family",
+    "spare time"
+   ],
+   "why": "The headings are family, spare time, future plans and learning English."
+  },
+  {
+   "q": "Notes should consist of...",
+   "o": [
+    "key words",
+    "long paragraphs",
+    "full essays"
+   ],
+   "why": "Key words are quick and clear."
+  },
+  {
+   "q": "Which is the best formal opening sentence?",
+   "o": [
+    "I am writing to introduce myself to you.",
+    "Hi! It's me!",
+    "What's up?"
+   ],
+   "why": "It is polite and formal."
+  },
+  {
+   "q": "What comes last in the letter plan?",
+   "o": [
+    "conclusion",
+    "introduction",
+    "family"
+   ],
+   "why": "A letter ends with a conclusion."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Correct 'salalah'",
+   "a": "Salalah",
+   "d": [
+    "SalaLah",
+    "Salala",
+    "Sallalah"
+   ]
+  },
+  {
+   "q": "Correct 'fammily'",
+   "a": "family",
+   "d": [
+    "famly",
+    "familly",
+    "fammilly"
+   ]
+  },
+  {
+   "q": "Correct 'Im'",
+   "a": "I'm",
+   "d": [
+    "Im'",
+    "I,m",
+    "'Im"
+   ]
+  },
+  {
+   "q": "Correct 'ahmed'",
+   "a": "Ahmed",
+   "d": [
+    "AHmed",
+    "Ahmd",
+    "ahMed"
+   ]
+  },
+  {
+   "q": "A formal ending",
+   "a": "Yours faithfully",
+   "d": [
+    "Love from",
+    "See ya!",
+    "Hi there!"
+   ]
+  },
+  {
+   "q": "An informal greeting",
+   "a": "Hi there!",
+   "d": [
+    "Yours faithfully",
+    "I would be grateful",
+    "Dear Sir"
+   ]
+  },
+  {
+   "q": "Formal or informal: both",
+   "a": "Best wishes",
+   "d": [
+    "See ya!",
+    "Love from",
+    "Yours faithfully"
+   ]
+  },
+  {
+   "q": "Notes are made of ...",
+   "a": "key words",
+   "d": [
+    "full sentences",
+    "paragraphs",
+    "essays"
+   ]
+  },
+  {
+   "q": "A heading in the plan",
+   "a": "future plans",
+   "d": [
+    "weather",
+    "sports news",
+    "prices"
+   ]
+  },
+  {
+   "q": "Correct 'gim'",
+   "a": "gym",
+   "d": [
+    "jym",
+    "gimm",
+    "gyme"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which four things must students write about?",
+   "o": [
+    "Family, spare time, future plans and learning English",
+    "Food, sport, weather and shopping",
+    "Films, music, games and cars",
+    "History, maths, science and art"
+   ],
+   "why": "These are the four headings."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two expressions can be used in both formal and informal letters?",
+   "o": [
+    "'Dear…' and 'Best wishes'",
+    "'See ya!' and 'Hi there!'",
+    "'Yours faithfully' and 'I would be grateful'",
+    "'Love from' and 'See ya!'"
+   ],
+   "why": "They fit both kinds of letter."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why do we use formal language in this letter?",
+   "o": [
+    "It is addressed to a teacher",
+    "It is to a best friend",
+    "It is a text message",
+    "It is a shopping list"
+   ],
+   "why": "We write formally to a teacher."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How should the letter be organised?",
+   "o": [
+    "Introduction, family, spare time, plans, learning English, conclusion",
+    "Conclusion first, then introduction",
+    "One long paragraph",
+    "Only a list of words"
+   ],
+   "why": "Each part gets its own paragraph."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct: 'im from salalah and i dont like english'",
+   "o": [
+    "I'm from Salalah and I don't like English.",
+    "Im from Salalah and I dont like English.",
+    "I'm from salalah and i don't like english.",
+    "I'm From Salalah And I Don't Like English."
+   ],
+   "why": "Capitals, apostrophes and a full stop are needed."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best key-word note for the heading 'spare time'?",
+   "o": [
+    "football – reading – Fridays",
+    "I really enjoy playing football with my friends every Friday afternoon.",
+    "My name is Ali.",
+    "Yours faithfully"
+   ],
+   "why": "Notes use key words, not full sentences."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is too informal for a letter to a teacher?",
+   "o": [
+    "See ya!",
+    "I am writing to introduce myself.",
+    "I would like to tell you about my family.",
+    "I hope to improve my English."
+   ],
+   "why": "'See ya!' is for friends."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should you plan before writing?",
+   "o": [
+    "Notes help you remember ideas and organise the writing",
+    "It makes the letter longer",
+    "Planning means you don't need to write",
+    "Teachers don't read letters"
+   ],
+   "why": "A plan gives your letter a clear order."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are key words better than full sentences in notes?",
+   "o": [
+    "They are quick to write and easy to read",
+    "They are always correct",
+    "They make essays shorter",
+    "They are more formal"
+   ],
+   "why": "Notes are only reminders of your ideas."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it helpful to correct one type of mistake at a time?",
+   "o": [
+    "It helps you focus and find more mistakes",
+    "It makes you read less",
+    "It avoids checking spelling",
+    "There is only one mistake in a letter"
+   ],
+   "why": "Looking for one thing at a time is easier."
+  }
+ ]
+}

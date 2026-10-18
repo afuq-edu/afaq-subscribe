@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 3: The future is now",
+ "lesson": "Lesson 2: Grammar – talking about the future",
+ "outcomes": [
+  "Choose the right future form: will, be going to, present continuous or present simple.",
+  "Talk about predictions, offers, intentions and arrangements.",
+  "Correct mistakes with future forms."
+ ],
+ "tf": [
+  {
+   "s": "We use the present simple for timetables and scheduled events: 'The show finishes at 10.'",
+   "t": true,
+   "why": "Timetables use the present simple."
+  },
+  {
+   "s": "We use the present continuous for fixed arrangements: 'I'm meeting my aunt at 8 p.m.'",
+   "t": true,
+   "why": "An arrangement with a time and place."
+  },
+  {
+   "s": "'I'll lend you some money' is an offer.",
+   "t": true,
+   "why": "Will is used for offers and quick decisions."
+  },
+  {
+   "s": "We use 'be going to' for timetables, like train times.",
+   "t": false,
+   "why": "Timetables use the present simple: The train leaves at 7."
+  },
+  {
+   "s": "'Look at those clouds! It's going to rain.' is a prediction based on what we can see.",
+   "t": true,
+   "why": "We use going to when there is evidence now."
+  },
+  {
+   "s": "'I'm going to clean my room' is an intention.",
+   "t": true,
+   "why": "Be going to shows a plan you have decided."
+  },
+  {
+   "s": "'The flight arriving at 7 tomorrow' is correct.",
+   "t": false,
+   "why": "We need a verb form: 'The flight arrives / is arriving at 7.'"
+  },
+  {
+   "s": "We use 'will' after 'I think' for predictions: 'I think it will rain.'",
+   "t": true,
+   "why": "I think + will is a common prediction."
+  },
+  {
+   "s": "'Many people going to her shows' is a correct prediction.",
+   "t": false,
+   "why": "We say: Many people will go to her shows."
+  },
+  {
+   "s": "The present continuous can only talk about now, never the future.",
+   "t": false,
+   "why": "It can also talk about future arrangements."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: The show ___ late tonight. (timetable)",
+   "o": [
+    "finishes",
+    "is finishing to",
+    "will finishing"
+   ],
+   "why": "Scheduled events use the present simple."
+  },
+  {
+   "q": "Complete: I ___ my aunt at the cinema at 8 p.m. (arrangement)",
+   "o": [
+    "'m meeting",
+    "meet will",
+    "going meet"
+   ],
+   "why": "Arrangements use the present continuous."
+  },
+  {
+   "q": "Complete: I can't hear anything! I ___ the TV up.",
+   "o": [
+    "'ll turn",
+    "'m turning tomorrow",
+    "turned"
+   ],
+   "why": "A decision made now uses will."
+  },
+  {
+   "q": "Complete: Look at those clouds! It ___.",
+   "o": [
+    "'s going to rain",
+    "rains every day",
+    "rained"
+   ],
+   "why": "We can see the evidence now."
+  },
+  {
+   "q": "Which form do we use for an intention?",
+   "o": [
+    "be going to",
+    "present simple",
+    "past simple"
+   ],
+   "why": "Be going to shows a plan you have decided."
+  },
+  {
+   "q": "Complete: On Friday, the comedian ___ a tour of Japan.",
+   "o": [
+    "starts",
+    "are going to start",
+    "start"
+   ],
+   "why": "A scheduled event: starts."
+  },
+  {
+   "q": "Which sentence is an offer?",
+   "o": [
+    "I'll load the dishwasher after dinner.",
+    "The bus leaves at 6.",
+    "I'm meeting Ali."
+   ],
+   "why": "I'll + verb offers to help."
+  },
+  {
+   "q": "Complete: Shihab ___ a careers advisor next week.",
+   "o": [
+    "'s meeting",
+    "meet",
+    "met"
+   ],
+   "why": "A fixed arrangement uses the present continuous."
+  },
+  {
+   "q": "Complete: The game is new, so it ___ long to find it.",
+   "o": [
+    "isn't going to take",
+    "doesn't took",
+    "not take"
+   ],
+   "why": "A prediction with be going to."
+  },
+  {
+   "q": "Complete: I think people ___ films with VR headsets.",
+   "o": [
+    "will watch",
+    "watching",
+    "are watch"
+   ],
+   "why": "I think + will for a prediction."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Form for timetables",
+   "a": "present simple",
+   "d": [
+    "past simple",
+    "be going to",
+    "past continuous"
+   ]
+  },
+  {
+   "q": "Form for arrangements",
+   "a": "present continuous",
+   "d": [
+    "present simple",
+    "past simple",
+    "past continuous"
+   ]
+  },
+  {
+   "q": "Form for offers",
+   "a": "will",
+   "d": [
+    "be going to",
+    "present simple",
+    "past simple"
+   ]
+  },
+  {
+   "q": "Form for intentions",
+   "a": "be going to",
+   "d": [
+    "present simple",
+    "past simple",
+    "past continuous"
+   ]
+  },
+  {
+   "q": "The play ___ at eight.",
+   "a": "starts",
+   "d": [
+    "start",
+    "starting",
+    "is start"
+   ]
+  },
+  {
+   "q": "I ___ you some money.",
+   "a": "'ll lend",
+   "d": [
+    "lending",
+    "lent to",
+    "'m lend"
+   ]
+  },
+  {
+   "q": "We ___ to a pizza restaurant.",
+   "a": "'re going",
+   "d": [
+    "will going",
+    "go to",
+    "goes"
+   ]
+  },
+  {
+   "q": "It ___ rain! (clouds)",
+   "a": "'s going to",
+   "d": [
+    "will to",
+    "is go to",
+    "goes to"
+   ]
+  },
+  {
+   "q": "'I think it will rain' is a",
+   "a": "prediction",
+   "d": [
+    "arrangement",
+    "offer",
+    "timetable"
+   ]
+  },
+  {
+   "q": "'I'm visiting Gran on Friday'",
+   "a": "arrangement",
+   "d": [
+    "prediction",
+    "offer",
+    "timetable"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which form do we use for an offer or an immediate decision?",
+   "o": [
+    "will",
+    "present simple",
+    "present continuous",
+    "past continuous"
+   ],
+   "why": "'I'll help you' is an offer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is about a timetable?",
+   "o": [
+    "The train leaves at 7 a.m.",
+    "I'll carry your bag.",
+    "I'm going to study hard.",
+    "I think it will be sunny."
+   ],
+   "why": "Timetables use the present simple."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is an arrangement?",
+   "o": [
+    "I'm meeting my uncle at 5 p.m.",
+    "I think robots will drive cars.",
+    "I'll answer the door.",
+    "The film starts at 9."
+   ],
+   "why": "A plan with a person and a time."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which form do we use when we can see evidence for a prediction now?",
+   "o": [
+    "be going to",
+    "present simple",
+    "past simple",
+    "present continuous"
+   ],
+   "why": "'Look! It's going to fall.'"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: I'm meeting my uncle and we ___ to a pizza restaurant.",
+   "o": [
+    "'re going",
+    "'ll go probably",
+    "go",
+    "went"
+   ],
+   "why": "This is part of the arrangement."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the mistake: 'The flight arriving at 7 tomorrow.'",
+   "o": [
+    "The flight arrives at 7 tomorrow.",
+    "The flight arrive at 7 tomorrow.",
+    "The flight will arriving at 7 tomorrow.",
+    "The flight going arrive at 7 tomorrow."
+   ],
+   "why": "A timetable uses the present simple."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend's bag is heavy. What do you say?",
+   "o": [
+    "I'll carry it for you.",
+    "I'm carrying it next week.",
+    "I carry it at 7 p.m.",
+    "I carried it for you."
+   ],
+   "why": "An offer uses will."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'will' right in 'Don't worry, I'll lend you some money'?",
+   "o": [
+    "It is an offer made at the moment of speaking",
+    "It is a fixed timetable",
+    "It is an arrangement made last week",
+    "It happened in the past"
+   ],
+   "why": "Offers and quick decisions use will."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'My dad's picking me up at 7.15' the best choice?",
+   "o": [
+    "It is an arrangement with a fixed time",
+    "It is a prediction from evidence",
+    "It is an offer",
+    "It is a timetable for trains"
+   ],
+   "why": "Arrangements use the present continuous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which set shows an arrangement, an intention and a prediction in that order?",
+   "o": [
+    "I'm visiting Gran on Friday. / I'm going to clean my room. / I think it will rain.",
+    "I think it will rain. / I'm visiting Gran. / I'll help you.",
+    "I'll help you. / The bus leaves at 6. / I'm going to study.",
+    "The film starts at 8. / I'll call you. / I'm meeting Ali."
+   ],
+   "why": "Present continuous, then going to, then will."
+  }
+ ]
+}

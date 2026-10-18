@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Meg's Learning Club 1",
+ "lesson": "Lesson 2: Language booster 1 – How old are you? Colours and numbers",
+ "outcomes": [
+  "I can ask How old are you? and answer I'm six.",
+  "I can say a number and a thing: six pens, two rulers.",
+  "I can say a colour and a thing: a red bag, an orange eraser."
+ ],
+ "tf": [
+  {
+   "s": "We answer How old are you? with I'm six.",
+   "t": true,
+   "why": "Yes! I'm and your age."
+  },
+  {
+   "s": "We answer How old are you? with It's a pen.",
+   "t": false,
+   "why": "We say I'm and a number."
+  },
+  {
+   "s": "In the listening, Mazin is five.",
+   "t": true,
+   "why": "Yes! Mazin is five."
+  },
+  {
+   "s": "In the listening, Muna is six.",
+   "t": false,
+   "why": "Muna is three."
+  },
+  {
+   "s": "We say two rulers for more than one ruler.",
+   "t": true,
+   "why": "Yes! We add s: rulers."
+  },
+  {
+   "s": "We say six pen.",
+   "t": false,
+   "why": "We say six pens."
+  },
+  {
+   "s": "We say an orange eraser.",
+   "t": true,
+   "why": "Yes! Orange starts with o, so we say an."
+  },
+  {
+   "s": "We say a orange pencil.",
+   "t": false,
+   "why": "We say an orange pencil."
+  },
+  {
+   "s": "Five candles on a cake means I'm five.",
+   "t": true,
+   "why": "Great! Count the candles."
+  },
+  {
+   "s": "Red is a number.",
+   "t": false,
+   "why": "Red is a colour."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How old are you?",
+   "o": [
+    "I'm six.",
+    "I'm red.",
+    "It's six."
+   ],
+   "why": "I'm six tells your age."
+  },
+  {
+   "q": "How old is Faris?",
+   "o": [
+    "six",
+    "three",
+    "four"
+   ],
+   "why": "Faris is six."
+  },
+  {
+   "q": "How old is Wafa?",
+   "o": [
+    "four",
+    "five",
+    "six"
+   ],
+   "why": "Wafa is four."
+  },
+  {
+   "q": "Count the candles: | | | | |",
+   "o": [
+    "I'm five.",
+    "I'm four.",
+    "I'm six."
+   ],
+   "why": "Five candles: I'm five."
+  },
+  {
+   "q": "One cat, two …",
+   "o": [
+    "rulers",
+    "ruler",
+    "a ruler"
+   ],
+   "why": "More than one: rulers."
+  },
+  {
+   "q": "I've got three … in my bag.",
+   "o": [
+    "pencils",
+    "pencil",
+    "a pencil"
+   ],
+   "why": "Three pencils."
+  },
+  {
+   "q": "It's … orange pencil.",
+   "o": [
+    "an",
+    "a",
+    "two"
+   ],
+   "why": "We say an orange pencil."
+  },
+  {
+   "q": "It's … red bag.",
+   "o": [
+    "a",
+    "an",
+    "six"
+   ],
+   "why": "We say a red bag."
+  },
+  {
+   "q": "Which word is a colour?",
+   "o": [
+    "green",
+    "pencil",
+    "five"
+   ],
+   "why": "Green is a colour."
+  },
+  {
+   "q": "Key: Number 1 is red. What colour is number 1?",
+   "o": [
+    "red",
+    "blue",
+    "green"
+   ],
+   "why": "The key says number 1 is red."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "How old is Muna?",
+   "a": "three",
+   "d": [
+    "five",
+    "six",
+    "four"
+   ]
+  },
+  {
+   "q": "How old is Mazin?",
+   "a": "five",
+   "d": [
+    "three",
+    "four",
+    "six"
+   ]
+  },
+  {
+   "q": "Catch the answer: How old are you?",
+   "a": "I'm six.",
+   "d": [
+    "It's red.",
+    "I'm Sami.",
+    "Six pens."
+   ]
+  },
+  {
+   "q": "Catch the right one.",
+   "a": "six pens",
+   "d": [
+    "six pen",
+    "a pens",
+    "an pens"
+   ]
+  },
+  {
+   "q": "Catch the right one.",
+   "a": "an orange eraser",
+   "d": [
+    "a orange eraser",
+    "orange a eraser",
+    "an eraser orange"
+   ]
+  },
+  {
+   "q": "Catch the right one.",
+   "a": "a blue pencil",
+   "d": [
+    "an blue pencil",
+    "blue a pencil",
+    "a pencil blue"
+   ]
+  },
+  {
+   "q": "Catch a colour.",
+   "a": "brown",
+   "d": [
+    "crayon",
+    "bag",
+    "ruler"
+   ]
+  },
+  {
+   "q": "Count: ✏ ✏",
+   "a": "two pencils",
+   "d": [
+    "one pencil",
+    "three pencils",
+    "four pencils"
+   ]
+  },
+  {
+   "q": "Count: ★ ★ ★ ★",
+   "a": "four",
+   "d": [
+    "three",
+    "five",
+    "six"
+   ]
+  },
+  {
+   "q": "Catch the number after five.",
+   "a": "six",
+   "d": [
+    "four",
+    "two",
+    "three"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which question asks about your age?",
+   "o": [
+    "How old are you?",
+    "What's your name?",
+    "Who's this?",
+    "What colour is it?"
+   ],
+   "why": "How old are you? asks your age."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one is a colour?",
+   "o": [
+    "orange",
+    "eraser",
+    "four",
+    "bag"
+   ],
+   "why": "Orange is a colour."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is right?",
+   "o": [
+    "five crayons",
+    "five crayon",
+    "a crayons",
+    "an crayons"
+   ],
+   "why": "More than one: crayons."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one is the right way to say it?",
+   "o": [
+    "a yellow bag",
+    "an yellow bag",
+    "a bag yellow",
+    "yellow a bag"
+   ],
+   "why": "We say a yellow bag."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend asks: How old are you? You are six. You say …",
+   "o": [
+    "I'm six.",
+    "I've got six.",
+    "It's six.",
+    "Six pens."
+   ],
+   "why": "Say I'm six."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You have three red pencils. You say …",
+   "o": [
+    "I've got three red pencils.",
+    "I've got three red pencil.",
+    "I'm three pencils.",
+    "It's a three pencils."
+   ],
+   "why": "Number, colour, then pencils."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "There are 4 candles on the cake. The child says …",
+   "o": [
+    "I'm four.",
+    "I'm five.",
+    "I'm three.",
+    "I'm six."
+   ],
+   "why": "4 candles: I'm four."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Muna is three. Mazin is five. Who is older?",
+   "o": [
+    "Mazin",
+    "Muna",
+    "They are the same.",
+    "Meg"
+   ],
+   "why": "Five is more than three."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say an orange eraser but a red eraser?",
+   "o": [
+    "Orange starts with the sound /o/.",
+    "Orange is a big colour.",
+    "Red is a number.",
+    "Eraser starts with r."
+   ],
+   "why": "We use an before sounds like a, e, i, o."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does not belong: red, blue, green, ruler?",
+   "o": [
+    "ruler",
+    "red",
+    "blue",
+    "green"
+   ],
+   "why": "Ruler is a school thing; the others are colours."
+  }
+ ]
+}

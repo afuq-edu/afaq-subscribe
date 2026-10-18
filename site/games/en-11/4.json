@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 1 - Unit 4: Communication Skills",
+ "outcomes": [
+  "Explain why communication and expressing feelings matter",
+  "Recognise the skills of a good communicator",
+  "Use tips to keep a conversation going"
+ ],
+ "tf": [
+  {
+   "s": "Communication involves talking and listening.",
+   "t": true,
+   "why": "Yes! Good communication is two-sided."
+  },
+  {
+   "s": "Negative feelings that stay inside can make you unhappy or angry.",
+   "t": true,
+   "why": "Right! That is why we should express our feelings."
+  },
+  {
+   "s": "'Pent-up' feelings are feelings that are held in.",
+   "t": true,
+   "why": "Correct! The text says feelings can get trapped inside your head."
+  },
+  {
+   "s": "Ahmed communicates better than Laila.",
+   "t": false,
+   "why": "Laila is the better communicator; she gives extra information and asks a question."
+  },
+  {
+   "s": "Answering only 'yes' or 'no' keeps a conversation going.",
+   "t": false,
+   "why": "Give more information so the conversation can continue."
+  },
+  {
+   "s": "Making eye contact is a tip for a good conversation.",
+   "t": true,
+   "why": "Eye contact shows you are listening."
+  },
+  {
+   "s": "Saying 'whatever' shows that you are interested.",
+   "t": false,
+   "why": "'Mm' or 'Really?' shows interest; 'whatever' does not."
+  },
+  {
+   "s": "Taking turns is important in a conversation.",
+   "t": true,
+   "why": "Good! Both speakers should get a chance to talk."
+  },
+  {
+   "s": "The writer advises keeping your problems a secret from everyone.",
+   "t": false,
+   "why": "The writer says talking to someone about a problem makes you feel better."
+  },
+  {
+   "s": "Asking a follow-up question can keep a conversation going.",
+   "t": true,
+   "why": "Yes! A related question shows interest."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What two things does communication involve?",
+   "o": [
+    "talking and listening",
+    "reading and writing",
+    "eating and sleeping"
+   ],
+   "why": "Communication is a two-sided relationship."
+  },
+  {
+   "q": "Who communicates better in the interviews?",
+   "o": [
+    "Laila",
+    "Ahmed",
+    "neither"
+   ],
+   "why": "Laila gives extra information and asks a question back."
+  },
+  {
+   "q": "Complete the phrase: 'How ___ you?'",
+   "o": [
+    "about",
+    "at",
+    "for"
+   ],
+   "why": "'How about you?' asks the other person to share too."
+  },
+  {
+   "q": "Which word shows interest?",
+   "o": [
+    "Really?",
+    "Whatever.",
+    "No."
+   ],
+   "why": "'Really?' shows you want to hear more."
+  },
+  {
+   "q": "What does 'pent-up' mean?",
+   "o": [
+    "held in",
+    "very happy",
+    "shared"
+   ],
+   "why": "Pent-up feelings are trapped inside."
+  },
+  {
+   "q": "How can you show you are listening?",
+   "o": [
+    "nod your head",
+    "look at your phone",
+    "walk away"
+   ],
+   "why": "Nodding shows the speaker you are listening."
+  },
+  {
+   "q": "A good follow-up question for 'I went to Salalah last week' is:",
+   "o": [
+    "What did you do there?",
+    "Yes.",
+    "I am tired."
+   ],
+   "why": "A related question keeps the talk going."
+  },
+  {
+   "q": "What can happen if you don't express negative feelings?",
+   "o": [
+    "you may not sleep or relax",
+    "you become taller",
+    "you learn faster"
+   ],
+   "why": "Trapped feelings can make you unhappy."
+  },
+  {
+   "q": "Which is a good title for the text?",
+   "o": [
+    "Why Communication Is Important",
+    "My Holiday in Muscat",
+    "How to Cook Rice"
+   ],
+   "why": "The title should show the main idea of the text."
+  },
+  {
+   "q": "Which phrase is a friendly greeting?",
+   "o": [
+    "Nice to see you!",
+    "Go away.",
+    "Be quiet."
+   ],
+   "why": "'Nice to see you!' is one of the Soundbites."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Communication = talking and ___",
+   "a": "listening",
+   "d": [
+    "sleeping",
+    "eating",
+    "running"
+   ]
+  },
+  {
+   "q": "Better communicator: Ahmed or Laila?",
+   "a": "Laila",
+   "d": [
+    "Ahmed",
+    "the teacher",
+    "nobody"
+   ]
+  },
+  {
+   "q": "Meaning of 'pent-up'",
+   "a": "held in",
+   "d": [
+    "let out",
+    "happy",
+    "shared"
+   ]
+  },
+  {
+   "q": "Complete: 'How ___ you?'",
+   "a": "about",
+   "d": [
+    "with",
+    "from",
+    "under"
+   ]
+  },
+  {
+   "q": "Word that shows interest",
+   "a": "Really?",
+   "d": [
+    "Whatever.",
+    "Stop.",
+    "Bye."
+   ]
+  },
+  {
+   "q": "Look at the speaker's eyes: ___",
+   "a": "eye contact",
+   "d": [
+    "eye drops",
+    "eye test",
+    "eyebrow"
+   ]
+  },
+  {
+   "q": "Speaking one after the other",
+   "a": "take turns",
+   "d": [
+    "take a bus",
+    "take notes",
+    "take off"
+   ]
+  },
+  {
+   "q": "Feeling from trapped negative feelings",
+   "a": "angry",
+   "d": [
+    "calm",
+    "relaxed",
+    "rested"
+   ]
+  },
+  {
+   "q": "Sound that shows you are listening",
+   "a": "mm",
+   "d": [
+    "shh",
+    "ouch",
+    "oops"
+   ]
+  },
+  {
+   "q": "Movement that shows you are listening",
+   "a": "nodding",
+   "d": [
+    "yawning",
+    "shrugging",
+    "sleeping"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why is it important to express our feelings?",
+   "o": [
+    "Negative feelings can get trapped inside and make us unhappy or angry",
+    "Feelings are not important",
+    "It makes other people angry",
+    "It stops us from talking"
+   ],
+   "why": "Sharing feelings helps us feel better."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the writer advise if you have pent-up feelings?",
+   "o": [
+    "Talk to someone about them",
+    "Keep them secret",
+    "Stop speaking to friends",
+    "Write them on the wall"
+   ],
+   "why": "Sharing a problem makes you feel better."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is one of the five tips for a good conversation?",
+   "o": [
+    "Ask related questions",
+    "Look at the floor",
+    "Talk all the time",
+    "Answer only 'yes'"
+   ],
+   "why": "Related questions keep the conversation going."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is one of the Soundbites?",
+   "o": [
+    "That's interesting.",
+    "Leave me alone.",
+    "I don't care.",
+    "Be quick."
+   ],
+   "why": "Phrases like 'That's interesting' keep a chat friendly."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend says, 'I like swimming.' What is the best reply to keep the conversation going?",
+   "o": [
+    "Really? Where do you swim?",
+    "Yes.",
+    "No.",
+    "OK."
+   ],
+   "why": "Show interest and ask a follow-up question."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The teacher asks Ahmed, 'Do you have any brothers?' Which answer is best?",
+   "o": [
+    "Yes, I have two. They both go to my school. How about you?",
+    "Yes.",
+    "No.",
+    "Maybe."
+   ],
+   "why": "Add details and a question back to keep talking."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "In a conversation, your partner speaks and you want to show you are listening. What should you do?",
+   "o": [
+    "Make eye contact and say 'mm' or 'really?'",
+    "Look at your phone",
+    "Start a new topic at once",
+    "Say 'whatever'"
+   ],
+   "why": "Eye contact and small words show interest."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Laila a better communicator than Ahmed?",
+   "o": [
+    "She gives extra information, adds comments and asks a question",
+    "She speaks very quickly",
+    "She answers only 'yes' or 'no'",
+    "She speaks very quietly"
+   ],
+   "why": "Extra information and questions keep a conversation going."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A conversation where one person only says 'yes' and 'no' is not successful. Why?",
+   "o": [
+    "It does not keep the conversation going",
+    "It is too long",
+    "Both people talk too much",
+    "It uses too many questions"
+   ],
+   "why": "Short answers stop the conversation."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The text calls communication 'a two-sided relationship'. What does this mean?",
+   "o": [
+    "Both people must talk and listen",
+    "Only one person talks",
+    "People must sit on two sides",
+    "You need two phones"
+   ],
+   "why": "Good communication needs talking and listening from both sides."
+  }
+ ]
+}

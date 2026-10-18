@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 4 – Off to the shops",
+ "lesson": "Lesson 3: Grammar – Relative clauses (who, which, where)",
+ "outcomes": [
+  "Use who for people, which for things and where for places.",
+  "Complete sentences with the correct relative word.",
+  "Describe a person, place or thing for a partner to guess."
+ ],
+ "tf": [
+  {
+   "s": "We use \"who\" for people.",
+   "t": true,
+   "why": "who = people."
+  },
+  {
+   "s": "We use \"which\" for places.",
+   "t": false,
+   "why": "We use which for things and where for places."
+  },
+  {
+   "s": "We use \"where\" for places.",
+   "t": true,
+   "why": "where = places."
+  },
+  {
+   "s": "\"It's the man which we saw earlier.\" is correct.",
+   "t": false,
+   "why": "For people we use who: It's the man who we saw earlier."
+  },
+  {
+   "s": "\"That's the phone case which my mum wants.\" is correct.",
+   "t": true,
+   "why": "A phone case is a thing, so we use which."
+  },
+  {
+   "s": "\"We're in the shop where my brother works.\" is correct.",
+   "t": true,
+   "why": "A shop is a place, so we use where."
+  },
+  {
+   "s": "\"The Earth is the planet who we live.\" is correct.",
+   "t": false,
+   "why": "We say: The Earth is the planet where we live."
+  },
+  {
+   "s": "\"Hassan likes magazines which are about space.\" is correct.",
+   "t": true,
+   "why": "Magazines are things, so we use which."
+  },
+  {
+   "s": "\"That's the woman where works at the corner shop.\" is correct.",
+   "t": false,
+   "why": "A woman is a person: That's the woman who works at the corner shop."
+  },
+  {
+   "s": "\"It's a shop where you can buy medicine.\" describes a pharmacy.",
+   "t": true,
+   "why": "A pharmacy is a shop where you can buy medicine."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word do we use for things?",
+   "o": [
+    "which",
+    "who",
+    "where"
+   ],
+   "why": "which = things."
+  },
+  {
+   "q": "Complete: That's the woman ______ works at the corner shop.",
+   "o": [
+    "who",
+    "which",
+    "where"
+   ],
+   "why": "A woman is a person."
+  },
+  {
+   "q": "Complete: A shoe shop is the shop ______ you can buy shoes and boots.",
+   "o": [
+    "where",
+    "who",
+    "which"
+   ],
+   "why": "A shop is a place."
+  },
+  {
+   "q": "Complete: I'm very good at fixing the toys ______ my brother breaks.",
+   "o": [
+    "which",
+    "who",
+    "where"
+   ],
+   "why": "Toys are things."
+  },
+  {
+   "q": "Complete: Who's the boy ______ is wearing glasses?",
+   "o": [
+    "who",
+    "which",
+    "where"
+   ],
+   "why": "A boy is a person."
+  },
+  {
+   "q": "It's a thing which you use to call people. What is it?",
+   "o": [
+    "a mobile phone",
+    "a pharmacy",
+    "a teacher"
+   ],
+   "why": "We call people with a mobile phone."
+  },
+  {
+   "q": "It's a shop where you can buy fish. What is it?",
+   "o": [
+    "the fishmonger's",
+    "the jeweller's",
+    "the toy shop"
+   ],
+   "why": "The fishmonger's sells fish."
+  },
+  {
+   "q": "It's a person who teaches children. Who is it?",
+   "o": [
+    "a teacher",
+    "a shop",
+    "a book"
+   ],
+   "why": "A teacher teaches children."
+  },
+  {
+   "q": "Choose: This is New Shoes. It's the shop (who / which / where) I buy all my shoes.",
+   "o": [
+    "where",
+    "who",
+    "which"
+   ],
+   "why": "A shop is a place where you do things."
+  },
+  {
+   "q": "Complete: It's the man ______ we saw earlier.",
+   "o": [
+    "who",
+    "which",
+    "where"
+   ],
+   "why": "A man is a person."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Relative word for people",
+   "a": "who",
+   "d": [
+    "which",
+    "where",
+    "what"
+   ]
+  },
+  {
+   "q": "Relative word for things",
+   "a": "which",
+   "d": [
+    "who",
+    "where",
+    "when"
+   ]
+  },
+  {
+   "q": "Relative word for places",
+   "a": "where",
+   "d": [
+    "who",
+    "which",
+    "why"
+   ]
+  },
+  {
+   "q": "the planet ___ we live",
+   "a": "where",
+   "d": [
+    "who",
+    "which",
+    "what"
+   ]
+  },
+  {
+   "q": "the girl ___ likes chess",
+   "a": "who",
+   "d": [
+    "which",
+    "where",
+    "what"
+   ]
+  },
+  {
+   "q": "the bag ___ is blue",
+   "a": "which",
+   "d": [
+    "who",
+    "where",
+    "when"
+   ]
+  },
+  {
+   "q": "the shop ___ I buy shoes",
+   "a": "where",
+   "d": [
+    "who",
+    "which",
+    "what"
+   ]
+  },
+  {
+   "q": "A shop where you buy medicine",
+   "a": "pharmacy",
+   "d": [
+    "kiosk",
+    "butcher's",
+    "toy shop"
+   ]
+  },
+  {
+   "q": "the case ___ has a comet",
+   "a": "which",
+   "d": [
+    "who",
+    "where",
+    "what"
+   ]
+  },
+  {
+   "q": "A person who sells fish",
+   "a": "fishmonger",
+   "d": [
+    "butcher",
+    "jeweller",
+    "teacher"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word do we use for places?",
+   "o": [
+    "where",
+    "who",
+    "which",
+    "what"
+   ],
+   "why": "where = places."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence has a relative clause?",
+   "o": [
+    "That's the phone case which my mum wants.",
+    "My mum wants a phone case.",
+    "I like phones.",
+    "Mum is happy."
+   ],
+   "why": "which my mum wants tells us more about the phone case."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Match: who → ?, which → ?, where → ?",
+   "o": [
+    "people, things, places",
+    "things, people, places",
+    "places, things, people",
+    "people, places, things"
+   ],
+   "why": "who = people, which = things, where = places."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Complete: Hassan likes magazines ______ are about space.",
+   "o": [
+    "which",
+    "who",
+    "where",
+    "when"
+   ],
+   "why": "Magazines are things."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "That's the boy who plays football.",
+    "That's the boy which plays football.",
+    "That's the boy where plays football.",
+    "That's the boy what plays football."
+   ],
+   "why": "A boy is a person, so we use who."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which riddle describes a kiosk?",
+   "o": [
+    "It's a shop where you can buy newspapers and snacks.",
+    "It's a person who sells meat.",
+    "It's a thing which you wear on your feet.",
+    "It's a shop where you can buy medicine."
+   ],
+   "why": "A kiosk sells newspapers and snacks."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The pharmacy is the shop ______ my aunt works.",
+   "o": [
+    "where",
+    "who",
+    "which",
+    "what"
+   ],
+   "why": "The pharmacy is a place."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "The Earth is the planet who we live.",
+    "It's the man who we saw earlier.",
+    "That's the bag which I like.",
+    "This is the shop where I buy shoes."
+   ],
+   "why": "For a place we use where, not who."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we use \"which\" in \"the toys which my brother breaks\"?",
+   "o": [
+    "Toys are things.",
+    "Toys are people.",
+    "Toys are places.",
+    "My brother is a thing."
+   ],
+   "why": "which describes things."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"It's a person who sells meat.\" What is the answer to this riddle?",
+   "o": [
+    "a butcher",
+    "a fishmonger",
+    "a pharmacy",
+    "a jeweller"
+   ],
+   "why": "A butcher sells meat."
+  }
+ ]
+}

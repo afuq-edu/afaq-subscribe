@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U3",
+ "lesson": "Unit 3 – Lesson 2: Story – The great clean-up",
+ "outcomes": [
+  "Understand the main events of the story The great clean-up.",
+  "Use comparatives like deeper than and wider than.",
+  "Give ideas to reuse rubbish."
+ ],
+ "tf": [
+  {
+   "s": "The Great Clean-up is at Wadi Darbat.",
+   "t": true,
+   "why": "Yes! It happens at Wadi Darbat."
+  },
+  {
+   "s": "There's a lot of fruit by the wadi.",
+   "t": false,
+   "why": "There's a lot of rubbish by the wadi."
+  },
+  {
+   "s": "The children wear gloves on their hands.",
+   "t": true,
+   "why": "Correct! Gloves keep their hands safe."
+  },
+  {
+   "s": "First they pick up the rubbish, then they put their gloves on.",
+   "t": false,
+   "why": "They put their gloves on first."
+  },
+  {
+   "s": "The mud is deeper than Fatma's shoes.",
+   "t": true,
+   "why": "Well done! The mud is very deep."
+  },
+  {
+   "s": "The children put the rubbish in boxes.",
+   "t": false,
+   "why": "They use bags."
+  },
+  {
+   "s": "The wood is wider than the bag.",
+   "t": true,
+   "why": "Yes! So Bo can't put it in the bag at first."
+  },
+  {
+   "s": "They can put all the rubbish in their shed.",
+   "t": false,
+   "why": "They can use only some of it for their shed."
+  },
+  {
+   "s": "You can make a pen holder from a can.",
+   "t": true,
+   "why": "Great idea! We can reuse rubbish."
+  },
+  {
+   "s": "Bottles are part of the rubbish by the wadi.",
+   "t": true,
+   "why": "Yes! They find bottles, cans, bags and wood."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word means things we throw away?",
+   "o": [
+    "rubbish",
+    "gloves",
+    "mud"
+   ],
+   "why": "Rubbish is what we throw away."
+  },
+  {
+   "q": "What do they put in the biggest bags?",
+   "o": [
+    "wood and cans",
+    "fruit and bread",
+    "shoes and hats"
+   ],
+   "why": "Wood and cans go in the biggest bags."
+  },
+  {
+   "q": "What is deeper than Fatma's shoes?",
+   "o": [
+    "the mud",
+    "the bag",
+    "the wood"
+   ],
+   "why": "The mud is deeper than her shoes."
+  },
+  {
+   "q": "What is the problem at the wadi?",
+   "o": [
+    "There's a lot of rubbish.",
+    "There isn't any water.",
+    "There are no trees."
+   ],
+   "why": "There's a lot of rubbish by the wadi."
+  },
+  {
+   "q": "Complete: The wood is ___ than the bag!",
+   "o": [
+    "wider",
+    "wide",
+    "widest"
+   ],
+   "why": "We compare two things with 'wider than'."
+  },
+  {
+   "q": "Which is rubbish from the story?",
+   "o": [
+    "cans",
+    "cupcakes",
+    "books"
+   ],
+   "why": "They find cans, bottles and wood."
+  },
+  {
+   "q": "You can make a lamp from a...",
+   "o": [
+    "bottle",
+    "mud",
+    "wadi"
+   ],
+   "why": "A bottle can become a lamp."
+  },
+  {
+   "q": "What does 'clean up' mean?",
+   "o": [
+    "pick up rubbish and make a place tidy",
+    "make a place dirty",
+    "go swimming"
+   ],
+   "why": "A clean-up makes a place clean."
+  },
+  {
+   "q": "Which do you wear on your feet?",
+   "o": [
+    "shoes",
+    "gloves",
+    "bags"
+   ],
+   "why": "We wear shoes on our feet."
+  },
+  {
+   "q": "What can you make with the rubbish?",
+   "o": [
+    "a table",
+    "a cloud",
+    "a river"
+   ],
+   "why": "We can reuse rubbish to make a table."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Wet, soft ground",
+   "a": "mud",
+   "d": [
+    "wood",
+    "can",
+    "bag"
+   ]
+  },
+  {
+   "q": "Opposite of clean",
+   "a": "dirty",
+   "d": [
+    "deep",
+    "wide",
+    "long"
+   ]
+  },
+  {
+   "q": "Put rubbish in...",
+   "a": "bags",
+   "d": [
+    "boxes",
+    "shoes",
+    "gloves"
+   ]
+  },
+  {
+   "q": "Bo is a...",
+   "a": "robot",
+   "d": [
+    "teacher",
+    "cat",
+    "girl"
+   ]
+  },
+  {
+   "q": "Wood for their...",
+   "a": "shed",
+   "d": [
+    "school",
+    "shop",
+    "car"
+   ]
+  },
+  {
+   "q": "hot → ...",
+   "a": "hotter",
+   "d": [
+    "hoter",
+    "hottest",
+    "more hot"
+   ]
+  },
+  {
+   "q": "small → ...",
+   "a": "smaller",
+   "d": [
+    "smallier",
+    "smallest",
+    "more small"
+   ]
+  },
+  {
+   "q": "tall → ...",
+   "a": "taller",
+   "d": [
+    "tallier",
+    "tallest",
+    "more tall"
+   ]
+  },
+  {
+   "q": "long → ...",
+   "a": "longer",
+   "d": [
+    "longger",
+    "longest",
+    "more long"
+   ]
+  },
+  {
+   "q": "wide → ...",
+   "a": "wider",
+   "d": [
+    "wideer",
+    "widest",
+    "more wide"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Where is the Great Clean-up?",
+   "o": [
+    "At Wadi Darbat",
+    "At a city school",
+    "On an island",
+    "In a supermarket"
+   ],
+   "why": "It's at Wadi Darbat."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Make the comparative: deep",
+   "o": [
+    "deeper",
+    "deepper",
+    "more deep",
+    "deepier"
+   ],
+   "why": "deep + er = deeper."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Make the comparative: big",
+   "o": [
+    "bigger",
+    "biger",
+    "more big",
+    "biggier"
+   ],
+   "why": "Double the g: bigger."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What can we reuse a bottle for?",
+   "o": [
+    "a plant pot",
+    "a sandwich",
+    "a glove",
+    "a hat"
+   ],
+   "why": "I can make a plant pot with a bottle."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: A mountain is ___ than a hill.",
+   "o": [
+    "higher",
+    "high",
+    "more high",
+    "highest"
+   ],
+   "why": "A mountain is higher than a hill."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: The wadi is more long than the road.",
+   "o": [
+    "The wadi is longer than the road.",
+    "The wadi is long than the road.",
+    "The wadi is more longer than the road.",
+    "The wadi is longest than the road."
+   ],
+   "why": "Short adjectives take -er: longer."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "My gloves are dirtier than yours!",
+    "My gloves are dirtyer than yours!",
+    "My gloves are more dirty than yours!",
+    "My gloves are dirtier then yours!"
+   ],
+   "why": "dirty → dirtier."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can't Bo put the wood in the bag at first?",
+   "o": [
+    "Because the wood is wider than the bag.",
+    "Because the bag is full of mud.",
+    "Because the wood is very small.",
+    "Because Bo has no gloves."
+   ],
+   "why": "The wood is too wide for the bag."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it 'dirtier', not 'dirtyer'?",
+   "o": [
+    "Adjectives ending in -y change y to i and add -er.",
+    "We always add -yer.",
+    "Dirty is a long adjective.",
+    "We double the last letter."
+   ],
+   "why": "y → i + er: dirtier."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do the children wear gloves?",
+   "o": [
+    "To keep their hands safe and clean from the rubbish.",
+    "Because it is cold.",
+    "To play football.",
+    "Because gloves are wider than bags."
+   ],
+   "why": "Gloves protect your hands when you pick up rubbish."
+  }
+ ]
+}

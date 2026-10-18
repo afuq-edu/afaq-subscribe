@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 1: Identity",
+ "lesson": "Lesson 4: Listening – cities",
+ "outcomes": [
+  "Find key words that show a question asks for agreement, a suggestion or feelings.",
+  "Put adverbs of frequency and time phrases in the right place.",
+  "Describe how a city makes me feel."
+ ],
+ "tf": [
+  {
+   "s": "The question 'What do they both think?' asks for agreement.",
+   "t": true,
+   "why": "'Both' tells you the speakers agree."
+  },
+  {
+   "s": "'What advice does Henry give?' asks about feelings.",
+   "t": false,
+   "why": "Advice is a suggestion, not a feeling."
+  },
+  {
+   "s": "Speakers often say the same idea in different words.",
+   "t": true,
+   "why": "Yes, so listen for meaning, not only the same words."
+  },
+  {
+   "s": "Adverbs of frequency usually go after the verb be.",
+   "t": true,
+   "why": "Like 'I am always tired on Thursday evenings.'"
+  },
+  {
+   "s": "Adverbs of frequency usually go after main verbs.",
+   "t": false,
+   "why": "They go before main verbs: 'I usually stay up late.'"
+  },
+  {
+   "s": "Time phrases like 'once a week' usually go at the end of a sentence.",
+   "t": true,
+   "why": "Yes: 'Tom and I go skating once a week.'"
+  },
+  {
+   "s": "'Rarely' has a similar meaning to 'frequently'.",
+   "t": false,
+   "why": "'Rarely' means not often; 'frequently' means often."
+  },
+  {
+   "s": "'Hardly ever' has a similar meaning to 'rarely'.",
+   "t": true,
+   "why": "Both mean almost never."
+  },
+  {
+   "s": "Before you listen, it helps to underline key words in the questions.",
+   "t": true,
+   "why": "Key words help you know what to listen for."
+  },
+  {
+   "s": "'Stressed' and 'relaxed' have the same meaning.",
+   "t": false,
+   "why": "They are opposites: stressed means worried, relaxed means calm."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word shows that a question asks for a suggestion?",
+   "o": [
+    "should",
+    "both",
+    "feel"
+   ],
+   "why": "'Should' is used for advice and suggestions."
+  },
+  {
+   "q": "Which question asks about feelings?",
+   "o": [
+    "How does Dylan feel about his new city?",
+    "What do they both think?",
+    "What should Juma do?"
+   ],
+   "why": "'Feel' shows it is about feelings."
+  },
+  {
+   "q": "Which sentence is correct?",
+   "o": [
+    "I am always tired on Thursday evenings.",
+    "I always am tired on Thursday evenings.",
+    "I am tired always on Thursday evenings."
+   ],
+   "why": "'Always' goes after 'am'."
+  },
+  {
+   "q": "Which sentence with 'rarely' is correct?",
+   "o": [
+    "We rarely travel by train.",
+    "We travel rarely by train.",
+    "Rarely we travel by train."
+   ],
+   "why": "'Rarely' goes before the main verb."
+  },
+  {
+   "q": "Where do time phrases usually go?",
+   "o": [
+    "at the end",
+    "after be",
+    "before the subject"
+   ],
+   "why": "Time phrases usually go at the end of the sentence."
+  },
+  {
+   "q": "Which one is a time phrase?",
+   "o": [
+    "once a month",
+    "usually",
+    "rarely"
+   ],
+   "why": "'Once a month' is a time phrase; the others are adverbs."
+  },
+  {
+   "q": "Which word means 'calm and not worried'?",
+   "o": [
+    "relaxed",
+    "stressed",
+    "excited"
+   ],
+   "why": "Relaxed means calm."
+  },
+  {
+   "q": "How does Dylan feel about his new city?",
+   "o": [
+    "Surprised people are so friendly",
+    "Angry people are rude",
+    "Bored with the parks"
+   ],
+   "why": "He is surprised by how friendly people are."
+  },
+  {
+   "q": "Order: usually / it / dark / isn't / in June",
+   "o": [
+    "It isn't usually dark in June.",
+    "It isn't dark in usually June.",
+    "It dark isn't usually in June."
+   ],
+   "why": "After be, the adverb comes next: isn't usually."
+  },
+  {
+   "q": "What do the two friends in conversation 3 agree about?",
+   "o": [
+    "They enjoy the different seasons.",
+    "They hate the city.",
+    "They want to move house."
+   ],
+   "why": "They both enjoy the different seasons."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "A question with 'both' asks for…",
+   "a": "agreement",
+   "d": [
+    "suggestion",
+    "feelings",
+    "a reason"
+   ]
+  },
+  {
+   "q": "A question with 'should' asks for…",
+   "a": "a suggestion",
+   "d": [
+    "agreement",
+    "feelings",
+    "a reason"
+   ]
+  },
+  {
+   "q": "Similar meaning to 'rarely'",
+   "a": "hardly ever",
+   "d": [
+    "always",
+    "usually",
+    "most days"
+   ]
+  },
+  {
+   "q": "Opposite of 'relaxed'",
+   "a": "stressed",
+   "d": [
+    "calm",
+    "happy",
+    "pleased"
+   ]
+  },
+  {
+   "q": "How often is 'every thirty days'?",
+   "a": "once a month",
+   "d": [
+    "twice a year",
+    "most days",
+    "every day"
+   ]
+  },
+  {
+   "q": "Adverb for 100% of the time",
+   "a": "always",
+   "d": [
+    "usually",
+    "rarely",
+    "hardly ever"
+   ]
+  },
+  {
+   "q": "Adverb for 0% of the time",
+   "a": "never",
+   "d": [
+    "often",
+    "usually",
+    "always"
+   ]
+  },
+  {
+   "q": "Adverbs of frequency go ___ be.",
+   "a": "after",
+   "d": [
+    "before",
+    "at the end",
+    "at the start"
+   ]
+  },
+  {
+   "q": "Adverbs of frequency go ___ main verbs.",
+   "a": "before",
+   "d": [
+    "after",
+    "at the end",
+    "at the start"
+   ]
+  },
+  {
+   "q": "Similar meaning to 'often'",
+   "a": "frequently",
+   "d": [
+    "rarely",
+    "hardly ever",
+    "never"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which adverb means 'not very often'?",
+   "o": [
+    "rarely",
+    "frequently",
+    "always",
+    "usually"
+   ],
+   "why": "'Rarely' means not often."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should you do before you listen?",
+   "o": [
+    "Underline key words in the questions",
+    "Write all the answers",
+    "Close your book",
+    "Read the script"
+   ],
+   "why": "Key words help you focus while you listen."
+  },
+  {
+   "lv": "التذكر",
+   "q": "'You will hear two friends. What do they both think?' This question asks for…",
+   "o": [
+    "agreement",
+    "a suggestion",
+    "feelings",
+    "a place"
+   ],
+   "why": "'Both think' means they agree."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a time phrase?",
+   "o": [
+    "now and then",
+    "rarely",
+    "usually",
+    "always"
+   ],
+   "why": "'Now and then' is a time phrase."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite: My parents go to the cinema. (hardly ever)",
+   "o": [
+    "My parents hardly ever go to the cinema.",
+    "My parents go hardly ever to the cinema.",
+    "Hardly ever my parents go to the cinema.",
+    "My parents go to hardly ever the cinema."
+   ],
+   "why": "The adverb goes before the main verb 'go'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct this sentence: 'Tom and I go once a week skating.'",
+   "o": [
+    "Tom and I go skating once a week.",
+    "Tom and I go a once week skating.",
+    "Tom once and I go skating a week.",
+    "Tom and I skating go once a week."
+   ],
+   "why": "The time phrase goes at the end."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "I usually study in the evening.",
+    "I study usually in the evening.",
+    "I am study usually in the evening.",
+    "I usually am study in the evening."
+   ],
+   "why": "'Usually' goes before the main verb 'study'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "One friend laughs more in the country. The other worries more in the city. What do they agree about?",
+   "o": [
+    "They are both more stressed in the city.",
+    "They both love the city.",
+    "They both want to visit the country less.",
+    "They are both relaxed in the city."
+   ],
+   "why": "Both ideas show the city makes them more stressed."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Speaker A: 'It had amazing history.' Speaker B: 'Yes, it was quite an interesting documentary.' What does this show?",
+   "o": [
+    "They say the same idea in different words.",
+    "They disagree.",
+    "They are giving a suggestion.",
+    "They feel stressed."
+   ],
+   "why": "Listen for the same idea, even when the words change."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does 'always' come after 'am' in 'I am always tired'?",
+   "o": [
+    "Adverbs of frequency go after the verb be.",
+    "Adverbs always go at the end.",
+    "'Tired' is a main verb.",
+    "'Always' is a time phrase."
+   ],
+   "why": "With be, the adverb comes after the verb."
+  }
+ ]
+}

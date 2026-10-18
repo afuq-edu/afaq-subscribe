@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 1: Identity",
+ "lesson": "Lesson 5: Speaking – giving personal information",
+ "outcomes": [
+  "Ask for and give personal information clearly.",
+  "Give longer answers with reasons and examples.",
+  "Use linking words: because, as, one reason is, for example, but, so, also."
+ ],
+ "tf": [
+  {
+   "s": "Your surname is your family name.",
+   "t": true,
+   "why": "The surname is the family name at the end of your full name."
+  },
+  {
+   "s": "A good interview answer is usually just one or two words.",
+   "t": false,
+   "why": "Good answers are fuller, with reasons and examples."
+  },
+  {
+   "s": "'Because', 'as' and 'one reason is' introduce a reason.",
+   "t": true,
+   "why": "They tell the listener why."
+  },
+  {
+   "s": "'For example' introduces a reason.",
+   "t": false,
+   "why": "'For example' introduces an example, not a reason."
+  },
+  {
+   "s": "In Ex 3, Chen gives better answers than Huda.",
+   "t": true,
+   "why": "His answers are fuller and more descriptive."
+  },
+  {
+   "s": "A postcode is a type of email address.",
+   "t": false,
+   "why": "A postcode is part of your home address."
+  },
+  {
+   "s": "We use 'but' to show a contrast.",
+   "t": true,
+   "why": "For example: It's a big city, but it's not the capital."
+  },
+  {
+   "s": "'How do you spell your surname?' asks someone to say the letters of their name.",
+   "t": true,
+   "why": "Spelling means saying the letters one by one."
+  },
+  {
+   "s": "You should share your personal information with anyone online.",
+   "t": false,
+   "why": "Share personal information only when it is safe and appropriate."
+  },
+  {
+   "s": "Your middle name always comes after your surname.",
+   "t": false,
+   "why": "The middle name comes between your first name and surname."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word introduces an example?",
+   "o": [
+    "for example",
+    "because",
+    "but"
+   ],
+   "why": "'For example' gives an example."
+  },
+  {
+   "q": "Complete: ___ do you get to school every day?",
+   "o": [
+    "How",
+    "Who",
+    "What"
+   ],
+   "why": "'How' asks about the way you travel."
+  },
+  {
+   "q": "Complete: It's a big city, ___ it's not the capital.",
+   "o": [
+    "but",
+    "so",
+    "because"
+   ],
+   "why": "'But' shows a contrast."
+  },
+  {
+   "q": "Complete: I take the bus ___ the bus stop is near my house.",
+   "o": [
+    "because",
+    "but",
+    "for example"
+   ],
+   "why": "'Because' gives the reason."
+  },
+  {
+   "q": "Order the words: middle / 's / your / what / name / ?",
+   "o": [
+    "What's your middle name?",
+    "Your what's middle name?",
+    "What's name your middle?"
+   ],
+   "why": "Question word first, then 's, then your middle name."
+  },
+  {
+   "q": "In Ex 5, whose answer is better?",
+   "o": [
+    "Huda's",
+    "Chen's",
+    "Neither"
+   ],
+   "why": "This time Huda gives the fuller answer."
+  },
+  {
+   "q": "Which question asks about a place?",
+   "o": [
+    "Where do you live?",
+    "Who is your friend?",
+    "How old are you?"
+   ],
+   "why": "'Where' asks about places."
+  },
+  {
+   "q": "Complete: I love music. I ___ play the guitar.",
+   "o": [
+    "also",
+    "but",
+    "because"
+   ],
+   "why": "'Also' adds more information."
+  },
+  {
+   "q": "Complete: It was raining, ___ we stayed at home.",
+   "o": [
+    "so",
+    "but",
+    "for example"
+   ],
+   "why": "'So' shows a result."
+  },
+  {
+   "q": "What is a fact file?",
+   "o": [
+    "A short list of facts about a person",
+    "A long story",
+    "A school timetable"
+   ],
+   "why": "A fact file collects key facts about someone."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Introduces an example",
+   "a": "for example",
+   "d": [
+    "because",
+    "but",
+    "so"
+   ]
+  },
+  {
+   "q": "Shows a contrast",
+   "a": "but",
+   "d": [
+    "so",
+    "also",
+    "because"
+   ]
+  },
+  {
+   "q": "Shows a result",
+   "a": "so",
+   "d": [
+    "but",
+    "also",
+    "as"
+   ]
+  },
+  {
+   "q": "Adds more information",
+   "a": "also",
+   "d": [
+    "but",
+    "so",
+    "because"
+   ]
+  },
+  {
+   "q": "Asks about a place",
+   "a": "Where",
+   "d": [
+    "Who",
+    "How",
+    "What"
+   ]
+  },
+  {
+   "q": "Asks about a person",
+   "a": "Who",
+   "d": [
+    "Where",
+    "How",
+    "When"
+   ]
+  },
+  {
+   "q": "Asks about the way",
+   "a": "How",
+   "d": [
+    "Who",
+    "Where",
+    "What"
+   ]
+  },
+  {
+   "q": "Your family name",
+   "a": "surname",
+   "d": [
+    "middle name",
+    "postcode",
+    "email"
+   ]
+  },
+  {
+   "q": "Better answers in Ex 3",
+   "a": "Chen",
+   "d": [
+    "Huda",
+    "Carlos",
+    "Neither"
+   ]
+  },
+  {
+   "q": "Better answer in Ex 5",
+   "a": "Huda",
+   "d": [
+    "Chen",
+    "Carlos",
+    "Neither"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these introduce a reason?",
+   "o": [
+    "because, as, one reason is",
+    "for example, also, so",
+    "but, also, for example",
+    "who, where, how"
+   ],
+   "why": "These words explain why."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do you ask someone to spell the name of their town?",
+   "o": [
+    "How do you spell the name of the town?",
+    "What do you spell the town?",
+    "Who spells the town?",
+    "Where is the town spell?"
+   ],
+   "why": "'How do you spell ...?' asks for the letters."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why does Chen give the best answers in Ex 3?",
+   "o": [
+    "His answers are fuller and more descriptive",
+    "He speaks very fast",
+    "He uses only one word",
+    "He asks the questions"
+   ],
+   "why": "He adds details, like where Guangzhou is."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a postcode?",
+   "o": [
+    "A code that is part of your address",
+    "Your middle name",
+    "Your phone password",
+    "A school subject"
+   ],
+   "why": "A postcode helps letters reach your address."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I'm keen on baking. ___, I make bread for my family once a week.",
+   "o": [
+    "For example",
+    "Because",
+    "But",
+    "So"
+   ],
+   "why": "The second sentence gives an example of baking."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which answer to 'Where do you live?' is the best?",
+   "o": [
+    "I live in Sohar. It's a busy city by the sea, and I like its parks.",
+    "Sohar.",
+    "In a city.",
+    "I live."
+   ],
+   "why": "A full answer adds a description and a reason."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: My favourite subject is science ___ I like doing experiments.",
+   "o": [
+    "because",
+    "but",
+    "for example",
+    "also"
+   ],
+   "why": "The second part gives the reason."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Huda says only 'I like swimming.' What is the best way to improve her answer?",
+   "o": [
+    "Add a reason: 'I like swimming because it helps me relax.'",
+    "Say it louder",
+    "Repeat it twice",
+    "Answer with one word"
+   ],
+   "why": "Reasons and examples make answers stronger."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it good to extend your answers in a speaking test?",
+   "o": [
+    "It shows you can give reasons, examples and details",
+    "It makes the test shorter",
+    "It means you don't need to listen",
+    "Short answers are not allowed"
+   ],
+   "why": "Fuller answers show more of your English."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses linking words correctly?",
+   "o": [
+    "I like football because it keeps me fit, and I also enjoy swimming.",
+    "I like football but because it is fun.",
+    "I like football so for example it's fun.",
+    "I like football also but swimming."
+   ],
+   "why": "Because gives a reason and also adds information."
+  }
+ ]
+}

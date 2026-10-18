@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Unit 1: Aviation Then and Now (Reading)",
+  "lesson": "Lead-in: transport then and now; core words; conventional vs solar-powered planes",
+  "outcomes": [
+    "Explain the point of a cartoon about congestion on land and in the sky",
+    "Match the Theme 4 core words with their meanings",
+    "Compare a petroleum-fuelled plane with a solar-powered plane"
+  ],
+  "tf": [
+    { "s": "Congestion means vehicles crowding together so they can't move.", "t": true, "why": "Traffic jams are an example of congestion." },
+    { "s": "The cartoon shows that congestion happens only on roads, never in the sky.", "t": false, "why": "The cartoon shows congestion on land and in the skies." },
+    { "s": "Road rage is violent and angry behaviour by drivers towards other drivers.", "t": true, "why": "Road rage is dangerous anger on the road." },
+    { "s": "A network is a system of lines connected to each other.", "t": true, "why": "Roads and flight routes can form a network." },
+    { "s": "Petroleum-based fuel produces carbon dioxide emissions that contribute to global warming.", "t": true, "why": "Burning petroleum releases carbon dioxide." },
+    { "s": "Petroleum fuel will never run out.", "t": false, "why": "Petroleum fuel will run out one day." },
+    { "s": "A solar-powered plane uses energy from the sun.", "t": true, "why": "Solar power comes from sunlight." },
+    { "s": "Calculators cannot be powered by solar energy.", "t": false, "why": "Many calculators, cars and boats can use solar power." },
+    { "s": "'Stressful' describes something that makes you feel relaxed and calm.", "t": false, "why": "Stressful things make you feel worried or tense." },
+    { "s": "Biofuels are fuels made from plant or animal materials.", "t": true, "why": "Yes, biofuels come from living materials such as plants." }
+  ],
+  "boxes": [
+    { "q": "What does the cartoon show?", "o": ["Congestion on land and in the sky", "An empty road", "A quiet beach"], "why": "It shows crowded roads and crowded skies." },
+    { "q": "Which word means 'angry behaviour by drivers'?", "o": ["Road rage", "Network", "Statistics"], "why": "Road rage is violent anger while driving." },
+    { "q": "Which word means 'a system of connected lines'?", "o": ["Network", "Congestion", "Biofuels"], "why": "A network links many points together." },
+    { "q": "Which gas does petroleum fuel produce?", "o": ["Carbon dioxide", "Oxygen", "Helium"], "why": "Burning petroleum gives out carbon dioxide." },
+    { "q": "Which problem does carbon dioxide add to?", "o": ["Global warming", "Road rage", "Air traffic control"], "why": "Carbon dioxide emissions contribute to global warming." },
+    { "q": "What powers a solar plane?", "o": ["The sun", "Petroleum", "Coal"], "why": "Solar means energy from the sun." },
+    { "q": "Which can be powered by solar energy?", "o": ["A calculator", "A candle", "A horse"], "why": "Many calculators use small solar panels." },
+    { "q": "Who guides planes safely in the sky?", "o": ["Air traffic control", "Cabin crew", "Road rage"], "why": "Air traffic control directs planes." },
+    { "q": "Which word describes numbers and data?", "o": ["Statistics", "Network", "Ambitious"], "why": "Statistics are facts shown in numbers." },
+    { "q": "Which word means 'having big goals'?", "o": ["Ambitious", "Stressful", "Commercial"], "why": "Ambitious people or plans aim very high." }
+  ],
+  "hunt": [
+    { "q": "Vehicles crowded and can't move", "a": "congestion", "d": ["network", "biofuels", "statistics"] },
+    { "q": "Drivers' violent anger", "a": "road rage", "d": ["congestion", "network", "commercial"] },
+    { "q": "System of connected lines", "a": "network", "d": ["road rage", "statistics", "biofuels"] },
+    { "q": "Facts shown as numbers", "a": "statistics", "d": ["biofuels", "network", "ambitious"] },
+    { "q": "Fuels from plants", "a": "biofuels", "d": ["petroleum", "statistics", "network"] },
+    { "q": "Causing worry and tension", "a": "stressful", "d": ["ambitious", "commercial", "relaxing"] },
+    { "q": "Directs planes in the sky", "a": "air traffic control", "d": ["cabin crew", "road rage", "network"] },
+    { "q": "Gas from burning petroleum", "a": "carbon dioxide", "d": ["oxygen", "helium", "nitrogen"] },
+    { "q": "Energy from the sun", "a": "solar", "d": ["petroleum", "coal", "diesel"] },
+    { "q": "Petroleum emissions cause global ...", "a": "warming", "d": ["cooling", "rage", "network"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "What does 'congestion' mean?", "o": ["Crowding together of vehicles so that they can't move", "A fast, empty road", "A kind of plane fuel", "A group of airports"], "why": "Congestion is a traffic problem of too many vehicles." },
+    { "lv": "التذكر", "q": "What are the problems of petroleum-based fuel?", "o": ["It produces carbon dioxide, adds to global warming and will run out", "It is made from sunlight", "It is free and never runs out", "It makes planes silent"], "why": "These are the problems discussed in the lesson." },
+    { "lv": "التذكر", "q": "Which things can be powered by solar energy?", "o": ["Cars, boats and calculators", "Only candles", "Only horses", "Nothing at all"], "why": "Solar energy can power many machines." },
+    { "lv": "التذكر", "q": "What does 'road rage' mean?", "o": ["Violent and angry behaviour by drivers towards other drivers", "A long, empty road", "A race between cars", "Rules for parking"], "why": "Road rage is angry, dangerous driving behaviour." },
+    { "lv": "التطبيق", "q": "A driver shouts and hits his horn angrily at another car in a traffic jam. Which core word describes his behaviour?", "o": ["Road rage", "Network", "Statistics", "Biofuels"], "why": "Angry behaviour towards other drivers is road rage." },
+    { "lv": "التطبيق", "q": "Complete: '___ is a system of lines connected to each other.'", "o": ["A network", "Congestion", "Road rage", "A biofuel"], "why": "A network connects lines, like roads or routes." },
+    { "lv": "التطبيق", "q": "A report says '60% of drivers are late because of traffic'. What kind of information is this?", "o": ["Statistics", "Road rage", "Biofuels", "Air traffic control"], "why": "Facts given as numbers are statistics." },
+    { "lv": "التحليل", "q": "What point does the cartoon make?", "o": ["Congestion is now a problem in the sky as well as on the roads", "Planes never fly near each other", "Roads are always empty", "Flying is cheaper than driving"], "why": "The cartoon shows that air space is becoming crowded too." },
+    { "lv": "التحليل", "q": "Why might solar-powered planes be better for the environment than petroleum-fuelled planes?", "o": ["They do not produce carbon dioxide from burning fuel", "They are always faster", "They carry more passengers", "They need more petroleum"], "why": "Sunlight is clean energy and does not run out." },
+    { "lv": "التحليل", "q": "Why is congestion in the sky a serious problem?", "o": ["Crowded air space makes flying more stressful and harder for air traffic control", "It makes the sky more colourful", "It means planes fly faster", "It has no effect on anyone"], "why": "More planes in the sky need more careful control." }
+  ]
+}

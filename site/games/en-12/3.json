@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: A Fair Exchange (Reading)",
+ "lesson": "Matching headings, vocabulary development and Time to Talk",
+ "outcomes": [
+  "Match headings to paragraphs using topic sentences",
+  "Find words in a text from their meanings",
+  "Use trading phrases to make a fair deal"
+ ],
+ "tf": [
+  {
+   "s": "A topic sentence gives the main idea of a paragraph.",
+   "t": true,
+   "why": "Yes, it tells you what the paragraph is about."
+  },
+  {
+   "s": "The topic sentence is always the last sentence of a paragraph.",
+   "t": false,
+   "why": "It is usually, but not always, the first sentence."
+  },
+  {
+   "s": "'Merchants' are people who buy and sell goods.",
+   "t": true,
+   "why": "Correct, merchants are traders."
+  },
+  {
+   "s": "'Gigantic' means very small.",
+   "t": false,
+   "why": "Gigantic means extremely big."
+  },
+  {
+   "s": "'Routes' are ways or paths from one place to another.",
+   "t": true,
+   "why": "Yes, trade routes connect places."
+  },
+  {
+   "s": "Paragraph 2 of the text is about the Arabs as traders.",
+   "t": true,
+   "why": "That is the main idea of paragraph 2."
+  },
+  {
+   "s": "Knowing the part of speech can help you find a word's meaning.",
+   "t": true,
+   "why": "For example, 'people who buy and sell' needs a plural noun."
+  },
+  {
+   "s": "'Economic' is connected with trade, industry and money.",
+   "t": true,
+   "why": "Yes, economic relates to money and trade."
+  },
+  {
+   "s": "'That's a fair deal' is a phrase used to refuse a trade.",
+   "t": false,
+   "why": "It is used to accept a trade you think is fair."
+  },
+  {
+   "s": "'Rituals' are types of ships used for trading.",
+   "t": false,
+   "why": "Rituals are ceremonies or actions done in a fixed way."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where is the topic sentence usually found?",
+   "o": [
+    "at the start of the paragraph",
+    "in the title",
+    "at the end of the text"
+   ],
+   "why": "It is usually the first sentence."
+  },
+  {
+   "q": "Which word means 'people who buy and sell goods'?",
+   "o": [
+    "merchants",
+    "routes",
+    "rituals"
+   ],
+   "why": "Merchants are traders."
+  },
+  {
+   "q": "Which word means 'a lot or very much'?",
+   "o": [
+    "dramatically",
+    "gigantic",
+    "economic"
+   ],
+   "why": "'Changed dramatically' means changed a lot."
+  },
+  {
+   "q": "Complete: Frankincense was ___ to Greece, Italy and Egypt.",
+   "o": [
+    "exported",
+    "imported",
+    "located"
+   ],
+   "why": "Exported means sent to other countries to sell."
+  },
+  {
+   "q": "Which word means 'a place or position'?",
+   "o": [
+    "location",
+    "route",
+    "merchant"
+   ],
+   "why": "Location is where something is."
+  },
+  {
+   "q": "Which phrase can you use to start a trade?",
+   "o": [
+    "What will you give me for my...?",
+    "Goodbye, see you.",
+    "I don't know."
+   ],
+   "why": "This question asks for an offer."
+  },
+  {
+   "q": "What helps you match a heading to a paragraph?",
+   "o": [
+    "the topic sentence",
+    "the page number",
+    "the longest word"
+   ],
+   "why": "The topic sentence shows the main idea."
+  },
+  {
+   "q": "Which word means 'extremely big'?",
+   "o": [
+    "gigantic",
+    "economic",
+    "dramatic"
+   ],
+   "why": "Gigantic means very, very big."
+  },
+  {
+   "q": "Which part of speech is 'merchants'?",
+   "o": [
+    "plural noun",
+    "verb",
+    "adjective"
+   ],
+   "why": "It names people, and there are more than one."
+  },
+  {
+   "q": "What should you say when you accept a good trade?",
+   "o": [
+    "That's a fair deal.",
+    "No, thank you.",
+    "Where is it from?"
+   ],
+   "why": "This phrase shows you agree to the deal."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "People who buy and sell goods",
+   "a": "merchants",
+   "d": [
+    "routes",
+    "rituals",
+    "locations"
+   ]
+  },
+  {
+   "q": "Extremely big",
+   "a": "gigantic",
+   "d": [
+    "economic",
+    "dramatic",
+    "exported"
+   ]
+  },
+  {
+   "q": "Ways from place to place",
+   "a": "routes",
+   "d": [
+    "merchants",
+    "rituals",
+    "logos"
+   ]
+  },
+  {
+   "q": "A place or position",
+   "a": "location",
+   "d": [
+    "route",
+    "ritual",
+    "merchant"
+   ]
+  },
+  {
+   "q": "Sent abroad to be sold",
+   "a": "exported",
+   "d": [
+    "imported",
+    "located",
+    "borrowed"
+   ]
+  },
+  {
+   "q": "Ceremonies done in a fixed way",
+   "a": "rituals",
+   "d": [
+    "routes",
+    "merchants",
+    "slogans"
+   ]
+  },
+  {
+   "q": "Related to trade and money",
+   "a": "economic",
+   "d": [
+    "gigantic",
+    "dramatic",
+    "ancient"
+   ]
+  },
+  {
+   "q": "Changed a lot: changed ___",
+   "a": "dramatically",
+   "d": [
+    "slowly",
+    "rarely",
+    "quietly"
+   ]
+  },
+  {
+   "q": "Sentence with the main idea",
+   "a": "topic sentence",
+   "d": [
+    "last sentence",
+    "short answer",
+    "question"
+   ]
+  },
+  {
+   "q": "Paragraph about Arab traders",
+   "a": "paragraph 2",
+   "d": [
+    "paragraph 1",
+    "paragraph 3",
+    "paragraph 4"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is a topic sentence?",
+   "o": [
+    "the sentence that gives the main idea of a paragraph",
+    "the last sentence of the text",
+    "a sentence with a new word",
+    "the title of the text"
+   ],
+   "why": "The topic sentence states the paragraph's main idea."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word from the text means 'people who buy and sell goods'?",
+   "o": [
+    "merchants",
+    "routes",
+    "rituals",
+    "locations"
+   ],
+   "why": "Merchants are traders."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is used in the trading game?",
+   "o": [
+    "What will you give me for my...?",
+    "How old are you?",
+    "What time is it?",
+    "Where do you live?"
+   ],
+   "why": "This phrase asks a partner for an offer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Is the topic sentence always the first sentence?",
+   "o": [
+    "No, usually but not always",
+    "Yes, always",
+    "No, it is always the last",
+    "There is no topic sentence"
+   ],
+   "why": "Read the whole paragraph if you are not sure."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The goods that are traded have changed ______ over the years.",
+   "o": [
+    "dramatically",
+    "gigantic",
+    "economic",
+    "merchants"
+   ],
+   "why": "An adverb is needed to describe 'changed'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A paragraph begins: 'Trade has changed the course of history.' What is this sentence?",
+   "o": [
+    "the topic sentence",
+    "a heading",
+    "a slogan",
+    "a conclusion"
+   ],
+   "why": "It states the main idea of paragraph 1."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend offers you his pen for your notebook, and you are happy. What do you say?",
+   "o": [
+    "That's a fair deal.",
+    "What will you give me?",
+    "Where is it from?",
+    "I need a dictionary."
+   ],
+   "why": "This phrase accepts the trade."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The meaning is 'people who buy and sell goods'. What kind of word should you look for?",
+   "o": [
+    "a plural noun",
+    "a past verb",
+    "an adjective",
+    "an adverb"
+   ],
+   "why": "'People' tells you the word is a plural noun."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does matching the topic sentence help with headings?",
+   "o": [
+    "It shows what the whole paragraph is about",
+    "It is the longest sentence",
+    "It has the most new words",
+    "It always has a number"
+   ],
+   "why": "A heading sums up the paragraph's main idea."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses 'gigantic' correctly?",
+   "o": [
+    "Modern tankers are gigantic ships.",
+    "The ant is gigantic.",
+    "He spoke gigantic.",
+    "She gigantic the goods."
+   ],
+   "why": "Gigantic is an adjective meaning extremely big."
+  }
+ ]
+}

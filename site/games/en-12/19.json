@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+ "lesson": "Reading for Pleasure: The Ethics of Advertising",
+ "outcomes": [
+  "Read an article about ethics in advertising for gist and detail",
+  "Decide whether adverts and mock-ups are honest, giving reasons"
+ ],
+ "tf": [
+  {
+   "s": "'Caveat emptor' means 'Let the buyer beware'.",
+   "t": true,
+   "why": "Buyers must be careful themselves."
+  },
+  {
+   "s": "Campbell's put marbles in soup bowls to push the vegetables to the top.",
+   "t": true,
+   "why": "This made the soup look full of vegetables."
+  },
+  {
+   "s": "A TV advert usually lasts several hours.",
+   "t": false,
+   "why": "A TV ad lasts no more than 30 seconds."
+  },
+  {
+   "s": "Print adverts have unlimited space for information.",
+   "t": false,
+   "why": "Print space is restricted."
+  },
+  {
+   "s": "'Four out of five doctors recommend Brand X' was meaningless because nobody knew how many doctors were asked.",
+   "t": true,
+   "why": "Without that number, the claim tells us little."
+  },
+  {
+   "s": "After the court case, McDonald's put nutritional information in its restaurants and online.",
+   "t": true,
+   "why": "It also offered healthier food."
+  },
+  {
+   "s": "A mock-up is the real product shown in an advert.",
+   "t": false,
+   "why": "A mock-up is a copy or model, not the real thing."
+  },
+  {
+   "s": "Using shaving cream instead of ice-cream in an ad does not show the real product.",
+   "t": true,
+   "why": "That is why many people think it is not ethical."
+  },
+  {
+   "s": "'Ethical' means morally right and honest.",
+   "t": true,
+   "why": "Ethical behaviour is fair and honest."
+  },
+  {
+   "s": "Misleading information helps buyers make correct choices.",
+   "t": false,
+   "why": "Misleading information gives a false impression."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who must be careful in 'Caveat emptor'?",
+   "o": [
+    "the buyer",
+    "the seller",
+    "the doctor"
+   ],
+   "why": "It means 'Let the buyer beware'."
+  },
+  {
+   "q": "Why did Campbell's use marbles?",
+   "o": [
+    "to push vegetables to the top",
+    "to make soup cheaper",
+    "to cool the soup"
+   ],
+   "why": "The soup looked fuller."
+  },
+  {
+   "q": "How long is a TV ad at most?",
+   "o": [
+    "30 seconds",
+    "30 minutes",
+    "3 hours"
+   ],
+   "why": "Time on TV is short and costly."
+  },
+  {
+   "q": "Is a mock-up the real product?",
+   "o": [
+    "no, it is a model",
+    "yes, always",
+    "only on TV"
+   ],
+   "why": "A mock-up only looks like the real thing."
+  },
+  {
+   "q": "What did McDonald's offer after the case?",
+   "o": [
+    "healthier food",
+    "free toys only",
+    "cheaper cars"
+   ],
+   "why": "It also gave nutritional information."
+  },
+  {
+   "q": "What was used instead of ice-cream?",
+   "o": [
+    "shaving cream",
+    "yoghurt",
+    "milk"
+   ],
+   "why": "It looks like ice-cream, but it is not the real product."
+  },
+  {
+   "q": "What does 'ethical' mean?",
+   "o": [
+    "morally right",
+    "very expensive",
+    "very fast"
+   ],
+   "why": "Ethical means honest and fair."
+  },
+  {
+   "q": "Why was the 'four out of five doctors' claim meaningless?",
+   "o": [
+    "we don't know how many were asked",
+    "doctors don't exist",
+    "it was too long"
+   ],
+   "why": "The total number was unknown."
+  },
+  {
+   "q": "What does 'regulated' mean?",
+   "o": [
+    "controlled by rules",
+    "completely free",
+    "very old"
+   ],
+   "why": "Regulated ads must follow rules."
+  },
+  {
+   "q": "What are 'side-effects'?",
+   "o": [
+    "extra unwanted effects",
+    "main benefits",
+    "prices"
+   ],
+   "why": "Medicines can have side-effects."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "'Let the buyer beware'",
+   "a": "caveat emptor",
+   "d": [
+    "mock-up",
+    "side-effect",
+    "slogan"
+   ]
+  },
+  {
+   "q": "Morally right and honest",
+   "a": "ethical",
+   "d": [
+    "misleading",
+    "regulated",
+    "excessive"
+   ]
+  },
+  {
+   "q": "A model, not the real thing",
+   "a": "mock-up",
+   "d": [
+    "copy",
+    "brand",
+    "logo"
+   ]
+  },
+  {
+   "q": "Put in soup by Campbell's",
+   "a": "marbles",
+   "d": [
+    "stones",
+    "coins",
+    "beads"
+   ]
+  },
+  {
+   "q": "Used instead of ice-cream",
+   "a": "shaving cream",
+   "d": [
+    "yoghurt",
+    "butter",
+    "milk"
+   ]
+  },
+  {
+   "q": "Max length of a TV ad",
+   "a": "30 seconds",
+   "d": [
+    "30 minutes",
+    "3 hours",
+    "10 minutes"
+   ]
+  },
+  {
+   "q": "Controlled by rules",
+   "a": "regulated",
+   "d": [
+    "ethical",
+    "misleading",
+    "publicity"
+   ]
+  },
+  {
+   "q": "Unwanted effects of a drug",
+   "a": "side-effects",
+   "d": [
+    "benefits",
+    "prices",
+    "slogans"
+   ]
+  },
+  {
+   "q": "Gives a false idea",
+   "a": "misleading",
+   "d": [
+    "ethical",
+    "honest",
+    "accurate"
+   ]
+  },
+  {
+   "q": "Year of the McDonald's case",
+   "a": "2002",
+   "d": [
+    "2012",
+    "1992",
+    "2020"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does 'Caveat emptor' mean?",
+   "o": [
+    "Let the buyer beware",
+    "The seller is always right",
+    "Free for everyone",
+    "Buy now, pay later"
+   ],
+   "why": "It is a warning to buyers."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why did Campbell's put marbles in the soup bowls?",
+   "o": [
+    "To push the vegetables to the top so the soup looked full",
+    "To make the soup heavier",
+    "To keep the soup hot",
+    "To decorate the bowls"
+   ],
+   "why": "This made the advert misleading."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What did McDonald's do after the court case?",
+   "o": [
+    "put nutritional information in restaurants and online and offered healthier food",
+    "closed all its restaurants",
+    "stopped advertising forever",
+    "raised its prices"
+   ],
+   "why": "It gave customers more information."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a mock-up?",
+   "o": [
+    "a copy made to look like the real product",
+    "the real product",
+    "the price label",
+    "a TV channel"
+   ],
+   "why": "A mock-up is not the real thing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A face cream ad says '9 out of 10 women love it', but does not say how many women were asked. What is the problem?",
+   "o": [
+    "The claim may be meaningless",
+    "The ad is too short",
+    "The cream is too cheap",
+    "The slogan is too long"
+   ],
+   "why": "Like the 'four out of five doctors' claim."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "An advert for medicine does not mention its side-effects. How would you describe it?",
+   "o": [
+    "misleading",
+    "nutritious",
+    "refreshing",
+    "stylish"
+   ],
+   "why": "Hiding important facts can mislead buyers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A food ad shows a burger that is much bigger than the real one. Which word fits?",
+   "o": [
+    "misleading",
+    "ethical",
+    "regulated",
+    "honest"
+   ],
+   "why": "It gives a false impression of the product."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it difficult to give too much information in an advert?",
+   "o": [
+    "A TV ad lasts no more than 30 seconds and print space is restricted",
+    "Nobody reads adverts",
+    "Companies have no information",
+    "It is against the law to give facts"
+   ],
+   "why": "Time and space are limited."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Many people think using shaving cream instead of ice-cream in an ad is not ethical. Why?",
+   "o": [
+    "It does not show the real product",
+    "Shaving cream is too expensive",
+    "Ice-cream is unhealthy",
+    "The ad is too long"
+   ],
+   "why": "The buyer sees something different from what they buy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which rule would make adverts more honest?",
+   "o": [
+    "Show the real product and give clear facts",
+    "Use more marbles",
+    "Hide the side-effects",
+    "Make ads longer than a film"
+   ],
+   "why": "Honest ads show the truth."
+  }
+ ]
+}

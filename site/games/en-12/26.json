@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 2: Coping with Change (Grammar)",
+ "lesson": "Grammar Recall: the past perfect tense",
+ "outcomes": [
+  "Understand when we use the past perfect (had + past participle)",
+  "Choose between the past perfect and other past forms",
+  "Talk about regrets with 'wish' and 'if only'"
+ ],
+ "tf": [
+  {
+   "s": "The past perfect is formed with had + past participle.",
+   "t": true,
+   "why": "Yes, for example 'had finished'."
+  },
+  {
+   "s": "In 'When I arrived, the lesson had started', the lesson started first.",
+   "t": true,
+   "why": "The past perfect shows the earlier action."
+  },
+  {
+   "s": "The past perfect shows the later of two past actions.",
+   "t": false,
+   "why": "It shows the earlier of two past actions."
+  },
+  {
+   "s": "We can use 'I wish' + past perfect to talk about regrets.",
+   "t": true,
+   "why": "For example, 'I wish I'd started it sooner.'"
+  },
+  {
+   "s": "'If only I had gone to bed earlier' is a regret about the future.",
+   "t": false,
+   "why": "It is a regret about the past."
+  },
+  {
+   "s": "The past perfect is correct for every past event.",
+   "t": false,
+   "why": "We use it only for the earlier of two past events."
+  },
+  {
+   "s": "'I'd' can be a short form of 'I had'.",
+   "t": true,
+   "why": "'I'd never lived' means 'I had never lived'."
+  },
+  {
+   "s": "In the listening, B had not expected such a long way between the buildings.",
+   "t": true,
+   "why": "Yes, the distance surprised B."
+  },
+  {
+   "s": "'Had went' is the correct past perfect of 'go'.",
+   "t": false,
+   "why": "The correct form is 'had gone'."
+  },
+  {
+   "s": "In the listening, Sara had expected a huge number of students.",
+   "t": true,
+   "why": "Yes, that was Sara's expectation."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "By the time we arrived, the match ___ (finish).",
+   "o": [
+    "had finished",
+    "finishes",
+    "has finished"
+   ],
+   "why": "The match ended before we arrived."
+  },
+  {
+   "q": "I wish I ___ harder for the test.",
+   "o": [
+    "had studied",
+    "study",
+    "will study"
+   ],
+   "why": "Wish + past perfect shows a past regret."
+  },
+  {
+   "q": "Complete: 'She had never ___ snow before.'",
+   "o": [
+    "seen",
+    "saw",
+    "see"
+   ],
+   "why": "'Seen' is the past participle of 'see'."
+  },
+  {
+   "q": "If only I ___ my time!",
+   "o": [
+    "hadn't wasted",
+    "don't waste",
+    "won't waste"
+   ],
+   "why": "If only + past perfect for a past regret."
+  },
+  {
+   "q": "'The film had begun when we got to the cinema.' What happened first?",
+   "o": [
+    "the film began",
+    "we got there",
+    "both at once"
+   ],
+   "why": "'Had begun' is the earlier action."
+  },
+  {
+   "q": "Which words are often followed by the past perfect for regret?",
+   "o": [
+    "wish and if only",
+    "because and so",
+    "and and but"
+   ],
+   "why": "'I wish I had…' and 'If only I had…'."
+  },
+  {
+   "q": "What is the past participle of 'eat'?",
+   "o": [
+    "eaten",
+    "ate",
+    "eated"
+   ],
+   "why": "Eat – ate – eaten."
+  },
+  {
+   "q": "What is 'I hadn't realised'?",
+   "o": [
+    "negative past perfect",
+    "present perfect",
+    "past continuous"
+   ],
+   "why": "Hadn't + past participle is the negative past perfect."
+  },
+  {
+   "q": "What is the short form of 'He had'?",
+   "o": [
+    "He'd",
+    "He's",
+    "Hed"
+   ],
+   "why": "He had = He'd."
+  },
+  {
+   "q": "I ___ (live) in Muscat for ten years before we moved.",
+   "o": [
+    "had lived",
+    "have lived",
+    "am living"
+   ],
+   "why": "Living there came before moving."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Form of the past perfect",
+   "a": "had + past participle",
+   "d": [
+    "have + past participle",
+    "was + -ing",
+    "did + base verb"
+   ]
+  },
+  {
+   "q": "Past participle of 'see'",
+   "a": "seen",
+   "d": [
+    "saw",
+    "seed",
+    "seeing"
+   ]
+  },
+  {
+   "q": "Past participle of 'swim'",
+   "a": "swum",
+   "d": [
+    "swam",
+    "swimmed",
+    "swimming"
+   ]
+  },
+  {
+   "q": "Past participle of 'go'",
+   "a": "gone",
+   "d": [
+    "went",
+    "goed",
+    "going"
+   ]
+  },
+  {
+   "q": "Past participle of 'catch'",
+   "a": "caught",
+   "d": [
+    "catched",
+    "catching",
+    "catches"
+   ]
+  },
+  {
+   "q": "I ___ I had started sooner.",
+   "a": "wish",
+   "d": [
+    "want",
+    "hope",
+    "like"
+   ]
+  },
+  {
+   "q": "Negative of 'had seen'",
+   "a": "hadn't seen",
+   "d": [
+    "didn't saw",
+    "haven't seen",
+    "wasn't seen"
+   ]
+  },
+  {
+   "q": "I'd never lived = I ___ never lived",
+   "a": "had",
+   "d": [
+    "would",
+    "did",
+    "have"
+   ]
+  },
+  {
+   "q": "If only + ... for past regrets",
+   "a": "past perfect",
+   "d": [
+    "present simple",
+    "future simple",
+    "present continuous"
+   ]
+  },
+  {
+   "q": "Past participle of 'be'",
+   "a": "been",
+   "d": [
+    "was",
+    "were",
+    "being"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does the past perfect show?",
+   "o": [
+    "An action before another past action",
+    "An action happening now",
+    "A future plan",
+    "A daily habit"
+   ],
+   "why": "It shows which past event came first."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence has a past perfect verb?",
+   "o": [
+    "I wish I'd started it sooner.",
+    "I start it soon.",
+    "I'm starting it now.",
+    "I will start it."
+   ],
+   "why": "'I'd started' = I had started."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In the listening, what had B not expected about the campus?",
+   "o": [
+    "Such a long way between the buildings",
+    "Very small classrooms",
+    "No cafeteria",
+    "Too few students"
+   ],
+   "why": "The distance between buildings surprised B."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In the listening, what had Sara expected?",
+   "o": [
+    "A huge number of students",
+    "Very few students",
+    "No teachers at all",
+    "A tiny campus"
+   ],
+   "why": "She expected many students and teachers of many nationalities."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: 'When I got home, my brother ___ all the cake.'",
+   "o": [
+    "had eaten",
+    "has eaten",
+    "eats",
+    "is eating"
+   ],
+   "why": "He ate the cake before I got home."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali stayed up late and is tired today. What does he say?",
+   "o": [
+    "If only I had gone to bed earlier.",
+    "If only I go to bed earlier.",
+    "If only I am going to bed.",
+    "If only I will go to bed earlier."
+   ],
+   "why": "If only + past perfect for a past regret."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: 'She ___ the sea before she visited Sur.'",
+   "o": [
+    "had never seen",
+    "has never seen",
+    "never sees",
+    "was never seeing"
+   ],
+   "why": "Not seeing the sea came before the visit."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the past perfect not always correct for past events?",
+   "o": [
+    "It is used only for the earlier of two past events",
+    "It is only for the future",
+    "It is never used in writing",
+    "It is only for questions"
+   ],
+   "why": "For a single past event, the past simple is enough."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'I'd never lived away from home before I started university.' Which came first?",
+   "o": [
+    "Not living away from home",
+    "Starting university",
+    "Both at the same time",
+    "Neither happened"
+   ],
+   "why": "The past perfect part is the earlier situation."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'had never seen' correct in 'Before that trip, I had never seen snow'?",
+   "o": [
+    "It happened before another past event",
+    "It is a present habit",
+    "It is a future plan",
+    "It happened after the trip"
+   ],
+   "why": "The trip is the later past event."
+  }
+ ]
+}

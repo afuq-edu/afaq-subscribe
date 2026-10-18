@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U3",
+ "lesson": "Unit 3 – Lesson 10: Review",
+ "outcomes": [
+  "Ask and answer comparative and superlative questions about animals.",
+  "Write the correct comparative and superlative forms.",
+  "Describe landscapes and say what you can do."
+ ],
+ "tf": [
+  {
+   "s": "A giraffe is taller than a camel.",
+   "t": true,
+   "why": "Yes! A giraffe is very tall."
+  },
+  {
+   "s": "A whale is the largest animal.",
+   "t": true,
+   "why": "Correct! The whale is the largest."
+  },
+  {
+   "s": "A bike is faster than a car.",
+   "t": false,
+   "why": "A car is faster than a bike."
+  },
+  {
+   "s": "The comparative of 'easy' is 'easier'.",
+   "t": true,
+   "why": "Great! y changes to i: easier."
+  },
+  {
+   "s": "The superlative of 'fast' is 'the fastest'.",
+   "t": true,
+   "why": "Well done! fast – faster – the fastest."
+  },
+  {
+   "s": "June is hotter than March in Oman.",
+   "t": true,
+   "why": "Yes! June is very hot."
+  },
+  {
+   "s": "The comparative of 'sweet' is 'more sweet'.",
+   "t": false,
+   "why": "We say sweeter: sweet – sweeter – the sweetest."
+  },
+  {
+   "s": "Mount Everest is the highest mountain in the world.",
+   "t": true,
+   "why": "Correct! It is the highest."
+  },
+  {
+   "s": "A place with a lot of trees is a waterfall.",
+   "t": false,
+   "why": "A place with a lot of trees is a forest."
+  },
+  {
+   "s": "A horse is faster than a cheetah.",
+   "t": false,
+   "why": "A cheetah is faster than a horse."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "easy – easier – ?",
+   "o": [
+    "the easiest",
+    "the easyest",
+    "the most easy"
+   ],
+   "why": "y changes to i: the easiest."
+  },
+  {
+   "q": "Is a giraffe ___ than a camel?",
+   "o": [
+    "taller",
+    "tall",
+    "tallest"
+   ],
+   "why": "Use the comparative: taller than."
+  },
+  {
+   "q": "What's the largest animal?",
+   "o": [
+    "a whale",
+    "a camel",
+    "a horse"
+   ],
+   "why": "The whale is the largest animal."
+  },
+  {
+   "q": "A lot of trees = ?",
+   "o": [
+    "a forest",
+    "a lake",
+    "a waterfall"
+   ],
+   "why": "Many trees make a forest."
+  },
+  {
+   "q": "Great sea views from the top?",
+   "o": [
+    "Jabal Samhan",
+    "Wadi Shab",
+    "Mount Everest"
+   ],
+   "why": "Jabal Samhan has great views of the sea from the top."
+  },
+  {
+   "q": "fast – ___ – the fastest",
+   "o": [
+    "faster",
+    "more fast",
+    "fastest"
+   ],
+   "why": "fast – faster – the fastest."
+  },
+  {
+   "q": "Which is faster?",
+   "o": [
+    "a car",
+    "a bike",
+    "a camel"
+   ],
+   "why": "A car is faster than a bike."
+  },
+  {
+   "q": "sweet – sweeter – ?",
+   "o": [
+    "the sweetest",
+    "the sweeter",
+    "the most sweet"
+   ],
+   "why": "sweet – sweeter – the sweetest."
+  },
+  {
+   "q": "Mount Everest is the ___ mountain.",
+   "o": [
+    "highest",
+    "higher",
+    "high"
+   ],
+   "why": "It is the highest mountain in the world."
+  },
+  {
+   "q": "Best time to go to Wadi Shab?",
+   "o": [
+    "early morning",
+    "weekends",
+    "midday"
+   ],
+   "why": "Go early in the morning, not at weekends."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Comparative of 'tall'",
+   "a": "taller",
+   "d": [
+    "tallest",
+    "more tall",
+    "talls"
+   ]
+  },
+  {
+   "q": "Comparative of 'hot'",
+   "a": "hotter",
+   "d": [
+    "hoter",
+    "hottest",
+    "more hot"
+   ]
+  },
+  {
+   "q": "Superlative of 'high'",
+   "a": "the highest",
+   "d": [
+    "higher",
+    "the higher",
+    "high"
+   ]
+  },
+  {
+   "q": "Superlative of 'easy'",
+   "a": "the easiest",
+   "d": [
+    "easier",
+    "the easyest",
+    "easy"
+   ]
+  },
+  {
+   "q": "Comparative of 'fast'",
+   "a": "faster",
+   "d": [
+    "fastest",
+    "more fast",
+    "fastly"
+   ]
+  },
+  {
+   "q": "Superlative of 'sweet'",
+   "a": "the sweetest",
+   "d": [
+    "sweeter",
+    "the sweeter",
+    "sweet"
+   ]
+  },
+  {
+   "q": "Faster than a horse",
+   "a": "a cheetah",
+   "d": [
+    "a camel",
+    "a cow",
+    "a sheep"
+   ]
+  },
+  {
+   "q": "Comparative of 'large'",
+   "a": "larger",
+   "d": [
+    "largest",
+    "more large",
+    "largeer"
+   ]
+  },
+  {
+   "q": "A place with a lot of trees",
+   "a": "forest",
+   "d": [
+    "lake",
+    "river",
+    "desert"
+   ]
+  },
+  {
+   "q": "Superlative of 'large'",
+   "a": "the largest",
+   "d": [
+    "larger",
+    "the larger",
+    "large"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What's the comparative of 'sweet'?",
+   "o": [
+    "sweeter",
+    "sweetest",
+    "more sweet",
+    "sweetter"
+   ],
+   "why": "sweet – sweeter."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one is a superlative?",
+   "o": [
+    "the sweetest",
+    "sweeter",
+    "sweet",
+    "more sweet"
+   ],
+   "why": "the + -est makes a superlative."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Complete: Mount Everest is the ___ mountain in the world.",
+   "o": [
+    "highest",
+    "higher",
+    "high",
+    "more high"
+   ],
+   "why": "Use the superlative: the highest."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word describes a place with a lot of trees?",
+   "o": [
+    "forest",
+    "waterfall",
+    "lake",
+    "beach"
+   ],
+   "why": "A forest has a lot of trees."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Is a bike ___ than a car?",
+   "o": [
+    "faster",
+    "fastest",
+    "fast",
+    "more fast"
+   ],
+   "why": "Use the comparative with 'than': faster."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Which month is ___, June or March?",
+   "o": [
+    "hotter",
+    "hottest",
+    "hoter",
+    "more hot"
+   ],
+   "why": "Two things: use the comparative, hotter."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'Is a cheetah faster than a horse?' Choose the answer.",
+   "o": [
+    "Yes, it is.",
+    "No, it isn't.",
+    "Yes, it does.",
+    "No, they aren't."
+   ],
+   "why": "A cheetah is faster than a horse."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say 'the easiest' and not 'the easyest'?",
+   "o": [
+    "The y changes to i.",
+    "We add -er.",
+    "We add more.",
+    "We double the y."
+   ],
+   "why": "In easy, y changes to i before -est."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is correct?",
+   "o": [
+    "A giraffe is taller than a camel.",
+    "A giraffe is tallest than a camel.",
+    "A giraffe is more tall than a camel.",
+    "A giraffe is taller then a camel."
+   ],
+   "why": "Comparative + than: taller than."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence compares THREE or more things?",
+   "o": [
+    "The whale is the largest animal.",
+    "A car is faster than a bike.",
+    "June is hotter than March.",
+    "A giraffe is taller than a camel."
+   ],
+   "why": "Superlatives like 'the largest' compare many things."
+  }
+ ]
+}

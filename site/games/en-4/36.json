@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U3",
+ "lesson": "Unit 3 – Lesson 8: Skills – Listening, Speaking and Writing (a fact file)",
+ "outcomes": [
+  "Listen and understand Dina's country and favourite place.",
+  "Ask and answer about a favourite place.",
+  "Write a fact file with headings and capital letters."
+ ],
+ "tf": [
+  {
+   "s": "Dina is from Cairo, in Egypt.",
+   "t": true,
+   "why": "Yes! Dina is from Cairo."
+  },
+  {
+   "s": "Dina's favourite place is the beach.",
+   "t": false,
+   "why": "Her favourite place is the mountains. She loves walking there."
+  },
+  {
+   "s": "In Egypt there are deserts, beautiful mountains and beaches.",
+   "t": true,
+   "why": "Correct! That's the landscape of Egypt."
+  },
+  {
+   "s": "We write 'cairo' with a small c.",
+   "t": false,
+   "why": "Cairo is a place name, so it starts with a capital C."
+  },
+  {
+   "s": "The longest river in the Egypt fact file is Wadi Shab.",
+   "t": false,
+   "why": "The longest river is the Nile."
+  },
+  {
+   "s": "Names of places start with a capital letter.",
+   "t": true,
+   "why": "Great! We write Muscat, Sur, Wadi Shab."
+  },
+  {
+   "s": "We write 'muscat is the capital of oman'.",
+   "t": false,
+   "why": "We write 'Muscat is the capital of Oman.'"
+  },
+  {
+   "s": "Jabal Shams goes under the heading 'Highest mountain'.",
+   "t": true,
+   "why": "Yes! Jabal Shams is the highest mountain in Oman."
+  },
+  {
+   "s": "The capital city of Oman is Sur.",
+   "t": false,
+   "why": "The capital city of Oman is Muscat."
+  },
+  {
+   "s": "A fact file has no headings.",
+   "t": false,
+   "why": "A fact file uses headings like Capital city and Landscape."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which city is in Egypt?",
+   "o": [
+    "Cairo",
+    "Muscat",
+    "Sur"
+   ],
+   "why": "Cairo is the capital of Egypt."
+  },
+  {
+   "q": "Which question asks about a favourite place?",
+   "o": [
+    "What's your favourite place in your country?",
+    "Where are you from?",
+    "What's the landscape like?"
+   ],
+   "why": "Use 'What's your favourite place ...?'"
+  },
+  {
+   "q": "Which question asks about the landscape?",
+   "o": [
+    "What's the landscape like?",
+    "Where are you from?",
+    "What's your name?"
+   ],
+   "why": "It asks what the land looks like."
+  },
+  {
+   "q": "Which heading is for 'the Nile'?",
+   "o": [
+    "Longest river",
+    "Capital city",
+    "Landscape"
+   ],
+   "why": "The Nile goes under Longest river."
+  },
+  {
+   "q": "Which word needs a capital letter?",
+   "o": [
+    "sur",
+    "beach",
+    "mountain"
+   ],
+   "why": "Sur is a place name: Sur."
+  },
+  {
+   "q": "Which sentence is correct?",
+   "o": [
+    "We visit Wadi Shab in Sur.",
+    "we visit wadi shab in sur.",
+    "We visit wadi Shab in sur."
+   ],
+   "why": "Capital letters for We, Wadi Shab and Sur."
+  },
+  {
+   "q": "Answer: What's your favourite place in your country?",
+   "o": [
+    "My favourite place is Wadi Bani Khalid.",
+    "I'm from Cairo.",
+    "There are deserts."
+   ],
+   "why": "Say 'My favourite place is ...'."
+  },
+  {
+   "q": "Before you listen, underline the...",
+   "o": [
+    "key words",
+    "pictures",
+    "numbers only"
+   ],
+   "why": "Key words help you choose the answer."
+  },
+  {
+   "q": "Which is a fact file heading?",
+   "o": [
+    "My favourite place",
+    "My lunch box",
+    "My homework"
+   ],
+   "why": "'My favourite place' is a heading."
+  },
+  {
+   "q": "Which is a landscape word from Dina's answer?",
+   "o": [
+    "deserts",
+    "Cairo",
+    "Egypt"
+   ],
+   "why": "Deserts, mountains and beaches are landscape words."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "We visit Wadi Shab in...",
+   "a": "Sur",
+   "d": [
+    "Cairo",
+    "Greenland",
+    "Japan"
+   ]
+  },
+  {
+   "q": "Dina's country",
+   "a": "Egypt",
+   "d": [
+    "Oman",
+    "Japan",
+    "Greenland"
+   ]
+  },
+  {
+   "q": "Dina's favourite place",
+   "a": "the mountains",
+   "d": [
+    "the beach",
+    "the desert",
+    "the city"
+   ]
+  },
+  {
+   "q": "Dina's city",
+   "a": "Cairo",
+   "d": [
+    "Muscat",
+    "Sur",
+    "Nizwa"
+   ]
+  },
+  {
+   "q": "Longest river in Egypt",
+   "a": "the Nile",
+   "d": [
+    "Wadi Shab",
+    "Wadi Darbat",
+    "the Dead Sea"
+   ]
+  },
+  {
+   "q": "Capital city of Oman",
+   "a": "Muscat",
+   "d": [
+    "Cairo",
+    "Sur",
+    "Ibri"
+   ]
+  },
+  {
+   "q": "Highest mountain in Oman",
+   "a": "Jabal Shams",
+   "d": [
+    "Jabal Samhan",
+    "Mount Everest",
+    "Wadi Shab"
+   ]
+  },
+  {
+   "q": "Place names start with a...",
+   "a": "capital letter",
+   "d": [
+    "small letter",
+    "number",
+    "full stop"
+   ]
+  },
+  {
+   "q": "Heading for mountains, wadis",
+   "a": "Landscape",
+   "d": [
+    "Capital city",
+    "Longest river",
+    "My name"
+   ]
+  },
+  {
+   "q": "Correct: wadi shab",
+   "a": "Wadi Shab",
+   "d": [
+    "wadi Shab",
+    "Wadi shab",
+    "WADI shab"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which are the fact file headings?",
+   "o": [
+    "Capital city, Landscape, Highest mountain, Longest river, My favourite place",
+    "Name, Age, Class, Teacher",
+    "Breakfast, Lunch, Dinner",
+    "Monday, Tuesday, Wednesday"
+   ],
+   "why": "These five headings make a fact file."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a place name?",
+   "o": [
+    "Daymaniyat Islands",
+    "beach",
+    "mountain",
+    "river"
+   ],
+   "why": "Place names like Daymaniyat Islands start with capital letters."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word must always start with a capital letter?",
+   "o": [
+    "Oman",
+    "love",
+    "beach",
+    "mountain"
+   ],
+   "why": "Oman is a country name."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question asks where someone is from?",
+   "o": [
+    "Where are you from?",
+    "What's the landscape like?",
+    "What's your favourite place?",
+    "How old are you?"
+   ],
+   "why": "'Where are you from?' asks about a country or city."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct: my favourite place is the daymaniyat islands.",
+   "o": [
+    "My favourite place is the Daymaniyat Islands.",
+    "my favourite place is the Daymaniyat islands.",
+    "My Favourite Place is the daymaniyat islands.",
+    "My favourite place is the daymaniyat Islands."
+   ],
+   "why": "Capital letters for My, Daymaniyat and Islands."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write the capital city line for Oman's fact file.",
+   "o": [
+    "Capital city: Muscat",
+    "Capital city: muscat",
+    "Landscape: Muscat",
+    "Longest river: Muscat"
+   ],
+   "why": "Capital city: Muscat, with a capital M."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which notes go under 'Landscape' for Oman?",
+   "o": [
+    "mountains, wadis, beaches, desert",
+    "Muscat",
+    "Jabal Shams only",
+    "My favourite place"
+   ],
+   "why": "Landscape tells about mountains, wadis, beaches and desert."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which words in the question 'Where is Dina from?' help you choose the picture?",
+   "o": [
+    "from",
+    "is",
+    "Dina's",
+    "where is"
+   ],
+   "why": "'From' tells you to listen for a country or city."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your partner forgot to write his favourite place. What is a good wish?",
+   "o": [
+    "Add your favourite place.",
+    "Remove the headings.",
+    "Write in small letters.",
+    "Write no title."
+   ],
+   "why": "A helpful wish improves the fact file."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we use headings in a fact file?",
+   "o": [
+    "To put the facts in clear groups.",
+    "To make it longer.",
+    "To hide the facts.",
+    "To draw pictures."
+   ],
+   "why": "Headings help the reader find facts."
+  }
+ ]
+}

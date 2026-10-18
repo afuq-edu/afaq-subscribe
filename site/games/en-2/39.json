@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Sounds and Spelling – Unit 3, Lesson 5: Review and dictation",
+ "outcomes": [
+  "I can match words to ou, oi, ue and i-e.",
+  "I can blend and write Unit 3 words.",
+  "I can write sentences with all, some, give and to."
+ ],
+ "tf": [
+  {
+   "s": "\"Mouth\" has ou.",
+   "t": true,
+   "why": "M-ou-th has ou."
+  },
+  {
+   "s": "\"Coin\" has ue.",
+   "t": false,
+   "why": "Coin has oi."
+  },
+  {
+   "s": "\"Blue\" has ue.",
+   "t": true,
+   "why": "Bl-ue has ue."
+  },
+  {
+   "s": "\"Kite\" has i-e.",
+   "t": true,
+   "why": "K-i-t-e has i-e."
+  },
+  {
+   "s": "\"Boil\" has ou.",
+   "t": false,
+   "why": "Boil has oi."
+  },
+  {
+   "s": "\"Cloud\" and \"shout\" have the same sound.",
+   "t": true,
+   "why": "Both have ou."
+  },
+  {
+   "s": "\"Glue\" and \"bike\" have the same sound.",
+   "t": false,
+   "why": "Glue has ue; bike has i-e."
+  },
+  {
+   "s": "\"Give\" is a tricky word.",
+   "t": true,
+   "why": "Give her a blue pen!"
+  },
+  {
+   "s": "\"Nine\" is spelled n-i-n-e.",
+   "t": true,
+   "why": "That is the right spelling."
+  },
+  {
+   "s": "\"Some\" is in the sentence: Can I have some oil?",
+   "t": true,
+   "why": "Some is a tricky word."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which digraph is in \"mouth\"?",
+   "o": [
+    "ou",
+    "oi",
+    "ue"
+   ],
+   "why": "M-ou-th."
+  },
+  {
+   "q": "Which digraph is in \"boil\"?",
+   "o": [
+    "oi",
+    "ou",
+    "i-e"
+   ],
+   "why": "B-oi-l."
+  },
+  {
+   "q": "Which digraph is in \"glue\"?",
+   "o": [
+    "ue",
+    "oi",
+    "ou"
+   ],
+   "why": "Gl-ue."
+  },
+  {
+   "q": "Which digraph is in \"bike\"?",
+   "o": [
+    "i-e",
+    "ue",
+    "ou"
+   ],
+   "why": "B-i-k-e."
+  },
+  {
+   "q": "Write: n-i-n-e",
+   "o": [
+    "nine",
+    "none",
+    "nain"
+   ],
+   "why": "n-i-n-e spells nine."
+  },
+  {
+   "q": "Can I have ___ oil?",
+   "o": [
+    "some",
+    "give",
+    "to"
+   ],
+   "why": "Can I have some oil?"
+  },
+  {
+   "q": "___ her a blue pen!",
+   "o": [
+    "Give",
+    "Some",
+    "All"
+   ],
+   "why": "Give her a blue pen!"
+  },
+  {
+   "q": "He likes ___ dive.",
+   "o": [
+    "to",
+    "all",
+    "some"
+   ],
+   "why": "He likes to dive."
+  },
+  {
+   "q": "We ___ like to play.",
+   "o": [
+    "all",
+    "give",
+    "to"
+   ],
+   "why": "We all like to play."
+  },
+  {
+   "q": "Which word has oi?",
+   "o": [
+    "point",
+    "cloud",
+    "kite"
+   ],
+   "why": "P-oi-nt has oi."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Digraph in \"mouth\"",
+   "a": "ou",
+   "d": [
+    "oi",
+    "ue",
+    "i-e"
+   ]
+  },
+  {
+   "q": "Digraph in \"coin\"",
+   "a": "oi",
+   "d": [
+    "ou",
+    "ue",
+    "i-e"
+   ]
+  },
+  {
+   "q": "Digraph in \"blue\"",
+   "a": "ue",
+   "d": [
+    "oi",
+    "ou",
+    "i-e"
+   ]
+  },
+  {
+   "q": "Digraph in \"kite\"",
+   "a": "i-e",
+   "d": [
+    "ou",
+    "oi",
+    "ue"
+   ]
+  },
+  {
+   "q": "Digraph in \"shout\"",
+   "a": "ou",
+   "d": [
+    "oi",
+    "ue",
+    "i-e"
+   ]
+  },
+  {
+   "q": "Digraph in \"glue\"",
+   "a": "ue",
+   "d": [
+    "ou",
+    "oi",
+    "i-e"
+   ]
+  },
+  {
+   "q": "Can I have ___ oil?",
+   "a": "some",
+   "d": [
+    "give",
+    "to",
+    "all"
+   ]
+  },
+  {
+   "q": "___ her a blue pen!",
+   "a": "Give",
+   "d": [
+    "Some",
+    "To",
+    "All"
+   ]
+  },
+  {
+   "q": "He likes ___ dive.",
+   "a": "to",
+   "d": [
+    "give",
+    "some",
+    "all"
+   ]
+  },
+  {
+   "q": "We ___ like to play.",
+   "a": "all",
+   "d": [
+    "give",
+    "to",
+    "some"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word has the ou sound?",
+   "o": [
+    "cloud",
+    "coin",
+    "kite",
+    "glue"
+   ],
+   "why": "Cl-ou-d has ou."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has the ue sound?",
+   "o": [
+    "blue",
+    "boil",
+    "bike",
+    "shout"
+   ],
+   "why": "Bl-ue has ue."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a tricky word?",
+   "o": [
+    "give",
+    "coin",
+    "glue",
+    "kite"
+   ],
+   "why": "All, some, give and to are tricky words."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has i-e?",
+   "o": [
+    "nine",
+    "coin",
+    "mouth",
+    "glue"
+   ],
+   "why": "N-i-n-e has i-e."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write the word for a picture of a kite.",
+   "o": [
+    "kite",
+    "kit",
+    "kiet",
+    "kyte"
+   ],
+   "why": "k-i-t-e spells kite."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the right word: Can I have ___ juice?",
+   "o": [
+    "some",
+    "give",
+    "to",
+    "all"
+   ],
+   "why": "We ask for some juice."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write the word: p-oi-n-t",
+   "o": [
+    "point",
+    "paint",
+    "pont",
+    "pint"
+   ],
+   "why": "p-oi-n-t spells point."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT have oi?",
+   "o": [
+    "shout",
+    "coin",
+    "boil",
+    "point"
+   ],
+   "why": "Shout has ou."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group has the same sound?",
+   "o": [
+    "blue, glue",
+    "bike, coin",
+    "cloud, boil",
+    "kite, mouth"
+   ],
+   "why": "Blue and glue both have ue."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses a tricky word correctly?",
+   "o": [
+    "He likes to dive.",
+    "He likes some dive.",
+    "He likes give dive.",
+    "He likes all dive."
+   ],
+   "why": "We say likes to + verb."
+  }
+ ]
+}

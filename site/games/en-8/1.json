@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Welcome: Let’s get started!",
+ "lesson": "Lesson 1: Let’s get started! (WOW! Magazine)",
+ "outcomes": [
+  "Read the WOW! Magazine welcome text and say how it works.",
+  "Match reader comments to their magazine ideas.",
+  "Say which magazine topics interest you and why."
+ ],
+ "tf": [
+  {
+   "s": "WOW! stands for World of Wonder!",
+   "t": true,
+   "why": "Great! WOW! means World of Wonder!"
+  },
+  {
+   "s": "The WOW! Magazine is full of articles for students.",
+   "t": true,
+   "why": "Yes, the magazine has articles for students like you."
+  },
+  {
+   "s": "Razan loves shopping.",
+   "t": true,
+   "why": "Right! Razan is the reader who loves shopping."
+  },
+  {
+   "s": "Jasiek prefers texting his friends to talking face-to-face.",
+   "t": false,
+   "why": "Jasiek prefers talking to his friends face-to-face."
+  },
+  {
+   "s": "Selina was on an island this summer.",
+   "t": true,
+   "why": "Yes, Selina was on an island with a lot of stormy weather."
+  },
+  {
+   "s": "Luisa wants to read about shopping.",
+   "t": false,
+   "why": "Luisa would like to invent things."
+  },
+  {
+   "s": "Abdulaziz went hiking and thought about other adventures.",
+   "t": true,
+   "why": "Correct! That is why he wants adventure stories."
+  },
+  {
+   "s": "There are ten new people on the WOW! Team this year.",
+   "t": false,
+   "why": "There are four new people on the WOW! Team."
+  },
+  {
+   "s": "Amir wants to read about extreme weather.",
+   "t": false,
+   "why": "Amir wants to read about learning."
+  },
+  {
+   "s": "Selina wants to know how to make the weather stormy.",
+   "t": false,
+   "why": "She wants to know why the weather is changing and how to stop it."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does WOW! stand for?",
+   "o": [
+    "World of Wonder!",
+    "Words of Wisdom!",
+    "Work on Weekends!"
+   ],
+   "why": "WOW! is short for World of Wonder!"
+  },
+  {
+   "q": "Who would like to invent things?",
+   "o": [
+    "Luisa",
+    "Razan",
+    "Jasiek"
+   ],
+   "why": "Luisa is the young inventor."
+  },
+  {
+   "q": "Who wants to read about learning?",
+   "o": [
+    "Amir",
+    "Selina",
+    "Abdulaziz"
+   ],
+   "why": "Amir chose the topic of learning."
+  },
+  {
+   "q": "Who wants to read adventure stories?",
+   "o": [
+    "Abdulaziz",
+    "Luisa",
+    "Amir"
+   ],
+   "why": "Abdulaziz went hiking and wants more adventures."
+  },
+  {
+   "q": "Complete: Tell us what you want to ___ about.",
+   "o": [
+    "find out",
+    "switch off",
+    "get up"
+   ],
+   "why": "To find out means to learn new information."
+  },
+  {
+   "q": "What is the magazine full of?",
+   "o": [
+    "articles for students",
+    "shopping lists",
+    "maps of Oman"
+   ],
+   "why": "The WOW! Magazine is full of articles for students."
+  },
+  {
+   "q": "How many new people are on the WOW! Team this year?",
+   "o": [
+    "four",
+    "two",
+    "six"
+   ],
+   "why": "There are four new people on the team."
+  },
+  {
+   "q": "Which word means talking to someone in the same place?",
+   "o": [
+    "face-to-face",
+    "texting",
+    "online"
+   ],
+   "why": "Face-to-face means you can see the person in front of you."
+  },
+  {
+   "q": "A person who makes new machines or things is an ___.",
+   "o": [
+    "inventor",
+    "reader",
+    "island"
+   ],
+   "why": "An inventor invents new things."
+  },
+  {
+   "q": "What was the weather like on Selina’s island?",
+   "o": [
+    "stormy",
+    "sunny every day",
+    "snowy"
+   ],
+   "why": "There was a lot of stormy weather on her island."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Who loves shopping?",
+   "a": "Razan",
+   "d": [
+    "Selina",
+    "Amir",
+    "Luisa"
+   ]
+  },
+  {
+   "q": "Who was on an island this summer?",
+   "a": "Selina",
+   "d": [
+    "Razan",
+    "Jasiek",
+    "Amir"
+   ]
+  },
+  {
+   "q": "Who would like to invent things?",
+   "a": "Luisa",
+   "d": [
+    "Abdulaziz",
+    "Razan",
+    "Selina"
+   ]
+  },
+  {
+   "q": "Who wants to read about learning?",
+   "a": "Amir",
+   "d": [
+    "Jasiek",
+    "Luisa",
+    "Razan"
+   ]
+  },
+  {
+   "q": "Who went hiking?",
+   "a": "Abdulaziz",
+   "d": [
+    "Amir",
+    "Selina",
+    "Jasiek"
+   ]
+  },
+  {
+   "q": "Who likes talking face-to-face?",
+   "a": "Jasiek",
+   "d": [
+    "Luisa",
+    "Abdulaziz",
+    "Selina"
+   ]
+  },
+  {
+   "q": "WOW! = World of ___",
+   "a": "Wonder",
+   "d": [
+    "Words",
+    "Water",
+    "Work"
+   ]
+  },
+  {
+   "q": "New people on the WOW! Team?",
+   "a": "four",
+   "d": [
+    "two",
+    "six",
+    "ten"
+   ]
+  },
+  {
+   "q": "Tell us what you want to ___ about.",
+   "a": "find out",
+   "d": [
+    "give up",
+    "turn off",
+    "look like"
+   ]
+  },
+  {
+   "q": "A piece of writing in a magazine",
+   "a": "article",
+   "d": [
+    "ticket",
+    "menu",
+    "receipt"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the WOW! Magazine full of?",
+   "o": [
+    "Articles for students",
+    "Photos of shops",
+    "Football results",
+    "Recipes"
+   ],
+   "why": "The magazine has many articles for students."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which reader loves shopping?",
+   "o": [
+    "Razan",
+    "Amir",
+    "Abdulaziz",
+    "Jasiek"
+   ],
+   "why": "Razan is the shopping fan."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where was Selina this summer?",
+   "o": [
+    "On an island",
+    "In the desert",
+    "In the mountains",
+    "At a shopping mall"
+   ],
+   "why": "Selina spent the summer on an island."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Jasiek prefer?",
+   "o": [
+    "Talking to friends face-to-face",
+    "Texting his friends",
+    "Writing letters",
+    "Playing online games"
+   ],
+   "why": "Jasiek prefers face-to-face talking."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A reader writes: “I went hiking and now I want more adventures.” Which topic suits this reader?",
+   "o": [
+    "Adventure stories",
+    "Shopping",
+    "Inventions",
+    "Learning"
+   ],
+   "why": "Hiking makes you think about adventures."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A student wants to make a new robot. Which reader is most like this student?",
+   "o": [
+    "Luisa",
+    "Razan",
+    "Selina",
+    "Amir"
+   ],
+   "why": "Luisa would like to invent things, like this student."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend says: “I want to know how to do better in my studies.” Which reader has the same idea?",
+   "o": [
+    "Amir",
+    "Razan",
+    "Jasiek",
+    "Luisa"
+   ],
+   "why": "Amir also wants to read about learning."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Selina want articles about the weather?",
+   "o": [
+    "She saw a lot of stormy weather on her island.",
+    "She loves shopping in the rain.",
+    "She wants to be an inventor.",
+    "She went hiking in the snow."
+   ],
+   "why": "Her stormy summer made her want to know why the weather is changing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Abdulaziz want adventure stories?",
+   "o": [
+    "Hiking made him think about other adventures.",
+    "He loves shopping.",
+    "He was on a stormy island.",
+    "He prefers texting."
+   ],
+   "why": "His hiking trip gave him the idea."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which reason best shows why a topic is good for a school magazine?",
+   "o": [
+    "Many students are interested in it.",
+    "It is very short.",
+    "Nobody knows about it.",
+    "It has no pictures."
+   ],
+   "why": "A good magazine topic interests many readers."
+  }
+ ]
+}

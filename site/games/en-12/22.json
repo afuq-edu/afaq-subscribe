@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: Goodbye, School! (Reading)",
+ "lesson": "Vocabulary development and comprehension: new students’ worries",
+ "outcomes": [
+  "Match new words from the text with their meanings",
+  "Use the new words in your own sentences",
+  "Answer questions about new students' worries and solutions"
+ ],
+ "tf": [
+  {
+   "s": "'Apprehensive' and 'excited' have the same meaning.",
+   "t": false,
+   "why": "Apprehensive means worried about something, not excited."
+  },
+  {
+   "s": "'Homesickness' is sadness because you miss your home and family.",
+   "t": true,
+   "why": "Yes, homesick students miss home."
+  },
+  {
+   "s": "A 'deadline' is the time by which work must be finished.",
+   "t": true,
+   "why": "Right, after the deadline it is too late."
+  },
+  {
+   "s": "To 'prioritise' means to do the easiest jobs first.",
+   "t": false,
+   "why": "Prioritise means you deal with the most important things first."
+  },
+  {
+   "s": "The text says new students often feel excited but terrified.",
+   "t": true,
+   "why": "Yes, they have mixed feelings about starting university."
+  },
+  {
+   "s": "'Independence' means relying on other people for everything.",
+   "t": false,
+   "why": "Independence means looking after yourself without help."
+  },
+  {
+   "s": "Getting lost is one problem new students may face.",
+   "t": true,
+   "why": "Yes, a new campus can be confusing."
+  },
+  {
+   "s": "The text says new students cannot get help from anyone.",
+   "t": false,
+   "why": "They can ask other students, tutors or support services."
+  },
+  {
+   "s": "Joining clubs and societies is the text's advice for making friends.",
+   "t": true,
+   "why": "Correct, clubs help you meet people."
+  },
+  {
+   "s": "Student support services can help new students with problems.",
+   "t": true,
+   "why": "Yes, that is what support services are for."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: 'She missed the ___ for her essay.'",
+   "o": [
+    "deadline",
+    "campus",
+    "emotion"
+   ],
+   "why": "A deadline is the last day to hand in work."
+  },
+  {
+   "q": "Complete: 'He felt ___ before his first exam.'",
+   "o": [
+    "apprehensive",
+    "independent",
+    "generous"
+   ],
+   "why": "Apprehensive means worried, which fits before an exam."
+  },
+  {
+   "q": "Complete: 'The library is in the middle of the university ___.'",
+   "o": [
+    "campus",
+    "deadline",
+    "anxiety"
+   ],
+   "why": "The campus is the university's land and buildings."
+  },
+  {
+   "q": "Complete: 'Living alone helps you develop ___.'",
+   "o": [
+    "independence",
+    "homesickness",
+    "anxiety"
+   ],
+   "why": "Living alone teaches you to manage on your own."
+  },
+  {
+   "q": "You have many tasks this week. What should you do with them?",
+   "o": [
+    "prioritise them",
+    "ignore them",
+    "forget them"
+   ],
+   "why": "Doing the most important tasks first helps you cope."
+  },
+  {
+   "q": "Complete: 'After a month away, he felt strong ___ and called his family.'",
+   "o": [
+    "homesickness",
+    "independence",
+    "deadline"
+   ],
+   "why": "Missing family is homesickness."
+  },
+  {
+   "q": "Which worry of new students is mentioned in the text?",
+   "o": [
+    "forgetting a deadline",
+    "having too many holidays",
+    "finishing school early"
+   ],
+   "why": "Forgetting a deadline is a real worry for new students."
+  },
+  {
+   "q": "Complete: 'Exams can cause stress and ___.'",
+   "o": [
+    "anxiety",
+    "independence",
+    "campus"
+   ],
+   "why": "Anxiety is a strong feeling of worry."
+  },
+  {
+   "q": "Complete: 'Fear, joy and anger are all ___.'",
+   "o": [
+    "emotions",
+    "deadlines",
+    "campuses"
+   ],
+   "why": "These are all feelings, or emotions."
+  },
+  {
+   "q": "Who can a new student ask for help?",
+   "o": [
+    "tutors",
+    "nobody",
+    "only people at home"
+   ],
+   "why": "Tutors are there to help students."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Worried about something",
+   "a": "apprehensive",
+   "d": [
+    "independent",
+    "confident",
+    "relaxed"
+   ]
+  },
+  {
+   "q": "Missing your home",
+   "a": "homesickness",
+   "d": [
+    "anxiety",
+    "independence",
+    "deadline"
+   ]
+  },
+  {
+   "q": "University grounds and buildings",
+   "a": "campus",
+   "d": [
+    "deadline",
+    "society",
+    "emotion"
+   ]
+  },
+  {
+   "q": "Last time to finish work",
+   "a": "deadline",
+   "d": [
+    "campus",
+    "tutor",
+    "emotion"
+   ]
+  },
+  {
+   "q": "Do the most important first",
+   "a": "prioritise",
+   "d": [
+    "postpone",
+    "forget",
+    "ignore"
+   ]
+  },
+  {
+   "q": "Another word for feelings",
+   "a": "emotions",
+   "d": [
+    "deadlines",
+    "campuses",
+    "tutors"
+   ]
+  },
+  {
+   "q": "A strong feeling of worry",
+   "a": "anxiety",
+   "d": [
+    "independence",
+    "excitement",
+    "confidence"
+   ]
+  },
+  {
+   "q": "Living without help from others",
+   "a": "independence",
+   "d": [
+    "homesickness",
+    "anxiety",
+    "emotion"
+   ]
+  },
+  {
+   "q": "Join these to make friends",
+   "a": "clubs and societies",
+   "d": [
+    "lectures",
+    "exams",
+    "deadlines"
+   ]
+  },
+  {
+   "q": "New students: excited but ...",
+   "a": "terrified",
+   "d": [
+    "bored",
+    "sleepy",
+    "angry"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does 'campus' mean?",
+   "o": [
+    "The grounds and buildings of a university",
+    "A long holiday",
+    "A university exam",
+    "A student club"
+   ],
+   "why": "The campus is where the university buildings are."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a problem new students may face?",
+   "o": [
+    "Forgetting a deadline",
+    "Having no lessons",
+    "Living too close to home",
+    "Having nothing to read"
+   ],
+   "why": "With so many new tasks, deadlines are easy to forget."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word from the text means 'feelings'?",
+   "o": [
+    "emotions",
+    "deadlines",
+    "societies",
+    "campus"
+   ],
+   "why": "Emotions are feelings like fear or happiness."
+  },
+  {
+   "lv": "التذكر",
+   "q": "According to the text, who can new students ask for help?",
+   "o": [
+    "Other students, tutors or support services",
+    "Only their younger brothers",
+    "Nobody at university",
+    "Only shop assistants"
+   ],
+   "why": "Many people at university are ready to help."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Sara has an essay, a test and a club meeting. She does the essay first because it is due tomorrow. What is she doing?",
+   "o": [
+    "Prioritising her tasks",
+    "Feeling homesick",
+    "Missing a deadline",
+    "Getting lost"
+   ],
+   "why": "She is dealing with the most important task first."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali misses his family and feels sad in his new room. What is he feeling?",
+   "o": [
+    "Homesickness",
+    "Independence",
+    "Excitement",
+    "Confidence"
+   ],
+   "why": "Missing home is homesickness."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Mona forgot to hand in her project on time. What did she miss?",
+   "o": [
+    "A deadline",
+    "A campus",
+    "An emotion",
+    "A society"
+   ],
+   "why": "The deadline is the time the work must be handed in."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might joining clubs and societies help a new student?",
+   "o": [
+    "They meet people and make friends",
+    "They never have to study",
+    "They avoid all deadlines",
+    "They can stay at home"
+   ],
+   "why": "Clubs bring together people with the same interests."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why could a new student feel 'excited but terrified'?",
+   "o": [
+    "University is a new experience with many changes",
+    "University has no rules",
+    "They already know everyone",
+    "They have finished studying"
+   ],
+   "why": "New experiences bring both excitement and worry."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it important to prioritise at university?",
+   "o": [
+    "Students have many tasks and deadlines",
+    "Students have nothing to do",
+    "Tutors do all the work",
+    "Deadlines do not matter"
+   ],
+   "why": "With many tasks, you must decide what comes first."
+  }
+ ]
+}

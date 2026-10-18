@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "3",
+ "lesson": "Unit 3: Renewable Energy – Review",
+ "outcomes": [
+  "Review energy vocabulary, conjunctions and suffixes.",
+  "Join sentences with the right conjunctions.",
+  "Set a learning goal for Unit 4."
+ ],
+ "tf": [
+  {
+   "s": "'However' shows contrast.",
+   "t": true,
+   "why": "Yes: 'Solar power is clean. However, it is expensive.'"
+  },
+  {
+   "s": "'Therefore' introduces a reason.",
+   "t": false,
+   "why": "'Therefore' introduces a result."
+  },
+  {
+   "s": "power + ful = powerful",
+   "t": true,
+   "why": "Correct, -ful makes an adjective."
+  },
+  {
+   "s": "Wind power is renewable and clean.",
+   "t": true,
+   "why": "Right, the wind does not run out."
+  },
+  {
+   "s": "Oil is a renewable energy source.",
+   "t": false,
+   "why": "Oil will run out, so it is non-renewable."
+  },
+  {
+   "s": "'I would like to request some information.' is a polite sentence.",
+   "t": true,
+   "why": "Well done, 'would like' is polite."
+  },
+  {
+   "s": "'In addition' adds more information.",
+   "t": true,
+   "why": "Yes, it adds another point."
+  },
+  {
+   "s": "'Yours sincerely' is used to open a formal email.",
+   "t": false,
+   "why": "It is a closing, used at the end."
+  },
+  {
+   "s": "A presentation usually ends with 'Thank you for listening.'",
+   "t": true,
+   "why": "Correct, it is a polite ending."
+  },
+  {
+   "s": "'Renewable' is formed from 'renew' + the suffix -ful.",
+   "t": false,
+   "why": "It is renew + -able."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Solar power is clean. ___, it is expensive.",
+   "o": [
+    "However",
+    "Moreover",
+    "In addition"
+   ],
+   "why": "Clean vs expensive is a contrast."
+  },
+  {
+   "q": "Oil is running out. ___, we need renewable energy.",
+   "o": [
+    "Therefore",
+    "But",
+    "However"
+   ],
+   "why": "Needing renewable energy is the result."
+  },
+  {
+   "q": "effect + ive = ?",
+   "o": [
+    "effective",
+    "effectful",
+    "effectous"
+   ],
+   "why": "-ive makes 'effective'."
+  },
+  {
+   "q": "Polite form of 'Give me information.'",
+   "o": [
+    "I would like to request some information.",
+    "Information now.",
+    "Give it."
+   ],
+   "why": "'Would like to request' is polite."
+  },
+  {
+   "q": "One advantage of wind power",
+   "o": [
+    "It is renewable and clean.",
+    "It runs out quickly.",
+    "It burns coal."
+   ],
+   "why": "Wind is clean and never runs out."
+  },
+  {
+   "q": "Which source is non-renewable?",
+   "o": [
+    "gas",
+    "sunlight",
+    "wind"
+   ],
+   "why": "Gas will run out."
+  },
+  {
+   "q": "Which closing is formal?",
+   "o": [
+    "Kind regards",
+    "Take care",
+    "See ya"
+   ],
+   "why": "'Kind regards' is formal."
+  },
+  {
+   "q": "Which word is an adjective?",
+   "o": [
+    "sustainable",
+    "sustain",
+    "sustainability"
+   ],
+   "why": "-able makes an adjective."
+  },
+  {
+   "q": "A hydroelectric dam uses…",
+   "o": [
+    "water",
+    "sunlight",
+    "wind"
+   ],
+   "why": "'Hydro' means water."
+  },
+  {
+   "q": "Which shows a reason?",
+   "o": [
+    "because",
+    "so",
+    "therefore"
+   ],
+   "why": "'Because' answers 'why'."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Energy from the sun",
+   "a": "solar power",
+   "d": [
+    "wind power",
+    "hydropower",
+    "biofuel"
+   ]
+  },
+  {
+   "q": "Contrast connector",
+   "a": "however",
+   "d": [
+    "moreover",
+    "therefore",
+    "also"
+   ]
+  },
+  {
+   "q": "Result connector",
+   "a": "therefore",
+   "d": [
+    "however",
+    "because",
+    "moreover"
+   ]
+  },
+  {
+   "q": "Adds information",
+   "a": "in addition",
+   "d": [
+    "however",
+    "therefore",
+    "because"
+   ]
+  },
+  {
+   "q": "power + suffix",
+   "a": "powerful",
+   "d": [
+    "powerous",
+    "powerable",
+    "powerive"
+   ]
+  },
+  {
+   "q": "danger + suffix",
+   "a": "dangerous",
+   "d": [
+    "dangerful",
+    "dangerable",
+    "dangerive"
+   ]
+  },
+  {
+   "q": "Polite request word",
+   "a": "would",
+   "d": [
+    "will",
+    "must",
+    "shall not"
+   ]
+  },
+  {
+   "q": "Formal closing",
+   "a": "Yours sincerely",
+   "d": [
+    "Take care",
+    "See you",
+    "Bye now"
+   ]
+  },
+  {
+   "q": "Non-renewable source",
+   "a": "coal",
+   "d": [
+    "wind",
+    "sunlight",
+    "water"
+   ]
+  },
+  {
+   "q": "Presentation ending",
+   "a": "Thank you for listening",
+   "d": [
+    "Good morning",
+    "Welcome",
+    "Our invention"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a renewable energy source?",
+   "o": [
+    "hydropower",
+    "coal",
+    "oil",
+    "gas"
+   ],
+   "why": "Moving water is renewable."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which connector shows contrast?",
+   "o": [
+    "however",
+    "moreover",
+    "therefore",
+    "in addition"
+   ],
+   "why": "'However' shows the opposite idea."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which suffix makes 'environmental'?",
+   "o": [
+    "-al",
+    "-ful",
+    "-ous",
+    "-ive"
+   ],
+   "why": "environment + al."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence opens a presentation?",
+   "o": [
+    "Good morning, everyone.",
+    "Thank you for listening.",
+    "Yours sincerely.",
+    "Kind regards."
+   ],
+   "why": "We greet the audience first."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best connector: 'Wind power is clean. ___, it is renewable.'",
+   "o": [
+    "Moreover",
+    "However",
+    "But",
+    "Because"
+   ],
+   "why": "Both ideas are good points, so we add."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct adjective: 'Solar panels are very ___ in sunny countries.'",
+   "o": [
+    "useful",
+    "useous",
+    "usefulness",
+    "usefully"
+   ],
+   "why": "use + ful = useful."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite formally: 'Can you send me some info?'",
+   "o": [
+    "I would like to request some information.",
+    "Send info now.",
+    "Hey, info please!",
+    "You send me info."
+   ],
+   "why": "Formal requests use 'would like to'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Oil is running out, ___ we need renewable energy.' Why is 'so' correct?",
+   "o": [
+    "Because the second part is a result.",
+    "Because the second part is a contrast.",
+    "Because the second part is a reason.",
+    "Because 'so' asks a question."
+   ],
+   "why": "'So' introduces a result."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses a conjunction incorrectly?",
+   "o": [
+    "Solar power is clean because it is expensive.",
+    "Solar power is clean but it is expensive.",
+    "Oman is sunny, so solar power is useful.",
+    "Wind is renewable. Moreover, it is clean."
+   ],
+   "why": "Being expensive is not the reason it is clean."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best learning goal for Unit 4?",
+   "o": [
+    "I will practise using the past passive.",
+    "I will never read.",
+    "I will forget Unit 3.",
+    "I will not do homework."
+   ],
+   "why": "A good goal is clear and positive."
+  }
+ ]
+}

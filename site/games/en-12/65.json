@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Safety on the Roads (Vocabulary)",
+ "lesson": "The language of trends: increase, decrease and describing a table",
+ "outcomes": [
+  "Use verbs and nouns that describe trends, such as rise and drop",
+  "Form adverbs like sharply and steadily from adjectives",
+  "Describe traffic statistics in a table using trend language"
+ ],
+ "tf": [
+  {
+   "s": "A trend is the way a situation changes over a period of time.",
+   "t": true,
+   "why": "Yes, a trend shows change over time."
+  },
+  {
+   "s": "'Rise' and 'grow' describe something going up.",
+   "t": true,
+   "why": "Correct, both show an upward change."
+  },
+  {
+   "s": "'Drop' and 'fall' describe something going up.",
+   "t": false,
+   "why": "Drop and fall describe something going down."
+  },
+  {
+   "s": "As nouns, increase and decrease are followed by 'in', as in 'an increase in accidents'.",
+   "t": true,
+   "why": "Right, we say an increase in or a drop in."
+  },
+  {
+   "s": "The adverb of 'steady' is 'steadyly'.",
+   "t": false,
+   "why": "The y changes to i: steadily."
+  },
+  {
+   "s": "'Reduce' means to make something smaller or less.",
+   "t": true,
+   "why": "Yes, reduce shows a downward change."
+  },
+  {
+   "s": "'Expand' describes a downward trend.",
+   "t": false,
+   "why": "Expand means to get bigger, so it shows an upward trend."
+  },
+  {
+   "s": "A 'slight' change is a very big change.",
+   "t": false,
+   "why": "Slight means small; sharp or dramatic means big."
+  },
+  {
+   "s": "'Gradually' means slowly over a period of time.",
+   "t": true,
+   "why": "Correct, a gradual change happens little by little."
+  },
+  {
+   "s": "'There was a sharp drop in the number of accidents' means accidents went down a lot quickly.",
+   "t": true,
+   "why": "Yes, sharp means quick and big."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which verb means 'go down'?",
+   "o": [
+    "fall",
+    "rise",
+    "grow"
+   ],
+   "why": "Fall shows a downward trend."
+  },
+  {
+   "q": "Which verb means 'go up'?",
+   "o": [
+    "increase",
+    "drop",
+    "reduce"
+   ],
+   "why": "Increase shows an upward trend."
+  },
+  {
+   "q": "What is the adverb of 'gradual'?",
+   "o": [
+    "gradually",
+    "gradualy",
+    "graduelly"
+   ],
+   "why": "Add -ly to gradual: gradually."
+  },
+  {
+   "q": "What is the adverb of 'dramatic'?",
+   "o": [
+    "dramatically",
+    "dramaticly",
+    "dramaticaly"
+   ],
+   "why": "Adjectives ending in -ic take -ally."
+  },
+  {
+   "q": "Complete: 'a rise ___ the number of cars'",
+   "o": [
+    "in",
+    "on",
+    "at"
+   ],
+   "why": "We use in after rise, increase and drop as nouns."
+  },
+  {
+   "q": "Which word describes a big, quick change?",
+   "o": [
+    "sharp",
+    "slight",
+    "gradual"
+   ],
+   "why": "Sharp shows a sudden, big change."
+  },
+  {
+   "q": "Which word describes a small change?",
+   "o": [
+    "slight",
+    "dramatic",
+    "steep"
+   ],
+   "why": "Slight means small."
+  },
+  {
+   "q": "What does 'trend' mean?",
+   "o": [
+    "the way a situation changes over time",
+    "a kind of road",
+    "a traffic fine"
+   ],
+   "why": "A trend is change over a period of time."
+  },
+  {
+   "q": "Which word is the opposite of 'expand'?",
+   "o": [
+    "reduce",
+    "grow",
+    "rise"
+   ],
+   "why": "Expand means get bigger; reduce means make smaller."
+  },
+  {
+   "q": "Which sentence shows a downward trend?",
+   "o": [
+    "Accidents dropped in 2014.",
+    "Accidents rose in 2014.",
+    "Accidents grew in 2014."
+   ],
+   "why": "Dropped means went down."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Opposite of 'rise'",
+   "a": "fall",
+   "d": [
+    "grow",
+    "expand",
+    "increase"
+   ]
+  },
+  {
+   "q": "Opposite of 'increase'",
+   "a": "decrease",
+   "d": [
+    "rise",
+    "grow",
+    "expand"
+   ]
+  },
+  {
+   "q": "Adverb of 'steady'",
+   "a": "steadily",
+   "d": [
+    "steadyly",
+    "steadly",
+    "steadilly"
+   ]
+  },
+  {
+   "q": "Adverb of 'sharp'",
+   "a": "sharply",
+   "d": [
+    "sharpely",
+    "sharplly",
+    "sharpily"
+   ]
+  },
+  {
+   "q": "Adverb of 'significant'",
+   "a": "significantly",
+   "d": [
+    "significantely",
+    "significantily",
+    "significently"
+   ]
+  },
+  {
+   "q": "Preposition after 'a drop'",
+   "a": "in",
+   "d": [
+    "on",
+    "at",
+    "to"
+   ]
+  },
+  {
+   "q": "Word for 'make smaller'",
+   "a": "reduce",
+   "d": [
+    "expand",
+    "grow",
+    "rise"
+   ]
+  },
+  {
+   "q": "Adjective for a small change",
+   "a": "slight",
+   "d": [
+    "sharp",
+    "dramatic",
+    "steep"
+   ]
+  },
+  {
+   "q": "Word for 'get bigger'",
+   "a": "expand",
+   "d": [
+    "drop",
+    "fall",
+    "reduce"
+   ]
+  },
+  {
+   "q": "Change over a period of time",
+   "a": "trend",
+   "d": [
+    "table",
+    "number",
+    "fine"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which group contains only 'up' words?",
+   "o": [
+    "rise, grow, expand",
+    "fall, drop, reduce",
+    "rise, drop, grow",
+    "fall, expand, reduce"
+   ],
+   "why": "Rise, grow and expand all show an increase."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group contains only 'down' words?",
+   "o": [
+    "decrease, drop, fall",
+    "increase, rise, grow",
+    "drop, expand, fall",
+    "grow, reduce, rise"
+   ],
+   "why": "Decrease, drop and fall all show a decrease."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the adverb of 'sudden'?",
+   "o": [
+    "suddenly",
+    "suddently",
+    "suddenely",
+    "suddenily"
+   ],
+   "why": "Just add -ly: suddenly."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which adjective means 'happening slowly, step by step'?",
+   "o": [
+    "gradual",
+    "sudden",
+    "sharp",
+    "dramatic"
+   ],
+   "why": "Gradual means little by little."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "There was a sharp increase in the number of vehicles.",
+    "There was a sharp increase of the number of vehicles.",
+    "There was a sharply increase in the number of vehicles.",
+    "There was sharp increase at the number of vehicles."
+   ],
+   "why": "We use an adjective before the noun and in after increase."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence about the fall in accidents.",
+   "o": [
+    "The number of accidents fell steadily.",
+    "The number of accidents fell steady.",
+    "The number of accidents fell steadyly.",
+    "The number of accidents steady fell."
+   ],
+   "why": "An adverb describes the verb: fell steadily."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Accidents went from 7,000 to 6,900. Which word fits best?",
+   "o": [
+    "slight",
+    "dramatic",
+    "sharp",
+    "steep"
+   ],
+   "why": "A change of 100 out of 7,000 is small, so slight fits."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we use 'a sharp drop' but 'dropped sharply'?",
+   "o": [
+    "an adjective goes with a noun and an adverb goes with a verb",
+    "they mean opposite things",
+    "sharply is only used for increases",
+    "there is no difference in grammar"
+   ],
+   "why": "Drop is a noun in the first and a verb in the second."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Numbers went up by a large amount in one year. Which phrase describes this best?",
+   "o": [
+    "a dramatic rise",
+    "a slight fall",
+    "a gradual drop",
+    "a steady decrease"
+   ],
+   "why": "A large, quick rise is dramatic."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between 'rise' and 'drop'?",
+   "o": [
+    "rise means go up and drop means go down",
+    "both mean go up",
+    "both mean go down",
+    "rise is only a noun"
+   ],
+   "why": "They describe opposite trends."
+  }
+ ]
+}

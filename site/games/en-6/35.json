@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 3: Places",
+  "lesson": "Unit 3 – Lesson 5: Vocabulary and Grammar – Parts of buildings and the Past continuous",
+  "outcomes": [
+    "I can name parts of buildings like ceiling, corridor and lift.",
+    "I can use the Past continuous (was/were + -ing) with the Past simple.",
+    "I can talk about my early memories."
+  ],
+  "tf": [
+    {"s": "The ceiling is above your head in a room.", "t": true, "why": "The ceiling is the top of a room; the floor is under your feet."},
+    {"s": "An escalator is a set of moving stairs.", "t": true, "why": "An escalator moves you up or down."},
+    {"s": "You go out of a building through the entrance.", "t": false, "why": "You go out through the exit; you go in through the entrance."},
+    {"s": "The Past continuous is was/were + verb-ing.", "t": true, "why": "For example: The guide was talking."},
+    {"s": "In the Past continuous, we say “They was watching TV.”", "t": false, "why": "With they we use were: They were watching TV."},
+    {"s": "A shorter action can happen in the middle of a longer action.", "t": true, "why": "I was watching TV (longer) when my friend called (shorter)."},
+    {"s": "A corridor is the top part of a building, like a roof.", "t": false, "why": "A corridor is a long passage with rooms on each side."},
+    {"s": "In “Eddie was touching a bookcase when he fell”, “he fell” is the longer action.", "t": false, "why": "Was touching a bookcase is the longer action; he fell is shorter."},
+    {"s": "A lift takes you up to another floor and uses electricity.", "t": true, "why": "You press a button and the lift goes up or down."},
+    {"s": "“What were you doing at 8 o’clock last night?” is a correct question.", "t": true, "why": "Question form: What + were + you + doing?"}
+  ],
+  "boxes": [
+    {"q": "What is above your head in a room?", "o": ["the ceiling", "the floor", "the corner"], "why": "The ceiling is above you."},
+    {"q": "What are “moving stairs”?", "o": ["an escalator", "a corridor", "a roof"], "why": "An escalator is moving stairs."},
+    {"q": "You go out of a building through the…", "o": ["exit", "ceiling", "wall"], "why": "The exit is the way out."},
+    {"q": "Complete: The guide ___ (talk) when they walked through the entrance.", "o": ["was talking", "were talking", "talking"], "why": "The guide is singular: was talking."},
+    {"q": "Complete: We ___ (visit) a castle when it started to rain.", "o": ["were visiting", "was visiting", "visiting"], "why": "We + were + -ing."},
+    {"q": "Complete: They ___ watching TV when Mum came home.", "o": ["weren’t", "wasn’t", "didn’t"], "why": "They + weren’t."},
+    {"q": "Complete: We live on the second ___ of the apartment building.", "o": ["floor", "ceiling", "roof"], "why": "We say on the second floor."},
+    {"q": "Which places did the four children talk about?", "o": ["school, house, castle, skyscraper", "harbour, palace, stadium, factory", "café, cinema, library, bus"], "why": "They talked about a school, a house, a castle and a skyscraper."},
+    {"q": "Which part of a building is on the very top, outside?", "o": ["the roof", "the floor", "the corridor"], "why": "The roof covers the top of a building."},
+    {"q": "Where do two walls meet?", "o": ["in the corner", "at the exit", "in the lift"], "why": "A corner is where two walls meet."}
+  ],
+  "hunt": [
+    {"q": "Above your head in a room", "a": "ceiling", "d": ["floor", "corner", "exit"]},
+    {"q": "Under your feet", "a": "floor", "d": ["ceiling", "roof", "wall"]},
+    {"q": "Moving stairs", "a": "escalator", "d": ["corridor", "corner", "entrance"]},
+    {"q": "The way out", "a": "exit", "d": ["entrance", "ceiling", "roof"]},
+    {"q": "The way in", "a": "entrance", "d": ["exit", "corner", "lift"]},
+    {"q": "Long passage with rooms", "a": "corridor", "d": ["roof", "lift", "ceiling"]},
+    {"q": "On top of the building", "a": "roof", "d": ["floor", "corridor", "exit"]},
+    {"q": "I ___ watching TV.", "a": "was", "d": ["were", "am be", "did"]},
+    {"q": "They ___ playing football.", "a": "were", "d": ["was", "is", "did"]},
+    {"q": "She ___ cooking. (negative)", "a": "wasn’t", "d": ["weren’t", "didn’t", "don’t"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which group is all parts of buildings?", "o": ["ceiling, wall, corridor, lift", "castle, harbour, palace, stadium", "coach, bush, tail, wind", "printer, screen, laptop, icon"], "why": "These are parts of a building."},
+    {"lv": "التذكر", "q": "“You use this to go up a floor. It uses electricity.” What is it?", "o": ["a lift", "the steps", "a wall", "a corner"], "why": "A lift (or an escalator) uses electricity to take you up."},
+    {"lv": "التذكر", "q": "Which is the correct rule?", "o": ["A shorter action happens in the middle of a longer action.", "The longer action always uses the Past simple.", "We never use when with the Past continuous.", "The Past continuous is did + verb."], "why": "The longer action uses was/were + -ing."},
+    {"lv": "التذكر", "q": "Which building words are in the mystery story?", "o": ["entrance, stairs, corridor, tower", "lift, escalator, exit, roof", "harbour, stadium, factory, hospital", "kitchen, garden, garage, bathroom"], "why": "Eddie’s story has an entrance, stairs, a corridor and a tower."},
+    {"lv": "التطبيق", "q": "Make a question: What / you / do / at 8 o’clock last night?", "o": ["What were you doing at 8 o’clock last night?", "What was you doing at 8 o’clock last night?", "What you were doing at 8 o’clock last night?", "What did you doing at 8 o’clock last night?"], "why": "What + were + you + doing?"},
+    {"lv": "التطبيق", "q": "Choose the correct sentence.", "o": ["I was playing in the garden when my father called me.", "I were playing in the garden when my father called me.", "I was play in the garden when my father called me.", "I playing in the garden when my father was call me."], "why": "I was + -ing for the longer action; called for the shorter one."},
+    {"lv": "التطبيق", "q": "“Were you sleeping when I called?” Choose the short answer.", "o": ["Yes, I was.", "Yes, I were.", "Yes, I did.", "Yes, I am."], "why": "With I we use was: Yes, I was."},
+    {"lv": "التحليل", "q": "“Eddie was touching a bookcase when he fell.” Which action is longer?", "o": ["was touching a bookcase", "he fell", "both are the same", "neither"], "why": "The Past continuous shows the longer action."},
+    {"lv": "التحليل", "q": "Which sentence has a mistake?", "o": ["My sisters was waiting outside the shop.", "My sisters were waiting outside the shop.", "My brother was waiting outside the shop.", "We were waiting outside the shop."], "why": "My sisters is plural, so we need were."},
+    {"lv": "التحليل", "q": "What is the difference between steps and an escalator?", "o": ["An escalator moves; steps don’t move.", "Steps use electricity; an escalator doesn’t.", "Steps are on the ceiling.", "There is no difference."], "why": "An escalator is moving stairs."}
+  ]
+}

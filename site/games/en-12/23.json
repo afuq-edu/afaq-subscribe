@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: Goodbye, School! (Reading)",
+ "lesson": "Types of reading and reading speeds; calculating words per minute",
+ "outcomes": [
+  "Know the four types of reading and their speeds",
+  "Calculate reading speed: words ÷ minutes",
+  "Change seconds into decimals of a minute"
+ ],
+ "tf": [
+  {
+   "s": "Close reading is slower than 100 words per minute.",
+   "t": true,
+   "why": "Yes, close reading is the slowest type."
+  },
+  {
+   "s": "Skimming is the slowest type of reading.",
+   "t": false,
+   "why": "Skimming is the fastest, above 400 wpm."
+  },
+  {
+   "s": "Casual reading of newspapers and magazines is about 250–400 wpm.",
+   "t": true,
+   "why": "Right, we read these quickly and informally."
+  },
+  {
+   "s": "Academic reading is about 100–250 wpm.",
+   "t": true,
+   "why": "Yes, academic texts need careful but steady reading."
+  },
+  {
+   "s": "Reading speed = minutes ÷ words.",
+   "t": false,
+   "why": "It is words ÷ minutes."
+  },
+  {
+   "s": "30 seconds is 0.5 of a minute.",
+   "t": true,
+   "why": "Yes, 30 is half of 60."
+  },
+  {
+   "s": "We read a contract and a magazine at the same speed.",
+   "t": false,
+   "why": "We read different texts at different speeds."
+  },
+  {
+   "s": "Reading 300 words in 2 minutes is 150 wpm.",
+   "t": true,
+   "why": "300 ÷ 2 = 150, well done."
+  },
+  {
+   "s": "3 minutes 25 seconds is 3.25 minutes.",
+   "t": false,
+   "why": "25 ÷ 60 = 0.417, so it is about 3.417 minutes."
+  },
+  {
+   "s": "Practising regularly can help you read faster.",
+   "t": true,
+   "why": "Regular practice improves reading speed."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which type of reading is above 400 wpm?",
+   "o": [
+    "skimming",
+    "close reading",
+    "academic reading"
+   ],
+   "why": "Skimming is the fastest type."
+  },
+  {
+   "q": "Which type of reading do we use for newspapers and magazines?",
+   "o": [
+    "casual reading",
+    "close reading",
+    "academic reading"
+   ],
+   "why": "Casual reading is quick and informal."
+  },
+  {
+   "q": "How many minutes is 45 seconds?",
+   "o": [
+    "0.75",
+    "0.45",
+    "0.5"
+   ],
+   "why": "45 ÷ 60 = 0.75."
+  },
+  {
+   "q": "To find reading speed, you divide the number of words by...",
+   "o": [
+    "the time in minutes",
+    "the number of pages",
+    "the time in hours"
+   ],
+   "why": "WPM means words per minute."
+  },
+  {
+   "q": "400 words in 4 minutes = ?",
+   "o": [
+    "100 wpm",
+    "1600 wpm",
+    "40 wpm"
+   ],
+   "why": "400 ÷ 4 = 100."
+  },
+  {
+   "q": "Which type of reading is the slowest?",
+   "o": [
+    "close reading",
+    "skimming",
+    "casual reading"
+   ],
+   "why": "Close reading is below 100 wpm."
+  },
+  {
+   "q": "Which speed suits academic reading?",
+   "o": [
+    "100–250 wpm",
+    "above 400 wpm",
+    "below 50 wpm"
+   ],
+   "why": "Academic reading is 100–250 wpm."
+  },
+  {
+   "q": "What is one way to improve reading speed?",
+   "o": [
+    "practise regularly",
+    "read every word twice",
+    "stop reading"
+   ],
+   "why": "Practice makes reading faster."
+  },
+  {
+   "q": "What does WPM stand for?",
+   "o": [
+    "words per minute",
+    "words per month",
+    "writing per minute"
+   ],
+   "why": "WPM = words per minute."
+  },
+  {
+   "q": "15 seconds is what part of a minute?",
+   "o": [
+    "0.25",
+    "0.15",
+    "0.5"
+   ],
+   "why": "15 ÷ 60 = 0.25."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Below 100 wpm",
+   "a": "close reading",
+   "d": [
+    "skimming",
+    "casual reading",
+    "academic reading"
+   ]
+  },
+  {
+   "q": "100–250 wpm",
+   "a": "academic reading",
+   "d": [
+    "skimming",
+    "close reading",
+    "casual reading"
+   ]
+  },
+  {
+   "q": "Above 400 wpm",
+   "a": "skimming",
+   "d": [
+    "close reading",
+    "academic reading",
+    "casual reading"
+   ]
+  },
+  {
+   "q": "250–400 wpm",
+   "a": "casual reading",
+   "d": [
+    "close reading",
+    "skimming",
+    "academic reading"
+   ]
+  },
+  {
+   "q": "600 words in 4 minutes",
+   "a": "150 wpm",
+   "d": [
+    "240 wpm",
+    "2400 wpm",
+    "100 wpm"
+   ]
+  },
+  {
+   "q": "500 words in 2.5 minutes",
+   "a": "200 wpm",
+   "d": [
+    "250 wpm",
+    "125 wpm",
+    "1250 wpm"
+   ]
+  },
+  {
+   "q": "2 minutes 30 seconds = ? minutes",
+   "a": "2.5",
+   "d": [
+    "2.3",
+    "2.03",
+    "3.2"
+   ]
+  },
+  {
+   "q": "1 minute 45 seconds = ? minutes",
+   "a": "1.75",
+   "d": [
+    "1.45",
+    "1.5",
+    "1.25"
+   ]
+  },
+  {
+   "q": "WPM means...",
+   "a": "words per minute",
+   "d": [
+    "words per month",
+    "work per minute",
+    "words per page"
+   ]
+  },
+  {
+   "q": "Reading speed = words ÷ ...",
+   "a": "minutes",
+   "d": [
+    "pages",
+    "hours",
+    "lines"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Close reading is below how many words per minute?",
+   "o": [
+    "100",
+    "250",
+    "400",
+    "50"
+   ],
+   "why": "Close reading is under 100 wpm."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the formula for reading speed?",
+   "o": [
+    "Words ÷ minutes",
+    "Minutes ÷ words",
+    "Words × minutes",
+    "Pages ÷ hours"
+   ],
+   "why": "Divide the words by the time in minutes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which texts do we usually read with casual reading?",
+   "o": [
+    "Newspapers and magazines",
+    "Legal contracts",
+    "Exam instructions",
+    "Research papers"
+   ],
+   "why": "Casual reading is for informal texts."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In the example, 546 words in 3 minutes 25 seconds is about...",
+   "o": [
+    "160 wpm",
+    "182 wpm",
+    "546 wpm",
+    "100 wpm"
+   ],
+   "why": "546 ÷ 3.417 ≈ 160 wpm."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Hamad read 450 words in 3 minutes. What is his speed?",
+   "o": [
+    "150 wpm",
+    "1350 wpm",
+    "135 wpm",
+    "300 wpm"
+   ],
+   "why": "450 ÷ 3 = 150."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Laila read 700 words in 3 minutes 30 seconds. What is her speed?",
+   "o": [
+    "200 wpm",
+    "233 wpm",
+    "2450 wpm",
+    "350 wpm"
+   ],
+   "why": "3 min 30 s = 3.5 min, and 700 ÷ 3.5 = 200."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A student looks quickly through an article at 450 wpm to get the main idea. What is this?",
+   "o": [
+    "Skimming",
+    "Close reading",
+    "Academic reading",
+    "Casual reading"
+   ],
+   "why": "Above 400 wpm for the main idea is skimming."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do university students need to read fast?",
+   "o": [
+    "They have many reading assignments",
+    "They never have exams",
+    "Fast reading needs no understanding",
+    "Their books are very short"
+   ],
+   "why": "Essays, research and exams need a lot of reading."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we read a contract more slowly than a magazine?",
+   "o": [
+    "Every detail in a contract is important",
+    "Contracts are written for children",
+    "Magazines have no words",
+    "Contracts are always funny"
+   ],
+   "why": "Important details need close reading."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why must you change seconds into decimals before calculating?",
+   "o": [
+    "Because the formula divides by minutes",
+    "Because seconds are not real time",
+    "Because it makes the answer bigger",
+    "Because you must count the words twice"
+   ],
+   "why": "Time must be in minutes, so seconds become part of a minute."
+  }
+ ]
+}

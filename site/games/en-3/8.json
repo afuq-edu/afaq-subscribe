@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 1: It's a happy day!",
+ "lesson": "Unit 1 – Lesson 5: Culture (traditional breakfasts)",
+ "outcomes": [
+  "I can name breakfast foods like cereal, porridge, soup and toast.",
+  "I can say what people eat for breakfast in different countries.",
+  "I can make an Omani breakfast menu."
+ ],
+ "tf": [
+  {
+   "s": "Breakfasts are different around the world.",
+   "t": true,
+   "why": "Yes! Every country has its own breakfast."
+  },
+  {
+   "s": "In Japan, some people have fish, pickles, rice and soup for breakfast.",
+   "t": true,
+   "why": "Well done! That is a Japanese breakfast."
+  },
+  {
+   "s": "In South Africa, people have corn porridge with sugar and milk.",
+   "t": true,
+   "why": "Great! Corn porridge is from South Africa."
+  },
+  {
+   "s": "In Oman, we have Khubz Rakhal with fish and pickles.",
+   "t": false,
+   "why": "In Oman we have Khubz Rakhal with eggs and beans."
+  },
+  {
+   "s": "In the UK, some people have toast and tea.",
+   "t": true,
+   "why": "Yes! Toast and tea are a UK breakfast."
+  },
+  {
+   "s": "Children in the UK often have soup and rice for breakfast.",
+   "t": false,
+   "why": "UK children often have cereal, milk and juice."
+  },
+  {
+   "s": "Khubz Rakhal is a breakfast from Japan.",
+   "t": false,
+   "why": "Khubz Rakhal is from Oman."
+  },
+  {
+   "s": "A breakfast menu has food and drinks for breakfast.",
+   "t": true,
+   "why": "A menu shows what we can eat and drink."
+  },
+  {
+   "s": "Tea is a food we eat with a spoon.",
+   "t": false,
+   "why": "Tea is a drink."
+  },
+  {
+   "s": "We say This is Khubz Rakhal. for one food.",
+   "t": true,
+   "why": "One thing takes This is."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where do people have Khubz Rakhal?",
+   "o": [
+    "Oman",
+    "Japan",
+    "the UK"
+   ],
+   "why": "Khubz Rakhal is an Omani breakfast."
+  },
+  {
+   "q": "Which is a drink?",
+   "o": [
+    "tea",
+    "toast",
+    "pickles"
+   ],
+   "why": "Tea is a drink."
+  },
+  {
+   "q": "Where do people have corn porridge with sugar and milk?",
+   "o": [
+    "South Africa",
+    "Oman",
+    "Japan"
+   ],
+   "why": "Corn porridge is from South Africa."
+  },
+  {
+   "q": "What do we have with Khubz Rakhal?",
+   "o": [
+    "eggs and beans",
+    "fish and rice",
+    "cereal and milk"
+   ],
+   "why": "In Oman we have it with eggs and beans."
+  },
+  {
+   "q": "Complete: This ___ Khubz Rakhal.",
+   "o": [
+    "is",
+    "are",
+    "am"
+   ],
+   "why": "One food takes is."
+  },
+  {
+   "q": "Complete: We have eggs ___ breakfast.",
+   "o": [
+    "for",
+    "to",
+    "at"
+   ],
+   "why": "We say for breakfast."
+  },
+  {
+   "q": "Where do some people have toast and tea?",
+   "o": [
+    "the UK",
+    "South Africa",
+    "Japan"
+   ],
+   "why": "Toast and tea are from the UK."
+  },
+  {
+   "q": "Which country has fish and rice for breakfast?",
+   "o": [
+    "Japan",
+    "the UK",
+    "South Africa"
+   ],
+   "why": "In Japan some people have fish and rice."
+  },
+  {
+   "q": "What is on a breakfast menu?",
+   "o": [
+    "breakfast food and drinks",
+    "school books",
+    "clothes"
+   ],
+   "why": "A menu lists food and drinks."
+  },
+  {
+   "q": "Which word is a breakfast food from the lesson?",
+   "o": [
+    "cereal",
+    "pencil",
+    "kite"
+   ],
+   "why": "Cereal is a breakfast food."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Omani breakfast bread",
+   "a": "Khubz Rakhal",
+   "d": [
+    "toast",
+    "porridge",
+    "cereal"
+   ]
+  },
+  {
+   "q": "Corn porridge country",
+   "a": "South Africa",
+   "d": [
+    "Japan",
+    "the UK",
+    "Oman"
+   ]
+  },
+  {
+   "q": "Fish, rice and soup country",
+   "a": "Japan",
+   "d": [
+    "Oman",
+    "the UK",
+    "South Africa"
+   ]
+  },
+  {
+   "q": "Khubz Rakhal country",
+   "a": "Oman",
+   "d": [
+    "Japan",
+    "the UK",
+    "South Africa"
+   ]
+  },
+  {
+   "q": "Toast and tea country",
+   "a": "the UK",
+   "d": [
+    "Oman",
+    "Japan",
+    "South Africa"
+   ]
+  },
+  {
+   "q": "Oman: Khubz Rakhal, eggs and ___",
+   "a": "beans",
+   "d": [
+    "pickles",
+    "cereal",
+    "soup"
+   ]
+  },
+  {
+   "q": "South Africa: ___ porridge",
+   "a": "corn",
+   "d": [
+    "rice",
+    "fish",
+    "bean"
+   ]
+  },
+  {
+   "q": "Japan: fish, rice, soup and ___",
+   "a": "pickles",
+   "d": [
+    "toast",
+    "cereal",
+    "porridge"
+   ]
+  },
+  {
+   "q": "UK children: cereal, milk and ___",
+   "a": "juice",
+   "d": [
+    "soup",
+    "pickles",
+    "beans"
+   ]
+  },
+  {
+   "q": "UK: toast and ___",
+   "a": "tea",
+   "d": [
+    "soup",
+    "pickles",
+    "rice"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which foods are from a Japanese breakfast?",
+   "o": [
+    "fish, pickles, rice and soup",
+    "toast and tea",
+    "Khubz Rakhal with eggs",
+    "corn porridge with milk"
+   ],
+   "why": "In Japan some people have fish, pickles, rice and soup."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do children in the UK often have for breakfast?",
+   "o": [
+    "cereal, milk and juice",
+    "fish and soup",
+    "Khubz Rakhal and beans",
+    "rice and pickles"
+   ],
+   "why": "UK children often have cereal, milk and juice."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which breakfast is from Oman?",
+   "o": [
+    "Khubz Rakhal with eggs and beans",
+    "corn porridge with sugar",
+    "fish and pickles",
+    "toast and tea"
+   ],
+   "why": "Khubz Rakhal is our Omani breakfast."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is NOT a breakfast food from the lesson?",
+   "o": [
+    "board",
+    "toast",
+    "soup",
+    "porridge"
+   ],
+   "why": "A board is in the classroom, not on the table."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: In Japan, some people have fish / toast for breakfast.",
+   "o": [
+    "fish",
+    "toast",
+    "cereal",
+    "porridge"
+   ],
+   "why": "Japanese breakfast has fish."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a sentence for your Omani menu.",
+   "o": [
+    "We have eggs and beans for breakfast.",
+    "We has eggs for breakfast.",
+    "We eggs have breakfast.",
+    "This are Khubz Rakhal."
+   ],
+   "why": "We have ... for breakfast."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend likes porridge with sugar and milk. Which country has this breakfast?",
+   "o": [
+    "South Africa",
+    "Japan",
+    "Oman",
+    "the UK"
+   ],
+   "why": "Corn porridge with sugar and milk is from South Africa."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How is a Japanese breakfast different from an Omani breakfast?",
+   "o": [
+    "Japan has fish and rice; Oman has Khubz Rakhal with eggs and beans.",
+    "They are the same.",
+    "Japan has Khubz Rakhal; Oman has fish.",
+    "Oman has toast; Japan has cereal."
+   ],
+   "why": "Each country has different breakfast food."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which menu is a good Omani breakfast menu?",
+   "o": [
+    "Khubz Rakhal, eggs, beans and tea",
+    "fish, pickles and soup",
+    "cereal and juice",
+    "corn porridge"
+   ],
+   "why": "These foods are from an Omani breakfast."
+  },
+  {
+   "lv": "التحليل",
+   "q": "In the lesson, which two breakfasts have milk?",
+   "o": [
+    "the UK and South Africa",
+    "Japan and Oman",
+    "Japan and the UK",
+    "Oman and South Africa"
+   ],
+   "why": "UK children have cereal and milk; South Africa has porridge with milk."
+  }
+ ]
+}

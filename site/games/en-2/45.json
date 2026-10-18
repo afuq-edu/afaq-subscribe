@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 3: Move your body!",
+  "lesson": "Unit 3 – Unit practice 1: Reading, writing and listening",
+  "outcomes": [
+    "I can read and write body words and movement words.",
+    "I can listen to an instruction and choose the right picture.",
+    "I can check my answers and correct my mistakes."
+  ],
+  "tf": [
+    {
+      "s": "I've got ten fingers.",
+      "t": true,
+      "why": "Yes! We have ten fingers on our two hands."
+    },
+    {
+      "s": "We stamp our feet.",
+      "t": true,
+      "why": "Great! Stamp your feet means hit the floor with your feet."
+    },
+    {
+      "s": "We clap our knees.",
+      "t": false,
+      "why": "We clap our hands."
+    },
+    {
+      "s": "Touch your head means put your hand on your head.",
+      "t": true,
+      "why": "Well done! Your hand goes on your head."
+    },
+    {
+      "s": "Feet are on our arms.",
+      "t": false,
+      "why": "Feet are at the end of our legs."
+    },
+    {
+      "s": "Stretch your arms means make them long.",
+      "t": true,
+      "why": "Yes! We stretch our arms up and out."
+    },
+    {
+      "s": "We bend our toes to sit down.",
+      "t": false,
+      "why": "We bend our knees."
+    },
+    {
+      "s": "Cloud has the sound ou.",
+      "t": true,
+      "why": "Great! c-l-ou-d has ou."
+    },
+    {
+      "s": "Coin has the sound ue.",
+      "t": false,
+      "why": "Coin has the sound oi."
+    },
+    {
+      "s": "I've got one tummy and two heads.",
+      "t": false,
+      "why": "We have one head and one tummy."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "I've got ten ___ on my feet.",
+      "o": [
+        "toes",
+        "arms",
+        "heads"
+      ],
+      "why": "Our toes are on our feet."
+    },
+    {
+      "q": "___ your hands!",
+      "o": [
+        "Clap",
+        "Stamp",
+        "Bend"
+      ],
+      "why": "We clap our hands."
+    },
+    {
+      "q": "___ your feet!",
+      "o": [
+        "Stamp",
+        "Clap",
+        "Stretch"
+      ],
+      "why": "We stamp our feet."
+    },
+    {
+      "q": "Which word is part of your leg?",
+      "o": [
+        "knee",
+        "kite",
+        "coin"
+      ],
+      "why": "A knee is part of our leg."
+    },
+    {
+      "q": "Which is a movement word?",
+      "o": [
+        "bend",
+        "blue",
+        "body"
+      ],
+      "why": "Bend is something we do."
+    },
+    {
+      "q": "Which word has i-e?",
+      "o": [
+        "nine",
+        "glue",
+        "shout"
+      ],
+      "why": "n-i-n-e has i-e."
+    },
+    {
+      "q": "Which word has ue?",
+      "o": [
+        "blue",
+        "boil",
+        "bike"
+      ],
+      "why": "b-l-ue has ue."
+    },
+    {
+      "q": "Touch your ___! (top of you)",
+      "o": [
+        "head",
+        "toes",
+        "feet"
+      ],
+      "why": "Your head is at the top."
+    },
+    {
+      "q": "I've got two ___ and two hands.",
+      "o": [
+        "arms",
+        "heads",
+        "tummies"
+      ],
+      "why": "We have two arms."
+    },
+    {
+      "q": "Which word is spelled right?",
+      "o": [
+        "fingers",
+        "fingrs",
+        "fngers"
+      ],
+      "why": "f-i-n-g-e-r-s is right."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Clap your ___!",
+      "a": "hands",
+      "d": [
+        "feet",
+        "knees",
+        "toes"
+      ]
+    },
+    {
+      "q": "Stamp your ___!",
+      "a": "feet",
+      "d": [
+        "hands",
+        "head",
+        "arms"
+      ]
+    },
+    {
+      "q": "Bend your ___!",
+      "a": "knees",
+      "d": [
+        "head",
+        "tummy",
+        "face"
+      ]
+    },
+    {
+      "q": "Touch your ___ (on your feet)",
+      "a": "toes",
+      "d": [
+        "arms",
+        "hands",
+        "head"
+      ]
+    },
+    {
+      "q": "Make your arms long.",
+      "a": "stretch",
+      "d": [
+        "clap",
+        "stamp",
+        "sit"
+      ]
+    },
+    {
+      "q": "How many fingers have you got?",
+      "a": "ten",
+      "d": [
+        "two",
+        "four",
+        "one"
+      ]
+    },
+    {
+      "q": "How many heads have you got?",
+      "a": "one",
+      "d": [
+        "two",
+        "ten",
+        "four"
+      ]
+    },
+    {
+      "q": "Find the oi word.",
+      "a": "coin",
+      "d": [
+        "cloud",
+        "glue",
+        "kite"
+      ]
+    },
+    {
+      "q": "Find the ou word.",
+      "a": "mouth",
+      "d": [
+        "boil",
+        "bike",
+        "blue"
+      ]
+    },
+    {
+      "q": "Find the body word.",
+      "a": "tummy",
+      "d": [
+        "cloud",
+        "coin",
+        "kite"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What is the word for the picture of feet?",
+      "o": [
+        "feet",
+        "hands",
+        "arms",
+        "knees"
+      ],
+      "why": "We walk on our feet."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word is a movement word?",
+      "o": [
+        "stretch",
+        "tummy",
+        "finger",
+        "head"
+      ],
+      "why": "Stretch is something we do with our body."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word has the sound oi?",
+      "o": [
+        "soil",
+        "shout",
+        "slide",
+        "glue"
+      ],
+      "why": "s-oi-l has oi."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which is a body word?",
+      "o": [
+        "leg",
+        "cloud",
+        "glue",
+        "kite"
+      ],
+      "why": "A leg is part of our body."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Complete: ___ your arms! (make them long)",
+      "o": [
+        "Stretch",
+        "Stamp",
+        "Clap",
+        "Bend"
+      ],
+      "why": "We stretch our arms to make them long."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You hear \"Stamp your feet.\" Which picture?",
+      "o": [
+        "A boy hits the floor with his feet",
+        "A boy claps his hands",
+        "A boy touches his head",
+        "A boy bends his knees"
+      ],
+      "why": "Stamp your feet means hit the floor with your feet."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Complete: I've got ten ___.",
+      "o": [
+        "fingers",
+        "heads",
+        "tummies",
+        "bodies"
+      ],
+      "why": "We have ten fingers."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Ali wrote \"I've got ten toos.\" What is the mistake?",
+      "o": [
+        "toos should be toes",
+        "ten should be one",
+        "I've should be I",
+        "There is no mistake"
+      ],
+      "why": "The right spelling is toes."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word is NOT a body word?",
+      "o": [
+        "clap",
+        "knee",
+        "arm",
+        "hand"
+      ],
+      "why": "Clap is a movement word, not a body part."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which two words have the same sound?",
+      "o": [
+        "blue and glue",
+        "blue and bike",
+        "coin and cloud",
+        "kite and coin"
+      ],
+      "why": "Blue and glue both have ue."
+    }
+  ]
+}

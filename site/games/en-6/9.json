@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 1: Free-time fun",
+ "lesson": "Unit 1 – Lesson 7: English in action – Making and responding to suggestions",
+ "outcomes": [
+  "I can make suggestions with You could…, Why don't you…? and How about…?",
+  "I can respond to suggestions politely.",
+  "I can say can in weak and strong forms."
+ ],
+ "tf": [
+  {
+   "s": "\"Why don't you play hockey?\" is a suggestion.",
+   "t": true,
+   "why": "Yes! Why don't you…? makes a suggestion."
+  },
+  {
+   "s": "\"That sounds good\" is a positive response.",
+   "t": true,
+   "why": "Correct! It means yes."
+  },
+  {
+   "s": "\"No, I don't think so\" means you agree.",
+   "t": false,
+   "why": "It is a polite way to say no."
+  },
+  {
+   "s": "After \"How about\", we use a verb with -ing.",
+   "t": true,
+   "why": "Right! How about going…?"
+  },
+  {
+   "s": "The boy chooses the video club.",
+   "t": true,
+   "why": "Yes, he goes to the video club."
+  },
+  {
+   "s": "The boy plays the piano.",
+   "t": false,
+   "why": "The boy plays the guitar."
+  },
+  {
+   "s": "In \"Yes, I can!\", can is strong.",
+   "t": true,
+   "why": "Great! In short answers can is strong."
+  },
+  {
+   "s": "In \"I can play the guitar\", can is strong.",
+   "t": false,
+   "why": "In sentences can is usually weak."
+  },
+  {
+   "s": "The video club is on Wednesdays at 3.30.",
+   "t": true,
+   "why": "Correct! Wednesdays at 3.30."
+  },
+  {
+   "s": "\"You could do puzzles\" is a response, not a suggestion.",
+   "t": false,
+   "why": "You could… is a way to make a suggestion."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "___ don't you learn a musical instrument?",
+   "o": [
+    "Why",
+    "How",
+    "What"
+   ],
+   "why": "We say Why don't you…?"
+  },
+  {
+   "q": "How about ___ to the video club?",
+   "o": [
+    "going",
+    "go",
+    "goes"
+   ],
+   "why": "How about + -ing."
+  },
+  {
+   "q": "Which is a positive response?",
+   "o": [
+    "That sounds good.",
+    "I don't think so.",
+    "No, thanks."
+   ],
+   "why": "That sounds good means yes."
+  },
+  {
+   "q": "What club does the boy choose?",
+   "o": [
+    "the video club",
+    "the football club",
+    "the art club"
+   ],
+   "why": "He chooses the video club."
+  },
+  {
+   "q": "\"How about making models?\" – \"That's a good ___!\"",
+   "o": [
+    "idea",
+    "sound",
+    "think"
+   ],
+   "why": "That's a good idea! means yes."
+  },
+  {
+   "q": "When is the video club?",
+   "o": [
+    "Wednesdays at 3.30",
+    "Mondays at 5.30",
+    "Fridays at 3.30"
+   ],
+   "why": "It's on Wednesdays at 3.30."
+  },
+  {
+   "q": "In \"Yes, I can!\", can is ___.",
+   "o": [
+    "strong",
+    "weak",
+    "silent"
+   ],
+   "why": "Short answers have strong can."
+  },
+  {
+   "q": "In \"I can swim\", can is ___.",
+   "o": [
+    "weak",
+    "strong",
+    "silent"
+   ],
+   "why": "In sentences can is weak."
+  },
+  {
+   "q": "You ___ do puzzles.",
+   "o": [
+    "could",
+    "can't",
+    "don't"
+   ],
+   "why": "You could… makes a suggestion."
+  },
+  {
+   "q": "Which is a polite no?",
+   "o": [
+    "No, I don't think so.",
+    "That's a good idea.",
+    "Yes, I could."
+   ],
+   "why": "\"I don't think so\" is a polite no."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "___ don't you swim?",
+   "a": "Why",
+   "d": [
+    "How",
+    "What",
+    "Who"
+   ]
+  },
+  {
+   "q": "How ___ making models?",
+   "a": "about",
+   "d": [
+    "often",
+    "many",
+    "much"
+   ]
+  },
+  {
+   "q": "You ___ do puzzles.",
+   "a": "could",
+   "d": [
+    "don't",
+    "aren't",
+    "isn't"
+   ]
+  },
+  {
+   "q": "How about ___ hockey?",
+   "a": "playing",
+   "d": [
+    "play",
+    "plays",
+    "played"
+   ]
+  },
+  {
+   "q": "The boy's club",
+   "a": "video club",
+   "d": [
+    "art club",
+    "chess club",
+    "music club"
+   ]
+  },
+  {
+   "q": "The boy plays the ...",
+   "a": "guitar",
+   "d": [
+    "piano",
+    "drums",
+    "violin"
+   ]
+  },
+  {
+   "q": "Club day",
+   "a": "Wednesday",
+   "d": [
+    "Monday",
+    "Friday",
+    "Sunday"
+   ]
+  },
+  {
+   "q": "can in \"Yes, I can!\"",
+   "a": "strong",
+   "d": [
+    "weak",
+    "silent",
+    "short"
+   ]
+  },
+  {
+   "q": "can in \"I can sing.\"",
+   "a": "weak",
+   "d": [
+    "strong",
+    "silent",
+    "long"
+   ]
+  },
+  {
+   "q": "A yes answer: That ... good.",
+   "a": "sounds",
+   "d": [
+    "looks",
+    "is",
+    "makes"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is a way to make a suggestion?",
+   "o": [
+    "How about going to the video club?",
+    "That sounds good.",
+    "No, I don't think so.",
+    "Yes, I could."
+   ],
+   "why": "How about…? makes a suggestion."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which response means no?",
+   "o": [
+    "No, I don't think so.",
+    "That's a good idea.",
+    "That sounds good.",
+    "Yes, I could."
+   ],
+   "why": "I don't think so is a polite no."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What instrument does the boy play?",
+   "o": [
+    "the guitar",
+    "the piano",
+    "the drums",
+    "the flute"
+   ],
+   "why": "He plays the guitar."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When is can usually strong?",
+   "o": [
+    "in short answers like \"Yes, I can!\"",
+    "in every sentence",
+    "never",
+    "only in questions"
+   ],
+   "why": "Can is strong in short answers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend wants to keep fit. Which is a good suggestion?",
+   "o": [
+    "Why don't you go swimming?",
+    "Why don't you watch cartoons?",
+    "How about sleeping all day?",
+    "You could play video games."
+   ],
+   "why": "Swimming keeps you fit."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "\"Why don't you play hockey?\" You don't like team sports. What do you say?",
+   "o": [
+    "No, I don't think so. I don't like team sports.",
+    "That's a good idea!",
+    "Yes, I could.",
+    "That sounds good."
+   ],
+   "why": "Say no politely and give a reason."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct suggestion.",
+   "o": [
+    "How about making models?",
+    "How about make models?",
+    "How about makes models?",
+    "How about to make models?"
+   ],
+   "why": "How about + -ing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"Can you skateboard? – Yes, I can.\" Which can is stressed?",
+   "o": [
+    "the second can",
+    "the first can",
+    "both",
+    "neither"
+   ],
+   "why": "The short answer has the strong can."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A: I'm bored. B: Why don't you play hockey? A: I don't think so. What should B say next?",
+   "o": [
+    "How about making models?",
+    "That's a good idea.",
+    "Yes, I could.",
+    "I don't believe it!"
+   ],
+   "why": "After a no, B makes a new suggestion."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What does \"Yes, I could. But …\" show?",
+   "o": [
+    "You are not sure and you have a problem with the idea.",
+    "You love the idea and say yes.",
+    "You are making a new suggestion.",
+    "You didn't hear the question."
+   ],
+   "why": "\"But\" shows there is a problem with the idea."
+  }
+ ]
+}

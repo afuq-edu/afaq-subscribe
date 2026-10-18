@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 3: Hobbies",
+ "lesson": "Unit 3 – Lesson 2: Story (Where's Fatma?)",
+ "outcomes": [
+  "I can say what Fatma does at 9, 10 and 11 o'clock.",
+  "I can say True or False about the story.",
+  "I can talk about having fun with friends."
+ ],
+ "tf": [
+  {
+   "s": "Fatma has tennis lessons at 9 o'clock.",
+   "t": true,
+   "why": "Yes! Fatma plays tennis at 9 o'clock."
+  },
+  {
+   "s": "Fatma plays tennis at 10 o'clock.",
+   "t": false,
+   "why": "At 10 o'clock she skateboards."
+  },
+  {
+   "s": "Fatma skateboards at 10 o'clock.",
+   "t": true,
+   "why": "Right! She skateboards at 10 o'clock."
+  },
+  {
+   "s": "Fatma watches TV at 11 o'clock.",
+   "t": false,
+   "why": "She doesn't watch TV at 11 o'clock. She roller-skates."
+  },
+  {
+   "s": "Fatma roller-skates at 11 o'clock.",
+   "t": true,
+   "why": "Yes! She roller-skates at 11 o'clock."
+  },
+  {
+   "s": "Polly can sing.",
+   "t": true,
+   "why": "Yes, Polly can sing!"
+  },
+  {
+   "s": "At the end, the children have lunch under a tree.",
+   "t": true,
+   "why": "Right! They have lunch under the tree."
+  },
+  {
+   "s": "Fatma is tired because she sleeps all morning.",
+   "t": false,
+   "why": "She is tired because she plays tennis, skateboards and roller-skates."
+  },
+  {
+   "s": "The value of the story is Have fun.",
+   "t": true,
+   "why": "Yes! Have fun with your friends."
+  },
+  {
+   "s": "Fatma roller-skates at 9 o'clock.",
+   "t": false,
+   "why": "At 9 o'clock she has tennis lessons."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does Fatma do at 9 o'clock?",
+   "o": [
+    "She plays tennis.",
+    "She skateboards.",
+    "She watches TV."
+   ],
+   "why": "Fatma has tennis lessons at 9."
+  },
+  {
+   "q": "What does Fatma do at 10 o'clock?",
+   "o": [
+    "She skateboards.",
+    "She plays tennis.",
+    "She roller-skates."
+   ],
+   "why": "She skateboards at 10."
+  },
+  {
+   "q": "What does Fatma do at 11 o'clock?",
+   "o": [
+    "She roller-skates.",
+    "She watches TV.",
+    "She plays tennis."
+   ],
+   "why": "She roller-skates at 11."
+  },
+  {
+   "q": "Where is Fatma at the end?",
+   "o": [
+    "Under the tree",
+    "In a shop",
+    "In bed"
+   ],
+   "why": "She is under the tree."
+  },
+  {
+   "q": "What can Atomic see on TV?",
+   "o": [
+    "The fish",
+    "A camel",
+    "A dhow"
+   ],
+   "why": "Atomic sees the fish on TV."
+  },
+  {
+   "q": "Circle: Polly can / can't sing.",
+   "o": [
+    "can",
+    "can't",
+    "doesn't"
+   ],
+   "why": "Polly can sing!"
+  },
+  {
+   "q": "What do the children do at the end?",
+   "o": [
+    "Have lunch under the tree",
+    "Go to school",
+    "Play tennis"
+   ],
+   "why": "They have lunch under the tree."
+  },
+  {
+   "q": "Circle: Fatma plays / doesn't play tennis at 11 o'clock.",
+   "o": [
+    "doesn't play",
+    "plays",
+    "play"
+   ],
+   "why": "At 11 she roller-skates."
+  },
+  {
+   "q": "What is the value of the story?",
+   "o": [
+    "Have fun",
+    "Be quiet",
+    "Go to bed early"
+   ],
+   "why": "The value is Have fun."
+  },
+  {
+   "q": "Children make a sandcastle together. Are they having fun?",
+   "o": [
+    "Yes",
+    "No",
+    "Only one child"
+   ],
+   "why": "They have fun together."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Fatma at 9 o'clock",
+   "a": "plays tennis",
+   "d": [
+    "skateboards",
+    "roller-skates",
+    "watches TV"
+   ]
+  },
+  {
+   "q": "Fatma at 10 o'clock",
+   "a": "skateboards",
+   "d": [
+    "plays tennis",
+    "roller-skates",
+    "reads books"
+   ]
+  },
+  {
+   "q": "Fatma at 11 o'clock",
+   "a": "roller-skates",
+   "d": [
+    "watches TV",
+    "plays tennis",
+    "skateboards"
+   ]
+  },
+  {
+   "q": "Time of tennis lessons",
+   "a": "9 o'clock",
+   "d": [
+    "10 o'clock",
+    "11 o'clock",
+    "12 o'clock"
+   ]
+  },
+  {
+   "q": "Time Fatma skateboards",
+   "a": "10 o'clock",
+   "d": [
+    "9 o'clock",
+    "11 o'clock",
+    "8 o'clock"
+   ]
+  },
+  {
+   "q": "Fatma at the end is …",
+   "a": "tired",
+   "d": [
+    "angry",
+    "cold",
+    "sad"
+   ]
+  },
+  {
+   "q": "Lunch is under the …",
+   "a": "tree",
+   "d": [
+    "bed",
+    "table",
+    "bridge"
+   ]
+  },
+  {
+   "q": "Who can sing?",
+   "a": "Polly",
+   "d": [
+    "Fatma",
+    "Atomic",
+    "Jack"
+   ]
+  },
+  {
+   "q": "Atomic sees ___ on TV.",
+   "a": "the fish",
+   "d": [
+    "the camel",
+    "the dhow",
+    "the bike"
+   ]
+  },
+  {
+   "q": "The story value",
+   "a": "Have fun",
+   "d": [
+    "Be quiet",
+    "Go home",
+    "Sit down"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who has tennis lessons at 9 o'clock?",
+   "o": [
+    "Fatma",
+    "Polly",
+    "Atomic",
+    "Jack"
+   ],
+   "why": "Fatma: I have tennis lessons at 9 o'clock."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Does Fatma play tennis at 10 o'clock?",
+   "o": [
+    "No, she doesn't.",
+    "Yes, she does.",
+    "Yes, she do.",
+    "No, she don't."
+   ],
+   "why": "At 10 she skateboards."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What time does Fatma roller-skate?",
+   "o": [
+    "11 o'clock",
+    "9 o'clock",
+    "10 o'clock",
+    "12 o'clock"
+   ],
+   "why": "She roller-skates at 11 o'clock."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a friend in the story?",
+   "o": [
+    "Lily",
+    "Qais",
+    "Anas",
+    "Bayan"
+   ],
+   "why": "Lily, Jack and Sami are in the story."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "True or False: She doesn't roller-skate at 11 o'clock.",
+   "o": [
+    "False",
+    "True",
+    "Both",
+    "We can't know"
+   ],
+   "why": "She roller-skates at 11 o'clock."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Fatma ___ at 10 o'clock.",
+   "o": [
+    "skateboards",
+    "skateboard",
+    "doesn't skateboard",
+    "roller-skate"
+   ],
+   "why": "She skateboards at 10."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which picture shows Have fun?",
+   "o": [
+    "Friends playing a game together",
+    "A child alone and sad",
+    "Children fighting",
+    "A child running on the road"
+   ],
+   "why": "Have fun together and safely."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Fatma tired?",
+   "o": [
+    "She plays tennis, skateboards and roller-skates.",
+    "She watches TV all day.",
+    "She sings all morning.",
+    "She has no lunch."
+   ],
+   "why": "She does three activities in one morning."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Put Fatma's morning in order.",
+   "o": [
+    "tennis → skateboard → roller-skate",
+    "roller-skate → tennis → skateboard",
+    "skateboard → roller-skate → tennis",
+    "tennis → roller-skate → skateboard"
+   ],
+   "why": "9 tennis, 10 skateboard, 11 roller-skate."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Fatma plays tennis, skateboards and roller-skates. How is her morning?",
+   "o": [
+    "Very busy",
+    "Very quiet",
+    "Very sad",
+    "Very short"
+   ],
+   "why": "Three activities in one morning is very busy!"
+  }
+ ]
+}

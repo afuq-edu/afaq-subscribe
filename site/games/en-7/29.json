@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Lesson 1: Vocabulary – Holiday equipment",
+ "outcomes": [
+  "Name 12 items of holiday equipment.",
+  "Explain why each item is useful on a trip.",
+  "Choose the right items for different holidays."
+ ],
+ "tf": [
+  {
+   "s": "You need a passport to travel to another country.",
+   "t": true,
+   "why": "Yes, a passport lets you enter other countries."
+  },
+  {
+   "s": "You use shampoo to wash your hair.",
+   "t": true,
+   "why": "Yes, shampoo is for hair."
+  },
+  {
+   "s": "Frank says children need a new passport every ten years.",
+   "t": false,
+   "why": "He says every five years."
+  },
+  {
+   "s": "Frank says guidebooks are heavy and you can download apps instead.",
+   "t": true,
+   "why": "Yes, apps are lighter than books."
+  },
+  {
+   "s": "You wear flip-flops on your head.",
+   "t": false,
+   "why": "You wear flip-flops on your feet."
+  },
+  {
+   "s": "A toothbrush and soap go in a washbag.",
+   "t": true,
+   "why": "Yes, a washbag holds things for washing."
+  },
+  {
+   "s": "A raincoat is useful on a sunny beach.",
+   "t": false,
+   "why": "A raincoat is for rainy days."
+  },
+  {
+   "s": "A pillow helps you sleep comfortably on a night journey.",
+   "t": true,
+   "why": "Yes, a pillow makes sleeping easier."
+  },
+  {
+   "s": "A suitcase is something you eat on a plane.",
+   "t": false,
+   "why": "A suitcase is a big bag for your clothes."
+  },
+  {
+   "s": "You should take medicine in case you are ill.",
+   "t": true,
+   "why": "Yes, medicine helps if you get sick."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which item can you get as an app on your phone?",
+   "o": [
+    "a guidebook",
+    "a pillow",
+    "a suitcase"
+   ],
+   "why": "Many guidebooks are apps now."
+  },
+  {
+   "q": "What do you wear on your feet at the beach?",
+   "o": [
+    "flip-flops",
+    "a raincoat",
+    "a pillow"
+   ],
+   "why": "Flip-flops are good for sand and water."
+  },
+  {
+   "q": "Complete: Take your ___ if you are ill.",
+   "o": [
+    "medicine",
+    "umbrella",
+    "guidebook"
+   ],
+   "why": "Medicine helps when you are ill."
+  },
+  {
+   "q": "Which item do you hold over your head in the rain?",
+   "o": [
+    "an umbrella",
+    "a suitcase",
+    "a charger"
+   ],
+   "why": "An umbrella keeps you dry."
+  },
+  {
+   "q": "Which item goes in a washbag?",
+   "o": [
+    "a toothbrush",
+    "a passport",
+    "a pillow"
+   ],
+   "why": "You clean your teeth with it."
+  },
+  {
+   "q": "Which book tells you about places to visit?",
+   "o": [
+    "a guidebook",
+    "a passport",
+    "a notebook"
+   ],
+   "why": "A guidebook gives information for tourists."
+  },
+  {
+   "q": "What do you put your clothes in for a trip?",
+   "o": [
+    "a suitcase",
+    "a washbag",
+    "a charger"
+   ],
+   "why": "A suitcase carries your clothes."
+  },
+  {
+   "q": "What do you use with water to wash your hands?",
+   "o": [
+    "soap",
+    "medicine",
+    "flip-flops"
+   ],
+   "why": "Soap cleans your hands."
+  },
+  {
+   "q": "Which item helps you see at night on a camping trip?",
+   "o": [
+    "a torch",
+    "flip-flops",
+    "soap"
+   ],
+   "why": "A torch gives light in the dark."
+  },
+  {
+   "q": "Which item do you need on a night journey to sleep well?",
+   "o": [
+    "a pillow",
+    "soap",
+    "a guidebook"
+   ],
+   "why": "A pillow is for your head."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "You need it to visit another country",
+   "a": "passport",
+   "d": [
+    "pillow",
+    "soap",
+    "charger"
+   ]
+  },
+  {
+   "q": "It charges your phone",
+   "a": "charger",
+   "d": [
+    "umbrella",
+    "washbag",
+    "suitcase"
+   ]
+  },
+  {
+   "q": "Shoes for the beach",
+   "a": "flip-flops",
+   "d": [
+    "raincoat",
+    "pillow",
+    "guidebook"
+   ]
+  },
+  {
+   "q": "A bag for soap and toothbrush",
+   "a": "washbag",
+   "d": [
+    "suitcase",
+    "passport",
+    "charger"
+   ]
+  },
+  {
+   "q": "Take it if you are ill",
+   "a": "medicine",
+   "d": [
+    "pillow",
+    "umbrella",
+    "soap"
+   ]
+  },
+  {
+   "q": "New passport for children every …",
+   "a": "five years",
+   "d": [
+    "ten years",
+    "one year",
+    "twenty years"
+   ]
+  },
+  {
+   "q": "Instead of a guidebook, download …",
+   "a": "apps",
+   "d": [
+    "photos",
+    "songs",
+    "games"
+   ]
+  },
+  {
+   "q": "A coat for rainy days",
+   "a": "raincoat",
+   "d": [
+    "flip-flops",
+    "soap",
+    "pillow"
+   ]
+  },
+  {
+   "q": "You clean your teeth with it",
+   "a": "toothbrush",
+   "d": [
+    "soap",
+    "umbrella",
+    "charger"
+   ]
+  },
+  {
+   "q": "A big bag for your clothes",
+   "a": "suitcase",
+   "d": [
+    "washbag",
+    "pillow",
+    "passport"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which items go in a washbag?",
+   "o": [
+    "toothbrush, toothpaste, shampoo and soap",
+    "passport, charger and guidebook",
+    "flip-flops and raincoat",
+    "pillow and suitcase"
+   ],
+   "why": "These are things for washing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why does Frank say not to take guidebooks?",
+   "o": [
+    "They are heavy and you can use apps.",
+    "They are too expensive.",
+    "They are not allowed on planes.",
+    "They have no pictures."
+   ],
+   "why": "Apps are light and easy to carry."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two items are useful for rainy days?",
+   "o": [
+    "a raincoat and an umbrella",
+    "flip-flops and soap",
+    "a pillow and a charger",
+    "a passport and a washbag"
+   ],
+   "why": "Both keep you dry."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which item can you wear?",
+   "o": [
+    "flip-flops",
+    "a charger",
+    "soap",
+    "medicine"
+   ],
+   "why": "You wear flip-flops on your feet."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are going on a camping trip. Which item is useful in case you get ill?",
+   "o": [
+    "medicine",
+    "a guidebook",
+    "flip-flops",
+    "a pillow"
+   ],
+   "why": "Medicine helps if you get sick."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your family is flying to London. Which item must you take?",
+   "o": [
+    "a passport",
+    "an umbrella",
+    "a pillow",
+    "soap"
+   ],
+   "why": "You can't enter another country without a passport."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: You don't need a ___ on a sunny beach.",
+   "o": [
+    "raincoat",
+    "sunhat",
+    "bottle of water",
+    "swimsuit"
+   ],
+   "why": "There is no rain, so no raincoat."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is a pillow useful on a night journey?",
+   "o": [
+    "So you can sleep comfortably.",
+    "So you can wash your face.",
+    "So you can charge your phone.",
+    "So you can read about places."
+   ],
+   "why": "A pillow helps you rest."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sara is going to a hot, sunny beach. Which list is best?",
+   "o": [
+    "flip-flops, soap and a toothbrush",
+    "a raincoat, an umbrella and a pillow",
+    "a raincoat and five guidebooks",
+    "an umbrella and a raincoat"
+   ],
+   "why": "These items are useful in the sun by the sea."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is a good travel tip of your own?",
+   "o": [
+    "Take a bottle of water on long journeys.",
+    "Leave your passport at home.",
+    "Never take medicine.",
+    "Carry five heavy guidebooks."
+   ],
+   "why": "Water keeps you healthy on long trips."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 2 – Then and now",
+ "lesson": "Lesson 4: Vocabulary and Grammar – Verbs and could / couldn’t",
+ "outcomes": [
+  "I can say verb phrases like post a letter, tie a shoelace and win a race.",
+  "I can talk about past ability: When I was one, I could walk, but I couldn't talk.",
+  "I can ask and answer: Could you swim when you were five? Yes, I could."
+ ],
+ "tf": [
+  {
+   "s": "Could is the past of can.",
+   "t": true,
+   "why": "Yes! We use could for ability in the past."
+  },
+  {
+   "s": "\"She could sends an email.\" is correct.",
+   "t": false,
+   "why": "After could, use the base verb: She could send an email."
+  },
+  {
+   "s": "Could is the same for I, you, he, she, we and they.",
+   "t": true,
+   "why": "Right! Could never changes."
+  },
+  {
+   "s": "We say \"post an email\" and \"send a letter\" in this lesson.",
+   "t": false,
+   "why": "The phrases are post a letter and send an email."
+  },
+  {
+   "s": "\"Could you talk when you were two?\" \"Yes, I could.\" is correct.",
+   "t": true,
+   "why": "Great! Could you …? Yes, I could."
+  },
+  {
+   "s": "Couldn't means could not.",
+   "t": true,
+   "why": "Yes! couldn't = could not."
+  },
+  {
+   "s": "We say \"win a race\" and \"tie a shoelace\".",
+   "t": true,
+   "why": "Yes! These are verb phrases from the lesson."
+  },
+  {
+   "s": "\"When I was one, I could talked.\" is correct.",
+   "t": false,
+   "why": "Use the base verb: I could talk."
+  },
+  {
+   "s": "We say \"hold a story\" and \"tell a pen\".",
+   "t": false,
+   "why": "We say tell a story and hold a pen."
+  },
+  {
+   "s": "The short answer to \"Could he swim?\" is \"No, he didn't.\"",
+   "t": false,
+   "why": "We answer with could: No, he couldn't."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "win ___",
+   "o": [
+    "a race",
+    "a letter",
+    "a face"
+   ],
+   "why": "We win a race."
+  },
+  {
+   "q": "post ___",
+   "o": [
+    "a letter",
+    "a race",
+    "a sandwich"
+   ],
+   "why": "We post a letter."
+  },
+  {
+   "q": "When I was two, I ___ hold a pen.",
+   "o": [
+    "could",
+    "can",
+    "coulds"
+   ],
+   "why": "For the past, use could."
+  },
+  {
+   "q": "Could you send an email when you were three?",
+   "o": [
+    "No, I couldn't.",
+    "No, I didn't could.",
+    "No, I can't send."
+   ],
+   "why": "Short answer: No, I couldn't."
+  },
+  {
+   "q": "tie a ___",
+   "o": [
+    "shoelace",
+    "story",
+    "email"
+   ],
+   "why": "We tie a shoelace."
+  },
+  {
+   "q": "Unscramble: dloh a pne",
+   "o": [
+    "hold a pen",
+    "hold a pan",
+    "hole a pen"
+   ],
+   "why": "dloh = hold, pne = pen."
+  },
+  {
+   "q": "Rawan couldn't post a letter, ___ she could make a face.",
+   "o": [
+    "but",
+    "or",
+    "so"
+   ],
+   "why": "But joins could and couldn't."
+  },
+  {
+   "q": "make a ___",
+   "o": [
+    "sandwich",
+    "letter",
+    "shoelace"
+   ],
+   "why": "We make a sandwich, and we make a face."
+  },
+  {
+   "q": "___ Hazim tell a story when he was three?",
+   "o": [
+    "Could",
+    "Did could",
+    "Was"
+   ],
+   "why": "Could + name + base verb?"
+  },
+  {
+   "q": "tell a ___",
+   "o": [
+    "story",
+    "pen",
+    "race"
+   ],
+   "why": "We tell a story."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "___ a letter",
+   "a": "post",
+   "d": [
+    "tie",
+    "hold",
+    "win"
+   ]
+  },
+  {
+   "q": "___ an email",
+   "a": "send",
+   "d": [
+    "tie",
+    "hold",
+    "win"
+   ]
+  },
+  {
+   "q": "___ a shoelace",
+   "a": "tie",
+   "d": [
+    "tell",
+    "post",
+    "send"
+   ]
+  },
+  {
+   "q": "___ a race",
+   "a": "win",
+   "d": [
+    "post",
+    "tell",
+    "hold"
+   ]
+  },
+  {
+   "q": "___ a pen",
+   "a": "hold",
+   "d": [
+    "send",
+    "tell",
+    "win"
+   ]
+  },
+  {
+   "q": "___ a story",
+   "a": "tell",
+   "d": [
+    "tie",
+    "post",
+    "hold"
+   ]
+  },
+  {
+   "q": "Unscramble: niw a crae",
+   "a": "win a race",
+   "d": [
+    "win a car",
+    "wear a race",
+    "new a race"
+   ]
+  },
+  {
+   "q": "Past of can",
+   "a": "could",
+   "d": [
+    "canned",
+    "cans",
+    "coulded"
+   ]
+  },
+  {
+   "q": "could not = ___",
+   "a": "couldn't",
+   "d": [
+    "can't",
+    "didn't",
+    "don't"
+   ]
+  },
+  {
+   "q": "He could ___ a sandwich.",
+   "a": "make",
+   "d": [
+    "makes",
+    "made",
+    "making"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list has only verb phrases from the lesson?",
+   "o": [
+    "post a letter, tie a shoelace, make a face",
+    "carry a bag, call the doctor, study Maths",
+    "bake a cake, fix toys, juggle",
+    "curly hair, a beard, a moustache"
+   ],
+   "why": "These are this lesson's verb phrases."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What comes after could?",
+   "o": [
+    "the base verb",
+    "verb + -ing",
+    "verb + -ed",
+    "to + verb"
+   ],
+   "why": "I could walk."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question is correct?",
+   "o": [
+    "Could you talk when you were two?",
+    "Could you talked when you were two?",
+    "Did you could talk when you were two?",
+    "Could you talking when you were two?"
+   ],
+   "why": "Could + you + base verb."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is from the grammar box idea?",
+   "o": [
+    "When I was one, I could walk, but I couldn't talk.",
+    "When I was one, I can walk.",
+    "When I was one, I could walked.",
+    "When I am one, I could walk."
+   ],
+   "why": "Could and couldn't for past ability."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a question: you / tie a shoelace / when you were four",
+   "o": [
+    "Could you tie a shoelace when you were four?",
+    "Could you tied a shoelace when you were four?",
+    "Can you tie a shoelace when you were four?",
+    "You could tie a shoelace when you were four?"
+   ],
+   "why": "Could + you + base verb + when you were …?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write: Rawan / post a letter (no) / make a face (yes)",
+   "o": [
+    "Rawan couldn't post a letter, but she could make a face.",
+    "Rawan could post a letter, but she couldn't make a face.",
+    "Rawan couldn't posted a letter, but she could made a face.",
+    "Rawan can't post a letter, but she can make a face."
+   ],
+   "why": "no = couldn't; yes = could."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You couldn't swim last year, but you can swim now. Which sentence is correct?",
+   "o": [
+    "I couldn't swim last year, but I can swim now.",
+    "I can't swim last year, but I could swim now.",
+    "I couldn't swam last year.",
+    "I could swim last year, but I can't now."
+   ],
+   "why": "couldn't for the past, can for now."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the mistake: \"She could sends an email.\"",
+   "o": [
+    "sends should be send",
+    "could should be coulds",
+    "an should be a",
+    "There is no mistake."
+   ],
+   "why": "After could, use the base verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A baby is one year old. Which sentence is most likely true?",
+   "o": [
+    "He couldn't send an email.",
+    "He could tie a shoelace.",
+    "He could post a letter.",
+    "He could win a race."
+   ],
+   "why": "A one-year-old baby can't use email yet."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say \"he could\" and not \"he coulds\"?",
+   "o": [
+    "Could is the same for all persons.",
+    "He is a plural word.",
+    "Could is a noun.",
+    "We add -s only in questions."
+   ],
+   "why": "Could never takes -s."
+  }
+ ]
+}

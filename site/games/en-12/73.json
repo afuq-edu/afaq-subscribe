@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: A Fair Exchange (Reading)",
+ "lesson": "Matching headings, vocabulary development and Time to Talk / Workbook practice: skimming a Fact File and multiple choice",
+ "outcomes": [
+  "Match headings to paragraphs by finding each topic sentence",
+  "Find and use new words such as merchants, exported and gigantic",
+  "Skim texts and answer multiple-choice questions with good strategies"
+ ],
+ "tf": [
+  {
+   "s": "A topic sentence gives the main idea of a paragraph.",
+   "t": true,
+   "why": "Yes, it tells you what the paragraph is about."
+  },
+  {
+   "s": "The topic sentence is always the last sentence of a paragraph.",
+   "t": false,
+   "why": "It is usually, but not always, the first sentence."
+  },
+  {
+   "s": "Paragraph 2 of the text is about the Arabs as traders.",
+   "t": true,
+   "why": "Correct, that is the main idea of paragraph 2."
+  },
+  {
+   "s": "'Merchants' are people who buy and sell goods.",
+   "t": true,
+   "why": "Right, merchants are traders."
+  },
+  {
+   "s": "'Gigantic' means very small.",
+   "t": false,
+   "why": "Gigantic means extremely big."
+  },
+  {
+   "s": "Frankincense was exported to Greece, Italy and Egypt.",
+   "t": true,
+   "why": "Yes, it was sent to these countries to be sold."
+  },
+  {
+   "s": "Oman became a member of the WTO on 9 November 2000.",
+   "t": true,
+   "why": "Correct, the Fact File gives this date."
+  },
+  {
+   "s": "Pictures and sub-headings are not useful before you read.",
+   "t": false,
+   "why": "They help you get the gist and see how ideas are organised."
+  },
+  {
+   "s": "When skimming, you must read every word slowly.",
+   "t": false,
+   "why": "Skimming means reading quickly for the general idea."
+  },
+  {
+   "s": "'That's a fair deal' is a phrase you can use when you agree to a trade.",
+   "t": true,
+   "why": "Yes, it shows you accept the exchange."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does a topic sentence give?",
+   "o": [
+    "the main idea of a paragraph",
+    "the last example",
+    "the title of the book"
+   ],
+   "why": "It states what the paragraph is about."
+  },
+  {
+   "q": "Which word means 'people who buy and sell goods'?",
+   "o": [
+    "merchants",
+    "rituals",
+    "routes"
+   ],
+   "why": "Merchants are traders."
+  },
+  {
+   "q": "Which word means 'sent to another country to be sold'?",
+   "o": [
+    "exported",
+    "imported",
+    "located"
+   ],
+   "why": "Exported goods leave the country."
+  },
+  {
+   "q": "Which word means 'extremely big'?",
+   "o": [
+    "gigantic",
+    "economic",
+    "dramatic"
+   ],
+   "why": "Gigantic means huge."
+  },
+  {
+   "q": "Which word means 'ways from one place to another'?",
+   "o": [
+    "routes",
+    "rituals",
+    "merchants"
+   ],
+   "why": "Trade routes are the paths traders used."
+  },
+  {
+   "q": "What does WTO stand for?",
+   "o": [
+    "World Trade Organisation",
+    "World Travel Office",
+    "World Train Organisation"
+   ],
+   "why": "The WTO deals with rules of trade between countries."
+  },
+  {
+   "q": "What do you shade in a multiple-choice answer sheet?",
+   "o": [
+    "a bubble",
+    "a picture",
+    "a paragraph"
+   ],
+   "why": "You shade the bubble of the correct answer."
+  },
+  {
+   "q": "Which phrase starts a trade?",
+   "o": [
+    "What will you give me for my...?",
+    "That's because...",
+    "Let me explain."
+   ],
+   "why": "You ask what your partner will offer."
+  },
+  {
+   "q": "How many words may you write for each answer in Activity 1?",
+   "o": [
+    "no more than three",
+    "exactly ten",
+    "at least five"
+   ],
+   "why": "Keep answers to three words or fewer."
+  },
+  {
+   "q": "Which part of speech helps with 'people who buy and sell goods'?",
+   "o": [
+    "a plural noun",
+    "a verb",
+    "an adverb"
+   ],
+   "why": "'People' tells you to look for a plural noun."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "People who buy and sell goods",
+   "a": "merchants",
+   "d": [
+    "rituals",
+    "routes",
+    "locations"
+   ]
+  },
+  {
+   "q": "Extremely big",
+   "a": "gigantic",
+   "d": [
+    "economic",
+    "slight",
+    "dramatic"
+   ]
+  },
+  {
+   "q": "Sent abroad to be sold",
+   "a": "exported",
+   "d": [
+    "imported",
+    "located",
+    "traded in"
+   ]
+  },
+  {
+   "q": "Paths traders follow",
+   "a": "routes",
+   "d": [
+    "rituals",
+    "merchants",
+    "bubbles"
+   ]
+  },
+  {
+   "q": "Changed ___ (a lot)",
+   "a": "dramatically",
+   "d": [
+    "slightly",
+    "economic",
+    "gigantic"
+   ]
+  },
+  {
+   "q": "A place or position",
+   "a": "location",
+   "d": [
+    "route",
+    "ritual",
+    "merchant"
+   ]
+  },
+  {
+   "q": "Paragraph about Arabs as traders",
+   "a": "2",
+   "d": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "q": "Organisation for trade rules",
+   "a": "WTO",
+   "d": [
+    "ROP",
+    "SQU",
+    "UN"
+   ]
+  },
+  {
+   "q": "Year Oman joined the WTO",
+   "a": "2000",
+   "d": [
+    "1990",
+    "2010",
+    "2005"
+   ]
+  },
+  {
+   "q": "What you shade in MCQ",
+   "a": "bubble",
+   "d": [
+    "heading",
+    "paragraph",
+    "box"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Where is the topic sentence usually found?",
+   "o": [
+    "at the start of the paragraph",
+    "in the title",
+    "in the last line of the text",
+    "in the pictures"
+   ],
+   "why": "It is usually, but not always, the first sentence."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the World Trade Organisation deal with?",
+   "o": [
+    "the rules of trade between countries",
+    "road safety rules",
+    "school exams",
+    "air traffic control"
+   ],
+   "why": "The WTO deals with trade rules."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When did Oman become a member of the WTO?",
+   "o": [
+    "9 November 2000",
+    "9 November 1990",
+    "19 November 2000",
+    "9 October 2000"
+   ],
+   "why": "The Fact File gives 9 November 2000."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'connected with trade, industry and money'?",
+   "o": [
+    "economic",
+    "gigantic",
+    "ritual",
+    "location"
+   ],
+   "why": "Economic relates to money and trade."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Frankincense was ___ to Greece, Italy and Egypt.",
+   "o": [
+    "exported",
+    "imported",
+    "located",
+    "bargained"
+   ],
+   "why": "Frankincense was sent out of Arabia to be sold."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: 'The goods that are traded have changed ___.'",
+   "o": [
+    "dramatically",
+    "dramatic",
+    "drama",
+    "dramatize"
+   ],
+   "why": "An adverb describes how they changed."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to swap your pen for your partner's book. What do you say?",
+   "o": [
+    "What will you give me for my pen?",
+    "That's because my pen is blue.",
+    "OK, let me explain.",
+    "Where is my pen?"
+   ],
+   "why": "This phrase opens a trade."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should you read the whole text before answering multiple-choice items?",
+   "o": [
+    "to get the gist so it is easier to reject wrong answers",
+    "to waste time",
+    "because the answers are in the title",
+    "so you can skip the questions"
+   ],
+   "why": "Knowing the gist helps you reject three answers."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is heading c best for the Farooq Al Sumar text?",
+   "o": [
+    "it relates to what the whole text is about",
+    "it is the longest heading",
+    "it is the first heading",
+    "it uses the most difficult words"
+   ],
+   "why": "The best heading covers the whole text, not one detail."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Trade has changed the course of history.' Why is this a good first sentence?",
+   "o": [
+    "it states the main idea of the paragraph",
+    "it gives a small detail",
+    "it asks a question",
+    "it ends the story"
+   ],
+   "why": "It is the topic sentence of paragraph 1."
+  }
+ ]
+}

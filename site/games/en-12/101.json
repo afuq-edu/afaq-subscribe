@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: The Train is Approaching! (Writing)",
+ "lesson": "Analysing the Etihad Rail essay and collecting information / Planning and writing an informative essay; peer editing",
+ "outcomes": [
+  "Analyse an informative essay about a rail safety campaign",
+  "Collect information and plan an informative essay",
+  "Write a first draft and edit a partner's draft"
+ ],
+ "tf": [
+  {
+   "s": "The Etihad Rail essay has five paragraphs.",
+   "t": true,
+   "why": "Yes, it has five paragraphs."
+  },
+  {
+   "s": "The campaign's message was to put safety first and respect the railway.",
+   "t": true,
+   "why": "Correct, that was the vital message."
+  },
+  {
+   "s": "The Safety Bus travelled around Western Abu Dhabi.",
+   "t": true,
+   "why": "Yes, it shared information with communities there."
+  },
+  {
+   "s": "People should cross the railway track anywhere they like.",
+   "t": false,
+   "why": "People should use bridges and underpasses."
+  },
+  {
+   "s": "The campaign used a roadshow to share information.",
+   "t": true,
+   "why": "Right, the Safety Bus was a roadshow."
+  },
+  {
+   "s": "You give your partner feedback using the editing checklist.",
+   "t": true,
+   "why": "Yes, the checklist guides your comments."
+  },
+  {
+   "s": "Your informative essay does not need a title.",
+   "t": false,
+   "why": "Give your essay a suitable title."
+  },
+  {
+   "s": "You attach the first draft to the second draft and give both to the teacher.",
+   "t": true,
+   "why": "Yes, the teacher can see your progress."
+  },
+  {
+   "s": "Flyers are long books given only to engineers.",
+   "t": false,
+   "why": "Flyers are short printed sheets handed out to people."
+  },
+  {
+   "s": "A supporting sentence introduces a completely new topic.",
+   "t": false,
+   "why": "A supporting sentence gives details about the topic sentence."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How can people cross the railway track safely?",
+   "o": [
+    "By bridges and underpasses",
+    "By running across",
+    "By climbing the fence"
+   ],
+   "why": "Bridges and underpasses keep people safe."
+  },
+  {
+   "q": "What was the Safety Bus?",
+   "o": [
+    "A roadshow bus giving railway information",
+    "A school bus",
+    "A train"
+   ],
+   "why": "It travelled around to teach safety."
+  },
+  {
+   "q": "What are flyers?",
+   "o": [
+    "Printed sheets of information",
+    "Train tickets",
+    "Railway tracks"
+   ],
+   "why": "Flyers are handed out to people."
+  },
+  {
+   "q": "Why were flyers handed out?",
+   "o": [
+    "To alert communities",
+    "To sell tickets",
+    "To advertise food"
+   ],
+   "why": "They warned people about railway safety."
+  },
+  {
+   "q": "What kind of essay do you write in this lesson?",
+   "o": [
+    "An informative essay",
+    "A poem",
+    "A letter"
+   ],
+   "why": "You write facts about a type of transport."
+  },
+  {
+   "q": "What is a safety campaign?",
+   "o": [
+    "Planned activities to keep people safe",
+    "A train race",
+    "A holiday"
+   ],
+   "why": "Campaigns spread an important message."
+  },
+  {
+   "q": "What do you do after writing the first draft?",
+   "o": [
+    "Exchange drafts with a partner",
+    "Throw it away",
+    "Copy a partner's draft"
+   ],
+   "why": "Peer editing helps you improve."
+  },
+  {
+   "q": "What do the Etihad Rail body paragraphs cover?",
+   "o": [
+    "The Safety Bus, safety rules and flyers",
+    "Food and drink",
+    "Sports and games"
+   ],
+   "why": "Each paragraph covers one part of the campaign."
+  },
+  {
+   "q": "Which word helps cohesion?",
+   "o": [
+    "moreover",
+    "railway",
+    "flyer"
+   ],
+   "why": "'Moreover' is a conjunction."
+  },
+  {
+   "q": "Which is a good topic sentence about trains?",
+   "o": [
+    "Trains are a safe and efficient form of transport.",
+    "I went.",
+    "Trains, and."
+   ],
+   "why": "It is a complete sentence with a clear main idea."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The campaign's travelling bus",
+   "a": "Safety Bus",
+   "d": [
+    "School Bus",
+    "Night Bus",
+    "Tour Bus"
+   ]
+  },
+  {
+   "q": "Tunnels under the railway",
+   "a": "Underpasses",
+   "d": [
+    "Bridges",
+    "Flyers",
+    "Tracks"
+   ]
+  },
+  {
+   "q": "Ways to cross over the track",
+   "a": "Bridges",
+   "d": [
+    "Underpasses",
+    "Flyers",
+    "Tunnels"
+   ]
+  },
+  {
+   "q": "Printed papers handed out",
+   "a": "Flyers",
+   "d": [
+    "Tracks",
+    "Bridges",
+    "Trains"
+   ]
+  },
+  {
+   "q": "Where the Safety Bus travelled",
+   "a": "Western Abu Dhabi",
+   "d": [
+    "Eastern Dubai",
+    "Northern Oman",
+    "Muscat"
+   ]
+  },
+  {
+   "q": "Paragraphs in your essay",
+   "a": "Five",
+   "d": [
+    "Two",
+    "Three",
+    "Eight"
+   ]
+  },
+  {
+   "q": "A travelling information show",
+   "a": "Roadshow",
+   "d": [
+    "Checklist",
+    "Flyer",
+    "Draft"
+   ]
+  },
+  {
+   "q": "Animals that use the underpasses",
+   "a": "Camels",
+   "d": [
+    "Penguins",
+    "Polar bears",
+    "Kangaroos"
+   ]
+  },
+  {
+   "q": "Check this first when editing",
+   "a": "Meaning",
+   "d": [
+    "Handwriting",
+    "Length",
+    "Colour"
+   ]
+  },
+  {
+   "q": "A list used for peer editing",
+   "a": "Checklist",
+   "d": [
+    "Flyer",
+    "Roadshow",
+    "Timetable"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What was the vital message of the campaign?",
+   "o": [
+    "Put safety first and respect the railway at all times",
+    "Trains are always late",
+    "Never travel by train",
+    "Buy your tickets early"
+   ],
+   "why": "Safety comes first near railways."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why were underpasses built for animals?",
+   "o": [
+    "So camels, gazelles and reptiles can cross safely",
+    "So animals can ride the train",
+    "To keep animals in one place",
+    "To store train parts"
+   ],
+   "why": "Animals need safe crossings too."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should the five paragraphs of your essay be?",
+   "o": [
+    "Introduction, three main body paragraphs, conclusion",
+    "Five conclusions",
+    "Title, title, title, title, title",
+    "Two introductions and three conclusions"
+   ],
+   "why": "This is the structure of an informative essay."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you check first in a partner's essay?",
+   "o": [
+    "Meaning and content",
+    "Only spelling",
+    "Only handwriting",
+    "Only the length"
+   ],
+   "why": "Ideas come first, then language."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose a topic sentence for a paragraph about trains' economic benefits.",
+   "o": [
+    "Trains have many economic benefits.",
+    "I travelled by train once.",
+    "The train was red.",
+    "Finally, the end."
+   ],
+   "why": "It states the main idea of the paragraph."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: Trains are safe. ___, they are fast.",
+   "o": [
+    "Moreover",
+    "But",
+    "Although",
+    "Because"
+   ],
+   "why": "'Moreover' adds another good point."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to write about buses. What should you do first?",
+   "o": [
+    "Collect information about buses and plan your paragraphs",
+    "Write the conclusion",
+    "Proofread the final draft",
+    "Hand in the essay"
+   ],
+   "why": "Planning comes before drafting."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why was a roadshow bus a good idea for the campaign?",
+   "o": [
+    "It could travel to many communities and share information",
+    "It was faster than a train",
+    "It carried freight",
+    "It replaced the railway"
+   ],
+   "why": "A travelling show reaches many people."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should you attach your first draft to your second draft?",
+   "o": [
+    "So the teacher can see how you improved",
+    "Because the second draft is shorter",
+    "To make the essay heavier",
+    "Because the first draft is the final one"
+   ],
+   "why": "Both drafts show your progress."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is safety important near railways?",
+   "o": [
+    "Trains are fast and heavy and cannot stop quickly",
+    "Trains move very slowly",
+    "Railways are always empty",
+    "Trains stop for every person"
+   ],
+   "why": "That is why people must respect the railway."
+  }
+ ]
+}

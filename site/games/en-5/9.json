@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 1 – Talent show",
+ "lesson": "Lesson 6: English in action – Describing people",
+ "outcomes": [
+  "I can ask and answer about people: Who's that boy over there? What's he like?",
+  "I can tell the difference between What's he like? and What does he look like?",
+  "I can say the sounds /eə/ (fair, hair) and /eɪ/ (today, eight)."
+ ],
+ "tf": [
+  {
+   "s": "\"What's he like?\" asks about personality.",
+   "t": true,
+   "why": "Yes! The answer can be: He's very friendly."
+  },
+  {
+   "s": "\"What does he look like?\" asks about personality.",
+   "t": false,
+   "why": "It asks about appearance, like hair and height."
+  },
+  {
+   "s": "Arthur is a new boy in the class.",
+   "t": true,
+   "why": "Right! The children describe Arthur, the new boy."
+  },
+  {
+   "s": "Arthur has got dark hair.",
+   "t": false,
+   "why": "Arthur has got fair hair."
+  },
+  {
+   "s": "Arthur is good at hockey.",
+   "t": true,
+   "why": "Yes! He's very friendly and good at hockey."
+  },
+  {
+   "s": "The word \"eight\" has the /eə/ sound.",
+   "t": false,
+   "why": "Eight has the /eɪ/ sound, like today."
+  },
+  {
+   "s": "Hair and chair have the same vowel sound.",
+   "t": true,
+   "why": "Great! Both have /eə/."
+  },
+  {
+   "s": "\"He seems very kind\" is a way to describe personality.",
+   "t": true,
+   "why": "Yes! He seems very … describes what someone is like."
+  },
+  {
+   "s": "Grey and fair have the same sound.",
+   "t": false,
+   "why": "Grey has /eɪ/; fair has /eə/."
+  },
+  {
+   "s": "\"Which one?\" is a question to say goodbye.",
+   "t": false,
+   "why": "We ask Which one? to find the right person."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's he ___? He's very friendly.",
+   "o": [
+    "like",
+    "look",
+    "likes"
+   ],
+   "why": "What's he like? asks about personality."
+  },
+  {
+   "q": "Which word has the /eɪ/ sound?",
+   "o": [
+    "eight",
+    "hair",
+    "chair"
+   ],
+   "why": "Eight sounds like today."
+  },
+  {
+   "q": "Which word has the /eə/ sound?",
+   "o": [
+    "fair",
+    "today",
+    "painting"
+   ],
+   "why": "Fair rhymes with hair."
+  },
+  {
+   "q": "Who's that girl over ___?",
+   "o": [
+    "there",
+    "their",
+    "they"
+   ],
+   "why": "Over there shows a place."
+  },
+  {
+   "q": "\"Who's that boy over there?\" What is a good reply?",
+   "o": [
+    "Which one?",
+    "He's eight.",
+    "Yes, he is."
+   ],
+   "why": "We ask which one to know the boy we mean."
+  },
+  {
+   "q": "Which word is about appearance?",
+   "o": [
+    "fair",
+    "kind",
+    "rude"
+   ],
+   "why": "Fair describes hair, so it is appearance."
+  },
+  {
+   "q": "What does Arthur look like?",
+   "o": [
+    "He's got fair hair.",
+    "He's very friendly.",
+    "He's good at hockey."
+   ],
+   "why": "Look like asks about appearance."
+  },
+  {
+   "q": "Which word is about personality?",
+   "o": [
+    "friendly",
+    "fair",
+    "tall"
+   ],
+   "why": "Friendly is a personality word."
+  },
+  {
+   "q": "She's ___ kind.",
+   "o": [
+    "really",
+    "real",
+    "reals"
+   ],
+   "why": "She's really kind."
+  },
+  {
+   "q": "Who is the new boy in the dialogue?",
+   "o": [
+    "Arthur",
+    "Tameem",
+    "Sami"
+   ],
+   "why": "The children describe Arthur, the new boy."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Rhymes with hair",
+   "a": "chair",
+   "d": [
+    "eight",
+    "today",
+    "grey"
+   ]
+  },
+  {
+   "q": "Same sound as today",
+   "a": "eight",
+   "d": [
+    "fair",
+    "hair",
+    "there's"
+   ]
+  },
+  {
+   "q": "Same sound as fair",
+   "a": "there's",
+   "d": [
+    "grey",
+    "painting",
+    "eight"
+   ]
+  },
+  {
+   "q": "Same sound as grey",
+   "a": "painting",
+   "d": [
+    "chair",
+    "hair",
+    "fair"
+   ]
+  },
+  {
+   "q": "Arthur's hair",
+   "a": "fair",
+   "d": [
+    "dark",
+    "curly",
+    "grey"
+   ]
+  },
+  {
+   "q": "Arthur is very ___.",
+   "a": "friendly",
+   "d": [
+    "rude",
+    "mean",
+    "lazy"
+   ]
+  },
+  {
+   "q": "Same sound as eight",
+   "a": "grey",
+   "d": [
+    "chair",
+    "hair",
+    "there's"
+   ]
+  },
+  {
+   "q": "Same sound as chair",
+   "a": "hair",
+   "d": [
+    "eight",
+    "today",
+    "grey"
+   ]
+  },
+  {
+   "q": "He ___ very shy.",
+   "a": "seems",
+   "d": [
+    "seem",
+    "seeming",
+    "seemed to"
+   ]
+  },
+  {
+   "q": "Arthur is good at ___.",
+   "a": "hockey",
+   "d": [
+    "karate",
+    "chess",
+    "juggling"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who is Arthur?",
+   "o": [
+    "A new boy with fair hair who is very friendly",
+    "A teacher with a beard",
+    "A girl who is good at karate",
+    "A cat at the talent show"
+   ],
+   "why": "Arthur is the new boy the children describe."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question asks about appearance?",
+   "o": [
+    "What does he look like?",
+    "What's he like?",
+    "Which one?",
+    "What's he good at?"
+   ],
+   "why": "Look like = appearance."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group has only the /eɪ/ sound?",
+   "o": [
+    "today, painting, eight, grey",
+    "fair, hair, chair, there's",
+    "today, hair, eight, chair",
+    "fair, grey, painting, there's"
+   ],
+   "why": "These words all have /eɪ/."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase do we use to describe personality?",
+   "o": [
+    "He seems very …",
+    "He's got …",
+    "He's from …",
+    "He's … years old."
+   ],
+   "why": "He seems very kind / friendly."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put the dialogue in order: What's she like? / Who's that girl over there? / She's really kind.",
+   "o": [
+    "Who's that girl over there? – What's she like? – She's really kind.",
+    "What's she like? – Who's that girl over there? – She's really kind.",
+    "She's really kind. – What's she like? – Who's that girl over there?",
+    "Who's that girl over there? – She's really kind. – What's she like?"
+   ],
+   "why": "First ask who, then what she's like, then answer."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend asks: \"What's your new classmate like?\" Which answer is best?",
+   "o": [
+    "He seems very confident.",
+    "He's got short hair.",
+    "He's ten.",
+    "He's over there."
+   ],
+   "why": "What's he like? needs a personality answer."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Describe a classmate with \"really good at\".",
+   "o": [
+    "He's really good at football.",
+    "He's really good football.",
+    "He really good at football.",
+    "He's really good at play football."
+   ],
+   "why": "really good at + noun or verb-ing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"What's he like?\" \"He's got a beard.\" What is wrong?",
+   "o": [
+    "The answer is about appearance, not personality.",
+    "Nothing is wrong.",
+    "The question is about age.",
+    "The answer is about hobbies."
+   ],
+   "why": "What's he like? needs a personality word like friendly."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT belong with the others?",
+   "o": [
+    "eight",
+    "hair",
+    "chair",
+    "fair"
+   ],
+   "why": "Eight has /eɪ/; the others have /eə/."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we ask \"Which one?\" in the dialogue?",
+   "o": [
+    "There are many children, so we need to know who.",
+    "We want to say goodbye.",
+    "We want to know the time.",
+    "We don't like the boy."
+   ],
+   "why": "Which one? helps us find the right person."
+  }
+ ]
+}

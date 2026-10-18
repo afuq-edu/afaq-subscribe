@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 2: Technology",
+  "lesson": "Unit 2 – Graded reader 2: The Animal App",
+  "outcomes": [
+    "I can remember the main events of The Animal App.",
+    "I can use comparative adverbs to compare animals.",
+    "I can say how apps help us learn about nature."
+  ],
+  "tf": [
+    {
+      "s": "Dana downloaded the Animal App on Friday.",
+      "t": true,
+      "why": "Yes, she downloaded it on Friday."
+    },
+    {
+      "s": "Dana’s app tells her the names of birds.",
+      "t": false,
+      "why": "The app tells her about small animals."
+    },
+    {
+      "s": "On Saturday, Dana looked after her little sister Laila.",
+      "t": true,
+      "why": "Laila is Dana’s little sister."
+    },
+    {
+      "s": "A grasshopper is green with long legs.",
+      "t": true,
+      "why": "Its long legs help it jump."
+    },
+    {
+      "s": "A bee flies faster than a bird.",
+      "t": false,
+      "why": "A bee flies more slowly than a bird."
+    },
+    {
+      "s": "Laila sees a big spider in the hedge.",
+      "t": false,
+      "why": "It isn’t a spider; it’s a cat’s nose."
+    },
+    {
+      "s": "A grasshopper can jump higher than a frog.",
+      "t": true,
+      "why": "The story says it jumps higher than a frog."
+    },
+    {
+      "s": "Laila was looking at a small animal in the grass.",
+      "t": true,
+      "why": "Yes, she found a small animal in the grass."
+    },
+    {
+      "s": "A bee is red and blue.",
+      "t": false,
+      "why": "A bee is yellow and black."
+    },
+    {
+      "s": "A hedge is a kind of insect.",
+      "t": false,
+      "why": "A hedge is a line of small trees or bushes."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "What is green with long legs?",
+      "o": [
+        "a grasshopper",
+        "a bee",
+        "a cat"
+      ],
+      "why": "The grasshopper is green with long legs."
+    },
+    {
+      "q": "What is yellow and black and can fly?",
+      "o": [
+        "a bee",
+        "a grasshopper",
+        "a spider"
+      ],
+      "why": "Bees are yellow and black."
+    },
+    {
+      "q": "What was in the hedge?",
+      "o": [
+        "a cat’s nose",
+        "a big spider",
+        "a bee"
+      ],
+      "why": "It was a cat’s nose."
+    },
+    {
+      "q": "Complete: A grasshopper can jump ___ than a frog.",
+      "o": [
+        "higher",
+        "more high",
+        "highly"
+      ],
+      "why": "high becomes higher."
+    },
+    {
+      "q": "Complete: A bee flies more ___ than a bird.",
+      "o": [
+        "slowly",
+        "slow",
+        "slower"
+      ],
+      "why": "more + adverb: more slowly."
+    },
+    {
+      "q": "What did Dana download?",
+      "o": [
+        "the Animal App",
+        "a game",
+        "a book"
+      ],
+      "why": "She downloaded the Animal App."
+    },
+    {
+      "q": "Who is Laila?",
+      "o": [
+        "Dana’s little sister",
+        "Dana’s teacher",
+        "Dana’s cat"
+      ],
+      "why": "Dana looked after her little sister Laila."
+    },
+    {
+      "q": "When did Dana look after Laila?",
+      "o": [
+        "on Saturday",
+        "on Friday",
+        "on Monday"
+      ],
+      "why": "It was on Saturday."
+    },
+    {
+      "q": "Which animal can jump high?",
+      "o": [
+        "the grasshopper",
+        "the bee",
+        "the spider"
+      ],
+      "why": "The grasshopper is a great jumper."
+    },
+    {
+      "q": "What does a fact file about an animal include?",
+      "o": [
+        "its colour, size and what it can do",
+        "its price and password",
+        "its favourite film"
+      ],
+      "why": "A fact file gives facts like colour, size, home and abilities."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Green with long legs",
+      "a": "grasshopper",
+      "d": [
+        "bee",
+        "spider",
+        "cat"
+      ]
+    },
+    {
+      "q": "Yellow and black, can fly",
+      "a": "bee",
+      "d": [
+        "grasshopper",
+        "rabbit",
+        "frog"
+      ]
+    },
+    {
+      "q": "What was in the hedge?",
+      "a": "a cat’s nose",
+      "d": [
+        "a big spider",
+        "a bird",
+        "a bee"
+      ]
+    },
+    {
+      "q": "Day Dana downloaded the app",
+      "a": "Friday",
+      "d": [
+        "Saturday",
+        "Sunday",
+        "Monday"
+      ]
+    },
+    {
+      "q": "Dana’s little sister",
+      "a": "Laila",
+      "d": [
+        "Najla",
+        "Nadia",
+        "Katya"
+      ]
+    },
+    {
+      "q": "high → ___",
+      "a": "higher",
+      "d": [
+        "more high",
+        "highly",
+        "highest"
+      ]
+    },
+    {
+      "q": "slowly → ___",
+      "a": "more slowly",
+      "d": [
+        "slowlier",
+        "slowest",
+        "most slow"
+      ]
+    },
+    {
+      "q": "fast → ___",
+      "a": "faster",
+      "d": [
+        "more fast",
+        "fastly",
+        "fastest"
+      ]
+    },
+    {
+      "q": "A bee flies more slowly than a…",
+      "a": "bird",
+      "d": [
+        "grasshopper",
+        "spider",
+        "snail"
+      ]
+    },
+    {
+      "q": "A grasshopper jumps higher than a…",
+      "a": "frog",
+      "d": [
+        "kangaroo",
+        "bird",
+        "horse"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What does Dana’s new app do?",
+      "o": [
+        "It tells her the names of small animals.",
+        "It tells her the names of birds.",
+        "It plays music.",
+        "It takes photos of the sky."
+      ],
+      "why": "The Animal App is about small animals."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Where was Laila looking at a small animal?",
+      "o": [
+        "in the grass",
+        "in the kitchen",
+        "in the car",
+        "at school"
+      ],
+      "why": "Laila was looking at a small animal in the grass."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which of these words is a plant?",
+      "o": [
+        "flower",
+        "bee",
+        "grasshopper",
+        "spider"
+      ],
+      "why": "A flower is a plant; the others are small animals."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which sentence is a comparative sentence from the story?",
+      "o": [
+        "It can jump higher than a frog.",
+        "It is green.",
+        "It can fly.",
+        "It lives in the grass."
+      ],
+      "why": "Higher than compares two animals."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Which sentence about a cheetah is correct?",
+      "o": [
+        "A cheetah runs faster than a dog.",
+        "A cheetah runs more fast than a dog.",
+        "A cheetah runs fastly than a dog.",
+        "A cheetah runs fast than a dog."
+      ],
+      "why": "fast → faster than."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Which sentence about the bee is correct?",
+      "o": [
+        "A bee flies more slowly than a bird.",
+        "A bee flies slowlier than a bird.",
+        "A bee flies more slow than a bird.",
+        "A bee flies slowly than a bird."
+      ],
+      "why": "slowly → more slowly than."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Which facts belong in a fact file about the grasshopper?",
+      "o": [
+        "It’s green with long legs. It can jump higher than a frog.",
+        "It’s yellow and black. It can fly.",
+        "It lives in a hedge. It has a big nose.",
+        "It is a plant. It has petals."
+      ],
+      "why": "These are the grasshopper’s facts from the story."
+    },
+    {
+      "lv": "التحليل",
+      "q": "“Laila sees a big spider in the hedge.” Choose the best answer.",
+      "o": [
+        "No – it’s a cat’s nose.",
+        "Yes – it’s a big spider.",
+        "No – it’s a bee.",
+        "Yes – it’s a grasshopper."
+      ],
+      "why": "Read carefully: the thing in the hedge was a cat’s nose."
+    },
+    {
+      "lv": "التحليل",
+      "q": "How can apps help us learn about nature?",
+      "o": [
+        "They tell us the names of animals and plants and facts about them.",
+        "They stop us going outside.",
+        "They make animals bigger.",
+        "They only play games."
+      ],
+      "why": "An app like Dana’s gives names and facts."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why does the story use “higher than a frog”?",
+      "o": [
+        "To compare the grasshopper with another animal",
+        "To tell us the frog’s colour",
+        "To say where the frog lives",
+        "To show the frog is a plant"
+      ],
+      "why": "Comparatives help us see how animals are different."
+    }
+  ]
+}

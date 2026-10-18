@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: Goodbye, School! (Reading)",
+ "lesson": "Types of reading and reading speeds; calculating words per minute / Timed reading practice and Time to Talk: ranking the tips",
+ "outcomes": [
+  "Identify types of reading and their speeds",
+  "Calculate reading speed in words per minute",
+  "Practise timed reading and rank tips for new students"
+ ],
+ "tf": [
+  {
+   "s": "We read different types of texts at different speeds.",
+   "t": true,
+   "why": "Yes, a contract and a magazine need different speeds."
+  },
+  {
+   "s": "Close reading is below 100 words per minute.",
+   "t": true,
+   "why": "Correct, close reading is the slowest."
+  },
+  {
+   "s": "Skimming is the slowest type of reading.",
+   "t": false,
+   "why": "Skimming is the fastest: above 400 wpm."
+  },
+  {
+   "s": "Reading speed = total number of words ÷ time taken in minutes.",
+   "t": true,
+   "why": "Right, that gives words per minute."
+  },
+  {
+   "s": "300 words read in 2 minutes is a speed of 600 wpm.",
+   "t": false,
+   "why": "300 ÷ 2 = 150 wpm."
+  },
+  {
+   "s": "Casual reading, like newspapers and magazines, is 250–400 wpm.",
+   "t": true,
+   "why": "Yes, informal reading is quite fast."
+  },
+  {
+   "s": "You should answer the questions while you are doing the timed reading.",
+   "t": false,
+   "why": "Answering during reading distracts you; answer after."
+  },
+  {
+   "s": "In timed reading, you should aim for about 75% accuracy.",
+   "t": true,
+   "why": "Correct, speed must come with understanding."
+  },
+  {
+   "s": "Reading fast without understanding is the main aim.",
+   "t": false,
+   "why": "The aim is to read fast while still understanding."
+  },
+  {
+   "s": "Recording your WPM helps you see if you are improving.",
+   "t": true,
+   "why": "Yes, you can compare with later readings."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the formula for reading speed?",
+   "o": [
+    "words ÷ minutes",
+    "minutes ÷ words",
+    "words × minutes"
+   ],
+   "why": "Divide the words by the minutes."
+  },
+  {
+   "q": "Which reading is below 100 wpm?",
+   "o": [
+    "close reading",
+    "skimming",
+    "casual reading"
+   ],
+   "why": "Close reading is slow and careful."
+  },
+  {
+   "q": "Which reading is 100–250 wpm?",
+   "o": [
+    "academic reading",
+    "skimming",
+    "casual reading"
+   ],
+   "why": "Academic reading is in this range."
+  },
+  {
+   "q": "Which reading is above 400 wpm?",
+   "o": [
+    "skimming",
+    "close reading",
+    "academic reading"
+   ],
+   "why": "Skimming is the fastest."
+  },
+  {
+   "q": "420 words in 3 minutes = ?",
+   "o": [
+    "140 wpm",
+    "120 wpm",
+    "1,260 wpm"
+   ],
+   "why": "420 ÷ 3 = 140."
+  },
+  {
+   "q": "What accuracy should you aim for?",
+   "o": [
+    "75%",
+    "25%",
+    "10%"
+   ],
+   "why": "Aim for 75% correct answers."
+  },
+  {
+   "q": "When do you answer the timed-reading questions?",
+   "o": [
+    "after reading",
+    "before reading",
+    "while reading"
+   ],
+   "why": "Answer after, without looking back."
+  },
+  {
+   "q": "What does WPM stand for?",
+   "o": [
+    "words per minute",
+    "work per month",
+    "words per mistake"
+   ],
+   "why": "WPM measures reading speed."
+  },
+  {
+   "q": "What does 'rank' mean?",
+   "o": [
+    "put in order of importance",
+    "read quickly",
+    "write a list of words"
+   ],
+   "why": "You rank tips from most to least useful."
+  },
+  {
+   "q": "Why do university students need to read fast?",
+   "o": [
+    "they have many reading assignments",
+    "they have no exams",
+    "books are short"
+   ],
+   "why": "Essays, research and exams need lots of reading."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "300 words in 2 minutes (wpm)",
+   "a": "150",
+   "d": [
+    "600",
+    "302",
+    "100"
+   ]
+  },
+  {
+   "q": "420 words in 3 minutes (wpm)",
+   "a": "140",
+   "d": [
+    "1,260",
+    "423",
+    "120"
+   ]
+  },
+  {
+   "q": "600 words in 4 minutes (wpm)",
+   "a": "150",
+   "d": [
+    "2,400",
+    "604",
+    "125"
+   ]
+  },
+  {
+   "q": "Reading below 100 wpm",
+   "a": "close reading",
+   "d": [
+    "skimming",
+    "casual reading",
+    "academic"
+   ]
+  },
+  {
+   "q": "Reading above 400 wpm",
+   "a": "skimming",
+   "d": [
+    "close reading",
+    "academic",
+    "casual reading"
+   ]
+  },
+  {
+   "q": "Reading 100-250 wpm",
+   "a": "academic reading",
+   "d": [
+    "skimming",
+    "casual reading",
+    "close reading"
+   ]
+  },
+  {
+   "q": "Reading 250-400 wpm",
+   "a": "casual reading",
+   "d": [
+    "close reading",
+    "academic reading",
+    "skimming"
+   ]
+  },
+  {
+   "q": "Target accuracy",
+   "a": "75%",
+   "d": [
+    "25%",
+    "50%",
+    "100%"
+   ]
+  },
+  {
+   "q": "Reading speed unit",
+   "a": "WPM",
+   "d": [
+    "KPH",
+    "GPS",
+    "PIN"
+   ]
+  },
+  {
+   "q": "Put tips in order",
+   "a": "rank",
+   "d": [
+    "skim",
+    "time",
+    "spell"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What type of reading do newspapers and magazines need?",
+   "o": [
+    "casual or informal reading",
+    "close reading",
+    "academic reading",
+    "no reading"
+   ],
+   "why": "They are read at 250–400 wpm."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why must you answer the questions after reading, not during?",
+   "o": [
+    "answering during reading distracts you",
+    "the questions are not important",
+    "you have no pen",
+    "it makes reading slower on purpose"
+   ],
+   "why": "Focus on reading first, then answer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list shows reading types from slowest to fastest?",
+   "o": [
+    "close, academic, casual, skimming",
+    "skimming, casual, academic, close",
+    "academic, close, skimming, casual",
+    "casual, skimming, close, academic"
+   ],
+   "why": "Close < 100; academic 100–250; casual 250–400; skimming > 400."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a way to improve reading speed?",
+   "o": [
+    "practise regularly",
+    "look up every word",
+    "read every line twice",
+    "stop reading"
+   ],
+   "why": "Regular practice builds speed."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A student reads 900 words in 2 minutes. What is her speed?",
+   "o": [
+    "450 wpm",
+    "1,800 wpm",
+    "902 wpm",
+    "225 wpm"
+   ],
+   "why": "900 ÷ 2 = 450 wpm."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A student reads 180 words in 2 minutes. Which type of reading is this speed?",
+   "o": [
+    "close reading",
+    "skimming",
+    "casual reading",
+    "academic reading"
+   ],
+   "why": "180 ÷ 2 = 90 wpm, which is below 100."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You need to read a contract carefully before signing. Which reading do you use?",
+   "o": [
+    "close reading",
+    "skimming",
+    "casual reading",
+    "no reading"
+   ],
+   "why": "Important details need slow, careful reading."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is speed without understanding not enough?",
+   "o": [
+    "the aim is to read fast while still understanding",
+    "speed is the only thing that matters",
+    "understanding is not tested",
+    "fast reading is always wrong"
+   ],
+   "why": "You must understand what you read."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to record your WPM and score each time?",
+   "o": [
+    "to compare later readings and see progress",
+    "to make the text shorter",
+    "to give it to a friend",
+    "it is not useful"
+   ],
+   "why": "Records show your improvement."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we read a contract and a magazine at different speeds?",
+   "o": [
+    "they have different purposes and levels of detail",
+    "they have the same words",
+    "magazines are always longer",
+    "contracts are only pictures"
+   ],
+   "why": "Your purpose decides your reading speed."
+  }
+ ]
+}

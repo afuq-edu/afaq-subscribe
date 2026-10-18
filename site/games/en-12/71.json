@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+ "lesson": "Across Cultures: Spain and Reading for Pleasure: the Shanghai Maglev Train",
+ "outcomes": [
+  "Read about Spain and answer questions on its history and culture",
+  "Learn new words such as peninsula, cosmopolitan and cape",
+  "Read an article about the Shanghai Maglev train and find its main ideas"
+ ],
+ "tf": [
+  {
+   "s": "General Francisco Franco ruled Spain after the Civil War.",
+   "t": true,
+   "why": "Yes, the text says Franco ruled after the Civil War."
+  },
+  {
+   "s": "About 3.3 million people live in Madrid.",
+   "t": true,
+   "why": "Correct, the text gives 3.3 million."
+  },
+  {
+   "s": "Don Quixote was written by General Franco.",
+   "t": false,
+   "why": "Don Quixote was written by Miguel de Cervantes."
+  },
+  {
+   "s": "A matador carries a sword and a cape.",
+   "t": true,
+   "why": "Right, the cape and sword are part of his role."
+  },
+  {
+   "s": "At La Tomatina, people throw squashy tomatoes.",
+   "t": true,
+   "why": "Yes, the festival is famous for throwing tomatoes."
+  },
+  {
+   "s": "A Maglev train uses magnets to float above the track.",
+   "t": true,
+   "why": "Correct, that is what makes it special."
+  },
+  {
+   "s": "A Maglev train is slower and noisier than ordinary trains.",
+   "t": false,
+   "why": "It is fast, smooth and quiet."
+  },
+  {
+   "s": "'Squashy' means very hard.",
+   "t": false,
+   "why": "Squashy means soft and easy to press flat."
+  },
+  {
+   "s": "A 'cosmopolitan' city has people from many different countries and cultures.",
+   "t": true,
+   "why": "Yes, cosmopolitan means international and varied."
+  },
+  {
+   "s": "A 'peninsula' is land surrounded by water on all sides.",
+   "t": false,
+   "why": "A peninsula has water on most sides but is joined to the mainland."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who wrote Don Quixote?",
+   "o": [
+    "Miguel de Cervantes",
+    "Francisco Franco",
+    "a matador"
+   ],
+   "why": "Cervantes is the famous Spanish writer."
+  },
+  {
+   "q": "How many people live in Madrid?",
+   "o": [
+    "3.3 million",
+    "33 million",
+    "330,000"
+   ],
+   "why": "The text gives 3.3 million."
+  },
+  {
+   "q": "What do people throw at La Tomatina?",
+   "o": [
+    "tomatoes",
+    "flowers",
+    "water balloons"
+   ],
+   "why": "La Tomatina is a tomato-throwing festival."
+  },
+  {
+   "q": "What does a matador carry?",
+   "o": [
+    "a sword and a cape",
+    "a book and a pen",
+    "a ball and a bat"
+   ],
+   "why": "The text says a sword and a cape."
+  },
+  {
+   "q": "Who ruled Spain after the Civil War?",
+   "o": [
+    "General Franco",
+    "Cervantes",
+    "the matador"
+   ],
+   "why": "Franco ruled after the Civil War."
+  },
+  {
+   "q": "What does a Maglev train use to float?",
+   "o": [
+    "magnets",
+    "wheels",
+    "wings"
+   ],
+   "why": "Magnets lift it above the track."
+  },
+  {
+   "q": "Where is the Maglev train in the article?",
+   "o": [
+    "Shanghai",
+    "Madrid",
+    "Muscat"
+   ],
+   "why": "The article is about the Shanghai Maglev."
+  },
+  {
+   "q": "What is a 'cape'?",
+   "o": [
+    "a large piece of cloth worn or held",
+    "a type of hat",
+    "a festival"
+   ],
+   "why": "The matador uses a cape in the bullring."
+  },
+  {
+   "q": "What is a 'monarchy'?",
+   "o": [
+    "a country ruled by a king or queen",
+    "a kind of train",
+    "a big city"
+   ],
+   "why": "A monarchy has a king or queen."
+  },
+  {
+   "q": "What does 'squashy' mean?",
+   "o": [
+    "soft and easy to press",
+    "very dry",
+    "made of metal"
+   ],
+   "why": "Squashy tomatoes are soft."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Writer of Don Quixote",
+   "a": "Cervantes",
+   "d": [
+    "Franco",
+    "Picasso",
+    "Columbus"
+   ]
+  },
+  {
+   "q": "Ruler after the Civil War",
+   "a": "Franco",
+   "d": [
+    "Cervantes",
+    "Madrid",
+    "La Tomatina"
+   ]
+  },
+  {
+   "q": "Population of Madrid",
+   "a": "3.3 million",
+   "d": [
+    "33 million",
+    "1.3 million",
+    "330,000"
+   ]
+  },
+  {
+   "q": "Thrown at La Tomatina",
+   "a": "tomatoes",
+   "d": [
+    "oranges",
+    "eggs",
+    "flowers"
+   ]
+  },
+  {
+   "q": "What a matador carries",
+   "a": "sword and cape",
+   "d": [
+    "bat and ball",
+    "pen and book",
+    "bag and hat"
+   ]
+  },
+  {
+   "q": "Maglev trains float using...",
+   "a": "magnets",
+   "d": [
+    "wheels",
+    "wings",
+    "water"
+   ]
+  },
+  {
+   "q": "City of the Maglev train",
+   "a": "Shanghai",
+   "d": [
+    "Madrid",
+    "Muscat",
+    "Paris"
+   ]
+  },
+  {
+   "q": "Soft and easy to press",
+   "a": "squashy",
+   "d": [
+    "crunchy",
+    "solid",
+    "sharp"
+   ]
+  },
+  {
+   "q": "Rule by a king or queen",
+   "a": "monarchy",
+   "d": [
+    "peninsula",
+    "cape",
+    "festival"
+   ]
+  },
+  {
+   "q": "Land almost surrounded by water",
+   "a": "peninsula",
+   "d": [
+    "monarchy",
+    "windmill",
+    "desert"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is La Tomatina?",
+   "o": [
+    "a festival where people throw tomatoes",
+    "a famous Spanish book",
+    "a type of train",
+    "a city in Spain"
+   ],
+   "why": "It is a tomato-throwing festival."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which Spanish city has about 3.3 million people?",
+   "o": [
+    "Madrid",
+    "Shanghai",
+    "Lisbon",
+    "Cape Town"
+   ],
+   "why": "Madrid has 3.3 million people."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word describes a city with people from many cultures?",
+   "o": [
+    "cosmopolitan",
+    "squashy",
+    "inedible",
+    "peninsula"
+   ],
+   "why": "Cosmopolitan means international."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who was General Francisco Franco?",
+   "o": [
+    "the ruler of Spain after the Civil War",
+    "the writer of Don Quixote",
+    "a famous matador",
+    "a train driver"
+   ],
+   "why": "Franco ruled Spain after the Civil War."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A visitor sees a man in the bullring with a sword and a cape. Who is he?",
+   "o": [
+    "a matador",
+    "a writer",
+    "a ruler",
+    "a train driver"
+   ],
+   "why": "A matador carries a sword and a cape."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend loves classic novels and wants a famous Spanish one. What do you suggest?",
+   "o": [
+    "Don Quixote by Cervantes",
+    "La Tomatina",
+    "the Maglev article",
+    "a book by Franco"
+   ],
+   "why": "Don Quixote is the famous novel from the text."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A train travels very fast without touching the track. What kind of train is it?",
+   "o": [
+    "a Maglev train",
+    "a steam train",
+    "a freight train",
+    "a toy train"
+   ],
+   "why": "Maglev trains float on magnets."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is a Maglev train smooth and quiet?",
+   "o": [
+    "it floats above the track, so there is little contact",
+    "it has very big wheels",
+    "it only runs at night",
+    "it is very slow"
+   ],
+   "why": "Without wheels rubbing on rails, it is quiet."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How is a Maglev train different from an ordinary train?",
+   "o": [
+    "it uses magnets to float instead of running on wheels",
+    "it uses horses",
+    "it runs on roads",
+    "it has no passengers"
+   ],
+   "why": "Floating on magnets is the key difference."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the word 'squashy' suit the tomatoes at La Tomatina?",
+   "o": [
+    "soft tomatoes break easily when thrown",
+    "hard tomatoes are used",
+    "tomatoes are not thrown",
+    "they are made of plastic"
+   ],
+   "why": "Squashy means soft, so they burst when thrown."
+  }
+ ]
+}

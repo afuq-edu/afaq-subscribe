@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 2: Where’s my pen?",
+  "lesson": "Unit 2 – Lesson 2: Story \"The computer\"",
+  "outcomes": [
+    "I can match speech bubbles to the story The computer.",
+    "I can say if a room is tidy or messy.",
+    "I can say one way to be tidy."
+  ],
+  "tf": [
+    { "s": "Atomic is a cat.", "t": true, "why": "Yes! this is Atomic, my cat." },
+    { "s": "Lily says: This is my desk.", "t": true, "why": "Great! Lily shows her desk." },
+    { "s": "Atomic is a parrot.", "t": false, "why": "Atomic is a cat. Polly is the parrot." },
+    { "s": "Oh! It's a computer. It's great.", "t": true, "why": "Yes! The friends like the computer." },
+    { "s": "A tidy room has toys all over the floor.", "t": false, "why": "In a tidy room things are in their place." },
+    { "s": "Putting books on the shelf is being tidy.", "t": true, "why": "Well done! That is a tidy thing to do." },
+    { "s": "It's tidy. and What a mess! mean the same.", "t": false, "why": "It's tidy. is good. What a mess! is untidy." },
+    { "s": "These are my books. is about one book.", "t": false, "why": "These are is for more than one book." },
+    { "s": "The value of the story is Be tidy.", "t": true, "why": "Yes! We learn to be tidy." },
+    { "s": "Being tidy makes it hard to find our things.", "t": false, "why": "Being tidy helps us find our things." }
+  ],
+  "boxes": [
+    { "q": "Oh! It's a ...", "o": ["computer", "cake", "kite"], "why": "Oh! It's a computer." },
+    { "q": "These are my books and this is Atomic, my ...", "o": ["cat", "parrot", "goat"], "why": "Atomic is Lily's cat." },
+    { "q": "Who says This is my desk?", "o": ["Lily", "Polly", "Atomic"], "why": "Lily says This is my desk." },
+    { "q": "Toys all over the floor. You say...", "o": ["What a mess!", "It's tidy.", "Happy birthday!"], "why": "A messy room: What a mess!" },
+    { "q": "Books on the shelf. You say...", "o": ["It's tidy.", "What a mess!", "Where's my pen?"], "why": "Things in their place: It's tidy." },
+    { "q": "One way to be tidy:", "o": ["Put the books on the shelf.", "Throw the pens.", "Drop the toys."], "why": "We put things in their place." },
+    { "q": "The computer is...", "o": ["great", "sad", "messy"], "why": "It's a computer. It's great." },
+    { "q": "Be ...", "o": ["tidy", "messy", "late"], "why": "The value is Be tidy." },
+    { "q": "This is my ... (one desk)", "o": ["desk", "desks", "books"], "why": "This is goes with one thing." },
+    { "q": "These are my ... (many books)", "o": ["books", "book", "desk"], "why": "These are goes with many things." }
+  ],
+  "hunt": [
+    { "q": "Oh! It's a ...", "a": "computer", "d": ["kite", "goat", "cake"] },
+    { "q": "Atomic is a ...", "a": "cat", "d": ["parrot", "goat", "dog"] },
+    { "q": "She says: This is my desk.", "a": "Lily", "d": ["Polly", "Atomic", "Jack"] },
+    { "q": "The parrot in the story", "a": "Polly", "d": ["Atomic", "Lily", "Sami"] },
+    { "q": "It's a computer. It's ...", "a": "great", "d": ["sad", "messy", "late"] },
+    { "q": "A messy room: What a ...!", "a": "mess", "d": ["desk", "cat", "book"] },
+    { "q": "Books in their place: It's ...", "a": "tidy", "d": ["messy", "sad", "late"] },
+    { "q": "The story value: Be ...", "a": "tidy", "d": ["loud", "messy", "slow"] },
+    { "q": "These are my ...", "a": "books", "d": ["desk", "cat", "computer"] },
+    { "q": "This is my ...", "a": "desk", "d": ["books", "pens", "crayons"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "What is the name of the story?", "o": ["The computer", "New toys", "At the lake", "I am six!"], "why": "The story is The computer." },
+    { "lv": "التذكر", "q": "Who is Atomic?", "o": ["Lily's cat", "Lily's parrot", "Lily's friend Sami", "Lily's teacher"], "why": "this is Atomic, my cat." },
+    { "lv": "التذكر", "q": "What does Lily show?", "o": ["her desk and her books", "her bike", "her kite", "her goat"], "why": "This is my desk. These are my books." },
+    { "lv": "التذكر", "q": "Which words do we say for a messy room?", "o": ["What a mess!", "It's tidy.", "It's great.", "Yes, of course."], "why": "What a mess! is for a messy room." },
+    { "lv": "التطبيق", "q": "Your pens are on the floor. What can you do?", "o": ["Put them in my pencil case", "Leave them there", "Throw them", "Step on them"], "why": "We put things in their place." },
+    { "lv": "التطبيق", "q": "You see a new computer. You say...", "o": ["Oh! It's a computer. It's great.", "What a mess!", "Is it a kite?", "Goodbye."], "why": "We say it's great." },
+    { "lv": "التطبيق", "q": "Show your friend your cat. You say...", "o": ["This is my cat.", "These are my cat.", "This is my cats.", "It's an cat."], "why": "One cat: This is my cat." },
+    { "lv": "التحليل", "q": "Picture a: books on the shelf. Picture b: toys on the floor. Which is tidy?", "o": ["Picture a", "Picture b", "Both", "None"], "why": "Books on the shelf are tidy." },
+    { "lv": "التحليل", "q": "Why is it good to be tidy?", "o": ["We can find our things", "Our room gets messy", "We lose our books", "Our cat is sad"], "why": "A tidy room helps us find things." },
+    { "lv": "التحليل", "q": "Which sentence is right?", "o": ["These are my books.", "This is my books.", "These is my books.", "This are my book."], "why": "These are goes with books." }
+  ]
+}

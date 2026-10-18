@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Studying Abroad (Vocabulary)",
+ "lesson": "Listening for specific information; grouping words (Top Tip)",
+ "outcomes": [
+  "Listen for specific information in a dialogue",
+  "Group words with related meanings into lexical fields"
+ ],
+ "tf": [
+  {
+   "s": "Majid is in Grade 12.",
+   "t": true,
+   "why": "Yes, he is in his last year of school."
+  },
+  {
+   "s": "In London, the father thinks Majid would speak English all the time.",
+   "t": false,
+   "why": "He thinks Majid would speak Arabic with friends in London."
+  },
+  {
+   "s": "Majid's father prefers London to Chichester.",
+   "t": false,
+   "why": "He prefers Chichester."
+  },
+  {
+   "s": "Chichester is a small city near the sea.",
+   "t": true,
+   "why": "That is one of its advantages."
+  },
+  {
+   "s": "Chichester has a direct rail link to London.",
+   "t": true,
+   "why": "So Majid can travel to London easily."
+  },
+  {
+   "s": "The father thinks Majid will speak English with local people in Chichester.",
+   "t": true,
+   "why": "That will help his English."
+  },
+  {
+   "s": "A lexical field is a group of words connected by meaning.",
+   "t": true,
+   "why": "For example, words about university life."
+  },
+  {
+   "s": "'Campus', 'lecture' and 'degree' belong to the lexical field of cooking.",
+   "t": false,
+   "why": "They belong to university life."
+  },
+  {
+   "s": "Grouping words by topic can help you remember vocabulary.",
+   "t": true,
+   "why": "Words in groups are easier to remember."
+  },
+  {
+   "s": "Before listening, it is best not to read the statements.",
+   "t": false,
+   "why": "Reading first tells you what to listen for."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What subject is Majid planning to study?",
+   "o": [
+    "airport management",
+    "medicine",
+    "engineering"
+   ],
+   "why": "He wants to study airport management."
+  },
+  {
+   "q": "Which city does Majid's father prefer?",
+   "o": [
+    "Chichester",
+    "London",
+    "Muscat"
+   ],
+   "why": "He prefers Chichester."
+  },
+  {
+   "q": "Why does the father prefer Chichester?",
+   "o": [
+    "Majid will speak English with local people",
+    "it is bigger than London",
+    "it is far from the sea"
+   ],
+   "why": "Speaking with locals improves English."
+  },
+  {
+   "q": "Which word belongs to university life?",
+   "o": [
+    "tutor",
+    "passport",
+    "recipe"
+   ],
+   "why": "Tutors teach at university."
+  },
+  {
+   "q": "Which group of words is about travel?",
+   "o": [
+    "airport, ticket, flight",
+    "lecture, tutor, degree",
+    "goal, team, match"
+   ],
+   "why": "These words are all about travelling."
+  },
+  {
+   "q": "What is a lexical field?",
+   "o": [
+    "a group of related words",
+    "a field for sports",
+    "a list of spellings"
+   ],
+   "why": "Words in a lexical field share a topic."
+  },
+  {
+   "q": "Who could Majid stay with in Chichester?",
+   "o": [
+    "an English host family",
+    "his school friends",
+    "nobody"
+   ],
+   "why": "A host family gives more English practice."
+  },
+  {
+   "q": "Grouping words by topic helps you...",
+   "o": [
+    "remember vocabulary",
+    "forget words",
+    "spell badly"
+   ],
+   "why": "Groups make words easier to recall."
+  },
+  {
+   "q": "How is Chichester connected to London?",
+   "o": [
+    "a direct rail link",
+    "a long boat trip",
+    "no connection"
+   ],
+   "why": "A direct train goes to London."
+  },
+  {
+   "q": "Which word does NOT belong: campus, lecture, degree, ticket?",
+   "o": [
+    "ticket",
+    "campus",
+    "degree"
+   ],
+   "why": "'Ticket' belongs to travel."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Majid's grade",
+   "a": "Grade 12",
+   "d": [
+    "Grade 10",
+    "Grade 11",
+    "Grade 9"
+   ]
+  },
+  {
+   "q": "Majid wants to study ...",
+   "a": "airport management",
+   "d": [
+    "medicine",
+    "engineering",
+    "law"
+   ]
+  },
+  {
+   "q": "The father prefers this city",
+   "a": "Chichester",
+   "d": [
+    "London",
+    "Manchester",
+    "Oxford"
+   ]
+  },
+  {
+   "q": "Chichester is near the ...",
+   "a": "sea",
+   "d": [
+    "desert",
+    "mountains",
+    "forest"
+   ]
+  },
+  {
+   "q": "A university word",
+   "a": "lecture",
+   "d": [
+    "passport",
+    "goal",
+    "recipe"
+   ]
+  },
+  {
+   "q": "A travel word",
+   "a": "passport",
+   "d": [
+    "lecture",
+    "tutor",
+    "degree"
+   ]
+  },
+  {
+   "q": "A group of related words",
+   "a": "lexical field",
+   "d": [
+    "sentence",
+    "paragraph",
+    "dictionary"
+   ]
+  },
+  {
+   "q": "In Chichester, Majid would speak English with...",
+   "a": "local people",
+   "d": [
+    "Arabic-speaking friends",
+    "nobody at all",
+    "his parents only"
+   ]
+  },
+  {
+   "q": "Chichester to London",
+   "a": "direct rail link",
+   "d": [
+    "boat only",
+    "no link",
+    "long flight"
+   ]
+  },
+  {
+   "q": "Field of: campus, degree, tutor",
+   "a": "university life",
+   "d": [
+    "sport",
+    "cooking",
+    "weather"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does Majid want to study?",
+   "o": [
+    "Airport management",
+    "Medicine",
+    "Engineering",
+    "Cooking"
+   ],
+   "why": "His plan is airport management."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which advantage of Chichester does the father give?",
+   "o": [
+    "It has a direct rail link to London",
+    "It is bigger than London",
+    "It is far from the sea",
+    "It has no host families"
+   ],
+   "why": "Chichester is small but well connected."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which grade is Majid in?",
+   "o": [
+    "Grade 12",
+    "Grade 11",
+    "Grade 10",
+    "Grade 9"
+   ],
+   "why": "Majid is finishing school."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should you do before you listen for specific information?",
+   "o": [
+    "Read the statements first",
+    "Close your eyes",
+    "Write the answers",
+    "Leave the room"
+   ],
+   "why": "Then you know what to listen for."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Group these words: ticket, passport, flight, airport. What is the field?",
+   "o": [
+    "Travel",
+    "University life",
+    "Food",
+    "Sport"
+   ],
+   "why": "They are all about travelling."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which word does NOT belong in the field 'university life'?",
+   "o": [
+    "suitcase",
+    "lecture",
+    "tutor",
+    "degree"
+   ],
+   "why": "A suitcase is for travel."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are listening for specific information. What are you listening for?",
+   "o": [
+    "Facts like names, places and numbers",
+    "Only the speakers' feelings",
+    "The music",
+    "Every single word"
+   ],
+   "why": "Specific information means particular facts."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the father think Chichester is better for Majid's English?",
+   "o": [
+    "He will speak English with local people instead of Arabic with friends",
+    "London has no English speakers",
+    "Chichester has more Arabic speakers",
+    "Majid already speaks perfect English"
+   ],
+   "why": "Daily English practice helps most."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is a direct rail link to London an advantage?",
+   "o": [
+    "Majid can visit London easily",
+    "He never needs to go anywhere",
+    "Trains are free",
+    "London is near the sea"
+   ],
+   "why": "He gets a quiet city and easy access to London."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does grouping words into lexical fields help learning?",
+   "o": [
+    "It helps you remember vocabulary by topic",
+    "It makes words shorter",
+    "You never need a dictionary",
+    "It changes the grammar"
+   ],
+   "why": "Related words help you recall each other."
+  }
+ ]
+}

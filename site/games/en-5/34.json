@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 4 – Off to the shops",
+ "lesson": "Lesson 2: Story – Stop, thief!",
+ "outcomes": [
+  "Read the story Stop, thief! and find the shops in it.",
+  "Put the events of the story in order and describe the thief.",
+  "Explain good behaviour towards children."
+ ],
+ "tf": [
+  {
+   "s": "Sami wants to buy a new mobile phone case for his mum.",
+   "t": true,
+   "why": "He wants a phone case for his mum."
+  },
+  {
+   "s": "An escalator is a machine which carries you upstairs and downstairs.",
+   "t": true,
+   "why": "That is what an escalator does."
+  },
+  {
+   "s": "Sami's mum loves the case which has a comet on it.",
+   "t": true,
+   "why": "She loves the case with the comet."
+  },
+  {
+   "s": "The children go up the escalator after they look at the phone cases.",
+   "t": false,
+   "why": "First they go up the escalator, then they look at phone cases."
+  },
+  {
+   "s": "The thief is the rude man who walked into Fatma earlier.",
+   "t": true,
+   "why": "The children remember him."
+  },
+  {
+   "s": "The man is stealing phones.",
+   "t": true,
+   "why": "The children see him stealing phones."
+  },
+  {
+   "s": "The thief is carrying a red school bag.",
+   "t": false,
+   "why": "He is carrying a blue sports bag."
+  },
+  {
+   "s": "Bo tries to stop the thief.",
+   "t": true,
+   "why": "Bo tries to stop him."
+  },
+  {
+   "s": "Shouting at children is good behaviour.",
+   "t": false,
+   "why": "Shouting makes children sad and afraid."
+  },
+  {
+   "s": "The thief has got straight blond hair.",
+   "t": false,
+   "why": "He has got dark, curly hair and a moustache."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does Sami want to buy for his mum?",
+   "o": [
+    "a phone case",
+    "a necklace",
+    "a football"
+   ],
+   "why": "He wants a new mobile phone case."
+  },
+  {
+   "q": "Why are the friends on the escalator?",
+   "o": [
+    "They want to go upstairs.",
+    "They want to go home.",
+    "They are looking for food."
+   ],
+   "why": "The escalator takes them upstairs."
+  },
+  {
+   "q": "What is the man carrying?",
+   "o": [
+    "a blue sports bag",
+    "a box of toys",
+    "a big umbrella"
+   ],
+   "why": "He has a blue sports bag."
+  },
+  {
+   "q": "Complete: Bo tries to stop the ______.",
+   "o": [
+    "thief",
+    "escalator",
+    "phone case"
+   ],
+   "why": "Bo tries to stop the thief."
+  },
+  {
+   "q": "What is the man doing?",
+   "o": [
+    "He's stealing phones.",
+    "He's selling fish.",
+    "He's buying shoes."
+   ],
+   "why": "He is stealing phones."
+  },
+  {
+   "q": "What has the thief got on his face?",
+   "o": [
+    "a moustache",
+    "glasses",
+    "a mask"
+   ],
+   "why": "He has got a moustache."
+  },
+  {
+   "q": "Which word means \"to take something that is not yours\"?",
+   "o": [
+    "steal",
+    "carry",
+    "walk"
+   ],
+   "why": "A thief steals things."
+  },
+  {
+   "q": "What is the opposite of \"upstairs\"?",
+   "o": [
+    "downstairs",
+    "outside",
+    "inside"
+   ],
+   "why": "Upstairs and downstairs are opposites."
+  },
+  {
+   "q": "Which is good behaviour towards younger children?",
+   "o": [
+    "Help them when they have a problem.",
+    "Shout at them.",
+    "Walk into them."
+   ],
+   "why": "Helping children is kind."
+  },
+  {
+   "q": "Which case does Sami's mum love?",
+   "o": [
+    "the one with a comet on it",
+    "the black one",
+    "the one with a car on it"
+   ],
+   "why": "She loves the case with the comet."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "A person who steals",
+   "a": "thief",
+   "d": [
+    "shopkeeper",
+    "teacher",
+    "friend"
+   ]
+  },
+  {
+   "q": "Machine that carries you up",
+   "a": "escalator",
+   "d": [
+    "telescope",
+    "rocket",
+    "phone"
+   ]
+  },
+  {
+   "q": "Sami wants a phone ___",
+   "a": "case",
+   "d": [
+    "shop",
+    "number",
+    "call"
+   ]
+  },
+  {
+   "q": "Picture on the case Mum loves",
+   "a": "comet",
+   "d": [
+    "star",
+    "rocket",
+    "planet"
+   ]
+  },
+  {
+   "q": "Thief's bag colour",
+   "a": "blue",
+   "d": [
+    "red",
+    "green",
+    "yellow"
+   ]
+  },
+  {
+   "q": "Thief's hair",
+   "a": "dark and curly",
+   "d": [
+    "blond",
+    "straight",
+    "short and red"
+   ]
+  },
+  {
+   "q": "Who tries to stop the thief?",
+   "a": "Bo",
+   "d": [
+    "Sami's mum",
+    "the thief",
+    "Malik"
+   ]
+  },
+  {
+   "q": "The rude man walked into …",
+   "a": "Fatma",
+   "d": [
+    "Bo",
+    "Sami",
+    "Mum"
+   ]
+  },
+  {
+   "q": "What is the thief stealing?",
+   "a": "phones",
+   "d": [
+    "fish",
+    "shoes",
+    "toys"
+   ]
+  },
+  {
+   "q": "Opposite of upstairs",
+   "a": "downstairs",
+   "d": [
+    "outside",
+    "inside",
+    "above"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is an escalator?",
+   "o": [
+    "a machine which carries you upstairs and downstairs",
+    "a shop which sells phones",
+    "a man who steals",
+    "a bag for sports"
+   ],
+   "why": "An escalator carries people up and down."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do the children know the man?",
+   "o": [
+    "He is the rude man who walked into Fatma earlier.",
+    "He is their teacher.",
+    "He works in the phone shop.",
+    "He is Sami's uncle."
+   ],
+   "why": "They saw him earlier."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which words are story words?",
+   "o": [
+    "escalator, thief, steal, phone case",
+    "port, fort, ruins",
+    "comet, rocket, satellite",
+    "butcher's, kiosk, pharmacy"
+   ],
+   "why": "These words are in Stop, thief!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the thief wearing?",
+   "o": [
+    "a black T-shirt, blue jeans and trainers",
+    "a spacesuit",
+    "a white shirt and a tie",
+    "a costume"
+   ],
+   "why": "That is the description in the story."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put in order: a) They look at phone cases. b) They go up the escalator.",
+   "o": [
+    "b, a",
+    "a, b",
+    "a only",
+    "b only"
+   ],
+   "why": "First they go up, then they look at phone cases."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Describe the thief.",
+   "o": [
+    "He's got dark, curly hair and a moustache.",
+    "He's got long blond hair.",
+    "He's got no hair and glasses.",
+    "He's got red hair and a beard."
+   ],
+   "why": "The story gives this description."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A younger child is lost in the shop. What is good behaviour?",
+   "o": [
+    "Listen to them and help them.",
+    "Shout at them.",
+    "Laugh at them.",
+    "Walk away."
+   ],
+   "why": "We should listen, help and be kind."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How did the children know the man was the thief?",
+   "o": [
+    "He was the rude man from earlier, and they saw him stealing phones.",
+    "He told them his name.",
+    "He had a comet on his T-shirt.",
+    "He was on the escalator."
+   ],
+   "why": "They remembered him and saw him stealing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is \"Shout at children\" not good behaviour?",
+   "o": [
+    "It makes children sad and afraid.",
+    "It is too quiet.",
+    "Children like it.",
+    "It helps them learn."
+   ],
+   "why": "Being kind is better than shouting."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which action in the story is NOT good behaviour?",
+   "o": [
+    "walking into people and stealing phones",
+    "trying to stop a thief",
+    "buying a present for Mum",
+    "helping friends"
+   ],
+   "why": "The rude man's actions are wrong; the children's actions are good."
+  }
+ ]
+}

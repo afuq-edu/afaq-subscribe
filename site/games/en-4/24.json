@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U2",
+ "lesson": "Unit 2 – Lesson 10: Review",
+ "outcomes": [
+  "Review food, drinks and containers from Unit 2.",
+  "Ask and answer with 'Is there any ...?' and 'Are there any ...?'",
+  "Use quantity words: some, any, a few, a lot of."
+ ],
+ "tf": [
+  {
+   "s": "We say 'Are there any apples?'",
+   "t": true,
+   "why": "Yes! Apples are countable, so we use 'Are there any'."
+  },
+  {
+   "s": "We say 'Is there any coffee?'",
+   "t": true,
+   "why": "Correct! Coffee is uncountable."
+  },
+  {
+   "s": "'There is a few sandwiches.' is correct.",
+   "t": false,
+   "why": "We say 'There are a few sandwiches.'"
+  },
+  {
+   "s": "'There isn't any bread.' is correct.",
+   "t": true,
+   "why": "Well done! We use 'any' in negative sentences."
+  },
+  {
+   "s": "A bottle of cheese is a good answer.",
+   "t": false,
+   "why": "We don't put cheese in a bottle. We say 'some cheese'."
+  },
+  {
+   "s": "'Is there any eggs?' is correct.",
+   "t": false,
+   "why": "Eggs are plural, so we say 'Are there any eggs?'"
+  },
+  {
+   "s": "Milk + shake makes 'milkshake'.",
+   "t": true,
+   "why": "Great! Milkshake is a drink."
+  },
+  {
+   "s": "Sushi is a food from Oman.",
+   "t": false,
+   "why": "Sushi is a Japanese food."
+  },
+  {
+   "s": "A can, a bottle and a bowl are containers.",
+   "t": true,
+   "why": "Correct! They hold food or drinks."
+  },
+  {
+   "s": "Rasha cooks sushi with chicken, wheat and butter.",
+   "t": false,
+   "why": "She cooks harees with chicken, wheat, butter and spices."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Riddle: It's a drink. It's black. It's hot.",
+   "o": [
+    "a cup of coffee",
+    "a glass of milk",
+    "a bowl of soup"
+   ],
+   "why": "Hot black coffee!"
+  },
+  {
+   "q": "Riddle: You make this food with bread.",
+   "o": [
+    "sandwiches",
+    "cereal",
+    "fruit"
+   ],
+   "why": "Sandwiches are made with bread."
+  },
+  {
+   "q": "Complete: ___ there any noodles?",
+   "o": [
+    "Are",
+    "Is",
+    "Am"
+   ],
+   "why": "Noodles is plural, so we use 'Are'."
+  },
+  {
+   "q": "Complete: There isn't ___ bread.",
+   "o": [
+    "any",
+    "a few",
+    "many"
+   ],
+   "why": "We use 'any' in negative sentences."
+  },
+  {
+   "q": "Which is a container?",
+   "o": [
+    "glass",
+    "rice",
+    "cheese"
+   ],
+   "why": "A glass holds a drink."
+  },
+  {
+   "q": "I'm small and sweet. And a treat to eat! What am I?",
+   "o": [
+    "a cupcake",
+    "a sandwich",
+    "a lemon"
+   ],
+   "why": "A cupcake is small and sweet."
+  },
+  {
+   "q": "Which food is savoury?",
+   "o": [
+    "noodles",
+    "a cupcake",
+    "ice cream"
+   ],
+   "why": "Noodles are savoury, not sweet."
+  },
+  {
+   "q": "Are there any cupcakes? (none) Answer:",
+   "o": [
+    "No, there aren't.",
+    "Yes, there is.",
+    "No, there isn't."
+   ],
+   "why": "Cupcakes are plural: 'No, there aren't.'"
+  },
+  {
+   "q": "Dad: Is there any milk? Zaid: ...",
+   "o": [
+    "Yes, there is.",
+    "Yes, there are.",
+    "Yes, I can."
+   ],
+   "why": "Milk is uncountable: 'Yes, there is.'"
+  },
+  {
+   "q": "Dad: Can you go to the shops for me? Zaid: ...",
+   "o": [
+    "Yes, I can.",
+    "Yes, there is.",
+    "Yes, we do."
+   ],
+   "why": "A 'Can you' question gets 'Yes, I can.'"
+  }
+ ],
+ "hunt": [
+  {
+   "q": "milk + ___ = a drink",
+   "a": "shake",
+   "d": [
+    "cake",
+    "box",
+    "bag"
+   ]
+  },
+  {
+   "q": "Container for soup",
+   "a": "bowl",
+   "d": [
+    "bottle",
+    "box",
+    "bag"
+   ]
+  },
+  {
+   "q": "A ___ of water",
+   "a": "bottle",
+   "d": [
+    "plate",
+    "box",
+    "bag"
+   ]
+  },
+  {
+   "q": "A ___ of coffee",
+   "a": "cup",
+   "d": [
+    "plate",
+    "box",
+    "bag"
+   ]
+  },
+  {
+   "q": "A ___ of cereal",
+   "a": "box",
+   "d": [
+    "cup",
+    "glass",
+    "can"
+   ]
+  },
+  {
+   "q": "One sandwich, two...",
+   "a": "sandwiches",
+   "d": [
+    "sandwich",
+    "sandwichs",
+    "sandwichies"
+   ]
+  },
+  {
+   "q": "A ___ of lemonade",
+   "a": "can",
+   "d": [
+    "plate",
+    "bowl",
+    "box"
+   ]
+  },
+  {
+   "q": "___ there any milk?",
+   "a": "Is",
+   "d": [
+    "Are",
+    "Am",
+    "Be"
+   ]
+  },
+  {
+   "q": "There are a ___ eggs.",
+   "a": "few",
+   "d": [
+    "any",
+    "much",
+    "lot"
+   ]
+  },
+  {
+   "q": "A glass of...",
+   "a": "milk",
+   "d": [
+    "bread",
+    "rice",
+    "cheese"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word is NOT a container?",
+   "o": [
+    "sandwich",
+    "can",
+    "bowl",
+    "plate"
+   ],
+   "why": "A sandwich is food, not a container."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What Japanese food do people eat with chopsticks?",
+   "o": [
+    "sushi",
+    "harees",
+    "soup",
+    "cereal"
+   ],
+   "why": "Sushi is from Japan and eaten with chopsticks."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Rasha cook with chicken, wheat, butter and spices?",
+   "o": [
+    "harees",
+    "sushi",
+    "fondue",
+    "bubble tea"
+   ],
+   "why": "Rasha cooks harees."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How can you eat soup?",
+   "o": [
+    "With a spoon",
+    "With a straw",
+    "With chopsticks",
+    "With sticks"
+   ],
+   "why": "We eat soup with a spoon."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Answer: Is there any lemonade? (two cans)",
+   "o": [
+    "Yes, there is. There are two cans of lemonade.",
+    "No, there isn't.",
+    "Yes, there are. There is two can of lemonade.",
+    "No, there aren't any."
+   ],
+   "why": "Lemonade is uncountable, and there are two cans."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Dad: Are there any eggs? Zaid: ...",
+   "o": [
+    "Yes, there are.",
+    "Yes, there is.",
+    "Yes, I am.",
+    "Yes, it is."
+   ],
+   "why": "Eggs are plural: 'Yes, there are.'"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Dad: Do we need anything else? Zaid: ...",
+   "o": [
+    "Yes, we do.",
+    "Yes, there are.",
+    "Yes, I can.",
+    "Yes, it is."
+   ],
+   "why": "A 'Do we' question gets 'Yes, we do.'"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Correct the sentence: 'There is a few sandwiches.'",
+   "o": [
+    "There are a few sandwiches.",
+    "There is a sandwiches.",
+    "There are a few sandwich.",
+    "There is any sandwiches."
+   ],
+   "why": "Sandwiches are plural, so we use 'There are'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which one is different? apple, banana, orange, bottle",
+   "o": [
+    "bottle – it is a container",
+    "apple – it is red",
+    "banana – it is long",
+    "orange – it is a colour"
+   ],
+   "why": "Apple, banana and orange are fruit; a bottle is a container."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is correct?",
+   "o": [
+    "There are a lot of noodles.",
+    "There is a lot of noodles.",
+    "There are a lot noodles.",
+    "There are a lot of noodle."
+   ],
+   "why": "Noodles are plural: 'There are a lot of noodles.'"
+  }
+ ]
+}

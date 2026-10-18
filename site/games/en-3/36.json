@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 3: Hobbies",
+ "lesson": "Unit 3 – Lesson 8: Review",
+ "outcomes": [
+  "I can talk about activities and days.",
+  "I can ask and answer Does he / she …?",
+  "I can write about a family member's Saturday."
+ ],
+ "tf": [
+  {
+   "s": "We write Yes, she does.",
+   "t": true,
+   "why": "Yes! does goes with she."
+  },
+  {
+   "s": "We write Yes, she do.",
+   "t": false,
+   "why": "With she we say Yes, she does."
+  },
+  {
+   "s": "Riddle: It's the weekend. It's not Friday. It is Saturday.",
+   "t": true,
+   "why": "Right! The weekend is Friday and Saturday."
+  },
+  {
+   "s": "Mohammed is the writer's cousin.",
+   "t": true,
+   "why": "Yes! This is my cousin, Mohammed."
+  },
+  {
+   "s": "Mohammed roller-skates on Saturdays.",
+   "t": false,
+   "why": "He doesn't roller-skate on Saturdays."
+  },
+  {
+   "s": "Mohammed always skateboards in the morning.",
+   "t": true,
+   "why": "Right! He always skateboards in the morning."
+  },
+  {
+   "s": "Mohammed never watches TV.",
+   "t": false,
+   "why": "He often watches TV in the afternoon."
+  },
+  {
+   "s": "Mohammed never goes to school on Saturdays.",
+   "t": true,
+   "why": "Yes! Saturday is the weekend."
+  },
+  {
+   "s": "We write: She often watch TV.",
+   "t": false,
+   "why": "With she, add -es: She often watches TV."
+  },
+  {
+   "s": "He never plays tennis means he plays tennis on no days.",
+   "t": true,
+   "why": "Yes! Never = no days."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Riddle: It's the weekend. It's not Friday. What day is it?",
+   "o": [
+    "Saturday",
+    "Sunday",
+    "Thursday"
+   ],
+   "why": "The weekend is Friday and Saturday."
+  },
+  {
+   "q": "Who is Mohammed?",
+   "o": [
+    "The writer's cousin",
+    "The writer's teacher",
+    "The writer's dad"
+   ],
+   "why": "This is my cousin, Mohammed."
+  },
+  {
+   "q": "What does Mohammed always do in the morning?",
+   "o": [
+    "He skateboards.",
+    "He roller-skates.",
+    "He watches TV."
+   ],
+   "why": "He always skateboards in the morning."
+  },
+  {
+   "q": "What does Mohammed often do in the afternoon?",
+   "o": [
+    "He watches TV.",
+    "He goes to school.",
+    "He does karate."
+   ],
+   "why": "He often watches TV in the afternoon."
+  },
+  {
+   "q": "Complete: He ___ roller-skate on Saturdays.",
+   "o": [
+    "doesn't",
+    "don't",
+    "isn't"
+   ],
+   "why": "He doesn't roller-skate."
+  },
+  {
+   "q": "Write: Does she listen to music? (yes)",
+   "o": [
+    "Yes, she does.",
+    "Yes, she do.",
+    "Yes, she listens."
+   ],
+   "why": "Yes, she does."
+  },
+  {
+   "q": "Spell the animal:",
+   "o": [
+    "camel",
+    "camle",
+    "cammel"
+   ],
+   "why": "c-a-m-e-l."
+  },
+  {
+   "q": "Spell the round thing you kick:",
+   "o": [
+    "ball",
+    "bal",
+    "bowl"
+   ],
+   "why": "b-a-l-l."
+  },
+  {
+   "q": "Write a sentence with often:",
+   "o": [
+    "She often watches TV.",
+    "She watches often TV.",
+    "She often watch TV."
+   ],
+   "why": "often + verb-es."
+  },
+  {
+   "q": "Crossword: the karate picture",
+   "o": [
+    "do karate",
+    "play karate",
+    "read karate"
+   ],
+   "why": "We say do karate."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "It's the weekend, not Friday",
+   "a": "Saturday",
+   "d": [
+    "Sunday",
+    "Thursday",
+    "Monday"
+   ]
+  },
+  {
+   "q": "Mohammed is my …",
+   "a": "cousin",
+   "d": [
+    "teacher",
+    "dad",
+    "uncle"
+   ]
+  },
+  {
+   "q": "Mohammed always … (morning)",
+   "a": "skateboards",
+   "d": [
+    "roller-skates",
+    "watches TV",
+    "reads books"
+   ]
+  },
+  {
+   "q": "Mohammed often … (afternoon)",
+   "a": "watches TV",
+   "d": [
+    "skateboards",
+    "plays tennis",
+    "does karate"
+   ]
+  },
+  {
+   "q": "He ___ roller-skate on Saturdays.",
+   "a": "doesn't",
+   "d": [
+    "don't",
+    "isn't",
+    "not"
+   ]
+  },
+  {
+   "q": "Does she …? (yes)",
+   "a": "Yes, she does.",
+   "d": [
+    "Yes, she do.",
+    "Yes, he does.",
+    "Yes, I do."
+   ]
+  },
+  {
+   "q": "Scrambled: a-m-l-e-c",
+   "a": "camel",
+   "d": [
+    "meal",
+    "lace",
+    "came"
+   ]
+  },
+  {
+   "q": "Scrambled: t-a-o-b",
+   "a": "boat",
+   "d": [
+    "bat",
+    "tab",
+    "oat"
+   ]
+  },
+  {
+   "q": "She often ___ TV.",
+   "a": "watches",
+   "d": [
+    "watch",
+    "watchs",
+    "watching"
+   ]
+  },
+  {
+   "q": "He never ___ tennis.",
+   "a": "plays",
+   "d": [
+    "play",
+    "playing",
+    "plaies"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is correct?",
+   "o": [
+    "Does she play tennis on Saturdays?",
+    "Do she play tennis on Saturdays?",
+    "Does she plays tennis on Saturdays?",
+    "She does play tennis Saturdays?"
+   ],
+   "why": "Does she + play …?"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which days are the weekend?",
+   "o": [
+    "Friday and Saturday",
+    "Saturday and Sunday",
+    "Thursday and Friday",
+    "Sunday and Monday"
+   ],
+   "why": "In Oman the weekend is Friday and Saturday."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is an activity word from Unit 3?",
+   "o": [
+    "roller-skate",
+    "jumper",
+    "picture",
+    "Eidiya"
+   ],
+   "why": "roller-skate is a Unit 3 activity."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When does Mohammed often watch TV?",
+   "o": [
+    "In the afternoon",
+    "In the morning",
+    "At school",
+    "On Fridays only"
+   ],
+   "why": "In the afternoon, he often watches TV."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write about your brother: plays football (every day), watches TV (no days).",
+   "o": [
+    "He always plays football. He never watches TV.",
+    "He never plays football. He always watches TV.",
+    "He always play football. He never watch TV.",
+    "He plays always football. He watches never TV."
+   ],
+   "why": "Every day = always; no days = never."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Order: TV. / often / She / watches",
+   "o": [
+    "She often watches TV.",
+    "She watches often TV.",
+    "Often she TV watches.",
+    "TV she often watches."
+   ],
+   "why": "She + often + watches + TV."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Answer: Does he play basketball? (no)",
+   "o": [
+    "No, he doesn't.",
+    "No, he don't.",
+    "Yes, he does.",
+    "No, she doesn't."
+   ],
+   "why": "No, he doesn't."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Does Mohammed go to school on Saturdays? How do you know?",
+   "o": [
+    "No. He never goes to school on Saturdays.",
+    "Yes. He always goes on Saturdays.",
+    "Yes. He often skateboards.",
+    "No. He doesn't roller-skate."
+   ],
+   "why": "The text says he never goes to school on Saturdays."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "He always skateboard in the morning.",
+    "He always skateboards in the morning.",
+    "He often watches TV.",
+    "He doesn't roller-skate."
+   ],
+   "why": "With he, add -s: skateboards."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Mohammed doesn't roller-skate on Saturdays. What does he do in the morning?",
+   "o": [
+    "He always skateboards.",
+    "He roller-skates.",
+    "He goes to school.",
+    "He never plays."
+   ],
+   "why": "He always skateboards in the morning."
+  }
+ ]
+}

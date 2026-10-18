@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U1",
+ "lesson": "Unit 1 – Graded readers: Welcome to Our School & Hippo's Kite",
+ "outcomes": [
+  "Read Welcome to Our School and understand its main ideas.",
+  "Read Hippo's Kite and say why each animal can't play.",
+  "Talk about being a good friend."
+ ],
+ "tf": [
+  {
+   "s": "In Welcome to Our School, the video is for friends in Brazil.",
+   "t": true,
+   "why": "Yes! They make a video for their friends in Brazil."
+  },
+  {
+   "s": "They have Science lessons on Tuesdays and Thursdays at nine o'clock.",
+   "t": true,
+   "why": "Correct! That is in the reader."
+  },
+  {
+   "s": "They water the plants every day before school.",
+   "t": false,
+   "why": "They water the plants every day after school."
+  },
+  {
+   "s": "They grow vegetables in the school garden.",
+   "t": true,
+   "why": "Great! The garden has vegetables."
+  },
+  {
+   "s": "The friends in Brazil want to make a video about their school, too.",
+   "t": true,
+   "why": "Yes! They like the idea."
+  },
+  {
+   "s": "Bird can't play because she always cleans her feathers on Saturday afternoons.",
+   "t": true,
+   "why": "Well done! That's Bird's reason."
+  },
+  {
+   "s": "Snake is free this afternoon.",
+   "t": false,
+   "why": "Snake is not free."
+  },
+  {
+   "s": "Monkey counts his fingers and toes every weekend.",
+   "t": true,
+   "why": "Right! Monkey likes numbers."
+  },
+  {
+   "s": "Crocodile is too busy to help Hippo.",
+   "t": false,
+   "why": "Crocodile is never too busy for a friend. He helps Hippo."
+  },
+  {
+   "s": "Hippo and Crocodile meet at half past five.",
+   "t": false,
+   "why": "They meet at half past three."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who is the school video for?",
+   "o": [
+    "friends in Brazil",
+    "friends in China",
+    "the headteacher"
+   ],
+   "why": "The video is for friends in Brazil."
+  },
+  {
+   "q": "When do they water the plants?",
+   "o": [
+    "every day after school",
+    "once a week",
+    "never"
+   ],
+   "why": "They water the plants every day after school."
+  },
+  {
+   "q": "What do they grow in the garden?",
+   "o": [
+    "vegetables",
+    "kites",
+    "computers"
+   ],
+   "why": "They grow vegetables."
+  },
+  {
+   "q": "What does Hippo want to play with?",
+   "o": [
+    "his kite",
+    "a ball",
+    "a robot"
+   ],
+   "why": "Hippo wants to play with his kite."
+  },
+  {
+   "q": "Why can't Bird play?",
+   "o": [
+    "She cleans her feathers.",
+    "She counts her toes.",
+    "She is swimming."
+   ],
+   "why": "Bird cleans her feathers on Saturday afternoons."
+  },
+  {
+   "q": "What does Monkey do every weekend?",
+   "o": [
+    "counts his fingers and toes",
+    "cleans his feathers",
+    "waters the plants"
+   ],
+   "why": "Monkey likes numbers."
+  },
+  {
+   "q": "Who plays with Hippo?",
+   "o": [
+    "Crocodile",
+    "Bird",
+    "Snake"
+   ],
+   "why": "Crocodile is never too busy for a friend."
+  },
+  {
+   "q": "What time do Hippo and Crocodile meet?",
+   "o": [
+    "half past three",
+    "quarter to five",
+    "nine o'clock"
+   ],
+   "why": "They meet at half past three."
+  },
+  {
+   "q": "Say no politely:",
+   "o": [
+    "Sorry, I'm not free.",
+    "Go away!",
+    "No kite!"
+   ],
+   "why": "Sorry, I'm not free. is polite."
+  },
+  {
+   "q": "What is the story Hippo's Kite about?",
+   "o": [
+    "being a good friend",
+    "a new school",
+    "food and drinks"
+   ],
+   "why": "The value is being a good friend."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Video for friends in...?",
+   "a": "Brazil",
+   "d": [
+    "China",
+    "Egypt",
+    "Britain"
+   ]
+  },
+  {
+   "q": "Science days?",
+   "a": "Tues and Thurs",
+   "d": [
+    "Mon and Wed",
+    "Fri and Sat",
+    "Sun and Mon"
+   ]
+  },
+  {
+   "q": "Science time?",
+   "a": "nine o'clock",
+   "d": [
+    "half past three",
+    "ten o'clock",
+    "quarter to five"
+   ]
+  },
+  {
+   "q": "Garden: they grow...?",
+   "a": "vegetables",
+   "d": [
+    "kites",
+    "computers",
+    "feathers"
+   ]
+  },
+  {
+   "q": "Bird cleans her...?",
+   "a": "feathers",
+   "d": [
+    "toes",
+    "kite",
+    "fingers"
+   ]
+  },
+  {
+   "q": "Monkey counts his...?",
+   "a": "fingers and toes",
+   "d": [
+    "feathers",
+    "kites",
+    "vegetables"
+   ]
+  },
+  {
+   "q": "Who helps Hippo?",
+   "a": "Crocodile",
+   "d": [
+    "Bird",
+    "Snake",
+    "Monkey"
+   ]
+  },
+  {
+   "q": "Hippo and Croc meet at?",
+   "a": "half past three",
+   "d": [
+    "half past five",
+    "nine o'clock",
+    "quarter to three"
+   ]
+  },
+  {
+   "q": "Hippo's toy?",
+   "a": "kite",
+   "d": [
+    "ball",
+    "robot",
+    "bike"
+   ]
+  },
+  {
+   "q": "Watering: when?",
+   "a": "after school",
+   "d": [
+    "before school",
+    "at night",
+    "on Fridays"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which places do the children show in their school video?",
+   "o": [
+    "the science lab, the classroom and the garden",
+    "the park, the beach and the shop",
+    "the boat and the forest",
+    "the cinema and the park"
+   ],
+   "why": "They show the science lab, the classroom and the garden."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When does Bird clean her feathers?",
+   "o": [
+    "on Saturday afternoons",
+    "every morning",
+    "on Friday mornings",
+    "never"
+   ],
+   "why": "Bird cleans her feathers on Saturday afternoons."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which animal likes numbers?",
+   "o": [
+    "Monkey",
+    "Bird",
+    "Snake",
+    "Hippo"
+   ],
+   "why": "Monkey counts his fingers and toes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do the friends in Brazil want to do?",
+   "o": [
+    "make a video about their school, too",
+    "visit Oman tomorrow",
+    "grow vegetables",
+    "fly a kite"
+   ],
+   "why": "They want to make their own video."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Hippo asks: 'Do you want to play with my kite this afternoon?' You are busy. Answer:",
+   "o": [
+    "Sorry, I can't. I'm not free.",
+    "Yes, see you then!",
+    "I'm nine.",
+    "It's my kite."
+   ],
+   "why": "Say sorry and that you are not free."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Plan a school video. Which sentence fits?",
+   "o": [
+    "Welcome to our library. We read books here every day.",
+    "Hippo has a kite.",
+    "Bird cleans her feathers.",
+    "I'm from Brazil."
+   ],
+   "why": "It names a place and says what you do there."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "True or false: 'They water the plants every day before school.' Choose the correct sentence.",
+   "o": [
+    "They water the plants every day after school.",
+    "They water the plants once a week.",
+    "They never water the plants.",
+    "They water the plants every night."
+   ],
+   "why": "The reader says after school."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Crocodile a good friend?",
+   "o": [
+    "He is never too busy for a friend and helps Hippo.",
+    "He cleans his feathers.",
+    "He counts his toes.",
+    "He doesn't like kites."
+   ],
+   "why": "Good friends make time to help."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can't Bird, Snake and Monkey play with Hippo?",
+   "o": [
+    "They are all busy.",
+    "They don't like Hippo.",
+    "It is raining.",
+    "The kite is broken."
+   ],
+   "why": "Each animal is busy with something else."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What can you do for a friend who is sad?",
+   "o": [
+    "Play with him.",
+    "Say you are too busy.",
+    "Walk away.",
+    "Laugh at him."
+   ],
+   "why": "Like Crocodile, we can make time for a friend."
+  }
+ ]
+}

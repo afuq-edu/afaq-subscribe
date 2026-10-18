@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Welcome: Hello!",
+  "lesson": "Welcome – Lesson 1: Classroom language",
+  "outcomes": [
+    "I can know the words look, listen, read, point, draw and write.",
+    "I can do what my teacher says: stand up, sit down, open your book.",
+    "I can read short classroom instructions and match them to pictures."
+  ],
+  "tf": [
+    {
+      "s": "We use our ears to listen.",
+      "t": true,
+      "why": "Yes! Ears help us listen."
+    },
+    {
+      "s": "We use a pencil to write.",
+      "t": true,
+      "why": "Great! We write with a pencil."
+    },
+    {
+      "s": "Stand up means sit on your chair.",
+      "t": false,
+      "why": "Stand up means get up on your feet."
+    },
+    {
+      "s": "Close your book means open it.",
+      "t": false,
+      "why": "Close is the opposite of open."
+    },
+    {
+      "s": "We wave goodbye at the end.",
+      "t": true,
+      "why": "Yes! We wave our hand to say goodbye."
+    },
+    {
+      "s": "Point means use your finger to show.",
+      "t": true,
+      "why": "Well done! We point with a finger."
+    },
+    {
+      "s": "Read means draw a picture.",
+      "t": false,
+      "why": "We read words. We draw pictures."
+    },
+    {
+      "s": "Look means use your eyes.",
+      "t": true,
+      "why": "Yes! We look with our eyes."
+    },
+    {
+      "s": "Sit down means stand up.",
+      "t": false,
+      "why": "Sit down means sit on your chair."
+    },
+    {
+      "s": "Pick up your book means put it on the floor.",
+      "t": false,
+      "why": "Pick up means take it in your hands."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Hand to ear. What is it?",
+      "o": [
+        "Listen",
+        "Draw",
+        "Write"
+      ],
+      "why": "We put a hand to our ear to listen."
+    },
+    {
+      "q": "Make a picture. What is it?",
+      "o": [
+        "Draw",
+        "Read",
+        "Listen"
+      ],
+      "why": "We draw a picture."
+    },
+    {
+      "q": "A boy is on his chair. What is it?",
+      "o": [
+        "Sit down",
+        "Stand up",
+        "Wave goodbye"
+      ],
+      "why": "He sits on his chair."
+    },
+    {
+      "q": "Open your book. Then...?",
+      "o": [
+        "Read",
+        "Wave goodbye",
+        "Sit down"
+      ],
+      "why": "We open a book to read it."
+    },
+    {
+      "q": "Which is a classroom instruction?",
+      "o": [
+        "Point",
+        "Red",
+        "Seven"
+      ],
+      "why": "Point is something we do in class."
+    },
+    {
+      "q": "We say goodbye. We...?",
+      "o": [
+        "Wave",
+        "Draw",
+        "Read"
+      ],
+      "why": "We wave goodbye."
+    },
+    {
+      "q": "The book is on the desk. Take it in your hands.",
+      "o": [
+        "Pick up your book",
+        "Close your book",
+        "Sit down"
+      ],
+      "why": "Pick up means take it in your hands."
+    },
+    {
+      "q": "Which word starts with W?",
+      "o": [
+        "Write",
+        "Read",
+        "Look"
+      ],
+      "why": "Write starts with W."
+    },
+    {
+      "q": "Use your eyes. What is it?",
+      "o": [
+        "Look",
+        "Listen",
+        "Write"
+      ],
+      "why": "We look with our eyes."
+    },
+    {
+      "q": "The lesson ends. Close your...?",
+      "o": [
+        "book",
+        "chair",
+        "ear"
+      ],
+      "why": "We close our book."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Use your ears.",
+      "a": "Listen",
+      "d": [
+        "Draw",
+        "Write",
+        "Point"
+      ]
+    },
+    {
+      "q": "Use your pencil to make words.",
+      "a": "Write",
+      "d": [
+        "Listen",
+        "Look",
+        "Wave"
+      ]
+    },
+    {
+      "q": "Use your eyes.",
+      "a": "Look",
+      "d": [
+        "Listen",
+        "Write",
+        "Sit"
+      ]
+    },
+    {
+      "q": "Make a picture.",
+      "a": "Draw",
+      "d": [
+        "Read",
+        "Listen",
+        "Stand"
+      ]
+    },
+    {
+      "q": "Show with your finger.",
+      "a": "Point",
+      "d": [
+        "Read",
+        "Draw",
+        "Listen"
+      ]
+    },
+    {
+      "q": "Get up from your chair.",
+      "a": "Stand up",
+      "d": [
+        "Sit down",
+        "Close",
+        "Wave"
+      ]
+    },
+    {
+      "q": "Read the words in your book.",
+      "a": "Read",
+      "d": [
+        "Draw",
+        "Wave",
+        "Stand"
+      ]
+    },
+    {
+      "q": "Move your hand at the end.",
+      "a": "Wave goodbye",
+      "d": [
+        "Sit down",
+        "Stand up",
+        "Read"
+      ]
+    },
+    {
+      "q": "Opposite of open your book.",
+      "a": "Close your book",
+      "d": [
+        "Pick up",
+        "Stand up",
+        "Look"
+      ]
+    },
+    {
+      "q": "Go to your chair.",
+      "a": "Sit down",
+      "d": [
+        "Stand up",
+        "Write",
+        "Point"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which one is a classroom instruction?",
+      "o": [
+        "Listen",
+        "Blue",
+        "Ten",
+        "Car"
+      ],
+      "why": "Listen is an instruction we hear in class."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What do we do with a book?",
+      "o": [
+        "Read",
+        "Wave",
+        "Stand",
+        "Listen"
+      ],
+      "why": "We read a book."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word means get up?",
+      "o": [
+        "Stand up",
+        "Sit down",
+        "Close",
+        "Draw"
+      ],
+      "why": "Stand up means get up on your feet."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which picture shows Wave goodbye?",
+      "o": [
+        "A girl moving her hand",
+        "A girl with a pencil",
+        "A girl on a chair",
+        "A girl with a book"
+      ],
+      "why": "We move our hand to wave goodbye."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "The teacher says: Open your book. What do you do?",
+      "o": [
+        "Open the book",
+        "Close the book",
+        "Stand up",
+        "Wave goodbye"
+      ],
+      "why": "Open your book means open it."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You see a boy standing. Which words match?",
+      "o": [
+        "Stand up",
+        "Sit down",
+        "Close your book",
+        "Draw"
+      ],
+      "why": "The boy is standing, so it is Stand up."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You want a friend to make a picture. You say...",
+      "o": [
+        "Draw",
+        "Listen",
+        "Sit down",
+        "Read"
+      ],
+      "why": "Draw means make a picture."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Teacher: Stand up. Wave goodbye. What comes first?",
+      "o": [
+        "Stand up",
+        "Wave goodbye",
+        "Sit down",
+        "Open your book"
+      ],
+      "why": "We do the instructions in order."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which one does NOT belong?",
+      "o": [
+        "Pencil",
+        "Look",
+        "Listen",
+        "Point"
+      ],
+      "why": "Look, listen and point are actions. A pencil is a thing."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why do we put a hand to our ear?",
+      "o": [
+        "To listen",
+        "To draw",
+        "To write",
+        "To sit down"
+      ],
+      "why": "A hand to the ear shows we listen."
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: Aviation Then and Now (Reading)",
+ "lesson": "Pronouns as cohesive devices, the Wright brothers and timed reading",
+ "outcomes": [
+  "Identify what pronouns refer to in a text",
+  "Understand the word 'pioneer' and use the right verb forms",
+  "Read against the clock and answer questions to check speed and accuracy"
+ ],
+ "tf": [
+  {
+   "s": "Pronouns link phrases and sentences and help a text read smoothly.",
+   "t": true,
+   "why": "Pronouns are cohesive devices that connect ideas."
+  },
+  {
+   "s": "In 'The airlines are trying to reduce emissions. They want to protect the environment.', 'They' refers to the emissions.",
+   "t": false,
+   "why": "'They' refers to the airlines."
+  },
+  {
+   "s": "A pioneer is a person who is among the first to do something new.",
+   "t": true,
+   "why": "Pioneers open the way for others."
+  },
+  {
+   "s": "The verb of 'invention' is 'invent'.",
+   "t": true,
+   "why": "invent (verb) – invention (noun)."
+  },
+  {
+   "s": "A pronoun usually replaces a noun that was mentioned earlier.",
+   "t": true,
+   "why": "This avoids repeating the same noun."
+  },
+  {
+   "s": "In timed reading, you should answer the questions while you are reading.",
+   "t": false,
+   "why": "Answer after you finish, so the questions do not distract you."
+  },
+  {
+   "s": "WPM in timed reading stands for 'words per minute'.",
+   "t": true,
+   "why": "It measures your reading speed."
+  },
+  {
+   "s": "Using the same noun again and again makes a text smoother than using pronouns.",
+   "t": false,
+   "why": "Repeating nouns sounds heavy; pronouns make the text flow."
+  },
+  {
+   "s": "A pioneer is someone who copies an idea many years after others.",
+   "t": false,
+   "why": "A pioneer is among the first, not a late copier."
+  },
+  {
+   "s": "Timed reading measures both how fast and how accurately you read.",
+   "t": true,
+   "why": "You record your speed and your score."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "'The airlines... They want to...' What does 'They' refer to?",
+   "o": [
+    "The airlines",
+    "The emissions",
+    "The passengers"
+   ],
+   "why": "'They' points back to the airlines."
+  },
+  {
+   "q": "What does 'pioneer' mean?",
+   "o": [
+    "One of the first to do something new",
+    "A pilot's helper",
+    "A very old plane"
+   ],
+   "why": "Pioneers lead the way."
+  },
+  {
+   "q": "What is the verb of 'invention'?",
+   "o": [
+    "invent",
+    "inventive",
+    "inventor"
+   ],
+   "why": "Invent is the verb."
+  },
+  {
+   "q": "What do pronouns usually replace?",
+   "o": [
+    "Nouns",
+    "Verbs",
+    "Adverbs"
+   ],
+   "why": "Pronouns stand in for nouns."
+  },
+  {
+   "q": "What does WPM mean?",
+   "o": [
+    "Words per minute",
+    "Writing per month",
+    "Words per mark"
+   ],
+   "why": "WPM measures reading speed."
+  },
+  {
+   "q": "When do you answer questions in timed reading?",
+   "o": [
+    "After reading",
+    "Before reading",
+    "While reading"
+   ],
+   "why": "This keeps you focused on reading."
+  },
+  {
+   "q": "What are pronouns in a text called?",
+   "o": [
+    "Cohesive devices",
+    "Topic sentences",
+    "Titles"
+   ],
+   "why": "They hold the text together."
+  },
+  {
+   "q": "Who is one example of a pioneer in science?",
+   "o": [
+    "Marie Curie",
+    "A tourist",
+    "A waiter"
+   ],
+   "why": "Marie Curie was a pioneer in radioactivity."
+  },
+  {
+   "q": "Which is a pronoun?",
+   "o": [
+    "them",
+    "plane",
+    "fly"
+   ],
+   "why": "'Them' replaces a plural noun."
+  },
+  {
+   "q": "What does a timed reading record?",
+   "o": [
+    "Speed and score",
+    "Height and weight",
+    "Price and time"
+   ],
+   "why": "You measure how fast and how well you read."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Verb of 'invention'",
+   "a": "invent",
+   "d": [
+    "inventor",
+    "inventive",
+    "invented"
+   ]
+  },
+  {
+   "q": "First to do something new",
+   "a": "pioneer",
+   "d": [
+    "passenger",
+    "tourist",
+    "copier"
+   ]
+  },
+  {
+   "q": "'The airlines... They...' They =",
+   "a": "the airlines",
+   "d": [
+    "the emissions",
+    "the planes",
+    "the pilots"
+   ]
+  },
+  {
+   "q": "Pronouns usually replace ...",
+   "a": "nouns",
+   "d": [
+    "verbs",
+    "adverbs",
+    "adjectives"
+   ]
+  },
+  {
+   "q": "Pronouns are cohesive ...",
+   "a": "devices",
+   "d": [
+    "sentences",
+    "titles",
+    "verbs"
+   ]
+  },
+  {
+   "q": "W in WPM stands for",
+   "a": "words",
+   "d": [
+    "writing",
+    "weeks",
+    "wings"
+   ]
+  },
+  {
+   "q": "Marie Curie's field",
+   "a": "radioactivity",
+   "d": [
+    "cooking",
+    "tourism",
+    "aviation"
+   ]
+  },
+  {
+   "q": "A plural pronoun",
+   "a": "they",
+   "d": [
+    "it",
+    "he",
+    "she"
+   ]
+  },
+  {
+   "q": "Pronoun for one thing",
+   "a": "it",
+   "d": [
+    "they",
+    "them",
+    "we"
+   ]
+  },
+  {
+   "q": "Answer questions ... reading",
+   "a": "after",
+   "d": [
+    "before",
+    "during",
+    "instead of"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do pronouns do in a text?",
+   "o": [
+    "They link phrases and sentences and make a text read smoothly",
+    "They give the title of the text",
+    "They always start a new paragraph",
+    "They show the past tense"
+   ],
+   "why": "Pronouns are cohesive devices."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which person is the best example of a pioneer?",
+   "o": [
+    "The first person to fly a new kind of plane",
+    "A passenger on a normal flight",
+    "Someone who reads about planes",
+    "A person who copies an old idea"
+   ],
+   "why": "A pioneer is among the first to do something new."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why do we answer comprehension questions after finishing a timed reading?",
+   "o": [
+    "So the questions do not distract from reading",
+    "Because the questions are easy",
+    "So we can read more slowly",
+    "Because the text disappears"
+   ],
+   "why": "Reading first, then answering, gives a true speed score."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which pair shows a noun and its verb?",
+   "o": [
+    "invention – invent",
+    "invent – inventive",
+    "inventor – invention",
+    "invented – invent"
+   ],
+   "why": "'Invention' is the noun and 'invent' is the verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'Virgin Atlantic flew a plane partly powered by biofuel. It was the world's first commercial biofuel flight.' What does 'It' refer to?",
+   "o": [
+    "The Virgin Atlantic flight",
+    "The biofuel",
+    "The world",
+    "The airline company's office"
+   ],
+   "why": "'It' refers back to the flight."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'Scientists are testing biofuels because they produce less pollution than oil. Airlines want to use them.' What does 'them' refer to?",
+   "o": [
+    "biofuels",
+    "scientists",
+    "airlines",
+    "pollution"
+   ],
+   "why": "Airlines want to use the biofuels."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You read 600 words in 3 minutes. What is your reading speed?",
+   "o": [
+    "200 WPM",
+    "300 WPM",
+    "1800 WPM",
+    "60 WPM"
+   ],
+   "why": "600 ÷ 3 = 200 words per minute."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is a pronoun better than repeating a noun? 'The plane took off. The plane flew to London. The plane landed.'",
+   "o": [
+    "Using 'It' avoids repetition and makes the text smoother",
+    "Pronouns make the text longer",
+    "Repeating nouns is always clearer",
+    "Pronouns change the meaning completely"
+   ],
+   "why": "Pronouns connect sentences without repetition."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How can you find what a pronoun refers to?",
+   "o": [
+    "Look back in the text for the noun it replaces",
+    "Look at the next chapter",
+    "Count the letters in the pronoun",
+    "Read only the title"
+   ],
+   "why": "Pronouns usually point back to an earlier noun."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are the Wright brothers good examples of pioneers?",
+   "o": [
+    "They were among the first to do something new in flying",
+    "They copied other people's planes",
+    "They worked as travel agents",
+    "They were celebrity chefs"
+   ],
+   "why": "Pioneers are among the first in their field."
+  }
+ ]
+}

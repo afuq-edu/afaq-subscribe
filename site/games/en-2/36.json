@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Sounds and Spelling – Unit 3, Lesson 4: i-e",
+ "outcomes": [
+  "I can say the sound i-e as in kite.",
+  "I can read and write five, nine, drive, dive, slide, kite and bike.",
+  "I can read the tricky word to."
+ ],
+ "tf": [
+  {
+   "s": "In \"kite\", the e makes the i say its name.",
+   "t": true,
+   "why": "Magic e changes kit to kite."
+  },
+  {
+   "s": "\"Kit\" and \"kite\" have the same sound.",
+   "t": false,
+   "why": "Kite has the long i sound; kit has a short i."
+  },
+  {
+   "s": "\"Five\" has the i-e sound.",
+   "t": true,
+   "why": "F-i-v-e: i-e says its name."
+  },
+  {
+   "s": "\"Bike\" has the i-e sound.",
+   "t": true,
+   "why": "B-i-k-e has i-e."
+  },
+  {
+   "s": "\"Pin\" and \"pine\" have the same sound.",
+   "t": false,
+   "why": "Pine has the long i sound because of the e."
+  },
+  {
+   "s": "\"Nine\" is spelled n-i-n-e.",
+   "t": true,
+   "why": "That is the right spelling."
+  },
+  {
+   "s": "\"To\" is a tricky word.",
+   "t": true,
+   "why": "He likes to dive."
+  },
+  {
+   "s": "\"Fish\" has the i-e sound.",
+   "t": false,
+   "why": "Fish has a short i sound."
+  },
+  {
+   "s": "\"Slide\" has the i-e sound.",
+   "t": true,
+   "why": "Sl-i-d-e has i-e."
+  },
+  {
+   "s": "\"Bite\" has the same sound as \"kite\".",
+   "t": true,
+   "why": "Both have i-e."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Add magic e: kit →",
+   "o": [
+    "kite",
+    "kitt",
+    "kiet"
+   ],
+   "why": "kit + e = kite."
+  },
+  {
+   "q": "Add magic e: pin →",
+   "o": [
+    "pine",
+    "pinn",
+    "pien"
+   ],
+   "why": "pin + e = pine."
+  },
+  {
+   "q": "Find the i-e word.",
+   "o": [
+    "bike",
+    "big",
+    "bin"
+   ],
+   "why": "B-i-k-e has i-e."
+  },
+  {
+   "q": "Which number has i-e?",
+   "o": [
+    "five",
+    "six",
+    "ten"
+   ],
+   "why": "F-i-v-e has i-e."
+  },
+  {
+   "q": "He likes ___ dive.",
+   "o": [
+    "to",
+    "some",
+    "all"
+   ],
+   "why": "He likes to dive."
+  },
+  {
+   "q": "She likes ___ drive.",
+   "o": [
+    "to",
+    "give",
+    "our"
+   ],
+   "why": "She likes to drive."
+  },
+  {
+   "q": "Spell the number 9:",
+   "o": [
+    "nine",
+    "nin",
+    "nien"
+   ],
+   "why": "n-i-n-e spells nine."
+  },
+  {
+   "q": "Which word has a short i?",
+   "o": [
+    "bit",
+    "bite",
+    "kite"
+   ],
+   "why": "Bit has a short i; bite has i-e."
+  },
+  {
+   "q": "You ride a ___.",
+   "o": [
+    "bike",
+    "five",
+    "nine"
+   ],
+   "why": "We ride a bike."
+  },
+  {
+   "q": "It flies in the sky.",
+   "o": [
+    "kite",
+    "bike",
+    "slide"
+   ],
+   "why": "A kite flies in the wind."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Number with i-e: 5",
+   "a": "five",
+   "d": [
+    "six",
+    "four",
+    "ten"
+   ]
+  },
+  {
+   "q": "Number with i-e: 9",
+   "a": "nine",
+   "d": [
+    "ten",
+    "six",
+    "eight"
+   ]
+  },
+  {
+   "q": "kit + e",
+   "a": "kite",
+   "d": [
+    "kit",
+    "cat",
+    "cute"
+   ]
+  },
+  {
+   "q": "pin + e",
+   "a": "pine",
+   "d": [
+    "pin",
+    "pen",
+    "pan"
+   ]
+  },
+  {
+   "q": "bit + e",
+   "a": "bite",
+   "d": [
+    "bit",
+    "bat",
+    "but"
+   ]
+  },
+  {
+   "q": "You ride it",
+   "a": "bike",
+   "d": [
+    "kite",
+    "five",
+    "dive"
+   ]
+  },
+  {
+   "q": "It flies in the wind",
+   "a": "kite",
+   "d": [
+    "bike",
+    "nine",
+    "drive"
+   ]
+  },
+  {
+   "q": "He likes ___ dive.",
+   "a": "to",
+   "d": [
+    "some",
+    "all",
+    "give"
+   ]
+  },
+  {
+   "q": "Has i-e",
+   "a": "slide",
+   "d": [
+    "slid",
+    "sled",
+    "sad"
+   ]
+  },
+  {
+   "q": "Has i-e",
+   "a": "drive",
+   "d": [
+    "dress",
+    "drum",
+    "drip"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does the e do in \"kite\"?",
+   "o": [
+    "It makes i say its name.",
+    "It makes no change.",
+    "It makes i silent.",
+    "It makes a new word: kit."
+   ],
+   "why": "Magic e makes i say its name."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has the i-e sound?",
+   "o": [
+    "dive",
+    "dog",
+    "dig",
+    "duck"
+   ],
+   "why": "D-i-v-e has i-e."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the tricky word in this lesson?",
+   "o": [
+    "to",
+    "kite",
+    "five",
+    "bike"
+   ],
+   "why": "To is the tricky word."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has i-e?",
+   "o": [
+    "nine",
+    "net",
+    "nut",
+    "nap"
+   ],
+   "why": "N-i-n-e has i-e."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Order the letters: k / e / b / i",
+   "o": [
+    "bike",
+    "beki",
+    "kibe",
+    "ibek"
+   ],
+   "why": "b-i-k-e spells bike."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I like ___ slide.",
+   "o": [
+    "to",
+    "some",
+    "all",
+    "our"
+   ],
+   "why": "I like to slide."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Read: kit or kite? The picture shows a kite in the sky.",
+   "o": [
+    "kite",
+    "kit",
+    "kits",
+    "kitt"
+   ],
+   "why": "A kite flies in the sky."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT have the i-e sound?",
+   "o": [
+    "fish",
+    "five",
+    "bike",
+    "dive"
+   ],
+   "why": "Fish has a short i."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do \"pin\" and \"pine\" sound different?",
+   "o": [
+    "The e makes the i long in pine.",
+    "Pine has two n's.",
+    "Pin has an e.",
+    "They are the same."
+   ],
+   "why": "Magic e changes the sound of i."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair has the same i-e sound?",
+   "o": [
+    "kite and bike",
+    "kit and kite",
+    "bit and bite",
+    "pin and pine"
+   ],
+   "why": "Kite and bike both have i-e."
+  }
+ ]
+}

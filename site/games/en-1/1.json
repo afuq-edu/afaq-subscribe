@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Welcome: Hello!",
+ "lesson": "Welcome – Hello! Meet the characters",
+ "outcomes": [
+  "I can say Hello!, Hi! and Goodbye!",
+  "I can name Fatma, Sami, Lily, Jack, Meg and Tom.",
+  "I can hold my pencil well and trace from left to right."
+ ],
+ "tf": [
+  {
+   "s": "Meg is a cat.",
+   "t": true,
+   "why": "Yes! Meg is a cat."
+  },
+  {
+   "s": "Tom is a cat.",
+   "t": true,
+   "why": "Yes! Tom is a cat too."
+  },
+  {
+   "s": "Sami is a girl.",
+   "t": false,
+   "why": "Sami is a boy."
+  },
+  {
+   "s": "We say Hello! when we meet a friend.",
+   "t": true,
+   "why": "Great! Hello! is for meeting people."
+  },
+  {
+   "s": "We say Goodbye! when we meet a friend.",
+   "t": false,
+   "why": "We say Goodbye! when we go."
+  },
+  {
+   "s": "We trace from left to right.",
+   "t": true,
+   "why": "Yes! Start on the left and go right."
+  },
+  {
+   "s": "We hold a pencil with the whole hand.",
+   "t": false,
+   "why": "We use the thumb and two fingers."
+  },
+  {
+   "s": "Fatma is a girl.",
+   "t": true,
+   "why": "Yes! Fatma is a girl."
+  },
+  {
+   "s": "Jack is a cat.",
+   "t": false,
+   "why": "Jack is a boy. Meg and Tom are the cats."
+  },
+  {
+   "s": "Lily is a cat.",
+   "t": false,
+   "why": "Lily is a girl. Meg and Tom are the cats."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Your friend says Hello! You say …",
+   "o": [
+    "Hi!",
+    "Goodbye!",
+    "Thank you!"
+   ],
+   "why": "Hi! is a nice answer to Hello!"
+  },
+  {
+   "q": "Who is a cat?",
+   "o": [
+    "Meg",
+    "Lily",
+    "Sami"
+   ],
+   "why": "Meg is a cat."
+  },
+  {
+   "q": "Who is a boy?",
+   "o": [
+    "Jack",
+    "Fatma",
+    "Lily"
+   ],
+   "why": "Jack is a boy."
+  },
+  {
+   "q": "Who is a girl?",
+   "o": [
+    "Lily",
+    "Sami",
+    "Tom"
+   ],
+   "why": "Lily is a girl."
+  },
+  {
+   "q": "What's your name?",
+   "o": [
+    "I'm Ali.",
+    "Goodbye!",
+    "This is Meg."
+   ],
+   "why": "We say I'm and our name."
+  },
+  {
+   "q": "We hold a pencil with …",
+   "o": [
+    "a thumb and two fingers",
+    "one finger",
+    "the whole hand"
+   ],
+   "why": "This is the tripod grip."
+  },
+  {
+   "q": "We trace lines from …",
+   "o": [
+    "left to right",
+    "right to left",
+    "top to the dot"
+   ],
+   "why": "In English we go left to right."
+  },
+  {
+   "q": "At the end of the lesson we say …",
+   "o": [
+    "Goodbye!",
+    "Hello!",
+    "What's your name?"
+   ],
+   "why": "Goodbye! is for going home."
+  },
+  {
+   "q": "When we write, we sit …",
+   "o": [
+    "up straight",
+    "on the table",
+    "on the floor"
+   ],
+   "why": "Sitting up straight helps us write well."
+  },
+  {
+   "q": "Which word is a greeting?",
+   "o": [
+    "Hi!",
+    "Meg",
+    "cat"
+   ],
+   "why": "Hi! is a greeting, like Hello!"
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Catch a cat's name.",
+   "a": "Meg",
+   "d": [
+    "Sami",
+    "Jack",
+    "Fatma"
+   ]
+  },
+  {
+   "q": "Catch the other cat's name.",
+   "a": "Tom",
+   "d": [
+    "Lily",
+    "Sami",
+    "Fatma"
+   ]
+  },
+  {
+   "q": "Catch a boy's name.",
+   "a": "Sami",
+   "d": [
+    "Lily",
+    "Meg",
+    "Fatma"
+   ]
+  },
+  {
+   "q": "Catch a girl's name.",
+   "a": "Fatma",
+   "d": [
+    "Jack",
+    "Tom",
+    "Sami"
+   ]
+  },
+  {
+   "q": "Catch another girl's name.",
+   "a": "Lily",
+   "d": [
+    "Tom",
+    "Jack",
+    "Meg"
+   ]
+  },
+  {
+   "q": "Catch another boy's name.",
+   "a": "Jack",
+   "d": [
+    "Meg",
+    "Fatma",
+    "Lily"
+   ]
+  },
+  {
+   "q": "Catch a word we say when we meet.",
+   "a": "Hello!",
+   "d": [
+    "Goodbye!",
+    "Sit down!",
+    "Well done!"
+   ]
+  },
+  {
+   "q": "Catch a word we say when we go.",
+   "a": "Goodbye!",
+   "d": [
+    "Hello!",
+    "Hi!",
+    "I'm Sami."
+   ]
+  },
+  {
+   "q": "Catch the answer: What's your name?",
+   "a": "I'm Sara.",
+   "d": [
+    "Hello, Meg!",
+    "Goodbye!",
+    "This is Tom."
+   ]
+  },
+  {
+   "q": "Catch the way we trace.",
+   "a": "left to right",
+   "d": [
+    "right to left",
+    "down to up",
+    "round and round"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which two are cats?",
+   "o": [
+    "Meg and Tom",
+    "Sami and Jack",
+    "Fatma and Lily",
+    "Lily and Sami"
+   ],
+   "why": "Meg and Tom are the two cats."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one is a greeting?",
+   "o": [
+    "Hello!",
+    "Pencil",
+    "Meg",
+    "Sit"
+   ],
+   "why": "Hello! is how we greet people."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How many fingers hold the pencil with the thumb?",
+   "o": [
+    "two",
+    "one",
+    "four",
+    "five"
+   ],
+   "why": "The thumb and two fingers hold the pencil."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which child is a boy?",
+   "o": [
+    "Sami",
+    "Fatma",
+    "Lily",
+    "Meg"
+   ],
+   "why": "Sami is a boy."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your teacher says: Hello! What's your name? You say …",
+   "o": [
+    "Hello! I'm Ahmed.",
+    "Goodbye, Meg!",
+    "This is Fatma.",
+    "Point to Sami."
+   ],
+   "why": "Say hello back and then your name."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You show your friend a picture of Fatma. You say …",
+   "o": [
+    "This is Fatma.",
+    "I'm Fatma's cat.",
+    "Goodbye, Jack!",
+    "What's your name?"
+   ],
+   "why": "We use This is … to show someone."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The lesson ends. You wave to Meg and say …",
+   "o": [
+    "Goodbye, Meg!",
+    "Hello, Meg!",
+    "I'm Meg.",
+    "This is Meg."
+   ],
+   "why": "We say Goodbye when we go."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which one is NOT a child?",
+   "o": [
+    "Tom",
+    "Jack",
+    "Lily",
+    "Sami"
+   ],
+   "why": "Tom is a cat, the others are children."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we start tracing at the dot on the left?",
+   "o": [
+    "We write from left to right.",
+    "The dot is pretty.",
+    "We write from right to left.",
+    "The line is short."
+   ],
+   "why": "English goes from left to right."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does not belong: Hello, Hi, Goodbye, Meg?",
+   "o": [
+    "Meg",
+    "Hello",
+    "Hi",
+    "Goodbye"
+   ],
+   "why": "Meg is a name; the others are greetings."
+  }
+ ]
+}

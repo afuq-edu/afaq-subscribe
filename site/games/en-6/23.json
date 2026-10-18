@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 2: Technology",
+  "lesson": "Unit 2 – Lesson 8: Literacy – Reading reviews",
+  "outcomes": [
+    "I can scan two reviews quickly to find information.",
+    "I can find the good and bad points in a review.",
+    "I can use expressions like solve a problem and score points."
+  ],
+  "tf": [
+    {"s": "In TopCity, players are looking for treasure.", "t": true, "why": "Yes, the game is about finding treasure in the city."},
+    {"s": "You move around TopCity by writing instructions, like programming a computer.", "t": true, "why": "Right, you give instructions to move around the city."},
+    {"s": "GameFan says TopCity is a free game.", "t": false, "why": "GameFan says the game isn’t free, but it is good value."},
+    {"s": "MrCool001 learnt to play the game by watching a video.", "t": true, "why": "Yes, MrCool001 watched a video to learn how to play."},
+    {"s": "GameFan’s opinion of the game is very positive.", "t": true, "why": "GameFan likes the game very much."},
+    {"s": "MrCool001 thinks TopCity is the best programming game of all.", "t": false, "why": "MrCool001 thinks there are better programming games."},
+    {"s": "In every building in TopCity, you have to solve a problem.", "t": true, "why": "Yes, each building has a problem to solve."},
+    {"s": "A review only tells you the good points about something.", "t": false, "why": "A review gives good points and bad points."},
+    {"s": "To scan a text means to read every word slowly.", "t": false, "why": "Scanning means looking quickly for the information you need."},
+    {"s": "GameFan says the game was difficult to start playing.", "t": false, "why": "GameFan says it was easy to start playing."}
+  ],
+  "boxes": [
+    {"q": "What score did GameFan get last night?", "o": ["50,000 points", "5,000 points", "500 points"], "why": "GameFan scored 50,000 points."},
+    {"q": "Complete: In every building you have to ___ a problem.", "o": ["solve", "score", "give"], "why": "We say solve a problem."},
+    {"q": "Who thinks there are better programming games?", "o": ["MrCool001", "GameFan", "Both reviewers"], "why": "MrCool001 says other programming games are better."},
+    {"q": "What is a person who writes a review called?", "o": ["a reviewer", "a player", "a programmer"], "why": "A reviewer writes a review."},
+    {"q": "What is MrCool001’s overall opinion of TopCity?", "o": ["quite positive", "very negative", "very positive"], "why": "MrCool001 likes it, but not as much as GameFan."},
+    {"q": "Complete: My brother ___ me tips for the game.", "o": ["gives", "solves", "scores"], "why": "We say give tips."},
+    {"q": "Which word means the pictures in a game?", "o": ["graphics", "points", "value"], "why": "Graphics are the pictures and images you see."},
+    {"q": "Complete: I like to ___ online with my friends.", "o": ["play", "solve", "score"], "why": "We say play online."},
+    {"q": "Who says the game was easy to start?", "o": ["GameFan", "MrCool001", "Nobody"], "why": "GameFan found it easy to start playing."},
+    {"q": "How can reviews help us?", "o": ["They help us decide what to buy or play.", "They fix our computers.", "They give us free games."], "why": "Reviews tell us good and bad points before we choose."}
+  ],
+  "hunt": [
+    {"q": "What are you looking for in TopCity?", "a": "treasure", "d": ["a password", "a friend", "a phone"]},
+    {"q": "___ a problem", "a": "solve", "d": ["score", "give", "play"]},
+    {"q": "___ points", "a": "score", "d": ["solve", "program", "give"]},
+    {"q": "___ tips", "a": "give", "d": ["score", "solve", "program"]},
+    {"q": "___ a computer", "a": "program", "d": ["score", "give", "solve"]},
+    {"q": "Test yourself with something hard", "a": "challenge yourself", "d": ["give tips", "play online", "score points"]},
+    {"q": "Who learnt by watching a video?", "a": "MrCool001", "d": ["GameFan", "Najla", "Nadia"]},
+    {"q": "GameFan’s score last night", "a": "50,000", "d": ["5,000", "15,000", "500,000"]},
+    {"q": "Read quickly to find information", "a": "scan", "d": ["write", "draw", "spell"]},
+    {"q": "Not free, but good ___", "a": "value", "d": ["graphics", "treasure", "skills"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What is GameFan’s bad point about TopCity?", "o": ["The game isn’t free.", "The graphics are bad.", "It is too easy.", "You can’t play online."], "why": "GameFan says it isn’t free, but it is still good value."},
+    {"lv": "التذكر", "q": "How do you move around the city in TopCity?", "o": ["You write instructions.", "You draw a map.", "You talk to the screen.", "You press one button only."], "why": "You write instructions, like programming a computer."},
+    {"lv": "التذكر", "q": "Which expression means “to test yourself with something difficult”?", "o": ["challenge yourself", "give tips", "play online", "score points"], "why": "When you challenge yourself, you try something hard."},
+    {"lv": "التذكر", "q": "What do we call the things a reviewer likes and doesn’t like?", "o": ["good points and bad points", "titles and pictures", "questions and answers", "words and letters"], "why": "Reviews give good points and bad points."},
+    {"lv": "التطبيق", "q": "“My friend tells me how to win the game.” Which expression fits?", "o": ["give tips", "score points", "program a computer", "solve a problem"], "why": "When someone tells you how to do better, they give you tips."},
+    {"lv": "التطبيق", "q": "You need to find the word “video” in two reviews in one minute. What should you do?", "o": ["Scan the reviews quickly.", "Read every word slowly.", "Write the reviews again.", "Read only the title."], "why": "Scanning helps you find a word fast."},
+    {"lv": "التطبيق", "q": "Choose the correct sentence.", "o": ["Most of us play games online at the weekend.", "Most of us plays games online at the weekend.", "Most of us playing games online at the weekend.", "Most of us is play games online at the weekend."], "why": "Most of us takes a plural verb: play."},
+    {"lv": "التحليل", "q": "“The game isn’t free, but it’s good value.” What does the reviewer mean?", "o": ["You pay, but it is worth the money.", "The game is too expensive.", "The game costs nothing.", "You can’t buy the game."], "why": "Good value means it is worth what you pay."},
+    {"lv": "التحليل", "q": "Why is MrCool001’s review quite positive, not very positive?", "o": ["He likes the game but thinks there are better programming games.", "He hates the game.", "He never played the game.", "He thinks the game is free."], "why": "He likes it, but he compares it with better games."},
+    {"lv": "التحليل", "q": "A friend wants a game that makes you think. Which reason from the reviews is best?", "o": ["You solve a problem in every building.", "The game isn’t free.", "MrCool001 watched a video.", "There are better programming games."], "why": "Solving problems makes you think, so this is the best reason."}
+  ]
+}

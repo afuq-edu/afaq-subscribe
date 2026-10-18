@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Welcome: Back to school",
+ "lesson": "Welcome – Lesson 2: Back to school, alphabet and spelling names",
+ "outcomes": [
+  "I can name the characters in the story Back to school.",
+  "I can say the alphabet in order.",
+  "I can ask for and spell a name letter by letter."
+ ],
+ "tf": [
+  {
+   "s": "Polly is a parrot.",
+   "t": true,
+   "why": "Yes! Polly is the parrot in the story."
+  },
+  {
+   "s": "Atomic is a dog.",
+   "t": false,
+   "why": "Atomic is the cat in the story."
+  },
+  {
+   "s": "The letter H comes after G.",
+   "t": true,
+   "why": "Great! G, H, I."
+  },
+  {
+   "s": "The letter M comes before L.",
+   "t": false,
+   "why": "L comes first: K, L, M."
+  },
+  {
+   "s": "We ask How do you spell your name? to hear the letters.",
+   "t": true,
+   "why": "We spell a name letter by letter."
+  },
+  {
+   "s": "Jack is the boy with the red cap and glasses.",
+   "t": true,
+   "why": "Well done! That is Jack."
+  },
+  {
+   "s": "Fatma has got twelve colouring pencils.",
+   "t": false,
+   "why": "Fatma has got fourteen colouring pencils."
+  },
+  {
+   "s": "The last letter of the alphabet is Y.",
+   "t": false,
+   "why": "The last letter is Z."
+  },
+  {
+   "s": "A-n-n-a spells the name Anna.",
+   "t": true,
+   "why": "A, n, n, a: Anna."
+  },
+  {
+   "s": "In alphabet order, Sami comes before Fatma.",
+   "t": false,
+   "why": "F comes before S, so Fatma comes first."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the name of the cat?",
+   "o": [
+    "Atomic",
+    "Polly",
+    "Lily"
+   ],
+   "why": "Atomic is the cat in the story."
+  },
+  {
+   "q": "Which letter comes after K?",
+   "o": [
+    "L",
+    "J",
+    "M"
+   ],
+   "why": "J, K, L: L comes after K."
+  },
+  {
+   "q": "Listen: P-o-l-l-y. Which name is it?",
+   "o": [
+    "Polly",
+    "Lily",
+    "Sami"
+   ],
+   "why": "P, o, l, l, y spells Polly."
+  },
+  {
+   "q": "Complete: What's your ___?",
+   "o": [
+    "name",
+    "spell",
+    "bag"
+   ],
+   "why": "We ask What's your name?"
+  },
+  {
+   "q": "Answer: What's your name?",
+   "o": [
+    "My name's Sami.",
+    "I'm fine.",
+    "It's a pen."
+   ],
+   "why": "We answer with My name's ..."
+  },
+  {
+   "q": "Which is the first letter of the alphabet?",
+   "o": [
+    "A",
+    "B",
+    "Z"
+   ],
+   "why": "The alphabet starts with A."
+  },
+  {
+   "q": "Which word is spelled k-i-t-e?",
+   "o": [
+    "kite",
+    "bike",
+    "hat"
+   ],
+   "why": "K, i, t, e spells kite."
+  },
+  {
+   "q": "Which letters are missing? J K _ M N O _ Q",
+   "o": [
+    "L and P",
+    "L and R",
+    "K and P"
+   ],
+   "why": "J K L M N O P Q."
+  },
+  {
+   "q": "How many colouring pencils has Fatma got?",
+   "o": [
+    "fourteen",
+    "four",
+    "forty"
+   ],
+   "why": "Fatma has got fourteen pencils."
+  },
+  {
+   "q": "Which name is spelled F-a-t-m-a?",
+   "o": [
+    "Fatma",
+    "Sami",
+    "Jack"
+   ],
+   "why": "F, a, t, m, a spells Fatma."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Letter after G",
+   "a": "H",
+   "d": [
+    "F",
+    "J",
+    "K"
+   ]
+  },
+  {
+   "q": "Letter before N",
+   "a": "M",
+   "d": [
+    "O",
+    "L",
+    "P"
+   ]
+  },
+  {
+   "q": "Letter after S",
+   "a": "T",
+   "d": [
+    "R",
+    "U",
+    "V"
+   ]
+  },
+  {
+   "q": "Letter before E",
+   "a": "D",
+   "d": [
+    "F",
+    "C",
+    "B"
+   ]
+  },
+  {
+   "q": "Last letter of the alphabet",
+   "a": "Z",
+   "d": [
+    "Y",
+    "X",
+    "A"
+   ]
+  },
+  {
+   "q": "The parrot in the story",
+   "a": "Polly",
+   "d": [
+    "Atomic",
+    "Lily",
+    "Fatma"
+   ]
+  },
+  {
+   "q": "The cat in the story",
+   "a": "Atomic",
+   "d": [
+    "Polly",
+    "Jack",
+    "Sami"
+   ]
+  },
+  {
+   "q": "The boy with the red cap",
+   "a": "Jack",
+   "d": [
+    "Sami",
+    "Lily",
+    "Fatma"
+   ]
+  },
+  {
+   "q": "Spell: b-i-k-e",
+   "a": "bike",
+   "d": [
+    "kite",
+    "hat",
+    "pen"
+   ]
+  },
+  {
+   "q": "Spell: s-i-n-g",
+   "a": "sing",
+   "d": [
+    "pen",
+    "hat",
+    "kite"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which question do we use to ask about a name?",
+   "o": [
+    "What's your name?",
+    "How many pencils?",
+    "What colour is it?",
+    "Where's Polly?"
+   ],
+   "why": "We ask What's your name?"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who are Polly and Atomic?",
+   "o": [
+    "a parrot and a cat",
+    "two girls",
+    "a cat and a dog",
+    "two boys"
+   ],
+   "why": "Polly is a parrot and Atomic is a cat."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which letters come after K?",
+   "o": [
+    "L, M, N",
+    "J, I, H",
+    "M, N, O",
+    "L, N, M"
+   ],
+   "why": "K, L, M, N."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the right way to spell pen?",
+   "o": [
+    "p-e-n",
+    "p-a-n",
+    "b-e-n",
+    "p-e-m"
+   ],
+   "why": "Pen is p, e, n."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend asks How do you spell Sami? What do you say?",
+   "o": [
+    "S-a-m-i.",
+    "My name's Sami.",
+    "Good morning!",
+    "Sami is a boy."
+   ],
+   "why": "We spell it letter by letter."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which letters are missing? C _ E F _ H",
+   "o": [
+    "D and G",
+    "D and F",
+    "B and G",
+    "E and G"
+   ],
+   "why": "C D E F G H."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Listen: L-i-l-y. Which name is it?",
+   "o": [
+    "Lily",
+    "Polly",
+    "Sami",
+    "Jack"
+   ],
+   "why": "L, i, l, y spells Lily."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Put the names in alphabet order: Sami, Atomic, Lily, Fatma",
+   "o": [
+    "Atomic, Fatma, Lily, Sami",
+    "Sami, Lily, Fatma, Atomic",
+    "Fatma, Atomic, Lily, Sami",
+    "Atomic, Lily, Fatma, Sami"
+   ],
+   "why": "A, F, L, S is alphabet order."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which name comes first in alphabet order?",
+   "o": [
+    "Jack",
+    "Polly",
+    "Sami",
+    "Lily"
+   ],
+   "why": "J comes before L, P and S."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A word is spelled h-a-t. How many letters has it got?",
+   "o": [
+    "three",
+    "two",
+    "four",
+    "five"
+   ],
+   "why": "H, a, t: three letters."
+  }
+ ]
+}

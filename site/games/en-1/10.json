@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 2: My school bag",
+ "lesson": "Lesson 2: Language practice – I've got … + Sound m",
+ "outcomes": [
+  "I can say what I have: I've got a pen and an eraser.",
+  "I can say the sound /m/ and write the letter m.",
+  "I can blend sounds to read map, mat and man."
+ ],
+ "tf": [
+  {
+   "s": "Moon starts with the sound /m/.",
+   "t": true,
+   "why": "Yes! m, m, moon."
+  },
+  {
+   "s": "The /m/ Phonics Card shows a mouse.",
+   "t": true,
+   "why": "Great! Mouse starts with /m/."
+  },
+  {
+   "s": "Milk starts with the letter n.",
+   "t": false,
+   "why": "Milk starts with m."
+  },
+  {
+   "s": "m – a – p makes map.",
+   "t": true,
+   "why": "Well done! m-a-p, map."
+  },
+  {
+   "s": "m – a – n makes mat.",
+   "t": false,
+   "why": "m-a-n makes man."
+  },
+  {
+   "s": "I've got a pen and an eraser is a good sentence.",
+   "t": true,
+   "why": "Yes! a pen, an eraser."
+  },
+  {
+   "s": "We say I've got a eraser.",
+   "t": false,
+   "why": "We say an eraser."
+  },
+  {
+   "s": "Monkey starts with /m/.",
+   "t": true,
+   "why": "Yes! m, m, monkey."
+  },
+  {
+   "s": "Mug starts with the letter t.",
+   "t": false,
+   "why": "Mug starts with m."
+  },
+  {
+   "s": "A ruler is a family word.",
+   "t": false,
+   "why": "A ruler is a school thing."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "I've got … ruler and … eraser.",
+   "o": [
+    "a / an",
+    "an / a",
+    "an / an"
+   ],
+   "why": "a ruler, an eraser."
+  },
+  {
+   "q": "You hold up a bag. You say: I've got a …",
+   "o": [
+    "bag",
+    "pen",
+    "ruler"
+   ],
+   "why": "It's a bag."
+  },
+  {
+   "q": "Teacher says I've got a ruler, but shows a pen. True?",
+   "o": [
+    "No! It's a pen.",
+    "Yes! It's a ruler.",
+    "Yes! It's a bag."
+   ],
+   "why": "It's a pen, not a ruler."
+  },
+  {
+   "q": "Which word starts with /m/?",
+   "o": [
+    "monkey",
+    "tin",
+    "hat"
+   ],
+   "why": "m, m, monkey!"
+  },
+  {
+   "q": "_oon: which letter is missing?",
+   "o": [
+    "m",
+    "n",
+    "s"
+   ],
+   "why": "m + oon = moon."
+  },
+  {
+   "q": "_ug: which letter is missing?",
+   "o": [
+    "m",
+    "p",
+    "t"
+   ],
+   "why": "m + ug = mug."
+  },
+  {
+   "q": "Blend: m – a – p",
+   "o": [
+    "map",
+    "mat",
+    "man"
+   ],
+   "why": "m-a-p, map!"
+  },
+  {
+   "q": "Blend: m – a – t",
+   "o": [
+    "mat",
+    "map",
+    "man"
+   ],
+   "why": "m-a-t, mat!"
+  },
+  {
+   "q": "Which letter makes the sound /m/?",
+   "o": [
+    "m",
+    "n",
+    "i"
+   ],
+   "why": "The letter m says /m/."
+  },
+  {
+   "q": "Which one is a school thing?",
+   "o": [
+    "eraser",
+    "moon",
+    "monkey"
+   ],
+   "why": "An eraser is a school thing."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Catch the /m/ word in the sky.",
+   "a": "moon",
+   "d": [
+    "sun",
+    "tree",
+    "nest"
+   ]
+  },
+  {
+   "q": "Catch the /m/ animal.",
+   "a": "monkey",
+   "d": [
+    "snake",
+    "tiger",
+    "insect"
+   ]
+  },
+  {
+   "q": "Catch the small /m/ animal.",
+   "a": "mouse",
+   "d": [
+    "ant",
+    "cat",
+    "insect"
+   ]
+  },
+  {
+   "q": "Catch the /m/ drink.",
+   "a": "milk",
+   "d": [
+    "ink",
+    "pie",
+    "nut"
+   ]
+  },
+  {
+   "q": "Catch the /m/ cup.",
+   "a": "mug",
+   "d": [
+    "pot",
+    "tin",
+    "pan"
+   ]
+  },
+  {
+   "q": "Catch the letter for /m/.",
+   "a": "m",
+   "d": [
+    "n",
+    "i",
+    "a"
+   ]
+  },
+  {
+   "q": "Blend: m – a – n",
+   "a": "man",
+   "d": [
+    "map",
+    "mat",
+    "pan"
+   ]
+  },
+  {
+   "q": "Blend: m – a – p",
+   "a": "map",
+   "d": [
+    "man",
+    "nap",
+    "tap"
+   ]
+  },
+  {
+   "q": "Catch the right one: I've got …",
+   "a": "a ruler",
+   "d": [
+    "an ruler",
+    "an bag",
+    "an pen"
+   ]
+  },
+  {
+   "q": "Catch a school thing.",
+   "a": "pen",
+   "d": [
+    "moon",
+    "milk",
+    "mouse"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these words starts with /m/?",
+   "o": [
+    "map",
+    "nap",
+    "tap",
+    "pan"
+   ],
+   "why": "m, m, map!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these do you put books in?",
+   "o": [
+    "bag",
+    "mum",
+    "moon",
+    "milk"
+   ],
+   "why": "We put books in a bag."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is right?",
+   "o": [
+    "an eraser",
+    "a eraser",
+    "an pen",
+    "an ruler"
+   ],
+   "why": "We say an eraser."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence tells what you have?",
+   "o": [
+    "I've got a pen.",
+    "What is it?",
+    "Who's this?",
+    "Goodbye!"
+   ],
+   "why": "I've got … tells what you have."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You drew a pen and a ruler. You say …",
+   "o": [
+    "I've got a pen and a ruler.",
+    "I've got an pen and a ruler.",
+    "This is my mum and dad.",
+    "It's a moon."
+   ],
+   "why": "a pen and a ruler."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "_ilk: which letter is missing?",
+   "o": [
+    "m",
+    "n",
+    "h",
+    "t"
+   ],
+   "why": "m + ilk = milk."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Teacher shows an eraser and says: I've got a bag. You say …",
+   "o": [
+    "No! It's an eraser.",
+    "Yes!",
+    "It's a bag.",
+    "No! It's a pen."
+   ],
+   "why": "It's an eraser, not a bag."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT start with /m/?",
+   "o": [
+    "nut",
+    "moon",
+    "milk",
+    "mug"
+   ],
+   "why": "Nut starts with /n/."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Map, mat, man. What is the same?",
+   "o": [
+    "They start with /m/.",
+    "They end with /m/.",
+    "They are animals.",
+    "They are school things."
+   ],
+   "why": "All of them start with m."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does not belong: pen, ruler, eraser, mouse?",
+   "o": [
+    "mouse",
+    "pen",
+    "ruler",
+    "eraser"
+   ],
+   "why": "A mouse is an animal, not a school thing."
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "2",
+  "lesson": "Unit 2: Climate Change – Reading and Understanding",
+  "outcomes": [
+    "Read a temperature chart and explain its trend.",
+    "Understand a text about the causes and effects of climate change.",
+    "Predict the future of endangered animals using will and won't."
+  ],
+  "tf": [
+    {"s": "The chart shows that average global temperatures have risen since 1881.", "t": true, "why": "Yes! The trend goes up from 1881 to 2010."},
+    {"s": "The horizontal axis of the chart shows the temperatures.", "t": false, "why": "The horizontal axis shows the years, 1881–2010."},
+    {"s": "Burning fossil fuels produces greenhouse gases.", "t": true, "why": "Correct, and these gases warm the Earth."},
+    {"s": "The Earth is getting hotter because there are more ice caps.", "t": false, "why": "It is because there are more greenhouse gases in the atmosphere."},
+    {"s": "Countries at sea level are at risk from floods.", "t": true, "why": "Right, rising sea levels threaten them."},
+    {"s": "'Release' means to let something out, for example gases.", "t": true, "why": "Well done!"},
+    {"s": "If the ice melts, polar bears will hunt seals more easily.", "t": false, "why": "Polar bears won't be able to hunt seals without the ice."},
+    {"s": "Turtles may have to lay their eggs somewhere else if their nesting beaches disappear.", "t": true, "why": "Yes, that is a prediction from the text."},
+    {"s": "'Will able to' is the correct form for future ability.", "t": false, "why": "We say 'will be able to' or 'won't be able to'."},
+    {"s": "Only governments can do something about climate change; individuals can do nothing.", "t": false, "why": "Individuals can change their habits too."}
+  ],
+  "boxes": [
+    {"q": "What kind of chart is in Activity 1?", "o": ["a column chart", "a pie chart", "a line graph"], "why": "It uses vertical columns for each period."},
+    {"q": "What does the horizontal axis show?", "o": ["the years", "the temperatures", "the countries"], "why": "It shows the years from 1881 to 2010."},
+    {"q": "There are more ___ in the atmosphere, so the Earth is getting hotter.", "o": ["greenhouse gases", "ice caps", "turtles"], "why": "Greenhouse gases trap heat."},
+    {"q": "Countries at sea level are at risk from ...", "o": ["floods", "droughts", "snow"], "why": "Rising sea levels can flood low land."},
+    {"q": "Which subheading matches paragraph 2?", "o": ["What causes climate change?", "How can we stop climate change?", "What is the weather today?"], "why": "Paragraph 2 explains the causes."},
+    {"q": "If the ice melts, polar bears ___ be able to hunt seals.", "o": ["won't", "will", "can"], "why": "Without ice they cannot hunt."},
+    {"q": "What is a 'habitat'?", "o": ["the natural home of an animal", "a type of gas", "a kind of weather"], "why": "Melting ice destroys the polar bear's habitat."},
+    {"q": "What are fossil fuels?", "o": ["coal, oil and gas we burn for energy", "leaves that koalas eat", "ice at the poles"], "why": "Burning them releases greenhouse gases."},
+    {"q": "Which animal eats eucalyptus leaves?", "o": ["the koala", "the polar bear", "the turtle"], "why": "Koalas depend on eucalyptus leaves."},
+    {"q": "Which word means 'having a duty to deal with something'?", "o": ["responsibility", "atmosphere", "extreme"], "why": "Stopping climate change is everyone's responsibility."}
+  ],
+  "hunt": [
+    {"q": "The chart's first year", "a": "1881", "d": ["1981", "1801", "2010"]},
+    {"q": "The chart's last year", "a": "2010", "d": ["1881", "2001", "2020"]},
+    {"q": "Gases that warm the Earth", "a": "greenhouse gases", "d": ["ice caps", "fresh air", "sea levels"]},
+    {"q": "Coal, oil and gas", "a": "fossil fuels", "d": ["greenhouses", "habitats", "ice caps"]},
+    {"q": "To let something out", "a": "release", "d": ["predict", "scan", "hunt"]},
+    {"q": "The air around the Earth", "a": "atmosphere", "d": ["habitat", "sea level", "ice cap"]},
+    {"q": "Polar bears hunt these", "a": "seals", "d": ["koalas", "turtles", "camels"]},
+    {"q": "Koalas eat these leaves", "a": "eucalyptus", "d": ["palm", "banana", "mango"]},
+    {"q": "Turtles lay eggs on these", "a": "nesting beaches", "d": ["ice caps", "mountains", "trees"]},
+    {"q": "Natural home of an animal", "a": "habitat", "d": ["atmosphere", "fossil fuel", "threat"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What trend does the chart show?", "o": ["Average global temperatures are rising.", "Temperatures are falling.", "Temperatures never change.", "Rain is increasing every year."], "why": "The columns get higher from 1881 to 2010."},
+    {"lv": "التذكر", "q": "What are greenhouse gases produced by, according to the text?", "o": ["burning fossil fuels and bacteria", "melting ice", "turtles and koalas", "rain and snow"], "why": "The text names fossil fuels and bacteria."},
+    {"lv": "التذكر", "q": "Which subheading matches the paragraph about stopping climate change?", "o": ["How can we stop climate change?", "What causes climate change?", "What is a drought?", "Why is it raining?"], "why": "That paragraph gives solutions."},
+    {"lv": "التذكر", "q": "Which three animals are in the texts?", "o": ["polar bears, turtles and koalas", "camels, goats and cows", "lions, tigers and eagles", "dolphins, whales and sharks"], "why": "Climate change threatens these three animals."},
+    {"lv": "التطبيق", "q": "Choose the correct prediction.", "o": ["Polar bears won't be able to hunt seals.", "Polar bears won't able to hunt seals.", "Polar bears will not be able hunt seals.", "Polar bears not will be able to hunt seals."], "why": "won't + be able to + verb."},
+    {"lv": "التطبيق", "q": "Nesting beaches will disappear. What will turtles have to do?", "o": ["lay eggs somewhere else", "hunt seals", "eat eucalyptus leaves", "live on the ice"], "why": "They will need a new place for their eggs."},
+    {"lv": "التطبيق", "q": "Choose the correct sentence with 'will have to'.", "o": ["We will have to use less energy.", "We will has to use less energy.", "We will have use less energy.", "We have will to use less energy."], "why": "will have to + base verb."},
+    {"lv": "التحليل", "q": "What might cause the rising trend in the chart?", "o": ["more greenhouse gases from burning fossil fuels", "more ice at the poles", "fewer cars in the world", "more rain in deserts"], "why": "These gases trap heat in the atmosphere."},
+    {"lv": "التحليل", "q": "Why are countries at sea level at risk?", "o": ["Rising sea levels can flood them.", "They have too many mountains.", "They have no fossil fuels.", "Their weather is always cold."], "why": "Melting ice raises the sea level."},
+    {"lv": "التحليل", "q": "Why does predicting before reading help you?", "o": ["It activates what you know and prepares you for the ideas.", "It means you don't need to read.", "It tells you every answer.", "It makes the text shorter."], "why": "Predicting gets your mind ready for the text."}
+  ]
+}

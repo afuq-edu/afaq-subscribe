@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 2: Congestion – A Growing Issue (Grammar)",
+ "lesson": "Grammar Recall: present perfect and present perfect continuous; verb forms / For and since; congestion discussion; Activate Your English",
+ "outcomes": [
+  "Use the present perfect and present perfect continuous",
+  "Use 'for' and 'since' correctly",
+  "Discuss traffic congestion using these tenses"
+ ],
+ "tf": [
+  {
+   "s": "The present perfect continuous is formed with have/has been + verb-ing.",
+   "t": true,
+   "why": "Yes, for example: I have been waiting."
+  },
+  {
+   "s": "'I've been waiting for an hour' shows an action that is still continuing.",
+   "t": true,
+   "why": "Right, the waiting has not stopped."
+  },
+  {
+   "s": "'I've lost my keys' is in the present perfect continuous.",
+   "t": false,
+   "why": "It is the present perfect simple: have + past participle."
+  },
+  {
+   "s": "We use 'for' with a starting point, for example 'for 3 o'clock'.",
+   "t": false,
+   "why": "Use 'since 3 o'clock'; 'for' goes with a length of time."
+  },
+  {
+   "s": "We use 'since' with a starting point in time.",
+   "t": true,
+   "why": "Yes, like since 2011 or since Monday."
+  },
+  {
+   "s": "'Where have you been?' is a present perfect question.",
+   "t": true,
+   "why": "Correct, it uses have + been."
+  },
+  {
+   "s": "'I haven't been to Dubai for 2011' is correct.",
+   "t": false,
+   "why": "2011 is a starting point, so we say 'since 2011'."
+  },
+  {
+   "s": "Car ownership increased by 10% between 2013 and 2014.",
+   "t": true,
+   "why": "Yes, that is the figure in the lesson."
+  },
+  {
+   "s": "'Have' is used with he, she and it in the present perfect.",
+   "t": false,
+   "why": "We use 'has' with he, she and it."
+  },
+  {
+   "s": "'I was stuck in traffic for half an hour' uses 'for' with a length of time.",
+   "t": true,
+   "why": "Well done, half an hour is a length of time."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: I've been waiting ___ 3 o'clock.",
+   "o": [
+    "since",
+    "for",
+    "during"
+   ],
+   "why": "3 o'clock is a starting point."
+  },
+  {
+   "q": "Complete: She has lived here ___ ten years.",
+   "o": [
+    "for",
+    "since",
+    "at"
+   ],
+   "why": "Ten years is a length of time."
+  },
+  {
+   "q": "Choose: I ___ English for six years.",
+   "o": [
+    "have been learning",
+    "am learning",
+    "learn"
+   ],
+   "why": "The action started in the past and continues."
+  },
+  {
+   "q": "Which sentence is present perfect continuous?",
+   "o": [
+    "I've been packing all morning.",
+    "I packed yesterday.",
+    "I will pack."
+   ],
+   "why": "have been + -ing"
+  },
+  {
+   "q": "Which time phrase goes with 'since'?",
+   "o": [
+    "last Monday",
+    "two weeks",
+    "an hour"
+   ],
+   "why": "'Last Monday' is a starting point."
+  },
+  {
+   "q": "Which time phrase goes with 'for'?",
+   "o": [
+    "a long time",
+    "2011",
+    "3 o'clock"
+   ],
+   "why": "'A long time' is a length of time."
+  },
+  {
+   "q": "What can the present perfect show?",
+   "o": [
+    "A recent action with a result now",
+    "A future plan",
+    "A fixed timetable"
+   ],
+   "why": "'I've lost my phone' means I don't have it now."
+  },
+  {
+   "q": "What is congestion?",
+   "o": [
+    "too much traffic on the roads",
+    "clean air",
+    "an empty road"
+   ],
+   "why": "Congestion makes journeys slow."
+  },
+  {
+   "q": "Which reply fits 'Have you packed yet?'",
+   "o": [
+    "I've been packing all morning!",
+    "I pack tomorrow yesterday.",
+    "Yes, I will packed."
+   ],
+   "why": "The reply uses the present perfect continuous."
+  },
+  {
+   "q": "Complete: How long ___ you been learning English?",
+   "o": [
+    "have",
+    "has",
+    "did"
+   ],
+   "why": "Use 'have' with 'you'."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "___ 2011",
+   "a": "since",
+   "d": [
+    "for",
+    "during",
+    "ago"
+   ]
+  },
+  {
+   "q": "___ half an hour",
+   "a": "for",
+   "d": [
+    "since",
+    "at",
+    "on"
+   ]
+  },
+  {
+   "q": "___ 3 o'clock",
+   "a": "since",
+   "d": [
+    "for",
+    "in",
+    "during"
+   ]
+  },
+  {
+   "q": "___ a long time",
+   "a": "for",
+   "d": [
+    "since",
+    "at",
+    "on"
+   ]
+  },
+  {
+   "q": "Rise in car ownership, 2013–14",
+   "a": "10%",
+   "d": [
+    "1%",
+    "20%",
+    "50%"
+   ]
+  },
+  {
+   "q": "I have ___ for an hour. (wait)",
+   "a": "been waiting",
+   "d": [
+    "been waited",
+    "be waiting",
+    "being waited"
+   ]
+  },
+  {
+   "q": "He ___ been working all day.",
+   "a": "has",
+   "d": [
+    "have",
+    "is",
+    "was"
+   ]
+  },
+  {
+   "q": "Too much traffic on the roads",
+   "a": "Congestion",
+   "d": [
+    "Holiday",
+    "Exhibition",
+    "Biofuel"
+   ]
+  },
+  {
+   "q": "Present perfect of 'lose' (I)",
+   "a": "have lost",
+   "d": [
+    "have losed",
+    "has lose",
+    "lost have"
+   ]
+  },
+  {
+   "q": "Where ___ you been?",
+   "a": "have",
+   "d": [
+    "has",
+    "did",
+    "are"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "When do we use 'for'?",
+   "o": [
+    "With a length of time",
+    "With a starting point",
+    "With a place",
+    "With a person"
+   ],
+   "why": "For example: for two hours."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is in the present perfect simple?",
+   "o": [
+    "I've lost my phone.",
+    "I've been waiting for an hour.",
+    "I lost my phone yesterday.",
+    "I'm losing my phone."
+   ],
+   "why": "have + past participle"
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the present perfect continuous often show?",
+   "o": [
+    "An action that started in the past and is still continuing",
+    "A finished action at a stated past time",
+    "A future plan",
+    "A daily habit"
+   ],
+   "why": "It focuses on an ongoing action."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which time phrases go with 'since'?",
+   "o": [
+    "3 o'clock, 2011, last week",
+    "two hours, a month, ages",
+    "an hour, three days, a year",
+    "a long time, ten minutes, a week"
+   ],
+   "why": "'Since' goes with starting points."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: Traffic ___ (flood) the city centre for months.",
+   "o": [
+    "has been flooding",
+    "is flooding",
+    "flood",
+    "have flooding"
+   ],
+   "why": "It started months ago and is still happening."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You started waiting at 2 o'clock and it is now 4 o'clock. Which sentence is correct?",
+   "o": [
+    "I've been waiting for two hours.",
+    "I've been waiting since two hours.",
+    "I wait for two hours.",
+    "I've been waiting since four o'clock."
+   ],
+   "why": "Two hours is a length of time, so use 'for'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete the dialogue: 'Have you studied for the exam?' '___'",
+   "o": [
+    "Yes, I've been studying all week!",
+    "Yes, I study since Monday.",
+    "No, I've been study.",
+    "Yes, I studying all week."
+   ],
+   "why": "have been + -ing is correct."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'has been growing' used to talk about car ownership?",
+   "o": [
+    "The growth began in the past and is still continuing",
+    "The growth stopped long ago",
+    "It is a future plan",
+    "It happened only once"
+   ],
+   "why": "The continuous form shows an ongoing change."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between 'I've been waiting for over an hour' and 'I've lost my phone'?",
+   "o": [
+    "The first focuses on how long an action has continued; the second on a result now",
+    "They mean the same",
+    "The first is about the future",
+    "The second is still continuing"
+   ],
+   "why": "Duration versus result."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Car ownership rose by 10% in one year. What problem might this cause?",
+   "o": [
+    "More congestion on the roads",
+    "Fewer cars in the city",
+    "Empty roads",
+    "Shorter journeys"
+   ],
+   "why": "More cars usually mean more traffic."
+  }
+ ]
+}

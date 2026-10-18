@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U4",
+ "lesson": "Unit 4 – Lesson 2: Story – The burglar",
+ "outcomes": [
+  "Understand the main events of the story 'The burglar'.",
+  "Use clues to work out who Alesha is.",
+  "Explain the mistake in the story and what to do next time."
+ ],
+ "tf": [
+  {
+   "s": "Lottie and her family are visiting friends.",
+   "t": true,
+   "why": "Yes! That's why Lottie isn't at home."
+  },
+  {
+   "s": "The person in the house is wearing jeans and a yellow jacket.",
+   "t": true,
+   "why": "Correct! Jeans and a yellow jacket."
+  },
+  {
+   "s": "The person in the house is eating some food.",
+   "t": false,
+   "why": "The person is drinking milk but isn't eating any food."
+  },
+  {
+   "s": "Fatma calls the police.",
+   "t": true,
+   "why": "Well done! Fatma calls the police."
+  },
+  {
+   "s": "The emergency number in the story is 999.",
+   "t": false,
+   "why": "In the story it is 9999."
+  },
+  {
+   "s": "The 'burglar' is really a boy.",
+   "t": false,
+   "why": "The 'burglar' is a girl."
+  },
+  {
+   "s": "Alesha is Lottie's cousin.",
+   "t": true,
+   "why": "Yes! She is in Lottie's family photo."
+  },
+  {
+   "s": "Bo goes into Lottie's house.",
+   "t": true,
+   "why": "Correct! Bo goes into the house."
+  },
+  {
+   "s": "Fatma and Sami know that Lottie's cousin is visiting.",
+   "t": false,
+   "why": "They don't know, so they make a mistake."
+  },
+  {
+   "s": "Alesha is scared in the house.",
+   "t": false,
+   "why": "Alesha isn't scared. It's a clue she isn't a burglar."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Why isn't Lottie at home?",
+   "o": [
+    "She's visiting friends.",
+    "She's at school.",
+    "She's at the police station."
+   ],
+   "why": "Lottie and her family are visiting friends."
+  },
+  {
+   "q": "What is the person drinking?",
+   "o": [
+    "milk",
+    "juice",
+    "water"
+   ],
+   "why": "The person drinks some milk."
+  },
+  {
+   "q": "What does the person pick up?",
+   "o": [
+    "the car keys",
+    "a phone",
+    "a book"
+   ],
+   "why": "He's picking up the car keys!"
+  },
+  {
+   "q": "Who calls the police?",
+   "o": [
+    "Fatma",
+    "Lottie",
+    "Alesha"
+   ],
+   "why": "Fatma calls the police."
+  },
+  {
+   "q": "Who is Alesha?",
+   "o": [
+    "Lottie's cousin",
+    "a burglar",
+    "a police officer"
+   ],
+   "why": "Alesha is Lottie's cousin."
+  },
+  {
+   "q": "What's the emergency number in the story?",
+   "o": [
+    "9999",
+    "1234",
+    "5555"
+   ],
+   "why": "Call 9999 now!"
+  },
+  {
+   "q": "What colour is the jacket?",
+   "o": [
+    "yellow",
+    "green",
+    "red"
+   ],
+   "why": "The person wears a yellow jacket."
+  },
+  {
+   "q": "Who is watching Lottie's house?",
+   "o": [
+    "Sami",
+    "Lottie",
+    "Alesha"
+   ],
+   "why": "Sami is watching Lottie's house."
+  },
+  {
+   "q": "A cousin is the child of your ...",
+   "o": [
+    "aunt or uncle",
+    "sister",
+    "grandson"
+   ],
+   "why": "Your aunt's or uncle's child is your cousin."
+  },
+  {
+   "q": "What should Fatma and Sami do next time?",
+   "o": [
+    "call Lottie's parents first",
+    "go into the house",
+    "run away"
+   ],
+   "why": "Asking first helps them avoid a mistake."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Emergency number in the story",
+   "a": "9999",
+   "d": [
+    "1111",
+    "5555",
+    "1234"
+   ]
+  },
+  {
+   "q": "Who is Alesha?",
+   "a": "Lottie's cousin",
+   "d": [
+    "Lottie's mum",
+    "a police officer",
+    "Bo's sister"
+   ]
+  },
+  {
+   "q": "Who calls the police?",
+   "a": "Fatma",
+   "d": [
+    "Lottie",
+    "Alesha",
+    "Bo"
+   ]
+  },
+  {
+   "q": "Who watches Lottie's house?",
+   "a": "Sami",
+   "d": [
+    "Alesha",
+    "Lottie",
+    "Bo"
+   ]
+  },
+  {
+   "q": "Colour of the jacket",
+   "a": "yellow",
+   "d": [
+    "green",
+    "blue",
+    "red"
+   ]
+  },
+  {
+   "q": "The person is drinking ...",
+   "a": "milk",
+   "d": [
+    "tea",
+    "juice",
+    "coffee"
+   ]
+  },
+  {
+   "q": "The person picks up the ...",
+   "a": "car keys",
+   "d": [
+    "phone",
+    "bag",
+    "book"
+   ]
+  },
+  {
+   "q": "The person opens the ...",
+   "a": "fridge",
+   "d": [
+    "oven",
+    "box",
+    "bag"
+   ]
+  },
+  {
+   "q": "The 'burglar' is a ...",
+   "a": "girl",
+   "d": [
+    "boy",
+    "man",
+    "dog"
+   ]
+  },
+  {
+   "q": "Who goes into the house?",
+   "a": "Bo",
+   "d": [
+    "Fatma",
+    "Sami",
+    "Lottie"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Where are Lottie and her family?",
+   "o": [
+    "They are visiting friends.",
+    "They are at the police station.",
+    "They are upstairs.",
+    "They are at school."
+   ],
+   "why": "They are visiting friends."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the 'burglar' wearing?",
+   "o": [
+    "jeans and a yellow jacket",
+    "a green jacket",
+    "a police hat",
+    "a white coat"
+   ],
+   "why": "Jeans and a yellow jacket."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Fatma say?",
+   "o": [
+    "We must call the police!",
+    "Let's eat some food!",
+    "I'm visiting friends!",
+    "Let's play cards!"
+   ],
+   "why": "We must call the police! Call 9999 now!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who is in Lottie's family photo?",
+   "o": [
+    "Alesha",
+    "Sami",
+    "Fatma",
+    "Bo"
+   ],
+   "why": "Alesha is in the family photo."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Fatma and Sami think there's a burglar in Lottie's ___ .",
+   "o": [
+    "house",
+    "car",
+    "school",
+    "garden"
+   ],
+   "why": "They think a burglar is in the house."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The burglar isn't a boy, it's a girl. She's Lottie's ___ .",
+   "o": [
+    "cousin",
+    "teacher",
+    "aunt",
+    "dentist"
+   ],
+   "why": "Alesha is Lottie's cousin."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence from the story.",
+   "o": [
+    "He isn't eating any food!",
+    "He aren't eating any food!",
+    "He not eating any food!",
+    "He isn't eat any food!"
+   ],
+   "why": "isn't + verb-ing is correct."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which clue shows Alesha is NOT a burglar?",
+   "o": [
+    "She isn't scared.",
+    "She is wearing jeans.",
+    "She is upstairs.",
+    "It is night."
+   ],
+   "why": "She isn't scared because she is family."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do Fatma and Sami make a mistake?",
+   "o": [
+    "They don't know Lottie's cousin is visiting.",
+    "They can't see the house.",
+    "They don't like Lottie.",
+    "They are at school."
+   ],
+   "why": "They don't ask first, so they think she is a burglar."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How do the children find out who Alesha is?",
+   "o": [
+    "They look at Lottie's family photo.",
+    "They call the dentist.",
+    "They read a book.",
+    "They ask a mechanic."
+   ],
+   "why": "Alesha is in Lottie's family photo."
+  }
+ ]
+}

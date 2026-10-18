@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 1: Our planet",
+ "lesson": "Lesson 10: Over to you! – Unit review",
+ "outcomes": [
+  "Review Unit 1 words about the environment and extreme weather.",
+  "Use modal verbs and reported questions and commands correctly.",
+  "Check your own progress in Unit 1."
+ ],
+ "tf": [
+  {
+   "s": "Harriet gave her birthday money to a panda charity.",
+   "t": true,
+   "why": "Yes, Harriet helped an endangered animal."
+  },
+  {
+   "s": "Faris made a statue from rubbish he found on the beach.",
+   "t": true,
+   "why": "Correct! He turned rubbish into art."
+  },
+  {
+   "s": "Leo said a sandstorm destroyed a lot of homes in his town.",
+   "t": false,
+   "why": "Leo talked about floods: the river water destroyed a lot of homes."
+  },
+  {
+   "s": "“We mustn’t destroy the rainforests” is correct.",
+   "t": true,
+   "why": "Great! Destroying rainforests is not allowed."
+  },
+  {
+   "s": "‘Do you save water?’ is reported as “I asked you if you saved water.”",
+   "t": true,
+   "why": "Yes, asked + if + past tense."
+  },
+  {
+   "s": "‘Don’t say the word!’ is reported as “I told you to don’t say the word.”",
+   "t": false,
+   "why": "We say I told you not to say the word."
+  },
+  {
+   "s": "Recycling and planting trees are problems for our planet.",
+   "t": false,
+   "why": "They are ways to help our planet."
+  },
+  {
+   "s": "A heatwave is a very hot period of weather.",
+   "t": true,
+   "why": "Right! Heatwaves bring very high temperatures."
+  },
+  {
+   "s": "“You needn’t switch off the lights” means it is not allowed to switch them off.",
+   "t": false,
+   "why": "Needn’t means it is not necessary."
+  },
+  {
+   "s": "The WOW! question of Unit 1 is “What can we do to protect our planet?”",
+   "t": true,
+   "why": "Yes, the whole unit answers this question."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who made a statue from rubbish found on the beach?",
+   "o": [
+    "Faris",
+    "Harriet",
+    "Leo"
+   ],
+   "why": "Faris made the statue."
+  },
+  {
+   "q": "Who gave birthday money to a panda charity?",
+   "o": [
+    "Harriet",
+    "Faris",
+    "Leo"
+   ],
+   "why": "Harriet helped the pandas."
+  },
+  {
+   "q": "Unscramble: nyclcoe",
+   "o": [
+    "cyclone",
+    "tornado",
+    "volcano"
+   ],
+   "why": "The letters make cyclone."
+  },
+  {
+   "q": "We ___ destroy the rainforests.",
+   "o": [
+    "mustn’t",
+    "must",
+    "needn’t"
+   ],
+   "why": "It is necessary not to destroy them."
+  },
+  {
+   "q": "Report ‘Spell the word cyclone aloud.’",
+   "o": [
+    "I told you to spell the word cyclone aloud.",
+    "I asked you if spell cyclone.",
+    "I told you spelling cyclone."
+   ],
+   "why": "Commands: told + object + to + verb."
+  },
+  {
+   "q": "Report ‘Do you recycle?’ (She asked me)",
+   "o": [
+    "She asked me if I recycled.",
+    "She asked me do I recycle.",
+    "She told me to recycled."
+   ],
+   "why": "Yes/no questions use if."
+  },
+  {
+   "q": "What destroyed homes in Leo’s town?",
+   "o": [
+    "river water from floods",
+    "a forest fire",
+    "a snowstorm"
+   ],
+   "why": "It rained so much that the river flooded homes."
+  },
+  {
+   "q": "Which is a way to protect our planet?",
+   "o": [
+    "use renewable energy",
+    "waste energy",
+    "destroy the rainforests"
+   ],
+   "why": "Renewable energy helps the planet."
+  },
+  {
+   "q": "We ___ plant trees. (the right thing to do)",
+   "o": [
+    "should",
+    "mustn’t",
+    "needn’t"
+   ],
+   "why": "Should gives advice."
+  },
+  {
+   "q": "Report: ‘How many letters are in the word drought?’",
+   "o": [
+    "I asked you how many letters were in the word drought.",
+    "I asked you how many letters are there in drought?",
+    "I told you how many letters in drought."
+   ],
+   "why": "Keep the question word and change are to were."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Unscramble: nyclcoe",
+   "a": "cyclone",
+   "d": [
+    "volcano",
+    "tornado",
+    "tsunami"
+   ]
+  },
+  {
+   "q": "Who helped a panda charity?",
+   "a": "Harriet",
+   "d": [
+    "Faris",
+    "Leo",
+    "Eliza"
+   ]
+  },
+  {
+   "q": "Who made a rubbish statue?",
+   "a": "Faris",
+   "d": [
+    "Leo",
+    "Harriet",
+    "Khalid"
+   ]
+  },
+  {
+   "q": "Who wrote about floods?",
+   "a": "Leo",
+   "d": [
+    "Faris",
+    "Harriet",
+    "Manar"
+   ]
+  },
+  {
+   "q": "Modal: not necessary",
+   "a": "needn’t",
+   "d": [
+    "mustn’t",
+    "must",
+    "should"
+   ]
+  },
+  {
+   "q": "Report yes/no questions with…",
+   "a": "if",
+   "d": [
+    "to",
+    "not",
+    "that"
+   ]
+  },
+  {
+   "q": "I told you ___ mime it.",
+   "a": "to",
+   "d": [
+    "if",
+    "not",
+    "what"
+   ]
+  },
+  {
+   "q": "Long time with no rain",
+   "a": "drought",
+   "d": [
+    "flood",
+    "hailstorm",
+    "heatwave"
+   ]
+  },
+  {
+   "q": "The planet is getting hotter",
+   "a": "global warming",
+   "d": [
+    "recycling",
+    "pollution",
+    "drought"
+   ]
+  },
+  {
+   "q": "Unit 1 title: Our…",
+   "a": "planet",
+   "d": [
+    "sports",
+    "money",
+    "school"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What did Leo say about floods in his town?",
+   "o": [
+    "It rained so much that the river water destroyed a lot of homes.",
+    "There was no rain for a long time.",
+    "The sand covered all the cars.",
+    "The snow closed the schools."
+   ],
+   "why": "Leo described a flood."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which modal verb means “it is the right thing to do”?",
+   "o": [
+    "should",
+    "mustn’t",
+    "needn’t",
+    "need to"
+   ],
+   "why": "Should gives advice."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is an extreme weather word?",
+   "o": [
+    "hailstorm",
+    "recycle",
+    "foundation",
+    "newsletter"
+   ],
+   "why": "A hailstorm is extreme weather."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who has helped an endangered animal?",
+   "o": [
+    "Harriet",
+    "Leo",
+    "Faris",
+    "Nobody"
+   ],
+   "why": "Harriet gave money to a panda charity."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Report: ‘Don’t say the word but mime it.’",
+   "o": [
+    "I told you not to say the word but to mime it.",
+    "I told you don’t say the word.",
+    "I asked you if you said the word.",
+    "I told you to not saying the word."
+   ],
+   "why": "told + you + not to + verb … but to + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best school rule.",
+   "o": [
+    "We mustn’t use mobile phones.",
+    "We mustn’t to use mobile phones.",
+    "We needn’t to use mobile phones.",
+    "We must using mobile phones."
+   ],
+   "why": "Mustn’t + base verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a sentence with a modal verb using the flashcard “plant trees”.",
+   "o": [
+    "We should plant trees.",
+    "We should to plant trees.",
+    "We planting should trees.",
+    "We should planted trees."
+   ],
+   "why": "Modal + base verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Faris’s statue a good idea for the planet?",
+   "o": [
+    "He used rubbish from the beach, so the beach is cleaner.",
+    "He bought new plastic for it.",
+    "He destroyed a tree to make it.",
+    "It uses a lot of energy."
+   ],
+   "why": "Using beach rubbish helps keep the beach clean."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair shows a problem and a solution from Unit 1?",
+   "o": [
+    "pollution – pick up rubbish",
+    "recycle – plant trees",
+    "global warming – waste energy",
+    "drought – destroy the rainforests"
+   ],
+   "why": "Picking up rubbish reduces pollution."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the mistake: “She asked me where did I live.”",
+   "o": [
+    "It should be “where I lived”.",
+    "“asked” should be “told”.",
+    "“where” should be “if”.",
+    "There is no mistake."
+   ],
+   "why": "Reported questions use normal word order."
+  }
+ ]
+}

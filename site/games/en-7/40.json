@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Learning club 1 – Lesson 3: Let’s practise! Carroll diagrams",
+ "outcomes": [
+  "Put machines in a Carroll diagram: makes heat / makes movement.",
+  "Make your own Carroll diagram to classify jobs.",
+  "Give clues to play Guess the job."
+ ],
+ "tf": [
+  {
+   "s": "A hair dryer makes heat and movement.",
+   "t": true,
+   "why": "Yes, it blows hot air."
+  },
+  {
+   "s": "A toaster makes movement.",
+   "t": false,
+   "why": "A toaster makes heat."
+  },
+  {
+   "s": "An escalator makes movement.",
+   "t": true,
+   "why": "Yes, the stairs move people up and down."
+  },
+  {
+   "s": "An oven makes heat.",
+   "t": true,
+   "why": "Yes, an oven cooks food with heat."
+  },
+  {
+   "s": "A comedian needs sports equipment to work.",
+   "t": false,
+   "why": "A comedian doesn't need music or sports equipment."
+  },
+  {
+   "s": "A food mixer makes movement.",
+   "t": true,
+   "why": "Yes, it turns and mixes food."
+  },
+  {
+   "s": "A Carroll diagram for two yes/no questions has four boxes.",
+   "t": true,
+   "why": "Yes: yes/yes, yes/no, no/yes, no/no."
+  },
+  {
+   "s": "We can use a Carroll diagram to classify jobs.",
+   "t": true,
+   "why": "Yes, for example outside job / not an outside job."
+  },
+  {
+   "s": "A zookeeper doesn't work with animals.",
+   "t": false,
+   "why": "A zookeeper works with animals every day."
+  },
+  {
+   "s": "In a Carroll diagram, a machine that makes heat and movement goes in the 'neither' box.",
+   "t": false,
+   "why": "It goes in the box for both heat and movement."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which is a category in the machines diagram?",
+   "o": [
+    "makes movement",
+    "makes jokes",
+    "makes friends"
+   ],
+   "why": "The machines are sorted by heat and movement."
+  },
+  {
+   "q": "Which machine do you use to dry your hair?",
+   "o": [
+    "a hair dryer",
+    "a blender",
+    "an escalator"
+   ],
+   "why": "A hair dryer blows warm air."
+  },
+  {
+   "q": "Does a blender make heat?",
+   "o": [
+    "No, it makes movement.",
+    "Yes, only heat.",
+    "Yes, heat and light."
+   ],
+   "why": "A blender spins to mix food."
+  },
+  {
+   "q": "Which machine makes heat?",
+   "o": [
+    "a toaster",
+    "an escalator",
+    "a food mixer"
+   ],
+   "why": "A toaster heats bread."
+  },
+  {
+   "q": "Which machine makes movement but not heat?",
+   "o": [
+    "a food mixer",
+    "a toaster",
+    "a hair dryer"
+   ],
+   "why": "A food mixer just turns."
+  },
+  {
+   "q": "Clue: You work inside and help people find books. Who?",
+   "o": [
+    "a librarian",
+    "a farmer",
+    "a zookeeper"
+   ],
+   "why": "Librarians work in libraries."
+  },
+  {
+   "q": "Which is a yes/no question to sort jobs?",
+   "o": [
+    "Is it an outside job?",
+    "What is your name?",
+    "How old are you?"
+   ],
+   "why": "The answer is yes or no."
+  },
+  {
+   "q": "Which is a good category to classify jobs?",
+   "o": [
+    "works with animals / doesn't work with animals",
+    "red / blue",
+    "Monday / Tuesday"
+   ],
+   "why": "It gives a clear yes/no question."
+  },
+  {
+   "q": "Clue: You work outside and grow food. Who?",
+   "o": [
+    "a farmer",
+    "a comedian",
+    "a pilot"
+   ],
+   "why": "Farmers grow food outside."
+  },
+  {
+   "q": "A Carroll diagram sorts things using …",
+   "o": [
+    "yes/no categories",
+    "a story",
+    "a timeline"
+   ],
+   "why": "Each box answers yes or no."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Makes heat AND movement",
+   "a": "hair dryer",
+   "d": [
+    "toaster",
+    "blender",
+    "escalator"
+   ]
+  },
+  {
+   "q": "Makes heat, no movement",
+   "a": "toaster",
+   "d": [
+    "blender",
+    "escalator",
+    "food mixer"
+   ]
+  },
+  {
+   "q": "Moves people up and down",
+   "a": "escalator",
+   "d": [
+    "toaster",
+    "hair dryer",
+    "blender"
+   ]
+  },
+  {
+   "q": "Performer who needs music",
+   "a": "singer",
+   "d": [
+    "comedian",
+    "footballer",
+    "farmer"
+   ]
+  },
+  {
+   "q": "A machine makes heat or …",
+   "a": "movement",
+   "d": [
+    "music",
+    "jokes",
+    "books"
+   ]
+  },
+  {
+   "q": "Needs no music or sports kit",
+   "a": "comedian",
+   "d": [
+    "footballer",
+    "singer",
+    "drummer"
+   ]
+  },
+  {
+   "q": "Works outside with animals",
+   "a": "farmer",
+   "d": [
+    "comedian",
+    "librarian",
+    "pilot"
+   ]
+  },
+  {
+   "q": "Diagram for sorting jobs",
+   "a": "Carroll diagram",
+   "d": [
+    "timeline",
+    "fact file",
+    "email"
+   ]
+  },
+  {
+   "q": "Mixes food by turning",
+   "a": "food mixer",
+   "d": [
+    "toaster",
+    "hair dryer",
+    "escalator"
+   ]
+  },
+  {
+   "q": "Game with job clues",
+   "a": "Guess the job",
+   "d": [
+    "Fly swat",
+    "Stop/Go",
+    "Travel snap"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What are the two categories in the machines diagram?",
+   "o": [
+    "makes heat / makes movement",
+    "makes light / makes sound",
+    "big / small",
+    "old / new"
+   ],
+   "why": "The machines are sorted by heat and movement."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which machine makes both heat and movement?",
+   "o": [
+    "a hair dryer",
+    "a toaster",
+    "a blender",
+    "an escalator"
+   ],
+   "why": "Hot air moves out of a hair dryer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two categories could classify jobs?",
+   "o": [
+    "outside job / works with animals",
+    "hot / cold food",
+    "January / July",
+    "light / heavy bags"
+   ],
+   "why": "These are yes/no questions about jobs."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which machine makes movement only?",
+   "o": [
+    "an escalator",
+    "a toaster",
+    "a hair dryer",
+    "an oven"
+   ],
+   "why": "An escalator moves but doesn't heat."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a clue for Guess the job: a zookeeper.",
+   "o": [
+    "It's an outside job and you work with animals.",
+    "It's an inside job and you make bread.",
+    "You fly planes.",
+    "You tell jokes on a stage."
+   ],
+   "why": "Zookeepers work outside with animals."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Where does a comedian go in the performers diagram?",
+   "o": [
+    "doesn't need music / doesn't need sports equipment",
+    "needs music / needs sports equipment",
+    "needs music / doesn't need sports equipment",
+    "doesn't need music / needs sports equipment"
+   ],
+   "why": "A comedian needs neither."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A footballer needs sports equipment but doesn't need music. Which box?",
+   "o": [
+    "needs sports equipment / doesn't need music",
+    "needs both",
+    "needs neither",
+    "needs music / doesn't need sports equipment"
+   ],
+   "why": "Yes for sports kit, no for music."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does a hair dryer go in a different box from a toaster?",
+   "o": [
+    "It makes movement as well as heat.",
+    "It makes no heat.",
+    "It is bigger.",
+    "It makes music."
+   ],
+   "why": "The toaster only makes heat."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which machines go in the same box?",
+   "o": [
+    "a blender and an escalator",
+    "a toaster and a blender",
+    "a hair dryer and an escalator",
+    "a toaster and an escalator"
+   ],
+   "why": "Both make movement but not heat."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your group's job diagram has one box with only one job. What does this tell you?",
+   "o": [
+    "Only that job has those two features.",
+    "The diagram is wrong.",
+    "All jobs are the same.",
+    "That job is the best job."
+   ],
+   "why": "Each box shows a mix of yes/no features."
+  }
+ ]
+}

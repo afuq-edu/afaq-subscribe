@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 1: Our planet",
+ "lesson": "Lesson 2: WOW! Team Talk – Saving energy",
+ "outcomes": [
+  "Understand a dialogue about a school energy-saving competition.",
+  "React with Brilliant!, I know! and Me too!",
+  "Suggest ideas to save energy at school."
+ ],
+ "tf": [
+  {
+   "s": "The competition is to see which school can save the most energy.",
+   "t": true,
+   "why": "Yes, the schools compete to save energy."
+  },
+  {
+   "s": "The children are going to close doors to keep the classroom warm.",
+   "t": false,
+   "why": "They close doors to keep the classroom cool."
+  },
+  {
+   "s": "The children already have recycling boxes for paper.",
+   "t": true,
+   "why": "Right! They have paper recycling boxes."
+  },
+  {
+   "s": "Eric wants to throw away the plastic bottles.",
+   "t": false,
+   "why": "Eric says they shouldn’t throw them away."
+  },
+  {
+   "s": "Ali tells Eric to turn off the computer.",
+   "t": true,
+   "why": "Yes, he hopes Eric isn’t going to forget."
+  },
+  {
+   "s": "The children are going to put their ideas on the WOW! website.",
+   "t": true,
+   "why": "Correct! Their ideas go on the WOW! website."
+  },
+  {
+   "s": "We say “Me too!” when we do or feel the same thing.",
+   "t": true,
+   "why": "Great! Me too! shows you are the same."
+  },
+  {
+   "s": "Turning off computers wastes energy.",
+   "t": false,
+   "why": "Turning off computers saves energy."
+  },
+  {
+   "s": "“Brilliant!” is a sad reaction to bad news.",
+   "t": false,
+   "why": "Brilliant! shows you think something is great."
+  },
+  {
+   "s": "Switching off lights is one of the children’s ideas to save energy.",
+   "t": true,
+   "why": "Yes, switching off lights saves energy."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Why are they going to close doors?",
+   "o": [
+    "to keep the classroom cool",
+    "to keep the students inside",
+    "to stop the noise"
+   ],
+   "why": "Closed doors keep the cool air in."
+  },
+  {
+   "q": "What recycling boxes do they already have?",
+   "o": [
+    "boxes for paper",
+    "boxes for glass",
+    "boxes for food"
+   ],
+   "why": "They already have paper recycling boxes."
+  },
+  {
+   "q": "Where will they put their ideas?",
+   "o": [
+    "on the WOW! website",
+    "in a diary",
+    "on the classroom door"
+   ],
+   "why": "They will share ideas on the WOW! website."
+  },
+  {
+   "q": "Which expression shows you do the same thing?",
+   "o": [
+    "Me too!",
+    "Brilliant!",
+    "I know!"
+   ],
+   "why": "Me too! means the same is true for me."
+  },
+  {
+   "q": "Reply: “I came first in the running race.”",
+   "o": [
+    "Brilliant!",
+    "Me too!",
+    "I know!"
+   ],
+   "why": "Brilliant! shows you are happy for your friend."
+  },
+  {
+   "q": "A: How can we use less paper? B: ___! We can do our homework online.",
+   "o": [
+    "I know",
+    "Me too",
+    "Brilliant"
+   ],
+   "why": "I know! is used here to give a good idea."
+  },
+  {
+   "q": "Reply: “I’m going to the park this afternoon.”",
+   "o": [
+    "Me too!",
+    "Brilliant!",
+    "I know!"
+   ],
+   "why": "Me too! means you are going as well."
+  },
+  {
+   "q": "What should they do with the plastic bottles?",
+   "o": [
+    "not throw them away",
+    "throw them away",
+    "break them"
+   ],
+   "why": "Eric says they shouldn’t throw them away."
+  },
+  {
+   "q": "Which action saves energy in class?",
+   "o": [
+    "turn off computers",
+    "leave lights on",
+    "open the fridge"
+   ],
+   "why": "Turning off computers saves electricity."
+  },
+  {
+   "q": "What is the competition about?",
+   "o": [
+    "saving energy",
+    "running fast",
+    "shopping online"
+   ],
+   "why": "Schools compete to save the most energy."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Reply to good news",
+   "a": "Brilliant!",
+   "d": [
+    "Oh no!",
+    "Sorry!",
+    "Goodbye!"
+   ]
+  },
+  {
+   "q": "Say you do the same thing",
+   "a": "Me too!",
+   "d": [
+    "Brilliant!",
+    "Excuse me!",
+    "Sorry!"
+   ]
+  },
+  {
+   "q": "Close doors to keep the room…",
+   "a": "cool",
+   "d": [
+    "dirty",
+    "noisy",
+    "dark"
+   ]
+  },
+  {
+   "q": "Recycling boxes they have for…",
+   "a": "paper",
+   "d": [
+    "glass",
+    "food",
+    "metal"
+   ]
+  },
+  {
+   "q": "Ideas go on the WOW! …",
+   "a": "website",
+   "d": [
+    "diary",
+    "poster",
+    "notebook"
+   ]
+  },
+  {
+   "q": "___ off the lights",
+   "a": "switch",
+   "d": [
+    "pick",
+    "throw",
+    "close"
+   ]
+  },
+  {
+   "q": "___ off computers",
+   "a": "turn",
+   "d": [
+    "pick",
+    "throw",
+    "plant"
+   ]
+  },
+  {
+   "q": "Don’t throw away plastic…",
+   "a": "bottles",
+   "d": [
+    "trees",
+    "doors",
+    "lights"
+   ]
+  },
+  {
+   "q": "A contest between schools",
+   "a": "competition",
+   "d": [
+    "newsletter",
+    "website",
+    "dialogue"
+   ]
+  },
+  {
+   "q": "Ali reminds Eric about the…",
+   "a": "computer",
+   "d": [
+    "bottle",
+    "door",
+    "window"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What competition are the children going to take part in?",
+   "o": [
+    "A competition to see which school can save the most energy",
+    "A running race",
+    "A shopping competition",
+    "A writing competition"
+   ],
+   "why": "It is an energy-saving competition."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who tells Eric to turn off the computer?",
+   "o": [
+    "Ali",
+    "Manar",
+    "Rosie",
+    "Eric’s teacher"
+   ],
+   "why": "Ali reminds Eric to turn it off."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is NOT one of the children’s ideas?",
+   "o": [
+    "Leave the lights on all day",
+    "Switch off lights",
+    "Turn off computers",
+    "Close doors"
+   ],
+   "why": "The children want to save energy, not waste it."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does “Brilliant!” show?",
+   "o": [
+    "You think something is great.",
+    "You are angry.",
+    "You do the same thing.",
+    "You don’t understand."
+   ],
+   "why": "Brilliant! is a happy reaction."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: “I love reading WOW! Magazine.” B: “___ I read it every week.”",
+   "o": [
+    "Me too!",
+    "Brilliant!",
+    "Oh no!",
+    "Sorry!"
+   ],
+   "why": "B does the same thing, so Me too! fits."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: “I recycled all our plastic bottles.” B: “___”",
+   "o": [
+    "Brilliant!",
+    "Me too, I’m sad.",
+    "I know! We can’t.",
+    "Sorry!"
+   ],
+   "why": "Brilliant! praises a good action."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: “How can we save water?” B: “___ We can have quick showers.”",
+   "o": [
+    "I know!",
+    "Me too!",
+    "Brilliant!",
+    "Goodbye!"
+   ],
+   "why": "I know! introduces your idea."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Ali remind Eric to turn off the computer?",
+   "o": [
+    "He hopes Eric isn’t going to forget, so they can save energy.",
+    "He wants Eric to play a game.",
+    "The computer is broken.",
+    "He wants to use the computer himself."
+   ],
+   "why": "Turning off computers is part of their energy-saving plan."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which new idea best fits the school energy competition?",
+   "o": [
+    "Use the stairs instead of the lift.",
+    "Leave the computers on at night.",
+    "Throw away plastic bottles.",
+    "Leave the lights on after school."
+   ],
+   "why": "Using the stairs saves electricity."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Eric say they shouldn’t throw away the plastic bottles?",
+   "o": [
+    "They can recycle them to help the planet.",
+    "They want to sell them.",
+    "The bottles are new.",
+    "The bin is full."
+   ],
+   "why": "Plastic bottles can be recycled instead of thrown away."
+  }
+ ]
+}

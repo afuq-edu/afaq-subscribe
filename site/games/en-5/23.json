@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 2 – Then and now",
+ "lesson": "Lesson 10: Get ready for A1 Movers",
+ "outcomes": [
+  "Say which picture is different and explain why.",
+  "Read the text and all the options carefully before choosing.",
+  "Answer personal questions with full sentences and extra information."
+ ],
+ "tf": [
+  {
+   "s": "In Reading and Writing Part 3, read the whole text and all the options before you choose.",
+   "t": true,
+   "why": "Reading everything first helps you choose the right word."
+  },
+  {
+   "s": "In Listening Part 3, you will need all the pictures.",
+   "t": false,
+   "why": "You won't need all the pictures, so check each one carefully."
+  },
+  {
+   "s": "In the exam, the answers are often very similar, so read each one carefully.",
+   "t": true,
+   "why": "Similar answers can trick you, so read slowly."
+  },
+  {
+   "s": "To explain your choice, you can say: This picture is different because …",
+   "t": true,
+   "why": "This sentence helps you give a reason."
+  },
+  {
+   "s": "\"Yes, I painted a picture.\" is a good answer to \"Did you make a rocket?\"",
+   "t": false,
+   "why": "The answer must be about the rocket, for example: Yes, but I didn't finish it."
+  },
+  {
+   "s": "When you tell a story from pictures, you can use first, then, next and finally.",
+   "t": true,
+   "why": "These words put the story in order."
+  },
+  {
+   "s": "In Speaking Part 4, one word like \"Yes\" is the best answer.",
+   "t": false,
+   "why": "Give a full sentence and add extra information."
+  },
+  {
+   "s": "You need electricity to write a letter.",
+   "t": false,
+   "why": "You don't need electricity to write a letter. That is why it is different from a computer."
+  },
+  {
+   "s": "\"No, I couldn't. My mum tied them for me.\" is a good answer to \"Could you tie your shoelaces when you were four?\"",
+   "t": true,
+   "why": "It answers the question and adds extra information."
+  },
+  {
+   "s": "We use \"which\" for people, for example: Juma is the boy which will buy a phone case.",
+   "t": false,
+   "why": "We use \"who\" for people: Juma is the boy who will buy a phone case."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: I use my computer to send ______.",
+   "o": [
+    "emails",
+    "rockets",
+    "shoelaces"
+   ],
+   "why": "We send emails on a computer."
+  },
+  {
+   "q": "Complete: I want to win a ______.",
+   "o": [
+    "race",
+    "letter",
+    "tablet"
+   ],
+   "why": "You can win a race."
+  },
+  {
+   "q": "Complete: Sometimes I listen to ______ on my computer.",
+   "o": [
+    "music",
+    "a comet",
+    "a bag"
+   ],
+   "why": "You can listen to music on a computer."
+  },
+  {
+   "q": "Complete: Sultan wants to go to the shop ______ sells necklaces.",
+   "o": [
+    "which",
+    "who",
+    "where"
+   ],
+   "why": "We use \"which\" for things, like a shop."
+  },
+  {
+   "q": "Complete: The greengrocer's ______ bananas and other fruit.",
+   "o": [
+    "sells",
+    "sell",
+    "selling"
+   ],
+   "why": "The greengrocer's is one shop, so we say \"sells\"."
+  },
+  {
+   "q": "Malik brings the bag. What is the best answer?",
+   "o": [
+    "Thank you, Malik!",
+    "Yes, I am.",
+    "No, I didn't."
+   ],
+   "why": "Malik helped, so we thank him."
+  },
+  {
+   "q": "Did you write any letters last month?",
+   "o": [
+    "No, I didn't, but I sent some emails.",
+    "No, I won't.",
+    "Yes, I do."
+   ],
+   "why": "A past question needs a past answer: I didn't / I sent."
+  },
+  {
+   "q": "Which word do we use at the end of a story?",
+   "o": [
+    "finally",
+    "first",
+    "then"
+   ],
+   "why": "\"Finally\" tells us it is the last part."
+  },
+  {
+   "q": "Complete: Juma, Sultan and Sabah ______ go to the shops to buy their grandma a present.",
+   "o": [
+    "have to",
+    "has to",
+    "having to"
+   ],
+   "why": "With three people we say \"have to\"."
+  },
+  {
+   "q": "How many times do you usually hear the audio in a listening task?",
+   "o": [
+    "twice",
+    "once",
+    "five times"
+   ],
+   "why": "You hear it twice, so you can check your answers."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Odd one out: computer, tablet, phone, letter",
+   "a": "letter",
+   "d": [
+    "computer",
+    "tablet",
+    "phone"
+   ]
+  },
+  {
+   "q": "First word to start a story",
+   "a": "first",
+   "d": [
+    "finally",
+    "next",
+    "then"
+   ]
+  },
+  {
+   "q": "Relative word for people",
+   "a": "who",
+   "d": [
+    "which",
+    "where",
+    "when"
+   ]
+  },
+  {
+   "q": "Relative word for places",
+   "a": "where",
+   "d": [
+    "who",
+    "which",
+    "what"
+   ]
+  },
+  {
+   "q": "Planets in the solar system",
+   "a": "eight",
+   "d": [
+    "six",
+    "ten",
+    "twelve"
+   ]
+  },
+  {
+   "q": "Past of \"can\"",
+   "a": "could",
+   "d": [
+    "can",
+    "will",
+    "have to"
+   ]
+  },
+  {
+   "q": "Will you go? (no)",
+   "a": "No, I won't.",
+   "d": [
+    "No, I don't.",
+    "No, I didn't.",
+    "No, I'm not."
+   ]
+  },
+  {
+   "q": "Shop that sells fruit",
+   "a": "greengrocer's",
+   "d": [
+    "bookshop",
+    "toy shop",
+    "shoe shop"
+   ]
+  },
+  {
+   "q": "Past of \"send\"",
+   "a": "sent",
+   "d": [
+    "sended",
+    "sends",
+    "sending"
+   ]
+  },
+  {
+   "q": "Past of \"write\"",
+   "a": "wrote",
+   "d": [
+    "writed",
+    "writes",
+    "writing"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the exam tip for Reading and Writing Part 3?",
+   "o": [
+    "Read the text and all the options before choosing.",
+    "Choose the first word you see.",
+    "Read only the first sentence.",
+    "Write the words before you read."
+   ],
+   "why": "Reading everything first helps you choose well."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence do we use in Speaking Part 3?",
+   "o": [
+    "This picture is different because …",
+    "This picture is my favourite.",
+    "I can't see the picture.",
+    "The picture is big."
+   ],
+   "why": "We say which picture is different and give a reason."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which words help you tell a story from pictures?",
+   "o": [
+    "first, then, next, finally",
+    "who, which, where",
+    "will, won't",
+    "big, bigger, biggest"
+   ],
+   "why": "These words show the order of the story."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How should you answer the questions in Speaking Part 4?",
+   "o": [
+    "With full sentences and extra information",
+    "With one word only",
+    "With a question",
+    "With no words"
+   ],
+   "why": "Full answers show what you can say."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Malik: Will you go to Space Club this afternoon? Choose the best answer.",
+   "o": [
+    "No, I don't think I'll go today. I've got a lot of homework.",
+    "No, I didn't go yesterday.",
+    "Yes, I went there last week.",
+    "Yes, it is a club."
+   ],
+   "why": "The question is about the future, so the answer uses will (I'll)."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Did you make a rocket last week at Space Club? Choose the best answer.",
+   "o": [
+    "Yes, but I didn't finish it.",
+    "Yes, I painted a picture.",
+    "Yes, I made a comet.",
+    "Yes, I will make it."
+   ],
+   "why": "Only this answer talks about the rocket in the past."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the words: Juma is the boy ___ will buy a phone case. Sultan wants the shop ___ sells necklaces.",
+   "o": [
+    "who / which",
+    "which / who",
+    "where / who",
+    "who / where"
+   ],
+   "why": "\"Who\" is for people and \"which\" is for things."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Computer, tablet, mobile phone, letter. Why is the letter different?",
+   "o": [
+    "You don't need electricity to write it.",
+    "It is the newest one.",
+    "You can play games on it.",
+    "It has got a screen."
+   ],
+   "why": "The other three need electricity, but a letter doesn't."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it important to check every picture in Listening Part 3?",
+   "o": [
+    "You won't need all the pictures, and some are very similar.",
+    "All the pictures are the same.",
+    "You must use every picture.",
+    "The pictures are not important."
+   ],
+   "why": "Some pictures are not answers, so check carefully."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Could you tie your shoelaces when you were four? Which is the best Speaking Part 4 answer?",
+   "o": [
+    "No, I couldn't. My mum tied them for me.",
+    "No.",
+    "Yes, I can.",
+    "No, I won't."
+   ],
+   "why": "It uses the past and adds extra information."
+  }
+ ]
+}

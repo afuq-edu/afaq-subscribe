@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 2: Adventure sports",
+ "lesson": "Lesson 1: Vocabulary – Extreme sports",
+ "outcomes": [
+  "Learn and say 12 extreme sports words.",
+  "Find which sports the WOW! Team talk about in the blog.",
+  "Sort sports by place and equipment and talk about sports you’d like to try."
+ ],
+ "tf": [
+  {
+   "s": "Diving is a sport you do under the water.",
+   "t": true,
+   "why": "Yes, divers go under the water with special equipment."
+  },
+  {
+   "s": "Manar goes rock climbing at her local sports centre.",
+   "t": true,
+   "why": "Correct! She climbs at the sports centre."
+  },
+  {
+   "s": "Rosie loves all extreme sports.",
+   "t": false,
+   "why": "Rosie doesn’t usually like extreme sports."
+  },
+  {
+   "s": "Rosie was scared at first when horse riding because the horse looked so big.",
+   "t": true,
+   "why": "Right! The big horse scared her at first."
+  },
+  {
+   "s": "Eric talks about go-karting in the WOW! Blog.",
+   "t": true,
+   "why": "Yes, Eric’s sport is go-karting."
+  },
+  {
+   "s": "Paragliding is a sport with wheels.",
+   "t": false,
+   "why": "Paragliding is up high in the air."
+  },
+  {
+   "s": "Abseiling means going down a rope on a cliff.",
+   "t": true,
+   "why": "Great! You go down a cliff on a rope."
+  },
+  {
+   "s": "Caving is a sport you do in the sea.",
+   "t": false,
+   "why": "Caving is a sport you do in a cave."
+  },
+  {
+   "s": "Beach volleyball is a water sport.",
+   "t": false,
+   "why": "Beach volleyball is a sand sport."
+  },
+  {
+   "s": "Mountain biking means riding a bike on city roads.",
+   "t": false,
+   "why": "Mountain biking is riding a bike on mountain paths."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which sport do you do on a board on big waves?",
+   "o": [
+    "surfboarding",
+    "sandboarding",
+    "abseiling"
+   ],
+   "why": "Surfboarding is on waves in the sea."
+  },
+  {
+   "q": "Which sport needs a small fast car on a track?",
+   "o": [
+    "go-karting",
+    "horse riding",
+    "diving"
+   ],
+   "why": "Go-karting uses small cars."
+  },
+  {
+   "q": "Who doesn’t usually like extreme sports?",
+   "o": [
+    "Rosie",
+    "Ali",
+    "Eric"
+   ],
+   "why": "Rosie said she doesn’t usually like them."
+  },
+  {
+   "q": "Which sport is up high?",
+   "o": [
+    "paragliding",
+    "diving",
+    "go-karting"
+   ],
+   "why": "Paragliders fly high in the air."
+  },
+  {
+   "q": "Which sport has wheels?",
+   "o": [
+    "motor racing",
+    "caving",
+    "surfboarding"
+   ],
+   "why": "Motor racing uses cars with wheels."
+  },
+  {
+   "q": "Which sport is in the water, pulled by a boat?",
+   "o": [
+    "water skiing",
+    "sandboarding",
+    "rock climbing"
+   ],
+   "why": "A boat pulls you on skis."
+  },
+  {
+   "q": "Which sport do you do on sand dunes?",
+   "o": [
+    "sandboarding",
+    "surfboarding",
+    "diving"
+   ],
+   "why": "Sandboarding is on the sand."
+  },
+  {
+   "q": "What sport does Manar do?",
+   "o": [
+    "rock climbing",
+    "horse riding",
+    "go-karting"
+   ],
+   "why": "Manar goes rock climbing."
+  },
+  {
+   "q": "Beach volleyball is a ___ sport.",
+   "o": [
+    "sand",
+    "water",
+    "indoor"
+   ],
+   "why": "It is played on sand."
+  },
+  {
+   "q": "Where is the stress in “paragliding”?",
+   "o": [
+    "para-GLI-ding",
+    "PA-ragliding",
+    "paragli-DING"
+   ],
+   "why": "We stress the GLI in paragliding."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Sport under the water",
+   "a": "diving",
+   "d": [
+    "caving",
+    "abseiling",
+    "paragliding"
+   ]
+  },
+  {
+   "q": "Sport in a cave",
+   "a": "caving",
+   "d": [
+    "diving",
+    "surfboarding",
+    "go-karting"
+   ]
+  },
+  {
+   "q": "Down a rope on a cliff",
+   "a": "abseiling",
+   "d": [
+    "diving",
+    "go-karting",
+    "water skiing"
+   ]
+  },
+  {
+   "q": "A bike on mountain paths",
+   "a": "mountain biking",
+   "d": [
+    "motor racing",
+    "go-karting",
+    "horse riding"
+   ]
+  },
+  {
+   "q": "Board on big waves",
+   "a": "surfboarding",
+   "d": [
+    "sandboarding",
+    "caving",
+    "abseiling"
+   ]
+  },
+  {
+   "q": "Flying with a big wing",
+   "a": "paragliding",
+   "d": [
+    "diving",
+    "caving",
+    "go-karting"
+   ]
+  },
+  {
+   "q": "Eric’s sport in the blog",
+   "a": "go-karting",
+   "d": [
+    "horse riding",
+    "rock climbing",
+    "caving"
+   ]
+  },
+  {
+   "q": "Rosie’s sport in the blog",
+   "a": "horse riding",
+   "d": [
+    "go-karting",
+    "diving",
+    "motor racing"
+   ]
+  },
+  {
+   "q": "Manar’s sport in the blog",
+   "a": "rock climbing",
+   "d": [
+    "water skiing",
+    "go-karting",
+    "surfboarding"
+   ]
+  },
+  {
+   "q": "Who doesn’t like extreme sports?",
+   "a": "Rosie",
+   "d": [
+    "Ali",
+    "Eric",
+    "Manar"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which sports does Ali talk about?",
+   "o": [
+    "Water skiing, surfboarding, paragliding and diving",
+    "Go-karting only",
+    "Horse riding only",
+    "Rock climbing and caving"
+   ],
+   "why": "Ali talks about four sports."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why was Rosie scared at first?",
+   "o": [
+    "The horse looked so big.",
+    "The water was too deep.",
+    "The car was too fast.",
+    "The cliff was too high."
+   ],
+   "why": "Rosie was scared of the big horse."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group of sports all need something with wheels?",
+   "o": [
+    "go-karting, motor racing, mountain biking",
+    "diving, caving, abseiling",
+    "surfboarding, water skiing, diving",
+    "paragliding, rock climbing, abseiling"
+   ],
+   "why": "Karts, cars and bikes have wheels."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group of sports are usually up high?",
+   "o": [
+    "paragliding, rock climbing, abseiling",
+    "diving, water skiing, surfboarding",
+    "go-karting, motor racing, horse riding",
+    "caving, diving, sandboarding"
+   ],
+   "why": "These sports happen high above the ground."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Clues: water, a boat pulls you, skis. Which sport is it?",
+   "o": [
+    "water skiing",
+    "diving",
+    "surfboarding",
+    "sandboarding"
+   ],
+   "why": "A boat pulls you on skis on the water."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best answer to “Would you like to try paragliding?”",
+   "o": [
+    "Yes, because it looks exciting.",
+    "Yes, I played it yesterday at school.",
+    "No, paragliding is a fruit.",
+    "Yes, I’m paragliding."
+   ],
+   "why": "A good answer gives a clear reason."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence tells where and who with?",
+   "o": [
+    "I play football in the park with my brother.",
+    "I like football.",
+    "Football is a sport.",
+    "Do you like football?"
+   ],
+   "why": "It says the place (park) and the person (brother)."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sport is the odd one out?",
+   "o": [
+    "horse riding",
+    "diving",
+    "surfboarding",
+    "water skiing"
+   ],
+   "why": "The others are water sports."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sports probably need a helmet?",
+   "o": [
+    "rock climbing and go-karting",
+    "diving and surfboarding",
+    "beach volleyball and swimming",
+    "diving and water skiing"
+   ],
+   "why": "Helmets protect your head in climbing and racing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Rosie doesn’t usually like extreme sports, but she tried horse riding. What does this show?",
+   "o": [
+    "You can try something new even if you feel scared.",
+    "Rosie loves all sports.",
+    "Horse riding is not a sport.",
+    "Rosie wants to go diving."
+   ],
+   "why": "Trying new things takes courage."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Lesson 6: Culture and Project – National animals",
+ "outcomes": [
+  "Find facts about the ring-tailed lemur, the Arabian oryx and the Komodo dragon.",
+  "Compare national animals of different countries.",
+  "Write notes about national animals and use but to show contrast."
+ ],
+ "tf": [
+  {
+   "s": "The Arabian oryx is the national animal of Oman.",
+   "t": true,
+   "why": "Yes, the oryx is Oman's national animal."
+  },
+  {
+   "s": "The ring-tailed lemur is the national animal of Madagascar.",
+   "t": true,
+   "why": "Yes, lemurs come from Madagascar."
+  },
+  {
+   "s": "The Arabian oryx has black fur.",
+   "t": false,
+   "why": "The oryx has white fur."
+  },
+  {
+   "s": "Ring-tailed lemurs live in the wild in Oman.",
+   "t": false,
+   "why": "They live in Madagascar."
+  },
+  {
+   "s": "The Arabian oryx must drink water every day.",
+   "t": false,
+   "why": "It gets the water it needs from its food."
+  },
+  {
+   "s": "The Komodo dragon is the national animal of Indonesia.",
+   "t": true,
+   "why": "Yes, it lives in Indonesia."
+  },
+  {
+   "s": "Some Komodo dragons can be three metres long.",
+   "t": true,
+   "why": "Yes, it is the largest lizard."
+  },
+  {
+   "s": "The Komodo dragon is a small bird.",
+   "t": false,
+   "why": "It is a very big lizard."
+  },
+  {
+   "s": "We use but to join two ideas that are different.",
+   "t": true,
+   "why": "Yes, but shows contrast."
+  },
+  {
+   "s": "You don't need to check how to say country names before you present.",
+   "t": false,
+   "why": "It is good to check the pronunciation first."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What colour is the Arabian oryx's fur?",
+   "o": [
+    "white",
+    "brown",
+    "black"
+   ],
+   "why": "The oryx has beautiful white fur."
+  },
+  {
+   "q": "Which country has the ring-tailed lemur as its national animal?",
+   "o": [
+    "Madagascar",
+    "Oman",
+    "Indonesia"
+   ],
+   "why": "The lemur lives in Madagascar."
+  },
+  {
+   "q": "How long can some Komodo dragons be?",
+   "o": [
+    "three metres",
+    "thirty centimetres",
+    "ten metres"
+   ],
+   "why": "Some are three metres long."
+  },
+  {
+   "q": "Which animal has venom?",
+   "o": [
+    "the Komodo dragon",
+    "the Arabian oryx",
+    "the ring-tailed lemur"
+   ],
+   "why": "The Komodo dragon has venom."
+  },
+  {
+   "q": "Which word joins two different ideas?",
+   "o": [
+    "but",
+    "and",
+    "so"
+   ],
+   "why": "But shows contrast."
+  },
+  {
+   "q": "Where does the Arabian oryx live?",
+   "o": [
+    "in the desert",
+    "in the sea",
+    "in the rainforest"
+   ],
+   "why": "The oryx lives in the desert."
+  },
+  {
+   "q": "Which national animal is a lizard?",
+   "o": [
+    "the Komodo dragon",
+    "the Arabian oryx",
+    "the bald eagle"
+   ],
+   "why": "The Komodo dragon is the largest lizard."
+  },
+  {
+   "q": "What does a ring-tailed lemur have on its tail?",
+   "o": [
+    "stripes",
+    "spots",
+    "feathers"
+   ],
+   "why": "Its tail is striped black and white."
+  },
+  {
+   "q": "Which animal is the national animal of the USA?",
+   "o": [
+    "the bald eagle",
+    "the kangaroo",
+    "the kiwi"
+   ],
+   "why": "The bald eagle is on the model note."
+  },
+  {
+   "q": "What should a note about a national animal include?",
+   "o": [
+    "name, country, looks, a fact",
+    "only the animal's name",
+    "a long story"
+   ],
+   "why": "Notes are short but give key facts."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Oman's national animal",
+   "a": "Arabian oryx",
+   "d": [
+    "Komodo dragon",
+    "lemur",
+    "bald eagle"
+   ]
+  },
+  {
+   "q": "Home of the ring-tailed lemur",
+   "a": "Madagascar",
+   "d": [
+    "Oman",
+    "Indonesia",
+    "Australia"
+   ]
+  },
+  {
+   "q": "Home of the Komodo dragon",
+   "a": "Indonesia",
+   "d": [
+    "Madagascar",
+    "Oman",
+    "USA"
+   ]
+  },
+  {
+   "q": "Colour of the oryx's fur",
+   "a": "white",
+   "d": [
+    "black",
+    "green",
+    "red"
+   ]
+  },
+  {
+   "q": "Komodo dragons taste the air with their …",
+   "a": "tongue",
+   "d": [
+    "tail",
+    "ears",
+    "nose"
+   ]
+  },
+  {
+   "q": "Length of a big Komodo dragon",
+   "a": "3 metres",
+   "d": [
+    "3 centimetres",
+    "30 metres",
+    "1 kilometre"
+   ]
+  },
+  {
+   "q": "Word that shows contrast",
+   "a": "but",
+   "d": [
+    "and",
+    "or",
+    "so"
+   ]
+  },
+  {
+   "q": "The oryx gets water from its …",
+   "a": "food",
+   "d": [
+    "river",
+    "rain",
+    "sea"
+   ]
+  },
+  {
+   "q": "Poison from an animal's bite",
+   "a": "venom",
+   "d": [
+    "grass",
+    "fur",
+    "tongue"
+   ]
+  },
+  {
+   "q": "A lemur's tail is …",
+   "a": "striped",
+   "d": [
+    "spotted",
+    "short",
+    "bald"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which animal is the largest lizard in the world?",
+   "o": [
+    "the Komodo dragon",
+    "the ring-tailed lemur",
+    "the Arabian oryx",
+    "the kiwi"
+   ],
+   "why": "The Komodo dragon is the largest lizard."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How does the Arabian oryx get water in the desert?",
+   "o": [
+    "from its food",
+    "from the sea",
+    "from rivers every day",
+    "from other animals"
+   ],
+   "why": "It gets all the water it needs from its food."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How does the Komodo dragon find animals?",
+   "o": [
+    "It tastes the air with its tongue.",
+    "It listens with its big ears.",
+    "It flies over them.",
+    "It digs under the sand."
+   ],
+   "why": "Its tongue helps it find food."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which three countries are in the culture text?",
+   "o": [
+    "Madagascar, Oman and Indonesia",
+    "Oman, Egypt and India",
+    "USA, Australia and Oman",
+    "Madagascar, Kenya and Indonesia"
+   ],
+   "why": "The text is about these three countries."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Join with but: The oryx lives in the desert. / It doesn't need to drink water.",
+   "o": [
+    "The oryx lives in the desert, but it doesn't need to drink water.",
+    "The oryx lives in the desert but, it doesn't need to drink water.",
+    "But the oryx lives in the desert it doesn't need to drink water.",
+    "The oryx but lives in the desert, it doesn't need to drink water."
+   ],
+   "why": "Put a comma, then but, between the two ideas."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses but correctly?",
+   "o": [
+    "Kiwis are small, but they lay very big eggs.",
+    "Kiwis are small, but they are small.",
+    "Kiwis are small, but they are little birds.",
+    "Kiwis lay eggs, but they lay eggs."
+   ],
+   "why": "But joins two different, surprising ideas."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good project note?",
+   "o": [
+    "Bald eagle – USA – big wings and a white head",
+    "The bald eagle is nice.",
+    "USA",
+    "Eagle eagle eagle"
+   ],
+   "why": "A good note has the name, country and features."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the Arabian oryx well suited to life in the desert?",
+   "o": [
+    "It doesn't need to drink water often.",
+    "It has a long striped tail.",
+    "It tastes the air with its tongue.",
+    "It can swim very fast."
+   ],
+   "why": "Getting water from food helps it in a dry place."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which national animal from the text would be the most dangerous to touch?",
+   "o": [
+    "the Komodo dragon",
+    "the ring-tailed lemur",
+    "the Arabian oryx",
+    "the kiwi"
+   ],
+   "why": "It is very big and has venom."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A student says: 'The Komodo dragon is amazing.' Which reason is best?",
+   "o": [
+    "Because it is the largest lizard and has venom.",
+    "Because it lives in Oman.",
+    "Because it has white fur.",
+    "Because it can fly."
+   ],
+   "why": "A good reason uses true facts from the text."
+  }
+ ]
+}

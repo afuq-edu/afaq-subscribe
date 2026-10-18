@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U1",
+ "lesson": "Unit 1 – Lesson 1: Vocabulary 1 (school subjects and places)",
+ "outcomes": [
+  "Name school subjects, school people and places.",
+  "Sort school words into subjects, people and places.",
+  "Ask and answer: What's your favourite subject?"
+ ],
+ "tf": [
+  {
+   "s": "ICT is a school subject.",
+   "t": true,
+   "why": "Yes! In ICT we use computers."
+  },
+  {
+   "s": "The headteacher is a school subject.",
+   "t": false,
+   "why": "The headteacher is a person, not a subject."
+  },
+  {
+   "s": "We learn about numbers in Maths.",
+   "t": true,
+   "why": "Correct! Maths is about numbers."
+  },
+  {
+   "s": "The school nurse is a place.",
+   "t": false,
+   "why": "The school nurse is a person."
+  },
+  {
+   "s": "The science lab is a place in school.",
+   "t": true,
+   "why": "Great! It is a place."
+  },
+  {
+   "s": "We learn to draw in Art.",
+   "t": true,
+   "why": "Well done! We draw in Art."
+  },
+  {
+   "s": "We use computers in P.E.",
+   "t": false,
+   "why": "We use computers in ICT. In P.E. we do sports."
+  },
+  {
+   "s": "Islamic Studies and Social Studies are school subjects.",
+   "t": true,
+   "why": "Yes! Both are subjects."
+  },
+  {
+   "s": "We ask: What's your favourite subject?",
+   "t": true,
+   "why": "Right! That is the question from the lesson."
+  },
+  {
+   "s": "We say: He like Maths.",
+   "t": false,
+   "why": "With he we add -s: He likes Maths."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "We use computers in ___.",
+   "o": [
+    "ICT",
+    "Art",
+    "Arabic"
+   ],
+   "why": "ICT is the computer subject."
+  },
+  {
+   "q": "We learn about numbers in ___.",
+   "o": [
+    "Maths",
+    "Art",
+    "P.E."
+   ],
+   "why": "Maths is about numbers."
+  },
+  {
+   "q": "Odd one out:",
+   "o": [
+    "headteacher",
+    "Maths",
+    "Science"
+   ],
+   "why": "The headteacher is a person, not a subject."
+  },
+  {
+   "q": "Is 'school nurse' a subject, a person or a place?",
+   "o": [
+    "a person",
+    "a subject",
+    "a place"
+   ],
+   "why": "The school nurse is a person."
+  },
+  {
+   "q": "Which one is a place?",
+   "o": [
+    "science lab",
+    "headteacher",
+    "Art"
+   ],
+   "why": "The science lab is a place."
+  },
+  {
+   "q": "We learn to draw in ___.",
+   "o": [
+    "Art",
+    "Maths",
+    "English"
+   ],
+   "why": "In Art we draw."
+  },
+  {
+   "q": "🧪🔬 Which subject?",
+   "o": [
+    "Science",
+    "Arabic",
+    "Social Studies"
+   ],
+   "why": "A test tube is used in Science."
+  },
+  {
+   "q": "Her favourite subject ___ English.",
+   "o": [
+    "is",
+    "are",
+    "am"
+   ],
+   "why": "Her favourite subject is English."
+  },
+  {
+   "q": "Which question asks about favourite subjects?",
+   "o": [
+    "What's your favourite subject?",
+    "Where are you from?",
+    "How old are you?"
+   ],
+   "why": "This question asks about your favourite subject."
+  },
+  {
+   "q": "Add a new word to 'Places':",
+   "o": [
+    "library",
+    "teacher",
+    "Maths"
+   ],
+   "why": "A library is a place in school."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "💻 subject?",
+   "a": "ICT",
+   "d": [
+    "Art",
+    "Maths",
+    "Arabic"
+   ]
+  },
+  {
+   "q": "Numbers subject?",
+   "a": "Maths",
+   "d": [
+    "Art",
+    "P.E.",
+    "English"
+   ]
+  },
+  {
+   "q": "Drawing subject?",
+   "a": "Art",
+   "d": [
+    "Maths",
+    "ICT",
+    "Science"
+   ]
+  },
+  {
+   "q": "A globe: which subject?",
+   "a": "Social Studies",
+   "d": [
+    "Maths",
+    "ICT",
+    "Art"
+   ]
+  },
+  {
+   "q": "A test tube: subject?",
+   "a": "Science",
+   "d": [
+    "Arabic",
+    "Art",
+    "P.E."
+   ]
+  },
+  {
+   "q": "Sports subject?",
+   "a": "P.E.",
+   "d": [
+    "ICT",
+    "Maths",
+    "Art"
+   ]
+  },
+  {
+   "q": "A school person?",
+   "a": "headteacher",
+   "d": [
+    "science lab",
+    "library",
+    "Maths"
+   ]
+  },
+  {
+   "q": "A school place?",
+   "a": "science lab",
+   "d": [
+    "headteacher",
+    "school nurse",
+    "Art"
+   ]
+  },
+  {
+   "q": "School nurse is a...?",
+   "a": "person",
+   "d": [
+    "place",
+    "subject",
+    "day"
+   ]
+  },
+  {
+   "q": "Odd one: Maths, Art...",
+   "a": "headteacher",
+   "d": [
+    "Science",
+    "ICT",
+    "English"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a school subject?",
+   "o": [
+    "Social Studies",
+    "school nurse",
+    "science lab",
+    "headteacher"
+   ],
+   "why": "Social Studies is a subject."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a person in school?",
+   "o": [
+    "headteacher",
+    "ICT",
+    "science lab",
+    "Art"
+   ],
+   "why": "The headteacher is a person."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where do we do experiments in school?",
+   "o": [
+    "in the science lab",
+    "in the headteacher's office",
+    "in Art",
+    "in the nurse's room"
+   ],
+   "why": "The science lab is for Science."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which subject uses computers?",
+   "o": [
+    "ICT",
+    "P.E.",
+    "Islamic Studies",
+    "Arabic"
+   ],
+   "why": "ICT uses computers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Fahad likes Art. Choose the correct sentence.",
+   "o": [
+    "His favourite subject is Art.",
+    "His favourite subject are Art.",
+    "He favourite subject is Art.",
+    "His favourite Art is subject."
+   ],
+   "why": "His favourite subject is Art."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The teacher says 'We use computers.' Which card do you slap?",
+   "o": [
+    "ICT",
+    "Art",
+    "Science",
+    "Maths"
+   ],
+   "why": "Computers → ICT."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Noora likes Maths and ICT. Which sentence is correct?",
+   "o": [
+    "Noora likes Maths and ICT.",
+    "Noora like Maths and ICT.",
+    "Noora liking Maths and ICT.",
+    "Noora is like Maths and ICT."
+   ],
+   "why": "With a name we use likes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group is sorted correctly as 'People'?",
+   "o": [
+    "headteacher, school nurse, teacher",
+    "Maths, Art, ICT",
+    "science lab, library, classroom",
+    "teacher, Maths, library"
+   ],
+   "why": "These are all people in school."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'headteacher' the odd one out in 'Maths, Science, headteacher, Art'?",
+   "o": [
+    "It is a person, not a subject.",
+    "It is a place.",
+    "It starts with h.",
+    "It is a sport."
+   ],
+   "why": "The others are all subjects."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group is sorted correctly as 'Places'?",
+   "o": [
+    "science lab, library, classroom",
+    "Art, Arabic, English",
+    "school nurse, headteacher",
+    "ICT, P.E., Maths"
+   ],
+   "why": "These are all places in school."
+  }
+ ]
+}

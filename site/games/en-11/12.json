@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 3 - Unit 2: Getting There",
+ "outcomes": [
+  "Put the parts of a travel brochure in the right order",
+  "Listen to a message and decide True, False or Not Given",
+  "Use will, going to and the present continuous for the future"
+ ],
+ "tf": [
+  {
+   "s": "On the bus trip, passengers buy a travel permit at the border.",
+   "t": true,
+   "why": "Yes! You need a travel permit at the border."
+  },
+  {
+   "s": "The bus stops in Nizwa for a refreshment break.",
+   "t": true,
+   "why": "Right! It is a short 20-minute stop."
+  },
+  {
+   "s": "The bus brochure begins with boarding the bus at Dubai bus station.",
+   "t": true,
+   "why": "Correct! Boarding at 7:30 am comes first."
+  },
+  {
+   "s": "The bus has lunch in Nizwa.",
+   "t": false,
+   "why": "Nizwa is the refreshment stop; lunch is at Hayma."
+  },
+  {
+   "s": "In a listening task, if the recording does not give the information, the answer is NG.",
+   "t": true,
+   "why": "Good! NG means not given."
+  },
+  {
+   "s": "We read the statements after listening, not before.",
+   "t": false,
+   "why": "Read them first so you know what to listen for."
+  },
+  {
+   "s": "'I'll have the blue one' shows a decision made at the moment of speaking.",
+   "t": true,
+   "why": "Yes! 'Will' is used for quick decisions."
+  },
+  {
+   "s": "'I'm meeting my brother tomorrow' shows a fixed arrangement.",
+   "t": true,
+   "why": "Right! The present continuous shows arrangements."
+  },
+  {
+   "s": "'He is going to have an accident' cannot be used when we see a man driving too fast.",
+   "t": false,
+   "why": "We use 'going to' for a prediction based on what we can see."
+  },
+  {
+   "s": "'I promise I am working harder next year' is the best way to make a promise.",
+   "t": false,
+   "why": "For a promise we use 'will': 'I promise I will work harder.'"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do you need to buy at the border?",
+   "o": [
+    "a travel permit",
+    "a bus ticket",
+    "a hotel room"
+   ],
+   "why": "Travellers buy a travel permit at the border."
+  },
+  {
+   "q": "Where does the bus stop for a refreshment break?",
+   "o": [
+    "Nizwa",
+    "Hayma",
+    "Thumrait"
+   ],
+   "why": "The Nizwa stop is about 20 minutes."
+  },
+  {
+   "q": "What time does the bus leave Dubai bus station?",
+   "o": [
+    "7:30 am",
+    "9:30 am",
+    "6:45 pm"
+   ],
+   "why": "Boarding is at 7:30 am."
+  },
+  {
+   "q": "Which future form shows a promise?",
+   "o": [
+    "I'll help you with your homework.",
+    "I'm helping you now.",
+    "I helped you yesterday."
+   ],
+   "why": "'Will' is used for promises."
+  },
+  {
+   "q": "Choose: I promise I ___ harder next year.",
+   "o": [
+    "will work",
+    "am working",
+    "worked"
+   ],
+   "why": "Promises use 'will'."
+  },
+  {
+   "q": "Choose: I can't come because I ___ my parents tomorrow.",
+   "o": [
+    "am visiting",
+    "visit",
+    "visited"
+   ],
+   "why": "An arrangement uses the present continuous."
+  },
+  {
+   "q": "'I'm going to watch TV, then go to bed' shows…",
+   "o": [
+    "a plan or intention",
+    "a promise",
+    "a past habit"
+   ],
+   "why": "'Going to' shows a plan."
+  },
+  {
+   "q": "Choose: What do you think ___ in the next ten years?",
+   "o": [
+    "will happen",
+    "is happening",
+    "happened"
+   ],
+   "why": "Predictions about the future often use 'will'."
+  },
+  {
+   "q": "Why do we read the statements before listening?",
+   "o": [
+    "to know what to listen for",
+    "to finish early",
+    "to guess the speaker's age"
+   ],
+   "why": "Key words tell you what to listen for."
+  },
+  {
+   "q": "Which word means 'leave' at an airport?",
+   "o": [
+    "depart",
+    "arrive",
+    "land"
+   ],
+   "why": "Planes depart and then arrive."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Bought at the border",
+   "a": "travel permit",
+   "d": [
+    "flight ticket",
+    "hotel key",
+    "passport photo"
+   ]
+  },
+  {
+   "q": "Bus refreshment stop",
+   "a": "Nizwa",
+   "d": [
+    "Hayma",
+    "Thumrait",
+    "Dubai"
+   ]
+  },
+  {
+   "q": "Bus lunch stop",
+   "a": "Hayma",
+   "d": [
+    "Nizwa",
+    "Dubai",
+    "Muscat"
+   ]
+  },
+  {
+   "q": "Bus boarding time",
+   "a": "7:30 am",
+   "d": [
+    "9:30 am",
+    "6:00 pm",
+    "11:00 am"
+   ]
+  },
+  {
+   "q": "Flight departure time",
+   "a": "9:30 am",
+   "d": [
+    "7:30 am",
+    "6:45 pm",
+    "11:00 pm"
+   ]
+  },
+  {
+   "q": "Future form for promises",
+   "a": "will",
+   "d": [
+    "going to",
+    "was",
+    "did"
+   ]
+  },
+  {
+   "q": "Future form for a plan",
+   "a": "going to",
+   "d": [
+    "will",
+    "used to",
+    "was"
+   ]
+  },
+  {
+   "q": "Choose: He ___ have an accident!",
+   "a": "is going to",
+   "d": [
+    "will to",
+    "is having to",
+    "going"
+   ]
+  },
+  {
+   "q": "Choose: I ___ my parents tomorrow.",
+   "a": "am visiting",
+   "d": [
+    "visited",
+    "visit to",
+    "was visiting"
+   ]
+  },
+  {
+   "q": "Opposite of 'depart'",
+   "a": "arrive",
+   "d": [
+    "leave",
+    "go",
+    "fly"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which paragraph begins the bus brochure?",
+   "o": [
+    "paragraph c – boarding the bus at Dubai bus station",
+    "paragraph f – the flight leaves",
+    "paragraph d – arriving at the hotel",
+    "paragraph h – the plane lands"
+   ],
+   "why": "The bus brochure order is c, e, g, b."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which future form shows a fixed arrangement?",
+   "o": [
+    "the present continuous",
+    "the past simple",
+    "the present simple",
+    "the past continuous"
+   ],
+   "why": "'She's meeting her friend later today.'"
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is 'will' used for?",
+   "o": [
+    "predictions, offers, promises and quick decisions",
+    "only past actions",
+    "only arrangements",
+    "only habits"
+   ],
+   "why": "'Will' has many future uses."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What kind of message do you listen to in this lesson?",
+   "o": [
+    "a message on an answering machine",
+    "a news report on TV",
+    "a song",
+    "a teacher's lesson"
+   ],
+   "why": "The traveller leaves a message about his trip."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "That man is driving too fast. Complete: He ___ an accident soon.",
+   "o": [
+    "is going to have",
+    "has",
+    "is having",
+    "had"
+   ],
+   "why": "We use 'going to' to predict from what we can see."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct prediction with 'will'.",
+   "o": [
+    "Cars will fly in the future.",
+    "Cars will to fly in the future.",
+    "Cars flying will in the future.",
+    "Cars will flew in the future."
+   ],
+   "why": "'Will' is followed by the base form of the verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence shows a decision made at the moment of speaking?",
+   "o": [
+    "I'll have the blue one.",
+    "I'm meeting Ali at six.",
+    "I went home.",
+    "I am going to study medicine next year."
+   ],
+   "why": "Quick decisions use 'will'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between 'I'm meeting my brother tomorrow' and 'I'm going to meet my brother'?",
+   "o": [
+    "The first is a fixed arrangement; the second is an intention",
+    "The first is past; the second is present",
+    "They are both promises",
+    "There is no difference"
+   ],
+   "why": "Present continuous = arrangement; going to = plan or intention."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which clues help you put the bus brochure paragraphs in order?",
+   "o": [
+    "times and words like 'after' and 'on arrival'",
+    "the colour of the bus",
+    "the length of the paragraphs",
+    "the names of the passengers"
+   ],
+   "why": "Time and sequence words show the order."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'She's meeting her friend later today' correct?",
+   "o": [
+    "It is an arrangement for the near future",
+    "It is a habit",
+    "It is a promise",
+    "It is a finished action"
+   ],
+   "why": "Arrangements use the present continuous."
+  }
+ ]
+}

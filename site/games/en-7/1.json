@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Welcome",
+ "lesson": "Welcome – Lesson 1: The WOW! Team",
+ "outcomes": [
+  "Meet the four members of the new WOW! Team.",
+  "Match readers' comments to magazine topics.",
+  "Introduce yourself and say what you want to read about."
+ ],
+ "tf": [
+  {
+   "s": "WOW! stands for World of Wonder.",
+   "t": true,
+   "why": "Yes, WOW! means World of Wonder."
+  },
+  {
+   "s": "The new WOW! Team has four members.",
+   "t": true,
+   "why": "Right: Majid, Frank, Bayan and Emily."
+  },
+  {
+   "s": "Bayan is a member of the new WOW! Team.",
+   "t": true,
+   "why": "Yes, Bayan is one of the four team members."
+  },
+  {
+   "s": "Last year, the WOW! Team looked at happy homes.",
+   "t": true,
+   "why": "Correct, happy homes was one of last year's topics."
+  },
+  {
+   "s": "Basim wants to read about animals.",
+   "t": false,
+   "why": "Basim needs travel information because he is going to Egypt by plane."
+  },
+  {
+   "s": "Razan went to the zoo and wants to learn the names of animal parts.",
+   "t": true,
+   "why": "Yes, that is why she is interested in animals."
+  },
+  {
+   "s": "Juma wants to read about architects because he is going on holiday.",
+   "t": false,
+   "why": "Juma is doing a school project about different jobs."
+  },
+  {
+   "s": "“Nice to meet you” is a good way to answer an introduction.",
+   "t": true,
+   "why": "Yes, we say it when we meet someone new."
+  },
+  {
+   "s": "“Last year, we look at happy homes” is a correct sentence.",
+   "t": false,
+   "why": "We use the past simple: Last year, we looked at happy homes."
+  },
+  {
+   "s": "“I'm going to visit my grandparents” talks about the past.",
+   "t": false,
+   "why": "Going to talks about a future plan."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How many members are in the new WOW! Team?",
+   "o": [
+    "four",
+    "three",
+    "six"
+   ],
+   "why": "The team is Majid, Frank, Bayan and Emily."
+  },
+  {
+   "q": "What does WOW! mean?",
+   "o": [
+    "World of Wonder",
+    "Way of Writing",
+    "World of Work"
+   ],
+   "why": "WOW! = World of Wonder."
+  },
+  {
+   "q": "Which topic did the team look at last year?",
+   "o": [
+    "different clothes",
+    "famous railways",
+    "space travel"
+   ],
+   "why": "Last year's topics were happy homes, different clothes and keeping safe outdoors."
+  },
+  {
+   "q": "Who is going to Egypt by plane?",
+   "o": [
+    "Basim",
+    "Razan",
+    "Juma"
+   ],
+   "why": "Basim needs travel information for his trip."
+  },
+  {
+   "q": "Who uses the metro in the city?",
+   "o": [
+    "Eliza",
+    "Juma",
+    "Razan"
+   ],
+   "why": "Eliza needs travel information too."
+  },
+  {
+   "q": "Hello, I'm Emily. – Hi Emily, ___ to meet you.",
+   "o": [
+    "nice",
+    "fine",
+    "good-bye"
+   ],
+   "why": "We say Nice to meet you."
+  },
+  {
+   "q": "Which tense is in: I'm going to fly next summer?",
+   "o": [
+    "future with going to",
+    "past simple",
+    "present simple"
+   ],
+   "why": "Going to + verb shows a future plan."
+  },
+  {
+   "q": "Choose: Yesterday we ___ to the park.",
+   "o": [
+    "went",
+    "go",
+    "are going"
+   ],
+   "why": "Yesterday needs the past simple: went."
+  },
+  {
+   "q": "Which word is a magazine topic this year?",
+   "o": [
+    "entertainment",
+    "homework",
+    "weather"
+   ],
+   "why": "This year's topics include writers, animals, travel, jobs and entertainment."
+  },
+  {
+   "q": "Which expression is NOT for introducing yourself?",
+   "o": [
+    "See you later.",
+    "Hello, I'm Salim.",
+    "Pleased to meet you."
+   ],
+   "why": "See you later is for saying goodbye."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Team member: M _ _ _ d",
+   "a": "Majid",
+   "d": [
+    "Basim",
+    "Juma",
+    "Salim"
+   ]
+  },
+  {
+   "q": "Team member with an English name",
+   "a": "Frank",
+   "d": [
+    "Basim",
+    "Juma",
+    "Razan"
+   ]
+  },
+  {
+   "q": "Who wants to read about animals?",
+   "a": "Razan",
+   "d": [
+    "Basim",
+    "Eliza",
+    "Juma"
+   ]
+  },
+  {
+   "q": "Who wants to read about jobs?",
+   "a": "Juma",
+   "d": [
+    "Eliza",
+    "Basim",
+    "Razan"
+   ]
+  },
+  {
+   "q": "Last year's topic: keeping ___ outdoors",
+   "a": "safe",
+   "d": [
+    "busy",
+    "quiet",
+    "cold"
+   ]
+  },
+  {
+   "q": "Topic for someone who loves planes",
+   "a": "travel",
+   "d": [
+    "animals",
+    "writers",
+    "clothes"
+   ]
+  },
+  {
+   "q": "Pleased to ___ you.",
+   "a": "meet",
+   "d": [
+    "see",
+    "know",
+    "greet"
+   ]
+  },
+  {
+   "q": "Past simple of look",
+   "a": "looked",
+   "d": [
+    "looking",
+    "looks",
+    "look"
+   ]
+  },
+  {
+   "q": "Future plan: I'm ___ to fly.",
+   "a": "going",
+   "d": [
+    "go",
+    "went",
+    "goes"
+   ]
+  },
+  {
+   "q": "Topic for someone who visited a zoo",
+   "a": "animals",
+   "d": [
+    "travel",
+    "jobs",
+    "writers"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who are the four members of the new WOW! Team?",
+   "o": [
+    "Majid, Frank, Bayan and Emily",
+    "Basim, Eliza, Juma and Razan",
+    "Majid, Juma, Bayan and Eliza",
+    "Frank, Razan, Emily and Basim"
+   ],
+   "why": "The readers wrote comments; the team is Majid, Frank, Bayan and Emily."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What were the three topics of last year's magazine?",
+   "o": [
+    "happy homes, different clothes, keeping safe outdoors",
+    "animals, travel, jobs",
+    "writers, entertainment, animals",
+    "food, sport, music"
+   ],
+   "why": "Those three topics were in the Grade 6 magazine."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two readers need information about travel?",
+   "o": [
+    "Basim and Eliza",
+    "Juma and Razan",
+    "Razan and Eliza",
+    "Basim and Juma"
+   ],
+   "why": "Basim is flying to Egypt and Eliza uses the metro."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Complete: Hello! I'm Emily and I'm ___ to meet you, too.",
+   "o": [
+    "pleased",
+    "pleasing",
+    "please",
+    "pleasure"
+   ],
+   "why": "We say: I'm pleased to meet you."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Salim loves trains. Which sentence is best for him?",
+   "o": [
+    "I'd like to read about famous railways because I love trains.",
+    "I'd like to read about clowns because I love animals.",
+    "I read about trains last year because I will love them.",
+    "I like trains so I don't want to read about them."
+   ],
+   "why": "Use I'd like to read about … because … with a clear reason."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "It was raining yesterday, but today it is very hot.",
+    "It is raining yesterday, but today it was very hot.",
+    "It rains yesterday, but today it was hot.",
+    "It was raining yesterday, but today it were hot."
+   ],
+   "why": "Yesterday takes the past; today takes the present."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is a future plan?",
+   "o": [
+    "Next summer, I'm going to go on a plane.",
+    "Last summer, I went on a plane.",
+    "I go on a plane every summer.",
+    "I went to the zoo yesterday."
+   ],
+   "why": "Going to + verb tells us about a plan."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might Juma want to read about architects?",
+   "o": [
+    "He is doing a school project about different jobs.",
+    "He is travelling to Egypt.",
+    "He went to the zoo.",
+    "He wants to be a clown."
+   ],
+   "why": "His comment says he wants to know what an architect does every day."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Razan went to the zoo. Which topic fits her best?",
+   "o": [
+    "animals",
+    "travel",
+    "entertainment",
+    "writers"
+   ],
+   "why": "She wants to learn the names of parts of animals."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the mistake: Last year, we look at how to make our homes happy.",
+   "o": [
+    "look should be looked",
+    "Last should be Next",
+    "homes should be home",
+    "happy should be happily"
+   ],
+   "why": "Last year tells us to use the past simple: looked."
+  }
+ ]
+}

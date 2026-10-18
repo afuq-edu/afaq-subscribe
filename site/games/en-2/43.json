@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Unit 3 – Consolidation 4: Story and English in action",
+ "outcomes": [
+  "I can put the story \"The robot\" in order and retell it.",
+  "I can pay a compliment and say thank you.",
+  "I can remember the value: Do exercise."
+ ],
+ "tf": [
+  {
+   "s": "At the start of \"The robot\", the children open a box with robot parts.",
+   "t": true,
+   "why": "The story starts with a box."
+  },
+  {
+   "s": "Gymbot's first instruction is \"Stand up, please!\"",
+   "t": true,
+   "why": "Gymbot says: Stand up, please!"
+  },
+  {
+   "s": "The value of \"The robot\" is \"Eat sweets.\"",
+   "t": false,
+   "why": "The value is Do exercise."
+  },
+  {
+   "s": "\"What a cool kite!\" is a compliment.",
+   "t": true,
+   "why": "It says something nice."
+  },
+  {
+   "s": "We answer a compliment with \"Thank you.\"",
+   "t": true,
+   "why": "That is polite."
+  },
+  {
+   "s": "In the story, the children put the robot together.",
+   "t": true,
+   "why": "Let's put it together!"
+  },
+  {
+   "s": "\"Bend your knees and touch your toes!\" is in the story.",
+   "t": true,
+   "why": "Gymbot says this."
+  },
+  {
+   "s": "A good reply to \"What a cool toy!\" is \"No, thank you, go away.\"",
+   "t": false,
+   "why": "We just say Thank you."
+  },
+  {
+   "s": "In the story, Gymbot tells the children to sit and watch TV.",
+   "t": false,
+   "why": "Gymbot helps them do exercise."
+  },
+  {
+   "s": "To retell a story, we say what happens in order.",
+   "t": true,
+   "why": "First, then, at the end."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What happens first in \"The robot\"?",
+   "o": [
+    "They open a box.",
+    "They touch their toes.",
+    "They stamp their feet."
+   ],
+   "why": "The box comes first."
+  },
+  {
+   "q": "Gymbot's first instruction:",
+   "o": [
+    "Stand up, please!",
+    "Sit down, please!",
+    "Go to sleep!"
+   ],
+   "why": "Stand up, please!"
+  },
+  {
+   "q": "Let's put it ___!",
+   "o": [
+    "together",
+    "under",
+    "away"
+   ],
+   "why": "Let's put it together!"
+  },
+  {
+   "q": "Value of the story:",
+   "o": [
+    "Do exercise.",
+    "Watch TV.",
+    "Eat cake."
+   ],
+   "why": "Do exercise."
+  },
+  {
+   "q": "You like a kite. You say:",
+   "o": [
+    "What a cool kite!",
+    "Give me the kite!",
+    "Where's my kite?"
+   ],
+   "why": "That is a compliment."
+  },
+  {
+   "q": "What a cool toy! You answer:",
+   "o": [
+    "Thank you.",
+    "Sorry.",
+    "Goodbye."
+   ],
+   "why": "Thank you is polite."
+  },
+  {
+   "q": "Move your legs and stamp your ___!",
+   "o": [
+    "feet",
+    "hands",
+    "eyes"
+   ],
+   "why": "Stamp your feet!"
+  },
+  {
+   "q": "Bend your knees and touch your ___!",
+   "o": [
+    "toes",
+    "ears",
+    "nose"
+   ],
+   "why": "Touch your toes!"
+  },
+  {
+   "q": "What's in the box?",
+   "o": [
+    "a robot",
+    "a kite",
+    "a dinosaur"
+   ],
+   "why": "The box has robot parts."
+  },
+  {
+   "q": "Look at my ___. – What a cool costume!",
+   "o": [
+    "costume",
+    "knees",
+    "box"
+   ],
+   "why": "Look at my costume."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The robot's name",
+   "a": "Gymbot",
+   "d": [
+    "Robbie",
+    "Jack",
+    "Polly"
+   ]
+  },
+  {
+   "q": "First instruction: Stand ___!",
+   "a": "up",
+   "d": [
+    "down",
+    "in",
+    "on"
+   ]
+  },
+  {
+   "q": "Robot parts are in a ...",
+   "a": "box",
+   "d": [
+    "bag",
+    "shed",
+    "pot"
+   ]
+  },
+  {
+   "q": "Let's put it ___!",
+   "a": "together",
+   "d": [
+    "away",
+    "under",
+    "down"
+   ]
+  },
+  {
+   "q": "Stamp your ...",
+   "a": "feet",
+   "d": [
+    "hands",
+    "ears",
+    "nose"
+   ]
+  },
+  {
+   "q": "Touch your ...",
+   "a": "toes",
+   "d": [
+    "ears",
+    "eyes",
+    "nose"
+   ]
+  },
+  {
+   "q": "Value: Do ...",
+   "a": "exercise",
+   "d": [
+    "homework",
+    "nothing",
+    "TV"
+   ]
+  },
+  {
+   "q": "Reply to a compliment",
+   "a": "Thank you.",
+   "d": [
+    "Sorry.",
+    "Goodbye.",
+    "No."
+   ]
+  },
+  {
+   "q": "What a ___ kite!",
+   "a": "cool",
+   "d": [
+    "sad",
+    "bad",
+    "no"
+   ]
+  },
+  {
+   "q": "Look ___ my picture.",
+   "a": "at",
+   "d": [
+    "on",
+    "in",
+    "to"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who gives the exercise instructions in the story?",
+   "o": [
+    "Gymbot",
+    "the teacher",
+    "the king",
+    "Mum"
+   ],
+   "why": "Gymbot gives the instructions."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which line is from the story?",
+   "o": [
+    "Bend your knees and touch your toes!",
+    "What a cool dinosaur!",
+    "Can I borrow it, please?",
+    "Here you are."
+   ],
+   "why": "Gymbot says this in the story."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do we say after a compliment?",
+   "o": [
+    "Thank you.",
+    "Stand up!",
+    "Let's dig!",
+    "Sorry."
+   ],
+   "why": "Thank you is polite."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which value does the story teach?",
+   "o": [
+    "Do exercise.",
+    "Share food.",
+    "Say sorry.",
+    "Be quiet."
+   ],
+   "why": "The robot helps children exercise."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend shows you a new toy. Pay a compliment.",
+   "o": [
+    "What a cool toy!",
+    "Give me your toy!",
+    "That toy is bad.",
+    "Where's the toy?"
+   ],
+   "why": "Say something kind."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Retell the first frame of \"The robot\".",
+   "o": [
+    "The children open a box with robot parts.",
+    "Gymbot touches his toes.",
+    "The children go home.",
+    "The children watch TV."
+   ],
+   "why": "The story starts with the box."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Look at my picture. – What a cool ___! – Thank you.",
+   "o": [
+    "picture",
+    "exercise",
+    "toes",
+    "box"
+   ],
+   "why": "The compliment is about the picture."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the right order in \"The robot\"?",
+   "o": [
+    "open the box, put it together, Stand up please!",
+    "Stand up please!, open the box, put it together",
+    "put it together, Stand up please!, open the box",
+    "Stand up please!, put it together, open the box"
+   ],
+   "why": "First the box, then they build it, then Gymbot speaks."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do the children put the robot together?",
+   "o": [
+    "Because the parts are in a box.",
+    "Because the robot is sick.",
+    "Because it is National Day.",
+    "Because they are sad."
+   ],
+   "why": "The robot comes in parts."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which compliment dialogue is best?",
+   "o": [
+    "What a cool kite! – Thank you.",
+    "What a cool kite! – No.",
+    "Give me the kite! – Thank you.",
+    "Thank you. – Go away."
+   ],
+   "why": "A kind compliment and a polite reply."
+  }
+ ]
+}

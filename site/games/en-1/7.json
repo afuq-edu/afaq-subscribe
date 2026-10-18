@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الأول",
+  "unit": "Unit 1: Family and friends",
+  "lesson": "Lesson 6: Review + Sounds review s, a, t, p, n",
+  "outcomes": [
+    "I can say all the Unit 1 family and friends words.",
+    "I can ask Who's this? and What's your name? and answer.",
+    "I can read and write tap, pat, nap and pan."
+  ],
+  "tf": [
+    {"s": "Mum, dad, brother and sister are family words.", "t": true, "why": "Yes! They are all in the family."},
+    {"s": "Cat is a family word like mum.", "t": false, "why": "A cat is an animal, not a person."},
+    {"s": "Sad starts with /s/.", "t": true, "why": "Yes! s, s, sad."},
+    {"s": "Tin and teddy start with the same sound.", "t": true, "why": "Great! Both start with /t/."},
+    {"s": "Ant and arrow start with /t/.", "t": false, "why": "Ant and arrow start with /æ/."},
+    {"s": "p – a – n makes pan.", "t": true, "why": "Well done! p-a-n, pan."},
+    {"s": "t – a – p makes pat.", "t": false, "why": "t-a-p makes tap."},
+    {"s": "We answer Who's this? with This is my brother.", "t": true, "why": "Yes! This is my … tells who it is."},
+    {"s": "Net starts with the letter t.", "t": false, "why": "Net starts with n."},
+    {"s": "A sister is a boy.", "t": false, "why": "A sister is a girl."}
+  ],
+  "boxes": [
+    {"q": "Who's this? (a girl in your family)", "o": ["This is my sister.", "This is my dad.", "This is my brother."], "why": "A girl in your family is your sister."},
+    {"q": "What's your name?", "o": ["I'm Muna.", "This is my mum.", "Who's this?"], "why": "I'm … tells your name."},
+    {"q": "First letter of sad?", "o": ["s", "t", "a"], "why": "Sad starts with s."},
+    {"q": "First letter of teddy?", "o": ["t", "p", "n"], "why": "Teddy starts with t."},
+    {"q": "First letter of arrow?", "o": ["a", "n", "s"], "why": "Arrow starts with a."},
+    {"q": "First letter of net?", "o": ["n", "t", "p"], "why": "Net starts with n."},
+    {"q": "Blend: t – a – p", "o": ["tap", "pat", "nap"], "why": "t-a-p, tap!"},
+    {"q": "Blend: n – a – p", "o": ["nap", "pan", "tap"], "why": "n-a-p, nap!"},
+    {"q": "You can say all the words. Colour the …", "o": ["happy face", "sad face", "cat"], "why": "A happy face means: I can do it!"},
+    {"q": "Which one is an animal?", "o": ["cat", "girl", "friend"], "why": "A cat is an animal."}
+  ],
+  "hunt": [
+    {"q": "Catch a family word.", "a": "mum", "d": ["cat", "pen", "sun"]},
+    {"q": "Catch another family word.", "a": "brother", "d": ["friend", "tree", "boy"]},
+    {"q": "Catch the word that is not family.", "a": "friend", "d": ["mum", "dad", "sister"]},
+    {"q": "Catch the /s/ word.", "a": "six", "d": ["tin", "ant", "pot"]},
+    {"q": "Catch the /æ/ word.", "a": "ant", "d": ["tin", "nut", "sun"]},
+    {"q": "Catch the /t/ word.", "a": "tin", "d": ["sad", "nut", "axe"]},
+    {"q": "Catch the /p/ word.", "a": "pot", "d": ["nest", "six", "tree"]},
+    {"q": "Catch the /n/ word.", "a": "nut", "d": ["pie", "ant", "sit"]},
+    {"q": "Blend: p – a – t", "a": "pat", "d": ["tap", "nap", "pan"]},
+    {"q": "Blend: p – a – n", "a": "pan", "d": ["nap", "tap", "pat"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which word is NOT a family word?", "o": ["friend", "mum", "dad", "sister"], "why": "A friend is not in your family."},
+    {"lv": "التذكر", "q": "Which question asks for a name?", "o": ["What's your name?", "Who's this cat?", "Goodbye!", "This is my dad."], "why": "What's your name? asks for a name."},
+    {"lv": "التذكر", "q": "Which letter makes the sound /p/?", "o": ["p", "n", "t", "a"], "why": "The letter p says /p/."},
+    {"lv": "التذكر", "q": "Which sounds did we learn in Unit 1?", "o": ["s, a, t, p, n", "s, a, m, h, r", "c, k, i, m, h", "b, d, g, o, e"], "why": "Unit 1 sounds are s, a, t, p, n."},
+    {"lv": "التطبيق", "q": "You show a drawing of your dad. You say …", "o": ["This is my dad.", "This is my sister.", "I'm your dad.", "What's your name, dad?"], "why": "Say This is my dad."},
+    {"lv": "التطبيق", "q": "Write the word: t – a – p", "o": ["tap", "pat", "apt", "pta"], "why": "t-a-p, tap."},
+    {"lv": "التطبيق", "q": "Put the letters in order to make a word: a, n, p", "o": ["pan", "anp", "pna", "apn"], "why": "p-a-n makes pan."},
+    {"lv": "التحليل", "q": "Which two words start with the same sound?", "o": ["tin and teddy", "tin and ant", "ant and six", "sad and nut"], "why": "Tin and teddy both start with /t/."},
+    {"lv": "التحليل", "q": "Which word does not belong: tap, pat, nap, mum?", "o": ["mum", "tap", "pat", "nap"], "why": "Mum is a family word; tap, pat and nap are blending words."},
+    {"lv": "التحليل", "q": "Sami says: This is my brother. Who is it?", "o": ["Mazin", "Fatma", "Lily", "Meg"], "why": "Mazin is Sami's brother."}
+  ]
+}

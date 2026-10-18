@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+ "lesson": "Review and Reference: Theme 1 learning objectives and core words test",
+ "outcomes": [
+  "Check what you have learned in Theme 1",
+  "Spell and use the Theme 1 core words",
+  "Use the past simple and passive correctly"
+ ],
+ "tf": [
+  {
+   "s": "'Excessive' means too much.",
+   "t": true,
+   "why": "Excessive spending is spending too much."
+  },
+  {
+   "s": "'Export' means buying goods from another country.",
+   "t": false,
+   "why": "Export means selling goods to another country; import is buying."
+  },
+  {
+   "s": "'Affluent' means rich.",
+   "t": true,
+   "why": "Affluent people have a lot of money."
+  },
+  {
+   "s": "'The company was founded in 1990' uses the past simple passive.",
+   "t": true,
+   "why": "Was + founded is passive."
+  },
+  {
+   "s": "'Mislead' means to give someone a wrong idea.",
+   "t": true,
+   "why": "Misleading ads give false impressions."
+  },
+  {
+   "s": "'Ritual' means a type of shop.",
+   "t": false,
+   "why": "A ritual is a ceremony done in a fixed way."
+  },
+  {
+   "s": "A shopaholic is someone who is addicted to shopping.",
+   "t": true,
+   "why": "It is one of the core words."
+  },
+  {
+   "s": "The past simple passive of 'discover' (singular) is 'was discover'.",
+   "t": false,
+   "why": "It is 'was discovered'."
+  },
+  {
+   "s": "'Bankruptcy' means being unable to pay your debts.",
+   "t": true,
+   "why": "It is a serious money problem."
+  },
+  {
+   "s": "'Dramatically' means very slightly.",
+   "t": false,
+   "why": "Dramatically means a lot or very suddenly."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word means 'too much'?",
+   "o": [
+    "excessive",
+    "affluent",
+    "economic"
+   ],
+   "why": "Excessive spending is spending too much."
+  },
+  {
+   "q": "What does 'import' mean?",
+   "o": [
+    "buy goods from abroad",
+    "sell goods abroad",
+    "make goods"
+   ],
+   "why": "Import is the opposite of export."
+  },
+  {
+   "q": "Complete: The company ___ (found) in 1990.",
+   "o": [
+    "was founded",
+    "founded",
+    "is found"
+   ],
+   "why": "The company receives the action."
+  },
+  {
+   "q": "Past simple passive of 'discover' (singular)?",
+   "o": [
+    "was discovered",
+    "were discover",
+    "discovered by"
+   ],
+   "why": "Was + past participle."
+  },
+  {
+   "q": "Which word means 'related to trade and money'?",
+   "o": [
+    "economic",
+    "ritual",
+    "location"
+   ],
+   "why": "Economic is about money and trade."
+  },
+  {
+   "q": "Which word means 'to have an effect on someone'?",
+   "o": [
+    "influence",
+    "export",
+    "mislead"
+   ],
+   "why": "Adverts influence what we buy."
+  },
+  {
+   "q": "What is a 'consumer'?",
+   "o": [
+    "a person who buys goods",
+    "a shop",
+    "a product"
+   ],
+   "why": "Consumers buy and use products."
+  },
+  {
+   "q": "Which word means 'unable to control a habit'?",
+   "o": [
+    "compulsive",
+    "affluent",
+    "economic"
+   ],
+   "why": "Compulsive buyers cannot stop buying."
+  },
+  {
+   "q": "Complete: The jeans ___ not created in Asia.",
+   "o": [
+    "were",
+    "was",
+    "did"
+   ],
+   "why": "Plural subject + were + not + past participle."
+  },
+  {
+   "q": "What does 'location' mean?",
+   "o": [
+    "a place",
+    "a price",
+    "a promise"
+   ],
+   "why": "Location is where something is."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Addicted to shopping",
+   "a": "shopaholic",
+   "d": [
+    "consumer",
+    "merchant",
+    "economist"
+   ]
+  },
+  {
+   "q": "Too much",
+   "a": "excessive",
+   "d": [
+    "affluent",
+    "economic",
+    "compulsive"
+   ]
+  },
+  {
+   "q": "Rich",
+   "a": "affluent",
+   "d": [
+    "excessive",
+    "compulsive",
+    "fertile"
+   ]
+  },
+  {
+   "q": "Sell goods abroad",
+   "a": "export",
+   "d": [
+    "import",
+    "influence",
+    "mislead"
+   ]
+  },
+  {
+   "q": "Give someone a wrong idea",
+   "a": "mislead",
+   "d": [
+    "influence",
+    "export",
+    "persuade"
+   ]
+  },
+  {
+   "q": "A person who buys goods",
+   "a": "consumer",
+   "d": [
+    "merchant",
+    "shopaholic",
+    "founder"
+   ]
+  },
+  {
+   "q": "Unable to pay debts",
+   "a": "bankruptcy",
+   "d": [
+    "consolation",
+    "location",
+    "ritual"
+   ]
+  },
+  {
+   "q": "Shopping to feel better",
+   "a": "retail therapy",
+   "d": [
+    "bargaining",
+    "window-shopping",
+    "trading"
+   ]
+  },
+  {
+   "q": "Passive of 'found' (it)",
+   "a": "was founded",
+   "d": [
+    "was found",
+    "founded",
+    "were founded"
+   ]
+  },
+  {
+   "q": "Past simple of 'lose'",
+   "a": "lost",
+   "d": [
+    "losed",
+    "loosed",
+    "lose"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does 'excessive' mean?",
+   "o": [
+    "too much",
+    "too little",
+    "very cheap",
+    "very old"
+   ],
+   "why": "Excessive means more than is needed."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'someone who is addicted to shopping'?",
+   "o": [
+    "shopaholic",
+    "consumer",
+    "merchant",
+    "founder"
+   ],
+   "why": "Shop + -holic."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the difference between 'export' and 'import'?",
+   "o": [
+    "Export is selling goods to another country; import is buying from another country",
+    "They mean the same",
+    "Import is selling; export is buying",
+    "Both mean making goods"
+   ],
+   "why": "They are opposites."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which core word means 'rich'?",
+   "o": [
+    "affluent",
+    "compulsive",
+    "economic",
+    "ritual"
+   ],
+   "why": "Affluent people have plenty of money."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The new machine ______ (invent) many years ago.",
+   "o": [
+    "was invented",
+    "invented",
+    "were invented",
+    "is invent"
+   ],
+   "why": "Singular subject + was + past participle."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The car ______ (not sell) well in Latin America.",
+   "o": [
+    "did not sell",
+    "was not sold well by",
+    "not sold",
+    "did not sold"
+   ],
+   "why": "Negative past simple: did not + base verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses 'mislead' correctly?",
+   "o": [
+    "Some adverts mislead customers about what a product can do.",
+    "He misleaded the ball into the goal.",
+    "The mall was mislead.",
+    "She is mislead to shopping."
+   ],
+   "why": "Mislead means give a wrong idea."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses 'compulsive' correctly?",
+   "o": [
+    "She is a compulsive buyer who cannot stop shopping.",
+    "The compulsive tanker carried oil.",
+    "He spoke compulsive.",
+    "The weather is compulsive."
+   ],
+   "why": "Compulsive describes a habit you cannot control."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses 'influence' correctly?",
+   "o": [
+    "Adverts can influence what people buy.",
+    "The influence was exported by dhow.",
+    "He influenced the soup with marbles.",
+    "Influence is a type of shop."
+   ],
+   "why": "Influence means to have an effect on."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to check the theme's learning objectives?",
+   "o": [
+    "To see what you have learned and what you need to practise",
+    "To finish the book quickly",
+    "To skip the test",
+    "To change the theme"
+   ],
+   "why": "Self-assessment helps you improve."
+  }
+ ]
+}

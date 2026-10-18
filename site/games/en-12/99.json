@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Safety on the Roads (Vocabulary)",
+ "lesson": "The language of trends: increase, decrease and describing a table / Road rage: Listening 4.3.2, advice and role play",
+ "outcomes": [
+  "Use verbs, nouns and adverbs to describe trends",
+  "Describe numbers in a table with trend language",
+  "Give advice to avoid road rage"
+ ],
+ "tf": [
+  {
+   "s": "A trend is the way a situation changes over a period of time.",
+   "t": true,
+   "why": "Yes, trends show change over time."
+  },
+  {
+   "s": "'Rise' and 'grow' describe something going down.",
+   "t": false,
+   "why": "'Rise' and 'grow' describe something going up."
+  },
+  {
+   "s": "'Drop', 'fall' and 'decrease' describe something going down.",
+   "t": true,
+   "why": "Correct, they all show a fall."
+  },
+  {
+   "s": "We say 'an increase in' the number of cars.",
+   "t": true,
+   "why": "Yes, the noun 'increase' is followed by 'in'."
+  },
+  {
+   "s": "The adverb of 'steady' is 'steadyly'.",
+   "t": false,
+   "why": "The adverb is 'steadily': y changes to i."
+  },
+  {
+   "s": "Tailgating means driving too close to the car in front.",
+   "t": true,
+   "why": "Right, and it makes drivers nervous."
+  },
+  {
+   "s": "'Reduce' means to make something bigger.",
+   "t": false,
+   "why": "'Reduce' means to make something smaller."
+  },
+  {
+   "s": "'Sharply' and 'dramatically' describe big changes.",
+   "t": true,
+   "why": "Yes, they show large, fast changes."
+  },
+  {
+   "s": "When another driver makes you angry, the best advice is to stay calm.",
+   "t": true,
+   "why": "Staying calm keeps everyone safe."
+  },
+  {
+   "s": "When someone cuts in, the other driver feels relaxed.",
+   "t": false,
+   "why": "Driver 4 had to brake sharply and felt scared."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which verb means 'go down'?",
+   "o": [
+    "fall",
+    "rise",
+    "grow"
+   ],
+   "why": "'Fall' shows a downward trend."
+  },
+  {
+   "q": "Which verb means 'go up'?",
+   "o": [
+    "rise",
+    "drop",
+    "reduce"
+   ],
+   "why": "'Rise' shows an upward trend."
+  },
+  {
+   "q": "What is the adverb of 'gradual'?",
+   "o": [
+    "gradually",
+    "graduallly",
+    "gradualy"
+   ],
+   "why": "Add -ly: gradually."
+  },
+  {
+   "q": "What is the adverb of 'dramatic'?",
+   "o": [
+    "dramatically",
+    "dramaticly",
+    "dramaticaly"
+   ],
+   "why": "Adjectives ending in -ic add -ally."
+  },
+  {
+   "q": "What did Driver 4 do when someone cut in?",
+   "o": [
+    "Braked sharply",
+    "Flashed his lights",
+    "Drove faster"
+   ],
+   "why": "He had to brake and feared an accident."
+  },
+  {
+   "q": "How does tailgating make a driver feel?",
+   "o": [
+    "nervous",
+    "relaxed",
+    "happy"
+   ],
+   "why": "Tailgating feels dangerous."
+  },
+  {
+   "q": "What are indicators used for?",
+   "o": [
+    "showing which way you will turn",
+    "playing music",
+    "cooling the car"
+   ],
+   "why": "Indicators tell others where you are going."
+  },
+  {
+   "q": "Which is a polite thing a driver could say?",
+   "o": [
+    "Sorry, I didn't see you – go ahead.",
+    "Get out of my way!",
+    "Move, now!"
+   ],
+   "why": "Polite words calm the situation."
+  },
+  {
+   "q": "Which adjective describes a small change?",
+   "o": [
+    "slight",
+    "sharp",
+    "dramatic"
+   ],
+   "why": "A slight change is small."
+  },
+  {
+   "q": "What is 'road rage'?",
+   "o": [
+    "anger of drivers on the road",
+    "a type of car",
+    "a road map"
+   ],
+   "why": "Road rage is angry, aggressive driving."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Opposite of 'increase'",
+   "a": "Decrease",
+   "d": [
+    "Rise",
+    "Grow",
+    "Expand"
+   ]
+  },
+  {
+   "q": "Opposite of 'rise'",
+   "a": "Drop",
+   "d": [
+    "Grow",
+    "Expand",
+    "Increase"
+   ]
+  },
+  {
+   "q": "Adverb of 'sharp'",
+   "a": "sharply",
+   "d": [
+    "sharpily",
+    "sharpely",
+    "sharpness"
+   ]
+  },
+  {
+   "q": "Adverb of 'significant'",
+   "a": "significantly",
+   "d": [
+    "significantally",
+    "significently",
+    "significance"
+   ]
+  },
+  {
+   "q": "Driving too close behind",
+   "a": "Tailgating",
+   "d": [
+    "Cutting in",
+    "Indicating",
+    "Parking"
+   ]
+  },
+  {
+   "q": "Lights that show you will turn",
+   "a": "Indicators",
+   "d": [
+    "Headlights",
+    "Brakes",
+    "Mirrors"
+   ]
+  },
+  {
+   "q": "an increase ___ the number",
+   "a": "in",
+   "d": [
+    "on",
+    "at",
+    "under"
+   ]
+  },
+  {
+   "q": "Feeling when drivers don't signal",
+   "a": "Confused",
+   "d": [
+    "Happy",
+    "Relaxed",
+    "Proud"
+   ]
+  },
+  {
+   "q": "Advice for an angry driver",
+   "a": "Stay calm",
+   "d": [
+    "Drive faster",
+    "Shout",
+    "Flash lights"
+   ]
+  },
+  {
+   "q": "A change over a period of time",
+   "a": "Trend",
+   "d": [
+    "Rage",
+    "Signal",
+    "Track"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list contains only verbs for going up?",
+   "o": [
+    "increase, rise, grow, expand",
+    "decrease, drop, fall, reduce",
+    "rise, fall, grow, drop",
+    "reduce, expand, drop, increase"
+   ],
+   "why": "These four all show an upward trend."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why is flashing lights at other drivers rude?",
+   "o": [
+    "It is aggressive and tries to push other drivers out of the way",
+    "It helps other drivers see",
+    "It shows you will turn left",
+    "It is a way to say thank you"
+   ],
+   "why": "Flashing lights can frighten other drivers."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why is turning without signals a problem?",
+   "o": [
+    "Other drivers don't know if you will go left or right",
+    "It saves petrol",
+    "It makes the car faster",
+    "It is the law to not signal"
+   ],
+   "why": "Signals help others understand your plan."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which adjective describes a slow, regular change?",
+   "o": [
+    "gradual",
+    "sudden",
+    "sharp",
+    "dramatic"
+   ],
+   "why": "A gradual change happens little by little."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The number of vehicles went up a lot. Which sentence fits?",
+   "o": [
+    "There was a sharp increase in the number of vehicles.",
+    "There was a slight decrease in the number of vehicles.",
+    "The number of vehicles fell sharply.",
+    "There was a sharp increase on vehicles."
+   ],
+   "why": "A big rise is a sharp increase in…"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Accidents went from 500 to 490 in one year. How can you describe this?",
+   "o": [
+    "There was a slight drop in accidents.",
+    "There was a dramatic rise in accidents.",
+    "Accidents increased sharply.",
+    "Accidents grew significantly."
+   ],
+   "why": "A fall of 10 out of 500 is small."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A driver is tailgating you and you feel nervous. What is the best advice?",
+   "o": [
+    "Stay calm and let the other driver pass",
+    "Brake suddenly to teach him a lesson",
+    "Flash your lights at him",
+    "Drive faster and faster"
+   ],
+   "why": "Letting him pass keeps you safe."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between 'rise' and 'drop'?",
+   "o": [
+    "'Rise' means go up; 'drop' means go down",
+    "They mean the same",
+    "'Rise' means go down; 'drop' means go up",
+    "Both describe no change"
+   ],
+   "why": "They are opposites."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is cutting in dangerous?",
+   "o": [
+    "The other driver must brake sharply and an accident may happen",
+    "It makes the road quieter",
+    "It helps traffic move smoothly",
+    "It saves time for everyone"
+   ],
+   "why": "Sudden braking can cause accidents."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does staying calm help to avoid road rage?",
+   "o": [
+    "Calm drivers make safer decisions and do not make things worse",
+    "Calm drivers always drive faster",
+    "It makes other drivers angrier",
+    "It means you never need to stop"
+   ],
+   "why": "Keeping cool stops problems from growing."
+  }
+ ]
+}

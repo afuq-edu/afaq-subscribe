@@ -1,0 +1,58 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Unit 2: Work and Travel (Grammar)",
+  "lesson": "Lead-in: jobs in tourism and hospitality; reading five job texts",
+  "outcomes": [
+    "List the skills and qualities needed for five tourism jobs",
+    "Match job responsibilities with the right jobs"
+  ],
+  "tf": [
+    { "s": "A tour guide needs good communication skills and languages.", "t": true, "why": "Tour guides talk to tourists from many countries." },
+    { "s": "A chef needs a passion for food and cooking.", "t": true, "why": "Chefs love food and create menus." },
+    { "s": "Airline cabin crew need a mixture of skills, like a nurse, chef, waiter and cleaner.", "t": true, "why": "Cabin crew do many different tasks on a flight." },
+    { "s": "A travel agent does not need computer skills.", "t": false, "why": "Travel agents use computers to organise and book trips." },
+    { "s": "A hotel manager must be patient to handle problems pleasantly.", "t": true, "why": "Patience helps the manager keep staff and guests happy." },
+    { "s": "Public speaking is a skill that tour guides rarely use.", "t": false, "why": "Tour guides speak to groups all the time, so public speaking is important." },
+    { "s": "Sales skills are useful for a travel agent.", "t": true, "why": "Travel agents sell holidays and trips to customers." },
+    { "s": "Creating menus is a main responsibility of cabin crew.", "t": false, "why": "Creating menus is a chef's job." },
+    { "s": "A hotel manager only needs to keep the guests happy, not the staff.", "t": false, "why": "A good hotel manager keeps both staff and guests happy." },
+    { "s": "Hotel managers, chefs and tour guides all work in the farming industry.", "t": false, "why": "These jobs belong to tourism and hospitality." }
+  ],
+  "boxes": [
+    { "q": "Which job creates menus?", "o": ["Chef", "Travel agent", "Tour guide"], "why": "Chefs plan and create menus." },
+    { "q": "Which job needs languages to talk to tourists?", "o": ["Tour guide", "Chef", "Cleaner"], "why": "Tour guides communicate with visitors from different countries." },
+    { "q": "Which job books trips for customers?", "o": ["Travel agent", "Chef", "Hotel manager"], "why": "Travel agents organise and sell travel." },
+    { "q": "Which job works on planes?", "o": ["Cabin crew", "Tour guide", "Travel agent"], "why": "Cabin crew look after passengers during flights." },
+    { "q": "Which job runs a hotel?", "o": ["Hotel manager", "Cabin crew", "Tour guide"], "why": "The hotel manager is in charge of the hotel." },
+    { "q": "Which quality helps a hotel manager handle problems?", "o": ["Patience", "Laziness", "Shyness"], "why": "Patience keeps problems calm and guests happy." },
+    { "q": "Which skill helps a travel agent stay organised?", "o": ["Organisational skills", "Cooking skills", "Swimming skills"], "why": "Travel agents must organise many bookings." },
+    { "q": "What industry do these five jobs belong to?", "o": ["Tourism and hospitality", "Farming", "Car making"], "why": "All five jobs serve travellers and guests." },
+    { "q": "What does 'responsibilities' mean?", "o": ["Duties you must do", "Free time", "Holiday places"], "why": "Responsibilities are the duties of a job." },
+    { "q": "Which job needs public speaking most?", "o": ["Tour guide", "Chef", "Travel agent"], "why": "Tour guides speak to groups of tourists." }
+  ],
+  "hunt": [
+    { "q": "Job: creates menus", "a": "chef", "d": ["tour guide", "travel agent", "cabin crew"] },
+    { "q": "Job: shows tourists around", "a": "tour guide", "d": ["chef", "hotel manager", "cabin crew"] },
+    { "q": "Job: sells and books holidays", "a": "travel agent", "d": ["chef", "tour guide", "cabin crew"] },
+    { "q": "Job: works on a plane", "a": "cabin crew", "d": ["chef", "travel agent", "tour guide"] },
+    { "q": "Job: in charge of a hotel", "a": "hotel manager", "d": ["chef", "cabin crew", "tour guide"] },
+    { "q": "Hotel manager's key quality", "a": "patience", "d": ["laziness", "rudeness", "anger"] },
+    { "q": "A tour guide's key skill", "a": "languages", "d": ["cooking", "sewing", "driving"] },
+    { "q": "A travel agent's key skill", "a": "sales skills", "d": ["cooking", "swimming", "painting"] },
+    { "q": "A chef has a passion for ...", "a": "food", "d": ["planes", "computers", "maps"] },
+    { "q": "Word for 'duties of a job'", "a": "responsibilities", "d": ["holidays", "qualities", "hobbies"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Which job needs 'a mixture of skills' like a nurse, chef, waiter and cleaner?", "o": ["Airline cabin crew", "Travel agent", "Tour guide", "Hotel manager"], "why": "Cabin crew care for passengers, serve food and keep the plane tidy." },
+    { "lv": "التذكر", "q": "Which is a skill of a travel agent?", "o": ["Computer skills", "Creating menus", "Cooking", "Cleaning rooms"], "why": "Travel agents use computers to book trips." },
+    { "lv": "التذكر", "q": "Which is a skill of a chef?", "o": ["Creating menus", "Public speaking", "Selling flights", "Flying planes"], "why": "Chefs create menus and love cooking." },
+    { "lv": "التذكر", "q": "Which skills does a tour guide need?", "o": ["Communication, languages and public speaking", "Cooking and cleaning", "Computer repair", "Driving trucks"], "why": "Tour guides talk with and guide tourists." },
+    { "lv": "التطبيق", "q": "A guest complains loudly about a noisy room. Which job holder should stay calm and solve it pleasantly?", "o": ["The hotel manager", "The chef", "The travel agent", "The tour guide"], "why": "A patient hotel manager handles problems and keeps guests happy." },
+    { "lv": "التطبيق", "q": "A group of tourists from Japan, Germany and Brazil visits Nizwa. Which skill helps their guide most?", "o": ["Speaking different languages", "Creating menus", "Sales skills", "Cleaning skills"], "why": "Languages help the guide communicate with tourists from different countries." },
+    { "lv": "التطبيق", "q": "Sara is very organised, good with computers and likes selling. Which job suits her best?", "o": ["Travel agent", "Chef", "Cabin crew", "Tour guide"], "why": "These are the key skills of a travel agent." },
+    { "lv": "التحليل", "q": "Why must a hotel manager be patient?", "o": ["To handle problems pleasantly while keeping staff and guests happy", "Because hotels are always quiet", "So he can cook for guests", "Because he works alone"], "why": "Patience helps a manager solve problems calmly." },
+    { "lv": "التحليل", "q": "Why does a tour guide need languages?", "o": ["To communicate with tourists from different countries", "To write menus", "To fly the plane", "To book hotel rooms online"], "why": "Tourists come from many countries and speak different languages." },
+    { "lv": "التحليل", "q": "Which statement shows the difference between a skill and a quality?", "o": ["A skill is learned, like using a computer; a quality is part of your character, like patience", "A skill and a quality are always the same", "A quality is a machine you use at work", "A skill is only about cooking"], "why": "Skills are abilities you learn; qualities describe your personality." }
+  ]
+}

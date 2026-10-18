@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U1",
+ "lesson": "Unit 1 – Lesson 9: Phonics (ie, igh, i-e, y)",
+ "outcomes": [
+  "Say and read words with the long i sound: ie, igh, i-e, y.",
+  "Choose the correct spelling for long i words.",
+  "Read the tricky words bye and my."
+ ],
+ "tf": [
+  {
+   "s": "'Night' has the long i sound.",
+   "t": true,
+   "why": "Yes! igh in night says /aɪ/."
+  },
+  {
+   "s": "'Pin' has the long i sound.",
+   "t": false,
+   "why": "Pin has a short i sound."
+  },
+  {
+   "s": "'Kite' uses the i-e spelling.",
+   "t": true,
+   "why": "Correct! k-i-t-e."
+  },
+  {
+   "s": "'Fly' uses the y spelling for the long i sound.",
+   "t": true,
+   "why": "Great! y at the end says /aɪ/ in fly."
+  },
+  {
+   "s": "'Pie' is spelled with igh.",
+   "t": false,
+   "why": "Pie is spelled with ie: p-ie."
+  },
+  {
+   "s": "'Light' and 'high' both use igh.",
+   "t": true,
+   "why": "Well done! l-igh-t, h-igh."
+  },
+  {
+   "s": "'Cat' has the long i sound.",
+   "t": false,
+   "why": "Cat has an /æ/ sound, not long i."
+  },
+  {
+   "s": "'Bike' and 'time' use the i-e spelling.",
+   "t": true,
+   "why": "Yes! b-i-k-e, t-i-m-e."
+  },
+  {
+   "s": "'My' is a tricky word with the long i sound.",
+   "t": true,
+   "why": "Right! The y in my says /aɪ/."
+  },
+  {
+   "s": "'Tie' is spelled 'tigh'.",
+   "t": false,
+   "why": "Tie is spelled t-ie."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word has the long i sound?",
+   "o": [
+    "kite",
+    "pen",
+    "cat"
+   ],
+   "why": "Kite has the long i sound."
+  },
+  {
+   "q": "fl__ (a bird can do this)",
+   "o": [
+    "fly",
+    "flie",
+    "flighe"
+   ],
+   "why": "The answer is fly, with y."
+  },
+  {
+   "q": "n__t (when we sleep)",
+   "o": [
+    "night",
+    "niet",
+    "nyt"
+   ],
+   "why": "Night is spelled with igh."
+  },
+  {
+   "q": "Odd one out (sound):",
+   "o": [
+    "pin",
+    "pie",
+    "kite"
+   ],
+   "why": "Pin has a short i sound."
+  },
+  {
+   "q": "Which spelling is in 'pie'?",
+   "o": [
+    "ie",
+    "igh",
+    "y"
+   ],
+   "why": "p-ie: the ie spelling."
+  },
+  {
+   "q": "Which spelling is in 'bike'?",
+   "o": [
+    "i-e",
+    "ie",
+    "igh"
+   ],
+   "why": "b-i-k-e: the i-e spelling."
+  },
+  {
+   "q": "Which spelling is in 'high'?",
+   "o": [
+    "igh",
+    "i-e",
+    "y"
+   ],
+   "why": "h-igh: the igh spelling."
+  },
+  {
+   "q": "Every night, I eat a pie and fly a ___.",
+   "o": [
+    "kite",
+    "cat",
+    "pen"
+   ],
+   "why": "The tongue twister ends with fly a kite."
+  },
+  {
+   "q": "Which is a tricky word?",
+   "o": [
+    "bye",
+    "kite",
+    "light"
+   ],
+   "why": "Bye is a tricky word."
+  },
+  {
+   "q": "Choose the correct spelling.",
+   "o": [
+    "light",
+    "lite",
+    "lyt"
+   ],
+   "why": "Light is spelled l-igh-t."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Long i: which word?",
+   "a": "night",
+   "d": [
+    "pin",
+    "sit",
+    "cat"
+   ]
+  },
+  {
+   "q": "Long i: which word?",
+   "a": "fly",
+   "d": [
+    "fish",
+    "pen",
+    "sun"
+   ]
+  },
+  {
+   "q": "Long i: which word?",
+   "a": "bike",
+   "d": [
+    "big",
+    "bag",
+    "bed"
+   ]
+  },
+  {
+   "q": "Spelling in 'pie'?",
+   "a": "ie",
+   "d": [
+    "igh",
+    "i-e",
+    "y"
+   ]
+  },
+  {
+   "q": "Spelling in 'light'?",
+   "a": "igh",
+   "d": [
+    "ie",
+    "i-e",
+    "y"
+   ]
+  },
+  {
+   "q": "Spelling in 'time'?",
+   "a": "i-e",
+   "d": [
+    "ie",
+    "igh",
+    "y"
+   ]
+  },
+  {
+   "q": "Spelling in 'cry'?",
+   "a": "y",
+   "d": [
+    "ie",
+    "igh",
+    "i-e"
+   ]
+  },
+  {
+   "q": "Odd one out: pie, kite...",
+   "a": "pin",
+   "d": [
+    "night",
+    "fly",
+    "tie"
+   ]
+  },
+  {
+   "q": "Tricky word with y?",
+   "a": "my",
+   "d": [
+    "kite",
+    "pie",
+    "night"
+   ]
+  },
+  {
+   "q": "Correct spelling?",
+   "a": "kite",
+   "d": [
+    "kight",
+    "kiet",
+    "kyte"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word has the ie spelling?",
+   "o": [
+    "tie",
+    "time",
+    "night",
+    "shy"
+   ],
+   "why": "t-ie uses ie."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has the igh spelling?",
+   "o": [
+    "high",
+    "bike",
+    "lie",
+    "cry"
+   ],
+   "why": "h-igh uses igh."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which words are tricky words in this lesson?",
+   "o": [
+    "bye, my",
+    "kite, bike",
+    "pie, tie",
+    "night, light"
+   ],
+   "why": "Bye and my are the tricky words."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word does NOT have the long i sound?",
+   "o": [
+    "sit",
+    "shy",
+    "lie",
+    "time"
+   ],
+   "why": "Sit has a short i sound."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Every n___t, I eat a p___ .",
+   "o": [
+    "night, pie",
+    "nite, pigh",
+    "nyt, py",
+    "night, pye"
+   ],
+   "why": "night (igh) and pie (ie)."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which word completes 'My kite is ___.'?",
+   "o": [
+    "high",
+    "hie",
+    "hyte",
+    "hi-e"
+   ],
+   "why": "High is spelled with igh."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct spelling: I ride my ___.",
+   "o": [
+    "bike",
+    "bighk",
+    "biek",
+    "byk"
+   ],
+   "why": "Bike uses i-e: b-i-k-e."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the same in pie, night, kite and fly?",
+   "o": [
+    "They all have the long i sound.",
+    "They all use igh.",
+    "They all end in e.",
+    "They all have a short i sound."
+   ],
+   "why": "Different spellings, same /aɪ/ sound!"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group has words with ONLY the i-e spelling?",
+   "o": [
+    "kite, bike, time",
+    "pie, tie, lie",
+    "night, light, high",
+    "fly, shy, cry"
+   ],
+   "why": "k-i-t-e, b-i-k-e, t-i-m-e."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group has words with ONLY the y spelling?",
+   "o": [
+    "fly, shy, cry",
+    "kite, bike, time",
+    "pie, tie, lie",
+    "night, light, high"
+   ],
+   "why": "In these words y says /aɪ/."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 3: Spend or save?",
+ "lesson": "Lesson 9: Literacy – Writing an informal email",
+ "outcomes": [
+  "Choose a good subject line for an email.",
+  "Start and finish an informal email correctly.",
+  "Use unless (= if not) and answer all the writer's questions."
+ ],
+ "tf": [
+  {
+   "s": "The subject line tells the reader why you are writing.",
+   "t": true,
+   "why": "Yes, the subject explains the reason."
+  },
+  {
+   "s": "We start an informal email with 'Dear Sir'.",
+   "t": false,
+   "why": "Informal emails start with Hi + name."
+  },
+  {
+   "s": "We can finish an informal email with 'See you soon' + your name.",
+   "t": true,
+   "why": "Correct, or 'Bye' + your name."
+  },
+  {
+   "s": "'Unless' means 'if not'.",
+   "t": true,
+   "why": "Right, unless = if not."
+  },
+  {
+   "s": "The best subject line for Kamla's email is 'Next weekend!'.",
+   "t": true,
+   "why": "Well done, it explains why she is writing."
+  },
+  {
+   "s": "Kamla needs to buy a present for her father.",
+   "t": false,
+   "why": "Kamla needs a present for her mother."
+  },
+  {
+   "s": "In a reply, you only need to answer one of the writer's questions.",
+   "t": false,
+   "why": "Answer all of the writer's questions."
+  },
+  {
+   "s": "'Unless you hurry, you'll miss the bus' means 'If you don't hurry, you'll miss the bus'.",
+   "t": true,
+   "why": "Yes, both sentences mean the same."
+  },
+  {
+   "s": "A good email uses paragraphs.",
+   "t": true,
+   "why": "Paragraphs make an email easy to read."
+  },
+  {
+   "s": "'I won't go unless it doesn't stop raining' is correct.",
+   "t": false,
+   "why": "Unless already means 'if not': I won't go unless it stops raining."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How do we start an informal email?",
+   "o": [
+    "Hi + name",
+    "Dear Sir or Madam",
+    "Yours faithfully"
+   ],
+   "why": "Informal emails begin with Hi + name."
+  },
+  {
+   "q": "How do we finish an informal email?",
+   "o": [
+    "See you soon + name",
+    "Yours faithfully",
+    "To whom it may concern"
+   ],
+   "why": "Friendly endings: Bye or See you soon."
+  },
+  {
+   "q": "What goes in the subject box?",
+   "o": [
+    "why you are writing",
+    "your address",
+    "the date"
+   ],
+   "why": "The subject tells the reason for writing."
+  },
+  {
+   "q": "What does Kamla need to buy?",
+   "o": [
+    "a present for her mother",
+    "a new phone",
+    "a school bag"
+   ],
+   "why": "Kamla needs a present for her mother."
+  },
+  {
+   "q": "'Unless' means ...",
+   "o": [
+    "if not",
+    "because",
+    "and then"
+   ],
+   "why": "Unless = if not."
+  },
+  {
+   "q": "Rewrite: If you don't hurry, you'll miss the bus.",
+   "o": [
+    "Unless you hurry, you'll miss the bus.",
+    "Unless you don't hurry, you'll miss the bus.",
+    "If you hurry, you'll miss the bus."
+   ],
+   "why": "Unless replaces 'if ... not'."
+  },
+  {
+   "q": "Who writes the reply to Kamla?",
+   "o": [
+    "Zainab",
+    "Nawal",
+    "Rasha"
+   ],
+   "why": "Zainab replies to Kamla."
+  },
+  {
+   "q": "What is the best subject line for Kamla's email?",
+   "o": [
+    "Next weekend!",
+    "Hello",
+    "Homework"
+   ],
+   "why": "'Next weekend!' tells why she is writing."
+  },
+  {
+   "q": "Zainab must write about the shops where she lives, her favourite shop and ...",
+   "o": [
+    "what else there is to do there",
+    "her maths test",
+    "her pet"
+   ],
+   "why": "These are Kamla's three questions."
+  },
+  {
+   "q": "Rewrite: I won't go if it doesn't stop raining.",
+   "o": [
+    "I won't go unless it stops raining.",
+    "I won't go unless it doesn't stop raining.",
+    "I go unless it rains not."
+   ],
+   "why": "Unless + positive verb."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Start an informal email",
+   "a": "Hi",
+   "d": [
+    "Dear Sir",
+    "Yours",
+    "Regards"
+   ]
+  },
+  {
+   "q": "Finish an informal email",
+   "a": "See you soon",
+   "d": [
+    "Dear Sir",
+    "Yours faithfully",
+    "Hello"
+   ]
+  },
+  {
+   "q": "Unless means",
+   "a": "if not",
+   "d": [
+    "because",
+    "so",
+    "and"
+   ]
+  },
+  {
+   "q": "Best subject for Kamla",
+   "a": "Next weekend!",
+   "d": [
+    "Hello",
+    "Homework",
+    "Shopping list"
+   ]
+  },
+  {
+   "q": "Kamla's present is for her",
+   "a": "mother",
+   "d": [
+    "father",
+    "sister",
+    "teacher"
+   ]
+  },
+  {
+   "q": "Who replies to Kamla?",
+   "a": "Zainab",
+   "d": [
+    "Nawal",
+    "Rasha",
+    "Rosie"
+   ]
+  },
+  {
+   "q": "Tells why you write",
+   "a": "subject",
+   "d": [
+    "signature",
+    "date",
+    "address"
+   ]
+  },
+  {
+   "q": "Organise your email in",
+   "a": "paragraphs",
+   "d": [
+    "tables",
+    "lists",
+    "maps"
+   ]
+  },
+  {
+   "q": "___ you hurry, you'll be late",
+   "a": "Unless",
+   "d": [
+    "If",
+    "Because",
+    "So"
+   ]
+  },
+  {
+   "q": "Tool to check your email",
+   "a": "checklist",
+   "d": [
+    "calculator",
+    "clock",
+    "ruler"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does an informal email start with?",
+   "o": [
+    "Hi + the person's name",
+    "Dear Sir or Madam",
+    "Yours faithfully",
+    "The date only"
+   ],
+   "why": "Hi + name is friendly and informal."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the subject line explain?",
+   "o": [
+    "why you are writing",
+    "your age",
+    "your address",
+    "the weather"
+   ],
+   "why": "The subject tells the reader the reason."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should you do when you plan a reply?",
+   "o": [
+    "make sure you answer all of the writer's questions",
+    "write only the subject",
+    "copy the writer's email",
+    "use Dear Sir"
+   ],
+   "why": "A good plan answers every question."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'unless' mean?",
+   "o": [
+    "if not",
+    "when",
+    "because",
+    "so that"
+   ],
+   "why": "Unless = if not."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite with unless: I won't have time to get it if I don't go next weekend.",
+   "o": [
+    "I won't have time to get it unless I go next weekend.",
+    "I won't have time to get it unless I don't go next weekend.",
+    "I will have time unless I go.",
+    "Unless I won't go, I have time."
+   ],
+   "why": "Unless replaces 'if I don't'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best last line of an informal email?",
+   "o": [
+    "See you soon, Zainab",
+    "Yours faithfully, Mrs Zainab",
+    "Dear Kamla,",
+    "Subject: Next weekend!"
+   ],
+   "why": "Finish with See you soon or Bye + your name."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "Unless it stops raining, we won't go out.",
+    "Unless it doesn't stop raining, we won't go out.",
+    "Unless it will stop raining, we go out.",
+    "Unless stop raining, we won't go."
+   ],
+   "why": "Unless + positive Present simple."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'Next weekend!' a better subject line than 'Hello'?",
+   "o": [
+    "It tells the reader why Kamla is writing.",
+    "It is shorter.",
+    "It is more formal.",
+    "It has no meaning."
+   ],
+   "why": "A good subject explains the reason for the email."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Zainab's reply only talks about her favourite shop. What is the problem?",
+   "o": [
+    "She hasn't answered all of Kamla's questions.",
+    "She used Hi.",
+    "She used paragraphs.",
+    "She wrote a subject line."
+   ],
+   "why": "A good reply answers all the questions."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which email is informal?",
+   "o": [
+    "Hi Kamla, I'd love to see you next weekend! See you soon, Zainab",
+    "Dear Sir, I am writing to complain. Yours faithfully",
+    "To the manager: Please send the bill.",
+    "Dear Madam, Thank you for your letter."
+   ],
+   "why": "It uses Hi, friendly words and See you soon."
+  }
+ ]
+}

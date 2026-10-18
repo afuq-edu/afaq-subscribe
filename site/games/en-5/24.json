@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 3 – Let’s explore!",
+ "lesson": "Lesson 1: Vocabulary – Space",
+ "outcomes": [
+  "Recognise and say twelve space words.",
+  "Sort space words: natural objects and things people make.",
+  "Give clues about space words and complete sentences with them."
+ ],
+ "tf": [
+  {
+   "s": "A comet is something people make.",
+   "t": false,
+   "why": "A comet is a natural object in space."
+  },
+  {
+   "s": "The Sun is a star.",
+   "t": true,
+   "why": "The Sun is a big, very hot ball that gives light, like other stars."
+  },
+  {
+   "s": "It is safe to look at the Sun.",
+   "t": false,
+   "why": "Never look at the Sun because it can hurt your eyes."
+  },
+  {
+   "s": "A rocket is something people make.",
+   "t": true,
+   "why": "People build rockets to go into space."
+  },
+  {
+   "s": "The planets in our solar system move around the Moon.",
+   "t": false,
+   "why": "The planets move around the Sun."
+  },
+  {
+   "s": "Astronauts wear spacesuits in space.",
+   "t": true,
+   "why": "A spacesuit keeps astronauts safe in space."
+  },
+  {
+   "s": "You can see stars and planets with a telescope.",
+   "t": true,
+   "why": "A telescope helps us see things far away in the sky."
+  },
+  {
+   "s": "A space station is a natural object.",
+   "t": false,
+   "why": "People make space stations."
+  },
+  {
+   "s": "Our planet has got a satellite called the Moon.",
+   "t": true,
+   "why": "The Moon goes around the Earth."
+  },
+  {
+   "s": "The Moon is a planet.",
+   "t": false,
+   "why": "The Moon goes around the Earth. It is not a planet."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Astronauts fly into space in it. What is it?",
+   "o": [
+    "a rocket",
+    "a telescope",
+    "a comet"
+   ],
+   "why": "A rocket takes astronauts into space."
+  },
+  {
+   "q": "Complete: We live on planet ______.",
+   "o": [
+    "Earth",
+    "Sun",
+    "Moon"
+   ],
+   "why": "Our planet is the Earth."
+  },
+  {
+   "q": "Which group has only things people make?",
+   "o": [
+    "rocket, satellite, space station",
+    "Sun, Moon, star",
+    "comet, planet, Earth"
+   ],
+   "why": "People build rockets, satellites and space stations."
+  },
+  {
+   "q": "Complete: It's fun to watch the sky at night with a ______.",
+   "o": [
+    "telescope",
+    "spacesuit",
+    "rocket"
+   ],
+   "why": "A telescope helps us see the night sky."
+  },
+  {
+   "q": "Which word means the Sun and all its planets?",
+   "o": [
+    "solar system",
+    "space station",
+    "satellite"
+   ],
+   "why": "The Sun and its planets make the solar system."
+  },
+  {
+   "q": "Which one is a natural object?",
+   "o": [
+    "a star",
+    "a rocket",
+    "a spacesuit"
+   ],
+   "why": "People don't make stars."
+  },
+  {
+   "q": "Clue: You can wear it. Which word is it?",
+   "o": [
+    "spacesuit",
+    "telescope",
+    "planet"
+   ],
+   "why": "Astronauts wear a spacesuit."
+  },
+  {
+   "q": "Is the Earth a star or a planet?",
+   "o": [
+    "a planet",
+    "a star",
+    "a comet"
+   ],
+   "why": "The Earth is one of the eight planets."
+  },
+  {
+   "q": "Why must we not look at the Sun?",
+   "o": [
+    "It can hurt our eyes.",
+    "It is too small.",
+    "It is a planet."
+   ],
+   "why": "The Sun is very bright and can hurt our eyes."
+  },
+  {
+   "q": "Clue: It goes around the Earth and people make it.",
+   "o": [
+    "a satellite",
+    "a comet",
+    "the Sun"
+   ],
+   "why": "People make satellites to go around the Earth."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Astronauts fly into space in it",
+   "a": "rocket",
+   "d": [
+    "comet",
+    "star",
+    "planet"
+   ]
+  },
+  {
+   "q": "Earth's natural satellite",
+   "a": "the Moon",
+   "d": [
+    "the Sun",
+    "a comet",
+    "a rocket"
+   ]
+  },
+  {
+   "q": "Use it to look at the night sky",
+   "a": "telescope",
+   "d": [
+    "spacesuit",
+    "satellite",
+    "rocket"
+   ]
+  },
+  {
+   "q": "Earth is one of eight ___",
+   "a": "planets",
+   "d": [
+    "stars",
+    "comets",
+    "rockets"
+   ]
+  },
+  {
+   "q": "Astronauts' special clothes",
+   "a": "spacesuit",
+   "d": [
+    "space station",
+    "telescope",
+    "solar system"
+   ]
+  },
+  {
+   "q": "Never look at it!",
+   "a": "the Sun",
+   "d": [
+    "the Moon",
+    "a planet",
+    "a rocket"
+   ]
+  },
+  {
+   "q": "A natural object with a long tail",
+   "a": "comet",
+   "d": [
+    "rocket",
+    "satellite",
+    "spacesuit"
+   ]
+  },
+  {
+   "q": "Astronauts live and work in it",
+   "a": "space station",
+   "d": [
+    "comet",
+    "star",
+    "solar system"
+   ]
+  },
+  {
+   "q": "The planets move around it",
+   "a": "the Sun",
+   "d": [
+    "the Moon",
+    "the Earth",
+    "a comet"
+   ]
+  },
+  {
+   "q": "Big, hot ball that gives light",
+   "a": "star",
+   "d": [
+    "planet",
+    "moon",
+    "rocket"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the Moon?",
+   "o": [
+    "Earth's satellite",
+    "a star",
+    "a rocket",
+    "a spacesuit"
+   ],
+   "why": "The Moon goes around the Earth, so it is Earth's satellite."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which thing do people make?",
+   "o": [
+    "a satellite",
+    "a comet",
+    "a star",
+    "the Moon"
+   ],
+   "why": "People make satellites to go around the Earth."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one do astronauts live and work in, above the Earth?",
+   "o": [
+    "a space station",
+    "a comet",
+    "a star",
+    "a telescope"
+   ],
+   "why": "A space station is a home in space for astronauts."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one can hurt your eyes if you look at it?",
+   "o": [
+    "the Sun",
+    "the Moon",
+    "a star",
+    "a planet"
+   ],
+   "why": "The Sun is very bright, so never look at it."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: There are eight ______ in our solar system. They move around the Sun.",
+   "o": [
+    "planets",
+    "stars",
+    "comets",
+    "rockets"
+   ],
+   "why": "The eight planets move around the Sun."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose a good clue for \"rocket\".",
+   "o": [
+    "Astronauts fly into space in it.",
+    "You can wear it.",
+    "It is our planet.",
+    "It is a very hot star."
+   ],
+   "why": "A rocket takes astronauts into space."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to see a comet at night. What do you need?",
+   "o": [
+    "a telescope",
+    "a spacesuit",
+    "a rocket",
+    "a satellite"
+   ],
+   "why": "A telescope helps you see things far away."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the Sun called a star?",
+   "o": [
+    "It is a big, very hot ball that gives light.",
+    "It goes around the Earth.",
+    "People made it.",
+    "It is very small."
+   ],
+   "why": "Stars are big, hot balls that give light, like the Sun."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT belong in the group \"things people make\"?",
+   "o": [
+    "comet",
+    "satellite",
+    "rocket",
+    "space station"
+   ],
+   "why": "A comet is natural. People make the other three."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Is a satellite like a rocket or like a star?",
+   "o": [
+    "like a rocket, because people make it",
+    "like a star, because it gives light",
+    "like a star, because it is very hot",
+    "like a star, because it is natural"
+   ],
+   "why": "People make satellites, just like rockets."
+  }
+ ]
+}

@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Studying Abroad (Vocabulary)",
+ "lesson": "Guessing vocabulary from context (Activity 3)",
+ "outcomes": [
+  "List strategies for dealing with new words",
+  "Guess the meaning of a word from its context"
+ ],
+ "tf": [
+  {
+   "s": "Guessing from context means using the words around the new word.",
+   "t": true,
+   "why": "The context gives clues to the meaning."
+  },
+  {
+   "s": "You must always look up every new word in a dictionary.",
+   "t": false,
+   "why": "You can also guess from context or sometimes ignore the word."
+  },
+  {
+   "s": "Guessing from context saves time and keeps you reading.",
+   "t": true,
+   "why": "You do not need to stop for every word."
+  },
+  {
+   "s": "Ignoring a new word is never a possible strategy.",
+   "t": false,
+   "why": "Ignoring a word is one of the strategies students listed."
+  },
+  {
+   "s": "A dictionary is useful when a word is essential and the context gives few clues.",
+   "t": true,
+   "why": "Then guessing is not enough."
+  },
+  {
+   "s": "The words before and after an unknown word can give clues.",
+   "t": true,
+   "why": "They often show what the word means."
+  },
+  {
+   "s": "A vocabulary notebook helps you record and remember new words.",
+   "t": true,
+   "why": "Writing words down helps you learn them."
+  },
+  {
+   "s": "After guessing a meaning, you should not check it in the sentence.",
+   "t": false,
+   "why": "Test your guess in the sentence to see if it makes sense."
+  },
+  {
+   "s": "Context means the sentences and text around a word.",
+   "t": true,
+   "why": "Yes, context is the words around it."
+  },
+  {
+   "s": "Stopping to look up every word makes reading faster.",
+   "t": false,
+   "why": "It slows your reading down."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which strategy uses the words around a new word?",
+   "o": [
+    "guessing from context",
+    "ignoring it",
+    "copying it"
+   ],
+   "why": "The surrounding words give clues."
+  },
+  {
+   "q": "'The test was simple; everyone finished in five minutes.' 'Simple' means...",
+   "o": [
+    "easy",
+    "difficult",
+    "long"
+   ],
+   "why": "Everyone finished quickly, so it was easy."
+  },
+  {
+   "q": "Why is guessing from context useful?",
+   "o": [
+    "it keeps you reading",
+    "it is always 100% right",
+    "it stops you reading"
+   ],
+   "why": "You can continue without stopping."
+  },
+  {
+   "q": "'After running 10 km, he was exhausted and lay down.' 'Exhausted' means...",
+   "o": [
+    "very tired",
+    "very rich",
+    "very quick"
+   ],
+   "why": "Running far and lying down show he was tired."
+  },
+  {
+   "q": "'The ancient castle was built 900 years ago.' 'Ancient' means...",
+   "o": [
+    "very old",
+    "very new",
+    "very tall"
+   ],
+   "why": "900 years ago tells you it is old."
+  },
+  {
+   "q": "'The room was spotless; there was no dirt anywhere.' 'Spotless' means...",
+   "o": [
+    "very clean",
+    "very dark",
+    "very small"
+   ],
+   "why": "'No dirt anywhere' is the clue."
+  },
+  {
+   "q": "Where can you write new words to remember them?",
+   "o": [
+    "a vocabulary notebook",
+    "a timetable",
+    "a shopping list"
+   ],
+   "why": "A vocabulary notebook keeps new words together."
+  },
+  {
+   "q": "What should you do after guessing a meaning?",
+   "o": [
+    "test it in the sentence",
+    "forget it",
+    "ignore the sentence"
+   ],
+   "why": "Check that the meaning makes sense."
+  },
+  {
+   "q": "'She was elated when she heard she had passed.' 'Elated' means...",
+   "o": [
+    "very happy",
+    "very angry",
+    "very sad"
+   ],
+   "why": "Passing an exam makes you happy."
+  },
+  {
+   "q": "'The tiny kitten looked minuscule next to the dog.' 'Minuscule' means...",
+   "o": [
+    "very small",
+    "very big",
+    "very loud"
+   ],
+   "why": "'Tiny' is the clue."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "'The arid land had no rain for years.' arid =",
+   "a": "dry",
+   "d": [
+    "wet",
+    "green",
+    "busy"
+   ]
+  },
+  {
+   "q": "'Famished after the trip, he ate a lot.' famished =",
+   "a": "hungry",
+   "d": [
+    "full",
+    "sleepy",
+    "bored"
+   ]
+  },
+  {
+   "q": "'He was furious and shouted at us.' furious =",
+   "a": "angry",
+   "d": [
+    "calm",
+    "happy",
+    "quiet"
+   ]
+  },
+  {
+   "q": "'The enormous elephant filled the road.' enormous =",
+   "a": "huge",
+   "d": [
+    "tiny",
+    "fast",
+    "thin"
+   ]
+  },
+  {
+   "q": "'It was chilly, so I wore a coat.' chilly =",
+   "a": "cold",
+   "d": [
+    "hot",
+    "dry",
+    "sunny"
+   ]
+  },
+  {
+   "q": "'The timid boy hid behind his mother.' timid =",
+   "a": "shy",
+   "d": [
+    "brave",
+    "loud",
+    "rude"
+   ]
+  },
+  {
+   "q": "'The swift runner won easily.' swift =",
+   "a": "fast",
+   "d": [
+    "slow",
+    "tired",
+    "lazy"
+   ]
+  },
+  {
+   "q": "'Fragile glass breaks easily.' fragile =",
+   "a": "easily broken",
+   "d": [
+    "very strong",
+    "very heavy",
+    "very cheap"
+   ]
+  },
+  {
+   "q": "'The damp towel was not dry yet.' damp =",
+   "a": "slightly wet",
+   "d": [
+    "very dry",
+    "very hot",
+    "very clean"
+   ]
+  },
+  {
+   "q": "Using the words around a new word",
+   "a": "context",
+   "d": [
+    "dictionary",
+    "ignoring",
+    "translation"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which three strategies did students list for dealing with new words?",
+   "o": [
+    "Ignore it, use a dictionary, guess from context",
+    "Copy it, delete it, shout it",
+    "Draw it, sing it, spell it",
+    "Skip the page, close the book, stop reading"
+   ],
+   "why": "These are the common strategies."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What can help you guess the meaning of a new word?",
+   "o": [
+    "The words before and after it",
+    "The page number",
+    "The font size",
+    "The title of another book"
+   ],
+   "why": "Clues are in the surrounding words."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is 'context'?",
+   "o": [
+    "The words and sentences around a word",
+    "A kind of dictionary",
+    "A grammar rule",
+    "A list of spellings"
+   ],
+   "why": "Context helps you understand a word."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When is a dictionary better than guessing?",
+   "o": [
+    "When the word is essential and the context gives few clues",
+    "Always, for every word",
+    "Never",
+    "Only when reading fast"
+   ],
+   "why": "Use a dictionary for important words you cannot guess."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'The road was so congested that we waited an hour in traffic.' 'Congested' means...",
+   "o": [
+    "Full of traffic",
+    "Empty",
+    "Newly built",
+    "Very wide"
+   ],
+   "why": "Waiting an hour in traffic is the clue."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'Although he was wealthy, he lived in a small house and spent little.' 'Wealthy' means...",
+   "o": [
+    "Rich",
+    "Poor",
+    "Kind",
+    "Young"
+   ],
+   "why": "'Although' shows a contrast with spending little."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'The instructions were ambiguous, so nobody knew what to do.' 'Ambiguous' means...",
+   "o": [
+    "Unclear",
+    "Very clear",
+    "Very short",
+    "Printed"
+   ],
+   "why": "Nobody knew what to do, so they were unclear."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it sensible to test each possible meaning in the sentence?",
+   "o": [
+    "To see which meaning makes sense",
+    "To make the sentence longer",
+    "To avoid reading",
+    "To change the text"
+   ],
+   "why": "The right meaning fits the sentence."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Unlike his noisy brother, Sami is reticent.' Which clue helps you guess that 'reticent' means quiet?",
+   "o": [
+    "Unlike his noisy brother",
+    "Sami is",
+    "The full stop",
+    "The capital letter"
+   ],
+   "why": "'Unlike' shows Sami is the opposite of noisy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can stopping to use a dictionary for every word be a problem?",
+   "o": [
+    "It slows you down and breaks your reading",
+    "It improves your speed",
+    "Dictionaries are always wrong",
+    "It makes texts shorter"
+   ],
+   "why": "Too many stops make it hard to follow the text."
+  }
+ ]
+}

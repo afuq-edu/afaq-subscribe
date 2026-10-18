@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U3",
+ "lesson": "Unit 3 – Lesson 1: Vocabulary 1 (landscapes and adjectives)",
+ "outcomes": [
+  "Name landscape words like river, mountain, lake and island.",
+  "Use the adjectives deep, high and wide.",
+  "Describe a place with an adjective and a landscape word."
+ ],
+ "tf": [
+  {
+   "s": "A lake has water.",
+   "t": true,
+   "why": "Yes! A lake is full of water."
+  },
+  {
+   "s": "A forest has a lot of buildings.",
+   "t": false,
+   "why": "A forest has a lot of trees. A city has a lot of buildings."
+  },
+  {
+   "s": "A city has a lot of buildings and a lot of people.",
+   "t": true,
+   "why": "Correct! A city is very big."
+  },
+  {
+   "s": "A mountain is easy to climb.",
+   "t": false,
+   "why": "A mountain is hard to climb because it's very high."
+  },
+  {
+   "s": "Jabal Shams is a high mountain in Oman.",
+   "t": true,
+   "why": "Well done! Jabal Shams is very high."
+  },
+  {
+   "s": "We say 'a deep mountain'.",
+   "t": false,
+   "why": "We say 'a high mountain' and 'a deep lake'."
+  },
+  {
+   "s": "'Wide' tells us about one side to the other.",
+   "t": true,
+   "why": "Great! A wide river is big from side to side."
+  },
+  {
+   "s": "A hill is higher than a mountain.",
+   "t": false,
+   "why": "A mountain is higher than a hill."
+  },
+  {
+   "s": "A waterfall has water.",
+   "t": true,
+   "why": "Yes! Water falls down a waterfall."
+  },
+  {
+   "s": "A city has water all around it.",
+   "t": false,
+   "why": "An island has water all around it."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Answer: Is there a river? (✓)",
+   "o": [
+    "Yes, there is.",
+    "Yes, there are.",
+    "No, there isn't."
+   ],
+   "why": "One river, it's there: 'Yes, there is.'"
+  },
+  {
+   "q": "It's hard to climb. It's very high.",
+   "o": [
+    "mountain",
+    "lake",
+    "river"
+   ],
+   "why": "A mountain is very high."
+  },
+  {
+   "q": "Odd one out: river, lake, waterfall, city",
+   "o": [
+    "city",
+    "river",
+    "lake"
+   ],
+   "why": "A city has no water like the others."
+  },
+  {
+   "q": "Which phrase is correct?",
+   "o": [
+    "a deep lake",
+    "a high lake",
+    "a tall lake"
+   ],
+   "why": "Lakes are deep."
+  },
+  {
+   "q": "Which place is the biggest?",
+   "o": [
+    "a city",
+    "a town",
+    "a house"
+   ],
+   "why": "A city is very big."
+  },
+  {
+   "q": "Ask to find a picture with an island.",
+   "o": [
+    "Is there an island?",
+    "Are there an island?",
+    "Is there a island?"
+   ],
+   "why": "We ask 'Is there an island?'."
+  },
+  {
+   "q": "Unjumble: atefwlalr",
+   "o": [
+    "waterfall",
+    "wonderful",
+    "waterball"
+   ],
+   "why": "a-t-e-f-w-l-a-l-r = waterfall."
+  },
+  {
+   "q": "Which is NOT a landscape word?",
+   "o": [
+    "shoes",
+    "hill",
+    "lake"
+   ],
+   "why": "Shoes are not a place."
+  },
+  {
+   "q": "Answer: Is there a high mountain? (✗)",
+   "o": [
+    "No, there isn't.",
+    "No, there aren't.",
+    "Yes, there is."
+   ],
+   "why": "One mountain, not there: 'No, there isn't.'"
+  },
+  {
+   "q": "Water moves along it to the sea.",
+   "o": [
+    "river",
+    "hill",
+    "forest"
+   ],
+   "why": "A river carries water."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Water all around it",
+   "a": "island",
+   "d": [
+    "city",
+    "hill",
+    "forest"
+   ]
+  },
+  {
+   "q": "A lot of trees",
+   "a": "forest",
+   "d": [
+    "lake",
+    "island",
+    "river"
+   ]
+  },
+  {
+   "q": "Water falls down it",
+   "a": "waterfall",
+   "d": [
+    "hill",
+    "city",
+    "town"
+   ]
+  },
+  {
+   "q": "Small mountain",
+   "a": "hill",
+   "d": [
+    "lake",
+    "river",
+    "island"
+   ]
+  },
+  {
+   "q": "Smaller than a city",
+   "a": "town",
+   "d": [
+    "island",
+    "forest",
+    "lake"
+   ]
+  },
+  {
+   "q": "A ___ mountain",
+   "a": "high",
+   "d": [
+    "deep",
+    "wide",
+    "wet"
+   ]
+  },
+  {
+   "q": "A ___ lake",
+   "a": "deep",
+   "d": [
+    "high",
+    "tall",
+    "dry"
+   ]
+  },
+  {
+   "q": "A ___ river",
+   "a": "wide",
+   "d": [
+    "high",
+    "tall",
+    "dry"
+   ]
+  },
+  {
+   "q": "Is there an island? Yes, there...",
+   "a": "is",
+   "d": [
+    "are",
+    "am",
+    "be"
+   ]
+  },
+  {
+   "q": "Spell it: I-S-L-A-N-D",
+   "a": "island",
+   "d": [
+    "iland",
+    "islend",
+    "ilend"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word is an adjective?",
+   "o": [
+    "wide",
+    "river",
+    "city",
+    "island"
+   ],
+   "why": "'Wide' describes a place."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which adjective means very tall, like a mountain?",
+   "o": [
+    "high",
+    "deep",
+    "wide",
+    "small"
+   ],
+   "why": "Mountains are high."
+  },
+  {
+   "lv": "التذكر",
+   "q": "It's got water. It's wide. It isn't a river. It isn't a waterfall. What is it?",
+   "o": [
+    "lake",
+    "island",
+    "forest",
+    "hill"
+   ],
+   "why": "It's a lake."
+  },
+  {
+   "lv": "التذكر",
+   "q": "It's got a lot of buildings and people. It's very big. What is it?",
+   "o": [
+    "city",
+    "forest",
+    "island",
+    "hill"
+   ],
+   "why": "That's a city."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Unjumble: tmnoanui",
+   "o": [
+    "mountain",
+    "fountain",
+    "monument",
+    "mountian"
+   ],
+   "why": "t-m-n-o-a-n-u-i = mountain."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The river is very ___ (from one side to the other).",
+   "o": [
+    "wide",
+    "high",
+    "deep",
+    "small"
+   ],
+   "why": "Wide means big from side to side."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best phrase for Jabal Akhdar.",
+   "o": [
+    "a high mountain",
+    "a deep mountain",
+    "a wide island",
+    "a deep forest"
+   ],
+   "why": "Jabal Akhdar is a high mountain."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best riddle for 'forest'?",
+   "o": [
+    "It's got a lot of trees. Animals live there.",
+    "It's got water all around it.",
+    "It's got a lot of buildings.",
+    "It's very deep and has water."
+   ],
+   "why": "Trees tell us it's a forest."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group has water in all of them?",
+   "o": [
+    "river, lake, waterfall",
+    "city, town, hill",
+    "forest, hill, mountain",
+    "city, forest, town"
+   ],
+   "why": "Rivers, lakes and waterfalls all have water."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'a high lake' wrong?",
+   "o": [
+    "We use 'deep' for lakes, not 'high'.",
+    "Lakes are buildings.",
+    "'High' is a colour.",
+    "Lakes have no water."
+   ],
+   "why": "Lakes are deep; mountains are high."
+  }
+ ]
+}

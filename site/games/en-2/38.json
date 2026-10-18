@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Unit 3 – Lesson 5: Culture and Project (National Day)",
+ "outcomes": [
+  "I can read a short text about National Day in Oman.",
+  "I can say what people do in a parade.",
+  "I can talk and write about my festival clothes."
+ ],
+ "tf": [
+  {
+   "s": "Faisal's favourite day is National Day.",
+   "t": true,
+   "why": "The text is about National Day in Oman."
+  },
+  {
+   "s": "In the text, there is a parade.",
+   "t": true,
+   "why": "There is a parade on National Day."
+  },
+  {
+   "s": "In the parade, Faisal stamps his feet.",
+   "t": true,
+   "why": "I walk and stamp my feet."
+  },
+  {
+   "s": "In the parade, Faisal claps his hands.",
+   "t": true,
+   "why": "I clap my hands."
+  },
+  {
+   "s": "In the text, the dress is black and pink.",
+   "t": false,
+   "why": "The dress is blue, red, green and white."
+  },
+  {
+   "s": "A parade is people walking together in a celebration.",
+   "t": true,
+   "why": "People walk together in a parade."
+  },
+  {
+   "s": "Eid is a festival.",
+   "t": true,
+   "why": "National Day and Eid are festivals."
+  },
+  {
+   "s": "A uniform is a kind of food.",
+   "t": false,
+   "why": "A uniform is special clothes people wear."
+  },
+  {
+   "s": "In the text, Faisal sleeps in the parade.",
+   "t": false,
+   "why": "He walks, stamps his feet and claps his hands."
+  },
+  {
+   "s": "We can write: My dishdasha is white.",
+   "t": true,
+   "why": "My + clothes + is + colour."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is Faisal's favourite day?",
+   "o": [
+    "National Day",
+    "his birthday",
+    "Monday"
+   ],
+   "why": "It's National Day in Oman!"
+  },
+  {
+   "q": "What does Faisal do with his feet?",
+   "o": [
+    "He stamps them.",
+    "He claps them.",
+    "He bends them."
+   ],
+   "why": "I walk and stamp my feet."
+  },
+  {
+   "q": "What does Faisal do with his hands?",
+   "o": [
+    "He claps them.",
+    "He stamps them.",
+    "He hides them."
+   ],
+   "why": "I clap my hands."
+  },
+  {
+   "q": "People walking together to celebrate:",
+   "o": [
+    "a parade",
+    "a pencil",
+    "a robot"
+   ],
+   "why": "That is a parade."
+  },
+  {
+   "q": "Special clothes people wear:",
+   "o": [
+    "a uniform",
+    "a festival",
+    "a parade"
+   ],
+   "why": "A uniform is special clothes."
+  },
+  {
+   "q": "Pick the festival.",
+   "o": [
+    "Eid",
+    "ruler",
+    "Monday"
+   ],
+   "why": "Eid is a festival."
+  },
+  {
+   "q": "My dishdasha ___ white.",
+   "o": [
+    "is",
+    "are",
+    "am"
+   ],
+   "why": "My dishdasha is white."
+  },
+  {
+   "q": "Colours of the dress in the text:",
+   "o": [
+    "blue, red, green and white",
+    "pink and black",
+    "yellow and purple"
+   ],
+   "why": "My dress is blue, red, green and white."
+  },
+  {
+   "q": "Where is the text about?",
+   "o": [
+    "Oman",
+    "the sea",
+    "the moon"
+   ],
+   "why": "It's National Day in Oman!"
+  },
+  {
+   "q": "Which is a body action from the text?",
+   "o": [
+    "clap my hands",
+    "read my book",
+    "eat my food"
+   ],
+   "why": "Faisal claps his hands."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Faisal's favourite day",
+   "a": "National Day",
+   "d": [
+    "Monday",
+    "Friday",
+    "Sunday"
+   ]
+  },
+  {
+   "q": "People walk in a ...",
+   "a": "parade",
+   "d": [
+    "pencil",
+    "robot",
+    "box"
+   ]
+  },
+  {
+   "q": "Special clothes",
+   "a": "uniform",
+   "d": [
+    "parade",
+    "festival",
+    "coin"
+   ]
+  },
+  {
+   "q": "Faisal ___ his feet.",
+   "a": "stamps",
+   "d": [
+    "claps",
+    "reads",
+    "eats"
+   ]
+  },
+  {
+   "q": "Faisal ___ his hands.",
+   "a": "claps",
+   "d": [
+    "stamps",
+    "bends",
+    "reads"
+   ]
+  },
+  {
+   "q": "A festival",
+   "a": "Eid",
+   "d": [
+    "Ruler",
+    "Desk",
+    "Robot"
+   ]
+  },
+  {
+   "q": "Country in the text",
+   "a": "Oman",
+   "d": [
+    "Egypt",
+    "Jordan",
+    "Kuwait"
+   ]
+  },
+  {
+   "q": "My dishdasha ___ white.",
+   "a": "is",
+   "d": [
+    "are",
+    "am",
+    "be"
+   ]
+  },
+  {
+   "q": "National Day and Eid are ...",
+   "a": "festivals",
+   "d": [
+    "robots",
+    "colours",
+    "clouds"
+   ]
+  },
+  {
+   "q": "Not a colour of the dress",
+   "a": "pink",
+   "d": [
+    "blue",
+    "green",
+    "white"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the text about?",
+   "o": [
+    "National Day in Oman",
+    "a robot",
+    "a lost tooth",
+    "a king"
+   ],
+   "why": "It's National Day in Oman!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means people walking together in a celebration?",
+   "o": [
+    "parade",
+    "uniform",
+    "festival",
+    "dress"
+   ],
+   "why": "That is a parade."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two body actions does Faisal do?",
+   "o": [
+    "stamp his feet and clap his hands",
+    "bend his knees and touch his toes",
+    "stretch his arms and sleep",
+    "read and write"
+   ],
+   "why": "I walk and stamp my feet. I clap my hands."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a festival?",
+   "o": [
+    "National Day",
+    "a uniform",
+    "a dress",
+    "a parade hat"
+   ],
+   "why": "National Day is a festival."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write about your clothes for Eid.",
+   "o": [
+    "My dress is red and green.",
+    "My dress are red.",
+    "I dress red is.",
+    "Red my dress."
+   ],
+   "why": "My + clothes + is + colour."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Present your poster. Which sentence is good?",
+   "o": [
+    "This is our poster. It's National Day.",
+    "This are our poster.",
+    "These is National Day.",
+    "Poster our is."
+   ],
+   "why": "This is our poster. It's National Day."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Look at the parade picture. People are in the same special clothes. What are they?",
+   "o": [
+    "uniforms",
+    "festivals",
+    "parades",
+    "coins"
+   ],
+   "why": "Same special clothes are uniforms."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do people stamp and clap in the parade?",
+   "o": [
+    "to celebrate National Day",
+    "because they are sad",
+    "to sleep",
+    "because it is cold"
+   ],
+   "why": "The parade is a happy celebration."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word is NOT a festival?",
+   "o": [
+    "uniform",
+    "Eid",
+    "National Day",
+    "festival day"
+   ],
+   "why": "A uniform is clothes, not a festival."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence about the text is true?",
+   "o": [
+    "The dress is blue, red, green and white.",
+    "Faisal sleeps in the parade.",
+    "There is no parade.",
+    "The text is about a robot."
+   ],
+   "why": "The text says the dress is blue, red, green and white."
+  }
+ ]
+}

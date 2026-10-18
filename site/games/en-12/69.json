@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: The Train is Approaching! (Writing)",
+ "lesson": "Analysing the Etihad Rail essay and collecting information",
+ "outcomes": [
+  "Analyse the structure of an informative essay about a rail safety campaign",
+  "Identify topic sentences and supporting sentences",
+  "Collect facts about a type of transport for an essay"
+ ],
+ "tf": [
+  {
+   "s": "The vital message of the Etihad Rail campaign was to put safety first.",
+   "t": true,
+   "why": "Yes, people must respect the railway at all times."
+  },
+  {
+   "s": "The Safety Bus was a roadshow that travelled around Western Abu Dhabi.",
+   "t": true,
+   "why": "Correct, it gave people information about the railway."
+  },
+  {
+   "s": "People are told to cross the railway track wherever they like.",
+   "t": false,
+   "why": "They should use bridges and underpasses."
+  },
+  {
+   "s": "Underpasses were also built so animals like camels and gazelles can cross.",
+   "t": true,
+   "why": "Right, reptiles can cross too."
+  },
+  {
+   "s": "Flyers were given out to alert communities about railway safety.",
+   "t": true,
+   "why": "Yes, flyers spread the safety message."
+  },
+  {
+   "s": "The Etihad Rail essay has three paragraphs.",
+   "t": false,
+   "why": "It has five paragraphs."
+  },
+  {
+   "s": "A supporting sentence gives details about the topic sentence.",
+   "t": true,
+   "why": "Correct, it supports the main idea with facts."
+  },
+  {
+   "s": "An informative essay mainly tells a funny story.",
+   "t": false,
+   "why": "An informative essay gives facts and information."
+  },
+  {
+   "s": "Questions like 'When was it invented?' help you collect information for an essay.",
+   "t": true,
+   "why": "Yes, question prompts guide your research."
+  },
+  {
+   "s": "A roadshow is a show that stays in one place.",
+   "t": false,
+   "why": "A roadshow travels from place to place."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What was the campaign's main message?",
+   "o": [
+    "put safety first",
+    "travel faster",
+    "buy tickets early"
+   ],
+   "why": "Safety first was the vital message."
+  },
+  {
+   "q": "What was the Safety Bus?",
+   "o": [
+    "a travelling roadshow",
+    "a school bus",
+    "a train"
+   ],
+   "why": "It travelled around to share safety information."
+  },
+  {
+   "q": "How can people cross the railway safely?",
+   "o": [
+    "by bridges and underpasses",
+    "by running across",
+    "by climbing fences"
+   ],
+   "why": "Bridges and underpasses keep people off the track."
+  },
+  {
+   "q": "Which animals can use the underpasses?",
+   "o": [
+    "camels and gazelles",
+    "whales and sharks",
+    "penguins"
+   ],
+   "why": "The essay mentions camels, gazelles and reptiles."
+  },
+  {
+   "q": "Why were flyers distributed?",
+   "o": [
+    "to alert communities",
+    "to sell tickets",
+    "to decorate trains"
+   ],
+   "why": "Flyers warned people about railway safety."
+  },
+  {
+   "q": "How many paragraphs does the essay have?",
+   "o": [
+    "five",
+    "two",
+    "eight"
+   ],
+   "why": "It has five paragraphs."
+  },
+  {
+   "q": "What type of essay is the Etihad Rail text?",
+   "o": [
+    "informative",
+    "story",
+    "letter"
+   ],
+   "why": "It gives facts and information."
+  },
+  {
+   "q": "What does a topic sentence do?",
+   "o": [
+    "states the main idea",
+    "ends the essay",
+    "gives the title"
+   ],
+   "why": "It tells you what the paragraph is about."
+  },
+  {
+   "q": "What is an underpass?",
+   "o": [
+    "a path that goes under something",
+    "a bridge above a river",
+    "a train station"
+   ],
+   "why": "An underpass goes under the railway."
+  },
+  {
+   "q": "Where did the Safety Bus travel?",
+   "o": [
+    "around Western Abu Dhabi",
+    "around Muscat",
+    "to Europe"
+   ],
+   "why": "The roadshow toured Western Abu Dhabi."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Main message: put ... first",
+   "a": "safety",
+   "d": [
+    "speed",
+    "money",
+    "time"
+   ]
+  },
+  {
+   "q": "Name of the roadshow bus",
+   "a": "Safety Bus",
+   "d": [
+    "School Bus",
+    "Rail Bus",
+    "City Bus"
+   ]
+  },
+  {
+   "q": "Area the bus travelled around",
+   "a": "Western Abu Dhabi",
+   "d": [
+    "Muscat",
+    "Dubai",
+    "Salalah"
+   ]
+  },
+  {
+   "q": "Paths that go under the track",
+   "a": "underpasses",
+   "d": [
+    "flyers",
+    "roadshows",
+    "stations"
+   ]
+  },
+  {
+   "q": "Papers given out to alert people",
+   "a": "flyers",
+   "d": [
+    "tickets",
+    "maps",
+    "books"
+   ]
+  },
+  {
+   "q": "An animal that uses underpasses",
+   "a": "camels",
+   "d": [
+    "penguins",
+    "whales",
+    "bears"
+   ]
+  },
+  {
+   "q": "Paragraphs in the essay",
+   "a": "five",
+   "d": [
+    "three",
+    "four",
+    "seven"
+   ]
+  },
+  {
+   "q": "Type of essay",
+   "a": "informative",
+   "d": [
+    "narrative",
+    "poem",
+    "letter"
+   ]
+  },
+  {
+   "q": "Sentence with the main idea",
+   "a": "topic sentence",
+   "d": [
+    "conclusion",
+    "title",
+    "quote"
+   ]
+  },
+  {
+   "q": "A show that travels",
+   "a": "roadshow",
+   "d": [
+    "film",
+    "flyer",
+    "campaign"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is a safety campaign?",
+   "o": [
+    "a planned set of activities to make people safer",
+    "a type of train",
+    "a race between buses",
+    "a railway ticket"
+   ],
+   "why": "A campaign is an organised effort with one aim."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which three things were part of the campaign?",
+   "o": [
+    "the Safety Bus roadshow, safety rules and flyers",
+    "a film, a song and a game",
+    "new trains, tickets and seats",
+    "a race, a party and prizes"
+   ],
+   "why": "These are the main parts described in the essay."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which animals does the essay mention using the crossings?",
+   "o": [
+    "camels, gazelles and reptiles",
+    "lions, tigers and bears",
+    "horses, cows and sheep",
+    "birds, fish and frogs"
+   ],
+   "why": "The essay names camels, gazelles and reptiles."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you call the sentences that give details about the main idea?",
+   "o": [
+    "supporting sentences",
+    "topic sentences",
+    "titles",
+    "headings"
+   ],
+   "why": "Supporting sentences add facts and examples."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to cross the railway track. What should you do?",
+   "o": [
+    "use a bridge or an underpass",
+    "walk across quickly",
+    "wait on the track",
+    "cross at night"
+   ],
+   "why": "The campaign says to use bridges and underpasses."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are writing about the bicycle. Which question helps you collect information?",
+   "o": [
+    "When was it invented?",
+    "What is your name?",
+    "Do you like pizza?",
+    "Where is my bag?"
+   ],
+   "why": "Prompts like this guide your research."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best topic sentence for a paragraph about trains' benefits?",
+   "o": [
+    "Trains have many economic benefits.",
+    "I like red.",
+    "For example, it was late.",
+    "The end."
+   ],
+   "why": "It clearly states the paragraph's main idea."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why were underpasses built for animals as well as people?",
+   "o": [
+    "so animals can cross the railway safely",
+    "to make the trains faster",
+    "so people can sell camels",
+    "to hide the trains"
+   ],
+   "why": "Protecting animals is part of railway safety."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why did the campaign use a travelling bus rather than one office?",
+   "o": [
+    "to reach communities in many places",
+    "because buses are faster than trains",
+    "to carry freight",
+    "to sell flyers"
+   ],
+   "why": "A roadshow takes the message to people where they live."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to analyse the structure of a model essay before writing?",
+   "o": [
+    "you can copy its organisation in your own essay",
+    "so you can copy its sentences exactly",
+    "to count the words only",
+    "it is not useful"
+   ],
+   "why": "Seeing how paragraphs are organised helps you plan."
+  }
+ ]
+}

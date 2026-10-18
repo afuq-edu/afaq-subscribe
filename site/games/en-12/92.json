@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Popular Destinations (Vocabulary)",
+ "lesson": "Parts of speech Top Tip, vocabulary matching and sentences / Cruises: reading, vocabulary matching and crossword",
+ "outcomes": [
+  "Find a word's part of speech before matching its meaning",
+  "Learn and use new tourism words",
+  "Read about cruises and solve a word crossword"
+ ],
+ "tf": [
+  {
+   "s": "'Steadily' is an adverb.",
+   "t": true,
+   "why": "Yes, it describes how something happens."
+  },
+  {
+   "s": "'Architecture' is the design of buildings.",
+   "t": true,
+   "why": "Correct, that is its meaning."
+  },
+  {
+   "s": "'Flock' means to stay at home alone.",
+   "t": false,
+   "why": "'Flock' means to go somewhere in large numbers."
+  },
+  {
+   "s": "A cruise is a holiday on a large ship.",
+   "t": true,
+   "why": "Yes, cruise passengers travel by sea."
+  },
+  {
+   "s": "'Voyage' means a journey by air.",
+   "t": false,
+   "why": "A voyage is a journey by sea."
+  },
+  {
+   "s": "'Security' means protection from danger.",
+   "t": true,
+   "why": "Right, security keeps people safe."
+  },
+  {
+   "s": "'Variety' is a verb.",
+   "t": false,
+   "why": "'Variety' is a noun: a variety of goods."
+  },
+  {
+   "s": "'Massive' means very small.",
+   "t": false,
+   "why": "'Massive' means very large."
+  },
+  {
+   "s": "Cruise ships have no shops or fitness centres.",
+   "t": false,
+   "why": "Cruise ships have many amenities, like shops and fitness centres."
+  },
+  {
+   "s": "'Superb' and 'massive' are adjectives.",
+   "t": true,
+   "why": "Yes, they describe nouns."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What part of speech is 'variety'?",
+   "o": [
+    "noun",
+    "verb",
+    "adverb"
+   ],
+   "why": "We say 'a variety of', so it is a noun."
+  },
+  {
+   "q": "What does 'major' mean as a noun?",
+   "o": [
+    "an army officer",
+    "a big ship",
+    "a building design"
+   ],
+   "why": "As a noun, a major is an army officer."
+  },
+  {
+   "q": "Which word means 'excellent'?",
+   "o": [
+    "superb",
+    "massive",
+    "staff"
+   ],
+   "why": "Superb means very good."
+  },
+  {
+   "q": "Which word means 'very large'?",
+   "o": [
+    "massive",
+    "superb",
+    "voyage"
+   ],
+   "why": "Massive ships are huge."
+  },
+  {
+   "q": "Who are the 'staff' on a ship?",
+   "o": [
+    "the people who work there",
+    "the passengers",
+    "the engines"
+   ],
+   "why": "Staff are the workers."
+  },
+  {
+   "q": "What are 'amenities' on a cruise ship?",
+   "o": [
+    "shops and fitness centres",
+    "storms and waves",
+    "maps and compasses"
+   ],
+   "why": "Amenities are useful and pleasant facilities."
+  },
+  {
+   "q": "Why are cruise ships called floating hotels?",
+   "o": [
+    "They offer luxurious rooms at sea",
+    "They are made of wood",
+    "They never move"
+   ],
+   "why": "They have hotel comfort on the sea."
+  },
+  {
+   "q": "Complete: The souq sells a ___ of goods.",
+   "o": [
+    "variety",
+    "flock",
+    "voyage"
+   ],
+   "why": "A variety means many different kinds."
+  },
+  {
+   "q": "What part of speech is 'massive'?",
+   "o": [
+    "adjective",
+    "noun",
+    "adverb"
+   ],
+   "why": "It describes a noun, like 'a massive ship'."
+  },
+  {
+   "q": "'Luxury' means…",
+   "o": [
+    "great comfort",
+    "danger at sea",
+    "a small boat"
+   ],
+   "why": "Luxury is comfort and expensive things."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "A journey by sea",
+   "a": "Voyage",
+   "d": [
+    "Cruise",
+    "Staff",
+    "Flock"
+   ]
+  },
+  {
+   "q": "Protection from danger",
+   "a": "Security",
+   "d": [
+    "Luxury",
+    "Variety",
+    "Maintenance"
+   ]
+  },
+  {
+   "q": "The design of buildings",
+   "a": "Architecture",
+   "d": [
+    "Amenities",
+    "Security",
+    "Variety"
+   ]
+  },
+  {
+   "q": "Go somewhere in large numbers",
+   "a": "Flock",
+   "d": [
+    "Draw",
+    "Interest",
+    "Major"
+   ]
+  },
+  {
+   "q": "A holiday on a large ship",
+   "a": "Cruise",
+   "d": [
+    "Voyage",
+    "Staff",
+    "Luxury"
+   ]
+  },
+  {
+   "q": "Part of speech of 'steadily'",
+   "a": "Adverb",
+   "d": [
+    "Noun",
+    "Verb",
+    "Adjective"
+   ]
+  },
+  {
+   "q": "Part of speech of 'superb'",
+   "a": "Adjective",
+   "d": [
+    "Noun",
+    "Verb",
+    "Adverb"
+   ]
+  },
+  {
+   "q": "Means 'attract'",
+   "a": "Draw",
+   "d": [
+    "Flock",
+    "Major",
+    "Staff"
+   ]
+  },
+  {
+   "q": "The workers on a ship",
+   "a": "Staff",
+   "d": [
+    "Guests",
+    "Amenities",
+    "Voyage"
+   ]
+  },
+  {
+   "q": "Keeping things in good repair",
+   "a": "Maintenance",
+   "d": [
+    "Security",
+    "Luxury",
+    "Voyage"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the Top Tip for matching meanings?",
+   "o": [
+    "Choose a meaning with the same part of speech as the headword",
+    "Choose the longest meaning",
+    "Always choose the first meaning",
+    "Choose any meaning you like"
+   ],
+   "why": "The meaning must be the same part of speech."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list shows four parts of speech?",
+   "o": [
+    "noun, verb, adjective, adverb",
+    "ship, hotel, staff, voyage",
+    "big, small, fast, slow",
+    "a, an, the, some"
+   ],
+   "why": "These are the four main parts of speech."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'the most important one of a group', like a company's main ship?",
+   "o": [
+    "flagship",
+    "flock",
+    "staff",
+    "voyage"
+   ],
+   "why": "A flagship is the leading or most important one."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which amenities does the text say cruise ships have?",
+   "o": [
+    "Shops and fitness centres",
+    "Farms and factories",
+    "Airports and railways",
+    "Deserts and mountains"
+   ],
+   "why": "Cruise ships have many facilities on board."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best word: The festival ___ many tourists.",
+   "o": [
+    "draws",
+    "flocks",
+    "voyages",
+    "varieties"
+   ],
+   "why": "Here 'draw' means attract."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best word: Tourists ___ to the beach every summer.",
+   "o": [
+    "flock",
+    "draw",
+    "major",
+    "steadily"
+   ],
+   "why": "People flock to a place in large numbers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses 'steadily' correctly?",
+   "o": [
+    "The number of tourists has grown steadily.",
+    "The steadily ship is big.",
+    "She steadily the door.",
+    "Steadily is my favourite food."
+   ],
+   "why": "'Steadily' is an adverb describing a verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why must a meaning be the same part of speech as the headword?",
+   "o": [
+    "Words of different parts of speech cannot match each other",
+    "Adverbs never have meanings",
+    "The longest word is always right",
+    "Nouns and verbs are the same"
+   ],
+   "why": "A noun matches a noun, a verb matches a verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Major' can be a noun meaning an army officer. In 'a major city', what part of speech is it?",
+   "o": [
+    "adjective",
+    "noun",
+    "verb",
+    "adverb"
+   ],
+   "why": "Here it describes 'city', so it is an adjective."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Would people who love comfort enjoy a cruise?",
+   "o": [
+    "Yes, because cruise ships offer luxury and many amenities",
+    "No, because ships have no rooms",
+    "No, because cruise ships have no staff",
+    "Yes, because cruises are always free"
+   ],
+   "why": "Cruise ships are like floating luxury hotels."
+  }
+ ]
+}

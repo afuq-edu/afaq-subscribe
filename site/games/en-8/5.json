@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 1: Our planet",
+ "lesson": "Lesson 3: Grammar – Modal verbs of obligation",
+ "outcomes": [
+  "Know what should, must, mustn’t, need to and needn’t mean.",
+  "Choose the correct modal verb in a sentence.",
+  "Talk about rules and give advice to save water and energy."
+ ],
+ "tf": [
+  {
+   "s": "“Needn’t” means it is not necessary.",
+   "t": true,
+   "why": "Yes! You needn’t do it, but you can if you want."
+  },
+  {
+   "s": "“Mustn’t” means it is not necessary, but you can do it.",
+   "t": false,
+   "why": "Mustn’t means it is necessary NOT to do it."
+  },
+  {
+   "s": "We use “should” to say the right thing to do.",
+   "t": true,
+   "why": "Correct! Should gives advice about the right thing."
+  },
+  {
+   "s": "“Must” and “need to” both mean it is necessary.",
+   "t": true,
+   "why": "Great! Both show that something is necessary."
+  },
+  {
+   "s": "“I needn’t to write about it” is correct.",
+   "t": false,
+   "why": "We say needn’t + verb with no to: I needn’t write about it."
+  },
+  {
+   "s": "After “must” we use the base verb: “We must stop cutting down trees.”",
+   "t": true,
+   "why": "Yes, must + base verb."
+  },
+  {
+   "s": "“We mustn’t destroying the rainforests” is correct.",
+   "t": false,
+   "why": "We say We mustn’t destroy the rainforests."
+  },
+  {
+   "s": "Mohammed must recycle the glass bottle.",
+   "t": true,
+   "why": "Right! The glass bottle must go for recycling."
+  },
+  {
+   "s": "Zaid’s family should start having quick showers.",
+   "t": false,
+   "why": "They already have quick showers."
+  },
+  {
+   "s": "Mohammed’s mum has finished reading the newspaper.",
+   "t": false,
+   "why": "She hasn’t finished reading it yet."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "We ___ waste water. It is very important.",
+   "o": [
+    "mustn’t",
+    "needn’t",
+    "should"
+   ],
+   "why": "Wasting water is not allowed, so we use mustn’t."
+  },
+  {
+   "q": "You ___ use recycled paper, but it’s a very good idea.",
+   "o": [
+    "needn’t",
+    "mustn’t",
+    "must"
+   ],
+   "why": "It is not necessary, so we use needn’t."
+  },
+  {
+   "q": "People ___ leave the lights on when they go out.",
+   "o": [
+    "shouldn’t",
+    "need to",
+    "must"
+   ],
+   "why": "Leaving lights on is not the right thing to do."
+  },
+  {
+   "q": "Which modal means “it is not necessary”?",
+   "o": [
+    "needn’t",
+    "mustn’t",
+    "must"
+   ],
+   "why": "Needn’t means not necessary."
+  },
+  {
+   "q": "Which modal means “it is necessary not to do it”?",
+   "o": [
+    "mustn’t",
+    "needn’t",
+    "should"
+   ],
+   "why": "Mustn’t means don’t do it."
+  },
+  {
+   "q": "We ___ wear a school uniform. (necessary)",
+   "o": [
+    "must",
+    "needn’t",
+    "shouldn’t"
+   ],
+   "why": "Must shows something is necessary."
+  },
+  {
+   "q": "You ___ have a long shower every day. (not necessary)",
+   "o": [
+    "needn’t",
+    "must",
+    "need to"
+   ],
+   "why": "Needn’t shows it is not necessary."
+  },
+  {
+   "q": "What should Zaid’s family do to save energy?",
+   "o": [
+    "walk to school",
+    "drive to school",
+    "have long showers"
+   ],
+   "why": "Walking instead of taking the car saves energy."
+  },
+  {
+   "q": "Which sentence is correct?",
+   "o": [
+    "He should switch off his computer.",
+    "He should to switch off his computer.",
+    "He should switching off his computer."
+   ],
+   "why": "Should + base verb, with no to."
+  },
+  {
+   "q": "Osama ___ hand in the report on Thursday.",
+   "o": [
+    "must",
+    "mustn’t",
+    "needn’t"
+   ],
+   "why": "It is necessary for Osama to hand it in."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Modal: not necessary",
+   "a": "needn’t",
+   "d": [
+    "mustn’t",
+    "must",
+    "should"
+   ]
+  },
+  {
+   "q": "Modal: necessary not to do",
+   "a": "mustn’t",
+   "d": [
+    "needn’t",
+    "should",
+    "need to"
+   ]
+  },
+  {
+   "q": "Modal: the right thing to do",
+   "a": "should",
+   "d": [
+    "mustn’t",
+    "needn’t",
+    "shouldn’t"
+   ]
+  },
+  {
+   "q": "We ___ waste water. (not allowed)",
+   "a": "mustn’t",
+   "d": [
+    "needn’t",
+    "should",
+    "must"
+   ]
+  },
+  {
+   "q": "We ___ wear a uniform. (necessary)",
+   "a": "must",
+   "d": [
+    "needn’t",
+    "shouldn’t",
+    "mustn’t"
+   ]
+  },
+  {
+   "q": "I needn’t ___ my room today.",
+   "a": "tidy",
+   "d": [
+    "to tidy",
+    "tidying",
+    "tidied"
+   ]
+  },
+  {
+   "q": "We mustn’t ___ the rainforests.",
+   "a": "destroy",
+   "d": [
+    "destroying",
+    "to destroy",
+    "destroyed"
+   ]
+  },
+  {
+   "q": "What must Mohammed recycle?",
+   "a": "glass bottle",
+   "d": [
+    "newspaper",
+    "plastic bag",
+    "old shoes"
+   ]
+  },
+  {
+   "q": "Zaid’s family should go to school…",
+   "a": "on foot",
+   "d": [
+    "by car",
+    "by plane",
+    "by taxi"
+   ]
+  },
+  {
+   "q": "Zaid’s family already have quick…",
+   "a": "showers",
+   "d": [
+    "cars",
+    "lights",
+    "baths"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which modal verbs mean something is necessary?",
+   "o": [
+    "must and need to",
+    "needn’t and should",
+    "mustn’t and needn’t",
+    "shouldn’t and needn’t"
+   ],
+   "why": "Must and need to both mean necessary."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which form comes after “needn’t”?",
+   "o": [
+    "the base verb with no “to”",
+    "to + verb",
+    "verb + -ing",
+    "the past tense"
+   ],
+   "why": "We say needn’t write, not needn’t to write."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is true about Mohammed’s mum and the newspaper?",
+   "o": [
+    "She hasn’t finished reading it yet.",
+    "She threw it away.",
+    "She recycled it.",
+    "She has finished reading it."
+   ],
+   "why": "She is still reading it."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do we use “should” for?",
+   "o": [
+    "To say the right thing to do",
+    "To say something is not allowed",
+    "To talk about the past",
+    "To ask a question about time"
+   ],
+   "why": "Should gives advice."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite with must: “We have to stop cutting down trees.”",
+   "o": [
+    "We must stop cutting down trees.",
+    "We mustn’t stop cutting down trees.",
+    "We needn’t stop cutting down trees.",
+    "We must to stop cutting down trees."
+   ],
+   "why": "Must keeps the meaning of have to."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the mistake: “I needn’t to write about it in my blog.”",
+   "o": [
+    "I needn’t write about it in my blog.",
+    "I needn’t writing about it in my blog.",
+    "I need not to writing about it.",
+    "I needn’t wrote about it in my blog."
+   ],
+   "why": "Needn’t is followed by the base verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best advice to save water?",
+   "o": [
+    "You should turn off the tap when you brush your teeth.",
+    "You must have a long shower.",
+    "You needn’t turn off the tap.",
+    "You should leave the tap running."
+   ],
+   "why": "Turning off the tap saves water."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between “You mustn’t bring paper” and “You needn’t bring paper”?",
+   "o": [
+    "Mustn’t = not allowed; needn’t = not necessary but you can",
+    "They mean the same",
+    "Mustn’t = not necessary; needn’t = not allowed",
+    "Both mean you must bring paper"
+   ],
+   "why": "Mustn’t forbids; needn’t gives you a choice."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which school rule needs “mustn’t”?",
+   "o": [
+    "We ___ use mobile phones in class.",
+    "We ___ wear a school uniform.",
+    "We ___ do our homework.",
+    "We ___ be on time."
+   ],
+   "why": "Using phones in class is not allowed, so mustn’t fits."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Zaid’s family already have quick showers. Which advice is NOT needed for them?",
+   "o": [
+    "You should have quick showers.",
+    "You should walk to school.",
+    "You should switch off lights.",
+    "You should recycle bottles."
+   ],
+   "why": "They already do this, so they don’t need this advice."
+  }
+ ]
+}

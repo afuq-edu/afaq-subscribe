@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 1: Identity",
+ "lesson": "Unit 1 Consolidation: Grammar file and speaking practice",
+ "outcomes": [
+  "Choose between the present simple and present continuous.",
+  "Match time expressions with the right present tense.",
+  "Answer speaking questions with reasons and examples."
+ ],
+ "tf": [
+  {
+   "s": "'Every day' is used with the present simple.",
+   "t": true,
+   "why": "It shows a habit."
+  },
+  {
+   "s": "'This week' is used with the present continuous.",
+   "t": true,
+   "why": "It shows something around now."
+  },
+  {
+   "s": "'At the moment' is used with the present simple.",
+   "t": false,
+   "why": "'At the moment' goes with the present continuous."
+  },
+  {
+   "s": "'My mother isn't liking using a laptop' is correct.",
+   "t": false,
+   "why": "'Like' is stative: 'My mother doesn't like…'"
+  },
+  {
+   "s": "'Do you like school? Yes, I do.' is a correct short answer.",
+   "t": true,
+   "why": "Short answers repeat the helping verb."
+  },
+  {
+   "s": "'Once a month' is used with the present continuous.",
+   "t": false,
+   "why": "'Once a month' shows a habit, so we use the present simple."
+  },
+  {
+   "s": "In the introduction speaking task, you should give reasons and examples.",
+   "t": true,
+   "why": "Reasons make your answers fuller."
+  },
+  {
+   "s": "'Are you chatting to your friends right now?' is correct.",
+   "t": true,
+   "why": "'Right now' takes the present continuous."
+  },
+  {
+   "s": "Stative verbs like 'have' (own) are usually used in the continuous form.",
+   "t": false,
+   "why": "We say 'I don't have a car', not 'I'm not having a car'."
+  },
+  {
+   "s": "You can use the grammar file to check and correct your own work.",
+   "t": true,
+   "why": "It is a great tool for learning alone."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Choose: My mother ___ using a laptop.",
+   "o": [
+    "doesn't like",
+    "isn't liking",
+    "not like"
+   ],
+   "why": "'Like' is a stative verb."
+  },
+  {
+   "q": "Complete: At the moment, I ___ my homework.",
+   "o": [
+    "'m doing",
+    "do",
+    "does"
+   ],
+   "why": "'At the moment' takes the present continuous."
+  },
+  {
+   "q": "Which time expression goes with the present continuous?",
+   "o": [
+    "today",
+    "usually",
+    "on Tuesdays"
+   ],
+   "why": "'Today' is for now."
+  },
+  {
+   "q": "Which time expression goes with the present simple?",
+   "o": [
+    "often",
+    "now",
+    "this week"
+   ],
+   "why": "'Often' shows a habit."
+  },
+  {
+   "q": "Short answer: Do you like school? Yes, …",
+   "o": [
+    "I do.",
+    "I like.",
+    "I am."
+   ],
+   "why": "Repeat 'do' in the short answer."
+  },
+  {
+   "q": "Choose: He ___ an email to his grandmother every morning.",
+   "o": [
+    "sends",
+    "is sending",
+    "send"
+   ],
+   "why": "'Every morning' shows a habit."
+  },
+  {
+   "q": "Choose: We ___ at my uncle's house this week.",
+   "o": [
+    "are staying",
+    "stay",
+    "stays"
+   ],
+   "why": "'This week' is a temporary situation."
+  },
+  {
+   "q": "Choose: I ___ a car. (own)",
+   "o": [
+    "don't have",
+    "am not having",
+    "not have"
+   ],
+   "why": "'Have' for owning is stative."
+  },
+  {
+   "q": "Choose: ___ you usually go out at the weekend?",
+   "o": [
+    "Do",
+    "Are",
+    "Is"
+   ],
+   "why": "Present simple questions use 'Do'."
+  },
+  {
+   "q": "Complete: Look! The boy ___ for the bus.",
+   "o": [
+    "'s running",
+    "runs",
+    "run"
+   ],
+   "why": "'Look!' shows an action now."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Goes with the present continuous",
+   "a": "at the moment",
+   "d": [
+    "every day",
+    "usually",
+    "on Tuesdays"
+   ]
+  },
+  {
+   "q": "Goes with the present simple",
+   "a": "once a month",
+   "d": [
+    "now",
+    "today",
+    "this week"
+   ]
+  },
+  {
+   "q": "She ___ the piano now.",
+   "a": "is practising",
+   "d": [
+    "practises",
+    "practise",
+    "practised"
+   ]
+  },
+  {
+   "q": "I ___ the lesson. (stative)",
+   "a": "understand",
+   "d": [
+    "'m understanding",
+    "understanding",
+    "understands"
+   ]
+  },
+  {
+   "q": "Are you tired? Yes, I ___.",
+   "a": "am",
+   "d": [
+    "do",
+    "is",
+    "are"
+   ]
+  },
+  {
+   "q": "Does he like tea? No, he ___.",
+   "a": "doesn't",
+   "d": [
+    "don't",
+    "isn't",
+    "not"
+   ]
+  },
+  {
+   "q": "___ you chatting to friends now?",
+   "a": "Are",
+   "d": [
+    "Do",
+    "Does",
+    "Is"
+   ]
+  },
+  {
+   "q": "We ___ a garden. (own, negative)",
+   "a": "don't have",
+   "d": [
+    "aren't having",
+    "not have",
+    "doesn't have"
+   ]
+  },
+  {
+   "q": "He ___ emails every day.",
+   "a": "sends",
+   "d": [
+    "is sending",
+    "send",
+    "sending"
+   ]
+  },
+  {
+   "q": "Tense for 'now' and 'today'",
+   "a": "present continuous",
+   "d": [
+    "present simple",
+    "past simple",
+    "past continuous"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which time expressions go with the present continuous?",
+   "o": [
+    "at the moment, now, this week, today",
+    "every day, never, often",
+    "on Tuesdays, once a month",
+    "usually, often, never"
+   ],
+   "why": "These show now or around now."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a stative verb?",
+   "o": [
+    "have (own)",
+    "run",
+    "chat",
+    "practise"
+   ],
+   "why": "'Have' for owning is a state."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the grammar file useful for?",
+   "o": [
+    "Checking rules and correcting your own work",
+    "Playing music",
+    "Writing stories only",
+    "Learning new words only"
+   ],
+   "why": "Use it to check your grammar."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a correct short answer?",
+   "o": [
+    "Yes, I do.",
+    "Yes, I like.",
+    "Yes, I am like.",
+    "Yes, do I."
+   ],
+   "why": "Use the helping verb in short answers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Answer with a reason: Do you prefer playing or watching sport?",
+   "o": [
+    "I prefer playing sport because I like being active.",
+    "Yes.",
+    "Sport.",
+    "I prefer."
+   ],
+   "why": "A good answer gives a reason."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a question: you / like / school?",
+   "o": [
+    "Do you like school?",
+    "Are you like school?",
+    "You like school do?",
+    "Does you like school?"
+   ],
+   "why": "Do + you + base verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I usually walk to school, but today I ___ the bus.",
+   "o": [
+    "'m taking",
+    "take",
+    "takes",
+    "taken"
+   ],
+   "why": "'Today' is different from the habit, so we use the present continuous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'doesn't like' correct in 'My mother doesn't like using a laptop'?",
+   "o": [
+    "'Like' is a stative verb.",
+    "It is happening right now.",
+    "It is a timetable.",
+    "'Like' needs the continuous."
+   ],
+   "why": "Stative verbs take the present simple."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair shows a stative verb and an action verb used correctly?",
+   "o": [
+    "I understand the lesson. I'm writing an email.",
+    "I'm understanding the lesson. I write an email now.",
+    "I understanding the lesson. I'm write an email.",
+    "I am understand the lesson. I writing an email."
+   ],
+   "why": "State = simple; action now = continuous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What makes an answer in the introduction task good?",
+   "o": [
+    "It gives a reason and an example.",
+    "It is only one word.",
+    "It only repeats the question.",
+    "It is all in the past tense."
+   ],
+   "why": "Reasons and examples show your English well."
+  }
+ ]
+}

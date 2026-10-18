@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: Goodbye, School! (Reading)",
+ "lesson": "Skimming and the first tips for faster reading / Vocabulary development and comprehension: new students’ worries",
+ "outcomes": [
+  "Skim a text quickly to choose the best title",
+  "Learn words about starting university, such as campus and deadline",
+  "Understand new students' worries and how to cope with them"
+ ],
+ "tf": [
+  {
+   "s": "This unit aims to improve your reading speed.",
+   "t": true,
+   "why": "Yes, the focus is speed reading."
+  },
+  {
+   "s": "When skimming, you should look up every new word in a dictionary.",
+   "t": false,
+   "why": "Looking up every word slows you down and stops you reading for gist."
+  },
+  {
+   "s": "Pictures and sub-headings can help you skim a text.",
+   "t": true,
+   "why": "Correct, they show you the main ideas quickly."
+  },
+  {
+   "s": "'Campus' means the grounds and buildings of a university.",
+   "t": true,
+   "why": "Right, students live and study on campus."
+  },
+  {
+   "s": "New students in the text feel only bored about starting university.",
+   "t": false,
+   "why": "They feel excited but terrified."
+  },
+  {
+   "s": "New students can ask other students, tutors or support services for help.",
+   "t": true,
+   "why": "Yes, the text suggests these people."
+  },
+  {
+   "s": "Joining clubs and societies is a way to make friends.",
+   "t": true,
+   "why": "Correct, the text gives this advice."
+  },
+  {
+   "s": "A 'deadline' is the time a piece of work must be finished by.",
+   "t": true,
+   "why": "Yes, missing a deadline is a common worry."
+  },
+  {
+   "s": "Title a was best because the text is about someone's first year.",
+   "t": false,
+   "why": "The text is not about one person's first year; title d is best."
+  },
+  {
+   "s": "'Homesickness' means feeling ill because your house is dirty.",
+   "t": false,
+   "why": "Homesickness is feeling sad because you miss home."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is skimming?",
+   "o": [
+    "reading quickly for the gist",
+    "reading every word slowly",
+    "writing a summary"
+   ],
+   "why": "Skimming gives the general idea."
+  },
+  {
+   "q": "Why shouldn't you look up every word when skimming?",
+   "o": [
+    "it slows you down",
+    "dictionaries are wrong",
+    "words are not important"
+   ],
+   "why": "Skimming is about speed and gist."
+  },
+  {
+   "q": "What does 'campus' mean?",
+   "o": [
+    "university grounds and buildings",
+    "a type of exam",
+    "a student club"
+   ],
+   "why": "The campus is where the university is."
+  },
+  {
+   "q": "How do new students feel?",
+   "o": [
+    "excited but terrified",
+    "only bored",
+    "angry"
+   ],
+   "why": "They have mixed feelings."
+  },
+  {
+   "q": "Which is a problem new students may face?",
+   "o": [
+    "getting lost",
+    "having too much money",
+    "too few classes"
+   ],
+   "why": "A big campus can be confusing."
+  },
+  {
+   "q": "What does the text suggest for making friends?",
+   "o": [
+    "join clubs and societies",
+    "stay in your room",
+    "only phone home"
+   ],
+   "why": "Clubs help you meet people."
+  },
+  {
+   "q": "What does 'apprehensive' mean?",
+   "o": [
+    "worried about the future",
+    "very happy",
+    "very hungry"
+   ],
+   "why": "Apprehensive means nervous about what will happen."
+  },
+  {
+   "q": "What does 'prioritise' mean?",
+   "o": [
+    "decide what is most important",
+    "forget everything",
+    "work very slowly"
+   ],
+   "why": "You do the most important things first."
+  },
+  {
+   "q": "Who can help new students?",
+   "o": [
+    "tutors and support services",
+    "only shopkeepers",
+    "nobody"
+   ],
+   "why": "The text lists people who can help."
+  },
+  {
+   "q": "Why is title d the best?",
+   "o": [
+    "it covers challenges and how to cope",
+    "it is the shortest",
+    "it mentions a first year"
+   ],
+   "why": "The best title covers the whole text."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Reading quickly for gist",
+   "a": "skimming",
+   "d": [
+    "dictation",
+    "spelling",
+    "scanning words"
+   ]
+  },
+  {
+   "q": "University grounds",
+   "a": "campus",
+   "d": [
+    "deadline",
+    "society",
+    "tutor"
+   ]
+  },
+  {
+   "q": "Time work must be done by",
+   "a": "deadline",
+   "d": [
+    "campus",
+    "emotion",
+    "anxiety"
+   ]
+  },
+  {
+   "q": "Missing home",
+   "a": "homesickness",
+   "d": [
+    "independence",
+    "anxiety",
+    "campus"
+   ]
+  },
+  {
+   "q": "Worried about the future",
+   "a": "apprehensive",
+   "d": [
+    "independent",
+    "excited",
+    "relaxed"
+   ]
+  },
+  {
+   "q": "Decide what is most important",
+   "a": "prioritise",
+   "d": [
+    "apologise",
+    "memorise",
+    "criticise"
+   ]
+  },
+  {
+   "q": "Strong feelings",
+   "a": "emotions",
+   "d": [
+    "deadlines",
+    "campuses",
+    "tutors"
+   ]
+  },
+  {
+   "q": "Being free to decide alone",
+   "a": "independence",
+   "d": [
+    "homesickness",
+    "anxiety",
+    "deadline"
+   ]
+  },
+  {
+   "q": "University teachers",
+   "a": "tutors",
+   "d": [
+    "societies",
+    "campuses",
+    "clubs"
+   ]
+  },
+  {
+   "q": "Join these to make friends",
+   "a": "clubs",
+   "d": [
+    "deadlines",
+    "exams",
+    "emotions"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the focus of this unit?",
+   "o": [
+    "improving reading speed",
+    "learning to cook",
+    "writing poems",
+    "spelling numbers"
+   ],
+   "why": "The unit teaches speed reading."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What two things help you skim a text?",
+   "o": [
+    "pictures and sub-headings",
+    "the page number and the price",
+    "the last word and a dictionary",
+    "the font size and colour"
+   ],
+   "why": "They show the main ideas quickly."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'a feeling of worry or nervousness'?",
+   "o": [
+    "anxiety",
+    "independence",
+    "campus",
+    "deadline"
+   ],
+   "why": "Anxiety is worry."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two problems does the text mention for new students?",
+   "o": [
+    "getting lost and forgetting a deadline",
+    "losing money and missing meals",
+    "getting sick and failing exams",
+    "losing a phone and a car"
+   ],
+   "why": "These are the examples in the text."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: She missed the ___ for her essay.",
+   "o": [
+    "deadline",
+    "campus",
+    "society",
+    "emotion"
+   ],
+   "why": "A deadline is the last day to hand work in."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A new student feels sad and misses her family. What is she feeling?",
+   "o": [
+    "homesickness",
+    "independence",
+    "excitement",
+    "prioritising"
+   ],
+   "why": "Missing home is homesickness."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A new student has five tasks and little time. What should he do?",
+   "o": [
+    "prioritise the most important tasks",
+    "do nothing",
+    "join every club",
+    "look up every word"
+   ],
+   "why": "Prioritising helps manage time."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is title d better than the other titles?",
+   "o": [
+    "it covers both the challenges and how to cope with them",
+    "it is the longest title",
+    "it only mentions one problem",
+    "it is about a first year"
+   ],
+   "why": "A good title covers the whole text."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How can a faster reading speed help you at university?",
+   "o": [
+    "it helps with essays, research papers and exams",
+    "it means you never need to study",
+    "it stops you making friends",
+    "it is only useful for novels"
+   ],
+   "why": "Faster reading saves time in all subjects."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might a new student feel both excited and terrified?",
+   "o": [
+    "university brings new freedom but also new worries",
+    "university is always boring",
+    "there are no new things at university",
+    "they already know everyone"
+   ],
+   "why": "New independence brings both excitement and worry."
+  }
+ ]
+}

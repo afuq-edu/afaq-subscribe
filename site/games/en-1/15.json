@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 2: My school bag",
+ "lesson": "Lesson 7: Get ready for… (Pre A1 Starters) + Unit 2 sounds review",
+ "outcomes": [
+  "I can listen and find the picture with the right school things.",
+  "I can follow Point to the … and say It's a …",
+  "I can write words like man, sack, sit, tick and tin."
+ ],
+ "tf": [
+  {
+   "s": "Point to the bag means show me the bag with your finger.",
+   "t": true,
+   "why": "Yes! Point with your finger."
+  },
+  {
+   "s": "What's this? is a question about a thing.",
+   "t": true,
+   "why": "Yes! We answer It's a …"
+  },
+  {
+   "s": "He's got a pencil means he has no pencil.",
+   "t": false,
+   "why": "He's got a pencil means he has one."
+  },
+  {
+   "s": "We answer What's this? with It's a crayon.",
+   "t": true,
+   "why": "Great! It's a crayon."
+  },
+  {
+   "s": "We answer What's this? with I'm six.",
+   "t": false,
+   "why": "We say It's a … for a thing."
+  },
+  {
+   "s": "For cat, the missing letter in c – a – _ is t.",
+   "t": true,
+   "why": "Yes! c-a-t, cat."
+  },
+  {
+   "s": "t – h – a in order makes hat.",
+   "t": false,
+   "why": "The order is h-a-t to make hat."
+  },
+  {
+   "s": "Sack ends with the letter s.",
+   "t": false,
+   "why": "Sack ends with ck."
+  },
+  {
+   "s": "Tick and tin start with the same sound.",
+   "t": true,
+   "why": "Yes! Both start with /t/."
+  },
+  {
+   "s": "Man starts with the letter n.",
+   "t": false,
+   "why": "Man starts with m."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's this? (a crayon)",
+   "o": [
+    "It's a crayon.",
+    "It's a book.",
+    "I'm a crayon."
+   ],
+   "why": "It's a crayon."
+  },
+  {
+   "q": "Point to the pencil case. You point to …",
+   "o": [
+    "the pencil case",
+    "the book",
+    "the ruler"
+   ],
+   "why": "Point to what you hear."
+  },
+  {
+   "q": "A has got a ruler. B hasn't got a ruler. What is different?",
+   "o": [
+    "the ruler",
+    "the bag",
+    "the pen"
+   ],
+   "why": "Only A has got the ruler."
+  },
+  {
+   "q": "c – a – _ (cat). Missing letter?",
+   "o": [
+    "t",
+    "p",
+    "n"
+   ],
+   "why": "c-a-t, cat."
+  },
+  {
+   "q": "_ – i – p (rip). Missing letter?",
+   "o": [
+    "r",
+    "h",
+    "t"
+   ],
+   "why": "r-i-p, rip."
+  },
+  {
+   "q": "Order the letters: t, h, a",
+   "o": [
+    "hat",
+    "tha",
+    "aht"
+   ],
+   "why": "h-a-t, hat!"
+  },
+  {
+   "q": "Dictation: write man.",
+   "o": [
+    "man",
+    "map",
+    "mat"
+   ],
+   "why": "m-a-n, man."
+  },
+  {
+   "q": "Dictation: write sit.",
+   "o": [
+    "sit",
+    "tin",
+    "sat"
+   ],
+   "why": "s-i-t, sit."
+  },
+  {
+   "q": "Write the letter for /h/.",
+   "o": [
+    "h",
+    "m",
+    "r"
+   ],
+   "why": "The letter h says /h/."
+  },
+  {
+   "q": "Write the letter for /r/.",
+   "o": [
+    "r",
+    "h",
+    "i"
+   ],
+   "why": "The letter r says /r/."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Catch the letter for /m/.",
+   "a": "m",
+   "d": [
+    "h",
+    "r",
+    "i"
+   ]
+  },
+  {
+   "q": "Catch the letter for /ɪ/.",
+   "a": "i",
+   "d": [
+    "m",
+    "h",
+    "r"
+   ]
+  },
+  {
+   "q": "Catch the letters at the end of sack.",
+   "a": "ck",
+   "d": [
+    "m",
+    "h",
+    "r"
+   ]
+  },
+  {
+   "q": "Order the letters: c, p, a",
+   "a": "cap",
+   "d": [
+    "pac",
+    "acp",
+    "cpa"
+   ]
+  },
+  {
+   "q": "Order the letters: t, i, h",
+   "a": "hit",
+   "d": [
+    "thi",
+    "iht",
+    "tih"
+   ]
+  },
+  {
+   "q": "Blend: m – a – p",
+   "a": "map",
+   "d": [
+    "man",
+    "mat",
+    "cap"
+   ]
+  },
+  {
+   "q": "Dictation: tick",
+   "a": "tick",
+   "d": [
+    "sack",
+    "tin",
+    "kit"
+   ]
+  },
+  {
+   "q": "Dictation: tin",
+   "a": "tin",
+   "d": [
+    "pin",
+    "tick",
+    "sit"
+   ]
+  },
+  {
+   "q": "Catch the answer: What's this?",
+   "a": "It's a book.",
+   "d": [
+    "I'm six.",
+    "Hello!",
+    "This is my mum."
+   ]
+  },
+  {
+   "q": "Catch the school thing for colouring.",
+   "a": "crayon",
+   "d": [
+    "ruler",
+    "book",
+    "eraser"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which one is a school thing?",
+   "o": [
+    "pencil case",
+    "rabbit",
+    "moon",
+    "hen"
+   ],
+   "why": "A pencil case is a school thing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the answer to What's this?",
+   "o": [
+    "It's a pen.",
+    "I've got a sister.",
+    "Goodbye!",
+    "I'm Sami."
+   ],
+   "why": "It's a … names a thing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which letters are in Unit 2?",
+   "o": [
+    "i, m, h, c, k, ck, r",
+    "s, a, t, p, n",
+    "b, d, f, g, j",
+    "o, u, l, v, w"
+   ],
+   "why": "Unit 2 letters: i, m, h, c, k, ck, r."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these words ends with ck?",
+   "o": [
+    "sack",
+    "man",
+    "sit",
+    "tin"
+   ],
+   "why": "s-a-ck, sack!"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Listen: I've got a book and a pencil. Which picture do you tick?",
+   "o": [
+    "a book and a pencil",
+    "a book and a ruler",
+    "a bag and a pencil",
+    "a pen and a crayon"
+   ],
+   "why": "Tick the book and the pencil."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are the examiner. What can you say?",
+   "o": [
+    "Point to the eraser.",
+    "I'm the eraser.",
+    "Goodbye, eraser.",
+    "Eraser is my mum."
+   ],
+   "why": "Point to the … is a good instruction."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Dictation: s – a – ck. You write …",
+   "o": [
+    "sack",
+    "sock",
+    "sick",
+    "sak"
+   ],
+   "why": "s-a-ck, sack."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Picture A: a pen and a book. Picture B: a pen. What has B not got?",
+   "o": [
+    "a book",
+    "a pen",
+    "a bag",
+    "a ruler"
+   ],
+   "why": "B has only a pen, no book."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does not belong: man, map, mat, hat?",
+   "o": [
+    "hat",
+    "man",
+    "map",
+    "mat"
+   ],
+   "why": "Hat starts with /h/; the others start with /m/."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Tick and tin. What is different?",
+   "o": [
+    "The last sound",
+    "The first sound",
+    "The middle sound",
+    "Nothing"
+   ],
+   "why": "t-i-ck and t-i-n: only the last sound changes."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 1 - Unit 3: Mobile Phones",
+ "outcomes": [
+  "Talk about the advantages and disadvantages of mobile phones",
+  "Understand new words and a radio phone-in",
+  "Know the full forms of common abbreviations"
+ ],
+ "tf": [
+  {
+   "s": "'Noise pollution' means loud and unpleasant sound.",
+   "t": true,
+   "why": "Yes! One caller says people are always shouting into their phones."
+  },
+  {
+   "s": "'Privacy' means the state of being alone.",
+   "t": true,
+   "why": "Correct! Privacy is being alone or private."
+  },
+  {
+   "s": "'Marvellous' means terrible.",
+   "t": false,
+   "why": "'Marvellous' means wonderful."
+  },
+  {
+   "s": "'Can't stand' means to dislike something strongly.",
+   "t": true,
+   "why": "Right! 'I can't stand noise' means I really dislike it."
+  },
+  {
+   "s": "'Exam' is short for 'examination'.",
+   "t": true,
+   "why": "Good! 'Exam' is an abbreviation."
+  },
+  {
+   "s": "'SMS' stands for 'short message service'.",
+   "t": true,
+   "why": "Yes, an SMS is a text message."
+  },
+  {
+   "s": "'Dept' is short for 'department'.",
+   "t": true,
+   "why": "Right! 'Dept' is a short form."
+  },
+  {
+   "s": "The caller who has never had a phone says he likes mobile phones.",
+   "t": false,
+   "why": "He does not like them; he likes his privacy and his peace and quiet."
+  },
+  {
+   "s": "The first caller carries her phone so that the school and her husband's office can contact her.",
+   "t": true,
+   "why": "Yes, they can contact her at any time."
+  },
+  {
+   "s": "Mobile phones have advantages only and no disadvantages.",
+   "t": false,
+   "why": "Phones have disadvantages too, such as cost and noise pollution."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does 'marvellous' mean?",
+   "o": [
+    "wonderful",
+    "terrible",
+    "noisy"
+   ],
+   "why": "'Marvellous' is a strong word for wonderful."
+  },
+  {
+   "q": "What does 'info' stand for?",
+   "o": [
+    "information",
+    "informal",
+    "inform"
+   ],
+   "why": "'Info' is short for 'information'."
+  },
+  {
+   "q": "What does 'USA' stand for?",
+   "o": [
+    "United States of America",
+    "United States of Arabia",
+    "Union of South Asia"
+   ],
+   "why": "Abbreviations often use the first letter of each word."
+  },
+  {
+   "q": "Which is a disadvantage of mobile phones?",
+   "o": [
+    "loss of privacy",
+    "calling for help",
+    "feeling safe"
+   ],
+   "why": "Loss of privacy is a disadvantage."
+  },
+  {
+   "q": "Which is an advantage of mobile phones?",
+   "o": [
+    "calling someone in an emergency",
+    "noise pollution",
+    "high cost"
+   ],
+   "why": "You can ring for help in an emergency."
+  },
+  {
+   "q": "What is 'uni' short for?",
+   "o": [
+    "university",
+    "uniform",
+    "union"
+   ],
+   "why": "'Uni' is an informal short form of 'university'."
+  },
+  {
+   "q": "Which object: 'I charge up the battery and plug in my earphones'?",
+   "o": [
+    "an MP3 player",
+    "a laptop computer",
+    "a pencil"
+   ],
+   "why": "Earphones are used with an MP3 player."
+  },
+  {
+   "q": "What is a 'phone-in'?",
+   "o": [
+    "a radio show where listeners call in",
+    "a broken phone",
+    "a phone shop"
+   ],
+   "why": "Callers phone the radio show to give their opinions."
+  },
+  {
+   "q": "What does 'get rid of' mean?",
+   "o": [
+    "throw away or remove",
+    "buy again",
+    "repair"
+   ],
+   "why": "If you get rid of something, you remove it."
+  },
+  {
+   "q": "Which phrase gives an opinion?",
+   "o": [
+    "In my opinion…",
+    "Yesterday I…",
+    "Once upon a time…"
+   ],
+   "why": "'In my opinion' introduces what you think."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Full form of 'exam'",
+   "a": "examination",
+   "d": [
+    "example",
+    "examiner",
+    "exercise"
+   ]
+  },
+  {
+   "q": "Full form of 'info'",
+   "a": "information",
+   "d": [
+    "informal",
+    "infant",
+    "inform"
+   ]
+  },
+  {
+   "q": "Full form of 'dept'",
+   "a": "department",
+   "d": [
+    "depth",
+    "departure",
+    "deposit"
+   ]
+  },
+  {
+   "q": "Full form of 'uni'",
+   "a": "university",
+   "d": [
+    "uniform",
+    "unit",
+    "union"
+   ]
+  },
+  {
+   "q": "Full form of 'tv'",
+   "a": "television",
+   "d": [
+    "telephone",
+    "telescope",
+    "telegram"
+   ]
+  },
+  {
+   "q": "Meaning of 'marvellous'",
+   "a": "wonderful",
+   "d": [
+    "terrible",
+    "boring",
+    "noisy"
+   ]
+  },
+  {
+   "q": "Meaning of 'can't stand'",
+   "a": "dislike strongly",
+   "d": [
+    "love",
+    "stand up",
+    "wait"
+   ]
+  },
+  {
+   "q": "Meaning of 'constant'",
+   "a": "all the time",
+   "d": [
+    "never",
+    "once",
+    "rarely"
+   ]
+  },
+  {
+   "q": "Word meaning 'state of being alone'",
+   "a": "privacy",
+   "d": [
+    "emergency",
+    "pollution",
+    "opinion"
+   ]
+  },
+  {
+   "q": "A good side of something",
+   "a": "advantage",
+   "d": [
+    "disadvantage",
+    "problem",
+    "pollution"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does 'emergency' mean?",
+   "o": [
+    "a sudden dangerous situation that needs action",
+    "a quiet place",
+    "a cheap phone",
+    "a long holiday"
+   ],
+   "why": "In an emergency you may need to ring for help."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why does one caller say mobiles are noise pollution?",
+   "o": [
+    "People are always shouting into them",
+    "They are too small",
+    "They have no battery",
+    "They are very cheap"
+   ],
+   "why": "Loud talking on phones makes unpleasant noise."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'IT' stand for?",
+   "o": [
+    "information technology",
+    "international travel",
+    "internet time",
+    "important text"
+   ],
+   "why": "IT is short for information technology."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'blab' mean?",
+   "o": [
+    "talk too much, often about secrets",
+    "stay silent",
+    "write a letter",
+    "walk slowly"
+   ],
+   "why": "People who blab talk too much."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "How was the abbreviation 'MOE' for 'Ministry of Education' formed?",
+   "o": [
+    "from the first letter of each word",
+    "from the last letter of each word",
+    "from the middle of each word",
+    "from the longest word only"
+   ],
+   "why": "Many abbreviations use first letters, like USA."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the sentence that uses abbreviations correctly.",
+   "o": [
+    "The IT dept sent me an SMS.",
+    "The IT department sent me an short message servise.",
+    "The I.T dpt sent me a S.",
+    "The it Dept sended an sms."
+   ],
+   "why": "IT, dept and SMS are short forms from the lesson."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses 'constant' correctly?",
+   "o": [
+    "The constant noise made me want to get rid of my old phone.",
+    "I constant my phone every day.",
+    "She is very constant to buy a phone.",
+    "Constant is my favourite phone."
+   ],
+   "why": "'Constant' is an adjective meaning 'all the time'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does one speaker feel safe with her phone?",
+   "o": [
+    "She can ring someone if she misses the bus or cannot find a taxi",
+    "Her phone is very expensive",
+    "She never uses it",
+    "Her phone has loud music"
+   ],
+   "why": "Being able to call for help makes her feel safe."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A caller says, 'I like my privacy and my peace and quiet.' What can we say about him?",
+   "o": [
+    "He does not like mobile phones",
+    "He owns three phones",
+    "He works in a phone shop",
+    "He loves noise"
+   ],
+   "why": "He has never owned a phone because he likes quiet."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The first caller says she cannot say she likes her phone, but it is useful. What does this show?",
+   "o": [
+    "She uses it because it is useful, not because she likes it",
+    "She hates all technology",
+    "She has never had a phone",
+    "She wants a new phone"
+   ],
+   "why": "She keeps it so the school and her husband's office can reach her."
+  }
+ ]
+}

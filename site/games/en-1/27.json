@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 4: My favourite toy",
+ "lesson": "Lesson 3: Story – The green yo-yo + Sound d",
+ "outcomes": [
+  "I can follow the story The green yo-yo.",
+  "I can say doll, plane, train and yo-yo.",
+  "I know sharing is good. I can hear the d sound."
+ ],
+ "tf": [
+  {
+   "s": "A train is a toy.",
+   "t": true,
+   "why": "Yes! Train is a new toy word."
+  },
+  {
+   "s": "The story is about sharing toys.",
+   "t": true,
+   "why": "Great! The value is Share."
+  },
+  {
+   "s": "At the end, the children all play together.",
+   "t": true,
+   "why": "Yes! They say: Let's all play!"
+  },
+  {
+   "s": "Sharing is good.",
+   "t": true,
+   "why": "Well done! When we share, we all play."
+  },
+  {
+   "s": "Dig starts with the d sound.",
+   "t": true,
+   "why": "Yes! D-d-dig."
+  },
+  {
+   "s": "I'm not sharing. is a kind thing to say.",
+   "t": false,
+   "why": "Let's share! is kind. I'm not sharing makes friends sad."
+  },
+  {
+   "s": "Lion starts with the d sound.",
+   "t": false,
+   "why": "Lion starts with l. Duck starts with d."
+  },
+  {
+   "s": "d – o – t makes the word dig.",
+   "t": false,
+   "why": "d-o-t makes dot. d-i-g makes dig."
+  },
+  {
+   "s": "In the story, the yo-yo is red.",
+   "t": false,
+   "why": "The story is The green yo-yo."
+  },
+  {
+   "s": "Duck and doll start with different letters.",
+   "t": false,
+   "why": "Duck and doll both start with d."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's this? (a doll)",
+   "o": [
+    "It's a doll.",
+    "It's a train.",
+    "It's a plane."
+   ],
+   "why": "It's a doll. Well done!"
+  },
+  {
+   "q": "What's Jack's favourite toy?",
+   "o": [
+    "His plane.",
+    "His doll.",
+    "His teddy."
+   ],
+   "why": "Jack's favourite toy is his plane."
+  },
+  {
+   "q": "Who says Let's share!?",
+   "o": [
+    "Fatma",
+    "Jack",
+    "Lily"
+   ],
+   "why": "Fatma says Let's share!"
+  },
+  {
+   "q": "What colour is the yo-yo in the story?",
+   "o": [
+    "green",
+    "red",
+    "blue"
+   ],
+   "why": "It's The green yo-yo."
+  },
+  {
+   "q": "Which word starts with d?",
+   "o": [
+    "duck",
+    "lion",
+    "goat"
+   ],
+   "why": "D-d-duck starts with d."
+  },
+  {
+   "q": "d – a – d. What's the word?",
+   "o": [
+    "dad",
+    "dig",
+    "dot"
+   ],
+   "why": "d-a-d makes dad."
+  },
+  {
+   "q": "What's missing? _ig",
+   "o": [
+    "d",
+    "b",
+    "g"
+   ],
+   "why": "d + ig makes dig."
+  },
+  {
+   "q": "Is sharing good?",
+   "o": [
+    "Yes.",
+    "No.",
+    "It's a plane."
+   ],
+   "why": "Yes! Sharing is good."
+  },
+  {
+   "q": "Which toy flies?",
+   "o": [
+    "plane",
+    "train",
+    "doll"
+   ],
+   "why": "A plane flies in the sky."
+  },
+  {
+   "q": "What do they say at the end?",
+   "o": [
+    "Let's all play!",
+    "Oh, no!",
+    "Goodbye!"
+   ],
+   "why": "They say Yes! Let's all play!"
+  }
+ ],
+ "hunt": [
+  {
+   "q": "It starts with d",
+   "a": "drum",
+   "d": [
+    "lion",
+    "goat",
+    "ball"
+   ]
+  },
+  {
+   "q": "d – o – t",
+   "a": "dot",
+   "d": [
+    "dig",
+    "dad",
+    "hot"
+   ]
+  },
+  {
+   "q": "d – i – g",
+   "a": "dig",
+   "d": [
+    "dot",
+    "dad",
+    "big"
+   ]
+  },
+  {
+   "q": "d – a – d",
+   "a": "dad",
+   "d": [
+    "dig",
+    "bad",
+    "did"
+   ]
+  },
+  {
+   "q": "A bird that starts with d",
+   "a": "duck",
+   "d": [
+    "goat",
+    "lion",
+    "frog"
+   ]
+  },
+  {
+   "q": "Name of Lily's doll",
+   "a": "Sue",
+   "d": [
+    "Fatma",
+    "Meg",
+    "Lily"
+   ]
+  },
+  {
+   "q": "The story value",
+   "a": "Share.",
+   "d": [
+    "Run.",
+    "Shout.",
+    "Hide."
+   ]
+  },
+  {
+   "q": "Picture 1: Fatma says…",
+   "a": "Let's play!",
+   "d": [
+    "Oh, no!",
+    "Goodbye!",
+    "Thank you."
+   ]
+  },
+  {
+   "q": "A new toy word",
+   "a": "yo-yo",
+   "d": [
+    "dig",
+    "dot",
+    "dad"
+   ]
+  },
+  {
+   "q": "First letter of doll",
+   "a": "d",
+   "d": [
+    "b",
+    "l",
+    "o"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a toy?",
+   "o": [
+    "yo-yo",
+    "dad",
+    "dot",
+    "dig"
+   ],
+   "why": "A yo-yo is a toy."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What sound does the dig card show?",
+   "o": [
+    "/d/",
+    "/b/",
+    "/l/",
+    "/g/"
+   ],
+   "why": "Dig starts with the /d/ sound."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is a new toy in this story?",
+   "o": [
+    "train",
+    "whiteboard",
+    "window",
+    "desk"
+   ],
+   "why": "Train is a new toy word."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence tells your favourite toy?",
+   "o": [
+    "It's my plane.",
+    "It's a window.",
+    "Let's tidy up.",
+    "Who's this?"
+   ],
+   "why": "It's my … tells your favourite toy."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend has no toy. What can you say?",
+   "o": [
+    "Let's share!",
+    "I'm not sharing.",
+    "Goodbye!",
+    "Oh, no!"
+   ],
+   "why": "Let's share! makes your friend happy."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Listen: d – o – t. What's the word?",
+   "o": [
+    "dot",
+    "dig",
+    "dad",
+    "hot"
+   ],
+   "why": "d-o-t makes dot."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your teacher asks: What's your favourite toy? You love your train. You say…",
+   "o": [
+    "It's my train.",
+    "It's a plane.",
+    "Let's share!",
+    "Yes, it is."
+   ],
+   "why": "It's my … tells your favourite toy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Sami sad at the start?",
+   "o": [
+    "He has no toys to play with.",
+    "He has a new plane.",
+    "He is in the classroom.",
+    "He has a red ball."
+   ],
+   "why": "Sami has no toys, so he is sad."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which picture shows the value Share?",
+   "o": [
+    "Children playing together with toys",
+    "A child playing alone",
+    "A child taking a toy",
+    "A child hiding a toy"
+   ],
+   "why": "Playing together shows sharing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can everyone play at the end?",
+   "o": [
+    "They share their toys.",
+    "Sami goes home.",
+    "The toys are gone.",
+    "It's time to tidy up."
+   ],
+   "why": "Sharing means everyone can play."
+  }
+ ]
+}

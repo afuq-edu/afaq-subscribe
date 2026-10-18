@@ -1,0 +1,266 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+ "lesson": "Reading for Pleasure: interview with Rumaitha Al Busaidi",
+ "outcomes": [
+  "Read an interview and find the main ideas",
+  "Explain why it is important to protect Antarctica"
+ ],
+ "tf": [
+  {
+   "s": "Rumaitha Al Busaidi travelled to Antarctica.",
+   "t": true,
+   "why": "The interview is about her journey there."
+  },
+  {
+   "s": "The text is a story, not an interview.",
+   "t": false,
+   "why": "It is an interview with questions and answers."
+  },
+  {
+   "s": "Rumaitha wants to preserve the Antarctic environment.",
+   "t": true,
+   "why": "She cares about protecting it."
+  },
+  {
+   "s": "People go on expeditions to explore, do research and learn.",
+   "t": true,
+   "why": "That is the purpose of an expedition."
+  },
+  {
+   "s": "Antarctica affects the climate.",
+   "t": true,
+   "why": "That is one reason it is important."
+  },
+  {
+   "s": "Antarctica has no wildlife.",
+   "t": false,
+   "why": "Antarctica has unique wildlife."
+  },
+  {
+   "s": "To 'preserve' something means to destroy it.",
+   "t": false,
+   "why": "Preserve means to keep it safe."
+  },
+  {
+   "s": "An interview is made of questions and answers.",
+   "t": true,
+   "why": "One person asks, the other answers."
+  },
+  {
+   "s": "Young people cannot do anything to protect the environment.",
+   "t": false,
+   "why": "Young people can help in many ways."
+  },
+  {
+   "s": "Young Omanis can learn courage from Rumaitha.",
+   "t": true,
+   "why": "Her journey shows courage."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does 'preserve' mean?",
+   "o": [
+    "keep something safe",
+    "break something",
+    "sell something"
+   ],
+   "why": "We preserve things we want to protect."
+  },
+  {
+   "q": "What is an 'expedition'?",
+   "o": [
+    "an organised journey to explore",
+    "a short walk to the shop",
+    "a school exam"
+   ],
+   "why": "Expeditions explore and do research."
+  },
+  {
+   "q": "In an interview, one person asks and the other...",
+   "o": [
+    "answers",
+    "sleeps",
+    "draws"
+   ],
+   "why": "An interview is questions and answers."
+  },
+  {
+   "q": "Why is Antarctica important?",
+   "o": [
+    "it affects the climate",
+    "it has many shopping malls",
+    "it has big cities"
+   ],
+   "why": "Changes in Antarctica affect the climate."
+  },
+  {
+   "q": "What does Rumaitha want to protect?",
+   "o": [
+    "the Antarctic environment",
+    "a football team",
+    "a shopping mall"
+   ],
+   "why": "She wants to preserve Antarctica."
+  },
+  {
+   "q": "What is the 'environment'?",
+   "o": [
+    "the natural world around us",
+    "a kind of interview",
+    "a timetable"
+   ],
+   "why": "It includes land, sea, air and wildlife."
+  },
+  {
+   "q": "Who answers the questions in this interview?",
+   "o": [
+    "Rumaitha",
+    "the reader",
+    "nobody"
+   ],
+   "why": "She talks about her own experience."
+  },
+  {
+   "q": "Why do scientists go on expeditions to Antarctica?",
+   "o": [
+    "to do research",
+    "to go shopping",
+    "to watch films"
+   ],
+   "why": "Expeditions help us learn."
+  },
+  {
+   "q": "How is the wildlife of Antarctica described?",
+   "o": [
+    "unique",
+    "boring",
+    "not there"
+   ],
+   "why": "Antarctica has special wildlife."
+  },
+  {
+   "q": "What is one way young people can protect the environment?",
+   "o": [
+    "reduce waste",
+    "throw rubbish anywhere",
+    "waste water"
+   ],
+   "why": "Small actions help the environment."
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Where did Rumaitha Al Busaidi travel?",
+   "o": [
+    "Antarctica",
+    "The Sahara",
+    "The Amazon",
+    "The Arctic"
+   ],
+   "why": "She travelled to Antarctica."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What type of text is it?",
+   "o": [
+    "An interview",
+    "A poem",
+    "A story",
+    "A recipe"
+   ],
+   "why": "It has questions and answers."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why do people go on expeditions?",
+   "o": [
+    "To explore, do research and learn",
+    "To sell goods",
+    "To sleep",
+    "To miss school"
+   ],
+   "why": "Expeditions are for discovery."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two things make Antarctica important?",
+   "o": [
+    "It affects the climate and has unique wildlife",
+    "It has big cities and factories",
+    "It is warm and crowded",
+    "It has many roads"
+   ],
+   "why": "These are the reasons in the lesson."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A student wants to help the environment at school. Which idea fits the lesson?",
+   "o": [
+    "Start a recycling campaign",
+    "Leave the lights on all day",
+    "Throw litter on the ground",
+    "Waste paper"
+   ],
+   "why": "Recycling protects the environment."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which question would you expect in an interview with Rumaitha?",
+   "o": [
+    "Why did you decide to go to Antarctica?",
+    "What is 5 + 5?",
+    "What colour is your bag?",
+    "When is lunch?"
+   ],
+   "why": "Interview questions are about her experience."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: 'We must ___ Antarctica for future generations.'",
+   "o": [
+    "preserve",
+    "destroy",
+    "pollute",
+    "forget"
+   ],
+   "why": "Preserve means keep safe."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it important to preserve Antarctica?",
+   "o": [
+    "Changes there affect the climate and its unique wildlife",
+    "It has no value",
+    "It is too small to matter",
+    "Nobody will ever go there"
+   ],
+   "why": "Protecting it helps the whole world."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What can young Omanis learn from Rumaitha?",
+   "o": [
+    "Courage and care for the environment",
+    "Laziness",
+    "Carelessness",
+    "To give up quickly"
+   ],
+   "why": "Her journey is an inspiring example."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the interview format help us learn about Rumaitha?",
+   "o": [
+    "We read her own answers about her experience",
+    "It has rhymes",
+    "It has no questions",
+    "It is a made-up story"
+   ],
+   "why": "We hear directly from her."
+  }
+ ]
+}

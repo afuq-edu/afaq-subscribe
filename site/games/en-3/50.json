@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 4: I want to be a doctor!",
+ "lesson": "Unit 4 – Graded readers",
+ "outcomes": [
+  "I can read 'It's Jobs Day' and guess jobs from clothes.",
+  "I can say the order of transport in 'A Boat to the Beach'.",
+  "I can retell a story with by train, by bus and by boat."
+ ],
+ "tf": [
+  {
+   "s": "In 'It's Jobs Day', the children wear clothes for their favourite jobs.",
+   "t": true,
+   "why": "Yes! They dress for the jobs they like."
+  },
+  {
+   "s": "Hamed is wearing a white hat and a white jacket.",
+   "t": true,
+   "why": "Right! Hamed wears white clothes."
+  },
+  {
+   "s": "Noora is wearing a red hat and a red jacket.",
+   "t": false,
+   "why": "Noora is wearing a blue hat and a blue jacket."
+  },
+  {
+   "s": "Qais is wearing his school clothes because he wants to be a teacher.",
+   "t": true,
+   "why": "Well done! A teacher goes to school every day."
+  },
+  {
+   "s": "Qais doesn't have a favourite job.",
+   "t": false,
+   "why": "Qais says: Yes, I do! I want to be a teacher!"
+  },
+  {
+   "s": "In 'A Boat to the Beach', it is a beach day.",
+   "t": true,
+   "why": "Yes! It's a special beach day."
+  },
+  {
+   "s": "In the end, they go to the beach by train.",
+   "t": false,
+   "why": "In the end, they go to the beach by boat."
+  },
+  {
+   "s": "The bus stops in the story.",
+   "t": true,
+   "why": "Right! Then Mum has a new idea."
+  },
+  {
+   "s": "The weather at the beach is cold and rainy.",
+   "t": false,
+   "why": "The weather is nice and sunny."
+  },
+  {
+   "s": "The boat goes slowly on the water.",
+   "t": false,
+   "why": "The boat goes fast on the water."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What day is it at school?",
+   "o": [
+    "Jobs Day",
+    "Sports Day",
+    "Beach Day"
+   ],
+   "why": "It's Jobs Day at school."
+  },
+  {
+   "q": "What does Hamed want to be?",
+   "o": [
+    "a chef",
+    "a pilot",
+    "a doctor"
+   ],
+   "why": "His white hat, white jacket and bread show a chef."
+  },
+  {
+   "q": "What does Qais want to be?",
+   "o": [
+    "a teacher",
+    "a chef",
+    "a builder"
+   ],
+   "why": "Qais wants to be a teacher."
+  },
+  {
+   "q": "What colour is Noora's jacket?",
+   "o": [
+    "blue",
+    "white",
+    "green"
+   ],
+   "why": "Noora wears a blue jacket."
+  },
+  {
+   "q": "What do the others think of Qais's job?",
+   "o": [
+    "It's a great job.",
+    "It's a bad job.",
+    "It's a funny job."
+   ],
+   "why": "They think teaching is a great job."
+  },
+  {
+   "q": "How do they usually go to the beach?",
+   "o": [
+    "by train",
+    "by car",
+    "by plane"
+   ],
+   "why": "We go to the beach by train."
+  },
+  {
+   "q": "What happens to the bus?",
+   "o": [
+    "It stops.",
+    "It flies.",
+    "It goes into the sea."
+   ],
+   "why": "The bus stops."
+  },
+  {
+   "q": "How do they get to the beach in the end?",
+   "o": [
+    "by boat",
+    "by bus",
+    "by motorbike"
+   ],
+   "why": "They go by boat."
+  },
+  {
+   "q": "Choose: We can go to the beach by / goes boat.",
+   "o": [
+    "by",
+    "goes",
+    "at"
+   ],
+   "why": "We go by boat."
+  },
+  {
+   "q": "Which transport goes on the water?",
+   "o": [
+    "boat",
+    "train",
+    "bus"
+   ],
+   "why": "A boat goes on the water."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Jobs Day: Hamed is a …",
+   "a": "chef",
+   "d": [
+    "pilot",
+    "teacher",
+    "nurse"
+   ]
+  },
+  {
+   "q": "Qais wants to be a …",
+   "a": "teacher",
+   "d": [
+    "chef",
+    "doctor",
+    "builder"
+   ]
+  },
+  {
+   "q": "Colour of Hamed's hat",
+   "a": "white",
+   "d": [
+    "blue",
+    "red",
+    "black"
+   ]
+  },
+  {
+   "q": "Mum says: It's ___.",
+   "a": "OK",
+   "d": [
+    "bad",
+    "sad",
+    "late"
+   ]
+  },
+  {
+   "q": "Hamed has some …",
+   "a": "bread",
+   "d": [
+    "medicine",
+    "paint",
+    "peaches"
+   ]
+  },
+  {
+   "q": "First transport in the story",
+   "a": "train",
+   "d": [
+    "boat",
+    "car",
+    "plane"
+   ]
+  },
+  {
+   "q": "The ___ stops.",
+   "a": "bus",
+   "d": [
+    "boat",
+    "plane",
+    "bike"
+   ]
+  },
+  {
+   "q": "Last transport in the story",
+   "a": "boat",
+   "d": [
+    "train",
+    "bus",
+    "car"
+   ]
+  },
+  {
+   "q": "The weather is …",
+   "a": "sunny",
+   "d": [
+    "rainy",
+    "snowy",
+    "cold"
+   ]
+  },
+  {
+   "q": "The boat goes ___ on water.",
+   "a": "fast",
+   "d": [
+    "slowly",
+    "under",
+    "never"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does Qais say about a favourite job?",
+   "o": [
+    "Yes, I do! I want to be a teacher!",
+    "No, I don't.",
+    "I want to be a chef!",
+    "I don't like jobs."
+   ],
+   "why": "Qais wants to be a teacher."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Complete: They are wearing the clothes for their favourite ___.",
+   "o": [
+    "jobs",
+    "days",
+    "books",
+    "games"
+   ],
+   "why": "They wear clothes for their favourite jobs."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What special day is it in 'A Boat to the Beach'?",
+   "o": [
+    "a beach day",
+    "a school day",
+    "Jobs Day",
+    "a birthday"
+   ],
+   "why": "Today is a beach day."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where does the family want to go?",
+   "o": [
+    "to the beach",
+    "to school",
+    "to the park",
+    "to the hospital"
+   ],
+   "why": "They want to go to the beach."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Hamed has bread and a white hat. How do you know his job?",
+   "o": [
+    "Chefs make bread and wear white hats.",
+    "Pilots eat bread.",
+    "Teachers wear white hats.",
+    "Doctors make bread."
+   ],
+   "why": "His clothes and bread show he's a chef."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put the transport in story order.",
+   "o": [
+    "train, bus, boat",
+    "boat, bus, train",
+    "bus, train, boat",
+    "train, boat, bus"
+   ],
+   "why": "First the train, then the bus, then the boat."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence matches the story?",
+   "o": [
+    "The boat goes fast on the water.",
+    "The train goes on the water.",
+    "The bus goes on the water.",
+    "The boat goes under the ground."
+   ],
+   "why": "The boat goes fast on the water."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Qais wearing his school clothes on Jobs Day?",
+   "o": [
+    "He wants to be a teacher.",
+    "He forgets it is Jobs Day.",
+    "He wants to be a chef.",
+    "He doesn't like jobs."
+   ],
+   "why": "Teachers work at school, so school clothes fit."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Retell the beach story in three sentences.",
+   "o": [
+    "They miss the train. The bus stops. They go to the beach by boat.",
+    "They go by boat. The train stops. They stay home.",
+    "The bus is fast. They go by train. The boat stops.",
+    "They miss the boat. They go by bus. The train stops."
+   ],
+   "why": "Train missed, bus stops, then boat."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What does Mum do when the bus stops?",
+   "o": [
+    "She finds a new way: by boat.",
+    "She goes home.",
+    "She cries.",
+    "She waits for a plane."
+   ],
+   "why": "Mum says: It's OK. We can go by boat."
+  }
+ ]
+}

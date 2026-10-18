@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 3 – Let’s explore!",
+ "lesson": "Graded reader 1: The Space Race",
+ "outcomes": [
+  "Predict what will happen in a story from the pictures.",
+  "Find details in the story The Space Race.",
+  "Give your opinion about the characters and the story."
+ ],
+ "tf": [
+  {
+   "s": "Faisal and Hazim are dressed as astronauts.",
+   "t": true,
+   "why": "They wear astronaut costumes."
+  },
+  {
+   "s": "The class is learning about the solar system in Science.",
+   "t": true,
+   "why": "Their Science topic is the solar system."
+  },
+  {
+   "s": "Hazim falls over because he sees a squirrel in the tree.",
+   "t": true,
+   "why": "He looks up at the squirrel and falls."
+  },
+  {
+   "s": "Faisal says: \"I'll win, but I won't enjoy the race.\"",
+   "t": false,
+   "why": "Faisal says: I won't win, but I'll enjoy the race."
+  },
+  {
+   "s": "Faisal gives Hazim his helmet.",
+   "t": true,
+   "why": "Faisal is kind and gives Hazim his helmet."
+  },
+  {
+   "s": "The boys think only one person won the race.",
+   "t": false,
+   "why": "They say they all won because they finished together."
+  },
+  {
+   "s": "Faisal thinks enjoying the race is more important than winning.",
+   "t": true,
+   "why": "He enjoys the race even if he doesn't win."
+  },
+  {
+   "s": "Hazim falls over because his shoes are too big.",
+   "t": false,
+   "why": "He falls because he looks up at a squirrel."
+  },
+  {
+   "s": "\"Stars\" and \"planets\" end with the same sound.",
+   "t": false,
+   "why": "stars ends with /z/ and planets ends with /s/."
+  },
+  {
+   "s": "The boys finish the race together.",
+   "t": true,
+   "why": "They finish together, so they say they all won."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who are Faisal and Hazim dressed as?",
+   "o": [
+    "astronauts",
+    "doctors",
+    "shopkeepers"
+   ],
+   "why": "They wear spacesuits and helmets."
+  },
+  {
+   "q": "What does Hazim see in the tree?",
+   "o": [
+    "a squirrel",
+    "a rocket",
+    "a comet"
+   ],
+   "why": "He sees a squirrel."
+  },
+  {
+   "q": "What does Faisal give Hazim?",
+   "o": [
+    "his helmet",
+    "his book",
+    "his telescope"
+   ],
+   "why": "He gives Hazim his helmet."
+  },
+  {
+   "q": "What is the class learning about in Science?",
+   "o": [
+    "the solar system",
+    "money",
+    "old forts"
+   ],
+   "why": "They are learning about the solar system."
+  },
+  {
+   "q": "Why do the boys say they all won?",
+   "o": [
+    "They finished the race together.",
+    "They were the fastest.",
+    "They didn't run."
+   ],
+   "why": "Finishing together made them all winners."
+  },
+  {
+   "q": "Which word is a story word?",
+   "o": [
+    "costume",
+    "greengrocer's",
+    "port"
+   ],
+   "why": "The boys wear costumes in the race."
+  },
+  {
+   "q": "Complete: I ______ win, but I'll enjoy the race.",
+   "o": [
+    "won't",
+    "will",
+    "didn't"
+   ],
+   "why": "I won't win = I will not win."
+  },
+  {
+   "q": "Which plural ends with /ɪz/?",
+   "o": [
+    "races",
+    "stars",
+    "planets"
+   ],
+   "why": "races ends with /ɪz/."
+  },
+  {
+   "q": "What do astronauts wear on their heads?",
+   "o": [
+    "a helmet",
+    "a costume",
+    "a straw"
+   ],
+   "why": "A helmet keeps the head safe."
+  },
+  {
+   "q": "What is the name of Graded reader 2?",
+   "o": [
+    "The New Telescope",
+    "The Science Fair",
+    "Stop, thief!"
+   ],
+   "why": "Graded reader 2 is The New Telescope."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Faisal and Hazim are dressed as",
+   "a": "astronauts",
+   "d": [
+    "doctors",
+    "teachers",
+    "pilots"
+   ]
+  },
+  {
+   "q": "Animal in the tree",
+   "a": "squirrel",
+   "d": [
+    "cat",
+    "bird",
+    "dog"
+   ]
+  },
+  {
+   "q": "Faisal gives Hazim his …",
+   "a": "helmet",
+   "d": [
+    "costume",
+    "rocket",
+    "book"
+   ]
+  },
+  {
+   "q": "Who falls over?",
+   "a": "Hazim",
+   "d": [
+    "Faisal",
+    "the teacher",
+    "Bo"
+   ]
+  },
+  {
+   "q": "Science topic in class",
+   "a": "solar system",
+   "d": [
+    "shops",
+    "money",
+    "museums"
+   ]
+  },
+  {
+   "q": "I won't win, but I'll ___ it",
+   "a": "enjoy",
+   "d": [
+    "hate",
+    "stop",
+    "break"
+   ]
+  },
+  {
+   "q": "Clothes for a party or play",
+   "a": "costume",
+   "d": [
+    "helmet",
+    "straw",
+    "model"
+   ]
+  },
+  {
+   "q": "Ending sound of \"races\"",
+   "a": "/ɪz/",
+   "d": [
+    "/s/",
+    "/z/",
+    "/t/"
+   ]
+  },
+  {
+   "q": "Ending sound of \"stars\"",
+   "a": "/z/",
+   "d": [
+    "/s/",
+    "/ɪz/",
+    "/d/"
+   ]
+  },
+  {
+   "q": "Graded reader 2",
+   "a": "The New Telescope",
+   "d": [
+    "The Space Race",
+    "Stop, thief!",
+    "Then and now"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the name of this story?",
+   "o": [
+    "The Space Race",
+    "The Science Fair",
+    "The New Telescope",
+    "Stop, thief!"
+   ],
+   "why": "Graded reader 1 is The Space Race."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why does Hazim fall over?",
+   "o": [
+    "He looks up at a squirrel in the tree.",
+    "He is very tired.",
+    "Faisal pushes him.",
+    "It is raining."
+   ],
+   "why": "He sees a squirrel and looks up."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which words are from the story?",
+   "o": [
+    "squirrel, helmet, costume, race",
+    "port, fort, ruins",
+    "price, money, shop",
+    "email, blog, website"
+   ],
+   "why": "These are the story words."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Faisal say about the race?",
+   "o": [
+    "I won't win, but I'll enjoy the race.",
+    "I'll win the race.",
+    "I won't run in the race.",
+    "I'll stop the race."
+   ],
+   "why": "Faisal wants to enjoy the race."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend needs help in a race. What would a good friend do?",
+   "o": [
+    "Help him, like Faisal helps Hazim.",
+    "Laugh at him.",
+    "Run away fast.",
+    "Take his costume."
+   ],
+   "why": "Faisal helps his friend by giving him his helmet."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which plural has the same ending sound as \"stars\"?",
+   "o": [
+    "moons",
+    "races",
+    "planets",
+    "rockets"
+   ],
+   "why": "stars and moons end with /z/."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Before reading, you look at the pictures and say what will happen. What are you doing?",
+   "o": [
+    "predicting",
+    "spelling",
+    "counting",
+    "singing"
+   ],
+   "why": "Predicting means guessing what will happen."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Faisal says, \"I won't win, but I'll enjoy the race.\" What does this tell you about him?",
+   "o": [
+    "He thinks enjoying the race is more important than winning.",
+    "He doesn't like races.",
+    "He is very sad.",
+    "He wants to stop the race."
+   ],
+   "why": "He is happy to take part even if he doesn't win."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Who won the race, in the boys' opinion?",
+   "o": [
+    "They all won, because they finished together.",
+    "Only Faisal won.",
+    "Only Hazim won.",
+    "Nobody finished the race."
+   ],
+   "why": "Finishing together made them all winners."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the main message of the story?",
+   "o": [
+    "Helping friends and enjoying the race matter more than winning.",
+    "Only winning is important.",
+    "Races are dangerous.",
+    "Squirrels are good runners."
+   ],
+   "why": "The boys help each other and enjoy the race."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Lesson 1: Vocabulary – Jobs in entertainment",
+ "outcomes": [
+  "Name 12 jobs in entertainment.",
+  "Say what people do in each job.",
+  "Use job words in your own sentences."
+ ],
+ "tf": [
+  {
+   "s": "A puppeteer works with puppets.",
+   "t": true,
+   "why": "Yes, puppeteers make puppets move and talk."
+  },
+  {
+   "s": "A comedian makes people laugh by telling jokes.",
+   "t": true,
+   "why": "Correct, comedians tell jokes."
+  },
+  {
+   "s": "A make-up artist writes stories for films.",
+   "t": false,
+   "why": "A make-up artist puts make-up on actors' faces."
+  },
+  {
+   "s": "A stunt performer does dangerous things for films.",
+   "t": true,
+   "why": "Yes, so they need to be very fit."
+  },
+  {
+   "s": "A camera operator usually performs on the stage.",
+   "t": false,
+   "why": "A camera operator videos the show; you don't see them on stage."
+  },
+  {
+   "s": "Clowns often wear wigs, red noses and big shoes.",
+   "t": true,
+   "why": "Yes, that is how we know a clown."
+  },
+  {
+   "s": "An animator makes cartoons and moving pictures.",
+   "t": true,
+   "why": "Yes, animators make drawings move."
+  },
+  {
+   "s": "A costume designer edits the sound in a film.",
+   "t": false,
+   "why": "A costume designer makes clothes for performers; a sound editor works with sound."
+  },
+  {
+   "s": "A presenter introduces a programme and talks to the audience.",
+   "t": true,
+   "why": "Yes, that is a presenter's job."
+  },
+  {
+   "s": "A sound editor needs to be very fit for dangerous actions.",
+   "t": false,
+   "why": "Stunt performers need to be fit; sound editors work with sound."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who works with puppets?",
+   "o": [
+    "a puppeteer",
+    "a presenter",
+    "a writer"
+   ],
+   "why": "A puppeteer works with puppets."
+  },
+  {
+   "q": "Who tells jokes?",
+   "o": [
+    "a comedian",
+    "an animator",
+    "a sound editor"
+   ],
+   "why": "A comedian makes people laugh with jokes."
+  },
+  {
+   "q": "Who makes clothes for performers?",
+   "o": [
+    "a costume designer",
+    "a camera operator",
+    "a clown"
+   ],
+   "why": "A costume designer designs costumes."
+  },
+  {
+   "q": "Who writes books and stories?",
+   "o": [
+    "a writer",
+    "a puppeteer",
+    "a stunt performer"
+   ],
+   "why": "A writer writes books."
+  },
+  {
+   "q": "Who uses a camera to video a show?",
+   "o": [
+    "a camera operator",
+    "a clown",
+    "a comedian"
+   ],
+   "why": "A camera operator videos the show."
+  },
+  {
+   "q": "Who wears a red nose and big shoes?",
+   "o": [
+    "a clown",
+    "a presenter",
+    "a writer"
+   ],
+   "why": "Clowns wear wigs, red noses and big shoes."
+  },
+  {
+   "q": "Which job do you NOT see on a stage?",
+   "o": [
+    "sound editor",
+    "performer",
+    "comedian"
+   ],
+   "why": "A sound editor works behind the scenes."
+  },
+  {
+   "q": "Which job needs a very fit person?",
+   "o": [
+    "stunt performer",
+    "writer",
+    "sound editor"
+   ],
+   "why": "Stunt performers do dangerous actions."
+  },
+  {
+   "q": "I love drawing cartoons. I'd like to be an ___.",
+   "o": [
+    "animator",
+    "presenter",
+    "clown"
+   ],
+   "why": "Animators make cartoons."
+  },
+  {
+   "q": "A vet looks after ___.",
+   "o": [
+    "sick animals",
+    "puppets",
+    "costumes"
+   ],
+   "why": "A vet is a doctor for animals."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "He works with puppets.",
+   "a": "puppeteer",
+   "d": [
+    "presenter",
+    "comedian",
+    "animator"
+   ]
+  },
+  {
+   "q": "He tells jokes.",
+   "a": "comedian",
+   "d": [
+    "clown",
+    "writer",
+    "presenter"
+   ]
+  },
+  {
+   "q": "She videos the show.",
+   "a": "camera operator",
+   "d": [
+    "sound editor",
+    "animator",
+    "writer"
+   ]
+  },
+  {
+   "q": "He does dangerous things.",
+   "a": "stunt performer",
+   "d": [
+    "presenter",
+    "writer",
+    "animator"
+   ]
+  },
+  {
+   "q": "She makes cartoons move.",
+   "a": "animator",
+   "d": [
+    "puppeteer",
+    "presenter",
+    "comedian"
+   ]
+  },
+  {
+   "q": "She designs clothes for shows.",
+   "a": "costume designer",
+   "d": [
+    "make-up artist",
+    "sound editor",
+    "presenter"
+   ]
+  },
+  {
+   "q": "Red nose and big shoes",
+   "a": "clown",
+   "d": [
+    "presenter",
+    "writer",
+    "animator"
+   ]
+  },
+  {
+   "q": "She puts make-up on actors.",
+   "a": "make-up artist",
+   "d": [
+    "costume designer",
+    "camera operator",
+    "writer"
+   ]
+  },
+  {
+   "q": "He writes books.",
+   "a": "writer",
+   "d": [
+    "clown",
+    "stunt performer",
+    "presenter"
+   ]
+  },
+  {
+   "q": "He works with sound.",
+   "a": "sound editor",
+   "d": [
+    "animator",
+    "puppeteer",
+    "clown"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which job is this? He makes people laugh by telling jokes.",
+   "o": [
+    "comedian",
+    "puppeteer",
+    "camera operator",
+    "costume designer"
+   ],
+   "why": "A comedian tells jokes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Write the job: She puts make-up on actors' faces.",
+   "o": [
+    "make-up artist",
+    "costume designer",
+    "animator",
+    "presenter"
+   ],
+   "why": "A make-up artist does actors' make-up."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does a puppeteer do?",
+   "o": [
+    "works with puppets",
+    "writes stories",
+    "edits sound",
+    "designs costumes"
+   ],
+   "why": "Puppeteers make puppets move."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is Majid going to do in the talent show?",
+   "o": [
+    "He's going to be the camera operator.",
+    "He's going to be a clown.",
+    "He's going to tell jokes.",
+    "He's going to design costumes."
+   ],
+   "why": "He will video the show."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You're very good at telling funny stories. You would be a great ___.",
+   "o": [
+    "comedian",
+    "sound editor",
+    "camera operator",
+    "costume designer"
+   ],
+   "why": "Funny stories make people laugh, like a comedian."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Hanan is creative and loves making clothes. Which job is good for her?",
+   "o": [
+    "costume designer",
+    "stunt performer",
+    "sound editor",
+    "presenter"
+   ],
+   "why": "A costume designer makes clothes for performers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence describes a job correctly?",
+   "o": [
+    "A stunt performer does dangerous things for films.",
+    "A writer puts make-up on actors.",
+    "A clown works with sound.",
+    "An animator videos the show."
+   ],
+   "why": "Only the first matches the job."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which two jobs need people who are very fit?",
+   "o": [
+    "stunt performer and performer",
+    "writer and sound editor",
+    "animator and writer",
+    "make-up artist and sound editor"
+   ],
+   "why": "They do dangerous or energetic actions."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group of jobs do you NOT usually see on a stage?",
+   "o": [
+    "camera operator, sound editor, writer",
+    "clown, comedian, performer",
+    "presenter, comedian, clown",
+    "puppeteer, performer, comedian"
+   ],
+   "why": "These people work behind the scenes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between a performer and a presenter?",
+   "o": [
+    "A performer acts, sings or does tricks; a presenter introduces a programme.",
+    "A performer writes books; a presenter draws cartoons.",
+    "They do exactly the same job.",
+    "A presenter does stunts; a performer edits sound."
+   ],
+   "why": "Performers entertain with acts; presenters talk to the audience."
+  }
+ ]
+}

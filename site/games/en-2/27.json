@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Learning Club 1",
+ "lesson": "Learning Club 1 – Lesson 1: Language booster 1",
+ "outcomes": [
+  "I can ask: What's your favourite book?",
+  "I can describe a book with very: very interesting, very scary.",
+  "I can write about my favourite book."
+ ],
+ "tf": [
+  {
+   "s": "We ask \"What's your favourite book?\" to know the book someone likes best.",
+   "t": true,
+   "why": "Favourite means the one you like best."
+  },
+  {
+   "s": "A good answer is \"My favourite book is Cinderella.\"",
+   "t": true,
+   "why": "We start with \"My favourite book is ...\"."
+  },
+  {
+   "s": "\"It's very interesting\" describes a book.",
+   "t": true,
+   "why": "Very + adjective describes things."
+  },
+  {
+   "s": "\"Is it very scary?\" can get the answer \"Yes, it is.\"",
+   "t": true,
+   "why": "Short answer: Yes, it is."
+  },
+  {
+   "s": "The short answer \"No, it is.\" is correct.",
+   "t": false,
+   "why": "We say \"No, it isn't.\""
+  },
+  {
+   "s": "\"Very\" makes the adjective stronger.",
+   "t": true,
+   "why": "Very big is more than big."
+  },
+  {
+   "s": "\"Snow White\" is the name of a colour in this lesson.",
+   "t": false,
+   "why": "Snow White is the name of a story book."
+  },
+  {
+   "s": "We write \"helicopter\" h-e-l-i-c-o-p-t-e-r.",
+   "t": true,
+   "why": "That is the right spelling."
+  },
+  {
+   "s": "\"It's very scary\" means the book is very happy.",
+   "t": false,
+   "why": "Scary means it makes you feel afraid."
+  },
+  {
+   "s": "\"Interesting\" and \"scary\" are adjectives.",
+   "t": true,
+   "why": "Adjectives describe things."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's your favourite book?",
+   "o": [
+    "My favourite book is Snow White.",
+    "I'm seven.",
+    "It's a pen."
+   ],
+   "why": "Start with \"My favourite book is ...\"."
+  },
+  {
+   "q": "It's ___ interesting.",
+   "o": [
+    "very",
+    "is",
+    "my"
+   ],
+   "why": "Very + adjective: very interesting."
+  },
+  {
+   "q": "Is it very scary? (yes)",
+   "o": [
+    "Yes, it is.",
+    "Yes, I am.",
+    "Yes, it isn't."
+   ],
+   "why": "Short answer: Yes, it is."
+  },
+  {
+   "q": "Is it very small? (no)",
+   "o": [
+    "No, it isn't.",
+    "No, it is.",
+    "No, I'm not."
+   ],
+   "why": "Short answer: No, it isn't."
+  },
+  {
+   "q": "Which is a story book?",
+   "o": [
+    "Little Red Riding Hood",
+    "helicopter",
+    "robot"
+   ],
+   "why": "Little Red Riding Hood is a story."
+  },
+  {
+   "q": "Which word is an adjective?",
+   "o": [
+    "scary",
+    "book",
+    "monster"
+   ],
+   "why": "Scary describes something."
+  },
+  {
+   "q": "Spell the word:",
+   "o": [
+    "helicopter",
+    "helicoptar",
+    "hellicopter"
+   ],
+   "why": "h-e-l-i-c-o-p-t-e-r."
+  },
+  {
+   "q": "My favourite ___ is Cinderella.",
+   "o": [
+    "book",
+    "very",
+    "is"
+   ],
+   "why": "Cinderella is a book."
+  },
+  {
+   "q": "The helicopter is very ___.",
+   "o": [
+    "noisy",
+    "book",
+    "robot"
+   ],
+   "why": "A helicopter makes a lot of noise."
+  },
+  {
+   "q": "First line of the dialogue:",
+   "o": [
+    "What's your favourite book?",
+    "It's very scary.",
+    "Jack and the Beanstalk."
+   ],
+   "why": "The question comes first."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "A very loud thing is very ___",
+   "a": "noisy",
+   "d": [
+    "small",
+    "book",
+    "quiet"
+   ]
+  },
+  {
+   "q": "Opposite of big",
+   "a": "small",
+   "d": [
+    "noisy",
+    "scary",
+    "very"
+   ]
+  },
+  {
+   "q": "Makes you afraid",
+   "a": "scary",
+   "d": [
+    "small",
+    "big",
+    "nice"
+   ]
+  },
+  {
+   "q": "A book you like best",
+   "a": "favourite",
+   "d": [
+    "very",
+    "scary",
+    "noisy"
+   ]
+  },
+  {
+   "q": "It flies and is noisy",
+   "a": "helicopter",
+   "d": [
+    "book",
+    "robot",
+    "monster"
+   ]
+  },
+  {
+   "q": "A story book",
+   "a": "Cinderella",
+   "d": [
+    "Robot",
+    "Ruler",
+    "Desk"
+   ]
+  },
+  {
+   "q": "Answer: Is it very big? (yes)",
+   "a": "Yes, it is.",
+   "d": [
+    "No, it is.",
+    "Yes, I am.",
+    "Yes, it isn't."
+   ]
+  },
+  {
+   "q": "Answer: Is it scary? (no)",
+   "a": "No, it isn't.",
+   "d": [
+    "No, it is.",
+    "Yes, it is.",
+    "No, I'm not."
+   ]
+  },
+  {
+   "q": "It's ___ interesting.",
+   "a": "very",
+   "d": [
+    "is",
+    "my",
+    "are"
+   ]
+  },
+  {
+   "q": "My favourite ___ is Snow White.",
+   "a": "book",
+   "d": [
+    "toy",
+    "very",
+    "it"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which question asks about a favourite book?",
+   "o": [
+    "What's your favourite book?",
+    "Where's my book?",
+    "Is this your book?",
+    "What's this?"
+   ],
+   "why": "\"Favourite\" means the one you like best."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word goes before an adjective to make it stronger?",
+   "o": [
+    "very",
+    "my",
+    "is",
+    "book"
+   ],
+   "why": "Very makes it stronger: very big."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a story book in the lesson?",
+   "o": [
+    "Jack and the Beanstalk",
+    "helicopter",
+    "ruler",
+    "pencil case"
+   ],
+   "why": "Jack and the Beanstalk is in the lesson."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is an adjective?",
+   "o": [
+    "interesting",
+    "Cinderella",
+    "book",
+    "favourite book"
+   ],
+   "why": "Interesting describes a thing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: My favourite book is Jack and the Beanstalk. It's very ___.",
+   "o": [
+    "scary",
+    "small",
+    "noisy",
+    "computer"
+   ],
+   "why": "In the lesson, Jack and the Beanstalk is very scary."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend asks: Is it very interesting? Your book is interesting. You say:",
+   "o": [
+    "Yes, it is.",
+    "No, it isn't.",
+    "Yes, I am.",
+    "It's a book."
+   ],
+   "why": "Say \"Yes, it is.\""
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put the words in order: book / My / is / favourite / Snow White",
+   "o": [
+    "My favourite book is Snow White.",
+    "My book favourite is Snow White.",
+    "Favourite my book is Snow White.",
+    "Snow White book is my favourite is."
+   ],
+   "why": "My favourite book is Snow White."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the right order for the dialogue?",
+   "o": [
+    "What's your favourite book? – Jack and the Beanstalk. – It's very scary.",
+    "It's very scary. – What's your favourite book? – Jack and the Beanstalk.",
+    "Jack and the Beanstalk. – It's very scary. – What's your favourite book?",
+    "It's very scary. – Jack and the Beanstalk. – What's your favourite book?"
+   ],
+   "why": "First the question, then the book, then the adjective."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is NOT correct?",
+   "o": [
+    "It's very a book.",
+    "It's very scary.",
+    "It's very interesting.",
+    "It's very big."
+   ],
+   "why": "Very goes before an adjective, not before \"a book\"."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence tells us more about a book?",
+   "o": [
+    "It's very interesting.",
+    "It's a book.",
+    "This is a book.",
+    "Here you are."
+   ],
+   "why": "Very + adjective describes the book."
+  }
+ ]
+}

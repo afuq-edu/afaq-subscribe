@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Unit 4 – Lesson 7: Review and Get ready for Starters",
+  "outcomes": [
+    "I can use family and face words in sentences.",
+    "I can read a description and say if it matches a picture.",
+    "I can follow the story \"The goat herd\"."
+  ],
+  "tf": [
+    { "s": "My dad's got brown eyes is a sentence about eyes.", "t": true, "why": "Yes! It tells us the colour of dad's eyes." },
+    { "s": "We say She's got fair hair for a boy.", "t": false, "why": "For a boy we say He's got." },
+    { "s": "In \"The goat herd\", a boy and his mum go out.", "t": true, "why": "Great! Mum and I like to go out." },
+    { "s": "The boy puts boots on his feet.", "t": true, "why": "Well done! He puts on his boots." },
+    { "s": "The boy has got some goat food in a bag.", "t": true, "why": "Yes! I have some goat food in a bag." },
+    { "s": "The boy and his mum do not like to go out.", "t": false, "why": "They like to go out." },
+    { "s": "A picture shows a big nose. She's got a small nose matches it.", "t": false, "why": "Big and small are different, so it does not match." },
+    { "s": "Sheep, feet and bees have the ee sound.", "t": true, "why": "Great! They all have ee." },
+    { "s": "Farm has the er sound.", "t": false, "why": "Farm has ar: f-ar-m." },
+    { "s": "My mum's got means my mum has got.", "t": true, "why": "Yes! mum's got = mum has got." }
+  ],
+  "boxes": [
+    { "q": "This is my ___. (dad's brother)", "o": ["uncle", "aunt", "cousin"], "why": "Dad's brother is my uncle." },
+    { "q": "Read: He's got brown hair. The boy has got brown hair.", "o": ["✓ (right)", "✗ (wrong)", "I don't know"], "why": "The words match the picture." },
+    { "q": "Read: She's got a small nose. The girl has got a big nose.", "o": ["✗ (wrong)", "✓ (right)", "I don't know"], "why": "Big is not small, so it is wrong." },
+    { "q": "Who goes out in \"The goat herd\"?", "o": ["a boy and his mum", "a girl and her dad", "a robot and a dog"], "why": "Mum and I like to go out." },
+    { "q": "What does the boy put on his feet?", "o": ["boots", "a hat", "a bag"], "why": "He puts boots on his feet." },
+    { "q": "What does the boy have in the bag?", "o": ["some goat food", "a yo-yo", "a ball"], "why": "I have some goat food in a bag." },
+    { "q": "Unscramble: m / ar / f", "o": ["farm", "fram", "marf"], "why": "f-ar-m spells farm." },
+    { "q": "Who's in your family? Choose a good answer.", "o": ["My mum, my dad, my brother and me.", "Brown eyes.", "Yes, it is."], "why": "We name the people in our family." },
+    { "q": "Which is a tricky word in the story?", "o": ["some", "goat", "farm"], "why": "Some is a tricky word." },
+    { "q": "Find an ee word in the story.", "o": ["sheep", "goats", "farm"], "why": "sh-ee-p has ee." }
+  ],
+  "hunt": [
+    { "q": "Mum's sister", "a": "aunt", "d": ["uncle", "cousin", "brother"] },
+    { "q": "Uncle's child", "a": "cousin", "d": ["aunt", "grandad", "mum"] },
+    { "q": "Boy: ___ got brown hair.", "a": "He's", "d": ["She's", "It's", "I'm"] },
+    { "q": "Girl: ___ got fair hair.", "a": "She's", "d": ["He's", "It's", "I'm"] },
+    { "q": "Opposite of big", "a": "small", "d": ["fair", "brown", "long"] },
+    { "q": "In the bag: some goat ___", "a": "food", "d": ["boots", "hair", "eyes"] },
+    { "q": "The boy goes out with his ___.", "a": "mum", "d": ["dad", "uncle", "cousin"] },
+    { "q": "Animals in the title", "a": "goats", "d": ["sheep", "bees", "cows"] },
+    { "q": "Find the ar word.", "a": "farm", "d": ["herd", "feet", "nose"] },
+    { "q": "Find the o-e word.", "a": "nose", "d": ["farm", "herd", "feet"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Which word is a family word?", "o": ["cousin", "nose", "fair", "boots"], "why": "A cousin is in our family." },
+    { "lv": "التذكر", "q": "What is the name of the graded reader?", "o": ["The goat herd", "The game", "The robot", "My bike"], "why": "The reader is The goat herd." },
+    { "lv": "التذكر", "q": "Which word has er?", "o": ["herd", "feet", "farm", "nose"], "why": "h-er-d has er." },
+    { "lv": "التذكر", "q": "Which word is a hair colour?", "o": ["fair", "small", "big", "long"], "why": "Fair hair is a light hair colour." },
+    { "lv": "التطبيق", "q": "Write about your dad's eyes.", "o": ["My dad's got brown eyes.", "My dad's got brown eye.", "My dad got's brown eyes.", "She's got brown eyes."], "why": "My dad's got brown eyes is right." },
+    { "lv": "التطبيق", "q": "Read and draw: She's got long black hair. Which picture?", "o": ["A girl with long black hair", "A girl with short fair hair", "A boy with black hair", "A girl with long red hair"], "why": "The picture must show long black hair." },
+    { "lv": "التطبيق", "q": "Tell your partner about your mum's nose.", "o": ["My mum's got a small nose.", "My mum's got a small noses.", "He's got a small nose.", "My mum small nose."], "why": "My mum's got a small nose." },
+    { "lv": "التحليل", "q": "Why does the boy have goat food in his bag?", "o": ["To feed the goats", "To eat it at school", "To give it to the bees", "To play a game"], "why": "Goat food is for goats." },
+    { "lv": "التحليل", "q": "Which sentence does NOT match: a boy with brown hair and blue eyes?", "o": ["He's got black hair.", "He's got brown hair.", "He's got blue eyes.", "He's got brown hair and blue eyes."], "why": "His hair is brown, not black." },
+    { "lv": "التحليل", "q": "Which group has the same sound as \"sheep\"?", "o": ["feet and bees", "farm and herd", "nose and boots", "goats and farm"], "why": "Feet and bees have ee, like sheep." }
+  ]
+}

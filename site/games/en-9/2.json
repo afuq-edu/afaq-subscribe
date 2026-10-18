@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 1: Identity",
+ "lesson": "Lesson 1: Reading – identities",
+ "outcomes": [
+  "Find key words in profiles and match them with photo boards.",
+  "Understand and use new words: valley, cover, busy, background, stadium.",
+  "Use phrasal verbs like take up, join in and hang out correctly."
+ ],
+ "tf": [
+  {
+   "s": "A photo board shows images and ideas about your interests and personality.",
+   "t": true,
+   "why": "That's why it tells us about a person's identity."
+  },
+  {
+   "s": "In multiple matching, it is enough if one piece of information matches.",
+   "t": false,
+   "why": "All the information must match, not just one part."
+  },
+  {
+   "s": "Board D belongs to Osama.",
+   "t": true,
+   "why": "It shows his city, football, karate and friends."
+  },
+  {
+   "s": "Cody loves playing sport every day.",
+   "t": false,
+   "why": "Cody is keen on sport, but only watching it, not playing it."
+  },
+  {
+   "s": "Hana's hobbies are cooking and travelling.",
+   "t": true,
+   "why": "Her key words show cooking and travelling."
+  },
+  {
+   "s": "'Take up' means to stop doing a hobby.",
+   "t": false,
+   "why": "'Take up' means to start a new hobby or activity."
+  },
+  {
+   "s": "The Hiking Club is a good choice for Brooke.",
+   "t": true,
+   "why": "Brooke likes being outdoors and meeting people."
+  },
+  {
+   "s": "A stadium is a quiet place in the mountains.",
+   "t": false,
+   "why": "A stadium is a big place where people watch sports games."
+  },
+  {
+   "s": "'Pick up' can mean to learn something new without formal study.",
+   "t": true,
+   "why": "For example: 'You will pick up skills quickly.'"
+  },
+  {
+   "s": "Key words help you find important information quickly.",
+   "t": true,
+   "why": "Underlining key words makes matching faster and easier."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which photo board belongs to Hana?",
+   "o": [
+    "G",
+    "D",
+    "A"
+   ],
+   "why": "Board G matches all of Hana's information."
+  },
+  {
+   "q": "Who is having karate lessons at the moment?",
+   "o": [
+    "Osama",
+    "Cody",
+    "Kim"
+   ],
+   "why": "Osama's profile says he is having karate lessons."
+  },
+  {
+   "q": "Which word means 'the area behind the main thing in a picture'?",
+   "o": [
+    "background",
+    "valley",
+    "cover"
+   ],
+   "why": "The background is behind the main thing you look at."
+  },
+  {
+   "q": "Which club is best for Majid?",
+   "o": [
+    "Basketball Club",
+    "Hiking Club",
+    "Art Club"
+   ],
+   "why": "He is fit and wants competitions at weekends."
+  },
+  {
+   "q": "Complete: They never ___ when we go hiking.",
+   "o": [
+    "join in",
+    "take up",
+    "find out"
+   ],
+   "why": "'Join in' means to take part in an activity."
+  },
+  {
+   "q": "Complete: I'm looking ___ to the school trip.",
+   "o": [
+    "forward",
+    "up",
+    "out"
+   ],
+   "why": "The phrasal verb is 'look forward to'."
+  },
+  {
+   "q": "Which board matches Kim?",
+   "o": [
+    "C",
+    "B",
+    "H"
+   ],
+   "why": "Only board C matches all of Kim's information."
+  },
+  {
+   "q": "What does 'hang out' mean?",
+   "o": [
+    "spend free time with friends",
+    "start a new hobby",
+    "discover information"
+   ],
+   "why": "We hang out with friends to relax and have fun."
+  },
+  {
+   "q": "Complete: The magazine has a photo of a footballer on the ___.",
+   "o": [
+    "cover",
+    "valley",
+    "stadium"
+   ],
+   "why": "The cover is the front of a magazine."
+  },
+  {
+   "q": "Which phrasal verb means 'discover information'?",
+   "o": [
+    "find out",
+    "get together",
+    "pick up"
+   ],
+   "why": "We find out facts or information."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Osama's photo board",
+   "a": "D",
+   "d": [
+    "A",
+    "C",
+    "G"
+   ]
+  },
+  {
+   "q": "Basil's photo board",
+   "a": "A",
+   "d": [
+    "C",
+    "H",
+    "I"
+   ]
+  },
+  {
+   "q": "Riley's photo board",
+   "a": "H",
+   "d": [
+    "A",
+    "C",
+    "G"
+   ]
+  },
+  {
+   "q": "Cody's photo board",
+   "a": "I",
+   "d": [
+    "B",
+    "D",
+    "H"
+   ]
+  },
+  {
+   "q": "Start a new hobby",
+   "a": "take up",
+   "d": [
+    "find out",
+    "hang out",
+    "join in"
+   ]
+  },
+  {
+   "q": "Take part in an activity",
+   "a": "join in",
+   "d": [
+    "take up",
+    "pick up",
+    "find out"
+   ]
+  },
+  {
+   "q": "Meet as a group",
+   "a": "get together",
+   "d": [
+    "take up",
+    "find out",
+    "pick up"
+   ]
+  },
+  {
+   "q": "Low land between hills",
+   "a": "valley",
+   "d": [
+    "stadium",
+    "cover",
+    "background"
+   ]
+  },
+  {
+   "q": "Full of people and activity",
+   "a": "busy",
+   "d": [
+    "calm",
+    "empty",
+    "lazy"
+   ]
+  },
+  {
+   "q": "Big place for sports games",
+   "a": "stadium",
+   "d": [
+    "valley",
+    "cover",
+    "background"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is a profile?",
+   "o": [
+    "A short text that describes a person",
+    "A list of school rules",
+    "A sports competition",
+    "A type of photo camera"
+   ],
+   "why": "Profiles tell us about people's lives and hobbies."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Cody like?",
+   "o": [
+    "Watching sport",
+    "Playing football",
+    "Cooking",
+    "Hiking"
+   ],
+   "why": "He is keen on sport, but only watching it."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrasal verb completes: I need a racket because I'm going to ___ tennis.",
+   "o": [
+    "take up",
+    "hang out",
+    "join in",
+    "get together"
+   ],
+   "why": "You start a new sport, so you take it up."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which club matches Brooke?",
+   "o": [
+    "Hiking Club",
+    "Basketball Club",
+    "Cooking Club",
+    "Chess Club"
+   ],
+   "why": "Brooke loves the outdoors and meeting people."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Kim plays instruments and makes videos about hairstyles and clothes. Which key words would you underline?",
+   "o": [
+    "instruments, hairstyles, clothes",
+    "lives, makes, about",
+    "he, and, the",
+    "videos, every, very"
+   ],
+   "why": "Key words carry the important information about hobbies."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: 'You will ___ skills quickly in our club.'",
+   "o": [
+    "pick up",
+    "look forward to",
+    "hang out",
+    "get together"
+   ],
+   "why": "'Pick up skills' means learn them easily."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: In the ___ you can see tall mountains.",
+   "o": [
+    "background",
+    "stadium",
+    "cover",
+    "busy"
+   ],
+   "why": "Mountains far behind the main subject are in the background."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Board B shows a guitar. Why doesn't it match Kim?",
+   "o": [
+    "It doesn't show all of Kim's other information",
+    "Kim doesn't like music",
+    "Guitars are not allowed on boards",
+    "Board B has too many photos"
+   ],
+   "why": "In multiple matching, every detail must match."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the Hiking Club right for Brooke but not for Rob?",
+   "o": [
+    "Rob doesn't like nature and wants a creative hobby",
+    "Rob is too young",
+    "Rob already goes hiking",
+    "Brooke doesn't like meeting people"
+   ],
+   "why": "Each person's needs decide the right club."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What does the idea 'identity is like a puzzle' mean?",
+   "o": [
+    "Your identity is made of many different parts",
+    "Your identity is very hard to find",
+    "Puzzles are a popular hobby",
+    "Everyone has the same identity"
+   ],
+   "why": "Family, hobbies and places all fit together to make you."
+  }
+ ]
+}

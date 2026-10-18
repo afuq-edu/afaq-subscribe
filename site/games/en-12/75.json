@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Shop Till You Drop (Vocabulary)",
+ "lesson": "Reading in detail: comprehension and reasons for over-shopping / Guessing vocabulary from context and make/do collocations",
+ "outcomes": [
+  "Read an article in detail and explain why people over-shop",
+  "Guess the meaning of new words from context",
+  "Use collocations with make and do correctly"
+ ],
+ "tf": [
+  {
+   "s": "The women in the article can spend a lot because they have very good jobs.",
+   "t": true,
+   "why": "Yes, one is a corporate lawyer and one is an accountant."
+  },
+  {
+   "s": "Katy feels bad about spending because she thinks it is wrong.",
+   "t": false,
+   "why": "Katy feels she deserves a treat for working hard."
+  },
+  {
+   "s": "Clever marketing by companies is one reason people buy things they don't need.",
+   "t": true,
+   "why": "Correct, marketing persuades people to buy."
+  },
+  {
+   "s": "The writer says shopping is a long-term solution to feeling bad.",
+   "t": false,
+   "why": "It is only a short-term fix that can create debt."
+  },
+  {
+   "s": "A lack of financial self-restraint can lead to bankruptcy.",
+   "t": true,
+   "why": "Yes, spending too much can ruin people financially."
+  },
+  {
+   "s": "We say 'make a mistake', not 'do a mistake'.",
+   "t": true,
+   "why": "Right, mistake collocates with make."
+  },
+  {
+   "s": "We say 'make the washing-up'.",
+   "t": false,
+   "why": "We say do the washing-up."
+  },
+  {
+   "s": "There is a simple rule that tells you when to use make or do.",
+   "t": false,
+   "why": "There is no rule, so we learn these collocations by heart."
+  },
+  {
+   "s": "The words before and after an unknown word can help you guess its meaning.",
+   "t": true,
+   "why": "Yes, these context clues give hints."
+  },
+  {
+   "s": "A 'collocation' is two or more words that often go together.",
+   "t": true,
+   "why": "Correct, like do the shopping."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which verb goes with 'a mistake'?",
+   "o": [
+    "make",
+    "do",
+    "take"
+   ],
+   "why": "We say make a mistake."
+  },
+  {
+   "q": "Which verb goes with 'the shopping'?",
+   "o": [
+    "do",
+    "make",
+    "have"
+   ],
+   "why": "We say do the shopping."
+  },
+  {
+   "q": "Which verb goes with 'a promise'?",
+   "o": [
+    "make",
+    "do",
+    "give"
+   ],
+   "why": "We say make a promise."
+  },
+  {
+   "q": "Which verb goes with 'some exercise'?",
+   "o": [
+    "do",
+    "make",
+    "put"
+   ],
+   "why": "We say do some exercise."
+  },
+  {
+   "q": "What is 'consolation'?",
+   "o": [
+    "comfort when you feel sad",
+    "a type of bank card",
+    "a big shop"
+   ],
+   "why": "People shop for consolation when they feel lonely."
+  },
+  {
+   "q": "Why doesn't Katy feel bad about spending?",
+   "o": [
+    "she thinks she deserves a treat",
+    "she found free clothes",
+    "her friend paid"
+   ],
+   "why": "She feels she earned a treat by working hard."
+  },
+  {
+   "q": "What does 'affluent' mean?",
+   "o": [
+    "rich",
+    "poor",
+    "tired"
+   ],
+   "why": "Affluent people have plenty of money."
+  },
+  {
+   "q": "What problem can over-shopping cause?",
+   "o": [
+    "credit card debt",
+    "better health",
+    "more free time"
+   ],
+   "why": "Spending too much leads to debt."
+  },
+  {
+   "q": "What helps you guess an unknown word?",
+   "o": [
+    "the words around it",
+    "its first letter only",
+    "the page number"
+   ],
+   "why": "Context clues come before and after the word."
+  },
+  {
+   "q": "Why must you learn make/do collocations by heart?",
+   "o": [
+    "there are no rules",
+    "they never change meaning",
+    "they are always the same"
+   ],
+   "why": "Without rules, memory is the key."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "___ a mistake",
+   "a": "make",
+   "d": [
+    "do",
+    "take",
+    "have"
+   ]
+  },
+  {
+   "q": "___ the shopping",
+   "a": "do",
+   "d": [
+    "make",
+    "take",
+    "give"
+   ]
+  },
+  {
+   "q": "Goes with 'make'",
+   "a": "a joke",
+   "d": [
+    "the shopping",
+    "a crossword",
+    "your duty"
+   ]
+  },
+  {
+   "q": "Another phrase with 'make'",
+   "a": "an impression",
+   "d": [
+    "the washing-up",
+    "some exercise",
+    "a favour"
+   ]
+  },
+  {
+   "q": "Goes with 'do'",
+   "a": "a crossword",
+   "d": [
+    "a promise",
+    "a mistake",
+    "dinner"
+   ]
+  },
+  {
+   "q": "Another phrase with 'do'",
+   "a": "your duty",
+   "d": [
+    "an enemy",
+    "a joke",
+    "a promise"
+   ]
+  },
+  {
+   "q": "Comfort when you are sad",
+   "a": "consolation",
+   "d": [
+    "bankruptcy",
+    "bargains",
+    "debt"
+   ]
+  },
+  {
+   "q": "Having lots of money",
+   "a": "affluent",
+   "d": [
+    "afflicted",
+    "bankrupt",
+    "lonely"
+   ]
+  },
+  {
+   "q": "Losing all your money",
+   "a": "bankruptcy",
+   "d": [
+    "consolation",
+    "bargains",
+    "treat"
+   ]
+  },
+  {
+   "q": "Things bought cheaply",
+   "a": "bargains",
+   "d": [
+    "debts",
+    "duties",
+    "mistakes"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What jobs do the two women in the article have?",
+   "o": [
+    "a corporate lawyer and an accountant",
+    "a teacher and a doctor",
+    "a pilot and a driver",
+    "a shopkeeper and a cook"
+   ],
+   "why": "Their good jobs let them spend a lot."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two reasons does the writer give for buying things people don't need?",
+   "o": [
+    "clever marketing and a need for consolation",
+    "cheap food and good weather",
+    "free parking and long holidays",
+    "school and homework"
+   ],
+   "why": "Marketing and feeling lonely or depressed push people to buy."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list contains only 'do' collocations?",
+   "o": [
+    "the washing-up, a favour, some exercise",
+    "a mistake, a promise, a joke",
+    "dinner, an enemy, an impression",
+    "a crossword, a mistake, dinner"
+   ],
+   "why": "These all collocate with do."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list contains only 'make' collocations?",
+   "o": [
+    "a promise, an enemy, dinner",
+    "the shopping, your duty, a crossword",
+    "a favour, the washing-up, a joke",
+    "some exercise, dinner, a promise"
+   ],
+   "why": "These all collocate with make."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: She ___ a promise to her mother.",
+   "o": [
+    "made",
+    "did",
+    "took",
+    "had"
+   ],
+   "why": "Promise goes with make: made a promise."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Please ___ me a favour.",
+   "o": [
+    "do",
+    "make",
+    "give",
+    "take"
+   ],
+   "why": "We say do someone a favour."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'After losing his job, he went shopping for consolation.' What does 'consolation' mean here?",
+   "o": [
+    "comfort",
+    "money",
+    "a gift card",
+    "a holiday"
+   ],
+   "why": "The context (losing his job) shows he needed comfort."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is shopping called a 'short-term fix'?",
+   "o": [
+    "it improves mood briefly but can cause long-term problems like debt",
+    "it fixes problems forever",
+    "it takes a short time to walk to the shops",
+    "it only happens in the morning"
+   ],
+   "why": "The good feeling ends but the debt stays."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What can a lack of financial self-restraint result in?",
+   "o": [
+    "bankruptcy and even divorce",
+    "more savings",
+    "a better job",
+    "free shopping"
+   ],
+   "why": "The article warns about these serious results."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Katy says 'I deserve a treat.' What does this show about her reason for shopping?",
+   "o": [
+    "she uses shopping as a reward for hard work",
+    "she shops because things are cheap",
+    "she does not like shopping",
+    "she shops for other people"
+   ],
+   "why": "She sees shopping as a reward."
+  }
+ ]
+}

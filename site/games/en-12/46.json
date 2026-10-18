@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Unit 2: Work and Travel (Grammar)",
+  "lesson": "Listening 3.2.1, conditional practice and the island puzzle",
+  "outcomes": [
+    "Listen to a travel agent and choose the correct information",
+    "Write first conditional sentences and solve a puzzle with them",
+    "Scan a text about the most visited countries for key information"
+  ],
+  "tf": [
+    { "s": "In the listening, Salima is celebrating her wedding anniversary.", "t": true, "why": "Salima wants a trip for her wedding anniversary." },
+    { "s": "The CN Tower is over 550 metres high.", "t": true, "why": "The listening says the CN Tower is over 550 m." },
+    { "s": "On the EdgeWalk, people walk inside the tower near the restaurant.", "t": false, "why": "The EdgeWalk goes outside, around the top of the tower." },
+    { "s": "In the puzzle, the man has a cat, a dog and some fish.", "t": true, "why": "He must move all three to the island by boat." },
+    { "s": "The man can take everything together safely in one trip.", "t": false, "why": "The dog would eat the cat, or the cat would eat the fish." },
+    { "s": "The first step of the solution is to take the cat and the fish to the island.", "t": true, "why": "That is how the solution starts." },
+    { "s": "The report about the most visited countries was published by the World Tourism Organisation.", "t": true, "why": "The text names the World Tourism Organisation." },
+    { "s": "Scanning means reading every word slowly and carefully.", "t": false, "why": "Scanning means looking quickly for specific information." },
+    { "s": "The Alhambra Palace mentioned in the text is in Italy.", "t": false, "why": "The Alhambra Palace is in Spain." },
+    { "s": "A key word in a question can guide you to the part of the text with the answer.", "t": true, "why": "Key words help you scan to the right place." }
+  ],
+  "boxes": [
+    { "q": "What is Salima celebrating?", "o": ["Her wedding anniversary", "Her birthday", "Her graduation"], "why": "She is planning a trip for her wedding anniversary." },
+    { "q": "How high is the CN Tower?", "o": ["Over 550 m", "About 150 m", "Over 1500 m"], "why": "The CN Tower is over 550 metres high." },
+    { "q": "Where does the EdgeWalk take people?", "o": ["Outside around the top", "Under the sea", "Through a forest"], "why": "The EdgeWalk is outside, around the top of the tower." },
+    { "q": "Which country is the CN Tower in?", "o": ["Canada", "Spain", "France"], "why": "The listening is about a trip to Canada." },
+    { "q": "Which animals could you see on the trip?", "o": ["Eagles, foxes and bears", "Lions and zebras", "Camels and goats"], "why": "The travel agent mentions eagles, foxes and bears." },
+    { "q": "Which Spanish palace does the text mention?", "o": ["The Alhambra Palace", "The CN Tower", "Bahla Fort"], "why": "The Alhambra Palace is in Spain." },
+    { "q": "What does scanning mean?", "o": ["Looking quickly for specific facts", "Reading for the main idea", "Writing a summary"], "why": "We scan to find a particular piece of information." },
+    { "q": "Who published the report on most visited countries?", "o": ["The World Tourism Organisation", "A travel agent", "A hotel manager"], "why": "The report came from the World Tourism Organisation." },
+    { "q": "If you go to Canada, you ___ a great time.", "o": ["'ll have", "had", "having"], "why": "First conditional: will + base verb." },
+    { "q": "In the puzzle, what would the dog do if left with the cat?", "o": ["Eat the cat", "Eat the fish", "Swim away"], "why": "The dog would eat the cat, so they cannot be left alone." }
+  ],
+  "hunt": [
+    { "q": "Height of the CN Tower (over ...)", "a": "550 m", "d": ["150 m", "55 m", "5000 m"] },
+    { "q": "Salima is celebrating her ...", "a": "anniversary", "d": ["birthday", "graduation", "new job"] },
+    { "q": "The walk around the tower top", "a": "EdgeWalk", "d": ["SkyRun", "TopSwim", "CityRide"] },
+    { "q": "Country of the CN Tower", "a": "Canada", "d": ["Spain", "Italy", "France"] },
+    { "q": "Country of the Alhambra Palace", "a": "Spain", "d": ["Canada", "Italy", "Oman"] },
+    { "q": "Who would eat the fish?", "a": "the cat", "d": ["the dog", "the man", "the boat"] },
+    { "q": "Who would eat the cat?", "a": "the dog", "d": ["the fish", "the man", "the eagle"] },
+    { "q": "Taken first: cat and ...", "a": "fish", "d": ["dog", "man", "boat"] },
+    { "q": "Reading fast for specific facts", "a": "scanning", "d": ["skimming", "summarising", "spelling"] },
+    { "q": "One of the most visited countries", "a": "France", "d": ["Oman", "Canada", "Yemen"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Who does Salima talk to in Listening 3.2.1?", "o": ["A travel agent", "A chef", "A hotel manager", "A pilot"], "why": "She asks a travel agent to help plan her trip." },
+    { "lv": "التذكر", "q": "What does the man have with him in the puzzle?", "o": ["A cat, a dog and some fish", "A cat, a horse and a bird", "Two dogs and a cat", "A goat and some fish"], "why": "He must move a cat, a dog and fish to the island." },
+    { "lv": "التذكر", "q": "Which countries are among the most visited in the text?", "o": ["France, Spain and Italy", "Oman, Yemen and Qatar", "Canada, Peru and Chile", "Kenya, Egypt and Sudan"], "why": "The text names France, Spain and Italy." },
+    { "lv": "التذكر", "q": "What is a key word?", "o": ["A word in the question that leads you to the answer in the text", "The longest word in a text", "A word you must learn by heart", "The title of the text"], "why": "Key words help you find the answer quickly." },
+    { "lv": "التطبيق", "q": "Make a first conditional: visit Dubai / see the tallest building.", "o": ["If you visit Dubai, you'll see the tallest building in the world.", "If you will visit Dubai, you see the tallest building.", "If you visited Dubai, you see the tallest building.", "You visit Dubai if you'll see the tallest building."], "why": "If + present simple, will + base verb." },
+    { "lv": "التطبيق", "q": "You need to find the name of a palace in a long text. What should you do?", "o": ["Scan for the key word 'palace'", "Read every word slowly twice", "Read only the title", "Count the paragraphs"], "why": "Scanning for a key word finds specific facts quickly." },
+    { "lv": "التطبيق", "q": "Choose the correct verb: 'If you ___ to see wild animals, you should take a boat trip.'", "o": ["want", "will want", "wanted", "wanting"], "why": "The if clause uses the present simple: want." },
+    { "lv": "التحليل", "q": "Why can't the man take the cat, dog and fish together?", "o": ["The dog would eat the cat, or the cat would eat the fish", "The fish cannot go in a boat", "The island is too far", "The dog cannot swim"], "why": "Some animals cannot be left together safely." },
+    { "lv": "التحليل", "q": "After taking the cat and fish across, why does the man bring the cat back?", "o": ["So the cat is not left alone with the fish", "Because the cat is hungry", "Because the dog wants to swim", "Because the boat is broken"], "why": "Bringing the cat back keeps the fish safe while he fetches the dog." },
+    { "lv": "التحليل", "q": "Why should you read the options before you listen?", "o": ["You know what information to listen for", "You can skip the listening", "The options tell you every answer", "It makes the recording shorter"], "why": "Reading first helps you focus on the key information." }
+  ]
+}

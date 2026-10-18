@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 1: Free-time fun",
+ "lesson": "Unit 1 – Lesson 6: Culture and Project – Sports and hobbies around the world",
+ "outcomes": [
+  "I can name popular sports in New Zealand, Oman and Canada.",
+  "I can compare free-time activities in Oman with other countries.",
+  "I can write sentences about free-time activities in Oman."
+ ],
+ "tf": [
+  {
+   "s": "Rugby is popular in New Zealand.",
+   "t": true,
+   "why": "Yes! Children there play Rippa Rugby."
+  },
+  {
+   "s": "To go snorkelling, you need to be good at swimming.",
+   "t": true,
+   "why": "Correct! Snorkelling is in the water."
+  },
+  {
+   "s": "In cross-country skiing, you can ski uphill too.",
+   "t": true,
+   "why": "Right! That's different from downhill skiing."
+  },
+  {
+   "s": "People go windsurfing when there is no wind.",
+   "t": false,
+   "why": "Windsurfing needs wind."
+  },
+  {
+   "s": "Cross-country skiing is popular in Oman.",
+   "t": false,
+   "why": "Cross-country skiing is popular in Canada."
+  },
+  {
+   "s": "Rugby and cross-country skiing are both popular in Oman.",
+   "t": false,
+   "why": "Rugby is popular in New Zealand and cross-country skiing in Canada."
+  },
+  {
+   "s": "People go windsurfing at Oman's beautiful beaches.",
+   "t": true,
+   "why": "Correct! Oman's beaches are great for windsurfing."
+  },
+  {
+   "s": "\"Dangerous\" means very safe.",
+   "t": false,
+   "why": "Dangerous means it can hurt you, so be careful."
+  },
+  {
+   "s": "\"Popular\" means many people like it.",
+   "t": true,
+   "why": "Yes! A popular activity is liked by many people."
+  },
+  {
+   "s": "A good project page tells when, where and what people have to do.",
+   "t": true,
+   "why": "Great! These three details help readers."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which sport is popular in New Zealand?",
+   "o": [
+    "rugby",
+    "windsurfing",
+    "skiing"
+   ],
+   "why": "New Zealand loves rugby."
+  },
+  {
+   "q": "Where is cross-country skiing popular?",
+   "o": [
+    "Canada",
+    "Oman",
+    "New Zealand"
+   ],
+   "why": "Canada has lots of snow."
+  },
+  {
+   "q": "To go snorkelling, you need to be good at ___.",
+   "o": [
+    "swimming",
+    "running",
+    "singing"
+   ],
+   "why": "Snorkelling is in the water."
+  },
+  {
+   "q": "Where do people go windsurfing in Oman?",
+   "o": [
+    "at the beaches",
+    "in the mountains",
+    "in the snow"
+   ],
+   "why": "Windsurfing happens at the beach."
+  },
+  {
+   "q": "Windsurfing needs a ___ day.",
+   "o": [
+    "windy",
+    "snowy",
+    "quiet"
+   ],
+   "why": "Wind pushes the sail."
+  },
+  {
+   "q": "Cross-country skiing needs ___ weather.",
+   "o": [
+    "snowy",
+    "hot",
+    "windy"
+   ],
+   "why": "You ski on snow."
+  },
+  {
+   "q": "In Oman, hiking is very ___.",
+   "o": [
+    "popular",
+    "snowy",
+    "windy"
+   ],
+   "why": "Lots of people enjoy hiking."
+  },
+  {
+   "q": "It can be ___, so only go with your family.",
+   "o": [
+    "dangerous",
+    "popular",
+    "fun"
+   ],
+   "why": "Dangerous means we must be careful."
+  },
+  {
+   "q": "Swimming helps you keep ___.",
+   "o": [
+    "fit",
+    "fast",
+    "funny"
+   ],
+   "why": "Keep fit means stay healthy."
+  },
+  {
+   "q": "What do you give other groups after their presentation?",
+   "o": [
+    "two stars and a wish",
+    "a ball",
+    "a prize"
+   ],
+   "why": "Two stars and a wish is kind feedback."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Popular in New Zealand",
+   "a": "rugby",
+   "d": [
+    "windsurfing",
+    "skiing",
+    "snorkelling"
+   ]
+  },
+  {
+   "q": "Popular in Canada",
+   "a": "skiing",
+   "d": [
+    "rugby",
+    "windsurfing",
+    "snorkelling"
+   ]
+  },
+  {
+   "q": "Sport on water with a sail",
+   "a": "windsurfing",
+   "d": [
+    "rugby",
+    "skiing",
+    "hiking"
+   ]
+  },
+  {
+   "q": "Swim and look under water",
+   "a": "snorkelling",
+   "d": [
+    "rugby",
+    "skiing",
+    "hiking"
+   ]
+  },
+  {
+   "q": "Lots of people like it.",
+   "a": "popular",
+   "d": [
+    "dangerous",
+    "snowy",
+    "windy"
+   ]
+  },
+  {
+   "q": "It can hurt you.",
+   "a": "dangerous",
+   "d": [
+    "popular",
+    "fit",
+    "windy"
+   ]
+  },
+  {
+   "q": "Weather for windsurfing",
+   "a": "windy",
+   "d": [
+    "snowy",
+    "rainy",
+    "foggy"
+   ]
+  },
+  {
+   "q": "Weather for skiing",
+   "a": "snowy",
+   "d": [
+    "windy",
+    "sunny",
+    "hot"
+   ]
+  },
+  {
+   "q": "Rippa Rugby country",
+   "a": "New Zealand",
+   "d": [
+    "Oman",
+    "Canada",
+    "Egypt"
+   ]
+  },
+  {
+   "q": "Stay healthy = keep ...",
+   "a": "fit",
+   "d": [
+    "fast",
+    "funny",
+    "busy"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which country is famous for Rippa Rugby?",
+   "o": [
+    "New Zealand",
+    "Oman",
+    "Canada",
+    "Japan"
+   ],
+   "why": "Children in New Zealand play Rippa Rugby."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you need to be good at to go snorkelling?",
+   "o": [
+    "swimming",
+    "skiing",
+    "running",
+    "singing"
+   ],
+   "why": "Snorkelling happens in water."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How is cross-country skiing different from downhill skiing?",
+   "o": [
+    "You can ski uphill too.",
+    "You ski on sand.",
+    "You don't need snow.",
+    "You play it in a team."
+   ],
+   "why": "Cross-country skiers can go uphill."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence uses the project language?",
+   "o": [
+    "In Oman, hiking is very popular.",
+    "In Oman, hiking is very snowy.",
+    "In Oman, hiking is very uphill.",
+    "In Oman, hiking is very wheels."
+   ],
+   "why": "In Oman, … is very popular."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence about an activity in Oman makes sense?",
+   "o": [
+    "People go hiking in the mountains.",
+    "People go skiing in the desert.",
+    "People go windsurfing on snow.",
+    "People go snorkelling in the mountains."
+   ],
+   "why": "Hiking happens in the mountains."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good safety sentence?",
+   "o": [
+    "It can be dangerous, so only go with your family.",
+    "It's dangerous, so go alone.",
+    "It's popular, so it's never dangerous.",
+    "It's windy, so don't tell anyone."
+   ],
+   "why": "Going with family keeps you safe."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which three things should each mini-book page tell readers?",
+   "o": [
+    "when, where and what people have to do",
+    "the price, the shop and the colour",
+    "your name, age and class",
+    "the weather, the time and the day"
+   ],
+   "why": "These details explain the activity."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How are rugby and cross-country skiing the same?",
+   "o": [
+    "They both keep you fit.",
+    "They both need snow.",
+    "They are both popular in Oman.",
+    "They both happen in water."
+   ],
+   "why": "Both sports are good exercise."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence correctly compares Oman and Canada?",
+   "o": [
+    "In Oman people go snorkelling, but in Canada people go cross-country skiing.",
+    "In Oman people go cross-country skiing, but in Canada people go snorkelling.",
+    "In Canada people play Rippa Rugby, but in Oman people ski.",
+    "In Oman and Canada people only go skiing."
+   ],
+   "why": "Snorkelling is in Oman; cross-country skiing is in Canada."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should you point to the pictures when you present?",
+   "o": [
+    "to help listeners understand and follow",
+    "to finish faster",
+    "to hide the words",
+    "to make the book longer"
+   ],
+   "why": "Pictures help listeners follow."
+  }
+ ]
+}

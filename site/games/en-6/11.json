@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 1: Free-time fun",
+ "lesson": "Unit 1 – Lesson 9: Writing – An interview",
+ "outcomes": [
+  "I can name the features of a good interview.",
+  "I can write questions with different question words.",
+  "I can check my interview for capital letters and question marks."
+ ],
+ "tf": [
+  {
+   "s": "A good interview uses lots of different question words.",
+   "t": true,
+   "why": "Yes! What, when, where, who, how and why."
+  },
+  {
+   "s": "Hashim's biggest model is a model of a ship.",
+   "t": true,
+   "why": "Correct! It is nearly one metre long."
+  },
+  {
+   "s": "Questions about \"the best\" or \"the biggest\" make interviews boring.",
+   "t": false,
+   "why": "They make the answers more interesting."
+  },
+  {
+   "s": "Every question needs a question mark at the end.",
+   "t": true,
+   "why": "Right! Questions end with ?"
+  },
+  {
+   "s": "\"what do you like swimming?\" is a correct question.",
+   "t": false,
+   "why": "It should be \"Why do you like swimming?\" with a capital letter."
+  },
+  {
+   "s": "\"Who helps you?\" can have the answer \"Sometimes my dad.\"",
+   "t": true,
+   "why": "Yes! Who asks about a person."
+  },
+  {
+   "s": "We use \"Where\" to ask about time.",
+   "t": false,
+   "why": "Where asks about places; When asks about time."
+  },
+  {
+   "s": "An interview has questions and answers.",
+   "t": true,
+   "why": "Great! That's its structure."
+  },
+  {
+   "s": "A question starts with a small letter.",
+   "t": false,
+   "why": "Questions start with a capital letter."
+  },
+  {
+   "s": "\"When did you start this hobby?\" can have the answer \"When I was six.\"",
+   "t": true,
+   "why": "Yes, When asks about time."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "___ did you start this hobby? – When I was six.",
+   "o": [
+    "When",
+    "Where",
+    "Who"
+   ],
+   "why": "When asks about time."
+  },
+  {
+   "q": "___ helps you? – Sometimes my dad.",
+   "o": [
+    "Who",
+    "Why",
+    "What"
+   ],
+   "why": "Who asks about a person."
+  },
+  {
+   "q": "___ do you play? – In the park.",
+   "o": [
+    "Where",
+    "When",
+    "Why"
+   ],
+   "why": "Where asks about places."
+  },
+  {
+   "q": "___ do you like swimming? – Because it's fun.",
+   "o": [
+    "Why",
+    "Who",
+    "Where"
+   ],
+   "why": "Why asks for a reason."
+  },
+  {
+   "q": "A good interview has lots of different ___.",
+   "o": [
+    "question words",
+    "pictures",
+    "rhymes"
+   ],
+   "why": "Different question words make a good interview."
+  },
+  {
+   "q": "How long is Hashim's ship model?",
+   "o": [
+    "nearly one metre",
+    "ten metres",
+    "one centimetre"
+   ],
+   "why": "It's nearly one metre long."
+  },
+  {
+   "q": "A question ends with a ___.",
+   "o": [
+    "question mark",
+    "full stop",
+    "comma"
+   ],
+   "why": "Questions end with ?"
+  },
+  {
+   "q": "In an interview, who asks the questions?",
+   "o": [
+    "the interviewer",
+    "the reader",
+    "the printer"
+   ],
+   "why": "The interviewer asks the questions."
+  },
+  {
+   "q": "\"I play every Saturday.\" Which question fits?",
+   "o": [
+    "When do you play?",
+    "Who do you play?",
+    "Why do you play?"
+   ],
+   "why": "Every Saturday is a time."
+  },
+  {
+   "q": "Which word asks about a way of doing something?",
+   "o": [
+    "How",
+    "Who",
+    "Where"
+   ],
+   "why": "How asks about the way."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Asks about a person",
+   "a": "Who",
+   "d": [
+    "Where",
+    "When",
+    "Why"
+   ]
+  },
+  {
+   "q": "Asks about a place",
+   "a": "Where",
+   "d": [
+    "Who",
+    "When",
+    "Why"
+   ]
+  },
+  {
+   "q": "Asks about time",
+   "a": "When",
+   "d": [
+    "Who",
+    "Where",
+    "Why"
+   ]
+  },
+  {
+   "q": "Asks for a reason",
+   "a": "Why",
+   "d": [
+    "Who",
+    "Where",
+    "When"
+   ]
+  },
+  {
+   "q": "Asks about a way",
+   "a": "How",
+   "d": [
+    "Who",
+    "Where",
+    "When"
+   ]
+  },
+  {
+   "q": "Hashim's hobby: making ...",
+   "a": "models",
+   "d": [
+    "videos",
+    "cards",
+    "puzzles"
+   ]
+  },
+  {
+   "q": "Hashim's biggest model",
+   "a": "a ship",
+   "d": [
+    "a car",
+    "a plane",
+    "a house"
+   ]
+  },
+  {
+   "q": "Ends every question",
+   "a": "question mark",
+   "d": [
+    "full stop",
+    "comma",
+    "capital letter"
+   ]
+  },
+  {
+   "q": "Starts every question",
+   "a": "capital letter",
+   "d": [
+    "question mark",
+    "comma",
+    "full stop"
+   ]
+  },
+  {
+   "q": "Interview = questions and ...",
+   "a": "answers",
+   "d": [
+    "pictures",
+    "songs",
+    "titles"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is Hashim's hobby?",
+   "o": [
+    "making models",
+    "making videos",
+    "collecting cards",
+    "doing photography"
+   ],
+   "why": "Hashim's interview is about making models."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list has only question words?",
+   "o": [
+    "what, when, where, who, how, why",
+    "what, and, but, who, how, why",
+    "the, best, most, big, how, why",
+    "is, are, do, does, can, could"
+   ],
+   "why": "These words start questions."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are two features of a good interview?",
+   "o": [
+    "lots of question words and questions about the best or biggest",
+    "no question marks and short answers",
+    "only yes/no questions",
+    "one question word only"
+   ],
+   "why": "Variety and interesting questions make a good interview."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the structure of an interview?",
+   "o": [
+    "introduction, questions, answers",
+    "title, poem, pictures",
+    "only answers",
+    "pictures and speech bubbles"
+   ],
+   "why": "An interview has an introduction, questions and answers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which question with Why is good for an interview about swimming?",
+   "o": [
+    "Why do you like swimming?",
+    "Why you like swimming?",
+    "why do you like swimming",
+    "Why does you like swimming?"
+   ],
+   "why": "Capital letter, correct form and a question mark."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which question asks about \"the best\"?",
+   "o": [
+    "What is the best match you've played?",
+    "Do you play football?",
+    "Where is the match?",
+    "Who is your coach?"
+   ],
+   "why": "It asks about the best thing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which question is written correctly?",
+   "o": [
+    "Who helps you make videos?",
+    "who helps you make videos?",
+    "Who helps you make videos.",
+    "who helps you make videos"
+   ],
+   "why": "Capital letter at the start, question mark at the end."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is \"What's the best model you've made?\" a good question?",
+   "o": [
+    "It asks about the best thing, so the answer is interesting.",
+    "It has a yes/no answer.",
+    "It is very short.",
+    "It doesn't need an answer."
+   ],
+   "why": "Questions about the best give interesting answers."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which question is the most interesting for Hashim?",
+   "o": [
+    "What is the most difficult model you have made?",
+    "Do you like wood?",
+    "Is it a model?",
+    "Are you Hashim?"
+   ],
+   "why": "It invites a long, interesting answer."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"Sometimes my dad.\" Which question gives this answer?",
+   "o": [
+    "Who helps you?",
+    "Where do you work?",
+    "Why do you like it?",
+    "When did you start?"
+   ],
+   "why": "The answer is a person, so the question uses Who."
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Learning Club 2",
+  "lesson": "Learning Club 2 – Lesson 1: Language booster 2",
+  "outcomes": [
+    "I can count body parts and say There is … / There are …",
+    "I can ask and answer Is there …? Are there …?",
+    "I can write about a funny monster."
+  ],
+  "tf": [
+    { "s": "We say There is for one thing.", "t": true, "why": "Yes! There is a head." },
+    { "s": "We say There are for more than one.", "t": true, "why": "Great! There are two arms." },
+    { "s": "There is two arms.", "t": false, "why": "Two arms is more than one: There are two arms." },
+    { "s": "There are a head.", "t": false, "why": "One head: There is a head." },
+    { "s": "Are there three legs? Yes, there are.", "t": true, "why": "Well done! That is a short answer." },
+    { "s": "Is there one arm? No, there isn't.", "t": true, "why": "Yes! No, there isn't is the short answer." },
+    { "s": "Is there one arm? Yes, there are.", "t": false, "why": "With Is there we answer Yes, there is." },
+    { "s": "There are seven heads is about one head.", "t": false, "why": "Seven heads is more than one." },
+    { "s": "Head, feet, arm, hand and leg are body words.", "t": true, "why": "Great! They are parts of the body." },
+    { "s": "One foot, two feets.", "t": false, "why": "We say one foot, two feet." }
+  ],
+  "boxes": [
+    { "q": "There ___ a head.", "o": ["is", "are", "am"], "why": "One head: There is." },
+    { "q": "There ___ two arms.", "o": ["are", "is", "am"], "why": "Two arms: There are." },
+    { "q": "Are there three legs? (yes)", "o": ["Yes, there are.", "Yes, there is.", "Yes, I am."], "why": "Are there …? Yes, there are." },
+    { "q": "Is there one arm? (no)", "o": ["No, there isn't.", "No, there aren't.", "No, I'm not."], "why": "Is there …? No, there isn't." },
+    { "q": "When do we say There are?", "o": ["for more than one", "for one", "for colours"], "why": "There are is for more than one." },
+    { "q": "Re-order: are / There / legs / three", "o": ["There are three legs.", "Three there are legs.", "Legs are there three."], "why": "There are three legs." },
+    { "q": "The robot has got one head.", "o": ["There is one head.", "There are one head.", "There is one heads."], "why": "One head: There is one head." },
+    { "q": "There are seven feet. (8 in the picture) Correct it!", "o": ["No! There are eight feet.", "Yes, there are.", "There is eight feet."], "why": "The picture shows eight feet." },
+    { "q": "Ask about heads:", "o": ["Are there two heads?", "Is there two heads?", "There two heads?"], "why": "Two heads: Are there …?" },
+    { "q": "Which is a body word?", "o": ["hand", "there", "seven"], "why": "A hand is part of the body." }
+  ],
+  "hunt": [
+    { "q": "There ___ one nose.", "a": "is", "d": ["are", "am", "be"] },
+    { "q": "There ___ four legs.", "a": "are", "d": ["is", "am", "be"] },
+    { "q": "There ___ two heads.", "a": "are", "d": ["is", "am", "isn't"] },
+    { "q": "Are there two arms? Yes, there…", "a": "are", "d": ["is", "am", "isn't"] },
+    { "q": "Is there a tail? No, there…", "a": "isn't", "d": ["aren't", "are", "am"] },
+    { "q": "Are there ten legs? No, there…", "a": "aren't", "d": ["isn't", "is", "am"] },
+    { "q": "One foot, two…", "a": "feet", "d": ["foots", "feets", "foot"] },
+    { "q": "We hold a pencil with it.", "a": "hand", "d": ["leg", "head", "feet"] },
+    { "q": "We walk with them.", "a": "legs", "d": ["arms", "hands", "heads"] },
+    { "q": "6 legs: There are ___ legs.", "a": "six", "d": ["seven", "four", "eight"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Which sentence is for one thing?", "o": ["There is a head.", "There are two arms.", "There are seven heads.", "There are four legs."], "why": "There is is for one." },
+    { "lv": "التذكر", "q": "Which is the right answer? Are there three legs?", "o": ["Yes, there are.", "Yes, there is.", "Yes, it is.", "Yes, I am."], "why": "Are there …? Yes, there are." },
+    { "lv": "التذكر", "q": "Which word is a body word?", "o": ["leg", "there", "four", "funny"], "why": "A leg is part of the body." },
+    { "lv": "التذكر", "q": "Which question is for one thing?", "o": ["Is there one arm?", "Are there two arms?", "Are there four legs?", "Are there three heads?"], "why": "Is there …? is for one." },
+    { "lv": "التطبيق", "q": "A monster has 4 arms. Describe it.", "o": ["There are four arms.", "There is four arms.", "There are four arm.", "There is a arms."], "why": "Four arms: There are four arms." },
+    { "lv": "التطبيق", "q": "Is there one arm on the robot? (It has four arms.)", "o": ["No, there isn't. There are four arms.", "Yes, there is.", "No, there aren't. There is one arm.", "Yes, there are four."], "why": "It has four arms, not one." },
+    { "lv": "التطبيق", "q": "Write about your monster: one head.", "o": ["There is one head.", "There are one head.", "There is one heads.", "Is there one head."], "why": "One head: There is one head." },
+    { "lv": "التحليل", "q": "Which sentence is NOT right?", "o": ["There is three legs.", "There is a head.", "There are three legs.", "There are two hands."], "why": "Three legs is more than one: There are." },
+    { "lv": "التحليل", "q": "A robot has 2 heads and 2 more heads. Which is right?", "o": ["There are four heads.", "There is four heads.", "There are two heads.", "There is one head."], "why": "Two and two make four: There are four heads." },
+    { "lv": "التحليل", "q": "Why do we say There are two arms, not There is two arms?", "o": ["Two arms is more than one.", "Arms is a colour.", "Two is a small number.", "We always say are."], "why": "There are is for more than one." }
+  ]
+}

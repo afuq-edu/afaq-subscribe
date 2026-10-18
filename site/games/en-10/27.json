@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "4",
+ "lesson": "Unit 4: Civilisation – Project: An Archaeological Site in Oman",
+ "outcomes": [
+  "Name archaeological sites in Oman.",
+  "Choose reliable sources and check facts.",
+  "Make a clear leaflet with my team and review others' work."
+ ],
+ "tf": [
+  {
+   "s": "An archaeological site is a place where evidence of the past is found.",
+   "t": true,
+   "why": "Yes, archaeologists study these places."
+  },
+  {
+   "s": "Al Baleed Archaeological Park is an archaeological site in Oman.",
+   "t": true,
+   "why": "Correct, it was one of the sites in the lesson."
+  },
+  {
+   "s": "A leaflet gives short information about a place.",
+   "t": true,
+   "why": "Right, leaflets are short and clear."
+  },
+  {
+   "s": "A travel blog is always a reliable source.",
+   "t": false,
+   "why": "Not always; we must check the source."
+  },
+  {
+   "s": "A reliable source is accurate and trustworthy.",
+   "t": true,
+   "why": "Well done, we can trust its information."
+  },
+  {
+   "s": "'The fort were built in the 17th century.' is correct.",
+   "t": false,
+   "why": "'The fort' is singular, so we say 'was built'."
+  },
+  {
+   "s": "'When was it built?' is a good research question about a site.",
+   "t": true,
+   "why": "Yes, it asks for a key fact."
+  },
+  {
+   "s": "Teamwork means everyone works alone without sharing.",
+   "t": false,
+   "why": "Teamwork means sharing roles and working together."
+  },
+  {
+   "s": "A leaflet about a site can include its name, location, history and importance.",
+   "t": true,
+   "why": "Correct, these are the key details."
+  },
+  {
+   "s": "When we review another team's leaflet, we should only say bad things.",
+   "t": false,
+   "why": "Good reviews include strengths and polite suggestions."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where is evidence of the past found?",
+   "o": [
+    "at an archaeological site",
+    "at a new shopping mall",
+    "at a football stadium"
+   ],
+   "why": "These sites hold clues about the past."
+  },
+  {
+   "q": "A ___ gives short information about a place.",
+   "o": [
+    "leaflet",
+    "bridge",
+    "novel"
+   ],
+   "why": "Leaflets are short and clear."
+  },
+  {
+   "q": "The fort ___ built in the 17th century.",
+   "o": [
+    "was",
+    "were",
+    "are"
+   ],
+   "why": "Singular subject: 'was'."
+  },
+  {
+   "q": "Is a travel blog always reliable?",
+   "o": [
+    "Not always; we must check it.",
+    "Yes, always.",
+    "Blogs are never online."
+   ],
+   "why": "Always check who wrote it."
+  },
+  {
+   "q": "A reliable source is…",
+   "o": [
+    "accurate and trustworthy",
+    "old and torn",
+    "short and funny"
+   ],
+   "why": "We can trust reliable sources."
+  },
+  {
+   "q": "Which is a good research question?",
+   "o": [
+    "Who discovered it?",
+    "What is your favourite colour?",
+    "Are you hungry?"
+   ],
+   "why": "It asks about the site's history."
+  },
+  {
+   "q": "We ___ other groups' leaflets.",
+   "o": [
+    "review",
+    "ignore",
+    "throw away"
+   ],
+   "why": "Reviewing helps everyone improve."
+  },
+  {
+   "q": "Which is a positive comment?",
+   "o": [
+    "The design is clear.",
+    "This is boring.",
+    "I did not read it."
+   ],
+   "why": "Positive comments name a strength."
+  },
+  {
+   "q": "Which is an archaeological site in Oman?",
+   "o": [
+    "Al Baleed Archaeological Park",
+    "the Eiffel Tower",
+    "the Aviva Stadium"
+   ],
+   "why": "Al Baleed is in Oman."
+  },
+  {
+   "q": "Something that is true and can be checked is a…",
+   "o": [
+    "fact",
+    "opinion",
+    "guess"
+   ],
+   "why": "Facts can be proved."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Place with evidence of the past",
+   "a": "archaeological site",
+   "d": [
+    "shopping mall",
+    "car park",
+    "stadium"
+   ]
+  },
+  {
+   "q": "Short printed information",
+   "a": "leaflet",
+   "d": [
+    "novel",
+    "dictionary",
+    "diary"
+   ]
+  },
+  {
+   "q": "Accurate and trustworthy",
+   "a": "reliable",
+   "d": [
+    "boring",
+    "ancient",
+    "colourful"
+   ]
+  },
+  {
+   "q": "Where information comes from",
+   "a": "source",
+   "d": [
+    "leaflet",
+    "design",
+    "team"
+   ]
+  },
+  {
+   "q": "True and can be checked",
+   "a": "fact",
+   "d": [
+    "opinion",
+    "guess",
+    "dream"
+   ]
+  },
+  {
+   "q": "Proof from the past",
+   "a": "evidence",
+   "d": [
+    "opinion",
+    "rumour",
+    "guess"
+   ]
+  },
+  {
+   "q": "The fort ___ built",
+   "a": "was",
+   "d": [
+    "were",
+    "are",
+    "be"
+   ]
+  },
+  {
+   "q": "Archaeological site in Oman",
+   "a": "Al Baleed",
+   "d": [
+    "Aviva",
+    "Mineirão",
+    "ArenA"
+   ]
+  },
+  {
+   "q": "Working well together",
+   "a": "teamwork",
+   "d": [
+    "homework",
+    "housework",
+    "artwork"
+   ]
+  },
+  {
+   "q": "Read and comment on work",
+   "a": "review",
+   "d": [
+    "ignore",
+    "copy",
+    "delete"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is an archaeological site?",
+   "o": [
+    "a place where evidence of the past is found",
+    "a place where new cars are sold",
+    "a modern power plant",
+    "a sports club"
+   ],
+   "why": "These sites show how people lived long ago."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is an archaeological site in Oman named in the lesson?",
+   "o": [
+    "Bibi Miriam's Shrine",
+    "the Aviva Stadium",
+    "the Mir'aah project",
+    "the Estadio Mineirão"
+   ],
+   "why": "Bibi Miriam's Shrine was one of the Omani sites."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What information goes in the leaflet?",
+   "o": [
+    "the site's name, location, history and importance",
+    "only the team members' names",
+    "a formal email greeting",
+    "the weather forecast"
+   ],
+   "why": "These details tell readers about the site."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'reliable' mean?",
+   "o": [
+    "accurate and trustworthy",
+    "very old",
+    "short",
+    "expensive"
+   ],
+   "why": "Reliable sources can be trusted."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The fort ___ in the 17th century.",
+   "o": [
+    "was built",
+    "were built",
+    "is build",
+    "was build"
+   ],
+   "why": "Singular past passive: was + built."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your team is researching a site. Which pair of research questions is best?",
+   "o": [
+    "When was it built? Who discovered it?",
+    "Do you like pizza? Are you tired?",
+    "What time is it? Where is my bag?",
+    "Is it raining? Who is your teacher?"
+   ],
+   "why": "Good questions ask about the site's history."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which comment is a helpful review of another team's leaflet?",
+   "o": [
+    "The design is clear, but you could add the site's location.",
+    "It is bad.",
+    "I don't care.",
+    "Start again."
+   ],
+   "why": "Give a strength and a suggestion."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why must you check the sources you use?",
+   "o": [
+    "To make sure the information is correct.",
+    "To make the leaflet longer.",
+    "To copy more pictures.",
+    "To finish faster without reading."
+   ],
+   "why": "Unreliable sources can contain mistakes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which source is most likely to be reliable for facts about a site?",
+   "o": [
+    "an official website about the site",
+    "a random comment online",
+    "a rumour from a friend",
+    "a funny video with no source"
+   ],
+   "why": "Official sources are usually checked and accurate."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to reflect on your teamwork after the project?",
+   "o": [
+    "It helps you find what to improve next time.",
+    "It makes the project longer.",
+    "It means you do not need to work.",
+    "It is only for the teacher."
+   ],
+   "why": "Reflection helps you grow."
+  }
+ ]
+}

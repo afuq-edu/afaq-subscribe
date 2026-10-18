@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Unit 3 – Consolidation 1: Body grammar and the song",
+ "outcomes": [
+  "I can read I've got sentences and colour a robot.",
+  "I can match movement verbs with the right body parts.",
+  "I can complete the song \"Move your body\"."
+ ],
+ "tf": [
+  {
+   "s": "\"I've got a blue tummy\" means the tummy is blue.",
+   "t": true,
+   "why": "The colour comes before the body part."
+  },
+  {
+   "s": "\"I've got green arms and pink hands\" means the hands are green.",
+   "t": false,
+   "why": "The arms are green and the hands are pink."
+  },
+  {
+   "s": "\"Clap your hands\" is sensible.",
+   "t": true,
+   "why": "We can clap our hands."
+  },
+  {
+   "s": "\"Clap your toes\" is sensible.",
+   "t": false,
+   "why": "It is silly; we clap our hands."
+  },
+  {
+   "s": "\"Stamp your feet\" is sensible.",
+   "t": true,
+   "why": "We stamp our feet."
+  },
+  {
+   "s": "We bend our knees.",
+   "t": true,
+   "why": "Bend your knees!"
+  },
+  {
+   "s": "\"Stretch your arms\" is silly.",
+   "t": false,
+   "why": "It is sensible; we can stretch our arms."
+  },
+  {
+   "s": "In the song we sing \"Stamp your feet!\"",
+   "t": true,
+   "why": "The song says Stamp your feet!"
+  },
+  {
+   "s": "\"I've got purple legs\" tells us the colour of the legs.",
+   "t": true,
+   "why": "The legs are purple."
+  },
+  {
+   "s": "We say \"I've got a orange knees.\"",
+   "t": false,
+   "why": "We say: I've got orange knees."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "I've got a blue tummy. The tummy is ...",
+   "o": [
+    "blue",
+    "green",
+    "pink"
+   ],
+   "why": "The sentence says blue."
+  },
+  {
+   "q": "I've got green arms. The arms are ...",
+   "o": [
+    "green",
+    "pink",
+    "blue"
+   ],
+   "why": "The sentence says green arms."
+  },
+  {
+   "q": "Clap your ___.",
+   "o": [
+    "hands",
+    "toes",
+    "knees"
+   ],
+   "why": "We clap our hands."
+  },
+  {
+   "q": "Bend your ___.",
+   "o": [
+    "knees",
+    "hands",
+    "head"
+   ],
+   "why": "We bend our knees."
+  },
+  {
+   "q": "Stretch your ___.",
+   "o": [
+    "arms",
+    "toes",
+    "tummy"
+   ],
+   "why": "We stretch our arms."
+  },
+  {
+   "q": "Stamp your (toes / feet)!",
+   "o": [
+    "feet",
+    "toes",
+    "hands"
+   ],
+   "why": "The song says Stamp your feet!"
+  },
+  {
+   "q": "Is \"clap your toes\" sensible?",
+   "o": [
+    "No",
+    "Yes",
+    "Always"
+   ],
+   "why": "It is silly; we clap our hands."
+  },
+  {
+   "q": "Match \"bend\" with ...",
+   "o": [
+    "knees",
+    "nose",
+    "ears"
+   ],
+   "why": "We bend our knees."
+  },
+  {
+   "q": "Which is a sensible instruction?",
+   "o": [
+    "Stretch your arms!",
+    "Clap your feet!",
+    "Stamp your head!"
+   ],
+   "why": "We can stretch our arms."
+  },
+  {
+   "q": "I've got purple legs and orange knees. The knees are ...",
+   "o": [
+    "orange",
+    "purple",
+    "blue"
+   ],
+   "why": "The knees are orange."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Clap your ...",
+   "a": "hands",
+   "d": [
+    "toes",
+    "knees",
+    "nose"
+   ]
+  },
+  {
+   "q": "Bend your ...",
+   "a": "knees",
+   "d": [
+    "hands",
+    "nose",
+    "ears"
+   ]
+  },
+  {
+   "q": "Stretch your ...",
+   "a": "arms",
+   "d": [
+    "toes",
+    "nose",
+    "tummy"
+   ]
+  },
+  {
+   "q": "Stamp your ...",
+   "a": "feet",
+   "d": [
+    "hands",
+    "head",
+    "arms"
+   ]
+  },
+  {
+   "q": "I've got a blue tummy: tummy?",
+   "a": "blue",
+   "d": [
+    "green",
+    "pink",
+    "red"
+   ]
+  },
+  {
+   "q": "Green arms, pink hands: hands?",
+   "a": "pink",
+   "d": [
+    "green",
+    "blue",
+    "red"
+   ]
+  },
+  {
+   "q": "Green arms, pink hands: arms?",
+   "a": "green",
+   "d": [
+    "pink",
+    "blue",
+    "red"
+   ]
+  },
+  {
+   "q": "Purple legs, orange knees: legs?",
+   "a": "purple",
+   "d": [
+    "orange",
+    "blue",
+    "pink"
+   ]
+  },
+  {
+   "q": "Clap your toes is ...",
+   "a": "silly",
+   "d": [
+    "sensible",
+    "good",
+    "fine"
+   ]
+  },
+  {
+   "q": "Clap your hands is ...",
+   "a": "sensible",
+   "d": [
+    "silly",
+    "wrong",
+    "bad"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which body part do we clap?",
+   "o": [
+    "hands",
+    "toes",
+    "knees",
+    "head"
+   ],
+   "why": "We clap our hands."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which body part do we stamp?",
+   "o": [
+    "feet",
+    "hands",
+    "ears",
+    "nose"
+   ],
+   "why": "We stamp our feet."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means a good, normal instruction?",
+   "o": [
+    "sensible",
+    "silly",
+    "noisy",
+    "scary"
+   ],
+   "why": "Sensible means it makes sense."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence tells a colour and a body part?",
+   "o": [
+    "I've got a blue tummy.",
+    "Clap your hands.",
+    "Stand up, please.",
+    "It's very big."
+   ],
+   "why": "Blue is the colour; tummy is the body part."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Read: I've got purple legs and orange knees. How do you colour the legs?",
+   "o": [
+    "purple",
+    "orange",
+    "blue",
+    "green"
+   ],
+   "why": "The legs are purple."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Read: I've got green arms and pink hands. How do you colour the hands?",
+   "o": [
+    "pink",
+    "green",
+    "blue",
+    "purple"
+   ],
+   "why": "The hands are pink."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your teacher says a silly instruction. What do you do?",
+   "o": [
+    "I don't do it.",
+    "I do it fast.",
+    "I clap my toes.",
+    "I shout."
+   ],
+   "why": "In the game we do only sensible instructions."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which instruction is silly?",
+   "o": [
+    "Stamp your hands!",
+    "Stamp your feet!",
+    "Bend your knees!",
+    "Clap your hands!"
+   ],
+   "why": "We stamp our feet, not our hands."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is \"Clap your toes\" silly?",
+   "o": [
+    "Because we clap with our hands.",
+    "Because toes are blue.",
+    "Because we have ten toes.",
+    "Because clap is a colour."
+   ],
+   "why": "Clapping is done with hands."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair matches well?",
+   "o": [
+    "bend – knees",
+    "clap – knees",
+    "stamp – arms",
+    "stretch – toes"
+   ],
+   "why": "We bend our knees."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 3: Hobbies",
+ "lesson": "Unit 3 – Lesson 9: Get ready for … Pre A1 Starters",
+ "outcomes": [
+  "I can look at a picture and write Yes or No.",
+  "I can answer questions about a picture.",
+  "I can unscramble letters to write activities."
+ ],
+ "tf": [
+  {
+   "s": "In this test, you write Yes or No, not Y or N.",
+   "t": true,
+   "why": "Yes! Always write the full words Yes or No."
+  },
+  {
+   "s": "You can write Y for Yes in this test.",
+   "t": false,
+   "why": "You must write the full word Yes."
+  },
+  {
+   "s": "For 'He plays tennis on Sundays', you check the day and the activity.",
+   "t": true,
+   "why": "Great! Check the day and the activity in the picture."
+  },
+  {
+   "s": "You only check the activity, not the day.",
+   "t": false,
+   "why": "Check both: the day and the activity."
+  },
+  {
+   "s": "We say: He plays tennis on Sundays.",
+   "t": true,
+   "why": "Right! With he, we add -s: plays."
+  },
+  {
+   "s": "We say: He play tennis on Sundays.",
+   "t": false,
+   "why": "With he, we say plays."
+  },
+  {
+   "s": "When you unscramble, you cross out each letter you use.",
+   "t": true,
+   "why": "Yes! Crossing out helps you use each letter once."
+  },
+  {
+   "s": "You can use one letter two times when you unscramble.",
+   "t": false,
+   "why": "Use each letter only one time."
+  },
+  {
+   "s": "The letters e-r-d-a make the word read.",
+   "t": true,
+   "why": "Well done! e-r-d-a makes read."
+  },
+  {
+   "s": "The letters k-i-t-e make the word bike.",
+   "t": false,
+   "why": "k-i-t-e makes kite."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: He ___ tennis on Sundays.",
+   "o": [
+    "plays",
+    "play",
+    "playing"
+   ],
+   "why": "With he, we say plays."
+  },
+  {
+   "q": "Complete: He ___ read books at the weekend.",
+   "o": [
+    "doesn't",
+    "don't",
+    "isn't"
+   ],
+   "why": "We say he doesn't read."
+  },
+  {
+   "q": "Complete: He always ___ a bike on Fridays.",
+   "o": [
+    "rides",
+    "ride",
+    "riding"
+   ],
+   "why": "With he, we say rides."
+  },
+  {
+   "q": "How many letters are in bike?",
+   "o": [
+    "4",
+    "3",
+    "5"
+   ],
+   "why": "b-i-k-e has four letters."
+  },
+  {
+   "q": "Which word is an activity?",
+   "o": [
+    "skateboard",
+    "Sunday",
+    "always"
+   ],
+   "why": "Skateboard is an activity."
+  },
+  {
+   "q": "Which word tells us how often?",
+   "o": [
+    "always",
+    "Friday",
+    "tennis"
+   ],
+   "why": "Always tells us how often."
+  },
+  {
+   "q": "Why do we count the dashes?",
+   "o": [
+    "To check the spelling",
+    "To find the day",
+    "To colour the picture"
+   ],
+   "why": "Counting dashes helps us check the spelling."
+  },
+  {
+   "q": "Which one is two words?",
+   "o": [
+    "listen to music",
+    "skateboard",
+    "tennis"
+   ],
+   "why": "listen to music has more than one word."
+  },
+  {
+   "q": "Answer: When does he do karate? (picture: Monday)",
+   "o": [
+    "On Mondays.",
+    "In Mondays.",
+    "At Monday."
+   ],
+   "why": "We say on with days."
+  },
+  {
+   "q": "Which sentence is about the weekend?",
+   "o": [
+    "He reads books on Saturdays.",
+    "He reads books on Mondays.",
+    "He reads books on Tuesdays."
+   ],
+   "why": "Saturday is at the weekend."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Unscramble: e r d a",
+   "a": "read",
+   "d": [
+    "red",
+    "ride",
+    "road"
+   ]
+  },
+  {
+   "q": "Unscramble: s n i n e t",
+   "a": "tennis",
+   "d": [
+    "tables",
+    "dinner",
+    "tunnel"
+   ]
+  },
+  {
+   "q": "Unscramble: k o o b s",
+   "a": "books",
+   "d": [
+    "boots",
+    "bikes",
+    "boxes"
+   ]
+  },
+  {
+   "q": "Unscramble: k i t e",
+   "a": "kite",
+   "d": [
+    "bike",
+    "cake",
+    "kick"
+   ]
+  },
+  {
+   "q": "Unscramble: a k s d t o b r a e",
+   "a": "skateboard",
+   "d": [
+    "basketball",
+    "keyboard",
+    "skipping"
+   ]
+  },
+  {
+   "q": "Unscramble: c i s u m",
+   "a": "music",
+   "d": [
+    "magic",
+    "mouse",
+    "bus"
+   ]
+  },
+  {
+   "q": "Unscramble: k b i e",
+   "a": "bike",
+   "d": [
+    "kite",
+    "book",
+    "bake"
+   ]
+  },
+  {
+   "q": "Letters in 'ride a bike'",
+   "a": "9",
+   "d": [
+    "8",
+    "10",
+    "4"
+   ]
+  },
+  {
+   "q": "Letters in 'tennis'",
+   "a": "6",
+   "d": [
+    "5",
+    "7",
+    "4"
+   ]
+  },
+  {
+   "q": "Letters in 'music'",
+   "a": "5",
+   "d": [
+    "4",
+    "6",
+    "3"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "In Reading and Writing Part 2, what do you write?",
+   "o": [
+    "Yes or No",
+    "Y or N",
+    "A or B",
+    "1 or 2"
+   ],
+   "why": "We write the full words Yes or No."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a day of the week?",
+   "o": [
+    "Wednesday",
+    "karate",
+    "always",
+    "tennis"
+   ],
+   "why": "Wednesday is a day of the week."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is a hobby?",
+   "o": [
+    "karate",
+    "Friday",
+    "often",
+    "picture"
+   ],
+   "why": "Karate is a hobby."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'every time'?",
+   "o": [
+    "always",
+    "never",
+    "often",
+    "Sunday"
+   ],
+   "why": "Always means every time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The picture shows a boy playing tennis on Sunday. Sentence: He plays tennis on Sundays. What do you write?",
+   "o": [
+    "Yes",
+    "No",
+    "Y",
+    "Sunday"
+   ],
+   "why": "The picture and the sentence match, so we write Yes."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The picture shows the boy reading a book on Saturday. Sentence: He doesn't read books at the weekend. What do you write?",
+   "o": [
+    "No",
+    "Yes",
+    "N",
+    "Saturday"
+   ],
+   "why": "He reads on Saturday, so the sentence is wrong: No."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture: he watches TV on Wednesdays. Answer: What does he do on Wednesdays?",
+   "o": [
+    "He watches TV.",
+    "He watch TV.",
+    "He watching TV.",
+    "He is TV."
+   ],
+   "why": "With he, we say watches."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we cross out letters when we unscramble a word?",
+   "o": [
+    "So we don't use a letter twice",
+    "So the word is longer",
+    "So we can find the day",
+    "So we don't need to read"
+   ],
+   "why": "Crossing out stops us using a letter two times."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sentence: He often watches TV on Wednesdays. What do you check in the picture?",
+   "o": [
+    "The day and the activity",
+    "The colours only",
+    "The boy's name only",
+    "The number of trees"
+   ],
+   "why": "Check the day and the activity before you write Yes or No."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A boy never rides a bike. Which sentence is correct?",
+   "o": [
+    "He doesn't ride a bike.",
+    "He always rides a bike.",
+    "He often rides a bike.",
+    "He rides a bike on Fridays."
+   ],
+   "why": "Never means he doesn't do it."
+  }
+ ]
+}

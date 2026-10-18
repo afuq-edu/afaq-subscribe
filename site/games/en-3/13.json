@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 1: It's a happy day!",
+ "lesson": "Unit 1 – Lesson 10: Fun corner",
+ "outcomes": [
+  "I can spell Unit 1 words in a crossword.",
+  "I can read a secret code question and answer.",
+  "I can play a board game and talk about my routines."
+ ],
+ "tf": [
+  {
+   "s": "In the secret code, 5 means the letter a.",
+   "t": true,
+   "why": "Yes! 5 = a, so Wh5t is What."
+  },
+  {
+   "s": "In the secret code, 6 means the letter u.",
+   "t": false,
+   "why": "6 means o. 3 means u."
+  },
+  {
+   "s": "The numbers in the code take the place of the vowels.",
+   "t": true,
+   "why": "Great! a, e, i, o and u are numbers."
+  },
+  {
+   "s": "After I get up, I pray.",
+   "t": true,
+   "why": "That is a crossword clue: pray."
+  },
+  {
+   "s": "The code 2 h5v4 d2nn4r means I have dinner.",
+   "t": true,
+   "why": "2 = i, 5 = a, 4 = e."
+  },
+  {
+   "s": "Homework is spelled h-o-m-w-o-r-k.",
+   "t": false,
+   "why": "Homework is h-o-m-e-w-o-r-k."
+  },
+  {
+   "s": "Breakfast is spelled b-r-e-a-k-f-a-s-t.",
+   "t": true,
+   "why": "Well done! Break + fast."
+  },
+  {
+   "s": "In the code, 2 means the letter e.",
+   "t": false,
+   "why": "2 means i. 4 means e."
+  },
+  {
+   "s": "In the board game, Miss a turn means you wait.",
+   "t": true,
+   "why": "You don't play in the next turn."
+  },
+  {
+   "s": "The crossword clue says I have dinner at two o'clock.",
+   "t": false,
+   "why": "The clue is I have lunch at two o'clock."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Clue: After I get up, I p____.",
+   "o": [
+    "pray",
+    "play",
+    "pen"
+   ],
+   "why": "After we get up, we pray."
+  },
+  {
+   "q": "Clue: I have l____ at two o'clock.",
+   "o": [
+    "lunch",
+    "lesson",
+    "late"
+   ],
+   "why": "Lunch is at two o'clock."
+  },
+  {
+   "q": "In the code, what letter is 5?",
+   "o": [
+    "a",
+    "e",
+    "o"
+   ],
+   "why": "5 = a."
+  },
+  {
+   "q": "In the code, what letter is 4?",
+   "o": [
+    "e",
+    "a",
+    "i"
+   ],
+   "why": "4 = e."
+  },
+  {
+   "q": "Read the code: d6",
+   "o": [
+    "do",
+    "da",
+    "di"
+   ],
+   "why": "6 = o, so d6 is do."
+  },
+  {
+   "q": "Read the code: y63",
+   "o": [
+    "you",
+    "yea",
+    "yoi"
+   ],
+   "why": "6 = o and 3 = u."
+  },
+  {
+   "q": "Missing vowels: h_m_w_rk",
+   "o": [
+    "homework",
+    "hamewark",
+    "himewirk"
+   ],
+   "why": "H-o-m-e-w-o-r-k."
+  },
+  {
+   "q": "Missing vowels: br__kf_st",
+   "o": [
+    "breakfast",
+    "braekfist",
+    "brookfast"
+   ],
+   "why": "B-r-e-a-k-f-a-s-t."
+  },
+  {
+   "q": "Which word is a crossword word?",
+   "o": [
+    "tennis",
+    "whale",
+    "kite"
+   ],
+   "why": "Tennis is in the Unit 1 crossword."
+  },
+  {
+   "q": "What do the numbers in the code replace?",
+   "o": [
+    "vowels",
+    "all letters",
+    "names"
+   ],
+   "why": "The numbers replace a, e, i, o and u."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "5 in the code",
+   "a": "a",
+   "d": [
+    "e",
+    "i",
+    "o"
+   ]
+  },
+  {
+   "q": "4 in the code",
+   "a": "e",
+   "d": [
+    "a",
+    "u",
+    "o"
+   ]
+  },
+  {
+   "q": "2 in the code",
+   "a": "i",
+   "d": [
+    "e",
+    "a",
+    "u"
+   ]
+  },
+  {
+   "q": "6 in the code",
+   "a": "o",
+   "d": [
+    "u",
+    "a",
+    "i"
+   ]
+  },
+  {
+   "q": "3 in the code",
+   "a": "u",
+   "d": [
+    "o",
+    "e",
+    "a"
+   ]
+  },
+  {
+   "q": "Read: d2nn4r",
+   "a": "dinner",
+   "d": [
+    "donner",
+    "danner",
+    "dunner"
+   ]
+  },
+  {
+   "q": "Read: t2m4",
+   "a": "time",
+   "d": [
+    "tame",
+    "tome",
+    "team"
+   ]
+  },
+  {
+   "q": "Read: b4d",
+   "a": "bed",
+   "d": [
+    "bad",
+    "bid",
+    "bud"
+   ]
+  },
+  {
+   "q": "Missing vowels: l_nch",
+   "a": "lunch",
+   "d": [
+    "lanch",
+    "linch",
+    "lonch"
+   ]
+  },
+  {
+   "q": "Missing vowels: t_nn_s",
+   "a": "tennis",
+   "d": [
+    "tannas",
+    "tonnus",
+    "tinnes"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which numbers stand for vowels in the code?",
+   "o": [
+    "5, 4, 2, 6, 3",
+    "1, 2, 3, 4, 5",
+    "7, 8, 9, 10, 11",
+    "0, 1, 7, 8, 9"
+   ],
+   "why": "5 = a, 4 = e, 2 = i, 6 = o, 3 = u."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is in the Unit 1 picture dictionary?",
+   "o": [
+    "have dinner",
+    "whale",
+    "dolphin",
+    "kite"
+   ],
+   "why": "The dictionary has routines and times of the day."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which clue goes with lunch?",
+   "o": [
+    "I have l____ at two o'clock.",
+    "After I get up, I p____.",
+    "I go to b__ at night.",
+    "I do my h_______."
+   ],
+   "why": "Lunch is at two o'clock."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is spelled correctly?",
+   "o": [
+    "homework",
+    "homwork",
+    "homewerk",
+    "hommework"
+   ],
+   "why": "Homework: h-o-m-e-w-o-r-k."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Read the code: Wh5t t2m4 d6 y63 h5v4 d2nn4r?",
+   "o": [
+    "What time do you have dinner?",
+    "What time do you have lunch?",
+    "When do you have dinner?",
+    "What time is it?"
+   ],
+   "why": "Change each number to its vowel."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Read the code: 2 h5v4 d2nn4r 5t s4v4n 6'cl6ck.",
+   "o": [
+    "I have dinner at seven o'clock.",
+    "I have dinner at six o'clock.",
+    "I have lunch at seven o'clock.",
+    "I go to bed at seven o'clock."
+   ],
+   "why": "S4v4n is seven."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write When in the code.",
+   "o": [
+    "Wh4n",
+    "Wh5n",
+    "Wh2n",
+    "Wh6n"
+   ],
+   "why": "E is 4, so When is Wh4n."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Write go to bed in the code.",
+   "o": [
+    "g6 t6 b4d",
+    "g5 t5 b2d",
+    "g6 t6 b2d",
+    "g3 t3 b4d"
+   ],
+   "why": "O = 6 and e = 4."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can we still read the code?",
+   "o": [
+    "Only the vowels change; the other letters stay.",
+    "All the letters are numbers.",
+    "The words are in Arabic.",
+    "The code has pictures."
+   ],
+   "why": "The other letters help us read the word."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the code for the word pray?",
+   "o": [
+    "pr5y",
+    "pr6y",
+    "pr4y",
+    "pr2y"
+   ],
+   "why": "Pray has the vowel a, and a is 5."
+  }
+ ]
+}

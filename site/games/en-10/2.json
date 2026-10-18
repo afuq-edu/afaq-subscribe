@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "1",
+  "lesson": "Unit 1: New Media – Reading and Understanding",
+  "outcomes": [
+    "Read the article 'Screenagers' for gist and for detail.",
+    "Guess the meaning of new words from context.",
+    "Give my opinion about screen time with a reason and an example."
+  ],
+  "tf": [
+    {"s": "'Screenager' is a blend of 'screen' and 'teenager'.", "t": true, "why": "Yes! Two words join to make one new word."},
+    {"s": "According to the article, teenagers spend about nine hours a day online.", "t": true, "why": "Correct, the article says nine hours."},
+    {"s": "The article says excessive screen time is negative regardless of content.", "t": false, "why": "The article says content and context matter more than the amount of time."},
+    {"s": "YouTube is the most popular platform for this age group in the article.", "t": true, "why": "Well done, the article names YouTube."},
+    {"s": "The article says all video games contain violent content.", "t": false, "why": "Not all video games are violent; content and context matter."},
+    {"s": "'Attention span' is a type of video.", "t": false, "why": "It is the length of time you can concentrate."},
+    {"s": "Skimming means reading a text quickly to get the general idea.", "t": true, "why": "Right, you focus on key words to get the gist."},
+    {"s": "'Reluctant' means happy and quick to do something.", "t": false, "why": "'Reluctant' means unwilling and slow to do something."},
+    {"s": "Too much screen time can harm the brain's development.", "t": true, "why": "Yes, the article warns about this."},
+    {"s": "Skimming means reading every word slowly to find small details.", "t": false, "why": "That is reading for detail; skimming is quick reading for gist."}
+  ],
+  "boxes": [
+    {"q": "What does 'screenager' mean?", "o": ["a teenager who spends a lot of time in front of a screen", "a person who repairs screens", "a very old TV"], "why": "It is an informal word: screen + teenager."},
+    {"q": "A person who uses a phone too much is ___ it.", "o": ["addicted to", "afraid of", "bored of"], "why": "'Addicted to' means you cannot stop using it."},
+    {"q": "What does 'excessive' mean?", "o": ["too much", "too little", "just right"], "why": "Excessive screen time means too much screen time."},
+    {"q": "Teenagers who are always on their phones are ___ their phones.", "o": ["glued to", "glued in", "glued at"], "why": "'Glued to' means you cannot look away from something."},
+    {"q": "Which matters more, says the writer?", "o": ["content and context", "the number of hours", "the size of the screen"], "why": "What you watch and why matters more than how long."},
+    {"q": "Many ___ use social media to advertise products.", "o": ["brands", "comments", "sources"], "why": "Brands are companies that sell products."},
+    {"q": "You can ___ videos to watch later without Internet.", "o": ["download", "source", "comment"], "why": "When you download, the video is saved on your device."},
+    {"q": "Which phrase starts an opinion?", "o": ["In my opinion", "Once upon a time", "First of all, thank you"], "why": "'In my opinion' introduces what you think."},
+    {"q": "What are 'digital natives'?", "o": ["people who grew up with digital technology", "people who never use the Internet", "old computers"], "why": "Today's teenagers grew up with screens around them."},
+    {"q": "Which word means 'results of an action'?", "o": ["consequences", "brands", "platforms"], "why": "Consequences are what happens because of an action."}
+  ],
+  "hunt": [
+    {"q": "screen + teenager = ?", "a": "screenager", "d": ["teenscreen", "screener", "teenager"]},
+    {"q": "Hours a day teens spend online", "a": "nine", "d": ["two", "five", "twelve"]},
+    {"q": "Most popular platform in the article", "a": "YouTube", "d": ["Snapchat", "Facebook", "Instagram"]},
+    {"q": "Unwilling and slow to do something", "a": "reluctant", "d": ["awesome", "interactive", "excessive"]},
+    {"q": "Too much", "a": "excessive", "d": ["reluctant", "awesome", "interactive"]},
+    {"q": "Time you can concentrate", "a": "attention span", "d": ["screen time", "digital native", "source"]},
+    {"q": "Reading quickly for the general idea", "a": "skimming", "d": ["streaming", "scrolling", "commenting"]},
+    {"q": "Save a video on your device", "a": "download", "d": ["comment", "participate", "source"]},
+    {"q": "Take part in something", "a": "participate", "d": ["download", "comment", "communicate"]},
+    {"q": "Can't stop using it: addicted ___", "a": "to", "d": ["of", "at", "in"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "According to the article, how many hours a day do teenagers spend online?", "o": ["nine", "three", "six", "twelve"], "why": "The article says nine hours a day."},
+    {"lv": "التذكر", "q": "Which statement is NOT true according to the article?", "o": ["Excessive screen time is negative regardless of content.", "Many teenagers are addicted to smartphones.", "Content and context of screen use matter.", "Too much screen time can harm the brain."], "why": "The writer says useful content is not negative."},
+    {"lv": "التذكر", "q": "What does 'attention span' mean?", "o": ["the length of time you can concentrate", "a type of video", "a social media platform", "a phone charger"], "why": "It is how long you can focus on one thing."},
+    {"lv": "التذكر", "q": "Which word means 'unwilling and slow to do something'?", "o": ["reluctant", "awesome", "interactive", "glued"], "why": "A reluctant person does not want to do it."},
+    {"lv": "التطبيق", "q": "Choose the best sentence using 'excessive'.", "o": ["Excessive screen time can make me tired.", "I am excessive to my phone.", "My phone is excessive of games.", "I excessive videos every day."], "why": "'Excessive' is an adjective that means too much."},
+    {"lv": "التطبيق", "q": "Sara can't stop looking at her phone during dinner. She is ...", "o": ["glued to her phone", "reluctant to her phone", "a source of her phone", "a brand of her phone"], "why": "'Glued to' means always looking at something."},
+    {"lv": "التطبيق", "q": "You want to know the general idea of five texts quickly. What should you do?", "o": ["skim them for key words", "read every word slowly", "translate every word", "read only the last line"], "why": "Skimming helps you get the gist fast."},
+    {"lv": "التحليل", "q": "Why does the writer think screen time is not always negative?", "o": ["Useful content can help teenagers learn.", "Screens are always cheap.", "Teenagers never use screens.", "All games are violent."], "why": "Content and context matter more than hours."},
+    {"lv": "التحليل", "q": "Which opinion is best supported with a reason?", "o": ["In my opinion, screen time is fine if the content is useful, because I learn new things.", "In my opinion, screen time.", "Screens are screens.", "I think phones."], "why": "A good opinion gives a clear idea and a reason."},
+    {"lv": "التحليل", "q": "How can you guess the meaning of a new word in a text?", "o": ["read the sentence around it", "look only at the pictures", "skip the whole paragraph", "count its letters"], "why": "The context around a word gives clues to its meaning."}
+  ]
+}

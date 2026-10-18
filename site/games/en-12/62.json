@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني عشر",
+  "unit": "Unit 2: Congestion – A Growing Issue (Grammar)",
+  "lesson": "Lead-in: traffic congestion; the cartoon; a letter to a council director",
+  "outcomes": [
+    "Talk about the feelings and effects of traffic congestion",
+    "Suggest ways to reduce congestion",
+    "Read a letter of complaint and answer questions about it"
+  ],
+  "tf": [
+    { "s": "A traffic jam happens when too many vehicles are crowded together and can't move.", "t": true, "why": "That is the meaning of a traffic jam." },
+    { "s": "Drivers stuck in traffic often feel frustrated, angry or stressed.", "t": true, "why": "Waiting in traffic makes people tense." },
+    { "s": "Congestion lowers the risk of road rage because drivers relax.", "t": false, "why": "Congestion makes drivers frustrated and impatient, so road rage increases." },
+    { "s": "A congestion charge, park and ride, and car-share schemes are ways to reduce congestion.", "t": true, "why": "They all cut the number of cars in busy areas." },
+    { "s": "Miss Smith worries that her boss will fire her because she is late.", "t": true, "why": "Traffic makes her late for work, so she feels stressed." },
+    { "s": "Getting up earlier has completely solved Miss Smith's problem.", "t": false, "why": "It hasn't worked, because other people get up earlier too." },
+    { "s": "Pollution is one of the problems caused by traffic congestion.", "t": true, "why": "Many cars waiting in traffic produce pollution." },
+    { "s": "Car-sharing means every person drives their own car to work.", "t": false, "why": "Car-sharing means people travel together in one car." },
+    { "s": "'Beat the traffic' means to drive into other cars.", "t": false, "why": "It means travelling early to avoid the heavy traffic." },
+    { "s": "Congestion has no effect on businesses.", "t": false, "why": "Businesses are affected when customers and workers are delayed." }
+  ],
+  "boxes": [
+    { "q": "What is a traffic jam?", "o": ["Vehicles crowded and unable to move", "A fast motorway", "A car park"], "why": "In a traffic jam, cars can't move." },
+    { "q": "How might a driver stuck in traffic feel?", "o": ["Frustrated", "Relaxed", "Sleepy and happy"], "why": "Delays make drivers frustrated." },
+    { "q": "What does Miss Smith worry about?", "o": ["Her boss will fire her", "Her car is too old", "Her house is too big"], "why": "She is often late for work because of traffic." },
+    { "q": "What has Miss Smith been doing?", "o": ["Getting up earlier", "Walking to work", "Working from home"], "why": "She has been getting up earlier, but it hasn't worked." },
+    { "q": "Why hasn't getting up earlier worked?", "o": ["Others get up earlier too", "Her alarm is broken", "She lives next to work"], "why": "Everyone tries to beat the traffic." },
+    { "q": "What is 'park and ride'?", "o": ["Park outside town, take a bus in", "Drive faster in town", "Park on the pavement"], "why": "It keeps cars out of the city centre." },
+    { "q": "What is a 'congestion charge'?", "o": ["Money paid to drive in busy areas", "A free parking ticket", "A phone charger"], "why": "Paying to drive in makes some people leave the car." },
+    { "q": "Which is a problem caused by congestion?", "o": ["Pollution", "Cleaner air", "Shorter journeys"], "why": "Many waiting cars pollute the air." },
+    { "q": "What does 'beat the traffic' mean?", "o": ["Travel early to avoid traffic", "Race other cars", "Break traffic rules"], "why": "You leave before the roads get busy." },
+    { "q": "Who did Miss Smith write her letter to?", "o": ["A council director", "A chef", "A tour guide"], "why": "She complains to a council director." }
+  ],
+  "hunt": [
+    { "q": "Cars crowded, can't move", "a": "traffic jam", "d": ["car-share", "park and ride", "motorway"] },
+    { "q": "Feeling of a stuck driver", "a": "frustrated", "d": ["relaxed", "delighted", "calm"] },
+    { "q": "Pay to drive in busy areas", "a": "congestion charge", "d": ["car-share", "park and ride", "road rage"] },
+    { "q": "Travel together in one car", "a": "car-share", "d": ["traffic jam", "road rage", "congestion"] },
+    { "q": "Park outside, bus into town", "a": "park and ride", "d": ["car-share", "traffic jam", "road rage"] },
+    { "q": "Travel early to avoid jams", "a": "beat the traffic", "d": ["road rage", "traffic jam", "car-share"] },
+    { "q": "Drivers' angry behaviour", "a": "road rage", "d": ["car-share", "park and ride", "street closure"] },
+    { "q": "Miss Smith fears her boss will ...", "a": "fire her", "d": ["thank her", "pay her more", "visit her"] },
+    { "q": "Miss Smith has been getting up ...", "a": "earlier", "d": ["later", "at noon", "never"] },
+    { "q": "Problem from many cars' fumes", "a": "pollution", "d": ["security", "luxury", "amenities"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Which feelings do drivers stuck in traffic have?", "o": ["Frustrated, angry and stressed", "Happy, calm and relaxed", "Bored but delighted", "Proud and excited"], "why": "Traffic delays cause negative feelings." },
+    { "lv": "التذكر", "q": "Which list gives ways to reduce congestion?", "o": ["Car-share, street closures, congestion charge, park and ride", "More cars, more parking, cheaper fuel", "Road rage, pollution, stress", "Longer journeys, later starts"], "why": "These solutions reduce the number of cars." },
+    { "lv": "التذكر", "q": "What has Miss Smith done to solve her problem?", "o": ["She has been getting up earlier, but it hasn't worked", "She has bought a new car", "She has moved to another city", "She has stopped working"], "why": "Others get up early too, so the roads are still busy." },
+    { "lv": "التذكر", "q": "Which list shows problems caused by congestion?", "o": ["Stress, road rage, pollution and businesses affected", "Clean air and short journeys", "Cheaper food and more holidays", "Fewer cars and quiet roads"], "why": "These are the problems listed in the lesson." },
+    { "lv": "التطبيق", "q": "Four colleagues live near each other and work in the same office. Which solution suits them?", "o": ["Car-share", "Each buys a bigger car", "Drive at the busiest time", "Pay four congestion charges"], "why": "Sharing one car means three fewer cars on the road." },
+    { "lv": "التطبيق", "q": "A city wants to keep cars out of its centre but still let people come in. Which idea fits best?", "o": ["Park and ride", "Build more car parks in the centre", "Make driving in the centre free", "Close all the buses"], "why": "Drivers park outside and take a bus into the centre." },
+    { "lv": "التطبيق", "q": "Ahmed leaves home at 5.30 a.m. to avoid busy roads. What is he trying to do?", "o": ["Beat the traffic", "Cause road rage", "Pay a congestion charge", "Car-share"], "why": "Leaving very early helps you avoid the traffic." },
+    { "lv": "التحليل", "q": "Why does congestion increase the risk of road rage?", "o": ["Drivers become frustrated, angry and impatient", "Roads become empty", "Cars drive faster", "Drivers sleep in their cars"], "why": "Long waits make some drivers lose their temper." },
+    { "lv": "التحليل", "q": "Why does Miss Smith feel stressed?", "o": ["She is late because of traffic and worries her boss will fire her", "She enjoys driving", "Her journey is very short", "Her boss has given her a prize"], "why": "Fear of losing her job adds to the stress of traffic." },
+    { "lv": "التحليل", "q": "Why might a congestion charge reduce traffic?", "o": ["Some drivers choose other transport to avoid paying", "It makes cars faster", "It gives drivers free fuel", "It makes the roads longer"], "why": "A cost encourages people to share cars or use buses." }
+  ]
+}

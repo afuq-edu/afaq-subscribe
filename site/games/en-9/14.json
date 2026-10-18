@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 3: The future is now",
+ "lesson": "Lesson 6: Writing – an email (giving advice)",
+ "outcomes": [
+  "Read a model email and find how it covers all four points.",
+  "Give advice and suggestions with different phrases.",
+  "Plan, write and check an informal email of about 100 words."
+ ],
+ "tf": [
+  {
+   "s": "Jood's email is informal: it starts with Hi and uses contractions.",
+   "t": true,
+   "why": "These features show an informal style."
+  },
+  {
+   "s": "Jood's reply covers all four points from her notes.",
+   "t": true,
+   "why": "A good reply includes every note."
+  },
+  {
+   "s": "A good reply only repeats the notes word for word.",
+   "t": false,
+   "why": "Jood adds a little extra information to each note."
+  },
+  {
+   "s": "'I think you ought to help a local business go digital' gives advice.",
+   "t": true,
+   "why": "'You ought to' gives advice."
+  },
+  {
+   "s": "'I hope you're feeling better now' gives advice.",
+   "t": false,
+   "why": "It wishes someone well."
+  },
+  {
+   "s": "We say 'You ought help with a recycling project.'",
+   "t": false,
+   "why": "We need 'to': You ought to help."
+  },
+  {
+   "s": "Razan wrote a letter, not an email.",
+   "t": false,
+   "why": "Razan wrote an email."
+  },
+  {
+   "s": "Using different advice phrases makes your email more interesting.",
+   "t": true,
+   "why": "A range of language shows your skills."
+  },
+  {
+   "s": "Your reply to Khalid should be about 100 words.",
+   "t": true,
+   "why": "The task asks for about 100 words."
+  },
+  {
+   "s": "Checking spelling and punctuation is part of improving your email.",
+   "t": true,
+   "why": "Self-checking helps you correct mistakes."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: ___ don't you offer to help people with their devices?",
+   "o": [
+    "Why",
+    "How",
+    "Shall"
+   ],
+   "why": "Why don't you ...? makes a suggestion."
+  },
+  {
+   "q": "Complete: How about ___ people set up websites?",
+   "o": [
+    "helping",
+    "help",
+    "to help"
+   ],
+   "why": "How about + -ing."
+  },
+  {
+   "q": "Complete: ___ I send you some information about the hospital?",
+   "o": [
+    "Shall",
+    "Ought",
+    "How about"
+   ],
+   "why": "Shall I ...? offers to do something."
+  },
+  {
+   "q": "Complete: I think you ___ phone them.",
+   "o": [
+    "should",
+    "ought",
+    "how about"
+   ],
+   "why": "Should + base verb."
+  },
+  {
+   "q": "How many points from the notes must your email include?",
+   "o": [
+    "four",
+    "two",
+    "six"
+   ],
+   "why": "There are four notes to cover."
+  },
+  {
+   "q": "Why is Arwa writing to Jood?",
+   "o": [
+    "to ask about Teen Tech Help Month",
+    "to invite her to a party",
+    "to say sorry"
+   ],
+   "why": "She asks which project is better and how she can help."
+  },
+  {
+   "q": "Which greeting shows an informal email?",
+   "o": [
+    "Hi Arwa,",
+    "Dear Sir or Madam,",
+    "To whom it may concern,"
+   ],
+   "why": "Hi is friendly and informal."
+  },
+  {
+   "q": "What does 'go digital' mean?",
+   "o": [
+    "start using technology and the internet",
+    "close a shop",
+    "stop using computers"
+   ],
+   "why": "A business goes digital when it uses technology."
+  },
+  {
+   "q": "Which phrase gives a reason?",
+   "o": [
+    "because",
+    "You could",
+    "How about"
+   ],
+   "why": "'Because' explains why."
+  },
+  {
+   "q": "What is a charity?",
+   "o": [
+    "an organisation that helps people in need",
+    "a type of shop that sells phones",
+    "a school subject"
+   ],
+   "why": "Charities help people, animals or the environment."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "You ___ to help them.",
+   "a": "ought",
+   "d": [
+    "should",
+    "could",
+    "shall"
+   ]
+  },
+  {
+   "q": "How about ___ (help)?",
+   "a": "helping",
+   "d": [
+    "help",
+    "to help",
+    "helped"
+   ]
+  },
+  {
+   "q": "___ don't you volunteer?",
+   "a": "Why",
+   "d": [
+    "How",
+    "What",
+    "Shall"
+   ]
+  },
+  {
+   "q": "___ I send you a link?",
+   "a": "Shall",
+   "d": [
+    "Ought",
+    "How",
+    "Why"
+   ]
+  },
+  {
+   "q": "Points to include",
+   "a": "four",
+   "d": [
+    "two",
+    "three",
+    "six"
+   ]
+  },
+  {
+   "q": "Length of the email",
+   "a": "100 words",
+   "d": [
+    "10 words",
+    "500 words",
+    "1000 words"
+   ]
+  },
+  {
+   "q": "Informal greeting",
+   "a": "Hi",
+   "d": [
+    "Dear Sir",
+    "Dear Madam",
+    "Yours faithfully"
+   ]
+  },
+  {
+   "q": "Person who works for free",
+   "a": "volunteer",
+   "d": [
+    "customer",
+    "manager",
+    "shopkeeper"
+   ]
+  },
+  {
+   "q": "Who Arwa writes to",
+   "a": "Jood",
+   "d": [
+    "Khalid",
+    "Razan",
+    "Sara"
+   ]
+  },
+  {
+   "q": "Who answers Razan",
+   "a": "Sara",
+   "d": [
+    "Jood",
+    "Arwa",
+    "Khalid"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which features make Jood's email informal?",
+   "o": [
+    "Hi, contractions and an exclamation mark",
+    "Dear Sir, long formal words",
+    "No paragraphs",
+    "Only questions"
+   ],
+   "why": "Informal emails sound friendly."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase in Jood's email gives advice?",
+   "o": [
+    "I think you ought to help a local business go digital.",
+    "I hope you're feeling better now.",
+    "Something like a local café or bakery.",
+    "Hi Arwa!"
+   ],
+   "why": "'You ought to' gives advice."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How many paragraphs does Jood's email have?",
+   "o": [
+    "three",
+    "one",
+    "five",
+    "ten"
+   ],
+   "why": "Each of the three paragraphs has a clear purpose."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the purpose of 'I hope you're feeling better now'?",
+   "o": [
+    "to wish someone well",
+    "to give advice",
+    "to make a suggestion",
+    "to give a reason"
+   ],
+   "why": "It shows care for the reader."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the mistake: 'You ought help with a recycling project.'",
+   "o": [
+    "You ought to help with a recycling project.",
+    "You ought helping with a recycling project.",
+    "You ought to helping with a recycling project.",
+    "You ought helped with a recycling project."
+   ],
+   "why": "Ought to + base verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good suggestion for Teen Tech Help Month?",
+   "o": [
+    "You could teach older people to use their phones.",
+    "You could to teach older people.",
+    "How about teach older people?",
+    "Why you don't teach older people?"
+   ],
+   "why": "You could + base verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence gives advice to Razan about helping children?",
+   "o": [
+    "You could read stories to children in the hospital.",
+    "You could reading stories to children.",
+    "How about read stories?",
+    "Shall you read stories?"
+   ],
+   "why": "You could + base verb gives a suggestion."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should you avoid repeating the same advice phrase?",
+   "o": [
+    "To show a range of language and make the email interesting",
+    "Because the same phrase is wrong grammar",
+    "To make the email shorter",
+    "Because teachers don't read it"
+   ],
+   "why": "Variety makes writing better."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Jood writes 'Something like a local café or bakery.' What does this show?",
+   "o": [
+    "She adds extra information, not just the notes",
+    "She forgot the notes",
+    "She is giving a reason",
+    "She is ending the email"
+   ],
+   "why": "Adding details makes the reply richer."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the best order for writing your email?",
+   "o": [
+    "Plan the four points, write about 100 words, then check it",
+    "Write quickly, then plan",
+    "Check first, then write",
+    "Write only the greeting"
+   ],
+   "why": "Planning and checking make a strong email."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 1 – Talent show",
+ "lesson": "Lesson 5: Culture – Good manners around the world",
+ "outcomes": [
+  "I can talk about good manners in Oman, the UK, China and Japan.",
+  "I can compare good manners in Oman with another country.",
+  "I can write manners with It's polite to …, You should … and In Oman, you must …."
+ ],
+ "tf": [
+  {
+   "s": "In the UK, people say thank you to the bus driver when they get off.",
+   "t": true,
+   "why": "Yes! The text says this about the UK."
+  },
+  {
+   "s": "In China, it's polite to finish everything on your plate.",
+   "t": false,
+   "why": "In China, it's rude. It means you didn't get enough food."
+  },
+  {
+   "s": "In Oman, you take off your shoes when you go inside someone's house.",
+   "t": true,
+   "why": "Right! This is good manners in Oman."
+  },
+  {
+   "s": "In Japan, it's polite to laugh with your mouth wide open.",
+   "t": false,
+   "why": "In Japan, this is rude."
+  },
+  {
+   "s": "In some parts of Asia, it's better to give a gentle handshake.",
+   "t": true,
+   "why": "Yes! A gentle handshake is better there."
+  },
+  {
+   "s": "In Oman, men give a gentle handshake.",
+   "t": false,
+   "why": "In Oman, men give a firm handshake."
+  },
+  {
+   "s": "\"It's polite to say thank you\" is a correct sentence.",
+   "t": true,
+   "why": "Great! It's polite to + verb."
+  },
+  {
+   "s": "Good manners are the same in every country.",
+   "t": false,
+   "why": "Some manners are different around the world."
+  },
+  {
+   "s": "\"You should listen to older people\" gives advice.",
+   "t": true,
+   "why": "Yes! You should … gives advice."
+  },
+  {
+   "s": "In Two stars and a wish, a star is something good about the work.",
+   "t": true,
+   "why": "Right! The wish is something to make better."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "It's polite ___ say \"thank you\".",
+   "o": [
+    "to",
+    "for",
+    "at"
+   ],
+   "why": "It's polite to + verb."
+  },
+  {
+   "q": "Change into advice: listen to older people.",
+   "o": [
+    "You should listen to older people.",
+    "You listen should to older people.",
+    "Should you listen older people."
+   ],
+   "why": "You should + verb gives advice."
+  },
+  {
+   "q": "In Oman, you ___ take off your shoes inside a house.",
+   "o": [
+    "must",
+    "mustn't",
+    "can't"
+   ],
+   "why": "It is a rule of good manners in Oman."
+  },
+  {
+   "q": "Which is a good manner?",
+   "o": [
+    "say please and thank you",
+    "be rude to older people",
+    "shout at your friends"
+   ],
+   "why": "Please and thank you are good manners everywhere in the text."
+  },
+  {
+   "q": "What is the opposite of polite?",
+   "o": [
+    "rude",
+    "firm",
+    "gentle"
+   ],
+   "why": "Polite and rude are opposites."
+  },
+  {
+   "q": "What is the speaking tip in the project?",
+   "o": [
+    "Smile when you speak.",
+    "Speak very fast.",
+    "Look at the floor."
+   ],
+   "why": "A smile helps people listen to you."
+  },
+  {
+   "q": "A strong handshake is a ___ handshake.",
+   "o": [
+    "firm",
+    "gentle",
+    "quiet"
+   ],
+   "why": "Firm means strong."
+  },
+  {
+   "q": "A soft handshake is a ___ handshake.",
+   "o": [
+    "gentle",
+    "firm",
+    "noisy"
+   ],
+   "why": "Gentle means soft."
+  },
+  {
+   "q": "What does the good manners book need?",
+   "o": [
+    "a cover, a title and three manners",
+    "a map and a song",
+    "a price and a shop"
+   ],
+   "why": "The product is a folded book with a cover, a title and three manners."
+  },
+  {
+   "q": "Choose the polite sentence.",
+   "o": [
+    "Please can I have some water?",
+    "Give me water!",
+    "Water now!"
+   ],
+   "why": "Please makes a request polite."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Rude to laugh with your mouth wide open",
+   "a": "Japan",
+   "d": [
+    "China",
+    "the UK",
+    "Oman"
+   ]
+  },
+  {
+   "q": "Take a small ___ when you visit.",
+   "a": "present",
+   "d": [
+    "shoe",
+    "plate",
+    "handshake"
+   ]
+  },
+  {
+   "q": "Opposite of firm (handshake)",
+   "a": "gentle",
+   "d": [
+    "strong",
+    "rude",
+    "polite"
+   ]
+  },
+  {
+   "q": "Men in Oman: a ___ handshake",
+   "a": "firm",
+   "d": [
+    "gentle",
+    "small",
+    "quiet"
+   ]
+  },
+  {
+   "q": "Take off your ___ in an Omani house.",
+   "a": "shoes",
+   "d": [
+    "plate",
+    "present",
+    "book"
+   ]
+  },
+  {
+   "q": "Opposite of noisily",
+   "a": "quietly",
+   "d": [
+    "fast",
+    "badly",
+    "happily"
+   ]
+  },
+  {
+   "q": "Saying please is ___.",
+   "a": "polite",
+   "d": [
+    "rude",
+    "noisy",
+    "firm"
+   ]
+  },
+  {
+   "q": "You ___ listen to older people.",
+   "a": "should",
+   "d": [
+    "isn't",
+    "doesn't",
+    "aren't"
+   ]
+  },
+  {
+   "q": "Say this to the bus driver in the UK",
+   "a": "Thank you",
+   "d": [
+    "Go away",
+    "Be quiet",
+    "Hurry up"
+   ]
+  },
+  {
+   "q": "Feedback: two stars and a ___",
+   "a": "wish",
+   "d": [
+    "star",
+    "smile",
+    "book"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Where is it better to give a gentle handshake?",
+   "o": [
+    "In some parts of Asia",
+    "Only at school",
+    "Nowhere",
+    "Only in the UK"
+   ],
+   "why": "The text says a gentle handshake is better in some parts of Asia."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase can start a rule in the good manners book?",
+   "o": [
+    "In Oman, you must …",
+    "Yesterday I …",
+    "I'm good at …",
+    "He's got …"
+   ],
+   "why": "The project uses In Oman, you must …, You should … and It's polite to …"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which countries do we read about in this lesson?",
+   "o": [
+    "the UK, Oman, China and Japan",
+    "Egypt, India, Spain and Oman",
+    "the UK, France, Italy and Oman",
+    "China, Brazil, Japan and Kenya"
+   ],
+   "why": "The text talks about the UK, Oman, China and Japan."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Name one good manner in Oman.",
+   "o": [
+    "Listen to older people.",
+    "Wear shoes inside a house.",
+    "Laugh with your mouth open at people.",
+    "Don't say thank you."
+   ],
+   "why": "Listening to older people is good manners in Oman."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write good advice for school with \"You should …\".",
+   "o": [
+    "You should say good morning to your teacher.",
+    "You should be rude to your teacher.",
+    "You should says good morning.",
+    "You should to say good morning."
+   ],
+   "why": "You should + verb: You should say …"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You visit a friend's house in Oman. What should you do at the door?",
+   "o": [
+    "Take off your shoes.",
+    "Keep your shoes on.",
+    "Run inside.",
+    "Shout hello."
+   ],
+   "why": "In Oman, we take off our shoes inside a house."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You eat dinner with a family in China. What is good manners there?",
+   "o": [
+    "Don't finish everything on your plate.",
+    "Finish everything on your plate.",
+    "Eat very fast.",
+    "Leave before dinner."
+   ],
+   "why": "In China, finishing everything means you didn't get enough food."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it rude in China to finish everything on your plate?",
+   "o": [
+    "It means you didn't get enough food.",
+    "It means the food is cold.",
+    "It means you are tired.",
+    "It means you want to go home."
+   ],
+   "why": "An empty plate says the host didn't give you enough."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which good manner is the same in Oman and the UK?",
+   "o": [
+    "saying please and thank you",
+    "laughing with your mouth wide open",
+    "wearing shoes inside a house",
+    "being rude to older people"
+   ],
+   "why": "Please and thank you are polite in both countries."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A group's book has beautiful pictures but very small writing. Which is the best wish?",
+   "o": [
+    "Write the sentences bigger.",
+    "The pictures are beautiful.",
+    "The title is clear.",
+    "Don't make a book."
+   ],
+   "why": "A wish says what can be better; the pictures are already a star."
+  }
+ ]
+}

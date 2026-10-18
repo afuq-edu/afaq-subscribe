@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Learning club 1 – Lesson 2: Think like a scientist! Carroll diagrams",
+ "outcomes": [
+  "Read a Carroll diagram that shows yes and no information.",
+  "Say which places need light and sound.",
+  "Make sentences with needs … but doesn't need …"
+ ],
+ "tf": [
+  {
+   "s": "A Carroll diagram shows yes and no information.",
+   "t": true,
+   "why": "Yes, it sorts things into yes and no boxes."
+  },
+  {
+   "s": "A cinema needs sound and it needs light.",
+   "t": true,
+   "why": "Yes, films need pictures and sound."
+  },
+  {
+   "s": "A bowling alley needs sound, but it doesn't need any light.",
+   "t": false,
+   "why": "It needs light, but it doesn't need sound."
+  },
+  {
+   "s": "A zip wire doesn't need light or sound.",
+   "t": true,
+   "why": "Yes, a zip wire needs neither."
+  },
+  {
+   "s": "A street parade needs light and sound.",
+   "t": false,
+   "why": "It needs sound, but it doesn't need light."
+  },
+  {
+   "s": "An aquarium needs light, but it doesn't need any sound.",
+   "t": true,
+   "why": "Yes, people need to see the fish."
+  },
+  {
+   "s": "Many machines need energy from electricity to work.",
+   "t": true,
+   "why": "Yes, electricity gives them energy."
+  },
+  {
+   "s": "A circus doesn't need light or sound.",
+   "t": false,
+   "why": "A circus needs light and sound."
+  },
+  {
+   "s": "A Carroll diagram uses a story to show information.",
+   "t": false,
+   "why": "It uses a table with yes and no boxes."
+  },
+  {
+   "s": "In a Carroll diagram, one thing can go in only one box.",
+   "t": true,
+   "why": "Yes, each thing has one place."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What type of diagram shows yes and no information?",
+   "o": [
+    "a Carroll diagram",
+    "a timeline",
+    "a fact file"
+   ],
+   "why": "Carroll diagrams sort by yes/no."
+  },
+  {
+   "q": "Complete: A cinema needs sound ___ it needs light.",
+   "o": [
+    "and",
+    "but",
+    "or"
+   ],
+   "why": "And joins two yes answers."
+  },
+  {
+   "q": "What does a bowling alley need?",
+   "o": [
+    "light, but not sound",
+    "sound, but not light",
+    "neither"
+   ],
+   "why": "Players need to see the pins."
+  },
+  {
+   "q": "What does a street parade need?",
+   "o": [
+    "sound, but not light",
+    "light, but not sound",
+    "neither"
+   ],
+   "why": "Parades have music in the day."
+  },
+  {
+   "q": "Which one needs energy from electricity?",
+   "o": [
+    "a TV",
+    "a pencil",
+    "a book"
+   ],
+   "why": "A TV works with electricity."
+  },
+  {
+   "q": "Where do many machines get their energy from?",
+   "o": [
+    "electricity",
+    "the Moon",
+    "sand"
+   ],
+   "why": "Electricity gives machines energy."
+  },
+  {
+   "q": "Complete: An aquarium needs light, ___ it doesn't need any sound.",
+   "o": [
+    "but",
+    "and",
+    "so"
+   ],
+   "why": "But shows the contrast."
+  },
+  {
+   "q": "Which place needs light and sound?",
+   "o": [
+    "a circus",
+    "a zip wire",
+    "an aquarium"
+   ],
+   "why": "A circus has lights and music."
+  },
+  {
+   "q": "A TV makes light and …",
+   "o": [
+    "sound",
+    "snow",
+    "sand"
+   ],
+   "why": "A TV shows pictures and makes sound."
+  },
+  {
+   "q": "In a Carroll diagram, the columns and rows show …",
+   "o": [
+    "yes and no",
+    "big and small numbers",
+    "past and future"
+   ],
+   "why": "Each box is yes or no for two questions."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Diagram with yes/no boxes",
+   "a": "Carroll diagram",
+   "d": [
+    "timeline",
+    "fact file",
+    "map"
+   ]
+  },
+  {
+   "q": "Needs light AND sound",
+   "a": "cinema",
+   "d": [
+    "zip wire",
+    "aquarium",
+    "bowling alley"
+   ]
+  },
+  {
+   "q": "Needs NO light or sound",
+   "a": "zip wire",
+   "d": [
+    "cinema",
+    "circus",
+    "street parade"
+   ]
+  },
+  {
+   "q": "Place with music in the street",
+   "a": "street parade",
+   "d": [
+    "aquarium",
+    "zip wire",
+    "bowling alley"
+   ]
+  },
+  {
+   "q": "Bowling alley needs …",
+   "a": "light",
+   "d": [
+    "sound",
+    "both",
+    "neither"
+   ]
+  },
+  {
+   "q": "Machines get energy from …",
+   "a": "electricity",
+   "d": [
+    "paper",
+    "sand",
+    "air"
+   ]
+  },
+  {
+   "q": "Needs ___, but doesn't need …",
+   "a": "but",
+   "d": [
+    "and",
+    "or",
+    "so"
+   ]
+  },
+  {
+   "q": "Aquarium needs light, not …",
+   "a": "sound",
+   "d": [
+    "light",
+    "water",
+    "fish"
+   ]
+  },
+  {
+   "q": "A circus needs light and …",
+   "a": "sound",
+   "d": [
+    "snow",
+    "sand",
+    "silence"
+   ]
+  },
+  {
+   "q": "Place to see fish",
+   "a": "aquarium",
+   "d": [
+    "cinema",
+    "zip wire",
+    "circus"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does a Carroll diagram do?",
+   "o": [
+    "It sorts things by yes and no.",
+    "It tells a story in order.",
+    "It shows a map of a city.",
+    "It lists months of the year."
+   ],
+   "why": "Carroll diagrams sort with yes/no."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which place needs sound but not light?",
+   "o": [
+    "a street parade",
+    "a cinema",
+    "an aquarium",
+    "a bowling alley"
+   ],
+   "why": "Parades have music in the daytime."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In 'needs … but doesn't need …', what does but show?",
+   "o": [
+    "a difference",
+    "a reason",
+    "a time",
+    "an example"
+   ],
+   "why": "But joins a yes and a no."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What two things are in the Carroll diagram about entertainment?",
+   "o": [
+    "makes sound and makes light",
+    "makes heat and makes movement",
+    "big and small",
+    "old and new"
+   ],
+   "why": "The diagram is about light and sound."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: A street parade needs light, but it doesn't need any sound.",
+   "o": [
+    "A street parade needs sound, but it doesn't need light.",
+    "A street parade needs light and sound.",
+    "A street parade doesn't need light or sound.",
+    "A street parade needs light, but no sound at all."
+   ],
+   "why": "Parades need music, not lights."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write about an aquarium with needs … but doesn't need …",
+   "o": [
+    "An aquarium needs light, but it doesn't need any sound.",
+    "An aquarium needs sound, but it doesn't need light.",
+    "An aquarium needs light and sound.",
+    "An aquarium doesn't need light."
+   ],
+   "why": "You need light to see the fish."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A bowling alley needs light but not sound. Which box does it go in?",
+   "o": [
+    "needs light / doesn't need sound",
+    "needs light / needs sound",
+    "doesn't need light / needs sound",
+    "doesn't need light / doesn't need sound"
+   ],
+   "why": "Yes for light, no for sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which place goes in the same box as a bowling alley?",
+   "o": [
+    "an aquarium",
+    "a cinema",
+    "a zip wire",
+    "a street parade"
+   ],
+   "why": "Both need light but not sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which two places go in the same box of the diagram?",
+   "o": [
+    "a cinema and a circus",
+    "a cinema and a zip wire",
+    "an aquarium and a street parade",
+    "a zip wire and a circus"
+   ],
+   "why": "Both need light and sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is a Carroll diagram useful?",
+   "o": [
+    "It shows clearly which things have or don't have a feature.",
+    "It makes the text longer.",
+    "It tells the time in other countries.",
+    "It replaces all words with pictures."
+   ],
+   "why": "Yes/no boxes make sorting clear."
+  }
+ ]
+}

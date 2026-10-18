@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: Jobs in Airports and Aviation (Listening & Speaking)",
+ "lesson": "Explanations practice, choosing a job, Listening 4.4.3 and a talk from a Fact File",
+ "outcomes": [
+  "Explain what car parts are used for and rank factors in choosing a job",
+  "Listen to a pilot and identify the rewards of his job",
+  "Analyse an informative essay and use conjunctions for cohesion"
+ ],
+ "tf": [
+  {
+   "s": "The bonnet protects the engine of a car.",
+   "t": true,
+   "why": "Yes, the bonnet covers and protects the engine."
+  },
+  {
+   "s": "The headlight is used to signal which way the car is turning.",
+   "t": false,
+   "why": "The headlight lights the road; the indicator signals turns."
+  },
+  {
+   "s": "Steve the pilot mentions good pay as a reward of his job.",
+   "t": true,
+   "why": "Correct, good pay is one of the rewards he ticks."
+  },
+  {
+   "s": "Steve says job security is the main reward of being a pilot.",
+   "t": false,
+   "why": "Job security is one of the things Steve does not mention."
+  },
+  {
+   "s": "For pilots, flexibility means they can have days on and off and group off days together.",
+   "t": true,
+   "why": "Right, that is how Steve explains flexibility."
+  },
+  {
+   "s": "When you give a talk, you should keep eye contact and speak in complete sentences.",
+   "t": true,
+   "why": "Yes, these help your audience follow you."
+  },
+  {
+   "s": "The Oman Rail essay has three paragraphs.",
+   "t": false,
+   "why": "It has five: an introduction, three main body paragraphs and a conclusion."
+  },
+  {
+   "s": "The main body of the Oman Rail essay describes economic, social and environmental benefits.",
+   "t": true,
+   "why": "Correct, each body paragraph covers one kind of benefit."
+  },
+  {
+   "s": "'However' is a conjunction of addition.",
+   "t": false,
+   "why": "However shows contrast; moreover and furthermore show addition."
+  },
+  {
+   "s": "'As a result' is a conjunction that shows a result.",
+   "t": true,
+   "why": "Yes, it links a cause to its effect."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the headlight used for?",
+   "o": [
+    "to light the road",
+    "to protect the engine",
+    "to show turns"
+   ],
+   "why": "Headlights help drivers see the road."
+  },
+  {
+   "q": "What is the indicator used for?",
+   "o": [
+    "to signal which way the car is turning",
+    "to light the road",
+    "to show the car's number"
+   ],
+   "why": "Indicators tell others where you are going."
+  },
+  {
+   "q": "Which question asks about purpose?",
+   "o": [
+    "What is the bonnet used for?",
+    "Where is the bonnet?",
+    "Who made the bonnet?"
+   ],
+   "why": "'What is ... used for?' asks about purpose."
+  },
+  {
+   "q": "Who is Steve in Listening 4.4.3?",
+   "o": [
+    "a pilot",
+    "a driver",
+    "a teacher"
+   ],
+   "why": "Steve talks about the rewards of being a pilot."
+  },
+  {
+   "q": "Which is a reward Steve mentions?",
+   "o": [
+    "discounts for family",
+    "working with many nationalities",
+    "job security"
+   ],
+   "why": "Steve mentions family discounts."
+  },
+  {
+   "q": "What does a Fact File help you do?",
+   "o": [
+    "give a short talk",
+    "drive a car",
+    "fly a plane"
+   ],
+   "why": "You use its facts to plan your talk."
+  },
+  {
+   "q": "What does 'cohesion' mean?",
+   "o": [
+    "ideas combined smoothly to form a whole",
+    "a type of train",
+    "a spelling mistake"
+   ],
+   "why": "Cohesion makes writing flow as one piece."
+  },
+  {
+   "q": "Which word is a conjunction of addition?",
+   "o": [
+    "moreover",
+    "but",
+    "although"
+   ],
+   "why": "Moreover adds another idea."
+  },
+  {
+   "q": "Which word is a conjunction of contrast?",
+   "o": [
+    "although",
+    "furthermore",
+    "moreover"
+   ],
+   "why": "Although shows contrast."
+  },
+  {
+   "q": "What does a topic sentence give?",
+   "o": [
+    "the main idea of a paragraph",
+    "the title of the essay",
+    "a list of words"
+   ],
+   "why": "The topic sentence tells you what the paragraph is about."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Car part that lights the road",
+   "a": "headlight",
+   "d": [
+    "bonnet",
+    "indicator",
+    "number plate"
+   ]
+  },
+  {
+   "q": "Car part that covers the engine",
+   "a": "bonnet",
+   "d": [
+    "headlight",
+    "indicator",
+    "number plate"
+   ]
+  },
+  {
+   "q": "Car part that signals a turn",
+   "a": "indicator",
+   "d": [
+    "bonnet",
+    "headlight",
+    "number plate"
+   ]
+  },
+  {
+   "q": "Job of Steve in the listening",
+   "a": "pilot",
+   "d": [
+    "driver",
+    "engineer",
+    "teacher"
+   ]
+  },
+  {
+   "q": "Days on and off for pilots",
+   "a": "flexibility",
+   "d": [
+    "security",
+    "discounts",
+    "pay"
+   ]
+  },
+  {
+   "q": "Paragraphs in the Oman Rail essay",
+   "a": "five",
+   "d": [
+    "three",
+    "four",
+    "six"
+   ]
+  },
+  {
+   "q": "Benefit types in the main body",
+   "a": "three",
+   "d": [
+    "two",
+    "four",
+    "five"
+   ]
+  },
+  {
+   "q": "A conjunction of contrast",
+   "a": "however",
+   "d": [
+    "moreover",
+    "furthermore",
+    "therefore"
+   ]
+  },
+  {
+   "q": "A conjunction of addition",
+   "a": "furthermore",
+   "d": [
+    "but",
+    "although",
+    "however"
+   ]
+  },
+  {
+   "q": "Type of 'As a result'",
+   "a": "result",
+   "d": [
+    "contrast",
+    "addition",
+    "time"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which reward does Steve NOT mention?",
+   "o": [
+    "good job security",
+    "good pay",
+    "travel",
+    "discounts for family"
+   ],
+   "why": "Steve does not mention job security."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the three benefits in the main body of the Oman Rail essay?",
+   "o": [
+    "economic, social and environmental",
+    "fast, cheap and quiet",
+    "safe, new and big",
+    "local, national and global"
+   ],
+   "why": "Each body paragraph gives one of these benefits."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the parts of an informative essay?",
+   "o": [
+    "introduction, main body and conclusion",
+    "title, picture and list",
+    "question, answer and score",
+    "dialogue, chart and map"
+   ],
+   "why": "An essay opens, develops ideas and closes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What type of conjunction is 'but'?",
+   "o": [
+    "contrast",
+    "addition",
+    "result",
+    "time"
+   ],
+   "why": "But shows a different or opposite idea."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner points to the number plate. What question do you ask?",
+   "o": [
+    "What is the number plate used for?",
+    "Where is the number plate used for?",
+    "What the number plate is?",
+    "Who is the number plate?"
+   ],
+   "why": "'What is ... used for?' asks about the purpose of a part."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best conjunction: 'Trains are fast. ___, they are safe.'",
+   "o": [
+    "Moreover",
+    "But",
+    "Although",
+    "However"
+   ],
+   "why": "Moreover adds a second positive idea."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best conjunction: 'Many people drive. ___, roads are crowded.'",
+   "o": [
+    "As a result",
+    "Although",
+    "However",
+    "But"
+   ],
+   "why": "Crowded roads are the result of many people driving."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is a topic sentence?",
+   "o": [
+    "The rail network will also bring many social benefits.",
+    "It was very nice.",
+    "For example, one train.",
+    "And then they went."
+   ],
+   "why": "It gives the main idea of the paragraph."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should a speaker keep eye contact during a talk?",
+   "o": [
+    "it keeps the audience interested and connected",
+    "it helps read the notes",
+    "it makes the talk longer",
+    "it is not important"
+   ],
+   "why": "Looking at listeners keeps them involved."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do groups need to compromise when ranking job factors?",
+   "o": [
+    "people value different factors, so they must agree together",
+    "there is only one correct answer",
+    "the teacher gives the ranking",
+    "factors are not important"
+   ],
+   "why": "Each person has different priorities, so they negotiate."
+  }
+ ]
+}

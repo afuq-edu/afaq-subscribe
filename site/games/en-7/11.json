@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Lesson 9: Literacy – Writing an advert",
+ "outcomes": [
+  "Know the features of a good advert.",
+  "Use imperatives and adjectives in an advert.",
+  "Plan, write and check your own advert."
+ ],
+ "tf": [
+  {
+   "s": "A slogan is a short, catchy sentence for an advert.",
+   "t": true,
+   "why": "Yes, like See the sea in the city!"
+  },
+  {
+   "s": "The slogan of City Beach Aquarium is “See the sea in the city!”",
+   "t": true,
+   "why": "Yes, that is its slogan."
+  },
+  {
+   "s": "Adverts use bullet points to make information clear and easy to read.",
+   "t": true,
+   "why": "Yes, bullet points are short and clear."
+  },
+  {
+   "s": "A logo is a long story about the place.",
+   "t": false,
+   "why": "A logo is a picture or symbol for the place."
+  },
+  {
+   "s": "“Our museum.” is a good, exciting slogan.",
+   "t": false,
+   "why": "It is not exciting; try Discover the past today!"
+  },
+  {
+   "s": "Visit, Watch and Learn are imperatives.",
+   "t": true,
+   "why": "They tell the reader what to do."
+  },
+  {
+   "s": "Amazing and exciting are adjectives that make adverts interesting.",
+   "t": true,
+   "why": "Yes, strong adjectives persuade."
+  },
+  {
+   "s": "A good advert should not tell people how to buy tickets.",
+   "t": false,
+   "why": "Important information, like tickets, helps readers."
+  },
+  {
+   "s": "“See amazing animals from all over the world!” is better than “You can see animals.”",
+   "t": true,
+   "why": "It uses an imperative and an exciting adjective."
+  },
+  {
+   "s": "After writing, we never check our advert.",
+   "t": false,
+   "why": "We plan, write, check and rewrite."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "___ through the glass tunnel and see sharks.",
+   "o": [
+    "Walk",
+    "Walking",
+    "Walked"
+   ],
+   "why": "Imperatives start with the base verb."
+  },
+  {
+   "q": "Complete the aquarium slogan: See the sea in the ___!",
+   "o": [
+    "city",
+    "park",
+    "desert"
+   ],
+   "why": "See the sea in the city!"
+  },
+  {
+   "q": "What is a logo?",
+   "o": [
+    "a picture or symbol",
+    "a price list",
+    "a phone number"
+   ],
+   "why": "A logo is the place's symbol."
+  },
+  {
+   "q": "Which is a special offer?",
+   "o": [
+    "Children under five go free!",
+    "Open every day.",
+    "We have a café."
+   ],
+   "why": "An offer gives you something extra or cheaper."
+  },
+  {
+   "q": "Which adjective makes an advert exciting?",
+   "o": [
+    "amazing",
+    "small",
+    "usual"
+   ],
+   "why": "Amazing is a strong adjective."
+  },
+  {
+   "q": "Which is a good slogan for a theme park?",
+   "o": [
+    "Fun for all the family!",
+    "A park.",
+    "Theme park is here."
+   ],
+   "why": "It is short and catchy."
+  },
+  {
+   "q": "Which bullet point uses an imperative?",
+   "o": [
+    "• Ride our new roller coaster!",
+    "• The roller coaster is new.",
+    "• We have a roller coaster."
+   ],
+   "why": "Ride is an imperative."
+  },
+  {
+   "q": "What comes after planning?",
+   "o": [
+    "writing",
+    "rewriting",
+    "voting"
+   ],
+   "why": "Plan – write – check – rewrite."
+  },
+  {
+   "q": "Why use bullet points?",
+   "o": [
+    "to make information clear",
+    "to make the advert longer",
+    "to hide information"
+   ],
+   "why": "Short points are easy to read."
+  },
+  {
+   "q": "Two stars and a wish means two good things and ___.",
+   "o": [
+    "one idea to improve",
+    "two mistakes",
+    "a prize"
+   ],
+   "why": "The wish is a helpful suggestion."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Short catchy line in an advert",
+   "a": "slogan",
+   "d": [
+    "logo",
+    "title",
+    "bullet"
+   ]
+  },
+  {
+   "q": "Picture or symbol for a place",
+   "a": "logo",
+   "d": [
+    "slogan",
+    "offer",
+    "list"
+   ]
+  },
+  {
+   "q": "Imperative for an advert",
+   "a": "Visit",
+   "d": [
+    "Visiting",
+    "Visited",
+    "Visitor"
+   ]
+  },
+  {
+   "q": "Exciting adjective",
+   "a": "amazing",
+   "d": [
+    "boring",
+    "small",
+    "tired"
+   ]
+  },
+  {
+   "q": "___ the sea in the city!",
+   "a": "See",
+   "d": [
+    "Seeing",
+    "Saw",
+    "Seen"
+   ]
+  },
+  {
+   "q": "Short lines with dots",
+   "a": "bullet points",
+   "d": [
+    "paragraphs",
+    "titles",
+    "logos"
+   ]
+  },
+  {
+   "q": "Children go free! is an…",
+   "a": "offer",
+   "d": [
+    "logo",
+    "slogan",
+    "title"
+   ]
+  },
+  {
+   "q": "Step after check",
+   "a": "rewrite",
+   "d": [
+    "plan",
+    "start",
+    "vote"
+   ]
+  },
+  {
+   "q": "Superlative adjective",
+   "a": "the biggest",
+   "d": [
+    "big",
+    "bigger",
+    "more big"
+   ]
+  },
+  {
+   "q": "___ amazing experiments!",
+   "a": "Watch",
+   "d": [
+    "Watching",
+    "Watched",
+    "Watches"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the slogan of City Beach Aquarium?",
+   "o": [
+    "See the sea in the city!",
+    "Fun for all the family!",
+    "Ride our new roller coaster!",
+    "Discover the past today!"
+   ],
+   "why": "That is the aquarium's slogan."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list shows features of a good advert?",
+   "o": [
+    "logo, slogan, bullet points, special offer",
+    "long paragraphs, no pictures",
+    "a diary date and first person",
+    "questions and answers only"
+   ],
+   "why": "These features make adverts clear and persuasive."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the steps of writing?",
+   "o": [
+    "plan – write – check – rewrite",
+    "write – plan – vote – stop",
+    "check – plan – rewrite – write",
+    "rewrite – write – plan – check"
+   ],
+   "why": "Plan first, then write, check and rewrite."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is an imperative from the aquarium advert?",
+   "o": [
+    "relax",
+    "relaxing",
+    "relaxed",
+    "relaxation"
+   ],
+   "why": "Relax, visit, walk, take, watch and learn are imperatives."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Improve this sentence: You can see animals.",
+   "o": [
+    "See amazing animals from all over the world!",
+    "You can see some animals.",
+    "Animals are there.",
+    "Can you see animals?"
+   ],
+   "why": "Use an imperative and an exciting adjective."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which pair of imperatives fits a science museum advert?",
+   "o": [
+    "Visit our space room! Watch amazing experiments!",
+    "We have a room. It has experiments.",
+    "Visited the room. Watched experiments.",
+    "Visiting room. Watching experiments."
+   ],
+   "why": "Imperatives invite the reader to act."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best special offer for an advert?",
+   "o": [
+    "Special offer: children under five go free!",
+    "Please pay at the door.",
+    "Tickets are expensive.",
+    "We close at 5 p.m."
+   ],
+   "why": "An offer gives the reader a good deal."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Is “Our museum.” a good slogan?",
+   "o": [
+    "No, it is not exciting. A slogan should be short and catchy.",
+    "Yes, it is very exciting.",
+    "Yes, because it is short.",
+    "No, because it has no phone number."
+   ],
+   "why": "A slogan must be catchy, e.g. Discover the past today!"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do adverts use bullet points?",
+   "o": [
+    "To make information short, clear and easy to read",
+    "To make the text very long",
+    "To tell a story",
+    "To show the date of a diary"
+   ],
+   "why": "Readers find information quickly."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A partner's advert has a clear logo and fun slogan but no opening times. What is a good wish?",
+   "o": [
+    "Next time, add the opening times.",
+    "Your logo is clear.",
+    "Your slogan is fun.",
+    "Please remove the slogan."
+   ],
+   "why": "A wish suggests how to improve."
+  }
+ ]
+}

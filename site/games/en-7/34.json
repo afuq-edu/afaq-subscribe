@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Lesson 6: Culture and Project – Famous railways",
+ "outcomes": [
+  "Find facts about the Haramain High-Speed railway and the Trans-Siberian railway.",
+  "Compare the two railways using numbers and facts.",
+  "Present a railway route with notes and interesting facts."
+ ],
+ "tf": [
+  {
+   "s": "The Haramain railway connects Makkah and Madinah.",
+   "t": true,
+   "why": "Yes, and it also stops at Jeddah."
+  },
+  {
+   "s": "Haramain trains can travel at 300 kilometres an hour.",
+   "t": true,
+   "why": "Yes, it is a high-speed railway."
+  },
+  {
+   "s": "The Trans-Siberian railway is less than 1,000 kilometres long.",
+   "t": false,
+   "why": "It is more than 9,000 kilometres long."
+  },
+  {
+   "s": "You need pyjamas on the Trans-Siberian train because you sleep on it.",
+   "t": true,
+   "why": "Yes, the journey takes many days."
+  },
+  {
+   "s": "Lake Baikal is the deepest lake in the world.",
+   "t": true,
+   "why": "Yes, you can see it from the train."
+  },
+  {
+   "s": "The Trans-Siberian journey starts and finishes in Africa.",
+   "t": false,
+   "why": "It starts in Europe and finishes in Asia."
+  },
+  {
+   "s": "The Haramain railway is a slow railway.",
+   "t": false,
+   "why": "It is a high-speed railway."
+  },
+  {
+   "s": "A railway map should show where the route starts and finishes.",
+   "t": true,
+   "why": "Yes, start and finish are important."
+  },
+  {
+   "s": "When you present, you should sound bored.",
+   "t": false,
+   "why": "Sound interested so others are interested too."
+  },
+  {
+   "s": "The Haramain railway is longer than the Trans-Siberian railway.",
+   "t": false,
+   "why": "About 450 km is much shorter than 9,000 km."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "In which country is the Haramain railway?",
+   "o": [
+    "Saudi Arabia",
+    "Russia",
+    "Oman"
+   ],
+   "why": "Makkah and Madinah are in Saudi Arabia."
+  },
+  {
+   "q": "Which railway is faster?",
+   "o": [
+    "the Haramain",
+    "the Trans-Siberian",
+    "They are the same."
+   ],
+   "why": "Haramain trains go 300 km an hour."
+  },
+  {
+   "q": "About how long is the Haramain railway?",
+   "o": [
+    "450 km",
+    "45 km",
+    "4,500 km"
+   ],
+   "why": "It is about 450 km long."
+  },
+  {
+   "q": "What is Lake Baikal famous for?",
+   "o": [
+    "It is the deepest lake in the world.",
+    "It is the smallest lake in the world.",
+    "It is in Madinah."
+   ],
+   "why": "You pass it on the Trans-Siberian."
+  },
+  {
+   "q": "What is the special number for the Trans-Siberian?",
+   "o": [
+    "more than 9,000 km long",
+    "300 km an hour",
+    "450 km long"
+   ],
+   "why": "It is a very long railway."
+  },
+  {
+   "q": "Write 300 kilometres an hour with the abbreviation.",
+   "o": [
+    "300 kmh",
+    "300 kgh",
+    "300 mmh"
+   ],
+   "why": "km = kilometres, h = hour."
+  },
+  {
+   "q": "Why do you need pyjamas on the Trans-Siberian?",
+   "o": [
+    "You sleep on the train.",
+    "It is very hot.",
+    "You go swimming."
+   ],
+   "why": "It is a long journey with nights on the train."
+  },
+  {
+   "q": "How many continents does the Trans-Siberian go through?",
+   "o": [
+    "two",
+    "one",
+    "five"
+   ],
+   "why": "Europe and Asia."
+  },
+  {
+   "q": "Why should you sound interested when you present?",
+   "o": [
+    "So other people will be interested too.",
+    "So you finish faster.",
+    "So nobody asks questions."
+   ],
+   "why": "Your interest helps your audience."
+  },
+  {
+   "q": "Which railway crosses two continents?",
+   "o": [
+    "the Trans-Siberian",
+    "the Haramain",
+    "Neither of them"
+   ],
+   "why": "It goes from Europe to Asia."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The path a train takes",
+   "a": "route",
+   "d": [
+    "ticket",
+    "station",
+    "seat"
+   ]
+  },
+  {
+   "q": "Clothes you sleep in",
+   "a": "pyjamas",
+   "d": [
+    "raincoat",
+    "flip-flops",
+    "helmet"
+   ]
+  },
+  {
+   "q": "A very fast train is …",
+   "a": "high-speed",
+   "d": [
+    "slow",
+    "sleepy",
+    "old"
+   ]
+  },
+  {
+   "q": "Go from one side to the other",
+   "a": "cross",
+   "d": [
+    "sleep",
+    "pack",
+    "stop"
+   ]
+  },
+  {
+   "q": "A route has a start and a …",
+   "a": "finish",
+   "d": [
+    "seat",
+    "ticket",
+    "window"
+   ]
+  },
+  {
+   "q": "300 km an hour is a …",
+   "a": "speed",
+   "d": [
+    "length",
+    "route",
+    "lake"
+   ]
+  },
+  {
+   "q": "Kilometres per …",
+   "a": "hour",
+   "d": [
+    "lake",
+    "train",
+    "city"
+   ]
+  },
+  {
+   "q": "Project: draw the route on a …",
+   "a": "map",
+   "d": [
+    "plate",
+    "ticket",
+    "pillow"
+   ]
+  },
+  {
+   "q": "Makkah–Madinah railway",
+   "a": "Haramain",
+   "d": [
+    "Trans-Siberian",
+    "Glacier Express",
+    "Rocky Mountaineer"
+   ]
+  },
+  {
+   "q": "Short form of kilometres",
+   "a": "km",
+   "d": [
+    "kg",
+    "cm",
+    "mm"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What kind of railway is the Haramain railway?",
+   "o": [
+    "a high-speed railway",
+    "a mountain railway",
+    "an old steam railway",
+    "an underground railway"
+   ],
+   "why": "Its trains travel at 300 km an hour."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What can you see from the Trans-Siberian train?",
+   "o": [
+    "Lake Baikal",
+    "the Pyramids",
+    "the Moon train",
+    "the Empty Quarter"
+   ],
+   "why": "The train passes the deepest lake in the world."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should a railway map show?",
+   "o": [
+    "start, finish, length and things to see",
+    "only the colour of the train",
+    "the price of food on the train",
+    "the driver's name"
+   ],
+   "why": "These help people understand the route."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which city is the Haramain railway's extra stop?",
+   "o": [
+    "Jeddah",
+    "Riyadh",
+    "Muscat",
+    "Moscow"
+   ],
+   "why": "It also stops at Jeddah."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A train travels at 300 km an hour. How far does it go in 2 hours?",
+   "o": [
+    "600 km",
+    "300 km",
+    "150 km",
+    "900 km"
+   ],
+   "why": "300 × 2 = 600 km."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good note for a railway map?",
+   "o": [
+    "The Rocky Mountaineer runs from Vancouver to Banff in Canada.",
+    "Trains are nice.",
+    "I like my bike.",
+    "Canada."
+   ],
+   "why": "A good note gives the route and country."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are going on the Trans-Siberian. What should you pack?",
+   "o": [
+    "pyjamas",
+    "flip-flops for the beach",
+    "a helmet for the Moon",
+    "nothing"
+   ],
+   "why": "You sleep on the train for many nights."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which railway is better for a quick trip between two cities?",
+   "o": [
+    "the Haramain railway",
+    "the Trans-Siberian railway",
+    "both are the same",
+    "neither has trains"
+   ],
+   "why": "It is high-speed and much shorter."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The Haramain railway is about 450 km. The Trans-Siberian is more than 9,000 km. What can we say?",
+   "o": [
+    "The Trans-Siberian is about 20 times longer.",
+    "The Haramain is longer.",
+    "They are the same length.",
+    "The Trans-Siberian is 2 times longer."
+   ],
+   "why": "9,000 ÷ 450 = 20."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might someone prefer the Trans-Siberian journey?",
+   "o": [
+    "You start in Europe and finish in Asia.",
+    "It is the fastest train in the world.",
+    "It is a very short trip.",
+    "It goes to the Moon."
+   ],
+   "why": "Crossing two continents is exciting."
+  }
+ ]
+}

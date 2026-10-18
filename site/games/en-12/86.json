@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: A Letter to a Teacher (Writing)",
+ "lesson": "Formal and informal language; drafting the letter / Checking and editing a partner’s letter; writing the second draft",
+ "outcomes": [
+  "Tell formal and informal expressions apart",
+  "Write a formal letter to a new English teacher",
+  "Edit a partner's letter and write a second draft"
+ ],
+ "tf": [
+  {
+   "s": "'Yours faithfully' is a formal ending.",
+   "t": true,
+   "why": "Yes, it is used in formal letters."
+  },
+  {
+   "s": "'Love from' is a good ending for a letter to a director.",
+   "t": false,
+   "why": "'Love from' is informal; a director needs a formal ending."
+  },
+  {
+   "s": "'Dear…' can be used in both formal and informal letters.",
+   "t": true,
+   "why": "Right, 'Dear' works in both kinds of letter."
+  },
+  {
+   "s": "'Hi there!' is a formal greeting.",
+   "t": false,
+   "why": "'Hi there!' is informal and friendly."
+  },
+  {
+   "s": "'I would be grateful if…' is formal language.",
+   "t": true,
+   "why": "Correct, it is a polite formal phrase."
+  },
+  {
+   "s": "When you check a partner's letter, you look at meaning and content first.",
+   "t": true,
+   "why": "Yes, the ideas must be clear first."
+  },
+  {
+   "s": "A second draft means writing a completely new letter.",
+   "t": false,
+   "why": "You only add the corrections and changes to your first draft."
+  },
+  {
+   "s": "You must accept every comment your partner gives you.",
+   "t": false,
+   "why": "You decide which comments are useful and keep those."
+  },
+  {
+   "s": "You underline ideas you don't understand in pencil.",
+   "t": true,
+   "why": "Yes, pencil marks are gentle and easy to remove."
+  },
+  {
+   "s": "The final draft goes into the portfolio with the earlier drafts.",
+   "t": true,
+   "why": "Well done, the portfolio shows how your writing improved."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which expression is informal?",
+   "o": [
+    "See ya!",
+    "Yours faithfully",
+    "I would like to…"
+   ],
+   "why": "'See ya!' is very casual."
+  },
+  {
+   "q": "Which ending can close a formal letter with a friendly tone?",
+   "o": [
+    "Best wishes",
+    "Love from",
+    "See ya!"
+   ],
+   "why": "'Best wishes' can be used in both kinds of letter."
+  },
+  {
+   "q": "Who is the letter in this unit written to?",
+   "o": [
+    "A new English teacher",
+    "A best friend",
+    "A shop manager"
+   ],
+   "why": "You introduce yourself to a new English teacher."
+  },
+  {
+   "q": "What helps you check your partner's language?",
+   "o": [
+    "An editing checklist",
+    "A map",
+    "A calculator"
+   ],
+   "why": "The checklist has questions about language."
+  },
+  {
+   "q": "Why do we use formal language in this letter?",
+   "o": [
+    "It is addressed to a teacher",
+    "It is to a close friend",
+    "It is a text message"
+   ],
+   "why": "We write formally to teachers."
+  },
+  {
+   "q": "What is a second draft?",
+   "o": [
+    "An improved copy of the first draft",
+    "Your first notes",
+    "A letter on a new topic"
+   ],
+   "why": "It includes corrections and improvements."
+  },
+  {
+   "q": "What do you attach to your second draft?",
+   "o": [
+    "The first draft",
+    "A photo",
+    "A poem"
+   ],
+   "why": "The first draft shows your progress."
+  },
+  {
+   "q": "Which is a formal opening sentence?",
+   "o": [
+    "I am writing to introduce myself to you.",
+    "Hi there! It's me!",
+    "See ya soon!"
+   ],
+   "why": "This sentence is polite and formal."
+  },
+  {
+   "q": "Which paragraph comes first in the letter?",
+   "o": [
+    "Introduction",
+    "Conclusion",
+    "Plans"
+   ],
+   "why": "Every letter starts with an introduction."
+  },
+  {
+   "q": "What is feedback?",
+   "o": [
+    "Comments that help you improve",
+    "A final mark",
+    "A new letter"
+   ],
+   "why": "Feedback helps you make your writing better."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "A formal letter ending",
+   "a": "Yours faithfully",
+   "d": [
+    "Love from",
+    "See ya!",
+    "Bye for now"
+   ]
+  },
+  {
+   "q": "An informal greeting",
+   "a": "Hi there!",
+   "d": [
+    "Yours faithfully",
+    "I would be grateful",
+    "Dear Sir"
+   ]
+  },
+  {
+   "q": "Fits formal and informal letters",
+   "a": "Dear…",
+   "d": [
+    "Love from",
+    "See ya!",
+    "Hi there!"
+   ]
+  },
+  {
+   "q": "Comments that help you improve",
+   "a": "Feedback",
+   "d": [
+    "Portfolio",
+    "Draft",
+    "Greeting"
+   ]
+  },
+  {
+   "q": "A file that keeps all your drafts",
+   "a": "Portfolio",
+   "d": [
+    "Checklist",
+    "Envelope",
+    "Dictionary"
+   ]
+  },
+  {
+   "q": "A list of questions to check work",
+   "a": "Checklist",
+   "d": [
+    "Portfolio",
+    "Feedback",
+    "Paragraph"
+   ]
+  },
+  {
+   "q": "Underline unclear ideas in…",
+   "a": "Pencil",
+   "d": [
+    "Red ink",
+    "Crayon",
+    "Marker"
+   ]
+  },
+  {
+   "q": "Check this first in a letter",
+   "a": "Meaning",
+   "d": [
+    "Handwriting",
+    "Length",
+    "Colour"
+   ]
+  },
+  {
+   "q": "A letter to a teacher uses…",
+   "a": "Formal language",
+   "d": [
+    "Slang",
+    "Text speak",
+    "Informal language"
+   ]
+  },
+  {
+   "q": "The last paragraph of the letter",
+   "a": "Conclusion",
+   "d": [
+    "Introduction",
+    "Family",
+    "Spare time"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list shows the correct order of the letter's paragraphs?",
+   "o": [
+    "Introduction, family, spare time, plans, learning English, conclusion",
+    "Conclusion, family, introduction, plans, spare time, learning English",
+    "Plans, introduction, conclusion, family, spare time, learning English",
+    "Family, conclusion, spare time, introduction, plans, learning English"
+   ],
+   "why": "The letter starts with an introduction and ends with a conclusion."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you check in a partner's letter?",
+   "o": [
+    "Its meaning and its language",
+    "Only the handwriting",
+    "Only the length",
+    "Only the colours"
+   ],
+   "why": "The checklist covers meaning and language."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should you do with the comments from your partner?",
+   "o": [
+    "Decide which ones are useful and keep them",
+    "Accept all of them",
+    "Ignore all of them",
+    "Rewrite your partner's letter"
+   ],
+   "why": "Not all advice is useful, so you choose."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is 'Best wishes' useful for?",
+   "o": [
+    "Ending a formal letter with a friendly tone",
+    "Starting a text message",
+    "Asking a question",
+    "Writing an address"
+   ],
+   "why": "'Best wishes' is polite but friendly."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are writing to your new English teacher. Which ending is best?",
+   "o": [
+    "Yours faithfully",
+    "See ya!",
+    "Love from",
+    "Bye for now"
+   ],
+   "why": "A letter to a teacher needs a formal ending."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner wrote: 'First I want to tell you about my family.' Which comment is useful?",
+   "o": [
+    "You should add a comma after 'First'.",
+    "Your letter is bad.",
+    "Write a new letter.",
+    "Use more colours."
+   ],
+   "why": "Helpful feedback is clear and specific."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence suits a formal letter?",
+   "o": [
+    "I would be grateful if you could help me with my writing.",
+    "Hi there! Help me with writing, OK?",
+    "See ya in class!",
+    "Love from your student."
+   ],
+   "why": "Formal letters use polite, complete sentences."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'Love from' not suitable for a letter to a teacher?",
+   "o": [
+    "It is informal and too personal",
+    "It is too long",
+    "It is too formal",
+    "It is a greeting, not an ending"
+   ],
+   "why": "Teachers get formal endings like 'Yours faithfully'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why don't you write a whole new letter for the second draft?",
+   "o": [
+    "You only need to add the corrections and changes",
+    "Second drafts must be shorter",
+    "Teachers never read second drafts",
+    "The first draft is always perfect"
+   ],
+   "why": "A second draft improves the first one."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do you check the meaning of a letter before small language errors?",
+   "o": [
+    "A letter must first make sense to the reader",
+    "Spelling is never important",
+    "Language checks are not allowed",
+    "Meaning is easier to fix at the end"
+   ],
+   "why": "Clear ideas come first, then accuracy."
+  }
+ ]
+}

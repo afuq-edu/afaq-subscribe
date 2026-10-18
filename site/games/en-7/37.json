@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Lesson 9: Literacy – Writing an email",
+ "outcomes": [
+  "Know how an email starts, ends and is organised.",
+  "Write an email about a school trip with going to and the present simple.",
+  "Add adjectives and check an email with a checklist."
+ ],
+ "tf": [
+  {
+   "s": "A school trip email often starts with Dear students.",
+   "t": true,
+   "why": "Yes, Dear … is a polite start."
+  },
+  {
+   "s": "The subject box tells the reader the topic of the email.",
+   "t": true,
+   "why": "Yes, the subject shows what it is about."
+  },
+  {
+   "s": "A school trip email is organised in paragraphs by day.",
+   "t": true,
+   "why": "Yes, this makes the plan clear."
+  },
+  {
+   "s": "We end a formal email with See ya!",
+   "t": false,
+   "why": "We end with Yours and the writer's name."
+  },
+  {
+   "s": "Express means slow.",
+   "t": false,
+   "why": "Express means fast."
+  },
+  {
+   "s": "Adjectives like amazing and delicious make an email more interesting.",
+   "t": true,
+   "why": "Yes, adjectives add colour."
+  },
+  {
+   "s": "Yours goes at the start of an email.",
+   "t": false,
+   "why": "Yours goes at the end, before the name."
+  },
+  {
+   "s": "We use going to for the trip plans: We're going to visit Jabreen Castle.",
+   "t": true,
+   "why": "Yes, going to is for plans."
+  },
+  {
+   "s": "Timetable details like The coach leaves at 7 a.m. use the past simple.",
+   "t": false,
+   "why": "Timetables use the present simple."
+  },
+  {
+   "s": "A school trip email can include a time for each activity.",
+   "t": true,
+   "why": "Yes, times make the plan clear."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: We're going to travel by ___ rocket to the Moon.",
+   "o": [
+    "express",
+    "delicious",
+    "heavy"
+   ],
+   "why": "Express = fast."
+  },
+  {
+   "q": "Complete: Bring a ___ suitcase because the rocket isn't very big!",
+   "o": [
+    "small",
+    "big",
+    "heavy"
+   ],
+   "why": "A small rocket needs small bags."
+  },
+  {
+   "q": "How does the Moon email end?",
+   "o": [
+    "Yours, Mrs Muna, head teacher",
+    "Dear students",
+    "Subject: Moon trip"
+   ],
+   "why": "Yours + name is the ending."
+  },
+  {
+   "q": "Which is a good subject line?",
+   "o": [
+    "School trip to Nizwa",
+    "Dear students",
+    "Yours, Mr Saeed"
+   ],
+   "why": "The subject gives the topic in a few words."
+  },
+  {
+   "q": "Which adjective describes food?",
+   "o": [
+    "delicious",
+    "express",
+    "heavy"
+   ],
+   "why": "Delicious food tastes very good."
+  },
+  {
+   "q": "Add an adjective: We're going to see ___ views.",
+   "o": [
+    "wonderful",
+    "slowly",
+    "visit"
+   ],
+   "why": "Wonderful describes the views."
+  },
+  {
+   "q": "Which is a timetable sentence?",
+   "o": [
+    "The coach leaves at 7 a.m.",
+    "I'm worried about the trip.",
+    "Dear students,"
+   ],
+   "why": "Times use the present simple."
+  },
+  {
+   "q": "Which goes at the very start of the email message?",
+   "o": [
+    "Dear students,",
+    "Yours,",
+    "We look forward to seeing you."
+   ],
+   "why": "Dear … opens the message."
+  },
+  {
+   "q": "Which is a good last line before Yours?",
+   "o": [
+    "We look forward to seeing you soon.",
+    "Dear students,",
+    "Subject: trip"
+   ],
+   "why": "It closes the email politely."
+  },
+  {
+   "q": "Which adjective means 'weighs a lot'?",
+   "o": [
+    "heavy",
+    "small",
+    "amazing"
+   ],
+   "why": "Heavy things are hard to carry."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Email greeting",
+   "a": "Dear",
+   "d": [
+    "Yours",
+    "Subject",
+    "Bye"
+   ]
+  },
+  {
+   "q": "Formal email ending",
+   "a": "Yours",
+   "d": [
+    "Dear",
+    "Hi",
+    "See ya"
+   ]
+  },
+  {
+   "q": "Box with the topic",
+   "a": "Subject",
+   "d": [
+    "To",
+    "Yours",
+    "Dear"
+   ]
+  },
+  {
+   "q": "Fast: an ___ coach",
+   "a": "express",
+   "d": [
+    "heavy",
+    "small",
+    "delicious"
+   ]
+  },
+  {
+   "q": "Tastes very good",
+   "a": "delicious",
+   "d": [
+    "heavy",
+    "express",
+    "small"
+   ]
+  },
+  {
+   "q": "Paragraphs are organised by …",
+   "a": "day",
+   "d": [
+    "colour",
+    "letter",
+    "size"
+   ]
+  },
+  {
+   "q": "Plan: We're ___ to visit Jabreen.",
+   "a": "going",
+   "d": [
+    "go",
+    "will",
+    "goes"
+   ]
+  },
+  {
+   "q": "The coach ___ at 7 a.m.",
+   "a": "leaves",
+   "d": [
+    "leave",
+    "left",
+    "leaving"
+   ]
+  },
+  {
+   "q": "Feedback: two stars and a …",
+   "a": "wish",
+   "d": [
+    "star",
+    "plan",
+    "day"
+   ]
+  },
+  {
+   "q": "Trip planned on the board",
+   "a": "Wahiba Sands",
+   "d": [
+    "the Moon",
+    "London",
+    "Edinburgh"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do you write in the To box?",
+   "o": [
+    "the reader's email address",
+    "the topic",
+    "the writer's name",
+    "the date of the trip"
+   ],
+   "why": "To shows who gets the email."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list shows the right order of an email?",
+   "o": [
+    "To – Subject – Dear … – paragraphs – Yours",
+    "Yours – Dear … – Subject – To",
+    "Dear … – Yours – To – Subject",
+    "Subject – Yours – paragraphs – Dear …"
+   ],
+   "why": "This is the email layout."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which adjectives are from the lesson?",
+   "o": [
+    "amazing, delicious, express",
+    "angry, tired, hungry",
+    "quickly, slowly, loudly",
+    "run, swim, fly"
+   ],
+   "why": "These adjectives can describe a trip."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which items are on the email checklist?",
+   "o": [
+    "To, Subject, Dear, days, times, adjectives, ending",
+    "only pictures and colours",
+    "headings like Food and Size",
+    "a story with a moral"
+   ],
+   "why": "The checklist covers all email parts."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a going to sentence for the trip.",
+   "o": [
+    "We're going to visit Jabreen Castle.",
+    "We going to visit Jabreen Castle.",
+    "We're go to visit Jabreen Castle.",
+    "We're going visit Jabreen Castle."
+   ],
+   "why": "be + going to + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best first line of a school trip email?",
+   "o": [
+    "Dear students, We can now send you information about our school trip.",
+    "Yours, Mr Saeed.",
+    "The coach leaves at 7 a.m.",
+    "Hi guys!!! Trip!!!"
+   ],
+   "why": "It greets and introduces the topic."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the right adjective: Wahiba Sands has ___ sand dunes.",
+   "o": [
+    "amazing",
+    "delicious",
+    "express",
+    "quickly"
+   ],
+   "why": "Amazing describes the dunes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the Moon email organised by days?",
+   "o": [
+    "To make the plan clear and easy to follow.",
+    "To make it longer.",
+    "Because emails can't have paragraphs.",
+    "Because it has no subject."
+   ],
+   "why": "Day-by-day helps the reader."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Is a school trip email formal or informal? How do you know?",
+   "o": [
+    "Quite formal – it starts with Dear and ends with Yours.",
+    "Informal – it has emojis.",
+    "Informal – it starts with Hi!",
+    "Formal – it has no name."
+   ],
+   "why": "Dear … and Yours show a formal email."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A partner's email has no times for each day. What is the best wish?",
+   "o": [
+    "Next time, add a time for each activity.",
+    "Delete the whole email.",
+    "Add more emojis.",
+    "Remove the subject."
+   ],
+   "why": "Times make the plan clearer."
+  }
+ ]
+}

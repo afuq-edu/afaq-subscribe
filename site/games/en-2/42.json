@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Unit 3 – Lesson 7: Review and Get ready for Starters",
+ "outcomes": [
+  "I can listen and write body words.",
+  "I can read instructions and match them to pictures.",
+  "I can read sentences about a picture and say Yes or No."
+ ],
+ "tf": [
+  {
+   "s": "\"Touch your head!\" is an instruction.",
+   "t": true,
+   "why": "It tells you what to do."
+  },
+  {
+   "s": "\"I've got six legs\" can describe a silly monster.",
+   "t": true,
+   "why": "A monster can have six legs."
+  },
+  {
+   "s": "A robot with two legs matches \"I've got three legs.\"",
+   "t": false,
+   "why": "Two legs do not match three legs, so No."
+  },
+  {
+   "s": "A green face matches \"I've got a green face.\"",
+   "t": true,
+   "why": "The picture matches, so Yes."
+  },
+  {
+   "s": "\"Point to the purple robot\" means show the purple robot with your finger.",
+   "t": true,
+   "why": "Point means show with your finger."
+  },
+  {
+   "s": "\"Put the pink pencil on the purple robot\" means put the pencil under the robot.",
+   "t": false,
+   "why": "\"On\" means on top of the robot."
+  },
+  {
+   "s": "We write \"knees\" for two knees.",
+   "t": true,
+   "why": "One knee, two knees."
+  },
+  {
+   "s": "\"Move your arms\" is about your feet.",
+   "t": false,
+   "why": "It is about your arms."
+  },
+  {
+   "s": "\"I've got eight fingers\" tells us a number and a body part.",
+   "t": true,
+   "why": "Eight is the number; fingers is the body part."
+  },
+  {
+   "s": "We say \"I've got three heads\" for a monster with three heads.",
+   "t": true,
+   "why": "Monsters can be silly!"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "I've got two ___. (knees picture)",
+   "o": [
+    "knees",
+    "knee",
+    "heads"
+   ],
+   "why": "Two knees: plural."
+  },
+  {
+   "q": "Read: I've got three legs. Robot has two legs.",
+   "o": [
+    "No",
+    "Yes",
+    "Three"
+   ],
+   "why": "Two is not three."
+  },
+  {
+   "q": "Read: I've got a green face. Face is green.",
+   "o": [
+    "Yes",
+    "No",
+    "Red"
+   ],
+   "why": "It matches."
+  },
+  {
+   "q": "Read: I've got a yellow tummy. Tummy is yellow.",
+   "o": [
+    "Yes",
+    "No",
+    "Blue"
+   ],
+   "why": "It matches."
+  },
+  {
+   "q": "Point to the purple robot. You ...",
+   "o": [
+    "show it with your finger",
+    "clap your hands",
+    "shout"
+   ],
+   "why": "Point means show with a finger."
+  },
+  {
+   "q": "Put the pencil ___ the robot. (on top)",
+   "o": [
+    "on",
+    "under",
+    "in"
+   ],
+   "why": "On top means on."
+  },
+  {
+   "q": "Listen: I've got six legs. Write:",
+   "o": [
+    "legs",
+    "arms",
+    "heads"
+   ],
+   "why": "The word is legs."
+  },
+  {
+   "q": "Touch your head. Which picture?",
+   "o": [
+    "a hand on a head",
+    "a hand on a knee",
+    "feet stamping"
+   ],
+   "why": "Touch your head means hand on head."
+  },
+  {
+   "q": "Describe a monster:",
+   "o": [
+    "I've got three heads.",
+    "I've got three head.",
+    "I three heads."
+   ],
+   "why": "I've got + number + plural."
+  },
+  {
+   "q": "Move your ___.",
+   "o": [
+    "arms",
+    "pink",
+    "purple"
+   ],
+   "why": "Arms is a body part."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "I've got two ___. (knees)",
+   "a": "knees",
+   "d": [
+    "knee",
+    "toes",
+    "arms"
+   ]
+  },
+  {
+   "q": "I've got six ___. (legs)",
+   "a": "legs",
+   "d": [
+    "arms",
+    "heads",
+    "toes"
+   ]
+  },
+  {
+   "q": "Robot has 2 legs. 3 legs?",
+   "a": "No",
+   "d": [
+    "Yes",
+    "Two",
+    "Three"
+   ]
+  },
+  {
+   "q": "Face is green. Green face?",
+   "a": "Yes",
+   "d": [
+    "No",
+    "Red",
+    "Blue"
+   ]
+  },
+  {
+   "q": "Show with your finger",
+   "a": "point",
+   "d": [
+    "clap",
+    "stamp",
+    "shout"
+   ]
+  },
+  {
+   "q": "Put the pencil ___ the robot.",
+   "a": "on",
+   "d": [
+    "at",
+    "to",
+    "of"
+   ]
+  },
+  {
+   "q": "Monster: I've got three ___.",
+   "a": "heads",
+   "d": [
+    "head",
+    "face",
+    "tummy"
+   ]
+  },
+  {
+   "q": "Touch your ___. (on top)",
+   "a": "head",
+   "d": [
+    "toes",
+    "feet",
+    "knees"
+   ]
+  },
+  {
+   "q": "Move your ___. (with hands)",
+   "a": "arms",
+   "d": [
+    "toes",
+    "feet",
+    "nose"
+   ]
+  },
+  {
+   "q": "Number: I've got ___ fingers. (8)",
+   "a": "eight",
+   "d": [
+    "six",
+    "three",
+    "ten"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word is a body part?",
+   "o": [
+    "legs",
+    "purple",
+    "pencil",
+    "point"
+   ],
+   "why": "Legs is a body part."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a movement instruction?",
+   "o": [
+    "Move your arms!",
+    "I've got two arms.",
+    "What a cool robot!",
+    "Here you are."
+   ],
+   "why": "It tells you to move."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In the Starters task, what do we write?",
+   "o": [
+    "Yes or No",
+    "a number",
+    "a colour",
+    "our name"
+   ],
+   "why": "We read and write Yes or No."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which colour is in the Starters task?",
+   "o": [
+    "purple",
+    "grey",
+    "brown",
+    "gold"
+   ],
+   "why": "Point to the purple robot."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Read: I've got eight fingers. The robot has got eight fingers. Write:",
+   "o": [
+    "Yes",
+    "No",
+    "Eight",
+    "Fingers"
+   ],
+   "why": "The picture matches."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The examiner says: Put the pink pencil on the purple robot. Where is the pencil now?",
+   "o": [
+    "on the purple robot",
+    "under the pink robot",
+    "in the bag",
+    "on the desk"
+   ],
+   "why": "On the purple robot."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Describe a silly monster.",
+   "o": [
+    "I've got three heads and six legs.",
+    "I've got a three heads.",
+    "I three head.",
+    "Got I've legs six."
+   ],
+   "why": "I've got + number + plural."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A robot has got a blue tummy. Read: I've got a yellow tummy. What do you write?",
+   "o": [
+    "No",
+    "Yes",
+    "Blue",
+    "Yellow"
+   ],
+   "why": "Blue is not yellow, so No."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we check every detail in the picture?",
+   "o": [
+    "To be sure the sentence matches.",
+    "To colour the picture.",
+    "To finish fast.",
+    "To find our name."
+   ],
+   "why": "Every word must match the picture."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which instruction is like the examiner's?",
+   "o": [
+    "Point to the purple robot.",
+    "What a cool robot!",
+    "I've got two arms.",
+    "Thank you."
+   ],
+   "why": "The examiner gives Point to ... and Put the ... on ...."
+  }
+ ]
+}

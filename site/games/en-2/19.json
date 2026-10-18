@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 2: Where’s my pen?",
+  "lesson": "Unit 2 – Lesson 4: Skills (Listening and speaking)",
+  "outcomes": [
+    "I can listen and find where things are.",
+    "I can ask Where's the ...? and What colour is it?",
+    "I can draw a teddy and write where it is."
+  ],
+  "tf": [
+    { "s": "The bag is under the chair. The bag is below the chair.", "t": true, "why": "Yes! under means below." },
+    { "s": "What colour is it? It's pink. is a good answer.", "t": true, "why": "Great! pink is a colour." },
+    { "s": "Where's the pencil? It's blue. is a good answer.", "t": false, "why": "Where asks the place: It's on the table." },
+    { "s": "It's in my pencil case. means it is inside.", "t": true, "why": "Yes! in means inside." },
+    { "s": "The teddy is on the chair. means it is under the chair.", "t": false, "why": "on means on top, not under." },
+    { "s": "This is my teddy. It's under the table. has two sentences.", "t": true, "why": "Well done! Each one ends with a full stop." },
+    { "s": "What colour is it? asks about the place.", "t": false, "why": "It asks about the colour." },
+    { "s": "It's on the shelf. It's green. tells place and colour.", "t": true, "why": "Yes! First the place, then the colour." },
+    { "s": "We answer Where's the ...? with Yes, it is.", "t": false, "why": "We answer with It's in / on / under ...." },
+    { "s": "A pencil case is a colour.", "t": false, "why": "A pencil case is a classroom object." }
+  ],
+  "boxes": [
+    { "q": "The bag is under the chair. Where's the bag?", "o": ["It's under the chair.", "It's on the chair.", "It's in the bag."], "why": "The bag is under the chair." },
+    { "q": "Where's the ruler? (on the table)", "o": ["It's on the table.", "It's under the table.", "It's a ruler."], "why": "The ruler is on the table." },
+    { "q": "What colour is your pencil case? (red)", "o": ["It's red.", "It's on the desk.", "It's a pen."], "why": "We answer with the colour." },
+    { "q": "The teddy is ... the chair. (on top)", "o": ["on", "in", "under"], "why": "On top = on." },
+    { "q": "It's ... my pencil case. (inside)", "o": ["in", "on", "under"], "why": "Inside = in." },
+    { "q": "It's on the desk. It's blue. What is it? (a blue pen on the desk)", "o": ["the pen", "the chair", "the shelf"], "why": "The blue pen is on the desk." },
+    { "q": "Ask your partner to find a cut-out:", "o": ["Where's the pencil?", "How old are you?", "Is it a kite?"], "why": "Where's ...? asks where it is." },
+    { "q": "This is my ... (one teddy)", "o": ["teddy", "teddies", "teddys"], "why": "One teddy: This is my teddy." },
+    { "q": "Which one tells a place?", "o": ["It's under the table.", "It's pink.", "It's a teddy."], "why": "under the table is a place." },
+    { "q": "Which one tells a colour?", "o": ["It's green.", "It's on the shelf.", "It's my teddy."], "why": "green is a colour." }
+  ],
+  "hunt": [
+    { "q": "Inside the pencil case", "a": "in", "d": ["on", "under", "at"] },
+    { "q": "The teddy is ... the chair. (top)", "a": "on", "d": ["in", "under", "at"] },
+    { "q": "Below the table", "a": "under", "d": ["in", "on", "at"] },
+    { "q": "Where's the ruler? (on the table)", "a": "on the table", "d": ["under the table", "in the bag", "on the chair"] },
+    { "q": "The bag is under the ...", "a": "chair", "d": ["pen", "crayon", "ruler"] },
+    { "q": "What colour is it? It's ...", "a": "pink", "d": ["desk", "shelf", "chair"] },
+    { "q": "Question about place", "a": "Where's", "d": ["Who", "Why", "How old"] },
+    { "q": "Question about colour", "a": "What colour", "d": ["Where", "How old", "Who"] },
+    { "q": "This is my ... (a soft toy bear)", "a": "teddy", "d": ["desk", "shelf", "chair"] },
+    { "q": "We put books on the ...", "a": "shelf", "d": ["pen", "eraser", "crayon"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Which question asks about a place?", "o": ["Where's the pencil?", "What colour is it?", "How old are you?", "What's your name?"], "why": "Where asks the place." },
+    { "lv": "التذكر", "q": "Which question asks about a colour?", "o": ["What colour is it?", "Where's the bag?", "Who is it?", "Is it a desk?"], "why": "What colour asks the colour." },
+    { "lv": "التذكر", "q": "Which word means on top?", "o": ["on", "in", "under", "where"], "why": "on = on top." },
+    { "lv": "التذكر", "q": "Which is a good answer to Where's the teddy?", "o": ["It's under the table.", "It's brown.", "It's a teddy.", "Yes, it is."], "why": "We tell the place." },
+    { "lv": "التطبيق", "q": "Listen: The bag is under the chair. Where do you draw the bag?", "o": ["Under the chair", "On the chair", "In the cupboard", "On the shelf"], "why": "The bag is under the chair." },
+    { "lv": "التطبيق", "q": "You draw a teddy on the desk. Write...", "o": ["It's on the desk.", "It's under the desk.", "It's in the desk.", "It's a desk."], "why": "The teddy is on the desk." },
+    { "lv": "التطبيق", "q": "Your pencil case is green. Your friend asks: What colour is it? You say...", "o": ["It's green.", "It's on the desk.", "It's a pencil case.", "Yes, it is."], "why": "We answer with the colour." },
+    { "lv": "التحليل", "q": "Clue: It's on the desk. It's blue. On the desk: a blue pen and a red book. What is it?", "o": ["the pen", "the book", "the desk", "the chair"], "why": "The blue thing on the desk is the pen." },
+    { "lv": "التحليل", "q": "Which two sentences describe a drawing well?", "o": ["This is my teddy. It's under the table.", "This is my teddy. How old are you?", "Under the table. Teddy.", "It's my. Teddy table."], "why": "Name it, then say where it is." },
+    { "lv": "التحليل", "q": "Which answer gives the place AND the colour?", "o": ["It's on the shelf. It's green.", "It's green.", "It's on the shelf.", "It's a shelf."], "why": "It tells where it is and its colour." }
+  ]
+}

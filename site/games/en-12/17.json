@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: Adverts – Appealing or Appalling? (Writing)",
+ "lesson": "Writing an evaluation of an advertisement",
+ "outcomes": [
+  "Sort positive and negative words for evaluating adverts",
+  "Write a first draft of an advert evaluation with reasons"
+ ],
+ "tf": [
+  {
+   "s": "An evaluation includes the writer's opinion supported by reasons.",
+   "t": true,
+   "why": "It does more than describe."
+  },
+  {
+   "s": "An evaluation only describes the advert.",
+   "t": false,
+   "why": "It must also give an opinion with reasons."
+  },
+  {
+   "s": "'Memorable' is a positive word for an advert.",
+   "t": true,
+   "why": "A memorable ad stays in your mind."
+  },
+  {
+   "s": "'Irritating' is a positive word for an advert.",
+   "t": false,
+   "why": "Irritating is negative; it means annoying."
+  },
+  {
+   "s": "'Creative' and 'amusing' are positive words.",
+   "t": true,
+   "why": "They praise an advert."
+  },
+  {
+   "s": "'Misleading' and 'repetitive' are negative words.",
+   "t": true,
+   "why": "They criticise an advert."
+  },
+  {
+   "s": "The model evaluation is about Smooth and Shiny shampoo.",
+   "t": true,
+   "why": "That is the advert in the model."
+  },
+  {
+   "s": "A second draft is not needed if you wrote a first draft.",
+   "t": false,
+   "why": "A second draft helps you correct and improve your writing."
+  },
+  {
+   "s": "An evaluation has an introduction, a description and an opinion with reasons.",
+   "t": true,
+   "why": "These are its three parts."
+  },
+  {
+   "s": "'Unrealistic' means very true to real life.",
+   "t": false,
+   "why": "Unrealistic means not like real life."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word is positive?",
+   "o": [
+    "memorable",
+    "boring",
+    "annoying"
+   ],
+   "why": "Memorable is a compliment."
+  },
+  {
+   "q": "Which word is negative?",
+   "o": [
+    "repetitive",
+    "creative",
+    "funny"
+   ],
+   "why": "Repetitive ads can annoy people."
+  },
+  {
+   "q": "What must an evaluation include besides description?",
+   "o": [
+    "opinion with reasons",
+    "a drawing",
+    "a poem"
+   ],
+   "why": "Reasons support your opinion."
+  },
+  {
+   "q": "What is a 'draft'?",
+   "o": [
+    "a first version of writing",
+    "a final exam",
+    "a slogan"
+   ],
+   "why": "You improve a draft later."
+  },
+  {
+   "q": "Which product is in the model evaluation?",
+   "o": [
+    "shampoo",
+    "a car",
+    "a phone"
+   ],
+   "why": "The model evaluates a shampoo ad."
+  },
+  {
+   "q": "Which phrase gives an opinion?",
+   "o": [
+    "In my opinion,",
+    "Once upon a time,",
+    "Yours faithfully,"
+   ],
+   "why": "It introduces your view."
+  },
+  {
+   "q": "Which word links an opinion to a reason?",
+   "o": [
+    "because",
+    "but",
+    "or"
+   ],
+   "why": "'Because' gives the reason."
+  },
+  {
+   "q": "Why write a second draft?",
+   "o": [
+    "to correct and improve",
+    "to make it shorter only",
+    "to copy a friend"
+   ],
+   "why": "Editing makes your writing better."
+  },
+  {
+   "q": "What does 'unrealistic' mean?",
+   "o": [
+    "not like real life",
+    "very cheap",
+    "very popular"
+   ],
+   "why": "Unrealistic things could not really happen."
+  },
+  {
+   "q": "Where can you find the structure of an evaluation?",
+   "o": [
+    "the Writing Guide",
+    "the cover",
+    "the map"
+   ],
+   "why": "The Writing Guide shows layout and headings."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Positive: stays in your mind",
+   "a": "memorable",
+   "d": [
+    "irritating",
+    "boring",
+    "repetitive"
+   ]
+  },
+  {
+   "q": "Negative: annoying",
+   "a": "irritating",
+   "d": [
+    "creative",
+    "amusing",
+    "popular"
+   ]
+  },
+  {
+   "q": "Negative: says the same again",
+   "a": "repetitive",
+   "d": [
+    "creative",
+    "special",
+    "funny"
+   ]
+  },
+  {
+   "q": "Positive: full of new ideas",
+   "a": "creative",
+   "d": [
+    "boring",
+    "misleading",
+    "annoying"
+   ]
+  },
+  {
+   "q": "Not like real life",
+   "a": "unrealistic",
+   "d": [
+    "memorable",
+    "popular",
+    "special"
+   ]
+  },
+  {
+   "q": "Gives a false impression",
+   "a": "misleading",
+   "d": [
+    "amusing",
+    "creative",
+    "popular"
+   ]
+  },
+  {
+   "q": "First version of writing",
+   "a": "draft",
+   "d": [
+    "slogan",
+    "copy",
+    "logo"
+   ]
+  },
+  {
+   "q": "Word to give a reason",
+   "a": "because",
+   "d": [
+    "but",
+    "or",
+    "so that"
+   ]
+  },
+  {
+   "q": "Product in the model",
+   "a": "shampoo",
+   "d": [
+    "car",
+    "phone",
+    "chocolate"
+   ]
+  },
+  {
+   "q": "Liked by many people",
+   "a": "popular",
+   "d": [
+    "boring",
+    "irritating",
+    "misleading"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What must an evaluation include besides a description?",
+   "o": [
+    "the writer's opinion supported by reasons",
+    "a list of prices",
+    "a picture",
+    "a slogan only"
+   ],
+   "why": "Opinion and reasons make it an evaluation."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list contains only positive words?",
+   "o": [
+    "funny, memorable, creative",
+    "boring, annoying, irritating",
+    "misleading, repetitive, boring",
+    "creative, annoying, boring"
+   ],
+   "why": "These words praise an advert."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list contains only negative words?",
+   "o": [
+    "irritating, misleading, repetitive",
+    "amusing, special, popular",
+    "funny, creative, memorable",
+    "popular, boring, special"
+   ],
+   "why": "These words criticise an advert."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the parts of the model evaluation?",
+   "o": [
+    "introduction, description, opinion with reasons",
+    "title, poem, ending",
+    "question, answer, quiz",
+    "price, logo, slogan"
+   ],
+   "why": "The model has these three parts."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good opening sentence for an evaluation?",
+   "o": [
+    "Advertisements try to persuade us to buy a product, but some mislead us.",
+    "I bought shampoo yesterday.",
+    "Shampoo is blue.",
+    "The end."
+   ],
+   "why": "It introduces the topic of adverts."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence gives an opinion with a reason?",
+   "o": [
+    "In my opinion, the ad is misleading because it suggests the shampoo will change your personality.",
+    "The ad is 30 seconds long.",
+    "The ad was on TV.",
+    "The shampoo costs 2 rials."
+   ],
+   "why": "It has an opinion and a 'because' reason."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner's draft has spelling mistakes. What should they do?",
+   "o": [
+    "correct them in a second draft",
+    "ignore them",
+    "start a new topic",
+    "delete the opinion"
+   ],
+   "why": "Second drafts fix mistakes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should you write a second draft?",
+   "o": [
+    "To correct mistakes and improve organisation and clarity",
+    "To make the text longer only",
+    "Because the first draft is always perfect",
+    "To change the topic"
+   ],
+   "why": "Editing improves the final piece."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'This advert is bad' a weak evaluation sentence?",
+   "o": [
+    "It gives no reason",
+    "It is too long",
+    "It uses a positive word",
+    "It is a question"
+   ],
+   "why": "An opinion needs a reason to support it."
+  },
+  {
+   "lv": "التحليل",
+   "q": "An advert shows a family flying in a car above the city. Which word describes it best?",
+   "o": [
+    "unrealistic",
+    "nutritious",
+    "repetitive",
+    "popular"
+   ],
+   "why": "Cars cannot fly, so it is not like real life."
+  }
+ ]
+}

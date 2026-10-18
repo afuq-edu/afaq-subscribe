@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 4: My favourite toy",
+ "lesson": "Lesson 6: Review + Sound v",
+ "outcomes": [
+  "I can hear the v sound in van, vet and violin.",
+  "I can find first sounds: th, u, d, l, ch and v.",
+  "I can blend and write short words."
+ ],
+ "tf": [
+  {
+   "s": "Van starts with the v sound.",
+   "t": true,
+   "why": "Yes! V-v-van."
+  },
+  {
+   "s": "Chair starts with the v sound.",
+   "t": false,
+   "why": "Chair starts with ch. Vet starts with v."
+  },
+  {
+   "s": "p – a – n makes the word pan.",
+   "t": true,
+   "why": "Well done! p-a-n is pan."
+  },
+  {
+   "s": "m – a – n makes the word van.",
+   "t": false,
+   "why": "m-a-n makes man. v-a-n makes van."
+  },
+  {
+   "s": "Lemon starts with the letter l.",
+   "t": true,
+   "why": "Right! L-l-lemon."
+  },
+  {
+   "s": "Thumb starts with th.",
+   "t": true,
+   "why": "Yes! Th-th-thumb."
+  },
+  {
+   "s": "Umbrella starts with the letter d.",
+   "t": false,
+   "why": "Umbrella starts with u."
+  },
+  {
+   "s": "d + rum makes drum.",
+   "t": true,
+   "why": "Great! d and rum make drum."
+  },
+  {
+   "s": "Chop starts with sh.",
+   "t": false,
+   "why": "Chop starts with ch. Shop starts with sh."
+  },
+  {
+   "s": "Violin and vase start with the same letter.",
+   "t": true,
+   "why": "Yes! Both start with v."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word starts with v?",
+   "o": [
+    "vet",
+    "chair",
+    "lemon"
+   ],
+   "why": "V-v-vet starts with v."
+  },
+  {
+   "q": "v – a – n. What's the word?",
+   "o": [
+    "van",
+    "man",
+    "pan"
+   ],
+   "why": "v-a-n makes van."
+  },
+  {
+   "q": "What's missing? _illage",
+   "o": [
+    "v",
+    "l",
+    "d"
+   ],
+   "why": "v + illage makes village."
+  },
+  {
+   "q": "Which picture starts with th: thumb or chair?",
+   "o": [
+    "thumb",
+    "chair",
+    "lemon"
+   ],
+   "why": "Thumb starts with th."
+  },
+  {
+   "q": "First letter of lemon?",
+   "o": [
+    "l",
+    "m",
+    "d"
+   ],
+   "why": "Lemon starts with l."
+  },
+  {
+   "q": "d + ig = ?",
+   "o": [
+    "dig",
+    "dot",
+    "big"
+   ],
+   "why": "d and ig make dig."
+  },
+  {
+   "q": "Order: n, th, i",
+   "o": [
+    "thin",
+    "thick",
+    "chin"
+   ],
+   "why": "th-i-n makes thin."
+  },
+  {
+   "q": "Which word starts with u?",
+   "o": [
+    "up",
+    "dot",
+    "van"
+   ],
+   "why": "Up starts with u."
+  },
+  {
+   "q": "Which word starts with ch?",
+   "o": [
+    "chip",
+    "ship",
+    "thin"
+   ],
+   "why": "Chip starts with ch."
+  },
+  {
+   "q": "Write the first letter of vest.",
+   "o": [
+    "v",
+    "f",
+    "b"
+   ],
+   "why": "Vest starts with v."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "It starts with v",
+   "a": "violin",
+   "d": [
+    "lemon",
+    "drum",
+    "chair"
+   ]
+  },
+  {
+   "q": "v – a – n",
+   "a": "van",
+   "d": [
+    "man",
+    "pan",
+    "vet"
+   ]
+  },
+  {
+   "q": "m – a – n",
+   "a": "man",
+   "d": [
+    "van",
+    "pan",
+    "mat"
+   ]
+  },
+  {
+   "q": "p – a – n",
+   "a": "pan",
+   "d": [
+    "van",
+    "man",
+    "pin"
+   ]
+  },
+  {
+   "q": "First letter of ladder",
+   "a": "l",
+   "d": [
+    "d",
+    "a",
+    "r"
+   ]
+  },
+  {
+   "q": "First sound of three",
+   "a": "th",
+   "d": [
+    "t",
+    "sh",
+    "ch"
+   ]
+  },
+  {
+   "q": "First sound of chop",
+   "a": "ch",
+   "d": [
+    "sh",
+    "th",
+    "c"
+   ]
+  },
+  {
+   "q": "d + ot",
+   "a": "dot",
+   "d": [
+    "dig",
+    "lot",
+    "dad"
+   ]
+  },
+  {
+   "q": "l + ock",
+   "a": "lock",
+   "d": [
+    "log",
+    "lid",
+    "dock"
+   ]
+  },
+  {
+   "q": "First letter of under",
+   "a": "u",
+   "d": [
+    "d",
+    "n",
+    "o"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What sound does the violin card show?",
+   "o": [
+    "/v/",
+    "/f/",
+    "/b/",
+    "/l/"
+   ],
+   "why": "Violin starts with the /v/ sound."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these words starts with v?",
+   "o": [
+    "vase",
+    "fan",
+    "bag",
+    "lamp"
+   ],
+   "why": "Vase starts with v."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word starts with d?",
+   "o": [
+    "drum",
+    "lock",
+    "thin",
+    "up"
+   ],
+   "why": "Drum starts with d."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word starts with th?",
+   "o": [
+    "think",
+    "chip",
+    "dig",
+    "lemon"
+   ],
+   "why": "Think starts with th."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Listen: p – a – n. What's the word?",
+   "o": [
+    "pan",
+    "van",
+    "man",
+    "pin"
+   ],
+   "why": "p-a-n makes pan."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write the word: ch – o – p",
+   "o": [
+    "chop",
+    "shop",
+    "chip",
+    "top"
+   ],
+   "why": "ch-o-p makes chop."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which word goes with the letter l?",
+   "o": [
+    "ladder",
+    "dot",
+    "under",
+    "van"
+   ],
+   "why": "Ladder starts with l."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word is the odd one out: van, vet, chair, vase?",
+   "o": [
+    "chair",
+    "van",
+    "vet",
+    "vase"
+   ],
+   "why": "Chair starts with ch. The others start with v."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word starts with ch, not th?",
+   "o": [
+    "children",
+    "three",
+    "that",
+    "thumb"
+   ],
+   "why": "Children starts with ch."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Van, man and pan. What is the same?",
+   "o": [
+    "They all end with an.",
+    "They all start with v.",
+    "They all start with m.",
+    "They are all toys."
+   ],
+   "why": "Van, man and pan all end with an."
+  }
+ ]
+}

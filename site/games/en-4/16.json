@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U2",
+ "lesson": "Unit 2 – Lesson 2: Story – The secret shed",
+ "outcomes": [
+  "Understand the main events of the story The secret shed.",
+  "Say if sentences about the story are true or false and correct them.",
+  "Say where food comes from: plants or animals."
+ ],
+ "tf": [
+  {
+   "s": "Fatma can't make sandwiches because there isn't any bread.",
+   "t": true,
+   "why": "Yes! There isn't any bread."
+  },
+  {
+   "s": "Bo puts lemonade on the noodles.",
+   "t": true,
+   "why": "Correct! That's a funny mistake."
+  },
+  {
+   "s": "There's some bread in Fatma's kitchen.",
+   "t": false,
+   "why": "There isn't any bread in Fatma's kitchen."
+  },
+  {
+   "s": "There is some bread at Lottie's house.",
+   "t": true,
+   "why": "Great! Lottie has bread."
+  },
+  {
+   "s": "Lemonade comes from a lemonade lake.",
+   "t": false,
+   "why": "Lemonade comes from lemons, and lemons grow on trees."
+  },
+  {
+   "s": "The children form a team called the Discovery Team.",
+   "t": true,
+   "why": "Well done! Let's form a team, the Discovery Team!"
+  },
+  {
+   "s": "The children find an old shed at the back of the garden.",
+   "t": true,
+   "why": "Yes! They can have their team meetings there."
+  },
+  {
+   "s": "Butter comes from a plant.",
+   "t": false,
+   "why": "Butter comes from milk, from an animal (cows)."
+  },
+  {
+   "s": "You drink lemonade; you don't put it on noodles.",
+   "t": true,
+   "why": "Right! That's what Bo learns."
+  },
+  {
+   "s": "The Discovery Team's symbol is a lemon tree.",
+   "t": false,
+   "why": "The symbol is a dinosaur model."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Why can't Fatma make sandwiches?",
+   "o": [
+    "There isn't any bread.",
+    "There isn't any cheese.",
+    "She is busy."
+   ],
+   "why": "There isn't any bread."
+  },
+  {
+   "q": "What does Bo put on the noodles?",
+   "o": [
+    "lemonade",
+    "cheese",
+    "bread"
+   ],
+   "why": "Bo puts lemonade on the noodles."
+  },
+  {
+   "q": "Where is there some bread?",
+   "o": [
+    "at Lottie's house",
+    "in the shed",
+    "in Fatma's kitchen"
+   ],
+   "why": "Lottie has some bread."
+  },
+  {
+   "q": "Where does lemonade come from?",
+   "o": [
+    "lemons",
+    "milk",
+    "a lake"
+   ],
+   "why": "Lemonade is made from lemons."
+  },
+  {
+   "q": "Where do lemons grow?",
+   "o": [
+    "on trees",
+    "in a lake",
+    "in a shed"
+   ],
+   "why": "Lemons grow on lemon trees."
+  },
+  {
+   "q": "What do they find at the back of the garden?",
+   "o": [
+    "an old shed",
+    "a lake",
+    "a robot"
+   ],
+   "why": "They find an old shed."
+  },
+  {
+   "q": "What is the name of the team?",
+   "o": [
+    "the Discovery Team",
+    "the Lemon Team",
+    "the Robot Team"
+   ],
+   "why": "They form the Discovery Team."
+  },
+  {
+   "q": "Butter comes from ___.",
+   "o": [
+    "an animal",
+    "a plant",
+    "a lake"
+   ],
+   "why": "Butter comes from milk (cows)."
+  },
+  {
+   "q": "There's ___ cheese.",
+   "o": [
+    "some",
+    "any",
+    "a"
+   ],
+   "why": "There's some cheese."
+  },
+  {
+   "q": "There isn't ___ bread.",
+   "o": [
+    "any",
+    "some",
+    "a lot"
+   ],
+   "why": "In negatives we use any."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "No bread, so no...?",
+   "a": "sandwiches",
+   "d": [
+    "noodles",
+    "lemonade",
+    "cheese"
+   ]
+  },
+  {
+   "q": "Bo puts on noodles?",
+   "a": "lemonade",
+   "d": [
+    "cheese",
+    "bread",
+    "milk"
+   ]
+  },
+  {
+   "q": "Lemonade comes from?",
+   "a": "lemons",
+   "d": [
+    "milk",
+    "a lake",
+    "cheese"
+   ]
+  },
+  {
+   "q": "Lemons grow on...?",
+   "a": "trees",
+   "d": [
+    "lakes",
+    "sheds",
+    "cows"
+   ]
+  },
+  {
+   "q": "Bread is at whose house?",
+   "a": "Lottie's",
+   "d": [
+    "Fatma's",
+    "Bo's",
+    "Sami's"
+   ]
+  },
+  {
+   "q": "Team name?",
+   "a": "Discovery Team",
+   "d": [
+    "Lemon Team",
+    "Robot Team",
+    "Picnic Team"
+   ]
+  },
+  {
+   "q": "Found in the garden?",
+   "a": "an old shed",
+   "d": [
+    "a lake",
+    "a robot",
+    "a boat"
+   ]
+  },
+  {
+   "q": "Team symbol?",
+   "a": "a dinosaur",
+   "d": [
+    "a lemon",
+    "a kite",
+    "a robot"
+   ]
+  },
+  {
+   "q": "Butter comes from?",
+   "a": "an animal",
+   "d": [
+    "a plant",
+    "a lake",
+    "a tree"
+   ]
+  },
+  {
+   "q": "There isn't ___ bread.",
+   "a": "any",
+   "d": [
+    "some",
+    "a",
+    "many"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do the children form in the story?",
+   "o": [
+    "a team, the Discovery Team",
+    "a band",
+    "a football club",
+    "a school"
+   ],
+   "why": "Let's form a team, the Discovery Team!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "What can the children do in the old shed?",
+   "o": [
+    "have their Discovery Team meetings",
+    "sleep",
+    "make lemonade",
+    "grow lemons"
+   ],
+   "why": "The shed is their meeting place."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which foods are in the story?",
+   "o": [
+    "cheese, bread, noodles, lemonade",
+    "pizza, rice, tea",
+    "cupcakes, coffee, salad",
+    "fish, chips, milk"
+   ],
+   "why": "Cheese, bread, noodles and lemonade are in the story."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the Discovery Team symbol?",
+   "o": [
+    "a dinosaur model",
+    "a lemon tree",
+    "a robot",
+    "a kite"
+   ],
+   "why": "The symbol is a dinosaur model."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: 'Bo puts coffee on noodles.'",
+   "o": [
+    "Bo puts lemonade on noodles.",
+    "Bo puts cheese on noodles.",
+    "Bo drinks coffee.",
+    "Bo puts bread on noodles."
+   ],
+   "why": "In the story, Bo puts lemonade on the noodles."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "True or false: 'There's some bread in Fatma's kitchen.'",
+   "o": [
+    "False – there isn't any bread.",
+    "True – there is a lot of bread.",
+    "True – there is some bread.",
+    "False – there is some cheese only at Lottie's."
+   ],
+   "why": "There isn't any bread in Fatma's kitchen."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which food comes from an animal?",
+   "o": [
+    "butter",
+    "lemons",
+    "bread",
+    "noodles"
+   ],
+   "why": "Butter comes from milk, from cows."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What does Bo learn in the story?",
+   "o": [
+    "Lemonade comes from lemons; you drink it.",
+    "Noodles grow on trees.",
+    "Lemonade comes from a lake.",
+    "Bread comes from cows."
+   ],
+   "why": "Bo learns where lemonade comes from."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Bo's mistake with the noodles funny?",
+   "o": [
+    "You drink lemonade; you don't put it on noodles.",
+    "Noodles are a drink.",
+    "Lemonade is savoury.",
+    "Bo can't cook."
+   ],
+   "why": "Lemonade is a drink, not a sauce for noodles!"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the shed a good place for the Discovery Team?",
+   "o": [
+    "It's quiet and they can decorate it.",
+    "It's a lake.",
+    "It has a lot of bread.",
+    "It's in Australia."
+   ],
+   "why": "A quiet place is good for team meetings."
+  }
+ ]
+}

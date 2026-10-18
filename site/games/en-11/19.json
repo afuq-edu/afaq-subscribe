@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 4 - Unit 4: Virtual Reality",
+ "outcomes": [
+  "Explain what virtual reality is and how it is used",
+  "Ask polite indirect questions",
+  "Talk about the uses and limits of virtual reality"
+ ],
+ "tf": [
+  {
+   "s": "Virtual reality is an interactive environment made using a computer.",
+   "t": true,
+   "why": "Yes! You can interact with a computer world."
+  },
+  {
+   "s": "Virtual reality can be used to train pilots and doctors.",
+   "t": true,
+   "why": "Right! It copies the real world for training."
+  },
+  {
+   "s": "PacMan and Super Mario Brothers are early fictional virtual reality games.",
+   "t": true,
+   "why": "Correct! They are fictional worlds."
+  },
+  {
+   "s": "Virtual reality today seems completely real.",
+   "t": false,
+   "why": "It is still difficult to make it seem real."
+  },
+  {
+   "s": "Virtual reality of the future may include smell and touch.",
+   "t": true,
+   "why": "Yes! Not just sights and sounds."
+  },
+  {
+   "s": "CAD software helps designers clearly see what they are trying to make.",
+   "t": true,
+   "why": "Good! CAD is used in design."
+  },
+  {
+   "s": "'Do you know when did it begin?' has the correct word order.",
+   "t": false,
+   "why": "The correct order is 'Do you know when it began?'"
+  },
+  {
+   "s": "Indirect questions are more polite than direct questions.",
+   "t": true,
+   "why": "Yes! 'Can you tell us…?' sounds polite."
+  },
+  {
+   "s": "Reading the questions before you listen is a good listening strategy.",
+   "t": true,
+   "why": "Right! You know what to listen for."
+  },
+  {
+   "s": "Virtual reality is mainly an experience of smell and taste.",
+   "t": false,
+   "why": "It is mainly a sound and sight (visual) experience."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is virtual reality?",
+   "o": [
+    "an interactive environment made using a computer",
+    "a real museum",
+    "a kind of mobile phone"
+   ],
+   "why": "It is a computer-made world."
+  },
+  {
+   "q": "Which is an example of virtual reality copying the real world?",
+   "o": [
+    "virtual museum tours",
+    "PacMan",
+    "Super Mario Brothers"
+   ],
+   "why": "Museum tours copy real places."
+  },
+  {
+   "q": "What may future virtual reality add?",
+   "o": [
+    "smell and touch",
+    "more keyboards",
+    "fewer sounds"
+   ],
+   "why": "It may feel more real."
+  },
+  {
+   "q": "Why is virtual reality not yet fully real?",
+   "o": [
+    "computers and the Internet are not powerful enough yet",
+    "people don't like games",
+    "it is too cheap"
+   ],
+   "why": "Technology must develop further."
+  },
+  {
+   "q": "Make polite: 'What is virtual reality?'",
+   "o": [
+    "Can you tell us what virtual reality is?",
+    "Can you tell us what is virtual reality?",
+    "What virtual reality is?"
+   ],
+   "why": "In indirect questions, the verb comes after the subject."
+  },
+  {
+   "q": "Which has correct word order?",
+   "o": [
+    "Do you know when it began?",
+    "Do you know when did it begin?",
+    "Do you know when began it?"
+   ],
+   "why": "No 'did' in indirect questions."
+  },
+  {
+   "q": "Turn into an indirect question: 'Where is the museum?'",
+   "o": [
+    "Could you tell me where the museum is?",
+    "Could you tell me where is the museum?",
+    "Could you tell me the museum where?"
+   ],
+   "why": "Subject before verb: 'the museum is'."
+  },
+  {
+   "q": "What does CAD software help designers do?",
+   "o": [
+    "see clearly what they are making",
+    "play PacMan",
+    "send e-mails"
+   ],
+   "why": "CAD helps with design."
+  },
+  {
+   "q": "Which is a listening strategy?",
+   "o": [
+    "predict the topic",
+    "close your eyes and sleep",
+    "write the answers before listening"
+   ],
+   "why": "Predicting helps you understand."
+  },
+  {
+   "q": "Virtual reality is mainly a sound and ___ experience.",
+   "o": [
+    "sight",
+    "smell",
+    "taste"
+   ],
+   "why": "It is audio and visual."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Early fictional VR game",
+   "a": "PacMan",
+   "d": [
+    "Excel",
+    "Google",
+    "Word"
+   ]
+  },
+  {
+   "q": "VR may add smell and ___",
+   "a": "touch",
+   "d": [
+    "colour",
+    "sound",
+    "sight"
+   ]
+  },
+  {
+   "q": "Workers trained with VR",
+   "a": "pilots",
+   "d": [
+    "farmers",
+    "bakers",
+    "tailors"
+   ]
+  },
+  {
+   "q": "VR is audio and ___",
+   "a": "visual",
+   "d": [
+    "smell",
+    "taste",
+    "touch"
+   ]
+  },
+  {
+   "q": "Design software in the text",
+   "a": "CAD",
+   "d": [
+    "SMS",
+    "IT",
+    "PS"
+   ]
+  },
+  {
+   "q": "VR is made using a…",
+   "a": "computer",
+   "d": [
+    "pencil",
+    "camera only",
+    "radio"
+   ]
+  },
+  {
+   "q": "Polite start: 'Can you ___ us…?'",
+   "a": "tell",
+   "d": [
+    "say",
+    "speak",
+    "talk"
+   ]
+  },
+  {
+   "q": "Polite start: 'Do you ___…?'",
+   "a": "know",
+   "d": [
+    "knew",
+    "known",
+    "knowing"
+   ]
+  },
+  {
+   "q": "A problem or limit of VR",
+   "a": "limitation",
+   "d": [
+    "invention",
+    "example",
+    "use"
+   ]
+  },
+  {
+   "q": "Strategy: listen for key ___",
+   "a": "words",
+   "d": [
+    "colours",
+    "numbers only",
+    "pictures"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What limitation does virtual reality have?",
+   "o": [
+    "It is difficult to make it seem real",
+    "It is too real",
+    "It cannot be used for games",
+    "It has no sound"
+   ],
+   "why": "Computers are not powerful enough yet."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which games are early fictional virtual reality games?",
+   "o": [
+    "PacMan and Super Mario Brothers",
+    "chess and football",
+    "CAD and museum tours",
+    "pilot training and doctors' training"
+   ],
+   "why": "They are fictional worlds."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is an indirect question phrase?",
+   "o": [
+    "Could you give some examples…?",
+    "Give examples!",
+    "What examples?",
+    "Examples now."
+   ],
+   "why": "Indirect questions sound polite."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do we usually use to control a computer in the text?",
+   "o": [
+    "a keyboard and mouse",
+    "a steering wheel",
+    "a remote key",
+    "a pencil"
+   ],
+   "why": "Keyboards and mice let us interact with computers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Change into an indirect question: 'When did virtual reality begin?'",
+   "o": [
+    "Do you know when virtual reality began?",
+    "Do you know when did virtual reality begin?",
+    "Do you know when virtual reality did begin?",
+    "Do you know virtual reality began when?"
+   ],
+   "why": "Drop 'did' and use the past form 'began'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good indirect question about the future of virtual reality?",
+   "o": [
+    "Do you have any idea what virtual reality will be like in the future?",
+    "What will be virtual reality like in the future?",
+    "Do you have any idea what will be virtual reality like?",
+    "Virtual reality future what?"
+   ],
+   "why": "Keep subject + verb order in indirect questions."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A hospital wants doctors to practise without danger to patients. How can virtual reality help?",
+   "o": [
+    "by training doctors in a copy of the real world",
+    "by playing PacMan",
+    "by selling DVDs",
+    "by sending e-mails"
+   ],
+   "why": "VR can copy the real world for training."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the writer think virtual reality will seem more real in future?",
+   "o": [
+    "Computers and the Internet will develop",
+    "People will stop using computers",
+    "Games will disappear",
+    "Museums will close"
+   ],
+   "why": "Better technology will make VR more real."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is CAD software useful for designers?",
+   "o": [
+    "They can clearly see what they are trying to make",
+    "It plays music",
+    "It is a game",
+    "It replaces all designers"
+   ],
+   "why": "Seeing a design helps before building it."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we change 'What is virtual reality?' into 'Can you tell us what virtual reality is?' when talking to an expert?",
+   "o": [
+    "It is more polite",
+    "It is shorter",
+    "It is the past tense",
+    "It has no question mark"
+   ],
+   "why": "Indirect questions are polite."
+  }
+ ]
+}

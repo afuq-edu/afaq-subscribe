@@ -1,0 +1,266 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: Malls and Markets (Listening & Speaking)",
+ "lesson": "Expressing likes, dislikes and preferences: Activity 4, class survey and discussion",
+ "outcomes": [
+  "Express likes and dislikes using different phrases",
+  "Carry out a class survey and report the results"
+ ],
+ "tf": [
+  {
+   "s": "'I'm not very keen on eating out' expresses a dislike.",
+   "t": true,
+   "why": "Not keen on means you do not like it much."
+  },
+  {
+   "s": "'What do you think about...?' is a way to ask for someone's opinion.",
+   "t": true,
+   "why": "It invites the other person to share their view."
+  },
+  {
+   "s": "'In my view...' is used to give an opinion.",
+   "t": true,
+   "why": "It introduces what you think."
+  },
+  {
+   "s": "In a survey, you interview people and record their answers.",
+   "t": true,
+   "why": "A survey collects answers from a group."
+  },
+  {
+   "s": "'Three of the five students prefer malls' reports a survey result.",
+   "t": true,
+   "why": "It tells us what the group said."
+  },
+  {
+   "s": "'I'd rather shop in a souq than in a mall' expresses a dislike of souqs.",
+   "t": false,
+   "why": "It shows a preference for souqs."
+  },
+  {
+   "s": "Closed questions usually give reasons and opinions.",
+   "t": false,
+   "why": "Open questions give reasons; closed questions give quick facts."
+  },
+  {
+   "s": "'Personally speaking...' is a phrase to give your own opinion.",
+   "t": true,
+   "why": "It shows you are talking about yourself."
+  },
+  {
+   "s": "'How about you?' is used to end a conversation.",
+   "t": false,
+   "why": "It asks for the other person's opinion."
+  },
+  {
+   "s": "In Activity 4, each student writes five likes and five dislikes.",
+   "t": true,
+   "why": "Then they share them in pairs."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which phrase asks for an opinion?",
+   "o": [
+    "What do you think about...?",
+    "I'm not keen on...",
+    "I really like..."
+   ],
+   "why": "It invites someone to give their view."
+  },
+  {
+   "q": "Which phrase gives an opinion?",
+   "o": [
+    "In my view...",
+    "How about you?",
+    "How do you feel about...?"
+   ],
+   "why": "It introduces your own opinion."
+  },
+  {
+   "q": "Which sentence expresses a like?",
+   "o": [
+    "I really like the atmosphere in the mall.",
+    "I'm not very keen on eating out.",
+    "I can't stand crowds."
+   ],
+   "why": "'Really like' shows a like."
+  },
+  {
+   "q": "Which sentence expresses a dislike?",
+   "o": [
+    "I'm not very keen on eating out.",
+    "I'm really into shopping.",
+    "I love the souq."
+   ],
+   "why": "'Not keen on' shows a dislike."
+  },
+  {
+   "q": "What is a survey?",
+   "o": [
+    "asking many people questions",
+    "a long story",
+    "a shopping list"
+   ],
+   "why": "A survey collects answers from a group."
+  },
+  {
+   "q": "How many group members do you interview?",
+   "o": [
+    "four",
+    "ten",
+    "one"
+   ],
+   "why": "Groups of five, so you interview four others."
+  },
+  {
+   "q": "Which question gives quick facts?",
+   "o": [
+    "a closed question",
+    "an open question",
+    "no question"
+   ],
+   "why": "Closed questions have short answers."
+  },
+  {
+   "q": "Which question gives reasons?",
+   "o": [
+    "an open question",
+    "a closed question",
+    "a yes/no question"
+   ],
+   "why": "Open questions ask 'why' or 'how'."
+  },
+  {
+   "q": "Complete: I'd ___ shop in a souq than in a mall.",
+   "o": [
+    "rather",
+    "prefer",
+    "like"
+   ],
+   "why": "'I'd rather A than B'."
+  },
+  {
+   "q": "Which phrase reports a result?",
+   "o": [
+    "Three of the five students prefer malls.",
+    "I think that...",
+    "How about you?"
+   ],
+   "why": "It reports what the group said."
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is used to ask for someone's opinion?",
+   "o": [
+    "How do you feel about...?",
+    "Personally speaking...",
+    "In my view...",
+    "I think that..."
+   ],
+   "why": "It is a question about another person's feelings."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is used to give your opinion?",
+   "o": [
+    "Personally speaking...",
+    "What do you think about...?",
+    "How about you?",
+    "How do you feel about...?"
+   ],
+   "why": "It introduces your own opinion."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you do in the class survey?",
+   "o": [
+    "interview group members and record their answers",
+    "write a story",
+    "draw a map",
+    "read a poem"
+   ],
+   "why": "A survey collects and records answers."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where can you find helpful phrases for writing about the results?",
+   "o": [
+    "the Useful language box",
+    "the cover of the book",
+    "the answer key",
+    "the dictionary only"
+   ],
+   "why": "The box gives example phrases."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a dislike: 'I'm not very ______ on eating out.'",
+   "o": [
+    "keen",
+    "fan",
+    "rather",
+    "into"
+   ],
+   "why": "The phrase is 'not keen on'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "In your group, 3 out of 5 students prefer malls. Which sentence reports this correctly?",
+   "o": [
+    "Three of the five students prefer shopping in malls.",
+    "Five of the three students prefer malls.",
+    "All students prefer malls.",
+    "No students prefer malls."
+   ],
+   "why": "3 of 5 is a correct report."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want your friend's opinion after giving yours. What do you say?",
+   "o": [
+    "How about you?",
+    "I'm not keen on it.",
+    "I'd rather not.",
+    "In my view."
+   ],
+   "why": "It invites your friend to share."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does a survey need both open and closed questions?",
+   "o": [
+    "Closed questions give quick facts; open questions give reasons and opinions",
+    "They are the same",
+    "Open questions are only for teachers",
+    "Closed questions give long stories"
+   ],
+   "why": "Using both gives a full picture."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which question is open?",
+   "o": [
+    "Why do you prefer the souq?",
+    "Do you like malls?",
+    "Is the mall big?",
+    "Did you go shopping yesterday?"
+   ],
+   "why": "'Why' needs a reason, not just yes or no."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses a variety of language well in a discussion?",
+   "o": [
+    "In my view, malls are convenient, but how about you?",
+    "Malls. Yes.",
+    "I like. I like. I like.",
+    "Mall good."
+   ],
+   "why": "It gives an opinion and asks for another."
+  }
+ ]
+}

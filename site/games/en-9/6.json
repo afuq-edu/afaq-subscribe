@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 2: Connections",
+ "lesson": "Lesson 1: Reading – the importance of languages",
+ "outcomes": [
+  "Read short and long texts and choose answers that match all the information.",
+  "Find the main idea and the writer's opinion in an article.",
+  "Understand why languages are important to culture and identity."
+ ],
+ "tf": [
+  {
+   "s": "Arabic is spoken by more than 300 million people.",
+   "t": true,
+   "why": "This is one of the true facts in the language quiz."
+  },
+  {
+   "s": "In multiple choice, the right option often uses synonyms of words in the text.",
+   "t": true,
+   "why": "Finding synonyms helps you match the text and the option."
+  },
+  {
+   "s": "The notice says only students with good grades can attend the extra English lessons.",
+   "t": false,
+   "why": "Students with low grades can attend too."
+  },
+  {
+   "s": "Eliza sent Anna a message about paying for the trip.",
+   "t": true,
+   "why": "The trip money is due on Friday."
+  },
+  {
+   "s": "When he was young, the writer loved learning French.",
+   "t": false,
+   "why": "He was unhappy because it didn't seem necessary."
+  },
+  {
+   "s": "The writer wants to keep as many languages alive as possible.",
+   "t": true,
+   "why": "He says languages carry stories, traditions and memories."
+  },
+  {
+   "s": "'At risk' means safe and protected.",
+   "t": false,
+   "why": "'At risk' means in danger."
+  },
+  {
+   "s": "Léa thinks learning a new language is a negative experience.",
+   "t": false,
+   "why": "Léa is positive: she says it's a wonderful experience."
+  },
+  {
+   "s": "Léa's cousins helped her learn the most Wolof.",
+   "t": true,
+   "why": "Her cousins were her age and were learning French."
+  },
+  {
+   "s": "'The three weeks flew by' means the weeks went very quickly.",
+   "t": true,
+   "why": "'Flew by' means passed quickly."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word means 'in danger'?",
+   "o": [
+    "at risk",
+    "alive",
+    "original"
+   ],
+   "why": "A language at risk might die out."
+  },
+  {
+   "q": "Where might you see an 'Extra English lessons' text?",
+   "o": [
+    "on a school noticeboard",
+    "in a cookbook",
+    "on a bus ticket"
+   ],
+   "why": "It is a school notice."
+  },
+  {
+   "q": "Why did Eliza send the message?",
+   "o": [
+    "to tell Anna to pay for the trip",
+    "to invite Anna to a party",
+    "to ask for homework help"
+   ],
+   "why": "The trip money is due on Friday."
+  },
+  {
+   "q": "Complete: Something strange ___ over the weekend.",
+   "o": [
+    "occurred",
+    "realised",
+    "allowed"
+   ],
+   "why": "'Occur' means happen."
+  },
+  {
+   "q": "Complete: The grammar lesson was ___ confusing at first.",
+   "o": [
+    "slightly",
+    "alive",
+    "original"
+   ],
+   "why": "'Slightly' means a little."
+  },
+  {
+   "q": "What did the writer learn when he returned to Canada?",
+   "o": [
+    "Some classmates spoke French at home",
+    "Nobody spoke French",
+    "Everyone spoke Chinese"
+   ],
+   "why": "French was the first language of some classmates."
+  },
+  {
+   "q": "What does Fatma need her dad to do?",
+   "o": [
+    "deliver her Chinese notes to school",
+    "buy her a new phone",
+    "pay for a trip"
+   ],
+   "why": "She asks him to take her notes to the school reception."
+  },
+  {
+   "q": "Which word means 'still living or existing'?",
+   "o": [
+    "alive",
+    "slightly",
+    "occurred"
+   ],
+   "why": "Languages that are still used are alive."
+  },
+  {
+   "q": "What happens when a language 'dies out'?",
+   "o": [
+    "Nobody speaks it any more",
+    "More people learn it",
+    "It becomes official"
+   ],
+   "why": "A language dies out when it stops being used."
+  },
+  {
+   "q": "What is the opinion of the writer of 'The importance of languages'?",
+   "o": [
+    "We should stop languages dying out",
+    "We need only one language",
+    "Languages are not important"
+   ],
+   "why": "He believes languages connect us to history and culture."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "In danger",
+   "a": "at risk",
+   "d": [
+    "alive",
+    "original",
+    "slightly"
+   ]
+  },
+  {
+   "q": "A little",
+   "a": "slightly",
+   "d": [
+    "at risk",
+    "alive",
+    "original"
+   ]
+  },
+  {
+   "q": "Happened",
+   "a": "occurred",
+   "d": [
+    "realised",
+    "allowed",
+    "discovered"
+   ]
+  },
+  {
+   "q": "Understood suddenly",
+   "a": "realised",
+   "d": [
+    "occurred",
+    "allowed",
+    "alive"
+   ]
+  },
+  {
+   "q": "Found something new",
+   "a": "discovered",
+   "d": [
+    "realised",
+    "occurred",
+    "allowed"
+   ]
+  },
+  {
+   "q": "Went very quickly",
+   "a": "flew by",
+   "d": [
+    "picked up",
+    "died out",
+    "took up"
+   ]
+  },
+  {
+   "q": "Language in the blog",
+   "a": "Wolof",
+   "d": [
+    "Gaelic",
+    "Welsh",
+    "Maori"
+   ]
+  },
+  {
+   "q": "Helped Léa most",
+   "a": "her cousins",
+   "d": [
+    "her teacher",
+    "her parents",
+    "an app"
+   ]
+  },
+  {
+   "q": "Léa's view of learning Wolof",
+   "a": "positive",
+   "d": [
+    "negative",
+    "angry",
+    "bored"
+   ]
+  },
+  {
+   "q": "Eliza's message is about",
+   "a": "the trip money",
+   "d": [
+    "a party",
+    "homework",
+    "a new phone"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which languages does the article mention in Canada?",
+   "o": [
+    "English, French, Cree, Ojibwe and Inuktitut",
+    "Arabic and Chinese only",
+    "Spanish and Italian",
+    "Only English"
+   ],
+   "why": "Skimming the article shows these languages."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How did the writer feel about learning French when he was young?",
+   "o": [
+    "Unhappy, because it didn't seem necessary",
+    "Excited, because he loved French",
+    "Bored, because it was too easy",
+    "Afraid of his teacher"
+   ],
+   "why": "He didn't see why he needed French."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What kind of texts are the 'Extra English lessons' text and Eliza's text?",
+   "o": [
+    "a school notice and a phone message",
+    "a story and a poem",
+    "an email and a diary",
+    "a recipe and an advert"
+   ],
+   "why": "Knowing the text type helps you understand its purpose."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'first or earliest'?",
+   "o": [
+    "original",
+    "alive",
+    "slightly",
+    "at risk"
+   ],
+   "why": "The original form is the first one."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: 'Some languages are ___, and they might die out soon.'",
+   "o": [
+    "at risk",
+    "original",
+    "slightly",
+    "realised"
+   ],
+   "why": "Languages in danger are at risk."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A notice says 'Contact your teacher.' Which option means the same?",
+   "o": [
+    "Speak to their teacher",
+    "Go to the library",
+    "Pay at reception",
+    "Send an email to the head"
+   ],
+   "why": "'Contact your teacher' and 'speak to their teacher' mean the same."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good reason against 'The world only needs one language'?",
+   "o": [
+    "Different languages keep cultures and traditions alive",
+    "One language is cheaper to print",
+    "Everyone already speaks the same language",
+    "Languages are only for school"
+   ],
+   "why": "Languages carry culture, stories and history."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is answer A correct for the writer's main point?",
+   "o": [
+    "He says languages carry stories, traditions and memories, so he wants to keep them alive",
+    "He says French is the only important language",
+    "He says learning languages is a waste of time",
+    "He says all languages are the same"
+   ],
+   "why": "The main point comes from the whole text, not one detail."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What would Léa say to someone thinking about learning a new language?",
+   "o": [
+    "If you ever get the chance, do it – it's wonderful",
+    "Don't do it, it's too hard",
+    "Only learn it at school",
+    "Wait until you are older"
+   ],
+   "why": "Léa's blog is very positive about learning Wolof."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is option A wrong for the 'Extra English lessons' question?",
+   "o": [
+    "The notice says students with low grades can attend too",
+    "The notice says there are no lessons",
+    "The notice is about a sports club",
+    "Option A is too short"
+   ],
+   "why": "The right option must match all the information in the text."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 2: Let's dress up!",
+ "lesson": "Unit 2 – Lesson 2: Story (The school show)",
+ "outcomes": [
+  "I can say what the characters wear in The school show.",
+  "I can explain the problem in the story and Jack's idea.",
+  "I can give examples of not being wasteful."
+ ],
+ "tf": [
+  {
+   "s": "The school show is at three o'clock.",
+   "t": true,
+   "why": "Yes! It's at 3 o'clock."
+  },
+  {
+   "s": "Lily's dress is purple.",
+   "t": true,
+   "why": "Well done! It's purple."
+  },
+  {
+   "s": "Jack and Sami are wearing trainers in the show.",
+   "t": false,
+   "why": "No, they aren't. They're wearing slippers."
+  },
+  {
+   "s": "The jeans and shirts are too small.",
+   "t": true,
+   "why": "That is the problem in the story."
+  },
+  {
+   "s": "Lily and Fatma are wearing pyjamas and baseball caps.",
+   "t": false,
+   "why": "Lily and Fatma are wearing dresses and hats."
+  },
+  {
+   "s": "Jack says I've got an idea!",
+   "t": true,
+   "why": "Jack has a good idea."
+  },
+  {
+   "s": "At the end, the children throw the old clothes away.",
+   "t": false,
+   "why": "They recycle the old clothes."
+  },
+  {
+   "s": "Leaving the water running is wasteful.",
+   "t": true,
+   "why": "We must not waste water."
+  },
+  {
+   "s": "Putting coins in a money box is wasteful.",
+   "t": false,
+   "why": "Saving money is good. It is not wasteful."
+  },
+  {
+   "s": "Atomic and Polly are wearing coats and jumpers.",
+   "t": true,
+   "why": "Yes! Atomic and Polly wear coats and jumpers."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What time is the school show?",
+   "o": [
+    "at three o'clock",
+    "at eight o'clock",
+    "at night"
+   ],
+   "why": "The show is at 3 o'clock."
+  },
+  {
+   "q": "What colour is Lily's dress?",
+   "o": [
+    "purple",
+    "green",
+    "yellow"
+   ],
+   "why": "It's purple."
+  },
+  {
+   "q": "Who is first in the show?",
+   "o": [
+    "Lily and Fatma",
+    "Jack and Sami",
+    "Atomic and Polly"
+   ],
+   "why": "Hurry, Lily and Fatma. You're first."
+  },
+  {
+   "q": "Who is wearing coats and jumpers?",
+   "o": [
+    "Atomic and Polly",
+    "Lily and Fatma",
+    "Miss Razan"
+   ],
+   "why": "Atomic and Polly wear them."
+  },
+  {
+   "q": "What is wrong with the jeans?",
+   "o": [
+    "They're too small.",
+    "They're too big.",
+    "They're dirty."
+   ],
+   "why": "Those jeans are too small!"
+  },
+  {
+   "q": "Who says I've got an idea!?",
+   "o": [
+    "Jack",
+    "Lily",
+    "Polly"
+   ],
+   "why": "Jack has the idea."
+  },
+  {
+   "q": "What do the children do with old clothes?",
+   "o": [
+    "recycle them",
+    "throw them away",
+    "hide them"
+   ],
+   "why": "They recycle the old clothes."
+  },
+  {
+   "q": "Are Jack and Sami wearing trainers?",
+   "o": [
+    "No, they aren't.",
+    "Yes, they are.",
+    "Yes, it is."
+   ],
+   "why": "They're wearing slippers."
+  },
+  {
+   "q": "Who says Are you ready for the school show?",
+   "o": [
+    "Miss Razan",
+    "Atomic",
+    "Sami"
+   ],
+   "why": "Miss Razan says it first."
+  },
+  {
+   "q": "What is the value of the story?",
+   "o": [
+    "Don't be wasteful.",
+    "See beauty in everything.",
+    "Be first."
+   ],
+   "why": "The story teaches Don't be wasteful."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Time of the school show",
+   "a": "three o'clock",
+   "d": [
+    "eight o'clock",
+    "ten o'clock",
+    "two o'clock"
+   ]
+  },
+  {
+   "q": "Colour of Lily's dress",
+   "a": "purple",
+   "d": [
+    "green",
+    "red",
+    "blue"
+   ]
+  },
+  {
+   "q": "The jeans are too ___",
+   "a": "small",
+   "d": [
+    "big",
+    "long",
+    "old"
+   ]
+  },
+  {
+   "q": "Jack and Sami wear ___",
+   "a": "slippers",
+   "d": [
+    "trainers",
+    "dresses",
+    "hats"
+   ]
+  },
+  {
+   "q": "Lily and Fatma wear ___",
+   "a": "dresses",
+   "d": [
+    "pyjamas",
+    "slippers",
+    "coats"
+   ]
+  },
+  {
+   "q": "Atomic and Polly wear ___",
+   "a": "coats",
+   "d": [
+    "dresses",
+    "pyjamas",
+    "slippers"
+   ]
+  },
+  {
+   "q": "The teacher in the story",
+   "a": "Miss Razan",
+   "d": [
+    "Lily",
+    "Fatma",
+    "Polly"
+   ]
+  },
+  {
+   "q": "I've got an ___!",
+   "a": "idea",
+   "d": [
+    "egg",
+    "apple",
+    "eye"
+   ]
+  },
+  {
+   "q": "Old clothes: we ___ them",
+   "a": "recycle",
+   "d": [
+    "waste",
+    "break",
+    "lose"
+   ]
+  },
+  {
+   "q": "You look ___!",
+   "a": "amazing",
+   "d": [
+    "small",
+    "wasteful",
+    "late"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What are Jack and Sami wearing in the show?",
+   "o": [
+    "pyjamas, baseball caps and slippers",
+    "dresses and hats",
+    "coats and jumpers",
+    "jeans and trainers"
+   ],
+   "why": "They wear pyjamas, baseball caps and slippers."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who is wearing dresses and hats?",
+   "o": [
+    "Lily and Fatma",
+    "Jack and Sami",
+    "Atomic and Polly",
+    "Miss Razan and Jack"
+   ],
+   "why": "They're wearing dresses and hats: Lily and Fatma."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Miss Razan say at the end?",
+   "o": [
+    "Well done, everyone!",
+    "Oh, no!",
+    "Snap!",
+    "Tidy up!"
+   ],
+   "why": "Well done, everyone!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a short answer from the story questions?",
+   "o": [
+    "Yes, they are.",
+    "Yes, they is.",
+    "No, they not.",
+    "Yes, it are."
+   ],
+   "why": "We say Yes, they are. / No, they aren't."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A boy leaves the water running. Is it good?",
+   "o": [
+    "No, it's wasteful.",
+    "Yes, it's good.",
+    "Yes, he is clever.",
+    "No, it's too small."
+   ],
+   "why": "Running water is wasted."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which action is NOT wasteful?",
+   "o": [
+    "Take only the food you can eat.",
+    "Leave the lights on all day.",
+    "Throw away good clothes.",
+    "Leave the water running."
+   ],
+   "why": "Take only what you can eat."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Describe Lily and Fatma.",
+   "o": [
+    "They're wearing dresses and hats.",
+    "We're wearing dresses and hats.",
+    "They're wearing slippers.",
+    "They wearing dresses."
+   ],
+   "why": "Two girls: They're wearing ..."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the problem in the story?",
+   "o": [
+    "The jeans and shirts are too small.",
+    "The show is at night.",
+    "Lily's dress is green.",
+    "Miss Razan is late."
+   ],
+   "why": "The clothes are too small to wear."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do the children recycle the old clothes?",
+   "o": [
+    "They don't want to be wasteful.",
+    "The clothes are new.",
+    "They like the colour.",
+    "The show is finished."
+   ],
+   "why": "Recycling means we are not wasteful."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which old clothes can we reuse for a show?",
+   "o": [
+    "old shirts and hats",
+    "new phones",
+    "food",
+    "water"
+   ],
+   "why": "We can reuse old clothes in a new way."
+  }
+ ]
+}

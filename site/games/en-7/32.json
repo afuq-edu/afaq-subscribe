@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Lesson 4: Book club – A holiday on the Moon (science fiction)",
+ "outcomes": [
+  "Know the features of a science fiction story.",
+  "Answer questions about the family's holiday on the Moon.",
+  "Use phrasal verbs: get on, get off, take off, put on."
+ ],
+ "tf": [
+  {
+   "s": "Science fiction stories are often about the future.",
+   "t": true,
+   "why": "Yes, they show a future world."
+  },
+  {
+   "s": "In science fiction, the world is often different from ours.",
+   "t": true,
+   "why": "Yes, like a hotel on the Moon."
+  },
+  {
+   "s": "The family went to the launch pad by plane.",
+   "t": false,
+   "why": "They went by train."
+  },
+  {
+   "s": "The family stayed in a space hotel on the Moon.",
+   "t": true,
+   "why": "Yes, they stayed in a space hotel."
+  },
+  {
+   "s": "The food on the Moon was very fresh.",
+   "t": false,
+   "why": "The food wasn't fresh."
+  },
+  {
+   "s": "The helmets were uncomfortable.",
+   "t": true,
+   "why": "Yes, that was one problem."
+  },
+  {
+   "s": "When they landed, they got on the rocket.",
+   "t": false,
+   "why": "When they landed, they got off the rocket."
+  },
+  {
+   "s": "The Moon holiday was perfect for everyone.",
+   "t": false,
+   "why": "There were problems, and Issa wanted to go home."
+  },
+  {
+   "s": "The opposite of get on is get off.",
+   "t": true,
+   "why": "Yes, get on a train, get off a train."
+  },
+  {
+   "s": "Science fiction stories are always about things in the past.",
+   "t": false,
+   "why": "They are usually about the future."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is a launch pad?",
+   "o": [
+    "a place where rockets take off",
+    "a room in a hotel",
+    "a kind of space food"
+   ],
+   "why": "Rockets start their journey from a launch pad."
+  },
+  {
+   "q": "Where did they stay on the Moon?",
+   "o": [
+    "in a space hotel",
+    "in a tent",
+    "in a rocket"
+   ],
+   "why": "They stayed in a space hotel."
+  },
+  {
+   "q": "What do people wear on their heads outside on the Moon?",
+   "o": [
+    "helmets",
+    "flip-flops",
+    "pillows"
+   ],
+   "why": "Helmets help people breathe and stay safe."
+  },
+  {
+   "q": "Which one is a phrasal verb?",
+   "o": [
+    "get off",
+    "rocket",
+    "hotel"
+   ],
+   "why": "Get off = verb + small word."
+  },
+  {
+   "q": "A plane leaves the ground. It …",
+   "o": [
+    "takes off",
+    "gets off",
+    "puts on"
+   ],
+   "why": "Take off = leave the ground."
+  },
+  {
+   "q": "You ___ your helmet before you go outside.",
+   "o": [
+    "put on",
+    "get off",
+    "take off"
+   ],
+   "why": "Put on = wear something."
+  },
+  {
+   "q": "Science fiction is usually about …",
+   "o": [
+    "the future",
+    "real history",
+    "today's news"
+   ],
+   "why": "Sci-fi imagines the future."
+  },
+  {
+   "q": "Complete: We got ___ the train at the launch pad.",
+   "o": [
+    "off",
+    "on",
+    "up"
+   ],
+   "why": "You get off when you arrive."
+  },
+  {
+   "q": "Complete: Take ___ your helmet when you are inside.",
+   "o": [
+    "off",
+    "on",
+    "up"
+   ],
+   "why": "Take off = remove clothes or a helmet."
+  },
+  {
+   "q": "Which is NOT a problem on the Moon holiday?",
+   "o": [
+    "The hotel had no windows.",
+    "The food wasn't fresh.",
+    "The helmets were uncomfortable."
+   ],
+   "why": "The hotel had a window to see Mars."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Story type about the future",
+   "a": "science fiction",
+   "d": [
+    "folk tale",
+    "fact file",
+    "email"
+   ]
+  },
+  {
+   "q": "Their hotel on the Moon",
+   "a": "space hotel",
+   "d": [
+    "beach hotel",
+    "desert camp",
+    "tent"
+   ]
+  },
+  {
+   "q": "Planet seen from the window",
+   "a": "Mars",
+   "d": [
+    "Earth",
+    "Venus",
+    "Jupiter"
+   ]
+  },
+  {
+   "q": "Transport to the launch pad",
+   "a": "train",
+   "d": [
+    "plane",
+    "bus",
+    "taxi"
+   ]
+  },
+  {
+   "q": "Opposite of get on",
+   "a": "get off",
+   "d": [
+    "put on",
+    "take on",
+    "get up"
+   ]
+  },
+  {
+   "q": "Wear something: ___ it on",
+   "a": "put",
+   "d": [
+    "get",
+    "take",
+    "go"
+   ]
+  },
+  {
+   "q": "A rocket leaves: it takes …",
+   "a": "off",
+   "d": [
+    "on",
+    "in",
+    "up"
+   ]
+  },
+  {
+   "q": "Uncomfortable things",
+   "a": "helmets",
+   "d": [
+    "pillows",
+    "beds",
+    "chairs"
+   ]
+  },
+  {
+   "q": "Boy who wants to go home",
+   "a": "Issa",
+   "d": [
+    "Khalid",
+    "Frank",
+    "Talal"
+   ]
+  },
+  {
+   "q": "The food wasn't …",
+   "a": "fresh",
+   "d": [
+    "cold",
+    "sweet",
+    "big"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What are two features of a science fiction story?",
+   "o": [
+    "It is in the future and the world is different.",
+    "It is true and about the past.",
+    "It has animals that talk and teach a lesson.",
+    "It gives facts under headings."
+   ],
+   "why": "Future + a different world = sci-fi."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrasal verb means 'wear clothes or a helmet'?",
+   "o": [
+    "put on",
+    "get off",
+    "take off",
+    "get on"
+   ],
+   "why": "Put on your helmet."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How did the family travel when they landed on the Moon?",
+   "o": [
+    "by Moon train",
+    "by car",
+    "on foot only",
+    "by plane"
+   ],
+   "why": "They used the Moon train."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where did the rocket leave from?",
+   "o": [
+    "the launch pad",
+    "the beach",
+    "the bus station",
+    "the hotel"
+   ],
+   "why": "Rockets take off from a launch pad."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The rocket will take ___ at 9 o'clock.",
+   "o": [
+    "off",
+    "on",
+    "in",
+    "up"
+   ],
+   "why": "Rockets and planes take off."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Please get ___ the bus quickly. It's leaving!",
+   "o": [
+    "on",
+    "off",
+    "out",
+    "at"
+   ],
+   "why": "You get on a bus to travel."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which story is science fiction?",
+   "o": [
+    "Children live in a city under the sea in 2200.",
+    "A platypus can't join any animal group.",
+    "A family visits a museum in Salalah.",
+    "A fact file about the stick insect."
+   ],
+   "why": "It is in the future in a very different world."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why wasn't the Moon holiday perfect?",
+   "o": [
+    "There wasn't much to do and the food wasn't fresh.",
+    "The hotel was too big and the food was fresh.",
+    "The train was too fast.",
+    "It was too hot on the Moon."
+   ],
+   "why": "Good! These are reasons from the story."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Issa wants to go home. What does this tell us about the Moon holiday?",
+   "o": [
+    "It wasn't as good as he hoped.",
+    "It was perfect for him.",
+    "He loved the fresh food.",
+    "He wanted to stay longer."
+   ],
+   "why": "Wanting to go home shows he wasn't happy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is a good reason to want a Moon holiday?",
+   "o": [
+    "I want to see the Earth from space.",
+    "I want fresh food every day.",
+    "I want comfortable helmets.",
+    "I want lots of things to do."
+   ],
+   "why": "The story says the other things were problems."
+  }
+ ]
+}

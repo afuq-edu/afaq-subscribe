@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 4 – Off to the shops",
+ "lesson": "Lesson 1: Vocabulary – Shops",
+ "outcomes": [
+  "Recognise and say twelve shop names.",
+  "Match shops to the things you can buy there.",
+  "Sort shops into groups like food, clothes and presents."
+ ],
+ "tf": [
+  {
+   "s": "You can buy meat at the butcher's.",
+   "t": true,
+   "why": "The butcher's sells meat."
+  },
+  {
+   "s": "You can buy fish at the greengrocer's.",
+   "t": false,
+   "why": "We buy fish at the fishmonger's. The greengrocer's sells fruit and vegetables."
+  },
+  {
+   "s": "You can buy medicine at the pharmacy.",
+   "t": true,
+   "why": "The pharmacy sells medicine."
+  },
+  {
+   "s": "You can buy newspapers, magazines and snacks at the kiosk.",
+   "t": true,
+   "why": "A kiosk sells newspapers, magazines and snacks."
+  },
+  {
+   "s": "A jeweller's sells footballs.",
+   "t": false,
+   "why": "A jeweller's sells things like necklaces. Footballs are at the sports shop."
+  },
+  {
+   "s": "The greengrocer's belongs to the food group.",
+   "t": true,
+   "why": "It sells fruit and vegetables, which are food."
+  },
+  {
+   "s": "You can buy a present for your granny at the gift shop.",
+   "t": true,
+   "why": "A gift shop sells presents."
+  },
+  {
+   "s": "You buy boots at the toy shop.",
+   "t": false,
+   "why": "You buy boots at the shoe shop."
+  },
+  {
+   "s": "The fishmonger's sells fruit.",
+   "t": false,
+   "why": "The fishmonger's sells fish."
+  },
+  {
+   "s": "A spider web can help you sort new words into groups.",
+   "t": true,
+   "why": "Spider webs help us organise words."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where can you buy meat?",
+   "o": [
+    "at the butcher's",
+    "at the pharmacy",
+    "at the toy shop"
+   ],
+   "why": "The butcher's sells meat."
+  },
+  {
+   "q": "Where can you buy fish?",
+   "o": [
+    "at the fishmonger's",
+    "at the jeweller's",
+    "at the shoe shop"
+   ],
+   "why": "The fishmonger's sells fish."
+  },
+  {
+   "q": "Medicine? You buy it at the ______.",
+   "o": [
+    "pharmacy",
+    "kiosk",
+    "sports shop"
+   ],
+   "why": "We buy medicine at the pharmacy."
+  },
+  {
+   "q": "Choose: My mum often goes to the (pharmacy / kiosk) to buy a magazine.",
+   "o": [
+    "kiosk",
+    "pharmacy",
+    "butcher's"
+   ],
+   "why": "A kiosk sells magazines."
+  },
+  {
+   "q": "I need to buy a necklace for my sister. We'll go to the ______.",
+   "o": [
+    "jeweller's",
+    "fishmonger's",
+    "greengrocer's"
+   ],
+   "why": "A jeweller's sells necklaces."
+  },
+  {
+   "q": "Where can you buy a football?",
+   "o": [
+    "at the sports shop",
+    "at the pharmacy",
+    "at the gift shop"
+   ],
+   "why": "Sports shops sell footballs."
+  },
+  {
+   "q": "Where can you buy a new phone case?",
+   "o": [
+    "at the phone shop",
+    "at the butcher's",
+    "at the greengrocer's"
+   ],
+   "why": "A phone shop sells phone cases."
+  },
+  {
+   "q": "Which shop sells apples and bananas?",
+   "o": [
+    "the greengrocer's",
+    "the shoe shop",
+    "the jeweller's"
+   ],
+   "why": "The greengrocer's sells fruit and vegetables."
+  },
+  {
+   "q": "Which group does the butcher's belong to?",
+   "o": [
+    "food",
+    "clothes",
+    "toys"
+   ],
+   "why": "The butcher's sells meat, which is food."
+  },
+  {
+   "q": "Where can you buy a doll or a toy car?",
+   "o": [
+    "at the toy shop",
+    "at the kiosk",
+    "at the pharmacy"
+   ],
+   "why": "The toy shop sells toys."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Buy fish here",
+   "a": "fishmonger's",
+   "d": [
+    "butcher's",
+    "jeweller's",
+    "kiosk"
+   ]
+  },
+  {
+   "q": "Buy meat here",
+   "a": "butcher's",
+   "d": [
+    "fishmonger's",
+    "pharmacy",
+    "toy shop"
+   ]
+  },
+  {
+   "q": "Buy medicine here",
+   "a": "pharmacy",
+   "d": [
+    "kiosk",
+    "gift shop",
+    "shoe shop"
+   ]
+  },
+  {
+   "q": "Buy fruit here",
+   "a": "greengrocer's",
+   "d": [
+    "jeweller's",
+    "phone shop",
+    "sports shop"
+   ]
+  },
+  {
+   "q": "Buy a necklace here",
+   "a": "jeweller's",
+   "d": [
+    "butcher's",
+    "fishmonger's",
+    "kiosk"
+   ]
+  },
+  {
+   "q": "Buy a magazine here",
+   "a": "kiosk",
+   "d": [
+    "pharmacy",
+    "butcher's",
+    "shoe shop"
+   ]
+  },
+  {
+   "q": "Buy trainers or boots here",
+   "a": "shoe shop",
+   "d": [
+    "toy shop",
+    "gift shop",
+    "pharmacy"
+   ]
+  },
+  {
+   "q": "Buy a racket here",
+   "a": "sports shop",
+   "d": [
+    "jeweller's",
+    "greengrocer's",
+    "kiosk"
+   ]
+  },
+  {
+   "q": "Buy a present here",
+   "a": "gift shop",
+   "d": [
+    "fishmonger's",
+    "butcher's",
+    "pharmacy"
+   ]
+  },
+  {
+   "q": "Small shop near your home",
+   "a": "corner shop",
+   "d": [
+    "sports shop",
+    "jeweller's",
+    "phone shop"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which shop sells newspapers, magazines and snacks?",
+   "o": [
+    "the kiosk",
+    "the jeweller's",
+    "the butcher's",
+    "the shoe shop"
+   ],
+   "why": "A kiosk sells these things."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What can you buy at the fishmonger's?",
+   "o": [
+    "fish",
+    "meat",
+    "medicine",
+    "toys"
+   ],
+   "why": "The fishmonger's sells fish."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is spelled correctly?",
+   "o": [
+    "greengrocer's",
+    "grengrocer's",
+    "greengroser's",
+    "greengrocers'"
+   ],
+   "why": "g-r-e-e-n-g-r-o-c-e-r-'s."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which shop sells medicine?",
+   "o": [
+    "the pharmacy",
+    "the gift shop",
+    "the toy shop",
+    "the kiosk"
+   ],
+   "why": "The pharmacy sells medicine."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: Yesterday, we went to the (butcher's / shoe shop) to buy some meat.",
+   "o": [
+    "butcher's",
+    "shoe shop",
+    "pharmacy",
+    "toy shop"
+   ],
+   "why": "Meat is sold at the butcher's."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: On Saturdays, my dad goes to the fishmonger's to buy some fruit.",
+   "o": [
+    "… to the greengrocer's to buy some fruit.",
+    "… to the pharmacy to buy some fruit.",
+    "… to the jeweller's to buy some fruit.",
+    "… to the shoe shop to buy some fruit."
+   ],
+   "why": "We buy fruit at the greengrocer's."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to buy a present for your granny. Where will you go?",
+   "o": [
+    "the gift shop",
+    "the butcher's",
+    "the fishmonger's",
+    "the pharmacy"
+   ],
+   "why": "A gift shop sells presents."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group has only food shops?",
+   "o": [
+    "butcher's, fishmonger's, greengrocer's",
+    "pharmacy, kiosk, toy shop",
+    "jeweller's, gift shop, phone shop",
+    "shoe shop, sports shop, toy shop"
+   ],
+   "why": "These three shops sell food."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which shop is the odd one out?",
+   "o": [
+    "shoe shop",
+    "butcher's",
+    "fishmonger's",
+    "greengrocer's"
+   ],
+   "why": "The others sell food, but the shoe shop sells shoes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "You need a necklace for your sister. Which two shops can you try?",
+   "o": [
+    "the jeweller's or the gift shop",
+    "the butcher's or the fishmonger's",
+    "the pharmacy or the kiosk",
+    "the shoe shop or the sports shop"
+   ],
+   "why": "Both sell things you can give as presents, like necklaces."
+  }
+ ]
+}

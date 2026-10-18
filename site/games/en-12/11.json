@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Shop Till You Drop (Vocabulary)",
+ "lesson": "Listening for specific information; word variables; vocabulary practice",
+ "outcomes": [
+  "Listen for specific information to complete tables",
+  "Use synonyms and the correct part of speech",
+  "Compare malls and markets and predict vocabulary"
+ ],
+ "tf": [
+  {
+   "s": "'-holic' in words like 'workaholic' means addicted to something.",
+   "t": true,
+   "why": "A workaholic is addicted to work."
+  },
+  {
+   "s": "A synonym is a word with the opposite meaning.",
+   "t": false,
+   "why": "A synonym has the same or a similar meaning."
+  },
+  {
+   "s": "'Buy' is a synonym of 'purchase'.",
+   "t": true,
+   "why": "Purchase and buy mean the same."
+  },
+  {
+   "s": "Dr Michael Thrift is a consumer psychologist.",
+   "t": true,
+   "why": "That is his job in the radio phone-in."
+  },
+  {
+   "s": "Susan Spender is the presenter of the radio programme.",
+   "t": false,
+   "why": "Susan Spender is the caller."
+  },
+  {
+   "s": "Dr Thrift says Susan suffers from Compulsive Shopping Disorder.",
+   "t": true,
+   "why": "She shops too much."
+  },
+  {
+   "s": "Knowing the part of speech helps you choose the right word for a gap.",
+   "t": true,
+   "why": "Decide if you need a noun, verb, adjective or adverb."
+  },
+  {
+   "s": "'Huge' is a synonym of 'enormous'.",
+   "t": true,
+   "why": "Both mean very big."
+  },
+  {
+   "s": "Bargaining is more common in a modern mall than in a souq.",
+   "t": false,
+   "why": "Bargaining is typical of a souq."
+  },
+  {
+   "s": "Predicting vocabulary before listening makes the text harder to understand.",
+   "t": false,
+   "why": "Predicting makes listening easier."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is a synonym for 'purchase'?",
+   "o": [
+    "buy",
+    "sell",
+    "return"
+   ],
+   "why": "Purchase means buy."
+  },
+  {
+   "q": "What is a synonym for 'enormous'?",
+   "o": [
+    "huge",
+    "tiny",
+    "quiet"
+   ],
+   "why": "Enormous and huge both mean very big."
+  },
+  {
+   "q": "What is Dr Thrift's job?",
+   "o": [
+    "consumer psychologist",
+    "presenter",
+    "shop owner"
+   ],
+   "why": "He studies how consumers behave."
+  },
+  {
+   "q": "Who is the caller in the phone-in?",
+   "o": [
+    "Susan Spender",
+    "Dr Michael Thrift",
+    "Vanessa"
+   ],
+   "why": "Susan calls the radio programme."
+  },
+  {
+   "q": "What does a 'chocoholic' love too much?",
+   "o": [
+    "chocolate",
+    "work",
+    "shopping"
+   ],
+   "why": "'-holic' shows addiction."
+  },
+  {
+   "q": "How many words go in each listening gap?",
+   "o": [
+    "one word",
+    "three words",
+    "a sentence"
+   ],
+   "why": "The rule is one word per gap."
+  },
+  {
+   "q": "Where do you often find narrow passages and bargaining?",
+   "o": [
+    "a souq",
+    "a mall",
+    "a car park"
+   ],
+   "why": "These are features of a traditional market."
+  },
+  {
+   "q": "Where do you often find a multi-level car park?",
+   "o": [
+    "a mall",
+    "a souq",
+    "a dhow"
+   ],
+   "why": "Big malls have large car parks."
+  },
+  {
+   "q": "What is one similarity between malls and markets?",
+   "o": [
+    "both sell many things",
+    "both have no shops",
+    "both are online only"
+   ],
+   "why": "Both offer a great variety of goods."
+  },
+  {
+   "q": "Why predict before listening?",
+   "o": [
+    "it makes the text easier",
+    "it makes it longer",
+    "it replaces listening"
+   ],
+   "why": "You know what to listen for."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Synonym of 'purchase'",
+   "a": "buy",
+   "d": [
+    "sell",
+    "pay",
+    "lend"
+   ]
+  },
+  {
+   "q": "Synonym of 'enormous'",
+   "a": "huge",
+   "d": [
+    "tiny",
+    "short",
+    "thin"
+   ]
+  },
+  {
+   "q": "Addicted to work",
+   "a": "workaholic",
+   "d": [
+    "chocoholic",
+    "shopaholic",
+    "traveller"
+   ]
+  },
+  {
+   "q": "Addicted to chocolate",
+   "a": "chocoholic",
+   "d": [
+    "workaholic",
+    "shopaholic",
+    "baker"
+   ]
+  },
+  {
+   "q": "Dr Thrift's job",
+   "a": "psychologist",
+   "d": [
+    "presenter",
+    "lawyer",
+    "accountant"
+   ]
+  },
+  {
+   "q": "The caller's name",
+   "a": "Susan Spender",
+   "d": [
+    "Michael Thrift",
+    "Katy",
+    "Vanessa"
+   ]
+  },
+  {
+   "q": "Words with the same meaning",
+   "a": "synonyms",
+   "d": [
+    "opposites",
+    "collocations",
+    "headings"
+   ]
+  },
+  {
+   "q": "Traditional market in Oman",
+   "a": "souq",
+   "d": [
+    "mall",
+    "car park",
+    "factory"
+   ]
+  },
+  {
+   "q": "Discussing a price",
+   "a": "bargaining",
+   "d": [
+    "window-shopping",
+    "advertising",
+    "exporting"
+   ]
+  },
+  {
+   "q": "Looking at shops, not buying",
+   "a": "window-shopping",
+   "d": [
+    "bargaining",
+    "over-shopping",
+    "exporting"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who are the three speakers in the listening?",
+   "o": [
+    "the presenter, Dr Michael Thrift and Susan Spender",
+    "Vanessa, Katy and the presenter",
+    "Juliet, Adi and Levi",
+    "three shop assistants"
+   ],
+   "why": "These are the speakers in the radio phone-in."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does '-holic' mean in 'shopaholic'?",
+   "o": [
+    "addicted to something",
+    "a type of shop",
+    "a place to buy",
+    "very cheap"
+   ],
+   "why": "Shopaholic means addicted to shopping."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What disorder does Dr Thrift say Susan suffers from?",
+   "o": [
+    "Compulsive Shopping Disorder",
+    "Shopping Fear Disorder",
+    "Sleep Disorder",
+    "Spending Too Little Disorder"
+   ],
+   "why": "She shops too much."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a synonym?",
+   "o": [
+    "a word with the same or similar meaning",
+    "a word with the opposite meaning",
+    "a long sentence",
+    "a type of question"
+   ],
+   "why": "Purchase and buy are synonyms."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete with a noun: The doctor did a lot of ______ into shopping habits.",
+   "o": [
+    "research",
+    "gradually",
+    "ancient",
+    "connect"
+   ],
+   "why": "After 'a lot of' we need a noun."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete with an adverb: Her spending increased ______ over the year.",
+   "o": [
+    "gradually",
+    "research",
+    "disease",
+    "discover"
+   ],
+   "why": "An adverb describes how it increased."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a feature of a souq rather than a mall?",
+   "o": [
+    "bargaining with friendly shopkeepers",
+    "a multi-level car park",
+    "wide walkways",
+    "big fashion chain stores"
+   ],
+   "why": "Bargaining is typical of traditional markets."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How can you choose the correct word for a gap in a sentence?",
+   "o": [
+    "Decide the part of speech needed, then choose a word of that type",
+    "Choose the longest word",
+    "Choose the first word in the list",
+    "Choose any word you know"
+   ],
+   "why": "The grammar of the sentence shows what type of word fits."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does predicting vocabulary help with listening?",
+   "o": [
+    "You expect the content, so the text is easier to understand",
+    "You do not need to listen",
+    "The recording becomes shorter",
+    "You can write more words"
+   ],
+   "why": "Prediction prepares your mind for the topic."
+  },
+  {
+   "lv": "التحليل",
+   "q": "You will hear a talk about shopping in Muscat. Which words are you most likely to hear?",
+   "o": [
+    "souq, bargaining, parking",
+    "tanker, engine, steel",
+    "Juliet, Romeo, play",
+    "dhow, sail, wind"
+   ],
+   "why": "These words fit the topic of shopping."
+  }
+ ]
+}

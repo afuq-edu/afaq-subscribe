@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+ "lesson": "Across Cultures: Country Focus – Egypt",
+ "outcomes": [
+  "Read facts about Egypt and answer questions",
+  "Learn and use new words: investment, prestigious, fertile, literacy"
+ ],
+ "tf": [
+  {
+   "s": "Egypt is bordered by the Mediterranean Sea and the Red Sea.",
+   "t": true,
+   "why": "Both seas border Egypt."
+  },
+  {
+   "s": "The capital of Egypt is Cairo.",
+   "t": true,
+   "why": "Cairo is Egypt's capital."
+  },
+  {
+   "s": "Al-Azhar University is one of the oldest Islamic universities.",
+   "t": true,
+   "why": "It is a famous Egyptian university."
+  },
+  {
+   "s": "The Suez Canal is one of Egypt's sources of income.",
+   "t": true,
+   "why": "Egypt earns money from the canal."
+  },
+  {
+   "s": "Egypt's land is mostly forests and lakes.",
+   "t": false,
+   "why": "Egypt has deserts and the River Nile."
+  },
+  {
+   "s": "'Fertile' land is good for growing crops.",
+   "t": true,
+   "why": "The Nile valley is very fertile."
+  },
+  {
+   "s": "'Literacy' means the ability to swim.",
+   "t": false,
+   "why": "Literacy is the ability to read and write."
+  },
+  {
+   "s": "'Prestigious' means respected and admired.",
+   "t": true,
+   "why": "A prestigious university is highly respected."
+  },
+  {
+   "s": "Tourism is not a source of income for Egypt.",
+   "t": false,
+   "why": "Tourism is one of Egypt's sources of income."
+  },
+  {
+   "s": "The Nile has supported farming in Egypt since ancient times.",
+   "t": true,
+   "why": "Farming along its banks is very old."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which city is Egypt's capital?",
+   "o": [
+    "Cairo",
+    "Alexandria",
+    "Muscat"
+   ],
+   "why": "Cairo is the capital."
+  },
+  {
+   "q": "Which river runs through Egypt?",
+   "o": [
+    "the Nile",
+    "the Thames",
+    "the Amazon"
+   ],
+   "why": "The Nile is Egypt's great river."
+  },
+  {
+   "q": "Which sea borders Egypt?",
+   "o": [
+    "the Red Sea",
+    "the Black Sea",
+    "the North Sea"
+   ],
+   "why": "Egypt is bordered by the Red Sea and the Mediterranean Sea."
+  },
+  {
+   "q": "Which university is in Egypt?",
+   "o": [
+    "Al-Azhar University",
+    "Sultan Qaboos University",
+    "Oxford University"
+   ],
+   "why": "Al-Azhar is an old Islamic university."
+  },
+  {
+   "q": "What does 'fertile' mean?",
+   "o": [
+    "good for growing crops",
+    "very dry",
+    "very cold"
+   ],
+   "why": "Fertile soil helps plants grow."
+  },
+  {
+   "q": "What does 'literacy' mean?",
+   "o": [
+    "ability to read and write",
+    "love of sport",
+    "farming skill"
+   ],
+   "why": "Literacy is about reading and writing."
+  },
+  {
+   "q": "What does 'prestigious' mean?",
+   "o": [
+    "highly respected",
+    "very cheap",
+    "very new"
+   ],
+   "why": "Prestigious places are admired."
+  },
+  {
+   "q": "Which is a source of income for Egypt?",
+   "o": [
+    "the Suez Canal",
+    "the Silk Road",
+    "the Amazon"
+   ],
+   "why": "Ships pay to use the canal."
+  },
+  {
+   "q": "What is 'investment'?",
+   "o": [
+    "putting money in to make profit",
+    "spending on sweets",
+    "losing money"
+   ],
+   "why": "Investors hope to earn more later."
+  },
+  {
+   "q": "What is a 'fan'?",
+   "o": [
+    "someone who loves something",
+    "a type of canal",
+    "a kind of crop"
+   ],
+   "why": "A football fan loves football."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Capital of Egypt",
+   "a": "Cairo",
+   "d": [
+    "Muscat",
+    "Madrid",
+    "Paris"
+   ]
+  },
+  {
+   "q": "Egypt's great river",
+   "a": "Nile",
+   "d": [
+    "Thames",
+    "Amazon",
+    "Danube"
+   ]
+  },
+  {
+   "q": "Old Islamic university",
+   "a": "Al-Azhar",
+   "d": [
+    "Oxford",
+    "Harvard",
+    "Sorbonne"
+   ]
+  },
+  {
+   "q": "Canal in Egypt",
+   "a": "Suez Canal",
+   "d": [
+    "Panama Canal",
+    "Kiel Canal",
+    "Grand Canal"
+   ]
+  },
+  {
+   "q": "Good for growing crops",
+   "a": "fertile",
+   "d": [
+    "literate",
+    "prestigious",
+    "dry"
+   ]
+  },
+  {
+   "q": "Ability to read and write",
+   "a": "literacy",
+   "d": [
+    "investment",
+    "agriculture",
+    "tourism"
+   ]
+  },
+  {
+   "q": "Highly respected",
+   "a": "prestigious",
+   "d": [
+    "fertile",
+    "cheap",
+    "ordinary"
+   ]
+  },
+  {
+   "q": "Money put in for profit",
+   "a": "investment",
+   "d": [
+    "literacy",
+    "debt",
+    "salary"
+   ]
+  },
+  {
+   "q": "Farming",
+   "a": "agriculture",
+   "d": [
+    "tourism",
+    "literacy",
+    "investment"
+   ]
+  },
+  {
+   "q": "A sea bordering Egypt",
+   "a": "Mediterranean",
+   "d": [
+    "Black Sea",
+    "Caspian Sea",
+    "North Sea"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which seas border Egypt?",
+   "o": [
+    "the Mediterranean Sea and the Red Sea",
+    "the Black Sea and the Red Sea",
+    "the Arabian Sea and the North Sea",
+    "the Caspian Sea and the Mediterranean Sea"
+   ],
+   "why": "Egypt lies between these seas."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the capital of Egypt?",
+   "o": [
+    "Cairo",
+    "Alexandria",
+    "Luxor",
+    "Aswan"
+   ],
+   "why": "Cairo is the capital city."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which Egyptian university is one of the oldest Islamic universities?",
+   "o": [
+    "Al-Azhar University",
+    "Cairo Tower University",
+    "Nile University of Oman",
+    "Suez University of Spain"
+   ],
+   "why": "Al-Azhar is famous worldwide."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a source of income in Egypt?",
+   "o": [
+    "the Suez Canal",
+    "the Silk Road",
+    "the Amazon River",
+    "the Etihad Rail"
+   ],
+   "why": "The canal earns money for Egypt."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The Nile valley is very ______, so farmers grow many crops there.",
+   "o": [
+    "fertile",
+    "prestigious",
+    "literate",
+    "invested"
+   ],
+   "why": "Fertile land is good for crops."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The government wants to raise ______ so that everyone can read and write.",
+   "o": [
+    "literacy",
+    "investment",
+    "agriculture",
+    "tourism"
+   ],
+   "why": "Literacy means reading and writing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Al-Azhar is a ______ university that students from many countries want to join.",
+   "o": [
+    "prestigious",
+    "fertile",
+    "nutritious",
+    "refreshing"
+   ],
+   "why": "A prestigious university is highly respected."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the Nile important to Egypt?",
+   "o": [
+    "It supports farming along its banks and has done since ancient times",
+    "It is a desert",
+    "It is only used by tourists",
+    "It is the capital"
+   ],
+   "why": "Fertile land along the river makes farming possible."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Egypt has large deserts. Where would you expect most farming to happen?",
+   "o": [
+    "along the River Nile",
+    "in the middle of the desert",
+    "on the Red Sea",
+    "at the Suez Canal"
+   ],
+   "why": "The Nile valley is fertile."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is agriculture possible in a country with large deserts like Egypt?",
+   "o": [
+    "The River Nile makes the land along it fertile",
+    "The deserts are full of forests",
+    "It rains every day in the desert",
+    "The Suez Canal is a farm"
+   ],
+   "why": "Fertile land along the Nile supports farming."
+  }
+ ]
+}

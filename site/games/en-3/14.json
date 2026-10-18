@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 1: It's a happy day!",
+ "lesson": "Unit 1 – Graded readers",
+ "outcomes": [
+  "I can read Welcome to Robot School! and answer questions about times.",
+  "I can read Elephant's Day and say when Elephant does things.",
+  "I can put story events in order."
+ ],
+ "tf": [
+  {
+   "s": "The robots go to school at eight o'clock.",
+   "t": true,
+   "why": "Yes! They go to school at eight o'clock."
+  },
+  {
+   "s": "At Robot School, it's time for lunch at half past twelve.",
+   "t": true,
+   "why": "Well done! Lunch is at half past twelve."
+  },
+  {
+   "s": "The robots have art lessons in the morning.",
+   "t": false,
+   "why": "They have art lessons in the afternoon."
+  },
+  {
+   "s": "Robots sleep at night.",
+   "t": false,
+   "why": "The story says Robots don't sleep!"
+  },
+  {
+   "s": "Robot's drawing is a sports car.",
+   "t": true,
+   "why": "Great! Robot draws a sports car."
+  },
+  {
+   "s": "Elephant gets up in the morning.",
+   "t": true,
+   "why": "I get up in the morning, says Elephant."
+  },
+  {
+   "s": "Elephant goes to school.",
+   "t": false,
+   "why": "Elephant says I don't go to school. I play!"
+  },
+  {
+   "s": "Elephant sings in the evening.",
+   "t": true,
+   "why": "Yes! He sings in the evening."
+  },
+  {
+   "s": "Elephant plays at night.",
+   "t": false,
+   "why": "Elephant says I don't play at night. I go to bed."
+  },
+  {
+   "s": "The girl says My ears! because Elephant sings very loudly.",
+   "t": true,
+   "why": "His song is very loud!"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What time do the robots go to school?",
+   "o": [
+    "eight o'clock",
+    "ten o'clock",
+    "half past twelve"
+   ],
+   "why": "They go at eight o'clock."
+  },
+  {
+   "q": "What do the robots have for lunch?",
+   "o": [
+    "fish, rice and vegetables",
+    "toast and tea",
+    "cereal and milk"
+   ],
+   "why": "Lunch is fish, rice and vegetables."
+  },
+  {
+   "q": "When do the robots have art lessons?",
+   "o": [
+    "in the afternoon",
+    "in the morning",
+    "at night"
+   ],
+   "why": "Art lessons are in the afternoon."
+  },
+  {
+   "q": "What is Robot's drawing?",
+   "o": [
+    "a sports car",
+    "a whale",
+    "a robot"
+   ],
+   "why": "Robot draws a sports car."
+  },
+  {
+   "q": "When does Elephant play?",
+   "o": [
+    "in the afternoon",
+    "at night",
+    "in the morning"
+   ],
+   "why": "I play in the afternoon."
+  },
+  {
+   "q": "When does Elephant have dinner?",
+   "o": [
+    "in the evening",
+    "in the morning",
+    "in the afternoon"
+   ],
+   "why": "He has dinner in the evening."
+  },
+  {
+   "q": "Complete: I ___ play at night.",
+   "o": [
+    "don't",
+    "do",
+    "am"
+   ],
+   "why": "Elephant doesn't play at night."
+  },
+  {
+   "q": "What time does Elephant go to bed?",
+   "o": [
+    "ten o'clock",
+    "eight o'clock",
+    "half past twelve"
+   ],
+   "why": "It's ten o'clock. I go to bed."
+  },
+  {
+   "q": "Who doesn't sleep?",
+   "o": [
+    "the robots",
+    "Elephant",
+    "the girl"
+   ],
+   "why": "Robots don't sleep!"
+  },
+  {
+   "q": "What does the girl say when Elephant sings?",
+   "o": [
+    "My ears!",
+    "Snap!",
+    "Good morning!"
+   ],
+   "why": "His singing is very loud."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Robots go to school at ___",
+   "a": "eight o'clock",
+   "d": [
+    "ten o'clock",
+    "two o'clock",
+    "six o'clock"
+   ]
+  },
+  {
+   "q": "Robot lunch time",
+   "a": "half past twelve",
+   "d": [
+    "eight o'clock",
+    "ten o'clock",
+    "quarter to six"
+   ]
+  },
+  {
+   "q": "Robots have art in the ___",
+   "a": "afternoon",
+   "d": [
+    "morning",
+    "night",
+    "evening"
+   ]
+  },
+  {
+   "q": "Robot's drawing",
+   "a": "sports car",
+   "d": [
+    "whale",
+    "phone",
+    "kite"
+   ]
+  },
+  {
+   "q": "Robots don't ___!",
+   "a": "sleep",
+   "d": [
+    "eat",
+    "draw",
+    "play"
+   ]
+  },
+  {
+   "q": "Elephant gets up in the ___",
+   "a": "morning",
+   "d": [
+    "night",
+    "evening",
+    "afternoon"
+   ]
+  },
+  {
+   "q": "Elephant sings in the ___",
+   "a": "evening",
+   "d": [
+    "morning",
+    "afternoon",
+    "night"
+   ]
+  },
+  {
+   "q": "Elephant goes to bed at ___",
+   "a": "ten o'clock",
+   "d": [
+    "eight o'clock",
+    "two o'clock",
+    "six o'clock"
+   ]
+  },
+  {
+   "q": "Elephant doesn't go to ___",
+   "a": "school",
+   "d": [
+    "bed",
+    "dinner",
+    "sleep"
+   ]
+  },
+  {
+   "q": "The girl says: My ___!",
+   "a": "ears",
+   "d": [
+    "eyes",
+    "hands",
+    "legs"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is from Welcome to Robot School!?",
+   "o": [
+    "It's half past twelve. It's time for lunch.",
+    "I don't go to school. I play!",
+    "I sing in the evening.",
+    "It's ten o'clock. I go to bed."
+   ],
+   "why": "Lunch at half past twelve is at Robot School."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is from Elephant's Day?",
+   "o": [
+    "I sing in the evening.",
+    "Robots don't sleep!",
+    "We go to school at eight o'clock.",
+    "We have art lessons in the afternoon."
+   ],
+   "why": "Elephant sings in the evening."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Elephant do in the afternoon?",
+   "o": [
+    "He plays.",
+    "He goes to school.",
+    "He sleeps.",
+    "He has art lessons."
+   ],
+   "why": "I play in the afternoon."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do the robots drink with lunch?",
+   "o": [
+    "water",
+    "tea",
+    "juice",
+    "milk"
+   ],
+   "why": "They have fish, rice, vegetables and water."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Elephant, Elephant, when do you get ___?",
+   "o": [
+    "up",
+    "on",
+    "to",
+    "in"
+   ],
+   "why": "We say get up."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I ___ go to school. I play! (Elephant)",
+   "o": [
+    "don't",
+    "do",
+    "have",
+    "am"
+   ],
+   "why": "Elephant does not go to school."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Lunch at Robot School is at half past twelve. Where is the minute hand?",
+   "o": [
+    "on 6",
+    "on 12",
+    "on 3",
+    "on 9"
+   ],
+   "why": "Half past means the minute hand is on 6."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Put the Robot School events in order.",
+   "o": [
+    "English lessons, lunch, art lessons, go home",
+    "lunch, go home, English lessons, art lessons",
+    "art lessons, English lessons, go home, lunch",
+    "go home, art lessons, lunch, English lessons"
+   ],
+   "why": "English is first and they go home last."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Does Robot go to bed? Why?",
+   "o": [
+    "No, because robots don't sleep.",
+    "Yes, at night.",
+    "Yes, at ten o'clock.",
+    "No, because he plays tennis."
+   ],
+   "why": "Robots don't sleep!"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which retells Elephant's day in the right order?",
+   "o": [
+    "He gets up, plays, sings, goes to bed.",
+    "He goes to bed, sings, gets up, plays.",
+    "He plays, goes to bed, gets up, sings.",
+    "He sings, gets up, goes to bed, plays."
+   ],
+   "why": "Morning, afternoon, evening, night."
+  }
+ ]
+}

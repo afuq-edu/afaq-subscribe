@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "3",
+ "lesson": "Unit 3: Renewable Energy – Grammar and Vocabulary",
+ "outcomes": [
+  "Use conjunctions like also, so, because and but.",
+  "Link ideas with however, moreover, in addition and therefore.",
+  "Form adjectives with suffixes like -able, -ful and -ous."
+ ],
+ "tf": [
+  {
+   "s": "'So' introduces a result.",
+   "t": true,
+   "why": "Yes, 'so' tells us what happened because of something."
+  },
+  {
+   "s": "'Because' introduces a contrast.",
+   "t": false,
+   "why": "'Because' gives a reason; 'but' shows contrast."
+  },
+  {
+   "s": "'Also' adds information.",
+   "t": true,
+   "why": "Correct, 'also' adds another idea."
+  },
+  {
+   "s": "'However' shows a contrast between two ideas.",
+   "t": true,
+   "why": "Right, like 'Solar power is clean. However, it is expensive.'"
+  },
+  {
+   "s": "'Moreover' shows a contrast.",
+   "t": false,
+   "why": "'Moreover' adds similar information."
+  },
+  {
+   "s": "power + ful = powerful",
+   "t": true,
+   "why": "Well done, -ful makes an adjective."
+  },
+  {
+   "s": "danger + ous = dangerful",
+   "t": false,
+   "why": "The correct word is 'dangerous'."
+  },
+  {
+   "s": "'Sustainable' ends with the suffix -able.",
+   "t": true,
+   "why": "Yes, sustain + able."
+  },
+  {
+   "s": "'Therefore' introduces a result.",
+   "t": true,
+   "why": "Correct, 'therefore' is a formal way to say 'so'."
+  },
+  {
+   "s": "'Renew' is an adjective.",
+   "t": false,
+   "why": "'Renew' is a verb; 'renewable' is the adjective."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Solar power is clean ___ it is expensive.",
+   "o": [
+    "but",
+    "because",
+    "so"
+   ],
+   "why": "Clean and expensive are opposite ideas, so we use 'but'."
+  },
+  {
+   "q": "Which conjunction gives a reason?",
+   "o": [
+    "because",
+    "so",
+    "but"
+   ],
+   "why": "'Because' answers 'why?'."
+  },
+  {
+   "q": "Which connector adds similar information?",
+   "o": [
+    "moreover",
+    "however",
+    "but"
+   ],
+   "why": "'Moreover' adds another point."
+  },
+  {
+   "q": "danger + ous = ?",
+   "o": [
+    "dangerous",
+    "dangerful",
+    "dangerable"
+   ],
+   "why": "-ous makes 'dangerous'."
+  },
+  {
+   "q": "use + ful = ?",
+   "o": [
+    "useful",
+    "useous",
+    "usive"
+   ],
+   "why": "-ful makes 'useful'."
+  },
+  {
+   "q": "Oil is running out. ___, we need renewable energy.",
+   "o": [
+    "Therefore",
+    "However",
+    "But"
+   ],
+   "why": "Needing renewable energy is the result."
+  },
+  {
+   "q": "Which word is an adjective?",
+   "o": [
+    "renewable",
+    "renew",
+    "renewal"
+   ],
+   "why": "-able makes an adjective."
+  },
+  {
+   "q": "Which conjunction shows a result?",
+   "o": [
+    "so",
+    "because",
+    "also"
+   ],
+   "why": "'So' shows what happens next."
+  },
+  {
+   "q": "environment + al = ?",
+   "o": [
+    "environmental",
+    "environmentful",
+    "environmentous"
+   ],
+   "why": "-al makes 'environmental'."
+  },
+  {
+   "q": "'Wind power is renewable. ___, it is quiet.'",
+   "o": [
+    "In addition",
+    "However",
+    "Because"
+   ],
+   "why": "Quiet is another good point, so we add it."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Conjunction for a reason",
+   "a": "because",
+   "d": [
+    "so",
+    "also",
+    "but"
+   ]
+  },
+  {
+   "q": "Conjunction for a result",
+   "a": "so",
+   "d": [
+    "because",
+    "also",
+    "but"
+   ]
+  },
+  {
+   "q": "Conjunction for contrast",
+   "a": "but",
+   "d": [
+    "so",
+    "also",
+    "because"
+   ]
+  },
+  {
+   "q": "Word that adds information",
+   "a": "also",
+   "d": [
+    "but",
+    "so",
+    "because"
+   ]
+  },
+  {
+   "q": "Formal word for contrast",
+   "a": "however",
+   "d": [
+    "moreover",
+    "therefore",
+    "in addition"
+   ]
+  },
+  {
+   "q": "Formal word for a result",
+   "a": "therefore",
+   "d": [
+    "however",
+    "moreover",
+    "although"
+   ]
+  },
+  {
+   "q": "beauty + suffix",
+   "a": "beautiful",
+   "d": [
+    "beautyous",
+    "beautyable",
+    "beautive"
+   ]
+  },
+  {
+   "q": "Root word of renewable",
+   "a": "renew",
+   "d": [
+    "able",
+    "new",
+    "renewal"
+   ]
+  },
+  {
+   "q": "effect + suffix",
+   "a": "effective",
+   "d": [
+    "effectful",
+    "effectous",
+    "effectable"
+   ]
+  },
+  {
+   "q": "Suffix in 'sustainable'",
+   "a": "-able",
+   "d": [
+    "-ful",
+    "-ous",
+    "-ive"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which conjunction introduces a reason?",
+   "o": [
+    "because",
+    "so",
+    "also",
+    "but"
+   ],
+   "why": "'Because' tells us why."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'moreover' do in a sentence?",
+   "o": [
+    "It adds similar information.",
+    "It shows contrast.",
+    "It gives a reason.",
+    "It asks a question."
+   ],
+   "why": "'Moreover' means 'also' in a formal way."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is formed with the suffix -ous?",
+   "o": [
+    "dangerous",
+    "powerful",
+    "effective",
+    "useful"
+   ],
+   "why": "danger + ous = dangerous."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a suffix?",
+   "o": [
+    "letters added to the end of a word",
+    "letters added to the start of a word",
+    "a type of sentence",
+    "a punctuation mark"
+   ],
+   "why": "Suffixes like -ful go at the end."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The Aviva Stadium uses renewable energy, ___ it reduced its carbon footprint.",
+   "o": [
+    "so",
+    "but",
+    "because",
+    "however"
+   ],
+   "why": "Reducing the carbon footprint is the result."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Join with 'also': 'I like football. I like tennis.'",
+   "o": [
+    "I like football. I also like tennis.",
+    "I also like football. I like also tennis.",
+    "I like football also I tennis.",
+    "Also I like football tennis."
+   ],
+   "why": "'Also' goes before the main verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Solar power is clean. ___, it is expensive to build.",
+   "o": [
+    "However",
+    "Moreover",
+    "In addition",
+    "Therefore"
+   ],
+   "why": "Clean vs expensive is a contrast."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between 'so' and 'because'?",
+   "o": [
+    "'So' introduces a result; 'because' introduces a reason.",
+    "They mean exactly the same.",
+    "'So' shows contrast; 'because' adds information.",
+    "'Because' introduces a result."
+   ],
+   "why": "Reason comes with 'because', result with 'so'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Coal is cheap. ___, it pollutes the air.' Which connector fits best?",
+   "o": [
+    "On the other hand",
+    "In addition",
+    "Therefore",
+    "Because"
+   ],
+   "why": "Cheap is good and pollution is bad, so we need a contrast."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are suffixes useful for building vocabulary?",
+   "o": [
+    "They let us form new words from the same root.",
+    "They make words shorter.",
+    "They change nouns into questions.",
+    "They are only used in names."
+   ],
+   "why": "One root like 'power' can make 'powerful'."
+  }
+ ]
+}

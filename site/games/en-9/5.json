@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 1: Identity",
+ "lesson": "Lesson 7: Switch On – Learning is fun (video and project)",
+ "outcomes": [
+  "Understand that people can learn new things at any age.",
+  "Use verb–noun collocations: repair a car, take a class, make friends.",
+  "Make an information sheet about evening classes with my group."
+ ],
+ "tf": [
+  {
+   "s": "The video says you can learn new things at any age and anywhere.",
+   "t": true,
+   "why": "That is the main message of the video."
+  },
+  {
+   "s": "According to the video, learning stops when you leave school.",
+   "t": false,
+   "why": "The video shows people learning throughout their lives."
+  },
+  {
+   "s": "Some people learn new things from home with apps or video tutorials.",
+   "t": true,
+   "why": "The video mentions learning from home."
+  },
+  {
+   "s": "Learning new skills can help you feel more confident.",
+   "t": true,
+   "why": "The video says new skills make people more confident."
+  },
+  {
+   "s": "We say 'make a class' when we start a course.",
+   "t": false,
+   "why": "We say 'take a class' or 'join a class'."
+  },
+  {
+   "s": "Evening classes can help you meet new people.",
+   "t": true,
+   "why": "The video says learners meet new people."
+  },
+  {
+   "s": "An information sheet about classes doesn't need times.",
+   "t": false,
+   "why": "Each class needs its time, length, materials and content."
+  },
+  {
+   "s": "We say 'repair a car' when we fix it.",
+   "t": true,
+   "why": "Repair means fix."
+  },
+  {
+   "s": "A photo on an information sheet makes it harder to understand.",
+   "t": false,
+   "why": "Photos show quickly what the class is about."
+  },
+  {
+   "s": "We say 'She made new friends there.'",
+   "t": true,
+   "why": "The collocation is make friends."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: My dad wants to ___ our car himself.",
+   "o": [
+    "repair",
+    "arrange",
+    "take"
+   ],
+   "why": "Repair means fix something broken."
+  },
+  {
+   "q": "Complete: She ___ new friends at the class.",
+   "o": [
+    "made",
+    "did",
+    "took"
+   ],
+   "why": "We say make friends."
+  },
+  {
+   "q": "Complete: I want to ___ a cooking class.",
+   "o": [
+    "take",
+    "make",
+    "repair"
+   ],
+   "why": "We say take a class."
+  },
+  {
+   "q": "Complete: They learn to ___ flowers.",
+   "o": [
+    "arrange",
+    "repair",
+    "give"
+   ],
+   "why": "The collocation is arrange flowers."
+  },
+  {
+   "q": "When can people learn, according to the video?",
+   "o": [
+    "at any age",
+    "only as children",
+    "only at school"
+   ],
+   "why": "Learning is lifelong."
+  },
+  {
+   "q": "What is lifelong learning?",
+   "o": [
+    "learning all through your life",
+    "learning only one skill",
+    "learning only at school"
+   ],
+   "why": "Lifelong means for your whole life."
+  },
+  {
+   "q": "Which information should each class on the sheet include?",
+   "o": [
+    "time, length, materials",
+    "only the teacher's name",
+    "only the price"
+   ],
+   "why": "People need to know when, how long and what to bring."
+  },
+  {
+   "q": "Complete: The cooking class ___ at 6 p.m. every Monday.",
+   "o": [
+    "starts",
+    "start",
+    "starting"
+   ],
+   "why": "He/she/it in the present simple adds -s."
+  },
+  {
+   "q": "Which is a good sentence for an information sheet?",
+   "o": [
+    "Please bring an apron and a notebook.",
+    "Bring maybe something.",
+    "Apron notebook bring."
+   ],
+   "why": "It tells people clearly what to bring."
+  },
+  {
+   "q": "Complete: The class ___ her the confidence to apply for a promotion.",
+   "o": [
+    "gave",
+    "made",
+    "took"
+   ],
+   "why": "We say give someone confidence."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "___ a car (fix it)",
+   "a": "repair",
+   "d": [
+    "arrange",
+    "take",
+    "make"
+   ]
+  },
+  {
+   "q": "___ flowers",
+   "a": "arrange",
+   "d": [
+    "repair",
+    "give",
+    "take"
+   ]
+  },
+  {
+   "q": "___ a class",
+   "a": "take",
+   "d": [
+    "make",
+    "repair",
+    "arrange"
+   ]
+  },
+  {
+   "q": "___ new friends",
+   "a": "make",
+   "d": [
+    "take",
+    "repair",
+    "arrange"
+   ]
+  },
+  {
+   "q": "___ someone confidence",
+   "a": "give",
+   "d": [
+    "make",
+    "take",
+    "arrange"
+   ]
+  },
+  {
+   "q": "Classes after work",
+   "a": "evening classes",
+   "d": [
+    "morning lessons",
+    "school exams",
+    "sports games"
+   ]
+  },
+  {
+   "q": "Making pots from clay",
+   "a": "pottery",
+   "d": [
+    "cooking",
+    "photography",
+    "repair"
+   ]
+  },
+  {
+   "q": "Things you bring to a class",
+   "a": "materials",
+   "d": [
+    "timetable",
+    "length",
+    "learning centre"
+   ]
+  },
+  {
+   "q": "Learning at every age",
+   "a": "lifelong learning",
+   "d": [
+    "homework",
+    "exam",
+    "timetable"
+   ]
+  },
+  {
+   "q": "Feeling sure of yourself",
+   "a": "confident",
+   "d": [
+    "lazy",
+    "shy",
+    "bored"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the main message of the video?",
+   "o": [
+    "You can learn things at any age and anywhere",
+    "Only children can learn",
+    "Learning is boring",
+    "You need a lot of money to learn"
+   ],
+   "why": "The video is about learning throughout your life."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do some people learn new things from home?",
+   "o": [
+    "They use apps or watch video tutorials",
+    "They go to a stadium",
+    "They visit a museum every day",
+    "They don't learn at home"
+   ],
+   "why": "The video mentions apps and video tutorials."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which collocation is correct?",
+   "o": [
+    "join a class",
+    "make a class",
+    "do a class",
+    "repair a class"
+   ],
+   "why": "We join or take a class."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What must each class description on the sheet include?",
+   "o": [
+    "time, length, what to bring and what people will learn",
+    "only a picture",
+    "only the teacher's phone number",
+    "the price of the building"
+   ],
+   "why": "These details help people choose a class."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: She ___ new friends there, and that ___ her the confidence to apply for a promotion.",
+   "o": [
+    "made / gave",
+    "did / made",
+    "took / took",
+    "gave / made"
+   ],
+   "why": "Make friends; give someone confidence."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which question could you ask another group about their sheet?",
+   "o": [
+    "How long is the pottery class?",
+    "Why are you here?",
+    "What is your surname?",
+    "Did you went to class?"
+   ],
+   "why": "It asks for information on the sheet."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your uncle wants to fix his own bike. Which evening class is best for him?",
+   "o": [
+    "bike repair",
+    "flower arranging",
+    "pottery",
+    "cooking"
+   ],
+   "why": "A repair class teaches you to fix things."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How are evening classes different from school?",
+   "o": [
+    "People choose them and can join at any age",
+    "They are only for children",
+    "They have no teacher",
+    "They are always free and every day"
+   ],
+   "why": "Adults choose evening classes to learn new skills."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is a photo or drawing useful on an information sheet?",
+   "o": [
+    "It shows quickly what the class is about",
+    "It hides the times",
+    "It makes the sheet longer",
+    "It replaces all the information"
+   ],
+   "why": "Pictures make the sheet clear and attractive."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is an advantage of learning new skills mentioned in the video?",
+   "o": [
+    "You feel more confident and meet new people",
+    "You never need to work",
+    "You stop learning at school",
+    "You become lazy"
+   ],
+   "why": "New skills help confidence and friendships."
+  }
+ ]
+}

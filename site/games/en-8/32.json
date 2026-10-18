@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 3: Spend or save?",
+ "lesson": "Lesson 6: WOW! Culture – Interesting markets (Project)",
+ "outcomes": [
+  "Read about interesting markets and find key facts.",
+  "Choose a market to visit and give reasons.",
+  "Write and present a tourist leaflet about markets."
+ ],
+ "tf": [
+  {
+   "s": "The Muara Kuin Floating Market is in Indonesia.",
+   "t": true,
+   "why": "Yes, it is a floating market in Indonesia."
+  },
+  {
+   "s": "You should get to the floating market after sunset.",
+   "t": false,
+   "why": "Go before sunrise; it is usually finished by 7am."
+  },
+  {
+   "s": "At the floating market you can buy fruit, vegetables, flowers and fish.",
+   "t": true,
+   "why": "Correct, they are sold from shop-boats."
+  },
+  {
+   "s": "Djemaa el Fna is in Marrakech.",
+   "t": true,
+   "why": "Right, it is in Marrakech."
+  },
+  {
+   "s": "Djemaa el Fna is famous for selling computers.",
+   "t": false,
+   "why": "It is famous for leather bags and shoes and bright bowls and cups."
+  },
+  {
+   "s": "The Flower Market in Hong Kong is open from 7am to 7pm every day.",
+   "t": true,
+   "why": "Well done, those are its opening times."
+  },
+  {
+   "s": "Khan al-Khalili market in Cairo is more than 600 years old.",
+   "t": true,
+   "why": "Yes, it is one of the oldest markets in the world."
+  },
+  {
+   "s": "At Djemaa el Fna after sunset, you can watch snakes and monkeys doing tricks.",
+   "t": true,
+   "why": "Yes, and eat food and listen to stories."
+  },
+  {
+   "s": "The Flower Market is in Indonesia.",
+   "t": false,
+   "why": "The Flower Market is in Hong Kong."
+  },
+  {
+   "s": "A good market description says only the colour of the market.",
+   "t": false,
+   "why": "Say where it is, when it is open and what you can buy."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where is the Muara Kuin Floating Market?",
+   "o": [
+    "Indonesia",
+    "Hong Kong",
+    "Cairo"
+   ],
+   "why": "It is in Indonesia."
+  },
+  {
+   "q": "Why go to the floating market before sunrise?",
+   "o": [
+    "It is usually finished by 7am.",
+    "It opens at night.",
+    "It is too hot at 6am."
+   ],
+   "why": "It closes early, by about 7am."
+  },
+  {
+   "q": "Where is the Flower Market?",
+   "o": [
+    "Hong Kong",
+    "Marrakech",
+    "Cairo"
+   ],
+   "why": "The Flower Market is in Hong Kong."
+  },
+  {
+   "q": "When is the Flower Market open?",
+   "o": [
+    "7am to 7pm every day",
+    "only at night",
+    "only on Fridays"
+   ],
+   "why": "It is open 7am to 7pm every day."
+  },
+  {
+   "q": "Which market is in Marrakech?",
+   "o": [
+    "Djemaa el Fna",
+    "Muara Kuin",
+    "Khan al-Khalili"
+   ],
+   "why": "Djemaa el Fna is in Marrakech."
+  },
+  {
+   "q": "Which market is in Cairo?",
+   "o": [
+    "Khan al-Khalili",
+    "Djemaa el Fna",
+    "the Flower Market"
+   ],
+   "why": "Khan al-Khalili is in Cairo."
+  },
+  {
+   "q": "At the floating market, people sell from ...",
+   "o": [
+    "shop-boats",
+    "cars",
+    "tents"
+   ],
+   "why": "Sellers use shop-boats on the water."
+  },
+  {
+   "q": "Djemaa el Fna sells bags and shoes made of ...",
+   "o": [
+    "leather",
+    "glass",
+    "paper"
+   ],
+   "why": "It is famous for leather bags and shoes."
+  },
+  {
+   "q": "What should a market description include?",
+   "o": [
+    "where, when it opens, what you can buy",
+    "your favourite colour",
+    "your teacher's name"
+   ],
+   "why": "These facts help tourists."
+  },
+  {
+   "q": "Which is a market in Oman you could include?",
+   "o": [
+    "Muttrah Souq",
+    "Djemaa el Fna",
+    "the Flower Market"
+   ],
+   "why": "Muttrah Souq is in Oman."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Country of Muara Kuin",
+   "a": "Indonesia",
+   "d": [
+    "Morocco",
+    "Egypt",
+    "China"
+   ]
+  },
+  {
+   "q": "City of Djemaa el Fna",
+   "a": "Marrakech",
+   "d": [
+    "Cairo",
+    "Hong Kong",
+    "Muscat"
+   ]
+  },
+  {
+   "q": "City of Khan al-Khalili",
+   "a": "Cairo",
+   "d": [
+    "Marrakech",
+    "Hong Kong",
+    "Muscat"
+   ]
+  },
+  {
+   "q": "City of the Flower Market",
+   "a": "Hong Kong",
+   "d": [
+    "Cairo",
+    "Marrakech",
+    "Sinaw"
+   ]
+  },
+  {
+   "q": "Floating market ends by",
+   "a": "7am",
+   "d": [
+    "7pm",
+    "noon",
+    "midnight"
+   ]
+  },
+  {
+   "q": "Flower Market closes at",
+   "a": "7pm",
+   "d": [
+    "7am",
+    "noon",
+    "10pm"
+   ]
+  },
+  {
+   "q": "Age of Khan al-Khalili",
+   "a": "600+ years",
+   "d": [
+    "60 years",
+    "10 years",
+    "6 years"
+   ]
+  },
+  {
+   "q": "Boats used as shops",
+   "a": "shop-boats",
+   "d": [
+    "ships",
+    "rafts",
+    "canoes"
+   ]
+  },
+  {
+   "q": "Bags at Djemaa el Fna",
+   "a": "leather",
+   "d": [
+    "plastic",
+    "paper",
+    "glass"
+   ]
+  },
+  {
+   "q": "Animals doing tricks",
+   "a": "snakes and monkeys",
+   "d": [
+    "camels",
+    "falcons",
+    "oryx"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What can you buy at the Muara Kuin Floating Market?",
+   "o": [
+    "fruit, vegetables, flowers and fish",
+    "leather bags and shoes",
+    "computers and phones",
+    "cars and bikes"
+   ],
+   "why": "These are sold from shop-boats."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is Djemaa el Fna famous for selling?",
+   "o": [
+    "leather bags and shoes and bright bowls and cups",
+    "fresh fish only",
+    "flowers only",
+    "books"
+   ],
+   "why": "It is famous for leather goods and colourful bowls and cups."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is one of the oldest markets in the world?",
+   "o": [
+    "Khan al-Khalili in Cairo",
+    "the Flower Market in Hong Kong",
+    "Muara Kuin",
+    "a new mall"
+   ],
+   "why": "Khan al-Khalili is more than 600 years old."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When is the Flower Market in Hong Kong open?",
+   "o": [
+    "7am to 7pm every day",
+    "only before sunrise",
+    "only after sunset",
+    "on weekends only"
+   ],
+   "why": "It opens every day from 7am to 7pm."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to buy fresh fish from a boat early in the morning. Where should you go?",
+   "o": [
+    "Muara Kuin Floating Market",
+    "the Flower Market",
+    "Djemaa el Fna in the evening",
+    "Khan al-Khalili at night"
+   ],
+   "why": "The floating market sells fish from shop-boats early."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a sentence for a leaflet: If you go early, you ___ the best fish.",
+   "o": [
+    "'ll find",
+    "found",
+    "would found",
+    "finding"
+   ],
+   "why": "First conditional: If you go, you'll find."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: If I could visit one market, I ___ go to Djemaa el Fna.",
+   "o": [
+    "'d",
+    "'ll",
+    "am",
+    "did"
+   ],
+   "why": "Second conditional: I'd go."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A tourist wants to hear stories and watch tricks in the evening. Which market is best?",
+   "o": [
+    "Djemaa el Fna",
+    "Muara Kuin",
+    "the Flower Market",
+    "a second-hand shop"
+   ],
+   "why": "After sunset at Djemaa el Fna there are stories and tricks."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might a tourist who wakes up late miss the floating market?",
+   "o": [
+    "It is usually finished by 7am.",
+    "It opens at 7pm.",
+    "It is closed every day.",
+    "It is on the Moon."
+   ],
+   "why": "It starts before sunrise and ends early."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which leaflet description is the most useful?",
+   "o": [
+    "The Flower Market is in Hong Kong. It is open 7am to 7pm every day.",
+    "It is a nice market.",
+    "I like markets.",
+    "Markets are big."
+   ],
+   "why": "It gives where and when, which helps tourists."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 1: Our planet",
+ "lesson": "Lesson 12: Fun corner (Optional lesson)",
+ "outcomes": [
+  "Have fun using Unit 1 words about the planet and the weather.",
+  "Complete sentences with must, should and mustn’t.",
+  "Report questions and commands in reported speech."
+ ],
+ "tf": [
+  {
+   "s": "“We should switch off lights” is a sentence about saving energy.",
+   "t": true,
+   "why": "Yes, switching off lights saves energy."
+  },
+  {
+   "s": "‘Close the door.’ is reported as “He told me to close the door.”",
+   "t": true,
+   "why": "Correct! told + me + to + verb."
+  },
+  {
+   "s": "‘What is a heatwave?’ is reported as “She asked me what is a heatwave.”",
+   "t": false,
+   "why": "We say: She asked me what a heatwave was."
+  },
+  {
+   "s": "A tornado is an extreme weather word.",
+   "t": true,
+   "why": "Right! A tornado is a very strong storm."
+  },
+  {
+   "s": "“We must to recycle paper” is correct.",
+   "t": false,
+   "why": "Must is followed by the base verb: We must recycle paper."
+  },
+  {
+   "s": "Saving water is a way to protect our planet.",
+   "t": true,
+   "why": "Great! Saving water helps the planet."
+  },
+  {
+   "s": "“Mustn’t” and “needn’t” have the same meaning.",
+   "t": false,
+   "why": "Mustn’t = don’t do it; needn’t = not necessary."
+  },
+  {
+   "s": "Climate change is a solution for our planet.",
+   "t": false,
+   "why": "Climate change is one of the planet’s problems."
+  },
+  {
+   "s": "‘Don’t waste water!’ is reported as “She told me not to waste water.”",
+   "t": true,
+   "why": "Yes, negative commands use not to."
+  },
+  {
+   "s": "Pollution means the air and water are clean.",
+   "t": false,
+   "why": "Pollution makes air and water dirty."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "We mustn’t ___ the rainforests.",
+   "o": [
+    "destroy",
+    "destroying",
+    "to destroy"
+   ],
+   "why": "Mustn’t + base verb."
+  },
+  {
+   "q": "Which is an extreme weather word?",
+   "o": [
+    "hailstorm",
+    "newsletter",
+    "recycle"
+   ],
+   "why": "A hailstorm is extreme weather."
+  },
+  {
+   "q": "Report ‘Close the window.’ (He / me)",
+   "o": [
+    "He told me to close the window.",
+    "He asked me close the window.",
+    "He told me closing the window."
+   ],
+   "why": "Commands: told + object + to + verb."
+  },
+  {
+   "q": "Report ‘Do you recycle?’ (She / me)",
+   "o": [
+    "She asked me if I recycled.",
+    "She told me if recycle.",
+    "She asked me do you recycle."
+   ],
+   "why": "Yes/no question: asked + if."
+  },
+  {
+   "q": "We ___ wear a helmet on a bike. (necessary)",
+   "o": [
+    "must",
+    "needn’t",
+    "shouldn’t"
+   ],
+   "why": "Must shows something is necessary."
+  },
+  {
+   "q": "Which is a problem for our planet?",
+   "o": [
+    "global warming",
+    "plant trees",
+    "save water"
+   ],
+   "why": "Global warming is a big problem."
+  },
+  {
+   "q": "A long time with no rain is a…",
+   "o": [
+    "drought",
+    "flood",
+    "tsunami"
+   ],
+   "why": "Drought = no rain for a long time."
+  },
+  {
+   "q": "You ___ bring a pen. I have lots. (not necessary)",
+   "o": [
+    "needn’t",
+    "mustn’t",
+    "must"
+   ],
+   "why": "Needn’t means it is not necessary."
+  },
+  {
+   "q": "We ___ throw rubbish on the beach.",
+   "o": [
+    "shouldn’t",
+    "should",
+    "need to"
+   ],
+   "why": "Throwing rubbish is not the right thing to do."
+  },
+  {
+   "q": "Report ‘Where do you live?’ (He / me)",
+   "o": [
+    "He asked me where I lived.",
+    "He asked me where do I live.",
+    "He told me to live."
+   ],
+   "why": "Keep the question word and use normal word order."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "We mustn’t ___ the rainforests.",
+   "a": "destroy",
+   "d": [
+    "plant",
+    "protect",
+    "save"
+   ]
+  },
+  {
+   "q": "We should ___ off lights.",
+   "a": "switch",
+   "d": [
+    "pick",
+    "end",
+    "get"
+   ]
+  },
+  {
+   "q": "He told me ___ close the door.",
+   "a": "to",
+   "d": [
+    "if",
+    "that",
+    "not"
+   ]
+  },
+  {
+   "q": "She asked me ___ I recycled.",
+   "a": "if",
+   "d": [
+    "to",
+    "not",
+    "what"
+   ]
+  },
+  {
+   "q": "‘What is it?’ → what it…",
+   "a": "was",
+   "d": [
+    "is",
+    "be",
+    "are"
+   ]
+  },
+  {
+   "q": "Modal: necessary",
+   "a": "must",
+   "d": [
+    "needn’t",
+    "shouldn’t",
+    "mustn’t"
+   ]
+  },
+  {
+   "q": "Modal: don’t do it!",
+   "a": "mustn’t",
+   "d": [
+    "needn’t",
+    "should",
+    "must"
+   ]
+  },
+  {
+   "q": "Very hot weather for days",
+   "a": "heatwave",
+   "d": [
+    "snowstorm",
+    "flood",
+    "hailstorm"
+   ]
+  },
+  {
+   "q": "Winds that blow in circles",
+   "a": "tornado",
+   "d": [
+    "drought",
+    "heatwave",
+    "flood"
+   ]
+  },
+  {
+   "q": "Use paper and plastic again",
+   "a": "recycle",
+   "d": [
+    "waste",
+    "destroy",
+    "pollute"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which sentence about saving energy is correct?",
+   "o": [
+    "We should switch off lights.",
+    "We should to switch off lights.",
+    "We should switching off lights.",
+    "We should switched off lights."
+   ],
+   "why": "Should + base verb."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which pair are both extreme weather words?",
+   "o": [
+    "tornado and drought",
+    "recycle and protect",
+    "tonne and piece",
+    "diary and report"
+   ],
+   "why": "Tornadoes and droughts are extreme weather."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word do we use to report a command?",
+   "o": [
+    "told",
+    "asked if",
+    "said what",
+    "wondered"
+   ],
+   "why": "We report commands with told + object + to."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is a way to help the planet?",
+   "o": [
+    "pick up rubbish",
+    "waste energy",
+    "pollution",
+    "climate change"
+   ],
+   "why": "Picking up rubbish keeps places clean."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Report: ‘What is a heatwave?’ (She asked me)",
+   "o": [
+    "She asked me what a heatwave was.",
+    "She asked me what is a heatwave.",
+    "She told me what a heatwave.",
+    "She asked me if what a heatwave was."
+   ],
+   "why": "Question word + subject + past verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete with the correct modal: “You ___ leave the tap on. It wastes water.”",
+   "o": [
+    "shouldn’t",
+    "should",
+    "need to",
+    "must"
+   ],
+   "why": "Leaving the tap on is not the right thing to do."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Report: ‘Please plant a tree.’ (The teacher / us)",
+   "o": [
+    "The teacher told us to plant a tree.",
+    "The teacher told us plant a tree.",
+    "The teacher asked us if plant a tree.",
+    "The teacher told us to planting a tree."
+   ],
+   "why": "told + us + to + verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses the correct modal for the meaning “it is not allowed”?",
+   "o": [
+    "You mustn’t throw rubbish in the sea.",
+    "You needn’t throw rubbish in the sea.",
+    "You should throw rubbish in the sea.",
+    "You need to throw rubbish in the sea."
+   ],
+   "why": "Mustn’t means it is not allowed."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the mistake: “He told me don’t waste energy.”",
+   "o": [
+    "It should be “not to waste energy”.",
+    "“told” should be “asked if”.",
+    "“energy” should be “energies”.",
+    "There is no mistake."
+   ],
+   "why": "Negative commands are reported with not to."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best answer to the Unit 1 question “What can we do to protect our planet?”",
+   "o": [
+    "We can recycle, save energy and plant trees.",
+    "We can waste water and energy.",
+    "We can destroy the rainforests.",
+    "We can leave lights on all day."
+   ],
+   "why": "These actions help protect the planet."
+  }
+ ]
+}

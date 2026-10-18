@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "4",
+ "lesson": "Unit 4: Civilisation – Reading and Understanding",
+ "outcomes": [
+  "Read texts about ancient civilisations for main ideas and details.",
+  "Learn words like trade, agriculture, monument and empire.",
+  "Use subheadings, dates and synonyms to understand a text."
+ ],
+ "tf": [
+  {
+   "s": "Trade is the buying and selling of goods.",
+   "t": true,
+   "why": "Yes, that is the meaning of trade."
+  },
+  {
+   "s": "'Agriculture' means farming.",
+   "t": true,
+   "why": "Correct, agriculture is growing crops and raising animals."
+  },
+  {
+   "s": "A monument is a building to remember a person or an event.",
+   "t": true,
+   "why": "Right, monuments help us remember."
+  },
+  {
+   "s": "'Not Given' means the statement is false.",
+   "t": false,
+   "why": "'Not Given' means the text has no information about it."
+  },
+  {
+   "s": "A subheading is a short title for a paragraph.",
+   "t": true,
+   "why": "Well done, it sums up the paragraph."
+  },
+  {
+   "s": "Magan is mentioned in Sumerian records.",
+   "t": true,
+   "why": "Correct, this shows contact between the two."
+  },
+  {
+   "s": "30 BC comes before 3000 BC.",
+   "t": false,
+   "why": "With BC dates, the bigger number is earlier, so 3000 BC comes first."
+  },
+  {
+   "s": "'Ancient' and 'modern' are synonyms.",
+   "t": false,
+   "why": "They are opposites; 'ancient' means very old."
+  },
+  {
+   "s": "Trade only allowed people to exchange goods, never ideas.",
+   "t": false,
+   "why": "Trade helped people exchange goods and ideas."
+  },
+  {
+   "s": "The Sumerians lived in Mesopotamia.",
+   "t": true,
+   "why": "Correct, this fact was in the texts."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "The buying and selling of goods is…",
+   "o": [
+    "trade",
+    "agriculture",
+    "religion"
+   ],
+   "why": "Trade means buying and selling."
+  },
+  {
+   "q": "Which word means 'farming'?",
+   "o": [
+    "agriculture",
+    "economy",
+    "empire"
+   ],
+   "why": "Agriculture is farming."
+  },
+  {
+   "q": "A building to remember a person or event is…",
+   "o": [
+    "a monument",
+    "a map",
+    "a market"
+   ],
+   "why": "Monuments remind us of the past."
+  },
+  {
+   "q": "A short title for a paragraph is…",
+   "o": [
+    "a subheading",
+    "a synonym",
+    "a date"
+   ],
+   "why": "Subheadings sum up paragraphs."
+  },
+  {
+   "q": "Where is Magan mentioned?",
+   "o": [
+    "in Sumerian records",
+    "in Greek plays",
+    "in Roman coins"
+   ],
+   "why": "The Sumerians wrote about Magan."
+  },
+  {
+   "q": "Which comes first: 3000 BC or 30 BC?",
+   "o": [
+    "3000 BC",
+    "30 BC",
+    "same time"
+   ],
+   "why": "Bigger BC numbers are earlier."
+  },
+  {
+   "q": "'Not Given' means…",
+   "o": [
+    "no information",
+    "false",
+    "true"
+   ],
+   "why": "The text does not say."
+  },
+  {
+   "q": "Synonym of 'ancient'",
+   "o": [
+    "very old",
+    "modern",
+    "small"
+   ],
+   "why": "Ancient means very old."
+  },
+  {
+   "q": "Where did the Sumerians live?",
+   "o": [
+    "Mesopotamia",
+    "Greece",
+    "Egypt"
+   ],
+   "why": "The Sumerians lived in Mesopotamia."
+  },
+  {
+   "q": "A word with the same meaning is a…",
+   "o": [
+    "synonym",
+    "subheading",
+    "monument"
+   ],
+   "why": "Synonyms share a meaning."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Buying and selling goods",
+   "a": "trade",
+   "d": [
+    "agriculture",
+    "empire",
+    "religion"
+   ]
+  },
+  {
+   "q": "Another word for farming",
+   "a": "agriculture",
+   "d": [
+    "trade",
+    "economy",
+    "society"
+   ]
+  },
+  {
+   "q": "Building to remember",
+   "a": "monument",
+   "d": [
+    "market",
+    "farm",
+    "harbour"
+   ]
+  },
+  {
+   "q": "Short title for a paragraph",
+   "a": "subheading",
+   "d": [
+    "synonym",
+    "sentence",
+    "caption"
+   ]
+  },
+  {
+   "q": "Same meaning word",
+   "a": "synonym",
+   "d": [
+    "opposite",
+    "subheading",
+    "verb"
+   ]
+  },
+  {
+   "q": "Means 'very old'",
+   "a": "ancient",
+   "d": [
+    "modern",
+    "new",
+    "young"
+   ]
+  },
+  {
+   "q": "Sumerians lived here",
+   "a": "Mesopotamia",
+   "d": [
+    "Greece",
+    "Rome",
+    "Egypt"
+   ]
+  },
+  {
+   "q": "Mentioned in Sumerian records",
+   "a": "Magan",
+   "d": [
+    "Rome",
+    "Athens",
+    "Maya"
+   ]
+  },
+  {
+   "q": "Earlier date",
+   "a": "3000 BC",
+   "d": [
+    "30 BC",
+    "AD 30",
+    "AD 300"
+   ]
+  },
+  {
+   "q": "Text has no information",
+   "a": "Not Given",
+   "d": [
+    "True",
+    "False",
+    "Correct"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does the map on page 38 show?",
+   "o": [
+    "six ancient civilisations with their names, locations and dates",
+    "the weather in Oman",
+    "modern cities",
+    "football stadiums"
+   ],
+   "why": "The map helps you place each civilisation."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'monument' mean?",
+   "o": [
+    "a building to remember a person or event",
+    "a type of farming",
+    "buying and selling",
+    "a short title"
+   ],
+   "why": "Monuments keep memories alive."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a subheading?",
+   "o": [
+    "a short title for a paragraph",
+    "the last sentence of a text",
+    "a list of dates",
+    "a picture"
+   ],
+   "why": "It tells you what the paragraph is about."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'Not Given' mean in a T / F / NG task?",
+   "o": [
+    "The text has no information about it.",
+    "The statement is false.",
+    "The statement is true.",
+    "The text is missing a page."
+   ],
+   "why": "NG is different from False."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: ______ is the buying and selling of goods.",
+   "o": [
+    "Trade",
+    "Agriculture",
+    "Religion",
+    "Society"
+   ],
+   "why": "Trade is about goods and markets."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put these in order from earliest: 30 BC, 3000 BC, 800 BC",
+   "o": [
+    "3000 BC, 800 BC, 30 BC",
+    "30 BC, 800 BC, 3000 BC",
+    "800 BC, 3000 BC, 30 BC",
+    "3000 BC, 30 BC, 800 BC"
+   ],
+   "why": "With BC dates, larger numbers are earlier."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A paragraph describes farms, crops and water channels. Which subheading fits best?",
+   "o": [
+    "Agriculture",
+    "Trade with other countries",
+    "Famous leaders",
+    "Religion"
+   ],
+   "why": "Farms and crops are about agriculture."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What evidence shows that ancient Magan had contact with other civilisations?",
+   "o": [
+    "Magan is mentioned in Sumerian records.",
+    "Magan built the pyramids.",
+    "Magan used the Greek alphabet.",
+    "Magan had no records."
+   ],
+   "why": "Being written about by the Sumerians shows contact."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How did trade help ancient societies?",
+   "o": [
+    "It allowed the exchange of goods and ideas and developed the economy.",
+    "It stopped people from meeting.",
+    "It made farming impossible.",
+    "It ended all civilisations."
+   ],
+   "why": "Trade connects people and grows the economy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do time references like dates help you sequence a text?",
+   "o": [
+    "They show the order in which events happened.",
+    "They show who wrote the text.",
+    "They tell you the synonyms.",
+    "They make the text longer."
+   ],
+   "why": "Dates tell us what came first."
+  }
+ ]
+}

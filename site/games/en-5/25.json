@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 3 – Let’s explore!",
+ "lesson": "Lesson 2: Story – The Science Fair",
+ "outcomes": [
+  "Read the story and find the space objects in it.",
+  "Correct false sentences about the story.",
+  "Think about what to do when something goes wrong."
+ ],
+ "tf": [
+  {
+   "s": "The children make a model of the solar system for the Science Fair.",
+   "t": true,
+   "why": "Their first project is a model of the solar system."
+  },
+  {
+   "s": "There are three challenges for the Science Fair.",
+   "t": false,
+   "why": "There are two challenges for the Science Fair."
+  },
+  {
+   "s": "Bo breaks the model.",
+   "t": true,
+   "why": "Bo breaks the model, so the children can't finish it."
+  },
+  {
+   "s": "The Moon is about a thousand kilometres from the Earth.",
+   "t": false,
+   "why": "The Moon is about 380,000 kilometres from the Earth."
+  },
+  {
+   "s": "In space, things are weightless.",
+   "t": true,
+   "why": "In space, things float because they are weightless."
+  },
+  {
+   "s": "In space, water stays in the glass when you brush your teeth.",
+   "t": false,
+   "why": "In space, water floats away."
+  },
+  {
+   "s": "The children finish their first project.",
+   "t": false,
+   "why": "The model breaks, so they don't finish it."
+  },
+  {
+   "s": "The children use a bottle of water, a straw, toothpaste and a toothbrush in their final project.",
+   "t": true,
+   "why": "These things show how to brush your teeth in space."
+  },
+  {
+   "s": "When something doesn't go well, you should try again and think about why.",
+   "t": true,
+   "why": "Trying again helps us learn."
+  },
+  {
+   "s": "When something goes wrong, it is best to stop and never try again.",
+   "t": false,
+   "why": "It is better to try again later and think about what happened."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What are the children making for the Science Fair at first?",
+   "o": [
+    "a model of the solar system",
+    "a rocket cake",
+    "a telescope"
+   ],
+   "why": "Their first project is a model of the solar system."
+  },
+  {
+   "q": "Who breaks the model?",
+   "o": [
+    "Bo",
+    "Miss Al Zahra",
+    "Malik"
+   ],
+   "why": "Bo breaks the model in the story."
+  },
+  {
+   "q": "How many projects do the children make?",
+   "o": [
+    "two",
+    "one",
+    "four"
+   ],
+   "why": "The children make two projects."
+  },
+  {
+   "q": "What does \"weightless\" mean?",
+   "o": [
+    "things float",
+    "things are very heavy",
+    "things are very hot"
+   ],
+   "why": "When things are weightless, they float."
+  },
+  {
+   "q": "Which word is in the story?",
+   "o": [
+    "toothbrush",
+    "umbrella",
+    "necklace"
+   ],
+   "why": "The children use a toothbrush in their project."
+  },
+  {
+   "q": "The children's first project is a ______ of the solar system.",
+   "o": [
+    "model",
+    "straw",
+    "toothbrush"
+   ],
+   "why": "They make a model of the solar system."
+  },
+  {
+   "q": "Complete: We'll ______ the model later.",
+   "o": [
+    "finish",
+    "finished",
+    "finishing"
+   ],
+   "why": "After \"will\" we use the base verb."
+  },
+  {
+   "q": "In space, what happens to water?",
+   "o": [
+    "It floats away.",
+    "It gets very hot.",
+    "It turns into a star."
+   ],
+   "why": "In space, water is weightless and floats away."
+  },
+  {
+   "q": "Do the children finish their first project?",
+   "o": [
+    "No, they don't.",
+    "Yes, they do.",
+    "Yes, they will today."
+   ],
+   "why": "The model breaks, so they don't finish it."
+  },
+  {
+   "q": "What should you do when something doesn't go well?",
+   "o": [
+    "Try again later.",
+    "Get angry.",
+    "Stop forever."
+   ],
+   "why": "Trying again helps you do better."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The children's first model",
+   "a": "solar system",
+   "d": [
+    "space station",
+    "rocket",
+    "telescope"
+   ]
+  },
+  {
+   "q": "Breaks the model",
+   "a": "Bo",
+   "d": [
+    "Malik",
+    "Miss Al Zahra",
+    "Hilal"
+   ]
+  },
+  {
+   "q": "Number of challenges",
+   "a": "two",
+   "d": [
+    "three",
+    "five",
+    "ten"
+   ]
+  },
+  {
+   "q": "In space, water ___ away",
+   "a": "floats",
+   "d": [
+    "runs",
+    "walks",
+    "sits"
+   ]
+  },
+  {
+   "q": "Use it to drink water",
+   "a": "straw",
+   "d": [
+    "toothpaste",
+    "model",
+    "comet"
+   ]
+  },
+  {
+   "q": "Put it on a toothbrush",
+   "a": "toothpaste",
+   "d": [
+    "straw",
+    "bottle",
+    "model"
+   ]
+  },
+  {
+   "q": "Things in space feel ___",
+   "a": "weightless",
+   "d": [
+    "heavy",
+    "hot",
+    "wet"
+   ]
+  },
+  {
+   "q": "Where do they show projects?",
+   "a": "Science Fair",
+   "d": [
+    "Space Club",
+    "the market",
+    "the museum"
+   ]
+  },
+  {
+   "q": "Moon to Earth: about ___ km",
+   "a": "380,000",
+   "d": [
+    "1,000",
+    "38,000",
+    "3,800"
+   ]
+  },
+  {
+   "q": "Good thing to do after a mistake",
+   "a": "try again",
+   "d": [
+    "give up",
+    "get angry",
+    "cry"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the Science Fair challenge in the story about?",
+   "o": [
+    "things in space",
+    "shops and money",
+    "old museums",
+    "hobbies"
+   ],
+   "why": "The story is about space and the solar system."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What happens to the first model?",
+   "o": [
+    "It breaks.",
+    "It wins a prize.",
+    "It floats away.",
+    "It goes to the Moon."
+   ],
+   "why": "Bo breaks the model."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which space object is in the story?",
+   "o": [
+    "the Moon",
+    "a corner shop",
+    "a fort",
+    "a phone case"
+   ],
+   "why": "The children talk about the Moon and the solar system."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which things do the children use in their final project?",
+   "o": [
+    "a bottle of water, a straw, toothpaste and a toothbrush",
+    "a rocket, a comet and a star",
+    "paint, paper and glue",
+    "a book, a pen and a bag"
+   ],
+   "why": "These things show how to brush your teeth in space."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: There are three challenges for the Science Fair.",
+   "o": [
+    "There are two challenges for the Science Fair.",
+    "There are four challenges for the Science Fair.",
+    "There is no challenge for the Science Fair.",
+    "There are three Science Fairs."
+   ],
+   "why": "The story has two challenges."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your model breaks. What is the best thing to do?",
+   "o": [
+    "Think about why it broke and try again.",
+    "Throw it away and stop.",
+    "Say it isn't your model.",
+    "Shout at your friend."
+   ],
+   "why": "Trying again and learning from mistakes is a good value."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "How can an astronaut sleep in space without floating away?",
+   "o": [
+    "in a sleeping bag tied to the wall",
+    "on a normal bed",
+    "in a chair by the window",
+    "in the water"
+   ],
+   "why": "Things float in space, so the bed must be tied down."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is brushing your teeth in space different?",
+   "o": [
+    "Everything is weightless and water floats away.",
+    "There is no toothpaste in space.",
+    "Astronauts don't have teeth.",
+    "It is very cold in space."
+   ],
+   "why": "Water floats away when things are weightless."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do the children need a straw in their final project?",
+   "o": [
+    "Water floats in space, so a straw helps you drink it.",
+    "A straw is a space object.",
+    "A straw makes the model stronger.",
+    "A straw is a toothbrush."
+   ],
+   "why": "A straw helps astronauts control the water."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What does the story teach us?",
+   "o": [
+    "When something goes wrong, try again.",
+    "Never do a Science Fair.",
+    "Models are not important.",
+    "Only adults can solve problems."
+   ],
+   "why": "The children didn't give up and made a new project."
+  }
+ ]
+}

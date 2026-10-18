@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: A Letter to a Teacher (Writing)",
+ "lesson": "Reading a formal letter and discussing its tone and punctuation",
+ "outcomes": [
+  "Find the purpose, structure and tone of a formal letter",
+  "Use capital letters, full stops, commas and apostrophes correctly"
+ ],
+ "tf": [
+  {
+   "s": "The letter begins with 'Dear…'.",
+   "t": true,
+   "why": "'Dear…' is a common opening."
+  },
+  {
+   "s": "The letter ends with 'Love from'.",
+   "t": false,
+   "why": "It ends with 'Best wishes'."
+  },
+  {
+   "s": "The letter has no paragraphs.",
+   "t": false,
+   "why": "The main body has five paragraphs."
+  },
+  {
+   "s": "The tone of the letter is official but friendly.",
+   "t": true,
+   "why": "It is formal but welcoming."
+  },
+  {
+   "s": "We use capital letters for the names of people, places and languages.",
+   "t": true,
+   "why": "For example, Ahmed, Muscat and English."
+  },
+  {
+   "s": "The apostrophe in 'She's' shows that 'is' is shortened.",
+   "t": true,
+   "why": "She's = she is."
+  },
+  {
+   "s": "A full stop goes at the beginning of a sentence.",
+   "t": false,
+   "why": "A full stop goes at the end of a sentence."
+  },
+  {
+   "s": "'Shes very late today.' is correctly punctuated.",
+   "t": false,
+   "why": "It needs an apostrophe: She's."
+  },
+  {
+   "s": "'english' should be written with a capital E.",
+   "t": true,
+   "why": "Languages start with a capital letter."
+  },
+  {
+   "s": "A course co-ordinator is a first-year student.",
+   "t": false,
+   "why": "A course co-ordinator organises a course."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word needs a capital letter?",
+   "o": [
+    "muscat",
+    "city",
+    "river"
+   ],
+   "why": "Names of places need capitals: Muscat."
+  },
+  {
+   "q": "Where does a full stop go?",
+   "o": [
+    "at the end of a sentence",
+    "at the start of a name",
+    "in the middle of a word"
+   ],
+   "why": "A full stop ends a sentence."
+  },
+  {
+   "q": "Correct: 'Its my first day.'",
+   "o": [
+    "It's my first day.",
+    "Its' my first day.",
+    "It,s my first day."
+   ],
+   "why": "It's = it is."
+  },
+  {
+   "q": "Which word needs an apostrophe?",
+   "o": [
+    "dont",
+    "done",
+    "down"
+   ],
+   "why": "Dont should be don't."
+  },
+  {
+   "q": "Who wrote the letter?",
+   "o": [
+    "a course co-ordinator",
+    "a new student",
+    "a tourist"
+   ],
+   "why": "The course co-ordinator wrote to new students."
+  },
+  {
+   "q": "Which sentence uses a comma correctly?",
+   "o": [
+    "First, read the letter.",
+    "First read, the letter.",
+    "First read the, letter."
+   ],
+   "why": "A comma comes after 'First'."
+  },
+  {
+   "q": "Why does 'Arabic' have a capital letter?",
+   "o": [
+    "it is a language",
+    "it is a long word",
+    "it ends a sentence"
+   ],
+   "why": "Languages always start with a capital."
+  },
+  {
+   "q": "How many paragraphs are in the main body?",
+   "o": [
+    "five",
+    "two",
+    "ten"
+   ],
+   "why": "The main body has five paragraphs."
+  },
+  {
+   "q": "Which opening is suitable for a formal letter?",
+   "o": [
+    "Dear Mr Ahmed",
+    "Hi there!",
+    "See ya!"
+   ],
+   "why": "'Dear…' is a polite opening."
+  },
+  {
+   "q": "'I am' can be shortened to...",
+   "o": [
+    "I'm",
+    "Im",
+    "I'am"
+   ],
+   "why": "The apostrophe replaces the 'a'."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Opening of the letter",
+   "a": "Dear...",
+   "d": [
+    "See ya!",
+    "Love from",
+    "Hi there!"
+   ]
+  },
+  {
+   "q": "Ending of the letter",
+   "a": "Best wishes",
+   "d": [
+    "See ya!",
+    "Hi there!",
+    "Cheers!"
+   ]
+  },
+  {
+   "q": "Paragraphs in the main body",
+   "a": "five",
+   "d": [
+    "two",
+    "three",
+    "ten"
+   ]
+  },
+  {
+   "q": "Tone of the letter",
+   "a": "official but friendly",
+   "d": [
+    "rude and angry",
+    "very informal",
+    "sad and cold"
+   ]
+  },
+  {
+   "q": "Mark that shows a letter is missing",
+   "a": "apostrophe",
+   "d": [
+    "full stop",
+    "comma",
+    "capital letter"
+   ]
+  },
+  {
+   "q": "Mark at the end of a sentence",
+   "a": "full stop",
+   "d": [
+    "apostrophe",
+    "comma",
+    "hyphen"
+   ]
+  },
+  {
+   "q": "Short form of 'she is'",
+   "a": "she's",
+   "d": [
+    "shes",
+    "she,s",
+    "s'he"
+   ]
+  },
+  {
+   "q": "Short form of 'do not'",
+   "a": "don't",
+   "d": [
+    "dont",
+    "do'nt",
+    "dont'"
+   ]
+  },
+  {
+   "q": "Which word needs a capital?",
+   "a": "english",
+   "d": [
+    "book",
+    "river",
+    "school"
+   ]
+  },
+  {
+   "q": "Writer of the letter",
+   "a": "course co-ordinator",
+   "d": [
+    "new student",
+    "tourist",
+    "pilot"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How does the letter begin and end?",
+   "o": [
+    "'Dear…' and 'Best wishes'",
+    "'Hi!' and 'See ya!'",
+    "'Hello' and 'Bye'",
+    "'Dear…' and 'Love from'"
+   ],
+   "why": "This is the letter's structure."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the tone of the letter?",
+   "o": [
+    "Official but friendly",
+    "Rude",
+    "Very informal",
+    "Sad"
+   ],
+   "why": "The writer is formal but welcoming."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why do we use capital letters in names?",
+   "o": [
+    "To show names of people, places and languages",
+    "To show a question",
+    "To end a sentence",
+    "To show a shortened word"
+   ],
+   "why": "Names always start with a capital."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In 'She's late', why is there an apostrophe?",
+   "o": [
+    "To show that 'is' is shortened",
+    "To show a question",
+    "To end the sentence",
+    "To show a name"
+   ],
+   "why": "She's = she is."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct: 'my brother lives in sohar'",
+   "o": [
+    "My brother lives in Sohar.",
+    "my brother lives in Sohar.",
+    "My brother lives in sohar",
+    "my Brother Lives in sohar."
+   ],
+   "why": "Capitals for the first word and the place, and a full stop."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is correctly punctuated?",
+   "o": [
+    "We're going to Nizwa on Friday.",
+    "were going to nizwa on friday",
+    "We're going to nizwa on Friday",
+    "Were going to Nizwa, on friday."
+   ],
+   "why": "Apostrophe, capitals and a full stop are all correct."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is best for a formal letter to a teacher?",
+   "o": [
+    "I am writing to introduce myself.",
+    "Hey! What's up?",
+    "See ya later!",
+    "Yo, teacher!"
+   ],
+   "why": "Formal letters use polite, full sentences."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the tone 'official but friendly'?",
+   "o": [
+    "The writer is formal but wants new students to feel welcome",
+    "The writer is angry",
+    "The writer is a close friend",
+    "The letter is a joke"
+   ],
+   "why": "The co-ordinator is polite and welcoming."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are paragraphs useful in a letter?",
+   "o": [
+    "They organise ideas so the reader can follow",
+    "They make the letter shorter",
+    "They replace punctuation",
+    "They hide the main idea"
+   ],
+   "why": "Each paragraph has its own idea."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is wrong with 'Ahmed doesnt speak french.'?",
+   "o": [
+    "It needs an apostrophe and a capital letter",
+    "It needs a comma only",
+    "It has too many full stops",
+    "Nothing is wrong"
+   ],
+   "why": "Correct: Ahmed doesn't speak French."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 2 - Unit 2: Teens and Adults",
+ "outcomes": [
+  "Talk about relationships between teenagers and parents",
+  "Understand a dialogue between a teacher and a student",
+  "Use the past simple and past continuous correctly"
+ ],
+ "tf": [
+  {
+   "s": "Nasser was falling asleep in class because he was chatting on the Internet all night.",
+   "t": true,
+   "why": "Yes! He stayed up late chatting online."
+  },
+  {
+   "s": "Nasser first said he went to bed at ten o'clock.",
+   "t": true,
+   "why": "Right, but that was not the real time."
+  },
+  {
+   "s": "Nasser really went to sleep at ten o'clock.",
+   "t": false,
+   "why": "He really went to sleep at about three o'clock."
+  },
+  {
+   "s": "Mr Hamed advises Nasser to get more sleep because he has exams soon.",
+   "t": true,
+   "why": "Correct! Sleep is important before exams."
+  },
+  {
+   "s": "We use the past continuous for a short completed action.",
+   "t": false,
+   "why": "A short completed action uses the past simple."
+  },
+  {
+   "s": "In 'I was doing my homework when my friend knocked', 'knocked' is the action that interrupted.",
+   "t": true,
+   "why": "Yes! The past simple shows the shorter, interrupting action."
+  },
+  {
+   "s": "'Oman won the Gulf Cup in March 2009' uses the past simple.",
+   "t": true,
+   "why": "'Won' is a completed action in the past."
+  },
+  {
+   "s": "'She was wearing a lovely pink dress' uses the past simple.",
+   "t": false,
+   "why": "'Was wearing' is the past continuous; it describes an ongoing activity."
+  },
+  {
+   "s": "Listening without interrupting can improve communication between teens and parents.",
+   "t": true,
+   "why": "Good! Calm listening helps people understand each other."
+  },
+  {
+   "s": "'Straightaway' means much later.",
+   "t": false,
+   "why": "'Straightaway' means immediately."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Why was Nasser falling asleep in class?",
+   "o": [
+    "he was chatting on the Internet all night",
+    "he was ill",
+    "he was playing football"
+   ],
+   "why": "He stayed up late online."
+  },
+  {
+   "q": "What time did Nasser really go to sleep?",
+   "o": [
+    "about three o'clock",
+    "ten o'clock",
+    "eight o'clock"
+   ],
+   "why": "He first said ten, but really slept at about three."
+  },
+  {
+   "q": "Choose: At 4 o'clock yesterday I ___ coffee.",
+   "o": [
+    "was drinking",
+    "drank",
+    "drinks"
+   ],
+   "why": "An action in progress at a time in the past uses the past continuous."
+  },
+  {
+   "q": "Choose: When the phone ___, I answered it.",
+   "o": [
+    "rang",
+    "was ringing",
+    "rings"
+   ],
+   "why": "Two quick completed actions use the past simple."
+  },
+  {
+   "q": "Choose: We ___ dinner when there was a power cut.",
+   "o": [
+    "were having",
+    "had",
+    "have"
+   ],
+   "why": "The longer action in progress uses the past continuous."
+  },
+  {
+   "q": "Which tense shows a completed action?",
+   "o": [
+    "past simple",
+    "past continuous",
+    "present continuous"
+   ],
+   "why": "For example: 'Oman won the Gulf Cup.'"
+  },
+  {
+   "q": "How did Mr Hamed ask his questions?",
+   "o": [
+    "suspiciously",
+    "happily",
+    "angrily"
+   ],
+   "why": "He did not believe Nasser."
+  },
+  {
+   "q": "Choose: J.K. Rowling taught English before she ___ the Harry Potter books.",
+   "o": [
+    "wrote",
+    "was writing",
+    "writes"
+   ],
+   "why": "'Wrote' is a completed action."
+  },
+  {
+   "q": "Which word often goes with the past continuous?",
+   "o": [
+    "while",
+    "yesterday at 3 only",
+    "ago"
+   ],
+   "why": "'While' introduces a longer action in progress."
+  },
+  {
+   "q": "Which is a good way to improve communication with parents?",
+   "o": [
+    "talk calmly",
+    "shout loudly",
+    "stop talking"
+   ],
+   "why": "Calm talk helps people understand each other."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Past tense of 'win'",
+   "a": "won",
+   "d": [
+    "winned",
+    "was winning",
+    "wins"
+   ]
+  },
+  {
+   "q": "Past continuous of 'I drink'",
+   "a": "was drinking",
+   "d": [
+    "drank",
+    "am drinking",
+    "drunk"
+   ]
+  },
+  {
+   "q": "Choose: We ___ dinner when…",
+   "a": "were having",
+   "d": [
+    "had",
+    "have",
+    "has"
+   ]
+  },
+  {
+   "q": "Choose: When the phone ___, …",
+   "a": "rang",
+   "d": [
+    "was ringing",
+    "rings",
+    "ringing"
+   ]
+  },
+  {
+   "q": "Choose: I almost ___ asleep.",
+   "a": "fell",
+   "d": [
+    "was falling",
+    "falls",
+    "fall"
+   ]
+  },
+  {
+   "q": "Choose: ___ you doing at 4?",
+   "a": "What were",
+   "d": [
+    "What did",
+    "What are",
+    "What do"
+   ]
+  },
+  {
+   "q": "Tense for a completed action",
+   "a": "past simple",
+   "d": [
+    "past continuous",
+    "present simple",
+    "future"
+   ]
+  },
+  {
+   "q": "Tense for an action in progress",
+   "a": "past continuous",
+   "d": [
+    "past simple",
+    "present simple",
+    "future"
+   ]
+  },
+  {
+   "q": "Word meaning 'immediately'",
+   "a": "straightaway",
+   "d": [
+    "suspiciously",
+    "later",
+    "never"
+   ]
+  },
+  {
+   "q": "Nasser's real sleep time",
+   "a": "three o'clock",
+   "d": [
+    "ten o'clock",
+    "nine o'clock",
+    "midnight"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What advice does Mr Hamed give Nasser?",
+   "o": [
+    "to get more sleep because he has exams soon",
+    "to buy a new computer",
+    "to chat more online",
+    "to leave school"
+   ],
+   "why": "Mr Hamed cares about Nasser's exams."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the past continuous describe?",
+   "o": [
+    "an ongoing action in the past",
+    "a habit now",
+    "a future plan",
+    "a finished short action"
+   ],
+   "why": "For example: 'She was wearing a lovely pink dress.'"
+  },
+  {
+   "lv": "التذكر",
+   "q": "What was Nasser doing all night?",
+   "o": [
+    "chatting on the Internet",
+    "studying for exams",
+    "sleeping",
+    "watching football"
+   ],
+   "why": "That is why he was tired in class."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word introduces a shorter action that interrupts a longer one?",
+   "o": [
+    "when",
+    "while",
+    "always",
+    "usually"
+   ],
+   "why": "'I was doing my homework when my friend knocked.'"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: When I first lived abroad, I ___ many problems.",
+   "o": [
+    "experienced",
+    "was experiencing",
+    "experience",
+    "am experiencing"
+   ],
+   "why": "The past simple is used for these completed experiences."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: What ___ at four o'clock yesterday afternoon? – I was drinking coffee.",
+   "o": [
+    "were you doing",
+    "did you do",
+    "do you do",
+    "are you doing"
+   ],
+   "why": "The answer is past continuous, so the question is too."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is correct?",
+   "o": [
+    "We were having dinner when the lights went out.",
+    "We had dinner when the lights were going out.",
+    "We have dinner when the lights went out.",
+    "We were have dinner when the lights go out."
+   ],
+   "why": "Longer action = past continuous; interruption = past simple."
+  },
+  {
+   "lv": "التحليل",
+   "q": "In 'I was doing my homework when my friend knocked on the door', why are two different tenses used?",
+   "o": [
+    "'was doing' is the longer action; 'knocked' is the short action that interrupted it",
+    "Both actions happen every day",
+    "Both actions are in the future",
+    "The sentence has a mistake"
+   ],
+   "why": "The two tenses show which action was in progress."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does 'The film was so boring that I almost fell asleep' use 'fell' and not 'was falling'?",
+   "o": [
+    "'fell' is a single completed action",
+    "'fell' shows a habit",
+    "'was falling' is the present tense",
+    "'fell' is a future form"
+   ],
+   "why": "'Was falling' would suggest a continuing action."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How did Mr Hamed show he did not believe Nasser?",
+   "o": [
+    "He asked suspiciously what time Nasser really slept",
+    "He gave Nasser a prize",
+    "He laughed and left",
+    "He asked about football"
+   ],
+   "why": "He asked again to find the real time."
+  }
+ ]
+}

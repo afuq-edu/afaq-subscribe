@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "WOW! Learning Club 1",
+  "lesson": "Learning Club 1 – Lesson 1: Language booster – Places and directions",
+  "outcomes": [
+    "I can name places in a town like airport, bridge and fire station.",
+    "I can follow directions on a map.",
+    "I can ask for and give directions in town."
+  ],
+  "tf": [
+    {
+      "s": "Firefighters work at a fire station.",
+      "t": true,
+      "why": "A fire station is where firefighters work."
+    },
+    {
+      "s": "Teenagers and adults study at a college.",
+      "t": true,
+      "why": "A college is a place to study after school."
+    },
+    {
+      "s": "A bridge is a place where planes land.",
+      "t": false,
+      "why": "Planes land at an airport; you go over a bridge."
+    },
+    {
+      "s": "In text 1, the person starts at the airport.",
+      "t": true,
+      "why": "The route begins at the airport."
+    },
+    {
+      "s": "On the way to the college, he walks past the fire station.",
+      "t": false,
+      "why": "He walks past the hospital."
+    },
+    {
+      "s": "Adam is trying to go to the stadium.",
+      "t": true,
+      "why": "He asks for directions to the stadium."
+    },
+    {
+      "s": "Adam is meeting Faris at the big gate.",
+      "t": true,
+      "why": "They meet at the big gate of the stadium."
+    },
+    {
+      "s": "We say “Go over the river” when we walk next to the river.",
+      "t": false,
+      "why": "We say go along the river; we go over a bridge."
+    },
+    {
+      "s": "On the map, the red pin shows where you start.",
+      "t": false,
+      "why": "The green pin is the start; the red pin is the destination."
+    },
+    {
+      "s": "“Go through the gate” means walk past the gate without going in.",
+      "t": false,
+      "why": "Through means you go in one side and out the other."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Where do firefighters work?",
+      "o": [
+        "at a fire station",
+        "at a college",
+        "at an airport"
+      ],
+      "why": "Firefighters work at a fire station."
+    },
+    {
+      "q": "You can drive or walk over this. What is it?",
+      "o": [
+        "a bridge",
+        "a square",
+        "an office"
+      ],
+      "why": "A bridge goes over a river or road."
+    },
+    {
+      "q": "Complete: Go ___ the bridge and then turn left.",
+      "o": [
+        "over",
+        "through",
+        "along"
+      ],
+      "why": "We go over a bridge."
+    },
+    {
+      "q": "Complete: Go ___ the road and go over the bridge.",
+      "o": [
+        "across",
+        "under",
+        "into"
+      ],
+      "why": "We cross a road: go across."
+    },
+    {
+      "q": "Complete: Walk ___ the river, then take the second right.",
+      "o": [
+        "along",
+        "at",
+        "of"
+      ],
+      "why": "We walk along a river."
+    },
+    {
+      "q": "Complete: Go ___ the big gate and turn left.",
+      "o": [
+        "through",
+        "over",
+        "along"
+      ],
+      "why": "We go through a gate."
+    },
+    {
+      "q": "Where is Adam trying to go?",
+      "o": [
+        "to the stadium",
+        "to the airport",
+        "to the college"
+      ],
+      "why": "Adam wants to go to the stadium."
+    },
+    {
+      "q": "What does he walk past on the way to the college?",
+      "o": [
+        "the hospital",
+        "the airport",
+        "the bridge"
+      ],
+      "why": "In text 1, he walks past the hospital."
+    },
+    {
+      "q": "Where do planes land and take off?",
+      "o": [
+        "at an airport",
+        "at a square",
+        "at a theatre"
+      ],
+      "why": "Planes use an airport."
+    },
+    {
+      "q": "On the map, what does the green pin show?",
+      "o": [
+        "the start",
+        "the end",
+        "a shop"
+      ],
+      "why": "Green is the start; red is the destination."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Firefighters work here",
+      "a": "fire station",
+      "d": [
+        "airport",
+        "college",
+        "square"
+      ]
+    },
+    {
+      "q": "Planes land here",
+      "a": "airport",
+      "d": [
+        "bridge",
+        "office",
+        "college"
+      ]
+    },
+    {
+      "q": "Teenagers and adults study here",
+      "a": "college",
+      "d": [
+        "airport",
+        "bridge",
+        "fire station"
+      ]
+    },
+    {
+      "q": "Walk or drive over it",
+      "a": "bridge",
+      "d": [
+        "office",
+        "theatre",
+        "college"
+      ]
+    },
+    {
+      "q": "Go ___ the bridge.",
+      "a": "over",
+      "d": [
+        "through",
+        "along",
+        "across"
+      ]
+    },
+    {
+      "q": "Walk ___ the river.",
+      "a": "along",
+      "d": [
+        "at",
+        "of",
+        "on"
+      ]
+    },
+    {
+      "q": "Go ___ the gate.",
+      "a": "through",
+      "d": [
+        "along",
+        "at",
+        "of"
+      ]
+    },
+    {
+      "q": "Cross it: go ___ the road.",
+      "a": "across",
+      "d": [
+        "through",
+        "at",
+        "of"
+      ]
+    },
+    {
+      "q": "Adam is going to the…",
+      "a": "stadium",
+      "d": [
+        "airport",
+        "college",
+        "theatre"
+      ]
+    },
+    {
+      "q": "Adam is meeting…",
+      "a": "Faris",
+      "d": [
+        "Ammar",
+        "Qais",
+        "Eddie"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which group shows the new town places?",
+      "o": [
+        "college, airport, bridge, fire station",
+        "ceiling, wall, corridor, lift",
+        "printer, screen, laptop, icon",
+        "grass, hedge, flower, bee"
+      ],
+      "why": "These are the Learning Club places."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which question asks for directions politely?",
+      "o": [
+        "Excuse me. Can you tell me where the college is, please?",
+        "College where?",
+        "Tell me the college now.",
+        "Where college you?"
+      ],
+      "why": "Excuse me … please is polite."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Where does the person start in text 1?",
+      "o": [
+        "at the airport",
+        "at the hospital",
+        "at the college",
+        "at the fire station"
+      ],
+      "why": "Text 1 starts at the airport."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which is a direction, not a place?",
+      "o": [
+        "Take the second left.",
+        "fire station",
+        "square",
+        "office"
+      ],
+      "why": "Take the second left tells you where to go."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "There is a river between you and the college. What direction fits?",
+      "o": [
+        "Go over the bridge.",
+        "Go through the river.",
+        "Go along the ceiling.",
+        "Take the lift."
+      ],
+      "why": "A bridge takes you over the river."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You want to get from one side of the road to the other. What do you do?",
+      "o": [
+        "Go across the road.",
+        "Go along the road.",
+        "Go over the gate.",
+        "Go through the bridge."
+      ],
+      "why": "Across means from one side to the other."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose the correct directions.",
+      "o": [
+        "Turn left, go past the hospital and go straight on.",
+        "Turn left, go past at the hospital straight.",
+        "Left turn hospital past go.",
+        "Go past on the left of straight."
+      ],
+      "why": "This uses the directions language correctly."
+    },
+    {
+      "lv": "التحليل",
+      "q": "What is the difference between “go along the river” and “go over the river”?",
+      "o": [
+        "Along means next to it; over means you cross it.",
+        "They mean the same.",
+        "Along means under it.",
+        "Over means you swim in it."
+      ],
+      "why": "Along follows the river; over crosses it."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why do maps in the lesson have a green pin and a red pin?",
+      "o": [
+        "To show where you start and where you finish",
+        "To show the weather",
+        "To show old and new places",
+        "To show the shops that are closed"
+      ],
+      "why": "Green is the start; red is the destination."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which place is the odd one out?",
+      "o": [
+        "bridge",
+        "college",
+        "office",
+        "fire station"
+      ],
+      "why": "You go over a bridge; the others are buildings."
+    }
+  ]
+}

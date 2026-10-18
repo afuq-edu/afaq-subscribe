@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Unit 3 – Consolidation 3: Phonics practice",
+ "outcomes": [
+  "I can match words to ou, oi, ue and i-e.",
+  "I can order letters to spell Unit 3 words.",
+  "I can blend new words like out, join, true and ride."
+ ],
+ "tf": [
+  {
+   "s": "\"Coin\" has oi.",
+   "t": true,
+   "why": "C-oi-n has oi."
+  },
+  {
+   "s": "\"Tissue\" has ue.",
+   "t": true,
+   "why": "Tiss-ue ends with ue."
+  },
+  {
+   "s": "\"Slide\" has ou.",
+   "t": false,
+   "why": "Slide has i-e."
+  },
+  {
+   "s": "\"Out\" has the same sound as \"shout\".",
+   "t": true,
+   "why": "Both have ou."
+  },
+  {
+   "s": "\"Join\" has the same sound as \"soil\".",
+   "t": true,
+   "why": "Both have oi."
+  },
+  {
+   "s": "\"True\" has the same sound as \"cloud\".",
+   "t": false,
+   "why": "True has ue, like blue."
+  },
+  {
+   "s": "\"Ride\" has the same sound as \"bike\".",
+   "t": true,
+   "why": "Both have i-e."
+  },
+  {
+   "s": "The letters e-l-u-b make \"blue\" in order.",
+   "t": true,
+   "why": "b-l-u-e spells blue."
+  },
+  {
+   "s": "\"Mouth\" has oi.",
+   "t": false,
+   "why": "Mouth has ou."
+  },
+  {
+   "s": "j + oi + n makes \"join\".",
+   "t": true,
+   "why": "Blend: j-oi-n, join."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Match \"coin\" to its digraph.",
+   "o": [
+    "oi",
+    "ou",
+    "ue"
+   ],
+   "why": "C-oi-n."
+  },
+  {
+   "q": "Order: e / l / u / b",
+   "o": [
+    "blue",
+    "bule",
+    "lube"
+   ],
+   "why": "b-l-u-e spells blue."
+  },
+  {
+   "q": "Blend: j + oi + n",
+   "o": [
+    "join",
+    "jean",
+    "jam"
+   ],
+   "why": "j-oi-n makes join."
+  },
+  {
+   "q": "Blend: r + i + d + e",
+   "o": [
+    "ride",
+    "rid",
+    "red"
+   ],
+   "why": "Magic e: ride."
+  },
+  {
+   "q": "Blend: ou + t",
+   "o": [
+    "out",
+    "oat",
+    "art"
+   ],
+   "why": "ou-t makes out."
+  },
+  {
+   "q": "Blend: t + r + ue",
+   "o": [
+    "true",
+    "tree",
+    "try"
+   ],
+   "why": "tr-ue makes true."
+  },
+  {
+   "q": "Find the ou word.",
+   "o": [
+    "mouth",
+    "soil",
+    "nine"
+   ],
+   "why": "M-ou-th has ou."
+  },
+  {
+   "q": "Find the i-e word.",
+   "o": [
+    "bike",
+    "boil",
+    "blue"
+   ],
+   "why": "B-i-k-e has i-e."
+  },
+  {
+   "q": "Find the ue word.",
+   "o": [
+    "glue",
+    "coin",
+    "shout"
+   ],
+   "why": "Gl-ue has ue."
+  },
+  {
+   "q": "Which picture has ou?",
+   "o": [
+    "cloud",
+    "kite",
+    "coin"
+   ],
+   "why": "Cl-ou-d has ou."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Blend: j + oi + n",
+   "a": "join",
+   "d": [
+    "jean",
+    "jog",
+    "gin"
+   ]
+  },
+  {
+   "q": "Blend: r + i + d + e",
+   "a": "ride",
+   "d": [
+    "rid",
+    "red",
+    "rode"
+   ]
+  },
+  {
+   "q": "Blend: ou + t",
+   "a": "out",
+   "d": [
+    "oat",
+    "art",
+    "it"
+   ]
+  },
+  {
+   "q": "Blend: t + r + ue",
+   "a": "true",
+   "d": [
+    "tree",
+    "try",
+    "toy"
+   ]
+  },
+  {
+   "q": "Order: e / l / u / b",
+   "a": "blue",
+   "d": [
+    "bule",
+    "lube",
+    "bell"
+   ]
+  },
+  {
+   "q": "Digraph in \"soil\"",
+   "a": "oi",
+   "d": [
+    "ou",
+    "ue",
+    "i-e"
+   ]
+  },
+  {
+   "q": "Digraph in \"tissue\"",
+   "a": "ue",
+   "d": [
+    "oi",
+    "ou",
+    "i-e"
+   ]
+  },
+  {
+   "q": "Digraph in \"slide\"",
+   "a": "i-e",
+   "d": [
+    "ou",
+    "oi",
+    "ue"
+   ]
+  },
+  {
+   "q": "Digraph in \"shout\"",
+   "a": "ou",
+   "d": [
+    "oi",
+    "ue",
+    "i-e"
+   ]
+  },
+  {
+   "q": "Same sound as \"coin\"",
+   "a": "boil",
+   "d": [
+    "bike",
+    "blue",
+    "cloud"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word has oi?",
+   "o": [
+    "soil",
+    "slide",
+    "shout",
+    "glue"
+   ],
+   "why": "S-oi-l has oi."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has ue?",
+   "o": [
+    "tissue",
+    "nine",
+    "mouth",
+    "coin"
+   ],
+   "why": "Tiss-ue has ue."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has ou?",
+   "o": [
+    "shout",
+    "bike",
+    "boil",
+    "blue"
+   ],
+   "why": "Sh-ou-t has ou."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has i-e?",
+   "o": [
+    "slide",
+    "soil",
+    "shout",
+    "glue"
+   ],
+   "why": "Sl-i-d-e has i-e."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write the word for a picture of a slide.",
+   "o": [
+    "slide",
+    "slid",
+    "sliede",
+    "sled"
+   ],
+   "why": "s-l-i-d-e spells slide."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Blend the new word: j + oi + n",
+   "o": [
+    "join",
+    "jean",
+    "june",
+    "john"
+   ],
+   "why": "j-oi-n makes join."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Order the letters: th / ou / m",
+   "o": [
+    "mouth",
+    "moth",
+    "thou",
+    "muth"
+   ],
+   "why": "m-ou-th spells mouth."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which new word has the same sound as \"glue\"?",
+   "o": [
+    "true",
+    "out",
+    "join",
+    "ride"
+   ],
+   "why": "True and glue both have ue."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which new word has the same sound as \"nine\"?",
+   "o": [
+    "ride",
+    "true",
+    "join",
+    "out"
+   ],
+   "why": "Ride and nine both have i-e."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT belong? cloud, shout, mouth, coin",
+   "o": [
+    "coin",
+    "cloud",
+    "shout",
+    "mouth"
+   ],
+   "why": "Coin has oi; the others have ou."
+  }
+ ]
+}

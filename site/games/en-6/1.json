@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Welcome: The WOW! Team",
+ "lesson": "Welcome – Lesson 1: Meet the WOW! Magazine",
+ "outcomes": [
+  "I can say what the WOW! Magazine is.",
+  "I can ask and answer questions about me and my partner.",
+  "I can name the four WOW! Team members."
+ ],
+ "tf": [
+  {
+   "s": "WOW! stands for World of Wonder!",
+   "t": true,
+   "why": "Great! WOW! means World of Wonder!"
+  },
+  {
+   "s": "You can buy the WOW! Magazine in the shops.",
+   "t": false,
+   "why": "WOW! is an online magazine, so you read it online."
+  },
+  {
+   "s": "The WOW! Magazine is made by kids for kids.",
+   "t": true,
+   "why": "Yes! Kids make it for other kids."
+  },
+  {
+   "s": "The WOW! Team asks students for ideas before choosing topics.",
+   "t": true,
+   "why": "Right! They ask you first, then they choose the topics."
+  },
+  {
+   "s": "There are six members in the WOW! Team.",
+   "t": false,
+   "why": "The team has four members: Reem, Sultan, Arlo and Julia."
+  },
+  {
+   "s": "Huda loves cooking.",
+   "t": true,
+   "why": "Yes, Huda's comment is about cooking."
+  },
+  {
+   "s": "Faisal wants to read about sports cars around the world.",
+   "t": false,
+   "why": "Faisal wants to read about traditional clothes around the world."
+  },
+  {
+   "s": "Rahaf went to a museum in the holidays.",
+   "t": true,
+   "why": "Correct! That is why she wants to know about the past."
+  },
+  {
+   "s": "Omaima had a new computer from her mum.",
+   "t": false,
+   "why": "Omaima's new computer was from her dad."
+  },
+  {
+   "s": "\"What's your favourite hobby?\" is a good question to ask a new classmate.",
+   "t": true,
+   "why": "Yes! It helps you learn about your new friend."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does WOW! stand for?",
+   "o": [
+    "World of Wonder!",
+    "World of Work!",
+    "Words of Wonder!"
+   ],
+   "why": "WOW! means World of Wonder!"
+  },
+  {
+   "q": "Where can you read WOW!?",
+   "o": [
+    "online",
+    "in the shops",
+    "in a newspaper"
+   ],
+   "why": "WOW! is an online magazine."
+  },
+  {
+   "q": "Who loves cooking?",
+   "o": [
+    "Huda",
+    "Basil",
+    "Faisal"
+   ],
+   "why": "Huda's comment is about cooking."
+  },
+  {
+   "q": "Basil wants to read about ___.",
+   "o": [
+    "sports",
+    "recipes",
+    "museums"
+   ],
+   "why": "Basil loves sports and wants to be happy and healthy."
+  },
+  {
+   "q": "Faisal wants to read about ___ clothes.",
+   "o": [
+    "traditional",
+    "sports",
+    "winter"
+   ],
+   "why": "Faisal is interested in traditional clothes around the world."
+  },
+  {
+   "q": "\"Good morning, and ___ to the start of this new school year.\"",
+   "o": [
+    "welcome",
+    "goodbye",
+    "sorry"
+   ],
+   "why": "We say welcome to greet people."
+  },
+  {
+   "q": "Answer: How old are you?",
+   "o": [
+    "I'm eleven.",
+    "I'm fine.",
+    "I'm Sultan."
+   ],
+   "why": "We answer \"How old…?\" with an age."
+  },
+  {
+   "q": "A ___ is something a reader writes about a page.",
+   "o": [
+    "comment",
+    "museum",
+    "recipe"
+   ],
+   "why": "A comment is what a reader writes."
+  },
+  {
+   "q": "Which word is about cooking?",
+   "o": [
+    "recipe",
+    "museum",
+    "camping"
+   ],
+   "why": "A recipe tells you how to cook something."
+  },
+  {
+   "q": "Who chooses the topics for the magazine?",
+   "o": [
+    "the WOW! Team",
+    "the shop",
+    "the teacher"
+   ],
+   "why": "The WOW! Team chooses topics after asking you."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "WOW! = World of ...",
+   "a": "Wonder",
+   "d": [
+    "Work",
+    "Water",
+    "Words"
+   ]
+  },
+  {
+   "q": "WOW! is an ... magazine.",
+   "a": "online",
+   "d": [
+    "old",
+    "expensive",
+    "paper"
+   ]
+  },
+  {
+   "q": "A WOW! Team member: R...",
+   "a": "Reem",
+   "d": [
+    "Rahaf",
+    "Rana",
+    "Rania"
+   ]
+  },
+  {
+   "q": "A WOW! Team member: S...",
+   "a": "Sultan",
+   "d": [
+    "Salim",
+    "Saif",
+    "Sami"
+   ]
+  },
+  {
+   "q": "He wants to read about clothes.",
+   "a": "Faisal",
+   "d": [
+    "Basil",
+    "Hisham",
+    "Sultan"
+   ]
+  },
+  {
+   "q": "She loves cooking.",
+   "a": "Huda",
+   "d": [
+    "Rahaf",
+    "Omaima",
+    "Julia"
+   ]
+  },
+  {
+   "q": "She went to a museum.",
+   "a": "Rahaf",
+   "d": [
+    "Huda",
+    "Omaima",
+    "Reem"
+   ]
+  },
+  {
+   "q": "A place with old things",
+   "a": "museum",
+   "d": [
+    "recipe",
+    "comment",
+    "topic"
+   ]
+  },
+  {
+   "q": "Instructions to cook food",
+   "a": "recipe",
+   "d": [
+    "museum",
+    "camping",
+    "comment"
+   ]
+  },
+  {
+   "q": "Good for your body",
+   "a": "healthy",
+   "d": [
+    "noisy",
+    "online",
+    "funny"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How many members are in the WOW! Team?",
+   "o": [
+    "four",
+    "two",
+    "six",
+    "ten"
+   ],
+   "why": "Reem, Sultan, Arlo and Julia make four."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list has the WOW! Team members?",
+   "o": [
+    "Reem, Sultan, Arlo and Julia",
+    "Huda, Basil, Rahaf and Faisal",
+    "Reem, Huda, Arlo and Omaima",
+    "Sultan, Hisham, Julia and Basil"
+   ],
+   "why": "The team is Reem, Sultan, Arlo and Julia."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the best description of WOW!?",
+   "o": [
+    "the magazine made by kids for kids",
+    "a magazine you buy in the shops",
+    "a book about the world",
+    "a TV show for adults"
+   ],
+   "why": "WOW! is made by kids for kids."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What did Omaima get from her dad?",
+   "o": [
+    "a new computer",
+    "a new bike",
+    "a recipe book",
+    "a museum ticket"
+   ],
+   "why": "Omaima had a new computer from her dad."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your new classmate asks, \"Why are you learning English?\" Which is a good answer?",
+   "o": [
+    "Because I want to travel.",
+    "I'm twelve.",
+    "My name is Ali.",
+    "Football."
+   ],
+   "why": "\"Why\" questions need an answer with \"because\"."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which question asks about free time?",
+   "o": [
+    "What's your favourite hobby?",
+    "How old are you?",
+    "What's your name?",
+    "Where is the museum?"
+   ],
+   "why": "A hobby is what you do in your free time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You love adventures. Which sentence can you say?",
+   "o": [
+    "I want to read about camping because I love adventures.",
+    "I want to read about recipes because I love adventures.",
+    "I'm medium height because I love adventures.",
+    "I love adventures because I'm eleven."
+   ],
+   "why": "Camping is an adventure, so the reason matches."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the WOW! Team ask students for ideas?",
+   "o": [
+    "to choose topics that are interesting for students",
+    "to sell the magazine in shops",
+    "to find new team members",
+    "to give students homework"
+   ],
+   "why": "They want topics students will enjoy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Rahaf want to know about places in the past?",
+   "o": [
+    "because she went to a museum in the holidays",
+    "because she loves cooking",
+    "because she got a new computer",
+    "because she plays sports"
+   ],
+   "why": "Her museum visit made her interested in the past."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which two readers want to learn how to stay healthy?",
+   "o": [
+    "Basil and Hisham",
+    "Huda and Faisal",
+    "Rahaf and Omaima",
+    "Faisal and Rahaf"
+   ],
+   "why": "Basil and Hisham both talk about being healthy."
+  }
+ ]
+}

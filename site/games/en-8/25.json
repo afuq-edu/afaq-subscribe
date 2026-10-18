@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 2: Adventure sports",
+ "lesson": "Graded reader 1: A Sandboarding Adventure",
+ "outcomes": [
+  "Read a story and find key information.",
+  "Learn the words goggles, knee pads, instructor, pleased and ancient.",
+  "Retell and give your opinion about the story."
+ ],
+ "tf": [
+  {
+   "s": "Laith and Aliyah went sandboarding in the Sharqiyah Sands.",
+   "t": true,
+   "why": "Yes, the story happens in the Sharqiyah Sands."
+  },
+  {
+   "s": "The Sharqiyah Sands are in the west of Oman.",
+   "t": false,
+   "why": "They are in the east of Oman."
+  },
+  {
+   "s": "The children wore goggles, knee pads and helmets.",
+   "t": true,
+   "why": "Right, that is their safety equipment."
+  },
+  {
+   "s": "Aliyah found a bracelet in the sand.",
+   "t": true,
+   "why": "Correct, she found some jewellery: a bracelet."
+  },
+  {
+   "s": "The bracelet was ancient treasure.",
+   "t": false,
+   "why": "It was Bushra's bracelet, not ancient treasure."
+  },
+  {
+   "s": "'Ancient' means very old.",
+   "t": true,
+   "why": "Well done, ancient means very old."
+  },
+  {
+   "s": "Bushra lost her bracelet in the evening.",
+   "t": false,
+   "why": "Bushra lost it in the morning."
+  },
+  {
+   "s": "An instructor is a person who teaches an activity.",
+   "t": true,
+   "why": "Yes, their instructor went with them down the dunes."
+  },
+  {
+   "s": "At the end, Aliyah felt angry.",
+   "t": false,
+   "why": "Aliyah felt happy for Bushra."
+  },
+  {
+   "s": "Dunes are hills of sand.",
+   "t": true,
+   "why": "Good, they went down sand dunes."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where did the children go sandboarding?",
+   "o": [
+    "the Sharqiyah Sands",
+    "Qantab Beach",
+    "Salalah"
+   ],
+   "why": "They had a lesson in the Sharqiyah Sands."
+  },
+  {
+   "q": "What did Aliyah find?",
+   "o": [
+    "a bracelet",
+    "a phone",
+    "a map"
+   ],
+   "why": "Aliyah found a bracelet in the sand."
+  },
+  {
+   "q": "Who did the bracelet belong to?",
+   "o": [
+    "Bushra",
+    "Aliyah",
+    "the instructor"
+   ],
+   "why": "The bracelet was Bushra's."
+  },
+  {
+   "q": "Who went with the children down the dunes?",
+   "o": [
+    "their instructor",
+    "their teacher from school",
+    "a doctor"
+   ],
+   "why": "Their instructor went with them."
+  },
+  {
+   "q": "What do goggles protect?",
+   "o": [
+    "your eyes",
+    "your knees",
+    "your feet"
+   ],
+   "why": "Goggles cover and protect the eyes."
+  },
+  {
+   "q": "What does 'pleased' mean?",
+   "o": [
+    "happy",
+    "scared",
+    "tired"
+   ],
+   "why": "Pleased means happy about something."
+  },
+  {
+   "q": "Complete: They went down some sand ___.",
+   "o": [
+    "dunes",
+    "valleys",
+    "bays"
+   ],
+   "why": "Hills of sand are dunes."
+  },
+  {
+   "q": "How did Aliyah feel at the end?",
+   "o": [
+    "happy for Bushra",
+    "sad",
+    "bored"
+   ],
+   "why": "She was happy that Bushra got her bracelet back."
+  },
+  {
+   "q": "When did Bushra lose her bracelet?",
+   "o": [
+    "in the morning",
+    "at night",
+    "last year"
+   ],
+   "why": "Bushra lost it in the morning."
+  },
+  {
+   "q": "Which is the correct stress? 'Laith had WANTED to go ...'",
+   "o": [
+    "wanted",
+    "had",
+    "to"
+   ],
+   "why": "The main verb is stressed, not 'had' or 'to'."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Where they went sandboarding",
+   "a": "Sharqiyah Sands",
+   "d": [
+    "Qantab Beach",
+    "Salalah",
+    "Spain"
+   ]
+  },
+  {
+   "q": "Part of Oman with the Sands",
+   "a": "east",
+   "d": [
+    "west",
+    "north",
+    "south"
+   ]
+  },
+  {
+   "q": "What Aliyah found",
+   "a": "bracelet",
+   "d": [
+    "ring",
+    "watch",
+    "phone"
+   ]
+  },
+  {
+   "q": "Owner of the bracelet",
+   "a": "Bushra",
+   "d": [
+    "Aliyah",
+    "Laith",
+    "Muneera"
+   ]
+  },
+  {
+   "q": "Person who teaches the lesson",
+   "a": "instructor",
+   "d": [
+    "opponent",
+    "expert diver",
+    "pilot"
+   ]
+  },
+  {
+   "q": "They protect your eyes",
+   "a": "goggles",
+   "d": [
+    "knee pads",
+    "helmets",
+    "gloves"
+   ]
+  },
+  {
+   "q": "They protect your knees",
+   "a": "knee pads",
+   "d": [
+    "goggles",
+    "helmets",
+    "boots"
+   ]
+  },
+  {
+   "q": "Hills of sand",
+   "a": "dunes",
+   "d": [
+    "valleys",
+    "bays",
+    "fields"
+   ]
+  },
+  {
+   "q": "Means very old",
+   "a": "ancient",
+   "d": [
+    "pleased",
+    "gentle",
+    "stunning"
+   ]
+  },
+  {
+   "q": "Means happy",
+   "a": "pleased",
+   "d": [
+    "ancient",
+    "scared",
+    "angry"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What did Laith and Aliyah have in the Sharqiyah Sands?",
+   "o": [
+    "a sandboarding lesson",
+    "a swimming lesson",
+    "a camel race",
+    "a football match"
+   ],
+   "why": "They had a sandboarding lesson."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What safety equipment did they wear?",
+   "o": [
+    "goggles, knee pads and helmets",
+    "gloves and boots",
+    "a life jacket",
+    "nothing"
+   ],
+   "why": "They wore goggles, knee pads and helmets."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'ancient' mean?",
+   "o": [
+    "very old",
+    "very new",
+    "very fast",
+    "very heavy"
+   ],
+   "why": "Ancient means very old."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What had Laith wanted to do for a long time?",
+   "o": [
+    "go sandboarding",
+    "go diving",
+    "climb a cliff",
+    "visit a market"
+   ],
+   "why": "Laith had wanted to go sandboarding for a long time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete the summary: The children put on their equipment and went down the dunes with their ___.",
+   "o": [
+    "instructor",
+    "opponent",
+    "puck",
+    "brochure"
+   ],
+   "why": "Their instructor went with them."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the false sentence: 'They had a lesson in the west of Oman.'",
+   "o": [
+    "They had a lesson in the east of Oman.",
+    "They had a lesson in Spain.",
+    "They had no lesson.",
+    "They had a lesson at sea."
+   ],
+   "why": "The Sharqiyah Sands are in the east."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses the Past perfect correctly?",
+   "o": [
+    "Laith had wanted to go sandboarding for a long time.",
+    "Laith had want to go sandboarding.",
+    "Laith has wanted go sandboarding.",
+    "Laith wanted had to go sandboarding."
+   ],
+   "why": "had + past participle: had wanted."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why did Aliyah feel happy at the end?",
+   "o": [
+    "Bushra got her lost bracelet back.",
+    "She won a race.",
+    "The lesson was cancelled.",
+    "She found ancient treasure."
+   ],
+   "why": "She was happy for Bushra."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why did the children wear goggles and knee pads?",
+   "o": [
+    "to stay safe while sandboarding",
+    "to look funny",
+    "because it was raining",
+    "to swim"
+   ],
+   "why": "Safety equipment protects you in extreme sports."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The bracelet was not ancient treasure. How do we know?",
+   "o": [
+    "It belonged to Bushra, who had lost it that morning.",
+    "It was made of sand.",
+    "It was a phone.",
+    "It was very new from a shop."
+   ],
+   "why": "The bracelet was Bushra's, lost that same morning."
+  }
+ ]
+}

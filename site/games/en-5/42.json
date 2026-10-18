@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Bo’s Learning Club 1",
+ "lesson": "Lesson 1: Language booster – Hobbies and making suggestions",
+ "outcomes": [
+  "Say hobby phrases like bake a cake and build a robot.",
+  "Make suggestions with How about …?, Shall we …? and Let's …",
+  "Respond to suggestions and agree on an activity."
+ ],
+ "tf": [
+  {
+   "s": "After \"How about\" we use a verb with -ing.",
+   "t": true,
+   "why": "How about playing board games?"
+  },
+  {
+   "s": "\"Let's going to the kiosk.\" is correct.",
+   "t": false,
+   "why": "After Let's we use the base verb: Let's go to the kiosk."
+  },
+  {
+   "s": "\"Shall we visit my granny?\" is correct.",
+   "t": true,
+   "why": "Shall we + base verb."
+  },
+  {
+   "s": "\"What about building a robot?\" is a suggestion.",
+   "t": true,
+   "why": "What about + -ing makes a suggestion."
+  },
+  {
+   "s": "\"What shall we do today?\" is correct word order.",
+   "t": true,
+   "why": "What + shall + we + do?"
+  },
+  {
+   "s": "\"Yes, that's a great idea!\" is a way to say no.",
+   "t": false,
+   "why": "It is a way to agree."
+  },
+  {
+   "s": "We say \"bake a robot\".",
+   "t": false,
+   "why": "We bake a cake and build a robot."
+  },
+  {
+   "s": "\"No, I don't like fish.\" is a good reply to \"What about visiting a fishmonger's?\"",
+   "t": true,
+   "why": "It says no and gives a reason."
+  },
+  {
+   "s": "\"How about visit the kiosk?\" is correct.",
+   "t": false,
+   "why": "We say: How about visiting the kiosk?"
+  },
+  {
+   "s": "\"Do an experiment\" is a hobby phrase in this lesson.",
+   "t": true,
+   "why": "do an experiment is one of the phrases."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Choose: How about (play / playing) board games?",
+   "o": [
+    "playing",
+    "play",
+    "played"
+   ],
+   "why": "How about + -ing."
+  },
+  {
+   "q": "Choose: Let's (go / going) to the kiosk.",
+   "o": [
+    "go",
+    "going",
+    "goes"
+   ],
+   "why": "Let's + base verb."
+  },
+  {
+   "q": "Choose: Shall we (visit / visiting) my granny?",
+   "o": [
+    "visit",
+    "visiting",
+    "visits"
+   ],
+   "why": "Shall we + base verb."
+  },
+  {
+   "q": "Complete: What ______ we do today?",
+   "o": [
+    "shall",
+    "are",
+    "did"
+   ],
+   "why": "What shall we do?"
+  },
+  {
+   "q": "Complete: ______ a robot.",
+   "o": [
+    "build",
+    "bake",
+    "do"
+   ],
+   "why": "We build a robot."
+  },
+  {
+   "q": "Complete: ______ a cake.",
+   "o": [
+    "bake",
+    "build",
+    "visit"
+   ],
+   "why": "We bake a cake."
+  },
+  {
+   "q": "How about baking a cake? Choose a reply.",
+   "o": [
+    "Yes, I'm hungry. Let's bake!",
+    "Yes, I baked.",
+    "No, it's a robot."
+   ],
+   "why": "This reply agrees and gives a reason."
+  },
+  {
+   "q": "Complete: How about ______ the kiosk? (visit)",
+   "o": [
+    "visiting",
+    "visit",
+    "visited"
+   ],
+   "why": "How about + -ing."
+  },
+  {
+   "q": "Which one makes a suggestion?",
+   "o": [
+    "Let's make a rocket!",
+    "I made a rocket.",
+    "He makes rockets."
+   ],
+   "why": "Let's + verb is a suggestion."
+  },
+  {
+   "q": "Complete: ______ an experiment.",
+   "o": [
+    "do",
+    "bake",
+    "build"
+   ],
+   "why": "We do an experiment."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "How about ___ a pizza?",
+   "a": "making",
+   "d": [
+    "make",
+    "made",
+    "makes"
+   ]
+  },
+  {
+   "q": "Let's ___ a rocket!",
+   "a": "make",
+   "d": [
+    "making",
+    "made",
+    "makes"
+   ]
+  },
+  {
+   "q": "Shall we ___ a robot?",
+   "a": "build",
+   "d": [
+    "building",
+    "built",
+    "builds"
+   ]
+  },
+  {
+   "q": "___ a cake",
+   "a": "bake",
+   "d": [
+    "build",
+    "do",
+    "visit"
+   ]
+  },
+  {
+   "q": "___ an experiment",
+   "a": "do",
+   "d": [
+    "bake",
+    "build",
+    "make a"
+   ]
+  },
+  {
+   "q": "___ a toy shop",
+   "a": "visit",
+   "d": [
+    "bake",
+    "do",
+    "build"
+   ]
+  },
+  {
+   "q": "What ___ we do today?",
+   "a": "shall",
+   "d": [
+    "are",
+    "did",
+    "does"
+   ]
+  },
+  {
+   "q": "Agree: Yes, that's a great ___!",
+   "a": "idea",
+   "d": [
+    "robot",
+    "pizza",
+    "shop"
+   ]
+  },
+  {
+   "q": "What about ___ a cake?",
+   "a": "baking",
+   "d": [
+    "bake",
+    "baked",
+    "bakes"
+   ]
+  },
+  {
+   "q": "___ go to the park!",
+   "a": "Let's",
+   "d": [
+    "How about",
+    "What about",
+    "Shall"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which group has only hobby phrases from the lesson?",
+   "o": [
+    "make a pizza, bake a cake, build a robot",
+    "buy, sell, save",
+    "Sun, Moon, star",
+    "port, fort, ruins"
+   ],
+   "why": "These are the hobby phrases."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What comes after \"Let's\"?",
+   "o": [
+    "the base verb",
+    "a verb with -ing",
+    "a verb with -ed",
+    "a verb with -s"
+   ],
+   "why": "Let's go, Let's bake."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What comes after \"How about\" and \"What about\"?",
+   "o": [
+    "a verb with -ing",
+    "the base verb",
+    "a verb with -ed",
+    "will"
+   ],
+   "why": "How about doing …? What about building …?"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence agrees with a suggestion?",
+   "o": [
+    "Yes, that's a great idea!",
+    "No, I don't like it.",
+    "I don't know.",
+    "Goodbye!"
+   ],
+   "why": "This shows you agree."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Respond to \"What about building a robot?\" if you like robots.",
+   "o": [
+    "Yes, that's a great idea. I love robots.",
+    "No, I don't like robots.",
+    "Yes, I built it yesterday.",
+    "Robots are planets."
+   ],
+   "why": "Agree and give a reason."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Order the words: shall / What / do / we?",
+   "o": [
+    "What shall we do?",
+    "What we shall do?",
+    "Shall what we do?",
+    "Do we shall what?"
+   ],
+   "why": "What + shall + we + do?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend loves Science. Which suggestion is best?",
+   "o": [
+    "How about doing an experiment?",
+    "How about visiting the butcher's?",
+    "Let's sleep all day.",
+    "Shall we sell a robot?"
+   ],
+   "why": "An experiment is a good choice for someone who loves Science."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "How about bake a cake?",
+    "Let's bake a cake.",
+    "Shall we bake a cake?",
+    "What about baking a cake?"
+   ],
+   "why": "After How about we need -ing: How about baking a cake?"
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"What about visiting a fishmonger's?\" \"No, I don't like fish.\" Why does the boy say no?",
+   "o": [
+    "He doesn't like fish.",
+    "He likes robots.",
+    "The fishmonger's is closed.",
+    "He has no money."
+   ],
+   "why": "His reason is in his reply."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which two sentences mean almost the same?",
+   "o": [
+    "How about making a pizza? / Let's make a pizza.",
+    "Let's make a pizza. / I made a pizza.",
+    "Shall we make a pizza? / I don't like pizza.",
+    "What about a pizza? / Pizza is a planet."
+   ],
+   "why": "Both are suggestions to make a pizza."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 4: I want to be a doctor!",
+ "lesson": "Unit 4 – Lesson 1: Vocabulary and Grammar (jobs)",
+ "outcomes": [
+  "I can name ten jobs.",
+  "I can say: I want to be a … / an …",
+  "I can choose a or an."
+ ],
+ "tf": [
+  {
+   "s": "A chef cooks food.",
+   "t": true,
+   "why": "Yes! A chef makes food."
+  },
+  {
+   "s": "A pilot flies a plane.",
+   "t": true,
+   "why": "Right! A pilot flies a plane."
+  },
+  {
+   "s": "We say: I want to be a artist.",
+   "t": false,
+   "why": "Artist starts with a vowel sound, so we say an artist."
+  },
+  {
+   "s": "We say: I want to be an astronaut.",
+   "t": true,
+   "why": "Great! An + astronaut."
+  },
+  {
+   "s": "A firefighter needs a palette and a brush.",
+   "t": false,
+   "why": "An artist uses a palette. A firefighter uses fire boots."
+  },
+  {
+   "s": "A doctor uses a stethoscope.",
+   "t": true,
+   "why": "Yes! A stethoscope is a doctor's object."
+  },
+  {
+   "s": "We use an before a consonant sound, like an pilot.",
+   "t": false,
+   "why": "We use a before a consonant sound: a pilot."
+  },
+  {
+   "s": "A builder uses a helmet and plans.",
+   "t": true,
+   "why": "Well done! Builders use helmets and plans."
+  },
+  {
+   "s": "A teacher works with a board and desks.",
+   "t": true,
+   "why": "Right! A teacher uses a board and desks."
+  },
+  {
+   "s": "An astronaut puts out fires.",
+   "t": false,
+   "why": "A firefighter puts out fires."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who puts out fires?",
+   "o": [
+    "a firefighter",
+    "a chef",
+    "a pilot"
+   ],
+   "why": "A firefighter puts out fires."
+  },
+  {
+   "q": "Choose: I want to be ___ artist.",
+   "o": [
+    "an",
+    "a",
+    "the"
+   ],
+   "why": "Artist starts with a vowel sound: an artist."
+  },
+  {
+   "q": "Choose: I want to be ___ nurse.",
+   "o": [
+    "a",
+    "an",
+    "two"
+   ],
+   "why": "Nurse starts with a consonant sound: a nurse."
+  },
+  {
+   "q": "Which job uses a palette?",
+   "o": [
+    "artist",
+    "builder",
+    "doctor"
+   ],
+   "why": "An artist paints with a palette."
+  },
+  {
+   "q": "Which job uses a stethoscope?",
+   "o": [
+    "doctor",
+    "teacher",
+    "chef"
+   ],
+   "why": "A doctor uses a stethoscope."
+  },
+  {
+   "q": "Who works in space?",
+   "o": [
+    "an astronaut",
+    "a teacher",
+    "a builder"
+   ],
+   "why": "An astronaut goes to space."
+  },
+  {
+   "q": "Which job goes with a plane?",
+   "o": [
+    "pilot",
+    "nurse",
+    "artist"
+   ],
+   "why": "A pilot flies a plane."
+  },
+  {
+   "q": "Which sentence is correct?",
+   "o": [
+    "I want to be a teacher.",
+    "I want be a teacher.",
+    "I want to a teacher."
+   ],
+   "why": "We say: I want to be a teacher."
+  },
+  {
+   "q": "Who helps keep people safe on the street?",
+   "o": [
+    "a police officer",
+    "an artist",
+    "a chef"
+   ],
+   "why": "A police officer keeps people safe."
+  },
+  {
+   "q": "Which word starts with a vowel sound?",
+   "o": [
+    "astronaut",
+    "pilot",
+    "doctor"
+   ],
+   "why": "Astronaut starts with a vowel sound, so we say an."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Fire boots belong to a …",
+   "a": "firefighter",
+   "d": [
+    "chef",
+    "teacher",
+    "pilot"
+   ]
+  },
+  {
+   "q": "A hammer and plans",
+   "a": "builder",
+   "d": [
+    "doctor",
+    "nurse",
+    "artist"
+   ]
+  },
+  {
+   "q": "Board and desks",
+   "a": "teacher",
+   "d": [
+    "pilot",
+    "chef",
+    "builder"
+   ]
+  },
+  {
+   "q": "Who cooks food?",
+   "a": "chef",
+   "d": [
+    "nurse",
+    "pilot",
+    "builder"
+   ]
+  },
+  {
+   "q": "Uses a stethoscope",
+   "a": "doctor",
+   "d": [
+    "chef",
+    "pilot",
+    "artist"
+   ]
+  },
+  {
+   "q": "Flies a plane",
+   "a": "pilot",
+   "d": [
+    "builder",
+    "teacher",
+    "nurse"
+   ]
+  },
+  {
+   "q": "Keeps the streets safe",
+   "a": "police officer",
+   "d": [
+    "chef",
+    "artist",
+    "astronaut"
+   ]
+  },
+  {
+   "q": "Paints pictures",
+   "a": "artist",
+   "d": [
+    "doctor",
+    "pilot",
+    "nurse"
+   ]
+  },
+  {
+   "q": "Goes to space",
+   "a": "astronaut",
+   "d": [
+    "chef",
+    "teacher",
+    "builder"
+   ]
+  },
+  {
+   "q": "Helps sick people with a doctor",
+   "a": "nurse",
+   "d": [
+    "pilot",
+    "artist",
+    "builder"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word is a job?",
+   "o": [
+    "nurse",
+    "plane",
+    "palette",
+    "brush"
+   ],
+   "why": "A nurse is a job."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does a pilot fly?",
+   "o": [
+    "a plane",
+    "a bus",
+    "a boat",
+    "a bike"
+   ],
+   "why": "A pilot flies a plane."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which job matches the palette and brush?",
+   "o": [
+    "artist",
+    "chef",
+    "pilot",
+    "nurse"
+   ],
+   "why": "An artist paints with a palette and brush."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How many jobs are in this lesson?",
+   "o": [
+    "ten",
+    "six",
+    "four",
+    "two"
+   ],
+   "why": "We learn ten jobs."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture: a hammer. Circle: I want to be a builder / artist / doctor.",
+   "o": [
+    "builder",
+    "artist",
+    "doctor",
+    "pilot"
+   ],
+   "why": "A builder uses a hammer."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a sentence for: astronaut.",
+   "o": [
+    "I want to be an astronaut.",
+    "I want to be a astronaut.",
+    "I want be an astronaut.",
+    "I want to an astronaut."
+   ],
+   "why": "We say: I want to be an astronaut."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend loves cooking. What can she say?",
+   "o": [
+    "I want to be a chef.",
+    "I want to be a pilot.",
+    "I want to be an astronaut.",
+    "I want to be a builder."
+   ],
+   "why": "A chef cooks food."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say an artist but a pilot?",
+   "o": [
+    "Artist starts with a vowel sound.",
+    "Artist is a long word.",
+    "Pilot starts with a vowel sound.",
+    "Pilot is a long word."
+   ],
+   "why": "We use an before a vowel sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair is correct?",
+   "o": [
+    "an astronaut, a firefighter",
+    "a astronaut, an firefighter",
+    "an astronaut, an firefighter",
+    "a astronaut, a firefighter"
+   ],
+   "why": "an + vowel sound, a + consonant sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The teacher mimes putting out a fire. Which job is it?",
+   "o": [
+    "firefighter",
+    "chef",
+    "artist",
+    "teacher"
+   ],
+   "why": "Putting out fires is a firefighter's job."
+  }
+ ]
+}

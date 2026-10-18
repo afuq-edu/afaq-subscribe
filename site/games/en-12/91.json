@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Popular Destinations (Vocabulary)",
+ "lesson": "The world’s most visited countries: reading and scanning",
+ "outcomes": [
+  "Talk about countries you would like to visit",
+  "Read about the world's most visited countries",
+  "Scan a text for details using key words"
+ ],
+ "tf": [
+  {
+   "s": "The text is about the world's most visited countries.",
+   "t": true,
+   "why": "Yes, it describes popular destinations."
+  },
+  {
+   "s": "Scanning is useful for finding names, dates and numbers.",
+   "t": true,
+   "why": "Right, scanning finds details quickly."
+  },
+  {
+   "s": "Guessing before you read helps you think about the topic.",
+   "t": true,
+   "why": "Yes, predicting prepares your mind for the text."
+  },
+  {
+   "s": "'Destination' means the person who travels.",
+   "t": false,
+   "why": "A destination is the place you travel to."
+  },
+  {
+   "s": "Key words are usually long sentences copied from the text.",
+   "t": false,
+   "why": "Key words are short words in the question that guide you."
+  },
+  {
+   "s": "When you scan, you look for the key word in the text.",
+   "t": true,
+   "why": "Well done, the key word shows where the answer is."
+  },
+  {
+   "s": "The Alhambra is an ancient city in China.",
+   "t": false,
+   "why": "The Alhambra is a palace in Spain."
+  },
+  {
+   "s": "Italy is mentioned among the most visited countries.",
+   "t": true,
+   "why": "Yes, with France and Spain."
+  },
+  {
+   "s": "Spain is one of the least visited countries in the text.",
+   "t": false,
+   "why": "Spain is one of the most visited countries."
+  },
+  {
+   "s": "The report about the most visited countries is from 2014.",
+   "t": true,
+   "why": "Correct, it is a 2014 report."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which organisation published the report?",
+   "o": [
+    "The World Tourism Organisation",
+    "A football club",
+    "A school"
+   ],
+   "why": "The World Tourism Organisation wrote it."
+  },
+  {
+   "q": "Which Spanish palace is mentioned?",
+   "o": [
+    "The Alhambra Palace",
+    "Ephesus",
+    "Shanghai World Financial Centre"
+   ],
+   "why": "The Alhambra is in Spain."
+  },
+  {
+   "q": "What is Ephesus?",
+   "o": [
+    "An ancient city",
+    "A modern tower",
+    "A lake"
+   ],
+   "why": "Ephesus is an ancient city."
+  },
+  {
+   "q": "What do Scotland and the Lake District offer visitors?",
+   "o": [
+    "Beautiful mountains and lakes",
+    "Ancient palaces",
+    "Tall towers"
+   ],
+   "why": "They are famous for natural beauty."
+  },
+  {
+   "q": "What is scanning?",
+   "o": [
+    "Looking quickly for specific information",
+    "Reading slowly for fun",
+    "Writing notes"
+   ],
+   "why": "Scanning is fast and focused."
+  },
+  {
+   "q": "What is a key word?",
+   "o": [
+    "A word that leads you to the answer",
+    "A very difficult word",
+    "The title of the text"
+   ],
+   "why": "Key words point to the right part of the text."
+  },
+  {
+   "q": "What does 'popular' mean?",
+   "o": [
+    "liked by many people",
+    "very old",
+    "very small"
+   ],
+   "why": "Popular places attract many visitors."
+  },
+  {
+   "q": "Which modern building in China does the text mention?",
+   "o": [
+    "Shanghai World Financial Centre",
+    "The Alhambra Palace",
+    "Ephesus"
+   ],
+   "why": "It is a modern building in Shanghai."
+  },
+  {
+   "q": "Which skill helps you find a date quickly?",
+   "o": [
+    "Scanning",
+    "Drawing",
+    "Spelling"
+   ],
+   "why": "Scan for numbers to find dates."
+  },
+  {
+   "q": "What should you find in each question before you scan?",
+   "o": [
+    "The key word",
+    "The longest word",
+    "The last word"
+   ],
+   "why": "The key word guides your eyes."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "A palace in Spain",
+   "a": "Alhambra",
+   "d": [
+    "Ephesus",
+    "Shanghai",
+    "Lake District"
+   ]
+  },
+  {
+   "q": "An ancient city in the text",
+   "a": "Ephesus",
+   "d": [
+    "Alhambra",
+    "Shanghai",
+    "Lake District"
+   ]
+  },
+  {
+   "q": "Country of the World Financial Centre",
+   "a": "China",
+   "d": [
+    "Spain",
+    "Italy",
+    "France"
+   ]
+  },
+  {
+   "q": "Famous for mountains and lakes",
+   "a": "Lake District",
+   "d": [
+    "Ephesus",
+    "Alhambra",
+    "Shanghai"
+   ]
+  },
+  {
+   "q": "Year of the tourism report",
+   "a": "2014",
+   "d": [
+    "2004",
+    "1994",
+    "2024"
+   ]
+  },
+  {
+   "q": "Reading fast to find details",
+   "a": "Scanning",
+   "d": [
+    "Writing",
+    "Spelling",
+    "Drawing"
+   ]
+  },
+  {
+   "q": "Liked by many people",
+   "a": "Popular",
+   "d": [
+    "Ancient",
+    "Modern",
+    "Empty"
+   ]
+  },
+  {
+   "q": "A place people travel to",
+   "a": "Destination",
+   "d": [
+    "Tourist",
+    "Ticket",
+    "Report"
+   ]
+  },
+  {
+   "q": "A word that leads to the answer",
+   "a": "Key word",
+   "d": [
+    "Title",
+    "Heading",
+    "Full stop"
+   ]
+  },
+  {
+   "q": "The Alhambra is a…",
+   "a": "Palace",
+   "d": [
+    "Tower",
+    "Bridge",
+    "Stadium"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which countries are among the most visited in the text?",
+   "o": [
+    "France, Spain and Italy",
+    "Chad, Niger and Mali",
+    "Nepal, Bhutan and Laos",
+    "Fiji, Tonga and Samoa"
+   ],
+   "why": "France, Spain and Italy get many tourists."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the World Tourism Organisation report show?",
+   "o": [
+    "The world's most visited countries",
+    "The best restaurants",
+    "Hotel prices",
+    "Airline timetables"
+   ],
+   "why": "The report lists popular countries."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should you do first when you scan?",
+   "o": [
+    "Read the question and find the key word",
+    "Read every word of the text",
+    "Close the book",
+    "Translate the whole text"
+   ],
+   "why": "Start with the question's key word."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is closest in meaning to 'destination'?",
+   "o": [
+    "place to go",
+    "traveller",
+    "ticket",
+    "suitcase"
+   ],
+   "why": "A destination is where you are going."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Question: 'Which modern building in China is mentioned?' What is the best key word to scan for?",
+   "o": [
+    "Modern building … China",
+    "Which",
+    "is",
+    "mentioned"
+   ],
+   "why": "Choose words that carry the meaning."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Question: 'Which organisation wrote the 2014 report?' Which key word helps you most?",
+   "o": [
+    "report … 2014",
+    "Which",
+    "the",
+    "wrote"
+   ],
+   "why": "Numbers and names are easy to spot."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to know quickly when a museum opens from a leaflet. What should you do?",
+   "o": [
+    "Scan for times and numbers",
+    "Read every word slowly",
+    "Learn all new words first",
+    "Write a summary first"
+   ],
+   "why": "Scanning finds details like times fast."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do key words help you scan?",
+   "o": [
+    "They lead you to the part of the text with the answer",
+    "They tell you the answer directly",
+    "They make the text shorter",
+    "They are always in the title"
+   ],
+   "why": "Key words show you where to look."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might France, Spain and Italy get so many tourists?",
+   "o": [
+    "They offer famous places, history and good food",
+    "They have no cities",
+    "They are closed to visitors",
+    "They have no hotels"
+   ],
+   "why": "Visitors come for places, culture and food."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A tourist loves ancient history. Which place in the text suits them best?",
+   "o": [
+    "Ephesus",
+    "Shanghai World Financial Centre",
+    "The Lake District",
+    "A shopping centre"
+   ],
+   "why": "Ephesus is an ancient city."
+  }
+ ]
+}

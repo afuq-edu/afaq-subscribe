@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Unit 3 – Lesson 1: Vocabulary and Grammar (The body)",
+ "outcomes": [
+  "I can name ten body parts.",
+  "I can say what I've got: I've got two arms.",
+  "I can read and write body words."
+ ],
+ "tf": [
+  {
+   "s": "We say \"one foot, two feet\".",
+   "t": true,
+   "why": "Foot has a special plural: feet."
+  },
+  {
+   "s": "We say \"two foots\".",
+   "t": false,
+   "why": "The right word is feet."
+  },
+  {
+   "s": "I've got ten toes.",
+   "t": true,
+   "why": "We have got ten toes."
+  },
+  {
+   "s": "I've got one face.",
+   "t": true,
+   "why": "We have got one face."
+  },
+  {
+   "s": "I've got three legs.",
+   "t": false,
+   "why": "We have got two legs."
+  },
+  {
+   "s": "Knees are in the middle of our legs.",
+   "t": true,
+   "why": "We bend our knees to sit."
+  },
+  {
+   "s": "Your tummy is on your head.",
+   "t": false,
+   "why": "Your tummy is in the middle of your body."
+  },
+  {
+   "s": "Fingers are on our hands.",
+   "t": true,
+   "why": "We have got ten fingers on our hands."
+  },
+  {
+   "s": "I've got two heads.",
+   "t": false,
+   "why": "We have got one head."
+  },
+  {
+   "s": "\"I've got\" means \"I have got\".",
+   "t": true,
+   "why": "I've is short for I have."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "I've got ten ___. (on my feet)",
+   "o": [
+    "toes",
+    "knees",
+    "arms"
+   ],
+   "why": "Toes are on our feet."
+  },
+  {
+   "q": "One foot, two ___.",
+   "o": [
+    "feet",
+    "foots",
+    "feets"
+   ],
+   "why": "The plural of foot is feet."
+  },
+  {
+   "q": "I've got two ___. (to walk)",
+   "o": [
+    "legs",
+    "heads",
+    "faces"
+   ],
+   "why": "We walk with our legs."
+  },
+  {
+   "q": "How many fingers have you got?",
+   "o": [
+    "I've got ten fingers.",
+    "I've got two fingers.",
+    "I've got one finger."
+   ],
+   "why": "We have got ten fingers."
+  },
+  {
+   "q": "I've got one ___.",
+   "o": [
+    "head",
+    "arms",
+    "toes"
+   ],
+   "why": "We have got one head."
+  },
+  {
+   "q": "Which body part do you bend to sit?",
+   "o": [
+    "knees",
+    "toes",
+    "face"
+   ],
+   "why": "We bend our knees."
+  },
+  {
+   "q": "Find the body word.",
+   "o": [
+    "tummy",
+    "ruler",
+    "chair"
+   ],
+   "why": "Tummy is a body part."
+  },
+  {
+   "q": "I've got two ___. (with fingers)",
+   "o": [
+    "hands",
+    "heads",
+    "tummies"
+   ],
+   "why": "Fingers are on our hands."
+  },
+  {
+   "q": "Your eyes and nose are on your ___.",
+   "o": [
+    "face",
+    "feet",
+    "knees"
+   ],
+   "why": "Eyes and nose are on the face."
+  },
+  {
+   "q": "___ got two arms.",
+   "o": [
+    "I've",
+    "I'm",
+    "It's"
+   ],
+   "why": "We say: I've got two arms."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Plural of foot",
+   "a": "feet",
+   "d": [
+    "foots",
+    "feets",
+    "foot"
+   ]
+  },
+  {
+   "q": "How many toes?",
+   "a": "ten",
+   "d": [
+    "two",
+    "one",
+    "five"
+   ]
+  },
+  {
+   "q": "How many heads?",
+   "a": "one",
+   "d": [
+    "two",
+    "ten",
+    "three"
+   ]
+  },
+  {
+   "q": "How many legs?",
+   "a": "two",
+   "d": [
+    "one",
+    "ten",
+    "four"
+   ]
+  },
+  {
+   "q": "How many fingers?",
+   "a": "ten",
+   "d": [
+    "two",
+    "one",
+    "four"
+   ]
+  },
+  {
+   "q": "On your hands",
+   "a": "fingers",
+   "d": [
+    "toes",
+    "knees",
+    "legs"
+   ]
+  },
+  {
+   "q": "On your feet",
+   "a": "toes",
+   "d": [
+    "fingers",
+    "arms",
+    "hands"
+   ]
+  },
+  {
+   "q": "In the middle of your leg",
+   "a": "knee",
+   "d": [
+    "toe",
+    "head",
+    "finger"
+   ]
+  },
+  {
+   "q": "Eyes, nose and mouth are on your",
+   "a": "face",
+   "d": [
+    "tummy",
+    "feet",
+    "arms"
+   ]
+  },
+  {
+   "q": "I've got ___ arms.",
+   "a": "two",
+   "d": [
+    "ten",
+    "one",
+    "three"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word is a body part?",
+   "o": [
+    "knees",
+    "desk",
+    "pen",
+    "book"
+   ],
+   "why": "Knees are a body part."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the plural of foot?",
+   "o": [
+    "feet",
+    "foots",
+    "footes",
+    "feets"
+   ],
+   "why": "Foot has a special plural: feet."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which body part is on top of your body?",
+   "o": [
+    "head",
+    "feet",
+    "toes",
+    "knees"
+   ],
+   "why": "The head is on top."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is correct?",
+   "o": [
+    "I've got ten toes.",
+    "I've got ten toe.",
+    "I got ten toes is.",
+    "I've ten got toes."
+   ],
+   "why": "I've got + number + plural word."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Say a sentence about your arms.",
+   "o": [
+    "I've got two arms.",
+    "I've got ten arms.",
+    "I've got one arms.",
+    "I've got two arm."
+   ],
+   "why": "We have got two arms."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Touch your tummy. Where is it?",
+   "o": [
+    "in the middle of your body",
+    "on your feet",
+    "on your head",
+    "on your fingers"
+   ],
+   "why": "The tummy is in the middle."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write: I've got ten ___.",
+   "o": [
+    "toes",
+    "heads",
+    "faces",
+    "tummies"
+   ],
+   "why": "We have got ten toes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say \"feet\" and not \"foots\"?",
+   "o": [
+    "Foot has a special plural.",
+    "Feet are big.",
+    "Foots is for toys.",
+    "We have one foot."
+   ],
+   "why": "Some words change in the plural: foot – feet."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is NOT true?",
+   "o": [
+    "I've got two heads.",
+    "I've got two legs.",
+    "I've got ten fingers.",
+    "I've got one face."
+   ],
+   "why": "We have got one head."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which list goes from top to bottom?",
+   "o": [
+    "head, tummy, knees, toes",
+    "toes, head, knees, tummy",
+    "knees, head, toes, tummy",
+    "tummy, toes, head, knees"
+   ],
+   "why": "Head is at the top and toes are at the bottom."
+  }
+ ]
+}

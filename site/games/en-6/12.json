@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 1: Free-time fun",
+ "lesson": "Unit 1 – Lesson 10: Over to you! and Review",
+ "outcomes": [
+  "I can read readers' comments and find the ones about sport.",
+  "I can write a comment about Unit 1.",
+  "I can use the Present simple and Present continuous correctly."
+ ],
+ "tf": [
+  {
+   "s": "John is reading a book about cycling.",
+   "t": true,
+   "why": "Yes! John's comment is about cycling."
+  },
+  {
+   "s": "Henry wants to learn to ski after reading the article.",
+   "t": true,
+   "why": "Correct! Henry wants to try skiing."
+  },
+  {
+   "s": "The comment about painting and art classes is about sport.",
+   "t": false,
+   "why": "Painting is a hobby, not a sport."
+  },
+  {
+   "s": "One reader started a karate club because he or she wanted friends to be healthy.",
+   "t": true,
+   "why": "Right! The club helps friends stay healthy."
+  },
+  {
+   "s": "\"I am usually doing karate after school\" is correct.",
+   "t": false,
+   "why": "For routines we say \"I usually do karate after school.\""
+  },
+  {
+   "s": "\"I'm watching a film at the moment\" is correct.",
+   "t": true,
+   "why": "Yes! At the moment = Present continuous."
+  },
+  {
+   "s": "We say \"play the gardening\".",
+   "t": false,
+   "why": "We say \"do the gardening\"."
+  },
+  {
+   "s": "We say \"go scooting\".",
+   "t": true,
+   "why": "Correct! We use go with scooting."
+  },
+  {
+   "s": "\"She likes sport, but she prefers making models\" uses state verbs.",
+   "t": true,
+   "why": "Yes, like and prefer are state verbs."
+  },
+  {
+   "s": "\"My parents eats sandwiches every day\" is correct.",
+   "t": false,
+   "why": "With parents (they) we say eat."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which child is reading a book about cycling?",
+   "o": [
+    "John",
+    "Henry",
+    "Hashim"
+   ],
+   "why": "John is reading about cycling."
+  },
+  {
+   "q": "Which comment is about Oman?",
+   "o": [
+    "snorkelling in Oman",
+    "the cycling book",
+    "painting and art"
+   ],
+   "why": "One reader wrote about snorkelling in Oman."
+  },
+  {
+   "q": "Which word is a state verb?",
+   "o": [
+    "prefer",
+    "play",
+    "watch"
+   ],
+   "why": "Prefer is a state verb."
+  },
+  {
+   "q": "___ the gardening",
+   "o": [
+    "do",
+    "play",
+    "go"
+   ],
+   "why": "We say do the gardening."
+  },
+  {
+   "q": "___ badminton",
+   "o": [
+    "play",
+    "do",
+    "go"
+   ],
+   "why": "We say play badminton."
+  },
+  {
+   "q": "I ___ volleyball once a week.",
+   "o": [
+    "play",
+    "am playing",
+    "plays"
+   ],
+   "why": "Once a week = routine."
+  },
+  {
+   "q": "We ___ doing karate at the moment.",
+   "o": [
+    "aren't",
+    "don't",
+    "isn't"
+   ],
+   "why": "Present continuous negative: aren't + -ing."
+  },
+  {
+   "q": "Amer ___ football now.",
+   "o": [
+    "is not playing",
+    "not plays",
+    "don't play"
+   ],
+   "why": "Now = Present continuous."
+  },
+  {
+   "q": "___ she like sport?",
+   "o": [
+    "Does",
+    "Do",
+    "Is"
+   ],
+   "why": "With she we use Does."
+  },
+  {
+   "q": "I liked the interview ___ it was exciting.",
+   "o": [
+    "because",
+    "but",
+    "or"
+   ],
+   "why": "Because gives a reason."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Reading about cycling",
+   "a": "John",
+   "d": [
+    "Henry",
+    "Hashim",
+    "Cody"
+   ]
+  },
+  {
+   "q": "Wants to learn to ski",
+   "a": "Henry",
+   "d": [
+    "John",
+    "Hashim",
+    "Arlo"
+   ]
+  },
+  {
+   "q": "Club started at lunch time",
+   "a": "karate club",
+   "d": [
+    "video club",
+    "art club",
+    "chess club"
+   ]
+  },
+  {
+   "q": "Comment not about sport",
+   "a": "painting",
+   "d": [
+    "karate",
+    "cycling",
+    "skiing"
+   ]
+  },
+  {
+   "q": "___ the gardening",
+   "a": "do",
+   "d": [
+    "play",
+    "go",
+    "make"
+   ]
+  },
+  {
+   "q": "___ scooting",
+   "a": "go",
+   "d": [
+    "play",
+    "do",
+    "make"
+   ]
+  },
+  {
+   "q": "I ___ a film now.",
+   "a": "'m watching",
+   "d": [
+    "watch",
+    "watches",
+    "watched"
+   ]
+  },
+  {
+   "q": "They ___ sandwiches daily.",
+   "a": "eat",
+   "d": [
+    "eats",
+    "eating",
+    "is eating"
+   ]
+  },
+  {
+   "q": "She ___ making models.",
+   "a": "prefers",
+   "d": [
+    "is preferring",
+    "prefer",
+    "preferring"
+   ]
+  },
+  {
+   "q": "Tense for routines",
+   "a": "Present simple",
+   "d": [
+    "Present continuous",
+    "Past simple",
+    "Future"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which comment is not about sport?",
+   "o": [
+    "the comment about painting and art classes",
+    "the karate club comment",
+    "the cycling book comment",
+    "the snorkelling in Oman comment"
+   ],
+   "why": "Painting is about art."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who wants to learn to ski after reading the article?",
+   "o": [
+    "Henry",
+    "John",
+    "Hashim",
+    "Sultan"
+   ],
+   "why": "Henry wants to ski."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group is correct?",
+   "o": [
+    "do the gardening, play badminton, go scooting",
+    "go the gardening, do badminton, play scooting",
+    "play the gardening, go badminton, do scooting",
+    "do the gardening, go badminton, play scooting"
+   ],
+   "why": "Each activity has its own verb."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is a good opinion comment?",
+   "o": [
+    "I liked the interview about cycling because it was exciting.",
+    "Cycling interview liked.",
+    "I like because.",
+    "The interview about."
+   ],
+   "why": "I liked … because … gives an opinion and a reason."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a question: you / study / French / every week?",
+   "o": [
+    "Do you study French every week?",
+    "Are you study French every week?",
+    "Does you study French every week?",
+    "Do you studying French every week?"
+   ],
+   "why": "Do + you + verb for routines."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a sentence: I / watch / a film / at the moment.",
+   "o": [
+    "I'm watching a film at the moment.",
+    "I watch a film at the moment.",
+    "I watching a film at the moment.",
+    "I'm watch a film at the moment."
+   ],
+   "why": "At the moment = am + -ing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a sentence: my parents / eat / sandwiches / every day.",
+   "o": [
+    "My parents eat sandwiches every day.",
+    "My parents eats sandwiches every day.",
+    "My parents are eating sandwiches every day.",
+    "My parents eating sandwiches every day."
+   ],
+   "why": "Routine with they: eat."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is wrong with \"I am usually doing karate after school\"?",
+   "o": [
+    "\"Usually\" shows a routine, so we need the Present simple.",
+    "Karate is not a sport.",
+    "We need \"is\" not \"am\".",
+    "Nothing is wrong."
+   ],
+   "why": "Usually = routine = Present simple."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why did one reader start a karate club at lunch time?",
+   "o": [
+    "He or she wanted friends to be healthy.",
+    "He or she wanted to stop doing sport.",
+    "He or she was bored with karate.",
+    "He or she wanted to read about painting."
+   ],
+   "why": "The club was to help friends be healthy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best new answer to the WOW! Question \"Why do we do sports and hobbies?\"",
+   "o": [
+    "To keep healthy and to relax, and they teach us teamwork.",
+    "Because we have to.",
+    "To be tired.",
+    "Because hobbies are boring."
+   ],
+   "why": "Good reasons: health, relaxing and teamwork."
+  }
+ ]
+}

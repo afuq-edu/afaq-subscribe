@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 4 – Off to the shops",
+ "lesson": "Lesson 7: Skills – Reading: an email",
+ "outcomes": [
+  "Predict what an email is about from the picture.",
+  "Decide if sentences about Razan's email are true or false.",
+  "Choose the best summary of a story and say why."
+ ],
+ "tf": [
+  {
+   "s": "Razan first went to the shoe shop with her friend Rasha.",
+   "t": true,
+   "why": "She went with Rasha."
+  },
+  {
+   "s": "Razan bought the shoes on the first day.",
+   "t": false,
+   "why": "She didn't buy them because she didn't have enough money."
+  },
+  {
+   "s": "Razan didn't have enough money for the shoes.",
+   "t": true,
+   "why": "That is why she didn't buy them."
+  },
+  {
+   "s": "Razan's friend Rasha bought the shoes.",
+   "t": false,
+   "why": "Razan's mum bought the shoes."
+  },
+  {
+   "s": "The next week, Razan was sad because the shop assistant sold the shoes.",
+   "t": true,
+   "why": "The shoes were not in the shop any more."
+  },
+  {
+   "s": "Rasha told Razan's mum that Razan wanted the shoes.",
+   "t": true,
+   "why": "That is how Mum knew."
+  },
+  {
+   "s": "A good summary mentions all the important points.",
+   "t": true,
+   "why": "A summary tells the main points of the story."
+  },
+  {
+   "s": "A good summary tells only the first sentence of the story.",
+   "t": false,
+   "why": "A good summary mentions all the important points."
+  },
+  {
+   "s": "The text is a letter in a newspaper.",
+   "t": false,
+   "why": "The text is an email."
+  },
+  {
+   "s": "A shop assistant is a person who works in a shop.",
+   "t": true,
+   "why": "Shop assistants help customers in a shop."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who did Razan first go to the shoe shop with?",
+   "o": [
+    "her friend Rasha",
+    "her teacher",
+    "her brother"
+   ],
+   "why": "She went with Rasha."
+  },
+  {
+   "q": "Why didn't Razan buy the shoes?",
+   "o": [
+    "She didn't have enough money.",
+    "She didn't like them.",
+    "The shop was closed."
+   ],
+   "why": "She didn't have enough money."
+  },
+  {
+   "q": "Who bought the shoes in the end?",
+   "o": [
+    "Razan's mum",
+    "Rasha",
+    "the shop assistant"
+   ],
+   "why": "Her mum bought them."
+  },
+  {
+   "q": "Where did Razan see the shoes?",
+   "o": [
+    "in the shoe shop",
+    "in the toy shop",
+    "at the pharmacy"
+   ],
+   "why": "She went to the shoe shop with Rasha."
+  },
+  {
+   "q": "What type of text is it?",
+   "o": [
+    "an email",
+    "a poem",
+    "a fact file"
+   ],
+   "why": "Razan wrote an email."
+  },
+  {
+   "q": "Who works in a shop and helps customers?",
+   "o": [
+    "a shop assistant",
+    "an astronaut",
+    "a thief"
+   ],
+   "why": "A shop assistant works in a shop."
+  },
+  {
+   "q": "You put shoes on to see if they are right. You ______ them.",
+   "o": [
+    "try on",
+    "sell",
+    "save"
+   ],
+   "why": "We try on shoes before we buy them."
+  },
+  {
+   "q": "The shoes are the right size. They ______.",
+   "o": [
+    "fit",
+    "notice",
+    "spend"
+   ],
+   "why": "Shoes that fit are the right size."
+  },
+  {
+   "q": "Which word means \"nice to look at\"?",
+   "o": [
+    "pretty",
+    "angry",
+    "heavy"
+   ],
+   "why": "Pretty means nice to look at."
+  },
+  {
+   "q": "What does a good summary do?",
+   "o": [
+    "It mentions all the important points.",
+    "It tells only one small detail.",
+    "It is longer than the story."
+   ],
+   "why": "A summary gives all the main points."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Razan's friend",
+   "a": "Rasha",
+   "d": [
+    "Nada",
+    "Huda",
+    "Fatma"
+   ]
+  },
+  {
+   "q": "Who bought the shoes?",
+   "a": "Mum",
+   "d": [
+    "Rasha",
+    "Razan",
+    "Dad"
+   ]
+  },
+  {
+   "q": "Shop Razan visited",
+   "a": "shoe shop",
+   "d": [
+    "toy shop",
+    "pharmacy",
+    "kiosk"
+   ]
+  },
+  {
+   "q": "Razan didn't have enough …",
+   "a": "money",
+   "d": [
+    "time",
+    "shoes",
+    "friends"
+   ]
+  },
+  {
+   "q": "How Razan felt next week",
+   "a": "sad",
+   "d": [
+    "happy",
+    "excited",
+    "hungry"
+   ]
+  },
+  {
+   "q": "Who told Mum?",
+   "a": "Rasha",
+   "d": [
+    "Razan",
+    "the shop assistant",
+    "Dad"
+   ]
+  },
+  {
+   "q": "Put shoes on to check them",
+   "a": "try on",
+   "d": [
+    "sell",
+    "spend",
+    "save"
+   ]
+  },
+  {
+   "q": "Right size: the shoes …",
+   "a": "fit",
+   "d": [
+    "notice",
+    "sell",
+    "save"
+   ]
+  },
+  {
+   "q": "Nice to look at",
+   "a": "pretty",
+   "d": [
+    "angry",
+    "heavy",
+    "rude"
+   ]
+  },
+  {
+   "q": "Type of text",
+   "a": "email",
+   "d": [
+    "poem",
+    "fact file",
+    "advert"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is Razan's text?",
+   "o": [
+    "an email",
+    "a blog post",
+    "a fact file",
+    "a TV advert"
+   ],
+   "why": "The text is an email."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why was Razan sad the next week?",
+   "o": [
+    "The shop assistant sold the shoes.",
+    "She lost her money.",
+    "Rasha was angry.",
+    "The shoes didn't fit."
+   ],
+   "why": "The shoes were sold."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which words are in this lesson?",
+   "o": [
+    "notice, shop assistant, pretty, fit, try on",
+    "comet, rocket, satellite",
+    "port, fort, ruins",
+    "escalator, thief, steal"
+   ],
+   "why": "These are the reading words."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does \"notice\" mean?",
+   "o": [
+    "see something",
+    "sell something",
+    "buy something",
+    "break something"
+   ],
+   "why": "When you notice something, you see it."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: Her friend Rasha bought the shoes.",
+   "o": [
+    "Her mum bought the shoes.",
+    "Her teacher bought the shoes.",
+    "Razan bought the shoes on the first day.",
+    "Nobody bought the shoes."
+   ],
+   "why": "Mum bought the shoes in the end."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You like some shoes in a shop. What do you do first?",
+   "o": [
+    "Try them on to see if they fit.",
+    "Steal them.",
+    "Sell them.",
+    "Throw them away."
+   ],
+   "why": "We try on shoes to check they fit."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is the best summary of the story?",
+   "o": [
+    "Razan liked some shoes but didn't have enough money. Rasha told Mum, and Mum bought them for her.",
+    "Razan has a friend.",
+    "Razan went to a shop.",
+    "The shoes were blue."
+   ],
+   "why": "It mentions all the important points."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is one summary better than another?",
+   "o": [
+    "It mentions all the important points of the story.",
+    "It is shorter than one line.",
+    "It has more names.",
+    "It has no ending."
+   ],
+   "why": "Good summaries include all the main points."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How did Mum know that Razan wanted the shoes?",
+   "o": [
+    "Her friend Rasha told her.",
+    "Razan told the shop assistant.",
+    "Mum read Razan's email.",
+    "Mum saw Razan in the shop."
+   ],
+   "why": "Rasha told Mum about the shoes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What does the story show about Rasha?",
+   "o": [
+    "She is a good friend who helps Razan.",
+    "She is rude to Razan.",
+    "She wants the shoes for herself.",
+    "She works in the shoe shop."
+   ],
+   "why": "Rasha helped Razan get the shoes she wanted."
+  }
+ ]
+}

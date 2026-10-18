@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: Malls and Markets (Listening & Speaking)",
+ "lesson": "Predicting and listening for specific information; Soundbites",
+ "outcomes": [
+  "Predict and complete a chart while listening to interviews",
+  "Express likes, dislikes and preferences with useful phrases"
+ ],
+ "tf": [
+  {
+   "s": "Tom likes to shop at the City Mall.",
+   "t": true,
+   "why": "Tom prefers the modern mall."
+  },
+  {
+   "s": "Carol prefers the traditional souq in Muttrah.",
+   "t": true,
+   "why": "Carol loves the souq."
+  },
+  {
+   "s": "Tom is really into jewellery and antiques.",
+   "t": false,
+   "why": "Tom is into electronics; Carol likes jewellery and antiques."
+  },
+  {
+   "s": "Carol says the only problem with the souq is parking.",
+   "t": true,
+   "why": "It is hard to find a parking place."
+  },
+  {
+   "s": "'I'm not a fan of...' is used to express a like.",
+   "t": false,
+   "why": "It expresses a dislike."
+  },
+  {
+   "s": "'I'd rather...' is used to express a preference.",
+   "t": true,
+   "why": "It shows what you prefer."
+  },
+  {
+   "s": "'I'm really into...' means you like something a lot.",
+   "t": true,
+   "why": "It is a natural way to say 'I like'."
+  },
+  {
+   "s": "Intonation is not important when we use these phrases.",
+   "t": false,
+   "why": "Correct intonation makes you sound natural."
+  },
+  {
+   "s": "Tom likes the City Mall because of the variety of shops and good sales.",
+   "t": true,
+   "why": "These are his reasons."
+  },
+  {
+   "s": "Carol hates bargaining in the souq.",
+   "t": false,
+   "why": "Bargaining is one of the things Carol likes."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which place is modern: City Mall or Muttrah souq?",
+   "o": [
+    "City Mall",
+    "Muttrah souq",
+    "both are traditional"
+   ],
+   "why": "The souq is traditional; the mall is modern."
+  },
+  {
+   "q": "Where does Carol prefer to shop?",
+   "o": [
+    "Muttrah souq",
+    "City Mall",
+    "a supermarket"
+   ],
+   "why": "Carol loves the traditional souq."
+  },
+  {
+   "q": "What is Tom really into?",
+   "o": [
+    "electronics",
+    "antiques",
+    "pashminas"
+   ],
+   "why": "Tom likes electronic stuff."
+  },
+  {
+   "q": "What problem does Carol mention?",
+   "o": [
+    "parking",
+    "prices",
+    "noise"
+   ],
+   "why": "It is hard to find a parking place."
+  },
+  {
+   "q": "Which phrase shows a dislike?",
+   "o": [
+    "I'm not a fan of...",
+    "I'm really into...",
+    "I'd rather..."
+   ],
+   "why": "Not a fan means you do not like it."
+  },
+  {
+   "q": "Which phrase shows a preference?",
+   "o": [
+    "I'd rather...",
+    "I'm not a fan of...",
+    "I'm keen on..."
+   ],
+   "why": "'I'd rather' compares two choices."
+  },
+  {
+   "q": "Complete: I'm not a ___ of modern malls.",
+   "o": [
+    "fan",
+    "friend",
+    "lover"
+   ],
+   "why": "The phrase is 'not a fan of'."
+  },
+  {
+   "q": "Which does Carol like buying?",
+   "o": [
+    "jewellery",
+    "computers",
+    "DVDs"
+   ],
+   "why": "Carol likes jewellery, antiques and pashminas."
+  },
+  {
+   "q": "What is one reason Tom likes the mall?",
+   "o": [
+    "it is a cool place with friends",
+    "it has narrow passages",
+    "it has bargaining"
+   ],
+   "why": "He likes to hang out there with friends."
+  },
+  {
+   "q": "What is 'window-shopping'?",
+   "o": [
+    "looking at goods without buying",
+    "buying windows",
+    "shopping online"
+   ],
+   "why": "You look in shop windows for fun."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Tom's favourite place",
+   "a": "City Mall",
+   "d": [
+    "Muttrah souq",
+    "Nizwa fort",
+    "a café"
+   ]
+  },
+  {
+   "q": "Carol's favourite place",
+   "a": "Muttrah souq",
+   "d": [
+    "City Mall",
+    "a cinema",
+    "an airport"
+   ]
+  },
+  {
+   "q": "Tom is into...",
+   "a": "electronics",
+   "d": [
+    "antiques",
+    "jewellery",
+    "pashminas"
+   ]
+  },
+  {
+   "q": "Carol's problem at the souq",
+   "a": "parking",
+   "d": [
+    "prices",
+    "noise",
+    "heat"
+   ]
+  },
+  {
+   "q": "Not a ___ of malls",
+   "a": "fan",
+   "d": [
+    "friend",
+    "lover",
+    "keen"
+   ]
+  },
+  {
+   "q": "I'd ___ shop in a souq",
+   "a": "rather",
+   "d": [
+    "prefer",
+    "into",
+    "fan"
+   ]
+  },
+  {
+   "q": "I'm really ___ football",
+   "a": "into",
+   "d": [
+    "rather",
+    "fan",
+    "onto"
+   ]
+  },
+  {
+   "q": "Soft scarves Carol likes",
+   "a": "pashminas",
+   "d": [
+    "laptops",
+    "DVDs",
+    "phones"
+   ]
+  },
+  {
+   "q": "Old valuable objects",
+   "a": "antiques",
+   "d": [
+    "electronics",
+    "sales",
+    "malls"
+   ]
+  },
+  {
+   "q": "Looking, not buying",
+   "a": "window-shopping",
+   "d": [
+    "bargaining",
+    "over-shopping",
+    "trading"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Where does Tom like to shop?",
+   "o": [
+    "at the City Mall",
+    "at the Muttrah souq",
+    "online",
+    "at a street market"
+   ],
+   "why": "Tom prefers the mall."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the only problem Carol mentions about the souq?",
+   "o": [
+    "It is hard to find a parking place",
+    "The prices are too high",
+    "The shopkeepers are unfriendly",
+    "It is too modern"
+   ],
+   "why": "Parking is her only problem."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase expresses a preference?",
+   "o": [
+    "I'd rather...",
+    "I'm not a fan of...",
+    "I'm really into...",
+    "I can't stand..."
+   ],
+   "why": "'I'd rather' shows what you prefer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which things does Carol like at the souq?",
+   "o": [
+    "jewellery, antiques, pashminas and bargaining",
+    "electronics and sales",
+    "cinemas and cafés",
+    "car parks and lifts"
+   ],
+   "why": "These were in Carol's part of the chart."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I'd rather spend my money on a new book ______ eat out.",
+   "o": [
+    "than",
+    "then",
+    "that",
+    "to"
+   ],
+   "why": "'I'd rather A than B'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You do not like crowded places. Which sentence is best?",
+   "o": [
+    "I'm not a fan of crowded places.",
+    "I'm really into crowded places.",
+    "I'd rather crowded places.",
+    "I'm a fan into crowded places."
+   ],
+   "why": "'Not a fan of' expresses a dislike."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You love computer games. Which sentence sounds most natural?",
+   "o": [
+    "I'm really into computer games.",
+    "I'm not a fan of computer games.",
+    "I'd rather computer games.",
+    "I'm into not computer games."
+   ],
+   "why": "'Really into' means you like it a lot."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Tom like the City Mall?",
+   "o": [
+    "variety of shops, sales and a cool place to meet friends",
+    "narrow passages and bargaining",
+    "antiques and pashminas",
+    "easy parking in the souq"
+   ],
+   "why": "His reasons are about the modern mall."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How are Tom's and Carol's preferences different?",
+   "o": [
+    "Tom prefers the modern mall; Carol prefers the traditional souq",
+    "Both prefer the mall",
+    "Both prefer the souq",
+    "Neither likes shopping"
+   ],
+   "why": "They like different kinds of places."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is correct intonation important with these phrases?",
+   "o": [
+    "It makes you sound natural and shows your feelings",
+    "It makes the sentences shorter",
+    "It changes the grammar",
+    "It is only for writing"
+   ],
+   "why": "Intonation helps listeners understand your attitude."
+  }
+ ]
+}

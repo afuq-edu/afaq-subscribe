@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U4",
+ "lesson": "Unit 4 – Lesson 3: Grammar 1 (present continuous)",
+ "outcomes": [
+  "Use the present continuous: am/is/are + verb-ing.",
+  "Make negative sentences and yes/no questions.",
+  "Say what people with different jobs are doing now."
+ ],
+ "tf": [
+  {
+   "s": "We make the present continuous with am, is or are + verb-ing.",
+   "t": true,
+   "why": "Yes! For example: He's opening the door."
+  },
+  {
+   "s": "The -ing form of 'open' is 'opening'.",
+   "t": true,
+   "why": "Correct! open + ing."
+  },
+  {
+   "s": "The -ing form of 'run' is 'runing'.",
+   "t": false,
+   "why": "We double the n: running."
+  },
+  {
+   "s": "The -ing form of 'write' is 'writing'.",
+   "t": true,
+   "why": "Well done! We drop the e: writing."
+  },
+  {
+   "s": "'They isn't playing cards' is correct.",
+   "t": false,
+   "why": "With they, we use aren't: They aren't playing cards."
+  },
+  {
+   "s": "'Is he wearing a yellow jacket?' is a correct question.",
+   "t": true,
+   "why": "Great! is comes first in the question."
+  },
+  {
+   "s": "The short answer to 'Are you wearing a green jacket?' can be 'No, I'm not.'",
+   "t": true,
+   "why": "Yes! No, I'm not."
+  },
+  {
+   "s": "'She programming a computer' is correct.",
+   "t": false,
+   "why": "We need is: She's programming a computer."
+  },
+  {
+   "s": "The -ing form of 'swim' is 'swiming'.",
+   "t": false,
+   "why": "We double the m: swimming."
+  },
+  {
+   "s": "'A police officer is helping a cat in a tree' is present continuous.",
+   "t": true,
+   "why": "Correct! is + helping."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "I ___ watching Lottie's house.",
+   "o": [
+    "'m",
+    "is",
+    "are"
+   ],
+   "why": "With I, we use am: I'm watching."
+  },
+  {
+   "q": "They ___ playing cards.",
+   "o": [
+    "aren't",
+    "isn't",
+    "am not"
+   ],
+   "why": "With they, use aren't."
+  },
+  {
+   "q": "-ing form of 'swim'?",
+   "o": [
+    "swimming",
+    "swiming",
+    "swimeing"
+   ],
+   "why": "Double the m: swimming."
+  },
+  {
+   "q": "-ing form of 'sit'?",
+   "o": [
+    "sitting",
+    "siting",
+    "sitteing"
+   ],
+   "why": "Double the t: sitting."
+  },
+  {
+   "q": "Is he wearing a yellow jacket? (Yes)",
+   "o": [
+    "Yes, he is.",
+    "Yes, he does.",
+    "Yes, he wearing."
+   ],
+   "why": "Short answer: Yes, he is."
+  },
+  {
+   "q": "What is the chef doing?",
+   "o": [
+    "He's cooking.",
+    "He cooking.",
+    "He cooks now."
+   ],
+   "why": "is + cooking."
+  },
+  {
+   "q": "Two engineers ___ a bridge.",
+   "o": [
+    "are building",
+    "is building",
+    "building"
+   ],
+   "why": "Two people: are building."
+  },
+  {
+   "q": "The farmer ___ vegetables.",
+   "o": [
+    "is growing",
+    "are growing",
+    "growing"
+   ],
+   "why": "One person: is growing."
+  },
+  {
+   "q": "He ___ eating any food.",
+   "o": [
+    "isn't",
+    "aren't",
+    "not"
+   ],
+   "why": "With he, use isn't."
+  },
+  {
+   "q": "Ask about the dentist:",
+   "o": [
+    "What is the dentist doing?",
+    "What the dentist doing?",
+    "What are the dentist do?"
+   ],
+   "why": "What + is + person + doing?"
+  }
+ ],
+ "hunt": [
+  {
+   "q": "-ing form of 'open'",
+   "a": "opening",
+   "d": [
+    "openning",
+    "open",
+    "opens"
+   ]
+  },
+  {
+   "q": "-ing form of 'run'",
+   "a": "running",
+   "d": [
+    "runing",
+    "runs",
+    "ran"
+   ]
+  },
+  {
+   "q": "-ing form of 'write'",
+   "a": "writing",
+   "d": [
+    "writeing",
+    "writting",
+    "writes"
+   ]
+  },
+  {
+   "q": "-ing form of 'swim'",
+   "a": "swimming",
+   "d": [
+    "swiming",
+    "swims",
+    "swimed"
+   ]
+  },
+  {
+   "q": "-ing form of 'cook'",
+   "a": "cooking",
+   "d": [
+    "cookking",
+    "cooks",
+    "cooked"
+   ]
+  },
+  {
+   "q": "-ing form of 'sit'",
+   "a": "sitting",
+   "d": [
+    "siting",
+    "sits",
+    "sat"
+   ]
+  },
+  {
+   "q": "I ___ watching.",
+   "a": "'m",
+   "d": [
+    "is",
+    "are",
+    "be"
+   ]
+  },
+  {
+   "q": "They ___ playing.",
+   "a": "are",
+   "d": [
+    "is",
+    "am",
+    "be"
+   ]
+  },
+  {
+   "q": "He ___ eating. (negative)",
+   "a": "isn't",
+   "d": [
+    "aren't",
+    "not",
+    "don't"
+   ]
+  },
+  {
+   "q": "We ___ writing. (negative)",
+   "a": "aren't",
+   "d": [
+    "isn't",
+    "not",
+    "doesn't"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How do we make the present continuous?",
+   "o": [
+    "am/is/are + verb-ing",
+    "verb + -ed",
+    "will + verb",
+    "do/does + verb"
+   ],
+   "why": "For example: She's programming a computer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the -ing form of 'program'?",
+   "o": [
+    "programming",
+    "programing",
+    "programeing",
+    "programmeing"
+   ],
+   "why": "Double the m: programming."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word makes a negative with 'he'?",
+   "o": [
+    "isn't",
+    "aren't",
+    "am not",
+    "don't"
+   ],
+   "why": "He isn't eating any food."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Answer: Are you wearing a green jacket? (No)",
+   "o": [
+    "No, I'm not.",
+    "No, I don't.",
+    "No, you aren't.",
+    "No, I isn't."
+   ],
+   "why": "Short answer: No, I'm not."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make it negative: He's eating food.",
+   "o": [
+    "He isn't eating any food.",
+    "He aren't eating any food.",
+    "He not eating food.",
+    "He isn't eat any food."
+   ],
+   "why": "isn't + verb-ing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a question: (he / wear / a yellow jacket)",
+   "o": [
+    "Is he wearing a yellow jacket?",
+    "He is wearing a yellow jacket?",
+    "Does he wearing a yellow jacket?",
+    "Is he wear a yellow jacket?"
+   ],
+   "why": "Put is first: Is he wearing ...?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: A police officer ___ (help) a cat in a tree.",
+   "o": [
+    "is helping",
+    "are helping",
+    "helping",
+    "is help"
+   ],
+   "why": "One person: is + helping."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is correct?",
+   "o": [
+    "She's programming a computer.",
+    "She programming a computer.",
+    "She are programming a computer.",
+    "She's program a computer."
+   ],
+   "why": "We need is + verb-ing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is about what is happening now?",
+   "o": [
+    "The vet is looking after a cat.",
+    "The vet looks after cats every day.",
+    "The vet looked after a cat.",
+    "The vet will look after a cat."
+   ],
+   "why": "is + looking = happening now."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we write 'running' with two n's?",
+   "o": [
+    "Run ends in one vowel + one consonant (u-n).",
+    "We always add -nning.",
+    "Because run ends in e.",
+    "Because it is negative."
+   ],
+   "why": "Like swim and sit, we double the last letter: running."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Unit 4 – Lesson 6: English in action (Introducing family and friends)",
+  "outcomes": [
+    "I can introduce someone: This is my sister. Her name's Jane.",
+    "I can say Nice to meet you and Nice to meet you, too.",
+    "I can write and act out an introduction."
+  ],
+  "tf": [
+    {
+      "s": "We use Her name's … for a girl.",
+      "t": true,
+      "why": "Yes! Her is for a girl."
+    },
+    {
+      "s": "We use His name's … for a boy.",
+      "t": true,
+      "why": "Great! His is for a boy."
+    },
+    {
+      "s": "This is my brother. Her name's Ali.",
+      "t": false,
+      "why": "Ali is a boy: His name's Ali."
+    },
+    {
+      "s": "When we meet someone new, we say Nice to meet you.",
+      "t": true,
+      "why": "Well done! That is a kind greeting."
+    },
+    {
+      "s": "The answer to Nice to meet you is Goodbye.",
+      "t": false,
+      "why": "We answer: Nice to meet you, too."
+    },
+    {
+      "s": "We say This is my … to introduce someone.",
+      "t": true,
+      "why": "Yes! This is my sister."
+    },
+    {
+      "s": "Her name's Muna. Muna is a girl.",
+      "t": true,
+      "why": "Great! Her is for a girl."
+    },
+    {
+      "s": "His name's Ahmed. Ahmed is a girl.",
+      "t": false,
+      "why": "His is for a boy, so Ahmed is a boy."
+    },
+    {
+      "s": "Nice to meet you, too means I am sad.",
+      "t": false,
+      "why": "It means I am happy to meet you too."
+    },
+    {
+      "s": "In the dialogue, Jane is Kim's sister.",
+      "t": false,
+      "why": "Jane is the speaker's sister; the speaker introduces her to Kim."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "This is my sister. ___ name's Jane.",
+      "o": [
+        "Her",
+        "His",
+        "He"
+      ],
+      "why": "Jane is a girl: Her name's Jane."
+    },
+    {
+      "q": "This is my brother. ___ name's Ali.",
+      "o": [
+        "His",
+        "Her",
+        "She"
+      ],
+      "why": "Ali is a boy: His name's Ali."
+    },
+    {
+      "q": "Nice to meet you, ___.",
+      "o": [
+        "too",
+        "two",
+        "to"
+      ],
+      "why": "We reply: Nice to meet you, too."
+    },
+    {
+      "q": "You meet a new friend. You say:",
+      "o": [
+        "Nice to meet you.",
+        "Goodbye.",
+        "Sit down."
+      ],
+      "why": "We say Nice to meet you."
+    },
+    {
+      "q": "Introduce your mum:",
+      "o": [
+        "This is my mum.",
+        "Who's my mum?",
+        "Is it mum?"
+      ],
+      "why": "This is my … introduces a person."
+    },
+    {
+      "q": "___ name's Ahmed.",
+      "o": [
+        "His",
+        "Her",
+        "She"
+      ],
+      "why": "Ahmed is a boy: His name's Ahmed."
+    },
+    {
+      "q": "___ name's Muna.",
+      "o": [
+        "Her",
+        "His",
+        "He"
+      ],
+      "why": "Muna is a girl: Her name's Muna."
+    },
+    {
+      "q": "Hello, Jane. Nice to meet you. Jane says:",
+      "o": [
+        "Nice to meet you, too.",
+        "Who's this?",
+        "It's my mum."
+      ],
+      "why": "Jane replies: Nice to meet you, too."
+    },
+    {
+      "q": "Which is a family word?",
+      "o": [
+        "grandad",
+        "nice",
+        "meet"
+      ],
+      "why": "Grandad is in our family."
+    },
+    {
+      "q": "Write: It's my ___. (a picture of a grandad)",
+      "o": [
+        "grandad",
+        "grandma",
+        "cousin"
+      ],
+      "why": "The picture shows grandad."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Grandma: ___ name's …",
+      "a": "Her",
+      "d": [
+        "His",
+        "He",
+        "It"
+      ]
+    },
+    {
+      "q": "Uncle: ___ name's …",
+      "a": "His",
+      "d": [
+        "Her",
+        "She",
+        "It"
+      ]
+    },
+    {
+      "q": "Dad's brother",
+      "a": "uncle",
+      "d": [
+        "aunt",
+        "sister",
+        "grandma"
+      ]
+    },
+    {
+      "q": "Nice to ___ you.",
+      "a": "meet",
+      "d": [
+        "meat",
+        "met",
+        "mate"
+      ]
+    },
+    {
+      "q": "___ is my sister.",
+      "a": "This",
+      "d": [
+        "His",
+        "Who",
+        "Her"
+      ]
+    },
+    {
+      "q": "Her name's ___. (a girl)",
+      "a": "Muna",
+      "d": [
+        "Ahmed",
+        "Ali",
+        "Sami"
+      ]
+    },
+    {
+      "q": "His name's ___. (a boy)",
+      "a": "Ahmed",
+      "d": [
+        "Muna",
+        "Jane",
+        "Lily"
+      ]
+    },
+    {
+      "q": "Mum's dad",
+      "a": "grandad",
+      "d": [
+        "cousin",
+        "brother",
+        "uncle"
+      ]
+    },
+    {
+      "q": "Aunt's child",
+      "a": "cousin",
+      "d": [
+        "grandad",
+        "mum",
+        "dad"
+      ]
+    },
+    {
+      "q": "Read: It's my ___. (mum picture)",
+      "a": "mum",
+      "d": [
+        "dad",
+        "grandad",
+        "uncle"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What do we say when we meet someone new?",
+      "o": [
+        "Nice to meet you.",
+        "Goodbye.",
+        "Stand up.",
+        "How many?"
+      ],
+      "why": "Nice to meet you is polite."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word do we use for a girl's name?",
+      "o": [
+        "Her",
+        "His",
+        "He",
+        "It"
+      ],
+      "why": "Her name's … is for a girl."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word do we use for a boy's name?",
+      "o": [
+        "His",
+        "Her",
+        "She",
+        "It"
+      ],
+      "why": "His name's … is for a boy."
+    },
+    {
+      "lv": "التذكر",
+      "q": "How do we introduce a person?",
+      "o": [
+        "This is my …",
+        "Who's this?",
+        "Is it …?",
+        "How many …?"
+      ],
+      "why": "This is my … introduces someone."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Introduce your brother Sami.",
+      "o": [
+        "This is my brother. His name's Sami.",
+        "This is my brother. Her name's Sami.",
+        "This is my sister. His name's Sami.",
+        "Who's my brother? Sami."
+      ],
+      "why": "Brother is a boy: His name's Sami."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your friend says: Nice to meet you. What do you say?",
+      "o": [
+        "Nice to meet you, too.",
+        "Thank you, goodbye.",
+        "Yes, it is.",
+        "It's my mum."
+      ],
+      "why": "We reply: Nice to meet you, too."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Complete: This is my sister. ___ name's Jane.",
+      "o": [
+        "Her",
+        "His",
+        "My",
+        "She"
+      ],
+      "why": "Sister is a girl: Her name's Jane."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which introduction is NOT right?",
+      "o": [
+        "This is my sister. His name's Muna.",
+        "This is my sister. Her name's Muna.",
+        "This is my brother. His name's Ali.",
+        "This is my mum."
+      ],
+      "why": "Sister is a girl, so we say Her name's."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why do we say Nice to meet you?",
+      "o": [
+        "To be kind and polite to someone new",
+        "To say goodbye",
+        "To ask a question",
+        "To count people"
+      ],
+      "why": "It shows we are happy to meet them."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Put the dialogue in order: (a) Nice to meet you, too. (b) This is my sister. (c) Hello! Nice to meet you.",
+      "o": [
+        "b, c, a",
+        "a, b, c",
+        "c, a, b",
+        "a, c, b"
+      ],
+      "why": "First introduce, then greet, then reply."
+    }
+  ]
+}

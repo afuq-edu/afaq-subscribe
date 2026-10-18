@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 1 - Unit 2: The Internet",
+ "outcomes": [
+  "Read a text about the Internet and answer questions",
+  "Find what pronouns and reference words refer to",
+  "Use the present simple and present continuous correctly"
+ ],
+ "tf": [
+  {
+   "s": "Tim Berners-Lee created the worldwide web in 1991.",
+   "t": true,
+   "why": "Yes! He created the worldwide web in 1991."
+  },
+  {
+   "s": "The text describes the Internet as a huge network of linked computers.",
+   "t": true,
+   "why": "Right! Millions of computers are linked together."
+  },
+  {
+   "s": "Blogging means writing online to share your thoughts and invite comments.",
+   "t": true,
+   "why": "Correct! Readers around the world can comment."
+  },
+  {
+   "s": "We use the present continuous for habits and routines.",
+   "t": false,
+   "why": "Habits use the present simple, e.g. 'He e-mails his friends every day.'"
+  },
+  {
+   "s": "'She is texting her friend right now' uses the present continuous.",
+   "t": true,
+   "why": "Good! 'is texting' shows an action happening now."
+  },
+  {
+   "s": "'I am getting a new phone tomorrow' talks about a future arrangement.",
+   "t": true,
+   "why": "Yes, the present continuous can show a future plan."
+  },
+  {
+   "s": "Airports and hotels give free connections so that people can stay connected wherever they are.",
+   "t": true,
+   "why": "Right! People with laptops can connect to work or home."
+  },
+  {
+   "s": "'He lives in Sohar' describes a temporary situation.",
+   "t": false,
+   "why": "'Lives' shows a permanent state; 'is living' shows a temporary one."
+  },
+  {
+   "s": "We use pronouns to repeat the same name again and again.",
+   "t": false,
+   "why": "Pronouns help us avoid repeating names."
+  },
+  {
+   "s": "The words 'every day' usually go with the present continuous.",
+   "t": false,
+   "why": "'Every day' shows a habit, so we use the present simple."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who created the worldwide web?",
+   "o": [
+    "Tim Berners-Lee",
+    "a hotel owner",
+    "a blogger"
+   ],
+   "why": "Tim Berners-Lee created it in 1991."
+  },
+  {
+   "q": "Which activity is NOT specifically mentioned in the text?",
+   "o": [
+    "e-mailing",
+    "blogging",
+    "online shopping"
+   ],
+   "why": "The text mentions shopping, blogging and social networking."
+  },
+  {
+   "q": "Choose: She ___ her friend right now.",
+   "o": [
+    "is texting",
+    "texts",
+    "text"
+   ],
+   "why": "'Right now' needs the present continuous."
+  },
+  {
+   "q": "Choose: They ___ in Sohar. (permanent)",
+   "o": [
+    "live",
+    "are living",
+    "is living"
+   ],
+   "why": "A permanent state uses the present simple."
+  },
+  {
+   "q": "'Ali bought a phone. He loves it.' What does 'it' refer to?",
+   "o": [
+    "the phone",
+    "Ali",
+    "love"
+   ],
+   "why": "'It' replaces 'the phone'."
+  },
+  {
+   "q": "What does 'they' (line 16) refer to?",
+   "o": [
+    "airports, coffee shops and hotels",
+    "bloggers",
+    "computer scientists"
+   ],
+   "why": "Read the sentence before the pronoun to find what it refers to."
+  },
+  {
+   "q": "Which tense shows a temporary situation?",
+   "o": [
+    "present continuous",
+    "present simple",
+    "past simple"
+   ],
+   "why": "'He is living in Sohar this month' is temporary."
+  },
+  {
+   "q": "Complete: Now I ___ the dishes.",
+   "o": [
+    "am washing",
+    "wash",
+    "washes"
+   ],
+   "why": "'Now' needs the present continuous."
+  },
+  {
+   "q": "What is the Internet described as in the text?",
+   "o": [
+    "the fastest growing technology",
+    "a new kind of phone",
+    "an old type of letter"
+   ],
+   "why": "It is the fastest growing technology on the planet."
+  },
+  {
+   "q": "What does 'their' (line 38) refer to?",
+   "o": [
+    "the readers of a blog",
+    "hotels",
+    "airports"
+   ],
+   "why": "'Their' refers to the people who read and comment on a blog."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Creator of the worldwide web",
+   "a": "Tim Berners-Lee",
+   "d": [
+    "Bill Gates",
+    "Steve Jobs",
+    "Isaac Newton"
+   ]
+  },
+  {
+   "q": "Year the worldwide web was created",
+   "a": "1991",
+   "d": [
+    "1919",
+    "2001",
+    "1981"
+   ]
+  },
+  {
+   "q": "Tense for habits and routines",
+   "a": "present simple",
+   "d": [
+    "present continuous",
+    "past simple",
+    "future"
+   ]
+  },
+  {
+   "q": "Tense for actions happening now",
+   "a": "present continuous",
+   "d": [
+    "present simple",
+    "past simple",
+    "past perfect"
+   ]
+  },
+  {
+   "q": "Choose: In the kitchen I usually ___.",
+   "a": "cook",
+   "d": [
+    "am cooking",
+    "cooks",
+    "cooking"
+   ]
+  },
+  {
+   "q": "Choose: but now I ___ the dishes.",
+   "a": "am washing",
+   "d": [
+    "wash",
+    "washes",
+    "washed"
+   ]
+  },
+  {
+   "q": "Pronoun for 'Tim Berners-Lee'",
+   "a": "he",
+   "d": [
+    "she",
+    "it",
+    "they"
+   ]
+  },
+  {
+   "q": "Pronoun for 'the Internet'",
+   "a": "it",
+   "d": [
+    "he",
+    "she",
+    "we"
+   ]
+  },
+  {
+   "q": "Pronoun for 'hotels and airports'",
+   "a": "they",
+   "d": [
+    "it",
+    "he",
+    "she"
+   ]
+  },
+  {
+   "q": "Writing online to share thoughts",
+   "a": "blogging",
+   "d": [
+    "e-shopping",
+    "texting",
+    "printing"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who was Tim Berners-Lee?",
+   "o": [
+    "the computer scientist who created the worldwide web",
+    "the owner of a coffee shop",
+    "a famous blogger",
+    "a mobile phone seller"
+   ],
+   "why": "He created the worldwide web in 1991."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the present simple used for?",
+   "o": [
+    "habits, routines and permanent states",
+    "actions happening now only",
+    "temporary situations only",
+    "finished past actions"
+   ],
+   "why": "For example: 'He e-mails his friends every day.'"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why do airports, coffee shops and hotels provide free connections?",
+   "o": [
+    "so people can stay connected to work or home wherever they are",
+    "so people stop using laptops",
+    "to sell more coffee only",
+    "to close the Internet at night"
+   ],
+   "why": "Anyone with a laptop or pocket PC can stay connected."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are 'these services' in the text?",
+   "o": [
+    "high-speed connections and wireless systems",
+    "coffee and food",
+    "free laptops",
+    "blog comments"
+   ],
+   "why": "These services connect people globally."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "I am getting a new phone tomorrow.",
+    "I getting a new phone tomorrow.",
+    "I gets a new phone tomorrow.",
+    "I am get a new phone tomorrow."
+   ],
+   "why": "The present continuous can show a future arrangement."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite: 'Tim Berners-Lee invented the web. Tim Berners-Lee was a computer scientist.' Choose the best version.",
+   "o": [
+    "Tim Berners-Lee invented the web. He was a computer scientist.",
+    "Tim Berners-Lee invented the web. It was a computer scientist.",
+    "Tim Berners-Lee invented the web. They was a computer scientist.",
+    "Tim Berners-Lee invented the web. She was a computer scientist."
+   ],
+   "why": "'He' replaces the man's name and avoids repetition."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: In the classroom I usually ___ but now I ___.",
+   "o": [
+    "sit / am standing",
+    "am sitting / stand",
+    "sits / standing",
+    "sit / stand"
+   ],
+   "why": "Habit = present simple; now = present continuous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between 'He lives in Sohar' and 'He is living in Sohar this month'?",
+   "o": [
+    "The first is permanent; the second is temporary",
+    "Both are temporary",
+    "The first is temporary; the second is permanent",
+    "There is no difference"
+   ],
+   "why": "The present continuous can show a temporary situation."
+  },
+  {
+   "lv": "التحليل",
+   "q": "In the board game, why do players say a sentence with 'usually' and 'now'?",
+   "o": [
+    "To contrast a habit with an action happening now",
+    "To practise the past tense",
+    "To ask questions only",
+    "To count the counters"
+   ],
+   "why": "'Usually' goes with the present simple; 'now' goes with the present continuous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Experts predict that it will change our lives.' What does 'it' most likely refer to?",
+   "o": [
+    "the Internet",
+    "the experts",
+    "our lives",
+    "a hotel"
+   ],
+   "why": "'It' refers to the technology mentioned before: the Internet."
+  }
+ ]
+}

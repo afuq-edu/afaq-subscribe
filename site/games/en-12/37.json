@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: A Letter to a Teacher (Writing)",
+ "lesson": "Checking and editing a partner’s letter; writing the second draft",
+ "outcomes": [
+  "Check a partner's letter for meaning and language with a checklist",
+  "Give helpful feedback and write a second draft"
+ ],
+ "tf": [
+  {
+   "s": "You check meaning and content first in a partner's letter.",
+   "t": true,
+   "why": "Part 1 of the checklist is about meaning."
+  },
+  {
+   "s": "You underline unclear ideas in pen.",
+   "t": false,
+   "why": "You underline them in pencil."
+  },
+  {
+   "s": "A second draft is a new letter on a different topic.",
+   "t": false,
+   "why": "It is the same letter, corrected and improved."
+  },
+  {
+   "s": "You should attach the first draft to the second draft.",
+   "t": true,
+   "why": "The teacher can see your changes."
+  },
+  {
+   "s": "You must accept every comment your partner gives.",
+   "t": false,
+   "why": "You decide which comments are useful."
+  },
+  {
+   "s": "The final draft goes into the portfolio with earlier drafts.",
+   "t": true,
+   "why": "The portfolio shows your progress."
+  },
+  {
+   "s": "The editing checklist has a Language section.",
+   "t": true,
+   "why": "It has questions 1–7 about language."
+  },
+  {
+   "s": "Another reader can notice mistakes you missed.",
+   "t": true,
+   "why": "Fresh eyes see things you don't."
+  },
+  {
+   "s": "Feedback should be rude so that it is remembered.",
+   "t": false,
+   "why": "Good feedback is polite and helpful."
+  },
+  {
+   "s": "A second draft is a corrected and improved copy of the first draft.",
+   "t": true,
+   "why": "It includes the changes from feedback."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do you use to underline unclear ideas?",
+   "o": [
+    "a pencil",
+    "a red marker",
+    "nothing"
+   ],
+   "why": "Pencil marks can be erased."
+  },
+  {
+   "q": "What does Part 1 of the checklist check?",
+   "o": [
+    "meaning",
+    "handwriting",
+    "colours"
+   ],
+   "why": "Meaning comes first."
+  },
+  {
+   "q": "Where does the final draft go?",
+   "o": [
+    "the portfolio",
+    "the bin",
+    "the library"
+   ],
+   "why": "It is kept with earlier drafts."
+  },
+  {
+   "q": "What does the second draft include?",
+   "o": [
+    "the corrections and changes",
+    "a whole new letter",
+    "nothing new"
+   ],
+   "why": "Only the errors and changes are added."
+  },
+  {
+   "q": "Why have someone else read your writing?",
+   "o": [
+    "they notice mistakes you miss",
+    "it takes longer",
+    "they rewrite it for you"
+   ],
+   "why": "Another reader helps you improve."
+  },
+  {
+   "q": "Which phrases can you use when giving feedback?",
+   "o": [
+    "Soundbites phrases",
+    "rude words",
+    "text messages"
+   ],
+   "why": "Polite phrases make feedback helpful."
+  },
+  {
+   "q": "Which is a helpful comment?",
+   "o": [
+    "You should add a comma after 'First'.",
+    "This is bad.",
+    "I don't like it."
+   ],
+   "why": "Helpful comments are clear and specific."
+  },
+  {
+   "q": "What should you do with comments that are not useful?",
+   "o": [
+    "disregard them",
+    "copy them",
+    "argue about them"
+   ],
+   "why": "You choose what to keep."
+  },
+  {
+   "q": "How many questions are in the Language section?",
+   "o": [
+    "seven",
+    "two",
+    "twenty"
+   ],
+   "why": "Questions 1–7 check language."
+  },
+  {
+   "q": "What do you write after peer editing?",
+   "o": [
+    "a second draft",
+    "a new poem",
+    "a test"
+   ],
+   "why": "You use the feedback to improve your letter."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Underline unclear ideas in ...",
+   "a": "pencil",
+   "d": [
+    "ink",
+    "paint",
+    "marker"
+   ]
+  },
+  {
+   "q": "Check this first",
+   "a": "meaning",
+   "d": [
+    "handwriting",
+    "colour",
+    "length"
+   ]
+  },
+  {
+   "q": "Corrected copy of a letter",
+   "a": "second draft",
+   "d": [
+    "first draft",
+    "checklist",
+    "portfolio"
+   ]
+  },
+  {
+   "q": "Folder for all your drafts",
+   "a": "portfolio",
+   "d": [
+    "checklist",
+    "dictionary",
+    "timetable"
+   ]
+  },
+  {
+   "q": "List of things to check",
+   "a": "checklist",
+   "d": [
+    "portfolio",
+    "draft",
+    "glossary"
+   ]
+  },
+  {
+   "q": "Comments that help you improve",
+   "a": "feedback",
+   "d": [
+    "deadline",
+    "portfolio",
+    "glossary"
+   ]
+  },
+  {
+   "q": "Questions in the Language section",
+   "a": "seven",
+   "d": [
+    "two",
+    "ten",
+    "three"
+   ]
+  },
+  {
+   "q": "Attach this to your second draft",
+   "a": "first draft",
+   "d": [
+    "dictionary",
+    "timetable",
+    "poem"
+   ]
+  },
+  {
+   "q": "What to do with useless comments",
+   "a": "disregard",
+   "d": [
+    "copy",
+    "repeat",
+    "memorise"
+   ]
+  },
+  {
+   "q": "Last version of your writing",
+   "a": "final draft",
+   "d": [
+    "first draft",
+    "notes",
+    "checklist"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do you check first in a partner's letter?",
+   "o": [
+    "Meaning and content",
+    "The colour of the paper",
+    "The handwriting only",
+    "The number of words"
+   ],
+   "why": "Meaning matters most."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you do with ideas you don't understand?",
+   "o": [
+    "Underline them in pencil",
+    "Delete them",
+    "Rewrite them yourself",
+    "Ignore them"
+   ],
+   "why": "Your partner can then make them clearer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What goes into the portfolio?",
+   "o": [
+    "The final draft with earlier drafts",
+    "Only the checklist",
+    "Your partner's letter",
+    "Nothing"
+   ],
+   "why": "The portfolio keeps all your drafts."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which part of the checklist has questions 1–7?",
+   "o": [
+    "The Language section",
+    "Part 1 (meaning)",
+    "The title",
+    "The address"
+   ],
+   "why": "The Language section checks grammar, spelling and punctuation."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner wrote: 'First we went to the beach.' Which feedback is useful?",
+   "o": [
+    "You should add a comma after 'First'.",
+    "Your letter is terrible.",
+    "Write a new letter.",
+    "Nothing."
+   ],
+   "why": "Specific advice helps your partner improve."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner's letter says 'I love my fammily.' What comment do you give?",
+   "o": [
+    "Check the spelling of 'family'.",
+    "Add more paragraphs about sport.",
+    "Change 'love' to 'hate'.",
+    "Remove the sentence."
+   ],
+   "why": "Point to the exact mistake."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You got five comments, but one would change your meaning wrongly. What do you do?",
+   "o": [
+    "Disregard that comment and use the useful ones",
+    "Accept all five",
+    "Ignore all the comments",
+    "Start a new topic"
+   ],
+   "why": "Keep only the advice that helps."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should you accept some comments and disregard others?",
+   "o": [
+    "Not all advice is useful, so you decide what to keep",
+    "All advice is wrong",
+    "All advice is always right",
+    "Comments do not matter"
+   ],
+   "why": "You are the writer and make the final choice."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the second draft not a whole new letter?",
+   "o": [
+    "It improves the first draft using the feedback",
+    "The first letter was useless",
+    "Teachers want new topics",
+    "It must be shorter"
+   ],
+   "why": "Editing builds on your first work."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why keep earlier drafts in your portfolio?",
+   "o": [
+    "To show how your writing improved",
+    "To have more paper",
+    "Because all drafts are the same",
+    "To copy them later"
+   ],
+   "why": "Drafts show your progress."
+  }
+ ]
+}

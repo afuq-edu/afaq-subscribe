@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 1: Family and friends",
+ "lesson": "Lesson 1: Hello! What's your name? + Sound s",
+ "outcomes": [
+  "I can say boy, girl, cat and friend.",
+  "I can say which cat goes with Jack and with Fatma.",
+  "I can say the sound /s/ and write the letter s."
+ ],
+ "tf": [
+  {
+   "s": "Tom is Jack's cat.",
+   "t": true,
+   "why": "Yes! Jack's cat is Tom."
+  },
+  {
+   "s": "Meg is Fatma's cat.",
+   "t": true,
+   "why": "Yes! Fatma's cat is Meg."
+  },
+  {
+   "s": "Meg is Jack's cat.",
+   "t": false,
+   "why": "Jack's cat is Tom. Meg is Fatma's cat."
+  },
+  {
+   "s": "Sun starts with /s/.",
+   "t": true,
+   "why": "Great! s, s, sun."
+  },
+  {
+   "s": "Snake starts with /t/.",
+   "t": false,
+   "why": "Snake starts with /s/."
+  },
+  {
+   "s": "Six starts with the letter s.",
+   "t": true,
+   "why": "Yes! s-ix, six."
+  },
+  {
+   "s": "A cat is a girl.",
+   "t": false,
+   "why": "A cat is an animal, not a girl."
+  },
+  {
+   "s": "Sami is a boy.",
+   "t": true,
+   "why": "Yes! Sami is a boy."
+  },
+  {
+   "s": "Pen starts with /s/.",
+   "t": false,
+   "why": "Pen starts with /p/, not /s/."
+  },
+  {
+   "s": "Fatma is a boy.",
+   "t": false,
+   "why": "Fatma is a girl."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Fatma is a …",
+   "o": [
+    "girl",
+    "boy",
+    "cat"
+   ],
+   "why": "Fatma is a girl."
+  },
+  {
+   "q": "Meg is a …",
+   "o": [
+    "cat",
+    "boy",
+    "girl"
+   ],
+   "why": "Meg is a cat."
+  },
+  {
+   "q": "Jack is a …",
+   "o": [
+    "boy",
+    "girl",
+    "cat"
+   ],
+   "why": "Jack is a boy."
+  },
+  {
+   "q": "Whose cat is Tom?",
+   "o": [
+    "Jack's",
+    "Fatma's",
+    "Lily's"
+   ],
+   "why": "Tom is Jack's cat."
+  },
+  {
+   "q": "Which word starts with /s/?",
+   "o": [
+    "sun",
+    "apple",
+    "teddy"
+   ],
+   "why": "s, s, sun!"
+  },
+  {
+   "q": "Which letter makes the sound /s/?",
+   "o": [
+    "s",
+    "a",
+    "t"
+   ],
+   "why": "The letter s says /s/."
+  },
+  {
+   "q": "_un: which letter is missing?",
+   "o": [
+    "s",
+    "t",
+    "p"
+   ],
+   "why": "s + un = sun."
+  },
+  {
+   "q": "_ix: which letter is missing?",
+   "o": [
+    "s",
+    "a",
+    "n"
+   ],
+   "why": "s + ix = six."
+  },
+  {
+   "q": "The /s/ Phonics Card shows a girl …",
+   "o": [
+    "singing",
+    "sleeping",
+    "eating"
+   ],
+   "why": "Sing starts with /s/."
+  },
+  {
+   "q": "Sad starts with …",
+   "o": [
+    "/s/",
+    "/t/",
+    "/æ/"
+   ],
+   "why": "s, s, sad!"
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Catch the word that starts with /s/.",
+   "a": "sun",
+   "d": [
+    "cat",
+    "boy",
+    "girl"
+   ]
+  },
+  {
+   "q": "Catch another /s/ word.",
+   "a": "snake",
+   "d": [
+    "apple",
+    "teddy",
+    "mum"
+   ]
+  },
+  {
+   "q": "Catch the /s/ number.",
+   "a": "six",
+   "d": [
+    "one",
+    "two",
+    "four"
+   ]
+  },
+  {
+   "q": "Catch the /s/ action word.",
+   "a": "sing",
+   "d": [
+    "clap",
+    "jump",
+    "wave"
+   ]
+  },
+  {
+   "q": "Catch the /s/ word: you do it on a chair.",
+   "a": "sit",
+   "d": [
+    "run",
+    "jump",
+    "clap"
+   ]
+  },
+  {
+   "q": "Catch the /s/ feeling word.",
+   "a": "sad",
+   "d": [
+    "happy",
+    "good",
+    "nice"
+   ]
+  },
+  {
+   "q": "Catch the letter for /s/.",
+   "a": "s",
+   "d": [
+    "a",
+    "t",
+    "p"
+   ]
+  },
+  {
+   "q": "Catch Jack's cat.",
+   "a": "Tom",
+   "d": [
+    "Meg",
+    "Lily",
+    "Fatma"
+   ]
+  },
+  {
+   "q": "Catch Fatma's cat.",
+   "a": "Meg",
+   "d": [
+    "Tom",
+    "Jack",
+    "Sami"
+   ]
+  },
+  {
+   "q": "Catch the animal word.",
+   "a": "cat",
+   "d": [
+    "boy",
+    "girl",
+    "friend"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word is an animal?",
+   "o": [
+    "cat",
+    "boy",
+    "girl",
+    "friend"
+   ],
+   "why": "A cat is an animal."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these words starts with /s/?",
+   "o": [
+    "sit",
+    "tin",
+    "ant",
+    "pen"
+   ],
+   "why": "s, s, sit!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who is Fatma's cat?",
+   "o": [
+    "Meg",
+    "Tom",
+    "Sami",
+    "Jack"
+   ],
+   "why": "Fatma's cat is Meg."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one is a girl?",
+   "o": [
+    "Lily",
+    "Jack",
+    "Sami",
+    "Tom"
+   ],
+   "why": "Lily is a girl."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Jack says: Say hello to my cat. Who is it?",
+   "o": [
+    "Tom",
+    "Meg",
+    "Lily",
+    "Fatma"
+   ],
+   "why": "Jack's cat is Tom."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "_nake: which letter is missing?",
+   "o": [
+    "s",
+    "a",
+    "t",
+    "n"
+   ],
+   "why": "s + nake = snake."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You see the girl flashcard. You say …",
+   "o": [
+    "girl",
+    "boy",
+    "cat",
+    "friend"
+   ],
+   "why": "The card shows a girl."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT start with /s/?",
+   "o": [
+    "cat",
+    "sun",
+    "six",
+    "sad"
+   ],
+   "why": "Cat starts with /k/; the others start with /s/."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does not belong: boy, girl, friend, sun?",
+   "o": [
+    "sun",
+    "boy",
+    "girl",
+    "friend"
+   ],
+   "why": "Sun is not a person."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sun, snake, six. What is the same?",
+   "o": [
+    "They start with /s/.",
+    "They are animals.",
+    "They are numbers.",
+    "They start with /t/."
+   ],
+   "why": "All three start with the sound /s/."
+  }
+ ]
+}

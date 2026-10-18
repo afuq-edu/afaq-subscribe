@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 3 - Unit 4: Tourist Information",
+ "outcomes": [
+  "Read about tourist sites in Dhofar",
+  "Make and respond to suggestions",
+  "Plan a day trip in a role play"
+ ],
+ "tf": [
+  {
+   "s": "Tawi Attair is a natural sinkhole that is home to many birds.",
+   "t": true,
+   "why": "Yes! It is over 100 metres wide and 220 metres deep."
+  },
+  {
+   "s": "Mughsayl has blowholes that shoot fountains of water 30 metres high.",
+   "t": true,
+   "why": "Right! The blowholes are amazing to see."
+  },
+  {
+   "s": "Taqah is famous for its pottery and silverwork.",
+   "t": true,
+   "why": "Correct! Its fort is famous for wooden doors and screens."
+  },
+  {
+   "s": "Mirbat Fort is famous because it was destroyed in 1970.",
+   "t": false,
+   "why": "Mirbat Fort survived an attack in 1970."
+  },
+  {
+   "s": "At Sadah, visitors can camp, sail and dive on its beaches.",
+   "t": true,
+   "why": "Yes, and they can visit the fort too."
+  },
+  {
+   "s": "'If I were you, I'd…' is a phrase for making a suggestion.",
+   "t": true,
+   "why": "Good! It gives friendly advice."
+  },
+  {
+   "s": "'I'd prefer to go to the wadi' means you agree with the plan.",
+   "t": false,
+   "why": "It shows you prefer a different plan."
+  },
+  {
+   "s": "Tawi Attair is 30 metres deep.",
+   "t": false,
+   "why": "Tawi Attair is 220 metres deep; 30 metres is the height of Mughsayl's blowhole fountains."
+  },
+  {
+   "s": "A tourist information officer gives visitors suggestions about places to visit.",
+   "t": true,
+   "why": "Right! That is the officer's job."
+  },
+  {
+   "s": "'Good idea.' is a way to accept a suggestion.",
+   "t": true,
+   "why": "Yes! It shows you agree."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which site has blowholes?",
+   "o": [
+    "Mughsayl",
+    "Taqah",
+    "Mirbat"
+   ],
+   "why": "Mughsayl's blowholes shoot water 30 metres high."
+  },
+  {
+   "q": "What is Tawi Attair?",
+   "o": [
+    "a natural sinkhole",
+    "a fort",
+    "a museum"
+   ],
+   "why": "It is a huge, deep sinkhole."
+  },
+  {
+   "q": "What is Taqah famous for?",
+   "o": [
+    "pottery and silverwork",
+    "blowholes",
+    "a sinkhole"
+   ],
+   "why": "Taqah is famous for its crafts."
+  },
+  {
+   "q": "Why is Mirbat Fort famous?",
+   "o": [
+    "it survived an attack in 1970",
+    "it is made of ice",
+    "it has blowholes"
+   ],
+   "why": "The fort protected the town and its port."
+  },
+  {
+   "q": "Complete: 'How about ___ them to Taqah?'",
+   "o": [
+    "taking",
+    "take",
+    "took"
+   ],
+   "why": "After 'How about' we use the -ing form."
+  },
+  {
+   "q": "Complete: 'I'd ___ go on Thursday.'",
+   "o": [
+    "rather",
+    "prefer",
+    "like to"
+   ],
+   "why": "'I'd rather' + base verb."
+  },
+  {
+   "q": "Which phrase begins with 'If I…'?",
+   "o": [
+    "If I were you, I'd…",
+    "I'd rather…",
+    "Why don't you…?"
+   ],
+   "why": "It is a polite way to suggest."
+  },
+  {
+   "q": "Which response accepts a suggestion?",
+   "o": [
+    "Good idea.",
+    "I'd rather go to the beach.",
+    "Let's go to Mirbat instead."
+   ],
+   "why": "'Good idea' shows agreement."
+  },
+  {
+   "q": "Which site would you suggest to a bird-lover?",
+   "o": [
+    "Tawi Attair",
+    "Taqah",
+    "Mirbat Fort"
+   ],
+   "why": "Tawi Attair is home to many birds."
+  },
+  {
+   "q": "What can visitors do at Sadah?",
+   "o": [
+    "camp, sail and dive",
+    "see a sinkhole",
+    "buy ice"
+   ],
+   "why": "Sadah has beautiful beaches."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Site with blowholes",
+   "a": "Mughsayl",
+   "d": [
+    "Taqah",
+    "Sadah",
+    "Mirbat"
+   ]
+  },
+  {
+   "q": "Natural sinkhole with birds",
+   "a": "Tawi Attair",
+   "d": [
+    "Mughsayl",
+    "Taqah",
+    "Sadah"
+   ]
+  },
+  {
+   "q": "Famous for pottery and silver",
+   "a": "Taqah",
+   "d": [
+    "Mughsayl",
+    "Tawi Attair",
+    "Sadah"
+   ]
+  },
+  {
+   "q": "Fort that survived a 1970 attack",
+   "a": "Mirbat Fort",
+   "d": [
+    "Taqah Fort",
+    "Nizwa Fort",
+    "Bahla Fort"
+   ]
+  },
+  {
+   "q": "Depth of Tawi Attair",
+   "a": "220 metres",
+   "d": [
+    "30 metres",
+    "100 metres",
+    "1970 metres"
+   ]
+  },
+  {
+   "q": "Height of Mughsayl fountains",
+   "a": "30 metres",
+   "d": [
+    "220 metres",
+    "100 metres",
+    "10 metres"
+   ]
+  },
+  {
+   "q": "Year of the attack on Mirbat",
+   "a": "1970",
+   "d": [
+    "1991",
+    "2009",
+    "1907"
+   ]
+  },
+  {
+   "q": "Complete: 'How ___ visiting Sadah?'",
+   "a": "about",
+   "d": [
+    "for",
+    "with",
+    "on"
+   ]
+  },
+  {
+   "q": "Complete: 'I'd ___ go tomorrow.'",
+   "a": "rather",
+   "d": [
+    "prefer",
+    "want",
+    "like"
+   ]
+  },
+  {
+   "q": "Complete: 'Why ___ you visit Taqah?'",
+   "a": "don't",
+   "d": [
+    "not",
+    "didn't",
+    "won't"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How wide is Tawi Attair?",
+   "o": [
+    "over 100 metres",
+    "30 metres",
+    "10 metres",
+    "220 kilometres"
+   ],
+   "why": "It is over 100 metres wide and 220 metres deep."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is Taqah Fort famous for?",
+   "o": [
+    "its wooden doors and screens",
+    "its blowholes",
+    "its sinkhole",
+    "its ice"
+   ],
+   "why": "The fort has beautiful wooden work."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a phrase for making a suggestion?",
+   "o": [
+    "You might like to…",
+    "I'd rather…",
+    "Good idea.",
+    "I'd prefer to…"
+   ],
+   "why": "The others are responses."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a phrase for responding with a different plan?",
+   "o": [
+    "Let's… instead",
+    "May I suggest…",
+    "Why don't you…?",
+    "How about…?"
+   ],
+   "why": "'Let's… instead' offers another plan."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A visitor likes history. What is a good suggestion?",
+   "o": [
+    "Why don't you visit Khor Rori?",
+    "Why don't you stay in your room?",
+    "How about sleeping all day?",
+    "You might like to go home."
+   ],
+   "why": "Khor Rori is a good place for a history lover."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend says, 'Why don't you visit Khor Rori?' You want to go to the beach. What do you say?",
+   "o": [
+    "I'd rather go to the beach.",
+    "Good idea, let's go to Khor Rori.",
+    "How about Khor Rori?",
+    "May I suggest Khor Rori?"
+   ],
+   "why": "'I'd rather…' shows a different choice."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct suggestion.",
+   "o": [
+    "How about visiting Mughsayl?",
+    "How about visit Mughsayl?",
+    "How about to visit Mughsayl?",
+    "How about visited Mughsayl?"
+   ],
+   "why": "'How about' is followed by the -ing form."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A family loves the sea and water sports. Which site is best for them?",
+   "o": [
+    "Sadah, where they can camp, sail and dive",
+    "Taqah, for pottery",
+    "Mirbat Fort, for history",
+    "Tawi Attair, for a sinkhole"
+   ],
+   "why": "Sadah's beaches suit water sports."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why would a bird-lover enjoy Tawi Attair?",
+   "o": [
+    "It is home to many birds",
+    "It has the best pottery",
+    "It has blowholes",
+    "It is a busy souk"
+   ],
+   "why": "Tawi Attair and Khor Rori are good for birdlife."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The officer says, 'May I suggest Mirbat?' and the visitor replies, 'Good idea.' What has happened?",
+   "o": [
+    "The suggestion was accepted",
+    "The suggestion was refused",
+    "A different plan was chosen",
+    "No suggestion was made"
+   ],
+   "why": "'Good idea.' shows agreement."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "4",
+ "lesson": "Unit 4: Civilisation – Review",
+ "outcomes": [
+  "Review civilisation words, the past passive and adverbs of degree.",
+  "Correct mistakes in sentences about civilisations.",
+  "Set a goal for next semester."
+ ],
+ "tf": [
+  {
+   "s": "'Old coins were found at the site.' is correct.",
+   "t": true,
+   "why": "Yes, plural subject + were found."
+  },
+  {
+   "s": "'The calendar was invented by them.' is a passive sentence.",
+   "t": true,
+   "why": "Correct, was + invented."
+  },
+  {
+   "s": "'Very' is stronger than 'extremely'.",
+   "t": false,
+   "why": "'Extremely' is stronger: a bit < quite < very < extremely."
+  },
+  {
+   "s": "'If I were a pharaoh, I would build a pyramid.' is correct.",
+   "t": true,
+   "why": "Well done, this is the second conditional."
+  },
+  {
+   "s": "'If I am a pharaoh, I would build a pyramid.' is correct.",
+   "t": false,
+   "why": "The second conditional needs 'If I were'."
+  },
+  {
+   "s": "A biography tells the story of a person's life.",
+   "t": true,
+   "why": "Right, usually in chronological order."
+  },
+  {
+   "s": "An archaeological site is a place where evidence of the past is found.",
+   "t": true,
+   "why": "Yes, like Al Baleed Archaeological Park."
+  },
+  {
+   "s": "'Ancient' means modern.",
+   "t": false,
+   "why": "'Ancient' means very old."
+  },
+  {
+   "s": "The Majan civilisation was known for copper and shipbuilding.",
+   "t": true,
+   "why": "Correct, as we learned in the unit."
+  },
+  {
+   "s": "We use the second conditional for real past events.",
+   "t": false,
+   "why": "It is for imaginary situations in the present."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "The pyramids ___ built by the Egyptians.",
+   "o": [
+    "were",
+    "was",
+    "is"
+   ],
+   "why": "Plural subject: 'were'."
+  },
+  {
+   "q": "Order from weakest: extremely / a bit / very",
+   "o": [
+    "a bit, very, extremely",
+    "extremely, very, a bit",
+    "very, a bit, extremely"
+   ],
+   "why": "Weakest to strongest."
+  },
+  {
+   "q": "Passive of 'They invented the calendar.'",
+   "o": [
+    "The calendar was invented.",
+    "The calendar invented.",
+    "The calendar were invent."
+   ],
+   "why": "was + invented."
+  },
+  {
+   "q": "If I ___ a pharaoh, I would build a pyramid.",
+   "o": [
+    "were",
+    "am",
+    "will be"
+   ],
+   "why": "Second conditional uses 'were'."
+  },
+  {
+   "q": "He ___ born in Nizwa.",
+   "o": [
+    "was",
+    "were",
+    "is being"
+   ],
+   "why": "Use 'was born'."
+  },
+  {
+   "q": "What is a biography?",
+   "o": [
+    "the story of a person's life",
+    "a map of a city",
+    "a list of rules"
+   ],
+   "why": "Biographies are life stories."
+  },
+  {
+   "q": "Which means 'very old'?",
+   "o": [
+    "ancient",
+    "modern",
+    "united"
+   ],
+   "why": "Ancient = very old."
+  },
+  {
+   "q": "Majan was known for…",
+   "o": [
+    "copper and shipbuilding",
+    "pyramids",
+    "philosophy"
+   ],
+   "why": "Majan traded copper and built ships."
+  },
+  {
+   "q": "A person who studies old objects is…",
+   "o": [
+    "an archaeologist",
+    "an ambassador",
+    "an entrepreneur"
+   ],
+   "why": "Archaeologists study the past."
+  },
+  {
+   "q": "The second conditional is for…",
+   "o": [
+    "imaginary situations",
+    "past facts",
+    "daily habits"
+   ],
+   "why": "Unreal situations use the second conditional."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Plural past passive helper",
+   "a": "were",
+   "d": [
+    "was",
+    "is",
+    "am"
+   ]
+  },
+  {
+   "q": "Strongest degree adverb",
+   "a": "extremely",
+   "d": [
+    "a bit",
+    "quite",
+    "very"
+   ]
+  },
+  {
+   "q": "Weakest degree adverb",
+   "a": "a bit",
+   "d": [
+    "very",
+    "quite",
+    "extremely"
+   ]
+  },
+  {
+   "q": "Life story of a person",
+   "a": "biography",
+   "d": [
+    "leaflet",
+    "email",
+    "map"
+   ]
+  },
+  {
+   "q": "Means 'very old'",
+   "a": "ancient",
+   "d": [
+    "modern",
+    "recent",
+    "new"
+   ]
+  },
+  {
+   "q": "Studies old objects",
+   "a": "archaeologist",
+   "d": [
+    "entrepreneur",
+    "ambassador",
+    "citizen"
+   ]
+  },
+  {
+   "q": "Known for copper and ships",
+   "a": "Majan",
+   "d": [
+    "Greek",
+    "Egyptian",
+    "Mayan"
+   ]
+  },
+  {
+   "q": "If he ___ a king…",
+   "a": "were",
+   "d": [
+    "am",
+    "will be",
+    "be"
+   ]
+  },
+  {
+   "q": "Past participle of 'invent'",
+   "a": "invented",
+   "d": [
+    "invent",
+    "inventing",
+    "invents"
+   ]
+  },
+  {
+   "q": "Place with evidence of the past",
+   "a": "archaeological site",
+   "d": [
+    "shopping mall",
+    "power plant",
+    "stadium"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How do we form the past passive?",
+   "o": [
+    "was/were + past participle",
+    "will + verb",
+    "am/is/are + verb-ing",
+    "had + verb"
+   ],
+   "why": "For example: 'were built'."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the culture and way of life of a society at a particular time?",
+   "o": [
+    "a civilisation",
+    "a leaflet",
+    "a biography",
+    "a conjunction"
+   ],
+   "why": "That is the meaning of civilisation."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which adverb is the strongest?",
+   "o": [
+    "extremely",
+    "a bit",
+    "quite",
+    "very"
+   ],
+   "why": "'Extremely' is at the top."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In which order is a biography usually written?",
+   "o": [
+    "chronological order",
+    "alphabetical order",
+    "random order",
+    "from the end to the start"
+   ],
+   "why": "Events follow the order they happened."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the mistake: 'The fort were built long ago.'",
+   "o": [
+    "The fort was built long ago.",
+    "The fort were build long ago.",
+    "The fort is built long ago.",
+    "The fort was build long ago."
+   ],
+   "why": "Singular subject: was + built."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite in the passive: 'They invented the calendar.'",
+   "o": [
+    "The calendar was invented (by them).",
+    "The calendar invented them.",
+    "They were invented the calendar.",
+    "The calendar is inventing."
+   ],
+   "why": "The object becomes the subject."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: If I ___ an archaeologist, I ___ study ancient sites in Oman.",
+   "o": [
+    "were / would",
+    "am / would",
+    "were / will",
+    "will be / would"
+   ],
+   "why": "If + past, would + verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "She was knowing for her inventions.",
+    "He was born in Muscat.",
+    "The tomb was discovered in 1922.",
+    "The pyramids were built by the Egyptians."
+   ],
+   "why": "The correct phrase is 'was known for'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'The pyramids are extremely impressive.' What does 'extremely' do here?",
+   "o": [
+    "It makes the adjective stronger.",
+    "It makes the sentence passive.",
+    "It shows the past.",
+    "It joins two sentences."
+   ],
+   "why": "Adverbs of degree show how much."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best goal for next semester?",
+   "o": [
+    "I will practise speaking English every day.",
+    "I will stop studying English.",
+    "I will forget the past passive.",
+    "I will not read anything."
+   ],
+   "why": "A good goal is clear and positive."
+  }
+ ]
+}

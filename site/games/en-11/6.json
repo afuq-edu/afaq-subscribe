@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 2 - Unit 1: Goodbye to Childhood",
+ "outcomes": [
+  "Understand what adolescence is and the changes it brings",
+  "Skim a text to find the topic and main idea of each paragraph",
+  "Find words in a text with similar meanings"
+ ],
+ "tf": [
+  {
+   "s": "Adolescence is the period between childhood and adulthood.",
+   "t": true,
+   "why": "Yes! It is the time of change from child to adult."
+  },
+  {
+   "s": "Adolescents are from about thirteen to nineteen years old.",
+   "t": true,
+   "why": "Right! These are the teenage years."
+  },
+  {
+   "s": "Acne means ugly red spots on the face or neck.",
+   "t": true,
+   "why": "Correct! Acne often appears in the teenage years."
+  },
+  {
+   "s": "Boys usually start their growth spurt earlier than girls.",
+   "t": false,
+   "why": "Girls begin earlier, as young as 10; boys between 12 and 17."
+  },
+  {
+   "s": "Peer pressure can lead teenagers into bad habits.",
+   "t": true,
+   "why": "Yes, friends can push teens to do the wrong things."
+  },
+  {
+   "s": "Paragraph 2 of the text is about relationships with the family.",
+   "t": false,
+   "why": "Paragraph 2 is about physical changes; paragraph 4 is about family."
+  },
+  {
+   "s": "'Physical' means related to the mind.",
+   "t": false,
+   "why": "'Physical' means related to the body; 'mental' means related to the mind."
+  },
+  {
+   "s": "When you skim a text, you should read every word.",
+   "t": false,
+   "why": "The Top Tip says: skim, don't read every word."
+  },
+  {
+   "s": "Teenagers can become self-conscious because they think everyone is looking at them.",
+   "t": true,
+   "why": "Right! They feel others are judging them."
+  },
+  {
+   "s": "'Security' means a feeling of safety.",
+   "t": true,
+   "why": "Good! Teenagers still need the security of their families."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does 'adolescence' mean?",
+   "o": [
+    "the period between childhood and adulthood",
+    "the training period for a new job",
+    "the first year of school"
+   ],
+   "why": "Adolescence is the teenage period."
+  },
+  {
+   "q": "What do parents complain about, according to the introduction?",
+   "o": [
+    "teenage mood swings",
+    "teenage cooking",
+    "too much homework"
+   ],
+   "why": "Mood swings are quick changes of feeling."
+  },
+  {
+   "q": "What do teens complain about?",
+   "o": [
+    "parents are suspicious and critical",
+    "parents are too quiet",
+    "parents give too much money"
+   ],
+   "why": "Teens feel their parents do not trust them."
+  },
+  {
+   "q": "Which paragraph deals with physical changes?",
+   "o": [
+    "paragraph 2",
+    "paragraph 1",
+    "paragraph 4"
+   ],
+   "why": "Paragraph 2 talks about the growth spurt and puberty."
+  },
+  {
+   "q": "Which paragraph deals with relationships with family?",
+   "o": [
+    "paragraph 4",
+    "paragraph 2",
+    "paragraph 3"
+   ],
+   "why": "Paragraph 4 is about family and independence."
+  },
+  {
+   "q": "Which word means 'disagreement'?",
+   "o": [
+    "conflict",
+    "security",
+    "transition"
+   ],
+   "why": "A conflict is a disagreement."
+  },
+  {
+   "q": "Which word means 'related to the mind'?",
+   "o": [
+    "mental",
+    "physical",
+    "acne"
+   ],
+   "why": "Mental changes are changes in how we think and feel."
+  },
+  {
+   "q": "What is a 'growth spurt'?",
+   "o": [
+    "a sudden increase in height and weight",
+    "a type of spot on the skin",
+    "a family argument"
+   ],
+   "why": "Teenagers grow quickly during a growth spurt."
+  },
+  {
+   "q": "Which word means 'change'?",
+   "o": [
+    "transition",
+    "security",
+    "conflict"
+   ],
+   "why": "Adolescence is a time of transition."
+  },
+  {
+   "q": "What is a topic sentence?",
+   "o": [
+    "the sentence that gives the main idea of a paragraph",
+    "the last word of a text",
+    "a question at the end"
+   ],
+   "why": "Underline the topic sentence to find the main idea."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Period between child and adult",
+   "a": "adolescence",
+   "d": [
+    "childhood",
+    "old age",
+    "infancy"
+   ]
+  },
+  {
+   "q": "Ugly red spots on the face",
+   "a": "acne",
+   "d": [
+    "angst",
+    "conflict",
+    "puberty"
+   ]
+  },
+  {
+   "q": "Word for 'change'",
+   "a": "transition",
+   "d": [
+    "security",
+    "conflict",
+    "acne"
+   ]
+  },
+  {
+   "q": "Related to the body",
+   "a": "physical",
+   "d": [
+    "mental",
+    "critical",
+    "dependent"
+   ]
+  },
+  {
+   "q": "Related to the mind",
+   "a": "mental",
+   "d": [
+    "physical",
+    "suspicious",
+    "social"
+   ]
+  },
+  {
+   "q": "A feeling of safety",
+   "a": "security",
+   "d": [
+    "conflict",
+    "angst",
+    "acne"
+   ]
+  },
+  {
+   "q": "Word for 'disagreement'",
+   "a": "conflict",
+   "d": [
+    "transition",
+    "security",
+    "values"
+   ]
+  },
+  {
+   "q": "Sudden increase in height",
+   "a": "growth spurt",
+   "d": [
+    "mood swing",
+    "peer pressure",
+    "acne"
+   ]
+  },
+  {
+   "q": "Quick changes of feeling",
+   "a": "mood swings",
+   "d": [
+    "growth spurt",
+    "acne",
+    "security"
+   ]
+  },
+  {
+   "q": "Pressure from friends your age",
+   "a": "peer pressure",
+   "d": [
+    "mood swings",
+    "angst",
+    "security"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "At what age can girls begin their growth spurt?",
+   "o": [
+    "as young as 10",
+    "at 20",
+    "at 17 only",
+    "at 5"
+   ],
+   "why": "Girls start earlier than boys."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which paragraph describes the nature of adolescence?",
+   "o": [
+    "paragraph 1",
+    "paragraph 2",
+    "paragraph 3",
+    "paragraph 4"
+   ],
+   "why": "Paragraph 1 introduces what adolescence is."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What question does the introduction ask about young Omanis?",
+   "o": [
+    "whether they are in danger of forgetting their own culture",
+    "whether they like sport",
+    "whether they should travel abroad",
+    "whether they read enough"
+   ],
+   "why": "Western media and the Internet may affect their culture."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'suspicious' describe in the introduction?",
+   "o": [
+    "parents who do not fully trust their teens",
+    "teens who are very happy",
+    "friends who help each other",
+    "teachers who give homework"
+   ],
+   "why": "Teens complain that parents are suspicious and critical."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Replace 'change' with a word from the text: 'Adolescence is a time of change.'",
+   "o": [
+    "Adolescence is a time of transition.",
+    "Adolescence is a time of security.",
+    "Adolescence is a time of acne.",
+    "Adolescence is a time of conflict."
+   ],
+   "why": "'Transition' means change."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best topic sentence for paragraph 4?",
+   "o": [
+    "Teenagers want independence but still need the security of their families.",
+    "Girls grow faster than boys.",
+    "Acne is red spots on the face.",
+    "Adolescence is between 13 and 19."
+   ],
+   "why": "Paragraph 4 is about family relationships."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the sentence that uses 'conflict' correctly.",
+   "o": [
+    "A conflict started between the brothers.",
+    "I conflict my homework every day.",
+    "She is very conflict today.",
+    "The conflict is a red spot."
+   ],
+   "why": "'Conflict' is a noun meaning disagreement."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How is paragraph 3 different from paragraph 2?",
+   "o": [
+    "Paragraph 2 is about physical changes; paragraph 3 is about mental changes",
+    "Both are about family",
+    "Paragraph 3 is about the growth spurt",
+    "Paragraph 2 is about friends"
+   ],
+   "why": "Body changes come first, then changes in how teens see themselves."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How can a teenager's friends cause family conflict?",
+   "o": [
+    "If he regards his friends as more important than his family",
+    "If he helps at home",
+    "If he studies hard",
+    "If he sleeps early"
+   ],
+   "why": "Putting friends before family can lead to disagreement."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the text say teenagers become easily embarrassed?",
+   "o": [
+    "Hormonal changes make them self-conscious",
+    "They have no friends",
+    "They are always on holiday",
+    "They grow less"
+   ],
+   "why": "Mental changes make teens feel others are judging them."
+  }
+ ]
+}

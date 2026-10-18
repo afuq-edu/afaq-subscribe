@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U2",
+ "lesson": "Unit 2 – Lesson 7: Skills – Reading (a recipe: Let's cook!)",
+ "outcomes": [
+  "Read a recipe and find information about Rasha and her harees.",
+  "Know the parts of a recipe.",
+  "Put recipe steps in order with First, Then, After that, Last."
+ ],
+ "tf": [
+  {
+   "s": "Rasha is ten years old.",
+   "t": true,
+   "why": "Yes! Rasha is 10."
+  },
+  {
+   "s": "Rasha is the winner of the TV show Kids Cook!",
+   "t": true,
+   "why": "Correct! She won Kids Cook!"
+  },
+  {
+   "s": "Harees is a sweet cake.",
+   "t": false,
+   "why": "Harees is a savoury porridge."
+  },
+  {
+   "s": "It takes 30 minutes to make harees.",
+   "t": true,
+   "why": "Well done! Time: 30 minutes."
+  },
+  {
+   "s": "The recipe is for ten people.",
+   "t": false,
+   "why": "The recipe is for 4 people."
+  },
+  {
+   "s": "You need a lot of butter for harees.",
+   "t": false,
+   "why": "You need only a little butter."
+  },
+  {
+   "s": "First, you cook the wheat in some water.",
+   "t": true,
+   "why": "Great! Cooking the wheat is the first step."
+  },
+  {
+   "s": "You add the spices before the chicken.",
+   "t": false,
+   "why": "You add the chicken, and after that the spices."
+  },
+  {
+   "s": "In a recipe, the ingredients come before the instructions.",
+   "t": true,
+   "why": "Yes! You get the ingredients before you cook."
+  },
+  {
+   "s": "Rasha lives with two people.",
+   "t": false,
+   "why": "She lives with five people: mum, dad, two brothers and her sister."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is Rasha's favourite food?",
+   "o": [
+    "harees",
+    "sushi",
+    "fondue"
+   ],
+   "why": "Rasha loves harees."
+  },
+  {
+   "q": "What is the last step?",
+   "o": [
+    "Add a little butter and serve.",
+    "Cook the wheat.",
+    "Add the chicken."
+   ],
+   "why": "Last, you add a little butter and serve."
+  },
+  {
+   "q": "What do you add after the chicken?",
+   "o": [
+    "the spices",
+    "the wheat",
+    "the water"
+   ],
+   "why": "After the chicken, you add the spices."
+  },
+  {
+   "q": "Which word starts the first step?",
+   "o": [
+    "First",
+    "Last",
+    "After that"
+   ],
+   "why": "We start with 'First'."
+  },
+  {
+   "q": "What is a list of food you need for a recipe?",
+   "o": [
+    "ingredients",
+    "instructions",
+    "time"
+   ],
+   "why": "Ingredients are the food you need."
+  },
+  {
+   "q": "What do you cook the wheat in?",
+   "o": [
+    "water",
+    "milk",
+    "tea"
+   ],
+   "why": "You cook the wheat in some water."
+  },
+  {
+   "q": "What does 'savoury' mean?",
+   "o": [
+    "not sweet",
+    "very cold",
+    "raw"
+   ],
+   "why": "Savoury food is not sweet."
+  },
+  {
+   "q": "Which word comes after 'Then'?",
+   "o": [
+    "After that",
+    "First",
+    "Ready"
+   ],
+   "why": "First, Then, After that, Last."
+  },
+  {
+   "q": "Which is NOT an ingredient of harees?",
+   "o": [
+    "chocolate",
+    "wheat",
+    "chicken"
+   ],
+   "why": "Harees has wheat, chicken, spices and butter, not chocolate."
+  },
+  {
+   "q": "What tells you what to do, step by step?",
+   "o": [
+    "instructions",
+    "ingredients",
+    "the title"
+   ],
+   "why": "Instructions tell you the steps."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Rasha's age",
+   "a": "10",
+   "d": [
+    "12",
+    "8",
+    "4"
+   ]
+  },
+  {
+   "q": "Rasha's dish",
+   "a": "harees",
+   "d": [
+    "sushi",
+    "fondue",
+    "shuwa"
+   ]
+  },
+  {
+   "q": "Time to make harees",
+   "a": "30 minutes",
+   "d": [
+    "10 minutes",
+    "2 hours",
+    "5 minutes"
+   ]
+  },
+  {
+   "q": "Harees is for ___ people.",
+   "a": "4",
+   "d": [
+    "2",
+    "8",
+    "10"
+   ]
+  },
+  {
+   "q": "First, you cook the...",
+   "a": "wheat",
+   "d": [
+    "butter",
+    "spices",
+    "chicken"
+   ]
+  },
+  {
+   "q": "After the wheat, add the...",
+   "a": "chicken",
+   "d": [
+    "butter",
+    "spices",
+    "sugar"
+   ]
+  },
+  {
+   "q": "Last, you add a little...",
+   "a": "butter",
+   "d": [
+    "wheat",
+    "water",
+    "chicken"
+   ]
+  },
+  {
+   "q": "Sequence word: the end",
+   "a": "Last",
+   "d": [
+    "First",
+    "Then",
+    "After that"
+   ]
+  },
+  {
+   "q": "Harees is a savoury...",
+   "a": "porridge",
+   "d": [
+    "cake",
+    "drink",
+    "salad"
+   ]
+  },
+  {
+   "q": "TV show Rasha won",
+   "a": "Kids Cook!",
+   "d": [
+    "Kids Sing!",
+    "Kids Run!",
+    "Kids Draw!"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who is Rasha?",
+   "o": [
+    "A 10-year-old winner of Kids Cook!",
+    "A teacher at a school",
+    "A shopkeeper",
+    "A TV doctor"
+   ],
+   "why": "Rasha is 10 and won Kids Cook!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is harees?",
+   "o": [
+    "a savoury porridge",
+    "a sweet drink",
+    "a fruit salad",
+    "a cake"
+   ],
+   "why": "Harees is a savoury porridge."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How many people is the harees recipe for?",
+   "o": [
+    "4",
+    "2",
+    "6",
+    "10"
+   ],
+   "why": "The recipe is for 4 people."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a part of a recipe?",
+   "o": [
+    "ingredients",
+    "a price list",
+    "a map",
+    "a timetable"
+   ],
+   "why": "A recipe has a name, time, people, ingredients and instructions."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put in order: (a) add the spices (b) cook the wheat (c) add butter (d) add the chicken",
+   "o": [
+    "b – d – a – c",
+    "a – b – c – d",
+    "d – b – a – c",
+    "b – a – d – c"
+   ],
+   "why": "Wheat, then chicken, then spices, then butter."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the mistake: 'First, you add the butter.'",
+   "o": [
+    "First, you cook the wheat in some water.",
+    "First, you add the spices.",
+    "First, you serve the harees.",
+    "First, you add the chicken."
+   ],
+   "why": "The first step is to cook the wheat."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "How much butter do you need for harees?",
+   "o": [
+    "a little butter",
+    "a lot of butter",
+    "ten bottles of butter",
+    "no butter"
+   ],
+   "why": "The recipe says a little butter."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do the ingredients come before the instructions?",
+   "o": [
+    "You need to get the ingredients before you cook.",
+    "Ingredients are not important.",
+    "Instructions are always short.",
+    "You read the recipe after cooking."
+   ],
+   "why": "You get everything ready first, then you cook."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do recipes use First, Then, After that and Last?",
+   "o": [
+    "They show the order of the steps.",
+    "They show the price.",
+    "They name the ingredients.",
+    "They tell the time."
+   ],
+   "why": "Sequence words show the order."
+  },
+  {
+   "lv": "التحليل",
+   "q": "You start cooking harees at 5 o'clock. When is it ready?",
+   "o": [
+    "half past five",
+    "six o'clock",
+    "quarter past five",
+    "five o'clock"
+   ],
+   "why": "It takes 30 minutes, so it is ready at half past five."
+  }
+ ]
+}

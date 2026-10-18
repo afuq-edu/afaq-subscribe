@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 3: Hobbies",
+ "lesson": "Unit 3 – Lesson 6: English in action (saying how often)",
+ "outcomes": [
+  "I can use always, often and never.",
+  "I can say what I do on Saturdays.",
+  "I can put always, often and never in the right place."
+ ],
+ "tf": [
+  {
+   "s": "Always means every day.",
+   "t": true,
+   "why": "Yes! Always = seven ticks."
+  },
+  {
+   "s": "Never means every day.",
+   "t": false,
+   "why": "Never means no days."
+  },
+  {
+   "s": "Often means many days.",
+   "t": true,
+   "why": "Right! Often = many days."
+  },
+  {
+   "s": "A table with seven ticks matches always.",
+   "t": true,
+   "why": "Yes! Seven ticks = always."
+  },
+  {
+   "s": "A table with no ticks matches often.",
+   "t": false,
+   "why": "No ticks = never."
+  },
+  {
+   "s": "We say: I always play tennis.",
+   "t": true,
+   "why": "Great! I + always + verb."
+  },
+  {
+   "s": "We say: I play always tennis.",
+   "t": false,
+   "why": "The word goes before the verb: I always play tennis."
+  },
+  {
+   "s": "A table with five ticks matches often.",
+   "t": true,
+   "why": "Yes! Five ticks = often."
+  },
+  {
+   "s": "We ask: What do you do on Saturdays?",
+   "t": true,
+   "why": "Right! This asks about your Saturday."
+  },
+  {
+   "s": "No, I never play tennis means I play tennis every day.",
+   "t": false,
+   "why": "Never means no days at all."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Seven ticks in the week:",
+   "o": [
+    "always",
+    "often",
+    "never"
+   ],
+   "why": "Seven ticks = always."
+  },
+  {
+   "q": "No ticks in the week:",
+   "o": [
+    "never",
+    "often",
+    "always"
+   ],
+   "why": "No ticks = never."
+  },
+  {
+   "q": "Five ticks in the week:",
+   "o": [
+    "often",
+    "never",
+    "always"
+   ],
+   "why": "Five ticks = often."
+  },
+  {
+   "q": "Order: never / I / video games. / play",
+   "o": [
+    "I never play video games.",
+    "I play never video games.",
+    "Never I video games play."
+   ],
+   "why": "I + never + verb."
+  },
+  {
+   "q": "Complete: I ___ read a book. (five days)",
+   "o": [
+    "often",
+    "never",
+    "always"
+   ],
+   "why": "Five days = often."
+  },
+  {
+   "q": "Which word means every day?",
+   "o": [
+    "always",
+    "never",
+    "often"
+   ],
+   "why": "Always = every day."
+  },
+  {
+   "q": "Ask your partner about tennis:",
+   "o": [
+    "Do you play tennis on Saturdays?",
+    "Does you play tennis on Saturdays?",
+    "You play tennis Saturdays?"
+   ],
+   "why": "Do you …?"
+  },
+  {
+   "q": "Answer with never:",
+   "o": [
+    "No, I never play tennis.",
+    "Yes, I never play tennis.",
+    "No, I play never tennis."
+   ],
+   "why": "No, I never …"
+  },
+  {
+   "q": "Table b has seven crosses:",
+   "o": [
+    "never",
+    "always",
+    "often"
+   ],
+   "why": "Seven crosses = never."
+  },
+  {
+   "q": "Where does always go?",
+   "o": [
+    "Before the verb",
+    "At the end",
+    "After the verb"
+   ],
+   "why": "I always ride a bike."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Seven ticks",
+   "a": "always",
+   "d": [
+    "often",
+    "never",
+    "sometimes"
+   ]
+  },
+  {
+   "q": "No ticks",
+   "a": "never",
+   "d": [
+    "always",
+    "often",
+    "sometimes"
+   ]
+  },
+  {
+   "q": "Five ticks",
+   "a": "often",
+   "d": [
+    "never",
+    "always",
+    "sometimes"
+   ]
+  },
+  {
+   "q": "Every day",
+   "a": "always",
+   "d": [
+    "never",
+    "often",
+    "once"
+   ]
+  },
+  {
+   "q": "No days",
+   "a": "never",
+   "d": [
+    "always",
+    "often",
+    "every day"
+   ]
+  },
+  {
+   "q": "Many days",
+   "a": "often",
+   "d": [
+    "never",
+    "no days",
+    "always"
+   ]
+  },
+  {
+   "q": "I ___ read a book. (5 days)",
+   "a": "often",
+   "d": [
+    "never",
+    "always",
+    "not"
+   ]
+  },
+  {
+   "q": "I ___ ride a bike. (7 days)",
+   "a": "always",
+   "d": [
+    "never",
+    "often",
+    "not"
+   ]
+  },
+  {
+   "q": "I ___ play basketball. (0 days)",
+   "a": "never",
+   "d": [
+    "always",
+    "often",
+    "every"
+   ]
+  },
+  {
+   "q": "Seven crosses",
+   "a": "never",
+   "d": [
+    "always",
+    "often",
+    "every day"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does often mean?",
+   "o": [
+    "many days",
+    "no days",
+    "every day",
+    "one day"
+   ],
+   "why": "Often = many days."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does never mean?",
+   "o": [
+    "no days",
+    "every day",
+    "many days",
+    "two days"
+   ],
+   "why": "Never = no days."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How many ticks does always have?",
+   "o": [
+    "seven",
+    "five",
+    "zero",
+    "three"
+   ],
+   "why": "Always = seven ticks."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What question do we ask in the dialogue?",
+   "o": [
+    "What do you do on Saturdays?",
+    "How much is it?",
+    "How old are you?",
+    "Where is Fatma?"
+   ],
+   "why": "We ask about Saturdays."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You brush your teeth every day. Choose the sentence.",
+   "o": [
+    "I always brush my teeth.",
+    "I never brush my teeth.",
+    "I often brush my teeth.",
+    "I brush always my teeth."
+   ],
+   "why": "Every day = always."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You watch TV on five days. Choose the sentence.",
+   "o": [
+    "I often watch TV.",
+    "I always watch TV.",
+    "I never watch TV.",
+    "I watch often TV."
+   ],
+   "why": "Five days = often."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You don't play basketball on Saturdays at all. Choose the sentence.",
+   "o": [
+    "I never play basketball on Saturdays.",
+    "I always play basketball on Saturdays.",
+    "I often play basketball on Saturdays.",
+    "I play never basketball on Saturdays."
+   ],
+   "why": "No days = never."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has the word in the wrong place?",
+   "o": [
+    "I ride always a bike.",
+    "I always ride a bike.",
+    "I often watch TV.",
+    "I never play basketball."
+   ],
+   "why": "It should be I always ride a bike."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sami: ✓✓✓✓✓✓✓. Lily: ✗✗✗✗✗✗✗. Who never plays?",
+   "o": [
+    "Lily",
+    "Sami",
+    "Both",
+    "Nobody"
+   ],
+   "why": "Lily has no ticks, so she never plays."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ali reads on 5 days. Huda reads on 7 days. Which is true?",
+   "o": [
+    "Huda always reads. Ali often reads.",
+    "Ali always reads. Huda often reads.",
+    "Both never read.",
+    "Huda never reads."
+   ],
+   "why": "7 days = always; 5 days = often."
+  }
+ ]
+}

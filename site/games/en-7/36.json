@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Lesson 8: Literacy – Reading an email",
+ "outcomes": [
+  "Find specific information in an email about a school trip to Bahla.",
+  "Answer questions in complete sentences and decide True, False or Doesn't say.",
+  "Know the parts of an email: To, Subject, Dear …, Yours."
+ ],
+ "tf": [
+  {
+   "s": "An express coach is a fast coach.",
+   "t": true,
+   "why": "Yes, express means fast."
+  },
+  {
+   "s": "Students should arrive at school after the coach leaves.",
+   "t": false,
+   "why": "They arrive at 4 p.m., before the coach leaves at 4.30."
+  },
+  {
+   "s": "The trip lasts three days: Sunday, Monday and Tuesday.",
+   "t": true,
+   "why": "Yes, that is the trip timeline."
+  },
+  {
+   "s": "The Subject box tells the reader the topic of the email.",
+   "t": true,
+   "why": "Yes, the subject shows what it is about."
+  },
+  {
+   "s": "Lovely and wonderful describe nice things.",
+   "t": true,
+   "why": "Yes, both are positive adjectives."
+  },
+  {
+   "s": "Students need a raincoat because it often rains in Bahla.",
+   "t": false,
+   "why": "The weather is usually hot."
+  },
+  {
+   "s": "The famous fort is in Bahla.",
+   "t": true,
+   "why": "Yes, Bahla fort is a UNESCO site."
+  },
+  {
+   "s": "Busy means having nothing to do.",
+   "t": false,
+   "why": "Busy means having a lot to do."
+  },
+  {
+   "s": "The email tells students what to bring on the trip.",
+   "t": true,
+   "why": "Yes, it lists things to bring."
+  },
+  {
+   "s": "Students don't need any money on the trip.",
+   "t": false,
+   "why": "They need money for lunch on Monday."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "On which day does the trip start?",
+   "o": [
+    "Sunday",
+    "Monday",
+    "Tuesday"
+   ],
+   "why": "The trip starts next Sunday."
+  },
+  {
+   "q": "What do students need money for on Monday?",
+   "o": [
+    "a sandwich and a drink",
+    "a hotel room",
+    "a new swimsuit"
+   ],
+   "why": "They buy lunch on Monday."
+  },
+  {
+   "q": "Why should students bring a sunhat?",
+   "o": [
+    "The weather is usually hot.",
+    "It is going to snow.",
+    "The coach is cold."
+   ],
+   "why": "A sunhat protects you from the sun."
+  },
+  {
+   "q": "Which part of an email starts the message?",
+   "o": [
+    "Dear …",
+    "Yours",
+    "Subject"
+   ],
+   "why": "We start with Dear …"
+  },
+  {
+   "q": "Where do you write the email address?",
+   "o": [
+    "To",
+    "Subject",
+    "Yours"
+   ],
+   "why": "The To box has the address."
+  },
+  {
+   "q": "What does express mean in express coach?",
+   "o": [
+    "fast",
+    "slow",
+    "old"
+   ],
+   "why": "An express coach is fast with few stops."
+  },
+  {
+   "q": "Bahla fort is a UNESCO World ___ site.",
+   "o": [
+    "Heritage",
+    "Holiday",
+    "Hotel"
+   ],
+   "why": "It is a World Heritage site."
+  },
+  {
+   "q": "Which word means 'having good luck'?",
+   "o": [
+    "lucky",
+    "busy",
+    "brand-new"
+   ],
+   "why": "Lucky = good things happen to you."
+  },
+  {
+   "q": "Which word means 'very nice'?",
+   "o": [
+    "lovely",
+    "busy",
+    "heavy"
+   ],
+   "why": "Lovely = very nice."
+  },
+  {
+   "q": "Which day comes after Sunday in the trip timeline?",
+   "o": [
+    "Monday",
+    "Saturday",
+    "Thursday"
+   ],
+   "why": "The trip goes Sunday, Monday, Tuesday."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The coach leaves at …",
+   "a": "4.30 p.m.",
+   "d": [
+    "4 p.m.",
+    "7 p.m.",
+    "5.30 p.m."
+   ]
+  },
+  {
+   "q": "Arrive at school at …",
+   "a": "4 p.m.",
+   "d": [
+    "4.30 p.m.",
+    "7 p.m.",
+    "8 a.m."
+   ]
+  },
+  {
+   "q": "Dinner every evening at …",
+   "a": "7 p.m.",
+   "d": [
+    "4 p.m.",
+    "9 p.m.",
+    "6 a.m."
+   ]
+  },
+  {
+   "q": "UNESCO site since …",
+   "a": "1987",
+   "d": [
+    "1978",
+    "2017",
+    "1997"
+   ]
+  },
+  {
+   "q": "Bring it for the pool",
+   "a": "swimsuit",
+   "d": [
+    "raincoat",
+    "pillow",
+    "pencil case"
+   ]
+  },
+  {
+   "q": "Shoes for a lot of walking",
+   "a": "trainers",
+   "d": [
+    "flip-flops",
+    "slippers",
+    "boots for snow"
+   ]
+  },
+  {
+   "q": "Completely new",
+   "a": "brand-new",
+   "d": [
+    "lovely",
+    "busy",
+    "lucky"
+   ]
+  },
+  {
+   "q": "Town with the famous fort",
+   "a": "Bahla",
+   "d": [
+    "Salalah",
+    "Sur",
+    "Muscat"
+   ]
+  },
+  {
+   "q": "Email ending word",
+   "a": "Yours",
+   "d": [
+    "Dear",
+    "Subject",
+    "To"
+   ]
+  },
+  {
+   "q": "Answer when the text has no info",
+   "a": "Doesn't say",
+   "d": [
+    "True",
+    "False",
+    "Yes"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What are the main parts of an email?",
+   "o": [
+    "To, Subject, Dear …, Yours",
+    "Title, Chapter, The End",
+    "Name, Food, Home, Size",
+    "Question, Answer, Score"
+   ],
+   "why": "These are the parts of an email."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What can students do at the hotel?",
+   "o": [
+    "swim in the brand-new pool",
+    "ride horses",
+    "watch a football match",
+    "go skiing"
+   ],
+   "why": "That is why they need a swimsuit."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is Bahla famous for?",
+   "o": [
+    "its fort",
+    "its beach",
+    "its high-speed train",
+    "its space hotel"
+   ],
+   "why": "Bahla fort is a UNESCO site."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When should you use a dictionary while reading?",
+   "o": [
+    "only for important words",
+    "for every word",
+    "never",
+    "before you read the title"
+   ],
+   "why": "Guess from context first, then check key words."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Answer in a complete sentence: When is the trip?",
+   "o": [
+    "The trip is next Sunday, 16th April.",
+    "Sunday.",
+    "16th April.",
+    "Next Sunday trip."
+   ],
+   "why": "A complete sentence has a subject and a verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Answer in a complete sentence: What can you see from the walls at the top of the fort?",
+   "o": [
+    "You can see some wonderful views from the walls at the top.",
+    "Wonderful views.",
+    "Views top walls.",
+    "The walls."
+   ],
+   "why": "Repeat the key words of the question."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are going to Bahla. It is usually hot. What is a good thing to take?",
+   "o": [
+    "a water bottle",
+    "a winter coat",
+    "an umbrella for snow",
+    "a heavy blanket"
+   ],
+   "why": "Water keeps you healthy in hot weather."
+  },
+  {
+   "lv": "التحليل",
+   "q": "True, False or Doesn't say? The students will buy gifts in the souq.",
+   "o": [
+    "Doesn't say",
+    "True",
+    "False",
+    "Both true and false"
+   ],
+   "why": "The email only says they can bring money for a gift if they want."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why must students wear trainers or comfortable shoes?",
+   "o": [
+    "They are going to do a lot of walking.",
+    "They are going to swim.",
+    "The coach is very small.",
+    "Shoes are not allowed at the fort."
+   ],
+   "why": "Comfortable shoes help on long walks."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the weather information in the email important?",
+   "o": [
+    "So students bring a sunhat and light clothes.",
+    "So students stay at home.",
+    "So students can buy a raincoat.",
+    "So the coach can leave early."
+   ],
+   "why": "It helps students pack the right things."
+  }
+ ]
+}

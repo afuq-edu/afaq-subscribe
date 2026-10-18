@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 1: Look at my toys!",
+  "lesson": "Unit 1 – Lesson 4: Skills (Listening and speaking)",
+  "outcomes": [
+    "I can read questions about toys and write answers.",
+    "I can write about a toy: It's a ... It's (colour).",
+    "I can read a-e words like cake and game, and the word have."
+  ],
+  "tf": [
+    {
+      "s": "The magic e in cake makes the a say /eɪ/.",
+      "t": true,
+      "why": "Yes! The e makes a say its name."
+    },
+    {
+      "s": "game, snake and lake have a-e.",
+      "t": true,
+      "why": "Great! They all have a and e."
+    },
+    {
+      "s": "The word cat has a-e.",
+      "t": false,
+      "why": "cat has no e at the end."
+    },
+    {
+      "s": "It's a ball. It's red. tells the toy and the colour.",
+      "t": true,
+      "why": "Yes! First the toy, then the colour."
+    },
+    {
+      "s": "Is it a red car? (a blue car) Yes, it is.",
+      "t": false,
+      "why": "The car is blue, so we say No, it isn't."
+    },
+    {
+      "s": "I have got a cake. uses the tricky word have.",
+      "t": true,
+      "why": "Well done! have is our tricky word."
+    },
+    {
+      "s": "The e at the end of snake says /e/.",
+      "t": false,
+      "why": "The magic e is quiet. It helps the a."
+    },
+    {
+      "s": "It's a robot. It's purple. has two sentences.",
+      "t": true,
+      "why": "Yes! Each sentence ends with a full stop."
+    },
+    {
+      "s": "The word rake has oa in it.",
+      "t": false,
+      "why": "rake has a-e, not oa."
+    },
+    {
+      "s": "The word flame has a magic e at the end.",
+      "t": true,
+      "why": "Yes! f - l - a - m - e has magic e."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "What's this? It's a ... (a ball)",
+      "o": [
+        "ball",
+        "kite",
+        "bike"
+      ],
+      "why": "The picture shows a ball."
+    },
+    {
+      "q": "Is it a brown teddy? (a brown teddy)",
+      "o": [
+        "Yes, it is.",
+        "No, it isn't.",
+        "It's a car."
+      ],
+      "why": "It is a brown teddy, so Yes."
+    },
+    {
+      "q": "Which word has a-e?",
+      "o": [
+        "cake",
+        "cat",
+        "can"
+      ],
+      "why": "c - a - k - e has magic e."
+    },
+    {
+      "q": "What does the e do in game?",
+      "o": [
+        "makes a say /eɪ/",
+        "says /e/",
+        "makes it a plane"
+      ],
+      "why": "Magic e makes the a say /eɪ/."
+    },
+    {
+      "q": "I ... got a snake.",
+      "o": [
+        "have",
+        "his",
+        "who"
+      ],
+      "why": "I have got a snake."
+    },
+    {
+      "q": "An animal with a-e",
+      "o": [
+        "snake",
+        "goat",
+        "cat"
+      ],
+      "why": "snake has a and e."
+    },
+    {
+      "q": "We swim in a...",
+      "o": [
+        "lake",
+        "cake",
+        "game"
+      ],
+      "why": "A lake has water."
+    },
+    {
+      "q": "Write about your toy:",
+      "o": [
+        "It's a kite.",
+        "I'm seven.",
+        "Goodbye."
+      ],
+      "why": "It's a ... tells about a toy."
+    },
+    {
+      "q": "It's a robot. It's ...",
+      "o": [
+        "purple",
+        "seven",
+        "his"
+      ],
+      "why": "The second sentence tells the colour."
+    },
+    {
+      "q": "Which word does NOT have a-e?",
+      "o": [
+        "rain",
+        "rake",
+        "flame"
+      ],
+      "why": "rain has ai."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Read: c - a - k - e",
+      "a": "cake",
+      "d": [
+        "lake",
+        "game",
+        "rake"
+      ]
+    },
+    {
+      "q": "An animal with magic e",
+      "a": "snake",
+      "d": [
+        "cake",
+        "lake",
+        "game"
+      ]
+    },
+    {
+      "q": "Find the a-e word.",
+      "a": "game",
+      "d": [
+        "cat",
+        "rain",
+        "boat"
+      ]
+    },
+    {
+      "q": "Water to swim in",
+      "a": "lake",
+      "d": [
+        "snake",
+        "cake",
+        "flame"
+      ]
+    },
+    {
+      "q": "Fire is a ...",
+      "a": "flame",
+      "d": [
+        "rake",
+        "game",
+        "lake"
+      ]
+    },
+    {
+      "q": "Tricky word: I ... got a cake.",
+      "a": "have",
+      "d": [
+        "his",
+        "her",
+        "who"
+      ]
+    },
+    {
+      "q": "What's this? It's a ... (ball)",
+      "a": "ball",
+      "d": [
+        "kite",
+        "doll",
+        "car"
+      ]
+    },
+    {
+      "q": "Is it a red car? (blue car)",
+      "a": "No, it isn't.",
+      "d": [
+        "Yes, it is.",
+        "It's red.",
+        "It's a ball."
+      ]
+    },
+    {
+      "q": "Is it a brown teddy? (brown)",
+      "a": "Yes, it is.",
+      "d": [
+        "No, it isn't.",
+        "It's a car.",
+        "It's blue."
+      ]
+    },
+    {
+      "q": "The sound of a-e",
+      "a": "/eɪ/",
+      "d": [
+        "/æ/",
+        "/aɪ/",
+        "/əʊ/"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which word has a split digraph a-e?",
+      "o": [
+        "rake",
+        "rat",
+        "rain",
+        "red"
+      ],
+      "why": "r - a - k - e has a and e."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which is the tricky word in: I have got a cake?",
+      "o": [
+        "have",
+        "got",
+        "cake",
+        "a"
+      ],
+      "why": "have is the tricky word."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which sentence tells a colour?",
+      "o": [
+        "It's red.",
+        "It's a ball.",
+        "Is it a car?",
+        "I'm seven."
+      ],
+      "why": "red is a colour."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which question asks about a thing?",
+      "o": [
+        "What's this?",
+        "Who is it?",
+        "How old are you?",
+        "What's your name?"
+      ],
+      "why": "What's this? asks about a thing."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You draw a green kite. Write two sentences.",
+      "o": [
+        "It's a kite. It's green.",
+        "It's a kite. It's a green.",
+        "It's green. It's a car.",
+        "It's an kite. It's green."
+      ],
+      "why": "First the toy, then the colour."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Is it a red car? The picture shows a red car. You write...",
+      "o": [
+        "Yes, it is.",
+        "No, it isn't.",
+        "It's blue.",
+        "It's a ball."
+      ],
+      "why": "The car is red, so Yes, it is."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Add magic e to cak. What word?",
+      "o": [
+        "cake",
+        "cat",
+        "lake",
+        "cap"
+      ],
+      "why": "cak + e = cake."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why does cake say /eɪ/ and cat say /æ/?",
+      "o": [
+        "cake has a magic e",
+        "cat has a magic e",
+        "cake has ai",
+        "cat has two a"
+      ],
+      "why": "The magic e changes the a sound."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which group has only a-e words?",
+      "o": [
+        "game, lake, flame",
+        "game, rain, cake",
+        "snake, cat, lake",
+        "rake, boat, game"
+      ],
+      "why": "game, lake and flame all have a-e."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Is it a purple robot? (a purple robot) Which answer is right?",
+      "o": [
+        "Yes, it is. It's purple.",
+        "No, it isn't. It's purple.",
+        "Yes, it is. It's red.",
+        "No, it isn't. It's a robot."
+      ],
+      "why": "The robot is purple, so Yes and It's purple."
+    }
+  ]
+}

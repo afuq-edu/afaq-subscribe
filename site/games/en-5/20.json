@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 2 – Then and now",
+ "lesson": "Lesson 6: English in action – Asking for information",
+ "outcomes": [
+  "I can ask politely for information: I'd like some information about …, please.",
+  "I can ask and answer about opening times and what you can see and do.",
+  "I can say -ed endings as /ɪd/, /t/ and /d/: visited, looked, cried."
+ ],
+ "tf": [
+  {
+   "s": "Jake wants to visit the National Museum.",
+   "t": true,
+   "why": "Yes! Jake asks about the National Museum."
+  },
+  {
+   "s": "The National Museum is open from 10 am until 5 pm.",
+   "t": true,
+   "why": "Right! It's open Saturday to Thursday, from 10 am until 5 pm."
+  },
+  {
+   "s": "The National Museum is open on Fridays.",
+   "t": false,
+   "why": "It is open Saturday to Thursday."
+  },
+  {
+   "s": "\"I'd like some information about the museum, please.\" is a polite request.",
+   "t": true,
+   "why": "Yes! I'd like … please is polite."
+  },
+  {
+   "s": "\"Visited\" ends with the /t/ sound.",
+   "t": false,
+   "why": "Visited ends with /ɪd/."
+  },
+  {
+   "s": "\"Looked\" ends with the /t/ sound.",
+   "t": true,
+   "why": "Yes! looked /t/."
+  },
+  {
+   "s": "\"Cried\" ends with the /ɪd/ sound.",
+   "t": false,
+   "why": "Cried ends with /d/."
+  },
+  {
+   "s": "\"Needed\" ends with the /ɪd/ sound.",
+   "t": true,
+   "why": "Great! needed /ɪd/."
+  },
+  {
+   "s": "\"What time does it open and close?\" asks about the price.",
+   "t": false,
+   "why": "It asks about opening times."
+  },
+  {
+   "s": "\"What can you see and do there?\" asks about activities in a place.",
+   "t": true,
+   "why": "Yes! It asks what visitors can see and do."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which museum does Jake want to visit?",
+   "o": [
+    "the National Museum",
+    "the Natural History Museum",
+    "the Science Museum"
+   ],
+   "why": "Jake asks about the National Museum."
+  },
+  {
+   "q": "What time does it ___ and close?",
+   "o": [
+    "open",
+    "opens",
+    "opened"
+   ],
+   "why": "does + base verb: open."
+  },
+  {
+   "q": "The National Museum is open ___ Saturday to Thursday.",
+   "o": [
+    "from",
+    "at",
+    "in"
+   ],
+   "why": "from Saturday to Thursday shows the days."
+  },
+  {
+   "q": "I'd ___ some information about the museum, please.",
+   "o": [
+    "like",
+    "liked",
+    "likes"
+   ],
+   "why": "I'd like = I would like."
+  },
+  {
+   "q": "It's open ___ 10 am until 5 pm.",
+   "o": [
+    "from",
+    "at",
+    "to"
+   ],
+   "why": "from … until … shows the times."
+  },
+  {
+   "q": "Which word ends with /ɪd/?",
+   "o": [
+    "visited",
+    "looked",
+    "cried"
+   ],
+   "why": "visited /ɪd/."
+  },
+  {
+   "q": "Which word ends with /t/?",
+   "o": [
+    "looked",
+    "needed",
+    "cried"
+   ],
+   "why": "looked /t/."
+  },
+  {
+   "q": "Which word ends with /d/?",
+   "o": [
+    "cried",
+    "visited",
+    "looked"
+   ],
+   "why": "cried /d/."
+  },
+  {
+   "q": "What can you ___ and do there?",
+   "o": [
+    "see",
+    "sees",
+    "saw"
+   ],
+   "why": "can + base verb."
+  },
+  {
+   "q": "Which is the most polite?",
+   "o": [
+    "I'd like some information, please.",
+    "Give me information.",
+    "Information now!"
+   ],
+   "why": "I'd like … please is polite."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Ending sound of visited",
+   "a": "/ɪd/",
+   "d": [
+    "/t/",
+    "/d/",
+    "/s/"
+   ]
+  },
+  {
+   "q": "Ending sound of looked",
+   "a": "/t/",
+   "d": [
+    "/ɪd/",
+    "/d/",
+    "/s/"
+   ]
+  },
+  {
+   "q": "Ending sound of cried",
+   "a": "/d/",
+   "d": [
+    "/t/",
+    "/ɪd/",
+    "/s/"
+   ]
+  },
+  {
+   "q": "Ending sound of needed",
+   "a": "/ɪd/",
+   "d": [
+    "/d/",
+    "/t/",
+    "/z/"
+   ]
+  },
+  {
+   "q": "Ending sound of played",
+   "a": "/d/",
+   "d": [
+    "/ɪd/",
+    "/t/",
+    "/z/"
+   ]
+  },
+  {
+   "q": "Ending sound of wanted",
+   "a": "/ɪd/",
+   "d": [
+    "/t/",
+    "/d/",
+    "/z/"
+   ]
+  },
+  {
+   "q": "Ending sound of walked",
+   "a": "/t/",
+   "d": [
+    "/d/",
+    "/ɪd/",
+    "/z/"
+   ]
+  },
+  {
+   "q": "The museum opens at ___.",
+   "a": "10 am",
+   "d": [
+    "5 pm",
+    "8 pm",
+    "6 am"
+   ]
+  },
+  {
+   "q": "The museum closes at ___.",
+   "a": "5 pm",
+   "d": [
+    "10 am",
+    "9 pm",
+    "1 pm"
+   ]
+  },
+  {
+   "q": "Jake's museum",
+   "a": "National Museum",
+   "d": [
+    "Science Museum",
+    "Toy Museum",
+    "Space Museum"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which phrase asks about times?",
+   "o": [
+    "What time does it open and close?",
+    "What can you see and do there?",
+    "I'd like some information.",
+    "Who's that boy?"
+   ],
+   "why": "What time … asks about times."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When is the National Museum open?",
+   "o": [
+    "Saturday to Thursday, from 10 am until 5 pm",
+    "Every day, from 8 am until 8 pm",
+    "Friday only, from 10 am until 5 pm",
+    "Sunday to Friday, from 9 am until 3 pm"
+   ],
+   "why": "That's what the dialogue says."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the three -ed sounds in this lesson?",
+   "o": [
+    "/ɪd/, /t/, /d/",
+    "/s/, /z/, /ɪz/",
+    "/eə/, /eɪ/, /ɪ/",
+    "/a/, /e/, /o/"
+   ],
+   "why": "visited /ɪd/, looked /t/, cried /d/."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence starts a polite request for information?",
+   "o": [
+    "I'd like some information about …, please.",
+    "Tell me now.",
+    "You give information.",
+    "What's he like?"
+   ],
+   "why": "I'd like … please is polite."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ask politely for information about the Science Museum.",
+   "o": [
+    "I'd like some information about the Science Museum, please.",
+    "I like information Science Museum.",
+    "Give me the Science Museum.",
+    "I'd liked some information about the Science Museum."
+   ],
+   "why": "I'd like some information about …, please."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A museum opens at 9 am and closes at 4 pm. Which answer is correct?",
+   "o": [
+    "It's open from 9 am until 4 pm.",
+    "It's open from 4 pm until 9 am.",
+    "It's open at 9 am until.",
+    "It's open from 9 pm until 4 am."
+   ],
+   "why": "from (open time) until (close time)."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Sort: looked, cried, needed → /t/, /d/, /ɪd/.",
+   "o": [
+    "looked /t/, cried /d/, needed /ɪd/",
+    "looked /d/, cried /t/, needed /ɪd/",
+    "looked /ɪd/, cried /d/, needed /t/",
+    "looked /t/, cried /ɪd/, needed /d/"
+   ],
+   "why": "These match the three -ed sounds."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does \"visited\" end with /ɪd/?",
+   "o": [
+    "The verb ends in a t sound, so we add an extra sound.",
+    "All -ed verbs end with /ɪd/.",
+    "Visit is irregular.",
+    "Because it is a question."
+   ],
+   "why": "Verbs ending in t or d take /ɪd/: visited, needed."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A visitor asks \"What can you see and do there?\" Which answer fits best?",
+   "o": [
+    "You can see old tools and learn about history.",
+    "It's open from 10 am.",
+    "It's on Saturday.",
+    "I'd like some information."
+   ],
+   "why": "The question asks about activities, not times."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which -ed word does NOT have the same ending sound as the others?",
+   "o": [
+    "needed",
+    "looked",
+    "walked",
+    "helped"
+   ],
+   "why": "Needed is /ɪd/; the others are /t/."
+  }
+ ]
+}

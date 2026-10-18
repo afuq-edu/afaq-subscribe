@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الأول",
+  "unit": "Unit 2: My school bag",
+  "lesson": "Lesson 1: School things – I've got … + Sound i",
+  "outcomes": [
+    "I can say bag, pen, eraser and ruler.",
+    "I can say It's a … and I've got a/an …",
+    "I can say the sound /ɪ/ and read sit, pin and tin."
+  ],
+  "tf": [
+    {"s": "We say an eraser.", "t": true, "why": "Yes! Eraser starts with e, so we say an."},
+    {"s": "We say an pen.", "t": false, "why": "We say a pen."},
+    {"s": "We use a ruler to draw straight lines.", "t": true, "why": "Yes! A ruler helps us draw lines."},
+    {"s": "Insect starts with the sound /ɪ/.", "t": true, "why": "Great! i, i, insect."},
+    {"s": "Igloo starts with the letter a.", "t": false, "why": "Igloo starts with i."},
+    {"s": "s – i – t makes sit.", "t": true, "why": "Well done! s-i-t, sit."},
+    {"s": "t – i – n makes pin.", "t": false, "why": "t-i-n makes tin."},
+    {"s": "In the story, Meg has got Fatma's bag.", "t": true, "why": "Yes! Meg the cat has got the bag."},
+    {"s": "A bag is a family word.", "t": false, "why": "A bag is a school thing."},
+    {"s": "Ink starts with /t/.", "t": false, "why": "Ink starts with /ɪ/."}
+  ],
+  "boxes": [
+    {"q": "What is it? (a pen)", "o": ["It's a pen.", "It's a bag.", "It's a ruler."], "why": "It's a pen."},
+    {"q": "I've got … eraser.", "o": ["an", "a", "my a"], "why": "We say an eraser."},
+    {"q": "I've got … ruler.", "o": ["a", "an", "the an"], "why": "We say a ruler."},
+    {"q": "We put our books in a …", "o": ["bag", "pen", "eraser"], "why": "Books go in a school bag."},
+    {"q": "Which word starts with /ɪ/?", "o": ["igloo", "apple", "sun"], "why": "i, i, igloo!"},
+    {"q": "_nk: which letter is missing?", "o": ["i", "a", "s"], "why": "i + nk = ink."},
+    {"q": "The /ɪ/ Phonics Card shows an …", "o": ["insect", "apple", "eraser"], "why": "Insect starts with /ɪ/."},
+    {"q": "Blend: p – i – n", "o": ["pin", "tin", "sit"], "why": "p-i-n, pin!"},
+    {"q": "Blend: t – i – n", "o": ["tin", "pin", "tap"], "why": "t-i-n, tin!"},
+    {"q": "Fatma: I'm ready for school. I've got a …", "o": ["pen", "cat", "brother"], "why": "A pen is a school thing."}
+  ],
+  "hunt": [
+    {"q": "Catch the school thing for writing.", "a": "pen", "d": ["bag", "ruler", "eraser"]},
+    {"q": "Catch the school thing for lines.", "a": "ruler", "d": ["pen", "bag", "eraser"]},
+    {"q": "Catch the school thing that cleans mistakes.", "a": "eraser", "d": ["ruler", "pen", "bag"]},
+    {"q": "Catch the school thing for books.", "a": "bag", "d": ["eraser", "pen", "ruler"]},
+    {"q": "Catch the /ɪ/ word.", "a": "insect", "d": ["apple", "teddy", "snake"]},
+    {"q": "Catch the /ɪ/ ice house.", "a": "igloo", "d": ["nest", "tree", "pot"]},
+    {"q": "Catch another /ɪ/ word.", "a": "ink", "d": ["ant", "nut", "sun"]},
+    {"q": "Catch the letter for /ɪ/.", "a": "i", "d": ["a", "s", "n"]},
+    {"q": "Blend: s – i – t", "a": "sit", "d": ["sat", "tin", "pin"]},
+    {"q": "Catch the right one: I've got …", "a": "an eraser", "d": ["an pen", "an bag", "an ruler"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which one is a school thing?", "o": ["ruler", "mum", "cat", "sister"], "why": "A ruler is a school thing."},
+    {"lv": "التذكر", "q": "Which letter makes the sound /ɪ/?", "o": ["i", "a", "t", "n"], "why": "The letter i says /ɪ/."},
+    {"lv": "التذكر", "q": "Which of these words starts with /ɪ/?", "o": ["in", "an", "on", "sun"], "why": "i, i, in!"},
+    {"lv": "التذكر", "q": "Who has got Fatma's school bag?", "o": ["Meg", "Mum", "Sami", "Tom"], "why": "Meg the cat has got it."},
+    {"lv": "التطبيق", "q": "Your teacher holds up an eraser: What is it? You say …", "o": ["It's an eraser.", "It's a eraser.", "It's a pen.", "I'm an eraser."], "why": "We say It's an eraser."},
+    {"lv": "التطبيق", "q": "You have a pen and a ruler. You say …", "o": ["I've got a pen and a ruler.", "I've got an pen.", "This is my mum.", "It's a bag."], "why": "I've got … tells what you have."},
+    {"lv": "التطبيق", "q": "Teacher: Show me a ruler. What do you hold up?", "o": ["a ruler", "a pen", "a bag", "an eraser"], "why": "Hold up the ruler."},
+    {"lv": "التحليل", "q": "Why do we say an eraser but a pen?", "o": ["Eraser starts with the sound /e/.", "Eraser is small.", "Pen is a long word.", "Pen starts with e."], "why": "We use an before sounds like e, a, i."},
+    {"lv": "التحليل", "q": "Which word does not belong: bag, pen, ruler, sister?", "o": ["sister", "bag", "pen", "ruler"], "why": "Sister is a family word."},
+    {"lv": "التحليل", "q": "Sit, pin, tin. What sound is in the middle?", "o": ["/ɪ/", "/æ/", "/s/", "/p/"], "why": "They all have i in the middle."}
+  ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "3",
+ "lesson": "Unit 3: Renewable Energy – Reading and Understanding",
+ "outcomes": [
+  "Identify the purpose and style of an email.",
+  "Find facts about renewable energy in an infographic and texts.",
+  "Recognise compound nouns like 'solar power'."
+ ],
+ "tf": [
+  {
+   "s": "'Dear Mr Brown' is a formal greeting.",
+   "t": true,
+   "why": "Yes, 'Dear' plus a title and surname is formal."
+  },
+  {
+   "s": "An email that starts with 'Hi' and ends with 'Take care' is formal.",
+   "t": false,
+   "why": "'Hi' and 'Take care' are friendly, informal words."
+  },
+  {
+   "s": "'Kind regards' is a closing for a formal email.",
+   "t": true,
+   "why": "Correct, it is a polite way to end a formal email."
+  },
+  {
+   "s": "An infographic shows information with pictures and short text.",
+   "t": true,
+   "why": "Right, it is a visual way to share facts."
+  },
+  {
+   "s": "A hydroelectric dam uses the sun to generate electricity.",
+   "t": false,
+   "why": "A hydroelectric dam uses water."
+  },
+  {
+   "s": "'Solar power' is a compound noun.",
+   "t": true,
+   "why": "Well done, two words together make one noun."
+  },
+  {
+   "s": "Wind farms contain turbines that generate electricity.",
+   "t": true,
+   "why": "Yes, many turbines together make a wind farm."
+  },
+  {
+   "s": "'I am writing to request some information.' shows the purpose is an invitation.",
+   "t": false,
+   "why": "The word 'request' tells us the purpose is asking for information."
+  },
+  {
+   "s": "The capacity of a power project is often measured in megawatts.",
+   "t": true,
+   "why": "Correct, megawatts show how much power it can produce."
+  },
+  {
+   "s": "Geothermal power uses the wind to make steam.",
+   "t": false,
+   "why": "Geothermal power uses natural heat and steam in the ground."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which greeting is formal?",
+   "o": [
+    "Dear Mr Brown",
+    "Hi Sam",
+    "Hey there"
+   ],
+   "why": "Formal emails use 'Dear' with a title."
+  },
+  {
+   "q": "Which closing is formal?",
+   "o": [
+    "Kind regards",
+    "See you",
+    "Take care"
+   ],
+   "why": "'Kind regards' is polite and formal."
+  },
+  {
+   "q": "Which word is a compound noun?",
+   "o": [
+    "wind power",
+    "quickly",
+    "beautiful"
+   ],
+   "why": "'Wind' + 'power' makes one noun."
+  },
+  {
+   "q": "Which project uses wind turbines?",
+   "o": [
+    "a wind farm",
+    "a dam",
+    "a solar plant"
+   ],
+   "why": "Wind farms are full of turbines."
+  },
+  {
+   "q": "Capacity is measured in…",
+   "o": [
+    "megawatts",
+    "kilometres",
+    "minutes"
+   ],
+   "why": "Megawatts measure power."
+  },
+  {
+   "q": "A hydroelectric dam uses…",
+   "o": [
+    "water",
+    "sunlight",
+    "coal"
+   ],
+   "why": "'Hydro' means water."
+  },
+  {
+   "q": "Unscramble: RAOSL",
+   "o": [
+    "solar",
+    "roads",
+    "oral"
+   ],
+   "why": "R-A-O-S-L makes 'solar'."
+  },
+  {
+   "q": "An email that invites someone has the purpose of…",
+   "o": [
+    "invitation",
+    "complaint",
+    "apology"
+   ],
+   "why": "Inviting someone is an invitation."
+  },
+  {
+   "q": "What is an infographic?",
+   "o": [
+    "a visual with pictures and short text",
+    "a long story",
+    "a phone call"
+   ],
+   "why": "Infographics show facts visually."
+  },
+  {
+   "q": "Geothermal power uses heat from…",
+   "o": [
+    "the ground",
+    "the sky",
+    "the sea"
+   ],
+   "why": "'Geo' means earth."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Formal greeting",
+   "a": "Dear Mr Brown",
+   "d": [
+    "Hi Sam",
+    "Hey you",
+    "Hello mate"
+   ]
+  },
+  {
+   "q": "Formal closing",
+   "a": "Kind regards",
+   "d": [
+    "Take care",
+    "See you",
+    "Bye for now"
+   ]
+  },
+  {
+   "q": "Visual with pictures and facts",
+   "a": "infographic",
+   "d": [
+    "email",
+    "letter",
+    "novel"
+   ]
+  },
+  {
+   "q": "Project with many turbines",
+   "a": "wind farm",
+   "d": [
+    "solar plant",
+    "dam",
+    "oil well"
+   ]
+  },
+  {
+   "q": "Uses water to make power",
+   "a": "hydroelectric dam",
+   "d": [
+    "wind farm",
+    "solar plant",
+    "coal mine"
+   ]
+  },
+  {
+   "q": "Unit of power capacity",
+   "a": "megawatt",
+   "d": [
+    "kilometre",
+    "kilogram",
+    "litre"
+   ]
+  },
+  {
+   "q": "Unscramble: RAOSL",
+   "a": "solar",
+   "d": [
+    "roast",
+    "oral",
+    "loads"
+   ]
+  },
+  {
+   "q": "Compound noun",
+   "a": "solar power",
+   "d": [
+    "quickly",
+    "beautiful",
+    "very"
+   ]
+  },
+  {
+   "q": "Purpose of 'Please come to…'",
+   "a": "invitation",
+   "d": [
+    "complaint",
+    "apology",
+    "request"
+   ]
+  },
+  {
+   "q": "Power from heat in the ground",
+   "a": "geothermal",
+   "d": [
+    "hydro",
+    "solar",
+    "wind"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What are the main parts of an email?",
+   "o": [
+    "greeting, message, closing",
+    "title, chapter, index",
+    "map, key, scale",
+    "question, answer, score"
+   ],
+   "why": "Every email needs a greeting and a closing around the message."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does a solar power plant do?",
+   "o": [
+    "It converts sunlight into electricity.",
+    "It stores water behind a wall.",
+    "It burns oil.",
+    "It uses steam from volcanoes only."
+   ],
+   "why": "Solar plants turn sunlight into electricity."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is formal language?",
+   "o": [
+    "I am writing to request some information.",
+    "Hi! What's up?",
+    "See you soon!",
+    "Take care, mate."
+   ],
+   "why": "Formal emails use full, polite sentences."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a compound noun?",
+   "o": [
+    "two words that make one noun",
+    "a verb that ends in -ing",
+    "a word that describes a verb",
+    "a short question"
+   ],
+   "why": "Examples are 'wind power' and 'renewable energy'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "An email ends with 'Take care, see you soon!'. What style is it?",
+   "o": [
+    "informal",
+    "formal",
+    "scientific",
+    "official"
+   ],
+   "why": "These friendly words show an informal style."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete the fact: ______ energy comes from sources that do not run out.",
+   "o": [
+    "Renewable",
+    "Fossil",
+    "Limited",
+    "Non-renewable"
+   ],
+   "why": "Renewable sources like the sun keep going."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to find the capacity of a wind farm in the text. What should you look for?",
+   "o": [
+    "a number in megawatts",
+    "the name of the writer",
+    "the greeting",
+    "a picture of the sea"
+   ],
+   "why": "Capacity is given as a number of megawatts."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are infographics useful for sharing facts?",
+   "o": [
+    "They present information visually and briefly.",
+    "They are always very long.",
+    "They have no pictures.",
+    "They only tell stories."
+   ],
+   "why": "Pictures and short text make facts easy to see."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does an email need a clear purpose?",
+   "o": [
+    "So the reader understands what is needed and replies quickly.",
+    "So the email is longer.",
+    "So the reader cannot reply.",
+    "So we do not need a greeting."
+   ],
+   "why": "A clear purpose helps the reader act."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Hydropower' is made of 'hydro' + 'power'. What does it tell you?",
+   "o": [
+    "It is power from water.",
+    "It is power from the sun.",
+    "It is power from coal.",
+    "It is power from the wind."
+   ],
+   "why": "'Hydro' means water, so hydropower uses water."
+  }
+ ]
+}

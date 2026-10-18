@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 2: Where’s my pen?",
+  "lesson": "Sounds and Spelling – Unit 2, Lesson 1: or",
+  "outcomes": [
+    "I can say the sound /ɔː/ for or and read fork, corn and storm.",
+    "I can read the tricky word our.",
+    "I can follow the story The computer and say why we are tidy."
+  ],
+  "tf": [
+    {
+      "s": "The letters or in fork say /ɔː/.",
+      "t": true,
+      "why": "Yes! or says /ɔː/ like in fork."
+    },
+    {
+      "s": "c - or - n makes the word corn.",
+      "t": true,
+      "why": "Great! c - or - n is corn."
+    },
+    {
+      "s": "The word boat has or in it.",
+      "t": false,
+      "why": "boat has oa. fork has or."
+    },
+    {
+      "s": "We use our for me and my friends.",
+      "t": true,
+      "why": "Yes! It is our game means it belongs to us."
+    },
+    {
+      "s": "In the story, Lily's project is a computer.",
+      "t": true,
+      "why": "Well done! Lily makes a computer."
+    },
+    {
+      "s": "In the story, the pen is on the bag.",
+      "t": false,
+      "why": "The pen is under the desk."
+    },
+    {
+      "s": "Atomic is under the table.",
+      "t": true,
+      "why": "Yes! Atomic is under the table."
+    },
+    {
+      "s": "What a mess! means the room is tidy.",
+      "t": false,
+      "why": "What a mess! means the room is untidy."
+    },
+    {
+      "s": "t - or - ch makes the word torch.",
+      "t": true,
+      "why": "Yes! t - or - ch is torch."
+    },
+    {
+      "s": "Being tidy is not important.",
+      "t": false,
+      "why": "Being tidy helps us find our things."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Blend: f - or - k",
+      "o": [
+        "fork",
+        "corn",
+        "torch"
+      ],
+      "why": "f - or - k makes fork."
+    },
+    {
+      "q": "c _ _ n: which letters are missing?",
+      "o": [
+        "or",
+        "oa",
+        "ai"
+      ],
+      "why": "c - or - n is corn."
+    },
+    {
+      "q": "Which word has or?",
+      "o": [
+        "torch",
+        "train",
+        "tie"
+      ],
+      "why": "t - or - ch has or."
+    },
+    {
+      "q": "It is ... game. (we)",
+      "o": [
+        "our",
+        "his",
+        "her"
+      ],
+      "why": "our is for we."
+    },
+    {
+      "q": "What is Lily's project?",
+      "o": [
+        "a computer",
+        "a kite",
+        "a cake"
+      ],
+      "why": "Lily's project is a computer."
+    },
+    {
+      "q": "Where's the pen?",
+      "o": [
+        "under the desk",
+        "in the bag",
+        "on the lake"
+      ],
+      "why": "It's under the desk."
+    },
+    {
+      "q": "Who makes the room untidy?",
+      "o": [
+        "Polly",
+        "Lily",
+        "Atomic"
+      ],
+      "why": "Polly makes a mess."
+    },
+    {
+      "q": "What a mess! Let's ...",
+      "o": [
+        "tidy up",
+        "sit down",
+        "go home"
+      ],
+      "why": "Let's tidy up."
+    },
+    {
+      "q": "The value of the story is...",
+      "o": [
+        "Be tidy",
+        "Be fast",
+        "Be loud"
+      ],
+      "why": "The story shows us to be tidy."
+    },
+    {
+      "q": "What sound does or make?",
+      "o": [
+        "/ɔː/",
+        "/əʊ/",
+        "/aɪ/"
+      ],
+      "why": "or says /ɔː/."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Blend: c - or - n",
+      "a": "corn",
+      "d": [
+        "fork",
+        "torch",
+        "sport"
+      ]
+    },
+    {
+      "q": "Blend: st - or - m",
+      "a": "storm",
+      "d": [
+        "sport",
+        "corn",
+        "fork"
+      ]
+    },
+    {
+      "q": "Blend: t - or - ch",
+      "a": "torch",
+      "d": [
+        "north",
+        "storm",
+        "fork"
+      ]
+    },
+    {
+      "q": "We eat with a ...",
+      "a": "fork",
+      "d": [
+        "storm",
+        "north",
+        "torch"
+      ]
+    },
+    {
+      "q": "Find the or word.",
+      "a": "sport",
+      "d": [
+        "soap",
+        "sail",
+        "tie"
+      ]
+    },
+    {
+      "q": "We: It is ... torch.",
+      "a": "our",
+      "d": [
+        "his",
+        "her",
+        "who"
+      ]
+    },
+    {
+      "q": "Lily's project",
+      "a": "computer",
+      "d": [
+        "kite",
+        "cake",
+        "boat"
+      ]
+    },
+    {
+      "q": "Where's my pen? It's ...",
+      "a": "under the desk",
+      "d": [
+        "in the box",
+        "on the bag",
+        "at the lake"
+      ]
+    },
+    {
+      "q": "Polly makes the room ...",
+      "a": "untidy",
+      "d": [
+        "tidy",
+        "clean",
+        "new"
+      ]
+    },
+    {
+      "q": "The value: Be ...",
+      "a": "tidy",
+      "d": [
+        "messy",
+        "late",
+        "loud"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which word has the or sound?",
+      "o": [
+        "north",
+        "nail",
+        "night",
+        "nest"
+      ],
+      "why": "n - or - th has or."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which is the tricky word in this lesson?",
+      "o": [
+        "our",
+        "who",
+        "have",
+        "his"
+      ],
+      "why": "We learn our."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Where's Atomic?",
+      "o": [
+        "She's under the table.",
+        "She's in the bag.",
+        "She's on the computer.",
+        "She's at the lake."
+      ],
+      "why": "Atomic is under the table."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What do they say when the room is untidy?",
+      "o": [
+        "What a mess!",
+        "Happy birthday!",
+        "Yes, of course.",
+        "Goodbye!"
+      ],
+      "why": "What a mess! is for an untidy room."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Look at a picture of corn. Write the word.",
+      "o": [
+        "corn",
+        "coan",
+        "cron",
+        "kon"
+      ],
+      "why": "c - or - n spells corn."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You and your friends have a ball. You say...",
+      "o": [
+        "It is our ball.",
+        "It is his ball.",
+        "It is her ball.",
+        "It is who ball."
+      ],
+      "why": "our is for me and my friends."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your room is a mess. What do you say?",
+      "o": [
+        "Let's tidy up.",
+        "It's a computer.",
+        "I'm seven.",
+        "Can I play?"
+      ],
+      "why": "We tidy up a messy room."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why do they say What a mess!?",
+      "o": [
+        "Polly makes the room untidy",
+        "The room is tidy",
+        "It's Lily's birthday",
+        "They are at the lake"
+      ],
+      "why": "Polly makes a mess in the room."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why is it good to be tidy?",
+      "o": [
+        "We can find our things",
+        "We lose our pens",
+        "Our room looks bad",
+        "We can't play"
+      ],
+      "why": "A tidy room helps us find things."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which group has only or words?",
+      "o": [
+        "fork, corn, storm",
+        "fork, boat, corn",
+        "torch, tie, sport",
+        "north, rain, storm"
+      ],
+      "why": "fork, corn and storm all have or."
+    }
+  ]
+}

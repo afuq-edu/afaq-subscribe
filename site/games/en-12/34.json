@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: A Helping Hand (Listening & Speaking)",
+ "lesson": "Interviewing about future plans and the poem ‘Goodbye, School’",
+ "outcomes": [
+  "Interview a classmate about future plans with full answers",
+  "Read and discuss a poem about leaving school",
+  "Share your own feelings about leaving school"
+ ],
+ "tf": [
+  {
+   "s": "In an interview, you should answer only 'yes' or 'no'.",
+   "t": false,
+   "why": "Add details and reasons to your answers."
+  },
+  {
+   "s": "Giving details keeps the conversation going.",
+   "t": true,
+   "why": "More information gives your partner more to ask about."
+  },
+  {
+   "s": "The poet has mixed emotions about leaving school.",
+   "t": true,
+   "why": "The poet feels hope and affection at the same time."
+  },
+  {
+   "s": "In the poem, 'patience' refers to the patience of teachers.",
+   "t": true,
+   "why": "The teachers patiently helped with learning."
+  },
+  {
+   "s": "The poet only feels sad and has no hope for the future.",
+   "t": false,
+   "why": "The poet also feels hope for the future."
+  },
+  {
+   "s": "The poet will remember close friends and the help of teachers.",
+   "t": true,
+   "why": "These are happy school memories."
+  },
+  {
+   "s": "The two lines students write about leaving school must rhyme.",
+   "t": false,
+   "why": "They do not need to rhyme."
+  },
+  {
+   "s": "'Prospects' are your chances of success in the future.",
+   "t": true,
+   "why": "Good prospects mean a hopeful future."
+  },
+  {
+   "s": "An 'achievement' is something you have done successfully.",
+   "t": true,
+   "why": "Passing a hard exam is an achievement."
+  },
+  {
+   "s": "Ambitions are things you want to forget.",
+   "t": false,
+   "why": "Ambitions are goals you hope to achieve."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What should you add to 'yes' or 'no' in an interview?",
+   "o": [
+    "details and reasons",
+    "nothing",
+    "a new question only"
+   ],
+   "why": "Details make your answer interesting."
+  },
+  {
+   "q": "Which is one of the interview question headings?",
+   "o": [
+    "university",
+    "weather",
+    "breakfast"
+   ],
+   "why": "The headings were job, university, travel and ambitions."
+  },
+  {
+   "q": "What does the poet feel about leaving school?",
+   "o": [
+    "mixed emotions",
+    "only anger",
+    "nothing"
+   ],
+   "why": "Leaving school brings different feelings."
+  },
+  {
+   "q": "Whose patience does the poem mention?",
+   "o": [
+    "the teachers'",
+    "the tourists'",
+    "the drivers'"
+   ],
+   "why": "Teachers helped the poet learn."
+  },
+  {
+   "q": "What does 'achievement' mean?",
+   "o": [
+    "something done successfully",
+    "a mistake",
+    "a holiday"
+   ],
+   "why": "An achievement is a success."
+  },
+  {
+   "q": "Who will the poet remember?",
+   "o": [
+    "close friends",
+    "strangers on the bus",
+    "famous actors"
+   ],
+   "why": "Friends are a big part of school life."
+  },
+  {
+   "q": "What does 'prospects' mean?",
+   "o": [
+    "chances of future success",
+    "old memories",
+    "school rules"
+   ],
+   "why": "Prospects are about the future."
+  },
+  {
+   "q": "Which is the best answer to 'Do you want to go to university?'",
+   "o": [
+    "Yes, I want to study IT because I enjoy computers.",
+    "Yes.",
+    "No."
+   ],
+   "why": "It gives a reason and more information."
+  },
+  {
+   "q": "How many lines do students write about leaving school?",
+   "o": [
+    "two",
+    "ten",
+    "twenty"
+   ],
+   "why": "A short poem of two lines."
+  },
+  {
+   "q": "What is an 'ambition'?",
+   "o": [
+    "a strong wish to achieve something",
+    "a type of poem",
+    "a school subject"
+   ],
+   "why": "Your ambition is your big goal."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Chances of future success",
+   "a": "prospects",
+   "d": [
+    "patience",
+    "emotions",
+    "deadlines"
+   ]
+  },
+  {
+   "q": "Something done successfully",
+   "a": "achievement",
+   "d": [
+    "ambition",
+    "prospect",
+    "patience"
+   ]
+  },
+  {
+   "q": "Staying calm while you wait or help",
+   "a": "patience",
+   "d": [
+    "anxiety",
+    "ambition",
+    "prospects"
+   ]
+  },
+  {
+   "q": "A strong wish for the future",
+   "a": "ambition",
+   "d": [
+    "patience",
+    "emotion",
+    "homesickness"
+   ]
+  },
+  {
+   "q": "Whose patience is in the poem?",
+   "a": "teachers'",
+   "d": [
+    "pilots'",
+    "tourists'",
+    "chefs'"
+   ]
+  },
+  {
+   "q": "The poem's title",
+   "a": "Goodbye, School",
+   "d": [
+    "Hello, School",
+    "Back to School",
+    "School Days"
+   ]
+  },
+  {
+   "q": "Lines to write about leaving school",
+   "a": "two",
+   "d": [
+    "ten",
+    "five",
+    "twenty"
+   ]
+  },
+  {
+   "q": "The poet's feelings",
+   "a": "mixed emotions",
+   "d": [
+    "only anger",
+    "only boredom",
+    "no feelings"
+   ]
+  },
+  {
+   "q": "An interview heading",
+   "a": "ambitions",
+   "d": [
+    "recipes",
+    "weather",
+    "football"
+   ]
+  },
+  {
+   "q": "The poet remembers close ...",
+   "a": "friends",
+   "d": [
+    "enemies",
+    "shops",
+    "roads"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why shouldn't you answer only 'yes' or 'no' in an interview?",
+   "o": [
+    "To give more information and keep the conversation going",
+    "To finish faster",
+    "Because talking is rude",
+    "To confuse your partner"
+   ],
+   "why": "Full answers make a better interview."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which four headings were used for the interview questions?",
+   "o": [
+    "Job, university, travel, ambitions",
+    "Food, colours, pets, films",
+    "Weather, shopping, games, music",
+    "Family, sport, cars, holidays"
+   ],
+   "why": "These headings are about future plans."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'patience' refer to in the poem?",
+   "o": [
+    "The patience of teachers who helped with learning",
+    "The patience of bus drivers",
+    "Waiting for lunch",
+    "A type of medicine"
+   ],
+   "why": "The poet is thankful to the teachers."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two feelings does the poet have?",
+   "o": [
+    "Hope for the future and affection for school",
+    "Anger and boredom",
+    "Fear and hate",
+    "No feelings at all"
+   ],
+   "why": "Leaving school brings mixed emotions."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner asks: 'Do you want to travel?' Which answer is best?",
+   "o": [
+    "Yes, I'd like to visit Japan to see its technology.",
+    "Yes.",
+    "No.",
+    "Maybe."
+   ],
+   "why": "It gives a place and a reason."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which question would you ask about ambitions?",
+   "o": [
+    "What do you hope to achieve in the future?",
+    "What did you eat today?",
+    "What time is it?",
+    "Where is your pen?"
+   ],
+   "why": "Ambitions are about future goals."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: 'Getting a scholarship was a great ___ for her.'",
+   "o": [
+    "achievement",
+    "patience",
+    "prospect",
+    "emotion"
+   ],
+   "why": "Getting a scholarship is a success."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might the poet feel both sad and hopeful?",
+   "o": [
+    "Leaving means saying goodbye to friends but starting a new future",
+    "The poet hates school",
+    "Nothing will change",
+    "The poet failed school"
+   ],
+   "why": "An ending is also a new beginning."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might the poet thank teachers for their patience?",
+   "o": [
+    "They helped calmly with learning over many years",
+    "They were always angry",
+    "They never taught",
+    "They left the school"
+   ],
+   "why": "Patient teachers make a big difference."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which interview answer gives the most useful information?",
+   "o": [
+    "I want to be an engineer because I love designing things.",
+    "I want a job.",
+    "Engineer.",
+    "I don't know."
+   ],
+   "why": "It gives a plan and a reason."
+  }
+ ]
+}

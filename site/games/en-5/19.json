@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الخامس",
+  "unit": "Unit 2 – Then and now",
+  "lesson": "Lesson 5: Culture – World museums",
+  "outcomes": [
+    "I can say what visitors can see and do in three world museums.",
+    "I can choose a museum to visit and give a reason with because.",
+    "I can write and present a guide to a museum in Oman."
+  ],
+  "tf": [
+    {"s": "The Natural History Museum is in London.", "t": true, "why": "Yes! It is in London, England."},
+    {"s": "The Oman Across the Ages Museum is in Muscat.", "t": false, "why": "It is in the Wilayat of Manah."},
+    {"s": "You can learn about robot design at the Shanghai Museum of Science and Technology.", "t": true, "why": "Right! It is a science and technology museum."},
+    {"s": "In one room of the Natural History Museum, the floor shakes.", "t": true, "why": "Yes! It shows what an earthquake feels like."},
+    {"s": "Bait Al Zubair is in a modern building.", "t": false, "why": "Bait Al Zubair is in a traditional building."},
+    {"s": "Bait Al Zubair is in the city of Muscat.", "t": true, "why": "Yes! The model guide says it's in Muscat."},
+    {"s": "The speaking tip for the project is: speak quietly and fast.", "t": false, "why": "The tip is: speak loudly and clearly."},
+    {"s": "You can see ancient tools at the Oman Across the Ages Museum.", "t": true, "why": "Yes! Ancient tools, old photographs and model boats."},
+    {"s": "An earthquake is a mountain with fire inside.", "t": false, "why": "That's a volcano. An earthquake is when the ground shakes."},
+    {"s": "\"I want to visit … because …\" gives a reason for your choice.", "t": true, "why": "Great! Because gives the reason."}
+  ],
+  "boxes": [
+    {"q": "Where is the Natural History Museum?", "o": ["in London", "in Shanghai", "in Manah"], "why": "It is in London, England."},
+    {"q": "Where is the Oman Across the Ages Museum?", "o": ["in the Wilayat of Manah", "in London", "in Shanghai"], "why": "It is in Manah, Oman."},
+    {"q": "In which museum can you learn about robot design?", "o": ["Shanghai Museum of Science and Technology", "Natural History Museum", "Bait Al Zubair"], "why": "Robots are science and technology."},
+    {"q": "Why does the floor shake in one room?", "o": ["to show what an earthquake feels like", "because the building is old", "to wake visitors up"], "why": "It helps visitors feel an earthquake safely."},
+    {"q": "Bait Al Zubair is in the city of ___.", "o": ["Muscat", "Manah", "London"], "why": "The model guide says Muscat."},
+    {"q": "Is Bait Al Zubair in a modern or a traditional building?", "o": ["a traditional building", "a modern building", "a tent"], "why": "It is a traditional building."},
+    {"q": "Which tip helps the class hear you?", "o": ["Speak loudly and clearly.", "Speak very quietly.", "Look at the floor."], "why": "Loud and clear speech is easy to hear."},
+    {"q": "Choose the guide phrase.", "o": ["In the museum, you can see …", "On Mondays, I …", "I'm good at …"], "why": "This phrase tells visitors what they can see."},
+    {"q": "New things that people make for the first time are ___.", "o": ["inventions", "volcanoes", "earthquakes"], "why": "Inventions are new ideas and machines."},
+    {"q": "Which can you see in the Oman Across the Ages Museum?", "o": ["model boats", "a T-Rex", "a shaking floor"], "why": "It has ancient tools, old photos, paintings and model boats."}
+  ],
+  "hunt": [
+    {"q": "City of the Natural History Museum", "a": "London", "d": ["Shanghai", "Muscat", "Manah"]},
+    {"q": "Wilayat of Oman Across the Ages", "a": "Manah", "d": ["Muscat", "London", "Shanghai"]},
+    {"q": "City of Bait Al Zubair", "a": "Muscat", "d": ["Manah", "London", "Shanghai"]},
+    {"q": "City of the robot design museum", "a": "Shanghai", "d": ["London", "Muscat", "Manah"]},
+    {"q": "The ground shakes", "a": "earthquake", "d": ["volcano", "invention", "museum"]},
+    {"q": "Mountain with fire inside", "a": "volcano", "d": ["earthquake", "tool", "museum"]},
+    {"q": "Very old tools", "a": "ancient tools", "d": ["new phones", "modern cars", "tablets"]},
+    {"q": "Bait Al Zubair building", "a": "traditional", "d": ["modern", "glass", "small"]},
+    {"q": "Speak loudly and ___.", "a": "clearly", "d": ["quietly", "fast", "badly"]},
+    {"q": "To look around and discover", "a": "explore", "d": ["post", "carry", "shake"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which three museums do we read about?", "o": ["Oman Across the Ages, Shanghai Museum of Science and Technology, Natural History Museum", "Bait Al Zubair, the Louvre, the British Museum", "The Technology Museum, the Space Museum, the Toy Museum", "The Science Fair, the Talent Show, the Corner Shop"], "why": "These are the three museums in the reading."},
+    {"lv": "التذكر", "q": "Which words are from this lesson?", "o": ["ancient tools, inventions, explore, volcano", "keyboard, mouse, tablet, CD player", "kind, shy, polite, rude", "juggle, karate, stage, banana"], "why": "These are the museum words."},
+    {"lv": "التذكر", "q": "Which sentence starts a museum guide?", "o": ["The … museum is in the city of …", "Yesterday I went …", "I'm great at …", "Who's that boy over there?"], "why": "A guide starts with the museum and its city."},
+    {"lv": "التذكر", "q": "Name two things you can see at the Oman Across the Ages Museum.", "o": ["ancient tools and model boats", "robots and rockets", "a T-Rex and volcanoes", "tablets and mobile phones"], "why": "It shows ancient tools, old photographs, paintings and model boats."},
+    {"lv": "التطبيق", "q": "Write a sentence for your guide: what you can learn.", "o": ["You can learn about Oman's history.", "You can learned about Oman's history.", "You learn can about Oman's history.", "You can to learn about Oman's history."], "why": "can + base verb: You can learn …"},
+    {"lv": "التطبيق", "q": "Which sentence gives a choice and a reason?", "o": ["I want to visit the Natural History Museum because I want to see the T-Rex.", "I want visit museum.", "The museum is in London.", "I visited because."], "why": "I want to visit … because … gives a reason."},
+    {"lv": "التطبيق", "q": "You love robots. Which museum is best for you?", "o": ["Shanghai Museum of Science and Technology", "Oman Across the Ages Museum", "Bait Al Zubair", "Natural History Museum"], "why": "You can learn about robot design there."},
+    {"lv": "التحليل", "q": "Why does one room in the Natural History Museum have a shaking floor?", "o": ["To show visitors what an earthquake feels like.", "Because the floor is broken.", "To make music.", "Because of a volcano outside."], "why": "Visitors can feel an earthquake safely."},
+    {"lv": "التحليل", "q": "Your guide says: \"It is in a traditional building.\" What does this tell visitors?", "o": ["The building is old in style, not modern.", "The building is made of glass.", "The museum is closed.", "The museum is in London."], "why": "Traditional means in the old local style."},
+    {"lv": "التحليل", "q": "Why should you speak loudly and clearly in your presentation?", "o": ["So the whole class can hear and understand you.", "So you finish fast.", "So nobody listens.", "So you don't need a guide."], "why": "Clear speaking helps your audience."}
+  ]
+}

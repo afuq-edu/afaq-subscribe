@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U1",
+ "lesson": "Unit 1 – Lesson 10: Review",
+ "outcomes": [
+  "Review school subjects, times and how often we do things.",
+  "Ask and answer with When does ...? and How often does ...?",
+  "Find and correct mistakes in unit grammar."
+ ],
+ "tf": [
+  {
+   "s": "Art, Maths, Science is in alphabetical order.",
+   "t": true,
+   "why": "Yes! A, M, S."
+  },
+  {
+   "s": "Adam has English homework on Wednesdays.",
+   "t": true,
+   "why": "Correct! That is in Adam's diary."
+  },
+  {
+   "s": "Adam has swimming lessons once a week.",
+   "t": false,
+   "why": "Adam has swimming lessons twice a week."
+  },
+  {
+   "s": "Adam practises karate every day.",
+   "t": true,
+   "why": "Great! He practises every day."
+  },
+  {
+   "s": "'Osamah play tennis twice a week' is correct.",
+   "t": false,
+   "why": "With Osamah (he) we write plays."
+  },
+  {
+   "s": "The Discovery Team always have English at half past eight.",
+   "t": true,
+   "why": "Well done! English is at half past eight."
+  },
+  {
+   "s": "Forest School is the name of the outdoor lesson in some schools in Britain.",
+   "t": true,
+   "why": "Yes! Children learn outside."
+  },
+  {
+   "s": "10.15 is 'quarter to ten'.",
+   "t": false,
+   "why": "10.15 is quarter past ten."
+  },
+  {
+   "s": "We say: He is always busy.",
+   "t": true,
+   "why": "Right! The adverb goes after is."
+  },
+  {
+   "s": "Lottie's headteacher is Mrs Zahra.",
+   "t": false,
+   "why": "Lottie's headteacher is Mrs Safa."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "First in alphabetical order:",
+   "o": [
+    "Art",
+    "Maths",
+    "Science"
+   ],
+   "why": "A comes before M and S."
+  },
+  {
+   "q": "When does Adam play football?",
+   "o": [
+    "at the weekend",
+    "on Mondays",
+    "every day"
+   ],
+   "why": "He plays on Fridays and Saturdays."
+  },
+  {
+   "q": "How often does Adam practise karate?",
+   "o": [
+    "every day",
+    "once a week",
+    "never"
+   ],
+   "why": "Adam practises karate every day."
+  },
+  {
+   "q": "___ does Adam have swimming lessons? Twice a week.",
+   "o": [
+    "How often",
+    "When",
+    "Where"
+   ],
+   "why": "The answer is a frequency, so we ask How often."
+  },
+  {
+   "q": "I ___ my homework every day.",
+   "o": [
+    "do",
+    "does",
+    "doing"
+   ],
+   "why": "With I we use do."
+  },
+  {
+   "q": "He ___ eats fish for lunch. (7 ticks)",
+   "o": [
+    "always",
+    "never",
+    "once"
+   ],
+   "why": "Seven ticks = always."
+  },
+  {
+   "q": "We have Maths ___ Tuesdays.",
+   "o": [
+    "on",
+    "at",
+    "in"
+   ],
+   "why": "on + day."
+  },
+  {
+   "q": "Ahmed goes swimming on Tuesday and Friday. He goes ___.",
+   "o": [
+    "twice a week",
+    "once a week",
+    "every day"
+   ],
+   "why": "Two days = twice a week."
+  },
+  {
+   "q": "What do you learn in Maths?",
+   "o": [
+    "about numbers",
+    "about leaves",
+    "about robots"
+   ],
+   "why": "In Maths we learn about numbers."
+  },
+  {
+   "q": "Who is Lottie's headteacher?",
+   "o": [
+    "Mrs Safa",
+    "Mrs Zahra",
+    "Muna"
+   ],
+   "why": "Mrs Safa is the headteacher."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Adam: karate how often?",
+   "a": "every day",
+   "d": [
+    "once a week",
+    "twice a week",
+    "never"
+   ]
+  },
+  {
+   "q": "Adam: swimming how often?",
+   "a": "twice a week",
+   "d": [
+    "once a week",
+    "every day",
+    "never"
+   ]
+  },
+  {
+   "q": "Adam: English homework?",
+   "a": "Wednesdays",
+   "d": [
+    "Mondays",
+    "Fridays",
+    "Sundays"
+   ]
+  },
+  {
+   "q": "Discovery Team English?",
+   "a": "half past eight",
+   "d": [
+    "quarter past eleven",
+    "nine o'clock",
+    "quarter to ten"
+   ]
+  },
+  {
+   "q": "Outdoor lesson in Britain?",
+   "a": "Forest School",
+   "d": [
+    "boat school",
+    "boarding school",
+    "ICT"
+   ]
+  },
+  {
+   "q": "First: Science, Art, Maths",
+   "a": "Art",
+   "d": [
+    "Science",
+    "Maths",
+    "English"
+   ]
+  },
+  {
+   "q": "10.15 = ?",
+   "a": "quarter past ten",
+   "d": [
+    "quarter to ten",
+    "half past ten",
+    "ten o'clock"
+   ]
+  },
+  {
+   "q": "Osamah ___ tennis.",
+   "a": "plays",
+   "d": [
+    "play",
+    "playing",
+    "is play"
+   ]
+  },
+  {
+   "q": "I ___ my homework.",
+   "a": "do",
+   "d": [
+    "does",
+    "doing",
+    "am do"
+   ]
+  },
+  {
+   "q": "Lottie's headteacher?",
+   "a": "Mrs Safa",
+   "d": [
+    "Mrs Zahra",
+    "Muna",
+    "Azza"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list is in alphabetical order?",
+   "o": [
+    "Art, English, Maths, Science",
+    "Science, Maths, Art, English",
+    "Maths, Art, Science, English",
+    "English, Art, Science, Maths"
+   ],
+   "why": "A, E, M, S."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When does Adam have English homework?",
+   "o": [
+    "on Wednesdays",
+    "on Fridays",
+    "every day",
+    "at the weekend"
+   ],
+   "why": "Adam's diary says Wednesdays."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do we call the outdoor lesson in some schools in Britain?",
+   "o": [
+    "Forest School",
+    "boarding school",
+    "boat school",
+    "ICT"
+   ],
+   "why": "It is called Forest School."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What time do the Discovery Team always have English?",
+   "o": [
+    "at half past eight",
+    "at quarter past eleven",
+    "at quarter to five",
+    "at twelve o'clock"
+   ],
+   "why": "They have English at half past eight."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct: 'Osamah play tennis twice a week.'",
+   "o": [
+    "Osamah plays tennis twice a week.",
+    "Osamah playing tennis twice a week.",
+    "Osamah play tennis twice week.",
+    "Osamah plays twice tennis a week."
+   ],
+   "why": "With he/she we add -s: plays."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite with 'always': 'He eats fish for lunch.'",
+   "o": [
+    "He always eats fish for lunch.",
+    "He eats always fish for lunch.",
+    "Always he eats fish lunch.",
+    "He always eat fish for lunch."
+   ],
+   "why": "The adverb goes before eats."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Say the time: I have Art at 10.15.",
+   "o": [
+    "I have Art at quarter past ten.",
+    "I have Art at quarter to ten.",
+    "I have Art at half past ten.",
+    "I have Art at ten o'clock."
+   ],
+   "why": "10.15 = quarter past ten."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Adam plays football on Fridays and Saturdays. How often is that?",
+   "o": [
+    "twice a week",
+    "once a week",
+    "every day",
+    "never"
+   ],
+   "why": "Two days a week = twice a week."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Answer: 'How often does Adam have swimming lessons?' Which answer type is right?",
+   "o": [
+    "a frequency: twice a week",
+    "a time: at half past four",
+    "a place: in the park",
+    "a name: Adam"
+   ],
+   "why": "How often needs a frequency answer."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "We have English in Mondays.",
+    "He is always busy.",
+    "I do my homework every day.",
+    "She has Art at twelve o'clock."
+   ],
+   "why": "We use on with days: on Mondays."
+  }
+ ]
+}

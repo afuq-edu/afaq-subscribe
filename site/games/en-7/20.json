@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 2",
+ "lesson": "Lesson 4: Book club – The platypus (a folk tale)",
+ "outcomes": [
+  "Answer questions about the folk tale The platypus.",
+  "Make nouns from verbs with -er.",
+  "Understand the message of the story."
+ ],
+ "tf": [
+  {
+   "s": "A folk tale is an old story that teaches important things.",
+   "t": true,
+   "why": "Yes, folk tales teach lessons."
+  },
+  {
+   "s": "The platypus has fur and a beak, lays eggs and swims.",
+   "t": true,
+   "why": "Yes, she is like many groups."
+  },
+  {
+   "s": "The platypus joins the birds at the end of the story.",
+   "t": false,
+   "why": "She doesn't join any group."
+  },
+  {
+   "s": "The platypus can't bite like the lions because she doesn't have teeth.",
+   "t": true,
+   "why": "Yes, she has no teeth."
+  },
+  {
+   "s": "The platypus can breathe underwater like the fish.",
+   "t": false,
+   "why": "She can't breathe underwater."
+  },
+  {
+   "s": "The message of the story is that everyone is special in different ways.",
+   "t": true,
+   "why": "Yes, that is the lesson."
+  },
+  {
+   "s": "The noun from dive is diver.",
+   "t": true,
+   "why": "Dive + r = diver."
+  },
+  {
+   "s": "The noun from swim is swimer.",
+   "t": false,
+   "why": "We double the m: swimmer."
+  },
+  {
+   "s": "The platypus can't join the birds because she can't fly.",
+   "t": true,
+   "why": "Yes, birds can fly but she can't."
+  },
+  {
+   "s": "The lions say they are important because they have feathers.",
+   "t": false,
+   "why": "They say they have fur and can run."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the noun from write?",
+   "o": [
+    "writer",
+    "writter",
+    "writeer"
+   ],
+   "why": "Write + r = writer."
+  },
+  {
+   "q": "What is the noun from swim?",
+   "o": [
+    "swimmer",
+    "swimer",
+    "swimeer"
+   ],
+   "why": "Double the m: swimmer."
+  },
+  {
+   "q": "What is the noun from sing?",
+   "o": [
+    "singer",
+    "singger",
+    "songer"
+   ],
+   "why": "Sing + er = singer."
+  },
+  {
+   "q": "What is the noun from run?",
+   "o": [
+    "runner",
+    "runer",
+    "runnar"
+   ],
+   "why": "Double the n: runner."
+  },
+  {
+   "q": "Which group does the platypus join?",
+   "o": [
+    "none",
+    "the birds",
+    "the fish"
+   ],
+   "why": "She doesn't join any group."
+  },
+  {
+   "q": "Which animals have beaks and lay eggs in the story?",
+   "o": [
+    "the birds",
+    "the lions",
+    "the fish"
+   ],
+   "why": "The birds have beaks and lay eggs."
+  },
+  {
+   "q": "What does the platypus NOT have?",
+   "o": [
+    "teeth",
+    "fur",
+    "a beak"
+   ],
+   "why": "She has no teeth."
+  },
+  {
+   "q": "What can't the platypus do like the fish?",
+   "o": [
+    "breathe underwater",
+    "swim",
+    "lay eggs"
+   ],
+   "why": "She can swim but can't breathe underwater."
+  },
+  {
+   "q": "What do the lions say makes them important?",
+   "o": [
+    "fur and running",
+    "feathers and flying",
+    "fins and swimming"
+   ],
+   "why": "They have fur and can run."
+  },
+  {
+   "q": "What is a folk tale?",
+   "o": [
+    "an old story that teaches something",
+    "a news report",
+    "a shopping list"
+   ],
+   "why": "Folk tales teach important things."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Noun from swim",
+   "a": "swimmer",
+   "d": [
+    "swimer",
+    "swiming",
+    "swims"
+   ]
+  },
+  {
+   "q": "Noun from run",
+   "a": "runner",
+   "d": [
+    "runer",
+    "running",
+    "runs"
+   ]
+  },
+  {
+   "q": "Noun from dive",
+   "a": "diver",
+   "d": [
+    "divver",
+    "diving",
+    "dives"
+   ]
+  },
+  {
+   "q": "Noun from sing",
+   "a": "singer",
+   "d": [
+    "singger",
+    "singing",
+    "sings"
+   ]
+  },
+  {
+   "q": "Groups the platypus joins",
+   "a": "none",
+   "d": [
+    "birds",
+    "fish",
+    "lions"
+   ]
+  },
+  {
+   "q": "Platypus has no…",
+   "a": "teeth",
+   "d": [
+    "fur",
+    "beak",
+    "eggs"
+   ]
+  },
+  {
+   "q": "Animals with fur that run",
+   "a": "lions",
+   "d": [
+    "birds",
+    "fish",
+    "frogs"
+   ]
+  },
+  {
+   "q": "Animals with beaks",
+   "a": "birds",
+   "d": [
+    "lions",
+    "fish",
+    "frogs"
+   ]
+  },
+  {
+   "q": "Animals that breathe underwater",
+   "a": "fish",
+   "d": [
+    "lions",
+    "birds",
+    "platypus"
+   ]
+  },
+  {
+   "q": "An old story that teaches",
+   "a": "folk tale",
+   "d": [
+    "diary",
+    "advert",
+    "poster"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which group does the platypus join in the end?",
+   "o": [
+    "None – she doesn't join any group.",
+    "The lions",
+    "The birds",
+    "The fish"
+   ],
+   "why": "She is special in her own way."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the message of the story?",
+   "o": [
+    "Everyone is special in different ways.",
+    "Lions are the best animals.",
+    "Birds can't swim.",
+    "Never go to sleep."
+   ],
+   "why": "The platypus is happy to be herself."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the noun from dive?",
+   "o": [
+    "diver",
+    "diveer",
+    "divver",
+    "diving"
+   ],
+   "why": "Dive + r = diver."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which features does the platypus have?",
+   "o": [
+    "fur, a beak, she lays eggs and swims",
+    "feathers, wings and she flies",
+    "scales, fins and gills",
+    "a hump, horns and hooves"
+   ],
+   "why": "She has features of many groups."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Answer in a complete sentence: Why can't the platypus join the birds?",
+   "o": [
+    "She can't join the birds because she can't fly.",
+    "Because fly.",
+    "She can join the birds.",
+    "Birds can't fly."
+   ],
+   "why": "A complete sentence repeats the question words."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: She is a fast ___ (swim).",
+   "o": [
+    "swimmer",
+    "swimer",
+    "swiming",
+    "swims"
+   ],
+   "why": "Double the m before -er."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence might the frogs say to the platypus?",
+   "o": [
+    "If you join us, you can live on land and in water like us.",
+    "If you join us, you can fly high.",
+    "If you join us, you will have a hump.",
+    "If you join us, you will have feathers."
+   ],
+   "why": "Frogs live on land and in water."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can't the platypus bite like the lions?",
+   "o": [
+    "She doesn't have teeth.",
+    "She has big teeth.",
+    "She can't swim.",
+    "She has a beak like a lion."
+   ],
+   "why": "Lions bite with teeth; the platypus has none."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why did the platypus curl up and go to sleep?",
+   "o": [
+    "She decided she was special in her own way and didn't want to join any group.",
+    "She was ill.",
+    "The fish were angry.",
+    "She was cold."
+   ],
+   "why": "She is happy to be different."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does every animal group want the platypus?",
+   "o": [
+    "She has something in common with each group.",
+    "She is the biggest animal.",
+    "She can fly very high.",
+    "She has the sharpest teeth."
+   ],
+   "why": "Fur like lions, a beak and eggs like birds, swimming like fish."
+  }
+ ]
+}

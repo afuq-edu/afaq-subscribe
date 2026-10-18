@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "LC1",
+ "lesson": "Bo's Learning Club 1 – Lesson 1: Maths – Sizes and shapes",
+ "outcomes": [
+  "Describe objects by size: large and small.",
+  "Describe objects by shape: round, square, rectangular, triangular.",
+  "Say how many sides a shape has."
+ ],
+ "tf": [
+  {
+   "s": "A triangular shape has three sides.",
+   "t": true,
+   "why": "Yes! Triangular shapes have three sides."
+  },
+  {
+   "s": "Books are round.",
+   "t": false,
+   "why": "Books are rectangular."
+  },
+  {
+   "s": "A square has four equal sides.",
+   "t": true,
+   "why": "Correct! All four sides are the same."
+  },
+  {
+   "s": "A rectangle has four equal sides.",
+   "t": false,
+   "why": "A rectangle has two long sides and two short sides."
+  },
+  {
+   "s": "Bowls are round.",
+   "t": true,
+   "why": "Well done! Bowls are round."
+  },
+  {
+   "s": "'Large' means very small.",
+   "t": false,
+   "why": "'Large' means big."
+  },
+  {
+   "s": "We say 'a small round ball'.",
+   "t": true,
+   "why": "Great! Size comes before shape."
+  },
+  {
+   "s": "We say 'a round small ball'.",
+   "t": false,
+   "why": "Size comes first: 'a small round ball'."
+  },
+  {
+   "s": "The moon is large and round.",
+   "t": true,
+   "why": "Yes! It's a large round moon."
+  },
+  {
+   "s": "A triangular plate has four sides.",
+   "t": false,
+   "why": "A triangular plate has three sides."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What shape is a book?",
+   "o": [
+    "rectangular",
+    "round",
+    "triangular"
+   ],
+   "why": "Books are rectangular."
+  },
+  {
+   "q": "How many long sides has a rectangle got?",
+   "o": [
+    "two",
+    "three",
+    "four"
+   ],
+   "why": "A rectangle has two long and two short sides."
+  },
+  {
+   "q": "What shape is a coin?",
+   "o": [
+    "round",
+    "square",
+    "triangular"
+   ],
+   "why": "A coin is round."
+  },
+  {
+   "q": "Which word is a size?",
+   "o": [
+    "large",
+    "square",
+    "round"
+   ],
+   "why": "Large is a size."
+  },
+  {
+   "q": "Which word is a shape?",
+   "o": [
+    "triangular",
+    "small",
+    "large"
+   ],
+   "why": "Triangular is a shape."
+  },
+  {
+   "q": "Complete: There's a ___ round ball.",
+   "o": [
+    "small",
+    "square",
+    "three"
+   ],
+   "why": "There's a small round ball."
+  },
+  {
+   "q": "What shape is a box of tea?",
+   "o": [
+    "square",
+    "round",
+    "triangular"
+   ],
+   "why": "A box of tea is square."
+  },
+  {
+   "q": "Is a coin large or small?",
+   "o": [
+    "small",
+    "large",
+    "square"
+   ],
+   "why": "A coin is small."
+  },
+  {
+   "q": "What shape is a phone?",
+   "o": [
+    "rectangular",
+    "round",
+    "triangular"
+   ],
+   "why": "A phone is rectangular."
+  },
+  {
+   "q": "Which shape has no corners?",
+   "o": [
+    "round",
+    "square",
+    "rectangular"
+   ],
+   "why": "Round shapes have no corners."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Sides of a triangle",
+   "a": "three",
+   "d": [
+    "four",
+    "two",
+    "five"
+   ]
+  },
+  {
+   "q": "Shape of a wheel",
+   "a": "round",
+   "d": [
+    "square",
+    "triangular",
+    "rectangular"
+   ]
+  },
+  {
+   "q": "Shape of a ball",
+   "a": "round",
+   "d": [
+    "square",
+    "triangular",
+    "flat"
+   ]
+  },
+  {
+   "q": "Shape of a ruler",
+   "a": "rectangular",
+   "d": [
+    "round",
+    "triangular",
+    "square"
+   ]
+  },
+  {
+   "q": "Opposite of small",
+   "a": "large",
+   "d": [
+    "round",
+    "square",
+    "short"
+   ]
+  },
+  {
+   "q": "A ___ plate (3 sides)",
+   "a": "triangular",
+   "d": [
+    "round",
+    "square",
+    "rectangular"
+   ]
+  },
+  {
+   "q": "A square box has ___ equal sides.",
+   "a": "four",
+   "d": [
+    "three",
+    "two",
+    "five"
+   ]
+  },
+  {
+   "q": "Shape of a page in a book",
+   "a": "rectangular",
+   "d": [
+    "round",
+    "triangular",
+    "oval"
+   ]
+  },
+  {
+   "q": "Shape of a window: four equal sides",
+   "a": "square",
+   "d": [
+    "round",
+    "triangular",
+    "oval"
+   ]
+  },
+  {
+   "q": "Shape of a chessboard",
+   "a": "square",
+   "d": [
+    "round",
+    "triangular",
+    "oval"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which shape has three sides?",
+   "o": [
+    "triangular",
+    "square",
+    "round",
+    "rectangular"
+   ],
+   "why": "Triangular shapes have three sides."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What shape is a bowl?",
+   "o": [
+    "round",
+    "square",
+    "triangular",
+    "rectangular"
+   ],
+   "why": "Bowls are round."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which describes the moon?",
+   "o": [
+    "a large round moon",
+    "a small square moon",
+    "a large triangular moon",
+    "a small rectangular moon"
+   ],
+   "why": "It's a large round moon."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means big?",
+   "o": [
+    "large",
+    "small",
+    "round",
+    "square"
+   ],
+   "why": "Large means big."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Describe the board in your classroom.",
+   "o": [
+    "a large rectangular board",
+    "a small round board",
+    "a large triangular board",
+    "a small square board"
+   ],
+   "why": "The board is large and rectangular."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct label.",
+   "o": [
+    "It's a small rectangular eraser.",
+    "It's a rectangular small eraser.",
+    "It's an eraser small rectangular.",
+    "It's small a rectangular eraser."
+   ],
+   "why": "Size first, then shape."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A window has four equal sides and it is big. What is it?",
+   "o": [
+    "a large square window",
+    "a small round window",
+    "a large triangular window",
+    "a small rectangular window"
+   ],
+   "why": "Four equal sides = square; big = large."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between square and rectangular?",
+   "o": [
+    "Square: four equal sides; rectangular: two long and two short sides.",
+    "Square has three sides; rectangular has four.",
+    "They are the same.",
+    "Square is round; rectangular is not."
+   ],
+   "why": "Squares have equal sides; rectangles do not."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which object has four equal sides?",
+   "o": [
+    "a square box",
+    "a round bowl",
+    "a triangular plate",
+    "a rectangular phone"
+   ],
+   "why": "The square box has four equal sides."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which one is different: a coin, a ball, a bowl, a book?",
+   "o": [
+    "a book – it is rectangular",
+    "a coin – it is small",
+    "a ball – it is round",
+    "a bowl – it is round"
+   ],
+   "why": "The coin, ball and bowl are round; the book is rectangular."
+  }
+ ]
+}

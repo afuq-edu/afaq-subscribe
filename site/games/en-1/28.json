@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 4: My favourite toy",
+ "lesson": "Lesson 4: Language practice – What's your favourite toy? + Sound l",
+ "outcomes": [
+  "I can ask: What's your favourite toy?",
+  "I can answer: It's my teddy.",
+  "I can hear the l sound in lion, leaf and lemon."
+ ],
+ "tf": [
+  {
+   "s": "We answer What's your favourite toy? with It's my …",
+   "t": true,
+   "why": "Yes! It's my car."
+  },
+  {
+   "s": "Ladder starts with the letter l.",
+   "t": true,
+   "why": "Great! L-l-ladder."
+  },
+  {
+   "s": "A yo-yo is a toy.",
+   "t": true,
+   "why": "Yes! A yo-yo goes up and down."
+  },
+  {
+   "s": "Lion starts with the l sound.",
+   "t": true,
+   "why": "Yes! L-l-lion."
+  },
+  {
+   "s": "Dad starts with the l sound.",
+   "t": false,
+   "why": "Dad starts with d. Ladder starts with l."
+  },
+  {
+   "s": "l – o – g makes the word log.",
+   "t": true,
+   "why": "Well done! l-o-g is log."
+  },
+  {
+   "s": "l – i – d makes the word lock.",
+   "t": false,
+   "why": "l-i-d makes lid. l-o-ck makes lock."
+  },
+  {
+   "s": "A window is a toy.",
+   "t": false,
+   "why": "A window is part of the room. A doll is a toy."
+  },
+  {
+   "s": "Lemon and leaf start with the same letter.",
+   "t": true,
+   "why": "Right! Both start with l."
+  },
+  {
+   "s": "We answer What's your favourite toy? with It's blue.",
+   "t": false,
+   "why": "Say the toy: It's my teddy."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's your favourite toy? (a car)",
+   "o": [
+    "It's my car.",
+    "It's blue.",
+    "Yes, it is."
+   ],
+   "why": "It's my car tells your favourite toy."
+  },
+  {
+   "q": "What's Fatma's favourite toy?",
+   "o": [
+    "Her train.",
+    "Her plane.",
+    "Her robot."
+   ],
+   "why": "Fatma's favourite toy is her train."
+  },
+  {
+   "q": "Which word starts with l?",
+   "o": [
+    "leaf",
+    "dad",
+    "vet"
+   ],
+   "why": "L-l-leaf starts with l."
+  },
+  {
+   "q": "l – o – ck. What's the word?",
+   "o": [
+    "lock",
+    "log",
+    "lid"
+   ],
+   "why": "l-o-ck makes lock."
+  },
+  {
+   "q": "What's missing? _eaf",
+   "o": [
+    "l",
+    "d",
+    "f"
+   ],
+   "why": "l + eaf makes leaf."
+  },
+  {
+   "q": "Which one is a toy?",
+   "o": [
+    "doll",
+    "lemon",
+    "lamp"
+   ],
+   "why": "A doll is a toy."
+  },
+  {
+   "q": "Which question asks about your best toy?",
+   "o": [
+    "What's your favourite toy?",
+    "Who's this?",
+    "Where's the bag?"
+   ],
+   "why": "Favourite means the toy you like best."
+  },
+  {
+   "q": "l – i – d. What's the word?",
+   "o": [
+    "lid",
+    "log",
+    "lock"
+   ],
+   "why": "l-i-d makes lid."
+  },
+  {
+   "q": "Which toy flies in the sky?",
+   "o": [
+    "plane",
+    "train",
+    "teddy"
+   ],
+   "why": "A plane flies."
+  },
+  {
+   "q": "Which word is an animal with l?",
+   "o": [
+    "lion",
+    "lemon",
+    "leaf"
+   ],
+   "why": "A lion is an animal."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "It starts with l",
+   "a": "ladder",
+   "d": [
+    "dog",
+    "drum",
+    "bed"
+   ]
+  },
+  {
+   "q": "l – o – g",
+   "a": "log",
+   "d": [
+    "lock",
+    "lid",
+    "leg"
+   ]
+  },
+  {
+   "q": "l – o – ck",
+   "a": "lock",
+   "d": [
+    "log",
+    "lid",
+    "clock"
+   ]
+  },
+  {
+   "q": "l – i – d",
+   "a": "lid",
+   "d": [
+    "log",
+    "lock",
+    "led"
+   ]
+  },
+  {
+   "q": "A toy that flies",
+   "a": "plane",
+   "d": [
+    "train",
+    "doll",
+    "teddy"
+   ]
+  },
+  {
+   "q": "A yellow fruit with l",
+   "a": "lemon",
+   "d": [
+    "leaf",
+    "lamp",
+    "log"
+   ]
+  },
+  {
+   "q": "A big cat with l",
+   "a": "lion",
+   "d": [
+    "duck",
+    "goat",
+    "bird"
+   ]
+  },
+  {
+   "q": "Answer about your toy",
+   "a": "It's my teddy.",
+   "d": [
+    "It's brown.",
+    "Yes.",
+    "Who's this?"
+   ]
+  },
+  {
+   "q": "First letter of leg",
+   "a": "l",
+   "d": [
+    "g",
+    "e",
+    "d"
+   ]
+  },
+  {
+   "q": "A toy that goes up and down",
+   "a": "yo-yo",
+   "d": [
+    "car",
+    "train",
+    "plane"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What sound does the lion card show?",
+   "o": [
+    "/l/",
+    "/d/",
+    "/v/",
+    "/b/"
+   ],
+   "why": "Lion starts with the /l/ sound."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these words starts with l?",
+   "o": [
+    "lamp",
+    "dot",
+    "chair",
+    "thumb"
+   ],
+   "why": "Lamp starts with l."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a toy?",
+   "o": [
+    "robot",
+    "leaf",
+    "ladder",
+    "lemon"
+   ],
+   "why": "A robot is a toy."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does favourite mean?",
+   "o": [
+    "The one you like best",
+    "The one you don't like",
+    "A new colour",
+    "A big box"
+   ],
+   "why": "Your favourite is the one you like best."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend asks: What's your favourite toy? You love your doll. You say…",
+   "o": [
+    "It's my doll.",
+    "It's a train.",
+    "It's pink.",
+    "What's your favourite toy?"
+   ],
+   "why": "It's my doll tells your favourite toy."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Listen: l – o – g. What's the word?",
+   "o": [
+    "log",
+    "lock",
+    "lid",
+    "dog"
+   ],
+   "why": "l-o-g makes log."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to know about your friend's best toy. What do you ask?",
+   "o": [
+    "What's your favourite toy?",
+    "What colour is it?",
+    "What's this?",
+    "Who's this?"
+   ],
+   "why": "Ask: What's your favourite toy?"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which answer tells the favourite toy AND its colour?",
+   "o": [
+    "It's my teddy. It's brown.",
+    "It's my teddy.",
+    "It's brown.",
+    "What's your favourite toy?"
+   ],
+   "why": "It tells the toy and the colour."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT start with l?",
+   "o": [
+    "dad",
+    "leg",
+    "lion",
+    "lemon"
+   ],
+   "why": "Dad starts with d."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group are all toys?",
+   "o": [
+    "doll, plane, yo-yo",
+    "doll, lemon, train",
+    "plane, ladder, car",
+    "leaf, robot, ball"
+   ],
+   "why": "Doll, plane and yo-yo are all toys."
+  }
+ ]
+}

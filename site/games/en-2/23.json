@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 2: Where’s my pen?",
+ "lesson": "Unit 2 – Lesson 6: English in action (Borrowing things)",
+ "outcomes": [
+  "I can borrow things politely in English.",
+  "I can blend words like chain, sport and broom.",
+  "I can use our, their, when and why."
+ ],
+ "tf": [
+  {
+   "s": "We say \"These are my books\" for many books.",
+   "t": true,
+   "why": "Use \"These are\" for more than one thing."
+  },
+  {
+   "s": "We say \"This is my books.\"",
+   "t": false,
+   "why": "For many books we say \"These are my books.\""
+  },
+  {
+   "s": "\"Can I borrow it, please?\" is a polite question.",
+   "t": true,
+   "why": "Saying \"please\" is good manners."
+  },
+  {
+   "s": "A good answer to \"Can I borrow it, please?\" is \"Yes. Here you are.\"",
+   "t": true,
+   "why": "\"Here you are\" means you give the thing."
+  },
+  {
+   "s": "ch + ai + n makes the word \"chain\".",
+   "t": true,
+   "why": "Blend the sounds: ch-ai-n, chain."
+  },
+  {
+   "s": "br + oo + m makes the word \"boom\".",
+   "t": false,
+   "why": "br-oo-m makes \"broom\"."
+  },
+  {
+   "s": "\"Hook\" has the same middle sound as \"book\".",
+   "t": true,
+   "why": "Hook and book both have the short oo sound."
+  },
+  {
+   "s": "\"Spoon\" has the same middle sound as \"book\".",
+   "t": false,
+   "why": "Spoon sounds like moon, not book."
+  },
+  {
+   "s": "\"Why\" is a question word.",
+   "t": true,
+   "why": "We use \"Why\" to ask the reason."
+  },
+  {
+   "s": "We say \"This is my ruler\" for one ruler.",
+   "t": true,
+   "why": "Use \"This is\" for one thing."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "This is my ___. (one ruler)",
+   "o": [
+    "ruler",
+    "rulers",
+    "ruleses"
+   ],
+   "why": "One ruler: This is my ruler."
+  },
+  {
+   "q": "___ are my crayons.",
+   "o": [
+    "These",
+    "This",
+    "It"
+   ],
+   "why": "Many crayons: These are my crayons."
+  },
+  {
+   "q": "Reply: Can I borrow it, please?",
+   "o": [
+    "Yes. Here you are.",
+    "Yes. I am seven.",
+    "It's a bag."
+   ],
+   "why": "We give the thing and say \"Here you are.\""
+  },
+  {
+   "q": "Here ___ ___.",
+   "o": [
+    "you are",
+    "is my",
+    "are you"
+   ],
+   "why": "The phrase is \"Here you are.\""
+  },
+  {
+   "q": "Blend: sp + or + t",
+   "o": [
+    "sport",
+    "spot",
+    "short"
+   ],
+   "why": "sp-or-t makes sport."
+  },
+  {
+   "q": "Blend: s + oa + p",
+   "o": [
+    "soap",
+    "sap",
+    "sop"
+   ],
+   "why": "s-oa-p makes soap."
+  },
+  {
+   "q": "Blend: k + i + ng",
+   "o": [
+    "king",
+    "kin",
+    "kick"
+   ],
+   "why": "k-i-ng makes king."
+  },
+  {
+   "q": "Which word has the oo of \"moon\"?",
+   "o": [
+    "boot",
+    "cook",
+    "hook"
+   ],
+   "why": "Boot has the long oo like moon."
+  },
+  {
+   "q": "___ is he sad?",
+   "o": [
+    "Why",
+    "Our",
+    "Their"
+   ],
+   "why": "We ask the reason with \"Why\"."
+  },
+  {
+   "q": "Find the odd sound: spoon, boot, cook",
+   "o": [
+    "cook",
+    "spoon",
+    "boot"
+   ],
+   "why": "Cook has the short oo like book."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Blend: st + or + m",
+   "a": "storm",
+   "d": [
+    "stem",
+    "star",
+    "stop"
+   ]
+  },
+  {
+   "q": "Blend: ch + ai + n",
+   "a": "chain",
+   "d": [
+    "chin",
+    "chair",
+    "rain"
+   ]
+  },
+  {
+   "q": "Blend: br + oo + m",
+   "a": "broom",
+   "d": [
+    "boom",
+    "brim",
+    "room"
+   ]
+  },
+  {
+   "q": "Blend: sp + or + t",
+   "a": "sport",
+   "d": [
+    "spot",
+    "short",
+    "port"
+   ]
+  },
+  {
+   "q": "Blend: s + oa + p",
+   "a": "soap",
+   "d": [
+    "sap",
+    "sop",
+    "soup"
+   ]
+  },
+  {
+   "q": "Blend: k + i + ng",
+   "a": "king",
+   "d": [
+    "kin",
+    "kid",
+    "sing"
+   ]
+  },
+  {
+   "q": "Same oo as \"book\"",
+   "a": "hook",
+   "d": [
+    "moon",
+    "spoon",
+    "boot"
+   ]
+  },
+  {
+   "q": "Same oo as \"moon\"",
+   "a": "spoon",
+   "d": [
+    "book",
+    "cook",
+    "hook"
+   ]
+  },
+  {
+   "q": "One thing: ___ is my bag.",
+   "a": "This",
+   "d": [
+    "These",
+    "They",
+    "We"
+   ]
+  },
+  {
+   "q": "Many things: ___ are my pens.",
+   "a": "These",
+   "d": [
+    "This",
+    "It",
+    "He"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which question do we use to borrow something?",
+   "o": [
+    "Can I borrow it, please?",
+    "What's your name?",
+    "How old are you?",
+    "Where are you?"
+   ],
+   "why": "\"Can I borrow it, please?\" asks for a thing politely."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do we say when we give something?",
+   "o": [
+    "Here you are.",
+    "Goodbye.",
+    "I'm fine.",
+    "Good night."
+   ],
+   "why": "\"Here you are\" goes with giving."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a tricky word from this lesson?",
+   "o": [
+    "their",
+    "chain",
+    "sport",
+    "soap"
+   ],
+   "why": "Our, their, when and why are the tricky words."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has the sounds ch-ai-n?",
+   "o": [
+    "chain",
+    "chin",
+    "rain",
+    "chair"
+   ],
+   "why": "ch-ai-n blends to chain."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You have many books. What do you say?",
+   "o": [
+    "These are my books.",
+    "This is my books.",
+    "This are my book.",
+    "These is my books."
+   ],
+   "why": "Many things take \"These are\"."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend asks: Is this your pen? It is your pen. You say:",
+   "o": [
+    "Yes, it is.",
+    "These are my pens.",
+    "Here you are, please.",
+    "Why is it?"
+   ],
+   "why": "Answer a yes question with \"Yes, it is.\""
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: It is ___ book. (the book of you and me)",
+   "o": [
+    "our",
+    "their",
+    "why",
+    "when"
+   ],
+   "why": "\"Our\" means it belongs to us."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT have the same oo sound as the others?",
+   "o": [
+    "cook",
+    "moon",
+    "spoon",
+    "boot"
+   ],
+   "why": "Cook has the short oo; the others have the long oo."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sara wants Ali's ruler. What is the most polite way to ask?",
+   "o": [
+    "Can I borrow it, please?",
+    "Give me the ruler!",
+    "Ruler!",
+    "This is my ruler."
+   ],
+   "why": "Polite words like \"please\" show good manners."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say \"These are\" and not \"This is\" for crayons?",
+   "o": [
+    "Because there are many crayons.",
+    "Because crayons are red.",
+    "Because crayons are small.",
+    "Because it is a question."
+   ],
+   "why": "\"These are\" is for more than one thing."
+  }
+ ]
+}

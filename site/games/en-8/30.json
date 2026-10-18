@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 3: Spend or save?",
+ "lesson": "Lesson 4: WOW! Book Club – A poem",
+ "outcomes": [
+  "Find the features of a poem: verses, lines and rhyme.",
+  "Name the four places the speaker wants to visit.",
+  "Ask and answer Would you like to ...? questions."
+ ],
+ "tf": [
+  {
+   "s": "The poem has four verses.",
+   "t": true,
+   "why": "Yes, it has four verses."
+  },
+  {
+   "s": "Each verse has four sentences.",
+   "t": true,
+   "why": "Correct, four in each verse."
+  },
+  {
+   "s": "The lines of the poem rhyme.",
+   "t": true,
+   "why": "Right, rhyme is a feature of this poem."
+  },
+  {
+   "s": "The speaker would like to visit the Sahara Desert.",
+   "t": false,
+   "why": "The places are Ancient Egypt, London, the Arctic and the Moon."
+  },
+  {
+   "s": "The speaker would like to become Sherlock Holmes.",
+   "t": true,
+   "why": "Yes, in London as Sherlock Holmes."
+  },
+  {
+   "s": "The speaker wants to go to the Arctic now because the sea ice is melting quickly.",
+   "t": true,
+   "why": "Well done, that is the reason."
+  },
+  {
+   "s": "Buzz Aldrin was the first man to walk on the Moon.",
+   "t": false,
+   "why": "Neil Armstrong was first, then Buzz Aldrin."
+  },
+  {
+   "s": "In the Arctic, the speaker would build a house in the snow.",
+   "t": true,
+   "why": "Yes, and make a huge snowman too."
+  },
+  {
+   "s": "A verse is one word in a poem.",
+   "t": false,
+   "why": "A verse is a group of lines in a poem."
+  },
+  {
+   "s": "In the Arctic, the speaker would look after camels.",
+   "t": false,
+   "why": "The speaker would look after polar bears."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How many verses does the poem have?",
+   "o": [
+    "four",
+    "two",
+    "six"
+   ],
+   "why": "The poem has four verses."
+  },
+  {
+   "q": "Who would the speaker like to become?",
+   "o": [
+    "Sherlock Holmes",
+    "a pharaoh",
+    "a polar bear"
+   ],
+   "why": "The speaker would like to be Sherlock Holmes."
+  },
+  {
+   "q": "Who was the first man to walk on the Moon?",
+   "o": [
+    "Neil Armstrong",
+    "Buzz Aldrin",
+    "Sherlock Holmes"
+   ],
+   "why": "Neil Armstrong was first."
+  },
+  {
+   "q": "Why go to the Arctic now?",
+   "o": [
+    "The sea ice is melting quickly.",
+    "It is very hot.",
+    "There are pharaohs there."
+   ],
+   "why": "The ice is melting fast."
+  },
+  {
+   "q": "What would the speaker look after in the Arctic?",
+   "o": [
+    "polar bears",
+    "camels",
+    "falcons"
+   ],
+   "why": "The speaker would look after polar bears."
+  },
+  {
+   "q": "When words end with the same sound, they ...",
+   "o": [
+    "rhyme",
+    "verse",
+    "line"
+   ],
+   "why": "Words that rhyme end with the same sound."
+  },
+  {
+   "q": "Where would the speaker be Sherlock Holmes?",
+   "o": [
+    "London",
+    "Egypt",
+    "the Moon"
+   ],
+   "why": "Sherlock Holmes is in London."
+  },
+  {
+   "q": "Answer: Would you like to go into space?",
+   "o": [
+    "Yes, I would.",
+    "Yes, I like.",
+    "Yes, I will like."
+   ],
+   "why": "Short answer: Yes, I would."
+  },
+  {
+   "q": "What would the speaker make in the Arctic?",
+   "o": [
+    "a huge snowman",
+    "a pyramid",
+    "a boat"
+   ],
+   "why": "A huge snowman."
+  },
+  {
+   "q": "Which place is about travelling back in time?",
+   "o": [
+    "Ancient Egypt",
+    "the Arctic",
+    "the Moon"
+   ],
+   "why": "Visiting Ancient Egypt means going back in time."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Number of verses",
+   "a": "four",
+   "d": [
+    "two",
+    "three",
+    "six"
+   ]
+  },
+  {
+   "q": "Detective in London",
+   "a": "Sherlock Holmes",
+   "d": [
+    "Neil Armstrong",
+    "Buzz Aldrin",
+    "a pharaoh"
+   ]
+  },
+  {
+   "q": "First man on the Moon",
+   "a": "Neil Armstrong",
+   "d": [
+    "Buzz Aldrin",
+    "Sherlock Holmes",
+    "Adil"
+   ]
+  },
+  {
+   "q": "Second man on the Moon",
+   "a": "Buzz Aldrin",
+   "d": [
+    "Neil Armstrong",
+    "Sherlock Holmes",
+    "Lucas"
+   ]
+  },
+  {
+   "q": "Ruler of Ancient Egypt",
+   "a": "pharaoh",
+   "d": [
+    "detective",
+    "astronaut",
+    "explorer"
+   ]
+  },
+  {
+   "q": "Cold place in the poem",
+   "a": "the Arctic",
+   "d": [
+    "Egypt",
+    "London",
+    "the desert"
+   ]
+  },
+  {
+   "q": "Animals in the Arctic verse",
+   "a": "polar bears",
+   "d": [
+    "camels",
+    "falcons",
+    "oryx"
+   ]
+  },
+  {
+   "q": "A group of lines in a poem",
+   "a": "verse",
+   "d": [
+    "rhyme",
+    "title",
+    "word"
+   ]
+  },
+  {
+   "q": "Same end sound",
+   "a": "rhyme",
+   "d": [
+    "verse",
+    "line",
+    "title"
+   ]
+  },
+  {
+   "q": "Place for the astronauts",
+   "a": "the Moon",
+   "d": [
+    "the Arctic",
+    "London",
+    "Egypt"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which four places would the speaker like to visit?",
+   "o": [
+    "Ancient Egypt, London, the Arctic, the Moon",
+    "Spain, China, Oman, the UK",
+    "the beach, the desert, a valley, a bay",
+    "Paris, Rome, Dubai, Muscat"
+   ],
+   "why": "These are the four places in the poem."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a feature of this poem?",
+   "o": [
+    "The lines rhyme.",
+    "It has no verses.",
+    "It is written as an email.",
+    "It has only one line."
+   ],
+   "why": "The poem's lines rhyme."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who walked on the Moon after Neil Armstrong?",
+   "o": [
+    "Buzz Aldrin",
+    "Sherlock Holmes",
+    "a pharaoh",
+    "Lucas"
+   ],
+   "why": "Buzz Aldrin followed Neil Armstrong."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a pharaoh?",
+   "o": [
+    "a ruler of Ancient Egypt",
+    "a detective",
+    "a polar bear",
+    "an astronaut"
+   ],
+   "why": "Pharaohs were rulers in Ancient Egypt."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct answer: 'Would you like to travel back in time?'",
+   "o": [
+    "Yes, I would. I'd like to see Ancient Egypt.",
+    "Yes, I do. I like see Egypt.",
+    "Yes, I will. I'll liking Egypt.",
+    "Yes, I would. I'd like seeing to Egypt."
+   ],
+   "why": "Would you like...? Yes, I would. I'd like to + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct question.",
+   "o": [
+    "Would you like to go into space?",
+    "Would you like go into space?",
+    "Do you would like to go into space?",
+    "Would you liking to go into space?"
+   ],
+   "why": "Would you like + to + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your group writes a new verse. How should it start?",
+   "o": [
+    "If you could ...",
+    "Dear Sir ...",
+    "Once upon a time ...",
+    "Yours sincerely ..."
+   ],
+   "why": "The poem's verses start with 'If you could...'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the speaker want to go to the Arctic now, not later?",
+   "o": [
+    "Because the sea ice is melting quickly.",
+    "Because it is getting hotter in London.",
+    "Because pharaohs live there.",
+    "Because the Moon is near."
+   ],
+   "why": "Melting ice means the Arctic is changing fast."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What do the four places in the poem have in common?",
+   "o": [
+    "They are all exciting places the speaker imagines visiting.",
+    "They are all in Oman.",
+    "They are all very hot.",
+    "They are all shops."
+   ],
+   "why": "The poem is about imagined adventures."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Play in the ice, build a house in the snow.' Which place is this verse about?",
+   "o": [
+    "the Arctic",
+    "Ancient Egypt",
+    "London",
+    "the Moon"
+   ],
+   "why": "Ice and snow describe the Arctic."
+  }
+ ]
+}

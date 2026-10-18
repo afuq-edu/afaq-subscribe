@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 3: Hobbies",
+ "lesson": "Unit 3 – Lesson 5: Culture (traditional sports in Oman)",
+ "outcomes": [
+  "I can name two traditional sports in Oman.",
+  "I can say facts about camel racing and dhow racing.",
+  "I can write about a favourite sport: … likes … He plays … on …"
+ ],
+ "tf": [
+  {
+   "s": "Camel racing is a traditional sport in Oman.",
+   "t": true,
+   "why": "Yes! Camel racing is a traditional Omani sport."
+  },
+  {
+   "s": "Camel racing is a new sport in Oman.",
+   "t": false,
+   "why": "Camel racing is a traditional sport, not a new one."
+  },
+  {
+   "s": "A dhow is a traditional sailing boat.",
+   "t": true,
+   "why": "Right! A dhow is a traditional sailing boat."
+  },
+  {
+   "s": "A dhow is a traditional house.",
+   "t": false,
+   "why": "A dhow is a boat, not a house."
+  },
+  {
+   "s": "Camels can run at about 64 kilometres an hour.",
+   "t": true,
+   "why": "Wow! Camels are very fast."
+  },
+  {
+   "s": "Camels can run at about 6 kilometres an hour.",
+   "t": false,
+   "why": "Camels can run at about 64 kilometres an hour."
+  },
+  {
+   "s": "Dhow racing is a traditional sport in Oman.",
+   "t": true,
+   "why": "Yes! Camel racing and dhow racing are traditional sports."
+  },
+  {
+   "s": "Anas likes tennis.",
+   "t": true,
+   "why": "Right! Anas likes tennis."
+  },
+  {
+   "s": "Anas plays tennis on Mondays.",
+   "t": false,
+   "why": "Anas plays tennis on Saturdays."
+  },
+  {
+   "s": "A tennis player has got a racket and tennis balls.",
+   "t": true,
+   "why": "Yes! He's got a racket and tennis balls."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Name a traditional sport in Oman.",
+   "o": [
+    "camel racing",
+    "skateboarding",
+    "video games"
+   ],
+   "why": "Camel racing is traditional in Oman."
+  },
+  {
+   "q": "What is a dhow?",
+   "o": [
+    "A traditional sailing boat",
+    "A fast camel",
+    "A tennis racket"
+   ],
+   "why": "A dhow is a sailing boat."
+  },
+  {
+   "q": "How fast can camels run?",
+   "o": [
+    "About 64 km an hour",
+    "About 4 km an hour",
+    "About 640 km an hour"
+   ],
+   "why": "About 64 kilometres an hour."
+  },
+  {
+   "q": "Correct the word: Camel racing is a new sport.",
+   "o": [
+    "traditional",
+    "fast",
+    "boat"
+   ],
+   "why": "Camel racing is a traditional sport."
+  },
+  {
+   "q": "Complete: Anas ___ tennis.",
+   "o": [
+    "likes",
+    "like",
+    "liking"
+   ],
+   "why": "With he, add -s: likes."
+  },
+  {
+   "q": "Anas plays tennis on …",
+   "o": [
+    "Saturdays",
+    "Sundays",
+    "Mondays"
+   ],
+   "why": "He plays tennis on Saturdays."
+  },
+  {
+   "q": "What has a tennis player got?",
+   "o": [
+    "A racket and balls",
+    "A bike and a helmet",
+    "A boat"
+   ],
+   "why": "He's got a racket and tennis balls."
+  },
+  {
+   "q": "He's got a bike and a helmet. What is the sport?",
+   "o": [
+    "cycling",
+    "tennis",
+    "karate"
+   ],
+   "why": "A bike and a helmet are for cycling."
+  },
+  {
+   "q": "Complete: She plays basketball ___ Fridays.",
+   "o": [
+    "on",
+    "at",
+    "in"
+   ],
+   "why": "We use on with days."
+  },
+  {
+   "q": "Camels are very …",
+   "o": [
+    "fast",
+    "slow",
+    "small"
+   ],
+   "why": "Camels can run very fast."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "A traditional sailing boat",
+   "a": "dhow",
+   "d": [
+    "camel",
+    "racket",
+    "bike"
+   ]
+  },
+  {
+   "q": "A fast animal in races",
+   "a": "camel",
+   "d": [
+    "cat",
+    "fish",
+    "cow"
+   ]
+  },
+  {
+   "q": "Camels can run about ___ km an hour",
+   "a": "64",
+   "d": [
+    "6",
+    "640",
+    "4"
+   ]
+  },
+  {
+   "q": "Camel racing is a ___ sport.",
+   "a": "traditional",
+   "d": [
+    "new",
+    "video",
+    "water"
+   ]
+  },
+  {
+   "q": "Anas ___ tennis.",
+   "a": "likes",
+   "d": [
+    "like",
+    "liking",
+    "liked"
+   ]
+  },
+  {
+   "q": "Anas plays tennis on …",
+   "a": "Saturdays",
+   "d": [
+    "Sundays",
+    "Mondays",
+    "Tuesdays"
+   ]
+  },
+  {
+   "q": "Tennis player has got a …",
+   "a": "racket",
+   "d": [
+    "helmet",
+    "camel",
+    "boat"
+   ]
+  },
+  {
+   "q": "Bike and helmet sport",
+   "a": "cycling",
+   "d": [
+    "tennis",
+    "sailing",
+    "karate"
+   ]
+  },
+  {
+   "q": "Plays basketball ___ Fridays.",
+   "a": "on",
+   "d": [
+    "at",
+    "in",
+    "by"
+   ]
+  },
+  {
+   "q": "A dhow is a sailing …",
+   "a": "boat",
+   "d": [
+    "house",
+    "camel",
+    "ball"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which two are traditional sports in Oman?",
+   "o": [
+    "Camel racing and dhow racing",
+    "Video games and TV",
+    "Skateboarding and roller-skating",
+    "Karate and tennis"
+   ],
+   "why": "Camel racing and dhow racing are traditional."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What kind of boat is a dhow?",
+   "o": [
+    "A traditional sailing boat",
+    "A new speed boat",
+    "A toy boat",
+    "A fishing net"
+   ],
+   "why": "A dhow is a traditional sailing boat."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means many people like it?",
+   "o": [
+    "popular",
+    "slow",
+    "tired",
+    "quiet"
+   ],
+   "why": "Popular means many people like it."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What has Anas got?",
+   "o": [
+    "A racket and tennis balls",
+    "A camel",
+    "A dhow",
+    "A bike and a helmet"
+   ],
+   "why": "He's got a racket and tennis balls."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct: A dhow is a traditional house.",
+   "o": [
+    "A dhow is a traditional sailing boat.",
+    "A dhow is a new house.",
+    "A dhow is a fast camel.",
+    "A dhow is a traditional sport shoe."
+   ],
+   "why": "A dhow is a boat."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Maryam likes basketball. She plays on Mondays. Choose the page sentences.",
+   "o": [
+    "Maryam likes basketball. She plays basketball on Mondays.",
+    "Maryam like basketball. She play basketball on Mondays.",
+    "Maryam likes basketball. She plays basketball at Mondays.",
+    "Maryam likes basketball. He plays basketball on Mondays."
+   ],
+   "why": "likes, plays and on + day."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Riddle: He's got a racket and a ball. What sport is it?",
+   "o": [
+    "tennis",
+    "camel racing",
+    "cycling",
+    "dhow racing"
+   ],
+   "why": "A racket and ball are for tennis."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Camels can run at about 64 kilometres an hour. What does this tell us?",
+   "o": [
+    "Camels are very fast.",
+    "Camels are slow.",
+    "Camels can sail.",
+    "Camels are small."
+   ],
+   "why": "64 km an hour is very fast!"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence gives a good reason?",
+   "o": [
+    "I like camel racing because it is exciting.",
+    "I like camel racing on.",
+    "I like camel because racing.",
+    "I camel racing like."
+   ],
+   "why": "because + a reason."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sport uses a sailing boat?",
+   "o": [
+    "dhow racing",
+    "camel racing",
+    "tennis",
+    "karate"
+   ],
+   "why": "A dhow is a sailing boat, so dhow racing uses one."
+  }
+ ]
+}

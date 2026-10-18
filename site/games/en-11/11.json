@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "unit": "",
+ "lesson": "Theme 3 - Unit 1: Types of Tourism",
+ "outcomes": [
+  "Name different types of holidays and tourism",
+  "Match key words to tour advertisements",
+  "Discuss the benefits and disadvantages of tourism"
+ ],
+ "tf": [
+  {
+   "s": "A cruise is a holiday on a big ship.",
+   "t": true,
+   "why": "Yes! A cruise is usually relaxing."
+  },
+  {
+   "s": "An adventure holiday could be dangerous.",
+   "t": true,
+   "why": "Right! Adventure holidays can include risky activities."
+  },
+  {
+   "s": "A camping trip is usually very expensive.",
+   "t": false,
+   "why": "A camping trip is a cheap holiday."
+  },
+  {
+   "s": "Bungee jumping is part of extreme sports tourism.",
+   "t": true,
+   "why": "Correct! It is an exciting extreme sport."
+  },
+  {
+   "s": "Whale watching belongs to cultural tourism.",
+   "t": false,
+   "why": "Whale watching belongs to wildlife holidays."
+  },
+  {
+   "s": "Local festivals and museums belong to cultural tourism.",
+   "t": true,
+   "why": "Yes, they show the culture of a place."
+  },
+  {
+   "s": "The ad about a hotel built of ice is about ice tourism.",
+   "t": true,
+   "why": "Right! The hotel melts in early spring."
+  },
+  {
+   "s": "The cooking holidays advert is about creating a work of art.",
+   "t": false,
+   "why": "Creating a work of art matches the painting holidays advert."
+  },
+  {
+   "s": "Foreign tourism can help the economy and create jobs.",
+   "t": true,
+   "why": "Good! Tourism brings money and work."
+  },
+  {
+   "s": "Foreign tourism can never change local traditions.",
+   "t": false,
+   "why": "One disadvantage is that tourism can change local traditions."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What type of holiday is a trip on a big ship?",
+   "o": [
+    "a cruise",
+    "a camping trip",
+    "a safari"
+   ],
+   "why": "A cruise is on a big ship."
+  },
+  {
+   "q": "Which type of tourism uses bungee jumping?",
+   "o": [
+    "extreme sports tourism",
+    "cultural tourism",
+    "wildlife holidays"
+   ],
+   "why": "Bungee jumping is an extreme sport."
+  },
+  {
+   "q": "Which type is going on safari?",
+   "o": [
+    "wildlife holidays",
+    "sailing holidays",
+    "cultural tourism"
+   ],
+   "why": "On safari you see wild animals."
+  },
+  {
+   "q": "What do you do on a sightseeing tour?",
+   "o": [
+    "see the famous places of a town",
+    "sail a yacht",
+    "jump from a bridge"
+   ],
+   "why": "Sightseeing means visiting famous places."
+  },
+  {
+   "q": "Which holiday is relaxing?",
+   "o": [
+    "a cruise",
+    "an adventure holiday",
+    "white water rafting"
+   ],
+   "why": "A cruise is calm and relaxing."
+  },
+  {
+   "q": "Which phrases belong to sailing holidays?",
+   "o": [
+    "yacht hire and experienced crews",
+    "museums and theatres",
+    "safari and whale watching"
+   ],
+   "why": "They are connected with boats."
+  },
+  {
+   "q": "Which advert is about 'visiting local markets'?",
+   "o": [
+    "cooking holidays",
+    "ice tourism",
+    "adventure sports"
+   ],
+   "why": "Cooks visit markets to buy food."
+  },
+  {
+   "q": "Which advert is about 'a variety of physical activities'?",
+   "o": [
+    "adventure sports",
+    "painting holidays",
+    "ice tourism"
+   ],
+   "why": "Adventure sports include many activities."
+  },
+  {
+   "q": "Complete: Foreign tourism helps to promote international ___.",
+   "o": [
+    "understanding",
+    "traffic",
+    "noise"
+   ],
+   "why": "Tourism helps people understand other cultures."
+  },
+  {
+   "q": "Which is a disadvantage of tourism?",
+   "o": [
+    "it can cause crowding",
+    "it creates jobs",
+    "it helps the economy"
+   ],
+   "why": "Too many tourists can make places crowded."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Holiday on a big ship",
+   "a": "cruise",
+   "d": [
+    "safari",
+    "camping trip",
+    "history tour"
+   ]
+  },
+  {
+   "q": "Cheap holiday in a tent",
+   "a": "camping trip",
+   "d": [
+    "cruise",
+    "safari",
+    "yacht hire"
+   ]
+  },
+  {
+   "q": "Holiday to see wild animals",
+   "a": "safari",
+   "d": [
+    "cruise",
+    "cooking holiday",
+    "history tour"
+   ]
+  },
+  {
+   "q": "Bungee jumping is ___ tourism",
+   "a": "extreme sports",
+   "d": [
+    "cultural",
+    "wildlife",
+    "medical"
+   ]
+  },
+  {
+   "q": "Museums and theatres: ___ tourism",
+   "a": "cultural",
+   "d": [
+    "extreme sports",
+    "wildlife",
+    "sailing"
+   ]
+  },
+  {
+   "q": "Whale watching: ___ holidays",
+   "a": "wildlife",
+   "d": [
+    "sailing",
+    "cultural",
+    "cooking"
+   ]
+  },
+  {
+   "q": "Yacht hire: ___ holidays",
+   "a": "sailing",
+   "d": [
+    "wildlife",
+    "cultural",
+    "camping"
+   ]
+  },
+  {
+   "q": "Coldest holiday advert",
+   "a": "ice tourism",
+   "d": [
+    "safari",
+    "cooking holidays",
+    "painting holidays"
+   ]
+  },
+  {
+   "q": "Creating a work of art",
+   "a": "painting holidays",
+   "d": [
+    "ice tourism",
+    "safari",
+    "adventure sports"
+   ]
+  },
+  {
+   "q": "Travelling for treatment",
+   "a": "medical tourism",
+   "d": [
+    "eco-tourism",
+    "cultural tourism",
+    "ice tourism"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which two phrases belong to cultural tourism?",
+   "o": [
+    "local festivals and museums and theatres",
+    "bungee jumping and rafting",
+    "safari and whale watching",
+    "yacht hire and crews"
+   ],
+   "why": "Culture is about traditions, arts and history."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two phrases belong to wildlife holidays?",
+   "o": [
+    "going on safari and whale watching",
+    "museums and theatres",
+    "yacht hire and crews",
+    "bungee jumping and rafting"
+   ],
+   "why": "Wildlife holidays are about animals."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is eco-tourism?",
+   "o": [
+    "visiting natural areas",
+    "travelling for treatment",
+    "shopping in malls",
+    "going to museums"
+   ],
+   "why": "Eco-tourism is about nature."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a benefit of foreign tourism?",
+   "o": [
+    "it helps the economy",
+    "it causes crowding",
+    "it changes local traditions",
+    "it makes noise"
+   ],
+   "why": "Tourists spend money and create jobs."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which key word in 'accommodation that disappears' leads you to the ice hotel ad?",
+   "o": [
+    "'disappears' links to 'the hotel melts in early spring'",
+    "'accommodation' links to cooking",
+    "'that' links to safari",
+    "'disappears' links to painting"
+   ],
+   "why": "Underline key words and find them in the ads."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your family wants a calm, relaxing holiday. Which is the best choice?",
+   "o": [
+    "a cruise",
+    "bungee jumping",
+    "white water rafting",
+    "an adventure holiday"
+   ],
+   "why": "A cruise is relaxing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which phrase from Activity 4 matches the safari advert?",
+   "o": [
+    "wild animals",
+    "creating a work of art",
+    "visiting local markets",
+    "accommodation that disappears"
+   ],
+   "why": "On safari you see wild animals."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do 'yacht hire' and 'experienced crews' belong to sailing holidays?",
+   "o": [
+    "Both are connected with boats and sailing",
+    "Both are about animals",
+    "Both are about museums",
+    "Both are extreme sports"
+   ],
+   "why": "Use the topic of the key words to match them."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the Top Tip tell you to underline key words before matching?",
+   "o": [
+    "Key words help you find the right advert quickly",
+    "It makes the text longer",
+    "Key words are always numbers",
+    "You do not need to read the adverts"
+   ],
+   "why": "Key words link the phrase to the text."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is the best concluding sentence for a paragraph about tourism in Oman?",
+   "o": [
+    "In conclusion, tourism brings many benefits to Oman, but we must protect our traditions.",
+    "I like pizza.",
+    "Bungee jumping is an extreme sport.",
+    "Yesterday I went to school."
+   ],
+   "why": "A concluding sentence sums up the main points."
+  }
+ ]
+}

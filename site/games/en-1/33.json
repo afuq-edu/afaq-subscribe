@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Meg's Learning Club 2",
+ "lesson": "Lesson 2: Language booster 2 – What are these? They're …",
+ "outcomes": [
+  "I can ask: What are these? They're balls.",
+  "I can say one toy or many toys: a car, cars.",
+  "I can count toys and say how many."
+ ],
+ "tf": [
+  {
+   "s": "We use What are these? for many things.",
+   "t": true,
+   "why": "Yes! What are these? They're cars."
+  },
+  {
+   "s": "We use What's this? for one thing.",
+   "t": true,
+   "why": "Great! What's this? It's a car."
+  },
+  {
+   "s": "One teddy, two teddies.",
+   "t": true,
+   "why": "Yes! We say teddies."
+  },
+  {
+   "s": "One ball, two ball.",
+   "t": false,
+   "why": "For two, we add s: two balls."
+  },
+  {
+   "s": "They're planes. is about one plane.",
+   "t": false,
+   "why": "They're planes is about many planes."
+  },
+  {
+   "s": "They're robots. answers What are these?",
+   "t": true,
+   "why": "Right! They're … answers What are these?"
+  },
+  {
+   "s": "We answer What are these? with It's a doll.",
+   "t": false,
+   "why": "For many, we say They're dolls."
+  },
+  {
+   "s": "One train, three trains.",
+   "t": true,
+   "why": "Yes! Add s for many trains."
+  },
+  {
+   "s": "We answer What's this? with They're cars.",
+   "t": false,
+   "why": "For one thing, we say It's a car."
+  },
+  {
+   "s": "How many? asks for a number.",
+   "t": true,
+   "why": "Yes! How many? Three!"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What are these? (two balls)",
+   "o": [
+    "They're balls.",
+    "It's a ball.",
+    "It's balls."
+   ],
+   "why": "Two balls: They're balls."
+  },
+  {
+   "q": "What's this? (one robot)",
+   "o": [
+    "It's a robot.",
+    "They're robots.",
+    "It's robots."
+   ],
+   "why": "One robot: It's a robot."
+  },
+  {
+   "q": "One teddy, two …",
+   "o": [
+    "teddies",
+    "teddys",
+    "teddy"
+   ],
+   "why": "We say teddies."
+  },
+  {
+   "q": "One car, two …",
+   "o": [
+    "cars",
+    "car",
+    "cares"
+   ],
+   "why": "Add s: cars."
+  },
+  {
+   "q": "What are these? (crayons)",
+   "o": [
+    "They're crayons.",
+    "It's a crayon.",
+    "They're crayon."
+   ],
+   "why": "Many crayons: They're crayons."
+  },
+  {
+   "q": "Which question is for many things?",
+   "o": [
+    "What are these?",
+    "What's this?",
+    "Who's this?"
+   ],
+   "why": "What are these? is for many things."
+  },
+  {
+   "q": "How many trains? (one train)",
+   "o": [
+    "One.",
+    "Two.",
+    "Three."
+   ],
+   "why": "There is one train."
+  },
+  {
+   "q": "What's this? (a pen)",
+   "o": [
+    "It's a pen.",
+    "They're pens.",
+    "It's pens."
+   ],
+   "why": "One pen: It's a pen."
+  },
+  {
+   "q": "One yo-yo, three …",
+   "o": [
+    "yo-yos",
+    "yo-yo",
+    "yo-yoes"
+   ],
+   "why": "Add s: yo-yos."
+  },
+  {
+   "q": "Many planes. What do you say?",
+   "o": [
+    "They're planes.",
+    "It's a plane.",
+    "It's planes."
+   ],
+   "why": "Many planes: They're planes."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "One doll, two …",
+   "a": "dolls",
+   "d": [
+    "doll",
+    "dolles",
+    "teddy"
+   ]
+  },
+  {
+   "q": "One teddy, two …",
+   "a": "teddies",
+   "d": [
+    "teddys",
+    "teddy",
+    "teddyes"
+   ]
+  },
+  {
+   "q": "One robot, two …",
+   "a": "robots",
+   "d": [
+    "robot",
+    "robotes",
+    "robit"
+   ]
+  },
+  {
+   "q": "One plane, two …",
+   "a": "planes",
+   "d": [
+    "plane",
+    "planies",
+    "plain"
+   ]
+  },
+  {
+   "q": "Ask about many things",
+   "a": "What are these?",
+   "d": [
+    "What's this?",
+    "Who's this?",
+    "How old?"
+   ]
+  },
+  {
+   "q": "Ask about one thing",
+   "a": "What's this?",
+   "d": [
+    "What are these?",
+    "They're cars.",
+    "How many?"
+   ]
+  },
+  {
+   "q": "Answer for many",
+   "a": "They're balls.",
+   "d": [
+    "It's a ball.",
+    "It's balls.",
+    "Ball."
+   ]
+  },
+  {
+   "q": "Answer for one",
+   "a": "It's a car.",
+   "d": [
+    "They're cars.",
+    "It's cars.",
+    "Cars."
+   ]
+  },
+  {
+   "q": "Ask for a number",
+   "a": "How many?",
+   "d": [
+    "What's this?",
+    "Who's this?",
+    "What colour?"
+   ]
+  },
+  {
+   "q": "One train, two …",
+   "a": "trains",
+   "d": [
+    "train",
+    "traines",
+    "trainies"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which question is for one thing?",
+   "o": [
+    "What's this?",
+    "What are these?",
+    "How many?",
+    "What colour are they?"
+   ],
+   "why": "What's this? is for one thing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means many teddies?",
+   "o": [
+    "teddies",
+    "teddy",
+    "teddys",
+    "teddyes"
+   ],
+   "why": "One teddy, many teddies."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which answer is for many things?",
+   "o": [
+    "They're cars.",
+    "It's a car.",
+    "It's cars.",
+    "A car."
+   ],
+   "why": "They're … is for many things."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question asks for a number?",
+   "o": [
+    "How many?",
+    "What's this?",
+    "What are these?",
+    "Who's this?"
+   ],
+   "why": "How many? asks for a number."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You see three robots. What are these?",
+   "o": [
+    "They're robots.",
+    "It's a robot.",
+    "They're robot.",
+    "It's robots."
+   ],
+   "why": "Many robots: They're robots."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend shows one doll. What's this?",
+   "o": [
+    "It's a doll.",
+    "They're dolls.",
+    "They're doll.",
+    "It's dolls."
+   ],
+   "why": "One doll: It's a doll."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "There are two balls and one ball. How many balls?",
+   "o": [
+    "Three",
+    "Two",
+    "One",
+    "Four"
+   ],
+   "why": "Two and one make three."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your friend points to many cars. Which question is right?",
+   "o": [
+    "What are these?",
+    "What's this?",
+    "Who's this?",
+    "How old are you?"
+   ],
+   "why": "Many things, so we ask What are these?"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "They're ball.",
+    "They're balls.",
+    "It's a ball.",
+    "They're cars."
+   ],
+   "why": "For many, add s: They're balls."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair is right?",
+   "o": [
+    "one train – two trains",
+    "one train – two train",
+    "one trains – two train",
+    "one teddy – two teddys"
+   ],
+   "why": "Add s for many trains."
+  }
+ ]
+}

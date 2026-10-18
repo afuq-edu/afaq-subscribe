@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: A Helping Hand (Listening & Speaking)",
+ "lesson": "Verb forms and scanning; listening for true/false (Listening 2.4.4)",
+ "outcomes": [
+  "Choose correct verb forms and scan a text for information",
+  "Decide if statements are true or false and correct the false ones"
+ ],
+ "tf": [
+  {
+   "s": "Ali wants to study engineering.",
+   "t": true,
+   "why": "Engineering is Ali's own wish."
+  },
+  {
+   "s": "Ali's father wants him to study medicine.",
+   "t": true,
+   "why": "His father wants him to be a doctor."
+  },
+  {
+   "s": "Ali's father is an engineer.",
+   "t": false,
+   "why": "Ali's father is a doctor."
+  },
+  {
+   "s": "Maha is in Grade 12.",
+   "t": false,
+   "why": "Maha is in Grade 11."
+  },
+  {
+   "s": "Ali is in Grade 12.",
+   "t": true,
+   "why": "Yes, Ali is in Grade 12."
+  },
+  {
+   "s": "Maha wants to be a doctor.",
+   "t": false,
+   "why": "Maha wants to be an IT programmer."
+  },
+  {
+   "s": "Scanning means reading every word carefully.",
+   "t": false,
+   "why": "Scanning is looking quickly for specific information."
+  },
+  {
+   "s": "When a statement is false, you should rewrite it correctly.",
+   "t": true,
+   "why": "Rewriting shows you know the right information."
+  },
+  {
+   "s": "Ali is worried because his father wants him to be a doctor.",
+   "t": true,
+   "why": "Ali wants to be an engineer instead."
+  },
+  {
+   "s": "An ambition is something you hope to achieve in the future.",
+   "t": true,
+   "why": "For example, becoming an engineer."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do you look for when you scan?",
+   "o": [
+    "specific information",
+    "the main idea only",
+    "spelling mistakes"
+   ],
+   "why": "Scanning finds names, numbers and facts."
+  },
+  {
+   "q": "Complete: 'Maha wants ___ an IT programmer.'",
+   "o": [
+    "to be",
+    "being",
+    "be"
+   ],
+   "why": "'Want' is followed by 'to' + verb."
+  },
+  {
+   "q": "Complete: 'Ali is worried ___ his future.'",
+   "o": [
+    "about",
+    "at",
+    "in"
+   ],
+   "why": "We say 'worried about'."
+  },
+  {
+   "q": "What does Ali's father want him to be?",
+   "o": [
+    "a doctor",
+    "an engineer",
+    "a teacher"
+   ],
+   "why": "His father hopes he will study medicine."
+  },
+  {
+   "q": "Complete: 'She is good ___ Maths.'",
+   "o": [
+    "at",
+    "on",
+    "of"
+   ],
+   "why": "We say 'good at'."
+  },
+  {
+   "q": "Complete: 'I ___ to study engineering.'",
+   "o": [
+    "want",
+    "wants",
+    "wanting"
+   ],
+   "why": "'I want' is the correct form."
+  },
+  {
+   "q": "Who is in Grade 11?",
+   "o": [
+    "Maha",
+    "Ali",
+    "Ali's father"
+   ],
+   "why": "Ali is in Grade 12, Maha in Grade 11."
+  },
+  {
+   "q": "What does Maha want to design?",
+   "o": [
+    "smart applications",
+    "bridges",
+    "clothes"
+   ],
+   "why": "As an IT programmer, she wants to design smart applications."
+  },
+  {
+   "q": "Complete: 'He can't ___ where he put his book.'",
+   "o": [
+    "remember",
+    "remembers",
+    "remembered"
+   ],
+   "why": "After 'can't' we use the base verb."
+  },
+  {
+   "q": "Which word means something you strongly hope to achieve?",
+   "o": [
+    "ambition",
+    "deadline",
+    "campus"
+   ],
+   "why": "Your ambition is your big goal."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Ali wants to study ...",
+   "a": "engineering",
+   "d": [
+    "medicine",
+    "IT",
+    "law"
+   ]
+  },
+  {
+   "q": "Ali's father's job",
+   "a": "doctor",
+   "d": [
+    "engineer",
+    "programmer",
+    "pilot"
+   ]
+  },
+  {
+   "q": "Maha's grade",
+   "a": "Grade 11",
+   "d": [
+    "Grade 12",
+    "Grade 10",
+    "Grade 9"
+   ]
+  },
+  {
+   "q": "Ali's grade",
+   "a": "Grade 12",
+   "d": [
+    "Grade 11",
+    "Grade 10",
+    "Grade 9"
+   ]
+  },
+  {
+   "q": "Maha wants to be an IT ...",
+   "a": "programmer",
+   "d": [
+    "doctor",
+    "engineer",
+    "teacher"
+   ]
+  },
+  {
+   "q": "Ali's father wants him to study ...",
+   "a": "medicine",
+   "d": [
+    "engineering",
+    "IT",
+    "art"
+   ]
+  },
+  {
+   "q": "Looking quickly for facts",
+   "a": "scanning",
+   "d": [
+    "close reading",
+    "translating",
+    "copying"
+   ]
+  },
+  {
+   "q": "Maha wants to design smart ...",
+   "a": "applications",
+   "d": [
+    "buildings",
+    "cars",
+    "clothes"
+   ]
+  },
+  {
+   "q": "Something you hope to achieve",
+   "a": "ambition",
+   "d": [
+    "deadline",
+    "campus",
+    "anxiety"
+   ]
+  },
+  {
+   "q": "Worried ___ the future",
+   "a": "about",
+   "d": [
+    "at",
+    "on",
+    "in"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why is Ali worried?",
+   "o": [
+    "His father wants him to be a doctor, but he wants to be an engineer",
+    "He failed his exams",
+    "He has no friends",
+    "He lost his ID card"
+   ],
+   "why": "His plans and his father's wishes are different."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Maha want to be?",
+   "o": [
+    "An IT programmer designing smart applications",
+    "A doctor",
+    "An engineer",
+    "A teacher"
+   ],
+   "why": "Maha is interested in IT."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is scanning?",
+   "o": [
+    "Looking quickly through a text for specific information",
+    "Reading every word slowly",
+    "Writing a summary",
+    "Learning a text by heart"
+   ],
+   "why": "Scanning is fast and focused."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should you do with a false statement in this activity?",
+   "o": [
+    "Rewrite it correctly",
+    "Delete it",
+    "Copy it again",
+    "Ignore it"
+   ],
+   "why": "Correcting it shows understanding."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Statement: 'Ali wants to study medicine.' Which correction is right?",
+   "o": [
+    "Ali wants to study engineering.",
+    "Ali wants to study IT.",
+    "Maha wants to study medicine.",
+    "Ali's father wants to study engineering."
+   ],
+   "why": "Medicine is his father's wish, not Ali's."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You need to find which girl wants to study abroad in a text. What should you do?",
+   "o": [
+    "Scan the text for that information",
+    "Read every word twice",
+    "Read only the title",
+    "Translate the whole text"
+   ],
+   "why": "Scanning finds specific facts quickly."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: 'Ali's father wants him ___ medicine.'",
+   "o": [
+    "to study",
+    "study",
+    "studying",
+    "studies"
+   ],
+   "why": "'Want someone to do something'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might Ali find it hard to decide about his future?",
+   "o": [
+    "His wish and his father's wish are different",
+    "He has no interests",
+    "He has finished university",
+    "Maha decided for him"
+   ],
+   "why": "He must balance his dream and his father's hopes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Ali is in Grade 11.' Why is this statement false?",
+   "o": [
+    "Ali is in Grade 12; Maha is in Grade 11",
+    "Ali is in Grade 10",
+    "Ali has left school",
+    "The statement is true"
+   ],
+   "why": "The grades of Ali and Maha were mixed up."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is reading the statements before listening helpful?",
+   "o": [
+    "You know what information to listen for",
+    "You do not need to listen",
+    "It gives you the answers",
+    "It makes the recording shorter"
+   ],
+   "why": "You can focus on the key details."
+  }
+ ]
+}

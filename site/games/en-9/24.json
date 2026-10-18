@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 2: Connections",
+ "lesson": "Lesson 2: Grammar – past simple and past continuous",
+ "outcomes": [
+  "Form the past simple and past continuous correctly.",
+  "Use when and while to show an action that interrupts another.",
+  "Recognise stative verbs that are not used in the continuous."
+ ],
+ "tf": [
+  {
+   "s": "We form the past continuous with was/were + verb-ing.",
+   "t": true,
+   "why": "For example: 'I was walking.'"
+  },
+  {
+   "s": "'I wasn't understanding why' is correct.",
+   "t": false,
+   "why": "'Understand' is stative: 'I didn't understand why.'"
+  },
+  {
+   "s": "The past simple of 'grow' is 'grew'.",
+   "t": true,
+   "why": "Grow is irregular: grow – grew."
+  },
+  {
+   "s": "The past simple of 'stop' is 'stoped'.",
+   "t": false,
+   "why": "We double the p: stopped."
+  },
+  {
+   "s": "We use the past simple for a short action that interrupts a longer action.",
+   "t": true,
+   "why": "Like 'I was cleaning when the phone rang.'"
+  },
+  {
+   "s": "'Hear' is a stative verb, so we don't usually say 'I was hearing'.",
+   "t": true,
+   "why": "We say 'I heard'."
+  },
+  {
+   "s": "The past simple of 'try' is 'tried'.",
+   "t": true,
+   "why": "-y becomes -ied: try – tried."
+  },
+  {
+   "s": "We often use 'while' with the longer action.",
+   "t": true,
+   "why": "'While I was walking home, it started to rain.'"
+  },
+  {
+   "s": "'Know' and 'like' are often used in the past continuous.",
+   "t": false,
+   "why": "They are stative verbs, so we use the past simple."
+  },
+  {
+   "s": "'When we were arriving, all the guests were eating' is the best sentence.",
+   "t": false,
+   "why": "Arriving is the short action: 'When we arrived…'"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: I ___ my homework when my auntie rang.",
+   "o": [
+    "was doing",
+    "do",
+    "am doing"
+   ],
+   "why": "The homework was in progress when she rang."
+  },
+  {
+   "q": "What is the past simple of 'make'?",
+   "o": [
+    "made",
+    "maked",
+    "making"
+   ],
+   "why": "Make is irregular: made."
+  },
+  {
+   "q": "What is the past simple of 'see'?",
+   "o": [
+    "saw",
+    "seed",
+    "seen"
+   ],
+   "why": "See is irregular: saw."
+  },
+  {
+   "q": "Complete: It ___ and I was standing at the bus stop getting wet.",
+   "o": [
+    "was raining",
+    "rains",
+    "is raining"
+   ],
+   "why": "Both are background actions in progress."
+  },
+  {
+   "q": "Complete: When we ___, all the guests were eating.",
+   "o": [
+    "arrived",
+    "were arriving",
+    "arrive"
+   ],
+   "why": "Arriving is the short action."
+  },
+  {
+   "q": "Choose: I ___ why she was upset.",
+   "o": [
+    "didn't understand",
+    "wasn't understanding",
+    "not understand"
+   ],
+   "why": "'Understand' is a stative verb."
+  },
+  {
+   "q": "What is the past simple of 'carry'?",
+   "o": [
+    "carried",
+    "carryed",
+    "carred"
+   ],
+   "why": "-y becomes -ied after a consonant."
+  },
+  {
+   "q": "Complete: ___ I was walking home, it started to rain.",
+   "o": [
+    "While",
+    "During",
+    "Yesterday"
+   ],
+   "why": "'While' goes with the longer action."
+  },
+  {
+   "q": "Complete: ___ you take a lot of books with you?",
+   "o": [
+    "Did",
+    "Were",
+    "Was"
+   ],
+   "why": "Past simple questions use 'Did'."
+  },
+  {
+   "q": "Complete: At 7 a.m. yesterday, I ___ breakfast.",
+   "o": [
+    "was having",
+    "have",
+    "am having"
+   ],
+   "why": "An action in progress at a time in the past."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Past simple of 'win'",
+   "a": "won",
+   "d": [
+    "winned",
+    "wan",
+    "wined"
+   ]
+  },
+  {
+   "q": "Past simple of 'hear'",
+   "a": "heard",
+   "d": [
+    "heared",
+    "hore",
+    "hearing"
+   ]
+  },
+  {
+   "q": "Past simple of 'come'",
+   "a": "came",
+   "d": [
+    "comed",
+    "coming",
+    "comes"
+   ]
+  },
+  {
+   "q": "Past simple of 'live'",
+   "a": "lived",
+   "d": [
+    "liveed",
+    "livd",
+    "living"
+   ]
+  },
+  {
+   "q": "Past simple of 'have'",
+   "a": "had",
+   "d": [
+    "haved",
+    "has",
+    "having"
+   ]
+  },
+  {
+   "q": "I ___ (sleep) at midnight.",
+   "a": "was sleeping",
+   "d": [
+    "were sleeping",
+    "was slept",
+    "am sleeping"
+   ]
+  },
+  {
+   "q": "They ___ (learn) English then.",
+   "a": "were learning",
+   "d": [
+    "was learning",
+    "are learning",
+    "were learn"
+   ]
+  },
+  {
+   "q": "I fell asleep while I ___ a film.",
+   "a": "was watching",
+   "d": [
+    "watch",
+    "am watching",
+    "were watching"
+   ]
+  },
+  {
+   "q": "I ___ the answer. (stative)",
+   "a": "knew",
+   "d": [
+    "was knowing",
+    "knowing",
+    "am knowing"
+   ]
+  },
+  {
+   "q": "Past simple of 'become'",
+   "a": "became",
+   "d": [
+    "becomed",
+    "becoming",
+    "becomes"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is the past continuous?",
+   "o": [
+    "was walking",
+    "walked",
+    "walks",
+    "is walking"
+   ],
+   "why": "was/were + -ing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which verb is NOT usually used in the past continuous?",
+   "o": [
+    "like",
+    "play",
+    "clean",
+    "walk"
+   ],
+   "why": "'Like' is a stative verb."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the past continuous often show?",
+   "o": [
+    "A longer action in progress in the past",
+    "A short finished action",
+    "A habit now",
+    "A future plan"
+   ],
+   "why": "It shows what was happening."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the past simple of 'take'?",
+   "o": [
+    "took",
+    "taked",
+    "taken",
+    "taking"
+   ],
+   "why": "Take is irregular: took."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: My phone ___ while I ___ my room.",
+   "o": [
+    "rang / was cleaning",
+    "was ringing / cleaned",
+    "ring / was cleaning",
+    "rang / am cleaning"
+   ],
+   "why": "Short action (rang) during a longer action (was cleaning)."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I ___ (not need) a dictionary because I ___ (have) an app.",
+   "o": [
+    "didn't need / had",
+    "wasn't needing / was having",
+    "didn't needed / had",
+    "not needed / have"
+   ],
+   "why": "'Need' and 'have' (own) are stative, so we use the past simple."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "What were you doing at 8 p.m. yesterday? Choose the correct answer.",
+   "o": [
+    "I was reading a book.",
+    "I am reading a book.",
+    "I read a book every day.",
+    "I was read a book."
+   ],
+   "why": "An action in progress at a past time."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'arrived' correct in 'When we arrived, all the guests were eating'?",
+   "o": [
+    "It is the short action that happened during the longer one.",
+    "It is a long action in progress.",
+    "It is a stative verb.",
+    "It is a habit."
+   ],
+   "why": "Short action = past simple."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'I wasn't understanding why…' wrong?",
+   "o": [
+    "'Understand' is stative, so we use the past simple.",
+    "We need 'were', not 'was'.",
+    "'Why' cannot follow 'understand'.",
+    "The past continuous needs -ed."
+   ],
+   "why": "Stative verbs are not used in the continuous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'I was eating dinner when my friend called.' Which action started first?",
+   "o": [
+    "eating dinner",
+    "my friend calling",
+    "both started together",
+    "neither happened"
+   ],
+   "why": "The longer action was already in progress."
+  }
+ ]
+}

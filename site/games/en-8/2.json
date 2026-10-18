@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Welcome: Let’s get started!",
+ "lesson": "Lesson 2: WOW! Team Talk – Question words",
+ "outcomes": [
+  "Get to know the four WOW! Team members.",
+  "Choose the correct question word for a question.",
+  "Ask and answer personal questions with a partner."
+ ],
+ "tf": [
+  {
+   "s": "Ali comes from Sur.",
+   "t": true,
+   "why": "Yes, Ali comes from Sur, but he lives in Muscat now."
+  },
+  {
+   "s": "Ali still lives in Sur now.",
+   "t": false,
+   "why": "Ali lives in Muscat now."
+  },
+  {
+   "s": "Ali walks to school because he wants to keep our planet clean.",
+   "t": true,
+   "why": "Great! Walking helps keep the planet clean."
+  },
+  {
+   "s": "Manar designs and makes her own clothes.",
+   "t": true,
+   "why": "Correct! That is why she does design for the magazine."
+  },
+  {
+   "s": "Eric doesn’t like winter sports.",
+   "t": false,
+   "why": "Eric goes skiing in the winter."
+  },
+  {
+   "s": "Rosie always goes to Argentina in the summer.",
+   "t": false,
+   "why": "She often goes there, not always."
+  },
+  {
+   "s": "We use “When” to ask about time.",
+   "t": true,
+   "why": "Right! When asks about time, like a birthday."
+  },
+  {
+   "s": "We use “Where” to ask about a reason.",
+   "t": false,
+   "why": "Where asks about a place; Why asks about a reason."
+  },
+  {
+   "s": "We say “How many brothers do you have?”, not “How much brothers”.",
+   "t": true,
+   "why": "We use How many with things we can count."
+  },
+  {
+   "s": "In a question, the subject comes before the question word: “You do live where?”",
+   "t": false,
+   "why": "The order is question word + auxiliary + subject: Where do you live?"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which question word asks about a place?",
+   "o": [
+    "Where",
+    "When",
+    "Who"
+   ],
+   "why": "Where asks about places."
+  },
+  {
+   "q": "Which question word asks about a person?",
+   "o": [
+    "Who",
+    "What",
+    "How many"
+   ],
+   "why": "Who asks about people."
+  },
+  {
+   "q": "___ is your birthday?",
+   "o": [
+    "When",
+    "Who",
+    "Where"
+   ],
+   "why": "A birthday is a time, so we use When."
+  },
+  {
+   "q": "___ old are you?",
+   "o": [
+    "How",
+    "What",
+    "Why"
+   ],
+   "why": "We ask How old are you?"
+  },
+  {
+   "q": "Who does the photos for the magazine?",
+   "o": [
+    "Eric",
+    "Manar",
+    "Ali"
+   ],
+   "why": "Eric takes the photos."
+  },
+  {
+   "q": "Who writes science articles?",
+   "o": [
+    "Ali",
+    "Rosie",
+    "Eric"
+   ],
+   "why": "Ali is interested in science and nature."
+  },
+  {
+   "q": "Who does the design for the magazine?",
+   "o": [
+    "Manar",
+    "Eric",
+    "Rosie"
+   ],
+   "why": "Manar likes designing things."
+  },
+  {
+   "q": "Who is number 3 in the photos?",
+   "o": [
+    "Rosie",
+    "Ali",
+    "Manar"
+   ],
+   "why": "The photos are Ali 1, Manar 2, Rosie 3, Eric 4."
+  },
+  {
+   "q": "Choose the correct question: ___ do you come from?",
+   "o": [
+    "Where",
+    "How many",
+    "When"
+   ],
+   "why": "Where do you come from? asks about a place."
+  },
+  {
+   "q": "Which question word asks about things?",
+   "o": [
+    "What",
+    "Who",
+    "When"
+   ],
+   "why": "What asks about things, like a favourite subject."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Question word for a place",
+   "a": "Where",
+   "d": [
+    "When",
+    "Who",
+    "Why"
+   ]
+  },
+  {
+   "q": "Question word for time",
+   "a": "When",
+   "d": [
+    "Where",
+    "What",
+    "Who"
+   ]
+  },
+  {
+   "q": "Question word for a reason",
+   "a": "Why",
+   "d": [
+    "Where",
+    "When",
+    "How many"
+   ]
+  },
+  {
+   "q": "Question word for a person",
+   "a": "Who",
+   "d": [
+    "What",
+    "When",
+    "Why"
+   ]
+  },
+  {
+   "q": "Question word for a number",
+   "a": "How many",
+   "d": [
+    "Who",
+    "Where",
+    "Why"
+   ]
+  },
+  {
+   "q": "Where does Ali come from?",
+   "a": "Sur",
+   "d": [
+    "Argentina",
+    "Salalah",
+    "Nizwa"
+   ]
+  },
+  {
+   "q": "Where does Ali live now?",
+   "a": "Muscat",
+   "d": [
+    "Sur",
+    "Argentina",
+    "Sohar"
+   ]
+  },
+  {
+   "q": "Who goes skiing in winter?",
+   "a": "Eric",
+   "d": [
+    "Ali",
+    "Manar",
+    "Rosie"
+   ]
+  },
+  {
+   "q": "Who makes her own clothes?",
+   "a": "Manar",
+   "d": [
+    "Rosie",
+    "Eric",
+    "Ali"
+   ]
+  },
+  {
+   "q": "Who often goes to Argentina?",
+   "a": "Rosie",
+   "d": [
+    "Manar",
+    "Ali",
+    "Eric"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does Rosie do for the magazine?",
+   "o": [
+    "Writing",
+    "Photos",
+    "Design",
+    "Science articles"
+   ],
+   "why": "Rosie is the team’s writer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why does Ali walk to school every day?",
+   "o": [
+    "He wants to keep our planet clean.",
+    "He doesn’t have a bike.",
+    "His school is in Sur.",
+    "He likes winter sports."
+   ],
+   "why": "Ali cares about the environment."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question word do we use to ask about the reason for something?",
+   "o": [
+    "Why",
+    "When",
+    "Where",
+    "Who"
+   ],
+   "why": "Why asks for a reason."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the word order in a question like “Where do you live?”",
+   "o": [
+    "question word + auxiliary + subject",
+    "subject + question word + auxiliary",
+    "auxiliary + subject + question word",
+    "subject + auxiliary + question word"
+   ],
+   "why": "Where (question word) + do (auxiliary) + you (subject)."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct question: ___ brothers and sisters do you have?",
+   "o": [
+    "How many",
+    "How much",
+    "How old",
+    "Who"
+   ],
+   "why": "Brothers and sisters can be counted, so we use How many."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The answer is “Because I love animals.” What was the question word?",
+   "o": [
+    "Why",
+    "Where",
+    "When",
+    "How many"
+   ],
+   "why": "Because gives a reason, so the question used Why."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which question is correct?",
+   "o": [
+    "What is your favourite subject?",
+    "What your favourite subject is?",
+    "Your favourite subject what is?",
+    "Is what your favourite subject?"
+   ],
+   "why": "The question word comes first, then the verb, then the subject."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Who is probably the most athletic member of the team?",
+   "o": [
+    "Eric, because he talks about sports",
+    "Manar, because she makes clothes",
+    "Rosie, because she writes",
+    "Ali, because he comes from Sur"
+   ],
+   "why": "Eric talks about sports and goes skiing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which team member most wants to protect nature and the Earth?",
+   "o": [
+    "Ali",
+    "Manar",
+    "Rosie",
+    "Eric"
+   ],
+   "why": "Ali is interested in science, nature and the environment."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which article would Manar probably enjoy most?",
+   "o": [
+    "How to design your own clothes",
+    "The best skiing places",
+    "Science of the rainforest",
+    "Football results"
+   ],
+   "why": "Manar likes clothes and making things."
+  }
+ ]
+}

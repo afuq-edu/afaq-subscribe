@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 3 – Let’s explore!",
+ "lesson": "Lesson 3: Grammar – will / won’t",
+ "outcomes": [
+  "Use will and won't to talk about decisions and plans.",
+  "Ask and answer Will you …? questions with short answers.",
+  "Use time words like soon, later and tomorrow."
+ ],
+ "tf": [
+  {
+   "s": "\"I'll\" is the short form of \"I will\".",
+   "t": true,
+   "why": "I'll = I will."
+  },
+  {
+   "s": "\"Won't\" is the short form of \"will not\".",
+   "t": true,
+   "why": "won't = will not."
+  },
+  {
+   "s": "\"He will sends a letter.\" is correct.",
+   "t": false,
+   "why": "After will we use the base verb: He will send a letter."
+  },
+  {
+   "s": "A good short answer to \"Will you play football tomorrow?\" is \"Yes, I will.\"",
+   "t": true,
+   "why": "We answer Will you …? with Yes, I will. or No, I won't."
+  },
+  {
+   "s": "We use will to talk about yesterday.",
+   "t": false,
+   "why": "We use will for the future, like tomorrow or later."
+  },
+  {
+   "s": "\"Tomorrow\", \"later\" and \"soon\" are time words for the future.",
+   "t": true,
+   "why": "These words often go with will."
+  },
+  {
+   "s": "The negative of \"We will have time.\" is \"We willn't have time.\"",
+   "t": false,
+   "why": "The negative is: We won't have time."
+  },
+  {
+   "s": "\"What will you get him?\" is a correct question.",
+   "t": true,
+   "why": "Question order: What + will + you + verb?"
+  },
+  {
+   "s": "\"No, I don't will.\" is a correct short answer.",
+   "t": false,
+   "why": "The correct short answer is: No, I won't."
+  },
+  {
+   "s": "\"It's raining. I'll take an umbrella.\" shows a decision.",
+   "t": true,
+   "why": "We use I'll when we decide something now."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: It's Hilal's birthday tomorrow. I ______ get him a present later.",
+   "o": [
+    "will",
+    "did",
+    "was"
+   ],
+   "why": "We use will for a plan in the future."
+  },
+  {
+   "q": "Make it negative: I will buy a book.",
+   "o": [
+    "I won't buy a book.",
+    "I will buyn't a book.",
+    "I don't will buy a book."
+   ],
+   "why": "will not = won't."
+  },
+  {
+   "q": "Will they study English tomorrow? (yes)",
+   "o": [
+    "Yes, they will.",
+    "Yes, they do.",
+    "Yes, they are."
+   ],
+   "why": "Short answer: Yes, they will."
+  },
+  {
+   "q": "Complete: Shahad ______ (not wear) her new jeans.",
+   "o": [
+    "won't wear",
+    "won't wears",
+    "not will wear"
+   ],
+   "why": "won't + base verb."
+  },
+  {
+   "q": "Complete: Azza and Badriya ______ (bake) a rocket cake.",
+   "o": [
+    "will bake",
+    "will baked",
+    "will baking"
+   ],
+   "why": "will + base verb."
+  },
+  {
+   "q": "Which is a time word for the future?",
+   "o": [
+    "tomorrow",
+    "yesterday",
+    "last week"
+   ],
+   "why": "Tomorrow is in the future."
+  },
+  {
+   "q": "Order the words: you / will / What / get him?",
+   "o": [
+    "What will you get him?",
+    "What you will get him?",
+    "Will what you get him?"
+   ],
+   "why": "Question: What + will + you + verb."
+  },
+  {
+   "q": "Choose: I (will / won't) buy a book; I think I'll get him a game.",
+   "o": [
+    "won't",
+    "will",
+    "am"
+   ],
+   "why": "He will get a game, so he won't buy a book."
+  },
+  {
+   "q": "Will you wear trainers to school tomorrow? (no)",
+   "o": [
+    "No, I won't.",
+    "No, I don't.",
+    "No, I wasn't."
+   ],
+   "why": "Short answer: No, I won't."
+  },
+  {
+   "q": "Which sentence is about the future?",
+   "o": [
+    "I'll do my homework this evening.",
+    "I did my homework.",
+    "I do my homework every day."
+   ],
+   "why": "I'll = I will, for the future."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Short form of \"I will\"",
+   "a": "I'll",
+   "d": [
+    "I'm",
+    "I've",
+    "I'd"
+   ]
+  },
+  {
+   "q": "Short form of \"will not\"",
+   "a": "won't",
+   "d": [
+    "don't",
+    "can't",
+    "isn't"
+   ]
+  },
+  {
+   "q": "Will you go? (yes)",
+   "a": "Yes, I will.",
+   "d": [
+    "Yes, I do.",
+    "Yes, I am.",
+    "Yes, I did."
+   ]
+  },
+  {
+   "q": "He will ___ a letter.",
+   "a": "send",
+   "d": [
+    "sends",
+    "sent",
+    "sending"
+   ]
+  },
+  {
+   "q": "We will ___ a cake.",
+   "a": "bake",
+   "d": [
+    "baked",
+    "bakes",
+    "baking"
+   ]
+  },
+  {
+   "q": "Future time word",
+   "a": "later",
+   "d": [
+    "yesterday",
+    "last year",
+    "ago"
+   ]
+  },
+  {
+   "q": "I'll do it ___ (future)",
+   "a": "this evening",
+   "d": [
+    "last night",
+    "yesterday",
+    "last week"
+   ]
+  },
+  {
+   "q": "She ___ wear jeans. (negative)",
+   "a": "won't",
+   "d": [
+    "willn't",
+    "doesn't will",
+    "not will"
+   ]
+  },
+  {
+   "q": "___ you play tomorrow?",
+   "a": "Will",
+   "d": [
+    "Did",
+    "Were",
+    "Was"
+   ]
+  },
+  {
+   "q": "It's raining. I'll take an ___",
+   "a": "umbrella",
+   "d": [
+    "telescope",
+    "rocket",
+    "comet"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the full form of \"I'll\"?",
+   "o": [
+    "I will",
+    "I all",
+    "I would",
+    "I well"
+   ],
+   "why": "I'll = I will."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What comes after will?",
+   "o": [
+    "the base verb",
+    "a verb with -s",
+    "a verb with -ed",
+    "a verb with -ing"
+   ],
+   "why": "We say will send, will bake, will go."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means \"will not\"?",
+   "o": [
+    "won't",
+    "want",
+    "wasn't",
+    "wouldn't"
+   ],
+   "why": "won't = will not."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group has only time words for the future?",
+   "o": [
+    "soon, later, tomorrow",
+    "yesterday, last week, ago",
+    "now, yesterday, before",
+    "last night, soon, ago"
+   ],
+   "why": "Soon, later and tomorrow are in the future."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: \"Will you use the computer tomorrow?\" \"Yes, I ______.\"",
+   "o": [
+    "will",
+    "do",
+    "use",
+    "am"
+   ],
+   "why": "Short answer: Yes, I will."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Nawal is going to bake a rocket cake for the party. How do you report her plan?",
+   "o": [
+    "Nawal will bake a rocket cake.",
+    "Nawal will bakes a rocket cake.",
+    "Nawal bake a rocket cake yesterday.",
+    "Nawal won't bakes a rocket cake."
+   ],
+   "why": "will + base verb for a plan."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "It's your friend's birthday tomorrow. What do you say?",
+   "o": [
+    "I'll get him a present.",
+    "I got him a present yesterday.",
+    "I get him a present every day.",
+    "I'm get him a present."
+   ],
+   "why": "Use I'll for a decision about the future."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "He will sends a letter.",
+    "He will send a letter.",
+    "They won't go today.",
+    "Will you study tomorrow?"
+   ],
+   "why": "After will, we don't add -s: He will send."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"I won't buy a book. I think I'll get him a game.\" What will the person buy?",
+   "o": [
+    "a game",
+    "a book",
+    "a book and a game",
+    "nothing"
+   ],
+   "why": "won't buy a book, but I'll get a game."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say \"I'll take an umbrella\" when it's raining?",
+   "o": [
+    "We make a decision now about the future.",
+    "We talk about the past.",
+    "We talk about every day.",
+    "We ask a question."
+   ],
+   "why": "I'll shows a decision we make at that moment."
+  }
+ ]
+}

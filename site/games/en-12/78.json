@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: Adverts – Appealing or Appalling? (Writing)",
+ "lesson": "Hard-sell and soft-sell; discussing TV adverts; planning an evaluation / Writing an evaluation of an advertisement",
+ "outcomes": [
+  "Explain the difference between hard-sell and soft-sell adverts",
+  "Sort positive and negative words for describing adverts",
+  "Write an evaluation of an advert with an opinion and reasons"
+ ],
+ "tf": [
+  {
+   "s": "An advert must get its message across quickly.",
+   "t": true,
+   "why": "Yes, ads have very little time or space."
+  },
+  {
+   "s": "A hard-sell advert focuses on how a product makes you feel.",
+   "t": false,
+   "why": "Hard-sell emphasises the product's features; soft-sell focuses on feelings."
+  },
+  {
+   "s": "A soft-sell advert focuses on how a product makes consumers feel.",
+   "t": true,
+   "why": "Correct, soft-sell appeals to emotions."
+  },
+  {
+   "s": "In advertising, 'copy' means the words in an advert.",
+   "t": true,
+   "why": "Right, copy is the text of the ad."
+  },
+  {
+   "s": "'Memorable' is a negative word for describing an advert.",
+   "t": false,
+   "why": "Memorable is positive: the ad is easy to remember."
+  },
+  {
+   "s": "'Repetitive' and 'misleading' are negative words for an advert.",
+   "t": true,
+   "why": "Yes, they describe bad points of an ad."
+  },
+  {
+   "s": "An evaluation only describes the advert and gives no opinion.",
+   "t": false,
+   "why": "An evaluation must give your opinion supported by reasons."
+  },
+  {
+   "s": "Many adverts combine hard-sell and soft-sell techniques.",
+   "t": true,
+   "why": "Yes, a car ad can show features and feelings."
+  },
+  {
+   "s": "A washing machine ad that lists what the machine can do uses soft-sell.",
+   "t": false,
+   "why": "Listing features is a hard-sell technique."
+  },
+  {
+   "s": "A second draft helps you correct mistakes and improve organisation.",
+   "t": true,
+   "why": "Correct, it makes your writing clearer."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does 'copy' mean in advertising?",
+   "o": [
+    "the words in an advert",
+    "a photocopy",
+    "the price"
+   ],
+   "why": "Copy is the advert's text."
+  },
+  {
+   "q": "What does hard-sell emphasise?",
+   "o": [
+    "the product's features",
+    "the buyer's feelings",
+    "the weather"
+   ],
+   "why": "Hard-sell tells you what the product can do."
+  },
+  {
+   "q": "What does soft-sell focus on?",
+   "o": [
+    "how the product makes you feel",
+    "technical details only",
+    "the price list"
+   ],
+   "why": "Soft-sell appeals to emotions."
+  },
+  {
+   "q": "Which is a positive word for an advert?",
+   "o": [
+    "creative",
+    "annoying",
+    "boring"
+   ],
+   "why": "Creative is a good quality."
+  },
+  {
+   "q": "Which is a negative word for an advert?",
+   "o": [
+    "irritating",
+    "amusing",
+    "popular"
+   ],
+   "why": "Irritating means it annoys you."
+  },
+  {
+   "q": "What must an evaluation include?",
+   "o": [
+    "an opinion with reasons",
+    "only a picture",
+    "a list of prices"
+   ],
+   "why": "You give and support your view."
+  },
+  {
+   "q": "Why can an advert be irritating?",
+   "o": [
+    "it is repetitive",
+    "it is creative",
+    "it is funny"
+   ],
+   "why": "Seeing the same thing again and again annoys people."
+  },
+  {
+   "q": "What is a 'print ad'?",
+   "o": [
+    "an advert in a newspaper or magazine",
+    "a TV advert",
+    "a radio song"
+   ],
+   "why": "Print ads appear on paper."
+  },
+  {
+   "q": "What does 'misleading' mean?",
+   "o": [
+    "giving a wrong idea",
+    "very funny",
+    "easy to remember"
+   ],
+   "why": "A misleading ad makes you believe something untrue."
+  },
+  {
+   "q": "Where can you find help with the layout of an evaluation?",
+   "o": [
+    "the Writing Guide",
+    "the glossary of names",
+    "the answer key"
+   ],
+   "why": "The Writing Guide shows structure and layout."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Technique that lists features",
+   "a": "hard-sell",
+   "d": [
+    "soft-sell",
+    "print ad",
+    "copy"
+   ]
+  },
+  {
+   "q": "Technique about feelings",
+   "a": "soft-sell",
+   "d": [
+    "hard-sell",
+    "copy",
+    "slogan"
+   ]
+  },
+  {
+   "q": "The words in an advert",
+   "a": "copy",
+   "d": [
+    "print",
+    "draft",
+    "logo"
+   ]
+  },
+  {
+   "q": "Positive: easy to remember",
+   "a": "memorable",
+   "d": [
+    "repetitive",
+    "misleading",
+    "boring"
+   ]
+  },
+  {
+   "q": "Negative: gives a false idea",
+   "a": "misleading",
+   "d": [
+    "memorable",
+    "creative",
+    "amusing"
+   ]
+  },
+  {
+   "q": "Negative: says the same again",
+   "a": "repetitive",
+   "d": [
+    "creative",
+    "special",
+    "popular"
+   ]
+  },
+  {
+   "q": "Positive: makes you laugh",
+   "a": "funny",
+   "d": [
+    "annoying",
+    "irritating",
+    "boring"
+   ]
+  },
+  {
+   "q": "Negative: annoying",
+   "a": "irritating",
+   "d": [
+    "amusing",
+    "popular",
+    "special"
+   ]
+  },
+  {
+   "q": "Washing machine ad technique",
+   "a": "hard-sell",
+   "d": [
+    "soft-sell",
+    "mock-up",
+    "slogan"
+   ]
+  },
+  {
+   "q": "Opinion + reasons in writing",
+   "a": "evaluation",
+   "d": [
+    "description",
+    "dictation",
+    "list"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the main aim of an advertisement?",
+   "o": [
+    "to get its message across quickly and persuade",
+    "to tell a long story",
+    "to teach grammar",
+    "to give the news"
+   ],
+   "why": "Ads must persuade fast."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list contains only positive words?",
+   "o": [
+    "funny, memorable, creative",
+    "boring, annoying, misleading",
+    "irritating, repetitive, boring",
+    "misleading, special, annoying"
+   ],
+   "why": "These words praise an advert."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list contains only negative words?",
+   "o": [
+    "irritating, repetitive, misleading",
+    "funny, amusing, popular",
+    "special, creative, memorable",
+    "memorable, boring, funny"
+   ],
+   "why": "These words criticise an advert."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you do after writing your first draft at school?",
+   "o": [
+    "edit it at home and bring a second draft",
+    "throw it away",
+    "copy a friend's",
+    "hand it in without reading"
+   ],
+   "why": "A second draft improves your work."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "An advert shows a family smiling happily in a car, with no technical details. Which technique is this?",
+   "o": [
+    "soft-sell",
+    "hard-sell",
+    "copy",
+    "print"
+   ],
+   "why": "It focuses on feelings, not features."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "An advert lists a phone's camera, battery and memory. Which technique is this?",
+   "o": [
+    "hard-sell",
+    "soft-sell",
+    "misleading",
+    "repetitive"
+   ],
+   "why": "Listing features is hard-sell."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence gives an opinion with a reason?",
+   "o": [
+    "In my opinion, the ad is misleading because it promises things the product can't do.",
+    "The ad is on TV.",
+    "The ad lasts 30 seconds.",
+    "There is a shampoo in the ad."
+   ],
+   "why": "It states a view and explains why."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do many car adverts combine hard-sell and soft-sell?",
+   "o": [
+    "they show design features and also how driving the car feels",
+    "they want to be boring",
+    "they have no features",
+    "they want to confuse buyers"
+   ],
+   "why": "Combining both appeals to reason and emotion."
+  },
+  {
+   "lv": "التحليل",
+   "q": "An advert repeats the same slogan many times. Why might viewers find it irritating?",
+   "o": [
+    "it is repetitive and becomes annoying",
+    "it is too creative",
+    "it is too short",
+    "it has no slogan"
+   ],
+   "why": "Repetition can quickly annoy people."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is an evaluation more than a description?",
+   "o": [
+    "it judges the ad and supports the judgement with reasons",
+    "it is longer",
+    "it uses more pictures",
+    "it has no paragraphs"
+   ],
+   "why": "Evaluating means giving and supporting your opinion."
+  }
+ ]
+}

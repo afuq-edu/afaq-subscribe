@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U4",
+ "lesson": "Unit 4 – Lesson 11: Get ready for A1 Movers & Fun corner",
+ "outcomes": [
+  "Read definitions and write the correct job words.",
+  "Listen to the whole dialogue before you choose.",
+  "Use job words, must and mustn't in a board game."
+ ],
+ "tf": [
+  {
+   "s": "'This person is cooking some food' is a chef.",
+   "t": true,
+   "why": "Yes! A chef cooks food."
+  },
+  {
+   "s": "'This car is taking a person to the hospital' is a police car.",
+   "t": false,
+   "why": "It's an ambulance."
+  },
+  {
+   "s": "'This person is repairing a car' is a mechanic.",
+   "t": true,
+   "why": "Correct! Mechanics repair cars."
+  },
+  {
+   "s": "'This person is working in a field' is a dentist.",
+   "t": false,
+   "why": "A farmer works in a field."
+  },
+  {
+   "s": "In Listening Part 4, you must listen to the whole dialogue.",
+   "t": true,
+   "why": "Well done! The answer can change later."
+  },
+  {
+   "s": "In Reading Part 1, some sentences are very similar.",
+   "t": true,
+   "why": "Yes! Read all the sentences carefully."
+  },
+  {
+   "s": "The first answer you hear is always correct.",
+   "t": false,
+   "why": "The answer may change later, so listen to the end."
+  },
+  {
+   "s": "In the game, a scientist works in the science lab.",
+   "t": true,
+   "why": "Correct! scientist – science lab."
+  },
+  {
+   "s": "'You must arrive on time' is a bad thing.",
+   "t": false,
+   "why": "Arriving on time is good, so you go forward."
+  },
+  {
+   "s": "A dentist looks after your teeth.",
+   "t": true,
+   "why": "Yes! A dentist looks after your teeth."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "This person helps sick animals.",
+   "o": [
+    "a vet",
+    "a mechanic",
+    "a lawyer"
+   ],
+   "why": "Vets help animals."
+  },
+  {
+   "q": "This person works for the police.",
+   "o": [
+    "a police officer",
+    "a chef",
+    "a farmer"
+   ],
+   "why": "Police officers work for the police."
+  },
+  {
+   "q": "This person drives a bus.",
+   "o": [
+    "a bus driver",
+    "a farmer",
+    "a chef"
+   ],
+   "why": "Bus drivers drive buses."
+  },
+  {
+   "q": "This person is working in a science lab.",
+   "o": [
+    "a scientist",
+    "a chef",
+    "a farmer"
+   ],
+   "why": "Scientists work in labs."
+  },
+  {
+   "q": "Square: 'You're making sandwiches.'",
+   "o": [
+    "Miss a turn.",
+    "Go back home.",
+    "Spin again."
+   ],
+   "why": "The square says: Miss a turn."
+  },
+  {
+   "q": "In Listening Part 4, listen to the ...",
+   "o": [
+    "whole dialogue",
+    "first word",
+    "last word"
+   ],
+   "why": "The answer can change later."
+  },
+  {
+   "q": "Where does a chef work in the game?",
+   "o": [
+    "the restaurant",
+    "the farm",
+    "the science lab"
+   ],
+   "why": "chef – restaurant."
+  },
+  {
+   "q": "Where does a farmer work?",
+   "o": [
+    "the farm",
+    "the restaurant",
+    "the science lab"
+   ],
+   "why": "farmer – farm."
+  },
+  {
+   "q": "You mustn't be ___ !",
+   "o": [
+    "late",
+    "on time",
+    "quiet"
+   ],
+   "why": "Being late is not good."
+  },
+  {
+   "q": "Not wearing your chef's hat?",
+   "o": [
+    "Go back home.",
+    "Spin again.",
+    "Go forward."
+   ],
+   "why": "In the game, you go back home."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Repairing a car",
+   "a": "mechanic",
+   "d": [
+    "farmer",
+    "chef",
+    "dentist"
+   ]
+  },
+  {
+   "q": "Working for the fire brigade",
+   "a": "firefighter",
+   "d": [
+    "vet",
+    "chef",
+    "lawyer"
+   ]
+  },
+  {
+   "q": "Working in a field",
+   "a": "farmer",
+   "d": [
+    "mechanic",
+    "dentist",
+    "lawyer"
+   ]
+  },
+  {
+   "q": "Cooking some food",
+   "a": "chef",
+   "d": [
+    "vet",
+    "mechanic",
+    "farmer"
+   ]
+  },
+  {
+   "q": "Takes a person to hospital",
+   "a": "ambulance",
+   "d": [
+    "bus",
+    "taxi",
+    "fire engine"
+   ]
+  },
+  {
+   "q": "Looks after your teeth",
+   "a": "dentist",
+   "d": [
+    "chef",
+    "farmer",
+    "mechanic"
+   ]
+  },
+  {
+   "q": "Scientist works in the ...",
+   "a": "science lab",
+   "d": [
+    "farm",
+    "restaurant",
+    "garage"
+   ]
+  },
+  {
+   "q": "Chef works in the ...",
+   "a": "restaurant",
+   "d": [
+    "farm",
+    "science lab",
+    "cave"
+   ]
+  },
+  {
+   "q": "You mustn't be ...",
+   "a": "late",
+   "d": [
+    "quiet",
+    "on time",
+    "careful"
+   ]
+  },
+  {
+   "q": "Listen to the whole ...",
+   "a": "dialogue",
+   "d": [
+    "word",
+    "letter",
+    "number"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the Reading and Writing Part 1 tip?",
+   "o": [
+    "Read all the sentences carefully; some are very similar.",
+    "Only read the first word.",
+    "Write very fast.",
+    "Don't read the sentences."
+   ],
+   "why": "Similar sentences need careful reading."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where does a farmer work in the game?",
+   "o": [
+    "the farm",
+    "the science lab",
+    "the restaurant",
+    "the hospital"
+   ],
+   "why": "farmer – farm."
+  },
+  {
+   "lv": "التذكر",
+   "q": "'You're not wearing your chef's hat.' What happens?",
+   "o": [
+    "Go back home.",
+    "Spin again.",
+    "Go forward two spaces.",
+    "You win."
+   ],
+   "why": "In the game, you go back home."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which definition is for 'a firefighter'?",
+   "o": [
+    "This person is working for the fire brigade.",
+    "This person is cooking some food.",
+    "This person is working in a field.",
+    "This person is repairing a car."
+   ],
+   "why": "Firefighters work for the fire brigade."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a definition for 'a dentist'.",
+   "o": [
+    "This person looks after your teeth.",
+    "This person repairs cars.",
+    "This person cooks food.",
+    "This person works in a field."
+   ],
+   "why": "Dentists look after teeth."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct house rule.",
+   "o": [
+    "You must help your family.",
+    "You must shout at your family.",
+    "You mustn't help your family.",
+    "You must to help your family."
+   ],
+   "why": "Helping your family is a good rule."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Square: 'You must arrive on time.' What do you do?",
+   "o": [
+    "Go forward.",
+    "Go back home.",
+    "Miss a turn.",
+    "Stop the game."
+   ],
+   "why": "Arriving on time is good, so you go forward."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why must you listen to the whole dialogue in Part 4?",
+   "o": [
+    "Because the first answer you hear may change later.",
+    "Because the dialogue is boring.",
+    "Because you can't see the pictures.",
+    "Because there is no answer."
+   ],
+   "why": "Speakers sometimes change their answer."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which definition is best for 'a mechanic'?",
+   "o": [
+    "This person is repairing a car.",
+    "This person is driving a bus.",
+    "This person is cooking some food.",
+    "This person is looking after animals."
+   ],
+   "why": "Mechanics repair cars; drivers only drive them."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair is NOT correct?",
+   "o": [
+    "chef – science lab",
+    "scientist – science lab",
+    "farmer – farm",
+    "chef – restaurant"
+   ],
+   "why": "A chef works in a restaurant."
+  }
+ ]
+}

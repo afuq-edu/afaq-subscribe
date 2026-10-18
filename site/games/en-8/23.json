@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 2: Adventure sports",
+ "lesson": "Lesson 8: Literacy – Reading brochures and adverts",
+ "outcomes": [
+  "Skim a brochure to find its type and purpose.",
+  "Scan a brochure for facts about four holidays.",
+  "Spot persuasive words in brochures and adverts."
+ ],
+ "tf": [
+  {
+   "s": "A brochure often tries to get you to buy something or go somewhere.",
+   "t": true,
+   "why": "Yes, brochures are written to persuade."
+  },
+  {
+   "s": "You can watch penguins on the safari holiday.",
+   "t": false,
+   "why": "Penguins are on the polar holiday in the Antarctic."
+  },
+  {
+   "s": "On the safari holiday you can see oryx in Oman.",
+   "t": true,
+   "why": "Correct, the safari adventure shows oryx in Oman."
+  },
+  {
+   "s": "The safari tour groups are small so you can get close to the animals.",
+   "t": true,
+   "why": "Well done, small groups get closer to the animals."
+  },
+  {
+   "s": "The climbing holiday is in the Antarctic.",
+   "t": false,
+   "why": "You climb up rocks in Spain on the climbing holiday."
+  },
+  {
+   "s": "Sandboarding in Oman is on the extreme sport holiday.",
+   "t": true,
+   "why": "Yes, sandboarding is an extreme sport."
+  },
+  {
+   "s": "Persuasive adjectives in adverts are always 100% true.",
+   "t": false,
+   "why": "Be careful: persuasive words may not always be true."
+  },
+  {
+   "s": "'Stunning' means very beautiful.",
+   "t": true,
+   "why": "Right, stunning scenery is very beautiful."
+  },
+  {
+   "s": "An expert is someone who is new to an activity.",
+   "t": false,
+   "why": "An expert knows a lot and has done it for a long time."
+  },
+  {
+   "s": "When you skim, you look quickly at the title, headings and pictures.",
+   "t": true,
+   "why": "Good! Skimming gives you the main idea fast."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What type of text is Adams' Adventures?",
+   "o": [
+    "a brochure",
+    "a diary",
+    "a poem"
+   ],
+   "why": "It is a brochure for adventure holidays."
+  },
+  {
+   "q": "Where can you watch penguins?",
+   "o": [
+    "in the Antarctic",
+    "in Spain",
+    "in Oman"
+   ],
+   "why": "Penguins are in the Antarctic on the polar holiday."
+  },
+  {
+   "q": "Which holiday lets you climb rocks in Spain?",
+   "o": [
+    "climbing",
+    "polar",
+    "safari"
+   ],
+   "why": "Climbing up rocks in Spain is the climbing holiday."
+  },
+  {
+   "q": "Why do brochures use positive words?",
+   "o": [
+    "to persuade people",
+    "to tell a sad story",
+    "to give a test"
+   ],
+   "why": "Positive words help sell holidays."
+  },
+  {
+   "q": "Complete: The scenery is ___. (very beautiful)",
+   "o": [
+    "stunning",
+    "gentle",
+    "expert"
+   ],
+   "why": "Stunning means very beautiful."
+  },
+  {
+   "q": "Complete: Walking across ___ green hills is lovely.",
+   "o": [
+    "gentle",
+    "terrific",
+    "expert"
+   ],
+   "why": "Gentle hills are soft and not steep."
+  },
+  {
+   "q": "Laith has been a diver for many years. He's a real diving ___.",
+   "o": [
+    "expert",
+    "brochure",
+    "safari"
+   ],
+   "why": "An expert has a lot of skill and experience."
+  },
+  {
+   "q": "Which word is persuasive?",
+   "o": [
+    "terrific",
+    "holiday",
+    "Spain"
+   ],
+   "why": "Terrific is a strong positive adjective."
+  },
+  {
+   "q": "Go sandboarding in Oman: which holiday?",
+   "o": [
+    "extreme sport",
+    "polar",
+    "climbing"
+   ],
+   "why": "Sandboarding is on the extreme sport holiday."
+  },
+  {
+   "q": "What do you look at first when you skim?",
+   "o": [
+    "title, headings and pictures",
+    "every small word",
+    "the last word only"
+   ],
+   "why": "Skimming means looking quickly at the main parts."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Holiday with penguins",
+   "a": "polar",
+   "d": [
+    "safari",
+    "climbing",
+    "extreme sport"
+   ]
+  },
+  {
+   "q": "Holiday with oryx",
+   "a": "safari",
+   "d": [
+    "polar",
+    "climbing",
+    "diving"
+   ]
+  },
+  {
+   "q": "Climb rocks in this country",
+   "a": "Spain",
+   "d": [
+    "Oman",
+    "China",
+    "the UK"
+   ]
+  },
+  {
+   "q": "Watch penguins in the",
+   "a": "Antarctic",
+   "d": [
+    "desert",
+    "valley",
+    "Spain"
+   ]
+  },
+  {
+   "q": "Very beautiful",
+   "a": "stunning",
+   "d": [
+    "gentle",
+    "expert",
+    "small"
+   ]
+  },
+  {
+   "q": "Soft, not steep (hills)",
+   "a": "gentle",
+   "d": [
+    "stunning",
+    "terrific",
+    "expert"
+   ]
+  },
+  {
+   "q": "A person with lots of skill",
+   "a": "expert",
+   "d": [
+    "opponent",
+    "tourist",
+    "beginner"
+   ]
+  },
+  {
+   "q": "Text that sells holidays",
+   "a": "brochure",
+   "d": [
+    "diary",
+    "poem",
+    "report"
+   ]
+  },
+  {
+   "q": "Sandboarding is on this holiday",
+   "a": "extreme sport",
+   "d": [
+    "polar",
+    "safari",
+    "climbing"
+   ]
+  },
+  {
+   "q": "Words that persuade",
+   "a": "adjectives",
+   "d": [
+    "numbers",
+    "dates",
+    "names"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the purpose of the Adams' Adventures text?",
+   "o": [
+    "to get you to go on an adventure holiday",
+    "to tell a story about a family",
+    "to teach you science",
+    "to give news about sport"
+   ],
+   "why": "A brochure persuades readers to book a holiday."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which animals can you see on the safari adventure in Oman?",
+   "o": [
+    "oryx",
+    "penguins",
+    "polar bears",
+    "dolphins"
+   ],
+   "why": "The safari adventure shows oryx in Oman."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'stunning' mean?",
+   "o": [
+    "very beautiful",
+    "very small",
+    "very slow",
+    "very cold"
+   ],
+   "why": "Stunning scenery is very beautiful."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group of words are all persuasive adjectives?",
+   "o": [
+    "stunning, amazing, perfect, terrific",
+    "Spain, Oman, Antarctic",
+    "safari, polar, climbing",
+    "brochure, advert, reader"
+   ],
+   "why": "These are strong positive adjectives that persuade."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'Watch penguins in the Antarctic.' Which holiday is this?",
+   "o": [
+    "polar",
+    "safari",
+    "climbing",
+    "extreme sport"
+   ],
+   "why": "Penguins live in the Antarctic, so it is the polar holiday."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best word: Our guides are ___ who know everything about the desert.",
+   "o": [
+    "experts",
+    "gentle",
+    "stunning",
+    "brochures"
+   ],
+   "why": "Experts know a lot about something."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want the main idea of a brochure in one minute. What should you do?",
+   "o": [
+    "skim the title, headings and pictures",
+    "read every word slowly",
+    "count the words",
+    "read only the last line"
+   ],
+   "why": "Skimming gives you the main idea quickly."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are the safari tour groups small?",
+   "o": [
+    "so you can get close to the animals",
+    "because the bus is broken",
+    "because it is cold",
+    "so it is cheaper"
+   ],
+   "why": "Small groups help visitors get closer to animals."
+  },
+  {
+   "lv": "التحليل",
+   "q": "An advert says 'the perfect holiday'. What should a careful reader think?",
+   "o": [
+    "It may not be completely true; it is trying to persuade.",
+    "It must be true because it is printed.",
+    "It is a fact from science.",
+    "It is a rule you must follow."
+   ],
+   "why": "Persuasive words try to sell, so read them carefully."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is most persuasive?",
+   "o": [
+    "Come and enjoy terrific views on a stunning trip!",
+    "The trip is on Monday.",
+    "There is a bus.",
+    "We go to Spain."
+   ],
+   "why": "Strong adjectives like terrific and stunning persuade readers."
+  }
+ ]
+}

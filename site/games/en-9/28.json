@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Review: Units 1-3",
+ "lesson": "Review: Units 1-3",
+ "outcomes": [
+  "Revise home technology words and phrasal verbs.",
+  "Give advice and make suggestions and offers.",
+  "Complete open cloze and multiple-choice cloze texts."
+ ],
+ "tf": [
+  {
+   "s": "We can heat dinner in a microwave.",
+   "t": true,
+   "why": "A microwave heats food."
+  },
+  {
+   "s": "'Why don't you watch a film to relax?' is a suggestion.",
+   "t": true,
+   "why": "'Why don't you…?' suggests an idea."
+  },
+  {
+   "s": "'Shall I…?' is used to make an offer.",
+   "t": true,
+   "why": "'Shall I carry that for you?'"
+  },
+  {
+   "s": "'You ought to…' gives advice.",
+   "t": true,
+   "why": "It means the same as 'You should…'"
+  },
+  {
+   "s": "A kettle keeps food cold.",
+   "t": false,
+   "why": "A kettle boils water; a fridge keeps food cold."
+  },
+  {
+   "s": "'How about to go out?' is correct.",
+   "t": false,
+   "why": "After 'How about' we use -ing: 'How about going out?'"
+  },
+  {
+   "s": "In a multiple-choice cloze, you choose the answer from options.",
+   "t": true,
+   "why": "You pick A, B, C or D."
+  },
+  {
+   "s": "'Ought to' is used to make an arrangement.",
+   "t": false,
+   "why": "'Ought to' is for advice."
+  },
+  {
+   "s": "'Pronounce' means change a word into another language.",
+   "t": false,
+   "why": "That is 'translate'; 'pronounce' means say the sounds."
+  },
+  {
+   "s": "We use 'should' to give advice.",
+   "t": true,
+   "why": "'You should get some sleep.'"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: I'll heat your dinner in the ___.",
+   "o": [
+    "microwave",
+    "kettle",
+    "fridge"
+   ],
+   "why": "A microwave heats food."
+  },
+  {
+   "q": "A: I'm stressed about my exams. B: ___ watch a film to relax?",
+   "o": [
+    "Why don't you",
+    "Shall you",
+    "How about"
+   ],
+   "why": "'Why don't you + verb' makes a suggestion."
+  },
+  {
+   "q": "Complete: I always switch ___ the subtitles.",
+   "o": [
+    "on",
+    "in",
+    "at"
+   ],
+   "why": "We switch on subtitles to see them."
+  },
+  {
+   "q": "Choose: Using the internet to ___ a foreign word is easy.",
+   "o": [
+    "translate",
+    "say",
+    "pronounce"
+   ],
+   "why": "Translate means change into another language."
+  },
+  {
+   "q": "Choose: We're no longer ___ at remembering information.",
+   "o": [
+    "good",
+    "able",
+    "hard"
+   ],
+   "why": "We say 'good at'."
+  },
+  {
+   "q": "Complete: You ___ to see a doctor.",
+   "o": [
+    "ought",
+    "should",
+    "shall"
+   ],
+   "why": "'Ought to' gives advice."
+  },
+  {
+   "q": "Complete the offer: ___ I carry that for you?",
+   "o": [
+    "Shall",
+    "How about",
+    "Why don't"
+   ],
+   "why": "'Shall I…?' makes an offer."
+  },
+  {
+   "q": "Which machine washes plates?",
+   "o": [
+    "dishwasher",
+    "kettle",
+    "fridge"
+   ],
+   "why": "A dishwasher washes plates."
+  },
+  {
+   "q": "Complete: The washing ___ is broken.",
+   "o": [
+    "machine",
+    "maker",
+    "kettle"
+   ],
+   "why": "Washing machine is a compound noun."
+  },
+  {
+   "q": "In an open cloze, how many words go in each gap?",
+   "o": [
+    "one",
+    "three",
+    "none"
+   ],
+   "why": "Write one word in each gap."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "It keeps food cold",
+   "a": "fridge",
+   "d": [
+    "kettle",
+    "microwave",
+    "plug"
+   ]
+  },
+  {
+   "q": "It boils water",
+   "a": "kettle",
+   "d": [
+    "fridge",
+    "dishwasher",
+    "microwave"
+   ]
+  },
+  {
+   "q": "Offer: ___ I help you?",
+   "a": "Shall",
+   "d": [
+    "Ought",
+    "How about",
+    "Why don't"
+   ]
+  },
+  {
+   "q": "Suggestion: How ___ a walk?",
+   "a": "about",
+   "d": [
+    "for",
+    "to",
+    "with"
+   ]
+  },
+  {
+   "q": "Advice: You ___ to rest.",
+   "a": "ought",
+   "d": [
+    "should",
+    "shall",
+    "could"
+   ]
+  },
+  {
+   "q": "Advice: You ___ rest.",
+   "a": "should",
+   "d": [
+    "ought",
+    "how about",
+    "going"
+   ]
+  },
+  {
+   "q": "Put the ___ in the socket.",
+   "a": "plug",
+   "d": [
+    "kettle",
+    "fridge",
+    "app"
+   ]
+  },
+  {
+   "q": "Change words into another language",
+   "a": "translate",
+   "d": [
+    "pronounce",
+    "remember",
+    "switch"
+   ]
+  },
+  {
+   "q": "Say a word with the right sounds",
+   "a": "pronounce",
+   "d": [
+    "translate",
+    "remember",
+    "download"
+   ]
+  },
+  {
+   "q": "I'm keen ___ music.",
+   "a": "on",
+   "d": [
+    "at",
+    "of",
+    "in"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which phrase gives advice?",
+   "o": [
+    "You ought to…",
+    "Shall I…?",
+    "How about…?",
+    "Why don't we…?"
+   ],
+   "why": "'Ought to' gives advice."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase makes an offer?",
+   "o": [
+    "Shall I…?",
+    "Why don't you…?",
+    "You should…",
+    "How about…?"
+   ],
+   "why": "'Shall I…?' offers help."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you write in each gap of an open cloze?",
+   "o": [
+    "one word",
+    "a whole sentence",
+    "nothing",
+    "a number only"
+   ],
+   "why": "Only one word fits each gap."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a home technology item?",
+   "o": [
+    "dishwasher",
+    "subtitle",
+    "research",
+    "memory"
+   ],
+   "why": "A dishwasher is a machine at home."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend is stressed about exams. What do you say?",
+   "o": [
+    "Why don't you take a short break?",
+    "Shall I stressed?",
+    "How about to study all night?",
+    "You ought study more."
+   ],
+   "why": "'Why don't you…?' is a kind suggestion."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend's bag is heavy. Offer to help.",
+   "o": [
+    "Shall I carry it for you?",
+    "You ought to carry it.",
+    "Why don't you carry it?",
+    "You should carry it."
+   ],
+   "why": "'Shall I…?' is an offer."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The TV is too loud. Can you ___ down?",
+   "o": [
+    "turn it",
+    "turn on it",
+    "it turn",
+    "switch it"
+   ],
+   "why": "The pronoun goes between turn and down."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'good' the right answer in 'we're no longer ___ at remembering information'?",
+   "o": [
+    "'Good at' is a correct adjective + preposition pair.",
+    "'Able at' is correct English.",
+    "'Hard at' means 'good at'.",
+    "'Good' is a verb."
+   ],
+   "why": "We say 'good at' something."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'translate' correct in 'Using the internet to ___ a foreign word is easy'?",
+   "o": [
+    "It means change words into another language.",
+    "It means say a word aloud.",
+    "It means remember a word.",
+    "It means switch on a device."
+   ],
+   "why": "Translation changes a word into your language."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is a good way to evaluate your learning in Units 1-3?",
+   "o": [
+    "Choose the most useful grammar point and three useful words",
+    "Forget the units",
+    "Only count the pages",
+    "Skip the review"
+   ],
+   "why": "Thinking about what you learnt helps you remember it."
+  }
+ ]
+}

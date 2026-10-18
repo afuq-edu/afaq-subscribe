@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+ "lesson": "Across Cultures: Country Focus – France",
+ "outcomes": [
+  "Read about France and answer questions about its land, history, food, travel and sport",
+  "Match words to meanings and decide if statements are true, false or not given"
+ ],
+ "tf": [
+  {
+   "s": "The Eiffel Tower is a famous landmark in France.",
+   "t": true,
+   "why": "It is one of France's best-known places."
+  },
+  {
+   "s": "The Chunnel is a bridge over the sea.",
+   "t": false,
+   "why": "The Chunnel is a tunnel that links France and the UK."
+  },
+  {
+   "s": "The Tour de France is a famous sports event.",
+   "t": true,
+   "why": "It is one of France's famous sports events."
+  },
+  {
+   "s": "'Romantic' means connected with love.",
+   "t": true,
+   "why": "Paris is often called romantic."
+  },
+  {
+   "s": "France is known for its high-speed trains.",
+   "t": true,
+   "why": "They are part of travel in France."
+  },
+  {
+   "s": "The Loire is a mountain in France.",
+   "t": false,
+   "why": "The Loire is a river."
+  },
+  {
+   "s": "Mont Blanc is a river in France.",
+   "t": false,
+   "why": "Mont Blanc is a mountain."
+  },
+  {
+   "s": "'Not Given' means the text says the statement is false.",
+   "t": false,
+   "why": "'Not Given' means the text does not give the information."
+  },
+  {
+   "s": "The text describes Paris as a city of parks and gardens.",
+   "t": true,
+   "why": "The text mentions its parks and gardens."
+  },
+  {
+   "s": "The French Revolution is part of France's history.",
+   "t": true,
+   "why": "It appears in the history notes with Napoleon."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which river gives its name to the Loire valley?",
+   "o": [
+    "the River Loire",
+    "the River Nile",
+    "the River Thames"
+   ],
+   "why": "The Loire valley is named after the River Loire."
+  },
+  {
+   "q": "Which tunnel links France and the UK?",
+   "o": [
+    "the Chunnel",
+    "the Eiffel",
+    "the Loire"
+   ],
+   "why": "The Chunnel goes under the sea."
+  },
+  {
+   "q": "Which is a famous French landmark?",
+   "o": [
+    "the Eiffel Tower",
+    "the Great Wall",
+    "Big Ben"
+   ],
+   "why": "The Eiffel Tower is in Paris."
+  },
+  {
+   "q": "What is the capital of France?",
+   "o": [
+    "Paris",
+    "Mont Blanc",
+    "Loire"
+   ],
+   "why": "Paris is the capital city."
+  },
+  {
+   "q": "What is the Tour de France?",
+   "o": [
+    "a famous sports event",
+    "a river",
+    "a tunnel"
+   ],
+   "why": "It is a famous French sports event."
+  },
+  {
+   "q": "Which word means 'connected with love'?",
+   "o": [
+    "romantic",
+    "stunning",
+    "historic"
+   ],
+   "why": "Romantic is about love."
+  },
+  {
+   "q": "What kind of trains is France known for?",
+   "o": [
+    "high-speed trains",
+    "steam trains only",
+    "no trains"
+   ],
+   "why": "High-speed trains connect French cities."
+  },
+  {
+   "q": "Who is a famous person from French history?",
+   "o": [
+    "Napoleon",
+    "Mont Blanc",
+    "Loire"
+   ],
+   "why": "Napoleon is in the history notes."
+  },
+  {
+   "q": "If the text does not give the information, the answer is...",
+   "o": [
+    "Not Given",
+    "True",
+    "False"
+   ],
+   "why": "We only answer from the text."
+  },
+  {
+   "q": "What is a Fact File?",
+   "o": [
+    "a short list of facts about a place",
+    "a long story",
+    "a train ticket"
+   ],
+   "why": "Groups make Fact Files about other countries."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Capital of France",
+   "a": "Paris",
+   "d": [
+    "Loire",
+    "Mont Blanc",
+    "Chunnel"
+   ]
+  },
+  {
+   "q": "Famous tower in Paris",
+   "a": "Eiffel Tower",
+   "d": [
+    "Mont Blanc",
+    "Loire",
+    "Chunnel"
+   ]
+  },
+  {
+   "q": "A famous French river",
+   "a": "Loire",
+   "d": [
+    "Mont Blanc",
+    "Paris",
+    "Napoleon"
+   ]
+  },
+  {
+   "q": "A famous French mountain",
+   "a": "Mont Blanc",
+   "d": [
+    "Loire",
+    "Paris",
+    "Eiffel Tower"
+   ]
+  },
+  {
+   "q": "Tunnel between France and the UK",
+   "a": "Chunnel",
+   "d": [
+    "Loire",
+    "Mont Blanc",
+    "Eiffel Tower"
+   ]
+  },
+  {
+   "q": "Famous name in French history",
+   "a": "Napoleon",
+   "d": [
+    "Mont Blanc",
+    "Loire",
+    "Chunnel"
+   ]
+  },
+  {
+   "q": "Famous French sports event",
+   "a": "Tour de France",
+   "d": [
+    "Loire",
+    "Chunnel",
+    "Mont Blanc"
+   ]
+  },
+  {
+   "q": "Connected with love",
+   "a": "romantic",
+   "d": [
+    "stunning",
+    "historic",
+    "modern"
+   ]
+  },
+  {
+   "q": "Fast French trains",
+   "a": "high-speed trains",
+   "d": [
+    "steam trains",
+    "slow trains",
+    "horse carts"
+   ]
+  },
+  {
+   "q": "Information not in the text",
+   "a": "Not Given",
+   "d": [
+    "True",
+    "False",
+    "Correct"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these belongs to France's history in the text?",
+   "o": [
+    "Napoleon and the French Revolution",
+    "Mont Blanc and the Loire",
+    "The Chunnel and high-speed trains",
+    "Tennis tournaments and the Tour de France"
+   ],
+   "why": "These are the history notes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which notes belong under 'Land'?",
+   "o": [
+    "The Loire and Mont Blanc",
+    "Napoleon",
+    "Recipes",
+    "Tennis tournaments"
+   ],
+   "why": "A river and a mountain describe the land."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two sports topics are in the notes?",
+   "o": [
+    "The Tour de France and tennis tournaments",
+    "Football and cricket",
+    "Swimming and golf",
+    "Camel racing and sailing"
+   ],
+   "why": "These are the sport notes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How is Paris described in the text?",
+   "o": [
+    "A city of parks and gardens",
+    "A small fishing village",
+    "A desert town",
+    "A mountain village"
+   ],
+   "why": "The text mentions its parks and gardens."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to travel from the UK to France by train under the sea. What do you use?",
+   "o": [
+    "The Chunnel",
+    "The Eiffel Tower",
+    "The Loire",
+    "Mont Blanc"
+   ],
+   "why": "The Chunnel is the tunnel between the two countries."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Statement: 'Everyone in France likes cycling.' The text says nothing about this. What is the answer?",
+   "o": [
+    "Not Given",
+    "True",
+    "False",
+    "Correct"
+   ],
+   "why": "The text gives no information about it."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your group is making a Fact File about another country. Which fact is best to include?",
+   "o": [
+    "Its famous landmarks",
+    "Your favourite colour",
+    "Your teacher's name",
+    "Today's homework"
+   ],
+   "why": "A Fact File gives facts about the country."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between 'False' and 'Not Given'?",
+   "o": [
+    "False: the text says the opposite; Not Given: the text does not say",
+    "They mean the same",
+    "Not Given means the statement is true",
+    "False means the text is not clear"
+   ],
+   "why": "Always check what the text actually says."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Paris called a city of parks and gardens?",
+   "o": [
+    "The text mentions its many parks and gardens",
+    "It has no buildings",
+    "It is in the mountains",
+    "It is a river"
+   ],
+   "why": "The answer comes from the text."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why could high-speed trains be useful for visitors to France?",
+   "o": [
+    "They help people travel between places quickly",
+    "They are only for goods",
+    "They are slower than walking",
+    "They only run at night"
+   ],
+   "why": "Fast trains save travel time."
+  }
+ ]
+}

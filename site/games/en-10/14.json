@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "2",
+  "lesson": "Unit 2: Climate Change – Review",
+  "outcomes": [
+    "Review Unit 2 words about climate change and the environment.",
+    "Use cause and effect connectors, compound nouns and will correctly.",
+    "Correct mistakes in sentences about the environment."
+  ],
+  "tf": [
+    {"s": "Climate is the weather in one place over a long period of time.", "t": true, "why": "Yes! Weather is only about a short time."},
+    {"s": "In 'Sea levels rise because of the melting ice', the melting ice is the cause.", "t": true, "why": "Correct, 'because of' comes before the cause."},
+    {"s": "'Therefore' comes before the cause.", "t": false, "why": "'Therefore' comes before the result."},
+    {"s": "'Greenhouse gas' and 'carbon footprint' are compound nouns.", "t": true, "why": "Right, each one is made of two words."},
+    {"s": "Burning fossil fuels makes the planet cooler.", "t": false, "why": "It releases greenhouse gases, so the planet gets hotter."},
+    {"s": "'Plastic harm the ocean' is a correct sentence.", "t": false, "why": "The correct sentence is 'Plastic harms the ocean.'"},
+    {"s": "A topic sentence states the main idea of a paragraph.", "t": true, "why": "Well done!"},
+    {"s": "An eco-friendly lifestyle harms the environment.", "t": false, "why": "Eco-friendly means not harmful to the environment."},
+    {"s": "'If we do nothing, sea levels will rise' is a prediction about the future.", "t": true, "why": "Yes, we use 'will' to predict."},
+    {"s": "In a debate, 'To sum up…' is used to introduce the first argument.", "t": false, "why": "'To sum up' is used at the end to summarise."}
+  ],
+  "boxes": [
+    {"q": "Sea levels rise ___ the melting ice.", "o": ["because of", "so", "therefore"], "why": "'Because of' + the cause."},
+    {"q": "Burning fuel releases greenhouse gases. ___, the planet gets hotter.", "o": ["Therefore", "Because of", "Due to"], "why": "'Therefore' introduces the result."},
+    {"q": "Which is a compound noun about climate change?", "o": ["fossil fuel", "football", "tea-bag"], "why": "Fossil fuels release greenhouse gases."},
+    {"q": "A long period without rain is a ...", "o": ["drought", "flood", "heat wave"], "why": "A drought makes the land dry."},
+    {"q": "Correct: 'Plastic harm the ocean, so because.'", "o": ["Plastic harms the ocean.", "Plastic harm the ocean because.", "Plastic harming the ocean so."], "why": "Add -s to the verb and remove the extra connectors."},
+    {"q": "Which phrasal verb means 'stop a machine'?", "o": ["switch off", "find out", "fill up"], "why": "Switch off the lights to save energy."},
+    {"q": "A person who buys goods or services is a ...", "o": ["consumer", "policy", "slogan"], "why": "We are all consumers when we shop."},
+    {"q": "If the ice melts, polar bears ___ be able to hunt seals.", "o": ["won't", "will", "are"], "why": "Without ice they cannot hunt."},
+    {"q": "A bag you can use many times is ...", "o": ["reusable", "disposable", "lightweight"], "why": "Reusable bags reduce plastic waste."},
+    {"q": "Where is the writer's opinion in an opinion essay?", "o": ["in the introduction", "only in the title", "nowhere"], "why": "The introduction presents the topic and the opinion."}
+  ],
+  "hunt": [
+    {"q": "Connector before a cause", "a": "because of", "d": ["therefore", "so", "consequently"]},
+    {"q": "Connector before a result", "a": "therefore", "d": ["because of", "due to", "as a result of"]},
+    {"q": "CO2 we release", "a": "carbon footprint", "d": ["ice cap", "sea level", "heat wave"]},
+    {"q": "Gases that warm the Earth", "a": "greenhouse gases", "d": ["fresh air", "ice caps", "sea levels"]},
+    {"q": "Too much water on the land", "a": "floods", "d": ["drought", "heat wave", "ice caps"]},
+    {"q": "To control something", "a": "regulate", "d": ["release", "consume", "reduce"]},
+    {"q": "Not harmful to nature", "a": "eco-friendly", "d": ["disposable", "harmful", "polluted"]},
+    {"q": "Short phrase on a bag", "a": "slogan", "d": ["material", "policy", "emission"]},
+    {"q": "Get rid of something", "a": "throw away", "d": ["fill up", "find out", "look for"]},
+    {"q": "States the main idea", "a": "topic sentence", "d": ["slogan", "conclusion", "example"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What does climate change mean?", "o": ["Average global temperatures are rising.", "It rains every day.", "Temperatures are falling.", "The weather never changes."], "why": "The planet is getting warmer."},
+    {"lv": "التذكر", "q": "How can compound nouns be written?", "o": ["as one word, with a hyphen, or as two words", "only as one word", "only with a hyphen", "only in capital letters"], "why": "football / tea-bag / ice cap."},
+    {"lv": "التذكر", "q": "What does 'policy' mean?", "o": ["a set of ideas officially agreed by a government", "a person who buys goods", "a gas in the air", "a short phrase on a bag"], "why": "Governments make policies."},
+    {"lv": "التذكر", "q": "Why does plastic end up in the ocean?", "o": ["It is lightweight and is blown or washed there.", "It is very heavy.", "It is made in the sea.", "Fish bring it."], "why": "Wind and water carry light plastic."},
+    {"lv": "التطبيق", "q": "Choose the correct prediction.", "o": ["If we do nothing, sea levels will rise.", "If we do nothing, sea levels rises will.", "If we do nothing, sea levels will rising.", "If we do nothing, sea levels will to rise."], "why": "will + base verb."},
+    {"lv": "التطبيق", "q": "Join: 'Temperatures rise. Many species lose their habitat.'", "o": ["Many species lose their habitat because of rising temperatures.", "Rising temperatures lose many species because of habitat.", "Many species because of lose their habitat.", "Therefore because temperatures rise species."], "why": "Effect + because of + cause."},
+    {"lv": "التطبيق", "q": "Which is an argument FOR 'It is easy to live a more eco-friendly lifestyle'?", "o": ["We can reuse bags and turn off lights.", "Eco-friendly products can be expensive.", "It takes too much time.", "Nobody cares about the planet."], "why": "Simple daily actions show it can be easy."},
+    {"lv": "التحليل", "q": "What is the effect in 'Fossil fuels are burned, so greenhouse gases increase'?", "o": ["greenhouse gases increase", "fossil fuels are burned", "so", "fossil fuels"], "why": "The effect comes after 'so'."},
+    {"lv": "التحليل", "q": "Why are countries at sea level at risk from climate change?", "o": ["Rising sea levels can cause floods.", "They have too much rain only.", "They have no deserts.", "They burn no fuel."], "why": "Melting ice raises the sea level."},
+    {"lv": "التحليل", "q": "Which is the best learning goal for Unit 3?", "o": ["I will practise reading emails.", "I will never write again.", "I will finish everything in one minute.", "I will not use English."], "why": "A good goal is clear and realistic."}
+  ]
+}

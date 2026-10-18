@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "WOW! Learning Club 1",
+ "lesson": "Lesson 1: Language booster – Polar bears & big numbers",
+ "outcomes": [
+  "Read an article about polar bears and find facts and numbers.",
+  "Say numbers over 100 correctly, with 'and' after hundred.",
+  "Use by myself / by yourself and we should / shouldn't."
+ ],
+ "tf": [
+  {
+   "s": "Some male polar bears are up to three metres long.",
+   "t": true,
+   "why": "Yes, up to three metres."
+  },
+  {
+   "s": "A polar bear's skin is white.",
+   "t": false,
+   "why": "Its skin is black."
+  },
+  {
+   "s": "A female polar bear once swam over 687 kilometres in nine days.",
+   "t": true,
+   "why": "Correct, an amazing swim!"
+  },
+  {
+   "s": "There are about 30,000 polar bears left in the Arctic.",
+   "t": true,
+   "why": "Right, about 30,000."
+  },
+  {
+   "s": "The Arctic sea ice is appearing.",
+   "t": false,
+   "why": "The sea ice is disappearing."
+  },
+  {
+   "s": "We say 450 as 'four hundred and fifty'.",
+   "t": true,
+   "why": "Well done, we say 'and' after hundred."
+  },
+  {
+   "s": "We say 835 as 'eight hundred thirty-five' with no 'and'.",
+   "t": false,
+   "why": "Say eight hundred and thirty-five."
+  },
+  {
+   "s": "'By myself' means alone.",
+   "t": true,
+   "why": "Yes, by myself = on my own."
+  },
+  {
+   "s": "'I can do my homework by yourself' is correct.",
+   "t": false,
+   "why": "With I, we say by myself."
+  },
+  {
+   "s": "'We should plant trees' is a Go Green sentence.",
+   "t": true,
+   "why": "Good, planting trees helps the planet."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What colour is a polar bear's skin?",
+   "o": [
+    "black",
+    "white",
+    "pink"
+   ],
+   "why": "Under the fur, the skin is black."
+  },
+  {
+   "q": "How long are some male polar bears?",
+   "o": [
+    "up to three metres",
+    "up to one metre",
+    "up to ten metres"
+   ],
+   "why": "Up to three metres long."
+  },
+  {
+   "q": "How heavy can polar bears be?",
+   "o": [
+    "up to 800 kg",
+    "up to 80 kg",
+    "up to 8 kg"
+   ],
+   "why": "They can weigh up to 800 kg."
+  },
+  {
+   "q": "How many polar bears are left in the Arctic?",
+   "o": [
+    "about 30,000",
+    "about 300",
+    "about 3 million"
+   ],
+   "why": "About 30,000 are left."
+  },
+  {
+   "q": "Say 605 in words.",
+   "o": [
+    "six hundred and five",
+    "sixty-five",
+    "six hundred fifty"
+   ],
+   "why": "605 = six hundred and five."
+  },
+  {
+   "q": "Say 101 in words.",
+   "o": [
+    "one hundred and one",
+    "one hundred and ten",
+    "eleven"
+   ],
+   "why": "101 = one hundred and one."
+  },
+  {
+   "q": "Rewrite: Are you going to walk to the shop alone?",
+   "o": [
+    "Are you going to walk to the shop by yourself?",
+    "Are you going to walk by myself?",
+    "Are you going to walk to the shop by you?"
+   ],
+   "why": "With you, we say by yourself."
+  },
+  {
+   "q": "Circle: Let's ___ a new game.",
+   "o": [
+    "invent",
+    "improve",
+    "waste"
+   ],
+   "why": "Invent means create something new."
+  },
+  {
+   "q": "Which is a good Go Green sentence?",
+   "o": [
+    "We shouldn't waste water.",
+    "We should waste paper.",
+    "We shouldn't recycle."
+   ],
+   "why": "Saving water helps the planet."
+  },
+  {
+   "q": "What happens to the Arctic sea ice?",
+   "o": [
+    "it is disappearing",
+    "it is getting bigger",
+    "it is turning green"
+   ],
+   "why": "The sea ice is disappearing."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Polar bear skin colour",
+   "a": "black",
+   "d": [
+    "white",
+    "pink",
+    "brown"
+   ]
+  },
+  {
+   "q": "Male length: up to",
+   "a": "3 metres",
+   "d": [
+    "1 metre",
+    "10 metres",
+    "30 metres"
+   ]
+  },
+  {
+   "q": "Weight: up to",
+   "a": "800 kg",
+   "d": [
+    "80 kg",
+    "8 kg",
+    "8,000 kg"
+   ]
+  },
+  {
+   "q": "Distance swum in 9 days",
+   "a": "687 km",
+   "d": [
+    "68 km",
+    "6,870 km",
+    "87 km"
+   ]
+  },
+  {
+   "q": "Polar bears left",
+   "a": "about 30,000",
+   "d": [
+    "about 300",
+    "about 3,000,000",
+    "about 30"
+   ]
+  },
+  {
+   "q": "four hundred and fifty",
+   "a": "450",
+   "d": [
+    "405",
+    "415",
+    "4,050"
+   ]
+  },
+  {
+   "q": "eight hundred and thirty-five",
+   "a": "835",
+   "d": [
+    "853",
+    "8,035",
+    "83"
+   ]
+  },
+  {
+   "q": "Means alone (I)",
+   "a": "by myself",
+   "d": [
+    "by yourself",
+    "by himself",
+    "by us"
+   ]
+  },
+  {
+   "q": "Means alone (you)",
+   "a": "by yourself",
+   "d": [
+    "by myself",
+    "by herself",
+    "by them"
+   ]
+  },
+  {
+   "q": "Opposite of appearing",
+   "a": "disappearing",
+   "d": [
+    "improving",
+    "inventing",
+    "recycling"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What are Rashid and Anas talking about in their dialogue?",
+   "o": [
+    "helping polar bears",
+    "shopping online",
+    "rock climbing",
+    "a poem"
+   ],
+   "why": "Their dialogue is about helping polar bears."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How far did a female polar bear once swim in nine days?",
+   "o": [
+    "over 687 kilometres",
+    "about 6 kilometres",
+    "exactly 100 kilometres",
+    "over 6,000 kilometres"
+   ],
+   "why": "She swam over 687 km."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which heading did the article use?",
+   "o": [
+    "Three sad facts",
+    "Three shopping facts",
+    "Three funny poems",
+    "Three rules"
+   ],
+   "why": "The headings are Three sad facts and Three fun facts."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'by myself' mean?",
+   "o": [
+    "alone, on my own",
+    "with my friends",
+    "with my family",
+    "very fast"
+   ],
+   "why": "By myself = alone."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "How do you say 10,000?",
+   "o": [
+    "ten thousand",
+    "one hundred thousand",
+    "ten hundred",
+    "one thousand"
+   ],
+   "why": "10,000 = ten thousand."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "I can do my homework by myself.",
+    "I can do my homework by yourself.",
+    "I can do my homework by me.",
+    "I can do my homework by mine."
+   ],
+   "why": "With I, use by myself."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Go Green: 'recycle plastic bottles'. Make a sentence.",
+   "o": [
+    "We should recycle plastic bottles.",
+    "We shouldn't recycle plastic bottles.",
+    "We should waste plastic bottles.",
+    "We recycle shouldn't bottles."
+   ],
+   "why": "Recycling helps the environment."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A polar bear swam about 687 km in nine days. About how far is that each day?",
+   "o": [
+    "about 76 km",
+    "about 7 km",
+    "about 687 km",
+    "about 6,000 km"
+   ],
+   "why": "687 divided by 9 is about 76 km a day."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which number is said correctly?",
+   "o": [
+    "six hundred and eighty-seven (687)",
+    "six hundred eighty-seven and (687)",
+    "sixty-eight seven (687)",
+    "six thousand and eighty-seven (687)"
+   ],
+   "why": "Say 'and' after hundred: six hundred and eighty-seven."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'The sea ice is disappearing' belongs under which heading?",
+   "o": [
+    "Three sad facts",
+    "Three fun facts",
+    "Big numbers",
+    "Go Green rules"
+   ],
+   "why": "Losing sea ice is sad news for polar bears."
+  }
+ ]
+}

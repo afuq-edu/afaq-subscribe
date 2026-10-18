@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+ "lesson": "Reading for Pleasure: interview with Rumaitha Al Busaidi / Review and Reference: Theme 2 learning objectives and core words test",
+ "outcomes": [
+  "Read an interview and find its main ideas",
+  "Explain why we should preserve Antarctica",
+  "Use the Theme 2 core words and the past perfect correctly"
+ ],
+ "tf": [
+  {
+   "s": "Rumaitha Al Busaidi travelled to Antarctica.",
+   "t": true,
+   "why": "Yes, the interview is about her trip to Antarctica."
+  },
+  {
+   "s": "The text about Rumaitha is a story.",
+   "t": false,
+   "why": "It is an interview with questions and answers."
+  },
+  {
+   "s": "Rumaitha wants to preserve the Antarctic environment.",
+   "t": true,
+   "why": "Right, she cares about protecting it."
+  },
+  {
+   "s": "'Homesick' means feeling sad because you miss home.",
+   "t": true,
+   "why": "Correct, it is a feeling of missing home."
+  },
+  {
+   "s": "'Reduce' means to make something larger.",
+   "t": false,
+   "why": "'Reduce' means make smaller; 'increase' means make larger."
+  },
+  {
+   "s": "'Cope with' means to deal successfully with a difficult situation.",
+   "t": true,
+   "why": "Yes, that is the meaning."
+  },
+  {
+   "s": "'Hadn't wasted' is a past perfect form.",
+   "t": true,
+   "why": "Well done: had not + past participle."
+  },
+  {
+   "s": "'By the time he arrived, we had left' means we left after he arrived.",
+   "t": false,
+   "why": "We left first; then he arrived."
+  },
+  {
+   "s": "A deadline is the time by which you must finish something.",
+   "t": true,
+   "why": "Yes, you must finish work before the deadline."
+  },
+  {
+   "s": "'Terrifying' means very relaxing.",
+   "t": false,
+   "why": "'Terrifying' means very frightening."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do people do on an expedition?",
+   "o": [
+    "Explore and do research",
+    "Go shopping",
+    "Stay at home"
+   ],
+   "why": "Expeditions are journeys to explore and learn."
+  },
+  {
+   "q": "Complete: By the time he arrived, we ___ (leave).",
+   "o": [
+    "had left",
+    "have left",
+    "leave"
+   ],
+   "why": "The earlier action takes the past perfect."
+  },
+  {
+   "q": "Which word means 'make smaller'?",
+   "o": [
+    "reduce",
+    "increase",
+    "edit"
+   ],
+   "why": "To reduce is to make less or smaller."
+  },
+  {
+   "q": "What is the past perfect of 'take'?",
+   "o": [
+    "had taken",
+    "has took",
+    "had took"
+   ],
+   "why": "Use had + the past participle 'taken'."
+  },
+  {
+   "q": "Which word means 'very frightening'?",
+   "o": [
+    "terrifying",
+    "positive",
+    "homesick"
+   ],
+   "why": "Something terrifying makes you very scared."
+  },
+  {
+   "q": "Which sentence is in the past perfect?",
+   "o": [
+    "I had finished my work.",
+    "I finish my work.",
+    "I will finish my work."
+   ],
+   "why": "Had + finished is the past perfect."
+  },
+  {
+   "q": "Why is Antarctica important?",
+   "o": [
+    "It affects climate and has unique wildlife",
+    "It has many shopping malls",
+    "It is very hot"
+   ],
+   "why": "Antarctica matters for the whole planet."
+  },
+  {
+   "q": "What does an interview contain?",
+   "o": [
+    "Questions and answers",
+    "Only pictures",
+    "Rhyming lines"
+   ],
+   "why": "An interviewer asks and the person answers."
+  },
+  {
+   "q": "To 'edit' your work means to…",
+   "o": [
+    "check and correct it",
+    "throw it away",
+    "copy it"
+   ],
+   "why": "Editing makes your work better."
+  },
+  {
+   "q": "What does 'cope with' mean?",
+   "o": [
+    "deal with a difficulty",
+    "run away from",
+    "forget about"
+   ],
+   "why": "You cope with a hard situation successfully."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "A feeling of missing home",
+   "a": "Homesick",
+   "d": [
+    "Terrifying",
+    "Positive",
+    "Campus"
+   ]
+  },
+  {
+   "q": "The last time to finish work",
+   "a": "Deadline",
+   "d": [
+    "Campus",
+    "Career",
+    "Expedition"
+   ]
+  },
+  {
+   "q": "Opposite of 'increase'",
+   "a": "Reduce",
+   "d": [
+    "Edit",
+    "Preserve",
+    "Cope"
+   ]
+  },
+  {
+   "q": "A journey to explore or research",
+   "a": "Expedition",
+   "d": [
+    "Deadline",
+    "Campus",
+    "Interview"
+   ]
+  },
+  {
+   "q": "Past perfect of 'make'",
+   "a": "had made",
+   "d": [
+    "has made",
+    "made",
+    "had make"
+   ]
+  },
+  {
+   "q": "Past perfect of 'plan'",
+   "a": "had planned",
+   "d": [
+    "has planned",
+    "had plan",
+    "planed"
+   ]
+  },
+  {
+   "q": "Where Rumaitha travelled",
+   "a": "Antarctica",
+   "d": [
+    "Africa",
+    "Asia",
+    "Australia"
+   ]
+  },
+  {
+   "q": "The work you do for many years",
+   "a": "Career",
+   "d": [
+    "Campus",
+    "Deadline",
+    "Feeling"
+   ]
+  },
+  {
+   "q": "Thinking in a hopeful way",
+   "a": "Positive",
+   "d": [
+    "Homesick",
+    "Terrifying",
+    "Negative"
+   ]
+  },
+  {
+   "q": "Past perfect of 'fail'",
+   "a": "had failed",
+   "d": [
+    "has failed",
+    "failed",
+    "had fail"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What kind of text is the reading about Rumaitha Al Busaidi?",
+   "o": [
+    "An interview",
+    "A poem",
+    "A letter",
+    "A recipe"
+   ],
+   "why": "The text has questions and her answers."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a 'placement test'?",
+   "o": [
+    "A test that shows which level or class you should join",
+    "A test you take after you graduate",
+    "A driving test",
+    "A test about places on a map"
+   ],
+   "why": "It helps put students in the right level."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'preserving' the environment mean?",
+   "o": [
+    "Protecting it and keeping it safe",
+    "Changing it completely",
+    "Selling it",
+    "Leaving it dirty"
+   ],
+   "why": "To preserve is to protect something."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which helping verb do we use to form the past perfect?",
+   "o": [
+    "had",
+    "has",
+    "have",
+    "was"
+   ],
+   "why": "Past perfect = had + past participle."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: She ___ (not check) her answers, so she made mistakes.",
+   "o": [
+    "hadn't checked",
+    "didn't checked",
+    "hasn't checked",
+    "not had checked"
+   ],
+   "why": "The earlier action uses hadn't + past participle."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best word: I must finish my essay before the ___.",
+   "o": [
+    "deadline",
+    "campus",
+    "career",
+    "expedition"
+   ],
+   "why": "A deadline is the time limit for work."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses 'cope with' correctly?",
+   "o": [
+    "She learned to cope with the difficult weather.",
+    "She coped with a delicious meal.",
+    "He copes with his favourite song every day.",
+    "They coped with a holiday they enjoyed."
+   ],
+   "why": "We cope with something difficult."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it important to preserve Antarctica?",
+   "o": [
+    "It affects the world's climate and has unique wildlife",
+    "It has many hotels",
+    "It is close to Oman",
+    "It has no animals"
+   ],
+   "why": "Protecting Antarctica helps the planet."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'By the time we arrived, the film had started.' What happened first?",
+   "o": [
+    "The film started",
+    "We arrived",
+    "Both happened at the same time",
+    "We left the cinema"
+   ],
+   "why": "The past perfect shows the earlier action."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What quality does Rumaitha show by going on her trip to Antarctica?",
+   "o": [
+    "Courage",
+    "Laziness",
+    "Fear of travel",
+    "Lack of interest"
+   ],
+   "why": "Her trip shows courage and care for the environment."
+  }
+ ]
+}

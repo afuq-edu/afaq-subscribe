@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 2: Let's dress up!",
+ "lesson": "Unit 2 – Graded readers",
+ "outcomes": [
+  "I can read 'The Clothes Game' and talk about the girls' clothes.",
+  "I can read 'Dad's Tracksuit' and retell the story.",
+  "I can choose your, you're, they're and our."
+ ],
+ "tf": [
+  {
+   "s": "In 'The Clothes Game', the girls close their eyes and count to ten.",
+   "t": true,
+   "why": "Yes! They close their eyes and count to ten."
+  },
+  {
+   "s": "The girls play the game in their bedroom.",
+   "t": true,
+   "why": "Right! The girls are in their bedroom."
+  },
+  {
+   "s": "In the story, the girls' handbags are orange.",
+   "t": true,
+   "why": "Well done! Our handbags are orange."
+  },
+  {
+   "s": "At the end of the game, the girls' clothes are the same.",
+   "t": false,
+   "why": "After the game, their clothes are different."
+  },
+  {
+   "s": "At the end, the glasses are on her head.",
+   "t": true,
+   "why": "Yes! They're on her head."
+  },
+  {
+   "s": "In 'Dad's Tracksuit', Dad is sixteen in the picture.",
+   "t": true,
+   "why": "Right! Dad is sixteen in the old picture."
+  },
+  {
+   "s": "Dad has got a beard in the picture.",
+   "t": false,
+   "why": "No, he hasn't got a beard in the picture."
+  },
+  {
+   "s": "The football team's tracksuits are blue.",
+   "t": false,
+   "why": "Their tracksuits are red."
+  },
+  {
+   "s": "Dad gives the child his tracksuit and trainers.",
+   "t": true,
+   "why": "Yes! Now the child is wearing Dad's tracksuit."
+  },
+  {
+   "s": "We say: You're tracksuit is cool, Dad.",
+   "t": false,
+   "why": "Before a noun we say Your: Your tracksuit is cool."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where are the girls?",
+   "o": [
+    "In their bedroom",
+    "At school",
+    "In a shop"
+   ],
+   "why": "The girls play in their bedroom."
+  },
+  {
+   "q": "What do the girls count to?",
+   "o": [
+    "Ten",
+    "Five",
+    "Twenty"
+   ],
+   "why": "They close their eyes and count to ten."
+  },
+  {
+   "q": "What colour are the girls' handbags?",
+   "o": [
+    "Orange",
+    "Red",
+    "Green"
+   ],
+   "why": "Our handbags are orange."
+  },
+  {
+   "q": "Complete: Our slippers are fun and our ___ are cool.",
+   "o": [
+    "coats",
+    "keys",
+    "phones"
+   ],
+   "why": "Our coats are cool."
+  },
+  {
+   "q": "How old is Dad in the picture?",
+   "o": [
+    "Sixteen",
+    "Six",
+    "Sixty"
+   ],
+   "why": "Dad is sixteen in the picture."
+  },
+  {
+   "q": "Dad is in a … team in the picture.",
+   "o": [
+    "football",
+    "tennis",
+    "karate"
+   ],
+   "why": "This is my football team."
+  },
+  {
+   "q": "What colour are the team's tracksuits?",
+   "o": [
+    "Red",
+    "Orange",
+    "Yellow"
+   ],
+   "why": "Their tracksuits are red."
+  },
+  {
+   "q": "Choose: ___ tracksuit and trainers are cool, Dad.",
+   "o": [
+    "Your",
+    "You're",
+    "They're"
+   ],
+   "why": "Your goes before a noun."
+  },
+  {
+   "q": "Choose: Now ___ wearing my tracksuit.",
+   "o": [
+    "you're",
+    "your",
+    "our"
+   ],
+   "why": "You're goes before wearing."
+  },
+  {
+   "q": "What kind of book does Dad have?",
+   "o": [
+    "A special book",
+    "A maths book",
+    "A shop book"
+   ],
+   "why": "It's a special book with old pictures."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Where are the girls?",
+   "a": "bedroom",
+   "d": [
+    "school",
+    "shop",
+    "park"
+   ]
+  },
+  {
+   "q": "The girls count to …",
+   "a": "ten",
+   "d": [
+    "five",
+    "twenty",
+    "three"
+   ]
+  },
+  {
+   "q": "Colour of the girls' handbags",
+   "a": "orange",
+   "d": [
+    "red",
+    "green",
+    "blue"
+   ]
+  },
+  {
+   "q": "Where are the glasses?",
+   "a": "on her head",
+   "d": [
+    "in her bag",
+    "on the bed",
+    "on the door"
+   ]
+  },
+  {
+   "q": "Our slippers are fun. Our ___ are cool.",
+   "a": "coats",
+   "d": [
+    "keys",
+    "phones",
+    "books"
+   ]
+  },
+  {
+   "q": "Dad's age in the picture",
+   "a": "sixteen",
+   "d": [
+    "six",
+    "sixty",
+    "twenty"
+   ]
+  },
+  {
+   "q": "Dad's team plays …",
+   "a": "football",
+   "d": [
+    "tennis",
+    "basketball",
+    "karate"
+   ]
+  },
+  {
+   "q": "Colour of the team's tracksuits",
+   "a": "red",
+   "d": [
+    "orange",
+    "yellow",
+    "green"
+   ]
+  },
+  {
+   "q": "___ tracksuit is cool, Dad.",
+   "a": "Your",
+   "d": [
+    "You're",
+    "They're",
+    "We're"
+   ]
+  },
+  {
+   "q": "Now ___ wearing my tracksuit.",
+   "a": "you're",
+   "d": [
+    "your",
+    "our",
+    "their"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "In 'The Clothes Game', what do the girls say first?",
+   "o": [
+    "Let's play a game!",
+    "How much is this?",
+    "Thank you.",
+    "Good night!"
+   ],
+   "why": "The story starts with Let's play a game!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "After the girls open their eyes, what do they ask?",
+   "o": [
+    "Are our clothes the same or different?",
+    "What time is it?",
+    "Where is Dad?",
+    "How old are you?"
+   ],
+   "why": "They ask if their clothes are the same or different."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Dad show in 'Dad's Tracksuit'?",
+   "o": [
+    "A special book with his football team",
+    "A new phone",
+    "A shop",
+    "A cake"
+   ],
+   "why": "Dad shows a special book with a picture of his team."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the team wearing in the picture?",
+   "o": [
+    "Tracksuits and trainers",
+    "Pyjamas and slippers",
+    "Coats and glasses",
+    "Dishdashas"
+   ],
+   "why": "They're wearing tracksuits and trainers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The girl asks: Where are my glasses? Choose the best answer.",
+   "o": [
+    "They're on your head.",
+    "Their on your head.",
+    "Your on your head.",
+    "It's 5 rials."
+   ],
+   "why": "They're = they are, so They're on your head."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: ___ handbags are orange. (we)",
+   "o": [
+    "Our",
+    "We're",
+    "Their",
+    "You're"
+   ],
+   "why": "Our goes before a noun."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: ___ wearing slippers. (talking to your friend)",
+   "o": [
+    "You're",
+    "Your",
+    "Our",
+    "Their"
+   ],
+   "why": "You're goes before wearing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is from 'The Clothes Game', not 'Dad's Tracksuit'?",
+   "o": [
+    "Close your eyes and count to ten.",
+    "This is my football team.",
+    "It's a special book.",
+    "Their tracksuits are red."
+   ],
+   "why": "The girls count to ten in 'The Clothes Game'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Put 'Dad's Tracksuit' in order: A. Dad gives the child his tracksuit. B. Dad shows a special book.",
+   "o": [
+    "B, then A",
+    "A, then B",
+    "Only A",
+    "Only B"
+   ],
+   "why": "First Dad shows the book, then he gives the tracksuit."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Dad in the picture: sixteen, no beard. Why?",
+   "o": [
+    "The picture is old, from when Dad was young.",
+    "Dad is sixteen now.",
+    "It is a picture of the child.",
+    "The picture is from a shop."
+   ],
+   "why": "It's an old picture of Dad when he was young."
+  }
+ ]
+}

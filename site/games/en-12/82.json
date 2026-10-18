@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 2: Coping with Change (Grammar)",
+ "lesson": "Listening and chart completion; choosing past forms / Reported speech with the past perfect; Activate Your English",
+ "outcomes": [
+  "Listen to students talk about their first weeks and complete a chart",
+  "Use the past perfect in reported speech",
+  "Talk about regrets with I wish and If only"
+ ],
+ "tf": [
+  {
+   "s": "Sara had expected a huge number of students.",
+   "t": true,
+   "why": "Yes, she expected many students and teachers of many nationalities."
+  },
+  {
+   "s": "'I'd expected the campus to be large' uses the past perfect.",
+   "t": true,
+   "why": "Correct, I'd expected = I had expected."
+  },
+  {
+   "s": "B had not expected such a long way between the buildings.",
+   "t": true,
+   "why": "Right, the distance surprised B."
+  },
+  {
+   "s": "Zaher's favourite activity is swimming in the sea.",
+   "t": false,
+   "why": "Zaher's favourite is volleyball and the gym."
+  },
+  {
+   "s": "'I forgot my keys,' he said. → He said he had forgotten his keys.",
+   "t": true,
+   "why": "Yes, the past simple moves back to the past perfect."
+  },
+  {
+   "s": "In reported speech, verbs move back a tense because the reporting verb is in the present.",
+   "t": false,
+   "why": "They move back because the reporting verb is in the past."
+  },
+  {
+   "s": "The past perfect is used for the earlier of two past events.",
+   "t": true,
+   "why": "Correct, it shows what happened first."
+  },
+  {
+   "s": "We should use the past perfect for every past action.",
+   "t": false,
+   "why": "It is only for the earlier of two past events."
+  },
+  {
+   "s": "'I wish I had studied more' is a regret about the past.",
+   "t": true,
+   "why": "Yes, wish + past perfect shows a past regret."
+  },
+  {
+   "s": "'If only I hadn't wasted my time' means I am happy I wasted my time.",
+   "t": false,
+   "why": "It shows regret: I wish I had not wasted it."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Report: 'I forgot my keys,' he said.",
+   "o": [
+    "He said he had forgotten his keys.",
+    "He said he forgets his keys.",
+    "He said he has forgot his keys."
+   ],
+   "why": "Past simple → past perfect."
+  },
+  {
+   "q": "Report: 'We didn't see him,' she said.",
+   "o": [
+    "She said they had not seen him.",
+    "She said they don't see him.",
+    "She said they not saw him."
+   ],
+   "why": "didn't see → had not seen."
+  },
+  {
+   "q": "What had Sara expected?",
+   "o": [
+    "a huge number of students",
+    "a small campus",
+    "no teachers"
+   ],
+   "why": "She expected a very big university."
+  },
+  {
+   "q": "What is Zaher's favourite activity?",
+   "o": [
+    "volleyball and the gym",
+    "reading",
+    "cooking"
+   ],
+   "why": "Zaher enjoys volleyball and the gym."
+  },
+  {
+   "q": "Which is the past perfect of 'swim'?",
+   "o": [
+    "had swum",
+    "had swam",
+    "had swimmed"
+   ],
+   "why": "The past participle of swim is swum."
+  },
+  {
+   "q": "Which is the past perfect of 'catch'?",
+   "o": [
+    "had caught",
+    "had catched",
+    "had catch"
+   ],
+   "why": "Catch is irregular: caught."
+  },
+  {
+   "q": "Which sentence shows a past regret?",
+   "o": [
+    "I wish I had studied more.",
+    "I study more.",
+    "I will study more."
+   ],
+   "why": "wish + had + past participle."
+  },
+  {
+   "q": "Why do verbs move back in reported speech?",
+   "o": [
+    "the reporting verb is in the past",
+    "the speaker is angry",
+    "it sounds shorter"
+   ],
+   "why": "Said/told in the past cause backshift."
+  },
+  {
+   "q": "What had B not expected?",
+   "o": [
+    "the long way between buildings",
+    "the friendly teachers",
+    "the food"
+   ],
+   "why": "The distance surprised B."
+  },
+  {
+   "q": "How is the past perfect formed?",
+   "o": [
+    "had + past participle",
+    "has + -ing",
+    "will + have"
+   ],
+   "why": "For example, had visited."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Past perfect: forget",
+   "a": "had forgotten",
+   "d": [
+    "had forgot",
+    "had forgetting",
+    "has forgotten"
+   ]
+  },
+  {
+   "q": "Past perfect: swim",
+   "a": "had swum",
+   "d": [
+    "had swam",
+    "had swimmed",
+    "has swum"
+   ]
+  },
+  {
+   "q": "Past perfect: catch",
+   "a": "had caught",
+   "d": [
+    "had catched",
+    "had catch",
+    "has caught"
+   ]
+  },
+  {
+   "q": "Past perfect: eat",
+   "a": "had eaten",
+   "d": [
+    "had ate",
+    "had eated",
+    "has eaten"
+   ]
+  },
+  {
+   "q": "Past perfect: build",
+   "a": "had built",
+   "d": [
+    "had builded",
+    "had build",
+    "has built"
+   ]
+  },
+  {
+   "q": "Past perfect: make",
+   "a": "had made",
+   "d": [
+    "had maked",
+    "had make",
+    "has made"
+   ]
+  },
+  {
+   "q": "Negative: not see",
+   "a": "had not seen",
+   "d": [
+    "had not saw",
+    "had not see",
+    "has not seen"
+   ]
+  },
+  {
+   "q": "Zaher's favourite sport",
+   "a": "volleyball",
+   "d": [
+    "football",
+    "swimming",
+    "tennis"
+   ]
+  },
+  {
+   "q": "Phrase for regret (2 words)",
+   "a": "If only",
+   "d": [
+    "As soon",
+    "Even though",
+    "So that"
+   ]
+  },
+  {
+   "q": "Moving tenses back",
+   "a": "backshift",
+   "d": [
+    "skimming",
+    "ranking",
+    "bargaining"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "When do we use the past perfect?",
+   "o": [
+    "for the earlier of two past events",
+    "for future plans",
+    "for habits now",
+    "for things happening right now"
+   ],
+   "why": "It shows which past action came first."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which verb in this sentence is in the past perfect: 'She had borrowed a book before class'?",
+   "o": [
+    "had borrowed",
+    "borrowed before",
+    "class",
+    "a book"
+   ],
+   "why": "had + borrowed = past perfect."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What did Sara expect besides many students?",
+   "o": [
+    "teachers from many nationalities",
+    "no classes",
+    "a tiny campus",
+    "very few buildings"
+   ],
+   "why": "She expected teachers from many nationalities."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase do we use with the past perfect to express regret?",
+   "o": [
+    "I wish",
+    "I will",
+    "I'm going to",
+    "I usually"
+   ],
+   "why": "I wish + past perfect expresses regret."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Report: 'I have never seen the sea,' he said.",
+   "o": [
+    "He said he had never seen the sea.",
+    "He said he has never seen the sea.",
+    "He said he never sees the sea.",
+    "He said he had never saw the sea."
+   ],
+   "why": "Present perfect → past perfect."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You didn't revise and failed. Which sentence shows regret?",
+   "o": [
+    "If only I had revised.",
+    "If only I revise.",
+    "If only I will revise.",
+    "If only I revising."
+   ],
+   "why": "If only + past perfect."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "Before I came here I had never used a library.",
+    "Before I came here I have never use a library.",
+    "Before I had came here I never used a library.",
+    "Before I come here I had never used a library."
+   ],
+   "why": "The earlier event uses the past perfect."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'realised' used and not 'had realised' in 'When I arrived, I realised I was late'?",
+   "o": [
+    "both happened at the same time, so the past perfect is not needed",
+    "realised is in the future",
+    "had realised is never correct",
+    "because it is a question"
+   ],
+   "why": "The past perfect is only for an earlier event."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between 'I wish I studied' and 'I wish I had studied'?",
+   "o": [
+    "'had studied' is a regret about the past",
+    "they always mean the same",
+    "'studied' is about the future",
+    "'had studied' is about now"
+   ],
+   "why": "Wish + past perfect looks back at the past."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'She told me she had visited the library.' What does the past perfect show?",
+   "o": [
+    "the visit happened before she told me",
+    "the visit will happen tomorrow",
+    "she is visiting now",
+    "she never visited"
+   ],
+   "why": "The visit came first, before the telling."
+  }
+ ]
+}

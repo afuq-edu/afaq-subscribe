@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: Goodbye, School! (Reading)",
+ "lesson": "Timed reading practice and Time to Talk: ranking the tips",
+ "outcomes": [
+  "Read a text quickly, record the time and calculate your WPM",
+  "Answer questions after reading and aim for 75% accuracy",
+  "Rank tips for new students and give reasons"
+ ],
+ "tf": [
+  {
+   "s": "You should answer the questions while you are reading the text.",
+   "t": false,
+   "why": "Answer after reading; answering during reading distracts you."
+  },
+  {
+   "s": "In timed reading, you should aim for 75% accuracy.",
+   "t": true,
+   "why": "Yes, 75% is the target score."
+  },
+  {
+   "s": "You need a timer that shows seconds.",
+   "t": true,
+   "why": "Seconds help you calculate your exact speed."
+  },
+  {
+   "s": "You should look back at the text when you answer the questions.",
+   "t": false,
+   "why": "You answer the questions without looking back."
+  },
+  {
+   "s": "Recording your WPM helps you see if you are improving.",
+   "t": true,
+   "why": "You can compare it with later readings."
+  },
+  {
+   "s": "Reading fast without understanding is the aim of timed reading.",
+   "t": false,
+   "why": "The aim is to read fast while still understanding."
+  },
+  {
+   "s": "420 words in 3 minutes is 140 wpm.",
+   "t": true,
+   "why": "420 ÷ 3 = 140."
+  },
+  {
+   "s": "In Time to Talk, students rank tips for new students.",
+   "t": true,
+   "why": "Yes, they put the tips in order of importance."
+  },
+  {
+   "s": "6 correct answers out of 10 is a score of 75%.",
+   "t": false,
+   "why": "6 out of 10 is 60%."
+  },
+  {
+   "s": "You only need to record your finish time.",
+   "t": false,
+   "why": "You record both start and finish times."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do you record before you start reading?",
+   "o": [
+    "the start time",
+    "your score",
+    "the answers"
+   ],
+   "why": "You need the start time to work out how long you took."
+  },
+  {
+   "q": "When do you answer the questions?",
+   "o": [
+    "after reading",
+    "before reading",
+    "while reading"
+   ],
+   "why": "Read first, then answer."
+  },
+  {
+   "q": "What do you do with the seconds before calculating?",
+   "o": [
+    "change them to decimals",
+    "ignore them",
+    "add them to the words"
+   ],
+   "why": "For example, 30 seconds = 0.5 minutes."
+  },
+  {
+   "q": "300 words in 2 minutes 30 seconds = ?",
+   "o": [
+    "120 wpm",
+    "150 wpm",
+    "130 wpm"
+   ],
+   "why": "300 ÷ 2.5 = 120."
+  },
+  {
+   "q": "In Time to Talk, how do you rank the tips first?",
+   "o": [
+    "on your own",
+    "with the whole school",
+    "at home"
+   ],
+   "why": "You rank alone first, then compare in groups."
+  },
+  {
+   "q": "How many tips do students rank?",
+   "o": [
+    "nine",
+    "three",
+    "twenty"
+   ],
+   "why": "There are nine tips to rank."
+  },
+  {
+   "q": "8 correct answers out of 10 is...",
+   "o": [
+    "80%",
+    "75%",
+    "8%"
+   ],
+   "why": "8 ÷ 10 = 0.8 = 80%."
+  },
+  {
+   "q": "Why should you answer without looking back at the text?",
+   "o": [
+    "to check what you understood",
+    "to save paper",
+    "to read it again"
+   ],
+   "why": "It shows how much you understood while reading."
+  },
+  {
+   "q": "What happens in the whole-class vote?",
+   "o": [
+    "students choose the best tip",
+    "students time each other",
+    "the teacher reads the text"
+   ],
+   "why": "The class votes for the most valuable tip."
+  },
+  {
+   "q": "What is the best aim in timed reading?",
+   "o": [
+    "fast and with understanding",
+    "fast with no understanding",
+    "slow and careful only"
+   ],
+   "why": "Speed and understanding go together."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Target accuracy",
+   "a": "75%",
+   "d": [
+    "50%",
+    "25%",
+    "100%"
+   ]
+  },
+  {
+   "q": "420 words in 3 minutes",
+   "a": "140 wpm",
+   "d": [
+    "120 wpm",
+    "1260 wpm",
+    "150 wpm"
+   ]
+  },
+  {
+   "q": "500 words in 2 minutes",
+   "a": "250 wpm",
+   "d": [
+    "1000 wpm",
+    "200 wpm",
+    "150 wpm"
+   ]
+  },
+  {
+   "q": "1 minute 30 seconds = ? minutes",
+   "a": "1.5",
+   "d": [
+    "1.3",
+    "1.03",
+    "2.5"
+   ]
+  },
+  {
+   "q": "3 minutes 15 seconds = ? minutes",
+   "a": "3.25",
+   "d": [
+    "3.15",
+    "3.5",
+    "3.1"
+   ]
+  },
+  {
+   "q": "9 correct out of 12",
+   "a": "75%",
+   "d": [
+    "90%",
+    "80%",
+    "70%"
+   ]
+  },
+  {
+   "q": "Answer the questions...",
+   "a": "after reading",
+   "d": [
+    "while reading",
+    "before reading",
+    "halfway through"
+   ]
+  },
+  {
+   "q": "Put tips in order of importance",
+   "a": "rank",
+   "d": [
+    "skim",
+    "guess",
+    "copy"
+   ]
+  },
+  {
+   "q": "Number of tips to rank",
+   "a": "nine",
+   "d": [
+    "three",
+    "five",
+    "twelve"
+   ]
+  },
+  {
+   "q": "600 words in 4 minutes",
+   "a": "150 wpm",
+   "d": [
+    "2400 wpm",
+    "240 wpm",
+    "100 wpm"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why must you answer the questions after reading, not during?",
+   "o": [
+    "Answering during reading distracts you",
+    "The questions are too short",
+    "The timer stops",
+    "The teacher reads them"
+   ],
+   "why": "Focus on reading first, then answer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What must everyone be able to see during timed reading?",
+   "o": [
+    "An accurate timer with seconds",
+    "A dictionary",
+    "The answers",
+    "A map"
+   ],
+   "why": "An accurate timer gives an exact reading time."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two times do you record?",
+   "o": [
+    "The start and finish times",
+    "Only the finish time",
+    "Only the start time",
+    "The time of the next lesson"
+   ],
+   "why": "Finish time minus start time = reading time."
+  },
+  {
+   "lv": "التذكر",
+   "q": "After ranking the tips alone, what do students do?",
+   "o": [
+    "Compare their rankings in groups",
+    "Throw away their lists",
+    "Write an essay",
+    "Read a new text"
+   ],
+   "why": "They compare and defend their choices."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Aisha read 480 words in 4 minutes. What is her speed?",
+   "o": [
+    "120 wpm",
+    "1920 wpm",
+    "160 wpm",
+    "100 wpm"
+   ],
+   "why": "480 ÷ 4 = 120."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Yousuf read a 700-word text. He started at 10:02:00 and finished at 10:05:30. What is his speed?",
+   "o": [
+    "200 wpm",
+    "233 wpm",
+    "175 wpm",
+    "140 wpm"
+   ],
+   "why": "He took 3.5 minutes, and 700 ÷ 3.5 = 200."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Salim answered 12 of 16 questions correctly. What is his score?",
+   "o": [
+    "75%, he reached the target",
+    "60%, below the target",
+    "80%, above the target",
+    "12%, below the target"
+   ],
+   "why": "12 ÷ 16 = 0.75 = 75%."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to record your WPM and score every time?",
+   "o": [
+    "To compare with later readings and see progress",
+    "To finish the book faster",
+    "To avoid answering questions",
+    "To change the text"
+   ],
+   "why": "Records show if you are improving."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is speed without understanding not enough?",
+   "o": [
+    "The aim is to read fast while still understanding",
+    "Speed is never important",
+    "Understanding needs no reading",
+    "The questions are always easy"
+   ],
+   "why": "Reading is only useful if you understand it."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Student A reads at 300 wpm and scores 40%. Student B reads at 200 wpm and scores 80%. Who met the 75% aim?",
+   "o": [
+    "Student B",
+    "Student A",
+    "Both students",
+    "Neither student"
+   ],
+   "why": "Only Student B scored above 75%."
+  }
+ ]
+}

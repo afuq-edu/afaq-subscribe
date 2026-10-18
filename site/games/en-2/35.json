@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Unit 3 – Lesson 4: Skills (Describing a robot)",
+ "outcomes": [
+  "I can listen and colour a robot.",
+  "I can describe a robot: I've got a blue head.",
+  "I can draw a robot and write about it."
+ ],
+ "tf": [
+  {
+   "s": "In the listening, the robot has got a blue head.",
+   "t": true,
+   "why": "I've got a blue head and a brown face."
+  },
+  {
+   "s": "In the listening, the robot has got a green face.",
+   "t": false,
+   "why": "The robot has got a brown face."
+  },
+  {
+   "s": "In the listening, the robot's hands are red.",
+   "t": true,
+   "why": "Green arms and red hands."
+  },
+  {
+   "s": "In the listening, the robot has got black feet.",
+   "t": true,
+   "why": "Green legs, blue knees and black feet."
+  },
+  {
+   "s": "In the listening, the robot's knees are red.",
+   "t": false,
+   "why": "The knees are blue."
+  },
+  {
+   "s": "\"I've got four arms\" matches a robot with two arms.",
+   "t": false,
+   "why": "Two arms is not four arms, so we put a cross."
+  },
+  {
+   "s": "We spell \"head\" h-e-a-d.",
+   "t": true,
+   "why": "That is the right spelling."
+  },
+  {
+   "s": "\"I've got a blue body and green arms\" has two body parts.",
+   "t": true,
+   "why": "Body and arms are two body parts."
+  },
+  {
+   "s": "We say \"I've got four arm.\"",
+   "t": false,
+   "why": "For four we say arms."
+  },
+  {
+   "s": "A robot can have ten fingers.",
+   "t": true,
+   "why": "I've got ten fingers is in the lesson."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What colour is the robot's head?",
+   "o": [
+    "blue",
+    "brown",
+    "red"
+   ],
+   "why": "I've got a blue head."
+  },
+  {
+   "q": "What colour is the robot's face?",
+   "o": [
+    "brown",
+    "blue",
+    "green"
+   ],
+   "why": "I've got a brown face."
+  },
+  {
+   "q": "What colour are the robot's arms?",
+   "o": [
+    "green",
+    "red",
+    "black"
+   ],
+   "why": "I've got green arms."
+  },
+  {
+   "q": "What colour are the robot's hands?",
+   "o": [
+    "red",
+    "green",
+    "blue"
+   ],
+   "why": "I've got red hands."
+  },
+  {
+   "q": "What colour are the robot's knees?",
+   "o": [
+    "blue",
+    "black",
+    "green"
+   ],
+   "why": "I've got blue knees."
+  },
+  {
+   "q": "What colour are the robot's feet?",
+   "o": [
+    "black",
+    "blue",
+    "red"
+   ],
+   "why": "I've got black feet."
+  },
+  {
+   "q": "Spell the word:",
+   "o": [
+    "head",
+    "haed",
+    "hed"
+   ],
+   "why": "h-e-a-d spells head."
+  },
+  {
+   "q": "I've got four ___.",
+   "o": [
+    "arms",
+    "arm",
+    "a arm"
+   ],
+   "why": "Four arms needs the plural."
+  },
+  {
+   "q": "I've got a red ___.",
+   "o": [
+    "head",
+    "arms",
+    "feet"
+   ],
+   "why": "\"a\" goes with one thing: a red head."
+  },
+  {
+   "q": "Read: I've got ten fingers. Picture: ten fingers.",
+   "o": [
+    "Tick",
+    "Cross",
+    "Circle"
+   ],
+   "why": "The picture matches, so tick."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Robot's head",
+   "a": "blue",
+   "d": [
+    "brown",
+    "red",
+    "pink"
+   ]
+  },
+  {
+   "q": "Robot's face",
+   "a": "brown",
+   "d": [
+    "blue",
+    "green",
+    "white"
+   ]
+  },
+  {
+   "q": "Robot's body",
+   "a": "blue",
+   "d": [
+    "red",
+    "brown",
+    "pink"
+   ]
+  },
+  {
+   "q": "Robot's arms",
+   "a": "green",
+   "d": [
+    "red",
+    "black",
+    "pink"
+   ]
+  },
+  {
+   "q": "Robot's hands",
+   "a": "red",
+   "d": [
+    "green",
+    "blue",
+    "pink"
+   ]
+  },
+  {
+   "q": "Robot's legs",
+   "a": "green",
+   "d": [
+    "red",
+    "brown",
+    "pink"
+   ]
+  },
+  {
+   "q": "Robot's knees",
+   "a": "blue",
+   "d": [
+    "black",
+    "red",
+    "pink"
+   ]
+  },
+  {
+   "q": "Robot's feet",
+   "a": "black",
+   "d": [
+    "blue",
+    "red",
+    "pink"
+   ]
+  },
+  {
+   "q": "I've got four ___.",
+   "a": "arms",
+   "d": [
+    "arm",
+    "head",
+    "face"
+   ]
+  },
+  {
+   "q": "I've got a red ___.",
+   "a": "head",
+   "d": [
+    "legs",
+    "hands",
+    "feet"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which sentence describes the robot's head?",
+   "o": [
+    "I've got a blue head.",
+    "I've got blue knees.",
+    "I've got green legs.",
+    "I've got red hands."
+   ],
+   "why": "The robot has got a blue head."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What colour is the robot's body?",
+   "o": [
+    "blue",
+    "green",
+    "brown",
+    "black"
+   ],
+   "why": "I've got a blue body."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is a colour?",
+   "o": [
+    "brown",
+    "knees",
+    "head",
+    "robot"
+   ],
+   "why": "Brown is a colour."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do we start a sentence about our robot?",
+   "o": [
+    "I've got ...",
+    "It's a ...",
+    "Where's ...",
+    "Can I ..."
+   ],
+   "why": "We describe with I've got ..."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your robot has got green legs. What do you write?",
+   "o": [
+    "I've got green legs.",
+    "I've got a green legs.",
+    "I've got green leg.",
+    "I green legs."
+   ],
+   "why": "I've got + colour + plural body part."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Say a sentence with two body parts and colours.",
+   "o": [
+    "I've got a blue body and green arms.",
+    "I've got a blue.",
+    "I've got arms.",
+    "Blue and green."
+   ],
+   "why": "Name each colour and body part."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Read: I've got four arms. The robot has got two arms. Tick or cross?",
+   "o": [
+    "Cross",
+    "Tick",
+    "Both",
+    "None"
+   ],
+   "why": "Two arms do not match four arms."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is NOT correct?",
+   "o": [
+    "I've got a green arms.",
+    "I've got green arms.",
+    "I've got a blue head.",
+    "I've got black feet."
+   ],
+   "why": "We don't use \"a\" with arms."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say \"a blue head\" but \"blue knees\"?",
+   "o": [
+    "We have one head and two knees.",
+    "Heads are blue.",
+    "Knees are small.",
+    "Head is a colour."
+   ],
+   "why": "\"a\" is for one thing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is a full description of the robot's legs, knees and feet?",
+   "o": [
+    "green legs, blue knees and black feet",
+    "blue legs, green knees and red feet",
+    "black legs, red knees and blue feet",
+    "red legs, black knees and green feet"
+   ],
+   "why": "The listening says green legs, blue knees and black feet."
+  }
+ ]
+}

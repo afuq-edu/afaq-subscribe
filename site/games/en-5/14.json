@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 1 – Talent show",
+ "lesson": "Graded readers 1 and 2",
+ "outcomes": [
+  "I can predict a story from its title and pictures and scan for details.",
+  "I can describe the characters with adjectives, comparatives and superlatives.",
+  "I can find the main ideas of a story and give my opinion."
+ ],
+ "tf": [
+  {
+   "s": "In The Baking Day, the red bowl is the biggest.",
+   "t": true,
+   "why": "Yes! The red bowl is the biggest."
+  },
+  {
+   "s": "The blue bowl is bigger than the red bowl.",
+   "t": false,
+   "why": "The blue bowl is smaller than the red bowl."
+  },
+  {
+   "s": "Arwa is more confident than Areej.",
+   "t": true,
+   "why": "Right! Arwa is the more confident girl."
+  },
+  {
+   "s": "The recipe was for eighty people.",
+   "t": false,
+   "why": "The recipe was for eight people, but they baked a cake for eighty."
+  },
+  {
+   "s": "Milk and bananas are foods in the recipe.",
+   "t": false,
+   "why": "The recipe foods are eggs, sugar, butter and flour."
+  },
+  {
+   "s": "In The Tennis Lesson, the boys are playing tennis.",
+   "t": true,
+   "why": "Yes! The story is about a tennis lesson."
+  },
+  {
+   "s": "Hamed is the best at tennis in the class.",
+   "t": true,
+   "why": "Yes! Hamed is the best."
+  },
+  {
+   "s": "At the start of the story, Hisham is good at tennis.",
+   "t": false,
+   "why": "At the start, he is good at painting and doing experiments."
+  },
+  {
+   "s": "One main idea of The Tennis Lesson is: friends help each other.",
+   "t": true,
+   "why": "Great! Friends help each other, and practice helps us get better."
+  },
+  {
+   "s": "Hisham's ball always hits the net because the net is broken.",
+   "t": false,
+   "why": "He isn't good at hitting the ball with his racquet yet."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which bowl is the biggest?",
+   "o": [
+    "the red bowl",
+    "the blue bowl",
+    "the green bowl"
+   ],
+   "why": "The red bowl is the biggest."
+  },
+  {
+   "q": "The blue bowl is ___ than the red bowl.",
+   "o": [
+    "smaller",
+    "bigger",
+    "the smallest"
+   ],
+   "why": "The blue bowl is smaller."
+  },
+  {
+   "q": "Why is the cake so big?",
+   "o": [
+    "They counted badly.",
+    "They used a big oven.",
+    "They wanted a party for the school."
+   ],
+   "why": "The recipe was for eight, but they made a cake for eighty."
+  },
+  {
+   "q": "Which is a food in the recipe?",
+   "o": [
+    "flour",
+    "bananas",
+    "milk"
+   ],
+   "why": "The recipe has eggs, sugar, butter and flour."
+  },
+  {
+   "q": "What sport are the boys playing?",
+   "o": [
+    "tennis",
+    "football",
+    "karate"
+   ],
+   "why": "The story is The Tennis Lesson."
+  },
+  {
+   "q": "Who is the best at tennis in the class?",
+   "o": [
+    "Hamed",
+    "Hisham",
+    "Arwa"
+   ],
+   "why": "Hamed is the best at tennis."
+  },
+  {
+   "q": "Which adjectives describe Hisham?",
+   "o": [
+    "shy and hard-working",
+    "kind and polite",
+    "rude and lazy"
+   ],
+   "why": "Hisham is shy and hard-working."
+  },
+  {
+   "q": "Which adjectives describe Hamed?",
+   "o": [
+    "kind and polite",
+    "shy and hard-working",
+    "mean and rude"
+   ],
+   "why": "Hamed is kind and polite."
+  },
+  {
+   "q": "What do you hit the ball with in tennis?",
+   "o": [
+    "a racquet",
+    "a net",
+    "a bowl"
+   ],
+   "why": "We hit the ball with a racquet."
+  },
+  {
+   "q": "Which reading skill means finding small details fast?",
+   "o": [
+    "scan",
+    "predict",
+    "retell"
+   ],
+   "why": "Scanning finds details quickly."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The biggest bowl",
+   "a": "red",
+   "d": [
+    "blue",
+    "green",
+    "yellow"
+   ]
+  },
+  {
+   "q": "The recipe was for ___ people.",
+   "a": "eight",
+   "d": [
+    "eighty",
+    "eighteen",
+    "two"
+   ]
+  },
+  {
+   "q": "The cake was for ___ people.",
+   "a": "eighty",
+   "d": [
+    "eight",
+    "eighteen",
+    "twelve"
+   ]
+  },
+  {
+   "q": "More confident: Arwa or Areej?",
+   "a": "Arwa",
+   "d": [
+    "Areej",
+    "Hisham",
+    "Hamed"
+   ]
+  },
+  {
+   "q": "A food in the recipe",
+   "a": "eggs",
+   "d": [
+    "bananas",
+    "milk",
+    "rice"
+   ]
+  },
+  {
+   "q": "Graded reader 1: The ___ Day",
+   "a": "Baking",
+   "d": [
+    "Tennis",
+    "Talent",
+    "Space"
+   ]
+  },
+  {
+   "q": "Hisham's ball always hits the ___.",
+   "a": "net",
+   "d": [
+    "racquet",
+    "bowl",
+    "cake"
+   ]
+  },
+  {
+   "q": "Hisham is good at ___ at the start.",
+   "a": "painting",
+   "d": [
+    "tennis",
+    "juggling",
+    "karate"
+   ]
+  },
+  {
+   "q": "You hold it to hit the ball",
+   "a": "racquet",
+   "d": [
+    "net",
+    "bowl",
+    "flour"
+   ]
+  },
+  {
+   "q": "Same sound as day",
+   "a": "make",
+   "d": [
+    "hair",
+    "chair",
+    "fair"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which foods are in the Baking Day recipe?",
+   "o": [
+    "eggs, sugar, butter, flour",
+    "milk, eggs, bananas, sugar",
+    "butter, bananas, flour, milk",
+    "sugar, milk, eggs, bananas"
+   ],
+   "why": "Milk and bananas are not in the recipe."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is Hisham good at at the start of The Tennis Lesson?",
+   "o": [
+    "painting and doing experiments",
+    "tennis and football",
+    "karate and juggling",
+    "baking and cooking"
+   ],
+   "why": "He is good at painting and experiments, not tennis yet."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the names of the two graded readers?",
+   "o": [
+    "The Baking Day and The Tennis Lesson",
+    "Talent show and Welcome back",
+    "Stop, thief! and The Space Race",
+    "My Granny and My family's unusual"
+   ],
+   "why": "These are Graded readers 1 and 2 for Unit 1."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which story words are from The Tennis Lesson?",
+   "o": [
+    "racquet, net, ball, P.E. lesson",
+    "bowl, flour, eggs, sugar",
+    "diamond, magnet, suspect",
+    "stage, karate, juggling"
+   ],
+   "why": "These words are about tennis."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Retell The Baking Day with a superlative. Which sentence is correct?",
+   "o": [
+    "The red bowl is the biggest.",
+    "The red bowl is the bigger.",
+    "The red bowl is biggest than the blue bowl.",
+    "The red bowl is the most big."
+   ],
+   "why": "the + superlative: the biggest."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Sort the adjectives: shy, kind, polite, hard-working. Which is correct?",
+   "o": [
+    "Hisham: shy, hard-working. Hamed: kind, polite.",
+    "Hisham: kind, polite. Hamed: shy, hard-working.",
+    "Hisham: shy, polite. Hamed: kind, hard-working.",
+    "Hisham: all four. Hamed: none."
+   ],
+   "why": "Hisham is shy and hard-working; Hamed is kind and polite."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "What could the girls change to make a better cake?",
+   "o": [
+    "Read the recipe carefully and make a smaller cake.",
+    "Use more sugar.",
+    "Bake for eighty hours.",
+    "Use a smaller bowl for eighty people."
+   ],
+   "why": "Reading the recipe carefully stops the counting mistake."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Hisham's ball always hit the net?",
+   "o": [
+    "He isn't good at hitting the ball with his racquet yet.",
+    "The ball is too big.",
+    "Hamed moves the net.",
+    "He doesn't like tennis."
+   ],
+   "why": "He needs practice to hit the ball well."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What are the two main ideas of The Tennis Lesson?",
+   "o": [
+    "Friends help each other; with help and practice you can become good at something.",
+    "Tennis is easy; nobody needs help.",
+    "Painting is better than tennis; Hamed is rude.",
+    "Cakes are big; recipes are hard."
+   ],
+   "why": "Friends help each other, and practice helps us get better."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The recipe was for 8 people, but the cake was for 80. How many times bigger was the cake?",
+   "o": [
+    "10 times",
+    "8 times",
+    "2 times",
+    "80 times"
+   ],
+   "why": "8 × 10 = 80."
+  }
+ ]
+}

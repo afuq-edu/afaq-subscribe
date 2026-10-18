@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Lesson 7: English in action – Saying how you feel about the future",
+ "outcomes": [
+  "Say how you feel about future events: looking forward to, can't wait, worried about.",
+  "Understand a dialogue about holiday plans and feelings.",
+  "Stress the question word and main verb in going to questions."
+ ],
+ "tf": [
+  {
+   "s": "I'm really looking forward to … shows a happy feeling.",
+   "t": true,
+   "why": "Yes, it means you are happy about something coming."
+  },
+  {
+   "s": "I'm worried about … shows a positive feeling.",
+   "t": false,
+   "why": "Worried about is a negative feeling."
+  },
+  {
+   "s": "Helen is worried because she doesn't like long car journeys.",
+   "t": true,
+   "why": "Yes, long car trips worry her."
+  },
+  {
+   "s": "Katy is going to travel to Salalah by plane.",
+   "t": false,
+   "why": "Katy is going by coach."
+  },
+  {
+   "s": "Katy's journey to Salalah is very short.",
+   "t": false,
+   "why": "It is about nine hours long."
+  },
+  {
+   "s": "We say: I'm excited on camping.",
+   "t": false,
+   "why": "We say excited about."
+  },
+  {
+   "s": "I can't wait for the holidays! means I'm very excited about them.",
+   "t": true,
+   "why": "Yes, can't wait shows excitement."
+  },
+  {
+   "s": "In 'Where are you going to sleep?', the words Where and sleep are stressed.",
+   "t": true,
+   "why": "Yes, the question word and main verb are stressed."
+  },
+  {
+   "s": "I'm not looking forward to … means I'm happy about it.",
+   "t": false,
+   "why": "It means you are not happy about it."
+  },
+  {
+   "s": "After looking forward, we use the word to.",
+   "t": true,
+   "why": "Yes: looking forward to the trip."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: I can't ___ for the summer holidays!",
+   "o": [
+    "wait",
+    "worry",
+    "forward"
+   ],
+   "why": "I can't wait = I'm very excited."
+  },
+  {
+   "q": "Complete: I'm really looking forward ___ the trip.",
+   "o": [
+    "to",
+    "about",
+    "for"
+   ],
+   "why": "Looking forward to …"
+  },
+  {
+   "q": "Ali can't sleep the night before a hard test. He is …",
+   "o": [
+    "worried",
+    "excited",
+    "bored"
+   ],
+   "why": "Worry can stop you sleeping."
+  },
+  {
+   "q": "Which expression shows a negative feeling?",
+   "o": [
+    "I'm worried about …",
+    "I'm excited about …",
+    "I can't wait …"
+   ],
+   "why": "Worried is a negative feeling."
+  },
+  {
+   "q": "I haven't studied. I'm ___ the exam.",
+   "o": [
+    "worried about",
+    "looking forward to",
+    "excited about"
+   ],
+   "why": "Not studying makes you worried."
+  },
+  {
+   "q": "Where is Katy going?",
+   "o": [
+    "Salalah",
+    "London",
+    "Bahla"
+   ],
+   "why": "Katy is going to Salalah."
+  },
+  {
+   "q": "Which words are stressed: How are you going to travel?",
+   "o": [
+    "How and travel",
+    "are and to",
+    "you and going"
+   ],
+   "why": "Stress the question word and main verb."
+  },
+  {
+   "q": "Complete: I'm worried ___ the exam.",
+   "o": [
+    "about",
+    "to",
+    "for"
+   ],
+   "why": "We say worried about."
+  },
+  {
+   "q": "Which is a good going to question about travel?",
+   "o": [
+    "How are you going to travel?",
+    "How you going travel?",
+    "How are you go to travel?"
+   ],
+   "why": "Question word + are + you + going to + verb."
+  },
+  {
+   "q": "Ali loves flying. He's ___ the flight.",
+   "o": [
+    "excited about",
+    "worried about",
+    "not looking forward to"
+   ],
+   "why": "He loves it, so he is excited."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "I'm excited ___ camping.",
+   "a": "about",
+   "d": [
+    "to",
+    "for",
+    "on"
+   ]
+  },
+  {
+   "q": "Looking forward ___ the trip",
+   "a": "to",
+   "d": [
+    "about",
+    "on",
+    "at"
+   ]
+  },
+  {
+   "q": "I can't ___! (very excited)",
+   "a": "wait",
+   "d": [
+    "worry",
+    "stop",
+    "look"
+   ]
+  },
+  {
+   "q": "Katy travels by …",
+   "a": "coach",
+   "d": [
+    "plane",
+    "train",
+    "boat"
+   ]
+  },
+  {
+   "q": "Feelings about the …",
+   "a": "future",
+   "d": [
+    "past",
+    "yesterday",
+    "last week"
+   ]
+  },
+  {
+   "q": "A negative feeling",
+   "a": "worried",
+   "d": [
+    "excited",
+    "happy",
+    "looking forward"
+   ]
+  },
+  {
+   "q": "Stressed: WHERE are you going to …",
+   "a": "SLEEP",
+   "d": [
+    "ARE",
+    "YOU",
+    "TO"
+   ]
+  },
+  {
+   "q": "Helen dislikes long … journeys",
+   "a": "car",
+   "d": [
+    "boat",
+    "plane",
+    "train"
+   ]
+  },
+  {
+   "q": "A positive feeling",
+   "a": "excited",
+   "d": [
+    "worried",
+    "scared",
+    "bored"
+   ]
+  },
+  {
+   "q": "I'm not looking …",
+   "a": "forward to",
+   "d": [
+    "about",
+    "wait",
+    "excited"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list has only positive expressions?",
+   "o": [
+    "I'm looking forward to … / I can't wait … / I'm excited about …",
+    "I'm worried about … / I'm excited about …",
+    "I'm not looking forward to … / I can't wait …",
+    "I'm worried about … / I'm not looking forward to …"
+   ],
+   "why": "All three show happy feelings."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In Wh- questions with going to, which words are stressed?",
+   "o": [
+    "the question word and the main verb",
+    "are and you",
+    "going and to",
+    "all the words equally"
+   ],
+   "why": "The important words are stressed."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How long is Katy's journey to Salalah?",
+   "o": [
+    "about nine hours",
+    "about two hours",
+    "about twenty hours",
+    "about ninety minutes"
+   ],
+   "why": "It is a long coach journey."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does I'm not looking forward to … mean?",
+   "o": [
+    "I'm not happy about something in the future.",
+    "I'm very excited.",
+    "I can't see well.",
+    "I'm looking at something."
+   ],
+   "why": "It is a negative feeling about the future."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your cousins are visiting tomorrow and you are very happy. What do you say?",
+   "o": [
+    "I can't wait to see them!",
+    "I'm worried about them.",
+    "I'm not looking forward to it.",
+    "I'm excited on them."
+   ],
+   "why": "Can't wait shows you are very happy."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: I'm ___ the long journey because I get bored.",
+   "o": [
+    "not looking forward to",
+    "really looking forward to",
+    "excited about",
+    "can't wait for"
+   ],
+   "why": "Getting bored is a reason to feel negative."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is correct?",
+   "o": [
+    "I'm really looking forward to visiting my cousins in Sur.",
+    "I'm really looking forward visit my cousins in Sur.",
+    "I'm really looking forward about my cousins in Sur.",
+    "I really looking forward to visit my cousins."
+   ],
+   "why": "Looking forward to + verb-ing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ali is excited about the flight, but he's worried about the long journey. What does but show?",
+   "o": [
+    "two different feelings",
+    "two happy feelings",
+    "a reason",
+    "a time"
+   ],
+   "why": "But joins a positive and a negative feeling."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Katy's coach journey is about nine hours. Why might someone be worried about it?",
+   "o": [
+    "Long journeys can be tiring and boring.",
+    "Nine hours is very short.",
+    "Coaches go to the Moon.",
+    "There is no road to Salalah."
+   ],
+   "why": "A long trip can be tiring."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is stronger: I'm looking forward to it or I can't wait?",
+   "o": [
+    "I can't wait",
+    "I'm looking forward to it",
+    "They mean the opposite.",
+    "Neither is positive."
+   ],
+   "why": "Can't wait shows very strong excitement."
+  }
+ ]
+}

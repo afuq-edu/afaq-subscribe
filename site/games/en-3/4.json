@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 1: It's a happy day!",
+ "lesson": "Unit 1 – Lesson 1: Vocabulary and Grammar (daily routines)",
+ "outcomes": [
+  "I can say and write ten daily routines.",
+  "I can say what I do and don't do with I / We and don't."
+ ],
+ "tf": [
+  {
+   "s": "We get up in the morning.",
+   "t": true,
+   "why": "Yes! We get up when the day starts."
+  },
+  {
+   "s": "Go to bed is the first routine of the day.",
+   "t": false,
+   "why": "Go to bed is the last routine. Get up is the first."
+  },
+  {
+   "s": "We use don't to say no: I don't play.",
+   "t": true,
+   "why": "Great! Don't comes before the verb."
+  },
+  {
+   "s": "The sentence I play don't is correct.",
+   "t": false,
+   "why": "Don't comes before the verb: I don't play."
+  },
+  {
+   "s": "Have breakfast means eat in the morning.",
+   "t": true,
+   "why": "Breakfast is the morning meal."
+  },
+  {
+   "s": "We have dinner at school in the morning.",
+   "t": false,
+   "why": "Dinner is the evening meal."
+  },
+  {
+   "s": "It's means It is.",
+   "t": true,
+   "why": "It's is the short way to say It is."
+  },
+  {
+   "s": "We say do homework, not have homework.",
+   "t": true,
+   "why": "Well done! The routine is do homework."
+  },
+  {
+   "s": "A red cross in a picture means a yes sentence.",
+   "t": false,
+   "why": "A red cross means no, so we use don't."
+  },
+  {
+   "s": "We can say We have lunch. and We don't have lunch.",
+   "t": true,
+   "why": "One is yes and one is no."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "A boy stretches and yawns. Which routine is it?",
+   "o": [
+    "get up",
+    "go to bed",
+    "have lunch"
+   ],
+   "why": "We stretch and yawn when we get up."
+  },
+  {
+   "q": "Complete: We ___ lunch at school. (yes)",
+   "o": [
+    "have",
+    "do",
+    "play"
+   ],
+   "why": "We say have lunch."
+  },
+  {
+   "q": "Complete: I ___ my homework.",
+   "o": [
+    "do",
+    "have",
+    "go"
+   ],
+   "why": "We say do homework."
+  },
+  {
+   "q": "Complete: I ___ to school.",
+   "o": [
+    "go",
+    "have",
+    "do"
+   ],
+   "why": "We say go to school."
+  },
+  {
+   "q": "Which is a meal?",
+   "o": [
+    "dinner",
+    "homework",
+    "bed"
+   ],
+   "why": "Dinner is a meal we eat."
+  },
+  {
+   "q": "Complete: I ___ play. (no)",
+   "o": [
+    "don't",
+    "not",
+    "no"
+   ],
+   "why": "We use don't before the verb."
+  },
+  {
+   "q": "A boy is sleeping at night. Which routine is it?",
+   "o": [
+    "go to bed",
+    "get up",
+    "go to school"
+   ],
+   "why": "At night we go to bed."
+  },
+  {
+   "q": "Which routine do we do in the art room?",
+   "o": [
+    "have art lessons",
+    "have dinner",
+    "go to bed"
+   ],
+   "why": "We paint and draw in art lessons."
+  },
+  {
+   "q": "Picture: tennis with a red cross. Which sentence?",
+   "o": [
+    "We don't play tennis.",
+    "We play tennis.",
+    "We tennis don't play."
+   ],
+   "why": "The red cross means no."
+  },
+  {
+   "q": "What is It's?",
+   "o": [
+    "It is",
+    "It has",
+    "It does"
+   ],
+   "why": "It's is short for It is."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The morning meal",
+   "a": "have breakfast",
+   "d": [
+    "have dinner",
+    "have lunch",
+    "do homework"
+   ]
+  },
+  {
+   "q": "The evening meal",
+   "a": "have dinner",
+   "d": [
+    "have breakfast",
+    "get up",
+    "go to school"
+   ]
+  },
+  {
+   "q": "Sleep at night",
+   "a": "go to bed",
+   "d": [
+    "get up",
+    "play",
+    "pray"
+   ]
+  },
+  {
+   "q": "Wake up in the morning",
+   "a": "get up",
+   "d": [
+    "go to bed",
+    "have dinner",
+    "do homework"
+   ]
+  },
+  {
+   "q": "Work at home after school",
+   "a": "do homework",
+   "d": [
+    "have lunch",
+    "go to bed",
+    "get up"
+   ]
+  },
+  {
+   "q": "Paint and draw at school",
+   "a": "have art lessons",
+   "d": [
+    "have dinner",
+    "do homework",
+    "go to bed"
+   ]
+  },
+  {
+   "q": "Meal in the middle of the day",
+   "a": "have lunch",
+   "d": [
+    "have dinner",
+    "have breakfast",
+    "go to bed"
+   ]
+  },
+  {
+   "q": "I ___ play. (no)",
+   "a": "don't",
+   "d": [
+    "not",
+    "no",
+    "do"
+   ]
+  },
+  {
+   "q": "Order: go / I / school / to",
+   "a": "I go to school",
+   "d": [
+    "Go I to school",
+    "I to go school",
+    "School I go to"
+   ]
+  },
+  {
+   "q": "It's = ___",
+   "a": "It is",
+   "d": [
+    "It has",
+    "Its",
+    "It was"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word do we use to say no?",
+   "o": [
+    "don't",
+    "do",
+    "have",
+    "play"
+   ],
+   "why": "Don't makes a no sentence."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which routine is NOT a meal?",
+   "o": [
+    "do homework",
+    "have breakfast",
+    "have lunch",
+    "have dinner"
+   ],
+   "why": "Homework is work, not food."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which routine do we do first in the day?",
+   "o": [
+    "get up",
+    "have dinner",
+    "go to bed",
+    "do homework"
+   ],
+   "why": "We get up first."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which routine is about eating eggs and bread in the morning?",
+   "o": [
+    "have breakfast",
+    "have dinner",
+    "go to bed",
+    "have art lessons"
+   ],
+   "why": "Breakfast is the morning meal."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Order the words: breakfast / We / have",
+   "o": [
+    "We have breakfast.",
+    "Have we breakfast.",
+    "Breakfast we have.",
+    "We breakfast have."
+   ],
+   "why": "I or We comes first, then the verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture: dinner with a red cross. Which sentence?",
+   "o": [
+    "I don't have dinner.",
+    "I have dinner.",
+    "I dinner don't have.",
+    "I have don't dinner."
+   ],
+   "why": "The cross means no: I don't have dinner."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is correct?",
+   "o": [
+    "We don't play tennis.",
+    "We not play tennis.",
+    "We play don't tennis.",
+    "We no play tennis."
+   ],
+   "why": "Don't comes before the verb play."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which routines are in the right order for a day?",
+   "o": [
+    "get up, have breakfast, go to school",
+    "go to bed, get up, have lunch",
+    "have dinner, get up, go to school",
+    "go to school, get up, have breakfast"
+   ],
+   "why": "We get up, eat breakfast, then go to school."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The chant says I don't play. Ali plays every day. What can Ali say?",
+   "o": [
+    "I play.",
+    "I don't play.",
+    "We don't play.",
+    "I don't go to school."
+   ],
+   "why": "Ali plays, so his sentence has no don't."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is about something you do at home in the afternoon?",
+   "o": [
+    "I do homework.",
+    "I go to school.",
+    "I get up.",
+    "I have breakfast."
+   ],
+   "why": "We do homework at home after school."
+  }
+ ]
+}

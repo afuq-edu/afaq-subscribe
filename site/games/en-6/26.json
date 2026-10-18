@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 2: Technology",
+  "lesson": "Unit 2 – Lesson 11: Get ready for… (exam practice)",
+  "outcomes": [
+    "I can listen to the whole dialogue before I choose an answer.",
+    "I can write the correct word for a definition and spell it well.",
+    "I can ask and answer questions about choosing a smartphone."
+  ],
+  "tf": [
+    {
+      "s": "In a listening test, you should listen to the whole dialogue before you choose.",
+      "t": true,
+      "why": "The answer can come anywhere in the dialogue."
+    },
+    {
+      "s": "The first picture you hear about is always the correct answer.",
+      "t": false,
+      "why": "The correct answer isn’t always at the beginning or the end."
+    },
+    {
+      "s": "A café is a place where a waiter brings your food.",
+      "t": true,
+      "why": "Yes, you can eat and drink in a café."
+    },
+    {
+      "s": "A printer is a small computer you can carry in a bag.",
+      "t": false,
+      "why": "That is a laptop; a printer prints on paper."
+    },
+    {
+      "s": "Snorkelling is a sport you do outdoors, under the water.",
+      "t": true,
+      "why": "You swim and look under the water."
+    },
+    {
+      "s": "A theatre is a place where actors work.",
+      "t": true,
+      "why": "Actors perform plays in a theatre."
+    },
+    {
+      "s": "“Pasword” is the correct spelling.",
+      "t": false,
+      "why": "The correct spelling is password, with double s."
+    },
+    {
+      "s": "Spelling does not matter when you write words in the test.",
+      "t": false,
+      "why": "Always check your spelling; it is part of the answer."
+    },
+    {
+      "s": "“Which girl?” “The one wearing headphones.” is a correct answer.",
+      "t": true,
+      "why": "The one wearing … tells us which person."
+    },
+    {
+      "s": "Volleyball is a place where you watch films.",
+      "t": false,
+      "why": "Volleyball is a sport you play with a ball and a net."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Write the word: a small computer you can carry in a bag.",
+      "o": [
+        "a laptop",
+        "a printer",
+        "a screen"
+      ],
+      "why": "A laptop is small enough to carry."
+    },
+    {
+      "q": "Write the word: a place where actors work.",
+      "o": [
+        "a theatre",
+        "a café",
+        "a library"
+      ],
+      "why": "Actors work in a theatre."
+    },
+    {
+      "q": "Which spelling is correct?",
+      "o": [
+        "headphones",
+        "hedphones",
+        "headfones"
+      ],
+      "why": "Headphones has ea and ph."
+    },
+    {
+      "q": "Which word is spelt correctly?",
+      "o": [
+        "laptop",
+        "laptob",
+        "labtop"
+      ],
+      "why": "Laptop ends with p."
+    },
+    {
+      "q": "Complete: Which girl? – The one ___ headphones.",
+      "o": [
+        "wearing",
+        "wear",
+        "wears"
+      ],
+      "why": "The one wearing … describes the person."
+    },
+    {
+      "q": "Which machine puts words and pictures on paper?",
+      "o": [
+        "a printer",
+        "a screen",
+        "a laptop"
+      ],
+      "why": "A printer prints on paper."
+    },
+    {
+      "q": "What should you do the first time you listen?",
+      "o": [
+        "Listen carefully to the whole description.",
+        "Write the first word you hear.",
+        "Close your book."
+      ],
+      "why": "Wait for the full description before you answer."
+    },
+    {
+      "q": "Which is a good question in a phone shop?",
+      "o": [
+        "How much is this smartphone?",
+        "Where is the theatre?",
+        "Do you like snorkelling?"
+      ],
+      "why": "You ask about the price before you buy."
+    },
+    {
+      "q": "Which is a sport you play with a small ball, bats and a table?",
+      "o": [
+        "table tennis",
+        "snorkelling",
+        "volleyball"
+      ],
+      "why": "Table tennis is played on a table."
+    },
+    {
+      "q": "Which part of a phone shows pictures and words?",
+      "o": [
+        "the screen",
+        "the battery",
+        "the bag"
+      ],
+      "why": "You look at the screen."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "A small computer you can carry",
+      "a": "laptop",
+      "d": [
+        "printer",
+        "screen",
+        "theatre"
+      ]
+    },
+    {
+      "q": "Where a waiter brings your food",
+      "a": "café",
+      "d": [
+        "theatre",
+        "laptop",
+        "printer"
+      ]
+    },
+    {
+      "q": "Where actors work",
+      "a": "theatre",
+      "d": [
+        "café",
+        "screen",
+        "pool"
+      ]
+    },
+    {
+      "q": "Sport under the water",
+      "a": "snorkelling",
+      "d": [
+        "volleyball",
+        "table tennis",
+        "running"
+      ]
+    },
+    {
+      "q": "Sport with a ball and a high net",
+      "a": "volleyball",
+      "d": [
+        "snorkelling",
+        "swimming",
+        "running"
+      ]
+    },
+    {
+      "q": "Prints on paper",
+      "a": "printer",
+      "d": [
+        "screen",
+        "laptop",
+        "café"
+      ]
+    },
+    {
+      "q": "Correct spelling",
+      "a": "password",
+      "d": [
+        "pasword",
+        "passwerd",
+        "pasward"
+      ]
+    },
+    {
+      "q": "Correct spelling",
+      "a": "headphones",
+      "d": [
+        "hedphones",
+        "headfones",
+        "hedfones"
+      ]
+    },
+    {
+      "q": "The one ___ headphones.",
+      "a": "wearing",
+      "d": [
+        "wear",
+        "wears",
+        "wore"
+      ]
+    },
+    {
+      "q": "Part of a tablet you look at",
+      "a": "screen",
+      "d": [
+        "printer",
+        "café",
+        "theatre"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Why shouldn’t you choose the first thing you hear?",
+      "o": [
+        "The correct answer isn’t always at the beginning or the end.",
+        "The first thing is always wrong.",
+        "The dialogue is too short.",
+        "You only hear one picture."
+      ],
+      "why": "Listen to the whole dialogue before you choose."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What should you check when you write words in Reading and Writing Part 1?",
+      "o": [
+        "your spelling",
+        "your drawing",
+        "the page colour",
+        "your name only"
+      ],
+      "why": "Words must be spelt correctly."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which of these words is a place?",
+      "o": [
+        "café",
+        "laptop",
+        "printer",
+        "screen"
+      ],
+      "why": "A café is a place where you eat and drink."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which of these words is a device?",
+      "o": [
+        "laptop",
+        "theatre",
+        "café",
+        "volleyball"
+      ],
+      "why": "A laptop is a computer device."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "“Which smartphone do you want to buy?” Choose the best answer.",
+      "o": [
+        "The black one, because it has a bigger screen.",
+        "Yes, I do.",
+        "At the theatre.",
+        "Snorkelling."
+      ],
+      "why": "It answers which one and gives a reason."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You want to know about a smartphone’s camera. What do you ask?",
+      "o": [
+        "Does it take good photos?",
+        "Is it a café?",
+        "Can it play volleyball?",
+        "Where do actors work?"
+      ],
+      "why": "A question about photos is about the camera."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Definition: “You can watch a play here.” Which word is correct?",
+      "o": [
+        "theatre",
+        "café",
+        "laptop",
+        "printer"
+      ],
+      "why": "Plays happen in a theatre, where actors work."
+    },
+    {
+      "lv": "التحليل",
+      "q": "A boy says: “I wanted the blue phone… but no, I bought the red one.” Which phone did he buy?",
+      "o": [
+        "the red one",
+        "the blue one",
+        "both phones",
+        "no phone"
+      ],
+      "why": "He mentions blue first, but the answer comes later: red."
+    },
+    {
+      "lv": "التحليل",
+      "q": "In a Listen and colour task, why wait for the full description?",
+      "o": [
+        "You need to know exactly which thing to colour.",
+        "Because the colours are always the same.",
+        "So you can finish before the audio starts.",
+        "Because you only colour one thing."
+      ],
+      "why": "The description tells you which object and which colour."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which definition fits “snorkelling” best?",
+      "o": [
+        "A sport you do outdoors, under the water",
+        "A game you play on a table",
+        "A sport with a big ball and a net",
+        "A place where you watch films"
+      ],
+      "why": "Snorkelling means swimming and looking under the water."
+    }
+  ]
+}

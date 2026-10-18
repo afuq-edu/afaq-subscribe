@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Graded readers 1 and 2: The Desert Safari / The Nature Hunt",
+ "outcomes": [
+  "Follow the main events of The Desert Safari and The Nature Hunt.",
+  "Name the animals in the stories and what they do.",
+  "Use must, might and the first conditional from the stories."
+ ],
+ "tf": [
+  {
+   "s": "Khalid and his family ride on the back of a big truck.",
+   "t": true,
+   "why": "Yes, they go on a desert safari in a truck."
+  },
+  {
+   "s": "In The Desert Safari, the eagle catches a fish.",
+   "t": false,
+   "why": "The eagle catches a rabbit."
+  },
+  {
+   "s": "The gazelles use their long horns to fight with.",
+   "t": true,
+   "why": "Yes, horns help them fight."
+  },
+  {
+   "s": "Khalid's family see an Arabian leopard on the safari.",
+   "t": true,
+   "why": "Yes, the leopard is the most exciting part."
+  },
+  {
+   "s": "In The Nature Hunt, the flamingos have antennae.",
+   "t": false,
+   "why": "The beetle has antennae; flamingos lay eggs."
+  },
+  {
+   "s": "In The Nature Hunt, the girls find the hedgehog in the lake.",
+   "t": false,
+   "why": "They find it in the trees."
+  },
+  {
+   "s": "The flamingos are the animals that lay eggs in The Nature Hunt.",
+   "t": true,
+   "why": "Yes, flamingos lay eggs."
+  },
+  {
+   "s": "The girls find a beetle on the bus window at the end.",
+   "t": true,
+   "why": "Yes, the beetle has antennae."
+  },
+  {
+   "s": "The girls don't win the prize.",
+   "t": false,
+   "why": "They win because they find all the animals."
+  },
+  {
+   "s": "The hedgehog curls up when Noora takes a photo.",
+   "t": true,
+   "why": "Yes, it makes itself into a ball."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does the eagle catch in The Desert Safari?",
+   "o": [
+    "a rabbit",
+    "a snake",
+    "a fish"
+   ],
+   "why": "The eagle catches a rabbit."
+  },
+  {
+   "q": "What does the Arabian leopard have?",
+   "o": [
+    "big paws and long whiskers",
+    "wings and feathers",
+    "fins and scales"
+   ],
+   "why": "That is how the story describes it."
+  },
+  {
+   "q": "Why does Khalid's mum look worried?",
+   "o": [
+    "The leopard runs to the truck, roaring.",
+    "The truck is very slow.",
+    "She can't see any animals."
+   ],
+   "why": "A roaring leopard coming close is scary."
+  },
+  {
+   "q": "Where do the girls find fish with fins and scales?",
+   "o": [
+    "in a lake",
+    "in the trees",
+    "on the bus"
+   ],
+   "why": "Fish live in the lake."
+  },
+  {
+   "q": "Who takes the photo of the hedgehog?",
+   "o": [
+    "Noora",
+    "Sabah",
+    "Khalid"
+   ],
+   "why": "Noora takes the photo."
+  },
+  {
+   "q": "Which animal has spines?",
+   "o": [
+    "a hedgehog",
+    "a flamingo",
+    "a beetle"
+   ],
+   "why": "Hedgehogs have spines on their back."
+  },
+  {
+   "q": "What is a nature hunt?",
+   "o": [
+    "a game where you look for animals outside",
+    "a test in the classroom",
+    "a ride on a truck in the desert"
+   ],
+   "why": "In a nature hunt you find animals from a list."
+  },
+  {
+   "q": "Complete: If you find all the animals, you ___ win a prize.",
+   "o": [
+    "will",
+    "are",
+    "did"
+   ],
+   "why": "First conditional: … will + verb."
+  },
+  {
+   "q": "Khalid is sure. It ___ be looking for food.",
+   "o": [
+    "must",
+    "might",
+    "can't"
+   ],
+   "why": "Must shows we are sure."
+  },
+  {
+   "q": "Which is a big hill of sand?",
+   "o": [
+    "a sand dune",
+    "a truck",
+    "a prize"
+   ],
+   "why": "Sand dunes are in the desert."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Family vehicle on the safari",
+   "a": "truck",
+   "d": [
+    "bus",
+    "train",
+    "boat"
+   ]
+  },
+  {
+   "q": "The eagle catches a …",
+   "a": "rabbit",
+   "d": [
+    "fish",
+    "scorpion",
+    "gazelle"
+   ]
+  },
+  {
+   "q": "Desert animal that stings",
+   "a": "scorpion",
+   "d": [
+    "gazelle",
+    "eagle",
+    "leopard"
+   ]
+  },
+  {
+   "q": "Animal with long horns",
+   "a": "gazelle",
+   "d": [
+    "leopard",
+    "eagle",
+    "scorpion"
+   ]
+  },
+  {
+   "q": "The guide throws it some …",
+   "a": "meat",
+   "d": [
+    "water",
+    "bread",
+    "fruit"
+   ]
+  },
+  {
+   "q": "Animal that lays eggs (Nature Hunt)",
+   "a": "flamingos",
+   "d": [
+    "hedgehogs",
+    "beetles",
+    "gazelles"
+   ]
+  },
+  {
+   "q": "Where they find the hedgehog",
+   "a": "in the trees",
+   "d": [
+    "in the lake",
+    "on the bus",
+    "in the sand"
+   ]
+  },
+  {
+   "q": "Fish have scales and …",
+   "a": "fins",
+   "d": [
+    "spines",
+    "antennae",
+    "horns"
+   ]
+  },
+  {
+   "q": "What they win",
+   "a": "a prize",
+   "d": [
+    "a truck",
+    "a camera",
+    "a leopard"
+   ]
+  },
+  {
+   "q": "Not sure: They ___ be gazelles.",
+   "a": "could",
+   "d": [
+    "must",
+    "can't",
+    "will"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do the girls need to find in The Nature Hunt?",
+   "o": [
+    "animals with antennae, spines, scales and fins, and one that lays eggs",
+    "four kinds of desert animals",
+    "four birds and a fish",
+    "a leopard, an eagle and a gazelle"
+   ],
+   "why": "That is the list for the nature hunt."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which four animals does Khalid's family see on the desert safari?",
+   "o": [
+    "an eagle, gazelles, a scorpion and a leopard",
+    "a hedgehog, a beetle, fish and flamingos",
+    "a lion, a shark, a bee and a turtle",
+    "a camel, a horse, a goat and a cat"
+   ],
+   "why": "These are the safari animals."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How does The Desert Safari end?",
+   "o": [
+    "The leopard catches the meat and runs away.",
+    "The leopard gets into the truck.",
+    "The family gets lost in the desert.",
+    "The eagle catches the leopard."
+   ],
+   "why": "The guide's meat keeps everyone safe."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why do the girls win the prize?",
+   "o": [
+    "They found all the animals on the list.",
+    "They took the most photos.",
+    "They were the fastest runners.",
+    "They found a leopard."
+   ],
+   "why": "They completed the whole list."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the guide's sentence with if?",
+   "o": [
+    "If you look over there, you'll see an Arabian leopard!",
+    "If you will look over there, you see an Arabian leopard!",
+    "If you looked over there, you'll see an Arabian leopard!",
+    "If you look over there, you saw an Arabian leopard!"
+   ],
+   "why": "If + present, will + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a new If sentence for a nature hunt.",
+   "o": [
+    "If we look under the rocks, we'll find a beetle.",
+    "If we will look under the rocks, we find a beetle.",
+    "If we looking under the rocks, we'll find a beetle.",
+    "If we look under the rocks, we found a beetle."
+   ],
+   "why": "Correct first conditional form."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The guide says: They could be Arabian gazelles. How sure is he?",
+   "o": [
+    "not sure",
+    "100% sure",
+    "sure they are not gazelles",
+    "he doesn't care"
+   ],
+   "why": "Could shows a possibility, not certainty."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the family leave the scorpion quickly?",
+   "o": [
+    "If it stings you, you'll need to go to hospital.",
+    "It is too small to see.",
+    "The truck is out of fuel.",
+    "The scorpion is sleeping."
+   ],
+   "why": "Scorpion stings are dangerous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Sabah think the hunt might be difficult?",
+   "o": [
+    "They need to find four different kinds of animals.",
+    "It is raining very hard.",
+    "They don't have a camera.",
+    "Animals are not allowed in the park."
+   ],
+   "why": "Finding four kinds of animals is a big job."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which item on the list does the beetle complete?",
+   "o": [
+    "an animal with antennae",
+    "an animal with spines",
+    "an animal with scales and fins",
+    "an animal that lays eggs"
+   ],
+   "why": "Beetles are insects with antennae."
+  }
+ ]
+}

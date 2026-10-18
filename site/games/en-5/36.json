@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 4 – Off to the shops",
+ "lesson": "Lesson 4: Vocabulary and Grammar – Money and have to / don’t have to",
+ "outcomes": [
+  "Say eight money words like purse, wallet, save and spend.",
+  "Use have to / don't have to for things that are necessary or not.",
+  "Ask and answer Do you have to …? questions."
+ ],
+ "tf": [
+  {
+   "s": "The opposite of \"buy\" is \"sell\".",
+   "t": true,
+   "why": "Shops sell and people buy."
+  },
+  {
+   "s": "\"Have to\" means it is necessary.",
+   "t": true,
+   "why": "have to = necessary."
+  },
+  {
+   "s": "\"Don't have to\" means you must not do it.",
+   "t": false,
+   "why": "don't have to = it is not necessary."
+  },
+  {
+   "s": "We say \"He have to get some pocket money.\"",
+   "t": false,
+   "why": "With he/she we use has to: He has to get some pocket money."
+  },
+  {
+   "s": "A money box is a place to keep money at home.",
+   "t": true,
+   "why": "You can save coins in a money box."
+  },
+  {
+   "s": "When you save money, you use it to buy sweets.",
+   "t": false,
+   "why": "When you save money, you keep it. When you spend it, you use it."
+  },
+  {
+   "s": "A purse is a small bag for money that women often carry.",
+   "t": true,
+   "why": "That is a purse."
+  },
+  {
+   "s": "\"Does Dana have to buy some shoes?\" is a correct question.",
+   "t": true,
+   "why": "Does + she + have to + verb."
+  },
+  {
+   "s": "A short answer to \"Do you have to study?\" is \"Yes, I have.\"",
+   "t": false,
+   "why": "The short answer is: Yes, I do."
+  },
+  {
+   "s": "\"She's got all the ingredients, so she doesn't have to go to the greengrocer's.\" is correct.",
+   "t": true,
+   "why": "She has everything, so it is not necessary to go."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where do you keep money at home?",
+   "o": [
+    "in a money box",
+    "in a purse at the shop",
+    "in the fridge"
+   ],
+   "why": "A money box keeps money safe at home."
+  },
+  {
+   "q": "Complete: He ______ get some pocket money.",
+   "o": [
+    "has to",
+    "have to",
+    "having to"
+   ],
+   "why": "With he we use has to."
+  },
+  {
+   "q": "The opposite of \"save\" is ______.",
+   "o": [
+    "spend",
+    "keep",
+    "sell"
+   ],
+   "why": "Save = keep money; spend = use it."
+  },
+  {
+   "q": "Make a question: you / have to / buy that boat?",
+   "o": [
+    "Do you have to buy that boat?",
+    "You do have to buy that boat?",
+    "Have you to buy that boat?"
+   ],
+   "why": "Do + you + have to + verb?"
+  },
+  {
+   "q": "I've got a lot of pocket money, so I ______ save any money.",
+   "o": [
+    "don't have to",
+    "have to",
+    "has to"
+   ],
+   "why": "It is not necessary to save."
+  },
+  {
+   "q": "We have a difficult exam tomorrow, so we ______ study a lot this evening.",
+   "o": [
+    "have to",
+    "don't have to",
+    "doesn't have to"
+   ],
+   "why": "Studying is necessary before an exam."
+  },
+  {
+   "q": "Complete: Shops ______ things and people buy them.",
+   "o": [
+    "sell",
+    "save",
+    "spend"
+   ],
+   "why": "Shops sell; customers buy."
+  },
+  {
+   "q": "Does Nawaf have to buy some shoes? (yes)",
+   "o": [
+    "Yes, he does.",
+    "Yes, he has.",
+    "Yes, he is."
+   ],
+   "why": "Short answer: Yes, he does."
+  },
+  {
+   "q": "Which sentence is about something NOT necessary?",
+   "o": [
+    "We don't have to buy toys.",
+    "We have to buy food.",
+    "She has to study."
+   ],
+   "why": "don't have to = not necessary."
+  },
+  {
+   "q": "Money that parents give children every week is ______.",
+   "o": [
+    "pocket money",
+    "a wallet",
+    "a price"
+   ],
+   "why": "Children get pocket money."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Opposite of buy",
+   "a": "sell",
+   "d": [
+    "save",
+    "spend",
+    "get"
+   ]
+  },
+  {
+   "q": "Opposite of save",
+   "a": "spend",
+   "d": [
+    "keep",
+    "buy",
+    "sell"
+   ]
+  },
+  {
+   "q": "Women's small money bag",
+   "a": "purse",
+   "d": [
+    "wallet",
+    "money box",
+    "sports bag"
+   ]
+  },
+  {
+   "q": "Keep coins at home in it",
+   "a": "money box",
+   "d": [
+    "purse",
+    "kiosk",
+    "phone case"
+   ]
+  },
+  {
+   "q": "She ___ go to school.",
+   "a": "has to",
+   "d": [
+    "have to",
+    "having to",
+    "haves to"
+   ]
+  },
+  {
+   "q": "They ___ buy food.",
+   "a": "have to",
+   "d": [
+    "has to",
+    "haves to",
+    "having"
+   ]
+  },
+  {
+   "q": "Not necessary (I)",
+   "a": "don't have to",
+   "d": [
+    "have to",
+    "has to",
+    "doesn't have"
+   ]
+  },
+  {
+   "q": "Not necessary (he)",
+   "a": "doesn't have to",
+   "d": [
+    "don't have to",
+    "has to",
+    "have to"
+   ]
+  },
+  {
+   "q": "Do you have to study? (yes)",
+   "a": "Yes, I do.",
+   "d": [
+    "Yes, I have.",
+    "Yes, I am.",
+    "Yes, I will."
+   ]
+  },
+  {
+   "q": "Money children get",
+   "a": "pocket money",
+   "d": [
+    "wallet",
+    "price",
+    "purse"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the difference between \"I have to\" and \"I don't have to\"?",
+   "o": [
+    "have to = necessary; don't have to = not necessary",
+    "have to = past; don't have to = future",
+    "They mean the same.",
+    "have to = question; don't have to = answer"
+   ],
+   "why": "have to shows something is necessary."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group has only money words?",
+   "o": [
+    "purse, wallet, save, spend",
+    "comet, rocket, star",
+    "port, fort, ruins",
+    "escalator, thief, steal"
+   ],
+   "why": "These are the money words."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a wallet?",
+   "o": [
+    "a small flat case for money",
+    "a shop for fish",
+    "a machine that goes upstairs",
+    "a big box for toys"
+   ],
+   "why": "People keep money and cards in a wallet."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word do we use with he and she?",
+   "o": [
+    "has to",
+    "have to",
+    "haves to",
+    "having to"
+   ],
+   "why": "He has to, she has to."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ask about Dana: buy some shoes?",
+   "o": [
+    "Does Dana have to buy some shoes?",
+    "Do Dana has to buy some shoes?",
+    "Dana does have to buys some shoes?",
+    "Has Dana to buy some shoes?"
+   ],
+   "why": "Does + Dana + have to + base verb?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your family needs food every week. Which sentence is correct?",
+   "o": [
+    "We have to buy food every week.",
+    "We don't have to buy food every week.",
+    "We has to buy food every week.",
+    "We have to buys food every week."
+   ],
+   "why": "Food is necessary, so we use have to."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You have no homework tonight. What do you say?",
+   "o": [
+    "I don't have to do homework tonight.",
+    "I have to do homework tonight.",
+    "I doesn't have to do homework tonight.",
+    "I has to do homework tonight."
+   ],
+   "why": "It is not necessary, so don't have to."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ali puts his pocket money in his money box every week. Is he saving or spending?",
+   "o": [
+    "saving",
+    "spending",
+    "selling",
+    "stealing"
+   ],
+   "why": "He keeps his money, so he is saving."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "He have to get some pocket money.",
+    "She has to study.",
+    "We don't have to buy toys.",
+    "Do you have to go?"
+   ],
+   "why": "With he we say has to."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sara buys sweets every day with her pocket money. What is true?",
+   "o": [
+    "She spends her money.",
+    "She saves her money.",
+    "She sells sweets.",
+    "She doesn't buy anything."
+   ],
+   "why": "Using money to buy things is spending."
+  }
+ ]
+}

@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: Adverts – Appealing or Appalling? (Writing)",
+ "lesson": "Lead-in: advertising, appealing or appalling? and slogans",
+ "outcomes": [
+  "Discuss the purpose and effects of adverts",
+  "Evaluate slogans and create a slogan for a product"
+ ],
+ "tf": [
+  {
+   "s": "The main purpose of advertising is to persuade people to buy a product or service.",
+   "t": true,
+   "why": "Adverts are made to persuade."
+  },
+  {
+   "s": "'Appealing' means very bad or shocking.",
+   "t": false,
+   "why": "Appealing means attractive; appalling means very bad."
+  },
+  {
+   "s": "'Appalling' means very bad or shocking.",
+   "t": true,
+   "why": "Appalling is the opposite of appealing."
+  },
+  {
+   "s": "A slogan is a short, memorable phrase used in adverts.",
+   "t": true,
+   "why": "Slogans help people remember a product."
+  },
+  {
+   "s": "Adverts can only promote products, never services.",
+   "t": false,
+   "why": "Adverts can promote services or organisations, like charities."
+  },
+  {
+   "s": "Adverts can sometimes make us feel bad about ourselves.",
+   "t": true,
+   "why": "For example, if we are not as beautiful as the people in the ad."
+  },
+  {
+   "s": "A good slogan should be long and hard to remember.",
+   "t": false,
+   "why": "Effective slogans are short and memorable."
+  },
+  {
+   "s": "A charity can use advertising.",
+   "t": true,
+   "why": "Organisations can advertise too."
+  },
+  {
+   "s": "A service is something someone does for you, not an object you buy.",
+   "t": true,
+   "why": "For example, a bank or a taxi is a service."
+  },
+  {
+   "s": "Everyone agrees that adverts do only good.",
+   "t": false,
+   "why": "Some people think adverts can do more harm than good."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do adverts mainly try to do?",
+   "o": [
+    "persuade people to buy",
+    "teach history",
+    "tell stories only"
+   ],
+   "why": "Adverts aim to persuade."
+  },
+  {
+   "q": "What does 'appealing' mean?",
+   "o": [
+    "attractive",
+    "shocking",
+    "boring"
+   ],
+   "why": "Appealing things attract us."
+  },
+  {
+   "q": "What does 'appalling' mean?",
+   "o": [
+    "very bad",
+    "very pretty",
+    "very cheap"
+   ],
+   "why": "Appalling means shocking or terrible."
+  },
+  {
+   "q": "Which is a slogan?",
+   "o": [
+    "Carry your dreams with style.",
+    "A company's small picture",
+    "A big shop"
+   ],
+   "why": "A slogan is a short memorable phrase."
+  },
+  {
+   "q": "What can adverts promote besides products?",
+   "o": [
+    "services",
+    "only food",
+    "nothing else"
+   ],
+   "why": "Services and organisations can be advertised."
+  },
+  {
+   "q": "How can adverts harm us?",
+   "o": [
+    "make us feel bad about ourselves",
+    "make us taller",
+    "give us free money"
+   ],
+   "why": "Comparing ourselves to models can hurt."
+  },
+  {
+   "q": "What makes a slogan effective?",
+   "o": [
+    "short and memorable",
+    "long and boring",
+    "full of hard words"
+   ],
+   "why": "People remember short phrases."
+  },
+  {
+   "q": "Which is an example of an organisation that advertises?",
+   "o": [
+    "a charity",
+    "a cloud",
+    "a river"
+   ],
+   "why": "Charities advertise to get support."
+  },
+  {
+   "q": "Short word for advertisement?",
+   "o": [
+    "ad",
+    "slo",
+    "pro"
+   ],
+   "why": "'Ad' or 'advert' are short forms."
+  },
+  {
+   "q": "Which could be a slogan for a school bag?",
+   "o": [
+    "Carry your dreams with style.",
+    "A bag is made of cloth.",
+    "Bags were sold in 2010."
+   ],
+   "why": "It is short, catchy and positive."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Main aim of adverts",
+   "a": "persuade",
+   "d": [
+    "entertain only",
+    "complain",
+    "punish"
+   ]
+  },
+  {
+   "q": "Attractive",
+   "a": "appealing",
+   "d": [
+    "appalling",
+    "boring",
+    "awful"
+   ]
+  },
+  {
+   "q": "Very bad, shocking",
+   "a": "appalling",
+   "d": [
+    "appealing",
+    "charming",
+    "lovely"
+   ]
+  },
+  {
+   "q": "Short memorable ad phrase",
+   "a": "slogan",
+   "d": [
+    "logo",
+    "brand",
+    "survey"
+   ]
+  },
+  {
+   "q": "Short form of advertisement",
+   "a": "ad",
+   "d": [
+    "adv",
+    "ment",
+    "tise"
+   ]
+  },
+  {
+   "q": "Thing you can buy",
+   "a": "product",
+   "d": [
+    "service",
+    "slogan",
+    "feeling"
+   ]
+  },
+  {
+   "q": "Work done for customers",
+   "a": "service",
+   "d": [
+    "product",
+    "slogan",
+    "logo"
+   ]
+  },
+  {
+   "q": "Organisation that can advertise",
+   "a": "charity",
+   "d": [
+    "cloud",
+    "river",
+    "mountain"
+   ]
+  },
+  {
+   "q": "A good slogan is...",
+   "a": "memorable",
+   "d": [
+    "forgettable",
+    "very long",
+    "confusing"
+   ]
+  },
+  {
+   "q": "Ads can make us feel...",
+   "a": "bad about ourselves",
+   "d": [
+    "taller",
+    "younger",
+    "faster"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the main purpose of advertising?",
+   "o": [
+    "to persuade people to buy a product or service",
+    "to give free gifts",
+    "to teach grammar",
+    "to report the news"
+   ],
+   "why": "Persuasion is at the heart of advertising."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the difference between 'appealing' and 'appalling'?",
+   "o": [
+    "Appealing = attractive; appalling = very bad",
+    "Both mean attractive",
+    "Both mean very bad",
+    "Appealing = very bad; appalling = attractive"
+   ],
+   "why": "They sound similar but have opposite meanings."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a slogan?",
+   "o": [
+    "a short memorable phrase used by companies in adverts",
+    "a picture of a company",
+    "the price of a product",
+    "a long article"
+   ],
+   "why": "Slogans help us remember products."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Besides products, what can adverts promote?",
+   "o": [
+    "services or organisations such as charities",
+    "only food",
+    "only cars",
+    "nothing else"
+   ],
+   "why": "Advertising is not only for products."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best slogan for new sportswear?",
+   "o": [
+    "Move faster, feel stronger.",
+    "Sportswear is made of cotton and other materials.",
+    "We sold sportswear in a shop last year.",
+    "Please read the label carefully before washing."
+   ],
+   "why": "It is short, catchy and persuasive."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A TV advert asks people to give money to help sick children. What is it promoting?",
+   "o": [
+    "a charity",
+    "a product",
+    "a slogan",
+    "a mall"
+   ],
+   "why": "Charities use adverts to get support."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "An advert makes you feel your phone is old and you must buy a new one. What is it trying to do?",
+   "o": [
+    "persuade you",
+    "inform you about history",
+    "make you laugh only",
+    "teach you spelling"
+   ],
+   "why": "Adverts persuade us to buy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How can adverts do harm?",
+   "o": [
+    "They can make us feel bad if we are not like the people in them",
+    "They give us too much free money",
+    "They stop us from shopping",
+    "They are always true"
+   ],
+   "why": "Comparing ourselves to models can hurt our feelings."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are short slogans usually more effective than long ones?",
+   "o": [
+    "People remember them easily",
+    "They cost more",
+    "They use difficult words",
+    "Nobody reads them"
+   ],
+   "why": "Memorable slogans stay in our minds."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'Adverts – Appealing or Appalling?' a good unit title?",
+   "o": [
+    "It asks whether adverts are good or bad",
+    "It describes a mall",
+    "It is about trade routes",
+    "It is a slogan for a car"
+   ],
+   "why": "The title invites us to evaluate adverts."
+  }
+ ]
+}

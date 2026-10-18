@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U2",
+ "lesson": "Unit 2 – Graded readers: The New Shop & A Bowl of Soup",
+ "outcomes": [
+  "Understand how the new shop changes from empty to popular.",
+  "Follow Grandad's soup recipe in the right order.",
+  "Find the problem in a story and how it is solved."
+ ],
+ "tf": [
+  {
+   "s": "At the start, the new shop is empty.",
+   "t": true,
+   "why": "Yes! Nobody knows about it yet."
+  },
+  {
+   "s": "The new shop only has milkshakes.",
+   "t": false,
+   "why": "It has cupcakes, too."
+  },
+  {
+   "s": "Hamzah's cousins go to the new shop.",
+   "t": true,
+   "why": "Correct! They go to the new shop."
+  },
+  {
+   "s": "At the end, the shop is still empty.",
+   "t": false,
+   "why": "At the end, the shop is popular."
+  },
+  {
+   "s": "The pink milkshakes look delicious.",
+   "t": true,
+   "why": "Well done! Hamzah wants to try one."
+  },
+  {
+   "s": "Huda and Muna find Grandad's book of recipes in the bookcase.",
+   "t": true,
+   "why": "Yes! The recipes are in the bookcase."
+  },
+  {
+   "s": "There is a box of rice and a bag of noodles.",
+   "t": false,
+   "why": "There is a box of noodles and a bag of rice."
+  },
+  {
+   "s": "The first step of the soup is to add vegetables.",
+   "t": false,
+   "why": "First, put the noodles in a pan."
+  },
+  {
+   "s": "Grandad brings vegetables from his garden.",
+   "t": true,
+   "why": "Great! That solves the problem."
+  },
+  {
+   "s": "There aren't any vegetables in the soup at the end.",
+   "t": false,
+   "why": "Grandad brings lots of vegetables, so the soup has vegetables."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Why is the shop empty at the start?",
+   "o": [
+    "Nobody knows about it.",
+    "It is closed.",
+    "It has no milkshakes."
+   ],
+   "why": "Nobody knows about the new shop yet."
+  },
+  {
+   "q": "What does Hamzah want to try?",
+   "o": [
+    "a milkshake",
+    "a soup",
+    "a sandwich"
+   ],
+   "why": "Hamzah wants a milkshake."
+  },
+  {
+   "q": "Who do Hamzah's cousins tell?",
+   "o": [
+    "their friends",
+    "their teacher",
+    "the shopkeeper"
+   ],
+   "why": "The cousins tell their friends."
+  },
+  {
+   "q": "What does 'popular' mean?",
+   "o": [
+    "many people like it",
+    "nobody likes it",
+    "it is empty"
+   ],
+   "why": "A popular shop has lots of people."
+  },
+  {
+   "q": "Ask for a milkshake politely.",
+   "o": [
+    "Can I have a milkshake, please?",
+    "Milkshake now!",
+    "Here you are, milkshake."
+   ],
+   "why": "Use 'Can I have ..., please?'."
+  },
+  {
+   "q": "Where is Grandad's book of recipes?",
+   "o": [
+    "in the bookcase",
+    "in the fridge",
+    "in the garden"
+   ],
+   "why": "It is in the bookcase."
+  },
+  {
+   "q": "What do you add after the noodles?",
+   "o": [
+    "a little water",
+    "a lot of sugar",
+    "milkshake"
+   ],
+   "why": "Then, add a little water."
+  },
+  {
+   "q": "What is the problem in 'A Bowl of Soup'?",
+   "o": [
+    "There aren't any vegetables.",
+    "There isn't any water.",
+    "There aren't any bowls."
+   ],
+   "why": "Oh no! There aren't any vegetables!"
+  },
+  {
+   "q": "What do you eat soup from?",
+   "o": [
+    "a bowl",
+    "a bottle",
+    "a bag"
+   ],
+   "why": "We eat soup from a bowl."
+  },
+  {
+   "q": "What does 'boil' mean?",
+   "o": [
+    "cook in very hot water",
+    "make cold",
+    "cut into small pieces"
+   ],
+   "why": "You boil noodles in very hot water."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "At the start, the shop is...",
+   "a": "empty",
+   "d": [
+    "popular",
+    "busy",
+    "big"
+   ]
+  },
+  {
+   "q": "At the end, the shop is...",
+   "a": "popular",
+   "d": [
+    "empty",
+    "closed",
+    "small"
+   ]
+  },
+  {
+   "q": "Hamzah tells his...",
+   "a": "cousins",
+   "d": [
+    "teachers",
+    "doctors",
+    "pilots"
+   ]
+  },
+  {
+   "q": "Milkshakes: pink and...",
+   "a": "yellow",
+   "d": [
+    "blue",
+    "black",
+    "grey"
+   ]
+  },
+  {
+   "q": "A ___ of lemonade",
+   "a": "bottle",
+   "d": [
+    "box",
+    "bag",
+    "bowl"
+   ]
+  },
+  {
+   "q": "Who has a garden?",
+   "a": "Grandad",
+   "d": [
+    "Hamzah",
+    "Huda",
+    "Muna"
+   ]
+  },
+  {
+   "q": "Story title: The New...",
+   "a": "Shop",
+   "d": [
+    "Bowl",
+    "Soup",
+    "Garden"
+   ]
+  },
+  {
+   "q": "Story title: A Bowl of...",
+   "a": "Soup",
+   "d": [
+    "Rice",
+    "Milk",
+    "Noodles"
+   ]
+  },
+  {
+   "q": "First, ... ___, add water.",
+   "a": "Then",
+   "d": [
+    "Last",
+    "Before",
+    "Ready"
+   ]
+  },
+  {
+   "q": "Oh no! There ___ any vegetables!",
+   "a": "aren't",
+   "d": [
+    "isn't",
+    "is",
+    "am"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Whose book of recipes is it?",
+   "o": [
+    "Grandad's",
+    "Hamzah's",
+    "the shopkeeper's",
+    "Hamzah's cousin's"
+   ],
+   "why": "It is Grandad's book of recipes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who finds the book of recipes?",
+   "o": [
+    "Huda and Muna",
+    "Hamzah and his cousins",
+    "Grandad",
+    "the shopkeeper"
+   ],
+   "why": "Huda and Muna find it."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the first step of Grandad's soup?",
+   "o": [
+    "Put the noodles in a pan.",
+    "Add the vegetables.",
+    "Eat the soup.",
+    "Add a little water."
+   ],
+   "why": "First, put the noodles in a pan."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means steps for cooking a dish?",
+   "o": [
+    "recipe",
+    "bookcase",
+    "window",
+    "shop"
+   ],
+   "why": "A recipe tells you how to cook."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Customer: Can I have a milkshake, please? Shopkeeper: Sure. ...",
+   "o": [
+    "Anything else?",
+    "Can I help you?",
+    "Bye, Grandad!",
+    "Oh no!"
+   ],
+   "why": "The shopkeeper asks if you want more."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the sentence that tells a friend about a good shop.",
+   "o": [
+    "There's a new shop. The milkshakes are delicious!",
+    "There aren't any shops.",
+    "The shop is empty and sad.",
+    "I don't like milkshakes."
+   ],
+   "why": "This sentence makes your friend want to visit."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write two steps of the soup with sequence words.",
+   "o": [
+    "First, put the noodles in a pan. Then, add a little water.",
+    "Then, put the noodles in a pan. First, add water.",
+    "Last, put the noodles in a pan. First, eat.",
+    "After that, eat. First, boil the bowl."
+   ],
+   "why": "First and Then show the right order."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How does the shop become popular?",
+   "o": [
+    "Hamzah tells his cousins, they tell friends, and friends tell all their friends.",
+    "The shop gives free food to everyone.",
+    "The shop closes for a week.",
+    "Grandad brings vegetables."
+   ],
+   "why": "The news spreads from person to person."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How is the problem in 'A Bowl of Soup' solved?",
+   "o": [
+    "Grandad brings lots of vegetables from his garden.",
+    "They buy a milkshake.",
+    "They put rice in a bottle.",
+    "They don't make the soup."
+   ],
+   "why": "Grandad's garden vegetables save the soup."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the same in both stories?",
+   "o": [
+    "Both are about food.",
+    "Both are about a football game.",
+    "Both happen at school.",
+    "Both are about animals."
+   ],
+   "why": "One story has milkshakes and one has soup."
+  }
+ ]
+}

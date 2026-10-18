@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Sounds and Spelling – Unit 4, Lesson 5: Review of digraphs (Units 1–4)",
+  "outcomes": [
+    "I can find the digraph in words from Units 1 to 4.",
+    "I can write words with ee, er, ar and o-e.",
+    "I can use the tricky words do, said, come and so."
+  ],
+  "tf": [
+    {
+      "s": "Sheep has the digraph ee.",
+      "t": true,
+      "why": "Yes! sh-ee-p has ee."
+    },
+    {
+      "s": "Shark has the digraph ar.",
+      "t": true,
+      "why": "Great! sh-ar-k has ar."
+    },
+    {
+      "s": "Perfume has the digraph oa.",
+      "t": false,
+      "why": "Perfume has er: p-er-fume."
+    },
+    {
+      "s": "Rose has o-e.",
+      "t": true,
+      "why": "Well done! r-o-s-e has o-e."
+    },
+    {
+      "s": "Rain has the digraph oi.",
+      "t": false,
+      "why": "Rain has ai: r-ai-n."
+    },
+    {
+      "s": "Moon has the digraph oo.",
+      "t": true,
+      "why": "Yes! m-oo-n has oo."
+    },
+    {
+      "s": "Do, said, come and so are tricky words.",
+      "t": true,
+      "why": "Great! We learn them by heart."
+    },
+    {
+      "s": "Boat has o-e.",
+      "t": false,
+      "why": "Boat has oa."
+    },
+    {
+      "s": "Cloud has the digraph ee.",
+      "t": false,
+      "why": "Cloud has ou."
+    },
+    {
+      "s": "Ring has the digraph ar.",
+      "t": false,
+      "why": "Ring has ng."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Which digraph is in \"sheep\"?",
+      "o": [
+        "ee",
+        "er",
+        "ar"
+      ],
+      "why": "sh-ee-p has ee."
+    },
+    {
+      "q": "Which sound is in the middle of \"shark\"?",
+      "o": [
+        "ar",
+        "ee",
+        "er"
+      ],
+      "why": "sh-ar-k has ar in the middle."
+    },
+    {
+      "q": "Write: p-er-f-u-m-e.",
+      "o": [
+        "perfume",
+        "purfume",
+        "perfum"
+      ],
+      "why": "p-er-f-u-m-e spells perfume."
+    },
+    {
+      "q": "\"Come and see,\" ___ Mum.",
+      "o": [
+        "said",
+        "so",
+        "do"
+      ],
+      "why": "Said tells us what Mum says."
+    },
+    {
+      "q": "What ___ you like?",
+      "o": [
+        "do",
+        "said",
+        "so"
+      ],
+      "why": "What do you like?"
+    },
+    {
+      "q": "It is ___ big!",
+      "o": [
+        "so",
+        "come",
+        "said"
+      ],
+      "why": "It is so big!"
+    },
+    {
+      "q": "Which word has ai?",
+      "o": [
+        "train",
+        "tree",
+        "star"
+      ],
+      "why": "tr-ai-n has ai."
+    },
+    {
+      "q": "Which word has or?",
+      "o": [
+        "fork",
+        "fern",
+        "farm"
+      ],
+      "why": "f-or-k has or."
+    },
+    {
+      "q": "Which word has oi?",
+      "o": [
+        "coin",
+        "cone",
+        "cake"
+      ],
+      "why": "c-oi-n has oi."
+    },
+    {
+      "q": "Which word has er?",
+      "o": [
+        "herb",
+        "home",
+        "hair"
+      ],
+      "why": "h-er-b has er."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Digraph in \"green\"",
+      "a": "ee",
+      "d": [
+        "er",
+        "ar",
+        "o-e"
+      ]
+    },
+    {
+      "q": "Digraph in \"fern\"",
+      "a": "er",
+      "d": [
+        "ee",
+        "ar",
+        "oa"
+      ]
+    },
+    {
+      "q": "Digraph in \"star\"",
+      "a": "ar",
+      "d": [
+        "er",
+        "ee",
+        "or"
+      ]
+    },
+    {
+      "q": "Digraph in \"home\"",
+      "a": "o-e",
+      "d": [
+        "oa",
+        "oo",
+        "ee"
+      ]
+    },
+    {
+      "q": "Digraph in \"coat\"",
+      "a": "oa",
+      "d": [
+        "o-e",
+        "oi",
+        "ou"
+      ]
+    },
+    {
+      "q": "Digraph in \"glue\"",
+      "a": "ue",
+      "d": [
+        "ee",
+        "ai",
+        "or"
+      ]
+    },
+    {
+      "q": "___ and play!",
+      "a": "Come",
+      "d": [
+        "Do",
+        "So",
+        "Said"
+      ]
+    },
+    {
+      "q": "The cake is ___ sweet!",
+      "a": "so",
+      "d": [
+        "do",
+        "come",
+        "said"
+      ]
+    },
+    {
+      "q": "A red flower with o-e",
+      "a": "rose",
+      "d": [
+        "shark",
+        "sheep",
+        "perfume"
+      ]
+    },
+    {
+      "q": "A big fish with ar",
+      "a": "shark",
+      "d": [
+        "rose",
+        "sheep",
+        "herb"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which word has the digraph ar?",
+      "o": [
+        "park",
+        "perfume",
+        "pie",
+        "point"
+      ],
+      "why": "p-ar-k has ar."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word has the digraph ee?",
+      "o": [
+        "feet",
+        "fern",
+        "farm",
+        "fork"
+      ],
+      "why": "f-ee-t has ee."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which is a tricky word?",
+      "o": [
+        "said",
+        "sheep",
+        "shark",
+        "star"
+      ],
+      "why": "Said is a tricky word."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word has o-e?",
+      "o": [
+        "stone",
+        "storm",
+        "star",
+        "sweet"
+      ],
+      "why": "s-t-o-n-e has o-e."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Write the word for a picture of a rose.",
+      "o": [
+        "rose",
+        "roze",
+        "roes",
+        "ros"
+      ],
+      "why": "r-o-s-e spells rose."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Order the sentence: see / Come / and",
+      "o": [
+        "Come and see.",
+        "See and come.",
+        "And come see.",
+        "Come see and."
+      ],
+      "why": "Come and see."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Complete: \"I am seven,\" ___ Ahmed.",
+      "o": [
+        "said",
+        "do",
+        "come",
+        "so"
+      ],
+      "why": "Said tells what Ahmed says."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which two words have the same digraph?",
+      "o": [
+        "shark and star",
+        "shark and sheep",
+        "star and stone",
+        "herd and home"
+      ],
+      "why": "Shark and star both have ar."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word is the odd one out?",
+      "o": [
+        "bee",
+        "star",
+        "park",
+        "dark"
+      ],
+      "why": "Bee has ee; the others have ar."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which two spellings make the same sound?",
+      "o": [
+        "o-e and oa",
+        "ee and ar",
+        "er and oi",
+        "ar and ou"
+      ],
+      "why": "Bone and boat have the same sound."
+    }
+  ]
+}

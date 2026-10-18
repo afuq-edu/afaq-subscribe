@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 2: Where’s my pen?",
+  "lesson": "Sounds and Spelling – Unit 2, Lesson 5: Review of Units 1–2 sounds",
+  "outcomes": [
+    "I can find ai, oa, ie, a-e, or, ng and oo in words.",
+    "I can use his, her, our, their, have and who.",
+    "I can ask politely: Can I borrow it, please?"
+  ],
+  "tf": [
+    { "s": "The word nail has ai.", "t": true, "why": "Yes! n - ai - l." },
+    { "s": "The word torch has or.", "t": true, "why": "Great! t - or - ch." },
+    { "s": "The word float has ie.", "t": false, "why": "float has oa: fl - oa - t." },
+    { "s": "The word ring has ng.", "t": true, "why": "Yes! r - i - ng." },
+    { "s": "The word lake has oa.", "t": false, "why": "lake has a-e." },
+    { "s": "Can I borrow it, please? is polite.", "t": true, "why": "Well done! please makes it polite." },
+    { "s": "We say Here you are. when we give something.", "t": true, "why": "Yes! Here you are. goes with giving." },
+    { "s": "We don't say Thank you after we borrow.", "t": false, "why": "We always say Thank you." },
+    { "s": "We say his for a girl.", "t": false, "why": "We say her for a girl and his for a boy." },
+    { "s": "The word moon has ai.", "t": false, "why": "moon has oo." }
+  ],
+  "boxes": [
+    { "q": "Which sound is in road?", "o": ["oa", "ai", "or"], "why": "r - oa - d has oa." },
+    { "q": "Which sound is in sail?", "o": ["ai", "ie", "oa"], "why": "s - ai - l has ai." },
+    { "q": "Which sound is in pie?", "o": ["ie", "ai", "ng"], "why": "p - ie has ie." },
+    { "q": "fl _ _ t (it stays on water)", "o": ["oa", "ai", "or"], "why": "fl - oa - t makes float." },
+    { "q": "Write the word: l-a-k-e", "o": ["lake", "leak", "lack"], "why": "l-a-k-e spells lake." },
+    { "q": "It is ... bag. (a girl)", "o": ["her", "his", "our"], "why": "her is for a girl." },
+    { "q": "It is ... ball. (two children)", "o": ["their", "our", "his"], "why": "their is for other people." },
+    { "q": "Is this your pen? (yes)", "o": ["Yes, it is.", "Here you are.", "Thank you."], "why": "We answer: Yes, it is." },
+    { "q": "You give your friend a ruler. You say...", "o": ["Here you are.", "Can I borrow it?", "What a mess!"], "why": "Here you are. goes with giving." },
+    { "q": "Your friend gives you a crayon. You say...", "o": ["Thank you.", "Here you are.", "Goodbye."], "why": "We say thank you." }
+  ],
+  "hunt": [
+    { "q": "The sound in nail", "a": "ai", "d": ["oa", "ie", "or"] },
+    { "q": "The sound in torch", "a": "or", "d": ["oa", "ng", "ai"] },
+    { "q": "The sound in king", "a": "ng", "d": ["or", "ai", "oo"] },
+    { "q": "The sound in tie", "a": "ie", "d": ["ai", "oa", "ng"] },
+    { "q": "The sound in book", "a": "oo", "d": ["oa", "or", "ai"] },
+    { "q": "The sound in game", "a": "a-e", "d": ["ai", "oa", "ie"] },
+    { "q": "Blend: b - r - ai - n", "a": "brain", "d": ["brown", "boat", "bring"] },
+    { "q": "Can I borrow it, ...?", "a": "please", "d": ["goodbye", "hello", "sorry"] },
+    { "q": "Is this ... pen? Yes, it is.", "a": "your", "d": ["who", "have", "when"] },
+    { "q": "Yes. Here you ...", "a": "are", "d": ["is", "am", "go"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Which word has oa?", "o": ["road", "rain", "ring", "roof"], "why": "r - oa - d has oa." },
+    { "lv": "التذكر", "q": "Which word has a-e?", "o": ["lake", "nail", "tie", "corn"], "why": "l - a - k - e has magic e." },
+    { "lv": "التذكر", "q": "How do you ask to borrow a ruler?", "o": ["Can I borrow it, please?", "Where's my pen?", "What a mess!", "Who is it?"], "why": "Can I borrow it, please? is polite." },
+    { "lv": "التذكر", "q": "What do you say after you borrow something?", "o": ["Thank you.", "Here you are.", "Goodbye.", "What colour is it?"], "why": "We say thank you." },
+    { "lv": "التطبيق", "q": "Omar has a game. It is ... game.", "o": ["his", "her", "their", "our"], "why": "Omar is a boy, so his." },
+    { "lv": "التطبيق", "q": "Write the missing sound: sp _ _ n (we eat with it)", "o": ["oo", "oa", "ai", "or"], "why": "sp - oo - n makes spoon." },
+    { "lv": "التطبيق", "q": "You need a crayon. Your friend has one. You say...", "o": ["Is this your crayon? Can I borrow it, please?", "Give me it!", "It's my crayon.", "Goodbye."], "why": "We ask politely to borrow." },
+    { "lv": "التحليل", "q": "Put in order: Thank you. / Can I borrow it, please? / Yes. Here you are.", "o": ["Can I borrow it, please? - Yes. Here you are. - Thank you.", "Thank you. - Can I borrow it, please? - Yes. Here you are.", "Yes. Here you are. - Thank you. - Can I borrow it, please?", "Thank you. - Yes. Here you are. - Can I borrow it, please?"], "why": "Ask, give, then say thank you." },
+    { "lv": "التحليل", "q": "Which group has a different sound in each word?", "o": ["nail, boat, pie, fork", "nail, rain, sail, chain", "boat, road, coat, soap", "fork, corn, storm, torch"], "why": "ai, oa, ie and or are all different." },
+    { "lv": "التحليل", "q": "Why do we say please and thank you?", "o": ["To show good manners", "To be loud", "To take things", "To say goodbye"], "why": "Polite words show good manners." }
+  ]
+}

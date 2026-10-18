@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 3: Places",
+  "lesson": "Unit 3 – Lesson 3: Grammar – Relative pronouns",
+  "outcomes": [
+    "I know when to use who, where, that/which and when.",
+    "I can join information with relative pronouns.",
+    "I can write definitions like “It’s a place where …”."
+  ],
+  "tf": [
+    {"s": "We use who for people.", "t": true, "why": "He’s the doctor who Julia saw."},
+    {"s": "We use where for things.", "t": false, "why": "We use where for places; that/which is for things."},
+    {"s": "We use when for time.", "t": true, "why": "I remember the time when you went to hospital."},
+    {"s": "“Camels are animals who live in the desert.” is the best answer in the lesson.", "t": false, "why": "For animals and things we use that: animals that live in the desert."},
+    {"s": "“A pharmacy is a shop where you can buy medicine.” is correct.", "t": true, "why": "A shop is a place, so we use where."},
+    {"s": "We can use that or which for things.", "t": true, "why": "What’s the book that you want to read?"},
+    {"s": "“A chef is a person where cooks in a restaurant.” is correct.", "t": false, "why": "A chef is a person, so we use who."},
+    {"s": "In the listening, the film is called Summer Nights.", "t": false, "why": "The film is called Summer Days."},
+    {"s": "The new cinema is next to the office building where Dad works.", "t": true, "why": "Yes, it is next to Dad’s office building."},
+    {"s": "“Winter is the time where the weather gets colder.” is correct.", "t": false, "why": "For time we use when: the time when …"}
+  ],
+  "boxes": [
+    {"q": "Which pronoun do we use for people?", "o": ["who", "where", "when"], "why": "who is for people."},
+    {"q": "Which pronoun do we use for places?", "o": ["where", "who", "when"], "why": "where is for places."},
+    {"q": "Which pronoun do we use for time?", "o": ["when", "who", "where"], "why": "when is for time."},
+    {"q": "Complete: A mechanic is someone ___ can fix machines.", "o": ["who", "where", "when"], "why": "A mechanic is a person: who."},
+    {"q": "Complete: Eid is a time ___ people give presents.", "o": ["when", "where", "who"], "why": "Eid is a time, so we use when."},
+    {"q": "Complete: A smartphone is a device ___ you use to send messages.", "o": ["that", "who", "where"], "why": "A device is a thing: that/which."},
+    {"q": "Complete: The hospital is the place ___ Julia went.", "o": ["where", "who", "when"], "why": "A hospital is a place."},
+    {"q": "What is the film called?", "o": ["Summer Days", "Summer Nights", "Winter Days"], "why": "The film is called Summer Days."},
+    {"q": "Complete: It’s a place ___ you go when you are very sick.", "o": ["where", "which", "who"], "why": "It’s a place where … (a hospital)."},
+    {"q": "Complete: Camels are animals ___ live in the desert.", "o": ["that", "where", "when"], "why": "For animals we use that or which."}
+  ],
+  "hunt": [
+    {"q": "Pronoun for people", "a": "who", "d": ["where", "when", "which"]},
+    {"q": "Pronoun for places", "a": "where", "d": ["who", "when", "which"]},
+    {"q": "Pronoun for time", "a": "when", "d": ["who", "where", "which"]},
+    {"q": "Pronoun for things", "a": "which", "d": ["who", "where", "when"]},
+    {"q": "A chef is a person ___ cooks.", "a": "who", "d": ["where", "when", "which"]},
+    {"q": "A library is a place ___ you read.", "a": "where", "d": ["who", "when", "which"]},
+    {"q": "Winter is the time ___ it’s cold.", "a": "when", "d": ["who", "where", "which"]},
+    {"q": "A pen is a thing ___ you write with.", "a": "that", "d": ["who", "where", "when"]},
+    {"q": "Name of the film", "a": "Summer Days", "d": ["Summer Nights", "Winter Days", "Sunny Days"]},
+    {"q": "A place where you go when very sick", "a": "hospital", "d": ["cinema", "library", "café"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which rule is correct?", "o": ["that/which – things; where – places; when – time; who – people", "who – things; where – time; when – people", "where – people; who – places", "when – places; which – people"], "why": "This is the grammar table from the lesson."},
+    {"lv": "التذكر", "q": "Where is the new cinema?", "o": ["next to the office building where Dad works", "next to the hospital", "behind the sports centre", "at the harbour"], "why": "It is next to Dad’s office building."},
+    {"lv": "التذكر", "q": "Which sentence uses who correctly?", "o": ["He’s the doctor who Julia saw.", "It’s the place who we live.", "It’s the day who we met.", "It’s the book who I read."], "why": "A doctor is a person, so who is correct."},
+    {"lv": "التذكر", "q": "Which sentence uses where correctly?", "o": ["A stadium is a place where you can watch matches.", "A teacher is a person where helps us.", "Friday is a day where we rest.", "A pen is a thing where you write."], "why": "A stadium is a place."},
+    {"lv": "التطبيق", "q": "Define “library”.", "o": ["It’s a place where you can read and borrow books.", "It’s a person who reads books.", "It’s a time when you read books.", "It’s a place who you read books."], "why": "A library is a place: It’s a place where …"},
+    {"lv": "التطبيق", "q": "Define “waitress”.", "o": ["She’s a person who brings food in a café.", "It’s a place where you eat.", "It’s a time when you eat.", "It’s a thing which you eat."], "why": "A waitress is a person, so we use who."},
+    {"lv": "التطبيق", "q": "Join: “I remember the day. We visited the chocolate factory that day.”", "o": ["I remember the day when we visited the chocolate factory.", "I remember the day who we visited the chocolate factory.", "I remember the day where we visited the chocolate factory.", "I remember the day what we visited the chocolate factory."], "why": "Day is a time: when."},
+    {"lv": "التحليل", "q": "Which sentence has a mistake?", "o": ["A bus is a thing who takes people to school.", "A bus is a thing that takes people to school.", "A café is a place where you can drink tea.", "A nurse is a person who helps doctors."], "why": "A bus is a thing, so we use that or which, not who."},
+    {"lv": "التحليل", "q": "“It’s a person who …” – what kind of word is the answer?", "o": ["a job or a person, like a chef", "a building, like a cinema", "a time, like winter", "a device, like a laptop"], "why": "who always tells us about a person."},
+    {"lv": "التحليل", "q": "Why do we use where in “the apartment building where Sharifa lives”?", "o": ["Because the apartment building is a place.", "Because Sharifa is a person.", "Because it talks about time.", "Because it is a question."], "why": "where gives information about a place."}
+  ]
+}

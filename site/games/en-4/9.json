@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U1",
+ "lesson": "Unit 1 – Lesson 7: Skills – Reading (Maryam's diary)",
+ "outcomes": [
+  "Read Maryam's diary and find key information.",
+  "Explain how Maryam's feelings change from worried to happy.",
+  "Compare Maryam's first day with your own school day."
+ ],
+ "tf": [
+  {
+   "s": "Maryam is changing schools because her dad's got a job in this town.",
+   "t": true,
+   "why": "Yes! That is why she moves to a new school."
+  },
+  {
+   "s": "School starts at quarter to nine.",
+   "t": false,
+   "why": "School starts at quarter past seven."
+  },
+  {
+   "s": "Maryam walks to school.",
+   "t": true,
+   "why": "Correct! She walks."
+  },
+  {
+   "s": "Maryam is in Grade 3.",
+   "t": false,
+   "why": "Maryam is in Grade 4."
+  },
+  {
+   "s": "Maryam's new friend is Muna.",
+   "t": true,
+   "why": "Great! Muna is her new friend."
+  },
+  {
+   "s": "Maryam's teacher is Mrs Zahra.",
+   "t": true,
+   "why": "Well done! Mrs Zahra is her teacher."
+  },
+  {
+   "s": "Maryam feels happy at the start and worried at the end.",
+   "t": false,
+   "why": "It is the other way: worried at the start, happy at the end."
+  },
+  {
+   "s": "Maryam's picture is on the wall of the Art classroom.",
+   "t": true,
+   "why": "Yes! That makes her happy."
+  },
+  {
+   "s": "A diary tells us about the writer's days and feelings.",
+   "t": true,
+   "why": "Right! Maryam writes about her days in a diary."
+  },
+  {
+   "s": "Maryam goes to school by boat.",
+   "t": false,
+   "why": "Maryam walks to school."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who is Maryam's new friend?",
+   "o": [
+    "Muna",
+    "Lottie",
+    "Azza"
+   ],
+   "why": "Muna is Maryam's new friend."
+  },
+  {
+   "q": "Who is Maryam's teacher?",
+   "o": [
+    "Mrs Zahra",
+    "Mrs Safa",
+    "Mrs Muna"
+   ],
+   "why": "Mrs Zahra is her teacher."
+  },
+  {
+   "q": "When does school start?",
+   "o": [
+    "at quarter past seven",
+    "at half past eight",
+    "at quarter to nine"
+   ],
+   "why": "School starts at quarter past seven."
+  },
+  {
+   "q": "How does Maryam go to school?",
+   "o": [
+    "She walks.",
+    "By bus.",
+    "By car."
+   ],
+   "why": "She walks to school."
+  },
+  {
+   "q": "Which grade is Maryam in?",
+   "o": [
+    "Grade 4",
+    "Grade 3",
+    "Grade 5"
+   ],
+   "why": "She is in Grade 4."
+  },
+  {
+   "q": "How does Maryam feel at the start?",
+   "o": [
+    "worried",
+    "happy",
+    "angry"
+   ],
+   "why": "She is worried about the new school."
+  },
+  {
+   "q": "Why is Maryam happy on Monday?",
+   "o": [
+    "Her picture is on the wall.",
+    "School is closed.",
+    "She has a new bike."
+   ],
+   "why": "Her Art picture is on the classroom wall."
+  },
+  {
+   "q": "What does Maryam do in Art?",
+   "o": [
+    "She draws a picture.",
+    "She sings a song.",
+    "She reads a book."
+   ],
+   "why": "She draws a picture in Art."
+  },
+  {
+   "q": "'Muna is friendly.' Friendly means ___.",
+   "o": [
+    "kind and nice",
+    "sad",
+    "late"
+   ],
+   "why": "A friendly person is kind and nice to others."
+  },
+  {
+   "q": "What has Maryam got ready?",
+   "o": [
+    "her uniform",
+    "her canoe",
+    "her robot"
+   ],
+   "why": "She has her uniform ready."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Maryam's new friend?",
+   "a": "Muna",
+   "d": [
+    "Azza",
+    "Lottie",
+    "Fatma"
+   ]
+  },
+  {
+   "q": "Maryam's teacher?",
+   "a": "Mrs Zahra",
+   "d": [
+    "Mrs Safa",
+    "Mrs Muna",
+    "Mrs Azza"
+   ]
+  },
+  {
+   "q": "School starts at...?",
+   "a": "quarter past seven",
+   "d": [
+    "quarter to nine",
+    "half past eight",
+    "eight o'clock"
+   ]
+  },
+  {
+   "q": "Maryam goes to school...?",
+   "a": "on foot",
+   "d": [
+    "by bus",
+    "by boat",
+    "by car"
+   ]
+  },
+  {
+   "q": "Maryam's grade?",
+   "a": "Grade 4",
+   "d": [
+    "Grade 3",
+    "Grade 5",
+    "Grade 2"
+   ]
+  },
+  {
+   "q": "Feeling at the start?",
+   "a": "worried",
+   "d": [
+    "happy",
+    "OK",
+    "excited"
+   ]
+  },
+  {
+   "q": "Feeling at the end?",
+   "a": "happy",
+   "d": [
+    "worried",
+    "nervous",
+    "sad"
+   ]
+  },
+  {
+   "q": "Her picture is in...?",
+   "a": "the Art classroom",
+   "d": [
+    "the science lab",
+    "the library",
+    "the office"
+   ]
+  },
+  {
+   "q": "Why move? Dad's new...?",
+   "a": "job",
+   "d": [
+    "car",
+    "house",
+    "friend"
+   ]
+  },
+  {
+   "q": "She writes in a...?",
+   "a": "diary",
+   "d": [
+    "timetable",
+    "poster",
+    "map"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why is Maryam changing schools?",
+   "o": [
+    "Her dad's got a job in this town.",
+    "She doesn't like her old teacher.",
+    "Her old school is on a boat.",
+    "She wants to study Art."
+   ],
+   "why": "Her dad's new job is the reason."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two words show Maryam's feelings at the start?",
+   "o": [
+    "worried, nervous",
+    "happy, OK",
+    "kind, friendly",
+    "busy, free"
+   ],
+   "why": "At first she is worried and nervous."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where is Maryam's picture?",
+   "o": [
+    "on the wall of the Art classroom",
+    "in her diary",
+    "at home",
+    "in the headteacher's office"
+   ],
+   "why": "It is on the wall of the Art classroom."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a diary?",
+   "o": [
+    "a book where you write about your days",
+    "a school timetable",
+    "a story about robots",
+    "a poster of a school"
+   ],
+   "why": "In a diary we write about our days and feelings."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Order and answer: is / Who / teacher / Maryam's ?",
+   "o": [
+    "Who is Maryam's teacher? Mrs Zahra.",
+    "Who teacher is Maryam's? Muna.",
+    "Is who Maryam's teacher? Mrs Safa.",
+    "Who is Maryam's teacher? Muna."
+   ],
+   "why": "Who is Maryam's teacher? Mrs Zahra."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the wrong word: 'School starts at quarter to nine.'",
+   "o": [
+    "School starts at quarter past seven.",
+    "School starts at half past nine.",
+    "School starts at quarter past nine.",
+    "School starts at seven o'clock."
+   ],
+   "why": "The diary says quarter past seven."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence best describes the text?",
+   "o": [
+    "Maryam is worried, but she makes friends and enjoys Art.",
+    "Maryam is happy all the time.",
+    "Maryam doesn't like her new school.",
+    "Maryam stays at her old school."
+   ],
+   "why": "Her feelings change from worried to happy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Maryam feel happy on Monday?",
+   "o": [
+    "Her picture is on the wall of the Art classroom.",
+    "She doesn't go to school.",
+    "Her dad has a new car.",
+    "She is in Grade 3."
+   ],
+   "why": "Seeing her picture on the wall makes her proud and happy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How do Maryam's feelings change in the diary?",
+   "o": [
+    "worried → happy",
+    "happy → worried",
+    "happy → angry",
+    "nervous → sad"
+   ],
+   "why": "Great reading! She starts worried and ends happy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Maryam walks to school. Saif goes by bus. What is different?",
+   "o": [
+    "how they travel to school",
+    "their school time",
+    "their feelings",
+    "their teacher"
+   ],
+   "why": "Walking and going by bus are different ways to travel."
+  }
+ ]
+}

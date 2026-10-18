@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 1: It's a happy day!",
+ "lesson": "Unit 1 – Lesson 7: Phonics (wh, ph)",
+ "outcomes": [
+  "I can say the sound /w/ for wh and /f/ for ph.",
+  "I can write wh or ph to complete words.",
+  "I can read and write the tricky word go."
+ ],
+ "tf": [
+  {
+   "s": "The letters wh make the /w/ sound in whale.",
+   "t": true,
+   "why": "Yes! Whale starts with /w/."
+  },
+  {
+   "s": "The letters ph make the /p/ sound in phone.",
+   "t": false,
+   "why": "Ph makes the /f/ sound: phone."
+  },
+  {
+   "s": "Dolphin has the letters ph in it.",
+   "t": true,
+   "why": "Well done! Dol-ph-in."
+  },
+  {
+   "s": "Wheel starts with the letters ph.",
+   "t": false,
+   "why": "Wheel starts with wh."
+  },
+  {
+   "s": "Fish and phone start with the same sound.",
+   "t": true,
+   "why": "Both start with /f/, but with different letters."
+  },
+  {
+   "s": "Elephant and alphabet have the /f/ sound with ph.",
+   "t": true,
+   "why": "Great! Ph says /f/ in both words."
+  },
+  {
+   "s": "White starts with the /f/ sound.",
+   "t": false,
+   "why": "White starts with wh, the /w/ sound."
+  },
+  {
+   "s": "Go is spelled g-o.",
+   "t": true,
+   "why": "Yes! Go has two letters."
+  },
+  {
+   "s": "The tongue twister says: The dolphin has got a wheel and the whale has got a phone.",
+   "t": false,
+   "why": "It's the whale with a wheel and the dolphin with a phone."
+  },
+  {
+   "s": "We say I go to bed at eight o'clock.",
+   "t": true,
+   "why": "We use go with bed, school, home and the shop."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which letters make /f/ in phone?",
+   "o": [
+    "ph",
+    "wh",
+    "p"
+   ],
+   "why": "Ph makes the /f/ sound."
+  },
+  {
+   "q": "Complete: ___ale (a big sea animal)",
+   "o": [
+    "wh",
+    "ph",
+    "f"
+   ],
+   "why": "Whale starts with wh."
+  },
+  {
+   "q": "Complete: dol___in",
+   "o": [
+    "ph",
+    "wh",
+    "f"
+   ],
+   "why": "Dolphin has ph in the middle."
+  },
+  {
+   "q": "What is the first sound in wheel?",
+   "o": [
+    "/w/",
+    "/f/",
+    "/h/"
+   ],
+   "why": "Wh makes the /w/ sound."
+  },
+  {
+   "q": "Complete: I ___ home at two o'clock.",
+   "o": [
+    "go",
+    "do",
+    "have"
+   ],
+   "why": "We go home."
+  },
+  {
+   "q": "Which word has wh?",
+   "o": [
+    "wheat",
+    "phone",
+    "fish"
+   ],
+   "why": "Wheat starts with wh."
+  },
+  {
+   "q": "Which word has ph?",
+   "o": [
+    "elephant",
+    "white",
+    "wheel"
+   ],
+   "why": "Elephant has ph."
+  },
+  {
+   "q": "What sound does ph make in alphabet?",
+   "o": [
+    "/f/",
+    "/p/",
+    "/w/"
+   ],
+   "why": "Ph says /f/."
+  },
+  {
+   "q": "Complete: We ___ to the shop.",
+   "o": [
+    "go",
+    "goes",
+    "going"
+   ],
+   "why": "We go to the shop."
+  },
+  {
+   "q": "In the tongue twister, who has got a phone?",
+   "o": [
+    "the dolphin",
+    "the whale",
+    "the elephant"
+   ],
+   "why": "The dolphin has got a phone."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "___ale",
+   "a": "wh",
+   "d": [
+    "ph",
+    "f",
+    "w"
+   ]
+  },
+  {
+   "q": "___eel",
+   "a": "wh",
+   "d": [
+    "ph",
+    "f",
+    "p"
+   ]
+  },
+  {
+   "q": "___one",
+   "a": "ph",
+   "d": [
+    "wh",
+    "w",
+    "h"
+   ]
+  },
+  {
+   "q": "dol___in",
+   "a": "ph",
+   "d": [
+    "wh",
+    "p",
+    "w"
+   ]
+  },
+  {
+   "q": "ele___ant",
+   "a": "ph",
+   "d": [
+    "wh",
+    "w",
+    "p"
+   ]
+  },
+  {
+   "q": "___ite (a colour)",
+   "a": "wh",
+   "d": [
+    "ph",
+    "f",
+    "p"
+   ]
+  },
+  {
+   "q": "The sound of ph",
+   "a": "/f/",
+   "d": [
+    "/w/",
+    "/p/",
+    "/h/"
+   ]
+  },
+  {
+   "q": "The sound of wh",
+   "a": "/w/",
+   "d": [
+    "/f/",
+    "/p/",
+    "/h/"
+   ]
+  },
+  {
+   "q": "Tricky word: g-o",
+   "a": "go",
+   "d": [
+    "got",
+    "do",
+    "so"
+   ]
+  },
+  {
+   "q": "The whale has got a ___",
+   "a": "wheel",
+   "d": [
+    "phone",
+    "fish",
+    "shop"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word has the /f/ sound with ph?",
+   "o": [
+    "phone",
+    "whale",
+    "wheel",
+    "white"
+   ],
+   "why": "Phone starts with ph = /f/."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word starts with wh?",
+   "o": [
+    "wheel",
+    "phone",
+    "fish",
+    "dolphin"
+   ],
+   "why": "Wheel starts with wh."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which tongue twister is correct?",
+   "o": [
+    "The whale has got a wheel and the dolphin has got a phone.",
+    "The whale has got a phone and the dolphin has got a wheel.",
+    "The elephant has got a wheel.",
+    "The dolphin has got a whale."
+   ],
+   "why": "Whale with a wheel, dolphin with a phone."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do you spell the tricky word?",
+   "o": [
+    "g-o",
+    "g-o-e",
+    "g-w-o",
+    "g-u"
+   ],
+   "why": "Go is g-o."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which question uses go correctly?",
+   "o": [
+    "When do you go home?",
+    "When do you goes home?",
+    "When you go home?",
+    "When go you home?"
+   ],
+   "why": "We ask When do you go ...?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a sentence: I / school / morning",
+   "o": [
+    "I go to school in the morning.",
+    "I go school at morning.",
+    "I to go school in the morning.",
+    "I go in school the morning."
+   ],
+   "why": "I go to school in the morning."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your teacher says a word with /f/ but it has ph. Which word is it?",
+   "o": [
+    "dolphin",
+    "fish",
+    "wheel",
+    "white"
+   ],
+   "why": "Dolphin has /f/ written with ph."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Fish and phone start with the same sound. What is different?",
+   "o": [
+    "The letters: f and ph",
+    "The sound: /f/ and /w/",
+    "Nothing is different",
+    "The letters: wh and ph"
+   ],
+   "why": "Same /f/ sound, different letters."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group has only ph words?",
+   "o": [
+    "phone, dolphin, elephant",
+    "whale, phone, wheel",
+    "white, wheat, phone",
+    "alphabet, wheel, dolphin"
+   ],
+   "why": "Phone, dolphin and elephant all have ph."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group has only words with the /w/ sound from wh?",
+   "o": [
+    "whale, wheel, wheat",
+    "whale, phone, white",
+    "dolphin, wheel, white",
+    "elephant, wheat, whale"
+   ],
+   "why": "Whale, wheel and wheat start with wh."
+  }
+ ]
+}

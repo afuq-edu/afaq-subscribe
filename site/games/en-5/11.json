@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 1 – Talent show",
+ "lesson": "Lesson 8: Skills – Listening, speaking and writing a description",
+ "outcomes": [
+  "I can listen for descriptions and talk about how a person looks and what they are like.",
+  "I can use the linking words and, or, but, so and because.",
+  "I can plan, write and check a description of someone important to me."
+ ],
+ "tf": [
+  {
+   "s": "Maite's granny is 72 years old.",
+   "t": true,
+   "why": "Yes! The text says she's 72."
+  },
+  {
+   "s": "Maite's granny likes watching cooking shows on TV.",
+   "t": false,
+   "why": "She doesn't like cooking shows or films about cooks."
+  },
+  {
+   "s": "In our description, we can say why the person is important to us.",
+   "t": true,
+   "why": "Yes! A description says who, appearance, personality, likes and why they are important."
+  },
+  {
+   "s": "We start each sentence with a small letter.",
+   "t": false,
+   "why": "We start each sentence with a capital letter."
+  },
+  {
+   "s": "But shows two different ideas: She likes cooking, but she doesn't like cooking shows.",
+   "t": true,
+   "why": "Yes! But joins two different ideas."
+  },
+  {
+   "s": "We use or to give a reason.",
+   "t": false,
+   "why": "Or gives a choice; because gives a reason."
+  },
+  {
+   "s": "A good description says how a person looks, what they are like and what they like doing.",
+   "t": true,
+   "why": "Great! These are the planning questions."
+  },
+  {
+   "s": "Maite's granny is great at making sushi.",
+   "t": true,
+   "why": "Yes! She makes delicious sushi."
+  },
+  {
+   "s": "We put a full stop at the start of a sentence.",
+   "t": false,
+   "why": "A full stop goes at the end of a sentence."
+  },
+  {
+   "s": "\"So\" gives a choice between two things.",
+   "t": false,
+   "why": "So shows a result. Or gives a choice."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's more delicious: chocolate ___ a cupcake?",
+   "o": [
+    "or",
+    "so",
+    "because"
+   ],
+   "why": "Or gives a choice."
+  },
+  {
+   "q": "This room is very untidy, ___ be careful!",
+   "o": [
+    "so",
+    "or",
+    "because"
+   ],
+   "why": "So shows the result."
+  },
+  {
+   "q": "I like my granny ___ she is very kind.",
+   "o": [
+    "because",
+    "or",
+    "so"
+   ],
+   "why": "Because gives the reason."
+  },
+  {
+   "q": "She likes cooking, ___ she doesn't like cooking shows.",
+   "o": [
+    "but",
+    "so",
+    "or"
+   ],
+   "why": "But joins two different ideas."
+  },
+  {
+   "q": "He's tall ___ he's got dark hair.",
+   "o": [
+    "and",
+    "but",
+    "or"
+   ],
+   "why": "And adds more information."
+  },
+  {
+   "q": "What do we use at the start of each sentence?",
+   "o": [
+    "a capital letter",
+    "a full stop",
+    "a comma"
+   ],
+   "why": "Every sentence starts with a capital letter."
+  },
+  {
+   "q": "Which planning question is about personality?",
+   "o": [
+    "What is he like?",
+    "What does he look like?",
+    "What does he like doing?"
+   ],
+   "why": "What is he like? asks about personality."
+  },
+  {
+   "q": "How old is Maite's granny?",
+   "o": [
+    "72",
+    "27",
+    "62"
+   ],
+   "why": "She's 72 years old."
+  },
+  {
+   "q": "What is Maite's granny great at making?",
+   "o": [
+    "sushi",
+    "pizza",
+    "cakes"
+   ],
+   "why": "She's great at making sushi."
+  },
+  {
+   "q": "Which sentence is a good start for a description?",
+   "o": [
+    "My brother is called Ahmed and he's twelve years old.",
+    "and twelve is Ahmed.",
+    "my brother ahmed"
+   ],
+   "why": "Start with a name and an age, a capital letter and a full stop."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Linking word for a reason",
+   "a": "because",
+   "d": [
+    "or",
+    "and",
+    "but"
+   ]
+  },
+  {
+   "q": "Linking word for a choice",
+   "a": "or",
+   "d": [
+    "because",
+    "so",
+    "and"
+   ]
+  },
+  {
+   "q": "Linking word for a result",
+   "a": "so",
+   "d": [
+    "or",
+    "but",
+    "and"
+   ]
+  },
+  {
+   "q": "Linking word for a different idea",
+   "a": "but",
+   "d": [
+    "and",
+    "so",
+    "because"
+   ]
+  },
+  {
+   "q": "Linking word to add information",
+   "a": "and",
+   "d": [
+    "but",
+    "or",
+    "because"
+   ]
+  },
+  {
+   "q": "Mark at the end of a sentence",
+   "a": "full stop",
+   "d": [
+    "capital letter",
+    "comma",
+    "question"
+   ]
+  },
+  {
+   "q": "Letter at the start of a sentence",
+   "a": "capital letter",
+   "d": [
+    "small letter",
+    "full stop",
+    "comma"
+   ]
+  },
+  {
+   "q": "Maite writes about her ___.",
+   "a": "granny",
+   "d": [
+    "uncle",
+    "brother",
+    "teacher"
+   ]
+  },
+  {
+   "q": "Kind and funny describe ___.",
+   "a": "personality",
+   "d": [
+    "appearance",
+    "age",
+    "hobbies"
+   ]
+  },
+  {
+   "q": "Short, grey hair describes ___.",
+   "a": "appearance",
+   "d": [
+    "personality",
+    "age",
+    "likes"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list has only linking words?",
+   "o": [
+    "and, or, but, so, because",
+    "big, bigger, the biggest",
+    "kind, shy, polite, rude",
+    "before, Monday, hair, tall"
+   ],
+   "why": "These five words link ideas."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What doesn't Maite's granny like?",
+   "o": [
+    "watching cooking shows or films about cooks",
+    "making sushi",
+    "her family",
+    "cooking"
+   ],
+   "why": "She doesn't like cooking shows or films about cooks on TV."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is one of the four planning questions?",
+   "o": [
+    "What does he/she like doing?",
+    "Where is the shop?",
+    "What time is it?",
+    "How much is it?"
+   ],
+   "why": "The plan asks who, look like, what like and like doing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What helps us check our writing?",
+   "o": [
+    "a checklist",
+    "a magnet",
+    "a week planner",
+    "a map"
+   ],
+   "why": "We tick the checklist and correct mistakes."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Join with \"but\": She likes cooking. She doesn't like cooking shows.",
+   "o": [
+    "She likes cooking, but she doesn't like cooking shows.",
+    "She likes cooking but, she doesn't like cooking shows.",
+    "She likes cooking because she doesn't like cooking shows.",
+    "She likes cooking or she doesn't like cooking shows."
+   ],
+   "why": "Put a comma before but and join the two ideas."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Join with \"so\": She's great at cooking. We often cook together.",
+   "o": [
+    "She's great at cooking, so we often cook together.",
+    "She's great at cooking, or we often cook together.",
+    "So she's great at cooking we cook.",
+    "She's great so at cooking we often cook together."
+   ],
+   "why": "So shows the result."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write notes for a plan about Uncle Hashim. Which is best?",
+   "o": [
+    "tall, short dark hair – kind, funny – likes football",
+    "My uncle is my uncle.",
+    "football football football",
+    "He is."
+   ],
+   "why": "Short notes answer look like, what like and likes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"She always makes me delicious sushi because she's great at making sushi.\" What does because do here?",
+   "o": [
+    "It gives a reason.",
+    "It gives a choice.",
+    "It adds a time.",
+    "It shows a different idea."
+   ],
+   "why": "Because tells us why she makes sushi."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is about personality, not appearance?",
+   "o": [
+    "She's very kind and hard-working.",
+    "She's got short, grey hair.",
+    "She's very tall.",
+    "She's got a long nose."
+   ],
+   "why": "Kind and hard-working describe personality."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the mistake: \"my grandma is called Aisha\"",
+   "o": [
+    "It needs a capital M and a full stop.",
+    "It needs the word because.",
+    "Aisha should be small.",
+    "There is no mistake."
+   ],
+   "why": "Sentences start with a capital letter and end with a full stop."
+  }
+ ]
+}

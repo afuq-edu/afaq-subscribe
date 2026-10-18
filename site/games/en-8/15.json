@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 1: Our planet",
+ "lesson": "Graded reader 1: The Cyclone",
+ "outcomes": [
+  "Read the story The Cyclone and find key information.",
+  "Learn new words: news, damage, injured, rescue centre, sight.",
+  "Say what the story teaches us about protecting animals."
+ ],
+ "tf": [
+  {
+   "s": "The cyclone in the story happened at the coast.",
+   "t": true,
+   "why": "Yes, the cyclone was at the coast."
+  },
+  {
+   "s": "Marwa was worried about a cyclone in the mountains.",
+   "t": false,
+   "why": "The cyclone was at the coast, not in the mountains."
+  },
+  {
+   "s": "After the cyclone, Marwa and her dad did a beach clean-up.",
+   "t": true,
+   "why": "Correct! They went to clean the beach."
+  },
+  {
+   "s": "The turtle had an injured flipper.",
+   "t": true,
+   "why": "Right! Its flipper was hurt."
+  },
+  {
+   "s": "Marwa and her dad took the turtle home as a pet.",
+   "t": false,
+   "why": "They called a rescue centre, and later they carried the turtle to the sea."
+  },
+  {
+   "s": "A woman put a bandage on the turtle’s flipper.",
+   "t": true,
+   "why": "Yes, the bandage helped the flipper."
+  },
+  {
+   "s": "Seven weeks later, they saw baby turtles on the beach.",
+   "t": true,
+   "why": "Great! It was a happy sight."
+  },
+  {
+   "s": "“Injured” means very happy.",
+   "t": false,
+   "why": "Injured means hurt."
+  },
+  {
+   "s": "A rescue centre is a shop that sells animals.",
+   "t": false,
+   "why": "A rescue centre is a place that helps injured animals."
+  },
+  {
+   "s": "The letter l is silent in “could”.",
+   "t": true,
+   "why": "Yes, we don’t say the l in could."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is a rescue centre?",
+   "o": [
+    "a place that helps injured animals",
+    "a big shopping mall",
+    "a weather station"
+   ],
+   "why": "Rescue centres care for hurt animals."
+  },
+  {
+   "q": "What does “injured” mean?",
+   "o": [
+    "hurt",
+    "hungry",
+    "happy"
+   ],
+   "why": "Injured means hurt."
+  },
+  {
+   "q": "What was wrong with the turtle?",
+   "o": [
+    "It had an injured flipper.",
+    "It was too big.",
+    "It was very old."
+   ],
+   "why": "The turtle’s flipper was injured."
+  },
+  {
+   "q": "A woman put a ___ on the turtle’s flipper.",
+   "o": [
+    "bandage",
+    "helmet",
+    "sign"
+   ],
+   "why": "A bandage covers an injury."
+  },
+  {
+   "q": "Then they ___ the turtle to the sea.",
+   "o": [
+    "carried",
+    "threw",
+    "sold"
+   ],
+   "why": "They carefully carried it to the sea."
+  },
+  {
+   "q": "What did they see seven weeks later?",
+   "o": [
+    "baby turtles on the beach",
+    "another cyclone",
+    "a big fish market"
+   ],
+   "why": "Baby turtles appeared on the beach."
+  },
+  {
+   "q": "Which letter is silent in “should”?",
+   "o": [
+    "l",
+    "s",
+    "d"
+   ],
+   "why": "The l in should is silent."
+  },
+  {
+   "q": "Which letter is silent in “know”?",
+   "o": [
+    "k",
+    "n",
+    "w"
+   ],
+   "why": "We say know like no."
+  },
+  {
+   "q": "Where did the cyclone happen?",
+   "o": [
+    "at the coast",
+    "in the desert",
+    "in the mountains"
+   ],
+   "why": "The story happens at the coast."
+  },
+  {
+   "q": "What does the story teach us?",
+   "o": [
+    "We should protect the environment and help animals.",
+    "We should stay away from beaches forever.",
+    "Turtles are dangerous."
+   ],
+   "why": "Marwa and her dad helped an animal."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Another word for hurt",
+   "a": "injured",
+   "d": [
+    "rescued",
+    "returned",
+    "carried"
+   ]
+  },
+  {
+   "q": "Place that helps hurt animals",
+   "a": "rescue centre",
+   "d": [
+    "shopping mall",
+    "harbour",
+    "dining room"
+   ]
+  },
+  {
+   "q": "The injured animal",
+   "a": "turtle",
+   "d": [
+    "dolphin",
+    "seagull",
+    "crab"
+   ]
+  },
+  {
+   "q": "Hurt part of the turtle",
+   "a": "flipper",
+   "d": [
+    "shell",
+    "head",
+    "eye"
+   ]
+  },
+  {
+   "q": "Put on the flipper",
+   "a": "bandage",
+   "d": [
+    "helmet",
+    "ring",
+    "sign"
+   ]
+  },
+  {
+   "q": "The girl in the story",
+   "a": "Marwa",
+   "d": [
+    "Manar",
+    "Rosie",
+    "Harriet"
+   ]
+  },
+  {
+   "q": "Weeks before the baby turtles",
+   "a": "seven",
+   "d": [
+    "two",
+    "ten",
+    "twelve"
+   ]
+  },
+  {
+   "q": "Where the cyclone happened",
+   "a": "coast",
+   "d": [
+    "desert",
+    "mountains",
+    "city centre"
+   ]
+  },
+  {
+   "q": "Silent letter in “know”",
+   "a": "k",
+   "d": [
+    "n",
+    "o",
+    "w"
+   ]
+  },
+  {
+   "q": "Silent letters in “lightning”",
+   "a": "gh",
+   "d": [
+    "li",
+    "ng",
+    "tn"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What did Marwa and her dad do after the cyclone?",
+   "o": [
+    "They did a beach clean-up.",
+    "They went shopping.",
+    "They went on holiday.",
+    "They stayed at home all week."
+   ],
+   "why": "They went to clean the beach."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does “damage” mean?",
+   "o": [
+    "Harm to things, like broken buildings",
+    "A kind of food",
+    "A happy feeling",
+    "A rescue centre"
+   ],
+   "why": "A cyclone can cause damage."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who put a bandage on the turtle’s flipper?",
+   "o": [
+    "A woman",
+    "Marwa’s teacher",
+    "A fisherman",
+    "Marwa’s brother"
+   ],
+   "why": "A woman put the bandage on."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a “sight”?",
+   "o": [
+    "Something you see",
+    "Something you eat",
+    "A loud noise",
+    "A type of storm"
+   ],
+   "why": "Baby turtles on the beach were a lovely sight."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You find an injured bird after a storm. What should you do, like Marwa?",
+   "o": [
+    "Call a rescue centre.",
+    "Leave it and go home.",
+    "Take it to a shop.",
+    "Throw it into the sea."
+   ],
+   "why": "Rescue centres help injured animals."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: “The cyclone caused a lot of ___ to the houses.”",
+   "o": [
+    "damage",
+    "sight",
+    "news",
+    "bandage"
+   ],
+   "why": "Damage means harm to things."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which word has a silent letter, like “should”?",
+   "o": [
+    "could",
+    "turtle",
+    "beach",
+    "sea"
+   ],
+   "why": "The l in could is silent."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Put the events in order.",
+   "o": [
+    "cyclone → beach clean-up → injured turtle → baby turtles",
+    "baby turtles → cyclone → beach clean-up → injured turtle",
+    "injured turtle → baby turtles → cyclone → beach clean-up",
+    "beach clean-up → baby turtles → cyclone → injured turtle"
+   ],
+   "why": "This order follows the story."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why was seeing baby turtles a happy end to the story?",
+   "o": [
+    "It showed the turtles were safe on the beach again.",
+    "It meant another cyclone was coming.",
+    "It showed the beach was dirty.",
+    "It meant the rescue centre was closed."
+   ],
+   "why": "After the cyclone, new life came to the beach."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How does the story link to Unit 1, Our planet?",
+   "o": [
+    "It shows people can protect the environment and help animals.",
+    "It is about online shopping.",
+    "It is about extreme sports.",
+    "It shows how to build a house."
+   ],
+   "why": "Protecting the planet is the main idea of Unit 1."
+  }
+ ]
+}

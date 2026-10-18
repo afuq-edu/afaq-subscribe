@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 2: Where’s my pen?",
+ "lesson": "Unit 2 – Lesson 7: Review and Get ready for Starters",
+ "outcomes": [
+  "I can use This is and These are.",
+  "I can say where things are: in, on, under.",
+  "I can answer: What's this? It's a ..."
+ ],
+ "tf": [
+  {
+   "s": "\"These are my pens\" is about many pens.",
+   "t": true,
+   "why": "\"These are\" is for more than one thing."
+  },
+  {
+   "s": "\"This is my pens\" is correct.",
+   "t": false,
+   "why": "For many pens we say \"These are my pens.\""
+  },
+  {
+   "s": "\"It's on the desk\" tells us where a thing is.",
+   "t": true,
+   "why": "\"On\" is a place word."
+  },
+  {
+   "s": "\"Where's the ruler?\" asks about a place.",
+   "t": true,
+   "why": "\"Where\" asks about place."
+  },
+  {
+   "s": "\"What's this?\" can get the answer \"It's a chair.\"",
+   "t": true,
+   "why": "We name the thing: It's a chair."
+  },
+  {
+   "s": "A picture of one computer matches \"These are computers.\"",
+   "t": false,
+   "why": "One computer needs \"This is a computer.\""
+  },
+  {
+   "s": "The letters o-o-b-k can make the word \"book\".",
+   "t": true,
+   "why": "b-o-o-k spells book."
+  },
+  {
+   "s": "\"Under\" means on top of something.",
+   "t": false,
+   "why": "\"On\" means on top; \"under\" means below."
+  },
+  {
+   "s": "A picture of a chair matches \"This is a desk.\"",
+   "t": false,
+   "why": "A chair is not a desk, so we put a cross."
+  },
+  {
+   "s": "We say \"These are scissors.\"",
+   "t": true,
+   "why": "We say \"These are\" with scissors."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "___ my pens.",
+   "o": [
+    "These are",
+    "This is",
+    "It is"
+   ],
+   "why": "Many pens: These are my pens."
+  },
+  {
+   "q": "This is my ___. (one)",
+   "o": [
+    "computer",
+    "computers",
+    "these"
+   ],
+   "why": "\"This is\" goes with one thing."
+  },
+  {
+   "q": "What's this? (a pencil case)",
+   "o": [
+    "It's a pencil case.",
+    "These are pencils.",
+    "Yes, it is."
+   ],
+   "why": "Answer with \"It's a ...\"."
+  },
+  {
+   "q": "The book is ___ the shelf. (on top)",
+   "o": [
+    "on",
+    "under",
+    "in"
+   ],
+   "why": "On top of something is \"on\"."
+  },
+  {
+   "q": "The ball is ___ the box. (inside)",
+   "o": [
+    "in",
+    "on",
+    "under"
+   ],
+   "why": "Inside something is \"in\"."
+  },
+  {
+   "q": "The cat is ___ the table. (below)",
+   "o": [
+    "under",
+    "on",
+    "in"
+   ],
+   "why": "Below something is \"under\"."
+  },
+  {
+   "q": "Unscramble: o-o-b-k",
+   "o": [
+    "book",
+    "boko",
+    "kobo"
+   ],
+   "why": "The word is book."
+  },
+  {
+   "q": "Read: These are scissors. Picture: scissors. Tick or cross?",
+   "o": [
+    "Tick",
+    "Cross",
+    "No answer"
+   ],
+   "why": "The picture matches, so tick."
+  },
+  {
+   "q": "Which question asks about a place?",
+   "o": [
+    "Where's the pen?",
+    "What's your name?",
+    "How old are you?"
+   ],
+   "why": "\"Where\" asks about place."
+  },
+  {
+   "q": "Which one is for many things?",
+   "o": [
+    "These are",
+    "This is",
+    "It's a"
+   ],
+   "why": "\"These are\" is plural."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Many things: ___ are",
+   "a": "These",
+   "d": [
+    "This",
+    "It",
+    "Is"
+   ]
+  },
+  {
+   "q": "One thing: ___ is",
+   "a": "This",
+   "d": [
+    "These",
+    "They",
+    "Are"
+   ]
+  },
+  {
+   "q": "Inside the box",
+   "a": "in",
+   "d": [
+    "on",
+    "under",
+    "up"
+   ]
+  },
+  {
+   "q": "On top of the desk",
+   "a": "on",
+   "d": [
+    "in",
+    "under",
+    "at"
+   ]
+  },
+  {
+   "q": "Below the chair",
+   "a": "under",
+   "d": [
+    "on",
+    "in",
+    "at"
+   ]
+  },
+  {
+   "q": "Unscramble: o-o-b-k",
+   "a": "book",
+   "d": [
+    "look",
+    "cook",
+    "boot"
+   ]
+  },
+  {
+   "q": "Unscramble: n-e-p",
+   "a": "pen",
+   "d": [
+    "pin",
+    "ten",
+    "hen"
+   ]
+  },
+  {
+   "q": "What's this? It's a ___. (sit)",
+   "a": "chair",
+   "d": [
+    "shelf",
+    "pen",
+    "bag"
+   ]
+  },
+  {
+   "q": "Tick or cross? Match = ?",
+   "a": "tick",
+   "d": [
+    "cross",
+    "circle",
+    "line"
+   ]
+  },
+  {
+   "q": "Question word for place",
+   "a": "Where",
+   "d": [
+    "What",
+    "Who",
+    "How"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word means inside?",
+   "o": [
+    "in",
+    "on",
+    "under",
+    "here"
+   ],
+   "why": "\"In\" means inside."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question asks about a thing?",
+   "o": [
+    "What's this?",
+    "Where are you?",
+    "How old are you?",
+    "Who is it?"
+   ],
+   "why": "\"What's this?\" asks about a thing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is for one thing?",
+   "o": [
+    "This is a table.",
+    "These are tables.",
+    "These are table.",
+    "This are tables."
+   ],
+   "why": "One table: This is a table."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which answer tells a place?",
+   "o": [
+    "It's under the desk.",
+    "It's a pen.",
+    "Yes, it is.",
+    "These are pens."
+   ],
+   "why": "\"Under the desk\" is a place."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Look: two erasers. What do you say?",
+   "o": [
+    "These are erasers.",
+    "This is erasers.",
+    "This is an eraser.",
+    "These is erasers."
+   ],
+   "why": "Two erasers are many, so use \"These are\"."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Where's the ruler? The ruler is on top of the desk.",
+   "o": [
+    "It's on the desk.",
+    "It's under the desk.",
+    "It's in the desk.",
+    "It's a desk."
+   ],
+   "why": "On top means \"on\"."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Read: These are computers. The picture shows one computer. What do you do?",
+   "o": [
+    "Put a cross.",
+    "Put a tick.",
+    "Draw two pens.",
+    "Write Yes."
+   ],
+   "why": "One computer does not match \"These are computers\"."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is wrong?",
+   "o": [
+    "This is my books.",
+    "These are my books.",
+    "This is my book.",
+    "These are my pens."
+   ],
+   "why": "Many books need \"These are\"."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ali says: \"The bag is under the chair.\" Where is the bag?",
+   "o": [
+    "Below the chair",
+    "On top of the chair",
+    "Inside the chair",
+    "Next to the door"
+   ],
+   "why": "\"Under\" means below."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say \"This is a chair\" and not \"These are chairs\"?",
+   "o": [
+    "Because there is one chair.",
+    "Because chairs are big.",
+    "Because it is a question.",
+    "Because chairs are brown."
+   ],
+   "why": "\"This is\" is for one thing."
+  }
+ ]
+}

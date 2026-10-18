@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 3: Spend or save?",
+ "lesson": "Lesson 7: English in action – Making a complaint",
+ "outcomes": [
+  "Understand a dialogue where a customer makes a complaint.",
+  "Name the problems and the solutions in a shop.",
+  "Make a polite complaint and answer as a shop assistant."
+ ],
+ "tf": [
+  {
+   "s": "The conversation takes place in a clothes shop.",
+   "t": true,
+   "why": "Yes, it happens in a clothes shop."
+  },
+  {
+   "s": "The customer and the shop assistant are old friends.",
+   "t": false,
+   "why": "They don't know each other."
+  },
+  {
+   "s": "The skirt has a button missing.",
+   "t": true,
+   "why": "Correct, a button is missing."
+  },
+  {
+   "s": "The customer gets a refund for the skirt.",
+   "t": false,
+   "why": "The skirt is exchanged; the refund is for the scarf."
+  },
+  {
+   "s": "The scarf is damaged.",
+   "t": true,
+   "why": "Right, so the customer asks for a refund."
+  },
+  {
+   "s": "The shop assistant needs to see the receipt.",
+   "t": true,
+   "why": "Yes, shops usually need the receipt."
+  },
+  {
+   "s": "A complaint is when you thank someone for good service.",
+   "t": false,
+   "why": "A complaint is when you say something is wrong."
+  },
+  {
+   "s": "In second conditionals, 'would' is usually unstressed.",
+   "t": true,
+   "why": "Well done, would is weak, not stressed."
+  },
+  {
+   "s": "'I'm afraid I have a complaint about...' is a polite way to start.",
+   "t": true,
+   "why": "Good, it is polite and clear."
+  },
+  {
+   "s": "If clothes don't fit, you can never change them.",
+   "t": false,
+   "why": "You can ask for an exchange or a refund."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is wrong with the skirt?",
+   "o": [
+    "a button is missing",
+    "it is too long",
+    "it is the wrong colour"
+   ],
+   "why": "There is a button missing."
+  },
+  {
+   "q": "What is wrong with the scarf?",
+   "o": [
+    "it is damaged",
+    "it is too big",
+    "it is too cheap"
+   ],
+   "why": "The scarf is damaged."
+  },
+  {
+   "q": "What does the customer get for the scarf?",
+   "o": [
+    "a refund",
+    "an exchange",
+    "a new skirt"
+   ],
+   "why": "The customer gets a refund."
+  },
+  {
+   "q": "What happens with the skirt?",
+   "o": [
+    "it is exchanged",
+    "it is thrown away",
+    "it is sold"
+   ],
+   "why": "The skirt is exchanged."
+  },
+  {
+   "q": "What does the shop assistant need to see?",
+   "o": [
+    "the receipt",
+    "the bank",
+    "the queue"
+   ],
+   "why": "The receipt shows you bought it there."
+  },
+  {
+   "q": "Complete: I'm afraid I have a ___ about some things I bought.",
+   "o": [
+    "complaint",
+    "refund",
+    "receipt"
+   ],
+   "why": "Use 'complaint' to say there is a problem."
+  },
+  {
+   "q": "Complete: No, thanks. Please could I have a ___?",
+   "o": [
+    "refund",
+    "receipt",
+    "queue"
+   ],
+   "why": "Ask for your money back with 'refund'."
+  },
+  {
+   "q": "Shop assistant: Would you like to ___ it?",
+   "o": [
+    "exchange",
+    "complain",
+    "queue"
+   ],
+   "why": "Exchange means change it for another one."
+  },
+  {
+   "q": "The astronaut costume is too big. What can you ask for?",
+   "o": [
+    "an exchange or a refund",
+    "a receipt only",
+    "nothing"
+   ],
+   "why": "Ask to change it or get your money back."
+  },
+  {
+   "q": "Is 'would' stressed in second conditionals?",
+   "o": [
+    "no, it is unstressed",
+    "yes, always",
+    "only at night"
+   ],
+   "why": "Would is weak and unstressed."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Missing from the skirt",
+   "a": "button",
+   "d": [
+    "zip",
+    "pocket",
+    "sleeve"
+   ]
+  },
+  {
+   "q": "Problem with the scarf",
+   "a": "damaged",
+   "d": [
+    "too big",
+    "too cheap",
+    "new"
+   ]
+  },
+  {
+   "q": "Solution for the skirt",
+   "a": "exchange",
+   "d": [
+    "refund",
+    "receipt",
+    "complaint"
+   ]
+  },
+  {
+   "q": "Solution for the scarf",
+   "a": "refund",
+   "d": [
+    "exchange",
+    "receipt",
+    "button"
+   ]
+  },
+  {
+   "q": "Paper the assistant needs",
+   "a": "receipt",
+   "d": [
+    "refund",
+    "complaint",
+    "card"
+   ]
+  },
+  {
+   "q": "Place of the dialogue",
+   "a": "clothes shop",
+   "d": [
+    "bookshop",
+    "bank",
+    "market"
+   ]
+  },
+  {
+   "q": "Saying something is wrong",
+   "a": "complaint",
+   "d": [
+    "refund",
+    "receipt",
+    "exchange"
+   ]
+  },
+  {
+   "q": "Money back",
+   "a": "refund",
+   "d": [
+    "exchange",
+    "receipt",
+    "sale"
+   ]
+  },
+  {
+   "q": "Too big or small: it doesn't ...",
+   "a": "fit",
+   "d": [
+    "sell",
+    "pay",
+    "buy"
+   ]
+  },
+  {
+   "q": "Stress on 'would'",
+   "a": "unstressed",
+   "d": [
+    "stressed",
+    "shouted",
+    "loud"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Where is the conversation?",
+   "o": [
+    "in a clothes shop",
+    "in a bank",
+    "at a market",
+    "at school"
+   ],
+   "why": "It happens in a clothes shop."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the two problems?",
+   "o": [
+    "a skirt with a missing button and a damaged scarf",
+    "a broken phone and a big costume",
+    "a late bus and a cold drink",
+    "a lost bracelet and a falcon"
+   ],
+   "why": "These are the customer's two problems."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase does a shop assistant use?",
+   "o": [
+    "I'll just need to see your receipt.",
+    "I'm afraid I have a complaint.",
+    "Please could I have a refund?",
+    "This is damaged."
+   ],
+   "why": "The shop assistant asks for the receipt."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a complaint?",
+   "o": [
+    "telling someone that something is wrong",
+    "buying something on sale",
+    "paying with contactless",
+    "waiting in a queue"
+   ],
+   "why": "A complaint says there is a problem."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your new phone screen is damaged. What do you say?",
+   "o": [
+    "I'm afraid I have a complaint about this phone. The screen is damaged.",
+    "Give me money now!",
+    "I love this phone, thank you.",
+    "Would you like to exchange it?"
+   ],
+   "why": "Start politely with 'I'm afraid I have a complaint...'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The shop assistant asks: 'Would you like to exchange it?' You want your money back. What do you say?",
+   "o": [
+    "No, thanks. Please could I have a refund?",
+    "Yes, please exchange it.",
+    "I'll need to see your receipt.",
+    "That's true."
+   ],
+   "why": "Ask politely for a refund."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: They're damaged here. I need to ___ them.",
+   "o": [
+    "exchange",
+    "receipt",
+    "complain them",
+    "queue"
+   ],
+   "why": "Exchange means change them for others."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the shop assistant ask for the receipt?",
+   "o": [
+    "to check that the customer bought it in that shop",
+    "to give it as a present",
+    "to write a poem",
+    "to call the police"
+   ],
+   "why": "The receipt proves where and when you bought it."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Match the problems to the solutions in the dialogue.",
+   "o": [
+    "skirt: exchange; scarf: refund",
+    "skirt: refund; scarf: exchange",
+    "both: refund",
+    "both: nothing"
+   ],
+   "why": "Different problems can have different solutions."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which complaint is the most polite?",
+   "o": [
+    "I'm afraid there's a problem with this costume. It's too big.",
+    "This costume is terrible! Give me my money!",
+    "You sold me a bad costume.",
+    "I hate this shop."
+   ],
+   "why": "Polite phrases like 'I'm afraid...' work better."
+  }
+ ]
+}

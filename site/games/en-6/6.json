@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 1: Free-time fun",
+ "lesson": "Unit 1 – Lesson 4: Book club – A picture story",
+ "outcomes": [
+  "I can name the features of a picture story.",
+  "I can answer questions about the story \"No Wi-Fi!\"",
+  "I can use expressions with do, like do a puzzle."
+ ],
+ "tf": [
+  {
+   "s": "In a picture story, pictures tell the story.",
+   "t": true,
+   "why": "Yes! The pictures help tell the story."
+  },
+  {
+   "s": "A picture story usually has only one character.",
+   "t": false,
+   "why": "A picture story often has many characters."
+  },
+  {
+   "s": "Samar can't do athletics because it's raining.",
+   "t": true,
+   "why": "Right! The rain stops her."
+  },
+  {
+   "s": "Nawal's idea is to put on a show.",
+   "t": true,
+   "why": "Correct! Nawal says \"Let's put on a show!\""
+  },
+  {
+   "s": "Samar loves playing the piano at the start of the story.",
+   "t": false,
+   "why": "Samar says \"I hate playing the piano.\""
+  },
+  {
+   "s": "Amani makes the invitations.",
+   "t": true,
+   "why": "Yes, Amani makes the invitations."
+  },
+  {
+   "s": "The children are sad after the show.",
+   "t": false,
+   "why": "They say \"That was fantastic!\" and have fun."
+  },
+  {
+   "s": "We say \"do homework\" and \"do a puzzle\".",
+   "t": true,
+   "why": "Great! These are collocations with do."
+  },
+  {
+   "s": "We write what characters say in speech bubbles.",
+   "t": true,
+   "why": "Yes, speech bubbles show the words characters say."
+  },
+  {
+   "s": "In the story, the Wi-Fi works all day.",
+   "t": false,
+   "why": "There's no Wi-Fi in the story."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Why can't Samar do athletics?",
+   "o": [
+    "It's raining.",
+    "She is ill.",
+    "It's night."
+   ],
+   "why": "The rain stops athletics."
+  },
+  {
+   "q": "What is Nawal's idea?",
+   "o": [
+    "to put on a show",
+    "to play computer games",
+    "to go swimming"
+   ],
+   "why": "Nawal wants to put on a show."
+  },
+  {
+   "q": "Who makes the invitations?",
+   "o": [
+    "Amani",
+    "Samar",
+    "Mum"
+   ],
+   "why": "Amani makes the invitations."
+  },
+  {
+   "q": "Who says \"Let's put on a show!\"?",
+   "o": [
+    "Nawal",
+    "Mum",
+    "Rasha"
+   ],
+   "why": "Nawal has the idea."
+  },
+  {
+   "q": "In a picture story, ___ tell the story.",
+   "o": [
+    "pictures",
+    "photos",
+    "songs"
+   ],
+   "why": "Pictures tell the story."
+  },
+  {
+   "q": "Which goes with play?",
+   "o": [
+    "the piano",
+    "homework",
+    "a puzzle"
+   ],
+   "why": "We say play the piano."
+  },
+  {
+   "q": "Which goes with do?",
+   "o": [
+    "homework",
+    "football",
+    "swimming"
+   ],
+   "why": "We say do homework."
+  },
+  {
+   "q": "What does Samar hate at the start?",
+   "o": [
+    "playing the piano",
+    "singing",
+    "acting"
+   ],
+   "why": "She says she hates playing the piano."
+  },
+  {
+   "q": "What does Samar play before the Wi-Fi stops?",
+   "o": [
+    "computer games",
+    "the guitar",
+    "volleyball"
+   ],
+   "why": "Samar plays computer games first."
+  },
+  {
+   "q": "Which is NOT a feature of a picture story?",
+   "o": [
+    "no pictures",
+    "speech bubbles",
+    "many characters"
+   ],
+   "why": "Picture stories have pictures, speech bubbles and many characters."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Her idea: put on a show",
+   "a": "Nawal",
+   "d": [
+    "Samar",
+    "Amani",
+    "Rasha"
+   ]
+  },
+  {
+   "q": "She makes the invitations.",
+   "a": "Amani",
+   "d": [
+    "Nawal",
+    "Samar",
+    "Mum"
+   ]
+  },
+  {
+   "q": "Samar hates playing the ...",
+   "a": "piano",
+   "d": [
+    "guitar",
+    "drums",
+    "violin"
+   ]
+  },
+  {
+   "q": "The weather in the story",
+   "a": "rainy",
+   "d": [
+    "sunny",
+    "snowy",
+    "windy"
+   ]
+  },
+  {
+   "q": "___ a puzzle",
+   "a": "do",
+   "d": [
+    "play",
+    "go",
+    "make"
+   ]
+  },
+  {
+   "q": "___ the gardening",
+   "a": "do",
+   "d": [
+    "play",
+    "go",
+    "make"
+   ]
+  },
+  {
+   "q": "Words a character says",
+   "a": "speech bubble",
+   "d": [
+    "title",
+    "cover",
+    "page number"
+   ]
+  },
+  {
+   "q": "Cards to ask people to come",
+   "a": "invitations",
+   "d": [
+    "puzzles",
+    "homework",
+    "pictures"
+   ]
+  },
+  {
+   "q": "The story is called No ...!",
+   "a": "Wi-Fi",
+   "d": [
+    "TV",
+    "Rain",
+    "Piano"
+   ]
+  },
+  {
+   "q": "Pictures tell this story.",
+   "a": "picture story",
+   "d": [
+    "poem",
+    "interview",
+    "review"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What are two features of a picture story?",
+   "o": [
+    "Pictures tell the story and there are many characters.",
+    "There are no pictures and one character.",
+    "It has only photos.",
+    "It is a song with no words."
+   ],
+   "why": "Pictures and many characters are features."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In a picture story, what shows the words a character says?",
+   "o": [
+    "a speech bubble",
+    "the title",
+    "the cover",
+    "a page number"
+   ],
+   "why": "Speech bubbles show what characters say."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Mum suggest?",
+   "o": [
+    "to do homework or do a puzzle",
+    "to go out in the rain",
+    "to play computer games",
+    "to buy a new piano"
+   ],
+   "why": "Mum says \"Why don't you do your homework … or do a puzzle?\""
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a collocation with do?",
+   "o": [
+    "do photography",
+    "do football",
+    "do swimming",
+    "do cycling"
+   ],
+   "why": "We say do photography."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put the events in order: a) The friends sing. b) Samar plays computer games. c) There's no Wi-Fi.",
+   "o": [
+    "b, c, a",
+    "a, b, c",
+    "c, a, b",
+    "c, b, a"
+   ],
+   "why": "First games, then no Wi-Fi, then singing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is correct?",
+   "o": [
+    "My sister does gymnastics every Friday.",
+    "My sister plays gymnastics every Friday.",
+    "My sister goes gymnastics every Friday.",
+    "My sister makes gymnastics every Friday."
+   ],
+   "why": "We say do gymnastics."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "What happens first in the story?",
+   "o": [
+    "There's no Wi-Fi.",
+    "The friends sing.",
+    "They put on a show.",
+    "Amani makes invitations."
+   ],
+   "why": "The story starts when there's no Wi-Fi."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How does Samar feel about the piano at the start? How do you know?",
+   "o": [
+    "She hates it, because she says \"I hate playing the piano.\"",
+    "She loves it, because she plays every day.",
+    "She is happy, because she sings.",
+    "She is scared, because it's raining."
+   ],
+   "why": "Her own words show her feelings."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Were the children happier before or after the show?",
+   "o": [
+    "After, because they had fun together without Wi-Fi.",
+    "Before, because they had Wi-Fi.",
+    "Before, because it was raining.",
+    "They were never happy."
+   ],
+   "why": "They say \"That was fantastic!\" after the show."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the message of the story?",
+   "o": [
+    "You can have fun without Wi-Fi.",
+    "Rain is always bad.",
+    "Computer games are the only fun.",
+    "Shows are boring."
+   ],
+   "why": "The friends have a great time with no Wi-Fi."
+  }
+ ]
+}

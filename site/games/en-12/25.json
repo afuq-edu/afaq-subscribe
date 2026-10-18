@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 2: Coping with Change (Grammar)",
+ "lesson": "Lead-in and dialogue: coping with university life",
+ "outcomes": [
+  "Predict questions a student might ask about university life",
+  "Read a dialogue and find Faisal's problems and how Abdullah helps",
+  "Review the past simple, present perfect and past continuous"
+ ],
+ "tf": [
+  {
+   "s": "Faisal leaves his essays to the last minute.",
+   "t": true,
+   "why": "Yes, this is part of his time management problem."
+  },
+  {
+   "s": "Faisal is always early for class.",
+   "t": false,
+   "why": "Faisal is often late for class."
+  },
+  {
+   "s": "Faisal finds cooking and washing his clothes challenging.",
+   "t": true,
+   "why": "Looking after himself is new for him."
+  },
+  {
+   "s": "Abdullah invites Faisal to dinner.",
+   "t": true,
+   "why": "Yes, that is one way Abdullah helps."
+  },
+  {
+   "s": "Abdullah tells Faisal that finding university strange is unusual.",
+   "t": false,
+   "why": "He tells Faisal it is normal to find university strange."
+  },
+  {
+   "s": "Faisal is finding it difficult to live alone.",
+   "t": true,
+   "why": "Living alone is one of his problems."
+  },
+  {
+   "s": "'I felt nervous on my first day' is in the past simple.",
+   "t": true,
+   "why": "'Felt' is the past simple of 'feel'."
+  },
+  {
+   "s": "'I was walking to class' is in the present perfect.",
+   "t": false,
+   "why": "'Was walking' is the past continuous."
+  },
+  {
+   "s": "At university, students only need to learn how to study.",
+   "t": false,
+   "why": "They also learn to manage time and live independently."
+  },
+  {
+   "s": "'I have lived here for a year' is in the present perfect.",
+   "t": true,
+   "why": "Have + past participle is the present perfect."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is one of Faisal's problems?",
+   "o": [
+    "time management",
+    "too many holidays",
+    "a broken phone"
+   ],
+   "why": "He leaves essays late and is late for class."
+  },
+  {
+   "q": "What does Abdullah say about finding university strange?",
+   "o": [
+    "it is normal",
+    "it is a big mistake",
+    "it never happens"
+   ],
+   "why": "He reassures Faisal."
+  },
+  {
+   "q": "Which tense is 'He was cooking dinner'?",
+   "o": [
+    "past continuous",
+    "past simple",
+    "present perfect"
+   ],
+   "why": "Was/were + -ing is the past continuous."
+  },
+  {
+   "q": "Which tense is 'I have finished my essay'?",
+   "o": [
+    "present perfect",
+    "past continuous",
+    "past simple"
+   ],
+   "why": "Have + past participle is the present perfect."
+  },
+  {
+   "q": "Which tense is 'She lost her ID card yesterday'?",
+   "o": [
+    "past simple",
+    "present perfect",
+    "past continuous"
+   ],
+   "why": "'Yesterday' with 'lost' shows the past simple."
+  },
+  {
+   "q": "What does 'coping' mean?",
+   "o": [
+    "dealing well with a difficulty",
+    "running away from a problem",
+    "copying work"
+   ],
+   "why": "Coping means managing a hard situation."
+  },
+  {
+   "q": "A person who can look after himself is...",
+   "o": [
+    "independent",
+    "dependent",
+    "late"
+   ],
+   "why": "Independent people manage on their own."
+  },
+  {
+   "q": "Who can give new students useful advice from experience?",
+   "o": [
+    "older students",
+    "new students",
+    "nobody"
+   ],
+   "why": "Older students have already been through it."
+  },
+  {
+   "q": "What does Faisal find challenging apart from studying?",
+   "o": [
+    "cooking and washing clothes",
+    "driving a bus",
+    "teaching a class"
+   ],
+   "why": "Looking after himself is new for him."
+  },
+  {
+   "q": "How does Abdullah help Faisal get to places?",
+   "o": [
+    "he gives him a lift",
+    "he buys him a car",
+    "he carries his bags"
+   ],
+   "why": "Giving someone a lift means driving them."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "'I was reading' — which tense?",
+   "a": "past continuous",
+   "d": [
+    "past simple",
+    "present perfect",
+    "future simple"
+   ]
+  },
+  {
+   "q": "'I have seen it' — which tense?",
+   "a": "present perfect",
+   "d": [
+    "past simple",
+    "past continuous",
+    "present simple"
+   ]
+  },
+  {
+   "q": "'She left early' — which tense?",
+   "a": "past simple",
+   "d": [
+    "present perfect",
+    "past continuous",
+    "present simple"
+   ]
+  },
+  {
+   "q": "Past simple of 'go'",
+   "a": "went",
+   "d": [
+    "gone",
+    "goed",
+    "going"
+   ]
+  },
+  {
+   "q": "Past participle of 'write'",
+   "a": "written",
+   "d": [
+    "wrote",
+    "writed",
+    "writing"
+   ]
+  },
+  {
+   "q": "Faisal is often ___ for class.",
+   "a": "late",
+   "d": [
+    "early",
+    "ready",
+    "on time"
+   ]
+  },
+  {
+   "q": "Abdullah invites Faisal to...",
+   "a": "dinner",
+   "d": [
+    "an exam",
+    "a lecture",
+    "a meeting"
+   ]
+  },
+  {
+   "q": "Dealing well with difficulties",
+   "a": "coping",
+   "d": [
+    "copying",
+    "cooking",
+    "calling"
+   ]
+  },
+  {
+   "q": "Faisal's problem with time",
+   "a": "time management",
+   "d": [
+    "culture shock",
+    "homesickness",
+    "anxiety"
+   ]
+  },
+  {
+   "q": "Form of the past continuous",
+   "a": "was/were + -ing",
+   "d": [
+    "had + past participle",
+    "have + past participle",
+    "did + base verb"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What problem does Faisal have with time?",
+   "o": [
+    "He leaves essays to the last minute and is late for class",
+    "He finishes everything a week early",
+    "He has no essays to write",
+    "He has too much free time"
+   ],
+   "why": "Poor time management causes these problems."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which three past tenses are reviewed in the lead-in?",
+   "o": [
+    "Past simple, present perfect and past continuous",
+    "Present simple, future and present continuous",
+    "Future perfect, present simple and future",
+    "Present continuous, future and imperative"
+   ],
+   "why": "These are the main tenses for talking about the past."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How does Abdullah help Faisal?",
+   "o": [
+    "He gives him a lift and invites him to dinner",
+    "He writes his essays for him",
+    "He cooks for him every day",
+    "He washes his clothes"
+   ],
+   "why": "Abdullah offers practical help and support."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'independent' mean?",
+   "o": [
+    "Able to look after yourself without help",
+    "Always needing help",
+    "Living with your family",
+    "Studying in a group"
+   ],
+   "why": "Independent people manage alone."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the sentence in the past simple.",
+   "o": [
+    "I felt nervous on my first day.",
+    "I have felt nervous.",
+    "I was feeling nervous.",
+    "I am nervous."
+   ],
+   "why": "'Felt' is the past simple of 'feel'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: 'When you called, I ___ dinner.'",
+   "o": [
+    "was cooking",
+    "have cooked",
+    "cook",
+    "am cooking"
+   ],
+   "why": "The past continuous shows an action in progress when another happened."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: 'I ___ three essays this term so far.'",
+   "o": [
+    "have written",
+    "was writing",
+    "write",
+    "writing"
+   ],
+   "why": "'So far' goes with the present perfect."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to learn from older students?",
+   "o": [
+    "They can give advice from their own experience",
+    "They do your homework",
+    "They know the exam answers",
+    "They decide your grades"
+   ],
+   "why": "They have already faced the same problems."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Faisal leaves essays to the last minute. What skill does he need most?",
+   "o": [
+    "Time management",
+    "Cooking",
+    "Driving",
+    "Swimming"
+   ],
+   "why": "Planning his time would solve this problem."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Abdullah tell Faisal it is normal to find university strange?",
+   "o": [
+    "To reassure him and make him feel better",
+    "To make him leave university",
+    "To laugh at him",
+    "To give him more work"
+   ],
+   "why": "Knowing others feel the same is comforting."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U3",
+ "lesson": "Unit 3 – Lesson 7: Skills – Reading (a story: Wadi rescue!)",
+ "outcomes": [
+  "Understand the main events of the story Wadi rescue!",
+  "Find action verbs and story details.",
+  "Explain what an emergency signal is and why it helps."
+ ],
+ "tf": [
+  {
+   "s": "Amjed is Jasim's younger brother.",
+   "t": false,
+   "why": "Amjed is Jasim's older cousin."
+  },
+  {
+   "s": "Jasim visits Amjed in Sur.",
+   "t": true,
+   "why": "Correct! He visits him in Sur."
+  },
+  {
+   "s": "The canoe turns over because of a big tree across the wadi.",
+   "t": true,
+   "why": "Well done! The tree is in the way."
+  },
+  {
+   "s": "Jasim and Amjed go canoeing.",
+   "t": true,
+   "why": "Yes! They go canoeing in the wadi."
+  },
+  {
+   "s": "Jasim blows the whistle quietly five times.",
+   "t": false,
+   "why": "He blows it loudly six times."
+  },
+  {
+   "s": "Six whistles is the emergency signal.",
+   "t": true,
+   "why": "Great! People hear it and come to help."
+  },
+  {
+   "s": "A car takes Amjed to hospital.",
+   "t": false,
+   "why": "A helicopter takes Amjed to hospital."
+  },
+  {
+   "s": "It's safe for Jasim to swim to Amjed.",
+   "t": false,
+   "why": "It's too dangerous for Jasim to swim to Amjed."
+  },
+  {
+   "s": "Canoeing down a wadi is easier than canoeing in a lake.",
+   "t": false,
+   "why": "Canoeing quickly down a wadi is harder than in a lake."
+  },
+  {
+   "s": "The best time to go to Wadi Shab is at the weekend.",
+   "t": false,
+   "why": "The fact file says early morning, not weekends."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who blows the whistle?",
+   "o": [
+    "Jasim",
+    "Amjed",
+    "the pilot"
+   ],
+   "why": "Jasim blows the whistle."
+  },
+  {
+   "q": "Which verb means move in water with your arms and legs?",
+   "o": [
+    "swim",
+    "blow",
+    "hear"
+   ],
+   "why": "We swim in water."
+  },
+  {
+   "q": "What does Amjed get to?",
+   "o": [
+    "a rock",
+    "a tree",
+    "a beach"
+   ],
+   "why": "Amjed gets to a rock."
+  },
+  {
+   "q": "What does Jasim use to call for help?",
+   "o": [
+    "a whistle",
+    "a canoe",
+    "a rock"
+   ],
+   "why": "He blows a whistle."
+  },
+  {
+   "q": "Where does the helicopter take Amjed?",
+   "o": [
+    "to hospital",
+    "to school",
+    "to the shop"
+   ],
+   "why": "It takes him to hospital."
+  },
+  {
+   "q": "What does 'turns over' mean?",
+   "o": [
+    "goes upside down",
+    "goes faster",
+    "stops"
+   ],
+   "why": "The canoe is upside down."
+  },
+  {
+   "q": "Where does the story happen?",
+   "o": [
+    "on a wadi",
+    "in a city shop",
+    "at school"
+   ],
+   "why": "The story is about canoeing on a wadi."
+  },
+  {
+   "q": "Which is an action verb from the story?",
+   "o": [
+    "swim",
+    "rock",
+    "canoe trip"
+   ],
+   "why": "'Swim' is an action."
+  },
+  {
+   "q": "When is the best time to go to Wadi Shab?",
+   "o": [
+    "early morning, not weekends",
+    "late at night",
+    "every weekend"
+   ],
+   "why": "The fact file says early morning."
+  },
+  {
+   "q": "Complete: The whistle is the ___ sound.",
+   "o": [
+    "loudest",
+    "louder",
+    "loud"
+   ],
+   "why": "It's the loudest sound."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Amjed is Jasim's older...",
+   "a": "cousin",
+   "d": [
+    "brother",
+    "teacher",
+    "friend"
+   ]
+  },
+  {
+   "q": "Harder than canoeing in a...",
+   "a": "lake",
+   "d": [
+    "wadi",
+    "rock",
+    "tree"
+   ]
+  },
+  {
+   "q": "Amjed gets to a...",
+   "a": "rock",
+   "d": [
+    "tree",
+    "shop",
+    "car"
+   ]
+  },
+  {
+   "q": "Emergency ___ (call for help)",
+   "a": "signal",
+   "d": [
+    "canoe",
+    "rock",
+    "tree"
+   ]
+  },
+  {
+   "q": "Times Jasim blows it",
+   "a": "six",
+   "d": [
+    "five",
+    "three",
+    "ten"
+   ]
+  },
+  {
+   "q": "Takes Amjed to hospital",
+   "a": "helicopter",
+   "d": [
+    "bus",
+    "canoe",
+    "bike"
+   ]
+  },
+  {
+   "q": "Opposite of safe",
+   "a": "dangerous",
+   "d": [
+    "easy",
+    "happy",
+    "loud"
+   ]
+  },
+  {
+   "q": "Canoe turns over: a big...",
+   "a": "tree",
+   "d": [
+    "fish",
+    "rock",
+    "bird"
+   ]
+  },
+  {
+   "q": "Jasim visits Amjed in...",
+   "a": "Sur",
+   "d": [
+    "Cairo",
+    "Ibri",
+    "Nizwa"
+   ]
+  },
+  {
+   "q": "loud → the...",
+   "a": "loudest",
+   "d": [
+    "louder",
+    "most loud",
+    "loudiest"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who is Amjed?",
+   "o": [
+    "Jasim's older cousin",
+    "Jasim's teacher",
+    "Jasim's dad",
+    "Jasim's little brother"
+   ],
+   "why": "Amjed is Jasim's older cousin."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why does the canoe turn over?",
+   "o": [
+    "Because of a big tree across the wadi.",
+    "Because of a big fish.",
+    "Because Jasim jumps.",
+    "Because of the helicopter."
+   ],
+   "why": "A big tree is across the wadi."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is an emergency signal?",
+   "o": [
+    "a sign to call for help",
+    "a kind of canoe",
+    "a game",
+    "a song"
+   ],
+   "why": "An emergency signal tells people you need help."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which story word is a small boat?",
+   "o": [
+    "canoe",
+    "helicopter",
+    "rock",
+    "whistle"
+   ],
+   "why": "A canoe is a small boat."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Canoeing in a lake is ___ than going quickly down a wadi.",
+   "o": [
+    "easier",
+    "harder",
+    "the easiest",
+    "more easy"
+   ],
+   "why": "A lake is calmer, so it's easier."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: 'Jasim blows the whistle quietly five times.'",
+   "o": [
+    "Jasim blows the whistle loudly six times.",
+    "Jasim blows the whistle quietly six times.",
+    "Jasim blows the whistle loudly five times.",
+    "Amjed blows the whistle quietly five times."
+   ],
+   "why": "He blows it loudly, six times."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct verb: Jasim ___ the whistle loudly.",
+   "o": [
+    "blows",
+    "swims",
+    "sees",
+    "visits"
+   ],
+   "why": "We blow a whistle."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the whistle a good idea?",
+   "o": [
+    "Six whistles is the emergency signal, so people hear it and come to help.",
+    "It is a nice song.",
+    "It makes the canoe faster.",
+    "It stops the water."
+   ],
+   "why": "The signal calls for help."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why doesn't Jasim swim to Amjed?",
+   "o": [
+    "Because it's too dangerous.",
+    "Because he is hungry.",
+    "Because Amjed is at home.",
+    "Because the water is warm."
+   ],
+   "why": "Jasim stays safe and calls for help instead."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What happens last in the story?",
+   "o": [
+    "A helicopter takes Amjed to hospital.",
+    "Jasim visits Amjed in Sur.",
+    "They go canoeing.",
+    "The canoe turns over."
+   ],
+   "why": "The helicopter comes at the end."
+  }
+ ]
+}

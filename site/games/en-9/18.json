@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 3: The future is now",
+ "lesson": "Lesson 7: Switch On – Technology helps everyone (video and project)",
+ "outcomes": [
+  "Explain how technology helps people stay healthy.",
+  "Use words like telemedicine, wearable devices and 3D printing.",
+  "Design and present a new technology for a health problem."
+ ],
+ "tf": [
+  {
+   "s": "Telemedicine lets people talk to doctors without travelling to a hospital.",
+   "t": true,
+   "why": "Yes, by video call or online."
+  },
+  {
+   "s": "A cochlear implant changes sounds into electronic signals.",
+   "t": true,
+   "why": "That is how it helps people hear."
+  },
+  {
+   "s": "In the project, each group writes a short description of its technology.",
+   "t": true,
+   "why": "Yes, the group describes its new technology."
+  },
+  {
+   "s": "AI can write medical notes for doctors.",
+   "t": true,
+   "why": "Yes, so doctors spend less time on paperwork."
+  },
+  {
+   "s": "Smartwatches and smart rings are examples of wearable devices.",
+   "t": true,
+   "why": "We wear them on our body."
+  },
+  {
+   "s": "Wearable devices can only tell the time.",
+   "t": false,
+   "why": "They can also track things like sleep."
+  },
+  {
+   "s": "In the project vote, students can vote for their own group.",
+   "t": false,
+   "why": "Students vote for another group's design."
+  },
+  {
+   "s": "The project starts by finding out about health technologies that already exist.",
+   "t": true,
+   "why": "Research comes first, then design."
+  },
+  {
+   "s": "Each group gives only one reason why its technology is useful.",
+   "t": false,
+   "why": "Each group gives three reasons."
+  },
+  {
+   "s": "3D printing makes prosthetics slower to produce.",
+   "t": false,
+   "why": "3D-printed prosthetics are quicker and cheaper to make."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What can a smartwatch track?",
+   "o": [
+    "sleep",
+    "vaccines",
+    "paperwork"
+   ],
+   "why": "Wearable devices can track sleep."
+  },
+  {
+   "q": "What can 3D printing make?",
+   "o": [
+    "prosthetics",
+    "vaccines",
+    "video calls"
+   ],
+   "why": "3D printers can make prosthetics."
+  },
+  {
+   "q": "Who reports the group's choice to the class?",
+   "o": [
+    "the chairperson",
+    "the designer",
+    "the question handler"
+   ],
+   "why": "The chairperson reports for the group."
+  },
+  {
+   "q": "What does telemedicine use?",
+   "o": [
+    "video calls",
+    "drones",
+    "3D printers"
+   ],
+   "why": "Patients talk to doctors by video call."
+  },
+  {
+   "q": "Which is a wearable device?",
+   "o": [
+    "a smart ring",
+    "a drone",
+    "a 3D printer"
+   ],
+   "why": "You wear a smart ring on your finger."
+  },
+  {
+   "q": "What does the group sketch in step 2?",
+   "o": [
+    "the new device",
+    "a map of Oman",
+    "a hospital"
+   ],
+   "why": "Groups plan what their new technology will look like."
+  },
+  {
+   "q": "Which project role speaks to the class?",
+   "o": [
+    "presenter",
+    "writer",
+    "designer"
+   ],
+   "why": "The presenter presents the technology."
+  },
+  {
+   "q": "What do drones carry to hard-to-reach places?",
+   "o": [
+    "medicine",
+    "patients",
+    "hospitals"
+   ],
+   "why": "Drones can carry medicine and vaccines."
+  },
+  {
+   "q": "Which problem could a new health device solve?",
+   "o": [
+    "forgetting medicine",
+    "liking football",
+    "a long holiday"
+   ],
+   "why": "A reminder device can help people take medicine."
+  },
+  {
+   "q": "What does a digital tooth scanner help with?",
+   "o": [
+    "teeth",
+    "hearing",
+    "sleep"
+   ],
+   "why": "It scans teeth."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Talk to a doctor by video call",
+   "a": "telemedicine",
+   "d": [
+    "prosthetics",
+    "drones",
+    "vaccines"
+   ]
+  },
+  {
+   "q": "It changes sounds into signals",
+   "a": "cochlear implant",
+   "d": [
+    "smart ring",
+    "drone",
+    "3D printer"
+   ]
+  },
+  {
+   "q": "It flies medicine to far places",
+   "a": "drone",
+   "d": [
+    "smart ring",
+    "implant",
+    "scanner"
+   ]
+  },
+  {
+   "q": "It makes cheap prosthetics",
+   "a": "3D printing",
+   "d": [
+    "telemedicine",
+    "drones",
+    "video calls"
+   ]
+  },
+  {
+   "q": "AI notes mean less…",
+   "a": "paperwork",
+   "d": [
+    "sleep",
+    "vaccines",
+    "medicine"
+   ]
+  },
+  {
+   "q": "A smartwatch is a ___ device.",
+   "a": "wearable",
+   "d": [
+    "printed",
+    "flying",
+    "paper"
+   ]
+  },
+  {
+   "q": "Follow the progress of your sleep",
+   "a": "track",
+   "d": [
+    "print",
+    "fly",
+    "vote"
+   ]
+  },
+  {
+   "q": "It scans your teeth",
+   "a": "tooth scanner",
+   "d": [
+    "drone",
+    "smart ring",
+    "implant"
+   ]
+  },
+  {
+   "q": "How many reasons does each group give?",
+   "a": "three",
+   "d": [
+    "one",
+    "two",
+    "ten"
+   ]
+  },
+  {
+   "q": "How the class chooses the best design",
+   "a": "a vote",
+   "d": [
+    "a drone",
+    "a scanner",
+    "a video"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the video mainly about?",
+   "o": [
+    "How technology helps people stay healthy",
+    "How to build a phone",
+    "The history of cities",
+    "Sports for teenagers"
+   ],
+   "why": "The video shows technology that helps health."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In step 1, what should you find out about existing technologies?",
+   "o": [
+    "What services they provide and how they help",
+    "Only their colour",
+    "Who sells them",
+    "How heavy they are"
+   ],
+   "why": "Research what they do, how they help and how to improve them."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In the project, what does the question handler do?",
+   "o": [
+    "Answers other groups' questions",
+    "Draws the device",
+    "Writes the description",
+    "Counts the votes"
+   ],
+   "why": "The question handler answers questions after the presentation."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'artificial arms or legs'?",
+   "o": [
+    "prosthetics",
+    "vaccines",
+    "drones",
+    "signals"
+   ],
+   "why": "Prosthetics replace missing body parts."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A family lives far from any hospital. Their child has a cough. Which technology can help first?",
+   "o": [
+    "Telemedicine",
+    "3D printing",
+    "A tooth scanner",
+    "A cochlear implant"
+   ],
+   "why": "They can talk to a doctor online without travelling."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Our device ___ people who live far from hospitals.",
+   "o": [
+    "will help",
+    "helped yesterday",
+    "helping",
+    "help"
+   ],
+   "why": "'Will help' talks about what the device is going to do."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your grandfather often forgets his medicine. Which new idea solves this problem?",
+   "o": [
+    "A smart bracelet that reminds him",
+    "A drone that films the garden",
+    "A 3D-printed toy",
+    "A video game"
+   ],
+   "why": "A reminder device matches the problem."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A girl could not hear well. Now she can hear sounds. Which technology probably helped her?",
+   "o": [
+    "A cochlear implant",
+    "A drone",
+    "A tooth scanner",
+    "A smart ring"
+   ],
+   "why": "A cochlear implant helps people hear."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best reason to choose drones as the most helpful technology?",
+   "o": [
+    "They reach places that are hard to get to.",
+    "They are fun to fly.",
+    "They are noisy.",
+    "They are small toys."
+   ],
+   "why": "A good reason explains how it helps people's health."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A group says: 'Our robot nurse can help many patients at night.' What is this?",
+   "o": [
+    "A reason the technology is useful",
+    "A health problem",
+    "A question for another group",
+    "A vote"
+   ],
+   "why": "It explains why their design is helpful."
+  }
+ ]
+}

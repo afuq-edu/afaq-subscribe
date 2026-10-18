@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 3: The future is now",
+ "lesson": "Lesson 1: Reading – the future of entertainment",
+ "outcomes": [
+  "Skim-read an article to find its main topics quickly.",
+  "Choose sentences that fit gaps using linking and reference words.",
+  "Learn new words like transform, lifelike and version."
+ ],
+ "tf": [
+  {
+   "s": "Skim-reading means reading quickly to find the main ideas.",
+   "t": true,
+   "why": "You don't need to read every word."
+  },
+  {
+   "s": "One skimming method is to read the first one or two lines of each paragraph.",
+   "t": true,
+   "why": "The first lines often show the main idea."
+  },
+  {
+   "s": "In a gapped text, every extra sentence fits somewhere.",
+   "t": false,
+   "why": "Extra sentences don't fit any gap."
+  },
+  {
+   "s": "In some interactive content, viewers can choose between different endings.",
+   "t": true,
+   "why": "Interactive means you take part."
+  },
+  {
+   "s": "The article says some people worry AI could replace human jobs in entertainment.",
+   "t": true,
+   "why": "This is one worry about AI."
+  },
+  {
+   "s": "'Lifelike' is a verb.",
+   "t": false,
+   "why": "'Lifelike' is an adjective."
+  },
+  {
+   "s": "'Regularly' is an adverb.",
+   "t": true,
+   "why": "It tells us how often."
+  },
+  {
+   "s": "'Consume' is a noun.",
+   "t": false,
+   "why": "'Consume' is a verb."
+  },
+  {
+   "s": "In 'Robot doctors', the writer wants to stop seeing her doctor now.",
+   "t": false,
+   "why": "She wants to keep seeing her doctor for now."
+  },
+  {
+   "s": "The tiny robots in 'Robot doctors' move through our blood.",
+   "t": true,
+   "why": "That is why they must be very small."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word means 'change completely'?",
+   "o": [
+    "transform",
+    "consume",
+    "create"
+   ],
+   "why": "Transform means change completely."
+  },
+  {
+   "q": "Which word means 'make something new'?",
+   "o": [
+    "create",
+    "consume",
+    "transform"
+   ],
+   "why": "Create means make something new."
+  },
+  {
+   "q": "In gap 3, 'Such characters' refers back to…",
+   "o": [
+    "virtual influencers",
+    "doctors",
+    "teachers"
+   ],
+   "why": "Reference words point back to an earlier idea."
+  },
+  {
+   "q": "Complete: I prefer the original v___ of that story.",
+   "o": [
+    "version",
+    "challenge",
+    "preference"
+   ],
+   "why": "A version is one form of something."
+  },
+  {
+   "q": "Complete: Small toys can be dangerous for babies – they might ___ them.",
+   "o": [
+    "swallow",
+    "trust",
+    "create"
+   ],
+   "why": "Babies might swallow small toys."
+  },
+  {
+   "q": "What word class is 'preference'?",
+   "o": [
+    "noun",
+    "verb",
+    "adverb"
+   ],
+   "why": "'Preference' is a noun."
+  },
+  {
+   "q": "What is the main idea of 'Robot doctors'?",
+   "o": [
+    "the future of doctors",
+    "the history of hospitals",
+    "healthy cooking"
+   ],
+   "why": "The article is about the future of doctors."
+  },
+  {
+   "q": "Complete: I don't ___ that man. He doesn't always tell the truth.",
+   "o": [
+    "trust",
+    "rely",
+    "swallow"
+   ],
+   "why": "We don't trust people who don't tell the truth."
+  },
+  {
+   "q": "How can AI change a film for different viewers?",
+   "o": [
+    "to suit their preferences",
+    "to make it the same for all",
+    "to stop it"
+   ],
+   "why": "AI can change the style or story for each viewer."
+  },
+  {
+   "q": "A doctor who knows a lot about one area is a…",
+   "o": [
+    "specialist",
+    "patient",
+    "treatment"
+   ],
+   "why": "A specialist is an expert in one area."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Change completely",
+   "a": "transform",
+   "d": [
+    "consume",
+    "create",
+    "swallow"
+   ]
+  },
+  {
+   "q": "Looking like a real person",
+   "a": "lifelike",
+   "d": [
+    "tiny",
+    "interactive",
+    "virtual"
+   ]
+  },
+  {
+   "q": "Very, very small",
+   "a": "tiny",
+   "d": [
+    "huge",
+    "lifelike",
+    "virtual"
+   ]
+  },
+  {
+   "q": "Depend on",
+   "a": "rely on",
+   "d": [
+    "set up",
+    "switch on",
+    "turn up"
+   ]
+  },
+  {
+   "q": "Care given to make you better",
+   "a": "treatment",
+   "d": [
+    "version",
+    "challenge",
+    "preference"
+   ]
+  },
+  {
+   "q": "'Challenge' in the article is a…",
+   "a": "noun",
+   "d": [
+    "verb",
+    "adverb",
+    "adjective"
+   ]
+  },
+  {
+   "q": "'Regularly' is a…",
+   "a": "adverb",
+   "d": [
+    "noun",
+    "verb",
+    "adjective"
+   ]
+  },
+  {
+   "q": "Extra sentences in the gapped text",
+   "a": "three",
+   "d": [
+    "one",
+    "two",
+    "five"
+   ]
+  },
+  {
+   "q": "Unreal social media characters",
+   "a": "virtual influencers",
+   "d": [
+    "robot doctors",
+    "specialists",
+    "viewers"
+   ]
+  },
+  {
+   "q": "To make something new",
+   "a": "create",
+   "d": [
+    "consume",
+    "swallow",
+    "trust"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which skimming method does the study tip suggest?",
+   "o": [
+    "Pick out key verbs and nouns quickly",
+    "Read every word slowly",
+    "Read only the last line",
+    "Look up every new word"
+   ],
+   "why": "Key words help you skim fast."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'consume' mean when we talk about entertainment?",
+   "o": [
+    "use or take in films and content",
+    "make something new",
+    "change completely",
+    "follow the progress of something"
+   ],
+   "why": "We consume content when we watch, read or listen."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'what you like more than other things'?",
+   "o": [
+    "preference",
+    "challenge",
+    "version",
+    "specialist"
+   ],
+   "why": "Your preference is what you prefer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which topic does the article mention?",
+   "o": [
+    "making your own films",
+    "cooking with robots",
+    "football results",
+    "school uniforms"
+   ],
+   "why": "AI can help people make their own films."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: It's important to practise r___ if you want to speak English well.",
+   "o": [
+    "regularly",
+    "rarely",
+    "lifelike",
+    "tiny"
+   ],
+   "why": "Practising regularly means practising often."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The sentence before a gap talks about AI recommending movies. Which sentence will fit best?",
+   "o": [
+    "One that continues the idea of AI in film",
+    "One about robot doctors",
+    "One about the weather",
+    "One that starts a new topic about sport"
+   ],
+   "why": "The right sentence links to what comes before and after."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The new game has very ___ characters – they look real!",
+   "o": [
+    "lifelike",
+    "regularly",
+    "consume",
+    "transform"
+   ],
+   "why": "Lifelike means looking real."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why doesn't sentence B fit the article?",
+   "o": [
+    "It is negative, but the article is mostly positive about AI.",
+    "It is too short.",
+    "It has no verbs.",
+    "It is about robot doctors."
+   ],
+   "why": "The tone of the sentence must match the text."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is a positive effect of AI on entertainment, according to the article?",
+   "o": [
+    "You can make your own films easily.",
+    "AI could replace human jobs.",
+    "Films will disappear.",
+    "Nobody will watch TV."
+   ],
+   "why": "Making your own films easily is a positive change."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Does the writer of 'Robot doctors' believe robots will be better than her usual doctor?",
+   "o": [
+    "No – she wants to keep seeing her doctor for now.",
+    "Yes – she has stopped visiting doctors.",
+    "Yes – robots are always better.",
+    "The article doesn't mention doctors."
+   ],
+   "why": "She still wants to see her own doctor."
+  }
+ ]
+}

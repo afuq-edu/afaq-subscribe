@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: A Warm Welcome (Reading)",
+ "lesson": "Lead-in: tourism and hospitality; core words of Theme 3",
+ "outcomes": [
+  "Explain the meaning of 'hospitality' and describe trainee chefs",
+  "Match the Theme 3 core words with their meanings",
+  "Read six tourists' views about Oman and answer questions"
+ ],
+ "tf": [
+  {
+   "s": "'Hospitality' means friendly treatment of visitors and guests.",
+   "t": true,
+   "why": "It makes visitors feel welcome."
+  },
+  {
+   "s": "The people in the picture are cabin crew on a plane.",
+   "t": false,
+   "why": "They are trainee chefs at the National Hospitality Institute."
+  },
+  {
+   "s": "'Cabin crew' are people who look after passengers on a plane or ship.",
+   "t": true,
+   "why": "They take care of passengers."
+  },
+  {
+   "s": "'Cruises' are holidays in the mountains.",
+   "t": false,
+   "why": "Cruises are holidays at sea on large ships."
+  },
+  {
+   "s": "'Scenery' means natural features such as mountains, deserts and forests.",
+   "t": true,
+   "why": "Oman has wonderful scenery."
+  },
+  {
+   "s": "In 2015, the New York Times listed Oman as Number 1 of 52 top destinations.",
+   "t": false,
+   "why": "Oman was Number 20 of 52."
+  },
+  {
+   "s": "More hotels and travel agencies show that tourism in Oman is growing.",
+   "t": true,
+   "why": "These changes show growth."
+  },
+  {
+   "s": "A tourist mentioned Jebel Shams for its scenery.",
+   "t": true,
+   "why": "Jebel Shams has beautiful views."
+  },
+  {
+   "s": "'Skilled' means having no training or ability.",
+   "t": false,
+   "why": "Skilled means having the ability and training to do something well."
+  },
+  {
+   "s": "Safety is one reason tourists like Oman.",
+   "t": true,
+   "why": "Tourists feel safe in Oman."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What are holidays at sea on large ships?",
+   "o": [
+    "cruises",
+    "chefs",
+    "qualifications"
+   ],
+   "why": "A cruise is a holiday on a big ship."
+  },
+  {
+   "q": "Who cooks in hotels and restaurants?",
+   "o": [
+    "chefs",
+    "cabin crew",
+    "tourists"
+   ],
+   "why": "Chefs are professional cooks."
+  },
+  {
+   "q": "What does 'stunning' mean?",
+   "o": [
+    "extremely beautiful",
+    "very boring",
+    "very small"
+   ],
+   "why": "Stunning scenery is very beautiful."
+  },
+  {
+   "q": "What does 'employment' mean?",
+   "o": [
+    "having paid work",
+    "going on holiday",
+    "being a tourist"
+   ],
+   "why": "Tourism is a source of employment."
+  },
+  {
+   "q": "Which number was Oman in the 2015 New York Times list?",
+   "o": [
+    "20",
+    "52",
+    "1"
+   ],
+   "why": "Oman was Number 20 of 52."
+  },
+  {
+   "q": "What does 'variety' mean?",
+   "o": [
+    "many different kinds",
+    "only one kind",
+    "nothing at all"
+   ],
+   "why": "Oman offers a variety of things to do."
+  },
+  {
+   "q": "Certificates you get after study and training are...",
+   "o": [
+    "qualifications",
+    "cruises",
+    "scenery"
+   ],
+   "why": "Qualifications show your training."
+  },
+  {
+   "q": "Where do the trainees in the picture study?",
+   "o": [
+    "the National Hospitality Institute",
+    "a sports club",
+    "an airport"
+   ],
+   "why": "They train there as chefs."
+  },
+  {
+   "q": "Why is a warm welcome important for tourists?",
+   "o": [
+    "they recommend the place to others",
+    "they tell others not to come",
+    "nothing changes"
+   ],
+   "why": "Happy tourists bring more visitors."
+  },
+  {
+   "q": "What does the title 'A Warm Welcome' suggest?",
+   "o": [
+    "visitors are welcomed warmly",
+    "the weather is always hot",
+    "tourists are not welcome"
+   ],
+   "why": "'Warm' here means friendly."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Holidays on large ships",
+   "a": "cruises",
+   "d": [
+    "chefs",
+    "cabin crew",
+    "scenery"
+   ]
+  },
+  {
+   "q": "They look after plane passengers",
+   "a": "cabin crew",
+   "d": [
+    "chefs",
+    "tourists",
+    "trainees"
+   ]
+  },
+  {
+   "q": "Professional cooks",
+   "a": "chefs",
+   "d": [
+    "cabin crew",
+    "pilots",
+    "tourists"
+   ]
+  },
+  {
+   "q": "Extremely beautiful",
+   "a": "stunning",
+   "d": [
+    "skilled",
+    "formal",
+    "boring"
+   ]
+  },
+  {
+   "q": "Mountains, deserts and forests",
+   "a": "scenery",
+   "d": [
+    "employment",
+    "training",
+    "cruises"
+   ]
+  },
+  {
+   "q": "Having paid work",
+   "a": "employment",
+   "d": [
+    "hospitality",
+    "scenery",
+    "variety"
+   ]
+  },
+  {
+   "q": "Many different kinds",
+   "a": "variety",
+   "d": [
+    "training",
+    "source",
+    "scenery"
+   ]
+  },
+  {
+   "q": "Oman's place in the 2015 list",
+   "a": "Number 20",
+   "d": [
+    "Number 1",
+    "Number 52",
+    "Number 10"
+   ]
+  },
+  {
+   "q": "Able to do a job well",
+   "a": "skilled",
+   "d": [
+    "stunning",
+    "formal",
+    "homesick"
+   ]
+  },
+  {
+   "q": "Certificates from study",
+   "a": "qualifications",
+   "d": [
+    "cruises",
+    "scenery",
+    "chefs"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who are the people in the picture?",
+   "o": [
+    "Trainee chefs with their trainer at the National Hospitality Institute",
+    "Cabin crew on a plane",
+    "Tourists on a cruise",
+    "Footballers in training"
+   ],
+   "why": "They are studying cookery."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why is Oman attractive to tourists?",
+   "o": [
+    "Wonderful scenery, friendly people, variety and safety",
+    "Cold weather and crowded cities",
+    "No hotels and no roads",
+    "Only shopping malls"
+   ],
+   "why": "These reasons appear in the tourists' views."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What shows that tourism in Oman is growing?",
+   "o": [
+    "More hotels and travel agencies",
+    "Fewer visitors",
+    "Closed airports",
+    "No new hotels"
+   ],
+   "why": "New businesses show growth."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are 'professionals'?",
+   "o": [
+    "People with special training and skills for their job",
+    "People on holiday",
+    "People who never work",
+    "Young children"
+   ],
+   "why": "Professionals are trained for their work."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: 'Hotels need ___ staff who are well trained.'",
+   "o": [
+    "skilled",
+    "stunning",
+    "homesick",
+    "ancient"
+   ],
+   "why": "Skilled workers do their jobs well."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ahmed works on a plane, serving food to passengers. What is he part of?",
+   "o": [
+    "The cabin crew",
+    "The scenery",
+    "The qualifications",
+    "A cruise"
+   ],
+   "why": "Cabin crew look after passengers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good alternative title for six tourists' views of Oman?",
+   "o": [
+    "Six Views of Oman",
+    "How to Cook Rice",
+    "My School Day",
+    "The History of France"
+   ],
+   "why": "The title should match the text."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is a warm welcome important for tourism?",
+   "o": [
+    "Tourists recommend their experience and attract more visitors",
+    "Tourists never come back",
+    "Hotels become empty",
+    "It stops employment"
+   ],
+   "why": "Good experiences spread by word of mouth."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can tourism be a source of employment?",
+   "o": [
+    "Hotels, airlines and restaurants need many workers",
+    "Tourists do all the jobs",
+    "Hotels need no staff",
+    "Tourism closes businesses"
+   ],
+   "why": "More tourists mean more jobs."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do hospitality workers need training and qualifications?",
+   "o": [
+    "To give visitors professional service",
+    "To avoid working",
+    "To become tourists",
+    "To close hotels"
+   ],
+   "why": "Training helps them do their jobs well."
+  }
+ ]
+}

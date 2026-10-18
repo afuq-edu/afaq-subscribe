@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 3: Move your body!",
+  "lesson": "Unit 3 – Unit practice 2: Speaking, support and challenge",
+  "outcomes": [
+    "I can answer questions about my body.",
+    "I can say body words and movement words.",
+    "I can describe a robot with I've got …"
+  ],
+  "tf": [
+    {
+      "s": "What's this? (a knee) It's a knee.",
+      "t": true,
+      "why": "Yes! The knee is in the middle of the leg."
+    },
+    {
+      "s": "I've got ten fingers.",
+      "t": true,
+      "why": "Great! Five on each hand makes ten."
+    },
+    {
+      "s": "The tummy is on your foot.",
+      "t": false,
+      "why": "The tummy is in the middle of your body."
+    },
+    {
+      "s": "Touch your toes means put your hands on your toes.",
+      "t": true,
+      "why": "Well done! Bend down and touch your toes."
+    },
+    {
+      "s": "How many legs have you got? I've got four legs.",
+      "t": false,
+      "why": "We have two legs."
+    },
+    {
+      "s": "A robot can say: I've got a blue head.",
+      "t": true,
+      "why": "Yes! We use I've got … to describe a robot."
+    },
+    {
+      "s": "Stretch means clap your hands.",
+      "t": false,
+      "why": "Stretch means make your body long."
+    },
+    {
+      "s": "We say: What's this? to ask about a thing.",
+      "t": true,
+      "why": "Great! What's this? asks about one thing."
+    },
+    {
+      "s": "I've got two head.",
+      "t": false,
+      "why": "We have one head: I've got a head."
+    },
+    {
+      "s": "Our knees are on our arms.",
+      "t": false,
+      "why": "Our knees are on our legs."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "What's this? (picture of a knee)",
+      "o": [
+        "It's a knee.",
+        "It's a hand.",
+        "It's a head."
+      ],
+      "why": "The picture shows a knee."
+    },
+    {
+      "q": "How many hands have you got?",
+      "o": [
+        "I've got two hands.",
+        "I've got ten hands.",
+        "I've got one hand."
+      ],
+      "why": "We have two hands."
+    },
+    {
+      "q": "How many arms have you got?",
+      "o": [
+        "two",
+        "ten",
+        "four"
+      ],
+      "why": "We have two arms."
+    },
+    {
+      "q": "The teacher makes her body long. Say it!",
+      "o": [
+        "stretch",
+        "stamp",
+        "clap"
+      ],
+      "why": "Making your body long is stretch."
+    },
+    {
+      "q": "Which word is a body word?",
+      "o": [
+        "tummy",
+        "touch",
+        "stamp"
+      ],
+      "why": "The tummy is part of the body."
+    },
+    {
+      "q": "Touch your ___! (at the end of your feet)",
+      "o": [
+        "toes",
+        "head",
+        "arms"
+      ],
+      "why": "Toes are at the end of our feet."
+    },
+    {
+      "q": "Describe a robot: I've got ___ arms.",
+      "o": [
+        "four",
+        "head",
+        "blue head"
+      ],
+      "why": "A number tells how many arms."
+    },
+    {
+      "q": "Which sentence is right?",
+      "o": [
+        "I've got a red head.",
+        "I've got a head red.",
+        "I got've a red head."
+      ],
+      "why": "The colour goes before the body word."
+    },
+    {
+      "q": "We hit the floor with our feet. We ___.",
+      "o": [
+        "stamp",
+        "clap",
+        "bend"
+      ],
+      "why": "We stamp our feet."
+    },
+    {
+      "q": "What do we move to clap?",
+      "o": [
+        "hands",
+        "feet",
+        "knees"
+      ],
+      "why": "We clap our hands."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "It's in the middle of your leg.",
+      "a": "knee",
+      "d": [
+        "hand",
+        "head",
+        "nose"
+      ]
+    },
+    {
+      "q": "Touch your ___ (middle of body)",
+      "a": "tummy",
+      "d": [
+        "toes",
+        "feet",
+        "hands"
+      ]
+    },
+    {
+      "q": "How many legs have you got?",
+      "a": "two",
+      "d": [
+        "ten",
+        "four",
+        "one"
+      ]
+    },
+    {
+      "q": "How many toes have you got?",
+      "a": "ten",
+      "d": [
+        "two",
+        "one",
+        "four"
+      ]
+    },
+    {
+      "q": "Make your body long.",
+      "a": "stretch",
+      "d": [
+        "stamp",
+        "clap",
+        "touch"
+      ]
+    },
+    {
+      "q": "Hit the floor with your feet.",
+      "a": "stamp",
+      "d": [
+        "stretch",
+        "clap",
+        "bend"
+      ]
+    },
+    {
+      "q": "Put your hands together.",
+      "a": "clap",
+      "d": [
+        "stamp",
+        "bend",
+        "move"
+      ]
+    },
+    {
+      "q": "I've got ___ arms. (2)",
+      "a": "two",
+      "d": [
+        "ten",
+        "one",
+        "four"
+      ]
+    },
+    {
+      "q": "Find the body word.",
+      "a": "head",
+      "d": [
+        "clap",
+        "stamp",
+        "bend"
+      ]
+    },
+    {
+      "q": "Find the movement word.",
+      "a": "bend",
+      "d": [
+        "knee",
+        "toes",
+        "tummy"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What's this? (picture of a tummy)",
+      "o": [
+        "It's a tummy.",
+        "It's a knee.",
+        "It's a toe.",
+        "It's a hand."
+      ],
+      "why": "The picture shows a tummy."
+    },
+    {
+      "lv": "التذكر",
+      "q": "How many fingers have you got?",
+      "o": [
+        "I've got ten fingers.",
+        "I've got two fingers.",
+        "I've got four fingers.",
+        "I've got one finger."
+      ],
+      "why": "We have ten fingers."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word is a movement word?",
+      "o": [
+        "stretch",
+        "knee",
+        "toes",
+        "arm"
+      ],
+      "why": "Stretch is something we do."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which question asks about a thing?",
+      "o": [
+        "What's this?",
+        "How are you?",
+        "Thank you.",
+        "Goodbye!"
+      ],
+      "why": "What's this? asks about a thing."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "The teacher says: Touch your toes. What do you do?",
+      "o": [
+        "Bend and put my hands on my toes",
+        "Clap my hands",
+        "Stamp my feet",
+        "Touch my head"
+      ],
+      "why": "We bend down to touch our toes."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "A robot has four arms. What does it say?",
+      "o": [
+        "I've got four arms.",
+        "I've got four heads.",
+        "I've got two arms.",
+        "I've got a arm."
+      ],
+      "why": "Four arms: I've got four arms."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Complete: How many ___ have you got? I've got two legs.",
+      "o": [
+        "legs",
+        "heads",
+        "fingers",
+        "tummies"
+      ],
+      "why": "The answer is about legs."
+    },
+    {
+      "lv": "التحليل",
+      "q": "A robot says: I've got a green head and ten red fingers. What colour is its head?",
+      "o": [
+        "green",
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "why": "It says a green head."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which answer is NOT right for us?",
+      "o": [
+        "I've got three legs.",
+        "I've got two arms.",
+        "I've got ten toes.",
+        "I've got one head."
+      ],
+      "why": "We have two legs, not three."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which is the odd one out?",
+      "o": [
+        "clap",
+        "knee",
+        "toes",
+        "tummy"
+      ],
+      "why": "Clap is a movement; the others are body parts."
+    }
+  ]
+}

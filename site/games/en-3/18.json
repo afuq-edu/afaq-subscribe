@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 2: Let's dress up!",
+ "lesson": "Unit 2 – Lesson 4: Skills",
+ "outcomes": [
+  "I can listen and colour clothes correctly.",
+  "I can read A birthday party and answer Yes or No.",
+  "I can write about my clothes with I'm wearing ... and My ... is / are ..."
+ ],
+ "tf": [
+  {
+   "s": "In the example, their hijabs are red.",
+   "t": true,
+   "why": "Yes! Their hijabs are red."
+  },
+  {
+   "s": "In the example, their baseball caps are green.",
+   "t": false,
+   "why": "Their baseball caps are purple."
+  },
+  {
+   "s": "In A birthday party, the dad is wearing a dishdasha.",
+   "t": true,
+   "why": "Our dad is wearing a dishdasha."
+  },
+  {
+   "s": "The dad's dishdasha is black.",
+   "t": false,
+   "why": "His dishdasha is white."
+  },
+  {
+   "s": "The mum's and sister's hijabs are blue.",
+   "t": true,
+   "why": "Their hijabs are blue."
+  },
+  {
+   "s": "The dad is wearing a baseball cap.",
+   "t": false,
+   "why": "No. He's wearing a hat."
+  },
+  {
+   "s": "The dad's sandals are brown.",
+   "t": true,
+   "why": "Well done! His sandals are brown."
+  },
+  {
+   "s": "In the text, His dishdasha means the dad's dishdasha.",
+   "t": true,
+   "why": "His is for a boy or a man."
+  },
+  {
+   "s": "We say They're hijabs are red.",
+   "t": false,
+   "why": "We say Their hijabs are red."
+  },
+  {
+   "s": "We write My shoes are black. for more than one shoe.",
+   "t": true,
+   "why": "Many things take are."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Their hijabs are red. Which colour do you use?",
+   "o": [
+    "red",
+    "blue",
+    "purple"
+   ],
+   "why": "Colour the hijabs red."
+  },
+  {
+   "q": "Complete: They're wearing baseball ___.",
+   "o": [
+    "caps",
+    "hats",
+    "coats"
+   ],
+   "why": "We say baseball caps."
+  },
+  {
+   "q": "Choose: ___ hijabs are red.",
+   "o": [
+    "Their",
+    "They're",
+    "There"
+   ],
+   "why": "Their goes before a thing."
+  },
+  {
+   "q": "What colour is the dad's dishdasha?",
+   "o": [
+    "white",
+    "brown",
+    "blue"
+   ],
+   "why": "His dishdasha is white."
+  },
+  {
+   "q": "What colour are the dad's sandals?",
+   "o": [
+    "brown",
+    "white",
+    "red"
+   ],
+   "why": "His sandals are brown."
+  },
+  {
+   "q": "Is the dad wearing a baseball cap?",
+   "o": [
+    "No. He's wearing a hat.",
+    "Yes, he is.",
+    "No. He's wearing a hijab."
+   ],
+   "why": "He's wearing a hat."
+  },
+  {
+   "q": "Who does Their mean in Their hijabs are blue?",
+   "o": [
+    "mum and sister",
+    "dad",
+    "the children"
+   ],
+   "why": "Their means our mum and our sister."
+  },
+  {
+   "q": "Complete: My shoes ___ black.",
+   "o": [
+    "are",
+    "is",
+    "am"
+   ],
+   "why": "Many things take are."
+  },
+  {
+   "q": "Complete: My dishdasha ___ white.",
+   "o": [
+    "is",
+    "are",
+    "am"
+   ],
+   "why": "One thing takes is."
+  },
+  {
+   "q": "Which word is from the birthday text?",
+   "o": [
+    "cake",
+    "whale",
+    "keys"
+   ],
+   "why": "There is cake at the birthday party."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Colour of their hijabs (listening)",
+   "a": "red",
+   "d": [
+    "blue",
+    "purple",
+    "white"
+   ]
+  },
+  {
+   "q": "Colour of their baseball caps",
+   "a": "purple",
+   "d": [
+    "red",
+    "brown",
+    "white"
+   ]
+  },
+  {
+   "q": "Dad's dishdasha is ___",
+   "a": "white",
+   "d": [
+    "brown",
+    "blue",
+    "purple"
+   ]
+  },
+  {
+   "q": "Dad's sandals are ___",
+   "a": "brown",
+   "d": [
+    "white",
+    "blue",
+    "purple"
+   ]
+  },
+  {
+   "q": "Mum's and sister's hijabs",
+   "a": "blue",
+   "d": [
+    "red",
+    "brown",
+    "white"
+   ]
+  },
+  {
+   "q": "Dad is wearing a ___",
+   "a": "hat",
+   "d": [
+    "baseball cap",
+    "hijab",
+    "tracksuit"
+   ]
+  },
+  {
+   "q": "___ hijabs are red.",
+   "a": "Their",
+   "d": [
+    "They're",
+    "There",
+    "They"
+   ]
+  },
+  {
+   "q": "Word for a man: ___ dishdasha",
+   "a": "His",
+   "d": [
+    "Their",
+    "Our",
+    "Her"
+   ]
+  },
+  {
+   "q": "I'm = ___",
+   "a": "I am",
+   "d": [
+    "I have",
+    "I was",
+    "I do"
+   ]
+  },
+  {
+   "q": "My shoes ___ black.",
+   "a": "are",
+   "d": [
+    "is",
+    "am",
+    "be"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the dad wearing in A birthday party?",
+   "o": [
+    "a dishdasha and a hat",
+    "a tracksuit and trainers",
+    "pyjamas and slippers",
+    "a coat and jeans"
+   ],
+   "why": "He is wearing a dishdasha and a hat."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which words are from the birthday text?",
+   "o": [
+    "presents, cake, sandals",
+    "whale, wheel, phone",
+    "toast, porridge, soup",
+    "board, AC, books"
+   ],
+   "why": "The text is about a birthday party."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is from the listening?",
+   "o": [
+    "They're wearing hijabs. Their hijabs are red.",
+    "Our dad is wearing a dishdasha.",
+    "They're wearing red pyjamas.",
+    "We're wearing jeans."
+   ],
+   "why": "The listening is about red hijabs and purple caps."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the writing frame?",
+   "o": [
+    "I'm wearing a ... and ... My ... is ...",
+    "When do you go to bed?",
+    "What time is it?",
+    "How many desks can you see?"
+   ],
+   "why": "We write I'm wearing ... and My ... is / are ..."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the right word: ___ hijabs are red.",
+   "o": [
+    "Their",
+    "They're",
+    "They",
+    "There's"
+   ],
+   "why": "Their shows the hijabs belong to them."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write about yourself: a white dishdasha.",
+   "o": [
+    "I'm wearing a white dishdasha.",
+    "I wearing a white dishdasha.",
+    "I'm wear a white dishdasha.",
+    "My wearing a white dishdasha."
+   ],
+   "why": "I'm wearing + clothes."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Two friends wear white dishdashas. Write two sentences.",
+   "o": [
+    "They're wearing dishdashas. Their dishdashas are white.",
+    "They wearing dishdashas. They dishdashas are white.",
+    "We're wearing dishdashas. Our dishdasha is white.",
+    "Their wearing dishdashas. They're dishdashas are white."
+   ],
+   "why": "They're wearing ... Their ... are ..."
+  },
+  {
+   "lv": "التحليل",
+   "q": "In Their hijabs are blue, who are they?",
+   "o": [
+    "our mum and our sister",
+    "our dad",
+    "the dad and the boy",
+    "the baseball caps"
+   ],
+   "why": "Their is about mum and sister."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we write His dishdasha is white?",
+   "o": [
+    "Because it is about one man, the dad.",
+    "Because it is about two girls.",
+    "Because it is about me.",
+    "Because it is about you."
+   ],
+   "why": "His is for a boy or a man."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence about the text is wrong?",
+   "o": [
+    "The dad is wearing a baseball cap.",
+    "The dad's sandals are brown.",
+    "The dad's dishdasha is white.",
+    "The hijabs are blue."
+   ],
+   "why": "The dad is wearing a hat, not a baseball cap."
+  }
+ ]
+}

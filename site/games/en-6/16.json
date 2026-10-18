@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 2: Technology",
+ "lesson": "Unit 2 – Lesson 1: Vocabulary – Devices",
+ "outcomes": [
+  "I can name devices like laptop, e-reader and headphones.",
+  "I can say how the WOW! Team uses technology.",
+  "I can say how technology helps us at home and at school."
+ ],
+ "tf": [
+  {
+   "s": "A laptop is a small computer you can carry.",
+   "t": true,
+   "why": "Yes! You can take a laptop with you."
+  },
+  {
+   "s": "You type a password to open your laptop or an app.",
+   "t": true,
+   "why": "Correct! A password keeps it safe."
+  },
+  {
+   "s": "Headphones let everyone in the room hear your music.",
+   "t": false,
+   "why": "With headphones, only you hear the music."
+  },
+  {
+   "s": "An e-reader is a device for reading books.",
+   "t": true,
+   "why": "Right! You read books on an e-reader."
+  },
+  {
+   "s": "A printer is a device for taking photos.",
+   "t": false,
+   "why": "A printer puts words and pictures on paper."
+  },
+  {
+   "s": "Arlo loves watching sport on TV.",
+   "t": true,
+   "why": "Yes! That's in Arlo's blog post."
+  },
+  {
+   "s": "Reem's smartphone takes better photos than her digital camera.",
+   "t": false,
+   "why": "Her digital camera takes better photos."
+  },
+  {
+   "s": "Sultan sends his homework to the school homework website.",
+   "t": true,
+   "why": "Correct! Sultan uses the website."
+  },
+  {
+   "s": "Julia uses headphones because she doesn't have a speaker.",
+   "t": true,
+   "why": "Yes, so nobody else hears her music."
+  },
+  {
+   "s": "A speaker has a screen for watching videos.",
+   "t": false,
+   "why": "A speaker plays sound; it doesn't need a screen."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "A small computer you can carry:",
+   "o": [
+    "laptop",
+    "printer",
+    "speaker"
+   ],
+   "why": "That's a laptop."
+  },
+  {
+   "q": "You type it to open your app:",
+   "o": [
+    "password",
+    "website",
+    "screen"
+   ],
+   "why": "That's a password."
+  },
+  {
+   "q": "Listen to music without others hearing:",
+   "o": [
+    "headphones",
+    "speaker",
+    "printer"
+   ],
+   "why": "Headphones are just for you."
+  },
+  {
+   "q": "Which device has a screen?",
+   "o": [
+    "smartphone",
+    "speaker",
+    "headphones"
+   ],
+   "why": "A smartphone has a screen."
+  },
+  {
+   "q": "Which device is for reading books?",
+   "o": [
+    "e-reader",
+    "printer",
+    "speaker"
+   ],
+   "why": "You read books on an e-reader."
+  },
+  {
+   "q": "Who loves watching sport on TV?",
+   "o": [
+    "Arlo",
+    "Julia",
+    "Reem"
+   ],
+   "why": "Arlo loves sport on TV."
+  },
+  {
+   "q": "Who sends homework to the school website?",
+   "o": [
+    "Sultan",
+    "Arlo",
+    "Julia"
+   ],
+   "why": "Sultan uses the homework website."
+  },
+  {
+   "q": "Which device takes better photos than Reem's smartphone?",
+   "o": [
+    "her digital camera",
+    "her laptop",
+    "her e-reader"
+   ],
+   "why": "Her digital camera is better for photos."
+  },
+  {
+   "q": "Why does Julia use headphones?",
+   "o": [
+    "She doesn't have a speaker.",
+    "She hates music.",
+    "Her laptop is broken."
+   ],
+   "why": "Without a speaker, she uses headphones."
+  },
+  {
+   "q": "A device that puts your work on paper:",
+   "o": [
+    "printer",
+    "app",
+    "password"
+   ],
+   "why": "A printer prints on paper."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Small computer to carry",
+   "a": "laptop",
+   "d": [
+    "printer",
+    "speaker",
+    "app"
+   ]
+  },
+  {
+   "q": "Secret word to open an app",
+   "a": "password",
+   "d": [
+    "website",
+    "screen",
+    "speaker"
+   ]
+  },
+  {
+   "q": "Device for reading books",
+   "a": "e-reader",
+   "d": [
+    "speaker",
+    "printer",
+    "headphones"
+   ]
+  },
+  {
+   "q": "Prints on paper",
+   "a": "printer",
+   "d": [
+    "speaker",
+    "screen",
+    "app"
+   ]
+  },
+  {
+   "q": "Plays music loudly",
+   "a": "speaker",
+   "d": [
+    "password",
+    "printer",
+    "e-reader"
+   ]
+  },
+  {
+   "q": "Takes photos",
+   "a": "digital camera",
+   "d": [
+    "printer",
+    "speaker",
+    "e-reader"
+   ]
+  },
+  {
+   "q": "Program on a smartphone",
+   "a": "app",
+   "d": [
+    "printer",
+    "speaker",
+    "headphones"
+   ]
+  },
+  {
+   "q": "Loves sport on TV",
+   "a": "Arlo",
+   "d": [
+    "Julia",
+    "Reem",
+    "Sultan"
+   ]
+  },
+  {
+   "q": "Sends homework online",
+   "a": "Sultan",
+   "d": [
+    "Arlo",
+    "Reem",
+    "Julia"
+   ]
+  },
+  {
+   "q": "Uses headphones for music",
+   "a": "Julia",
+   "d": [
+    "Sultan",
+    "Arlo",
+    "Reem"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list has three devices with screens?",
+   "o": [
+    "smartphone, laptop, e-reader",
+    "speaker, headphones, printer",
+    "password, app, website",
+    "headphones, speaker, password"
+   ],
+   "why": "These devices all have screens."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a password?",
+   "o": [
+    "something you type to open your laptop or app",
+    "a device for music",
+    "a big screen",
+    "a kind of printer"
+   ],
+   "why": "A password keeps your device safe."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do we call laptops, smartphones and e-readers?",
+   "o": [
+    "devices",
+    "passwords",
+    "apps",
+    "websites"
+   ],
+   "why": "They are all devices."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a website?",
+   "o": [
+    "a place on the internet with information",
+    "a device for music",
+    "a kind of printer",
+    "a secret word"
+   ],
+   "why": "You visit websites on the internet."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to listen to music on the bus without others hearing. What do you use?",
+   "o": [
+    "headphones",
+    "a speaker",
+    "a printer",
+    "an e-reader"
+   ],
+   "why": "Headphones keep music just for you."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which two devices can you use to read books?",
+   "o": [
+    "e-reader and tablet",
+    "speaker and printer",
+    "headphones and speaker",
+    "printer and headphones"
+   ],
+   "why": "You can read books on screens."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is correct?",
+   "o": [
+    "I use my laptop to do my homework.",
+    "I use my headphones to print my homework.",
+    "I use my speaker to read books.",
+    "I use my printer to take photos."
+   ],
+   "why": "A laptop is good for homework."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Reem use her digital camera for photos?",
+   "o": [
+    "It takes better photos than her smartphone.",
+    "Her smartphone has no screen.",
+    "She doesn't have a smartphone.",
+    "It plays music."
+   ],
+   "why": "The digital camera takes better photos."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is a good answer to the WOW! Question \"How can technology help us at school?\"",
+   "o": [
+    "We can find information for projects and watch videos to learn.",
+    "We can stop learning.",
+    "We don't need teachers or books.",
+    "We can play games all day in class."
+   ],
+   "why": "Technology helps us learn and find information."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Julia doesn't have a speaker. What is the best way for her to listen to music?",
+   "o": [
+    "with headphones",
+    "with a printer",
+    "with a password",
+    "with an e-reader"
+   ],
+   "why": "Headphones play music without a speaker."
+  }
+ ]
+}

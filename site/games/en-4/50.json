@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U4",
+ "lesson": "Unit 4 – Lesson 10: Review",
+ "outcomes": [
+  "Say what people with different jobs are doing.",
+  "Ask and answer questions in the present continuous.",
+  "Use must and mustn't for rules in the park and at school."
+ ],
+ "tf": [
+  {
+   "s": "'What is the bus driver doing?' – 'He's driving a bus.'",
+   "t": true,
+   "why": "Yes! is + driving."
+  },
+  {
+   "s": "A firefighter is a job that helps people.",
+   "t": true,
+   "why": "Correct! Firefighters help people."
+  },
+  {
+   "s": "In the park, you must swim in the river.",
+   "t": false,
+   "why": "You mustn't swim in the river!"
+  },
+  {
+   "s": "You must put litter in the bin.",
+   "t": true,
+   "why": "Well done! Keep places clean."
+  },
+  {
+   "s": "The boat driver works in a hospital.",
+   "t": false,
+   "why": "The boat driver works in a cave."
+  },
+  {
+   "s": "Sound artists make sounds for TV programmes and films.",
+   "t": true,
+   "why": "Yes! That's their job."
+  },
+  {
+   "s": "'Is Malik flying a kite?' (✗) – 'No, he isn't.'",
+   "t": true,
+   "why": "Correct! No, he isn't."
+  },
+  {
+   "s": "'The vet are looking after a cat' is correct.",
+   "t": false,
+   "why": "With one person, use is: The vet is looking after a cat."
+  },
+  {
+   "s": "'You mustn't drop litter' is a good park rule.",
+   "t": true,
+   "why": "Yes! Litter goes in the bin."
+  },
+  {
+   "s": "'You must be late' is a school rule.",
+   "t": false,
+   "why": "At school, you mustn't be late."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the bus driver doing?",
+   "o": [
+    "He's driving a bus.",
+    "He drive a bus.",
+    "He driving a bus."
+   ],
+   "why": "is + driving."
+  },
+  {
+   "q": "You ___ swim in the river. (park)",
+   "o": [
+    "mustn't",
+    "must",
+    "must to"
+   ],
+   "why": "Swimming in the river is not allowed."
+  },
+  {
+   "q": "You ___ put litter in the bin.",
+   "o": [
+    "must",
+    "mustn't",
+    "musts"
+   ],
+   "why": "Always put litter in the bin."
+  },
+  {
+   "q": "Ask about the chef:",
+   "o": [
+    "What is the chef doing?",
+    "What the chef is doing?",
+    "What are the chef doing?"
+   ],
+   "why": "What + is + person + doing?"
+  },
+  {
+   "q": "Where does the boat driver work?",
+   "o": [
+    "in a cave",
+    "in a garage",
+    "in a studio"
+   ],
+   "why": "In Speedwell Cavern."
+  },
+  {
+   "q": "Is Malik flying a kite? (✗)",
+   "o": [
+    "No, he isn't.",
+    "No, he doesn't.",
+    "No, he not."
+   ],
+   "why": "Short answer: No, he isn't."
+  },
+  {
+   "q": "'You mustn't shout. You mustn't be late.' Where are you?",
+   "o": [
+    "at school",
+    "at a football match",
+    "at the beach"
+   ],
+   "why": "These are school rules."
+  },
+  {
+   "q": "You must walk on the ___ .",
+   "o": [
+    "path",
+    "river",
+    "bin"
+   ],
+   "why": "In the park, walk on the path."
+  },
+  {
+   "q": "What do sound artists make?",
+   "o": [
+    "sounds for TV and films",
+    "rockets",
+    "video games"
+   ],
+   "why": "Sound artists make sounds."
+  },
+  {
+   "q": "The chef ___ .",
+   "o": [
+    "is cooking",
+    "are cooking",
+    "cooking"
+   ],
+   "why": "One person: is cooking."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Driving a bus",
+   "a": "bus driver",
+   "d": [
+    "chef",
+    "vet",
+    "dentist"
+   ]
+  },
+  {
+   "q": "The chef ___ cooking.",
+   "a": "is",
+   "d": [
+    "are",
+    "am",
+    "be"
+   ]
+  },
+  {
+   "q": "Opposite of 'be late'",
+   "a": "arrive on time",
+   "d": [
+    "be quiet",
+    "drop litter",
+    "shout"
+   ]
+  },
+  {
+   "q": "You ___ drop litter.",
+   "a": "mustn't",
+   "d": [
+    "must",
+    "musts",
+    "must to"
+   ]
+  },
+  {
+   "q": "You ___ walk on the path.",
+   "a": "must",
+   "d": [
+    "mustn't",
+    "musts",
+    "must to"
+   ]
+  },
+  {
+   "q": "Is he flying a kite? (✗)",
+   "a": "No, he isn't.",
+   "d": [
+    "Yes, he is.",
+    "No, he doesn't.",
+    "No, he not."
+   ]
+  },
+  {
+   "q": "Is she cooking? (✓)",
+   "a": "Yes, she is.",
+   "d": [
+    "No, she isn't.",
+    "Yes, she does.",
+    "Yes, she cook."
+   ]
+  },
+  {
+   "q": "The vet ___ looking after a cat.",
+   "a": "is",
+   "d": [
+    "are",
+    "am",
+    "be"
+   ]
+  },
+  {
+   "q": "Two engineers ___ building.",
+   "a": "are",
+   "d": [
+    "is",
+    "am",
+    "be"
+   ]
+  },
+  {
+   "q": "Put litter in the ...",
+   "a": "bin",
+   "d": [
+    "river",
+    "path",
+    "tree"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is present continuous?",
+   "o": [
+    "The bus driver is driving a bus.",
+    "The bus driver drives every day.",
+    "The bus driver drove a bus.",
+    "The bus driver will drive."
+   ],
+   "why": "is + driving = happening now."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a park rule?",
+   "o": [
+    "You mustn't swim in the river.",
+    "You must drop litter.",
+    "You must swim in the river.",
+    "You mustn't walk on the path."
+   ],
+   "why": "Swimming in the river is dangerous."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which job helps people?",
+   "o": [
+    "firefighter",
+    "computer programmer",
+    "engineer",
+    "animator"
+   ],
+   "why": "Firefighters help people every day."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do sound artists do?",
+   "o": [
+    "They make sounds for TV programmes and films.",
+    "They build rockets.",
+    "They fix cars.",
+    "They grow vegetables."
+   ],
+   "why": "Sound artists make sounds."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Order the words: is / the / vet / after / looking / a cat",
+   "o": [
+    "The vet is looking after a cat.",
+    "The vet looking is after a cat.",
+    "Is the vet looking a cat after.",
+    "The vet is after looking a cat."
+   ],
+   "why": "Person + is + verb-ing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: You ___ put litter in the bin.",
+   "o": [
+    "must",
+    "mustn't",
+    "must to",
+    "musting"
+   ],
+   "why": "Putting litter in the bin is good."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Order the words: mustn't / You / in the river / swim",
+   "o": [
+    "You mustn't swim in the river.",
+    "You swim mustn't in the river.",
+    "Mustn't you swim in the river.",
+    "You in the river mustn't swim."
+   ],
+   "why": "You + mustn't + verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair of park rules is correct?",
+   "o": [
+    "You must walk on the path. You mustn't drop litter.",
+    "You must drop litter. You mustn't walk on the path.",
+    "You must swim in the river. You must drop litter.",
+    "You mustn't put litter in the bin. You must swim in the river."
+   ],
+   "why": "Walk on the path and keep the park clean."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say 'No, he isn't' and not 'No, he doesn't'?",
+   "o": [
+    "The question uses 'is'.",
+    "The question uses 'does'.",
+    "He is a girl.",
+    "It is a past question."
+   ],
+   "why": "Is he ...? – No, he isn't."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is wrong?",
+   "o": [
+    "She programming a computer.",
+    "She's programming a computer.",
+    "He's driving a bus.",
+    "They're building a bridge."
+   ],
+   "why": "It needs is: She's programming a computer."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Lesson 4: Book club – My Muscat diary",
+ "outcomes": [
+  "Find the features of a diary.",
+  "Answer questions about a family holiday in Muscat.",
+  "Use -ed and -ing adjectives correctly."
+ ],
+ "tf": [
+  {
+   "s": "A diary usually has dates.",
+   "t": true,
+   "why": "Yes, each entry starts with a date."
+  },
+  {
+   "s": "A diary is usually written in the first person (I, we).",
+   "t": true,
+   "why": "Yes, the writer tells about their own day."
+  },
+  {
+   "s": "The family arrived in Muscat on Saturday 29th December.",
+   "t": true,
+   "why": "Yes, they arrived in the evening."
+  },
+  {
+   "s": "The family went to the aquarium on Monday.",
+   "t": false,
+   "why": "They went to the aquarium on Sunday afternoon."
+  },
+  {
+   "s": "On Monday, they visited the National Museum and a planetarium.",
+   "t": true,
+   "why": "Yes, those were Monday's places."
+  },
+  {
+   "s": "Dad has had the Royal Opera House tickets since December.",
+   "t": false,
+   "why": "He has had them since September."
+  },
+  {
+   "s": "The family is flying home to Salalah.",
+   "t": false,
+   "why": "They are flying home to Khasab."
+  },
+  {
+   "s": "We use -ed adjectives to say how we feel.",
+   "t": true,
+   "why": "Yes: I was tired, I was excited."
+  },
+  {
+   "s": "“The show was excited” is correct.",
+   "t": false,
+   "why": "The show causes the feeling, so it was exciting."
+  },
+  {
+   "s": "The writer didn't write on Sunday night because he/she was too tired.",
+   "t": true,
+   "why": "Yes, it was a tiring day."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where is the family flying home to?",
+   "o": [
+    "Khasab",
+    "Sur",
+    "Nizwa"
+   ],
+   "why": "Their home is in Khasab."
+  },
+  {
+   "q": "Which part of Saturday did they arrive?",
+   "o": [
+    "the evening",
+    "the morning",
+    "lunchtime"
+   ],
+   "why": "They arrived on Saturday 29th December in the evening."
+  },
+  {
+   "q": "Which places did they visit on Monday?",
+   "o": [
+    "the National Museum and a planetarium",
+    "the aquarium and a park",
+    "a zoo and a circus"
+   ],
+   "why": "Monday was museum and planetarium day."
+  },
+  {
+   "q": "When did they go to the aquarium?",
+   "o": [
+    "Sunday afternoon",
+    "Monday evening",
+    "Saturday morning"
+   ],
+   "why": "They went on Sunday afternoon."
+  },
+  {
+   "q": "Choose: The show was (excited / exciting).",
+   "o": [
+    "exciting",
+    "excited",
+    "excite"
+   ],
+   "why": "The show causes the feeling."
+  },
+  {
+   "q": "Choose: I was so (embarrassed / embarrassing).",
+   "o": [
+    "embarrassed",
+    "embarrassing",
+    "embarrass"
+   ],
+   "why": "-ed tells us how a person feels."
+  },
+  {
+   "q": "The art gallery was interest___.",
+   "o": [
+    "-ing",
+    "-ed",
+    "-s"
+   ],
+   "why": "Interesting describes the gallery."
+  },
+  {
+   "q": "Which is a feature of a diary?",
+   "o": [
+    "dates",
+    "a list of ingredients",
+    "bullet points for prices"
+   ],
+   "why": "Diaries have dates."
+  },
+  {
+   "q": "The long walk was ___.",
+   "o": [
+    "tiring",
+    "tired",
+    "tire"
+   ],
+   "why": "The walk causes the feeling."
+  },
+  {
+   "q": "After the walk, I was ___.",
+   "o": [
+    "tired",
+    "tiring",
+    "tires"
+   ],
+   "why": "Tired says how I feel."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Family's home town",
+   "a": "Khasab",
+   "d": [
+    "Sur",
+    "Nizwa",
+    "Salalah"
+   ]
+  },
+  {
+   "q": "Day they arrived in Muscat",
+   "a": "Saturday",
+   "d": [
+    "Monday",
+    "Friday",
+    "Tuesday"
+   ]
+  },
+  {
+   "q": "Day at the aquarium",
+   "a": "Sunday",
+   "d": [
+    "Monday",
+    "Friday",
+    "Saturday"
+   ]
+  },
+  {
+   "q": "Dad's tickets since ___",
+   "a": "September",
+   "d": [
+    "December",
+    "June",
+    "March"
+   ]
+  },
+  {
+   "q": "Place with stars and planets",
+   "a": "planetarium",
+   "d": [
+    "aquarium",
+    "art gallery",
+    "park"
+   ]
+  },
+  {
+   "q": "Place to see fish",
+   "a": "aquarium",
+   "d": [
+    "planetarium",
+    "museum",
+    "opera house"
+   ]
+  },
+  {
+   "q": "The film was ___.",
+   "a": "boring",
+   "d": [
+    "bored",
+    "bore",
+    "bores"
+   ]
+  },
+  {
+   "q": "I feel ___ about the trip.",
+   "a": "excited",
+   "d": [
+    "exciting",
+    "excite",
+    "excites"
+   ]
+  },
+  {
+   "q": "The museum was ___.",
+   "a": "interesting",
+   "d": [
+    "interested",
+    "interest",
+    "interests"
+   ]
+  },
+  {
+   "q": "A diary uses I and we: ___ person",
+   "a": "first",
+   "d": [
+    "second",
+    "third",
+    "last"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What are two features of a diary?",
+   "o": [
+    "dates and the first person",
+    "titles and prices",
+    "questions and answers",
+    "bullet points and a map"
+   ],
+   "why": "Diaries have dates and use I/we."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When did the family arrive in Muscat?",
+   "o": [
+    "On Saturday 29th December, in the evening",
+    "On Monday morning",
+    "On Sunday afternoon",
+    "In September"
+   ],
+   "why": "That was the first entry."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Since when has Dad had the tickets for the Royal Opera House?",
+   "o": [
+    "Since September",
+    "Since Monday",
+    "For two days",
+    "Since Saturday"
+   ],
+   "why": "He bought them in September."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two places did they visit on Monday?",
+   "o": [
+    "The National Museum and a planetarium",
+    "The aquarium and Al-Qurum park",
+    "The art gallery and the aquarium",
+    "The Royal Opera House and a zoo"
+   ],
+   "why": "Monday's entry tells us this."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "The long walk was tiring. I was tired.",
+    "The long walk was tired. I was tiring.",
+    "The walk was tire. I was tiring.",
+    "The walk was tiring. I was tiring."
+   ],
+   "why": "-ing for the cause, -ed for the feeling."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best start for a diary entry?",
+   "o": [
+    "Friday 3rd May. We visited the aquarium today.",
+    "Dear Sir, I am writing to you.",
+    "Ingredients: two eggs.",
+    "Once upon a time, there was a king."
+   ],
+   "why": "A diary entry starts with a date and uses we/I."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali got a low mark and his friends laughed. How did he feel?",
+   "o": [
+    "embarrassed",
+    "embarrassing",
+    "exciting",
+    "interesting"
+   ],
+   "why": "-ed adjectives describe a person's feeling."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why didn't the writer write the diary on Sunday night?",
+   "o": [
+    "He/she was too tired.",
+    "He/she lost the diary.",
+    "They were at the airport.",
+    "He/she was bored."
+   ],
+   "why": "After a busy day, the writer was too tired."
+  },
+  {
+   "lv": "التحليل",
+   "q": "True or false? The family went to the aquarium on Monday.",
+   "o": [
+    "False – they went on Sunday afternoon.",
+    "True – they went on Monday.",
+    "False – they went on Saturday.",
+    "True – they went on Monday night."
+   ],
+   "why": "Check the date of each entry."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between bored and boring?",
+   "o": [
+    "Bored says how you feel; boring describes what causes it.",
+    "They mean the same.",
+    "Boring is for people; bored is for things.",
+    "Bored is the future; boring is the past."
+   ],
+   "why": "-ed = feeling; -ing = the cause."
+  }
+ ]
+}

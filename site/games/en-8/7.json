@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 1: Our planet",
+ "lesson": "Lesson 5: Vocabulary and Grammar – Extreme weather & reported speech",
+ "outcomes": [
+  "Learn 12 words for extreme weather.",
+  "Report questions and commands correctly.",
+  "Give safety tips for extreme weather."
+ ],
+ "tf": [
+  {
+   "s": "Thunder, lightning and flood are weather words in Khalid’s diary.",
+   "t": true,
+   "why": "Yes, Khalid’s diary also has storm, cyclone, wind and rain."
+  },
+  {
+   "s": "A heatwave is a period of very cold weather.",
+   "t": false,
+   "why": "A heatwave is a very hot period of weather."
+  },
+  {
+   "s": "“I asked my dad what a cyclone was” reports the question “What is a cyclone?”",
+   "t": true,
+   "why": "Correct! The question word stays and is becomes was."
+  },
+  {
+   "s": "A reported question does not need a question mark.",
+   "t": true,
+   "why": "Right! It is a normal sentence: He asked me where I lived."
+  },
+  {
+   "s": "“Sara asked me where I lived” is a correct reported question.",
+   "t": true,
+   "why": "Great! It has normal word order and a past verb."
+  },
+  {
+   "s": "We use “if” to report a Wh- question.",
+   "t": false,
+   "why": "We use if for yes/no questions; Wh- questions keep the question word."
+  },
+  {
+   "s": "“He told me not to panic” reports the command “Don’t panic!”",
+   "t": true,
+   "why": "Right! told + object + not to + verb."
+  },
+  {
+   "s": "In reported questions, “is” usually changes to “are”.",
+   "t": false,
+   "why": "The tense moves back: is changes to was."
+  },
+  {
+   "s": "The reported question “I asked my dad what was a cyclone” is correct.",
+   "t": false,
+   "why": "The correct order is: I asked my dad what a cyclone was."
+  },
+  {
+   "s": "In a flood, you should walk in the water to get home quickly.",
+   "t": false,
+   "why": "You should go to a high place and not walk in the water."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do we call a long time with no rain?",
+   "o": [
+    "a drought",
+    "a flood",
+    "a hailstorm"
+   ],
+   "why": "A drought means no rain for a long time."
+  },
+  {
+   "q": "Which comes from a mountain with fire and hot rock?",
+   "o": [
+    "a volcano",
+    "a tsunami",
+    "a snowstorm"
+   ],
+   "why": "A volcano sends out fire and hot rock."
+  },
+  {
+   "q": "Which word reports a yes/no question?",
+   "o": [
+    "if",
+    "to",
+    "that"
+   ],
+   "why": "We use asked + if."
+  },
+  {
+   "q": "Report ‘Get out!’ (Grandpa told us)",
+   "o": [
+    "Grandpa told us to get out.",
+    "Grandpa told us get out.",
+    "Grandpa asked us if get out."
+   ],
+   "why": "told + object + to + verb."
+  },
+  {
+   "q": "Report ‘Do you like heatwaves?’ (Bassam asked Talal)",
+   "o": [
+    "Bassam asked Talal if he liked heatwaves.",
+    "Bassam asked Talal do you like heatwaves.",
+    "Bassam told Talal to like heatwaves."
+   ],
+   "why": "Yes/no question: asked + if + past tense."
+  },
+  {
+   "q": "Weather with ice falling from the sky:",
+   "o": [
+    "hailstorm",
+    "heatwave",
+    "drought"
+   ],
+   "why": "Hail is small balls of ice."
+  },
+  {
+   "q": "In a sandstorm, you should…",
+   "o": [
+    "stay inside and close the windows",
+    "go to the beach",
+    "open all the windows"
+   ],
+   "why": "Staying inside keeps you safe from the sand."
+  },
+  {
+   "q": "Report ‘Close all the windows!’ (I / you)",
+   "o": [
+    "I told you to close all the windows.",
+    "I told you closing all the windows.",
+    "I asked you if close all the windows."
+   ],
+   "why": "Commands use told + object + to + verb."
+  },
+  {
+   "q": "Which word is a fire in a big area of trees?",
+   "o": [
+    "forest fire",
+    "volcano",
+    "thunder"
+   ],
+   "why": "A forest fire burns trees."
+  },
+  {
+   "q": "Report ‘Where’s my book?’ (Samira asked her dad)",
+   "o": [
+    "Samira asked her dad where her book was.",
+    "Samira asked her dad where is my book.",
+    "Samira asked her dad if where her book."
+   ],
+   "why": "Keep the question word, change is to was, no question order."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Long time with no rain",
+   "a": "drought",
+   "d": [
+    "flood",
+    "tornado",
+    "hailstorm"
+   ]
+  },
+  {
+   "q": "Very hot period of weather",
+   "a": "heatwave",
+   "d": [
+    "snowstorm",
+    "drought",
+    "flood"
+   ]
+  },
+  {
+   "q": "Giant wave from an earthquake",
+   "a": "tsunami",
+   "d": [
+    "tornado",
+    "volcano",
+    "heatwave"
+   ]
+  },
+  {
+   "q": "Strong wind that carries sand",
+   "a": "sandstorm",
+   "d": [
+    "snowstorm",
+    "hailstorm",
+    "tsunami"
+   ]
+  },
+  {
+   "q": "Winds that blow in circles",
+   "a": "tornado",
+   "d": [
+    "drought",
+    "flood",
+    "heatwave"
+   ]
+  },
+  {
+   "q": "Mountain with fire and hot rock",
+   "a": "volcano",
+   "d": [
+    "tsunami",
+    "cyclone",
+    "hailstorm"
+   ]
+  },
+  {
+   "q": "Too much water covers the land",
+   "a": "flood",
+   "d": [
+    "drought",
+    "heatwave",
+    "sandstorm"
+   ]
+  },
+  {
+   "q": "Report a yes/no question: asked…",
+   "a": "if",
+   "d": [
+    "to",
+    "that",
+    "not"
+   ]
+  },
+  {
+   "q": "He told me ___ panic.",
+   "a": "not to",
+   "d": [
+    "don’t",
+    "to not",
+    "no"
+   ]
+  },
+  {
+   "q": "‘What is it?’ → asked what it…",
+   "a": "was",
+   "d": [
+    "is",
+    "are",
+    "be"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word means heavy snow with strong winds?",
+   "o": [
+    "snowstorm",
+    "heatwave",
+    "drought",
+    "sandstorm"
+   ],
+   "why": "A snowstorm is a storm with a lot of snow."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the pattern for reporting a command?",
+   "o": [
+    "told + object + (not) to + verb",
+    "asked + if + verb",
+    "asked + question word",
+    "said + -ing"
+   ],
+   "why": "Commands use told + object + to."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which pair of weather words came from Khalid’s diary?",
+   "o": [
+    "thunder and lightning",
+    "tsunami and volcano",
+    "snowstorm and hailstorm",
+    "drought and heatwave"
+   ],
+   "why": "Khalid’s diary had storm, thunder, lightning, cyclone and flood."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do we report a Wh- question?",
+   "o": [
+    "asked + question word + subject + verb",
+    "asked + if + question word",
+    "told + to + question word",
+    "asked + verb + subject"
+   ],
+   "why": "Example: I asked my dad what a cyclone was."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Report: ‘Do you know what to do?’ (I asked him)",
+   "o": [
+    "I asked him if he knew what to do.",
+    "I asked him do you know what to do.",
+    "I told him to know what to do.",
+    "I asked him if did he know what to do."
+   ],
+   "why": "Yes/no question: asked + if + past tense."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Report: ‘Look at my volcano poster.’ (Sara told the class)",
+   "o": [
+    "Sara told the class to look at her volcano poster.",
+    "Sara told the class look at my volcano poster.",
+    "Sara asked the class if look at her poster.",
+    "Sara told the class to looking at her poster."
+   ],
+   "why": "told + object + to + verb, and my becomes her."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Report: ‘Don’t start a forest fire!’ (He told me)",
+   "o": [
+    "He told me not to start a forest fire.",
+    "He told me to not starting a forest fire.",
+    "He asked me if start a forest fire.",
+    "He told me don’t start a forest fire."
+   ],
+   "why": "Negative commands use not to + verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best safety tip for a flood?",
+   "o": [
+    "Go to a high place and don’t walk in the water.",
+    "Go swimming in the water.",
+    "Stay in the lowest room.",
+    "Drive through the water quickly."
+   ],
+   "why": "High places keep you away from flood water."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the mistake: “Samira asked her dad where was her book.”",
+   "o": [
+    "The word order: it should be “where her book was”.",
+    "“asked” should be “told”.",
+    "“where” should be “if”.",
+    "There is no mistake."
+   ],
+   "why": "Reported questions use normal sentence order."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say “I asked him if he liked it” and not “I asked him if he likes it”?",
+   "o": [
+    "The tense moves back in reported speech.",
+    "“likes” is a noun.",
+    "We never use present verbs in English.",
+    "“if” always comes with the future."
+   ],
+   "why": "In reported speech the tense usually goes back, like is → was."
+  }
+ ]
+}

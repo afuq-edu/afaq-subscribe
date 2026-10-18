@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "WOW! Learning Club 1",
+  "lesson": "Learning Club 1 – Lessons 2–3: CLIL Science – How can we classify technology?",
+  "outcomes": [
+    "I can explain what technology is and how it helps us.",
+    "I can classify technology by use and by age (old or new).",
+    "I can use and make an identification key with Yes/No questions."
+  ],
+  "tf": [
+    {"s": "Technology uses science to make things that help us.", "t": true, "why": "Science helps people invent useful things."},
+    {"s": "A steam train is new technology.", "t": false, "why": "A steam train is old technology."},
+    {"s": "Virtual Reality (VR) is new technology.", "t": true, "why": "VR is a modern form of technology."},
+    {"s": "A vacuum cleaner is technology in the house that helps us clean.", "t": true, "why": "It sucks up dust from the floor."},
+    {"s": "We can only classify technology in one way.", "t": false, "why": "We can classify it by use and by age, and more."},
+    {"s": "A smartphone uses the internet and is new technology.", "t": true, "why": "That is two ways to classify it."},
+    {"s": "A cassette player is new technology.", "t": false, "why": "A cassette player is old technology."},
+    {"s": "An identification key uses Yes/No questions.", "t": true, "why": "Each answer leads you to the next question."},
+    {"s": "A usual fridge uses the internet.", "t": false, "why": "Usually no; only a smart fridge uses the internet."},
+    {"s": "A tree diagram helps us organise things into groups.", "t": true, "why": "Its branches show the groups."}
+  ],
+  "boxes": [
+    {"q": "Is Virtual Reality old or new technology?", "o": ["new", "old", "neither"], "why": "VR is new technology."},
+    {"q": "Which is old technology?", "o": ["a steam train", "a VR simulator", "a digital camera"], "why": "Steam trains are old technology."},
+    {"q": "Which helps us clean the house?", "o": ["a vacuum cleaner", "an oven", "a coffee machine"], "why": "A vacuum cleaner cleans floors."},
+    {"q": "Which helps us cook?", "o": ["an oven", "a vacuum cleaner", "a steam train"], "why": "We cook food in an oven."},
+    {"q": "Which uses the internet and you can carry it?", "o": ["a smartphone", "a fridge", "a steam train"], "why": "A smartphone is small and goes online."},
+    {"q": "Which can you travel in and is old technology?", "o": ["a steam train", "a smartphone", "a watch"], "why": "You travel in a steam train, and it is old."},
+    {"q": "Does a smart fridge use the internet?", "o": ["Yes, it does.", "No, it doesn’t.", "It is a train."], "why": "A smart fridge connects to the internet."},
+    {"q": "What does “classify” mean?", "o": ["put things into groups", "break things", "buy things"], "why": "To classify is to sort into groups."},
+    {"q": "Which is a Yes/No question for a key?", "o": ["Can you carry it?", "What is it?", "Where do you live?"], "why": "The answer is yes or no."},
+    {"q": "What does technology use to make things that help us?", "o": ["science", "music", "sport"], "why": "Technology uses science."}
+  ],
+  "hunt": [
+    {"q": "Old or new: steam train", "a": "old", "d": ["new", "smart", "online"]},
+    {"q": "Old or new: VR simulator", "a": "new", "d": ["old", "ancient", "broken"]},
+    {"q": "Old technology", "a": "cassette player", "d": ["digital camera", "VR simulator", "smartphone"]},
+    {"q": "New technology", "a": "digital camera", "d": ["telephone", "cassette player", "steam train"]},
+    {"q": "Helps us clean", "a": "vacuum cleaner", "d": ["oven", "coffee machine", "steam train"]},
+    {"q": "Helps us cook", "a": "oven", "d": ["vacuum cleaner", "watch", "car"]},
+    {"q": "Uses the internet, you can carry it", "a": "smartphone", "d": ["fridge", "steam train", "oven"]},
+    {"q": "You can travel in it", "a": "car", "d": ["fridge", "watch", "oven"]},
+    {"q": "Put things into groups", "a": "classify", "d": ["download", "upload", "repair"]},
+    {"q": "Technology uses ___ to help us.", "a": "science", "d": ["music", "art", "sport"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which ways of classifying technology are in the text?", "o": ["uses the internet, uses machines, for cooking/cleaning, old and new", "colour, size and price", "big, small, heavy and light", "hot, cold, wet and dry"], "why": "These are the ways in the text."},
+    {"lv": "التذكر", "q": "What is an identification key?", "o": ["Yes/No questions that help you identify something", "a key to open a door", "a password for a computer", "a list of prices"], "why": "A key uses questions to find out what something is."},
+    {"lv": "التذكر", "q": "Which pair is both old technology?", "o": ["telephone and cassette player", "digital camera and VR simulator", "smartphone and VR", "smart fridge and smartphone"], "why": "The telephone and cassette player are old."},
+    {"lv": "التذكر", "q": "What do we use to organise technology into groups in this lesson?", "o": ["a tree diagram", "a story plan", "a brochure", "a review"], "why": "A tree diagram shows groups and branches."},
+    {"lv": "التطبيق", "q": "Classify a smartphone in two ways.", "o": ["It uses the internet; it is new technology.", "It uses steam; it is old technology.", "It is for cooking; it is old.", "It is for cleaning; it uses no electricity."], "why": "A smartphone goes online and is new."},
+    {"lv": "التطبيق", "q": "Follow the key: Does it use the internet? Yes. Can you carry it? No. Which is it?", "o": ["a computer", "a smartphone", "a steam train", "a watch"], "why": "A computer uses the internet, but you don’t carry it around."},
+    {"lv": "التطبيق", "q": "Write two ways to classify technology. Which answer is best?", "o": ["by use (internet/machines) and by age (old/new)", "by colour and by smell", "by name and by letter", "by price only"], "why": "Use and age are ways from the lesson."},
+    {"lv": "التحليل", "q": "Which question would NOT work well in an identification key?", "o": ["What colour do you like?", "Can you travel in it?", "Does it use the internet?", "Is it old technology?"], "why": "Key questions must have Yes/No answers about the object."},
+    {"lv": "التحليل", "q": "A fridge usually doesn’t use the internet, but a smart fridge does. What does this show?", "o": ["New versions of old machines can use the internet.", "Fridges are old technology only.", "Smart fridges are trains.", "Fridges can’t be classified."], "why": "Technology changes and new types go online."},
+    {"lv": "التحليل", "q": "Another group’s key gives two answers for the same questions. What does this mean?", "o": ["The key doesn’t work well; it needs another question.", "The key is perfect.", "The objects are the same thing.", "Keys never work."], "why": "A good key leads to only one answer each time."}
+  ]
+}

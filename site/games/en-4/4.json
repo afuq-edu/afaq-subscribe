@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U1",
+ "lesson": "Unit 1 – Lesson 2: Story – First day at a new school!",
+ "outcomes": [
+  "Understand the main events of the story First day at a new school!",
+  "Put the story events in order and retell them.",
+  "Explain Bo's problem: magnets attract metal."
+ ],
+ "tf": [
+  {
+   "s": "Lottie feels nervous at the start of the story.",
+   "t": true,
+   "why": "Yes! It is her first day, so she is nervous."
+  },
+  {
+   "s": "The headteacher is Mrs Safa.",
+   "t": true,
+   "why": "Correct! Mrs Safa is the headteacher."
+  },
+  {
+   "s": "The loud noise is in the science lab.",
+   "t": false,
+   "why": "The loud noise is in the ICT classroom."
+  },
+  {
+   "s": "Bo is Sami's robot.",
+   "t": true,
+   "why": "Great! Bo is Sami's ICT robot."
+  },
+  {
+   "s": "A magnet pulls Bo because Bo is made of metal.",
+   "t": true,
+   "why": "Yes! Magnets attract metal."
+  },
+  {
+   "s": "A magnet attracts paper.",
+   "t": false,
+   "why": "Paper is not metal, so a magnet does not pull it."
+  },
+  {
+   "s": "The children have Science at quarter past eleven on Mondays and Wednesdays.",
+   "t": true,
+   "why": "Well done! That is in the story."
+  },
+  {
+   "s": "The story starts when everyone meets Bo.",
+   "t": false,
+   "why": "First, the children arrive at school. Meeting Bo is at the end."
+  },
+  {
+   "s": "They have English at half past eight.",
+   "t": true,
+   "why": "Correct! English is at half past eight."
+  },
+  {
+   "s": "Lottie is from Britain.",
+   "t": false,
+   "why": "Lottie is from Australia."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who shows Lottie the school?",
+   "o": [
+    "Fatma",
+    "Mrs Safa",
+    "Bo"
+   ],
+   "why": "Fatma shows Lottie the school."
+  },
+  {
+   "q": "How does Lottie feel at first?",
+   "o": [
+    "nervous",
+    "angry",
+    "sleepy"
+   ],
+   "why": "It is her first day, so she feels nervous."
+  },
+  {
+   "q": "Where is the loud noise?",
+   "o": [
+    "in the ICT classroom",
+    "in the headteacher's office",
+    "in the garden"
+   ],
+   "why": "The noise comes from the ICT classroom."
+  },
+  {
+   "q": "What does a magnet attract?",
+   "o": [
+    "a key",
+    "a paper",
+    "a cereal box"
+   ],
+   "why": "A key is made of metal, so the magnet pulls it."
+  },
+  {
+   "q": "What is Bo?",
+   "o": [
+    "a robot",
+    "a cat",
+    "a teacher"
+   ],
+   "why": "Bo is Sami's robot."
+  },
+  {
+   "q": "What happens first?",
+   "o": [
+    "The children arrive at school.",
+    "There's a loud noise.",
+    "Everyone meets Bo."
+   ],
+   "why": "The story starts when the children arrive."
+  },
+  {
+   "q": "Fatma ___ Lottie the school.",
+   "o": [
+    "shows",
+    "show",
+    "showing"
+   ],
+   "why": "With Fatma (she) we say shows."
+  },
+  {
+   "q": "A kind sentence for a nervous new pupil:",
+   "o": [
+    "Don't worry! I can show you around.",
+    "Go away!",
+    "I'm busy."
+   ],
+   "why": "Kind words help a new friend feel happy."
+  },
+  {
+   "q": "Who is the headteacher?",
+   "o": [
+    "Mrs Safa",
+    "Lottie",
+    "Fatma"
+   ],
+   "why": "The headteacher is Mrs Safa."
+  },
+  {
+   "q": "Which word helps us put events in order?",
+   "o": [
+    "then",
+    "nervous",
+    "metal"
+   ],
+   "why": "First, then, after that and finally help us order events."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Lottie feels...?",
+   "a": "nervous",
+   "d": [
+    "happy",
+    "angry",
+    "sleepy"
+   ]
+  },
+  {
+   "q": "The headteacher?",
+   "a": "Mrs Safa",
+   "d": [
+    "Lottie",
+    "Fatma",
+    "Sami"
+   ]
+  },
+  {
+   "q": "Sami's robot?",
+   "a": "Bo",
+   "d": [
+    "Lottie",
+    "Safa",
+    "Sami"
+   ]
+  },
+  {
+   "q": "A magnet pulls...?",
+   "a": "metal",
+   "d": [
+    "paper",
+    "wood",
+    "plastic"
+   ]
+  },
+  {
+   "q": "Which sticks to a magnet?",
+   "a": "a paper clip",
+   "d": [
+    "a paper",
+    "a cereal box",
+    "a book"
+   ]
+  },
+  {
+   "q": "Noise in which class?",
+   "a": "ICT",
+   "d": [
+    "Art",
+    "Maths",
+    "Arabic"
+   ]
+  },
+  {
+   "q": "Science time?",
+   "a": "quarter past eleven",
+   "d": [
+    "half past eight",
+    "ten o'clock",
+    "quarter to nine"
+   ]
+  },
+  {
+   "q": "English time?",
+   "a": "half past eight",
+   "d": [
+    "quarter past eleven",
+    "nine o'clock",
+    "quarter to ten"
+   ]
+  },
+  {
+   "q": "Word to start a story?",
+   "a": "first",
+   "d": [
+    "finally",
+    "then",
+    "after that"
+   ]
+  },
+  {
+   "q": "Lottie is from...?",
+   "a": "Australia",
+   "d": [
+    "Oman",
+    "Britain",
+    "Egypt"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Where is the headteacher's office in the story?",
+   "o": [
+    "Fatma shows Lottie the office.",
+    "It is in the ICT classroom.",
+    "It is in Lottie's house.",
+    "It is in the park."
+   ],
+   "why": "Fatma shows Lottie the headteacher's office."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who does everyone meet at the end of the story?",
+   "o": [
+    "Bo, Sami's robot",
+    "Mrs Safa's cat",
+    "Lottie's mum",
+    "a new teacher"
+   ],
+   "why": "At the end, everyone meets Bo."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do the children have at quarter past eleven on Mondays and Wednesdays?",
+   "o": [
+    "Science",
+    "Art",
+    "P.E.",
+    "Arabic"
+   ],
+   "why": "They have Science at quarter past eleven."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the last sequencing word?",
+   "o": [
+    "finally",
+    "first",
+    "then",
+    "after that"
+   ],
+   "why": "We use 'finally' for the last event."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put in order: (a) Lottie meets the headteacher (b) There's a loud noise (c) Fatma shows Lottie the school",
+   "o": [
+    "c, a, b",
+    "a, b, c",
+    "b, c, a",
+    "c, b, a"
+   ],
+   "why": "Fatma shows the school, Lottie meets the headteacher, then there is a noise."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You have a magnet. Which object will it pull?",
+   "o": [
+    "a metal key",
+    "a piece of paper",
+    "a cereal box",
+    "a pencil case made of cloth"
+   ],
+   "why": "Magnets attract metal things like keys."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A new pupil looks nervous. What can you say?",
+   "o": [
+    "Come and meet my friends.",
+    "Don't talk to me.",
+    "You are late!",
+    "Sit alone."
+   ],
+   "why": "Kind words help a new friend at school."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the magnet pull Bo?",
+   "o": [
+    "Bo is made of metal.",
+    "Bo is very small.",
+    "Bo is noisy.",
+    "Bo likes magnets."
+   ],
+   "why": "Good thinking! Magnets attract metal, and Bo is metal."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Lottie nervous?",
+   "o": [
+    "It is her first day at a new school.",
+    "She doesn't like Science.",
+    "She is ill.",
+    "She loses her bag."
+   ],
+   "why": "A first day at a new school can make us nervous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence tells the end of the story?",
+   "o": [
+    "There's a loud noise and everyone meets Bo.",
+    "The children arrive at school.",
+    "Fatma shows Lottie the science lab.",
+    "Lottie feels nervous."
+   ],
+   "why": "The noise and meeting Bo come at the end."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 1: Identity",
+ "lesson": "Lesson 6: Writing – an email (a personal profile)",
+ "outcomes": [
+  "Use quite and very correctly with adjectives.",
+  "Join ideas with and, but, or, because and so.",
+  "Plan and write a clear email of about 100 words."
+ ],
+ "tf": [
+  {
+   "s": "'Very' makes an adjective stronger than 'quite'.",
+   "t": true,
+   "why": "Yes: very = stronger, quite = less strong."
+  },
+  {
+   "s": "We say 'a quite interesting story'.",
+   "t": false,
+   "why": "'Quite' goes before the article: 'quite an interesting story'."
+  },
+  {
+   "s": "We say 'a very good film'.",
+   "t": true,
+   "why": "'Very' goes after the article: 'a very good film'."
+  },
+  {
+   "s": "We can say 'I was very terrified'.",
+   "t": false,
+   "why": "'Terrified' is an extreme adjective, so we don't use very or quite."
+  },
+  {
+   "s": "'But' introduces a contrast.",
+   "t": true,
+   "why": "Yes, 'but' shows a different or opposite idea."
+  },
+  {
+   "s": "'So' gives a reason.",
+   "t": false,
+   "why": "'So' gives a result; 'because' gives a reason."
+  },
+  {
+   "s": "Each content point in your email should have some extra information.",
+   "t": true,
+   "why": "Details, reasons or examples make your email better."
+  },
+  {
+   "s": "Rahaf's email has four paragraphs.",
+   "t": true,
+   "why": "Yes, each paragraph matches one of her notes."
+  },
+  {
+   "s": "The preposition after 'interested' is 'on'.",
+   "t": false,
+   "why": "We say 'interested in'."
+  },
+  {
+   "s": "'Fed up' goes with the preposition 'with'.",
+   "t": true,
+   "why": "Yes: 'I'm fed up with the rain.'"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which linking word gives a reason?",
+   "o": [
+    "because",
+    "but",
+    "or"
+   ],
+   "why": "'Because' tells us why."
+  },
+  {
+   "q": "Which linking word gives a result?",
+   "o": [
+    "so",
+    "or",
+    "because"
+   ],
+   "why": "'So' shows what happens as a result."
+  },
+  {
+   "q": "Which linking word gives an alternative?",
+   "o": [
+    "or",
+    "so",
+    "because"
+   ],
+   "why": "'Or' gives another choice."
+  },
+  {
+   "q": "Complete: It was ___ exciting day.",
+   "o": [
+    "quite an",
+    "a quite",
+    "quite a"
+   ],
+   "why": "'Quite' comes before 'an': quite an exciting day."
+  },
+  {
+   "q": "Which is an extreme adjective?",
+   "o": [
+    "terrified",
+    "quiet",
+    "sociable"
+   ],
+   "why": "'Terrified' means extremely scared."
+  },
+  {
+   "q": "Which preposition goes with 'keen'?",
+   "o": [
+    "on",
+    "at",
+    "in"
+   ],
+   "why": "We say 'keen on'."
+  },
+  {
+   "q": "Which preposition goes with 'brilliant'?",
+   "o": [
+    "at",
+    "with",
+    "on"
+   ],
+   "why": "We say 'brilliant at'."
+  },
+  {
+   "q": "What should the last paragraph of your Channel 1 email do?",
+   "o": [
+    "Say why they should choose you",
+    "Describe the weather",
+    "Only say goodbye"
+   ],
+   "why": "Finish by giving reasons to choose you."
+  },
+  {
+   "q": "'I do karate once a week' is about…",
+   "o": [
+    "hobbies",
+    "personality",
+    "likes and dislikes"
+   ],
+   "why": "Karate is a hobby."
+  },
+  {
+   "q": "How long should your email be?",
+   "o": [
+    "about 100 words",
+    "about 10 words",
+    "about 1,000 words"
+   ],
+   "why": "The task asks for about 100 words."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Linking word for a contrast",
+   "a": "but",
+   "d": [
+    "and",
+    "so",
+    "because"
+   ]
+  },
+  {
+   "q": "Linking word for a reason",
+   "a": "because",
+   "d": [
+    "but",
+    "or",
+    "so"
+   ]
+  },
+  {
+   "q": "Linking word to add information",
+   "a": "and",
+   "d": [
+    "but",
+    "or",
+    "so"
+   ]
+  },
+  {
+   "q": "I'm interested ___ history.",
+   "a": "in",
+   "d": [
+    "on",
+    "at",
+    "with"
+   ]
+  },
+  {
+   "q": "She's good ___ maths.",
+   "a": "at",
+   "d": [
+    "on",
+    "in",
+    "with"
+   ]
+  },
+  {
+   "q": "I'm bored ___ this game.",
+   "a": "with",
+   "d": [
+    "at",
+    "on",
+    "in"
+   ]
+  },
+  {
+   "q": "An extreme adjective",
+   "a": "terrified",
+   "d": [
+    "scared",
+    "quiet",
+    "shy"
+   ]
+  },
+  {
+   "q": "I'm terrified = I'm very ___.",
+   "a": "scared",
+   "d": [
+    "confident",
+    "keen",
+    "sociable"
+   ]
+  },
+  {
+   "q": "I hate speaking in public. I'm not very…",
+   "a": "confident",
+   "d": [
+    "shy",
+    "quiet",
+    "scared"
+   ]
+  },
+  {
+   "q": "Feedback: Maybe next time you ___ …",
+   "a": "could",
+   "d": [
+    "must",
+    "can't",
+    "won't"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does 'quite' do to an adjective?",
+   "o": [
+    "Makes it less strong than 'very'",
+    "Makes it stronger than 'very'",
+    "Makes it negative",
+    "Makes it an extreme adjective"
+   ],
+   "why": "'Quite' is less strong than 'very'."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the four content points in the Channel 1 email?",
+   "o": [
+    "Where you live, your personality, what you enjoy, why they should choose you",
+    "Your age, your phone, your food, your bus",
+    "Your teacher, your marks, your bag, your desk",
+    "The weather, the news, sport, music"
+   ],
+   "why": "These four points tell Channel 1 about you."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is correct?",
+   "o": [
+    "a very old village",
+    "a quite old village",
+    "very terrified",
+    "quite a old village"
+   ],
+   "why": "'Very' goes after 'a': a very old village."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a school council member?",
+   "o": [
+    "A student who represents classmates",
+    "A teacher who marks exams",
+    "A parent who drives the bus",
+    "A visitor to the school"
+   ],
+   "why": "Council members speak for their classmates."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Join with the best word: I was tired. I went to bed early.",
+   "o": [
+    "so",
+    "but",
+    "or",
+    "because"
+   ],
+   "why": "Going to bed early is the result, so we use 'so'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite: I don't like speaking in public. → I'm not a very ___ person.",
+   "o": [
+    "confident",
+    "shy",
+    "quiet",
+    "nervous"
+   ],
+   "why": "Not confident means you don't like speaking in public."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence for your email.",
+   "o": [
+    "Choose me because I'm a very funny person.",
+    "Choose me because I'm very a funny person.",
+    "Choose me so I'm a funny very person.",
+    "Choose me because I'm quite a funny a person."
+   ],
+   "why": "'Because' gives the reason, and 'a very funny' is the right order."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'I was very terrified' wrong?",
+   "o": [
+    "'Terrified' is an extreme adjective.",
+    "'Terrified' needs 'quite' instead.",
+    "'Very' must go after the adjective.",
+    "We need 'an' before 'terrified'."
+   ],
+   "why": "We don't use very or quite with extreme adjectives."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What makes Dana's email persuasive?",
+   "o": [
+    "She covers all the points and adds extra information.",
+    "It is very short.",
+    "It has no adjectives.",
+    "It only talks about the weather."
+   ],
+   "why": "Covering every point with details makes an email strong."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your partner's email misses one content point. What is the best feedback?",
+   "o": [
+    "Maybe next time you could add that point.",
+    "Your email is bad.",
+    "Write it all again now.",
+    "Don't use linking words."
+   ],
+   "why": "Kind and useful feedback helps your partner improve."
+  }
+ ]
+}

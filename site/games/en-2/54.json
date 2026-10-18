@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Sounds and Spelling – Unit 4, Lesson 4: o-e",
+  "outcomes": [
+    "I can see that o-e makes the same sound as oa.",
+    "I can read and write bone, home, rose, nose and cone.",
+    "I can read sentences with the tricky word so."
+  ],
+  "tf": [
+    {
+      "s": "Bone has o-e.",
+      "t": true,
+      "why": "Yes! b-o-n-e: the o and e work together."
+    },
+    {
+      "s": "o-e in home sounds like oa in boat.",
+      "t": true,
+      "why": "Great! o-e and oa make the same sound."
+    },
+    {
+      "s": "Not and note are the same word.",
+      "t": false,
+      "why": "The magic e changes not to note."
+    },
+    {
+      "s": "Boat has o-e.",
+      "t": false,
+      "why": "Boat has oa: b-oa-t."
+    },
+    {
+      "s": "So is a tricky word.",
+      "t": true,
+      "why": "Well done! We learn so by heart."
+    },
+    {
+      "s": "We smell with our nose.",
+      "t": true,
+      "why": "Yes! And nose has o-e."
+    },
+    {
+      "s": "Stone is spelled s-t-o-n.",
+      "t": false,
+      "why": "Stone needs the magic e: s-t-o-n-e."
+    },
+    {
+      "s": "Hope has o-e but hop does not.",
+      "t": true,
+      "why": "Great! The e makes hop into hope."
+    },
+    {
+      "s": "In rope, the e makes a loud sound.",
+      "t": false,
+      "why": "The magic e is quiet; it changes the o."
+    },
+    {
+      "s": "Cone has oo.",
+      "t": false,
+      "why": "Cone has o-e: c-o-n-e."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Which spelling is in \"boat\"?",
+      "o": [
+        "oa",
+        "o-e",
+        "oo"
+      ],
+      "why": "b-oa-t has oa."
+    },
+    {
+      "q": "Add e to \"not\". What word?",
+      "o": [
+        "note",
+        "nut",
+        "net"
+      ],
+      "why": "not + e = note."
+    },
+    {
+      "q": "A dog likes to eat a ___.",
+      "o": [
+        "bone",
+        "rose",
+        "note"
+      ],
+      "why": "Dogs like bones."
+    },
+    {
+      "q": "It is ___ big!",
+      "o": [
+        "so",
+        "said",
+        "come"
+      ],
+      "why": "It is so big! uses so."
+    },
+    {
+      "q": "A red flower.",
+      "o": [
+        "rose",
+        "rope",
+        "home"
+      ],
+      "why": "A rose is a flower."
+    },
+    {
+      "q": "Which word has a magic e?",
+      "o": [
+        "stone",
+        "boat",
+        "moon"
+      ],
+      "why": "s-t-o-n-e has o-e."
+    },
+    {
+      "q": "Where do you live?",
+      "o": [
+        "home",
+        "cone",
+        "nose"
+      ],
+      "why": "We live at home."
+    },
+    {
+      "q": "Which is spelled right?",
+      "o": [
+        "rope",
+        "roap",
+        "rop"
+      ],
+      "why": "r-o-p-e spells rope."
+    },
+    {
+      "q": "Add e to \"hop\". What word?",
+      "o": [
+        "hope",
+        "hip",
+        "hoop"
+      ],
+      "why": "hop + e = hope."
+    },
+    {
+      "q": "Which word does NOT have o-e?",
+      "o": [
+        "coat",
+        "cone",
+        "home"
+      ],
+      "why": "Coat has oa."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "A dog's food",
+      "a": "bone",
+      "d": [
+        "rose",
+        "rope",
+        "note"
+      ]
+    },
+    {
+      "q": "Ice cream is in a ___.",
+      "a": "cone",
+      "d": [
+        "home",
+        "stone",
+        "nose"
+      ]
+    },
+    {
+      "q": "We smell with it.",
+      "a": "nose",
+      "d": [
+        "note",
+        "bone",
+        "cone"
+      ]
+    },
+    {
+      "q": "A flower: r_s_",
+      "a": "rose",
+      "d": [
+        "rope",
+        "stone",
+        "home"
+      ]
+    },
+    {
+      "q": "not + e",
+      "a": "note",
+      "d": [
+        "nut",
+        "net",
+        "nose"
+      ]
+    },
+    {
+      "q": "rod + e",
+      "a": "rode",
+      "d": [
+        "rad",
+        "red",
+        "rid"
+      ]
+    },
+    {
+      "q": "The cake is ___ sweet!",
+      "a": "so",
+      "d": [
+        "do",
+        "come",
+        "said"
+      ]
+    },
+    {
+      "q": "Find the o-e word.",
+      "a": "stone",
+      "d": [
+        "boat",
+        "moon",
+        "coat"
+      ]
+    },
+    {
+      "q": "Find the oa word.",
+      "a": "coat",
+      "d": [
+        "cone",
+        "home",
+        "rope"
+      ]
+    },
+    {
+      "q": "Find the right spelling.",
+      "a": "home",
+      "d": [
+        "hom",
+        "hoam",
+        "homm"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which word has o-e?",
+      "o": [
+        "rope",
+        "boat",
+        "moon",
+        "cloud"
+      ],
+      "why": "r-o-p-e has o-e."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which is the tricky word in this lesson?",
+      "o": [
+        "so",
+        "bone",
+        "home",
+        "rose"
+      ],
+      "why": "So is the tricky word."
+    },
+    {
+      "lv": "التذكر",
+      "q": "o-e makes the same sound as ___.",
+      "o": [
+        "oa",
+        "ee",
+        "er",
+        "oi"
+      ],
+      "why": "o-e and oa sound the same, like in bone and boat."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Write the word for a picture of a bone.",
+      "o": [
+        "bone",
+        "bon",
+        "boan",
+        "bun"
+      ],
+      "why": "b-o-n-e spells bone."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Complete: The dog is ___ happy!",
+      "o": [
+        "so",
+        "said",
+        "come",
+        "do"
+      ],
+      "why": "So makes happy stronger."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Circle o-e in \"stone\".",
+      "o": [
+        "st-o-n-e (o and e)",
+        "st-on-e (on)",
+        "s-to-ne (to)",
+        "sto-ne (ne)"
+      ],
+      "why": "The o and the e are joined around n."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Which word fits? I write a ___ to my friend.",
+      "o": [
+        "note",
+        "nose",
+        "cone",
+        "rose"
+      ],
+      "why": "We write a note."
+    },
+    {
+      "lv": "التحليل",
+      "q": "What does the magic e do in \"note\"?",
+      "o": [
+        "It changes the o sound.",
+        "It makes a loud e sound.",
+        "It makes the word short.",
+        "Nothing."
+      ],
+      "why": "The e is quiet and changes not into note."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which two words have the same sound but different spellings?",
+      "o": [
+        "bone and boat",
+        "bone and bike",
+        "boat and bee",
+        "home and herd"
+      ],
+      "why": "o-e in bone and oa in boat sound the same."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word is the odd one out?",
+      "o": [
+        "moon",
+        "home",
+        "rose",
+        "cone"
+      ],
+      "why": "Moon has oo; the others have o-e."
+    }
+  ]
+}

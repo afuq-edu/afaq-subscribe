@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 4: My favourite toy",
+ "lesson": "Lesson 1: Toys – What colour is it? + Sounds th",
+ "outcomes": [
+  "I can name toys: ball, car, robot and teddy.",
+  "I can ask and answer: What colour is it? It's red.",
+  "I can hear the th sound in three, this and thumb."
+ ],
+ "tf": [
+  {
+   "s": "A teddy is a toy.",
+   "t": true,
+   "why": "Yes! A teddy is a soft toy."
+  },
+  {
+   "s": "Sami's robot is red.",
+   "t": true,
+   "why": "Great! Sami's robot is red."
+  },
+  {
+   "s": "We answer What colour is it? with It's a ball.",
+   "t": false,
+   "why": "We answer with a colour, like It's red."
+  },
+  {
+   "s": "Three starts with the th sound.",
+   "t": true,
+   "why": "Yes! Th-th-three."
+  },
+  {
+   "s": "Fish starts with the th sound.",
+   "t": false,
+   "why": "Fish starts with f. Think starts with th."
+  },
+  {
+   "s": "th – i – n makes the word thin.",
+   "t": true,
+   "why": "Well done! th-i-n is thin."
+  },
+  {
+   "s": "m – o – th makes the word moth.",
+   "t": true,
+   "why": "Right! m-o-th is moth."
+  },
+  {
+   "s": "A whiteboard is a toy.",
+   "t": false,
+   "why": "A whiteboard is a classroom thing. A ball is a toy."
+  },
+  {
+   "s": "This is my car. tells about your toy.",
+   "t": true,
+   "why": "Yes! This is my … shows your toy."
+  },
+  {
+   "s": "Shell starts with the th sound.",
+   "t": false,
+   "why": "Shell starts with sh. Thumb starts with th."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's this? (a robot)",
+   "o": [
+    "It's a robot.",
+    "It's a teddy.",
+    "It's a car."
+   ],
+   "why": "It's a robot. Well done!"
+  },
+  {
+   "q": "What colour is it? (a blue car)",
+   "o": [
+    "It's blue.",
+    "It's a car.",
+    "It's my car."
+   ],
+   "why": "It's blue tells the colour."
+  },
+  {
+   "q": "Which word starts with th?",
+   "o": [
+    "thumb",
+    "fish",
+    "goat"
+   ],
+   "why": "Th-th-thumb starts with th."
+  },
+  {
+   "q": "th – i – ck. What's the word?",
+   "o": [
+    "thick",
+    "thin",
+    "moth"
+   ],
+   "why": "th-i-ck makes thick."
+  },
+  {
+   "q": "What's missing? _umb",
+   "o": [
+    "th",
+    "sh",
+    "b"
+   ],
+   "why": "th + umb makes thumb."
+  },
+  {
+   "q": "Which one is a toy?",
+   "o": [
+    "ball",
+    "door",
+    "desk"
+   ],
+   "why": "A ball is a toy."
+  },
+  {
+   "q": "Has Sami got a car?",
+   "o": [
+    "Yes.",
+    "No.",
+    "It's red."
+   ],
+   "why": "Yes! Sami has got a car."
+  },
+  {
+   "q": "Which letters make the th sound?",
+   "o": [
+    "t and h",
+    "s and h",
+    "c and h"
+   ],
+   "why": "T and h make th."
+  },
+  {
+   "q": "Show your toy. What do you say?",
+   "o": [
+    "This is my teddy.",
+    "Who's this?",
+    "Goodbye!"
+   ],
+   "why": "This is my … shows your toy."
+  },
+  {
+   "q": "Which number starts with th?",
+   "o": [
+    "three",
+    "two",
+    "six"
+   ],
+   "why": "Three starts with th."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "A soft toy bear",
+   "a": "teddy",
+   "d": [
+    "robot",
+    "car",
+    "ball"
+   ]
+  },
+  {
+   "q": "A toy with wheels",
+   "a": "car",
+   "d": [
+    "teddy",
+    "ball",
+    "robot"
+   ]
+  },
+  {
+   "q": "Sami's robot is …",
+   "a": "red",
+   "d": [
+    "blue",
+    "green",
+    "yellow"
+   ]
+  },
+  {
+   "q": "It starts with th",
+   "a": "thumb",
+   "d": [
+    "fish",
+    "goat",
+    "shell"
+   ]
+  },
+  {
+   "q": "th – i – n",
+   "a": "thin",
+   "d": [
+    "thick",
+    "moth",
+    "fin"
+   ]
+  },
+  {
+   "q": "m – o – th",
+   "a": "moth",
+   "d": [
+    "mop",
+    "thin",
+    "moss"
+   ]
+  },
+  {
+   "q": "Ask about a colour",
+   "a": "What colour is it?",
+   "d": [
+    "What's this?",
+    "Who's this?",
+    "Where's my car?"
+   ]
+  },
+  {
+   "q": "A number with th",
+   "a": "three",
+   "d": [
+    "four",
+    "five",
+    "two"
+   ]
+  },
+  {
+   "q": "Letters for the th sound",
+   "a": "th",
+   "d": [
+    "sh",
+    "ch",
+    "f"
+   ]
+  },
+  {
+   "q": "We kick a …",
+   "a": "ball",
+   "d": [
+    "teddy",
+    "robot",
+    "car"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word is a toy?",
+   "o": [
+    "robot",
+    "window",
+    "desk",
+    "door"
+   ],
+   "why": "A robot is a toy."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these words starts with th?",
+   "o": [
+    "think",
+    "fan",
+    "bag",
+    "shop"
+   ],
+   "why": "Think starts with th."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What colour is Sami's robot?",
+   "o": [
+    "Red",
+    "Blue",
+    "Green",
+    "Yellow"
+   ],
+   "why": "Sami's robot is red."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question asks about a colour?",
+   "o": [
+    "What colour is it?",
+    "What's this?",
+    "Who's this?",
+    "Where's the bag?"
+   ],
+   "why": "What colour is it? asks for a colour."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner shows a green car. What colour is it?",
+   "o": [
+    "It's green.",
+    "It's a car.",
+    "It's red.",
+    "It's my teddy."
+   ],
+   "why": "It's green tells the colour."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Listen: th – i – ck. What's the word?",
+   "o": [
+    "thick",
+    "thin",
+    "moth",
+    "chick"
+   ],
+   "why": "th-i-ck makes thick."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You show your ball to a friend. What do you say?",
+   "o": [
+    "This is my ball.",
+    "Who's this?",
+    "What colour is it?",
+    "Thank you."
+   ],
+   "why": "This is my ball shows your toy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence tells the toy and its colour?",
+   "o": [
+    "It's a green car.",
+    "It's a car.",
+    "It's green.",
+    "What colour is it?"
+   ],
+   "why": "It's a green car tells both."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT start with th?",
+   "o": [
+    "fish",
+    "three",
+    "this",
+    "thumb"
+   ],
+   "why": "Fish starts with f."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group are all toys?",
+   "o": [
+    "ball, car, teddy",
+    "ball, door, robot",
+    "car, desk, teddy",
+    "window, robot, ball"
+   ],
+   "why": "Ball, car and teddy are all toys."
+  }
+ ]
+}

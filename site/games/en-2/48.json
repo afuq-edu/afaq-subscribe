@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Sounds and Spelling – Unit 4, Lesson 1: ee",
+  "outcomes": [
+    "I can say the sound of ee.",
+    "I can read and write words like sheep, bee and feet.",
+    "I can read the tricky word said."
+  ],
+  "tf": [
+    {
+      "s": "Sheep has the letters ee.",
+      "t": true,
+      "why": "Yes! sh-ee-p has ee."
+    },
+    {
+      "s": "Bee and see have the same sound.",
+      "t": true,
+      "why": "Great! Both end with ee."
+    },
+    {
+      "s": "Cheese has the letters oi.",
+      "t": false,
+      "why": "Cheese has ee: ch-ee-se."
+    },
+    {
+      "s": "Teeth has the letters ee.",
+      "t": true,
+      "why": "Well done! t-ee-th has ee."
+    },
+    {
+      "s": "Green is spelled g-r-e-n.",
+      "t": false,
+      "why": "Green has two e's: g-r-ee-n."
+    },
+    {
+      "s": "Said is a tricky word.",
+      "t": true,
+      "why": "Yes! We learn said by heart."
+    },
+    {
+      "s": "Coin has the ee sound.",
+      "t": false,
+      "why": "Coin has the oi sound."
+    },
+    {
+      "s": "We blend sl-ee-p to read sleep.",
+      "t": true,
+      "why": "Great blending! sl-ee-p is sleep."
+    },
+    {
+      "s": "Feet has the letters ou.",
+      "t": false,
+      "why": "Feet has ee: f-ee-t."
+    },
+    {
+      "s": "Cloud has the ee sound.",
+      "t": false,
+      "why": "Cloud has the ou sound."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Blend sh – ee – p.",
+      "o": [
+        "sheep",
+        "ship",
+        "shop"
+      ],
+      "why": "sh-ee-p makes sheep."
+    },
+    {
+      "q": "Which word has ee?",
+      "o": [
+        "bee",
+        "boil",
+        "bike"
+      ],
+      "why": "b-ee has ee."
+    },
+    {
+      "q": "A yellow and black insect.",
+      "o": [
+        "bee",
+        "sheep",
+        "cheese"
+      ],
+      "why": "A bee is a yellow and black insect."
+    },
+    {
+      "q": "\"I am six,\" ___ the boy.",
+      "o": [
+        "said",
+        "sad",
+        "see"
+      ],
+      "why": "We use said to tell what someone says."
+    },
+    {
+      "q": "We bite with our ___.",
+      "o": [
+        "teeth",
+        "feet",
+        "sheep"
+      ],
+      "why": "We bite with our teeth."
+    },
+    {
+      "q": "Which is the right spelling?",
+      "o": [
+        "sweet",
+        "swet",
+        "swiet"
+      ],
+      "why": "s-w-ee-t spells sweet."
+    },
+    {
+      "q": "Circle ee in \"teeth\".",
+      "o": [
+        "t-ee-th",
+        "te-et-h",
+        "tee-t-h"
+      ],
+      "why": "The two e's are together: t-ee-th."
+    },
+    {
+      "q": "The grass is ___.",
+      "o": [
+        "green",
+        "sleep",
+        "feet"
+      ],
+      "why": "Grass is green."
+    },
+    {
+      "q": "What do we do at night?",
+      "o": [
+        "sleep",
+        "sweet",
+        "cheese"
+      ],
+      "why": "We sleep at night."
+    },
+    {
+      "q": "What sound does ee make?",
+      "o": [
+        "/iː/ as in bee",
+        "/aʊ/ as in cloud",
+        "/ɔɪ/ as in coin"
+      ],
+      "why": "ee says /iː/ like in bee."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Blend sl – ee – p.",
+      "a": "sleep",
+      "d": [
+        "slip",
+        "slap",
+        "slope"
+      ]
+    },
+    {
+      "q": "Blend f – ee – t.",
+      "a": "feet",
+      "d": [
+        "fit",
+        "fat",
+        "foot"
+      ]
+    },
+    {
+      "q": "Blend b – ee.",
+      "a": "bee",
+      "d": [
+        "boy",
+        "bye",
+        "bow"
+      ]
+    },
+    {
+      "q": "Find the ee word (food).",
+      "a": "cheese",
+      "d": [
+        "coin",
+        "cloud",
+        "kite"
+      ]
+    },
+    {
+      "q": "Find the ee word (colour).",
+      "a": "green",
+      "d": [
+        "glue",
+        "five",
+        "soil"
+      ]
+    },
+    {
+      "q": "We bite with them.",
+      "a": "teeth",
+      "d": [
+        "feet",
+        "sheep",
+        "bees"
+      ]
+    },
+    {
+      "q": "We walk on them.",
+      "a": "feet",
+      "d": [
+        "teeth",
+        "bees",
+        "cheese"
+      ]
+    },
+    {
+      "q": "\"Hello,\" ___ Mum.",
+      "a": "said",
+      "d": [
+        "some",
+        "all",
+        "give"
+      ]
+    },
+    {
+      "q": "Find the right spelling.",
+      "a": "sleep",
+      "d": [
+        "slep",
+        "sleap",
+        "slip"
+      ]
+    },
+    {
+      "q": "Sugar is ___.",
+      "a": "sweet",
+      "d": [
+        "green",
+        "sleep",
+        "feet"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which word has the ee sound?",
+      "o": [
+        "see",
+        "soil",
+        "slide",
+        "shout"
+      ],
+      "why": "s-ee has ee."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which is the tricky word in this lesson?",
+      "o": [
+        "said",
+        "sheep",
+        "bee",
+        "green"
+      ],
+      "why": "Said is the tricky word."
+    },
+    {
+      "lv": "التذكر",
+      "q": "How many e's are in \"bee\"?",
+      "o": [
+        "two",
+        "one",
+        "three",
+        "four"
+      ],
+      "why": "b-e-e has two e's."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which letters say /iː/ in sheep?",
+      "o": [
+        "ee",
+        "sh",
+        "ou",
+        "oi"
+      ],
+      "why": "ee says /iː/."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Blend ch – ee – se.",
+      "o": [
+        "cheese",
+        "choose",
+        "chess",
+        "chase"
+      ],
+      "why": "ch-ee-se makes cheese."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Complete: \"Come here,\" ___ Dad.",
+      "o": [
+        "said",
+        "sad",
+        "sea",
+        "some"
+      ],
+      "why": "Said tells us what Dad says."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Write the word for a picture of a bee.",
+      "o": [
+        "bee",
+        "bie",
+        "bea",
+        "bey"
+      ],
+      "why": "b-ee spells bee."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word does NOT have ee?",
+      "o": [
+        "coin",
+        "feet",
+        "sheep",
+        "green"
+      ],
+      "why": "Coin has oi, not ee."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which two words have the same sound?",
+      "o": [
+        "sheep and sleep",
+        "sheep and shout",
+        "bee and bike",
+        "feet and five"
+      ],
+      "why": "Sheep and sleep both have ee."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Tom wrote \"swet\". What is missing?",
+      "o": [
+        "one e: sweet",
+        "an o: swot",
+        "an i: swit",
+        "nothing"
+      ],
+      "why": "Sweet needs two e's."
+    }
+  ]
+}

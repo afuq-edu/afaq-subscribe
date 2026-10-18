@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 2 – Then and now",
+ "lesson": "Lesson 7: Skills – Reading: a science blog",
+ "outcomes": [
+  "I can predict what a text is about from its title and match headings to paragraphs.",
+  "I can find facts about the history of cardboard in a science blog.",
+  "I can explain why cardboard with triangles is strong."
+ ],
+ "tf": [
+  {
+   "s": "The text is a science blog.",
+   "t": true,
+   "why": "Yes! It's Majid's science blog about cardboard."
+  },
+  {
+   "s": "Robert Gair invented the cardboard box.",
+   "t": true,
+   "why": "Right! He was a Scottish engineer."
+  },
+  {
+   "s": "The first cardboard box was in 1906.",
+   "t": false,
+   "why": "The first cardboard box was in 1879."
+  },
+  {
+   "s": "Robert Gair was a doctor from Oman.",
+   "t": false,
+   "why": "He was a Scottish engineer."
+  },
+  {
+   "s": "The triangle is the strongest shape.",
+   "t": true,
+   "why": "Yes! It can carry a lot."
+  },
+  {
+   "s": "A house of cards works better with squares than with triangles.",
+   "t": false,
+   "why": "It works with triangles but not with squares."
+  },
+  {
+   "s": "In 1906, a food company put a name and a picture on a cereal box.",
+   "t": true,
+   "why": "Yes! That happened for the first time in 1906."
+  },
+  {
+   "s": "We can see triangle shapes in bridges and bikes.",
+   "t": true,
+   "why": "Great! Triangles make them strong."
+  },
+  {
+   "s": "An engineer is a person who sells food.",
+   "t": false,
+   "why": "An engineer designs and builds things."
+  },
+  {
+   "s": "Paragraph 2 of the blog is about cardboard in space.",
+   "t": false,
+   "why": "Paragraph 2 is the History of cardboard."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who invented the cardboard box?",
+   "o": [
+    "Robert Gair",
+    "Majid",
+    "Jake"
+   ],
+   "why": "Robert Gair, a Scottish engineer."
+  },
+  {
+   "q": "When did Robert Gair invent the cardboard box?",
+   "o": [
+    "in 1879",
+    "in 1906",
+    "in 1997"
+   ],
+   "why": "The blog says 1879."
+  },
+  {
+   "q": "What happened for the first time in 1906?",
+   "o": [
+    "a cereal box with a name and a picture",
+    "the first cardboard box",
+    "the first house of cards"
+   ],
+   "why": "A food company put the name and a picture on a cereal box."
+  },
+  {
+   "q": "Which shape is the strongest?",
+   "o": [
+    "a triangle",
+    "a square",
+    "a circle"
+   ],
+   "why": "Triangles can carry a lot."
+  },
+  {
+   "q": "Which paragraph is \"History of cardboard\"?",
+   "o": [
+    "Paragraph 2",
+    "Paragraph 4",
+    "Paragraph 1"
+   ],
+   "why": "History of cardboard is paragraph 2."
+  },
+  {
+   "q": "Who writes the science blog?",
+   "o": [
+    "Majid",
+    "Robert Gair",
+    "Osama"
+   ],
+   "why": "It's Majid's science blog."
+  },
+  {
+   "q": "Robert Gair was ___.",
+   "o": [
+    "Scottish",
+    "Omani",
+    "Chinese"
+   ],
+   "why": "He was a Scottish engineer."
+  },
+  {
+   "q": "To make something new for the first time is to ___.",
+   "o": [
+    "invent",
+    "carry",
+    "post"
+   ],
+   "why": "Robert Gair invented the cardboard box."
+  },
+  {
+   "q": "What is a cereal box made of?",
+   "o": [
+    "cardboard",
+    "glass",
+    "metal"
+   ],
+   "why": "Cereal boxes are made of cardboard."
+  },
+  {
+   "q": "Not weak, it can carry a lot: it's ___.",
+   "o": [
+    "strong",
+    "small",
+    "soft"
+   ],
+   "why": "Strong things can carry a lot."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The first cardboard box: year",
+   "a": "1879",
+   "d": [
+    "1906",
+    "1789",
+    "1970"
+   ]
+  },
+  {
+   "q": "The first cereal box picture: year",
+   "a": "1906",
+   "d": [
+    "1879",
+    "1609",
+    "1960"
+   ]
+  },
+  {
+   "q": "Inventor of the cardboard box",
+   "a": "Robert Gair",
+   "d": [
+    "Majid",
+    "Jake",
+    "Osama"
+   ]
+  },
+  {
+   "q": "Robert Gair's job",
+   "a": "engineer",
+   "d": [
+    "vet",
+    "teacher",
+    "pilot"
+   ]
+  },
+  {
+   "q": "The strongest shape",
+   "a": "triangle",
+   "d": [
+    "square",
+    "circle",
+    "line"
+   ]
+  },
+  {
+   "q": "A shape with four equal sides",
+   "a": "square",
+   "d": [
+    "triangle",
+    "circle",
+    "line"
+   ]
+  },
+  {
+   "q": "The blog's material",
+   "a": "cardboard",
+   "d": [
+    "glass",
+    "metal",
+    "plastic"
+   ]
+  },
+  {
+   "q": "Box with a food name and picture",
+   "a": "cereal box",
+   "d": [
+    "glass box",
+    "shoe box",
+    "toy box"
+   ]
+  },
+  {
+   "q": "A place with triangle shapes",
+   "a": "bridges",
+   "d": [
+    "clouds",
+    "rivers",
+    "oceans"
+   ]
+  },
+  {
+   "q": "Type of text",
+   "a": "science blog",
+   "d": [
+    "police report",
+    "email",
+    "poem"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who was Robert Gair?",
+   "o": [
+    "a Scottish engineer",
+    "an Omani teacher",
+    "a vet in London",
+    "a food company owner in 1906"
+   ],
+   "why": "He was a Scottish engineer who invented the cardboard box."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which words are from the blog?",
+   "o": [
+    "cardboard, engineer, invent, triangle",
+    "diamond, magnet, suspect, circus",
+    "keyboard, mouse, tablet, email",
+    "stage, karate, banana, juggling"
+   ],
+   "why": "These are the science blog words."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What happened in 1879?",
+   "o": [
+    "Robert Gair invented the cardboard box.",
+    "The first cereal box with a picture.",
+    "Majid wrote his blog.",
+    "The first house of cards."
+   ],
+   "why": "1879 is the year of the first cardboard box."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What can we do before reading a text?",
+   "o": [
+    "Predict what it is about from the title.",
+    "Close the book.",
+    "Read only the last word.",
+    "Skip the title."
+   ],
+   "why": "The title helps us predict."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Name three places where you can see triangle shapes.",
+   "o": [
+    "bridges, houses, bikes",
+    "clouds, rivers, the sea",
+    "eggs, balls, coins",
+    "the sun, the moon, a CD"
+   ],
+   "why": "Triangles make these things strong."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Describe a cardboard object at home. Which sentence is best?",
+   "o": [
+    "This is a cereal box. We keep our breakfast in it.",
+    "This is a glass. I drink water from it.",
+    "This is a phone. I call my friend.",
+    "This is a pen. I write with it."
+   ],
+   "why": "A cereal box is made of cardboard."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You build one card shape with triangles and one with squares. What happens?",
+   "o": [
+    "The triangle shape stands; the square one falls.",
+    "The square shape stands; the triangle one falls.",
+    "Both fall.",
+    "Both shapes fly."
+   ],
+   "why": "Triangles are the strongest shape."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does a house of cards work with triangles but not with squares?",
+   "o": [
+    "The triangle is the strongest shape; it can carry a lot.",
+    "Squares are too big.",
+    "Triangles are heavier.",
+    "Cards don't like squares."
+   ],
+   "why": "Triangles stay strong and keep their shape."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How many years after the first cardboard box was the first cereal box with a picture?",
+   "o": [
+    "27 years",
+    "17 years",
+    "37 years",
+    "7 years"
+   ],
+   "why": "1906 − 1879 = 27."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A paragraph tells us about 1879 and 1906. Which heading fits it best?",
+   "o": [
+    "History of cardboard",
+    "Why triangles are strong",
+    "Cardboard at my house",
+    "How to build a bridge"
+   ],
+   "why": "Years and first inventions are history."
+  }
+ ]
+}

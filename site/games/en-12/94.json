@@ -1,0 +1,267 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: Service With a Smile (Listening & Speaking)",
+ "lesson": "Role play, tour-guide problems and ‘The customer is always right’",
+ "outcomes": [
+  "Role-play complaints and polite responses",
+  "Suggest solutions using 'I think I would…'",
+  "Discuss whether 'the customer is always right'"
+ ],
+ "tf": [
+  {
+   "s": "Harry Gordon Selfridge founded the store Selfridge's.",
+   "t": true,
+   "why": "Yes, and he is linked to the famous phrase."
+  },
+  {
+   "s": "'I think I would…' can introduce a hypothetical solution.",
+   "t": true,
+   "why": "Correct, it suggests what you would do."
+  },
+  {
+   "s": "Workbook Activity 3 asks if the customer is right in different situations.",
+   "t": true,
+   "why": "Yes, groups discuss situations A–D."
+  },
+  {
+   "s": "Some people criticise the phrase because some customers can be rude.",
+   "t": true,
+   "why": "Right, customers are not always right."
+  },
+  {
+   "s": "A good waiter should argue loudly with an unhappy customer.",
+   "t": false,
+   "why": "A good waiter stays calm and polite."
+  },
+  {
+   "s": "A hypothetical situation is one that has really happened.",
+   "t": false,
+   "why": "A hypothetical situation is imagined."
+  },
+  {
+   "s": "In the role play, one person complains and the other responds politely.",
+   "t": true,
+   "why": "Yes, you practise complaining and responding."
+  },
+  {
+   "s": "'The best idea would be to…' is a phrase for complaining.",
+   "t": false,
+   "why": "It is a phrase for suggesting a solution."
+  },
+  {
+   "s": "The customer is right in every situation, without exception.",
+   "t": false,
+   "why": "The lesson shows that sometimes the customer is wrong."
+  },
+  {
+   "s": "The phrase encourages staff to give good service.",
+   "t": true,
+   "why": "Yes, that is one reason companies use it."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who coined 'The customer is always right'?",
+   "o": [
+    "Harry Gordon Selfridge",
+    "A taxi driver",
+    "A tour guide"
+   ],
+   "why": "Selfridge is linked to this phrase."
+  },
+  {
+   "q": "What could a waiter say to avoid a scene?",
+   "o": [
+    "I'm sorry, let me fix that for you.",
+    "That's your problem.",
+    "Go away!"
+   ],
+   "why": "An apology calms the customer."
+  },
+  {
+   "q": "Which phrase introduces a solution?",
+   "o": [
+    "The best idea would be to…",
+    "Leave me alone.",
+    "Who cares?"
+   ],
+   "why": "It suggests a sensible plan."
+  },
+  {
+   "q": "What do groups do in Activity 5?",
+   "o": [
+    "Choose a tour-guide problem and solve it",
+    "Write a poem",
+    "Draw a map"
+   ],
+   "why": "Groups decide what to do about a problem."
+  },
+  {
+   "q": "What is 'customer service'?",
+   "o": [
+    "Helping customers well",
+    "Cooking food",
+    "Building hotels"
+   ],
+   "why": "Good service keeps customers happy."
+  },
+  {
+   "q": "Who are 'customers'?",
+   "o": [
+    "People who buy goods or services",
+    "The workers",
+    "The owners"
+   ],
+   "why": "Customers buy from a business."
+  },
+  {
+   "q": "What is a 'role play'?",
+   "o": [
+    "Acting out a situation",
+    "Reading silently",
+    "Writing a test"
+   ],
+   "why": "In a role play you act a part."
+  },
+  {
+   "q": "What does 'hypothetical' mean?",
+   "o": [
+    "imagined, not real",
+    "true and in the past",
+    "very funny"
+   ],
+   "why": "Hypothetical situations are 'what if' ideas."
+  },
+  {
+   "q": "What tone should staff use with a difficult customer?",
+   "o": [
+    "polite",
+    "rude",
+    "angry"
+   ],
+   "why": "Politeness helps solve problems."
+  },
+  {
+   "q": "Why do companies use the phrase?",
+   "o": [
+    "To promise good service",
+    "To scare staff",
+    "To raise prices"
+   ],
+   "why": "It tells customers they will be treated well."
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which phrases introduce a hypothetical solution?",
+   "o": [
+    "I think I would… / The best idea would be to…",
+    "Yesterday I went… / Last week I saw…",
+    "Hi there! / See ya!",
+    "Yours faithfully / Love from"
+   ],
+   "why": "These phrases suggest what you would do."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which store did Harry Gordon Selfridge found?",
+   "o": [
+    "Selfridge's",
+    "A tour company",
+    "A cruise ship",
+    "A restaurant in Muscat"
+   ],
+   "why": "He was the founder of Selfridge's."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrases do you use in the role play?",
+   "o": [
+    "Phrases for complaining and responding",
+    "Phrases for ending letters",
+    "Phrases for describing graphs",
+    "Phrases for telling the time"
+   ],
+   "why": "The Soundbites help you complain and reply."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a 'solution'?",
+   "o": [
+    "A way to deal with a problem",
+    "A new problem",
+    "A complaint",
+    "A customer"
+   ],
+   "why": "Groups look for solutions to problems."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are a waiter and a customer says the soup is cold. What do you say?",
+   "o": [
+    "I'm so sorry. I'll bring you a hot one right away.",
+    "It's fine, eat it.",
+    "That's not my problem.",
+    "Soup is always cold here."
+   ],
+   "why": "Apologise and fix the problem."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are a tour guide and a tourist complains that the bus is late. Which response is best?",
+   "o": [
+    "I'm sorry for the delay. The best idea would be to wait in the shade while I call the driver.",
+    "Stop complaining.",
+    "It isn't my job.",
+    "Then walk."
+   ],
+   "why": "A polite response with a solution is best."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: If a tourist lost his passport, I think I ___ help him call the embassy.",
+   "o": [
+    "would",
+    "will to",
+    "did",
+    "am"
+   ],
+   "why": "Hypothetical solutions use 'would'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might the phrase make employees unhappy?",
+   "o": [
+    "Staff must agree even when the customer is wrong or rude",
+    "Customers always pay more",
+    "Staff get longer holidays",
+    "It makes work too easy"
+   ],
+   "why": "Being told the customer is always right can feel unfair."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A customer shouts at a shop assistant for no reason. What is the best view?",
+   "o": [
+    "The customer is not right, but the assistant should stay calm and polite",
+    "The customer is never wrong, so the assistant is to blame",
+    "The assistant should shout back",
+    "The assistant should walk away and say nothing"
+   ],
+   "why": "Even when customers are wrong, good service stays polite."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it good to stay polite with a difficult customer?",
+   "o": [
+    "It calms the situation and protects the company's name",
+    "It makes the customer angrier",
+    "It is never useful",
+    "It ends the conversation badly"
+   ],
+   "why": "Politeness solves problems better than anger."
+  }
+ ]
+}

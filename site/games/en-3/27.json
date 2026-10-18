@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Atomic's Learning Club 1",
+ "lesson": "Learning Club 1 – Lesson 1: Language booster 1 (numbers 21–30 and tens)",
+ "outcomes": [
+  "I can say and write the numbers 21 to 30.",
+  "I can count in tens to one hundred.",
+  "I can find the missing number in a pattern."
+ ],
+ "tf": [
+  {
+   "s": "Twenty-five comes after twenty-four.",
+   "t": true,
+   "why": "Yes! 24, then 25."
+  },
+  {
+   "s": "We write 21 as twenty-one, with a hyphen.",
+   "t": true,
+   "why": "Right! Twenty-one has a hyphen."
+  },
+  {
+   "s": "We spell 40 as fourty.",
+   "t": false,
+   "why": "The correct spelling is forty, with no u."
+  },
+  {
+   "s": "Ninety comes before one hundred when we count in tens.",
+   "t": true,
+   "why": "Yes! 90, then 100."
+  },
+  {
+   "s": "Sixteen is bigger than sixty.",
+   "t": false,
+   "why": "Sixty (60) is bigger than sixteen (16)."
+  },
+  {
+   "s": "Thirty, forty, fifty, sixty: we add ten each time.",
+   "t": true,
+   "why": "Great! This pattern is +10."
+  },
+  {
+   "s": "67 is sixty-seven.",
+   "t": true,
+   "why": "Well done! 60 + 7 = sixty-seven."
+  },
+  {
+   "s": "45 is fifty-four.",
+   "t": false,
+   "why": "45 is forty-five."
+  },
+  {
+   "s": "Twenty-two, twenty-four, twenty-six: we add two each time.",
+   "t": true,
+   "why": "Yes! The rule is +2."
+  },
+  {
+   "s": "We write 100 as ten hundred.",
+   "t": false,
+   "why": "100 is one hundred."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What comes after twenty-nine?",
+   "o": [
+    "thirty",
+    "twenty-ten",
+    "forty"
+   ],
+   "why": "After 29 comes 30."
+  },
+  {
+   "q": "Write 28 in words.",
+   "o": [
+    "twenty-eight",
+    "eighty-two",
+    "twelve-eight"
+   ],
+   "why": "28 = twenty-eight."
+  },
+  {
+   "q": "Complete: thirty, ___, fifty, sixty",
+   "o": [
+    "forty",
+    "forty-one",
+    "thirty-one"
+   ],
+   "why": "The rule is +10."
+  },
+  {
+   "q": "Which is bigger?",
+   "o": [
+    "sixty",
+    "sixteen",
+    "six"
+   ],
+   "why": "Sixty is 60."
+  },
+  {
+   "q": "Correct spelling:",
+   "o": [
+    "forty",
+    "fourty",
+    "fortee"
+   ],
+   "why": "We write forty."
+  },
+  {
+   "q": "What comes before one hundred in tens?",
+   "o": [
+    "ninety",
+    "eighty",
+    "ninety-nine"
+   ],
+   "why": "Count in tens: … 90, 100."
+  },
+  {
+   "q": "Match: 99",
+   "o": [
+    "ninety-nine",
+    "nineteen-nine",
+    "nine-nine"
+   ],
+   "why": "99 = ninety-nine."
+  },
+  {
+   "q": "Complete: 22, 24, ___, 28",
+   "o": [
+    "26",
+    "25",
+    "27"
+   ],
+   "why": "The rule is +2."
+  },
+  {
+   "q": "Write 100 in words.",
+   "o": [
+    "one hundred",
+    "ten tens",
+    "one thousand"
+   ],
+   "why": "100 = one hundred."
+  },
+  {
+   "q": "Order from small to big:",
+   "o": [
+    "22, 25, 27, 30",
+    "30, 27, 25, 22",
+    "25, 22, 30, 27"
+   ],
+   "why": "Small to big: 22, 25, 27, 30."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "After twenty-four",
+   "a": "twenty-five",
+   "d": [
+    "twenty-three",
+    "forty-two",
+    "fifty-two"
+   ]
+  },
+  {
+   "q": "28 in words",
+   "a": "twenty-eight",
+   "d": [
+    "eighty-two",
+    "twenty-six",
+    "eighteen"
+   ]
+  },
+  {
+   "q": "45 in words",
+   "a": "forty-five",
+   "d": [
+    "fifty-four",
+    "fourteen",
+    "forty-four"
+   ]
+  },
+  {
+   "q": "67 in words",
+   "a": "sixty-seven",
+   "d": [
+    "seventy-six",
+    "sixty-six",
+    "seventeen"
+   ]
+  },
+  {
+   "q": "thirty, ___, fifty",
+   "a": "forty",
+   "d": [
+    "forty-one",
+    "thirty-five",
+    "sixty"
+   ]
+  },
+  {
+   "q": "eighty, ninety, ___",
+   "a": "one hundred",
+   "d": [
+    "ninety-one",
+    "seventy",
+    "eighty-one"
+   ]
+  },
+  {
+   "q": "twenty-two, twenty-four, ___",
+   "a": "twenty-six",
+   "d": [
+    "twenty-five",
+    "twenty-eight",
+    "twenty-three"
+   ]
+  },
+  {
+   "q": "forty-seven, fifty, ___",
+   "a": "fifty-three",
+   "d": [
+    "fifty-one",
+    "fifty-five",
+    "sixty"
+   ]
+  },
+  {
+   "q": "Before thirty",
+   "a": "twenty-nine",
+   "d": [
+    "thirty-one",
+    "twenty-one",
+    "nineteen"
+   ]
+  },
+  {
+   "q": "48 in words",
+   "a": "forty-eight",
+   "d": [
+    "eighty-four",
+    "fourteen",
+    "fifty-eight"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How do we say 30?",
+   "o": [
+    "thirty",
+    "thirteen",
+    "three-ten",
+    "twenty-ten"
+   ],
+   "why": "30 is thirty."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which number is twenty-three?",
+   "o": [
+    "23",
+    "32",
+    "13",
+    "203"
+   ],
+   "why": "Twenty + three = 23."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Count in tens: ten, twenty, thirty, …",
+   "o": [
+    "forty",
+    "thirty-one",
+    "fourteen",
+    "fifty"
+   ],
+   "why": "After thirty comes forty."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which spelling is correct?",
+   "o": [
+    "fifty",
+    "fivety",
+    "fifteey",
+    "fifthy"
+   ],
+   "why": "We write fifty."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Find the missing number: 90, 80, 70, ___",
+   "o": [
+    "60",
+    "50",
+    "71",
+    "69"
+   ],
+   "why": "The rule is −10."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Find the missing number: 25, 30, 35, ___",
+   "o": [
+    "40",
+    "36",
+    "45",
+    "38"
+   ],
+   "why": "The rule is +5."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Find the missing number: 30, 29, 28, ___",
+   "o": [
+    "27",
+    "26",
+    "29",
+    "31"
+   ],
+   "why": "The rule is −1."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the rule? forty-seven, fifty, fifty-three, fifty-six",
+   "o": [
+    "+3",
+    "+2",
+    "+5",
+    "+10"
+   ],
+   "why": "Each number is 3 more."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Polly is between 29 and 31. Where is she?",
+   "o": [
+    "30",
+    "28",
+    "32",
+    "39"
+   ],
+   "why": "30 is between 29 and 31."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which number is the biggest?",
+   "o": [
+    "ninety-one",
+    "nineteen",
+    "sixty-nine",
+    "eighty-nine"
+   ],
+   "why": "Ninety-one is 91, the biggest."
+  }
+ ]
+}

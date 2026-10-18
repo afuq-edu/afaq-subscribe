@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 1: Our planet",
+ "lesson": "Lesson 6: WOW! Culture – Climate change and animals (Project)",
+ "outcomes": [
+  "Read about how climate change puts animals in danger.",
+  "Explain why polar bears, giant pandas and Arabian tahrs are in danger.",
+  "Plan and present ideas to help an endangered animal."
+ ],
+ "tf": [
+  {
+   "s": "The Arctic sea ice is now 30% smaller than in 1979.",
+   "t": true,
+   "why": "Yes, the sea ice is getting smaller."
+  },
+  {
+   "s": "Polar bears are in danger because there is more sea ice.",
+   "t": false,
+   "why": "There is less sea ice, and in some areas it melts completely."
+  },
+  {
+   "s": "Bamboo is about 90% of a giant panda’s diet.",
+   "t": true,
+   "why": "Correct! Pandas eat mostly bamboo."
+  },
+  {
+   "s": "Bamboo grows very fast, so pandas always have enough food.",
+   "t": false,
+   "why": "Bamboo grows slowly, and climate change might make it grow even slower."
+  },
+  {
+   "s": "Arabian tahrs live in the Hajar Mountains in Oman.",
+   "t": true,
+   "why": "Great! The Hajar Mountains are their home."
+  },
+  {
+   "s": "There are more than 10,000 Arabian tahrs in the wild.",
+   "t": false,
+   "why": "There are fewer than 2,500 left in the wild."
+  },
+  {
+   "s": "Droughts are a danger for Arabian tahrs.",
+   "t": true,
+   "why": "Yes, droughts are a problem for tahrs."
+  },
+  {
+   "s": "An animal that is extinct still lives in many places.",
+   "t": false,
+   "why": "Extinct means there are no more of that animal."
+  },
+  {
+   "s": "To help these animals, we must slow down climate change and protect their homes and food.",
+   "t": true,
+   "why": "Right! Both things are important."
+  },
+  {
+   "s": "At a second-hand sale, people sell only brand new things.",
+   "t": false,
+   "why": "Second-hand things are things people used before."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where do Arabian tahrs live?",
+   "o": [
+    "the Hajar Mountains",
+    "the Arctic",
+    "the rainforest"
+   ],
+   "why": "Tahrs live in the Hajar Mountains in Oman."
+  },
+  {
+   "q": "What is the main food of giant pandas?",
+   "o": [
+    "bamboo",
+    "fish",
+    "grass seeds"
+   ],
+   "why": "Bamboo is about 90% of their diet."
+  },
+  {
+   "q": "What is the problem for polar bears?",
+   "o": [
+    "less sea ice",
+    "too much bamboo",
+    "too many mountains"
+   ],
+   "why": "The Arctic sea ice is getting smaller."
+  },
+  {
+   "q": "What is the danger for Arabian tahrs in the text?",
+   "o": [
+    "drought",
+    "snowstorms",
+    "less sea ice"
+   ],
+   "why": "Droughts make life hard for tahrs."
+  },
+  {
+   "q": "How many Arabian tahrs are left in the wild?",
+   "o": [
+    "fewer than 2,500",
+    "about 25,000",
+    "more than 250,000"
+   ],
+   "why": "Fewer than 2,500 are left."
+  },
+  {
+   "q": "What does “endangered” mean?",
+   "o": [
+    "in danger of becoming extinct",
+    "very big and strong",
+    "living only in zoos"
+   ],
+   "why": "Endangered animals might disappear."
+  },
+  {
+   "q": "We must protect their natural ___.",
+   "o": [
+    "habitats",
+    "shops",
+    "websites"
+   ],
+   "why": "A habitat is the place where an animal lives."
+  },
+  {
+   "q": "Polar bears can smell seals that are ___ away.",
+   "o": [
+    "16 km",
+    "16 m",
+    "1,600 km"
+   ],
+   "why": "Polar bears can smell seals 16 km away."
+  },
+  {
+   "q": "In a sponsored event, people give money for…",
+   "o": [
+    "each thing you do",
+    "nothing",
+    "each animal you buy"
+   ],
+   "why": "For example, money for each kilometre you walk."
+  },
+  {
+   "q": "A plan with steps to help an animal is an…",
+   "o": [
+    "action plan",
+    "diary",
+    "advert"
+   ],
+   "why": "An action plan lists ideas to do."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Panda’s main food",
+   "a": "bamboo",
+   "d": [
+    "fish",
+    "seals",
+    "grass"
+   ]
+  },
+  {
+   "q": "Polar bears live in the…",
+   "a": "Arctic",
+   "d": [
+    "desert",
+    "rainforest",
+    "Hajar"
+   ]
+  },
+  {
+   "q": "Tahrs live in these mountains",
+   "a": "Hajar",
+   "d": [
+    "Alps",
+    "Andes",
+    "Atlas"
+   ]
+  },
+  {
+   "q": "Arctic sea ice is ___ smaller",
+   "a": "30%",
+   "d": [
+    "3%",
+    "90%",
+    "60%"
+   ]
+  },
+  {
+   "q": "Bamboo in a panda’s diet",
+   "a": "90%",
+   "d": [
+    "30%",
+    "10%",
+    "50%"
+   ]
+  },
+  {
+   "q": "Tahrs in the wild: fewer than…",
+   "a": "2,500",
+   "d": [
+    "250",
+    "25,000",
+    "250,000"
+   ]
+  },
+  {
+   "q": "Danger for tahrs",
+   "a": "drought",
+   "d": [
+    "sea ice",
+    "snowstorm",
+    "bamboo"
+   ]
+  },
+  {
+   "q": "No more of an animal is left",
+   "a": "extinct",
+   "d": [
+    "endangered",
+    "renewable",
+    "wild"
+   ]
+  },
+  {
+   "q": "The place an animal lives",
+   "a": "habitat",
+   "d": [
+    "harbour",
+    "newsletter",
+    "sale"
+   ]
+  },
+  {
+   "q": "Polar bears smell seals ___ away",
+   "a": "16 km",
+   "d": [
+    "1 km",
+    "160 km",
+    "6 m"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which ideas could groups research to help an endangered animal?",
+   "o": [
+    "A sponsored event, a second-hand sale and wildlife centres",
+    "Shopping malls, cars and computers",
+    "Cutting down forests and building roads",
+    "Hunting and fishing trips"
+   ],
+   "why": "These ideas can raise money and help animals."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which animal is endangered and lives in Oman?",
+   "o": [
+    "Arabian tahr",
+    "Giant panda",
+    "Polar bear",
+    "Seal"
+   ],
+   "why": "The Arabian tahr lives in the Hajar Mountains."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a sponsored event?",
+   "o": [
+    "An event where people give money for each thing you do",
+    "A sale of old clothes",
+    "A visit to a zoo",
+    "A test at school"
+   ],
+   "why": "For example, money for every kilometre you walk."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a second-hand sale?",
+   "o": [
+    "Selling things people used before",
+    "Selling new phones",
+    "Giving free food",
+    "Buying tickets online"
+   ],
+   "why": "Second-hand means used before."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is a good idea for an action plan?",
+   "o": [
+    "We could organise a second-hand sale and give the money to a wildlife charity.",
+    "We could leave the lights on all day.",
+    "We could cut down trees for the animals.",
+    "We could throw rubbish in the mountains."
+   ],
+   "why": "This idea raises money to help animals."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Use a modal verb to give a rule for your plan:",
+   "o": [
+    "We must recycle paper and plastic.",
+    "We mustn’t recycle paper and plastic.",
+    "We needn’t to recycle paper.",
+    "We must recycling paper."
+   ],
+   "why": "Must + base verb gives a strong rule."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your group chose the Arabian oryx. Which question could another group ask you?",
+   "o": [
+    "How will you get money for the charity?",
+    "What is your favourite colour?",
+    "When is your birthday?",
+    "Where did you buy your bag?"
+   ],
+   "why": "Good questions are about the plan."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are giant pandas in danger?",
+   "o": [
+    "Bamboo grows slowly and climate change might make it grow even slower.",
+    "There is less sea ice.",
+    "They live in the Hajar Mountains.",
+    "They eat too much fish."
+   ],
+   "why": "Pandas need a lot of bamboo, which grows slowly."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How does climate change cause problems for polar bears?",
+   "o": [
+    "Warmer weather melts the sea ice they need.",
+    "It makes bamboo grow slower.",
+    "It causes droughts in the mountains.",
+    "It makes the Arctic colder."
+   ],
+   "why": "Less sea ice is a big problem for polar bears."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the same for all three animals in the text?",
+   "o": [
+    "Climate change puts them in danger.",
+    "They all eat bamboo.",
+    "They all live in Oman.",
+    "They all live on sea ice."
+   ],
+   "why": "The text is about climate change and animals in danger."
+  }
+ ]
+}

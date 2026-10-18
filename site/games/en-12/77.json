@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: Malls and Markets (Listening & Speaking)",
+ "lesson": "Predicting and listening for specific information; Soundbites / Expressing likes, dislikes and preferences: Activity 4, class survey and discussion",
+ "outcomes": [
+  "Predict and listen for specific information in interviews",
+  "Use phrases to express likes, dislikes and preferences",
+  "Carry out a class survey and report the results"
+ ],
+ "tf": [
+  {
+   "s": "Tom likes to shop at the City Mall.",
+   "t": true,
+   "why": "Yes, he likes the variety of shops and the sales."
+  },
+  {
+   "s": "Carol prefers the traditional souq in Muttrah.",
+   "t": true,
+   "why": "Correct, she likes the souq."
+  },
+  {
+   "s": "Carol says the only problem with the souq is the high prices.",
+   "t": false,
+   "why": "Her only problem is finding a parking place."
+  },
+  {
+   "s": "Tom is interested in electronics.",
+   "t": true,
+   "why": "Right, the chart shows electronics for Tom."
+  },
+  {
+   "s": "'I'm not a fan of...' is used to express a like.",
+   "t": false,
+   "why": "It expresses a dislike."
+  },
+  {
+   "s": "'I'd rather...' is used to express a preference.",
+   "t": true,
+   "why": "Yes, as in I'd rather shop in a souq than in a mall."
+  },
+  {
+   "s": "'I'm really into...' means I really like something.",
+   "t": true,
+   "why": "Correct, it is a natural way to say like."
+  },
+  {
+   "s": "'What do you think about...?' is a way to ask for someone's opinion.",
+   "t": true,
+   "why": "Yes, it invites the other person to share their view."
+  },
+  {
+   "s": "Carol likes buying electronics in the City Mall.",
+   "t": false,
+   "why": "Carol likes jewellery, antiques and pashminas in the souq."
+  },
+  {
+   "s": "A survey is a story you write about yourself.",
+   "t": false,
+   "why": "A survey collects answers from many people."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where does Tom like to shop?",
+   "o": [
+    "the City Mall",
+    "Muttrah souq",
+    "online"
+   ],
+   "why": "Tom prefers the City Mall."
+  },
+  {
+   "q": "Where does Carol like to shop?",
+   "o": [
+    "Muttrah souq",
+    "the City Mall",
+    "the airport"
+   ],
+   "why": "Carol likes the traditional souq."
+  },
+  {
+   "q": "What problem does Carol mention?",
+   "o": [
+    "parking",
+    "bad food",
+    "no shops"
+   ],
+   "why": "It is hard to find parking at the souq."
+  },
+  {
+   "q": "Which phrase expresses a dislike?",
+   "o": [
+    "I'm not very keen on...",
+    "I'm really into...",
+    "I'd rather..."
+   ],
+   "why": "Not very keen on shows a dislike."
+  },
+  {
+   "q": "Which phrase expresses a preference?",
+   "o": [
+    "I'd rather...",
+    "I'm not a fan of...",
+    "I'm really into..."
+   ],
+   "why": "I'd rather compares two choices."
+  },
+  {
+   "q": "Which phrase expresses a like?",
+   "o": [
+    "I'm really into...",
+    "I'm not a fan of...",
+    "I can't stand..."
+   ],
+   "why": "Really into means you like it a lot."
+  },
+  {
+   "q": "Complete: I'm not a ___ of modern shopping malls.",
+   "o": [
+    "fan",
+    "friend",
+    "keen"
+   ],
+   "why": "I'm not a fan of... shows a dislike."
+  },
+  {
+   "q": "Which question asks for an opinion?",
+   "o": [
+    "How about you?",
+    "Where is the mall?",
+    "What time is it?"
+   ],
+   "why": "How about you? invites someone's view."
+  },
+  {
+   "q": "Which items does Carol like?",
+   "o": [
+    "jewellery and antiques",
+    "electronics",
+    "video games"
+   ],
+   "why": "Carol mentions jewellery, antiques and pashminas."
+  },
+  {
+   "q": "What do you do in a class survey?",
+   "o": [
+    "interview classmates and record answers",
+    "read a story",
+    "draw a map"
+   ],
+   "why": "You collect and record answers."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Where Tom likes to shop",
+   "a": "City Mall",
+   "d": [
+    "Muttrah souq",
+    "airport",
+    "market"
+   ]
+  },
+  {
+   "q": "Where Carol likes to shop",
+   "a": "Muttrah souq",
+   "d": [
+    "City Mall",
+    "airport",
+    "online"
+   ]
+  },
+  {
+   "q": "Carol's only problem",
+   "a": "parking",
+   "d": [
+    "prices",
+    "crowds",
+    "noise"
+   ]
+  },
+  {
+   "q": "Tom is into...",
+   "a": "electronics",
+   "d": [
+    "antiques",
+    "jewellery",
+    "pashminas"
+   ]
+  },
+  {
+   "q": "Something Carol buys",
+   "a": "pashminas",
+   "d": [
+    "electronics",
+    "laptops",
+    "phones"
+   ]
+  },
+  {
+   "q": "Phrase for a preference",
+   "a": "I'd rather",
+   "d": [
+    "I'm not a fan of",
+    "I'm into",
+    "I dislike"
+   ]
+  },
+  {
+   "q": "Phrase for a dislike",
+   "a": "I'm not a fan of",
+   "d": [
+    "I'm really into",
+    "I'd rather",
+    "I love"
+   ]
+  },
+  {
+   "q": "Phrase for a like",
+   "a": "I'm really into",
+   "d": [
+    "I'm not keen on",
+    "I can't stand",
+    "I'm not a fan of"
+   ]
+  },
+  {
+   "q": "Carol enjoys ... in the souq",
+   "a": "bargaining",
+   "d": [
+    "parking",
+    "escalators",
+    "sales"
+   ]
+  },
+  {
+   "q": "Asking classmates questions",
+   "a": "survey",
+   "d": [
+    "essay",
+    "poem",
+    "dictation"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why does Tom like the City Mall?",
+   "o": [
+    "the variety of shops and good sales",
+    "the bargaining",
+    "the narrow passages",
+    "the antiques"
+   ],
+   "why": "Tom mentions the variety of shops and sales."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Carol like to buy at the souq?",
+   "o": [
+    "jewellery, antiques and pashminas",
+    "electronics and phones",
+    "cars and bikes",
+    "books and pens"
+   ],
+   "why": "These are the items in Carol's chart."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is used to express a preference?",
+   "o": [
+    "I prefer...",
+    "I'm not a fan of...",
+    "I'm not very keen on...",
+    "I can't stand..."
+   ],
+   "why": "I prefer compares two options."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What did you do before listening to the interviews?",
+   "o": [
+    "predict the information in the chart",
+    "write an essay",
+    "draw a map",
+    "read a story"
+   ],
+   "why": "Predicting helps you listen for specific information."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Express a preference about shopping. Choose the correct sentence.",
+   "o": [
+    "I'd rather shop in a souq than in a mall.",
+    "I'd rather to shop in a souq than a mall.",
+    "I rather shopping in a souq.",
+    "I'd rather shopping in a souq."
+   ],
+   "why": "I'd rather + base verb + than."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend asks what you think of eating out and you don't like it. What do you say?",
+   "o": [
+    "I'm not very keen on eating out.",
+    "I'm really into eating out.",
+    "I'd rather eat out every day.",
+    "I'm a big fan of eating out."
+   ],
+   "why": "Not very keen on shows a dislike politely."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Three of five students in your group prefer malls. How do you report it?",
+   "o": [
+    "Three of the five students prefer shopping in malls.",
+    "Three of the five student prefers mall.",
+    "Malls prefer three students.",
+    "Five of three students prefer malls."
+   ],
+   "why": "This reports the survey result clearly."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does 'I'm really into electronic stuff' sound more natural than repeating 'I like'?",
+   "o": [
+    "using varied phrases makes speech more natural",
+    "'I like' is grammatically wrong",
+    "it is shorter",
+    "it is only used in writing"
+   ],
+   "why": "Variety makes your English sound natural."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does a survey need both open and closed questions?",
+   "o": [
+    "closed questions give quick facts and open questions give reasons and opinions",
+    "both give the same information",
+    "open questions are never used",
+    "closed questions give long stories"
+   ],
+   "why": "Each type gives different useful information."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Carol loves the souq but mentions parking. What does this show?",
+   "o": [
+    "a place can have advantages and a disadvantage",
+    "she hates the souq",
+    "the souq has no problems",
+    "she prefers the mall"
+   ],
+   "why": "She likes it overall but notes one problem."
+  }
+ ]
+}

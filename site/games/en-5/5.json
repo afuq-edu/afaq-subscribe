@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 1 – Talent show",
+ "lesson": "Lesson 2: Story – Talent show",
+ "outcomes": [
+  "I can tell the main characters and events of the story Talent show.",
+  "I can put story events in order and correct false sentences.",
+  "I can say kind words to help a friend: You can do it! Well done!"
+ ],
+ "tf": [
+  {
+   "s": "Tameem is great at karate.",
+   "t": true,
+   "why": "Yes! Tameem is great at karate."
+  },
+  {
+   "s": "Tameem is very shy when he's on stage.",
+   "t": false,
+   "why": "Tameem is very confident when he's on stage."
+  },
+  {
+   "s": "The cat in the story is very friendly.",
+   "t": true,
+   "why": "Right! Sami and Lottie meet a friendly cat."
+  },
+  {
+   "s": "The cat's name is Rayner.",
+   "t": false,
+   "why": "His name is Bailey."
+  },
+  {
+   "s": "Fatma didn't eat anything after lunchtime.",
+   "t": true,
+   "why": "Yes, so she needs energy."
+  },
+  {
+   "s": "Bo helps Fatma when she can't get the balls out.",
+   "t": true,
+   "why": "Great! Bo is a kind friend."
+  },
+  {
+   "s": "Fatma feels calm and happy before the show.",
+   "t": false,
+   "why": "She is nervous: she says she's feeling worse and worse."
+  },
+  {
+   "s": "The story says we need to eat something every ten hours.",
+   "t": false,
+   "why": "We need to eat something every three hours."
+  },
+  {
+   "s": "At the end, everyone says Fatma is the best.",
+   "t": true,
+   "why": "Yes! Fatma does very well on stage."
+  },
+  {
+   "s": "\"Juggling is too difficult for you\" is a sentence that encourages a friend.",
+   "t": false,
+   "why": "It makes a friend sad. You can do it! encourages them."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which fruit does Fatma eat?",
+   "o": [
+    "a banana",
+    "an apple",
+    "an orange"
+   ],
+   "why": "Lottie gives Fatma a banana."
+  },
+  {
+   "q": "Who gives Fatma the banana?",
+   "o": [
+    "Lottie",
+    "Sami",
+    "Tameem"
+   ],
+   "why": "Lottie gives it to her for energy."
+  },
+  {
+   "q": "Why does Fatma need the banana?",
+   "o": [
+    "She needs energy.",
+    "She is cold.",
+    "She wants to sleep."
+   ],
+   "why": "Food gives us energy, and Fatma didn't eat after lunch."
+  },
+  {
+   "q": "What does Lottie say to the nervous Fatma?",
+   "o": [
+    "Don't worry, Fatma!",
+    "Go home, Fatma!",
+    "You are lazy, Fatma!"
+   ],
+   "why": "Lottie encourages her friend."
+  },
+  {
+   "q": "What is Fatma's problem on stage?",
+   "o": [
+    "She can't get the balls out.",
+    "She can't find the stage.",
+    "She can't see the cat."
+   ],
+   "why": "Bo helps her get the balls out."
+  },
+  {
+   "q": "Who meets the friendly cat?",
+   "o": [
+    "Sami and Lottie",
+    "Fatma and Bo",
+    "Tameem and Fatma"
+   ],
+   "why": "Sami and Lottie meet the cat at the show."
+  },
+  {
+   "q": "Which sentence encourages a friend?",
+   "o": [
+    "You've worked very hard! You can do it!",
+    "You can't do it.",
+    "That's too difficult for you."
+   ],
+   "why": "Kind words make friends feel confident."
+  },
+  {
+   "q": "What do people do in a talent show?",
+   "o": [
+    "show what they are good at",
+    "buy food",
+    "sleep on stage"
+   ],
+   "why": "People show their talents on stage."
+  },
+  {
+   "q": "What happens first?",
+   "o": [
+    "Fatma eats a banana.",
+    "The cat runs onto the stage.",
+    "Everyone says Fatma is the best."
+   ],
+   "why": "Fatma eats the banana before the cat runs on stage."
+  },
+  {
+   "q": "What happens at the end of the story?",
+   "o": [
+    "Everyone says Fatma is the best.",
+    "Fatma eats a banana.",
+    "Fatma goes home before the show."
+   ],
+   "why": "The show ends well for Fatma."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Tameem is great at ___.",
+   "a": "karate",
+   "d": [
+    "juggling",
+    "singing",
+    "chess"
+   ]
+  },
+  {
+   "q": "The cat's name",
+   "a": "Bailey",
+   "d": [
+    "Rayner",
+    "Tameem",
+    "Bo"
+   ]
+  },
+  {
+   "q": "Fatma eats a ___.",
+   "a": "banana",
+   "d": [
+    "cake",
+    "pizza",
+    "sandwich"
+   ]
+  },
+  {
+   "q": "Who helps Fatma on stage?",
+   "a": "Bo",
+   "d": [
+    "Sami",
+    "Tameem",
+    "Bailey"
+   ]
+  },
+  {
+   "q": "Food gives us ___.",
+   "a": "energy",
+   "d": [
+    "talent",
+    "karate",
+    "stage"
+   ]
+  },
+  {
+   "q": "Eat something every ___ hours.",
+   "a": "three",
+   "d": [
+    "ten",
+    "eight",
+    "twelve"
+   ]
+  },
+  {
+   "q": "Fatma's talent: throwing and catching balls",
+   "a": "juggling",
+   "d": [
+    "karate",
+    "dancing",
+    "swimming"
+   ]
+  },
+  {
+   "q": "The place where people perform",
+   "a": "stage",
+   "d": [
+    "kitchen",
+    "garden",
+    "bedroom"
+   ]
+  },
+  {
+   "q": "Tameem on stage is very ___.",
+   "a": "confident",
+   "d": [
+    "shy",
+    "lazy",
+    "rude"
+   ]
+  },
+  {
+   "q": "Words to say: Well ___!",
+   "a": "done",
+   "d": [
+    "bad",
+    "lazy",
+    "worse"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the name of the story?",
+   "o": [
+    "Talent show",
+    "Welcome back",
+    "Then and now",
+    "Stop, thief!"
+   ],
+   "why": "This lesson's story is Talent show."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Complete: Sami and Lottie meet a friendly ___ at the talent show.",
+   "o": [
+    "cat",
+    "dog",
+    "teacher",
+    "robot"
+   ],
+   "why": "They meet Bailey, a friendly cat."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which words are story vocabulary?",
+   "o": [
+    "talent show, juggling, karate, stage",
+    "beard, moustache, curly, fair",
+    "museum, phone, camera, radio",
+    "shop, money, price, thief"
+   ],
+   "why": "These words come from the Talent show story."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why does Bo help Fatma?",
+   "o": [
+    "She can't get the balls out.",
+    "She is hungry.",
+    "She lost the cat.",
+    "She can't sing."
+   ],
+   "why": "Bo helps her with the balls on stage."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put in order: a) The cat runs onto the stage. b) Fatma eats a banana. c) Everyone says Fatma is the best.",
+   "o": [
+    "b, a, c",
+    "a, b, c",
+    "c, b, a",
+    "b, c, a"
+   ],
+   "why": "Banana first, then the cat, then everyone praises Fatma."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend is nervous before a talent show. What can you say?",
+   "o": [
+    "Don't worry! You're great at singing. You can do it!",
+    "You will be terrible.",
+    "Don't go on stage.",
+    "I'm better than you."
+   ],
+   "why": "Encouraging words help a friend feel confident."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: Tameem is very shy when he's on stage.",
+   "o": [
+    "Tameem is very confident when he's on stage.",
+    "Tameem is very lazy when he's on stage.",
+    "Tameem is very rude when he's on stage.",
+    "Tameem is very shy when he's at home."
+   ],
+   "why": "In the story, Tameem is confident on stage."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How do we know Fatma was nervous before the show?",
+   "o": [
+    "She said \"I'm feeling worse and worse\".",
+    "She ate a banana.",
+    "She met a cat.",
+    "She went home early."
+   ],
+   "why": "Her words and Lottie's \"Don't worry\" show she was nervous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What does Bo helping Fatma show about him?",
+   "o": [
+    "He is kind and a good friend.",
+    "He is lazy.",
+    "He is rude.",
+    "He is shy."
+   ],
+   "why": "Helping a friend with a problem is kind."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Lottie give Fatma a banana?",
+   "o": [
+    "Fatma needs energy for the show.",
+    "Fatma doesn't like bananas.",
+    "The cat wants the banana.",
+    "Lottie is full."
+   ],
+   "why": "Fatma didn't eat after lunch, and food gives energy."
+  }
+ ]
+}

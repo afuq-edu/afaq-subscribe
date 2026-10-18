@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "LC2",
+ "lesson": "Bo's Learning Club 2 – Lesson 1: Science – Health",
+ "outcomes": [
+  "Name common illnesses: a cold, a headache, a sore throat, a stomachache, a cough.",
+  "Give health advice with should and shouldn't.",
+  "Say what you do to stay healthy."
+ ],
+ "tf": [
+  {
+   "s": "With a stomachache, you should drink lots of water.",
+   "t": true,
+   "why": "Yes! Water helps."
+  },
+  {
+   "s": "With a stomachache, you should eat a lot.",
+   "t": false,
+   "why": "You shouldn't eat a lot."
+  },
+  {
+   "s": "With a sore throat, you shouldn't shout.",
+   "t": true,
+   "why": "Correct! Rest your throat."
+  },
+  {
+   "s": "A child should take medicine from his parents or a doctor.",
+   "t": true,
+   "why": "Well done! An adult gives medicine."
+  },
+  {
+   "s": "With a headache, you should play video games.",
+   "t": false,
+   "why": "You shouldn't play video games with a headache."
+  },
+  {
+   "s": "'Should' means it is a good idea.",
+   "t": true,
+   "why": "Yes! should = good idea."
+  },
+  {
+   "s": "'Shouldn't' means it is a good idea.",
+   "t": false,
+   "why": "shouldn't = a bad idea."
+  },
+  {
+   "s": "Eating fruit and vegetables helps you stay healthy.",
+   "t": true,
+   "why": "Great! Healthy food helps you."
+  },
+  {
+   "s": "A cough and a sore throat can be a cold.",
+   "t": true,
+   "why": "Correct! Sami has a cold."
+  },
+  {
+   "s": "With a cold, you should go to school.",
+   "t": false,
+   "why": "You should rest in bed. You shouldn't go to school."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "She should rest in ___ .",
+   "o": [
+    "bed",
+    "school",
+    "the park"
+   ],
+   "why": "Rest in bed when you are ill."
+  },
+  {
+   "q": "He should drink lots of ___ .",
+   "o": [
+    "water",
+    "sweets",
+    "cola"
+   ],
+   "why": "Drink lots of water."
+  },
+  {
+   "q": "He should have some ___ .",
+   "o": [
+    "medicine",
+    "video games",
+    "chocolate"
+   ],
+   "why": "Medicine helps you get better."
+  },
+  {
+   "q": "He has a headache. He ___ play video games.",
+   "o": [
+    "shouldn't",
+    "should",
+    "must"
+   ],
+   "why": "Video games are a bad idea with a headache."
+  },
+  {
+   "q": "Sore throat: She shouldn't ___ .",
+   "o": [
+    "shout",
+    "rest",
+    "drink water"
+   ],
+   "why": "Shouting hurts your throat."
+  },
+  {
+   "q": "Who should give medicine to a child?",
+   "o": [
+    "parents or a doctor",
+    "a friend",
+    "the child"
+   ],
+   "why": "Only an adult gives medicine."
+  },
+  {
+   "q": "Sami has a cough and a sore throat. What's the illness?",
+   "o": [
+    "a cold",
+    "a stomachache",
+    "a headache"
+   ],
+   "why": "That's a cold."
+  },
+  {
+   "q": "Which is a healthy habit?",
+   "o": [
+    "playing sports",
+    "eating lots of sweets",
+    "sleeping very late"
+   ],
+   "why": "Sport keeps you healthy."
+  },
+  {
+   "q": "'Should' means ...",
+   "o": [
+    "a good idea",
+    "a bad idea",
+    "a funny idea"
+   ],
+   "why": "should = good idea."
+  },
+  {
+   "q": "Pain in your tummy = ?",
+   "o": [
+    "a stomachache",
+    "a headache",
+    "a sore throat"
+   ],
+   "why": "stomach + ache."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Pain in your head",
+   "a": "a headache",
+   "d": [
+    "a cough",
+    "a cold",
+    "a sore throat"
+   ]
+  },
+  {
+   "q": "Pain in your tummy",
+   "a": "a stomachache",
+   "d": [
+    "a headache",
+    "a cough",
+    "a cold"
+   ]
+  },
+  {
+   "q": "Cough + sore throat",
+   "a": "a cold",
+   "d": [
+    "a headache",
+    "a stomachache",
+    "a broken leg"
+   ]
+  },
+  {
+   "q": "Rest in ...",
+   "a": "bed",
+   "d": [
+    "school",
+    "the park",
+    "the river"
+   ]
+  },
+  {
+   "q": "Drink lots of ...",
+   "a": "water",
+   "d": [
+    "cola",
+    "coffee",
+    "fizzy drinks"
+   ]
+  },
+  {
+   "q": "Headache: you ___ play games.",
+   "a": "shouldn't",
+   "d": [
+    "should",
+    "must",
+    "can"
+   ]
+  },
+  {
+   "q": "Cold: you ___ rest in bed.",
+   "a": "should",
+   "d": [
+    "shouldn't",
+    "mustn't",
+    "can't"
+   ]
+  },
+  {
+   "q": "Sore throat: don't ...",
+   "a": "shout",
+   "d": [
+    "rest",
+    "sleep",
+    "drink water"
+   ]
+  },
+  {
+   "q": "Gives medicine to a child",
+   "a": "a doctor",
+   "d": [
+    "a friend",
+    "a teacher",
+    "a mechanic"
+   ]
+  },
+  {
+   "q": "A healthy food",
+   "a": "vegetables",
+   "d": [
+    "sweets",
+    "cola",
+    "crisps"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which one is an illness?",
+   "o": [
+    "a sore throat",
+    "a white coat",
+    "a skateboard",
+    "a garage"
+   ],
+   "why": "A sore throat is an illness."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should you do with a stomachache?",
+   "o": [
+    "drink lots of water and not eat a lot",
+    "eat a lot of food",
+    "play outside all day",
+    "shout loudly"
+   ],
+   "why": "Drink water and don't eat a lot."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'shouldn't' mean?",
+   "o": [
+    "It's a bad idea.",
+    "It's a good idea.",
+    "You must do it.",
+    "You can do it now."
+   ],
+   "why": "shouldn't = bad idea."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do healthy children do?",
+   "o": [
+    "They play sports and eat fruit and vegetables.",
+    "They eat lots of sweets.",
+    "They never sleep.",
+    "They never play outside."
+   ],
+   "why": "Sport and healthy food keep you well."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali has a headache. Which advice is right?",
+   "o": [
+    "You shouldn't play video games.",
+    "You should play video games.",
+    "You should shout.",
+    "You should eat a lot."
+   ],
+   "why": "Rest is better than video games with a headache."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Give advice: He has a cold.",
+   "o": [
+    "He should rest in bed. He shouldn't go to school.",
+    "He should go to school. He shouldn't rest.",
+    "He should shout. He shouldn't drink water.",
+    "He should play video games."
+   ],
+   "why": "Rest helps you get better."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The girl has a sore throat. What shouldn't she do?",
+   "o": [
+    "She shouldn't shout.",
+    "She shouldn't drink water.",
+    "She shouldn't rest.",
+    "She shouldn't sleep."
+   ],
+   "why": "Shouting hurts a sore throat."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should parents or a doctor give medicine to a child?",
+   "o": [
+    "Medicine can be dangerous without an adult.",
+    "Medicine is a sweet.",
+    "Children like medicine.",
+    "Medicine is a game."
+   ],
+   "why": "Adults know how much medicine to give."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sami has a cough and a sore throat. What's the matter?",
+   "o": [
+    "He has a cold.",
+    "He has a stomachache.",
+    "He has a broken arm.",
+    "He has a headache."
+   ],
+   "why": "A cough and a sore throat can be a cold."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence gives a bad idea for a stomachache?",
+   "o": [
+    "You should eat a lot.",
+    "You should drink lots of water.",
+    "You shouldn't eat a lot.",
+    "You should rest."
+   ],
+   "why": "Eating a lot is a bad idea."
+  }
+ ]
+}

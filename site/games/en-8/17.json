@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 2: Adventure sports",
+ "lesson": "Lesson 2: WOW! Team Talk – Are extreme sports dangerous?",
+ "outcomes": [
+  "Understand a dialogue where two friends disagree about extreme sports.",
+  "Use I suppose so., I told you so! and Not really. correctly.",
+  "Give your opinion about extreme sports with a reason."
+ ],
+ "tf": [
+  {
+   "s": "Ali and Eric disagree about whether extreme sports are too dangerous for children.",
+   "t": true,
+   "why": "Yes, that is what the boys talk about."
+  },
+  {
+   "s": "Eric hurt himself when he was go-karting.",
+   "t": false,
+   "why": "Eric fell when he was rock climbing."
+  },
+  {
+   "s": "Eric’s cousin started sandboarding when he was four.",
+   "t": true,
+   "why": "Correct! He started very young."
+  },
+  {
+   "s": "Eric’s cousin never uses a helmet.",
+   "t": false,
+   "why": "He always uses a helmet and wears special clothes."
+  },
+  {
+   "s": "Eric’s sister cut herself when she was running.",
+   "t": true,
+   "why": "Right! Eric uses this to show all sports can be dangerous."
+  },
+  {
+   "s": "Ali thinks children shouldn’t do extreme sports because they often hurt themselves.",
+   "t": true,
+   "why": "Yes, that is Ali’s opinion."
+  },
+  {
+   "s": "At the end, the boys are going to the beach.",
+   "t": false,
+   "why": "They are going to PE."
+  },
+  {
+   "s": "We say “I told you so!” when we were right before.",
+   "t": true,
+   "why": "Great! It shows you said it earlier."
+  },
+  {
+   "s": "“Not really.” means “Yes, very much.”",
+   "t": false,
+   "why": "Not really. is a soft way to say no."
+  },
+  {
+   "s": "Eric thinks only extreme sports can be dangerous.",
+   "t": false,
+   "why": "Eric says all sports can be dangerous."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How did Eric hurt himself?",
+   "o": [
+    "He fell when he was rock climbing.",
+    "He fell off a horse.",
+    "He cut himself running."
+   ],
+   "why": "Eric fell while rock climbing."
+  },
+  {
+   "q": "Who said: “That’s too young. What if he hurts himself?”",
+   "o": [
+    "Ali",
+    "Eric",
+    "Eric’s cousin"
+   ],
+   "why": "Ali worries that children get hurt."
+  },
+  {
+   "q": "Where are the boys going at the end?",
+   "o": [
+    "to PE",
+    "to the beach",
+    "to the hospital"
+   ],
+   "why": "They go to their PE lesson."
+  },
+  {
+   "q": "Which expression means you were right before?",
+   "o": [
+    "I told you so!",
+    "Not really.",
+    "I suppose so."
+   ],
+   "why": "I told you so! shows you said it first."
+  },
+  {
+   "q": "“Was the test difficult yesterday?” (It was easy.)",
+   "o": [
+    "Not really.",
+    "I told you so!",
+    "I suppose so."
+   ],
+   "why": "Not really. means no, not much."
+  },
+  {
+   "q": "“If you like cycling, you’ll like mountain biking.”",
+   "o": [
+    "I suppose so.",
+    "I told you so!",
+    "Not really."
+   ],
+   "why": "I suppose so. means you agree a little."
+  },
+  {
+   "q": "He always ___ a helmet and wears special clothes.",
+   "o": [
+    "uses",
+    "loses",
+    "breaks"
+   ],
+   "why": "Eric’s cousin always uses a helmet."
+  },
+  {
+   "q": "Who is with Eric’s cousin when he goes sandboarding?",
+   "o": [
+    "his parents",
+    "nobody",
+    "his teacher"
+   ],
+   "why": "His parents are there to keep him safe."
+  },
+  {
+   "q": "“That bus to the beach was very slow!”",
+   "o": [
+    "I told you so!",
+    "Not really.",
+    "Brilliant!"
+   ],
+   "why": "You said before that the bus was slow."
+  },
+  {
+   "q": "What does the safety gear protect you from?",
+   "o": [
+    "getting hurt",
+    "getting hungry",
+    "getting lost"
+   ],
+   "why": "Helmets and special clothes help stop injuries."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "You were right before:",
+   "a": "I told you so!",
+   "d": [
+    "Not really.",
+    "I suppose so.",
+    "Me too!"
+   ]
+  },
+  {
+   "q": "A soft way to say no:",
+   "a": "Not really.",
+   "d": [
+    "I told you so!",
+    "Brilliant!",
+    "I suppose so."
+   ]
+  },
+  {
+   "q": "Agree, but not strongly:",
+   "a": "I suppose so.",
+   "d": [
+    "Not really.",
+    "I told you so!",
+    "Oh no!"
+   ]
+  },
+  {
+   "q": "Eric fell when he was…",
+   "a": "rock climbing",
+   "d": [
+    "go-karting",
+    "diving",
+    "running"
+   ]
+  },
+  {
+   "q": "Eric’s sister cut herself…",
+   "a": "running",
+   "d": [
+    "diving",
+    "caving",
+    "surfing"
+   ]
+  },
+  {
+   "q": "Age cousin started sandboarding",
+   "a": "four",
+   "d": [
+    "fourteen",
+    "ten",
+    "eight"
+   ]
+  },
+  {
+   "q": "The cousin always uses a…",
+   "a": "helmet",
+   "d": [
+    "compass",
+    "rope",
+    "map"
+   ]
+  },
+  {
+   "q": "The boys go to ___ at the end.",
+   "a": "PE",
+   "d": [
+    "Maths",
+    "the beach",
+    "lunch"
+   ]
+  },
+  {
+   "q": "Eric’s cousin’s sport",
+   "a": "sandboarding",
+   "d": [
+    "rock climbing",
+    "diving",
+    "horse riding"
+   ]
+  },
+  {
+   "q": "Who thinks extreme sports are risky?",
+   "a": "Ali",
+   "d": [
+    "Eric",
+    "Rosie",
+    "Manar"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do Ali and Eric disagree about?",
+   "o": [
+    "Whether extreme sports are too dangerous for children",
+    "Which team is the best",
+    "Where to go on holiday",
+    "What to eat for lunch"
+   ],
+   "why": "That is the main topic of the dialogue."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How does Eric show that all sports can be dangerous?",
+   "o": [
+    "His sister cut herself when she was running.",
+    "His cousin fell off a cliff.",
+    "He broke his bike.",
+    "Ali hurt himself diving."
+   ],
+   "why": "Even running can be dangerous."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How does Eric’s cousin stay safe?",
+   "o": [
+    "He uses a helmet, wears special clothes and his parents are there.",
+    "He only goes at night.",
+    "He never goes sandboarding.",
+    "He goes alone."
+   ],
+   "why": "Safety gear and his parents keep him safe."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which expression shows you agree but not strongly?",
+   "o": [
+    "I suppose so.",
+    "I told you so!",
+    "Not really.",
+    "Brilliant!"
+   ],
+   "why": "I suppose so. is a weak agreement."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: “Do you like snakes?” B: “___ They scare me.”",
+   "o": [
+    "Not really.",
+    "I told you so!",
+    "I suppose so.",
+    "Me too!"
+   ],
+   "why": "Not really. is a polite no."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: “I said it would rain, and now it’s raining!” What could A say?",
+   "o": [
+    "I told you so!",
+    "Not really.",
+    "I suppose so.",
+    "Excuse me."
+   ],
+   "why": "A was right before."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: “Maybe we should take a helmet, just in case.” B (agreeing a little): “___”",
+   "o": [
+    "I suppose so.",
+    "I told you so!",
+    "Not really.",
+    "No way!"
+   ],
+   "why": "I suppose so. is a soft yes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Ali think children shouldn’t do extreme sports?",
+   "o": [
+    "Because they often hurt themselves",
+    "Because extreme sports are boring",
+    "Because they are too expensive",
+    "Because children don’t like sports"
+   ],
+   "why": "Ali is worried about injuries."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which reason best supports Eric’s opinion?",
+   "o": [
+    "Children can be safe with a helmet, special clothes and parents there.",
+    "Children never get hurt.",
+    "Rock climbing is easy.",
+    "Helmets are not needed."
+   ],
+   "why": "Eric shows how his cousin stays safe."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best way to give your opinion in this debate?",
+   "o": [
+    "I agree with Eric because all sports can be dangerous.",
+    "Eric.",
+    "I don’t know anything.",
+    "Sports."
+   ],
+   "why": "A good opinion has a reason."
+  }
+ ]
+}

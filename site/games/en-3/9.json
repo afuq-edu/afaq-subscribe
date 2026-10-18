@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 1: It's a happy day!",
+ "lesson": "Unit 1 – Lesson 6: English in action (saying the time)",
+ "outcomes": [
+  "I can say the time with o'clock, half past, quarter past and quarter to.",
+  "I can ask and answer What time is it?",
+  "I can act out a short dialogue about time."
+ ],
+ "tf": [
+  {
+   "s": "When the minute hand is on 12, we say o'clock.",
+   "t": true,
+   "why": "Yes! 12 on the minute hand means o'clock."
+  },
+  {
+   "s": "When the minute hand is on 6, we say quarter past.",
+   "t": false,
+   "why": "Minute hand on 6 means half past."
+  },
+  {
+   "s": "When the minute hand is on 3, we say quarter past.",
+   "t": true,
+   "why": "Well done! On 3 is quarter past."
+  },
+  {
+   "s": "When the minute hand is on 9, we say quarter to.",
+   "t": true,
+   "why": "Great! On 9 is quarter to."
+  },
+  {
+   "s": "Quarter past eight is earlier than quarter to eight.",
+   "t": false,
+   "why": "Quarter to eight comes first, then eight o'clock, then quarter past eight."
+  },
+  {
+   "s": "In the dialogue, they have English at quarter past eight.",
+   "t": true,
+   "why": "Yes! We have English at quarter past eight."
+  },
+  {
+   "s": "Half past six comes after quarter past six.",
+   "t": true,
+   "why": "Quarter past six, then half past six."
+  },
+  {
+   "s": "Quarter to seven comes before half past six.",
+   "t": false,
+   "why": "Half past six comes first, then quarter to seven."
+  },
+  {
+   "s": "We ask What time is it? to know the time.",
+   "t": true,
+   "why": "That is the question for the time."
+  },
+  {
+   "s": "In the second dialogue, it is time for breakfast.",
+   "t": false,
+   "why": "It's seven o'clock and it's time for dinner."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Minute hand on 12, hour hand on 4. What time is it?",
+   "o": [
+    "four o'clock",
+    "twelve o'clock",
+    "half past four"
+   ],
+   "why": "Minute hand on 12 means o'clock."
+  },
+  {
+   "q": "Complete: It's quarter ___ eight. (minute hand on 9)",
+   "o": [
+    "to",
+    "past",
+    "half"
+   ],
+   "why": "On 9 we say quarter to."
+  },
+  {
+   "q": "Complete: It's half past ___. (hour hand between 6 and 7)",
+   "o": [
+    "six",
+    "seven",
+    "five"
+   ],
+   "why": "Between 6 and 7 with the minute hand on 6 is half past six."
+  },
+  {
+   "q": "Minute hand on 3, hour hand just after 9.",
+   "o": [
+    "quarter past nine",
+    "quarter to nine",
+    "half past nine"
+   ],
+   "why": "On 3 is quarter past."
+  },
+  {
+   "q": "Which question asks about the time?",
+   "o": [
+    "What time is it?",
+    "What's wrong?",
+    "What's your name?"
+   ],
+   "why": "We ask What time is it?"
+  },
+  {
+   "q": "What time do they have English?",
+   "o": [
+    "quarter past eight",
+    "eight o'clock",
+    "half past eight"
+   ],
+   "why": "They have English at quarter past eight."
+  },
+  {
+   "q": "Why do they say Let's hurry?",
+   "o": [
+    "It's time for English!",
+    "It's time for bed.",
+    "It's a holiday."
+   ],
+   "why": "English is starting, so they hurry."
+  },
+  {
+   "q": "In the second dialogue, what time is it?",
+   "o": [
+    "seven o'clock",
+    "six o'clock",
+    "half past seven"
+   ],
+   "why": "It's seven o'clock."
+  },
+  {
+   "q": "Which is earlier?",
+   "o": [
+    "quarter to eight",
+    "quarter past eight",
+    "half past eight"
+   ],
+   "why": "Quarter to eight is before eight o'clock."
+  },
+  {
+   "q": "Where is the minute hand at half past one?",
+   "o": [
+    "on 6",
+    "on 12",
+    "on 3"
+   ],
+   "why": "Half past means the minute hand is on 6."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Minute hand on 12",
+   "a": "o'clock",
+   "d": [
+    "half past",
+    "quarter past",
+    "quarter to"
+   ]
+  },
+  {
+   "q": "Minute hand on 6",
+   "a": "half past",
+   "d": [
+    "o'clock",
+    "quarter past",
+    "quarter to"
+   ]
+  },
+  {
+   "q": "Minute hand on 3",
+   "a": "quarter past",
+   "d": [
+    "quarter to",
+    "half past",
+    "o'clock"
+   ]
+  },
+  {
+   "q": "Minute hand on 9",
+   "a": "quarter to",
+   "d": [
+    "quarter past",
+    "half past",
+    "o'clock"
+   ]
+  },
+  {
+   "q": "Hour hand on 4, minute on 12",
+   "a": "four o'clock",
+   "d": [
+    "twelve o'clock",
+    "half past four",
+    "quarter to four"
+   ]
+  },
+  {
+   "q": "Hour hand 6–7, minute on 6",
+   "a": "half past six",
+   "d": [
+    "half past seven",
+    "six o'clock",
+    "quarter to six"
+   ]
+  },
+  {
+   "q": "Hour hand 1–2, minute on 6",
+   "a": "half past one",
+   "d": [
+    "half past two",
+    "one o'clock",
+    "quarter past one"
+   ]
+  },
+  {
+   "q": "Hour just before 7, minute on 9",
+   "a": "quarter to seven",
+   "d": [
+    "quarter past seven",
+    "quarter to six",
+    "half past seven"
+   ]
+  },
+  {
+   "q": "English is at quarter past ___",
+   "a": "eight",
+   "d": [
+    "seven",
+    "nine",
+    "six"
+   ]
+  },
+  {
+   "q": "Oh, no! What's ___?",
+   "a": "wrong",
+   "d": [
+    "time",
+    "name",
+    "colour"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do we say when the minute hand is on 6?",
+   "o": [
+    "half past",
+    "o'clock",
+    "quarter to",
+    "quarter past"
+   ],
+   "why": "On 6 is half past."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question is from the dialogue?",
+   "o": [
+    "What time do we have English?",
+    "When do you go to bed?",
+    "How many desks can you see?",
+    "What's in your bag?"
+   ],
+   "why": "They ask What time do we have English?"
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is it time for in the second dialogue?",
+   "o": [
+    "dinner",
+    "English",
+    "breakfast",
+    "bed"
+   ],
+   "why": "It's time for dinner."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do they say when they are late?",
+   "o": [
+    "Oh, no! Let's hurry!",
+    "Good morning!",
+    "Snap!",
+    "Tidy up!"
+   ],
+   "why": "They say Oh, no! and Let's hurry!"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The minute hand is on 9 and the hour hand is just before 3. What time is it?",
+   "o": [
+    "quarter to three",
+    "quarter past three",
+    "quarter to two",
+    "half past three"
+   ],
+   "why": "On 9 is quarter to, and the next hour is three."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a dialogue line: have breakfast / quarter to six.",
+   "o": [
+    "We have breakfast at quarter to six.",
+    "We have breakfast in quarter to six.",
+    "We breakfast at quarter six.",
+    "We have breakfast at six to quarter."
+   ],
+   "why": "We use at with a time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The minute hand is on 3 and the hour hand is just after 10. What time is it?",
+   "o": [
+    "quarter past ten",
+    "quarter to ten",
+    "half past ten",
+    "ten o'clock"
+   ],
+   "why": "On 3 is quarter past."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which list is in the right order, from early to late?",
+   "o": [
+    "six o'clock, quarter past six, half past six, quarter to seven",
+    "half past six, six o'clock, quarter to seven, quarter past six",
+    "quarter to seven, half past six, quarter past six, six o'clock",
+    "quarter past six, six o'clock, half past six, quarter to seven"
+   ],
+   "why": "Each step is 15 minutes later."
+  },
+  {
+   "lv": "التحليل",
+   "q": "English is at quarter past eight. It is quarter past eight now. What do you say?",
+   "o": [
+    "Oh, no! It's time for English! Let's hurry!",
+    "Good night!",
+    "It's time for dinner.",
+    "We go to bed at night."
+   ],
+   "why": "It is time for English, so we hurry."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Quarter to seven is the same as ...",
+   "o": [
+    "15 minutes before seven",
+    "15 minutes after seven",
+    "30 minutes after seven",
+    "seven o'clock"
+   ],
+   "why": "Quarter to means 15 minutes before the hour."
+  }
+ ]
+}

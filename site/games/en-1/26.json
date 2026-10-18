@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 4: My favourite toy",
+ "lesson": "Lesson 2: Language practice – colours of toys + Sound u",
+ "outcomes": [
+  "I can ask and answer: What colour is it? It's green.",
+  "I can draw my toy and talk about it.",
+  "I can hear the u sound in up, under and umbrella."
+ ],
+ "tf": [
+  {
+   "s": "We answer What colour is it? with a colour.",
+   "t": true,
+   "why": "Yes! It's green. It's blue."
+  },
+  {
+   "s": "Is it a ball? is a question about a toy.",
+   "t": true,
+   "why": "Great! It asks about a toy."
+  },
+  {
+   "s": "Umbrella starts with the u sound.",
+   "t": true,
+   "why": "Yes! U-u-umbrella."
+  },
+  {
+   "s": "Three starts with the u sound.",
+   "t": false,
+   "why": "Three starts with th. Up starts with u."
+  },
+  {
+   "s": "n – u – t makes the word nut.",
+   "t": true,
+   "why": "Well done! n-u-t is nut."
+  },
+  {
+   "s": "r – u – g makes the word bun.",
+   "t": false,
+   "why": "r-u-g makes rug. b-u-n makes bun."
+  },
+  {
+   "s": "A teddy is a colour.",
+   "t": false,
+   "why": "A teddy is a toy. Red and blue are colours."
+  },
+  {
+   "s": "Up starts with the letter u.",
+   "t": true,
+   "why": "Right! Up starts with u."
+  },
+  {
+   "s": "We answer What colour is it? with Yes.",
+   "t": false,
+   "why": "Say a colour, like It's red."
+  },
+  {
+   "s": "Under starts with the letter u.",
+   "t": true,
+   "why": "Yes! U-u-under."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What colour is it? (a green robot)",
+   "o": [
+    "It's green.",
+    "It's a robot.",
+    "Yes, it is."
+   ],
+   "why": "It's green tells the colour."
+  },
+  {
+   "q": "Which word starts with u?",
+   "o": [
+    "up",
+    "on",
+    "fish"
+   ],
+   "why": "U-u-up starts with u."
+  },
+  {
+   "q": "b – u – n. What's the word?",
+   "o": [
+    "bun",
+    "nut",
+    "rug"
+   ],
+   "why": "b-u-n makes bun."
+  },
+  {
+   "q": "What's missing? _p",
+   "o": [
+    "u",
+    "o",
+    "b"
+   ],
+   "why": "u + p makes up."
+  },
+  {
+   "q": "Guess the secret card. Which question asks about a toy?",
+   "o": [
+    "Is it a ball?",
+    "Who's this?",
+    "Where's the door?"
+   ],
+   "why": "Is it a ball? asks about the toy."
+  },
+  {
+   "q": "What's this? (a teddy)",
+   "o": [
+    "It's a teddy.",
+    "It's a car.",
+    "It's a ball."
+   ],
+   "why": "It's a teddy. Well done!"
+  },
+  {
+   "q": "Which word is a colour?",
+   "o": [
+    "yellow",
+    "robot",
+    "car"
+   ],
+   "why": "Yellow is a colour."
+  },
+  {
+   "q": "r – u – g. What's the word?",
+   "o": [
+    "rug",
+    "bun",
+    "nut"
+   ],
+   "why": "r-u-g makes rug."
+  },
+  {
+   "q": "Which question asks about the colour?",
+   "o": [
+    "What colour is it?",
+    "What's this?",
+    "Is it a car?"
+   ],
+   "why": "What colour is it? asks for a colour."
+  },
+  {
+   "q": "Show your drawing of a ball. What's this?",
+   "o": [
+    "It's a ball.",
+    "It's a robot.",
+    "It's a door."
+   ],
+   "why": "It's a ball. Great drawing!"
+  }
+ ],
+ "hunt": [
+  {
+   "q": "It starts with u",
+   "a": "umbrella",
+   "d": [
+    "octopus",
+    "fish",
+    "goat"
+   ]
+  },
+  {
+   "q": "n – u – t",
+   "a": "nut",
+   "d": [
+    "bun",
+    "rug",
+    "not"
+   ]
+  },
+  {
+   "q": "b – u – n",
+   "a": "bun",
+   "d": [
+    "nut",
+    "rug",
+    "bin"
+   ]
+  },
+  {
+   "q": "r – u – g",
+   "a": "rug",
+   "d": [
+    "bun",
+    "nut",
+    "rag"
+   ]
+  },
+  {
+   "q": "First letter of up",
+   "a": "u",
+   "d": [
+    "p",
+    "o",
+    "a"
+   ]
+  },
+  {
+   "q": "A colour",
+   "a": "blue",
+   "d": [
+    "ball",
+    "car",
+    "teddy"
+   ]
+  },
+  {
+   "q": "A toy",
+   "a": "robot",
+   "d": [
+    "green",
+    "red",
+    "yellow"
+   ]
+  },
+  {
+   "q": "A ball is below the table",
+   "a": "under",
+   "d": [
+    "up",
+    "on",
+    "in"
+   ]
+  },
+  {
+   "q": "Answer: What colour is it?",
+   "a": "It's red.",
+   "d": [
+    "It's a car.",
+    "Yes.",
+    "Who's this?"
+   ]
+  },
+  {
+   "q": "Guess a toy. Ask…",
+   "a": "Is it a car?",
+   "d": [
+    "Who's this?",
+    "Goodbye!",
+    "It's red."
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What sound does the under card show?",
+   "o": [
+    "/ʌ/ (u)",
+    "/ɒ/ (o)",
+    "/θ/ (th)",
+    "/b/"
+   ],
+   "why": "Under starts with the u sound."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a colour?",
+   "o": [
+    "green",
+    "teddy",
+    "robot",
+    "car"
+   ],
+   "why": "Green is a colour."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these words starts with u?",
+   "o": [
+    "umbrella",
+    "octopus",
+    "thumb",
+    "ball"
+   ],
+   "why": "Umbrella starts with u."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which toy is soft and like a bear?",
+   "o": [
+    "teddy",
+    "car",
+    "robot",
+    "ball"
+   ],
+   "why": "A teddy is a soft bear."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend shows a yellow ball. What colour is it?",
+   "o": [
+    "It's yellow.",
+    "It's a ball.",
+    "It's red.",
+    "It's my car."
+   ],
+   "why": "It's yellow tells the colour."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Listen: n – u – t. What's the word?",
+   "o": [
+    "nut",
+    "bun",
+    "rug",
+    "net"
+   ],
+   "why": "n-u-t makes nut."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to know your friend's toy colour. What do you ask?",
+   "o": [
+    "What colour is it?",
+    "What's this?",
+    "Who's this?",
+    "Is it a ball?"
+   ],
+   "why": "What colour is it? asks for the colour."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your friend has a secret card. You think it's a car. What do you ask?",
+   "o": [
+    "Is it a car?",
+    "What colour is it?",
+    "Who's this?",
+    "It's a car."
+   ],
+   "why": "Is it a car? checks your guess."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word has the u sound in the middle?",
+   "o": [
+    "bun",
+    "up",
+    "under",
+    "umbrella"
+   ],
+   "why": "B-u-n has u in the middle. The others start with u."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which answer tells the toy AND its colour?",
+   "o": [
+    "It's a blue robot.",
+    "It's blue.",
+    "It's a robot.",
+    "Yes, it is."
+   ],
+   "why": "It's a blue robot tells both."
+  }
+ ]
+}

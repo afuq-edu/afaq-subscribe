@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 3: Spend or save?",
+ "lesson": "Lesson 2: WOW! Team Talk – Online shopping",
+ "outcomes": [
+  "Understand opinions in a dialogue about online shopping and shops.",
+  "Use No chance!, I'm only kidding! and That's true.",
+  "Write and act out a short shopping dialogue."
+ ],
+ "tf": [
+  {
+   "s": "Rosie and Manar both like online shopping.",
+   "t": false,
+   "why": "Rosie likes online shopping; Manar prefers shops."
+  },
+  {
+   "s": "Manar invites Rosie to come shopping at the weekend.",
+   "t": true,
+   "why": "Yes, Manar invites her for the weekend."
+  },
+  {
+   "s": "Rosie thinks shopping in shops is a waste of time.",
+   "t": true,
+   "why": "Correct, Rosie says it's a waste of time."
+  },
+  {
+   "s": "Rosie sends things back if they don't fit.",
+   "t": true,
+   "why": "Right, she sends them back."
+  },
+  {
+   "s": "Manar thinks we may not need shops in the future.",
+   "t": false,
+   "why": "It is Rosie who thinks that."
+  },
+  {
+   "s": "'I'm only kidding!' means 'I'm joking'.",
+   "t": true,
+   "why": "Yes, you say it when you were joking."
+  },
+  {
+   "s": "'No chance!' means 'Yes, of course!'",
+   "t": false,
+   "why": "'No chance!' is a strong way to say no."
+  },
+  {
+   "s": "'That's true.' shows that you agree.",
+   "t": true,
+   "why": "Well done, it means you agree."
+  },
+  {
+   "s": "Manar loves walking around bookshops and clothes stores.",
+   "t": true,
+   "why": "Yes, Manar enjoys real shops."
+  },
+  {
+   "s": "When you shop online, you can try clothes on before buying.",
+   "t": false,
+   "why": "In shops you can try things on; online you may have to send them back."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who prefers shops?",
+   "o": [
+    "Manar",
+    "Rosie",
+    "Eric"
+   ],
+   "why": "Manar prefers going to shops."
+  },
+  {
+   "q": "Who likes online shopping?",
+   "o": [
+    "Rosie",
+    "Manar",
+    "Ali"
+   ],
+   "why": "Rosie likes shopping online."
+  },
+  {
+   "q": "Which expression means 'I'm joking'?",
+   "o": [
+    "I'm only kidding!",
+    "That's true.",
+    "No chance!"
+   ],
+   "why": "'I'm only kidding!' means I'm joking."
+  },
+  {
+   "q": "Which expression shows you agree?",
+   "o": [
+    "That's true.",
+    "No chance!",
+    "I'm only kidding!"
+   ],
+   "why": "'That's true.' shows agreement."
+  },
+  {
+   "q": "Reply: 'Let's swim in the sea!' (the water is very cold)",
+   "o": [
+    "No chance!",
+    "That's true.",
+    "I'm only kidding!"
+   ],
+   "why": "'No chance!' is a strong no."
+  },
+  {
+   "q": "What does Rosie do if online clothes aren't big enough?",
+   "o": [
+    "sends them back",
+    "throws them away",
+    "gives them to Manar"
+   ],
+   "why": "She sends them back."
+  },
+  {
+   "q": "Complete: If I need something, I ask my parents to buy it ___.",
+   "o": [
+    "online",
+    "second-hand",
+    "at the till"
+   ],
+   "why": "Rosie's parents buy things online."
+  },
+  {
+   "q": "What does Manar love walking around?",
+   "o": [
+    "bookshops and clothes stores",
+    "the beach",
+    "the desert"
+   ],
+   "why": "Manar loves bookshops and clothes stores."
+  },
+  {
+   "q": "Reply: 'It's too late to go shopping.' (you agree)",
+   "o": [
+    "That's true.",
+    "No chance!",
+    "I'm only kidding!"
+   ],
+   "why": "You agree, so say 'That's true.'"
+  },
+  {
+   "q": "In a shop you can ___ clothes before you buy them.",
+   "o": [
+    "try on",
+    "send back",
+    "refund"
+   ],
+   "why": "Try on means put clothes on to check the size."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Prefers shops",
+   "a": "Manar",
+   "d": [
+    "Rosie",
+    "Eric",
+    "Ali"
+   ]
+  },
+  {
+   "q": "Prefers online shopping",
+   "a": "Rosie",
+   "d": [
+    "Manar",
+    "Lucas",
+    "Adil"
+   ]
+  },
+  {
+   "q": "Rosie: shopping is a waste of ...",
+   "a": "time",
+   "d": [
+    "money",
+    "food",
+    "paper"
+   ]
+  },
+  {
+   "q": "Manar invites Rosie for the ...",
+   "a": "weekend",
+   "d": [
+    "morning",
+    "holiday",
+    "test"
+   ]
+  },
+  {
+   "q": "Means 'I'm joking'",
+   "a": "I'm only kidding!",
+   "d": [
+    "That's true.",
+    "No chance!",
+    "Me too."
+   ]
+  },
+  {
+   "q": "Means 'I agree'",
+   "a": "That's true.",
+   "d": [
+    "No chance!",
+    "I'm only kidding!",
+    "Never!"
+   ]
+  },
+  {
+   "q": "A strong 'no'",
+   "a": "No chance!",
+   "d": [
+    "That's true.",
+    "Sure!",
+    "OK then."
+   ]
+  },
+  {
+   "q": "Rosie ___ things back",
+   "a": "sends",
+   "d": [
+    "buys",
+    "tries",
+    "sells"
+   ]
+  },
+  {
+   "q": "Shop Manar loves",
+   "a": "bookshops",
+   "d": [
+    "garages",
+    "banks",
+    "hospitals"
+   ]
+  },
+  {
+   "q": "Buy things on the internet",
+   "a": "online",
+   "d": [
+    "second-hand",
+    "on sale",
+    "in a queue"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Do Rosie and Manar both like online shopping?",
+   "o": [
+    "No, Rosie likes it but Manar prefers shops.",
+    "Yes, they both love it.",
+    "No, neither of them likes it.",
+    "Yes, but only for books."
+   ],
+   "why": "They have different opinions."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who thinks we may not need shops in the future?",
+   "o": [
+    "Rosie",
+    "Manar",
+    "Eric",
+    "Ali"
+   ],
+   "why": "Rosie thinks that."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Manar invite Rosie to do?",
+   "o": [
+    "come shopping at the weekend",
+    "play football",
+    "go diving",
+    "study for a test"
+   ],
+   "why": "Manar invites Rosie to go shopping at the weekend."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which expression means you are joking?",
+   "o": [
+    "I'm only kidding!",
+    "That's true.",
+    "No chance!",
+    "Excuse me."
+   ],
+   "why": "'I'm only kidding!' shows you were joking."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: 'Do you want to go to the mall now?' B is very tired. What does B say?",
+   "o": [
+    "No chance! I'm tired.",
+    "That's true! I'm tired.",
+    "I'm only kidding! Let's go.",
+    "Yes, of course."
+   ],
+   "why": "'No chance!' is a strong no."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: 'Are you ready for the test today?' B: 'Isn't it tomorrow?' A: '___ Yes, it is tomorrow.'",
+   "o": [
+    "I'm only kidding!",
+    "No chance!",
+    "That's true.",
+    "Excuse me!"
+   ],
+   "why": "A was joking, so A says 'I'm only kidding!'"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: 'Shops are busy at the weekend.' B agrees. What does B say?",
+   "o": [
+    "That's true.",
+    "No chance!",
+    "I'm only kidding!",
+    "Goodbye!"
+   ],
+   "why": "'That's true.' shows agreement."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might Manar prefer shops to online shopping?",
+   "o": [
+    "She can try things on and enjoys walking around shops.",
+    "She hates books.",
+    "Shops have no queues.",
+    "She can't use the internet at all."
+   ],
+   "why": "In shops you can try things on, and Manar loves walking around them."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is one problem with online shopping in the dialogue?",
+   "o": [
+    "Things might not fit, so you have to send them back.",
+    "You must stand in a long queue.",
+    "You can't pay.",
+    "Shops are closed online."
+   ],
+   "why": "Rosie sends things back if they aren't big enough."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Rosie says shopping is a waste of time. What does this tell us?",
+   "o": [
+    "She thinks online shopping is quicker.",
+    "She loves bookshops.",
+    "She wants to go every day.",
+    "She works in a shop."
+   ],
+   "why": "Rosie prefers online shopping because it saves time."
+  }
+ ]
+}

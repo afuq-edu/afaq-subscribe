@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "WOW! Learning Club 1",
+ "lesson": "Lesson 3: CLIL Science – Let’s practise! (Rainforests)",
+ "outcomes": [
+  "Read about rainforests and find causes and effects.",
+  "Make a plan with arrows for a text.",
+  "Present the causes and effects of a problem."
+ ],
+ "tf": [
+  {
+   "s": "Rainforests have more plants and animals than any other habitat.",
+   "t": true,
+   "why": "Yes, that is why they are so important."
+  },
+  {
+   "s": "Trees are used to make fuel, paper and furniture.",
+   "t": true,
+   "why": "Correct, and wooden homes too."
+  },
+  {
+   "s": "Forest workers burn trees so farmers can have new land.",
+   "t": true,
+   "why": "Right, for crops and farm animals."
+  },
+  {
+   "s": "Burning trees makes the air cleaner.",
+   "t": false,
+   "why": "Burning trees makes gases that cause air pollution."
+  },
+  {
+   "s": "When rainforest trees are cut down, plants die and animals move away.",
+   "t": true,
+   "why": "Well done, that is the chain of effects."
+  },
+  {
+   "s": "'Animals lose habitat' is a cause.",
+   "t": false,
+   "why": "It is an effect of cutting down trees."
+  },
+  {
+   "s": "Burning trees causes global warming.",
+   "t": true,
+   "why": "Yes, the gases cause global warming."
+  },
+  {
+   "s": "Melting ice helps penguins and polar bears.",
+   "t": false,
+   "why": "Melting ice makes them lose some of their habitats."
+  },
+  {
+   "s": "A plan with arrows can show causes and effects.",
+   "t": true,
+   "why": "Good, arrows link cause to effect."
+  },
+  {
+   "s": "Cutting down rainforests is not a problem for animals.",
+   "t": false,
+   "why": "Animals lose their habitat and move away."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Why are rainforests very important?",
+   "o": [
+    "They have the most plants and animals.",
+    "They are cold.",
+    "They have no trees."
+   ],
+   "why": "They have more plants and animals than any other habitat."
+  },
+  {
+   "q": "Trees are used to make fuel and ___ homes.",
+   "o": [
+    "wooden",
+    "glass",
+    "plastic"
+   ],
+   "why": "Trees give wood for wooden homes."
+  },
+  {
+   "q": "What do burning trees make?",
+   "o": [
+    "gases",
+    "water",
+    "ice"
+   ],
+   "why": "Burning makes gases that cause pollution."
+  },
+  {
+   "q": "Cause or effect: animals lose habitat.",
+   "o": [
+    "effect",
+    "cause",
+    "neither"
+   ],
+   "why": "It is a result of cutting down trees."
+  },
+  {
+   "q": "Trees are cut down → plants die → ...",
+   "o": [
+    "animals move away",
+    "more animals come",
+    "it snows"
+   ],
+   "why": "Without plants, animals move away."
+  },
+  {
+   "q": "Which is made from trees?",
+   "o": [
+    "paper",
+    "plastic",
+    "glass"
+   ],
+   "why": "Paper comes from trees."
+  },
+  {
+   "q": "Melting ice → penguins and polar bears ...",
+   "o": [
+    "lose habitat",
+    "get more food",
+    "grow bigger"
+   ],
+   "why": "Melting ice takes away their habitat."
+  },
+  {
+   "q": "Burning trees causes air pollution and ...",
+   "o": [
+    "global warming",
+    "more rain",
+    "cleaner rivers"
+   ],
+   "why": "The gases cause global warming."
+  },
+  {
+   "q": "What shows cause and effect in a plan?",
+   "o": [
+    "arrows",
+    "colours",
+    "page numbers"
+   ],
+   "why": "Arrows link cause to effect."
+  },
+  {
+   "q": "What problem do groups present at the end?",
+   "o": [
+    "plastic rubbish",
+    "rainforest shopping",
+    "football rules"
+   ],
+   "why": "Groups present the causes and effects of plastic rubbish."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Habitat with most life",
+   "a": "rainforest",
+   "d": [
+    "desert",
+    "ice",
+    "city"
+   ]
+  },
+  {
+   "q": "Made from trees",
+   "a": "paper",
+   "d": [
+    "plastic",
+    "glass",
+    "metal"
+   ]
+  },
+  {
+   "q": "Burning trees makes",
+   "a": "gases",
+   "d": [
+    "water",
+    "ice",
+    "sand"
+   ]
+  },
+  {
+   "q": "Why burn trees?",
+   "a": "new farm land",
+   "d": [
+    "warm houses",
+    "clean air",
+    "more rain"
+   ]
+  },
+  {
+   "q": "Animals lose habitat is a",
+   "a": "effect",
+   "d": [
+    "cause",
+    "title",
+    "question"
+   ]
+  },
+  {
+   "q": "Trees cut down: animals",
+   "a": "move away",
+   "d": [
+    "come back",
+    "get bigger",
+    "sleep"
+   ]
+  },
+  {
+   "q": "Burning causes air ...",
+   "a": "pollution",
+   "d": [
+    "cleaning",
+    "freshness",
+    "cooling"
+   ]
+  },
+  {
+   "q": "Melting ice hurts",
+   "a": "polar bears",
+   "d": [
+    "camels",
+    "oryx",
+    "falcons"
+   ]
+  },
+  {
+   "q": "Links cause and effect",
+   "a": "arrows",
+   "d": [
+    "colours",
+    "pictures",
+    "numbers"
+   ]
+  },
+  {
+   "q": "Topic of final presentation",
+   "a": "plastic rubbish",
+   "d": [
+    "shopping",
+    "markets",
+    "sport"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a cause, not an effect, in the rainforest text?",
+   "o": [
+    "Trees are cut down.",
+    "Plants die.",
+    "Animals move away.",
+    "Animals lose habitat."
+   ],
+   "why": "Cutting trees is the cause; the others are effects."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which things are made from trees?",
+   "o": [
+    "fuel, paper, furniture",
+    "plastic, glass, metal",
+    "ice, snow, water",
+    "sand, stone, gold"
+   ],
+   "why": "Trees give fuel, oil, paper, furniture and wooden homes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What happens when rainforest trees are burned?",
+   "o": [
+    "They make gases that cause air pollution and global warming.",
+    "They make clean water.",
+    "They make more ice.",
+    "Nothing happens."
+   ],
+   "why": "Burning releases polluting gases."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why do forest workers sometimes burn the trees?",
+   "o": [
+    "so farmers can have new land for crops and farm animals",
+    "to make light at night",
+    "to cook food",
+    "to stop pollution"
+   ],
+   "why": "The land is used for farming."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make an arrow plan: trees are cut down → ...",
+   "o": [
+    "plants die → animals move away",
+    "animals come → more trees grow",
+    "ice melts → it snows",
+    "shops open → people buy"
+   ],
+   "why": "Cutting trees causes plants to die and animals to leave."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence shows cause and effect correctly?",
+   "o": [
+    "Because of burning trees, there is more air pollution.",
+    "Because of air pollution, people burn trees.",
+    "Burning trees, so trees.",
+    "Air pollution causes trees to burn."
+   ],
+   "why": "Burning trees is the cause; pollution is the effect."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "For the plastic rubbish presentation, which is a cause-and-effect plan?",
+   "o": [
+    "plastic in the sea → sea animals are hurt",
+    "plastic is a word → it has seven letters",
+    "plastic is blue → it is nice",
+    "plastic → plastic"
+   ],
+   "why": "A clear cause leads to an effect."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ice in the Arctic and Antarctic is melting. What is the effect?",
+   "o": [
+    "Penguins and polar bears lose some of their habitats.",
+    "Penguins get bigger homes.",
+    "More ice is made.",
+    "Rainforests grow."
+   ],
+   "why": "Melting ice takes away their habitat."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Animals lose habitat.' Why is this an effect, not a cause?",
+   "o": [
+    "It happens because trees are cut down.",
+    "It happens before trees are cut.",
+    "It makes trees grow.",
+    "It is a kind of fuel."
+   ],
+   "why": "It is the result of cutting down the rainforest."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Farmers get new land, but animals lose their homes. What does this show?",
+   "o": [
+    "One action can have good and bad effects.",
+    "Burning trees has no effects.",
+    "Animals like farms.",
+    "Rainforests are not important."
+   ],
+   "why": "Burning forests helps farming but harms animals and the air."
+  }
+ ]
+}

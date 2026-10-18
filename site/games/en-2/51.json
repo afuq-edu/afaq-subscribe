@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 4: Meet my family",
+  "lesson": "Unit 4 – Lesson 3: Vocabulary and Grammar (The face)",
+  "outcomes": [
+    "I can name face parts and hair colours.",
+    "I can describe people with He's got and She's got.",
+    "I can read and write ar words like star and shark."
+  ],
+  "tf": [
+    { "s": "We see with our eyes.", "t": true, "why": "Yes! Eyes help us see." },
+    { "s": "We hear with our nose.", "t": false, "why": "We hear with our ears." },
+    { "s": "We say She's got for a girl.", "t": true, "why": "Great! She is for a girl." },
+    { "s": "We say She's got for a boy.", "t": false, "why": "We say He's got for a boy." },
+    { "s": "In the song, Claire has got red hair.", "t": true, "why": "Well done! She's got red hair." },
+    { "s": "In the song, Piers has got blue eyes.", "t": true, "why": "Yes! Piers has got blue eyes." },
+    { "s": "Fair, brown, red and black can be hair colours.", "t": true, "why": "Great! These are hair colours." },
+    { "s": "Our mouth is on top of our head.", "t": false, "why": "Our mouth is on our face, under the nose." },
+    { "s": "Shark has the letters er.", "t": false, "why": "Shark has ar: sh-ar-k." },
+    { "s": "Star has the letters ar.", "t": true, "why": "Yes! st-ar has ar." }
+  ],
+  "boxes": [
+    { "q": "We smell with our ___.", "o": ["nose", "ears", "hair"], "why": "We smell with our nose." },
+    { "q": "We eat with our ___.", "o": ["mouth", "eyes", "ears"], "why": "We eat with our mouth." },
+    { "q": "A girl: ___ got green eyes.", "o": ["She's", "He's", "I'm"], "why": "She's got is for a girl." },
+    { "q": "A boy: ___ got black hair.", "o": ["He's", "She's", "It's"], "why": "He's got is for a boy." },
+    { "q": "What colour is Claire's hair?", "o": ["red", "black", "fair"], "why": "Claire has got red hair." },
+    { "q": "Her name's ___. (song)", "o": ["Claire", "Piers", "Ahmed"], "why": "In the song, her name's Claire." },
+    { "q": "Blend sh – ar – k.", "o": ["shark", "shirt", "shook"], "why": "sh-ar-k makes shark." },
+    { "q": "What ___ you see?", "o": ["do", "come", "said"], "why": "We say What do you see?" },
+    { "q": "Which word has ar?", "o": ["farm", "fern", "feet"], "why": "f-ar-m has ar." },
+    { "q": "Which is a face word?", "o": ["ears", "knees", "toes"], "why": "Our ears are on our head, by our face." }
+  ],
+  "hunt": [
+    { "q": "We see with them.", "a": "eyes", "d": ["ears", "nose", "hair"] },
+    { "q": "We hear with them.", "a": "ears", "d": ["eyes", "mouth", "nose"] },
+    { "q": "It's in the middle of your face.", "a": "nose", "d": ["ears", "hair", "eyes"] },
+    { "q": "Touch your ___! (on top of head)", "a": "hair", "d": ["nose", "mouth", "eyes"] },
+    { "q": "Claire's hair colour", "a": "red", "d": ["fair", "brown", "black"] },
+    { "q": "Piers's eye colour", "a": "blue", "d": ["green", "red", "brown"] },
+    { "q": "___ got blue eyes. (Piers)", "a": "He's", "d": ["She's", "It's", "I'm"] },
+    { "q": "It shines in the sky at night.", "a": "star", "d": ["scarf", "shark", "farm"] },
+    { "q": "We wear it in cold weather.", "a": "scarf", "d": ["star", "park", "art"] },
+    { "q": "Find the tricky word.", "a": "do", "d": ["star", "dark", "park"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Which word is a face word?", "o": ["mouth", "knee", "foot", "arm"], "why": "The mouth is on our face." },
+    { "lv": "التذكر", "q": "Which is a hair colour in this lesson?", "o": ["fair", "purple", "pink", "orange"], "why": "Fair hair is light yellow hair." },
+    { "lv": "التذكر", "q": "Which letters make the sound in \"park\"?", "o": ["ar", "er", "ee", "oi"], "why": "p-ar-k has ar." },
+    { "lv": "التذكر", "q": "Who has got blue eyes in the song?", "o": ["Piers", "Claire", "Lily", "Polly"], "why": "Piers has got blue eyes." },
+    { "lv": "التطبيق", "q": "Your friend Sara has got brown eyes. What do you say?", "o": ["She's got brown eyes.", "He's got brown eyes.", "She's got brown eye.", "She got's brown eyes."], "why": "Sara is a girl: She's got brown eyes." },
+    { "lv": "التطبيق", "q": "Complete: His name's ___. He's got blue eyes.", "o": ["Piers", "Claire", "Sara", "Lily"], "why": "His is for a boy: Piers." },
+    { "lv": "التطبيق", "q": "Write the word for a picture of a star.", "o": ["star", "ster", "stor", "stair"], "why": "st-ar spells star." },
+    { "lv": "التحليل", "q": "Which sentence is right for a boy?", "o": ["He's got a small nose.", "She's got a small nose.", "He's got a small noses.", "His got a small nose."], "why": "For a boy we say He's got." },
+    { "lv": "التحليل", "q": "Which is the odd one out?", "o": ["toes", "eyes", "nose", "mouth"], "why": "Toes are on our feet; the others are on our face." },
+    { "lv": "التحليل", "q": "Which word does NOT have ar?", "o": ["herd", "dark", "art", "farm"], "why": "Herd has er, not ar." }
+  ]
+}

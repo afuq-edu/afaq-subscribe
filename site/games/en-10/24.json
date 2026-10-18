@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "unit": "4",
+ "lesson": "Unit 4: Civilisation – Grammar and Vocabulary",
+ "outcomes": [
+  "Form the past passive with was/were + past participle.",
+  "Use adverbs of degree: a bit, quite, very, extremely.",
+  "Use the second conditional for imaginary situations."
+ ],
+ "tf": [
+  {
+   "s": "The past passive is formed with was/were + past participle.",
+   "t": true,
+   "why": "Yes, for example 'was built'."
+  },
+  {
+   "s": "'The pyramids was built by the Egyptians.' is correct.",
+   "t": false,
+   "why": "'Pyramids' is plural, so we say 'were built'."
+  },
+  {
+   "s": "'Bahla Fort was built long ago.' is a past passive sentence.",
+   "t": true,
+   "why": "Correct, it uses was + built."
+  },
+  {
+   "s": "In the passive, the object of the active sentence becomes the subject.",
+   "t": true,
+   "why": "Right, 'the tomb' becomes the subject."
+  },
+  {
+   "s": "'The fort was build.' is correct.",
+   "t": false,
+   "why": "We need the past participle: 'was built'."
+  },
+  {
+   "s": "'Extremely' is stronger than 'a bit'.",
+   "t": true,
+   "why": "Yes: a bit < quite < very < extremely."
+  },
+  {
+   "s": "'A bit' is the strongest adverb of degree.",
+   "t": false,
+   "why": "'A bit' is the weakest; 'extremely' is the strongest."
+  },
+  {
+   "s": "'If I were a pharaoh, I would build a pyramid.' is a second conditional sentence.",
+   "t": true,
+   "why": "Well done, it uses If + past, would + verb."
+  },
+  {
+   "s": "We use the second conditional for real past events.",
+   "t": false,
+   "why": "It is for unreal or imaginary situations in the present."
+  },
+  {
+   "s": "We often use the passive in history texts when the focus is on the event.",
+   "t": true,
+   "why": "Correct, the doer is often unknown or less important."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "The pyramids ___ built by the Egyptians.",
+   "o": [
+    "were",
+    "was",
+    "is"
+   ],
+   "why": "Plural subject: 'were'."
+  },
+  {
+   "q": "Bahla Fort ___ built long ago.",
+   "o": [
+    "was",
+    "were",
+    "are"
+   ],
+   "why": "Singular subject: 'was'."
+  },
+  {
+   "q": "Which is correct?",
+   "o": [
+    "was built",
+    "was build",
+    "was building"
+   ],
+   "why": "Use the past participle 'built'."
+  },
+  {
+   "q": "The weakest adverb of degree is…",
+   "o": [
+    "a bit",
+    "very",
+    "extremely"
+   ],
+   "why": "'A bit' is the weakest."
+  },
+  {
+   "q": "If I ___ a pharaoh, I would build a pyramid.",
+   "o": [
+    "were",
+    "am",
+    "will be"
+   ],
+   "why": "Second conditional uses 'were'."
+  },
+  {
+   "q": "The pyramids are ___ impressive.",
+   "o": [
+    "extremely",
+    "extreme",
+    "extremity"
+   ],
+   "why": "We need the adverb 'extremely'."
+  },
+  {
+   "q": "Passive: 'Archaeologists found old coins.'",
+   "o": [
+    "Old coins were found by archaeologists.",
+    "Old coins was found by archaeologists.",
+    "Old coins found archaeologists."
+   ],
+   "why": "Plural 'coins' needs 'were found'."
+  },
+  {
+   "q": "'I think civilisation is important.' is…",
+   "o": [
+    "an opinion",
+    "a fact",
+    "a date"
+   ],
+   "why": "'I think' shows an opinion."
+  },
+  {
+   "q": "The second conditional is for…",
+   "o": [
+    "imaginary situations",
+    "past facts",
+    "daily routines"
+   ],
+   "why": "It talks about unreal situations."
+  },
+  {
+   "q": "Which word shows who did the action in a passive?",
+   "o": [
+    "by",
+    "was",
+    "if"
+   ],
+   "why": "'by the Egyptians' shows the doer."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Plural past passive helper",
+   "a": "were",
+   "d": [
+    "was",
+    "is",
+    "am"
+   ]
+  },
+  {
+   "q": "Singular past passive helper",
+   "a": "was",
+   "d": [
+    "were",
+    "are",
+    "be"
+   ]
+  },
+  {
+   "q": "Past participle of 'build'",
+   "a": "built",
+   "d": [
+    "build",
+    "builded",
+    "building"
+   ]
+  },
+  {
+   "q": "Past participle of 'invent'",
+   "a": "invented",
+   "d": [
+    "invent",
+    "inventing",
+    "invents"
+   ]
+  },
+  {
+   "q": "Past participle of 'discover'",
+   "a": "discovered",
+   "d": [
+    "discover",
+    "discovering",
+    "discovers"
+   ]
+  },
+  {
+   "q": "Weakest degree adverb",
+   "a": "a bit",
+   "d": [
+    "quite",
+    "very",
+    "extremely"
+   ]
+  },
+  {
+   "q": "Strongest degree adverb",
+   "a": "extremely",
+   "d": [
+    "a bit",
+    "quite",
+    "very"
+   ]
+  },
+  {
+   "q": "If she ___ a queen…",
+   "a": "were",
+   "d": [
+    "am",
+    "will be",
+    "be"
+   ]
+  },
+  {
+   "q": "…, I ___ build a pyramid.",
+   "a": "would",
+   "d": [
+    "will",
+    "am",
+    "did"
+   ]
+  },
+  {
+   "q": "Word before the doer",
+   "a": "by",
+   "d": [
+    "was",
+    "if",
+    "to"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How is the past passive formed?",
+   "o": [
+    "was/were + past participle",
+    "will + verb",
+    "have + verb-ing",
+    "do + verb"
+   ],
+   "why": "For example: 'was built', 'were discovered'."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list is in order from weakest to strongest?",
+   "o": [
+    "a bit, quite, very, extremely",
+    "extremely, very, quite, a bit",
+    "very, a bit, extremely, quite",
+    "quite, extremely, a bit, very"
+   ],
+   "why": "'A bit' is weakest, 'extremely' strongest."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When do we use the second conditional?",
+   "o": [
+    "for unreal or imaginary situations in the present",
+    "for things that happen every day",
+    "for finished past events",
+    "for future plans we are sure about"
+   ],
+   "why": "It describes situations that are not real."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is in the past passive?",
+   "o": [
+    "The calendar was invented by the Mayans.",
+    "The Mayans invent the calendar.",
+    "The Mayans are inventing a calendar.",
+    "The Mayans will invent a calendar."
+   ],
+   "why": "was + invented = past passive."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Change to the passive: 'They discovered the tomb in 1922.'",
+   "o": [
+    "The tomb was discovered in 1922.",
+    "The tomb discovered in 1922.",
+    "The tomb is discovering in 1922.",
+    "They were discovered the tomb in 1922."
+   ],
+   "why": "The object 'the tomb' becomes the subject."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: If I ___ a Roman emperor, I ___ ask about the empire.",
+   "o": [
+    "met / would",
+    "meet / will",
+    "met / will",
+    "meet / would"
+   ],
+   "why": "Second conditional: If + past, would + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best sentence: The pyramids are ___.",
+   "o": [
+    "extremely impressive",
+    "extreme impressive",
+    "impressive extremely very",
+    "a bit extremely impressive"
+   ],
+   "why": "An adverb of degree goes before the adjective."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we often use the passive in history texts?",
+   "o": [
+    "The focus is on the event, not on the unknown doer.",
+    "It makes sentences shorter always.",
+    "It is only for the future.",
+    "It shows the writer's opinion."
+   ],
+   "why": "We often don't know who built or found things."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "The tombs was discovered by archaeologists.",
+    "Bahla Fort was built long ago.",
+    "The tomb was discovered in 1922.",
+    "The calendar was invented by the Mayans."
+   ],
+   "why": "'Tombs' is plural, so it needs 'were'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'I think the Romans were very powerful.' Is this a fact or an opinion, and why?",
+   "o": [
+    "An opinion, because it starts with 'I think'.",
+    "A fact, because it uses 'were'.",
+    "A fact, because it is about history.",
+    "An opinion, because it is in the passive."
+   ],
+   "why": "'I think' shows a personal view."
+  }
+ ]
+}

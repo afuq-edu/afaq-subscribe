@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "1",
+  "lesson": "Unit 1: New Media – Review",
+  "outcomes": [
+    "Review Unit 1 words about new media, blogs and the news.",
+    "Use phrasal verbs and comparatives like 'not as … as' correctly.",
+    "Correct mistakes in sentences that describe a chart."
+  ],
+  "tf": [
+    {"s": "A blog is a regular online record of your thoughts.", "t": true, "why": "Yes! Bloggers post their ideas online regularly."},
+    {"s": "'Football is more popular than chess' = 'Chess is not as popular as football.'", "t": true, "why": "Correct, both sentences have the same meaning."},
+    {"s": "We say 'click in the link'.", "t": false, "why": "We say 'click on the link'."},
+    {"s": "'Back up your files' means make a copy so you don't lose them.", "t": true, "why": "Right, backing up keeps your files safe."},
+    {"s": "Fake news is always based on facts.", "t": false, "why": "Fake news is not based on facts, so check the source."},
+    {"s": "A pie chart summary should use the past continuous tense.", "t": false, "why": "We describe charts in the present simple."},
+    {"s": "'Not as … as' is followed by the comparative form, e.g. 'not as bigger as'.", "t": false, "why": "We use the base form: 'not as big as'."},
+    {"s": "Followers are people who follow your social media account.", "t": true, "why": "Well done, more followers means more people see your posts."},
+    {"s": "New media are interactive.", "t": true, "why": "Yes, people can communicate and take part."},
+    {"s": "A printed newspaper is more interactive than a blog.", "t": false, "why": "A blog lets readers comment; a printed newspaper is one-way."}
+  ],
+  "boxes": [
+    {"q": "Please ___ your files regularly.", "o": ["back up", "hang up", "hurry up"], "why": "'Back up' means save a copy."},
+    {"q": "I click ___ the link.", "o": ["on", "in", "at"], "why": "The phrasal verb is 'click on'."},
+    {"q": "I log ___ to the website with my password.", "o": ["in", "on", "up"], "why": "We 'log in to' a website."},
+    {"q": "Which sentence is correct?", "o": ["Chess is not as popular as football.", "Chess is not as more popular as football.", "Chess is not popular as as football."], "why": "not as + base adjective + as."},
+    {"q": "Which word starts a summary of the main idea of a chart?", "o": ["Overall", "Because", "Hurry up"], "why": "'Overall' introduces the general picture."},
+    {"q": "Which is a good way to avoid fake news?", "o": ["check the source", "share it fast", "believe every post"], "why": "A trusted source gives true information."},
+    {"q": "A circle divided into slices is a ...", "o": ["pie chart", "line graph", "column chart"], "why": "Each slice shows a part of the whole."},
+    {"q": "Which is an example of new media?", "o": ["social media", "a printed magazine", "a stereo"], "why": "Social media is online and interactive."},
+    {"q": "'Screenager' combines which two words?", "o": ["screen + teenager", "screen + manager", "scream + teenager"], "why": "A screenager spends a lot of time in front of a screen."},
+    {"q": "Which shows the most popular platform?", "o": ["YouTube is the most popular platform.", "YouTube is most popular than platform.", "YouTube is the more popular platform of all."], "why": "'The most' compares one with all others."}
+  ],
+  "hunt": [
+    {"q": "Save a copy of your files", "a": "back up", "d": ["hang up", "hurry up", "bring up"]},
+    {"q": "Find something by chance", "a": "come across", "d": ["back up", "log in", "hang up"]},
+    {"q": "Enter a website with a password", "a": "log in", "d": ["hang up", "back up", "bring up"]},
+    {"q": "An online record of your thoughts", "a": "blog", "d": ["chart", "radio", "source"]},
+    {"q": "News not based on facts", "a": "fake news", "d": ["blog post", "pie chart", "podcast"]},
+    {"q": "Where news comes from", "a": "source", "d": ["follower", "menu", "slice"]},
+    {"q": "Not as ___ as (popular)", "a": "popular", "d": ["more popular", "most popular", "popularer"]},
+    {"q": "People who follow your account", "a": "followers", "d": ["bloggers", "sources", "journalists"]},
+    {"q": "Tense for describing charts", "a": "present simple", "d": ["past simple", "future simple", "past continuous"]},
+    {"q": "Media that let people interact", "a": "new media", "d": ["old media", "printed media", "radio"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What is a phrasal verb?", "o": ["a verb + adverb or preposition with its own meaning", "a verb in the future tense", "a type of chart", "a long noun"], "why": "Examples are log in, back up and come across."},
+    {"lv": "التذكر", "q": "Which chart has vertical bars?", "o": ["a column chart", "a pie chart", "a line graph", "a bar chart"], "why": "A bar chart has horizontal bars; columns are vertical."},
+    {"lv": "التذكر", "q": "What does 'interactive' mean?", "o": ["involving communication between people", "printed on paper", "very old", "very expensive"], "why": "New media are interactive."},
+    {"lv": "التذكر", "q": "Which expression makes a suggestion?", "o": ["Why don't we…?", "I'm sorry but I don't agree.", "One example of this is…", "Overall, …"], "why": "'Why don't we…?' suggests an idea."},
+    {"lv": "التطبيق", "q": "Correct: 'I click in the link and log out the website.'", "o": ["I click on the link and log out of the website.", "I click at the link and log out in the website.", "I clicks in the link and logs out the website.", "I click in the link and log off on the website."], "why": "We say 'click on' and 'log out of'."},
+    {"lv": "التطبيق", "q": "Rewrite: 'Taxis are more expensive than buses.'", "o": ["Buses are not as expensive as taxis.", "Taxis are not as expensive as buses.", "Buses are not as more expensive as taxis.", "Buses are as expensive as taxis."], "why": "Swap the items and use the base adjective."},
+    {"lv": "التطبيق", "q": "Choose the best sentence for a pie chart summary.", "o": ["Overall, YouTube is the most popular platform.", "Overall, I love YouTube so much.", "Overall, YouTube were the most popular.", "Overall, YouTube is popularer."], "why": "It is objective and uses correct grammar."},
+    {"lv": "التحليل", "q": "Which sentence has a mistake?", "o": ["The chart show that football are popular.", "The chart shows that football is popular.", "Girls prefer swimming, while boys prefer football.", "Poetry is the least popular genre."], "why": "It should be 'The chart shows that football is popular.'"},
+    {"lv": "التحليل", "q": "Why is a blog an example of new media?", "o": ["Readers can comment and communicate with the writer.", "It is printed every morning.", "It has no pictures.", "Only one person can read it."], "why": "Interaction makes it new media."},
+    {"lv": "التحليل", "q": "Which is the best learning goal for Unit 2?", "o": ["I will practise reading texts faster.", "I will finish the book in one day.", "I will never make mistakes.", "I will stop reading."], "why": "A good goal is clear and realistic."}
+  ]
+}

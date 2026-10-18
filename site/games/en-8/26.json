@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 2: Adventure sports",
+ "lesson": "Graded reader 2: A Rock Climbing Adventure",
+ "outcomes": [
+  "Read a story and follow the order of events.",
+  "Learn the words equipment, falcon, nest, flap and proud.",
+  "Give your opinion about the characters' actions."
+ ],
+ "tf": [
+  {
+   "s": "The boys went rock climbing in the north of Oman.",
+   "t": true,
+   "why": "Yes, the story happens in the north of Oman."
+  },
+  {
+   "s": "The boys saw the sunset before they got to the cliffs.",
+   "t": false,
+   "why": "They saw the sunrise, early in the morning."
+  },
+  {
+   "s": "The baby falcon had fallen out of its nest.",
+   "t": true,
+   "why": "Correct, it had fallen out of its nest."
+  },
+  {
+   "s": "Sultan saw a baby falcon sitting on its nest.",
+   "t": false,
+   "why": "The baby falcon had fallen out of its nest."
+  },
+  {
+   "s": "Adil climbed the cliff with the baby falcon.",
+   "t": true,
+   "why": "Right, Adil took the baby back up."
+  },
+  {
+   "s": "The boys took a bus down the cliff.",
+   "t": false,
+   "why": "They abseiled down the cliff."
+  },
+  {
+   "s": "The boys knew how to climb because they had taken lessons.",
+   "t": true,
+   "why": "Well done, they had taken climbing lessons."
+  },
+  {
+   "s": "A nest is a home that birds build for their eggs and babies.",
+   "t": true,
+   "why": "Yes, birds build nests."
+  },
+  {
+   "s": "Dad was angry because Adil helped the baby falcon.",
+   "t": false,
+   "why": "Dad was proud of Adil."
+  },
+  {
+   "s": "The falcon's mother was making noises.",
+   "t": true,
+   "why": "Good, the mother bird was making noises."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where did the boys go rock climbing?",
+   "o": [
+    "the north of Oman",
+    "the south of Oman",
+    "Spain"
+   ],
+   "why": "They climbed in the north of Oman."
+  },
+  {
+   "q": "What did the boys find?",
+   "o": [
+    "a baby falcon",
+    "a bracelet",
+    "a puck"
+   ],
+   "why": "They found a baby falcon."
+  },
+  {
+   "q": "What had happened to the baby falcon?",
+   "o": [
+    "It had fallen out of its nest.",
+    "It had flown to the sea.",
+    "It had eaten too much."
+   ],
+   "why": "It had fallen out of its nest."
+  },
+  {
+   "q": "Who climbed the cliff with the baby?",
+   "o": [
+    "Adil",
+    "Dad",
+    "the falcon's mother"
+   ],
+   "why": "Adil climbed up with the baby falcon."
+  },
+  {
+   "q": "How did the boys get down the cliff?",
+   "o": [
+    "They abseiled.",
+    "They jumped.",
+    "They flew."
+   ],
+   "why": "They abseiled down on ropes."
+  },
+  {
+   "q": "What does 'proud' mean?",
+   "o": [
+    "very pleased about someone's good action",
+    "very scared",
+    "very tired"
+   ],
+   "why": "Dad was proud because Adil did something good."
+  },
+  {
+   "q": "What do birds do when they flap?",
+   "o": [
+    "move their wings up and down",
+    "build a nest",
+    "lay eggs"
+   ],
+   "why": "Flap means move the wings up and down."
+  },
+  {
+   "q": "Complete: The boys had ___ lessons, so they knew how to climb.",
+   "o": [
+    "taken",
+    "took",
+    "take"
+   ],
+   "why": "Past perfect: had taken."
+  },
+  {
+   "q": "What did they see before they got to the cliffs?",
+   "o": [
+    "the sunrise",
+    "the tide",
+    "a bay"
+   ],
+   "why": "They saw the sunrise on the way."
+  },
+  {
+   "q": "Ropes and helmets for climbing are called ...",
+   "o": [
+    "equipment",
+    "nests",
+    "falcons"
+   ],
+   "why": "Equipment is the things you need for an activity."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Bird in the story",
+   "a": "falcon",
+   "d": [
+    "penguin",
+    "eagle",
+    "parrot"
+   ]
+  },
+  {
+   "q": "Bird's home",
+   "a": "nest",
+   "d": [
+    "cave",
+    "tent",
+    "dune"
+   ]
+  },
+  {
+   "q": "Who climbed with the baby?",
+   "a": "Adil",
+   "d": [
+    "Laith",
+    "Dad",
+    "Younis"
+   ]
+  },
+  {
+   "q": "Part of Oman in the story",
+   "a": "north",
+   "d": [
+    "south",
+    "east",
+    "west"
+   ]
+  },
+  {
+   "q": "Seen before the cliffs",
+   "a": "sunrise",
+   "d": [
+    "sunset",
+    "tide",
+    "rain"
+   ]
+  },
+  {
+   "q": "How they got down",
+   "a": "abseiled",
+   "d": [
+    "jumped",
+    "swam",
+    "flew"
+   ]
+  },
+  {
+   "q": "Dad felt ...",
+   "a": "proud",
+   "d": [
+    "angry",
+    "bored",
+    "scared"
+   ]
+  },
+  {
+   "q": "Move wings up and down",
+   "a": "flap",
+   "d": [
+    "swim",
+    "dig",
+    "climb"
+   ]
+  },
+  {
+   "q": "The boys had ___ lessons",
+   "a": "taken",
+   "d": [
+    "took",
+    "take",
+    "taking"
+   ]
+  },
+  {
+   "q": "The baby had ___ out",
+   "a": "fallen",
+   "d": [
+    "fell",
+    "fall",
+    "falling"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is a falcon?",
+   "o": [
+    "a kind of bird",
+    "a kind of fish",
+    "a climbing rope",
+    "a kind of tent"
+   ],
+   "why": "A falcon is a bird."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'abseil' mean?",
+   "o": [
+    "go down a cliff on a rope",
+    "climb up a tree",
+    "fly like a bird",
+    "swim underwater"
+   ],
+   "why": "The boys abseiled down the cliff on ropes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why did Dad feel proud?",
+   "o": [
+    "Adil helped the baby falcon.",
+    "Adil won a race.",
+    "Adil found a bracelet.",
+    "Adil slept early."
+   ],
+   "why": "Helping the baby falcon made Dad proud."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What was the falcon's mother doing?",
+   "o": [
+    "making noises",
+    "building a house",
+    "sleeping",
+    "swimming"
+   ],
+   "why": "The mother was making noises."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete the summary: The boys ___ down the cliff.",
+   "o": [
+    "abseiled",
+    "flapped",
+    "nested",
+    "fell"
+   ],
+   "why": "Abseil means go down a cliff on a rope."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: 'Sultan saw a baby falcon on its nest.'",
+   "o": [
+    "The baby falcon had fallen out of its nest.",
+    "Sultan saw a baby penguin.",
+    "The falcon was in the sea.",
+    "Sultan saw nothing."
+   ],
+   "why": "The baby was not on its nest; it had fallen out."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses the Past perfect correctly?",
+   "o": [
+    "The baby falcon had fallen out of its nest.",
+    "The baby falcon had fell out of its nest.",
+    "The baby falcon has fall out of its nest.",
+    "The baby falcon falling had out of its nest."
+   ],
+   "why": "had + past participle: had fallen."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why could the boys climb the cliff safely?",
+   "o": [
+    "They had taken lessons and had the right equipment.",
+    "They were very tall.",
+    "The cliff was flat.",
+    "They did not need ropes."
+   ],
+   "why": "Lessons and equipment helped them climb safely."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What happened first?",
+   "o": [
+    "The baby falcon fell out of its nest.",
+    "Adil climbed the cliff with the baby.",
+    "Dad felt proud.",
+    "The boys abseiled down."
+   ],
+   "why": "The fall happened first; then Adil helped and they came down."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A student says Adil was brave. Which reason supports this?",
+   "o": [
+    "He climbed a cliff to take the baby back to its nest.",
+    "He went home early.",
+    "He watched the sunrise.",
+    "He was making noises."
+   ],
+   "why": "Climbing the cliff to help the bird shows courage."
+  }
+ ]
+}

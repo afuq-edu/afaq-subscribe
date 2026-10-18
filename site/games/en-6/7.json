@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 1: Free-time fun",
+ "lesson": "Unit 1 – Lesson 5: Vocabulary and Grammar – Hobbies and state verbs",
+ "outcomes": [
+  "I can name hobbies with the correct verb.",
+  "I can use state verbs like like, love, hate and prefer.",
+  "I can suggest a new hobby for a friend."
+ ],
+ "tf": [
+  {
+   "s": "We say \"collect cards\".",
+   "t": true,
+   "why": "Yes! We collect cards."
+  },
+  {
+   "s": "We say \"play a diary\".",
+   "t": false,
+   "why": "We say \"write a diary\"."
+  },
+  {
+   "s": "Like, love and hate are state verbs.",
+   "t": true,
+   "why": "Correct! They are state verbs."
+  },
+  {
+   "s": "We usually use state verbs in continuous tenses.",
+   "t": false,
+   "why": "State verbs are not usually used in continuous tenses."
+  },
+  {
+   "s": "\"I'm not believing you\" is correct.",
+   "t": false,
+   "why": "Believe is a state verb, so we say \"I don't believe you.\""
+  },
+  {
+   "s": "Rasha prefers acting to singing.",
+   "t": true,
+   "why": "Right! Rasha doesn't like singing; she prefers acting."
+  },
+  {
+   "s": "Photography is a hobby that uses a camera.",
+   "t": true,
+   "why": "Yes, you take photos with a camera."
+  },
+  {
+   "s": "We say \"make models\" and \"make videos\".",
+   "t": true,
+   "why": "Great! Both use make."
+  },
+  {
+   "s": "\"Do you knowing how to play table tennis?\" is correct.",
+   "t": false,
+   "why": "We say \"Do you know how to play table tennis?\""
+  },
+  {
+   "s": "\"That song sounds fantastic\" uses a state verb.",
+   "t": true,
+   "why": "Yes, sound is a state verb."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "___ a diary",
+   "o": [
+    "write",
+    "collect",
+    "play"
+   ],
+   "why": "We write a diary."
+  },
+  {
+   "q": "___ cards",
+   "o": [
+    "collect",
+    "write",
+    "do"
+   ],
+   "why": "We collect cards."
+  },
+  {
+   "q": "___ models",
+   "o": [
+    "make",
+    "watch",
+    "write"
+   ],
+   "why": "We make models."
+  },
+  {
+   "q": "Which hobby uses a camera?",
+   "o": [
+    "do photography",
+    "do puzzles",
+    "write a diary"
+   ],
+   "why": "Photography uses a camera."
+  },
+  {
+   "q": "She ___ making models.",
+   "o": [
+    "doesn't like",
+    "isn't liking",
+    "not likes"
+   ],
+   "why": "Like is a state verb, so no -ing."
+  },
+  {
+   "q": "That song ___ fantastic.",
+   "o": [
+    "sounds",
+    "is sounding",
+    "sound"
+   ],
+   "why": "Sound is a state verb: it sounds."
+  },
+  {
+   "q": "Which is a state verb?",
+   "o": [
+    "know",
+    "run",
+    "swim"
+   ],
+   "why": "Know is a state verb."
+  },
+  {
+   "q": "___ cartoons",
+   "o": [
+    "watch",
+    "make",
+    "collect"
+   ],
+   "why": "We watch cartoons."
+  },
+  {
+   "q": "What does Rasha prefer?",
+   "o": [
+    "acting",
+    "singing",
+    "playing the piano"
+   ],
+   "why": "Rasha prefers acting."
+  },
+  {
+   "q": "___ musical instruments",
+   "o": [
+    "play",
+    "do",
+    "write"
+   ],
+   "why": "We play musical instruments."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "___ a diary",
+   "a": "write",
+   "d": [
+    "collect",
+    "watch",
+    "play"
+   ]
+  },
+  {
+   "q": "___ cards",
+   "a": "collect",
+   "d": [
+    "write",
+    "watch",
+    "do"
+   ]
+  },
+  {
+   "q": "___ cartoons",
+   "a": "watch",
+   "d": [
+    "make",
+    "collect",
+    "write"
+   ]
+  },
+  {
+   "q": "___ models",
+   "a": "make",
+   "d": [
+    "watch",
+    "write",
+    "do"
+   ]
+  },
+  {
+   "q": "___ board games",
+   "a": "play",
+   "d": [
+    "write",
+    "make",
+    "collect"
+   ]
+  },
+  {
+   "q": "___ the gardening",
+   "a": "do",
+   "d": [
+    "play",
+    "watch",
+    "collect"
+   ]
+  },
+  {
+   "q": "Hobby with a camera",
+   "a": "photography",
+   "d": [
+    "gardening",
+    "puzzles",
+    "cartoons"
+   ]
+  },
+  {
+   "q": "Hobby with plants",
+   "a": "gardening",
+   "d": [
+    "photography",
+    "cartoons",
+    "board games"
+   ]
+  },
+  {
+   "q": "A state verb",
+   "a": "prefer",
+   "d": [
+    "swim",
+    "jump",
+    "run"
+   ]
+  },
+  {
+   "q": "I ___ you. (believe)",
+   "a": "believe",
+   "d": [
+    "am believing",
+    "believing",
+    "believes"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list has only state verbs?",
+   "o": [
+    "like, love, hate, prefer",
+    "run, jump, swim, play",
+    "make, write, watch, collect",
+    "go, do, play, make"
+   ],
+   "why": "These verbs describe feelings and thoughts."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which hobby is correct?",
+   "o": [
+    "write a diary",
+    "collect a diary",
+    "watch a diary",
+    "make a diary"
+   ],
+   "why": "We write a diary."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Rasha think about singing?",
+   "o": [
+    "She doesn't like it; she prefers acting.",
+    "She loves it.",
+    "She does it every day.",
+    "She prefers it to acting."
+   ],
+   "why": "Rasha prefers acting."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the rule for state verbs?",
+   "o": [
+    "They are not usually used in continuous tenses.",
+    "They always end in -ing.",
+    "They are only used in questions.",
+    "They are only used in the past."
+   ],
+   "why": "State verbs usually don't take -ing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "I don't believe you.",
+    "I'm not believing you.",
+    "I not believe you.",
+    "I doesn't believe you."
+   ],
+   "why": "Believe is a state verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct question.",
+   "o": [
+    "Do you know how to play table tennis?",
+    "Do you knowing how to play table tennis?",
+    "Are you knowing how to play table tennis?",
+    "Does you know how to play table tennis?"
+   ],
+   "why": "Know is a state verb: Do you know…?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence with prefer is correct?",
+   "o": [
+    "I prefer doing puzzles to watching cartoons.",
+    "I'm preferring doing puzzles.",
+    "I prefer do puzzles to watch cartoons.",
+    "I prefers doing puzzles."
+   ],
+   "why": "prefer + -ing + to + -ing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your partner likes nature but hates sport. Which hobby can you suggest?",
+   "o": [
+    "You could do the gardening.",
+    "You could play hockey.",
+    "You could do karate.",
+    "You could play volleyball."
+   ],
+   "why": "Gardening is about nature, not sport."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your friend likes making things and is creative. What is the best suggestion?",
+   "o": [
+    "You could make models.",
+    "You could watch cartoons.",
+    "You could do athletics.",
+    "You could go skiing."
+   ],
+   "why": "Making models is creative."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is \"Are you knowing this song?\" wrong?",
+   "o": [
+    "Know is a state verb, so we say \"Do you know this song?\"",
+    "Song is a verb.",
+    "We never ask about songs.",
+    "It needs \"is\" not \"are\"."
+   ],
+   "why": "State verbs don't usually use the continuous."
+  }
+ ]
+}

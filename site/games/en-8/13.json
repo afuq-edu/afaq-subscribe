@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 1: Our planet",
+ "lesson": "Lesson 11: Get ready for… B1 Preliminary",
+ "outcomes": [
+  "Choose the correct word for each gap in a text about green turtles.",
+  "Use exam tips for reading, listening and speaking tasks.",
+  "Compare activities and give reasons when you speak."
+ ],
+ "tf": [
+  {
+   "s": "Green turtles live on the Great Barrier Reef in Australia.",
+   "t": true,
+   "why": "Yes, the text is about turtles on the Great Barrier Reef."
+  },
+  {
+   "s": "A report found that rising temperatures mean 99% of turtles are born female.",
+   "t": true,
+   "why": "Correct! Rising temperatures are changing turtle births."
+  },
+  {
+   "s": "In a gap-fill task, you should read only the words next to the gap.",
+   "t": false,
+   "why": "First read the whole text, then look at each gap."
+  },
+  {
+   "s": "In Listening Part 1, you should choose the first picture you hear.",
+   "t": false,
+   "why": "Listen carefully to the whole recording before you choose."
+  },
+  {
+   "s": "If we don’t stop global warming, green turtles may become extinct.",
+   "t": true,
+   "why": "Right! Extinct means no more turtles."
+  },
+  {
+   "s": "In Listening Part 2, you should listen for the speakers’ opinions.",
+   "t": true,
+   "why": "Great! The questions ask what the speakers think."
+  },
+  {
+   "s": "In the speaking exam, it is enough to say one word without a reason.",
+   "t": false,
+   "why": "Compare the pictures and explain your answer with a reason."
+  },
+  {
+   "s": "In Reading Part 4, the sentence you choose must fit with the sentences before and after the gap.",
+   "t": true,
+   "why": "Yes, check the sentences around the gap."
+  },
+  {
+   "s": "“Water skiing is more exciting than mountain biking” compares two activities.",
+   "t": true,
+   "why": "More … than is used to compare."
+  },
+  {
+   "s": "The text says global warming is good for green turtles.",
+   "t": false,
+   "why": "Global warming is a danger for green turtles."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Green turtles live on the Great Barrier Reef ___ Australia.",
+   "o": [
+    "in",
+    "at",
+    "on"
+   ],
+   "why": "We use in with countries."
+  },
+  {
+   "q": "Scientists say we ___ do something now to stop global warming.",
+   "o": [
+    "must",
+    "needn’t",
+    "mustn’t"
+   ],
+   "why": "It is necessary to act now."
+  },
+  {
+   "q": "A ___ has found that 99% of turtles are born female.",
+   "o": [
+    "report",
+    "letter",
+    "diary"
+   ],
+   "why": "Scientists write a report about what they found."
+  },
+  {
+   "q": "Green turtles may become ___.",
+   "o": [
+    "extinct",
+    "renewable",
+    "global"
+   ],
+   "why": "Extinct means there are none left."
+  },
+  {
+   "q": "Global ___ is making temperatures rise.",
+   "o": [
+    "warming",
+    "energy",
+    "change"
+   ],
+   "why": "The phrase is global warming."
+  },
+  {
+   "q": "What should you read first in a gap-fill task?",
+   "o": [
+    "the whole text",
+    "only the last line",
+    "only the title"
+   ],
+   "why": "Reading the whole text helps you understand it."
+  },
+  {
+   "q": "What should you listen for in Listening Part 2?",
+   "o": [
+    "opinions",
+    "page numbers",
+    "the speakers’ names only"
+   ],
+   "why": "Part 2 is about what the speakers think."
+  },
+  {
+   "q": "Water skiing is ___ exciting ___ mountain biking.",
+   "o": [
+    "more … than",
+    "most … of",
+    "as … than"
+   ],
+   "why": "More … than compares two things."
+  },
+  {
+   "q": "What should you do in the speaking compare task?",
+   "o": [
+    "compare and give a reason",
+    "say only yes or no",
+    "stay silent"
+   ],
+   "why": "Reasons show your ideas clearly."
+  },
+  {
+   "q": "What percentage of turtles are born female, says the report?",
+   "o": [
+    "99%",
+    "9%",
+    "50%"
+   ],
+   "why": "Rising temperatures mean 99% are female."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The Reef ___ Australia",
+   "a": "in",
+   "d": [
+    "at",
+    "on",
+    "to"
+   ]
+  },
+  {
+   "q": "We ___ act now. (necessary)",
+   "a": "must",
+   "d": [
+    "needn’t",
+    "mustn’t",
+    "could"
+   ]
+  },
+  {
+   "q": "Global ___",
+   "a": "warming",
+   "d": [
+    "energy",
+    "rubbish",
+    "report"
+   ]
+  },
+  {
+   "q": "No more turtles left",
+   "a": "extinct",
+   "d": [
+    "female",
+    "global",
+    "renewable"
+   ]
+  },
+  {
+   "q": "Turtles born female",
+   "a": "99%",
+   "d": [
+    "9%",
+    "50%",
+    "19%"
+   ]
+  },
+  {
+   "q": "Where is the Great Barrier Reef?",
+   "a": "Australia",
+   "d": [
+    "Oman",
+    "Argentina",
+    "the Arctic"
+   ]
+  },
+  {
+   "q": "Text type that found the facts",
+   "a": "report",
+   "d": [
+    "diary",
+    "poem",
+    "letter"
+   ]
+  },
+  {
+   "q": "Listening Part 2: listen for…",
+   "a": "opinions",
+   "d": [
+    "prices",
+    "colours",
+    "names"
+   ]
+  },
+  {
+   "q": "more exciting ___ biking",
+   "a": "than",
+   "d": [
+    "that",
+    "then",
+    "of"
+   ]
+  },
+  {
+   "q": "Turtles are in danger ___ of heat",
+   "a": "because",
+   "d": [
+    "so",
+    "but",
+    "and"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the reading tip for the gap-fill task (Reading Part 5)?",
+   "o": [
+    "Read the whole text first, then each gap.",
+    "Choose the longest word every time.",
+    "Read only the first sentence.",
+    "Guess without reading."
+   ],
+   "why": "Understanding the whole text helps you choose."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the tip for Listening Part 1?",
+   "o": [
+    "Don’t choose the first picture you hear; listen to the whole recording.",
+    "Choose the first picture you hear.",
+    "Look only at picture C.",
+    "Don’t look at the pictures."
+   ],
+   "why": "The first thing you hear is not always the answer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do rising temperatures mean for green turtles?",
+   "o": [
+    "Most baby turtles are born female.",
+    "More turtles are born male.",
+    "Turtles grow bigger.",
+    "Turtles move to the Arctic."
+   ],
+   "why": "The report says 99% are born female."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where do the green turtles in the text live?",
+   "o": [
+    "On the Great Barrier Reef",
+    "In the Hajar Mountains",
+    "In the Arctic",
+    "In a rainforest"
+   ],
+   "why": "The text is about the Great Barrier Reef in Australia."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best answer for the speaking task: “Which activity is the most exciting?”",
+   "o": [
+    "I think water skiing is more exciting than mountain biking because you can jump over waves.",
+    "Water skiing.",
+    "Yes.",
+    "I don’t know."
+   ],
+   "why": "A good answer compares and gives a reason."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Answer the question “Have you ever been camping?” in the best way.",
+   "o": [
+    "Yes, I have. I went camping in the desert with my family.",
+    "Yes.",
+    "Camping.",
+    "Have you?"
+   ],
+   "why": "Full answers with details are better in the exam."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the word for the gap: “Green turtles are in danger ___ temperatures are rising.”",
+   "o": [
+    "because",
+    "but",
+    "so",
+    "or"
+   ],
+   "why": "Because gives the reason."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it a good idea to read the whole text before choosing answers?",
+   "o": [
+    "To understand what the text is about first",
+    "To finish the exam faster",
+    "To count the words",
+    "To find the hardest gap"
+   ],
+   "why": "Knowing the main idea helps you choose the right word."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why may green turtles become extinct?",
+   "o": [
+    "Global warming means almost no male turtles are born.",
+    "There is too much bamboo.",
+    "They live in the desert.",
+    "The reef is getting colder."
+   ],
+   "why": "With so few males, it is hard for turtles to survive."
+  },
+  {
+   "lv": "التحليل",
+   "q": "In Reading Part 4, how can you check that a sentence fits the gap?",
+   "o": [
+    "It must make sense with the sentences before and after.",
+    "It must be the shortest sentence.",
+    "It must start with the same letter.",
+    "It must have a number."
+   ],
+   "why": "The sentences around the gap give you clues."
+  }
+ ]
+}

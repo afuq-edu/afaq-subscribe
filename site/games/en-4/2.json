@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "W",
+ "lesson": "Welcome Lesson 2: Hobbies and numbers 50–100",
+ "outcomes": [
+  "Name hobbies and say: I like ... / I don't like ...",
+  "Count from 50 to 60 and in tens to 100.",
+  "Solve number riddles with plus, minus and equals."
+ ],
+ "tf": [
+  {
+   "s": "Swimming is a hobby.",
+   "t": true,
+   "why": "Yes! Swimming is one of the hobbies in the lesson."
+  },
+  {
+   "s": "We write 70 as 'seventy'.",
+   "t": true,
+   "why": "Great! 70 = seventy."
+  },
+  {
+   "s": "Fifty-five minus two equals fifty-three.",
+   "t": true,
+   "why": "Correct! 55 − 2 = 53."
+  },
+  {
+   "s": "Forty plus sixty equals ninety.",
+   "t": false,
+   "why": "40 + 60 = 100, one hundred."
+  },
+  {
+   "s": "We say: He like swimming.",
+   "t": false,
+   "why": "With he/she we add -s: He likes swimming."
+  },
+  {
+   "s": "'Me, too!' means you like the same thing.",
+   "t": true,
+   "why": "Yes! We say 'Me, too!' when we agree."
+  },
+  {
+   "s": "We write 52 as 'fifty-two'.",
+   "t": true,
+   "why": "Well done! 52 = fifty-two."
+  },
+  {
+   "s": "After fifty, sixty comes eighty.",
+   "t": false,
+   "why": "The order is fifty, sixty, seventy, eighty."
+  },
+  {
+   "s": "'Minus' means we add numbers.",
+   "t": false,
+   "why": "Minus means take away. Plus means add."
+  },
+  {
+   "s": "The correct sentence is: I don't like tennis.",
+   "t": true,
+   "why": "Yes! We use don't with I."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "50 + 6 = ?",
+   "o": [
+    "fifty-six",
+    "sixty-five",
+    "fifty-four"
+   ],
+   "why": "50 + 6 = 56, fifty-six."
+  },
+  {
+   "q": "Which is a hobby?",
+   "o": [
+    "canoeing",
+    "Maths",
+    "headteacher"
+   ],
+   "why": "Canoeing is a hobby."
+  },
+  {
+   "q": "I ___ like football. (negative)",
+   "o": [
+    "don't",
+    "doesn't",
+    "not"
+   ],
+   "why": "With I we use don't."
+  },
+  {
+   "q": "She ___ like tennis.",
+   "o": [
+    "doesn't",
+    "don't",
+    "not"
+   ],
+   "why": "With she we use doesn't."
+  },
+  {
+   "q": "fifty, sixty, seventy, ___",
+   "o": [
+    "eighty",
+    "ninety",
+    "fifty"
+   ],
+   "why": "Count in tens: seventy, eighty."
+  },
+  {
+   "q": "Which sign means 'plus'?",
+   "o": [
+    "+",
+    "−",
+    "="
+   ],
+   "why": "Plus is the + sign."
+  },
+  {
+   "q": "ninety + ten = ?",
+   "o": [
+    "one hundred",
+    "eighty",
+    "ninety-one"
+   ],
+   "why": "90 + 10 = 100."
+  },
+  {
+   "q": "He ___ swimming.",
+   "o": [
+    "likes",
+    "like",
+    "liking"
+   ],
+   "why": "With he we say likes."
+  },
+  {
+   "q": "Fifty-nine comes after ___.",
+   "o": [
+    "fifty-eight",
+    "sixty",
+    "fifty-nine"
+   ],
+   "why": "58, then 59."
+  },
+  {
+   "q": "A friend says 'I like reading.' You like it too. Say:",
+   "o": [
+    "Me, too!",
+    "No, thanks.",
+    "Goodbye!"
+   ],
+   "why": "We say 'Me, too!' to agree."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "70 in words?",
+   "a": "seventy",
+   "d": [
+    "seventeen",
+    "sixty",
+    "eighty"
+   ]
+  },
+  {
+   "q": "58 − 5 = ?",
+   "a": "fifty-three",
+   "d": [
+    "fifty-two",
+    "fifty-eight",
+    "sixty-three"
+   ]
+  },
+  {
+   "q": "40 + 60 = ?",
+   "a": "one hundred",
+   "d": [
+    "ninety",
+    "eighty",
+    "seventy"
+   ]
+  },
+  {
+   "q": "52 in words?",
+   "a": "fifty-two",
+   "d": [
+    "twenty-five",
+    "fifty",
+    "sixty-two"
+   ]
+  },
+  {
+   "q": "sixty, seventy, ___?",
+   "a": "eighty",
+   "d": [
+    "ninety",
+    "fifty",
+    "sixty"
+   ]
+  },
+  {
+   "q": "50 + 4 = ?",
+   "a": "fifty-four",
+   "d": [
+    "forty-five",
+    "fifty-five",
+    "sixty-four"
+   ]
+  },
+  {
+   "q": "90 in words?",
+   "a": "ninety",
+   "d": [
+    "nineteen",
+    "nine",
+    "eighty"
+   ]
+  },
+  {
+   "q": "50 + 9 = ?",
+   "a": "fifty-nine",
+   "d": [
+    "ninety-five",
+    "fifty-eight",
+    "sixty-nine"
+   ]
+  },
+  {
+   "q": "A water hobby?",
+   "a": "swimming",
+   "d": [
+    "reading",
+    "going shopping",
+    "playing football"
+   ]
+  },
+  {
+   "q": "A hobby with books?",
+   "a": "reading",
+   "d": [
+    "swimming",
+    "canoeing",
+    "playing tennis"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which number is 'eighty'?",
+   "o": [
+    "80",
+    "18",
+    "8",
+    "90"
+   ],
+   "why": "Eighty = 80."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means = ?",
+   "o": [
+    "equals",
+    "plus",
+    "minus",
+    "times"
+   ],
+   "why": "The = sign is 'equals'."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one is NOT a hobby from the lesson?",
+   "o": [
+    "Science",
+    "canoeing",
+    "reading",
+    "going shopping"
+   ],
+   "why": "Science is a school subject, not a hobby."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What number comes after ninety when we count in tens?",
+   "o": [
+    "one hundred",
+    "eighty",
+    "ninety-one",
+    "seventy"
+   ],
+   "why": "Ninety, then one hundred."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Solve: sixty plus ten equals ___.",
+   "o": [
+    "seventy",
+    "fifty",
+    "eighty",
+    "sixty-one"
+   ],
+   "why": "60 + 10 = 70."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: 'Lottie don't like tennis.'",
+   "o": [
+    "Lottie doesn't like tennis.",
+    "Lottie not like tennis.",
+    "Lottie don't likes tennis.",
+    "Lottie isn't like tennis."
+   ],
+   "why": "With she or a name we use doesn't."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Solve: fifty-seven minus four equals ___.",
+   "o": [
+    "fifty-three",
+    "fifty-one",
+    "sixty-one",
+    "forty-three"
+   ],
+   "why": "57 − 4 = 53."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which riddle has the answer fifty-six?",
+   "o": [
+    "Fifty plus six",
+    "Sixty minus six",
+    "Fifty minus six",
+    "Fifty-five plus two"
+   ],
+   "why": "50 + 6 = 56. Great thinking!"
+  },
+  {
+   "lv": "التحليل",
+   "q": "There are machine parts on Sami's desk. What does Sami like?",
+   "o": [
+    "building machines",
+    "going shopping",
+    "canoeing",
+    "reading"
+   ],
+   "why": "The clue on his desk shows he likes building machines."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which list is in the correct order?",
+   "o": [
+    "fifty, sixty, seventy",
+    "sixty, fifty, seventy",
+    "seventy, sixty, eighty",
+    "fifty, seventy, sixty"
+   ],
+   "why": "Counting in tens: fifty, sixty, seventy."
+  }
+ ]
+}

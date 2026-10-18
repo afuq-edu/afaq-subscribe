@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 3: Move your body!",
+ "lesson": "Unit 3 – Consolidation 2: Communication game",
+ "outcomes": [
+  "I can build a body and say the body words.",
+  "I can find movement verbs.",
+  "I can give and follow instructions in a game."
+ ],
+ "tf": [
+  {
+   "s": "\"Clap your hands!\" is an instruction.",
+   "t": true,
+   "why": "It tells you what to do."
+  },
+  {
+   "s": "\"Stretch\" is a movement verb.",
+   "t": true,
+   "why": "Stretch is something we do."
+  },
+  {
+   "s": "\"Toes\" is a movement verb.",
+   "t": false,
+   "why": "Toes is a body part."
+  },
+  {
+   "s": "\"Touch your knees!\" has a verb and a body part.",
+   "t": true,
+   "why": "Touch is the verb; knees is the body part."
+  },
+  {
+   "s": "There are six movement verbs: move, bend, stretch, touch, stamp, clap.",
+   "t": true,
+   "why": "These are the six verbs."
+  },
+  {
+   "s": "\"Fingers\" is a movement verb.",
+   "t": false,
+   "why": "Fingers is a body part."
+  },
+  {
+   "s": "Spin clap + hands, then say \"Clap your hands!\"",
+   "t": true,
+   "why": "Put the verb and body part together."
+  },
+  {
+   "s": "\"Bend your nose!\" is a sensible instruction.",
+   "t": false,
+   "why": "We can't bend our nose; it is silly."
+  },
+  {
+   "s": "Our toes are on our feet.",
+   "t": true,
+   "why": "Toes are on our feet."
+  },
+  {
+   "s": "\"Knees\" is a body part.",
+   "t": true,
+   "why": "Knees are on our legs."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which is a movement verb?",
+   "o": [
+    "stamp",
+    "feet",
+    "head"
+   ],
+   "why": "Stamp is a verb."
+  },
+  {
+   "q": "Which is a body part?",
+   "o": [
+    "fingers",
+    "clap",
+    "bend"
+   ],
+   "why": "Fingers is a body part."
+  },
+  {
+   "q": "Spin: clap + hands",
+   "o": [
+    "Clap your hands!",
+    "Hands your clap!",
+    "Clap hands your!"
+   ],
+   "why": "Verb + your + body part."
+  },
+  {
+   "q": "Spin: touch + knees",
+   "o": [
+    "Touch your knees!",
+    "Knees your touch!",
+    "Touch knees!"
+   ],
+   "why": "Verb + your + body part."
+  },
+  {
+   "q": "Spin: bend + knees",
+   "o": [
+    "Bend your knees!",
+    "Bend your nose!",
+    "Your bend knees!"
+   ],
+   "why": "Bend your knees!"
+  },
+  {
+   "q": "Find the verb: s-t-r-e-t-c-h",
+   "o": [
+    "stretch",
+    "stamp",
+    "touch"
+   ],
+   "why": "The letters spell stretch."
+  },
+  {
+   "q": "How many movement verbs are there?",
+   "o": [
+    "six",
+    "two",
+    "ten"
+   ],
+   "why": "Move, bend, stretch, touch, stamp, clap."
+  },
+  {
+   "q": "Where are your toes?",
+   "o": [
+    "on your feet",
+    "on your hands",
+    "on your head"
+   ],
+   "why": "Toes are on our feet."
+  },
+  {
+   "q": "Where are your fingers?",
+   "o": [
+    "on your hands",
+    "on your feet",
+    "on your knees"
+   ],
+   "why": "Fingers are on our hands."
+  },
+  {
+   "q": "Stamp your ___!",
+   "o": [
+    "feet",
+    "eyes",
+    "head"
+   ],
+   "why": "We stamp our feet."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Movement verb",
+   "a": "clap",
+   "d": [
+    "toes",
+    "head",
+    "knees"
+   ]
+  },
+  {
+   "q": "Movement verb",
+   "a": "stretch",
+   "d": [
+    "arms",
+    "legs",
+    "face"
+   ]
+  },
+  {
+   "q": "Movement verb",
+   "a": "bend",
+   "d": [
+    "feet",
+    "tummy",
+    "hands"
+   ]
+  },
+  {
+   "q": "Body part",
+   "a": "fingers",
+   "d": [
+    "clap",
+    "stamp",
+    "move"
+   ]
+  },
+  {
+   "q": "Body part",
+   "a": "knees",
+   "d": [
+    "touch",
+    "bend",
+    "clap"
+   ]
+  },
+  {
+   "q": "Spin: clap + ?",
+   "a": "hands",
+   "d": [
+    "toes",
+    "nose",
+    "ears"
+   ]
+  },
+  {
+   "q": "Spin: stamp + ?",
+   "a": "feet",
+   "d": [
+    "hands",
+    "ears",
+    "nose"
+   ]
+  },
+  {
+   "q": "Spin: bend + ?",
+   "a": "knees",
+   "d": [
+    "nose",
+    "ears",
+    "eyes"
+   ]
+  },
+  {
+   "q": "Toes are on your ...",
+   "a": "feet",
+   "d": [
+    "hands",
+    "head",
+    "arms"
+   ]
+  },
+  {
+   "q": "How many verbs?",
+   "a": "six",
+   "d": [
+    "two",
+    "ten",
+    "one"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is NOT a movement verb?",
+   "o": [
+    "tummy",
+    "move",
+    "clap",
+    "stamp"
+   ],
+   "why": "Tummy is a body part."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is a body part?",
+   "o": [
+    "toes",
+    "bend",
+    "stretch",
+    "touch"
+   ],
+   "why": "Toes is a body part."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which instruction is from the spinner game?",
+   "o": [
+    "Touch your knees!",
+    "What's your name?",
+    "Here you are.",
+    "It's very big."
+   ],
+   "why": "Spinner instructions have a verb and a body part."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which verb do we do with our hands?",
+   "o": [
+    "clap",
+    "stamp",
+    "bend",
+    "dive"
+   ],
+   "why": "We clap our hands."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Spin: stretch + arms. What do you say?",
+   "o": [
+    "Stretch your arms!",
+    "Arms your stretch!",
+    "Stretch my!",
+    "Your arms stretch!"
+   ],
+   "why": "Verb + your + body part."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your group gives the class an instruction. Which is good?",
+   "o": [
+    "Bend your knees!",
+    "Clap your toes!",
+    "Stamp your nose!",
+    "Stretch your eyes!"
+   ],
+   "why": "We can bend our knees."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You build a body. Where do you put the head?",
+   "o": [
+    "on top",
+    "at the bottom",
+    "on the feet",
+    "on the hands"
+   ],
+   "why": "The head is on top of the body."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT belong? clap, stamp, bend, legs",
+   "o": [
+    "legs",
+    "clap",
+    "stamp",
+    "bend"
+   ],
+   "why": "Legs is a body part; the others are verbs."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT belong? arms, feet, touch, fingers",
+   "o": [
+    "touch",
+    "arms",
+    "feet",
+    "fingers"
+   ],
+   "why": "Touch is a verb; the others are body parts."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which instruction matches a verb with the right body part?",
+   "o": [
+    "Stamp your feet!",
+    "Stamp your hands!",
+    "Clap your knees!",
+    "Bend your fingers ten!"
+   ],
+   "why": "We stamp our feet."
+  }
+ ]
+}

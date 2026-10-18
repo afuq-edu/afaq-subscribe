@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 3: Our classroom",
+ "lesson": "Lesson 3: Story – Let's tidy up! + Sound g",
+ "outcomes": [
+  "I can follow the story Let's tidy up!",
+  "I can say chair, desk, floor, wall and pot.",
+  "I can hear the g sound in gate, goat and girl."
+ ],
+ "tf": [
+  {
+   "s": "At the start of the story, the classroom is not tidy.",
+   "t": true,
+   "why": "Yes! Miss Zahra says: Oh, no! Look at the classroom!"
+  },
+  {
+   "s": "At the end, the pens are in the pot.",
+   "t": true,
+   "why": "Great! The pens are in the pot."
+  },
+  {
+   "s": "At the end, the pens are on the floor.",
+   "t": false,
+   "why": "They tidy up. The pens go in the pot."
+  },
+  {
+   "s": "The book is under the chair.",
+   "t": true,
+   "why": "Yes! The book is under the chair."
+  },
+  {
+   "s": "Being tidy is good.",
+   "t": true,
+   "why": "Well done! Be tidy is the value of the story."
+  },
+  {
+   "s": "Sami says: Let's tidy up!",
+   "t": true,
+   "why": "Yes! Sami says Let's tidy up!"
+  },
+  {
+   "s": "Goat starts with the f sound.",
+   "t": false,
+   "why": "Goat starts with g."
+  },
+  {
+   "s": "f – o – g makes the word fig.",
+   "t": false,
+   "why": "f-o-g makes fog. f-i-g makes fig."
+  },
+  {
+   "s": "The story ends with: Thank you, children.",
+   "t": true,
+   "why": "Yes! The classroom is tidy at the end."
+  },
+  {
+   "s": "Grapes start with the o sound.",
+   "t": false,
+   "why": "Grapes start with g."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where are the crayons at the start?",
+   "o": [
+    "On the desk.",
+    "In the pot.",
+    "Under the chair."
+   ],
+   "why": "The crayons are on the desk."
+  },
+  {
+   "q": "What does Sami say?",
+   "o": [
+    "Let's tidy up!",
+    "Oh, no!",
+    "Goodbye!"
+   ],
+   "why": "Sami says Let's tidy up!"
+  },
+  {
+   "q": "Where do the pens go?",
+   "o": [
+    "In the pot.",
+    "On the floor.",
+    "Under the desk."
+   ],
+   "why": "The pens are in the pot."
+  },
+  {
+   "q": "Which word starts with g?",
+   "o": [
+    "girl",
+    "boy",
+    "fish"
+   ],
+   "why": "G-g-girl starts with g."
+  },
+  {
+   "q": "f – i – g. What's the word?",
+   "o": [
+    "fig",
+    "fog",
+    "fin"
+   ],
+   "why": "f-i-g makes fig."
+  },
+  {
+   "q": "What's missing? _ate",
+   "o": [
+    "g",
+    "f",
+    "o"
+   ],
+   "why": "g + ate makes gate."
+  },
+  {
+   "q": "We sit on a …",
+   "o": [
+    "chair",
+    "wall",
+    "pot"
+   ],
+   "why": "We sit on a chair."
+  },
+  {
+   "q": "The value of the story is…",
+   "o": [
+    "Be tidy.",
+    "Be fast.",
+    "Be loud."
+   ],
+   "why": "Be tidy! Put things away."
+  },
+  {
+   "q": "Which picture is tidy?",
+   "o": [
+    "Pens in the pot",
+    "Book on the floor",
+    "Crayons on the floor"
+   ],
+   "why": "Pens in the pot is tidy."
+  },
+  {
+   "q": "Which colour starts with g?",
+   "o": [
+    "green",
+    "red",
+    "blue"
+   ],
+   "why": "G-g-green starts with g."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "It starts with g",
+   "a": "gate",
+   "d": [
+    "fan",
+    "shop",
+    "octopus"
+   ]
+  },
+  {
+   "q": "f – o – g",
+   "a": "fog",
+   "d": [
+    "fig",
+    "fin",
+    "mop"
+   ]
+  },
+  {
+   "q": "We put books on a …",
+   "a": "desk",
+   "d": [
+    "wall",
+    "window",
+    "door"
+   ]
+  },
+  {
+   "q": "Part of the room",
+   "a": "wall",
+   "d": [
+    "goat",
+    "grapes",
+    "gate"
+   ]
+  },
+  {
+   "q": "A fruit with g",
+   "a": "grapes",
+   "d": [
+    "fig",
+    "olive",
+    "orange"
+   ]
+  },
+  {
+   "q": "First letter of goat",
+   "a": "g",
+   "d": [
+    "o",
+    "t",
+    "b"
+   ]
+  },
+  {
+   "q": "Not a g word",
+   "a": "fish",
+   "d": [
+    "goat",
+    "gate",
+    "girl"
+   ]
+  },
+  {
+   "q": "Let's tidy …",
+   "a": "up!",
+   "d": [
+    "down!",
+    "in!",
+    "on!"
+   ]
+  },
+  {
+   "q": "A colour that starts with g",
+   "a": "green",
+   "d": [
+    "red",
+    "blue",
+    "pink"
+   ]
+  },
+  {
+   "q": "Oh, no! Look at the …",
+   "a": "classroom",
+   "d": [
+    "window",
+    "goat",
+    "garden"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who says Oh, no! Look at the classroom!?",
+   "o": [
+    "Miss Zahra",
+    "Sami",
+    "Jack",
+    "Fatma"
+   ],
+   "why": "Miss Zahra sees the mess first."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What sound does the gate card show?",
+   "o": [
+    "/g/",
+    "/f/",
+    "/ɒ/",
+    "/s/"
+   ],
+   "why": "Gate starts with the /g/ sound."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where is the book in the story?",
+   "o": [
+    "Under the chair.",
+    "On the wall.",
+    "In the pot.",
+    "On the whiteboard."
+   ],
+   "why": "The book is under the chair."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is a place for pens?",
+   "o": [
+    "pot",
+    "floor",
+    "wall",
+    "door"
+   ],
+   "why": "We put pens in a pot."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your crayons are on the floor. What do you say?",
+   "o": [
+    "Let's tidy up!",
+    "Oh, good!",
+    "Goodbye!",
+    "It's my turn."
+   ],
+   "why": "Let's tidy up! Put them away."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Listen: f – o – g. What's the word?",
+   "o": [
+    "fog",
+    "fig",
+    "fit",
+    "fin"
+   ],
+   "why": "f-o-g makes fog."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which group of words all start with g?",
+   "o": [
+    "gate, goat, girl",
+    "gate, fish, girl",
+    "goat, on, game",
+    "fan, goat, grapes"
+   ],
+   "why": "Gate, goat and girl all start with g."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the classroom look nice at the end?",
+   "o": [
+    "The children tidy up.",
+    "The pens are on the floor.",
+    "The book is under the chair.",
+    "It's the morning."
+   ],
+   "why": "The children put things away, so it is tidy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which picture shows the story's value?",
+   "o": [
+    "Children putting pens in the pot",
+    "A book under the chair",
+    "Crayons on the desk",
+    "Pens on the floor"
+   ],
+   "why": "Putting things away shows Be tidy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What happens in the story first?",
+   "o": [
+    "The classroom is messy.",
+    "The pens are in the pot.",
+    "Miss Zahra says Thank you.",
+    "The classroom is tidy."
+   ],
+   "why": "First the classroom is messy. Then they tidy up."
+  }
+ ]
+}

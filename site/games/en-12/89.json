@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: A Warm Welcome (Reading)",
+ "lesson": "Vocabulary development and Time to Talk: a place I would like to visit / Oman quiz and the dolphin centre narrative",
+ "outcomes": [
+  "Learn and use new words like canyon, trek and awesome",
+  "Describe a place you would like to visit",
+  "Answer quiz questions about Oman and read a narrative"
+ ],
+ "tf": [
+  {
+   "s": "'Trek' means to go on a long, difficult walk.",
+   "t": true,
+   "why": "Yes, a trek is a long, hard walk."
+  },
+  {
+   "s": "A canyon is a long deep valley with steep sides.",
+   "t": true,
+   "why": "Correct, that is a canyon."
+  },
+  {
+   "s": "Oman's coastline is less than 1000 kilometres long.",
+   "t": false,
+   "why": "Oman's coastline is over 3000 kilometres long."
+  },
+  {
+   "s": "Oman borders Saudi Arabia, Yemen and the UAE.",
+   "t": true,
+   "why": "Right, Oman has three neighbours."
+  },
+  {
+   "s": "In a quiz show, the host is the person who answers the questions.",
+   "t": false,
+   "why": "The host asks the questions; contestants answer."
+  },
+  {
+   "s": "'Wildlife' means only pets kept at home.",
+   "t": false,
+   "why": "Wildlife is animals and plants living in nature."
+  },
+  {
+   "s": "In Time to Talk, you describe a place you would like to visit.",
+   "t": true,
+   "why": "Yes, you make notes and then talk about it."
+  },
+  {
+   "s": "A narrative essay tells a story of events.",
+   "t": true,
+   "why": "Yes, like the text about the dolphin centre."
+  },
+  {
+   "s": "'Proud' means feeling ashamed of something.",
+   "t": false,
+   "why": "'Proud' means feeling pleased about something good."
+  },
+  {
+   "s": "A contestant is the person who writes the quiz.",
+   "t": false,
+   "why": "A contestant takes part in the quiz."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does 'awesome' mean?",
+   "o": [
+    "very impressive",
+    "very small",
+    "very boring"
+   ],
+   "why": "An awesome view amazes you."
+  },
+  {
+   "q": "What does 'explore' mean?",
+   "o": [
+    "travel to discover a place",
+    "sleep all day",
+    "close a door"
+   ],
+   "why": "Explorers discover new places."
+  },
+  {
+   "q": "What is 'wildlife'?",
+   "o": [
+    "Animals and plants in nature",
+    "City buildings",
+    "Fast cars"
+   ],
+   "why": "Wildlife lives in nature."
+  },
+  {
+   "q": "Which animal is NOT found in Oman?",
+   "o": [
+    "Bears",
+    "Leopards",
+    "Wolves"
+   ],
+   "why": "The quiz says bears are not found in Oman."
+  },
+  {
+   "q": "Why should you take notes before speaking?",
+   "o": [
+    "They help you remember your ideas",
+    "They make your talk boring",
+    "They stop you from speaking"
+   ],
+   "why": "Notes help you speak fluently."
+  },
+  {
+   "q": "What type of essay is the dolphin centre text?",
+   "o": [
+    "A narrative essay",
+    "A formal letter",
+    "A poem"
+   ],
+   "why": "It tells the story of a visit."
+  },
+  {
+   "q": "Which sentence uses 'trek' correctly?",
+   "o": [
+    "We trekked up the mountain for five hours.",
+    "I trekked my tea.",
+    "She treks the TV."
+   ],
+   "why": "You trek on foot over a long distance."
+  },
+  {
+   "q": "Which sentence uses 'proud' correctly?",
+   "o": [
+    "I am proud of my brother's success.",
+    "She was proud because she lost her bag.",
+    "He felt proud of breaking the window."
+   ],
+   "why": "We feel proud of good things."
+  },
+  {
+   "q": "When did Bahla Fort become a UNESCO heritage site?",
+   "o": [
+    "1987",
+    "1997",
+    "2007"
+   ],
+   "why": "Bahla Fort joined the UNESCO list in 1987."
+  },
+  {
+   "q": "How far is Masirah Island from the mainland?",
+   "o": [
+    "15 kilometres",
+    "150 kilometres",
+    "1 kilometre"
+   ],
+   "why": "Masirah is 15 kilometres from the mainland."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "A long, difficult walk",
+   "a": "Trek",
+   "d": [
+    "Canyon",
+    "Host",
+    "Quiz"
+   ]
+  },
+  {
+   "q": "Very impressive",
+   "a": "Awesome",
+   "d": [
+    "Proud",
+    "Tiny",
+    "Boring"
+   ]
+  },
+  {
+   "q": "Deep valley with steep sides",
+   "a": "Canyon",
+   "d": [
+    "Island",
+    "Beach",
+    "Plain"
+   ]
+  },
+  {
+   "q": "Animals and plants in nature",
+   "a": "Wildlife",
+   "d": [
+    "Scenery",
+    "Canyon",
+    "Coastline"
+   ]
+  },
+  {
+   "q": "Travel to discover a new place",
+   "a": "Explore",
+   "d": [
+    "Arrive",
+    "Rest",
+    "Return"
+   ]
+  },
+  {
+   "q": "Pleased about a success",
+   "a": "Proud",
+   "d": [
+    "Afraid",
+    "Bored",
+    "Tired"
+   ]
+  },
+  {
+   "q": "Length of Oman's coastline",
+   "a": "Over 3000 km",
+   "d": [
+    "About 300 km",
+    "About 30 km",
+    "Under 1000 km"
+   ]
+  },
+  {
+   "q": "Animal not found in Oman",
+   "a": "Bears",
+   "d": [
+    "Leopards",
+    "Wolves",
+    "Camels"
+   ]
+  },
+  {
+   "q": "The person who runs a quiz show",
+   "a": "Host",
+   "d": [
+    "Contestant",
+    "Guide",
+    "Chef"
+   ]
+  },
+  {
+   "q": "A person who plays in a quiz",
+   "a": "Contestant",
+   "d": [
+    "Host",
+    "Writer",
+    "Driver"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which countries border Oman?",
+   "o": [
+    "Saudi Arabia, Yemen and the UAE",
+    "Iraq, Iran and Qatar",
+    "Egypt, Sudan and Libya",
+    "Kuwait, Bahrain and Jordan"
+   ],
+   "why": "Oman has three neighbouring countries."
+  },
+  {
+   "lv": "التذكر",
+   "q": "According to the quiz, which animals are found in Oman?",
+   "o": [
+    "Leopards and wolves",
+    "Bears and wolves",
+    "Bears and leopards",
+    "Only bears"
+   ],
+   "why": "Bears are the animals not found in Oman."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do partners do in the Oman Quiz activity?",
+   "o": [
+    "Ask Quiz A and B questions and give scores out of 10",
+    "Write a letter to a teacher",
+    "Draw a map of Oman",
+    "Read a poem aloud"
+   ],
+   "why": "Partners quiz each other and give a score."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is Bahla Fort?",
+   "o": [
+    "A UNESCO heritage site",
+    "A dolphin centre",
+    "A canyon",
+    "An island"
+   ],
+   "why": "Bahla Fort is on the UNESCO heritage list."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best word: The view from the top of the canyon was ___.",
+   "o": [
+    "awesome",
+    "proud",
+    "wildlife",
+    "trek"
+   ],
+   "why": "'Awesome' describes an amazing view."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses 'explore' correctly?",
+   "o": [
+    "We want to explore the old fort and its rooms.",
+    "I explore my breakfast every morning.",
+    "She explored her homework into the bag.",
+    "They explore the phone number."
+   ],
+   "why": "We explore places to discover them."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend says: 'I'd like to visit Jebel Shams.' Which follow-up question is best?",
+   "o": [
+    "What can visitors do there?",
+    "Do you?",
+    "Yes or no?",
+    "Is it a name?"
+   ],
+   "why": "An open question gets more details."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The text tells what happened on a visit to a dolphin centre. Why is it a narrative essay?",
+   "o": [
+    "It tells a story of events",
+    "It gives arguments for and against",
+    "It describes a product for sale",
+    "It is a letter to a friend"
+   ],
+   "why": "Narratives tell a story."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Oman's coastline is over 3000 kilometres long. What does this suggest for tourism?",
+   "o": [
+    "Oman has many coastal places to visit",
+    "Oman has no sea",
+    "Tourists cannot swim in Oman",
+    "Oman is a small island"
+   ],
+   "why": "A long coast offers many beaches and sea activities."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to guess a word's meaning from context first?",
+   "o": [
+    "It helps you understand new words while reading",
+    "It means you never need to read",
+    "Dictionaries are always wrong",
+    "Context never helps with meaning"
+   ],
+   "why": "Context clues help you read faster and better."
+  }
+ ]
+}

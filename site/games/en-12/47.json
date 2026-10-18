@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 3: Popular Destinations (Vocabulary)",
+ "lesson": "Parts of speech Top Tip, vocabulary matching and sentences",
+ "outcomes": [
+  "Identify a word's part of speech before choosing its meaning",
+  "Match eight tourism words with their meanings and use them in sentences"
+ ],
+ "tf": [
+  {
+   "s": "'Steadily' is an adverb.",
+   "t": true,
+   "why": "Many adverbs end in -ly, like steadily."
+  },
+  {
+   "s": "'Architecture' means the design of a building.",
+   "t": true,
+   "why": "Architecture is about how buildings are designed."
+  },
+  {
+   "s": "'Flock' as a verb means to go somewhere in large numbers.",
+   "t": true,
+   "why": "For example: tourists flock to the beach in summer."
+  },
+  {
+   "s": "A meaning can match a headword even if it is a different part of speech.",
+   "t": false,
+   "why": "The meaning must be the same part of speech as the headword."
+  },
+  {
+   "s": "'Draw' can mean 'attract', as in 'The festival draws many tourists.'",
+   "t": true,
+   "why": "Here 'draw' means to attract people."
+  },
+  {
+   "s": "'Variety' is a verb.",
+   "t": false,
+   "why": "'Variety' is a noun: a variety of goods."
+  },
+  {
+   "s": "When 'major' is a noun, it can mean an army officer.",
+   "t": true,
+   "why": "That is why you check the part of speech of the headword first."
+  },
+  {
+   "s": "Adjectives describe actions, and verbs describe nouns.",
+   "t": false,
+   "why": "Adjectives describe nouns; verbs show actions."
+  },
+  {
+   "s": "Checking the part of speech helps you eliminate wrong options.",
+   "t": true,
+   "why": "Options with a different part of speech can be removed."
+  },
+  {
+   "s": "'Steadily' means suddenly and quickly.",
+   "t": false,
+   "why": "'Steadily' means in a regular, gradual way."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which part of speech describes a noun?",
+   "o": [
+    "Adjective",
+    "Adverb",
+    "Verb"
+   ],
+   "why": "Adjectives describe nouns, e.g. a major city."
+  },
+  {
+   "q": "What part of speech is 'architecture'?",
+   "o": [
+    "Noun",
+    "Adverb",
+    "Adjective"
+   ],
+   "why": "Architecture is a thing, so it is a noun."
+  },
+  {
+   "q": "What does 'architecture' mean?",
+   "o": [
+    "The design of buildings",
+    "A type of food",
+    "A long journey"
+   ],
+   "why": "Architecture is the design of buildings."
+  },
+  {
+   "q": "What does 'flock' mean?",
+   "o": [
+    "Go somewhere in large numbers",
+    "Sleep for a long time",
+    "Build a house"
+   ],
+   "why": "People flock to places in big crowds."
+  },
+  {
+   "q": "Which sentence uses 'draw' to mean 'attract'?",
+   "o": [
+    "The festival draws many tourists.",
+    "I draw a cat.",
+    "Draw a line here."
+   ],
+   "why": "Here the festival attracts tourists."
+  },
+  {
+   "q": "Complete: 'The souq sells a ___ of goods.'",
+   "o": [
+    "variety",
+    "flock",
+    "steadily"
+   ],
+   "why": "A variety of goods means many different kinds."
+  },
+  {
+   "q": "Which word is an adjective?",
+   "o": [
+    "major",
+    "steadily",
+    "flock"
+   ],
+   "why": "'Major' describes a noun, e.g. a major city."
+  },
+  {
+   "q": "Which word is usually an adverb?",
+   "o": [
+    "steadily",
+    "variety",
+    "architecture"
+   ],
+   "why": "The -ly ending often shows an adverb."
+  },
+  {
+   "q": "What should you check first in the Top Tip?",
+   "o": [
+    "The part of speech",
+    "The spelling",
+    "The page number"
+   ],
+   "why": "Find the part of speech, then match the meaning."
+  },
+  {
+   "q": "Which word names an action?",
+   "o": [
+    "Verb",
+    "Noun",
+    "Adjective"
+   ],
+   "why": "Verbs show actions, like flock or draw."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Part of speech of 'steadily'",
+   "a": "adverb",
+   "d": [
+    "noun",
+    "verb",
+    "adjective"
+   ]
+  },
+  {
+   "q": "Part of speech of 'variety'",
+   "a": "noun",
+   "d": [
+    "adverb",
+    "verb",
+    "adjective"
+   ]
+  },
+  {
+   "q": "Part of speech of 'major' (a ~ city)",
+   "a": "adjective",
+   "d": [
+    "noun",
+    "verb",
+    "adverb"
+   ]
+  },
+  {
+   "q": "Part of speech of 'flock' (to go)",
+   "a": "verb",
+   "d": [
+    "noun",
+    "adverb",
+    "adjective"
+   ]
+  },
+  {
+   "q": "Word: design of buildings",
+   "a": "architecture",
+   "d": [
+    "variety",
+    "flock",
+    "interest"
+   ]
+  },
+  {
+   "q": "Word: go somewhere in big numbers",
+   "a": "flock",
+   "d": [
+    "draw",
+    "major",
+    "variety"
+   ]
+  },
+  {
+   "q": "Word that can mean 'attract'",
+   "a": "draw",
+   "d": [
+    "flock",
+    "major",
+    "steadily"
+   ]
+  },
+  {
+   "q": "Word: many different kinds",
+   "a": "variety",
+   "d": [
+    "flagship",
+    "architecture",
+    "draw"
+   ]
+  },
+  {
+   "q": "'Major' as a noun: an army ...",
+   "a": "officer",
+   "d": [
+    "building",
+    "journey",
+    "festival"
+   ]
+  },
+  {
+   "q": "Word ending often seen in adverbs",
+   "a": "-ly",
+   "d": [
+    "-tion",
+    "-ness",
+    "-ment"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these words is a noun?",
+   "o": [
+    "architecture",
+    "steadily",
+    "quickly",
+    "beautiful"
+   ],
+   "why": "Architecture names a thing, so it is a noun."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In the Top Tip, what do you do with options that are a different part of speech from the headword?",
+   "o": [
+    "Eliminate them",
+    "Choose them first",
+    "Copy them twice",
+    "Translate them"
+   ],
+   "why": "Removing them leaves only the possible meanings."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list contains four parts of speech?",
+   "o": [
+    "noun, verb, adjective, adverb",
+    "noun, menu, verb, hotel",
+    "adverb, essay, quiz, verb",
+    "adjective, cruise, noun, host"
+   ],
+   "why": "These are the four main parts of speech studied in the lesson."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'the design of a building'?",
+   "o": [
+    "architecture",
+    "variety",
+    "flagship",
+    "interest"
+   ],
+   "why": "Architecture is about building design."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best word: 'Every winter, tourists ___ to the beaches of Salalah and Muscat.'",
+   "o": [
+    "flock",
+    "variety",
+    "steadily",
+    "architecture"
+   ],
+   "why": "We need a verb meaning 'go in large numbers'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best word: 'The number of visitors has grown ___ every year.'",
+   "o": [
+    "steadily",
+    "steady",
+    "variety",
+    "flock"
+   ],
+   "why": "We need an adverb to describe how the number grew."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses 'draw' in the sense of 'attract'?",
+   "o": [
+    "The new museum draws thousands of visitors.",
+    "Please draw a map of your town.",
+    "He draws pictures in his book.",
+    "Draw a circle on the board."
+   ],
+   "why": "Here the museum attracts visitors."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The headword 'major' is an adjective. Why is 'an army officer' a wrong meaning here?",
+   "o": [
+    "It is a noun meaning, not an adjective meaning",
+    "It is too long",
+    "It is spelled wrongly",
+    "It is a verb meaning"
+   ],
+   "why": "The meaning must be the same part of speech as the headword."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why must the meaning be the same part of speech as the headword?",
+   "o": [
+    "Words of different parts of speech cannot replace each other",
+    "It makes the answer longer",
+    "Dictionaries only list nouns",
+    "Adverbs have no meaning"
+   ],
+   "why": "A correct meaning can replace the word in a sentence."
+  },
+  {
+   "lv": "التحليل",
+   "q": "In 'The souq sells a variety of goods', which part of speech is 'variety' and how do you know?",
+   "o": [
+    "A noun, because it comes after 'a'",
+    "A verb, because it shows action",
+    "An adverb, because it ends in -y",
+    "An adjective, because it describes 'sells'"
+   ],
+   "why": "Words after 'a' or 'the' are often nouns."
+  }
+ ]
+}

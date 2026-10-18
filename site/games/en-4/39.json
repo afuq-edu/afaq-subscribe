@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U3",
+ "lesson": "Unit 3 – Lesson 11: Get ready for A1 Movers & Fun corner",
+ "outcomes": [
+  "Listen carefully and match names to people in a picture.",
+  "Say differences between two pictures using 'but'.",
+  "Use landscape words and comparatives in a board game."
+ ],
+ "tf": [
+  {
+   "s": "Before you listen, look at the picture carefully.",
+   "t": true,
+   "why": "Yes! Looking first helps you listen."
+  },
+  {
+   "s": "In Speaking Part 1 you find four differences.",
+   "t": true,
+   "why": "Correct! You find four differences."
+  },
+  {
+   "s": "We use 'but' to join two different facts.",
+   "t": true,
+   "why": "Well done! 'but' shows a difference."
+  },
+  {
+   "s": "'Miss a turn' means you play two times.",
+   "t": false,
+   "why": "Miss a turn means you don't play in the next turn."
+  },
+  {
+   "s": "'Spin again' means you have another go.",
+   "t": true,
+   "why": "Yes! You spin one more time."
+  },
+  {
+   "s": "'Go forward two spaces' means you move back.",
+   "t": false,
+   "why": "Forward means you move ahead two spaces."
+  },
+  {
+   "s": "'The path is shorter than the road' uses a comparative.",
+   "t": true,
+   "why": "Great! shorter is a comparative."
+  },
+  {
+   "s": "'You climb the higher hill' is the superlative.",
+   "t": false,
+   "why": "The superlative is 'the highest hill'."
+  },
+  {
+   "s": "'The river is wide, but the road is narrow' shows a difference.",
+   "t": true,
+   "why": "Yes! wide and narrow are different."
+  },
+  {
+   "s": "You don't need to listen to names in Listening Part 1.",
+   "t": false,
+   "why": "You listen and match the names to people."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "In Listening Part 1, you match names to ...",
+   "o": [
+    "people in a picture",
+    "animals in a song",
+    "words in a story"
+   ],
+   "why": "You match names to people in the picture."
+  },
+  {
+   "q": "How many differences do you find?",
+   "o": [
+    "four",
+    "two",
+    "ten"
+   ],
+   "why": "In Speaking Part 1 you find four."
+  },
+  {
+   "q": "The path is ___ than the road.",
+   "o": [
+    "shorter",
+    "shortest",
+    "short"
+   ],
+   "why": "Use the comparative: shorter than."
+  },
+  {
+   "q": "You climb the ___ hill. (high)",
+   "o": [
+    "highest",
+    "higher",
+    "high"
+   ],
+   "why": "Use the superlative: the highest."
+  },
+  {
+   "q": "'Miss a turn' means ...",
+   "o": [
+    "you don't play next turn",
+    "you play again",
+    "you win"
+   ],
+   "why": "You wait and don't play next time."
+  },
+  {
+   "q": "Opposite of 'wide'?",
+   "o": [
+    "narrow",
+    "deep",
+    "long"
+   ],
+   "why": "Wide and narrow are opposites."
+  },
+  {
+   "q": "What do you do before you listen?",
+   "o": [
+    "look at the picture",
+    "close your eyes",
+    "write a story"
+   ],
+   "why": "Look at the picture carefully first."
+  },
+  {
+   "q": "The lake is ___ .",
+   "o": [
+    "deep",
+    "quick",
+    "hungry"
+   ],
+   "why": "Lakes can be deep."
+  },
+  {
+   "q": "'Spin again' means ...",
+   "o": [
+    "have another go",
+    "stop playing",
+    "go back"
+   ],
+   "why": "You spin one more time."
+  },
+  {
+   "q": "In picture A there are three mountains, ___ in picture B there are four.",
+   "o": [
+    "but",
+    "or",
+    "so"
+   ],
+   "why": "'but' joins two different facts."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Joins two different facts",
+   "a": "but",
+   "d": [
+    "and",
+    "so",
+    "or"
+   ]
+  },
+  {
+   "q": "Opposite of 'wide'",
+   "a": "narrow",
+   "d": [
+    "deep",
+    "long",
+    "high"
+   ]
+  },
+  {
+   "q": "Opposite of 'long'",
+   "a": "short",
+   "d": [
+    "deep",
+    "wide",
+    "high"
+   ]
+  },
+  {
+   "q": "Comparative of 'short'",
+   "a": "shorter",
+   "d": [
+    "shortest",
+    "more short",
+    "shorts"
+   ]
+  },
+  {
+   "q": "Comparative of 'wide'",
+   "a": "wider",
+   "d": [
+    "widest",
+    "wideer",
+    "more wide"
+   ]
+  },
+  {
+   "q": "Superlative of 'high'",
+   "a": "highest",
+   "d": [
+    "higher",
+    "more high",
+    "highs"
+   ]
+  },
+  {
+   "q": "Differences in Speaking Part 1",
+   "a": "four",
+   "d": [
+    "two",
+    "six",
+    "ten"
+   ]
+  },
+  {
+   "q": "Don't play next time",
+   "a": "Miss a turn",
+   "d": [
+    "Spin again",
+    "Go forward",
+    "Win"
+   ]
+  },
+  {
+   "q": "Have another go",
+   "a": "Spin again",
+   "d": [
+    "Miss a turn",
+    "Go back",
+    "Stop"
+   ]
+  },
+  {
+   "q": "Comparative of 'deep'",
+   "a": "deeper",
+   "d": [
+    "deepest",
+    "more deep",
+    "deeps"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What should you do before you listen?",
+   "o": [
+    "Look at the picture carefully.",
+    "Write your name.",
+    "Close the book.",
+    "Talk to a friend."
+   ],
+   "why": "Looking first helps you know the words."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you do in A1 Movers Listening Part 1?",
+   "o": [
+    "Listen and match names to people.",
+    "Draw a map.",
+    "Sing a song.",
+    "Write a story."
+   ],
+   "why": "You listen and draw lines from names to people."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'Miss a turn' mean?",
+   "o": [
+    "You don't play in the next turn.",
+    "You spin again.",
+    "You go forward two spaces.",
+    "You win the game."
+   ],
+   "why": "You wait for one turn."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'Go forward two spaces' mean?",
+   "o": [
+    "Move ahead two squares.",
+    "Move back two squares.",
+    "Miss two turns.",
+    "Spin two times."
+   ],
+   "why": "Forward means you move ahead."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: In picture A the river is wide, but in picture B it's ___ .",
+   "o": [
+    "narrow",
+    "wide",
+    "deep",
+    "long"
+   ],
+   "why": "'but' shows a difference: wide – narrow."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete the square: The river is ___ than the road.",
+   "o": [
+    "wider",
+    "widest",
+    "wide",
+    "more wide"
+   ],
+   "why": "Use the comparative with 'than'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture A: three mountains. Picture B: four mountains. Choose the best sentence.",
+   "o": [
+    "In picture A there are three mountains, but in picture B there are four.",
+    "In picture A there are four mountains, but in picture B there are three.",
+    "In picture A and picture B there are three mountains.",
+    "There are no mountains in picture B."
+   ],
+   "why": "Say each picture correctly and join them with 'but'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses a superlative?",
+   "o": [
+    "You climb the highest hill.",
+    "The path is shorter than the road.",
+    "The lake is deep.",
+    "The road is long."
+   ],
+   "why": "'the highest' is a superlative."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best new board game square?",
+   "o": [
+    "The lake is deeper than the river. Go forward one space.",
+    "The lake deep river.",
+    "Go forward deep.",
+    "The lake is the deeper."
+   ],
+   "why": "It has a correct comparative sentence and a rule."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we use 'but' in 'The road is long, but the path is short'?",
+   "o": [
+    "The two facts are different.",
+    "The two facts are the same.",
+    "It is a question.",
+    "It is a rule."
+   ],
+   "why": "'but' joins facts that are different."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "LC2",
+ "lesson": "Bo's Learning Club 2 – Lesson 2: Language booster 2 (at the doctor's)",
+ "outcomes": [
+  "Understand and order a dialogue at the doctor's.",
+  "Ask 'What should I do?' and give advice.",
+  "Make a health advice chart: illness – should – shouldn't."
+ ],
+ "tf": [
+  {
+   "s": "The doctor says first: 'Hello. What's the problem?'",
+   "t": true,
+   "why": "Yes! The doctor starts with the problem."
+  },
+  {
+   "s": "'I don't feel well' means I feel very good.",
+   "t": false,
+   "why": "It means you feel ill."
+  },
+  {
+   "s": "'What's the matter?' asks about your problem.",
+   "t": true,
+   "why": "Correct! It asks what is wrong."
+  },
+  {
+   "s": "With a cold, you should rest in bed.",
+   "t": true,
+   "why": "Well done! Rest helps."
+  },
+  {
+   "s": "At the end, the patient says 'Thank you, doctor.'",
+   "t": true,
+   "why": "Yes! Always say thank you."
+  },
+  {
+   "s": "We say 'What should I do?' to ask for advice.",
+   "t": true,
+   "why": "Correct! should asks for advice."
+  },
+  {
+   "s": "With a cold, you should go to school.",
+   "t": false,
+   "why": "You shouldn't go to school with a cold."
+  },
+  {
+   "s": "The dialogue order is: thanks – problem – advice.",
+   "t": false,
+   "why": "The order is: problem – advice – thanks."
+  },
+  {
+   "s": "With a headache, you shouldn't play video games.",
+   "t": true,
+   "why": "Yes! Rest your eyes and head."
+  },
+  {
+   "s": "With a sore throat, you should shout.",
+   "t": false,
+   "why": "You shouldn't shout with a sore throat."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What ___ I do?",
+   "o": [
+    "should",
+    "shouldn't",
+    "am"
+   ],
+   "why": "What should I do? asks for advice."
+  },
+  {
+   "q": "Doctor: What's the matter? You: ...",
+   "o": [
+    "I have a cold.",
+    "Thank you, doctor.",
+    "You should rest."
+   ],
+   "why": "Tell the doctor your problem."
+  },
+  {
+   "q": "Last line of the dialogue?",
+   "o": [
+    "Thank you, doctor.",
+    "What's the matter?",
+    "I have a cold."
+   ],
+   "why": "We thank the doctor at the end."
+  },
+  {
+   "q": "Advice for a cold:",
+   "o": [
+    "You should rest in bed.",
+    "You should go to school.",
+    "You should shout."
+   ],
+   "why": "Rest in bed with a cold."
+  },
+  {
+   "q": "Headache: You shouldn't ...",
+   "o": [
+    "play video games",
+    "rest",
+    "sleep"
+   ],
+   "why": "Video games are a bad idea."
+  },
+  {
+   "q": "Sore throat: You shouldn't ...",
+   "o": [
+    "shout",
+    "rest",
+    "drink water"
+   ],
+   "why": "Shouting hurts your throat."
+  },
+  {
+   "q": "Hello, doctor. I don't feel ___ .",
+   "o": [
+    "well",
+    "good idea",
+    "happy birthday"
+   ],
+   "why": "I don't feel well = I am ill."
+  },
+  {
+   "q": "Doctor: Hello. What's the problem?",
+   "o": [
+    "Hello, doctor. I don't feel well.",
+    "Thank you, doctor.",
+    "You should rest in bed."
+   ],
+   "why": "First tell the doctor you don't feel well."
+  },
+  {
+   "q": "Chart: illness – you should – you ___",
+   "o": [
+    "shouldn't",
+    "must",
+    "can"
+   ],
+   "why": "The chart shows good and bad ideas."
+  },
+  {
+   "q": "Order: problem – advice – ?",
+   "o": [
+    "thanks",
+    "hello",
+    "problem"
+   ],
+   "why": "We say thank you at the end."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Stomachache: drink lots of ...",
+   "a": "water",
+   "d": [
+    "cola",
+    "coffee",
+    "fizzy drinks"
+   ]
+  },
+  {
+   "q": "First words of the doctor",
+   "a": "What's the problem?",
+   "d": [
+    "Thank you.",
+    "Goodbye.",
+    "I have a cold."
+   ]
+  },
+  {
+   "q": "Patient's last words",
+   "a": "Thank you, doctor.",
+   "d": [
+    "What's the matter?",
+    "Hello.",
+    "I have a cold."
+   ]
+  },
+  {
+   "q": "Cold: rest in ...",
+   "a": "bed",
+   "d": [
+    "school",
+    "the park",
+    "the car"
+   ]
+  },
+  {
+   "q": "Cold: don't go to ...",
+   "a": "school",
+   "d": [
+    "bed",
+    "home",
+    "sleep"
+   ]
+  },
+  {
+   "q": "Sore throat: don't ...",
+   "a": "shout",
+   "d": [
+    "rest",
+    "drink water",
+    "sleep"
+   ]
+  },
+  {
+   "q": "Headache: don't play ...",
+   "a": "video games",
+   "d": [
+    "in bed",
+    "with medicine",
+    "quietly"
+   ]
+  },
+  {
+   "q": "I don't feel ...",
+   "a": "well",
+   "d": [
+    "good idea",
+    "doctor",
+    "matter"
+   ]
+  },
+  {
+   "q": "Asks about your problem",
+   "a": "What's the matter?",
+   "d": [
+    "Thank you.",
+    "Goodbye.",
+    "You should rest."
+   ]
+  },
+  {
+   "q": "Good idea word",
+   "a": "should",
+   "d": [
+    "shouldn't",
+    "mustn't",
+    "don't"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does the doctor say first?",
+   "o": [
+    "Hello. What's the problem?",
+    "Thank you, doctor.",
+    "You shouldn't go to school.",
+    "I have a cold."
+   ],
+   "why": "The doctor asks about the problem."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the patient say at the end?",
+   "o": [
+    "Thank you, doctor.",
+    "What's the matter?",
+    "You should rest in bed.",
+    "Hello. What's the problem?"
+   ],
+   "why": "We thank the doctor."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question asks for advice?",
+   "o": [
+    "What should I do?",
+    "What's your name?",
+    "Where do you live?",
+    "How old are you?"
+   ],
+   "why": "'What should I do?' asks for advice."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you say when you feel ill?",
+   "o": [
+    "I don't feel well.",
+    "I feel very well.",
+    "I'm very happy.",
+    "I'm a doctor."
+   ],
+   "why": "I don't feel well = I am ill."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "What should you do when you have a cold?",
+   "o": [
+    "You should rest in bed. You shouldn't go to school.",
+    "You should go to school. You shouldn't rest.",
+    "You should shout. You should run.",
+    "You should eat a lot."
+   ],
+   "why": "Rest at home with a cold."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Give advice for a headache.",
+   "o": [
+    "You should have some medicine from your parents. You shouldn't play video games.",
+    "You should play video games all day.",
+    "You should shout loudly.",
+    "You shouldn't rest."
+   ],
+   "why": "Rest and medicine from an adult help."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct chart line.",
+   "o": [
+    "Sore throat – You should have some medicine – You shouldn't shout.",
+    "Sore throat – You should shout – You shouldn't rest.",
+    "Sore throat – You should play video games – You shouldn't drink water.",
+    "Sore throat – You should go to school – You shouldn't sleep."
+   ],
+   "why": "Medicine helps; shouting hurts your throat."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Order: Thank you, doctor. / I have a stomachache. / What's the matter?",
+   "o": [
+    "What's the matter? – I have a stomachache. – Thank you, doctor.",
+    "Thank you, doctor. – What's the matter? – I have a stomachache.",
+    "I have a stomachache. – Thank you, doctor. – What's the matter?",
+    "What's the matter? – Thank you, doctor. – I have a stomachache."
+   ],
+   "why": "Problem – answer – thanks."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the doctor ask 'What's the matter?'",
+   "o": [
+    "To know your problem and give advice.",
+    "To know your name.",
+    "To play a game.",
+    "To say goodbye."
+   ],
+   "why": "The doctor needs to know the problem."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which advice is NOT good for a cold?",
+   "o": [
+    "You should go to school.",
+    "You should rest in bed.",
+    "You shouldn't go to school.",
+    "You should have some medicine."
+   ],
+   "why": "With a cold, stay home and rest."
+  }
+ ]
+}

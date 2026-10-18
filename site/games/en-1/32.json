@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Meg's Learning Club 2",
+ "lesson": "Lesson 1: CLIL Maths – Shapes",
+ "outcomes": [
+  "I can name shapes: circle, square, triangle and rectangle.",
+  "I can count the sides of a shape.",
+  "I can find shapes around me and say: It's a circle."
+ ],
+ "tf": [
+  {
+   "s": "A triangle has three sides.",
+   "t": true,
+   "why": "Yes! One, two, three sides."
+  },
+  {
+   "s": "A square has four sides.",
+   "t": true,
+   "why": "Great! A square has four sides."
+  },
+  {
+   "s": "A circle has four corners.",
+   "t": false,
+   "why": "A circle has no corners. It is round."
+  },
+  {
+   "s": "A rectangle has three sides.",
+   "t": false,
+   "why": "A rectangle has four sides."
+  },
+  {
+   "s": "The whiteboard is a rectangle.",
+   "t": true,
+   "why": "Yes! The whiteboard is a rectangle."
+  },
+  {
+   "s": "A square has four sides the same.",
+   "t": true,
+   "why": "Right! All four sides of a square are the same."
+  },
+  {
+   "s": "A triangle is round.",
+   "t": false,
+   "why": "A circle is round. A triangle has three sides."
+  },
+  {
+   "s": "We ask What shape is it? about a shape.",
+   "t": true,
+   "why": "Yes! What shape is it? It's a circle."
+  },
+  {
+   "s": "We can find shapes in the classroom.",
+   "t": true,
+   "why": "Yes! The whiteboard is a rectangle."
+  },
+  {
+   "s": "The moon in the picture is a triangle.",
+   "t": false,
+   "why": "The moon in the picture is a circle."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How many sides has a triangle?",
+   "o": [
+    "Three",
+    "Four",
+    "Two"
+   ],
+   "why": "A triangle has three sides."
+  },
+  {
+   "q": "Which shape has no corners?",
+   "o": [
+    "circle",
+    "square",
+    "triangle"
+   ],
+   "why": "A circle is round with no corners."
+  },
+  {
+   "q": "What shape is the whiteboard?",
+   "o": [
+    "rectangle",
+    "circle",
+    "triangle"
+   ],
+   "why": "The whiteboard is a rectangle."
+  },
+  {
+   "q": "How many sides has a rectangle?",
+   "o": [
+    "Four",
+    "Three",
+    "One"
+   ],
+   "why": "A rectangle has four sides."
+  },
+  {
+   "q": "Which shape has four sides the same?",
+   "o": [
+    "square",
+    "triangle",
+    "circle"
+   ],
+   "why": "A square has four sides the same."
+  },
+  {
+   "q": "What shape is the moon in the picture?",
+   "o": [
+    "circle",
+    "square",
+    "rectangle"
+   ],
+   "why": "The moon in the picture is a circle."
+  },
+  {
+   "q": "Which question asks about a shape?",
+   "o": [
+    "What shape is it?",
+    "What colour is it?",
+    "How old are you?"
+   ],
+   "why": "What shape is it? asks about the shape."
+  },
+  {
+   "q": "Is it a circle? (a round shape)",
+   "o": [
+    "Yes.",
+    "No.",
+    "It's red."
+   ],
+   "why": "A round shape is a circle."
+  },
+  {
+   "q": "The square is red. What colour is the square?",
+   "o": [
+    "Red.",
+    "Square.",
+    "Four."
+   ],
+   "why": "The square is red."
+  },
+  {
+   "q": "Which shapes are in the house picture?",
+   "o": [
+    "A square and a triangle",
+    "Two circles",
+    "A circle only"
+   ],
+   "why": "The house has a square and a triangle."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Sides of a triangle",
+   "a": "three",
+   "d": [
+    "four",
+    "two",
+    "five"
+   ]
+  },
+  {
+   "q": "Sides of a square",
+   "a": "four",
+   "d": [
+    "three",
+    "two",
+    "six"
+   ]
+  },
+  {
+   "q": "Sides of a rectangle",
+   "a": "four",
+   "d": [
+    "three",
+    "one",
+    "five"
+   ]
+  },
+  {
+   "q": "A round shape",
+   "a": "circle",
+   "d": [
+    "square",
+    "triangle",
+    "rectangle"
+   ]
+  },
+  {
+   "q": "Three sides",
+   "a": "triangle",
+   "d": [
+    "circle",
+    "square",
+    "rectangle"
+   ]
+  },
+  {
+   "q": "A shape word",
+   "a": "triangle",
+   "d": [
+    "teddy",
+    "robot",
+    "window"
+   ]
+  },
+  {
+   "q": "Shape of the whiteboard",
+   "a": "rectangle",
+   "d": [
+    "circle",
+    "triangle",
+    "heart"
+   ]
+  },
+  {
+   "q": "No corners",
+   "a": "circle",
+   "d": [
+    "square",
+    "triangle",
+    "rectangle"
+   ]
+  },
+  {
+   "q": "Ask about a shape",
+   "a": "What shape is it?",
+   "d": [
+    "How old are you?",
+    "Who's this?",
+    "Where's the bag?"
+   ]
+  },
+  {
+   "q": "Corners of a triangle",
+   "a": "three",
+   "d": [
+    "four",
+    "none",
+    "two"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which shape is round?",
+   "o": [
+    "circle",
+    "square",
+    "triangle",
+    "rectangle"
+   ],
+   "why": "A circle is round."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How many corners has a rectangle?",
+   "o": [
+    "4",
+    "3",
+    "2",
+    "0"
+   ],
+   "why": "A rectangle has 4 corners."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is NOT a shape?",
+   "o": [
+    "teddy",
+    "circle",
+    "square",
+    "triangle"
+   ],
+   "why": "A teddy is a toy, not a shape."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which shape has three sides?",
+   "o": [
+    "triangle",
+    "square",
+    "circle",
+    "rectangle"
+   ],
+   "why": "A triangle has three sides."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your teacher points to the whiteboard. What shape is it?",
+   "o": [
+    "It's a rectangle.",
+    "It's a circle.",
+    "It's a triangle.",
+    "It's red."
+   ],
+   "why": "The whiteboard is a rectangle."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A shape has 3 sides and 3 corners. What is it?",
+   "o": [
+    "a triangle",
+    "a square",
+    "a circle",
+    "a rectangle"
+   ],
+   "why": "Three sides and three corners make a triangle."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The circle is blue. What colour is the circle?",
+   "o": [
+    "The circle is blue.",
+    "It's a circle.",
+    "It's round.",
+    "It has four sides."
+   ],
+   "why": "The circle is blue tells the colour."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How is a square different from a rectangle?",
+   "o": [
+    "A square has four sides the same.",
+    "A square has three sides.",
+    "A square is round.",
+    "A square has no corners."
+   ],
+   "why": "All four sides of a square are the same."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which shape is NOT like the others: square, rectangle, circle, triangle?",
+   "o": [
+    "circle",
+    "square",
+    "rectangle",
+    "triangle"
+   ],
+   "why": "A circle has no sides or corners. The others do."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A house picture has a roof and a wall. Which shapes do you see?",
+   "o": [
+    "A triangle and a square",
+    "Two circles",
+    "A circle and a rectangle",
+    "Only a circle"
+   ],
+   "why": "The roof is a triangle. The house is a square."
+  }
+ ]
+}

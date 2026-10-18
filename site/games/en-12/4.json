@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 1: A Fair Exchange (Reading)",
+ "lesson": "Workbook practice: skimming a Fact File and multiple choice",
+ "outcomes": [
+  "Skim a Fact File to find information quickly",
+  "Choose the best heading for a text and give reasons",
+  "Answer multiple-choice questions carefully"
+ ],
+ "tf": [
+  {
+   "s": "The World Trade Organisation deals with the rules of trade between countries.",
+   "t": true,
+   "why": "Yes, the WTO deals with trade rules."
+  },
+  {
+   "s": "Oman became a member of the WTO on 9 November 2000.",
+   "t": true,
+   "why": "That is the date in the Fact File."
+  },
+  {
+   "s": "In Activity 1 you may write as many words as you like for each answer.",
+   "t": false,
+   "why": "The rule is no more than three words."
+  },
+  {
+   "s": "Headings and sub-headings can help you know what information is inside a text.",
+   "t": true,
+   "why": "They show how the ideas are organised."
+  },
+  {
+   "s": "Pictures are not helpful when you skim a text.",
+   "t": false,
+   "why": "Pictures help you get the gist quickly."
+  },
+  {
+   "s": "You should read the whole text before answering multiple-choice items.",
+   "t": true,
+   "why": "Then it is easier to reject the wrong answers."
+  },
+  {
+   "s": "In a multiple-choice item, you usually reject three options to find the right one.",
+   "t": true,
+   "why": "Rejecting wrong options helps you find the answer."
+  },
+  {
+   "s": "The best heading relates only to the first sentence of the text.",
+   "t": false,
+   "why": "The best heading relates to the whole text."
+  },
+  {
+   "s": "WTO stands for World Travel Organisation.",
+   "t": false,
+   "why": "WTO stands for World Trade Organisation."
+  },
+  {
+   "s": "Skimming a Fact File helps you decide if the information you need is there.",
+   "t": true,
+   "why": "Yes, skimming is quick checking."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does WTO stand for?",
+   "o": [
+    "World Trade Organisation",
+    "World Travel Office",
+    "World Tanker Organisation"
+   ],
+   "why": "The WTO deals with world trade."
+  },
+  {
+   "q": "When did Oman join the WTO?",
+   "o": [
+    "9 November 2000",
+    "9 November 1990",
+    "1 January 2010"
+   ],
+   "why": "The Fact File gives 9 November 2000."
+  },
+  {
+   "q": "How many words can each Activity 1 answer have?",
+   "o": [
+    "no more than three",
+    "exactly ten",
+    "no limit"
+   ],
+   "why": "Short answers have a three-word limit."
+  },
+  {
+   "q": "What do you do with the answer bubble?",
+   "o": [
+    "shade it",
+    "cross it out",
+    "leave it empty"
+   ],
+   "why": "In multiple choice, you shade the correct bubble."
+  },
+  {
+   "q": "What helps you get the gist before reading?",
+   "o": [
+    "pictures and sub-headings",
+    "the page number",
+    "the font colour"
+   ],
+   "why": "They show the topic and how ideas are organised."
+  },
+  {
+   "q": "Which heading is best for the Farooq Al Sumar text?",
+   "o": [
+    "heading c",
+    "heading a",
+    "heading d"
+   ],
+   "why": "Heading c relates to the whole text."
+  },
+  {
+   "q": "What should you read first in a multiple-choice task?",
+   "o": [
+    "the whole text",
+    "only the options",
+    "only the last line"
+   ],
+   "why": "Reading the whole text first gives you the gist."
+  },
+  {
+   "q": "What does a Fact File mostly give?",
+   "o": [
+    "facts under headings",
+    "a long story",
+    "a poem"
+   ],
+   "why": "A Fact File organises facts under headings."
+  },
+  {
+   "q": "What does the WTO deal with?",
+   "o": [
+    "rules of trade",
+    "school timetables",
+    "weather"
+   ],
+   "why": "It deals with trade between countries."
+  },
+  {
+   "q": "Why reject options in multiple choice?",
+   "o": [
+    "to find the correct answer",
+    "to save ink",
+    "to make it harder"
+   ],
+   "why": "Removing wrong answers leaves the right one."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Organisation for trade rules",
+   "a": "WTO",
+   "d": [
+    "UN",
+    "FIFA",
+    "NASA"
+   ]
+  },
+  {
+   "q": "Year Oman joined the WTO",
+   "a": "2000",
+   "d": [
+    "1990",
+    "2010",
+    "1970"
+   ]
+  },
+  {
+   "q": "Word limit in Activity 1",
+   "a": "three words",
+   "d": [
+    "ten words",
+    "five words",
+    "one word"
+   ]
+  },
+  {
+   "q": "Mark the correct bubble by...",
+   "a": "shading",
+   "d": [
+    "tearing",
+    "folding",
+    "erasing"
+   ]
+  },
+  {
+   "q": "Text with facts under headings",
+   "a": "Fact File",
+   "d": [
+    "poem",
+    "novel",
+    "diary"
+   ]
+  },
+  {
+   "q": "Smaller title inside a text",
+   "a": "sub-heading",
+   "d": [
+    "slogan",
+    "logo",
+    "brand"
+   ]
+  },
+  {
+   "q": "Best heading for Al Sumar text",
+   "a": "heading c",
+   "d": [
+    "heading a",
+    "heading b",
+    "heading d"
+   ]
+  },
+  {
+   "q": "Ancient trade route",
+   "a": "the Silk Road",
+   "d": [
+    "the Wind Road",
+    "the Oil Road",
+    "the Sand Road"
+   ]
+  },
+  {
+   "q": "How oil is carried today",
+   "a": "supertankers",
+   "d": [
+    "dhows",
+    "camels",
+    "trains"
+   ]
+  },
+  {
+   "q": "Day in November Oman joined",
+   "a": "9 November",
+   "d": [
+    "1 November",
+    "19 November",
+    "29 November"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which organisation deals with the rules of trade between countries?",
+   "o": [
+    "the World Trade Organisation",
+    "the Silk Road",
+    "Oman Air",
+    "the United Nations Bank"
+   ],
+   "why": "The WTO deals with trade rules."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How should you mark your answer in a multiple-choice test?",
+   "o": [
+    "shade the correct bubble",
+    "write a long sentence",
+    "draw a picture",
+    "circle the question"
+   ],
+   "why": "Shading the bubble shows your answer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do headings on a Fact File help you do?",
+   "o": [
+    "know what information is inside",
+    "learn new spelling",
+    "count the words",
+    "find the author"
+   ],
+   "why": "Headings show where to find information."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When did Oman become a member of the WTO?",
+   "o": [
+    "9 November 2000",
+    "9 November 1999",
+    "19 November 2000",
+    "9 October 2000"
+   ],
+   "why": "The Fact File gives this exact date."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A question says 'Answer in no more than three words.' Which answer is correct?",
+   "o": [
+    "the Silk Road",
+    "It was the famous Silk Road route",
+    "the long Silk Road of old times",
+    "a road for silk and spices trade"
+   ],
+   "why": "Only 'the Silk Road' keeps to three words."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You need to know if a Fact File mentions Oman. What is the fastest way?",
+   "o": [
+    "skim the headings",
+    "read it aloud twice",
+    "copy it out",
+    "learn it by heart"
+   ],
+   "why": "Skimming headings tells you quickly if it is there."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "How were goods carried in modern times, according to Activity 1?",
+   "o": [
+    "by gigantic supertankers",
+    "by wooden dhows only",
+    "by camel only",
+    "by plane only"
+   ],
+   "why": "The answer in Activity 1 is 'by gigantic supertankers'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it a good idea to read the whole text before multiple-choice items?",
+   "o": [
+    "You get the gist, so rejecting wrong answers is easier",
+    "It makes the test shorter",
+    "You can skip the questions",
+    "The answers are always in the title"
+   ],
+   "why": "Understanding the whole text helps you choose."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is heading c the best for the Farooq Al Sumar text?",
+   "o": [
+    "It relates to the whole text",
+    "It is the shortest heading",
+    "It is the first heading",
+    "It mentions a date"
+   ],
+   "why": "A good heading fits the whole text, not one part."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are pictures and sub-headings useful when skimming?",
+   "o": [
+    "They show the gist and how ideas are organised",
+    "They tell you every detail",
+    "They replace the text",
+    "They give the answers to every question"
+   ],
+   "why": "They give a quick overview of the text."
+  }
+ ]
+}

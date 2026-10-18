@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 2: Coping with Change (Grammar)",
+ "lesson": "Reported speech with the past perfect; Activate Your English",
+ "outcomes": [
+  "Report past statements using the past perfect",
+  "Talk about regrets with 'I wish' and 'If only'"
+ ],
+ "tf": [
+  {
+   "s": "'I forgot my keys,' he said. → He said he had forgotten his keys.",
+   "t": true,
+   "why": "The past simple moves back to the past perfect."
+  },
+  {
+   "s": "In reported speech, the past simple often becomes the past perfect.",
+   "t": true,
+   "why": "This is called backshift."
+  },
+  {
+   "s": "Verbs move back a tense because the reporting verb is in the present.",
+   "t": false,
+   "why": "They move back because the reporting verb is in the past."
+  },
+  {
+   "s": "'We didn't see him,' she said. → She said they had not seen him.",
+   "t": true,
+   "why": "Didn't see becomes had not seen."
+  },
+  {
+   "s": "'I wish I had studied more' is a regret about the past.",
+   "t": true,
+   "why": "Wish + past perfect shows regret."
+  },
+  {
+   "s": "'If only I hadn't wasted my time' means the speaker is happy about wasting time.",
+   "t": false,
+   "why": "It means the speaker is sorry about it."
+  },
+  {
+   "s": "'I swam,' she said. → She said she had swam.",
+   "t": false,
+   "why": "The correct form is 'had swum'."
+  },
+  {
+   "s": "The past perfect of 'catch' is 'had caught'.",
+   "t": true,
+   "why": "Catch – caught – caught."
+  },
+  {
+   "s": "We can use 'If only' with a negative past perfect.",
+   "t": true,
+   "why": "For example, 'If only I hadn't wasted my time.'"
+  },
+  {
+   "s": "In reported speech, we never change the verb tense.",
+   "t": false,
+   "why": "After a past reporting verb, the tense usually moves back."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "'I lost my phone,' he said. → He said he ___ his phone.",
+   "o": [
+    "had lost",
+    "has lose",
+    "loses"
+   ],
+   "why": "Lost becomes had lost."
+  },
+  {
+   "q": "'We bought a car,' they said. → They said they ___ a car.",
+   "o": [
+    "had bought",
+    "have buy",
+    "buys"
+   ],
+   "why": "Bought becomes had bought."
+  },
+  {
+   "q": "'I didn't write it,' she said. → She said she ___ it.",
+   "o": [
+    "had not written",
+    "has not wrote",
+    "didn't wrote"
+   ],
+   "why": "Didn't write becomes had not written."
+  },
+  {
+   "q": "'I took the bus,' Ali said. → Ali said he ___ the bus.",
+   "o": [
+    "had taken",
+    "takes",
+    "has took"
+   ],
+   "why": "Took becomes had taken."
+  },
+  {
+   "q": "What is 'backshift'?",
+   "o": [
+    "moving a verb back one tense",
+    "adding a new subject",
+    "deleting the verb"
+   ],
+   "why": "In reported speech, verbs move back a tense."
+  },
+  {
+   "q": "'I found the key,' Sara said. → Sara said she ___ the key.",
+   "o": [
+    "had found",
+    "has find",
+    "finds"
+   ],
+   "why": "Found becomes had found."
+  },
+  {
+   "q": "I wish I ___ (not/eat) so much.",
+   "o": [
+    "hadn't eaten",
+    "don't eat",
+    "won't eat"
+   ],
+   "why": "Wish + negative past perfect."
+  },
+  {
+   "q": "'I went home,' he said. → He said he ___ home.",
+   "o": [
+    "had gone",
+    "has went",
+    "goes"
+   ],
+   "why": "Went becomes had gone."
+  },
+  {
+   "q": "In 'She told me she had forgotten', which is the reporting verb?",
+   "o": [
+    "told",
+    "forgotten",
+    "had"
+   ],
+   "why": "The reporting verb introduces the reported words."
+  },
+  {
+   "q": "Which words can start a sentence about regret?",
+   "o": [
+    "If only",
+    "Because",
+    "Although"
+   ],
+   "why": "'If only I had…' expresses regret."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Report 'I forgot.' → He said he ...",
+   "a": "had forgotten",
+   "d": [
+    "had forgot",
+    "has forgetted",
+    "had forgetting"
+   ]
+  },
+  {
+   "q": "Report 'I swam.' → She said she ...",
+   "a": "had swum",
+   "d": [
+    "had swam",
+    "had swimmed",
+    "has swim"
+   ]
+  },
+  {
+   "q": "Report 'I caught it.' → He said he ...",
+   "a": "had caught",
+   "d": [
+    "had catched",
+    "has catch",
+    "had catching"
+   ]
+  },
+  {
+   "q": "Report 'I ate.' → She said she ...",
+   "a": "had eaten",
+   "d": [
+    "had ate",
+    "had eated",
+    "has eat"
+   ]
+  },
+  {
+   "q": "Report 'We built it.' → They said they ...",
+   "a": "had built",
+   "d": [
+    "had builded",
+    "has build",
+    "had building"
+   ]
+  },
+  {
+   "q": "Report 'I was ill.' → He said he ...",
+   "a": "had been ill",
+   "d": [
+    "had was ill",
+    "had be ill",
+    "had being ill"
+   ]
+  },
+  {
+   "q": "Report 'I didn't see it.' → She said she ...",
+   "a": "had not seen",
+   "d": [
+    "had not saw",
+    "not had seen",
+    "had not see"
+   ]
+  },
+  {
+   "q": "Report 'I made it.' → He said he ...",
+   "a": "had made",
+   "d": [
+    "had maked",
+    "has make",
+    "had making"
+   ]
+  },
+  {
+   "q": "Report 'I didn't speak.' → He said he ...",
+   "a": "had not spoken",
+   "d": [
+    "had not spoke",
+    "had not speaked",
+    "not had spoke"
+   ]
+  },
+  {
+   "q": "Report 'They didn't come.' → She said they ...",
+   "a": "had not come",
+   "d": [
+    "had not came",
+    "had not coming",
+    "not had came"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why do verbs move back a tense in reported speech?",
+   "o": [
+    "Because the reporting verb is in the past",
+    "Because the speaker is angry",
+    "Because it is a question",
+    "Because the verb is irregular"
+   ],
+   "why": "A past reporting verb like 'said' causes backshift."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence shows a regret about the past?",
+   "o": [
+    "I wish I had studied more.",
+    "I study a lot.",
+    "I will study more.",
+    "I am studying now."
+   ],
+   "why": "Wish + past perfect = past regret."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In reported speech, the past simple usually becomes the...",
+   "o": [
+    "past perfect",
+    "present simple",
+    "future simple",
+    "present continuous"
+   ],
+   "why": "For example, forgot → had forgotten."
+  },
+  {
+   "lv": "التذكر",
+   "q": "'I saw a film,' he said. Which report is correct?",
+   "o": [
+    "He said he had seen a film.",
+    "He said he sees a film.",
+    "He said he has saw a film.",
+    "He said he will see a film."
+   ],
+   "why": "Saw becomes had seen."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'We didn't eat lunch,' they said. Report it.",
+   "o": [
+    "They said they had not eaten lunch.",
+    "They said they don't eat lunch.",
+    "They said they have not ate lunch.",
+    "They said they will not eat lunch."
+   ],
+   "why": "Didn't eat becomes had not eaten."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Khalid missed the bus because he woke up late. Which regret fits?",
+   "o": [
+    "If only I hadn't woken up late.",
+    "If only I don't wake up late.",
+    "If only I wake up late.",
+    "If only I won't wake up late."
+   ],
+   "why": "If only + negative past perfect."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Sara is sorry she didn't call her grandmother. What does she say?",
+   "o": [
+    "I wish I had called my grandmother.",
+    "I wish I call my grandmother.",
+    "I wish I will call my grandmother.",
+    "I wish I calling my grandmother."
+   ],
+   "why": "Wish + past perfect for a past regret."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between 'I wish I started' and 'I wish I had started'?",
+   "o": [
+    "'Had started' is the correct past perfect for a past regret",
+    "They mean exactly the same",
+    "'Started' talks about the future",
+    "'Had started' is a present habit"
+   ],
+   "why": "Past regrets need the past perfect."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'He said he had forgotten his book' in the past perfect?",
+   "o": [
+    "The forgetting happened before he spoke",
+    "The forgetting will happen tomorrow",
+    "He is forgetting it now",
+    "He forgets it every day"
+   ],
+   "why": "The past perfect shows the earlier past action."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which reported sentence contains a mistake?",
+   "o": [
+    "She said she had swam in the sea.",
+    "She said she had swum in the sea.",
+    "He said he had caught a fish.",
+    "They said they had built a house."
+   ],
+   "why": "The past participle of 'swim' is 'swum'."
+  }
+ ]
+}

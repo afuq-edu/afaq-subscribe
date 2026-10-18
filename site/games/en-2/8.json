@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الثاني",
+  "unit": "Unit 1: Look at my toys!",
+  "lesson": "Sounds and Spelling – Unit 1, Lesson 3: ie",
+  "outcomes": [
+    "I can say the sound /aɪ/ for ie and read tie and pie.",
+    "I can read questions with the tricky word who.",
+    "I can ask Is it a ...? and What's this? about toys."
+  ],
+  "tf": [
+    { "s": "The letters ie in pie say /aɪ/.", "t": true, "why": "Yes! ie says /aɪ/ like in pie." },
+    { "s": "t - ie makes the word tie.", "t": true, "why": "Great! t - ie is tie." },
+    { "s": "The word tail has ie in it.", "t": false, "why": "tail has ai. tie has ie." },
+    { "s": "We use who to ask about a person.", "t": true, "why": "Yes! Who is it? asks about a person." },
+    { "s": "ie and oa make the same sound.", "t": false, "why": "ie says /aɪ/. oa says /əʊ/." },
+    { "s": "The word lie has ie in it.", "t": true, "why": "Well done! l - ie is lie." },
+    { "s": "Who is it? asks What colour is it?", "t": false, "why": "Who is it? asks about a person, not a colour." },
+    { "s": "Is it a slide? (a scooter) No, it isn't. It's a scooter.", "t": true, "why": "Yes! It is not a slide. It's a scooter." },
+    { "s": "Is it a yo-yo? (a yo-yo) No, it isn't.", "t": false, "why": "It is a yo-yo, so we say Yes, it is." },
+    { "s": "The word pie has oa in it.", "t": false, "why": "pie has ie, not oa." }
+  ],
+  "boxes": [
+    { "q": "Blend: p - ie", "o": ["pie", "tie", "lie"], "why": "p - ie makes pie." },
+    { "q": "Blend: t - ie", "o": ["tie", "pie", "tail"], "why": "t - ie makes tie." },
+    { "q": "Which word has ie: tie or tail?", "o": ["tie", "tail", "both"], "why": "tie has ie. tail has ai." },
+    { "q": "What sound does ie make?", "o": ["/aɪ/", "/eɪ/", "/əʊ/"], "why": "ie says /aɪ/." },
+    { "q": "... is it? (asking about a person)", "o": ["Who", "His", "Her"], "why": "Who asks about a person." },
+    { "q": "Who has got the pie? Answer with a...", "o": ["name", "colour", "number"], "why": "Who asks about a person, so we say a name." },
+    { "q": "Is it a bike? (a bike)", "o": ["Yes, it is.", "No, it isn't.", "It's a kite."], "why": "It is a bike, so we say Yes." },
+    { "q": "Show a toy. Ask your friend...", "o": ["What's this?", "Who is seven?", "How old are you?"], "why": "What's this? asks about a thing." },
+    { "q": "Which word has ie?", "o": ["lie", "rain", "goat"], "why": "l - ie has ie." },
+    { "q": "Which is a toy word?", "o": ["scooter", "pie", "tie"], "why": "A scooter is a toy." }
+  ],
+  "hunt": [
+    { "q": "Blend: p - ie", "a": "pie", "d": ["tie", "lie", "die"] },
+    { "q": "Blend: t - ie", "a": "tie", "d": ["pie", "lie", "tail"] },
+    { "q": "Blend: l - ie", "a": "lie", "d": ["tie", "pie", "rain"] },
+    { "q": "Find the ie word.", "a": "tie", "d": ["tail", "boat", "rain"] },
+    { "q": "Which one has ie?", "a": "pie", "d": ["goat", "train", "coat"] },
+    { "q": "The sound of ie", "a": "/aɪ/", "d": ["/eɪ/", "/əʊ/", "/æ/"] },
+    { "q": "Ask about a person: ... is it?", "a": "Who", "d": ["His", "Her", "An"] },
+    { "q": "Is it a slide? (a scooter)", "a": "No, it isn't.", "d": ["Yes, it is.", "It's a slide.", "It's a kite."] },
+    { "q": "Is it a yo-yo? (a yo-yo)", "a": "Yes, it is.", "d": ["No, it isn't.", "It's a ball.", "It isn't."] },
+    { "q": "An outdoor toy you ride", "a": "bike", "d": ["doll", "teddy", "puzzle"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Which word has the ie sound /aɪ/?", "o": ["pie", "pen", "pin", "pan"], "why": "p - ie says /aɪ/." },
+    { "lv": "التذكر", "q": "Which is the tricky word in this lesson?", "o": ["who", "his", "her", "have"], "why": "We learn who. His and her are revision." },
+    { "lv": "التذكر", "q": "Which question asks about a person?", "o": ["Who is it?", "What's this?", "Is it a bike?", "What colour is it?"], "why": "Who asks about a person." },
+    { "lv": "التذكر", "q": "How many sounds in tie?", "o": ["Two: t - ie", "Three: t - i - e", "One: tie", "Four: t - i - e - s"], "why": "ie makes one sound, so tie is t - ie." },
+    { "lv": "التطبيق", "q": "Teacher: Who has got the pie? Lily has it. You say...", "o": ["Lily.", "It's a pie.", "Yes, it is.", "It's red."], "why": "Who asks for a person, so we say Lily." },
+    { "lv": "التطبيق", "q": "Your friend shows a scooter. Ask a question.", "o": ["Is it a scooter?", "Who is seven?", "How old are you?", "What's your name?"], "why": "Is it a ...? asks about a toy." },
+    { "lv": "التطبيق", "q": "Look at a picture of a tie. Write the word.", "o": ["tie", "tye", "tai", "tee"], "why": "t - ie spells tie." },
+    { "lv": "التحليل", "q": "Which group has only ie words?", "o": ["tie, pie, lie", "tie, tail, pie", "pie, goat, lie", "rain, tie, pie"], "why": "tie, pie and lie all have ie." },
+    { "lv": "التحليل", "q": "Change p in pie to t. What word?", "o": ["tie", "lie", "die", "pie"], "why": "t - ie makes tie." },
+    { "lv": "التحليل", "q": "Is it a doll? The answer is No, it isn't. It's a robot. What is the toy?", "o": ["a robot", "a doll", "a pie", "a tie"], "why": "The answer says It's a robot." }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 4: I want to be a doctor!",
+ "lesson": "Unit 4 – Lesson 10: Fun corner",
+ "outcomes": [
+  "I can say: I want to be a / an … and I want to travel by …",
+  "I can complete a jobs and transport crossword.",
+  "I can describe people's jobs from pictures."
+ ],
+ "tf": [
+  {
+   "s": "We say: I want to travel by train.",
+   "t": true,
+   "why": "Yes! travel by + transport."
+  },
+  {
+   "s": "We say: I want to travel by a motorbike.",
+   "t": false,
+   "why": "No a after by: by motorbike."
+  },
+  {
+   "s": "We say: I want to be an astronaut.",
+   "t": true,
+   "why": "Right! an + astronaut."
+  },
+  {
+   "s": "We say: I want to be an chef.",
+   "t": false,
+   "why": "chef starts with a consonant sound: a chef."
+  },
+  {
+   "s": "In the game, you take turns.",
+   "t": true,
+   "why": "Yes! Taking turns is fair."
+  },
+  {
+   "s": "A builder wears a helmet.",
+   "t": true,
+   "why": "Well done! Builders wear helmets."
+  },
+  {
+   "s": "A rocket goes with a chef.",
+   "t": false,
+   "why": "A rocket goes with an astronaut."
+  },
+  {
+   "s": "A person who likes children can want to be a teacher.",
+   "t": true,
+   "why": "Yes! Teachers work with children."
+  },
+  {
+   "s": "bus, train and motorbike are jobs.",
+   "t": false,
+   "why": "They are transport."
+  },
+  {
+   "s": "We say: He's pilot.",
+   "t": false,
+   "why": "We say: He's a pilot."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Spinner: chef. Make a sentence.",
+   "o": [
+    "I want to be a chef.",
+    "I want to be an chef.",
+    "I want travel by chef."
+   ],
+   "why": "I want to be a chef."
+  },
+  {
+   "q": "Spinner: train. Make a sentence.",
+   "o": [
+    "I want to travel by train.",
+    "I want to be a train.",
+    "I want to travel by a train."
+   ],
+   "why": "I want to travel by train."
+  },
+  {
+   "q": "Choose: I want to be a / an astronaut.",
+   "o": [
+    "an",
+    "a",
+    "by"
+   ],
+   "why": "an astronaut."
+  },
+  {
+   "q": "Complete: I want to ___ by motorbike.",
+   "o": [
+    "travel",
+    "be",
+    "work a"
+   ],
+   "why": "I want to travel by motorbike."
+  },
+  {
+   "q": "Clue: I go by … (a red bus)",
+   "o": [
+    "bus",
+    "car",
+    "boat"
+   ],
+   "why": "The picture is a bus."
+  },
+  {
+   "q": "Clue: I like children and I want to be a …",
+   "o": [
+    "teacher",
+    "pilot",
+    "builder"
+   ],
+   "why": "Teachers work with children."
+  },
+  {
+   "q": "Clue: Her uncle is an … (rocket)",
+   "o": [
+    "astronaut",
+    "artist",
+    "firefighter"
+   ],
+   "why": "A rocket goes to space."
+  },
+  {
+   "q": "Picture: a man in overalls with a helmet. He's a ___.",
+   "o": [
+    "builder",
+    "chef",
+    "nurse"
+   ],
+   "why": "Builders wear overalls and helmets."
+  },
+  {
+   "q": "Picture: a man in a pilot uniform. He's a ___.",
+   "o": [
+    "pilot",
+    "doctor",
+    "teacher"
+   ],
+   "why": "He's wearing a pilot uniform."
+  },
+  {
+   "q": "Which square is a good new game square?",
+   "o": [
+    "builder + car",
+    "builder + Monday",
+    "red + blue"
+   ],
+   "why": "A game square has a job and a transport."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "I want to ___ by train.",
+   "a": "travel",
+   "d": [
+    "be",
+    "want",
+    "an"
+   ]
+  },
+  {
+   "q": "I want to be ___ artist.",
+   "a": "an",
+   "d": [
+    "a",
+    "by",
+    "two"
+   ]
+  },
+  {
+   "q": "I want to be ___ nurse.",
+   "a": "a",
+   "d": [
+    "an",
+    "by",
+    "two"
+   ]
+  },
+  {
+   "q": "Spell the fire job",
+   "a": "firefighter",
+   "d": [
+    "firefiter",
+    "firfighter",
+    "firefighte"
+   ]
+  },
+  {
+   "q": "Travel on water",
+   "a": "boat",
+   "d": [
+    "bus",
+    "car",
+    "train"
+   ]
+  },
+  {
+   "q": "Two wheels",
+   "a": "motorbike",
+   "d": [
+    "bus",
+    "train",
+    "boat"
+   ]
+  },
+  {
+   "q": "Job: builds houses",
+   "a": "builder",
+   "d": [
+    "pilot",
+    "nurse",
+    "chef"
+   ]
+  },
+  {
+   "q": "Job: flies a plane",
+   "a": "pilot",
+   "d": [
+    "chef",
+    "teacher",
+    "artist"
+   ]
+  },
+  {
+   "q": "I want to ___ a pilot.",
+   "a": "be",
+   "d": [
+    "travel",
+    "by",
+    "go"
+   ]
+  },
+  {
+   "q": "Goes on rails",
+   "a": "train",
+   "d": [
+    "car",
+    "boat",
+    "motorbike"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word is a job?",
+   "o": [
+    "builder",
+    "bus",
+    "train",
+    "motorbike"
+   ],
+   "why": "A builder is a job."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is transport?",
+   "o": [
+    "motorbike",
+    "artist",
+    "teacher",
+    "pilot"
+   ],
+   "why": "A motorbike is transport."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Spell the job for: Her uncle is an … (rocket)",
+   "o": [
+    "a-s-t-r-o-n-a-u-t",
+    "a-s-t-r-o-n-o-t",
+    "a-s-t-o-r-n-a-u-t",
+    "a-s-t-r-a-n-a-u-t"
+   ],
+   "why": "a-s-t-r-o-n-a-u-t."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you say for the spinner: nurse?",
+   "o": [
+    "I want to be a nurse.",
+    "I want to be an nurse.",
+    "I want to travel by nurse.",
+    "I want nurse."
+   ],
+   "why": "a + nurse."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture: a woman with a car at a school. Complete: She's a ___.",
+   "o": [
+    "teacher",
+    "pilot",
+    "builder",
+    "firefighter"
+   ],
+   "why": "She works at a school: a teacher."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture: a man in a pilot uniform at the bus stop. Which sentence is right?",
+   "o": [
+    "He goes to work by bus.",
+    "She goes to work by bus.",
+    "He goes to work by plane.",
+    "He go to work by bus."
+   ],
+   "why": "He is at the bus stop: He goes to work by bus."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make two sentences about your dream.",
+   "o": [
+    "I want to be an astronaut. I want to travel by boat.",
+    "I want to be a astronaut. I want to travel by boat.",
+    "I want to be an astronaut. I want travel by boat.",
+    "I want be an astronaut. I want to travel by a boat."
+   ],
+   "why": "an astronaut, travel by boat: all correct."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which new game square is correct?",
+   "o": [
+    "I want to be a builder. I want to travel by car.",
+    "I want to be a car. I want to travel by builder.",
+    "I want to be an builder. I want to travel by car.",
+    "I want to be a builder. I want to travel by a car."
+   ],
+   "why": "Job with a / an, then by + transport."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The pilot is at the bus stop. What does this tell you?",
+   "o": [
+    "He goes to work by bus.",
+    "He flies a bus.",
+    "He is a bus driver.",
+    "He doesn't work."
+   ],
+   "why": "The bus stop shows his transport."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say 'travel by' but 'be a'?",
+   "o": [
+    "We travel by transport and we are a job.",
+    "They mean the same.",
+    "Jobs go after by.",
+    "Transport goes after a only."
+   ],
+   "why": "Jobs follow be a / an. Transport follows travel by."
+  }
+ ]
+}

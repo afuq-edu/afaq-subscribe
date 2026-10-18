@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الخامس",
+  "unit": "Unit 2 – Then and now",
+  "lesson": "Lesson 2: Story – Then and now",
+  "outcomes": [
+    "I can understand the story Then and now and match speech bubbles to characters.",
+    "I can correct mistakes in sentences about the story.",
+    "I can find creative ideas in the story and make my own code."
+  ],
+  "tf": [
+    {"s": "Sami's project is about how things were different in the past.", "t": true, "why": "Yes! It's about how things were different ten years ago and more."},
+    {"s": "Sami's parents had a tablet ten years ago.", "t": false, "why": "They didn't have a tablet; they had a computer."},
+    {"s": "Over 100 years ago, people in big houses used speaking tubes.", "t": true, "why": "Right! A speaking tube worked like a phone."},
+    {"s": "The children make a speaking tube with two bottles.", "t": false, "why": "They make it with two cans, a hose and some string."},
+    {"s": "Sound can travel through a tube.", "t": true, "why": "Yes! That is how a speaking tube works."},
+    {"s": "Lottie says \"Let's use this code mum told me about\".", "t": true, "why": "Yes! Lottie knows the code from her mum."},
+    {"s": "Over 100 years ago, people used mobile phones to talk to each other.", "t": false, "why": "They used speaking tubes."},
+    {"s": "Making a secret code is a creative idea.", "t": true, "why": "Great! Being creative means having new ideas."},
+    {"s": "In the Discovery Team code, you move the last letter to the start.", "t": false, "why": "You move the first letter to the end and add ay."},
+    {"s": "The story's value is being lazy.", "t": false, "why": "The value is being creative."}
+  ],
+  "boxes": [
+    {"q": "What do the children use to make a speaking tube?", "o": ["two cans, a hose and some string", "two bottles and a box", "a tablet and a mouse"], "why": "Cans, a hose and string make the tube."},
+    {"q": "What did people in big houses use like a phone 100 years ago?", "o": ["speaking tubes", "mobile phones", "tablets"], "why": "Speaking tubes carried their voices."},
+    {"q": "What did Sami's parents have ten years ago?", "o": ["a computer", "a tablet", "a speaking tube"], "why": "They had a computer, but no tablet."},
+    {"q": "Who says \"Let's use this code mum told me about\"?", "o": ["Lottie", "Sami", "Bo"], "why": "Lottie's mum told her about the code."},
+    {"q": "\"Hello Sami\" in the Discovery Team code is ___.", "o": ["Ellohay Amisay", "Olleh Imas", "Hellay Samay"], "why": "Move the first letter to the end and add ay."},
+    {"q": "Which idea is creative?", "o": ["making a speaking tube from cans", "sleeping all day", "watching the same film again"], "why": "Making something new from old things is creative."},
+    {"q": "Then: letter. Now: ___.", "o": ["email", "speaking tube", "CD"], "why": "Today we send emails."},
+    {"q": "Then: computer. Now: ___.", "o": ["tablet", "letter", "hose"], "why": "Many people use tablets now."},
+    {"q": "What travels through the speaking tube?", "o": ["sound", "water", "letters"], "why": "Sound travels through a tube."},
+    {"q": "Then: telephone. Now: ___.", "o": ["mobile phone", "speaking tube", "letter"], "why": "Now we carry mobile phones."}
+  ],
+  "hunt": [
+    {"q": "Old phone in big houses", "a": "speaking tube", "d": ["mobile phone", "tablet", "keyboard"]},
+    {"q": "Tube part: two ___", "a": "cans", "d": ["bottles", "boxes", "bags"]},
+    {"q": "A long tube for water", "a": "hose", "d": ["string", "can", "code"]},
+    {"q": "Ties things together", "a": "string", "d": ["hose", "can", "tablet"]},
+    {"q": "Secret writing", "a": "code", "d": ["project", "hose", "email"]},
+    {"q": "Sami's school work", "a": "project", "d": ["code", "string", "hose"]},
+    {"q": "Ali in the code", "a": "Liaay", "d": ["Ilaay", "Aliay", "Ayali"]},
+    {"q": "Who knows the code from mum?", "a": "Lottie", "d": ["Sami", "Fatma", "Bo"]},
+    {"q": "Speaking tubes: over ___ years ago", "a": "100", "d": ["10", "5", "2"]},
+    {"q": "The story's value: being ___", "a": "creative", "d": ["lazy", "rude", "mean"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What is Sami's project about?", "o": ["How things were different ten years ago and more", "Good manners around the world", "Space and planets", "Hobbies and talents"], "why": "The project is about then and now."},
+    {"lv": "التذكر", "q": "Which words are from the story?", "o": ["speaking tube, can, hose, string, code", "diamond, magnet, suspect, circus", "stage, karate, banana, juggling", "bowl, flour, eggs, sugar"], "why": "These are the story words of Then and now."},
+    {"lv": "التذكر", "q": "What is the rule of the Discovery Team code?", "o": ["Move the first letter to the end and add ay.", "Write the word backwards.", "Change every letter to a number.", "Add -ing to every word."], "why": "Hello → Ellohay."},
+    {"lv": "التذكر", "q": "What is the value in this story?", "o": ["being creative", "being tidy", "being polite at the table", "being quiet"], "why": "The children have creative ideas."},
+    {"lv": "التطبيق", "q": "Correct: Sami's parents had a tablet ten years ago.", "o": ["They didn't have a tablet; they had a computer.", "They had two tablets.", "They had a speaking tube.", "They had a mobile phone and a tablet."], "why": "Ten years ago, they had a computer."},
+    {"lv": "التطبيق", "q": "Write \"Sami\" in the Discovery Team code.", "o": ["Amisay", "Imasay", "Samiay", "Aysami"], "why": "S moves to the end: ami + s + ay = Amisay."},
+    {"lv": "التطبيق", "q": "Correct: The children make a speaking tube with two bottles.", "o": ["They make it with two cans.", "They make it with two tablets.", "They make it with two letters.", "They make it with two phones."], "why": "The tube uses two cans."},
+    {"lv": "التحليل", "q": "Why couldn't you walk around with an old telephone?", "o": ["It stayed in the house; it wasn't mobile.", "It was too small.", "It had no sound.", "It was made of string."], "why": "Old telephones were not mobile."},
+    {"lv": "التحليل", "q": "How does the children's speaking tube work?", "o": ["Sound travels through the hose from one can to the other.", "It uses electricity.", "It sends emails.", "It uses a code."], "why": "Sound travels through a tube."},
+    {"lv": "التحليل", "q": "Why is making a secret code a creative idea?", "o": ["The children make something new to send messages.", "It is a very old phone.", "It is a rule from school.", "It is the same as an email."], "why": "Creative means thinking of new ideas."}
+  ]
+}

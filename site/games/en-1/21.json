@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 3: Our classroom",
+ "lesson": "Lesson 4: Language practice – in, on, under + Sound sh",
+ "outcomes": [
+  "I can say where things are with in, on and under.",
+  "I can say chair, desk, floor and wall.",
+  "I can hear the sh sound in ship, shop and shell."
+ ],
+ "tf": [
+  {
+   "s": "The bag is on the floor means the bag is down on the floor.",
+   "t": true,
+   "why": "Yes! On the floor."
+  },
+  {
+   "s": "The cat is under the desk means the cat is on top of the desk.",
+   "t": false,
+   "why": "Under means below. On means on top."
+  },
+  {
+   "s": "Pencils in the pot are inside the pot.",
+   "t": true,
+   "why": "Great! In means inside."
+  },
+  {
+   "s": "Ship starts with the sh sound.",
+   "t": true,
+   "why": "Yes! Sh-sh-ship."
+  },
+  {
+   "s": "Sun starts with the sh sound.",
+   "t": false,
+   "why": "Sun starts with s. Shop starts with sh."
+  },
+  {
+   "s": "Fish ends with the sh sound.",
+   "t": true,
+   "why": "Well done! Fi-sh ends with sh."
+  },
+  {
+   "s": "sh – o – p makes the word ship.",
+   "t": false,
+   "why": "sh-o-p makes shop. sh-i-p makes ship."
+  },
+  {
+   "s": "A wall is part of the classroom.",
+   "t": true,
+   "why": "Yes! The classroom has walls."
+  },
+  {
+   "s": "We can put a pencil on a desk.",
+   "t": true,
+   "why": "Yes! The pencil is on the desk."
+  },
+  {
+   "s": "Under and on mean the same.",
+   "t": false,
+   "why": "On is on top. Under is below."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "The cat is below the desk. The cat is … the desk.",
+   "o": [
+    "under",
+    "on",
+    "in"
+   ],
+   "why": "Below means under."
+  },
+  {
+   "q": "The pencils are inside the pot. They are … the pot.",
+   "o": [
+    "in",
+    "on",
+    "under"
+   ],
+   "why": "Inside means in."
+  },
+  {
+   "q": "Which word starts with sh?",
+   "o": [
+    "sheep",
+    "sun",
+    "fish"
+   ],
+   "why": "Sh-sh-sheep starts with sh."
+  },
+  {
+   "q": "sh – i – p. What's the word?",
+   "o": [
+    "ship",
+    "shop",
+    "shed"
+   ],
+   "why": "sh-i-p makes ship."
+  },
+  {
+   "q": "What's missing? _eep",
+   "o": [
+    "sh",
+    "f",
+    "g"
+   ],
+   "why": "sh + eep makes sheep."
+  },
+  {
+   "q": "We put books on the …",
+   "o": [
+    "desk",
+    "wall",
+    "door"
+   ],
+   "why": "We put books on the desk."
+  },
+  {
+   "q": "Where's the bag? (It is on the floor.)",
+   "o": [
+    "It's on the floor.",
+    "It's in the floor.",
+    "It's under the floor."
+   ],
+   "why": "The bag is on the floor."
+  },
+  {
+   "q": "Which word ends with sh?",
+   "o": [
+    "fish",
+    "ship",
+    "shop"
+   ],
+   "why": "Fi-sh ends with sh."
+  },
+  {
+   "q": "Which word tells where?",
+   "o": [
+    "under",
+    "chair",
+    "ship"
+   ],
+   "why": "Under tells us where a thing is."
+  },
+  {
+   "q": "Which one is a sea animal with sh?",
+   "o": [
+    "shark",
+    "sheep",
+    "shop"
+   ],
+   "why": "A shark lives in the sea."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Inside the pot",
+   "a": "in",
+   "d": [
+    "on",
+    "under",
+    "up"
+   ]
+  },
+  {
+   "q": "Below the desk",
+   "a": "under",
+   "d": [
+    "in",
+    "on",
+    "up"
+   ]
+  },
+  {
+   "q": "On top of the desk",
+   "a": "on",
+   "d": [
+    "in",
+    "under",
+    "up"
+   ]
+  },
+  {
+   "q": "It starts with sh",
+   "a": "shell",
+   "d": [
+    "fish",
+    "sun",
+    "goat"
+   ]
+  },
+  {
+   "q": "sh – o – p",
+   "a": "shop",
+   "d": [
+    "ship",
+    "shed",
+    "fish"
+   ]
+  },
+  {
+   "q": "f – i – sh",
+   "a": "fish",
+   "d": [
+    "fig",
+    "fin",
+    "ship"
+   ]
+  },
+  {
+   "q": "We sit on a …",
+   "a": "chair",
+   "d": [
+    "wall",
+    "floor",
+    "shop"
+   ]
+  },
+  {
+   "q": "You put your feet on the …",
+   "a": "floor",
+   "d": [
+    "wall",
+    "window",
+    "pot"
+   ]
+  },
+  {
+   "q": "Letters for the sh sound",
+   "a": "sh",
+   "d": [
+    "ch",
+    "th",
+    "s"
+   ]
+  },
+  {
+   "q": "An animal with sh",
+   "a": "sheep",
+   "d": [
+    "goat",
+    "frog",
+    "octopus"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word means inside?",
+   "o": [
+    "in",
+    "on",
+    "under",
+    "up"
+   ],
+   "why": "In means inside."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these words starts with sh?",
+   "o": [
+    "shirt",
+    "fish",
+    "sock",
+    "goat"
+   ],
+   "why": "Shirt starts with sh. Fish ends with sh."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one is part of the classroom?",
+   "o": [
+    "wall",
+    "sheep",
+    "shark",
+    "ship"
+   ],
+   "why": "The wall is part of the classroom."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two letters make the sh sound?",
+   "o": [
+    "s and h",
+    "c and h",
+    "t and h",
+    "s and k"
+   ],
+   "why": "S and h together say sh."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your pencil is on top of your desk. Where is it?",
+   "o": [
+    "It's on the desk.",
+    "It's under the desk.",
+    "It's in the desk.",
+    "It's on the floor."
+   ],
+   "why": "On top means on."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Listen: sh – e – d. What's the word?",
+   "o": [
+    "shed",
+    "shop",
+    "ship",
+    "fish"
+   ],
+   "why": "sh-e-d makes shed."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The crayon is inside the bag. Which sentence is right?",
+   "o": [
+    "The crayon is in the bag.",
+    "The crayon is on the bag.",
+    "The crayon is under the bag.",
+    "The bag is in the crayon."
+   ],
+   "why": "Inside the bag means in the bag."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word has sh at the end, not the start?",
+   "o": [
+    "fish",
+    "ship",
+    "shop",
+    "shell"
+   ],
+   "why": "Fish ends with sh. The others start with sh."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The cat is on the chair. Now it jumps down below the chair. Where is it now?",
+   "o": [
+    "Under the chair.",
+    "On the chair.",
+    "In the chair.",
+    "On the wall."
+   ],
+   "why": "Below the chair means under the chair."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group of words all start with sh?",
+   "o": [
+    "shop, shed, sheep",
+    "shop, fish, sun",
+    "ship, sock, shell",
+    "shark, goat, shirt"
+   ],
+   "why": "Shop, shed and sheep all start with sh."
+  }
+ ]
+}

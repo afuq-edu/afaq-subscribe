@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 4: My favourite toy",
+ "lesson": "Lesson 7: Get ready for… (Pre A1 Starters) + Unit 4 sounds review",
+ "outcomes": [
+  "I can answer: What's your name? How old are you?",
+  "I can say my favourite toy and its colour.",
+  "I can blend and write words like thin, chin and mug."
+ ],
+ "tf": [
+  {
+   "s": "We answer How old are you? with I'm six.",
+   "t": true,
+   "why": "Yes! I'm six tells your age."
+  },
+  {
+   "s": "The girl's name is Muna.",
+   "t": true,
+   "why": "Great! Her name is Muna."
+  },
+  {
+   "s": "Muna is three.",
+   "t": false,
+   "why": "Muna is six. Her brother Omar is three."
+  },
+  {
+   "s": "Omar is Muna's brother.",
+   "t": true,
+   "why": "Yes! Omar is her brother."
+  },
+  {
+   "s": "We answer What's your name? with I'm six.",
+   "t": false,
+   "why": "Say your name: My name's …"
+  },
+  {
+   "s": "We answer What's your favourite toy? with It's my …",
+   "t": true,
+   "why": "Yes! It's my teddy."
+  },
+  {
+   "s": "Chin starts with the ch sound.",
+   "t": true,
+   "why": "Right! Ch-ch-chin."
+  },
+  {
+   "s": "l – o – g makes the word dog.",
+   "t": false,
+   "why": "l-o-g makes log."
+  },
+  {
+   "s": "m – u – g makes the word mug.",
+   "t": true,
+   "why": "Well done! m-u-g is mug."
+  },
+  {
+   "s": "Van starts with the f sound.",
+   "t": false,
+   "why": "Van starts with v."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's your name?",
+   "o": [
+    "My name's Sami.",
+    "I'm six.",
+    "It's my car."
+   ],
+   "why": "My name's … tells your name."
+  },
+  {
+   "q": "How old are you?",
+   "o": [
+    "I'm six.",
+    "It's red.",
+    "My name's Muna."
+   ],
+   "why": "I'm six tells your age."
+  },
+  {
+   "q": "How old is Omar?",
+   "o": [
+    "Three.",
+    "Six.",
+    "Five."
+   ],
+   "why": "Omar is three."
+  },
+  {
+   "q": "What's your favourite toy?",
+   "o": [
+    "It's my car.",
+    "I'm six.",
+    "It's blue."
+   ],
+   "why": "It's my car tells your favourite toy."
+  },
+  {
+   "q": "What colour is the ball?",
+   "o": [
+    "Green.",
+    "Red.",
+    "Yellow."
+   ],
+   "why": "The ball is green."
+  },
+  {
+   "q": "What's the first sound of van?",
+   "o": [
+    "/v/",
+    "/f/",
+    "/b/"
+   ],
+   "why": "Van starts with /v/."
+  },
+  {
+   "q": "Order: l, g, o",
+   "o": [
+    "log",
+    "gol",
+    "olg"
+   ],
+   "why": "l-o-g makes log."
+  },
+  {
+   "q": "Write: ch – i – n",
+   "o": [
+    "chin",
+    "thin",
+    "shin"
+   ],
+   "why": "ch-i-n makes chin."
+  },
+  {
+   "q": "Which letter makes the /d/ sound?",
+   "o": [
+    "d",
+    "b",
+    "l"
+   ],
+   "why": "The letter d says /d/."
+  },
+  {
+   "q": "Write: m – o – th",
+   "o": [
+    "moth",
+    "mop",
+    "math"
+   ],
+   "why": "m-o-th makes moth."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The girl's name",
+   "a": "Muna",
+   "d": [
+    "Omar",
+    "Lily",
+    "Sue"
+   ]
+  },
+  {
+   "q": "The girl's brother",
+   "a": "Omar",
+   "d": [
+    "Sami",
+    "Jack",
+    "Mazin"
+   ]
+  },
+  {
+   "q": "Number after five",
+   "a": "six",
+   "d": [
+    "four",
+    "three",
+    "two"
+   ]
+  },
+  {
+   "q": "Colour of the doll",
+   "a": "orange",
+   "d": [
+    "green",
+    "yellow",
+    "blue"
+   ]
+  },
+  {
+   "q": "Number before three",
+   "a": "two",
+   "d": [
+    "four",
+    "five",
+    "six"
+   ]
+  },
+  {
+   "q": "Ask about a colour",
+   "a": "What colour is it?",
+   "d": [
+    "How old are you?",
+    "What's your name?",
+    "Who's this?"
+   ]
+  },
+  {
+   "q": "th – i – n",
+   "a": "thin",
+   "d": [
+    "chin",
+    "tin",
+    "then"
+   ]
+  },
+  {
+   "q": "s – u – n",
+   "a": "sun",
+   "d": [
+    "sin",
+    "son",
+    "bun"
+   ]
+  },
+  {
+   "q": "d – a – d",
+   "a": "dad",
+   "d": [
+    "did",
+    "bad",
+    "dot"
+   ]
+  },
+  {
+   "q": "A number from 1 to 6",
+   "a": "five",
+   "d": [
+    "seven",
+    "nine",
+    "ten"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which question asks your name?",
+   "o": [
+    "What's your name?",
+    "How old are you?",
+    "What colour is it?",
+    "How many?"
+   ],
+   "why": "What's your name? asks for your name."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question asks your age?",
+   "o": [
+    "How old are you?",
+    "What's your name?",
+    "What's your favourite toy?",
+    "Who's this?"
+   ],
+   "why": "How old asks about your age."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What colour is the robot?",
+   "o": [
+    "Yellow",
+    "Green",
+    "Orange",
+    "Brown"
+   ],
+   "why": "The robot is yellow."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which letters make the /tʃ/ sound?",
+   "o": [
+    "c and h",
+    "s and h",
+    "t and h",
+    "d and h"
+   ],
+   "why": "C and h together say ch."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The examiner asks: What's your favourite toy? You love your teddy. You say…",
+   "o": [
+    "It's my teddy.",
+    "I'm six.",
+    "My name's Sami.",
+    "It's brown."
+   ],
+   "why": "It's my teddy tells your favourite toy."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend is five. What does your friend say?",
+   "o": [
+    "I'm five.",
+    "I'm six.",
+    "My name's five.",
+    "It's five toys."
+   ],
+   "why": "I'm five tells the age."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write the word: m – u – g",
+   "o": [
+    "mug",
+    "mud",
+    "bug",
+    "mop"
+   ],
+   "why": "m-u-g makes mug."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Muna is six. Omar is three. Who is older?",
+   "o": [
+    "Muna",
+    "Omar",
+    "They are the same.",
+    "The teacher"
+   ],
+   "why": "Six is more than three, so Muna is older."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which answer goes with What's your name?",
+   "o": [
+    "My name's Muna.",
+    "I'm six.",
+    "She's three.",
+    "It's my doll."
+   ],
+   "why": "My name's … tells a name."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence tells about two toys and their colours?",
+   "o": [
+    "The teddy is brown. The car is blue.",
+    "The teddy is brown.",
+    "What colour is it?",
+    "I've got a car."
+   ],
+   "why": "It tells two toys and two colours."
+  }
+ ]
+}

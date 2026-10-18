@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 2: My school bag",
+ "lesson": "Lesson 4: Language practice – I haven't got … + Sounds c, k, ck",
+ "outcomes": [
+  "I can say I've got a book. I haven't got a crayon.",
+  "I can name all eight school things.",
+  "I can say the sound /k/ for c, k and ck and read cat, cap, sack, tick."
+ ],
+ "tf": [
+  {
+   "s": "I haven't got a book means I have no book.",
+   "t": true,
+   "why": "Yes! Haven't got means you don't have it."
+  },
+  {
+   "s": "I've got a pen means I have no pen.",
+   "t": false,
+   "why": "I've got a pen means you have a pen."
+  },
+  {
+   "s": "Our song is called I'm ready for school.",
+   "t": true,
+   "why": "Yes! We sing I'm ready for school."
+  },
+  {
+   "s": "King starts with the sound /k/.",
+   "t": true,
+   "why": "Great! k, k, king."
+  },
+  {
+   "s": "Cat starts with the sound /k/.",
+   "t": true,
+   "why": "Yes! The letter c says /k/ in cat."
+  },
+  {
+   "s": "Duck ends with the letters ck.",
+   "t": true,
+   "why": "Yes! d-u-ck, duck."
+  },
+  {
+   "s": "Kite starts with the letter h.",
+   "t": false,
+   "why": "Kite starts with k."
+  },
+  {
+   "s": "c – a – p makes cat.",
+   "t": false,
+   "why": "c-a-p makes cap."
+  },
+  {
+   "s": "A pencil case is a family word.",
+   "t": false,
+   "why": "A pencil case is a school thing."
+  },
+  {
+   "s": "Thumbs down means I've got it.",
+   "t": false,
+   "why": "Thumbs down means I haven't got it."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Thumbs up + book: I … a book.",
+   "o": [
+    "'ve got",
+    "haven't got",
+    "am"
+   ],
+   "why": "Thumbs up: I've got a book."
+  },
+  {
+   "q": "Thumbs down + crayon: I … a crayon.",
+   "o": [
+    "haven't got",
+    "'ve got",
+    "is"
+   ],
+   "why": "Thumbs down: I haven't got a crayon."
+  },
+  {
+   "q": "Which word starts with /k/?",
+   "o": [
+    "kite",
+    "hat",
+    "moon"
+   ],
+   "why": "k, k, kite!"
+  },
+  {
+   "q": "_ap: which letter is missing?",
+   "o": [
+    "c",
+    "h",
+    "m"
+   ],
+   "why": "c + ap = cap."
+  },
+  {
+   "q": "du__: which letters are missing?",
+   "o": [
+    "ck",
+    "sh",
+    "mm"
+   ],
+   "why": "d-u-ck, duck."
+  },
+  {
+   "q": "The k picture on the Phonics Card is a …",
+   "o": [
+    "king",
+    "cat",
+    "duck"
+   ],
+   "why": "King starts with k."
+  },
+  {
+   "q": "Blend: c – a – t",
+   "o": [
+    "cat",
+    "cap",
+    "hat"
+   ],
+   "why": "c-a-t, cat!"
+  },
+  {
+   "q": "Blend: t – i – ck",
+   "o": [
+    "tick",
+    "sack",
+    "tin"
+   ],
+   "why": "t-i-ck, tick!"
+  },
+  {
+   "q": "Which three letters can say /k/?",
+   "o": [
+    "c, k, ck",
+    "m, h, i",
+    "s, t, n"
+   ],
+   "why": "c, k and ck all say /k/."
+  },
+  {
+   "q": "Which is a school thing?",
+   "o": [
+    "pencil",
+    "king",
+    "duck"
+   ],
+   "why": "A pencil is a school thing."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Catch the /k/ word that starts with k.",
+   "a": "king",
+   "d": [
+    "cloud",
+    "cat",
+    "cut"
+   ]
+  },
+  {
+   "q": "Catch the /k/ word in the sky.",
+   "a": "cloud",
+   "d": [
+    "moon",
+    "hill",
+    "house"
+   ]
+  },
+  {
+   "q": "Catch the word that ends in ck.",
+   "a": "duck",
+   "d": [
+    "cat",
+    "king",
+    "cap"
+   ]
+  },
+  {
+   "q": "Catch another word that ends in ck.",
+   "a": "sock",
+   "d": [
+    "kite",
+    "cut",
+    "cloud"
+   ]
+  },
+  {
+   "q": "Catch the /k/ word you fly.",
+   "a": "kite",
+   "d": [
+    "hen",
+    "mug",
+    "pin"
+   ]
+  },
+  {
+   "q": "Blend: c – a – p",
+   "a": "cap",
+   "d": [
+    "cat",
+    "map",
+    "hat"
+   ]
+  },
+  {
+   "q": "Blend: s – a – ck",
+   "a": "sack",
+   "d": [
+    "tick",
+    "sat",
+    "cat"
+   ]
+  },
+  {
+   "q": "Catch the words that mean: no book.",
+   "a": "I haven't got",
+   "d": [
+    "I've got",
+    "It's a",
+    "This is my"
+   ]
+  },
+  {
+   "q": "Catch the school thing we read.",
+   "a": "book",
+   "d": [
+    "crayon",
+    "pencil",
+    "eraser"
+   ]
+  },
+  {
+   "q": "Catch the school thing for colouring.",
+   "a": "crayon",
+   "d": [
+    "ruler",
+    "bag",
+    "book"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these words starts with /k/?",
+   "o": [
+    "cut",
+    "hut",
+    "nut",
+    "mug"
+   ],
+   "why": "c, c, cut!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one means you have NO crayon?",
+   "o": [
+    "I haven't got a crayon.",
+    "I've got a crayon.",
+    "It's a crayon.",
+    "This is my crayon."
+   ],
+   "why": "Haven't got means you don't have it."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How many school things did we learn in Unit 2?",
+   "o": [
+    "eight",
+    "four",
+    "two",
+    "ten"
+   ],
+   "why": "pen, eraser, ruler, bag, crayon, pencil case, pencil, book."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which letters say /k/ at the end of duck?",
+   "o": [
+    "ck",
+    "k",
+    "c",
+    "d"
+   ],
+   "why": "Duck ends with ck."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You've got a ruler but no crayons. You say …",
+   "o": [
+    "I've got a ruler. I haven't got crayons.",
+    "I haven't got a ruler.",
+    "I've got crayons.",
+    "It's a ruler and crayons."
+   ],
+   "why": "Say what you have and what you don't have."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write the missing letter: _at (an animal)",
+   "o": [
+    "c",
+    "h",
+    "m",
+    "s"
+   ],
+   "why": "c + at = cat."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your teacher shows thumbs down and a pencil card. You say …",
+   "o": [
+    "I haven't got a pencil.",
+    "I've got a pencil.",
+    "It's a book.",
+    "I'm a pencil."
+   ],
+   "why": "Thumbs down means haven't got."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Cat, kite, duck. What sound do they all have?",
+   "o": [
+    "/k/",
+    "/h/",
+    "/m/",
+    "/s/"
+   ],
+   "why": "c, k and ck all say /k/."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT have the sound /k/?",
+   "o": [
+    "hen",
+    "king",
+    "sock",
+    "cap"
+   ],
+   "why": "Hen has no /k/ sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does not belong: pencil, book, crayon, king?",
+   "o": [
+    "king",
+    "pencil",
+    "book",
+    "crayon"
+   ],
+   "why": "King is not a school thing."
+  }
+ ]
+}

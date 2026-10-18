@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U2",
+ "lesson": "Unit 2 – Lesson 1: Vocabulary 1 (food and drinks)",
+ "outcomes": [
+  "Name twelve food and drink words.",
+  "Sort food and drinks into sweet and savoury.",
+  "Put food words in alphabetical order and play a guessing game."
+ ],
+ "tf": [
+  {
+   "s": "Cupcakes are sweet.",
+   "t": true,
+   "why": "Yes! Cupcakes are sweet."
+  },
+  {
+   "s": "Noodles are sweet.",
+   "t": false,
+   "why": "Noodles are savoury."
+  },
+  {
+   "s": "Salad is savoury.",
+   "t": true,
+   "why": "Correct! Salad is savoury."
+  },
+  {
+   "s": "Crisps are a drink.",
+   "t": false,
+   "why": "Crisps are food, not a drink."
+  },
+  {
+   "s": "Lemonade is a sweet drink made from lemons.",
+   "t": true,
+   "why": "Great! Lemonade is sweet."
+  },
+  {
+   "s": "A milkshake is a sweet drink with milk.",
+   "t": true,
+   "why": "Yes! Milkshake is sweet."
+  },
+  {
+   "s": "In alphabetical order, crisps comes before cereal.",
+   "t": false,
+   "why": "Cereal comes first: ce- before cr-."
+  },
+  {
+   "s": "Tea and coffee are drinks.",
+   "t": true,
+   "why": "Right! We drink tea and coffee."
+  },
+  {
+   "s": "Sandwiches, crisps and noodles are savoury.",
+   "t": true,
+   "why": "Well done! They are not sweet."
+  },
+  {
+   "s": "Vegetables are a drink.",
+   "t": false,
+   "why": "Vegetables are food."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Is salad sweet or savoury?",
+   "o": [
+    "savoury",
+    "sweet",
+    "a drink"
+   ],
+   "why": "Salad is savoury."
+  },
+  {
+   "q": "Odd one out: tea, coffee, crisps",
+   "o": [
+    "crisps",
+    "tea",
+    "coffee"
+   ],
+   "why": "Crisps are food; the others are drinks."
+  },
+  {
+   "q": "A sweet drink with milk:",
+   "o": [
+    "milkshake",
+    "coffee",
+    "salad"
+   ],
+   "why": "Milkshake is made with milk."
+  },
+  {
+   "q": "Which comes first in ABC order?",
+   "o": [
+    "cereal",
+    "crisps",
+    "cupcakes"
+   ],
+   "why": "ce- comes before cr- and cu-."
+  },
+  {
+   "q": "Which group is sweet?",
+   "o": [
+    "cupcakes, milkshake, lemonade",
+    "crisps, noodles, sandwiches",
+    "salad, vegetables, noodles"
+   ],
+   "why": "These are all sweet."
+  },
+  {
+   "q": "It's a drink. It's hot. It's black. It's ___.",
+   "o": [
+    "coffee",
+    "lemonade",
+    "milkshake"
+   ],
+   "why": "Coffee is a hot black drink."
+  },
+  {
+   "q": "Which is food?",
+   "o": [
+    "noodles",
+    "tea",
+    "lemonade"
+   ],
+   "why": "Noodles are food."
+  },
+  {
+   "q": "Ask to guess a food:",
+   "o": [
+    "Is it sweet or savoury?",
+    "How old are you?",
+    "Where are you from?"
+   ],
+   "why": "This question helps you guess."
+  },
+  {
+   "q": "Which is a drink?",
+   "o": [
+    "lemonade",
+    "cupcakes",
+    "crisps"
+   ],
+   "why": "Lemonade is a drink."
+  },
+  {
+   "q": "Order: salad, sandwiches, noodles",
+   "o": [
+    "noodles, salad, sandwiches",
+    "salad, noodles, sandwiches",
+    "sandwiches, salad, noodles"
+   ],
+   "why": "n, then sa-l, then sa-n."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Sweet drink with milk?",
+   "a": "milkshake",
+   "d": [
+    "coffee",
+    "tea",
+    "salad"
+   ]
+  },
+  {
+   "q": "Made from lemons?",
+   "a": "lemonade",
+   "d": [
+    "milkshake",
+    "coffee",
+    "cereal"
+   ]
+  },
+  {
+   "q": "Hot black drink?",
+   "a": "coffee",
+   "d": [
+    "lemonade",
+    "milkshake",
+    "salad"
+   ]
+  },
+  {
+   "q": "Salad: sweet or savoury?",
+   "a": "savoury",
+   "d": [
+    "sweet",
+    "drink",
+    "hot"
+   ]
+  },
+  {
+   "q": "Cupcakes: sweet or savoury?",
+   "a": "sweet",
+   "d": [
+    "savoury",
+    "drink",
+    "salty"
+   ]
+  },
+  {
+   "q": "Noodles: sweet or savoury?",
+   "a": "savoury",
+   "d": [
+    "sweet",
+    "drink",
+    "cold"
+   ]
+  },
+  {
+   "q": "Odd one: tea, coffee...",
+   "a": "crisps",
+   "d": [
+    "lemonade",
+    "milkshake",
+    "tea"
+   ]
+  },
+  {
+   "q": "First in ABC order?",
+   "a": "cereal",
+   "d": [
+    "crisps",
+    "cupcakes",
+    "coffee"
+   ]
+  },
+  {
+   "q": "Last in ABC order?",
+   "a": "vegetables",
+   "d": [
+    "tea",
+    "sandwiches",
+    "salad"
+   ]
+  },
+  {
+   "q": "Which is a drink?",
+   "a": "tea",
+   "d": [
+    "salad",
+    "cupcakes",
+    "noodles"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which of these is savoury?",
+   "o": [
+    "crisps",
+    "cupcakes",
+    "milkshake",
+    "lemonade"
+   ],
+   "why": "Crisps are savoury."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a drink?",
+   "o": [
+    "lemonade",
+    "noodles",
+    "salad",
+    "cereal"
+   ],
+   "why": "Lemonade is a drink."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'savoury' mean?",
+   "o": [
+    "not sweet, like crisps or noodles",
+    "very sweet, like cupcakes",
+    "a hot drink",
+    "a kind of fruit"
+   ],
+   "why": "Savoury food is not sweet."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is spelled correctly?",
+   "o": [
+    "cupcakes",
+    "cupcaks",
+    "capcakes",
+    "cupkakes"
+   ],
+   "why": "c-u-p-c-a-k-e-s."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put in alphabetical order: tea, fruit, milkshake",
+   "o": [
+    "fruit, milkshake, tea",
+    "tea, milkshake, fruit",
+    "milkshake, fruit, tea",
+    "fruit, tea, milkshake"
+   ],
+   "why": "f, m, t."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Guess: 'It's food. It's sweet. It's small. We eat it at parties.'",
+   "o": [
+    "cupcakes",
+    "noodles",
+    "salad",
+    "coffee"
+   ],
+   "why": "Cupcakes are sweet party food."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend says: 'It's food. It's savoury. It's long.' What is it?",
+   "o": [
+    "noodles",
+    "lemonade",
+    "cupcakes",
+    "milkshake"
+   ],
+   "why": "Noodles are long and savoury."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group has only savoury food?",
+   "o": [
+    "crisps, noodles, sandwiches",
+    "cupcakes, crisps, salad",
+    "milkshake, noodles, salad",
+    "lemonade, fruit, cupcakes"
+   ],
+   "why": "All three are savoury."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is crisps the odd one out in 'tea, coffee, crisps, lemonade'?",
+   "o": [
+    "It is food, not a drink.",
+    "It is sweet.",
+    "It is hot.",
+    "It starts with c."
+   ],
+   "why": "The others are all drinks."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair is in alphabetical order?",
+   "o": [
+    "salad, sandwiches",
+    "sandwiches, salad",
+    "crisps, cereal",
+    "noodles, milkshake"
+   ],
+   "why": "l comes before n: salad, sandwiches."
+  }
+ ]
+}

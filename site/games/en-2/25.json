@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني",
+ "unit": "Unit 2: Where’s my pen?",
+ "lesson": "Sounds and Spelling – Unit 2, Lesson 7: Review and dictation",
+ "outcomes": [
+  "I can match words to sounds: ai, oa, ie, or, oo, ng.",
+  "I can find the odd one out.",
+  "I can write sentences with our, their, why and when."
+ ],
+ "tf": [
+  {
+   "s": "\"Fork\" has the or sound.",
+   "t": true,
+   "why": "F-or-k has the or sound."
+  },
+  {
+   "s": "\"Train\" has the oa sound.",
+   "t": false,
+   "why": "Train has the ai sound."
+  },
+  {
+   "s": "\"Float\" has the oa sound.",
+   "t": true,
+   "why": "Fl-oa-t has the oa sound."
+  },
+  {
+   "s": "\"Pie\" has the ie sound.",
+   "t": true,
+   "why": "P-ie has the ie sound."
+  },
+  {
+   "s": "\"String\" ends with the ng sound.",
+   "t": true,
+   "why": "Stri-ng ends with ng."
+  },
+  {
+   "s": "\"Tooth\" has the or sound.",
+   "t": false,
+   "why": "Tooth has the oo sound."
+  },
+  {
+   "s": "\"Gate\" has the same long a sound as \"train\".",
+   "t": true,
+   "why": "Gate and train both have a long a sound."
+  },
+  {
+   "s": "\"Book\" has the same oo sound as \"moon\".",
+   "t": false,
+   "why": "Book has a short oo; moon has a long oo."
+  },
+  {
+   "s": "\"Why are you sad?\" is a question.",
+   "t": true,
+   "why": "It starts with \"Why\" and ends with ?."
+  },
+  {
+   "s": "\"Their\" and \"our\" are tricky words.",
+   "t": true,
+   "why": "We learn tricky words by looking at them."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which sound is in \"fork\"?",
+   "o": [
+    "or",
+    "ai",
+    "oa"
+   ],
+   "why": "F-or-k: or."
+  },
+  {
+   "q": "Which sound is in \"train\"?",
+   "o": [
+    "ai",
+    "oo",
+    "ie"
+   ],
+   "why": "Tr-ai-n: ai."
+  },
+  {
+   "q": "Which sound is in \"tooth\"?",
+   "o": [
+    "oo",
+    "or",
+    "ng"
+   ],
+   "why": "T-oo-th: oo."
+  },
+  {
+   "q": "Odd one out: moon, spoon, book",
+   "o": [
+    "book",
+    "moon",
+    "spoon"
+   ],
+   "why": "Book has a short oo sound."
+  },
+  {
+   "q": "Odd one out: boat, float, pie",
+   "o": [
+    "pie",
+    "boat",
+    "float"
+   ],
+   "why": "Pie has ie; the others have oa."
+  },
+  {
+   "q": "___ are you sad?",
+   "o": [
+    "Why",
+    "Our",
+    "Their"
+   ],
+   "why": "\"Why\" asks for a reason."
+  },
+  {
+   "q": "___ is it hot?",
+   "o": [
+    "When",
+    "Their",
+    "Our"
+   ],
+   "why": "\"When\" asks about time."
+  },
+  {
+   "q": "It is ___ torch. (their things)",
+   "o": [
+    "their",
+    "why",
+    "when"
+   ],
+   "why": "\"Their\" means it belongs to them."
+  },
+  {
+   "q": "Read: Our boat is red. What colour is the boat?",
+   "o": [
+    "red",
+    "blue",
+    "green"
+   ],
+   "why": "The text says the boat is red."
+  },
+  {
+   "q": "Which word ends with ng?",
+   "o": [
+    "string",
+    "train",
+    "gate"
+   ],
+   "why": "Stri-ng ends with ng."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Sound in \"fork\"",
+   "a": "or",
+   "d": [
+    "ai",
+    "oa",
+    "ie"
+   ]
+  },
+  {
+   "q": "Sound in \"train\"",
+   "a": "ai",
+   "d": [
+    "or",
+    "oo",
+    "ng"
+   ]
+  },
+  {
+   "q": "Sound in \"float\"",
+   "a": "oa",
+   "d": [
+    "ai",
+    "ie",
+    "or"
+   ]
+  },
+  {
+   "q": "Sound in \"pie\"",
+   "a": "ie",
+   "d": [
+    "oa",
+    "or",
+    "ng"
+   ]
+  },
+  {
+   "q": "Sound in \"tooth\"",
+   "a": "oo",
+   "d": [
+    "or",
+    "ai",
+    "ie"
+   ]
+  },
+  {
+   "q": "End sound in \"string\"",
+   "a": "ng",
+   "d": [
+    "oo",
+    "oa",
+    "ai"
+   ]
+  },
+  {
+   "q": "Odd one out: moon, spoon, book",
+   "a": "book",
+   "d": [
+    "moon",
+    "spoon",
+    "soon"
+   ]
+  },
+  {
+   "q": "___ is it hot? (time)",
+   "a": "When",
+   "d": [
+    "Our",
+    "Their",
+    "Why"
+   ]
+  },
+  {
+   "q": "___ are you sad? (reason)",
+   "a": "Why",
+   "d": [
+    "When",
+    "Our",
+    "Their"
+   ]
+  },
+  {
+   "q": "It is ___ cake. (us)",
+   "a": "our",
+   "d": [
+    "their",
+    "why",
+    "when"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word has the ie sound?",
+   "o": [
+    "pie",
+    "pin",
+    "pen",
+    "pan"
+   ],
+   "why": "P-ie has the ie sound."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has the oa sound?",
+   "o": [
+    "float",
+    "fork",
+    "fish",
+    "feet"
+   ],
+   "why": "Fl-oa-t has oa."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a tricky word?",
+   "o": [
+    "when",
+    "train",
+    "gate",
+    "pie"
+   ],
+   "why": "Our, their, why and when are tricky words."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has the ai sound?",
+   "o": [
+    "train",
+    "tooth",
+    "torch",
+    "string"
+   ],
+   "why": "Tr-ai-n has ai."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write the dictation: ___ is it hot?",
+   "o": [
+    "When",
+    "Why",
+    "Their",
+    "Our"
+   ],
+   "why": "The sentence is \"When is it hot?\""
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write the dictation: It is ___ torch.",
+   "o": [
+    "their",
+    "when",
+    "why",
+    "string"
+   ],
+   "why": "The sentence is \"It is their torch.\""
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Read: Our boat is red. What do you colour red?",
+   "o": [
+    "the boat",
+    "the cake",
+    "the train",
+    "the pie"
+   ],
+   "why": "The text says our boat is red."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT have the oa sound?",
+   "o": [
+    "gate",
+    "boat",
+    "float",
+    "soap"
+   ],
+   "why": "Gate has a long a sound, not oa."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word has the same sound as \"fork\"?",
+   "o": [
+    "torch",
+    "tooth",
+    "train",
+    "pie"
+   ],
+   "why": "Fork and torch both have or."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is a question?",
+   "o": [
+    "Why are you sad?",
+    "It is our cake.",
+    "It is their torch.",
+    "Our boat is red."
+   ],
+   "why": "A question asks something and ends with ?."
+  }
+ ]
+}

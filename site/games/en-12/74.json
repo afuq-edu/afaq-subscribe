@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 2: What’s in a Name? (Grammar)",
+ "lesson": "Workbook grammar: choosing tenses, multiple choice and passive gap-fill / Activate Your English: asking and answering questions to complete a task",
+ "outcomes": [
+  "Choose between the past simple and the past simple passive",
+  "Complete texts with correct passive forms and explain why",
+  "Ask and answer past simple and passive questions to complete a task"
+ ],
+ "tf": [
+  {
+   "s": "'The list was published in 2013' is in the past simple passive.",
+   "t": true,
+   "why": "Yes: was + past participle."
+  },
+  {
+   "s": "'Apple remained in first place' is in the past simple active.",
+   "t": true,
+   "why": "Correct, remained is an active past simple verb."
+  },
+  {
+   "s": "We say 'Apple was founded in 1976' because the focus is on who founded it.",
+   "t": false,
+   "why": "The focus is on the company and the action, not the doer."
+  },
+  {
+   "s": "The passive is formed with was/were + past participle.",
+   "t": true,
+   "why": "Right, for example was released."
+  },
+  {
+   "s": "'Where did Levi Strauss born?' is a correct question.",
+   "t": false,
+   "why": "Born is passive here: Where was Levi Strauss born?"
+  },
+  {
+   "s": "We use 'did' in questions with active past simple verbs.",
+   "t": true,
+   "why": "Yes, like What did he make for the miners?"
+  },
+  {
+   "s": "'The first iPad was released in 2010' is correct.",
+   "t": true,
+   "why": "Correct: was + released."
+  },
+  {
+   "s": "'Samsung entered the market' and 'The market was entered by Samsung' emphasise the same thing.",
+   "t": false,
+   "why": "The first stresses Samsung; the second stresses the market."
+  },
+  {
+   "s": "In a passive question, the order is question word + was/were + subject + past participle.",
+   "t": true,
+   "why": "Yes, as in When was the design created?"
+  },
+  {
+   "s": "In an information-gap task, both partners have exactly the same information.",
+   "t": false,
+   "why": "Each partner has information the other needs."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: The list ___ (publish) in 2013.",
+   "o": [
+    "was published",
+    "published",
+    "was publish"
+   ],
+   "why": "Passive: was + past participle."
+  },
+  {
+   "q": "Complete: The first iPad ___ (release) in 2010.",
+   "o": [
+    "was released",
+    "released was",
+    "is release"
+   ],
+   "why": "The iPad is the receiver of the action."
+  },
+  {
+   "q": "Make a question: Levi Strauss was born in Germany. (Where)",
+   "o": [
+    "Where was Levi Strauss born?",
+    "Where did Levi Strauss born?",
+    "Where Levi Strauss was born?"
+   ],
+   "why": "Use was with the passive born."
+  },
+  {
+   "q": "Which question is in the past simple active?",
+   "o": [
+    "What did he make for the miners?",
+    "What was the cloth coloured with?",
+    "When was the design created?"
+   ],
+   "why": "Did + base verb shows the active form."
+  },
+  {
+   "q": "Which question is passive?",
+   "o": [
+    "What was the cloth coloured with?",
+    "Who first created jeans?",
+    "What did he make?"
+   ],
+   "why": "Was + coloured is a passive form."
+  },
+  {
+   "q": "Passive of: They designed the iPhone in California.",
+   "o": [
+    "The iPhone was designed in California.",
+    "The iPhone designed in California.",
+    "The iPhone was design in California."
+   ],
+   "why": "Was + designed makes the passive."
+  },
+  {
+   "q": "Which word asks about time?",
+   "o": [
+    "When",
+    "Where",
+    "Who"
+   ],
+   "why": "When asks about time."
+  },
+  {
+   "q": "Which auxiliary goes with the passive in the past?",
+   "o": [
+    "was/were",
+    "did",
+    "does"
+   ],
+   "why": "Was/were + past participle form the passive."
+  },
+  {
+   "q": "Complete: Apple ___ in first place.",
+   "o": [
+    "remained",
+    "was remained",
+    "was remain"
+   ],
+   "why": "Remain has no object, so it stays active."
+  },
+  {
+   "q": "Who did Levi Strauss make clothes for?",
+   "o": [
+    "miners",
+    "pilots",
+    "drivers"
+   ],
+   "why": "He made clothes for the miners."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Passive: publish (past)",
+   "a": "was published",
+   "d": [
+    "published",
+    "is published",
+    "was publish"
+   ]
+  },
+  {
+   "q": "Passive: release (past)",
+   "a": "was released",
+   "d": [
+    "released",
+    "is releasing",
+    "was release"
+   ]
+  },
+  {
+   "q": "Passive: found (past)",
+   "a": "was founded",
+   "d": [
+    "founded",
+    "is found",
+    "was find"
+   ]
+  },
+  {
+   "q": "Passive: design (past)",
+   "a": "was designed",
+   "d": [
+    "designed",
+    "is design",
+    "was design"
+   ]
+  },
+  {
+   "q": "Passive: beat (past)",
+   "a": "was beaten",
+   "d": [
+    "was beat",
+    "beated",
+    "was beating"
+   ]
+  },
+  {
+   "q": "Auxiliary for active questions",
+   "a": "did",
+   "d": [
+    "was",
+    "were",
+    "been"
+   ]
+  },
+  {
+   "q": "Question word for place",
+   "a": "Where",
+   "d": [
+    "When",
+    "Who",
+    "Why"
+   ]
+  },
+  {
+   "q": "Question word for time",
+   "a": "When",
+   "d": [
+    "Where",
+    "Who",
+    "What"
+   ]
+  },
+  {
+   "q": "Levi Strauss made jeans for...",
+   "a": "miners",
+   "d": [
+    "pilots",
+    "farmers",
+    "sailors"
+   ]
+  },
+  {
+   "q": "Levi Strauss was born in...",
+   "a": "Germany",
+   "d": [
+    "Spain",
+    "China",
+    "Oman"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How do we form the past simple passive?",
+   "o": [
+    "was/were + past participle",
+    "did + base verb",
+    "have + been + -ing",
+    "will + base verb"
+   ],
+   "why": "For example, was published."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is in the passive?",
+   "o": [
+    "Apple was founded in 1976.",
+    "Apple rose in the table.",
+    "Apple remained first.",
+    "Apple changed its logo."
+   ],
+   "why": "Was founded is the passive form."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question is correct?",
+   "o": [
+    "Where was Levi Strauss born?",
+    "Where did Levi Strauss born?",
+    "Where Levi Strauss born?",
+    "Where was born Levi Strauss?"
+   ],
+   "why": "Question word + was + subject + born."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is an information-gap task?",
+   "o": [
+    "partners ask questions to get information the other has",
+    "a test with no questions",
+    "a reading with no words",
+    "a writing task alone"
+   ],
+   "why": "Each partner fills the gap by asking questions."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The old record ___ (beat) last year.",
+   "o": [
+    "was beaten",
+    "beat",
+    "was beat",
+    "beaten"
+   ],
+   "why": "Passive: was + beaten."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The number of users ___ (rise) in 2013.",
+   "o": [
+    "rose",
+    "was risen",
+    "was rose",
+    "rised"
+   ],
+   "why": "Rise has no object, so it can't be passive: rose."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a question about the past: Levi Strauss made jeans for the miners. (What)",
+   "o": [
+    "What did Levi Strauss make for the miners?",
+    "What was Levi Strauss make for the miners?",
+    "What Levi Strauss made for the miners?",
+    "What did Levi Strauss made for the miners?"
+   ],
+   "why": "Did + base verb make."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'was founded' used in 'Apple was founded in 1976'?",
+   "o": [
+    "the focus is on the company and the past action, not on who founded it",
+    "because 1976 is in the future",
+    "because Apple did the founding",
+    "because it is a question"
+   ],
+   "why": "The passive puts the receiver of the action first."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we use 'did' in some questions and 'was' in others?",
+   "o": [
+    "did is for active past verbs; was/were is for the passive",
+    "they always mean the same",
+    "did is only for the future",
+    "was is only for plural subjects"
+   ],
+   "why": "The auxiliary depends on active or passive."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How can you check that a question is grammatically correct?",
+   "o": [
+    "check the auxiliary, the word order and the verb form",
+    "check only the question mark",
+    "check that it is very long",
+    "check only the spelling of names"
+   ],
+   "why": "Auxiliary + order + verb form make a correct question."
+  }
+ ]
+}

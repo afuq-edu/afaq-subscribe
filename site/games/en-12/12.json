@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: Malls and Markets (Listening & Speaking)",
+ "lesson": "Predicting the content of a talk (Listening 1.4.1)",
+ "outcomes": [
+  "Predict which phrases relate to malls, markets or both",
+  "Listen to a tour guide's talk and sort phrases correctly"
+ ],
+ "tf": [
+  {
+   "s": "The tour guide talks about shopping in malls and souqs in Muscat.",
+   "t": true,
+   "why": "Those are the two kinds of places in the talk."
+  },
+  {
+   "s": "According to the guide, shopping malls are best for quick, easy shopping.",
+   "t": true,
+   "why": "Malls make shopping fast and easy."
+  },
+  {
+   "s": "Opportunities for bargaining exist mainly in shopping malls.",
+   "t": false,
+   "why": "Bargaining happens in souqs."
+  },
+  {
+   "s": "Tourists love the narrow passages and tiny shops of the souqs.",
+   "t": true,
+   "why": "They enjoy the traditional market style."
+  },
+  {
+   "s": "A multi-level car park is a typical feature of a traditional souq.",
+   "t": false,
+   "why": "It is a feature of a modern mall."
+  },
+  {
+   "s": "Every phrase in the list is mentioned in the talk.",
+   "t": false,
+   "why": "Four phrases are not mentioned."
+  },
+  {
+   "s": "Two of the phrases apply to both malls and markets.",
+   "t": true,
+   "why": "Phrases 2 and 4 apply to both."
+  },
+  {
+   "s": "Predicting before listening helps you know what to listen for.",
+   "t": true,
+   "why": "Predictions prepare you for the talk."
+  },
+  {
+   "s": "The phrases in the talk come in exactly the same order as the list.",
+   "t": false,
+   "why": "The order in the talk is different."
+  },
+  {
+   "s": "The guide says the souqs have friendly shopkeepers.",
+   "t": true,
+   "why": "Friendly shopkeepers are part of the souq's charm."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where is quick, easy shopping best?",
+   "o": [
+    "shopping malls",
+    "souqs",
+    "dhows"
+   ],
+   "why": "Malls are fast and convenient."
+  },
+  {
+   "q": "Where can you bargain?",
+   "o": [
+    "in souqs",
+    "in car parks",
+    "in banks"
+   ],
+   "why": "Bargaining is part of souq shopping."
+  },
+  {
+   "q": "Who gives the talk?",
+   "o": [
+    "a tour guide",
+    "a lawyer",
+    "a pilot"
+   ],
+   "why": "The speaker is a tour guide."
+  },
+  {
+   "q": "How many phrases are not in the talk?",
+   "o": [
+    "four",
+    "two",
+    "six"
+   ],
+   "why": "Phrases 1, 5, 7 and 11 do not occur."
+  },
+  {
+   "q": "How many phrases apply to both places?",
+   "o": [
+    "two",
+    "four",
+    "none"
+   ],
+   "why": "Phrases 2 and 4 apply to both."
+  },
+  {
+   "q": "Which is a feature of malls?",
+   "o": [
+    "wide walkways",
+    "narrow passages",
+    "bargaining"
+   ],
+   "why": "Malls are big and wide."
+  },
+  {
+   "q": "Which is a feature of souqs?",
+   "o": [
+    "tiny shops",
+    "multi-level car parks",
+    "wide walkways"
+   ],
+   "why": "Souqs have small, traditional shops."
+  },
+  {
+   "q": "Which city is the talk about?",
+   "o": [
+    "Muscat",
+    "Cairo",
+    "Paris"
+   ],
+   "why": "The guide talks about shopping in Muscat."
+  },
+  {
+   "q": "What should you do before listening?",
+   "o": [
+    "predict",
+    "sleep",
+    "write an essay"
+   ],
+   "why": "Predicting prepares you."
+  },
+  {
+   "q": "What do you write while listening?",
+   "o": [
+    "the number of each phrase",
+    "the whole talk",
+    "your name only"
+   ],
+   "why": "You note numbers of phrases you hear."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Best for quick, easy shopping",
+   "a": "malls",
+   "d": [
+    "souqs",
+    "dhows",
+    "tankers"
+   ]
+  },
+  {
+   "q": "Where you can bargain",
+   "a": "souqs",
+   "d": [
+    "malls",
+    "car parks",
+    "banks"
+   ]
+  },
+  {
+   "q": "Who gives the talk?",
+   "a": "tour guide",
+   "d": [
+    "shopkeeper",
+    "pilot",
+    "lawyer"
+   ]
+  },
+  {
+   "q": "Phrases not in the talk",
+   "a": "four",
+   "d": [
+    "two",
+    "six",
+    "one"
+   ]
+  },
+  {
+   "q": "Phrases for both places",
+   "a": "two",
+   "d": [
+    "four",
+    "five",
+    "none"
+   ]
+  },
+  {
+   "q": "Mall feature: multi-level ___",
+   "a": "car park",
+   "d": [
+    "passages",
+    "souq",
+    "tiny shops"
+   ]
+  },
+  {
+   "q": "Souq feature: narrow ___",
+   "a": "passages",
+   "d": [
+    "walkways",
+    "car parks",
+    "escalators"
+   ]
+  },
+  {
+   "q": "Souq shopkeepers are...",
+   "a": "friendly",
+   "d": [
+    "angry",
+    "robots",
+    "absent"
+   ]
+  },
+  {
+   "q": "Mall feature: wide ___",
+   "a": "walkways",
+   "d": [
+    "passages",
+    "sails",
+    "routes"
+   ]
+  },
+  {
+   "q": "City in the talk",
+   "a": "Muscat",
+   "d": [
+    "Paris",
+    "Ottawa",
+    "Madrid"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "According to the guide, which place is best for quick, easy shopping?",
+   "o": [
+    "shopping malls",
+    "souqs",
+    "street stalls",
+    "online shops"
+   ],
+   "why": "Malls are fast and convenient."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where do opportunities for bargaining exist?",
+   "o": [
+    "in souqs",
+    "in shopping malls",
+    "in car parks",
+    "in banks"
+   ],
+   "why": "Bargaining is part of the souq experience."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How many phrases in the list are not in the talk?",
+   "o": [
+    "four",
+    "two",
+    "three",
+    "none"
+   ],
+   "why": "Phrases 1, 5, 7 and 11 do not occur."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do tourists love about souqs?",
+   "o": [
+    "narrow passages, tiny shops and friendly shopkeepers",
+    "multi-level car parks",
+    "big fashion chains",
+    "wide walkways"
+   ],
+   "why": "These give the souq its traditional style."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which phrase would you put in the 'Malls' column?",
+   "o": [
+    "multi-level car park",
+    "narrow passages",
+    "bargaining",
+    "tiny shops"
+   ],
+   "why": "Big car parks are typical of malls."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which phrase would you put in the 'Markets' column?",
+   "o": [
+    "opportunities for bargaining",
+    "multi-level car park",
+    "wide walkways",
+    "quick, easy shopping"
+   ],
+   "why": "Bargaining belongs to markets."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A tourist wants a traditional shopping experience and likes to bargain. Where should she go?",
+   "o": [
+    "a souq",
+    "a mall",
+    "a car park",
+    "an airport"
+   ],
+   "why": "Souqs offer bargaining and tradition."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to predict where phrases belong before listening?",
+   "o": [
+    "You know what to listen for, so it is easier to follow",
+    "It makes the recording shorter",
+    "You do not need to listen",
+    "It gives you all the answers"
+   ],
+   "why": "Prediction prepares you for the content."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do some phrases go in both columns?",
+   "o": [
+    "They describe features shared by malls and markets",
+    "They are not in the talk",
+    "They are spelt wrongly",
+    "They are about airports"
+   ],
+   "why": "Two phrases apply to both places."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why might someone say both souqs and malls are a shopper's paradise?",
+   "o": [
+    "Each offers variety in its own way",
+    "Both have no shops",
+    "Both are closed all day",
+    "Neither sells anything"
+   ],
+   "why": "Malls and souqs each have their own good points."
+  }
+ ]
+}

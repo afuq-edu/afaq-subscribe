@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 1: It's a happy day!",
+ "lesson": "Unit 1 – Lesson 2: Story (Atomic is colourful!)",
+ "outcomes": [
+  "I can understand the story Atomic is colourful!",
+  "I can say True or False about the story.",
+  "I can see beauty in nature, art and music."
+ ],
+ "tf": [
+  {
+   "s": "Blue and yellow make green.",
+   "t": true,
+   "why": "Yes! Mix blue and yellow and you get green."
+  },
+  {
+   "s": "Sami and Jack play tennis in the park before school.",
+   "t": true,
+   "why": "Well done! They play in the park before school."
+  },
+  {
+   "s": "Jack and Sami have tennis lessons at school.",
+   "t": false,
+   "why": "They say We don't have tennis lessons."
+  },
+  {
+   "s": "The children have art lessons at school today.",
+   "t": true,
+   "why": "Yes! They have art lessons today."
+  },
+  {
+   "s": "They don't have art lessons.",
+   "t": false,
+   "why": "They have art lessons at school today."
+  },
+  {
+   "s": "Atomic is colourful at the end of the story.",
+   "t": true,
+   "why": "Atomic gets paint on him, so he is colourful."
+  },
+  {
+   "s": "Polly gets paint on her and becomes colourful.",
+   "t": false,
+   "why": "Atomic is the colourful one in the story."
+  },
+  {
+   "s": "At the end, the children paint a picture of Atomic.",
+   "t": true,
+   "why": "Great! They paint colourful Atomic."
+  },
+  {
+   "s": "Listening to music together can be seeing beauty.",
+   "t": true,
+   "why": "We can see beauty in music too."
+  },
+  {
+   "s": "We can only see beauty in art, not in nature.",
+   "t": false,
+   "why": "We can see beauty in everything: nature, art and music."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do blue and yellow make?",
+   "o": [
+    "green",
+    "red",
+    "purple"
+   ],
+   "why": "Blue and yellow make green."
+  },
+  {
+   "q": "Where do Sami and Jack play tennis?",
+   "o": [
+    "in the park",
+    "at school",
+    "at home"
+   ],
+   "why": "They play tennis in the park."
+  },
+  {
+   "q": "When do they play tennis?",
+   "o": [
+    "before school",
+    "at night",
+    "after dinner"
+   ],
+   "why": "They play tennis before school."
+  },
+  {
+   "q": "Who is colourful at the end?",
+   "o": [
+    "Atomic",
+    "Polly",
+    "Sami"
+   ],
+   "why": "Atomic gets paint on him."
+  },
+  {
+   "q": "Who is on the table?",
+   "o": [
+    "Polly",
+    "Jack",
+    "Lily"
+   ],
+   "why": "Polly is on the table, then the paints fall."
+  },
+  {
+   "q": "Which lessons do the children have today?",
+   "o": [
+    "art lessons",
+    "tennis lessons",
+    "music lessons"
+   ],
+   "why": "They have art lessons today."
+  },
+  {
+   "q": "What do we use to paint?",
+   "o": [
+    "paintbrushes",
+    "pencil cases",
+    "tennis balls"
+   ],
+   "why": "We paint with paintbrushes and paints."
+  },
+  {
+   "q": "Which word means many colours?",
+   "o": [
+    "colourful",
+    "messy",
+    "clean"
+   ],
+   "why": "Colourful means with many colours."
+  },
+  {
+   "q": "What do the children paint at the end?",
+   "o": [
+    "a picture of Atomic",
+    "a picture of Polly",
+    "a tennis ball"
+   ],
+   "why": "They paint colourful Atomic."
+  },
+  {
+   "q": "What is the value of the story?",
+   "o": [
+    "See beauty in everything",
+    "Be quick",
+    "Play tennis every day"
+   ],
+   "why": "The story says See beauty in everything."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Blue + yellow = ?",
+   "a": "green",
+   "d": [
+    "red",
+    "orange",
+    "purple"
+   ]
+  },
+  {
+   "q": "The colourful animal",
+   "a": "Atomic",
+   "d": [
+    "Polly",
+    "Jack",
+    "Fatma"
+   ]
+  },
+  {
+   "q": "Polly is on the ___",
+   "a": "table",
+   "d": [
+    "floor",
+    "bike",
+    "board"
+   ]
+  },
+  {
+   "q": "Sami and Jack play ___",
+   "a": "tennis",
+   "d": [
+    "football",
+    "music",
+    "art"
+   ]
+  },
+  {
+   "q": "Where do they play tennis?",
+   "a": "in the park",
+   "d": [
+    "at school",
+    "in bed",
+    "at home"
+   ]
+  },
+  {
+   "q": "When do they play tennis?",
+   "a": "before school",
+   "d": [
+    "at night",
+    "after dinner",
+    "in bed"
+   ]
+  },
+  {
+   "q": "We have ___ lessons today.",
+   "a": "art",
+   "d": [
+    "tennis",
+    "music",
+    "maths"
+   ]
+  },
+  {
+   "q": "What a ___!",
+   "a": "mess",
+   "d": [
+    "park",
+    "table",
+    "tennis"
+   ]
+  },
+  {
+   "q": "Clean the ___",
+   "a": "floor",
+   "d": [
+    "park",
+    "tennis",
+    "music"
+   ]
+  },
+  {
+   "q": "We paint with ___",
+   "a": "paintbrushes",
+   "d": [
+    "tennis balls",
+    "pencil cases",
+    "flowers"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who gets paint on him in the story?",
+   "o": [
+    "Atomic",
+    "Polly",
+    "Jack",
+    "Sami"
+   ],
+   "why": "Atomic gets paint on him."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is from the story?",
+   "o": [
+    "We have art lessons at school today.",
+    "We have tennis lessons at school.",
+    "We don't have art lessons.",
+    "We play tennis at night."
+   ],
+   "why": "They have art lessons at school today."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which words are story words?",
+   "o": [
+    "paints, paintbrushes, flowers",
+    "pen, kite, hat",
+    "bed, dinner, night",
+    "AC, board, books"
+   ],
+   "why": "The story is about painting."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does What a mess! mean?",
+   "o": [
+    "Things are not tidy.",
+    "Things are very clean.",
+    "It is time for bed.",
+    "It is a nice picture."
+   ],
+   "why": "We say What a mess! when things are not tidy."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You have blue paint and yellow paint. What colour can you make?",
+   "o": [
+    "green",
+    "red",
+    "black",
+    "pink"
+   ],
+   "why": "Blue and yellow make green."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: We have / don't have art lessons at school today.",
+   "o": [
+    "We have art lessons at school today.",
+    "We don't have art lessons at school today.",
+    "We have don't art lessons today.",
+    "We not have art lessons today."
+   ],
+   "why": "In the story they have art lessons today."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which picture shows seeing beauty?",
+   "o": [
+    "A family enjoys music together.",
+    "A boy breaks a pencil.",
+    "A girl drops her bag.",
+    "A cat sleeps on a book."
+   ],
+   "why": "Enjoying music is seeing beauty."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Atomic colourful?",
+   "o": [
+    "The paints fall and he gets paint on him.",
+    "He plays tennis in the park.",
+    "He eats colourful food.",
+    "He sleeps on the flowers."
+   ],
+   "why": "Polly is on the table, the paints fall and Atomic gets paint on him."
+  },
+  {
+   "lv": "التحليل",
+   "q": "There is a mess, but the children see beauty. What do they do?",
+   "o": [
+    "They tidy up and paint Atomic.",
+    "They go home and sleep.",
+    "They play tennis at school.",
+    "They are angry with Atomic."
+   ],
+   "why": "They tidy up and paint a picture of colourful Atomic."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which shows the value See beauty in everything?",
+   "o": [
+    "You enjoy the colours of the flowers.",
+    "You say the flowers are ugly.",
+    "You close your eyes in art class.",
+    "You do not listen to music."
+   ],
+   "why": "Enjoying nature's colours is seeing beauty."
+  }
+ ]
+}

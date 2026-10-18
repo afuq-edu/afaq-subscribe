@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U1",
+ "lesson": "Unit 1 – Lesson 6: English in action – Making arrangements",
+ "outcomes": [
+  "Invite a friend: Do you want to play football tomorrow morning?",
+  "Say no politely and suggest another time.",
+  "Make an arrangement: Let's meet at quarter to five in the park."
+ ],
+ "tf": [
+  {
+   "s": "Ryan and Alex arrange to meet at quarter to five.",
+   "t": true,
+   "why": "Yes! They meet at quarter to five."
+  },
+  {
+   "s": "Ryan goes swimming on Friday mornings.",
+   "t": true,
+   "why": "Correct! So he can't play then."
+  },
+  {
+   "s": "Alex always visits his aunt on Saturdays.",
+   "t": true,
+   "why": "Right! So he is not free on Saturday morning."
+  },
+  {
+   "s": "'Sorry, I can't.' is a way to say yes.",
+   "t": false,
+   "why": "'Sorry, I can't.' is a polite way to say no."
+  },
+  {
+   "s": "'Let's meet in the park.' is a suggestion.",
+   "t": true,
+   "why": "Great! Let's ... makes a suggestion."
+  },
+  {
+   "s": "'What about Saturday?' suggests another day.",
+   "t": true,
+   "why": "Yes! We use 'What about ...?' to suggest."
+  },
+  {
+   "s": "We say: Do you want play football?",
+   "t": false,
+   "why": "We need to: Do you want to play football?"
+  },
+  {
+   "s": "'I'm not free' means you have time to play.",
+   "t": false,
+   "why": "I'm not free means you are busy."
+  },
+  {
+   "s": "'See you then!' is a way to end an arrangement.",
+   "t": true,
+   "why": "Yes! We say it when the plan is ready."
+  },
+  {
+   "s": "Quarter to five is 5.15.",
+   "t": false,
+   "why": "Quarter to five is 4.45."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What time do the boys meet?",
+   "o": [
+    "quarter to five",
+    "half past four",
+    "five o'clock"
+   ],
+   "why": "They meet at quarter to five."
+  },
+  {
+   "q": "Do you ___ to play football?",
+   "o": [
+    "want",
+    "wants",
+    "wanting"
+   ],
+   "why": "Do you want to ...?"
+  },
+  {
+   "q": "Say no politely:",
+   "o": [
+    "Sorry, I can't.",
+    "Go away.",
+    "No football!"
+   ],
+   "why": "Sorry, I can't. is polite."
+  },
+  {
+   "q": "Suggest another day:",
+   "o": [
+    "What about Saturday?",
+    "See you then!",
+    "I'm nine."
+   ],
+   "why": "What about ...? suggests something new."
+  },
+  {
+   "q": "___ meet in the park.",
+   "o": [
+    "Let's",
+    "Let",
+    "Lets'"
+   ],
+   "why": "Let's = let us."
+  },
+  {
+   "q": "Why can't Ryan play on Friday morning?",
+   "o": [
+    "He goes swimming.",
+    "He visits his aunt.",
+    "He has Maths."
+   ],
+   "why": "Ryan goes swimming on Friday mornings."
+  },
+  {
+   "q": "Why can't Alex play on Saturday morning?",
+   "o": [
+    "He visits his aunt.",
+    "He goes swimming.",
+    "He is ill."
+   ],
+   "why": "Alex always visits his aunt on Saturdays."
+  },
+  {
+   "q": "End the arrangement:",
+   "o": [
+    "See you then!",
+    "Sorry, I can't.",
+    "Do you want to?"
+   ],
+   "why": "See you then! closes the plan."
+  },
+  {
+   "q": "'I'm not ___.' means I'm busy.",
+   "o": [
+    "free",
+    "happy",
+    "nine"
+   ],
+   "why": "I'm not free = I'm busy."
+  },
+  {
+   "q": "Where do the boys meet?",
+   "o": [
+    "in the park",
+    "at school",
+    "at the cinema"
+   ],
+   "why": "Let's meet at quarter to five in the park."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Meeting time?",
+   "a": "quarter to five",
+   "d": [
+    "half past four",
+    "five o'clock",
+    "quarter past five"
+   ]
+  },
+  {
+   "q": "Ryan on Friday morning?",
+   "a": "swimming",
+   "d": [
+    "football",
+    "cinema",
+    "reading"
+   ]
+  },
+  {
+   "q": "Alex visits his...?",
+   "a": "aunt",
+   "d": [
+    "uncle",
+    "teacher",
+    "grandpa"
+   ]
+  },
+  {
+   "q": "Meeting place?",
+   "a": "the park",
+   "d": [
+    "the school",
+    "the shop",
+    "the beach"
+   ]
+  },
+  {
+   "q": "Do you ___ to play?",
+   "a": "want",
+   "d": [
+    "wants",
+    "like to",
+    "go"
+   ]
+  },
+  {
+   "q": "Sorry, I ___.",
+   "a": "can't",
+   "d": [
+    "can",
+    "want",
+    "free"
+   ]
+  },
+  {
+   "q": "___ meet at five.",
+   "a": "Let's",
+   "d": [
+    "Do",
+    "Sorry",
+    "What"
+   ]
+  },
+  {
+   "q": "___ about Saturday?",
+   "a": "What",
+   "d": [
+    "Who",
+    "When",
+    "Let's"
+   ]
+  },
+  {
+   "q": "I'm not ___. (busy)",
+   "a": "free",
+   "d": [
+    "busy",
+    "sorry",
+    "fine"
+   ]
+  },
+  {
+   "q": "Quarter to five = ?",
+   "a": "4.45",
+   "d": [
+    "5.15",
+    "5.45",
+    "4.15"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which phrase invites a friend?",
+   "o": [
+    "Do you want to play football?",
+    "Sorry, I can't.",
+    "See you then!",
+    "I'm not free."
+   ],
+   "why": "Do you want to ...? is an invitation."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase refuses politely?",
+   "o": [
+    "Sorry, I'm not free.",
+    "Let's meet at five.",
+    "What about Saturday?",
+    "See you then!"
+   ],
+   "why": "Sorry, I'm not free. says no nicely."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who always visits his aunt on Saturdays?",
+   "o": [
+    "Alex",
+    "Ryan",
+    "Sami",
+    "Lottie"
+   ],
+   "why": "Alex visits his aunt on Saturdays."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word starts a suggestion?",
+   "o": [
+    "Let's",
+    "Sorry",
+    "Free",
+    "Then"
+   ],
+   "why": "Let's ... makes a suggestion."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend asks: 'Do you want to go to the park?' You are busy. What do you say?",
+   "o": [
+    "Sorry, I can't. I'm not free.",
+    "Yes, see you then!",
+    "Let's go now.",
+    "I want to go."
+   ],
+   "why": "Say sorry and that you are not free."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Order the words: you / do / want / to / tennis / play / ?",
+   "o": [
+    "Do you want to play tennis?",
+    "You do want to tennis play?",
+    "Do want you to play tennis?",
+    "Do you to want play tennis?"
+   ],
+   "why": "Do you want to + verb?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose a suggestion with a time and a place.",
+   "o": [
+    "Let's meet at half past four in the park.",
+    "Sorry, I can't.",
+    "Do you want to?",
+    "I'm not free."
+   ],
+   "why": "It has Let's, a time and a place."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can't Ryan play football on Friday morning?",
+   "o": [
+    "He goes swimming on Friday mornings.",
+    "He visits his aunt.",
+    "He doesn't like football.",
+    "He is at school."
+   ],
+   "why": "Ryan has swimming then."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A and B are both free on Friday at six o'clock. What can they do?",
+   "o": [
+    "Go to the cinema together on Friday at six.",
+    "Say 'Sorry, I can't.'",
+    "Meet on Saturday morning.",
+    "Never meet."
+   ],
+   "why": "They are both free, so they can make a plan."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the correct order of an arrangement?",
+   "o": [
+    "invite – refuse – suggest – agree",
+    "agree – invite – refuse – suggest",
+    "refuse – agree – invite – suggest",
+    "suggest – agree – refuse – invite"
+   ],
+   "why": "First invite, then refuse, suggest a new time and agree."
+  }
+ ]
+}

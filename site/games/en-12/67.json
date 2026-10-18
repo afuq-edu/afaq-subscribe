@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 4: Jobs in Airports and Aviation (Listening & Speaking)",
+ "lesson": "Jobs in airports: matching, Listening 4.4.1 and asking for/giving explanations",
+ "outcomes": [
+  "Match airport jobs with their responsibilities",
+  "Listen to an air traffic controller and answer questions",
+  "Use phrases to ask for and give explanations"
+ ],
+ "tf": [
+  {
+   "s": "Tariq Al Kharousi works as an air traffic controller.",
+   "t": true,
+   "why": "Yes, he works at the new Muscat Airport."
+  },
+  {
+   "s": "Tariq has worked in air traffic control for just over 22 years.",
+   "t": true,
+   "why": "Correct, he has many years of experience."
+  },
+  {
+   "s": "An air traffic controller needs a passion for aviation and to be good at science.",
+   "t": true,
+   "why": "Right, Tariq says these are important."
+  },
+  {
+   "s": "Tariq says his job is easy and has short hours.",
+   "t": false,
+   "why": "It is stressful, with long working periods and lots of concentration."
+  },
+  {
+   "s": "Tariq says his job is stressful but rewarding.",
+   "t": true,
+   "why": "Yes, it is hard but it makes him feel good."
+  },
+  {
+   "s": "Tariq decides the landing order only by the colour of each plane.",
+   "t": false,
+   "why": "He uses the size, speed and direction of each plane."
+  },
+  {
+   "s": "'What do you mean by...?' is a phrase to ask for an explanation.",
+   "t": true,
+   "why": "Correct, you use it when you don't understand something."
+  },
+  {
+   "s": "'That's because...' is a phrase to ask a question.",
+   "t": false,
+   "why": "It is used to give an explanation."
+  },
+  {
+   "s": "The control tower at the new Muscat airport is 97 metres tall.",
+   "t": true,
+   "why": "Yes, the lead-in facts give 97 m."
+  },
+  {
+   "s": "The new Muscat airport runway is 40 kilometres long.",
+   "t": false,
+   "why": "The runway is 4 km long."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is Tariq's job?",
+   "o": [
+    "air traffic controller",
+    "pilot",
+    "engineer"
+   ],
+   "why": "Tariq directs aircraft safely as an air traffic controller."
+  },
+  {
+   "q": "What does an air traffic controller do?",
+   "o": [
+    "directs aircraft safely",
+    "sells tickets",
+    "cooks for passengers"
+   ],
+   "why": "Controllers guide planes so they land and take off safely."
+  },
+  {
+   "q": "How long has Tariq worked in air traffic control?",
+   "o": [
+    "just over 22 years",
+    "2 years",
+    "12 years"
+   ],
+   "why": "He has just over 22 years of experience."
+  },
+  {
+   "q": "Which phrase gives an explanation?",
+   "o": [
+    "OK, let me explain.",
+    "What do you mean by...?",
+    "Can you tell us about...?"
+   ],
+   "why": "Let me explain introduces an explanation."
+  },
+  {
+   "q": "Which phrase asks for an explanation?",
+   "o": [
+    "Can you tell us about...?",
+    "The reason is...",
+    "That's because..."
+   ],
+   "why": "Can you tell us about... asks for information."
+  },
+  {
+   "q": "How tall is the control tower at Muscat airport?",
+   "o": [
+    "97 metres",
+    "9 metres",
+    "970 metres"
+   ],
+   "why": "The tower is 97 m tall."
+  },
+  {
+   "q": "How long is the runway?",
+   "o": [
+    "4 km",
+    "14 km",
+    "400 m"
+   ],
+   "why": "The runway is 4 km long."
+  },
+  {
+   "q": "How does Tariq describe his job?",
+   "o": [
+    "stressful but rewarding",
+    "boring and easy",
+    "relaxing and quiet"
+   ],
+   "why": "It is hard but it gives him satisfaction."
+  },
+  {
+   "q": "What subject should a controller be good at?",
+   "o": [
+    "science",
+    "art",
+    "music"
+   ],
+   "why": "Tariq says science is important."
+  },
+  {
+   "q": "Where do planes land and take off?",
+   "o": [
+    "on the runway",
+    "in the control tower",
+    "in the car park"
+   ],
+   "why": "The runway is the long strip used by planes."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Tariq's job",
+   "a": "air traffic controller",
+   "d": [
+    "pilot",
+    "engineer",
+    "cabin crew"
+   ]
+  },
+  {
+   "q": "Tariq's years in air traffic control",
+   "a": "22",
+   "d": [
+    "12",
+    "2",
+    "32"
+   ]
+  },
+  {
+   "q": "Height of control tower (m)",
+   "a": "97",
+   "d": [
+    "79",
+    "47",
+    "9"
+   ]
+  },
+  {
+   "q": "Length of the runway",
+   "a": "4 km",
+   "d": [
+    "40 km",
+    "14 km",
+    "1 km"
+   ]
+  },
+  {
+   "q": "Cost of the airport (rials)",
+   "a": "1.85 billion",
+   "d": [
+    "18.5 billion",
+    "185 million",
+    "1.5 billion"
+   ]
+  },
+  {
+   "q": "Passengers at first (a year)",
+   "a": "12 million",
+   "d": [
+    "48 million",
+    "1.2 million",
+    "20 million"
+   ]
+  },
+  {
+   "q": "Passengers it will rise to",
+   "a": "48 million",
+   "d": [
+    "12 million",
+    "84 million",
+    "4.8 million"
+   ]
+  },
+  {
+   "q": "Where planes take off",
+   "a": "runway",
+   "d": [
+    "control tower",
+    "terminal",
+    "car park"
+   ]
+  },
+  {
+   "q": "Tariq needs a passion for...",
+   "a": "aviation",
+   "d": [
+    "cooking",
+    "football",
+    "fashion"
+   ]
+  },
+  {
+   "q": "School subject a controller needs",
+   "a": "science",
+   "d": [
+    "art",
+    "history",
+    "music"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is a quality needed to be an air traffic controller?",
+   "o": [
+    "a passion for aviation",
+    "a love of cooking",
+    "being good at drawing",
+    "a fear of planes"
+   ],
+   "why": "Tariq says you need a passion for aviation."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase do we use to ask for an explanation?",
+   "o": [
+    "What do you mean by...?",
+    "The reason is...",
+    "That's because...",
+    "OK, let me explain."
+   ],
+   "why": "What do you mean by... asks someone to explain."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When did the first Airbus 330 land at Muscat's new airport?",
+   "o": [
+    "14 December 2014",
+    "14 December 2004",
+    "4 December 2014",
+    "14 November 2014"
+   ],
+   "why": "The lead-in photo shows the first landing on 14 December 2014."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where does an air traffic controller work?",
+   "o": [
+    "in the control tower",
+    "on the runway",
+    "in the plane's kitchen",
+    "at the ticket desk"
+   ],
+   "why": "Controllers watch the planes from the control tower."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend says 'My job is rewarding.' You don't understand the word. What do you say?",
+   "o": [
+    "What do you mean by 'rewarding'?",
+    "That's because it is rewarding.",
+    "OK, let me explain.",
+    "The reason is rewarding."
+   ],
+   "why": "This phrase asks for an explanation of a word."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Someone asks why you want to be a pilot. How do you start your answer?",
+   "o": [
+    "The reason is...",
+    "What do you mean by...?",
+    "Can you tell us about...?",
+    "Could you repeat that?"
+   ],
+   "why": "The reason is... introduces an explanation."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The airport will grow from 12 million to 48 million passengers. How many times bigger is that?",
+   "o": [
+    "four times",
+    "two times",
+    "twelve times",
+    "forty times"
+   ],
+   "why": "12 million multiplied by 4 is 48 million."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is air traffic control not a job with short hours?",
+   "o": [
+    "it involves long working periods and needs concentration",
+    "planes only fly at night",
+    "controllers work one hour a week",
+    "it is a part-time hobby"
+   ],
+   "why": "Tariq explains the job needs long hours and focus."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How does Tariq decide the landing order?",
+   "o": [
+    "by the size and speed of each plane and the direction it comes from",
+    "by the name of the airline",
+    "by the colour of each plane",
+    "by the price of the tickets"
+   ],
+   "why": "He considers size, speed and direction."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Tariq call his job rewarding even though it is stressful?",
+   "o": [
+    "keeping aircraft safe gives him satisfaction",
+    "it has very short hours",
+    "he never has to concentrate",
+    "it is easy work"
+   ],
+   "why": "Doing an important job well feels rewarding."
+  }
+ ]
+}
