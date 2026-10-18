@@ -838,6 +838,7 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
     // حساب نور المفتوح: الاشتراك المدفوع لحساب نور صاحبه فقط
     const who = await noorWho(tabId);
     const nc = await noorCheck(who).catch(() => ({ ok: true }));
+    if (!nc.ok && nc.error === 'noor_wait') return [{ key: 'remote', name: 'الاشتراك', short: 'الاشتراك', status: 'wait', blocked: true, remoteError: 'noor_wait', who, reg: nc.reg || '', noor: nc.noor || '', error: REMOTE_ERR.noor_wait, values: [] }];
     if (!nc.ok) return [{ key: 'remote', name: 'الاشتراك', short: 'الاشتراك', status: 'fail', blocked: true, remoteError: 'noor_other', error: nc.owner ? `هذا الاشتراك لحساب نور «${nc.owner}»، وحساب نور المفتوح الآن لمعلم آخر. لتحضير حساب آخر يحتاج صاحبه اشتراكه الخاص.` : REMOTE_ERR.noor_other, values: [] }];
     // مادة اشتراك: محتوى الحصة يُجلب الآن من منصة أفق (لا يُخزَّن في الإضافة)
     const r = await remoteLesson(pkg, lesson);

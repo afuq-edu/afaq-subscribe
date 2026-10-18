@@ -46,3 +46,89 @@ grant execute on function public.admin_noor_reset(bigint) to authenticated;
 --   if v_acc = 'sub' and not admin: إن كان للمستخدم ربط (noor_hash <> '') وحساب نور الجهاز معروف ومختلف ← {error:'noor_other', owner}
 -- admin_requests: أُضيف الحقل 'noor_name' (اسم حساب نور المربوط).
 -- (النصان الكاملان مطبّقان في الهجرتين hader_ext_session_noor وhader_noor_admin)
+
+-- 2026-10-18 (مطبَّق، هجرة hader_noor_name_allow): الاشتراك باسم المعلم — إن اختلف اسم حساب نور عن الاسم المسجّل لا يُربط تلقائيًا؛
+-- يُسجَّل طلب سماح (pending_*) وتنتظر «حاضر» حتى يضغط المدير «اسمح بحساب نور» (admin_noor_allow).
+alter table public.noor_bind add column if not exists pending_hash text;
+alter table public.noor_bind add column if not exists pending_name text;
+alter table public.noor_bind add column if not exists pending_at timestamptz;
+
+create or replace function public.ar_name_norm(t text) returns text language sql immutable as $$
+  select trim(regexp_replace(regexp_replace(regexp_replace(translate(regexp_replace(coalesce(t, ''), '[ًٌٍَُِّْـ]', '', 'g'), 'أإآٱىة', 'اااايه'),
+    '(^|\s)(عبد|ابو|أبو|ام|بن|بنت)\s+', '\1\2', 'g'), '[^ء-ي0-9 ]', ' ', 'g'), '\s+', ' ', 'g'))
+$$;
+-- كل كلمات الاسم المسجّل موجودة في اسم نور، والاسم الأول نفسه
+create or replace function public.noor_name_ok(p_reg text, p_noor text) returns boolean language plpgsql immutable as $$
+declare r text[]; n text[]; w text;
+begin
+  r := string_to_array(public.ar_name_norm(p_reg), ' '); n := string_to_array(public.ar_name_norm(p_noor), ' ');
+  if coalesce(array_length(r, 1), 0) = 0 or coalesce(array_length(n, 1), 0) = 0 then return true; end if;
+  if r[1] <> n[1] then return false; end if;
+  foreach w in array r loop if not (w = any(n)) then return false; end if; end loop;
+  return true;
+end $$;
+
+create or replace function public.ext_noor(p_token text, p_noor text, p_name text default null) returns jsonb
+language plpgsql security definer set search_path = public as $$
+declare d record; b public.noor_bind; v_paid boolean; v_reg text; v_name text := left(nullif(trim(coalesce(p_name, '')), ''), 120);
+begin
+  select * into d from public.ext_device(p_token);
+  if d.user_id is null then return jsonb_build_object('ok', false, 'error', 'unlinked'); end if;
+  if coalesce(p_noor, '') !~ '^[0-9a-f]{64}$' then return jsonb_build_object('ok', true); end if;
+  update public.devices set noor_hash = p_noor where id = d.device_id;
+  if coalesce((select pr.is_admin from public.profiles pr where pr.id = d.user_id), false) then return jsonb_build_object('ok', true); end if;
+  v_paid := exists (select 1 from public.subscriptions s join public.terms t on t.id = s.term_id
+                    where s.user_id = d.user_id and not s.revoked and public.today_muscat() <= t.ends_on);
+  if not v_paid then return jsonb_build_object('ok', true); end if;
+  select * into b from public.noor_bind where user_id = d.user_id;
+  if b.user_id is not null and b.noor_hash = p_noor then return jsonb_build_object('ok', true); end if;
+  select r.name into v_reg from public.ext_requests r where r.user_id = d.user_id order by r.created_at desc limit 1;
+  if (b.user_id is null or b.noor_hash = '') and public.noor_name_ok(v_reg, v_name) then
+    insert into public.noor_bind (user_id, noor_hash, noor_name) values (d.user_id, p_noor, v_name)
+    on conflict (user_id) do update set noor_hash = excluded.noor_hash, noor_name = excluded.noor_name, bound_at = now(),
+      pending_hash = null, pending_name = null, pending_at = null;
+    return jsonb_build_object('ok', true, 'bound', true);
+  end if;
+  -- اسم مختلف أو حساب آخر: يُسجَّل طلب سماح للمدير
+  insert into public.noor_bind (user_id, noor_hash, pending_hash, pending_name, pending_at) values (d.user_id, '', p_noor, v_name, now())
+  on conflict (user_id) do update set pending_hash = excluded.pending_hash, pending_name = excluded.pending_name, pending_at = now();
+  return jsonb_build_object('ok', false, 'error', 'noor_wait', 'reg', v_reg, 'noor', v_name);
+end $$;
+grant execute on function public.ext_noor(text, text, text) to anon, authenticated;
+
+create or replace function public.admin_noor_allow(p_id bigint) returns jsonb
+language plpgsql security definer set search_path = public as $$
+begin
+  if not public.is_admin() then raise exception 'غير مسموح'; end if;
+  update public.noor_bind set noor_hash = pending_hash, noor_name = pending_name, bound_at = now(), pending_hash = null, pending_name = null, pending_at = null
+  where user_id = (select user_id from public.ext_requests where id = p_id) and pending_hash is not null;
+  return jsonb_build_object('ok', true);
+end $$;
+revoke execute on function public.admin_noor_allow(bigint) from anon;
+grant execute on function public.admin_noor_allow(bigint) to authenticated;
+
+create or replace function public.admin_requests() returns jsonb
+language plpgsql stable security definer set search_path = public as $function$
+declare v_t int := public.current_term_id(); v_tn smallint := (select term from public.terms where id = public.current_term_id());
+begin
+  if not public.is_admin() then raise exception 'غير مسموح'; end if;
+  return coalesce((select jsonb_agg(jsonb_build_object(
+    'id', r.id, 'user_id', r.user_id, 'name', r.name, 'phone', r.phone, 'shift', r.shift, 'status', r.status,
+    'created_at', r.created_at, 'requested_at', r.requested_at, 'activated_at', r.activated_at,
+    'packages', coalesce((select jsonb_agg(jsonb_build_object('id', p.id, 'title', p.title,
+        'used', public.trial_used(r.user_id, p.id), 'active', public.active_term(r.user_id, p.id, v_tn) is not null) order by p.grade, p.subject)
+      from public.packages p where p.id = any (r.package_ids)), '[]'::jsonb),
+    'devices', (select count(*) from public.devices d where d.user_id = r.user_id and d.revoked_at is null),
+    'last_seen', (select max(d.last_seen) from public.devices d where d.user_id = r.user_id),
+    'referred_by', r.referred_by,
+    'ref_name', (select x.name from public.ext_requests x where x.id = r.referred_by),
+    'invited', (select count(*) from public.ext_requests x where x.referred_by = r.id),
+    'invited_active', (select count(*) from public.ext_requests x where x.referred_by = r.id and x.status = 'active'),
+    'noor_name', (select coalesce(nb.noor_name, 'مربوط') from public.noor_bind nb where nb.user_id = r.user_id and nb.noor_hash <> ''),
+    'noor_wait', (select coalesce(nb.pending_name, 'حساب نور باسم آخر') from public.noor_bind nb where nb.user_id = r.user_id and nb.pending_hash is not null
+                  and r.id = (select max(x.id) from public.ext_requests x where x.user_id = r.user_id))
+  ) order by case when exists (select 1 from public.noor_bind nb where nb.user_id = r.user_id and nb.pending_hash is not null) then -1
+                  else case r.status when 'requested' then 0 when 'trial' then 1 when 'active' then 2 else 3 end end,
+             coalesce(r.requested_at, r.created_at) desc)
+  from public.ext_requests r), '[]'::jsonb);
+end $function$;
