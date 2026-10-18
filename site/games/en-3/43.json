@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 4: I want to be a doctor!",
+ "lesson": "Unit 4 – Lesson 4: Skills",
+ "outcomes": [
+  "I can listen and match people with jobs and transport.",
+  "I can use He's and She's.",
+  "I can write about my dream job and my family."
+ ],
+ "tf": [
+  {
+   "s": "He's means He is.",
+   "t": true,
+   "why": "Yes! He's is the short form of He is."
+  },
+  {
+   "s": "She's means She has.",
+   "t": false,
+   "why": "Here, She's means She is."
+  },
+  {
+   "s": "In 'My family', grandma is a chef.",
+   "t": true,
+   "why": "Right! My grandma is a chef."
+  },
+  {
+   "s": "In 'My family', grandma goes to work by bus.",
+   "t": false,
+   "why": "Grandma goes to work by car."
+  },
+  {
+   "s": "In 'My family', the uncle is an artist.",
+   "t": true,
+   "why": "Yes! My uncle is an artist."
+  },
+  {
+   "s": "In 'My family', the brother is a pilot.",
+   "t": false,
+   "why": "The brother is a firefighter."
+  },
+  {
+   "s": "The brother goes to work by motorbike.",
+   "t": true,
+   "why": "Well done! He goes by motorbike."
+  },
+  {
+   "s": "Before you listen, you look at the people and the transport in the picture.",
+   "t": true,
+   "why": "Great! Looking first helps you listen."
+  },
+  {
+   "s": "We write: My uncle is a artist.",
+   "t": false,
+   "why": "Artist starts with a vowel sound: an artist."
+  },
+  {
+   "s": "In 'My family', the uncle goes to work by bus.",
+   "t": true,
+   "why": "Yes! The uncle goes to work by bus."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the long form of She's?",
+   "o": [
+    "She is",
+    "She was",
+    "She has got"
+   ],
+   "why": "She's = She is."
+  },
+  {
+   "q": "Which sentence uses She's correctly?",
+   "o": [
+    "She's a doctor.",
+    "She's go to work.",
+    "She's by car."
+   ],
+   "why": "She's a doctor. = She is a doctor."
+  },
+  {
+   "q": "What is the brother's job?",
+   "o": [
+    "firefighter",
+    "chef",
+    "artist"
+   ],
+   "why": "The brother is a firefighter."
+  },
+  {
+   "q": "Which job in 'My family' uses an?",
+   "o": [
+    "artist",
+    "chef",
+    "firefighter"
+   ],
+   "why": "We say an artist."
+  },
+  {
+   "q": "Card: a nurse and a car (a man). Which is correct?",
+   "o": [
+    "He's a nurse. He goes to work by car.",
+    "She's a nurse. He goes to work by car.",
+    "He's nurse. He goes by a car."
+   ],
+   "why": "He's a nurse. He goes to work by car."
+  },
+  {
+   "q": "Who is she? (an old woman in the family)",
+   "o": [
+    "grandma",
+    "uncle",
+    "brother"
+   ],
+   "why": "Grandma is an old woman in the family."
+  },
+  {
+   "q": "Complete: I want to be ___ astronaut.",
+   "o": [
+    "an",
+    "a",
+    "the"
+   ],
+   "why": "Astronaut starts with a vowel sound."
+  },
+  {
+   "q": "Complete: My mum is a teacher. ___ goes to work by car.",
+   "o": [
+    "She",
+    "He",
+    "It"
+   ],
+   "why": "Mum is a woman, so we use She."
+  },
+  {
+   "q": "Complete: He's ___ chef.",
+   "o": [
+    "a",
+    "an",
+    "by"
+   ],
+   "why": "Chef starts with a consonant sound."
+  },
+  {
+   "q": "Who is he? (dad's brother)",
+   "o": [
+    "uncle",
+    "grandma",
+    "sister"
+   ],
+   "why": "Dad's brother is an uncle."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "He is = …",
+   "a": "He's",
+   "d": [
+    "He's got",
+    "His",
+    "He"
+   ]
+  },
+  {
+   "q": "Grandma's job",
+   "a": "chef",
+   "d": [
+    "artist",
+    "pilot",
+    "nurse"
+   ]
+  },
+  {
+   "q": "Grandma goes by …",
+   "a": "car",
+   "d": [
+    "bus",
+    "train",
+    "boat"
+   ]
+  },
+  {
+   "q": "The uncle's job",
+   "a": "artist",
+   "d": [
+    "chef",
+    "firefighter",
+    "doctor"
+   ]
+  },
+  {
+   "q": "The brother goes by …",
+   "a": "motorbike",
+   "d": [
+    "car",
+    "bus",
+    "train"
+   ]
+  },
+  {
+   "q": "___ an artist",
+   "a": "He's",
+   "d": [
+    "He",
+    "His",
+    "He goes"
+   ]
+  },
+  {
+   "q": "She's a teacher. She goes by …",
+   "a": "train",
+   "d": [
+    "boat",
+    "plane",
+    "bike"
+   ]
+  },
+  {
+   "q": "Dad's mum",
+   "a": "grandma",
+   "d": [
+    "uncle",
+    "brother",
+    "sister"
+   ]
+  },
+  {
+   "q": "___ a nurse (a woman)",
+   "a": "She's",
+   "d": [
+    "He's",
+    "Her",
+    "She"
+   ]
+  },
+  {
+   "q": "My brother is a …",
+   "a": "firefighter",
+   "d": [
+    "teacher",
+    "chef",
+    "artist"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the short form of He is?",
+   "o": [
+    "He's",
+    "His",
+    "He'is",
+    "Hes"
+   ],
+   "why": "He is = He's."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In 'My family', who is a chef?",
+   "o": [
+    "grandma",
+    "uncle",
+    "brother",
+    "mum"
+   ],
+   "why": "My grandma is a chef."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In 'My family', who goes to work by motorbike?",
+   "o": [
+    "the brother",
+    "grandma",
+    "the uncle",
+    "dad"
+   ],
+   "why": "My brother goes to work by motorbike."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is a family member?",
+   "o": [
+    "uncle",
+    "chef",
+    "motorbike",
+    "train"
+   ],
+   "why": "An uncle is a family member."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write about your dad: he is a pilot and he drives a car to work.",
+   "o": [
+    "My dad is a pilot. He goes to work by car.",
+    "My dad is an pilot. He goes to work by car.",
+    "My dad is a pilot. She goes to work by car.",
+    "My dad is a pilot. He go to work by car."
+   ],
+   "why": "a pilot, He, goes: all correct."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Describe a secret card: a chef (a man) and a bus.",
+   "o": [
+    "He's a chef. He goes to work by bus.",
+    "She's a chef. She goes to work by bus.",
+    "He's a chef. He goes to work by a bus.",
+    "He chef. He goes to work by bus."
+   ],
+   "why": "He's a chef. He goes to work by bus."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Circle: My brother goes to work by car / motorbike.",
+   "o": [
+    "motorbike",
+    "car",
+    "bus",
+    "train"
+   ],
+   "why": "In the text, the brother goes by motorbike."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we write an artist?",
+   "o": [
+    "Artist starts with a vowel sound.",
+    "Artist is a family word.",
+    "Artist goes by bus.",
+    "Artist has six letters."
+   ],
+   "why": "We use an before a vowel sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "My grandma is a chef. He goes to work by car.",
+    "My grandma is a chef. She goes to work by car.",
+    "My uncle is an artist. He goes to work by bus.",
+    "My brother is a firefighter. He goes to work by motorbike."
+   ],
+   "why": "Grandma is a woman, so we need She."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What helps you most before you listen and draw lines?",
+   "o": [
+    "Look at the people and transport in the picture.",
+    "Close your book.",
+    "Write the names first.",
+    "Draw a new picture."
+   ],
+   "why": "Looking first tells you what to listen for."
+  }
+ ]
+}

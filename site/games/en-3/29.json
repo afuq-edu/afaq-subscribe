@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 3: Hobbies",
+ "lesson": "Unit 3 – Lesson 1: Vocabulary and Grammar (activities)",
+ "outcomes": [
+  "I can name ten activities.",
+  "I can say He plays … and She doesn't …",
+  "I can add -s or -es to the verb for he and she."
+ ],
+ "tf": [
+  {
+   "s": "With he and she, the verb takes -s: He plays tennis.",
+   "t": true,
+   "why": "Yes! He plays, she reads."
+  },
+  {
+   "s": "We say: She doesn't plays tennis.",
+   "t": false,
+   "why": "After doesn't, no -s: She doesn't play tennis."
+  },
+  {
+   "s": "The he-form of watch is watches.",
+   "t": true,
+   "why": "Right! watch → watches."
+  },
+  {
+   "s": "The he-form of do is dos.",
+   "t": false,
+   "why": "do → does."
+  },
+  {
+   "s": "Ride a bike is an activity.",
+   "t": true,
+   "why": "Yes, ride a bike is one of our activities."
+  },
+  {
+   "s": "We say: Rashid listen to music.",
+   "t": false,
+   "why": "With he, add -s: Rashid listens to music."
+  },
+  {
+   "s": "We say: He doesn't watch TV.",
+   "t": true,
+   "why": "Great! doesn't + verb without -s."
+  },
+  {
+   "s": "Do karate and play basketball are activities.",
+   "t": true,
+   "why": "Yes! Both are activities from the lesson."
+  },
+  {
+   "s": "We ask a friend: Do you play tennis?",
+   "t": true,
+   "why": "Right! Do you …? asks about hobbies."
+  },
+  {
+   "s": "The he-form of ride is rideies.",
+   "t": false,
+   "why": "ride → rides."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: Rashid ___ to music.",
+   "o": [
+    "listens",
+    "listen",
+    "listening"
+   ],
+   "why": "With he, add -s."
+  },
+  {
+   "q": "Correct: She doesn't plays tennis.",
+   "o": [
+    "She doesn't play tennis.",
+    "She don't plays tennis.",
+    "She not play tennis."
+   ],
+   "why": "doesn't + verb with no -s."
+  },
+  {
+   "q": "The he-form of watch:",
+   "o": [
+    "watches",
+    "watchs",
+    "watch"
+   ],
+   "why": "watch → watches."
+  },
+  {
+   "q": "The he-form of do:",
+   "o": [
+    "does",
+    "dos",
+    "doing"
+   ],
+   "why": "do → does."
+  },
+  {
+   "q": "Complete: Noora ___ video games.",
+   "o": [
+    "plays",
+    "play",
+    "playes"
+   ],
+   "why": "With she, add -s."
+  },
+  {
+   "q": "Complete: He ___ a bike.",
+   "o": [
+    "rides",
+    "ride",
+    "rids"
+   ],
+   "why": "ride → rides."
+  },
+  {
+   "q": "A girl with headphones:",
+   "o": [
+    "listen to music",
+    "skateboard",
+    "do karate"
+   ],
+   "why": "Headphones are for music."
+  },
+  {
+   "q": "Ask your classmate about roller-skating:",
+   "o": [
+    "Do you roller-skate?",
+    "Does you roller-skate?",
+    "You roller-skate do?"
+   ],
+   "why": "We ask Do you …?"
+  },
+  {
+   "q": "Answer: Do you play tennis? (yes)",
+   "o": [
+    "Yes, I do.",
+    "Yes, I does.",
+    "Yes, I play."
+   ],
+   "why": "Short answer: Yes, I do."
+  },
+  {
+   "q": "Huda – skateboard ✗. Write it:",
+   "o": [
+    "She doesn't skateboard.",
+    "She skateboards.",
+    "She don't skateboard."
+   ],
+   "why": "✗ means doesn't."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "He-form of watch",
+   "a": "watches",
+   "d": [
+    "watchs",
+    "watching",
+    "watch"
+   ]
+  },
+  {
+   "q": "He-form of do",
+   "a": "does",
+   "d": [
+    "dos",
+    "doing",
+    "did"
+   ]
+  },
+  {
+   "q": "He-form of ride",
+   "a": "rides",
+   "d": [
+    "ride",
+    "rideses",
+    "riding"
+   ]
+  },
+  {
+   "q": "He-form of play",
+   "a": "plays",
+   "d": [
+    "plaies",
+    "play",
+    "playing"
+   ]
+  },
+  {
+   "q": "Rashid ___ to music.",
+   "a": "listens",
+   "d": [
+    "listen",
+    "listening",
+    "listenes"
+   ]
+  },
+  {
+   "q": "She doesn't ___ tennis.",
+   "a": "play",
+   "d": [
+    "plays",
+    "playing",
+    "plaies"
+   ]
+  },
+  {
+   "q": "Headphones activity",
+   "a": "listen to music",
+   "d": [
+    "ride a bike",
+    "do karate",
+    "skateboard"
+   ]
+  },
+  {
+   "q": "A boy with a book",
+   "a": "read books",
+   "d": [
+    "watch TV",
+    "play tennis",
+    "roller-skate"
+   ]
+  },
+  {
+   "q": "Two boys with game controllers",
+   "a": "play video games",
+   "d": [
+    "read books",
+    "do karate",
+    "ride a bike"
+   ]
+  },
+  {
+   "q": "Omar ___ karate. (yes)",
+   "a": "does",
+   "d": [
+    "do",
+    "doing",
+    "dos"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is an activity from the lesson?",
+   "o": [
+    "skateboard",
+    "beard",
+    "jumper",
+    "Monday"
+   ],
+   "why": "Skateboard is an activity."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do we add to play with she?",
+   "o": [
+    "-s",
+    "-es",
+    "-ing",
+    "nothing"
+   ],
+   "why": "She plays."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is correct?",
+   "o": [
+    "He doesn't watch TV.",
+    "He doesn't watches TV.",
+    "He don't watch TV.",
+    "He not watch TV."
+   ],
+   "why": "doesn't + verb with no -s."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which verb takes -es with he?",
+   "o": [
+    "watch",
+    "play",
+    "ride",
+    "read"
+   ],
+   "why": "watch → watches."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali plays basketball ✓ and watch TV ✗. Choose the sentences.",
+   "o": [
+    "Ali plays basketball. He doesn't watch TV.",
+    "Ali play basketball. He doesn't watches TV.",
+    "Ali plays basketball. He watches TV.",
+    "Ali doesn't play basketball. He watches TV."
+   ],
+   "why": "✓ = plays, ✗ = doesn't watch."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Sara – read books ✓. Write it.",
+   "o": [
+    "Sara reads books.",
+    "Sara read books.",
+    "Sara doesn't read books.",
+    "Sara reades books."
+   ],
+   "why": "With she, add -s."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A boy in a picture does karate with a red cross. Write it.",
+   "o": [
+    "He doesn't do karate.",
+    "He does karate.",
+    "He doesn't does karate.",
+    "He don't do karate."
+   ],
+   "why": "A red cross means doesn't."
+  },
+  {
+   "lv": "التحليل",
+   "q": "I listen to music. → Rashid ___ to music. What changes?",
+   "o": [
+    "The verb takes -s.",
+    "Nothing changes.",
+    "We add doesn't.",
+    "We add -ing."
+   ],
+   "why": "With he and she, we add -s."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "She ride a bike.",
+    "She rides a bike.",
+    "He reads books.",
+    "He doesn't skateboard."
+   ],
+   "why": "It should be She rides a bike."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we write He doesn't play, not He doesn't plays?",
+   "o": [
+    "doesn't already shows he, so the verb has no -s.",
+    "play is a noun.",
+    "-s is only for I.",
+    "doesn't is a day."
+   ],
+   "why": "After doesn't, the verb has no -s."
+  }
+ ]
+}

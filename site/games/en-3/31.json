@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 3: Hobbies",
+ "lesson": "Unit 3 – Lesson 3: Vocabulary and Grammar (days of the week)",
+ "outcomes": [
+  "I can say the days of the week in order.",
+  "I can ask and answer Does he / she … on …?",
+  "I can spell the days of the week."
+ ],
+ "tf": [
+  {
+   "s": "Wednesday comes after Tuesday.",
+   "t": true,
+   "why": "Yes! Tuesday, then Wednesday."
+  },
+  {
+   "s": "The weekend in Oman is Friday and Saturday.",
+   "t": true,
+   "why": "Right! Friday and Saturday are the weekend."
+  },
+  {
+   "s": "The week starts with Sunday in our list.",
+   "t": true,
+   "why": "Yes! Sunday, Monday, Tuesday …"
+  },
+  {
+   "s": "Thursday comes between Friday and Saturday.",
+   "t": false,
+   "why": "Friday comes between Thursday and Saturday."
+  },
+  {
+   "s": "Wednesday has a silent d.",
+   "t": true,
+   "why": "Well done! We don't hear the d in Wednesday."
+  },
+  {
+   "s": "We answer Does she roller-skate on Mondays? with No, she don't.",
+   "t": false,
+   "why": "We say No, she doesn't."
+  },
+  {
+   "s": "Days of the week start with a capital letter.",
+   "t": true,
+   "why": "Yes! Monday, Tuesday … all start with a capital."
+  },
+  {
+   "s": "We ask: Do he play tennis on Sundays?",
+   "t": false,
+   "why": "With he we ask Does he play tennis on Sundays?"
+  },
+  {
+   "s": "Monday comes after Sunday.",
+   "t": true,
+   "why": "Right! Sunday, then Monday."
+  },
+  {
+   "s": "There are five days in a week.",
+   "t": false,
+   "why": "There are seven days in a week."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What day comes after Tuesday?",
+   "o": [
+    "Wednesday",
+    "Monday",
+    "Thursday"
+   ],
+   "why": "Tuesday → Wednesday."
+  },
+  {
+   "q": "What day is between Thursday and Saturday?",
+   "o": [
+    "Friday",
+    "Sunday",
+    "Wednesday"
+   ],
+   "why": "Thursday, Friday, Saturday."
+  },
+  {
+   "q": "Complete: Friday + Saturday = ___",
+   "o": [
+    "the weekend",
+    "a school day",
+    "Monday"
+   ],
+   "why": "Friday and Saturday are the weekend."
+  },
+  {
+   "q": "Answer: Does he go to school on Thursdays? (yes)",
+   "o": [
+    "Yes, he does.",
+    "Yes, he do.",
+    "Yes, he is."
+   ],
+   "why": "Yes, he does."
+  },
+  {
+   "q": "Answer: Does she roller-skate on Mondays? (no)",
+   "o": [
+    "No, she doesn't.",
+    "No, she don't.",
+    "No, she isn't."
+   ],
+   "why": "No, she doesn't."
+  },
+  {
+   "q": "Spell the day:",
+   "o": [
+    "Wednesday",
+    "Wensday",
+    "Wednsday"
+   ],
+   "why": "W-e-d-n-e-s-d-a-y."
+  },
+  {
+   "q": "Which spelling is correct?",
+   "o": [
+    "Thursday",
+    "Thrusday",
+    "Thursdy"
+   ],
+   "why": "T-h-u-r-s-d-a-y."
+  },
+  {
+   "q": "What day comes after Sunday?",
+   "o": [
+    "Monday",
+    "Saturday",
+    "Friday"
+   ],
+   "why": "Sunday → Monday."
+  },
+  {
+   "q": "Ask about Sara and basketball on Mondays:",
+   "o": [
+    "Does Sara play basketball on Mondays?",
+    "Do Sara play basketball on Mondays?",
+    "Sara plays basketball on Mondays?"
+   ],
+   "why": "Does + Sara + play …?"
+  },
+  {
+   "q": "Complete: I play football ___ Saturdays.",
+   "o": [
+    "on",
+    "in",
+    "at"
+   ],
+   "why": "We say on + day."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "After Tuesday",
+   "a": "Wednesday",
+   "d": [
+    "Monday",
+    "Thursday",
+    "Sunday"
+   ]
+  },
+  {
+   "q": "Between Thursday and Saturday",
+   "a": "Friday",
+   "d": [
+    "Sunday",
+    "Wednesday",
+    "Monday"
+   ]
+  },
+  {
+   "q": "After Sunday",
+   "a": "Monday",
+   "d": [
+    "Saturday",
+    "Tuesday",
+    "Friday"
+   ]
+  },
+  {
+   "q": "Before Saturday",
+   "a": "Friday",
+   "d": [
+    "Sunday",
+    "Thursday",
+    "Monday"
+   ]
+  },
+  {
+   "q": "Before Thursday",
+   "a": "Wednesday",
+   "d": [
+    "Friday",
+    "Tuesday",
+    "Saturday"
+   ]
+  },
+  {
+   "q": "Friday + Saturday",
+   "a": "the weekend",
+   "d": [
+    "school days",
+    "Monday",
+    "a month"
+   ]
+  },
+  {
+   "q": "Does she …? (yes)",
+   "a": "Yes, she does.",
+   "d": [
+    "Yes, she do.",
+    "Yes, she is.",
+    "Yes, she can."
+   ]
+  },
+  {
+   "q": "Does he …? (no)",
+   "a": "No, he doesn't.",
+   "d": [
+    "No, he don't.",
+    "No, he isn't.",
+    "No, he can't."
+   ]
+  },
+  {
+   "q": "Days in a week",
+   "a": "seven",
+   "d": [
+    "five",
+    "six",
+    "ten"
+   ]
+  },
+  {
+   "q": "Silent letter in Wednesday",
+   "a": "d",
+   "d": [
+    "w",
+    "y",
+    "s"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list is in the correct order?",
+   "o": [
+    "Sunday, Monday, Tuesday",
+    "Monday, Sunday, Tuesday",
+    "Tuesday, Monday, Sunday",
+    "Sunday, Tuesday, Monday"
+   ],
+   "why": "Sunday, Monday, Tuesday."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which days are the weekend in Oman?",
+   "o": [
+    "Friday and Saturday",
+    "Sunday and Monday",
+    "Monday and Tuesday",
+    "Wednesday and Thursday"
+   ],
+   "why": "The weekend is Friday and Saturday."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do we start the question about he?",
+   "o": [
+    "Does he …?",
+    "Do he …?",
+    "Is he play …?",
+    "He does …?"
+   ],
+   "why": "Does he …?"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is spelled correctly?",
+   "o": [
+    "Saturday",
+    "Saterday",
+    "Satarday",
+    "Saturdy"
+   ],
+   "why": "S-a-t-u-r-d-a-y."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A boy rides a bike on Tuesday. Does he ride a bike on Tuesdays?",
+   "o": [
+    "Yes, he does.",
+    "No, he doesn't.",
+    "Yes, she does.",
+    "No, he don't."
+   ],
+   "why": "The picture shows him riding on Tuesday."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A girl skateboards on Wednesday. Does she roller-skate on Wednesdays?",
+   "o": [
+    "No, she doesn't.",
+    "Yes, she does.",
+    "Yes, she do.",
+    "No, he doesn't."
+   ],
+   "why": "She skateboards, not roller-skates."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A girl listens to music on Thursday. Choose the question and answer.",
+   "o": [
+    "Does she listen to music on Thursdays? Yes, she does.",
+    "Do she listen to music on Thursdays? Yes, she do.",
+    "Does she listens to music on Thursdays? Yes, she does.",
+    "Does she listen to music on Thursdays? No, she doesn't."
+   ],
+   "why": "Does she + verb …? Yes, she does."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Today is Thursday. What day is it tomorrow?",
+   "o": [
+    "Friday",
+    "Wednesday",
+    "Saturday",
+    "Sunday"
+   ],
+   "why": "After Thursday comes Friday."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your timetable card is empty on Tuesday. What do you ask your partner?",
+   "o": [
+    "What does Sara do on Tuesdays?",
+    "How much is it?",
+    "How old is Sara?",
+    "Where is Tuesday?"
+   ],
+   "why": "Ask to find the missing information."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ahmed goes to school on Sundays. Does he go to school on Fridays?",
+   "o": [
+    "No, he doesn't. Friday is the weekend.",
+    "Yes, he does. Friday is a school day.",
+    "Yes, he do.",
+    "No, she doesn't."
+   ],
+   "why": "Friday is the weekend in Oman."
+  }
+ ]
+}

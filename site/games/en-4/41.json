@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U4",
+ "lesson": "Unit 4 – Lesson 1: Vocabulary 1 (jobs)",
+ "outcomes": [
+  "Name twelve jobs.",
+  "Say where people work and what they do.",
+  "Ask yes/no questions to guess a job."
+ ],
+ "tf": [
+  {
+   "s": "A chef works in a restaurant.",
+   "t": true,
+   "why": "Yes! A chef cooks in a restaurant."
+  },
+  {
+   "s": "A vet works with animals.",
+   "t": true,
+   "why": "Correct! A vet helps animals."
+  },
+  {
+   "s": "A mechanic helps you with your teeth.",
+   "t": false,
+   "why": "A dentist helps with teeth. A mechanic fixes cars."
+  },
+  {
+   "s": "A scientist works in a science lab.",
+   "t": true,
+   "why": "Well done! Scientists work in a lab."
+  },
+  {
+   "s": "A farmer works mostly inside an office.",
+   "t": false,
+   "why": "A farmer works mostly outside, on a farm."
+  },
+  {
+   "s": "A dentist works in a clinic.",
+   "t": true,
+   "why": "Yes! You visit a dentist at a clinic."
+  },
+  {
+   "s": "'River' is a job.",
+   "t": false,
+   "why": "A river is a landscape word, not a job."
+  },
+  {
+   "s": "'Does this person help animals?' is a good question to guess 'vet'.",
+   "t": true,
+   "why": "Great question! Vets help animals."
+  },
+  {
+   "s": "A firefighter fixes cars in a garage.",
+   "t": false,
+   "why": "A mechanic fixes cars. A firefighter puts out fires."
+  },
+  {
+   "s": "Police officers and firefighters help people.",
+   "t": true,
+   "why": "Yes! They both help people."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who fixes cars?",
+   "o": [
+    "a mechanic",
+    "a chef",
+    "a lawyer"
+   ],
+   "why": "A mechanic fixes cars."
+  },
+  {
+   "q": "Who helps you with your teeth?",
+   "o": [
+    "a dentist",
+    "a farmer",
+    "a bus driver"
+   ],
+   "why": "A dentist looks after teeth."
+  },
+  {
+   "q": "Where does a chef work?",
+   "o": [
+    "in a restaurant",
+    "on a farm",
+    "in a garage"
+   ],
+   "why": "A chef works in a restaurant."
+  },
+  {
+   "q": "Who works with animals?",
+   "o": [
+    "a vet",
+    "an engineer",
+    "a lawyer"
+   ],
+   "why": "A vet helps animals."
+  },
+  {
+   "q": "Who works mostly outside?",
+   "o": [
+    "a farmer",
+    "a computer programmer",
+    "a lawyer"
+   ],
+   "why": "A farmer works outside on a farm."
+  },
+  {
+   "q": "Which one is a job?",
+   "o": [
+    "engineer",
+    "waterfall",
+    "forest"
+   ],
+   "why": "An engineer is a job."
+  },
+  {
+   "q": "Who drives a bus?",
+   "o": [
+    "a bus driver",
+    "a dentist",
+    "a vet"
+   ],
+   "why": "A bus driver drives a bus."
+  },
+  {
+   "q": "Where does a farmer work?",
+   "o": [
+    "on a farm",
+    "in a clinic",
+    "in a restaurant"
+   ],
+   "why": "A farmer works on a farm."
+  },
+  {
+   "q": "A spanner is a tool for a ...",
+   "o": [
+    "mechanic",
+    "chef",
+    "dentist"
+   ],
+   "why": "Mechanics use spanners to fix cars."
+  },
+  {
+   "q": "Who works with computers?",
+   "o": [
+    "a computer programmer",
+    "a farmer",
+    "a firefighter"
+   ],
+   "why": "A computer programmer works with computers."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Fixes cars",
+   "a": "mechanic",
+   "d": [
+    "chef",
+    "vet",
+    "lawyer"
+   ]
+  },
+  {
+   "q": "Helps with your teeth",
+   "a": "dentist",
+   "d": [
+    "farmer",
+    "engineer",
+    "chef"
+   ]
+  },
+  {
+   "q": "Works in a restaurant",
+   "a": "chef",
+   "d": [
+    "vet",
+    "mechanic",
+    "dentist"
+   ]
+  },
+  {
+   "q": "Helps animals",
+   "a": "vet",
+   "d": [
+    "lawyer",
+    "chef",
+    "bus driver"
+   ]
+  },
+  {
+   "q": "Works on a farm",
+   "a": "farmer",
+   "d": [
+    "dentist",
+    "lawyer",
+    "engineer"
+   ]
+  },
+  {
+   "q": "Works in a science lab",
+   "a": "scientist",
+   "d": [
+    "farmer",
+    "bus driver",
+    "chef"
+   ]
+  },
+  {
+   "q": "Drives a bus",
+   "a": "bus driver",
+   "d": [
+    "dentist",
+    "vet",
+    "scientist"
+   ]
+  },
+  {
+   "q": "Wears a chef's hat",
+   "a": "chef",
+   "d": [
+    "lawyer",
+    "dentist",
+    "farmer"
+   ]
+  },
+  {
+   "q": "Odd one out (not a job)",
+   "a": "river",
+   "d": [
+    "dentist",
+    "vet",
+    "lawyer"
+   ]
+  },
+  {
+   "q": "Puts out fires",
+   "a": "firefighter",
+   "d": [
+    "chef",
+    "dentist",
+    "lawyer"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word is a job?",
+   "o": [
+    "lawyer",
+    "forest",
+    "mountain",
+    "lake"
+   ],
+   "why": "A lawyer is a job."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where does a dentist work?",
+   "o": [
+    "in a clinic",
+    "on a farm",
+    "in a restaurant",
+    "in a garage"
+   ],
+   "why": "A dentist works in a clinic."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which job uses a spanner?",
+   "o": [
+    "mechanic",
+    "dentist",
+    "chef",
+    "lawyer"
+   ],
+   "why": "A mechanic uses a spanner to fix cars."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who works in a science lab?",
+   "o": [
+    "a scientist",
+    "a farmer",
+    "a chef",
+    "a bus driver"
+   ],
+   "why": "Scientists work in labs."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Riddle: 'I wear a white coat and I look at your teeth.' Who am I?",
+   "o": [
+    "a dentist",
+    "a chef",
+    "a farmer",
+    "a mechanic"
+   ],
+   "why": "A dentist looks at your teeth."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Riddle: 'This person fixes cars in a garage.' Who is it?",
+   "o": [
+    "a mechanic",
+    "a vet",
+    "a scientist",
+    "a lawyer"
+   ],
+   "why": "Mechanics fix cars in a garage."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to guess 'chef'. Which question is best?",
+   "o": [
+    "Does this person work in a restaurant?",
+    "Does this person fix cars?",
+    "Does this person help animals?",
+    "Does this person drive a bus?"
+   ],
+   "why": "Chefs work in restaurants."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group has three jobs that help people?",
+   "o": [
+    "police officer, firefighter, dentist",
+    "river, forest, lake",
+    "chef, waterfall, mountain",
+    "desert, vet, beach"
+   ],
+   "why": "These three jobs all help people."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Odd one out: dentist, vet, lawyer, river",
+   "o": [
+    "river",
+    "dentist",
+    "vet",
+    "lawyer"
+   ],
+   "why": "River is not a job."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sara loves animals and wants to help them. Which job is best for her?",
+   "o": [
+    "vet",
+    "mechanic",
+    "lawyer",
+    "bus driver"
+   ],
+   "why": "A vet helps animals."
+  }
+ ]
+}

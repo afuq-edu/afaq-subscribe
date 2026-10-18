@@ -1,0 +1,358 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 3: Hobbies",
+ "lesson": "Unit 3 – Lesson 7: Phonics (i-e, a-e, o-e, u-e)",
+ "outcomes": [
+  "I can say the magic-e sounds in bike, cake, stone, cube and tube.",
+  "I can use do and does in questions and short answers."
+ ],
+ "tf": [
+  {
+   "s": "In bike, the e at the end is silent.",
+   "t": true,
+   "why": "Yes! The e is silent and makes i say its name."
+  },
+  {
+   "s": "The magic e makes the vowel say its name.",
+   "t": true,
+   "why": "Right! a-e in cake says a."
+  },
+  {
+   "s": "Cake has the split vowel o-e.",
+   "t": false,
+   "why": "Cake has a-e."
+  },
+  {
+   "s": "Cube and tube have u-e.",
+   "t": true,
+   "why": "Well done! c-u-b-e, t-u-b-e."
+  },
+  {
+   "s": "When we add e to kit, we get kite.",
+   "t": true,
+   "why": "Yes! kit → kite."
+  },
+  {
+   "s": "Stone has i-e.",
+   "t": false,
+   "why": "Stone has o-e."
+  },
+  {
+   "s": "We ask: Does you speak English?",
+   "t": false,
+   "why": "With you we say Do: Do you speak English?"
+  },
+  {
+   "s": "We ask: Does she like cake?",
+   "t": true,
+   "why": "Yes! does goes with he and she."
+  },
+  {
+   "s": "Short answer: Does he play the flute? No, he don't.",
+   "t": false,
+   "why": "We say No, he doesn't."
+  },
+  {
+   "s": "We use do with I and you.",
+   "t": true,
+   "why": "Right! Do you …? Yes, I do."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word has i-e?",
+   "o": [
+    "bike",
+    "cake",
+    "stone"
+   ],
+   "why": "b-i-k-e has i-e."
+  },
+  {
+   "q": "Which word has a-e?",
+   "o": [
+    "cake",
+    "cube",
+    "bike"
+   ],
+   "why": "c-a-k-e has a-e."
+  },
+  {
+   "q": "Which word has o-e?",
+   "o": [
+    "stone",
+    "tube",
+    "kite"
+   ],
+   "why": "s-t-o-n-e has o-e."
+  },
+  {
+   "q": "Complete: c_k_ (something sweet)",
+   "o": [
+    "a, e",
+    "i, e",
+    "o, e"
+   ],
+   "why": "The word is cake."
+  },
+  {
+   "q": "Complete: t_b_",
+   "o": [
+    "u, e",
+    "a, e",
+    "o, e"
+   ],
+   "why": "The word is tube."
+  },
+  {
+   "q": "cub → cube. What does the e do?",
+   "o": [
+    "It makes u say its name.",
+    "It makes u silent.",
+    "It makes the word plural."
+   ],
+   "why": "Magic e makes the vowel say its name."
+  },
+  {
+   "q": "Choose: ___ you speak English?",
+   "o": [
+    "Do",
+    "Does",
+    "Is"
+   ],
+   "why": "Do goes with you."
+  },
+  {
+   "q": "Answer: Does he play the flute? (no)",
+   "o": [
+    "No, he doesn't.",
+    "No, he don't.",
+    "No, he isn't."
+   ],
+   "why": "No, he doesn't."
+  },
+  {
+   "q": "Complete: ___ she like cake? Yes, she ___.",
+   "o": [
+    "Does / does",
+    "Do / do",
+    "Does / do"
+   ],
+   "why": "Does she …? Yes, she does."
+  },
+  {
+   "q": "A small hard rock is a …",
+   "o": [
+    "stone",
+    "cube",
+    "tube"
+   ],
+   "why": "A stone is a small hard rock."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Split vowel in bike",
+   "a": "i-e",
+   "d": [
+    "a-e",
+    "o-e",
+    "u-e"
+   ]
+  },
+  {
+   "q": "Split vowel in cake",
+   "a": "a-e",
+   "d": [
+    "i-e",
+    "o-e",
+    "u-e"
+   ]
+  },
+  {
+   "q": "Split vowel in stone",
+   "a": "o-e",
+   "d": [
+    "a-e",
+    "i-e",
+    "u-e"
+   ]
+  },
+  {
+   "q": "Split vowel in cube",
+   "a": "u-e",
+   "d": [
+    "o-e",
+    "a-e",
+    "i-e"
+   ]
+  },
+  {
+   "q": "kit + e",
+   "a": "kite",
+   "d": [
+    "kit",
+    "kitty",
+    "kites"
+   ]
+  },
+  {
+   "q": "cap + e",
+   "a": "cape",
+   "d": [
+    "cap",
+    "capes",
+    "cup"
+   ]
+  },
+  {
+   "q": "A small hard rock",
+   "a": "stone",
+   "d": [
+    "cube",
+    "cake",
+    "tube"
+   ]
+  },
+  {
+   "q": "___ you ride a bike?",
+   "a": "Do",
+   "d": [
+    "Does",
+    "Is",
+    "Are"
+   ]
+  },
+  {
+   "q": "___ she like cake?",
+   "a": "Does",
+   "d": [
+    "Do",
+    "Is",
+    "Are"
+   ]
+  },
+  {
+   "q": "Does he …? (no)",
+   "a": "No, he doesn't.",
+   "d": [
+    "No, he don't.",
+    "No, he isn't.",
+    "No, I don't."
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word has the same vowel sound as gate?",
+   "o": [
+    "cake",
+    "bike",
+    "tube",
+    "stone"
+   ],
+   "why": "gate and cake both have a-e."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has the same vowel sound as phone?",
+   "o": [
+    "stone",
+    "kite",
+    "cube",
+    "cake"
+   ],
+   "why": "phone and stone both have o-e."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the tongue twister?",
+   "o": [
+    "The boy has got a cube, a bike, a cake and a stone.",
+    "The girl has got a hat, a cat and a mat.",
+    "I can hear a vulture.",
+    "Let's play a game!"
+   ],
+   "why": "The boy has got a cube, a bike, a cake and a stone."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a tricky word in this lesson?",
+   "o": [
+    "does",
+    "cube",
+    "bike",
+    "stone"
+   ],
+   "why": "do and does are the tricky words."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ask your partner about his sister and cake.",
+   "o": [
+    "Does your sister like cake?",
+    "Do your sister like cake?",
+    "Does your sister likes cake?",
+    "Your sister like cake?"
+   ],
+   "why": "Does + your sister + like …?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Answer: Do you ride a bike to school? (no)",
+   "o": [
+    "No, I don't.",
+    "No, I doesn't.",
+    "No, you don't.",
+    "No, he doesn't."
+   ],
+   "why": "No, I don't."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete the word: k_t_ (it flies in the sky)",
+   "o": [
+    "i, e",
+    "a, e",
+    "o, e",
+    "u, e"
+   ],
+   "why": "The word is kite."
+  },
+  {
+   "lv": "التحليل",
+   "q": "cub has no e. cube has an e. What changes?",
+   "o": [
+    "The u says its name.",
+    "Nothing changes.",
+    "The word gets shorter.",
+    "The b is silent."
+   ],
+   "why": "Magic e makes u say its name."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT have magic e?",
+   "o": [
+    "cub",
+    "cube",
+    "tube",
+    "bike"
+   ],
+   "why": "cub has no e at the end."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sort: I, you, he, she. Which two go with does?",
+   "o": [
+    "he and she",
+    "I and you",
+    "I and he",
+    "you and she"
+   ],
+   "why": "he and she go with does."
+  }
+ ]
+}

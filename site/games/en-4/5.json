@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U1",
+ "lesson": "Unit 1 – Lesson 3: Grammar 1 (present simple with days and times)",
+ "outcomes": [
+  "Tell the time: o'clock, quarter past, half past, quarter to.",
+  "Talk about a timetable: We have Maths on Tuesdays at half past ten.",
+  "Ask and answer: When do you have ...?"
+ ],
+ "tf": [
+  {
+   "s": "10.15 is 'quarter past ten'.",
+   "t": true,
+   "why": "Yes! 15 minutes past ten is quarter past ten."
+  },
+  {
+   "s": "12.45 is 'quarter past twelve'.",
+   "t": false,
+   "why": "12.45 is quarter to one."
+  },
+  {
+   "s": "We say: We have Maths on Tuesdays.",
+   "t": true,
+   "why": "Correct! We use on with days."
+  },
+  {
+   "s": "We say: We have English in nine o'clock.",
+   "t": false,
+   "why": "We use at with times: at nine o'clock."
+  },
+  {
+   "s": "8.30 is 'half past eight'.",
+   "t": true,
+   "why": "Great! 30 minutes past eight is half past eight."
+  },
+  {
+   "s": "We say: She have Art on Sundays.",
+   "t": false,
+   "why": "With she we use has: She has Art on Sundays."
+  },
+  {
+   "s": "The question is: When does she have P.E.?",
+   "t": true,
+   "why": "Yes! We use does with she."
+  },
+  {
+   "s": "'Azza doesn't have P.E.' is a negative sentence.",
+   "t": true,
+   "why": "Right! doesn't makes the sentence negative."
+  },
+  {
+   "s": "9.45 is 'quarter to nine'.",
+   "t": false,
+   "why": "9.45 is quarter to ten."
+  },
+  {
+   "s": "We say: I have Science at quarter past eleven.",
+   "t": true,
+   "why": "Well done! at + time."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "We have Maths ___ Tuesdays.",
+   "o": [
+    "on",
+    "at",
+    "in"
+   ],
+   "why": "We use on with days."
+  },
+  {
+   "q": "She has Art ___ twelve o'clock.",
+   "o": [
+    "at",
+    "on",
+    "in"
+   ],
+   "why": "We use at with times."
+  },
+  {
+   "q": "She ___ Maths at quarter past eight.",
+   "o": [
+    "has",
+    "have",
+    "having"
+   ],
+   "why": "With she we use has."
+  },
+  {
+   "q": "When ___ you have English?",
+   "o": [
+    "do",
+    "does",
+    "is"
+   ],
+   "why": "With you we use do."
+  },
+  {
+   "q": "When ___ he have Science?",
+   "o": [
+    "does",
+    "do",
+    "are"
+   ],
+   "why": "With he we use does."
+  },
+  {
+   "q": "What time is 11.15?",
+   "o": [
+    "quarter past eleven",
+    "quarter to eleven",
+    "half past eleven"
+   ],
+   "why": "15 minutes past eleven."
+  },
+  {
+   "q": "What time is 7.30?",
+   "o": [
+    "half past seven",
+    "half past six",
+    "quarter to seven"
+   ],
+   "why": "30 minutes past seven."
+  },
+  {
+   "q": "What time is 3.00?",
+   "o": [
+    "three o'clock",
+    "half past three",
+    "quarter past three"
+   ],
+   "why": "Exactly three is three o'clock."
+  },
+  {
+   "q": "Azza ___ have P.E. at quarter to ten.",
+   "o": [
+    "doesn't",
+    "don't",
+    "isn't"
+   ],
+   "why": "With Azza (she) we use doesn't."
+  },
+  {
+   "q": "Answer: 'When do you have English?'",
+   "o": [
+    "We have English at eight o'clock.",
+    "Yes, I do.",
+    "I like English."
+   ],
+   "why": "We answer 'When?' with a time."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "10.15 = ?",
+   "a": "quarter past ten",
+   "d": [
+    "quarter to ten",
+    "half past ten",
+    "ten o'clock"
+   ]
+  },
+  {
+   "q": "12.45 = ?",
+   "a": "quarter to one",
+   "d": [
+    "quarter past one",
+    "half past twelve",
+    "twelve o'clock"
+   ]
+  },
+  {
+   "q": "8.30 = ?",
+   "a": "half past eight",
+   "d": [
+    "half past nine",
+    "quarter to eight",
+    "eight o'clock"
+   ]
+  },
+  {
+   "q": "1.30 = ?",
+   "a": "half past one",
+   "d": [
+    "quarter past one",
+    "half past two",
+    "one o'clock"
+   ]
+  },
+  {
+   "q": "9.45 = ?",
+   "a": "quarter to ten",
+   "d": [
+    "quarter to nine",
+    "quarter past nine",
+    "half past nine"
+   ]
+  },
+  {
+   "q": "12.00 = ?",
+   "a": "twelve o'clock",
+   "d": [
+    "half past twelve",
+    "quarter to twelve",
+    "quarter past twelve"
+   ]
+  },
+  {
+   "q": "Word before a day?",
+   "a": "on",
+   "d": [
+    "at",
+    "in",
+    "to"
+   ]
+  },
+  {
+   "q": "Word before a time?",
+   "a": "at",
+   "d": [
+    "on",
+    "in",
+    "to"
+   ]
+  },
+  {
+   "q": "She ___ Art.",
+   "a": "has",
+   "d": [
+    "have",
+    "haves",
+    "having"
+   ]
+  },
+  {
+   "q": "When ___ she have P.E.?",
+   "a": "does",
+   "d": [
+    "do",
+    "is",
+    "are"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which time is 'quarter past'?",
+   "o": [
+    "four fifteen (4.15)",
+    "four forty-five (4.45)",
+    "four thirty (4.30)",
+    "four o'clock (4.00)"
+   ],
+   "why": "Quarter past means 15 minutes past the hour."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word do we use before days?",
+   "o": [
+    "on",
+    "at",
+    "in",
+    "to"
+   ],
+   "why": "On Mondays, on Tuesdays..."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the negative sentence?",
+   "o": [
+    "She doesn't have Art.",
+    "She has Art.",
+    "She likes Art.",
+    "She has Art at nine."
+   ],
+   "why": "doesn't makes it negative."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What time is half past ten?",
+   "o": [
+    "10.30",
+    "10.15",
+    "9.30",
+    "10.45"
+   ],
+   "why": "Half past ten = 10.30."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write the question for: 'We have English at eight o'clock.'",
+   "o": [
+    "When do you have English?",
+    "When does you have English?",
+    "What is English?",
+    "Do you like English?"
+   ],
+   "why": "We ask about time with 'When do you have ...?'"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Hamzah has Art at 12.00 on Wednesday. Choose the correct sentence.",
+   "o": [
+    "He has Art on Wednesday at twelve o'clock.",
+    "He have Art in Wednesday at twelve o'clock.",
+    "He has Art at Wednesday on twelve o'clock.",
+    "He has Art on Wednesday at half past twelve."
+   ],
+   "why": "has + on + day + at + time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make it negative: 'Azza has P.E. at quarter to ten.'",
+   "o": [
+    "Azza doesn't have P.E. at quarter to ten.",
+    "Azza don't have P.E. at quarter to ten.",
+    "Azza doesn't has P.E. at quarter to ten.",
+    "Azza not have P.E. at quarter to ten."
+   ],
+   "why": "doesn't + have (not has)."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the mistake: 'We have English in Mondays at nine o'clock.'",
+   "o": [
+    "in should be on",
+    "at should be on",
+    "have should be has",
+    "nine should be ninth"
+   ],
+   "why": "We use on with days: on Mondays."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Hamzah has Science at 1.30. What time is it in words?",
+   "o": [
+    "half past one",
+    "quarter past one",
+    "half past two",
+    "one thirty past"
+   ],
+   "why": "1.30 is half past one."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we write 'She has' but 'We have'?",
+   "o": [
+    "We add -s (has) with he, she and it.",
+    "Because 'has' is for times.",
+    "Because 'have' is for days.",
+    "There is no rule."
+   ],
+   "why": "Good thinking! With he, she or it we use has."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 3: Hobbies",
+ "lesson": "Unit 3 – Lesson 4: Skills",
+ "outcomes": [
+  "I can listen and choose the right day.",
+  "I can read a text and give short answers.",
+  "I can write about my week with on and at."
+ ],
+ "tf": [
+  {
+   "s": "We say on + day: on Mondays.",
+   "t": true,
+   "why": "Yes! on Mondays, on Fridays."
+  },
+  {
+   "s": "We say at the weekend.",
+   "t": true,
+   "why": "Right! at the weekend."
+  },
+  {
+   "s": "We say: I play football at Sundays.",
+   "t": false,
+   "why": "With a day we use on: on Sundays."
+  },
+  {
+   "s": "Adam plays tennis on Mondays.",
+   "t": true,
+   "why": "Yes! Adam plays tennis on Mondays."
+  },
+  {
+   "s": "Adam plays basketball on Mondays.",
+   "t": false,
+   "why": "Adam plays basketball at the weekend."
+  },
+  {
+   "s": "Bayan skateboards on Tuesdays.",
+   "t": true,
+   "why": "Right! Bayan skateboards on Tuesdays."
+  },
+  {
+   "s": "Bayan roller-skates on Tuesdays.",
+   "t": false,
+   "why": "Bayan roller-skates on Thursdays."
+  },
+  {
+   "s": "Before listening, we read the sentence and look at the three days.",
+   "t": true,
+   "why": "Great tip! Read first, then listen."
+  },
+  {
+   "s": "In the game: Does he roller-skate on Wednesdays? No, he doesn't. He roller-skates at the weekend.",
+   "t": true,
+   "why": "Yes, he roller-skates at the weekend."
+  },
+  {
+   "s": "We find a sentence in the text to prove our answer.",
+   "t": true,
+   "why": "Well done! Proof sentences show we are right."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Does Adam play tennis on Mondays?",
+   "o": [
+    "Yes, he does.",
+    "No, he doesn't.",
+    "Yes, she does."
+   ],
+   "why": "Adam plays tennis on Mondays."
+  },
+  {
+   "q": "When does Adam play basketball?",
+   "o": [
+    "At the weekend",
+    "On Mondays",
+    "On Tuesdays"
+   ],
+   "why": "He plays basketball at the weekend."
+  },
+  {
+   "q": "Does Bayan roller-skate on Tuesdays?",
+   "o": [
+    "No, she doesn't.",
+    "Yes, she does.",
+    "No, he doesn't."
+   ],
+   "why": "She roller-skates on Thursdays."
+  },
+  {
+   "q": "Does Bayan skateboard on Tuesdays?",
+   "o": [
+    "Yes, she does.",
+    "No, she doesn't.",
+    "Yes, he does."
+   ],
+   "why": "Bayan skateboards on Tuesdays."
+  },
+  {
+   "q": "When does Bayan roller-skate?",
+   "o": [
+    "On Thursdays",
+    "On Mondays",
+    "At the weekend"
+   ],
+   "why": "She roller-skates on Thursdays."
+  },
+  {
+   "q": "Complete: I watch TV ___ the weekend.",
+   "o": [
+    "at",
+    "on",
+    "in"
+   ],
+   "why": "We say at the weekend."
+  },
+  {
+   "q": "Complete: I play football ___ Sundays.",
+   "o": [
+    "on",
+    "at",
+    "in"
+   ],
+   "why": "We say on + day."
+  },
+  {
+   "q": "Ask: girl skateboarding, Saturday.",
+   "o": [
+    "Does she skateboard on Saturdays?",
+    "Do she skateboard on Saturdays?",
+    "Does she skateboards on Saturdays?"
+   ],
+   "why": "Does she + verb …?"
+  },
+  {
+   "q": "What do you look at before listening?",
+   "o": [
+    "The sentence and the three days",
+    "The page number",
+    "The clock"
+   ],
+   "why": "Read first so you know what to listen for."
+  },
+  {
+   "q": "Proof for: Bayan doesn't roller-skate on Tuesdays.",
+   "o": [
+    "She roller-skates on Thursdays.",
+    "She skateboards on Mondays.",
+    "Adam plays tennis."
+   ],
+   "why": "This sentence shows she roller-skates on Thursdays."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Adam plays tennis on …",
+   "a": "Mondays",
+   "d": [
+    "Tuesdays",
+    "Thursdays",
+    "Fridays"
+   ]
+  },
+  {
+   "q": "Adam plays basketball …",
+   "a": "at the weekend",
+   "d": [
+    "on Mondays",
+    "on Tuesdays",
+    "on Thursdays"
+   ]
+  },
+  {
+   "q": "Bayan skateboards on …",
+   "a": "Tuesdays",
+   "d": [
+    "Mondays",
+    "Thursdays",
+    "Saturdays"
+   ]
+  },
+  {
+   "q": "Bayan roller-skates on …",
+   "a": "Thursdays",
+   "d": [
+    "Tuesdays",
+    "Mondays",
+    "Sundays"
+   ]
+  },
+  {
+   "q": "I watch TV ___ the weekend.",
+   "a": "at",
+   "d": [
+    "on",
+    "in",
+    "by"
+   ]
+  },
+  {
+   "q": "I read books ___ Sundays.",
+   "a": "on",
+   "d": [
+    "at",
+    "in",
+    "by"
+   ]
+  },
+  {
+   "q": "Does Adam play tennis on Mondays?",
+   "a": "Yes, he does.",
+   "d": [
+    "No, he doesn't.",
+    "Yes, she does.",
+    "No, she doesn't."
+   ]
+  },
+  {
+   "q": "Does Bayan roller-skate on Tuesdays?",
+   "a": "No, she doesn't.",
+   "d": [
+    "Yes, she does.",
+    "No, he doesn't.",
+    "Yes, he does."
+   ]
+  },
+  {
+   "q": "He roller-skates …",
+   "a": "at the weekend",
+   "d": [
+    "on Wednesdays",
+    "on Mondays",
+    "on Tuesdays"
+   ]
+  },
+  {
+   "q": "Does he roller-skate on Wednesdays?",
+   "a": "No, he doesn't.",
+   "d": [
+    "Yes, he does.",
+    "Yes, she does.",
+    "No, she doesn't."
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is correct?",
+   "o": [
+    "on Mondays",
+    "at Mondays",
+    "in Mondays",
+    "by Mondays"
+   ],
+   "why": "We use on with days."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Choose the right words: I play video games ___.",
+   "o": [
+    "at the weekend",
+    "on the weekend day",
+    "in weekend",
+    "by the weekend"
+   ],
+   "why": "We say at the weekend."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Adam NOT play on Mondays?",
+   "o": [
+    "basketball",
+    "tennis",
+    "the piano",
+    "football and tennis"
+   ],
+   "why": "He doesn't play basketball on Mondays."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Bayan do on Tuesdays?",
+   "o": [
+    "She skateboards.",
+    "She roller-skates.",
+    "She plays tennis.",
+    "She does karate."
+   ],
+   "why": "Bayan skateboards on Tuesdays."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write about your week: I ___ football ___ Sundays.",
+   "o": [
+    "play / on",
+    "plays / at",
+    "play / at",
+    "playing / in"
+   ],
+   "why": "I play … on Sundays."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Card: a girl skateboarding on Saturday. Does she skateboard on Saturdays?",
+   "o": [
+    "Yes, she does.",
+    "No, she doesn't.",
+    "Yes, he does.",
+    "No, he doesn't."
+   ],
+   "why": "The card shows her skateboarding on Saturday."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "I watch TV at the weekend.",
+    "I watch TV on the weekend day.",
+    "I watches TV at the weekend.",
+    "I watch TV in Sundays."
+   ],
+   "why": "I + verb + at the weekend."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Bayan roller-skates on Thursdays. So, does she roller-skate on Tuesdays?",
+   "o": [
+    "No, she doesn't.",
+    "Yes, she does.",
+    "Yes, he does.",
+    "We can't know"
+   ],
+   "why": "Thursdays, not Tuesdays, so No, she doesn't."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Adam plays basketball at the weekend. Does he play basketball on Mondays?",
+   "o": [
+    "No, he doesn't.",
+    "Yes, he does.",
+    "Yes, she does.",
+    "No, she doesn't."
+   ],
+   "why": "Monday is not the weekend."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we read the sentences before we listen?",
+   "o": [
+    "To know what to listen for",
+    "To finish quickly",
+    "To skip the listening",
+    "To draw pictures"
+   ],
+   "why": "Reading first helps us find the answer."
+  }
+ ]
+}

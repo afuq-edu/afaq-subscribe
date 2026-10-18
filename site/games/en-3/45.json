@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 4: I want to be a doctor!",
+ "lesson": "Unit 4 – Lesson 6: English in action (talking on the phone)",
+ "outcomes": [
+  "I can ask for a person on the phone.",
+  "I can say my name and phone number.",
+  "I can take a phone message."
+ ],
+ "tf": [
+  {
+   "s": "We ask: Hello, can I speak to Emily, please?",
+   "t": true,
+   "why": "Yes! That is a polite way to ask."
+  },
+  {
+   "s": "When someone isn't there, we say: Emily's not here.",
+   "t": true,
+   "why": "Right! Then we ask: Who is this?"
+  },
+  {
+   "s": "To say who you are on the phone, we say: I'm is Alice.",
+   "t": false,
+   "why": "We say: This is Alice."
+  },
+  {
+   "s": "We say phone numbers digit by digit.",
+   "t": true,
+   "why": "Great! We say each number one by one."
+  },
+  {
+   "s": "We say a phone number as one big number.",
+   "t": false,
+   "why": "We say it digit by digit: two-six-nine-zero …"
+  },
+  {
+   "s": "A phone message has a name and a phone number.",
+   "t": true,
+   "why": "Yes! Write the name and the number."
+  },
+  {
+   "s": "In the dialogue, Manar wants to speak to Nawal.",
+   "t": true,
+   "why": "Well done! Manar calls Nawal."
+  },
+  {
+   "s": "Nawal answers the phone and talks to Manar.",
+   "t": false,
+   "why": "Nawal's not here. She can call Manar later."
+  },
+  {
+   "s": "We end with: Thanks, Manar. Nawal can call you later.",
+   "t": true,
+   "why": "Yes! That is a nice way to finish."
+  },
+  {
+   "s": "We say: Emily can calls you later.",
+   "t": false,
+   "why": "After can, we say call."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How do you ask for a person on the phone?",
+   "o": [
+    "Can I speak to Emily, please?",
+    "Where is the phone?",
+    "What's your phone?"
+   ],
+   "why": "We say: Can I speak to …, please?"
+  },
+  {
+   "q": "What do you ask when you don't know the caller?",
+   "o": [
+    "Who is this?",
+    "What is this?",
+    "Where is this?"
+   ],
+   "why": "We ask: Who is this?"
+  },
+  {
+   "q": "Who is calling Nawal?",
+   "o": [
+    "Manar",
+    "Emily",
+    "Alice"
+   ],
+   "why": "Manar is calling Nawal."
+  },
+  {
+   "q": "Complete: Nawal ___ call you later.",
+   "o": [
+    "can",
+    "is",
+    "does"
+   ],
+   "why": "Nawal can call you later."
+  },
+  {
+   "q": "Complete: Emily can ___ you later.",
+   "o": [
+    "call",
+    "calls",
+    "calling"
+   ],
+   "why": "After can, use call."
+  },
+  {
+   "q": "Complete: My phone ___ is 12345708.",
+   "o": [
+    "number",
+    "name",
+    "letter"
+   ],
+   "why": "My phone number is …"
+  },
+  {
+   "q": "What is the first line of a phone call?",
+   "o": [
+    "Hello, can I speak to …?",
+    "Thanks, Ahmed.",
+    "This is Ahmed."
+   ],
+   "why": "We start with Hello."
+  },
+  {
+   "q": "What do you write in a phone message?",
+   "o": [
+    "name and phone number",
+    "colour and size",
+    "day and weather"
+   ],
+   "why": "A message has the name and the number."
+  },
+  {
+   "q": "Say 0",
+   "o": [
+    "zero",
+    "ten",
+    "one"
+   ],
+   "why": "0 is zero."
+  },
+  {
+   "q": "What is the last line of the call?",
+   "o": [
+    "Thanks, Ahmed. Osamah can call you later.",
+    "Hello, can I speak to Osamah?",
+    "Osamah's not here."
+   ],
+   "why": "We finish with Thanks."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Who is calling Nawal?",
+   "a": "Manar",
+   "d": [
+    "Emily",
+    "Alice",
+    "Basim"
+   ]
+  },
+  {
+   "q": "Who isn't here?",
+   "a": "Nawal",
+   "d": [
+    "Manar",
+    "Ali",
+    "Ahmed"
+   ]
+  },
+  {
+   "q": "Osamah's ___ here.",
+   "a": "not",
+   "d": [
+    "no",
+    "isn't",
+    "don't"
+   ]
+  },
+  {
+   "q": "___ is Alice.",
+   "a": "This",
+   "d": [
+    "I",
+    "Me",
+    "My"
+   ]
+  },
+  {
+   "q": "Emily can ___ you later.",
+   "a": "call",
+   "d": [
+    "calls",
+    "speak",
+    "calling"
+   ]
+  },
+  {
+   "q": "Can I ___ to Emily?",
+   "a": "speak",
+   "d": [
+    "call",
+    "say",
+    "tell"
+   ]
+  },
+  {
+   "q": "Hello, ___ I speak to Emily?",
+   "a": "can",
+   "d": [
+    "do",
+    "is",
+    "am"
+   ]
+  },
+  {
+   "q": "Say 7",
+   "a": "seven",
+   "d": [
+    "six",
+    "nine",
+    "five"
+   ]
+  },
+  {
+   "q": "Say 9",
+   "a": "nine",
+   "d": [
+    "four",
+    "seven",
+    "zero"
+   ]
+  },
+  {
+   "q": "First digit of 26903457",
+   "a": "two",
+   "d": [
+    "six",
+    "seven",
+    "nine"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does Manar say after Who is this?",
+   "o": [
+    "This is Manar.",
+    "Who is Manar?",
+    "Manar's not here.",
+    "Thanks, Manar."
+   ],
+   "why": "We say: This is Manar."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is Manar's phone number?",
+   "o": [
+    "12345708",
+    "26903457",
+    "76598710",
+    "16543408"
+   ],
+   "why": "Manar's number is 12345708."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word do we use to be polite?",
+   "o": [
+    "please",
+    "phone",
+    "later",
+    "here"
+   ],
+   "why": "Please is a polite word."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'not now, after some time'?",
+   "o": [
+    "later",
+    "here",
+    "please",
+    "hello"
+   ],
+   "why": "Later means after some time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Say Laila's phone number: 26903457",
+   "o": [
+    "two-six-nine-zero-three-four-five-seven",
+    "two-six-nine-three-zero-four-five-seven",
+    "twenty-six-ninety-thirty-four-fifty-seven",
+    "two-six-nine-zero-three-five-four-seven"
+   ],
+   "why": "Say each digit in order."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Take a message for Nawal.",
+   "o": [
+    "Name: Manar. Phone number: 12345708.",
+    "Name: Nawal. Phone number: 12345708.",
+    "Name: Manar. Phone number: 12345780.",
+    "Name: Emily. Phone number: 26903457."
+   ],
+   "why": "Write the caller's name and number correctly."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are Basim (16543408). What do you say?",
+   "o": [
+    "This is Basim. My phone number is 16543408.",
+    "I'm is Basim. My number 16543408.",
+    "Who is Basim? My phone is 16543408.",
+    "This is Basim. My phone number is 16543480."
+   ],
+   "why": "Say This is … and the correct number."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Put in order: A Thanks, Ahmed … / B Hello, can I speak … / C This is Ahmed … / D Osamah's not here …",
+   "o": [
+    "B, D, C, A",
+    "A, B, C, D",
+    "B, C, D, A",
+    "D, B, A, C"
+   ],
+   "why": "Hello, then not here, then This is, then Thanks."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we write down the phone number in a message?",
+   "o": [
+    "So the person can call back later",
+    "So we can draw it",
+    "So we can forget it",
+    "So we can sing it"
+   ],
+   "why": "The number helps Nawal call back."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A caller asks for your sister, but she isn't at home. What is the best reply?",
+   "o": [
+    "She's not here. Who is this?",
+    "Goodbye!",
+    "Yes, I'm your sister.",
+    "My phone is red."
+   ],
+   "why": "Say she's not here and ask who is calling."
+  }
+ ]
+}

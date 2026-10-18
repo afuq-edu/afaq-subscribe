@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 4: I want to be a doctor!",
+ "lesson": "Unit 4 – Lesson 7: Phonics (ea, ea)",
+ "outcomes": [
+  "I can say the long ea in read and the short ea in bread.",
+  "I can sort ea words into two groups.",
+  "I can read and write the tricky word want."
+ ],
+ "tf": [
+  {
+   "s": "The ea in beach is long, like in read.",
+   "t": true,
+   "why": "Yes! beach and read have the long ea."
+  },
+  {
+   "s": "The ea in bread is long, like in sea.",
+   "t": false,
+   "why": "The ea in bread is short, like in head."
+  },
+  {
+   "s": "head and feather have the same ea sound.",
+   "t": true,
+   "why": "Right! Both have the short ea."
+  },
+  {
+   "s": "leaf and weather have the same ea sound.",
+   "t": false,
+   "why": "leaf has a long ea. weather has a short ea."
+  },
+  {
+   "s": "sea has the long ea sound.",
+   "t": true,
+   "why": "Well done! sea has the long ea."
+  },
+  {
+   "s": "The letters ea can make two different sounds.",
+   "t": true,
+   "why": "Yes! ea can be long or short."
+  },
+  {
+   "s": "We say: She want a kite.",
+   "t": false,
+   "why": "With she, we say wants."
+  },
+  {
+   "s": "We say: I want to go to the beach.",
+   "t": true,
+   "why": "Great! I want to … is correct."
+  },
+  {
+   "s": "We spell the tricky word want: w-o-n-t.",
+   "t": false,
+   "why": "We spell it w-a-n-t."
+  },
+  {
+   "s": "The word read and the word bread have the same ea sound.",
+   "t": false,
+   "why": "read has a long ea. bread has a short ea."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Is the ea in beach long or short?",
+   "o": [
+    "long",
+    "short",
+    "silent"
+   ],
+   "why": "beach has a long ea."
+  },
+  {
+   "q": "Is the ea in bread long or short?",
+   "o": [
+    "short",
+    "long",
+    "silent"
+   ],
+   "why": "bread has a short ea."
+  },
+  {
+   "q": "Which word has the same ea sound as head?",
+   "o": [
+    "bread",
+    "sea",
+    "leaf"
+   ],
+   "why": "head and bread have a short ea."
+  },
+  {
+   "q": "Which word has the same ea sound as read?",
+   "o": [
+    "leaf",
+    "feather",
+    "weather"
+   ],
+   "why": "read and leaf have a long ea."
+  },
+  {
+   "q": "Complete: w___ther",
+   "o": [
+    "ea",
+    "ee",
+    "ai"
+   ],
+   "why": "We write weather."
+  },
+  {
+   "q": "Complete: I ___ to make some bread.",
+   "o": [
+    "want",
+    "wants",
+    "wanting"
+   ],
+   "why": "With I, we say want."
+  },
+  {
+   "q": "Complete: She ___ a kite, some bread and a leaf.",
+   "o": [
+    "wants",
+    "want",
+    "wanting"
+   ],
+   "why": "With she, we say wants."
+  },
+  {
+   "q": "Complete: I want to ___ a leaf.",
+   "o": [
+    "see",
+    "sees",
+    "seeing"
+   ],
+   "why": "After want to, we use see."
+  },
+  {
+   "q": "What do you want to do?",
+   "o": [
+    "I want to go to the beach.",
+    "I wants to go to the beach.",
+    "I want go to the beach."
+   ],
+   "why": "We say: I want to go …"
+  },
+  {
+   "q": "Which word is the tricky word?",
+   "o": [
+    "want",
+    "beach",
+    "head"
+   ],
+   "why": "want is the tricky word in this lesson."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Long ea word",
+   "a": "sea",
+   "d": [
+    "head",
+    "bread",
+    "feather"
+   ]
+  },
+  {
+   "q": "Short ea word",
+   "a": "head",
+   "d": [
+    "leaf",
+    "beach",
+    "sea"
+   ]
+  },
+  {
+   "q": "Pick the long ea",
+   "a": "beach",
+   "d": [
+    "weather",
+    "bread",
+    "head"
+   ]
+  },
+  {
+   "q": "Pick the short ea",
+   "a": "feather",
+   "d": [
+    "read",
+    "sea",
+    "leaf"
+   ]
+  },
+  {
+   "q": "Same ea as eat",
+   "a": "read",
+   "d": [
+    "bread",
+    "head",
+    "weather"
+   ]
+  },
+  {
+   "q": "Same ea as weather",
+   "a": "bread",
+   "d": [
+    "beach",
+    "leaf",
+    "sea"
+   ]
+  },
+  {
+   "q": "He ___ a cake.",
+   "a": "wants",
+   "d": [
+    "want",
+    "wanting",
+    "to want"
+   ]
+  },
+  {
+   "q": "I ___ to see the sea.",
+   "a": "want",
+   "d": [
+    "wants",
+    "wanting",
+    "wanted to"
+   ]
+  },
+  {
+   "q": "Spell the tricky word",
+   "a": "w-a-n-t",
+   "d": [
+    "w-o-n-t",
+    "w-a-n-d",
+    "w-e-n-t"
+   ]
+  },
+  {
+   "q": "Complete: f___ther",
+   "a": "ea",
+   "d": [
+    "ee",
+    "oa",
+    "ai"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word has a short ea?",
+   "o": [
+    "weather",
+    "beach",
+    "sea",
+    "leaf"
+   ],
+   "why": "weather has a short ea."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has a long ea?",
+   "o": [
+    "leaf",
+    "head",
+    "bread",
+    "feather"
+   ],
+   "why": "leaf has a long ea."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the Unit 4 tongue twister?",
+   "o": [
+    "I eat bread and read on the beach in the hot weather.",
+    "I eat beach and read on the bread in the hot weather.",
+    "I read bread and eat on the beach in the cold weather.",
+    "I eat bread and read in the sea in the hot weather."
+   ],
+   "why": "Well done! That is the tongue twister."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do you spell the tricky word?",
+   "o": [
+    "want",
+    "wont",
+    "wnat",
+    "whant"
+   ],
+   "why": "We spell it w-a-n-t."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Sort: leaf, feather, sea, head. Which words have the long ea?",
+   "o": [
+    "leaf and sea",
+    "feather and head",
+    "leaf and head",
+    "sea and feather"
+   ],
+   "why": "leaf and sea have a long ea."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: He wants a cake, a phone and ___.",
+   "o": [
+    "a feather",
+    "a feathers",
+    "feather a",
+    "an feather"
+   ],
+   "why": "He wants a feather."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Answer: What do you want to do?",
+   "o": [
+    "I want to see the sea.",
+    "I wants to see the sea.",
+    "I want see the sea.",
+    "I want to sees the sea."
+   ],
+   "why": "We say: I want to see the sea."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do read and bread look the same but sound different?",
+   "o": [
+    "ea can make a long or a short sound.",
+    "bread has no ea.",
+    "read is a tricky word.",
+    "They have different letters ea."
+   ],
+   "why": "The letters ea have two sounds."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group is all short ea?",
+   "o": [
+    "bread, head, feather",
+    "bread, sea, head",
+    "beach, leaf, sea",
+    "weather, read, head"
+   ],
+   "why": "bread, head and feather all have a short ea."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "She want some bread.",
+    "I want some bread.",
+    "She wants some bread.",
+    "I want to see the sea."
+   ],
+   "why": "With she, we need wants."
+  }
+ ]
+}

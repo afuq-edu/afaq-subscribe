@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U1",
+ "lesson": "Unit 1 – Lesson 11: Get ready for A1 Movers & Fun corner",
+ "outcomes": [
+  "Answer exam questions about a picture and a listening text.",
+  "Write one word or a number for each listening answer.",
+  "Use times, subjects and frequency words in a board game."
+ ],
+ "tf": [
+  {
+   "s": "In Listening Part 2, you write one word or a number for each answer.",
+   "t": true,
+   "why": "Yes! Keep each answer short."
+  },
+  {
+   "s": "Before listening, it helps to read the notes and guess the type of word.",
+   "t": true,
+   "why": "Great tip! Predicting helps you listen."
+  },
+  {
+   "s": "In the picture, the girl is reading a book about Science.",
+   "t": true,
+   "why": "Correct! Her book is about Science."
+  },
+  {
+   "s": "'How often? ___ a week' needs a time like 'half past eight'.",
+   "t": false,
+   "why": "It needs a frequency word like once or twice."
+  },
+  {
+   "s": "8.30 is 'half past eight'.",
+   "t": true,
+   "why": "Well done! 30 minutes past eight."
+  },
+  {
+   "s": "In the picture, the girl's mother has got a kite.",
+   "t": false,
+   "why": "The girl's mother has got a bag."
+  },
+  {
+   "s": "We do P.E. twice a week means two times a week.",
+   "t": true,
+   "why": "Yes! Twice = two."
+  },
+  {
+   "s": "'Do you want to play football tomorrow?' is an invitation.",
+   "t": true,
+   "why": "Right! Do you want to ...? invites a friend."
+  },
+  {
+   "s": "In the board game you can stay on a square with a wrong sentence.",
+   "t": false,
+   "why": "You must complete the sentence correctly to stay there."
+  },
+  {
+   "s": "Maths, Art and ICT are school subjects.",
+   "t": true,
+   "why": "Yes! You can find them in the word search."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the girl reading a book about?",
+   "o": [
+    "Science",
+    "Art",
+    "Maths"
+   ],
+   "why": "She is reading a book about Science."
+  },
+  {
+   "q": "What has the girl's mother got?",
+   "o": [
+    "a bag",
+    "a kite",
+    "a robot"
+   ],
+   "why": "She's got a bag."
+  },
+  {
+   "q": "How many words for each Listening Part 2 answer?",
+   "o": [
+    "one word or a number",
+    "a full sentence",
+    "three sentences"
+   ],
+   "why": "Write just one word or a number."
+  },
+  {
+   "q": "What time is it? (8.30)",
+   "o": [
+    "It's half past eight.",
+    "It's quarter past eight.",
+    "It's eight o'clock."
+   ],
+   "why": "8.30 = half past eight."
+  },
+  {
+   "q": "We do P.E. ___ a week. (2)",
+   "o": [
+    "twice",
+    "once",
+    "three times"
+   ],
+   "why": "Two = twice."
+  },
+  {
+   "q": "'How often? ___ a week' needs a ___ word.",
+   "o": [
+    "frequency",
+    "colour",
+    "country"
+   ],
+   "why": "Once and twice are frequency words."
+  },
+  {
+   "q": "Answer: Do you want to play football tomorrow?",
+   "o": [
+    "Yes, please.",
+    "It's half past eight.",
+    "I'm from Oman."
+   ],
+   "why": "Yes, please. accepts the invitation."
+  },
+  {
+   "q": "Which is a school subject?",
+   "o": [
+    "ICT",
+    "park",
+    "kite"
+   ],
+   "why": "ICT is a subject."
+  },
+  {
+   "q": "What time is it? (11.15)",
+   "o": [
+    "It's quarter past eleven.",
+    "It's quarter to eleven.",
+    "It's half past eleven."
+   ],
+   "why": "11.15 = quarter past eleven."
+  },
+  {
+   "q": "Which is a frequency word?",
+   "o": [
+    "always",
+    "Science",
+    "bag"
+   ],
+   "why": "Always tells how often."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "8.30 = ?",
+   "a": "half past eight",
+   "d": [
+    "half past nine",
+    "quarter to eight",
+    "eight o'clock"
+   ]
+  },
+  {
+   "q": "11.15 = ?",
+   "a": "quarter past eleven",
+   "d": [
+    "quarter to eleven",
+    "half past eleven",
+    "eleven o'clock"
+   ]
+  },
+  {
+   "q": "4.45 = ?",
+   "a": "quarter to five",
+   "d": [
+    "quarter past four",
+    "quarter to four",
+    "half past four"
+   ]
+  },
+  {
+   "q": "2 times a week?",
+   "a": "twice",
+   "d": [
+    "once",
+    "never",
+    "always"
+   ]
+  },
+  {
+   "q": "1 time a week?",
+   "a": "once",
+   "d": [
+    "twice",
+    "always",
+    "never"
+   ]
+  },
+  {
+   "q": "Girl's book is about...?",
+   "a": "Science",
+   "d": [
+    "Art",
+    "Maths",
+    "English"
+   ]
+  },
+  {
+   "q": "Mother has got a...?",
+   "a": "bag",
+   "d": [
+    "kite",
+    "book",
+    "hat"
+   ]
+  },
+  {
+   "q": "Words per listening answer?",
+   "a": "one",
+   "d": [
+    "two",
+    "three",
+    "five"
+   ]
+  },
+  {
+   "q": "A school subject?",
+   "a": "ICT",
+   "d": [
+    "park",
+    "kite",
+    "bag"
+   ]
+  },
+  {
+   "q": "Do you ___ to play?",
+   "a": "want",
+   "d": [
+    "wants",
+    "like",
+    "go"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What should you write for each answer in Listening Part 2?",
+   "o": [
+    "one word or a number",
+    "a long sentence",
+    "a picture",
+    "two sentences"
+   ],
+   "why": "Short answers: one word or a number."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the girl in the picture reading?",
+   "o": [
+    "a book about Science",
+    "a book about Art",
+    "a diary",
+    "a timetable"
+   ],
+   "why": "She is reading a book about Science."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a good exam tip before listening?",
+   "o": [
+    "Read the notes and predict the type of word.",
+    "Close your eyes.",
+    "Write the answers before you listen.",
+    "Talk to your friend."
+   ],
+   "why": "Predicting helps you catch the answer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'two times'?",
+   "o": [
+    "twice",
+    "once",
+    "never",
+    "always"
+   ],
+   "why": "Twice = two times."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Note: 'How often? ___ a week'. Which answer fits?",
+   "o": [
+    "twice",
+    "Science",
+    "Monday",
+    "bag"
+   ],
+   "why": "How often needs a frequency word."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Note: 'Time: ___'. Which answer fits?",
+   "o": [
+    "4.30",
+    "Science",
+    "twice",
+    "Ruba"
+   ],
+   "why": "A time answer needs a time or number."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Board game square: 'What time is it? (12.45)'",
+   "o": [
+    "It's quarter to one.",
+    "It's quarter past twelve.",
+    "It's half past twelve.",
+    "It's quarter to twelve."
+   ],
+   "why": "12.45 = quarter to one."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we look at the picture before answering Part 6 questions?",
+   "o": [
+    "The answers are in the picture.",
+    "The picture is pretty.",
+    "We don't need to read.",
+    "The picture has the time."
+   ],
+   "why": "Look at the picture to find the answers."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which answer is too long for a one-word answer?",
+   "o": [
+    "She goes on Saturdays at half past four.",
+    "Saturday",
+    "twice",
+    "bag"
+   ],
+   "why": "For one-word answers, keep it short."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses unit language correctly?",
+   "o": [
+    "We always have English after break.",
+    "We have always English after break.",
+    "We always has English after break.",
+    "Always we English have after break."
+   ],
+   "why": "The adverb goes before have, and we use have with we."
+  }
+ ]
+}

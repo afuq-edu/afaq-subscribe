@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 2: Technology",
+  "lesson": "Unit 2 – Lesson 7: English in action – Asking for help",
+  "outcomes": [
+    "I can ask for help politely with a technology task.",
+    "I can answer when someone asks me for help.",
+    "I can say the weak form of to /tə/ in questions."
+  ],
+  "tf": [
+    {
+      "s": "“Could you show me how to use this?” is more polite than “Show me how to use this!”",
+      "t": true,
+      "why": "Starting with Could you … makes a request polite."
+    },
+    {
+      "s": "In the dialogue, the girl wants to print her English homework.",
+      "t": true,
+      "why": "Yes, she needs help to print her English homework."
+    },
+    {
+      "s": "Mum helps the girl revise for her exam before dinner.",
+      "t": false,
+      "why": "Mum has to cook dinner, so she can help after dinner."
+    },
+    {
+      "s": "“Of course.” is a way to say yes when someone asks for help.",
+      "t": true,
+      "why": "Of course means yes, I can help you."
+    },
+    {
+      "s": "“Sorry, not now.” means you are happy to help right away.",
+      "t": false,
+      "why": "Sorry, not now means you cannot help at this moment."
+    },
+    {
+      "s": "In “I need to go online”, the word to is usually short and weak: /tə/.",
+      "t": true,
+      "why": "In connected speech, to often sounds short, like /tə/."
+    },
+    {
+      "s": "In “Can you show me how to do it?”, the word to is the stressed word.",
+      "t": false,
+      "why": "We stress show and do, not the small word to."
+    },
+    {
+      "s": "“Help me with my homework.” is a polite question.",
+      "t": false,
+      "why": "It is an order; Could you help me with my homework, please? is polite."
+    },
+    {
+      "s": "To turn on the printer, the girl presses a button.",
+      "t": true,
+      "why": "Right, she presses that button to turn it on."
+    },
+    {
+      "s": "“Do you have time to …?” is a way to ask for help.",
+      "t": true,
+      "why": "Yes, Do you have time to help me? is a polite question for help."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Complete: Can you show me ___ to turn it on?",
+      "o": [
+        "how",
+        "what",
+        "who"
+      ],
+      "why": "We say show me how to do something."
+    },
+    {
+      "q": "Complete: You need ___ type the password.",
+      "o": [
+        "to",
+        "for",
+        "at"
+      ],
+      "why": "need is followed by to + verb."
+    },
+    {
+      "q": "Which word starts a polite request?",
+      "o": [
+        "Could",
+        "Must",
+        "Don’t"
+      ],
+      "why": "Could you …? is a polite way to ask."
+    },
+    {
+      "q": "Why can’t Mum help the girl now?",
+      "o": [
+        "She has to cook dinner.",
+        "She is at work.",
+        "She is asleep."
+      ],
+      "why": "Mum is busy cooking dinner, so she helps later."
+    },
+    {
+      "q": "Which reply means “I can help you”?",
+      "o": [
+        "Of course.",
+        "Sorry, not now.",
+        "No, thanks."
+      ],
+      "why": "Of course is a friendly yes."
+    },
+    {
+      "q": "How does to sound in “Do you have time to help me?”",
+      "o": [
+        "short /tə/",
+        "long /tuː/",
+        "silent"
+      ],
+      "why": "In a quick question, to is weak and short."
+    },
+    {
+      "q": "Which reply means “It is not difficult”?",
+      "o": [
+        "It’s easy!",
+        "Sorry, not now.",
+        "Please can I use it?"
+      ],
+      "why": "It’s easy! tells the person the task is simple."
+    },
+    {
+      "q": "Complete: Please can I ___ your laptop?",
+      "o": [
+        "use",
+        "using",
+        "to use"
+      ],
+      "why": "After can I we use the base verb: use."
+    },
+    {
+      "q": "Which question asks for help with technology?",
+      "o": [
+        "Can you show me how to upload a photo?",
+        "Do you like football?",
+        "Where is your school?"
+      ],
+      "why": "Uploading a photo is a technology task."
+    },
+    {
+      "q": "When can Mum help the girl revise?",
+      "o": [
+        "After dinner",
+        "Before school",
+        "At lunchtime"
+      ],
+      "why": "Mum says she can help after dinner."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Polite: ___ you help me, please?",
+      "a": "Could",
+      "d": [
+        "Must",
+        "Don’t",
+        "Stop"
+      ]
+    },
+    {
+      "q": "Can you show me ___ to do it?",
+      "a": "how",
+      "d": [
+        "who",
+        "where",
+        "what"
+      ]
+    },
+    {
+      "q": "I need ___ go online.",
+      "a": "to",
+      "d": [
+        "for",
+        "at",
+        "in"
+      ]
+    },
+    {
+      "q": "A friendly yes to a request",
+      "a": "Of course.",
+      "d": [
+        "Go away.",
+        "Never.",
+        "Stop it."
+      ]
+    },
+    {
+      "q": "What does the girl want to print?",
+      "a": "her homework",
+      "d": [
+        "a photo",
+        "a map",
+        "a ticket"
+      ]
+    },
+    {
+      "q": "Mum has to cook ___.",
+      "a": "dinner",
+      "d": [
+        "breakfast",
+        "a cake",
+        "lunch"
+      ]
+    },
+    {
+      "q": "Mum can help her revise ___ dinner.",
+      "a": "after",
+      "d": [
+        "before",
+        "during",
+        "without"
+      ]
+    },
+    {
+      "q": "The weak form of to sounds like…",
+      "a": "/tə/",
+      "d": [
+        "/tuː/",
+        "/təʊ/",
+        "/tɔː/"
+      ]
+    },
+    {
+      "q": "She presses a ___ to turn it on.",
+      "a": "button",
+      "d": [
+        "screen",
+        "window",
+        "door"
+      ]
+    },
+    {
+      "q": "Do you have ___ to help me?",
+      "a": "time",
+      "d": [
+        "money",
+        "food",
+        "a pen"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What does the girl ask her mum to help with?",
+      "o": [
+        "Printing her English homework and revising for an exam",
+        "Cooking dinner and cleaning",
+        "Buying a new phone",
+        "Playing a computer game"
+      ],
+      "why": "She needs help to print her homework and revise for an exam."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which of these is a response, not a question?",
+      "o": [
+        "Sorry, not now.",
+        "Could you help me?",
+        "Do you have time to help me?",
+        "Can you show me how to …?"
+      ],
+      "why": "Sorry, not now. is an answer to a request."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which words are stressed in “Can you show me how to do it?”",
+      "o": [
+        "show and do",
+        "to and it",
+        "can and to",
+        "me and to"
+      ],
+      "why": "Important words like show and do are stressed; to is weak."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which question uses the language from the lesson to ask for help?",
+      "o": [
+        "Do you have time to help me?",
+        "What time is it?",
+        "Do you have a sister?",
+        "Is it raining?"
+      ],
+      "why": "Do you have time to …? is one of the help questions."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Make it polite: “Help me with my homework.”",
+      "o": [
+        "Could you help me with my homework, please?",
+        "You help me with my homework now.",
+        "Help my homework, you!",
+        "Did you help me with my homework?"
+      ],
+      "why": "Could you … please? turns an order into a polite request."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "You want to download an app but you don’t know how. What do you say?",
+      "o": [
+        "Can you show me how to download this app?",
+        "Show me the app now!",
+        "I don’t want this app.",
+        "Where did you download it yesterday?"
+      ],
+      "why": "Can you show me how to …? asks for help politely."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "A: Do you have time to help me? B: Sorry, not now. What can A say next?",
+      "o": [
+        "Could you help me after dinner?",
+        "Of course, it’s easy!",
+        "Thank you for helping me now.",
+        "Yes, I have time."
+      ],
+      "why": "If the person is busy, you can politely ask for help later."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why is “Could you show me how to use this?” better than “Show me how to use this!”?",
+      "o": [
+        "It is a polite question, not an order.",
+        "It is shorter.",
+        "It uses the past tense.",
+        "It doesn’t have a verb."
+      ],
+      "why": "A polite question sounds kind and respectful."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word is weak and short in “I need to go online”?",
+      "o": [
+        "to",
+        "need",
+        "go",
+        "online"
+      ],
+      "why": "Small words like to are weak; need, go and online carry the meaning."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Mum says she has to cook dinner. What does this tell us?",
+      "o": [
+        "She is busy now but can help later.",
+        "She doesn’t want to help at all.",
+        "She doesn’t know about printers.",
+        "She thinks the homework is easy."
+      ],
+      "why": "Mum is busy now, so she offers to help after dinner."
+    }
+  ]
+}

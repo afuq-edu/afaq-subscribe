@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الخامس",
+  "unit": "Unit 1 – Talent show",
+  "lesson": "Lesson 1: Vocabulary – Personality adjectives",
+  "outcomes": [
+    "I can say twelve personality adjectives like shy, kind, polite and tidy.",
+    "I can match adjectives to their opposites and notice the prefix un-.",
+    "I can say what personality a job needs: In my job, I need to be kind."
+  ],
+  "tf": [
+    {"s": "The opposite of shy is confident.", "t": true, "why": "Yes! Shy and confident are opposites."},
+    {"s": "The opposite of kind is polite.", "t": false, "why": "The opposite of kind is mean. Polite and rude are a pair."},
+    {"s": "We add un- to friendly to make its opposite.", "t": true, "why": "Right! friendly → unfriendly."},
+    {"s": "A polite person always says please and thank you.", "t": true, "why": "Yes! That is what polite people do."},
+    {"s": "A lazy person works a lot and never stops.", "t": false, "why": "That is a hard-working person. A lazy person doesn't like to work."},
+    {"s": "The opposite of polite is rude.", "t": true, "why": "Great! Polite and rude are opposites."},
+    {"s": "A tidy person has got all their things in a mess.", "t": false, "why": "A tidy person has got all their things in order."},
+    {"s": "A shy person is afraid to talk to new people.", "t": true, "why": "Yes! That is the meaning of shy."},
+    {"s": "Mean is a positive adjective.", "t": false, "why": "Mean is negative; kind is its positive opposite."},
+    {"s": "We make the opposite of tidy with the prefix dis-.", "t": false, "why": "We use un-: tidy → untidy."}
+  ],
+  "boxes": [
+    {"q": "What is the opposite of tidy?", "o": ["untidy", "rude", "lazy"], "why": "un- + tidy = untidy."},
+    {"q": "What is the opposite of lazy?", "o": ["hard-working", "kind", "shy"], "why": "Lazy and hard-working are opposites."},
+    {"q": "\"She's afraid to talk to new people.\" She is ___.", "o": ["shy", "rude", "mean"], "why": "A shy person is afraid to talk to new people."},
+    {"q": "Which adjective is positive?", "o": ["kind", "mean", "rude"], "why": "Kind is a nice thing to be."},
+    {"q": "Which prefix makes the opposite of friendly?", "o": ["un-", "re-", "dis-"], "why": "friendly → unfriendly."},
+    {"q": "In my job, I need ___ kind.", "o": ["to be", "be", "being"], "why": "The structure is I need to be + adjective."},
+    {"q": "A person who doesn't share and is not nice is ___.", "o": ["mean", "polite", "confident"], "why": "Mean is the opposite of kind."},
+    {"q": "Which adjective is NOT made with un-?", "o": ["rude", "unfriendly", "untidy"], "why": "Rude is a different word; it is the opposite of polite."},
+    {"q": "A person who talks easily on a stage is ___.", "o": ["confident", "shy", "lazy"], "why": "Confident people are not afraid in front of others."},
+    {"q": "Which adjective describes someone who is not nice to new people?", "o": ["unfriendly", "hard-working", "tidy"], "why": "Unfriendly is the opposite of friendly."}
+  ],
+  "hunt": [
+    {"q": "Opposite of confident", "a": "shy", "d": ["kind", "tidy", "polite"]},
+    {"q": "Opposite of kind", "a": "mean", "d": ["shy", "lazy", "tidy"]},
+    {"q": "Opposite of polite", "a": "rude", "d": ["mean", "shy", "lazy"]},
+    {"q": "Opposite of friendly", "a": "unfriendly", "d": ["unkind", "untidy", "unhappy"]},
+    {"q": "Opposite of hard-working", "a": "lazy", "d": ["rude", "mean", "shy"]},
+    {"q": "Opposite of untidy", "a": "tidy", "d": ["kind", "polite", "friendly"]},
+    {"q": "Says please and thank you", "a": "polite", "d": ["rude", "mean", "lazy"]},
+    {"q": "All her things are in order.", "a": "tidy", "d": ["untidy", "shy", "rude"]},
+    {"q": "He doesn't like to work.", "a": "lazy", "d": ["hard-working", "confident", "tidy"]},
+    {"q": "She smiles and helps everyone.", "a": "kind", "d": ["mean", "rude", "lazy"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which list has three opposite pairs?", "o": ["shy – confident, kind – mean, polite – rude", "shy – kind, lazy – tidy, rude – mean", "tidy – polite, kind – confident, lazy – shy", "rude – mean, shy – lazy, kind – tidy"], "why": "These are the lesson's opposite pairs."},
+    {"lv": "التذكر", "q": "Which two adjectives use the prefix un- to make their opposites?", "o": ["friendly and tidy", "kind and polite", "shy and lazy", "rude and mean"], "why": "unfriendly and untidy."},
+    {"lv": "التذكر", "q": "What is the lesson's tip for learning a new word?", "o": ["Think of the opposite.", "Draw a face.", "Say it ten times fast.", "Write it in red."], "why": "Thinking of the opposite helps you learn new adjectives."},
+    {"lv": "التذكر", "q": "Which word is a personality adjective?", "o": ["hard-working", "curly", "tall", "fair"], "why": "Curly, tall and fair are about appearance, not personality."},
+    {"lv": "التطبيق", "q": "\"I'm a doctor. In my job, I need to be ___.\" Which is best?", "o": ["kind and hard-working", "lazy and rude", "mean and unfriendly", "untidy and lazy"], "why": "A doctor helps sick people, so kind and hard-working fit."},
+    {"lv": "التطبيق", "q": "Write a definition for a guessing game: hard-working.", "o": ["He works a lot and never stops until he finishes.", "He never does his work.", "He is afraid of new people.", "He never says thank you."], "why": "A hard-working person works a lot."},
+    {"lv": "التطبيق", "q": "Ahmed leaves his books and clothes everywhere. What is he?", "o": ["untidy", "tidy", "polite", "confident"], "why": "Things everywhere means untidy."},
+    {"lv": "التحليل", "q": "Why does a waiter need to be polite and friendly?", "o": ["He talks to many customers every day.", "He works alone at home.", "He never meets people.", "He only cooks food."], "why": "Waiters meet many people, so they need to be nice to them."},
+    {"lv": "التحليل", "q": "Is \"mean\" made with un-, and what is its opposite?", "o": ["No. Its opposite is kind.", "Yes. Its opposite is unmean.", "No. Its opposite is rude.", "Yes. Its opposite is shy."], "why": "Mean is its own word; its opposite is kind."},
+    {"lv": "التحليل", "q": "Which sentence describes a classmate in a positive way?", "o": ["My friend Salim is very kind and hard-working.", "My friend Salim is rude.", "My friend Salim is lazy and untidy.", "My friend Salim is mean."], "why": "Kind and hard-working are positive adjectives."}
+  ]
+}

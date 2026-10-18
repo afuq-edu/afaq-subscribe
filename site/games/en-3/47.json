@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 4: I want to be a doctor!",
+ "lesson": "Unit 4 – Lesson 8: Review",
+ "outcomes": [
+  "I can name jobs and transport from Unit 4.",
+  "I can say: He / She goes to work by …",
+  "I can write about a family member's job."
+ ],
+ "tf": [
+  {
+   "s": "A doctor works in a hospital.",
+   "t": true,
+   "why": "Yes! A doctor helps people in a hospital."
+  },
+  {
+   "s": "The underground goes on the road.",
+   "t": false,
+   "why": "The underground goes under the ground."
+  },
+  {
+   "s": "We use He for a man and She for a woman.",
+   "t": true,
+   "why": "Right! Look at the person in the picture."
+  },
+  {
+   "s": "We say: She loves his job. (about a woman)",
+   "t": false,
+   "why": "For a woman, we say her job."
+  },
+  {
+   "s": "We say: She goes to work at seven o'clock.",
+   "t": true,
+   "why": "Great! at + time."
+  },
+  {
+   "s": "A train goes on rails.",
+   "t": true,
+   "why": "Yes! A train goes on rails."
+  },
+  {
+   "s": "A firefighter is a kind of transport.",
+   "t": false,
+   "why": "A firefighter is a job."
+  },
+  {
+   "s": "We say: He goes to work by motorbike.",
+   "t": true,
+   "why": "Well done! by + transport."
+  },
+  {
+   "s": "A pilot flies a boat.",
+   "t": false,
+   "why": "A pilot flies a plane."
+  },
+  {
+   "s": "We spell boat: b-o-t-e.",
+   "t": false,
+   "why": "We spell it b-o-a-t."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Riddle: It's long. It goes under the ground. What is it?",
+   "o": [
+    "the underground",
+    "a boat",
+    "a motorbike"
+   ],
+   "why": "The underground goes under the ground."
+  },
+  {
+   "q": "Riddle: I work in a hospital. I'm not a nurse. What am I?",
+   "o": [
+    "a doctor",
+    "a pilot",
+    "a chef"
+   ],
+   "why": "A doctor works in a hospital."
+  },
+  {
+   "q": "Picture: a man on a boat. Circle: He / She goes to work by boat.",
+   "o": [
+    "He",
+    "She",
+    "It"
+   ],
+   "why": "A man is He."
+  },
+  {
+   "q": "Circle: She loves his / her job.",
+   "o": [
+    "her",
+    "his",
+    "he"
+   ],
+   "why": "She → her."
+  },
+  {
+   "q": "Clock shows 7. Complete: She goes to work at ___ o'clock.",
+   "o": [
+    "seven",
+    "six",
+    "eight"
+   ],
+   "why": "7 is seven."
+  },
+  {
+   "q": "Which job starts with a?",
+   "o": [
+    "artist",
+    "pilot",
+    "nurse"
+   ],
+   "why": "artist starts with a."
+  },
+  {
+   "q": "Which is transport?",
+   "o": [
+    "motorbike",
+    "builder",
+    "chef"
+   ],
+   "why": "A motorbike is transport."
+  },
+  {
+   "q": "Which is a job?",
+   "o": [
+    "police officer",
+    "train",
+    "car"
+   ],
+   "why": "A police officer is a job."
+  },
+  {
+   "q": "Picture: a woman on a motorbike. Which sentence?",
+   "o": [
+    "She goes to work by motorbike.",
+    "He goes to work by motorbike.",
+    "She goes to work by a motorbike."
+   ],
+   "why": "A woman, a motorbike, no a after by."
+  },
+  {
+   "q": "Complete: She works at the ___.",
+   "o": [
+    "weekend",
+    "Monday",
+    "o'clock"
+   ],
+   "why": "She works at the weekend."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Goes under the ground",
+   "a": "underground",
+   "d": [
+    "boat",
+    "car",
+    "bus"
+   ]
+  },
+  {
+   "q": "Works in a hospital, not a nurse",
+   "a": "doctor",
+   "d": [
+    "pilot",
+    "artist",
+    "builder"
+   ]
+  },
+  {
+   "q": "Spell: goes on rails",
+   "a": "train",
+   "d": [
+    "trian",
+    "tran",
+    "trein"
+   ]
+  },
+  {
+   "q": "Spell: on water",
+   "a": "boat",
+   "d": [
+    "bote",
+    "boot",
+    "baot"
+   ]
+  },
+  {
+   "q": "Spell: four wheels",
+   "a": "car",
+   "d": [
+    "kar",
+    "carr",
+    "cra"
+   ]
+  },
+  {
+   "q": "Spell: two wheels",
+   "a": "motorbike",
+   "d": [
+    "moterbike",
+    "motorbik",
+    "motrbike"
+   ]
+  },
+  {
+   "q": "Job with a palette",
+   "a": "artist",
+   "d": [
+    "doctor",
+    "chef",
+    "nurse"
+   ]
+  },
+  {
+   "q": "Job in space",
+   "a": "astronaut",
+   "d": [
+    "firefighter",
+    "teacher",
+    "chef"
+   ]
+  },
+  {
+   "q": "She loves ___ job.",
+   "a": "her",
+   "d": [
+    "his",
+    "he",
+    "she"
+   ]
+  },
+  {
+   "q": "Seven o'clock",
+   "a": "7:00",
+   "d": [
+    "6:00",
+    "8:00",
+    "11:00"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How many jobs are in the word search?",
+   "o": [
+    "ten",
+    "four",
+    "six",
+    "two"
+   ],
+   "why": "There are ten jobs in the word search."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which job is in the word search?",
+   "o": [
+    "police officer",
+    "bus driver",
+    "student",
+    "uncle"
+   ],
+   "why": "police officer is one of the ten jobs."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which transport has letters t-r-a-i-n?",
+   "o": [
+    "train",
+    "boat",
+    "car",
+    "bus"
+   ],
+   "why": "t-r-a-i-n spells train."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which job starts with the letter b?",
+   "o": [
+    "builder",
+    "doctor",
+    "chef",
+    "pilot"
+   ],
+   "why": "builder starts with b."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Riddle: I want to help people. I want to work in a hospital. I'm not a nurse. What am I?",
+   "o": [
+    "A doctor",
+    "A pilot",
+    "A chef",
+    "A builder"
+   ],
+   "why": "A doctor helps people in a hospital."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write about your uncle: he is a pilot and goes by car.",
+   "o": [
+    "My uncle is a pilot. He goes to work by car.",
+    "My uncle is a pilot. She goes to work by car.",
+    "My uncle is an pilot. He goes to work by car.",
+    "My uncle is a pilot. He go to work by car."
+   ],
+   "why": "a pilot, He goes, by car."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The notes say: Friday, Saturday. When does she work?",
+   "o": [
+    "at the weekend",
+    "on Mondays",
+    "every night",
+    "in the morning only"
+   ],
+   "why": "Friday and Saturday are the weekend."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which clue tells you to circle He?",
+   "o": [
+    "The picture shows a man.",
+    "The picture shows a boat.",
+    "The sentence has by.",
+    "The clock shows seven."
+   ],
+   "why": "A man in the picture means He."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "My mum is a teacher. He goes to work by car.",
+    "My mum is a teacher. She goes to work by car.",
+    "My dad is a chef. He goes to work by bus.",
+    "My sister is an artist. She goes to work by train."
+   ],
+   "why": "Mum is a woman, so we need She."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair is a job and its transport?",
+   "o": [
+    "a pilot and a plane",
+    "a chef and a boat",
+    "a teacher and a rocket",
+    "a nurse and a palette"
+   ],
+   "why": "A pilot flies a plane."
+  }
+ ]
+}

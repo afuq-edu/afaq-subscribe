@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U2",
+ "lesson": "Unit 2 – Lesson 5: Culture – Food around the world",
+ "outcomes": [
+  "Describe special dishes from other countries.",
+  "Say what is in a dish and when we eat it.",
+  "Make a poster about a special food from Oman."
+ ],
+ "tf": [
+  {
+   "s": "Bubble tea has jelly balls in it.",
+   "t": true,
+   "why": "Yes! Bubble tea has jelly balls."
+  },
+  {
+   "s": "The fish in sushi is cooked.",
+   "t": false,
+   "why": "The fish in sushi is raw. It isn't cooked."
+  },
+  {
+   "s": "You need a plate to eat bunny chow.",
+   "t": false,
+   "why": "You eat bunny chow with a spoon and you don't need a plate."
+  },
+  {
+   "s": "Shuwa is meat with spices.",
+   "t": true,
+   "why": "Great! Shuwa is meat with spices."
+  },
+  {
+   "s": "In Oman we eat shuwa at Eid.",
+   "t": true,
+   "why": "Correct! We eat shuwa at Eid."
+  },
+  {
+   "s": "'When do you eat it?' asks about the ingredients.",
+   "t": false,
+   "why": "'What's in it?' asks about the ingredients."
+  },
+  {
+   "s": "Bubble tea is a hot curry.",
+   "t": false,
+   "why": "Bubble tea is a drink with jelly balls."
+  },
+  {
+   "s": "Harees has wheat and chicken in it.",
+   "t": true,
+   "why": "Well done! Harees has wheat and chicken."
+  },
+  {
+   "s": "'I really want to try sushi!' means you don't like sushi.",
+   "t": false,
+   "why": "It means you want to eat sushi very much."
+  },
+  {
+   "s": "Bunny chow has curry in it.",
+   "t": true,
+   "why": "Yes! Bunny chow has curry."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which dish has warm chocolate?",
+   "o": [
+    "fondue",
+    "sushi",
+    "bunny chow"
+   ],
+   "why": "In fondue, you dip food in warm chocolate."
+  },
+  {
+   "q": "Which word means 'not cooked'?",
+   "o": [
+    "raw",
+    "warm",
+    "sweet"
+   ],
+   "why": "Raw means not cooked."
+  },
+  {
+   "q": "Which question asks for the name of a food?",
+   "o": [
+    "What's it called?",
+    "What's in it?",
+    "When do you eat it?"
+   ],
+   "why": "'What's it called?' asks for the name."
+  },
+  {
+   "q": "Complete: I really want to ___ bubble tea!",
+   "o": [
+    "try",
+    "sleep",
+    "play"
+   ],
+   "why": "We say 'I really want to try ...'."
+  },
+  {
+   "q": "Which is a quantity word?",
+   "o": [
+    "a lot of",
+    "chopsticks",
+    "Eid"
+   ],
+   "why": "'A lot of' tells us how much."
+  },
+  {
+   "q": "Which drink is from Asia?",
+   "o": [
+    "bubble tea",
+    "fondue",
+    "shuwa"
+   ],
+   "why": "Bubble tea comes from Asia."
+  },
+  {
+   "q": "Which dish is rice with fish or vegetables?",
+   "o": [
+    "sushi",
+    "fondue",
+    "bubble tea"
+   ],
+   "why": "Sushi is rice with fish or vegetables."
+  },
+  {
+   "q": "Halwa is a ___ food.",
+   "o": [
+    "sweet",
+    "raw",
+    "cold"
+   ],
+   "why": "Halwa is sweet."
+  },
+  {
+   "q": "Complete: This is shuwa. ___ meat with spices.",
+   "o": [
+    "It is",
+    "They are",
+    "There are"
+   ],
+   "why": "One dish, so we say 'It is'."
+  },
+  {
+   "q": "Which is an Omani dish?",
+   "o": [
+    "shuwa",
+    "sushi",
+    "fondue"
+   ],
+   "why": "Shuwa is a special food from Oman."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Sushi is from...",
+   "a": "Japan",
+   "d": [
+    "Switzerland",
+    "South Africa",
+    "Oman"
+   ]
+  },
+  {
+   "q": "Fondue: you dip food in warm...",
+   "a": "chocolate",
+   "d": [
+    "fish",
+    "curry",
+    "tea"
+   ]
+  },
+  {
+   "q": "Bunny chow is from...",
+   "a": "South Africa",
+   "d": [
+    "Japan",
+    "Switzerland",
+    "Oman"
+   ]
+  },
+  {
+   "q": "Bubble tea: you drink it with a...",
+   "a": "straw",
+   "d": [
+    "spoon",
+    "plate",
+    "stick"
+   ]
+  },
+  {
+   "q": "Sushi: you eat it with...",
+   "a": "chopsticks",
+   "d": [
+    "a straw",
+    "a cup",
+    "a bowl"
+   ]
+  },
+  {
+   "q": "Bunny chow: you eat it with a...",
+   "a": "spoon",
+   "d": [
+    "straw",
+    "cup",
+    "stick"
+   ]
+  },
+  {
+   "q": "Bubble tea is from...",
+   "a": "Asia",
+   "d": [
+    "Switzerland",
+    "South Africa",
+    "Oman"
+   ]
+  },
+  {
+   "q": "Poster question: What's ___ it?",
+   "a": "in",
+   "d": [
+    "on",
+    "at",
+    "by"
+   ]
+  },
+  {
+   "q": "There's a lot ___ rice in it.",
+   "a": "of",
+   "d": [
+    "in",
+    "on",
+    "at"
+   ]
+  },
+  {
+   "q": "Harees: chicken and...",
+   "a": "wheat",
+   "d": [
+    "chocolate",
+    "raw fish",
+    "jelly balls"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which dish is a drink?",
+   "o": [
+    "bubble tea",
+    "sushi",
+    "bunny chow",
+    "fondue"
+   ],
+   "why": "Bubble tea is a drink."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question asks about the time we eat a food?",
+   "o": [
+    "When do you eat it?",
+    "What's it called?",
+    "What's in it?",
+    "Where is it?"
+   ],
+   "why": "'When' asks about time."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where is fondue from?",
+   "o": [
+    "Switzerland",
+    "Japan",
+    "South Africa",
+    "Oman"
+   ],
+   "why": "Fondue comes from Switzerland."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do people eat at Eid in Oman?",
+   "o": [
+    "shuwa",
+    "sushi",
+    "bubble tea",
+    "fondue"
+   ],
+   "why": "Shuwa is a special food for Eid."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali wants a dish that you dip food in. Which dish is it?",
+   "o": [
+    "fondue",
+    "sushi",
+    "bunny chow",
+    "shuwa"
+   ],
+   "why": "In fondue you dip food in warm chocolate."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete the poster: This is harees. It is wheat with ___ .",
+   "o": [
+    "chicken",
+    "chocolate",
+    "jelly balls",
+    "raw fish"
+   ],
+   "why": "Harees has wheat and chicken."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct poster sentence.",
+   "o": [
+    "There's a lot of rice in it.",
+    "There's a lot of rices in it.",
+    "There are a lot of rice in it.",
+    "There's a lot rice in it."
+   ],
+   "why": "We say 'There's a lot of rice in it'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sushi and bubble tea: how are they different?",
+   "o": [
+    "You eat sushi with chopsticks and drink bubble tea with a straw.",
+    "You eat both with a spoon.",
+    "Both have warm chocolate in them.",
+    "Both come from Switzerland."
+   ],
+   "why": "Sushi uses chopsticks, and bubble tea uses a straw."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sara doesn't like raw fish. Which dish is NOT good for her?",
+   "o": [
+    "sushi",
+    "fondue",
+    "bubble tea",
+    "halwa"
+   ],
+   "why": "Sushi can have raw fish in it."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which poster is the best?",
+   "o": [
+    "It has a picture, a title and clear sentences.",
+    "It has only one word.",
+    "It has no title and no picture.",
+    "It has a picture but no sentences."
+   ],
+   "why": "Pictures, a title and clear sentences make a great poster."
+  }
+ ]
+}

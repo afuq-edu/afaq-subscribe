@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الخامس",
+  "unit": "Welcome – Welcome back",
+  "lesson": "Lesson 3: Vocabulary – Appearance",
+  "outcomes": [
+    "I can name hair and face words: curly, straight, dark, fair, a beard, a moustache.",
+    "I can describe people in the right word order: She's got long, dark, curly hair.",
+    "I can write short sentences about how my family members look."
+  ],
+  "tf": [
+    {"s": "The opposite of curly hair is straight hair.", "t": true, "why": "Yes! Curly and straight are opposites."},
+    {"s": "In the poem, Dad has got a beard.", "t": true, "why": "Right! Dad is the one with a beard."},
+    {"s": "We say \"She's got curly, dark, long hair.\"", "t": false, "why": "Say long or short first: She's got long, dark, curly hair."},
+    {"s": "A moustache grows above the mouth.", "t": true, "why": "Yes! A moustache is hair above the mouth."},
+    {"s": "Fair hair is very dark hair.", "t": false, "why": "Fair hair is light in colour, the opposite of dark."},
+    {"s": "In the poem, Laith has got a moustache.", "t": true, "why": "Yes! Laith has got a moustache and fair hair."},
+    {"s": "In the poem, Thuriya has got short, straight hair.", "t": false, "why": "Thuriya has got long, dark, curly hair."},
+    {"s": "We say \"He's got a beard.\" to describe a man's face.", "t": true, "why": "Great! He's got + a beard."},
+    {"s": "Tall and long are words for hair colour.", "t": false, "why": "Dark and fair are colours; long and short tell us how long hair is."},
+    {"s": "\"She's got long hair\" and \"She has got long hair\" mean different things.", "t": false, "why": "She's got is the short form of she has got."}
+  ],
+  "boxes": [
+    {"q": "Who has got a beard in the poem?", "o": ["Dad", "Laith", "Thuriya"], "why": "In the poem, Dad has got a beard."},
+    {"q": "The opposite of long hair is ___ hair.", "o": ["short", "curly", "fair"], "why": "Long and short are opposites."},
+    {"q": "The opposite of dark hair is ___ hair.", "o": ["fair", "straight", "long"], "why": "Dark and fair are opposites for hair colour."},
+    {"q": "Choose the right word order.", "o": ["short, dark, straight hair", "straight, short, dark hair", "dark, straight, short hair"], "why": "Long or short comes first, then colour, then curly or straight."},
+    {"q": "He's got ___ moustache.", "o": ["a", "an", "the two"], "why": "We say a beard and a moustache."},
+    {"q": "Hair that is not curly is ___.", "o": ["straight", "fair", "short"], "why": "Straight is the opposite of curly."},
+    {"q": "Which word is about hair colour?", "o": ["fair", "curly", "long"], "why": "Fair and dark tell us the colour of hair."},
+    {"q": "She ___ got long hair.", "o": ["has", "have", "is"], "why": "She has got, or she's got."},
+    {"q": "Which word describes a whole person, not hair?", "o": ["tall", "curly", "straight"], "why": "Tall describes a person's height."},
+    {"q": "Who is very tall with long, dark, curly hair?", "o": ["Thuriya", "Dad", "Laith"], "why": "The poem describes Thuriya like this."}
+  ],
+  "hunt": [
+    {"q": "Opposite of curly", "a": "straight", "d": ["long", "fair", "dark"]},
+    {"q": "Opposite of short hair", "a": "long", "d": ["curly", "dark", "straight"]},
+    {"q": "Opposite of fair hair", "a": "dark", "d": ["short", "curly", "long"]},
+    {"q": "Hair on a man's chin", "a": "a beard", "d": ["a moustache", "a fringe", "a smile"]},
+    {"q": "Hair above the mouth", "a": "a moustache", "d": ["a beard", "an eyebrow", "a nose"]},
+    {"q": "He's ___ a beard.", "a": "got", "d": ["get", "gets", "getting"]},
+    {"q": "Word order: long, dark, ___ hair", "a": "curly", "d": ["tall", "short", "big"]},
+    {"q": "In the poem, Laith's hair is ___.", "a": "fair", "d": ["curly", "long", "dark"]},
+    {"q": "Not short: very ___", "a": "tall", "d": ["fair", "curly", "straight"]},
+    {"q": "They ___ got short hair.", "a": "have", "d": ["has", "is", "are"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which list has only appearance words for hair?", "o": ["curly, straight, fair, dark", "kind, shy, rude, lazy", "tall, sing, run, jump", "red, apple, ball, book"], "why": "Curly, straight, fair and dark describe hair."},
+    {"lv": "التذكر", "q": "What does Laith look like in the poem?", "o": ["He's got a moustache and fair hair.", "He's got a beard and dark hair.", "He's very tall with curly hair.", "He's got long, straight hair."], "why": "The poem says Laith has got a moustache and his hair is fair."},
+    {"lv": "التذكر", "q": "What is the word order tip in this lesson?", "o": ["Say long or short first.", "Say the colour last.", "Say curly first.", "Say hair first."], "why": "We say long or short first: long, dark, curly hair."},
+    {"lv": "التذكر", "q": "What is the name of the poem in this lesson?", "o": ["My family's unusual", "Welcome back", "Talent show", "Then and now"], "why": "The poem is called My family's unusual."},
+    {"lv": "التطبيق", "q": "Put the words in order: hair / curly / long / dark. She's got …", "o": ["long, dark, curly hair.", "curly, long, dark hair.", "dark, curly, long hair.", "hair long, dark, curly."], "why": "Long first, then colour, then curly."},
+    {"lv": "التطبيق", "q": "Your brother is very tall. His hair is short, dark and curly. Which sentence is correct?", "o": ["He's very tall. He's got short, dark, curly hair.", "He's very tall. He's got curly, dark, short hair.", "He's very short. He's got long, fair hair.", "He's got very tall, dark, curly hair."], "why": "Short comes first, then dark, then curly."},
+    {"lv": "التطبيق", "q": "Which sentence describes a man with hair on his chin?", "o": ["He's got a beard.", "He's got a moustache.", "He's got fair hair.", "He's got straight hair."], "why": "Hair on the chin is a beard."},
+    {"lv": "التحليل", "q": "Which description is NOT correct English?", "o": ["She's got curly, long, fair hair.", "She's got long, fair, curly hair.", "She's got short, dark hair.", "He's got short, straight hair."], "why": "Long must come first, before fair and curly."},
+    {"lv": "التحليل", "q": "Your friend says: \"She's got long, dark hair.\" Which picture matches?", "o": ["a girl with long, dark hair", "a girl with short, fair hair", "a man with a beard", "a girl with short, dark hair"], "why": "Long and dark must both be true."},
+    {"lv": "التحليل", "q": "Why is \"curly hair – straight hair\" a good pair to learn together?", "o": ["They are opposites.", "They mean the same.", "They are both colours.", "They are both about height."], "why": "Learning opposites together helps us remember both words."}
+  ]
+}

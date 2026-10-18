@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الخامس",
+  "unit": "Welcome – Welcome back",
+  "lesson": "Lesson 2: Grammar – Present simple with when / before / after",
+  "outcomes": [
+    "I can use before, after and when to show the order of my daily activities.",
+    "I can ask and answer about my routine: What do you do when you get home?",
+    "I can join two sentences into one with after, before or when."
+  ],
+  "tf": [
+    {"s": "\"I have a shower before I go to school.\" The shower comes first.", "t": true, "why": "Yes! Before tells us the shower happens first."},
+    {"s": "\"I watch TV after I do my homework.\" TV comes first.", "t": false, "why": "After means homework comes first, then TV."},
+    {"s": "We put a comma after the first part when a sentence starts with when, before or after.", "t": true, "why": "Right! When I get home, I have lunch."},
+    {"s": "\"I wash my hands after I eat\" is the healthy way to say we wash our hands first.", "t": false, "why": "We wash our hands first, so we say before I eat."},
+    {"s": "\"When Arwa gets home, she does her homework.\" is a correct sentence.", "t": true, "why": "Great! It has when, a comma and the present simple."},
+    {"s": "In \"When she gets home\", we can say \"When she get home\".", "t": false, "why": "She takes -s in the present simple: she gets."},
+    {"s": "\"After we have lunch, we go to the park.\" means lunch comes first.", "t": true, "why": "Yes! After shows lunch happens first."},
+    {"s": "Before, after and when are words for food.", "t": false, "why": "They are time words that link two actions."},
+    {"s": "\"I play tennis and then I go home\" can be: After I play tennis, I go home.", "t": true, "why": "Well done! After joins the two actions in order."},
+    {"s": "\"Before I have breakfast, I get up.\" shows breakfast comes first.", "t": false, "why": "Before I have breakfast means getting up comes first."}
+  ],
+  "boxes": [
+    {"q": "I have a shower ___ I go to school.", "o": ["before", "after", "when"], "why": "The shower comes first, so we say before."},
+    {"q": "___ I get home, I always do my homework.", "o": ["When", "Before", "Then"], "why": "When I get home tells us the time of the action."},
+    {"q": "After Mudrik and his family ___ dinner, they play a board game.", "o": ["have", "has", "having"], "why": "Mudrik and his family are more than one, so have."},
+    {"q": "Which sentence has the comma in the right place?", "o": ["When I get home, I have lunch.", "When, I get home I have lunch.", "When I get, home I have lunch."], "why": "The comma comes after the first part of the sentence."},
+    {"q": "I listen to music ___ I study.", "o": ["when", "before", "after"], "why": "The two actions happen at the same time, so when."},
+    {"q": "Which word means \"later than\"?", "o": ["after", "before", "when"], "why": "After means later than something else."},
+    {"q": "Which word means \"earlier than\"?", "o": ["before", "after", "when"], "why": "Before means earlier than something else."},
+    {"q": "When he ___ to the library, he reads a book.", "o": ["goes", "go", "going"], "why": "He takes -s: he goes."},
+    {"q": "I brush my teeth ___ I go to bed.", "o": ["before", "after", "when"], "why": "We brush our teeth first, then go to bed."},
+    {"q": "Before my sister watches TV, she ___ her homework.", "o": ["does", "do", "doing"], "why": "She takes -s in the present simple: she does."}
+  ],
+  "hunt": [
+    {"q": "Shower first, then school: shower ___ school", "a": "before", "d": ["after", "when", "then"]},
+    {"q": "Homework first, then TV: TV ___ homework", "a": "after", "d": ["before", "when", "and"]},
+    {"q": "Same time: I sing ___ I cook.", "a": "when", "d": ["before", "after", "then"]},
+    {"q": "When Arwa ___ home, she reads.", "a": "gets", "d": ["get", "getting", "got"]},
+    {"q": "After I ___ lunch, I play.", "a": "have", "d": ["has", "having", "haves"]},
+    {"q": "Before he ___ to school, he eats.", "a": "goes", "d": ["go", "going", "gos"]},
+    {"q": "When she ___ up, she has a shower.", "a": "wakes", "d": ["wake", "waking", "woke"]},
+    {"q": "When I ___ tired, I go to bed.", "a": "am", "d": ["is", "are", "be"]},
+    {"q": "Before I ___ TV, I study.", "a": "watch", "d": ["watches", "watching", "watchs"]},
+    {"q": "The mark after the first part", "a": "comma ,", "d": ["full stop .", "question mark ?", "exclamation !"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which three words link two actions in time in this lesson?", "o": ["before, after, when", "and, but, or", "big, bigger, biggest", "in, on, at"], "why": "Before, after and when show the order of actions."},
+    {"lv": "التذكر", "q": "Which sentence is correct?", "o": ["When Arwa gets home, she does her homework.", "When Arwa get home, she does her homework.", "When Arwa gets home, she do her homework.", "When Arwa getting home, she does her homework."], "why": "Arwa and she both take -s: gets, does."},
+    {"lv": "التذكر", "q": "Where does the comma go in \"Before I go to school I brush my hair\"?", "o": ["after school", "after Before", "after I", "after brush"], "why": "Before I go to school, I brush my hair."},
+    {"lv": "التذكر", "q": "\"After I have breakfast, I go to school.\" What happens first?", "o": ["breakfast", "school", "both at the same time", "nothing"], "why": "After I have breakfast means breakfast is first."},
+    {"lv": "التطبيق", "q": "Rewrite with After: We have lunch and then we go to the park.", "o": ["After we have lunch, we go to the park.", "After we go to the park, we have lunch.", "After we have lunch we going to the park.", "After lunch we has go to the park."], "why": "Lunch is first, so it goes after the word After."},
+    {"lv": "التطبيق", "q": "Rewrite with Before: My sister does her homework and then she watches TV.", "o": ["Before my sister watches TV, she does her homework.", "Before my sister does her homework, she watches TV.", "Before my sister watch TV, she does her homework.", "Before my sister watches TV she do her homework."], "why": "TV comes second, so it goes after Before."},
+    {"lv": "التطبيق", "q": "On Mondays, you have Maths first and then Art. Which sentence is true?", "o": ["Before you have Art, you have Maths.", "Before you have Maths, you have Art.", "After you have Art, you have Maths.", "When you have Art, you have Maths."], "why": "Maths comes earlier than Art, so before Art."},
+    {"lv": "التحليل", "q": "What is the difference between \"I watch TV after I do my homework\" and \"I watch TV before I do my homework\"?", "o": ["The order of homework and TV changes.", "There is no difference.", "One is about yesterday.", "One is about my friend."], "why": "After puts homework first; before puts TV first."},
+    {"lv": "التحليل", "q": "Ali wakes up at 6:00 and has breakfast at 6:30. Which sentence is correct?", "o": ["After Ali wakes up, he has breakfast.", "Before Ali wakes up, he has breakfast.", "After Ali has breakfast, he wakes up.", "Ali wakes up after he has breakfast."], "why": "Waking up is first, so after he wakes up comes breakfast."},
+    {"lv": "التحليل", "q": "Why do we use when in \"I listen to music when I study\"?", "o": ["Both actions happen at the same time.", "Music comes first.", "Studying comes first.", "The actions are in the past."], "why": "When shows two things happening together."}
+  ]
+}

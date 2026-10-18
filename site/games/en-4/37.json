@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U3",
+ "lesson": "Unit 3 – Lesson 9: Phonics (ei, eigh)",
+ "outcomes": [
+  "Say and read words with the 'ay' sound spelled ei and eigh.",
+  "Sort and write ei and eigh words correctly.",
+  "Say the tongue twister clearly and quickly."
+ ],
+ "tf": [
+  {
+   "s": "'Eight' has the same sound as 'day'.",
+   "t": true,
+   "why": "Yes! eigh says 'ay' in eight."
+  },
+  {
+   "s": "'Sleigh' is spelled with eigh.",
+   "t": true,
+   "why": "Great! s-l-eigh."
+  },
+  {
+   "s": "'Reins' is spelled with eigh.",
+   "t": false,
+   "why": "Reins uses ei: r-ei-n-s."
+  },
+  {
+   "s": "'Beige' and 'vein' both have ei.",
+   "t": true,
+   "why": "Well done! Both use ei."
+  },
+  {
+   "s": "'Egg' has the same sound as 'eight'.",
+   "t": false,
+   "why": "Egg has a short e sound, not 'ay'."
+  },
+  {
+   "s": "'Weigh' goes in the eigh column.",
+   "t": true,
+   "why": "Yes! w-eigh."
+  },
+  {
+   "s": "'Eighteen' goes in the ei column.",
+   "t": false,
+   "why": "Eighteen starts with eigh: eigh-teen."
+  },
+  {
+   "s": "In 'reindeer', the letters ei say 'ay'.",
+   "t": true,
+   "why": "Correct! r-ei-n-deer."
+  },
+  {
+   "s": "The letters g and h in 'eight' are loud and clear.",
+   "t": false,
+   "why": "In eigh, the g and h are silent."
+  },
+  {
+   "s": "The tongue twister says 'eight reindeer'.",
+   "t": true,
+   "why": "Yes! Eight reindeer with reins and a sleigh in the snow."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which spelling? r___ns",
+   "o": [
+    "ei",
+    "eigh",
+    "ee"
+   ],
+   "why": "Reins is spelled r-ei-n-s."
+  },
+  {
+   "q": "Which spelling? sl___",
+   "o": [
+    "eigh",
+    "ei",
+    "ai"
+   ],
+   "why": "Sleigh is spelled s-l-eigh."
+  },
+  {
+   "q": "Which column: eighteen?",
+   "o": [
+    "eigh",
+    "ei",
+    "ay"
+   ],
+   "why": "Eighteen begins with eigh."
+  },
+  {
+   "q": "Which column: vein?",
+   "o": [
+    "ei",
+    "eigh",
+    "ea"
+   ],
+   "why": "Vein is spelled v-ei-n."
+  },
+  {
+   "q": "Odd one out (sound):",
+   "o": [
+    "egg",
+    "eight",
+    "weigh"
+   ],
+   "why": "Egg does not have the 'ay' sound."
+  },
+  {
+   "q": "Which word is a colour?",
+   "o": [
+    "beige",
+    "sleigh",
+    "reins"
+   ],
+   "why": "Beige is a light brown colour."
+  },
+  {
+   "q": "Which word is a number?",
+   "o": [
+    "eighteen",
+    "reindeer",
+    "vein"
+   ],
+   "why": "Eighteen is a number."
+  },
+  {
+   "q": "Which word has eigh?",
+   "o": [
+    "weigh",
+    "beige",
+    "reins"
+   ],
+   "why": "Weigh is spelled w-eigh."
+  },
+  {
+   "q": "What pulls the sleigh in the snow?",
+   "o": [
+    "reindeer",
+    "eighteen",
+    "beige"
+   ],
+   "why": "Reindeer pull the sleigh."
+  },
+  {
+   "q": "Which word has ei (not eigh)?",
+   "o": [
+    "reindeer",
+    "eight",
+    "sleigh"
+   ],
+   "why": "Reindeer is spelled r-ei-n-d-ee-r."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Missing letters: sl___",
+   "a": "eigh",
+   "d": [
+    "ei",
+    "ee",
+    "oa"
+   ]
+  },
+  {
+   "q": "Missing letters: r___ns",
+   "a": "ei",
+   "d": [
+    "eigh",
+    "oa",
+    "ue"
+   ]
+  },
+  {
+   "q": "Missing letters: w___",
+   "a": "eigh",
+   "d": [
+    "ei",
+    "ie",
+    "oo"
+   ]
+  },
+  {
+   "q": "Missing letters: v___n",
+   "a": "ei",
+   "d": [
+    "eigh",
+    "oo",
+    "ue"
+   ]
+  },
+  {
+   "q": "Missing letters: b___ge",
+   "a": "ei",
+   "d": [
+    "eigh",
+    "oa",
+    "oo"
+   ]
+  },
+  {
+   "q": "Missing letters: ___teen",
+   "a": "eigh",
+   "d": [
+    "ei",
+    "ai",
+    "oa"
+   ]
+  },
+  {
+   "q": "Find the eigh word",
+   "a": "eight",
+   "d": [
+    "vein",
+    "reins",
+    "beige"
+   ]
+  },
+  {
+   "q": "Find the ei (not eigh) word",
+   "a": "vein",
+   "d": [
+    "weigh",
+    "sleigh",
+    "eight"
+   ]
+  },
+  {
+   "q": "Find the 'ay' sound word",
+   "a": "weigh",
+   "d": [
+    "egg",
+    "bed",
+    "pen"
+   ]
+  },
+  {
+   "q": "Find the number word",
+   "a": "eighteen",
+   "d": [
+    "reindeer",
+    "beige",
+    "reins"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word has the same sound as 'day'?",
+   "o": [
+    "eight",
+    "egg",
+    "bed",
+    "ten"
+   ],
+   "why": "Eight has the 'ay' sound like day."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which letters say 'ay' in 'sleigh'?",
+   "o": [
+    "eigh",
+    "sl",
+    "le",
+    "gh"
+   ],
+   "why": "In sleigh, eigh says 'ay'."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group has only words spelled with ei (not eigh)?",
+   "o": [
+    "reins, vein, beige",
+    "eight, weigh, sleigh",
+    "reins, eight, weigh",
+    "vein, sleigh, beige"
+   ],
+   "why": "Reins, vein and beige all use ei."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group has only eigh words?",
+   "o": [
+    "eight, weigh, eighteen",
+    "reins, vein, beige",
+    "eight, reins, vein",
+    "beige, sleigh, reins"
+   ],
+   "why": "Eight, weigh and eighteen all use eigh."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: ___ reindeer with reins and a sl___ in the snow.",
+   "o": [
+    "Eight / sleigh",
+    "Ate / slay",
+    "Eight / slee",
+    "Eighteen / sleigh"
+   ],
+   "why": "The tongue twister says: Eight reindeer with reins and a sleigh."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "How do you spell the number 8?",
+   "o": [
+    "eight",
+    "eit",
+    "eigt",
+    "aight"
+   ],
+   "why": "8 is spelled e-i-g-h-t."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct spelling.",
+   "o": [
+    "reindeer",
+    "raindeer",
+    "reighndeer",
+    "reendeer"
+   ],
+   "why": "Reindeer is spelled with ei."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT have the 'ay' sound?",
+   "o": [
+    "egg",
+    "beige",
+    "weigh",
+    "vein"
+   ],
+   "why": "Egg has a short e sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Eighteen' and 'eight' are in the same column. Why?",
+   "o": [
+    "They both have eigh.",
+    "They both have ei.",
+    "They both have ee.",
+    "They both end in t."
+   ],
+   "why": "Both words start with eigh."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair has two words spelled with ei (not eigh)?",
+   "o": [
+    "reindeer, vein",
+    "eight, weigh",
+    "sleigh, reins",
+    "weigh, beige"
+   ],
+   "why": "Reindeer and vein both use ei."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U1",
+ "lesson": "Unit 1 – Lesson 5: Culture – Unusual schools around the world",
+ "outcomes": [
+  "Describe unusual schools around the world.",
+  "Compare your school with schools in other countries.",
+  "Plan and describe a perfect school."
+ ],
+ "tf": [
+  {
+   "s": "In Bangladesh, some children study at school on a boat.",
+   "t": true,
+   "why": "Yes! A boat school helps when there are floods."
+  },
+  {
+   "s": "The boat school is in the USA.",
+   "t": false,
+   "why": "The boat school is in Bangladesh."
+  },
+  {
+   "s": "At a boarding school, children sleep at school on weekdays.",
+   "t": true,
+   "why": "Correct! They go home at the weekend or for holidays."
+  },
+  {
+   "s": "At Forest School, children have an outdoor lesson once a week.",
+   "t": true,
+   "why": "Great! They learn outside, for example looking at leaves."
+  },
+  {
+   "s": "The school in the USA uses a lot of books and paper.",
+   "t": false,
+   "why": "That school never uses books or paper. Children use computers."
+  },
+  {
+   "s": "A school in Indonesia teaches children using examples from nature.",
+   "t": true,
+   "why": "Well done! Nature is their teacher."
+  },
+  {
+   "s": "Children at a boarding school go home every evening.",
+   "t": false,
+   "why": "They sleep at school on weekdays and go home at the weekend."
+  },
+  {
+   "s": "Some schools in Bangladesh are on boats because there are sometimes floods.",
+   "t": true,
+   "why": "Yes! Floods make it hard to get to school."
+  },
+  {
+   "s": "An outdoor lesson happens inside the classroom.",
+   "t": false,
+   "why": "Outdoor means outside, not inside."
+  },
+  {
+   "s": "Forest School lessons are about nature.",
+   "t": true,
+   "why": "Right! Children look at leaves and nature outside."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where is the boat school?",
+   "o": [
+    "Bangladesh",
+    "Indonesia",
+    "the USA"
+   ],
+   "why": "Some children in Bangladesh study on a boat."
+  },
+  {
+   "q": "Why do some children study on a boat?",
+   "o": [
+    "There are sometimes floods.",
+    "They like fishing.",
+    "Boats are cheap."
+   ],
+   "why": "Floods make it hard to reach a normal school."
+  },
+  {
+   "q": "Which school never uses books or paper?",
+   "o": [
+    "a school in the USA",
+    "Forest School",
+    "the boat school"
+   ],
+   "why": "Children there use computers."
+  },
+  {
+   "q": "Where do boarding school children sleep on weekdays?",
+   "o": [
+    "at school",
+    "at their aunt's house",
+    "on a boat"
+   ],
+   "why": "They sleep at school and go home at the weekend."
+  },
+  {
+   "q": "What do children do at Forest School?",
+   "o": [
+    "have an outdoor lesson",
+    "sleep at school",
+    "use only computers"
+   ],
+   "why": "They learn outside once a week."
+  },
+  {
+   "q": "In Indonesia, a school uses examples from ___.",
+   "o": [
+    "nature",
+    "computers",
+    "boats"
+   ],
+   "why": "That school teaches with nature."
+  },
+  {
+   "q": "Outdoor means ___.",
+   "o": [
+    "outside",
+    "inside",
+    "at home"
+   ],
+   "why": "Outdoor lessons are outside."
+  },
+  {
+   "q": "How often is the outdoor lesson at Forest School?",
+   "o": [
+    "once a week",
+    "every day",
+    "never"
+   ],
+   "why": "It is once a week."
+  },
+  {
+   "q": "Choose the correct poster sentence.",
+   "o": [
+    "We have an outdoor lesson once a week.",
+    "We has an outdoor lesson once a week.",
+    "We have once a week an outdoor lesson lesson."
+   ],
+   "why": "We have ... once a week."
+  },
+  {
+   "q": "We travel to school ___ boat.",
+   "o": [
+    "by",
+    "on",
+    "at"
+   ],
+   "why": "We say: by boat, by bus, by car."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Boat school country?",
+   "a": "Bangladesh",
+   "d": [
+    "Indonesia",
+    "the USA",
+    "Oman"
+   ]
+  },
+  {
+   "q": "Why a boat school?",
+   "a": "floods",
+   "d": [
+    "snow",
+    "sand",
+    "wind"
+   ]
+  },
+  {
+   "q": "USA school uses...?",
+   "a": "computers",
+   "d": [
+    "books",
+    "paper",
+    "boats"
+   ]
+  },
+  {
+   "q": "Indonesia school uses...?",
+   "a": "nature",
+   "d": [
+    "computers",
+    "boats",
+    "paper"
+   ]
+  },
+  {
+   "q": "Outdoor lessons are...?",
+   "a": "outside",
+   "d": [
+    "inside",
+    "at home",
+    "online"
+   ]
+  },
+  {
+   "q": "Forest lesson: how often?",
+   "a": "once a week",
+   "d": [
+    "every day",
+    "never",
+    "twice a day"
+   ]
+  },
+  {
+   "q": "Sleep at school on weekdays?",
+   "a": "boarding school",
+   "d": [
+    "Forest School",
+    "boat school",
+    "computer school"
+   ]
+  },
+  {
+   "q": "Opposite of outdoors?",
+   "a": "indoors",
+   "d": [
+    "outside",
+    "forest",
+    "nature"
+   ]
+  },
+  {
+   "q": "Forest School: look at...?",
+   "a": "leaves",
+   "d": [
+    "computers",
+    "books",
+    "boats"
+   ]
+  },
+  {
+   "q": "We travel to school by...?",
+   "a": "boat",
+   "d": [
+    "leaves",
+    "nature",
+    "paper"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Where do some children study on a boat?",
+   "o": [
+    "in Bangladesh",
+    "in the USA",
+    "in Indonesia",
+    "in Britain"
+   ],
+   "why": "The boat school is in Bangladesh."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When do boarding school children go home?",
+   "o": [
+    "at the weekend or for holidays",
+    "every evening",
+    "every morning",
+    "never"
+   ],
+   "why": "They sleep at school on weekdays."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which school teaches children using examples from nature?",
+   "o": [
+    "a school in Indonesia",
+    "a school in the USA",
+    "the boat school",
+    "a boarding school"
+   ],
+   "why": "The school in Indonesia uses nature."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do children use at the school in the USA?",
+   "o": [
+    "computers",
+    "books",
+    "paper",
+    "leaves"
+   ],
+   "why": "That school never uses books or paper."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A child says: 'I sleep at school from Sunday to Thursday.' What kind of school is it?",
+   "o": [
+    "a boarding school",
+    "a boat school",
+    "a Forest School",
+    "a computer school"
+   ],
+   "why": "Sleeping at school on weekdays = boarding school."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A child says: 'Today we look at leaves outside.' Which school is it?",
+   "o": [
+    "Forest School",
+    "a boarding school",
+    "the boat school",
+    "the school in the USA"
+   ],
+   "why": "Forest School has outdoor lessons about nature."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write about your perfect school: we go outside two days a week.",
+   "o": [
+    "We have an outdoor lesson twice a week.",
+    "We have an outdoor lesson once a week.",
+    "We never have an outdoor lesson.",
+    "We have an outdoor lesson every day."
+   ],
+   "why": "Two days a week = twice a week."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How is a boarding school different from most schools in Oman?",
+   "o": [
+    "Children sleep at school on weekdays.",
+    "Children study on a boat.",
+    "Children never use books.",
+    "Children only study at the weekend."
+   ],
+   "why": "Good comparing! Boarding school children stay at school."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is a boat school a good idea in a place with floods?",
+   "o": [
+    "Children can still get to school when there is water.",
+    "Boats are faster than cars.",
+    "Children like fishing.",
+    "There are no teachers on land."
+   ],
+   "why": "A boat can float on flood water."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is a good reason why a school is 'perfect'?",
+   "o": [
+    "We use computers every day.",
+    "We never learn anything.",
+    "We have no teachers.",
+    "We never go outside or read."
+   ],
+   "why": "A good reason tells something nice and useful about the school."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U2",
+ "lesson": "Unit 2 – Lesson 6: English in action – Shopping for food",
+ "outcomes": [
+  "Use polite phrases to buy food in a shop.",
+  "Understand what Adam buys and how much he pays.",
+  "Add up prices in rials."
+ ],
+ "tf": [
+  {
+   "s": "Adam buys ten apples.",
+   "t": false,
+   "why": "Adam buys six apples."
+  },
+  {
+   "s": "Adam buys four bananas.",
+   "t": false,
+   "why": "Adam buys four oranges, not bananas."
+  },
+  {
+   "s": "Adam pays four rials.",
+   "t": true,
+   "why": "Correct! That's four rials."
+  },
+  {
+   "s": "The shopkeeper says 'Anything else?' to ask if you want more.",
+   "t": true,
+   "why": "Well done! 'Anything else?' asks if you want more."
+  },
+  {
+   "s": "'Can I have six apples, please?' is a polite way to ask.",
+   "t": true,
+   "why": "Great! We use 'Can I have ..., please?' to ask politely."
+  },
+  {
+   "s": "When you finish shopping, you say 'Can I help you?'",
+   "t": false,
+   "why": "The shopkeeper says 'Can I help you?'. You say 'No, that's it, thanks.'"
+  },
+  {
+   "s": "If 2 apples are 1 rial, 4 apples are 2 rials.",
+   "t": true,
+   "why": "Yes! 2 + 2 apples = 1 + 1 rials."
+  },
+  {
+   "s": "Adam buys some lemons.",
+   "t": false,
+   "why": "Adam buys apples, oranges and grapes."
+  },
+  {
+   "s": "'Here you are.' is what you say when you give something.",
+   "t": true,
+   "why": "Correct! We say it when we give something."
+  },
+  {
+   "s": "Adam buys some grapes too.",
+   "t": true,
+   "why": "Yes! He buys some grapes."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does the shopkeeper say first?",
+   "o": [
+    "Can I help you?",
+    "Here you are.",
+    "No, that's it."
+   ],
+   "why": "The shopkeeper starts with 'Can I help you?'."
+  },
+  {
+   "q": "How many oranges does Adam buy?",
+   "o": [
+    "four",
+    "six",
+    "two"
+   ],
+   "why": "Adam buys four oranges."
+  },
+  {
+   "q": "How much does Adam pay?",
+   "o": [
+    "four rials",
+    "six rials",
+    "two rials"
+   ],
+   "why": "Adam pays four rials."
+  },
+  {
+   "q": "Complete: Can I ___ six apples, please?",
+   "o": [
+    "have",
+    "help",
+    "give"
+   ],
+   "why": "We say 'Can I have ..., please?'."
+  },
+  {
+   "q": "You finish shopping. What do you say?",
+   "o": [
+    "No, that's it, thanks.",
+    "Can I help you?",
+    "Anything else?"
+   ],
+   "why": "'No, that's it, thanks' means you finish."
+  },
+  {
+   "q": "Which is a polite request?",
+   "o": [
+    "Can I have some milk, please?",
+    "Give me milk!",
+    "Milk now!"
+   ],
+   "why": "'Can I have ..., please?' is polite."
+  },
+  {
+   "q": "2 apples = 1 rial. How much are 6 apples?",
+   "o": [
+    "3 rials",
+    "6 rials",
+    "2 rials"
+   ],
+   "why": "6 apples are 3 rials."
+  },
+  {
+   "q": "How does the shopkeeper say the price?",
+   "o": [
+    "That's four rials, please.",
+    "Can I help you?",
+    "Anything else?"
+   ],
+   "why": "The shopkeeper says 'That's ... rials, please.'"
+  },
+  {
+   "q": "What is OMR?",
+   "o": [
+    "Omani rials",
+    "a fruit",
+    "a shop"
+   ],
+   "why": "OMR means Omani rials."
+  },
+  {
+   "q": "You give money to the shopkeeper. You say...",
+   "o": [
+    "Here you are.",
+    "Anything else?",
+    "Can I help you?"
+   ],
+   "why": "We say 'Here you are' when we give something."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Adam buys six...",
+   "a": "apples",
+   "d": [
+    "oranges",
+    "lemons",
+    "bananas"
+   ]
+  },
+  {
+   "q": "Adam buys some...",
+   "a": "grapes",
+   "d": [
+    "lemons",
+    "eggs",
+    "bananas"
+   ]
+  },
+  {
+   "q": "Shopkeeper: Can I ___ you?",
+   "a": "help",
+   "d": [
+    "have",
+    "give",
+    "go"
+   ]
+  },
+  {
+   "q": "Here you ___.",
+   "a": "are",
+   "d": [
+    "is",
+    "am",
+    "be"
+   ]
+  },
+  {
+   "q": "Shopkeeper: Anything ___?",
+   "a": "else",
+   "d": [
+    "more",
+    "other",
+    "again"
+   ]
+  },
+  {
+   "q": "Can I have it, ___?",
+   "a": "please",
+   "d": [
+    "sure",
+    "sorry",
+    "that"
+   ]
+  },
+  {
+   "q": "2 apples = 1 rial. 8 apples?",
+   "a": "4 rials",
+   "d": [
+    "8 rials",
+    "2 rials",
+    "16 rials"
+   ]
+  },
+  {
+   "q": "2 apples = 1 rial. 10 apples?",
+   "a": "5 rials",
+   "d": [
+    "10 rials",
+    "2 rials",
+    "20 rials"
+   ]
+  },
+  {
+   "q": "1 rial + 2 rials + 4 rials",
+   "a": "7 rials",
+   "d": [
+    "6 rials",
+    "8 rials",
+    "5 rials"
+   ]
+  },
+  {
+   "q": "All the prices added up",
+   "a": "total",
+   "d": [
+    "list",
+    "shop",
+    "bag"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does Adam buy?",
+   "o": [
+    "Six apples, four oranges and some grapes",
+    "Four apples and six oranges",
+    "Six bananas and some grapes",
+    "Some apples and two lemons"
+   ],
+   "why": "Adam buys six apples, four oranges and some grapes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the shopkeeper say to ask if you want more?",
+   "o": [
+    "Anything else?",
+    "Here you are.",
+    "That's it.",
+    "Can I have it?"
+   ],
+   "why": "'Anything else?' asks if you want more."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Complete: That's four rials, ___ .",
+   "o": [
+    "please",
+    "sorry",
+    "hello",
+    "goodbye"
+   ],
+   "why": "The shopkeeper says 'That's four rials, please.'"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who says 'Can I help you?'",
+   "o": [
+    "the shopkeeper",
+    "the customer",
+    "the teacher",
+    "Adam's friend"
+   ],
+   "why": "The shopkeeper asks 'Can I help you?'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want three lemons. What do you say?",
+   "o": [
+    "Can I have three lemons, please?",
+    "Can I help three lemons?",
+    "Here you are three lemons.",
+    "Anything else three lemons?"
+   ],
+   "why": "Use 'Can I have ..., please?'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The shopkeeper asks 'Anything else?'. You want some milk. What do you say?",
+   "o": [
+    "Yes, can I have some milk, please?",
+    "No, that's it, thanks.",
+    "Here you are.",
+    "Can I help you?"
+   ],
+   "why": "Ask for the milk politely."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Apples 2 + lemonade 1 + cereal 2 + sandwiches 4 + crisps 1 + milk 1. What is the total?",
+   "o": [
+    "11 rials",
+    "10 rials",
+    "9 rials",
+    "12 rials"
+   ],
+   "why": "2 + 1 + 2 + 4 + 1 + 1 = 11 rials."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Put the dialogue in order: (a) Here you are. (b) Can I have a bag of grapes, please? (c) That's two rials.",
+   "o": [
+    "b – a – c",
+    "a – b – c",
+    "c – b – a",
+    "a – c – b"
+   ],
+   "why": "First ask, then the shopkeeper gives the grapes, then says the price."
+  },
+  {
+   "lv": "التحليل",
+   "q": "2 apples are 1 rial. Sami has 3 rials. How many apples can he buy?",
+   "o": [
+    "6",
+    "3",
+    "4",
+    "2"
+   ],
+   "why": "1 rial = 2 apples, so 3 rials = 6 apples."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the shopkeeper say 'Anything else?'",
+   "o": [
+    "To ask if the customer wants more",
+    "To say the price",
+    "To say goodbye",
+    "To give the change"
+   ],
+   "why": "It checks if the customer wants more food."
+  }
+ ]
+}

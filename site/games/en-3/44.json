@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 4: I want to be a doctor!",
+ "lesson": "Unit 4 – Lesson 5: Culture (the yellow school bus)",
+ "outcomes": [
+  "I can talk about the yellow school bus.",
+  "I can ask: How do you go to school?",
+  "I can read a bar graph about school transport."
+ ],
+ "tf": [
+  {
+   "s": "All school buses in the United States are yellow.",
+   "t": true,
+   "why": "Yes! School buses there are yellow."
+  },
+  {
+   "s": "Cars don't stop for school buses in the United States.",
+   "t": false,
+   "why": "Cars stop for school buses."
+  },
+  {
+   "s": "Bus drivers take students to school in the morning.",
+   "t": true,
+   "why": "Right! And they take them home in the afternoon."
+  },
+  {
+   "s": "Bus drivers take students home at night.",
+   "t": false,
+   "why": "They take students home in the afternoon."
+  },
+  {
+   "s": "School buses in Oman are yellow too.",
+   "t": true,
+   "why": "Yes! Our school buses are yellow too."
+  },
+  {
+   "s": "The tallest bar on a graph shows the most common transport.",
+   "t": true,
+   "why": "Well done! The tallest bar shows the most."
+  },
+  {
+   "s": "The shortest bar shows the most students.",
+   "t": false,
+   "why": "The shortest bar shows the least."
+  },
+  {
+   "s": "We say: I walk to school.",
+   "t": true,
+   "why": "Great! I walk. is correct."
+  },
+  {
+   "s": "We say: I go to school by a car.",
+   "t": false,
+   "why": "No a after by: I go to school by car."
+  },
+  {
+   "s": "A bus driver is a student on the bus.",
+   "t": false,
+   "why": "A bus driver drives the bus."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What colour are school buses in the United States?",
+   "o": [
+    "yellow",
+    "red",
+    "blue"
+   ],
+   "why": "They are yellow."
+  },
+  {
+   "q": "Who drives the school bus?",
+   "o": [
+    "the bus driver",
+    "a student",
+    "a chef"
+   ],
+   "why": "The bus driver drives the bus."
+  },
+  {
+   "q": "What do cars do for school buses?",
+   "o": [
+    "They stop.",
+    "They go fast.",
+    "They follow them."
+   ],
+   "why": "Cars stop for school buses."
+  },
+  {
+   "q": "When do students go home on the school bus?",
+   "o": [
+    "in the afternoon",
+    "in the morning",
+    "at midnight"
+   ],
+   "why": "They go home in the afternoon."
+  },
+  {
+   "q": "Ask a friend about school transport.",
+   "o": [
+    "How do you go to school?",
+    "What's your name?",
+    "How old are you?"
+   ],
+   "why": "We ask: How do you go to school?"
+  },
+  {
+   "q": "Complete: I go to school ___ bus.",
+   "o": [
+    "by",
+    "in",
+    "on a"
+   ],
+   "why": "We say by bus."
+  },
+  {
+   "q": "Complete: In our group, two students ___ to school.",
+   "o": [
+    "walk",
+    "walks",
+    "by walk"
+   ],
+   "why": "Students walk to school."
+  },
+  {
+   "q": "What does a bar graph help us do?",
+   "o": [
+    "compare numbers",
+    "draw a bus",
+    "write a story"
+   ],
+   "why": "A graph helps us compare numbers."
+  },
+  {
+   "q": "Which word is a person?",
+   "o": [
+    "students",
+    "stop",
+    "bus"
+   ],
+   "why": "Students are people."
+  },
+  {
+   "q": "Which word means the opposite of most?",
+   "o": [
+    "least",
+    "tall",
+    "many"
+   ],
+   "why": "Most and least are opposites."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Colour of US school buses",
+   "a": "yellow",
+   "d": [
+    "green",
+    "red",
+    "white"
+   ]
+  },
+  {
+   "q": "Drives the school bus",
+   "a": "bus driver",
+   "d": [
+    "student",
+    "teacher",
+    "chef"
+   ]
+  },
+  {
+   "q": "Cars ___ for school buses.",
+   "a": "stop",
+   "d": [
+    "go",
+    "run",
+    "jump"
+   ]
+  },
+  {
+   "q": "Students go home in the …",
+   "a": "afternoon",
+   "d": [
+    "night",
+    "morning",
+    "winter"
+   ]
+  },
+  {
+   "q": "Tallest bar shows the …",
+   "a": "most",
+   "d": [
+    "least",
+    "none",
+    "same"
+   ]
+  },
+  {
+   "q": "Shortest bar shows the …",
+   "a": "least",
+   "d": [
+    "most",
+    "all",
+    "biggest"
+   ]
+  },
+  {
+   "q": "I go to school ___ car.",
+   "a": "by",
+   "d": [
+    "in",
+    "at",
+    "on"
+   ]
+  },
+  {
+   "q": "No transport: I …",
+   "a": "walk",
+   "d": [
+    "drive",
+    "fly",
+    "sail"
+   ]
+  },
+  {
+   "q": "People on the school bus",
+   "a": "students",
+   "d": [
+    "chefs",
+    "pilots",
+    "doctors"
+   ]
+  },
+  {
+   "q": "A yellow school ___",
+   "a": "bus",
+   "d": [
+    "boat",
+    "car",
+    "train"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Where are all the school buses yellow?",
+   "o": [
+    "in the United States",
+    "only in the sea",
+    "in the underground",
+    "in a park"
+   ],
+   "why": "The text is about school buses in the United States."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When do bus drivers take students to school?",
+   "o": [
+    "in the morning",
+    "in the afternoon",
+    "at night",
+    "at the weekend"
+   ],
+   "why": "They take students to school in the morning."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is about school transport?",
+   "o": [
+    "school bus",
+    "palette",
+    "stethoscope",
+    "kite"
+   ],
+   "why": "A school bus takes students to school."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do we draw to show how our group goes to school?",
+   "o": [
+    "a bar graph",
+    "a map",
+    "a story",
+    "a clock"
+   ],
+   "why": "We collect data and draw a bar graph."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Graph: car 4, bus 3, walk 2. Which is the most common?",
+   "o": [
+    "car",
+    "bus",
+    "walk",
+    "boat"
+   ],
+   "why": "Car has the tallest bar: 4."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Graph: car 4, bus 3, walk 2. Write a sentence.",
+   "o": [
+    "In our group, four students go to school by car.",
+    "In our group, four students go to school by bus.",
+    "In our group, two students go to school by car.",
+    "In our group, four students walks to school."
+   ],
+   "why": "Four students go by car."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "True or False: Bus drivers drive the school buses.",
+   "o": [
+    "True",
+    "False",
+    "Yes, he does.",
+    "Yellow"
+   ],
+   "why": "Bus drivers drive the school buses."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Graph: bus 5, car 3, walk 1. Which is the least common?",
+   "o": [
+    "walk",
+    "bus",
+    "car",
+    "train"
+   ],
+   "why": "Walk has the shortest bar: 1."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do cars stop for school buses?",
+   "o": [
+    "To keep the students safe",
+    "Because the bus is yellow",
+    "To talk to the driver",
+    "Because they are late"
+   ],
+   "why": "Stopping keeps students safe."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How are school buses in Oman like school buses in the United States?",
+   "o": [
+    "They are yellow too.",
+    "They are boats.",
+    "They go under the ground.",
+    "They have no driver."
+   ],
+   "why": "In both places, school buses are yellow."
+  }
+ ]
+}

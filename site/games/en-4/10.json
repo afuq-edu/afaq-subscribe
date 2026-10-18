@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U1",
+ "lesson": "Unit 1 – Lesson 8: Skills – Listening, Speaking and Writing",
+ "outcomes": [
+  "Listen for details about after-school activities and times.",
+  "Ask and answer: What do you do after school?",
+  "Write about your favourite lesson with capital letters and full stops."
+ ],
+ "tf": [
+  {
+   "s": "Saeed has swimming lessons after school.",
+   "t": true,
+   "why": "Yes! Saeed is going swimming."
+  },
+  {
+   "s": "Azza's Quran lesson is at quarter past four.",
+   "t": true,
+   "why": "Correct! It is at quarter past four."
+  },
+  {
+   "s": "Ammar's favourite lesson is Maths.",
+   "t": false,
+   "why": "Ammar's favourite lesson is English."
+  },
+  {
+   "s": "Ammar likes Maths because he likes learning about numbers.",
+   "t": true,
+   "why": "Great! That is his reason."
+  },
+  {
+   "s": "Subject names like English and Maths start with a capital letter.",
+   "t": true,
+   "why": "Yes! We write English, Maths, Art."
+  },
+  {
+   "s": "A sentence ends with a capital letter.",
+   "t": false,
+   "why": "A sentence starts with a capital letter and ends with a full stop."
+  },
+  {
+   "s": "'i like art because we draw' is written correctly.",
+   "t": false,
+   "why": "Correct it: I like Art because we draw."
+  },
+  {
+   "s": "Underlining key words before listening helps you find the answer.",
+   "t": true,
+   "why": "Well done! Key words help you listen."
+  },
+  {
+   "s": "Anas wants to play tennis.",
+   "t": true,
+   "why": "Right! Anas wants to play tennis."
+  },
+  {
+   "s": "We use 'because' to give a reason.",
+   "t": true,
+   "why": "Yes! I like it because ..."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is Ammar's favourite lesson?",
+   "o": [
+    "English",
+    "Maths",
+    "Art"
+   ],
+   "why": "Ammar's favourite lesson is English."
+  },
+  {
+   "q": "What time is Azza's Quran lesson?",
+   "o": [
+    "quarter past four",
+    "half past four",
+    "quarter to four"
+   ],
+   "why": "It is at quarter past four."
+  },
+  {
+   "q": "What does Saeed do after school today?",
+   "o": [
+    "swimming lessons",
+    "Quran lesson",
+    "tennis"
+   ],
+   "why": "Saeed has swimming lessons."
+  },
+  {
+   "q": "What does Anas want to do?",
+   "o": [
+    "play tennis",
+    "go swimming",
+    "read a book"
+   ],
+   "why": "Anas wants to play tennis."
+  },
+  {
+   "q": "Which word gives a reason?",
+   "o": [
+    "because",
+    "and",
+    "then"
+   ],
+   "why": "Because tells why."
+  },
+  {
+   "q": "A sentence starts with a ___.",
+   "o": [
+    "capital letter",
+    "full stop",
+    "number"
+   ],
+   "why": "Start with a capital letter."
+  },
+  {
+   "q": "A sentence ends with a ___.",
+   "o": [
+    "full stop",
+    "capital letter",
+    "comma"
+   ],
+   "why": "End with a full stop."
+  },
+  {
+   "q": "Which is correct?",
+   "o": [
+    "My favourite lesson is English.",
+    "my favourite lesson is english",
+    "My favourite lesson is english"
+   ],
+   "why": "Capital M, capital E and a full stop."
+  },
+  {
+   "q": "Ask a friend about Saturdays:",
+   "o": [
+    "What do you do on Saturdays?",
+    "What you do Saturdays?",
+    "Do what you on Saturdays?"
+   ],
+   "why": "What do you do on + day?"
+  },
+  {
+   "q": "On Wednesdays, I ___ swimming.",
+   "o": [
+    "go",
+    "goes",
+    "going"
+   ],
+   "why": "With I we say go."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Ammar's favourite lesson?",
+   "a": "English",
+   "d": [
+    "Maths",
+    "Art",
+    "Science"
+   ]
+  },
+  {
+   "q": "Azza's lesson?",
+   "a": "Quran lesson",
+   "d": [
+    "swimming",
+    "tennis",
+    "Art lesson"
+   ]
+  },
+  {
+   "q": "Azza's lesson time?",
+   "a": "quarter past four",
+   "d": [
+    "quarter to four",
+    "half past four",
+    "four o'clock"
+   ]
+  },
+  {
+   "q": "Saeed after school?",
+   "a": "swimming",
+   "d": [
+    "tennis",
+    "reading",
+    "football"
+   ]
+  },
+  {
+   "q": "Anas wants to play...?",
+   "a": "tennis",
+   "d": [
+    "football",
+    "basketball",
+    "chess"
+   ]
+  },
+  {
+   "q": "Word for a reason?",
+   "a": "because",
+   "d": [
+    "and",
+    "then",
+    "but"
+   ]
+  },
+  {
+   "q": "End of a sentence?",
+   "a": "full stop",
+   "d": [
+    "capital letter",
+    "comma",
+    "space"
+   ]
+  },
+  {
+   "q": "Start of a sentence?",
+   "a": "capital letter",
+   "d": [
+    "full stop",
+    "comma",
+    "number"
+   ]
+  },
+  {
+   "q": "Needs a capital: 'maths'",
+   "a": "Maths",
+   "d": [
+    "maths",
+    "mATHS",
+    "maTHS"
+   ]
+  },
+  {
+   "q": "Ammar likes Maths: numbers or?",
+   "a": "numbers",
+   "d": [
+    "animals",
+    "plants",
+    "stories"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why does Ammar like Maths?",
+   "o": [
+    "He likes learning about numbers.",
+    "He likes drawing.",
+    "He likes swimming.",
+    "He likes computers."
+   ],
+   "why": "Ammar likes numbers."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which words need a capital letter: 'my favourite subject is maths.'?",
+   "o": [
+    "My, Maths",
+    "favourite, subject",
+    "is, maths",
+    "subject, My"
+   ],
+   "why": "The first word and subject names need capitals."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should you do before you listen?",
+   "o": [
+    "Look at the pictures and underline key words.",
+    "Close your book.",
+    "Write the answers first.",
+    "Talk to your friend."
+   ],
+   "why": "Key words help you choose the right picture."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question asks about after-school activities?",
+   "o": [
+    "What do you do after school?",
+    "Where are you from?",
+    "How old are you?",
+    "What's your name?"
+   ],
+   "why": "This question asks about after-school activities."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: 'i like art because we draw'",
+   "o": [
+    "I like Art because we draw.",
+    "i like Art because we draw",
+    "I like art because we draw",
+    "I Like Art Because We Draw."
+   ],
+   "why": "Capital I, capital A for Art and a full stop."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Answer: What do you do after school on Thursdays?",
+   "o": [
+    "On Thursdays, I play basketball.",
+    "On Thursdays, I am nine.",
+    "Thursdays is a day.",
+    "I'm from Oman."
+   ],
+   "why": "Say the day and the activity."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete the plan: 'My favourite lesson is Art. I like it ___ we draw pictures.'",
+   "o": [
+    "because",
+    "but",
+    "or",
+    "then"
+   ],
+   "why": "Because gives the reason."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A question says: 'What time is Azza's lesson?' Which key words help you most?",
+   "o": [
+    "what time",
+    "Azza's",
+    "is",
+    "lesson"
+   ],
+   "why": "'What time' tells you to listen for a time."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which paragraph follows the writing plan best?",
+   "o": [
+    "My favourite lesson is English. I like it because we read stories. I also like Maths.",
+    "english is good",
+    "I am nine. I'm from Oman.",
+    "Maths. Art. English."
+   ],
+   "why": "It names the lesson, gives a reason and another lesson."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we use a checklist after writing?",
+   "o": [
+    "To find and correct our mistakes.",
+    "To make the text longer.",
+    "To copy a friend's work.",
+    "To draw a picture."
+   ],
+   "why": "Great habit! Checking helps us fix capitals, full stops and spelling."
+  }
+ ]
+}

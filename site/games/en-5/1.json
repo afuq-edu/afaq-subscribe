@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الخامس",
+  "unit": "Welcome – Welcome back",
+  "lesson": "Lesson 1: Welcome back (story and freetime activities)",
+  "outcomes": [
+    "I can name the Discovery Team and tell the main events of the story.",
+    "I can ask and answer about weekly activities: On Sundays, Sami plays football.",
+    "I can say what a person is doing now: She's building a robot."
+  ],
+  "tf": [
+    {"s": "In the story, there is a new girl at the school.", "t": true, "why": "Yes! A new girl comes to the school in the story."},
+    {"s": "The new girl at the school is from Oman.", "t": false, "why": "She is from Egypt."},
+    {"s": "On Mondays, Sami goes to Chess Club.", "t": true, "why": "Right! The week planner shows Chess Club for Sami on Mondays."},
+    {"s": "On Tuesdays, Fatma and Lottie have a tennis lesson.", "t": false, "why": "On Tuesdays, they have a swimming lesson."},
+    {"s": "We say \"On Mondays\" for something we do every Monday.", "t": true, "why": "Yes! On + days tells us about our weekly routine."},
+    {"s": "\"He's play football now.\" is a correct sentence.", "t": false, "why": "We need -ing: He's playing football now."},
+    {"s": "Bo says the children are very busy.", "t": true, "why": "Yes! Bo says: You are all very busy!"},
+    {"s": "Bo is a member of the Discovery Team.", "t": true, "why": "Great! Sami, Fatma, Lottie and Bo are the Discovery Team."},
+    {"s": "\"She's building a robot\" tells us what she does every week.", "t": false, "why": "It tells us what she is doing now."},
+    {"s": "We say \"In Fridays, I visit Granny.\"", "t": false, "why": "We use on with days: On Fridays, I visit Granny."}
+  ],
+  "boxes": [
+    {"q": "Where is the new girl from?", "o": ["Egypt", "Oman", "India"], "why": "The story says she's from Egypt."},
+    {"q": "What does Sami do on Sundays?", "o": ["He plays football.", "He plays chess.", "He has a music lesson."], "why": "On Sundays, Sami plays football."},
+    {"q": "Who says \"You are all very busy!\"?", "o": ["Bo", "Sami", "Lottie"], "why": "Bo says it because the children have activities on most days."},
+    {"q": "Look! He ___ basketball now.", "o": ["is playing", "plays", "play"], "why": "For now, we use is + playing."},
+    {"q": "Choose the correct sentence.", "o": ["On Saturdays, I visit Granny.", "On Saturdays, I visiting Granny.", "In Saturdays, I visit Granny."], "why": "On + days + present simple for a routine."},
+    {"q": "Which one is a club in the week planner?", "o": ["Basketball Club", "Swimming lesson", "Visit Granny"], "why": "Basketball Club and Chess Club are clubs."},
+    {"q": "What ___ she doing?", "o": ["is", "does", "are"], "why": "What is she doing? asks about now."},
+    {"q": "Sami ___ to Chess Club on Mondays.", "o": ["goes", "going", "is go"], "why": "Sami goes: he, she or a name takes -s."},
+    {"q": "Which word is a day of the week?", "o": ["Thursday", "Tennis", "Today"], "why": "Thursday is a day of the week."},
+    {"q": "Which is a freetime activity?", "o": ["music lesson", "breakfast", "bedtime"], "why": "A music lesson is something we do in our free time."}
+  ],
+  "hunt": [
+    {"q": "She's ___ a robot. (build)", "a": "building", "d": ["build", "builds", "built"]},
+    {"q": "He's ___ in the pool. (swim)", "a": "swimming", "d": ["swiming", "swims", "swam"]},
+    {"q": "I'm ___ a book. (read)", "a": "reading", "d": ["reads", "readed", "read"]},
+    {"q": "She's ___ now. (dance)", "a": "dancing", "d": ["danceing", "dances", "danced"]},
+    {"q": "They're ___ a story. (write)", "a": "writing", "d": ["writeing", "writes", "wrote"]},
+    {"q": "He's ___ fast. (run)", "a": "running", "d": ["runing", "runs", "ran"]},
+    {"q": "The day after Sunday", "a": "Monday", "d": ["Tuesday", "Friday", "Saturday"]},
+    {"q": "The day after Friday", "a": "Saturday", "d": ["Sunday", "Thursday", "Wednesday"]},
+    {"q": "Sami, Fatma, Lottie and Bo: the ___ Team", "a": "Discovery", "d": ["Science", "Talent", "Football"]},
+    {"q": "Fatma and Lottie on Tuesdays", "a": "swimming lesson", "d": ["chess club", "tennis club", "visit Granny"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Who are the Discovery Team?", "o": ["Sami, Fatma, Lottie and Bo", "Sami, Fatma, Tameem and Bo", "Lottie, Arwa, Sami and Bo", "Fatma, Laith, Lottie and Bo"], "why": "The four members are Sami, Fatma, Lottie and Bo."},
+    {"lv": "التذكر", "q": "What does Sami do on Mondays?", "o": ["He goes to Chess Club.", "He has a swimming lesson.", "He plays football.", "He visits Granny."], "why": "The week planner shows Chess Club on Mondays."},
+    {"lv": "التذكر", "q": "\"She's building a robot.\" This sentence is in the ___.", "o": ["present continuous", "present simple", "past simple", "future"], "why": "be + verb-ing is the present continuous."},
+    {"lv": "التذكر", "q": "Which words do we use for an activity every Wednesday?", "o": ["On Wednesdays", "In Wednesday", "At Wednesdays", "By Wednesday"], "why": "We use On + days for weekly activities."},
+    {"lv": "التطبيق", "q": "A picture shows a boy kicking a ball right now. Which sentence fits?", "o": ["He's playing football.", "He plays football on Sundays.", "He played football.", "He play football."], "why": "For an action now, use is + verb-ing."},
+    {"lv": "التطبيق", "q": "Which sentence about your Fridays is correct?", "o": ["On Fridays, I visit my grandparents.", "On Fridays, I visiting my grandparents.", "On Fridays, I am visit my grandparents.", "On Fridays, I visits my grandparents."], "why": "For a routine, use the present simple: I visit."},
+    {"lv": "التطبيق", "q": "The planner says: Tuesdays – Fatma and Lottie – swimming lesson. Which sentence is correct?", "o": ["On Tuesdays, Fatma and Lottie have a swimming lesson.", "On Tuesdays, Fatma and Lottie has a swimming lesson.", "In Tuesdays, Fatma and Lottie have a swimming lesson.", "On Tuesdays, Fatma and Lottie having a swimming lesson."], "why": "Two people take have, and days take on."},
+    {"lv": "التحليل", "q": "Why does Bo say \"You are all very busy!\"?", "o": ["The children have activities on most days.", "The children are sleeping.", "The school is closed.", "The children don't like clubs."], "why": "They have clubs, lessons and visits on most days, so they are busy."},
+    {"lv": "التحليل", "q": "Which sentence tells us about a routine, not about now?", "o": ["On Sundays, Sami plays football.", "Sami is playing football now.", "Look! Sami is running.", "Sami is building a robot."], "why": "On Sundays + present simple shows a routine."},
+    {"lv": "التحليل", "q": "\"Lottie is swimming.\" When is this happening?", "o": ["now", "every Tuesday", "last week", "every day"], "why": "The present continuous tells us what is happening now."}
+  ]
+}

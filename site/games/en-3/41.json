@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 4: I want to be a doctor!",
+ "lesson": "Unit 4 – Lesson 2: Story (The job fair)",
+ "outcomes": [
+  "I can name the jobs of the people in 'The job fair'.",
+  "I can remember what happens in the story.",
+  "I can explain: Follow your dreams."
+ ],
+ "tf": [
+  {
+   "s": "Mr Ibrahim is a chef.",
+   "t": true,
+   "why": "Yes! Mr Ibrahim is a chef."
+  },
+  {
+   "s": "Mr Ahmed is a doctor.",
+   "t": false,
+   "why": "Mr Ahmed is a pilot."
+  },
+  {
+   "s": "Aunt Aseel is a famous artist.",
+   "t": true,
+   "why": "Right! Aunt Aseel is a famous artist."
+  },
+  {
+   "s": "Aseel is Fatma's sister.",
+   "t": false,
+   "why": "Aseel is Fatma's aunt."
+  },
+  {
+   "s": "Lisa doesn't feel well in the story.",
+   "t": true,
+   "why": "Yes! Lisa doesn't feel well."
+  },
+  {
+   "s": "Mrs Shahad gives Lisa some food.",
+   "t": false,
+   "why": "Mrs Shahad, the doctor, gives Lisa some medicine."
+  },
+  {
+   "s": "Aunt Aseel goes home by plane.",
+   "t": true,
+   "why": "Well done! She goes home by plane."
+  },
+  {
+   "s": "Polly and Atomic want to be chefs.",
+   "t": false,
+   "why": "Polly and Atomic want to be artists."
+  },
+  {
+   "s": "A girl who wants to be an artist and paints every day follows her dream.",
+   "t": true,
+   "why": "Yes! She works hard for her dream."
+  },
+  {
+   "s": "Follow your dreams means you never try.",
+   "t": false,
+   "why": "Follow your dreams means you work hard to be what you want to be."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who is a pilot in the story?",
+   "o": [
+    "Mr Ahmed",
+    "Mr Ibrahim",
+    "Lisa"
+   ],
+   "why": "Mr Ahmed is a pilot."
+  },
+  {
+   "q": "What is Mrs Shahad's job?",
+   "o": [
+    "doctor",
+    "chef",
+    "artist"
+   ],
+   "why": "Mrs Shahad is a doctor."
+  },
+  {
+   "q": "What does Lisa get?",
+   "o": [
+    "some medicine",
+    "some food",
+    "a plane"
+   ],
+   "why": "Lisa gets some medicine."
+  },
+  {
+   "q": "How does Lisa feel after the medicine?",
+   "o": [
+    "better",
+    "worse",
+    "tired"
+   ],
+   "why": "Lisa says: I feel better now."
+  },
+  {
+   "q": "Whose aunt is Aseel?",
+   "o": [
+    "Fatma's",
+    "Lisa's",
+    "Polly's"
+   ],
+   "why": "Aseel is Fatma's aunt."
+  },
+  {
+   "q": "What do Polly and Atomic want to be?",
+   "o": [
+    "artists",
+    "pilots",
+    "doctors"
+   ],
+   "why": "They want to be artists."
+  },
+  {
+   "q": "What is the value of the story?",
+   "o": [
+    "Follow your dreams.",
+    "Go to bed early.",
+    "Eat your food."
+   ],
+   "why": "The value is Follow your dreams."
+  },
+  {
+   "q": "What does I don't feel well mean?",
+   "o": [
+    "I am ill.",
+    "I am happy.",
+    "I am hungry."
+   ],
+   "why": "I don't feel well means I am ill."
+  },
+  {
+   "q": "Who says: I don't feel well?",
+   "o": [
+    "Lisa",
+    "Mr Ahmed",
+    "Aunt Aseel"
+   ],
+   "why": "Lisa doesn't feel well."
+  },
+  {
+   "q": "Where are the people in the story?",
+   "o": [
+    "at a job fair",
+    "at a camel race",
+    "at the beach"
+   ],
+   "why": "The story is about a job fair."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Mr Ibrahim's job",
+   "a": "chef",
+   "d": [
+    "pilot",
+    "doctor",
+    "artist"
+   ]
+  },
+  {
+   "q": "Mr Ahmed's job",
+   "a": "pilot",
+   "d": [
+    "chef",
+    "teacher",
+    "nurse"
+   ]
+  },
+  {
+   "q": "Mrs Shahad's job",
+   "a": "doctor",
+   "d": [
+    "artist",
+    "pilot",
+    "builder"
+   ]
+  },
+  {
+   "q": "Aunt Aseel's job",
+   "a": "artist",
+   "d": [
+    "chef",
+    "doctor",
+    "pilot"
+   ]
+  },
+  {
+   "q": "Aunt Aseel goes home by …",
+   "a": "plane",
+   "d": [
+    "car",
+    "bus",
+    "boat"
+   ]
+  },
+  {
+   "q": "Lisa has some …",
+   "a": "medicine",
+   "d": [
+    "food",
+    "paint",
+    "bread"
+   ]
+  },
+  {
+   "q": "Aseel is Fatma's …",
+   "a": "aunt",
+   "d": [
+    "sister",
+    "mum",
+    "friend"
+   ]
+  },
+  {
+   "q": "Who feels ill?",
+   "a": "Lisa",
+   "d": [
+    "Fatma",
+    "Mr Ahmed",
+    "Aunt Aseel"
+   ]
+  },
+  {
+   "q": "I feel ___ now.",
+   "a": "better",
+   "d": [
+    "bad",
+    "ill",
+    "worse"
+   ]
+  },
+  {
+   "q": "Polly and Atomic want to be …",
+   "a": "artists",
+   "d": [
+    "chefs",
+    "pilots",
+    "doctors"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who is the chef in the story?",
+   "o": [
+    "Mr Ibrahim",
+    "Mr Ahmed",
+    "Mrs Shahad",
+    "Lisa"
+   ],
+   "why": "Mr Ibrahim is the chef."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is Aunt Aseel?",
+   "o": [
+    "a famous artist",
+    "a pilot",
+    "a doctor",
+    "a chef"
+   ],
+   "why": "Aunt Aseel is a famous artist."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who helps Lisa?",
+   "o": [
+    "Mrs Shahad",
+    "Mr Ibrahim",
+    "Mr Ahmed",
+    "Polly"
+   ],
+   "why": "Mrs Shahad, the doctor, helps Lisa."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Complete: Aunt Aseel, these are my ___.",
+   "o": [
+    "friends",
+    "jobs",
+    "planes",
+    "medicine"
+   ],
+   "why": "Fatma says: these are my friends."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct ending: Aunt Aseel is going home by …",
+   "o": [
+    "plane",
+    "car",
+    "bus",
+    "boat"
+   ],
+   "why": "She is going home by plane."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Introduce Mr Ahmed like in the story.",
+   "o": [
+    "This is Mr Ahmed. He's a pilot.",
+    "This is Mr Ahmed. She's a pilot.",
+    "This is Mr Ahmed. He's a chef.",
+    "These is Mr Ahmed. He's a pilot."
+   ],
+   "why": "We say: This is Mr Ahmed. He's a pilot."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend doesn't feel well. What can you say?",
+   "o": [
+    "Don't worry. Let's get the doctor.",
+    "I want to be a pilot.",
+    "This is Mr Ibrahim.",
+    "Goodbye!"
+   ],
+   "why": "Kind words and a doctor help, like in the story."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What happens to Lisa and who helps her?",
+   "o": [
+    "She feels ill, and the doctor gives her medicine.",
+    "She flies a plane with Mr Ahmed.",
+    "She cooks with Mr Ibrahim.",
+    "She paints with Aunt Aseel."
+   ],
+   "why": "Mrs Shahad the doctor helps Lisa."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A boy wants to be a pilot. Which shows he follows his dream?",
+   "o": [
+    "He studies hard every day.",
+    "He never reads.",
+    "He says he doesn't want a job.",
+    "He forgets his dream."
+   ],
+   "why": "Following a dream means working hard for it."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the doctor important in the story?",
+   "o": [
+    "She helps Lisa feel better.",
+    "She flies Aunt Aseel home.",
+    "She cooks lunch.",
+    "She paints a picture."
+   ],
+   "why": "The doctor gives Lisa medicine and she feels better."
+  }
+ ]
+}

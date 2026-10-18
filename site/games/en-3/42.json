@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 4: I want to be a doctor!",
+ "lesson": "Unit 4 – Lesson 3: Vocabulary and Grammar (transport)",
+ "outcomes": [
+  "I can name six kinds of transport.",
+  "I can say: He / She goes to work by …",
+  "I can talk about how my family goes to work."
+ ],
+ "tf": [
+  {
+   "s": "A boat goes on water.",
+   "t": true,
+   "why": "Yes! A boat goes on the water."
+  },
+  {
+   "s": "The underground goes under the ground.",
+   "t": true,
+   "why": "Right! That is why we call it the underground."
+  },
+  {
+   "s": "We say: He goes to work by a bus.",
+   "t": false,
+   "why": "We don't use a after by: He goes to work by bus."
+  },
+  {
+   "s": "We say: She goes to work by train.",
+   "t": true,
+   "why": "Great! by + transport, with no a or the."
+  },
+  {
+   "s": "We say: He go to work by car.",
+   "t": false,
+   "why": "With he, we say goes."
+  },
+  {
+   "s": "A motorbike has two wheels.",
+   "t": true,
+   "why": "Yes! A motorbike has two wheels."
+  },
+  {
+   "s": "Underground has nine letters.",
+   "t": false,
+   "why": "Underground has 11 letters."
+  },
+  {
+   "s": "The secret word in the crossword is boat.",
+   "t": true,
+   "why": "Well done! The secret word is boat."
+  },
+  {
+   "s": "A train goes on water.",
+   "t": false,
+   "why": "A boat goes on water. A train goes on rails."
+  },
+  {
+   "s": "We use She for a man in the picture.",
+   "t": false,
+   "why": "We use He for a man and She for a woman."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: She goes to work ___ train.",
+   "o": [
+    "by",
+    "in",
+    "at"
+   ],
+   "why": "We say by train."
+  },
+  {
+   "q": "Which transport goes on water?",
+   "o": [
+    "boat",
+    "car",
+    "motorbike"
+   ],
+   "why": "A boat goes on water."
+  },
+  {
+   "q": "Complete: He ___ to work by car.",
+   "o": [
+    "goes",
+    "go",
+    "going"
+   ],
+   "why": "With he, we say goes."
+  },
+  {
+   "q": "Which is correct?",
+   "o": [
+    "by bus",
+    "by a bus",
+    "by the bus"
+   ],
+   "why": "No a or the after by."
+  },
+  {
+   "q": "Which one is NOT transport?",
+   "o": [
+    "teacher",
+    "train",
+    "bus"
+   ],
+   "why": "A teacher is a job."
+  },
+  {
+   "q": "Picture: a woman. Circle He or She.",
+   "o": [
+    "She",
+    "He",
+    "It"
+   ],
+   "why": "We use She for a woman."
+  },
+  {
+   "q": "Which word goes in the crossword with 9 letters?",
+   "o": [
+    "motorbike",
+    "car",
+    "train"
+   ],
+   "why": "m-o-t-o-r-b-i-k-e has nine letters."
+  },
+  {
+   "q": "Complete: ca_",
+   "o": [
+    "r",
+    "t",
+    "n"
+   ],
+   "why": "c-a-r spells car."
+  },
+  {
+   "q": "Which transport has four wheels?",
+   "o": [
+    "car",
+    "boat",
+    "motorbike"
+   ],
+   "why": "A car has four wheels."
+  },
+  {
+   "q": "How many kinds of transport do we learn?",
+   "o": [
+    "six",
+    "ten",
+    "two"
+   ],
+   "why": "We learn six: bus, boat, underground, train, car, motorbike."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Goes on water",
+   "a": "boat",
+   "d": [
+    "car",
+    "bus",
+    "train"
+   ]
+  },
+  {
+   "q": "Goes under the ground",
+   "a": "underground",
+   "d": [
+    "motorbike",
+    "boat",
+    "car"
+   ]
+  },
+  {
+   "q": "She goes to work ___ bus.",
+   "a": "by",
+   "d": [
+    "in",
+    "on",
+    "at"
+   ]
+  },
+  {
+   "q": "He ___ to work by boat.",
+   "a": "goes",
+   "d": [
+    "go",
+    "going",
+    "gos"
+   ]
+  },
+  {
+   "q": "Secret word",
+   "a": "boat",
+   "d": [
+    "bus",
+    "car",
+    "train"
+   ]
+  },
+  {
+   "q": "Letters in underground",
+   "a": "11",
+   "d": [
+    "9",
+    "10",
+    "12"
+   ]
+  },
+  {
+   "q": "Letters in train",
+   "a": "5",
+   "d": [
+    "4",
+    "6",
+    "3"
+   ]
+  },
+  {
+   "q": "Complete: bu_",
+   "a": "s",
+   "d": [
+    "t",
+    "r",
+    "n"
+   ]
+  },
+  {
+   "q": "Two wheels and fast",
+   "a": "motorbike",
+   "d": [
+    "bus",
+    "train",
+    "boat"
+   ]
+  },
+  {
+   "q": "Goes on rails",
+   "a": "train",
+   "d": [
+    "car",
+    "boat",
+    "motorbike"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which transport goes under the ground?",
+   "o": [
+    "the underground",
+    "a boat",
+    "a car",
+    "a motorbike"
+   ],
+   "why": "The underground goes under the ground."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a kind of transport?",
+   "o": [
+    "motorbike",
+    "doctor",
+    "teacher",
+    "artist"
+   ],
+   "why": "A motorbike is transport."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Spell motorbike.",
+   "o": [
+    "m-o-t-o-r-b-i-k-e",
+    "m-o-t-e-r-b-i-k-e",
+    "m-o-t-o-r-b-i-c-k",
+    "m-o-t-r-b-i-k-e"
+   ],
+   "why": "m-o-t-o-r-b-i-k-e is correct."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word goes after goes to work?",
+   "o": [
+    "by",
+    "at",
+    "of",
+    "with a"
+   ],
+   "why": "We say goes to work by …"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct: He go to work by a bus.",
+   "o": [
+    "He goes to work by bus.",
+    "He go to work by bus.",
+    "He goes to work by a bus.",
+    "He going to work by bus."
+   ],
+   "why": "We need goes and no a after by."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture: a man on a boat. Write the sentence.",
+   "o": [
+    "He goes to work by boat.",
+    "She goes to work by boat.",
+    "He goes to work by train.",
+    "He go to work by boat."
+   ],
+   "why": "A man, a boat: He goes to work by boat."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your mum drives to work. What do you say?",
+   "o": [
+    "My mum goes to work by car.",
+    "My mum goes to work by boat.",
+    "My mum go to work by car.",
+    "My mum goes to work by a car."
+   ],
+   "why": "Driving means going by car."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How do you know to circle He or She?",
+   "o": [
+    "Look at the person in the picture.",
+    "Look at the colour of the transport.",
+    "Count the letters.",
+    "Look at the page number."
+   ],
+   "why": "A man is He and a woman is She."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is wrong?",
+   "o": [
+    "She goes to work by the train.",
+    "She goes to work by train.",
+    "He goes to work by car.",
+    "He goes to work by motorbike."
+   ],
+   "why": "We don't use the after by."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A man lives near the sea and works on an island. Which transport is best?",
+   "o": [
+    "boat",
+    "car",
+    "motorbike",
+    "train"
+   ],
+   "why": "A boat goes across the water."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Welcome: The WOW! Team",
+ "lesson": "Welcome – Lesson 2: The WOW! Team (adjectives)",
+ "outcomes": [
+  "I can say and spell adjectives to describe people.",
+  "I can match the WOW! Team members to their profiles.",
+  "I can describe myself and a classmate with adjectives."
+ ],
+ "tf": [
+  {
+   "s": "\"Medium height\" means not tall and not short.",
+   "t": true,
+   "why": "Yes! Medium height is in the middle."
+  },
+  {
+   "s": "A chatty person never talks.",
+   "t": false,
+   "why": "A chatty person talks a lot."
+  },
+  {
+   "s": "Sultan designed the WOW! Magazine.",
+   "t": true,
+   "why": "Right! Sultan is the designer."
+  },
+  {
+   "s": "Julia is clever and she likes Science.",
+   "t": true,
+   "why": "Correct! Julia loves Science."
+  },
+  {
+   "s": "A brave person is scared of everything.",
+   "t": false,
+   "why": "A brave person isn't afraid of anything."
+  },
+  {
+   "s": "\"Tall\" describes appearance.",
+   "t": true,
+   "why": "Yes, tall is about how a person looks."
+  },
+  {
+   "s": "\"Kind\" describes appearance.",
+   "t": false,
+   "why": "Kind is about personality, how a person is inside."
+  },
+  {
+   "s": "A creative person has lots of new ideas.",
+   "t": true,
+   "why": "Great! Creative people have many ideas."
+  },
+  {
+   "s": "Arlo is energetic.",
+   "t": true,
+   "why": "Yes, Arlo is energetic."
+  },
+  {
+   "s": "We use \"What does he look like?\" to ask about personality.",
+   "t": false,
+   "why": "\"What does he look like?\" asks about appearance; \"What is he like?\" asks about personality."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "She has lots of new ideas. She's ___.",
+   "o": [
+    "creative",
+    "tall",
+    "noisy"
+   ],
+   "why": "New ideas show a creative person."
+  },
+  {
+   "q": "I'm not afraid of anything. I'm ___.",
+   "o": [
+    "brave",
+    "pretty",
+    "chatty"
+   ],
+   "why": "Not afraid means brave."
+  },
+  {
+   "q": "He talks a lot. He's ___.",
+   "o": [
+    "chatty",
+    "tall",
+    "brave"
+   ],
+   "why": "Talking a lot means chatty."
+  },
+  {
+   "q": "Who designed the WOW! Magazine?",
+   "o": [
+    "Sultan",
+    "Arlo",
+    "Reem"
+   ],
+   "why": "Sultan designed the magazine."
+  },
+  {
+   "q": "Who is clever and likes Science?",
+   "o": [
+    "Julia",
+    "Reem",
+    "Sultan"
+   ],
+   "why": "Julia loves Science."
+  },
+  {
+   "q": "Which word is about appearance?",
+   "o": [
+    "handsome",
+    "kind",
+    "friendly"
+   ],
+   "why": "Handsome describes how someone looks."
+  },
+  {
+   "q": "Which word is about personality?",
+   "o": [
+    "friendly",
+    "tall",
+    "medium height"
+   ],
+   "why": "Friendly describes what someone is like."
+  },
+  {
+   "q": "He shouts and sings a lot. He's ___.",
+   "o": [
+    "noisy",
+    "kind",
+    "creative"
+   ],
+   "why": "Shouting and singing a lot is noisy."
+  },
+  {
+   "q": "He never feels tired. He's ___.",
+   "o": [
+    "energetic",
+    "chatty",
+    "pretty"
+   ],
+   "why": "Never tired means energetic."
+  },
+  {
+   "q": "Arlo is ___.",
+   "o": [
+    "energetic",
+    "clever",
+    "pretty"
+   ],
+   "why": "Arlo is the energetic one."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Not tall and not short",
+   "a": "medium height",
+   "d": [
+    "handsome",
+    "pretty",
+    "energetic"
+   ]
+  },
+  {
+   "q": "Talks a lot",
+   "a": "chatty",
+   "d": [
+    "brave",
+    "kind",
+    "tall"
+   ]
+  },
+  {
+   "q": "Not afraid of anything",
+   "a": "brave",
+   "d": [
+    "noisy",
+    "pretty",
+    "chatty"
+   ]
+  },
+  {
+   "q": "Has lots of new ideas",
+   "a": "creative",
+   "d": [
+    "tall",
+    "noisy",
+    "brave"
+   ]
+  },
+  {
+   "q": "Never feels tired",
+   "a": "energetic",
+   "d": [
+    "kind",
+    "pretty",
+    "clever"
+   ]
+  },
+  {
+   "q": "Shouts and sings a lot",
+   "a": "noisy",
+   "d": [
+    "kind",
+    "clever",
+    "tall"
+   ]
+  },
+  {
+   "q": "He designed the magazine.",
+   "a": "Sultan",
+   "d": [
+    "Arlo",
+    "Basil",
+    "Faisal"
+   ]
+  },
+  {
+   "q": "She likes Science.",
+   "a": "Julia",
+   "d": [
+    "Reem",
+    "Huda",
+    "Rahaf"
+   ]
+  },
+  {
+   "q": "Good at Maths and smart",
+   "a": "clever",
+   "d": [
+    "noisy",
+    "tall",
+    "chatty"
+   ]
+  },
+  {
+   "q": "Nice to other people",
+   "a": "kind",
+   "d": [
+    "tall",
+    "noisy",
+    "medium height"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which adjective means \"not tall and not short\"?",
+   "o": [
+    "medium height",
+    "handsome",
+    "energetic",
+    "chatty"
+   ],
+   "why": "Medium height is in the middle."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which WOW! Team member is energetic?",
+   "o": [
+    "Arlo",
+    "Julia",
+    "Sultan",
+    "Reem"
+   ],
+   "why": "Arlo is the energetic one."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What pet does Julia have?",
+   "o": [
+    "a bird",
+    "a cat",
+    "a dog",
+    "a fish"
+   ],
+   "why": "Julia has a pet bird."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group has only appearance adjectives?",
+   "o": [
+    "tall, pretty, handsome",
+    "kind, brave, clever",
+    "chatty, noisy, friendly",
+    "creative, fun, energetic"
+   ],
+   "why": "These words describe how people look."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "\"He's 1 metre 80 and he never feels tired.\" Which adjectives match?",
+   "o": [
+    "tall and energetic",
+    "medium height and chatty",
+    "short and brave",
+    "handsome and noisy"
+   ],
+   "why": "1 metre 80 is tall, and never tired is energetic."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "\"I'm creative. I like computers.\" Which team member are you like?",
+   "o": [
+    "Sultan",
+    "Arlo",
+    "Reem",
+    "Julia"
+   ],
+   "why": "Sultan is creative and likes computers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence describes personality?",
+   "o": [
+    "She's brave and kind.",
+    "She's tall.",
+    "He's handsome.",
+    "He's medium height."
+   ],
+   "why": "Brave and kind tell us what she is like."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Reem say \"I think they're being kind\"?",
+   "o": [
+    "Her friends say she's pretty, and she thinks they are just being nice.",
+    "She is scared of everything.",
+    "She designed the magazine.",
+    "She doesn't like her friends."
+   ],
+   "why": "Reem thinks her friends are just being nice."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A person shouts and sings a lot and is good at Maths. Which two adjectives fit?",
+   "o": [
+    "noisy and clever",
+    "kind and tall",
+    "brave and pretty",
+    "chatty and handsome"
+   ],
+   "why": "Shouting is noisy; good at Maths is clever."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which question asks about personality?",
+   "o": [
+    "What is he like?",
+    "What does he look like?",
+    "How old is he?",
+    "How tall is he?"
+   ],
+   "why": "\"What is he like?\" asks about personality."
+  }
+ ]
+}

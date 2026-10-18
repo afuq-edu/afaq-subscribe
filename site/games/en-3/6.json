@@ -55,9 +55,9 @@
    "why": "Great! In the afternoon."
   },
   {
-   "s": "The answer to When do you go to bed? is We go to bed in the evening at night.",
+   "s": "Evening comes before afternoon.",
    "t": false,
-   "why": "Use one time phrase: We go to bed at night."
+   "why": "Afternoon comes first, then evening."
   }
  ],
  "boxes": [

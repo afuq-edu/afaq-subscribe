@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 1: Free-time fun",
+ "lesson": "Unit 1 – Lesson 1: Vocabulary – Sports",
+ "outcomes": [
+  "I can name sports with go, play and do.",
+  "I can find the sport from clues in a short text.",
+  "I can sort sports into groups and say why we do sports."
+ ],
+ "tf": [
+  {
+   "s": "We say \"go swimming\".",
+   "t": true,
+   "why": "Yes! We use go with swimming."
+  },
+  {
+   "s": "We say \"do volleyball\".",
+   "t": false,
+   "why": "We say \"play volleyball\"."
+  },
+  {
+   "s": "We say \"do karate\".",
+   "t": true,
+   "why": "Correct! We use do with karate."
+  },
+  {
+   "s": "Skiing is a winter sport.",
+   "t": true,
+   "why": "Yes, we go skiing on snow."
+  },
+  {
+   "s": "Cycling uses wheels and a helmet.",
+   "t": true,
+   "why": "Right! A bike has wheels and you wear a helmet."
+  },
+  {
+   "s": "Karate is a team sport.",
+   "t": false,
+   "why": "Karate is an individual sport."
+  },
+  {
+   "s": "We say \"play gymnastics\".",
+   "t": false,
+   "why": "We say \"do gymnastics\"."
+  },
+  {
+   "s": "Sports can help keep us healthy.",
+   "t": true,
+   "why": "Great! Sports keep us fit and healthy."
+  },
+  {
+   "s": "You play table tennis with big bats and a big ball.",
+   "t": false,
+   "why": "Table tennis uses small bats and a small ball."
+  },
+  {
+   "s": "Hockey is a team sport.",
+   "t": true,
+   "why": "Yes, you play hockey in a team."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "I ___ swimming every week.",
+   "o": [
+    "go",
+    "play",
+    "do"
+   ],
+   "why": "We say go swimming."
+  },
+  {
+   "q": "We ___ badminton after school.",
+   "o": [
+    "play",
+    "go",
+    "do"
+   ],
+   "why": "We say play badminton."
+  },
+  {
+   "q": "She ___ athletics.",
+   "o": [
+    "does",
+    "goes",
+    "plays"
+   ],
+   "why": "We use do with athletics."
+  },
+  {
+   "q": "Which is a winter sport?",
+   "o": [
+    "ice skating",
+    "volleyball",
+    "table tennis"
+   ],
+   "why": "Ice skating is a winter sport."
+  },
+  {
+   "q": "Which sport has wheels?",
+   "o": [
+    "cycling",
+    "karate",
+    "swimming"
+   ],
+   "why": "A bike has wheels."
+  },
+  {
+   "q": "\"We play it indoors and on the beach.\" What is it?",
+   "o": [
+    "volleyball",
+    "skiing",
+    "karate"
+   ],
+   "why": "You can play volleyball indoors or on the beach."
+  },
+  {
+   "q": "Which is a team sport?",
+   "o": [
+    "volleyball",
+    "karate",
+    "skiing"
+   ],
+   "why": "Volleyball is played in teams."
+  },
+  {
+   "q": "What do you wear on your head when you cycle?",
+   "o": [
+    "a helmet",
+    "skis",
+    "a bat"
+   ],
+   "why": "A helmet keeps your head safe."
+  },
+  {
+   "q": "Which goes with \"go\"?",
+   "o": [
+    "scooting",
+    "hockey",
+    "gymnastics"
+   ],
+   "why": "We say go scooting."
+  },
+  {
+   "q": "What do you need for table tennis?",
+   "o": [
+    "small bats",
+    "skis",
+    "a helmet"
+   ],
+   "why": "Table tennis uses small bats."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "___ skiing",
+   "a": "go",
+   "d": [
+    "play",
+    "do",
+    "make"
+   ]
+  },
+  {
+   "q": "___ hockey",
+   "a": "play",
+   "d": [
+    "go",
+    "do",
+    "make"
+   ]
+  },
+  {
+   "q": "___ karate",
+   "a": "do",
+   "d": [
+    "go",
+    "play",
+    "make"
+   ]
+  },
+  {
+   "q": "___ ice skating",
+   "a": "go",
+   "d": [
+    "play",
+    "do",
+    "make"
+   ]
+  },
+  {
+   "q": "___ table tennis",
+   "a": "play",
+   "d": [
+    "go",
+    "do",
+    "make"
+   ]
+  },
+  {
+   "q": "___ gymnastics",
+   "a": "do",
+   "d": [
+    "go",
+    "play",
+    "make"
+   ]
+  },
+  {
+   "q": "Sport with skis and snow",
+   "a": "skiing",
+   "d": [
+    "hockey",
+    "karate",
+    "badminton"
+   ]
+  },
+  {
+   "q": "Sport in white clothes",
+   "a": "karate",
+   "d": [
+    "cycling",
+    "skiing",
+    "swimming"
+   ]
+  },
+  {
+   "q": "Sport in water",
+   "a": "swimming",
+   "d": [
+    "cycling",
+    "hockey",
+    "karate"
+   ]
+  },
+  {
+   "q": "Sport with a bike",
+   "a": "cycling",
+   "d": [
+    "badminton",
+    "gymnastics",
+    "athletics"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which verb do we use with volleyball, hockey and badminton?",
+   "o": [
+    "play",
+    "go",
+    "do",
+    "make"
+   ],
+   "why": "We play ball and racket games."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sport do we use with \"do\"?",
+   "o": [
+    "athletics",
+    "cycling",
+    "hockey",
+    "swimming"
+   ],
+   "why": "We say do athletics."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list has two winter sports?",
+   "o": [
+    "skiing, ice skating",
+    "volleyball, hockey",
+    "karate, gymnastics",
+    "cycling, scooting"
+   ],
+   "why": "Skiing and ice skating are winter sports."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In Julia's post, which sport uses wheels and a helmet?",
+   "o": [
+    "cycling",
+    "karate",
+    "table tennis",
+    "volleyball"
+   ],
+   "why": "Cycling uses wheels and a helmet."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is correct?",
+   "o": [
+    "I go cycling with my brother.",
+    "I play cycling with my brother.",
+    "I do cycling with my brother.",
+    "I go hockey with my brother."
+   ],
+   "why": "We say go cycling."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which list has one sport with go, one with play and one with do?",
+   "o": [
+    "go cycling, play table tennis, do gymnastics",
+    "go hockey, play karate, do swimming",
+    "go volleyball, play skiing, do cycling",
+    "go karate, play gymnastics, do hockey"
+   ],
+   "why": "Each verb matches its sport here."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "\"You do it in water. You don't need a ball.\" Which sport is it?",
+   "o": [
+    "swimming",
+    "volleyball",
+    "cycling",
+    "skiing"
+   ],
+   "why": "Water and no ball means swimming."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which clue tells you Reem's sport is table tennis?",
+   "o": [
+    "She uses small bats, a small ball and a big table.",
+    "She wears a helmet.",
+    "She plays on snow.",
+    "She wears white clothes."
+   ],
+   "why": "Small bats and a big table point to table tennis."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Hockey, karate, volleyball: which is NOT a team sport?",
+   "o": [
+    "karate",
+    "hockey",
+    "volleyball",
+    "all are team sports"
+   ],
+   "why": "Karate is an individual sport."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is a good answer to the WOW! Question \"Why do we do sports?\"",
+   "o": [
+    "They keep us fit and help us make new friends.",
+    "They make us tired and bored.",
+    "Because we play hockey.",
+    "Because skiing is a winter sport."
+   ],
+   "why": "Sports keep us healthy and help us make friends."
+  }
+ ]
+}

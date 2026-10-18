@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U3",
+ "lesson": "Unit 3 – Graded readers: The Boat Race & The Baby Bird",
+ "outcomes": [
+  "Read 'The Boat Race' and follow the events.",
+  "Read 'The Baby Bird' and describe the problem and the solution.",
+  "Use comparatives and superlatives from the stories."
+ ],
+ "tf": [
+  {
+   "s": "In 'The Boat Race', Mrs Aseel has the longest boat.",
+   "t": true,
+   "why": "Yes! The teacher has the longest boat."
+  },
+  {
+   "s": "In 'The Boat Race', the class is on a river.",
+   "t": true,
+   "why": "Yes! The class is on the river in their boats."
+  },
+  {
+   "s": "The boys race to a hill.",
+   "t": true,
+   "why": "Correct! They race to a hill."
+  },
+  {
+   "s": "At the end, Qais is slower and drier than Yasir.",
+   "t": true,
+   "why": "Well done! Yasir gets wetter."
+  },
+  {
+   "s": "Yasir is wetter because his boat goes into the big waterfall.",
+   "t": true,
+   "why": "Yes! The waterfall makes him wet."
+  },
+  {
+   "s": "In 'The Baby Bird', the family has nets to catch fish.",
+   "t": false,
+   "why": "They use nets to clean up rubbish in the forest."
+  },
+  {
+   "s": "The baby bird is in the tallest tree.",
+   "t": true,
+   "why": "Correct! It is in the tallest tree."
+  },
+  {
+   "s": "The baby bird can fly very well.",
+   "t": false,
+   "why": "The baby bird can't fly."
+  },
+  {
+   "s": "Muna's dad catches the baby bird in his hands.",
+   "t": false,
+   "why": "Muna catches it in her net."
+  },
+  {
+   "s": "The baby bird is bigger than the other birds.",
+   "t": false,
+   "why": "The baby bird is smaller than the other birds."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Whose boat is quicker?",
+   "o": [
+    "Yasir's",
+    "Qais's",
+    "Muna's"
+   ],
+   "why": "Yasir's boat is quicker than Qais's boat."
+  },
+  {
+   "q": "Where do the boys race to?",
+   "o": [
+    "a hill",
+    "a school",
+    "a shop"
+   ],
+   "why": "They race to a hill."
+  },
+  {
+   "q": "Who gets wetter?",
+   "o": [
+    "Yasir",
+    "Qais",
+    "Mrs Aseel"
+   ],
+   "why": "Yasir's boat goes into the waterfall."
+  },
+  {
+   "q": "Which word is from 'The Baby Bird'?",
+   "o": [
+    "nets",
+    "sleigh",
+    "waterfall"
+   ],
+   "why": "The family uses nets in the forest."
+  },
+  {
+   "q": "Where is the baby bird?",
+   "o": [
+    "in the tallest tree",
+    "in the river",
+    "in a box"
+   ],
+   "why": "It is in the tallest tree."
+  },
+  {
+   "q": "That bird is ___ than the other birds.",
+   "o": [
+    "smaller",
+    "smallest",
+    "small"
+   ],
+   "why": "Use the comparative with 'than'."
+  },
+  {
+   "q": "What can't the baby bird do?",
+   "o": [
+    "fly",
+    "eat",
+    "sing"
+   ],
+   "why": "The baby bird can't fly."
+  },
+  {
+   "q": "My boat is quicker than your boat! My boat is the ___!",
+   "o": [
+    "quickest",
+    "quicker",
+    "quick"
+   ],
+   "why": "quick – quicker – the quickest."
+  },
+  {
+   "q": "Your net is the ___ net!",
+   "o": [
+    "biggest",
+    "bigger",
+    "big"
+   ],
+   "why": "big – bigger – the biggest."
+  },
+  {
+   "q": "Where are the nets used?",
+   "o": [
+    "in the forest",
+    "in the sea",
+    "at school"
+   ],
+   "why": "They clean up rubbish in the forest."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Who has the longest boat?",
+   "a": "Mrs Aseel",
+   "d": [
+    "Qais",
+    "Yasir",
+    "Muna"
+   ]
+  },
+  {
+   "q": "Who is drier at the end?",
+   "a": "Qais",
+   "d": [
+    "Yasir",
+    "Mrs Aseel",
+    "Muna"
+   ]
+  },
+  {
+   "q": "Who catches the baby bird?",
+   "a": "Muna",
+   "d": [
+    "Qais",
+    "Yasir",
+    "Mrs Aseel"
+   ]
+  },
+  {
+   "q": "The boys race to a ...",
+   "a": "hill",
+   "d": [
+    "shop",
+    "school",
+    "house"
+   ]
+  },
+  {
+   "q": "What makes Yasir wet?",
+   "a": "the waterfall",
+   "d": [
+    "the rain",
+    "the sea",
+    "the hill"
+   ]
+  },
+  {
+   "q": "The baby bird is in the ...",
+   "a": "tallest tree",
+   "d": [
+    "river",
+    "nest box",
+    "car"
+   ]
+  },
+  {
+   "q": "Muna catches the bird in her",
+   "a": "net",
+   "d": [
+    "hands",
+    "bag",
+    "hat"
+   ]
+  },
+  {
+   "q": "The family cleans up ...",
+   "a": "rubbish",
+   "d": [
+    "cars",
+    "boats",
+    "books"
+   ]
+  },
+  {
+   "q": "Comparative of 'quick'",
+   "a": "quicker",
+   "d": [
+    "quickest",
+    "more quick",
+    "quickly"
+   ]
+  },
+  {
+   "q": "Comparative of 'wet'",
+   "a": "wetter",
+   "d": [
+    "weter",
+    "wettest",
+    "more wet"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which words are from 'The Boat Race'?",
+   "o": [
+    "boat, race, waterfall",
+    "forest, nets, rubbish",
+    "police, burglar, keys",
+    "reindeer, sleigh, snow"
+   ],
+   "why": "The Boat Race is about boats, a race and a waterfall."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In 'The Baby Bird', why do they have nets?",
+   "o": [
+    "They are cleaning up rubbish in the forest.",
+    "They are catching fish.",
+    "They are playing a game.",
+    "They are making a boat."
+   ],
+   "why": "They help clean the forest."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What's the problem in 'The Baby Bird'?",
+   "o": [
+    "The baby bird can't fly.",
+    "The boat is too long.",
+    "The family is hungry.",
+    "The forest is on fire."
+   ],
+   "why": "The baby bird is high up and can't fly."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'The Baby Bird' teach us?",
+   "o": [
+    "Clean the forest and help animals.",
+    "Always win every race.",
+    "Never help others.",
+    "Stay at home all day."
+   ],
+   "why": "The story shows cleaning nature and helping animals."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Qais is slower and ___ than Yasir.",
+   "o": [
+    "drier",
+    "driest",
+    "dry",
+    "more dry"
+   ],
+   "why": "dry – drier: y changes to i."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence about the boys.",
+   "o": [
+    "Yasir's boat is quicker than Qais's boat.",
+    "Qais's boat is quickest than Yasir's boat.",
+    "Yasir's boat is more quick than Qais's boat.",
+    "Yasir's boat is quick than Qais's boat."
+   ],
+   "why": "Comparative + than: quicker than."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "How can you help nature like Azza and Muna?",
+   "o": [
+    "I can pick up rubbish in the park.",
+    "I can throw rubbish in the river.",
+    "I can break tree branches.",
+    "I can scare the birds."
+   ],
+   "why": "Picking up rubbish keeps nature clean."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Yasir wetter than Qais at the end?",
+   "o": [
+    "His boat goes into the big waterfall.",
+    "He swims in the sea.",
+    "It is raining on him.",
+    "He falls off the hill."
+   ],
+   "why": "The waterfall makes Yasir wet."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How does Muna solve the problem?",
+   "o": [
+    "She catches the baby bird in her net.",
+    "She climbs the tallest tree.",
+    "She calls the police.",
+    "She gives the bird some food."
+   ],
+   "why": "Her net catches the bird safely."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses a superlative?",
+   "o": [
+    "My boat is the quickest!",
+    "My boat is quicker than your boat!",
+    "You're wetter than me.",
+    "That bird is smaller than the other birds."
+   ],
+   "why": "'the quickest' is a superlative."
+  }
+ ]
+}

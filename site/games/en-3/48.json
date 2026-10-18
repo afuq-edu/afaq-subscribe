@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Unit 4: I want to be a doctor!",
+ "lesson": "Unit 4 – Lesson 9: Get ready for … Pre A1 Starters",
+ "outcomes": [
+  "I can read sentences and put a tick or a cross.",
+  "I can complete sentences from a picture with one word.",
+  "I can answer questions about me: What do you want to be?"
+ ],
+ "tf": [
+  {
+   "s": "In Reading and Writing Part 1, you put a tick for a correct sentence.",
+   "t": true,
+   "why": "Yes! A tick means the sentence matches the picture."
+  },
+  {
+   "s": "You mark a wrong sentence with a tick.",
+   "t": false,
+   "why": "We mark a wrong sentence with a cross."
+  },
+  {
+   "s": "For 'She goes to work by car', you check the person and the transport.",
+   "t": true,
+   "why": "Great! Check she and car in the picture."
+  },
+  {
+   "s": "Picture: a man on a train. 'She goes to work by train.' gets a tick.",
+   "t": false,
+   "why": "It's a man, so it gets a cross: He goes to work by train."
+  },
+  {
+   "s": "In Part 5, you write one word in each gap.",
+   "t": true,
+   "why": "Right! One word in each sentence."
+  },
+  {
+   "s": "Thought bubbles in the picture show dream jobs.",
+   "t": true,
+   "why": "Yes! The bubbles show what people want to be."
+  },
+  {
+   "s": "We write: I want to be a artist.",
+   "t": false,
+   "why": "We write: I want to be an artist."
+  },
+  {
+   "s": "A bubble with a fire helmet shows a firefighter.",
+   "t": true,
+   "why": "Well done! A fire helmet means firefighter."
+  },
+  {
+   "s": "You don't need to check spelling before you finish.",
+   "t": false,
+   "why": "Always check your spelling and a / an."
+  },
+  {
+   "s": "A bubble with space shows a chef.",
+   "t": false,
+   "why": "Space shows an astronaut."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How do you mark a wrong sentence?",
+   "o": [
+    "with a cross",
+    "with a tick",
+    "with a circle"
+   ],
+   "why": "A wrong sentence gets a cross."
+  },
+  {
+   "q": "Correct: She goes to work by train. (picture: a man)",
+   "o": [
+    "He goes to work by train.",
+    "She go to work by train.",
+    "He goes to work by a train."
+   ],
+   "why": "A man is He."
+  },
+  {
+   "q": "Complete: I want to be an ___. (bubble: space)",
+   "o": [
+    "astronaut",
+    "artist",
+    "pilot"
+   ],
+   "why": "Space means astronaut."
+  },
+  {
+   "q": "Complete: He goes to work by ___. (a man on a red motorbike)",
+   "o": [
+    "motorbike",
+    "bus",
+    "boat"
+   ],
+   "why": "He rides a motorbike."
+  },
+  {
+   "q": "Complete: She goes to work by ___. (a woman at the station steps)",
+   "o": [
+    "underground",
+    "boat",
+    "plane"
+   ],
+   "why": "Station steps go down to the underground."
+  },
+  {
+   "q": "Answer: What do you want to be?",
+   "o": [
+    "I want to be a pilot.",
+    "I want a pilot.",
+    "I am want pilot."
+   ],
+   "why": "We say: I want to be …"
+  },
+  {
+   "q": "Answer: How do you go to school?",
+   "o": [
+    "I go to school by bus.",
+    "I go school bus.",
+    "I goes to school by bus."
+   ],
+   "why": "We say: I go to school by bus."
+  },
+  {
+   "q": "How many words do you write in each gap in Part 5?",
+   "o": [
+    "one",
+    "two",
+    "three"
+   ],
+   "why": "Write one word."
+  },
+  {
+   "q": "What shows a person's dream job in the picture?",
+   "o": [
+    "a thought bubble",
+    "the transport",
+    "the clock"
+   ],
+   "why": "Thought bubbles show dream jobs."
+  },
+  {
+   "q": "Which word goes after an?",
+   "o": [
+    "artist",
+    "firefighter",
+    "pilot"
+   ],
+   "why": "artist starts with a vowel sound."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Mark for a correct sentence",
+   "a": "tick",
+   "d": [
+    "cross",
+    "circle",
+    "line"
+   ]
+  },
+  {
+   "q": "Mark for a wrong sentence",
+   "a": "cross",
+   "d": [
+    "tick",
+    "dot",
+    "star"
+   ]
+  },
+  {
+   "q": "Bubble: fire helmet",
+   "a": "firefighter",
+   "d": [
+    "chef",
+    "teacher",
+    "nurse"
+   ]
+  },
+  {
+   "q": "Bubble: space",
+   "a": "astronaut",
+   "d": [
+    "builder",
+    "doctor",
+    "pilot"
+   ]
+  },
+  {
+   "q": "Man on a red motorbike: by …",
+   "a": "motorbike",
+   "d": [
+    "boat",
+    "train",
+    "plane"
+   ]
+  },
+  {
+   "q": "Woman at station steps: by …",
+   "a": "underground",
+   "d": [
+    "bus",
+    "boat",
+    "car"
+   ]
+  },
+  {
+   "q": "I want to be ___ artist.",
+   "a": "an",
+   "d": [
+    "a",
+    "two",
+    "the an"
+   ]
+  },
+  {
+   "q": "I want to be ___ firefighter.",
+   "a": "a",
+   "d": [
+    "an",
+    "two",
+    "an a"
+   ]
+  },
+  {
+   "q": "Words in each Part 5 gap",
+   "a": "one",
+   "d": [
+    "two",
+    "three",
+    "four"
+   ]
+  },
+  {
+   "q": "Picture: a man. Use …",
+   "a": "He",
+   "d": [
+    "She",
+    "It",
+    "They"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do you put next to a correct sentence in Part 1?",
+   "o": [
+    "a tick",
+    "a cross",
+    "a number",
+    "a letter"
+   ],
+   "why": "A correct sentence gets a tick."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question is about you in Speaking Part 4?",
+   "o": [
+    "What do you want to be?",
+    "Where is the bus?",
+    "What colour is the car?",
+    "How many trains are there?"
+   ],
+   "why": "Part 4 asks questions about you."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In the picture, what do the thought bubbles show?",
+   "o": [
+    "dream jobs",
+    "transport",
+    "the weather",
+    "food"
+   ],
+   "why": "Thought bubbles show dream jobs."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word completes: I want to be an ___?",
+   "o": [
+    "astronaut",
+    "firefighter",
+    "pilot",
+    "doctor"
+   ],
+   "why": "astronaut starts with a vowel sound."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture: a man on a train. Sentence: She goes to work by train. What do you do?",
+   "o": [
+    "Put a cross.",
+    "Put a tick.",
+    "Write Yes.",
+    "Draw a train."
+   ],
+   "why": "The person is a man, so it's wrong: a cross."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: She goes to work by train. (picture: a man)",
+   "o": [
+    "He goes to work by train.",
+    "She goes to work by car.",
+    "He go to work by train.",
+    "He goes to work by a train."
+   ],
+   "why": "A man is He. He goes to work by train."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I want to be a ___. (bubble: fire helmet)",
+   "o": [
+    "firefighter",
+    "chef",
+    "artist",
+    "astronaut"
+   ],
+   "why": "A fire helmet means firefighter."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the answer an artist and not a artist?",
+   "o": [
+    "artist starts with a vowel sound.",
+    "artist is a long word.",
+    "artist is a woman.",
+    "artist goes by underground."
+   ],
+   "why": "We use an before a vowel sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What do you check for: He goes to work by motorbike?",
+   "o": [
+    "the person and the transport",
+    "only the colours",
+    "only the number",
+    "the day and the time"
+   ],
+   "why": "Check he and motorbike in the picture."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What should you do before you finish Part 5?",
+   "o": [
+    "Check spelling and a / an.",
+    "Close your book.",
+    "Write two words in each gap.",
+    "Draw a picture."
+   ],
+   "why": "Checking helps you get every answer right."
+  }
+ ]
+}

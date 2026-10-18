@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Across Cultures · Reading for Pleasure · Review and Reference",
+ "lesson": "Across Cultures: Spain and Reading for Pleasure: the Shanghai Maglev Train / Review and Reference: Theme 4 learning objectives and core words test",
+ "outcomes": [
+  "Learn about Spain's history, culture and traditions",
+  "Understand the main ideas about the Shanghai Maglev train",
+  "Spell and use the Theme 4 core words and tenses"
+ ],
+ "tf": [
+  {
+   "s": "Miguel de Cervantes wrote Don Quixote.",
+   "t": true,
+   "why": "Yes, Cervantes is Spain's famous writer."
+  },
+  {
+   "s": "About 3.3 million people live in Madrid.",
+   "t": true,
+   "why": "Correct, Madrid has about 3.3 million people."
+  },
+  {
+   "s": "A peninsula is land almost surrounded by water.",
+   "t": true,
+   "why": "Yes, Spain is on a peninsula."
+  },
+  {
+   "s": "A matador carries a sword and a cape.",
+   "t": true,
+   "why": "Right, those are a matador's tools."
+  },
+  {
+   "s": "General Francisco Franco ruled Spain after the Civil War.",
+   "t": true,
+   "why": "Yes, that is in the Across Cultures text."
+  },
+  {
+   "s": "A Maglev train runs on wheels like a conventional train.",
+   "t": false,
+   "why": "A Maglev uses magnets to float above the track."
+  },
+  {
+   "s": "'Freight' means goods carried by trains or lorries.",
+   "t": true,
+   "why": "Correct, freight is goods, not passengers."
+  },
+  {
+   "s": "'Emit' means to take in.",
+   "t": false,
+   "why": "'Emit' means to send out, like gas."
+  },
+  {
+   "s": "'Currently' means in the distant past.",
+   "t": false,
+   "why": "'Currently' means now, at the present time."
+  },
+  {
+   "s": "'I've call you all morning' is correct.",
+   "t": false,
+   "why": "The correct form is 'I've been calling you all morning'."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do people throw at La Tomatina?",
+   "o": [
+    "Squashy tomatoes",
+    "Flowers",
+    "Water balloons"
+   ],
+   "why": "La Tomatina is a tomato festival."
+  },
+  {
+   "q": "What makes a Maglev train float?",
+   "o": [
+    "Magnets",
+    "Wheels",
+    "Wings"
+   ],
+   "why": "Magnets lift the train above the track."
+  },
+  {
+   "q": "Complete: I've ___ (call) you all morning.",
+   "o": [
+    "been calling",
+    "been called",
+    "being calling"
+   ],
+   "why": "have been + -ing"
+  },
+  {
+   "q": "What does 'inedible' mean?",
+   "o": [
+    "cannot be eaten",
+    "very tasty",
+    "very cheap"
+   ],
+   "why": "'In-' means not; inedible means not edible."
+  },
+  {
+   "q": "What does 'cosmopolitan' mean?",
+   "o": [
+    "full of people from many countries",
+    "very small and quiet",
+    "very old"
+   ],
+   "why": "A cosmopolitan city is international."
+  },
+  {
+   "q": "What is a 'traffic jam'?",
+   "o": [
+    "a long line of slow or stopped cars",
+    "a sweet food",
+    "a fast road"
+   ],
+   "why": "Traffic jams make journeys slow."
+  },
+  {
+   "q": "Which word means 'usual or traditional'?",
+   "o": [
+    "conventional",
+    "inedible",
+    "squashy"
+   ],
+   "why": "A conventional train runs on wheels."
+  },
+  {
+   "q": "Which sentence uses 'campaign' correctly?",
+   "o": [
+    "The police launched a road safety campaign.",
+    "I ate a campaign for lunch.",
+    "The campaign is my brother's car."
+   ],
+   "why": "A campaign is a planned set of actions."
+  },
+  {
+   "q": "Which machines in Spain use the wind?",
+   "o": [
+    "Windmills",
+    "Capes",
+    "Trucks"
+   ],
+   "why": "Windmills turn in the wind."
+  },
+  {
+   "q": "What does 'benefit' mean?",
+   "o": [
+    "an advantage or good result",
+    "a problem",
+    "a cost"
+   ],
+   "why": "A benefit is something good."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Writer of Don Quixote",
+   "a": "Cervantes",
+   "d": [
+    "Franco",
+    "Picasso",
+    "Columbus"
+   ]
+  },
+  {
+   "q": "Ruled Spain after the Civil War",
+   "a": "Franco",
+   "d": [
+    "Cervantes",
+    "Picasso",
+    "Columbus"
+   ]
+  },
+  {
+   "q": "Population of Madrid",
+   "a": "3.3 million",
+   "d": [
+    "33 million",
+    "330,000",
+    "1.3 million"
+   ]
+  },
+  {
+   "q": "Spain's tomato festival",
+   "a": "La Tomatina",
+   "d": [
+    "Don Quixote",
+    "Maglev",
+    "Madrid"
+   ]
+  },
+  {
+   "q": "Goods carried by trains",
+   "a": "Freight",
+   "d": [
+    "Flyer",
+    "Benefit",
+    "Campaign"
+   ]
+  },
+  {
+   "q": "To send out gas",
+   "a": "Emit",
+   "d": [
+    "Absorb",
+    "Store",
+    "Freeze"
+   ]
+  },
+  {
+   "q": "Usual or traditional",
+   "a": "Conventional",
+   "d": [
+    "Inedible",
+    "Squashy",
+    "Cosmopolitan"
+   ]
+  },
+  {
+   "q": "A matador's sword and…",
+   "a": "Cape",
+   "d": [
+    "Shield",
+    "Flag",
+    "Ball"
+   ]
+  },
+  {
+   "q": "Train that floats on magnets",
+   "a": "Maglev",
+   "d": [
+    "Steam train",
+    "Tram",
+    "Freight train"
+   ]
+  },
+  {
+   "q": "I've ___ (train) all week.",
+   "a": "been training",
+   "d": [
+    "been trained",
+    "being training",
+    "be training"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is special about a Maglev train?",
+   "o": [
+    "It uses magnets to float above the track, so it is fast, smooth and quiet",
+    "It is pulled by horses",
+    "It runs on normal wheels and is very slow",
+    "It only carries freight"
+   ],
+   "why": "Magnets lift the train off the track."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a 'monarchy'?",
+   "o": [
+    "A country ruled by a king or queen",
+    "A large windmill",
+    "A kind of festival",
+    "A fast train"
+   ],
+   "why": "Spain has a monarchy."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'truck' mean?",
+   "o": [
+    "A large vehicle for carrying goods",
+    "A small boat",
+    "A train station",
+    "A traffic light"
+   ],
+   "why": "Trucks carry goods by road."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'squashy' mean?",
+   "o": [
+    "Soft and easy to press flat",
+    "Hard as stone",
+    "Very sweet",
+    "Very dry"
+   ],
+   "why": "Squashy tomatoes are soft."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: He ___ (mend) the car since 9 o'clock.",
+   "o": [
+    "has been mending",
+    "have been mending",
+    "is mending",
+    "mended"
+   ],
+   "why": "'Since 9 o'clock' shows an action that is still continuing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best word: Trucks carry ___ from the port to the city.",
+   "o": [
+    "freight",
+    "flyers",
+    "windmills",
+    "campaigns"
+   ],
+   "why": "Freight is goods carried by vehicles."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best word: Old cars ___ a lot of harmful gas.",
+   "o": [
+    "emit",
+    "benefit",
+    "inedible",
+    "currently"
+   ],
+   "why": "Cars emit, or send out, gas."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is a Maglev train smoother and quieter than a conventional train?",
+   "o": [
+    "It floats above the track instead of rolling on it",
+    "It has more wheels",
+    "It goes more slowly",
+    "It carries fewer people"
+   ],
+   "why": "No wheels on the rails means less noise and bumping."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Madrid is described as cosmopolitan. What does this tell you?",
+   "o": [
+    "People from many countries and cultures live there",
+    "It is a small village",
+    "Nobody visits it",
+    "It has no culture"
+   ],
+   "why": "Cosmopolitan cities are international."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is correct?",
+   "o": [
+    "I've been doing my homework since 4 o'clock.",
+    "I've been doing my homework for 4 o'clock.",
+    "I've doing my homework since 4 o'clock.",
+    "I been doing my homework since 4 o'clock."
+   ],
+   "why": "have been + -ing, and 'since' with a starting point."
+  }
+ ]
+}

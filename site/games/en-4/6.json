@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U1",
+ "lesson": "Unit 1 – Lesson 4: Vocabulary and Grammar 2 (adverbs of frequency)",
+ "outcomes": [
+  "Say how often you do things: always, often, sometimes, never.",
+  "Use every day, once a week, twice a week, three times a week.",
+  "Put the adverb in the right place in a sentence."
+ ],
+ "tf": [
+  {
+   "s": "'Twice a week' means two days a week.",
+   "t": true,
+   "why": "Yes! Twice = two times."
+  },
+  {
+   "s": "'Never' means every day.",
+   "t": false,
+   "why": "Never means not at all. Every day means seven days."
+  },
+  {
+   "s": "'She is always busy' is correct.",
+   "t": true,
+   "why": "Correct! The adverb goes after is."
+  },
+  {
+   "s": "'She plays always tennis' is correct.",
+   "t": false,
+   "why": "The adverb goes before the verb: She always plays tennis."
+  },
+  {
+   "s": "'Once a week' means one time a week.",
+   "t": true,
+   "why": "Great! Once = one time."
+  },
+  {
+   "s": "Seven ticks on the week calendar means 'every day'.",
+   "t": true,
+   "why": "Yes! Seven days = every day."
+  },
+  {
+   "s": "'He never plays football' means he plays football a lot.",
+   "t": false,
+   "why": "Never means he doesn't play it at all."
+  },
+  {
+   "s": "The question 'How often do you watch TV?' asks about frequency.",
+   "t": true,
+   "why": "Well done! 'How often' asks how many times."
+  },
+  {
+   "s": "'Sometimes' means more often than 'always'.",
+   "t": false,
+   "why": "Always is the most often; sometimes is less."
+  },
+  {
+   "s": "'He always eats fish for lunch' is correct.",
+   "t": true,
+   "why": "Yes! The adverb goes before eats."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Two days a week = ?",
+   "o": [
+    "twice a week",
+    "once a week",
+    "every day"
+   ],
+   "why": "Twice means two times."
+  },
+  {
+   "q": "Seven ticks = ?",
+   "o": [
+    "every day",
+    "never",
+    "once a week"
+   ],
+   "why": "Seven days a week is every day."
+  },
+  {
+   "q": "Zero ticks = ?",
+   "o": [
+    "never",
+    "always",
+    "often"
+   ],
+   "why": "Never means not at all."
+  },
+  {
+   "q": "She is ___ busy.",
+   "o": [
+    "always",
+    "twice",
+    "once"
+   ],
+   "why": "Always fits before busy: She is always busy."
+  },
+  {
+   "q": "Choose the correct sentence.",
+   "o": [
+    "She always plays tennis.",
+    "She plays always tennis.",
+    "Always she tennis plays."
+   ],
+   "why": "The adverb goes before the main verb."
+  },
+  {
+   "q": "___ do you watch TV?",
+   "o": [
+    "How often",
+    "What",
+    "Who"
+   ],
+   "why": "How often asks about frequency."
+  },
+  {
+   "q": "Three days a week = ?",
+   "o": [
+    "three times a week",
+    "twice a week",
+    "once a week"
+   ],
+   "why": "Three days = three times a week."
+  },
+  {
+   "q": "My friend often ___ swimming.",
+   "o": [
+    "goes",
+    "go",
+    "going"
+   ],
+   "why": "With my friend (he/she) we say goes."
+  },
+  {
+   "q": "Which word means 'not at all'?",
+   "o": [
+    "never",
+    "often",
+    "always"
+   ],
+   "why": "Never = 0 times."
+  },
+  {
+   "q": "Order: never / plays / he / football",
+   "o": [
+    "He never plays football.",
+    "He plays never football.",
+    "Never he football plays."
+   ],
+   "why": "The adverb goes before the verb plays."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "2 days a week?",
+   "a": "twice a week",
+   "d": [
+    "once a week",
+    "every day",
+    "never"
+   ]
+  },
+  {
+   "q": "1 day a week?",
+   "a": "once a week",
+   "d": [
+    "twice a week",
+    "every day",
+    "always"
+   ]
+  },
+  {
+   "q": "7 days a week?",
+   "a": "every day",
+   "d": [
+    "once a week",
+    "twice a week",
+    "never"
+   ]
+  },
+  {
+   "q": "0 days a week?",
+   "a": "never",
+   "d": [
+    "always",
+    "often",
+    "sometimes"
+   ]
+  },
+  {
+   "q": "3 days a week?",
+   "a": "three times a week",
+   "d": [
+    "twice a week",
+    "once a week",
+    "every day"
+   ]
+  },
+  {
+   "q": "Opposite of never?",
+   "a": "always",
+   "d": [
+    "sometimes",
+    "once",
+    "twice"
+   ]
+  },
+  {
+   "q": "She is ___ busy (7 ticks)",
+   "a": "always",
+   "d": [
+    "never",
+    "once",
+    "twice"
+   ]
+  },
+  {
+   "q": "Twice means ... times",
+   "a": "two",
+   "d": [
+    "one",
+    "three",
+    "seven"
+   ]
+  },
+  {
+   "q": "Once means ... time",
+   "a": "one",
+   "d": [
+    "two",
+    "three",
+    "seven"
+   ]
+  },
+  {
+   "q": "___ often do you read?",
+   "a": "How",
+   "d": [
+    "What",
+    "Who",
+    "Where"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word means 'all the time'?",
+   "o": [
+    "always",
+    "sometimes",
+    "never",
+    "once"
+   ],
+   "why": "Always = every time."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a frequency expression?",
+   "o": [
+    "twice a week",
+    "quarter past ten",
+    "next door",
+    "science lab"
+   ],
+   "why": "Twice a week tells how often."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question asks about frequency?",
+   "o": [
+    "How often do you go swimming?",
+    "Where do you go swimming?",
+    "Who goes swimming?",
+    "What is swimming?"
+   ],
+   "why": "How often asks how many times."
+  },
+  {
+   "lv": "التذكر",
+   "q": "'Every day' means ___ days a week.",
+   "o": [
+    "seven",
+    "two",
+    "one",
+    "three"
+   ],
+   "why": "Every day = all seven days."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I do my homework ___. (7 ticks)",
+   "o": [
+    "every day",
+    "never",
+    "once a week",
+    "twice a week"
+   ],
+   "why": "Seven ticks means every day."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the mistake: 'She plays always tennis.'",
+   "o": [
+    "She always plays tennis.",
+    "She plays tennis always always.",
+    "Always plays she tennis.",
+    "She always play tennis."
+   ],
+   "why": "The adverb goes before the verb, and she plays."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put 'always' in the sentence: 'She is busy.'",
+   "o": [
+    "She is always busy.",
+    "She always is busy.",
+    "Always she is busy.",
+    "She is busy always."
+   ],
+   "why": "With is, the adverb goes after it."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Rewrite with 'often': 'She goes swimming three times a week.'",
+   "o": [
+    "She often goes swimming.",
+    "She never goes swimming.",
+    "She goes often swimming.",
+    "She often go swimming."
+   ],
+   "why": "Three times a week is often; the adverb goes before goes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which rule is right?",
+   "o": [
+    "The adverb goes after is/are and before other verbs.",
+    "The adverb always goes at the end.",
+    "The adverb goes after every verb.",
+    "The adverb goes before is/are."
+   ],
+   "why": "Great! After be, before other verbs."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ali plays tennis once a week. Sara plays tennis every day. Who plays more?",
+   "o": [
+    "Sara",
+    "Ali",
+    "They play the same.",
+    "Nobody plays."
+   ],
+   "why": "Every day (7) is more than once a week (1)."
+  }
+ ]
+}

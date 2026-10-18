@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "unit": "Unit 5: The Train is Approaching! (Writing)",
+ "lesson": "Reading an informative essay on Oman Rail; analysing structure; conjunctions",
+ "outcomes": [
+  "Analyse the structure of an informative essay",
+  "Find topic sentences and the main benefits",
+  "Use and classify conjunctions to link ideas"
+ ],
+ "tf": [
+  {
+   "s": "The Oman Rail essay has five paragraphs.",
+   "t": true,
+   "why": "Yes: introduction, three body paragraphs and a conclusion."
+  },
+  {
+   "s": "Paragraph 1 of the essay is the conclusion.",
+   "t": false,
+   "why": "Paragraph 1 is the introduction."
+  },
+  {
+   "s": "Paragraphs 2–4 describe economic, social and environmental benefits.",
+   "t": true,
+   "why": "Correct, they form the main body."
+  },
+  {
+   "s": "Cohesion is when different parts are combined smoothly to form a whole.",
+   "t": true,
+   "why": "Yes, a cohesive text flows well."
+  },
+  {
+   "s": "'But' is a conjunction of addition.",
+   "t": false,
+   "why": "'But' shows contrast."
+  },
+  {
+   "s": "An informative essay mainly tells a made-up story.",
+   "t": false,
+   "why": "An informative essay gives facts and information."
+  },
+  {
+   "s": "'Firstly' can begin the first point in a list.",
+   "t": true,
+   "why": "Yes, it helps order your ideas."
+  },
+  {
+   "s": "'Also' is a conjunction of addition.",
+   "t": true,
+   "why": "Right, it adds another idea."
+  },
+  {
+   "s": "'As a result' is a conjunction of contrast.",
+   "t": false,
+   "why": "'As a result' shows a result."
+  },
+  {
+   "s": "The main idea of a paragraph is often in its topic sentence.",
+   "t": true,
+   "why": "Yes, the topic sentence tells you the main idea."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is paragraph 5 of the essay?",
+   "o": [
+    "The conclusion",
+    "The introduction",
+    "The first benefit"
+   ],
+   "why": "The essay ends with a conclusion."
+  },
+  {
+   "q": "Which is a topic sentence from the essay?",
+   "o": [
+    "The rail network will also bring many social benefits.",
+    "Trains are blue.",
+    "I like trains."
+   ],
+   "why": "It introduces the main idea of a paragraph."
+  },
+  {
+   "q": "What does an informative essay do?",
+   "o": [
+    "Gives facts and information",
+    "Tells a fairy tale",
+    "Asks for a job"
+   ],
+   "why": "It informs the reader."
+  },
+  {
+   "q": "Which benefits does the main body describe?",
+   "o": [
+    "Economic, social and environmental",
+    "Sports and games",
+    "Food and drink"
+   ],
+   "why": "Each body paragraph gives one kind of benefit."
+  },
+  {
+   "q": "Where is the topic sentence usually found?",
+   "o": [
+    "At the start of a paragraph",
+    "In the title",
+    "After the conclusion"
+   ],
+   "why": "It usually comes first."
+  },
+  {
+   "q": "What should you notice while reading the essay?",
+   "o": [
+    "The number and job of the paragraphs",
+    "The colour of the train",
+    "The writer's age"
+   ],
+   "why": "Structure is the focus of this lesson."
+  },
+  {
+   "q": "What does a conclusion do?",
+   "o": [
+    "Sums up the essay",
+    "Introduces the topic",
+    "Gives a new benefit"
+   ],
+   "why": "It brings the essay to a close."
+  },
+  {
+   "q": "Which sentence uses a result conjunction?",
+   "o": [
+    "The train is fast; therefore, people save time.",
+    "The train is fast, but it is expensive.",
+    "Eventually, the train arrived."
+   ],
+   "why": "'Therefore' shows a result."
+  },
+  {
+   "q": "Which sentence uses a contrast conjunction?",
+   "o": [
+    "Trains are fast, but tickets can be expensive.",
+    "Trains are fast. Furthermore, they are safe.",
+    "Trains are fast; therefore, people use them."
+   ],
+   "why": "'But' shows contrast."
+  },
+  {
+   "q": "Which sentence uses an addition conjunction?",
+   "o": [
+    "In addition, trains reduce pollution.",
+    "Eventually, the train arrived.",
+    "However, the station was closed."
+   ],
+   "why": "'In addition' adds an idea."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Type of conjunction: 'but'",
+   "a": "Contrast",
+   "d": [
+    "Addition",
+    "Result",
+    "Time"
+   ]
+  },
+  {
+   "q": "Type of conjunction: 'therefore'",
+   "a": "Result",
+   "d": [
+    "Contrast",
+    "Addition",
+    "Example"
+   ]
+  },
+  {
+   "q": "Type of conjunction: 'moreover'",
+   "a": "Addition",
+   "d": [
+    "Contrast",
+    "Result",
+    "Time"
+   ]
+  },
+  {
+   "q": "Type of conjunction: 'eventually'",
+   "a": "Time",
+   "d": [
+    "Contrast",
+    "Result",
+    "Example"
+   ]
+  },
+  {
+   "q": "Paragraphs in the Oman Rail essay",
+   "a": "Five",
+   "d": [
+    "Three",
+    "Four",
+    "Six"
+   ]
+  },
+  {
+   "q": "The first paragraph",
+   "a": "Introduction",
+   "d": [
+    "Main body",
+    "Conclusion",
+    "Title"
+   ]
+  },
+  {
+   "q": "Paragraphs 2 to 4",
+   "a": "Main body",
+   "d": [
+    "Introduction",
+    "Conclusion",
+    "Title"
+   ]
+  },
+  {
+   "q": "Smooth links in a text",
+   "a": "Cohesion",
+   "d": [
+    "Congestion",
+    "Trend",
+    "Campaign"
+   ]
+  },
+  {
+   "q": "A conjunction of contrast",
+   "a": "although",
+   "d": [
+    "moreover",
+    "therefore",
+    "also"
+   ]
+  },
+  {
+   "q": "A conjunction of addition",
+   "a": "furthermore",
+   "d": [
+    "but",
+    "although",
+    "therefore"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list shows the parts of the essay in order?",
+   "o": [
+    "Introduction, main body (three paragraphs), conclusion",
+    "Conclusion, introduction, main body",
+    "Main body, conclusion, introduction",
+    "Introduction, conclusion, main body"
+   ],
+   "why": "Essays start with an introduction and end with a conclusion."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two conjunctions both show addition?",
+   "o": [
+    "moreover, furthermore",
+    "but, although",
+    "therefore, as a result",
+    "eventually, firstly"
+   ],
+   "why": "They both add more information."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which type of conjunction is 'for example'?",
+   "o": [
+    "Example",
+    "Contrast",
+    "Result",
+    "Time"
+   ],
+   "why": "It introduces an example."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the job of paragraph 1?",
+   "o": [
+    "To introduce the topic",
+    "To sum up the essay",
+    "To give the environmental benefits",
+    "To list all conjunctions"
+   ],
+   "why": "The introduction opens the essay."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: Trains are comfortable. ___, they are better for the environment.",
+   "o": [
+    "Furthermore",
+    "But",
+    "Although",
+    "Eventually"
+   ],
+   "why": "We are adding another good point."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: The tickets are cheap, ___ the journey is long.",
+   "o": [
+    "but",
+    "therefore",
+    "furthermore",
+    "for example"
+   ],
+   "why": "The two ideas contrast."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: Trains carry many passengers. ___, there are fewer cars on the roads.",
+   "o": [
+    "As a result",
+    "Although",
+    "But",
+    "For example"
+   ],
+   "why": "Fewer cars is the result."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are paragraphs 2–4 called the main body?",
+   "o": [
+    "They contain the main information: the three benefits",
+    "They are the shortest paragraphs",
+    "They give the title",
+    "They end the essay"
+   ],
+   "why": "The body carries the main content."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do writers use conjunctions?",
+   "o": [
+    "To link ideas so the text reads smoothly",
+    "To make the essay longer only",
+    "To hide the main idea",
+    "To replace paragraphs"
+   ],
+   "why": "Conjunctions create cohesion."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'The rail network will also bring many social benefits.' a good topic sentence?",
+   "o": [
+    "It tells the reader the main idea of the paragraph",
+    "It ends the essay",
+    "It gives a number",
+    "It is the title"
+   ],
+   "why": "A topic sentence introduces what follows."
+  }
+ ]
+}
