@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U4",
+ "lesson": "Unit 4 – Lesson 4: Vocabulary and Grammar 2 (rules: must / mustn't)",
+ "outcomes": [
+  "Say rules phrases like 'put litter in the bin' and 'arrive on time'.",
+  "Use must and mustn't to talk about rules.",
+  "Guess a place from its rules."
+ ],
+ "tf": [
+  {
+   "s": "'You must be quiet in class' is a good school rule.",
+   "t": true,
+   "why": "Yes! We must be quiet in class."
+  },
+  {
+   "s": "The opposite of 'arrive on time' is 'be late'.",
+   "t": true,
+   "why": "Correct! on time – late."
+  },
+  {
+   "s": "The opposite of 'follow the rules' is 'put litter in the bin'.",
+   "t": false,
+   "why": "The opposite is 'break the rules'."
+  },
+  {
+   "s": "We say 'You mustn't drop litter.'",
+   "t": true,
+   "why": "Well done! Litter goes in the bin."
+  },
+  {
+   "s": "'You must play with fire' is a good rule.",
+   "t": false,
+   "why": "Fire is dangerous. You mustn't play with fire."
+  },
+  {
+   "s": "After must, we use the verb with no 'to': You must be quiet.",
+   "t": true,
+   "why": "Great! must + verb."
+  },
+  {
+   "s": "'You mustn't' means you can do it.",
+   "t": false,
+   "why": "Mustn't means don't do it."
+  },
+  {
+   "s": "In the song, the bus driver says 'You must buy your ticket.'",
+   "t": true,
+   "why": "Yes! You must buy your ticket."
+  },
+  {
+   "s": "'You must shout in class' is a real school rule.",
+   "t": false,
+   "why": "We must be quiet in class, not shout."
+  },
+  {
+   "s": "'You mustn't drop litter here' can be a rule for the playground.",
+   "t": true,
+   "why": "Correct! Keep the playground clean."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "You ___ drop litter. (✗)",
+   "o": [
+    "mustn't",
+    "must",
+    "must to"
+   ],
+   "why": "✗ means don't: mustn't."
+  },
+  {
+   "q": "Opposite of 'arrive on time'?",
+   "o": [
+    "be late",
+    "be quiet",
+    "follow the rules"
+   ],
+   "why": "on time – late."
+  },
+  {
+   "q": "Opposite of 'follow the rules'?",
+   "o": [
+    "break the rules",
+    "drop litter",
+    "be quiet"
+   ],
+   "why": "follow – break."
+  },
+  {
+   "q": "You ___ arrive on time to take the bus.",
+   "o": [
+    "must",
+    "mustn't",
+    "must to"
+   ],
+   "why": "It is good to be on time: must."
+  },
+  {
+   "q": "Opposite of 'shout in class'?",
+   "o": [
+    "be quiet in class",
+    "be late",
+    "drop litter"
+   ],
+   "why": "shout – be quiet."
+  },
+  {
+   "q": "You must buy your ___ . (bus)",
+   "o": [
+    "ticket",
+    "pillow",
+    "spoon"
+   ],
+   "why": "The bus driver says: You must buy your ticket."
+  },
+  {
+   "q": "Where do we put litter?",
+   "o": [
+    "in the bin",
+    "on the floor",
+    "in the river"
+   ],
+   "why": "Put litter in the bin."
+  },
+  {
+   "q": "You must be quiet at the ___ .",
+   "o": [
+    "cinema",
+    "football match",
+    "park game"
+   ],
+   "why": "Be quiet at the cinema."
+  },
+  {
+   "q": "Which rule is funny?",
+   "o": [
+    "You must wear a pink hat.",
+    "You mustn't shout in class.",
+    "You must arrive on time."
+   ],
+   "why": "A pink hat is not a real school rule!"
+  },
+  {
+   "q": "must + ?",
+   "o": [
+    "verb",
+    "verb-ing",
+    "to + verb"
+   ],
+   "why": "must + verb: You must be quiet."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Opposite of 'arrive on time'",
+   "a": "be late",
+   "d": [
+    "be quiet",
+    "drop litter",
+    "shout in class"
+   ]
+  },
+  {
+   "q": "Opposite of 'follow the rules'",
+   "a": "break the rules",
+   "d": [
+    "be late",
+    "be quiet",
+    "shout"
+   ]
+  },
+  {
+   "q": "Opposite of 'shout in class'",
+   "a": "be quiet",
+   "d": [
+    "be late",
+    "drop litter",
+    "break"
+   ]
+  },
+  {
+   "q": "Opposite of 'drop litter'",
+   "a": "put it in the bin",
+   "d": [
+    "be late",
+    "shout",
+    "break the rules"
+   ]
+  },
+  {
+   "q": "You ___ play with fire.",
+   "a": "mustn't",
+   "d": [
+    "must",
+    "can",
+    "must to"
+   ]
+  },
+  {
+   "q": "You ___ be quiet in class.",
+   "a": "must",
+   "d": [
+    "mustn't",
+    "must to",
+    "musts"
+   ]
+  },
+  {
+   "q": "You ___ drop litter.",
+   "a": "mustn't",
+   "d": [
+    "must",
+    "musts",
+    "must to"
+   ]
+  },
+  {
+   "q": "Bus driver: buy your ...",
+   "a": "ticket",
+   "d": [
+    "pillow",
+    "hat",
+    "spoon"
+   ]
+  },
+  {
+   "q": "You ___ be late.",
+   "a": "mustn't",
+   "d": [
+    "must",
+    "musts",
+    "must to"
+   ]
+  },
+  {
+   "q": "Be quiet at the ...",
+   "a": "cinema",
+   "d": [
+    "playground",
+    "beach",
+    "football match"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does 'mustn't' mean?",
+   "o": [
+    "Don't do it.",
+    "Do it.",
+    "Do it later.",
+    "Do it twice."
+   ],
+   "why": "Mustn't means it's not allowed."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is a good thing to do?",
+   "o": [
+    "put litter in the bin",
+    "drop litter",
+    "break the rules",
+    "be late"
+   ],
+   "why": "Putting litter in the bin is good."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Complete: You must ___ quiet in class.",
+   "o": [
+    "be",
+    "to be",
+    "being",
+    "is"
+   ],
+   "why": "must + verb: must be."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the opposite of 'be late'?",
+   "o": [
+    "arrive on time",
+    "shout in class",
+    "drop litter",
+    "break the rules"
+   ],
+   "why": "late – on time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a rule for the library.",
+   "o": [
+    "You must be quiet in the library.",
+    "You must shout in the library.",
+    "You mustn't be quiet in the library.",
+    "You must to be quiet in the library."
+   ],
+   "why": "Libraries are quiet places."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct rule for school.",
+   "o": [
+    "You mustn't break the rules at school.",
+    "You must break the rules at school.",
+    "You mustn't to break the rules.",
+    "You must breaking the rules."
+   ],
+   "why": "mustn't + verb: mustn't break."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rule: 'You must arrive on time to take the bus.' Where is it?",
+   "o": [
+    "at the bus stop",
+    "at the cinema",
+    "in the nurse's room",
+    "in the library"
+   ],
+   "why": "Buses need you to be on time."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The school nurse says 'Quiet, please!' Where is she?",
+   "o": [
+    "in the nurse's room",
+    "on the bus",
+    "in the playground",
+    "at the cinema"
+   ],
+   "why": "She is helping pupils in her room."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which rule is NOT a real rule?",
+   "o": [
+    "You must wear a pink hat.",
+    "You mustn't shout in class.",
+    "You must be quiet at the cinema.",
+    "You mustn't drop litter."
+   ],
+   "why": "A pink hat rule is a funny rule."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why must we put litter in the bin?",
+   "o": [
+    "To keep places clean.",
+    "To be late.",
+    "To break the rules.",
+    "To make the park dirty."
+   ],
+   "why": "Bins keep our places clean."
+  }
+ ]
+}

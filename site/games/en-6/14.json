@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 1: Free-time fun",
+ "lesson": "Unit 1 – Graded reader 1: Let’s Play Volleyball!",
+ "outcomes": [
+  "I can predict a story from its title and pictures.",
+  "I can say which sport each girl is good at.",
+  "I can explain the story's message: everyone can do something well."
+ ],
+ "tf": [
+  {
+   "s": "The girls are at the sports centre.",
+   "t": true,
+   "why": "Yes! The story happens at the sports centre."
+  },
+  {
+   "s": "Maryam is good at volleyball.",
+   "t": true,
+   "why": "Correct! Maryam is good at volleyball."
+  },
+  {
+   "s": "Arwa can kick really well.",
+   "t": true,
+   "why": "Right! Arwa is good at karate."
+  },
+  {
+   "s": "Huda never misses the ball.",
+   "t": false,
+   "why": "Huda always misses the ball."
+  },
+  {
+   "s": "Huda falls over when she tries karate.",
+   "t": true,
+   "why": "Yes, Huda falls over in karate."
+  },
+  {
+   "s": "Maryam can't play volleyball.",
+   "t": false,
+   "why": "Maryam is good at volleyball."
+  },
+  {
+   "s": "Huda tries gymnastics and she loves it.",
+   "t": true,
+   "why": "Correct! Huda loves gymnastics."
+  },
+  {
+   "s": "Huda is sad at the end of the story.",
+   "t": false,
+   "why": "Huda is happy at the end because she can do gymnastics well."
+  },
+  {
+   "s": "Huda's mum says, \"You can do lots of things, Huda!\"",
+   "t": true,
+   "why": "Yes! Those are her mum's kind words."
+  },
+  {
+   "s": "The message of the story is that only some people are good at sport.",
+   "t": false,
+   "why": "The message is that everyone can do something well."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where are the girls?",
+   "o": [
+    "at the sports centre",
+    "at the beach",
+    "at school"
+   ],
+   "why": "They are at the sports centre."
+  },
+  {
+   "q": "The story's title is \"Let's Play ___!\"",
+   "o": [
+    "Volleyball",
+    "Karate",
+    "Gymnastics"
+   ],
+   "why": "The graded reader is Let's Play Volleyball!"
+  },
+  {
+   "q": "Which girl can kick really well?",
+   "o": [
+    "Arwa",
+    "Huda",
+    "Maryam"
+   ],
+   "why": "Arwa is good at karate."
+  },
+  {
+   "q": "I ___ like playing volleyball.",
+   "o": [
+    "don't",
+    "doesn't",
+    "am not"
+   ],
+   "why": "With I we use don't."
+  },
+  {
+   "q": "Before you read, you can ___ the story from the title.",
+   "o": [
+    "predict",
+    "print",
+    "upload"
+   ],
+   "why": "Predicting means guessing what will happen."
+  },
+  {
+   "q": "You do gymnastics on a ___.",
+   "o": [
+    "mat",
+    "belt",
+    "helmet"
+   ],
+   "why": "Gymnasts use mats."
+  },
+  {
+   "q": "In karate you wear a ___.",
+   "o": [
+    "belt",
+    "helmet",
+    "mat"
+   ],
+   "why": "Karate clothes have a belt."
+  },
+  {
+   "q": "To go down suddenly onto the ground =",
+   "o": [
+    "fall over",
+    "miss",
+    "kick"
+   ],
+   "why": "That's fall over."
+  },
+  {
+   "q": "In \"I can swim\", can is ___.",
+   "o": [
+    "weak",
+    "strong",
+    "silent"
+   ],
+   "why": "In sentences can is weak."
+  },
+  {
+   "q": "Which girl is the main character?",
+   "o": [
+    "Huda",
+    "Maryam",
+    "Arwa"
+   ],
+   "why": "The story is mostly about Huda."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Maryam's sport",
+   "a": "volleyball",
+   "d": [
+    "karate",
+    "gymnastics",
+    "swimming"
+   ]
+  },
+  {
+   "q": "Arwa's sport",
+   "a": "karate",
+   "d": [
+    "volleyball",
+    "gymnastics",
+    "cycling"
+   ]
+  },
+  {
+   "q": "Huda's sport",
+   "a": "gymnastics",
+   "d": [
+    "karate",
+    "volleyball",
+    "hockey"
+   ]
+  },
+  {
+   "q": "She always misses the ball.",
+   "a": "Huda",
+   "d": [
+    "Maryam",
+    "Arwa",
+    "Reem"
+   ]
+  },
+  {
+   "q": "She kicks really well.",
+   "a": "Arwa",
+   "d": [
+    "Huda",
+    "Maryam",
+    "Julia"
+   ]
+  },
+  {
+   "q": "Where the story happens",
+   "a": "sports centre",
+   "d": [
+    "beach",
+    "museum",
+    "park"
+   ]
+  },
+  {
+   "q": "Soft floor for gymnastics",
+   "a": "mat",
+   "d": [
+    "belt",
+    "bat",
+    "helmet"
+   ]
+  },
+  {
+   "q": "You wear it in karate.",
+   "a": "belt",
+   "d": [
+    "mat",
+    "bat",
+    "skis"
+   ]
+  },
+  {
+   "q": "Huda at the end",
+   "a": "happy",
+   "d": [
+    "sad",
+    "angry",
+    "bored"
+   ]
+  },
+  {
+   "q": "Not hit the ball",
+   "a": "miss",
+   "d": [
+    "kick",
+    "catch",
+    "throw"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which sport is each girl good at?",
+   "o": [
+    "Huda – gymnastics, Maryam – volleyball, Arwa – karate",
+    "Huda – karate, Maryam – gymnastics, Arwa – volleyball",
+    "Huda – volleyball, Maryam – karate, Arwa – gymnastics",
+    "All three are good at volleyball."
+   ],
+   "why": "Each girl is good at a different sport."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Huda's mum say to her?",
+   "o": [
+    "You can do lots of things, Huda!",
+    "You can't do anything, Huda!",
+    "Stop playing sport, Huda!",
+    "Go home, Huda!"
+   ],
+   "why": "Her mum encourages her."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does \"miss a ball\" mean?",
+   "o": [
+    "not hit or catch the ball",
+    "kick the ball very well",
+    "buy a new ball",
+    "throw the ball high"
+   ],
+   "why": "When you miss, the ball doesn't touch you."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What happens when Huda tries karate?",
+   "o": [
+    "She falls over.",
+    "She wins.",
+    "She kicks really well.",
+    "She loves it."
+   ],
+   "why": "Huda falls over in karate."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Huda tries gymnastics and she ___ it.",
+   "o": [
+    "loves",
+    "hates",
+    "misses",
+    "falls"
+   ],
+   "why": "Huda loves gymnastics."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Huda always ___ the ball.",
+   "o": [
+    "misses",
+    "kicks",
+    "catches",
+    "loves"
+   ],
+   "why": "Huda always misses the ball in volleyball."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Is can strong or weak in \"Yes, I can!\"?",
+   "o": [
+    "strong",
+    "weak",
+    "silent",
+    "it changes to can't"
+   ],
+   "why": "In short answers can is strong."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Huda happy at the end?",
+   "o": [
+    "Because she can do gymnastics really well.",
+    "Because she wins at volleyball.",
+    "Because she kicks well in karate.",
+    "Because she goes home."
+   ],
+   "why": "She finds the sport she is good at."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the message of the story?",
+   "o": [
+    "Everyone is good at something, so keep trying new things.",
+    "Never try a new sport.",
+    "Volleyball is the only good sport.",
+    "If you fall over, stop playing."
+   ],
+   "why": "Huda keeps trying and finds her sport."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Huda go to get some water during karate?",
+   "o": [
+    "She doesn't like karate after she falls over.",
+    "She is good at karate.",
+    "Her mum asks her to.",
+    "The sports centre is closed."
+   ],
+   "why": "Karate is difficult for Huda."
+  }
+ ]
+}

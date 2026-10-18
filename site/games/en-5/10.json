@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 1 – Talent show",
+ "lesson": "Lesson 7: Skills – Reading: a police report",
+ "outcomes": [
+  "I can say what type of text I am reading: a report.",
+  "I can scan a report for details about the suspects.",
+  "I can use clues in the text to correct sentences and solve a mystery."
+ ],
+ "tf": [
+  {
+   "s": "The text is a report.",
+   "t": true,
+   "why": "Yes! It is Chief Inspector Fleming's report."
+  },
+  {
+   "s": "The diamond was in a glass box at Mrs Morgan's house.",
+   "t": true,
+   "why": "Right! That is where the diamond was."
+  },
+  {
+   "s": "Mr Parker is a doctor.",
+   "t": false,
+   "why": "Mr Parker is a vet."
+  },
+  {
+   "s": "Mr Parker's wife is ill.",
+   "t": true,
+   "why": "Yes, and she needs an expensive operation."
+  },
+  {
+   "s": "Mr Allen is an Art student.",
+   "t": false,
+   "why": "Mr Allen is a Science student."
+  },
+  {
+   "s": "The conclusion of the report tells us who took the diamond.",
+   "t": true,
+   "why": "Yes! The conclusion solves the mystery."
+  },
+  {
+   "s": "Miss Allen used a magnet to get the glass box.",
+   "t": true,
+   "why": "Yes! She used Mr Allen's magnet."
+  },
+  {
+   "s": "Mrs Willow went to London with the diamond.",
+   "t": false,
+   "why": "Mr Parker went to London with the diamond. Mrs Willow watched the door."
+  },
+  {
+   "s": "A suspect is a person who maybe did something wrong.",
+   "t": true,
+   "why": "Yes! The report has a fact file of suspects."
+  },
+  {
+   "s": "In the report, Mr Parker doesn't need any money.",
+   "t": false,
+   "why": "He needs money to pay for his wife's operation."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What kind of text is it?",
+   "o": [
+    "a report",
+    "a blog",
+    "a magazine article"
+   ],
+   "why": "It is a police report."
+  },
+  {
+   "q": "What is Mr Parker's job?",
+   "o": [
+    "a vet",
+    "a teacher",
+    "a doctor"
+   ],
+   "why": "The report says he's a vet."
+  },
+  {
+   "q": "Where was the diamond?",
+   "o": [
+    "in a glass box",
+    "in a bag",
+    "in a car"
+   ],
+   "why": "It was in a glass box at Mrs Morgan's house."
+  },
+  {
+   "q": "Whose house was the diamond in?",
+   "o": [
+    "Mrs Morgan's",
+    "Mrs Willow's",
+    "Mr Parker's"
+   ],
+   "why": "The glass box was at Mrs Morgan's house."
+  },
+  {
+   "q": "Whose magnet did Miss Allen use?",
+   "o": [
+    "Mr Allen's",
+    "Mrs Willow's",
+    "Mr Parker's"
+   ],
+   "why": "She used Mr Allen's magnet."
+  },
+  {
+   "q": "What did Mrs Willow do?",
+   "o": [
+    "She watched the door.",
+    "She went to London.",
+    "She used the magnet."
+   ],
+   "why": "Mrs Willow watched the door."
+  },
+  {
+   "q": "Who wrote the report?",
+   "o": [
+    "Chief Inspector Fleming",
+    "Mrs Morgan",
+    "Mr Allen"
+   ],
+   "why": "It is Chief Inspector Fleming's report."
+  },
+  {
+   "q": "Who is ill in the report?",
+   "o": [
+    "Mr Parker's wife",
+    "Mrs Morgan",
+    "Miss Allen"
+   ],
+   "why": "Mr Parker's wife is ill."
+  },
+  {
+   "q": "Which word means \"not well\"?",
+   "o": [
+    "ill",
+    "kind",
+    "tidy"
+   ],
+   "why": "Ill means sick."
+  },
+  {
+   "q": "Which word is a show with acrobats and clowns?",
+   "o": [
+    "circus",
+    "diamond",
+    "report"
+   ],
+   "why": "A circus is a show; a trapeze is used there."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The report writer: Chief ___ Fleming",
+   "a": "Inspector",
+   "d": [
+    "Doctor",
+    "Teacher",
+    "Engineer"
+   ]
+  },
+  {
+   "q": "The thing they took",
+   "a": "diamond",
+   "d": [
+    "magnet",
+    "glass box",
+    "car"
+   ]
+  },
+  {
+   "q": "Mr Allen studies ___.",
+   "a": "Science",
+   "d": [
+    "Art",
+    "Music",
+    "Maths"
+   ]
+  },
+  {
+   "q": "Mr Parker went here with it",
+   "a": "London",
+   "d": [
+    "Muscat",
+    "Paris",
+    "Cairo"
+   ]
+  },
+  {
+   "q": "The diamond was in a glass ___.",
+   "a": "box",
+   "d": [
+    "bag",
+    "car",
+    "cup"
+   ]
+  },
+  {
+   "q": "It pulls metal things",
+   "a": "magnet",
+   "d": [
+    "diamond",
+    "trapeze",
+    "report"
+   ]
+  },
+  {
+   "q": "Who watched the door?",
+   "a": "Mrs Willow",
+   "d": [
+    "Mr Parker",
+    "Mrs Morgan",
+    "Mr Allen"
+   ]
+  },
+  {
+   "q": "A person who maybe did it",
+   "a": "suspect",
+   "d": [
+    "vet",
+    "student",
+    "driver"
+   ]
+  },
+  {
+   "q": "Doctors do it in hospital",
+   "a": "operation",
+   "d": [
+    "trapeze",
+    "diamond",
+    "circus"
+   ]
+  },
+  {
+   "q": "They ___ at the house. (past of are)",
+   "a": "were",
+   "d": [
+    "was",
+    "are",
+    "be"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the text?",
+   "o": [
+    "a fact file of suspects in a report",
+    "a story about a cat",
+    "an email to a friend",
+    "a song about hobbies"
+   ],
+   "why": "The report has a fact file of suspects."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who used Mr Allen's magnet?",
+   "o": [
+    "Miss Allen",
+    "Mrs Willow",
+    "Mr Parker",
+    "Mrs Morgan"
+   ],
+   "why": "Miss Allen used it to get the glass box."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who went to London with the diamond?",
+   "o": [
+    "Mr Parker",
+    "Miss Allen",
+    "Mrs Willow",
+    "Mr Allen"
+   ],
+   "why": "Mr Parker took the diamond to London."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which words are from the report?",
+   "o": [
+    "diamond, magnet, suspect, circus",
+    "beard, curly, fair, tall",
+    "juggle, karate, stage, banana",
+    "please, handshake, shoes, plate"
+   ],
+   "why": "These are the report's vocabulary words."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: Mr Allen is an Art student.",
+   "o": [
+    "Mr Allen is a Science student.",
+    "Mr Allen is a vet.",
+    "Mr Allen is a Music student.",
+    "Mr Allen is a police officer."
+   ],
+   "why": "The report says Mr Allen is a Science student."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to find Mr Parker's job quickly. What do you do?",
+   "o": [
+    "Scan the text for his name.",
+    "Read only the title.",
+    "Look at the page number.",
+    "Read the last word."
+   ],
+   "why": "Scanning helps us find details fast."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence about the report is correct?",
+   "o": [
+    "The diamond was in a glass box at Mrs Morgan's house.",
+    "The diamond were in a glass box.",
+    "The diamond is in London now at Mrs Morgan's house.",
+    "The diamond was in Mr Allen's bag."
+   ],
+   "why": "One diamond: was. It was at Mrs Morgan's house."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why did Mr Parker need money?",
+   "o": [
+    "His wife is ill and needs an expensive operation.",
+    "He wanted a bigger house.",
+    "He lost his job as a teacher.",
+    "He wanted to buy a magnet."
+   ],
+   "why": "This clue shows why he wanted the diamond."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Who took the diamond?",
+   "o": [
+    "They all did it together.",
+    "Only Mr Parker",
+    "Only Miss Allen",
+    "Nobody took it."
+   ],
+   "why": "Each person had a job: watching, using the magnet and going to London."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How did the magnet help them?",
+   "o": [
+    "Miss Allen used it to get the glass box.",
+    "It opened the front door.",
+    "It found London on a map.",
+    "It made Mrs Willow ill."
+   ],
+   "why": "The magnet was the tool to get the glass box."
+  }
+ ]
+}

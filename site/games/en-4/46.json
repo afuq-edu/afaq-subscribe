@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U4",
+ "lesson": "Unit 4 – Lesson 6: English in action – Calling the emergency services",
+ "outcomes": [
+  "Know the emergency number and the emergency services.",
+  "Give your name, address, phone number and the emergency in a call.",
+  "Choose the right service for a situation."
+ ],
+ "tf": [
+  {
+   "s": "The emergency phone number is 9999.",
+   "t": true,
+   "why": "Yes! Call 9999 in an emergency."
+  },
+  {
+   "s": "For a house on fire, you need the fire brigade.",
+   "t": true,
+   "why": "Correct! Firefighters put out fires."
+  },
+  {
+   "s": "For a broken leg, you need the police.",
+   "t": false,
+   "why": "For a broken leg, you need an ambulance."
+  },
+  {
+   "s": "The operator asks 'What service do you need?' first.",
+   "t": true,
+   "why": "Well done! Service comes first."
+  },
+  {
+   "s": "You must give your address in an emergency call.",
+   "t": true,
+   "why": "Yes! So they can find you quickly."
+  },
+  {
+   "s": "'Someone's robbing the bank!' – call an ambulance.",
+   "t": false,
+   "why": "For a robbery, you need the police."
+  },
+  {
+   "s": "In the call, Sally's little brother has got a broken leg.",
+   "t": true,
+   "why": "Correct! Sally needs an ambulance."
+  },
+  {
+   "s": "The operator never asks for your name.",
+   "t": false,
+   "why": "The operator asks: What's your name?"
+  },
+  {
+   "s": "A police officer works in a police car.",
+   "t": true,
+   "why": "Yes! Police officers use police cars."
+  },
+  {
+   "s": "You can call 9999 to play a game.",
+   "t": false,
+   "why": "9999 is only for real emergencies."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "'My house is on fire!' Which service?",
+   "o": [
+    "the fire brigade",
+    "an ambulance",
+    "the police"
+   ],
+   "why": "Firefighters put out fires."
+  },
+  {
+   "q": "'My sister's got a broken arm!'",
+   "o": [
+    "an ambulance",
+    "the fire brigade",
+    "the police"
+   ],
+   "why": "An ambulance helps people who are hurt."
+  },
+  {
+   "q": "'Someone's robbing the bank!'",
+   "o": [
+    "the police",
+    "an ambulance",
+    "the fire brigade"
+   ],
+   "why": "The police stop robbers."
+  },
+  {
+   "q": "Emergency phone number?",
+   "o": [
+    "9999",
+    "1234",
+    "1000"
+   ],
+   "why": "Call 9999."
+  },
+  {
+   "q": "I need an ___ , please.",
+   "o": [
+    "ambulance",
+    "bus",
+    "ticket"
+   ],
+   "why": "I need an ambulance, please."
+  },
+  {
+   "q": "What's your ___ ? 7 Sultan Road, Ibri.",
+   "o": [
+    "address",
+    "name",
+    "phone number"
+   ],
+   "why": "7 Sultan Road is an address."
+  },
+  {
+   "q": "'My grandma is feeling ill.'",
+   "o": [
+    "an ambulance",
+    "the police",
+    "the fire brigade"
+   ],
+   "why": "An ambulance helps ill people."
+  },
+  {
+   "q": "Who works on a fire engine?",
+   "o": [
+    "firefighters",
+    "dentists",
+    "chefs"
+   ],
+   "why": "Firefighters drive fire engines."
+  },
+  {
+   "q": "First question from the operator?",
+   "o": [
+    "What service do you need?",
+    "What's your phone number?",
+    "What's the emergency?"
+   ],
+   "why": "Service comes first."
+  },
+  {
+   "q": "What's the ___ ? My brother has got a broken leg.",
+   "o": [
+    "emergency",
+    "address",
+    "name"
+   ],
+   "why": "The operator asks: What's the emergency?"
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Emergency number",
+   "a": "9999",
+   "d": [
+    "1234",
+    "5555",
+    "1111"
+   ]
+  },
+  {
+   "q": "House on fire",
+   "a": "fire brigade",
+   "d": [
+    "ambulance",
+    "police",
+    "dentist"
+   ]
+  },
+  {
+   "q": "Broken leg",
+   "a": "ambulance",
+   "d": [
+    "police",
+    "fire brigade",
+    "mechanic"
+   ]
+  },
+  {
+   "q": "Someone robbing a bank",
+   "a": "police",
+   "d": [
+    "ambulance",
+    "fire brigade",
+    "vet"
+   ]
+  },
+  {
+   "q": "Grandma feeling ill",
+   "a": "ambulance",
+   "d": [
+    "police",
+    "fire brigade",
+    "lawyer"
+   ]
+  },
+  {
+   "q": "Fire in the kitchen",
+   "a": "fire brigade",
+   "d": [
+    "police",
+    "ambulance",
+    "chef"
+   ]
+  },
+  {
+   "q": "7 Sultan Road, Ibri is a ...",
+   "a": "address",
+   "d": [
+    "name",
+    "phone number",
+    "service"
+   ]
+  },
+  {
+   "q": "A strange car in my garage",
+   "a": "police",
+   "d": [
+    "ambulance",
+    "fire brigade",
+    "dentist"
+   ]
+  },
+  {
+   "q": "Sally's brother has a broken",
+   "a": "leg",
+   "d": [
+    "arm",
+    "car",
+    "phone"
+   ]
+  },
+  {
+   "q": "First operator question",
+   "a": "service",
+   "d": [
+    "name",
+    "address",
+    "phone number"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which are the three emergency services?",
+   "o": [
+    "police, fire brigade, ambulance",
+    "chef, vet, dentist",
+    "bus, taxi, train",
+    "school, park, cinema"
+   ],
+   "why": "Police, fire brigade and ambulance help in emergencies."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the operator say first?",
+   "o": [
+    "Hello, 9999 emergency services. What service do you need?",
+    "What's your favourite colour?",
+    "Goodbye!",
+    "How old are you?"
+   ],
+   "why": "The operator asks about the service first."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What's the emergency in Sally's call?",
+   "o": [
+    "Her little brother has got a broken leg.",
+    "Her house is on fire.",
+    "Someone is robbing a bank.",
+    "Her cat is in a tree."
+   ],
+   "why": "Sally's brother has a broken leg."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'The ambulance is on its way' mean?",
+   "o": [
+    "The ambulance is coming.",
+    "The ambulance is broken.",
+    "The ambulance is at the hospital.",
+    "There is no ambulance."
+   ],
+   "why": "On its way means it is coming to you."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'There's a fire in the kitchen!' What do you say?",
+   "o": [
+    "I need the fire brigade, please.",
+    "I need an ambulance, please.",
+    "I need the police, please.",
+    "I need a chef, please."
+   ],
+   "why": "Fires need the fire brigade."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'My sister's got a broken arm!' Which service do you need?",
+   "o": [
+    "an ambulance",
+    "the fire brigade",
+    "the police",
+    "a mechanic"
+   ],
+   "why": "Hurt people need an ambulance."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: What's your ___ ? It's 92 345 678.",
+   "o": [
+    "phone number",
+    "address",
+    "name",
+    "emergency"
+   ],
+   "why": "Numbers like this are a phone number."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why must you give your address in an emergency call?",
+   "o": [
+    "So they can find you quickly.",
+    "So they can send you a letter.",
+    "So they can visit you for tea.",
+    "So they can play a game."
+   ],
+   "why": "Your address helps them find you."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the correct order of the operator's questions?",
+   "o": [
+    "service – name – address – phone number – emergency",
+    "name – emergency – service – address – phone number",
+    "phone number – address – name – service – emergency",
+    "emergency – phone number – service – name – address"
+   ],
+   "why": "First the service, then your details, then the emergency."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is NOT an emergency?",
+   "o": [
+    "I want to talk to a friend.",
+    "My house is on fire!",
+    "Someone's robbing the bank!",
+    "My brother has got a broken leg!"
+   ],
+   "why": "Only call 9999 in a real emergency."
+  }
+ ]
+}

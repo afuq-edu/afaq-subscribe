@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الخامس",
+  "unit": "Unit 1 – Talent show",
+  "lesson": "Lesson 4: Vocabulary and Grammar – Hobbies and be good at",
+  "outcomes": [
+    "I can say hobby phrases like bake a cake, fix toys and do experiments.",
+    "I can talk about ability: I'm good at juggling. I'm terrible at spelling.",
+    "I can ask and answer: Is he good at counting? Yes, he is."
+  ],
+  "tf": [
+    {"s": "After \"good at\" we use verb + -ing: good at baking.", "t": true, "why": "Yes! good at + verb-ing."},
+    {"s": "\"She's terrible at throw a ball\" is correct.", "t": false, "why": "We need -ing: She's terrible at throwing a ball."},
+    {"s": "Great at is better than good at.", "t": true, "why": "Right! The scale is great at, good at, not very good at, terrible at."},
+    {"s": "Terrible at means you do something very well.", "t": false, "why": "Terrible at means you are very bad at it."},
+    {"s": "We say \"do experiments\" and \"fix toys\".", "t": true, "why": "Yes! These are hobby phrases from the lesson."},
+    {"s": "The -ing form of bake is bakeing.", "t": false, "why": "Drop the e: baking."},
+    {"s": "The -ing form of juggle is juggling.", "t": true, "why": "Great! Drop the e and add -ing."},
+    {"s": "We say \"make a cake\" and \"bake a pizza\" in this lesson.", "t": false, "why": "The phrases are bake a cake and make a pizza."},
+    {"s": "\"Is he good at spelling?\" \"No, he isn't.\" is a correct short answer.", "t": true, "why": "Yes! Is he …? No, he isn't."},
+    {"s": "\"Not very good at\" is the worst on the scale.", "t": false, "why": "Terrible at is the worst."}
+  ],
+  "boxes": [
+    {"q": "I'm good at ___ cakes. (bake)", "o": ["baking", "bake", "bakeing"], "why": "good at + verb-ing; drop the e."},
+    {"q": "fix ___", "o": ["toys", "a cake", "experiments"], "why": "We fix toys."},
+    {"q": "do ___", "o": ["experiments", "a ball", "a pizza"], "why": "We do experiments."},
+    {"q": "throw a ___", "o": ["ball", "word", "cake"], "why": "We throw a ball."},
+    {"q": "count ___", "o": ["fingers", "a cake", "a pizza"], "why": "In the lesson we count fingers."},
+    {"q": "Rashid / terrible / juggle", "o": ["Rashid is terrible at juggling.", "Rashid is terrible at juggle.", "Rashid terrible juggling."], "why": "be + terrible at + verb-ing."},
+    {"q": "Is Thamer good at throwing a ball? Yes, ___.", "o": ["he is", "he does", "he has"], "why": "Is he …? Yes, he is."},
+    {"q": "Which is the best on the scale?", "o": ["great at", "good at", "not very good at"], "why": "Great at is the top of the scale."},
+    {"q": "make ___", "o": ["a pizza", "a ball", "experiments"], "why": "We make a pizza."},
+    {"q": "She ___ good at spelling.", "o": ["is", "are", "does"], "why": "She is good at …"}
+  ],
+  "hunt": [
+    {"q": "bake → ___", "a": "baking", "d": ["bakeing", "bakking", "bakes"]},
+    {"q": "juggle → ___", "a": "juggling", "d": ["juggleing", "jugling", "juggles"]},
+    {"q": "make → ___", "a": "making", "d": ["makeing", "makking", "makes"]},
+    {"q": "fix → ___", "a": "fixing", "d": ["fixxing", "fixeing", "fixs"]},
+    {"q": "spell → ___", "a": "spelling", "d": ["speling", "spelleing", "spells"]},
+    {"q": "throw → ___", "a": "throwing", "d": ["throwwing", "throweing", "throws"]},
+    {"q": "___ a cake", "a": "bake", "d": ["throw", "spell", "count"]},
+    {"q": "___ experiments", "a": "do", "d": ["throw", "bake", "juggle"]},
+    {"q": "___ a long word", "a": "spell", "d": ["bake", "throw", "fix"]},
+    {"q": "The worst on the scale", "a": "terrible at", "d": ["great at", "good at", "not very good at"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Put in order from best to worst.", "o": ["great at, good at, not very good at, terrible at", "good at, great at, terrible at, not very good at", "terrible at, good at, great at, not very good at", "not very good at, great at, good at, terrible at"], "why": "Great at is the best and terrible at is the worst."},
+    {"lv": "التذكر", "q": "Which list has only hobby phrases from the lesson?", "o": ["fix toys, juggle, bake a cake", "curly hair, a beard, tall", "kind, shy, rude", "Monday, Tuesday, Friday"], "why": "These are hobbies; the others are appearance, personality or days."},
+    {"lv": "التذكر", "q": "What comes after \"good at\"?", "o": ["verb + -ing", "verb + -ed", "to + verb", "verb + -s"], "why": "I'm good at juggling."},
+    {"lv": "التذكر", "q": "Which question asks about ability?", "o": ["What are you great at?", "Where are you from?", "How old are you?", "What's your name?"], "why": "Great at and good at talk about ability."},
+    {"lv": "التطبيق", "q": "Make a question: Shihab / spell a really long word", "o": ["Is Shihab good at spelling a really long word?", "Does Shihab good at spell a really long word?", "Is Shihab good at spell a really long word?", "Shihab is good spelling a really long word?"], "why": "Is + name + good at + verb-ing?"},
+    {"lv": "التطبيق", "q": "Thamer is great at throwing a ball a long way. Answer: Is Thamer good at throwing a ball a long way?", "o": ["Yes, he is. He's great at throwing a ball a long way.", "No, he isn't. He's terrible at it.", "Yes, he does.", "No, he doesn't."], "why": "He is great at it, so the answer is Yes, he is."},
+    {"lv": "التطبيق", "q": "Samar acts very, very well. What do you report?", "o": ["Samar is great at acting.", "Samar is terrible at acting.", "Samar is great at act.", "Samar great acting."], "why": "Very, very well = great at + verb-ing."},
+    {"lv": "التحليل", "q": "Find the mistake: \"I'm not very good at make a pizza.\"", "o": ["make should be making", "not should be no", "I'm should be I", "pizza should be pizzas"], "why": "After at we use verb-ing: making."},
+    {"lv": "التحليل", "q": "Saif is good at fixing toys but he isn't very good at juggling. Which is true?", "o": ["Saif fixes toys better than he juggles.", "Saif juggles better than he fixes toys.", "Saif is terrible at fixing toys.", "Saif is great at juggling."], "why": "Good at is higher on the scale than not very good at."},
+    {"lv": "التحليل", "q": "Why do we write \"baking\" and not \"bakeing\"?", "o": ["We drop the e before -ing.", "We double the k.", "Bake is irregular.", "We always add -eing."], "why": "Verbs ending in e drop it: bake → baking."}
+  ]
+}

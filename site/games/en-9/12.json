@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 3: The future is now",
+ "lesson": "Lesson 4: Listening – discussing technology",
+ "outcomes": [
+  "Predict words before listening and choose the correct picture.",
+  "Spot distractors: all the pictures are mentioned, but only one is right.",
+  "Give advice and suggestions with should, ought to, could, how about and shall."
+ ],
+ "tf": [
+  {
+   "s": "Before you listen, you should look at the pictures and predict words you might hear.",
+   "t": true,
+   "why": "Predicting helps you understand the conversation."
+  },
+  {
+   "s": "In picture questions, only the correct picture is mentioned in the recording.",
+   "t": false,
+   "why": "All three pictures are usually mentioned, but only one is correct."
+  },
+  {
+   "s": "The girl's printer has stopped working.",
+   "t": true,
+   "why": "The printer is the thing that isn't working."
+  },
+  {
+   "s": "The girl's games controller is still broken.",
+   "t": false,
+   "why": "It had a problem before, but it's fine now."
+  },
+  {
+   "s": "The woman agrees to buy batteries for the boy's torch.",
+   "t": true,
+   "why": "She agrees to buy batteries."
+  },
+  {
+   "s": "'How about' is followed by a noun or the -ing form.",
+   "t": true,
+   "why": "For example: How about making a sandwich?"
+  },
+  {
+   "s": "We say 'You ought look for it properly.'",
+   "t": false,
+   "why": "Ought needs 'to': You ought to look for it properly."
+  },
+  {
+   "s": "'Shall I help you?' is an offer.",
+   "t": true,
+   "why": "Shall I ...? offers help."
+  },
+  {
+   "s": "'Why you don't get a tablet?' is correct.",
+   "t": false,
+   "why": "The correct word order is 'Why don't you get a tablet?'"
+  },
+  {
+   "s": "In the VR conversation, the girl enjoyed diving the most.",
+   "t": true,
+   "why": "Diving was her favourite VR experience."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: How about ___ a toasted sandwich?",
+   "o": [
+    "making",
+    "make",
+    "to make"
+   ],
+   "why": "How about + -ing."
+  },
+  {
+   "q": "Complete: You ___ to look for it properly.",
+   "o": [
+    "ought",
+    "should",
+    "could"
+   ],
+   "why": "Only ought is followed by to."
+  },
+  {
+   "q": "Complete: ___ I help you? (offer)",
+   "o": [
+    "Shall",
+    "How about",
+    "Why"
+   ],
+   "why": "Shall I ...? makes an offer."
+  },
+  {
+   "q": "What is the boy looking for?",
+   "o": [
+    "his headphones",
+    "his charger",
+    "his tablet"
+   ],
+   "why": "He is looking for his headphones."
+  },
+  {
+   "q": "Which VR experience did the girl NOT try?",
+   "o": [
+    "motor racing",
+    "diving",
+    "both of them"
+   ],
+   "why": "Her brother tried motor racing, not her."
+  },
+  {
+   "q": "How does the boy prefer to listen to audiobooks at home?",
+   "o": [
+    "with big headphones",
+    "with small earphones",
+    "with a speaker"
+   ],
+   "why": "He likes big headphones that go over his ears."
+  },
+  {
+   "q": "Complete: Why ___ you buy a smart watch?",
+   "o": [
+    "don't",
+    "not",
+    "no"
+   ],
+   "why": "Why don't you ...? makes a suggestion."
+  },
+  {
+   "q": "What time does the computer shop open on Saturday?",
+   "o": [
+    "8.45",
+    "9.15",
+    "8.15"
+   ],
+   "why": "It opens at quarter to nine."
+  },
+  {
+   "q": "Complete: We ___ order some pizza, too.",
+   "o": [
+    "could",
+    "how about",
+    "ought"
+   ],
+   "why": "Could + verb makes a suggestion."
+  },
+  {
+   "q": "What is a distractor in a listening task?",
+   "o": [
+    "an option that is mentioned but wrong",
+    "the correct answer",
+    "the question number"
+   ],
+   "why": "Distractors are mentioned to test careful listening."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Stopped working (girl)",
+   "a": "printer",
+   "d": [
+    "controller",
+    "tablet",
+    "smart watch"
+   ]
+  },
+  {
+   "q": "Woman agrees to buy",
+   "a": "batteries",
+   "d": [
+    "headphones",
+    "a charger",
+    "a tablet"
+   ]
+  },
+  {
+   "q": "Girl's favourite VR",
+   "a": "diving",
+   "d": [
+    "motor racing",
+    "flying",
+    "football"
+   ]
+  },
+  {
+   "q": "Boy is looking for his",
+   "a": "headphones",
+   "d": [
+    "batteries",
+    "printer",
+    "tablet"
+   ]
+  },
+  {
+   "q": "Shop opens on Saturday at",
+   "a": "8.45",
+   "d": [
+    "9.45",
+    "8.15",
+    "9.15"
+   ]
+  },
+  {
+   "q": "How about ___ popcorn?",
+   "a": "getting",
+   "d": [
+    "get",
+    "to get",
+    "got"
+   ]
+  },
+  {
+   "q": "You ___ to rest.",
+   "a": "ought",
+   "d": [
+    "should",
+    "could",
+    "shall"
+   ]
+  },
+  {
+   "q": "___ I open the window?",
+   "a": "Shall",
+   "d": [
+    "How about",
+    "Why don't",
+    "Ought"
+   ]
+  },
+  {
+   "q": "Why don't you ___ a tablet?",
+   "a": "get",
+   "d": [
+    "getting",
+    "to get",
+    "got"
+   ]
+  },
+  {
+   "q": "Used to power a phone",
+   "a": "charger",
+   "d": [
+    "earphones",
+    "printer",
+    "torch"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What should you do before you listen to a picture question?",
+   "o": [
+    "Read the question, look at the pictures and predict words",
+    "Close your eyes",
+    "Choose an answer quickly",
+    "Read the last question only"
+   ],
+   "why": "Preparing helps you catch the right answer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is followed by -ing?",
+   "o": [
+    "How about",
+    "Why don't you",
+    "You should",
+    "You ought to"
+   ],
+   "why": "How about + noun or -ing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase makes an offer?",
+   "o": [
+    "Shall I ...?",
+    "How about ...?",
+    "You ought to ...",
+    "You shouldn't ..."
+   ],
+   "why": "Shall I carry your bag? is an offer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the woman agree to buy for the boy?",
+   "o": [
+    "batteries for his torch",
+    "a new tablet",
+    "a smart watch",
+    "earphones"
+   ],
+   "why": "He needs batteries for his torch."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend is always tired in the morning. Which is good advice?",
+   "o": [
+    "You should go to bed earlier.",
+    "You should to go to bed earlier.",
+    "How about go to bed earlier?",
+    "You ought go to bed earlier."
+   ],
+   "why": "Should + base verb, with no 'to'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the mistake: 'Why you don't get a tablet?'",
+   "o": [
+    "Why don't you get a tablet?",
+    "Why you not get a tablet?",
+    "Why don't you getting a tablet?",
+    "Why do you don't get a tablet?"
+   ],
+   "why": "Why don't you + base verb?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which suggestion is correct for an end-of-year class event?",
+   "o": [
+    "Why don't we have a picnic in the park?",
+    "Why we don't have a picnic?",
+    "How about have a picnic?",
+    "We ought have a picnic."
+   ],
+   "why": "Why don't we + base verb?"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the games controller the wrong answer for the girl's question?",
+   "o": [
+    "It had a problem before, but it's fine now",
+    "It was never mentioned",
+    "It is too expensive",
+    "It belongs to her brother"
+   ],
+   "why": "A mentioned item can still be a distractor."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the listening task mention all three pictures?",
+   "o": [
+    "To test if you listen carefully for the right one",
+    "Because all three are correct",
+    "To make the recording shorter",
+    "Because the pictures are the same"
+   ],
+   "why": "You must listen for details, not just words."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses three advice phrases correctly?",
+   "o": [
+    "You should rest. You could read. Why don't you call a friend?",
+    "You should to rest. You could reading. Why you don't call?",
+    "You ought rest. How about read? Shall you call?",
+    "You should rested. You could to read. Why not you call?"
+   ],
+   "why": "Each phrase keeps its own verb pattern."
+  }
+ ]
+}

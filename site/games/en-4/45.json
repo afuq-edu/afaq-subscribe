@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U4",
+ "lesson": "Unit 4 – Lesson 5: Culture – Some unusual jobs",
+ "outcomes": [
+  "Describe some unusual jobs.",
+  "Use must to say what people in a job must do.",
+  "Write about jobs in your family: what they do and where they work."
+ ],
+ "tf": [
+  {
+   "s": "The boat driver works in a cave.",
+   "t": true,
+   "why": "Yes! The boat driver works in a cave in England."
+  },
+  {
+   "s": "Visitors in the cave must wear a special hard hat.",
+   "t": true,
+   "why": "Correct! A hard hat keeps them safe."
+  },
+  {
+   "s": "A professional sleeper checks how good beds and pillows are.",
+   "t": true,
+   "why": "Well done! That is the sleeper's job."
+  },
+  {
+   "s": "A tea taster tries three cups of tea every day.",
+   "t": false,
+   "why": "The tea taster tries 300 cups every day!"
+  },
+  {
+   "s": "You must train for five years to be a tea taster.",
+   "t": true,
+   "why": "Yes! Five years of training."
+  },
+  {
+   "s": "The cave in the text has an underground lake.",
+   "t": true,
+   "why": "Correct! The boat goes on an underground lake."
+  },
+  {
+   "s": "A professional sleeper works in a cave.",
+   "t": false,
+   "why": "The boat driver works in a cave. The sleeper tests beds."
+  },
+  {
+   "s": "'A doctor must help people' uses must.",
+   "t": true,
+   "why": "Great! must + help."
+  },
+  {
+   "s": "'A doctor works in a school' is correct.",
+   "t": false,
+   "why": "A doctor works in a hospital."
+  },
+  {
+   "s": "The tea taster uses a big pillow.",
+   "t": false,
+   "why": "The tea taster uses a long spoon. Pillows are for the sleeper."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where does the boat driver work?",
+   "o": [
+    "in a cave",
+    "in a hospital",
+    "in a school"
+   ],
+   "why": "He works in a cave with an underground lake."
+  },
+  {
+   "q": "What must visitors wear in the cave?",
+   "o": [
+    "a special hard hat",
+    "a chef's hat",
+    "a white coat"
+   ],
+   "why": "A hard hat keeps visitors safe."
+  },
+  {
+   "q": "Who checks beds and pillows?",
+   "o": [
+    "a professional sleeper",
+    "a tea taster",
+    "a boat driver"
+   ],
+   "why": "That's the professional sleeper's job."
+  },
+  {
+   "q": "How many cups does the tea taster try a day?",
+   "o": [
+    "300",
+    "30",
+    "3"
+   ],
+   "why": "The tea taster tries 300 cups every day."
+  },
+  {
+   "q": "How long must a tea taster train?",
+   "o": [
+    "five years",
+    "five days",
+    "five weeks"
+   ],
+   "why": "You must train for five years."
+  },
+  {
+   "q": "Where does a doctor work?",
+   "o": [
+    "in a hospital",
+    "in a cave",
+    "on a farm"
+   ],
+   "why": "A doctor works in a hospital."
+  },
+  {
+   "q": "A doctor ___ help people.",
+   "o": [
+    "must",
+    "mustn't",
+    "must to"
+   ],
+   "why": "A doctor must help people."
+  },
+  {
+   "q": "Where does a teacher work?",
+   "o": [
+    "in a school",
+    "in a garage",
+    "in a cave"
+   ],
+   "why": "A teacher works in a school."
+  },
+  {
+   "q": "Which job is unusual?",
+   "o": [
+    "professional sleeper",
+    "teacher",
+    "doctor"
+   ],
+   "why": "Sleeping as a job is unusual!"
+  },
+  {
+   "q": "A vet must help ___ .",
+   "o": [
+    "animals",
+    "cars",
+    "computers"
+   ],
+   "why": "Vets help animals."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Boat driver works in a ...",
+   "a": "cave",
+   "d": [
+    "school",
+    "hospital",
+    "shop"
+   ]
+  },
+  {
+   "q": "Visitors must wear a ...",
+   "a": "hard hat",
+   "d": [
+    "pillow",
+    "spoon",
+    "jacket"
+   ]
+  },
+  {
+   "q": "Tea taster: cups a day",
+   "a": "300",
+   "d": [
+    "3",
+    "30",
+    "3000"
+   ]
+  },
+  {
+   "q": "Tea taster trains for ...",
+   "a": "five years",
+   "d": [
+    "five days",
+    "one week",
+    "two months"
+   ]
+  },
+  {
+   "q": "Sleeper checks beds and ...",
+   "a": "pillows",
+   "d": [
+    "teeth",
+    "cars",
+    "boats"
+   ]
+  },
+  {
+   "q": "Tea taster uses a long ...",
+   "a": "spoon",
+   "d": [
+    "hat",
+    "boat",
+    "pillow"
+   ]
+  },
+  {
+   "q": "A doctor works in a ...",
+   "a": "hospital",
+   "d": [
+    "cave",
+    "farm",
+    "garage"
+   ]
+  },
+  {
+   "q": "A teacher works in a ...",
+   "a": "school",
+   "d": [
+    "cave",
+    "garage",
+    "farm"
+   ]
+  },
+  {
+   "q": "The cave has an underground",
+   "a": "lake",
+   "d": [
+    "forest",
+    "desert",
+    "road"
+   ]
+  },
+  {
+   "q": "A firefighter must put out",
+   "a": "fires",
+   "d": [
+    "cars",
+    "teeth",
+    "boats"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which job is in a cave?",
+   "o": [
+    "boat driver",
+    "tea taster",
+    "professional sleeper",
+    "doctor"
+   ],
+   "why": "The boat driver works in Speedwell Cavern."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In which country is the cave?",
+   "o": [
+    "England",
+    "Oman",
+    "India",
+    "China"
+   ],
+   "why": "Speedwell Cavern is in England."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does a professional sleeper check?",
+   "o": [
+    "how good beds and pillows are",
+    "how good tea is",
+    "how fast boats are",
+    "how big caves are"
+   ],
+   "why": "The sleeper tests beds and pillows."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which three questions are in the job book project?",
+   "o": [
+    "What's the job? What must the person do? Where does the person work?",
+    "What's your name? What's your address? What's your phone number?",
+    "How old are you? Where do you live? What do you like?",
+    "What's the weather? What time is it? What day is it?"
+   ],
+   "why": "The project asks about the job, its rules and its place."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: A ___ must help animals. He works in a clinic.",
+   "o": [
+    "vet",
+    "mechanic",
+    "lawyer",
+    "boat driver"
+   ],
+   "why": "Vets help animals."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "A firefighter must help people and put out fires.",
+    "A firefighter must helps people.",
+    "A firefighter must to help people.",
+    "A firefighter mustn't help people."
+   ],
+   "why": "must + verb, with no s."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best page for the job book.",
+   "o": [
+    "Job: doctor. A doctor must help people. A doctor works in a hospital.",
+    "Job: doctor. A doctor must fix cars. A doctor works in a garage.",
+    "Job: doctor. A doctor mustn't help people.",
+    "Job: doctor. A doctor works in a cave."
+   ],
+   "why": "It answers all three questions correctly."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why must visitors wear a hard hat in the cave?",
+   "o": [
+    "To keep their heads safe.",
+    "To look funny.",
+    "To sleep well.",
+    "To taste tea."
+   ],
+   "why": "Hard hats keep heads safe."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'tea taster' an unusual job?",
+   "o": [
+    "The person tries 300 cups of tea every day.",
+    "The person works in a school.",
+    "The person drives a bus.",
+    "The person helps animals."
+   ],
+   "why": "Not many people taste tea as a job!"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair is correct?",
+   "o": [
+    "boat driver – cave",
+    "tea taster – hospital",
+    "professional sleeper – farm",
+    "doctor – cave"
+   ],
+   "why": "The boat driver works in a cave."
+  }
+ ]
+}

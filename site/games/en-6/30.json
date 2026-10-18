@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 2: Technology",
+  "lesson": "Unit 2 – Consolidation: Grammar, vocabulary and progress",
+  "outcomes": [
+    "I can use can/could and have to/had to for now and the past.",
+    "I can make comparative adverbs like more carefully, better and worse.",
+    "I can use technology phrases like download an app and type a password."
+  ],
+  "tf": [
+    {"s": "Could is the past form of can.", "t": true, "why": "I can swim now; I could swim when I was five."},
+    {"s": "“People didn’t could send emails.” is correct.", "t": false, "why": "The correct sentence is: People couldn’t send emails."},
+    {"s": "The comparative of badly is worse.", "t": true, "why": "badly → worse is irregular."},
+    {"s": "The comparative of well is weller.", "t": false, "why": "The comparative of well is better."},
+    {"s": "“Didn’t have to” means it was not necessary in the past.", "t": true, "why": "They didn’t have to worry about Wi-Fi."},
+    {"s": "We say “Jood have to remember lots of passwords.”", "t": false, "why": "With he/she we use has to: Jood has to …"},
+    {"s": "The comparative of quietly is more quietly.", "t": true, "why": "Adverbs ending in -ly use more."},
+    {"s": "We say “turn off the TV”.", "t": true, "why": "Turn off is the correct phrase for the TV."},
+    {"s": "We say “click on a password”.", "t": false, "why": "We click on an icon and type a password."},
+    {"s": "“You can type more fast than me.” is correct.", "t": false, "why": "We say faster than, not more fast."}
+  ],
+  "boxes": [
+    {"q": "Complete: Jood’s grandma ___ send emails to her friends.", "o": ["couldn’t", "can’t", "doesn’t have to"], "why": "In the past there were no emails, so she couldn’t."},
+    {"q": "Complete: Jood ___ remember lots of passwords!", "o": ["has to", "have to", "had to"], "why": "Now, for she/he: has to."},
+    {"q": "Complete: Children ___ write with a pen or pencil – not a computer.", "o": ["had to", "has to", "could"], "why": "In the past it was necessary: had to."},
+    {"q": "Complete: They ___ worry about Wi-Fi working.", "o": ["didn’t have to", "don’t had to", "didn’t had to"], "why": "didn’t + have to."},
+    {"q": "Complete: Anood does her homework ___ than Basma. (carefully)", "o": ["more carefully", "carefullier", "more careful"], "why": "more + adverb: more carefully."},
+    {"q": "Correct: “He speaks English more badly than his brother.”", "o": ["worse than", "badder than", "more bad than"], "why": "The comparative of badly is worse."},
+    {"q": "Which verb goes with “an icon”?", "o": ["click on", "type", "turn off"], "why": "You click on an icon."},
+    {"q": "Which verb goes with “a password”?", "o": ["type", "take", "watch"], "why": "You type a password."},
+    {"q": "Which verb goes with “a selfie”?", "o": ["take", "search", "go"], "why": "We take a selfie."},
+    {"q": "Which verb goes with “the internet”?", "o": ["search", "press", "take"], "why": "We search the internet."}
+  ],
+  "hunt": [
+    {"q": "___ online", "a": "go", "d": ["take", "press", "type"]},
+    {"q": "___ a selfie", "a": "take", "d": ["go", "search", "type"]},
+    {"q": "___ a message", "a": "send", "d": ["press", "go", "search"]},
+    {"q": "___ a button", "a": "press", "d": ["go", "send", "search"]},
+    {"q": "click on an ___", "a": "icon", "d": ["online", "internet", "selfie"]},
+    {"q": "well → ___", "a": "better", "d": ["weller", "more well", "best"]},
+    {"q": "badly → ___", "a": "worse", "d": ["badder", "more bad", "worst"]},
+    {"q": "carefully → ___", "a": "more carefully", "d": ["carefullier", "more careful", "most careful"]},
+    {"q": "Past of can", "a": "could", "d": ["can’t", "has to", "will"]},
+    {"q": "Jood ___ remember passwords.", "a": "has to", "d": ["have to", "had to", "couldn’t"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which is the correct form for the past?", "o": ["had to / didn’t have to", "have to / doesn’t have to", "has to / don’t have to", "can / can’t"], "why": "Had to and didn’t have to talk about the past."},
+    {"lv": "التذكر", "q": "Which comparative adverb is irregular?", "o": ["better", "more quietly", "more carefully", "more clearly"], "why": "well → better is irregular."},
+    {"lv": "التذكر", "q": "Which phrase is correct?", "o": ["download an app", "download a button", "press an app", "take the internet"], "why": "We download an app."},
+    {"lv": "التذكر", "q": "Which sentence talks about now?", "o": ["I have to use a password.", "My grandfather didn’t have to use passwords.", "People couldn’t send emails.", "Children had to write with a pen."], "why": "Have to is present."},
+    {"lv": "التطبيق", "q": "Correct: “My dad understands technology weller than my grandad.”", "o": ["My dad understands technology better than my grandad.", "My dad understands technology more well than my grandad.", "My dad understands technology gooder than my grandad.", "My dad understands technology best than my grandad."], "why": "well → better."},
+    {"lv": "التطبيق", "q": "With an old telephone, people ___ take photos.", "o": ["couldn’t", "can", "have to", "has to"], "why": "Old telephones had no camera, so people couldn’t take photos with them."},
+    {"lv": "التطبيق", "q": "Last week I couldn’t go online. I ___ finish my homework at my cousin’s house.", "o": ["had to", "have to", "has to", "didn’t have to"], "why": "It was necessary in the past: had to."},
+    {"lv": "التحليل", "q": "Which sentence is wrong?", "o": ["She works more hardly than me.", "She works harder than me.", "She speaks more quietly than me.", "She writes better than me."], "why": "hard → harder, not more hardly."},
+    {"lv": "التحليل", "q": "“These days, children have to remember passwords. When Grandad was young, children ___.” Which ending fits?", "o": ["didn’t have to remember passwords", "have to remember passwords", "has to remember passwords", "couldn’t remember anything"], "why": "In the past there were no passwords, so it wasn’t necessary."},
+    {"lv": "التحليل", "q": "Which pair shows then and now correctly?", "o": ["Then: People couldn’t send emails. Now: We can send emails.", "Then: People can send emails. Now: We couldn’t send emails.", "Then: People has to send emails. Now: We had to send emails.", "Then: People don’t send emails. Now: We didn’t send emails."], "why": "Couldn’t is past, can is present."}
+  ]
+}

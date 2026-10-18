@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 1: Our planet",
+ "lesson": "Lesson 7: English in action – Giving advice",
+ "outcomes": [
+  "Understand a dialogue where a teacher gives advice.",
+  "Give advice with phrases like I think you should… and Why don’t you…?",
+  "Hear and say silent letters in words like shouldn’t and lightning."
+ ],
+ "tf": [
+  {
+   "s": "Eliza wants to help animals that are in danger.",
+   "t": true,
+   "why": "Yes, and Miss Brown gives her advice."
+  },
+  {
+   "s": "Miss Brown tells Eliza to look online to find out more.",
+   "t": true,
+   "why": "Right! Looking online is one of her ideas."
+  },
+  {
+   "s": "Miss Brown tells Eliza to put a notice in the school newsletter.",
+   "t": true,
+   "why": "Correct! A notice tells other students."
+  },
+  {
+   "s": "We say “If I was you, I would…” in the lesson phrase.",
+   "t": false,
+   "why": "The phrase is If I were you, I would…"
+  },
+  {
+   "s": "“Why don’t you…?” is a way to give advice.",
+   "t": true,
+   "why": "Great! Why don’t you buy a book? is advice."
+  },
+  {
+   "s": "The letter l is silent in “shouldn’t”.",
+   "t": true,
+   "why": "Yes, we don’t say the l in shouldn’t."
+  },
+  {
+   "s": "In “lightning”, we say the letters gh clearly.",
+   "t": false,
+   "why": "The gh in lightning is silent."
+  },
+  {
+   "s": "We say “Perhaps you ought learn some vocabulary.”",
+   "t": false,
+   "why": "We say ought to: Perhaps you ought to learn some vocabulary."
+  },
+  {
+   "s": "“You could always…” is a phrase for complaining.",
+   "t": false,
+   "why": "You could always… is a phrase for giving advice."
+  },
+  {
+   "s": "Miss Brown says Eliza should make the garden dangerous for animals.",
+   "t": false,
+   "why": "She says Eliza can make the garden safe for animals."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "___ don’t you look for one online?",
+   "o": [
+    "Why",
+    "Where",
+    "When"
+   ],
+   "why": "Why don’t you…? gives advice."
+  },
+  {
+   "q": "If I ___ you, I would have a look at your garden.",
+   "o": [
+    "were",
+    "am",
+    "be"
+   ],
+   "why": "We say If I were you."
+  },
+  {
+   "q": "You could ___ pick up rubbish.",
+   "o": [
+    "always",
+    "never",
+    "ought"
+   ],
+   "why": "You could always… gives a helpful idea."
+  },
+  {
+   "q": "Perhaps you ___ to ask your teacher for help.",
+   "o": [
+    "ought",
+    "should",
+    "could"
+   ],
+   "why": "Ought is followed by to."
+  },
+  {
+   "q": "Which letter is silent in “shouldn’t”?",
+   "o": [
+    "l",
+    "d",
+    "sh"
+   ],
+   "why": "The l in shouldn’t is not pronounced."
+  },
+  {
+   "q": "Which letters are silent in “lightning”?",
+   "o": [
+    "gh",
+    "ng",
+    "li"
+   ],
+   "why": "The gh is not pronounced."
+  },
+  {
+   "q": "What is Miss Brown doing in the dialogue?",
+   "o": [
+    "giving Eliza advice",
+    "complaining to Eliza",
+    "buying a present"
+   ],
+   "why": "She helps Eliza with advice."
+  },
+  {
+   "q": "Advice for “I’m not doing well in Maths.”",
+   "o": [
+    "Perhaps you ought to ask your teacher for help.",
+    "You mustn’t ask anyone.",
+    "You needn’t study."
+   ],
+   "why": "Asking the teacher is helpful advice."
+  },
+  {
+   "q": "Which phrase gives advice?",
+   "o": [
+    "I think you should…",
+    "I’m sorry, but…",
+    "Can I have…?"
+   ],
+   "why": "I think you should… is an advice phrase."
+  },
+  {
+   "q": "Advice for someone who wants to recycle more:",
+   "o": [
+    "You should recycle plastic and glass bottles.",
+    "You should throw bottles away.",
+    "You mustn’t recycle."
+   ],
+   "why": "Recycling bottles is good advice."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "If I ___ you, I would…",
+   "a": "were",
+   "d": [
+    "was",
+    "am",
+    "is"
+   ]
+  },
+  {
+   "q": "___ don’t you…?",
+   "a": "Why",
+   "d": [
+    "What",
+    "Where",
+    "Who"
+   ]
+  },
+  {
+   "q": "Perhaps you ___ to…",
+   "a": "ought",
+   "d": [
+    "should",
+    "must",
+    "could"
+   ]
+  },
+  {
+   "q": "You could ___ …",
+   "a": "always",
+   "d": [
+    "never",
+    "ought",
+    "were"
+   ]
+  },
+  {
+   "q": "I think you ___ …",
+   "a": "should",
+   "d": [
+    "ought",
+    "were",
+    "always"
+   ]
+  },
+  {
+   "q": "Silent letter in shouldn’t",
+   "a": "l",
+   "d": [
+    "s",
+    "d",
+    "n"
+   ]
+  },
+  {
+   "q": "Silent letters in lightning",
+   "a": "gh",
+   "d": [
+    "li",
+    "ng",
+    "tn"
+   ]
+  },
+  {
+   "q": "Eliza wants to help…",
+   "a": "animals",
+   "d": [
+    "teachers",
+    "shops",
+    "cars"
+   ]
+  },
+  {
+   "q": "Put a notice in the school…",
+   "a": "newsletter",
+   "d": [
+    "garden",
+    "bin",
+    "car"
+   ]
+  },
+  {
+   "q": "Make the ___ safe for animals",
+   "a": "garden",
+   "d": [
+    "newsletter",
+    "computer",
+    "test"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does Eliza want to do?",
+   "o": [
+    "Help animals that are in danger",
+    "Buy a present",
+    "Pass a Maths test",
+    "Go to a party"
+   ],
+   "why": "Eliza wants to help endangered animals."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is one piece of advice Miss Brown gives?",
+   "o": [
+    "Look online to find out more.",
+    "Stay at home and do nothing.",
+    "Throw rubbish in the garden.",
+    "Buy a pet panda."
+   ],
+   "why": "Looking online helps Eliza find out what animals she can help."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is NOT a phrase for giving advice?",
+   "o": [
+    "Excuse me, where is the bank?",
+    "I think you should…",
+    "If I were you, I would…",
+    "Why don’t you…?"
+   ],
+   "why": "Asking for directions is not giving advice."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which letter is silent in “mustn’t”?",
+   "o": [
+    "the t in “must”",
+    "the m",
+    "the s",
+    "the u"
+   ],
+   "why": "We say mus-n’t."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend says: “I don’t know what present to get my mother for Eid.” Choose the best advice.",
+   "o": [
+    "If I were you, I would buy her some flowers.",
+    "If I was you, I buy flowers.",
+    "You mustn’t buy a present.",
+    "Why you don’t buy flowers?"
+   ],
+   "why": "This uses the advice phrase correctly."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend has an English test tomorrow. Which advice is correct?",
+   "o": [
+    "Perhaps you ought to learn some vocabulary.",
+    "Perhaps you ought learn some vocabulary.",
+    "Perhaps you ought learning vocabulary.",
+    "Perhaps you to ought learn vocabulary."
+   ],
+   "why": "ought to + base verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: A: “I want to buy a present.” B: “___ buy a book?”",
+   "o": [
+    "Why don’t you",
+    "Why you don’t",
+    "Why do you not to",
+    "Why not you"
+   ],
+   "why": "Why don’t you + verb…?"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is putting a notice in the school newsletter good advice for Eliza?",
+   "o": [
+    "Many students will read it and can help too.",
+    "It makes the garden safe.",
+    "It is a way to buy animals.",
+    "It stops climate change by itself."
+   ],
+   "why": "A notice tells other students about her idea."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word has a silent letter?",
+   "o": [
+    "shouldn’t",
+    "plant",
+    "rubbish",
+    "help"
+   ],
+   "why": "The l in shouldn’t is silent."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which reply gives advice, not an order?",
+   "o": [
+    "You could always ask your teacher.",
+    "Ask your teacher now!",
+    "You must ask your teacher.",
+    "Don’t ask your teacher!"
+   ],
+   "why": "You could always… is a soft way to give advice."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 1: Our planet",
+ "lesson": "Lesson 1: Vocabulary – The environment",
+ "outcomes": [
+  "Learn 12 phrases about the environment.",
+  "Sort phrases into planet problems and ways to help.",
+  "Use verbs like save, switch off and plant with different objects."
+ ],
+ "tf": [
+  {
+   "s": "Global warming is a problem for our planet.",
+   "t": true,
+   "why": "Yes, global warming means the planet is getting hotter."
+  },
+  {
+   "s": "Planting trees is one of our planet’s problems.",
+   "t": false,
+   "why": "Planting trees is a way to help the planet."
+  },
+  {
+   "s": "Pollution is a problem for the environment.",
+   "t": true,
+   "why": "Right! Pollution makes air, water and land dirty."
+  },
+  {
+   "s": "Recycling helps the environment.",
+   "t": true,
+   "why": "Great! Recycling means using materials again."
+  },
+  {
+   "s": "Wasting energy is a way to protect the planet.",
+   "t": false,
+   "why": "Wasting energy is a problem; we should save energy."
+  },
+  {
+   "s": "Manar picked up rubbish from the beach.",
+   "t": true,
+   "why": "Yes, she picked up more than 30 pieces of rubbish."
+  },
+  {
+   "s": "Eric destroyed a tree in the WOW! Blog.",
+   "t": false,
+   "why": "Eric planted a tree to help the environment."
+  },
+  {
+   "s": "“Switch off the lights” means to turn the lights on.",
+   "t": false,
+   "why": "Switch off means turn off, so the lights stop using electricity."
+  },
+  {
+   "s": "We can use the verb “save” with different objects, like water and energy.",
+   "t": true,
+   "why": "Correct! We say save water and save energy."
+  },
+  {
+   "s": "Destroying the rainforests helps to stop climate change.",
+   "t": false,
+   "why": "Destroying the rainforests is a problem for our planet."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: ___ the rainforests (a problem)",
+   "o": [
+    "destroy",
+    "plant",
+    "recycle"
+   ],
+   "why": "Destroy the rainforests is one of the planet’s problems."
+  },
+  {
+   "q": "Complete: People need to use ___ energy.",
+   "o": [
+    "renewable",
+    "waste",
+    "global"
+   ],
+   "why": "Renewable energy comes from sources that do not run out."
+  },
+  {
+   "q": "Please ___ the lights when you go out.",
+   "o": [
+    "switch off",
+    "pick up",
+    "plant"
+   ],
+   "why": "We switch off lights to save electricity."
+  },
+  {
+   "q": "Could you please ___ those bottles and put them in the bin?",
+   "o": [
+    "pick up",
+    "switch off",
+    "destroy"
+   ],
+   "why": "We pick up rubbish and put it in the bin."
+  },
+  {
+   "q": "Which phrase is a way to help the planet?",
+   "o": [
+    "plant trees",
+    "pollution",
+    "global warming"
+   ],
+   "why": "Planting trees helps the planet."
+  },
+  {
+   "q": "Which phrase is a problem?",
+   "o": [
+    "waste energy",
+    "save water",
+    "recycle"
+   ],
+   "why": "Wasting energy is bad for the planet."
+  },
+  {
+   "q": "How did Eric help the environment?",
+   "o": [
+    "He planted a tree.",
+    "He switched off the TV.",
+    "He used a car."
+   ],
+   "why": "Eric planted a tree."
+  },
+  {
+   "q": "Scientists think people’s activities are causing ___ warming.",
+   "o": [
+    "global",
+    "climate",
+    "environment"
+   ],
+   "why": "The phrase is global warming."
+  },
+  {
+   "q": "A lot of people ___ energy by leaving on lights all the time.",
+   "o": [
+    "waste",
+    "save",
+    "switch"
+   ],
+   "why": "Leaving lights on wastes energy."
+  },
+  {
+   "q": "Which object can follow “switch off”?",
+   "o": [
+    "the TV",
+    "rubbish",
+    "trees"
+   ],
+   "why": "We switch off the TV or the lights."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "___ the environment (keep it safe)",
+   "a": "protect",
+   "d": [
+    "destroy",
+    "waste",
+    "pollute"
+   ]
+  },
+  {
+   "q": "___ trees",
+   "a": "plant",
+   "d": [
+    "switch",
+    "waste",
+    "pollute"
+   ]
+  },
+  {
+   "q": "___ rubbish",
+   "a": "pick up",
+   "d": [
+    "switch off",
+    "plant",
+    "save"
+   ]
+  },
+  {
+   "q": "___ off lights",
+   "a": "switch",
+   "d": [
+    "pick",
+    "plant",
+    "waste"
+   ]
+  },
+  {
+   "q": "The planet getting hotter",
+   "a": "global warming",
+   "d": [
+    "recycling",
+    "renewable energy",
+    "planting trees"
+   ]
+  },
+  {
+   "q": "Dirty air, water and land",
+   "a": "pollution",
+   "d": [
+    "recycling",
+    "protection",
+    "renewable"
+   ]
+  },
+  {
+   "q": "Use bottles and paper again",
+   "a": "recycle",
+   "d": [
+    "destroy",
+    "waste",
+    "pollute"
+   ]
+  },
+  {
+   "q": "___ the rainforests (a problem)",
+   "a": "destroy",
+   "d": [
+    "protect",
+    "plant",
+    "save"
+   ]
+  },
+  {
+   "q": "Manar picked up rubbish from the…",
+   "a": "beach",
+   "d": [
+    "desert",
+    "mountain",
+    "library"
+   ]
+  },
+  {
+   "q": "___ energy (a problem)",
+   "a": "waste",
+   "d": [
+    "save",
+    "renewable",
+    "protect"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does “switch off lights” mean?",
+   "o": [
+    "Turn off the lights so they stop using electricity",
+    "Buy new lights",
+    "Turn on more lights",
+    "Clean the lights"
+   ],
+   "why": "Switch off means turn off."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How did Manar help the environment?",
+   "o": [
+    "She picked up more than 30 pieces of rubbish from the beach.",
+    "She planted a tree.",
+    "She switched off the TV.",
+    "She used renewable energy."
+   ],
+   "why": "Manar cleaned the beach."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a problem for our planet?",
+   "o": [
+    "Climate change",
+    "Planting trees",
+    "Saving water",
+    "Recycling"
+   ],
+   "why": "Climate change is one of the planet’s problems."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase means keeping nature safe?",
+   "o": [
+    "protect the environment",
+    "waste energy",
+    "destroy the rainforests",
+    "pollution"
+   ],
+   "why": "To protect means to keep safe."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put these in the right group: pollution, plant trees, waste energy, recycle. Which are problems?",
+   "o": [
+    "pollution and waste energy",
+    "plant trees and recycle",
+    "pollution and recycle",
+    "plant trees and waste energy"
+   ],
+   "why": "Pollution and wasting energy hurt the planet."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses “save” with a different object from “water”?",
+   "o": [
+    "We should save energy at school.",
+    "We should save water at home.",
+    "We should waste energy at school.",
+    "We should save the water tap."
+   ],
+   "why": "Save energy uses a new object with the same verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence shows a way you can help the environment?",
+   "o": [
+    "I recycle plastic bottles.",
+    "I leave the lights on all day.",
+    "I throw rubbish on the beach.",
+    "I leave the tap running."
+   ],
+   "why": "Recycling is a good way to help."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Is “global warming” a problem or a solution, and why?",
+   "o": [
+    "A problem, because the planet is getting hotter",
+    "A solution, because it keeps us warm",
+    "A solution, because it saves energy",
+    "A problem, because it plants trees"
+   ],
+   "why": "Global warming is a problem: the planet is getting hotter."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is using renewable energy good for the planet?",
+   "o": [
+    "It helps us stop wasting energy and causing pollution.",
+    "It destroys the rainforests.",
+    "It makes more rubbish.",
+    "It uses more water."
+   ],
+   "why": "Renewable energy is one of the ways we can help."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair is a problem and its matching solution?",
+   "o": [
+    "waste energy – switch off lights",
+    "pollution – destroy the rainforests",
+    "global warming – waste energy",
+    "recycle – plant trees"
+   ],
+   "why": "Switching off lights stops wasting energy."
+  }
+ ]
+}

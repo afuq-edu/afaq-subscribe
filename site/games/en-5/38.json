@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 4 – Off to the shops",
+ "lesson": "Lesson 6: English in action – Asking for a price",
+ "outcomes": [
+  "Ask for and give prices politely in a shop.",
+  "Use phrases like How much is it? and I'll have that one, please.",
+  "Say the sound /ʒ/ in words like pleasure and television."
+ ],
+ "tf": [
+  {
+   "s": "We ask \"How much is it?\" to know the price.",
+   "t": true,
+   "why": "How much …? asks about price."
+  },
+  {
+   "s": "The necklace with the blue star is fifteen rials.",
+   "t": true,
+   "why": "It's fifteen rials."
+  },
+  {
+   "s": "Lucas has got twenty rials.",
+   "t": false,
+   "why": "Lucas has got thirteen rials."
+  },
+  {
+   "s": "Lucas buys the necklace which has a flower on it.",
+   "t": true,
+   "why": "He buys the flower necklace."
+  },
+  {
+   "s": "The flower necklace is fifteen rials.",
+   "t": false,
+   "why": "The flower necklace is twelve rials."
+  },
+  {
+   "s": "\"Television\" has the /ʒ/ sound.",
+   "t": true,
+   "why": "tele-vi-sion has /ʒ/."
+  },
+  {
+   "s": "\"Station\" has the /ʒ/ sound.",
+   "t": false,
+   "why": "station has /ʃ/, not /ʒ/. Television has /ʒ/."
+  },
+  {
+   "s": "\"My pleasure!\" is a polite reply when someone says thank you.",
+   "t": true,
+   "why": "It means you are happy to help."
+  },
+  {
+   "s": "\"Give me that!\" is the most polite way to ask in a shop.",
+   "t": false,
+   "why": "It is more polite to say: I'll have that one, please."
+  },
+  {
+   "s": "\"Measure\", \"treasure\" and \"usually\" have the /ʒ/ sound.",
+   "t": true,
+   "why": "They all have /ʒ/."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: How ______ is it?",
+   "o": [
+    "much",
+    "many",
+    "old"
+   ],
+   "why": "We ask How much is it? for prices."
+  },
+  {
+   "q": "How much money has Lucas got?",
+   "o": [
+    "thirteen rials",
+    "fifteen rials",
+    "thirty rials"
+   ],
+   "why": "Lucas has got thirteen rials."
+  },
+  {
+   "q": "How much is the necklace with the blue star?",
+   "o": [
+    "fifteen rials",
+    "twelve rials",
+    "five rials"
+   ],
+   "why": "It's fifteen rials."
+  },
+  {
+   "q": "Which word has the /ʒ/ sound?",
+   "o": [
+    "television",
+    "station",
+    "machine"
+   ],
+   "why": "Television has /ʒ/."
+  },
+  {
+   "q": "You want to buy something. What do you say?",
+   "o": [
+    "I'll have that one, please.",
+    "How old are you?",
+    "Stop, thief!"
+   ],
+   "why": "This is how we decide to buy."
+  },
+  {
+   "q": "Ask politely to look at a notebook in the window.",
+   "o": [
+    "Can I look at the notebook which is in the window, please?",
+    "Give me the notebook!",
+    "Where is the window?"
+   ],
+   "why": "Can I …, please? is polite."
+  },
+  {
+   "q": "The shop assistant says \"Thank you.\" You can reply ______.",
+   "o": [
+    "My pleasure!",
+    "How much?",
+    "No, I won't."
+   ],
+   "why": "My pleasure! is polite."
+  },
+  {
+   "q": "Which necklace does Lucas buy?",
+   "o": [
+    "the one with a flower",
+    "the one with a blue star",
+    "the one with a comet"
+   ],
+   "why": "He buys the flower necklace."
+  },
+  {
+   "q": "What is the money in Oman called?",
+   "o": [
+    "rials",
+    "dollars",
+    "pounds"
+   ],
+   "why": "Prices in the dialogue are in rials."
+  },
+  {
+   "q": "Which word has /ʒ/, like television?",
+   "o": [
+    "decision",
+    "school",
+    "shop"
+   ],
+   "why": "Decision has /ʒ/."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Ask the price: How ___ is it?",
+   "a": "much",
+   "d": [
+    "many",
+    "old",
+    "far"
+   ]
+  },
+  {
+   "q": "Price of the blue star necklace",
+   "a": "15 rials",
+   "d": [
+    "12 rials",
+    "13 rials",
+    "5 rials"
+   ]
+  },
+  {
+   "q": "Price of the flower necklace",
+   "a": "12 rials",
+   "d": [
+    "15 rials",
+    "13 rials",
+    "20 rials"
+   ]
+  },
+  {
+   "q": "Lucas's money",
+   "a": "13 rials",
+   "d": [
+    "12 rials",
+    "15 rials",
+    "30 rials"
+   ]
+  },
+  {
+   "q": "Money left after Lucas buys",
+   "a": "1 rial",
+   "d": [
+    "2 rials",
+    "3 rials",
+    "0 rials"
+   ]
+  },
+  {
+   "q": "/ʒ/ word: My ___!",
+   "a": "pleasure",
+   "d": [
+    "please",
+    "pizza",
+    "pen"
+   ]
+  },
+  {
+   "q": "/ʒ/ word that rhymes with measure",
+   "a": "treasure",
+   "d": [
+    "teacher",
+    "table",
+    "tree"
+   ]
+  },
+  {
+   "q": "/ʒ/ word: I ___ walk to school.",
+   "a": "usually",
+   "d": [
+    "under",
+    "uncle",
+    "umbrella"
+   ]
+  },
+  {
+   "q": "Reply to Thank you",
+   "a": "My pleasure!",
+   "d": [
+    "How much?",
+    "Stop!",
+    "Goodbye!"
+   ]
+  },
+  {
+   "q": "I'll ___ that one, please.",
+   "a": "have",
+   "d": [
+    "has",
+    "having",
+    "had"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which question asks for a price?",
+   "o": [
+    "How much is it?",
+    "How old is it?",
+    "How far is it?",
+    "How tall is it?"
+   ],
+   "why": "How much …? is for prices."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Lucas want to buy?",
+   "o": [
+    "a present (a necklace)",
+    "a football",
+    "a phone",
+    "a book"
+   ],
+   "why": "He buys a necklace as a present."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase do we use to choose something in a shop?",
+   "o": [
+    "I'll have that one, please.",
+    "I'm interested in joining.",
+    "What's your date of birth?",
+    "I won't win."
+   ],
+   "why": "This phrase shows your decision."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group has only words with the /ʒ/ sound?",
+   "o": [
+    "pleasure, measure, treasure",
+    "station, machine, shop",
+    "please, pizza, pen",
+    "star, rocket, planet"
+   ],
+   "why": "These words all have /ʒ/."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The shop assistant says, \"It's fifteen rials.\" What did the customer ask?",
+   "o": [
+    "How much is it?",
+    "How old is it?",
+    "What's your name?",
+    "Where is it?"
+   ],
+   "why": "The answer is a price."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to see a ring in the window. What do you say?",
+   "o": [
+    "Can I look at the ring which is in the window, please?",
+    "Give me ring.",
+    "I'll have, please.",
+    "How much rings?"
+   ],
+   "why": "Use Can I look at …, please?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Lucas has 13 rials and buys the necklace for 12 rials. How much money does he have left?",
+   "o": [
+    "1 rial",
+    "2 rials",
+    "3 rials",
+    "25 rials"
+   ],
+   "why": "13 − 12 = 1 rial."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Lucas has 13 rials. Can he buy the necklace with the blue star?",
+   "o": [
+    "No, because it costs 15 rials.",
+    "Yes, because it costs 12 rials.",
+    "Yes, because it costs 5 rials.",
+    "No, because it is free."
+   ],
+   "why": "15 rials is more than 13 rials."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT have the /ʒ/ sound?",
+   "o": [
+    "station",
+    "television",
+    "usually",
+    "decision"
+   ],
+   "why": "Station has /ʃ/; the others have /ʒ/."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say \"please\" and \"My pleasure!\" in a shop?",
+   "o": [
+    "To be polite and friendly.",
+    "To ask the price.",
+    "To say goodbye.",
+    "To get money back."
+   ],
+   "why": "Polite words make shopping friendly."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 2: Adventure sports",
+ "lesson": "Lesson 5: Vocabulary and Grammar – Geography & Past perfect",
+ "outcomes": [
+  "Learn and use 12 geography words.",
+  "Use the Past perfect: had + past participle.",
+  "Put two past events in the right order."
+ ],
+ "tf": [
+  {
+   "s": "A valley is a low place between hills or mountains.",
+   "t": true,
+   "why": "Yes! A valley lies low between hills."
+  },
+  {
+   "s": "Sunset is when the sun comes up in the morning.",
+   "t": false,
+   "why": "Sunset is when the sun goes down; sunrise is in the morning."
+  },
+  {
+   "s": "A wood is a small forest.",
+   "t": true,
+   "why": "Right, a wood is a small area of trees."
+  },
+  {
+   "s": "Salalah is in the north of Oman.",
+   "t": false,
+   "why": "Salalah is in the south of Oman."
+  },
+  {
+   "s": "Sur is in the east of Oman.",
+   "t": true,
+   "why": "Correct, Sur is in the east."
+  },
+  {
+   "s": "We form the Past perfect with had + past participle.",
+   "t": true,
+   "why": "Well done: had + past participle, e.g. had eaten."
+  },
+  {
+   "s": "The Past perfect shows the later of two past events.",
+   "t": false,
+   "why": "It shows the earlier event, the one that happened first."
+  },
+  {
+   "s": "The tide is the movement of the sea up and down.",
+   "t": true,
+   "why": "Yes, the moon causes the tide."
+  },
+  {
+   "s": "In 'After I had eaten breakfast, I came to school', I came to school first.",
+   "t": false,
+   "why": "The Past perfect part, eating breakfast, happened first."
+  },
+  {
+   "s": "A bay is a part of the sea with land curving around it.",
+   "t": true,
+   "why": "Good! A bay is where the coast curves in."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What do we call a small forest?",
+   "o": [
+    "a wood",
+    "a bay",
+    "a field"
+   ],
+   "why": "A wood is a small forest."
+  },
+  {
+   "q": "When does the sun go down?",
+   "o": [
+    "at sunset",
+    "at sunrise",
+    "at noon"
+   ],
+   "why": "The sun goes down at sunset."
+  },
+  {
+   "q": "Complete: She ___ her homework before dinner.",
+   "o": [
+    "had finished",
+    "has finish",
+    "had finish"
+   ],
+   "why": "Past perfect = had + past participle: had finished."
+  },
+  {
+   "q": "Which word means the view of the natural land around you?",
+   "o": [
+    "scenery",
+    "tide",
+    "valley"
+   ],
+   "why": "Scenery is the beautiful view of nature."
+  },
+  {
+   "q": "Which direction is opposite to east?",
+   "o": [
+    "west",
+    "north",
+    "south"
+   ],
+   "why": "East and west are opposites."
+  },
+  {
+   "q": "Complete: They ___ (not get) very far before Hussain stopped.",
+   "o": [
+    "hadn't got",
+    "didn't got",
+    "haven't got"
+   ],
+   "why": "The negative Past perfect is hadn't + past participle."
+  },
+  {
+   "q": "What is an open area of grass, often on a farm?",
+   "o": [
+    "a field",
+    "a wood",
+    "a bay"
+   ],
+   "why": "A field is an open area of land with grass or crops."
+  },
+  {
+   "q": "Complete: On the coach I saw that I ___ my money at home.",
+   "o": [
+    "had left",
+    "have left",
+    "leave"
+   ],
+   "why": "Leaving the money happened first, so we use had left."
+  },
+  {
+   "q": "Which word goes with the moon and the sea?",
+   "o": [
+    "tide",
+    "sunrise",
+    "scenery"
+   ],
+   "why": "The moon moves the sea up and down: the tide."
+  },
+  {
+   "q": "You can watch the ___ early in the morning.",
+   "o": [
+    "sunrise",
+    "sunset",
+    "tide"
+   ],
+   "why": "The sun comes up at sunrise."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Opposite of north",
+   "a": "south",
+   "d": [
+    "east",
+    "west",
+    "valley"
+   ]
+  },
+  {
+   "q": "Opposite of sunrise",
+   "a": "sunset",
+   "d": [
+    "sunlight",
+    "sunday",
+    "noon"
+   ]
+  },
+  {
+   "q": "A small forest",
+   "a": "wood",
+   "d": [
+    "field",
+    "bay",
+    "tide"
+   ]
+  },
+  {
+   "q": "Low land between mountains",
+   "a": "valley",
+   "d": [
+    "bay",
+    "field",
+    "wood"
+   ]
+  },
+  {
+   "q": "Sea moved by the moon",
+   "a": "tide",
+   "d": [
+    "bay",
+    "valley",
+    "scenery"
+   ]
+  },
+  {
+   "q": "Salalah is in the ...",
+   "a": "south",
+   "d": [
+    "north",
+    "east",
+    "west"
+   ]
+  },
+  {
+   "q": "Sur is in the ...",
+   "a": "east",
+   "d": [
+    "west",
+    "south",
+    "north"
+   ]
+  },
+  {
+   "q": "Past participle of eat",
+   "a": "eaten",
+   "d": [
+    "ate",
+    "eated",
+    "eating"
+   ]
+  },
+  {
+   "q": "Past participle of leave",
+   "a": "left",
+   "d": [
+    "leaved",
+    "leaving",
+    "leaves"
+   ]
+  },
+  {
+   "q": "Past perfect of write",
+   "a": "had written",
+   "d": [
+    "had wrote",
+    "has write",
+    "was writing"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How do we form the Past perfect?",
+   "o": [
+    "had + past participle",
+    "has + past participle",
+    "was + verb-ing",
+    "did + verb"
+   ],
+   "why": "The Past perfect always uses had + past participle."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means the time when the sun comes up?",
+   "o": [
+    "sunrise",
+    "sunset",
+    "tide",
+    "scenery"
+   ],
+   "why": "Sunrise is in the early morning."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a bay?",
+   "o": [
+    "part of the sea with land curving round it",
+    "a low place between hills",
+    "a small forest",
+    "an open area of grass"
+   ],
+   "why": "A bay is where the coastline curves in."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In which part of Oman is Sur?",
+   "o": [
+    "the east",
+    "the west",
+    "the south",
+    "the north"
+   ],
+   "why": "Sur is in the east of Oman."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "After they had crossed the valley, they climbed the hill.",
+    "After they climbed the hill, they had crossed the valley.",
+    "After they have crossed the valley, they climb the hill.",
+    "After they had cross the valley, they climbed the hill."
+   ],
+   "why": "Crossing the valley came first, so it takes the Past perfect."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Before the sun came up, we ___ and got dressed.",
+   "o": [
+    "had got up",
+    "have got up",
+    "get up",
+    "had get up"
+   ],
+   "why": "Getting up happened first: had got up."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Join: He brushed his teeth. Then he put on his pyjamas.",
+   "o": [
+    "Before he put on his pyjamas, he had brushed his teeth.",
+    "Before he had put on his pyjamas, he brushed his teeth.",
+    "After he put on his pyjamas, he had brushed his teeth.",
+    "Before he puts on his pyjamas, he brushed his teeth."
+   ],
+   "why": "Brushing his teeth was first, so it is in the Past perfect."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'After Muneera had eaten breakfast, she went hiking.' What happened first?",
+   "o": [
+    "She ate breakfast.",
+    "She went hiking.",
+    "Both at the same time.",
+    "We can't know."
+   ],
+   "why": "The Past perfect (had eaten) shows the first event."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ali describes his town: 'The sea comes in and goes out twice a day.' Which word is he describing?",
+   "o": [
+    "tide",
+    "bay",
+    "valley",
+    "sunset"
+   ],
+   "why": "The sea moving in and out is the tide."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we use 'had left' in 'I saw that I had left my money at home'?",
+   "o": [
+    "Leaving the money happened before seeing it.",
+    "Seeing happened before leaving.",
+    "It is happening now.",
+    "It will happen later."
+   ],
+   "why": "The Past perfect shows the earlier past action."
+  }
+ ]
+}

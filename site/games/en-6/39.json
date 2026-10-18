@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 3: Places",
+  "lesson": "Unit 3 – Lesson 9: Writing – A short story",
+  "outcomes": [
+    "I know the parts of a story plan: characters, place, problem and ending.",
+    "I can use direct speech, adverbs and time words in a story.",
+    "I can write a short story with the Past simple and Past continuous."
+  ],
+  "tf": [
+    {"s": "In the model story, Ammar and Qais were at the stadium.", "t": true, "why": "The story happens at the stadium."},
+    {"s": "Ammar fell down some steps and broke his foot.", "t": true, "why": "That is the problem in the story."},
+    {"s": "Amjed Rashid is Ammar’s brother.", "t": false, "why": "Amjed Rashid is the number nine, Ammar’s favourite player."},
+    {"s": "At the end, Amjed Rashid gives Ammar two tickets for a match in April.", "t": true, "why": "It is a happy ending."},
+    {"s": "A story plan has four parts: characters, place, problem and ending.", "t": true, "why": "Planning these parts helps you write a good story."},
+    {"s": "Direct speech goes inside quotation marks.", "t": true, "why": "For example: ‘My foot hurts!’"},
+    {"s": "“Happily” and “quickly” are adjectives.", "t": false, "why": "They are adverbs; they tell us how someone does something."},
+    {"s": "A good short story doesn’t need a problem.", "t": false, "why": "A problem makes the story interesting."},
+    {"s": "“Suddenly” and “at last” are time words we can use in stories.", "t": true, "why": "Time words help the reader follow the events."},
+    {"s": "Ammar broke his arm at the stadium.", "t": false, "why": "He broke his foot, not his arm."}
+  ],
+  "boxes": [
+    {"q": "Where were Ammar and Qais?", "o": ["at the stadium", "at the hospital", "at the harbour"], "why": "They were at the stadium."},
+    {"q": "Who is Amjed Rashid?", "o": ["Ammar’s favourite player", "Ammar’s teacher", "Ammar’s doctor"], "why": "He is the number nine, Ammar’s favourite player."},
+    {"q": "What did Amjed Rashid give Ammar?", "o": ["two tickets for a match", "a new football", "a T-shirt"], "why": "He gave him two tickets for a match in April."},
+    {"q": "Which is direct speech?", "o": ["‘My foot hurts!’", "Ammar was at the stadium.", "He broke his foot."], "why": "Direct speech shows the exact words in quotation marks."},
+    {"q": "Complete: I ___ (read) a book when the door opened.", "o": ["was reading", "were reading", "read"], "why": "The longer action uses was + -ing."},
+    {"q": "Add an adverb: She smiled ___.", "o": ["happily", "happy", "happiness"], "why": "Adverbs like happily describe the verb."},
+    {"q": "Which is a time word for stories?", "o": ["suddenly", "upstairs", "ancient"], "why": "Suddenly tells us something happened fast."},
+    {"q": "What is the first part of a story plan?", "o": ["characters", "ending", "problem"], "why": "Who is in the story comes first in the plan."},
+    {"q": "Which month is the match in?", "o": ["April", "May", "June"], "why": "The tickets are for a match in April."},
+    {"q": "Which punctuation is correct?", "o": ["‘I’m so excited,’ said Ammar.", "Im so excited said Ammar.", "‘Im so excited said Ammar."], "why": "Use quotation marks, an apostrophe and a comma."}
+  ],
+  "hunt": [
+    {"q": "Where Ammar and Qais were", "a": "stadium", "d": ["hospital", "harbour", "palace"]},
+    {"q": "What Ammar broke", "a": "his foot", "d": ["his arm", "his phone", "his hand"]},
+    {"q": "Amjed Rashid’s number", "a": "nine", "d": ["seven", "ten", "eleven"]},
+    {"q": "Number of tickets", "a": "two", "d": ["one", "three", "four"]},
+    {"q": "Month of the match", "a": "April", "d": ["March", "May", "July"]},
+    {"q": "Ammar’s friend at the stadium", "a": "Qais", "d": ["Eddie", "Jake", "Finn"]},
+    {"q": "Ammar fell down some…", "a": "steps", "d": ["trees", "hills", "boxes"]},
+    {"q": "Find the adverb", "a": "quickly", "d": ["quick", "happy", "excited"]},
+    {"q": "Find the time word", "a": "at last", "d": ["upstairs", "on the left", "next to"]},
+    {"q": "Find the time word", "a": "then", "d": ["there", "where", "who"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What was Ammar’s problem in the story?", "o": ["He fell down some steps and broke his foot.", "He lost his ticket.", "He was late for the match.", "He couldn’t find Qais."], "why": "Falling and breaking his foot is the problem."},
+    {"lv": "التذكر", "q": "How does the story end?", "o": ["Amjed Rashid gives Ammar two tickets for a match in April.", "Ammar goes home sad.", "Ammar becomes a football player.", "Qais breaks his foot."], "why": "The story has a happy ending."},
+    {"lv": "التذكر", "q": "Which list shows the parts of a story plan?", "o": ["characters, place, problem, ending", "title, price, good points, bad points", "city, country, age, buildings", "question, answer, key, score"], "why": "These four parts make a story plan."},
+    {"lv": "التذكر", "q": "What do we put around direct speech?", "o": ["quotation marks", "brackets", "numbers", "question marks only"], "why": "Quotation marks show the exact words someone said."},
+    {"lv": "التطبيق", "q": "Choose the best first sentence for a story.", "o": ["Salim was walking along the beach when he saw a box.", "Salim walk beach box.", "The box is in Salim.", "Salim were walking along the beach."], "why": "It uses the Past continuous and Past simple to start the action."},
+    {"lv": "التطبيق", "q": "Choose the correct line of direct speech.", "o": ["‘What’s in the box?’ he asked.", "What’s in the box he asked.", "‘What’s in the box he asked?", "He asked ‘whats in the box’"], "why": "Quotation marks go around the words he said."},
+    {"lv": "التطبيق", "q": "Which sentence uses an adverb well?", "o": ["‘Thank you!’ said Ammar happily.", "‘Thank you!’ said Ammar happy.", "‘Thank you!’ happily Ammar.", "‘Thank you!’ said happy Ammar happily."], "why": "Happily describes how he said it."},
+    {"lv": "التحليل", "q": "Why does a good story need a problem?", "o": ["It makes the story exciting and gives the characters something to solve.", "It makes the story shorter.", "It is the title of the story.", "It is not important."], "why": "The problem keeps readers interested."},
+    {"lv": "التحليل", "q": "“My foot hurts!” What does this direct speech show the reader?", "o": ["How Ammar feels after he falls", "Where the stadium is", "Who won the match", "What month it is"], "why": "Direct speech shows the character’s feelings."},
+    {"lv": "التحليل", "q": "Why is the ending of Ammar’s story happy, even after his accident?", "o": ["His favourite player gives him tickets for another match.", "His foot was not really broken.", "He won a prize at school.", "He never went to the stadium."], "why": "Something good happens after the problem."}
+  ]
+}

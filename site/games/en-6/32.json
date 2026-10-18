@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 3: Places",
+  "lesson": "Unit 3 – Lesson 2: Team Talk – Finding the sports centre",
+  "outcomes": [
+    "I can understand the places Reem and Julia talk about.",
+    "I can use Right!, No way! and Hey, look! in the right situation.",
+    "I can talk about places I have been to."
+  ],
+  "tf": [
+    {
+      "s": "Reem and Julia are looking for the sports centre.",
+      "t": true,
+      "why": "Yes, they are trying to find the sports centre."
+    },
+    {
+      "s": "Sharifa lives in the apartment building.",
+      "t": true,
+      "why": "They pass the apartment building where Sharifa lives."
+    },
+    {
+      "s": "Julia went to hospital because she fell off her bike.",
+      "t": false,
+      "why": "She was sick after eating too much chocolate at the factory."
+    },
+    {
+      "s": "“I went to the stadium” is in the present simple.",
+      "t": false,
+      "why": "Went is the past simple of go."
+    },
+    {
+      "s": "The girls are going to be late for their swimming class.",
+      "t": true,
+      "why": "Yes, they don’t want to be late for swimming."
+    },
+    {
+      "s": "Julia liked hospital because the Wi-Fi was very good.",
+      "t": false,
+      "why": "She was bored and the Wi-Fi wasn’t good."
+    },
+    {
+      "s": "At the end, the sports centre is right behind them.",
+      "t": true,
+      "why": "Hey, look! It was there all the time."
+    },
+    {
+      "s": "We say “No way!” when we are surprised.",
+      "t": true,
+      "why": "No way! shows surprise."
+    },
+    {
+      "s": "We say “Hey, look!” when we want someone to stop looking.",
+      "t": false,
+      "why": "Hey, look! asks someone to see something."
+    },
+    {
+      "s": "The girls visited a chocolate factory in the past.",
+      "t": true,
+      "why": "They remember the day when they went to the chocolate factory."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Where does Sharifa live?",
+      "o": [
+        "in the apartment building",
+        "in the hospital",
+        "in the stadium"
+      ],
+      "why": "It’s the apartment building where Sharifa lives."
+    },
+    {
+      "q": "What class are the girls going to?",
+      "o": [
+        "a swimming class",
+        "a music class",
+        "an art class"
+      ],
+      "why": "They are going to their swimming class."
+    },
+    {
+      "q": "Why did Julia go to hospital?",
+      "o": [
+        "She ate too much chocolate.",
+        "She hurt her leg.",
+        "She visited a friend."
+      ],
+      "why": "She was sick after too much chocolate."
+    },
+    {
+      "q": "Where is the sports centre?",
+      "o": [
+        "right behind them",
+        "next to the harbour",
+        "in another city"
+      ],
+      "why": "They find it right behind them."
+    },
+    {
+      "q": "Respond: “The sports centre is closed!”",
+      "o": [
+        "No way!",
+        "Right!",
+        "Thank you!"
+      ],
+      "why": "No way! shows surprise at bad news."
+    },
+    {
+      "q": "Complete: Hey, ___! There’s a map.",
+      "o": [
+        "look",
+        "see",
+        "watch"
+      ],
+      "why": "The expression is Hey, look!"
+    },
+    {
+      "q": "Respond: “This is where we saw our friend Halima.”",
+      "o": [
+        "Right!",
+        "No way!",
+        "Hey, look!"
+      ],
+      "why": "Right! shows you agree or remember."
+    },
+    {
+      "q": "Complete: That’s the stadium ___ my brother went to the football match.",
+      "o": [
+        "where",
+        "who",
+        "when"
+      ],
+      "why": "We use where for places."
+    },
+    {
+      "q": "Why couldn’t Julia go online in hospital?",
+      "o": [
+        "The Wi-Fi wasn’t good.",
+        "She had no phone.",
+        "Her mum said no."
+      ],
+      "why": "The Wi-Fi was bad, so she was bored."
+    },
+    {
+      "q": "Complete: I ___ to the harbour last week.",
+      "o": [
+        "went",
+        "go",
+        "going"
+      ],
+      "why": "Last week is the past: went."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "The girls are looking for the…",
+      "a": "sports centre",
+      "d": [
+        "stadium",
+        "hospital",
+        "factory"
+      ]
+    },
+    {
+      "q": "Sharifa lives in the…",
+      "a": "apartment building",
+      "d": [
+        "factory",
+        "stadium",
+        "sports centre"
+      ]
+    },
+    {
+      "q": "Julia was sick after eating…",
+      "a": "chocolate",
+      "d": [
+        "fish",
+        "rice",
+        "bread"
+      ]
+    },
+    {
+      "q": "The girls’ class",
+      "a": "swimming",
+      "d": [
+        "music",
+        "art",
+        "cooking"
+      ]
+    },
+    {
+      "q": "Julia’s brother saw a match at the…",
+      "a": "stadium",
+      "d": [
+        "hospital",
+        "factory",
+        "palace"
+      ]
+    },
+    {
+      "q": "Surprised? Say…",
+      "a": "No way!",
+      "d": [
+        "Right!",
+        "Thanks!",
+        "Goodbye!"
+      ]
+    },
+    {
+      "q": "Want a friend to see? Say…",
+      "a": "Hey, look!",
+      "d": [
+        "No way!",
+        "Sorry!",
+        "Goodbye!"
+      ]
+    },
+    {
+      "q": "Agree? Say…",
+      "a": "Right!",
+      "d": [
+        "No way!",
+        "Hey, look!",
+        "Oh no!"
+      ]
+    },
+    {
+      "q": "The sports centre was right…",
+      "a": "behind them",
+      "d": [
+        "in Muscat",
+        "far away",
+        "on the sea"
+      ]
+    },
+    {
+      "q": "Julia was ___ in hospital.",
+      "a": "bored",
+      "d": [
+        "excited",
+        "happy",
+        "busy"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which places do the girls talk about?",
+      "o": [
+        "apartment building, stadium, hospital, factory",
+        "castle, harbour, palace, tower",
+        "cinema, library, café, bus",
+        "school, park, beach, market"
+      ],
+      "why": "These are the places in the dialogue."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Why didn’t Julia like hospital?",
+      "o": [
+        "She was bored and couldn’t go online.",
+        "The nurses were not nice.",
+        "The food was bad.",
+        "She had to stay there for a year."
+      ],
+      "why": "The Wi-Fi wasn’t good, so she was bored."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Where did Julia eat too much chocolate?",
+      "o": [
+        "at the factory",
+        "at the stadium",
+        "at the sports centre",
+        "at Sharifa’s home"
+      ],
+      "why": "They visited a chocolate factory."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which expression shows surprise?",
+      "o": [
+        "No way!",
+        "Right!",
+        "Please.",
+        "Of course."
+      ],
+      "why": "No way! means I can’t believe it!"
+    },
+    {
+      "lv": "التطبيق",
+      "q": "“Are we near the harbour yet?” – “___ I can see the sea!”",
+      "o": [
+        "Hey, look!",
+        "No way!",
+        "Sorry, not now.",
+        "Right, thanks."
+      ],
+      "why": "Hey, look! points to something you can see."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "A: There’s a skyscraper in our town now. B: ___",
+      "o": [
+        "No way!",
+        "Hey, look!",
+        "Could you help me?",
+        "Do you have time?"
+      ],
+      "why": "B is surprised by the news."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose the correct sentence about a place you have been to.",
+      "o": [
+        "I went to the harbour. I saw big boats.",
+        "I go to the harbour yesterday.",
+        "I goed to the harbour.",
+        "I going to the harbour last week."
+      ],
+      "why": "Use the past simple: went, saw."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why is it funny that the sports centre is right behind them?",
+      "o": [
+        "They were looking for it, but it was close all the time.",
+        "Because it is closed.",
+        "Because it is a hospital.",
+        "Because Julia is sick."
+      ],
+      "why": "They walked around looking for a place that was next to them."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which is the fib? Three are facts about the dialogue.",
+      "o": [
+        "Julia’s brother played football at the stadium.",
+        "Sharifa lives in the apartment building.",
+        "Julia went to hospital.",
+        "The girls have a swimming class."
+      ],
+      "why": "Julia’s brother went to a football match; he didn’t play."
+    },
+    {
+      "lv": "التحليل",
+      "q": "In “the apartment building where Sharifa lives”, what does “where Sharifa lives” do?",
+      "o": [
+        "It gives more information about the building.",
+        "It asks a question.",
+        "It tells us the time.",
+        "It describes a person’s job."
+      ],
+      "why": "Where joins extra information about a place."
+    }
+  ]
+}

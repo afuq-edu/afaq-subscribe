@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 2: Technology",
+  "lesson": "Unit 2 – Lesson 9: Writing – A review",
+  "outcomes": [
+    "I know the parts of a good review.",
+    "I can use adjectives and adverbs in a review.",
+    "I can plan, write and check my own review of an app or game."
+  ],
+  "tf": [
+    {
+      "s": "A review should start with a short introduction.",
+      "t": true,
+      "why": "An introduction tells the reader what the review is about."
+    },
+    {
+      "s": "A good review gives good points and bad points.",
+      "t": true,
+      "why": "Both help the reader decide."
+    },
+    {
+      "s": "“Slowly” and “easily” are adjectives.",
+      "t": false,
+      "why": "They are adverbs; they tell us how something happens."
+    },
+    {
+      "s": "“Brilliant” and “expensive” are adjectives.",
+      "t": true,
+      "why": "They describe a noun, like a brilliant app."
+    },
+    {
+      "s": "Reviews often use “you”, for example “You can upload photos easily.”",
+      "t": true,
+      "why": "Using you speaks directly to the reader."
+    },
+    {
+      "s": "The FunTimeforKids app opens very quickly.",
+      "t": false,
+      "why": "It takes two minutes to open, which is too slow."
+    },
+    {
+      "s": "A good point about FunTimeforKids is its tools for painting and drawing.",
+      "t": true,
+      "why": "Yes, those tools are one of its good points."
+    },
+    {
+      "s": "“It opens more quickly than the old app” uses a comparative adverb.",
+      "t": true,
+      "why": "More quickly than compares how two things work."
+    },
+    {
+      "s": "A review must not say anything bad about the app.",
+      "t": false,
+      "why": "Honest reviews include bad points too."
+    },
+    {
+      "s": "After you write your review, you should never change anything.",
+      "t": false,
+      "why": "Checking with a checklist and rewriting a sentence makes your review better."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "How long does FunTimeforKids take to open?",
+      "o": [
+        "two minutes",
+        "two seconds",
+        "two hours"
+      ],
+      "why": "The review says it takes two minutes to open."
+    },
+    {
+      "q": "Which word is an adverb?",
+      "o": [
+        "easily",
+        "brilliant",
+        "expensive"
+      ],
+      "why": "Easily tells us how; many adverbs end in -ly."
+    },
+    {
+      "q": "Which word is an adjective?",
+      "o": [
+        "fantastic",
+        "slowly",
+        "cheaply"
+      ],
+      "why": "Fantastic describes a thing."
+    },
+    {
+      "q": "Turn the note “upload photos – easy” into a sentence.",
+      "o": [
+        "You can upload photos easily.",
+        "You can upload photos easy.",
+        "You upload easy photos can."
+      ],
+      "why": "We use the adverb easily after the verb."
+    },
+    {
+      "q": "What is a bad point about FunTimeforKids?",
+      "o": [
+        "It opens too slowly.",
+        "It has drawing tools.",
+        "It has painting tools."
+      ],
+      "why": "Opening slowly is a problem, so it is a bad point."
+    },
+    {
+      "q": "Complete: It opens more ___ than the old app.",
+      "o": [
+        "quickly",
+        "quick",
+        "quicker"
+      ],
+      "why": "more + adverb: more quickly."
+    },
+    {
+      "q": "What comes at the end of a review?",
+      "o": [
+        "a conclusion",
+        "an introduction",
+        "a title only"
+      ],
+      "why": "A conclusion gives your final opinion."
+    },
+    {
+      "q": "Which sentence talks to the reader?",
+      "o": [
+        "It helps you learn new words.",
+        "The app is green.",
+        "I bought it last week."
+      ],
+      "why": "It helps you … speaks directly to the reader."
+    },
+    {
+      "q": "Which word fits a bad point?",
+      "o": [
+        "expensive",
+        "brilliant",
+        "fantastic"
+      ],
+      "why": "Expensive means it costs a lot, which is a bad point."
+    },
+    {
+      "q": "Complete: It works ___ on my old phone.",
+      "o": [
+        "slowly",
+        "slow",
+        "slowness"
+      ],
+      "why": "Works is a verb, so we use the adverb slowly."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "The adverb of easy",
+      "a": "easily",
+      "d": [
+        "easy",
+        "easier",
+        "easiest"
+      ]
+    },
+    {
+      "q": "The adverb of slow",
+      "a": "slowly",
+      "d": [
+        "slow",
+        "slower",
+        "slowest"
+      ]
+    },
+    {
+      "q": "The adverb of cheap",
+      "a": "cheaply",
+      "d": [
+        "cheap",
+        "cheaper",
+        "cheapest"
+      ]
+    },
+    {
+      "q": "The adverb of quick",
+      "a": "quickly",
+      "d": [
+        "quick",
+        "quicker",
+        "quickest"
+      ]
+    },
+    {
+      "q": "Find the adjective",
+      "a": "brilliant",
+      "d": [
+        "easily",
+        "slowly",
+        "cheaply"
+      ]
+    },
+    {
+      "q": "Find the adjective",
+      "a": "expensive",
+      "d": [
+        "quickly",
+        "easily",
+        "slowly"
+      ]
+    },
+    {
+      "q": "A review starts with an…",
+      "a": "introduction",
+      "d": [
+        "ending",
+        "answer",
+        "address"
+      ]
+    },
+    {
+      "q": "FunTimeforKids opens in two…",
+      "a": "minutes",
+      "d": [
+        "seconds",
+        "hours",
+        "days"
+      ]
+    },
+    {
+      "q": "You can ___ photos easily.",
+      "a": "upload",
+      "d": [
+        "eat",
+        "sleep",
+        "cook"
+      ]
+    },
+    {
+      "q": "Opens too slowly is a ___ point.",
+      "a": "bad",
+      "d": [
+        "good",
+        "funny",
+        "happy"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What does an adverb do in a review?",
+      "o": [
+        "It tells us how something happens.",
+        "It names a thing.",
+        "It is always the title.",
+        "It asks a question."
+      ],
+      "why": "Adverbs like easily and slowly describe how."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which of these is NOT a usual part of a review?",
+      "o": [
+        "a shopping list",
+        "an introduction",
+        "good points",
+        "bad points"
+      ],
+      "why": "A review has an introduction, good points and bad points."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which adjectives are in the TechWhizz review?",
+      "o": [
+        "great and fantastic",
+        "slowly and easily",
+        "upload and print",
+        "minutes and photos"
+      ],
+      "why": "Great and fantastic are adjectives from the review."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which is a good introduction sentence for a review?",
+      "o": [
+        "This is a great app for children who like learning languages.",
+        "It opens slowly.",
+        "Thank you for reading.",
+        "You can upload photos."
+      ],
+      "why": "An introduction says what the app is and who it is for."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose the correct sentence.",
+      "o": [
+        "You can learn new words quickly.",
+        "You can learn new words quick.",
+        "You can quickly new words learn.",
+        "You can learning new words quickly."
+      ],
+      "why": "can + verb, then the adverb quickly."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Note: “print – cheap”. Which sentence is correct?",
+      "o": [
+        "You can print pictures cheaply.",
+        "You can print pictures cheap.",
+        "You can cheap print pictures.",
+        "You print can pictures cheaply."
+      ],
+      "why": "We use the adverb cheaply after the verb and its object."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Which sentence is a bad point?",
+      "o": [
+        "It works slowly on my old phone.",
+        "It has brilliant drawing tools.",
+        "You can upload photos easily.",
+        "It helps you learn quickly."
+      ],
+      "why": "Working slowly is a problem for the user."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why do reviews use “you”?",
+      "o": [
+        "To speak directly to the reader and show how the app helps them.",
+        "Because the writer forgot their name.",
+        "To ask the reader a question.",
+        "To make the review longer."
+      ],
+      "why": "You makes the reader imagine using the app."
+    },
+    {
+      "lv": "التحليل",
+      "q": "A review says only: “It’s brilliant! It’s fantastic!” What is missing?",
+      "o": [
+        "bad points and details",
+        "adjectives",
+        "an exclamation mark",
+        "the word it"
+      ],
+      "why": "A useful review also gives details and bad points."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which sentence compares two apps?",
+      "o": [
+        "This app opens more quickly than my old app.",
+        "This app opens quickly.",
+        "This app is brilliant.",
+        "You can upload photos."
+      ],
+      "why": "More quickly than compares two things."
+    }
+  ]
+}

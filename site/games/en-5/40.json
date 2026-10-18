@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 4 – Off to the shops",
+ "lesson": "Lesson 8: Skills – Listening, speaking and writing an email",
+ "outcomes": [
+  "Listen for information about shops in a town.",
+  "Use the apostrophe in shop names like greengrocer's.",
+  "Write an email to a friend suggesting shops to visit."
+ ],
+ "tf": [
+  {
+   "s": "The shopping mall in Westport is called the Smith Centre.",
+   "t": true,
+   "why": "It is the Smith Centre."
+  },
+  {
+   "s": "Nada likes to buy apples and pears from the greengrocer's.",
+   "t": true,
+   "why": "She buys apples and pears there."
+  },
+  {
+   "s": "Nada's favourite shop is the pharmacy.",
+   "t": false,
+   "why": "Her favourite shop is the toy shop, Kids Toys."
+  },
+  {
+   "s": "In Westport, there is a pharmacy in the shopping mall.",
+   "t": true,
+   "why": "You can go there for medicine."
+  },
+  {
+   "s": "\"Kiosk\" needs 's at the end.",
+   "t": false,
+   "why": "Kiosk doesn't need 's. Fishmonger does: fishmonger's."
+  },
+  {
+   "s": "We can end an email to a friend with \"Love from …\".",
+   "t": true,
+   "why": "Love from … is a friendly ending."
+  },
+  {
+   "s": "In Westport, you can go to the jeweller's for medicine.",
+   "t": false,
+   "why": "You can go to the pharmacy in the shopping mall."
+  },
+  {
+   "s": "We start an email to a friend with \"Hi …,\".",
+   "t": true,
+   "why": "Hi Basma, is a friendly start."
+  },
+  {
+   "s": "\"The pharmacy\" needs 's at the end.",
+   "t": false,
+   "why": "We write the pharmacy without 's."
+  },
+  {
+   "s": "Meat is the odd one out in: apples, bananas, meat, carrots.",
+   "t": true,
+   "why": "Meat is from the butcher's; the others are from the greengrocer's."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the shopping mall in Westport called?",
+   "o": [
+    "the Smith Centre",
+    "Queen Street",
+    "Kids Toys"
+   ],
+   "why": "It is the Smith Centre."
+  },
+  {
+   "q": "Where can you go for medicine in Westport?",
+   "o": [
+    "the pharmacy in the mall",
+    "the toy shop",
+    "the fishmonger's"
+   ],
+   "why": "The pharmacy is in the shopping mall."
+  },
+  {
+   "q": "What is Nada's favourite shop?",
+   "o": [
+    "the toy shop",
+    "the pharmacy",
+    "the butcher's"
+   ],
+   "why": "Her favourite shop is Kids Toys."
+  },
+  {
+   "q": "Which name needs 's?",
+   "o": [
+    "fishmonger",
+    "kiosk",
+    "pharmacy"
+   ],
+   "why": "We write fishmonger's."
+  },
+  {
+   "q": "How do you start an email to your friend Basma?",
+   "o": [
+    "Hi Basma,",
+    "Goodbye Basma,",
+    "Love from Basma"
+   ],
+   "why": "Start with Hi …,"
+  },
+  {
+   "q": "How does Sharifa end her email?",
+   "o": [
+    "Love from Sharifa",
+    "Hi Sharifa",
+    "Dear Sharifa"
+   ],
+   "why": "Love from … ends the email."
+  },
+  {
+   "q": "Write correctly: the jeweller",
+   "o": [
+    "the jeweller's",
+    "the jewellers'",
+    "the jeweller"
+   ],
+   "why": "The jeweller's = the jeweller's shop."
+  },
+  {
+   "q": "Complete: This is the new shop ______ you can buy nice presents.",
+   "o": [
+    "where",
+    "who",
+    "which"
+   ],
+   "why": "A shop is a place."
+  },
+  {
+   "q": "Complete: Some children get ______ money from their mum or dad.",
+   "o": [
+    "pocket",
+    "purse",
+    "price"
+   ],
+   "why": "Children get pocket money."
+  },
+  {
+   "q": "What is the name of a machine which carries you upstairs and downstairs?",
+   "o": [
+    "an escalator",
+    "a kiosk",
+    "a wallet"
+   ],
+   "why": "An escalator goes up and down."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Westport shopping mall",
+   "a": "Smith Centre",
+   "d": [
+    "Queen Street",
+    "Kids Toys",
+    "Dream Gifts"
+   ]
+  },
+  {
+   "q": "Nada's favourite shop",
+   "a": "Kids Toys",
+   "d": [
+    "Smith Centre",
+    "New Shoes",
+    "Dream Gifts"
+   ]
+  },
+  {
+   "q": "Nada buys apples and …",
+   "a": "pears",
+   "d": [
+    "fish",
+    "meat",
+    "shoes"
+   ]
+  },
+  {
+   "q": "A street in Westport",
+   "a": "Queen Street",
+   "d": [
+    "Smith Centre",
+    "Kids Toys",
+    "Wadi Dawkah"
+   ]
+  },
+  {
+   "q": "Medicine in Westport: the …",
+   "a": "pharmacy",
+   "d": [
+    "toy shop",
+    "fishmonger's",
+    "kiosk"
+   ]
+  },
+  {
+   "q": "Email ending: ___ from Sharifa",
+   "a": "Love",
+   "d": [
+    "Hi",
+    "Dear",
+    "Goodbye"
+   ]
+  },
+  {
+   "q": "Shop for fish (spelling)",
+   "a": "fishmonger's",
+   "d": [
+    "fishmongers'",
+    "fishmonger",
+    "fish'monger"
+   ]
+  },
+  {
+   "q": "Shop for meat (spelling)",
+   "a": "butcher's",
+   "d": [
+    "butchers'",
+    "butcher",
+    "butch'ers"
+   ]
+  },
+  {
+   "q": "Have 15 OMR, spend 6. Save?",
+   "a": "9 OMR",
+   "d": [
+    "6 OMR",
+    "21 OMR",
+    "11 OMR"
+   ]
+  },
+  {
+   "q": "Odd one out: apples, meat, carrots",
+   "a": "meat",
+   "d": [
+    "apples",
+    "carrots",
+    "bananas"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why do we write an apostrophe in \"greengrocer's\"?",
+   "o": [
+    "It is short for the greengrocer's shop.",
+    "It is a question.",
+    "It is a plural.",
+    "It is a name of a person only."
+   ],
+   "why": "greengrocer's = the greengrocer's shop."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a friendly start for an email?",
+   "o": [
+    "Hi Ali,",
+    "Love from Ali",
+    "Goodbye, Ali.",
+    "The end."
+   ],
+   "why": "Hi …, starts an email."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What kind of market is in Westport?",
+   "o": [
+    "an indoor market",
+    "a fish market on a boat",
+    "a market on the Moon",
+    "a night market only"
+   ],
+   "why": "Westport has an indoor market."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase can start the first line of an email asking for advice?",
+   "o": [
+    "You asked for some advice about …",
+    "Love from …",
+    "How much is it?",
+    "Stop, thief!"
+   ],
+   "why": "This phrase answers your friend's question."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write one sentence suggesting a shop.",
+   "o": [
+    "In the toy shop, you can buy amazing kites.",
+    "In the toy shop, you can buys amazing kites.",
+    "Toy shop kites buy.",
+    "You can buying kites in the toy shop."
+   ],
+   "why": "You can + base verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You have 15 OMR. You buy a book for 6 OMR. How much do you save?",
+   "o": [
+    "9 OMR",
+    "6 OMR",
+    "21 OMR",
+    "10 OMR"
+   ],
+   "why": "15 − 6 = 9 OMR."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "At the market, there's a great fishmonger's.",
+    "At the market, there's a great fishmongers'.",
+    "At the market, there's a great fish'monger.",
+    "At the market, there a great fishmonger's."
+   ],
+   "why": "fishmonger's needs 's before the s."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which plan note is best for an email about shops?",
+   "o": [
+    "toy shop – in the mall – big kites",
+    "toy shop",
+    "I like shops very much",
+    "kites, kites, kites"
+   ],
+   "why": "Good notes say the shop, where it is and what is special."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which group of names all need 's?",
+   "o": [
+    "butcher's, greengrocer's, jeweller's",
+    "pharmacy, kiosk, toy shop",
+    "shoe shop, gift shop, kiosk",
+    "pharmacy, sports shop, phone shop"
+   ],
+   "why": "These names are short for … shop."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which email is in the correct order?",
+   "o": [
+    "Hi Ali, … You asked for some advice … At the market, … Love from Saif.",
+    "Love from Saif. Hi Ali, …",
+    "At the market … Hi Ali.",
+    "Hi Ali, Love from Saif. You asked …"
+   ],
+   "why": "Greeting, then the message, then the ending."
+  }
+ ]
+}

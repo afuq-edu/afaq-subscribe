@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 3: Spend or save?",
+ "lesson": "Lesson 3: Grammar – Zero and first conditionals",
+ "outcomes": [
+  "Know the difference between zero and first conditionals.",
+  "Form conditionals correctly.",
+  "Talk about what you will do in different situations."
+ ],
+ "tf": [
+  {
+   "s": "The zero conditional talks about things that are always true.",
+   "t": true,
+   "why": "Yes, zero = real situations that are always true."
+  },
+  {
+   "s": "The first conditional uses if + Present simple, will + verb.",
+   "t": true,
+   "why": "Correct! e.g. If it rains, I'll stay home."
+  },
+  {
+   "s": "The zero conditional uses will in both parts.",
+   "t": false,
+   "why": "The zero conditional uses the Present simple in both parts."
+  },
+  {
+   "s": "'If you mix yellow and blue paint, you make green' is a first conditional.",
+   "t": false,
+   "why": "It is always true, so it is a zero conditional."
+  },
+  {
+   "s": "The first conditional is about things that might happen in the future.",
+   "t": true,
+   "why": "Right, it talks about possible future events."
+  },
+  {
+   "s": "'If we all buy everything online, shops will close' is a first conditional.",
+   "t": true,
+   "why": "Well done: if + Present simple, will + verb."
+  },
+  {
+   "s": "We say 'If it will rain tomorrow, I will stay home.'",
+   "t": false,
+   "why": "No will after if: If it rains tomorrow, I'll stay home."
+  },
+  {
+   "s": "Huda's banana was grown in Oman.",
+   "t": true,
+   "why": "Yes, it was grown in Oman."
+  },
+  {
+   "s": "Huda will ask her teacher to find out more.",
+   "t": false,
+   "why": "Huda and her mum will look online."
+  },
+  {
+   "s": "'If you don't eat breakfast, you get hungry' is a zero conditional.",
+   "t": true,
+   "why": "Good! It is a general truth."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which conditional is about things that are always true?",
+   "o": [
+    "zero",
+    "first",
+    "second"
+   ],
+   "why": "The zero conditional is for general truths."
+  },
+  {
+   "q": "Complete: If we all buy everything online, shops ___ close.",
+   "o": [
+    "will",
+    "are",
+    "did"
+   ],
+   "why": "First conditional: will + verb."
+  },
+  {
+   "q": "Choose: If that happens, I ___ be happy.",
+   "o": [
+    "won't",
+    "don't",
+    "didn't"
+   ],
+   "why": "First conditional: won't + verb."
+  },
+  {
+   "q": "Complete: If you ___ (not eat) breakfast, you get hungry.",
+   "o": [
+    "don't eat",
+    "won't eat",
+    "didn't eat"
+   ],
+   "why": "Zero conditional: Present simple in the if part."
+  },
+  {
+   "q": "Complete: If the cat falls from that tree, I ___ it.",
+   "o": [
+    "'ll catch",
+    "catch will",
+    "caught"
+   ],
+   "why": "First conditional: I'll catch."
+  },
+  {
+   "q": "Where was Huda's banana grown?",
+   "o": [
+    "in Oman",
+    "in Spain",
+    "in China"
+   ],
+   "why": "The banana was grown in Oman."
+  },
+  {
+   "q": "When does Huda have to do a project?",
+   "o": [
+    "over the holidays",
+    "tonight",
+    "next year"
+   ],
+   "why": "Her project is over the holidays."
+  },
+  {
+   "q": "How will Huda find out more?",
+   "o": [
+    "look online",
+    "ask her teacher",
+    "read a poem"
+   ],
+   "why": "They will look online."
+  },
+  {
+   "q": "Which verb goes in the if part of a first conditional?",
+   "o": [
+    "Present simple",
+    "will + verb",
+    "would + verb"
+   ],
+   "why": "The if part uses the Present simple."
+  },
+  {
+   "q": "Buying food grown in your own country is called buying ...",
+   "o": [
+    "locally",
+    "online",
+    "second-hand"
+   ],
+   "why": "Buy locally = buy things made or grown near you."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Conditional for general truths",
+   "a": "zero",
+   "d": [
+    "first",
+    "second",
+    "third"
+   ]
+  },
+  {
+   "q": "Conditional for possible future",
+   "a": "first",
+   "d": [
+    "zero",
+    "second",
+    "third"
+   ]
+  },
+  {
+   "q": "Shops ___ close",
+   "a": "will",
+   "d": [
+    "would",
+    "are",
+    "did"
+   ]
+  },
+  {
+   "q": "I ___ be happy (negative)",
+   "a": "won't",
+   "d": [
+    "don't",
+    "didn't",
+    "wouldn't"
+   ]
+  },
+  {
+   "q": "If you ___ eat, you get hungry",
+   "a": "don't",
+   "d": [
+    "won't",
+    "didn't",
+    "wouldn't"
+   ]
+  },
+  {
+   "q": "Yellow + blue paint make",
+   "a": "green",
+   "d": [
+    "red",
+    "orange",
+    "purple"
+   ]
+  },
+  {
+   "q": "Huda's banana was grown in",
+   "a": "Oman",
+   "d": [
+    "Spain",
+    "China",
+    "the UK"
+   ]
+  },
+  {
+   "q": "Huda and mum will look ...",
+   "a": "online",
+   "d": [
+    "outside",
+    "at school",
+    "in a shop"
+   ]
+  },
+  {
+   "q": "If it ___ tomorrow, I'll stay in",
+   "a": "rains",
+   "d": [
+    "will rain",
+    "rained",
+    "raining"
+   ]
+  },
+  {
+   "q": "If I lose my wallet, I ___ tell Mum",
+   "a": "'ll",
+   "d": [
+    "'d",
+    "did",
+    "am"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the form of the first conditional?",
+   "o": [
+    "if + Present simple, will + verb",
+    "if + Present simple, Present simple",
+    "if + Past simple, would + verb",
+    "if + will, will"
+   ],
+   "why": "First conditional: if + Present simple, will + verb."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the form of the zero conditional?",
+   "o": [
+    "if + Present simple, Present simple",
+    "if + Past simple, would + verb",
+    "if + will, Present simple",
+    "if + had, would"
+   ],
+   "why": "Zero conditional uses the Present simple in both parts."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When do we use the zero conditional?",
+   "o": [
+    "for things that are always true",
+    "for imaginary situations",
+    "for past events",
+    "for wishes only"
+   ],
+   "why": "Zero conditional = general truths."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'buy locally' mean?",
+   "o": [
+    "buy things made or grown near where you live",
+    "buy everything online",
+    "buy second-hand things only",
+    "buy things on sale"
+   ],
+   "why": "Buying locally means buying things from your own area or country."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "If it rains tomorrow, I'll stay at home.",
+    "If it will rain tomorrow, I stay at home.",
+    "If it rained tomorrow, I will stay at home.",
+    "If it rain tomorrow, I'll staying home."
+   ],
+   "why": "No will after if: If it rains, I'll..."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: If I have time this Saturday, I ___ a new book.",
+   "o": [
+    "'ll buy",
+    "bought",
+    "buying",
+    "would bought"
+   ],
+   "why": "First conditional: will + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: If you heat ice, it ___.",
+   "o": [
+    "melts",
+    "will melted",
+    "melted",
+    "would melt"
+   ],
+   "why": "It is always true, so we use the zero conditional: melts."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Zero or first? 'If you mix yellow and blue paint, you make green.'",
+   "o": [
+    "zero, because it is always true",
+    "first, because it is in the future",
+    "zero, because it uses will",
+    "first, because it is imaginary"
+   ],
+   "why": "It is a general truth, so it is zero."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'If we all buy everything online, shops will close' a first conditional?",
+   "o": [
+    "It is about a possible result in the future.",
+    "It is always true.",
+    "It is about the past.",
+    "It is an imaginary wish."
+   ],
+   "why": "It shows a possible future result."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is a general truth, not a future plan?",
+   "o": [
+    "If you don't eat breakfast, you get hungry.",
+    "If I go to the mall, I'll buy shoes.",
+    "If it rains, we'll stay inside.",
+    "If I lose my wallet, I'll tell Dad."
+   ],
+   "why": "It is always true, so it is a zero conditional."
+  }
+ ]
+}

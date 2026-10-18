@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Bo’s Learning Club 1",
+ "lesson": "Lesson 3: Let’s practise – A planet fact file",
+ "outcomes": [
+  "Read a fact file about Mars and decide true or false.",
+  "Write questions about a planet: How big …? How far …? How many …?",
+  "Make and present a planet fact file."
+ ],
+ "tf": [
+  {
+   "s": "Mars is the smallest planet in the solar system.",
+   "t": false,
+   "why": "Mars is the smallest after Mercury."
+  },
+  {
+   "s": "Mars has more moons than Earth.",
+   "t": true,
+   "why": "Mars has two moons; Earth has one."
+  },
+  {
+   "s": "Mars is the fourth planet from the Sun.",
+   "t": true,
+   "why": "Mercury, Venus, Earth, Mars."
+  },
+  {
+   "s": "Earth has two moons.",
+   "t": false,
+   "why": "Earth has one moon."
+  },
+  {
+   "s": "A fact file can have the name, size, distance from the Sun, number of moons and a fun fact.",
+   "t": true,
+   "why": "These are the parts of a fact file."
+  },
+  {
+   "s": "\"How far is it from the Sun?\" is a question about distance.",
+   "t": true,
+   "why": "How far …? asks about distance."
+  },
+  {
+   "s": "\"How many moons has it got?\" asks about the size of a planet.",
+   "t": false,
+   "why": "It asks about the number of moons. How big …? asks about size."
+  },
+  {
+   "s": "Mercury is smaller than Mars.",
+   "t": true,
+   "why": "Mars is the smallest after Mercury, so Mercury is smaller."
+  },
+  {
+   "s": "Jupiter is the smallest planet.",
+   "t": false,
+   "why": "Jupiter is the biggest planet."
+  },
+  {
+   "s": "Pictures and colours can make a fact file more interesting.",
+   "t": true,
+   "why": "Pictures and colours help readers."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which planet is fourth from the Sun?",
+   "o": [
+    "Mars",
+    "Venus",
+    "Jupiter"
+   ],
+   "why": "Mars is fourth."
+  },
+  {
+   "q": "How many moons has Mars got?",
+   "o": [
+    "two",
+    "one",
+    "none"
+   ],
+   "why": "Mars has two moons."
+  },
+  {
+   "q": "Which question asks about distance?",
+   "o": [
+    "How far is it from the Sun?",
+    "How big is it?",
+    "How many moons has it got?"
+   ],
+   "why": "How far …? is for distance."
+  },
+  {
+   "q": "Which question asks about size?",
+   "o": [
+    "How big is it?",
+    "How far is it?",
+    "How many moons has it got?"
+   ],
+   "why": "How big …? is for size."
+  },
+  {
+   "q": "How many moons has Earth got?",
+   "o": [
+    "one",
+    "two",
+    "four"
+   ],
+   "why": "Earth has one moon."
+  },
+  {
+   "q": "Which is the smallest planet?",
+   "o": [
+    "Mercury",
+    "Mars",
+    "Earth"
+   ],
+   "why": "Mercury is the smallest; Mars comes after it."
+  },
+  {
+   "q": "Which is the biggest planet?",
+   "o": [
+    "Jupiter",
+    "Mars",
+    "Mercury"
+   ],
+   "why": "Jupiter is the biggest."
+  },
+  {
+   "q": "Which planet is red?",
+   "o": [
+    "Mars",
+    "Earth",
+    "Neptune"
+   ],
+   "why": "Mars is the red planet."
+  },
+  {
+   "q": "What is a \"fun fact\" in a fact file?",
+   "o": [
+    "an interesting thing about the planet",
+    "the price of the planet",
+    "a joke about a shop"
+   ],
+   "why": "A fun fact is interesting information."
+  },
+  {
+   "q": "Complete: How ______ moons has it got?",
+   "o": [
+    "many",
+    "much",
+    "far"
+   ],
+   "why": "How many + plural noun."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Fourth planet from the Sun",
+   "a": "Mars",
+   "d": [
+    "Venus",
+    "Earth",
+    "Jupiter"
+   ]
+  },
+  {
+   "q": "Smallest planet",
+   "a": "Mercury",
+   "d": [
+    "Mars",
+    "Earth",
+    "Venus"
+   ]
+  },
+  {
+   "q": "Red planet",
+   "a": "Mars",
+   "d": [
+    "Earth",
+    "Saturn",
+    "Neptune"
+   ]
+  },
+  {
+   "q": "Moons of Mars",
+   "a": "two",
+   "d": [
+    "one",
+    "four",
+    "ten"
+   ]
+  },
+  {
+   "q": "Moons of Earth",
+   "a": "one",
+   "d": [
+    "two",
+    "three",
+    "none"
+   ]
+  },
+  {
+   "q": "Question for distance: How …?",
+   "a": "far",
+   "d": [
+    "big",
+    "many",
+    "old"
+   ]
+  },
+  {
+   "q": "Question for size: How …?",
+   "a": "big",
+   "d": [
+    "far",
+    "many",
+    "much"
+   ]
+  },
+  {
+   "q": "Question for moons: How …?",
+   "a": "many",
+   "d": [
+    "far",
+    "big",
+    "much"
+   ]
+  },
+  {
+   "q": "Biggest planet",
+   "a": "Jupiter",
+   "d": [
+    "Mars",
+    "Mercury",
+    "Earth"
+   ]
+  },
+  {
+   "q": "Interesting fact in a fact file",
+   "a": "fun fact",
+   "d": [
+    "price",
+    "address",
+    "shop"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which planet is the smallest after Mercury?",
+   "o": [
+    "Mars",
+    "Jupiter",
+    "Saturn",
+    "Neptune"
+   ],
+   "why": "Mars is the smallest after Mercury."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which parts are in a planet fact file?",
+   "o": [
+    "name, size, distance from the Sun, number of moons, fun fact",
+    "price, shop, money",
+    "greeting, ending, Love from",
+    "Hi, How much is it?"
+   ],
+   "why": "These are the parts of a fact file."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which planet is closest to the Sun?",
+   "o": [
+    "Mercury",
+    "Mars",
+    "Jupiter",
+    "Neptune"
+   ],
+   "why": "Mercury is first from the Sun."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which planet has a big ring?",
+   "o": [
+    "Saturn",
+    "Mars",
+    "Mercury",
+    "Earth"
+   ],
+   "why": "Saturn has a big ring."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a question for your fact file about distance.",
+   "o": [
+    "How far is it from the Sun?",
+    "How big is it?",
+    "How many moons has it got?",
+    "What colour is it?"
+   ],
+   "why": "How far …? asks about distance."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a correct question about moons.",
+   "o": [
+    "How many moons has it got?",
+    "How much moons has it got?",
+    "How many moon it got?",
+    "How far moons has it got?"
+   ],
+   "why": "How many + plural noun + has it got?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose two correct facts for a Jupiter fact file.",
+   "o": [
+    "Jupiter is the biggest planet. It has more than 90 moons.",
+    "Jupiter is the smallest planet. It has no moons.",
+    "Jupiter is the closest to the Sun. It is red.",
+    "Jupiter is our planet. It has one moon."
+   ],
+   "why": "Jupiter is the biggest and has many moons."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"Mars has more moons than Earth.\" Why is this true?",
+   "o": [
+    "Mars has two moons and Earth has one.",
+    "Mars has one moon and Earth has two.",
+    "Mars has no moons.",
+    "Earth has no moons."
+   ],
+   "why": "Two is more than one."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"Mars is the smallest planet.\" Why is this false?",
+   "o": [
+    "Mercury is smaller than Mars.",
+    "Mars is the biggest planet.",
+    "Mars is not a planet.",
+    "Mars is bigger than Jupiter."
+   ],
+   "why": "Mars is the smallest after Mercury."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we add pictures and colours to a fact file?",
+   "o": [
+    "To make it more interesting.",
+    "To make it longer.",
+    "To hide the facts.",
+    "To make it difficult to read."
+   ],
+   "why": "Pictures and colours help people enjoy and understand it."
+  }
+ ]
+}

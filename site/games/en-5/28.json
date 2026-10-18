@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 3 – Let’s explore!",
+ "lesson": "Lesson 5: Culture – Frankincense Land",
+ "outcomes": [
+  "Read about the history of frankincense in Oman.",
+  "Explain why Al Balid and Khawr Ruri were important ports.",
+  "Write about an ancient place in Oman using set phrases."
+ ],
+ "tf": [
+  {
+   "s": "Frankincense comes from trees.",
+   "t": true,
+   "why": "Frankincense comes from frankincense trees."
+  },
+  {
+   "s": "Many frankincense trees grow in Wadi Dawkah in the south of Oman.",
+   "t": true,
+   "why": "Wadi Dawkah is in the south of Oman."
+  },
+  {
+   "s": "In the past, people used frankincense for perfume and medicine.",
+   "t": true,
+   "why": "Frankincense was used for perfume and medicine."
+  },
+  {
+   "s": "Al Balid and Khawr Ruri were important mountains.",
+   "t": false,
+   "why": "Al Balid and Khawr Ruri were important ports."
+  },
+  {
+   "s": "Boats took frankincense from the ports to markets in other countries.",
+   "t": true,
+   "why": "That is why the ports were important."
+  },
+  {
+   "s": "People built big walls and forts at the ports to guard them.",
+   "t": true,
+   "why": "Frankincense was very important, so they guarded the ports."
+  },
+  {
+   "s": "The Museum of Frankincense Land is in Wadi Dawkah.",
+   "t": false,
+   "why": "The Museum of Frankincense Land is at Al Balid."
+  },
+  {
+   "s": "The buildings at Bat are about 50 years old.",
+   "t": false,
+   "why": "The buildings at Bat are about 5,000 years old."
+  },
+  {
+   "s": "When you present, you should look at the people you are talking to.",
+   "t": true,
+   "why": "Looking at your audience is a good speaking tip."
+  },
+  {
+   "s": "Frankincense comes from the sea.",
+   "t": false,
+   "why": "Frankincense comes from trees."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where do many frankincense trees grow?",
+   "o": [
+    "Wadi Dawkah",
+    "Bat",
+    "Nizwa"
+   ],
+   "why": "Many trees grow in Wadi Dawkah."
+  },
+  {
+   "q": "What did people use frankincense for in the past?",
+   "o": [
+    "perfume and medicine",
+    "building forts",
+    "making boats"
+   ],
+   "why": "Frankincense was used for perfume and medicine."
+  },
+  {
+   "q": "What is a port?",
+   "o": [
+    "a place where boats stop",
+    "a tall mountain",
+    "a kind of tree"
+   ],
+   "why": "Boats come and go from a port."
+  },
+  {
+   "q": "What is the name of the museum at Al Balid?",
+   "o": [
+    "the Museum of Frankincense Land",
+    "the Space Museum",
+    "the Science Fair"
+   ],
+   "why": "It is called the Museum of Frankincense Land."
+  },
+  {
+   "q": "Complete: This place is ______ Bahla Fort.",
+   "o": [
+    "called",
+    "calls",
+    "calling"
+   ],
+   "why": "This place is called …"
+  },
+  {
+   "q": "How old are the buildings at Bat?",
+   "o": [
+    "about 5,000 years old",
+    "about 50 years old",
+    "about 5 years old"
+   ],
+   "why": "They are about 5,000 years old."
+  },
+  {
+   "q": "Where is Bat?",
+   "o": [
+    "in Al-Dhahira Governorate",
+    "in Wadi Dawkah",
+    "in Al Balid"
+   ],
+   "why": "Bat is in Al-Dhahira Governorate."
+  },
+  {
+   "q": "Bahla Fort is near ______.",
+   "o": [
+    "Nizwa",
+    "Salalah",
+    "Al Balid"
+   ],
+   "why": "Bahla Fort is near Nizwa."
+  },
+  {
+   "q": "Why did people build forts at the ports?",
+   "o": [
+    "to guard the ports",
+    "to grow trees",
+    "to make perfume"
+   ],
+   "why": "Forts helped guard the important ports."
+  },
+  {
+   "q": "Which phrase tells the age of a place?",
+   "o": [
+    "It is about … years old.",
+    "It is in …",
+    "This place is called …"
+   ],
+   "why": "Use years old for age."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Frankincense comes from …",
+   "a": "trees",
+   "d": [
+    "rocks",
+    "the sea",
+    "animals"
+   ]
+  },
+  {
+   "q": "Valley with frankincense trees",
+   "a": "Wadi Dawkah",
+   "d": [
+    "Bat",
+    "Nizwa",
+    "Bahla"
+   ]
+  },
+  {
+   "q": "A port in Oman",
+   "a": "Al Balid",
+   "d": [
+    "Wadi Dawkah",
+    "Jabal Shams",
+    "Bat"
+   ]
+  },
+  {
+   "q": "Another old port",
+   "a": "Khawr Ruri",
+   "d": [
+    "Bahla Fort",
+    "Bat",
+    "Wadi Dawkah"
+   ]
+  },
+  {
+   "q": "Frankincense use",
+   "a": "perfume",
+   "d": [
+    "rockets",
+    "boats",
+    "walls"
+   ]
+  },
+  {
+   "q": "Another frankincense use",
+   "a": "medicine",
+   "d": [
+    "clothes",
+    "forts",
+    "boats"
+   ]
+  },
+  {
+   "q": "Buildings to guard a port",
+   "a": "forts",
+   "d": [
+    "museums",
+    "trees",
+    "shops"
+   ]
+  },
+  {
+   "q": "Age of Bat (years)",
+   "a": "about 5,000",
+   "d": [
+    "about 50",
+    "about 5",
+    "about 500,000"
+   ]
+  },
+  {
+   "q": "Bahla Fort is near …",
+   "a": "Nizwa",
+   "d": [
+    "Salalah",
+    "Wadi Dawkah",
+    "Bat"
+   ]
+  },
+  {
+   "q": "Old broken buildings",
+   "a": "ruins",
+   "d": [
+    "perfume",
+    "medicine",
+    "port"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Where is Wadi Dawkah?",
+   "o": [
+    "in the south of Oman",
+    "in the north of Oman",
+    "in another country",
+    "in the sea"
+   ],
+   "why": "Wadi Dawkah is in the south of Oman."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two places were important frankincense ports?",
+   "o": [
+    "Al Balid and Khawr Ruri",
+    "Bat and Nizwa",
+    "Bahla and Nizwa",
+    "Wadi Dawkah and Bat"
+   ],
+   "why": "Al Balid and Khawr Ruri were ports."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means \"to keep something safe from danger\"?",
+   "o": [
+    "guard",
+    "perfume",
+    "port",
+    "ruins"
+   ],
+   "why": "People guarded the ports with walls and forts."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which speaking tip is in this lesson?",
+   "o": [
+    "Look at the people you are talking to.",
+    "Speak very fast.",
+    "Look at the floor.",
+    "Read without stopping."
+   ],
+   "why": "Looking at the audience helps them listen."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: It ______ about 5,000 years old.",
+   "o": [
+    "is",
+    "are",
+    "has",
+    "does"
+   ],
+   "why": "It is about … years old."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose a good sentence for your page about an ancient place.",
+   "o": [
+    "Today, you can see old towers and ruins.",
+    "Today, you can see old towers and ruins tomorrow.",
+    "Today, you seeing old towers.",
+    "Today, you can sees old towers."
+   ],
+   "why": "Today, you can see … is a set phrase."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are writing about Bat. Which sentence is correct?",
+   "o": [
+    "It is in Al-Dhahira Governorate.",
+    "It is in Wadi Dawkah.",
+    "It is a port.",
+    "It is a frankincense tree."
+   ],
+   "why": "Bat is in Al-Dhahira Governorate."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why did Al Balid and Khawr Ruri become important ports?",
+   "o": [
+    "Boats took frankincense from them to markets in other countries.",
+    "They had the tallest mountains.",
+    "They were near the Moon.",
+    "People made rockets there."
+   ],
+   "why": "Trading frankincense made the ports important."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why did people build big walls and forts at the ports?",
+   "o": [
+    "Frankincense was very important, so they guarded the ports.",
+    "They wanted to grow trees there.",
+    "They liked climbing walls.",
+    "They wanted to stop boats coming."
+   ],
+   "why": "Valuable things need guarding."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best order for a page about an ancient place?",
+   "o": [
+    "This place is called … It is in … It is about … years old. Today, you can see …",
+    "Today, you can see … This place is called …",
+    "It is about … years old. Hi, I'm …",
+    "Did you know …? Goodbye."
+   ],
+   "why": "First the name, then where it is, its age and what you can see today."
+  }
+ ]
+}

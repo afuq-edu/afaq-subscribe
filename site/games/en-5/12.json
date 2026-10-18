@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 1 – Talent show",
+ "lesson": "Lesson 9: Review",
+ "outcomes": [
+  "I can use Unit 1 words: personality adjectives and hobbies.",
+  "I can use comparatives, superlatives and be good at + verb-ing correctly.",
+  "I can answer exam-style questions about appearance, personality and abilities."
+ ],
+ "tf": [
+  {
+   "s": "If you don't do any work, you are lazy.",
+   "t": true,
+   "why": "Yes! Lazy people don't like to work."
+  },
+  {
+   "s": "\"That boy is the most mean boy in the school\" is correct.",
+   "t": false,
+   "why": "Mean is short: the meanest."
+  },
+  {
+   "s": "The opposite of polite is rude.",
+   "t": true,
+   "why": "Right! Polite and rude are opposites."
+  },
+  {
+   "s": "\"He is good at doing experiments\" is correct.",
+   "t": true,
+   "why": "Great! good at + verb-ing."
+  },
+  {
+   "s": "\"My sister is tidyer than I am\" is spelled correctly.",
+   "t": false,
+   "why": "y changes to i: tidier."
+  },
+  {
+   "s": "\"He likes making pizza\" answers \"What's he like?\"",
+   "t": false,
+   "why": "What's he like? needs personality, like He's very polite."
+  },
+  {
+   "s": "An exam tip: read each word to see which one fits best.",
+   "t": true,
+   "why": "Yes! This helps you choose the right answer."
+  },
+  {
+   "s": "\"He's tall with long, black, curly hair\" answers \"What does he look like?\"",
+   "t": true,
+   "why": "Yes! It is about appearance."
+  },
+  {
+   "s": "The superlative of short is the most short.",
+   "t": false,
+   "why": "Short is a short adjective: the shortest."
+  },
+  {
+   "s": "We say \"I'm good at fix toys.\"",
+   "t": false,
+   "why": "We say I'm good at fixing toys."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "My brother always says ___ and thank you.",
+   "o": [
+    "please",
+    "yes",
+    "why"
+   ],
+   "why": "Please and thank you are polite words."
+  },
+  {
+   "q": "My sister is ___ than I am. (tidy)",
+   "o": [
+    "tidier",
+    "tidyer",
+    "more tidy"
+   ],
+   "why": "y → i + er."
+  },
+  {
+   "q": "He is shorter than me, but he is not the ___ person in our family.",
+   "o": [
+    "shortest",
+    "most short",
+    "shorter"
+   ],
+   "why": "the + superlative: the shortest."
+  },
+  {
+   "q": "My toy is broken! But I'm ___ fixing toys!",
+   "o": [
+    "good at",
+    "good in",
+    "good for"
+   ],
+   "why": "We say good at + verb-ing."
+  },
+  {
+   "q": "He is good at ___ experiments.",
+   "o": [
+    "doing",
+    "having",
+    "taking"
+   ],
+   "why": "We do experiments."
+  },
+  {
+   "q": "What's the opposite of hard-working?",
+   "o": [
+    "lazy",
+    "kind",
+    "shy"
+   ],
+   "why": "Lazy and hard-working are opposites."
+  },
+  {
+   "q": "What's he like?",
+   "o": [
+    "He's very polite and he seems very confident.",
+    "He likes making pizza.",
+    "He's got short hair."
+   ],
+   "why": "What's he like? asks about personality."
+  },
+  {
+   "q": "good → better → ___",
+   "o": [
+    "the best",
+    "the goodest",
+    "the better"
+   ],
+   "why": "Good is irregular."
+  },
+  {
+   "q": "Which word is a hobby phrase?",
+   "o": [
+    "bake a cake",
+    "fair hair",
+    "a beard"
+   ],
+   "why": "Bake a cake is a hobby."
+  },
+  {
+   "q": "What are you like? Choose a good answer.",
+   "o": [
+    "I'm friendly and hard-working.",
+    "I'm good at juggling.",
+    "I've got long hair."
+   ],
+   "why": "What are you like? needs personality adjectives."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Opposite of polite",
+   "a": "rude",
+   "d": [
+    "kind",
+    "tidy",
+    "shy"
+   ]
+  },
+  {
+   "q": "Opposite of shy",
+   "a": "confident",
+   "d": [
+    "lazy",
+    "mean",
+    "rude"
+   ]
+  },
+  {
+   "q": "mean → the ___",
+   "a": "meanest",
+   "d": [
+    "most mean",
+    "meaner",
+    "meanst"
+   ]
+  },
+  {
+   "q": "bad → ___ (comparative)",
+   "a": "worse",
+   "d": [
+    "badder",
+    "worst",
+    "more bad"
+   ]
+  },
+  {
+   "q": "hard-working → ___ hard-working",
+   "a": "more",
+   "d": [
+    "most",
+    "much",
+    "very"
+   ]
+  },
+  {
+   "q": "juggle → good at ___",
+   "a": "juggling",
+   "d": [
+    "juggle",
+    "juggleing",
+    "juggles"
+   ]
+  },
+  {
+   "q": "___ toys",
+   "a": "fix",
+   "d": [
+    "bake",
+    "spell",
+    "count"
+   ]
+  },
+  {
+   "q": "throw a ___",
+   "a": "ball",
+   "d": [
+    "word",
+    "pizza",
+    "toy"
+   ]
+  },
+  {
+   "q": "Not kind",
+   "a": "mean",
+   "d": [
+    "polite",
+    "friendly",
+    "tidy"
+   ]
+  },
+  {
+   "q": "He works a lot: he's ___.",
+   "a": "hard-working",
+   "d": [
+    "lazy",
+    "untidy",
+    "rude"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which two things are Unit 1 vocabulary?",
+   "o": [
+    "personality adjectives and hobbies",
+    "shops and money",
+    "space and numbers",
+    "museums and technology"
+   ],
+   "why": "Unit 1 words are personality adjectives and hobbies."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which form is correct?",
+   "o": [
+    "the most hard-working",
+    "the hard-workingest",
+    "the more hard-working",
+    "the most hardest-working"
+   ],
+   "why": "Long adjectives use the most."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence helps you check your progress?",
+   "o": [
+    "Now I can … / I need to work more on …",
+    "On Mondays, I …",
+    "Before I go to school, …",
+    "Who's that boy over there?"
+   ],
+   "why": "These phrases are for self-assessment."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What comes after \"be good at\"?",
+   "o": [
+    "verb + -ing",
+    "to + verb",
+    "verb + -ed",
+    "the + adjective"
+   ],
+   "why": "I'm good at spelling."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write about your avatar's appearance and personality. Which is best?",
+   "o": [
+    "My avatar has got short, curly hair. She's confident and hard-working.",
+    "My avatar is good at bake.",
+    "My avatar has got kind hair.",
+    "My avatar is the most tall."
+   ],
+   "why": "It has appearance and personality, with correct grammar."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali is 12, Sara is 10 and Huda is 8. Which sentence is correct?",
+   "o": [
+    "Ali is the oldest.",
+    "Huda is the oldest.",
+    "Sara is older than Ali.",
+    "Huda is older than Sara."
+   ],
+   "why": "12 is the biggest age, so Ali is the oldest."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: Basil is the ___ boy in the class at football. He never wins. (bad)",
+   "o": [
+    "worst",
+    "baddest",
+    "worse",
+    "most bad"
+   ],
+   "why": "bad – worse – the worst."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is \"He's tall with long, black, curly hair\" the best answer to \"What does he look like?\"",
+   "o": [
+    "The question asks about appearance.",
+    "The question asks about hobbies.",
+    "The question asks about personality.",
+    "It is the longest answer."
+   ],
+   "why": "Look like = appearance."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the mistake: \"She's more kind than her brother.\"",
+   "o": [
+    "more kind should be kinder",
+    "She's should be She",
+    "than should be then",
+    "There is no mistake."
+   ],
+   "why": "Kind is short: kinder than."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your friend always does all her homework and helps at home. Which adjective fits her best?",
+   "o": [
+    "hard-working",
+    "lazy",
+    "rude",
+    "untidy"
+   ],
+   "why": "She works a lot, so she is hard-working."
+  }
+ ]
+}

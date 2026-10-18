@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 3: The future is now",
+ "lesson": "Lesson 5: Speaking – the future of technology",
+ "outcomes": [
+  "Give and ask for opinions about technology.",
+  "Agree and disagree politely with phrases like 'That's true, but ...'.",
+  "Work with a partner to reach an agreement in a collaborative task."
+ ],
+ "tf": [
+  {
+   "s": "'In my view' is used for giving an opinion.",
+   "t": true,
+   "why": "It introduces your own idea."
+  },
+  {
+   "s": "'What do you think?' asks for someone's opinion.",
+   "t": true,
+   "why": "It invites your partner to share their view."
+  },
+  {
+   "s": "'I'm not sure' is a polite way to disagree.",
+   "t": true,
+   "why": "It shows you don't fully agree, in a gentle way."
+  },
+  {
+   "s": "'That's a good point' is used for disagreeing.",
+   "t": false,
+   "why": "'That's a good point' shows you agree or accept an idea."
+  },
+  {
+   "s": "The speakers agree that the AI clothes assistant is the most useful.",
+   "t": true,
+   "why": "They decide on the clothes assistant."
+  },
+  {
+   "s": "'That's true, but ...' says something positive before disagreeing.",
+   "t": true,
+   "why": "It accepts part of the idea before giving another view."
+  },
+  {
+   "s": "In a collaborative task, you should only give your own ideas and ignore your partner.",
+   "t": false,
+   "why": "You should respond to your partner and try to reach an agreement."
+  },
+  {
+   "s": "We say 'What's your view at the AI doctor?'",
+   "t": false,
+   "why": "We say 'What's your view on ...?'"
+  },
+  {
+   "s": "The speakers discuss an AI household assistant, an AI doctor and an AI clothes assistant.",
+   "t": true,
+   "why": "These are the three AI robots in the recording."
+  },
+  {
+   "s": "Shouting is a good way to persuade the other group in a debate.",
+   "t": false,
+   "why": "Good reasons and polite language persuade people."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: What's your view ___ the AI doctor?",
+   "o": [
+    "on",
+    "at",
+    "with"
+   ],
+   "why": "What's your view on ...?"
+  },
+  {
+   "q": "Complete: ___ me, an AI clothes assistant would be useful.",
+   "o": [
+    "For",
+    "To",
+    "At"
+   ],
+   "why": "'For me, ...' gives your opinion."
+  },
+  {
+   "q": "Complete: That's a good ___.",
+   "o": [
+    "point",
+    "view",
+    "sure"
+   ],
+   "why": "'That's a good point' accepts an idea."
+  },
+  {
+   "q": "Complete: I don't ___. I think they're all interesting.",
+   "o": [
+    "agree",
+    "point",
+    "view"
+   ],
+   "why": "'I don't agree' shows disagreement."
+  },
+  {
+   "q": "Which phrase asks for an opinion?",
+   "o": [
+    "What do you think?",
+    "In my view, ...",
+    "I agree."
+   ],
+   "why": "It's a question about the other person's idea."
+  },
+  {
+   "q": "Which phrase gives your opinion?",
+   "o": [
+    "In my view, ...",
+    "What's your view?",
+    "Do you agree?"
+   ],
+   "why": "'In my view' starts your own idea."
+  },
+  {
+   "q": "Which AI robot do the speakers agree is most useful?",
+   "o": [
+    "the clothes assistant",
+    "the AI doctor",
+    "the household assistant"
+   ],
+   "why": "They agree on the clothes assistant."
+  },
+  {
+   "q": "What is the aim of a collaborative task?",
+   "o": [
+    "to try to reach an agreement",
+    "to talk alone for five minutes",
+    "to write an essay"
+   ],
+   "why": "You discuss ideas together and try to agree."
+  },
+  {
+   "q": "Which is a polite way to disagree?",
+   "o": [
+    "That's true, but ...",
+    "You're wrong!",
+    "No way!"
+   ],
+   "why": "It respects the other person's idea first."
+  },
+  {
+   "q": "Which phrase shows you agree?",
+   "o": [
+    "You're right.",
+    "I'm not sure.",
+    "I don't agree."
+   ],
+   "why": "'You're right' shows agreement."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Giving opinion: In my ___",
+   "a": "view",
+   "d": [
+    "point",
+    "sure",
+    "right"
+   ]
+  },
+  {
+   "q": "Agreeing: You're ___",
+   "a": "right",
+   "d": [
+    "sure",
+    "view",
+    "wrong"
+   ]
+  },
+  {
+   "q": "Agreeing: That's a good ___",
+   "a": "point",
+   "d": [
+    "view",
+    "sure",
+    "think"
+   ]
+  },
+  {
+   "q": "Polite disagreeing: I'm not ___",
+   "a": "sure",
+   "d": [
+    "right",
+    "point",
+    "view"
+   ]
+  },
+  {
+   "q": "What's your view ___ AI?",
+   "a": "on",
+   "d": [
+    "at",
+    "with",
+    "in"
+   ]
+  },
+  {
+   "q": "___ me, it's useful.",
+   "a": "For",
+   "d": [
+    "To",
+    "At",
+    "By"
+   ]
+  },
+  {
+   "q": "Robots agreed most useful",
+   "a": "clothes assistant",
+   "d": [
+    "AI doctor",
+    "AI teacher",
+    "cleaning robot"
+   ]
+  },
+  {
+   "q": "'In my view' is for",
+   "a": "giving opinions",
+   "d": [
+    "asking opinions",
+    "agreeing",
+    "disagreeing"
+   ]
+  },
+  {
+   "q": "'What do you think?' is for",
+   "a": "asking opinions",
+   "d": [
+    "giving opinions",
+    "agreeing",
+    "disagreeing"
+   ]
+  },
+  {
+   "q": "'That's true, but' is for",
+   "a": "disagreeing",
+   "d": [
+    "agreeing",
+    "asking opinions",
+    "giving opinions"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which three AI robots do the speakers discuss?",
+   "o": [
+    "a household assistant, a doctor and a clothes assistant",
+    "a teacher, a driver and a cook",
+    "a cleaner, a pilot and a nurse",
+    "a footballer, a singer and a doctor"
+   ],
+   "why": "These are the three AI robots in the recording."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is used for asking for an opinion?",
+   "o": [
+    "What's your view on ...?",
+    "In my view, ...",
+    "That's true, but ...",
+    "You're right."
+   ],
+   "why": "It is a question to your partner."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group does 'I'm not sure' belong to?",
+   "o": [
+    "disagreeing",
+    "agreeing",
+    "giving opinions",
+    "asking for opinions"
+   ],
+   "why": "It's a gentle way to disagree."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'reach an agreement' mean?",
+   "o": [
+    "decide together on the same idea",
+    "stop talking",
+    "win an argument",
+    "give no opinion"
+   ],
+   "why": "In a collaborative task you try to agree."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your partner says, 'A cleaning robot is the most useful.' Which response is best?",
+   "o": [
+    "That's true, it saves time. But for me, a homework assistant would be more useful.",
+    "No. Homework assistant.",
+    "You are wrong about everything.",
+    "I don't know robots."
+   ],
+   "why": "Respond to your partner, then give your idea."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Respond politely: 'Robots will do all our homework.'",
+   "o": [
+    "That's a good point, but I think we still need to learn for ourselves.",
+    "That's stupid.",
+    "Yes, and I'll never study again!",
+    "Robots? No."
+   ],
+   "why": "Accept the idea, then give your view politely."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: 'I think robots will be everywhere. ___' (ask your partner)",
+   "o": [
+    "What do you think?",
+    "In my view.",
+    "You're right.",
+    "That's true."
+   ],
+   "why": "Ask your partner's opinion to keep the discussion going."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'That's true, but ...' a polite way to disagree?",
+   "o": [
+    "It accepts part of the other idea before giving a different view",
+    "It ends the conversation",
+    "It shows you agree completely",
+    "It asks a question"
+   ],
+   "why": "Starting positively keeps the discussion friendly."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is a good reason why an AI teacher at home might not be good?",
+   "o": [
+    "Children learn social skills by being with classmates and teachers",
+    "AI teachers are always too slow",
+    "Children don't need to learn",
+    "Homes are too small"
+   ],
+   "why": "Learning with others builds social skills."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should you respond to your partner before giving your own idea?",
+   "o": [
+    "It shows you listened and helps you reach an agreement",
+    "It makes the task shorter",
+    "It means you don't need an opinion",
+    "Partners don't like new ideas"
+   ],
+   "why": "Good discussions connect ideas."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Bo’s Learning Club 1",
+ "lesson": "Lesson 2: Science – The solar system",
+ "outcomes": [
+  "Name the eight planets in our solar system.",
+  "Read a science text and find facts about the planets.",
+  "Explain why we can live on Earth."
+ ],
+ "tf": [
+  {
+   "s": "There are eight planets in our solar system.",
+   "t": true,
+   "why": "There are eight planets."
+  },
+  {
+   "s": "Jupiter is the biggest planet.",
+   "t": true,
+   "why": "Jupiter is the biggest planet."
+  },
+  {
+   "s": "Earth goes around the Sun every 365 days.",
+   "t": true,
+   "why": "That is one year."
+  },
+  {
+   "s": "We can live on Earth because there is air and water.",
+   "t": true,
+   "why": "Air and water help us live."
+  },
+  {
+   "s": "Mercury and Venus are the farthest planets from the Sun.",
+   "t": false,
+   "why": "Uranus and Neptune are the farthest from the Sun."
+  },
+  {
+   "s": "Saturn has a big ring around it.",
+   "t": true,
+   "why": "Saturn's big ring makes it amazing."
+  },
+  {
+   "s": "Earth is bigger than Jupiter.",
+   "t": false,
+   "why": "Jupiter is bigger than Earth. It is the biggest planet."
+  },
+  {
+   "s": "Saturn has 146 moons.",
+   "t": true,
+   "why": "The lesson says Saturn has 146 moons."
+  },
+  {
+   "s": "Earth goes around the Sun every 30 days.",
+   "t": false,
+   "why": "Earth goes around the Sun every 365 days."
+  },
+  {
+   "s": "Neptune is the closest planet to the Sun.",
+   "t": false,
+   "why": "Mercury is the closest. Neptune is one of the farthest."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which planet is second from the Sun?",
+   "o": [
+    "Venus",
+    "Mars",
+    "Saturn"
+   ],
+   "why": "Mercury, then Venus."
+  },
+  {
+   "q": "Which planet has a big ring and 146 moons?",
+   "o": [
+    "Saturn",
+    "Mercury",
+    "Venus"
+   ],
+   "why": "Saturn has a big ring."
+  },
+  {
+   "q": "How long does it take for Earth to go around the Sun?",
+   "o": [
+    "365 days",
+    "30 days",
+    "7 days"
+   ],
+   "why": "One year = 365 days."
+  },
+  {
+   "q": "Which planet comes after Saturn?",
+   "o": [
+    "Uranus",
+    "Mars",
+    "Venus"
+   ],
+   "why": "… Jupiter, Saturn, Uranus, Neptune."
+  },
+  {
+   "q": "Which planets are the farthest from the Sun?",
+   "o": [
+    "Uranus and Neptune",
+    "Mercury and Venus",
+    "Earth and Mars"
+   ],
+   "why": "Uranus and Neptune are the farthest."
+  },
+  {
+   "q": "Which planet comes first from the Sun?",
+   "o": [
+    "Mercury",
+    "Neptune",
+    "Jupiter"
+   ],
+   "why": "Mercury is the closest to the Sun."
+  },
+  {
+   "q": "What do we need to breathe?",
+   "o": [
+    "air",
+    "rings",
+    "moons"
+   ],
+   "why": "We breathe air."
+  },
+  {
+   "q": "Which planet is between Venus and Mars?",
+   "o": [
+    "Earth",
+    "Jupiter",
+    "Saturn"
+   ],
+   "why": "Mercury, Venus, Earth, Mars …"
+  },
+  {
+   "q": "Complete: Jupiter is ______ than Earth.",
+   "o": [
+    "bigger",
+    "biggest",
+    "big"
+   ],
+   "why": "Compare two things with -er than."
+  },
+  {
+   "q": "Which word means \"to move in a circle around something\"?",
+   "o": [
+    "go round",
+    "ring",
+    "air"
+   ],
+   "why": "Earth goes round the Sun."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Biggest planet",
+   "a": "Jupiter",
+   "d": [
+    "Earth",
+    "Mars",
+    "Venus"
+   ]
+  },
+  {
+   "q": "Planet with a big ring",
+   "a": "Saturn",
+   "d": [
+    "Mercury",
+    "Earth",
+    "Mars"
+   ]
+  },
+  {
+   "q": "Planet closest to the Sun",
+   "a": "Mercury",
+   "d": [
+    "Neptune",
+    "Saturn",
+    "Jupiter"
+   ]
+  },
+  {
+   "q": "Our planet",
+   "a": "Earth",
+   "d": [
+    "Mars",
+    "Venus",
+    "Uranus"
+   ]
+  },
+  {
+   "q": "Days for Earth to go round",
+   "a": "365",
+   "d": [
+    "30",
+    "100",
+    "7"
+   ]
+  },
+  {
+   "q": "Planets in our solar system",
+   "a": "8",
+   "d": [
+    "6",
+    "9",
+    "12"
+   ]
+  },
+  {
+   "q": "Saturn's moons",
+   "a": "146",
+   "d": [
+    "1",
+    "2",
+    "14"
+   ]
+  },
+  {
+   "q": "A farthest planet",
+   "a": "Neptune",
+   "d": [
+    "Mercury",
+    "Venus",
+    "Earth"
+   ]
+  },
+  {
+   "q": "Planet after Earth",
+   "a": "Mars",
+   "d": [
+    "Venus",
+    "Saturn",
+    "Mercury"
+   ]
+  },
+  {
+   "q": "We need air and …",
+   "a": "water",
+   "d": [
+    "rings",
+    "rockets",
+    "comets"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list has the eight planets in order from the Sun?",
+   "o": [
+    "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune",
+    "Earth, Mercury, Venus, Mars, Saturn, Jupiter, Neptune, Uranus",
+    "Mars, Venus, Earth, Mercury, Jupiter, Saturn, Neptune, Uranus",
+    "Mercury, Earth, Venus, Mars, Jupiter, Uranus, Saturn, Neptune"
+   ],
+   "why": "This is the order from the Sun."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which planet is the biggest?",
+   "o": [
+    "Jupiter",
+    "Saturn",
+    "Neptune",
+    "Earth"
+   ],
+   "why": "Jupiter is the biggest planet."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why is Saturn amazing?",
+   "o": [
+    "It has 146 moons and a big ring around it.",
+    "It is the closest to the Sun.",
+    "People live there.",
+    "It is the smallest planet."
+   ],
+   "why": "Saturn has many moons and a big ring."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two planets are the farthest from the Sun?",
+   "o": [
+    "Uranus and Neptune",
+    "Mercury and Venus",
+    "Earth and Mars",
+    "Jupiter and Saturn"
+   ],
+   "why": "Uranus and Neptune are the farthest."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Compare Jupiter and Earth.",
+   "o": [
+    "Jupiter is bigger than Earth.",
+    "Earth is bigger than Jupiter.",
+    "Jupiter is biggest than Earth.",
+    "Jupiter is more big than Earth."
+   ],
+   "why": "Jupiter is the biggest planet."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "How many years is 730 days for Earth?",
+   "o": [
+    "2 years",
+    "1 year",
+    "3 years",
+    "7 years"
+   ],
+   "why": "365 + 365 = 730 days = 2 years."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend asks: Which planet do we live on? What is the right answer?",
+   "o": [
+    "We live on Earth, the third planet from the Sun.",
+    "We live on Mars, the first planet.",
+    "We live on Jupiter, the biggest planet.",
+    "We live on the Sun."
+   ],
+   "why": "Earth is third: Mercury, Venus, Earth."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can we live on Earth?",
+   "o": [
+    "Because there is air and water.",
+    "Because it is the biggest planet.",
+    "Because it has a big ring.",
+    "Because it is very far from the Sun."
+   ],
+   "why": "Living things need air and water."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Jupiter is the biggest planet. What does this tell you?",
+   "o": [
+    "Jupiter is bigger than all the other planets.",
+    "Jupiter is smaller than Earth.",
+    "Jupiter is the closest to the Sun.",
+    "Jupiter has no moons."
+   ],
+   "why": "The biggest means bigger than all the others."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is NOT true?",
+   "o": [
+    "Saturn is the biggest planet.",
+    "Jupiter is the biggest planet.",
+    "Saturn has a big ring.",
+    "There are eight planets."
+   ],
+   "why": "Jupiter, not Saturn, is the biggest planet."
+  }
+ ]
+}

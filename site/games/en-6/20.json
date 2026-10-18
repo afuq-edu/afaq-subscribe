@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 2: Technology",
+ "lesson": "Unit 2 – Lesson 5: Vocabulary and Grammar – Using technology and comparative adverbs",
+ "outcomes": [
+  "I can name technology actions like upload a photo and download an app.",
+  "I can use comparative adverbs like faster and more carefully.",
+  "I can compare what I can do with a friend."
+ ],
+ "tf": [
+  {
+   "s": "\"Upload a photo\" means to put a photo on the internet.",
+   "t": true,
+   "why": "Yes! You upload to the internet."
+  },
+  {
+   "s": "The comparative of fast is more fast.",
+   "t": false,
+   "why": "We say faster."
+  },
+  {
+   "s": "The comparative of well is better.",
+   "t": true,
+   "why": "Correct! Well → better."
+  },
+  {
+   "s": "The comparative of badly is badder.",
+   "t": false,
+   "why": "Badly → worse."
+  },
+  {
+   "s": "With adverbs ending in -ly, we use more: more carefully.",
+   "t": true,
+   "why": "Right! more + -ly adverb."
+  },
+  {
+   "s": "The comparative of hard is harder.",
+   "t": true,
+   "why": "Yes! Short adverbs take -er."
+  },
+  {
+   "s": "\"She writes more clear than me\" is correct.",
+   "t": false,
+   "why": "We say \"She writes more clearly than me.\""
+  },
+  {
+   "s": "The Pass first app helps you prepare for an English exam.",
+   "t": true,
+   "why": "Correct! That's the Pass first app."
+  },
+  {
+   "s": "We say \"turn off the TV\" when we stop it.",
+   "t": true,
+   "why": "Yes! Turn off = stop it working."
+  },
+  {
+   "s": "\"Download an app\" means to delete it.",
+   "t": false,
+   "why": "Download means to get it onto your device."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "___ the computer (start it)",
+   "o": [
+    "turn on",
+    "turn off",
+    "upload"
+   ],
+   "why": "Turn on means start it."
+  },
+  {
+   "q": "The comparative of fast:",
+   "o": [
+    "faster",
+    "more fast",
+    "fastly"
+   ],
+   "why": "fast → faster."
+  },
+  {
+   "q": "The comparative of well:",
+   "o": [
+    "better",
+    "weller",
+    "more well"
+   ],
+   "why": "well → better."
+  },
+  {
+   "q": "The comparative of badly:",
+   "o": [
+    "worse",
+    "badder",
+    "more bad"
+   ],
+   "why": "badly → worse."
+  },
+  {
+   "q": "I can run ___ than my brother.",
+   "o": [
+    "faster",
+    "more fast",
+    "fastest"
+   ],
+   "why": "fast → faster."
+  },
+  {
+   "q": "I play tennis ___ than my sister.",
+   "o": [
+    "better",
+    "gooder",
+    "more good"
+   ],
+   "why": "well → better."
+  },
+  {
+   "q": "Please turn ___ the TV. It's time for bed.",
+   "o": [
+    "off",
+    "on",
+    "up"
+   ],
+   "why": "Turn off to stop the TV."
+  },
+  {
+   "q": "Which app helps you prepare for an English exam?",
+   "o": [
+    "Pass first",
+    "Let's go!",
+    "Learn Languages"
+   ],
+   "why": "Pass first is for exams."
+  },
+  {
+   "q": "___ a password",
+   "o": [
+    "type",
+    "upload",
+    "take"
+   ],
+   "why": "We type a password."
+  },
+  {
+   "q": "___ a selfie",
+   "o": [
+    "take",
+    "type",
+    "press"
+   ],
+   "why": "We take a selfie."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Comparative of fast",
+   "a": "faster",
+   "d": [
+    "more fast",
+    "fastly",
+    "fastest"
+   ]
+  },
+  {
+   "q": "Comparative of well",
+   "a": "better",
+   "d": [
+    "weller",
+    "more well",
+    "best"
+   ]
+  },
+  {
+   "q": "Comparative of badly",
+   "a": "worse",
+   "d": [
+    "badder",
+    "more bad",
+    "worst"
+   ]
+  },
+  {
+   "q": "Comparative of hard",
+   "a": "harder",
+   "d": [
+    "more hard",
+    "hardly",
+    "hardest"
+   ]
+  },
+  {
+   "q": "Comparative of carefully",
+   "a": "more carefully",
+   "d": [
+    "carefuller",
+    "carefullier",
+    "most careful"
+   ]
+  },
+  {
+   "q": "___ a photo (put online)",
+   "a": "upload",
+   "d": [
+    "press",
+    "type",
+    "turn off"
+   ]
+  },
+  {
+   "q": "___ an app (get it)",
+   "a": "download",
+   "d": [
+    "type",
+    "press",
+    "turn off"
+   ]
+  },
+  {
+   "q": "___ on an icon",
+   "a": "click",
+   "d": [
+    "type",
+    "take",
+    "send"
+   ]
+  },
+  {
+   "q": "___ a button",
+   "a": "press",
+   "d": [
+    "send",
+    "type",
+    "upload"
+   ]
+  },
+  {
+   "q": "App for an English exam",
+   "a": "Pass first",
+   "d": [
+    "Let's go!",
+    "Learn Languages",
+    "WOW!"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which phrase means to put a photo on the internet?",
+   "o": [
+    "upload a photo",
+    "download a photo",
+    "take a photo",
+    "turn off a photo"
+   ],
+   "why": "Upload means put online."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list has only irregular comparatives?",
+   "o": [
+    "better, worse",
+    "faster, harder",
+    "more quickly, more easily",
+    "faster, more clearly"
+   ],
+   "why": "well → better and badly → worse are irregular."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which app helps you learn 20 languages?",
+   "o": [
+    "Learn Languages",
+    "Pass first",
+    "Let's go!",
+    "WOW! Blog"
+   ],
+   "why": "The name tells you: Learn Languages."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group is all technology actions?",
+   "o": [
+    "go online, search the internet, send a message",
+    "go skiing, play hockey, do karate",
+    "write a diary, collect cards, make models",
+    "go home, eat lunch, sleep"
+   ],
+   "why": "These are things we do with technology."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: You can find your way ___ (easily) with the app.",
+   "o": [
+    "more easily",
+    "easier",
+    "more easy",
+    "easilyer"
+   ],
+   "why": "-ly adverbs use more."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "She writes more clearly than me.",
+    "She writes more clear than me.",
+    "She writes clearlier than me.",
+    "She writes clear than me."
+   ],
+   "why": "more + clearly."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "\"I can play basketball well.\" What is the best comeback in the game?",
+   "o": [
+    "I can play basketball better than you!",
+    "I can play basketball weller than you!",
+    "I can play basketball more well than you!",
+    "I can play basketball good than you!"
+   ],
+   "why": "well → better."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say \"more carefully\" but \"harder\"?",
+   "o": [
+    "Carefully ends in -ly, so we use more; hard is short, so we add -er.",
+    "Both follow the same rule.",
+    "Hard ends in -ly.",
+    "Carefully is irregular."
+   ],
+   "why": "Two different rules for two kinds of adverb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "He swims more fast than me.",
+    "He swims faster than me.",
+    "He draws more carefully than me.",
+    "He plays better than me."
+   ],
+   "why": "fast → faster, not more fast."
+  },
+  {
+   "lv": "التحليل",
+   "q": "You want to find information for a project. Which action do you need?",
+   "o": [
+    "search the internet",
+    "turn off the TV",
+    "take a selfie",
+    "press a button on the printer"
+   ],
+   "why": "Searching the internet finds information."
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الخامس",
+  "unit": "Unit 1 – Talent show",
+  "lesson": "Fun corner (optional lesson)",
+  "outcomes": [
+    "I can make comparatives and superlatives in questions.",
+    "I can ask and answer opinion questions and give a reason with because.",
+    "I can write new game questions with a superlative."
+  ],
+  "tf": [
+    {"s": "The comparative of easy is easier.", "t": true, "why": "Yes! y changes to i: easier."},
+    {"s": "The comparative of difficult is difficulter.", "t": false, "why": "Difficult is long: more difficult."},
+    {"s": "\"Which is the hottest month in the year?\" is correct.", "t": true, "why": "Right! hot → the hottest; we double the t."},
+    {"s": "\"Are you confidenter than your best friend?\" is correct.", "t": false, "why": "Confident is long: more confident than."},
+    {"s": "We use because to give a reason for our answer.", "t": true, "why": "Yes! It's better to be polite because people like polite people."},
+    {"s": "\"Who is the kindest person you know?\" uses a superlative.", "t": true, "why": "Great! the kindest is a superlative."},
+    {"s": "The superlative of interesting is the interestingest.", "t": false, "why": "Interesting is long: the most interesting."},
+    {"s": "It's better to be rude than polite.", "t": false, "why": "People like polite people, so it's better to be polite."},
+    {"s": "Long adjectives use more and the most.", "t": true, "why": "Yes! more confident, the most interesting."},
+    {"s": "The superlative of hot is the hotest.", "t": false, "why": "Double the t: the hottest."}
+  ],
+  "boxes": [
+    {"q": "Are you ___ than your best friend? (confident)", "o": ["more confident", "confidenter", "most confident"], "why": "Long adjective + than: more confident."},
+    {"q": "Which is the ___ month in the year? (hot)", "o": ["hottest", "hotest", "most hot"], "why": "Double the t and add -est."},
+    {"q": "easy → ___", "o": ["easier", "easyer", "more easy"], "why": "y → i + er."},
+    {"q": "Is fixing toys ___ than doing experiments? (difficult)", "o": ["more difficult", "difficulter", "the most difficult"], "why": "Long adjective + than."},
+    {"q": "What is the ___ book you know? (interesting)", "o": ["most interesting", "interestingest", "more interesting"], "why": "the most + long adjective."},
+    {"q": "Who is the ___ person you know? (kind)", "o": ["kindest", "most kind", "kinder"], "why": "Short adjective: the kindest."},
+    {"q": "Is it better to be polite or rude?", "o": ["Polite, because people like polite people.", "Rude, because it's fun.", "Rude, because people like it."], "why": "Polite people make others feel good."},
+    {"q": "Which word gives a reason?", "o": ["because", "than", "the"], "why": "Because tells us why."},
+    {"q": "Which do we need for the board game?", "o": ["a dice and counters", "a magnet", "a glass box"], "why": "Pairs play with a dice and counters."},
+    {"q": "Which is a question with a comparative?", "o": ["Are you taller than your brother?", "Who is the tallest?", "Are you tall?"], "why": "taller than is a comparative."}
+  ],
+  "hunt": [
+    {"q": "easy → ___", "a": "easier", "d": ["easyer", "more easy", "easiest"]},
+    {"q": "hot → the ___", "a": "hottest", "d": ["hotest", "most hot", "hotter"]},
+    {"q": "difficult → ___", "a": "more difficult", "d": ["difficulter", "most difficult", "difficultest"]},
+    {"q": "interesting → the ___", "a": "most interesting", "d": ["interestingest", "more interesting", "interestinger"]},
+    {"q": "kind → the ___", "a": "kindest", "d": ["most kind", "kinder", "kindiest"]},
+    {"q": "confident → ___", "a": "more confident", "d": ["confidenter", "most confident", "confidentest"]},
+    {"q": "good → ___", "a": "better", "d": ["gooder", "more good", "best"]},
+    {"q": "bad → the ___", "a": "worst", "d": ["baddest", "worse", "most bad"]},
+    {"q": "big → ___", "a": "bigger", "d": ["biger", "more big", "biggest"]},
+    {"q": "Word for a reason", "a": "because", "d": ["than", "the", "most"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which adjective uses more for the comparative?", "o": ["confident", "easy", "hot", "kind"], "why": "Confident is long, so more confident."},
+    {"lv": "التذكر", "q": "Which is the correct superlative?", "o": ["the hottest", "the hotest", "the most hot", "the hotter"], "why": "hot → the hottest."},
+    {"lv": "التذكر", "q": "Which word do we put before a superlative?", "o": ["the", "than", "a", "because"], "why": "the biggest, the most interesting."},
+    {"lv": "التذكر", "q": "What do we add to give a reason in our answer?", "o": ["because …", "than …", "the most …", "or …"], "why": "Because gives a reason."},
+    {"lv": "التطبيق", "q": "Write a new game question with a superlative.", "o": ["What is the most interesting book you know? Why?", "What is more interesting book you know?", "What is the interestingest book you know?", "What is interesting than book you know?"], "why": "the most + long adjective."},
+    {"lv": "التطبيق", "q": "Answer with a reason: Is it better to be polite or rude?", "o": ["It's better to be polite because people like polite people.", "It's better to be rude because people like it.", "It's gooder to be polite.", "It's better polite."], "why": "Better + reason with because."},
+    {"lv": "التطبيق", "q": "Complete: Is swimming ___ than running? (easy)", "o": ["easier", "more easy", "easiest", "easyer"], "why": "easy → easier than."},
+    {"lv": "التحليل", "q": "Find the mistake: \"Who is the most kind person you know?\"", "o": ["most kind should be kindest", "Who should be What", "person should be people", "There is no mistake."], "why": "Kind is short: the kindest."},
+    {"lv": "التحليل", "q": "Why do we say \"more difficult\" but \"easier\"?", "o": ["Difficult is a long adjective; easy is short.", "Easy is irregular.", "Difficult is a superlative.", "They are both wrong."], "why": "Long adjectives use more; short ones add -er."},
+    {"lv": "التحليل", "q": "Which question asks about one thing in a whole group?", "o": ["Which is the hottest month in the year?", "Is June hotter than May?", "Is it hot?", "Are you hot?"], "why": "The superlative compares one thing with all the others."}
+  ]
+}

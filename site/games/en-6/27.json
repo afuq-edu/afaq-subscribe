@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 2: Technology",
+  "lesson": "Unit 2 – Graded reader 1: The Lost Phone",
+  "outcomes": [
+    "I can follow and order the events of The Lost Phone.",
+    "I can understand the words coach, strong wind, bush and tail.",
+    "I can suggest rules to keep my devices safe."
+  ],
+  "tf": [
+    {
+      "s": "Jake and Finn are going to London.",
+      "t": true,
+      "why": "Yes, they are on their way to London."
+    },
+    {
+      "s": "The family took a coach because they couldn’t take their car.",
+      "t": true,
+      "why": "They had to travel by coach."
+    },
+    {
+      "s": "From the window, the boys could see lots of camels.",
+      "t": false,
+      "why": "They could see fields, hills and lots of cows."
+    },
+    {
+      "s": "On the coach, Jake was watching a video on his smartphone.",
+      "t": true,
+      "why": "He was watching a video with headphones."
+    },
+    {
+      "s": "Jake’s phone fell out of the window because of a strong wind.",
+      "t": true,
+      "why": "A strong wind came and the phone fell out."
+    },
+    {
+      "s": "Finn saw a cat moving under a bush.",
+      "t": false,
+      "why": "Finn saw a rabbit moving under a bush."
+    },
+    {
+      "s": "The phone was under the rabbit’s tail.",
+      "t": true,
+      "why": "Yes, they found it under the rabbit’s tail."
+    },
+    {
+      "s": "Jake was sad at the end of the story.",
+      "t": false,
+      "why": "He was very happy because he found his phone."
+    },
+    {
+      "s": "The phone fell out before they took selfies.",
+      "t": false,
+      "why": "First they took selfies, then the phone fell out."
+    },
+    {
+      "s": "Holding your phone out of an open window is a safe idea.",
+      "t": false,
+      "why": "It is not safe; the phone can fall out, like in the story."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Where are Jake and Finn going?",
+      "o": [
+        "London",
+        "Paris",
+        "Muscat"
+      ],
+      "why": "They are on their way to London."
+    },
+    {
+      "q": "Why did they travel by coach?",
+      "o": [
+        "They couldn’t take their car.",
+        "The coach was free.",
+        "They liked coaches."
+      ],
+      "why": "They couldn’t take their car, so they had to take a coach."
+    },
+    {
+      "q": "What animal did Finn see under a bush?",
+      "o": [
+        "a rabbit",
+        "a cat",
+        "a cow"
+      ],
+      "why": "Finn saw a rabbit moving."
+    },
+    {
+      "q": "Where was the phone?",
+      "o": [
+        "under the rabbit’s tail",
+        "in Jake’s bag",
+        "on the coach seat"
+      ],
+      "why": "The phone was under the rabbit’s tail."
+    },
+    {
+      "q": "What did the strong wind do?",
+      "o": [
+        "It made the phone fall out of the window.",
+        "It broke the coach.",
+        "It took Jake’s headphones."
+      ],
+      "why": "The wind came and the phone fell out."
+    },
+    {
+      "q": "What did the boys do before the phone fell out?",
+      "o": [
+        "They took selfies.",
+        "They slept.",
+        "They ate lunch."
+      ],
+      "why": "They took selfies first."
+    },
+    {
+      "q": "A coach is…",
+      "o": [
+        "a big bus for long trips",
+        "a small car",
+        "a kind of phone"
+      ],
+      "why": "People travel by coach between cities."
+    },
+    {
+      "q": "What was Jake using with his phone on the coach?",
+      "o": [
+        "headphones",
+        "a printer",
+        "a laptop"
+      ],
+      "why": "He watched a video with headphones."
+    },
+    {
+      "q": "Why was Jake very happy at the end?",
+      "o": [
+        "He found his phone and saw the funny selfies.",
+        "He got a new phone.",
+        "He arrived in Paris."
+      ],
+      "why": "Finding the phone and the funny selfies made him happy."
+    },
+    {
+      "q": "Which is a good rule for a trip?",
+      "o": [
+        "Keep your phone inside, away from open windows.",
+        "Hold your phone out of the window.",
+        "Give your phone to a stranger."
+      ],
+      "why": "Keeping it inside stops it falling out."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "City they are going to",
+      "a": "London",
+      "d": [
+        "Paris",
+        "Rome",
+        "Cairo"
+      ]
+    },
+    {
+      "q": "They travelled by…",
+      "a": "coach",
+      "d": [
+        "car",
+        "plane",
+        "boat"
+      ]
+    },
+    {
+      "q": "The boys could see lots of…",
+      "a": "cows",
+      "d": [
+        "camels",
+        "lions",
+        "fish"
+      ]
+    },
+    {
+      "q": "The phone fell because of a strong…",
+      "a": "wind",
+      "d": [
+        "rain",
+        "sun",
+        "snow"
+      ]
+    },
+    {
+      "q": "Finn saw a ___ under a bush.",
+      "a": "rabbit",
+      "d": [
+        "cat",
+        "dog",
+        "bird"
+      ]
+    },
+    {
+      "q": "The phone was under the rabbit’s…",
+      "a": "tail",
+      "d": [
+        "ear",
+        "nose",
+        "foot"
+      ]
+    },
+    {
+      "q": "The rabbit was under a…",
+      "a": "bush",
+      "d": [
+        "car",
+        "bed",
+        "table"
+      ]
+    },
+    {
+      "q": "Jake was watching a…",
+      "a": "video",
+      "d": [
+        "book",
+        "football",
+        "map"
+      ]
+    },
+    {
+      "q": "Photos they took of themselves",
+      "a": "selfies",
+      "d": [
+        "maps",
+        "videos",
+        "tickets"
+      ]
+    },
+    {
+      "q": "How did Jake feel at the end?",
+      "a": "very happy",
+      "d": [
+        "very angry",
+        "very sad",
+        "very bored"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What could the boys see from the window?",
+      "o": [
+        "fields, hills and lots of cows",
+        "the sea and boats",
+        "tall buildings and shops",
+        "a desert and camels"
+      ],
+      "why": "They saw fields, hills and lots of cows."
+    },
+    {
+      "lv": "التذكر",
+      "q": "How did Jake lose his phone?",
+      "o": [
+        "A strong wind came and it fell out of the window.",
+        "He left it in a café.",
+        "Finn took it.",
+        "He dropped it in the sea."
+      ],
+      "why": "The wind made the phone fall out of the window."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What did Jake have to type on the phone?",
+      "o": [
+        "the password",
+        "a letter",
+        "his address",
+        "a review"
+      ],
+      "why": "In the story, the password was typed on the phone."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Who saw the rabbit?",
+      "o": [
+        "Finn",
+        "Jake",
+        "Mum",
+        "The coach driver"
+      ],
+      "why": "Finn saw a rabbit moving under a bush."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Put in order: a) They took selfies. b) The phone fell out. c) They are on their way to London.",
+      "o": [
+        "c, a, b",
+        "a, b, c",
+        "b, c, a",
+        "c, b, a"
+      ],
+      "why": "First the trip, then the selfies, then the phone fell out."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Correct the sentence: “They could see lots of camels.”",
+      "o": [
+        "They could see lots of cows.",
+        "They couldn’t see anything.",
+        "They could see lots of rabbits.",
+        "They could see lots of cats."
+      ],
+      "why": "The story says lots of cows."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose the correct sentence about the story.",
+      "o": [
+        "They had to take a coach.",
+        "They have to took a coach.",
+        "They had to taking a coach.",
+        "They has to take a coach."
+      ],
+      "why": "had to + base verb: had to take."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why is the story called The Lost Phone?",
+      "o": [
+        "Because Jake loses his phone and then finds it.",
+        "Because Finn buys a new phone.",
+        "Because the coach is lost.",
+        "Because the rabbit has a phone."
+      ],
+      "why": "The main problem in the story is the lost phone."
+    },
+    {
+      "lv": "التحليل",
+      "q": "What can we learn from the story?",
+      "o": [
+        "Be careful with devices when you travel.",
+        "Never travel by coach.",
+        "Rabbits like phones.",
+        "Selfies are bad."
+      ],
+      "why": "The phone was lost because it was near an open window."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word is the odd one out: bush, field, hill, coach?",
+      "o": [
+        "coach",
+        "bush",
+        "field",
+        "hill"
+      ],
+      "why": "A coach is a vehicle; the others are things in the countryside."
+    }
+  ]
+}

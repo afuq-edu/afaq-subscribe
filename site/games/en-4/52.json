@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U4",
+ "lesson": "Unit 4 – Graded readers: My Dad's a Mechanic & I Want to Be a Scientist!",
+ "outcomes": [
+  "Read 'My Dad's a Mechanic' and explain how Shahad helps her dad.",
+  "Read 'I Want to Be a Scientist!' and follow the lab visit.",
+  "Talk about rules with must and mustn't."
+ ],
+ "tf": [
+  {
+   "s": "Shahad is helping her dad at the park.",
+   "t": false,
+   "why": "She's helping him at his garage."
+  },
+  {
+   "s": "Shahad's dad is a mechanic.",
+   "t": true,
+   "why": "Yes! He fixes cars in a garage."
+  },
+  {
+   "s": "At first, Shahad mustn't use her skateboard.",
+   "t": true,
+   "why": "Correct! They're working, not playing."
+  },
+  {
+   "s": "Dad is under the white car.",
+   "t": true,
+   "why": "Well done! He's under the white car."
+  },
+  {
+   "s": "Dad uses Shahad's skateboard to get his tools and screws.",
+   "t": true,
+   "why": "Yes! The skateboard helps him move."
+  },
+  {
+   "s": "Mrs Sumaiya is a mechanic.",
+   "t": false,
+   "why": "Mrs Sumaiya is a scientist."
+  },
+  {
+   "s": "Mrs Sumaiya is wearing a white coat.",
+   "t": true,
+   "why": "Correct! Scientists wear white coats."
+  },
+  {
+   "s": "The children must put a lot of blue powder in the glass.",
+   "t": false,
+   "why": "They must only put a little blue powder in."
+  },
+  {
+   "s": "Ahmed is happy when he hears the noise.",
+   "t": false,
+   "why": "He's worried when he hears the noise."
+  },
+  {
+   "s": "After the noise stops, they see lots of beautiful colours.",
+   "t": true,
+   "why": "Yes! They see lots of beautiful colours."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where is Shahad helping her dad?",
+   "o": [
+    "at his garage",
+    "at the park",
+    "at school"
+   ],
+   "why": "She helps at his garage."
+  },
+  {
+   "q": "Why mustn't Shahad use her skateboard at first?",
+   "o": [
+    "They're working, not playing.",
+    "It's broken.",
+    "It's raining."
+   ],
+   "why": "They're working!"
+  },
+  {
+   "q": "Dad can't get his ___ and screws.",
+   "o": [
+    "tools",
+    "shoes",
+    "books"
+   ],
+   "why": "He can't get his tools and screws."
+  },
+  {
+   "q": "What helps Dad move under the car?",
+   "o": [
+    "Shahad's skateboard",
+    "a bike",
+    "a bus"
+   ],
+   "why": "The skateboard is Shahad's idea."
+  },
+  {
+   "q": "What colour is the car?",
+   "o": [
+    "white",
+    "blue",
+    "red"
+   ],
+   "why": "Dad is under the white car."
+  },
+  {
+   "q": "Who is Mrs Sumaiya?",
+   "o": [
+    "a scientist",
+    "a mechanic",
+    "a chef"
+   ],
+   "why": "She is a scientist."
+  },
+  {
+   "q": "What is Mrs Sumaiya wearing?",
+   "o": [
+    "a white coat",
+    "a chef's hat",
+    "a yellow jacket"
+   ],
+   "why": "Scientists wear white coats."
+  },
+  {
+   "q": "What goes in the glass?",
+   "o": [
+    "a little blue powder",
+    "a lot of water",
+    "red paint"
+   ],
+   "why": "Only a little blue powder."
+  },
+  {
+   "q": "How does Ahmed feel at the noise?",
+   "o": [
+    "worried",
+    "happy",
+    "bored"
+   ],
+   "why": "Ahmed is worried."
+  },
+  {
+   "q": "What do they see after the noise?",
+   "o": [
+    "beautiful colours",
+    "a skateboard",
+    "a car"
+   ],
+   "why": "Lots of beautiful colours."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Shahad's dad's job",
+   "a": "mechanic",
+   "d": [
+    "scientist",
+    "chef",
+    "farmer"
+   ]
+  },
+  {
+   "q": "Where Shahad helps Dad",
+   "a": "garage",
+   "d": [
+    "park",
+    "school",
+    "lab"
+   ]
+  },
+  {
+   "q": "Shahad's toy",
+   "a": "skateboard",
+   "d": [
+    "kite",
+    "ball",
+    "bike"
+   ]
+  },
+  {
+   "q": "Dad is under the ... car",
+   "a": "white",
+   "d": [
+    "red",
+    "blue",
+    "green"
+   ]
+  },
+  {
+   "q": "Dad can't get tools and ...",
+   "a": "screws",
+   "d": [
+    "boots",
+    "books",
+    "pens"
+   ]
+  },
+  {
+   "q": "Mrs Sumaiya's job",
+   "a": "scientist",
+   "d": [
+    "mechanic",
+    "dentist",
+    "farmer"
+   ]
+  },
+  {
+   "q": "Mrs Sumaiya wears a white ...",
+   "a": "coat",
+   "d": [
+    "hat",
+    "jacket",
+    "dress"
+   ]
+  },
+  {
+   "q": "Colour of the powder",
+   "a": "blue",
+   "d": [
+    "red",
+    "green",
+    "yellow"
+   ]
+  },
+  {
+   "q": "Ahmed feels ... at the noise",
+   "a": "worried",
+   "d": [
+    "happy",
+    "bored",
+    "hungry"
+   ]
+  },
+  {
+   "q": "The story's place: a science ...",
+   "a": "lab",
+   "d": [
+    "garage",
+    "park",
+    "shop"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Where does the story 'My Dad's a Mechanic' happen?",
+   "o": [
+    "at a garage",
+    "in a science lab",
+    "at the park",
+    "at a zoo"
+   ],
+   "why": "Shahad helps her dad at his garage."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What must the children only put in the glass?",
+   "o": [
+    "a little blue powder",
+    "a lot of blue powder",
+    "some milk",
+    "some screws"
+   ],
+   "why": "Only a little blue powder."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who is the scientist in the second story?",
+   "o": [
+    "Mrs Sumaiya",
+    "Shahad",
+    "Ahmed",
+    "Dad"
+   ],
+   "why": "Mrs Sumaiya is a scientist."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is Dad's problem?",
+   "o": [
+    "He's under the car and can't get his tools and screws.",
+    "His skateboard is broken.",
+    "He can't find the garage.",
+    "The car is blue."
+   ],
+   "why": "He can't reach his tools."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose a sentence about what Shahad is doing in the garage.",
+   "o": [
+    "She's cleaning the white car.",
+    "She's flying a kite.",
+    "She's putting powder in a glass.",
+    "She's swimming."
+   ],
+   "why": "Shahad is cleaning the white car."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose a good science lab rule.",
+   "o": [
+    "You must listen to the scientist.",
+    "You must touch the powder.",
+    "You mustn't listen to the scientist.",
+    "You must play in the lab."
+   ],
+   "why": "Listening keeps you safe in the lab."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: 'You mustn't use your skateboard, Shahad. We're working. We ___ playing!'",
+   "o": [
+    "aren't",
+    "isn't",
+    "not",
+    "don't"
+   ],
+   "why": "With we, use aren't."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How does Shahad's idea solve Dad's problem?",
+   "o": [
+    "Dad uses her skateboard to move under the car and get his tools.",
+    "Shahad fixes the car alone.",
+    "Dad buys a new car.",
+    "Shahad calls the police."
+   ],
+   "why": "The skateboard helps Dad move."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Ahmed worried?",
+   "o": [
+    "He hears a loud noise.",
+    "He sees beautiful colours.",
+    "He has no white coat.",
+    "He is at the garage."
+   ],
+   "why": "The loud noise worries him."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses the present continuous?",
+   "o": [
+    "Ahmed is putting a little blue powder in his glass.",
+    "You must only put a little blue powder in the glass.",
+    "Mrs Sumaiya is a scientist.",
+    "Ahmed wants to be a scientist."
+   ],
+   "why": "is + putting = happening now."
+  }
+ ]
+}

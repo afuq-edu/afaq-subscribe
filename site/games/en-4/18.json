@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U2",
+ "lesson": "Unit 2 – Lesson 4: Vocabulary and Grammar 2 (containers; Is there any ...? / Are there any ...?)",
+ "outcomes": [
+  "Name food containers: a can of lemonade, a bowl of soup.",
+  "Ask and answer: Is there any ...? / Are there any ...?",
+  "Describe a picnic basket or a fridge with containers."
+ ],
+ "tf": [
+  {
+   "s": "We say: a bowl of soup.",
+   "t": true,
+   "why": "Yes! Soup goes in a bowl."
+  },
+  {
+   "s": "We say: a box of cereal.",
+   "t": true,
+   "why": "Correct! Cereal comes in a box."
+  },
+  {
+   "s": "The plural of 'a cup of coffee' is 'two cup of coffees'.",
+   "t": false,
+   "why": "We say two cups of coffee: add -s to the container."
+  },
+  {
+   "s": "We ask: Are there any apples?",
+   "t": true,
+   "why": "Great! Apples are countable plural."
+  },
+  {
+   "s": "We ask: Are there any coffee?",
+   "t": false,
+   "why": "Coffee is uncountable: Is there any coffee?"
+  },
+  {
+   "s": "'No, there isn't.' answers 'Is there any salad?'",
+   "t": true,
+   "why": "Yes! Short answer with isn't."
+  },
+  {
+   "s": "'Yes, there is.' answers 'Are there any sandwiches?'",
+   "t": false,
+   "why": "For are we answer: Yes, there are."
+  },
+  {
+   "s": "We say: a glass of milk.",
+   "t": true,
+   "why": "Well done! Milk goes in a glass."
+  },
+  {
+   "s": "We ask: Is there any fruit?",
+   "t": true,
+   "why": "Right! Fruit is uncountable here."
+  },
+  {
+   "s": "We say: a plate of water.",
+   "t": false,
+   "why": "Water goes in a bottle or a glass: a bottle of water."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "a ___ of soup",
+   "o": [
+    "bowl",
+    "can",
+    "box"
+   ],
+   "why": "We eat soup from a bowl."
+  },
+  {
+   "q": "a ___ of cereal",
+   "o": [
+    "box",
+    "glass",
+    "cup"
+   ],
+   "why": "Cereal comes in a box."
+  },
+  {
+   "q": "a ___ of lemonade",
+   "o": [
+    "can",
+    "plate",
+    "bowl"
+   ],
+   "why": "Lemonade comes in a can."
+  },
+  {
+   "q": "a ___ of sandwiches",
+   "o": [
+    "plate",
+    "bottle",
+    "cup"
+   ],
+   "why": "Sandwiches are on a plate."
+  },
+  {
+   "q": "a cup of coffee → two ___",
+   "o": [
+    "cups of coffee",
+    "cup of coffees",
+    "cups of coffees"
+   ],
+   "why": "Add -s to cup only."
+  },
+  {
+   "q": "___ there any cupcakes? Yes, there are.",
+   "o": [
+    "Are",
+    "Is",
+    "Do"
+   ],
+   "why": "Cupcakes are plural: Are there any ...?"
+  },
+  {
+   "q": "___ there any juice?",
+   "o": [
+    "Is",
+    "Are",
+    "Do"
+   ],
+   "why": "Juice is uncountable: Is there any juice?"
+  },
+  {
+   "q": "Is there any salad? (✗)",
+   "o": [
+    "No, there isn't.",
+    "No, there aren't.",
+    "Yes, there is."
+   ],
+   "why": "Short negative answer: No, there isn't."
+  },
+  {
+   "q": "Are there any sandwiches? (✓)",
+   "o": [
+    "Yes, there are.",
+    "Yes, there is.",
+    "No, there aren't."
+   ],
+   "why": "Short positive answer: Yes, there are."
+  },
+  {
+   "q": "Is there ___ water?",
+   "o": [
+    "any",
+    "a few",
+    "many"
+   ],
+   "why": "Questions use any."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "___ of soup",
+   "a": "a bowl",
+   "d": [
+    "a can",
+    "a box",
+    "a bag"
+   ]
+  },
+  {
+   "q": "___ of milk",
+   "a": "a glass",
+   "d": [
+    "a plate",
+    "a box",
+    "a bag"
+   ]
+  },
+  {
+   "q": "___ of cereal",
+   "a": "a box",
+   "d": [
+    "a glass",
+    "a cup",
+    "a can"
+   ]
+  },
+  {
+   "q": "___ of fruit",
+   "a": "a bag",
+   "d": [
+    "a cup",
+    "a glass",
+    "a bowl"
+   ]
+  },
+  {
+   "q": "___ of water",
+   "a": "a bottle",
+   "d": [
+    "a plate",
+    "a box",
+    "a bag"
+   ]
+  },
+  {
+   "q": "___ of sandwiches",
+   "a": "a plate",
+   "d": [
+    "a cup",
+    "a can",
+    "a bottle"
+   ]
+  },
+  {
+   "q": "___ of coffee",
+   "a": "a cup",
+   "d": [
+    "a plate",
+    "a box",
+    "a bag"
+   ]
+  },
+  {
+   "q": "Two ___ of lemonade",
+   "a": "glasses",
+   "d": [
+    "glass",
+    "glasss",
+    "glassies"
+   ]
+  },
+  {
+   "q": "___ there any eggs?",
+   "a": "Are",
+   "d": [
+    "Is",
+    "Am",
+    "Do"
+   ]
+  },
+  {
+   "q": "___ there any cheese?",
+   "a": "Is",
+   "d": [
+    "Are",
+    "Am",
+    "Do"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is correct?",
+   "o": [
+    "a bottle of water",
+    "a plate of water",
+    "a bowl of cereal box",
+    "a bag of milk"
+   ],
+   "why": "Water comes in a bottle."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which container do we use for milk?",
+   "o": [
+    "a glass",
+    "a plate",
+    "a box",
+    "a bag"
+   ],
+   "why": "We drink milk from a glass."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the correct short answer to 'Are there any apples?' (✗)",
+   "o": [
+    "No, there aren't.",
+    "No, there isn't.",
+    "Yes, there is.",
+    "No, it isn't."
+   ],
+   "why": "Are there ...? → No, there aren't."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which container goes with fruit?",
+   "o": [
+    "a bag",
+    "a can",
+    "a cup",
+    "a glass"
+   ],
+   "why": "We say a bag of fruit."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ask about eggs in the fridge.",
+   "o": [
+    "Are there any eggs?",
+    "Is there any eggs?",
+    "Are there a eggs?",
+    "Is there eggs any?"
+   ],
+   "why": "Eggs are countable plural: Are there any ...?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write about the picnic: two cans + lemonade",
+   "o": [
+    "There are two cans of lemonade.",
+    "There is two can of lemonade.",
+    "There are two can of lemonades.",
+    "There are two cans of lemonades."
+   ],
+   "why": "Plural container + of + lemonade."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Is there any cheese? (✓) Choose the answer.",
+   "o": [
+    "Yes, there is.",
+    "Yes, there are.",
+    "No, there isn't.",
+    "Yes, it is."
+   ],
+   "why": "Is there ...? → Yes, there is."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say 'Are there any apples?' but 'Is there any fruit?'",
+   "o": [
+    "Apples are countable plural; fruit is uncountable.",
+    "Apples are sweet; fruit is savoury.",
+    "Fruit is a drink.",
+    "There is no reason."
+   ],
+   "why": "Great thinking! Countable plural → are; uncountable → is."
+  },
+  {
+   "lv": "التحليل",
+   "q": "In the fridge game, which question is smarter at the start?",
+   "o": [
+    "Are there any drinks?",
+    "Is there any milk?",
+    "Is there a bottle of water?",
+    "Are there any eggs?"
+   ],
+   "why": "It checks many items at once."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Soup is hot and we eat it with a spoon. Which container is best?",
+   "o": [
+    "a bowl",
+    "a bottle",
+    "a box",
+    "a bag"
+   ],
+   "why": "A bowl is best for soup."
+  }
+ ]
+}

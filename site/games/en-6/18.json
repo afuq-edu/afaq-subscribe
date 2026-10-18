@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 2: Technology",
+ "lesson": "Unit 2 – Lesson 3: Grammar – could/couldn’t, had to/didn’t have to",
+ "outcomes": [
+  "I can use could and couldn't for ability in the past.",
+  "I can use had to and didn't have to for the past.",
+  "I can compare life in the past and now."
+ ],
+ "tf": [
+  {
+   "s": "The past of can is could.",
+   "t": true,
+   "why": "Yes! can → could."
+  },
+  {
+   "s": "The past of have to is had to.",
+   "t": true,
+   "why": "Correct! have to → had to."
+  },
+  {
+   "s": "The past of don't have to is doesn't have to.",
+   "t": false,
+   "why": "The past is didn't have to."
+  },
+  {
+   "s": "Arlo had to use his brother's computer.",
+   "t": true,
+   "why": "Right! His laptop stopped working."
+  },
+  {
+   "s": "Hanan's grandad's password was Hanan's name and birthday.",
+   "t": true,
+   "why": "Yes! That was his password."
+  },
+  {
+   "s": "Hanan's dad listened to the news on the radio before.",
+   "t": false,
+   "why": "He listened to the news on TV before."
+  },
+  {
+   "s": "Hanan's grandma wanted to send an email to Hanan's aunt.",
+   "t": true,
+   "why": "Correct! She wanted to email her aunt."
+  },
+  {
+   "s": "Hanan's mum thanked her by buying her a laptop.",
+   "t": false,
+   "why": "Her mum read her a story."
+  },
+  {
+   "s": "When Grandma was young, people couldn't write messages on smartphones.",
+   "t": true,
+   "why": "Yes, there were no smartphones then."
+  },
+  {
+   "s": "\"Had to\" means it was not necessary.",
+   "t": false,
+   "why": "Had to means it was necessary; didn't have to means not necessary."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "The past of can is ___.",
+   "o": [
+    "could",
+    "can't",
+    "had"
+   ],
+   "why": "can → could."
+  },
+  {
+   "q": "The past of don't have to is ___.",
+   "o": [
+    "didn't have to",
+    "don't had to",
+    "hadn't"
+   ],
+   "why": "don't have to → didn't have to."
+  },
+  {
+   "q": "He ___ use his brother's computer.",
+   "o": [
+    "had to",
+    "didn't have to",
+    "can"
+   ],
+   "why": "His laptop stopped working, so it was necessary."
+  },
+  {
+   "q": "In the past, children ___ use computers for homework.",
+   "o": [
+    "couldn't",
+    "could",
+    "had to"
+   ],
+   "why": "There were no computers for them."
+  },
+  {
+   "q": "She ___ to do her homework now.",
+   "o": [
+    "has",
+    "have",
+    "had"
+   ],
+   "why": "Present with she: has to."
+  },
+  {
+   "q": "___ you swim when you were five?",
+   "o": [
+    "Could",
+    "Can",
+    "Had"
+   ],
+   "why": "Past ability question: Could you…?"
+  },
+  {
+   "q": "How did Hanan's dad listen to the news before?",
+   "o": [
+    "on TV",
+    "on an app",
+    "on the radio"
+   ],
+   "why": "He watched the news on TV."
+  },
+  {
+   "q": "In the past people had to write ___.",
+   "o": [
+    "letters",
+    "emails",
+    "apps"
+   ],
+   "why": "Before email, people wrote letters."
+  },
+  {
+   "q": "I ___ swim when I was three. I was too young.",
+   "o": [
+    "couldn't",
+    "could",
+    "had to"
+   ],
+   "why": "Too young means not able: couldn't."
+  },
+  {
+   "q": "Which device did Hanan's mum use?",
+   "o": [
+    "an e-reader",
+    "a printer",
+    "a speaker"
+   ],
+   "why": "Mum matches the e-reader."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Past of can",
+   "a": "could",
+   "d": [
+    "can't",
+    "had to",
+    "has to"
+   ]
+  },
+  {
+   "q": "Past of can't",
+   "a": "couldn't",
+   "d": [
+    "could",
+    "can",
+    "didn't"
+   ]
+  },
+  {
+   "q": "Past of have to",
+   "a": "had to",
+   "d": [
+    "has to",
+    "could",
+    "have"
+   ]
+  },
+  {
+   "q": "Past of don't have to",
+   "a": "didn't have to",
+   "d": [
+    "don't had to",
+    "hasn't to",
+    "couldn't"
+   ]
+  },
+  {
+   "q": "She ___ to go now.",
+   "a": "has",
+   "d": [
+    "have",
+    "had",
+    "having"
+   ]
+  },
+  {
+   "q": "Mum's device",
+   "a": "e-reader",
+   "d": [
+    "printer",
+    "speaker",
+    "laptop"
+   ]
+  },
+  {
+   "q": "Grandma wanted to send an ...",
+   "a": "email",
+   "d": [
+    "photo",
+    "app",
+    "e-reader"
+   ]
+  },
+  {
+   "q": "Dad heard the news on ...",
+   "a": "TV",
+   "d": [
+    "radio",
+    "laptop",
+    "printer"
+   ]
+  },
+  {
+   "q": "Mum thanked Hanan with a ...",
+   "a": "story",
+   "d": [
+    "cake",
+    "phone",
+    "song"
+   ]
+  },
+  {
+   "q": "Old way: write ...",
+   "a": "letters",
+   "d": [
+    "emails",
+    "apps",
+    "websites"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the past of can't?",
+   "o": [
+    "couldn't",
+    "can't",
+    "didn't",
+    "hadn't to"
+   ],
+   "why": "can't → couldn't."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the past of has to?",
+   "o": [
+    "had to",
+    "has had",
+    "have to",
+    "haded to"
+   ],
+   "why": "has to → had to."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What did Hanan's grandma want to do?",
+   "o": [
+    "send an email to Hanan's aunt",
+    "read a book on an e-reader",
+    "watch the news on TV",
+    "change her password"
+   ],
+   "why": "She wanted to email the aunt."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How did Hanan's mum thank her?",
+   "o": [
+    "She read her a story.",
+    "She gave her a new phone.",
+    "She cooked her dinner.",
+    "She sent her an email."
+   ],
+   "why": "Mum read her a story."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: Arlo's laptop stopped working, so he ___ use his brother's computer.",
+   "o": [
+    "had to",
+    "didn't have to",
+    "could",
+    "has to"
+   ],
+   "why": "It was necessary: had to."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: When Grandma was young, people ___ write messages on smartphones.",
+   "o": [
+    "couldn't",
+    "could",
+    "had to",
+    "have to"
+   ],
+   "why": "There were no smartphones."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence about the past is correct?",
+   "o": [
+    "In the past people had to write letters.",
+    "In the past people has to write letters.",
+    "In the past people can write emails.",
+    "In the past people have to wrote letters."
+   ],
+   "why": "had to + base verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say \"He had to use his brother's computer\"?",
+   "o": [
+    "Because it was necessary – his laptop stopped working.",
+    "Because it was fun.",
+    "Because he could choose.",
+    "Because it wasn't necessary."
+   ],
+   "why": "Had to shows something was necessary."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair correctly compares the past and now?",
+   "o": [
+    "In the past people couldn't send emails. Now we can send emails.",
+    "In the past people could send emails. Now we can't.",
+    "In the past people had to send emails. Now we had to write letters.",
+    "In the past people can send emails. Now we could."
+   ],
+   "why": "Couldn't (past) and can (now) show the change."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence shows that something was NOT necessary in the past?",
+   "o": [
+    "We didn't have to go to school on Friday.",
+    "We had to go to school on Friday.",
+    "We couldn't go to school on Friday.",
+    "We could go to school on Friday."
+   ],
+   "why": "Didn't have to means it was not necessary."
+  }
+ ]
+}

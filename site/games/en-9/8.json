@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 2: Connections",
+ "lesson": "Lesson 5: Speaking – describing a photo",
+ "outcomes": [
+  "Describe a photo for about one minute in clear stages.",
+  "Use phrases like 'This photo shows ...' and 'in the background'.",
+  "Guess with might, I think and I guess, and give reasons."
+ ],
+ "tf": [
+  {
+   "s": "Fluency means speaking with few pauses and little repetition.",
+   "t": true,
+   "why": "Fluent speakers keep going smoothly."
+  },
+  {
+   "s": "We can start a photo description with 'This photo shows ...'.",
+   "t": true,
+   "why": "It introduces the main idea of the photo."
+  },
+  {
+   "s": "We use 'might' when we are completely sure.",
+   "t": false,
+   "why": "'Might' shows a guess or possibility."
+  },
+  {
+   "s": "The study tip suggests about 15 seconds for each stage of the description.",
+   "t": true,
+   "why": "Four stages of 15 seconds make one minute."
+  },
+  {
+   "s": "A good description only names the objects in the photo.",
+   "t": false,
+   "why": "You should also describe the place, the people and their actions."
+  },
+  {
+   "s": "'In the background' describes things behind the main people.",
+   "t": true,
+   "why": "For example: In the background there are some trees."
+  },
+  {
+   "s": "We say 'This photo was taken in a bus'.",
+   "t": false,
+   "why": "We say 'on a bus'."
+  },
+  {
+   "s": "'Definitely' shows that you are sure.",
+   "t": true,
+   "why": "For example: They're definitely at home."
+  },
+  {
+   "s": "You should stop talking after 15 seconds in the one-minute long turn.",
+   "t": false,
+   "why": "Try to speak for the full minute."
+  },
+  {
+   "s": "Talking about people's clothes is a good way to fill one minute.",
+   "t": true,
+   "why": "Appearance and clothes add useful details."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which phrase introduces a photo?",
+   "o": [
+    "This photo shows ...",
+    "In the end ...",
+    "Once upon a time ..."
+   ],
+   "why": "It tells the listener what the photo is about."
+  },
+  {
+   "q": "Complete: In the ___, there are some trees and buildings.",
+   "o": [
+    "background",
+    "queue",
+    "middle name"
+   ],
+   "why": "Things behind the main people are in the background."
+  },
+  {
+   "q": "Complete: This photo was taken ___ a bus.",
+   "o": [
+    "on",
+    "in",
+    "at"
+   ],
+   "why": "We say on a bus."
+  },
+  {
+   "q": "Which word shows a guess?",
+   "o": [
+    "might",
+    "definitely",
+    "always"
+   ],
+   "why": "Might = maybe."
+  },
+  {
+   "q": "Which word shows you are sure?",
+   "o": [
+    "definitely",
+    "might",
+    "I guess"
+   ],
+   "why": "Definitely shows certainty."
+  },
+  {
+   "q": "How long is the individual long turn?",
+   "o": [
+    "about one minute",
+    "about ten minutes",
+    "about five seconds"
+   ],
+   "why": "You describe the photo for about one minute."
+  },
+  {
+   "q": "Which sentence says where the photo was taken?",
+   "o": [
+    "It was taken outside.",
+    "The boys are friends.",
+    "They are wearing coats."
+   ],
+   "why": "'Outside' tells us the place."
+  },
+  {
+   "q": "Complete: The boy ___ the left has short hair.",
+   "o": [
+    "on",
+    "in",
+    "at"
+   ],
+   "why": "We say on the left."
+  },
+  {
+   "q": "What does 'The boys are both wearing coats' describe?",
+   "o": [
+    "what the people look like",
+    "the place",
+    "the time"
+   ],
+   "why": "Clothes are part of appearance."
+  },
+  {
+   "q": "You are not sure. Complete: ___ they're at a party.",
+   "o": [
+    "I guess",
+    "Definitely",
+    "I'm sure"
+   ],
+   "why": "'I guess' shows you are not sure."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Shows a guess",
+   "a": "might",
+   "d": [
+    "definitely",
+    "always",
+    "never"
+   ]
+  },
+  {
+   "q": "Shows you are sure",
+   "a": "definitely",
+   "d": [
+    "might",
+    "maybe",
+    "I guess"
+   ]
+  },
+  {
+   "q": "Behind the main people",
+   "a": "background",
+   "d": [
+    "front",
+    "queue",
+    "fluency"
+   ]
+  },
+  {
+   "q": "___ a bus",
+   "a": "on",
+   "d": [
+    "in",
+    "at",
+    "to"
+   ]
+  },
+  {
+   "q": "The boy ___ the left",
+   "a": "on",
+   "d": [
+    "in",
+    "at",
+    "by"
+   ]
+  },
+  {
+   "q": "Length of the long turn",
+   "a": "one minute",
+   "d": [
+    "ten minutes",
+    "five seconds",
+    "one hour"
+   ]
+  },
+  {
+   "q": "Seconds for each stage",
+   "a": "15",
+   "d": [
+    "5",
+    "30",
+    "60"
+   ]
+  },
+  {
+   "q": "Stages in the description",
+   "a": "4",
+   "d": [
+    "2",
+    "6",
+    "10"
+   ]
+  },
+  {
+   "q": "Few pauses, little repetition",
+   "a": "fluency",
+   "d": [
+    "background",
+    "queue",
+    "grammar"
+   ]
+  },
+  {
+   "q": "Line of people waiting",
+   "a": "queue",
+   "d": [
+    "background",
+    "fluency",
+    "photo"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What are the four stages of a one-minute photo description?",
+   "o": [
+    "Introduce the idea, describe the place, the people's appearance, what they are doing",
+    "Name, age, address, email",
+    "Start, guess, stop, repeat",
+    "Read, write, listen, draw"
+   ],
+   "why": "Following stages keeps your description organised."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why do we say 'The friends might be watching a film'?",
+   "o": [
+    "We are guessing",
+    "We are sure",
+    "It happened yesterday",
+    "It is a command"
+   ],
+   "why": "Might shows possibility."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question words help you plan to speak for thirty seconds?",
+   "o": [
+    "who, what, where, when, why",
+    "a, an, the",
+    "but, so, also",
+    "yes, no, maybe"
+   ],
+   "why": "These questions give you ideas to talk about."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase introduces your opinion or guess?",
+   "o": [
+    "I think ...",
+    "Thank you",
+    "Goodbye",
+    "Here you are"
+   ],
+   "why": "I think ... shows your idea."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Improve: 'They are at home. They eat pizza.'",
+   "o": [
+    "They're definitely at home because there's a sofa, and they're eating pizza together.",
+    "They home. Pizza.",
+    "They are at home at home.",
+    "They ate pizza at home tomorrow."
+   ],
+   "why": "Reasons and the present continuous make it better."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Photo: three girls on a sofa with a laptop. Which sentence describes the action?",
+   "o": [
+    "They're looking at a laptop together.",
+    "This photo shows a typical scene.",
+    "In the background there's a window.",
+    "The girl on the left has long hair."
+   ],
+   "why": "Actions use the present continuous."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct order: photo / a typical scene / shows / this / in a supermarket",
+   "o": [
+    "This photo shows a typical scene in a supermarket.",
+    "This shows photo a typical scene in a supermarket.",
+    "A typical scene this photo shows in a supermarket.",
+    "In a supermarket shows this photo a typical scene."
+   ],
+   "why": "Subject + verb + object + place."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A student stops after 30 seconds. What could they add to fill one minute?",
+   "o": [
+    "People's appearance, clothes, more objects and the background",
+    "The same sentence again",
+    "Their own address",
+    "Nothing – 30 seconds is enough"
+   ],
+   "why": "More details help you speak for the full minute."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence gives a guess with a reason?",
+   "o": [
+    "I think they are sisters because they look similar.",
+    "They are sisters.",
+    "Sisters.",
+    "They were sisters yesterday."
+   ],
+   "why": "'I think' shows the guess and 'because' gives the reason."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it useful to organise a photo description into stages?",
+   "o": [
+    "It helps you speak fluently and not forget ideas",
+    "It makes the description shorter",
+    "It means you don't need to look at the photo",
+    "It stops you from using adjectives"
+   ],
+   "why": "A clear plan makes speaking easier."
+  }
+ ]
+}

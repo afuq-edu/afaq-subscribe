@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 2 – Then and now",
+ "lesson": "Lesson 1: Vocabulary – Technology",
+ "outcomes": [
+  "I can say technology words like keyboard, tablet, email and CD player.",
+  "I can use verb + noun phrases: carry a bag, call the doctor, study Maths.",
+  "I can describe an object for a partner to guess."
+ ],
+ "tf": [
+  {
+   "s": "You type on a keyboard.",
+   "t": true,
+   "why": "Yes! You touch the letters on it to write."
+  },
+  {
+   "s": "You use a CD player to send an email.",
+   "t": false,
+   "why": "You use a CD player to listen to music."
+  },
+  {
+   "s": "A mobile phone is a small telephone you carry with you.",
+   "t": true,
+   "why": "Right! Mobile means you can carry it."
+  },
+  {
+   "s": "You write a letter with a pen and some paper.",
+   "t": true,
+   "why": "Yes! An email is on a computer; a letter is on paper."
+  },
+  {
+   "s": "We say \"study the doctor\".",
+   "t": false,
+   "why": "We say call the doctor."
+  },
+  {
+   "s": "Email and letter are both messages.",
+   "t": true,
+   "why": "Great! That's why mouse is the odd one out."
+  },
+  {
+   "s": "A mouse in this lesson is a small animal.",
+   "t": false,
+   "why": "Here, a mouse is part of a computer."
+  },
+  {
+   "s": "We say \"carry a bag\" and \"study grammar\".",
+   "t": true,
+   "why": "Yes! These are verb + noun phrases."
+  },
+  {
+   "s": "A tablet is big and heavy, and you can't touch it.",
+   "t": false,
+   "why": "A tablet is small and flat; you touch it to play and read."
+  },
+  {
+   "s": "You can walk around with an old telephone, like a mobile phone.",
+   "t": false,
+   "why": "An old telephone stayed in the house; it wasn't mobile."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "You touch the letters on it to write. What is it?",
+   "o": [
+    "a keyboard",
+    "a mouse",
+    "a CD player"
+   ],
+   "why": "A keyboard has letters on it."
+  },
+  {
+   "q": "You use it to listen to music. What is it?",
+   "o": [
+    "a CD player",
+    "a keyboard",
+    "a letter"
+   ],
+   "why": "A CD player plays music."
+  },
+  {
+   "q": "I ___ my grandma on the phone every Friday.",
+   "o": [
+    "call",
+    "carry",
+    "study"
+   ],
+   "why": "We call people on the phone."
+  },
+  {
+   "q": "She ___ her school bag every day.",
+   "o": [
+    "carries",
+    "calls",
+    "studies"
+   ],
+   "why": "We carry a bag."
+  },
+  {
+   "q": "Which verb goes with \"Maths\"?",
+   "o": [
+    "study",
+    "call",
+    "carry"
+   ],
+   "why": "We study Maths."
+  },
+  {
+   "q": "Which is the odd one out?",
+   "o": [
+    "mouse",
+    "email",
+    "letter"
+   ],
+   "why": "Mouse is part of a computer; the others are messages."
+  },
+  {
+   "q": "A small telephone you carry with you is a ___.",
+   "o": [
+    "mobile phone",
+    "computer",
+    "keyboard"
+   ],
+   "why": "A mobile phone goes everywhere with you."
+  },
+  {
+   "q": "It's small and flat. You touch it to play games and read.",
+   "o": [
+    "a tablet",
+    "a letter",
+    "a telephone"
+   ],
+   "why": "That is a tablet."
+  },
+  {
+   "q": "You send this on a computer.",
+   "o": [
+    "an email",
+    "a letter",
+    "a CD"
+   ],
+   "why": "An email goes from one computer to another."
+  },
+  {
+   "q": "Which phrase is correct?",
+   "o": [
+    "call a friend",
+    "carry Maths",
+    "study the doctor"
+   ],
+   "why": "We call a friend."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "You type on it.",
+   "a": "keyboard",
+   "d": [
+    "mouse",
+    "letter",
+    "CD player"
+   ]
+  },
+  {
+   "q": "You click with it.",
+   "a": "mouse",
+   "d": [
+    "email",
+    "letter",
+    "tablet"
+   ]
+  },
+  {
+   "q": "It plays music.",
+   "a": "CD player",
+   "d": [
+    "keyboard",
+    "mouse",
+    "letter"
+   ]
+  },
+  {
+   "q": "Paper message with a pen",
+   "a": "letter",
+   "d": [
+    "email",
+    "tablet",
+    "mouse"
+   ]
+  },
+  {
+   "q": "Message on a computer",
+   "a": "email",
+   "d": [
+    "letter",
+    "keyboard",
+    "CD player"
+   ]
+  },
+  {
+   "q": "Phone you carry",
+   "a": "mobile phone",
+   "d": [
+    "telephone",
+    "computer",
+    "keyboard"
+   ]
+  },
+  {
+   "q": "___ the doctor",
+   "a": "call",
+   "d": [
+    "carry",
+    "study",
+    "type"
+   ]
+  },
+  {
+   "q": "___ a book",
+   "a": "carry",
+   "d": [
+    "call",
+    "type",
+    "send"
+   ]
+  },
+  {
+   "q": "___ grammar",
+   "a": "study",
+   "d": [
+    "carry",
+    "call",
+    "click"
+   ]
+  },
+  {
+   "q": "Flat; you touch it to read",
+   "a": "tablet",
+   "d": [
+    "keyboard",
+    "CD player",
+    "letter"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list has only technology nouns from the lesson?",
+   "o": [
+    "computer, keyboard, mouse, tablet",
+    "carry, call, study, write",
+    "kind, shy, rude, tidy",
+    "beard, curly, fair, tall"
+   ],
+   "why": "These are technology nouns."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which three verbs are in this lesson?",
+   "o": [
+    "carry, call, study",
+    "juggle, bake, fix",
+    "run, swim, jump",
+    "buy, sell, pay"
+   ],
+   "why": "Carry, call and study are the lesson's verbs."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do you do with a keyboard?",
+   "o": [
+    "You type on it.",
+    "You listen to music.",
+    "You carry water.",
+    "You eat with it."
+   ],
+   "why": "We type on a keyboard."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the learning tip in this lesson?",
+   "o": [
+    "Draw a table to remember phrases.",
+    "Close your eyes and sleep.",
+    "Say each word once.",
+    "Only learn nouns."
+   ],
+   "why": "A table helps you remember verb + noun phrases."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a table for \"play\". Which three nouns fit?",
+   "o": [
+    "football, computer games, the piano",
+    "the doctor, a friend, grandma",
+    "Maths, grammar, English",
+    "a bag, a book, a box"
+   ],
+   "why": "We play football, games and the piano."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a clue for \"tablet\". Which is best?",
+   "o": [
+    "It's small and flat. You touch it to play games and read.",
+    "You write it with a pen.",
+    "You listen to CDs on it.",
+    "It is part of a keyboard."
+   ],
+   "why": "This clue describes a tablet."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "\"I've got this thing at home. I do my homework on it. I type on its keyboard.\" What is it?",
+   "o": [
+    "a computer",
+    "a CD player",
+    "a letter",
+    "a telephone"
+   ],
+   "why": "A computer has a keyboard for homework."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is mouse the odd one out: email, letter, mouse?",
+   "o": [
+    "Mouse is part of a computer; email and letter are messages.",
+    "Mouse is a verb.",
+    "Mouse is the longest word.",
+    "Email and letter are animals."
+   ],
+   "why": "Email and letter are both messages."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair shows then and now?",
+   "o": [
+    "letter – email",
+    "keyboard – mouse",
+    "call – carry",
+    "Maths – grammar"
+   ],
+   "why": "People wrote letters; now they also send emails."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses the verb correctly?",
+   "o": [
+    "I study grammar every day.",
+    "I call my bag every day.",
+    "I carry the doctor every day.",
+    "I study my grandma on the phone."
+   ],
+   "why": "We study grammar."
+  }
+ ]
+}

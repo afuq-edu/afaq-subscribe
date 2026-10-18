@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 1: Free-time fun",
+ "lesson": "Unit 1 – Lesson 2: Team Talk – How often do you do sports?",
+ "outcomes": [
+  "I can understand how often Arlo and Sultan do sports.",
+  "I can ask and answer with \"How often do you …?\"",
+  "I can use Really?, I don't believe it! and You're so funny!"
+ ],
+ "tf": [
+  {
+   "s": "Arlo goes to school by scooter.",
+   "t": true,
+   "why": "Yes! Arlo gets to school by scooter."
+  },
+  {
+   "s": "Sultan does more sports than Arlo.",
+   "t": false,
+   "why": "Arlo does the most sports."
+  },
+  {
+   "s": "Sultan does gymnastics once a week.",
+   "t": true,
+   "why": "Correct! Sultan does gymnastics once a week."
+  },
+  {
+   "s": "Sultan does karate every Monday.",
+   "t": true,
+   "why": "Right! He does karate every Monday."
+  },
+  {
+   "s": "\"I don't believe it!\" shows that you are surprised.",
+   "t": true,
+   "why": "Yes, we say it when something surprises us."
+  },
+  {
+   "s": "\"You're so funny!\" is a way to say you are sad.",
+   "t": false,
+   "why": "We say \"You're so funny!\" when something makes us laugh."
+  },
+  {
+   "s": "\"Twice a week\" means one time every week.",
+   "t": false,
+   "why": "Twice a week means two times every week."
+  },
+  {
+   "s": "We ask \"How often do you …?\" to find out how many times you do something.",
+   "t": true,
+   "why": "Great! How often asks about frequency."
+  },
+  {
+   "s": "Sultan says \"I don't believe it!\" because Arlo does karate too.",
+   "t": true,
+   "why": "Yes, he is surprised that Arlo does karate too."
+  },
+  {
+   "s": "\"Every day\" means only on Mondays.",
+   "t": false,
+   "why": "Every day means all the days of the week."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How does Arlo get to school?",
+   "o": [
+    "by scooter",
+    "by bus",
+    "by bike"
+   ],
+   "why": "Arlo goes by scooter."
+  },
+  {
+   "q": "Who does the most sports?",
+   "o": [
+    "Arlo",
+    "Sultan",
+    "Julia"
+   ],
+   "why": "Arlo does the most sports."
+  },
+  {
+   "q": "How often does Sultan do gymnastics?",
+   "o": [
+    "once a week",
+    "every day",
+    "twice a week"
+   ],
+   "why": "He does it once a week."
+  },
+  {
+   "q": "Sultan does karate every ___.",
+   "o": [
+    "Monday",
+    "Friday",
+    "morning"
+   ],
+   "why": "Sultan does karate every Monday."
+  },
+  {
+   "q": "Which expression shows surprise?",
+   "o": [
+    "I don't believe it!",
+    "You're so funny!",
+    "Good morning!"
+   ],
+   "why": "I don't believe it! shows surprise."
+  },
+  {
+   "q": "\"I can stand on one leg and make a face.\" You say:",
+   "o": [
+    "You're so funny!",
+    "I don't believe it!",
+    "How often?"
+   ],
+   "why": "A funny action gets \"You're so funny!\""
+  },
+  {
+   "q": "___ often do you go swimming?",
+   "o": [
+    "How",
+    "What",
+    "Who"
+   ],
+   "why": "We ask How often."
+  },
+  {
+   "q": "Two times a week =",
+   "o": [
+    "twice a week",
+    "once a week",
+    "every week"
+   ],
+   "why": "Two times is twice."
+  },
+  {
+   "q": "___ you play football every week?",
+   "o": [
+    "Do",
+    "Does",
+    "Are"
+   ],
+   "why": "We use Do with you."
+  },
+  {
+   "q": "___ Arlo do karate?",
+   "o": [
+    "Does",
+    "Do",
+    "Is"
+   ],
+   "why": "We use Does with he, she or a name."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "One time a week",
+   "a": "once a week",
+   "d": [
+    "twice a week",
+    "every day",
+    "not very often"
+   ]
+  },
+  {
+   "q": "Two times a week",
+   "a": "twice a week",
+   "d": [
+    "once a week",
+    "every day",
+    "at the weekends"
+   ]
+  },
+  {
+   "q": "All seven days",
+   "a": "every day",
+   "d": [
+    "once a week",
+    "sometimes",
+    "every Monday"
+   ]
+  },
+  {
+   "q": "Arlo goes to school by ...",
+   "a": "scooter",
+   "d": [
+    "bus",
+    "car",
+    "bike"
+   ]
+  },
+  {
+   "q": "He does the most sports.",
+   "a": "Arlo",
+   "d": [
+    "Sultan",
+    "Julia",
+    "Reem"
+   ]
+  },
+  {
+   "q": "Sultan does karate every ...",
+   "a": "Monday",
+   "d": [
+    "Friday",
+    "morning",
+    "Sunday"
+   ]
+  },
+  {
+   "q": "Sultan does it once a week.",
+   "a": "gymnastics",
+   "d": [
+    "skiing",
+    "hockey",
+    "swimming"
+   ]
+  },
+  {
+   "q": "Shows surprise: ...?",
+   "a": "Really",
+   "d": [
+    "Funny",
+    "Hello",
+    "Goodbye"
+   ]
+  },
+  {
+   "q": "___ often do you swim?",
+   "a": "How",
+   "d": [
+    "What",
+    "Who",
+    "Where"
+   ]
+  },
+  {
+   "q": "___ she play hockey?",
+   "a": "Does",
+   "d": [
+    "Do",
+    "Is",
+    "Are"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is a frequency expression?",
+   "o": [
+    "once a week",
+    "by scooter",
+    "a helmet",
+    "very tall"
+   ],
+   "why": "Once a week tells us how often."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which expression do you use when something makes you laugh?",
+   "o": [
+    "You're so funny!",
+    "I don't believe it!",
+    "Really?",
+    "Once a week."
+   ],
+   "why": "We say \"You're so funny!\" when someone is funny."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which frequency expression means \"not many times\"?",
+   "o": [
+    "not very often",
+    "every day",
+    "twice a week",
+    "every Monday"
+   ],
+   "why": "Not very often means only a few times."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does \"I'm learning to swim\" mean?",
+   "o": [
+    "I'm starting to swim and I'm not good at it yet.",
+    "I swim very well.",
+    "I never swim.",
+    "I swim every Monday."
+   ],
+   "why": "Learning means you are still practising."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "\"I go swimming at 5.30 every morning.\" What can you say?",
+   "o": [
+    "I don't believe it!",
+    "You're so funny!",
+    "Once a week.",
+    "By scooter."
+   ],
+   "why": "Swimming so early is surprising."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which question is correct?",
+   "o": [
+    "How often do you go swimming?",
+    "How often you go swimming?",
+    "How often does you go swimming?",
+    "How often are you go swimming?"
+   ],
+   "why": "How often + do + you + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is correct?",
+   "o": [
+    "I play football twice a week.",
+    "I play football two a week.",
+    "I twice play football a week.",
+    "I play football once twice."
+   ],
+   "why": "We say twice a week."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Sultan say \"I don't believe it!\"?",
+   "o": [
+    "He is surprised that Arlo does karate too.",
+    "He thinks Arlo is funny.",
+    "He is angry with Arlo.",
+    "He can't hear Arlo."
+   ],
+   "why": "He didn't expect Arlo to do karate too."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ali swims every day. Sami swims once a week. Who swims more often?",
+   "o": [
+    "Ali",
+    "Sami",
+    "They swim the same.",
+    "We can't know."
+   ],
+   "why": "Every day is more often than once a week."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"I'm learning Portuguese.\" Which reply fits best?",
+   "o": [
+    "Really?",
+    "You're so funny!",
+    "Twice a week.",
+    "By scooter."
+   ],
+   "why": "Really? shows interest and surprise."
+  }
+ ]
+}

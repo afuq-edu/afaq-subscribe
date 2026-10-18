@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 2: Connections",
+ "lesson": "Lesson 7: Switch On – You and your phone (video interviews and project)",
+ "outcomes": [
+  "Understand people's ideas about a week without a phone.",
+  "Hear and say the difference between I, I'd and I'll.",
+  "Compare life in the 1980s with life now and present my group's ideas."
+ ],
+ "tf": [
+  {
+   "s": "Maxwell mentions writing to people offline.",
+   "t": true,
+   "why": "He talks about writing to people without the internet."
+  },
+  {
+   "s": "Sophie says she would be early every day without her phone.",
+   "t": false,
+   "why": "Sophie says she would be late every day."
+  },
+  {
+   "s": "Jack seemed relaxed about a week without his phone.",
+   "t": true,
+   "why": "He isn't on it much and likes camps with the scouts."
+  },
+  {
+   "s": "'I'll' is the short form of 'I will'.",
+   "t": true,
+   "why": "I + will = I'll."
+  },
+  {
+   "s": "'I'd' is the short form of 'I will'.",
+   "t": false,
+   "why": "I'd is the short form of 'I would' (or I had)."
+  },
+  {
+   "s": "To find the average phone time, you add the times and divide by the number of people.",
+   "t": true,
+   "why": "That's how we calculate an average."
+  },
+  {
+   "s": "Teenagers in the 1980s used mobile phones to chat to friends.",
+   "t": false,
+   "why": "They didn't have mobile phones; they used landline phones."
+  },
+  {
+   "s": "'Keep in touch' means stay in contact with someone.",
+   "t": true,
+   "why": "We keep in touch by calling, writing or meeting."
+  },
+  {
+   "s": "A disadvantage of a week without a phone is that it can be harder to contact online friends.",
+   "t": true,
+   "why": "This is one possible disadvantage."
+  },
+  {
+   "s": "The small difference between I, I'd and I'll is impossible to hear.",
+   "t": false,
+   "why": "It is small, but you can hear it with practice."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which speaker mentions writing to people offline?",
+   "o": [
+    "Maxwell",
+    "Sophie",
+    "Jack"
+   ],
+   "why": "Maxwell talks about writing offline."
+  },
+  {
+   "q": "Which speaker says she would be late every day without her phone?",
+   "o": [
+    "Sophie",
+    "Aisha",
+    "Zoe"
+   ],
+   "why": "Sophie uses her phone to be on time."
+  },
+  {
+   "q": "'I'd' is the short form of ...",
+   "o": [
+    "I would",
+    "I will",
+    "I do"
+   ],
+   "why": "I + would = I'd."
+  },
+  {
+   "q": "Complete: I think ___ be quite bored. (prediction)",
+   "o": [
+    "I'll",
+    "I",
+    "I'd to"
+   ],
+   "why": "I'll = I will, for a prediction."
+  },
+  {
+   "q": "Complete: ___ probably hang out with them.",
+   "o": [
+    "I'd",
+    "I",
+    "I'll to"
+   ],
+   "why": "I'd = I would, for an imagined situation."
+  },
+  {
+   "q": "How did teenagers chat to friends in the 1980s?",
+   "o": [
+    "on a landline phone",
+    "on social media",
+    "with video calls"
+   ],
+   "why": "Mobile phones and the internet weren't common then."
+  },
+  {
+   "q": "Complete: In the 1980s, people ___ (buy) tickets at the stadium.",
+   "o": [
+    "bought",
+    "buyed",
+    "buy"
+   ],
+   "why": "Buy is irregular: buy – bought."
+  },
+  {
+   "q": "What does 'make arrangements' mean?",
+   "o": [
+    "plan when and where to meet",
+    "break a phone",
+    "delete messages"
+   ],
+   "why": "We make arrangements to meet people."
+  },
+  {
+   "q": "Which is an advantage of a week without a phone?",
+   "o": [
+    "more time for homework and sleep",
+    "more screen time",
+    "more online games"
+   ],
+   "why": "Less phone time can mean more time for other things."
+  },
+  {
+   "q": "Which sentence compares then and now?",
+   "o": [
+    "Buying tickets is easier now than in the 1980s.",
+    "I buy tickets.",
+    "Tickets are tickets."
+   ],
+   "why": "'Easier ... than' compares two times."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Writes to people offline",
+   "a": "Maxwell",
+   "d": [
+    "Sophie",
+    "Jack",
+    "Zoe"
+   ]
+  },
+  {
+   "q": "Late every day without it",
+   "a": "Sophie",
+   "d": [
+    "Maxwell",
+    "Jack",
+    "Ethan"
+   ]
+  },
+  {
+   "q": "Jack likes camps with the",
+   "a": "scouts",
+   "d": [
+    "teachers",
+    "neighbours",
+    "doctors"
+   ]
+  },
+  {
+   "q": "Short form of 'I will'",
+   "a": "I'll",
+   "d": [
+    "I'd",
+    "I",
+    "I'm"
+   ]
+  },
+  {
+   "q": "Short form of 'I would'",
+   "a": "I'd",
+   "d": [
+    "I'll",
+    "I",
+    "I'm"
+   ]
+  },
+  {
+   "q": "1980s phone at home",
+   "a": "landline",
+   "d": [
+    "smartphone",
+    "tablet",
+    "laptop"
+   ]
+  },
+  {
+   "q": "Past simple of 'buy'",
+   "a": "bought",
+   "d": [
+    "buyed",
+    "brought",
+    "buys"
+   ]
+  },
+  {
+   "q": "Stay in contact",
+   "a": "keep in touch",
+   "d": [
+    "take up",
+    "die out",
+    "fly by"
+   ]
+  },
+  {
+   "q": "Time spent on screens",
+   "a": "screen time",
+   "d": [
+    "free time",
+    "bedtime",
+    "lunchtime"
+   ]
+  },
+  {
+   "q": "Decade in the project",
+   "a": "the 1980s",
+   "d": [
+    "the 1880s",
+    "the 2080s",
+    "the 1580s"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What did groups calculate in Ex 1?",
+   "o": [
+    "their average daily phone time",
+    "the price of a phone",
+    "the number of apps in the world",
+    "the length of the video"
+   ],
+   "why": "They worked out the group's average phone time."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the video ask the speakers about?",
+   "o": [
+    "a week without their phone",
+    "their favourite food",
+    "their first school day",
+    "a trip to the 1980s"
+   ],
+   "why": "The interviews are about a week without a phone."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How did people get holiday information in the 1980s?",
+   "o": [
+    "from newspapers, phone calls and visiting places",
+    "from apps",
+    "from video calls",
+    "from social media"
+   ],
+   "why": "There were no smartphones, so people used other ways."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which speaker seemed relaxed about a week without a phone?",
+   "o": [
+    "Jack",
+    "Sophie",
+    "Ethan",
+    "Aisha"
+   ],
+   "why": "Jack isn't on his phone much."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: If I didn't have my phone, ___ write letters to my friends.",
+   "o": [
+    "I'd",
+    "I'll",
+    "I",
+    "I'm"
+   ],
+   "why": "An imagined situation uses would: I'd."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Don't worry, ___ call you later.",
+   "o": [
+    "I'll",
+    "I'd",
+    "I",
+    "I'm"
+   ],
+   "why": "A promise or decision uses will: I'll."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Three friends use their phones for 2, 3 and 4 hours a day. What is the average?",
+   "o": [
+    "3 hours",
+    "9 hours",
+    "2 hours",
+    "4 hours"
+   ],
+   "why": "(2 + 3 + 4) ÷ 3 = 3."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why did Jack think a week without his phone would be nice?",
+   "o": [
+    "He isn't on it much and enjoys camps with the scouts",
+    "He wants to sleep all day",
+    "His phone is broken",
+    "He doesn't have any friends"
+   ],
+   "why": "He likes getting off screens."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is a way life was better without phones?",
+   "o": [
+    "People met face to face more and had less screen time",
+    "Buying tickets was faster",
+    "People could contact anyone instantly",
+    "Shops were open all night"
+   ],
+   "why": "Less screen time meant more real-life contact."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is a way life is better now with phones?",
+   "o": [
+    "We can contact people quickly and buy tickets online",
+    "We queue longer for tickets",
+    "We read only paper maps",
+    "We can't find information"
+   ],
+   "why": "Phones make many tasks faster."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Units 1–4 – Semester review",
+ "lesson": "Semester review: Grammar reference, Solve it and Progress path",
+ "outcomes": [
+  "Remember the main grammar of Units 1–4.",
+  "Choose the correct grammar form in sentences.",
+  "Check your progress and set a goal for next semester."
+ ],
+ "tf": [
+  {
+   "s": "\"Hamed is the best tennis player in the class.\" is correct.",
+   "t": true,
+   "why": "good → better → best."
+  },
+  {
+   "s": "\"When I was one, I could walk, but I couldn't talk.\" uses could for the past.",
+   "t": true,
+   "why": "could / couldn't = past ability."
+  },
+  {
+   "s": "The negative of \"I will get him a book.\" is \"I don't will get him a book.\"",
+   "t": false,
+   "why": "The negative is: I won't get him a book."
+  },
+  {
+   "s": "\"He has to get some pocket money.\" is correct.",
+   "t": true,
+   "why": "With he we use has to."
+  },
+  {
+   "s": "We use \"which\" for people.",
+   "t": false,
+   "why": "We use who for people and which for things."
+  },
+  {
+   "s": "\"It's the shop where my brother works.\" is correct.",
+   "t": true,
+   "why": "A shop is a place, so we use where."
+  },
+  {
+   "s": "1,000,000 is \"a thousand\".",
+   "t": false,
+   "why": "1,000,000 is a million."
+  },
+  {
+   "s": "A planet is something people make.",
+   "t": false,
+   "why": "A planet is natural. Satellites, space stations and rockets are made by people."
+  },
+  {
+   "s": "\"I visited my grandma yesterday.\" is in the past simple.",
+   "t": true,
+   "why": "visited is the past simple of visit."
+  },
+  {
+   "s": "We ask about the depth of a sea with \"How deep …?\"",
+   "t": true,
+   "why": "How deep is the Sea of Oman?"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: Hamed is the ______ (good) tennis player in the class.",
+   "o": [
+    "best",
+    "goodest",
+    "better"
+   ],
+   "why": "good → better → best."
+  },
+  {
+   "q": "Complete: When I was one, I ______ walk, but I couldn't talk.",
+   "o": [
+    "could",
+    "can",
+    "will"
+   ],
+   "why": "could for past ability."
+  },
+  {
+   "q": "Make it negative: I will get him a book.",
+   "o": [
+    "I won't get him a book.",
+    "I willn't get him a book.",
+    "I not will get him a book."
+   ],
+   "why": "will not = won't."
+  },
+  {
+   "q": "Complete: He ______ get some pocket money. (have to)",
+   "o": [
+    "has to",
+    "have to",
+    "haves to"
+   ],
+   "why": "he/she + has to."
+  },
+  {
+   "q": "Choose: It's the shop (who / which / where) my brother works.",
+   "o": [
+    "where",
+    "who",
+    "which"
+   ],
+   "why": "Places take where."
+  },
+  {
+   "q": "What number is this: 1,000,000?",
+   "o": [
+    "a million",
+    "a thousand",
+    "ten thousand"
+   ],
+   "why": "Six zeros = a million."
+  },
+  {
+   "q": "Circle the odd one out: satellite, planet, space station, rocket.",
+   "o": [
+    "planet",
+    "satellite",
+    "rocket"
+   ],
+   "why": "A planet is natural; the others are made by people."
+  },
+  {
+   "q": "Which unit grammar is \"who / which / where\"?",
+   "o": [
+    "relative clauses",
+    "past simple",
+    "big numbers"
+   ],
+   "why": "who, which and where make relative clauses."
+  },
+  {
+   "q": "Complete: Before I go to school, I ______ breakfast.",
+   "o": [
+    "have",
+    "had",
+    "having"
+   ],
+   "why": "We use the present simple for routines."
+  },
+  {
+   "q": "Which sentence is about the future?",
+   "o": [
+    "I'll play football tomorrow.",
+    "I played football yesterday.",
+    "I could play football when I was six."
+   ],
+   "why": "I'll = I will, for the future."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "good → better → ___",
+   "a": "best",
+   "d": [
+    "goodest",
+    "more good",
+    "gooder"
+   ]
+  },
+  {
+   "q": "Past of can",
+   "a": "could",
+   "d": [
+    "can't",
+    "will",
+    "has to"
+   ]
+  },
+  {
+   "q": "Negative of will",
+   "a": "won't",
+   "d": [
+    "don't",
+    "didn't",
+    "can't"
+   ]
+  },
+  {
+   "q": "She ___ study. (necessary)",
+   "a": "has to",
+   "d": [
+    "have to",
+    "having to",
+    "haves to"
+   ]
+  },
+  {
+   "q": "Relative word for people",
+   "a": "who",
+   "d": [
+    "which",
+    "where",
+    "when"
+   ]
+  },
+  {
+   "q": "Relative word for places",
+   "a": "where",
+   "d": [
+    "who",
+    "which",
+    "what"
+   ]
+  },
+  {
+   "q": "Write: 1,000,000",
+   "a": "a million",
+   "d": [
+    "a thousand",
+    "a hundred",
+    "ten thousand"
+   ]
+  },
+  {
+   "q": "Past of visit",
+   "a": "visited",
+   "d": [
+    "visits",
+    "visiting",
+    "will visit"
+   ]
+  },
+  {
+   "q": "How ___ is the mountain?",
+   "a": "high",
+   "d": [
+    "deep",
+    "far",
+    "much"
+   ]
+  },
+  {
+   "q": "Past of go",
+   "a": "went",
+   "d": [
+    "goed",
+    "goes",
+    "going"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which grammar is in Unit 3?",
+   "o": [
+    "will / won't and How …?",
+    "have to / don't have to",
+    "comparatives and superlatives",
+    "past simple and could"
+   ],
+   "why": "Unit 3 has will / won't and How …?"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which grammar is in Unit 4?",
+   "o": [
+    "who / which / where and have to",
+    "will and How …?",
+    "past simple and could",
+    "comparatives and be good at"
+   ],
+   "why": "Unit 4 has relative clauses and have to."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence uses be good at correctly?",
+   "o": [
+    "She's good at drawing.",
+    "She's good in drawing.",
+    "She good at drawing.",
+    "She's good at draw."
+   ],
+   "why": "be good at + -ing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence shows self-assessment?",
+   "o": [
+    "Now I can … I need to work more on …",
+    "How much is it?",
+    "Let's go to the kiosk.",
+    "It's the man who we saw."
+   ],
+   "why": "We say what we can do and what we need to practise."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write one sentence with have to.",
+   "o": [
+    "I have to do my homework.",
+    "I has to do my homework.",
+    "I have to doing my homework.",
+    "I having to do my homework."
+   ],
+   "why": "I + have to + base verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "What could you do when you were five? Choose the correct answer.",
+   "o": [
+    "I could ride a bike, but I couldn't swim.",
+    "I can ride a bike, but I can't swam.",
+    "I could rode a bike.",
+    "I will ride a bike when I was five."
+   ],
+   "why": "could + base verb for the past."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Describe your friend in one sentence.",
+   "o": [
+    "She's got long, dark hair and she's very kind.",
+    "She have got long hair.",
+    "She's got long, dark hair and she very kind.",
+    "She is got long hair."
+   ],
+   "why": "She's got + appearance, and she's + personality."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "He will sends a letter.",
+    "I'll play football tomorrow.",
+    "He has to get some pocket money.",
+    "That's the woman who works at the shop."
+   ],
+   "why": "After will we use the base verb: will send."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"I can describe people well. I need to work more on the past simple.\" What is this student doing?",
+   "o": [
+    "assessing their own progress",
+    "making a suggestion",
+    "asking for a price",
+    "telling a story"
+   ],
+   "why": "They say what they can do and what to practise."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence compares two people correctly?",
+   "o": [
+    "Ali is taller than Omar.",
+    "Ali is tallest than Omar.",
+    "Ali is more tall than Omar.",
+    "Ali is the taller than Omar."
+   ],
+   "why": "For two people we use -er than."
+  }
+ ]
+}

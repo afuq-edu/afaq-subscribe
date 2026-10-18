@@ -1,0 +1,267 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U2",
+ "lesson": "Unit 2 – Lesson 11: Get ready for A1 Movers & Fun corner",
+ "outcomes": [
+  "Choose the best answer in a short dialogue.",
+  "Say which picture is different and why.",
+  "Write a healthy shopping list and ask for food politely."
+ ],
+ "tf": [
+  {
+   "s": "A shopping list tells you what to buy.",
+   "t": true,
+   "why": "Yes! You write the things you want to buy."
+  },
+  {
+   "s": "'Is there any water?' 'Yes, there are.' is correct.",
+   "t": false,
+   "why": "Water is uncountable: 'Yes, there is.'"
+  },
+  {
+   "s": "A good exam tip is to read each option and say it in your head.",
+   "t": true,
+   "why": "Great tip! It helps you choose the best answer."
+  },
+  {
+   "s": "Crisps are a healthy food.",
+   "t": false,
+   "why": "Crisps aren't very healthy. Fruit and vegetables are healthy."
+  },
+  {
+   "s": "A cupcake is very healthy because it's sweet.",
+   "t": false,
+   "why": "A cupcake is sweet, so it isn't very healthy."
+  },
+  {
+   "s": "You pay at the checkout in a shop.",
+   "t": true,
+   "why": "Correct! The checkout is where you pay."
+  },
+  {
+   "s": "Vegetables are good for a healthy shopping list.",
+   "t": true,
+   "why": "Well done! Vegetables are healthy."
+  },
+  {
+   "s": "We use 'because' to say why a picture is different.",
+   "t": true,
+   "why": "Yes! 'This one is different because ...'"
+  },
+  {
+   "s": "Dad asks Zaid to go to school.",
+   "t": false,
+   "why": "Dad asks Zaid to go to the shops."
+  },
+  {
+   "s": "In the board game, you ask 'Can I have ..., please?'",
+   "t": true,
+   "why": "Correct! That is polite."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Dad: Can you go to the shops for me? Zaid: ...",
+   "o": [
+    "Yes, I can.",
+    "Yes, there is.",
+    "Yes, we do."
+   ],
+   "why": "A 'Can you' question: 'Yes, I can.'"
+  },
+  {
+   "q": "Dad: Do we need anything else? Zaid: ...",
+   "o": [
+    "Yes, we do.",
+    "Yes, I can.",
+    "Yes, there are."
+   ],
+   "why": "A 'Do we' question: 'Yes, we do.'"
+  },
+  {
+   "q": "Dad: Great, thanks Zaid! Bye! Zaid: ...",
+   "o": [
+    "Bye!",
+    "Yes, there is.",
+    "Here you are."
+   ],
+   "why": "We answer 'Bye!' with 'Bye!'"
+  },
+  {
+   "q": "Which item is healthy?",
+   "o": [
+    "vegetables",
+    "cupcakes",
+    "crisps"
+   ],
+   "why": "Vegetables are healthy."
+  },
+  {
+   "q": "Ask for water politely.",
+   "o": [
+    "Can I have a bottle of water, please?",
+    "Water now!",
+    "Give me a water."
+   ],
+   "why": "Use 'Can I have ..., please?'"
+  },
+  {
+   "q": "The shopkeeper gives you food. He says...",
+   "o": [
+    "Here you are.",
+    "Bye!",
+    "Yes, we do."
+   ],
+   "why": "We say 'Here you are' when we give something."
+  },
+  {
+   "q": "Complete: This one is different ___ ...",
+   "o": [
+    "because",
+    "but",
+    "and"
+   ],
+   "why": "'Because' gives the reason."
+  },
+  {
+   "q": "Which goes in a bottle?",
+   "o": [
+    "water",
+    "cheese",
+    "bread"
+   ],
+   "why": "Bottles are for drinks like water."
+  },
+  {
+   "q": "Which is a vegetable?",
+   "o": [
+    "carrot",
+    "cupcake",
+    "milkshake"
+   ],
+   "why": "A carrot is a vegetable."
+  },
+  {
+   "q": "Which word means 'good for your body'?",
+   "o": [
+    "healthy",
+    "empty",
+    "popular"
+   ],
+   "why": "Healthy food is good for your body."
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Dad: Is there any milk? Zaid: ...",
+   "o": [
+    "Yes, there is.",
+    "Yes, there are.",
+    "Yes, I can.",
+    "Yes, we do."
+   ],
+   "why": "Milk is uncountable: 'Yes, there is.'"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Dad: Are there any eggs? Zaid: ...",
+   "o": [
+    "Yes, there are.",
+    "Yes, there is.",
+    "Yes, I can.",
+    "Bye!"
+   ],
+   "why": "Eggs are plural: 'Yes, there are.'"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where does Dad want Zaid to go?",
+   "o": [
+    "to the shops",
+    "to school",
+    "to the park",
+    "to the beach"
+   ],
+   "why": "Dad asks: Can you go to the shops for me?"
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should you do with each answer option in the exam?",
+   "o": [
+    "Read it and say it in your head.",
+    "Skip it.",
+    "Draw it.",
+    "Read only the first one."
+   ],
+   "why": "Reading each option helps you choose."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which shopping list is the most healthy?",
+   "o": [
+    "apples, carrots, water, fish",
+    "cupcakes, crisps, sweets, cake",
+    "crisps, cake, lemonade, sweets",
+    "ice cream, cupcakes, crisps, cake"
+   ],
+   "why": "Fruit, vegetables, water and fish are healthy."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want two apples in the game. What do you say?",
+   "o": [
+    "Can I have two apples, please?",
+    "Are there two apples?",
+    "Here you are, two apples.",
+    "Yes, I can."
+   ],
+   "why": "Ask politely with 'Can I have ...?'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture A has three apples. Picture B has two apples. Which sentence is right?",
+   "o": [
+    "In Picture A there are three apples.",
+    "In Picture A there is three apples.",
+    "In Picture B there are three apples.",
+    "In Picture A there are two apples."
+   ],
+   "why": "Picture A has three apples: 'there are three apples'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is different: apple, banana, orange, carrot?",
+   "o": [
+    "carrot, because it's a vegetable",
+    "apple, because it's round",
+    "banana, because it's yellow",
+    "orange, because it's a colour"
+   ],
+   "why": "Apple, banana and orange are fruit; a carrot is a vegetable."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'a bottle of cheese' wrong?",
+   "o": [
+    "We don't put cheese in a bottle.",
+    "Cheese is a drink.",
+    "Bottles are for bread.",
+    "Cheese is a fruit."
+   ],
+   "why": "Bottles are for drinks like water."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is fruit better than a cupcake for a healthy list?",
+   "o": [
+    "A cupcake is sweet, but fruit is healthy.",
+    "Fruit is always pink.",
+    "Cupcakes are vegetables.",
+    "Fruit is in a bottle."
+   ],
+   "why": "Sweet food is not very healthy."
+  }
+ ]
+}

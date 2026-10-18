@@ -89,13 +89,13 @@
    "why": "Huda's comment is about cooking."
   },
   {
-   "q": "Who had a new computer from her dad?",
+   "q": "Basil wants to read about ___.",
    "o": [
-    "Omaima",
-    "Rahaf",
-    "Huda"
+    "sports",
+    "recipes",
+    "museums"
    ],
-   "why": "Omaima got a new computer from her dad."
+   "why": "Basil loves sports and wants to be happy and healthy."
   },
   {
    "q": "Faisal wants to read about ___ clothes.",
@@ -107,13 +107,13 @@
    "why": "Faisal is interested in traditional clothes around the world."
   },
   {
-   "q": "Who wants to know about places in the past?",
+   "q": "\"Good morning, and ___ to the start of this new school year.\"",
    "o": [
-    "Rahaf",
-    "Basil",
-    "Omaima"
+    "welcome",
+    "goodbye",
+    "sorry"
    ],
-   "why": "Rahaf went to a museum, so she likes the past."
+   "why": "We say welcome to greet people."
   },
   {
    "q": "Answer: How old are you?",

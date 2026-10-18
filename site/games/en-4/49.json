@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U4",
+ "lesson": "Unit 4 – Lesson 9: Phonics (oo, ue, ew)",
+ "outcomes": [
+  "Say and read words with the long 'oo' sound spelled oo, ue and ew.",
+  "Write long 'oo' words with the correct spelling.",
+  "Say the tongue twister clearly."
+ ],
+ "tf": [
+  {
+   "s": "'Blue' and 'moon' have the same long 'oo' sound.",
+   "t": true,
+   "why": "Yes! bl-ue and m-oo-n."
+  },
+  {
+   "s": "'Screw' is spelled with ew.",
+   "t": true,
+   "why": "Correct! s-c-r-ew."
+  },
+  {
+   "s": "'Glue' is spelled with oo.",
+   "t": false,
+   "why": "Glue is spelled with ue: g-l-ue."
+  },
+  {
+   "s": "'Book' has the same long sound as 'boot'.",
+   "t": false,
+   "why": "Book has a short sound. Boot has a long 'oo'."
+  },
+  {
+   "s": "'Food' and 'noon' are spelled with oo.",
+   "t": true,
+   "why": "Well done! f-oo-d, n-oo-n."
+  },
+  {
+   "s": "'Chew' and 'stew' are spelled with ew.",
+   "t": true,
+   "why": "Yes! Both end in ew."
+  },
+  {
+   "s": "'Jewel' is spelled with ue.",
+   "t": false,
+   "why": "Jewel is spelled with ew: j-ew-el."
+  },
+  {
+   "s": "The tongue twister is 'There's a blue screw in my boot!'",
+   "t": true,
+   "why": "Correct! blue, screw, boot."
+  },
+  {
+   "s": "'Blue' is a colour.",
+   "t": true,
+   "why": "Yes! Blue is a colour."
+  },
+  {
+   "s": "'Moon' is spelled with ew.",
+   "t": false,
+   "why": "Moon is spelled with oo: m-oo-n."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which spelling? bl___ (a colour)",
+   "o": [
+    "ue",
+    "oo",
+    "ew"
+   ],
+   "why": "Blue is spelled b-l-ue."
+  },
+  {
+   "q": "Which spelling? scr___",
+   "o": [
+    "ew",
+    "oo",
+    "ue"
+   ],
+   "why": "Screw is spelled s-c-r-ew."
+  },
+  {
+   "q": "Which spelling? m___n",
+   "o": [
+    "oo",
+    "ue",
+    "ew"
+   ],
+   "why": "Moon is spelled m-oo-n."
+  },
+  {
+   "q": "Odd one out (sound):",
+   "o": [
+    "book",
+    "boot",
+    "chew"
+   ],
+   "why": "Book has a short sound."
+  },
+  {
+   "q": "Which word has ue?",
+   "o": [
+    "glue",
+    "food",
+    "stew"
+   ],
+   "why": "Glue is spelled g-l-ue."
+  },
+  {
+   "q": "Which word has ew?",
+   "o": [
+    "jewel",
+    "noon",
+    "blue"
+   ],
+   "why": "Jewel is spelled j-ew-el."
+  },
+  {
+   "q": "Which spelling? f___d",
+   "o": [
+    "oo",
+    "ew",
+    "ue"
+   ],
+   "why": "Food is spelled f-oo-d."
+  },
+  {
+   "q": "There's a blue screw in my ___!",
+   "o": [
+    "boot",
+    "book",
+    "bag"
+   ],
+   "why": "The tongue twister ends with boot."
+  },
+  {
+   "q": "Which spelling? ch___",
+   "o": [
+    "ew",
+    "oo",
+    "ue"
+   ],
+   "why": "Chew is spelled c-h-ew."
+  },
+  {
+   "q": "12 o'clock in the day = ?",
+   "o": [
+    "noon",
+    "moon",
+    "stew"
+   ],
+   "why": "Noon is 12 o'clock in the day."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Missing letters: bl___",
+   "a": "ue",
+   "d": [
+    "oo",
+    "ew",
+    "oa"
+   ]
+  },
+  {
+   "q": "Missing letters: scr___",
+   "a": "ew",
+   "d": [
+    "ue",
+    "oo",
+    "ay"
+   ]
+  },
+  {
+   "q": "Missing letters: m___n",
+   "a": "oo",
+   "d": [
+    "ue",
+    "ew",
+    "ai"
+   ]
+  },
+  {
+   "q": "Missing letters: gl___",
+   "a": "ue",
+   "d": [
+    "oo",
+    "ew",
+    "ee"
+   ]
+  },
+  {
+   "q": "Missing letters: st___",
+   "a": "ew",
+   "d": [
+    "oo",
+    "ue",
+    "ay"
+   ]
+  },
+  {
+   "q": "Missing letters: b___ts",
+   "a": "oo",
+   "d": [
+    "ue",
+    "ew",
+    "oa"
+   ]
+  },
+  {
+   "q": "Missing letters: j___el",
+   "a": "ew",
+   "d": [
+    "oo",
+    "ue",
+    "ai"
+   ]
+  },
+  {
+   "q": "Missing letters: n___n",
+   "a": "oo",
+   "d": [
+    "ew",
+    "ue",
+    "ee"
+   ]
+  },
+  {
+   "q": "Short sound, not long 'oo'",
+   "a": "book",
+   "d": [
+    "boot",
+    "blue",
+    "chew"
+   ]
+  },
+  {
+   "q": "Find the ew word",
+   "a": "chew",
+   "d": [
+    "glue",
+    "food",
+    "moon"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word has the long 'oo' sound?",
+   "o": [
+    "moon",
+    "book",
+    "bag",
+    "bed"
+   ],
+   "why": "Moon has the long 'oo' sound."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group has only oo words?",
+   "o": [
+    "boots, moon, noon, food",
+    "blue, glue, screw",
+    "chew, stew, jewel",
+    "blue, moon, chew"
+   ],
+   "why": "They are all spelled with oo."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group has only ew words?",
+   "o": [
+    "screw, chew, stew, jewel",
+    "blue, glue",
+    "boots, food",
+    "moon, blue, jewel"
+   ],
+   "why": "They are all spelled with ew."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two words are spelled with ue?",
+   "o": [
+    "blue, glue",
+    "moon, food",
+    "chew, stew",
+    "boots, noon"
+   ],
+   "why": "bl-ue and gl-ue."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: There's a bl___ scr___ in my b___t!",
+   "o": [
+    "ue / ew / oo",
+    "oo / ue / ew",
+    "ew / oo / ue",
+    "ue / oo / ew"
+   ],
+   "why": "blue, screw, boot."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct spelling: There's a blue ___ in my boot!",
+   "o": [
+    "screw",
+    "scroo",
+    "scrue",
+    "skrew"
+   ],
+   "why": "Screw is spelled s-c-r-ew."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the correct spelling of the word for things we eat?",
+   "o": [
+    "food",
+    "fewd",
+    "fued",
+    "fude"
+   ],
+   "why": "Food is spelled f-oo-d."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Odd one out (sound): boot, blue, chew, book",
+   "o": [
+    "book",
+    "boot",
+    "blue",
+    "chew"
+   ],
+   "why": "Book has a short sound; the others are long 'oo'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has two long 'oo' words?",
+   "o": [
+    "The moon is blue.",
+    "The book is red.",
+    "The cat is big.",
+    "I like my bag."
+   ],
+   "why": "moon and blue both have the long 'oo'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Blue', 'screw' and 'boot' have the same sound. What is different?",
+   "o": [
+    "The spelling: ue, ew, oo.",
+    "The sound.",
+    "The number of letters only.",
+    "Nothing is different."
+   ],
+   "why": "Same sound, three different spellings."
+  }
+ ]
+}

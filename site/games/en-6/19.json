@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 2: Technology",
+ "lesson": "Unit 2 – Lesson 4: Book club – A poem",
+ "outcomes": [
+  "I can name the features of a poem.",
+  "I can find rhyming words in the smartphone poem.",
+  "I can make adverbs with -ly, like quickly and easily."
+ ],
+ "tf": [
+  {
+   "s": "The lines in poems are usually short.",
+   "t": true,
+   "why": "Yes! Poems often have short lines."
+  },
+  {
+   "s": "\"Lighter\" rhymes with \"brighter\".",
+   "t": true,
+   "why": "Correct! They end with the same sound."
+  },
+  {
+   "s": "\"Phone\" rhymes with \"map\".",
+   "t": false,
+   "why": "\"Phone\" rhymes with \"home\"."
+  },
+  {
+   "s": "A verse is a group of lines in a poem.",
+   "t": true,
+   "why": "Right! Poems are made of verses."
+  },
+  {
+   "s": "The poem says the new phone's screen is much darker.",
+   "t": false,
+   "why": "The poem says the screen is much brighter."
+  },
+  {
+   "s": "The map app helps you find your way more easily.",
+   "t": true,
+   "why": "Yes! You can get home safely."
+  },
+  {
+   "s": "The adverb of easy is easyly.",
+   "t": false,
+   "why": "When an adjective ends in y, we change y to i: easily."
+  },
+  {
+   "s": "The adverb of quiet is quietly.",
+   "t": true,
+   "why": "Correct! quiet + ly."
+  },
+  {
+   "s": "In the poem, you can shop online with the smartphone.",
+   "t": true,
+   "why": "Yes! Shopping online is one use."
+  },
+  {
+   "s": "Poems never have words that rhyme.",
+   "t": false,
+   "why": "Poems sometimes have words that rhyme."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word rhymes with \"brighter\"?",
+   "o": [
+    "lighter",
+    "phone",
+    "map"
+   ],
+   "why": "brighter / lighter rhyme."
+  },
+  {
+   "q": "Which word rhymes with \"phone\"?",
+   "o": [
+    "home",
+    "line",
+    "screen"
+   ],
+   "why": "phone / home rhyme."
+  },
+  {
+   "q": "Which word rhymes with \"online\"?",
+   "o": [
+    "time",
+    "phone",
+    "light"
+   ],
+   "why": "online / time rhyme."
+  },
+  {
+   "q": "Lines in poems are usually ___.",
+   "o": [
+    "short",
+    "long",
+    "very long"
+   ],
+   "why": "Poems have short lines."
+  },
+  {
+   "q": "The new phone's screen is much ___.",
+   "o": [
+    "brighter",
+    "darker",
+    "smaller"
+   ],
+   "why": "The screen is brighter."
+  },
+  {
+   "q": "easy → ___",
+   "o": [
+    "easily",
+    "easyly",
+    "easly"
+   ],
+   "why": "y → ily."
+  },
+  {
+   "q": "quick → ___",
+   "o": [
+    "quickly",
+    "quickily",
+    "quicky"
+   ],
+   "why": "Just add -ly."
+  },
+  {
+   "q": "Check the facts more ___ on the screen.",
+   "o": [
+    "carefully",
+    "careful",
+    "care"
+   ],
+   "why": "We need an adverb: carefully."
+  },
+  {
+   "q": "A group of lines in a poem is a ___.",
+   "o": [
+    "verse",
+    "title",
+    "chapter"
+   ],
+   "why": "That's a verse."
+  },
+  {
+   "q": "With the map app you can get home ___.",
+   "o": [
+    "safely",
+    "safe",
+    "safety"
+   ],
+   "why": "We need an adverb: safely."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Rhymes with brighter",
+   "a": "lighter",
+   "d": [
+    "phone",
+    "map",
+    "screen"
+   ]
+  },
+  {
+   "q": "Rhymes with phone",
+   "a": "home",
+   "d": [
+    "light",
+    "map",
+    "time"
+   ]
+  },
+  {
+   "q": "Rhymes with online",
+   "a": "time",
+   "d": [
+    "home",
+    "phone",
+    "map"
+   ]
+  },
+  {
+   "q": "Adverb of easy",
+   "a": "easily",
+   "d": [
+    "easyly",
+    "easy",
+    "easly"
+   ]
+  },
+  {
+   "q": "Adverb of quick",
+   "a": "quickly",
+   "d": [
+    "quick",
+    "quickily",
+    "quicky"
+   ]
+  },
+  {
+   "q": "Adverb of careful",
+   "a": "carefully",
+   "d": [
+    "careful",
+    "carefuly",
+    "carely"
+   ]
+  },
+  {
+   "q": "Adverb of quiet",
+   "a": "quietly",
+   "d": [
+    "quiet",
+    "quietily",
+    "quitely"
+   ]
+  },
+  {
+   "q": "Adverb of safe",
+   "a": "safely",
+   "d": [
+    "safe",
+    "safety",
+    "safily"
+   ]
+  },
+  {
+   "q": "Group of lines in a poem",
+   "a": "verse",
+   "d": [
+    "rhyme",
+    "title",
+    "screen"
+   ]
+  },
+  {
+   "q": "Words with the same end sound",
+   "a": "rhyme",
+   "d": [
+    "verse",
+    "line",
+    "adverb"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What are the features of a poem?",
+   "o": [
+    "short lines, rhyme and verses",
+    "long paragraphs and no rhyme",
+    "questions and answers",
+    "pictures and speech bubbles"
+   ],
+   "why": "Poems have short lines, rhyme and verses."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the poem say about the new phone?",
+   "o": [
+    "It is thinner, lighter and brighter.",
+    "It is bigger and heavier.",
+    "It has no screen.",
+    "It is very old."
+   ],
+   "why": "The latest smartphone is thinner, lighter and brighter."
+  },
+  {
+   "lv": "التذكر",
+   "q": "In the poem, what is thinner, lighter and brighter?",
+   "o": [
+    "the latest smartphone",
+    "the map app",
+    "the selfie",
+    "the old TV"
+   ],
+   "why": "The poem describes the latest smartphone."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a use of the smartphone in the poem?",
+   "o": [
+    "take a selfie",
+    "cook dinner",
+    "drive a car",
+    "wash clothes"
+   ],
+   "why": "You can take a selfie with it."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Change \"easy\" into an adverb.",
+   "o": [
+    "easily",
+    "easyly",
+    "easy",
+    "easier"
+   ],
+   "why": "Change y to i and add -ly."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: My father drives ___.",
+   "o": [
+    "carefully",
+    "careful",
+    "care",
+    "carefuller"
+   ],
+   "why": "We need an adverb to describe how he drives."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The baby is sleeping, so talk ___.",
+   "o": [
+    "quietly",
+    "quiet",
+    "quieter",
+    "quietness"
+   ],
+   "why": "We need an adverb: quietly."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What can you do with the free map app in the poem?",
+   "o": [
+    "Find your way more easily and get home safely.",
+    "Take better photos.",
+    "Shop online.",
+    "Watch a video."
+   ],
+   "why": "The map app helps you find your way."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do \"lighter\" and \"brighter\" sound good together in the poem?",
+   "o": [
+    "They rhyme, so the poem has rhythm.",
+    "They are both nouns.",
+    "They have different endings.",
+    "They are long words."
+   ],
+   "why": "Rhyming words give the poem its sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which smartphone use keeps you safe, so it may be the most important?",
+   "o": [
+    "finding your way with the map app",
+    "taking a selfie",
+    "shopping online",
+    "watching a video"
+   ],
+   "why": "Finding your way helps you get home safely."
+  }
+ ]
+}

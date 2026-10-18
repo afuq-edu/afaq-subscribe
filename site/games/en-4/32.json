@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U3",
+ "lesson": "Unit 3 – Lesson 4: Vocabulary and Grammar 2 (superlatives)",
+ "outcomes": [
+  "Make superlatives of short adjectives: the highest, the longest.",
+  "Ask and answer questions with superlatives.",
+  "Know when to use a superlative: more than two things."
+ ],
+ "tf": [
+  {
+   "s": "The Nile is the longest river in the world.",
+   "t": true,
+   "why": "Yes! The Nile is the longest."
+  },
+  {
+   "s": "Mount Everest is the lowest mountain in the world.",
+   "t": false,
+   "why": "Mount Everest is the highest mountain in the world."
+  },
+  {
+   "s": "Jabal Shams is the highest mountain in Oman.",
+   "t": true,
+   "why": "Correct! It's the highest in Oman."
+  },
+  {
+   "s": "June is a very hot month in Oman.",
+   "t": true,
+   "why": "Well done! June is very hot in Oman."
+  },
+  {
+   "s": "The superlative of 'big' is 'the bigest'.",
+   "t": false,
+   "why": "We double the g: the biggest."
+  },
+  {
+   "s": "We use 'the' before a superlative.",
+   "t": true,
+   "why": "Great! 'the highest', 'the longest'."
+  },
+  {
+   "s": "We use superlatives to compare only two things.",
+   "t": false,
+   "why": "We use superlatives for more than two things."
+  },
+  {
+   "s": "The song says: This is the longest wadi in the desert.",
+   "t": true,
+   "why": "Yes! The song uses 'the longest'."
+  },
+  {
+   "s": "The superlative of 'hot' is 'the hotest'.",
+   "t": false,
+   "why": "Double the t: the hottest."
+  },
+  {
+   "s": "'The most high' is correct.",
+   "t": false,
+   "why": "Short adjectives take -est: the highest."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Make the superlative: small",
+   "o": [
+    "the smallest",
+    "the smaller",
+    "the most small"
+   ],
+   "why": "small → the smallest."
+  },
+  {
+   "q": "Make the superlative: wide",
+   "o": [
+    "the widest",
+    "the wider",
+    "the most wide"
+   ],
+   "why": "wide → the widest."
+  },
+  {
+   "q": "Make the superlative: old",
+   "o": [
+    "the oldest",
+    "the older",
+    "the most old"
+   ],
+   "why": "old → the oldest."
+  },
+  {
+   "q": "Complete: The ___ month of the year is June. (hot)",
+   "o": [
+    "hottest",
+    "hotter",
+    "hotest"
+   ],
+   "why": "hot → the hottest."
+  },
+  {
+   "q": "Complete: Saif is the ___ person in our class. (tall)",
+   "o": [
+    "tallest",
+    "taller",
+    "tall"
+   ],
+   "why": "tall → the tallest."
+  },
+  {
+   "q": "Do you know the tallest person in our class?",
+   "o": [
+    "Yes, I do. It's Saif.",
+    "Yes, it is.",
+    "Yes, there is."
+   ],
+   "why": "'Do you know ...?' – 'Yes, I do.'"
+  },
+  {
+   "q": "Which is a superlative?",
+   "o": [
+    "the coldest",
+    "colder",
+    "cold"
+   ],
+   "why": "'The coldest' is a superlative."
+  },
+  {
+   "q": "Make the superlative: clean",
+   "o": [
+    "the cleanest",
+    "the cleaner",
+    "the most clean"
+   ],
+   "why": "clean → the cleanest."
+  },
+  {
+   "q": "Which word goes before a superlative?",
+   "o": [
+    "the",
+    "a",
+    "than"
+   ],
+   "why": "We say 'the longest'."
+  },
+  {
+   "q": "Which is NOT a superlative?",
+   "o": [
+    "higher",
+    "the highest",
+    "the longest"
+   ],
+   "why": "'Higher' is a comparative."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "long → the...",
+   "a": "longest",
+   "d": [
+    "longer",
+    "most long",
+    "longgest"
+   ]
+  },
+  {
+   "q": "big → the...",
+   "a": "biggest",
+   "d": [
+    "bigest",
+    "bigger",
+    "most big"
+   ]
+  },
+  {
+   "q": "dirty → the...",
+   "a": "dirtiest",
+   "d": [
+    "dirtyest",
+    "dirtier",
+    "most dirty"
+   ]
+  },
+  {
+   "q": "cold → the...",
+   "a": "coldest",
+   "d": [
+    "colder",
+    "most cold",
+    "coldiest"
+   ]
+  },
+  {
+   "q": "deep → the...",
+   "a": "deepest",
+   "d": [
+    "deeper",
+    "most deep",
+    "deeppest"
+   ]
+  },
+  {
+   "q": "fast → the...",
+   "a": "fastest",
+   "d": [
+    "faster",
+    "most fast",
+    "fasttest"
+   ]
+  },
+  {
+   "q": "easy → the...",
+   "a": "easiest",
+   "d": [
+    "easyest",
+    "easier",
+    "most easy"
+   ]
+  },
+  {
+   "q": "Biggest city in Oman",
+   "a": "Muscat",
+   "d": [
+    "Ibri",
+    "Sur",
+    "Nizwa"
+   ]
+  },
+  {
+   "q": "Lowest sea in the world",
+   "a": "the Dead Sea",
+   "d": [
+    "the Red Sea",
+    "the Nile",
+    "Wadi Shab"
+   ]
+  },
+  {
+   "q": "wet → the...",
+   "a": "wettest",
+   "d": [
+    "wetest",
+    "wetter",
+    "most wet"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Complete: Everest is the ___ mountain in the world. (high)",
+   "o": [
+    "highest",
+    "higher",
+    "most high",
+    "highiest"
+   ],
+   "why": "high → the highest."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the superlative of 'happy'?",
+   "o": [
+    "the happiest",
+    "the happyest",
+    "the most happy",
+    "the happier"
+   ],
+   "why": "y → i + est."
+  },
+  {
+   "lv": "التذكر",
+   "q": "short – shorter – ...",
+   "o": [
+    "the shortest",
+    "the most short",
+    "the shorter",
+    "the shortiest"
+   ],
+   "why": "short → the shortest."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Ask about the biggest city in Oman.",
+   "o": [
+    "Do you know the biggest city in Oman?",
+    "Do you know the bigger city in Oman?",
+    "Do you know the big city in Oman than?",
+    "Do you know biggest city Oman?"
+   ],
+   "why": "Use 'the biggest'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Three pupils: Ali 130 cm, Sami 140 cm, Omar 125 cm. Who is the tallest?",
+   "o": [
+    "Sami",
+    "Ali",
+    "Omar",
+    "They are the same."
+   ],
+   "why": "140 cm is the most."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write one superlative sentence about Oman.",
+   "o": [
+    "Jabal Shams is the highest mountain in Oman.",
+    "Jabal Shams is higher mountain in Oman.",
+    "Jabal Shams is the most high mountain in Oman.",
+    "Jabal Shams is the higher than Oman."
+   ],
+   "why": "Use 'the highest'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The ___ person in my family is my grandad. (old)",
+   "o": [
+    "oldest",
+    "older",
+    "most old",
+    "oldiest"
+   ],
+   "why": "old → the oldest."
+  },
+  {
+   "lv": "التحليل",
+   "q": "When do we use 'the longest' and not 'longer than'?",
+   "o": [
+    "When we compare more than two things.",
+    "When we compare two things.",
+    "When we talk about one thing.",
+    "When we talk about colours."
+   ],
+   "why": "Superlatives compare three or more."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses a comparative, not a superlative?",
+   "o": [
+    "A mountain is higher than a hill.",
+    "Everest is the highest mountain.",
+    "The Nile is the longest river.",
+    "Muscat is the biggest city in Oman."
+   ],
+   "why": "'Higher than' compares two things."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it 'the hottest' with two t's?",
+   "o": [
+    "Hot ends in one vowel and one consonant, so we double it.",
+    "We always add -test.",
+    "Hot ends in y.",
+    "Hot is a long adjective."
+   ],
+   "why": "h-o-t: double the t, then add -est."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U2",
+ "lesson": "Unit 2 – Lesson 3: Grammar 1 (there is / there are with countable and uncountable nouns)",
+ "outcomes": [
+  "Use there is / there are with a lot of, some, a few and a little.",
+  "Tell countable nouns from uncountable nouns.",
+  "Describe differences between two pictures."
+ ],
+ "tf": [
+  {
+   "s": "We say: There are a few sandwiches.",
+   "t": true,
+   "why": "Yes! Sandwiches are countable, so we use a few."
+  },
+  {
+   "s": "We say: There is a few lemonade.",
+   "t": false,
+   "why": "Lemonade is uncountable: There is a little lemonade."
+  },
+  {
+   "s": "Bread is an uncountable noun.",
+   "t": true,
+   "why": "Correct! We say There isn't any bread."
+  },
+  {
+   "s": "Grapes are uncountable.",
+   "t": false,
+   "why": "We can count grapes, so they are countable."
+  },
+  {
+   "s": "We say: There are a lot of noodles.",
+   "t": true,
+   "why": "Great! Noodles is plural, so we use are."
+  },
+  {
+   "s": "We use 'any' in negative sentences.",
+   "t": true,
+   "why": "Yes! There aren't any cupcakes."
+  },
+  {
+   "s": "'There are a little vegetables' is correct.",
+   "t": false,
+   "why": "Vegetables are countable: There are a few vegetables."
+  },
+  {
+   "s": "Tea and salad are uncountable.",
+   "t": true,
+   "why": "Well done! We say a little tea, a little salad."
+  },
+  {
+   "s": "We say: There aren't any bread.",
+   "t": false,
+   "why": "Bread is uncountable: There isn't any bread."
+  },
+  {
+   "s": "Crisps are countable.",
+   "t": true,
+   "why": "Right! We can count crisps."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "There are a ___ sandwiches. (3)",
+   "o": [
+    "few",
+    "little",
+    "any"
+   ],
+   "why": "Countable nouns take a few."
+  },
+  {
+   "q": "There is a ___ lemonade.",
+   "o": [
+    "little",
+    "few",
+    "many"
+   ],
+   "why": "Uncountable nouns take a little."
+  },
+  {
+   "q": "There ___ a lot of noodles.",
+   "o": [
+    "are",
+    "is",
+    "am"
+   ],
+   "why": "Noodles is plural: there are."
+  },
+  {
+   "q": "There ___ any salad. (negative)",
+   "o": [
+    "isn't",
+    "aren't",
+    "not"
+   ],
+   "why": "Salad is uncountable: there isn't."
+  },
+  {
+   "q": "There aren't ___ cupcakes.",
+   "o": [
+    "any",
+    "some",
+    "a little"
+   ],
+   "why": "Negatives use any."
+  },
+  {
+   "q": "Which is uncountable?",
+   "o": [
+    "tea",
+    "grapes",
+    "sandwiches"
+   ],
+   "why": "We can't count tea."
+  },
+  {
+   "q": "Which is countable?",
+   "o": [
+    "cupcakes",
+    "bread",
+    "lemonade"
+   ],
+   "why": "We can count cupcakes."
+  },
+  {
+   "q": "There ___ a lot of salad.",
+   "o": [
+    "is",
+    "are",
+    "am"
+   ],
+   "why": "Salad is uncountable: there is."
+  },
+  {
+   "q": "Make it negative: There are some cupcakes.",
+   "o": [
+    "There aren't any cupcakes.",
+    "There isn't some cupcakes.",
+    "There are any cupcakes."
+   ],
+   "why": "aren't + any."
+  },
+  {
+   "q": "In Picture A, there ___ a few crisps.",
+   "o": [
+    "are",
+    "is",
+    "isn't"
+   ],
+   "why": "Crisps are plural: there are."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Countable: a few or a little?",
+   "a": "a few",
+   "d": [
+    "a little",
+    "any",
+    "much"
+   ]
+  },
+  {
+   "q": "Uncountable: a few or a little?",
+   "a": "a little",
+   "d": [
+    "a few",
+    "many",
+    "any"
+   ]
+  },
+  {
+   "q": "Uncountable noun?",
+   "a": "bread",
+   "d": [
+    "grapes",
+    "cupcakes",
+    "sandwiches"
+   ]
+  },
+  {
+   "q": "Countable noun?",
+   "a": "grapes",
+   "d": [
+    "tea",
+    "salad",
+    "bread"
+   ]
+  },
+  {
+   "q": "There ___ a lot of noodles.",
+   "a": "are",
+   "d": [
+    "is",
+    "am",
+    "be"
+   ]
+  },
+  {
+   "q": "There ___ some coffee.",
+   "a": "is",
+   "d": [
+    "are",
+    "am",
+    "be"
+   ]
+  },
+  {
+   "q": "There isn't ___ bread.",
+   "a": "any",
+   "d": [
+    "some",
+    "few",
+    "a"
+   ]
+  },
+  {
+   "q": "There are a ___ crisps.",
+   "a": "few",
+   "d": [
+    "little",
+    "any",
+    "much"
+   ]
+  },
+  {
+   "q": "There is a ___ tea.",
+   "a": "little",
+   "d": [
+    "few",
+    "many",
+    "any"
+   ]
+  },
+  {
+   "q": "There ___ any cupcakes.",
+   "a": "aren't",
+   "d": [
+    "isn't",
+    "not",
+    "am not"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which word goes with countable nouns?",
+   "o": [
+    "a few",
+    "a little",
+    "much",
+    "any bread"
+   ],
+   "why": "We say a few sandwiches, a few grapes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word goes with uncountable nouns?",
+   "o": [
+    "a little",
+    "a few",
+    "many",
+    "two"
+   ],
+   "why": "We say a little lemonade, a little tea."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is negative?",
+   "o": [
+    "There aren't any cupcakes.",
+    "There are some cupcakes.",
+    "There are a lot of cupcakes.",
+    "There are a few cupcakes."
+   ],
+   "why": "aren't any makes it negative."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list has only uncountable nouns?",
+   "o": [
+    "tea, salad, lemonade",
+    "grapes, crisps, tea",
+    "cupcakes, bread, sandwiches",
+    "noodles, crisps, grapes"
+   ],
+   "why": "We can't count tea, salad or lemonade."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Sort: grapes, tea, salad, crisps. Which are countable?",
+   "o": [
+    "grapes, crisps",
+    "tea, salad",
+    "grapes, tea",
+    "salad, crisps"
+   ],
+   "why": "We can count grapes and crisps."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Picture A has a lot of tea. Picture B has some tea. Choose the correct sentence.",
+   "o": [
+    "In Picture A, there is a lot of tea.",
+    "In Picture A, there are a lot of tea.",
+    "In Picture B, there is a lot of tea.",
+    "In Picture A, there is a few tea."
+   ],
+   "why": "Tea is uncountable: there is."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct: 'There are a little vegetables.'",
+   "o": [
+    "There are a few vegetables.",
+    "There is a little vegetables.",
+    "There are a little vegetable.",
+    "There is a few vegetables."
+   ],
+   "why": "Vegetables are countable: a few."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say 'There isn't any bread' and not 'There aren't any bread'?",
+   "o": [
+    "Bread is uncountable, so we use is.",
+    "Bread is plural.",
+    "Bread is a drink.",
+    "We always use isn't."
+   ],
+   "why": "Uncountable nouns take is."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say 'a few sandwiches' but 'a little lemonade'?",
+   "o": [
+    "We can count sandwiches but not lemonade.",
+    "Sandwiches are sweet.",
+    "Lemonade is food.",
+    "Both are uncountable."
+   ],
+   "why": "Great! a few for countable, a little for uncountable."
+  },
+  {
+   "lv": "التحليل",
+   "q": "In Picture A there isn't any salad. In Picture B there is a little salad. What is the difference?",
+   "o": [
+    "Picture B has some salad; Picture A has none.",
+    "Both have a lot of salad.",
+    "Picture A has more salad.",
+    "Neither has salad."
+   ],
+   "why": "A little is more than none."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 2: Technology",
+  "lesson": "Unit 2 – Lesson 12: Fun corner (optional lesson)",
+  "outcomes": [
+    "I can give a clear definition of a Unit 2 word.",
+    "I can guess technology words from definitions.",
+    "I can write about what I learnt in my learning diary."
+  ],
+  "tf": [
+    {
+      "s": "“It’s a thing you use to print your homework” defines a printer.",
+      "t": true,
+      "why": "A printer puts your homework on paper."
+    },
+    {
+      "s": "You put headphones on your eyes to watch a film.",
+      "t": false,
+      "why": "You put headphones on your ears to listen."
+    },
+    {
+      "s": "A password is a secret word you type to open an app or computer.",
+      "t": true,
+      "why": "Keep your password secret!"
+    },
+    {
+      "s": "An e-reader is a device you use to read e-books.",
+      "t": true,
+      "why": "You can read and sometimes listen to books on it."
+    },
+    {
+      "s": "To upload a photo means to delete it from your phone.",
+      "t": false,
+      "why": "Upload means to put a photo from your device onto the internet."
+    },
+    {
+      "s": "“It’s something you can …” is a useful way to start a definition.",
+      "t": true,
+      "why": "It helps your partner guess the word."
+    },
+    {
+      "s": "A good definition says the word you are describing.",
+      "t": false,
+      "why": "Don’t say the word; describe it so your partner can guess."
+    },
+    {
+      "s": "A learning diary is where you write what you did and learnt.",
+      "t": true,
+      "why": "For example: Today, I played the definitions game."
+    },
+    {
+      "s": "A printer is a device you use to take selfies.",
+      "t": false,
+      "why": "You take selfies with a phone or tablet camera."
+    },
+    {
+      "s": "A smartphone is a thing you can use to send messages.",
+      "t": true,
+      "why": "Yes, you can send messages with a smartphone."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "“You use it to print your homework.” What is it?",
+      "o": [
+        "a printer",
+        "a screen",
+        "a password"
+      ],
+      "why": "A printer prints on paper."
+    },
+    {
+      "q": "“A device you use to read e-books.” What is it?",
+      "o": [
+        "an e-reader",
+        "headphones",
+        "a printer"
+      ],
+      "why": "An e-reader is for reading e-books."
+    },
+    {
+      "q": "“You put them on your ears to listen to music.” What are they?",
+      "o": [
+        "headphones",
+        "glasses",
+        "keys"
+      ],
+      "why": "Headphones go on your ears."
+    },
+    {
+      "q": "Complete: It’s a thing you use ___ take photos.",
+      "o": [
+        "to",
+        "for",
+        "at"
+      ],
+      "why": "a thing you use to + verb."
+    },
+    {
+      "q": "“A secret word you type to open an app.” What is it?",
+      "o": [
+        "a password",
+        "an icon",
+        "a screen"
+      ],
+      "why": "A password keeps your app safe."
+    },
+    {
+      "q": "Which sentence is a good start for a definition?",
+      "o": [
+        "It’s something you can …",
+        "Could you help me?",
+        "I liked it because …"
+      ],
+      "why": "It’s something you can … describes a thing."
+    },
+    {
+      "q": "What does “upload a photo” mean?",
+      "o": [
+        "put a photo onto the internet",
+        "print a photo",
+        "draw a photo"
+      ],
+      "why": "You send the photo from your device to the internet."
+    },
+    {
+      "q": "Complete the diary: Today, I ___ the definitions game.",
+      "o": [
+        "played",
+        "play",
+        "playing"
+      ],
+      "why": "We use the past simple for what we did today."
+    },
+    {
+      "q": "“You click on it to open an app.” What is it?",
+      "o": [
+        "an icon",
+        "a printer",
+        "a coach"
+      ],
+      "why": "An icon is the small picture you click on."
+    },
+    {
+      "q": "“The part of a tablet you look at.” What is it?",
+      "o": [
+        "the screen",
+        "the password",
+        "the button"
+      ],
+      "why": "You look at the screen."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "You use it to print homework",
+      "a": "printer",
+      "d": [
+        "screen",
+        "icon",
+        "e-reader"
+      ]
+    },
+    {
+      "q": "On your ears to listen to music",
+      "a": "headphones",
+      "d": [
+        "printer",
+        "screen",
+        "password"
+      ]
+    },
+    {
+      "q": "A secret word you type",
+      "a": "password",
+      "d": [
+        "icon",
+        "screen",
+        "printer"
+      ]
+    },
+    {
+      "q": "A device to read e-books",
+      "a": "e-reader",
+      "d": [
+        "printer",
+        "headphones",
+        "camera"
+      ]
+    },
+    {
+      "q": "Click on it to open an app",
+      "a": "icon",
+      "d": [
+        "printer",
+        "password",
+        "headphones"
+      ]
+    },
+    {
+      "q": "It’s a thing you use ___ …",
+      "a": "to",
+      "d": [
+        "at",
+        "on",
+        "of"
+      ]
+    },
+    {
+      "q": "It’s something you ___ …",
+      "a": "can",
+      "d": [
+        "are",
+        "is",
+        "does"
+      ]
+    },
+    {
+      "q": "Put a photo onto the internet",
+      "a": "upload",
+      "d": [
+        "print",
+        "delete",
+        "draw"
+      ]
+    },
+    {
+      "q": "Get an app onto your phone",
+      "a": "download",
+      "d": [
+        "upload",
+        "print",
+        "type"
+      ]
+    },
+    {
+      "q": "Today, I ___ the game.",
+      "a": "played",
+      "d": [
+        "play",
+        "plays",
+        "playing"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "Which is a good definition of “password”?",
+      "o": [
+        "It’s a secret word you type to open an app or computer.",
+        "It’s a thing you wear on your ears.",
+        "It’s a place where you watch films.",
+        "It’s a machine that prints paper."
+      ],
+      "why": "A password is a secret word."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which word means “put a photo from your device onto the internet”?",
+      "o": [
+        "upload",
+        "download",
+        "print",
+        "turn on"
+      ],
+      "why": "Upload means sending something up to the internet."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What do you write in a learning diary?",
+      "o": [
+        "What you did and learnt in the lesson",
+        "Your password",
+        "A shopping list",
+        "Your friend’s address"
+      ],
+      "why": "A diary helps you think about your learning."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which sentence starter is for a definition?",
+      "o": [
+        "It’s a thing you use to …",
+        "Do you have time to …?",
+        "Sorry, not now.",
+        "Of course."
+      ],
+      "why": "It’s a thing you use to … tells what something does."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Define “smartphone” for your partner. Which is best?",
+      "o": [
+        "It’s something you can use to call people and send messages.",
+        "It’s a smartphone.",
+        "It’s a big building.",
+        "It’s a kind of food."
+      ],
+      "why": "A good definition describes the thing without saying its name."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Your partner says: “It’s a thing you use to listen to music on your ears.” What do you guess?",
+      "o": [
+        "headphones",
+        "a printer",
+        "an e-reader",
+        "a password"
+      ],
+      "why": "Headphones go on your ears."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose the best diary sentence.",
+      "o": [
+        "Today, I played the definitions game and I learnt to describe devices.",
+        "Tomorrow I play game.",
+        "Game definitions today I.",
+        "I am play the game yesterday."
+      ],
+      "why": "It uses the past simple correctly and says what you learnt."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why is “It’s a printer” a bad definition?",
+      "o": [
+        "It says the word, so there is nothing to guess.",
+        "It is too long.",
+        "It uses the word thing.",
+        "It is a question."
+      ],
+      "why": "A definition should describe, not name, the word."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which definition is clearer for “e-reader”?",
+      "o": [
+        "A device you use to read e-books.",
+        "A thing.",
+        "Something nice.",
+        "It’s good."
+      ],
+      "why": "It says what the device is used for."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which word does NOT fit: printer, laptop, headphones, theatre?",
+      "o": [
+        "theatre",
+        "printer",
+        "laptop",
+        "headphones"
+      ],
+      "why": "A theatre is a place; the others are devices."
+    }
+  ]
+}

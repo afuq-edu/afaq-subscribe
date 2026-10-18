@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "LC1",
+ "lesson": "Bo's Learning Club 1 – Lesson 2: Language booster 1 (locations and question words)",
+ "outcomes": [
+  "Use location words: up, down, top, bottom, above, below.",
+  "Say where things are on shop shelves.",
+  "Ask questions with what, where, why, when and who."
+ ],
+ "tf": [
+  {
+   "s": "The opposite of 'up' is 'down'.",
+   "t": true,
+   "why": "Yes! Up and down are opposites."
+  },
+  {
+   "s": "The opposite of 'top' is 'above'.",
+   "t": false,
+   "why": "The opposite of 'top' is 'bottom'."
+  },
+  {
+   "s": "The juice is on the bottom shelf.",
+   "t": true,
+   "why": "Correct! It's on the bottom shelf."
+  },
+  {
+   "s": "The juice is above the bread.",
+   "t": false,
+   "why": "The juice is below the bread."
+  },
+  {
+   "s": "'Where' asks about a place.",
+   "t": true,
+   "why": "Well done! Where = place."
+  },
+  {
+   "s": "'Who' asks about a time.",
+   "t": false,
+   "why": "'Who' asks about a person. 'When' asks about time."
+  },
+  {
+   "s": "'Why' asks about a reason.",
+   "t": true,
+   "why": "Great! We answer with 'Because ...'."
+  },
+  {
+   "s": "'Tomorrow' answers a 'When' question.",
+   "t": true,
+   "why": "Yes! 'When is the party?' 'Tomorrow.'"
+  },
+  {
+   "s": "'My sister' answers a 'Where' question.",
+   "t": false,
+   "why": "'My sister' answers a 'Who' question."
+  },
+  {
+   "s": "'Above' is the opposite of 'below'.",
+   "t": true,
+   "why": "Correct! Above and below are opposites."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Answer: Who are you with?",
+   "o": [
+    "My sister.",
+    "At school.",
+    "Tomorrow."
+   ],
+   "why": "'Who' needs a person."
+  },
+  {
+   "q": "Answer: What is it?",
+   "o": [
+    "It's a cupcake.",
+    "At school.",
+    "Tomorrow."
+   ],
+   "why": "'What' needs a thing."
+  },
+  {
+   "q": "Is the bread above or below the juice?",
+   "o": [
+    "above",
+    "below",
+    "bottom"
+   ],
+   "why": "The bread is above the juice."
+  },
+  {
+   "q": "Complete: ___ is she? She's my sister.",
+   "o": [
+    "Who",
+    "What",
+    "When"
+   ],
+   "why": "We ask about a person with 'Who'."
+  },
+  {
+   "q": "Complete: ___ are you doing there? I'm buying cupcakes.",
+   "o": [
+    "What",
+    "Who",
+    "Where"
+   ],
+   "why": "We ask about an action with 'What'."
+  },
+  {
+   "q": "Answer: Where are you?",
+   "o": [
+    "At school.",
+    "My sister.",
+    "Tomorrow."
+   ],
+   "why": "'Where' needs a place."
+  },
+  {
+   "q": "Answer: Why are you buying cupcakes?",
+   "o": [
+    "Because it's my birthday.",
+    "At the shop.",
+    "My mum."
+   ],
+   "why": "'Why' needs a reason."
+  },
+  {
+   "q": "The shelf at the very top is the ___ shelf.",
+   "o": [
+    "top",
+    "bottom",
+    "below"
+   ],
+   "why": "It is the top shelf."
+  },
+  {
+   "q": "Which question word asks about a reason?",
+   "o": [
+    "Why",
+    "Who",
+    "Where"
+   ],
+   "why": "Why = reason."
+  },
+  {
+   "q": "Complete: It's on the bottom shelf. It's ___ the bread.",
+   "o": [
+    "below",
+    "above",
+    "top"
+   ],
+   "why": "The juice is under the bread: below."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Opposite of up",
+   "a": "down",
+   "d": [
+    "top",
+    "above",
+    "below"
+   ]
+  },
+  {
+   "q": "Opposite of above",
+   "a": "below",
+   "d": [
+    "up",
+    "top",
+    "down"
+   ]
+  },
+  {
+   "q": "___ are you? At school.",
+   "a": "Where",
+   "d": [
+    "Who",
+    "When",
+    "Why"
+   ]
+  },
+  {
+   "q": "Question word: person",
+   "a": "Who",
+   "d": [
+    "What",
+    "Where",
+    "When"
+   ]
+  },
+  {
+   "q": "Question word: time",
+   "a": "When",
+   "d": [
+    "Who",
+    "Where",
+    "What"
+   ]
+  },
+  {
+   "q": "Question word: reason",
+   "a": "Why",
+   "d": [
+    "Who",
+    "When",
+    "Where"
+   ]
+  },
+  {
+   "q": "Question word: thing",
+   "a": "What",
+   "d": [
+    "Who",
+    "When",
+    "Where"
+   ]
+  },
+  {
+   "q": "Location word: higher than",
+   "a": "above",
+   "d": [
+    "below",
+    "bottom",
+    "down"
+   ]
+  },
+  {
+   "q": "The shelf at the very bottom",
+   "a": "bottom shelf",
+   "d": [
+    "top shelf",
+    "up shelf",
+    "above shelf"
+   ]
+  },
+  {
+   "q": "Answer to 'Why ...?' starts with",
+   "a": "Because",
+   "d": [
+    "At",
+    "Tomorrow",
+    "My"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is NOT a location word?",
+   "o": [
+    "party",
+    "above",
+    "below",
+    "bottom"
+   ],
+   "why": "'Party' is not a location word."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where's the juice?",
+   "o": [
+    "It's on the bottom shelf.",
+    "It's on the top shelf.",
+    "It's above the bread.",
+    "It's in the fridge."
+   ],
+   "why": "The juice is on the bottom shelf."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the opposite of 'bottom'?",
+   "o": [
+    "top",
+    "down",
+    "below",
+    "up"
+   ],
+   "why": "Top and bottom are opposites."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which answer goes with 'When is the party?'",
+   "o": [
+    "It's tomorrow.",
+    "It's my sister.",
+    "At school.",
+    "Because it's fun."
+   ],
+   "why": "'When' needs a time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The eggs are on the top shelf. The milk is under them. Which is correct?",
+   "o": [
+    "The eggs are above the milk.",
+    "The eggs are below the milk.",
+    "The milk is above the eggs.",
+    "The eggs are on the bottom shelf."
+   ],
+   "why": "The eggs are higher, so they are above the milk."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a question for the answer 'Because it's my birthday.'",
+   "o": [
+    "Why are you buying cupcakes?",
+    "Where are you?",
+    "Who is she?",
+    "When is it?"
+   ],
+   "why": "'Because' answers a 'Why' question."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which question asks a friend about the weekend?",
+   "o": [
+    "Where do you go at the weekend?",
+    "Who is she?",
+    "What is it?",
+    "Why is it red?"
+   ],
+   "why": "It asks about a place at the weekend."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The teacher says 'At school.' Which question word did she hear?",
+   "o": [
+    "Where",
+    "Who",
+    "When",
+    "Why"
+   ],
+   "why": "'At school' is a place."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which uses two location words to say where the juice is?",
+   "o": [
+    "It's on the bottom shelf, below the bread.",
+    "It's juice.",
+    "It's cold.",
+    "It's on the shelf."
+   ],
+   "why": "'Bottom' and 'below' are two location words."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair does NOT go together?",
+   "o": [
+    "Who – a place",
+    "Where – a place",
+    "When – a time",
+    "Why – a reason"
+   ],
+   "why": "'Who' asks about a person, not a place."
+  }
+ ]
+}

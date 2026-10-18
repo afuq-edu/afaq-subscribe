@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 2: Connections",
+ "lesson": "Lesson 3: Vocabulary – language and communication",
+ "outcomes": [
+  "Use communication verbs: explain, mean, pronounce, repeat, translate, understand.",
+  "Choose correctly between tell/talk, say/speak and hear/listen.",
+  "Use verbs with the right prepositions, like talk to and listen to."
+ ],
+ "tf": [
+  {
+   "s": "'Translate' means change words into another language.",
+   "t": true,
+   "why": "We translate from one language into another."
+  },
+  {
+   "s": "We say 'I said him that he was wrong.'",
+   "t": false,
+   "why": "We say something to someone: 'I said to him ...' or 'I told him ...'."
+  },
+  {
+   "s": "We say 'tell someone something', like 'Tell me a story.'",
+   "t": true,
+   "why": "Tell is followed directly by the person."
+  },
+  {
+   "s": "We say 'We say two languages at home.'",
+   "t": false,
+   "why": "We speak languages: 'We speak two languages at home.'"
+  },
+  {
+   "s": "'Can you listen me now?' is correct.",
+   "t": false,
+   "why": "Listen needs 'to'; here we need hear: 'Can you hear me now?'"
+  },
+  {
+   "s": "'Pronounce' means say a word with the correct sounds.",
+   "t": true,
+   "why": "For example: How do you pronounce 'quiet'?"
+  },
+  {
+   "s": "'Repeat' means say something again.",
+   "t": true,
+   "why": "'Could you repeat it, please?' asks someone to say it again."
+  },
+  {
+   "s": "We say 'talk to your friends about your problems'.",
+   "t": true,
+   "why": "Talk to someone about something."
+  },
+  {
+   "s": "'Explain' means change words into another language.",
+   "t": false,
+   "why": "Explain means make something clear; translate changes the language."
+  },
+  {
+   "s": "Gestures, pictures and translation apps can help people communicate without a shared language.",
+   "t": true,
+   "why": "These were ideas from the lesson discussion."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Choose: She didn't ___ me the answer.",
+   "o": [
+    "tell",
+    "talk",
+    "say"
+   ],
+   "why": "Tell + person + thing."
+  },
+  {
+   "q": "Complete: I didn't catch that. Could you ___ it, please?",
+   "o": [
+    "repeat",
+    "translate",
+    "mean"
+   ],
+   "why": "Repeat means say it again."
+  },
+  {
+   "q": "Complete: How do you ___ this word?",
+   "o": [
+    "pronounce",
+    "explain",
+    "listen"
+   ],
+   "why": "Pronounce is about the sound of a word."
+  },
+  {
+   "q": "Complete: What does this word ___?",
+   "o": [
+    "mean",
+    "say",
+    "tell"
+   ],
+   "why": "We ask what a word means."
+  },
+  {
+   "q": "Choose: ___ to the teacher carefully.",
+   "o": [
+    "Listen",
+    "Hear",
+    "Speak"
+   ],
+   "why": "Listen to someone."
+  },
+  {
+   "q": "Complete: Sometimes she ___ Spanish to me.",
+   "o": [
+    "spoke",
+    "said",
+    "told"
+   ],
+   "why": "We speak a language."
+  },
+  {
+   "q": "Complete: I ask my Thai friend to ___ for me.",
+   "o": [
+    "translate",
+    "pronounce",
+    "repeat"
+   ],
+   "why": "He changes Thai into my language."
+  },
+  {
+   "q": "Which is correct?",
+   "o": [
+    "Can you hear me now?",
+    "Can you listen me now?",
+    "Can you hear to me now?"
+   ],
+   "why": "Hear has no preposition."
+  },
+  {
+   "q": "Complete: Can you ___ how this machine works?",
+   "o": [
+    "explain",
+    "pronounce",
+    "repeat"
+   ],
+   "why": "Explain means make something clear."
+  },
+  {
+   "q": "Choose: Do you ___ to your friends about problems?",
+   "o": [
+    "talk",
+    "tell",
+    "say"
+   ],
+   "why": "Talk to someone about something."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Change into another language",
+   "a": "translate",
+   "d": [
+    "explain",
+    "repeat",
+    "mean"
+   ]
+  },
+  {
+   "q": "Say it again",
+   "a": "repeat",
+   "d": [
+    "translate",
+    "pronounce",
+    "explain"
+   ]
+  },
+  {
+   "q": "Make something clear",
+   "a": "explain",
+   "d": [
+    "repeat",
+    "hear",
+    "say"
+   ]
+  },
+  {
+   "q": "Say the sounds of a word",
+   "a": "pronounce",
+   "d": [
+    "translate",
+    "mean",
+    "listen"
+   ]
+  },
+  {
+   "q": "Have a definition",
+   "a": "mean",
+   "d": [
+    "say",
+    "tell",
+    "speak"
+   ]
+  },
+  {
+   "q": "___ me a story",
+   "a": "Tell",
+   "d": [
+    "Say",
+    "Talk",
+    "Speak"
+   ]
+  },
+  {
+   "q": "___ to music",
+   "a": "listen",
+   "d": [
+    "hear",
+    "say",
+    "tell"
+   ]
+  },
+  {
+   "q": "___ two languages",
+   "a": "speak",
+   "d": [
+    "say",
+    "tell",
+    "talk"
+   ]
+  },
+  {
+   "q": "___ to your friends",
+   "a": "talk",
+   "d": [
+    "tell",
+    "say",
+    "hear"
+   ]
+  },
+  {
+   "q": "Know what something means",
+   "a": "understand",
+   "d": [
+    "pronounce",
+    "repeat",
+    "translate"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which verb means 'have a definition or explanation'?",
+   "o": [
+    "mean",
+    "repeat",
+    "pronounce",
+    "hear"
+   ],
+   "why": "We ask: What does this word mean?"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which pattern is correct?",
+   "o": [
+    "say something to someone",
+    "say someone something",
+    "tell to someone something",
+    "talk someone something"
+   ],
+   "why": "Say something to someone; tell someone something."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which verb is NOT followed by 'to' before a person?",
+   "o": [
+    "tell",
+    "talk",
+    "listen",
+    "speak"
+   ],
+   "why": "We tell someone directly: tell me."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which verb is about sound you notice without trying?",
+   "o": [
+    "hear",
+    "listen",
+    "explain",
+    "translate"
+   ],
+   "why": "We hear sounds; we listen when we pay attention."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: You can't read a menu in Thai, so your friend ___ it into English for you.",
+   "o": [
+    "translated",
+    "pronounced",
+    "repeated",
+    "heard"
+   ],
+   "why": "Changing a menu into English is translating."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "He told me that he was tired.",
+    "He said me that he was tired.",
+    "He talked me that he was tired.",
+    "He spoke me that he was tired."
+   ],
+   "why": "Tell + person: told me."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend speaks very fast and you don't understand. What do you say?",
+   "o": [
+    "Could you repeat that, please?",
+    "Could you translate me?",
+    "Could you hear that?",
+    "Could you pronounce me?"
+   ],
+   "why": "Asking someone to repeat is polite and clear."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'Can you listen me now?' wrong?",
+   "o": [
+    "Listen needs 'to', and here we really mean hear",
+    "Listen is always past tense",
+    "'Me' can't follow any verb",
+    "It needs 'speak' instead"
+   ],
+   "why": "On a phone call we ask: Can you hear me?"
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses 'speak' and 'say' correctly?",
+   "o": [
+    "I speak Arabic, and I say 'hello' to my teacher.",
+    "I say Arabic, and I speak 'hello' to my teacher.",
+    "I speak Arabic, and I say my teacher hello.",
+    "I say Arabic, and I tell 'hello'."
+   ],
+   "why": "Speak a language; say words to someone."
+  },
+  {
+   "lv": "التحليل",
+   "q": "You meet a visitor who doesn't speak your language. Which is the best way to communicate?",
+   "o": [
+    "Use gestures, pictures or a translation app, and be patient",
+    "Shout louder",
+    "Walk away",
+    "Speak very fast"
+   ],
+   "why": "Patience and helpful tools make communication easier."
+  }
+ ]
+}

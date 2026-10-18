@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 3 – Let’s explore!",
+ "lesson": "Lesson 4: Vocabulary and Grammar – Big numbers and How …?",
+ "outcomes": [
+  "Say and write big numbers from a hundred to a million.",
+  "Ask and answer How …? questions about size and distance.",
+  "Choose the right adjective: deep, high, long, far, wide, tall."
+ ],
+ "tf": [
+  {
+   "s": "1,000,000 is \"a million\".",
+   "t": true,
+   "why": "A million has six zeros."
+  },
+  {
+   "s": "50,000 is \"five thousand\".",
+   "t": false,
+   "why": "50,000 is fifty thousand. 5,000 is five thousand."
+  },
+  {
+   "s": "We ask about the sea with \"How deep …?\"",
+   "t": true,
+   "why": "We use deep for seas and oceans."
+  },
+  {
+   "s": "The Sea of Oman is 3,700 metres deep.",
+   "t": true,
+   "why": "How deep is the Sea of Oman? It's 3,700 metres deep."
+  },
+  {
+   "s": "We ask about the distance from Muscat to Salalah with \"How tall …?\"",
+   "t": false,
+   "why": "For distance we use How far …?"
+  },
+  {
+   "s": "100,000 is \"a hundred thousand\".",
+   "t": true,
+   "why": "100,000 = a hundred thousand."
+  },
+  {
+   "s": "The Moon is 3,474 metres wide.",
+   "t": false,
+   "why": "The Moon is 3,474 kilometres wide."
+  },
+  {
+   "s": "5,000 is bigger than 1,000,000.",
+   "t": false,
+   "why": "A million is much bigger than five thousand."
+  },
+  {
+   "s": "We can ask about a mountain with \"How high …?\"",
+   "t": true,
+   "why": "How high is Jabal Shams?"
+  },
+  {
+   "s": "10,000 is \"a hundred thousand\".",
+   "t": false,
+   "why": "10,000 is ten thousand."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Write in numbers: five thousand",
+   "o": [
+    "5,000",
+    "50,000",
+    "500"
+   ],
+   "why": "Five thousand = 5,000."
+  },
+  {
+   "q": "Write in words: 10,000",
+   "o": [
+    "ten thousand",
+    "a thousand",
+    "a hundred thousand"
+   ],
+   "why": "10,000 = ten thousand."
+  },
+  {
+   "q": "Complete: How ______ is it from Muscat to Salalah?",
+   "o": [
+    "far",
+    "tall",
+    "deep"
+   ],
+   "why": "We use far for distance."
+  },
+  {
+   "q": "Complete: How ______ is the Pacific Ocean at its deepest point?",
+   "o": [
+    "deep",
+    "high",
+    "tall"
+   ],
+   "why": "Oceans are deep."
+  },
+  {
+   "q": "Which number is the biggest?",
+   "o": [
+    "1,000,000",
+    "100,000",
+    "5,000"
+   ],
+   "why": "A million is the biggest."
+  },
+  {
+   "q": "How wide is the Moon?",
+   "o": [
+    "3,474 kilometres",
+    "3,474 metres",
+    "347 kilometres"
+   ],
+   "why": "The Moon is 3,474 kilometres wide."
+  },
+  {
+   "q": "Ask about Jabal Shams (high).",
+   "o": [
+    "How high is Jabal Shams?",
+    "How deep is Jabal Shams?",
+    "How far is Jabal Shams high?"
+   ],
+   "why": "Mountains are high."
+  },
+  {
+   "q": "Say this number: 500",
+   "o": [
+    "five hundred",
+    "fifty",
+    "five thousand"
+   ],
+   "why": "500 = five hundred."
+  },
+  {
+   "q": "Complete: How long is your pencil? It's 15 centimetres ______.",
+   "o": [
+    "long",
+    "deep",
+    "far"
+   ],
+   "why": "We answer with the same adjective: long."
+  },
+  {
+   "q": "How do we say 7,650?",
+   "o": [
+    "seven thousand, six hundred and fifty",
+    "seventy-six fifty",
+    "seven hundred and sixty-five"
+   ],
+   "why": "7,650 = seven thousand, six hundred and fifty."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Write: 50,000",
+   "a": "fifty thousand",
+   "d": [
+    "five thousand",
+    "five hundred",
+    "fifteen thousand"
+   ]
+  },
+  {
+   "q": "Write: 1,000,000",
+   "a": "a million",
+   "d": [
+    "a thousand",
+    "ten thousand",
+    "a hundred"
+   ]
+  },
+  {
+   "q": "Write in numbers: a hundred",
+   "a": "100",
+   "d": [
+    "1,000",
+    "10",
+    "10,000"
+   ]
+  },
+  {
+   "q": "How ___ is the sea?",
+   "a": "deep",
+   "d": [
+    "tall",
+    "far",
+    "old"
+   ]
+  },
+  {
+   "q": "How ___ is the mountain?",
+   "a": "high",
+   "d": [
+    "deep",
+    "wide",
+    "far"
+   ]
+  },
+  {
+   "q": "How ___ is it to Salalah?",
+   "a": "far",
+   "d": [
+    "deep",
+    "high",
+    "tall"
+   ]
+  },
+  {
+   "q": "How ___ is the river?",
+   "a": "long",
+   "d": [
+    "deep",
+    "tall",
+    "high"
+   ]
+  },
+  {
+   "q": "Write in numbers: a thousand",
+   "a": "1,000",
+   "d": [
+    "100",
+    "10,000",
+    "100,000"
+   ]
+  },
+  {
+   "q": "Smallest number",
+   "a": "500",
+   "d": [
+    "5,000",
+    "50,000",
+    "500,000"
+   ]
+  },
+  {
+   "q": "Moon is 3,474 km ___",
+   "a": "wide",
+   "d": [
+    "deep",
+    "tall",
+    "old"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How do we say 100,000?",
+   "o": [
+    "a hundred thousand",
+    "ten thousand",
+    "a million",
+    "a thousand"
+   ],
+   "why": "100,000 = a hundred thousand."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How deep is the Sea of Oman?",
+   "o": [
+    "3,700 metres",
+    "370 metres",
+    "37,000 metres",
+    "3,474 kilometres"
+   ],
+   "why": "The Sea of Oman is 3,700 metres deep."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which adjective do we use to ask about a distance?",
+   "o": [
+    "far",
+    "deep",
+    "tall",
+    "wide"
+   ],
+   "why": "How far …? is for distance."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How far is the Moon from the Earth?",
+   "o": [
+    "384,400 kilometres",
+    "3,700 metres",
+    "3,474 kilometres",
+    "1,000 kilometres"
+   ],
+   "why": "The Moon is 384,400 kilometres away."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Order from the biggest: 5,000 / 1,000,000 / 500",
+   "o": [
+    "1,000,000; 5,000; 500",
+    "500; 5,000; 1,000,000",
+    "5,000; 1,000,000; 500",
+    "1,000,000; 500; 5,000"
+   ],
+   "why": "A million, then five thousand, then five hundred."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct question about the River Nile.",
+   "o": [
+    "How long is the River Nile?",
+    "How tall is the River Nile?",
+    "How high is the River Nile?",
+    "How old long is the River Nile?"
+   ],
+   "why": "Rivers are long, so we ask How long …?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write 700,500 in words.",
+   "o": [
+    "seven hundred thousand, five hundred",
+    "seventy thousand, five hundred",
+    "seven thousand, five hundred",
+    "seven million, five hundred"
+   ],
+   "why": "700,000 + 500 = seven hundred thousand, five hundred."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"How ______ is the Moon? It's 3,474 kilometres wide.\" Which word completes the question?",
+   "o": [
+    "wide",
+    "deep",
+    "far",
+    "high"
+   ],
+   "why": "The answer says wide, so the question uses wide too."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which question and answer match?",
+   "o": [
+    "How deep is the sea? It's 3,700 metres deep.",
+    "How tall is the sea? It's 3,700 metres far.",
+    "How far is the sea? It's 3,700 metres high.",
+    "How high is the sea? It's 3,700 metres long."
+   ],
+   "why": "The adjective in the question and the answer is the same."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which number is the same as \"fifty thousand\"?",
+   "o": [
+    "50,000",
+    "5,000",
+    "500,000",
+    "15,000"
+   ],
+   "why": "Fifty thousand has four zeros: 50,000."
+  }
+ ]
+}

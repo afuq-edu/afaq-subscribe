@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 3: Places",
+  "lesson": "Unit 3 – Lesson 6: Culture and Project – Ancient cities in our region",
+  "outcomes": [
+    "I can understand facts about Baalbek, Carthage and Petra.",
+    "I can say what old buildings tell us about the past.",
+    "I can make and present a tourist brochure about an ancient city."
+  ],
+  "tf": [
+    {"s": "Baalbek is in Lebanon.", "t": true, "why": "Baalbek is an ancient city in Lebanon."},
+    {"s": "Carthage is in Jordan.", "t": false, "why": "Carthage is in Tunisia; Petra is in Jordan."},
+    {"s": "Baalbek is more than 2,000 years old.", "t": true, "why": "It is a very old, ancient city."},
+    {"s": "Carthage was an important harbour on the coast of Tunisia.", "t": true, "why": "Boats came to its harbour on the coast."},
+    {"s": "There is a new theatre in Petra today.", "t": false, "why": "The theatre in Petra is ancient, not new."},
+    {"s": "In Petra, people bought and sold spices.", "t": true, "why": "Spices came from India, China and Egypt."},
+    {"s": "Today you can see Roman baths, statues and a theatre in Carthage.", "t": true, "why": "You can also see the city walls."},
+    {"s": "“Ancient” means very new and modern.", "t": false, "why": "Ancient means very, very old."},
+    {"s": "Ruins are buildings that are brand new.", "t": false, "why": "Ruins are what is left of old, broken buildings."},
+    {"s": "A good brochure has headings, pictures and short texts.", "t": true, "why": "These help visitors find information quickly."}
+  ],
+  "boxes": [
+    {"q": "How old is Baalbek?", "o": ["more than 2,000 years old", "about 20 years old", "about 200 years old"], "why": "Baalbek is more than 2,000 years old."},
+    {"q": "Which country is Petra in?", "o": ["Jordan", "Tunisia", "Lebanon"], "why": "Petra is in Jordan."},
+    {"q": "Which country is Carthage in?", "o": ["Tunisia", "Jordan", "Lebanon"], "why": "Carthage is in Tunisia."},
+    {"q": "What did people buy and sell in Petra?", "o": ["spices", "cars", "phones"], "why": "They traded spices from India, China and Egypt."},
+    {"q": "What was Carthage?", "o": ["an important harbour", "a desert village", "a modern skyscraper"], "why": "Carthage was a harbour on the coast."},
+    {"q": "Complete: Jerash is a city which is more than ___ years old.", "o": ["2,000", "20", "200"], "why": "Jerash is more than 2,000 years old."},
+    {"q": "Which is an ancient place in Oman?", "o": ["Bat", "Carthage", "Baalbek"], "why": "Bat is in Oman; the others are in other countries."},
+    {"q": "Why should you speak in a loud, clear voice?", "o": ["So everyone can hear and understand.", "So the lesson finishes quickly.", "So nobody asks questions."], "why": "A clear voice helps your audience."},
+    {"q": "Which phrase can you use in your brochure?", "o": ["Today you can see …", "Could you help me …?", "No way!"], "why": "Today you can see … tells visitors what is there."},
+    {"q": "Complete: Why don’t we visit Petra? – Good ___.", "o": ["idea", "morning", "night"], "why": "Good idea! agrees with a suggestion."}
+  ],
+  "hunt": [
+    {"q": "Ancient city in Lebanon", "a": "Baalbek", "d": ["Petra", "Carthage", "Jerash"]},
+    {"q": "Ancient city in Tunisia", "a": "Carthage", "d": ["Petra", "Baalbek", "Jerash"]},
+    {"q": "Petra is in…", "a": "Jordan", "d": ["Tunisia", "Lebanon", "Oman"]},
+    {"q": "Traded in Petra", "a": "spices", "d": ["phones", "cars", "laptops"]},
+    {"q": "Very, very old", "a": "ancient", "d": ["modern", "new", "tall"]},
+    {"q": "Old broken buildings", "a": "ruins", "d": ["skyscrapers", "offices", "lifts"]},
+    {"q": "The land next to the sea", "a": "coast", "d": ["desert", "mountain", "tower"]},
+    {"q": "Baalbek is more than ___ years old", "a": "2,000", "d": ["20", "200", "50"]},
+    {"q": "Ancient place in Oman", "a": "Qalhat", "d": ["Carthage", "Baalbek", "Petra"]},
+    {"q": "Seen in Carthage today", "a": "Roman baths", "d": ["skyscrapers", "escalators", "a new mall"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What can you still see in Carthage today?", "o": ["city walls, Roman baths, statues and a theatre", "skyscrapers and shopping malls", "a new airport", "only sand"], "why": "These ancient things are still there."},
+    {"lv": "التذكر", "q": "Where did the spices in Petra come from?", "o": ["India, China and Egypt", "only Jordan", "Tunisia and Lebanon", "Europe"], "why": "Traders brought spices from India, China and Egypt."},
+    {"lv": "التذكر", "q": "Which three things should your project notes include?", "o": ["how old the city is, the most important buildings, what you can see today", "your name, age and phone number", "the price of tickets only", "the weather every day"], "why": "These are the three parts of the notes."},
+    {"lv": "التذكر", "q": "Which three cities are in the culture texts?", "o": ["Baalbek, Carthage and Petra", "Muscat, Nizwa and Sur", "London, Paris and Rome", "Bat, Qalhat and Ubar"], "why": "The texts are about Baalbek, Carthage and Petra."},
+    {"lv": "التطبيق", "q": "Choose the best sentence for a brochure.", "o": ["The most important building is the Roman theatre.", "The most important building is my bedroom.", "I don’t like old buildings.", "Could you show me the theatre?"], "why": "It uses a project phrase and gives useful information."},
+    {"lv": "التطبيق", "q": "Write about Bahla Fort. Which sentence is best?", "o": ["Bahla Fort is very old and you can see its walls and towers.", "Bahla Fort is a new shopping mall.", "Bahla Fort is in Tunisia.", "Bahla Fort was built last year."], "why": "It describes an old building in Oman correctly."},
+    {"lv": "التطبيق", "q": "“Carthage is in Lebanon.” True, false or doesn’t say?", "o": ["False – it’s in Tunisia.", "True", "Doesn’t say", "False – it’s in Jordan."], "why": "Carthage is in Tunisia."},
+    {"lv": "التحليل", "q": "Why was Carthage important?", "o": ["It was a harbour on the coast, so boats and trade came there.", "It had the tallest skyscraper.", "It was in the middle of the desert.", "It had no buildings."], "why": "A harbour city connects people by sea."},
+    {"lv": "التحليل", "q": "What do old buildings in our town tell us?", "o": ["How people lived in the past", "What the weather will be tomorrow", "How to use a smartphone", "Nothing at all"], "why": "Old buildings show us our history."},
+    {"lv": "التحليل", "q": "Petra had people from many places buying and selling spices. What does this tell us?", "o": ["Petra was an important place for trade.", "Petra was a small, quiet village.", "Nobody visited Petra.", "Petra had no markets."], "why": "Trade from many countries means it was an important city."}
+  ]
+}

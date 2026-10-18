@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U3",
+ "lesson": "Unit 3 – Lesson 6: English in action – Asking the way",
+ "outcomes": [
+  "Ask the way politely.",
+  "Understand and give directions: turn left, turn right, go straight ahead.",
+  "Follow directions on a map to find a place."
+ ],
+ "tf": [
+  {
+   "s": "We start with 'Excuse me' when we ask the way.",
+   "t": true,
+   "why": "Yes! 'Excuse me' is polite."
+  },
+  {
+   "s": "The opposite of 'turn left' is 'turn right'.",
+   "t": true,
+   "why": "Correct! Left and right are opposites."
+  },
+  {
+   "s": "Razan wants to go to the museum.",
+   "t": false,
+   "why": "Razan wants to go to the park."
+  },
+  {
+   "s": "You turn right at the supermarket to go to the park.",
+   "t": true,
+   "why": "Well done! Turn right at the supermarket."
+  },
+  {
+   "s": "The park is on the right.",
+   "t": false,
+   "why": "The park is on the left."
+  },
+  {
+   "s": "'Go straight ahead' means turn around.",
+   "t": false,
+   "why": "It means keep walking forward."
+  },
+  {
+   "s": "A chemist, a bank and a cinema are places in a town.",
+   "t": true,
+   "why": "Great! They are buildings on the map."
+  },
+  {
+   "s": "You can buy medicine at a cinema.",
+   "t": false,
+   "why": "You buy medicine at a chemist."
+  },
+  {
+   "s": "We say 'Can you tell me the way to the park, please?'",
+   "t": true,
+   "why": "Correct! That's a polite question."
+  },
+  {
+   "s": "'Go across the road' means walk next to the road for a long time.",
+   "t": false,
+   "why": "'Go across' means from one side to the other. 'Go along' means next to it."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does 'go along the road' mean?",
+   "o": [
+    "walk next to the road",
+    "walk to the other side",
+    "stop and wait"
+   ],
+   "why": "'Along' means next to the road."
+  },
+  {
+   "q": "Which is NOT a direction?",
+   "o": [
+    "chemist",
+    "turn right",
+    "go straight ahead"
+   ],
+   "why": "A chemist is a place."
+  },
+  {
+   "q": "Where do you begin on the map?",
+   "o": [
+    "at Start",
+    "at the park",
+    "at the cinema"
+   ],
+   "why": "You always begin at Start."
+  },
+  {
+   "q": "Turn right ___ the supermarket.",
+   "o": [
+    "at",
+    "on",
+    "of"
+   ],
+   "why": "We say 'turn right at the supermarket'."
+  },
+  {
+   "q": "Complete: Excuse me, can you ___ me the way to the park, please?",
+   "o": [
+    "tell",
+    "say",
+    "speak"
+   ],
+   "why": "We say 'tell me the way'."
+  },
+  {
+   "q": "Which is a building on the map?",
+   "o": [
+    "museum",
+    "river",
+    "forest"
+   ],
+   "why": "A museum is a building in town."
+  },
+  {
+   "q": "Which word tells you to change direction?",
+   "o": [
+    "turn",
+    "straight",
+    "ahead"
+   ],
+   "why": "'Turn left' or 'turn right' changes direction."
+  },
+  {
+   "q": "Where can you eat a meal?",
+   "o": [
+    "restaurant",
+    "bank",
+    "museum"
+   ],
+   "why": "You eat at a restaurant."
+  },
+  {
+   "q": "Someone asks you the way. You start with...",
+   "o": [
+    "Sure.",
+    "Bye.",
+    "No, thanks."
+   ],
+   "why": "'Sure.' is a friendly start."
+  },
+  {
+   "q": "Ask the way to the bank.",
+   "o": [
+    "Excuse me, can you tell me the way to the bank, please?",
+    "Bank where?",
+    "Go to the bank!"
+   ],
+   "why": "Ask politely with 'Excuse me' and 'please'."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Opposite of left",
+   "a": "right",
+   "d": [
+    "up",
+    "top",
+    "down"
+   ]
+  },
+  {
+   "q": "Go ___ ahead.",
+   "a": "straight",
+   "d": [
+    "across",
+    "along",
+    "left"
+   ]
+  },
+  {
+   "q": "Go ___ the road (to the other side)",
+   "a": "across",
+   "d": [
+    "along",
+    "ahead",
+    "straight"
+   ]
+  },
+  {
+   "q": "Turn right at the...",
+   "a": "supermarket",
+   "d": [
+    "bank",
+    "school",
+    "cinema"
+   ]
+  },
+  {
+   "q": "The park is on the...",
+   "a": "left",
+   "d": [
+    "right",
+    "top",
+    "bottom"
+   ]
+  },
+  {
+   "q": "Watch a film here",
+   "a": "cinema",
+   "d": [
+    "bank",
+    "chemist",
+    "museum"
+   ]
+  },
+  {
+   "q": "Buy medicine here",
+   "a": "chemist",
+   "d": [
+    "cinema",
+    "bank",
+    "school"
+   ]
+  },
+  {
+   "q": "Keep money here",
+   "a": "bank",
+   "d": [
+    "cinema",
+    "restaurant",
+    "museum"
+   ]
+  },
+  {
+   "q": "Learn here",
+   "a": "school",
+   "d": [
+    "bank",
+    "cinema",
+    "chemist"
+   ]
+  },
+  {
+   "q": "Polite word at the end",
+   "a": "please",
+   "d": [
+    "sure",
+    "bye",
+    "sorry"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who wants to go to the park?",
+   "o": [
+    "Razan",
+    "Jasim",
+    "Dina",
+    "Saif"
+   ],
+   "why": "Razan wants to go to the park."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where is the park?",
+   "o": [
+    "on the left",
+    "on the right",
+    "behind the bank",
+    "next to the school"
+   ],
+   "why": "The park is on the left."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word do you say first to be polite?",
+   "o": [
+    "Excuse me",
+    "Bye",
+    "Sure",
+    "Turn"
+   ],
+   "why": "'Excuse me' is polite."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which place has old things to see?",
+   "o": [
+    "museum",
+    "bank",
+    "chemist",
+    "restaurant"
+   ],
+   "why": "A museum has old things."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put in order: (a) The park is on the left. (b) Excuse me, can you tell me the way to the park, please? (c) Sure. Turn right at the supermarket.",
+   "o": [
+    "b – c – a",
+    "a – b – c",
+    "c – a – b",
+    "b – a – c"
+   ],
+   "why": "Ask, then 'Sure', then the directions."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You walk from one side of the road to the other. Which direction is it?",
+   "o": [
+    "go across the road",
+    "go along the road",
+    "turn left",
+    "go straight ahead"
+   ],
+   "why": "'Across' means from one side to the other."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want the cinema. Which question is correct?",
+   "o": [
+    "Excuse me, can you tell me the way to the cinema, please?",
+    "Excuse me, can you tell me the cinema way?",
+    "Can you say me the way to the cinema?",
+    "Where the cinema is, please?"
+   ],
+   "why": "Use 'tell me the way to ...'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your partner turned right, not left. What happens?",
+   "o": [
+    "He arrives at the wrong place.",
+    "He arrives at the right place.",
+    "Nothing changes.",
+    "The map changes."
+   ],
+   "why": "One wrong turn takes you to a different place."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we begin at 'Start' each time on the map?",
+   "o": [
+    "So everyone follows the directions from the same place.",
+    "Because it is the park.",
+    "Because it is the end.",
+    "So we don't need directions."
+   ],
+   "why": "Directions only work from the right starting point."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which directions are the best to answer a friend?",
+   "o": [
+    "Go straight ahead. Turn left. The library is on the right.",
+    "Library, library, library.",
+    "Go. Go. Go.",
+    "It's there."
+   ],
+   "why": "Clear steps help your friend find the place."
+  }
+ ]
+}

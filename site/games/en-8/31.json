@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 3: Spend or save?",
+ "lesson": "Lesson 5: Vocabulary and Grammar – Imaginary situations & second conditional",
+ "outcomes": [
+  "Learn 12 phrases for imaginary situations.",
+  "Form the second conditional: if + Past simple, would + verb.",
+  "Tell real situations from imaginary ones."
+ ],
+ "tf": [
+  {
+   "s": "The second conditional is for imaginary situations.",
+   "t": true,
+   "why": "Yes, it talks about things that are not real."
+  },
+  {
+   "s": "The second conditional uses if + Past simple, would + verb.",
+   "t": true,
+   "why": "Correct, e.g. If I had a wish, I'd travel."
+  },
+  {
+   "s": "'If you could travel back in time' is a real situation.",
+   "t": false,
+   "why": "We can't travel back in time, so it is imaginary."
+  },
+  {
+   "s": "'Donate to a charity' means give money to help people.",
+   "t": true,
+   "why": "Right, you donate to help others."
+  },
+  {
+   "s": "We say 'If I would have a lot of money, I'd travel.'",
+   "t": false,
+   "why": "No would after if: If I had a lot of money, I'd travel."
+  },
+  {
+   "s": "'I'd' in 'I'd walk on the moon' means I would.",
+   "t": true,
+   "why": "Yes, 'd = would here."
+  },
+  {
+   "s": "'If you were rich, would you donate to a charity?' is correct.",
+   "t": true,
+   "why": "Well done, we use were with you."
+  },
+  {
+   "s": "The second conditional is about things that are always true.",
+   "t": false,
+   "why": "That is the zero conditional; the second is imaginary."
+  },
+  {
+   "s": "An inventor is a person who makes new things.",
+   "t": true,
+   "why": "Yes, inventors create new ideas and machines."
+  },
+  {
+   "s": "'Be invisible' means everyone can see you.",
+   "t": false,
+   "why": "Invisible means no one can see you."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: If I ___ (go) into space, I'd walk on the moon.",
+   "o": [
+    "went",
+    "go",
+    "will go"
+   ],
+   "why": "Second conditional: if + Past simple."
+  },
+  {
+   "q": "Complete: If you ___ (be) rich, would you donate to a charity?",
+   "o": [
+    "were",
+    "are",
+    "will be"
+   ],
+   "why": "We use were in the second conditional."
+  },
+  {
+   "q": "Complete: She'd print jewellery if she ___ a 3D printer.",
+   "o": [
+    "got",
+    "gets",
+    "will get"
+   ],
+   "why": "if + Past simple: got."
+  },
+  {
+   "q": "Choose: They'd feel sad if they ___ the only people on Earth.",
+   "o": [
+    "were",
+    "would be",
+    "are"
+   ],
+   "why": "No would in the if part: were."
+  },
+  {
+   "q": "Choose: If I ___ a super ability, I'd like to see through walls.",
+   "o": [
+    "had",
+    "would have",
+    "have"
+   ],
+   "why": "if + Past simple: had."
+  },
+  {
+   "q": "Which phrase means give money to help people?",
+   "o": [
+    "donate to a charity",
+    "win a cup",
+    "pass exams"
+   ],
+   "why": "Donating helps people in need."
+  },
+  {
+   "q": "Which situation is imaginary?",
+   "o": [
+    "be invisible",
+    "go to school",
+    "eat lunch"
+   ],
+   "why": "People can't really be invisible."
+  },
+  {
+   "q": "A person who invents new things is ...",
+   "o": [
+    "an inventor",
+    "a customer",
+    "a principal"
+   ],
+   "why": "Inventors create new things."
+  },
+  {
+   "q": "Real or imaginary: If you could travel back in time?",
+   "o": [
+    "imaginary",
+    "real",
+    "always true"
+   ],
+   "why": "Time travel is imaginary."
+  },
+  {
+   "q": "Complete: If I lived on the moon, I ___ wear a spacesuit.",
+   "o": [
+    "'d need to",
+    "need to",
+    "will need to"
+   ],
+   "why": "Second conditional result: would + verb."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "If I ___ a wish, ...",
+   "a": "had",
+   "d": [
+    "have",
+    "will have",
+    "would have"
+   ]
+  },
+  {
+   "q": "If you ___ rich, ...",
+   "a": "were",
+   "d": [
+    "are",
+    "will be",
+    "be"
+   ]
+  },
+  {
+   "q": "Short form of would",
+   "a": "'d",
+   "d": [
+    "'ll",
+    "'s",
+    "'ve"
+   ]
+  },
+  {
+   "q": "Give money to help people",
+   "a": "donate",
+   "d": [
+    "spend",
+    "win",
+    "save"
+   ]
+  },
+  {
+   "q": "No one can see you",
+   "a": "invisible",
+   "d": [
+    "inventor",
+    "famous",
+    "rich"
+   ]
+  },
+  {
+   "q": "Makes new things",
+   "a": "inventor",
+   "d": [
+    "customer",
+    "character",
+    "opponent"
+   ]
+  },
+  {
+   "q": "Second conditional is for",
+   "a": "imaginary",
+   "d": [
+    "always true",
+    "past",
+    "real future"
+   ]
+  },
+  {
+   "q": "Head teacher of a school",
+   "a": "principal",
+   "d": [
+    "inventor",
+    "customer",
+    "pilot"
+   ]
+  },
+  {
+   "q": "If I ___ into space, ...",
+   "a": "went",
+   "d": [
+    "go",
+    "will go",
+    "gone"
+   ]
+  },
+  {
+   "q": "Win a ___ in a competition",
+   "a": "cup",
+   "d": [
+    "exam",
+    "wish",
+    "charity"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the form of the second conditional?",
+   "o": [
+    "if + Past simple, would + verb",
+    "if + Present simple, will + verb",
+    "if + Present simple, Present simple",
+    "if + would, would"
+   ],
+   "why": "Second conditional: if + Past simple, would + verb."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When do we use the second conditional?",
+   "o": [
+    "for imaginary situations",
+    "for things always true",
+    "for possible future plans",
+    "for finished past events"
+   ],
+   "why": "It talks about unreal or imaginary situations."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'donate to a charity' mean?",
+   "o": [
+    "give money to help people",
+    "buy something on sale",
+    "win a prize",
+    "pass an exam"
+   ],
+   "why": "Donating helps people in need."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase is NOT an imaginary situation?",
+   "o": [
+    "eat breakfast",
+    "be invisible",
+    "travel back in time",
+    "become a film character"
+   ],
+   "why": "Eating breakfast is real and normal."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: If I ___ (live) on the moon, I ___ (need) to wear a spacesuit.",
+   "o": [
+    "lived ... would need",
+    "live ... will need",
+    "would live ... needed",
+    "lived ... need"
+   ],
+   "why": "if + Past simple, would + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct question.",
+   "o": [
+    "If you had a wish, what would you do?",
+    "If you would have a wish, what did you do?",
+    "If you have a wish, what would you did?",
+    "If you had a wish, what will you doing?"
+   ],
+   "why": "if + Past simple, would + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Continue the chain: If I became an inventor, ...",
+   "o": [
+    "I'd have lots of good ideas.",
+    "I have lots of good ideas yesterday.",
+    "I will had good ideas.",
+    "I'd had have good ideas."
+   ],
+   "why": "Use would ('d) + verb in the result."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'If I had a lot of money, I'd donate some to charity' a second conditional?",
+   "o": [
+    "It is an imaginary situation with if + Past simple and would.",
+    "It is always true.",
+    "It is about yesterday.",
+    "It uses will."
+   ],
+   "why": "The speaker imagines having a lot of money."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence shows a real, possible future, not an imaginary one?",
+   "o": [
+    "If it rains tomorrow, I'll take an umbrella.",
+    "If I were invisible, I'd surprise my friends.",
+    "If I could fly, I'd go to the Moon.",
+    "If I became a film character, I'd be an explorer."
+   ],
+   "why": "This is a first conditional about a real possibility."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is wrong with 'If I would be rich, I would travel the world'?",
+   "o": [
+    "We don't use would in the if part; say 'If I were rich'.",
+    "We need will in both parts.",
+    "'Travel' should be 'travelled'.",
+    "Nothing is wrong."
+   ],
+   "why": "The if part uses the Past simple: If I were rich."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U2",
+ "lesson": "Unit 2 – Lesson 8: Skills – Listening, Speaking and Writing (a recipe)",
+ "outcomes": [
+  "Listen and say what each child likes and doesn't like.",
+  "Ask and answer about a favourite recipe.",
+  "Write a recipe with ingredients and ordered steps."
+ ],
+ "tf": [
+  {
+   "s": "Anas loves cheese.",
+   "t": true,
+   "why": "Yes! Anas loves cheese."
+  },
+  {
+   "s": "Anas likes bread very much.",
+   "t": false,
+   "why": "Anas doesn't like bread."
+  },
+  {
+   "s": "Malik likes fruit and vegetables.",
+   "t": true,
+   "why": "Correct! Malik likes fruit and vegetables."
+  },
+  {
+   "s": "Malik loves ice cream.",
+   "t": false,
+   "why": "Malik doesn't like sweet things like ice cream."
+  },
+  {
+   "s": "Yousuf loves crisps and cake.",
+   "t": true,
+   "why": "Well done! Yousuf loves crisps and cake."
+  },
+  {
+   "s": "Yousuf likes vegetables.",
+   "t": false,
+   "why": "Yousuf doesn't like fruit or vegetables."
+  },
+  {
+   "s": "Tea is an ingredient in the pasta recipe.",
+   "t": false,
+   "why": "The pasta recipe has tomatoes, olive oil and pasta, not tea."
+  },
+  {
+   "s": "The pasta recipe is for 2 people.",
+   "t": true,
+   "why": "Yes! It is for 2 people."
+  },
+  {
+   "s": "A recipe has a list of ingredients.",
+   "t": true,
+   "why": "Great! Every recipe needs an ingredients list."
+  },
+  {
+   "s": "'Last' starts the first step of a recipe.",
+   "t": false,
+   "why": "'First' starts the first step. 'Last' is for the final step."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What doesn't Anas like?",
+   "o": [
+    "bread",
+    "cheese",
+    "pasta"
+   ],
+   "why": "Anas doesn't like bread."
+  },
+  {
+   "q": "Who loves crisps and cake?",
+   "o": [
+    "Yousuf",
+    "Malik",
+    "Anas"
+   ],
+   "why": "Yousuf loves crisps and cake."
+  },
+  {
+   "q": "How long does the pasta take?",
+   "o": [
+    "10 minutes",
+    "30 minutes",
+    "2 hours"
+   ],
+   "why": "The pasta takes 10 minutes."
+  },
+  {
+   "q": "Which is a checklist question for your recipe?",
+   "o": [
+    "Is my spelling correct?",
+    "What's my favourite colour?",
+    "Where is the shop?"
+   ],
+   "why": "Check the ingredients list, spelling and handwriting."
+  },
+  {
+   "q": "Complete: ___ , you put the olive oil in a hot pan.",
+   "o": [
+    "First",
+    "Last",
+    "After that"
+   ],
+   "why": "Putting oil in the pan is the first step."
+  },
+  {
+   "q": "Ask about a recipe: What ingredients do you ___?",
+   "o": [
+    "need",
+    "eat",
+    "play"
+   ],
+   "why": "We ask 'What ingredients do you need?'."
+  },
+  {
+   "q": "Which is in the pasta recipe?",
+   "o": [
+    "tomatoes",
+    "cheese",
+    "chicken"
+   ],
+   "why": "The recipe has tomatoes, olive oil and pasta."
+  },
+  {
+   "q": "What do you cook the pasta in?",
+   "o": [
+    "hot water",
+    "cold milk",
+    "olive oil only"
+   ],
+   "why": "You cook the pasta in hot water."
+  },
+  {
+   "q": "Before you listen, look at the...",
+   "o": [
+    "pictures and names",
+    "clock",
+    "door"
+   ],
+   "why": "Looking at the pictures and names first helps you."
+  },
+  {
+   "q": "Complete: I need ___ tomatoes.",
+   "o": [
+    "some",
+    "any",
+    "a"
+   ],
+   "why": "We say 'I need some tomatoes'."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Anas loves...",
+   "a": "cheese",
+   "d": [
+    "bread",
+    "cake",
+    "crisps"
+   ]
+  },
+  {
+   "q": "Anas doesn't like...",
+   "a": "bread",
+   "d": [
+    "cheese",
+    "pasta",
+    "rice"
+   ]
+  },
+  {
+   "q": "Yousuf loves crisps and...",
+   "a": "cake",
+   "d": [
+    "fruit",
+    "bread",
+    "soup"
+   ]
+  },
+  {
+   "q": "Malik likes fruit and...",
+   "a": "vegetables",
+   "d": [
+    "ice cream",
+    "cake",
+    "sweets"
+   ]
+  },
+  {
+   "q": "Pasta recipe: time",
+   "a": "10 minutes",
+   "d": [
+    "30 minutes",
+    "1 hour",
+    "5 minutes"
+   ]
+  },
+  {
+   "q": "Pasta recipe: for ___ people",
+   "a": "2",
+   "d": [
+    "4",
+    "6",
+    "10"
+   ]
+  },
+  {
+   "q": "Not in the pasta recipe",
+   "a": "tea",
+   "d": [
+    "tomatoes",
+    "pasta",
+    "olive oil"
+   ]
+  },
+  {
+   "q": "Put olive oil in a hot...",
+   "a": "pan",
+   "d": [
+    "cup",
+    "bag",
+    "box"
+   ]
+  },
+  {
+   "q": "Second step word",
+   "a": "Then",
+   "d": [
+    "First",
+    "Last",
+    "Ready"
+   ]
+  },
+  {
+   "q": "Final step word",
+   "a": "Last",
+   "d": [
+    "First",
+    "Then",
+    "After that"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does Malik not like?",
+   "o": [
+    "sweet things like ice cream",
+    "fruit",
+    "vegetables",
+    "fruit and vegetables"
+   ],
+   "why": "Malik doesn't like sweet things."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which question asks about a favourite recipe?",
+   "o": [
+    "What's your favourite recipe?",
+    "How old are you?",
+    "Where do you live?",
+    "What time is it?"
+   ],
+   "why": "We ask 'What's your favourite recipe?'."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Put the sequence words in order.",
+   "o": [
+    "First, Then, After that, Last",
+    "Last, Then, First, After that",
+    "Then, First, Last, After that",
+    "After that, First, Then, Last"
+   ],
+   "why": "First, Then, After that, Last."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What are the parts of a recipe?",
+   "o": [
+    "name, time, people, ingredients, steps",
+    "only the name",
+    "a price and a shop",
+    "a map and a title"
+   ],
+   "why": "A recipe has a name, time, people, ingredients and steps."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write the ingredients line for a fruit salad.",
+   "o": [
+    "Ingredients: apples, bananas, oranges, grapes",
+    "Ingredients: cheese, crisps, cake",
+    "Ingredients: chicken, wheat, butter",
+    "Ingredients: tea, coffee, milk"
+   ],
+   "why": "A fruit salad is made of fruit."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete the third step: ___ , you cook the pasta in hot water.",
+   "o": [
+    "After that",
+    "First",
+    "Last",
+    "Then"
+   ],
+   "why": "The third step starts with 'After that'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Anas loves cheese ___ he doesn't like bread.",
+   "o": [
+    "but",
+    "and",
+    "so",
+    "or"
+   ],
+   "why": "'But' joins two different ideas."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it difficult to cook for Yousuf?",
+   "o": [
+    "He loves crisps and cake but doesn't like fruit or vegetables.",
+    "He likes all food.",
+    "He only eats bread.",
+    "He loves vegetables."
+   ],
+   "why": "Yousuf likes snacks and sweet food but not fruit or vegetables."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which menu has something Anas loves and something Malik likes?",
+   "o": [
+    "cheese and a fruit salad",
+    "ice cream",
+    "bread",
+    "cake and crisps"
+   ],
+   "why": "Anas loves cheese and Malik likes fruit."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your partner's last step has no sequence word. What is a good tip?",
+   "o": [
+    "Add 'Last' to your final step.",
+    "Remove the ingredients.",
+    "Write no title.",
+    "Add 'First' to every step."
+   ],
+   "why": "'Last' shows the final step."
+  }
+ ]
+}

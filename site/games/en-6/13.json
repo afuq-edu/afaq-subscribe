@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 1: Free-time fun",
+ "lesson": "Unit 1 – Lesson 11: Get ready for… (exam practice)",
+ "outcomes": [
+  "I can choose the right word for gaps in a text.",
+  "I can find people in a picture from what I hear.",
+  "I can write sports and hobby words from definitions."
+ ],
+ "tf": [
+  {
+   "s": "In a gap text, you should read the whole text first.",
+   "t": true,
+   "why": "Yes! It helps you understand the meaning."
+  },
+  {
+   "s": "\"Photos of people are easy to take because people smile\" is correct.",
+   "t": true,
+   "why": "Right! Because gives the reason."
+  },
+  {
+   "s": "We say \"Some people don't like take photos of flowers.\"",
+   "t": false,
+   "why": "We say \"don't like taking photos\"."
+  },
+  {
+   "s": "\"There are lots of things which you can photograph\" is correct.",
+   "t": true,
+   "why": "Correct! We use which for things."
+  },
+  {
+   "s": "We use \"who\" for things and \"which\" for people.",
+   "t": false,
+   "why": "It's the other way: who for people, which for things."
+  },
+  {
+   "s": "A helmet is something hard that you wear on your head.",
+   "t": true,
+   "why": "Yes! That's a helmet."
+  },
+  {
+   "s": "You need skis and a helmet to go cycling.",
+   "t": false,
+   "why": "You need a bike and a helmet to go cycling."
+  },
+  {
+   "s": "Table tennis is an indoor sport with a small, plastic ball.",
+   "t": true,
+   "why": "Correct! That's table tennis."
+  },
+  {
+   "s": "Before you listen, it helps to read the names.",
+   "t": true,
+   "why": "Great tip! Read the names first."
+  },
+  {
+   "s": "\"The boy who's wearing a blue helmet\" describes a girl.",
+   "t": false,
+   "why": "It describes a boy."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "There are lots of things ___ you can photograph.",
+   "o": [
+    "which",
+    "who",
+    "where"
+   ],
+   "why": "Which is for things."
+  },
+  {
+   "q": "Some people don't like ___ photos of flowers.",
+   "o": [
+    "taking",
+    "take",
+    "took"
+   ],
+   "why": "like + -ing."
+  },
+  {
+   "q": "Photos of people are easy to take ___ people smile.",
+   "o": [
+    "because",
+    "but",
+    "that"
+   ],
+   "why": "Because gives a reason."
+  },
+  {
+   "q": "Something hard you wear on your head:",
+   "o": [
+    "a helmet",
+    "a bat",
+    "a mat"
+   ],
+   "why": "That's a helmet."
+  },
+  {
+   "q": "A sport you do in water:",
+   "o": [
+    "swimming",
+    "cycling",
+    "karate"
+   ],
+   "why": "You swim in water."
+  },
+  {
+   "q": "I like doing puzzles because it's ___.",
+   "o": [
+    "fun",
+    "boring",
+    "difficult"
+   ],
+   "why": "When you like something, give a positive reason."
+  },
+  {
+   "q": "The girl ___ is scooting.",
+   "o": [
+    "who",
+    "which",
+    "where"
+   ],
+   "why": "We use who for people."
+  },
+  {
+   "q": "We use ___ for places.",
+   "o": [
+    "where",
+    "who",
+    "which"
+   ],
+   "why": "Where is for places."
+  },
+  {
+   "q": "What should you do first in a gap text?",
+   "o": [
+    "read the whole text",
+    "write the answers",
+    "read only the title"
+   ],
+   "why": "Read the whole text first."
+  },
+  {
+   "q": "\"I like making videos ___ it's creative.\"",
+   "o": [
+    "because",
+    "but",
+    "who"
+   ],
+   "why": "Because gives a reason."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "For people: the boy ___",
+   "a": "who",
+   "d": [
+    "which",
+    "where",
+    "when"
+   ]
+  },
+  {
+   "q": "For things: the photo ___",
+   "a": "which",
+   "d": [
+    "who",
+    "where",
+    "when"
+   ]
+  },
+  {
+   "q": "For places: the park ___",
+   "a": "where",
+   "d": [
+    "who",
+    "which",
+    "when"
+   ]
+  },
+  {
+   "q": "Hard, worn on your head",
+   "a": "helmet",
+   "d": [
+    "mat",
+    "bat",
+    "belt"
+   ]
+  },
+  {
+   "q": "Needs a bike and helmet",
+   "a": "cycling",
+   "d": [
+    "skiing",
+    "karate",
+    "swimming"
+   ]
+  },
+  {
+   "q": "Indoor, small plastic ball",
+   "a": "table tennis",
+   "d": [
+    "rugby",
+    "skiing",
+    "hockey"
+   ]
+  },
+  {
+   "q": "Katy is ...",
+   "a": "running",
+   "d": [
+    "cycling",
+    "swimming",
+    "scooting"
+   ]
+  },
+  {
+   "q": "William wears a blue ...",
+   "a": "helmet",
+   "d": [
+    "dress",
+    "hat",
+    "belt"
+   ]
+  },
+  {
+   "q": "don't like ___ photos",
+   "a": "taking",
+   "d": [
+    "take",
+    "took",
+    "takes"
+   ]
+  },
+  {
+   "q": "Gives a reason",
+   "a": "because",
+   "d": [
+    "but",
+    "which",
+    "who"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Why should you read the whole text first?",
+   "o": [
+    "to understand the meaning before choosing answers",
+    "to finish quickly",
+    "to count the words",
+    "to find the title"
+   ],
+   "why": "Understanding the text helps you choose."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which girl is Katy?",
+   "o": [
+    "the one who is running",
+    "the one who is cycling",
+    "the one who is swimming",
+    "the one with the blue helmet"
+   ],
+   "why": "Katy is running."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who is William?",
+   "o": [
+    "the boy who's wearing a blue helmet",
+    "the girl with the red dress",
+    "the boy who's running",
+    "the girl who's scooting"
+   ],
+   "why": "William has a blue helmet and a bicycle."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which adjectives give opinions?",
+   "o": [
+    "interesting, boring, exciting",
+    "blue, red, green",
+    "tall, short, medium height",
+    "first, second, third"
+   ],
+   "why": "These words tell how you feel about something."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: Some people prefer ___ photos of animals.",
+   "o": [
+    "to take",
+    "taking to",
+    "took",
+    "takes"
+   ],
+   "why": "prefer + to + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "\"You need a bike and a helmet to do this sport.\" What is it?",
+   "o": [
+    "cycling",
+    "swimming",
+    "karate",
+    "table tennis"
+   ],
+   "why": "Bike + helmet = cycling."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good exam-style answer about a hobby?",
+   "o": [
+    "I like making videos because it's creative and fun.",
+    "Videos.",
+    "Yes.",
+    "I like because."
+   ],
+   "why": "Give an opinion and a reason."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is \"which\" correct in \"There are lots of things which you can photograph\"?",
+   "o": [
+    "Because we use which for things.",
+    "Because we use which for people.",
+    "Because we use which for places.",
+    "Because which means because."
+   ],
+   "why": "Things take which."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which tip helps most in a listening task with names?",
+   "o": [
+    "Read the names before you listen.",
+    "Close your eyes.",
+    "Write the answers before listening.",
+    "Listen only to the last part."
+   ],
+   "why": "Knowing the names helps you listen for them."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"It's an indoor sport that people play with a small, plastic ball.\" Why is it NOT volleyball?",
+   "o": [
+    "Volleyball uses a bigger ball and can be played on the beach.",
+    "Volleyball is a winter sport.",
+    "Volleyball uses a helmet.",
+    "Volleyball is a hobby, not a sport."
+   ],
+   "why": "The small, plastic ball points to table tennis."
+  }
+ ]
+}

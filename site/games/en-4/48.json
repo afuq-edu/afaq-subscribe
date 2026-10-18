@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U4",
+ "lesson": "Unit 4 – Lesson 8: Skills – Listening, Speaking and Writing (a report)",
+ "outcomes": [
+  "Listen and find information about Hamzah the farmer.",
+  "Ask: What do you want to be when you grow up? Why?",
+  "Write a report in paragraphs using 'because'."
+ ],
+ "tf": [
+  {
+   "s": "Hamzah is a farmer.",
+   "t": true,
+   "why": "Yes! Hamzah works on a farm."
+  },
+  {
+   "s": "Hamzah is twenty years old.",
+   "t": false,
+   "why": "Hamzah is sixteen."
+  },
+  {
+   "s": "Hamzah is working on his uncle's farm.",
+   "t": true,
+   "why": "Correct! He works on his uncle's farm."
+  },
+  {
+   "s": "Hamzah likes working outside.",
+   "t": true,
+   "why": "Well done! He thinks it's healthy."
+  },
+  {
+   "s": "Hamzah's uncle only grows tomatoes.",
+   "t": false,
+   "why": "He grows other vegetables and sometimes has sheep, too."
+  },
+  {
+   "s": "We use 'because' to give a reason.",
+   "t": true,
+   "why": "Yes! 'because' tells us why."
+  },
+  {
+   "s": "'He want to be a mechanic' is correct.",
+   "t": false,
+   "why": "With he, we say wants: He wants to be a mechanic."
+  },
+  {
+   "s": "In Talal's report, a new idea starts a new paragraph.",
+   "t": true,
+   "why": "Correct! Each idea gets its own paragraph."
+  },
+  {
+   "s": "Talal wants to be a chef.",
+   "t": false,
+   "why": "Talal wants to be a video game animator."
+  },
+  {
+   "s": "The last paragraph of the report is about the writer's own opinion.",
+   "t": true,
+   "why": "Yes! It says what Talal wants to be."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How old is Hamzah?",
+   "o": [
+    "sixteen",
+    "six",
+    "sixty"
+   ],
+   "why": "Hamzah is sixteen."
+  },
+  {
+   "q": "Where is Hamzah working?",
+   "o": [
+    "on his uncle's farm",
+    "in a hospital",
+    "in a studio"
+   ],
+   "why": "He works on his uncle's farm."
+  },
+  {
+   "q": "Hamzah's uncle grows tomatoes and other ...",
+   "o": [
+    "vegetables",
+    "rockets",
+    "jewels"
+   ],
+   "why": "He grows vegetables and sometimes has sheep."
+  },
+  {
+   "q": "How many want to be chefs?",
+   "o": [
+    "two",
+    "three",
+    "six"
+   ],
+   "why": "Saeed and Mohammed want to be chefs."
+  },
+  {
+   "q": "Azza wants to be a vet ___ she likes animals.",
+   "o": [
+    "because",
+    "but",
+    "or"
+   ],
+   "why": "'because' gives the reason."
+  },
+  {
+   "q": "He ___ to be a mechanic.",
+   "o": [
+    "wants",
+    "want",
+    "wanting"
+   ],
+   "why": "He wants – add s with he."
+  },
+  {
+   "q": "They ___ to be doctors.",
+   "o": [
+    "want",
+    "wants",
+    "wanting"
+   ],
+   "why": "They want – no s."
+  },
+  {
+   "q": "Why do Manar, Bayan and Anas want to be doctors?",
+   "o": [
+    "to help people",
+    "to make sounds",
+    "to fix cars"
+   ],
+   "why": "They want to help people."
+  },
+  {
+   "q": "What does Talal want to be?",
+   "o": [
+    "a video game animator",
+    "a doctor",
+    "a farmer"
+   ],
+   "why": "He loves video games."
+  },
+  {
+   "q": "How many classmates do you ask in the survey?",
+   "o": [
+    "six",
+    "two",
+    "ten"
+   ],
+   "why": "You ask six classmates."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Hamzah's job",
+   "a": "farmer",
+   "d": [
+    "mechanic",
+    "doctor",
+    "chef"
+   ]
+  },
+  {
+   "q": "Hamzah's age",
+   "a": "sixteen",
+   "d": [
+    "six",
+    "sixty",
+    "twelve"
+   ]
+  },
+  {
+   "q": "Hamzah works on his ... farm",
+   "a": "uncle's",
+   "d": [
+    "aunt's",
+    "sister's",
+    "cousin's"
+   ]
+  },
+  {
+   "q": "Word that gives a reason",
+   "a": "because",
+   "d": [
+    "but",
+    "and",
+    "or"
+   ]
+  },
+  {
+   "q": "He ___ to be a vet.",
+   "a": "wants",
+   "d": [
+    "want",
+    "wanting",
+    "wanted"
+   ]
+  },
+  {
+   "q": "Talal's future job",
+   "a": "animator",
+   "d": [
+    "chef",
+    "doctor",
+    "farmer"
+   ]
+  },
+  {
+   "q": "Manar, Bayan, Anas: future job",
+   "a": "doctors",
+   "d": [
+    "chefs",
+    "vets",
+    "farmers"
+   ]
+  },
+  {
+   "q": "Saeed and Mohammed: future job",
+   "a": "chefs",
+   "d": [
+    "doctors",
+    "vets",
+    "mechanics"
+   ]
+  },
+  {
+   "q": "Classmates in the survey",
+   "a": "six",
+   "d": [
+    "two",
+    "four",
+    "ten"
+   ]
+  },
+  {
+   "q": "Azza's future job",
+   "a": "vet",
+   "d": [
+    "chef",
+    "pilot",
+    "farmer"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What question do you ask in the survey?",
+   "o": [
+    "What do you want to be when you grow up? Why?",
+    "What's your address?",
+    "How often do you watch TV?",
+    "What's the emergency?"
+   ],
+   "why": "The survey asks about future jobs."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Besides vegetables, what does Hamzah's uncle sometimes have?",
+   "o": [
+    "sheep",
+    "cars",
+    "rockets",
+    "boats"
+   ],
+   "why": "He sometimes has sheep, too."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How many paragraphs are in Talal's report?",
+   "o": [
+    "three",
+    "one",
+    "five",
+    "ten"
+   ],
+   "why": "Results, more results and opinion."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why does Talal want to be a video game animator?",
+   "o": [
+    "because he loves video games",
+    "because he likes animals",
+    "because he likes cars",
+    "because he wants to help people"
+   ],
+   "why": "Talal loves video games."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: When I grow up, I want to be a mechanic ___ I like cars.",
+   "o": [
+    "because",
+    "but",
+    "or",
+    "so"
+   ],
+   "why": "'because' gives the reason."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the sentence: 'He want to be a mechanic.'",
+   "o": [
+    "He wants to be a mechanic.",
+    "He wanting to be a mechanic.",
+    "He want be a mechanic.",
+    "He is want to be a mechanic."
+   ],
+   "why": "With he, add s: wants."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A survey shows: 3 doctors, 2 chefs, 1 vet. Which job is the most popular?",
+   "o": [
+    "doctor",
+    "chef",
+    "vet",
+    "animator"
+   ],
+   "why": "3 is the biggest number."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Hamzah think working outside is good?",
+   "o": [
+    "It's healthy.",
+    "It's quiet.",
+    "It's dangerous.",
+    "It's easy."
+   ],
+   "why": "Hamzah likes working outside because it's healthy."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the last paragraph of the report about?",
+   "o": [
+    "the writer's own opinion",
+    "Hamzah's age",
+    "the emergency number",
+    "the weather"
+   ],
+   "why": "The last paragraph says what the writer wants to be."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we start a new paragraph?",
+   "o": [
+    "For each new idea.",
+    "For each new word.",
+    "After every sentence.",
+    "Only at the end."
+   ],
+   "why": "A new idea needs a new paragraph."
+  }
+ ]
+}

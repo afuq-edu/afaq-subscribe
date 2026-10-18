@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 2: Technology",
+ "lesson": "Unit 2 – Lesson 6: Culture and Project – Technology helps us",
+ "outcomes": [
+  "I can say how technology helps children with special needs.",
+  "I can match devices to the people they help.",
+  "I can make a spider diagram about technology and learning."
+ ],
+ "tf": [
+  {
+   "s": "Some deaf children use special alarm clocks with lights and vibrations.",
+   "t": true,
+   "why": "Yes! They can see or feel the alarm."
+  },
+  {
+   "s": "Children in Oman who are deaf use the special alarm clocks in the text.",
+   "t": false,
+   "why": "The text says the children are in the UK."
+  },
+  {
+   "s": "E-readers can make letters very large.",
+   "t": true,
+   "why": "Right! That helps people who cannot see well."
+  },
+  {
+   "s": "Virtual Reality (VR) helps children with Down's Syndrome to paint.",
+   "t": true,
+   "why": "Yes! VR helps them paint."
+  },
+  {
+   "s": "People who cannot talk can use their eyes to make computers do things.",
+   "t": true,
+   "why": "Correct! Their eyes control the computer."
+  },
+  {
+   "s": "Special alarm clocks for deaf children are very loud.",
+   "t": false,
+   "why": "They use lights and vibrations, not sound."
+  },
+  {
+   "s": "With an e-reader, people who cannot see well can only read and never hear the words.",
+   "t": false,
+   "why": "They can also hear the words."
+  },
+  {
+   "s": "We should be kind and respect people with special needs.",
+   "t": true,
+   "why": "Yes! Kindness and respect are important."
+  },
+  {
+   "s": "In a spider diagram about technology, we write \"Technology\" in the middle.",
+   "t": true,
+   "why": "Great! The main idea goes in the middle."
+  },
+  {
+   "s": "When you summarise, you say every small detail.",
+   "t": false,
+   "why": "Summarising means giving the most important information."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which words mean a person needs extra help?",
+   "o": [
+    "special needs",
+    "password",
+    "website"
+   ],
+   "why": "Special needs means a person needs extra help."
+  },
+  {
+   "q": "What helps children with Down's Syndrome to paint?",
+   "o": [
+    "Virtual Reality (VR)",
+    "an alarm clock",
+    "a printer"
+   ],
+   "why": "VR helps them paint."
+  },
+  {
+   "q": "In which country do deaf children use special alarm clocks?",
+   "o": [
+    "the UK",
+    "Oman",
+    "Canada"
+   ],
+   "why": "The text says the UK."
+  },
+  {
+   "q": "What does the class vote for at the end of the project?",
+   "o": [
+    "the best device for learning",
+    "the tallest student",
+    "the best sport"
+   ],
+   "why": "The class votes for the best device for learning."
+  },
+  {
+   "q": "How do e-readers help people who cannot see well?",
+   "o": [
+    "very large letters",
+    "loud alarms",
+    "small screens"
+   ],
+   "why": "The letters can be very large."
+  },
+  {
+   "q": "What do we write in the middle of the spider diagram?",
+   "o": [
+    "Technology",
+    "My name",
+    "The date"
+   ],
+   "why": "Technology is the main idea."
+  },
+  {
+   "q": "You can use a tablet to help you ___ notes.",
+   "o": [
+    "take",
+    "make up",
+    "turn"
+   ],
+   "why": "We say take notes."
+  },
+  {
+   "q": "OLPC stands for One Laptop per ___.",
+   "o": [
+    "Child",
+    "Class",
+    "City"
+   ],
+   "why": "One Laptop per Child."
+  },
+  {
+   "q": "A person who cannot hear is ___.",
+   "o": [
+    "deaf",
+    "blind",
+    "tired"
+   ],
+   "why": "Deaf means cannot hear."
+  },
+  {
+   "q": "How should we treat people with special needs?",
+   "o": [
+    "with kindness and respect",
+    "badly",
+    "we should ignore them"
+   ],
+   "why": "Be kind and respectful."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Cannot hear",
+   "a": "deaf",
+   "d": [
+    "blind",
+    "tall",
+    "brave"
+   ]
+  },
+  {
+   "q": "Helps children paint",
+   "a": "VR",
+   "d": [
+    "OLPC",
+    "app",
+    "printer"
+   ]
+  },
+  {
+   "q": "Shaking you can feel",
+   "a": "vibration",
+   "d": [
+    "password",
+    "screen",
+    "speaker"
+   ]
+  },
+  {
+   "q": "Wakes you up",
+   "a": "alarm clock",
+   "d": [
+    "e-reader",
+    "printer",
+    "speaker"
+   ]
+  },
+  {
+   "q": "Has very large letters",
+   "a": "e-reader",
+   "d": [
+    "alarm clock",
+    "speaker",
+    "printer"
+   ]
+  },
+  {
+   "q": "Country with the alarm clocks",
+   "a": "the UK",
+   "d": [
+    "Oman",
+    "Canada",
+    "Chile"
+   ]
+  },
+  {
+   "q": "They control computers.",
+   "a": "eyes",
+   "d": [
+    "feet",
+    "hands",
+    "ears"
+   ]
+  },
+  {
+   "q": "One Laptop per ...",
+   "a": "Child",
+   "d": [
+    "Class",
+    "City",
+    "School"
+   ]
+  },
+  {
+   "q": "Middle of the diagram",
+   "a": "Technology",
+   "d": [
+    "Sports",
+    "Hobbies",
+    "Places"
+   ]
+  },
+  {
+   "q": "You ___ notes on a tablet.",
+   "a": "take",
+   "d": [
+    "make",
+    "give",
+    "do"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How can children who are deaf wake up in the morning?",
+   "o": [
+    "with special alarm clocks that use lights and vibrations",
+    "with very loud music",
+    "with headphones",
+    "with a printer"
+   ],
+   "why": "Lights and vibrations wake them up."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does VR stand for?",
+   "o": [
+    "Virtual Reality",
+    "Very Real",
+    "Video Radio",
+    "Visual Reader"
+   ],
+   "why": "VR means Virtual Reality."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What can people who cannot talk use to make computers do things?",
+   "o": [
+    "their eyes",
+    "a speaker",
+    "an alarm clock",
+    "a printer"
+   ],
+   "why": "They use their eyes."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a spider diagram?",
+   "o": [
+    "a poster with the main idea in the middle and branches",
+    "a list of spiders",
+    "a story with pictures",
+    "a poem with rhymes"
+   ],
+   "why": "Branches come out from the main idea."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A boy can't see well. Which device helps him read?",
+   "o": [
+    "an e-reader with large letters",
+    "a special alarm clock",
+    "a VR headset for painting",
+    "a speaker with no screen"
+   ],
+   "why": "Large letters and audio help him read."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses the project phrases correctly?",
+   "o": [
+    "You can use a tablet to help you to take notes.",
+    "You can a tablet to help take notes.",
+    "You use can a tablet notes.",
+    "A tablet are very good at you."
+   ],
+   "why": "You can use … to help you to …"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence about learning with a device is correct?",
+   "o": [
+    "I can watch videos on my computer to learn about science.",
+    "I can watch videos on my alarm clock to learn science.",
+    "I can print videos on my speaker.",
+    "I can learn science when I turn off everything."
+   ],
+   "why": "Computers show learning videos."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A girl has difficulty holding a pen. Which technology helps her paint?",
+   "o": [
+    "Virtual Reality (VR)",
+    "a light alarm clock",
+    "an e-reader",
+    "headphones"
+   ],
+   "why": "VR helps her paint without holding a pen."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do alarm clocks for deaf children use lights and vibrations?",
+   "o": [
+    "Because they cannot hear sounds.",
+    "Because lights are cheaper.",
+    "Because they like colours.",
+    "Because they cannot see."
+   ],
+   "why": "They see or feel what they can't hear."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should you summarise when you present your poster?",
+   "o": [
+    "So listeners understand the most important information quickly.",
+    "So the presentation is very long.",
+    "So nobody understands.",
+    "So you don't have to show the poster."
+   ],
+   "why": "A summary gives the key ideas."
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 3: Places",
+  "lesson": "Unit 3 – Lesson 4: Book club – A mystery story",
+  "outcomes": [
+    "I know the features of a mystery story.",
+    "I can understand and order the events of “Bingley Palace”.",
+    "I can make compound nouns like bookcase and sketchbook."
+  ],
+  "tf": [
+    {"s": "A mystery story usually has a puzzle to solve.", "t": true, "why": "The reader and the characters try to solve a puzzle."},
+    {"s": "A mystery story often has a kind of detective.", "t": true, "why": "Someone looks for clues, like Eddie does."},
+    {"s": "Lady Charlotte lived in the palace many years ago and painted lots of pictures.", "t": true, "why": "Her paintings were lost for a long time."},
+    {"s": "The painting showed three windows in the tower, but there are only two.", "t": false, "why": "It’s the other way: the painting showed two windows, but there are three."},
+    {"s": "Eddie found the secret room when he touched a bookcase.", "t": true, "why": "The bookcase moved and he fell down some stairs."},
+    {"s": "Lord Bingley is angry because Eddie found the secret room.", "t": false, "why": "He is happy because Eddie found the lost paintings."},
+    {"s": "Eddie was holding his sketchbook next to the picture.", "t": true, "why": "He compared the picture with the real tower."},
+    {"s": "Bookcase is a compound noun: book + case.", "t": true, "why": "Two words join to make one new noun."},
+    {"s": "In the story, the guide fell down some stairs.", "t": false, "why": "It was Eddie who fell down the stairs."},
+    {"s": "Eddie fell down the stairs before they walked through the entrance.", "t": false, "why": "First they walked through the entrance; Eddie fell later."}
+  ],
+  "boxes": [
+    {"q": "Who is Lady Charlotte?", "o": ["a woman who lived in the palace long ago", "the guide", "Eddie’s teacher"], "why": "She lived in the palace and painted pictures."},
+    {"q": "What was wrong with the painting of the palace?", "o": ["It showed only two windows in the tower.", "It had no tower.", "It was upside down."], "why": "The real tower has three windows."},
+    {"q": "What happened when Eddie touched the bookcase?", "o": ["It moved and he fell.", "It broke.", "A light came on."], "why": "The bookcase moved and he fell down some stairs."},
+    {"q": "Why is Lord Bingley happy?", "o": ["Eddie found the lost paintings.", "Eddie painted a new picture.", "Eddie bought the palace."], "why": "The lost paintings of Lady Charlotte were found."},
+    {"q": "What was Eddie holding next to the picture?", "o": ["his sketchbook", "his phone", "a map"], "why": "He held his sketchbook next to it."},
+    {"q": "book + ___ = a shop for books", "o": ["shop", "case", "room"], "why": "bookshop is a shop where you buy books."},
+    {"q": "class + ___ = a room where students learn", "o": ["room", "case", "book"], "why": "classroom is a room where students learn."},
+    {"q": "Which is a compound noun?", "o": ["staircase", "palace", "guide"], "why": "stair + case = staircase."},
+    {"q": "Where were the lost paintings?", "o": ["in a secret room", "in the tower window", "in a shop"], "why": "Eddie found them in a secret room."},
+    {"q": "What is a sketchbook?", "o": ["a book that you draw pictures in", "a book where you write a diary", "a shop that sells books"], "why": "You draw sketches in a sketchbook."}
+  ],
+  "hunt": [
+    {"q": "Lost things Eddie found", "a": "paintings", "d": ["phones", "keys", "coins"]},
+    {"q": "Eddie touched a…", "a": "bookcase", "d": ["window", "door", "painting"]},
+    {"q": "The room was…", "a": "secret", "d": ["big", "new", "empty"]},
+    {"q": "Windows in the tower", "a": "three", "d": ["two", "one", "four"]},
+    {"q": "Windows in the painting", "a": "two", "d": ["three", "four", "five"]},
+    {"q": "Who painted the pictures?", "a": "Lady Charlotte", "d": ["Lord Bingley", "the guide", "Reem"]},
+    {"q": "Eddie fell down some…", "a": "stairs", "d": ["trees", "hills", "boats"]},
+    {"q": "book + shop =", "a": "bookshop", "d": ["bookroom", "shopbook", "bookball"]},
+    {"q": "foot + ball =", "a": "football", "d": ["footcase", "ballfoot", "footroom"]},
+    {"q": "A book you draw in", "a": "sketchbook", "d": ["bookcase", "classroom", "staircase"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which two features does a mystery story have?", "o": ["a puzzle to solve and a kind of detective", "a song and a dance", "a recipe and a shopping list", "a map and a timetable"], "why": "Mysteries have a puzzle and someone who solves it."},
+    {"lv": "التذكر", "q": "Whose paintings were lost?", "o": ["Lady Charlotte’s", "Eddie’s", "Lord Bingley’s", "the guide’s"], "why": "Lady Charlotte painted lots of pictures."},
+    {"lv": "التذكر", "q": "Which tenses do we use to tell the story?", "o": ["Past simple and Past continuous", "Present simple only", "Future only", "Present continuous only"], "why": "Stories about the past use these two tenses."},
+    {"lv": "التذكر", "q": "Which word is NOT a compound noun?", "o": ["palace", "bookcase", "classroom", "football"], "why": "Palace is one word, not two words joined."},
+    {"lv": "التطبيق", "q": "Put in order: a) Eddie fell down some stairs. b) The guide showed them a picture. c) They walked through the entrance.", "o": ["c, b, a", "a, b, c", "b, a, c", "c, a, b"], "why": "Entrance, then the picture, then the fall."},
+    {"lv": "التطبيق", "q": "Define “classroom” with a relative pronoun.", "o": ["It’s a room where students learn.", "It’s a room who students learn.", "It’s a person who is a room.", "It’s a time when is a room."], "why": "A room is a place, so we use where."},
+    {"lv": "التطبيق", "q": "Define “guide” with a relative pronoun.", "o": ["A guide is a person who shows visitors around a place.", "A guide is a place where you sleep.", "A guide is a thing which you eat.", "A guide is a time when you travel."], "why": "A guide is a person: who."},
+    {"lv": "التحليل", "q": "How did Eddie know something was strange?", "o": ["The painting had two tower windows, but the real tower had three.", "The guide told him the answer.", "He heard a noise in the tower.", "Lord Bingley gave him a map."], "why": "He noticed a difference, like a detective."},
+    {"lv": "التحليل", "q": "Why is Eddie like a detective in the story?", "o": ["He looks carefully, finds clues and solves the puzzle.", "He works for the police.", "He paints pictures.", "He lives in the palace."], "why": "Detectives notice details and solve mysteries."},
+    {"lv": "التحليل", "q": "Which is a sensible idea about why the paintings were in the secret room?", "o": ["Lady Charlotte hid them to keep them safe.", "The bookcase painted them.", "Eddie put them there.", "The guide sold them."], "why": "It is a good guess that fits the story."}
+  ]
+}

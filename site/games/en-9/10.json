@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 2: Connections",
+ "lesson": "Unit 2 Consolidation: Grammar file and Practice Guide",
+ "outcomes": [
+  "Use the past simple and past continuous correctly.",
+  "Use the -ing form as a subject and after prepositions.",
+  "Use reading and speaking exam strategies from the Practice Guide."
+ ],
+ "tf": [
+  {
+   "s": "We use the past continuous for a longer action that was in progress in the past.",
+   "t": true,
+   "why": "For example: I was sleeping."
+  },
+  {
+   "s": "'I was believing everything he said' is correct.",
+   "t": false,
+   "why": "Believe is a stative verb, so we say 'I believed'."
+  },
+  {
+   "s": "We can use the -ing form as the subject of a sentence: 'Swimming is fun.'",
+   "t": true,
+   "why": "The -ing form can act like a noun."
+  },
+  {
+   "s": "The past simple question of 'you saw' is 'Did you saw?'",
+   "t": false,
+   "why": "After did we use the base verb: 'Did you see?'"
+  },
+  {
+   "s": "A past simple action can interrupt a past continuous action.",
+   "t": true,
+   "why": "I was tidying my room when my cousin arrived."
+  },
+  {
+   "s": "The negative of 'I was considering' is 'I wasn't considering'.",
+   "t": true,
+   "why": "Past continuous negative: wasn't/weren't + -ing."
+  },
+  {
+   "s": "After a preposition we use the base form: 'interested in learn'.",
+   "t": false,
+   "why": "After a preposition we use -ing: interested in learning."
+  },
+  {
+   "s": "A distractor is a wrong option that may contain words from the text.",
+   "t": true,
+   "why": "Distractors can look right but don't match the meaning."
+  },
+  {
+   "s": "The last question in a long-text reading task usually tests a small detail.",
+   "t": false,
+   "why": "It usually tests the main idea or the writer's overall opinion."
+  },
+  {
+   "s": "There are five short texts in Reading Part 1.",
+   "t": true,
+   "why": "Reading Part 1 has five short texts."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: I ___ the message because I ___.",
+   "o": [
+    "didn't see / was sleeping",
+    "wasn't seeing / slept",
+    "didn't saw / was sleep"
+   ],
+   "why": "Short finished action + longer action in progress."
+  },
+  {
+   "q": "Complete: ___ to music helps me relax.",
+   "o": [
+    "Listening",
+    "Listen",
+    "Listened"
+   ],
+   "why": "The -ing form is the subject."
+  },
+  {
+   "q": "Choose: I ___ everything he said.",
+   "o": [
+    "believed",
+    "was believing",
+    "believing"
+   ],
+   "why": "Stative verbs don't use the continuous."
+  },
+  {
+   "q": "Complete: ___ it ___ when you left?",
+   "o": [
+    "Was / raining",
+    "Did / raining",
+    "Was / rain"
+   ],
+   "why": "Past continuous question: was + subject + -ing."
+  },
+  {
+   "q": "Which is a past simple question?",
+   "o": [
+    "What did you see yesterday?",
+    "What you saw yesterday?",
+    "What did you saw yesterday?"
+   ],
+   "why": "Did + subject + base verb."
+  },
+  {
+   "q": "What should you look for between a text and the options?",
+   "o": [
+    "synonyms",
+    "page numbers",
+    "pictures"
+   ],
+   "why": "Words with the same meaning help you match."
+  },
+  {
+   "q": "What is a distractor?",
+   "o": [
+    "a wrong option",
+    "the right answer",
+    "a title"
+   ],
+   "why": "Distractors are there to test careful reading."
+  },
+  {
+   "q": "Complete: I was tidying my room when my cousin ___.",
+   "o": [
+    "arrived",
+    "was arriving",
+    "arrive"
+   ],
+   "why": "The short action interrupts: past simple."
+  },
+  {
+   "q": "Which verb is stative?",
+   "o": [
+    "believe",
+    "run",
+    "tidy"
+   ],
+   "why": "Stative verbs describe states, like believe or know."
+  },
+  {
+   "q": "Where can you check your answers to Practice Guide tasks?",
+   "o": [
+    "in the answers and explanations",
+    "in the grammar file only",
+    "on the cover"
+   ],
+   "why": "The explanations show why answers are right or wrong."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Past simple of 'see'",
+   "a": "saw",
+   "d": [
+    "seed",
+    "seen",
+    "sees"
+   ]
+  },
+  {
+   "q": "Past simple of 'come'",
+   "a": "came",
+   "d": [
+    "comed",
+    "come",
+    "comes"
+   ]
+  },
+  {
+   "q": "Past simple of 'hear'",
+   "a": "heard",
+   "d": [
+    "heared",
+    "hears",
+    "hearing"
+   ]
+  },
+  {
+   "q": "Past simple of 'mean'",
+   "a": "meant",
+   "d": [
+    "meaned",
+    "means",
+    "meaning"
+   ]
+  },
+  {
+   "q": "___ is good exercise",
+   "a": "Swimming",
+   "d": [
+    "Swim",
+    "Swam",
+    "Swims"
+   ]
+  },
+  {
+   "q": "Stative verb",
+   "a": "believe",
+   "d": [
+    "tidy",
+    "swim",
+    "run"
+   ]
+  },
+  {
+   "q": "I ___ sleeping. (past)",
+   "a": "was",
+   "d": [
+    "were",
+    "did",
+    "am"
+   ]
+  },
+  {
+   "q": "They ___ watching TV. (past)",
+   "a": "were",
+   "d": [
+    "was",
+    "did",
+    "is"
+   ]
+  },
+  {
+   "q": "Wrong option in a test",
+   "a": "distractor",
+   "d": [
+    "synonym",
+    "key word",
+    "main idea"
+   ]
+  },
+  {
+   "q": "Same meaning word",
+   "a": "synonym",
+   "d": [
+    "distractor",
+    "stative",
+    "contraction"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which form do we use for a longer action in progress at a time in the past?",
+   "o": [
+    "past continuous",
+    "past simple",
+    "present simple",
+    "future"
+   ],
+   "why": "Was/were + -ing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the correct past continuous question?",
+   "o": [
+    "What were you doing?",
+    "What did you doing?",
+    "What was you doing?",
+    "What you were doing?"
+   ],
+   "why": "Were + you + -ing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence uses the -ing form as a subject?",
+   "o": [
+    "Swimming is good for you.",
+    "I swim every day.",
+    "I swam yesterday.",
+    "She swims well."
+   ],
+   "why": "The -ing word is the subject here."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the last question in Reading Part 3 usually test?",
+   "o": [
+    "the main idea or the writer's opinion",
+    "the title of the text",
+    "one spelling",
+    "the number of paragraphs"
+   ],
+   "why": "It tests your understanding of the whole text."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I ___ (do) my homework when the phone ___ (ring).",
+   "o": [
+    "was doing / rang",
+    "did / was ringing",
+    "was doing / was ringing",
+    "did / rang"
+   ],
+   "why": "Long action in progress, then a short interruption."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "I'm thinking about talking to her.",
+    "I'm thinking about talk to her.",
+    "I'm thinking about talked to her.",
+    "I'm thinking about to talk to her."
+   ],
+   "why": "After a preposition we use -ing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence with a stative verb.",
+   "o": [
+    "He knew the answer.",
+    "He was knowing the answer.",
+    "He knowing the answer.",
+    "He did knew the answer."
+   ],
+   "why": "Know is a stative verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can an option be wrong even if it has words from the text?",
+   "o": [
+    "Its meaning doesn't match all the information in the text",
+    "It is too long",
+    "It has a capital letter",
+    "It is always the first option"
+   ],
+   "why": "Read for meaning, not only for the same words."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'I was hearing a noise' usually wrong?",
+   "o": [
+    "Hear is normally stative, so we say 'I heard a noise'",
+    "Noise is plural",
+    "Hear has no past form",
+    "We must use 'did hear'"
+   ],
+   "why": "Stative verbs usually don't take the continuous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which strategy helps you most in multiple-choice reading?",
+   "o": [
+    "Underline key words and find the matching part of the text",
+    "Choose the longest option",
+    "Read only the title",
+    "Always choose option A"
+   ],
+   "why": "Key words lead you to the evidence."
+  }
+ ]
+}

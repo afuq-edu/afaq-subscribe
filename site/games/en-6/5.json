@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 1: Free-time fun",
+ "lesson": "Unit 1 – Lesson 3: Grammar – Present simple and Present continuous",
+ "outcomes": [
+  "I can use the Present simple for habits and routines.",
+  "I can use the Present continuous for actions happening now.",
+  "I can make questions in both tenses."
+ ],
+ "tf": [
+  {
+   "s": "We use the Present simple for habits and routines.",
+   "t": true,
+   "why": "Yes! Habits use the Present simple."
+  },
+  {
+   "s": "We use the Present continuous for things happening at the moment.",
+   "t": true,
+   "why": "Correct! Now = Present continuous."
+  },
+  {
+   "s": "\"I'm reading the WOW! Quiz\" is in the Present simple.",
+   "t": false,
+   "why": "\"I'm reading\" is the Present continuous."
+  },
+  {
+   "s": "\"Every week\" is a time word for the Present simple.",
+   "t": true,
+   "why": "Right! Every week shows a routine."
+  },
+  {
+   "s": "\"At the moment\" is a time word for the Present simple.",
+   "t": false,
+   "why": "At the moment goes with the Present continuous."
+  },
+  {
+   "s": "\"Is she play volleyball now?\" is correct.",
+   "t": false,
+   "why": "The correct question is \"Is she playing volleyball now?\""
+  },
+  {
+   "s": "\"Does Arlo do karate every day?\" is a Present simple question.",
+   "t": true,
+   "why": "Yes! Does + every day = Present simple."
+  },
+  {
+   "s": "Majid does karate twice a week.",
+   "t": true,
+   "why": "Correct! Majid does karate twice a week."
+  },
+  {
+   "s": "It is hot every day at the winter sports centre.",
+   "t": false,
+   "why": "It is cold every day at the winter sports centre."
+  },
+  {
+   "s": "Arwa loves volleyball because it's a great way to make new friends.",
+   "t": true,
+   "why": "Yes! She meets people and makes friends."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "I ___ volleyball every Monday.",
+   "o": [
+    "play",
+    "am playing",
+    "playing"
+   ],
+   "why": "Every Monday is a routine: Present simple."
+  },
+  {
+   "q": "I ___ a helmet now.",
+   "o": [
+    "'m wearing",
+    "wear",
+    "wears"
+   ],
+   "why": "Now = Present continuous."
+  },
+  {
+   "q": "Osama ___ to athletics club on Saturdays.",
+   "o": [
+    "goes",
+    "go",
+    "is go"
+   ],
+   "why": "With he/she, add -es: goes."
+  },
+  {
+   "q": "My brother ___ hockey every Tuesday.",
+   "o": [
+    "plays",
+    "play",
+    "is play"
+   ],
+   "why": "With he/she, add -s for routines."
+  },
+  {
+   "q": "___ you learning hockey at the moment?",
+   "o": [
+    "Are",
+    "Do",
+    "Does"
+   ],
+   "why": "At the moment = Present continuous: Are you learning?"
+  },
+  {
+   "q": "___ he play hockey?",
+   "o": [
+    "Does",
+    "Is",
+    "Do"
+   ],
+   "why": "Present simple questions with he use Does."
+  },
+  {
+   "q": "Which word goes with the Present continuous?",
+   "o": [
+    "now",
+    "every week",
+    "after school"
+   ],
+   "why": "Now shows an action happening at the moment."
+  },
+  {
+   "q": "Which word goes with the Present simple?",
+   "o": [
+    "once a week",
+    "now",
+    "at the moment"
+   ],
+   "why": "Once a week shows a habit."
+  },
+  {
+   "q": "How often does Majid do karate?",
+   "o": [
+    "twice a week",
+    "every day",
+    "once a week"
+   ],
+   "why": "Majid does karate twice a week."
+  },
+  {
+   "q": "Which sport does Razan do?",
+   "o": [
+    "ice skating",
+    "karate",
+    "volleyball"
+   ],
+   "why": "Razan does ice skating."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Tense for habits",
+   "a": "Present simple",
+   "d": [
+    "Present continuous",
+    "Past simple",
+    "Future"
+   ]
+  },
+  {
+   "q": "Tense for now",
+   "a": "Present continuous",
+   "d": [
+    "Present simple",
+    "Past simple",
+    "Future"
+   ]
+  },
+  {
+   "q": "Osama ___ to the club.",
+   "a": "goes",
+   "d": [
+    "go",
+    "going",
+    "is go"
+   ]
+  },
+  {
+   "q": "She is ___ tennis now.",
+   "a": "playing",
+   "d": [
+    "play",
+    "plays",
+    "played"
+   ]
+  },
+  {
+   "q": "He ___ play chess.",
+   "a": "doesn't",
+   "d": [
+    "don't",
+    "isn't",
+    "aren't"
+   ]
+  },
+  {
+   "q": "Time word: Present continuous",
+   "a": "at the moment",
+   "d": [
+    "every week",
+    "once a week",
+    "after school"
+   ]
+  },
+  {
+   "q": "Time word: Present simple",
+   "a": "every week",
+   "d": [
+    "now",
+    "today",
+    "at the moment"
+   ]
+  },
+  {
+   "q": "Majid's sport",
+   "a": "karate",
+   "d": [
+    "ice skating",
+    "volleyball",
+    "athletics"
+   ]
+  },
+  {
+   "q": "Razan's sport",
+   "a": "ice skating",
+   "d": [
+    "karate",
+    "athletics",
+    "volleyball"
+   ]
+  },
+  {
+   "q": "Arwa's sport",
+   "a": "volleyball",
+   "d": [
+    "karate",
+    "ice skating",
+    "athletics"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which tense is \"I'm reading the WOW! Quiz\"?",
+   "o": [
+    "Present continuous",
+    "Present simple",
+    "Past simple",
+    "Future"
+   ],
+   "why": "am/is/are + -ing is the Present continuous."
+  },
+  {
+   "lv": "التذكر",
+   "q": "We use the ___ for habits and routines.",
+   "o": [
+    "Present simple",
+    "Present continuous",
+    "Past continuous",
+    "Future"
+   ],
+   "why": "Habits use the Present simple."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where is it cold every day?",
+   "o": [
+    "at the winter sports centre",
+    "on the beach",
+    "at the athletics club",
+    "at school"
+   ],
+   "why": "The winter sports centre is cold every day."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group has only Present simple time words?",
+   "o": [
+    "every week, once a week, after school",
+    "now, today, at the moment",
+    "now, every week, today",
+    "at the moment, after school, now"
+   ],
+   "why": "These words show routines."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a question: Arlo / go scooting / every day?",
+   "o": [
+    "Does Arlo go scooting every day?",
+    "Is Arlo go scooting every day?",
+    "Do Arlo goes scooting every day?",
+    "Does Arlo goes scooting every day?"
+   ],
+   "why": "Does + name + verb (no -s)."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "Is he doing karate now?",
+    "Is he do karate now?",
+    "Does he doing karate now?",
+    "Is he does karate now?"
+   ],
+   "why": "Is + he + verb-ing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct pair: routine, then now.",
+   "o": [
+    "I go to school by bus every day. I'm writing now.",
+    "I'm going to school every day. I write now.",
+    "I going to school every day. I writing now.",
+    "I goes to school every day. I'm write now."
+   ],
+   "why": "Routine = Present simple; now = Present continuous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is \"He's wearing a helmet\" different from \"He does karate every Monday\"?",
+   "o": [
+    "It describes something happening now.",
+    "It describes a habit.",
+    "It is about the past.",
+    "It is a question."
+   ],
+   "why": "He's wearing = happening now."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Arwa love volleyball?",
+   "o": [
+    "It's a great way to meet people and make new friends.",
+    "It's cold every day.",
+    "She does it alone.",
+    "She can do it on skis."
+   ],
+   "why": "Volleyball helps her make friends."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "He don't play chess every day.",
+    "He doesn't play chess every day.",
+    "My brother plays hockey every Tuesday.",
+    "He's playing hockey now."
+   ],
+   "why": "With he we need doesn't, not don't."
+  }
+ ]
+}

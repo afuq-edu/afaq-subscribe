@@ -1,0 +1,359 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 3: Places",
+  "lesson": "Unit 3 – Lessons 10–11: Over to you!, Review and Get ready for…",
+  "outcomes": [
+    "I can review Unit 3 places, parts of buildings and relative pronouns.",
+    "I can use the Past continuous with the Past simple.",
+    "I can use exam tips and understand the story ‘Be an Architect’ Day."
+  ],
+  "tf": [
+    {
+      "s": "In Petra, the writer walked along streets where people walked 2,000 years ago.",
+      "t": true,
+      "why": "Petra is an ancient city with very old streets."
+    },
+    {
+      "s": "A skyscraper is a tall building which has lots of floors.",
+      "t": true,
+      "why": "Skyscrapers have many floors."
+    },
+    {
+      "s": "When you finish a cloze task, you should never read the text again.",
+      "t": false,
+      "why": "The tip is: read the whole text again when you finish."
+    },
+    {
+      "s": "An architect visited the class in the graded reader.",
+      "t": true,
+      "why": "The architect came for ‘Be an Architect’ Day."
+    },
+    {
+      "s": "The prize for the best model was a building set.",
+      "t": true,
+      "why": "A building set was the prize."
+    },
+    {
+      "s": "Only one student won the prize.",
+      "t": false,
+      "why": "Everyone won the prize."
+    },
+    {
+      "s": "In the story, the sports centre has plants on the roof.",
+      "t": true,
+      "why": "The plants are on the roof, not at the entrance."
+    },
+    {
+      "s": "“The castle who I made has 30 tiny steps.” is correct.",
+      "t": false,
+      "why": "A castle is a thing, so we use that: The castle that I made …"
+    },
+    {
+      "s": "“They were playing when the lights went out.” is correct.",
+      "t": true,
+      "why": "Past continuous for the longer action, Past simple for the shorter one."
+    },
+    {
+      "s": "An architect is a person who cooks in a restaurant.",
+      "t": false,
+      "why": "An architect designs buildings."
+    }
+  ],
+  "boxes": [
+    {
+      "q": "Unscramble the building word: tessp",
+      "o": [
+        "steps",
+        "stairs",
+        "stops"
+      ],
+      "why": "t-e-s-s-p makes steps."
+    },
+    {
+      "q": "Unscramble: nicgeli",
+      "o": [
+        "ceiling",
+        "cooling",
+        "calling"
+      ],
+      "why": "The building word is ceiling."
+    },
+    {
+      "q": "Complete: A skyscraper is a tall building which has lots of ___.",
+      "o": [
+        "floors",
+        "harbours",
+        "castles"
+      ],
+      "why": "Skyscrapers have lots of floors."
+    },
+    {
+      "q": "Choose: There are (factories / apartments / castles) in some skyscrapers.",
+      "o": [
+        "apartments",
+        "factories",
+        "castles"
+      ],
+      "why": "People live in apartments in skyscrapers."
+    },
+    {
+      "q": "Choose: I don’t like going up and down in a (lift / roof / floor).",
+      "o": [
+        "lift",
+        "roof",
+        "floor"
+      ],
+      "why": "A lift goes up and down."
+    },
+    {
+      "q": "Who was visiting the class?",
+      "o": [
+        "an architect",
+        "a doctor",
+        "a footballer"
+      ],
+      "why": "An architect visited for ‘Be an Architect’ Day."
+    },
+    {
+      "q": "Who won the prize?",
+      "o": [
+        "everyone",
+        "nobody",
+        "the teacher"
+      ],
+      "why": "Everyone won!"
+    },
+    {
+      "q": "Complete: That’s the factory ___ my dad works.",
+      "o": [
+        "where",
+        "who",
+        "when"
+      ],
+      "why": "A factory is a place: where."
+    },
+    {
+      "q": "Complete: I was ___ at a laptop when a famous actor walked in.",
+      "o": [
+        "looking",
+        "look",
+        "looked"
+      ],
+      "why": "was + -ing: was looking."
+    },
+    {
+      "q": "What should you do before you listen?",
+      "o": [
+        "Look at the picture and text.",
+        "Close your eyes.",
+        "Write your answers."
+      ],
+      "why": "Looking first helps you know what to listen for."
+    }
+  ],
+  "hunt": [
+    {
+      "q": "Unscramble: tessp",
+      "a": "steps",
+      "d": [
+        "stops",
+        "sets",
+        "tests"
+      ]
+    },
+    {
+      "q": "Unscramble: nicgeli",
+      "a": "ceiling",
+      "d": [
+        "calling",
+        "cooling",
+        "selling"
+      ]
+    },
+    {
+      "q": "A skyscraper has lots of…",
+      "a": "floors",
+      "d": [
+        "harbours",
+        "castles",
+        "palaces"
+      ]
+    },
+    {
+      "q": "Goes up and down a building",
+      "a": "lift",
+      "d": [
+        "roof",
+        "floor",
+        "wall"
+      ]
+    },
+    {
+      "q": "The prize for the best model",
+      "a": "a building set",
+      "d": [
+        "a smartphone",
+        "a laptop",
+        "a ticket"
+      ]
+    },
+    {
+      "q": "Person who designs buildings",
+      "a": "architect",
+      "d": [
+        "mechanic",
+        "chef",
+        "nurse"
+      ]
+    },
+    {
+      "q": "Who won the prize?",
+      "a": "everyone",
+      "d": [
+        "nobody",
+        "one girl",
+        "the teacher"
+      ]
+    },
+    {
+      "q": "Plants are on the ___ of the sports centre.",
+      "a": "roof",
+      "d": [
+        "entrance",
+        "floor",
+        "exit"
+      ]
+    },
+    {
+      "q": "Sticks things together",
+      "a": "glue",
+      "d": [
+        "straw",
+        "paint",
+        "box"
+      ]
+    },
+    {
+      "q": "The castle ___ I made",
+      "a": "that",
+      "d": [
+        "who",
+        "where",
+        "when"
+      ]
+    }
+  ],
+  "mcq": [
+    {
+      "lv": "التذكر",
+      "q": "What did the girls use to make models?",
+      "o": [
+        "cardboard boxes, plastic bottles, paper straws, paint and glue",
+        "stones, sand and water",
+        "only paper",
+        "wood and metal"
+      ],
+      "why": "They used things like boxes, bottles and straws."
+    },
+    {
+      "lv": "التذكر",
+      "q": "Which exam tip helps with cloze tasks?",
+      "o": [
+        "When you finish, read the whole text again.",
+        "Choose the first answer you see.",
+        "Leave all the gaps empty.",
+        "Read only the title."
+      ],
+      "why": "Re-reading helps you check your answers."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What did the writer do in Petra?",
+      "o": [
+        "climbed steps and walked along very old streets",
+        "swam in a pool",
+        "went up a skyscraper",
+        "worked in a factory"
+      ],
+      "why": "Petra’s streets are 2,000 years old."
+    },
+    {
+      "lv": "التذكر",
+      "q": "What is the Unit 3 WOW! Question?",
+      "o": [
+        "Why are some places and buildings important to us?",
+        "How can technology help us?",
+        "What hobbies do you have?",
+        "How do animals live?"
+      ],
+      "why": "Unit 3 is about places."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Make a sentence: they / play / when / the lights / go out",
+      "o": [
+        "They were playing when the lights went out.",
+        "They was playing when the lights went out.",
+        "They played when the lights were go out.",
+        "They were play when the lights going out."
+      ],
+      "why": "were + -ing, then the Past simple went."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Which sentence about your town is correct?",
+      "o": [
+        "I visit the sports centre every week. I play basketball there.",
+        "I visits the sports centre every week.",
+        "I visiting the sports centre every week.",
+        "I am visit the sports centre every week."
+      ],
+      "why": "Present simple with I: I visit, I play."
+    },
+    {
+      "lv": "التطبيق",
+      "q": "Choose the correct relative pronoun: An architect is a person ___ designs buildings.",
+      "o": [
+        "who",
+        "where",
+        "when",
+        "which"
+      ],
+      "why": "An architect is a person: who."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Why are some places important to us?",
+      "o": [
+        "They hold special memories and teach us about history.",
+        "Because they are always new.",
+        "Because they have Wi-Fi.",
+        "They are not important."
+      ],
+      "why": "Places connect us with our memories and the past."
+    },
+    {
+      "lv": "التحليل",
+      "q": "The architect gave the prize to everyone. What is a good reason to agree?",
+      "o": [
+        "Everyone worked hard and made a good model.",
+        "Nobody made a model.",
+        "The prize was too small.",
+        "The architect didn’t look at the models."
+      ],
+      "why": "A good opinion gives a reason that fits the story."
+    },
+    {
+      "lv": "التحليل",
+      "q": "Which sentence has a mistake?",
+      "o": [
+        "That’s the factory who my dad works.",
+        "That’s the factory where my dad works.",
+        "He’s the architect who visited us.",
+        "It’s the model that I made."
+      ],
+      "why": "A factory is a place, so we need where."
+    }
+  ]
+}

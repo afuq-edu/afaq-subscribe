@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Starter",
+ "lesson": "Starter: Fun times!",
+ "outcomes": [
+  "Use a, an, the or no article correctly.",
+  "Ask and answer questions about past holidays using the past simple.",
+  "Plan and write a short paragraph about my best moment."
+ ],
+ "tf": [
+  {
+   "s": "We use 'an' before a word that starts with a vowel sound, like 'an interesting blog'.",
+   "t": true,
+   "why": "'Interesting' starts with a vowel sound, so we say 'an'."
+  },
+  {
+   "s": "We say 'the communication is really important' when we talk about communication in general.",
+   "t": false,
+   "why": "Abstract nouns used in general take no article: 'Communication is really important'."
+  },
+  {
+   "s": "The past simple of 'swim' is 'swam'.",
+   "t": true,
+   "why": "Swim is irregular: swim – swam."
+  },
+  {
+   "s": "'Did you went to the beach?' is a correct question.",
+   "t": false,
+   "why": "After 'did' we use the base verb: 'Did you go to the beach?'"
+  },
+  {
+   "s": "The past simple of 'take' is 'took'.",
+   "t": true,
+   "why": "Take is irregular: take – took."
+  },
+  {
+   "s": "We use 'a' before a singular countable noun mentioned for the first time.",
+   "t": true,
+   "why": "Yes, like 'I bought a new camera'."
+  },
+  {
+   "s": "'Writing a blog takes the time' is the correct sentence.",
+   "t": false,
+   "why": "'Time' here is general and uncountable, so no article: 'takes time'."
+  },
+  {
+   "s": "In the model paragraph, the writer played the piano at an audition.",
+   "t": false,
+   "why": "She played the violin at her audition."
+  },
+  {
+   "s": "A good 'best moment' paragraph says why it was your best moment.",
+   "t": true,
+   "why": "Explaining why is one of the four questions in the task."
+  },
+  {
+   "s": "A good paragraph about your best moment should use the present simple for the main events.",
+   "t": false,
+   "why": "The moment is in the past, so we use the past simple."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: I bought ___ new camera last week.",
+   "o": [
+    "a",
+    "an",
+    "the"
+   ],
+   "why": "'New' starts with a consonant sound, and it's the first mention."
+  },
+  {
+   "q": "Complete: I visited ___ old castle.",
+   "o": [
+    "an",
+    "a",
+    "the"
+   ],
+   "why": "'Old' starts with a vowel sound, so we use 'an'."
+  },
+  {
+   "q": "What is the past simple of 'go'?",
+   "o": [
+    "went",
+    "goed",
+    "gone"
+   ],
+   "why": "Go is irregular: go – went."
+  },
+  {
+   "q": "Which question is correct?",
+   "o": [
+    "Did you have a picnic?",
+    "Did you had a picnic?",
+    "Do you had a picnic?"
+   ],
+   "why": "Did + base verb makes a past simple question."
+  },
+  {
+   "q": "What did speaker 2 think of the new food?",
+   "o": [
+    "It was too sweet",
+    "It was too salty",
+    "It was delicious"
+   ],
+   "why": "She didn't really like it because it was much too sweet."
+  },
+  {
+   "q": "Which photo matches the phrase 'Our new pet'?",
+   "o": [
+    "Photo E",
+    "Photo A",
+    "Photo C"
+   ],
+   "why": "Ryan's post about the new pet matches photo E."
+  },
+  {
+   "q": "Complete: I ___ (feel) nervous before the show.",
+   "o": [
+    "felt",
+    "feeled",
+    "feel"
+   ],
+   "why": "Feel is irregular: feel – felt."
+  },
+  {
+   "q": "About how long should your best moment paragraph be?",
+   "o": [
+    "100 words",
+    "20 words",
+    "500 words"
+   ],
+   "why": "The task asks for a paragraph of about 100 words."
+  },
+  {
+   "q": "Which phrase can you use to give a reason?",
+   "o": [
+    "I think ... because ...",
+    "Did you ...?",
+    "Last summer ..."
+   ],
+   "why": "'Because' introduces a reason."
+  },
+  {
+   "q": "Complete: ___ castle was near the sea. (We already know which castle.)",
+   "o": [
+    "The",
+    "A",
+    "An"
+   ],
+   "why": "We use 'the' when the listener knows which thing we mean."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Past simple of 'swim'",
+   "a": "swam",
+   "d": [
+    "swum",
+    "swimmed",
+    "swims"
+   ]
+  },
+  {
+   "q": "Past simple of 'take'",
+   "a": "took",
+   "d": [
+    "taked",
+    "taken",
+    "takes"
+   ]
+  },
+  {
+   "q": "Past simple of 'go'",
+   "a": "went",
+   "d": [
+    "goed",
+    "gone",
+    "goes"
+   ]
+  },
+  {
+   "q": "Past simple of 'feel'",
+   "a": "felt",
+   "d": [
+    "feeled",
+    "fell",
+    "feels"
+   ]
+  },
+  {
+   "q": "Article: ___ interesting blog",
+   "a": "an",
+   "d": [
+    "a",
+    "the",
+    "no article"
+   ]
+  },
+  {
+   "q": "Article: ___ visitor (first mention)",
+   "a": "a",
+   "d": [
+    "an",
+    "the",
+    "no article"
+   ]
+  },
+  {
+   "q": "Article: ___ communication is important",
+   "a": "no article",
+   "d": [
+    "a",
+    "an",
+    "the"
+   ]
+  },
+  {
+   "q": "Article: ___ most natural choice",
+   "a": "the",
+   "d": [
+    "a",
+    "an",
+    "no article"
+   ]
+  },
+  {
+   "q": "Instrument in the model paragraph",
+   "a": "violin",
+   "d": [
+    "piano",
+    "guitar",
+    "drums"
+   ]
+  },
+  {
+   "q": "Past simple of 'try'",
+   "a": "tried",
+   "d": [
+    "tryed",
+    "tries",
+    "trying"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "When do we use 'the'?",
+   "o": [
+    "When it is clear which thing we mean",
+    "Before every plural noun",
+    "Before abstract nouns in general",
+    "Before any word starting with a vowel"
+   ],
+   "why": "We use 'the' for something specific or already known."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who has decided about their future job in the posts?",
+   "o": [
+    "Dana",
+    "Ryan",
+    "Nancy",
+    "Laith"
+   ],
+   "why": "Dana says she now knows what kind of job she wants."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the past simple of 'play'?",
+   "o": [
+    "played",
+    "plaied",
+    "plays",
+    "playing"
+   ],
+   "why": "Regular verbs add -ed: play – played."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is NOT one of the four questions in the best moment task?",
+   "o": [
+    "Who was your teacher?",
+    "When did it happen?",
+    "What skills did you use?",
+    "Why was it your best moment?"
+   ],
+   "why": "The four questions are when, what, which skills and why."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "Communication is really important.",
+    "The communication is really important.",
+    "A communication is really important.",
+    "An communication is really important."
+   ],
+   "why": "General abstract nouns take no article."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the mistake: 'Did you swam outdoors?'",
+   "o": [
+    "Did you swim outdoors?",
+    "Did you swimmed outdoors?",
+    "Do you swam outdoors?",
+    "Did you swum outdoors?"
+   ],
+   "why": "After 'did' we always use the base form."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Last summer we ___ to Salalah and ___ in the sea.",
+   "o": [
+    "went / swam",
+    "go / swim",
+    "goed / swimmed",
+    "went / swim"
+   ],
+   "why": "Both actions are finished in the past, so both verbs are past simple."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say 'an interesting blog' but 'a visitor'?",
+   "o": [
+    "'Interesting' starts with a vowel sound; 'visitor' starts with a consonant sound",
+    "'Blog' is plural and 'visitor' is singular",
+    "'An' is for people, 'a' is for things",
+    "'Visitor' is an abstract noun"
+   ],
+   "why": "The choice between a and an depends on the first sound of the next word."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why was the audition the writer's best moment?",
+   "o": [
+    "She was accepted and learnt that hard work leads to success",
+    "She won a lot of money",
+    "She met a famous singer",
+    "She didn't need to practise"
+   ],
+   "why": "Being accepted after hard practice made it special."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your partner says, 'I didn't try any new food.' Which question did you probably ask?",
+   "o": [
+    "Did you try a new food?",
+    "Do you try a new food?",
+    "Did you tried a new food?",
+    "Are you try a new food?"
+   ],
+   "why": "A past simple question uses Did + base verb."
+  }
+ ]
+}

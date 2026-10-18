@@ -89,13 +89,13 @@
    "why": "We use do with athletics."
   },
   {
-   "q": "Which is a winter sport?",
+   "q": "Which do you use on snow?",
    "o": [
-    "ice skating",
-    "volleyball",
-    "table tennis"
+    "skis",
+    "bats",
+    "wheels"
    ],
-   "why": "Ice skating is a winter sport."
+   "why": "You go skiing on snow with skis."
   },
   {
    "q": "Which sport has wheels?",

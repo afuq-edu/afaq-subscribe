@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "WOW! Learning Club 1",
+ "lesson": "Lesson 2: CLIL Science – Think like a scientist!",
+ "outcomes": [
+  "Say what an explanation is and when we use it.",
+  "Plan an explanation with cause-and-effect arrows.",
+  "Explain causes and effects of climate change."
+ ],
+ "tf": [
+  {
+   "s": "An explanation tells us how or why something happens.",
+   "t": true,
+   "why": "Yes, explanations answer how and why."
+  },
+  {
+   "s": "Explanations tell us when and where something happens.",
+   "t": false,
+   "why": "They tell us how or why something happens."
+  },
+  {
+   "s": "In our notes, arrows link a cause to its effect.",
+   "t": true,
+   "why": "Correct, the arrow points from cause to effect."
+  },
+  {
+   "s": "Gases from cars cause pollution.",
+   "t": true,
+   "why": "Right, car gases pollute the air."
+  },
+  {
+   "s": "Global warming causes the cutting down of forests.",
+   "t": false,
+   "why": "It is the other way: cutting down forests causes global warming."
+  },
+  {
+   "s": "Using fossil fuels causes global warming.",
+   "t": true,
+   "why": "Well done, burning fossil fuels warms the planet."
+  },
+  {
+   "s": "A cause is what happens as a result.",
+   "t": false,
+   "why": "A cause makes something happen; the result is the effect."
+  },
+  {
+   "s": "We can use 'because of', 'due to' and 'so' to explain causes and effects.",
+   "t": true,
+   "why": "Yes, these words link causes and effects."
+  },
+  {
+   "s": "Cutting down forests is one cause of global warming.",
+   "t": true,
+   "why": "Correct, it is a cause in the lesson."
+  },
+  {
+   "s": "An effect is the reason why something happens.",
+   "t": false,
+   "why": "The reason is the cause; the effect is the result."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does an explanation tell us?",
+   "o": [
+    "how or why something happens",
+    "when and where",
+    "who and what colour"
+   ],
+   "why": "Explanations answer how and why."
+  },
+  {
+   "q": "What do arrows show in our notes?",
+   "o": [
+    "they link causes and effects",
+    "the page number",
+    "the date"
+   ],
+   "why": "Arrows join a cause to its effect."
+  },
+  {
+   "q": "Complete: Gases from cars cause ___.",
+   "o": [
+    "pollution",
+    "rain",
+    "forests"
+   ],
+   "why": "Car gases cause air pollution."
+  },
+  {
+   "q": "What causes global warming?",
+   "o": [
+    "using fossil fuels",
+    "planting trees",
+    "recycling paper"
+   ],
+   "why": "Burning fossil fuels causes global warming."
+  },
+  {
+   "q": "In 'cutting down forests → global warming', what is the effect?",
+   "o": [
+    "global warming",
+    "cutting down forests",
+    "the arrow"
+   ],
+   "why": "The effect comes after the arrow."
+  },
+  {
+   "q": "Which word joins a cause to an effect?",
+   "o": [
+    "so",
+    "but",
+    "or"
+   ],
+   "why": "'So' introduces the effect."
+  },
+  {
+   "q": "What is a cause?",
+   "o": [
+    "the thing that makes something happen",
+    "the result",
+    "a question"
+   ],
+   "why": "A cause makes something happen."
+  },
+  {
+   "q": "What is an effect?",
+   "o": [
+    "the result",
+    "the reason",
+    "the title"
+   ],
+   "why": "An effect is what happens because of a cause."
+  },
+  {
+   "q": "Which is a cause of air pollution?",
+   "o": [
+    "gases from cars",
+    "planting trees",
+    "walking"
+   ],
+   "why": "Car gases pollute the air."
+  },
+  {
+   "q": "Complete: Using fossil fuels ___ global warming.",
+   "o": [
+    "causes",
+    "stops",
+    "cleans"
+   ],
+   "why": "Using fossil fuels causes global warming."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Explanations answer how or ...",
+   "a": "why",
+   "d": [
+    "when",
+    "where",
+    "who"
+   ]
+  },
+  {
+   "q": "Links cause to effect",
+   "a": "arrow",
+   "d": [
+    "circle",
+    "line break",
+    "full stop"
+   ]
+  },
+  {
+   "q": "Gases from cars cause ...",
+   "a": "pollution",
+   "d": [
+    "rain",
+    "snow",
+    "trees"
+   ]
+  },
+  {
+   "q": "The result of a cause",
+   "a": "effect",
+   "d": [
+    "cause",
+    "reason",
+    "title"
+   ]
+  },
+  {
+   "q": "Makes something happen",
+   "a": "cause",
+   "d": [
+    "effect",
+    "result",
+    "answer"
+   ]
+  },
+  {
+   "q": "Effect of fossil fuels",
+   "a": "global warming",
+   "d": [
+    "clean air",
+    "more ice",
+    "more trees"
+   ]
+  },
+  {
+   "q": "Fuels from the ground",
+   "a": "fossil fuels",
+   "d": [
+    "solar power",
+    "wind power",
+    "water"
+   ]
+  },
+  {
+   "q": "Joins cause to effect",
+   "a": "so",
+   "d": [
+    "but",
+    "or",
+    "because"
+   ]
+  },
+  {
+   "q": "Means because of",
+   "a": "due to",
+   "d": [
+    "so",
+    "unless",
+    "but"
+   ]
+  },
+  {
+   "q": "Cutting down forests causes",
+   "a": "global warming",
+   "d": [
+    "more rain",
+    "cold winters",
+    "clean air"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is an explanation?",
+   "o": [
+    "a text that tells how or why something happens",
+    "a story with characters",
+    "a list of prices",
+    "a poem with rhyme"
+   ],
+   "why": "Explanations answer how and why."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do arrows show in cause-and-effect notes?",
+   "o": [
+    "a cause leading to an effect",
+    "a question",
+    "a new paragraph",
+    "a heading"
+   ],
+   "why": "Arrows link causes to effects."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these causes global warming?",
+   "o": [
+    "cutting down forests",
+    "planting trees",
+    "saving energy",
+    "recycling"
+   ],
+   "why": "Cutting down forests causes global warming."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means the result of a cause?",
+   "o": [
+    "effect",
+    "cause",
+    "explanation",
+    "note"
+   ],
+   "why": "An effect is the result."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Turn the notes into a sentence: fossil fuels → global warming.",
+   "o": [
+    "Using fossil fuels causes global warming.",
+    "Global warming causes fossil fuels.",
+    "Fossil fuels and global warming are friends.",
+    "Global warming uses fossil fuels."
+   ],
+   "why": "Cause first, then effect."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: ___ air pollution, many people have breathing problems.",
+   "o": [
+    "Because of",
+    "So",
+    "Unless",
+    "But"
+   ],
+   "why": "'Because of' introduces the cause."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses 'so' correctly?",
+   "o": [
+    "Using fossil fuels causes global warming, so our planet gets hotter.",
+    "Our planet gets hotter, so we use fossil fuels to cool it.",
+    "So global warming, fossil fuels.",
+    "Global warming, so, so."
+   ],
+   "why": "'So' introduces the effect."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Global warming causes the cutting down of forests.' What is wrong?",
+   "o": [
+    "The cause and effect are the wrong way round.",
+    "Nothing is wrong.",
+    "Forests cause cars.",
+    "It should be about the Moon."
+   ],
+   "why": "Cutting down forests causes global warming."
+  },
+  {
+   "lv": "التحليل",
+   "q": "In 'gases from cars → air pollution → global warming', what is air pollution?",
+   "o": [
+    "an effect of car gases and a cause of global warming",
+    "only a cause",
+    "only an effect",
+    "not connected"
+   ],
+   "why": "One thing can be both an effect and a cause in a chain."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which question does an explanation answer?",
+   "o": [
+    "Why is the planet getting hotter?",
+    "What is your name?",
+    "Where is the shop?",
+    "When is lunch?"
+   ],
+   "why": "Explanations answer why or how questions."
+  }
+ ]
+}

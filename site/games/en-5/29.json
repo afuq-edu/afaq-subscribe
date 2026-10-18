@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 3 – Let’s explore!",
+ "lesson": "Lesson 6: English in action – Giving personal information",
+ "outcomes": [
+  "Ask for and give personal information to join a club.",
+  "Spell names and say phone numbers clearly.",
+  "Say plural endings /s/, /ɪz/ and /z/."
+ ],
+ "tf": [
+  {
+   "s": "Emily wants to join the Space Explorers Club.",
+   "t": true,
+   "why": "Emily wants to join the Space Explorers Club."
+  },
+  {
+   "s": "To ask about a birthday, we say: What's your date of birth?",
+   "t": true,
+   "why": "Date of birth = the day you were born."
+  },
+  {
+   "s": "In a phone number, 44 can be said \"double-four\".",
+   "t": true,
+   "why": "Two same numbers together = double."
+  },
+  {
+   "s": "In a phone number, 0 can be said \"oh\".",
+   "t": true,
+   "why": "We often say oh for 0 in phone numbers."
+  },
+  {
+   "s": "The correct sentence is: I'm interested in join the Chess Club.",
+   "t": false,
+   "why": "We say: I'm interested in joining the Chess Club."
+  },
+  {
+   "s": "The plural \"races\" ends with the sound /ɪz/.",
+   "t": true,
+   "why": "races, spaces and places end with /ɪz/."
+  },
+  {
+   "s": "The plural \"stars\" ends with the sound /s/.",
+   "t": false,
+   "why": "stars ends with /z/."
+  },
+  {
+   "s": "The plural \"planets\" ends with the sound /z/.",
+   "t": false,
+   "why": "planets ends with /s/."
+  },
+  {
+   "s": "We ask \"How do you spell your last name?\" to know how to write the name.",
+   "t": true,
+   "why": "Spelling means saying the letters one by one."
+  },
+  {
+   "s": "We ask \"What's your date of birth?\" to know someone's phone number.",
+   "t": false,
+   "why": "For a phone number we ask: What's your home phone number?"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: How do you ______ your last name?",
+   "o": [
+    "spell",
+    "say",
+    "see"
+   ],
+   "why": "How do you spell …?"
+  },
+  {
+   "q": "Which question asks for a phone number?",
+   "o": [
+    "What's your home phone number?",
+    "What's your date of birth?",
+    "How do you spell it?"
+   ],
+   "why": "Ask: What's your home phone number?"
+  },
+  {
+   "q": "How do we say 445006?",
+   "o": [
+    "double-four five double-oh six",
+    "forty-four five six",
+    "four four five zero zero six"
+   ],
+   "why": "Same numbers together = double, and 0 = oh."
+  },
+  {
+   "q": "Which club does Emily want to join?",
+   "o": [
+    "Space Explorers Club",
+    "Chess Club",
+    "Football Club"
+   ],
+   "why": "Emily wants to join the Space Explorers Club."
+  },
+  {
+   "q": "Complete: I'm interested ______ joining the club.",
+   "o": [
+    "in",
+    "on",
+    "at"
+   ],
+   "why": "interested in + -ing."
+  },
+  {
+   "q": "Which plural ends with /ɪz/?",
+   "o": [
+    "places",
+    "stars",
+    "planets"
+   ],
+   "why": "places ends with /ɪz/."
+  },
+  {
+   "q": "Which plural ends with /s/?",
+   "o": [
+    "rockets",
+    "moons",
+    "stars"
+   ],
+   "why": "rockets ends with /s/."
+  },
+  {
+   "q": "Which plural ends with /z/?",
+   "o": [
+    "moons",
+    "races",
+    "planets"
+   ],
+   "why": "moons ends with /z/."
+  },
+  {
+   "q": "What card do you get when you join a club?",
+   "o": [
+    "a membership card",
+    "a birthday card",
+    "a word card"
+   ],
+   "why": "A membership card shows you are in the club."
+  },
+  {
+   "q": "How do we say 77 in a phone number?",
+   "o": [
+    "double-seven",
+    "seventy-seven-seven",
+    "seven double"
+   ],
+   "why": "Two sevens = double-seven."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Club Emily wants to join",
+   "a": "Space Explorers",
+   "d": [
+    "Chess Club",
+    "Art Club",
+    "Football Club"
+   ]
+  },
+  {
+   "q": "How do you ___ your name?",
+   "a": "spell",
+   "d": [
+    "speak",
+    "sing",
+    "sell"
+   ]
+  },
+  {
+   "q": "Say 00 in a phone number",
+   "a": "double-oh",
+   "d": [
+    "oh-oh-oh",
+    "zero zero zero",
+    "double-one"
+   ]
+  },
+  {
+   "q": "Say 44 in a phone number",
+   "a": "double-four",
+   "d": [
+    "forty-four",
+    "four-four-four",
+    "double-five"
+   ]
+  },
+  {
+   "q": "Ending sound of \"stars\"",
+   "a": "/z/",
+   "d": [
+    "/s/",
+    "/ɪz/",
+    "/t/"
+   ]
+  },
+  {
+   "q": "Ending sound of \"planets\"",
+   "a": "/s/",
+   "d": [
+    "/z/",
+    "/ɪz/",
+    "/d/"
+   ]
+  },
+  {
+   "q": "Ending sound of \"spaces\"",
+   "a": "/ɪz/",
+   "d": [
+    "/s/",
+    "/z/",
+    "/d/"
+   ]
+  },
+  {
+   "q": "Ending sound of \"moons\"",
+   "a": "/z/",
+   "d": [
+    "/s/",
+    "/ɪz/",
+    "/t/"
+   ]
+  },
+  {
+   "q": "Ending sound of \"rockets\"",
+   "a": "/s/",
+   "d": [
+    "/z/",
+    "/ɪz/",
+    "/d/"
+   ]
+  },
+  {
+   "q": "I'm interested ___ joining",
+   "a": "in",
+   "d": [
+    "on",
+    "at",
+    "for"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which question asks for your birthday?",
+   "o": [
+    "What's your date of birth?",
+    "How do you spell your name?",
+    "What's your phone number?",
+    "Which club do you like?"
+   ],
+   "why": "Date of birth is the day you were born."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do we say for 0 in a phone number?",
+   "o": [
+    "oh",
+    "double",
+    "no",
+    "one"
+   ],
+   "why": "We often say oh for 0."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which words end with /ɪz/?",
+   "o": [
+    "spaces, races",
+    "stars, moons",
+    "planets, rockets",
+    "stars, rockets"
+   ],
+   "why": "spaces and races end with /ɪz/."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do we write on a membership card?",
+   "o": [
+    "name, date of birth and phone number",
+    "a story about space",
+    "a shopping list",
+    "a recipe"
+   ],
+   "why": "A membership card has personal information."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put the words in order: I / interested / join / the Chess Club",
+   "o": [
+    "I'm interested in joining the Chess Club.",
+    "I interested join the Chess Club.",
+    "I'm interested on join the Chess Club.",
+    "I'm join interested the Chess Club."
+   ],
+   "why": "I'm interested in + -ing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your phone number is 228. How do you say it?",
+   "o": [
+    "double-two eight",
+    "twenty-two eight",
+    "two two two eight",
+    "double-eight two"
+   ],
+   "why": "Two 2s together = double-two."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to know how to write your friend's last name. What do you ask?",
+   "o": [
+    "How do you spell your last name?",
+    "What's your date of birth?",
+    "Where do you live?",
+    "What's your phone number?"
+   ],
+   "why": "Spelling tells you the letters."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sort the plurals: stars, places, planets.",
+   "o": [
+    "stars /z/, places /ɪz/, planets /s/",
+    "stars /s/, places /z/, planets /ɪz/",
+    "stars /ɪz/, places /s/, planets /z/",
+    "stars /z/, places /s/, planets /ɪz/"
+   ],
+   "why": "Each word has a different ending sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word has the same ending sound as \"races\"?",
+   "o": [
+    "places",
+    "stars",
+    "rockets",
+    "moons"
+   ],
+   "why": "races and places both end with /ɪz/."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say \"double-four\" in a phone number?",
+   "o": [
+    "The same number comes two times.",
+    "The number is very big.",
+    "It is the last number.",
+    "It is a date of birth."
+   ],
+   "why": "Double means two of the same number."
+  }
+ ]
+}

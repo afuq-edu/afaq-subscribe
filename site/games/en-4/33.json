@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U3",
+ "lesson": "Unit 3 – Lesson 5: Culture – Nature reserves in Oman",
+ "outcomes": [
+  "Describe three nature reserves in Oman.",
+  "Choose a reserve to visit and give a reason.",
+  "Make a leaflet about a nature reserve."
+ ],
+ "tf": [
+  {
+   "s": "There are nine Daymaniyat Islands.",
+   "t": true,
+   "why": "Yes! There are nine islands."
+  },
+  {
+   "s": "The Arabian leopard lives in Jabal Samhan.",
+   "t": true,
+   "why": "Correct! It's a rare animal."
+  },
+  {
+   "s": "You can visit the Daymaniyat Islands from May to October.",
+   "t": false,
+   "why": "You can't, because turtles lay their eggs on the beaches."
+  },
+  {
+   "s": "The world's largest nature reserve is in Oman.",
+   "t": false,
+   "why": "It's in Greenland."
+  },
+  {
+   "s": "At Khawr Ruri you can see the ruins of the old city of Samharam.",
+   "t": true,
+   "why": "Well done! The ruins are very old."
+  },
+  {
+   "s": "Jabal Samhan is a nature reserve in Oman.",
+   "t": true,
+   "why": "Yes! It's one of the reserves in the lesson."
+  },
+  {
+   "s": "Turtles lay their eggs on the beaches of the Daymaniyat Islands.",
+   "t": true,
+   "why": "Great! That's why visitors can't go in those months."
+  },
+  {
+   "s": "Samharam is a kind of turtle.",
+   "t": false,
+   "why": "Samharam is an old city. You can see its ruins at Khawr Ruri."
+  },
+  {
+   "s": "A good leaflet has a title, photos and short information.",
+   "t": true,
+   "why": "Yes! These are the parts of a leaflet."
+  },
+  {
+   "s": "The Arabian leopard is a very common animal.",
+   "t": false,
+   "why": "It is one of the rarest animals."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where are the Daymaniyat Islands?",
+   "o": [
+    "in the sea near Muscat",
+    "in the desert",
+    "in Greenland"
+   ],
+   "why": "They are in the sea near Muscat."
+  },
+  {
+   "q": "What can you do at a nature reserve?",
+   "o": [
+    "see animals and plants",
+    "buy cupcakes",
+    "play football"
+   ],
+   "why": "Reserves are for seeing nature."
+  },
+  {
+   "q": "Which question asks what is in the reserve?",
+   "o": [
+    "What can you see there?",
+    "Where is it?",
+    "What's it called?"
+   ],
+   "why": "'What can you see there?' asks about animals and places."
+  },
+  {
+   "q": "What can tourists see at Khawr Ruri?",
+   "o": [
+    "the ruins of Samharam",
+    "the Arabian leopard",
+    "the tallest building"
+   ],
+   "why": "Khawr Ruri has the ruins of Samharam."
+  },
+  {
+   "q": "Complete: I want to visit Jabal Samhan ___ I want to see the leopard.",
+   "o": [
+    "because",
+    "but",
+    "or"
+   ],
+   "why": "'Because' gives a reason."
+  },
+  {
+   "q": "Which question asks about the place of a reserve?",
+   "o": [
+    "Where is it?",
+    "What's it called?",
+    "What can you see?"
+   ],
+   "why": "'Where' asks about a place."
+  },
+  {
+   "q": "Which is a sea animal?",
+   "o": [
+    "dolphin",
+    "leopard",
+    "gazelle"
+   ],
+   "why": "Dolphins live in the sea."
+  },
+  {
+   "q": "What does 'ruins' mean?",
+   "o": [
+    "old broken buildings",
+    "new shops",
+    "tall trees"
+   ],
+   "why": "Ruins are what is left of old buildings."
+  },
+  {
+   "q": "Complete the leaflet: The ... ___ Reserve is in ... .",
+   "o": [
+    "Wildlife",
+    "Shopping",
+    "Football"
+   ],
+   "why": "A wildlife reserve protects animals."
+  },
+  {
+   "q": "How do you write the title of a leaflet?",
+   "o": [
+    "with capital letters",
+    "with no words",
+    "in very small letters"
+   ],
+   "why": "Titles use capital letters."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Daymaniyat: how many islands?",
+   "a": "nine",
+   "d": [
+    "seven",
+    "three",
+    "twelve"
+   ]
+  },
+  {
+   "q": "Rare animal in Jabal Samhan",
+   "a": "leopard",
+   "d": [
+    "turtle",
+    "dolphin",
+    "whale"
+   ]
+  },
+  {
+   "q": "Old city at Khawr Ruri",
+   "a": "Samharam",
+   "d": [
+    "Muscat",
+    "Sur",
+    "Nizwa"
+   ]
+  },
+  {
+   "q": "Largest nature reserve",
+   "a": "Greenland",
+   "d": [
+    "Oman",
+    "Japan",
+    "Canada"
+   ]
+  },
+  {
+   "q": "Lay eggs on the beaches",
+   "a": "turtles",
+   "d": [
+    "wolves",
+    "ibex",
+    "gazelles"
+   ]
+  },
+  {
+   "q": "Reserve in the sea",
+   "a": "marine",
+   "d": [
+    "desert",
+    "city",
+    "mountain"
+   ]
+  },
+  {
+   "q": "Opposite of common",
+   "a": "rare",
+   "d": [
+    "big",
+    "old",
+    "wet"
+   ]
+  },
+  {
+   "q": "Can't visit: May to...",
+   "a": "October",
+   "d": [
+    "June",
+    "March",
+    "December"
+   ]
+  },
+  {
+   "q": "Reserve with turtles",
+   "a": "Daymaniyat",
+   "d": [
+    "Jabal Samhan",
+    "Khawr Ruri",
+    "Greenland"
+   ]
+  },
+  {
+   "q": "Reserve with ruins",
+   "a": "Khawr Ruri",
+   "d": [
+    "Daymaniyat",
+    "Jabal Samhan",
+    "Greenland"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which three reserves are in the lesson?",
+   "o": [
+    "Daymaniyat Islands, Jabal Samhan, Khawr Ruri",
+    "Jabal Shams, Wadi Darbat, Muscat",
+    "Greenland, Japan, Canada",
+    "Wadi Shab, the Nile, Everest"
+   ],
+   "why": "These are three nature reserves in Oman."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When can't you visit the Daymaniyat Islands?",
+   "o": [
+    "from May to October",
+    "in January",
+    "on Fridays",
+    "at night only"
+   ],
+   "why": "Visitors can't go from May to October."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a nature reserve?",
+   "o": [
+    "a place where animals and plants are protected",
+    "a big shopping centre",
+    "a school for animals",
+    "a busy city"
+   ],
+   "why": "Reserves protect nature."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which animals lay eggs on the Daymaniyat beaches?",
+   "o": [
+    "turtles",
+    "leopards",
+    "wolves",
+    "gazelles"
+   ],
+   "why": "Turtles lay their eggs there."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Sara loves sea animals. Which reserve is best for her?",
+   "o": [
+    "the Daymaniyat Islands",
+    "Jabal Samhan",
+    "Khawr Ruri's ruins",
+    "Greenland"
+   ],
+   "why": "The Daymaniyat Islands are a marine reserve."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Omar likes old history. Which place should he visit?",
+   "o": [
+    "Khawr Ruri",
+    "the Daymaniyat Islands",
+    "the beach in June",
+    "Greenland"
+   ],
+   "why": "Khawr Ruri has the ruins of an old city."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose a superlative sentence for a leaflet.",
+   "o": [
+    "The Arabian leopard is one of the rarest animals.",
+    "The Arabian leopard is rare than a cat.",
+    "The Arabian leopard is the most rare.",
+    "The Arabian leopard rarer animal."
+   ],
+   "why": "'The rarest' is a superlative."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can't visitors go to the Daymaniyat Islands from May to October?",
+   "o": [
+    "Because turtles lay their eggs on the beaches.",
+    "Because the islands are closed for school.",
+    "Because there is snow.",
+    "Because there are no beaches."
+   ],
+   "why": "People stay away to protect the turtles' eggs."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence gives a reason?",
+   "o": [
+    "I want to visit Jabal Samhan because I want to see the leopard.",
+    "Jabal Samhan is in Oman.",
+    "What's it called?",
+    "You can see the ruins."
+   ],
+   "why": "'Because' tells us why."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which leaflet is the clearest?",
+   "o": [
+    "It has a title, photos and short sentences.",
+    "It has no title.",
+    "It has very long sentences and no photos.",
+    "It has only one word."
+   ],
+   "why": "A clear leaflet has a title, photos and short information."
+  }
+ ]
+}

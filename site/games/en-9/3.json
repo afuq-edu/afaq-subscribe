@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 1: Identity",
+ "lesson": "Lesson 3: Vocabulary – personality adjectives",
+ "outcomes": [
+  "Understand and use personality adjectives.",
+  "Use the right preposition after adjectives (good at, keen on ...).",
+  "Describe myself and others fairly."
+ ],
+ "tf": [
+  {
+   "s": "A lazy person doesn't like working.",
+   "t": true,
+   "why": "That's the meaning of lazy."
+  },
+  {
+   "s": "We say 'interested on technology'.",
+   "t": false,
+   "why": "Interested always goes with 'in': interested in technology."
+  },
+  {
+   "s": "A confident person believes they can do things well.",
+   "t": true,
+   "why": "Confident people trust their own abilities."
+  },
+  {
+   "s": "A shy person loves talking to new people.",
+   "t": false,
+   "why": "A shy person feels nervous with new people; a sociable person enjoys them."
+  },
+  {
+   "s": "We say 'keen on sports'.",
+   "t": true,
+   "why": "Keen collocates with 'on'."
+  },
+  {
+   "s": "'Fed up with' means very happy with something.",
+   "t": false,
+   "why": "'Fed up with' means bored or annoyed with something."
+  },
+  {
+   "s": "After 'terrible at' we use the -ing form, like 'terrible at drawing'.",
+   "t": true,
+   "why": "A preposition is followed by a noun or an -ing verb."
+  },
+  {
+   "s": "Rude is a positive adjective.",
+   "t": false,
+   "why": "Rude is negative: it means not polite."
+  },
+  {
+   "s": "A sociable person enjoys being with other people.",
+   "t": true,
+   "why": "Sociable people like meeting and talking to others."
+  },
+  {
+   "s": "Someone who makes you laugh is serious.",
+   "t": false,
+   "why": "Someone who makes you laugh is funny."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: She's very good ___ listening.",
+   "o": [
+    "at",
+    "on",
+    "in"
+   ],
+   "why": "We say good at."
+  },
+  {
+   "q": "Complete: I'm fed up ___ this song.",
+   "o": [
+    "with",
+    "at",
+    "of"
+   ],
+   "why": "We say fed up with."
+  },
+  {
+   "q": "Najla doesn't often joke or smile. She's ...",
+   "o": [
+    "serious",
+    "sociable",
+    "funny"
+   ],
+   "why": "A person who rarely jokes is serious."
+  },
+  {
+   "q": "Thuriya makes me laugh. She's ...",
+   "o": [
+    "funny",
+    "calm",
+    "lazy"
+   ],
+   "why": "Funny people make us laugh."
+  },
+  {
+   "q": "Complete: I'm frightened ___ spiders.",
+   "o": [
+    "of",
+    "at",
+    "with"
+   ],
+   "why": "We say frightened of."
+  },
+  {
+   "q": "Which adjective means 'making a lot of sound'?",
+   "o": [
+    "noisy",
+    "calm",
+    "shy"
+   ],
+   "why": "Noisy people or places make a lot of sound."
+  },
+  {
+   "q": "Complete: He's excited ___ the holiday.",
+   "o": [
+    "about",
+    "on",
+    "at"
+   ],
+   "why": "We say excited about."
+  },
+  {
+   "q": "Which adjective describes someone who loves sport?",
+   "o": [
+    "sporty",
+    "clever",
+    "rude"
+   ],
+   "why": "Sporty people enjoy doing sport."
+  },
+  {
+   "q": "Complete: My brother is brilliant ___ maths.",
+   "o": [
+    "at",
+    "in",
+    "on"
+   ],
+   "why": "We say brilliant at, like good at."
+  },
+  {
+   "q": "Which word is the opposite of 'noisy'?",
+   "o": [
+    "calm",
+    "sociable",
+    "confident"
+   ],
+   "why": "A calm person is quiet and relaxed."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "good ___",
+   "a": "at",
+   "d": [
+    "on",
+    "with",
+    "in"
+   ]
+  },
+  {
+   "q": "keen ___",
+   "a": "on",
+   "d": [
+    "at",
+    "of",
+    "with"
+   ]
+  },
+  {
+   "q": "interested ___",
+   "a": "in",
+   "d": [
+    "on",
+    "at",
+    "of"
+   ]
+  },
+  {
+   "q": "bored ___",
+   "a": "with",
+   "d": [
+    "at",
+    "in",
+    "on"
+   ]
+  },
+  {
+   "q": "afraid ___",
+   "a": "of",
+   "d": [
+    "at",
+    "on",
+    "in"
+   ]
+  },
+  {
+   "q": "excited ___",
+   "a": "about",
+   "d": [
+    "at",
+    "on",
+    "with"
+   ]
+  },
+  {
+   "q": "Doesn't like working",
+   "a": "lazy",
+   "d": [
+    "shy",
+    "calm",
+    "sporty"
+   ]
+  },
+  {
+   "q": "Not polite",
+   "a": "rude",
+   "d": [
+    "funny",
+    "clever",
+    "calm"
+   ]
+  },
+  {
+   "q": "Good at learning, smart",
+   "a": "clever",
+   "d": [
+    "lazy",
+    "noisy",
+    "rude"
+   ]
+  },
+  {
+   "q": "Nervous with new people",
+   "a": "shy",
+   "d": [
+    "sociable",
+    "noisy",
+    "rude"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which adjective describes someone who is not nice or friendly?",
+   "o": [
+    "unpleasant",
+    "sociable",
+    "calm",
+    "funny"
+   ],
+   "why": "Unpleasant is a negative adjective."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which preposition goes with 'terrible'?",
+   "o": [
+    "at",
+    "on",
+    "in",
+    "with"
+   ],
+   "why": "We say terrible at, like good at."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a collocation?",
+   "o": [
+    "Words that often go together, like keen on",
+    "A long story",
+    "A question with yes or no",
+    "A type of punctuation"
+   ],
+   "why": "Adjective + preposition pairs are collocations."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which adjective is positive?",
+   "o": [
+    "confident",
+    "rude",
+    "lazy",
+    "unpleasant"
+   ],
+   "why": "Confident describes a good quality."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the mistake: 'I'm interested on technology.'",
+   "o": [
+    "I'm interested in technology.",
+    "I'm interested at technology.",
+    "I'm interested with technology.",
+    "I'm interested of technology."
+   ],
+   "why": "Interested always goes with in."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali gets top marks and solves problems quickly. Which adjective fits him?",
+   "o": [
+    "clever",
+    "lazy",
+    "shy",
+    "noisy"
+   ],
+   "why": "Clever means good at learning and thinking."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: We're both keen ___ ___ football.",
+   "o": [
+    "on playing",
+    "at playing",
+    "on play",
+    "in play"
+   ],
+   "why": "Keen on + -ing: keen on playing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence describes a friend fairly and kindly?",
+   "o": [
+    "My friend is clever and he's brilliant at maths.",
+    "My friend is lazy and rude.",
+    "My friend is unpleasant at everything.",
+    "My friend is noisy on everything."
+   ],
+   "why": "Describing people fairly means avoiding unkind labels."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'Are you good at drawing?' correct but 'Are you good in drawing?' is not?",
+   "o": [
+    "'Good' collocates with 'at'",
+    "'Good' is a verb",
+    "'Drawing' needs 'in' only with numbers",
+    "Questions never use 'at'"
+   ],
+   "why": "Collocations are fixed: good at."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Fahad loves parties and talks to everyone. His brother stays quiet with new people. Which pair of adjectives fits them?",
+   "o": [
+    "sociable / shy",
+    "shy / sociable",
+    "lazy / sporty",
+    "rude / funny"
+   ],
+   "why": "Fahad enjoys people, so he is sociable; his brother is shy."
+  }
+ ]
+}

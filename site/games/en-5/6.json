@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 1 – Talent show",
+ "lesson": "Lesson 3: Grammar – Comparative and superlative adjectives",
+ "outcomes": [
+  "I can make comparatives and superlatives: big – bigger – the biggest.",
+  "I can use more / the most with long adjectives and know good and bad forms.",
+  "I can compare people and things using than and the."
+ ],
+ "tf": [
+  {
+   "s": "The comparative of big is bigger.",
+   "t": true,
+   "why": "Yes! big → bigger: we double the g."
+  },
+  {
+   "s": "The superlative of good is the goodest.",
+   "t": false,
+   "why": "Good is irregular: good – better – the best."
+  },
+  {
+   "s": "We use more with long adjectives: more hard-working.",
+   "t": true,
+   "why": "Right! Long adjectives use more and the most."
+  },
+  {
+   "s": "\"She is the most short girl in the class\" is correct.",
+   "t": false,
+   "why": "Short is a short adjective: the shortest."
+  },
+  {
+   "s": "The comparative of bad is worse.",
+   "t": true,
+   "why": "Yes! bad – worse – the worst."
+  },
+  {
+   "s": "We use than after a comparative: taller than.",
+   "t": true,
+   "why": "Great! Ali is taller than Saif."
+  },
+  {
+   "s": "Superlatives usually have \"the\" before them.",
+   "t": true,
+   "why": "Yes! the biggest, the best, the most hard-working."
+  },
+  {
+   "s": "The comparative of curly is curlyer.",
+   "t": false,
+   "why": "y changes to i: curlier."
+  },
+  {
+   "s": "Kind is a long adjective, so we say more kind.",
+   "t": false,
+   "why": "Kind is short: kinder, the kindest."
+  },
+  {
+   "s": "\"You're the biggest cat ever!\" has a comparative.",
+   "t": false,
+   "why": "The biggest is a superlative."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "big → bigger → ___",
+   "o": [
+    "the biggest",
+    "the bigest",
+    "the most big"
+   ],
+   "why": "Double the g and add -est."
+  },
+  {
+   "q": "My mum is ___ than me.",
+   "o": [
+    "shorter",
+    "short",
+    "the shortest"
+   ],
+   "why": "With than we use the comparative."
+  },
+  {
+   "q": "Rahaf is ___ than me at schoolwork. (good)",
+   "o": [
+    "better",
+    "gooder",
+    "best"
+   ],
+   "why": "Good is irregular: better."
+  },
+  {
+   "q": "tidy → ___",
+   "o": [
+    "tidier",
+    "tidyer",
+    "more tidy"
+   ],
+   "why": "y changes to i, then add -er."
+  },
+  {
+   "q": "hard-working → the ___ hard-working",
+   "o": [
+    "most",
+    "more",
+    "best"
+   ],
+   "why": "Long adjectives: the most."
+  },
+  {
+   "q": "Basil is the ___ boy in the whole school. (bad)",
+   "o": [
+    "worst",
+    "baddest",
+    "worse"
+   ],
+   "why": "bad – worse – the worst."
+  },
+  {
+   "q": "Which is a superlative?",
+   "o": [
+    "the kindest",
+    "kinder",
+    "kind"
+   ],
+   "why": "-est with the is the superlative."
+  },
+  {
+   "q": "This film is ___ than that film. It's very boring. (bad)",
+   "o": [
+    "worse",
+    "worst",
+    "badder"
+   ],
+   "why": "With than: worse."
+  },
+  {
+   "q": "He is the ___ person in my family. (hard-working)",
+   "o": [
+    "most hard-working",
+    "hard-workingest",
+    "more hard-working"
+   ],
+   "why": "Long adjective + superlative: the most hard-working."
+  },
+  {
+   "q": "She always gets ___ marks than me.",
+   "o": [
+    "better",
+    "best",
+    "good"
+   ],
+   "why": "With than we need better."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "short → ___ (comparative)",
+   "a": "shorter",
+   "d": [
+    "shortest",
+    "more short",
+    "shortter"
+   ]
+  },
+  {
+   "q": "big → ___ (superlative)",
+   "a": "the biggest",
+   "d": [
+    "the bigest",
+    "the bigger",
+    "the most big"
+   ]
+  },
+  {
+   "q": "good → ___ (comparative)",
+   "a": "better",
+   "d": [
+    "gooder",
+    "best",
+    "more good"
+   ]
+  },
+  {
+   "q": "good → ___ (superlative)",
+   "a": "the best",
+   "d": [
+    "the goodest",
+    "the better",
+    "the most good"
+   ]
+  },
+  {
+   "q": "bad → ___ (superlative)",
+   "a": "the worst",
+   "d": [
+    "the baddest",
+    "the worse",
+    "the most bad"
+   ]
+  },
+  {
+   "q": "curly → ___ (comparative)",
+   "a": "curlier",
+   "d": [
+    "curlyer",
+    "more curly",
+    "curliest"
+   ]
+  },
+  {
+   "q": "kind → ___ (comparative)",
+   "a": "kinder",
+   "d": [
+    "more kind",
+    "kindder",
+    "kindest"
+   ]
+  },
+  {
+   "q": "tidy → ___ (superlative)",
+   "a": "the tidiest",
+   "d": [
+    "the tidyest",
+    "the most tidy",
+    "the tidier"
+   ]
+  },
+  {
+   "q": "confident → ___ (comparative)",
+   "a": "more confident",
+   "d": [
+    "confidenter",
+    "most confident",
+    "confidentest"
+   ]
+  },
+  {
+   "q": "Ali is taller ___ Saif.",
+   "a": "than",
+   "d": [
+    "then",
+    "that",
+    "the"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which shows good correctly?",
+   "o": [
+    "good – better – the best",
+    "good – gooder – the goodest",
+    "good – more good – the most good",
+    "good – best – the better"
+   ],
+   "why": "Good is an irregular adjective."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do long adjectives make the superlative?",
+   "o": [
+    "the most + adjective",
+    "add -est",
+    "add -er",
+    "the more + adjective"
+   ],
+   "why": "Long adjectives: the most hard-working."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word do we use after a comparative?",
+   "o": [
+    "than",
+    "the",
+    "and",
+    "then"
+   ],
+   "why": "Taller than, better than."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the comparative of tidy?",
+   "o": [
+    "tidier",
+    "tidyer",
+    "more tidy",
+    "tidiest"
+   ],
+   "why": "y → i + er: tidier."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali is 140 cm, Saif is 135 cm and Omar is 150 cm. Which sentence is true?",
+   "o": [
+    "Omar is the tallest boy.",
+    "Saif is the tallest boy.",
+    "Ali is taller than Omar.",
+    "Saif is taller than Ali."
+   ],
+   "why": "150 is the biggest number, so Omar is the tallest."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Zainab is ___ than Hazim. (kind)",
+   "o": [
+    "kinder",
+    "more kind",
+    "the kindest",
+    "kindest"
+   ],
+   "why": "Kind is short: kinder than."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct question.",
+   "o": [
+    "Is Zainab tidier than Hazim?",
+    "Is Zainab more tidier than Hazim?",
+    "Is Zainab tidiest than Hazim?",
+    "Is Zainab tidy than Hazim?"
+   ],
+   "why": "Comparative + than: tidier than."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say \"more hard-working\" but \"kinder\"?",
+   "o": [
+    "Hard-working is long; kind is short.",
+    "Kind is irregular.",
+    "Hard-working is a superlative.",
+    "There is no reason."
+   ],
+   "why": "Long adjectives use more; short ones add -er."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the mistake: \"Hazim is more tidy than Zainab.\"",
+   "o": [
+    "It should be tidier than.",
+    "It should be the most tidy.",
+    "It should be tidy than.",
+    "There is no mistake."
+   ],
+   "why": "Tidy is a short adjective: tidier."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A mouse, a cat and a wolf. Which sentence is correct?",
+   "o": [
+    "The wolf is the biggest.",
+    "The mouse is the biggest.",
+    "The cat is bigger than the wolf.",
+    "The mouse is bigger than the cat."
+   ],
+   "why": "A wolf is bigger than a cat, and a cat is bigger than a mouse."
+  }
+ ]
+}

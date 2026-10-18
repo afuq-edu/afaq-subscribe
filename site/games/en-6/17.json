@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 2: Technology",
+ "lesson": "Unit 2 – Lesson 2: Team Talk – A problem with technology",
+ "outcomes": [
+  "I can understand Arlo's homework problem.",
+  "I can use Why not?, Oh, dear! and You're joking!",
+  "I can tell a partner about a homework problem."
+ ],
+ "tf": [
+  {
+   "s": "Arlo forgot his password.",
+   "t": false,
+   "why": "Arlo didn't forget his password; his laptop stopped working."
+  },
+  {
+   "s": "Arlo's laptop stopped working.",
+   "t": true,
+   "why": "Yes! That was the first problem."
+  },
+  {
+   "s": "Arlo used his brother's computer.",
+   "t": true,
+   "why": "Correct! He used his brother's computer."
+  },
+  {
+   "s": "Arlo used Mr Ammar's computer.",
+   "t": false,
+   "why": "He used his brother's computer."
+  },
+  {
+   "s": "Arlo can't print his homework because their printer doesn't work.",
+   "t": true,
+   "why": "Right! The printer doesn't work."
+  },
+  {
+   "s": "Sultan gives Arlo a pen and some paper.",
+   "t": true,
+   "why": "Yes! Sultan gives him a pen and paper."
+  },
+  {
+   "s": "The Wi-Fi didn't work.",
+   "t": true,
+   "why": "Correct! The Wi-Fi was another problem."
+  },
+  {
+   "s": "Arlo says \"You're joking!\" because he is happy to write his homework again.",
+   "t": false,
+   "why": "He doesn't want to write it all again by hand."
+  },
+  {
+   "s": "We say \"Oh, dear!\" when we hear bad news.",
+   "t": true,
+   "why": "Yes, it shows we are sorry."
+  },
+  {
+   "s": "\"Why not?\" means \"I agree, that's great.\"",
+   "t": false,
+   "why": "\"Why not?\" asks for a reason after a negative sentence."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What happened to Arlo's laptop?",
+   "o": [
+    "It stopped working.",
+    "He lost it.",
+    "It was new."
+   ],
+   "why": "His laptop stopped working."
+  },
+  {
+   "q": "Whose computer did Arlo use?",
+   "o": [
+    "his brother's",
+    "Sultan's",
+    "Mr Ammar's"
+   ],
+   "why": "He used his brother's computer."
+  },
+  {
+   "q": "Why can't Arlo print his homework?",
+   "o": [
+    "The printer doesn't work.",
+    "He has no paper.",
+    "He forgot it."
+   ],
+   "why": "Their printer doesn't work."
+  },
+  {
+   "q": "What does Sultan give Arlo?",
+   "o": [
+    "a pen and some paper",
+    "a new laptop",
+    "a printer"
+   ],
+   "why": "Sultan gives him a pen and paper."
+  },
+  {
+   "q": "\"My homework fell out of the window!\" You say:",
+   "o": [
+    "Oh, dear!",
+    "Why not?",
+    "That sounds good."
+   ],
+   "why": "Oh, dear! fits bad news."
+  },
+  {
+   "q": "\"I dropped my smartphone in the river!\" You say:",
+   "o": [
+    "You're joking!",
+    "Why not?",
+    "That's a good idea."
+   ],
+   "why": "You're joking! shows big surprise."
+  },
+  {
+   "q": "\"I've got a headache.\" You say:",
+   "o": [
+    "Oh, dear.",
+    "You're joking!",
+    "Why not?"
+   ],
+   "why": "Oh, dear shows you are sorry."
+  },
+  {
+   "q": "Did you ___ your password?",
+   "o": [
+    "forget",
+    "forgot",
+    "forgets"
+   ],
+   "why": "Did + base verb: forget."
+  },
+  {
+   "q": "Which was another problem for Arlo?",
+   "o": [
+    "The Wi-Fi didn't work.",
+    "His pen didn't work.",
+    "He had no brother."
+   ],
+   "why": "The Wi-Fi didn't work."
+  },
+  {
+   "q": "I left my homework ___ the bus.",
+   "o": [
+    "on",
+    "at",
+    "under"
+   ],
+   "why": "We say on the bus."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Bad news reply",
+   "a": "Oh, dear!",
+   "d": [
+    "Why not?",
+    "Really good!",
+    "Well done!"
+   ]
+  },
+  {
+   "q": "Ask for a reason",
+   "a": "Why not?",
+   "d": [
+    "Oh, dear!",
+    "You're joking!",
+    "Well done!"
+   ]
+  },
+  {
+   "q": "Big surprise reply",
+   "a": "You're joking!",
+   "d": [
+    "Why not?",
+    "Oh, dear!",
+    "Thank you!"
+   ]
+  },
+  {
+   "q": "It stopped working.",
+   "a": "laptop",
+   "d": [
+    "pen",
+    "paper",
+    "bag"
+   ]
+  },
+  {
+   "q": "It doesn't work at home.",
+   "a": "printer",
+   "d": [
+    "pen",
+    "paper",
+    "book"
+   ]
+  },
+  {
+   "q": "Whose computer Arlo used",
+   "a": "his brother's",
+   "d": [
+    "his teacher's",
+    "Sultan's",
+    "his dad's"
+   ]
+  },
+  {
+   "q": "Sultan gives Arlo a ...",
+   "a": "pen",
+   "d": [
+    "laptop",
+    "printer",
+    "phone"
+   ]
+  },
+  {
+   "q": "Internet at home",
+   "a": "Wi-Fi",
+   "d": [
+    "printer",
+    "pen",
+    "paper"
+   ]
+  },
+  {
+   "q": "Did you ___ it?",
+   "a": "forget",
+   "d": [
+    "forgot",
+    "forgets",
+    "forgetting"
+   ]
+  },
+  {
+   "q": "I ___ my bag yesterday.",
+   "a": "lost",
+   "d": [
+    "lose",
+    "loses",
+    "losing"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What was Arlo's first problem?",
+   "o": [
+    "His laptop stopped working.",
+    "He forgot his password.",
+    "He lost his pen.",
+    "He was ill."
+   ],
+   "why": "His laptop stopped working."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which expression do we use for bad news?",
+   "o": [
+    "Oh, dear!",
+    "Why not?",
+    "That sounds good.",
+    "How about…?"
+   ],
+   "why": "Oh, dear! shows you feel sorry."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which expression do we use to ask for a reason?",
+   "o": [
+    "Why not?",
+    "Oh, dear!",
+    "You're joking!",
+    "Well done!"
+   ],
+   "why": "Why not? asks for the reason."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What was the problem after Arlo used his brother's computer?",
+   "o": [
+    "The Wi-Fi didn't work.",
+    "The pen didn't work.",
+    "His brother was angry.",
+    "He forgot his name."
+   ],
+   "why": "The Wi-Fi didn't work."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "\"I couldn't go to football practice yesterday.\" What is the best reply?",
+   "o": [
+    "Why not?",
+    "You're joking!",
+    "That sounds good.",
+    "Yes, I could."
+   ],
+   "why": "We ask for the reason."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a correct homework problem in the Past simple?",
+   "o": [
+    "My printer didn't work.",
+    "My printer don't worked.",
+    "My printer not work.",
+    "My printer doesn't worked."
+   ],
+   "why": "didn't + base verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: I lost my school bag. B: ___",
+   "o": [
+    "Oh, dear! Where did you lose it?",
+    "You're so funny!",
+    "That sounds good!",
+    "Why don't you?"
+   ],
+   "why": "Oh, dear! fits bad news."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Arlo say \"You're joking!\"?",
+   "o": [
+    "He doesn't want to write all his homework again by hand.",
+    "He thinks Sultan is funny.",
+    "He is happy about the printer.",
+    "He found his password."
+   ],
+   "why": "Writing it all again is a big job."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why didn't Arlo send his homework?",
+   "o": [
+    "His laptop stopped working and then the Wi-Fi didn't work.",
+    "He didn't do it.",
+    "He forgot his password.",
+    "He left it on the bus."
+   ],
+   "why": "Technology problems stopped him."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"True or false: Arlo forgot his password.\" Which answer is correct?",
+   "o": [
+    "False – his laptop stopped working.",
+    "True – he forgot it.",
+    "True – he used Mr Ammar's computer.",
+    "False – he didn't have a laptop."
+   ],
+   "why": "The dialogue shows his laptop was the problem."
+  }
+ ]
+}

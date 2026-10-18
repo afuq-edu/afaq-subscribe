@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 2: Adventure sports",
+ "lesson": "Lesson 9: Literacy – Writing a brochure",
+ "outcomes": [
+  "Know the purpose of a brochure.",
+  "Find the features of a good brochure.",
+  "Plan and write a brochure with strong adjectives."
+ ],
+ "tf": [
+  {
+   "s": "The model brochure wants people to come water skiing at Qantab Beach.",
+   "t": true,
+   "why": "Yes, that is its purpose."
+  },
+  {
+   "s": "A good brochure often starts with questions to the reader.",
+   "t": true,
+   "why": "Questions make readers interested."
+  },
+  {
+   "s": "Brochures should use long paragraphs.",
+   "t": false,
+   "why": "Short paragraphs are easier to read."
+  },
+  {
+   "s": "Brochures talk to the reader using 'you' and 'we'.",
+   "t": true,
+   "why": "Right, 'you' and 'we' make it friendly and direct."
+  },
+  {
+   "s": "'Brilliant' and 'gorgeous' are exciting adjectives.",
+   "t": true,
+   "why": "Well done, they are strong, exciting adjectives."
+  },
+  {
+   "s": "The last sentence of a brochure does not matter.",
+   "t": false,
+   "why": "An interesting final sentence helps readers remember."
+  },
+  {
+   "s": "'The food was terrible' uses a stronger adjective than 'The food was very bad'.",
+   "t": true,
+   "why": "Yes, terrible is a strong adjective."
+  },
+  {
+   "s": "A brochure should be boring so people trust it.",
+   "t": false,
+   "why": "A brochure should be exciting to persuade readers."
+  },
+  {
+   "s": "You can use a checklist to check your brochure.",
+   "t": true,
+   "why": "A checklist helps you include every feature."
+  },
+  {
+   "s": "'The view was very nice' is the strongest way to describe a great view.",
+   "t": false,
+   "why": "Stronger words are stunning or amazing."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the model brochure about?",
+   "o": [
+    "water skiing at Qantab Beach",
+    "climbing in Spain",
+    "penguins"
+   ],
+   "why": "It invites people to water ski at Qantab Beach."
+  },
+  {
+   "q": "How does the model brochure start?",
+   "o": [
+    "with questions",
+    "with a date",
+    "with a list of prices"
+   ],
+   "why": "It starts with questions to make readers interested."
+  },
+  {
+   "q": "Which pronouns do brochures use?",
+   "o": [
+    "you and we",
+    "he and she",
+    "it and they"
+   ],
+   "why": "'You' and 'we' speak directly to the reader."
+  },
+  {
+   "q": "Why use short paragraphs?",
+   "o": [
+    "They are easy to read.",
+    "They look empty.",
+    "They save ink."
+   ],
+   "why": "Short paragraphs are easy for readers."
+  },
+  {
+   "q": "Rewrite strongly: The weather was very bad.",
+   "o": [
+    "The weather was awful.",
+    "The weather was OK.",
+    "The weather was nice."
+   ],
+   "why": "Awful is a strong word for very bad."
+  },
+  {
+   "q": "Rewrite strongly: The view was very nice.",
+   "o": [
+    "The view was stunning.",
+    "The view was fine.",
+    "The view was small."
+   ],
+   "why": "Stunning is a strong word for very nice."
+  },
+  {
+   "q": "Which is a good brochure title?",
+   "o": [
+    "Sandboarding in the Sharqiyah Sands!",
+    "My homework",
+    "Monday"
+   ],
+   "why": "A good title is short and exciting."
+  },
+  {
+   "q": "Which is a good final sentence?",
+   "o": [
+    "Book today for the adventure of your life!",
+    "The end.",
+    "I am tired."
+   ],
+   "why": "An exciting ending makes readers want to act."
+  },
+  {
+   "q": "Which word is an exciting adjective?",
+   "o": [
+    "gorgeous",
+    "beach",
+    "water"
+   ],
+   "why": "Gorgeous is an exciting adjective."
+  },
+  {
+   "q": "What do you do after writing your brochure?",
+   "o": [
+    "check it with a checklist",
+    "throw it away",
+    "copy a friend's"
+   ],
+   "why": "Checking helps you improve your work."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Beach in the model brochure",
+   "a": "Qantab",
+   "d": [
+    "Salalah",
+    "Sur",
+    "Spain"
+   ]
+  },
+  {
+   "q": "Sport in the model brochure",
+   "a": "water skiing",
+   "d": [
+    "climbing",
+    "hockey",
+    "cycleball"
+   ]
+  },
+  {
+   "q": "Pronoun for the reader",
+   "a": "you",
+   "d": [
+    "he",
+    "she",
+    "it"
+   ]
+  },
+  {
+   "q": "Strong word for very bad",
+   "a": "awful",
+   "d": [
+    "nice",
+    "good",
+    "fine"
+   ]
+  },
+  {
+   "q": "Strong word for very nice",
+   "a": "stunning",
+   "d": [
+    "bad",
+    "OK",
+    "small"
+   ]
+  },
+  {
+   "q": "Exciting adjective",
+   "a": "brilliant",
+   "d": [
+    "beach",
+    "holiday",
+    "water"
+   ]
+  },
+  {
+   "q": "Another exciting adjective",
+   "a": "gorgeous",
+   "d": [
+    "paragraph",
+    "sentence",
+    "title"
+   ]
+  },
+  {
+   "q": "Brochures start with ...",
+   "a": "questions",
+   "d": [
+    "prices",
+    "dates",
+    "maps"
+   ]
+  },
+  {
+   "q": "Best length of paragraphs",
+   "a": "short",
+   "d": [
+    "long",
+    "huge",
+    "endless"
+   ]
+  },
+  {
+   "q": "Tool to check your brochure",
+   "a": "checklist",
+   "d": [
+    "calculator",
+    "map",
+    "clock"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the purpose of the model brochure?",
+   "o": [
+    "to get people to come water skiing at Qantab Beach",
+    "to tell a story about a trip",
+    "to report the news",
+    "to teach grammar"
+   ],
+   "why": "The brochure persuades people to try water skiing."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a feature of a good brochure?",
+   "o": [
+    "an interesting final sentence",
+    "very long paragraphs",
+    "no title",
+    "sad words"
+   ],
+   "why": "A good brochure ends with an interesting sentence."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why does a brochure start with questions?",
+   "o": [
+    "to make readers interested",
+    "to test readers",
+    "to finish quickly",
+    "to show the price"
+   ],
+   "why": "Questions catch the reader's attention."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which two adjectives are in the model brochure?",
+   "o": [
+    "brilliant, gorgeous",
+    "terrible, awful",
+    "small, slow",
+    "cold, wet"
+   ],
+   "why": "The brochure uses exciting adjectives like brilliant and gorgeous."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite with a strong adjective: The food was very bad.",
+   "o": [
+    "The food was terrible.",
+    "The food was quite bad.",
+    "The food was fine.",
+    "The food was very very bad."
+   ],
+   "why": "Terrible is a strong adjective for very bad."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best opening question for a paragliding brochure.",
+   "o": [
+    "Have you ever wanted to fly like a bird?",
+    "Is it Monday today?",
+    "Do you like homework?",
+    "What is your name?"
+   ],
+   "why": "A good question makes readers dream about the activity."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence speaks directly to the reader?",
+   "o": [
+    "You will love our gorgeous beach!",
+    "The beach is there.",
+    "People went to the beach.",
+    "It was a beach."
+   ],
+   "why": "Using 'you' talks directly to the reader."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which brochure plan is the best?",
+   "o": [
+    "exciting title, questions, strong adjectives, short paragraphs, interesting ending",
+    "long paragraphs and no title",
+    "only a list of prices",
+    "a story about your family"
+   ],
+   "why": "It has all the features from the How to write box."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'The view was stunning' better than 'The view was very nice' in a brochure?",
+   "o": [
+    "A strong adjective is more persuasive.",
+    "It is shorter.",
+    "It is a question.",
+    "It uses 'we'."
+   ],
+   "why": "Strong adjectives make readers want to come."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A student's brochure has no questions and no 'you'. What should the student add?",
+   "o": [
+    "questions to the reader and 'you'",
+    "more long paragraphs",
+    "a sad ending",
+    "page numbers"
+   ],
+   "why": "Questions and 'you' make the brochure speak to the reader."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 3 – Let’s explore!",
+ "lesson": "Lesson 7: Skills – Reading: life on the International Space Station",
+ "outcomes": [
+  "Read a text about life on the International Space Station.",
+  "Find facts and numbers in the text and correct false sentences.",
+  "Plan and explain choices for a space trip."
+ ],
+ "tf": [
+  {
+   "s": "The ISS is a satellite.",
+   "t": true,
+   "why": "The International Space Station is a satellite."
+  },
+  {
+   "s": "The ISS goes around the Earth once every 90 minutes.",
+   "t": true,
+   "why": "It goes around the Earth every 90 minutes."
+  },
+  {
+   "s": "Astronauts on the ISS see 24 sunrises every 16 hours.",
+   "t": false,
+   "why": "They see 16 sunrises or sunsets every 24 hours."
+  },
+  {
+   "s": "The ISS travels at 28,000 kilometres per hour.",
+   "t": true,
+   "why": "It is very fast: 28,000 kilometres per hour."
+  },
+  {
+   "s": "Astronauts don't need to exercise on the ISS.",
+   "t": false,
+   "why": "They exercise for two hours a day to keep their muscles strong."
+  },
+  {
+   "s": "In space, muscles can become very weak.",
+   "t": true,
+   "why": "Astronauts are weightless, so their muscles can become weak."
+  },
+  {
+   "s": "ISS means the International Space Station.",
+   "t": true,
+   "why": "ISS = International Space Station."
+  },
+  {
+   "s": "Astronauts on the ISS exercise for ten minutes a week.",
+   "t": false,
+   "why": "They exercise for two hours a day."
+  },
+  {
+   "s": "For the trip to Mars, everything must fit in a box one metre high, wide and deep.",
+   "t": true,
+   "why": "That is the problem in the planning task."
+  },
+  {
+   "s": "The ISS goes around the Moon.",
+   "t": false,
+   "why": "The ISS goes around the Earth."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does ISS mean?",
+   "o": [
+    "International Space Station",
+    "Indian Space Ship",
+    "International Sun Star"
+   ],
+   "why": "ISS = International Space Station."
+  },
+  {
+   "q": "How often does the ISS go around the Earth?",
+   "o": [
+    "once every 90 minutes",
+    "once a day",
+    "once a year"
+   ],
+   "why": "Once every 90 minutes."
+  },
+  {
+   "q": "How many hours a day do astronauts exercise?",
+   "o": [
+    "two",
+    "ten",
+    "twenty"
+   ],
+   "why": "They exercise for two hours a day."
+  },
+  {
+   "q": "How fast does the ISS go?",
+   "o": [
+    "28,000 km per hour",
+    "280 km per hour",
+    "28 km per hour"
+   ],
+   "why": "28,000 kilometres per hour."
+  },
+  {
+   "q": "When the Sun comes up in the morning, it is ______.",
+   "o": [
+    "sunrise",
+    "sunset",
+    "starlight"
+   ],
+   "why": "Sunrise is when the Sun comes up."
+  },
+  {
+   "q": "When the Sun goes down in the evening, it is ______.",
+   "o": [
+    "sunset",
+    "sunrise",
+    "sunlight"
+   ],
+   "why": "Sunset is when the Sun goes down."
+  },
+  {
+   "q": "Why must astronauts exercise?",
+   "o": [
+    "Their muscles can become weak.",
+    "They want to win a race.",
+    "They are very hungry."
+   ],
+   "why": "Exercise keeps muscles strong in space."
+  },
+  {
+   "q": "How many sunrises or sunsets can astronauts see every 24 hours?",
+   "o": [
+    "16",
+    "24",
+    "2"
+   ],
+   "why": "They see 16 sunrises or sunsets every 24 hours."
+  },
+  {
+   "q": "How many things can you choose for the trip to Mars?",
+   "o": [
+    "nine",
+    "ninety",
+    "one"
+   ],
+   "why": "You choose nine things."
+  },
+  {
+   "q": "Which word means \"you float because there is no weight\"?",
+   "o": [
+    "weightless",
+    "heavy",
+    "strong"
+   ],
+   "why": "Weightless things float."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "ISS goes around the …",
+   "a": "Earth",
+   "d": [
+    "Moon",
+    "Sun",
+    "Mars"
+   ]
+  },
+  {
+   "q": "Minutes for one trip around Earth",
+   "a": "90",
+   "d": [
+    "9",
+    "16",
+    "28"
+   ]
+  },
+  {
+   "q": "Sunrises or sunsets per day",
+   "a": "16",
+   "d": [
+    "24",
+    "90",
+    "2"
+   ]
+  },
+  {
+   "q": "Exercise each day (hours)",
+   "a": "two",
+   "d": [
+    "ten",
+    "twenty",
+    "zero"
+   ]
+  },
+  {
+   "q": "ISS speed (km per hour)",
+   "a": "28,000",
+   "d": [
+    "2,800",
+    "280",
+    "90"
+   ]
+  },
+  {
+   "q": "The ISS is a …",
+   "a": "satellite",
+   "d": [
+    "planet",
+    "comet",
+    "star"
+   ]
+  },
+  {
+   "q": "The Sun comes up",
+   "a": "sunrise",
+   "d": [
+    "sunset",
+    "midnight",
+    "moonlight"
+   ]
+  },
+  {
+   "q": "Exercise keeps them strong",
+   "a": "muscles",
+   "d": [
+    "teeth",
+    "eyes",
+    "hair"
+   ]
+  },
+  {
+   "q": "Things you take to Mars",
+   "a": "nine",
+   "d": [
+    "ninety",
+    "nineteen",
+    "two"
+   ]
+  },
+  {
+   "q": "Planet for the space trip",
+   "a": "Mars",
+   "d": [
+    "Earth",
+    "the Sun",
+    "the Moon"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the ISS?",
+   "o": [
+    "a satellite",
+    "a planet",
+    "a comet",
+    "a star"
+   ],
+   "why": "The International Space Station is a satellite."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How fast does the ISS travel?",
+   "o": [
+    "28,000 kilometres per hour",
+    "90 kilometres per hour",
+    "16 kilometres per hour",
+    "380,000 kilometres per hour"
+   ],
+   "why": "The ISS travels at 28,000 kilometres per hour."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How long do astronauts exercise every day?",
+   "o": [
+    "two hours",
+    "two minutes",
+    "ten hours",
+    "ninety minutes"
+   ],
+   "why": "They exercise for two hours a day."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How big is the box for the trip to Mars?",
+   "o": [
+    "one metre high, wide and deep",
+    "ten metres high",
+    "as big as a room",
+    "one centimetre wide"
+   ],
+   "why": "Everything must fit in a one-metre box."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct this sentence: Astronauts can see 24 sunrises every 16 hours.",
+   "o": [
+    "They see 16 sunrises or sunsets every 24 hours.",
+    "They see 90 sunrises every hour.",
+    "They see one sunrise every day.",
+    "They see no sunrises."
+   ],
+   "why": "The text says 16 every 24 hours."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You will go to Mars for a long time. Which reason is good for taking a photo of your family?",
+   "o": [
+    "I'll miss them.",
+    "It is very heavy.",
+    "It is food.",
+    "It is a spacesuit."
+   ],
+   "why": "A family photo helps when you miss your family."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: The ISS goes around the Earth once every ______ minutes.",
+   "o": [
+    "90",
+    "9",
+    "16",
+    "28"
+   ],
+   "why": "It goes around once every 90 minutes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can astronauts' muscles become very weak in space?",
+   "o": [
+    "They are weightless, so their muscles don't work hard.",
+    "They eat too much.",
+    "They sleep all day.",
+    "They see too many sunsets."
+   ],
+   "why": "Without weight, muscles don't work hard, so astronauts exercise."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do astronauts see many sunrises in one day?",
+   "o": [
+    "The ISS goes around the Earth very fast.",
+    "The Sun moves very fast.",
+    "The ISS stops near the Sun.",
+    "They have a lot of lamps."
+   ],
+   "why": "It goes around the Earth every 90 minutes, so the Sun rises many times."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The box is small. Which thing is the best choice for the trip to Mars?",
+   "o": [
+    "a book for your free time",
+    "a big bike",
+    "a sofa",
+    "a car"
+   ],
+   "why": "Small, useful things fit in the box."
+  }
+ ]
+}

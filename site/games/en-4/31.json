@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U3",
+ "lesson": "Unit 3 – Lesson 3: Grammar 1 (comparatives with short adjectives)",
+ "outcomes": [
+  "Make comparatives of short adjectives: taller, bigger, dirtier.",
+  "Ask and answer questions like 'Is Molt Town bigger than Trock Town?'",
+  "Write true sentences comparing people, places and objects."
+ ],
+ "tf": [
+  {
+   "s": "A mountain is higher than a hill.",
+   "t": true,
+   "why": "Yes! Mountains are higher than hills."
+  },
+  {
+   "s": "A hill is higher than a mountain.",
+   "t": false,
+   "why": "A mountain is higher than a hill."
+  },
+  {
+   "s": "Molt Town is bigger than Trock Town.",
+   "t": true,
+   "why": "Correct! 'Is Molt Town bigger? Yes, it is.'"
+  },
+  {
+   "s": "The chair is wider than the table.",
+   "t": false,
+   "why": "No, it isn't. The table is wider than the chair."
+  },
+  {
+   "s": "Jebel Shams is smaller than Mount Everest.",
+   "t": true,
+   "why": "Well done! Mount Everest is much higher."
+  },
+  {
+   "s": "We add -er to short adjectives: tall → taller.",
+   "t": true,
+   "why": "Great! tall + er = taller."
+  },
+  {
+   "s": "The comparative of 'big' is 'biger'.",
+   "t": false,
+   "why": "We double the g: bigger."
+  },
+  {
+   "s": "The comparative of 'dirty' is 'dirtyer'.",
+   "t": false,
+   "why": "y changes to i: dirtier."
+  },
+  {
+   "s": "We use 'than' after a comparative: taller than.",
+   "t": true,
+   "why": "Yes! 'Taller than' compares two things."
+  },
+  {
+   "s": "'More long' is correct.",
+   "t": false,
+   "why": "Short adjectives take -er: longer."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Make the comparative: short",
+   "o": [
+    "shorter",
+    "shortest",
+    "more short"
+   ],
+   "why": "short + er = shorter."
+  },
+  {
+   "q": "Make the comparative: hot",
+   "o": [
+    "hotter",
+    "hoter",
+    "hotest"
+   ],
+   "why": "Double the t: hotter."
+  },
+  {
+   "q": "Make the comparative: clean",
+   "o": [
+    "cleaner",
+    "cleanner",
+    "cleanest"
+   ],
+   "why": "clean + er = cleaner."
+  },
+  {
+   "q": "Make the comparative: wide",
+   "o": [
+    "wider",
+    "wideer",
+    "widder"
+   ],
+   "why": "wide ends in e, so just add r."
+  },
+  {
+   "q": "Make the comparative: happy",
+   "o": [
+    "happier",
+    "happyer",
+    "more happy"
+   ],
+   "why": "y → i + er: happier."
+  },
+  {
+   "q": "Is the chair wider than the table?",
+   "o": [
+    "No, it isn't.",
+    "Yes, they are.",
+    "No, they aren't."
+   ],
+   "why": "The table is wider than the chair."
+  },
+  {
+   "q": "Complete: The Nile is ___ than Wadi Shab.",
+   "o": [
+    "longer",
+    "long",
+    "longest"
+   ],
+   "why": "We compare with 'longer than'."
+  },
+  {
+   "q": "Which word comes after a comparative?",
+   "o": [
+    "than",
+    "then",
+    "that"
+   ],
+   "why": "We say 'taller than'."
+  },
+  {
+   "q": "Which question compares two towns?",
+   "o": [
+    "Is Molt Town bigger than Trock Town?",
+    "Is Molt Town big?",
+    "Where is Molt Town?"
+   ],
+   "why": "'Bigger than' compares two towns."
+  },
+  {
+   "q": "Complete: Who is ___ than Sally?",
+   "o": [
+    "taller",
+    "tall",
+    "tallest"
+   ],
+   "why": "We use the comparative: taller."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "tall → ...",
+   "a": "taller",
+   "d": [
+    "tallest",
+    "more tall",
+    "tallier"
+   ]
+  },
+  {
+   "q": "deep → ...",
+   "a": "deeper",
+   "d": [
+    "deepest",
+    "more deep",
+    "deepper"
+   ]
+  },
+  {
+   "q": "old → ...",
+   "a": "older",
+   "d": [
+    "oldest",
+    "more old",
+    "oldder"
+   ]
+  },
+  {
+   "q": "dirty → ...",
+   "a": "dirtier",
+   "d": [
+    "dirtyer",
+    "dirtiest",
+    "more dirty"
+   ]
+  },
+  {
+   "q": "long → ...",
+   "a": "longer",
+   "d": [
+    "longest",
+    "more long",
+    "longger"
+   ]
+  },
+  {
+   "q": "cold → ...",
+   "a": "colder",
+   "d": [
+    "coldest",
+    "more cold",
+    "coldder"
+   ]
+  },
+  {
+   "q": "small → ...",
+   "a": "smaller",
+   "d": [
+    "smallest",
+    "more small",
+    "smallier"
+   ]
+  },
+  {
+   "q": "fast → ...",
+   "a": "faster",
+   "d": [
+    "fastest",
+    "more fast",
+    "fastter"
+   ]
+  },
+  {
+   "q": "easy → ...",
+   "a": "easier",
+   "d": [
+    "easyer",
+    "easiest",
+    "more easy"
+   ]
+  },
+  {
+   "q": "Word after 'taller'",
+   "a": "than",
+   "d": [
+    "then",
+    "that",
+    "the"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is the correct comparative of 'big'?",
+   "o": [
+    "bigger",
+    "biger",
+    "more big",
+    "bigest"
+   ],
+   "why": "Short adjective, one vowel + one consonant: double it."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the correct comparative of 'high'?",
+   "o": [
+    "higher",
+    "highher",
+    "more high",
+    "highest"
+   ],
+   "why": "high + er = higher."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is correct?",
+   "o": [
+    "A mountain is higher than a hill.",
+    "A mountain is high than a hill.",
+    "A mountain is more high than a hill.",
+    "A mountain is higher then a hill."
+   ],
+   "why": "Use 'higher than'."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Is Molt Town bigger than Trock Town?",
+   "o": [
+    "Yes, it is.",
+    "Yes, they are.",
+    "No, they aren't.",
+    "Yes, it does."
+   ],
+   "why": "Yes, it is."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write: (cleaner) my classroom / the playground",
+   "o": [
+    "My classroom is cleaner than the playground.",
+    "My classroom is clean than the playground.",
+    "My classroom cleaner the playground.",
+    "My classroom is cleanest than the playground."
+   ],
+   "why": "Use 'cleaner than'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali is 130 cm. Sami is 140 cm. Which is true?",
+   "o": [
+    "Sami is taller than Ali.",
+    "Ali is taller than Sami.",
+    "Ali is bigger than Sami.",
+    "Sami is shorter than Ali."
+   ],
+   "why": "140 cm is more than 130 cm."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "The desk is 60 cm wide. The book is 20 cm wide. Which is true?",
+   "o": [
+    "The desk is wider than the book.",
+    "The book is wider than the desk.",
+    "The book is longer than the desk.",
+    "The desk is shorter than the book."
+   ],
+   "why": "60 cm is more than 20 cm."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it 'bigger' with two g's?",
+   "o": [
+    "Big ends in one vowel and one consonant, so we double it.",
+    "We always add -ger.",
+    "Big is a long adjective.",
+    "Big ends in y."
+   ],
+   "why": "b-i-g: one vowel + one consonant, so double the g."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is NOT true?",
+   "o": [
+    "Jebel Shams is higher than Mount Everest.",
+    "A mountain is higher than a hill.",
+    "The table is wider than the chair.",
+    "Mount Everest is higher than Jebel Shams."
+   ],
+   "why": "Mount Everest is higher than Jebel Shams."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How many things does a comparative sentence compare?",
+   "o": [
+    "two",
+    "one",
+    "five",
+    "ten"
+   ],
+   "why": "Comparatives compare two things."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 2 – Then and now",
+ "lesson": "Lesson 3: Grammar – Past simple",
+ "outcomes": [
+  "I can make regular and irregular past simple verbs: played, tried, had, went.",
+  "I can make negatives and questions: I didn't use a tablet. Did you have a phone?",
+  "I can tell a short story about the past with time words like two days ago."
+ ],
+ "tf": [
+  {
+   "s": "The past simple of have is had.",
+   "t": true,
+   "why": "Yes! have → had is irregular."
+  },
+  {
+   "s": "The past simple of try is tryed.",
+   "t": false,
+   "why": "y changes to i: tried."
+  },
+  {
+   "s": "\"Did you have a phone?\" \"Yes, we did.\" is correct.",
+   "t": true,
+   "why": "Right! Did …? Yes, we did."
+  },
+  {
+   "s": "\"They didn't drank water.\" is correct.",
+   "t": false,
+   "why": "After didn't, use the base verb: They didn't drink water."
+  },
+  {
+   "s": "The past simple of go is went.",
+   "t": true,
+   "why": "Yes! go → went is irregular."
+  },
+  {
+   "s": "\"Ten years ago\" and \"last month\" are time words for the past.",
+   "t": true,
+   "why": "Great! They tell us when something happened."
+  },
+  {
+   "s": "The past simple of wear is weared.",
+   "t": false,
+   "why": "Wear is irregular: wore."
+  },
+  {
+   "s": "Regular verbs add -ed in the past: play → played.",
+   "t": true,
+   "why": "Yes! play → played."
+  },
+  {
+   "s": "We use \"were\" with he and she: She were happy.",
+   "t": false,
+   "why": "We say she was; were is for you, we and they."
+  },
+  {
+   "s": "The past simple of eat is eated.",
+   "t": false,
+   "why": "Eat is irregular: ate."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "play → ___",
+   "o": [
+    "played",
+    "plaid",
+    "plaied"
+   ],
+   "why": "Regular verb: add -ed."
+  },
+  {
+   "q": "Faisal's dad ___ to the beach with his family. (go)",
+   "o": [
+    "went",
+    "goed",
+    "goes"
+   ],
+   "why": "go → went."
+  },
+  {
+   "q": "Make it negative: I used a tablet.",
+   "o": [
+    "I didn't use a tablet.",
+    "I didn't used a tablet.",
+    "I not used a tablet."
+   ],
+   "why": "didn't + base verb."
+  },
+  {
+   "q": "___ you have a phone ten years ago?",
+   "o": [
+    "Did",
+    "Do",
+    "Were"
+   ],
+   "why": "Past questions start with Did."
+  },
+  {
+   "q": "drink → ___",
+   "o": [
+    "drank",
+    "drinked",
+    "drinks"
+   ],
+   "why": "drink → drank in the past simple."
+  },
+  {
+   "q": "She went to the lake. She ___ to the river.",
+   "o": [
+    "didn't go",
+    "didn't went",
+    "not went"
+   ],
+   "why": "didn't + base verb: didn't go."
+  },
+  {
+   "q": "Did you play football yesterday? No, I ___.",
+   "o": [
+    "didn't",
+    "don't",
+    "wasn't"
+   ],
+   "why": "Did …? No, I didn't."
+  },
+  {
+   "q": "We ___ at the beach last weekend.",
+   "o": [
+    "were",
+    "was",
+    "are"
+   ],
+   "why": "We + were."
+  },
+  {
+   "q": "find → ___",
+   "o": [
+    "found",
+    "finded",
+    "fand"
+   ],
+   "why": "find → found is irregular."
+  },
+  {
+   "q": "Which is a time word for the past?",
+   "o": [
+    "two days ago",
+    "tomorrow",
+    "next week"
+   ],
+   "why": "Ago tells us about the past."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "have → ___",
+   "a": "had",
+   "d": [
+    "haved",
+    "has",
+    "hid"
+   ]
+  },
+  {
+   "q": "go → ___",
+   "a": "went",
+   "d": [
+    "goed",
+    "goes",
+    "wented"
+   ]
+  },
+  {
+   "q": "eat → ___",
+   "a": "ate",
+   "d": [
+    "eated",
+    "eats",
+    "eating"
+   ]
+  },
+  {
+   "q": "come → ___",
+   "a": "came",
+   "d": [
+    "comed",
+    "comes",
+    "coming"
+   ]
+  },
+  {
+   "q": "try → ___",
+   "a": "tried",
+   "d": [
+    "tryed",
+    "tries",
+    "trys"
+   ]
+  },
+  {
+   "q": "wear → ___",
+   "a": "wore",
+   "d": [
+    "weared",
+    "wears",
+    "wearing"
+   ]
+  },
+  {
+   "q": "find → ___",
+   "a": "found",
+   "d": [
+    "finded",
+    "finds",
+    "fond"
+   ]
+  },
+  {
+   "q": "use → ___",
+   "a": "used",
+   "d": [
+    "useed",
+    "uses",
+    "usd"
+   ]
+  },
+  {
+   "q": "They ___ happy. (past of be)",
+   "a": "were",
+   "d": [
+    "was",
+    "are",
+    "is"
+   ]
+  },
+  {
+   "q": "I ___ use a tablet. (negative)",
+   "a": "didn't",
+   "d": [
+    "don't",
+    "wasn't",
+    "not"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list has only irregular past forms?",
+   "o": [
+    "had, found, went, ate",
+    "played, tried, used, visited",
+    "had, played, went, tried",
+    "went, used, ate, played"
+   ],
+   "why": "Irregular verbs don't add -ed."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the past simple of drink?",
+   "o": [
+    "drank",
+    "drinked",
+    "drinks",
+    "drinking"
+   ],
+   "why": "drink → drank."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a correct short answer to \"Did you have a phone?\"",
+   "o": [
+    "No, we didn't.",
+    "No, we don't.",
+    "No, we haven't.",
+    "No, we weren't."
+   ],
+   "why": "Did …? No, we didn't."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which time words talk about the past?",
+   "o": [
+    "last month, a long time ago, ten years ago",
+    "tomorrow, next week, soon",
+    "now, today, every day",
+    "always, often, never"
+   ],
+   "why": "These words tell us when in the past."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a question: you / have a phone / ten years ago",
+   "o": [
+    "Did you have a phone ten years ago?",
+    "Did you had a phone ten years ago?",
+    "Do you had a phone ten years ago?",
+    "You did have a phone ten years ago?"
+   ],
+   "why": "Did + subject + base verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write about last weekend: one positive and one negative sentence.",
+   "o": [
+    "I visited my grandma. I didn't play computer games.",
+    "I visit my grandma. I don't play computer games.",
+    "I visited my grandma. I didn't played computer games.",
+    "I visiting my grandma. I not play computer games."
+   ],
+   "why": "Positive: visited. Negative: didn't + play."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Describe a day out yesterday. Which sentence is correct?",
+   "o": [
+    "It was hot, so I wore a hat.",
+    "It were hot, so I weared a hat.",
+    "It is hot, so I wore a hat yesterday.",
+    "It was hot, so I wear a hat yesterday."
+   ],
+   "why": "It was + wore."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we write \"tried\" with -ied?",
+   "o": [
+    "The verb ends in a consonant + y, so y changes to i.",
+    "Try is irregular.",
+    "We always add -ied.",
+    "Because it is a question."
+   ],
+   "why": "try → tried, study → studied."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the mistake: \"They didn't drank water.\"",
+   "o": [
+    "drank should be drink",
+    "didn't should be don't",
+    "They should be Them",
+    "There is no mistake."
+   ],
+   "why": "After didn't, we use the base verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is about the past?",
+   "o": [
+    "I used a mobile phone two days ago.",
+    "I use a mobile phone every day.",
+    "I'm using a mobile phone now.",
+    "I'm good at using a mobile phone."
+   ],
+   "why": "used + two days ago shows the past."
+  }
+ ]
+}

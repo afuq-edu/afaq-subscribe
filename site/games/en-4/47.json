@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U4",
+ "lesson": "Unit 4 – Lesson 7: Skills – Reading (I love my job!)",
+ "outcomes": [
+  "Read about four amazing jobs and find information.",
+  "Decide if sentences about the text are true or false.",
+  "Give your opinion: interesting, boring, dangerous or exciting."
+ ],
+ "tf": [
+  {
+   "s": "Warren draws the people in video games and makes them move.",
+   "t": true,
+   "why": "Yes! Warren is a video game animator."
+  },
+  {
+   "s": "Drawing people in video games is very quick.",
+   "t": false,
+   "why": "An animator must work very slowly and carefully."
+  },
+  {
+   "s": "Martina takes care of animals.",
+   "t": true,
+   "why": "Correct! Martina is a zoo vet."
+  },
+  {
+   "s": "Martina sees birds, snakes, turtles, giraffes and elephants.",
+   "t": true,
+   "why": "Well done! She sees many animals."
+  },
+  {
+   "s": "Mike makes sounds for TV programmes and films.",
+   "t": true,
+   "why": "Yes! Mike is a sound artist."
+  },
+  {
+   "s": "Mike moves a pair of shoes to make the sound of a bird's wings.",
+   "t": false,
+   "why": "He moves a pair of gloves."
+  },
+  {
+   "s": "Alison's rockets take people into space.",
+   "t": true,
+   "why": "Correct! To the International Space Station."
+  },
+  {
+   "s": "Mike works in a zoo.",
+   "t": false,
+   "why": "Mike works in a studio. Martina works in a zoo."
+  },
+  {
+   "s": "Alison is a zoo vet.",
+   "t": false,
+   "why": "Alison is a rocket engineer. She builds rockets."
+  },
+  {
+   "s": "'I think the sound artist's job is very interesting' is an opinion.",
+   "t": true,
+   "why": "Yes! 'I think' gives an opinion."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who is a video game animator?",
+   "o": [
+    "Warren",
+    "Mike",
+    "Alison"
+   ],
+   "why": "Warren draws people in video games."
+  },
+  {
+   "q": "Who is a zoo vet?",
+   "o": [
+    "Martina",
+    "Alison",
+    "Warren"
+   ],
+   "why": "Martina takes care of animals."
+  },
+  {
+   "q": "Who is a sound artist?",
+   "o": [
+    "Mike",
+    "Martina",
+    "Warren"
+   ],
+   "why": "Mike makes sounds for TV and films."
+  },
+  {
+   "q": "Who builds rockets?",
+   "o": [
+    "Alison",
+    "Mike",
+    "Martina"
+   ],
+   "why": "Alison is a rocket engineer."
+  },
+  {
+   "q": "Where does Mike make sounds?",
+   "o": [
+    "in a studio",
+    "in a zoo",
+    "in space"
+   ],
+   "why": "Mike works in a studio."
+  },
+  {
+   "q": "What does Mike move for bird's wings?",
+   "o": [
+    "a pair of gloves",
+    "a pair of boots",
+    "a book"
+   ],
+   "why": "Gloves sound like wings!"
+  },
+  {
+   "q": "An animator must work very ___ .",
+   "o": [
+    "slowly and carefully",
+    "quickly",
+    "loudly"
+   ],
+   "why": "Drawing must be slow and careful."
+  },
+  {
+   "q": "Alison's rockets go to the ...",
+   "o": [
+    "International Space Station",
+    "zoo",
+    "studio"
+   ],
+   "why": "They take people to the Space Station."
+  },
+  {
+   "q": "Which word gives an opinion?",
+   "o": [
+    "exciting",
+    "rocket",
+    "studio"
+   ],
+   "why": "Exciting describes how you feel about something."
+  },
+  {
+   "q": "'I take care of animals.' Who?",
+   "o": [
+    "Martina",
+    "Alison",
+    "Mike"
+   ],
+   "why": "Martina is the zoo vet."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Video game animator",
+   "a": "Warren",
+   "d": [
+    "Mike",
+    "Alison",
+    "Martina"
+   ]
+  },
+  {
+   "q": "Zoo vet",
+   "a": "Martina",
+   "d": [
+    "Warren",
+    "Mike",
+    "Alison"
+   ]
+  },
+  {
+   "q": "Sound artist",
+   "a": "Mike",
+   "d": [
+    "Alison",
+    "Warren",
+    "Martina"
+   ]
+  },
+  {
+   "q": "Rocket engineer",
+   "a": "Alison",
+   "d": [
+    "Martina",
+    "Mike",
+    "Warren"
+   ]
+  },
+  {
+   "q": "Mike works in a ...",
+   "a": "studio",
+   "d": [
+    "zoo",
+    "farm",
+    "hospital"
+   ]
+  },
+  {
+   "q": "Mike's bird wing sound",
+   "a": "gloves",
+   "d": [
+    "boots",
+    "rockets",
+    "pillows"
+   ]
+  },
+  {
+   "q": "Martina works in a ...",
+   "a": "zoo",
+   "d": [
+    "studio",
+    "garage",
+    "cave"
+   ]
+  },
+  {
+   "q": "Alison builds ...",
+   "a": "rockets",
+   "d": [
+    "games",
+    "sounds",
+    "zoos"
+   ]
+  },
+  {
+   "q": "Opposite of 'safe'",
+   "a": "dangerous",
+   "d": [
+    "boring",
+    "interesting",
+    "exciting"
+   ]
+  },
+  {
+   "q": "Opposite of 'interesting'",
+   "a": "boring",
+   "d": [
+    "exciting",
+    "dangerous",
+    "amazing"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does Warren do?",
+   "o": [
+    "He draws the people in video games and makes them move.",
+    "He takes care of animals.",
+    "He builds rockets.",
+    "He makes sounds for films."
+   ],
+   "why": "Warren is a video game animator."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does a sound artist do?",
+   "o": [
+    "makes sounds for TV programmes and films",
+    "builds rockets",
+    "draws video games",
+    "takes care of animals"
+   ],
+   "why": "Mike is a sound artist."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where do Alison's rockets take people?",
+   "o": [
+    "to the International Space Station",
+    "to the zoo",
+    "to a studio",
+    "to a farm"
+   ],
+   "why": "Her rockets go into space."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which animals does Martina see?",
+   "o": [
+    "birds, snakes, turtles, giraffes and elephants",
+    "cats and dogs only",
+    "fish and sharks only",
+    "horses and cows only"
+   ],
+   "why": "Martina sees many different animals."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'I build rockets.' Who is speaking?",
+   "o": [
+    "Alison",
+    "Warren",
+    "Mike",
+    "Martina"
+   ],
+   "why": "Alison is a rocket engineer."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I think the rocket engineer's job is ___ because it goes into space.",
+   "o": [
+    "exciting",
+    "boring",
+    "quiet",
+    "slow"
+   ],
+   "why": "Space rockets are exciting!"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You are a video game animator. Which sentence is right?",
+   "o": [
+    "I draw people in video games. I must work slowly and carefully.",
+    "I build rockets for space.",
+    "I take care of zoo animals.",
+    "I make sounds with gloves."
+   ],
+   "why": "An animator draws and works carefully."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Mike move a pair of gloves?",
+   "o": [
+    "To make the sound of a bird's wings.",
+    "To keep his hands warm.",
+    "To draw a bird.",
+    "To catch a bird."
+   ],
+   "why": "Moving gloves sounds like wings."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why must an animator work slowly and carefully?",
+   "o": [
+    "Drawing people in video games is not quick.",
+    "Video games are boring.",
+    "Animals are dangerous.",
+    "Rockets are fast."
+   ],
+   "why": "Making people move in games takes time."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Do you think Martina likes her job? Which reason fits the text?",
+   "o": [
+    "Yes, because she sees many different animals.",
+    "No, because she builds rockets.",
+    "Yes, because she draws video games.",
+    "No, because she works in a studio."
+   ],
+   "why": "Martina works with lots of animals."
+  }
+ ]
+}

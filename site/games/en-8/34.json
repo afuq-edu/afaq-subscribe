@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 3: Spend or save?",
+ "lesson": "Lesson 8: Literacy – Reading emails",
+ "outcomes": [
+  "Decide if an email is formal or informal from the subject and style.",
+  "Read two emails and answer questions.",
+  "Learn words from the emails and their opposites."
+ ],
+ "tf": [
+  {
+   "s": "The two emails are informal emails between friends.",
+   "t": true,
+   "why": "Yes, they are friendly, informal emails."
+  },
+  {
+   "s": "The shopping centre Nawal visited has 1,200 shops.",
+   "t": true,
+   "why": "Correct, 1,200 shops."
+  },
+  {
+   "s": "Nawal loves shopping and bought lots of things.",
+   "t": false,
+   "why": "Nawal hates shopping, so she didn't buy anything."
+  },
+  {
+   "s": "The shopping centre has more than 200 places to eat.",
+   "t": true,
+   "why": "Right, more than 200 places to eat."
+  },
+  {
+   "s": "There is an underwater zoo and aquarium at the shopping centre.",
+   "t": true,
+   "why": "Yes, and an ice rink and a cinema."
+  },
+  {
+   "s": "Rasha went to the shops to buy a new phone.",
+   "t": false,
+   "why": "She went to complain about a T-shirt and get a refund."
+  },
+  {
+   "s": "Rasha felt embarrassed because she had taken her little sister's T-shirt by mistake.",
+   "t": true,
+   "why": "Well done, that was her mistake."
+  },
+  {
+   "s": "'Enormous' means very small.",
+   "t": false,
+   "why": "Enormous means very big."
+  },
+  {
+   "s": "The opposite of 'sell' is 'buy'.",
+   "t": true,
+   "why": "Yes, sell and buy are opposites."
+  },
+  {
+   "s": "The opposite of 'first' is 'next'.",
+   "t": false,
+   "why": "The opposite of first is last."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How many shops are in the shopping centre?",
+   "o": [
+    "1,200",
+    "200",
+    "12"
+   ],
+   "why": "There are 1,200 shops."
+  },
+  {
+   "q": "What should you read first in an inbox?",
+   "o": [
+    "the subject",
+    "the last line",
+    "the date only"
+   ],
+   "why": "The subject tells you what the email is about."
+  },
+  {
+   "q": "Does Nawal like shopping?",
+   "o": [
+    "No, she hates it.",
+    "Yes, she loves it.",
+    "Only online."
+   ],
+   "why": "Nawal hates shopping."
+  },
+  {
+   "q": "Why did Rasha go to the shops?",
+   "o": [
+    "to complain about a T-shirt",
+    "to buy shoes",
+    "to meet Nawal"
+   ],
+   "why": "She wanted a refund for a T-shirt."
+  },
+  {
+   "q": "What word means 'very big'?",
+   "o": [
+    "enormous",
+    "jealous",
+    "embarrassed"
+   ],
+   "why": "Enormous means very big."
+  },
+  {
+   "q": "What word means wanting what someone else has?",
+   "o": [
+    "jealous",
+    "incredible",
+    "underwater"
+   ],
+   "why": "Jealous means wanting what others have."
+  },
+  {
+   "q": "Feeling uncomfortable because of a mistake is ...",
+   "o": [
+    "embarrassed",
+    "enormous",
+    "jealous"
+   ],
+   "why": "Rasha felt embarrassed."
+  },
+  {
+   "q": "Opposite of 'hate'?",
+   "o": [
+    "love",
+    "like",
+    "sell"
+   ],
+   "why": "Love is the opposite of hate."
+  },
+  {
+   "q": "Opposite of 'tomorrow'?",
+   "o": [
+    "yesterday",
+    "today",
+    "later"
+   ],
+   "why": "Yesterday is the opposite of tomorrow."
+  },
+  {
+   "q": "Where can you skate at the shopping centre?",
+   "o": [
+    "the ice rink",
+    "the aquarium",
+    "the cinema"
+   ],
+   "why": "You skate on an ice rink."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Number of shops",
+   "a": "1,200",
+   "d": [
+    "200",
+    "120",
+    "12,000"
+   ]
+  },
+  {
+   "q": "Places to eat",
+   "a": "more than 200",
+   "d": [
+    "about 20",
+    "1,200",
+    "fewer than 50"
+   ]
+  },
+  {
+   "q": "Who hates shopping?",
+   "a": "Nawal",
+   "d": [
+    "Rasha",
+    "Rosie",
+    "Manar"
+   ]
+  },
+  {
+   "q": "Who felt embarrassed?",
+   "a": "Rasha",
+   "d": [
+    "Nawal",
+    "Huda",
+    "Aliyah"
+   ]
+  },
+  {
+   "q": "Rasha took her sister's",
+   "a": "T-shirt",
+   "d": [
+    "scarf",
+    "skirt",
+    "phone"
+   ]
+  },
+  {
+   "q": "Means very big",
+   "a": "enormous",
+   "d": [
+    "jealous",
+    "incredible",
+    "tiny"
+   ]
+  },
+  {
+   "q": "Opposite of hate",
+   "a": "love",
+   "d": [
+    "sell",
+    "like",
+    "last"
+   ]
+  },
+  {
+   "q": "Opposite of sell",
+   "a": "buy",
+   "d": [
+    "love",
+    "pay",
+    "last"
+   ]
+  },
+  {
+   "q": "Opposite of first",
+   "a": "last",
+   "d": [
+    "next",
+    "second",
+    "early"
+   ]
+  },
+  {
+   "q": "Type of these emails",
+   "a": "informal",
+   "d": [
+    "formal",
+    "business",
+    "official"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What else can you do at the shopping centre if you get bored of shopping?",
+   "o": [
+    "visit the underwater zoo, the ice rink or the cinema",
+    "climb a cliff",
+    "go sandboarding",
+    "ride a camel"
+   ],
+   "why": "There are fun places besides shops."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Are the emails formal or informal?",
+   "o": [
+    "informal, between friends",
+    "formal, to a company",
+    "formal, to a teacher",
+    "they are not emails"
+   ],
+   "why": "They are friendly emails between friends."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'jealous' mean?",
+   "o": [
+    "wanting what someone else has",
+    "very big",
+    "very old",
+    "very happy"
+   ],
+   "why": "Jealous is wanting what others have."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does 'incredible' mean?",
+   "o": [
+    "amazing, hard to believe",
+    "very small",
+    "boring",
+    "angry"
+   ],
+   "why": "Incredible means amazing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the word: The shopping centre was ___; it had 1,200 shops!",
+   "o": [
+    "enormous",
+    "jealous",
+    "embarrassed",
+    "underwater"
+   ],
+   "why": "Enormous means very big."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend went to an amazing place. You wish you were there too. You feel ...",
+   "o": [
+    "jealous",
+    "embarrassed",
+    "enormous",
+    "incredible"
+   ],
+   "why": "Jealous: wanting what someone else had."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Find the opposites: hate, sell, first.",
+   "o": [
+    "love, buy, last",
+    "like, pay, next",
+    "love, spend, second",
+    "hate, buy, first"
+   ],
+   "why": "love, buy and last are the opposites."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why didn't Nawal buy anything?",
+   "o": [
+    "She hates shopping.",
+    "She had no bank card.",
+    "The shops were closed.",
+    "She lost her wallet."
+   ],
+   "why": "Nawal hates shopping."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why did Rasha feel embarrassed?",
+   "o": [
+    "She had taken her little sister's T-shirt by mistake.",
+    "She lost her receipt.",
+    "She got the wrong refund.",
+    "Nawal laughed at her."
+   ],
+   "why": "Her complaint was about the wrong T-shirt."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How can you tell an email is informal before reading it?",
+   "o": [
+    "Look at the subject line and who it is from, like a friend.",
+    "Count the words.",
+    "Look at the colour.",
+    "Read only the date."
+   ],
+   "why": "The subject and sender show if it is friendly."
+  }
+ ]
+}

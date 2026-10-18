@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 2: Adventure sports",
+ "lesson": "Lesson 6: WOW! Culture – Unusual sports (Project)",
+ "outcomes": [
+  "Read about three unusual sports and find key facts.",
+  "Compare sports and give reasons for your choice.",
+  "Plan and present a poster about an unusual sport."
+ ],
+ "tf": [
+  {
+   "s": "Underwater hockey is played at the bottom of a swimming pool.",
+   "t": true,
+   "why": "Yes, players play on the pool floor."
+  },
+  {
+   "s": "Underwater hockey is played on ice.",
+   "t": false,
+   "why": "It is played underwater, at the bottom of a pool."
+  },
+  {
+   "s": "Each underwater hockey team has six players.",
+   "t": true,
+   "why": "Right, there are six players in a team."
+  },
+  {
+   "s": "Bamboo drifting started in China about 1,000 years ago.",
+   "t": true,
+   "why": "Correct! It is a very old sport from China."
+  },
+  {
+   "s": "In cycleball, players can kick the ball with their feet.",
+   "t": false,
+   "why": "In cycleball you can only move the ball with your bike."
+  },
+  {
+   "s": "Cycleball started in America in 1893.",
+   "t": true,
+   "why": "Yes, Nicholas Kaufman started it in 1893."
+  },
+  {
+   "s": "The bamboo used in bamboo drifting is about 2 metres long.",
+   "t": false,
+   "why": "The bamboo is about 9 metres long."
+  },
+  {
+   "s": "Underwater hockey started in the UK in the 1950s.",
+   "t": true,
+   "why": "Well done, it began in the UK in the 1950s."
+  },
+  {
+   "s": "A puck is the person you play against.",
+   "t": false,
+   "why": "The person you play against is your opponent; a puck is what you hit in hockey."
+  },
+  {
+   "s": "A good sport poster tells you the equipment and the rules.",
+   "t": true,
+   "why": "Yes, equipment and rules help readers understand the sport."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where is underwater hockey played?",
+   "o": [
+    "at the bottom of a pool",
+    "on ice",
+    "on a beach"
+   ],
+   "why": "Players play on the floor of a swimming pool."
+  },
+  {
+   "q": "Which country did bamboo drifting come from?",
+   "o": [
+    "China",
+    "the UK",
+    "America"
+   ],
+   "why": "Bamboo drifting comes from China."
+  },
+  {
+   "q": "Who started cycleball?",
+   "o": [
+    "Nicholas Kaufman",
+    "Younis",
+    "Lucas"
+   ],
+   "why": "Nicholas Kaufman started cycleball in 1893."
+  },
+  {
+   "q": "What do you call the person you play against?",
+   "o": [
+    "an opponent",
+    "a puck",
+    "a team"
+   ],
+   "why": "Your opponent is the player on the other side."
+  },
+  {
+   "q": "In cycleball, how do you move the ball?",
+   "o": [
+    "with your bike",
+    "with your feet",
+    "with your hands"
+   ],
+   "why": "Cycleball players move the ball only with their bikes."
+  },
+  {
+   "q": "How long is the bamboo in bamboo drifting?",
+   "o": [
+    "about 9 metres",
+    "about 1 metre",
+    "about 50 metres"
+   ],
+   "why": "The bamboo is about 9 metres long."
+  },
+  {
+   "q": "What are clever, special moves called?",
+   "o": [
+    "tricks",
+    "halves",
+    "pucks"
+   ],
+   "why": "Tricks are special skilful moves."
+  },
+  {
+   "q": "Which is a good question for a sport poster?",
+   "o": [
+    "What equipment do you need?",
+    "What is your teacher's name?",
+    "What time is lunch?"
+   ],
+   "why": "A poster explains equipment, rules and where people play."
+  },
+  {
+   "q": "When did underwater hockey start?",
+   "o": [
+    "in the 1950s",
+    "in 1893",
+    "1,000 years ago"
+   ],
+   "why": "It started in the UK in the 1950s."
+  },
+  {
+   "q": "At the end of the project, how does the class choose the best sport?",
+   "o": [
+    "they vote",
+    "they toss a coin",
+    "the teacher guesses"
+   ],
+   "why": "The class votes and gives reasons."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Players in an underwater hockey team",
+   "a": "six",
+   "d": [
+    "four",
+    "eleven",
+    "two"
+   ]
+  },
+  {
+   "q": "Bamboo drifting comes from",
+   "a": "China",
+   "d": [
+    "the UK",
+    "America",
+    "Oman"
+   ]
+  },
+  {
+   "q": "Underwater hockey started in",
+   "a": "the UK",
+   "d": [
+    "China",
+    "America",
+    "Oman"
+   ]
+  },
+  {
+   "q": "Cycleball started in",
+   "a": "America",
+   "d": [
+    "China",
+    "the UK",
+    "Oman"
+   ]
+  },
+  {
+   "q": "Year cycleball started",
+   "a": "1893",
+   "d": [
+    "1950",
+    "1000",
+    "1983"
+   ]
+  },
+  {
+   "q": "Length of the bamboo",
+   "a": "9 metres",
+   "d": [
+    "2 metres",
+    "90 metres",
+    "19 metres"
+   ]
+  },
+  {
+   "q": "The player you play against",
+   "a": "opponent",
+   "d": [
+    "puck",
+    "trick",
+    "half"
+   ]
+  },
+  {
+   "q": "You hit it in underwater hockey",
+   "a": "puck",
+   "d": [
+    "bat",
+    "racket",
+    "bamboo"
+   ]
+  },
+  {
+   "q": "In cycleball you move the ball with your",
+   "a": "bike",
+   "d": [
+    "feet",
+    "hands",
+    "head"
+   ]
+  },
+  {
+   "q": "Where underwater hockey is played",
+   "a": "pool",
+   "d": [
+    "ice",
+    "beach",
+    "field"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "How many players are in an underwater hockey team?",
+   "o": [
+    "six",
+    "four",
+    "eight",
+    "eleven"
+   ],
+   "why": "Each team has six players."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where did underwater hockey start?",
+   "o": [
+    "the UK",
+    "China",
+    "America",
+    "Oman"
+   ],
+   "why": "It started in the UK in the 1950s."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sport uses a piece of bamboo about 9 metres long?",
+   "o": [
+    "bamboo drifting",
+    "cycleball",
+    "underwater hockey",
+    "abseiling"
+   ],
+   "why": "Bamboo drifting uses bamboo about 9 metres long."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When did cycleball start?",
+   "o": [
+    "1893",
+    "the 1950s",
+    "1,000 years ago",
+    "last year"
+   ],
+   "why": "Nicholas Kaufman started cycleball in America in 1893."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which rule is correct for cycleball?",
+   "o": [
+    "You mustn't use your feet.",
+    "You must kick the ball.",
+    "You must play underwater.",
+    "You mustn't use a bike."
+   ],
+   "why": "In cycleball you can only move the ball with your bike."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete the poster sentence: In cycleball, players move the ball with their ___.",
+   "o": [
+    "bikes",
+    "feet",
+    "hands",
+    "sticks"
+   ],
+   "why": "Cycleball players use their bikes to move the ball."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Use the Past perfect: After we ___ our sport, we wrote the descriptions.",
+   "o": [
+    "had chosen",
+    "have chosen",
+    "chose had",
+    "had choose"
+   ],
+   "why": "had + past participle: had chosen."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sport is the oldest?",
+   "o": [
+    "bamboo drifting",
+    "underwater hockey",
+    "cycleball",
+    "they are all the same age"
+   ],
+   "why": "Bamboo drifting began about 1,000 years ago, long before 1893 or the 1950s."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A student says: 'I'd like to try underwater hockey because I love swimming.' What is this?",
+   "o": [
+    "a choice with a reason",
+    "a rule of the sport",
+    "a piece of equipment",
+    "a question for the poster"
+   ],
+   "why": "Giving a reason makes your choice stronger."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence would best help a PE teacher choose a sport?",
+   "o": [
+    "It needs only a pool, sticks and a puck, and it keeps everyone active.",
+    "It is a sport.",
+    "My friend likes it.",
+    "It has a funny name."
+   ],
+   "why": "Good descriptions give equipment and why the sport suits PE."
+  }
+ ]
+}

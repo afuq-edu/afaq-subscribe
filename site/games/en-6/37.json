@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 3: Places",
+  "lesson": "Unit 3 – Lesson 7: English in action – Giving directions in a building",
+  "outcomes": [
+    "I can ask for directions politely inside a building.",
+    "I can give directions with upstairs, along the corridor and on the left.",
+    "I can say the weak and strong forms of was and were."
+  ],
+  "tf": [
+    {"s": "In the dialogue, it is the boy’s first visit to the shopping mall.", "t": true, "why": "He doesn’t know the mall, so he asks for directions."},
+    {"s": "The bookshop is downstairs on the right.", "t": false, "why": "The bookshop is upstairs on the right."},
+    {"s": "To get to the bookshop, you take the escalator to the second floor.", "t": true, "why": "It’s the second shop on the right."},
+    {"s": "The café is on the second floor.", "t": false, "why": "The café is on the ground floor, next to the exit."},
+    {"s": "The shoe shop is the third shop on the right.", "t": true, "why": "Go straight on; it’s the third shop on the right."},
+    {"s": "“Can you tell me where the café is, please?” is a polite question.", "t": true, "why": "Can you tell me … please? is polite."},
+    {"s": "In “We were visiting the bookshop”, were is strong.", "t": false, "why": "In the middle of a sentence, were is weak /wə/."},
+    {"s": "In the short answer “Yes, I was.”, was is strong.", "t": true, "why": "At the end of a short answer, was is strong."},
+    {"s": "“Go along the corridor” means go up in the lift.", "t": false, "why": "Along the corridor means walk down the long passage."},
+    {"s": "The café is next to the exit.", "t": true, "why": "It’s on the left, next to the exit."}
+  ],
+  "boxes": [
+    {"q": "Where is the shoe shop?", "o": ["the third shop on the right", "upstairs on the left", "next to the exit"], "why": "Go straight on; it’s the third shop on the right."},
+    {"q": "How does the boy get to the bookshop?", "o": ["He takes the escalator.", "He goes down the stairs.", "He goes out of the exit."], "why": "He takes the escalator to the second floor."},
+    {"q": "Which floor is the café on?", "o": ["the ground floor", "the first floor", "the second floor"], "why": "The café is on the ground floor."},
+    {"q": "Complete: Go ___ the corridor and around the corner.", "o": ["along", "on", "at"], "why": "We say go along the corridor."},
+    {"q": "Complete: It’s the first door ___ the right.", "o": ["on", "in", "at"], "why": "We say on the right / on the left."},
+    {"q": "Complete: Can you tell me ___ the bookshop is, please?", "o": ["where", "who", "when"], "why": "We ask where for places."},
+    {"q": "Which word is weak in “My sisters were waiting outside the shop”?", "o": ["were", "sisters", "waiting"], "why": "Small helping words like were are weak."},
+    {"q": "Is was strong or weak in “Yes, I was.”?", "o": ["strong", "weak", "silent"], "why": "Short answers use the strong form."},
+    {"q": "Which three places does the boy ask about?", "o": ["shoe shop, bookshop, café", "hospital, bank, café", "cinema, library, stadium"], "why": "He asks for the shoe shop, the bookshop and the café."},
+    {"q": "Complete: Take the ___ to the first floor.", "o": ["lift", "corner", "exit"], "why": "A lift takes you up to another floor."}
+  ],
+  "hunt": [
+    {"q": "Opposite of upstairs", "a": "downstairs", "d": ["along", "around", "straight on"]},
+    {"q": "Opposite of left", "a": "right", "d": ["up", "down", "along"]},
+    {"q": "Go ___ the corridor.", "a": "along", "d": ["on", "at", "of"]},
+    {"q": "Go ___ the corner.", "a": "around", "d": ["of", "at", "on"]},
+    {"q": "Moving stairs to the 2nd floor", "a": "escalator", "d": ["corridor", "exit", "corner"]},
+    {"q": "Floor of the café", "a": "ground floor", "d": ["first floor", "second floor", "roof"]},
+    {"q": "The café is next to the…", "a": "exit", "d": ["lift", "bookshop", "roof"]},
+    {"q": "The shoe shop is the ___ on the right.", "a": "third", "d": ["first", "second", "fourth"]},
+    {"q": "Where is the bookshop?", "a": "upstairs", "d": ["downstairs", "outside", "on the roof"]},
+    {"q": "were in “We were visiting”", "a": "weak", "d": ["strong", "silent", "stressed"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Where is the café?", "o": ["On the ground floor, along the corridor and around the corner, on the left", "On the second floor, on the right", "Upstairs, next to the bookshop", "Outside the mall"], "why": "The café is on the ground floor next to the exit."},
+    {"lv": "التذكر", "q": "Which question asks for directions politely?", "o": ["Excuse me. Can you tell me where the bookshop is, please?", "Where’s the bookshop? Tell me now!", "Bookshop?", "You go to the bookshop."], "why": "Excuse me … please makes it polite."},
+    {"lv": "التذكر", "q": "When are was and were usually strong?", "o": ["At the end, in short answers like “Yes, they were.”", "Always in the middle of a sentence", "Never", "Only in questions with what"], "why": "In short answers they are strong."},
+    {"lv": "التذكر", "q": "Which phrase is NOT a direction?", "o": ["Sorry, not now.", "Go straight on.", "It’s on the left.", "Take the escalator."], "why": "Sorry, not now. is a reply, not a direction."},
+    {"lv": "التطبيق", "q": "Correct the sentence: “The bookshop is downstairs on the right.”", "o": ["The bookshop is upstairs on the right.", "The bookshop is downstairs on the left.", "The bookshop is next to the exit.", "The bookshop is on the ground floor."], "why": "The dialogue says it is upstairs on the right."},
+    {"lv": "التطبيق", "q": "Give directions to the café using “around the corner”.", "o": ["Go along the corridor and around the corner. The café is on the left.", "Around corner café left go.", "Go around the corner at the roof.", "The café is around the ceiling."], "why": "Along the corridor, around the corner, then on the left."},
+    {"lv": "التطبيق", "q": "Directions from the classroom: which sentence is clear and correct?", "o": ["Go along the corridor, go down the stairs and it’s the first door on the left.", "Go along the stairs on the ceiling.", "It’s the first door in the left.", "Go down the corridor up the roof."], "why": "It uses the directions language correctly."},
+    {"lv": "التحليل", "q": "The boy is on the ground floor and wants the bookshop on the second floor. What is the best direction?", "o": ["Take the escalator to the second floor.", "Go out of the exit.", "Go around the corner to the café.", "Go downstairs."], "why": "He must go up two floors, so the escalator helps."},
+    {"lv": "التحليل", "q": "Why does the boy need directions?", "o": ["It’s his first visit to the mall.", "He works in the mall.", "He wants to go home.", "The shops are closed."], "why": "He doesn’t know where the shops are."},
+    {"lv": "التحليل", "q": "Which sentence has were in its weak form?", "o": ["We were visiting the bookshop.", "Yes, they were.", "No, they weren’t.", "Yes, we were."], "why": "In the middle of a sentence, were is weak."}
+  ]
+}

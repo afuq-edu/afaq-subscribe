@@ -212,8 +212,8 @@
    "a": "an",
    "d": [
     "a",
-    "two",
-    "the an"
+    "by",
+    "to"
    ]
   },
   {
@@ -221,8 +221,8 @@
    "a": "a",
    "d": [
     "an",
-    "two",
-    "an a"
+    "by",
+    "to"
    ]
   },
   {
@@ -328,7 +328,7 @@
    "o": [
     "artist starts with a vowel sound.",
     "artist is a long word.",
-    "artist is a woman.",
+    "artist has six letters.",
     "artist goes by underground."
    ],
    "why": "We use an before a vowel sound."

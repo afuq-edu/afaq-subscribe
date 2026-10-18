@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف الخامس",
+  "unit": "Unit 2 – Then and now",
+  "lesson": "Lesson 8: Skills – Listening, speaking and writing a report",
+  "outcomes": [
+    "I can ask and answer about a visit: Where did you go? What did you see there?",
+    "I can find the parts of a report: the date, paragraphs and headings.",
+    "I can plan, write and check a report about a visit."
+  ],
+  "tf": [
+    {"s": "Osama's report is about the Louvre Abu Dhabi.", "t": true, "why": "Yes! Osama went to the Louvre Abu Dhabi."},
+    {"s": "The Louvre Abu Dhabi has around 70 paintings.", "t": false, "why": "It has around 700 paintings."},
+    {"s": "A report about a visit starts with the date.", "t": true, "why": "Right! The date tells the reader when the visit happened."},
+    {"s": "A report is written in one long line with no paragraphs.", "t": false, "why": "A report uses paragraphs."},
+    {"s": "We use an exclamation mark for interesting facts.", "t": true, "why": "Yes! I learnt a lot about Oman's past!"},
+    {"s": "The Louvre Abu Dhabi building is old and dark.", "t": false, "why": "It is very modern and beautiful, with lots of light."},
+    {"s": "\"Where did you go?\" asks about a place you visited.", "t": true, "why": "Yes! It asks about the place."},
+    {"s": "\"Did you saw the doctor yesterday?\" is correct.", "t": false, "why": "After did, use the base verb: Did you see …?"},
+    {"s": "\"What did you learn?\" is one of the report headings.", "t": true, "why": "Great! The report ends with what you learnt."},
+    {"s": "The past simple of carry is carryed.", "t": false, "why": "y changes to i: carried."}
+  ],
+  "boxes": [
+    {"q": "Where did Osama go?", "o": ["the Louvre Abu Dhabi", "the British Museum", "the Car Museum"], "why": "His report is about the Louvre Abu Dhabi."},
+    {"q": "About how many paintings does it have?", "o": ["around 700", "around 70", "around 7,000"], "why": "The report says around 700."},
+    {"q": "Where ___ you go?", "o": ["did", "do", "were"], "why": "Past question: Where did you go?"},
+    {"q": "Why does a report start with the date?", "o": ["to tell the reader when the visit happened", "to make it longer", "to show the price"], "why": "The date shows when."},
+    {"q": "\"On 23 June, I visited the British Museum.\" Which heading?", "o": ["When and where did you go?", "What did you learn?", "What could you do?"], "why": "It gives the date and the place."},
+    {"q": "Which punctuation mark do we use for interesting facts?", "o": ["an exclamation mark (!)", "a question mark (?)", "a comma (,)"], "why": "! shows something exciting."},
+    {"q": "I learnt a lot ___ Oman's history.", "o": ["about", "on", "at"], "why": "We learn about something."},
+    {"q": "My brother ___ Science last year. (not study)", "o": ["didn't study", "didn't studied", "not studied"], "why": "didn't + base verb."},
+    {"q": "What did you ___ there?", "o": ["see", "saw", "seeing"], "why": "did + base verb: see."},
+    {"q": "Which is a place from the listening?", "o": ["funfair", "stage", "glass box"], "why": "The places are the zoo, Science Museum, Car Museum and funfair."}
+  ],
+  "hunt": [
+    {"q": "Osama's museum", "a": "Louvre Abu Dhabi", "d": ["British Museum", "Car Museum", "Science Museum"]},
+    {"q": "Paintings at the Louvre Abu Dhabi", "a": "around 700", "d": ["around 70", "around 7", "around 7,000"]},
+    {"q": "A report starts with the ___.", "a": "date", "d": ["price", "end", "answer"]},
+    {"q": "Mark for interesting facts", "a": "!", "d": ["?", ",", "-"]},
+    {"q": "Where ___ you go?", "a": "did", "d": ["do", "does", "are"]},
+    {"q": "A place with rides and games", "a": "funfair", "d": ["zoo", "library", "bank"]},
+    {"q": "A place to see animals", "a": "zoo", "d": ["funfair", "Car Museum", "shop"]},
+    {"q": "carry → ___", "a": "carried", "d": ["carryed", "carries", "caried"]},
+    {"q": "I learnt a lot ___ Oman.", "a": "about", "d": ["on", "at", "in"]},
+    {"q": "Reports are divided into ___.", "a": "paragraphs", "d": ["songs", "games", "tickets"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "What is special about the Louvre Abu Dhabi?", "o": ["The building is very modern and beautiful, with lots of light.", "It is a small traditional house.", "It has a shaking floor.", "It is in London."], "why": "Osama's report describes a modern building with lots of light."},
+    {"lv": "التذكر", "q": "Which are the four report headings?", "o": ["When and where? What's special? What could you do? What did you learn?", "Who? What's he like? Where's he from? How old?", "Breakfast, lunch, dinner, snack", "Monday, Tuesday, Wednesday, Thursday"], "why": "These are the parts of a report about a visit."},
+    {"lv": "التذكر", "q": "Which places are in the listening?", "o": ["zoo, Science Museum, Car Museum, funfair", "shop, bank, school, mosque", "beach, desert, river, lake", "London, Shanghai, Manah, Muscat"], "why": "The children visited these places."},
+    {"lv": "التذكر", "q": "Which questions ask about a visit?", "o": ["Where did you go? What did you see there?", "What's he like? Who's that?", "How much is it? Can I help you?", "Are you good at …?"], "why": "These ask about a past visit."},
+    {"lv": "التطبيق", "q": "Write the first sentence of a report with a date.", "o": ["On Saturday 3 July, I visited the Natural History Museum of Oman.", "I visit museum.", "The museum is good.", "on saturday i go museum"], "why": "Start with the date and the place, with capital letters."},
+    {"lv": "التطبيق", "q": "Which plan notes are best for a report?", "o": ["Bait Al Zubair – traditional house – saw old swords – learnt about Oman's past", "I like pizza and juggling.", "Monday, Tuesday, Friday", "tall, curly hair, kind"], "why": "The notes answer where, what's special, what you saw and what you learnt."},
+    {"lv": "التطبيق", "q": "Write the \"What's special about it?\" sentence.", "o": ["It's special because you can see a real whale.", "On 23 June, I visited it.", "I learnt a lot.", "Where did you go?"], "why": "It's special because … tells what is special."},
+    {"lv": "التحليل", "q": "Why does a report about a visit start with the date?", "o": ["To tell the reader when the visit happened.", "To show the museum's price.", "To end the report.", "Because the date is a heading for what you learnt."], "why": "The date shows when."},
+    {"lv": "التحليل", "q": "Find the mistake: \"Did you saw the doctor yesterday?\"", "o": ["saw should be see", "Did should be Do", "yesterday should be tomorrow", "There is no mistake."], "why": "After did, use the base verb."},
+    {"lv": "التحليل", "q": "\"I learnt a lot about Oman's past!\" Which heading does this sentence go under?", "o": ["What did you learn?", "When and where did you go?", "What's special about it?", "What could you do?"], "why": "It tells what you learnt."}
+  ]
+}

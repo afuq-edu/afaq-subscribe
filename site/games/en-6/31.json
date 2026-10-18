@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السادس",
+  "unit": "Unit 3: Places",
+  "lesson": "Unit 3 – Lesson 1: Vocabulary – Places and buildings",
+  "outcomes": [
+    "I can name twelve places and buildings, like castle and skyscraper.",
+    "I can guess a place from a description.",
+    "I can say why some places are important to people."
+  ],
+  "tf": [
+    {"s": "Big boats stop at a harbour.", "t": true, "why": "A harbour is where boats and ships stop."},
+    {"s": "A skyscraper is a very small, old house.", "t": false, "why": "A skyscraper is a very tall, modern building."},
+    {"s": "Doctors and nurses work in a hospital.", "t": true, "why": "People go to a hospital when they are ill."},
+    {"s": "A king or queen lives in a factory.", "t": false, "why": "A king or queen lives in a palace."},
+    {"s": "A factory is a place where people make things, like chocolate.", "t": true, "why": "Workers make things in a factory."},
+    {"s": "A stadium is a place for big sports matches.", "t": true, "why": "Lots of people watch matches in a stadium."},
+    {"s": "People live in an office building.", "t": false, "why": "People work in an office building; they live in an apartment building."},
+    {"s": "In the word skyscraper, the stress is on SKY.", "t": true, "why": "We say SKY-scra-per."},
+    {"s": "Some places are important because they tell us about history.", "t": true, "why": "A castle or fort can tell us about the past."},
+    {"s": "A swimming pool is a place where you can climb mountains.", "t": false, "why": "You swim in a swimming pool."}
+  ],
+  "boxes": [
+    {"q": "Where do big boats stop?", "o": ["at a harbour", "at a stadium", "at a palace"], "why": "Boats stop at a harbour."},
+    {"q": "What is a very tall, modern building?", "o": ["a skyscraper", "a castle", "a swimming pool"], "why": "Skyscrapers are very tall."},
+    {"q": "Where does a king or queen live?", "o": ["in a palace", "in a factory", "in a harbour"], "why": "Kings and queens live in palaces."},
+    {"q": "Where can you see how to make chocolate?", "o": ["at a factory", "at a hospital", "at a tower"], "why": "Things like chocolate are made in a factory."},
+    {"q": "Which place is for sport?", "o": ["a sports centre", "an office building", "a hospital"], "why": "You do sports at a sports centre."},
+    {"q": "Which place is for living?", "o": ["an apartment building", "a factory", "a stadium"], "why": "Families live in apartments."},
+    {"q": "Which is an Omani example of a harbour?", "o": ["Muttrah", "Nizwa castle", "a skyscraper"], "why": "Muttrah harbour is in Muscat."},
+    {"q": "“It’s the tallest building in the city. There’s a café at the top.” What is it?", "o": ["a skyscraper", "a hospital", "a swimming pool"], "why": "The tallest building is a skyscraper."},
+    {"q": "Where is the stress in hospital?", "o": ["HOS-pi-tal", "hos-PI-tal", "hos-pi-TAL"], "why": "We say HOS-pi-tal."},
+    {"q": "“You can swim here. It has blue water.” What is it?", "o": ["a swimming pool", "a tower", "a palace"], "why": "You swim in a swimming pool."}
+  ],
+  "hunt": [
+    {"q": "Doctors and nurses work here", "a": "hospital", "d": ["palace", "factory", "harbour"]},
+    {"q": "A king or queen lives here", "a": "palace", "d": ["hospital", "stadium", "factory"]},
+    {"q": "Big boats stop here", "a": "harbour", "d": ["tower", "castle", "stadium"]},
+    {"q": "A very tall, modern building", "a": "skyscraper", "d": ["castle", "harbour", "factory"]},
+    {"q": "People make things here", "a": "factory", "d": ["palace", "harbour", "stadium"]},
+    {"q": "Watch big football matches here", "a": "stadium", "d": ["factory", "palace", "hospital"]},
+    {"q": "You swim here", "a": "swimming pool", "d": ["office building", "tower", "castle"]},
+    {"q": "People work at desks here", "a": "office building", "d": ["swimming pool", "harbour", "stadium"]},
+    {"q": "Many families live here", "a": "apartment building", "d": ["sports centre", "factory", "stadium"]},
+    {"q": "An old building with thick walls", "a": "castle", "d": ["skyscraper", "swimming pool", "office building"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "Which place has kind doctors and nurses?", "o": ["the hospital", "the stadium", "the factory", "the palace"], "why": "Doctors and nurses work in a hospital."},
+    {"lv": "التذكر", "q": "Which group of places is all for sport?", "o": ["stadium, sports centre, swimming pool", "palace, castle, tower", "factory, office building, hospital", "harbour, apartment building, palace"], "why": "We do or watch sports in these places."},
+    {"lv": "التذكر", "q": "What is the WOW! Question of Unit 3?", "o": ["Why are some places and buildings important to us?", "How can technology help us?", "What sports do you do?", "Where do animals live?"], "why": "Unit 3 is about places and why they matter."},
+    {"lv": "التذكر", "q": "Which is an old building in Oman that tells us about history?", "o": ["Nizwa castle", "a skyscraper", "an office building", "a sports centre"], "why": "Nizwa castle is an important historic place."},
+    {"lv": "التطبيق", "q": "Which group of places is all for working?", "o": ["factory, office building, hospital", "swimming pool, stadium, sports centre", "palace, apartment building, castle", "tower, swimming pool, stadium"], "why": "People have jobs in factories, offices and hospitals."},
+    {"lv": "التطبيق", "q": "Choose the correct sentence about a town.", "o": ["There’s a big hospital near my house.", "There’s a big hospital near my house swim.", "There a big hospital near my house.", "There’s big hospitals near my house."], "why": "There’s a + singular noun."},
+    {"lv": "التطبيق", "q": "“I stayed there with my family. We could see the sea and the boats.” Which place is near?", "o": ["a harbour", "a factory", "a stadium", "a hospital"], "why": "Boats and the sea mean a harbour."},
+    {"lv": "التحليل", "q": "Why might a castle be important to people?", "o": ["It tells us about history and people have memories there.", "It is the newest building.", "It is a place to buy food.", "It is where boats stop."], "why": "Old buildings connect us with the past."},
+    {"lv": "التحليل", "q": "Which word is the odd one out?", "o": ["harbour", "palace", "castle", "tower"], "why": "A harbour is for boats; the others are kinds of buildings."},
+    {"lv": "التحليل", "q": "Which is the best two-clue description of a stadium?", "o": ["You watch big matches here. Thousands of people sit here.", "You sleep here. It has a kitchen.", "Boats stop here. It is near the sea.", "You make chocolate here. It has machines."], "why": "Both clues fit a stadium."}
+  ]
+}

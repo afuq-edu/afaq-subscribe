@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 1: Free-time fun",
+ "lesson": "Unit 1 – Lesson 8: Literacy – Reading an interview",
+ "outcomes": [
+  "I can scan an interview to find information.",
+  "I can say if a sentence is true, false or doesn't say.",
+  "I can guess new words like route and hostel from the text."
+ ],
+ "tf": [
+  {
+   "s": "Henry and Cody are visiting Argentina and Chile.",
+   "t": true,
+   "why": "Yes! They cycle in Argentina and Chile."
+  },
+  {
+   "s": "There is a lot of oxygen high in the Andes.",
+   "t": false,
+   "why": "Above 4,000 metres there isn't much oxygen."
+  },
+  {
+   "s": "Henry and Cody are sleeping in a hostel tonight.",
+   "t": true,
+   "why": "Correct! Tonight they sleep in a hostel."
+  },
+  {
+   "s": "When there aren't any hostels, they sleep in a hotel.",
+   "t": false,
+   "why": "If there aren't any hostels, they camp in a tent."
+  },
+  {
+   "s": "Henry and Cody are always hungry because cycling uses a lot of energy.",
+   "t": true,
+   "why": "Right! Cycling uses lots of energy."
+  },
+  {
+   "s": "The interview says that Cody is a teacher.",
+   "t": false,
+   "why": "The interview doesn't say what Cody's job is."
+  },
+  {
+   "s": "A hostel is a very cheap and simple hotel.",
+   "t": true,
+   "why": "Yes! That's what hostel means."
+  },
+  {
+   "s": "\"Route\" means the way you go to a place.",
+   "t": true,
+   "why": "Great! A route is your way."
+  },
+  {
+   "s": "\"Altitude\" means how fast you cycle.",
+   "t": false,
+   "why": "Altitude means how high a place is above sea level."
+  },
+  {
+   "s": "On a cycling trip in Oman, you need lots of water because it's hot.",
+   "t": true,
+   "why": "Yes, water is very important in the heat."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which countries are Henry and Cody visiting?",
+   "o": [
+    "Argentina and Chile",
+    "Oman and Canada",
+    "New Zealand and Chile"
+   ],
+   "why": "They cycle in Argentina and Chile."
+  },
+  {
+   "q": "Where are they sleeping tonight?",
+   "o": [
+    "in a hostel",
+    "in a tent",
+    "at home"
+   ],
+   "why": "Tonight they sleep in a hostel."
+  },
+  {
+   "q": "They write blog posts and ___.",
+   "o": [
+    "emails",
+    "poems",
+    "recipes"
+   ],
+   "why": "They send blog posts and emails."
+  },
+  {
+   "q": "A very cheap and simple hotel is a ___.",
+   "o": [
+    "hostel",
+    "route",
+    "camp"
+   ],
+   "why": "That's a hostel."
+  },
+  {
+   "q": "The way you go to a place is a ___.",
+   "o": [
+    "route",
+    "hostel",
+    "oxygen"
+   ],
+   "why": "That's a route."
+  },
+  {
+   "q": "How high a place is above sea level =",
+   "o": [
+    "altitude",
+    "energy",
+    "freedom"
+   ],
+   "why": "That's altitude."
+  },
+  {
+   "q": "The mountains they cycle over are the ___.",
+   "o": [
+    "Andes",
+    "Alps",
+    "Hajar"
+   ],
+   "why": "They cycle over the Andes."
+  },
+  {
+   "q": "Why are they always hungry?",
+   "o": [
+    "Cycling uses a lot of energy.",
+    "They don't like food.",
+    "There are no shops."
+   ],
+   "why": "Cycling uses lots of energy."
+  },
+  {
+   "q": "Henry and Cody are travelling on two ___.",
+   "o": [
+    "wheels",
+    "skis",
+    "boats"
+   ],
+   "why": "The interview is called Adventures on two wheels."
+  },
+  {
+   "q": "A person who loves cycling is a keen ___.",
+   "o": [
+    "cyclist",
+    "teacher",
+    "camper"
+   ],
+   "why": "Keen cyclist means someone who loves cycling."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "A cheap, simple hotel",
+   "a": "hostel",
+   "d": [
+    "route",
+    "oxygen",
+    "altitude"
+   ]
+  },
+  {
+   "q": "The way to a place",
+   "a": "route",
+   "d": [
+    "hostel",
+    "energy",
+    "freedom"
+   ]
+  },
+  {
+   "q": "How high a place is",
+   "a": "altitude",
+   "d": [
+    "route",
+    "freedom",
+    "energy"
+   ]
+  },
+  {
+   "q": "We breathe it.",
+   "a": "oxygen",
+   "d": [
+    "energy",
+    "altitude",
+    "route"
+   ]
+  },
+  {
+   "q": "Food gives you this.",
+   "a": "energy",
+   "d": [
+    "oxygen",
+    "hostel",
+    "route"
+   ]
+  },
+  {
+   "q": "Being free to do things",
+   "a": "freedom",
+   "d": [
+    "altitude",
+    "hostel",
+    "oxygen"
+   ]
+  },
+  {
+   "q": "Henry's friend on the trip",
+   "a": "Cody",
+   "d": [
+    "John",
+    "Arlo",
+    "Sultan"
+   ]
+  },
+  {
+   "q": "Mountains above 4,000 m",
+   "a": "Andes",
+   "d": [
+    "Alps",
+    "Rockies",
+    "Atlas"
+   ]
+  },
+  {
+   "q": "Sleep here if no hostel",
+   "a": "tent",
+   "d": [
+    "hotel",
+    "car",
+    "school"
+   ]
+  },
+  {
+   "q": "Country on the trip",
+   "a": "Chile",
+   "d": [
+    "Oman",
+    "Canada",
+    "Kenya"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What does \"altitude\" mean?",
+   "o": [
+    "how high a place is above sea level",
+    "a cheap hotel",
+    "the way to a place",
+    "the food you eat"
+   ],
+   "why": "Altitude is about height."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a hostel?",
+   "o": [
+    "a very cheap and simple hotel",
+    "a big mountain",
+    "a bike shop",
+    "a kind of tent"
+   ],
+   "why": "A hostel is a cheap, simple hotel."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do Henry and Cody do if there aren't any hostels?",
+   "o": [
+    "They camp in a tent.",
+    "They cycle all night.",
+    "They go home.",
+    "They sleep in a hotel."
+   ],
+   "why": "They camp in a tent."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is an interview?",
+   "o": [
+    "questions and answers with a person",
+    "a story with pictures",
+    "a poem",
+    "a list of words"
+   ],
+   "why": "An interview has questions and answers."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "\"Henry and Cody are always hungry.\" True, false or doesn't say?",
+   "o": [
+    "True, because cycling uses a lot of energy.",
+    "False, because they don't eat.",
+    "Doesn't say.",
+    "False, because they are in a hostel."
+   ],
+   "why": "The interview tells us they are always hungry."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want to find which question mentions camping. What do you do?",
+   "o": [
+    "Scan the questions quickly for the word.",
+    "Read every word slowly twice.",
+    "Read only the last line.",
+    "Guess without looking."
+   ],
+   "why": "Scanning helps you find information fast."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence plans a cycling route in Oman?",
+   "o": [
+    "We're going to start in Muscat and cycle to Sur.",
+    "We're going to ski in Muscat.",
+    "We camp in the Andes.",
+    "We're going to cycle to Chile."
+   ],
+   "why": "Muscat to Sur is a route in Oman."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is cycling over the Andes difficult?",
+   "o": [
+    "It's above 4,000 metres and there isn't much oxygen.",
+    "There are too many hostels.",
+    "It's very hot and sandy.",
+    "There are no mountains."
+   ],
+   "why": "High altitude means less oxygen."
+  },
+  {
+   "lv": "التحليل",
+   "q": "\"Cody is a teacher.\" Why is the answer \"doesn't say\"?",
+   "o": [
+    "The interview gives no information about Cody's job.",
+    "The interview says Cody is a doctor.",
+    "The interview says Cody is a teacher.",
+    "Cody isn't in the interview."
+   ],
+   "why": "If the text doesn't tell us, the answer is \"doesn't say\"."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why must you carry lots of water on a cycling trip in Oman?",
+   "o": [
+    "Because it's hot.",
+    "Because it's snowy.",
+    "Because there's no oxygen.",
+    "Because hostels are cheap."
+   ],
+   "why": "Heat makes you thirsty."
+  }
+ ]
+}

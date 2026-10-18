@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "unit": "U2",
+ "lesson": "Unit 2 – Lesson 9: Phonics (oa, o-e, ow)",
+ "outcomes": [
+  "Say and read words with the long o sound.",
+  "Spell long o words with oa, o-e and ow.",
+  "Read and use the tricky word 'any'."
+ ],
+ "tf": [
+  {
+   "s": "'Boat' has the long o sound.",
+   "t": true,
+   "why": "Yes! b-oa-t has a long o."
+  },
+  {
+   "s": "'Dog' has the long o sound.",
+   "t": false,
+   "why": "'Dog' has a short o sound."
+  },
+  {
+   "s": "In 'snow', the long o is spelled 'ow'.",
+   "t": true,
+   "why": "Correct! s-n-ow."
+  },
+  {
+   "s": "'Nose' is spelled with 'oa'.",
+   "t": false,
+   "why": "'Nose' is spelled with o-e: n-o-s-e."
+  },
+  {
+   "s": "'Home' and 'bone' have the o-e spelling.",
+   "t": true,
+   "why": "Well done! Both use o-e."
+  },
+  {
+   "s": "'Soap' is spelled with 'ow'.",
+   "t": false,
+   "why": "'Soap' is spelled with oa: s-oa-p."
+  },
+  {
+   "s": "'Goat' and 'coat' rhyme.",
+   "t": true,
+   "why": "Great! Both end with -oat."
+  },
+  {
+   "s": "'Road' is spelled 'rowd'.",
+   "t": false,
+   "why": "We spell it r-o-a-d."
+  },
+  {
+   "s": "'Any' is a tricky word.",
+   "t": true,
+   "why": "Yes! 'Any' is this lesson's tricky word."
+  },
+  {
+   "s": "In 'rose', the e at the end helps make the long o sound.",
+   "t": true,
+   "why": "Yes! The magic e makes the o long."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which word has the long o sound?",
+   "o": [
+    "goat",
+    "dog",
+    "hot"
+   ],
+   "why": "g-oa-t has a long o."
+  },
+  {
+   "q": "Which spelling is in 'boat'?",
+   "o": [
+    "oa",
+    "ow",
+    "o-e"
+   ],
+   "why": "b-oa-t."
+  },
+  {
+   "q": "Which spelling is in 'slow'?",
+   "o": [
+    "ow",
+    "oa",
+    "o-e"
+   ],
+   "why": "s-l-ow."
+  },
+  {
+   "q": "Which spelling is in 'bone'?",
+   "o": [
+    "o-e",
+    "oa",
+    "ow"
+   ],
+   "why": "b-o-n-e."
+  },
+  {
+   "q": "It's white and cold. sn___",
+   "o": [
+    "snow",
+    "snoa",
+    "snoe"
+   ],
+   "why": "Snow is spelled with ow."
+  },
+  {
+   "q": "You wash your hands with...",
+   "o": [
+    "soap",
+    "sowp",
+    "sope"
+   ],
+   "why": "Soap is spelled s-oa-p."
+  },
+  {
+   "q": "Odd one out (sound): boat, nose, snow, dog",
+   "o": [
+    "dog",
+    "boat",
+    "snow"
+   ],
+   "why": "'Dog' has a short o."
+  },
+  {
+   "q": "Which word rhymes with 'nose'?",
+   "o": [
+    "rose",
+    "nest",
+    "nice"
+   ],
+   "why": "Nose and rose both end with -ose."
+  },
+  {
+   "q": "Complete: Are there ___ boats on the river?",
+   "o": [
+    "any",
+    "a",
+    "one"
+   ],
+   "why": "We use 'any' in questions."
+  },
+  {
+   "q": "You smell with your...",
+   "o": [
+    "nose",
+    "noas",
+    "nowse"
+   ],
+   "why": "Nose is spelled n-o-s-e."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "On a road you drive a car. r__d",
+   "a": "road",
+   "d": [
+    "rowd",
+    "roed",
+    "rood"
+   ]
+  },
+  {
+   "q": "You wear it when it's cold.",
+   "a": "coat",
+   "d": [
+    "cote",
+    "cowt",
+    "cot"
+   ]
+  },
+  {
+   "q": "A dog likes to eat a...",
+   "a": "bone",
+   "d": [
+    "boan",
+    "bown",
+    "bon"
+   ]
+  },
+  {
+   "q": "A red flower",
+   "a": "rose",
+   "d": [
+    "roas",
+    "roze",
+    "ros"
+   ]
+  },
+  {
+   "q": "Not fast",
+   "a": "slow",
+   "d": [
+    "sloa",
+    "slowe",
+    "slo"
+   ]
+  },
+  {
+   "q": "Plants ___ in the garden.",
+   "a": "grow",
+   "d": [
+    "groa",
+    "grohe",
+    "gro"
+   ]
+  },
+  {
+   "q": "Where you live",
+   "a": "home",
+   "d": [
+    "hoam",
+    "howm",
+    "hom"
+   ]
+  },
+  {
+   "q": "You go on water in a...",
+   "a": "boat",
+   "d": [
+    "bowt",
+    "bote",
+    "bot"
+   ]
+  },
+  {
+   "q": "The wind can ___.",
+   "a": "blow",
+   "d": [
+    "bloa",
+    "bloe",
+    "blo"
+   ]
+  },
+  {
+   "q": "Spelling in 'goat'",
+   "a": "oa",
+   "d": [
+    "ow",
+    "o-e",
+    "oo"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which group of words all use 'oa'?",
+   "o": [
+    "boat, coat, goat",
+    "nose, rose, home",
+    "snow, grow, blow",
+    "boat, nose, snow"
+   ],
+   "why": "boat, coat and goat use oa."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group of words all use 'ow'?",
+   "o": [
+    "snow, grow, blow",
+    "road, soap, coat",
+    "home, bone, nose",
+    "rose, goat, slow"
+   ],
+   "why": "snow, grow and blow use ow."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group of words all use 'o-e'?",
+   "o": [
+    "nose, rose, home",
+    "boat, road, soap",
+    "snow, slow, grow",
+    "coat, bone, blow"
+   ],
+   "why": "nose, rose and home use o-e."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the tricky word in this lesson?",
+   "o": [
+    "any",
+    "boat",
+    "snow",
+    "home"
+   ],
+   "why": "The tricky word is 'any'."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete the tongue twister: I'm in a b___t and there's sn___ on my n___e.",
+   "o": [
+    "boat, snow, nose",
+    "bowt, snoa, noas",
+    "bote, snoe, nowe",
+    "boot, snaw, nise"
+   ],
+   "why": "boat (oa), snow (ow), nose (o-e)."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct spelling: A ___ eats grass.",
+   "o": [
+    "goat",
+    "gote",
+    "gowt",
+    "goet"
+   ],
+   "why": "Goat is spelled g-oa-t."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "Are there any boats on the river?",
+    "Are there any boat on the river?",
+    "Is there any boats on the river?",
+    "Are there a boats on the river?"
+   ],
+   "why": "We say 'Are there any boats ...?'."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT have the long o sound?",
+   "o": [
+    "hot",
+    "coat",
+    "grow",
+    "rose"
+   ],
+   "why": "'Hot' has a short o."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'Coat', 'home' and 'grow' are spelled differently. What is the same?",
+   "o": [
+    "They all have the long o sound.",
+    "They all end with e.",
+    "They all have oa.",
+    "They all have a short o."
+   ],
+   "why": "Three spellings, one long o sound."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word fits the o-e pattern?",
+   "o": [
+    "bone",
+    "road",
+    "blow",
+    "soap"
+   ],
+   "why": "b-o-n-e uses o-e."
+  }
+ ]
+}

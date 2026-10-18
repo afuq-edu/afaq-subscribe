@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "unit": "Unit 1: Free-time fun",
+ "lesson": "Unit 1 – Graded reader 2: The Blue Butterfly",
+ "outcomes": [
+  "I can find the hobbies people are doing in the park.",
+  "I can understand what each \"butterfly\" really is.",
+  "I can complete a summary of the story."
+ ],
+ "tf": [
+  {
+   "s": "Jood and Hassan are doing photography in the park.",
+   "t": true,
+   "why": "Yes! They are taking photos."
+  },
+  {
+   "s": "Hassan wants to take a photo of a red butterfly.",
+   "t": false,
+   "why": "Hassan wants a photo of a blue butterfly."
+  },
+  {
+   "s": "The first \"butterfly\" is really an eraser on a puzzle book.",
+   "t": true,
+   "why": "Correct! It's an eraser."
+  },
+  {
+   "s": "The second \"butterfly\" is a badge on a costume.",
+   "t": true,
+   "why": "Right! It's a badge."
+  },
+  {
+   "s": "The real butterfly is on top of a table tennis bat.",
+   "t": true,
+   "why": "Yes! It lands on the bat."
+  },
+  {
+   "s": "Some girls are playing board games in the park.",
+   "t": false,
+   "why": "The girls are doing puzzles."
+  },
+  {
+   "s": "The boys are wearing costumes and crowns in the show.",
+   "t": true,
+   "why": "Correct! They are putting on a show."
+  },
+  {
+   "s": "Hassan is sad because he loses his camera.",
+   "t": false,
+   "why": "He is sad because he can't find a blue butterfly."
+  },
+  {
+   "s": "A group of boys are putting on a show.",
+   "t": true,
+   "why": "Yes! The boys put on a show."
+  },
+  {
+   "s": "The story happens at the sports centre.",
+   "t": false,
+   "why": "The story happens in the park."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What are Jood and Hassan doing?",
+   "o": [
+    "photography",
+    "puzzles",
+    "karate"
+   ],
+   "why": "They are doing photography."
+  },
+  {
+   "q": "What does Hassan want a photo of?",
+   "o": [
+    "a blue butterfly",
+    "a bird",
+    "a flower"
+   ],
+   "why": "He wants a blue butterfly."
+  },
+  {
+   "q": "What is the first \"butterfly\" really?",
+   "o": [
+    "an eraser",
+    "a badge",
+    "a bat"
+   ],
+   "why": "It's an eraser on a puzzle book."
+  },
+  {
+   "q": "Where is the real butterfly?",
+   "o": [
+    "on a table tennis bat",
+    "on a puzzle book",
+    "on a crown"
+   ],
+   "why": "It's on top of the bat."
+  },
+  {
+   "q": "Who are putting on a show?",
+   "o": [
+    "a group of boys",
+    "Jood and Hassan",
+    "some girls"
+   ],
+   "why": "The boys put on a show."
+  },
+  {
+   "q": "What are the boys wearing?",
+   "o": [
+    "costumes and crowns",
+    "helmets",
+    "karate belts"
+   ],
+   "why": "They wear costumes and crowns."
+  },
+  {
+   "q": "Some girls are ___ in the park.",
+   "o": [
+    "doing puzzles",
+    "playing board games",
+    "making models"
+   ],
+   "why": "The girls are doing puzzles."
+  },
+  {
+   "q": "Where does the story happen?",
+   "o": [
+    "in the park",
+    "at the beach",
+    "at school"
+   ],
+   "why": "It's in the park."
+  },
+  {
+   "q": "Why is Hassan sad?",
+   "o": [
+    "He can't find a blue butterfly.",
+    "It's raining.",
+    "He loses his bat."
+   ],
+   "why": "He can't find the butterfly."
+  },
+  {
+   "q": "You use a ___ to rub out pencil.",
+   "o": [
+    "eraser",
+    "badge",
+    "crown"
+   ],
+   "why": "An eraser rubs out pencil."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Hassan wants a blue ...",
+   "a": "butterfly",
+   "d": [
+    "bird",
+    "flower",
+    "fish"
+   ]
+  },
+  {
+   "q": "First \"butterfly\"",
+   "a": "eraser",
+   "d": [
+    "badge",
+    "crown",
+    "bat"
+   ]
+  },
+  {
+   "q": "Second \"butterfly\"",
+   "a": "badge",
+   "d": [
+    "eraser",
+    "crown",
+    "mat"
+   ]
+  },
+  {
+   "q": "Real butterfly is on a ...",
+   "a": "bat",
+   "d": [
+    "crown",
+    "costume",
+    "book"
+   ]
+  },
+  {
+   "q": "Kings wear this on the head.",
+   "a": "crown",
+   "d": [
+    "badge",
+    "eraser",
+    "bat"
+   ]
+  },
+  {
+   "q": "Clothes for a show",
+   "a": "costume",
+   "d": [
+    "crown",
+    "badge",
+    "helmet"
+   ]
+  },
+  {
+   "q": "Jood and Hassan's hobby",
+   "a": "photography",
+   "d": [
+    "puzzles",
+    "karate",
+    "gardening"
+   ]
+  },
+  {
+   "q": "The girls are doing ...",
+   "a": "puzzles",
+   "d": [
+    "photography",
+    "karate",
+    "gymnastics"
+   ]
+  },
+  {
+   "q": "The boys put on a ...",
+   "a": "show",
+   "d": [
+    "puzzle",
+    "photo",
+    "match"
+   ]
+  },
+  {
+   "q": "Where the story happens",
+   "a": "park",
+   "d": [
+    "museum",
+    "beach",
+    "sports centre"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which hobbies do people do in the park?",
+   "o": [
+    "doing puzzles, putting on a show, doing photography, playing table tennis",
+    "skiing, karate, swimming, cycling",
+    "making models, cooking, writing a diary, gardening",
+    "playing video games, watching cartoons, hockey, rugby"
+   ],
+   "why": "These four hobbies are in the story."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the second \"butterfly\"?",
+   "o": [
+    "a badge on a costume",
+    "an eraser on a puzzle book",
+    "a real butterfly",
+    "a crown"
+   ],
+   "why": "It's a badge on a costume."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who is with Hassan doing photography?",
+   "o": [
+    "Jood",
+    "Huda",
+    "Maryam",
+    "Arwa"
+   ],
+   "why": "Jood and Hassan take photos together."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a crown?",
+   "o": [
+    "something a king or queen wears on the head",
+    "a small table tennis ball",
+    "an insect with wings",
+    "a pencil"
+   ],
+   "why": "A crown goes on the head."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Hassan finds a blue butterfly on top of his ___.",
+   "o": [
+    "bat",
+    "book",
+    "crown",
+    "badge"
+   ],
+   "why": "It's on his table tennis bat."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: Some children ___ in the park.",
+   "o": [
+    "are playing table tennis",
+    "on top of his bat",
+    "is playing table tennis",
+    "playing is table tennis"
+   ],
+   "why": "Some children are playing table tennis."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence uses the Present continuous from the story?",
+   "o": [
+    "The boys are putting on a show.",
+    "The boys put on a show every day.",
+    "The boys puts on a show.",
+    "The boys putting on a show."
+   ],
+   "why": "are + -ing = Present continuous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Jood say \"Sorry, Hassan\"?",
+   "o": [
+    "Because the thing he saw wasn't a real butterfly.",
+    "Because she broke his camera.",
+    "Because she took his bat.",
+    "Because she is late."
+   ],
+   "why": "The \"butterfly\" was an eraser or a badge."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is Hassan sad in the middle of the story?",
+   "o": [
+    "He can't find a blue butterfly.",
+    "He doesn't like photography.",
+    "He falls over.",
+    "The show is boring."
+   ],
+   "why": "He keeps looking but can't find one."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How does Hassan's problem end?",
+   "o": [
+    "He finds a real blue butterfly on his table tennis bat.",
+    "He stops looking and goes home.",
+    "Jood finds a butterfly on a crown.",
+    "He takes a photo of an eraser."
+   ],
+   "why": "At last the real butterfly lands on his bat."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الخامس",
+ "unit": "Unit 4 – Off to the shops",
+ "lesson": "Lesson 5: Culture – The world of the corner shop",
+ "outcomes": [
+  "Read about corner shops in different countries.",
+  "Match names for corner shops to countries and cities.",
+  "Write and present a short advert for a shop."
+ ],
+ "tf": [
+  {
+   "s": "In Australia, a corner shop is called a milk bar.",
+   "t": true,
+   "why": "Australians call it a milk bar."
+  },
+  {
+   "s": "In New Zealand, a corner shop is called a bodega.",
+   "t": false,
+   "why": "In New Zealand it is called a dairy. A bodega is in New York."
+  },
+  {
+   "s": "In New York, a corner shop is called a bodega.",
+   "t": true,
+   "why": "New Yorkers say bodega."
+  },
+  {
+   "s": "In Canada, a corner shop is called a corner store.",
+   "t": true,
+   "why": "Canadians say corner store."
+  },
+  {
+   "s": "In Detroit, a corner shop is called a milk bar.",
+   "t": false,
+   "why": "In Detroit it is called a party shop."
+  },
+  {
+   "s": "People go to a corner shop to get something quickly and easily.",
+   "t": true,
+   "why": "Corner shops are near and fast."
+  },
+  {
+   "s": "Corner shops in the UK also sell stamps and stationery.",
+   "t": true,
+   "why": "They sell stamps, cleaning products and stationery too."
+  },
+  {
+   "s": "In a TV advert, you should sound bored.",
+   "t": false,
+   "why": "In an advert you should sound excited."
+  },
+  {
+   "s": "\"Come to our friendly shop …\" is a phrase for an advert.",
+   "t": true,
+   "why": "It invites people to the shop."
+  },
+  {
+   "s": "Corner shops only sell cars.",
+   "t": false,
+   "why": "Corner shops sell things like sweets, drinks and newspapers."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is a corner shop called in Australia?",
+   "o": [
+    "a milk bar",
+    "a dairy",
+    "a party shop"
+   ],
+   "why": "In Australia it is a milk bar."
+  },
+  {
+   "q": "What is a corner shop called in New Zealand?",
+   "o": [
+    "a dairy",
+    "a bodega",
+    "a milk bar"
+   ],
+   "why": "In New Zealand it is a dairy."
+  },
+  {
+   "q": "Where is a corner shop called a party shop?",
+   "o": [
+    "in Detroit",
+    "in Canada",
+    "in Australia"
+   ],
+   "why": "In Detroit, in the USA."
+  },
+  {
+   "q": "Why do people go to a corner shop?",
+   "o": [
+    "to get something quickly",
+    "to see a film",
+    "to visit a museum"
+   ],
+   "why": "Corner shops are quick and easy."
+  },
+  {
+   "q": "Complete: Come to our ______ shop, Dream Gifts.",
+   "o": [
+    "friendly",
+    "angry",
+    "boring"
+   ],
+   "why": "A friendly shop sounds good."
+  },
+  {
+   "q": "How should you sound in a TV advert?",
+   "o": [
+    "excited",
+    "sad",
+    "sleepy"
+   ],
+   "why": "Sounding excited makes people interested."
+  },
+  {
+   "q": "What does Dream Gifts sell?",
+   "o": [
+    "gifts and cards",
+    "fish and meat",
+    "medicine"
+   ],
+   "why": "Dream Gifts sells the best gifts and cards."
+  },
+  {
+   "q": "Which phrase can end an advert?",
+   "o": [
+    "You will be happy that you came here!",
+    "How much is it?",
+    "Stop, thief!"
+   ],
+   "why": "This phrase ends the advert happily."
+  },
+  {
+   "q": "Which thing can you buy in a corner shop?",
+   "o": [
+    "newspapers",
+    "a car",
+    "a house"
+   ],
+   "why": "Corner shops sell newspapers."
+  },
+  {
+   "q": "Complete: You can buy fresh bread and milk ______.",
+   "o": [
+    "here",
+    "hear",
+    "there are"
+   ],
+   "why": "You can buy … here."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Corner shop in Australia",
+   "a": "milk bar",
+   "d": [
+    "dairy",
+    "bodega",
+    "party shop"
+   ]
+  },
+  {
+   "q": "Corner shop in New Zealand",
+   "a": "dairy",
+   "d": [
+    "milk bar",
+    "bodega",
+    "corner store"
+   ]
+  },
+  {
+   "q": "Corner shop in New York",
+   "a": "bodega",
+   "d": [
+    "dairy",
+    "milk bar",
+    "party shop"
+   ]
+  },
+  {
+   "q": "Corner shop in Canada",
+   "a": "corner store",
+   "d": [
+    "bodega",
+    "dairy",
+    "milk bar"
+   ]
+  },
+  {
+   "q": "Corner shop in Detroit",
+   "a": "party shop",
+   "d": [
+    "milk bar",
+    "dairy",
+    "bodega"
+   ]
+  },
+  {
+   "q": "Put it on a letter",
+   "a": "stamps",
+   "d": [
+    "sweets",
+    "drinks",
+    "snacks"
+   ]
+  },
+  {
+   "q": "Pens, paper and rulers",
+   "a": "stationery",
+   "d": [
+    "stamps",
+    "sweets",
+    "drinks"
+   ]
+  },
+  {
+   "q": "How to sound in an advert",
+   "a": "excited",
+   "d": [
+    "bored",
+    "sad",
+    "sleepy"
+   ]
+  },
+  {
+   "q": "Come to our ___ shop",
+   "a": "friendly",
+   "d": [
+    "angry",
+    "boring",
+    "closed"
+   ]
+  },
+  {
+   "q": "The model advert's shop",
+   "a": "Dream Gifts",
+   "d": [
+    "New Shoes",
+    "Happy Corner",
+    "Space Club"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which name for a corner shop is used in Canada?",
+   "o": [
+    "corner store",
+    "milk bar",
+    "dairy",
+    "bodega"
+   ],
+   "why": "Canadians say corner store."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which country uses the name \"milk bar\"?",
+   "o": [
+    "Australia",
+    "New Zealand",
+    "Canada",
+    "the UK"
+   ],
+   "why": "A milk bar is in Australia."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do UK corner shops also sell?",
+   "o": [
+    "stamps, cleaning products and stationery",
+    "cars and bikes",
+    "houses and boats",
+    "rockets and telescopes"
+   ],
+   "why": "They sell stamps, cleaning products and stationery."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the speaking tip for the advert?",
+   "o": [
+    "Sound excited.",
+    "Speak very quietly.",
+    "Look at the floor.",
+    "Don't smile."
+   ],
+   "why": "An excited voice makes the advert interesting."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a sentence for your advert with \"We also sell …\".",
+   "o": [
+    "We also sell birthday cards.",
+    "We also sells birthday cards.",
+    "We also selling birthday cards.",
+    "We also sold birthday cards yesterday."
+   ],
+   "why": "We also sell + things."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You need a newspaper and a drink fast. Where can you go?",
+   "o": [
+    "a corner shop",
+    "a museum",
+    "a port",
+    "a space station"
+   ],
+   "why": "Corner shops sell these things and are quick."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the best first line for an advert.",
+   "o": [
+    "Come to our friendly shop, Happy Corner.",
+    "Goodbye, Happy Corner.",
+    "Happy Corner is closed.",
+    "I don't like Happy Corner."
+   ],
+   "why": "Adverts start by inviting people."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do people like corner shops?",
+   "o": [
+    "They can get things quickly and easily.",
+    "Corner shops are very far away.",
+    "Corner shops only sell gold.",
+    "Corner shops are open once a year."
+   ],
+   "why": "Corner shops are near and quick."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How is a corner shop in Oman like a corner shop in the UK?",
+   "o": [
+    "Both sell sweets, drinks and newspapers.",
+    "Both sell only fish.",
+    "Both are called bodegas.",
+    "Both sell cars."
+   ],
+   "why": "They sell many of the same things."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best order for an advert?",
+   "o": [
+    "Come to our shop … You can buy … We also sell … You will be happy that you came here!",
+    "You will be happy … Come to our shop …",
+    "We also sell … Goodbye.",
+    "How much is it? It's five rials."
+   ],
+   "why": "Invite, say what you sell, then end happily."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 1: Our planet",
+ "lesson": "Lesson 4: WOW! Book Club – A diary",
+ "outcomes": [
+  "Know the features of a diary entry.",
+  "Put the events of Khalid’s cyclone story in order.",
+  "Use phrasal verbs with get: under, out, into, down, up, onto."
+ ],
+ "tf": [
+  {
+   "s": "A diary is usually written in the first person.",
+   "t": true,
+   "why": "Yes, the writer uses I and we."
+  },
+  {
+   "s": "A diary is usually very formal.",
+   "t": false,
+   "why": "A diary is usually informal."
+  },
+  {
+   "s": "A diary tells us about the writer’s life and feelings.",
+   "t": true,
+   "why": "Great! Diaries share the writer’s life and feelings."
+  },
+  {
+   "s": "Khalid’s frightening experience was a cyclone.",
+   "t": true,
+   "why": "Right! A cyclone was coming."
+  },
+  {
+   "s": "Khalid got up late because he was tired.",
+   "t": false,
+   "why": "He got up early because the big storm woke him up."
+  },
+  {
+   "s": "The family went to the dining room because it was the safest place in the house.",
+   "t": true,
+   "why": "Correct! The dining room was the safest place."
+  },
+  {
+   "s": "In the morning, the cyclone was still very strong.",
+   "t": false,
+   "why": "In the morning the rain stopped and the cyclone was over."
+  },
+  {
+   "s": "In an earthquake, you should get onto a table.",
+   "t": false,
+   "why": "You should get under a table."
+  },
+  {
+   "s": "The harbour flooded before the family went to the dining room.",
+   "t": true,
+   "why": "Yes, the harbour flooded first, then they went to the dining room."
+  },
+  {
+   "s": "Khalid’s dad told him to worry a lot.",
+   "t": false,
+   "why": "His dad said not to worry."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Is a diary usually formal or informal?",
+   "o": [
+    "informal",
+    "formal",
+    "scientific"
+   ],
+   "why": "Diaries are personal, so they are informal."
+  },
+  {
+   "q": "Why did Khalid get up early?",
+   "o": [
+    "The big storm woke him up.",
+    "He had school.",
+    "He wanted to go fishing."
+   ],
+   "why": "The storm woke him."
+  },
+  {
+   "q": "Where did the family go to be safe?",
+   "o": [
+    "the dining room",
+    "the roof",
+    "the harbour"
+   ],
+   "why": "The dining room was the safest place."
+  },
+  {
+   "q": "What happened in the morning?",
+   "o": [
+    "The rain stopped.",
+    "The harbour flooded.",
+    "A sandstorm started."
+   ],
+   "why": "The rain stopped and the cyclone was over."
+  },
+  {
+   "q": "If there’s an earthquake, get ___ a table.",
+   "o": [
+    "under",
+    "onto",
+    "out"
+   ],
+   "why": "Under a table keeps you safe."
+  },
+  {
+   "q": "My father used a ladder to get ___ the roof.",
+   "o": [
+    "onto",
+    "under",
+    "out of"
+   ],
+   "why": "We get onto a high surface like a roof."
+  },
+  {
+   "q": "Quick! Get ___ of the house!",
+   "o": [
+    "out",
+    "into",
+    "under"
+   ],
+   "why": "Get out of means leave a place."
+  },
+  {
+   "q": "We got ___ the car and drove away.",
+   "o": [
+    "into",
+    "onto",
+    "out"
+   ],
+   "why": "We get into a car."
+  },
+  {
+   "q": "A diary uses “I” and “we”. This is called…",
+   "o": [
+    "first person",
+    "third person",
+    "a question"
+   ],
+   "why": "I and we are first person."
+  },
+  {
+   "q": "What flooded in Khalid’s story?",
+   "o": [
+    "the harbour",
+    "the school",
+    "the desert"
+   ],
+   "why": "The harbour flooded in the storm."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Get ___ a table (earthquake)",
+   "a": "under",
+   "d": [
+    "onto",
+    "into",
+    "out"
+   ]
+  },
+  {
+   "q": "Get ___ of the house",
+   "a": "out",
+   "d": [
+    "under",
+    "onto",
+    "up"
+   ]
+  },
+  {
+   "q": "Get ___ the car",
+   "a": "into",
+   "d": [
+    "under",
+    "up",
+    "onto"
+   ]
+  },
+  {
+   "q": "Get ___ the roof (ladder)",
+   "a": "onto",
+   "d": [
+    "under",
+    "out",
+    "into"
+   ]
+  },
+  {
+   "q": "Get ___ in the morning",
+   "a": "up",
+   "d": [
+    "under",
+    "into",
+    "onto"
+   ]
+  },
+  {
+   "q": "Khalid’s frightening weather",
+   "a": "cyclone",
+   "d": [
+    "snowstorm",
+    "heatwave",
+    "drought"
+   ]
+  },
+  {
+   "q": "The safest room in the house",
+   "a": "dining room",
+   "d": [
+    "kitchen",
+    "garden",
+    "roof"
+   ]
+  },
+  {
+   "q": "Place that flooded",
+   "a": "harbour",
+   "d": [
+    "school",
+    "desert",
+    "mountain"
+   ]
+  },
+  {
+   "q": "A diary is usually…",
+   "a": "informal",
+   "d": [
+    "formal",
+    "scientific",
+    "a poem"
+   ]
+  },
+  {
+   "q": "A diary is written in the…",
+   "a": "first person",
+   "d": [
+    "third person",
+    "future tense",
+    "passive"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is a feature of a diary?",
+   "o": [
+    "It is about the writer’s life and feelings.",
+    "It is always very formal.",
+    "It is written in the third person.",
+    "It has no dates or events."
+   ],
+   "why": "A diary is personal and informal."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What was Khalid’s frightening experience?",
+   "o": [
+    "A cyclone was coming.",
+    "He got lost in the desert.",
+    "There was a forest fire.",
+    "He fell off a bike."
+   ],
+   "why": "Khalid wrote about a cyclone."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What did Khalid’s dad say?",
+   "o": [
+    "Not to worry",
+    "To go to the harbour",
+    "To get onto the roof",
+    "To go back to sleep"
+   ],
+   "why": "His dad told him not to worry."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why did the family go to the dining room?",
+   "o": [
+    "It was the safest place in the house.",
+    "It was time for dinner.",
+    "It was the biggest room.",
+    "It had a big window."
+   ],
+   "why": "They went there to be safe."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct phrasal verb: “The baby cat is on the tree. Can you help it get ___?”",
+   "o": [
+    "down",
+    "under",
+    "into",
+    "out of"
+   ],
+   "why": "Get down means come down from a high place."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is correct?",
+   "o": [
+    "The bus is here. Let’s get onto it.",
+    "The bus is here. Let’s get under it.",
+    "The bus is here. Let’s get out it.",
+    "The bus is here. Let’s get down it."
+   ],
+   "why": "We get onto a bus."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence sounds like a diary entry?",
+   "o": [
+    "Today I woke up early and felt really scared.",
+    "Cyclones are storms with strong winds.",
+    "Dear Sir, I am writing to complain.",
+    "Turn left at the end of the road."
+   ],
+   "why": "A diary uses I and talks about feelings."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which order of events is correct?",
+   "o": [
+    "woke up early → harbour flooded → dining room → rain stopped",
+    "rain stopped → woke up early → harbour flooded → dining room",
+    "dining room → woke up early → rain stopped → harbour flooded",
+    "harbour flooded → rain stopped → woke up early → dining room"
+   ],
+   "why": "This follows the story from start to end."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How did Khalid probably feel during the cyclone?",
+   "o": [
+    "Frightened",
+    "Bored",
+    "Excited to go swimming",
+    "Hungry and sleepy"
+   ],
+   "why": "The diary is about a frightening experience."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do people write about feelings in a diary?",
+   "o": [
+    "A diary is personal, about the writer’s own life.",
+    "A diary is a science report.",
+    "A diary must be formal.",
+    "A diary is for selling things."
+   ],
+   "why": "Diaries share personal experiences and feelings."
+  }
+ ]
+}

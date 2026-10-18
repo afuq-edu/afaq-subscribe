@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 3: Spend or save?",
+ "lesson": "Lesson 1: Vocabulary – Shopping",
+ "outcomes": [
+  "Learn and say 12 shopping words and phrases.",
+  "Sort shopping words into things and people.",
+  "Talk about your shopping habits."
+ ],
+ "tf": [
+  {
+   "s": "A queue is a line of people waiting.",
+   "t": true,
+   "why": "Yes, people wait in a queue to pay."
+  },
+  {
+   "s": "A receipt is the machine where you pay.",
+   "t": false,
+   "why": "The machine is the till; a receipt is the paper you get after you pay."
+  },
+  {
+   "s": "A customer is a person who buys things in a shop.",
+   "t": true,
+   "why": "Correct, customers buy things."
+  },
+  {
+   "s": "Second-hand things are brand new.",
+   "t": false,
+   "why": "Second-hand things have been used by someone before."
+  },
+  {
+   "s": "If you get a refund, you get your money back.",
+   "t": true,
+   "why": "Right, a refund gives your money back."
+  },
+  {
+   "s": "Rosie doesn't like shopping because she doesn't want to stand in a queue.",
+   "t": true,
+   "why": "Yes, Rosie hates waiting in queues."
+  },
+  {
+   "s": "A shop assistant is a thing you see in a shop.",
+   "t": false,
+   "why": "A shop assistant is a person who works in a shop."
+  },
+  {
+   "s": "Manar likes buying tablets and laptops in second-hand shops.",
+   "t": true,
+   "why": "Well done, that's what Manar says."
+  },
+  {
+   "s": "In 'receipt', we say the letter p.",
+   "t": false,
+   "why": "The p in receipt is silent."
+  },
+  {
+   "s": "Ali thinks buying things made in our country helps the environment.",
+   "t": true,
+   "why": "Yes, and it helps the people who make them."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What is the paper you get after you pay?",
+   "o": [
+    "a receipt",
+    "a till",
+    "a queue"
+   ],
+   "why": "You get a receipt after paying."
+  },
+  {
+   "q": "What is the machine where you pay in a shop?",
+   "o": [
+    "a till",
+    "a bank card",
+    "a receipt"
+   ],
+   "why": "You pay at the till."
+  },
+  {
+   "q": "Complete: Can I ___ this shirt for a bigger size?",
+   "o": [
+    "exchange",
+    "refund",
+    "queue"
+   ],
+   "why": "Exchange means change it for another one."
+  },
+  {
+   "q": "Complete: The jacket was broken, so I got a ___.",
+   "o": [
+    "refund",
+    "customer",
+    "till"
+   ],
+   "why": "A refund gives you your money back."
+  },
+  {
+   "q": "How does Eric pay at Sports Superstar?",
+   "o": [
+    "with contactless",
+    "with coins",
+    "with a cheque"
+   ],
+   "why": "Eric pays with contactless."
+  },
+  {
+   "q": "Who doesn't like going shopping?",
+   "o": [
+    "Rosie",
+    "Manar",
+    "Eric"
+   ],
+   "why": "Rosie doesn't like shopping."
+  },
+  {
+   "q": "When something is cheaper than usual, it is ...",
+   "o": [
+    "on sale",
+    "second-hand",
+    "a receipt"
+   ],
+   "why": "On sale means at a lower price."
+  },
+  {
+   "q": "Which is a person in a shop?",
+   "o": [
+    "shop assistant",
+    "till",
+    "bank card"
+   ],
+   "why": "A shop assistant is a person."
+  },
+  {
+   "q": "Buying things on the internet is ...",
+   "o": [
+    "online shopping",
+    "second-hand",
+    "a queue"
+   ],
+   "why": "Online shopping happens on the internet."
+  },
+  {
+   "q": "Which is the opposite of spend money?",
+   "o": [
+    "save money",
+    "pay money",
+    "exchange money"
+   ],
+   "why": "Saving means keeping money."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Line of people waiting",
+   "a": "queue",
+   "d": [
+    "till",
+    "receipt",
+    "refund"
+   ]
+  },
+  {
+   "q": "Paper you get after paying",
+   "a": "receipt",
+   "d": [
+    "queue",
+    "till",
+    "customer"
+   ]
+  },
+  {
+   "q": "Machine where you pay",
+   "a": "till",
+   "d": [
+    "receipt",
+    "queue",
+    "refund"
+   ]
+  },
+  {
+   "q": "Person who buys things",
+   "a": "customer",
+   "d": [
+    "shop assistant",
+    "manager",
+    "driver"
+   ]
+  },
+  {
+   "q": "Person who works in a shop",
+   "a": "shop assistant",
+   "d": [
+    "customer",
+    "queue",
+    "receipt"
+   ]
+  },
+  {
+   "q": "Money back for a broken item",
+   "a": "refund",
+   "d": [
+    "receipt",
+    "sale",
+    "queue"
+   ]
+  },
+  {
+   "q": "Used before by someone",
+   "a": "second-hand",
+   "d": [
+    "on sale",
+    "brand new",
+    "contactless"
+   ]
+  },
+  {
+   "q": "Opposite of spend",
+   "a": "save",
+   "d": [
+    "pay",
+    "buy",
+    "exchange"
+   ]
+  },
+  {
+   "q": "Eric pays with ...",
+   "a": "contactless",
+   "d": [
+    "coins",
+    "a cheque",
+    "gold"
+   ]
+  },
+  {
+   "q": "Rosie's parents buy ...",
+   "a": "online",
+   "d": [
+    "second-hand",
+    "in queues",
+    "at the till"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What do you call a line of people waiting to pay?",
+   "o": [
+    "a queue",
+    "a till",
+    "a receipt",
+    "a refund"
+   ],
+   "why": "A queue is a line of people."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where does Manar like shopping for tablets and laptops?",
+   "o": [
+    "in second-hand shops",
+    "online",
+    "at Sports Superstar",
+    "at the market only"
+   ],
+   "why": "Manar likes second-hand shops."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group shows only people in a shop?",
+   "o": [
+    "customer, shop assistant",
+    "till, receipt",
+    "bank card, queue",
+    "refund, exchange"
+   ],
+   "why": "Customers and shop assistants are people."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word has a silent p?",
+   "o": [
+    "receipt",
+    "pay",
+    "shop",
+    "spend"
+   ],
+   "why": "We don't say the p in receipt."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your new shoes are too small. What do you ask?",
+   "o": [
+    "Can I exchange these for a bigger size?",
+    "Can I queue these?",
+    "Can I receipt these?",
+    "Can I till these?"
+   ],
+   "why": "Exchange means swap for another one."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You don't want to use cash. How can you pay?",
+   "o": [
+    "with contactless",
+    "with a queue",
+    "with a receipt",
+    "with a refund"
+   ],
+   "why": "Contactless lets you pay with a card without cash."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "I'm better at saving money than spending it.",
+    "I'm better at queue money.",
+    "I till my money every week.",
+    "I receipt money at the shop."
+   ],
+   "why": "Save and spend are money verbs."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why doesn't Rosie like going shopping?",
+   "o": [
+    "She doesn't want to stand in a queue.",
+    "She loves the till.",
+    "She has no friends.",
+    "Shops are always closed."
+   ],
+   "why": "Rosie hates waiting in queues, so her parents buy online."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Ali think we should buy things made in our country?",
+   "o": [
+    "It helps the environment and the people who make them.",
+    "It is always cheaper.",
+    "Shops are bigger.",
+    "They are second-hand."
+   ],
+   "why": "Local products help the environment and local workers."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which item belongs with 'things you see in a shop'?",
+   "o": [
+    "bank card",
+    "customer",
+    "shop assistant",
+    "Rosie"
+   ],
+   "why": "A bank card is a thing; the others are people."
+  }
+ ]
+}

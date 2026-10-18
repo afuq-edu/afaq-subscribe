@@ -154,51 +154,6 @@
  ],
  "hunt": [
   {
-   "q": "Clue: rocket",
-   "a": "astronaut",
-   "d": [
-    "chef",
-    "nurse",
-    "builder"
-   ]
-  },
-  {
-   "q": "Clue: a red bus",
-   "a": "bus",
-   "d": [
-    "car",
-    "train",
-    "boat"
-   ]
-  },
-  {
-   "q": "Clue: likes children",
-   "a": "teacher",
-   "d": [
-    "pilot",
-    "chef",
-    "builder"
-   ]
-  },
-  {
-   "q": "Overalls and helmet",
-   "a": "builder",
-   "d": [
-    "pilot",
-    "teacher",
-    "artist"
-   ]
-  },
-  {
-   "q": "Pilot uniform",
-   "a": "pilot",
-   "d": [
-    "builder",
-    "nurse",
-    "chef"
-   ]
-  },
-  {
    "q": "I want to ___ by train.",
    "a": "travel",
    "d": [
@@ -226,21 +181,66 @@
    ]
   },
   {
-   "q": "Spell the rocket job",
-   "a": "astronaut",
-   "d": [
-    "astronot",
-    "astranaut",
-    "astronut"
-   ]
-  },
-  {
    "q": "Spell the fire job",
    "a": "firefighter",
    "d": [
     "firefiter",
     "firfighter",
     "firefighte"
+   ]
+  },
+  {
+   "q": "Travel on water",
+   "a": "boat",
+   "d": [
+    "bus",
+    "car",
+    "train"
+   ]
+  },
+  {
+   "q": "Two wheels",
+   "a": "motorbike",
+   "d": [
+    "bus",
+    "train",
+    "boat"
+   ]
+  },
+  {
+   "q": "Job: builds houses",
+   "a": "builder",
+   "d": [
+    "pilot",
+    "nurse",
+    "chef"
+   ]
+  },
+  {
+   "q": "Job: flies a plane",
+   "a": "pilot",
+   "d": [
+    "chef",
+    "teacher",
+    "artist"
+   ]
+  },
+  {
+   "q": "I want to ___ a pilot.",
+   "a": "be",
+   "d": [
+    "travel",
+    "by",
+    "go"
+   ]
+  },
+  {
+   "q": "Goes on rails",
+   "a": "train",
+   "d": [
+    "car",
+    "boat",
+    "motorbike"
    ]
   }
  ],

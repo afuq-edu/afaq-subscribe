@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "unit": "Atomic's Learning Club 2",
+ "lesson": "Learning Club 2 – Lesson 2: Social Studies – Important months",
+ "outcomes": [
+  "I can say the twelve months in order.",
+  "I can match important events with their months.",
+  "I can ask and answer: When is your birthday?"
+ ],
+ "tf": [
+  {
+   "s": "There are twelve months in a year.",
+   "t": true,
+   "why": "Yes! January to December."
+  },
+  {
+   "s": "April comes after March.",
+   "t": true,
+   "why": "Right! March, then April."
+  },
+  {
+   "s": "School starts in September.",
+   "t": true,
+   "why": "Well done! School starts in September."
+  },
+  {
+   "s": "National Day is in July.",
+   "t": false,
+   "why": "National Day is in November."
+  },
+  {
+   "s": "We write months with a capital letter.",
+   "t": true,
+   "why": "Yes! Months are names, so they have capitals."
+  },
+  {
+   "s": "We write: my birthday is in june.",
+   "t": false,
+   "why": "We write June with a capital J."
+  },
+  {
+   "s": "June, July and August are very cold months in Oman.",
+   "t": false,
+   "why": "They are very hot months in Oman."
+  },
+  {
+   "s": "The first month of the year is January.",
+   "t": true,
+   "why": "Great! January is first."
+  },
+  {
+   "s": "We answer When is your birthday? with: It's on June.",
+   "t": false,
+   "why": "We say: It's in June."
+  },
+  {
+   "s": "December comes before November.",
+   "t": false,
+   "why": "November comes before December."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What month comes after March?",
+   "o": [
+    "April",
+    "May",
+    "February"
+   ],
+   "why": "March, then April."
+  },
+  {
+   "q": "Which month does school start?",
+   "o": [
+    "September",
+    "November",
+    "January"
+   ],
+   "why": "School starts in September."
+  },
+  {
+   "q": "Which month is National Day?",
+   "o": [
+    "November",
+    "September",
+    "May"
+   ],
+   "why": "National Day is in November."
+  },
+  {
+   "q": "Ask your partner about his birthday.",
+   "o": [
+    "When is your birthday?",
+    "How is your birthday?",
+    "Who is your birthday?"
+   ],
+   "why": "We ask: When is your birthday?"
+  },
+  {
+   "q": "Answer: When is Jasim's birthday?",
+   "o": [
+    "It's in June.",
+    "It's at June.",
+    "He June."
+   ],
+   "why": "It's in June."
+  },
+  {
+   "q": "Why do we write months with a capital letter?",
+   "o": [
+    "They are names.",
+    "They are long.",
+    "They are hot."
+   ],
+   "why": "Months are names."
+  },
+  {
+   "q": "On a birthday graph, which month has the most birthdays?",
+   "o": [
+    "the month with the tallest bar",
+    "the month with no bar",
+    "the first month"
+   ],
+   "why": "The tallest bar shows the most."
+  },
+  {
+   "q": "Which is the last month of the year?",
+   "o": [
+    "December",
+    "October",
+    "January"
+   ],
+   "why": "December is the last month."
+  },
+  {
+   "q": "Which word is a month?",
+   "o": [
+    "August",
+    "autumn",
+    "Sunday"
+   ],
+   "why": "August is a month."
+  },
+  {
+   "q": "Which is written correctly?",
+   "o": [
+    "February",
+    "february",
+    "FEBruary"
+   ],
+   "why": "Months start with a capital letter."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Months in a year",
+   "a": "twelve",
+   "d": [
+    "ten",
+    "seven",
+    "four"
+   ]
+  },
+  {
+   "q": "First month",
+   "a": "January",
+   "d": [
+    "December",
+    "March",
+    "June"
+   ]
+  },
+  {
+   "q": "Month after June",
+   "a": "July",
+   "d": [
+    "May",
+    "August",
+    "April"
+   ]
+  },
+  {
+   "q": "Month before August",
+   "a": "July",
+   "d": [
+    "September",
+    "June",
+    "May"
+   ]
+  },
+  {
+   "q": "School starts in …",
+   "a": "September",
+   "d": [
+    "November",
+    "July",
+    "March"
+   ]
+  },
+  {
+   "q": "National Day month",
+   "a": "November",
+   "d": [
+    "October",
+    "August",
+    "February"
+   ]
+  },
+  {
+   "q": "Month after October",
+   "a": "November",
+   "d": [
+    "September",
+    "December",
+    "May"
+   ]
+  },
+  {
+   "q": "Jasim's birthday month",
+   "a": "June",
+   "d": [
+    "May",
+    "July",
+    "March"
+   ]
+  },
+  {
+   "q": "It's ___ June.",
+   "a": "in",
+   "d": [
+    "on",
+    "at",
+    "by"
+   ]
+  },
+  {
+   "q": "A very hot month in Oman",
+   "a": "July",
+   "d": [
+    "January",
+    "February",
+    "December"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list is in the right order?",
+   "o": [
+    "January, February, March, April",
+    "January, March, February, April",
+    "April, March, February, January",
+    "February, January, April, March"
+   ],
+   "why": "January, February, March, April."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which month comes after November?",
+   "o": [
+    "December",
+    "October",
+    "January",
+    "September"
+   ],
+   "why": "November, then December."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which month comes between April and June?",
+   "o": [
+    "May",
+    "March",
+    "July",
+    "August"
+   ],
+   "why": "April, May, June."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How many months are there from January to June?",
+   "o": [
+    "six",
+    "five",
+    "four",
+    "twelve"
+   ],
+   "why": "January, February, March, April, May, June: six months."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your birthday is in May. Answer: When is your birthday?",
+   "o": [
+    "It's in May.",
+    "It's on May.",
+    "It's May in.",
+    "It in May."
+   ],
+   "why": "We say: It's in May."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Graph: May 2, June 5, July 0. How many pupils have birthdays in May?",
+   "o": [
+    "2",
+    "5",
+    "0",
+    "7"
+   ],
+   "why": "The May bar shows 2."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Graph: May 2, June 5, July 0. Which month has the most birthdays?",
+   "o": [
+    "June",
+    "May",
+    "July",
+    "August"
+   ],
+   "why": "June has the tallest bar: 5."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Graph: May 2, June 5, July 0. Which sentence is true?",
+   "o": [
+    "There are no birthdays in July.",
+    "There are no birthdays in June.",
+    "May has the most birthdays.",
+    "July has five birthdays."
+   ],
+   "why": "July has 0, so no birthdays."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which months are very hot in Oman?",
+   "o": [
+    "June, July, August",
+    "December, January, February",
+    "January, February, March",
+    "November, December, January"
+   ],
+   "why": "June, July and August are very hot in Oman."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "School starts in september.",
+    "School starts in September.",
+    "National Day is in November.",
+    "My birthday is in June."
+   ],
+   "why": "september needs a capital S."
+  }
+ ]
+}

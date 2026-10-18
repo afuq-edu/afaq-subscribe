@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 1: Our planet",
+ "lesson": "Lesson 8: Literacy – Reading a report",
+ "outcomes": [
+  "Use the title and diagrams to find the main idea of a report.",
+  "Understand facts about plastic pollution in the sea.",
+  "Learn report words like tonne, foundation and government."
+ ],
+ "tf": [
+  {
+   "s": "By 2050, there will be more plastic than fish in the sea.",
+   "t": true,
+   "why": "Yes, the report says plastic will be more than fish."
+  },
+  {
+   "s": "Most plastics are recycled.",
+   "t": false,
+   "why": "Only 5% of plastics are recycled."
+  },
+  {
+   "s": "8 million tonnes of plastic go into the ocean every year.",
+   "t": true,
+   "why": "Correct! That is a huge amount."
+  },
+  {
+   "s": "50 years ago, we made twenty times less plastic than we do today.",
+   "t": true,
+   "why": "Right! We make much more plastic now."
+  },
+  {
+   "s": "A tonne is 100 kilogrammes.",
+   "t": false,
+   "why": "A tonne is 1,000 kilogrammes."
+  },
+  {
+   "s": "The report says only children must work together to protect the oceans.",
+   "t": false,
+   "why": "Businesses and governments must work together."
+  },
+  {
+   "s": "Reading the title and the first paragraph helps you get the main idea.",
+   "t": true,
+   "why": "Great tip! The title, first paragraph and diagrams show the main idea."
+  },
+  {
+   "s": "The opposite of “safe” is “dangerous”.",
+   "t": true,
+   "why": "Yes, safe and dangerous are opposites."
+  },
+  {
+   "s": "Diagrams in a report make the information harder to understand.",
+   "t": false,
+   "why": "Diagrams help readers see the information quickly."
+  },
+  {
+   "s": "Plastic should always end up in the sea as rubbish.",
+   "t": false,
+   "why": "Plastic should never end up in the sea."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What percentage of plastics are recycled?",
+   "o": [
+    "only 5%",
+    "about 50%",
+    "almost 95%"
+   ],
+   "why": "Only 5% of plastics are recycled."
+  },
+  {
+   "q": "How much plastic goes into the ocean every year?",
+   "o": [
+    "8 million tonnes",
+    "8 tonnes",
+    "8 kilogrammes"
+   ],
+   "why": "It is 8 million tonnes every year."
+  },
+  {
+   "q": "A unit of weight equal to 1,000 kg:",
+   "o": [
+    "tonne",
+    "piece",
+    "business"
+   ],
+   "why": "One tonne = 1,000 kilogrammes."
+  },
+  {
+   "q": "An organisation that provides money to help people:",
+   "o": [
+    "foundation",
+    "government",
+    "piece"
+   ],
+   "why": "A foundation gives money to help."
+  },
+  {
+   "q": "A group of people who lead a country:",
+   "o": [
+    "government",
+    "business",
+    "foundation"
+   ],
+   "why": "The government leads a country."
+  },
+  {
+   "q": "Plastic should never ___ ___ in the sea as rubbish.",
+   "o": [
+    "end up",
+    "pick up",
+    "get up"
+   ],
+   "why": "End up means finally be in a place."
+  },
+  {
+   "q": "The opposite of “always” is…",
+   "o": [
+    "never",
+    "often",
+    "more"
+   ],
+   "why": "Always and never are opposites."
+  },
+  {
+   "q": "The opposite of “less” is…",
+   "o": [
+    "more",
+    "never",
+    "safe"
+   ],
+   "why": "Less and more are opposites."
+  },
+  {
+   "q": "What does the bar chart in the report show?",
+   "o": [
+    "how much more plastic we make",
+    "how many fish we eat",
+    "how hot the sea is"
+   ],
+   "why": "The bar chart shows plastic production growing."
+  },
+  {
+   "q": "Who must work together to protect the oceans?",
+   "o": [
+    "businesses and governments",
+    "only fish",
+    "only tourists"
+   ],
+   "why": "The report names businesses and governments."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Plastics recycled",
+   "a": "5%",
+   "d": [
+    "50%",
+    "95%",
+    "25%"
+   ]
+  },
+  {
+   "q": "Plastic into the ocean yearly (tonnes)",
+   "a": "8 million",
+   "d": [
+    "8 thousand",
+    "80",
+    "8 hundred"
+   ]
+  },
+  {
+   "q": "Year with more plastic than fish",
+   "a": "2050",
+   "d": [
+    "1979",
+    "2005",
+    "2020"
+   ]
+  },
+  {
+   "q": "Kilogrammes in one tonne",
+   "a": "1,000",
+   "d": [
+    "100",
+    "10",
+    "10,000"
+   ]
+  },
+  {
+   "q": "Opposite of safe",
+   "a": "dangerous",
+   "d": [
+    "clean",
+    "less",
+    "never"
+   ]
+  },
+  {
+   "q": "Opposite of always",
+   "a": "never",
+   "d": [
+    "often",
+    "more",
+    "safe"
+   ]
+  },
+  {
+   "q": "Opposite of less",
+   "a": "more",
+   "d": [
+    "never",
+    "safe",
+    "few"
+   ]
+  },
+  {
+   "q": "People who lead a country",
+   "a": "government",
+   "d": [
+    "foundation",
+    "business",
+    "tonne"
+   ]
+  },
+  {
+   "q": "Gives money to help people",
+   "a": "foundation",
+   "d": [
+    "government",
+    "piece",
+    "tonne"
+   ]
+  },
+  {
+   "q": "Finally be in a place",
+   "a": "end up",
+   "d": [
+    "get up",
+    "pick up",
+    "switch off"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the main topic of the report?",
+   "o": [
+    "Plastic pollution in the sea",
+    "Extreme sports",
+    "Shopping online",
+    "Giant pandas"
+   ],
+   "why": "The report is about plastic in the sea."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What will happen by 2050, according to the report?",
+   "o": [
+    "There will be more plastic than fish in the sea.",
+    "All plastic will be recycled.",
+    "There will be no plastic in the sea.",
+    "There will be more fish than ever."
+   ],
+   "why": "Plastic will be more than fish if we don’t act."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is a “piece”?",
+   "o": [
+    "One part of something",
+    "A large organisation",
+    "A unit of weight",
+    "A group that leads a country"
+   ],
+   "why": "For example, a piece of plastic."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should you read first to get the main idea of a report?",
+   "o": [
+    "The title, the first paragraph and the diagrams",
+    "Only the last word",
+    "Only the page numbers",
+    "Nothing – start in the middle"
+   ],
+   "why": "This reading tip helps you predict the topic."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which action helps reduce plastic pollution?",
+   "o": [
+    "Use a reusable water bottle.",
+    "Buy more plastic bags.",
+    "Throw bottles on the beach.",
+    "Never recycle anything."
+   ],
+   "why": "Reusable bottles mean less plastic rubbish."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A school has 10 tonnes of rubbish. How many kilogrammes is that?",
+   "o": [
+    "10,000 kg",
+    "1,000 kg",
+    "100 kg",
+    "100,000 kg"
+   ],
+   "why": "10 × 1,000 = 10,000 kg."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: “The government and ___ must work together to stop plastic pollution.”",
+   "o": [
+    "businesses",
+    "tonnes",
+    "pieces",
+    "fish"
+   ],
+   "why": "The report says businesses and governments must work together."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Only 5% of plastics are recycled. What does this tell us?",
+   "o": [
+    "Most plastic is not recycled, so it can end up as rubbish.",
+    "Almost all plastic is recycled.",
+    "Plastic is not a problem.",
+    "Recycling is not needed."
+   ],
+   "why": "95% is not recycled, which is a big problem."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How does the ratio diagram help readers?",
+   "o": [
+    "It compares plastic and fish in the sea.",
+    "It shows the price of plastic.",
+    "It shows the weather.",
+    "It lists the writers’ names."
+   ],
+   "why": "The ratio shows plastic vs fish."
+  },
+  {
+   "lv": "التحليل",
+   "q": "We made twenty times less plastic 50 years ago. What does this show?",
+   "o": [
+    "We make much more plastic today.",
+    "We make less plastic today.",
+    "Plastic was not invented 50 years ago.",
+    "We make the same amount every year."
+   ],
+   "why": "Plastic production has grown a lot."
+  }
+ ]
+}
