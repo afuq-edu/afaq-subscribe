@@ -13,7 +13,7 @@ import {
 } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { AFAQ } from './afaq-config.js';
-import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck } from './remote.js';
+import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck, installUrl } from './remote.js';
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -1041,6 +1041,18 @@ async function selectLesson(node) {
   }
   return r;
 }
+// تعمل النسخة الأحدث فقط: نطلب تثبيتها بهدوء، وما حُفظ يبقى ويكمل بعد التحديث من حيث وصل
+async function oldVersionWait() {
+  for (;;) {
+    const a = await ask({
+      kind: 'info', head: 'نسخة جديدة من «حاضر» جاهزة',
+      text: 'نزّل النسخة الجديدة من صفحة التثبيت وثبّتها مكان القديمة، ثم افتح «حاضر» وأكمل من حيث وصلت. موادك وما حضّرته يبقى كما هو.',
+      buttons: [{ id: 'go', label: 'افتح صفحة التحديث', primary: true }, { id: 'stop', label: 'لاحقًا' }],
+    });
+    if (a !== 'go') return;
+    openUrl(installUrl());
+  }
+}
 // حساب نور باسم غير اسم المعلم المسجّل: ننتظر سماح المشرف من لوحته، ونكمل وحدنا فور موافقته
 async function noorWait(blk) {
   const text = `حساب نور المفتوح باسم «${blk.noor || 'آخر'}»، واشتراكك في «حاضر» باسم «${blk.reg || '—'}».\nأرسلت طلب السماح لهذا الحساب إلى المشرف، وأكمل وحدي فور موافقته.`;
@@ -1070,6 +1082,7 @@ async function fillOnce(item, c) {
     rep = await fillNoor(tabId, pkg, s.lesson, opts());
     blk = rep.find((x) => x.key === 'remote');
   }
+  if (blk && blk.remoteError === 'old_version') { await oldVersionWait(); return { ok: false, cls: 'stop', why: '' }; }
   if (blk && blk.remoteError === 'trial_over') WIZ.trialOver = true;
   if (blk) return { ok: false, cls: blk.remoteError === 'network' || blk.remoteError === 'server' ? 'net' : 'fatal', why: blk.error };
   // تعارض في الجدول: التاريخ مستخدم في نور، أو لا حصة لك (لا صفوف) في ذلك اليوم ← يوم الحصة التالي تلقائيًا

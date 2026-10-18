@@ -179,6 +179,7 @@
             <label class="field"><span>الحد اليومي للحصص لكل معلم</span><input name="daily_limit" type="number" min="10" dir="ltr"><small>حصص مختلفة في ٢٤ ساعة؛ إعادة المحاولة لا تُحتسب.</small></label>
             <label class="field"><span>أقصى عدد أجهزة لكل معلم</span><input name="max_devices" type="number" min="1" max="5" dir="ltr"></label>
           </div>
+          <label class="field"><span>أقدم نسخة من «حاضر» مسموح لها بالتعبئة</span><input name="min_ext_version" dir="ltr" placeholder="4.9.18"><small>النسخ الأقدم لا تعبّئ، وتطلب من المعلم تنزيل الجديدة من صفحة التثبيت.</small></label>
           <label class="field"><span>خصم دعوة زميل</span><input name="referral_discount" placeholder="20%"><small>نسبة مثل «20%» أو مبلغ مثل «1 ر.ع.». يظهر للمعلم في رابط دعوته، ويحصل عليه هو وزميله إذا اشترك الزميل.</small></label>
           <label class="field"><span>إجازات التقويم الرسمي <small>(لكل المعلمين)</small></span><textarea name="holidays" rows="5" placeholder="18/11/2026 العيد الوطني&#10;من 14/12/2026 إلى 25/12/2026 إجازة منتصف الفصل"></textarea><small>سطر لكل إجازة: يوم واحد أو «من … إلى …». يتخطّاها «حاضر» عند توزيع تواريخ النشر.</small></label>
           <div class="msg" id="setMsg" hidden></div>
