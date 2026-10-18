@@ -842,7 +842,7 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
     if (!nc.ok) return [{ key: 'remote', name: 'الاشتراك', short: 'الاشتراك', status: 'fail', blocked: true, remoteError: 'noor_other', error: nc.owner ? `هذا الاشتراك لحساب نور «${nc.owner}»، وحساب نور المفتوح الآن لمعلم آخر. لتحضير حساب آخر يحتاج صاحبه اشتراكه الخاص.` : REMOTE_ERR.noor_other, values: [] }];
     // مادة اشتراك: محتوى الحصة يُجلب الآن من منصة أفق (لا يُخزَّن في الإضافة)
     const r = await remoteLesson(pkg, lesson);
-    if (!r.ok) return [{ key: 'remote', name: 'الاشتراك', short: 'الاشتراك', status: 'fail', blocked: true, remoteError: r.error, error: REMOTE_ERR[r.error] || REMOTE_ERR.network, values: [] }];
+    if (!r.ok) return [{ key: 'remote', name: 'الاشتراك', short: 'الاشتراك', status: r.error === 'noor_wait' ? 'wait' : 'fail', blocked: true, remoteError: r.error, who, error: REMOTE_ERR[r.error] || REMOTE_ERR.network, values: [] }];
     lesson = r.lesson;
   }
   // مدة الحصة حسب نوع المدرسة: فترتان ٣٥ دقيقة، فترة واحدة ٤٠
