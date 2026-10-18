@@ -103,13 +103,13 @@ export async function remoteLesson(pkg, lesson) {
   if (hit && Date.now() - hit.at < 10 * 60000) return { ok: true, lesson: Object.assign({}, lesson, hit.content) };
   const link = await getLink();
   if (!link) return { ok: false, error: 'unlinked' };
-  let r = await rpc('ext_session', { p_token: link.token, p_package: pkg.remote.package_id, p_term: pkg.remote.term, p_lesson: lesson.id });
-  if (r && r.error === 'network') { await new Promise((ok) => setTimeout(ok, 1500)); r = await rpc('ext_session', { p_token: link.token, p_package: pkg.remote.package_id, p_term: pkg.remote.term, p_lesson: lesson.id }); }
+  let r = await rpc('ext_session', { p_token: link.token, p_package: pkg.remote.package_id, p_term: pkg.remote.term, p_lesson: lesson.id, p_ver: chrome.runtime.getManifest().version });
+  if (r && r.error === 'network') { await new Promise((ok) => setTimeout(ok, 1500)); r = await rpc('ext_session', { p_token: link.token, p_package: pkg.remote.package_id, p_term: pkg.remote.term, p_lesson: lesson.id, p_ver: chrome.runtime.getManifest().version }); }
   if (!r || !r.ok) {
     const error = (r && r.error) || 'network';
     if (error === 'unlinked') await unlink();
     else if (error === 'expired') sync().catch(() => {});   // تُحذف المادة المنتهية من المكتبة
-    return { ok: false, error, limit: r && r.limit };
+    return { ok: false, error, limit: r && r.limit, min: r && r.min };
   }
   memo.set(key, { at: Date.now(), content: r.lesson });
   if (r.left != null && pkg.remote.trial) pkg.remote.left = r.left;
@@ -126,6 +126,7 @@ export const REMOTE_ERR = {
   network: 'تعذّر الاتصال بخادم منصة أفق — تحقق من الإنترنت.',
   server: 'خادم منصة أفق لم يستجب كما يجب — أعد المحاولة بعد قليل.',
   config: 'الإضافة غير مضبوطة على خادم منصة أفق.',
+  old_version: 'نسخة جديدة من «حاضر» جاهزة — نزّلها من صفحة التثبيت لتكمل التحضير.',
   noor_wait: 'حساب نور المفتوح باسم غير اسمك المسجّل في «حاضر»، فأرسلت طلب السماح له إلى المشرف. أكمل وحدي فور موافقته.',
   noor_other: 'هذا الاشتراك لحساب نور صاحبه، وحساب نور المفتوح الآن لمعلم آخر. لتحضير حساب آخر يحتاج صاحبه اشتراكه الخاص.',
 };
@@ -138,6 +139,7 @@ export async function noorCheck(who) {
   const r = await rpc('ext_noor', { p_token: link.token, p_noor: hash, p_name: who.name || '' }, 10000);
   return r && r.ok === false && (r.error === 'noor_other' || r.error === 'noor_wait') ? r : { ok: true };   // تعذّر الاتصال: لا نوقف المعلم
 }
+export const installUrl = () => AFAQ.SITE_URL.replace(/#.*$/, '') + 'install.html#update';
 export const siteUrl = (hash) => AFAQ.SITE_URL.replace(/#.*$/, '') + (hash || '');
 
 // ---------- «حاضر» مباشرة دون الموقع ----------

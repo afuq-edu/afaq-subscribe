@@ -488,7 +488,7 @@
   $('#setForm').onsubmit = async (e) => {
     e.preventDefault();
     const f = e.target, msg = $('#setMsg');
-    const keys = ['site_name', 'whatsapp', 'extension_url', 'announcement', 'daily_limit', 'max_devices', 'price_term', 'price_year', 'holidays', 'referral_discount', 'youtube_url'];
+    const keys = ['site_name', 'whatsapp', 'extension_url', 'announcement', 'daily_limit', 'max_devices', 'price_term', 'price_year', 'holidays', 'referral_discount', 'youtube_url', 'min_ext_version'];
     const vals = Object.fromEntries(keys.map((k) => [k, f[k].value.trim()]));
     for (const k of ['price_term', 'price_year']) {
       if (vals[k] && !A.priceNum(vals[k])) { setMsg(msg, 'bad', 'السعر رقم، مثل 5 أو 4.5'); return; }
@@ -496,6 +496,7 @@
     }
     vals.whatsapp = vals.whatsapp.replace(/[^\d]/g, '').replace(/^00/, '');   // wa.me لا يقبل 00 قبل رمز الدولة
     if (vals.whatsapp && vals.whatsapp.length < 10) { setMsg(msg, 'bad', 'رقم واتساب بالصيغة الدولية، مثل 9689xxxxxxx.'); return; }
+    if (vals.min_ext_version && !/^\d+(\.\d+)*$/.test(vals.min_ext_version)) { setMsg(msg, 'bad', 'رقم النسخة مثل 4.9.18'); return; }
     vals.youtube_url = (vals.youtube_url || '').trim();
     if (vals.youtube_url && !/^https:\/\/(www\.|m\.)?(youtube\.com|youtu\.be)\//.test(vals.youtube_url)) { setMsg(msg, 'bad', 'ضع رابط فيديو من يوتيوب يبدأ بـ https://youtu.be/ أو https://www.youtube.com/'); return; }
     if (vals.extension_url && !/^https:\/\/(chromewebstore\.google\.com|chrome\.google\.com\/webstore)\//.test(vals.extension_url)) { setMsg(msg, 'bad', 'ضع رابط صفحة الإضافة في متجر كروم (chromewebstore.google.com)، أو اتركه فارغًا ما دامت الإضافة لم تُنشر.'); return; }
