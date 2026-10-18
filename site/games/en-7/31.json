@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Lesson 3: Grammar – going to and will",
+ "outcomes": [
+  "Use going to for plans you decided before.",
+  "Use will for quick decisions at the time of speaking.",
+  "Write about your weekend plans with going to."
+ ],
+ "tf": [
+  {
+   "s": "We use going to for plans we decided before.",
+   "t": true,
+   "why": "Yes, going to is for plans."
+  },
+  {
+   "s": "We use will for decisions we make at the time of speaking.",
+   "t": true,
+   "why": "Yes, will is for quick decisions."
+  },
+  {
+   "s": "I will to take an umbrella is correct.",
+   "t": false,
+   "why": "No to after will: I will take an umbrella."
+  },
+  {
+   "s": "The short form of I will is I'll.",
+   "t": true,
+   "why": "Yes, I will = I'll."
+  },
+  {
+   "s": "The negative of I'm going to visit London is I'm not going to visit London.",
+   "t": true,
+   "why": "Yes, add not after am."
+  },
+  {
+   "s": "We bought the tickets. We will visit London is the best choice.",
+   "t": false,
+   "why": "It is a plan, so: We are going to visit London."
+  },
+  {
+   "s": "Both going to and will can talk about the future.",
+   "t": true,
+   "why": "Yes, both are future forms."
+  },
+  {
+   "s": "Won't is the short form of will not.",
+   "t": true,
+   "why": "Yes, will not = won't."
+  },
+  {
+   "s": "She are going to visit Muscat is correct.",
+   "t": false,
+   "why": "We say She is going to …"
+  },
+  {
+   "s": "We use going to only for things that happened yesterday.",
+   "t": false,
+   "why": "Going to is for the future, not the past."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "The phone is ringing. I ___ answer it.",
+   "o": [
+    "'ll",
+    "'m going to",
+    "did"
+   ],
+   "why": "A decision now uses will."
+  },
+  {
+   "q": "I'm thirsty. – I ___ get you some water.",
+   "o": [
+    "'ll",
+    "'m going to",
+    "was"
+   ],
+   "why": "This is a quick offer, so will."
+  },
+  {
+   "q": "We ___ visit the mountains for the holidays. (plan)",
+   "o": [
+    "are going to",
+    "will to",
+    "goes"
+   ],
+   "why": "Plans use be going to."
+  },
+  {
+   "q": "She ___ visit Muscat this year. (negative plan)",
+   "o": [
+    "isn't going to",
+    "won't to",
+    "doesn't going to"
+   ],
+   "why": "Negative plan: isn't going to."
+  },
+  {
+   "q": "This bag is very heavy! – I ___ help you carry it.",
+   "o": [
+    "'ll",
+    "am going",
+    "helped"
+   ],
+   "why": "You offer help at that moment."
+  },
+  {
+   "q": "Which is a quick decision?",
+   "o": [
+    "It's cold. I'll close the window.",
+    "I'm going to visit my aunt on Saturday.",
+    "We're going to fly to London next month."
+   ],
+   "why": "You decide when you feel cold."
+  },
+  {
+   "q": "Which is a plan?",
+   "o": [
+    "I'm going to play football on Friday.",
+    "I'm hungry. I'll make a sandwich.",
+    "It's raining. I'll take an umbrella."
+   ],
+   "why": "You decided this before."
+  },
+  {
+   "q": "Correct: I will to take an umbrella.",
+   "o": [
+    "I will take an umbrella.",
+    "I will taking an umbrella.",
+    "I will takes an umbrella."
+   ],
+   "why": "Will + base verb, no to."
+  },
+  {
+   "q": "Short form of will not?",
+   "o": [
+    "won't",
+    "willn't",
+    "don't"
+   ],
+   "why": "Will not = won't."
+  },
+  {
+   "q": "Complete: I ___ (take) a small bag, too. (decided now)",
+   "o": [
+    "'ll take",
+    "'m taking to",
+    "took"
+   ],
+   "why": "A decision now: I'll take."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Plan: I ___ visit my uncle.",
+   "a": "am going to",
+   "d": [
+    "will to",
+    "going",
+    "am will"
+   ]
+  },
+  {
+   "q": "Decision now: I ___ help you.",
+   "a": "will",
+   "d": [
+    "am going",
+    "going to",
+    "was"
+   ]
+  },
+  {
+   "q": "Short form of I will",
+   "a": "I'll",
+   "d": [
+    "I'm",
+    "I've",
+    "I'd"
+   ]
+  },
+  {
+   "q": "Short form of will not",
+   "a": "won't",
+   "d": [
+    "don't",
+    "isn't",
+    "wasn't"
+   ]
+  },
+  {
+   "q": "They ___ going to travel.",
+   "a": "are",
+   "d": [
+    "is",
+    "am",
+    "be"
+   ]
+  },
+  {
+   "q": "He ___ going to swim.",
+   "a": "is",
+   "d": [
+    "are",
+    "am",
+    "be"
+   ]
+  },
+  {
+   "q": "Short form of I am",
+   "a": "I'm",
+   "d": [
+    "I'll",
+    "I've",
+    "Im"
+   ]
+  },
+  {
+   "q": "We're going to ___ Nizwa.",
+   "a": "visit",
+   "d": [
+    "visiting",
+    "visited",
+    "visits"
+   ]
+  },
+  {
+   "q": "It's cold. I'll ___ my coat.",
+   "a": "wear",
+   "d": [
+    "to wear",
+    "wearing",
+    "wore"
+   ]
+  },
+  {
+   "q": "Negative: I'm ___ going to go.",
+   "a": "not",
+   "d": [
+    "no",
+    "don't",
+    "won't"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "When do we use going to?",
+   "o": [
+    "for plans we decided before",
+    "for decisions at the time of speaking",
+    "for finished past actions",
+    "for daily habits"
+   ],
+   "why": "Going to = a plan."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When do we use will?",
+   "o": [
+    "for decisions at the time of speaking",
+    "for plans we made last week",
+    "for actions happening now",
+    "for things in the past"
+   ],
+   "why": "Will = I decide now."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is the correct question form?",
+   "o": [
+    "Are you going to visit London?",
+    "You are going to visit London?",
+    "Do you going to visit London?",
+    "Are you go to visit London?"
+   ],
+   "why": "Put are before you."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What comes after will?",
+   "o": [
+    "the base verb",
+    "to + verb",
+    "verb + ing",
+    "the past tense"
+   ],
+   "why": "Will + base verb: will take."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "We bought the tickets. We ___ visit London.",
+   "o": [
+    "are going to",
+    "will",
+    "were",
+    "did"
+   ],
+   "why": "The tickets show a plan."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make it negative: I'm going to visit London.",
+   "o": [
+    "I'm not going to visit London.",
+    "I'm going not to visit London.",
+    "I don't going to visit London.",
+    "I won't going to visit London."
+   ],
+   "why": "Put not after am."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend says: I'm hungry! What do you say?",
+   "o": [
+    "I'll make you a sandwich.",
+    "I'm going to make you a sandwich last week.",
+    "I made you a sandwich tomorrow.",
+    "I will to make you a sandwich."
+   ],
+   "why": "A quick offer uses will."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Frank say I'll take one about the umbrella?",
+   "o": [
+    "He decides when Majid says he doesn't have one.",
+    "He planned it last month.",
+    "He doesn't like umbrellas.",
+    "He is talking about the past."
+   ],
+   "why": "It is a decision at the time of speaking."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which pair shows one plan and one quick decision?",
+   "o": [
+    "I'm going to visit Salalah in the summer. It's hot – I'll take my sunhat.",
+    "I'll visit Salalah. I'll take my sunhat.",
+    "I'm going to visit Salalah. I'm going to visit Nizwa.",
+    "I visited Salalah. I took my sunhat."
+   ],
+   "why": "First a plan, then a quick decision."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ali says: I'm going to take a pillow on the bus trip. Sami answers: Good idea! I'll take one too. Why does Sami use will?",
+   "o": [
+    "He decides at that moment.",
+    "He planned it a week ago.",
+    "It happened yesterday.",
+    "It is a habit."
+   ],
+   "why": "Sami's idea comes as he speaks."
+  }
+ ]
+}

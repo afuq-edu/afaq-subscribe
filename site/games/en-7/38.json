@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Learning club 1 – Lesson 1: Language booster (months, seasons, telling the time)",
+ "outcomes": [
+  "Name the 12 months and the four seasons in order.",
+  "Tell the time with o'clock, quarter past, half past and quarter to.",
+  "Understand time differences and seasons in different countries."
+ ],
+ "tf": [
+  {
+   "s": "The Earth takes about 365 days to go around the Sun.",
+   "t": true,
+   "why": "Yes, that is one year."
+  },
+  {
+   "s": "April comes after March.",
+   "t": true,
+   "why": "Yes: March, April, May."
+  },
+  {
+   "s": "11:15 is quarter past eleven.",
+   "t": true,
+   "why": "Yes, 15 minutes after eleven."
+  },
+  {
+   "s": "5:30 is half past six.",
+   "t": false,
+   "why": "5:30 is half past five."
+  },
+  {
+   "s": "June, July and August are summer months in Europe.",
+   "t": true,
+   "why": "Yes, that is Europe's summer."
+  },
+  {
+   "s": "Australia and Europe have opposite seasons.",
+   "t": true,
+   "why": "Yes, when one has summer, the other has winter."
+  },
+  {
+   "s": "It is the same time everywhere in the world.",
+   "t": false,
+   "why": "Different countries have different times."
+  },
+  {
+   "s": "There are four seasons: spring, summer, autumn and winter.",
+   "t": true,
+   "why": "Yes, those are the four seasons."
+  },
+  {
+   "s": "New York is ahead of Muscat in time.",
+   "t": false,
+   "why": "New York is behind Muscat, by 8 hours here."
+  },
+  {
+   "s": "Autumn comes after spring.",
+   "t": false,
+   "why": "Summer comes after spring."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Write 12:45 in words.",
+   "o": [
+    "quarter to one",
+    "quarter past twelve",
+    "quarter to twelve"
+   ],
+   "why": "15 minutes before one."
+  },
+  {
+   "q": "Which month comes before March?",
+   "o": [
+    "February",
+    "April",
+    "January"
+   ],
+   "why": "February, then March."
+  },
+  {
+   "q": "Which season comes after winter?",
+   "o": [
+    "spring",
+    "autumn",
+    "summer"
+   ],
+   "why": "Winter, spring, summer, autumn."
+  },
+  {
+   "q": "Which month is the first month of the year?",
+   "o": [
+    "January",
+    "December",
+    "March"
+   ],
+   "why": "The year starts in January."
+  },
+  {
+   "q": "What season is it for Shihab in Oman in the dialogue?",
+   "o": [
+    "summer",
+    "winter",
+    "autumn"
+   ],
+   "why": "It is summer in Oman."
+  },
+  {
+   "q": "How many hours are in one day?",
+   "o": [
+    "24",
+    "12",
+    "7"
+   ],
+   "why": "The Earth turns once in about 24 hours."
+  },
+  {
+   "q": "Write 6:00 in words.",
+   "o": [
+    "six o'clock",
+    "half past six",
+    "quarter to six"
+   ],
+   "why": "Exactly on the hour = o'clock."
+  },
+  {
+   "q": "Which is the last month of the year?",
+   "o": [
+    "December",
+    "November",
+    "January"
+   ],
+   "why": "December is month 12."
+  },
+  {
+   "q": "Which season comes after summer?",
+   "o": [
+    "autumn",
+    "spring",
+    "winter"
+   ],
+   "why": "Summer, then autumn."
+  },
+  {
+   "q": "Write 10:30 in words.",
+   "o": [
+    "half past ten",
+    "half past eleven",
+    "quarter past ten"
+   ],
+   "why": "30 minutes after ten."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "4:15",
+   "a": "quarter past four",
+   "d": [
+    "quarter to four",
+    "half past four",
+    "four o'clock"
+   ]
+  },
+  {
+   "q": "8:30",
+   "a": "half past eight",
+   "d": [
+    "half past nine",
+    "quarter to eight",
+    "eight o'clock"
+   ]
+  },
+  {
+   "q": "2:45",
+   "a": "quarter to three",
+   "d": [
+    "quarter past two",
+    "half past two",
+    "three o'clock"
+   ]
+  },
+  {
+   "q": "7:00",
+   "a": "seven o'clock",
+   "d": [
+    "half past seven",
+    "quarter to seven",
+    "quarter past seven"
+   ]
+  },
+  {
+   "q": "Month after June",
+   "a": "July",
+   "d": [
+    "May",
+    "August",
+    "January"
+   ]
+  },
+  {
+   "q": "Month before October",
+   "a": "September",
+   "d": [
+    "November",
+    "August",
+    "December"
+   ]
+  },
+  {
+   "q": "Season of July in Europe",
+   "a": "summer",
+   "d": [
+    "winter",
+    "spring",
+    "autumn"
+   ]
+  },
+  {
+   "q": "Season after autumn",
+   "a": "winter",
+   "d": [
+    "spring",
+    "summer",
+    "autumn"
+   ]
+  },
+  {
+   "q": "7 p.m. Muscat = ? New York",
+   "a": "11 a.m.",
+   "d": [
+    "11 p.m.",
+    "3 p.m.",
+    "7 a.m."
+   ]
+  },
+  {
+   "q": "Months in a year",
+   "a": "12",
+   "d": [
+    "10",
+    "7",
+    "365"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which list shows the four seasons in order, starting with spring?",
+   "o": [
+    "spring, summer, autumn, winter",
+    "spring, winter, summer, autumn",
+    "spring, autumn, winter, summer",
+    "spring, summer, winter, autumn"
+   ],
+   "why": "That is the order of the seasons."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which months are winter in Europe?",
+   "o": [
+    "December, January and February",
+    "June, July and August",
+    "March, April and May",
+    "September, October and November"
+   ],
+   "why": "Europe's winter is December to February."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do we say 9:15?",
+   "o": [
+    "It's quarter past nine.",
+    "It's quarter to nine.",
+    "It's half past nine.",
+    "It's nine o'clock."
+   ],
+   "why": "15 minutes after nine."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why do we have day and night?",
+   "o": [
+    "The Earth turns, so one side faces the Sun.",
+    "The Sun goes around the Moon.",
+    "The Moon covers the Sun every evening.",
+    "The Earth stops moving at night."
+   ],
+   "why": "The side facing the Sun has day."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "It's 1:45. How do you say it?",
+   "o": [
+    "It's quarter to two.",
+    "It's quarter past one.",
+    "It's half past one.",
+    "It's quarter to one."
+   ],
+   "why": "15 minutes before two."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "New York is 8 hours behind Muscat. It's 3 p.m. in Muscat. What time is it in New York?",
+   "o": [
+    "7 a.m.",
+    "11 p.m.",
+    "3 a.m.",
+    "8 p.m."
+   ],
+   "why": "3 p.m. minus 8 hours = 7 a.m."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which month is between April and June?",
+   "o": [
+    "May",
+    "March",
+    "July",
+    "August"
+   ],
+   "why": "April, May, June."
+  },
+  {
+   "lv": "التحليل",
+   "q": "If it's summer in Oman, which season is it in Australia?",
+   "o": [
+    "winter",
+    "summer",
+    "spring",
+    "autumn"
+   ],
+   "why": "Australia's seasons are opposite to ours."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Your friend in New Zealand is in winter in July. What can you say?",
+   "o": [
+    "It's hot in Oman, but it's cold in New Zealand.",
+    "It's cold in both countries.",
+    "It's summer in New Zealand.",
+    "The seasons are the same everywhere."
+   ],
+   "why": "The two countries have opposite seasons."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it a bad idea to call a friend in New York at 7 a.m. Muscat time?",
+   "o": [
+    "It's 11 p.m. in New York, so they may be asleep.",
+    "It's lunch time in New York.",
+    "New York has no phones.",
+    "It's the same time there."
+   ],
+   "why": "7 a.m. minus 8 hours is 11 p.m. the night before."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Lesson 2: Team Talk – Of course! Good plan!",
+ "outcomes": [
+  "Understand a dialogue about getting ready for a trip.",
+  "Use the expressions Of course!, Good plan! and Thanks for your help.",
+  "Say who will bring each item and why."
+ ],
+ "tf": [
+  {
+   "s": "Frank and Majid are flying to London.",
+   "t": true,
+   "why": "Yes, they are going by plane."
+  },
+  {
+   "s": "Majid has an umbrella.",
+   "t": false,
+   "why": "Majid doesn't have an umbrella."
+  },
+  {
+   "s": "Frank is going to take a small rucksack.",
+   "t": true,
+   "why": "Yes, Frank will take a small rucksack."
+  },
+  {
+   "s": "Majid needs to bring toothpaste, soap and shampoo.",
+   "t": false,
+   "why": "Frank will bring them and they can share."
+  },
+  {
+   "s": "Good plan! means That's a good idea!",
+   "t": true,
+   "why": "Yes, we say it when we like an idea."
+  },
+  {
+   "s": "Frank will download a guidebook.",
+   "t": true,
+   "why": "Yes, Frank will get it on his phone."
+  },
+  {
+   "s": "We say Thanks for your help when someone does something for us.",
+   "t": true,
+   "why": "Yes, it is a polite way to say thank you."
+  },
+  {
+   "s": "Good plan! is a way to say thank you.",
+   "t": false,
+   "why": "Good plan! means That's a good idea!"
+  },
+  {
+   "s": "The boys are going to London to practise English.",
+   "t": true,
+   "why": "Yes, that is the reason for the trip."
+  },
+  {
+   "s": "Of course! means No, never!",
+   "t": false,
+   "why": "Of course! means Yes, certainly!"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who is going to take a small rucksack?",
+   "o": [
+    "Frank",
+    "Majid",
+    "Majid's mum"
+   ],
+   "why": "Frank takes a small rucksack."
+  },
+  {
+   "q": "Why does Frank say: I'll take one?",
+   "o": [
+    "Majid has no umbrella.",
+    "Frank has two passports.",
+    "Majid wants sweets."
+   ],
+   "why": "Frank decides to bring an umbrella for Majid."
+  },
+  {
+   "q": "Which expression means That's a good idea!?",
+   "o": [
+    "Good plan!",
+    "Of course!",
+    "Thanks for your help."
+   ],
+   "why": "Good plan! shows you like the idea."
+  },
+  {
+   "q": "A: Are you ready for our trip? B: Of ___!",
+   "o": [
+    "course",
+    "plan",
+    "help"
+   ],
+   "why": "Of course! = Yes, certainly."
+  },
+  {
+   "q": "Your friend helps you pack. You say …",
+   "o": [
+    "Thanks for your help.",
+    "Good plan!",
+    "Of course!"
+   ],
+   "why": "We thank people who help us."
+  },
+  {
+   "q": "How are Frank and Majid travelling to London?",
+   "o": [
+    "by plane",
+    "by bus",
+    "by ship"
+   ],
+   "why": "Majid gets sweets for the plane."
+  },
+  {
+   "q": "Who has a problem with his passport?",
+   "o": [
+    "Majid",
+    "Frank",
+    "the teacher"
+   ],
+   "why": "Majid forgot about his passport."
+  },
+  {
+   "q": "Why don't the boys both need soap and shampoo?",
+   "o": [
+    "They can share Frank's.",
+    "They don't wash.",
+    "The hotel is closed."
+   ],
+   "why": "Sharing means less to carry."
+  },
+  {
+   "q": "A: Let's take the bus to the airport. B: ___",
+   "o": [
+    "Good plan!",
+    "Thanks for your help.",
+    "I don't have one."
+   ],
+   "why": "Good plan! answers a suggestion."
+  },
+  {
+   "q": "Why are the boys going to London?",
+   "o": [
+    "to practise English",
+    "to play football",
+    "to visit a zoo"
+   ],
+   "why": "It is an English trip."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "City they are flying to",
+   "a": "London",
+   "d": [
+    "Muscat",
+    "Paris",
+    "Edinburgh"
+   ]
+  },
+  {
+   "q": "Reply to a good idea",
+   "a": "Good plan!",
+   "d": [
+    "Of course!",
+    "Excuse me!",
+    "Pardon?"
+   ]
+  },
+  {
+   "q": "Reply when someone helps you",
+   "a": "Thanks for your help.",
+   "d": [
+    "Good plan!",
+    "Of course!",
+    "Excuse me."
+   ]
+  },
+  {
+   "q": "Answer: Can I borrow a pen?",
+   "a": "Of course!",
+   "d": [
+    "Good plan!",
+    "Thanks for your help.",
+    "Watch out!"
+   ]
+  },
+  {
+   "q": "Majid gets sweets for the …",
+   "a": "plane",
+   "d": [
+    "train",
+    "bus",
+    "boat"
+   ]
+  },
+  {
+   "q": "Frank's small bag",
+   "a": "rucksack",
+   "d": [
+    "washbag",
+    "suitcase",
+    "pillow"
+   ]
+  },
+  {
+   "q": "They go to London to practise …",
+   "a": "English",
+   "d": [
+    "football",
+    "cooking",
+    "swimming"
+   ]
+  },
+  {
+   "q": "Frank downloads a …",
+   "a": "guidebook",
+   "d": [
+    "passport",
+    "umbrella",
+    "ticket"
+   ]
+  },
+  {
+   "q": "Who will bring the shampoo?",
+   "a": "Frank",
+   "d": [
+    "Majid",
+    "Grandma",
+    "the pilot"
+   ]
+  },
+  {
+   "q": "Thanks for your ___.",
+   "a": "help",
+   "d": [
+    "plan",
+    "course",
+    "trip"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which three expressions are in the Team Talk?",
+   "o": [
+    "Of course! Good plan! Thanks for your help.",
+    "Hello! Goodbye! See you!",
+    "I'm crazy about! I can't stand! I don't mind!",
+    "Excuse me! Sorry! Pardon?"
+   ],
+   "why": "These are the Team Talk expressions."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Majid NOT need to pack?",
+   "o": [
+    "toothpaste, soap and shampoo",
+    "his passport",
+    "his clothes",
+    "his phone"
+   ],
+   "why": "Frank will bring them and they can share."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which situation is right for Thanks for your help.?",
+   "o": [
+    "A friend carries your heavy bag.",
+    "A friend asks: Are you ready?",
+    "A friend says: Let's go by bus.",
+    "A friend says goodbye."
+   ],
+   "why": "We thank people who help us."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Of course! mean?",
+   "o": [
+    "Yes, certainly!",
+    "No, thank you.",
+    "I don't know.",
+    "Maybe later."
+   ],
+   "why": "Of course! is a strong yes."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend says: I'll bring the snacks for the trip. What is the best reply?",
+   "o": [
+    "Good plan! Thanks for your help.",
+    "Of course not!",
+    "I can't stand snacks.",
+    "I don't have one."
+   ],
+   "why": "You like the idea and say thank you."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your teacher asks: Can you help me carry these books? You say …",
+   "o": [
+    "Of course!",
+    "Good plan!",
+    "Thanks for your help.",
+    "I'm not keen on it."
+   ],
+   "why": "Of course! means yes, happily."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: Let's check our passports tonight. B: ___",
+   "o": [
+    "Good plan!",
+    "Thanks for your help.",
+    "Of course not.",
+    "I don't have one."
+   ],
+   "why": "Good plan! answers a good suggestion."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How do we know the boys are going by plane?",
+   "o": [
+    "Majid will get some sweets for the plane.",
+    "Frank has a rucksack.",
+    "Majid has no umbrella.",
+    "Frank will download a guidebook."
+   ],
+   "why": "The plane is mentioned with the sweets."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Frank ask: Are you sure you're ready for this trip?",
+   "o": [
+    "Majid forgot about his passport and has no umbrella.",
+    "Majid packed too many umbrellas.",
+    "Frank doesn't want to go.",
+    "The plane is cancelled."
+   ],
+   "why": "Majid isn't fully prepared yet."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is sharing soap and shampoo a good idea on a trip?",
+   "o": [
+    "You carry less in your bag.",
+    "It is more expensive.",
+    "Hotels don't allow it.",
+    "You need more bags."
+   ],
+   "why": "Sharing makes your bag lighter."
+  }
+ ]
+}

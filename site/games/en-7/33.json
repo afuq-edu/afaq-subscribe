@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Lesson 5: Vocabulary and Grammar – Transport verbs; Present simple for the future",
+ "outcomes": [
+  "Name and use 12 transport and travel verbs.",
+  "Use the present simple for timetables and fixed plans.",
+  "Ask and answer questions about a timetable."
+ ],
+ "tf": [
+  {
+   "s": "When a plane leaves the ground, it takes off.",
+   "t": true,
+   "why": "Yes, take off = leave the ground."
+  },
+  {
+   "s": "When a plane comes down to the ground, it lands.",
+   "t": true,
+   "why": "Yes, land is the opposite of take off."
+  },
+  {
+   "s": "Take a seat means stand up.",
+   "t": false,
+   "why": "Take a seat means sit down."
+  },
+  {
+   "s": "We use the present simple for timetables: The train leaves at 6 o'clock.",
+   "t": true,
+   "why": "Yes, timetables use the present simple."
+  },
+  {
+   "s": "What time the train leaves? is a correct question.",
+   "t": false,
+   "why": "Say: What time does the train leave?"
+  },
+  {
+   "s": "The opposite of get on is get off.",
+   "t": true,
+   "why": "Yes, get on the bus, get off the bus."
+  },
+  {
+   "s": "Explore means to stay at home and sleep.",
+   "t": false,
+   "why": "Explore means to go and see new places."
+  },
+  {
+   "s": "The flight leave in ten minutes is correct.",
+   "t": false,
+   "why": "With the flight (it), add -s: leaves."
+  },
+  {
+   "s": "Catch a bus means get on a bus before it leaves.",
+   "t": true,
+   "why": "Yes, you catch the bus at the bus stop."
+  },
+  {
+   "s": "The present simple can talk about the future when it is a fixed timetable.",
+   "t": true,
+   "why": "Yes, like The bus leaves at 7 a.m. tomorrow."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which verb means 'get to a place at the end of a journey'?",
+   "o": [
+    "arrive",
+    "leave",
+    "pack"
+   ],
+   "why": "You arrive at the end."
+  },
+  {
+   "q": "Complete: The flight ___ (leave) in ten minutes.",
+   "o": [
+    "leaves",
+    "leave",
+    "is leave"
+   ],
+   "why": "It/the flight + verb + s."
+  },
+  {
+   "q": "Complete: We ___ (land) in fifteen minutes.",
+   "o": [
+    "land",
+    "lands",
+    "landing"
+   ],
+   "why": "We + base verb: land."
+  },
+  {
+   "q": "Complete: Please ___ a seat.",
+   "o": [
+    "take",
+    "catch",
+    "pack"
+   ],
+   "why": "Take a seat = sit down."
+  },
+  {
+   "q": "Opposite of get on?",
+   "o": [
+    "get off",
+    "take off",
+    "go on"
+   ],
+   "why": "Get off = leave a bus or train."
+  },
+  {
+   "q": "Before a trip, you put clothes in your suitcase. You …",
+   "o": [
+    "pack your suitcase",
+    "catch a bus",
+    "land"
+   ],
+   "why": "Pack = put things in a bag."
+  },
+  {
+   "q": "Complete: What time ___ the museum open?",
+   "o": [
+    "does",
+    "do",
+    "is"
+   ],
+   "why": "The museum (it) → does."
+  },
+  {
+   "q": "Complete: When ___ we arrive in Salalah?",
+   "o": [
+    "do",
+    "does",
+    "are"
+   ],
+   "why": "We → do."
+  },
+  {
+   "q": "What does a plane do at the end of a flight?",
+   "o": [
+    "land",
+    "take off",
+    "pack"
+   ],
+   "why": "Planes land at the airport."
+  },
+  {
+   "q": "Which itinerary sentence is correct?",
+   "o": [
+    "We go home at 4 p.m.",
+    "We goes home at 4 p.m.",
+    "We going home at 4 p.m."
+   ],
+   "why": "We + base verb: go."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "A plane leaves the ground",
+   "a": "take off",
+   "d": [
+    "land",
+    "get off",
+    "explore"
+   ]
+  },
+  {
+   "q": "A plane comes down",
+   "a": "land",
+   "d": [
+    "take off",
+    "pack",
+    "leave"
+   ]
+  },
+  {
+   "q": "Sit down",
+   "a": "take a seat",
+   "d": [
+    "get off",
+    "catch a bus",
+    "explore"
+   ]
+  },
+  {
+   "q": "Get to the bus before it leaves",
+   "a": "catch",
+   "d": [
+    "pack",
+    "land",
+    "explore"
+   ]
+  },
+  {
+   "q": "See new places",
+   "a": "explore",
+   "d": [
+    "land",
+    "pack",
+    "arrive"
+   ]
+  },
+  {
+   "q": "Put things in your bag",
+   "a": "pack",
+   "d": [
+    "land",
+    "arrive",
+    "explore"
+   ]
+  },
+  {
+   "q": "The coach ___ at 9 a.m.",
+   "a": "leaves",
+   "d": [
+    "leave",
+    "leaving",
+    "is leave"
+   ]
+  },
+  {
+   "q": "What time ___ it arrive?",
+   "a": "does",
+   "d": [
+    "do",
+    "is",
+    "are"
+   ]
+  },
+  {
+   "q": "Go on a …",
+   "a": "journey",
+   "d": [
+    "suitcase",
+    "seat",
+    "ticket"
+   ]
+  },
+  {
+   "q": "Travel ___ train",
+   "a": "by",
+   "d": [
+    "on",
+    "with",
+    "in"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "When do we use the present simple for the future?",
+   "o": [
+    "for timetables and fixed plans",
+    "for quick decisions",
+    "for things in the past",
+    "for actions happening now"
+   ],
+   "why": "Timetables use the present simple."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which verb is the opposite of take off?",
+   "o": [
+    "land",
+    "arrive",
+    "pack",
+    "explore"
+   ],
+   "why": "Planes take off and land."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is a travel verb from the lesson?",
+   "o": [
+    "go on a journey",
+    "brush your teeth",
+    "do homework",
+    "cook dinner"
+   ],
+   "why": "Go on a journey is a travel verb."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence is about a timetable?",
+   "o": [
+    "The bus leaves at 7 a.m.",
+    "I'll help you with your bag.",
+    "I'm going to visit my aunt.",
+    "I went to Muscat last week."
+   ],
+   "why": "Times on a timetable use the present simple."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a question: the bus / leave / what time?",
+   "o": [
+    "What time does the bus leave?",
+    "What time the bus leave?",
+    "What time does leave the bus?",
+    "What time do the bus leaves?"
+   ],
+   "why": "Question word + does + subject + verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Travel note: 8 a.m. – leave school. Which sentence is correct?",
+   "o": [
+    "The bus leaves school at 8 a.m.",
+    "The bus leave school at 8 a.m.",
+    "The bus is leave school at 8 a.m.",
+    "The bus leaving school at 8 a.m."
+   ],
+   "why": "The bus (it) + leaves."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete the itinerary: We ___ the museum at 11 a.m.",
+   "o": [
+    "explore",
+    "explores",
+    "exploring",
+    "are explore"
+   ],
+   "why": "We + base verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Correct the mistake: What time the train leaves?",
+   "o": [
+    "What time does the train leave?",
+    "What time the train leave?",
+    "What time does the train leaves?",
+    "What time is the train leave?"
+   ],
+   "why": "Add does and use the base verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "The bus leaves at 7 a.m. and arrives in Salalah at 7 p.m. How long is the journey?",
+   "o": [
+    "12 hours",
+    "7 hours",
+    "14 hours",
+    "10 hours"
+   ],
+   "why": "From 7 a.m. to 7 p.m. is 12 hours."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses the present simple for a future plan correctly?",
+   "o": [
+    "Our flight lands at 3 p.m. tomorrow.",
+    "Our flight landed at 3 p.m. tomorrow.",
+    "Our flight land at 3 p.m. tomorrow.",
+    "Our flight is land at 3 p.m. tomorrow."
+   ],
+   "why": "Fixed time + present simple with -s."
+  }
+ ]
+}
