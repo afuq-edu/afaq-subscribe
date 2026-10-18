@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الأول",
+ "unit": "Unit 1: Family and friends",
+ "lesson": "Lesson 3: Story – This is my family + Sound t",
+ "outcomes": [
+  "I can say mum, dad, brother and sister.",
+  "I can say This is my … and know it is good to be helpful.",
+  "I can say the sound /t/ and write the letter t."
+ ],
+ "tf": [
+  {
+   "s": "Mazin is Sami's brother.",
+   "t": true,
+   "why": "Yes! Sami says: This is my brother."
+  },
+  {
+   "s": "In the story, Fatma says: This is my friend, Lily.",
+   "t": true,
+   "why": "Yes! Lily is Fatma's friend."
+  },
+  {
+   "s": "Mazin is Sami's sister.",
+   "t": false,
+   "why": "Mazin is a boy. He is Sami's brother."
+  },
+  {
+   "s": "It is good to help our family.",
+   "t": true,
+   "why": "Yes! Be helpful."
+  },
+  {
+   "s": "Helping is a bad thing.",
+   "t": false,
+   "why": "Helping is a good thing. Be helpful!"
+  },
+  {
+   "s": "Tree starts with the sound /t/.",
+   "t": true,
+   "why": "Great! t, t, tree."
+  },
+  {
+   "s": "Teddy starts with the letter s.",
+   "t": false,
+   "why": "Teddy starts with t."
+  },
+  {
+   "s": "Mum and dad are in the family.",
+   "t": true,
+   "why": "Yes! Mum and dad are family words."
+  },
+  {
+   "s": "Dad is a sister.",
+   "t": false,
+   "why": "Dad is our father."
+  },
+  {
+   "s": "Apple starts with /t/.",
+   "t": false,
+   "why": "Apple starts with /æ/."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Sami points to Mazin. This is my …",
+   "o": [
+    "brother",
+    "sister",
+    "mum"
+   ],
+   "why": "Mazin is Sami's brother."
+  },
+  {
+   "q": "Fatma points to Lily. This is my …",
+   "o": [
+    "friend",
+    "dad",
+    "brother"
+   ],
+   "why": "Lily is Fatma's friend."
+  },
+  {
+   "q": "Who's this? (a man in the family)",
+   "o": [
+    "dad",
+    "mum",
+    "sister"
+   ],
+   "why": "Dad is a man in the family."
+  },
+  {
+   "q": "A girl in your family is your …",
+   "o": [
+    "sister",
+    "brother",
+    "dad"
+   ],
+   "why": "A sister is a girl."
+  },
+  {
+   "q": "You carry books for your mum. You are …",
+   "o": [
+    "helpful",
+    "sad",
+    "a cat"
+   ],
+   "why": "Great! You are helpful."
+  },
+  {
+   "q": "Which word starts with /t/?",
+   "o": [
+    "teddy",
+    "apple",
+    "snake"
+   ],
+   "why": "t, t, teddy!"
+  },
+  {
+   "q": "_ree: which letter is missing?",
+   "o": [
+    "t",
+    "s",
+    "a"
+   ],
+   "why": "t + ree = tree."
+  },
+  {
+   "q": "The /t/ Phonics Card shows a …",
+   "o": [
+    "teddy",
+    "sun",
+    "apple"
+   ],
+   "why": "Teddy starts with /t/."
+  },
+  {
+   "q": "The /t/ action is: cuddle a …",
+   "o": [
+    "teddy",
+    "snake",
+    "tree"
+   ],
+   "why": "We hug a teddy for /t/."
+  },
+  {
+   "q": "Mum, dad, brother, sister. They are a …",
+   "o": [
+    "family",
+    "cat",
+    "school"
+   ],
+   "why": "They are a family."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Catch Sami's brother.",
+   "a": "Mazin",
+   "d": [
+    "Fatma",
+    "Lily",
+    "Meg"
+   ]
+  },
+  {
+   "q": "Catch Fatma's friend.",
+   "a": "Lily",
+   "d": [
+    "Mazin",
+    "Tom",
+    "Meg"
+   ]
+  },
+  {
+   "q": "Catch a boy in the family.",
+   "a": "brother",
+   "d": [
+    "sister",
+    "mum",
+    "cat"
+   ]
+  },
+  {
+   "q": "Catch a girl in the family.",
+   "a": "sister",
+   "d": [
+    "brother",
+    "dad",
+    "boy"
+   ]
+  },
+  {
+   "q": "Catch the man in the family.",
+   "a": "dad",
+   "d": [
+    "mum",
+    "sister",
+    "girl"
+   ]
+  },
+  {
+   "q": "Catch the /t/ word.",
+   "a": "tree",
+   "d": [
+    "sun",
+    "apple",
+    "snake"
+   ]
+  },
+  {
+   "q": "Catch the /t/ animal.",
+   "a": "tiger",
+   "d": [
+    "snake",
+    "ant",
+    "cat"
+   ]
+  },
+  {
+   "q": "Catch the /t/ word you play with.",
+   "a": "toys",
+   "d": [
+    "sun",
+    "axe",
+    "apple"
+   ]
+  },
+  {
+   "q": "Catch another /t/ word.",
+   "a": "train",
+   "d": [
+    "six",
+    "ant",
+    "sing"
+   ]
+  },
+  {
+   "q": "Catch the letter for /t/.",
+   "a": "t",
+   "d": [
+    "s",
+    "a",
+    "p"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the name of the story?",
+   "o": [
+    "This is my family",
+    "Hello, Meg!",
+    "My cat Tom",
+    "Goodbye, Sami"
+   ],
+   "why": "The story is This is my family."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word starts with /t/?",
+   "o": [
+    "tin",
+    "sit",
+    "ant",
+    "sad"
+   ],
+   "why": "t, t, tin!"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which one is a family word?",
+   "o": [
+    "mum",
+    "tree",
+    "sun",
+    "apple"
+   ],
+   "why": "Mum is in the family."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who is a woman in the family?",
+   "o": [
+    "mum",
+    "dad",
+    "brother",
+    "friend"
+   ],
+   "why": "Mum is a woman in the family."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You show a photo of your sister. You say …",
+   "o": [
+    "This is my sister.",
+    "This is my dad.",
+    "I'm your sister.",
+    "Goodbye, sister."
+   ],
+   "why": "We say This is my … to show people."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend drops his papers. What can you do?",
+   "o": [
+    "Help him pick them up.",
+    "Go away.",
+    "Laugh.",
+    "Sit and watch."
+   ],
+   "why": "Be helpful like the children in the story."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "_iger: which letter is missing?",
+   "o": [
+    "t",
+    "s",
+    "a",
+    "p"
+   ],
+   "why": "t + iger = tiger."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does not belong: mum, dad, sister, tree?",
+   "o": [
+    "tree",
+    "mum",
+    "dad",
+    "sister"
+   ],
+   "why": "Tree is not a person in the family."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which word does NOT start with /t/?",
+   "o": [
+    "sun",
+    "teddy",
+    "tree",
+    "toys"
+   ],
+   "why": "Sun starts with /s/."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Fatma is a girl in Sami's family. So Fatma is his …",
+   "o": [
+    "sister",
+    "brother",
+    "dad",
+    "cat"
+   ],
+   "why": "A girl in your family is your sister."
+  }
+ ]
+}

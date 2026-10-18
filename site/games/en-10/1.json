@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف العاشر",
+  "unit": "1",
+  "lesson": "Unit 1: New Media – Introducing New Media",
+  "outcomes": [
+    "Name different types of devices and media.",
+    "Explain what 'new media' means in my own words.",
+    "Listen for key words to find out which media a speaker describes."
+  ],
+  "tf": [
+    {"s": "New media are types of media that are interactive.", "t": true, "why": "Yes! New media let people take part and communicate."},
+    {"s": "A printed newspaper is a good example of new media.", "t": false, "why": "A printed newspaper is old media; it is one-way communication."},
+    {"s": "A blog lets readers comment and communicate with the writer.", "t": true, "why": "Right, that is why a blog is interactive new media."},
+    {"s": "An online news site is a digital version of a newspaper.", "t": true, "why": "Correct, it is the newspaper on the Internet."},
+    {"s": "A smartphone, a tablet and a computer are all examples of a device.", "t": true, "why": "Well done, these are all devices."},
+    {"s": "All radios need batteries to work.", "t": false, "why": "Some radios run on solar power or wind up, so they do not need batteries."},
+    {"s": "'Interactive' means printed on paper.", "t": false, "why": "'Interactive' means involving communication between people."},
+    {"s": "On social media you can connect with other people and scroll through posts.", "t": true, "why": "Yes, these are key things people do on social media."},
+    {"s": "A video game is a type of old media.", "t": false, "why": "A video game is interactive, so it belongs to new media."},
+    {"s": "The first speaker says the radio cannot reach people in the desert.", "t": false, "why": "The speaker says the radio reaches everyone, even in the desert."}
+  ],
+  "boxes": [
+    {"q": "Which device can run on solar power or wind up?", "o": ["a radio", "a blog", "a tablet"], "why": "Some radios use solar power or wind up instead of batteries."},
+    {"q": "What does 'interactive' mean?", "o": ["involving communication between people", "very old", "printed on paper"], "why": "Interactive media let people communicate with each other."},
+    {"q": "Which one is new media?", "o": ["a blog", "a printed magazine", "a stereo"], "why": "A blog is online and interactive."},
+    {"q": "Which word completes: 'Social media helps people ___ with friends'?", "o": ["communicate", "print", "repair"], "why": "We communicate with friends on social media."},
+    {"q": "What is an online news site?", "o": ["a digital version of a newspaper", "a video game", "a stereo"], "why": "It gives the news on the Internet."},
+    {"q": "Which of these is worn on your wrist?", "o": ["a smart watch", "a radio", "a newspaper"], "why": "A smart watch is a small device you wear on your wrist."},
+    {"q": "Which is a type of old media?", "o": ["radio", "social media", "video streaming"], "why": "Radio is a traditional, one-way medium."},
+    {"q": "What can you do on social media?", "o": ["scroll through posts and comments", "listen to a stereo only", "read a printed page"], "why": "Scrolling through posts is a typical social media activity."},
+    {"q": "Which word describes a smartphone, a tablet or a computer?", "o": ["device", "blog", "website"], "why": "They are all devices."},
+    {"q": "Why can the radio be more important than TV, says speaker 1?", "o": ["It reaches everyone", "It shows pictures", "It is interactive"], "why": "The radio reaches rich and poor people, in cities and in the desert."}
+  ],
+  "hunt": [
+    {"q": "Media you read online, written by one person", "a": "blog", "d": ["radio", "stereo", "magazine"]},
+    {"q": "A device you wear like a watch", "a": "smart watch", "d": ["tablet", "stereo", "radio"]},
+    {"q": "You play it on a screen", "a": "video game", "d": ["newspaper", "radio", "magazine"]},
+    {"q": "New media let people do this", "a": "communicate", "d": ["print", "repair", "wind up"]},
+    {"q": "Opposite of new media", "a": "old media", "d": ["social media", "blog", "website"]},
+    {"q": "Media you can hear but not see", "a": "radio", "d": ["TV", "magazine", "blog"]},
+    {"q": "Watching videos online without downloading", "a": "video streaming", "d": ["newspaper", "stereo", "radio"]},
+    {"q": "Smartphone, tablet or computer", "a": "device", "d": ["blog", "website", "magazine"]},
+    {"q": "Printed news you buy every day", "a": "newspaper", "d": ["blog", "website", "video game"]},
+    {"q": "Speaker 3 talks about this media", "a": "social media", "d": ["radio", "newspaper", "stereo"]}
+  ],
+  "mcq": [
+    {"lv": "التذكر", "q": "New media are types of media that are ...", "o": ["interactive", "silent", "always printed", "only for adults"], "why": "New media let people take part and communicate."},
+    {"lv": "التذكر", "q": "Which of these is a device?", "o": ["a tablet", "a blog", "a website", "a newspaper"], "why": "A tablet is a device, like a smartphone or a computer."},
+    {"lv": "التذكر", "q": "Which is a type of media that you can read on paper?", "o": ["a magazine", "a blog", "video streaming", "a video game"], "why": "Magazines are printed on paper."},
+    {"lv": "التذكر", "q": "Which word means 'to join or link with other people'?", "o": ["connect", "download", "print", "wind up"], "why": "We connect with other people, for example on social media."},
+    {"lv": "التطبيق", "q": "A speaker says: 'It uses solar power, so you don't need batteries.' What is it?", "o": ["a radio", "a blog", "a magazine", "a website"], "why": "The key words 'solar power' and 'batteries' point to the radio."},
+    {"lv": "التطبيق", "q": "Choose the correct sentence about media.", "o": ["I use social media because I can talk to my friends.", "I use social media because it is printed.", "I read a radio every morning.", "I listen to a magazine at night."], "why": "This sentence uses the media word correctly and gives a reason."},
+    {"lv": "التطبيق", "q": "Ali reads the news on his phone and writes comments. What is he using?", "o": ["an online news site", "a printed newspaper", "a stereo", "a radio"], "why": "Reading news online and commenting is new, interactive media."},
+    {"lv": "التحليل", "q": "Why is a blog new media but a printed newspaper is not?", "o": ["A blog lets readers comment and communicate.", "A blog is always longer.", "A newspaper has no pictures.", "A blog is only for news."], "why": "A blog is interactive, while a printed newspaper is one-way."},
+    {"lv": "التحليل", "q": "Which words tell you a speaker is talking about social media?", "o": ["connect with people, scroll through posts", "solar power, batteries", "printed pages every morning", "wind up the handle"], "why": "Connecting and scrolling through posts describe social media."},
+    {"lv": "التحليل", "q": "Which group has only new media?", "o": ["blog, social media, video game", "radio, newspaper, magazine", "blog, radio, newspaper", "magazine, stereo, video game"], "why": "Blogs, social media and video games are all interactive."}
+  ]
+}
