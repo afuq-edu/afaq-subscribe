@@ -36,7 +36,7 @@ export function ready(pkg) {
 const append = (notes, text) => (notes || '').includes(MARK) ? notes : ((notes || '').trimEnd() + (notes && notes.trim() ? '\n\n' : '') + text);
 const q = (s) => "'" + String(s).replace(/'/g, "''") + "'";
 
-const [mode, ...args] = process.argv.slice(2);
+const [mode, ...args] = import.meta.url === `file://${process.argv[1]}` ? process.argv.slice(2) : [];
 if (mode === 'sql') {
   for (const pkg of args) {
     const map = ready(pkg);
