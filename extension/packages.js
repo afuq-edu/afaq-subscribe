@@ -3,7 +3,7 @@ import { hadirEngine } from './engine.js';
 import { bestLesson, rankLessons, lessonNum, unitNum, kwNorm, kwScore, titleSim, bestTreeLesson, unitMayHold, stripSessionSuffix, sessionSuffix } from './match.js';
 import { parsePlanText, parsePlanBest, NOOR_STRATEGIES, NOOR_RESOURCES, NOOR_LEVELS, SAMPLE_PLAN, mapStrategies, mapResources } from './parse.js';
 import { AFAQ } from './afaq-config.js';
-import { remoteLesson, isRemote, REMOTE_ERR } from './remote.js';
+import { remoteLesson, isRemote, REMOTE_ERR, noorCheck } from './remote.js';
 import { layoutDates, isIso, weekStart, weekEnd, inWeekOf, isSchoolDay, parseHolidays, countSchoolDays } from './dates.js';
 import { normalizePackage, normalizeLesson, hasFileDates, datedCount, lintPackage, lintLevel, fitLessonMinutes } from './lint.js';
 export { isRemote, REMOTE_ERR, layoutDates, isIso, weekStart, weekEnd, inWeekOf, isSchoolDay, parseHolidays, countSchoolDays, normalizePackage, normalizeLesson, hasFileDates, datedCount, lintPackage, lintLevel };
@@ -818,9 +818,27 @@ export async function applyTitleSuffix(tabId, pkg, lesson) {
   return r.ok ? want : null;
 }
 
+// المعلم المسجّل في نور: رقمه في نص الصفحة («var user_id = '…'») واسمه في الترحيب أو الصورة — أو null
+async function noorWho(tabId) {
+  try {
+    const [res] = await chrome.scripting.executeScript({ target: { tabId }, func: () => {
+      let id = '';
+      for (const sc of document.scripts) { const m = (sc.textContent || '').match(/\buser_id\s*=\s*['"](\d{4,})['"]/); if (m) { id = m[1]; break; } }
+      const h = document.querySelector('.wlc-section h1'), av = document.querySelector('.navbar-account .avatar[title], .avatar[title]');
+      const name = ((h && h.textContent) || (av && av.getAttribute('title')) || '').replace(/\s+/g, ' ').trim();
+      return id ? { id, name } : null;
+    } });
+    return (res && res.result) || null;
+  } catch (e) { return null; }
+}
+
 // تعبئة حصة في نموذج نور — مع حفظ «آخر تعبئة» وتحديث التقدم والسجل
 export async function fillNoor(tabId, pkg, lesson, opts = {}) {
   if (isRemote(pkg)) {
+    // حساب نور المفتوح: الاشتراك المدفوع لحساب نور صاحبه فقط
+    const who = await noorWho(tabId);
+    const nc = await noorCheck(who).catch(() => ({ ok: true }));
+    if (!nc.ok) return [{ key: 'remote', name: 'الاشتراك', short: 'الاشتراك', status: 'fail', blocked: true, remoteError: 'noor_other', error: nc.owner ? `هذا الاشتراك لحساب نور «${nc.owner}»، وحساب نور المفتوح الآن لمعلم آخر. لتحضير حساب آخر يحتاج صاحبه اشتراكه الخاص.` : REMOTE_ERR.noor_other, values: [] }];
     // مادة اشتراك: محتوى الحصة يُجلب الآن من منصة أفق (لا يُخزَّن في الإضافة)
     const r = await remoteLesson(pkg, lesson);
     if (!r.ok) return [{ key: 'remote', name: 'الاشتراك', short: 'الاشتراك', status: 'fail', blocked: true, remoteError: r.error, error: REMOTE_ERR[r.error] || REMOTE_ERR.network, values: [] }];
