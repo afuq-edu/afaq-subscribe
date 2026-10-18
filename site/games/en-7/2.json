@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Welcome",
+ "lesson": "Welcome – Lesson 2: Team Talk",
+ "outcomes": [
+  "Find out who each WOW! Team member is from their profile.",
+  "Answer questions about the About Us page.",
+  "Decide if a sentence is true, false or doesn't say."
+ ],
+ "tf": [
+  {
+   "s": "Frank is thirteen and likes travelling with his parents.",
+   "t": true,
+   "why": "Yes, that is in Frank's profile."
+  },
+  {
+   "s": "Majid usually wears an Omani hat and a dishdasha.",
+   "t": true,
+   "why": "Correct, that is Majid."
+  },
+  {
+   "s": "Bayan was hungry when she went camping because they didn't take enough food.",
+   "t": true,
+   "why": "Yes, they didn't take enough food."
+  },
+  {
+   "s": "Emily usually wears her long coat in Oman.",
+   "t": false,
+   "why": "It is not usually cold enough in Oman to wear it."
+  },
+  {
+   "s": "Egyptian food tastes like Spanish food.",
+   "t": true,
+   "why": "Yes, the profile says this."
+  },
+  {
+   "s": "Majid has been camping in dangerous places.",
+   "t": false,
+   "why": "He hasn't been camping anywhere dangerous."
+  },
+  {
+   "s": "All the students in Majid's class know some first aid.",
+   "t": true,
+   "why": "Yes, they all know some first aid."
+  },
+  {
+   "s": "Bayan has never been camping.",
+   "t": false,
+   "why": "She has been camping twice before."
+  },
+  {
+   "s": "“Doesn't say” means the text says the opposite.",
+   "t": false,
+   "why": "Doesn't say means the text gives no information; false means it says the opposite."
+  },
+  {
+   "s": "A compass and a camping stove are words for the outdoors.",
+   "t": true,
+   "why": "Yes, we use them when we go camping."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Who is thirteen?",
+   "o": [
+    "Frank",
+    "Majid",
+    "Bayan"
+   ],
+   "why": "Frank is thirteen."
+  },
+  {
+   "q": "Who usually wears a dishdasha?",
+   "o": [
+    "Majid",
+    "Frank",
+    "Emily"
+   ],
+   "why": "Majid wears an Omani hat and dishdasha."
+  },
+  {
+   "q": "Bayan has been camping ___ before.",
+   "o": [
+    "twice",
+    "never",
+    "ten times"
+   ],
+   "why": "She has been camping twice before."
+  },
+  {
+   "q": "Which food tastes like Spanish food?",
+   "o": [
+    "Egyptian food",
+    "Indian food",
+    "Omani food"
+   ],
+   "why": "The text says Egyptian food tastes like Spanish food."
+  },
+  {
+   "q": "Why was Bayan hungry when she went camping?",
+   "o": [
+    "They didn't take enough food.",
+    "The food was too hot.",
+    "She didn't like the food."
+   ],
+   "why": "They didn't take enough food."
+  },
+  {
+   "q": "It isn't cold ___ to wear a long coat.",
+   "o": [
+    "enough",
+    "too",
+    "very"
+   ],
+   "why": "Enough comes after the adjective: cold enough."
+  },
+  {
+   "q": "Which word is clothes or an accessory?",
+   "o": [
+    "bracelet",
+    "bandage",
+    "compass"
+   ],
+   "why": "A bracelet is an accessory."
+  },
+  {
+   "q": "What do you write when the text gives no information?",
+   "o": [
+    "DS",
+    "T",
+    "F"
+   ],
+   "why": "DS = doesn't say."
+  },
+  {
+   "q": "I love ___ football.",
+   "o": [
+    "playing",
+    "play",
+    "played"
+   ],
+   "why": "After love, we often use the -ing form."
+  },
+  {
+   "q": "Which word is a first aid item?",
+   "o": [
+    "bandage",
+    "bracelet",
+    "checked shirt"
+   ],
+   "why": "We use a bandage for first aid."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Who is thirteen?",
+   "a": "Frank",
+   "d": [
+    "Majid",
+    "Bayan",
+    "Emily"
+   ]
+  },
+  {
+   "q": "Who wears a dishdasha?",
+   "a": "Majid",
+   "d": [
+    "Frank",
+    "Emily",
+    "Bayan"
+   ]
+  },
+  {
+   "q": "Who has a long coat?",
+   "a": "Emily",
+   "d": [
+    "Majid",
+    "Frank",
+    "Bayan"
+   ]
+  },
+  {
+   "q": "Who has been camping twice?",
+   "a": "Bayan",
+   "d": [
+    "Emily",
+    "Frank",
+    "Majid"
+   ]
+  },
+  {
+   "q": "Food that tastes like Spanish",
+   "a": "Egyptian",
+   "d": [
+    "Indian",
+    "Chinese",
+    "Italian"
+   ]
+  },
+  {
+   "q": "Not cold ___ for a coat",
+   "a": "enough",
+   "d": [
+    "too",
+    "very",
+    "more"
+   ]
+  },
+  {
+   "q": "You use it to find the way",
+   "a": "compass",
+   "d": [
+    "bandage",
+    "stove",
+    "bracelet"
+   ]
+  },
+  {
+   "q": "Item for a cut finger",
+   "a": "bandage",
+   "d": [
+    "compass",
+    "bracelet",
+    "stove"
+   ]
+  },
+  {
+   "q": "Text gives no information",
+   "a": "doesn't say",
+   "d": [
+    "true",
+    "false",
+    "correct"
+   ]
+  },
+  {
+   "q": "I'm interested ___ music.",
+   "a": "in",
+   "d": [
+    "on",
+    "at",
+    "for"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who usually wears an Omani hat and dishdasha?",
+   "o": [
+    "Majid",
+    "Frank",
+    "Emily",
+    "Bayan"
+   ],
+   "why": "Majid's profile says this."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who is thirteen and likes travelling with his parents?",
+   "o": [
+    "Frank",
+    "Majid",
+    "Basim",
+    "Juma"
+   ],
+   "why": "That is Frank's profile."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Complete: All the students in Majid's class know some ___.",
+   "o": [
+    "first aid",
+    "French",
+    "football",
+    "cooking"
+   ],
+   "why": "They all know some first aid."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does DS mean in a reading task?",
+   "o": [
+    "doesn't say",
+    "don't stop",
+    "does speak",
+    "didn't start"
+   ],
+   "why": "DS = doesn't say."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "T, F or DS? Frank likes cooking and wants to cook more.",
+   "o": [
+    "T",
+    "F",
+    "DS",
+    "It is impossible to know"
+   ],
+   "why": "The text says this, so it is true."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "T, F or DS? Majid has been camping in dangerous places.",
+   "o": [
+    "F",
+    "T",
+    "DS",
+    "T and DS"
+   ],
+   "why": "The text says he hasn't been anywhere dangerous."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence describes Bayan correctly?",
+   "o": [
+    "She has been camping twice before.",
+    "She has never been camping.",
+    "She usually wears a dishdasha.",
+    "She is thirteen and travels with her parents."
+   ],
+   "why": "Bayan has been camping twice."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why doesn't Emily usually wear her long coat?",
+   "o": [
+    "It is not usually cold enough in Oman.",
+    "It is too big for her.",
+    "She lost it.",
+    "She doesn't like the colour."
+   ],
+   "why": "Oman is not usually cold enough for a long coat."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between F and DS?",
+   "o": [
+    "F: the text says the opposite. DS: the text gives no information.",
+    "F: the text gives no information. DS: the text says the opposite.",
+    "They mean the same thing.",
+    "F is for people; DS is for places."
+   ],
+   "why": "Look for proof: opposite = F, nothing = DS."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Bayan was hungry on her last camping trip. What will she probably do next time?",
+   "o": [
+    "Take enough food",
+    "Take a long coat",
+    "Wear a dishdasha",
+    "Not take any food"
+   ],
+   "why": "They were hungry because they didn't take enough food."
+  }
+ ]
+}

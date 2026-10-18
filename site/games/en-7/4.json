@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Lesson 2: Team Talk – I’ve no idea! I get it!",
+ "outcomes": [
+  "Find information in the Team Talk dialogue.",
+  "Use I've no idea. / That's cool! / I get it. in short dialogues.",
+  "Answer questions about a dialogue in complete sentences."
+ ],
+ "tf": [
+  {
+   "s": "Frank has been a puppeteer since he was eight.",
+   "t": true,
+   "why": "Yes, he started when he was eight."
+  },
+  {
+   "s": "Majid's uncle is a sound editor.",
+   "t": false,
+   "why": "Majid's uncle is a comedian."
+  },
+  {
+   "s": "Frank's costume is a bit small now.",
+   "t": true,
+   "why": "Yes, he has had it for a long time."
+  },
+  {
+   "s": "We say “I've no idea” when we don't know the answer.",
+   "t": true,
+   "why": "Right, it means I don't know."
+  },
+  {
+   "s": "We say “I get it” when we don't understand a joke.",
+   "t": false,
+   "why": "I get it means I understand."
+  },
+  {
+   "s": "The joke Nobody Nose is funny because nose sounds like knows.",
+   "t": true,
+   "why": "Yes, it also means nobody knows."
+  },
+  {
+   "s": "Frank has been ready since lunchtime.",
+   "t": true,
+   "why": "Correct, he was ready since lunchtime."
+  },
+  {
+   "s": "Frank bought his costume yesterday.",
+   "t": false,
+   "why": "He's had it for a long time."
+  },
+  {
+   "s": "“That's cool!” shows you think something is great.",
+   "t": true,
+   "why": "Yes, we say it when we like something."
+  },
+  {
+   "s": "Ali told Frank and Majid to come on because the show was finished.",
+   "t": false,
+   "why": "It was time for the WOW! Talent Show to start."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What's the capital of Peru? – ___",
+   "o": [
+    "I've no idea.",
+    "That's cool!",
+    "I get it."
+   ],
+   "why": "Use I've no idea when you don't know."
+  },
+  {
+   "q": "My aunt is a TV presenter. – Wow! That's ___!",
+   "o": [
+    "cool",
+    "idea",
+    "get"
+   ],
+   "why": "That's cool! shows you are impressed."
+  },
+  {
+   "q": "Do you get the joke? – Yes, I ___ it!",
+   "o": [
+    "get",
+    "know",
+    "idea"
+   ],
+   "why": "I get it = I understand."
+  },
+  {
+   "q": "Majid's uncle makes people laugh. His job is ___.",
+   "o": [
+    "comedian",
+    "puppeteer",
+    "writer"
+   ],
+   "why": "His uncle is a comedian."
+  },
+  {
+   "q": "How long has Frank had his costume?",
+   "o": [
+    "for a long time",
+    "since yesterday",
+    "for one day"
+   ],
+   "why": "He's had it for a long time."
+  },
+  {
+   "q": "Is Frank's costume too big or a bit small?",
+   "o": [
+    "a bit small",
+    "too big",
+    "just right"
+   ],
+   "why": "It's a bit small now."
+  },
+  {
+   "q": "In the joke, nose sounds like ___.",
+   "o": [
+    "knows",
+    "noise",
+    "nice"
+   ],
+   "why": "Nose and knows sound the same."
+  },
+  {
+   "q": "What is the show in the dialogue?",
+   "o": [
+    "the WOW! Talent Show",
+    "a circus show",
+    "a cooking show"
+   ],
+   "why": "They are getting ready for the WOW! Talent Show."
+  },
+  {
+   "q": "Which answer is a complete sentence?",
+   "o": [
+    "Frank has been ready since lunchtime.",
+    "Since lunchtime.",
+    "Lunchtime."
+   ],
+   "why": "A complete sentence has a subject and a verb."
+  },
+  {
+   "q": "Who has been a puppeteer since he was eight?",
+   "o": [
+    "Frank",
+    "Majid",
+    "Ali"
+   ],
+   "why": "Frank is the puppeteer."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "You don't know: I've no ___.",
+   "a": "idea",
+   "d": [
+    "joke",
+    "clue",
+    "answer"
+   ]
+  },
+  {
+   "q": "You understand: I ___ it!",
+   "a": "get",
+   "d": [
+    "got",
+    "have",
+    "know"
+   ]
+  },
+  {
+   "q": "Great news: That's ___!",
+   "a": "cool",
+   "d": [
+    "bad",
+    "sad",
+    "idea"
+   ]
+  },
+  {
+   "q": "Majid's uncle's job",
+   "a": "comedian",
+   "d": [
+    "puppeteer",
+    "clown",
+    "writer"
+   ]
+  },
+  {
+   "q": "Frank's job in the show",
+   "a": "puppeteer",
+   "d": [
+    "comedian",
+    "presenter",
+    "clown"
+   ]
+  },
+  {
+   "q": "Nose sounds like ___",
+   "a": "knows",
+   "d": [
+    "noise",
+    "nice",
+    "news"
+   ]
+  },
+  {
+   "q": "Frank's costume is a bit ___",
+   "a": "small",
+   "d": [
+    "big",
+    "old",
+    "long"
+   ]
+  },
+  {
+   "q": "Frank ready since ___",
+   "a": "lunchtime",
+   "d": [
+    "breakfast",
+    "bedtime",
+    "Monday"
+   ]
+  },
+  {
+   "q": "Frank a puppeteer since age ___",
+   "a": "eight",
+   "d": [
+    "five",
+    "ten",
+    "twelve"
+   ]
+  },
+  {
+   "q": "The show: WOW! ___ Show",
+   "a": "Talent",
+   "d": [
+    "Cooking",
+    "Magic",
+    "Circus"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which expression do you use when you don't know the answer?",
+   "o": [
+    "I've no idea.",
+    "That's cool!",
+    "I get it.",
+    "Nice to meet you."
+   ],
+   "why": "I've no idea = I don't know."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How long has Frank been a puppeteer?",
+   "o": [
+    "Since he was eight.",
+    "For two days.",
+    "Since lunchtime.",
+    "Since last week."
+   ],
+   "why": "He started when he was eight."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What job does Majid's uncle do?",
+   "o": [
+    "He's a comedian.",
+    "He's a sound editor.",
+    "He's a puppeteer.",
+    "He's a writer."
+   ],
+   "why": "Majid's uncle is a comedian."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which expression shows you understand something?",
+   "o": [
+    "I get it.",
+    "I've no idea.",
+    "Come on!",
+    "See you!"
+   ],
+   "why": "I get it = I understand."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: My brother is a stunt performer. B: ___",
+   "o": [
+    "Wow! That's cool!",
+    "I've no idea.",
+    "I get it, it's funny.",
+    "Nobody nose."
+   ],
+   "why": "That's cool! shows you are impressed."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a complete answer: Since when has Frank been ready?",
+   "o": [
+    "Frank has been ready since lunchtime.",
+    "Lunchtime.",
+    "He ready lunchtime.",
+    "Since he was eight."
+   ],
+   "why": "Use the question words to make a full sentence."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: Do you get the joke? Which reply shows you understand it?",
+   "o": [
+    "Yes, I get it! It's really funny.",
+    "I've no idea.",
+    "That's a puppet.",
+    "No, I don't get it."
+   ],
+   "why": "I get it shows you understand."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the joke Nobody Nose funny?",
+   "o": [
+    "Nose sounds like knows, so it also means nobody knows.",
+    "Because the puppet has a big nose.",
+    "Because Frank is a comedian.",
+    "Because nobody laughed."
+   ],
+   "why": "Words that sound the same can make jokes."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Frank has had his costume for a long time. Why is it a bit small now?",
+   "o": [
+    "Frank has grown bigger since he got it.",
+    "The costume is new.",
+    "Frank is getting smaller.",
+    "It belongs to Majid."
+   ],
+   "why": "Children grow, so old clothes get small."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why did Ali tell Frank and Majid to come on?",
+   "o": [
+    "It was time for the WOW! Talent Show.",
+    "They were late for school.",
+    "The show was finished.",
+    "They wanted to go home."
+   ],
+   "why": "The show was starting."
+  }
+ ]
+}

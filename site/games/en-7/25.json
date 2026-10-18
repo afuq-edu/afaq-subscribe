@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Lesson 9: Literacy – Writing an information text",
+ "outcomes": [
+  "Use facts from a fact file to write an information text.",
+  "Follow the rules: full sentences, no abbreviations, adjectives, logical order.",
+  "Check a partner's text and give helpful feedback."
+ ],
+ "tf": [
+  {
+   "s": "In an information text, we write full sentences.",
+   "t": true,
+   "why": "Yes, notes become full sentences."
+  },
+  {
+   "s": "It is good to use abbreviations like kg and m in an information text.",
+   "t": false,
+   "why": "Write the full words: kilograms, metres."
+  },
+  {
+   "s": "Hammerhead shark babies are called pups.",
+   "t": true,
+   "why": "Yes, baby sharks are pups."
+  },
+  {
+   "s": "A hammerhead shark can weigh up to 450 kilograms.",
+   "t": true,
+   "why": "Yes, it is a very heavy fish."
+  },
+  {
+   "s": "The hammerhead shark's favourite food is seaweed.",
+   "t": false,
+   "why": "Its favourite food is stingrays."
+  },
+  {
+   "s": "Adjectives can make an information text more interesting.",
+   "t": true,
+   "why": "Yes, words like strange and amazing help."
+  },
+  {
+   "s": "The hammerhead shark lives in cold rivers.",
+   "t": false,
+   "why": "It lives in warm water in oceans around the world."
+  },
+  {
+   "s": "We should order the facts in a logical way.",
+   "t": true,
+   "why": "Yes, a clear order helps the reader."
+  },
+  {
+   "s": "An information text should start with the animal's family.",
+   "t": false,
+   "why": "Start with the name and type to introduce the animal."
+  },
+  {
+   "s": "We should use all the facts from the fact file.",
+   "t": true,
+   "why": "Yes, that is one of the rules."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Pups are a fact for which heading?",
+   "o": [
+    "Family",
+    "Food",
+    "Home"
+   ],
+   "why": "Babies go under Family."
+  },
+  {
+   "q": "How long can a hammerhead shark be?",
+   "o": [
+    "up to 6 metres",
+    "up to 6 centimetres",
+    "up to 60 metres"
+   ],
+   "why": "It can be up to six metres."
+  },
+  {
+   "q": "Which is a sentence, not a note?",
+   "o": [
+    "It eats stingrays.",
+    "Food – stingrays",
+    "stingrays, fish"
+   ],
+   "why": "A sentence has a subject and a verb."
+  },
+  {
+   "q": "Write in full: kg",
+   "o": [
+    "kilograms",
+    "kilometres",
+    "kings"
+   ],
+   "why": "kg is short for kilograms."
+  },
+  {
+   "q": "Write in full: m (for length)",
+   "o": [
+    "metres",
+    "minutes",
+    "months"
+   ],
+   "why": "m is short for metres."
+  },
+  {
+   "q": "Which word is an adjective?",
+   "o": [
+    "strange",
+    "shark",
+    "swim"
+   ],
+   "why": "Strange describes a noun."
+  },
+  {
+   "q": "Which one is an abbreviation?",
+   "o": [
+    "cm",
+    "centimetres",
+    "kilograms"
+   ],
+   "why": "cm is the short form of centimetres."
+  },
+  {
+   "q": "Which is a good fact file heading?",
+   "o": [
+    "Food",
+    "Hello",
+    "The End"
+   ],
+   "why": "Food is a fact file heading."
+  },
+  {
+   "q": "Why is it called a hammerhead shark?",
+   "o": [
+    "Its head looks like a hammer.",
+    "It eats hammers.",
+    "It is very small."
+   ],
+   "why": "Its wide head has a hammer shape."
+  },
+  {
+   "q": "What do we call feedback with two good points and one idea?",
+   "o": [
+    "two stars and a wish",
+    "a fact file",
+    "a heading"
+   ],
+   "why": "Stars are good points; the wish helps next time."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Hammerhead babies",
+   "a": "pups",
+   "d": [
+    "cubs",
+    "calves",
+    "chicks"
+   ]
+  },
+  {
+   "q": "Hammerhead's favourite food",
+   "a": "stingrays",
+   "d": [
+    "seaweed",
+    "insects",
+    "fruit"
+   ]
+  },
+  {
+   "q": "Shark with a head like a tool",
+   "a": "hammerhead",
+   "d": [
+    "whale shark",
+    "tiger shark",
+    "great white"
+   ]
+  },
+  {
+   "q": "Hammerhead's home: warm …",
+   "a": "oceans",
+   "d": [
+    "rivers",
+    "lakes",
+    "ponds"
+   ]
+  },
+  {
+   "q": "An adjective for your text",
+   "a": "amazing",
+   "d": [
+    "shark",
+    "swim",
+    "ocean"
+   ]
+  },
+  {
+   "q": "Feedback: two stars and a …",
+   "a": "wish",
+   "d": [
+    "fact",
+    "heading",
+    "note"
+   ]
+  },
+  {
+   "q": "Arabian leopards live in …",
+   "a": "Dhofar",
+   "d": [
+    "Madagascar",
+    "Australia",
+    "Indonesia"
+   ]
+  },
+  {
+   "q": "Information texts use full …",
+   "a": "sentences",
+   "d": [
+    "notes",
+    "headings",
+    "abbreviations"
+   ]
+  },
+  {
+   "q": "Order the facts …",
+   "a": "logically",
+   "d": [
+    "randomly",
+    "backwards",
+    "twice"
+   ]
+  },
+  {
+   "q": "A shark is a kind of …",
+   "a": "fish",
+   "d": [
+    "mammal",
+    "reptile",
+    "insect"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is NOT a rule for writing an information text?",
+   "o": [
+    "Use lots of abbreviations.",
+    "Use full sentences.",
+    "Add adjectives.",
+    "Put the facts in a logical order."
+   ],
+   "why": "We avoid abbreviations in an information text."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Under which heading do you write 'stingrays'?",
+   "o": [
+    "Food",
+    "Size",
+    "Home",
+    "Body"
+   ],
+   "why": "Stingrays are what it eats."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What should come first in an information text?",
+   "o": [
+    "the animal's name and type",
+    "the animal's family",
+    "an interesting fact",
+    "the animal's food"
+   ],
+   "why": "First we introduce the animal."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which animal does the teacher use as a model fact file?",
+   "o": [
+    "the Arabian leopard",
+    "the hammerhead shark",
+    "the Komodo dragon",
+    "the stick insect"
+   ],
+   "why": "The model fact file is about the Arabian leopard."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Change the note into a sentence: Home – warm water in oceans.",
+   "o": [
+    "The hammerhead shark lives in warm water in oceans all around the world.",
+    "Home warm water oceans.",
+    "Warm water in oceans home.",
+    "The hammerhead shark home is warm."
+   ],
+   "why": "A full sentence has a subject and a verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Rewrite without abbreviations: up to 6 m long and 450 kg.",
+   "o": [
+    "up to six metres long and it weighs up to 450 kilograms",
+    "up to 6 m long and 450 kilograms",
+    "up to six minutes long and 450 kg",
+    "up to six miles long and 450 grams"
+   ],
+   "why": "Write the full words for m and kg."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Add an adjective: It has a ___ head.",
+   "o": [
+    "strange",
+    "swims",
+    "quickly",
+    "ocean"
+   ],
+   "why": "Strange is an adjective that describes the head."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why shouldn't we use abbreviations in an information text?",
+   "o": [
+    "Because the text uses full sentences and complete words.",
+    "Because abbreviations are too long.",
+    "Because readers love short notes.",
+    "Because fact files have no numbers."
+   ],
+   "why": "Information texts use complete words."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best first sentence for an information text?",
+   "o": [
+    "The Arabian leopard is a rare and beautiful mammal.",
+    "It is nice.",
+    "Food: goats and birds.",
+    "And it has spots too."
+   ],
+   "why": "It introduces the animal with its name and type."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the most helpful feedback for a partner's text?",
+   "o": [
+    "Your facts are clear. Next time, write the size in full words.",
+    "It's bad.",
+    "I don't like sharks.",
+    "Write it again."
+   ],
+   "why": "Good feedback gives praise and one clear tip."
+  }
+ ]
+}

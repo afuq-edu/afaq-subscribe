@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Lesson 11: Get ready for… A2 Key for Schools",
+ "outcomes": [
+  "Read a text and choose the correct answer, then check the other options are wrong.",
+  "Fill a gap with ONE correct word by thinking about the type of word.",
+  "Understand short notices and messages."
+ ],
+ "tf": [
+  {
+   "s": "After you choose an answer, it is a good idea to check the other options are wrong.",
+   "t": true,
+   "why": "Yes, this is the exam tip for Reading Part 3."
+  },
+  {
+   "s": "Thuriya has been a writer for twenty years.",
+   "t": true,
+   "why": "Yes, she has been a writer for a long time."
+  },
+  {
+   "s": "Thuriya travelled to Antarctica a month ago.",
+   "t": false,
+   "why": "She has been there for three weeks."
+  },
+  {
+   "s": "Thuriya is going to Africa next.",
+   "t": true,
+   "why": "Yes, and it will be warmer there."
+  },
+  {
+   "s": "In a one-word gap task, you can write two or three words.",
+   "t": false,
+   "why": "You write only ONE word in each gap."
+  },
+  {
+   "s": "It is helpful to read the whole text first before filling the gaps.",
+   "t": true,
+   "why": "Yes, it helps you understand and predict."
+  },
+  {
+   "s": "Only a few children read Wild Kids magazine.",
+   "t": false,
+   "why": "Thousands of children all around the world read it."
+  },
+  {
+   "s": "Thuriya cooks dinner every day.",
+   "t": false,
+   "why": "She cooks twice a week, on Monday and Friday."
+  },
+  {
+   "s": "A good tip for Reading Part 1 is to think where you might see each text.",
+   "t": true,
+   "why": "Yes, that helps you understand a notice."
+  },
+  {
+   "s": "Twice a week means two times every week.",
+   "t": true,
+   "why": "Yes, twice means two times."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How long has Thuriya been a writer?",
+   "o": [
+    "for twenty years",
+    "for three weeks",
+    "for two years"
+   ],
+   "why": "She has been a writer for twenty years."
+  },
+  {
+   "q": "How often does Thuriya cook dinner?",
+   "o": [
+    "twice a week",
+    "every day",
+    "once a month"
+   ],
+   "why": "She cooks on Monday and Friday."
+  },
+  {
+   "q": "Where is Thuriya going next?",
+   "o": [
+    "to Africa",
+    "to Antarctica",
+    "to Oman"
+   ],
+   "why": "Her next trip is to Africa."
+  },
+  {
+   "q": "Complete: I've lived here ___ 2019.",
+   "o": [
+    "since",
+    "for",
+    "ago"
+   ],
+   "why": "Use since with a point in time."
+  },
+  {
+   "q": "Complete: If it rains, we ___ stay at home.",
+   "o": [
+    "will",
+    "are",
+    "did"
+   ],
+   "why": "First conditional: If + present, will + verb."
+  },
+  {
+   "q": "A notice says: Closed on Friday. Where might you see it?",
+   "o": [
+    "on a shop door",
+    "inside a book",
+    "on a plane ticket"
+   ],
+   "why": "Shops put notices like this on the door."
+  },
+  {
+   "q": "Complete: A seal has ___ instead of feet.",
+   "o": [
+    "flippers",
+    "wings",
+    "horns"
+   ],
+   "why": "Seals use flippers to swim."
+  },
+  {
+   "q": "Where might you see a notice about devices in boxes?",
+   "o": [
+    "at an airport",
+    "in a forest",
+    "at the beach"
+   ],
+   "why": "Airports ask you to put devices in boxes."
+  },
+  {
+   "q": "Who reads Wild Kids magazine?",
+   "o": [
+    "thousands of children",
+    "only teachers",
+    "only Thuriya"
+   ],
+   "why": "Children all around the world read it."
+  },
+  {
+   "q": "What should you check after filling a gap?",
+   "o": [
+    "the spelling",
+    "the page colour",
+    "the picture size"
+   ],
+   "why": "Always check your spelling."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Thuriya's job",
+   "a": "writer",
+   "d": [
+    "doctor",
+    "pilot",
+    "teacher"
+   ]
+  },
+  {
+   "q": "Years as a writer",
+   "a": "twenty",
+   "d": [
+    "two",
+    "three",
+    "ten"
+   ]
+  },
+  {
+   "q": "How long in Antarctica?",
+   "a": "three weeks",
+   "d": [
+    "a month",
+    "a year",
+    "two days"
+   ]
+  },
+  {
+   "q": "Her next trip",
+   "a": "Africa",
+   "d": [
+    "Antarctica",
+    "Asia",
+    "Europe"
+   ]
+  },
+  {
+   "q": "She cooks dinner …",
+   "a": "twice a week",
+   "d": [
+    "every day",
+    "once a year",
+    "never"
+   ]
+  },
+  {
+   "q": "Animals in Antarctica",
+   "a": "penguins",
+   "d": [
+    "camels",
+    "lions",
+    "giraffes"
+   ]
+  },
+  {
+   "q": "Type of word: since",
+   "a": "preposition",
+   "d": [
+    "verb",
+    "noun",
+    "adjective"
+   ]
+  },
+  {
+   "q": "Magazine in the interview",
+   "a": "Wild Kids",
+   "d": [
+    "Wild Cats",
+    "Big Kids",
+    "Kids Life"
+   ]
+  },
+  {
+   "q": "Half of 10 rials",
+   "a": "5 rials",
+   "d": [
+    "10 rials",
+    "20 rials",
+    "2 rials"
+   ]
+  },
+  {
+   "q": "Words in each gap",
+   "a": "one",
+   "d": [
+    "two",
+    "three",
+    "four"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the exam tip for Reading Part 3?",
+   "o": [
+    "After choosing, check the other two options are wrong.",
+    "Choose the longest answer.",
+    "Don't read the text.",
+    "Always choose A."
+   ],
+   "why": "Checking wrong options makes you sure."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why will Thuriya be happier in Africa?",
+   "o": [
+    "Because it's warmer there.",
+    "Because it's colder there.",
+    "Because she can cook every day.",
+    "Because there are penguins."
+   ],
+   "why": "Antarctica is very cold; Africa is warmer."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What type of word is missing? The camel has a big ___ on its back.",
+   "o": [
+    "a noun",
+    "a verb",
+    "a preposition",
+    "an adverb"
+   ],
+   "why": "The missing word is a thing: hump."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which is an exam tip for one-word gaps?",
+   "o": [
+    "Read the sentence before and after the gap.",
+    "Write as many words as you like.",
+    "Skip all the hard gaps.",
+    "Never check spelling."
+   ],
+   "why": "The sentences around the gap help you."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Circus notice: Half-price tickets on Monday. Tickets are usually 10 rials. How much is a ticket on Monday?",
+   "o": [
+    "5 rials",
+    "10 rials",
+    "20 rials",
+    "15 rials"
+   ],
+   "why": "Half of 10 is 5."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Airport notice: Put devices in the boxes. You don't have to take off your shoes. Which is true?",
+   "o": [
+    "You can keep your shoes on.",
+    "You must take off your shoes.",
+    "You can't bring devices.",
+    "There are no boxes."
+   ],
+   "why": "Don't have to means it is not necessary."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the ONE word: He has worked here ___ ten years.",
+   "o": [
+    "for",
+    "since",
+    "ago",
+    "at"
+   ],
+   "why": "Use for with a length of time."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Thuriya has been in Antarctica for three weeks. Why is 'A month ago' wrong for when she travelled there?",
+   "o": [
+    "Three weeks is less than a month.",
+    "She went there a year ago.",
+    "She has never been there.",
+    "A month is shorter than three weeks."
+   ],
+   "why": "She arrived three weeks ago, not a month ago."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is it important to read the whole text before filling the gaps?",
+   "o": [
+    "To understand the general meaning and predict words.",
+    "To finish the test faster without thinking.",
+    "To count the number of lines.",
+    "To find the longest word."
+   ],
+   "why": "Knowing the meaning helps you guess the gap."
+  },
+  {
+   "lv": "التحليل",
+   "q": "It ___ be a bird. It doesn't have wings. Why is can't correct?",
+   "o": [
+    "We are sure it is not a bird.",
+    "We think it might be a bird.",
+    "We are sure it is a bird.",
+    "We are talking about the past."
+   ],
+   "why": "Can't shows we are sure something is impossible."
+  }
+ ]
+}

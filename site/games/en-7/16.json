@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Unit 1 Review: Unit 1 practice sheet",
+ "outcomes": [
+  "Use Unit 1 words for jobs and places.",
+  "Use since/for and the Present continuous for plans correctly.",
+  "Find your strengths and set a goal for Unit 2."
+ ],
+ "tf": [
+  {
+   "s": "“This art gallery has been here for twenty years” is correct.",
+   "t": true,
+   "why": "Twenty years is a period, so we use for."
+  },
+  {
+   "s": "“He has worked at the aquarium for 2016” is correct.",
+   "t": false,
+   "why": "2016 is a point in time: since 2016."
+  },
+  {
+   "s": "A camera operator controls a camera to film shows.",
+   "t": true,
+   "why": "Yes, that is the job."
+  },
+  {
+   "s": "A theme park has rides and roller coasters.",
+   "t": true,
+   "why": "Yes, theme parks have exciting rides."
+  },
+  {
+   "s": "“I'm meeting my friends at the bowling alley on Friday” is a future arrangement.",
+   "t": true,
+   "why": "On Friday shows a fixed plan."
+  },
+  {
+   "s": "A puppeteer puts make-up on actors' faces.",
+   "t": false,
+   "why": "A make-up artist does make-up; a puppeteer works with puppets."
+  },
+  {
+   "s": "Adverts often use imperatives like Visit and Watch.",
+   "t": true,
+   "why": "Imperatives speak directly to the reader."
+  },
+  {
+   "s": "You can see paintings at an ice rink.",
+   "t": false,
+   "why": "You see paintings at an art gallery."
+  },
+  {
+   "s": "A good learning goal is clear and says what you will do.",
+   "t": true,
+   "why": "For example: I will use word cards every day."
+  },
+  {
+   "s": "“She are visiting her aunt tomorrow” is correct.",
+   "t": false,
+   "why": "She takes is: She is visiting her aunt tomorrow."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "This art gallery has been here ___ twenty years.",
+   "o": [
+    "for",
+    "since",
+    "at"
+   ],
+   "why": "Twenty years is a period."
+  },
+  {
+   "q": "I'm ___ (meet) my friends on Friday.",
+   "o": [
+    "meeting",
+    "meet",
+    "met"
+   ],
+   "why": "Am + meeting."
+  },
+  {
+   "q": "Where can you see wild animals from a car?",
+   "o": [
+    "a safari park",
+    "an art gallery",
+    "a planetarium"
+   ],
+   "why": "A safari park has wild animals."
+  },
+  {
+   "q": "This person controls a camera to film shows.",
+   "o": [
+    "camera operator",
+    "sound editor",
+    "presenter"
+   ],
+   "why": "A camera operator films shows."
+  },
+  {
+   "q": "He has worked at the aquarium ___ 2016.",
+   "o": [
+    "since",
+    "for",
+    "in"
+   ],
+   "why": "2016 is a point in time."
+  },
+  {
+   "q": "Which job makes cartoons?",
+   "o": [
+    "animator",
+    "clown",
+    "stunt performer"
+   ],
+   "why": "Animators make cartoons."
+  },
+  {
+   "q": "Which is a feature of an advert?",
+   "o": [
+    "a slogan",
+    "a diary date",
+    "a recipe"
+   ],
+   "why": "Adverts have slogans."
+  },
+  {
+   "q": "Which place has stars and planets?",
+   "o": [
+    "a planetarium",
+    "a soft play centre",
+    "a circus"
+   ],
+   "why": "A planetarium shows the sky."
+  },
+  {
+   "q": "We ___ going to the circus tonight.",
+   "o": [
+    "are",
+    "is",
+    "am"
+   ],
+   "why": "We takes are."
+  },
+  {
+   "q": "Which is a clear learning goal?",
+   "o": [
+    "I will use word cards every day.",
+    "I am good.",
+    "Maybe something."
+   ],
+   "why": "A goal says what you will do."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Here ___ twenty years",
+   "a": "for",
+   "d": [
+    "since",
+    "at",
+    "ago"
+   ]
+  },
+  {
+   "q": "Worked here ___ 2016",
+   "a": "since",
+   "d": [
+    "for",
+    "at",
+    "ago"
+   ]
+  },
+  {
+   "q": "He films shows.",
+   "a": "camera operator",
+   "d": [
+    "comedian",
+    "writer",
+    "clown"
+   ]
+  },
+  {
+   "q": "Place with roller coasters",
+   "a": "theme park",
+   "d": [
+    "art gallery",
+    "ice rink",
+    "aquarium"
+   ]
+  },
+  {
+   "q": "Place for bowling",
+   "a": "bowling alley",
+   "d": [
+    "planetarium",
+    "circus",
+    "museum"
+   ]
+  },
+  {
+   "q": "I'm ___ friends on Friday.",
+   "a": "meeting",
+   "d": [
+    "meet",
+    "met",
+    "meets"
+   ]
+  },
+  {
+   "q": "She ___ visiting tomorrow.",
+   "a": "is",
+   "d": [
+    "are",
+    "am",
+    "be"
+   ]
+  },
+  {
+   "q": "Short catchy advert line",
+   "a": "slogan",
+   "d": [
+    "logo",
+    "diary",
+    "poster"
+   ]
+  },
+  {
+   "q": "He tells jokes.",
+   "a": "comedian",
+   "d": [
+    "puppeteer",
+    "animator",
+    "presenter"
+   ]
+  },
+  {
+   "q": "Place to see sea animals",
+   "a": "aquarium",
+   "d": [
+    "ice rink",
+    "3D cinema",
+    "circus"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Write the job: This person controls a camera to film shows.",
+   "o": [
+    "camera operator",
+    "sound editor",
+    "costume designer",
+    "clown"
+   ],
+   "why": "A camera operator films shows."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which place has rides and roller coasters?",
+   "o": [
+    "A theme park",
+    "A planetarium",
+    "An art gallery",
+    "A science museum"
+   ],
+   "why": "Theme parks have rides."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When do we use since?",
+   "o": [
+    "With a point in time, like 2016",
+    "With a period, like two years",
+    "With future plans",
+    "With imperatives"
+   ],
+   "why": "Since + a point in time."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which four are features of a good advert?",
+   "o": [
+    "logo, slogan, bullet points, special offer",
+    "dates, first person, feelings, title",
+    "since, for, have, has",
+    "beak, fin, paws, claws"
+   ],
+   "why": "These make an advert clear and persuasive."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Find and correct: He has worked at the aquarium for 2016.",
+   "o": [
+    "He has worked at the aquarium since 2016.",
+    "He has worked at the aquarium for 2016 years.",
+    "He worked at the aquarium since 2016 ago.",
+    "He is working at the aquarium for 2016."
+   ],
+   "why": "2016 is a point in time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I'm ___ (meet) my friends at the bowling alley on Friday.",
+   "o": [
+    "meeting",
+    "meet",
+    "met",
+    "meets"
+   ],
+   "why": "Present continuous: am + meeting."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence describes a job correctly?",
+   "o": [
+    "An animator makes cartoons.",
+    "A clown edits sound.",
+    "A writer does stunts.",
+    "A presenter makes costumes."
+   ],
+   "why": "Animators make moving pictures."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A student keeps making spelling mistakes with new words. Which goal is best?",
+   "o": [
+    "I will learn the spelling of new words by using word cards every day.",
+    "I will stop learning new words.",
+    "I will write faster.",
+    "I will only read adverts."
+   ],
+   "why": "A good goal fixes the problem with a clear action."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is NOT about a future arrangement?",
+   "o": [
+    "I've lived here for six years.",
+    "We're flying to Cairo in July.",
+    "I'm meeting Ali on Friday.",
+    "They're visiting the museum tomorrow."
+   ],
+   "why": "The first one is the Present perfect, not the future."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "We has been here since Monday.",
+    "She has been here since Monday.",
+    "I've known him for a year.",
+    "They've lived here for ten years."
+   ],
+   "why": "We takes have: We have been here."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 2",
+ "lesson": "Lesson 1: Vocabulary – Animal body parts",
+ "outcomes": [
+  "Name 12 animal body parts.",
+  "Find animals from descriptions of their body parts.",
+  "Describe animals with It has … / It doesn't have …"
+ ],
+ "tf": [
+  {
+   "s": "A camel has a hump on its back.",
+   "t": true,
+   "why": "Yes, camels have humps."
+  },
+  {
+   "s": "A bird uses its beak to eat.",
+   "t": true,
+   "why": "Yes, a beak is a bird's hard mouth."
+  },
+  {
+   "s": "A seal has flippers and long whiskers.",
+   "t": true,
+   "why": "Yes, that is the seal in the quiz."
+  },
+  {
+   "s": "A fish uses its horns to swim.",
+   "t": false,
+   "why": "Fish use fins to swim."
+  },
+  {
+   "s": "A hedgehog has spines on its back.",
+   "t": true,
+   "why": "Yes, spines protect it."
+  },
+  {
+   "s": "An oryx has two long horns on its head.",
+   "t": true,
+   "why": "Yes, oryx have long horns."
+  },
+  {
+   "s": "Birds have scales, like snakes.",
+   "t": false,
+   "why": "Birds have feathers; snakes and fish have scales."
+  },
+  {
+   "s": "A cat has flippers on its feet.",
+   "t": false,
+   "why": "Cats have paws; seals have flippers."
+  },
+  {
+   "s": "Insects use their antennae to walk.",
+   "t": false,
+   "why": "They walk with their legs; antennae are on their head."
+  },
+  {
+   "s": "Bees are important because they help plants grow.",
+   "t": true,
+   "why": "Yes, the quiz says this."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What does a camel have on its back?",
+   "o": [
+    "a hump",
+    "a fin",
+    "flippers"
+   ],
+   "why": "Camels have humps."
+  },
+  {
+   "q": "Which body part helps a fish swim?",
+   "o": [
+    "fins",
+    "paws",
+    "horns"
+   ],
+   "why": "Fins help fish swim."
+  },
+  {
+   "q": "A cat has long ___ on its face.",
+   "o": [
+    "whiskers",
+    "horns",
+    "flippers"
+   ],
+   "why": "Cats have whiskers."
+  },
+  {
+   "q": "Which animal has a beak?",
+   "o": [
+    "a bird",
+    "a lizard",
+    "a cat"
+   ],
+   "why": "Birds have beaks."
+  },
+  {
+   "q": "Which animal has scales?",
+   "o": [
+    "a snake",
+    "a camel",
+    "a seal"
+   ],
+   "why": "Snakes have scales."
+  },
+  {
+   "q": "Which animal has spines?",
+   "o": [
+    "a hedgehog",
+    "a fish",
+    "a bird"
+   ],
+   "why": "Hedgehogs have spines."
+  },
+  {
+   "q": "What does an oryx have on its head?",
+   "o": [
+    "horns",
+    "a hump",
+    "a beak"
+   ],
+   "why": "Oryx have long horns."
+  },
+  {
+   "q": "Which body part is sharp, on the end of a cat's toes?",
+   "o": [
+    "claws",
+    "fins",
+    "scales"
+   ],
+   "why": "Claws are sharp nails."
+  },
+  {
+   "q": "What do seals use to swim?",
+   "o": [
+    "flippers",
+    "horns",
+    "a hump"
+   ],
+   "why": "Seals have flippers."
+  },
+  {
+   "q": "Which body part does a snake use to taste and smell?",
+   "o": [
+    "tongue",
+    "hump",
+    "beak"
+   ],
+   "why": "Snakes use their long tongue."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Camel's back",
+   "a": "hump",
+   "d": [
+    "fin",
+    "beak",
+    "horn"
+   ]
+  },
+  {
+   "q": "Bird's hard mouth",
+   "a": "beak",
+   "d": [
+    "paw",
+    "fin",
+    "hump"
+   ]
+  },
+  {
+   "q": "Helps a fish swim",
+   "a": "fin",
+   "d": [
+    "claw",
+    "horn",
+    "hump"
+   ]
+  },
+  {
+   "q": "Cat's face hairs",
+   "a": "whiskers",
+   "d": [
+    "spines",
+    "scales",
+    "horns"
+   ]
+  },
+  {
+   "q": "Hedgehog's back",
+   "a": "spines",
+   "d": [
+    "fins",
+    "scales",
+    "flippers"
+   ]
+  },
+  {
+   "q": "Oryx head",
+   "a": "horns",
+   "d": [
+    "flippers",
+    "fins",
+    "beak"
+   ]
+  },
+  {
+   "q": "Snake's skin",
+   "a": "scales",
+   "d": [
+    "feathers",
+    "fur",
+    "spines"
+   ]
+  },
+  {
+   "q": "Seal swims with…",
+   "a": "flippers",
+   "d": [
+    "paws",
+    "horns",
+    "beak"
+   ]
+  },
+  {
+   "q": "Insect's head feelers",
+   "a": "antennae",
+   "d": [
+    "whiskers",
+    "horns",
+    "fins"
+   ]
+  },
+  {
+   "q": "Feet of a bear",
+   "a": "paws",
+   "d": [
+    "fins",
+    "flippers",
+    "beaks"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Write the body part: the hard pointed mouth of a bird.",
+   "o": [
+    "beak",
+    "tongue",
+    "claw",
+    "fin"
+   ],
+   "why": "Birds have beaks."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Write the body part: the feet of a cat or a bear.",
+   "o": [
+    "paws",
+    "fins",
+    "flippers",
+    "horns"
+   ],
+   "why": "Cats and bears have paws."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which animal in the quiz has flippers and long whiskers?",
+   "o": [
+    "a seal",
+    "a camel",
+    "a hedgehog",
+    "a bee"
+   ],
+   "why": "Seals have flippers and whiskers."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why are bees important, according to the quiz?",
+   "o": [
+    "They help plants grow.",
+    "They have humps.",
+    "They eat fish.",
+    "They have horns."
+   ],
+   "why": "Bees help plants grow."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "It has scales and a long tongue. It isn't a snake. What could it be?",
+   "o": [
+    "a lizard",
+    "a bird",
+    "a camel",
+    "a seal"
+   ],
+   "why": "Lizards have scales and long tongues."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which two animals have scales?",
+   "o": [
+    "fish and crocodile",
+    "camel and cat",
+    "bird and bee",
+    "seal and bear"
+   ],
+   "why": "Fish and crocodiles have scales."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentences describe a hedgehog?",
+   "o": [
+    "It has spines on its back. It has small paws.",
+    "It has a hump. It has fins.",
+    "It has flippers. It has horns.",
+    "It has a beak. It has scales."
+   ],
+   "why": "Hedgehogs have spines and small paws."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which animal is the odd one out: snake, fish, bird?",
+   "o": [
+    "bird – it has feathers, not scales",
+    "snake – it has no legs",
+    "fish – it lives in water",
+    "snake – it has a tongue"
+   ],
+   "why": "Snakes and fish have scales; birds don't."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which animal is the odd one out: oryx, goat, seal?",
+   "o": [
+    "seal – it has flippers, not horns",
+    "oryx – it lives in Oman",
+    "goat – it is small",
+    "oryx – it has four legs"
+   ],
+   "why": "Oryx and goats have horns."
+  },
+  {
+   "lv": "التحليل",
+   "q": "An animal has a hump and lives in the desert. Which body part helps you know it is a camel?",
+   "o": [
+    "the hump",
+    "the tail",
+    "the eyes",
+    "the ears"
+   ],
+   "why": "Of these animals, only camels have a hump."
+  }
+ ]
+}

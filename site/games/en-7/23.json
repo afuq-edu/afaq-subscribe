@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Lesson 7: English in action – Saying what you like and don’t like",
+ "outcomes": [
+  "Say what you like and don't like with different expressions.",
+  "Order expressions from most positive to most negative.",
+  "Put the stress on the correct syllable in animal names."
+ ],
+ "tf": [
+  {
+   "s": "I'm crazy about dolphins means I like dolphins very much.",
+   "t": true,
+   "why": "Yes, crazy about is very positive."
+  },
+  {
+   "s": "I can't stand spiders is stronger than I'm not keen on spiders.",
+   "t": true,
+   "why": "Yes, can't stand is the most negative."
+  },
+  {
+   "s": "I don't mind ants means I hate ants very much.",
+   "t": false,
+   "why": "I don't mind is neutral: it's OK for me."
+  },
+  {
+   "s": "In giraffe, the stress is on the second syllable: gi-RAFFE.",
+   "t": true,
+   "why": "Yes, we say gi-RAFFE."
+  },
+  {
+   "s": "In elephant, the stress is on the last syllable.",
+   "t": false,
+   "why": "We say EL-e-phant, stress on the first syllable."
+  },
+  {
+   "s": "In kangaroo, the stress is on the last syllable: kan-ga-ROO.",
+   "t": true,
+   "why": "Yes, ROO is the strong part."
+  },
+  {
+   "s": "I quite like is more positive than I'm crazy about.",
+   "t": false,
+   "why": "Crazy about is stronger than quite like."
+  },
+  {
+   "s": "In the dialogue, one child is scared of sharks.",
+   "t": true,
+   "why": "Yes, sharks scare one of the children."
+  },
+  {
+   "s": "We say: I'm crazy on sea animals.",
+   "t": false,
+   "why": "The correct preposition is about: crazy about."
+  },
+  {
+   "s": "I find camels really interesting is a positive sentence.",
+   "t": true,
+   "why": "Yes, it shows you like learning about them."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: I'm crazy ___ sea animals.",
+   "o": [
+    "about",
+    "on",
+    "with"
+   ],
+   "why": "We say crazy about."
+  },
+  {
+   "q": "Complete: I don't like sharks ___ ___!",
+   "o": [
+    "at all",
+    "very much",
+    "so good"
+   ],
+   "why": "I don't like … at all is very negative."
+  },
+  {
+   "q": "Do you like ants? – I don't ___ them. (It's OK.)",
+   "o": [
+    "mind",
+    "like at all",
+    "stand"
+   ],
+   "why": "I don't mind is a neutral answer."
+  },
+  {
+   "q": "Which expression is the most negative?",
+   "o": [
+    "I can't stand …",
+    "I quite like …",
+    "I don't mind …"
+   ],
+   "why": "Can't stand means you really hate it."
+  },
+  {
+   "q": "Which expression is the most positive?",
+   "o": [
+    "I'm crazy about …",
+    "I'm not keen on …",
+    "I don't mind …"
+   ],
+   "why": "Crazy about means you love it."
+  },
+  {
+   "q": "Where is the stress in dolphin?",
+   "o": [
+    "DOL-phin",
+    "dol-PHIN",
+    "no stress"
+   ],
+   "why": "We say DOL-phin."
+  },
+  {
+   "q": "Complete: I'm not ___ on snakes.",
+   "o": [
+    "keen",
+    "crazy",
+    "mind"
+   ],
+   "why": "We say I'm not keen on …"
+  },
+  {
+   "q": "Complete: I find spiders really ___.",
+   "o": [
+    "interesting",
+    "about",
+    "stand"
+   ],
+   "why": "I find … really interesting."
+  },
+  {
+   "q": "Which is a question about likes?",
+   "o": [
+    "Are you keen on snakes?",
+    "I can't stand snakes.",
+    "Snakes are long."
+   ],
+   "why": "It asks about someone's feelings."
+  },
+  {
+   "q": "Which is a good survey result sentence?",
+   "o": [
+    "Six students are crazy about dolphins.",
+    "Dolphins live in the sea.",
+    "Do you like dolphins?"
+   ],
+   "why": "It reports what students said."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "I'm crazy ___ horses.",
+   "a": "about",
+   "d": [
+    "on",
+    "for",
+    "at"
+   ]
+  },
+  {
+   "q": "I'm not keen ___ spiders.",
+   "a": "on",
+   "d": [
+    "about",
+    "in",
+    "with"
+   ]
+  },
+  {
+   "q": "I don't like it ___ ___!",
+   "a": "at all",
+   "d": [
+    "so much",
+    "very",
+    "quite"
+   ]
+  },
+  {
+   "q": "I can't ___ snakes.",
+   "a": "stand",
+   "d": [
+    "mind",
+    "keen",
+    "find"
+   ]
+  },
+  {
+   "q": "Neutral: I don't ___ ants.",
+   "a": "mind",
+   "d": [
+    "stand",
+    "keen",
+    "crazy"
+   ]
+  },
+  {
+   "q": "Stress on the 1st syllable",
+   "a": "dolphin",
+   "d": [
+    "giraffe",
+    "kangaroo",
+    "gazelle"
+   ]
+  },
+  {
+   "q": "Stress on the 2nd syllable",
+   "a": "giraffe",
+   "d": [
+    "dolphin",
+    "elephant",
+    "camel"
+   ]
+  },
+  {
+   "q": "Stress on the last syllable",
+   "a": "kangaroo",
+   "d": [
+    "elephant",
+    "dolphin",
+    "spider"
+   ]
+  },
+  {
+   "q": "Most positive expression",
+   "a": "crazy about",
+   "d": [
+    "don't mind",
+    "not keen on",
+    "can't stand"
+   ]
+  },
+  {
+   "q": "Animal one child is scared of",
+   "a": "sharks",
+   "d": [
+    "camels",
+    "horses",
+    "rabbits"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which animals do the children talk about in the dialogue?",
+   "o": [
+    "spiders, ants, sea animals and sharks",
+    "lions, tigers and bears",
+    "camels, horses and goats",
+    "birds, bees and butterflies"
+   ],
+   "why": "These are the animals in the video."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list goes from most positive to most negative?",
+   "o": [
+    "crazy about – quite like – don't mind – can't stand",
+    "can't stand – don't mind – quite like – crazy about",
+    "quite like – crazy about – can't stand – don't mind",
+    "don't mind – crazy about – can't stand – quite like"
+   ],
+   "why": "Great! That is the likes scale in order."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does I'm not keen on … mean?",
+   "o": [
+    "I don't really like …",
+    "I love …",
+    "I'm scared of …",
+    "I want to buy …"
+   ],
+   "why": "Not keen on is a soft way to say you don't like it."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do we say elephant?",
+   "o": [
+    "EL-e-phant",
+    "el-E-phant",
+    "el-e-PHANT",
+    "all syllables the same"
+   ],
+   "why": "The first syllable is strong: EL-e-phant."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Amal loves horses very much. What does she say?",
+   "o": [
+    "I'm crazy about horses.",
+    "I don't mind horses.",
+    "I'm not keen on horses.",
+    "I can't stand horses."
+   ],
+   "why": "Crazy about shows strong love."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ali thinks snakes are terrible and he hates them. What does he say?",
+   "o": [
+    "I can't stand snakes.",
+    "I quite like snakes.",
+    "I don't mind snakes.",
+    "I find snakes really interesting."
+   ],
+   "why": "Can't stand is for things we hate."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend asks: Do you like ants? You think they're OK. What do you say?",
+   "o": [
+    "I don't mind them.",
+    "I'm crazy about them.",
+    "I can't stand them.",
+    "I don't like them at all."
+   ],
+   "why": "I don't mind is the neutral answer."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "I'm keen about camels.",
+    "I'm crazy about camels.",
+    "I'm not keen on camels.",
+    "I find camels really interesting."
+   ],
+   "why": "We say keen on, not keen about."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Sara says: I'm not keen on spiders. Huda says: I can't stand spiders. Who dislikes spiders more?",
+   "o": [
+    "Huda",
+    "Sara",
+    "They feel the same.",
+    "Neither dislikes them."
+   ],
+   "why": "Can't stand is stronger than not keen on."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we clap when we practise animal names?",
+   "o": [
+    "To hear and feel the stressed syllable",
+    "To count the letters",
+    "To make the word shorter",
+    "To change the meaning"
+   ],
+   "why": "Clapping shows which syllable is strong."
+  }
+ ]
+}

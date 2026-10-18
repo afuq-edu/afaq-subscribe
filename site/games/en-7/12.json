@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Lesson 10: Over to you!",
+ "outcomes": [
+  "Find information in readers' comments.",
+  "Use since/for and the Present continuous for plans.",
+  "Answer the WOW! question: How can people and places entertain us?"
+ ],
+ "tf": [
+  {
+   "s": "The WOW! question for Unit 1 is: How can people and places entertain us?",
+   "t": true,
+   "why": "Yes, that is the Unit 1 question."
+  },
+  {
+   "s": "The girl who wants to be a make-up artist loves art.",
+   "t": true,
+   "why": "Yes, she helped paint everyone's faces at a family party."
+  },
+  {
+   "s": "We say “I've written a diary for I was seven.”",
+   "t": false,
+   "why": "I was seven is a point in time: since I was seven."
+  },
+  {
+   "s": "“In July we are flying to Cairo” is a future arrangement.",
+   "t": true,
+   "why": "In July shows a fixed future plan."
+  },
+  {
+   "s": "You go bowling at an ice rink.",
+   "t": false,
+   "why": "You go bowling at a bowling alley."
+  },
+  {
+   "s": "“Ali has played football for five years” is correct.",
+   "t": true,
+   "why": "Five years is a period, so we use for."
+  },
+  {
+   "s": "A costume designer makes clothes for performers.",
+   "t": true,
+   "why": "Yes, costumes are clothes for shows."
+  },
+  {
+   "s": "Planetariums and museums can help us learn in a fun way.",
+   "t": true,
+   "why": "Yes, places can entertain and teach us."
+  },
+  {
+   "s": "The Present continuous for plans is have + past participle.",
+   "t": false,
+   "why": "It is am/is/are + verb-ing."
+  },
+  {
+   "s": "A comedian works behind the camera and videos the show.",
+   "t": false,
+   "why": "A camera operator videos the show; a comedian tells jokes."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "I've written a diary ___ I was seven.",
+   "o": [
+    "since",
+    "for",
+    "ago"
+   ],
+   "why": "I was seven is a point in time."
+  },
+  {
+   "q": "In July we ___ (fly) to Cairo.",
+   "o": [
+    "are flying",
+    "is flying",
+    "flying"
+   ],
+   "why": "We + are + flying."
+  },
+  {
+   "q": "Where do you go bowling?",
+   "o": [
+    "a bowling alley",
+    "a planetarium",
+    "an art gallery"
+   ],
+   "why": "Bowling alleys are for bowling."
+  },
+  {
+   "q": "Which comment talks about clothes?",
+   "o": [
+    "the costume designer's",
+    "the comedian's",
+    "the camera operator's"
+   ],
+   "why": "Costume designers make clothes."
+  },
+  {
+   "q": "Ali has played football ___ five years.",
+   "o": [
+    "for",
+    "since",
+    "at"
+   ],
+   "why": "Five years is a period of time."
+  },
+  {
+   "q": "Who makes people laugh?",
+   "o": [
+    "a comedian",
+    "a sound editor",
+    "an animator"
+   ],
+   "why": "Comedians tell jokes."
+  },
+  {
+   "q": "Which sentence is a future plan?",
+   "o": [
+    "I'm visiting my aunt on Friday.",
+    "I visited my aunt.",
+    "I visit my aunt every day."
+   ],
+   "why": "On Friday shows a future arrangement."
+  },
+  {
+   "q": "Where can you watch films with special glasses?",
+   "o": [
+    "a 3D cinema",
+    "a safari park",
+    "an aquarium"
+   ],
+   "why": "A 3D cinema uses special glasses."
+  },
+  {
+   "q": "How long ___ you known your best friend?",
+   "o": [
+    "have",
+    "has",
+    "are"
+   ],
+   "why": "You takes have."
+  },
+  {
+   "q": "Which job puts make-up on actors?",
+   "o": [
+    "make-up artist",
+    "writer",
+    "presenter"
+   ],
+   "why": "A make-up artist does make-up."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "I've lived here ___ 2015.",
+   "a": "since",
+   "d": [
+    "for",
+    "at",
+    "ago"
+   ]
+  },
+  {
+   "q": "I've had it ___ a year.",
+   "a": "for",
+   "d": [
+    "since",
+    "at",
+    "ago"
+   ]
+  },
+  {
+   "q": "Place for bowling",
+   "a": "bowling alley",
+   "d": [
+    "ice rink",
+    "aquarium",
+    "circus"
+   ]
+  },
+  {
+   "q": "Place for skating",
+   "a": "ice rink",
+   "d": [
+    "planetarium",
+    "art gallery",
+    "museum"
+   ]
+  },
+  {
+   "q": "She paints actors' faces.",
+   "a": "make-up artist",
+   "d": [
+    "animator",
+    "writer",
+    "presenter"
+   ]
+  },
+  {
+   "q": "He makes costumes.",
+   "a": "costume designer",
+   "d": [
+    "comedian",
+    "clown",
+    "writer"
+   ]
+  },
+  {
+   "q": "We ___ flying to Cairo.",
+   "a": "are",
+   "d": [
+    "is",
+    "am",
+    "have"
+   ]
+  },
+  {
+   "q": "He ___ playing tomorrow.",
+   "a": "is",
+   "d": [
+    "are",
+    "am",
+    "have"
+   ]
+  },
+  {
+   "q": "Past participle of write",
+   "a": "written",
+   "d": [
+    "wrote",
+    "writed",
+    "writing"
+   ]
+  },
+  {
+   "q": "Place with planets and stars",
+   "a": "planetarium",
+   "d": [
+    "aquarium",
+    "ice rink",
+    "theme park"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the Unit 1 WOW! question?",
+   "o": [
+    "How can people and places entertain us?",
+    "Why are animals so awesome?",
+    "Why do we travel?",
+    "What is your favourite food?"
+   ],
+   "why": "Unit 1 is about entertainment."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who wants to be a make-up artist, and why?",
+   "o": [
+    "The girl who loves art and painted faces at a family party",
+    "The boy who loves trains",
+    "The girl who tells jokes",
+    "The boy who plays football"
+   ],
+   "why": "Her comment tells us she loves art."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which place do you go to for bowling?",
+   "o": [
+    "A bowling alley",
+    "An ice rink",
+    "An aquarium",
+    "A planetarium"
+   ],
+   "why": "Bowling alleys are for bowling."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which form is used for future arrangements in Unit 1?",
+   "o": [
+    "Present continuous",
+    "Past simple",
+    "Present perfect",
+    "Imperative"
+   ],
+   "why": "For example: We're watching a show on Tuesday."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I've written a diary ___ I was seven.",
+   "o": [
+    "since",
+    "for",
+    "in",
+    "ago"
+   ],
+   "why": "I was seven is a point in time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a sentence about a friend with the Present perfect and for.",
+   "o": [
+    "Ali has played football for five years.",
+    "Ali played football for five years ago.",
+    "Ali has played football since five years.",
+    "Ali is playing football for 2020."
+   ],
+   "why": "Has + past participle + for + a period."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: In July we ___ (fly) to Cairo.",
+   "o": [
+    "are flying",
+    "have flown since",
+    "flew",
+    "fly yesterday"
+   ],
+   "why": "In July is a future arrangement."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which answer to the WOW! question is the best?",
+   "o": [
+    "Performers make us laugh, and places like museums help us learn in a fun way.",
+    "Animals have wings and claws.",
+    "We travel by plane and bus.",
+    "I don't like entertainment."
+   ],
+   "why": "It talks about people and places that entertain us."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence has a mistake?",
+   "o": [
+    "He has been a stunt performer since ten years.",
+    "She has been a presenter since 2018.",
+    "I've known him for two years.",
+    "They've lived here since May."
+   ],
+   "why": "Ten years is a period, so it should be for."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A reader says: I love making clothes for our school plays. Which job suits this reader?",
+   "o": [
+    "costume designer",
+    "sound editor",
+    "camera operator",
+    "comedian"
+   ],
+   "why": "Costume designers make clothes for performers."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Lesson 3: Grammar – Present perfect with since and for",
+ "outcomes": [
+  "Know when to use since and when to use for.",
+  "Ask and answer How long questions with the Present perfect.",
+  "Talk about yourself using since and for."
+ ],
+ "tf": [
+  {
+   "s": "We use since with a point in time, like 2016.",
+   "t": true,
+   "why": "Yes: since 2016, since lunchtime."
+  },
+  {
+   "s": "We use for with a period of time, like five years.",
+   "t": true,
+   "why": "Yes: for five years, for a long time."
+  },
+  {
+   "s": "“I've had my watch since two years” is correct.",
+   "t": false,
+   "why": "Two years is a period, so we say for two years."
+  },
+  {
+   "s": "“He has been a puppeteer since he was eight” is correct.",
+   "t": true,
+   "why": "He was eight is a point in time."
+  },
+  {
+   "s": "We say “How long has she lived in Sur?”",
+   "t": true,
+   "why": "She takes has in the Present perfect."
+  },
+  {
+   "s": "“I haven't been to the cinema for I was seven” is correct.",
+   "t": false,
+   "why": "I was seven is a point in time, so use since."
+  },
+  {
+   "s": "We say “I've lived here for 2019.”",
+   "t": false,
+   "why": "2019 is a point in time: since 2019."
+  },
+  {
+   "s": "The Present perfect is have/has + past participle.",
+   "t": true,
+   "why": "For example: I have known, she has lived."
+  },
+  {
+   "s": "We say “How long have you had your bike?”",
+   "t": true,
+   "why": "You takes have."
+  },
+  {
+   "s": "Majid's uncle has been a comedian since ten years.",
+   "t": false,
+   "why": "Ten years is a period: for ten years."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "I've lived here ___ five years.",
+   "o": [
+    "for",
+    "since",
+    "at"
+   ],
+   "why": "Five years is a period of time."
+  },
+  {
+   "q": "My uncle has worked at the aquarium ___ 2016.",
+   "o": [
+    "since",
+    "for",
+    "in"
+   ],
+   "why": "2016 is a point in time."
+  },
+  {
+   "q": "How long ___ she lived in Sur?",
+   "o": [
+    "has",
+    "have",
+    "is"
+   ],
+   "why": "She takes has."
+  },
+  {
+   "q": "How long ___ you studied English?",
+   "o": [
+    "have",
+    "has",
+    "are"
+   ],
+   "why": "You takes have."
+  },
+  {
+   "q": "I've known my best friend ___ 2020.",
+   "o": [
+    "since",
+    "for",
+    "ago"
+   ],
+   "why": "2020 is a point in time."
+  },
+  {
+   "q": "Frank has had his costume ___ a long time.",
+   "o": [
+    "for",
+    "since",
+    "from"
+   ],
+   "why": "A long time is a period."
+  },
+  {
+   "q": "Which time words go with since?",
+   "o": [
+    "lunchtime, 2016",
+    "ten years, a week",
+    "two days, a month"
+   ],
+   "why": "Points in time go with since."
+  },
+  {
+   "q": "Which time words go with for?",
+   "o": [
+    "five years, two days",
+    "Monday, 2020",
+    "lunchtime, my birthday"
+   ],
+   "why": "Periods of time go with for."
+  },
+  {
+   "q": "Sara has ___ her phone for two years.",
+   "o": [
+    "had",
+    "have",
+    "having"
+   ],
+   "why": "Present perfect uses the past participle: had."
+  },
+  {
+   "q": "We use How long + Present perfect to ask about ___.",
+   "o": [
+    "time until now",
+    "the future",
+    "yesterday only"
+   ],
+   "why": "It asks how much time from the past until now."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "I've lived here ___ 5 years.",
+   "a": "for",
+   "d": [
+    "since",
+    "at",
+    "in"
+   ]
+  },
+  {
+   "q": "I've been here ___ 2019.",
+   "a": "since",
+   "d": [
+    "for",
+    "at",
+    "ago"
+   ]
+  },
+  {
+   "q": "How long ___ she lived here?",
+   "a": "has",
+   "d": [
+    "have",
+    "is",
+    "did"
+   ]
+  },
+  {
+   "q": "How long ___ you had it?",
+   "a": "have",
+   "d": [
+    "has",
+    "are",
+    "do"
+   ]
+  },
+  {
+   "q": "Point in time for since",
+   "a": "lunchtime",
+   "d": [
+    "ten years",
+    "two days",
+    "a week"
+   ]
+  },
+  {
+   "q": "Period of time for for",
+   "a": "two weeks",
+   "d": [
+    "Monday",
+    "2016",
+    "my birthday"
+   ]
+  },
+  {
+   "q": "Past participle of have",
+   "a": "had",
+   "d": [
+    "has",
+    "having",
+    "haved"
+   ]
+  },
+  {
+   "q": "Past participle of know",
+   "a": "known",
+   "d": [
+    "knew",
+    "knowed",
+    "knowing"
+   ]
+  },
+  {
+   "q": "Past participle of be",
+   "a": "been",
+   "d": [
+    "was",
+    "being",
+    "be"
+   ]
+  },
+  {
+   "q": "Past participle of live",
+   "a": "lived",
+   "d": [
+    "lives",
+    "living",
+    "live"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "When do we use since?",
+   "o": [
+    "with a point in time",
+    "with a period of time",
+    "with the future",
+    "with commands"
+   ],
+   "why": "Since + a point in time, e.g. since 2016."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When do we use for?",
+   "o": [
+    "with a period of time",
+    "with a point in time",
+    "with names",
+    "with places"
+   ],
+   "why": "For + a period, e.g. for five years."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Complete: Majid's uncle has been a comedian ___ ten years.",
+   "o": [
+    "for",
+    "since",
+    "ago",
+    "at"
+   ],
+   "why": "Ten years is a period of time."
+  },
+  {
+   "lv": "التذكر",
+   "q": "since or for? He has been a puppeteer ___ he was eight.",
+   "o": [
+    "since",
+    "for",
+    "ago",
+    "during"
+   ],
+   "why": "He was eight is a point in time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a question: you / have / your bike / how long?",
+   "o": [
+    "How long have you had your bike?",
+    "How long you have had your bike?",
+    "How long has you had your bike?",
+    "How long did you have your bike now?"
+   ],
+   "why": "How long + have + subject + past participle."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Change to a question: He has played football for five years.",
+   "o": [
+    "How long has he played football?",
+    "How long have he played football?",
+    "How long he has played football?",
+    "How long is he play football?"
+   ],
+   "why": "He takes has; the subject comes after has."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the mistake: I haven't been to the cinema for I was seven.",
+   "o": [
+    "I haven't been to the cinema since I was seven.",
+    "I haven't been to the cinema for I am seven.",
+    "I haven't went to the cinema for I was seven.",
+    "I hasn't been to the cinema since I was seven."
+   ],
+   "why": "I was seven is a point in time, so use since."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is correct?",
+   "o": [
+    "I've had my watch for two years.",
+    "I've had my watch since two years.",
+    "I've had my watch for 2022.",
+    "I have my watch since two years."
+   ],
+   "why": "Two years is a period, so use for."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Ahmed got his bike on his birthday and still has it. Which sentence is right?",
+   "o": [
+    "Ahmed has had his bike since his birthday.",
+    "Ahmed has had his bike for his birthday.",
+    "Ahmed had his bike since his birthday.",
+    "Ahmed has his bike for his birthday."
+   ],
+   "why": "His birthday is a point in time and he still has it."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Huda moved to Muscat eight years ago and still lives there. Which is correct?",
+   "o": [
+    "Huda has lived in Muscat for eight years.",
+    "Huda has lived in Muscat since eight years.",
+    "Huda lived in Muscat for eight years ago.",
+    "Huda is living in Muscat since eight years."
+   ],
+   "why": "Eight years is a period of time, so use for."
+  }
+ ]
+}

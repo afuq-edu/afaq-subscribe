@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 2",
+ "lesson": "Lesson 2: Team Talk – Watch out! It’s so cute!",
+ "outcomes": [
+  "Follow a dialogue to find out what the animal is.",
+  "Use Watch out! / Wow! / It's so cute! correctly.",
+  "Explain why we shouldn't touch wild animals."
+ ],
+ "tf": [
+  {
+   "s": "The animal in the dialogue is a hedgehog.",
+   "t": true,
+   "why": "Yes, it has spines, small paws and whiskers."
+  },
+  {
+   "s": "We say “Watch out!” to warn someone of danger.",
+   "t": true,
+   "why": "Yes, it means be careful."
+  },
+  {
+   "s": "It can't be a snake because it doesn't have scales.",
+   "t": true,
+   "why": "Yes, snakes have scales."
+  },
+  {
+   "s": "Bears live in the place where the children are walking.",
+   "t": false,
+   "why": "Bears don't live there."
+  },
+  {
+   "s": "Emily thinks it could be a bird because she can hear birds.",
+   "t": true,
+   "why": "Yes, she hears birds."
+  },
+  {
+   "s": "The animal has wings.",
+   "t": false,
+   "why": "The animal doesn't have wings."
+  },
+  {
+   "s": "Nawal wants to pick up the hedgehog.",
+   "t": true,
+   "why": "Yes, but Emily says they shouldn't touch it."
+  },
+  {
+   "s": "Emily says they should touch the hedgehog because it is friendly.",
+   "t": false,
+   "why": "She says they shouldn't touch it because it may be scared."
+  },
+  {
+   "s": "“It's so cute!” is a good reply to “Look at this baby rabbit!”",
+   "t": true,
+   "why": "We say it about small, lovely animals."
+  },
+  {
+   "s": "Bayan hasn't seen any animals because there aren't any animals there.",
+   "t": false,
+   "why": "You have to look carefully and listen."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "There's a scorpion near your foot! – ___",
+   "o": [
+    "Watch out!",
+    "It's so cute!",
+    "I get it."
+   ],
+   "why": "Watch out! warns of danger."
+  },
+  {
+   "q": "Look at this baby rabbit! – Wow! ___",
+   "o": [
+    "It's so cute!",
+    "Watch out!",
+    "I've no idea."
+   ],
+   "why": "We say it's so cute about lovely animals."
+  },
+  {
+   "q": "What is the animal in the dialogue?",
+   "o": [
+    "a hedgehog",
+    "a snake",
+    "a bear"
+   ],
+   "why": "It is a hedgehog."
+  },
+  {
+   "q": "It has no scales, so it can't be a ___.",
+   "o": [
+    "snake",
+    "hedgehog",
+    "rabbit"
+   ],
+   "why": "Snakes have scales."
+  },
+  {
+   "q": "Should we touch wild animals?",
+   "o": [
+    "No, they may be scared.",
+    "Yes, always.",
+    "Yes, if they are small."
+   ],
+   "why": "Wild animals can be scared, so we look but don't touch."
+  },
+  {
+   "q": "Why does Emily think it could be a bird?",
+   "o": [
+    "She can hear birds.",
+    "It has wings.",
+    "It has a beak."
+   ],
+   "why": "She hears birds nearby."
+  },
+  {
+   "q": "Who wants to pick up the hedgehog?",
+   "o": [
+    "Nawal",
+    "Emily",
+    "Bayan"
+   ],
+   "why": "Nawal wants to pick it up."
+  },
+  {
+   "q": "What does the hedgehog have on its back?",
+   "o": [
+    "spines",
+    "scales",
+    "feathers"
+   ],
+   "why": "Hedgehogs have spines."
+  },
+  {
+   "q": "Why can't it be a bear?",
+   "o": [
+    "Bears don't live there.",
+    "Bears are small.",
+    "Bears have spines."
+   ],
+   "why": "There are no bears in that place."
+  },
+  {
+   "q": "Correct: The animal has wings.",
+   "o": [
+    "The animal doesn't have wings.",
+    "The animal has two wings.",
+    "The animal have wings."
+   ],
+   "why": "Use doesn't have for the negative."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Warning of danger",
+   "a": "Watch out!",
+   "d": [
+    "It's so cute!",
+    "Wow!",
+    "I get it."
+   ]
+  },
+  {
+   "q": "About a baby animal",
+   "a": "It's so cute!",
+   "d": [
+    "Watch out!",
+    "I've no idea.",
+    "Come on!"
+   ]
+  },
+  {
+   "q": "The animal in the grass",
+   "a": "hedgehog",
+   "d": [
+    "snake",
+    "bear",
+    "bird"
+   ]
+  },
+  {
+   "q": "Hedgehog's back",
+   "a": "spines",
+   "d": [
+    "scales",
+    "feathers",
+    "fins"
+   ]
+  },
+  {
+   "q": "Snakes have…",
+   "a": "scales",
+   "d": [
+    "spines",
+    "whiskers",
+    "paws"
+   ]
+  },
+  {
+   "q": "Who wants to pick it up?",
+   "a": "Nawal",
+   "d": [
+    "Emily",
+    "Bayan",
+    "Frank"
+   ]
+  },
+  {
+   "q": "Who hears birds?",
+   "a": "Emily",
+   "d": [
+    "Nawal",
+    "Bayan",
+    "Majid"
+   ]
+  },
+  {
+   "q": "Hedgehog may be…",
+   "a": "scared",
+   "d": [
+    "hungry",
+    "happy",
+    "cold"
+   ]
+  },
+  {
+   "q": "Animal not living there",
+   "a": "bear",
+   "d": [
+    "bird",
+    "hedgehog",
+    "snake"
+   ]
+  },
+  {
+   "q": "Hedgehog's feet",
+   "a": "small paws",
+   "d": [
+    "fins",
+    "flippers",
+    "hooves"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which expression do you use to warn someone of danger?",
+   "o": [
+    "Watch out!",
+    "It's so cute!",
+    "Wow!",
+    "That's cool!"
+   ],
+   "why": "Watch out! means be careful."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which body parts does the hedgehog have?",
+   "o": [
+    "Spines, small paws and whiskers",
+    "Scales, fins and a tail",
+    "Wings, a beak and feathers",
+    "A hump, horns and hooves"
+   ],
+   "why": "These clues show it is a hedgehog."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why hasn't Bayan seen any animals yet?",
+   "o": [
+    "You have to look carefully and listen.",
+    "There are no animals.",
+    "It is night.",
+    "She is at home."
+   ],
+   "why": "Animals can be hard to see."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which expression shows you are surprised and impressed?",
+   "o": [
+    "Wow!",
+    "Watch out!",
+    "Nobody knows.",
+    "See you."
+   ],
+   "why": "Wow! shows surprise."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Look at that turtle! It's huge! Which reply fits?",
+   "o": [
+    "Wow! It's so big!",
+    "Watch out! It's a scorpion!",
+    "I've no idea.",
+    "It's so small!"
+   ],
+   "why": "Wow! fits surprise at something huge."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "A: Look! There's something in the grass. B: ___ It might be a snake.",
+   "o": [
+    "Watch out!",
+    "It's so cute!",
+    "That's cool!",
+    "I get it!"
+   ],
+   "why": "A snake can be dangerous, so warn your friend."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct this sentence about the dialogue: The animal has wings.",
+   "o": [
+    "The animal doesn't have wings.",
+    "The animal have wings.",
+    "The animal hasn't wing.",
+    "The animal has a wing."
+   ],
+   "why": "Use doesn't have for the negative."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why can't the animal be a snake?",
+   "o": [
+    "It doesn't have scales.",
+    "It is too small.",
+    "It has wings.",
+    "It lives in water."
+   ],
+   "why": "Snakes always have scales."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Emily say they shouldn't touch the hedgehog?",
+   "o": [
+    "It may be scared.",
+    "It is a toy.",
+    "It is a snake.",
+    "It may fly away."
+   ],
+   "why": "We shouldn't touch wild animals; they can get scared."
+  },
+  {
+   "lv": "التحليل",
+   "q": "How do the children decide it is not a bird?",
+   "o": [
+    "It doesn't have wings.",
+    "It has spines and wings.",
+    "It can sing.",
+    "It has a beak."
+   ],
+   "why": "Birds have wings; this animal doesn't."
+  }
+ ]
+}

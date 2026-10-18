@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السابع",
+  "unit": "",
+  "lesson": "Lesson 8: Literacy – Reading an information text",
+  "outcomes": [
+    "Match fact files to information texts.",
+    "Find facts quickly using headings like Home, Food and Size.",
+    "Answer questions about animals in complete sentences."
+  ],
+  "tf": [
+    { "s": "A vertebrate is an animal with a backbone.", "t": true, "why": "Yes, vertebrates have a backbone." },
+    { "s": "The giant prickly stick insect is a vertebrate.", "t": false, "why": "It is an insect, so it is an invertebrate." },
+    { "s": "The mata mata turtle is a reptile.", "t": true, "why": "Yes, turtles are vertebrate reptiles." },
+    { "s": "The stick insect lives in the forests of Australia.", "t": true, "why": "Yes, its home is in Australian forests." },
+    { "s": "The mata mata turtle lives in cold seas near the North Pole.", "t": false, "why": "It lives in warm lakes, ponds and rivers in South America." },
+    { "s": "The stick insect can hide easily because it looks like dead leaves or wood.", "t": true, "why": "Yes, its shape and colour help it hide." },
+    { "s": "The turtle uses its long nose to breathe while it hides in the water.", "t": true, "why": "Yes, it breathes through its long nose." },
+    { "s": "A fact file explains facts in long paragraphs.", "t": false, "why": "A fact file gives short notes under headings." },
+    { "s": "The stick insect can be up to 20 metres long.", "t": false, "why": "It is up to 20 centimetres long." },
+    { "s": "Both the stick insect and the mata mata turtle lay eggs.", "t": true, "why": "Yes, that is one way they are the same." }
+  ],
+  "boxes": [
+    { "q": "Is the mata mata turtle a vertebrate or an invertebrate?", "o": ["a vertebrate", "an invertebrate", "an insect"], "why": "Reptiles have a backbone." },
+    { "q": "What does the mata mata turtle eat?", "o": ["fish and other small animals", "only leaves", "grass and flowers"], "why": "Its food is fish and small animals." },
+    { "q": "How much does the stick insect weigh?", "o": ["up to 20 grams", "up to 20 kilograms", "up to 2 kilograms"], "why": "It is very light: up to 20 grams." },
+    { "q": "What colour is the stick insect's body?", "o": ["brown or green", "red or blue", "black and white"], "why": "Brown or green helps it look like leaves." },
+    { "q": "Which heading tells you where an animal lives?", "o": ["Home", "Food", "Size"], "why": "Home tells us where it lives." },
+    { "q": "An animal without a backbone is …", "o": ["an invertebrate", "a vertebrate", "a reptile"], "why": "In- means it has no backbone." },
+    { "q": "Which continent is the mata mata turtle from?", "o": ["South America", "Australia", "Asia"], "why": "It lives in South America." },
+    { "q": "What kind of animal is the stick insect?", "o": ["an insect", "a reptile", "a mammal"], "why": "It is an insect, with no backbone." },
+    { "q": "Which helps you find facts fast in a fact file?", "o": ["the headings", "the page number", "the title colour"], "why": "Headings show where each fact is." },
+    { "q": "Which answer is a complete sentence?", "o": ["It lives in the forests of Australia.", "Forests of Australia.", "Australia."], "why": "A complete sentence has a subject and a verb." }
+  ],
+  "hunt": [
+    { "q": "Animal with a backbone", "a": "vertebrate", "d": ["invertebrate", "insect", "fact file"] },
+    { "q": "A stick insect is an …", "a": "invertebrate", "d": ["vertebrate", "reptile", "mammal"] },
+    { "q": "The mata mata turtle is a …", "a": "reptile", "d": ["insect", "fish", "bird"] },
+    { "q": "Home of the stick insect", "a": "Australia", "d": ["South America", "Oman", "Africa"] },
+    { "q": "Home of the mata mata turtle", "a": "South America", "d": ["Australia", "Europe", "Antarctica"] },
+    { "q": "Length of the stick insect", "a": "20 centimetres", "d": ["20 metres", "2 metres", "200 metres"] },
+    { "q": "The turtle breathes with its long …", "a": "nose", "d": ["tail", "legs", "shell"] },
+    { "q": "Heading for what an animal eats", "a": "Food", "d": ["Home", "Size", "Family"] },
+    { "q": "Heading for how big it is", "a": "Size", "d": ["Food", "Home", "Type"] },
+    { "q": "The stick insect looks like dead …", "a": "leaves", "d": ["fish", "stones", "flowers"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "What is the main difference between a vertebrate and an invertebrate?", "o": ["A vertebrate has a backbone.", "A vertebrate can fly.", "An invertebrate is always big.", "An invertebrate lives in water."], "why": "The backbone is the key difference." },
+    { "lv": "التذكر", "q": "Where does the mata mata turtle live?", "o": ["in warm lakes, ponds and rivers", "in the desert", "in cold seas", "in tall trees"], "why": "It lives in warm fresh water in South America." },
+    { "lv": "التذكر", "q": "Which of these is a fact file heading?", "o": ["Family", "Story", "Dialogue", "Poem"], "why": "Fact files use headings like Family, Food and Home." },
+    { "lv": "التذكر", "q": "What does the mata mata turtle use its long nose for?", "o": ["to breathe while it hides in the water", "to catch insects in trees", "to dig holes", "to smell flowers"], "why": "It stays hidden and breathes through its nose." },
+    { "lv": "التطبيق", "q": "Answer in a complete sentence: How much does the stick insect weigh?", "o": ["The stick insect weighs up to 20 grams.", "Up to 20 grams.", "20 grams stick insect.", "Weighs 20."], "why": "A full answer repeats the subject and the verb." },
+    { "lv": "التطبيق", "q": "Correct the sentence: The mata mata turtle is an invertebrate.", "o": ["The mata mata turtle is a vertebrate reptile.", "The mata mata turtle is an insect.", "The mata mata turtle is an invertebrate insect.", "The mata mata turtle is a bird."], "why": "Turtles are reptiles with a backbone." },
+    { "lv": "التطبيق", "q": "You want to know what the stick insect eats. Which heading do you look at?", "o": ["Food", "Size", "Home", "Body"], "why": "Food tells you what it eats." },
+    { "lv": "التحليل", "q": "Why is it easy for the stick insect to hide?", "o": ["It looks like dead leaves or wood.", "It is very heavy.", "It can swim fast.", "It has a long nose."], "why": "Its shape and colour are like the forest." },
+    { "lv": "التحليل", "q": "Which sentence shows one similarity and one difference?", "o": ["Both lay eggs, but the turtle is a vertebrate and the stick insect is not.", "Both are vertebrates and both live in Australia.", "Both are insects, but only one lays eggs.", "Both live in water, but the turtle is green."], "why": "Good comparison with true facts from the texts." },
+    { "lv": "التحليل", "q": "Why does an information text use full sentences but a fact file doesn't?", "o": ["A fact file gives quick notes; a text explains facts.", "A fact file is for teachers only.", "An information text has no facts.", "A fact file is always longer."], "why": "Notes are quick; texts explain in sentences." }
+  ]
+}

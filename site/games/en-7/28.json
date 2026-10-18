@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "",
+ "lesson": "Units 1–2 Review and Assessment: Short Test 1 and Unit 2 practice sheet",
+ "outcomes": [
+  "Use test strategies: read the questions first and underline key words.",
+  "Review Unit 2 words: body parts and animal verbs.",
+  "Use must, might, can't and the first conditional correctly."
+ ],
+ "tf": [
+  {
+   "s": "Before listening, it helps to read the questions and look at the pictures.",
+   "t": true,
+   "why": "Yes, you know what to listen for."
+  },
+  {
+   "s": "Whiskers are long hairs near a cat's nose.",
+   "t": true,
+   "why": "Yes, cats use whiskers to feel."
+  },
+  {
+   "s": "Seals are good at diving because they have flippers.",
+   "t": true,
+   "why": "Yes, flippers help them swim and dive."
+  },
+  {
+   "s": "Camels live in the sea.",
+   "t": false,
+   "why": "Camels live in the desert."
+  },
+  {
+   "s": "A camel has a big hump on its back.",
+   "t": true,
+   "why": "Yes, camels have a hump."
+  },
+  {
+   "s": "We use might when we are 100% sure.",
+   "t": false,
+   "why": "Might means we are not sure."
+  },
+  {
+   "s": "Turtles and flamingos both lay eggs.",
+   "t": true,
+   "why": "Yes, both lay eggs."
+  },
+  {
+   "s": "The correct sentence is: If you will touch the fish, it will swim away.",
+   "t": false,
+   "why": "Say: If you touch the fish, it will swim away."
+  },
+  {
+   "s": "Underlining key words in a question can help you find the answer.",
+   "t": true,
+   "why": "Yes, key words show what to look for."
+  },
+  {
+   "s": "Can't means we think something is possible.",
+   "t": false,
+   "why": "Can't means we are sure it is not possible."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "I can't see the turtle. It ___ be under the water. (not sure)",
+   "o": [
+    "might",
+    "must",
+    "can't"
+   ],
+   "why": "Might shows we are not sure."
+  },
+  {
+   "q": "Complete: If a bee ___ you, it will hurt.",
+   "o": [
+    "stings",
+    "will sting",
+    "stung"
+   ],
+   "why": "After if, use the present simple."
+  },
+  {
+   "q": "Which body parts help a fish swim?",
+   "o": [
+    "fins",
+    "whiskers",
+    "horns"
+   ],
+   "why": "Fish move their fins to swim."
+  },
+  {
+   "q": "Which animal has spines?",
+   "o": [
+    "a hedgehog",
+    "a seal",
+    "a camel"
+   ],
+   "why": "Hedgehogs have spines on their back."
+  },
+  {
+   "q": "Which animal has a hard shell?",
+   "o": [
+    "a turtle",
+    "a camel",
+    "a cat"
+   ],
+   "why": "Turtles have a shell to stay safe."
+  },
+  {
+   "q": "Which animal lays eggs?",
+   "o": [
+    "a snake",
+    "a cat",
+    "a camel"
+   ],
+   "why": "Snakes lay eggs."
+  },
+  {
+   "q": "It has no wings. It ___ be a bird.",
+   "o": [
+    "can't",
+    "must",
+    "will"
+   ],
+   "why": "Without wings, it is sure not to be a bird."
+  },
+  {
+   "q": "Which strategy helps in a test?",
+   "o": [
+    "Underline key words.",
+    "Answer without reading.",
+    "Leave the questions blank."
+   ],
+   "why": "Key words help you focus."
+  },
+  {
+   "q": "A clown works in a …",
+   "o": [
+    "circus",
+    "hospital",
+    "library"
+   ],
+   "why": "Clowns work in a circus."
+  },
+  {
+   "q": "Which verb? A hedgehog makes itself into a ball.",
+   "o": [
+    "curls up",
+    "dives",
+    "digs"
+   ],
+   "why": "Curl up = make a ball shape."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Long hairs near a cat's nose",
+   "a": "whiskers",
+   "d": [
+    "flippers",
+    "fins",
+    "spines"
+   ]
+  },
+  {
+   "q": "Seals have these instead of feet",
+   "a": "flippers",
+   "d": [
+    "paws",
+    "wings",
+    "hooves"
+   ]
+  },
+  {
+   "q": "Camel's back has a big …",
+   "a": "hump",
+   "d": [
+    "fin",
+    "shell",
+    "beak"
+   ]
+  },
+  {
+   "q": "Sure: It ___ be hungry.",
+   "a": "must",
+   "d": [
+    "might",
+    "can't",
+    "could"
+   ]
+  },
+  {
+   "q": "Not sure: It ___ be asleep.",
+   "a": "might",
+   "d": [
+    "must",
+    "can't",
+    "will"
+   ]
+  },
+  {
+   "q": "Sure it isn't: It ___ be a fish.",
+   "a": "can't",
+   "d": [
+    "must",
+    "might",
+    "will"
+   ]
+  },
+  {
+   "q": "If you touch it, it ___ swim away.",
+   "a": "will",
+   "d": [
+    "is",
+    "did",
+    "was"
+   ]
+  },
+  {
+   "q": "Animal verb: a lion …",
+   "a": "roars",
+   "d": [
+    "stings",
+    "digs",
+    "dives"
+   ]
+  },
+  {
+   "q": "Place where clowns work",
+   "a": "circus",
+   "d": [
+    "school",
+    "airport",
+    "farm"
+   ]
+  },
+  {
+   "q": "Animal that lays eggs",
+   "a": "turtle",
+   "d": [
+    "camel",
+    "cat",
+    "seal"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What should you do before a listening task?",
+   "o": [
+    "Read the questions and look at the pictures.",
+    "Close your eyes and wait.",
+    "Write the answers first.",
+    "Talk to your friend."
+   ],
+   "why": "Knowing the questions helps you listen."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which modal shows we are sure something is true?",
+   "o": [
+    "must",
+    "might",
+    "could",
+    "may"
+   ],
+   "why": "Must = I'm sure it's true."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which of these is a body part?",
+   "o": [
+    "whiskers",
+    "roar",
+    "sting",
+    "dig"
+   ],
+   "why": "The others are animal verbs."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list has only animals that lay eggs?",
+   "o": [
+    "birds, turtles, snakes",
+    "cats, camels, seals",
+    "birds, cats, snakes",
+    "turtles, camels, flamingos"
+   ],
+   "why": "Birds, turtles and snakes lay eggs."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose: If you ___ (touch) the fish, it will swim away.",
+   "o": [
+    "touch",
+    "will touch",
+    "touched",
+    "touching"
+   ],
+   "why": "If + present simple."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "It's dark, but I hear a loud roar. It ___ be a lion!",
+   "o": [
+    "must",
+    "can't",
+    "doesn't",
+    "isn't"
+   ],
+   "why": "The roar makes us sure."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Text: 'If you want a place to have fun with your children …' Which continuation fits?",
+   "o": [
+    "We are open from 8 a.m. to 8 p.m.",
+    "He will leave his job next week.",
+    "They're good at diving.",
+    "It has a big hump on its back."
+   ],
+   "why": "A fun place tells you its opening times."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Seals have flippers. Why are they good at diving but not fast on land?",
+   "o": [
+    "Flippers help in water but are not good for walking.",
+    "Seals don't like water.",
+    "Flippers are only for flying.",
+    "Seals have long legs."
+   ],
+   "why": "The same body part helps in water but not on land."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which text continues with 'It also has a big hump on its back'?",
+   "o": [
+    "an animal that lives in the desert and eats plants",
+    "a clown who is leaving his job",
+    "a sea animal with flippers",
+    "a place for families to have fun"
+   ],
+   "why": "A desert animal with a hump is a camel."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A student often spells body-part words wrong. What is the best plan?",
+   "o": [
+    "I need to practise spelling body-part words.",
+    "I don't need to practise anything.",
+    "I will skip the spelling questions.",
+    "I will only practise numbers."
+   ],
+   "why": "Good self-assessment names what to practise."
+  }
+ ]
+}

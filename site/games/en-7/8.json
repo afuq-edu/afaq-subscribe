@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Lesson 6: Culture and Project – Performers around the world",
+ "outcomes": [
+  "Find details about Al Haboot and Cirque du Soleil.",
+  "Compare two kinds of performance.",
+  "Plan and present a poster for a performance."
+ ],
+ "tf": [
+  {
+   "s": "Al Haboot is a performance from Oman.",
+   "t": true,
+   "why": "Yes, it is an Omani performance."
+  },
+  {
+   "s": "Al Haboot is especially popular in Dhofar governorate.",
+   "t": true,
+   "why": "Yes, in the mountains of Oman, especially Dhofar."
+  },
+  {
+   "s": "Al Haboot performers use a poem, rhythm and swords.",
+   "t": true,
+   "why": "Yes, those are key parts of Al Haboot."
+  },
+  {
+   "s": "Cirque du Soleil comes from Canada.",
+   "t": true,
+   "why": "Yes, Cirque du Soleil is from Canada."
+  },
+  {
+   "s": "Cirque du Soleil means Circus of the moon.",
+   "t": false,
+   "why": "It means Circus of the sun."
+  },
+  {
+   "s": "Cirque du Soleil started in 1994.",
+   "t": false,
+   "why": "It started in 1984."
+  },
+  {
+   "s": "Cirque du Soleil performs in Antarctica.",
+   "t": false,
+   "why": "Antarctica is the one continent where they do not perform."
+  },
+  {
+   "s": "A poster for a show should give the place, dates and times.",
+   "t": true,
+   "why": "Yes, people need to know where and when."
+  },
+  {
+   "s": "When you present, you should look at the floor, not the people.",
+   "t": false,
+   "why": "Look at the people listening to keep them interested."
+  },
+  {
+   "s": "We use bullet points on a poster for the dates and times.",
+   "t": true,
+   "why": "Yes, bullet points make them easy to read."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Which country does Al Haboot come from?",
+   "o": [
+    "Oman",
+    "Canada",
+    "Egypt"
+   ],
+   "why": "Al Haboot is Omani."
+  },
+  {
+   "q": "Where is Cirque du Soleil from?",
+   "o": [
+    "Canada",
+    "Oman",
+    "Spain"
+   ],
+   "why": "It is from Canada."
+  },
+  {
+   "q": "Soleil in Cirque du Soleil means ___.",
+   "o": [
+    "sun",
+    "stars",
+    "sea"
+   ],
+   "why": "Cirque du Soleil means Circus of the sun."
+  },
+  {
+   "q": "In which year did the Canadian circus begin?",
+   "o": [
+    "1984",
+    "1948",
+    "2004"
+   ],
+   "why": "Cirque du Soleil started in 1984."
+  },
+  {
+   "q": "What do Al Haboot performers carry?",
+   "o": [
+    "swords",
+    "puppets",
+    "balloons"
+   ],
+   "why": "Swords are part of Al Haboot."
+  },
+  {
+   "q": "Al Haboot is popular in the ___ of Oman.",
+   "o": [
+    "mountains",
+    "cities",
+    "islands"
+   ],
+   "why": "It is popular in the mountains, especially Dhofar."
+  },
+  {
+   "q": "What do we put after an interesting fact on a poster?",
+   "o": [
+    "an exclamation mark",
+    "a question mark",
+    "a comma"
+   ],
+   "why": "Exclamation marks make facts exciting!"
+  },
+  {
+   "q": "What three details must a show poster include?",
+   "o": [
+    "place, dates and times",
+    "price, colour and size",
+    "name, age and hobby"
+   ],
+   "why": "People need to know where and when."
+  },
+  {
+   "q": "Which continent does Cirque du Soleil NOT perform on?",
+   "o": [
+    "Antarctica",
+    "Asia",
+    "Europe"
+   ],
+   "why": "They perform on every other continent."
+  },
+  {
+   "q": "Why should you look at the people listening?",
+   "o": [
+    "to keep them interested",
+    "to remember the words",
+    "to finish faster"
+   ],
+   "why": "Eye contact keeps people interested."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Country of Al Haboot",
+   "a": "Oman",
+   "d": [
+    "Canada",
+    "Egypt",
+    "Spain"
+   ]
+  },
+  {
+   "q": "Country of Cirque du Soleil",
+   "a": "Canada",
+   "d": [
+    "Oman",
+    "France",
+    "Peru"
+   ]
+  },
+  {
+   "q": "Cirque du Soleil started in…",
+   "a": "1984",
+   "d": [
+    "1948",
+    "1994",
+    "2004"
+   ]
+  },
+  {
+   "q": "Soleil means…",
+   "a": "sun",
+   "d": [
+    "moon",
+    "star",
+    "sky"
+   ]
+  },
+  {
+   "q": "Al Haboot is popular in…",
+   "a": "Dhofar",
+   "d": [
+    "Muscat",
+    "Musandam",
+    "Sur"
+   ]
+  },
+  {
+   "q": "Al Haboot performers use…",
+   "a": "swords",
+   "d": [
+    "puppets",
+    "balloons",
+    "bikes"
+   ]
+  },
+  {
+   "q": "No Cirque shows on…",
+   "a": "Antarctica",
+   "d": [
+    "Asia",
+    "Africa",
+    "Europe"
+   ]
+  },
+  {
+   "q": "Punctuation for exciting facts",
+   "a": "exclamation mark",
+   "d": [
+    "question mark",
+    "comma",
+    "full stop"
+   ]
+  },
+  {
+   "q": "Dates and times go in…",
+   "a": "bullet points",
+   "d": [
+    "questions",
+    "titles",
+    "pictures"
+   ]
+  },
+  {
+   "q": "Good presenters make eye ___",
+   "a": "contact",
+   "d": [
+    "colour",
+    "shape",
+    "pictures"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Where is Al Haboot especially popular?",
+   "o": [
+    "In the mountains of Oman, especially in Dhofar",
+    "In the cities of Canada",
+    "In the desert of Egypt",
+    "In Antarctica"
+   ],
+   "why": "Al Haboot is popular in Dhofar governorate."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does Cirque du Soleil mean?",
+   "o": [
+    "Circus of the sun",
+    "Circus of the moon",
+    "Circus of the world",
+    "Circus of the stars"
+   ],
+   "why": "Soleil is French for sun."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which three things are part of Al Haboot?",
+   "o": [
+    "a poem, rhythm and swords",
+    "clowns, make-up and wigs",
+    "puppets, music and masks",
+    "bikes, ropes and balls"
+   ],
+   "why": "Al Haboot uses a poem, rhythm and swords."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When did Cirque du Soleil start?",
+   "o": [
+    "1984",
+    "1884",
+    "1994",
+    "2014"
+   ],
+   "why": "It started in 1984."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is a good bullet point for a show poster?",
+   "o": [
+    "• Friday 18th November, 7 p.m.",
+    "• I like this show",
+    "• Do you like swords?",
+    "• The end"
+   ],
+   "why": "Bullet points give dates and times."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which is the best poster title?",
+   "o": [
+    "Al Haboot Show – Amazing Swords and Songs!",
+    "al haboot show",
+    "A show.",
+    "Is this a show?"
+   ],
+   "why": "A good title is clear and exciting, with an exclamation mark."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your group is presenting a poster. What should you do?",
+   "o": [
+    "Speak clearly and look at the people listening.",
+    "Read very quietly from the paper.",
+    "Turn your back to the class.",
+    "Speak as fast as you can."
+   ],
+   "why": "A clear voice and eye contact help your audience."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is one difference between Al Haboot and Cirque du Soleil?",
+   "o": [
+    "Al Haboot uses a poem and swords; Cirque du Soleil uses circus acts and costumes.",
+    "Both come from Canada.",
+    "Al Haboot started in 1984.",
+    "Cirque du Soleil uses swords and a poem."
+   ],
+   "why": "Compare what the performers do in each show."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is one way the two performances are the same?",
+   "o": [
+    "Both entertain people with performers.",
+    "Both come from Oman.",
+    "Both use swords.",
+    "Both perform only in Antarctica."
+   ],
+   "why": "Each one is a performance that entertains an audience."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A poster says the show is in Salalah but has no date or time. What is the problem?",
+   "o": [
+    "People won't know when to go.",
+    "People won't know where to go.",
+    "It has too many dates.",
+    "It has too many bullet points."
+   ],
+   "why": "A poster needs the place, dates and times."
+  }
+ ]
+}

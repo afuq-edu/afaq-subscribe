@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Lesson 8: Literacy – Reading an advert",
+ "outcomes": [
+  "Scan an advert to find information quickly.",
+  "Decide if statements are Yes, No or Doesn't say.",
+  "Notice how adverts persuade readers."
+ ],
+ "tf": [
+  {
+   "s": "The advert is for Treetops Adventure Playground.",
+   "t": true,
+   "why": "Yes, that is its name."
+  },
+  {
+   "s": "The climbing wall is 15 metres high.",
+   "t": true,
+   "why": "Yes, it is 15 metres."
+  },
+  {
+   "s": "A ten-year-old can play in the Tiny-Tots Playground.",
+   "t": false,
+   "why": "It is for children aged six or under."
+  },
+  {
+   "s": "You wear a helmet and a special harness for the high activities.",
+   "t": true,
+   "why": "Yes, they keep you safe."
+  },
+  {
+   "s": "The Treetops guides help you put on your harness.",
+   "t": true,
+   "why": "Yes, the guides help you."
+  },
+  {
+   "s": "The special offer is three tickets for the price of one.",
+   "t": false,
+   "why": "It is two tickets for the price of one."
+  },
+  {
+   "s": "The ice cream shop has made its own ice cream since 2014.",
+   "t": false,
+   "why": "It has made its own ice cream since 2004."
+  },
+  {
+   "s": "Adverts use imperatives like Ride, Climb and Jump.",
+   "t": true,
+   "why": "Imperatives speak directly to the reader."
+  },
+  {
+   "s": "In the maze, you try to find the exit.",
+   "t": true,
+   "why": "Yes, you go along paths and through tunnels."
+  },
+  {
+   "s": "You can only buy tickets at the playground gate.",
+   "t": false,
+   "why": "You can buy them on the website or by phone."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "How high is the climbing wall?",
+   "o": [
+    "15 metres",
+    "50 metres",
+    "5 metres"
+   ],
+   "why": "It is 15 metres high."
+  },
+  {
+   "q": "Who is the Tiny-Tots Playground for?",
+   "o": [
+    "children aged six or under",
+    "children aged ten",
+    "adults only"
+   ],
+   "why": "It is for young children."
+  },
+  {
+   "q": "What is the special offer?",
+   "o": [
+    "two tickets for the price of one",
+    "free ice cream",
+    "a free helmet"
+   ],
+   "why": "Two for one!"
+  },
+  {
+   "q": "What do you wear on the high activities?",
+   "o": [
+    "a helmet and a harness",
+    "a hat and a coat",
+    "sunglasses"
+   ],
+   "why": "They keep you safe."
+  },
+  {
+   "q": "Who helps you put on your harness?",
+   "o": [
+    "the Treetops guides",
+    "your teacher",
+    "the ice cream seller"
+   ],
+   "why": "The guides help you."
+  },
+  {
+   "q": "Which word is an imperative?",
+   "o": [
+    "Climb",
+    "Climbing",
+    "Climbed"
+   ],
+   "why": "Imperatives give an order or invitation."
+  },
+  {
+   "q": "Which number can you phone for tickets?",
+   "o": [
+    "0181 496 077",
+    "0181 694 770",
+    "0118 496 077"
+   ],
+   "why": "The advert gives 0181 496 077."
+  },
+  {
+   "q": "Since when has the shop made its own ice cream?",
+   "o": [
+    "2004",
+    "2014",
+    "1984"
+   ],
+   "why": "Since 2004."
+  },
+  {
+   "q": "What do you go through in the maze?",
+   "o": [
+    "tunnels",
+    "rivers",
+    "shops"
+   ],
+   "why": "The maze has paths and tunnels."
+  },
+  {
+   "q": "What does DS mean?",
+   "o": [
+    "The text doesn't say.",
+    "The text says no.",
+    "The text says yes."
+   ],
+   "why": "DS = doesn't say."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Height of the climbing wall",
+   "a": "15 metres",
+   "d": [
+    "50 metres",
+    "5 metres",
+    "25 metres"
+   ]
+  },
+  {
+   "q": "Tiny-Tots age limit",
+   "a": "six",
+   "d": [
+    "ten",
+    "eight",
+    "twelve"
+   ]
+  },
+  {
+   "q": "Special offer: 2 for the price of…",
+   "a": "one",
+   "d": [
+    "two",
+    "three",
+    "four"
+   ]
+  },
+  {
+   "q": "You wear it on your head",
+   "a": "helmet",
+   "d": [
+    "harness",
+    "tunnel",
+    "rope"
+   ]
+  },
+  {
+   "q": "Ice cream made since…",
+   "a": "2004",
+   "d": [
+    "2014",
+    "1984",
+    "1994"
+   ]
+  },
+  {
+   "q": "They help with your harness",
+   "a": "guides",
+   "d": [
+    "parents",
+    "teachers",
+    "cooks"
+   ]
+  },
+  {
+   "q": "You find the exit in the…",
+   "a": "maze",
+   "d": [
+    "café",
+    "zip wire",
+    "trampoline"
+   ]
+  },
+  {
+   "q": "Ride along a high line",
+   "a": "zip wire",
+   "d": [
+    "maze",
+    "tunnel",
+    "harness"
+   ]
+  },
+  {
+   "q": "An imperative",
+   "a": "Jump",
+   "d": [
+    "Jumping",
+    "Jumped",
+    "Jumps"
+   ]
+  },
+  {
+   "q": "Jump up high on a…",
+   "a": "trampoline",
+   "d": [
+    "maze",
+    "tunnel",
+    "harness"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What is the adventure playground called?",
+   "o": [
+    "Treetops Adventure Playground",
+    "City Beach Aquarium",
+    "Muscat Science Museum",
+    "Fun Park"
+   ],
+   "why": "The name is Treetops."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How can you buy tickets?",
+   "o": [
+    "On the website or by phoning",
+    "Only at the gate",
+    "At the post office",
+    "From a teacher"
+   ],
+   "why": "The advert gives a website and phone number."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What can you do in the Treetops Maze?",
+   "o": [
+    "Go along the paths and through the tunnels to find the exit",
+    "Jump on the trampoline",
+    "Buy ice cream",
+    "Ride the zip wire"
+   ],
+   "why": "A maze is a puzzle of paths."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word means a set of straps that keeps you safe up high?",
+   "o": [
+    "harness",
+    "maze",
+    "tunnel",
+    "slogan"
+   ],
+   "why": "A harness holds you safely."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Y, N or DS? If you're ten, you can play in the Tiny-Tots Playground.",
+   "o": [
+    "N",
+    "Y",
+    "DS",
+    "Y and DS"
+   ],
+   "why": "It is for children six or under, so the answer is No."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Write a complete answer: What is the special offer?",
+   "o": [
+    "The special offer is two tickets for the price of one.",
+    "Two for one.",
+    "Special offer.",
+    "It is ice cream."
+   ],
+   "why": "A full sentence repeats the question words."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which pair are imperatives from the advert?",
+   "o": [
+    "Ride, Climb",
+    "Riding, Climbed",
+    "Rider, Climber",
+    "Rides, Climbs"
+   ],
+   "why": "Imperatives use the base verb."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the advert say It's the best ice cream in the world!?",
+   "o": [
+    "To make people want to visit",
+    "To tell a scientific fact",
+    "To give the opening times",
+    "To explain safety rules"
+   ],
+   "why": "Adverts use strong words to persuade."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do adverts ask questions and use imperatives?",
+   "o": [
+    "They speak directly to the reader and make the place sound exciting.",
+    "They make the advert longer.",
+    "They give the phone number.",
+    "They tell a story about the past."
+   ],
+   "why": "This makes readers feel invited."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Correct this: The café has made its own ice cream since 2014.",
+   "o": [
+    "The ice cream shop has made its own ice cream since 2004.",
+    "The café has made its own ice cream for 2014.",
+    "The café made ice cream in 2014.",
+    "The ice cream shop has made coffee since 2004."
+   ],
+   "why": "Check the place and the year in the advert."
+  }
+ ]
+}

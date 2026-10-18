@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Lesson 11: Get ready for… A2 Flyers and A2 Key",
+ "outcomes": [
+  "Listen and match people to places.",
+  "Choose the best answer in a conversation.",
+  "Use exam tips to check your answers."
+ ],
+ "tf": [
+  {
+   "s": "In a listening test, a speaker may mention more than one place.",
+   "t": true,
+   "why": "Yes, so listen carefully to the end."
+  },
+  {
+   "s": "You should choose the first place you hear, without listening more.",
+   "t": false,
+   "why": "Listen until the end to find the place the person really went to."
+  },
+  {
+   "s": "You should read all the answers before you choose one.",
+   "t": true,
+   "why": "Yes, that is a good exam tip."
+  },
+  {
+   "s": "“Of course you can!” is a good answer to “Can I come with you?”",
+   "t": true,
+   "why": "Yes, it answers the question politely."
+  },
+  {
+   "s": "“In the morning.” is a good answer to “Can I come with you?”",
+   "t": false,
+   "why": "In the morning answers a When question."
+  },
+  {
+   "s": "“You have to visit the website” answers “How do we buy tickets?”",
+   "t": true,
+   "why": "Yes, it tells us how to buy them."
+  },
+  {
+   "s": "“No, we're taking a picnic” answers “Are you going to have lunch in the café?”",
+   "t": true,
+   "why": "Yes, it answers a yes/no question about lunch."
+  },
+  {
+   "s": "Jasim's been a footballer for he was ten.",
+   "t": false,
+   "why": "He was ten is a point in time: since he was ten."
+  },
+  {
+   "s": "It is a good idea to check your answers after you finish.",
+   "t": true,
+   "why": "Checking helps you find mistakes."
+  },
+  {
+   "s": "A question with When needs an answer about a place.",
+   "t": false,
+   "why": "When asks about time; Where asks about place."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Fahad: Can I come with you?",
+   "o": [
+    "Of course you can!",
+    "In the morning.",
+    "By bus."
+   ],
+   "why": "It answers Can I…?"
+  },
+  {
+   "q": "Fahad: How do we buy tickets?",
+   "o": [
+    "You have to visit the website.",
+    "Yes, I am.",
+    "At ten o'clock."
+   ],
+   "why": "How asks about the way."
+  },
+  {
+   "q": "Fahad: Are you going to have lunch in the café?",
+   "o": [
+    "No, we're taking a picnic.",
+    "You have to visit the website.",
+    "Of course you can!"
+   ],
+   "why": "It is a yes/no question about lunch."
+  },
+  {
+   "q": "Jasim's been a footballer ___ he was ten.",
+   "o": [
+    "since",
+    "for",
+    "ago"
+   ],
+   "why": "He was ten is a point in time."
+  },
+  {
+   "q": "A speaker says two places. What should you do?",
+   "o": [
+    "listen until the end",
+    "choose the first one",
+    "stop listening"
+   ],
+   "why": "The correct place may come later."
+  },
+  {
+   "q": "What should you do before choosing a response?",
+   "o": [
+    "read all the responses",
+    "choose quickly",
+    "read only the first one"
+   ],
+   "why": "Read every option first."
+  },
+  {
+   "q": "Which answer fits a When question?",
+   "o": [
+    "In the morning.",
+    "By car.",
+    "With my brother."
+   ],
+   "why": "When asks about time."
+  },
+  {
+   "q": "Which answer fits a How question about travel?",
+   "o": [
+    "By bus.",
+    "At six.",
+    "Yes, it is."
+   ],
+   "why": "How do you go? – By bus."
+  },
+  {
+   "q": "Which answer fits a Where question?",
+   "o": [
+    "At the aquarium.",
+    "At ten o'clock.",
+    "Because it's fun."
+   ],
+   "why": "Where asks about place."
+  },
+  {
+   "q": "Which answer fits a Why question?",
+   "o": [
+    "Because it's fun.",
+    "At the museum.",
+    "On Friday."
+   ],
+   "why": "Why needs because."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Question about time",
+   "a": "When",
+   "d": [
+    "Where",
+    "Who",
+    "Why"
+   ]
+  },
+  {
+   "q": "Question about place",
+   "a": "Where",
+   "d": [
+    "When",
+    "Who",
+    "How"
+   ]
+  },
+  {
+   "q": "Question about reason",
+   "a": "Why",
+   "d": [
+    "Where",
+    "When",
+    "Who"
+   ]
+  },
+  {
+   "q": "Question about a person",
+   "a": "Who",
+   "d": [
+    "When",
+    "Where",
+    "Why"
+   ]
+  },
+  {
+   "q": "Answer to a Why question",
+   "a": "Because…",
+   "d": [
+    "At six",
+    "By bus",
+    "Yes"
+   ]
+  },
+  {
+   "q": "Answer to a When question",
+   "a": "In the morning",
+   "d": [
+    "By car",
+    "At the zoo",
+    "My dad"
+   ]
+  },
+  {
+   "q": "Answer to a Where question",
+   "a": "At the park",
+   "d": [
+    "On Monday",
+    "By bus",
+    "Because"
+   ]
+  },
+  {
+   "q": "Jasim's a footballer ___ ten",
+   "a": "since",
+   "d": [
+    "for",
+    "ago",
+    "from"
+   ]
+  },
+  {
+   "q": "Reply to Can I come?",
+   "a": "Of course!",
+   "d": [
+    "At ten.",
+    "By bus.",
+    "Because."
+   ]
+  },
+  {
+   "q": "Listen until the ___",
+   "a": "end",
+   "d": [
+    "start",
+    "middle",
+    "break"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What should you do if a speaker mentions two places?",
+   "o": [
+    "Listen until the end to find which place the person went to.",
+    "Write the first place you hear.",
+    "Write both places.",
+    "Stop listening and guess."
+   ],
+   "why": "The correct place may come later."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which exam tip is correct?",
+   "o": [
+    "Read all the answers before you choose one.",
+    "Always choose the longest answer.",
+    "Never check your answers.",
+    "Choose the first answer you see."
+   ],
+   "why": "Reading every option helps you choose well."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Complete: Jasim's been a footballer ___ he was ten.",
+   "o": [
+    "since",
+    "for",
+    "ago",
+    "from"
+   ],
+   "why": "He was ten is a point in time."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word asks about time?",
+   "o": [
+    "When",
+    "Where",
+    "Who",
+    "What colour"
+   ],
+   "why": "When asks about time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Fahad: Can I come with you? Choose Yousuf's best answer.",
+   "o": [
+    "Of course you can!",
+    "In the morning.",
+    "It's a museum.",
+    "Two tickets."
+   ],
+   "why": "It answers Can I…?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Fahad: How do we buy tickets? Which answer fits?",
+   "o": [
+    "You have to visit the website.",
+    "Yes, we are.",
+    "At the café.",
+    "Of course you can!"
+   ],
+   "why": "How asks about the way to do something."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Fahad: Are you going to have lunch in the café? Which answer fits?",
+   "o": [
+    "No, we're taking a picnic.",
+    "You have to visit the website.",
+    "In the morning.",
+    "By plane."
+   ],
+   "why": "A yes/no question needs Yes or No."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A speaker says: I wanted to go to the cinema, but it was closed, so I went to the park. Where did he go?",
+   "o": [
+    "the park",
+    "the cinema",
+    "both places",
+    "nowhere"
+   ],
+   "why": "Listen to the end: he went to the park."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is “In the morning.” a wrong answer to “Can I come with you?”",
+   "o": [
+    "It answers a When question, not a Can question.",
+    "It is too long.",
+    "It is a question.",
+    "It has no verb at the end."
+   ],
+   "why": "Match the answer to the question word."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why should you read all the responses before choosing?",
+   "o": [
+    "Another response might fit the question better.",
+    "It is faster to choose the first.",
+    "All responses are correct.",
+    "The last response is always right."
+   ],
+   "why": "Comparing options helps you find the best one."
+  }
+ ]
+}

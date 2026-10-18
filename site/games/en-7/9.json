@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Lesson 7: English in action – Buying tickets",
+ "outcomes": [
+  "Use expressions to buy tickets and ask about prices.",
+  "Work out the total price of tickets.",
+  "Hear and say the weak schwa sound in -er and -or endings."
+ ],
+ "tf": [
+  {
+   "s": "We say “Can I have four tickets, please?” to buy tickets.",
+   "t": true,
+   "why": "Yes, it is a polite way to ask."
+  },
+  {
+   "s": "We ask “How much is a guide?” to find out the price.",
+   "t": true,
+   "why": "How much asks about price."
+  },
+  {
+   "s": "The customer says “Here you are” when giving the money.",
+   "t": true,
+   "why": "Yes, we say it when we give something."
+  },
+  {
+   "s": "At the fort, a guide costs ten rials.",
+   "t": true,
+   "why": "Yes, a guide is 10 rials."
+  },
+  {
+   "s": "The boy in the dialogue buys two tickets.",
+   "t": false,
+   "why": "He buys four tickets."
+  },
+  {
+   "s": "The boy wants a guide because he wants to know about the fort's history.",
+   "t": true,
+   "why": "Yes, a guide tells you about the fort."
+  },
+  {
+   "s": "“That's 19 rials on total” is correct.",
+   "t": false,
+   "why": "We say in total."
+  },
+  {
+   "s": "In operator, the last syllable has a weak schwa sound.",
+   "t": true,
+   "why": "Yes, -tor sounds like /tə/."
+  },
+  {
+   "s": "Two adult tickets at 7 rials and two child tickets at 4 rials cost 18 rials.",
+   "t": false,
+   "why": "14 + 8 = 22 rials."
+  },
+  {
+   "s": "The customer says “Here are your tickets.”",
+   "t": false,
+   "why": "The ticket seller says that; the customer says Here you are."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Can I ___ four tickets, please?",
+   "o": [
+    "have",
+    "has",
+    "having"
+   ],
+   "why": "Can I have … ? is polite."
+  },
+  {
+   "q": "___ much is a guide?",
+   "o": [
+    "How",
+    "What",
+    "Who"
+   ],
+   "why": "How much asks for the price."
+  },
+  {
+   "q": "That's 19 rials ___ total.",
+   "o": [
+    "in",
+    "on",
+    "at"
+   ],
+   "why": "We say in total."
+  },
+  {
+   "q": "What does the customer say when giving money?",
+   "o": [
+    "Here you are.",
+    "I've no idea.",
+    "See you!"
+   ],
+   "why": "Here you are = take this."
+  },
+  {
+   "q": "What does the seller say with the tickets?",
+   "o": [
+    "Here are your tickets.",
+    "How much is it?",
+    "Can I have a ticket?"
+   ],
+   "why": "The seller gives the tickets."
+  },
+  {
+   "q": "How much is a guide at the fort?",
+   "o": [
+    "10 rials",
+    "7 rials",
+    "4 rials"
+   ],
+   "why": "A guide costs 10 rials."
+  },
+  {
+   "q": "The boy asks: Can I have ___ tickets, please?",
+   "o": [
+    "four",
+    "two",
+    "three"
+   ],
+   "why": "He buys four tickets."
+  },
+  {
+   "q": "Which word ends with a weak schwa sound?",
+   "o": [
+    "performer",
+    "perform",
+    "form"
+   ],
+   "why": "The -er ending is weak: /ə/."
+  },
+  {
+   "q": "3D cinema: adult 3 rials, child 2 rials. One adult and one child?",
+   "o": [
+    "5 rials",
+    "6 rials",
+    "4 rials"
+   ],
+   "why": "3 + 2 = 5 rials."
+  },
+  {
+   "q": "Which question is polite?",
+   "o": [
+    "Can I have two tickets, please?",
+    "Give me tickets.",
+    "Tickets now!"
+   ],
+   "why": "Can I have … please? is polite."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Can I ___ two tickets?",
+   "a": "have",
+   "d": [
+    "has",
+    "take",
+    "do"
+   ]
+  },
+  {
+   "q": "___ much is it?",
+   "a": "How",
+   "d": [
+    "What",
+    "Who",
+    "Where"
+   ]
+  },
+  {
+   "q": "That's 19 rials ___ total.",
+   "a": "in",
+   "d": [
+    "on",
+    "at",
+    "by"
+   ]
+  },
+  {
+   "q": "Giving money: Here ___ are.",
+   "a": "you",
+   "d": [
+    "we",
+    "it",
+    "they"
+   ]
+  },
+  {
+   "q": "Price of a guide (rials)",
+   "a": "10",
+   "d": [
+    "7",
+    "4",
+    "12"
+   ]
+  },
+  {
+   "q": "Adult 7 + child 4 = ? rials",
+   "a": "11",
+   "d": [
+    "10",
+    "12",
+    "13"
+   ]
+  },
+  {
+   "q": "Tickets the boy buys",
+   "a": "four",
+   "d": [
+    "two",
+    "three",
+    "five"
+   ]
+  },
+  {
+   "q": "2 adults (7) + 2 children (4)",
+   "a": "22",
+   "d": [
+    "18",
+    "20",
+    "24"
+   ]
+  },
+  {
+   "q": "Weak sound in -er, -or",
+   "a": "schwa",
+   "d": [
+    "stress",
+    "silent",
+    "long"
+   ]
+  },
+  {
+   "q": "Word with schwa ending",
+   "a": "editor",
+   "d": [
+    "edit",
+    "art",
+    "seat"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which question do you use to ask the price?",
+   "o": [
+    "How much is a guide?",
+    "Can I have a guide?",
+    "Where is the guide?",
+    "Who is the guide?"
+   ],
+   "why": "How much asks about money."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How many tickets does the boy buy?",
+   "o": [
+    "Four tickets",
+    "One ticket",
+    "Two tickets",
+    "Ten tickets"
+   ],
+   "why": "He buys four."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the customer say when giving the money?",
+   "o": [
+    "Here you are.",
+    "Enjoy the show!",
+    "That's in total.",
+    "I get it."
+   ],
+   "why": "Here you are is used when giving something."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where is the schwa sound in operator?",
+   "o": [
+    "In the last syllable: -tor",
+    "In the first syllable: op-",
+    "There is no schwa",
+    "In every syllable"
+   ],
+   "why": "The ending -tor is weak: /tə/."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Adult 7 rials, child 4 rials. Two adults and two children. How much in total?",
+   "o": [
+    "22 rials",
+    "18 rials",
+    "11 rials",
+    "28 rials"
+   ],
+   "why": "7×2 = 14 and 4×2 = 8; 14 + 8 = 22."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "3D cinema: adult 3 rials, child 2 rials. Two adults and three children want tickets. What does the seller say?",
+   "o": [
+    "That's 12 rials in total.",
+    "That's 10 rials in total.",
+    "That's 13 rials in total.",
+    "That's 15 rials in total."
+   ],
+   "why": "3×2 = 6 and 2×3 = 6; 6 + 6 = 12."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "You want two tickets for children. What do you say?",
+   "o": [
+    "Can I have two tickets for children, please?",
+    "How much is two children?",
+    "Here are two children.",
+    "Enjoy the children!"
+   ],
+   "why": "Use Can I have … please?"
+  },
+  {
+   "lv": "التحليل",
+   "q": "A father and three children (child 4 rials) want a guide (10 rials). Adult is 7 rials. What is the total?",
+   "o": [
+    "29 rials",
+    "21 rials",
+    "25 rials",
+    "31 rials"
+   ],
+   "why": "7 + 12 + 10 = 29 rials."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does the boy decide to have a guide?",
+   "o": [
+    "He wants to find out about the fort and its history.",
+    "The guide is free.",
+    "He doesn't want to buy tickets.",
+    "He wants to sell tickets."
+   ],
+   "why": "A guide can explain the fort's history."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which answer is the ticket seller's line, not the customer's?",
+   "o": [
+    "Here are your tickets. Enjoy the visit!",
+    "Can I have four tickets, please?",
+    "How much is a guide?",
+    "Here you are."
+   ],
+   "why": "The seller gives the tickets and wishes you a good visit."
+  }
+ ]
+}

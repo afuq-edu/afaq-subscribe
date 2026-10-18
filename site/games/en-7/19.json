@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 2",
+ "lesson": "Lesson 3: Grammar – may, might, could, can’t, must",
+ "outcomes": [
+  "Know when to use must, can't and may/might/could.",
+  "Make deductions about animals from clues.",
+  "Give a reason for your deduction."
+ ],
+ "tf": [
+  {
+   "s": "We use must when we are sure something is true.",
+   "t": true,
+   "why": "Yes: It has a hump. It must be a camel."
+  },
+  {
+   "s": "We use can't when we are sure something is not true.",
+   "t": true,
+   "why": "Yes: It doesn't have wings. It can't be a bird."
+  },
+  {
+   "s": "May, might and could mean we are not sure.",
+   "t": true,
+   "why": "Yes, they show it is possible."
+  },
+  {
+   "s": "“It can't to be a bear” is correct.",
+   "t": false,
+   "why": "After a modal, use the base verb: It can't be a bear."
+  },
+  {
+   "s": "It has eight legs and makes webs. It must be a spider.",
+   "t": true,
+   "why": "Spiders have eight legs and make webs."
+  },
+  {
+   "s": "It has flippers but no fins. It must be a fish.",
+   "t": false,
+   "why": "Fish have fins, so it can't be a fish."
+  },
+  {
+   "s": "“It might be a cat” and “It must be a cat” mean the same.",
+   "t": false,
+   "why": "Might = not sure; must = sure."
+  },
+  {
+   "s": "It has antennae and six legs. It must be an insect.",
+   "t": true,
+   "why": "Insects have six legs and antennae."
+  },
+  {
+   "s": "The light is off. They can't be at home. Here can't means we are sure they are not at home.",
+   "t": true,
+   "why": "Can't shows we are sure it is not true."
+  },
+  {
+   "s": "Someone is at the door. We don't know who. “It must be Dad” is the best sentence.",
+   "t": false,
+   "why": "We are not sure, so we say It might be Dad."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "It has a hump and lives in the desert. It ___ be a camel.",
+   "o": [
+    "must",
+    "can't",
+    "might not"
+   ],
+   "why": "We are sure, so must."
+  },
+  {
+   "q": "It doesn't have wings. It ___ be a bird.",
+   "o": [
+    "can't",
+    "must",
+    "could"
+   ],
+   "why": "We are sure it is not a bird."
+  },
+  {
+   "q": "I'm not sure what it is. It ___ be a fox.",
+   "o": [
+    "might",
+    "must",
+    "can't"
+   ],
+   "why": "Might shows we are not sure."
+  },
+  {
+   "q": "It has wings and a beak. It ___ be a bird.",
+   "o": [
+    "must",
+    "can't",
+    "might not"
+   ],
+   "why": "Wings and a beak tell us it's a bird."
+  },
+  {
+   "q": "It isn't moving. It (must / can't) be asleep.",
+   "o": [
+    "must",
+    "can't",
+    "mustn't"
+   ],
+   "why": "Not moving tells us it is asleep."
+  },
+  {
+   "q": "Her phone is ringing but she isn't answering. She ___ be busy.",
+   "o": [
+    "must",
+    "can't",
+    "isn't"
+   ],
+   "why": "We are quite sure she is busy."
+  },
+  {
+   "q": "Which modal means 100% sure it is true?",
+   "o": [
+    "must",
+    "might",
+    "could"
+   ],
+   "why": "Must = sure."
+  },
+  {
+   "q": "Which modal means 0% – sure it is not true?",
+   "o": [
+    "can't",
+    "may",
+    "must"
+   ],
+   "why": "Can't = sure not."
+  },
+  {
+   "q": "It lays eggs, swims and has a beak like a duck. What must it be?",
+   "o": [
+    "a platypus",
+    "a fish",
+    "a lion"
+   ],
+   "why": "Only the platypus fits all three clues."
+  },
+  {
+   "q": "After must, can't or might, we use…",
+   "o": [
+    "the base verb (be)",
+    "verb + -ing",
+    "to + verb"
+   ],
+   "why": "Example: It might be a cat."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Sure it's true",
+   "a": "must",
+   "d": [
+    "can't",
+    "might",
+    "could"
+   ]
+  },
+  {
+   "q": "Sure it's not true",
+   "a": "can't",
+   "d": [
+    "must",
+    "may",
+    "might"
+   ]
+  },
+  {
+   "q": "Not sure (m…)",
+   "a": "might",
+   "d": [
+    "must",
+    "can't",
+    "mustn't"
+   ]
+  },
+  {
+   "q": "Not sure (c…)",
+   "a": "could",
+   "d": [
+    "can't",
+    "must",
+    "mustn't"
+   ]
+  },
+  {
+   "q": "Hump, desert: it must be a…",
+   "a": "camel",
+   "d": [
+    "fish",
+    "bird",
+    "bee"
+   ]
+  },
+  {
+   "q": "Eight legs, webs: a…",
+   "a": "spider",
+   "d": [
+    "bee",
+    "ant",
+    "snake"
+   ]
+  },
+  {
+   "q": "Wings and beak: a…",
+   "a": "bird",
+   "d": [
+    "fish",
+    "cat",
+    "lizard"
+   ]
+  },
+  {
+   "q": "Six legs, antennae: an…",
+   "a": "insect",
+   "d": [
+    "bird",
+    "fish",
+    "snake"
+   ]
+  },
+  {
+   "q": "No wings: it ___ be a bird.",
+   "a": "can't",
+   "d": [
+    "must",
+    "will",
+    "is"
+   ]
+  },
+  {
+   "q": "Lays eggs, duck beak, swims",
+   "a": "platypus",
+   "d": [
+    "lion",
+    "cat",
+    "shark"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which modal do we use when we are sure something is not true?",
+   "o": [
+    "can't",
+    "must",
+    "might",
+    "could"
+   ],
+   "why": "Can't = we are sure it is not true."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which modal do we use when we are sure something is true?",
+   "o": [
+    "must",
+    "may",
+    "might",
+    "could"
+   ],
+   "why": "Must = sure."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which group of modals means we are not sure?",
+   "o": [
+    "may, might, could",
+    "must, can't",
+    "must, will",
+    "can't, mustn't"
+   ],
+   "why": "These show possibility."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Correct: It can't to be a bear.",
+   "o": [
+    "It can't be a bear.",
+    "It can't being a bear.",
+    "It can't is a bear.",
+    "It not can be a bear."
+   ],
+   "why": "No to after a modal."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a deduction: It has eight legs and makes webs.",
+   "o": [
+    "It must be a spider.",
+    "It can't be a spider.",
+    "It must be a bird.",
+    "It might be a fish."
+   ],
+   "why": "Eight legs and webs = a spider."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a deduction: It has antennae and six legs.",
+   "o": [
+    "It must be an insect.",
+    "It must be a snake.",
+    "It can't be an insect.",
+    "It must be a bird."
+   ],
+   "why": "Insects have six legs and antennae."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "There are big paw prints and long claw marks. Which deduction is best?",
+   "o": [
+    "It might be a bear. It must be a big animal.",
+    "It must be a fish.",
+    "It can't be an animal.",
+    "It must be a bird."
+   ],
+   "why": "Big paws and claws mean a big animal."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the difference between It might be a cat and It must be a cat?",
+   "o": [
+    "Might = not sure; must = sure.",
+    "Might = sure; must = not sure.",
+    "They mean the same.",
+    "Might is for the past; must is for the future."
+   ],
+   "why": "Modals show how sure we are."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Someone is at the door. Why is It might be Dad better than It must be Dad?",
+   "o": [
+    "Because we are not sure who it is.",
+    "Because Dad is never at home.",
+    "Because might is the past tense.",
+    "Because must is always wrong."
+   ],
+   "why": "Might shows we are guessing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "A picture shows fur and claws. Which pair of deductions makes sense?",
+   "o": [
+    "It might be a cat. It can't be a fish.",
+    "It must be a fish. It might be a bird.",
+    "It can't be a cat. It must be a snake.",
+    "It must be a bird. It can't be a cat."
+   ],
+   "why": "Fish don't have fur, but cats do."
+  }
+ ]
+}

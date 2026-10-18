@@ -1,0 +1,59 @@
+{
+  "subject": "اللغة الإنجليزية",
+  "grade": "الصف السابع",
+  "unit": "",
+  "lesson": "Lesson 5: Vocabulary and Grammar – Animal verbs; First conditional",
+  "outcomes": [
+    "Name and use animal verbs like roar, sting, dive and curl up.",
+    "Make first conditional sentences: If + present, will + verb.",
+    "Talk about real things that can happen in the future."
+  ],
+  "tf": [
+    { "s": "A lion roars loudly.", "t": true, "why": "Yes, roar is the loud sound a lion makes." },
+    { "s": "A hedgehog curls up to make itself into a ball.", "t": true, "why": "Yes, it curls up to stay safe." },
+    { "s": "Bees sting with their tail.", "t": true, "why": "Yes, a bee stings with the end of its body." },
+    { "s": "In the first conditional, we use will in the if part.", "t": false, "why": "The if part uses the present simple: If it rains, …" },
+    { "s": "The negative of will is won't.", "t": true, "why": "Yes, will not = won't." },
+    { "s": "Dig means to fly high in the sky.", "t": false, "why": "Dig means to make a hole in the ground." },
+    { "s": "If we plant more flowers, more bees will come.", "t": true, "why": "Yes, this sentence is correct: present + will." },
+    { "s": "If I will see a lion, I will run away.", "t": false, "why": "Say: If I see a lion, I'll run away." },
+    { "s": "The first conditional talks about things that can really happen in the future.", "t": true, "why": "Yes, it is for real future possibilities." },
+    { "s": "Hide means to show yourself so everyone can see you.", "t": false, "why": "Hide means to go where others can't see you." }
+  ],
+  "boxes": [
+    { "q": "A hedgehog makes itself into a ball. It …", "o": ["curls up", "roars", "dives"], "why": "Curl up means make your body into a ball." },
+    { "q": "Complete: If you come with us, you ___ with the best animals.", "o": ["will be", "are being", "was"], "why": "The result part uses will + verb." },
+    { "q": "Which animal digs?", "o": ["a rabbit", "an eagle", "a shark"], "why": "Rabbits dig holes in the ground." },
+    { "q": "Complete: If you ___ (not hurry), you'll miss the bus.", "o": ["don't hurry", "won't hurry", "didn't hurry"], "why": "The if part uses the present simple." },
+    { "q": "Which verb? A scorpion can ___ you.", "o": ["sting", "dive", "lay eggs"], "why": "A scorpion stings with its tail." },
+    { "q": "Which animal dives into the water?", "o": ["a penguin", "a camel", "a hedgehog"], "why": "Penguins dive to catch fish." },
+    { "q": "Complete: If you shout, the gazelles will ___.", "o": ["run away", "lay eggs", "dig"], "why": "Scared animals run away quickly." },
+    { "q": "Which animal lays eggs?", "o": ["a turtle", "a lion", "a horse"], "why": "Turtles lay eggs." },
+    { "q": "Choose: If you look up, you ___ an eagle.", "o": ["will see", "saw", "seeing"], "why": "Use will + verb after the if part." },
+    { "q": "What tense is in the if part of a first conditional?", "o": ["present simple", "past simple", "will future"], "why": "If + present simple, … will + verb." }
+  ],
+  "hunt": [
+    { "q": "A lion does this loudly.", "a": "roar", "d": ["dig", "dive", "hide"] },
+    { "q": "A bee does this with its tail.", "a": "sting", "d": ["roar", "curl up", "dive"] },
+    { "q": "A rabbit makes a hole. It …", "a": "digs", "d": ["flies", "roars", "stings"] },
+    { "q": "A bird is scared. It …", "a": "flies away", "d": ["digs", "lays eggs", "roars"] },
+    { "q": "A turtle does this on the beach.", "a": "lays eggs", "d": ["roars", "stings", "flies away"] },
+    { "q": "Negative of will", "a": "won't", "d": ["don't", "isn't", "didn't"] },
+    { "q": "If it ___ (rain), I'll stay home.", "a": "rains", "d": ["will rain", "rained", "raining"] },
+    { "q": "If you touch it, it ___ (curl up).", "a": "will curl up", "d": ["curls up", "curled up", "curling up"] },
+    { "q": "If we put water out, birds ___ it.", "a": "will drink", "d": ["drank", "drinking", "drinks"] },
+    { "q": "A penguin goes under the water. It …", "a": "dives", "d": ["digs", "roars", "hides"] }
+  ],
+  "mcq": [
+    { "lv": "التذكر", "q": "Which verb means 'go away quickly on foot because you are scared'?", "o": ["run away", "fly away", "curl up", "dig"], "why": "Run away is on foot; fly away is with wings." },
+    { "lv": "التذكر", "q": "What is the correct form of the first conditional?", "o": ["If + present simple, … will + verb", "If + will, … present simple", "If + past simple, … will + verb", "If + will, … will + verb"], "why": "The if part is present; the result uses will." },
+    { "lv": "التذكر", "q": "Which animal verb means 'cut into something with your teeth'?", "o": ["bite", "sting", "dive", "lay eggs"], "why": "Animals bite with their teeth." },
+    { "lv": "التذكر", "q": "Which animal can roar?", "o": ["a lion", "a bee", "a hedgehog", "a turtle"], "why": "Lions are famous for their loud roar." },
+    { "lv": "التطبيق", "q": "Complete: If a scorpion ___ you, you'll need to go to hospital.", "o": ["stings", "will sting", "stung", "stinging"], "why": "After if, use the present simple: stings." },
+    { "lv": "التطبيق", "q": "Make it negative: If I join the lions, the birds will be happy.", "o": ["If I join the lions, the birds won't be happy.", "If I don't join the lions, the birds will be happy.", "If I join the lions, the birds don't will be happy.", "If I won't join the lions, the birds will be happy."], "why": "We change will to won't in the result part." },
+    { "lv": "التطبيق", "q": "Which sentence is correct?", "o": ["If you touch a hedgehog, it will curl up.", "If you will touch a hedgehog, it curls up.", "If you will touch a hedgehog, it will curl up.", "If you touched a hedgehog, it will curl up."], "why": "Present in the if part, will in the result." },
+    { "lv": "التحليل", "q": "Your class wants more birds in the school garden. Which plan uses the first conditional correctly?", "o": ["If we put food out, more birds will come.", "If we will put food out, more birds come.", "If we put food out, more birds came.", "If we putting food out, more birds will come."], "why": "Good! Present simple, then will + verb." },
+    { "lv": "التحليل", "q": "Which is the best advice if you see a scorpion?", "o": ["If you see a scorpion, move away slowly.", "If you see a scorpion, touch it.", "If you see a scorpion, pick it up.", "If you see a scorpion, sit next to it."], "why": "Moving away slowly keeps you safe." },
+    { "lv": "التحليل", "q": "In a conditional chain, what comes next? If it rains, I'll stay home. If I stay home, …", "o": ["I'll read a book.", "it rains.", "I stayed home.", "I will rain."], "why": "Each result starts the next if sentence." }
+  ]
+}

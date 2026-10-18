@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Lesson 12: Optional lesson – Fun corner",
+ "outcomes": [
+  "Use Unit 1 words and grammar in games.",
+  "Ask and answer How long questions.",
+  "Read the story The Entertainment Tour and find times and places."
+ ],
+ "tf": [
+  {
+   "s": "“How long has he been a clown?” is a correct question.",
+   "t": true,
+   "why": "How long + has + he + been."
+  },
+  {
+   "s": "“He has been a stunt performer since ten years” is correct.",
+   "t": false,
+   "why": "Ten years is a period: for ten years."
+  },
+  {
+   "s": "“I'm going to the 3D cinema tomorrow” is a plan.",
+   "t": true,
+   "why": "Tomorrow shows a future plan."
+  },
+  {
+   "s": "A costume designer designs costumes for films.",
+   "t": true,
+   "why": "Yes, that is the job."
+  },
+  {
+   "s": "In the story, Mr Talal is the boys' teacher.",
+   "t": true,
+   "why": "Yes, Mr Talal takes them on the tour."
+  },
+  {
+   "s": "The boys meet the guide at the Science Museum at four o'clock.",
+   "t": false,
+   "why": "They meet the guide at ten o'clock."
+  },
+  {
+   "s": "The boys buy a postcard in the gift shop.",
+   "t": true,
+   "why": "Yes, they buy a postcard."
+  },
+  {
+   "s": "At the end of the story, Hazim can't find his camera.",
+   "t": true,
+   "why": "Yes, that is the problem at the end."
+  },
+  {
+   "s": "The boys visit the art gallery before the Science Museum.",
+   "t": false,
+   "why": "They go to the Science Museum first, then the art gallery."
+  },
+  {
+   "s": "A sculpture is a song you sing in a show.",
+   "t": false,
+   "why": "A sculpture is art made from stone, metal or wood."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Mr Talal is the boys' ___.",
+   "o": [
+    "teacher",
+    "guide",
+    "father"
+   ],
+   "why": "Mr Talal is their teacher."
+  },
+  {
+   "q": "What time do they catch the bus back to school?",
+   "o": [
+    "four o'clock",
+    "ten o'clock",
+    "one o'clock"
+   ],
+   "why": "The bus back is at four o'clock."
+  },
+  {
+   "q": "Where do the boys buy a postcard?",
+   "o": [
+    "in the gift shop",
+    "in the café",
+    "on the bus"
+   ],
+   "why": "They buy it in the gift shop."
+  },
+  {
+   "q": "Where do they go after the Science Museum?",
+   "o": [
+    "the art gallery",
+    "the aquarium",
+    "the ice rink"
+   ],
+   "why": "The art gallery comes next."
+  },
+  {
+   "q": "What is Hazim's problem at the end?",
+   "o": [
+    "He can't find his camera.",
+    "He is hungry.",
+    "He misses the bus."
+   ],
+   "why": "His camera is lost."
+  },
+  {
+   "q": "He has been a stunt performer ___ ten years.",
+   "o": [
+    "for",
+    "since",
+    "at"
+   ],
+   "why": "Ten years is a period."
+  },
+  {
+   "q": "How long ___ he been a clown?",
+   "o": [
+    "has",
+    "have",
+    "is"
+   ],
+   "why": "He takes has."
+  },
+  {
+   "q": "She designs costumes for films. She is a ___.",
+   "o": [
+    "costume designer",
+    "sound editor",
+    "presenter"
+   ],
+   "why": "Costume designers make costumes."
+  },
+  {
+   "q": "They're ___ at the ice rink.",
+   "o": [
+    "skating",
+    "skate",
+    "skated"
+   ],
+   "why": "Present continuous: are + skating."
+  },
+  {
+   "q": "Which word is from the story about art?",
+   "o": [
+    "sculpture",
+    "harness",
+    "trampoline"
+   ],
+   "why": "Sculptures are in art galleries."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "The boys' teacher",
+   "a": "Mr Talal",
+   "d": [
+    "Mr Frank",
+    "Mr Majid",
+    "Mr Ali"
+   ]
+  },
+  {
+   "q": "Who loses his camera?",
+   "a": "Hazim",
+   "d": [
+    "Faisal",
+    "Mr Talal",
+    "Majid"
+   ]
+  },
+  {
+   "q": "Gift shop buy",
+   "a": "postcard",
+   "d": [
+    "camera",
+    "sculpture",
+    "ticket"
+   ]
+  },
+  {
+   "q": "Meet the guide at…",
+   "a": "10 o'clock",
+   "d": [
+    "1 o'clock",
+    "4 o'clock",
+    "8 o'clock"
+   ]
+  },
+  {
+   "q": "Bus back to school at…",
+   "a": "4 o'clock",
+   "d": [
+    "10 o'clock",
+    "1 o'clock",
+    "7 o'clock"
+   ]
+  },
+  {
+   "q": "First place on the tour",
+   "a": "Science Museum",
+   "d": [
+    "art gallery",
+    "gift shop",
+    "school"
+   ]
+  },
+  {
+   "q": "Art made of stone or metal",
+   "a": "sculpture",
+   "d": [
+    "postcard",
+    "galaxy",
+    "balloon"
+   ]
+  },
+  {
+   "q": "Stars and planets together",
+   "a": "galaxy",
+   "d": [
+    "sculpture",
+    "gallery",
+    "balloon"
+   ]
+  },
+  {
+   "q": "Stunt performer ___ 10 years",
+   "a": "for",
+   "d": [
+    "since",
+    "ago",
+    "at"
+   ]
+  },
+  {
+   "q": "How long ___ he been here?",
+   "a": "has",
+   "d": [
+    "have",
+    "is",
+    "did"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Who is taking the boys on the tour?",
+   "o": [
+    "Their teacher, Mr Talal",
+    "Their father",
+    "A clown",
+    "Frank"
+   ],
+   "why": "Mr Talal is their teacher."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What time are they meeting the guide at the Science Museum?",
+   "o": [
+    "At ten o'clock",
+    "At one o'clock",
+    "At four o'clock",
+    "At midnight"
+   ],
+   "why": "The museum visit is at ten."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What do the boys buy in the gift shop?",
+   "o": [
+    "A postcard",
+    "A camera",
+    "A sculpture",
+    "A hot-air balloon"
+   ],
+   "why": "They buy a postcard."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Write the job: She designs costumes for films.",
+   "o": [
+    "costume designer",
+    "make-up artist",
+    "animator",
+    "stunt performer"
+   ],
+   "why": "A costume designer designs costumes."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct: He has been a stunt performer since ten years.",
+   "o": [
+    "He has been a stunt performer for ten years.",
+    "He is a stunt performer since ten years.",
+    "He was a stunt performer for ten years ago.",
+    "He has be a stunt performer for ten years."
+   ],
+   "why": "Ten years is a period, so use for."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ask a How long question about a clown.",
+   "o": [
+    "How long has he been a clown?",
+    "How long he has been a clown?",
+    "How long is he been a clown?",
+    "How long have he been a clown?"
+   ],
+   "why": "How long + has + he + been?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Put in order: art gallery – bus back to school – Science Museum.",
+   "o": [
+    "Science Museum → art gallery → bus back to school",
+    "Art gallery → Science Museum → bus back to school",
+    "Bus back to school → art gallery → Science Museum",
+    "Science Museum → bus back to school → art gallery"
+   ],
+   "why": "10 o'clock, then 1 o'clock, then 4 o'clock."
+  },
+  {
+   "lv": "التحليل",
+   "q": "What is the problem at the end of the story?",
+   "o": [
+    "Hazim can't find his camera.",
+    "The bus doesn't come.",
+    "The museum is closed.",
+    "Mr Talal is ill."
+   ],
+   "why": "The lost camera is the problem."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why has Hazim been excited since breakfast time?",
+   "o": [
+    "It's a fun day and they are going on an entertainment tour.",
+    "He has a new camera.",
+    "He is going to the dentist.",
+    "It is his birthday."
+   ],
+   "why": "The tour makes it an exciting day."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence about a picture of an ice rink is correct?",
+   "o": [
+    "They're skating at the ice rink.",
+    "They're swimming at the ice rink.",
+    "They're skating at the aquarium.",
+    "They skating at the ice rink."
+   ],
+   "why": "People skate at an ice rink: are + skating."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Lesson 5: Vocabulary and Grammar – Places of entertainment; Present continuous for future arrangements",
+ "outcomes": [
+  "Name 12 places of entertainment.",
+  "Use the Present continuous for future arrangements.",
+  "Talk and write about your own plans."
+ ],
+ "tf": [
+  {
+   "s": "You skate at an ice rink.",
+   "t": true,
+   "why": "Yes, an ice rink has ice for skating."
+  },
+  {
+   "s": "You can see fish, sharks and turtles at an aquarium.",
+   "t": true,
+   "why": "Yes, an aquarium has sea animals."
+  },
+  {
+   "s": "A planetarium has stars and planets on the ceiling.",
+   "t": true,
+   "why": "Yes, it shows the night sky."
+  },
+  {
+   "s": "You watch films with special glasses at a bowling alley.",
+   "t": false,
+   "why": "That is a 3D cinema; at a bowling alley you play bowling."
+  },
+  {
+   "s": "We can use the Present continuous for fixed future plans.",
+   "t": true,
+   "why": "Yes: We're watching a show on Tuesday."
+  },
+  {
+   "s": "The Present continuous is am/is/are + verb-ing.",
+   "t": true,
+   "why": "For example: is taking, are visiting."
+  },
+  {
+   "s": "“I'm flying to Cairo on Monday” is about now.",
+   "t": false,
+   "why": "On Monday shows it is a future arrangement."
+  },
+  {
+   "s": "“She isn't coming to the circus tonight” is a correct negative.",
+   "t": true,
+   "why": "Is not + coming = isn't coming."
+  },
+  {
+   "s": "A safari park is a place to see paintings.",
+   "t": false,
+   "why": "You see paintings at an art gallery; a safari park has wild animals."
+  },
+  {
+   "s": "“Tomorrow we visiting the park” is correct.",
+   "t": false,
+   "why": "We need are: Tomorrow we are visiting the park."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where do you skate?",
+   "o": [
+    "at an ice rink",
+    "at a planetarium",
+    "at an art gallery"
+   ],
+   "why": "Ice rinks are for skating."
+  },
+  {
+   "q": "Where can you see paintings?",
+   "o": [
+    "at an art gallery",
+    "at an ice rink",
+    "at a bowling alley"
+   ],
+   "why": "Art galleries show paintings."
+  },
+  {
+   "q": "Where do you watch films with glasses?",
+   "o": [
+    "at a 3D cinema",
+    "at an aquarium",
+    "at a circus"
+   ],
+   "why": "A 3D cinema uses special glasses."
+  },
+  {
+   "q": "Tomorrow we ___ (visit) Al-Qurum park.",
+   "o": [
+    "are visiting",
+    "is visiting",
+    "visiting"
+   ],
+   "why": "We + are + verb-ing."
+  },
+  {
+   "q": "She ___ (not / come) to the circus tonight.",
+   "o": [
+    "isn't coming",
+    "aren't coming",
+    "not coming"
+   ],
+   "why": "She + isn't + coming."
+  },
+  {
+   "q": "My dad ___ (take) us to the theme park this evening.",
+   "o": [
+    "is taking",
+    "are taking",
+    "take"
+   ],
+   "why": "He/she takes is."
+  },
+  {
+   "q": "Which is a time expression for the future?",
+   "o": [
+    "next week",
+    "yesterday",
+    "last year"
+   ],
+   "why": "Next week is in the future."
+  },
+  {
+   "q": "Make negative: We are going out tonight.",
+   "o": [
+    "We aren't going out tonight.",
+    "We isn't going out tonight.",
+    "We not going out tonight."
+   ],
+   "why": "We + aren't + going."
+  },
+  {
+   "q": "Which place has rides like a roller coaster?",
+   "o": [
+    "a theme park",
+    "an art gallery",
+    "a science museum"
+   ],
+   "why": "Theme parks have rides."
+  },
+  {
+   "q": "Where do clowns and acrobats perform?",
+   "o": [
+    "at a circus",
+    "at an aquarium",
+    "at a planetarium"
+   ],
+   "why": "A circus has clowns and acrobats."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Place to skate",
+   "a": "ice rink",
+   "d": [
+    "aquarium",
+    "art gallery",
+    "planetarium"
+   ]
+  },
+  {
+   "q": "Place to see sharks",
+   "a": "aquarium",
+   "d": [
+    "circus",
+    "ice rink",
+    "3D cinema"
+   ]
+  },
+  {
+   "q": "Place with stars on the ceiling",
+   "a": "planetarium",
+   "d": [
+    "aquarium",
+    "theme park",
+    "ice rink"
+   ]
+  },
+  {
+   "q": "Place to see paintings",
+   "a": "art gallery",
+   "d": [
+    "bowling alley",
+    "safari park",
+    "circus"
+   ]
+  },
+  {
+   "q": "Place to see wild animals",
+   "a": "safari park",
+   "d": [
+    "art gallery",
+    "ice rink",
+    "3D cinema"
+   ]
+  },
+  {
+   "q": "Place with clowns",
+   "a": "circus",
+   "d": [
+    "aquarium",
+    "art gallery",
+    "planetarium"
+   ]
+  },
+  {
+   "q": "We ___ visiting Nizwa.",
+   "a": "are",
+   "d": [
+    "is",
+    "am",
+    "be"
+   ]
+  },
+  {
+   "q": "She ___ coming tonight.",
+   "a": "isn't",
+   "d": [
+    "aren't",
+    "am not",
+    "don't"
+   ]
+  },
+  {
+   "q": "Dad is ___ us out.",
+   "a": "taking",
+   "d": [
+    "take",
+    "took",
+    "takes"
+   ]
+  },
+  {
+   "q": "A future time expression",
+   "a": "tomorrow",
+   "d": [
+    "yesterday",
+    "last week",
+    "now"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which place has stars and planets on the ceiling?",
+   "o": [
+    "a planetarium",
+    "an aquarium",
+    "an ice rink",
+    "a soft play centre"
+   ],
+   "why": "A planetarium shows the sky."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Where can you see fish, sharks and turtles?",
+   "o": [
+    "at an aquarium",
+    "at an art gallery",
+    "at a bowling alley",
+    "at a 3D cinema"
+   ],
+   "why": "Aquariums have sea animals."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do we make the Present continuous?",
+   "o": [
+    "am/is/are + verb-ing",
+    "have/has + past participle",
+    "will + verb",
+    "did + verb"
+   ],
+   "why": "For example: I am meeting."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which word is a place of entertainment?",
+   "o": [
+    "bowling alley",
+    "bus stop",
+    "post office",
+    "hospital"
+   ],
+   "why": "People go to a bowling alley for fun."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Ask a question: you / visit / the safari park / next week?",
+   "o": [
+    "Are you visiting the safari park next week?",
+    "Do you visiting the safari park next week?",
+    "You are visit the safari park next week?",
+    "Is you visiting the safari park next week?"
+   ],
+   "why": "Are + you + verb-ing?"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: My cousins ___ us at the theme park on Friday.",
+   "o": [
+    "are meeting",
+    "is meeting",
+    "meeting",
+    "meets yesterday"
+   ],
+   "why": "They takes are + -ing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Which sentence is about a future arrangement?",
+   "o": [
+    "I'm visiting my grandma on Thursday.",
+    "I'm reading a book now.",
+    "I visited my grandma last week.",
+    "I visit my grandma every day."
+   ],
+   "why": "On Thursday shows a fixed future plan."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence is an arrangement?",
+   "o": [
+    "I'm flying to Cairo on Monday.",
+    "I'm reading now.",
+    "I read every night.",
+    "I was flying yesterday."
+   ],
+   "why": "It has a future time and a fixed plan."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is the Present continuous used in: We're watching a show on Tuesday?",
+   "o": [
+    "It is a future arrangement; they have decided and have tickets.",
+    "It is happening right now.",
+    "It happened last Tuesday.",
+    "It happens every Tuesday."
+   ],
+   "why": "Fixed plans with a time use the Present continuous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which time expression does NOT go with a future arrangement?",
+   "o": [
+    "last night",
+    "tonight",
+    "next week",
+    "on Saturday"
+   ],
+   "why": "Last night is in the past."
+  }
+ ]
+}

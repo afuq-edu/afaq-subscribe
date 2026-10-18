@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السابع",
+ "unit": "Unit 1",
+ "lesson": "Graded readers 1 and 2: The Entertainment Tour / The School Show",
+ "outcomes": [
+  "Read two graded readers and find key details.",
+  "Use story words like galaxy, sculpture and backstage.",
+  "Talk about your dream job with since and for."
+ ],
+ "tf": [
+  {
+   "s": "At the Science Museum, Hazim understood how hot-air balloons fly.",
+   "t": true,
+   "why": "Yes, he learned that at the museum."
+  },
+  {
+   "s": "The boys take a photo in front of an amazing galaxy.",
+   "t": true,
+   "why": "Yes, the galaxy picture was amazing."
+  },
+  {
+   "s": "Faisal says they can do another tour with their parents tomorrow.",
+   "t": true,
+   "why": "Yes, that helps Hazim feel better."
+  },
+  {
+   "s": "A sculpture is a piece of art you can walk around.",
+   "t": true,
+   "why": "Yes, it is made from stone, metal or wood."
+  },
+  {
+   "s": "Samar and Basma have been at the school show for two days.",
+   "t": false,
+   "why": "They have been there for two hours."
+  },
+  {
+   "s": "Basma's dream is to become a make-up artist.",
+   "t": true,
+   "why": "Yes, that is Basma's dream."
+  },
+  {
+   "s": "The lion at the door is a real lion.",
+   "t": false,
+   "why": "It is a performer wearing lion make-up."
+  },
+  {
+   "s": "The performer has wanted to be a performer for a few days.",
+   "t": false,
+   "why": "He/she has wanted it for many years."
+  },
+  {
+   "s": "The costume designer hopes performers all over the world will use her costumes one day.",
+   "t": true,
+   "why": "Yes, that is her hope."
+  },
+  {
+   "s": "Backstage is where the audience sits.",
+   "t": false,
+   "why": "Backstage is behind the stage, where performers get ready."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Where did Hazim learn how hot-air balloons fly?",
+   "o": [
+    "at the Science Museum",
+    "at the art gallery",
+    "on the bus"
+   ],
+   "why": "He learned it at the Science Museum."
+  },
+  {
+   "q": "What do they take a photo in front of?",
+   "o": [
+    "a galaxy",
+    "a lion",
+    "a bus"
+   ],
+   "why": "An amazing galaxy picture."
+  },
+  {
+   "q": "How long have Samar and Basma been at the show?",
+   "o": [
+    "two hours",
+    "two days",
+    "two weeks"
+   ],
+   "why": "For two hours."
+  },
+  {
+   "q": "Who do the girls meet first backstage?",
+   "o": [
+    "a performer",
+    "a make-up artist",
+    "a teacher"
+   ],
+   "why": "They meet a performer first."
+  },
+  {
+   "q": "Who painted the lion's face?",
+   "o": [
+    "the make-up artist",
+    "the costume designer",
+    "the camera operator"
+   ],
+   "why": "Make-up artists paint faces."
+  },
+  {
+   "q": "Why is Samar nervous at the classroom door?",
+   "o": [
+    "She sees a lion's face.",
+    "She is late.",
+    "She lost her ticket."
+   ],
+   "why": "She thinks it is a real lion."
+  },
+  {
+   "q": "I've wanted to be a writer ___ many years.",
+   "o": [
+    "for",
+    "since",
+    "at"
+   ],
+   "why": "Many years is a period."
+  },
+  {
+   "q": "I've wanted to be a costume designer ___ I was small.",
+   "o": [
+    "since",
+    "for",
+    "ago"
+   ],
+   "why": "I was small is a point in time."
+  },
+  {
+   "q": "What does the audience do when they love a show?",
+   "o": [
+    "cheer",
+    "sleep",
+    "cry"
+   ],
+   "why": "People cheer to show they are happy."
+  },
+  {
+   "q": "What does the performer love?",
+   "o": [
+    "hearing the audience cheer",
+    "painting faces",
+    "making costumes"
+   ],
+   "why": "The performer loves school shows and the audience's cheers."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Hazim's lost item",
+   "a": "camera",
+   "d": [
+    "postcard",
+    "ticket",
+    "phone"
+   ]
+  },
+  {
+   "q": "Hazim's friend",
+   "a": "Faisal",
+   "d": [
+    "Fahad",
+    "Frank",
+    "Majid"
+   ]
+  },
+  {
+   "q": "Photo in front of a…",
+   "a": "galaxy",
+   "d": [
+    "lion",
+    "bus",
+    "shop"
+   ]
+  },
+  {
+   "q": "Hazim learned how they fly",
+   "a": "hot-air balloons",
+   "d": [
+    "planes",
+    "birds",
+    "rockets"
+   ]
+  },
+  {
+   "q": "Basma's dream job",
+   "a": "make-up artist",
+   "d": [
+    "writer",
+    "clown",
+    "animator"
+   ]
+  },
+  {
+   "q": "Girls at the show for 2…",
+   "a": "hours",
+   "d": [
+    "days",
+    "weeks",
+    "years"
+   ]
+  },
+  {
+   "q": "Face at the door",
+   "a": "lion",
+   "d": [
+    "tiger",
+    "clown",
+    "monkey"
+   ]
+  },
+  {
+   "q": "Behind the stage",
+   "a": "backstage",
+   "d": [
+    "audience",
+    "gallery",
+    "balloon"
+   ]
+  },
+  {
+   "q": "Shout happily at a show",
+   "a": "cheer",
+   "d": [
+    "whisper",
+    "cry",
+    "sleep"
+   ]
+  },
+  {
+   "q": "Wanted it ___ I was small",
+   "a": "since",
+   "d": [
+    "for",
+    "ago",
+    "from"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "What did Hazim understand at the Science Museum?",
+   "o": [
+    "How hot-air balloons fly",
+    "How to make a sculpture",
+    "How to write a postcard",
+    "How to find a camera"
+   ],
+   "why": "The museum taught him about hot-air balloons."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Whose dream is to become a make-up artist?",
+   "o": [
+    "Basma's",
+    "Samar's",
+    "Hazim's",
+    "Faisal's"
+   ],
+   "why": "Basma wants to be a make-up artist."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does sculpture mean?",
+   "o": [
+    "Art made from stone, metal or wood that you can walk around",
+    "A picture of stars",
+    "A kind of bus",
+    "A gift shop card"
+   ],
+   "why": "You can walk around a sculpture."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What does the costume designer hope?",
+   "o": [
+    "That performers all over the world use her costumes one day",
+    "That she becomes a lion",
+    "That the show finishes early",
+    "That she finds a camera"
+   ],
+   "why": "She dreams her costumes will be used everywhere."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Find a Present continuous sentence for the future in the story.",
+   "o": [
+    "We're visiting an art gallery at one o'clock.",
+    "We visited the museum.",
+    "Hazim has been excited.",
+    "They take a photo."
+   ],
+   "why": "Are + -ing with a future time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I've wanted to be a camera operator ___ I was eight.",
+   "o": [
+    "since",
+    "for",
+    "ago",
+    "during"
+   ],
+   "why": "I was eight is a point in time."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "How does Faisal help Hazim feel better?",
+   "o": [
+    "He says they can do another tour with their parents tomorrow and find the camera.",
+    "He gives Hazim his own camera.",
+    "He buys him a postcard.",
+    "He calls the police."
+   ],
+   "why": "Faisal offers a new plan."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why does Samar think there is a real lion?",
+   "o": [
+    "A performer is wearing lion make-up.",
+    "There is a lion in the classroom.",
+    "She hears a lion on TV.",
+    "She sees a lion costume in the shop."
+   ],
+   "why": "The make-up artist painted the performer's face."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which job from Unit 1 painted the lion's face?",
+   "o": [
+    "make-up artist",
+    "sound editor",
+    "animator",
+    "presenter"
+   ],
+   "why": "Make-up artists paint actors' faces."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which is the best new ending for The Entertainment Tour?",
+   "o": [
+    "Mr Talal finds the camera on the bus seat, and Hazim is very happy.",
+    "The boys meet a lion backstage.",
+    "Basma becomes a make-up artist.",
+    "The galaxy disappears."
+   ],
+   "why": "It solves the problem of the lost camera."
+  }
+ ]
+}
