@@ -132,3 +132,10 @@ begin
              coalesce(r.requested_at, r.created_at) desc)
   from public.ext_requests r), '[]'::jsonb);
 end $function$;
+
+-- 2026-10-18 (مطبَّق، هجرة hader_name_norm_dots): مطابقة الاسم لا تحاسب على الهمزات ولا النقاط (رسم الحروف بلا نقاط)
+create or replace function public.ar_name_norm(t text) returns text language sql immutable as $$
+  select translate(trim(regexp_replace(regexp_replace(regexp_replace(translate(regexp_replace(coalesce(t, ''), '[ًٌٍَُِّْـ]', '', 'g'), 'أإآٱىة', 'اااايه'),
+    '(^|\s)(عبد|ابو|أبو|ام|بن|بنت)\s+', '\1\2', 'g'), '[^ء-ي0-9 ]', ' ', 'g'), '\s+', ' ', 'g')),
+    'بتثنيجخذزشضظغقؤئء', 'ٮٮٮٮٮححدرسصطعفوٮ')
+$$;

@@ -1843,7 +1843,8 @@ function wzRender() {
   } else if (wz.step === 'name') {
     head.textContent = 'اسمك كما في نور';
     body.innerHTML = `<p class="wz-note">تبدأ تجربتك المجانية الآن: ${toAr((wz.catalog && wz.catalog.trial) || 3)} حصص مجانًا في المواد كلها معًا، دون دفع ولا تواصل.</p>
-      <input class="input big" id="wzName" placeholder="الاسم الثلاثي" autocomplete="name">
+      <p class="wz-note big"><b>اكتب اسمك كما هو مسجّل في منصة نور</b> — اشتراكك يكون باسمك، ويعمل لحساب نور الذي يحمل هذا الاسم.</p>
+      <input class="input big" id="wzName" placeholder="اسمك كما في نور" autocomplete="name">
       <input class="input big" id="wzPhone" placeholder="رقم الهاتف (اختياري)" inputmode="tel" dir="ltr" style="text-align:right">
       <p class="wz-note" id="wzRefNote" hidden>دعاك زميلك ✓ — إذا اشتركت تحصلان كلاكما على خصم.</p>
       <details class="wz-code" id="wzRefBox"><summary>دعاني زميل (رقم الدعوة)</summary><input class="input big" id="wzRef" placeholder="رقم طلب زميلك، مثل 1003" inputmode="numeric" dir="ltr"></details>
