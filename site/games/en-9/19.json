@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 3: The future is now",
+ "lesson": "Unit 3 Consolidation: Grammar file and Practice Guide",
+ "outcomes": [
+  "Correct mistakes with future forms (will, going to, present continuous).",
+  "Tell the difference between advice and suggestions.",
+  "Use exam strategies for gapped texts, picture listening and speaking."
+ ],
+ "tf": [
+  {
+   "s": "We use 'I'll' for an offer, like 'I'll go to the shop. Do you need anything?'",
+   "t": true,
+   "why": "Yes, will is great for offers."
+  },
+  {
+   "s": "'The train leaves at 6.30 tomorrow' uses the present simple for a timetable.",
+   "t": true,
+   "why": "Timetables use the present simple, even for the future."
+  },
+  {
+   "s": "'How about to have some sandwiches?' is correct.",
+   "t": false,
+   "why": "After 'How about' we use -ing: 'How about having some sandwiches?'"
+  },
+  {
+   "s": "'You should see a doctor' is a suggestion.",
+   "t": false,
+   "why": "With 'should' this sentence gives advice."
+  },
+  {
+   "s": "When we can see something is about to happen, we use 'going to'.",
+   "t": true,
+   "why": "Like 'Look out! That cat's going to jump!'"
+  },
+  {
+   "s": "We use 'Shall I…?' to make an offer.",
+   "t": true,
+   "why": "Yes: 'Shall I help you?'"
+  },
+  {
+   "s": "In a gapped-text task, you should read only the sentence before the gap.",
+   "t": false,
+   "why": "Read the sentences before AND after the gap."
+  },
+  {
+   "s": "In picture listening, you often hear about all three pictures, but only one answers the question.",
+   "t": true,
+   "why": "So listen carefully to the whole recording."
+  },
+  {
+   "s": "In the Unit 3 gapped-text tasks, there are no extra sentences.",
+   "t": false,
+   "why": "There are three extra sentences you don't need."
+  },
+  {
+   "s": "'What do you think?' is a phrase to ask your partner's opinion.",
+   "t": true,
+   "why": "Asking your partner keeps the discussion going."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Bader and I arranged it. Complete: Bader and I ___ to the cinema tonight.",
+   "o": [
+    "are going",
+    "go",
+    "will to go"
+   ],
+   "why": "We use the present continuous for arrangements."
+  },
+  {
+   "q": "Complete the suggestion: Why ___ we go to the park?",
+   "o": [
+    "don't",
+    "not",
+    "do"
+   ],
+   "why": "'Why don't we…?' makes a suggestion."
+  },
+  {
+   "q": "Complete the offer: ___ I help you?",
+   "o": [
+    "Shall",
+    "Do",
+    "Am"
+   ],
+   "why": "'Shall I…?' is used for offers."
+  },
+  {
+   "q": "'You should rest.' This sentence is…",
+   "o": [
+    "advice",
+    "an offer",
+    "a prediction"
+   ],
+   "why": "'Should' is used for advice."
+  },
+  {
+   "q": "The sky is clear. Complete: I don't think it ___ rain tomorrow.",
+   "o": [
+    "will",
+    "won't",
+    "is"
+   ],
+   "why": "'I don't think it will…' is the correct prediction."
+  },
+  {
+   "q": "What should you look for around a gap?",
+   "o": [
+    "reference and linking words",
+    "page numbers",
+    "pictures"
+   ],
+   "why": "These words connect the sentences."
+  },
+  {
+   "q": "Before picture listening, you should…",
+   "o": [
+    "name each picture and predict words",
+    "close your eyes",
+    "write the answers"
+   ],
+   "why": "Predicting words helps you listen."
+  },
+  {
+   "q": "Complete the suggestion: You ___ try this new app – it's great!",
+   "o": [
+    "could",
+    "going",
+    "don't"
+   ],
+   "why": "'You could…' makes a suggestion."
+  },
+  {
+   "q": "In the collaborative speaking task, you try to…",
+   "o": [
+    "reach an agreement",
+    "finish alone",
+    "stay silent"
+   ],
+   "why": "Talk with your partner and agree together."
+  },
+  {
+   "q": "Complete the arrangement: I ___ meeting my friends at four.",
+   "o": [
+    "'m",
+    "will",
+    "going"
+   ],
+   "why": "'I'm meeting…' is the present continuous."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "Offer: ___ I open the window?",
+   "a": "Shall",
+   "d": [
+    "Do",
+    "Am",
+    "Are"
+   ]
+  },
+  {
+   "q": "How about ___ sandwiches?",
+   "a": "having",
+   "d": [
+    "to have",
+    "have",
+    "had"
+   ]
+  },
+  {
+   "q": "The train ___ at 6.30 tomorrow.",
+   "a": "leaves",
+   "d": [
+    "leaving",
+    "is leave",
+    "will to leave"
+   ]
+  },
+  {
+   "q": "Look out! The cat's going to ___!",
+   "a": "jump",
+   "d": [
+    "jumping",
+    "jumps",
+    "jumped"
+   ]
+  },
+  {
+   "q": "Advice: You ___ see a doctor.",
+   "a": "should",
+   "d": [
+    "shall",
+    "are",
+    "going"
+   ]
+  },
+  {
+   "q": "Read the sentences before and ___ the gap.",
+   "a": "after",
+   "d": [
+    "under",
+    "without",
+    "instead of"
+   ]
+  },
+  {
+   "q": "Ask an opinion: What do you ___?",
+   "a": "think",
+   "d": [
+    "thinking",
+    "thought",
+    "thinks"
+   ]
+  },
+  {
+   "q": "I'm sure it ___ be sunny.",
+   "a": "will",
+   "d": [
+    "is",
+    "does",
+    "going"
+   ]
+  },
+  {
+   "q": "Plan: I'm going to ___ a book tonight.",
+   "a": "read",
+   "d": [
+    "reading",
+    "reads",
+    "to read"
+   ]
+  },
+  {
+   "q": "'Why don't we go?' is a…",
+   "a": "suggestion",
+   "d": [
+    "prediction",
+    "offer",
+    "arrangement"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which form do we often use for a fixed arrangement with a time?",
+   "o": [
+    "present continuous",
+    "present simple",
+    "past simple",
+    "past continuous"
+   ],
+   "why": "Like 'I'm meeting Ali at five.'"
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which sentence makes an offer?",
+   "o": [
+    "Shall I carry your bag?",
+    "Why don't we go out?",
+    "You should rest.",
+    "It will rain."
+   ],
+   "why": "'Shall I…?' offers help."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which strategy helps with a gapped text?",
+   "o": [
+    "Read the sentences before and after the gap",
+    "Read only the title",
+    "Choose the longest sentence",
+    "Leave all the hard gaps empty"
+   ],
+   "why": "The text around the gap gives you clues."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which phrase asks for your partner's view?",
+   "o": [
+    "What's your view on this?",
+    "I'll pay for it.",
+    "Look out!",
+    "Shall I help you?"
+   ],
+   "why": "This phrase invites your partner to give an opinion."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Correct the offer: 'I go to the shop. Do you need anything?'",
+   "o": [
+    "I'll go to the shop.",
+    "I went to the shop.",
+    "I'm go to the shop.",
+    "I going to the shop."
+   ],
+   "why": "We use will for offers made now."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Your friend has a headache. Give advice.",
+   "o": [
+    "You should lie down.",
+    "Shall we lie down?",
+    "You lay down yesterday.",
+    "How about to lie down?"
+   ],
+   "why": "'You should…' gives advice."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: I'm sure our team ___ win. They're the best!",
+   "o": [
+    "will",
+    "won't",
+    "wins last week",
+    "is winning yesterday"
+   ],
+   "why": "We use will for a prediction we feel sure about."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'leaves' correct in 'The train leaves at 6.30 tomorrow'?",
+   "o": [
+    "It is a timetable, so we use the present simple.",
+    "It happened yesterday.",
+    "It is an offer.",
+    "It is advice."
+   ],
+   "why": "Timetables use the present simple."
+  },
+  {
+   "lv": "التحليل",
+   "q": "In picture listening, why must you listen carefully until the end?",
+   "o": [
+    "All three things may be mentioned, but only one is the answer.",
+    "The pictures are always wrong.",
+    "You hear nothing about the pictures.",
+    "The answer is always the first picture."
+   ],
+   "why": "Distractors are often mentioned too."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we use 'going to' in 'Look out! That cat's going to jump!'?",
+   "o": [
+    "We can see it is about to happen.",
+    "It is a timetable.",
+    "It is an offer.",
+    "It happened in the past."
+   ],
+   "why": "We use going to when we can see the evidence now."
+  }
+ ]
+}

@@ -324,14 +324,14 @@
   },
   {
    "lv": "التحليل",
-   "q": "Why are the children going to close the classroom doors?",
+   "q": "Why does Ali remind Eric to turn off the computer?",
    "o": [
-    "To keep the classroom cool",
-    "To make the classroom hotter",
-    "To keep the paper safe",
-    "To make the room darker"
+    "He hopes Eric isn’t going to forget, so they can save energy.",
+    "He wants Eric to play a game.",
+    "The computer is broken.",
+    "He wants to use the computer himself."
    ],
-   "why": "Closed doors help keep the classroom cool."
+   "why": "Turning off computers is part of their energy-saving plan."
   },
   {
    "lv": "التحليل",

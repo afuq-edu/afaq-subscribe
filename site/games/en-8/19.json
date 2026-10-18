@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 2: Adventure sports",
+ "lesson": "Lesson 4: WOW! Book Club – An adventure story",
+ "outcomes": [
+  "Know the features of an adventure story: characters, setting and exciting events.",
+  "Understand the events of the story Old-fashioned explorers.",
+  "Make and use compound adjectives like ice-cold and world-famous."
+ ],
+ "tf": [
+  {
+   "s": "In a story, a character is a person.",
+   "t": true,
+   "why": "Yes, characters are the people in the story."
+  },
+  {
+   "s": "The setting of a story is the place where it happens.",
+   "t": true,
+   "why": "Correct! The setting is the place."
+  },
+  {
+   "s": "An adventure story usually has boring events.",
+   "t": false,
+   "why": "Adventure stories have exciting events."
+  },
+  {
+   "s": "Nada brought her grandad’s old compass.",
+   "t": true,
+   "why": "Right! She took Grandad’s old compass."
+  },
+  {
+   "s": "Hussain heard a man who was shouting for help.",
+   "t": true,
+   "why": "Yes, Hussain heard the man’s shouts."
+  },
+  {
+   "s": "The man fell into a river.",
+   "t": false,
+   "why": "The man fell down the cliff."
+  },
+  {
+   "s": "The people in the helicopter pulled the man to safety on a rope.",
+   "t": true,
+   "why": "Great! Then they took him to hospital."
+  },
+  {
+   "s": "Old-fashioned explorers had mobile phones and helicopters.",
+   "t": false,
+   "why": "They didn’t have mobile phones or helicopters to help people."
+  },
+  {
+   "s": "We make a compound adjective with word + hyphen + word, like ice-cold.",
+   "t": true,
+   "why": "Yes! ice + cold = ice-cold."
+  },
+  {
+   "s": "“World-famous” means only a few people know it.",
+   "t": false,
+   "why": "World-famous means people all over the world know it."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What did Nada bring with her?",
+   "o": [
+    "Grandad’s old compass",
+    "a mobile phone",
+    "a helicopter map"
+   ],
+   "why": "Nada brought the old compass."
+  },
+  {
+   "q": "Where did the man fall?",
+   "o": [
+    "down the cliff",
+    "into the sea",
+    "off a bike"
+   ],
+   "why": "He fell down the cliff."
+  },
+  {
+   "q": "Make a compound adjective: ice + cold",
+   "o": [
+    "ice-cold",
+    "cold-ice",
+    "icecolded"
+   ],
+   "why": "Word + hyphen + word: ice-cold."
+  },
+  {
+   "q": "Food you make at home is ___ food.",
+   "o": [
+    "home-made",
+    "world-famous",
+    "ice-cold"
+   ],
+   "why": "Home-made means made at home."
+  },
+  {
+   "q": "A journey that takes nine hours is a ___ journey.",
+   "o": [
+    "nine-hour",
+    "nine-hours",
+    "hours-nine"
+   ],
+   "why": "In compound adjectives the noun is singular: nine-hour."
+  },
+  {
+   "q": "A country where people speak English is an ___ country.",
+   "o": [
+    "English-speaking",
+    "English-spoken",
+    "speaking-English"
+   ],
+   "why": "English-speaking describes the country."
+  },
+  {
+   "q": "A book that won a prize is a ___ book.",
+   "o": [
+    "prize-winning",
+    "prize-won",
+    "winning-prize"
+   ],
+   "why": "Prize-winning means it won a prize."
+  },
+  {
+   "q": "The place where a story happens is the…",
+   "o": [
+    "setting",
+    "character",
+    "title"
+   ],
+   "why": "Setting = place."
+  },
+  {
+   "q": "Who heard the man shouting for help?",
+   "o": [
+    "Hussain",
+    "Nada",
+    "Rahaf"
+   ],
+   "why": "Hussain heard him."
+  },
+  {
+   "q": "What helped the man get to hospital?",
+   "o": [
+    "a helicopter",
+    "a compass",
+    "a camel"
+   ],
+   "why": "The helicopter team took him to hospital."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "ice + cold",
+   "a": "ice-cold",
+   "d": [
+    "cold-ice",
+    "cold-iced",
+    "ice-colder"
+   ]
+  },
+  {
+   "q": "Known all over the world",
+   "a": "world-famous",
+   "d": [
+    "home-made",
+    "ice-cold",
+    "nine-hour"
+   ]
+  },
+  {
+   "q": "Made at home",
+   "a": "home-made",
+   "d": [
+    "prize-winning",
+    "world-famous",
+    "old-fashioned"
+   ]
+  },
+  {
+   "q": "Won a prize",
+   "a": "prize-winning",
+   "d": [
+    "home-made",
+    "ice-cold",
+    "English-speaking"
+   ]
+  },
+  {
+   "q": "From the past, not modern",
+   "a": "old-fashioned",
+   "d": [
+    "world-famous",
+    "prize-winning",
+    "home-made"
+   ]
+  },
+  {
+   "q": "Lasting nine hours",
+   "a": "nine-hour",
+   "d": [
+    "nine-hours",
+    "hour-nine",
+    "nine-houred"
+   ]
+  },
+  {
+   "q": "A person in a story",
+   "a": "character",
+   "d": [
+    "setting",
+    "title",
+    "compass"
+   ]
+  },
+  {
+   "q": "The place in a story",
+   "a": "setting",
+   "d": [
+    "character",
+    "helmet",
+    "ending"
+   ]
+  },
+  {
+   "q": "What Nada brought",
+   "a": "compass",
+   "d": [
+    "phone",
+    "rope",
+    "helmet"
+   ]
+  },
+  {
+   "q": "It took the man to hospital",
+   "a": "helicopter",
+   "d": [
+    "camel",
+    "boat",
+    "bike"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which is a feature of an adventure story?",
+   "o": [
+    "It has exciting events.",
+    "It has no characters.",
+    "It is a list of facts.",
+    "It has no setting."
+   ],
+   "why": "Adventure stories are exciting."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Who are the three children in the story?",
+   "o": [
+    "Hussain, Rahaf and Nada",
+    "Ali, Eric and Rosie",
+    "Majid, Hazim and Saeed",
+    "Khalid, Marwa and Manar"
+   ],
+   "why": "The journalist role play interviews Hussain, Rahaf and Nada."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How did the people in the helicopter help the man?",
+   "o": [
+    "They pulled him to safety on a rope and took him to hospital.",
+    "They gave him a compass.",
+    "They took him home on a camel.",
+    "They called his school."
+   ],
+   "why": "The helicopter team rescued him."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do we make a compound adjective?",
+   "o": [
+    "word + hyphen + word",
+    "word + -ing only",
+    "two words with no hyphen ever",
+    "word + -ly"
+   ],
+   "why": "Example: old-fashioned."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Choose the correct sentence.",
+   "o": [
+    "The Pyramids are world-famous.",
+    "The Pyramids are famous-world.",
+    "The Pyramids are world famous-ly.",
+    "The Pyramids are worlds-famous."
+   ],
+   "why": "World-famous is the compound adjective."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: “After the long walk, we drank some ___ water.”",
+   "o": [
+    "ice-cold",
+    "home-made",
+    "prize-winning",
+    "nine-hour"
+   ],
+   "why": "Ice-cold water is very cold."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: “My mum’s ___ bread is delicious.”",
+   "o": [
+    "home-made",
+    "English-speaking",
+    "nine-hour",
+    "world-famous"
+   ],
+   "why": "Bread made at home is home-made."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why are the children happy that they aren’t really old-fashioned explorers?",
+   "o": [
+    "Old-fashioned explorers didn’t have mobile phones or helicopters to help people.",
+    "Old-fashioned explorers had better compasses.",
+    "They don’t like adventures.",
+    "Explorers never go to cliffs."
+   ],
+   "why": "Modern tools like helicopters can save people."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which event happened first?",
+   "o": [
+    "Hussain heard a man shouting for help.",
+    "The man was taken to hospital.",
+    "The helicopter pulled the man up on a rope.",
+    "The helicopter flew away with the man."
+   ],
+   "why": "Hearing the shouts came before the rescue."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we say “a nine-hour journey” and not “a nine-hours journey”?",
+   "o": [
+    "In a compound adjective the noun stays singular.",
+    "Hours is a verb.",
+    "Nine is not a number.",
+    "We never use hyphens."
+   ],
+   "why": "Compound adjectives before a noun don’t take -s."
+  }
+ ]
+}

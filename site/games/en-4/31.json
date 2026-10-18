@@ -25,9 +25,9 @@
    "why": "Correct! 'Is Molt Town bigger? Yes, it is.'"
   },
   {
-   "s": "The chair is wider than the table.",
+   "s": "We say 'Molt Town is more big than Trock Town.'",
    "t": false,
-   "why": "No, it isn't. The table is wider than the chair."
+   "why": "We say 'bigger than'."
   },
   {
    "s": "Jebel Shams is smaller than Mount Everest.",
@@ -235,12 +235,12 @@
    ]
   },
   {
-   "q": "Word after 'taller'",
-   "a": "than",
+   "q": "wet → ...",
+   "a": "wetter",
    "d": [
-    "then",
-    "that",
-    "the"
+    "weter",
+    "wettest",
+    "more wet"
    ]
   }
  ],
@@ -280,14 +280,14 @@
   },
   {
    "lv": "التذكر",
-   "q": "Is Molt Town bigger than Trock Town?",
+   "q": "Is the table wider than the chair?",
    "o": [
     "Yes, it is.",
     "Yes, they are.",
     "No, they aren't.",
     "Yes, it does."
    ],
-   "why": "Yes, it is."
+   "why": "The table is wider, so: Yes, it is."
   },
   {
    "lv": "التطبيق",

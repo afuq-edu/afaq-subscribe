@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 2: Connections",
+ "lesson": "Lesson 4: Listening – communicating with animals",
+ "outcomes": [
+  "Predict the type of word missing before I listen.",
+  "Understand a talk about how people communicate with animals.",
+  "Use the -ing form as a subject and after prepositions."
+ ],
+ "tf": [
+  {
+   "s": "Before you listen, it helps to predict the type of word missing in each gap.",
+   "t": true,
+   "why": "Predicting helps you listen for the right information."
+  },
+  {
+   "s": "Mudrik became interested in animal communication when he was 25.",
+   "t": false,
+   "why": "He was 12; 25 is the number of years he has been interested."
+  },
+  {
+   "s": "In Brazil, dolphins chase fish towards the nets.",
+   "t": true,
+   "why": "Yes, the dolphins help the people fish."
+  },
+  {
+   "s": "Experts in Africa use sounds to keep elephants away from villages.",
+   "t": true,
+   "why": "They copy elephant sounds."
+  },
+  {
+   "s": "The talk says respect is important when we communicate with animals.",
+   "t": true,
+   "why": "We should treat animals with respect."
+  },
+  {
+   "s": "'Swim is really good for you' is correct.",
+   "t": false,
+   "why": "As a subject we use the -ing form: 'Swimming is really good for you.'"
+  },
+  {
+   "s": "We use the -ing form after prepositions, like 'dream of being'.",
+   "t": true,
+   "why": "After a preposition, use -ing."
+  },
+  {
+   "s": "The -ing form of 'swim' is 'swiming'.",
+   "t": false,
+   "why": "We double the final consonant: swimming."
+  },
+  {
+   "s": "The -ing form of 'lie' is 'lying'.",
+   "t": true,
+   "why": "-ie becomes -y: lie – lying."
+  },
+  {
+   "s": "We can never use the -ing form as the subject of a sentence.",
+   "t": false,
+   "why": "We can: 'Reading before bed helps me relax.'"
+  }
+ ],
+ "boxes": [
+  {
+   "q": "What kind of word is missing in 'when he was ___ years old'?",
+   "o": [
+    "a number",
+    "a place",
+    "a feeling"
+   ],
+   "why": "'Years old' needs a number."
+  },
+  {
+   "q": "Monty Roberts watched how horses behaved in ___.",
+   "o": [
+    "the wild",
+    "the nets",
+    "a school"
+   ],
+   "why": "He watched horses in the wild."
+  },
+  {
+   "q": "What is the -ing form of 'come'?",
+   "o": [
+    "coming",
+    "comeing",
+    "comming"
+   ],
+   "why": "Drop the -e and add -ing."
+  },
+  {
+   "q": "What is the -ing form of 'die'?",
+   "o": [
+    "dying",
+    "dieing",
+    "diying"
+   ],
+   "why": "-ie becomes -y: dying."
+  },
+  {
+   "q": "Complete: I'm fed up with ___ the same food.",
+   "o": [
+    "eating",
+    "eat",
+    "to eat"
+   ],
+   "why": "After 'with' (a preposition) we use -ing."
+  },
+  {
+   "q": "Complete: ___ before bed helps me relax.",
+   "o": [
+    "Reading",
+    "Read",
+    "Reads"
+   ],
+   "why": "The -ing form can be the subject."
+  },
+  {
+   "q": "What do you get if you pass the end-of-course test?",
+   "o": [
+    "a certificate",
+    "a parent",
+    "a website"
+   ],
+   "why": "You get a certificate."
+  },
+  {
+   "q": "How much is the fee for the AI course?",
+   "o": [
+    "€20",
+    "€12",
+    "€25"
+   ],
+   "why": "The fee is twenty euros."
+  },
+  {
+   "q": "What will the online course teach you to use AI for?",
+   "o": [
+    "presentations",
+    "cooking",
+    "driving"
+   ],
+   "why": "It teaches you to use AI for presentations."
+  },
+  {
+   "q": "Who must come with children under thirteen to face-to-face sessions?",
+   "o": [
+    "a parent",
+    "a classmate",
+    "a friend"
+   ],
+   "why": "A parent must attend with them."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "-ing form of 'make'",
+   "a": "making",
+   "d": [
+    "makeing",
+    "makking",
+    "maked"
+   ]
+  },
+  {
+   "q": "-ing form of 'get'",
+   "a": "getting",
+   "d": [
+    "geting",
+    "getteing",
+    "gotting"
+   ]
+  },
+  {
+   "q": "-ing form of 'have'",
+   "a": "having",
+   "d": [
+    "haveing",
+    "havving",
+    "havinng"
+   ]
+  },
+  {
+   "q": "Mudrik's age when he became interested",
+   "a": "12",
+   "d": [
+    "25",
+    "13",
+    "20"
+   ]
+  },
+  {
+   "q": "Dolphins chase fish towards…",
+   "a": "the nets",
+   "d": [
+    "the wild",
+    "the sounds",
+    "the village"
+   ]
+  },
+  {
+   "q": "Experts keep elephants away with…",
+   "a": "sounds",
+   "d": [
+    "nets",
+    "lights",
+    "fences"
+   ]
+  },
+  {
+   "q": "What we should show animals",
+   "a": "respect",
+   "d": [
+    "fear",
+    "speed",
+    "money"
+   ]
+  },
+  {
+   "q": "I'm not very good at ___ alone.",
+   "a": "working",
+   "d": [
+    "work",
+    "worked",
+    "to work"
+   ]
+  },
+  {
+   "q": "___ is really good for you.",
+   "a": "Swimming",
+   "d": [
+    "Swim",
+    "Swims",
+    "Swam"
+   ]
+  },
+  {
+   "q": "After a preposition we use…",
+   "a": "the -ing form",
+   "d": [
+    "the past form",
+    "to + verb",
+    "the base form"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which animals does the talk mention?",
+   "o": [
+    "horses, dolphins and elephants",
+    "cats, dogs and birds",
+    "lions, tigers and bears",
+    "sharks, whales and fish"
+   ],
+   "why": "The talk is about horses, dolphins and elephants."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When do we use the -ing form?",
+   "o": [
+    "As a subject or object, and after prepositions",
+    "Only after 'will'",
+    "Only in the past simple",
+    "Before every noun"
+   ],
+   "why": "These are the uses in the grammar box."
+  },
+  {
+   "lv": "التذكر",
+   "q": "What is the spelling rule for 'come → coming'?",
+   "o": [
+    "Drop the final -e",
+    "Double the final consonant",
+    "Change -ie to -y",
+    "Add -s"
+   ],
+   "why": "come – coming: drop the -e."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Using AI, scientists discovered that whales use how many different sounds?",
+   "o": [
+    "143",
+    "12",
+    "25",
+    "20"
+   ],
+   "why": "Whales use 143 different sounds."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: Many animal lovers dream of ___ able to talk to animals.",
+   "o": [
+    "being",
+    "be",
+    "to be",
+    "been"
+   ],
+   "why": "After the preposition 'of' we use -ing."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: What if a rabbit is fed up with ___ in the same area every day?",
+   "o": [
+    "playing",
+    "play",
+    "to play",
+    "played"
+   ],
+   "why": "After 'with' we use the -ing form."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "'In the USA, Monty Roberts watched the way horses behaved in ___.' What type of word do you need?",
+   "o": [
+    "a place",
+    "a number",
+    "a feeling",
+    "a verb"
+   ],
+   "why": "'In ___' here needs a place."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is '25' a wrong answer for the gap about Mudrik's age?",
+   "o": [
+    "25 is how many years he has been interested, not his age",
+    "25 is not a number",
+    "He was 25 when he stopped",
+    "The gap needs a place"
+   ],
+   "why": "Watch out for distractors: listen for what the gap asks."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do we use 'being' in 'dream of being able to talk to animals'?",
+   "o": [
+    "It comes after the preposition 'of'.",
+    "It is the past tense.",
+    "It is a stative verb.",
+    "It is the object of 'able'."
+   ],
+   "why": "After a preposition we use -ing."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why do children under thirteen need a parent at face-to-face sessions?",
+   "o": [
+    "The course rules say anyone not yet a teenager must come with a parent.",
+    "The course is free for parents.",
+    "Children cannot use computers.",
+    "The sessions are only for adults."
+   ],
+   "why": "This is what the course rules say."
+  }
+ ]
+}

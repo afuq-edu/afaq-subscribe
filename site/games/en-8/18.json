@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "unit": "Unit 2: Adventure sports",
+ "lesson": "Lesson 3: Grammar – Reflexive pronouns",
+ "outcomes": [
+  "Know the reflexive pronouns: myself, yourself, himself and more.",
+  "Use a reflexive pronoun when the subject and object are the same.",
+  "Choose between object pronouns (me, him) and reflexive pronouns."
+ ],
+ "tf": [
+  {
+   "s": "We use reflexive pronouns when the subject and the object are the same.",
+   "t": true,
+   "why": "Yes! I hurt myself: I is the subject and myself is the object."
+  },
+  {
+   "s": "The reflexive pronoun for “we” is “ourselves”.",
+   "t": true,
+   "why": "Correct! We → ourselves."
+  },
+  {
+   "s": "“She hurt himself in the swimming pool” is correct.",
+   "t": false,
+   "why": "She → herself: She hurt herself."
+  },
+  {
+   "s": "The reflexive pronoun for an animal or thing is “itself”.",
+   "t": true,
+   "why": "Right! The camel hurt itself."
+  },
+  {
+   "s": "Plural reflexive pronouns end in -selves.",
+   "t": true,
+   "why": "Great! ourselves, yourselves, themselves."
+  },
+  {
+   "s": "“We called Jasim and told himself to bring some food” is correct.",
+   "t": false,
+   "why": "The subject is we, not Jasim, so we use him."
+  },
+  {
+   "s": "“Myself have prepared a new blog” is correct.",
+   "t": false,
+   "why": "We use the subject pronoun: I have prepared a new blog."
+  },
+  {
+   "s": "Majid is looking for his trainers because he wants to go skateboarding.",
+   "t": true,
+   "why": "Yes, he needs them for skateboarding."
+  },
+  {
+   "s": "Hazim wants to go diving.",
+   "t": false,
+   "why": "Hazim doesn’t want to be under the water."
+  },
+  {
+   "s": "Saeed feels proud because he did rock climbing even though he was scared.",
+   "t": true,
+   "why": "Correct! He was brave."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "I hurt ___ when I fell off my bike.",
+   "o": [
+    "myself",
+    "me",
+    "himself"
+   ],
+   "why": "I → myself."
+  },
+  {
+   "q": "The camel hurt ___ when it was running.",
+   "o": [
+    "itself",
+    "himself",
+    "themselves"
+   ],
+   "why": "For an animal we use itself."
+  },
+  {
+   "q": "Have you made ___ some lunch? (you – plural)",
+   "o": [
+    "yourselves",
+    "yourself",
+    "themselves"
+   ],
+   "why": "Plural you → yourselves."
+  },
+  {
+   "q": "Are your friends enjoying ___ at the stadium?",
+   "o": [
+    "themselves",
+    "ourselves",
+    "himself"
+   ],
+   "why": "Friends = they → themselves."
+  },
+  {
+   "q": "My teacher spoke to my father and ___.",
+   "o": [
+    "me",
+    "myself",
+    "I"
+   ],
+   "why": "The subject is my teacher, so we use me."
+  },
+  {
+   "q": "___ have prepared a new sports blog.",
+   "o": [
+    "We",
+    "Ourselves",
+    "Us"
+   ],
+   "why": "The subject needs a subject pronoun."
+  },
+  {
+   "q": "Did you make it ___? (you – one person)",
+   "o": [
+    "yourself",
+    "yourselves",
+    "myself"
+   ],
+   "why": "One person you → yourself."
+  },
+  {
+   "q": "Where were Majid’s trainers?",
+   "o": [
+    "in the bedroom, next to the bed",
+    "in the kitchen",
+    "at school"
+   ],
+   "why": "They were next to his bed."
+  },
+  {
+   "q": "When did Hazim go mountain biking?",
+   "o": [
+    "on holiday last year",
+    "yesterday after school",
+    "never"
+   ],
+   "why": "He went on holiday last year."
+  },
+  {
+   "q": "Reflexive pronoun for “he”:",
+   "o": [
+    "himself",
+    "hisself",
+    "herself"
+   ],
+   "why": "He → himself."
+  }
+ ],
+ "hunt": [
+  {
+   "q": "I → ?",
+   "a": "myself",
+   "d": [
+    "meself",
+    "yourself",
+    "itself"
+   ]
+  },
+  {
+   "q": "you (one person) → ?",
+   "a": "yourself",
+   "d": [
+    "yourselves",
+    "myself",
+    "himself"
+   ]
+  },
+  {
+   "q": "he → ?",
+   "a": "himself",
+   "d": [
+    "hisself",
+    "herself",
+    "itself"
+   ]
+  },
+  {
+   "q": "she → ?",
+   "a": "herself",
+   "d": [
+    "himself",
+    "sheself",
+    "itself"
+   ]
+  },
+  {
+   "q": "it → ?",
+   "a": "itself",
+   "d": [
+    "itselves",
+    "himself",
+    "herself"
+   ]
+  },
+  {
+   "q": "we → ?",
+   "a": "ourselves",
+   "d": [
+    "ourself",
+    "themselves",
+    "yourselves"
+   ]
+  },
+  {
+   "q": "you (plural) → ?",
+   "a": "yourselves",
+   "d": [
+    "yourself",
+    "ourselves",
+    "themselves"
+   ]
+  },
+  {
+   "q": "they → ?",
+   "a": "themselves",
+   "d": [
+    "theirselves",
+    "ourselves",
+    "himself"
+   ]
+  },
+  {
+   "q": "Majid wants to go…",
+   "a": "skateboarding",
+   "d": [
+    "diving",
+    "swimming",
+    "caving"
+   ]
+  },
+  {
+   "q": "Who felt proud after climbing?",
+   "a": "Saeed",
+   "d": [
+    "Majid",
+    "Hazim",
+    "Jasim"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "When do we use reflexive pronouns?",
+   "o": [
+    "When the subject and the object of the verb are the same",
+    "When we talk about the future",
+    "When we ask a question",
+    "When the subject is plural only"
+   ],
+   "why": "Example: She cut herself."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which list has only reflexive pronouns?",
+   "o": [
+    "myself, herself, ourselves",
+    "me, him, us",
+    "my, her, our",
+    "I, she, we"
+   ],
+   "why": "Reflexive pronouns end in -self or -selves."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why doesn’t Hazim want to go diving?",
+   "o": [
+    "He doesn’t want to be under the water.",
+    "He has no trainers.",
+    "He is too young.",
+    "He wants to go shopping."
+   ],
+   "why": "Hazim doesn’t like being under the water."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Why does Saeed feel proud?",
+   "o": [
+    "He was scared about rock climbing, but he did it.",
+    "He won a go-karting race.",
+    "He found his trainers.",
+    "He went diving."
+   ],
+   "why": "He did something that scared him."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Change: “We hurt our heads when we were rock climbing.”",
+   "o": [
+    "We hurt ourselves when we were rock climbing.",
+    "We hurt us when we were rock climbing.",
+    "We hurt themselves when we were rock climbing.",
+    "We hurt ourself when we were rock climbing."
+   ],
+   "why": "We → ourselves."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: “Our cat hurt ___ when it was playing in the garden.”",
+   "o": [
+    "itself",
+    "herself",
+    "themselves",
+    "it"
+   ],
+   "why": "The cat is it → itself."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: “They cut ___ when they were go-karting.”",
+   "o": [
+    "themselves",
+    "theirselves",
+    "them",
+    "himself"
+   ],
+   "why": "They → themselves."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Find the correct sentence.",
+   "o": [
+    "I write notes to myself.",
+    "I write notes to me myself.",
+    "Myself write notes to me.",
+    "I write notes to itself."
+   ],
+   "why": "I is the subject and myself is the object."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is “We called Jasim and told him to bring food” correct, not “himself”?",
+   "o": [
+    "The subject (we) and the object (Jasim) are different people.",
+    "Him is always plural.",
+    "Himself is only for animals.",
+    "We never use himself."
+   ],
+   "why": "Reflexive pronouns are only for the same person."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence about yourself uses “enjoy myself” correctly?",
+   "o": [
+    "I enjoy myself when I play football.",
+    "I enjoy me when I play football.",
+    "I enjoy myself football play.",
+    "Myself enjoy when I play."
+   ],
+   "why": "I + enjoy + myself."
+  }
+ ]
+}

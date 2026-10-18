@@ -1,0 +1,359 @@
+{
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف التاسع",
+ "unit": "Unit 1: Identity",
+ "lesson": "Lesson 2: Grammar – present simple and present continuous",
+ "outcomes": [
+  "Use the present simple for habits and states.",
+  "Use the present continuous for actions now and around now.",
+  "Recognise stative verbs like know, like and understand."
+ ],
+ "tf": [
+  {
+   "s": "We use the present simple for habits, like 'I play football on Tuesdays'.",
+   "t": true,
+   "why": "Habits use the present simple."
+  },
+  {
+   "s": "We use the present continuous for actions happening now.",
+   "t": true,
+   "why": "Like 'Look! The children are playing.'"
+  },
+  {
+   "s": "'I'm knowing the answer' is correct.",
+   "t": false,
+   "why": "'Know' is a stative verb: 'I know the answer.'"
+  },
+  {
+   "s": "In 'Scottish food tastes very different', 'taste' is a stative verb.",
+   "t": true,
+   "why": "It describes a quality, so we use the present simple."
+  },
+  {
+   "s": "'My school day is starting at eight every day' is the best way to talk about a routine.",
+   "t": false,
+   "why": "For routines we say 'My school day starts at eight.'"
+  },
+  {
+   "s": "'It never rains in June, but it's raining now' uses both tenses correctly.",
+   "t": true,
+   "why": "A general fact, then an action now."
+  },
+  {
+   "s": "We use the present continuous for permanent states.",
+   "t": false,
+   "why": "Permanent states use the present simple."
+  },
+  {
+   "s": "'Do you often listen to classical music?' is a correct question.",
+   "t": true,
+   "why": "Do + you + adverb + base verb."
+  },
+  {
+   "s": "'Think' always describes an action.",
+   "t": false,
+   "why": "'I think you're wrong' is an opinion, which is a state."
+  },
+  {
+   "s": "'I'm learning Spanish at the moment' talks about something happening around now.",
+   "t": true,
+   "why": "The present continuous is for now and around now."
+  }
+ ],
+ "boxes": [
+  {
+   "q": "Complete: Look! The children ___ in the garden.",
+   "o": [
+    "are playing",
+    "play",
+    "plays"
+   ],
+   "why": "'Look!' shows it is happening now."
+  },
+  {
+   "q": "Choose: I ___ you're wrong.",
+   "o": [
+    "think",
+    "'m thinking",
+    "am think"
+   ],
+   "why": "An opinion is a state, so we use the present simple."
+  },
+  {
+   "q": "Complete: My school day ___ at eight o'clock every day.",
+   "o": [
+    "starts",
+    "is starting",
+    "start"
+   ],
+   "why": "A routine takes the present simple."
+  },
+  {
+   "q": "Which word is a stative verb?",
+   "o": [
+    "like",
+    "run",
+    "play"
+   ],
+   "why": "'Like' describes a state."
+  },
+  {
+   "q": "Complete: What ___ you ___ about? You look happy!",
+   "o": [
+    "are / thinking",
+    "do / think",
+    "is / think"
+   ],
+   "why": "It is happening now, so we use the present continuous."
+  },
+  {
+   "q": "Why does Darcy have to go?",
+   "o": [
+    "Her dad is calling her.",
+    "She is late for school.",
+    "She is cooking dinner."
+   ],
+   "why": "Her dad is calling her."
+  },
+  {
+   "q": "Which sentence is about a habit?",
+   "o": [
+    "I help in the kitchen every day.",
+    "I'm working on a project at the moment.",
+    "Look, it's snowing!"
+   ],
+   "why": "'Every day' shows a habit."
+  },
+  {
+   "q": "Choose: This soup ___ delicious.",
+   "o": [
+    "tastes",
+    "is tasting",
+    "taste"
+   ],
+   "why": "'Taste' is a stative verb here."
+  },
+  {
+   "q": "Where do Courtney and Darcy live?",
+   "o": [
+    "on the Gold Coast",
+    "in Muscat",
+    "in London"
+   ],
+   "why": "They live on the Gold Coast."
+  },
+  {
+   "q": "Choose: ___ you understand the question?",
+   "o": [
+    "Do",
+    "Are",
+    "Is"
+   ],
+   "why": "'Understand' is stative, so we use 'Do you…?'"
+  }
+ ],
+ "hunt": [
+  {
+   "q": "I ___ football every Tuesday.",
+   "a": "play",
+   "d": [
+    "plays",
+    "playing",
+    "to play"
+   ]
+  },
+  {
+   "q": "Look! It ___ outside.",
+   "a": "'s raining",
+   "d": [
+    "rains",
+    "rain",
+    "raining"
+   ]
+  },
+  {
+   "q": "I ___ the answer.",
+   "a": "know",
+   "d": [
+    "'m knowing",
+    "knowing",
+    "knows"
+   ]
+  },
+  {
+   "q": "This week I ___ for a test.",
+   "a": "'m preparing",
+   "d": [
+    "prepare",
+    "prepares",
+    "preparing"
+   ]
+  },
+  {
+   "q": "Present continuous: am/is/are + …",
+   "a": "verb + -ing",
+   "d": [
+    "verb + -ed",
+    "to + verb",
+    "verb + s"
+   ]
+  },
+  {
+   "q": "She ___ spicy food.",
+   "a": "likes",
+   "d": [
+    "is liking",
+    "like",
+    "liking"
+   ]
+  },
+  {
+   "q": "Which is a stative verb?",
+   "a": "believe",
+   "d": [
+    "run",
+    "cook",
+    "swim"
+   ]
+  },
+  {
+   "q": "Tense for habits",
+   "a": "present simple",
+   "d": [
+    "present continuous",
+    "past simple",
+    "past continuous"
+   ]
+  },
+  {
+   "q": "Tense for actions happening now",
+   "a": "present continuous",
+   "d": [
+    "present simple",
+    "past simple",
+    "past continuous"
+   ]
+  },
+  {
+   "q": "___ you often listen to music?",
+   "a": "Do",
+   "d": [
+    "Are",
+    "Is",
+    "Does"
+   ]
+  }
+ ],
+ "mcq": [
+  {
+   "lv": "التذكر",
+   "q": "Which sentence uses the present continuous?",
+   "o": [
+    "I'm working on a project at the moment.",
+    "I help in the kitchen every day.",
+    "My favourite food is harees.",
+    "I like spicy food."
+   ],
+   "why": "am/is/are + -ing = present continuous."
+  },
+  {
+   "lv": "التذكر",
+   "q": "Which verb is usually NOT used in the continuous form?",
+   "o": [
+    "know",
+    "play",
+    "write",
+    "study"
+   ],
+   "why": "'Know' is a stative verb."
+  },
+  {
+   "lv": "التذكر",
+   "q": "When do we use the present simple?",
+   "o": [
+    "For habits and permanent states",
+    "Only for actions happening now",
+    "Only for the past",
+    "For actions at this moment"
+   ],
+   "why": "Habits and states take the present simple."
+  },
+  {
+   "lv": "التذكر",
+   "q": "How do we make a present simple question with 'you'?",
+   "o": [
+    "Do you + base verb?",
+    "Are you + base verb?",
+    "You do + base verb?",
+    "Does you + base verb?"
+   ],
+   "why": "For example: 'Do you play tennis?'"
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: It never ___ in June, but look, it ___ now!",
+   "o": [
+    "rains / 's raining",
+    "is raining / rains",
+    "rain / rains",
+    "rains / rains"
+   ],
+   "why": "A general fact, then an action now."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Make a question: you / often / listen / to classical music?",
+   "o": [
+    "Do you often listen to classical music?",
+    "Are you often listen to classical music?",
+    "Does you often listen to classical music?",
+    "You often listen to classical music do?"
+   ],
+   "why": "Do + subject + adverb + base verb."
+  },
+  {
+   "lv": "التطبيق",
+   "q": "Complete: My brother ___ football every Friday, but now he ___ for his exams.",
+   "o": [
+    "plays / 's studying",
+    "is playing / studies",
+    "play / study",
+    "plays / studies"
+   ],
+   "why": "A habit, then an action around now."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Why is 'tastes' correct in 'Scottish food tastes very different'?",
+   "o": [
+    "'Taste' here is a stative verb describing a quality.",
+    "It is happening right now.",
+    "It is a past action.",
+    "'Taste' must always be continuous."
+   ],
+   "why": "Verbs that describe qualities are stative."
+  },
+  {
+   "lv": "التحليل",
+   "q": "Which sentence uses 'have' as an action, not a state?",
+   "o": [
+    "I'm having lunch now.",
+    "I have two brothers.",
+    "She has a big house.",
+    "They have a cat."
+   ],
+   "why": "'Having lunch' is an action, so it can be continuous."
+  },
+  {
+   "lv": "التحليل",
+   "q": "'I think you're wrong' and 'I'm thinking about my holiday'. What is the difference?",
+   "o": [
+    "The first is an opinion (state); the second is an action now.",
+    "Both are opinions.",
+    "Both are habits.",
+    "The first is a past action."
+   ],
+   "why": "'Think' can be a state or an action."
+  }
+ ]
+}
