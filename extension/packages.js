@@ -819,7 +819,14 @@ export async function applyTitleSuffix(tabId, pkg, lesson) {
 }
 
 // المعلم المسجّل في نور: رقمه في نص الصفحة («var user_id = '…'») واسمه في الترحيب أو الصورة — أو null
-async function noorWho(tabId) {
+// آخر معلم ظهر في نور يُحفظ (١٢ ساعة)، فإن خلت صفحة التحضير من رقمه استُعمل المحفوظ
+export async function noorWho(tabId) {
+  const who = await noorWhoRead(tabId);
+  if (who) { chrome.storage.local.set({ noorWho: Object.assign({ at: Date.now() }, who) }).catch(() => {}); return who; }
+  const { noorWho: c } = await chrome.storage.local.get('noorWho').catch(() => ({}));
+  return c && c.id && Date.now() - c.at < 12 * 3600e3 ? { id: c.id, name: c.name || '' } : null;
+}
+async function noorWhoRead(tabId) {
   try {
     const [res] = await chrome.scripting.executeScript({ target: { tabId }, func: () => {
       let id = '';
