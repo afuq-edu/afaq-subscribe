@@ -1046,6 +1046,14 @@ async function selectLesson(node) {
 }
 // تعمل النسخة الأحدث فقط: نطلب تثبيتها بهدوء، وما حُفظ يبقى ويكمل بعد التحديث من حيث وصل
 async function oldVersionWait() {
+  // من متجر كروم: يطلب التحديث ويعيد التشغيل وحده، دون تنزيل ولا فك
+  let self = null;
+  try { self = await chrome.management.getSelf(); } catch (e) {}
+  if (self && self.installType !== 'development') {
+    setBox('run', 'أحدّث «حاضر» إلى النسخة الجديدة…', 'لحظات وتعود «حاضر» وحدها، وموادك وما حضّرته يبقى كما هو.');
+    const st = await new Promise((ok) => { try { chrome.runtime.requestUpdateCheck((s) => ok(s)); } catch (e) { ok(''); } });
+    if (st === 'update_available') { await sleep(4000); chrome.runtime.reload(); return; }
+  }
   for (;;) {
     const a = await ask({
       kind: 'info', head: 'نسخة جديدة من «حاضر» جاهزة',

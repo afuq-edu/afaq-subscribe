@@ -34,7 +34,8 @@
     <a class="btn" id="videoLink" href="#" target="_blank" rel="noopener" hidden>▶ شرح بالفيديو</a></p>
   <section id="store" hidden style="margin-bottom:28px">
     <p><a class="btn primary" id="storeLink" href="#" target="_blank" rel="noopener">ثبّت «حاضر» من متجر كروم</a></p>
-    <p class="muted small" style="margin-top:10px">اضغط «إضافة إلى Chrome»، فتفتح «حاضر» وحدها على أول خطوة.</p>
+    <p class="muted small" style="margin-top:10px">اضغط «إضافة إلى Chrome»، فتفتح «حاضر» وحدها على أول خطوة، وتصلك التحديثات وحدها دون تنزيل.</p>
+    <p class="muted small" style="margin-top:6px">إن كانت عندك نسخة ثبّتّها يدويًا من ملف، أزلها من <code dir="ltr">chrome://extensions</code> بعد تثبيت نسخة المتجر. <a href="#" id="showManual">أو ثبّت يدويًا من ملف</a></p>
   </section>
 
   <section id="manual">
@@ -106,6 +107,7 @@
       document.getElementById('storeLink').href = u;
       document.getElementById('store').hidden = false;
       document.getElementById('manual').hidden = true;
+      document.getElementById('showManual').onclick = (e) => { e.preventDefault(); document.getElementById('manual').hidden = false; };
     } catch (e) {}
   })();
   (async () => {
