@@ -149,7 +149,10 @@ function assignDates() {
     }
     if (offRule.seq) { fileMode = false; startIso = nextSchoolDay(offRule.last, days, false); }
   }
-  const items = cands.map((s) => ({ s, fileDate: fileMode && isIso(s.lesson.pubDate) ? s.lesson.pubDate : '', fixed: s.fixed || '' }));
+  // تواريخ متتابعة: الحصص المختارة أولًا على أيام متتالية، ثم ما لم يُختر بعدها — حتى لا تتباعد المختارة بحصص لن تُنشر
+  const picked = (s) => (s.manual != null ? s.manual : inScope(s));
+  const order = !fileMode && !['week', 'dates'].includes(scope.kind) ? cands.filter(picked).concat(cands.filter((s) => !picked(s))) : cands;
+  const items = order.map((s) => ({ s, fileDate: fileMode && isIso(s.lesson.pubDate) ? s.lesson.pubDate : '', fixed: s.fixed || '' }));
   const notes = layoutDates(items, { start: startIso, days, taken: [...taken], useFileDates: fileMode, skip: holidaySet(settings) });
   const termEnd = termEndOf(settings, termNo);
   items.forEach((it) => { it.s.date = it.date; it.s.dateSrc = it.dateSrc; it.s.movedFrom = ''; it.s.afterTerm = !!(termEnd && it.date > termEnd); });
@@ -1261,7 +1264,7 @@ function heartbeat(on) {
 // نقطة استئناف: إن أُغلقت النافذة أو تعطّل كروم يُتابَع التشغيل عند فتحها
 async function checkpoint(active) {
   const sc = { kind: scope.kind, picks: [...(scope.picks || [])], units: [...scope.units], weekDay: scope.weekDay, from: scope.from, to: scope.to, dateFrom: scope.dateFrom, dateTo: scope.dateTo, dsrc: useFile ? 'file' : 'seq' };
-  await chrome.storage.local.set({ semesterRun: active ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
+  await chrome.storage.local.set({ semesterRun: active ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
 }
 function setRunning(on) {
   running = on;
@@ -1322,6 +1325,7 @@ async function run() {
   termNo = +((document.querySelector('input[name=term]:checked') || {}).value) || 1;
   // مصدر التواريخ يُقرأ من الاختيار الظاهر الآن (لا من حالة سابقة)
   useFile = hasFileDates(pkg) && ((document.querySelector('input[name=dsrc]:checked') || {}).value !== 'seq');
+  if (WIZ.on && WIZ.seq) useFile = false;   // «أبدأ من تاريخ ثم متتابعًا»: لا تواريخ نشرة أبدًا، حتى عند الإكمال
   if ($('start').value && $('start').value !== startAuto) startTouched = true;
   await chrome.storage.local.set({ semesterOpts: { review: $('optReview').checked, step: $('optStep').checked, noor: $('optNoor').checked, auto: $('optAuto').checked, term: termNo, scope: scope.kind, dsrc: useFile ? 'file' : 'seq' } }).catch(() => {});
   stopFlag = false; stopHooks.length = 0;
@@ -1727,7 +1731,7 @@ async function offerResume() {
   const radio = document.querySelector(`input[name=term][value="${run0.term}"]`); if (radio) radio.checked = true;
   if (run0.startTouched && run0.start) { $('start').value = run0.start; startTouched = true; renderDays(); }
   if (run0.scope && init.restoreScope) init.restoreScope(run0.scope);
-  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; WIZ.rid = run0.wiz.rid || Date.now(); WIZ.sum = run0.wiz.sum || 0; WIZ.auto = run0.wiz.auto || 0; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
+  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; WIZ.seq = !!run0.wiz.seq; WIZ.rid = run0.wiz.rid || Date.now(); WIZ.sum = run0.wiz.sum || 0; WIZ.auto = run0.wiz.auto || 0; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
   let left = 10, cancelled = false;
   const tick = () => {
     if (cancelled) return;
@@ -2025,7 +2029,7 @@ async function wzRun() {
   $('optReview').checked = wz.dates === 'each';
   $('optStep').checked = wz.save === 'review';
   $('optNoor').checked = true; $('optAuto').checked = true;
-  WIZ.on = true; WIZ.rule = wz.dates === 'official' ? 'official' : '';
+  WIZ.on = true; WIZ.rule = wz.dates === 'official' ? 'official' : ''; WIZ.seq = wz.dates === 'start';
   WIZ.rid = Date.now(); WIZ.sum = 0; WIZ.auto = 0;
   wizRunning();
   run();
@@ -2125,7 +2129,7 @@ function wzResumeBtn(label) {
 function wzAgain() {
   clearTimeout(WIZ.timer);
   document.body.classList.remove('wiz-run', 'showplan');
-  WIZ.on = false; WIZ.rule = ''; WIZ.trialCap = null;
+  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null;
   $('wizCard').hidden = false;
   $('nowCard').hidden = true; $('planCard').hidden = true; $('logCard').hidden = true;
   $('topMsg').className = 'msg';
