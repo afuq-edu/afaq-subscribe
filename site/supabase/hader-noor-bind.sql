@@ -207,3 +207,20 @@ begin
   return jsonb_build_object('ok', true, 'lesson', v_lesson,
     'left', case when v_acc = 'trial' then greatest(0, v_trial - public.trial_used_total(d.user_id)) end);
 end $function$;
+
+-- 2026-10-19 (مطبَّق، هجرة hader_trial_per_noor_account): التجربة المجانية لحساب نور لا للتثبيت
+create or replace function public.trial_peers(p_uid uuid) returns setof uuid
+language sql stable security definer set search_path = public as $$
+  with h as (
+    select d.noor_hash x from public.devices d where d.user_id = p_uid and coalesce(d.noor_hash, '') <> ''
+    union select nb.noor_hash from public.noor_bind nb where nb.user_id = p_uid and nb.noor_hash <> ''
+  )
+  select p_uid
+  union select d.user_id from public.devices d where d.noor_hash in (select x from h)
+  union select nb.user_id from public.noor_bind nb where nb.noor_hash in (select x from h)
+$$;
+create or replace function public.trial_used_total(p_uid uuid) returns integer
+language sql stable security definer set search_path = public as $$
+  select count(distinct (u.package_id, u.term, u.lesson_id))::int from public.usage_log u
+  where u.user_id in (select public.trial_peers(p_uid))
+$$;

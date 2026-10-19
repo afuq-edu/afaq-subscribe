@@ -9,7 +9,7 @@ import {
   gradeNumber, gradeOfName, sameSubject, unsavedText, kwNorm, ordinalOf, getPicks,
   noorTerms, termAllLessons, pickTreeNode, stripSessionSuffix, sessionSuffix, lessonNum,
   layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, lintPackage, lintLevel, knownCourse, rememberCourse, resetProgress, packageProgress, clearSession,
-  holidaySet, termEndOf, countSchoolDays, loadNoorTree, storeNoorTree, dateOverrides, setDateOverride, GRADES,
+  holidaySet, termEndOf, countSchoolDays, loadNoorTree, storeNoorTree, dateOverrides, setDateOverride, GRADES, noorWho,
 } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { AFAQ } from './afaq-config.js';
@@ -530,7 +530,7 @@ async function stepHome() {
     for (let j = 0; j < 4 && !stopFlag; j++) {
       r = await exec(readHomePage);
       if (r && r.login) { await focusNoor(); if (!(await loginWait(HOME))) return null; j = -1; continue; }
-      if (r && r.courses.length) { chrome.storage.local.set({ noorCourses: { at: Date.now(), courses: r.courses } }).catch(() => {}); return r.courses; }
+      if (r && r.courses.length) { chrome.storage.local.set({ noorCourses: { at: Date.now(), courses: r.courses } }).catch(() => {}); noorWho(tabId).catch(() => {}); return r.courses; }
       await sleep(1500);
     }
     if (stopFlag) break;
