@@ -224,3 +224,11 @@ language sql stable security definer set search_path = public as $$
   select count(distinct (u.package_id, u.term, u.lesson_id))::int from public.usage_log u
   where u.user_id in (select public.trial_peers(p_uid))
 $$;
+
+-- ٤٫١٠٫١: «بن/بنت/ابن» تُحذف من الاسم قبل المقارنة (كانت تُلصق بما بعدها فلا يطابق «موسى بن أحمد» اسم «موسى أحمد» في نور)
+create or replace function public.ar_name_norm(t text) returns text language sql immutable as $f$
+  select translate(trim(regexp_replace(regexp_replace(regexp_replace(regexp_replace(translate(regexp_replace(coalesce(t, ''), '[ًٌٍَُِّْـ]', '', 'g'), 'أإآٱىة', 'اااايه'),
+    '(^|\s)(بن|بنت|ابن)\s+', '\1', 'g'),
+    '(^|\s)(عبد|ابو|ام)\s+', '\1\2', 'g'), '[^ء-ي0-9 ]', ' ', 'g'), '\s+', ' ', 'g')),
+    'بتثنيجخذزشضظغقؤئء', 'ٮٮٮٮٮححدرسصطعفوٮ')
+$f$;
