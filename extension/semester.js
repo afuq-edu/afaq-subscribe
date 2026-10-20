@@ -892,6 +892,11 @@ function alignGroups(groups, nodes, known) {
 }
 async function buildPlan(nodes) {
   treeNodes = nodes;
+  // قائمة نور لم تُقرأ كاملة: ما حُفظ في مرات سابقة (قبل تصفير السجل عند الفتح) يُعدّ موجودًا، فلا يتكرر
+  if (WIZ.on && courseCid && (!noorHave || noorHave.partial)) {
+    const bak = ((await chrome.storage.local.get('semesterSavedBak').catch(() => ({}))).semesterSavedBak || {})[courseCid] || {};
+    semSaved = Object.assign({}, bak, semSaved);
+  }
   const groups = lessonGroups(pkg);
   // اختياراتك السابقة: عنوان درس نور ← حصة من المادة (الأحدث أولًا)
   const known = new Map(), usedNode = new Set(), stale = [];
@@ -2205,7 +2210,11 @@ async function freshRecord() {
     const st = r.state;
     st.sessions = {}; delete st.lastPub; delete st.chain; delete st.dateOverrides;
     await savePkgState(st);
-    await chrome.storage.local.set({ semesterSaved: {} });
+    // نسخة احتياطية تُستعمل فقط إن تعذّرت قراءة قائمة نور كاملة (حتى لا يتكرر ما هو موجود فيها)
+    const v = await chrome.storage.local.get(['semesterSaved', 'semesterSavedBak']);
+    const bak = v.semesterSavedBak || {};
+    Object.entries(v.semesterSaved || {}).forEach(([cid, m]) => { bak[cid] = Object.assign(bak[cid] || {}, m); });
+    await chrome.storage.local.set({ semesterSaved: {}, semesterSavedBak: bak });
     await chrome.storage.local.remove(['noorList', 'lastFill']);
     state = st;
   } catch (e) {}
