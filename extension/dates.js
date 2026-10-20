@@ -252,7 +252,7 @@ export function layoutDates(items, { start, days, taken, useFileDates = true, sk
   const used = new Set(taken || []);
   const hol = skip instanceof Set ? skip : new Set(skip || []);
   const notes = [];
-  let prev = null;
+  let prev = null, last = null;
   const free = (iso) => { let d = nextSchoolDay(iso, days, true); for (let i = 0; i < 120 && (used.has(d) || hol.has(d)); i++) d = nextSchoolDay(d, days, false); return d; };
   items.forEach((s, i) => {
     let want, src;
@@ -260,10 +260,17 @@ export function layoutDates(items, { start, days, taken, useFileDates = true, sk
     else if (useFileDates && s.fileDate && isIso(s.fileDate)) { want = s.fileDate; src = 'file'; }
     else if (prev) { want = nextSchoolDay(prev, days, false); src = 'seq'; }
     else { want = nextSchoolDay(start && isIso(start) ? start : isoOf(new Date()), days, true); src = 'start'; }
-    const d = exact && src === 'fixed' ? want : free(want);
-    if (d !== want) notes.push({ i, from: want, to: d, why: hol.has(want) ? 'holiday' : isSchoolDay(want, days) ? 'taken' : 'offday', src });
+    const exactDay = exact && src === 'fixed';
+    // الترتيب محفوظ: حصة موعدها في النشرة بعد سابقتها لا تُنشر قبلها ولا معها — إن تأخّرت السابقة (إجازة، يوم مشغول،
+    // يوم بلا حصص) تتأخر هذه بعدها بدل أن تسبقها
+    const plan = isIso(s.fileDate) ? s.fileDate : want;
+    let at = want;
+    if (!exactDay && last && (src === 'file' || src === 'fixed') && plan >= last.plan && at <= last.date) at = nextSchoolDay(last.date, days, false);
+    const d = exactDay ? want : free(at);
+    if (d !== want) notes.push({ i, from: want, to: d, why: hol.has(want) ? 'holiday' : !isSchoolDay(want, days) ? 'offday' : 'taken', src });
     s.date = d; s.dateSrc = src;
     used.add(d);
+    last = { plan, date: d };
     // التسلسل يتبع آخر تاريخ (الأكبر) حتى لا نعود للخلف بعد مرساة متأخرة
     prev = prev && prev > d ? prev : d;
   });
