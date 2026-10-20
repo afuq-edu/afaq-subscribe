@@ -142,6 +142,8 @@ async function openWizard() {
   } catch (e) {}
   chrome.windows.create({ url: u, type: 'popup', width: 560, height: 900 }).catch(() => chrome.tabs.create({ url: u }));
 }
+// أيقونة «حاضر» في شريط الأدوات تفتح النافذة الرئيسية مباشرة (لا نافذة منبثقة)
+chrome.action.onClicked.addListener(() => { openWizard(); });
 chrome.runtime.onMessage.addListener((msg, sender, reply) => {
   if (!msg || !sender.tab || !sender.tab.id) return;
   const tabId = sender.tab.id;
@@ -221,7 +223,6 @@ chrome.runtime.onInstalled.addListener(async (d) => {
   }
   // أول تثبيت: يفتح «حاضر» مباشرة على الخطوة الأولى (اختيار الصف) — دون موقع ولا تسجيل
   if (d.reason === 'install') chrome.windows.create({ url: chrome.runtime.getURL('semester.html'), type: 'popup', width: 560, height: 900 }).catch(() => chrome.tabs.create({ url: chrome.runtime.getURL('semester.html') }));
-  else if (d.reason === 'update' && d.previousVersion && parseInt(d.previousVersion, 10) < 3) chrome.tabs.create({ url: chrome.runtime.getURL('options.html#whatsnew') });
   // تفعيل الزر العائم في صفحات نور المفتوحة الآن دون الحاجة لإعادة تحميلها
   try {
     const cs = (chrome.runtime.getManifest().content_scripts || [])[0];

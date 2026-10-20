@@ -11,7 +11,6 @@
 </head>
 <body>
 <main class="wrap" style="max-width:760px;padding:48px 20px 72px">
-  <a href="index.html" class="small">العودة إلى الموقع</a>
   <h1 style="margin:14px 0 12px;font-size:34px">تثبيت إضافة «حاضر»</h1>
   <p class="muted" style="margin-bottom:12px">تعمل على متصفح <b>كروم</b> أو <b>إيدج</b> في الحاسوب. تُثبَّت مرة واحدة، ثم تصلها مواد اشتراكك تلقائيًا.</p>
 
@@ -31,7 +30,7 @@
   <p style="margin-bottom:22px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn" id="videoLink" href="#" target="_blank" rel="noopener" hidden>▶ شرح بالفيديو</a></p>
   <section id="store" hidden style="margin-bottom:28px">
     <p><a class="btn primary" id="storeLink" href="#" target="_blank" rel="noopener">ثبّت «حاضر» من متجر كروم</a></p>
-    <p class="muted small" style="margin-top:10px">اضغط «إضافة إلى Chrome»، فتفتح «حاضر» وحدها على أول خطوة، وتصلك التحديثات وحدها دون تنزيل.</p>
+    <p class="muted small" style="margin-top:10px">اضغط «إضافة إلى Chrome»، فتفتح «حاضر» وحدها. اختر «أختار الدروس بنفسي» أو «تحضير الفصل كاملًا»، وتصلك التحديثات وحدها دون تنزيل. تجدها لاحقًا من أيقونة الإضافات 🧩 بجانب شريط العنوان.</p>
     <p class="muted small" style="margin-top:6px">إن كانت عندك نسخة ثبّتّها يدويًا من ملف، أزلها من <code dir="ltr">chrome://extensions</code> بعد تثبيت نسخة المتجر. <a href="#" id="showManual">أو ثبّت يدويًا من ملف</a></p>
   </section>
 
@@ -42,7 +41,7 @@
       <section><h3>٢. افتح صفحة الإضافات</h3><p class="muted">انسخ هذا العنوان والصقه في شريط العنوان في كروم ثم اضغط Enter: <code dir="ltr">chrome://extensions</code></p></section>
       <section><h3>٣. فعّل «وضع المطوّر»</h3><p class="muted">من المفتاح في أعلى الصفحة (يمين أو يسار حسب لغة المتصفح).</p></section>
       <section><h3>٤. حمّل الإضافة</h3><p class="muted">اضغط «تحميل إضافة غير مضغوطة» (Load unpacked) واختر المجلد الذي استخرجته.</p></section>
-      <section><h3>٥. ابدأ</h3><p class="muted">تفتح «حاضر» وحدها بعد التثبيت: اختر صفك ومادتك وتبدأ تجربتك المجانية مباشرة. وتجدها لاحقًا من أيقونة الإضافات 🧩 بجانب شريط العنوان في كروم.</p></section>
+      <section><h3>٥. ابدأ</h3><p class="muted">تفتح «حاضر» وحدها بعد التثبيت: اختر «أختار الدروس بنفسي» أو «تحضير الفصل كاملًا»، وتبدأ تجربتك المجانية مباشرة. وتجدها لاحقًا من أيقونة الإضافات 🧩 بجانب شريط العنوان في كروم.</p></section>
     </div>
   </section>
   </section>
@@ -81,6 +80,11 @@
       const u = String(((await r.json())[0] || {}).value || '').trim();
       if (!/^https:\/\/(chromewebstore\.google\.com|chrome\.google\.com\/webstore)\//.test(u)) return;   // رابط متجر كروم فقط
       document.getElementById('storeLink').href = u;
+      // التحديث: من المتجر مرة واحدة، وبعدها تتحدّث «حاضر» وحدها
+      const up = document.getElementById('update');
+      up.innerHTML = `<h2 style="font-size:22px;margin-bottom:10px">تحديث «حاضر» إلى النسخة الجديدة</h2>
+        <p style="margin-bottom:12px"><a class="btn primary" href="${u}" target="_blank" rel="noopener">ثبّت «حاضر» من متجر كروم</a></p>
+        <p class="muted">بعد التثبيت من المتجر أزل النسخة القديمة من <code dir="ltr">chrome://extensions</code>. من الآن تتحدّث «حاضر» وحدها دون تنزيل ملفات.</p>`;
       document.getElementById('store').hidden = false;
       document.getElementById('manual').hidden = true;
       document.getElementById('showManual').onclick = (e) => { e.preventDefault(); document.getElementById('manual').hidden = false; };

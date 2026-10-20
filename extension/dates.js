@@ -247,7 +247,8 @@ export const shortDate = (iso) => (isIso(iso) ? toArDigits(parseIso(iso).getDate
 // يوم حصة أو كانت مستعملة)، وما بعدها بلا تاريخ يتبعها يومًا بعد يوم على أيام الحصص. fixed: تاريخ نُقل أثناء التشغيل (لا يتغيّر).
 // taken: تواريخ لا تُستعمل (محفوظة لحصص أخرى). يعيد ملاحظات التعديل: [{ i, from, to, why: offday|taken, src }]
 // skip: أيام إجازة (مجموعة ISO) لا تُستعمل أبدًا — تُحسب كيوم بلا حصص (why: holiday)
-export function layoutDates(items, { start, days, taken, useFileDates = true, skip } = {}) {
+// exact: التاريخ الذي كتبه المعلم بنفسه (fixed) يبقى كما هو، دون نقل
+export function layoutDates(items, { start, days, taken, useFileDates = true, skip, exact = false } = {}) {
   const used = new Set(taken || []);
   const hol = skip instanceof Set ? skip : new Set(skip || []);
   const notes = [];
@@ -259,7 +260,7 @@ export function layoutDates(items, { start, days, taken, useFileDates = true, sk
     else if (useFileDates && s.fileDate && isIso(s.fileDate)) { want = s.fileDate; src = 'file'; }
     else if (prev) { want = nextSchoolDay(prev, days, false); src = 'seq'; }
     else { want = nextSchoolDay(start && isIso(start) ? start : isoOf(new Date()), days, true); src = 'start'; }
-    const d = free(want);
+    const d = exact && src === 'fixed' ? want : free(want);
     if (d !== want) notes.push({ i, from: want, to: d, why: hol.has(want) ? 'holiday' : isSchoolDay(want, days) ? 'taken' : 'offday', src });
     s.date = d; s.dateSrc = src;
     used.add(d);
