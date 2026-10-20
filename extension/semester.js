@@ -136,19 +136,10 @@ function assignDates() {
   const ordered = plan.slice().sort((a, b) => pos(a) - pos(b) || a.i - b.i);
   const cands = ordered.flatMap((p) => p.sessions.filter((s) => s.eligible));
   const taken = fixedDates(cands);
-  // «حسب النشرة الرسمية»: إن كانت في نور تحاضير بتواريخ بعد تاريخ أول حصة مطلوبة (أو عليه) فالبناء بعد آخر تاريخ موجود، متتابعًا
+  // «حسب النشرة الرسمية»: كل حصة بتاريخها في النشرة دائمًا، فلا يُنشر درس سابق بعد درس لاحق.
+  // يوم عليه تحضير موجود في نور لا يُستعمل مرة ثانية: الحصة التي تقع عليه وحدها تنتقل إلى أقرب يوم حصة بعده
   let fileMode = useFile, startIso = $('start').value || isoOf(new Date());
-  if (WIZ.rule === 'official' && useFile && plan.length) {
-    if (!offRule) {
-      const existing = [...taken, ...noorDates, ...Object.values(semSaved || {})].filter(isIso).sort();
-      const last = existing[existing.length - 1] || '';
-      const want = cands.filter((s) => (s.manual != null ? s.manual : inScope(s)) && isIso(s.lesson.pubDate)).map((s) => s.lesson.pubDate).sort();
-      offRule = { seq: !!(last && want.length && want[0] <= last), last };
-      if (offRule.seq) logLine('info', `في نور تحاضير حتى ${dayLabel(last, false)} تتعارض مع تواريخ النشرة — سأبني بعد آخر تاريخ موجود، متتابعًا على أيام حصصك`);
-      else if (last) logLine('info', `التحاضير الموجودة في نور (حتى ${dayLabel(last, false)}) قبل تواريخ النشرة — أتبع النشرة الرسمية`);
-    }
-    if (offRule.seq) { fileMode = false; startIso = nextSchoolDay(offRule.last, days, false); }
-  }
+  if (WIZ.on) noorDates.forEach((d) => taken.add(d));
   // تواريخ متتابعة: الحصص المختارة أولًا على أيام متتالية، ثم ما لم يُختر بعدها — حتى لا تتباعد المختارة بحصص لن تُنشر
   const picked = (s) => (s.manual != null ? s.manual : inScope(s));
   const order = !fileMode && !['week', 'dates'].includes(scope.kind) ? cands.filter(picked).concat(cands.filter((s) => !picked(s))) : cands;
@@ -1303,6 +1294,23 @@ function autoResolve() {
   const miss = plan.filter((p) => p.miss && !p.skipped).length;
   if (miss) logLine('info', `بدأت تلقائيًا: ${toAr(miss)} ${miss === 1 ? 'درس بلا مقابل' : 'دروس بلا مقابل'} في نور تُخطّيت — تظهر في النهاية`);
 }
+// المعالج (دون مراجعة): لا يُعبَّأ درس في درس نور غير مؤكد أنه مقابله — حتى لا يقع تحضير درس مكان درس آخر.
+// الربط بالترتيب أو برقم الوحدة يبقى فقط إن وافق رقمُ الدرس أو اسمُه درسَ نور؛ ودرسا ملف على درس نور واحد يبقى أقربهما اسمًا
+function safeLinks() {
+  const sim = (p) => titleSim(stripSessionSuffix(p.group.lesson || ''), p.node.text);
+  const drop = (p) => { p.node = null; p.miss = true; p.skipped = true; p.why = 'لم أتأكد من مقابله في نور'; presence(p); };
+  let n = 0;
+  plan.forEach((p) => {
+    if (!p.node || p.edited || (p.how !== 'order' && p.how !== 'number')) return;
+    const a = lessonNum(p.group.lesson), b = lessonNum(p.node.text);
+    if ((a != null && b != null && a === b) || sim(p) >= 0.5) return;
+    drop(p); n++;
+  });
+  const by = new Map();
+  plan.forEach((p) => { if (p.node) { const l = by.get(p.node.id) || []; l.push(p); by.set(p.node.id, l); } });
+  by.forEach((l) => { if (l.length < 2) return; l.sort((x, y) => sim(y) - sim(x)).slice(1).forEach((p) => { drop(p); n++; }); });
+  if (n) logLine('info', `${toAr(n)} ${n === 1 ? 'درس لم أتأكد من مقابله' : 'دروس لم أتأكد من مقابلها'} في نور — لم أعبّئها حتى لا يقع تحضير مكان آخر`);
+}
 function waitGo(autoMs, lbl) {
   return new Promise((res) => {
     let iv = null, left = Math.round((autoMs || 0) / 1000);
@@ -1395,7 +1403,8 @@ async function run() {
     // المعالج: لا انتظار ولا تأكيد — سطر الخطة («سأنشر ١٢ حصة من … إلى …») يظهر والتعبئة تبدأ فورًا.
     // التعارض يُحل وحده كما في البدء التلقائي (المربوط بالاسم يُعبَّأ، وما لا مقابل له يُتخطّى ويظهر في التقرير)
     if (WIZ.on && !$('optReview').checked) {
-      if (nConf || plan.mismatch) { autoResolve(); await savePicks(); assignDates(); renderPlan(); }
+      if (nConf || plan.mismatch) { autoResolve(); await savePicks(); }
+      safeLinks(); assignDates(); renderPlan();
       if (!queue.length) { finished = true; throw new Error(plan.some((p) => p.sessions.some((s) => s.inNoor)) ? 'كل الحصص المختارة موجودة في نور ✓' : 'لا شيء ناقص ✓'); }
       setBox('run', planLine(), WIZ.trialCap != null ? `من تجربتك المجانية. أبدأ الآن.` : 'أبدأ الآن.');
     } else if ($('optReview').checked || nConf || plan.mismatch || !queue.length) {
@@ -1759,7 +1768,7 @@ if (q.get('debug') === '1') {
     WIZ, get offRule() { return offRule; }, setNoorDates(a) { noorDates = new Set(a); offRule = null; }, setSemSaved(o) { semSaved = o; },
     set(o) { if (o.pkg) pkg = o.pkg; if (o.state) state = o.state; if (o.settings) settings = o.settings; if (o.days) days = o.days; if (o.scope) Object.assign(scope, o.scope, o.scope.units ? { units: new Set(o.scope.units) } : {}); if (o.useFile != null) useFile = o.useFile; if (o.start) $('start').value = o.start; if (o.editable != null) editable = o.editable; if (o.noorHave) { noorHave = new Map(Object.entries(o.noorHave)); } },
     renderPlan,
-    buildPlan, assignDates, shiftDate, conflicts, completion,
+    buildPlan, assignDates, shiftDate, conflicts, completion, safeLinks,
     get plan() { return plan; }, get queue() { return queue; }, get treeNodes() { return treeNodes; }, get log() { return diag.log; },
     planLine: () => planLine(), setQueue(q) { queue = q; },
     wizAfterRun: (o) => wizAfterRun(o), wizRunning: () => wizRunning(), wzFromNoor: () => wzFromNoor(wzOffers()), get settings() { return settings; }, holidays: () => [...holidaySet(settings)],
@@ -2080,7 +2089,9 @@ async function wizAfterRun({ report, ok, failed, stopped, error, had }) {
   }
   if (wz.mode === 'pick') $('wzMore').hidden = false;
   if (!n) { setBox('ok', had ? '✓ هذه الحصص موجودة في نور' : '✓ لا شيء ناقص', wz.mode === 'pick' ? 'هل تختار درسًا آخر؟' : ''); return; }
-  setBox('ok', '✓ تمت التعبئة بنجاح', `نُشر ${countWord(n).replace('حصتان', 'حصتين')}${range}.${wz.mode === 'pick' ? ' هل تختار درسًا آخر؟' : ''}`);
+  const miss = plan.filter((p) => p.miss).map((p) => p.group.lesson).filter(Boolean);
+  const mt = miss.length ? ` تركت ما لم أجد مقابله في نور بالاسم، فاختره بنفسك: ${miss.slice(0, 6).map((x) => '«' + x + '»').join('، ')}${miss.length > 6 ? '…' : ''}.` : '';
+  setBox('ok', '✓ تمت التعبئة بنجاح', `نُشر ${countWord(n).replace('حصتان', 'حصتين')}${range}.${mt}${wz.mode === 'pick' ? ' هل تختار درسًا آخر؟' : ''}`);
 }
 // ما يفعله المعلم ليكمل، دون عرض نص الخطأ (يبقى في السجل والتقرير)
 function wzHint(e) {
