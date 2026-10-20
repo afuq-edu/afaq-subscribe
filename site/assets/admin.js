@@ -185,20 +185,44 @@
         <td>${r.packages.map((p) => `<div style="margin-bottom:3px"><span class="tag">${esc(p.title)}</span> ${p.active ? '<span class="chip ok">مشترك</span>' : `<small class="muted">${A.sessionsWord(p.used)}</small>`}</div>`).join('') || '<span class="muted small">—</span>'}</td>
         <td><span class="chip ${cls}">${lbl}</span></td>
         <td><div class="inline-acts">
-          ${pend.length && r.status !== 'cancelled' ? `<button class="btn sm primary" data-act="${r.id}" type="button">فعّل</button>` : ''}
+          ${r.status !== 'cancelled' ? `<button class="btn sm primary" data-act="${r.id}" type="button">${pend.length || r.status !== 'active' ? 'فعّل مواد' : 'أضف مواد'}</button>` : ''}
           ${r.phone ? `<a class="btn sm wa" target="_blank" rel="noopener" href="${esc(A.waLink(r.phone.replace(/^0+/, '').length === 8 ? '968' + r.phone.replace(/^0+/, '') : r.phone, `السلام عليكم أ. ${r.name}، بخصوص طلبك رقم ${r.id} في «حاضر».`))}">واتساب</a>` : ''}
           <button class="btn ghost sm" data-unl="${r.id}" type="button" title="يصفّر محاولات التسجيل اليوم لجهاز هذا الطلب وشبكته">تصفير المحاولات</button>
           ${r.noor_wait ? `<button class="btn sm primary" data-noorok="${r.id}" type="button" title="يصير حساب نور هذا هو حساب اشتراك المعلم">اسمح بحساب نور</button>` : ''}
           ${r.noor_name ? `<button class="btn ghost sm" data-noor="${r.id}" type="button" title="غيّر المعلم حسابه في نور: يُربط بأول حساب نور باسمه يُعبَّأ له">فكّ ربط نور</button>` : ''}
           ${r.status === 'cancelled' ? `<button class="btn ghost sm" data-rst="${r.id}" data-to="trial" type="button">استعادة</button>` : `<button class="btn ghost sm danger" data-rst="${r.id}" data-to="cancelled" type="button">إلغاء</button>`}
+        </div></td></tr>
+        <tr class="actrow" data-actrow="${r.id}" hidden><td colspan="5"><div style="display:grid;gap:10px;padding:6px 0">
+          <b>اختر المواد التي تفعّلها لـ${esc(r.name || 'المعلم')}</b>
+          <div class="pkgpick" data-actpk="${r.id}"></div>
+          <div class="inline-acts"><select data-actplan="${r.id}" style="max-width:160px"><option value="term">اشتراك فصلي</option><option value="year">اشتراك سنوي</option></select>
+            <button class="btn primary" data-actgo="${r.id}" type="button">فعّل المواد المختارة</button><button class="btn ghost" data-actx="${r.id}" type="button">إلغاء</button></div>
         </div></td></tr>`;
     }).join('') : '<tr><td colspan="5" class="empty">لا طلبات هنا.</td></tr>');
+    // «فعّل مواد»: يختار المدير المواد (مادة وصف) التي يريدها المعلم، فتفتح له في «حاضر» وحدها
     $$('[data-act]').forEach((b) => {
-      b.onclick = async () => {
+      b.onclick = () => {
         const r = D.requests.find((x) => x.id === +b.dataset.act);
+        const row = $(`[data-actrow="${r.id}"]`);
+        if (!row.hidden) { row.hidden = true; return; }
+        // مواد طلبه (ما جرّبه) مختارة مسبقًا — بالمادة والصف، أيًّا كان نوع المدرسة
+        const want = new Set(r.packages.filter((p) => !p.active).map((p) => { const k = D.packages.find((x) => x.id === p.id); return k ? k.subject + '|' + k.grade : ''; }));
+        pkgPicker($(`[data-actpk="${r.id}"]`), D.packages.filter((p) => want.has(p.subject + '|' + p.grade)).map((p) => p.id));
+        row.hidden = false;
+      };
+    });
+    $$('[data-actx]').forEach((b) => { b.onclick = () => { $(`[data-actrow="${b.dataset.actx}"]`).hidden = true; }; });
+    $$('[data-actgo]').forEach((b) => {
+      b.onclick = async () => {
+        const r = D.requests.find((x) => x.id === +b.dataset.actgo);
+        const ids = $$(`[data-actpk="${r.id}"] input:checked`).map((i) => i.value);
+        if (!ids.length) { A.toast('اختر مادة واحدة على الأقل.', 'bad'); return; }
         b.disabled = true;
-        // ضغطة واحدة: اشتراك فصل كامل في مواد الطلب، وتفتح في إضافة المعلم وحدها
-        try { await db.rpc('admin_activate_request', { p_id: r.id, p_plan: 'term', p_package_ids: null }); A.toast(`فُعّل اشتراك ${r.name || 'المعلم'} لهذا الفصل.`, 'ok'); renderRequests(); } catch (e) { b.disabled = false; A.toast(A.errText(e), 'bad'); }
+        try {
+          await db.rpc('admin_activate_request', { p_id: r.id, p_plan: $(`[data-actplan="${r.id}"]`).value, p_package_ids: ids });
+          A.toast(`فُعّل لـ${r.name || 'المعلم'}: ${ids.map(pkgTitle).join('، ')}. تظهر في «حاضر» عنده خلال دقيقة.`, 'ok');
+          renderRequests();
+        } catch (e) { b.disabled = false; A.toast(A.errText(e), 'bad'); }
       };
     });
     $$('[data-noor]').forEach((b) => {

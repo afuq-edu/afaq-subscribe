@@ -2,9 +2,9 @@
   "manifest_version": 3,
   "name": "حاضر — منصة أفق التعليمية",
   "short_name": "حاضر",
-  "version": "4.9.22",
+  "version": "4.10.0",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtuuljr/EwL48b3zR9yoktgd83Fc9ZLoB0gdRzaZUjAsYbOHnHzCi5QA8z3JanHQLsvd2DGrUiaVpiM318msvjQU8dcHe3rivcWhrjJolniHfmKjLvEL898iw415x68mn05nlBOUae53tjGer9EI+oaCD9fy+6CMugPk7Ab8wl78qIsg99+yHQCMVaD+S6D5OSsroXftDTWdk5NJ1hFohI2dtRILT2RlXfqnoUiz6ihchhLfAO+1C7hK4kbamjo0cLgImPXLup+thA+BJkpO4pQyw+6b3ufuAuxY1mJwSD2cEsDq7ziwbEr5GIXThJuIEjA/OSB7ACCBjaQvrCdrUtQIDAQAB",
-  "description": "تعبئة تحاضير منصة نور تلقائيًا من اشتراكك في منصة أفق: الفصل كاملًا أو دروسًا تختارها، بتواريخ النشر الرسمية.",
+  "description": "تعبئة تحاضير منصة نور تلقائيًا من اشتراكك في منصة أفق: دروسًا تختارها بتواريخك، أو الفصل كاملًا.",
   "default_locale": "ar",
   "icons": {
     "16": "icons/icon16.png",
@@ -14,7 +14,6 @@
   },
   "action": {
     "default_title": "حاضر — تعبئة التحضير",
-    "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png"
@@ -24,7 +23,6 @@
     "service_worker": "background.js",
     "type": "module"
   },
-  "options_page": "options.html",
   "permissions": [
     "storage",
     "scripting",
@@ -37,15 +35,6 @@
     "http://*.moe.gov.om/*",
     "https://*.supabase.co/*"
   ],
-  "commands": {
-    "fill-last": {
-      "suggested_key": {
-        "default": "Alt+Shift+H",
-        "mac": "Alt+Shift+H"
-      },
-      "description": "تعبئة الدرس المفتوح في نور بالحصة المقترحة"
-    }
-  },
   "content_scripts": [
     {
       "matches": [
