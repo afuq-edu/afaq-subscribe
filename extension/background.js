@@ -74,7 +74,7 @@ async function fillFromShortcut(tab) {
     badge(tab.id, '✕', '#b91c1c');
   }
 }
-chrome.commands.onCommand.addListener((command, tab) => { if (command === 'fill-last') fillFromShortcut(tab); });
+if (chrome.commands) chrome.commands.onCommand.addListener((command, tab) => { if (command === 'fill-last') fillFromShortcut(tab); });   // الاختصار أُزيل من manifest في ٤٫١٠
 self.hadirFillFromShortcut = fillFromShortcut;   // للتشخيص والاختبار
 
 // ---------- اكتشاف الحفظ ----------
