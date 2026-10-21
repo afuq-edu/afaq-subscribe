@@ -17,6 +17,7 @@
 // Ports: AFAQ_PORT = base port of the mock backends (worker w uses AFAQ_PORT+w; default: free ports). Noor itself is not a port:
 // it is served through Playwright context.route (NOOR_PORT is accepted and ignored). 8765 is never used unless asked for.
 // Output: tests/noor-mock/matrix-report.md + matrix-report.json (override with REPORT=<path without extension>).
+import { JSDOM } from 'jsdom';
 import { chromium } from '/opt/node22/lib/node_modules/playwright/index.mjs';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -66,9 +67,15 @@ const plain = (html) => {
   if (blocky) s = s.replace(/<br\s*\/?>/gi, '\n').replace(/<\/(p|div|li|h\d|tr)>/gi, '\n').replace(/<\/?(p|div|li|ul|ol|table|tbody|thead|tr|td|th|h\d|blockquote|section|article)\b[^<>]*>/gi, '');
   for (let i = 0; i < 6; i++) s = s.replace(/<(span|b|i|u|strong|em|font|mark|small|big|code|a)\b[^<>]*>([^<]*)<\/\1>/gi, '$2');
   s = s.replace(/<sup>([^<]*)<\/sup>/gi, (m, t) => scriptize(t, SUPC)).replace(/<sub>([^<]*)<\/sub>/gi, (m, t) => scriptize(t, SUBC));
-  s = s.replace(/&nbsp;/g, ' ').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&');
+  s = decodeEntities(s).replace(/ /g, ' ');
   return norm(s);
 };
+// every named/numeric entity decoded, tags kept literal — the same rule as engine.js decodeEntities (DOMParser on the «<»-escaped text)
+const JSD = new JSDOM('');
+function decodeEntities(s) {
+  if (!/&#?[a-z0-9]+;/i.test(s)) return s;
+  return new JSD.window.DOMParser().parseFromString(s.replace(/</g, '&lt;'), 'text/html').body.textContent;
+}
 const GRADES = ['الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس', 'السابع', 'الثامن', 'التاسع', 'العاشر', 'الحادي عشر', 'الثاني عشر'];
 const D = (s) => new Date(s + 'T12:00:00Z');
 const isoOf = (d) => d.toISOString().slice(0, 10);
@@ -499,7 +506,7 @@ async function flowPick(job, J, W) {
     check(F, new Set(heads).size === heads.length && heads.length > 0, `pick list: each unit appears once (${heads.length} units)`, 'headings: ' + heads.join(' | '));
     const keys = await b.pg.evaluate(() => [...document.querySelectorAll('input[data-k]')].map((x) => x.dataset.k));
     const allG = J.T.groups;
-    check(F, allG.every((g) => keys.includes(g.key)) && keys.length === allG.length, `pick list: all ${allG.length} lessons listed once`, `listed ${keys.length}; missing: ` + allG.filter((g) => !keys.includes(g.key)).map((g) => g.lesson).slice(0, 5).join(' | '));
+    check(F, allG.every((g) => keys.includes(g.key)) && keys.length === allG.length, `pick list: every lesson listed once (${allG.length} lessons)`, `listed ${keys.length}; missing: ` + allG.filter((g) => !keys.includes(g.key)).map((g) => g.lesson).slice(0, 5).join(' | '));
     for (const g of gs) {
       await b.pg.evaluate((k) => { const cb = [...document.querySelectorAll('input[data-k]')].find((x) => x.dataset.k === k); if (cb && !cb.checked) cb.click(); }, g.key);
       await sleep(250);

@@ -375,9 +375,16 @@ export function hadirEngine(action, payload) {
     if (blocky) s = s.replace(/<br\s*\/?>/gi, '\n').replace(/<\/(p|div|li|h\d|tr)>/gi, '\n').replace(/<\/?(p|div|li|ul|ol|table|tbody|thead|tr|td|th|h\d|blockquote|section|article)\b[^<>]*>/gi, '');
     for (let i = 0; i < 6; i++) s = s.replace(/<(span|b|i|u|strong|em|font|mark|small|big|code|a)\b[^<>]*>([^<]*)<\/\1>/gi, '$2');
     s = s.replace(/<sup>([^<]*)<\/sup>/gi, (m, t) => scriptize(t, SUPC)).replace(/<sub>([^<]*)<\/sub>/gi, (m, t) => scriptize(t, SUBC));
-    s = s.replace(/&nbsp;/g, ' ').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&');
+    s = decodeEntities(s).replace(/ /g, ' ');
     return s.replace(/\n{3,}/g, '\n\n').trim();
   };
+  // فكّ كل الكيانات (المسماة والرقمية: &deg; &times; &#1575;…) دون تفسير الوسوم: تُهرَّب «<» أولًا ثم يُقرأ النص بالمحلل الخامل
+  function decodeEntities(s) {
+    if (!/&#?[a-z0-9]+;/i.test(s)) return s;
+    try { return parseInert(s.replace(/</g, '&lt;')).body.textContent; } catch (e) {
+      return s.replace(/&nbsp;/g, ' ').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&');
+    }
+  }
   // تنظيف أي HTML قبل كتابته في الصفحة (قد يأتي من ملف تحاضير مشارَك)
   const DROP_TAGS = /^(SCRIPT|STYLE|IFRAME|FRAME|FRAMESET|OBJECT|EMBED|APPLET|LINK|META|BASE|NOSCRIPT|TEMPLATE|SVG|MATH|FORM|INPUT|BUTTON|TEXTAREA|SELECT|OPTION|VIDEO|AUDIO|SOURCE|TRACK|CANVAS|IMG|PICTURE|PORTAL|DIALOG)$/i;
   const safeHtml = (html) => {

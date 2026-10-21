@@ -22,6 +22,10 @@ The first full run on 4.10.3 (2026-10-20, 110 packages) found five extension bug
   `<img>`/`<input>`… removed), and the file text (`raw`) was built but never handed to `writeValue()`. A plain field now
   receives the file text with only real formatting markup flattened; the rich-editor copy stays sanitised. The content check
   compares «المفاهيم» in Noor with the same flattening of the file text.
+- **B7 — (found by review, not by the matrix) with B6's targeted flattening only six entities were decoded**, so a converted
+  file's `&deg;`, `&times;`, `&hellip;` or numeric `&#1575;` would have been typed into a plain field as literal entity text
+  (the old DOM-based flattening decoded everything). All named and numeric entities are decoded again (DOMParser on the
+  «<»-escaped text, so tag names stay literal); the harness mirrors it with jsdom.
 - **N1 (cosmetic) — after the window was closed mid-run and the run resumed, the closing line counted only the sessions
   saved after the resume.** The resume now counts what this opening already saved.
 - Date model: the extension lays the sessions out in the order of the official schedule (the file order, chronological),
