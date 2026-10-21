@@ -510,6 +510,12 @@ async function flowPick(job, J, W) {
     for (const g of gs) {
       await b.pg.evaluate((k) => { const cb = [...document.querySelectorAll('input[data-k]')].find((x) => x.dataset.k === k); if (cb && !cb.checked) cb.click(); }, g.key);
       await sleep(250);
+      if (g === gs[0]) {
+        // every chosen session shows a clear, empty date box (no suggested date; the teacher types it)
+        const boxes = await b.pg.evaluate((ids) => ids.map((id) => { const el = [...document.querySelectorAll('input[data-d]')].find((x) => x.dataset.d === id); if (!el) return null; const r = el.getBoundingClientRect(); return { w: Math.round(r.width), h: Math.round(r.height), v: el.value }; }), g.sessions.map((l) => l.id));
+        check(F, boxes.every((x) => x && x.w >= 120 && x.h >= 24), `pick list: a clear date box for every session of a chosen lesson (${g.sessions.length === 1 ? 'one session' : 'several sessions'})`, JSON.stringify(boxes));
+        check(F, boxes.every((x) => x && x.v === ''), 'pick list: no suggested date (boxes start empty)', JSON.stringify(boxes));
+      }
       for (const l of g.sessions) if (!want[l.id] && g.sessions.length > 1) { await b.pg.evaluate((id) => { const cb = [...document.querySelectorAll('input[data-s]')].find((x) => x.dataset.s === id); if (cb && cb.checked) cb.click(); }, l.id); await sleep(150); }
     }
     for (const [id, d] of Object.entries(want)) await b.pg.evaluate(([id, d]) => { const el = [...document.querySelectorAll('input[data-d]')].find((x) => x.dataset.d === id); if (el) { el.value = d; el.dispatchEvent(new Event('change', { bubbles: true })); } }, [id, d]);
