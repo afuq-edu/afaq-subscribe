@@ -2192,16 +2192,17 @@ function wzLessons() {
   $('wzHead').textContent = 'اختر الدروس وتواريخها';
   // كل وحدة كتلة واحدة في القائمة (خطة الوزارة قد تداخل حصص وحدة مع غيرها فتبدو دروسها ناقصة)؛ ترتيب التعبئة الكاملة لا يتأثر
   const gs = groupByUnit(lessonGroups(wz.pkg));
-  const sd = daysFor(state, settings, wz.pkg.id);
-  const nextDate = () => { const ds = [...wz.sel.values()].filter(isIso).sort(); return ds.length ? nextSchoolDay(ds[ds.length - 1], sd, false) : nextSchoolDay(isoOf(new Date()), sd, true); };
+  // لا تاريخ مقترح: المعلم يحدد تاريخ كل حصة بنفسه
   let u = null;
   body.innerHTML = wzTrialNote() + '<div class="wz-list">' + gs.map((g) => {
     const on = g.sessions.some((l) => wz.sel.has(l.id));
     const uh = g.unit !== u ? `<div class="wz-unit">${esc(g.unit || 'دروس')}</div>` : ''; u = g.unit;
     const one = g.sessions.length === 1;
     const dateIn = (l) => `<input class="input wz-date" type="date" data-d="${esc(l.id)}" value="${esc(wz.sel.get(l.id) || '')}">`;
-    const ses = on && !one ? `<div class="wz-ses">${g.sessions.map((l, k) => `<label class="wz-s"><input type="checkbox" data-s="${esc(l.id)}" ${wz.sel.has(l.id) ? 'checked' : ''}><span>الحصة ${ORD[k] || toAr(k + 1)}</span>${wz.sel.has(l.id) ? dateIn(l) : ''}</label>`).join('')}</div>` : '';
-    return `${uh}<div class="wz-les ${on ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-k="${esc(g.key)}" ${on ? 'checked' : ''}><span>${esc(g.lesson || 'درس')}</span>${on && one ? dateIn(g.sessions[0]) : `<em>${one ? '' : countWord(g.sessions.length)}</em>`}</label>${ses}</div>`;
+    // خانة التاريخ تحت الدرس بالشكل نفسه للحصة الواحدة وللحصص المتعددة
+    const ses = on && one ? `<div class="wz-ses"><label class="wz-s"><span>تاريخ النشر</span>${dateIn(g.sessions[0])}</label></div>`
+      : on && !one ? `<div class="wz-ses">${g.sessions.map((l, k) => `<label class="wz-s"><input type="checkbox" data-s="${esc(l.id)}" ${wz.sel.has(l.id) ? 'checked' : ''}><span>الحصة ${ORD[k] || toAr(k + 1)}</span>${wz.sel.has(l.id) ? dateIn(l) : ''}</label>`).join('')}</div>` : '';
+    return `${uh}<div class="wz-les ${on ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-k="${esc(g.key)}" ${on ? 'checked' : ''}><span>${esc(g.lesson || 'درس')}</span><em>${one ? '' : countWord(g.sessions.length)}</em></label>${ses}</div>`;
   }).join('') + '</div>';
   const n = wz.sel.size;
   body.insertAdjacentHTML('beforeend', `<button class="btn primary big" id="wzLessGo" ${n ? '' : 'disabled'}>${n ? `عبّئ ${countWord(n).replace('حصتان', 'الحصتين')} في نور` : 'اختر درسًا'}</button>`);
@@ -2209,15 +2210,15 @@ function wzLessons() {
   body.querySelectorAll('input[data-k]').forEach((cb) => {
     cb.onchange = () => {
       const g = gs.find((x) => x.key === cb.dataset.k);
-      if (cb.checked) g.sessions.forEach((l) => { if (!wz.sel.has(l.id)) wz.sel.set(l.id, nextDate()); });
+      if (cb.checked) g.sessions.forEach((l) => { if (!wz.sel.has(l.id)) wz.sel.set(l.id, ''); });
       else g.sessions.forEach((l) => wz.sel.delete(l.id));
       wzLessons();
     };
   });
   body.querySelectorAll('input[data-s]').forEach((cb) => {
-    cb.onchange = () => { if (cb.checked) wz.sel.set(cb.dataset.s, nextDate()); else wz.sel.delete(cb.dataset.s); wzLessons(); };
+    cb.onchange = () => { if (cb.checked) wz.sel.set(cb.dataset.s, ''); else wz.sel.delete(cb.dataset.s); wzLessons(); };
   });
-  body.querySelectorAll('input[data-d]').forEach((d) => { d.onclick = (e) => e.stopPropagation(); d.onchange = () => { if (isIso(d.value)) wz.sel.set(d.dataset.d, d.value); }; });
+  body.querySelectorAll('input[data-d]').forEach((d) => { d.onclick = (e) => e.stopPropagation(); d.onchange = () => { wz.sel.set(d.dataset.d, isIso(d.value) ? d.value : ''); }; });
   $('wzLessGo').onclick = () => {
     if ([...wz.sel.values()].some((v) => !isIso(v))) { wzMsg('info', 'اكتب تاريخ كل حصة اخترتها.'); return; }
     wzRun();
