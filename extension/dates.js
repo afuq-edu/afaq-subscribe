@@ -264,10 +264,12 @@ export function layoutDates(items, { start, days, taken, useFileDates = true, sk
     // الترتيب محفوظ: حصة موعدها في النشرة بعد سابقتها لا تُنشر قبلها ولا معها — إن تأخّرت السابقة (إجازة، يوم مشغول،
     // يوم بلا حصص) تتأخر هذه بعدها بدل أن تسبقها
     const plan = isIso(s.fileDate) ? s.fileDate : want;
-    let at = want;
-    if (!exactDay && last && (src === 'file' || src === 'fixed') && plan >= last.plan && at <= last.date) at = nextSchoolDay(last.date, days, false);
+    let at = want, pushed = false;
+    if (!exactDay && last && (src === 'file' || src === 'fixed') && plan >= last.plan && at <= last.date) { at = nextSchoolDay(last.date, days, false); pushed = true; }
+    if (!exactDay && isIso(s.after) && at <= s.after) { at = nextSchoolDay(s.after, days, false); pushed = true; }
     const d = exactDay ? want : free(at);
-    if (d !== want) notes.push({ i, from: want, to: d, why: hol.has(want) ? 'holiday' : !isSchoolDay(want, days) ? 'offday' : 'taken', src });
+    // السبب: إجازة، يوم بلا حصص، يوم مشغول، أو «order» (تأخّرت الحصة التي قبلها فتبعتها — اليوم نفسه حرّ)
+    if (d !== want) notes.push({ i, from: want, to: d, why: hol.has(want) ? 'holiday' : !isSchoolDay(want, days) ? 'offday' : pushed && !used.has(want) ? 'order' : 'taken', src });
     s.date = d; s.dateSrc = src;
     used.add(d);
     last = { plan, date: d };

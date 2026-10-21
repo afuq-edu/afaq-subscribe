@@ -362,9 +362,21 @@ export function hadirEngine(action, payload) {
 
   // تحليل HTML في مستند خامل (DOMParser): لا تُنفَّذ سكربتات ولا تُحمَّل صور
   const parseInert = (html) => new DOMParser().parseFromString(String(html || ''), 'text/html');
+  // نص الحقل العادي من محتوى فيه وسوم: يُزال التنسيق المزدوج فقط (<span class="m">…</span>، <b>…</b>…)، و<sup>/<sub> تصير
+  // حروفًا علوية/سفلية (سم² وH₂O)، وتُفكّ الكيانات (&lt; &gt; &amp;…) — أما الوسم المفرد («الوسم <meta>» في درس يشرح HTML)
+  // فيبقى نصًا كما هو، فلا يضيع محتوى الدرس. ملف محوّل من HTML حقيقي (فقرات مغلقة بلا وسوم رأس) تُحوَّل فقراته إلى أسطر.
+  const SUPC = { 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴', 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹', '+': '⁺', '-': '⁻', '−': '⁻', '(': '⁽', ')': '⁾', n: 'ⁿ', ' ': ' ' };
+  const SUBC = { 0: '₀', 1: '₁', 2: '₂', 3: '₃', 4: '₄', 5: '₅', 6: '₆', 7: '₇', 8: '₈', 9: '₉', '+': '₊', '-': '₋', '−': '₋', '(': '₍', ')': '₎', ' ': ' ' };
+  const arDigit = (c) => { const i = '٠١٢٣٤٥٦٧٨٩'.indexOf(c); return i >= 0 ? String(i) : c; };
+  const scriptize = (t, map) => { const cs = [...t].map(arDigit); return cs.every((c) => map[c] != null) ? cs.map((c) => map[c]).join('') : t; };
   const stripHtml = (html) => {
-    const b = parseInert(String(html).replace(/<br\s*\/?>/gi, '\n').replace(/<\/(p|div|li|h\d)>/gi, '\n')).body;
-    return (b ? b.textContent : '').replace(/\n{3,}/g, '\n\n').trim();
+    let s = String(html);
+    const blocky = /<\/(p|div|li|h\d|tr)>/i.test(s) && !/<(meta|head|html|body|title)\b/i.test(s);
+    if (blocky) s = s.replace(/<br\s*\/?>/gi, '\n').replace(/<\/(p|div|li|h\d|tr)>/gi, '\n').replace(/<\/?(p|div|li|ul|ol|table|tbody|thead|tr|td|th|h\d|blockquote|section|article)\b[^<>]*>/gi, '');
+    for (let i = 0; i < 6; i++) s = s.replace(/<(span|b|i|u|strong|em|font|mark|small|big|code|a)\b[^<>]*>([^<]*)<\/\1>/gi, '$2');
+    s = s.replace(/<sup>([^<]*)<\/sup>/gi, (m, t) => scriptize(t, SUPC)).replace(/<sub>([^<]*)<\/sub>/gi, (m, t) => scriptize(t, SUBC));
+    s = s.replace(/&nbsp;/g, ' ').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&');
+    return s.replace(/\n{3,}/g, '\n\n').trim();
   };
   // تنظيف أي HTML قبل كتابته في الصفحة (قد يأتي من ملف تحاضير مشارَك)
   const DROP_TAGS = /^(SCRIPT|STYLE|IFRAME|FRAME|FRAMESET|OBJECT|EMBED|APPLET|LINK|META|BASE|NOSCRIPT|TEMPLATE|SVG|MATH|FORM|INPUT|BUTTON|TEXTAREA|SELECT|OPTION|VIDEO|AUDIO|SOURCE|TRACK|CANVAS|IMG|PICTURE|PORTAL|DIALOG)$/i;
@@ -403,7 +415,8 @@ export function hadirEngine(action, payload) {
     const el = it.el;
     let v = f.value;
     if (it.kind === 'text') {
-      if (f.kind === 'rich' || looksHtml(v) && f.kind !== 'text') v = stripHtml(v);
+      const src = typeof f.raw === 'string' ? f.raw : v;   // حقل نصي: النص الأصلي (لا نسخة المحرر الغني المنظَّفة)
+      v = f.kind === 'rich' || (looksHtml(src) || /&(lt|gt|amp|nbsp|quot|#39);/.test(src)) && f.kind !== 'text' ? stripHtml(src) : src;
       if (it.type === 'date' || it.type === 'datetime-local') v = toDateInput(v, it.type);
       else if (el.tagName === 'INPUT') v = String(v).replace(/\s*\n+\s*/g, ' — ');   // حقل سطر واحد
       fire(el, 'focus', 'FocusEvent');
@@ -1347,7 +1360,8 @@ export function hadirEngine(action, payload) {
               const target = { el: tgt.el, kind, type: tgt.el.type ? String(tgt.el.type).toLowerCase() : '', host: tgt.host };
               if (payload.skipFilled && currentIsFilled(target)) { results[it.key] = { status: 'skip', how: tgt.how }; continue; }
               const v = Array.isArray(it.value) ? it.value.join('، ') : it.value;
-              const ok = writeValue(target, { kind: Array.isArray(it.value) ? 'text' : 'rich', value: v });
+              // raw: نص الملف الأصلي للخانة النصية العادية (قد يذكر وسمًا مثل <img> في درس يشرح HTML)
+              const ok = writeValue(target, { kind: Array.isArray(it.value) ? 'text' : 'rich', value: v, raw: Array.isArray(it.value) ? undefined : it.raw });
               results[it.key] = { status: ok ? 'ok' : 'fail', how: tgt.how };
               flash(target);
             }
@@ -1404,6 +1418,8 @@ export function hadirEngine(action, payload) {
         // تُحمَّل من نور بعد التاريخ: ننتظر ظهورها ثم هدوء القائمة (لا مدة ثابتة)
         let slots = await waitDom(document.body, () => { const s = findSlots(); return s.length ? s : false; }, { timeout: 3500, quiet: 300 });
         slots = slots || findSlots();
+        // نور البطيئة: لا يُحكم بأن اليوم بلا صفوف قبل مهلة ثانية أطول (الحكم الخاطئ ينقل الحصة وما بعدها)
+        if (!slots.length) slots = (await waitDom(document.body, () => { const s = findSlots(); return s.length ? s : false; }, { timeout: 6000, quiet: 300 })) || findSlots();
         if (!slots.length) results.timeslots = { status: 'nolabel' };
         else {
           let hits = 0, already = 0;

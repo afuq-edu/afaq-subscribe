@@ -2,3 +2,4 @@ node_modules/
 tests/ext/
 package-lock.json
 site/hader.zip
+tests/noor-mock/matrix-report.json
