@@ -2189,7 +2189,8 @@ function wzLessons() {
   const body = $('wzBody');
   const keep = body.querySelector('.wz-list'); const top = keep ? keep.scrollTop : 0;
   $('wzHead').textContent = 'اختر الدروس وتواريخها';
-  const gs = lessonGroups(wz.pkg);
+  // كل وحدة كتلة واحدة في القائمة (خطة الوزارة قد تداخل حصص وحدة مع غيرها فتبدو دروسها ناقصة)؛ ترتيب التعبئة الكاملة لا يتأثر
+  const gs = groupByUnit(lessonGroups(wz.pkg));
   const sd = daysFor(state, settings, wz.pkg.id);
   const nextDate = () => { const ds = [...wz.sel.values()].filter(isIso).sort(); return ds.length ? nextSchoolDay(ds[ds.length - 1], sd, false) : nextSchoolDay(isoOf(new Date()), sd, true); };
   let u = null;
@@ -2220,6 +2221,12 @@ function wzLessons() {
     if ([...wz.sel.values()].some((v) => !isIso(v))) { wzMsg('info', 'اكتب تاريخ كل حصة اخترتها.'); return; }
     wzRun();
   };
+}
+// الوحدات بترتيب أول ظهورها، ودروس كل وحدة بترتيب ظهورها (لا ترتيب رقمي: أرقام العناوين قد تكون مسافات أو أعدادًا من المحتوى)
+function groupByUnit(groups) {
+  const units = new Map();
+  groups.forEach((g) => { const k = String(g.unit || '').replace(/\s+/g, ' ').trim(); if (!units.has(k)) units.set(k, []); units.get(k).push(g); });
+  return [...units.values()].flat();
 }
 function wzTrialNote() {
   const r = wz.pkg && wz.pkg.remote;

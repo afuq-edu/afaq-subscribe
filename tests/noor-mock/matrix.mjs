@@ -100,7 +100,12 @@ function listPackages() {
     }
   };
   visit(PREPS, 0);
-  return { files, skipped };
+  // a backup or corrected copy of a package with the same id (old-en-9/, fix-en-9/…): only the grade folder's copy is tested
+  const byId = new Map();
+  const rank = (f) => (/^g\d/.test(f.rel) ? 0 : /\//.test(f.rel) ? 2 : 1);
+  for (const f of files) { const cur = byId.get(f.id); if (!cur || rank(f) < rank(cur)) byId.set(f.id, f); }
+  for (const f of files) if (byId.get(f.id) !== f) skipped.push({ file: f.rel, why: `duplicate id ${f.id} (tested from ${byId.get(f.id).rel})` });
+  return { files: files.filter((f) => byId.get(f.id) === f), skipped };
 }
 // the extension flips «lesson-unit» numbering («2-1 القلب» → «1-2 القلب», match.js fixPairOrder) when it loads a package, and the
 // wizard's pick screen keys (data-k) use the flipped names — the harness uses the extension's own function so the keys agree
@@ -489,6 +494,12 @@ async function flowPick(job, J, W) {
   } : null;
   const select = async () => {
     await b.pg.waitForSelector('input[data-k]', { timeout: 30000 });
+    // every unit is one block in the pick list, with all its lessons, whatever the file order (the ministry plan interleaves units)
+    const heads = await b.pg.evaluate(() => [...document.querySelectorAll('.wz-unit')].map((e) => e.textContent.replace(/\s+/g, ' ').trim()));
+    check(F, new Set(heads).size === heads.length && heads.length > 0, `pick list: each unit appears once (${heads.length} units)`, 'headings: ' + heads.join(' | '));
+    const keys = await b.pg.evaluate(() => [...document.querySelectorAll('input[data-k]')].map((x) => x.dataset.k));
+    const allG = J.T.groups;
+    check(F, allG.every((g) => keys.includes(g.key)) && keys.length === allG.length, `pick list: all ${allG.length} lessons listed once`, `listed ${keys.length}; missing: ` + allG.filter((g) => !keys.includes(g.key)).map((g) => g.lesson).slice(0, 5).join(' | '));
     for (const g of gs) {
       await b.pg.evaluate((k) => { const cb = [...document.querySelectorAll('input[data-k]')].find((x) => x.dataset.k === k); if (cb && !cb.checked) cb.click(); }, g.key);
       await sleep(250);
