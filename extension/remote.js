@@ -35,7 +35,8 @@ export async function linkWith(token, name) {
 }
 
 export async function unlink() {
-  await chrome.storage.local.remove([LINK, STATUS]);
+  await chrome.storage.local.remove([LINK, STATUS, FLQ]);
+  flq = [];   // سجل التعبئة المعلّق لهذا الحساب لا يُرسل باسم حساب يُربط بعده
   const r = await chrome.storage.local.get('packages');
   await chrome.storage.local.set({ packages: (r.packages || []).filter((p) => !p.remote) });
   memo.clear();
@@ -222,6 +223,61 @@ export async function referral() {
   const r = await rpc('ext_referral', { p_token: link.token });
   if (r && r.ok) r.url = AFAQ.SITE_URL.replace(/#.*$/, '') + 'install.html?r=' + r.request;
   return r || { ok: false, error: 'network' };
+}
+
+// ---------- سجل التعبئة الصامت ----------
+// كل حصة حاولها التشغيل تنتهي بصف واحد يراه المشرف في لوحته تحت طلب المعلم — لا يظهر للمعلم شيء ولا يُبطئ التعبئة أو يوقفها:
+// الصف يُضاف في الذاكرة فورًا ويُحفظ محليًا (حتى ٥٠٠ صف، يسقط الأقدم)، ويُرسل دفعاتٍ في الخلفية؛ ما لم يصل يبقى في الطابور ليُعاد في الفتح التالي
+const FLQ = 'fillLogQueue';
+const FL_CAP = 500;
+let flq = [];           // الطابور في الذاكرة
+let flLoaded = null;    // ما بقي من جلسة سابقة يُقرأ من التخزين مرة واحدة ويتقدّم على ما جُمع الآن
+let flPend = false;     // حفظ محلي مجدول (يُجمع كل ما أُضيف في الدفعة نفسها في كتابة واحدة)
+let flushing = null;    // إرسال جارٍ (واحد في كل مرة)
+function flLoad() {
+  if (!flLoaded) flLoaded = chrome.storage.local.get(FLQ).then((r) => { const old = Array.isArray(r[FLQ]) ? r[FLQ] : []; flq = old.concat(flq).slice(-FL_CAP); }).catch(() => {});
+  return flLoaded;
+}
+function flSave() {
+  if (flPend) return;
+  flPend = true;
+  flLoad().then(() => { flPend = false; return chrome.storage.local.set({ [FLQ]: flq }); }).catch(() => { flPend = false; });
+}
+// صف واحد: { run_id, mode, ver, package_id, term, lesson_id, lesson_title, noor_lesson, noor_unit, pub_date, moved_from, status, note, client_at } — لا يرمي ولا ينتظر
+export function fillLog(row) {
+  try {
+    const r = Object.assign({ run_id: '', mode: '', ver: '', package_id: '', term: null, lesson_id: '', lesson_title: '', noor_lesson: '', noor_unit: '', pub_date: null, moved_from: null, status: 'failed', note: '', client_at: '' }, row || {});
+    r.run_id = String(r.run_id || Date.now());
+    if (!r.ver) { try { r.ver = chrome.runtime.getManifest().version; } catch (e) { r.ver = ''; } }
+    if (!r.client_at) r.client_at = new Date().toISOString();
+    r.note = String(r.note || '').slice(0, 300);
+    flq.push(r);
+    if (flq.length > FL_CAP) flq.splice(0, flq.length - FL_CAP);
+    flSave();
+  } catch (e) {}
+}
+// إرسال ما في الطابور دفعات (١٠٠ صف) — نجح الإرسال: تُحذف الدفعة؛ أي شيء آخر (خادم قديم، انقطاع): تبقى للإرسال التالي
+export async function flushFillLog() {
+  try {
+    if (!flushing) flushing = flDo().finally(() => { flushing = null; });
+    await flushing;
+  } catch (e) {}
+}
+async function flDo() {
+  await flLoad();
+  const link = await getLink();
+  if (!link) return;
+  // ما سُجّل قبل الربط الحالي (حساب سابق فُكّ ربطه في نافذة أخرى، أو قبل أي ربط) لا يُنسب إلى هذا الحساب: يُسقط
+  const stale = flq.filter((x) => Date.parse(x.client_at) < (+link.at || 0));
+  if (stale.length) { flq = flq.filter((x) => !stale.includes(x)); await chrome.storage.local.set({ [FLQ]: flq }).catch(() => {}); }
+  while (flq.length) {
+    const batch = flq.slice(0, 100);
+    const r = await rpc('ext_log', { p_token: link.token, p_rows: batch }, 8000);
+    if (r && r.error === 'unlinked') { flq = []; await chrome.storage.local.remove(FLQ).catch(() => {}); return; }   // رمز لم يعد مربوطًا: لا يُعاد ولا يُرسل لاحقًا باسم غيره
+    if (!r || r.ok !== true) return;
+    flq = flq.filter((x) => !batch.includes(x));
+    await chrome.storage.local.set({ [FLQ]: flq }).catch(() => {});
+  }
 }
 
 // ---------- نسخة جديدة ----------

@@ -187,6 +187,7 @@
         <td><div class="inline-acts">
           ${r.status !== 'cancelled' ? `<button class="btn sm primary" data-act="${r.id}" type="button">${pend.length || r.status !== 'active' ? 'فعّل مواد' : 'أضف مواد'}</button>` : ''}
           ${r.phone ? `<a class="btn sm wa" target="_blank" rel="noopener" href="${esc(A.waLink(r.phone.replace(/^0+/, '').length === 8 ? '968' + r.phone.replace(/^0+/, '') : r.phone, `السلام عليكم أ. ${r.name}، بخصوص طلبك رقم ${r.id} في «حاضر».`))}">واتساب</a>` : ''}
+          <button class="btn ghost sm" data-log="${r.id}" type="button" title="ما عبّأته «حاضر» لهذا المعلم حصةً حصة وما حدث لكل منها (لا يراه المعلم)">سجل التعبئة</button>
           <button class="btn ghost sm" data-unl="${r.id}" type="button" title="يصفّر محاولات التسجيل اليوم لجهاز هذا الطلب وشبكته">تصفير المحاولات</button>
           ${r.noor_wait ? `<button class="btn sm primary" data-noorok="${r.id}" type="button" title="يصير حساب نور هذا هو حساب اشتراك المعلم">اسمح بحساب نور</button>` : ''}
           ${r.noor_name ? `<button class="btn ghost sm" data-noor="${r.id}" type="button" title="غيّر المعلم حسابه في نور: يُربط بأول حساب نور باسمه يُعبَّأ له">فكّ ربط نور</button>` : ''}
@@ -197,7 +198,8 @@
           <div class="pkgpick" data-actpk="${r.id}"></div>
           <div class="inline-acts"><select data-actplan="${r.id}" style="max-width:160px"><option value="term">اشتراك فصلي</option><option value="year">اشتراك سنوي</option></select>
             <button class="btn primary" data-actgo="${r.id}" type="button">فعّل المواد المختارة</button><button class="btn ghost" data-actx="${r.id}" type="button">إلغاء</button></div>
-        </div></td></tr>`;
+        </div></td></tr>
+        <tr class="actrow" data-logrow="${r.id}" hidden><td colspan="5"></td></tr>`;
     }).join('') : '<tr><td colspan="5" class="empty">لا طلبات هنا.</td></tr>');
     // «فعّل مواد»: يختار المدير المواد (مادة وصف) التي يريدها المعلم، فتفتح له في «حاضر» وحدها
     $$('[data-act]').forEach((b) => {
@@ -212,6 +214,15 @@
       };
     });
     $$('[data-actx]').forEach((b) => { b.onclick = () => { $(`[data-actrow="${b.dataset.actx}"]`).hidden = true; }; });
+    // «سجل التعبئة»: يُفتح ويُغلق، ويُحمَّل من القاعدة أول مرة فقط (و«تحديث» داخله يعيد التحميل)
+    $$('[data-log]').forEach((b) => {
+      b.onclick = () => {
+        const row = $(`[data-logrow="${b.dataset.log}"]`);
+        if (!row.hidden) { row.hidden = true; return; }
+        row.hidden = false;
+        if (!row.dataset.loaded) drawFillLog(+b.dataset.log, row);
+      };
+    });
     $$('[data-actgo]').forEach((b) => {
       b.onclick = async () => {
         const r = D.requests.find((x) => x.id === +b.dataset.actgo);
@@ -248,9 +259,52 @@
       };
     });
   }
+  // سجل التعبئة: ما أرسلته «حاضر» بصمت عن كل حصة عبّأتها للمعلم — تشغيلات الأحدث أولًا، وداخل كل تشغيلة الأسطر بترتيب وقوعها
+  const LOG_ST = { saved: ['ok', 'حُفظت'], unconfirmed: ['warn', 'غير مؤكدة'], failed: ['bad', 'لم تُحفظ'], skipped: ['off', 'تُخطّيت'] };
+  const LOG_MODE = { pick: 'حصص مختارة', term: 'الفصل كاملًا' };
+  const hm = (iso) => { const d = new Date(iso); return toAr(`${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`); };
+  async function drawFillLog(id, row) {
+    const cell = row.firstElementChild;
+    cell.innerHTML = '<small class="muted">جارٍ التحميل…</small>';
+    let rows;
+    try { rows = (await db.rpc('admin_fill_log', { p_request: id })) || []; }
+    catch (e) {
+      const off = /admin_fill_log|function/i.test(String(e.message));
+      A.toast(off ? 'سجل التعبئة غير مفعّل في قاعدة البيانات بعد (hader-fill-log.sql).' : A.errText(e), 'bad');
+      cell.innerHTML = `<small class="muted">${off ? 'سجل التعبئة غير مفعّل في قاعدة البيانات بعد.' : esc(A.errText(e))}</small> <a href="#" class="small" data-logre="${id}">أعد المحاولة</a>`;
+      $('[data-logre]', cell).onclick = (ev) => { ev.preventDefault(); drawFillLog(id, row); };
+      return;
+    }
+    row.dataset.loaded = '1';
+    const when = (x) => x.client_at || x.at, time = (x) => `${esc(ago(when(x)))} <small class="muted">${esc(hm(when(x)))}</small>`;
+    const runs = new Map();   // الأسطر تأتي الأحدث أولًا، فأول ظهور لكل تشغيلة يرتّب التشغيلات
+    rows.forEach((x) => { const k = x.run_id || '#' + x.id; if (!runs.has(k)) runs.set(k, []); runs.get(k).push(x); });
+    const head = `<div style="display:flex;gap:10px;align-items:baseline;margin-bottom:6px"><b>سجل التعبئة</b><small class="muted">${rows.length ? `${toAr(rows.length)} سطرًا في ${toAr(runs.size)} تشغيلة` : ''}</small><a href="#" class="small" data-logre="${id}" style="margin-inline-start:auto">تحديث</a></div>`;
+    const body = rows.length ? `<table class="grid" style="font-size:13.5px"><tr><th>الوقت</th><th>المادة</th><th>الحصة ← درس نور</th><th>تاريخ النشر</th><th>الحالة</th><th>ملاحظة</th></tr>` + [...runs.values()].map((list) => {
+      list.sort((a, b) => String(a.at).localeCompare(String(b.at)) || a.id - b.id);
+      // حصة لها أكثر من صف نهائي في التشغيلة نفسها (أُعيدت بعد التحقق النهائي، أو في استئناف): الأحدث هو الحكم، وما قبله يُعرض باهتًا ولا يُعدّ
+      const last = new Map();
+      list.forEach((x) => { if (LOG_ST[x.status] && x.lesson_id) last.set(x.lesson_id, x); });
+      const old = (x) => !!(LOG_ST[x.status] && x.lesson_id && last.get(x.lesson_id) !== x);
+      const f = list[0], cnt = (s) => list.filter((x) => x.status === s && !old(x)).length;
+      const sum = Object.entries(LOG_ST).filter(([s]) => cnt(s)).map(([s, [, l]]) => `${toAr(cnt(s))} ${l}`).join(' · ');
+      return `<tr><td colspan="6" style="background:#F7FAFC"><small class="muted">تشغيلة ${esc(ago(when(f)))} ${esc(hm(when(f)))} · «حاضر» ${esc(f.ver || '؟')}${f.title || f.package_id ? ` · ${esc(f.title || f.package_id)}` : ''}${f.term ? ` · ${A.termName(f.term)}` : ''}${sum ? ` · ${sum}` : ''}</small></td></tr>` + list.map((x) => {
+        if (x.status === 'start') return `<tr><td>${time(x)}</td><td colspan="5"><b>بدء تعبئة ${esc(x.title || x.package_id || '')}</b> <small class="muted">(${esc(LOG_MODE[x.mode] || x.mode || '')}${x.note ? ` · ${esc(x.note)}` : ''})</small></td></tr>`;
+        if (x.status === 'end') return `<tr><td>${time(x)}</td><td colspan="5"><b>انتهى${x.note ? ':' : '.'}</b> ${esc(x.note || '')}</td></tr>`;
+        const [cls, lbl] = LOG_ST[x.status] || ['', x.status];
+        return `<tr${old(x) ? ' style="opacity:.55"' : ''}><td>${time(x)}</td><td><span class="tag">${esc(x.title || x.package_id || '—')}</span></td>
+          <td>${esc(x.lesson_title || x.lesson_id || '—')}${x.noor_lesson ? ` <span class="muted">←</span> ${esc(x.noor_lesson)}` : ''}${x.noor_unit ? `<br><small class="muted">${esc(x.noor_unit)}</small>` : ''}</td>
+          <td>${x.pub_date ? esc(A.dateAr(x.pub_date)) : '<span class="muted">—</span>'}${x.moved_from ? `<br><small class="muted">كان ${esc(A.dateAr(x.moved_from))}</small>` : ''}</td>
+          <td style="white-space:nowrap"><span class="chip ${cls}">${esc(lbl)}</span>${old(x) ? '<br><small class="muted">حلّ محله صف أحدث</small>' : ''}</td><td class="small">${esc(x.note || '')}</td></tr>`;
+      }).join('');
+    }).join('') + '</table>' : '<p class="muted small" style="margin:0">لا سجل بعد.</p>';
+    cell.innerHTML = head + body;
+    $('[data-logre]', cell).onclick = (ev) => { ev.preventDefault(); drawFillLog(id, row); };
+  }
   $('#reqSearch').oninput = drawRequests;
   $('#reqFilter').onchange = drawRequests;
-  setInterval(() => { if (!$('[data-pane="requests"]').hidden) renderRequests(); }, 60000);
+  // التحديث الدوري لا يعيد بناء الجدول وسجل تعبئة أو مربع تفعيل مفتوح (حتى لا يُغلق في وجه المدير)
+  setInterval(() => { if (!$('[data-pane="requests"]').hidden && !$$('.actrow:not([hidden])').length) renderRequests(); }, 60000);
 
   // ================= أدوات مشتركة =================
   function pkgPicker(box, selected) {

@@ -51,6 +51,9 @@ export function keywords(s) {
 
 // نسبة الكلمات المفتاحية المشتركة
 export function kwScore(title, target) {
+  // الاسمان متطابقان بعد التوحيد (ولو كانا كلمة شائعة وحدها مثل «بين»): تطابق تام
+  const na = kwNorm(title), nb = kwNorm(target);
+  if (na && na === nb) return 1;
   const a = keywords(title), b = keywords(target);
   if (!a.length || !b.length) return 0;
   let hit = 0;
@@ -181,12 +184,13 @@ function scoreLesson(title, l, na, ua, unitTitle) {
   const nb = lessonNum(name);
   const swapped = swappedPair(title, name);
   if (na != null && nb != null) {
-    if (na === nb || swapped) sc = Math.max(sc, 0.5) + (swapped ? 0.8 : 1);
-    else {
-      // الرقم مختلف لكن الاسم طويل ومحدد ومتطابق تقريبًا (لا «Grammar» عامة): الرقم هو الخطأ غالبًا
-      const specific = keywords(nameOnly(title)).length >= 3 && keywords(nameOnly(name)).length >= 3;
-      sc = specific && titleSim(nameOnly(title), nameOnly(name)) >= 0.8 ? sc * 0.9 : 0;
-    }
+    const kt = keywords(nameOnly(title)).length, kn = keywords(nameOnly(name)).length;
+    const ns = titleSim(nameOnly(title), nameOnly(name));
+    // الرقم مطابق لكن الاسمين (وكلاهما اسم حقيقي) لا يشتركان في شيء: مرشّح ضعيف — يُقبل إن لم يوجد أفضل (رقم مطابق + اسم مطابق أعلى دائمًا)
+    if (na === nb || swapped) sc = kt >= 2 && kn >= 2 && ns < 0.2 ? 1.0 : Math.max(sc, 0.5) + (swapped ? 0.8 : 1);
+    // الاسم مطابق تمامًا والرقم مختلف: ترقيم الملف هو الخطأ (يسبق مرشّحًا بالرقم وحده)؛ أو اسم طويل ومحدد ومتطابق تقريبًا
+    else if (kt >= 2 && kn >= 2 && ns >= 0.95) sc = Math.max(sc, 0.5) + 0.9;
+    else sc = kt >= 3 && kn >= 3 && ns >= 0.8 ? sc * 0.9 : 0;
   }
   // كلمات الوحدة ترجّح بين دروس متشابهة (مثل Lesson 2 في أكثر من وحدة)
   if (sc > 0) sc += 0.3 * titleSim(unitTitle != null ? unitTitle : title, l.unit || '');

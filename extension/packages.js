@@ -633,7 +633,15 @@ export function lessonValues(pkg, lesson) {
 }
 export function buildItems(pkg, lesson) {
   const vals = lessonValues(pkg, lesson);
-  return NOOR_FIELDS.map((f) => ({ key: f.key, match: f.match, mode: f.mode, fillTo: f.fillTo, value: vals[f.key], other: lesson[f.key + 'Other'] || '' }))
+  // raw: النص كما في الملف — الحقل النصي العادي يأخذه (التنظيف الأمني يلزم المحرر الغني وحده، ويُسقط ذكر وسم مثل <img> في درس يشرح HTML)
+  const raws = {};
+  NOOR_FIELDS.forEach((f) => { if (typeof lesson[f.key] === 'string') raws[f.key] = lesson[f.key]; });
+  if (driveApplies(pkg)) {
+    // رابط الدرايف يُلحق بالملاحظات نصًا كما يُلحق بنسخة المحرر الغني
+    const link = String(pkg.driveLink).trim();
+    if (!String(raws.notes || '').includes(link)) raws.notes = (raws.notes ? raws.notes + '\n' : '') + 'ملفات الدرس والمواد الداعمة: ' + link;
+  }
+  return NOOR_FIELDS.map((f) => ({ key: f.key, match: f.match, mode: f.mode, fillTo: f.fillTo, value: vals[f.key], raw: raws[f.key], other: lesson[f.key + 'Other'] || '' }))
     .filter((it) => it.mode === 'checkall' || (Array.isArray(it.value) ? it.value.length : String(it.value || '').trim()));
 }
 
@@ -665,7 +673,10 @@ async function treeOp(tabId, payload) {
   return parts.find((p) => p && p.tree) || parts.find((p) => p && p.tree === false) || { tree: false };
 }
 export const sessionNo = (pkg, lesson) => {
-  const sessions = ((pkg && pkg.lessons) || []).filter((l) => groupKey(l) === groupKey(lesson));
+  // الحصة قد تأتي نسخةً من الخادم باسم الدرس كما في الملف (قبل قلب ترقيم «2-1»): تُعرَف بمعرّفها في المادة
+  const all = (pkg && pkg.lessons) || [];
+  const me = all.find((l) => l.id === lesson.id) || lesson;
+  const sessions = all.filter((l) => groupKey(l) === groupKey(me));
   return sessions.findIndex((l) => l.id === lesson.id) + 1;
 };
 
@@ -809,9 +820,12 @@ export async function pickTreeNode(tabId, node) {
 export async function applyTitleSuffix(tabId, pkg, lesson) {
   const st = await treeOp(tabId, { op: 'state' });
   if (!st.tree || !st.title || !st.selected) return null;
-  const base = stripSessionSuffix(st.title);
-  if (base !== st.selected.text) return null;
+  // اسم الدرس نفسه قد ينتهي بـ«(1)» («الجمع (1)»): لا يُحذف منه، والحصة الثانية «الجمع (1) (2)»
+  // المقارنة بعد توحيد المسافات: نور يضع اسم الشجرة بمسافاته الأصلية (قد تكون مزدوجة) وقراءتنا للشجرة توحّدها
+  const ws = (x) => String(x || '').replace(/\s+/g, ' ').trim();
   const n = sessionNo(pkg, lesson);
+  const base = ws(st.title) === ws(st.selected.text) || ws(stripSessionSuffix(st.title)) === ws(st.selected.text) ? (n >= 2 ? st.selected.text : st.title) : '';
+  if (!base) return null;
   const want = n >= 2 ? `${base} (${n})` : base;
   if (want === st.title) return null;
   const r = await treeOp(tabId, { op: 'title', value: want });
