@@ -634,7 +634,14 @@ export function lessonValues(pkg, lesson) {
 export function buildItems(pkg, lesson) {
   const vals = lessonValues(pkg, lesson);
   // raw: النص كما في الملف — الحقل النصي العادي يأخذه (التنظيف الأمني يلزم المحرر الغني وحده، ويُسقط ذكر وسم مثل <img> في درس يشرح HTML)
-  return NOOR_FIELDS.map((f) => ({ key: f.key, match: f.match, mode: f.mode, fillTo: f.fillTo, value: vals[f.key], raw: typeof lesson[f.key] === 'string' ? lesson[f.key] : undefined, other: lesson[f.key + 'Other'] || '' }))
+  const raws = {};
+  NOOR_FIELDS.forEach((f) => { if (typeof lesson[f.key] === 'string') raws[f.key] = lesson[f.key]; });
+  if (driveApplies(pkg)) {
+    // رابط الدرايف يُلحق بالملاحظات نصًا كما يُلحق بنسخة المحرر الغني
+    const link = String(pkg.driveLink).trim();
+    if (!String(raws.notes || '').includes(link)) raws.notes = (raws.notes ? raws.notes + '\n' : '') + 'ملفات الدرس والمواد الداعمة: ' + link;
+  }
+  return NOOR_FIELDS.map((f) => ({ key: f.key, match: f.match, mode: f.mode, fillTo: f.fillTo, value: vals[f.key], raw: raws[f.key], other: lesson[f.key + 'Other'] || '' }))
     .filter((it) => it.mode === 'checkall' || (Array.isArray(it.value) ? it.value.length : String(it.value || '').trim()));
 }
 
