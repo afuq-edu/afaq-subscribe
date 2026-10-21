@@ -148,7 +148,7 @@ async function ui(pg) {
   return pg.evaluate(() => {
     const t = (id) => { const e = document.getElementById(id); return e ? e.textContent.replace(/\s+/g, ' ').trim() : ''; };
     const vis = (id) => { const e = document.getElementById(id); return !!e && !e.hidden; };
-    return { head: t('nowHead'), text: t('nowText'), stop: vis('stopBtn'), again: vis('wzAgain'), wiz: vis('wizCard'), wzHead: t('wzHead'), run: document.body.classList.contains('wiz-run') };
+    return { head: t('nowHead'), text: t('nowText'), stop: vis('stopBtn'), again: vis('wzAgain'), wiz: vis('wizCard'), wzHead: t('wzHead'), wzBody: t('wzBody'), run: document.body.classList.contains('wiz-run') };
   });
 }
 async function waitDone(pg, ms, label) {
@@ -289,7 +289,7 @@ T(6, 'Noor tree: duplicate lesson names in other units + one renamed lesson', as
   return b;
 });
 
-T(7, 'Trial cap: 2 free sessions left → only 2 saved, then the pay screen', async (env) => {
+T(7, 'Trial cap: 2 free sessions left → only 2 saved, then the pay screen; after activation the run continues by itself', async (env) => {
   const tree = treeFromPackage(PKG);
   const noor = env.noor({ tree });
   env.afaq.reset({ pkg: PKG, trialLeft: 2 });
@@ -300,6 +300,17 @@ T(7, 'Trial cap: 2 free sessions left → only 2 saved, then the pay screen', as
   check(s.wiz && /انتهت تجربتك المجانية/.test(s.wzHead), 'pay screen «انتهت تجربتك المجانية» is shown', JSON.stringify(s));
   assertRows('S7', rows, tree, { expectIds: [sid(1), sid(2)], dates: { [sid(1)]: S[sid(1)].pubDate, [sid(2)]: S[sid(2)].pubDate } });
   check(env.afaq.st.calls.includes('ext_contact'), 'request marked «بانتظار التفعيل» (ext_contact called)');
+  check(s.wiz && /يكمل التحضير وحده/.test(s.wzBody || s.text || ''), 'pay screen says the preparation continues by itself after activation', JSON.stringify(s));
+  // the admin activates the request: the run continues by itself (no button), with the same choices, nothing saved twice
+  env.afaq.st.active = true; env.afaq.st.status = 'active';
+  const t0 = Date.now();
+  let left = null;
+  while (Date.now() - t0 < 90000) { const u = await ui(b.pg).catch(() => null); if (u && !(u.wiz && /انتهت تجربتك/.test(u.wzHead))) { left = u; break; } await sleep(1500); }
+  check(!!left, 'activation is picked up without any click (pay screen closes by itself)');
+  const s2 = await waitDone(b.pg, 10 * 60000, 'after activation');
+  check(/تمت التعبئة بنجاح|نُشر/.test(s2.head), 'run finishes after activation', `${s2.head} | ${s2.text}`);
+  const rows2 = noor.st.rows.filter((r) => !r.preexisting);
+  assertRows('S7b', rows2, tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
   return b;
 });
 

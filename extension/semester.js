@@ -249,6 +249,7 @@ function renderPlan() {
     + (c.miss.length + c.weak.length + c.dup.length ? ` · للمراجعة: ${toAr(c.miss.length + c.weak.length + c.dup.length)}` : '');
   const dup = dupNodes();
   $('plan').innerHTML = plan.map((p, i) => {
+    if (WIZ.on && p.miss) return '';   // المعالج: درس بلا مقابل في الشجرة لا يُعرض للمعلم
     const h = HOW[p.how] || ['ok', ''];
     // درس كل حصصه في نور: لا داعي لعلامة «بالترتيب — تأكد» بعد أن حُفظ
     const settled = p.node && !dup.has(p.node.id) && p.sessions.every((s) => s.inNoor || s.savedNow || done(s.lesson));
@@ -2242,7 +2243,7 @@ function wzPickOffer() {
 // المادة جاهزة: «أختار الدروس بنفسي» ← قائمة الدروس · «الفصل كاملًا» ← التعبئة مباشرة
 function wzOpen(p) {
   wz.pkg = p;
-  if (p.remote && p.remote.trial && !p.remote.left) { wzGo('pay'); return; }
+  if (p.remote && p.remote.trial && !p.remote.left) { payResume = 'open'; wzGo('pay'); return; }
   const ids = new Set((p.lessons || []).map((l) => l.id));
   [...wz.sel.keys()].forEach((k) => { if (!ids.has(k)) wz.sel.delete(k); });
   if (wz.mode === 'term') wzRun(); else wzGo('lessons');
@@ -2278,7 +2279,7 @@ async function wzSavePrefs() { await chrome.storage.local.set({ wizPrefs: { grad
 async function wzRun() {
   const p = wz.pkg;
   if (!p) return;
-  if (p.remote && p.remote.trial && !p.remote.left) { wzGo('pay'); return; }
+  if (p.remote && p.remote.trial && !p.remote.left) { payResume = 'start'; wzGo('pay'); return; }
   await init();   // المكتبة كما هي الآن
   if (![...$('pkgSel').options].some((o) => o.value === p.id)) { wzMsg('bad', 'المادة لم تعد في مكتبتك — أعد فتح النافذة.'); return; }
   $('pkgSel').value = p.id; startTouched = false; $('pkgSel').onchange();
@@ -2322,10 +2323,10 @@ async function wizAfterRun({ report, ok, failed, stopped, error, had, past = 0 }
     const r = await getPackages(); packages = r.packages; state = r.state;
     const p2 = packages.find((x) => x.id === pkg.id) || pkg;
     // انتهت الحصص المجانية: ما بقي منها لم يكتمل حفظه (جُلب ولم يُحفظ) يُكمَل أولًا، ثم شاشة الاشتراك
-    const owed = (WIZ.failedIds || []).some((id) => WIZ.fetched && WIZ.fetched.has(id));
-    if (!(owed && failed && WIZ.auto < 1) && (WIZ.trialOver || (p2.remote && p2.remote.trial && !p2.remote.left))) { wz.pkg = p2; showPay(p2); return; }
+    // انتهت الحصص المجانية: لا إعادة تلقائية تصطدم بنهاية التجربة — شاشة التفعيل مباشرة، ويكمل التحضير وحده بعد التفعيل
+    if (WIZ.trialOver || (p2.remote && p2.remote.trial && !p2.remote.left)) { wz.pkg = p2; payResume = 'run'; showPay(p2); return; }
   }
-  if (WIZ.trialOver && !((WIZ.failedIds || []).some((id) => WIZ.fetched && WIZ.fetched.has(id)) && failed && WIZ.auto < 1)) { showPay(pkg); return; }
+  if (WIZ.trialOver) { payResume = 'run'; showPay(pkg); return; }
   const n = WIZ.sum;
   const range = wzRange(report);
   if (stopped) {
@@ -2356,9 +2357,8 @@ async function wizAfterRun({ report, ok, failed, stopped, error, had, past = 0 }
   // نور لا تقبل تاريخًا مضى: ما مضى تاريخه تُرك بهدوء، ويُذكر للمعلم دون صيغة خطأ
   const pt = past ? ` ${past === 1 ? 'حصة واحدة مضى تاريخها' : `${countWord(past)} مضى تاريخها`} ونور لا تقبل نشرها بتاريخ ماضٍ، فتركتها.` : '';
   if (!n) { setBox('ok', had ? '✓ هذه الحصص موجودة في نور' : past ? '✓ انتهى' : '✓ لا شيء ناقص', `${pt}${wz.mode === 'pick' ? ' هل تختار درسًا آخر؟' : ''}`.trim()); return; }
-  const miss = plan.filter((p) => p.miss).map((p) => p.group.lesson).filter(Boolean);
-  const mt = miss.length ? ` تركت ما لم أجد مقابله في نور بالاسم، فاختره بنفسك: ${miss.slice(0, 6).map((x) => '«' + x + '»').join('، ')}${miss.length > 6 ? '…' : ''}.` : '';
-  setBox('ok', '✓ تمت التعبئة بنجاح', `نُشر ${countWord(n).replace('حصتان', 'حصتين')}${range}.${mt}${pt}${wz.mode === 'pick' ? ' هل تختار درسًا آخر؟' : ''}`);
+  // ما لا يقابله درس في شجرة نور لا يُذكر للمعلم (يبقى في سجل المشرف وحده)
+  setBox('ok', '✓ تمت التعبئة بنجاح', `نُشر ${countWord(n).replace('حصتان', 'حصتين')}${range}.${pt}${wz.mode === 'pick' ? ' هل تختار درسًا آخر؟' : ''}`);
 }
 // ما يفعله المعلم ليكمل، دون عرض نص الخطأ (يبقى في السجل والتقرير)
 function wzHint(e) {
@@ -2433,6 +2433,7 @@ let payTimer = null;
 // رقم واتساب للعرض فقط (دون رابط): 96876506037 ← 76506037
 const waShow = (n) => { const d = String(n || '').replace(/\D/g, '').replace(/^00/, '') || '96876506037'; return d.length === 11 && d.startsWith('968') ? d.slice(3) : d; };
 let payAsked = false;
+let payResume = '';   // ما يكمل وحده بعد التفعيل: 'run' تشغيل توقف عند نهاية التجربة · 'start' بدء التعبئة · 'open' فتح المادة
 function wzPayRender() {
   const st = wz.status || {};
   const req = st.request || {};
@@ -2440,9 +2441,9 @@ function wzPayRender() {
   $('wzBody').innerHTML = `<p class="wz-note big">لتفعيل اشتراكك تواصل معنا على واتساب، واذكر اسمك والمواد التي تريدها.</p>
     <div class="wz-wa"><span>واتساب</span><b dir="ltr">${esc(waShow(st.whatsapp))}</b></div>
     ${req.id ? `<p class="wz-line">رقم طلبك: <b>${toAr(req.id)}</b></p>` : ''}
-    <p class="hint">بعد التفعيل تظهر موادك هنا وحدها.</p>
+    <p class="hint">${payResume ? 'اطلب التفعيل، وبعده يكمل التحضير وحده من حيث توقف — أبقِ هذه النافذة ونور مفتوحتين.' : 'بعد التفعيل تظهر موادك هنا وحدها.'}</p>
     <button class="btn sm" id="wzOther">رجوع</button>`;
-  $('wzOther').onclick = () => { clearInterval(payTimer); wzAgain(); };
+  $('wzOther').onclick = () => { clearInterval(payTimer); payResume = ''; wzAgain(); };
   // يُسجَّل الطلب «بانتظار التفعيل» في لوحة الإدارة (مرة واحدة)
   if (!payAsked && req.status !== 'requested' && req.status !== 'active') { payAsked = true; contactRequest().then((r) => { if (r && r.ok) wz.status = Object.assign({}, st, { request: Object.assign({}, req, { id: r.request || req.id, status: r.status || 'requested' }) }); }).catch(() => {}); }
   clearInterval(payTimer);
@@ -2459,6 +2460,22 @@ async function wzPoll() {
 async function wzActivated() {
   clearInterval(payTimer);
   await wzReload();
+  const how = payResume; payResume = '';
+  const p = wz.pkg && packages.find((x) => x.id === wz.pkg.id);
+  if (how && p && !(p.remote && p.remote.trial)) {
+    // التحضير يكمل وحده من حيث توقف، بالاختيارات نفسها (ما نُشر لا يتكرر: يُقرأ من قائمة نور)
+    wz.pkg = p;
+    if (how === 'run' && WIZ.on) {
+      if ($('pkgSel')) $('pkgSel').value = p.id;
+      WIZ.auto = 0;
+      wizRunning();
+      setBox('run', '✓ فُعّل اشتراكك', 'أكمل التحضير الآن من حيث توقف.');
+      run();
+      return;
+    }
+    if (how === 'start') { wzRun(); return; }
+    if (how === 'open') { wzOpen(p); return; }
+  }
   $('wzHead').textContent = '✓ فُعّل اشتراكك';
   $('wzBody').innerHTML = `<p class="wz-note big">موادك جاهزة الآن.</p><button class="btn primary big" id="wzCont">ابدأ</button>`;
   $('wzCont').onclick = () => { wz.hist = []; wzAgain(); };
