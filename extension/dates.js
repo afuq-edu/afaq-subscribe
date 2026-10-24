@@ -248,30 +248,42 @@ export const shortDate = (iso) => (isIso(iso) ? toArDigits(parseIso(iso).getDate
 // taken: تواريخ لا تُستعمل (محفوظة لحصص أخرى). يعيد ملاحظات التعديل: [{ i, from, to, why: offday|taken, src }]
 // skip: أيام إجازة (مجموعة ISO) لا تُستعمل أبدًا — تُحسب كيوم بلا حصص (why: holiday)
 // exact: التاريخ الذي كتبه المعلم بنفسه (fixed) يبقى كما هو، دون نقل
-export function layoutDates(items, { start, days, taken, useFileDates = true, skip, exact = false } = {}) {
-  const used = new Set(taken || []);
+// cap(iso): عدد حصص المعلم لنفس الشعبة في ذلك اليوم (كما يعرضها نور) — اليوم يتسع لهذا العدد من التحاضير، تحضير لكل حصة.
+// weekly: حصص كل أسبوع من النشرة توزَّع بالترتيب على حصص المعلم الفعلية في أسبوعها (من أول يوم حصة فيه)، لا على يوم النشرة بعينه:
+// تواريخ النشرة أيام متتالية من أول الأسبوع، وجدول المعلم قد يجمع حصتين في يوم — وما لم يتسع له أسبوعه ينتقل إلى ما بعده بالترتيب.
+// taken: تواريخ عليها تحاضير قائمة (يتكرر التاريخ بعددها). كل حصة تأخذ slot: رقم حصتها في يومها (1 = الأولى).
+export function layoutDates(items, { start, days, taken, useFileDates = true, skip, exact = false, cap = null, weekly = false } = {}) {
+  const used = new Map();
+  (taken || []).forEach((d) => used.set(d, (used.get(d) || 0) + 1));
+  const capOf = (iso) => { const n = cap ? Number(cap(iso)) : 1; return n >= 1 ? n : 1; };
+  const full = (iso) => (used.get(iso) || 0) >= capOf(iso);
   const hol = skip instanceof Set ? skip : new Set(skip || []);
   const notes = [];
   let prev = null, last = null;
-  const free = (iso) => { let d = nextSchoolDay(iso, days, true); for (let i = 0; i < 120 && (used.has(d) || hol.has(d)); i++) d = nextSchoolDay(d, days, false); return d; };
+  const free = (iso) => { let d = nextSchoolDay(iso, days, true); for (let i = 0; i < 120 && (full(d) || hol.has(d)); i++) d = nextSchoolDay(d, days, false); return d; };
+  const first = items.map((s) => s.fileDate).filter(isIso).sort()[0] || '';
+  const anchor = (fd) => { const w = weekStart(fd); return first && w < first ? first : w; };
   items.forEach((s, i) => {
     let want, src;
     if (s.fixed && isIso(s.fixed)) { want = s.fixed; src = 'fixed'; }
-    else if (useFileDates && s.fileDate && isIso(s.fileDate)) { want = s.fileDate; src = 'file'; }
-    else if (prev) { want = nextSchoolDay(prev, days, false); src = 'seq'; }
+    else if (useFileDates && s.fileDate && isIso(s.fileDate)) { want = weekly ? anchor(s.fileDate) : s.fileDate; src = 'file'; }
+    else if (prev) { want = full(prev) ? nextSchoolDay(prev, days, false) : prev; src = 'seq'; }
     else { want = nextSchoolDay(start && isIso(start) ? start : isoOf(new Date()), days, true); src = 'start'; }
     const exactDay = exact && src === 'fixed';
-    // الترتيب محفوظ: حصة موعدها في النشرة بعد سابقتها لا تُنشر قبلها ولا معها — إن تأخّرت السابقة (إجازة، يوم مشغول،
-    // يوم بلا حصص) تتأخر هذه بعدها بدل أن تسبقها
+    // الترتيب محفوظ: حصة موعدها في النشرة بعد سابقتها لا تُنشر قبلها — إن تأخّرت السابقة (إجازة، يوم مشغول،
+    // يوم بلا حصص) تتأخر هذه بعدها (في يومها نفسه إن بقيت فيه حصة، وإلا بعده) بدل أن تسبقها
     const plan = isIso(s.fileDate) ? s.fileDate : want;
     let at = want, pushed = false;
-    if (!exactDay && last && (src === 'file' || src === 'fixed') && plan >= last.plan && at <= last.date) { at = nextSchoolDay(last.date, days, false); pushed = true; }
-    if (!exactDay && isIso(s.after) && at <= s.after) { at = nextSchoolDay(s.after, days, false); pushed = true; }
+    if (!exactDay && last && (src === 'file' || src === 'fixed') && plan >= last.plan && at <= last.date) { pushed = at < last.date || full(last.date); at = last.date; }
+    if (!exactDay && isIso(s.after) && at <= s.after) { pushed = pushed || at < s.after || full(s.after); at = s.after; }
     const d = exactDay ? want : free(at);
+    const from = weekly && src === 'file' ? s.fileDate : want;
+    const moved = weekly && src === 'file' ? weekStart(d) !== weekStart(s.fileDate) : d !== want;
     // السبب: إجازة، يوم بلا حصص، يوم مشغول، أو «order» (تأخّرت الحصة التي قبلها فتبعتها — اليوم نفسه حرّ)
-    if (d !== want) notes.push({ i, from: want, to: d, why: hol.has(want) ? 'holiday' : !isSchoolDay(want, days) ? 'offday' : pushed && !used.has(want) ? 'order' : 'taken', src });
+    if (moved) notes.push({ i, from, to: d, why: hol.has(want) ? 'holiday' : !isSchoolDay(want, days) ? 'offday' : pushed && !full(want) ? 'order' : 'taken', src });
     s.date = d; s.dateSrc = src;
-    used.add(d);
+    used.set(d, (used.get(d) || 0) + 1);
+    s.slot = used.get(d);
     last = { plan, date: d };
     // التسلسل يتبع آخر تاريخ (الأكبر) حتى لا نعود للخلف بعد مرساة متأخرة
     prev = prev && prev > d ? prev : d;

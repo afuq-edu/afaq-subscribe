@@ -615,12 +615,13 @@ export function cleanHtml(h) {
       .replace(/([\s"'\/])on[a-z]+\s*=\s*("[^"]*"|'[^']*'|[^\s>]*)/gi, '$1')
       .replace(/([\s"'\/])(href|src|action|formaction|xlink:href)\s*=\s*("|')?\s*(javascript|data|vbscript):[^\s>]*/gi, '$1'));
 }
-// الرابط في سطر مستقل لا يلتصق بالكتابة («الرابط: https://…» ← «الرابط:» ثم الرابط في سطره) فيُفتح بالنقر
-// (لا يمس رابطًا داخل مثال كود مثل <a href="https://…"> في دروس HTML)
-const URL_RE = /https?:\/\/[^\s"'<>«»]+/g;
+// رابط حقيقي (له نطاق: https://site.com/…) — لا «https://» وحدها كما في درس عن بروتوكول التشفير
+const URL_RE = /https?:\/\/[\w-]+(?:\.[\w-]+)+[^\s"'<>«»]*/g;
+// «الرابط: https://…» ← «الرابط:» ثم الرابط في سطره، فلا يلتصق بالكتابة ويُفتح بالنقر. الرابط داخل جملة يبقى في مكانه
+// (يصير قابلًا للنقر في المحرر الغني)، ولا يُمس مثال كود مثل <a href="https://…"> في دروس HTML
 export function spaceLinks(t) {
   if (typeof t !== 'string') return t;
-  return t.replace(/([^\s"'=])[ \t]*(https?:\/\/[^\s"'<>«»]+)/g, '$1\n$2').replace(/(https?:\/\/[^\s"'<>«»]+?)([.,،؛:)\]]*)[ \t]+(?=\S)/g, '$1$2\n');
+  return t.replace(/([:：])[ \t]*(https?:\/\/[\w-]+(?:\.[\w-]+)+[^\s"'<>«»]*)/g, '$1\n$2');
 }
 const escH = (s) => String(s).replace(/&(?!#?[a-z0-9]+;)/gi, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 // وسوم التنسيق الحقيقية في ملفات التحاضير (أس، دليل سفلي، رمز علمي) — أي وسم آخر نص يُكتب كما هو (دروس HTML تذكر <h1> و<p>)
@@ -907,6 +908,7 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
     items, skipFilled, publishDate: opts.publishDate || '', allRows: true,
     ensureChecks: settings.ensureGlobal ? [GLOBAL_CHECK] : [],
     checkTimeslots: settings.checkTimeslots !== false,
+    slotNo: opts.slotNo || 1, slotFull: opts.slotFull || null, allowSection: !!opts.allowSection,   // تحضير لكل حصة: رقم حصة هذا التحضير في يومه
     setWeek: settings.setWeek !== false,
     mark: { pkgId: pkg.id, lessonId: lesson.id, date: opts.publishDate || '', at: Date.now() },
   });

@@ -406,7 +406,7 @@ export function hadirEngine(action, payload) {
   const looksHtml = (s) => /<\/?[a-z][\s\S]*>/i.test(String(s));
   const textToHtml = (s) => String(s).split(/\n/).map((l) => '<p>' + (escapeHtml(l) || '<br>') + '</p>').join('');
   // نص بلا وسوم (من غير ملف التحاضير): كل سطر فقرة والروابط قابلة للنقر — نص الملف يصل جاهزًا بفقراته من richText
-  const richHtml = (v) => looksHtml(v) ? String(v) : textToHtml(v).replace(/https?:\/\/[^\s<>"'«»]+/g, (u) => { const t = u.replace(/[.,،؛:)\]]+$/, ''); return `<a href="${t}" target="_blank">${t}</a>` + u.slice(t.length); });
+  const richHtml = (v) => looksHtml(v) ? String(v) : textToHtml(v).replace(/https?:\/\/[\w-]+(?:\.[\w-]+)+[^\s<>"'«»]*/g, (u) => { const t = u.replace(/[.,،؛:)\]]+$/, ''); return `<a href="${t}" target="_blank">${t}</a>` + u.slice(t.length); });
 
   function toDateInput(v, type) {
     const s = String(v).trim();
@@ -1411,29 +1411,74 @@ export function hadirEngine(action, payload) {
           }
         }
       }
-      // الصفوف/الحصص (lecture_timeslots): قد تُحمَّل بعد اختيار التاريخ — ننتظر استقرارها ثم نحدد الظاهرة كلها
+      // الحصص (lecture_timeslots): تُحمَّل من نور بعد اختيار التاريخ — مربع لكل حصة: «المادة - الصف - الشعبة - الحصة»،
+      // والحصة التي عليها تحضير في هذا التاريخ معطّلة. تحضير لكل حصة: لكل شعبة حصة واحدة — الأولى في التحضير الأول من اليوم،
+      // والثانية في الثاني (slotNo)؛ والشعب الأخرى (9/1 و9/2) تأخذ التحضير نفسه كل في حصتها.
+      // يوم بلا حصص للمعلم: نور تكتب «لا يوجد فترات زمنية مرتبطة بهذه الحصص» وتعرض مربع الشعبة وحده (نشر بلا حصة)
       if (action === 'noor' && payload.checkTimeslots) {
-        const findSlots = () => {
+        const isSec = (el) => /\[section\]/.test(el.name || '');
+        const findSlots = (withOff, sec) => {
           const out = [];
           for (const d of docs) {
-            d.doc.querySelectorAll('input[type="checkbox"].lecture_timeslots, input[type="checkbox"][name*="[timeslot]"]').forEach((el) => {
-              if (el.disabled) return;
-              const lbl = el.closest('label');
+            d.doc.querySelectorAll('input[type="checkbox"].lecture_timeslots, input[type="checkbox"][name*="[timeslot]"], input[type="checkbox"][name*="[section]"]').forEach((el) => {
+              if ((el.disabled && !withOff) || isSec(el) !== !!sec) return;
+              const lbl = el.closest('label') || (el.parentElement && el.parentElement.querySelector('label'));
               if (isRendered(el) || (lbl && isRendered(lbl))) out.push(el);
             });
           }
           return out;
         };
-        // تُحمَّل من نور بعد التاريخ: ننتظر ظهورها ثم هدوء القائمة (لا مدة ثابتة)
-        let slots = await waitDom(document.body, () => { const s = findSlots(); return s.length ? s : false; }, { timeout: 3500, quiet: 300 });
-        slots = slots || findSlots();
-        // نور البطيئة: لا يُحكم بأن اليوم بلا صفوف قبل مهلة ثانية أطول (الحكم الخاطئ ينقل الحصة وما بعدها)
-        if (!slots.length) slots = (await waitDom(document.body, () => { const s = findSlots(); return s.length ? s : false; }, { timeout: 6000, quiet: 300 })) || findSlots();
-        if (!slots.length) results.timeslots = { status: 'nolabel' };
-        else {
-          let hits = 0, already = 0;
-          for (const c of slots) { if (c.checked) { already++; continue; } if (await checkOne(c)) hits++; }
-          results.timeslots = { status: hits + already === slots.length ? 'ok' : 'partial', how: 'checks', hits, already, total: slots.length };
+        const NO_PERIODS = /لا\s*(?:يوجد|توجد)\s*فترات\s*زمنية/;
+        const noPeriods = () => docs.some((d) => Array.from(d.doc.querySelectorAll('.lecture_timeslots_div, .timeslots')).some((x) => isRendered(x) && NO_PERIODS.test(x.textContent || '')));
+        // ننتظر ظهور الحصص (أو جملة «لا يوجد فترات») ثم هدوء القائمة — الجملة قد تبقى من حالة سابقة لحظة التحميل: لا تُعتمد قبل ثانيتين
+        const t0 = Date.now();
+        const ready = () => { const s = findSlots(true); return s.length ? s : noPeriods() && Date.now() - t0 > 2000 ? 'none' : false; };
+        let got = await waitDom(document.body, ready, { timeout: 3500, quiet: 300 });
+        // نور البطيئة: لا يُحكم بأن اليوم بلا حصص قبل مهلة ثانية أطول (الحكم الخاطئ ينقل الحصة وما بعدها)
+        if (!got) got = await waitDom(document.body, ready, { timeout: 6000, quiet: 300 });
+        const all = findSlots(true);
+        const secs = findSlots(false, true);
+        if (!all.length) {
+          // لا حصص في هذا اليوم: يُنقل التحضير إلى يوم حصة — إلا إن طُلب النشر للشعبة بلا حصة (معلم لا جدول له في نور)
+          if (payload.allowSection && secs.length) {
+            let hits = 0, already = 0;
+            for (const c of secs) { if (c.checked) { already++; continue; } if (await checkOne(c)) hits++; }
+            results.timeslots = { status: hits + already === secs.length ? 'ok' : 'partial', how: 'section', hits, already, total: secs.length, cap: 1 };
+          } else results.timeslots = { status: 'nolabel', sectionOnly: !!secs.length, noPeriods: noPeriods() };
+        } else {
+          const textOf = (el) => { const l = el.closest('label') || (el.id && el.ownerDocument.querySelector('label[for="' + CSS.escape(el.id) + '"]')) || (el.parentElement && el.parentElement.querySelector('label')); return clean((l || el.parentElement || {}).textContent || el.value || ''); };
+          // الشعبة: «المادة - الصف - الشعبة - الحصة» بلا الجزء الأخير؛ وإلا النص بلا رقم الحصة ولا وقتها
+          const secOf = (el) => {
+            const t = textOf(el), parts = t.split(/\s+-\s+/);
+            if (parts.length >= 4) return parts.slice(0, -1).join(' - ');
+            return t.replace(/[٠-٩]/g, (c) => '٠١٢٣٤٥٦٧٨٩'.indexOf(c))
+              .replace(/(?:ال)?(?:حصة|حصه|فترة|فتره)\s*(?:رقم|ال)?\s*[:：]?\s*\(?\s*(?:\d+|الأولى|الاولى|الثانية|الثانيه|الثالثة|الرابعة|الخامسة|السادسة|السابعة|الثامنة)\s*\)?/g, ' ')
+              .replace(/\d{1,2}\s*[:：.]\s*\d{2}(?:\s*(?:ص|م|am|pm))?/gi, ' ').replace(/[—–\-|،,()]+/g, ' ').replace(/\s+/g, ' ').trim();
+          };
+          // نص بلا اسم شعبة: كل مربع وحده (لا تُدمج شعبتان لا يُعرف الفرق بينهما)
+          const groups = new Map();
+          all.forEach((el, i) => { const key = secOf(el) || '#' + i; if (!groups.has(key)) groups.set(key, []); groups.get(key).push(el); });
+          const k = Math.max(1, +payload.slotNo || 1), full = payload.slotFull || {};
+          const pick = [];
+          groups.forEach((els, key) => {
+            const open = els.filter((el) => !el.disabled);
+            if (!open.length) return;                                                                   // حصص الشعبة كلها محضّرة اليوم
+            let el;
+            if (k === 1 || open.length < els.length) el = open[0];                                     // المحجوزة معطّلة: أول حصة حرة
+            else if (full[key] && els.length < full[key]) el = open[0];                                 // المحجوزة اختفت: الباقية حرة
+            else el = els[k - 1] || null;                                                               // كلها ظاهرة: الحصة رقم k
+            if (el) pick.push(el);
+          });
+          const cnt = {}; groups.forEach((els, key) => { cnt[key] = els.length; });
+          const cap = Math.max(1, ...Object.values(cnt));
+          if (!pick.length) results.timeslots = { status: 'noslot', groups: cnt, cap, total: all.length };
+          else {
+            // ما ليس من هذا التحضير يبقى بلا تحديد (الحصة الثانية للشعبة لها تحضيرها)
+            for (const el of all) if (!pick.includes(el) && el.checked && !el.disabled) { try { el.click(); } catch (e) {} if (el.checked) { el.checked = false; fire(el, 'change'); } }
+            let hits = 0, already = 0;
+            for (const c of pick) { if (c.checked) { already++; continue; } if (await checkOne(c)) hits++; }
+            results.timeslots = { status: hits + already === pick.length ? 'ok' : 'partial', how: 'checks', hits, already, total: pick.length, groups: cnt, cap, slotNo: k };
+          }
         }
       }
       // خيارات يجب أن تكون محددة دائمًا (مثل: تعميم التحضير على كافة الجداول)

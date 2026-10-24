@@ -20,12 +20,14 @@ for (const d of fs.readdirSync(ROOT)) { const dd = path.join(ROOT, d); if (!fs.s
     const ps = [...doc.querySelectorAll('p,li,div')].filter((e) => e.textContent.trim());
     const rawLines = String(it.raw).split('\n').filter((s) => s.trim()).length;
     const want = new dom.window.DOMParser().parseFromString('<p>'+String(it.raw).replace(/<\/?(sup|sub|span)\b[^>]*>/g,'').replace(/</g,'&lt;')+'</p>','text/html').body.textContent.replace(/\s+/g,' ').trim(), got = [...doc.body.querySelectorAll('p')].map((p) => p.textContent).join('\n').replace(/\s+/g,' ').trim();
-    const urls = (String(it.raw).replace(/"[^"]*"/g,'').match(/https?:\/\/[^\s<>"'«»]+/g) || []);
+    const RAW = String(it.raw).replace(/"[^"]*"/g, '');
+    const urls = RAW.match(/https?:\/\/[\w-]+(?:\.[\w-]+)+[^\s<>"'«»]*/g) || [];
+    const own = new Set((RAW.match(/[:：][ \t]*https?:\/\/[\w-]+(?:\.[\w-]+)+[^\s<>"'«»]*/g) || []).map((x) => x.replace(/^[:：][ \t]*/, '').replace(/[.,،؛:)\]]+$/, '')));
     const as = [...doc.querySelectorAll('a[href]')]; links += as.length;
     const why = [];
     if (want !== got) { let i=0; while (want[i]===got[i]) i++; why.push('text differs: ' + want.slice(i-20,i+40) + ' | ' + got.slice(i-20,i+40)); }
     if (rawLines > 1 && ps.length < rawLines) why.push(`lines ${rawLines} → blocks ${ps.length}`);
-    for (const u of urls) { const t = u.replace(/[.,،؛:)\]]+$/, ''); const an = as.find((e) => e.getAttribute('href') === t); if (!an) why.push('no anchor ' + t); else if (an.parentElement.textContent.trim().replace(/[.,،؛:)\]]+$/,'') !== an.textContent.trim()) why.push('link glued: ' + an.parentElement.textContent.slice(0, 80)); }
+    for (const u of urls) { const t = u.replace(/[.,،؛:)\]]+$/, ''); const an = as.find((e) => e.getAttribute('href') === t); if (!an) why.push('no anchor ' + t); else if (own.has(t) && an.parentElement.textContent.trim().replace(/[.,،؛:)\]]+$/,'') !== an.textContent.trim()) why.push('link glued: ' + an.parentElement.textContent.slice(0, 80)); }
     if (why.length) bad.push(`${pkg.id} ${l.title || ''} [${it.key}] ${why.join('; ')}`);
     if (it.key === 'concepts' && pkg.id === 'it-10-2' && /hgroup/.test(it.raw)) sample = html;
  }}}}

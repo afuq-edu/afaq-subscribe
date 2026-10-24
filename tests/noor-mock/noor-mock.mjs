@@ -60,10 +60,15 @@ export function createNoor(cfg) {
     uniqueDates: cfg.uniqueDates !== false,          // Noor refuses two preps with the same publish date in one course
     ambiguous: cfg.ambiguous || {},                  // { saveAttemptNo: 'form' | 'abort' | 'form-nosave' } — row saved (or not) but result unclear
     noClassDates: new Set(cfg.noClassDates || []),
+    // the teacher's timetable: weekday → [[section, periods that day], …] (default: two sections, one period each, every day);
+    // takenSlots: how the form shows a period that already has a prep on that date — 'disable' | 'hide' | 'show' (save then refuses)
+    periods: cfg.periods || null,
+    takenSlots: cfg.takenSlots || 'disable',
     createdOld: cfg.createdOld || '2026-10-15 09:12',
     showCreated: cfg.showCreated !== false,
   };
   const course = (cid) => courses.find((c) => c.cid === cid);
+  const takenOf = (cid) => { const m = {}; st.rows.filter((r) => r.cid === cid && r.publishDate).forEach((r) => { m[r.publishDate] = (m[r.publishDate] || []).concat(r.slots || ['*']); }); return m; };
   const nodeById = (c, id) => { for (const t of c.tree.terms) for (const u of t.units) for (const l of u.lessons) if (l.nodeId === id) return { term: t.text, unit: u.text, ...l }; return null; };
   for (const e of cfg.existing || []) {
     st.rows.push({ id: String(++st.nextId), cid: e.cid || 'BIO9', title: e.title, publishDate: e.publishDate || '', created: e.created || st.createdOld, preexisting: true, lessonId: e.nodeId || '', nodeText: e.title.replace(/\s*\(\d+\)$/, '') });
@@ -108,7 +113,7 @@ export function createNoor(cfg) {
  <input type="hidden" id="lesson-id" name="data[Preparation][lesson_id]" value="0">
  <div id="jstree_node_tree"><ul class="jstree-container-ul"></ul></div>
  <div class="pub"><span>تاريخ النشر</span> <input type="text" class="pubDateClass" id="publishdate-1" name="data[Preparation][date1][publish_date]" autocomplete="off"></div>
- <div id="slots-1"></div>
+ <div class="timeslots"><div class="lecture_timeslots_div" id="slots-1"></div></div>
  <label><input type="checkbox" name="data[Preparation][global]" value="1"> تعميم التحضير على كافة الجداول</label>
  <label class="ctl-label">المخرجات التعليمية</label>
  <div id="criteria-checkbox"></div>
@@ -132,6 +137,7 @@ export function createNoor(cfg) {
 (function(){
   var TREE = ${JSON.stringify(tree)};
   var REJECT = ${JSON.stringify([...st.rejectAtFill])}, NOCLASS = ${JSON.stringify([...st.noClassDates])};
+  var CTITLE = ${JSON.stringify(c.subject + ' - ' + c.grade)}, PERIODS = ${JSON.stringify(st.periods)}, TAKEN = ${JSON.stringify(takenOf(cid))}, TAKENMODE = ${JSON.stringify(st.takenSlots)};
   var gen = 0, root = document.querySelector('#jstree_node_tree > ul');
   function node(text, level, nodeId, kind, data) {
     var li = document.createElement('li'); li.className = 'jstree-node jstree-closed'; li.id = 'j1_' + (++gen);
@@ -177,9 +183,21 @@ export function createNoor(cfg) {
       document.body.appendChild(p);
       return;
     }
-    if (NOCLASS.indexOf(v) >= 0) return;
+    // as real Noor (saved pages 2026-10-24): a day without periods shows the notice and a section-only box
+    var wd0 = new Date(v + 'T12:00').getDay();
+    if (NOCLASS.indexOf(v) >= 0 || (PERIODS && !(PERIODS[wd0] || []).length)) { setTimeout(function () { slots.innerHTML = '<label style="color:#DC143C">لا يوجد فترات زمنية مرتبطة بهذه الحصص </label> <br><label><input style="margin: 0 13px" type="checkbox" class="lecture_timeslots" name="data[plane][date1][section][]" value="8026942">' + CTITLE + ' - 1</label>'; }, 150); return; }
     setTimeout(function () {
-      slots.innerHTML = ['9/1 — الحصة 2', '9/2 — الحصة 5'].map(function (t, k) { return '<label><input type="checkbox" class="lecture_timeslots" name="data[Preparation][date1][timeslot][]" value="' + (k + 1) + '"> ' + t + '</label>'; }).join('');
+      var wd = new Date(v + 'T12:00').getDay(), per = PERIODS ? (PERIODS[wd] || []) : [['1', 1], ['2', 1]], html = '', p0 = 1;
+      var tk = TAKEN[v] || [];
+      per.forEach(function (x) {
+        for (var k = 0; k < x[1]; k++) {
+          var val = x[0] + '|' + (p0 + k), taken = tk.indexOf('*') >= 0 || tk.indexOf(val) >= 0;
+          if (taken && TAKENMODE === 'hide') continue;
+          html += '<div class="checkbox"><input type="checkbox" class="lecture_timeslots' + (taken && TAKENMODE === 'disable' ? ' disabled" disabled="true' : '') + '" name="data[plane][date1][timeslot][]" date-i="1" value="' + val + '"/><label>' + CTITLE + ' - ' + x[0] + ' -  الحصة ' + (p0 + k) + ' </label>' + (taken && TAKENMODE === 'disable' ? '<div style="color: red; font-size: 12px">لا يمكنك نشر التحضير لهذه الحصة في التاريخ المحدد لأن تحضيرًا آخر نُشر عليه</div>' : '') + '</div>';
+        }
+        p0 += x[1] + 1;
+      });
+      slots.innerHTML = html;
     }, 150);
   });
 })();
@@ -199,17 +217,19 @@ export function createNoor(cfg) {
     const missing = [];
     if (!title || !node) missing.push('الدرس');
     if (!date) missing.push('تاريخ النشر');
-    if (!f.getAll('data[Preparation][date1][timeslot][]').length) missing.push('الصفوف');
+    const want = f.getAll('data[plane][date1][timeslot][]'), secOnly = f.getAll('data[plane][date1][section][]');
+    if (!want.length && !secOnly.length) missing.push('الصفوف');
     if (!all('objectives').length) missing.push('المخرجات');
     if (missing.length) { post.outcome = 'invalid:' + missing.join(','); return { kind: 'form', extra: { alert: 'يجب تعبئة: ' + missing.join('، ') } }; }
     if (st.rejectAtSave.has(date)) { post.outcome = 'date-rejected'; return { kind: 'form', extra: { swal: 'لا يمكن إضافة التحضير: التاريخ مستخدم من قبل' } }; }
-    if (st.uniqueDates && st.rows.some((r) => r.cid === cid && r.publishDate === date)) { post.outcome = 'date-dup'; return { kind: 'form', extra: { swal: 'يوجد تحضير مسبق بنفس التاريخ' } }; }
+    // Noor: a second prep on the same date only on a period that has none (a pre-existing prep holds every period of its day)
+    if (st.uniqueDates && st.rows.some((r) => r.cid === cid && r.publishDate === date && (!r.slots || r.slots.some((x) => want.includes(x))))) { post.outcome = 'date-dup'; return { kind: 'form', extra: { swal: 'يوجد تحضير مسبق بنفس التاريخ' } }; }
     const amb = st.ambiguous[n];
     if (amb === 'form-nosave') { post.outcome = 'ambiguous-not-saved'; return { kind: 'form', extra: {} }; }
     const row = {
       id: String(++st.nextId), cid, title, lessonId, nodeText: node.text, unit: node.unit, term: node.term, publishDate: date, created: nowStamp(), post: n,
       concepts: g('concepts'), procedures: g('procedures').slice(0, 80), levels: all('levels'), strategies: all('strategies'), resources: all('resources'),
-      timeslots: f.getAll('data[Preparation][date1][timeslot][]').length, objectives: all('objectives').length, global: g('global') === '1',
+      timeslots: want.length || secOnly.length, slots: want.length ? want : null, sectionOnly: !want.length, objectives: all('objectives').length, global: g('global') === '1',
     };
     st.rows.push(row);
     post.outcome = amb ? 'saved-' + amb : 'saved';
