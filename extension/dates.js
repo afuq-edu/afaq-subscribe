@@ -252,7 +252,7 @@ export const shortDate = (iso) => (isIso(iso) ? toArDigits(parseIso(iso).getDate
 // weekly: حصص كل أسبوع من النشرة توزَّع بالترتيب على حصص المعلم الفعلية في أسبوعها (من أول يوم حصة فيه)، لا على يوم النشرة بعينه:
 // تواريخ النشرة أيام متتالية من أول الأسبوع، وجدول المعلم قد يجمع حصتين في يوم — وما لم يتسع له أسبوعه ينتقل إلى ما بعده بالترتيب.
 // taken: تواريخ عليها تحاضير قائمة (يتكرر التاريخ بعددها). كل حصة تأخذ slot: رقم حصتها في يومها (1 = الأولى).
-export function layoutDates(items, { start, days, taken, useFileDates = true, skip, exact = false, cap = null, weekly = false } = {}) {
+export function layoutDates(items, { start, days, taken, useFileDates = true, skip, exact = false, cap = null, weekly = false, loose = '' } = {}) {
   const used = new Map();
   (taken || []).forEach((d) => used.set(d, (used.get(d) || 0) + 1));
   const capOf = (iso) => { const n = cap ? Number(cap(iso)) : 1; return n >= 1 ? n : 1; };
@@ -264,9 +264,13 @@ export function layoutDates(items, { start, days, taken, useFileDates = true, sk
   const first = items.map((s) => s.fileDate).filter(isIso).sort()[0] || '';
   const anchor = (fd) => { const w = weekStart(fd); return first && w < first ? first : w; };
   items.forEach((s, i) => {
-    let want, src;
+    let want, src, pulled = false;
     if (s.fixed && isIso(s.fixed)) { want = s.fixed; src = 'fixed'; }
-    else if (useFileDates && s.fileDate && isIso(s.fileDate)) { want = weekly ? anchor(s.fileDate) : s.fileDate; src = 'file'; }
+    else if (useFileDates && s.fileDate && isIso(s.fileDate)) {
+      want = weekly ? anchor(s.fileDate) : s.fileDate; src = 'file';
+      // ضغط الفصل: ما أسبوعه بعد «loose» لا ينتظر أسبوعه بل يلي ما قبله مباشرة (ولا يسبق loose)
+      if (weekly && isIso(loose) && want > loose) { want = loose; pulled = true; }
+    }
     else if (prev) { want = full(prev) ? nextSchoolDay(prev, days, false) : prev; src = 'seq'; }
     else { want = nextSchoolDay(start && isIso(start) ? start : isoOf(new Date()), days, true); src = 'start'; }
     const exactDay = exact && src === 'fixed';
@@ -280,7 +284,7 @@ export function layoutDates(items, { start, days, taken, useFileDates = true, sk
     const from = weekly && src === 'file' ? s.fileDate : want;
     const moved = weekly && src === 'file' ? weekStart(d) !== weekStart(s.fileDate) : d !== want;
     // السبب: إجازة، يوم بلا حصص، يوم مشغول، أو «order» (تأخّرت الحصة التي قبلها فتبعتها — اليوم نفسه حرّ)
-    if (moved) notes.push({ i, from, to: d, why: hol.has(want) ? 'holiday' : !isSchoolDay(want, days) ? 'offday' : pushed && !full(want) ? 'order' : 'taken', src });
+    if (moved && !pulled) notes.push({ i, from, to: d, why: hol.has(want) ? 'holiday' : !isSchoolDay(want, days) ? 'offday' : pushed && !full(want) ? 'order' : 'taken', src });
     s.date = d; s.dateSrc = src;
     used.set(d, (used.get(d) || 0) + 1);
     s.slot = used.get(d);

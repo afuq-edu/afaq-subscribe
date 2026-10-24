@@ -115,6 +115,7 @@ export function createNoor(cfg) {
  <div class="pub"><span>تاريخ النشر</span> <input type="text" class="pubDateClass" id="publishdate-1" name="data[Preparation][date1][publish_date]" autocomplete="off"></div>
  <div class="timeslots"><div class="lecture_timeslots_div" id="slots-1"></div></div>
  <label><input type="checkbox" name="data[Preparation][global]" value="1"> تعميم التحضير على كافة الجداول</label>
+ <label><input type="checkbox" name="data[Preparation][semester_plan]" value="1" id="semesterPlan"> خطة فصلية</label>
  <label class="ctl-label">المخرجات التعليمية</label>
  <div id="criteria-checkbox"></div>
  <label class="ctl-label">المستوى</label>
@@ -229,7 +230,7 @@ export function createNoor(cfg) {
     const row = {
       id: String(++st.nextId), cid, title, lessonId, nodeText: node.text, unit: node.unit, term: node.term, publishDate: date, created: nowStamp(), post: n,
       concepts: g('concepts'), procedures: g('procedures').slice(0, 80), levels: all('levels'), strategies: all('strategies'), resources: all('resources'),
-      timeslots: want.length || secOnly.length, slots: want.length ? want : null, sectionOnly: !want.length, objectives: all('objectives').length, global: g('global') === '1',
+      timeslots: want.length || secOnly.length, slots: want.length ? want : null, sectionOnly: !want.length, objectives: all('objectives').length, global: g('global') === '1', semesterPlan: g('semester_plan') === '1',
     };
     st.rows.push(row);
     post.outcome = amb ? 'saved-' + amb : 'saved';

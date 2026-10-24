@@ -27,6 +27,7 @@ export const NOOR_FIELDS = [
   { key: 'notes', name: 'ملاحظات (خطة الدراسة الأسبوعية)', short: 'الملاحظات', match: ['ملاحظات ضمن خطة الدراسة', 'خطة الدراسة الأسبوعية', 'ملاحظات'], mode: 'text' },
 ];
 export const GLOBAL_CHECK = 'تعميم التحضير على كافة الجداول';
+export const PLAN_CHECK = 'خطة فصلية';   // خانة نور «خطة فصلية» تُحدَّد في كل تحضير
 export const GRADES = ['الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس', 'السابع', 'الثامن', 'التاسع', 'العاشر', 'الحادي عشر', 'الثاني عشر'];
 export const DAY_NAMES = ['الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
 
@@ -36,6 +37,7 @@ export const DEFAULT_SETTINGS = {
   driveLink: '',                 // رابط الدرايف الافتراضي للحزم الجديدة (يضبطه المعلم من الإعدادات)
   checkTimeslots: true,          // تحديد كل الصفوف (الحصص) الظاهرة
   ensureGlobal: true,            // «تعميم التحضير على كافة الجداول»
+  ensurePlan: true,              // «خطة فصلية»
   setWeek: true,                 // اختيار أسبوع العمل حسب التاريخ
   skipFilled: false,             // عدم تغيير الحقول المكتوبة
   fab: true,                     // زر «حاضر» داخل صفحة نور
@@ -942,7 +944,7 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
   }
   const parts = await execNoor(tabId, 'noor', {
     items, skipFilled, publishDate: opts.publishDate || '', allRows: true,
-    ensureChecks: settings.ensureGlobal ? [GLOBAL_CHECK] : [],
+    ensureChecks: (settings.ensureGlobal ? [GLOBAL_CHECK] : []).concat(settings.ensurePlan === false ? [] : [PLAN_CHECK]),
     checkTimeslots: settings.checkTimeslots !== false,
     slotNo: opts.slotNo || 1, slotFull: opts.slotFull || null, allowSection: !!opts.allowSection,   // تحضير لكل حصة: رقم حصة هذا التحضير في يومه
     setWeek: settings.setWeek !== false,
@@ -959,6 +961,8 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
   if (settings.checkTimeslots !== false) report.push(Object.assign({ key: 'timeslots', name: 'الصفوف (الحصص)', short: 'الصفوف' }, merged.timeslots || { status: 'nolabel' }));
   if (merged.week) report.push(Object.assign({ key: 'week', name: 'أسبوع العمل', short: 'الأسبوع' }, merged.week));
   if (settings.ensureGlobal) report.push(Object.assign({ key: 'global', name: GLOBAL_CHECK, short: 'التعميم' }, merged['check:' + GLOBAL_CHECK] || { status: 'nolabel' }));
+  // «خطة فصلية»: تُحدَّد حين تكون في النموذج؛ غيابها لا يمنع الحفظ ولا يُعرض
+  if (merged['check:' + PLAN_CHECK] && merged['check:' + PLAN_CHECK].status === 'ok') report.push(Object.assign({ key: 'plan', name: PLAN_CHECK, short: 'الخطة الفصلية' }, merged['check:' + PLAN_CHECK]));
   if (opts.publishDate) report.push(Object.assign({ key: 'publish', name: 'تاريخ النشر', short: 'التاريخ' }, merged.publish || { status: 'nolabel' }));
   if (lessonRow) report.unshift(Object.assign({ key: 'lesson', name: 'الدرس في نور', short: 'الدرس' }, lessonRow));
   if (merged.preflight) report.push(Object.assign({ key: 'preflight', name: 'جاهز للحفظ', short: 'جاهز للحفظ' }, merged.preflight));

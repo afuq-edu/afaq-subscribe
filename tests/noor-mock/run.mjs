@@ -190,7 +190,7 @@ T(1, 'Full term, official dates, empty Noor', async (env) => {
   check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
   check(rows.every((r) => r.cid === 'BIO9'), 'all saves in the right course card (الأحياء — التاسع)', rows.filter((r) => r.cid !== 'BIO9').map((r) => r.cid).join(','));
   assertRows('S1', rows, tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
-  check(rows.every((r) => r.timeslots > 0 && r.objectives > 0 && r.global), 'every row has classes, outcomes and «تعميم» checked');
+  check(rows.every((r) => r.timeslots > 0 && r.objectives > 0 && r.global && r.semesterPlan), 'every row has classes, outcomes, «تعميم» and «خطة فصلية» checked');
   check(rows.every((r) => r.concepts && r.procedures), 'content (concepts / procedures) filled in every row');
   return b;
 });

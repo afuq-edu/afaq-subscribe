@@ -154,7 +154,7 @@ function pkgEnd(p) {
 // أزواج الحصص المتتالية من الدرس نفسه (لم تُحفظ) التي يمكن جمعها في تحضير واحد، الأفضل أولًا: حصتان في أسبوع واحد
 // متتاليتان في الملف، ثم الأقرب؛ ولا تُمسّ الحصة الجارية تعبئتها الآن
 const wanted = (s) => (s.manual != null ? s.manual : inScope(s));   // الحصة ضمن ما سيُعبَّأ (قبل أن تُضبط s.on)
-function mergePairs(items, max = 3) {
+function mergePairs(items, max = 3, today = '') {
   const size = (s) => 1 + ((s.merge || []).length);
   const idx = (s) => s.p ? s.p.sessions.indexOf(s) : -1;
   const lastOf = (s) => (s.merge && s.merge.length ? s.merge[s.merge.length - 1] : s);
@@ -162,6 +162,7 @@ function mergePairs(items, max = 3) {
   for (let i = 0; i + 1 < items.length; i++) {
     const a = items[i].s;
     if (!a.p || !wanted(a) || !a.eligible || a.savedNow || a.cur || a.done) continue;
+    if (today && items[i].date && items[i].date < today) continue;   // ما تاريخه مضى لا تقبله نور أصلًا — لا يُجمع إليه شيء
     // الحصة التالية من الدرس نفسه: تليها مباشرة، أو بعد حصص دروس أخرى في الأسبوعين التاليين (دروس متداخلة كالتلاوة)
     for (let j = i + 1; j < Math.min(items.length, i + 12); j++) {
       const b = items[j].s;
@@ -173,7 +174,7 @@ function mergePairs(items, max = 3) {
       break;
     }
   }
-  return out.sort((x, y) => x.score - y.score || x.i - y.i);
+  return out.sort((x, y) => x.score - y.score || y.i - x.i);   // الأفضل أولًا، ثم الأقرب إلى آخر الفصل (أقل تغيير في أسابيع الخطة)
 }
 function assignDates() {
   const pos = (p) => (p.node ? treeNodes.indexOf(p.node) : 1e9);
@@ -205,27 +206,44 @@ function assignDates() {
   // حدّان: آخر أسبوع في خطة المادة (تُجمع الحصص حتى تتسع له)، ونهاية الفصل الفعلية (ما بعدها يُعلَّم «بعد نهاية الفصل»)
   const planEnd = pkgEnd(pkg) || termEndOf(settings, termNo);
   const termEnd = termEndOf(settings, termNo) || (pkg.remote && isIso(pkg.remote.ends_on) ? pkg.remote.ends_on : '') || planEnd;
+  let loose = '';   // ضغط الفصل: من هذا التاريخ تلي كل حصة ما قبلها مباشرة بدل انتظار أسبوعها في الخطة
   const lay = () => {
     const items = order.filter((s) => !s.mergedInto).map((s) => ({ s, fileDate: fileMode && isIso(s.lesson.pubDate) ? s.lesson.pubDate : '', fixed: s.fixed || '', after: after.get(s) || '' }));
-    const notes = layoutDates(items, { start: startIso, days, taken, useFileDates: fileMode, skip: holidaySet(settings), exact: !!WIZ.pickDates, cap: capOf, weekly: fileMode && !WIZ.pickDates });
+    const notes = layoutDates(items, { start: startIso, days, taken, useFileDates: fileMode, skip: holidaySet(settings), exact: !!WIZ.pickDates, cap: capOf, weekly: fileMode && !WIZ.pickDates, loose });
     return { items, notes };
   };
   let { items, notes } = lay();
-  // نهاية الفصل حدّ لا يُتجاوز: حصص الملف أكثر مما في جدول المعلم من حصص حتى آخر أسبوع في الخطة ← حصتان (أو ثلاث)
-  // متتاليتان من الدرس نفسه في تحضير واحد «الدرس (2 و 3)»، في أقرب أسبوع فيه حصتان للدرس، حتى يتسع الفصل لها كلها
-  // يُجمع الزوج الذي يقرّب الفصل فعلًا (جمع في أسبوع فيه متسع لا يفيد؛ ما بعده لا يتقدّم إلى أسبوع قبل أسبوعه)
+  // نهاية الفصل حدّ لا يُتجاوز حين تكون حصص الملف أكثر من حصص المعلم في الجدول حتى آخر أسبوع في الخطة:
+  // ١) حصتان (حتى أربع) متتاليتان من الدرس نفسه في تحضير واحد «الدرس (2 و 3)» — يُجمع الزوج الذي يقرّب الفصل فعلًا
+  //    (جمع في أسبوع فيه متسع لا يفيد؛ ما بعده لا يتقدّم إلى أسبوع قبل أسبوعه)
+  // ٢) فإن بقيت حصص بعد الخطة (آخر أسابيعها دروس مختلفة لا تُجمع): ما بعد اليوم يُضغط فتلي كل حصة ما قبلها مباشرة
+  //    (لا تسبق اليوم ولا ترتيبها)، ويُجمع ما يلزم بعدها، ثم يُعاد ما أمكن إلى أسابيعه فلا يبدأ الضغط إلا من حيث يلزم
   if (planEnd && fileMode && !WIZ.pickDates && WIZ.trialCap == null) {   // التجربة (٣ حصص) لا تحتاج ضغط الفصل
+    const today = isoOf(new Date());
     const lateN = (its) => its.filter((it) => it.date > planEnd).length;
     const join = (a, b) => { const was = { am: a.merge, bm: b.merge }; a.merge = (a.merge || []).concat(b, b.merge || []); b.mergedInto = a; b.merge = null; return () => { a.merge = was.am; b.merge = was.bm; b.mergedInto = null; }; };
-    for (let guard = 0, late = lateN(items); guard < 300 && late; guard++) {
-      let done = false;
-      for (const c of mergePairs(items, 4)) {
-        const undo = join(c.a, c.b);
-        const next = lay();
-        if (lateN(next.items) < late) { ({ items, notes } = next); late = lateN(items); done = true; break; }
-        undo();
+    const tryMerges = () => {
+      for (let guard = 0, late = lateN(items); guard < 300 && late; guard++) {
+        let done = false;
+        for (const c of mergePairs(items, 4, today)) {
+          const undo = join(c.a, c.b);
+          const next = lay();
+          if (lateN(next.items) < late) { ({ items, notes } = next); late = lateN(items); done = true; break; }
+          undo();
+        }
+        if (!done) break;
       }
-      if (!done) break;
+    };
+    if (lateN(items)) tryMerges();
+    if (lateN(items)) {
+      loose = nextSchoolDay(today, days, true);
+      ({ items, notes } = lay());
+      if (lateN(items)) tryMerges();
+      if (!lateN(items)) {   // أبعد بداية للضغط تُبقي الفصل متّسعًا: ما قبلها يبقى في أسابيعه
+        const wks = [...new Set(items.map((it) => (isIso(it.fileDate) ? weekStart(it.fileDate) : '')).filter((w) => w > loose))].sort();
+        for (let k = wks.length - 1; k >= 0; k--) { const was = loose; loose = wks[k]; const next = lay(); if (!lateN(next.items)) { ({ items, notes } = next); break; } loose = was; }
+      }
+      if (!dateNotes.has('loose:' + loose)) { dateNotes.add('loose:' + loose); logLine('info', `حصصك في الجدول أقل من حصص الخطة: من ${dayLabel(loose, false)} تتابع الحصص على حصصك مباشرة حتى يكتمل الفصل في وقته`); }
     }
   }
   items.forEach((it) => { it.s.date = it.date; it.s.slot = it.slot || 1; it.s.dateSrc = it.dateSrc; it.s.movedFrom = ''; it.s.afterTerm = !!(termEnd && it.date > termEnd); });
