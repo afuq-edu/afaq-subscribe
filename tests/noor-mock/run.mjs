@@ -430,7 +430,13 @@ for (const [n, left] of [[13, 0], [14, 2]]) T(n, `Reinstall: a new trial request
 });
 
 T(15, 'Fewer periods than the plan (2 a week for 3 sessions a week): sessions of the same lesson share one prep «(2 و 3)», nothing after the plan\'s last week, a re-run adds nothing', async (env) => {
-  usePkg(derivePkg({ keep: range(1, 18) }));
+  // the plan straddles today (one week behind, five ahead), as a teacher running the tool mid-term: merging and
+  // compaction apply from today on; a session whose date passed is never a merge partner (Noor would reject the date)
+  const pk = derivePkg({ keep: range(1, 18) });
+  const dayMs = 864e5, wk = (iso) => { const d = new Date(iso + 'T12:00Z'); d.setUTCDate(d.getUTCDate() - d.getUTCDay()); return d; };
+  const shift = Math.round((wk(new Date().toISOString().slice(0, 10)) - wk(pk.lessons[0].pubDate)) / dayMs) - 7;
+  pk.lessons.forEach((l) => { if (l.pubDate) l.pubDate = new Date(new Date(l.pubDate + 'T12:00Z').getTime() + shift * dayMs).toISOString().slice(0, 10); });
+  usePkg(pk);
   const tree = treeFromPackage(PKG);
   const periods = { 0: [['1', 1], ['2', 1]], 1: [], 2: [['1', 1], ['2', 1]], 3: [], 4: [] };
   const noor = env.noor({ tree, periods });
