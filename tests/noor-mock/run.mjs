@@ -67,7 +67,7 @@ function check(ok, what, detail = '') {
 const fmtRows = (rows) => rows.map((r) => { const l = sessionOfRow(r); return `#${r.post} ${l ? l.id.slice(-3) : '???'} «${r.title}» node=${r.nodeText} [${r.unit}] date=${r.publishDate}`; }).join('\n');
 
 // ---------- common assertions on what Noor received ----------
-function assertRows(name, rows, tree, { expectIds, dates, preexisting = [] }) {
+function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], sameDay = false }) {
   const unknown = rows.filter((r) => !sessionOfRow(r));
   check(!unknown.length, `${name}: every saved row carries the content of a session from the file`, fmtRows(unknown));
   const byId = new Map();
@@ -97,8 +97,14 @@ function assertRows(name, rows, tree, { expectIds, dates, preexisting = [] }) {
     .concat(preexisting.map((p) => ({ l: PKG.lessons.find((x) => x.pubDate === p.publishDate && titleFor(tree, x) === p.title), d: p.publishDate })).filter((x) => x.l));
   all.sort((a, b) => a.l.idx - b.l.idx);
   const flips = [];
-  for (let i = 1; i < all.length; i++) if (!(all[i].d > all[i - 1].d)) flips.push(`${all[i - 1].l.id}@${all[i - 1].d} then ${all[i].l.id}@${all[i].d}`);
-  check(!flips.length, `${name}: dates follow curriculum order (no order flip, no shared date)`, flips.join('\n'));
+  for (let i = 1; i < all.length; i++) if (!(all[i].d > all[i - 1].d || (sameDay && all[i].d === all[i - 1].d))) flips.push(`${all[i - 1].l.id}@${all[i - 1].d} then ${all[i].l.id}@${all[i].d}`);
+  check(!flips.length, `${name}: dates follow curriculum order (no order flip${sameDay ? '' : ', no shared date'})`, flips.join('\n'));
+  if (sameDay) {
+    // a shared date only on different periods: no period of a section holds two preps
+    const used = new Map(), clash = [];
+    rows.forEach((r) => (r.slots || []).forEach((x) => { const k = r.publishDate + '|' + x; if (used.has(k)) clash.push(`${k}: ${used.get(k)} and ${sessionOfRow(r) && sessionOfRow(r).id}`); else used.set(k, sessionOfRow(r) && sessionOfRow(r).id); }));
+    check(!clash.length, `${name}: one prep per period (no period used twice)`, clash.join('\n'));
+  }
   const wkend = rows.filter((r) => [5, 6].includes(new Date(r.publishDate + 'T12:00').getDay()));
   check(!wkend.length, `${name}: no publish date on Friday/Saturday`, fmtRows(wkend));
 }
@@ -336,7 +342,9 @@ T(8, 'Lesson names ending in «(1)»/«(2)» («الجمع (1)», «الجمع (
 T(9, 'Same lesson name in two units: unit 1 is in Noor, unit 2 still filled once; a re-run adds nothing', async (env) => {
   const rev = (n, after, date) => ({ after, lesson: { id: 'rev-' + n, unit: n === 1 ? 'الوحدة الأولى: الخلايا' : 'الوحدة الثانية: انتقال المواد من الخلايا وإليها', lesson: 'مراجعة الوحدة',
     title: 'الحصة الأولى: مراجعة الوحدة ' + n, publishDate: date, pubDate: date, concepts: 'مفاهيم مراجعة الوحدة رقم ' + n } });
-  usePkg(derivePkg({ keep: range(1, 17), add: [rev(1, sid(9), '2026-09-24'), rev(2, sid(17), '2026-10-14')] }));
+  // review sessions dated right after the unit's last session (prep files fill each week from Sunday without gaps; the
+  // week's sessions go on the teacher's first free periods of that week)
+  usePkg(derivePkg({ keep: range(1, 17), add: [rev(1, sid(9), '2026-09-23'), rev(2, sid(17), '2026-10-13')] }));
   const tree = treeFromPackage(PKG);
   const pre = existingFor(tree, PKG.lessons.map((l) => l.id).filter((id) => id !== 'rev-2' && id !== sid(16) && id !== sid(17)));
   const noor = env.noor({ tree, existing: pre });
@@ -371,6 +379,53 @@ T(10, 'Empty course, first save response lost (connection drop after the click):
   const s2 = await rerun(b, 'manual re-run');
   console.log(`    re-run: ${s2.head} | ${s2.text}`);
   check(noor.st.rows.length === n1, `manual re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
+  return b;
+});
+
+// two periods of the same section on one day (real Noor 2026-10-24: «تقنية المعلومات - التاسع - 1 -  الحصة 7» and «… الحصة 8»;
+// a period that already has a prep on that date is disabled, or hidden): one prep per period, each week's sessions on the
+// teacher's real periods of that week. Timetable: Sun section 1 ×2 + section 2 ×1 · Tue both ×1 · Wed section 1 ×1 · Mon/Thu none
+for (const [n, mode] of [[11, 'disable'], [12, 'hide']]) T(n, `Two periods of one section on Sunday (taken period ${mode === 'disable' ? 'disabled' : 'hidden'}): a prep for each period, each week on its real periods, no duplicates`, async (env) => {
+  usePkg(derivePkg({ keep: range(1, 18) }));
+  const tree = treeFromPackage(PKG);
+  const periods = { 0: [['1', 2], ['2', 1]], 1: [], 2: [['1', 1], ['2', 1]], 3: [['1', 1]], 4: [] };
+  const noor = env.noor({ tree, periods, takenSlots: mode });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 20 * 60000, 'two-period term');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  // file: 3 sessions a week dated Sun, Mon, Tue → teacher: Sun (period 1), Sun (period 2), Tue
+  const exp = {};
+  PKG.lessons.forEach((l, i) => { const ws = new Date(l.pubDate + 'T12:00'); ws.setDate(ws.getDate() - ws.getDay()); const d = new Date(ws); d.setDate(d.getDate() + (i % 3 === 2 ? 2 : 0)); exp[l.id] = d.toISOString().slice(0, 10); });
+  assertRows(`S${n}`, rows, tree, { expectIds: PKG.lessons.map((l) => l.id), dates: exp, sameDay: true });
+  const sun = rows.filter((r) => new Date(r.publishDate + 'T12:00').getDay() === 0);
+  const byDay = sun.reduce((m, r) => { (m[r.publishDate] = m[r.publishDate] || []).push(r); return m; }, {});
+  check(Object.values(byDay).every((v) => v.length === 2), 'every Sunday has two preps (one per period of section 1)', JSON.stringify(Object.fromEntries(Object.entries(byDay).map(([d, v]) => [d, v.map((r) => (r.slots || []).join('+'))]))));
+  check(Object.values(byDay).every((v) => v.some((r) => (r.slots || []).length === 2) && v.some((r) => (r.slots || []).join() === '1|2')), 'first Sunday prep: section 1 period 1 + section 2; second: section 1 period 2 only', JSON.stringify(Object.values(byDay).map((v) => v.map((r) => r.slots))));
+  check(rows.every((r) => !r.sectionOnly && (r.slots || []).length), 'no prep on a day without periods (Mon/Thu)', rows.filter((r) => r.sectionOnly).map((r) => r.publishDate).join(', '));
+  check(!noor.st.posts.some((p) => /date-dup/.test(p.outcome || '')), 'Noor never refused a save as a duplicate period', noor.st.posts.filter((p) => /dup/.test(p.outcome || '')).map((p) => p.date).join(', '));
+  const n1 = noor.st.rows.length;
+  const s2 = await rerun(b, 'manual re-run');
+  check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
+  return b;
+});
+
+for (const [n, left] of [[13, 0], [14, 2]]) T(n, `Reinstall: a new trial request (${left} free sessions left) on the Noor account of a paid subscriber with the same name → the subscription comes back by itself, the whole term is filled, no pay screen`, async (env) => {
+  usePkg(derivePkg({ keep: range(1, 9) }));
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree });
+  env.afaq.reset({ pkg: PKG, trialLeft: left, mergeOnNoor: true });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 10 * 60000, 'reinstall reclaim');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح» (not the pay screen)', `${s.head} | ${s.wzHead || ''} | ${s.text}`);
+  check(env.afaq.st.merged >= 1, 'the server merged this device back into the subscription (ext_noor → merged)', env.afaq.st.calls.join(' '));
+  check(!env.afaq.st.calls.includes('ext_contact'), 'no activation request was sent (ext_contact not called)');
+  check(env.afaq.st.left === left, `no free trial session was used (left ${left} → ${env.afaq.st.left})`);
+  assertRows(`S${n}`, rows, tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
   return b;
 });
 

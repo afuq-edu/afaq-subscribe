@@ -42,7 +42,9 @@ const SAMPLE = opt('sample', 0) ? +opt('sample') : 0;
 const ONLY = opt('only', '') ? String(opt('only')).split(',').map((s) => s.trim()).filter(Boolean) : [];
 const JOBS = Math.max(1, +opt('jobs', Math.max(1, Math.min(4, os.cpus().length))));
 const FLOWS = String(opt('flows', 'term,pick')).split(',');
-const FAULTS = ['none', 'holidays', 'busy', 'reject', 'netcut', 'close', 'yearend'];
+// twoper: section 1 has two periods every Sunday (real Noor: «… - 1 -  الحصة 7» and «… الحصة 8») — one prep per period
+const FAULTS = ['none', 'holidays', 'busy', 'reject', 'netcut', 'close', 'yearend', 'twoper'];
+const TWOPER = { 0: [['1', 2], ['2', 1]], 1: [['1', 1], ['2', 1]], 2: [['1', 1], ['2', 1]], 3: [['1', 1], ['2', 1]], 4: [['1', 1], ['2', 1]] };
 const ONLY_FAULTS = opt('faults', '') ? String(opt('faults')).split(',') : null;   // keep only the packages whose rotated fault is one of these
 const FORCE_FAULT = opt('fault', '') ? String(opt('fault')) : '';                     // give every selected package this fault instead of the rotated one
 const SEED = String(opt('seed', 'hadir'));
@@ -174,18 +176,22 @@ const titleFor = (nodeOf, l, groups) => { const g = groups.find((x) => x.key ===
 // also where the sessions of different lessons interleave, as in the Quran units), each on its official date, unless that day
 // is blocked (holiday / busy / rejected / already taken): then the next free school day; a session is never published on or
 // before the previous one of the schedule (so a moved session pushes the following ones until a gap absorbs the shift). ----------
-function expectDates(groups, saved, blocked) {
+// One prep per PERIOD (4.10.8): a day holds as many sessions as the section has periods that day (cap); each week's sessions
+// of the file (always Sun, Mon, … without gaps) go in order on the teacher's free periods of that week, from its Sunday (never
+// before the term's first date), never before the previous session; what the week cannot hold spills into the next one.
+function expectDates(groups, saved, blocked, cap = () => 1) {
   const out = {};
-  const used = new Set(blocked);
+  const used = new Map([...blocked].map((d) => [d, Infinity]));
+  const first = groups.flatMap((g) => g.sessions).map((s) => s.pubDate).filter(Boolean).sort()[0];
+  const wkStart = (iso) => { const d = new Date(iso + 'T12:00'); d.setDate(d.getDate() - d.getDay()); const w = d.toISOString().slice(0, 10); return first && w < first ? first : w; };
   let last = null;
   for (const g of groups) for (const s of g.sessions) {
     if (!saved.has(s.id)) continue;
-    const plan = s.pubDate;
-    let at = plan;
-    if (last && plan >= last.plan && at <= last.date) at = nextSchool(last.date, false);
+    let at = wkStart(s.pubDate);
+    if (last && at < last) at = last;
     let d = nextSchool(at, true);
-    for (let i = 0; i < 300 && used.has(d); i++) d = nextSchool(d, false);
-    out[s.id] = d; used.add(d); last = { plan, date: d };
+    for (let i = 0; i < 300 && (used.get(d) || 0) >= cap(d); i++) d = nextSchool(d, false);
+    out[s.id] = d; used.set(d, (used.get(d) || 0) + 1); last = d;
   }
   return out;
 }
@@ -374,6 +380,7 @@ async function flowTerm(job, J, W) {
   if (job.fault === 'busy') { const b2 = [at(0.35), at(0.7)]; b2.forEach((d) => blocked.add(d)); cfg.existing = [{ cid: J.cid, title: 'نشاط إثرائي', publishDate: b2[0] }, { cid: J.cid, title: 'اختبار قصير', publishDate: b2[1] }]; F.info.busy = b2; }
   if (job.fault === 'reject') { const rj = [at(0.4), at(0.75)]; rj.forEach((d) => blocked.add(d)); cfg.rejectAtSave = rj; F.info.rejectAtSave = rj; }
   if (job.fault === 'netcut') { cfg.ambiguous = { 2: 'abort', [Math.max(3, Math.floor(n / 2))]: 'abort' }; F.info.netcutPosts = Object.keys(cfg.ambiguous).map(Number); }
+  if (job.fault === 'twoper') { cfg.periods = TWOPER; cfg.takenSlots = n % 2 ? 'hide' : 'disable'; F.info.twoper = cfg.takenSlots; }
   const noor = createNoor(cfg);
   W.afaq.reset({ pkgs: J.pkgs, catalog: J.catalog, meta: J.meta, tag: TAG });
   const b = await launch(W.extDir, noor, { settings });
@@ -424,27 +431,42 @@ async function flowTerm(job, J, W) {
     // order + term + dates
     const saved = J.pkg.lessons.filter((l) => cnt.has(l.id)).map((l) => ({ l, d: cnt.get(l.id)[0].publishDate }));
     const dOf = Object.fromEntries(saved.map((x) => [x.l.id, x.d]));
+    // two periods on a day: the next session may share the date (on the next period)
+    const after = (a, b) => a > b || (job.fault === 'twoper' && a === b);
     const flipsIn = [];
-    J.T.groups.forEach((g) => { const ss = g.sessions.filter((l) => dOf[l.id]); for (let i = 1; i < ss.length; i++) if (!(dOf[ss[i].id] > dOf[ss[i - 1].id])) flipsIn.push(`«${g.lesson}»: session ${i} ${ss[i - 1].id}@${dOf[ss[i - 1].id]} then session ${i + 1} ${ss[i].id}@${dOf[ss[i].id]}`); });
+    J.T.groups.forEach((g) => { const ss = g.sessions.filter((l) => dOf[l.id]); for (let i = 1; i < ss.length; i++) if (!after(dOf[ss[i].id], dOf[ss[i - 1].id])) flipsIn.push(`«${g.lesson}»: session ${i} ${ss[i - 1].id}@${dOf[ss[i - 1].id]} then session ${i + 1} ${ss[i].id}@${dOf[ss[i].id]}`); });
     check(F, !flipsIn.length, 'order: within a lesson, session k+1 strictly after session k', flipsIn.slice(0, 10).join('\n'));
     // lesson order = Noor-tree order (unit by unit); within a unit the lessons follow each other, so lesson k+1 never starts before lesson k
     const flipsLess = [];
     J.T.tree.terms[0].units.forEach((u) => {
       const firsts = u.lessons.map((n) => J.T.groups.find((g) => g.unit === u.text && g.lesson === n.fileLesson)).map((g) => g.sessions.find((l) => dOf[l.id])).filter(Boolean);
-      firsts.forEach((a, i) => { if (i && !(dOf[a.id] > dOf[firsts[i - 1].id])) flipsLess.push(`[${u.text}] lesson «${firsts[i - 1].lesson}» starts ${dOf[firsts[i - 1].id]}, the next lesson «${a.lesson}» starts ${dOf[a.id]}`); });
+      firsts.forEach((a, i) => { if (i && !after(dOf[a.id], dOf[firsts[i - 1].id])) flipsLess.push(`[${u.text}] lesson «${firsts[i - 1].lesson}» starts ${dOf[firsts[i - 1].id]}, the next lesson «${a.lesson}» starts ${dOf[a.id]}`); });
     });
     check(F, !flipsLess.length, 'order: within a unit, lesson k+1 never starts before lesson k', flipsLess.slice(0, 10).join('\n'));
     const flips = [];
-    for (let i = 1; i < saved.length; i++) if (!(saved[i].d > saved[i - 1].d)) flips.push(`${saved[i - 1].l.id} «${saved[i - 1].l.lesson}»@${saved[i - 1].d} then ${saved[i].l.id} «${saved[i].l.lesson}»@${saved[i].d}`);
+    for (let i = 1; i < saved.length; i++) if (!after(saved[i].d, saved[i - 1].d)) flips.push(`${saved[i - 1].l.id} «${saved[i - 1].l.lesson}»@${saved[i - 1].d} then ${saved[i].l.id} «${saved[i].l.lesson}»@${saved[i].d}`);
     check(F, !flips.length, 'note — file order: no session published before an earlier entry of the file (sessions of different lessons interleaved in the file may swap by a day after a move)', flips.slice(0, 10).join('\n'), true);
     const t1 = J.pkg.lessons.map((l) => l.pubDate).sort()[0];
     const out = saved.filter((x) => x.d < t1 || x.d > J.endsOn);
     check(F, !out.length, `term: every date within the term (${t1} … ${J.endsOn})`, out.slice(0, 10).map((x) => `${x.l.id}@${x.d}`).join('\n'));
     const onBlocked = saved.filter((x) => blocked.has(x.d));
     if (blocked.size) check(F, !onBlocked.length, `blocked days: nothing on a ${job.fault} day (${[...blocked].join(', ')})`, onBlocked.map((x) => `${x.l.id}@${x.d}`).join('\n'));
-    const exp = expectDates([{ sessions: J.pkg.lessons }], new Set(saved.map((x) => x.l.id)), blocked);   // file order = official schedule
-    const early = saved.filter((x) => x.d < x.l.pubDate);
-    check(F, !early.length, 'dates: no session before its official date', early.slice(0, 10).map((x) => `${x.l.id}: ${x.d} < ${x.l.pubDate}`).join('\n'));
+    const capF = job.fault === 'twoper' ? (d) => (new Date(d + 'T12:00').getDay() === 0 ? 2 : 1) : () => 1;
+    const exp = expectDates([{ sessions: J.pkg.lessons }], new Set(saved.map((x) => x.l.id)), blocked, capF);   // file order = official schedule
+    const wk0 = (iso) => { const d = new Date(iso + 'T12:00'); d.setDate(d.getDate() - d.getDay()); return d.toISOString().slice(0, 10); };
+    const early = saved.filter((x) => (job.fault === 'twoper' ? x.d < wk0(x.l.pubDate) : x.d < x.l.pubDate));
+    if (job.fault === 'twoper') {
+      const seen = new Map(), clash = [];
+      noor.st.rows.filter((r) => !r.preexisting).forEach((r) => (r.slots || []).forEach((x) => { const k = r.publishDate + '|' + x; if (seen.has(k)) clash.push(k); seen.set(k, 1); }));
+      check(F, !clash.length, 'periods: one prep per period (no period of a section used twice on a day)', clash.slice(0, 10).join('\n'));
+      const sundays = new Set(saved.filter((x) => new Date(x.d + 'T12:00').getDay() === 0).map((x) => x.d));
+      // a Sunday takes a second prep when its week has a second session (a one-session-a-week plan leaves the 2nd period empty)
+      const want2 = (d) => Object.values(exp).filter((x) => x === d).length;
+      const one = [...sundays].filter((d) => saved.filter((x) => x.d === d).length !== want2(d));
+      const two = Object.values(exp).filter((d, i, a) => a.indexOf(d) !== i).length;
+      check(F, !one.length, `periods: each Sunday holds one prep per session its week has, up to two (${two} Sundays with two)`, one.slice(0, 10).join(', '));
+    }
+    check(F, !early.length, job.fault === 'twoper' ? 'dates: no session before its week' : 'dates: no session before its official date', early.slice(0, 10).map((x) => `${x.l.id}: ${x.d} < ${x.l.pubDate}`).join('\n'));
     const off = saved.filter((x) => x.d !== exp[x.l.id]);
     check(F, !off.length, blocked.size ? 'dates: official date, or the next free school day when blocked (later sessions follow)' : 'dates: every session on its official date', `${off.length} differ: ` + off.slice(0, 10).map((x) => `${x.l.id}: got ${x.d}, expected ${exp[x.l.id]} (file ${x.l.pubDate})`).join('\n'));
     if (job.fault === 'busy') check(F, cfg.existing.every((e) => noor.st.rows.filter((x) => x.preexisting && x.publishDate === e.publishDate).length === 1), 'busy: the existing preps are untouched');

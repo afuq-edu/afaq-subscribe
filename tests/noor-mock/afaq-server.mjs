@@ -8,7 +8,7 @@ export function startAfaq(port = 8765) {
   const reset = (o = {}) => {
     st = {
       pkg: o.pkg, active: o.trialLeft == null, left: o.trialLeft == null ? 0 : o.trialLeft, status: o.trialLeft == null ? 'active' : 'trial',
-      holidays: o.holidays || '', calls: [], sessions: [], noor: [],
+      holidays: o.holidays || '', calls: [], sessions: [], noor: [], mergeOnNoor: !!o.mergeOnNoor,
     };
     return st;
   };
@@ -36,7 +36,7 @@ export function startAfaq(port = 8765) {
       else if (fn === 'ext_me') out = { ok: true, name: 'سالم علي', subs: [sub()], request: { id: 1001, status: st.active ? 'active' : st.status, shift: 'one', packages: ['bio-9'] }, whatsapp: '96876506037', trial_lessons: 3, trial_left: st.active ? null : st.left };
       else if (fn === 'ext_structure') out = { ok: true, pkg: JSON.parse(JSON.stringify(st.pkg)) };
       else if (fn === 'ext_pick') out = { ok: true, request: 1001 };
-      else if (fn === 'ext_noor') { st.noor.push(args); out = { ok: true }; }
+      else if (fn === 'ext_noor') { st.noor.push(args); if (st.mergeOnNoor && !st.active && args.p_noor) { st.active = true; st.status = 'active'; st.merged = (st.merged || 0) + 1; out = { ok: true, merged: true }; } else out = { ok: true }; }
       else if (fn === 'ext_set_ref') out = { ok: true };
       else if (fn === 'ext_referral') out = { ok: true, request: 1001, invited: 0 };
       else if (fn === 'ext_contact') { st.status = 'requested'; out = { ok: true, request: 1001, name: 'سالم علي', status: 'requested', packages: ['الأحياء — التاسع'], shift: 'one', whatsapp: '96876506037' }; }

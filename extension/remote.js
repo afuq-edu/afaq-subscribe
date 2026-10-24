@@ -138,6 +138,11 @@ export async function noorCheck(who) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode('noor:' + who.id));
   const hash = [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
   const r = await rpc('ext_noor', { p_token: link.token, p_noor: hash, p_name: who.name || '' }, 10000);
+  if (r && r.merged) {
+    // أُعيد تثبيت «حاضر»: حساب نور المفتوح باسم صاحب اشتراك فعّال، فعاد هذا الجهاز إلى اشتراكه
+    await sync({ force: true }).catch(() => {});
+    return { ok: true, merged: true };
+  }
   return r && r.ok === false && (r.error === 'noor_other' || r.error === 'noor_wait') ? r : { ok: true };   // تعذّر الاتصال: لا نوقف المعلم
 }
 export const installUrl = () => AFAQ.SITE_URL.replace(/#.*$/, '') + 'install.html#update';
