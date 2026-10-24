@@ -27,6 +27,9 @@ const countWord = (n) => (n === 1 ? 'حصة واحدة' : n === 2 ? 'حصتان'
 const termName = (n) => (n === 1 ? 'الأول' : 'الثاني');
 const HOME = 'https://lms.moe.gov.om/teacher';
 const q = new URLSearchParams(location.search);
+// اليوم: تاريخ الجهاز — وللاختبار الآلي فقط (?debug=1&now=YYYY-MM-DD) تاريخ ثابت
+const NOW_FIXED = q.get('debug') === '1' && /^\d{4}-\d{2}-\d{2}$/.test(q.get('now') || '') ? q.get('now') : '';
+const todayIso = () => NOW_FIXED || isoOf(new Date());
 
 let packages = [], pkg = null, state = null, settings = null;
 let tabId = Number(q.get('tab')) || null;
@@ -179,7 +182,7 @@ function mergePairs(items, max = 3, today = '') {
 function assignDates() {
   const pos = (p) => (p.node ? treeNodes.indexOf(p.node) : 1e9);
   const ordered = plan.slice().sort((a, b) => pos(a) - pos(b) || a.i - b.i);
-  let fileMode = useFile, startIso = $('start').value || isoOf(new Date());
+  let fileMode = useFile, startIso = $('start').value || todayIso();
   // ترتيب التوزيع: بتواريخ الملف (النشرة) حين تُعتمد — فدروس تتداخل حصصها عبر الوحدات (سور القرآن، القصائد) تبقى على
   // تسلسل النشرة بعد أي تأجيل — وما بلا تاريخ يتبع ما قبله؛ وإلا بترتيب شجرة نور
   let seqAll = ordered.flatMap((p) => p.sessions);
@@ -209,7 +212,7 @@ function assignDates() {
   let loose = '';   // ضغط الفصل: من هذا التاريخ تلي كل حصة ما قبلها مباشرة بدل انتظار أسبوعها في الخطة
   const lay = () => {
     const items = order.filter((s) => !s.mergedInto).map((s) => ({ s, fileDate: fileMode && isIso(s.lesson.pubDate) ? s.lesson.pubDate : '', fixed: s.fixed || '', after: after.get(s) || '' }));
-    const notes = layoutDates(items, { start: startIso, days, taken, useFileDates: fileMode, skip: holidaySet(settings), exact: !!WIZ.pickDates, cap: capOf, weekly: fileMode && !WIZ.pickDates, loose });
+    const notes = layoutDates(items, { start: startIso, days, taken, useFileDates: fileMode, skip: holidaySet(settings), exact: !!WIZ.pickDates, cap: capOf, weekly: fileMode && !WIZ.pickDates, loose, today: todayIso() });
     return { items, notes };
   };
   let { items, notes } = lay();
@@ -219,7 +222,7 @@ function assignDates() {
   // ٢) فإن بقيت حصص بعد الخطة (آخر أسابيعها دروس مختلفة لا تُجمع): ما بعد اليوم يُضغط فتلي كل حصة ما قبلها مباشرة
   //    (لا تسبق اليوم ولا ترتيبها)، ويُجمع ما يلزم بعدها، ثم يُعاد ما أمكن إلى أسابيعه فلا يبدأ الضغط إلا من حيث يلزم
   if (planEnd && fileMode && !WIZ.pickDates && WIZ.trialCap == null) {   // التجربة (٣ حصص) لا تحتاج ضغط الفصل
-    const today = isoOf(new Date());
+    const today = todayIso();
     const lateN = (its) => its.filter((it) => it.date > planEnd).length;
     const join = (a, b) => { const was = { am: a.merge, bm: b.merge }; a.merge = (a.merge || []).concat(b, b.merge || []); b.mergedInto = a; b.merge = null; return () => { a.merge = was.am; b.merge = was.bm; b.mergedInto = null; }; };
     const tryMerges = () => {
@@ -873,7 +876,7 @@ async function waitForm(ms = 45000) {
 // فتُعرف من البداية الأيام التي لا حصة فيها (تُتخطّى) وعدد حصص الشعبة في كل يوم (تحضير لكل حصة)، وتُرتَّب الخطة عليها قبل أول حصة
 async function probeSchedule(addUrl) {
   if (!useFile || WIZ.pickDates || !queue.length || stopFlag) return;
-  const today = isoOf(new Date());
+  const today = todayIso();
   const ws = weekStart(queue[0].date > today ? queue[0].date : today);
   const hol = holidaySet(settings);
   const dates = [0, 1, 2, 3, 4].map((i) => addDays(ws, i)).filter((d) => !hol.has(d));
@@ -1406,7 +1409,7 @@ async function fillOnce(item, c) {
     const ts = rep.find((x) => x.key === 'timeslots');
     const usedDay = pb && pb.status !== 'ok' && /من قبل|مسبق|مستخدم|مكرر|موجود/.test(pb.error || '');
     // نور ترفض تاريخًا مضى: لا يُزحزح يومًا بعد يوم حتى اليوم (يقلب الترتيب ويهدر المحاولات) بل تُترك الحصة بهدوء
-    if (pb && pb.status !== 'ok' && !usedDay && s.date < isoOf(new Date()) && PAST_RE.test(pb.error || '')) return { ok: false, cls: 'past', why: 'نور: ' + pb.error };
+    if (pb && pb.status !== 'ok' && !usedDay && s.date < todayIso() && PAST_RE.test(pb.error || '')) return { ok: false, cls: 'past', why: 'نور: ' + pb.error };
     const noClassDay = !usedDay && ts && ts.status === 'nolabel' && (!pb || pb.status === 'ok');
     // لا حصة باقية للشعبة في ذلك اليوم (حصصه أقل مما قدّرت، أو حُجزت كلها): اليوم لا يتسع لأكثر مما أُخذ منه
     const dayFull = !usedDay && ts && ts.status === 'noslot' && (!pb || pb.status === 'ok');
@@ -1462,7 +1465,7 @@ async function saveNow(item, formUrl) {
   const al = await pageAlerts(tabId).catch(() => null);
   if (al && al.login) return { err: 'login' };
   const v = judgeSave(al, formUrl);
-  if (v === 'error') { const t = al.errs.join(' | '); return { err: /مسبق|من قبل|موجود|تعارض|مكرر|نفس الحصة|نفس التاريخ|محجوز/.test(t) ? 'date' : s.date < isoOf(new Date()) && PAST_RE.test(t) ? 'past' : 'noor', msg: 'نور: ' + t }; }
+  if (v === 'error') { const t = al.errs.join(' | '); return { err: /مسبق|من قبل|موجود|تعارض|مكرر|نفس الحصة|نفس التاريخ|محجوز/.test(t) ? 'date' : s.date < todayIso() && PAST_RE.test(t) ? 'past' : 'noor', msg: 'نور: ' + t }; }
   if (v === 'saved' && (navigated || (al && al.oks.length))) return { ok: true };
   return { err: 'unknown', msg: 'لم يتأكد نجاح الحفظ من الصفحة' };
 }
@@ -1560,7 +1563,7 @@ async function processItem(item, addUrl, maxTries = 4) {
   let tries = 0, moves = 0;
   const NO_PAST = 'نور لا تقبل تاريخًا مضى';
   // عُرف في هذا التشغيل أن نور ترفض التواريخ الماضية: ما مضى تاريخه يُترك دون محاولة
-  if (WIZ.noPast && s.date < isoOf(new Date())) return { skipped: true, why: NO_PAST };
+  if (WIZ.noPast && s.date < todayIso()) return { skipped: true, why: NO_PAST };
   while (!stopFlag) {
     if (!(await waitOnline())) return 'stop';
     const gen = ++attemptGen;
@@ -2071,7 +2074,7 @@ async function init() {
     diag.budget = b;
   };
   $('lintToggle').onclick = () => { $('lint').hidden = !$('lint').hidden; $('lintToggle').textContent = $('lint').hidden ? 'عرض التفاصيل' : 'إخفاء'; };
-  document.querySelectorAll('input[name=scope]').forEach((r) => { r.onchange = () => { if (running) return; scope.kind = r.value; if (scope.kind === 'week' && !scope.weekDay) { scope.weekDay = $('start').value || isoOf(new Date()); $('weekDay').value = scope.weekDay; } syncWeekStart(); scopeUi(); }; });
+  document.querySelectorAll('input[name=scope]').forEach((r) => { r.onchange = () => { if (running) return; scope.kind = r.value; if (scope.kind === 'week' && !scope.weekDay) { scope.weekDay = $('start').value || todayIso(); $('weekDay').value = scope.weekDay; } syncWeekStart(); scopeUi(); }; });
   document.querySelectorAll('input[name=dsrc]').forEach((r) => { r.onchange = () => { if (running) return; useFile = r.value === 'file'; o.dsrc = r.value; scopeUi(); }; });
   // أسبوع: أول تاريخ نشر = أول يوم حصة في ذلك الأسبوع (ما لم تكن التواريخ من الملف)
   const syncWeekStart = () => {
@@ -2093,7 +2096,7 @@ async function init() {
   document.querySelectorAll('.quick [data-q]').forEach((b) => {
     b.onclick = () => {
       if (running) return;
-      const today = isoOf(new Date());
+      const today = todayIso();
       const q = b.dataset.q;
       if (q === 'today') { setScope('dates'); $('dateFrom').value = today; $('dateTo').value = today; syncDates(); }
       else if (q === 'week' || q === 'nextweek') { setScope('week'); const d = parseIso(today); if (q === 'nextweek') d.setDate(d.getDate() + 7); scope.weekDay = isoOf(d); $('weekDay').value = scope.weekDay; syncWeekStart(); }
@@ -2110,7 +2113,7 @@ async function init() {
   const onPkg = () => {
     pkg = packages.find((p) => p.id === $('pkgSel').value) || pkg;
     days = daysFor(state, settings, pkg.id);
-    let start = nextSchoolDay(isoOf(new Date()), days, true);
+    let start = nextSchoolDay(todayIso(), days, true);
     const used = Object.keys(usedDates(pkg, state)).sort().pop();
     if (used && used >= start) start = nextSchoolDay(used, days, false);
     $('start').value = start; startAuto = start;
@@ -2466,7 +2469,7 @@ async function wzRun() {
   const rd = document.querySelector(`input[name=dsrc][value="${fileOk ? 'file' : 'seq'}"]`); if (rd) rd.checked = true;
   useFile = fileOk;
   const first = pick ? [...wz.sel.values()].filter(isIso).sort()[0] : '';
-  $('start').value = first || nextSchoolDay(isoOf(new Date()), daysFor(state, settings, p.id), true); renderDays();
+  $('start').value = first || nextSchoolDay(todayIso(), daysFor(state, settings, p.id), true); renderDays();
   $('optReview').checked = false;
   $('optStep').checked = false;
   $('optNoor').checked = true; $('optAuto').checked = true;

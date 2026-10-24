@@ -46,6 +46,7 @@ const FLOWS = String(opt('flows', 'term,pick')).split(',');
 // oneper: the teacher has fewer periods a week than the plan (one day less than the plan's weekly average needs, at least one:
 //   Sunday, Sunday+Monday, …) — consecutive sessions of a lesson share one prep «الدرس (2 و 3)» so nothing goes past the plan's last week
 const FAULTS = ['none', 'holidays', 'busy', 'reject', 'netcut', 'close', 'yearend', 'twoper', 'oneper'];
+const FIXED_NOW = '2026-09-05';   // the wizard's «today» in these runs (?now=): the day before every plan starts, so nothing has passed
 const onePer = (pkg) => { const ds = pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort(); const wks = Math.max(1, Math.round((new Date(ds[ds.length - 1]) - new Date(ds[0])) / 6048e5) + 1); const k = Math.max(1, Math.ceil(pkg.lessons.length / wks) - 1); return Object.fromEntries([0, 1, 2, 3, 4].map((d) => [d, d < k ? [['1', 1], ['2', 1]] : []])); };
 const TWOPER = { 0: [['1', 2], ['2', 1]], 1: [['1', 1], ['2', 1]], 2: [['1', 1], ['2', 1]], 3: [['1', 1], ['2', 1]], 4: [['1', 1], ['2', 1]] };
 const ONLY_FAULTS = opt('faults', '') ? String(opt('faults')).split(',') : null;   // keep only the packages whose rotated fault is one of these
@@ -249,7 +250,7 @@ async function openTool(b) {
   b.pg = await b.ctx.newPage();
   b.pg.on('pageerror', (e) => b.errs.push(e.message));
   if (process.env.TRACE_EXEC) b.pg.on('console', (m) => { const t = m.text(); if (/^\[(exec|nav|box)\]/.test(t)) console.log(`    ${new Date().toISOString().slice(14, 23)} ${t}`); });
-  await b.pg.goto(`chrome-extension://${b.id}/semester.html?debug=1`);
+  await b.pg.goto(`chrome-extension://${b.id}/semester.html?debug=1&now=${FIXED_NOW}`);
 }
 async function clickCard(pg, text, ms = 20000) {
   const end = Date.now() + ms;
@@ -471,9 +472,10 @@ async function flowTerm(job, J, W) {
     const exp = expectDates([{ sessions: J.pkg.lessons }], new Set(saved.map((x) => x.l.id)), blocked, capF);   // file order = official schedule
     const wk0 = (iso) => { const d = new Date(iso + 'T12:00'); d.setDate(d.getDate() - d.getDay()); return d.toISOString().slice(0, 10); };
     const tails = new Set(rows.filter((r) => r.mergedTags && r.mergedTags[0] !== tagOf(r.concepts)).map((r) => tagOf(r.concepts)));
-    // oneper: when merging cannot fit the plan, sessions after today may come earlier than their plan week (never before today)
-    const todayIso = new Date().toISOString().slice(0, 10);
-    const early = saved.filter((x) => !tails.has(x.l.id) && (job.fault === 'oneper' ? x.d < wk0(x.l.pubDate) && x.d < todayIso : job.fault === 'twoper' ? x.d < wk0(x.l.pubDate) : x.d < x.l.pubDate));
+    // oneper: when merging cannot fit the plan, sessions may come earlier than their plan week (never before the plan's first week)
+    const todayIso = FIXED_NOW;
+    const plan0 = wk0(J.pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort()[0]);
+    const early = saved.filter((x) => !tails.has(x.l.id) && (job.fault === 'oneper' ? x.d < plan0 : job.fault === 'twoper' ? x.d < wk0(x.l.pubDate) : x.d < x.l.pubDate));
     if (job.fault === 'twoper') {
       const seen = new Map(), clash = [];
       noor.st.rows.filter((r) => !r.preexisting).forEach((r) => (r.slots || []).forEach((x) => { const k = r.publishDate + '|' + x; if (seen.has(k)) clash.push(k); seen.set(k, 1); }));
@@ -518,7 +520,8 @@ async function flowTerm(job, J, W) {
         }
       }
       check(F, !late.length || !mergeable.length, `oneper: nothing after the plan's last week (${lastWk}) unless no two sessions of one lesson from today on could still share a prep (${late.length} late)`, late.slice(0, 6).map((x) => `${x.l.id}@${x.d}`).join(', ') + (mergeable.length ? ' · still mergeable: ' + mergeable.slice(0, 5).join('; ') : ''));
-      check(F, late.length <= bound, `oneper: no more late preps than the future overflow bound (${bound})`, `${late.length} late: ` + late.slice(0, 6).map((x) => `${x.l.id}@${x.d}`).join(', '));
+      const latePreps = rows0.filter((r) => r.publishDate > lastWk).length;
+      check(F, latePreps <= bound, `oneper: no more late preps than the overflow bound (${bound})`, `${latePreps} late preps: ` + late.slice(0, 6).map((x) => `${x.l.id}@${x.d}`).join(', '));
       const notSun = rows0.filter((r) => !cfg.periods[new Date(r.publishDate + 'T12:00').getDay()].length);
       check(F, !notSun.length, `oneper: every prep on a day with a period (${F.info.oneperDays} a week)`, notSun.slice(0, 10).map((r) => r.publishDate).join(', '));
       const perDay = rows0.reduce((m, r) => { m[r.publishDate] = (m[r.publishDate] || 0) + 1; return m; }, {});

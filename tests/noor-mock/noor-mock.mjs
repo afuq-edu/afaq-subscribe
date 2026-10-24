@@ -58,6 +58,7 @@ export function createNoor(cfg) {
     rejectAtFill: new Set(cfg.rejectAtFill || []),   // date popup «التاريخ مستخدم من قبل» right after typing it
     rejectAtSave: new Set(cfg.rejectAtSave || []),   // the save returns the form with that error
     uniqueDates: cfg.uniqueDates !== false,          // Noor refuses two preps with the same publish date in one course
+    noPast: cfg.noPast || '',                        // Noor refuses a publish date before this day (its «today»): the save returns the form with that error
     ambiguous: cfg.ambiguous || {},                  // { saveAttemptNo: 'form' | 'abort' | 'form-nosave' } — row saved (or not) but result unclear
     noClassDates: new Set(cfg.noClassDates || []),
     // the teacher's timetable: weekday → [[section, periods that day], …] (default: two sections, one period each, every day);
@@ -222,6 +223,7 @@ export function createNoor(cfg) {
     if (!want.length && !secOnly.length) missing.push('الصفوف');
     if (!all('objectives').length) missing.push('المخرجات');
     if (missing.length) { post.outcome = 'invalid:' + missing.join(','); return { kind: 'form', extra: { alert: 'يجب تعبئة: ' + missing.join('، ') } }; }
+    if (st.noPast && date && date < st.noPast) { post.outcome = 'date-past'; return { kind: 'form', extra: { swal: 'لا يمكن اختيار تاريخ سابق لليوم الحالي' } }; }
     if (st.rejectAtSave.has(date)) { post.outcome = 'date-rejected'; return { kind: 'form', extra: { swal: 'لا يمكن إضافة التحضير: التاريخ مستخدم من قبل' } }; }
     // Noor: a second prep on the same date only on a period that has none (a pre-existing prep holds every period of its day)
     if (st.uniqueDates && st.rows.some((r) => r.cid === cid && r.publishDate === date && (!r.slots || r.slots.some((x) => want.includes(x))))) { post.outcome = 'date-dup'; return { kind: 'form', extra: { swal: 'يوجد تحضير مسبق بنفس التاريخ' } }; }
