@@ -429,6 +429,36 @@ for (const [n, left] of [[13, 0], [14, 2]]) T(n, `Reinstall: a new trial request
   return b;
 });
 
+T(15, 'Fewer periods than the plan (2 a week for 3 sessions a week): sessions of the same lesson share one prep «(2 و 3)», nothing after the plan\'s last week, a re-run adds nothing', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 18) }));
+  const tree = treeFromPackage(PKG);
+  const periods = { 0: [['1', 1], ['2', 1]], 1: [], 2: [['1', 1], ['2', 1]], 3: [], 4: [] };
+  const noor = env.noor({ tree, periods });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 20 * 60000, 'fewer periods');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  const lastFile = PKG.lessons.map((l) => l.pubDate).sort().pop();
+  const end = new Date(lastFile + 'T12:00'); end.setDate(end.getDate() + (4 - end.getDay())); const endIso = end.toISOString().slice(0, 10);
+  check(rows.every((r) => r.publishDate <= endIso), `no prep after the plan's last week (${endIso})`, rows.filter((r) => r.publishDate > endIso).map((r) => r.publishDate + ' ' + r.title).join(', '));
+  check(rows.every((r) => [0, 2].includes(new Date(r.publishDate + 'T12:00').getDay())), 'every prep on a day with periods (Sun/Tue)', rows.map((r) => r.publishDate).join(', '));
+  const cover = new Map();
+  rows.forEach((r) => PKG.lessons.forEach((l) => { if (norm(r.concepts).includes(norm(l.concepts))) cover.set(l.id, (cover.get(l.id) || []).concat(r.title)); }));
+  const missing = PKG.lessons.filter((l) => !cover.has(l.id)).map((l) => l.id), twice = [...cover].filter(([, v]) => v.length > 1).map(([k]) => k);
+  check(!missing.length, 'every session of the plan is in a prep in Noor', missing.join(', '));
+  check(!twice.length, 'no session in two preps', twice.join(', '));
+  const extra = rows.reduce((a, r) => { const m = r.title.match(/\((\d+(?: و \d+)+)\)$/); return a + (m ? m[1].split(' و ').length - 1 : 0); }, 0);
+  check(extra === PKG.lessons.length - rows.length, `shared preps carry «(n و m)» in the title for every extra session (${extra})`, rows.map((r) => r.title).join(' | '));
+  const byDay = rows.reduce((m, r) => { m[r.publishDate] = (m[r.publishDate] || 0) + 1; return m; }, {});
+  check(Object.values(byDay).every((n) => n === 1), 'one prep per day (one period per section)', JSON.stringify(byDay));
+  const n1 = noor.st.rows.length;
+  const s2 = await rerun(b, 'manual re-run');
+  check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
+  return b;
+});
+
 // ---------- main ----------
 const want = process.argv.slice(2).map(Number).filter(Boolean);
 const list = Object.keys(SC).map(Number).filter((n) => !want.length || want.includes(n));
