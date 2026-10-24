@@ -465,7 +465,9 @@ async function flowTerm(job, J, W) {
     check(F, !flips.length, 'note — file order: no session published before an earlier entry of the file (sessions of different lessons interleaved in the file may swap by a day after a move)', flips.slice(0, 10).join('\n'), true);
     const t1 = J.pkg.lessons.map((l) => l.pubDate).sort()[0];
     const out = saved.filter((x) => x.d < t1 || x.d > J.endsOn);
-    check(F, !out.length, `term: every date within the term (${t1} … ${J.endsOn})`, out.slice(0, 10).map((x) => `${x.l.id}@${x.d}`).join('\n'));
+    // oneper: judged below with the merge analysis — a plan whose lessons are single sessions cannot be merged into fewer periods
+    const termOut = job.fault === 'oneper' ? out : [];
+    if (job.fault !== 'oneper') check(F, !out.length, `term: every date within the term (${t1} … ${J.endsOn})`, out.slice(0, 10).map((x) => `${x.l.id}@${x.d}`).join('\n'));
     const onBlocked = saved.filter((x) => blocked.has(x.d));
     if (blocked.size) check(F, !onBlocked.length, `blocked days: nothing on a ${job.fault} day (${[...blocked].join(', ')})`, onBlocked.map((x) => `${x.l.id}@${x.d}`).join('\n'));
     const capF = job.fault === 'twoper' ? (d) => (new Date(d + 'T12:00').getDay() === 0 ? 2 : 1) : () => 1;
@@ -522,6 +524,7 @@ async function flowTerm(job, J, W) {
       check(F, !late.length || !mergeable.length, `oneper: nothing after the plan's last week (${lastWk}) unless no two sessions of one lesson from today on could still share a prep (${late.length} late)`, late.slice(0, 6).map((x) => `${x.l.id}@${x.d}`).join(', ') + (mergeable.length ? ' · still mergeable: ' + mergeable.slice(0, 5).join('; ') : ''));
       const latePreps = rows0.filter((r) => r.publishDate > lastWk).length;
       check(F, latePreps <= bound, `oneper: no more late preps than the overflow bound (${bound})`, `${latePreps} late preps: ` + late.slice(0, 6).map((x) => `${x.l.id}@${x.d}`).join(', '));
+      check(F, !termOut.length || (!mergeable.length && latePreps <= bound), `term: every date within the term (… ${J.endsOn}) unless the plan cannot fit the periods at all (nothing left to merge)`, termOut.slice(0, 6).map((x) => `${x.l.id}@${x.d}`).join(', ') + (mergeable.length ? ' · still mergeable: ' + mergeable.slice(0, 3).join('; ') : ''));
       const notSun = rows0.filter((r) => !cfg.periods[new Date(r.publishDate + 'T12:00').getDay()].length);
       check(F, !notSun.length, `oneper: every prep on a day with a period (${F.info.oneperDays} a week)`, notSun.slice(0, 10).map((r) => r.publishDate).join(', '));
       const perDay = rows0.reduce((m, r) => { m[r.publishDate] = (m[r.publishDate] || 0) + 1; return m; }, {});
