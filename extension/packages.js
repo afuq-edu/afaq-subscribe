@@ -615,32 +615,49 @@ export function cleanHtml(h) {
       .replace(/([\s"'\/])on[a-z]+\s*=\s*("[^"]*"|'[^']*'|[^\s>]*)/gi, '$1')
       .replace(/([\s"'\/])(href|src|action|formaction|xlink:href)\s*=\s*("|')?\s*(javascript|data|vbscript):[^\s>]*/gi, '$1'));
 }
+// الرابط في سطر مستقل لا يلتصق بالكتابة («الرابط: https://…» ← «الرابط:» ثم الرابط في سطره) فيُفتح بالنقر
+// (لا يمس رابطًا داخل مثال كود مثل <a href="https://…"> في دروس HTML)
+const URL_RE = /https?:\/\/[^\s"'<>«»]+/g;
+export function spaceLinks(t) {
+  if (typeof t !== 'string') return t;
+  return t.replace(/([^\s"'=])[ \t]*(https?:\/\/[^\s"'<>«»]+)/g, '$1\n$2').replace(/(https?:\/\/[^\s"'<>«»]+?)([.,،؛:)\]]*)[ \t]+(?=\S)/g, '$1$2\n');
+}
+const escH = (s) => String(s).replace(/&(?!#?[a-z0-9]+;)/gi, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// وسوم التنسيق الحقيقية في ملفات التحاضير (أس، دليل سفلي، رمز علمي) — أي وسم آخر نص يُكتب كما هو (دروس HTML تذكر <h1> و<p>)
+const INLINE_TAG = /&lt;(\/?)(sup|sub|span)((?: class=&quot;[a-z0-9 _-]*&quot;)?)&gt;/gi;
+const linkLine = (h) => h.replace(URL_RE, (u) => { const t = u.replace(/[.,،؛:)\]]+$/, ''); return `<a href="${t}" target="_blank">${t}</a>` + u.slice(t.length); });
+// نص الحصة للمحرر الغني في نور: كل سطر فقرة مستقلة (النقاط والترقيم في أسطرها)، السطر الفارغ فاصل، والروابط قابلة للنقر
+export function richText(t) {
+  const s = String(t || '');
+  if (!s.trim()) return '';
+  if (/^\s*<[a-z][^>]*>[\s\S]*>\s*$/i.test(s) && !/\n/.test(s.trim())) return cleanHtml(s);   // HTML جاهز من ملف مشارَك
+  return s.replace(/\r/g, '').split('\n').map((l) => {
+    const h = escH(l).replace(/&quot;/g, '"').replace(/"/g, '&quot;').replace(INLINE_TAG, (m, c, tag, cls) => `<${c}${tag}${cls.replace(/&quot;/g, '"')}>`);
+    return '<p>' + (l.trim() ? linkLine(h) : '<br>') + '</p>';
+  }).join('');
+}
 export function lessonValues(pkg, lesson) {
   const v = {};
   NOOR_FIELDS.forEach((f) => {
     const raw = lesson[f.key] != null ? lesson[f.key] : (f.mode === 'text' || f.mode === 'checkall' ? '' : []);
-    v[f.key] = typeof raw === 'string' ? cleanHtml(raw) : raw;
+    v[f.key] = typeof raw === 'string' ? richText(lessonText(pkg, lesson, f.key)) : raw;
   });
-  if (driveApplies(pkg)) {
-    const link = String(pkg.driveLink).trim();
-    // لا نكرر الرابط إن كان مكتوبًا في الملاحظات أصلًا
-    if (!String(v.notes || '').includes(link)) {
-      const safe = link.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
-      v.notes = (v.notes || '') + `<p><strong>ملفات الدرس والمواد الداعمة:</strong> <a href="${safe}" target="_blank">${safe}</a></p>`;
-    }
-  }
   return v;
+}
+// النص كما في الملف بعد فصل الروابط، مع رابط ملفات الدرس في آخر الملاحظات (لا نكرره إن كان مكتوبًا أصلًا)
+function lessonText(pkg, lesson, key) {
+  let t = spaceLinks(String(lesson[key] == null ? '' : lesson[key]));
+  if (key === 'notes' && driveApplies(pkg)) {
+    const link = String(pkg.driveLink).trim();
+    if (!t.includes(link)) t = (t.trim() ? t + '\n\n' : '') + 'ملفات الدرس والمواد الداعمة:\n' + link;
+  }
+  return t;
 }
 export function buildItems(pkg, lesson) {
   const vals = lessonValues(pkg, lesson);
   // raw: النص كما في الملف — الحقل النصي العادي يأخذه (التنظيف الأمني يلزم المحرر الغني وحده، ويُسقط ذكر وسم مثل <img> في درس يشرح HTML)
   const raws = {};
-  NOOR_FIELDS.forEach((f) => { if (typeof lesson[f.key] === 'string') raws[f.key] = lesson[f.key]; });
-  if (driveApplies(pkg)) {
-    // رابط الدرايف يُلحق بالملاحظات نصًا كما يُلحق بنسخة المحرر الغني
-    const link = String(pkg.driveLink).trim();
-    if (!String(raws.notes || '').includes(link)) raws.notes = (raws.notes ? raws.notes + '\n' : '') + 'ملفات الدرس والمواد الداعمة: ' + link;
-  }
+  NOOR_FIELDS.forEach((f) => { if (typeof lesson[f.key] === 'string' || f.key === 'notes') raws[f.key] = lessonText(pkg, lesson, f.key); });
   return NOOR_FIELDS.map((f) => ({ key: f.key, match: f.match, mode: f.mode, fillTo: f.fillTo, value: vals[f.key], raw: raws[f.key], other: lesson[f.key + 'Other'] || '' }))
     .filter((it) => it.mode === 'checkall' || (Array.isArray(it.value) ? it.value.length : String(it.value || '').trim()));
 }

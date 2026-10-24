@@ -405,6 +405,8 @@ export function hadirEngine(action, payload) {
   const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const looksHtml = (s) => /<\/?[a-z][\s\S]*>/i.test(String(s));
   const textToHtml = (s) => String(s).split(/\n/).map((l) => '<p>' + (escapeHtml(l) || '<br>') + '</p>').join('');
+  // نص بلا وسوم (من غير ملف التحاضير): كل سطر فقرة والروابط قابلة للنقر — نص الملف يصل جاهزًا بفقراته من richText
+  const richHtml = (v) => looksHtml(v) ? String(v) : textToHtml(v).replace(/https?:\/\/[^\s<>"'«»]+/g, (u) => { const t = u.replace(/[.,،؛:)\]]+$/, ''); return `<a href="${t}" target="_blank">${t}</a>` + u.slice(t.length); });
 
   function toDateInput(v, type) {
     const s = String(v).trim();
@@ -435,7 +437,7 @@ export function hadirEngine(action, payload) {
       return String(el.value) === String(v) || it.type === 'date';
     }
     if (it.kind === 'rich') {
-      const html = safeHtml((f.kind === 'text' && !looksHtml(v)) ? textToHtml(v) : String(v));
+      const html = safeHtml(richHtml(v));   // كان النص العادي يُكتب في المحرر الغني بلا فقرات فيلتصق كله
       const api = apiEditor(el);
       if (api && api.type === 'tiny') {
         api.ed.setContent(html);
