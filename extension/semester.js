@@ -206,13 +206,16 @@ function assignDates() {
     const d = savedIds.has(s.lesson.id) ? semSaved[s.lesson.id] : '';
     if (isIso(d) && d > floor) floor = d;
   });
+  // «بداية الإدخال» (اختيار المعلم في التحضير التلقائي): لا تُنشر حصة قبل هذا التاريخ، وما بعده يُلاءم آخر أسبوع في الخطة
+  const fromIso = fileMode && !WIZ.pickDates && isIso(WIZ.fromDate) ? WIZ.fromDate : '';
+  if (fromIso) cands.forEach((s) => { const a = after.get(s) || ''; if (fromIso > a) after.set(s, fromIso); });
   // حدّان: آخر أسبوع في خطة المادة (تُجمع الحصص حتى تتسع له)، ونهاية الفصل الفعلية (ما بعدها يُعلَّم «بعد نهاية الفصل»)
   const planEnd = pkgEnd(pkg) || termEndOf(settings, termNo);
   const termEnd = termEndOf(settings, termNo) || (pkg.remote && isIso(pkg.remote.ends_on) ? pkg.remote.ends_on : '') || planEnd;
   let loose = '';   // ضغط الفصل: من هذا التاريخ تلي كل حصة ما قبلها مباشرة بدل انتظار أسبوعها في الخطة
   const lay = () => {
     const items = order.filter((s) => !s.mergedInto).map((s) => ({ s, fileDate: fileMode && isIso(s.lesson.pubDate) ? s.lesson.pubDate : '', fixed: s.fixed || '', after: after.get(s) || '' }));
-    const notes = layoutDates(items, { start: startIso, days, taken, useFileDates: fileMode, skip: holidaySet(settings), exact: !!WIZ.pickDates, cap: capOf, weekly: fileMode && !WIZ.pickDates, loose, today: todayIso() });
+    const notes = layoutDates(items, { start: startIso, days, taken, useFileDates: fileMode, skip: holidaySet(settings), exact: !!WIZ.pickDates, cap: capOf, weekly: fileMode && !WIZ.pickDates, loose, today: fromIso ? '' : todayIso() });
     return { items, notes };
   };
   let { items, notes } = lay();
@@ -222,7 +225,7 @@ function assignDates() {
   // ٢) فإن بقيت حصص بعد الخطة (آخر أسابيعها دروس مختلفة لا تُجمع): ما بعد اليوم يُضغط فتلي كل حصة ما قبلها مباشرة
   //    (لا تسبق اليوم ولا ترتيبها)، ويُجمع ما يلزم بعدها، ثم يُعاد ما أمكن إلى أسابيعه فلا يبدأ الضغط إلا من حيث يلزم
   if (planEnd && fileMode && !WIZ.pickDates && WIZ.trialCap == null) {   // التجربة (٣ حصص) لا تحتاج ضغط الفصل
-    const today = todayIso();
+    const today = fromIso || todayIso();
     const lateN = (its) => its.filter((it) => it.date > planEnd).length;
     const join = (a, b) => { const was = { am: a.merge, bm: b.merge }; a.merge = (a.merge || []).concat(b, b.merge || []); b.mergedInto = a; b.merge = null; return () => { a.merge = was.am; b.merge = was.bm; b.mergedInto = null; }; };
     const tryMerges = () => {
@@ -2349,6 +2352,14 @@ function wzRender() {
       });
     };
     return;
+  } else if (wz.step === 'from') {
+    head.textContent = 'بداية الإدخال';
+    body.innerHTML = `<p class="wz-note big">من أي تاريخ تبدأ التحاضير؟ اتركه فارغًا لتبدأ من أول الخطة.</p>
+      <input class="input big wz-date" type="date" id="wzFrom" value="${isIso(WIZ.fromDate) ? WIZ.fromDate : ''}">
+      <p class="wz-note">ما قبل هذا التاريخ لا يُنشر فيه شيء، وتتتابع الحصص بعده على حصصك حتى تنتهي في آخر أسبوع من الخطة.</p>
+      <button class="btn primary big" id="wzFromGo">ابدأ التحضير</button>`;
+    $('wzFromGo').onclick = () => { const v = $('wzFrom').value; WIZ.fromDate = isIso(v) ? v : ''; wzRun(); };
+    return;
   } else if (wz.step === 'lessons') {
     wzLessons();
     return;
@@ -2420,7 +2431,7 @@ function wzOpen(p) {
   if (p.remote && p.remote.trial && !p.remote.left) { payResume = 'open'; wzGo('pay'); return; }
   const ids = new Set((p.lessons || []).map((l) => l.id));
   [...wz.sel.keys()].forEach((k) => { if (!ids.has(k)) wz.sel.delete(k); });
-  if (wz.mode === 'term') wzRun(); else wzGo('lessons');
+  if (wz.mode === 'term') wzGo('from'); else wzGo('lessons');
 }
 // بعد نوع المدرسة: مادة في مكتبتك ← wzOpen · مادة من الكتالوج ← تجربة (الاسم أول مرة)
 async function wzResolve(noName) {
