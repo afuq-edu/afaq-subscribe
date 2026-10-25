@@ -537,8 +537,11 @@ async function flowTerm(job, J, W) {
       const rootOf = (r) => byId.get(tagOf(r.concepts));
       const planWk = (r) => { const l = rootOf(r); return l && l.pubDate ? wk0(l.pubDate) : ''; };
       const slotsOn = (d) => { if (!cfg.periods) return 1; const per = {}; for (const [sec] of cfg.periods[wday(d)] || []) per[sec] = (per[sec] || 0) + 1; return Math.max(0, ...Object.values(per)); };
-      const slotsFrom = (from) => { let n = 0; for (let d = from; d <= lastWk; d = addDays(d, 1)) if (isSchool(d)) n += slotsOn(d); return n; };
-      const from0 = nextSchool(todayIso, false);
+      const slotsFrom = (from) => { let n = 0; for (let d = from; d <= lastWk; d = addDays(d, 1)) if (isSchool(d) && !blocked.has(d)) n += slotsOn(d); return n; };
+      // a tight plan under a refusal met DURING the run: what was saved before it can no longer be joined, so the push of the
+      // last refused day can only be absorbed by joins and room after it
+      const since = tight && job.fault === 'reject' ? [...blocked].sort().pop() : todayIso;   // the last refusal's push can only be absorbed after it
+      const from0 = nextSchool(since, false);
       const bound = Math.max(0, rows0.filter((r) => r.publishDate >= from0).length - slotsFrom(from0));
       const sizeOf = (r) => Math.max(1, (String(r.concepts || '').match(/\[\[trace:/g) || []).length);
       const lastIdx = (r) => { const tags = String(r.concepts || '').match(/\[\[trace:([^\]]+)\]\]/g) || []; const id = tags.length ? tags[tags.length - 1].replace(/^\[\[trace:|\]\]$/g, '') : tagOf(r.concepts); const l = byId.get(id); return l ? l.idx : -1; };
@@ -550,7 +553,7 @@ async function flowTerm(job, J, W) {
         rs.sort((x, y) => rootOf(x).idx - rootOf(y).idx);
         for (let i = 0; i + 1 < rs.length; i++) {
           const p = rs[i], q = rs[i + 1];
-          if (p.publishDate < todayIso || rootOf(q).idx !== lastIdx(p) + 1 || sizeOf(p) + sizeOf(q) > 4) continue;
+          if (p.publishDate < since || rootOf(q).idx !== lastIdx(p) + 1 || sizeOf(p) + sizeOf(q) > 4) continue;
           if (daysBetween(planWk(p), planWk(q)) > 14) continue;
           mergeable.push(`${k}: ${rootOf(p).id}+${rootOf(q).id} (${p.publishDate}/${q.publishDate})`);
         }
