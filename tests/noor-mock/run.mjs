@@ -110,7 +110,8 @@ function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], same
 }
 
 // ---------- browser + wizard driving ----------
-async function launch(extDir, noor) {
+const FIXED_NOW = '2026-09-05';   // the wizard's «today» (?now=): the day before the plan starts, unless a scenario says otherwise
+async function launch(extDir, noor, { now = FIXED_NOW } = {}) {
   const ctx = await chromium.launchPersistentContext('', {
     headless: !process.env.HEADFUL, executablePath: '/opt/pw-browsers/chromium',
     args: [`--disable-extensions-except=${extDir}`, `--load-extension=${extDir}`, ...(process.env.HEADFUL ? [] : ['--headless=new'])],
@@ -125,7 +126,7 @@ async function launch(extDir, noor) {
   const errs = [];
   const pg = await ctx.newPage();
   pg.on('pageerror', (e) => errs.push(e.message));
-  await pg.goto(`chrome-extension://${id}/semester.html?debug=1`);
+  await pg.goto(`chrome-extension://${id}/semester.html?debug=1&now=${now}`);
   return { ctx, sw, pg, id, errs };
 }
 const card = async (pg, t) => { await pg.locator('.wz-card:not([disabled])', { hasText: t }).first().click({ timeout: 20000 }); await sleep(500); };
@@ -190,7 +191,7 @@ T(1, 'Full term, official dates, empty Noor', async (env) => {
   check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
   check(rows.every((r) => r.cid === 'BIO9'), 'all saves in the right course card (الأحياء — التاسع)', rows.filter((r) => r.cid !== 'BIO9').map((r) => r.cid).join(','));
   assertRows('S1', rows, tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
-  check(rows.every((r) => r.timeslots > 0 && r.objectives > 0 && r.global), 'every row has classes, outcomes and «تعميم» checked');
+  check(rows.every((r) => r.timeslots > 0 && r.objectives > 0 && r.global && r.semesterPlan), 'every row has classes, outcomes, «تعميم» and «خطة فصلية» checked');
   check(rows.every((r) => r.concepts && r.procedures), 'content (concepts / procedures) filled in every row');
   return b;
 });
@@ -429,6 +430,72 @@ for (const [n, left] of [[13, 0], [14, 2]]) T(n, `Reinstall: a new trial request
   return b;
 });
 
+T(15, 'Fewer periods than the plan (2 a week for 3 sessions a week): sessions of the same lesson share one prep «(2 و 3)», nothing after the plan\'s last week, a re-run adds nothing', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 18) }));
+  const tree = treeFromPackage(PKG);
+  const periods = { 0: [['1', 1], ['2', 1]], 1: [], 2: [['1', 1], ['2', 1]], 3: [], 4: [] };
+  const noor = env.noor({ tree, periods });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 20 * 60000, 'fewer periods');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  const lastFile = PKG.lessons.map((l) => l.pubDate).sort().pop();
+  const end = new Date(lastFile + 'T12:00'); end.setDate(end.getDate() + (4 - end.getDay())); const endIso = end.toISOString().slice(0, 10);
+  check(rows.every((r) => r.publishDate <= endIso), `no prep after the plan's last week (${endIso})`, rows.filter((r) => r.publishDate > endIso).map((r) => r.publishDate + ' ' + r.title).join(', '));
+  check(rows.every((r) => [0, 2].includes(new Date(r.publishDate + 'T12:00').getDay())), 'every prep on a day with periods (Sun/Tue)', rows.map((r) => r.publishDate).join(', '));
+  const cover = new Map();
+  rows.forEach((r) => PKG.lessons.forEach((l) => { if (norm(r.concepts).includes(norm(l.concepts))) cover.set(l.id, (cover.get(l.id) || []).concat(r.title)); }));
+  const missing = PKG.lessons.filter((l) => !cover.has(l.id)).map((l) => l.id), twice = [...cover].filter(([, v]) => v.length > 1).map(([k]) => k);
+  check(!missing.length, 'every session of the plan is in a prep in Noor', missing.join(', '));
+  check(!twice.length, 'no session in two preps', twice.join(', '));
+  const extra = rows.reduce((a, r) => { const m = r.title.match(/\((\d+(?: و \d+)+)\)$/); return a + (m ? m[1].split(' و ').length - 1 : 0); }, 0);
+  check(extra === PKG.lessons.length - rows.length, `shared preps carry «(n و m)» in the title for every extra session (${extra})`, rows.map((r) => r.title).join(' | '));
+  const byDay = rows.reduce((m, r) => { m[r.publishDate] = (m[r.publishDate] || 0) + 1; return m; }, {});
+  check(Object.values(byDay).every((n) => n === 1), 'one prep per day (one period per section)', JSON.stringify(byDay));
+  const n1 = noor.st.rows.length;
+  const s2 = await rerun(b, 'manual re-run');
+  check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
+  return b;
+});
+
+T(16, 'Mid-term start with fewer periods (2 a week for 3): the weeks that passed are left quietly (Noor refuses past dates) and never push the coming weeks; from today on the plan ends in its last week', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 30) }));   // 10 weeks × 3 sessions
+  const tree = treeFromPackage(PKG);
+  const periods = { 0: [['1', 1], ['2', 1]], 1: [], 2: [['1', 1], ['2', 1]], 3: [], 4: [] };
+  const today = '2026-10-04';   // Sunday of plan week 5: weeks 1–4 have passed
+  const noor = env.noor({ tree, periods, noPast: today });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now: today });
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 20 * 60000, 'mid-term start');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check(rows.every((r) => r.publishDate >= today), 'no prep before today (Noor refuses past dates)', rows.filter((r) => r.publishDate < today).map((r) => r.publishDate + ' ' + r.title).join(', '));
+  const lastFile = PKG.lessons.map((l) => l.pubDate).sort().pop();
+  const end = new Date(lastFile + 'T12:00'); end.setDate(end.getDate() + (4 - end.getDay())); const endIso = end.toISOString().slice(0, 10);
+  check(rows.every((r) => r.publishDate <= endIso), `no prep after the plan's last week (${endIso})`, rows.filter((r) => r.publishDate > endIso).map((r) => r.publishDate + ' ' + r.title).join(', '));
+  check(rows.every((r) => [0, 2].includes(new Date(r.publishDate + 'T12:00').getDay())), 'every prep on a day with periods (Sun/Tue)', rows.map((r) => r.publishDate).join(', '));
+  const cover = new Map();
+  rows.forEach((r) => PKG.lessons.forEach((l) => { if (norm(r.concepts).includes(norm(l.concepts))) cover.set(l.id, (cover.get(l.id) || []).concat(r.title)); }));
+  const future = PKG.lessons.filter((l) => l.pubDate >= today), past = PKG.lessons.filter((l) => l.pubDate < today);
+  check(future.every((l) => cover.has(l.id)), `every session from today on is in a prep (${future.length})`, future.filter((l) => !cover.has(l.id)).map((l) => l.id).join(', '));
+  check(past.every((l) => !cover.has(l.id)), 'no session of a past week was carried into the coming weeks', past.filter((l) => cover.has(l.id)).map((l) => l.id).join(', '));
+  const twice = [...cover].filter(([, v]) => v.length > 1).map(([k]) => k);
+  check(!twice.length, 'no session in two preps', twice.join(', '));
+  const extra = rows.reduce((a, r) => { const m = r.title.match(/\((\d+(?: و \d+)+)\)$/); return a + (m ? m[1].split(' و ').length - 1 : 0); }, 0);
+  check(extra === future.length - rows.length, `shared preps carry «(n و m)» in the title for every extra session (${extra})`, rows.map((r) => r.title).join(' | '));
+  const byDay = rows.reduce((m, r) => { m[r.publishDate] = (m[r.publishDate] || 0) + 1; return m; }, {});
+  check(Object.values(byDay).every((n) => n === 1), 'one prep per day (one period per section)', JSON.stringify(byDay));
+  const refused = noor.st.posts.filter((p) => p.outcome === 'date-past').length;
+  check(refused === 1, `a past date was tried once, refused by Noor, then the rest were left without more attempts (${refused} refused)`, noor.st.posts.filter((p) => p.outcome === 'date-past').map((p) => p.date).join(', '));
+  const n1 = noor.st.rows.length;
+  await rerun(b, 'manual re-run');
+  check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
+  return b;
+});
+
 // ---------- main ----------
 const want = process.argv.slice(2).map(Number).filter(Boolean);
 const list = Object.keys(SC).map(Number).filter((n) => !want.length || want.includes(n));
@@ -442,7 +509,7 @@ for (const n of list) {
   console.log(`\n=== Scenario ${n}: ${SC[n].title}`);
   const t0 = Date.now();
   let b = null;
-  const env = { afaq, noor: (cfg) => (env.noorInst = createNoor(Object.assign({ pkg: PKG }, cfg))), launch: async (noor) => (b = await launch(extDir, noor)) };
+  const env = { afaq, noor: (cfg) => (env.noorInst = createNoor(Object.assign({ pkg: PKG }, cfg))), launch: async (noor, o) => (b = await launch(extDir, noor, o)) };
   try {
     await SC[n].fn(env);
   } catch (e) {

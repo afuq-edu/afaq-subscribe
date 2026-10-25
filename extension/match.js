@@ -97,8 +97,11 @@ const ENUM = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eig
 const ENUM_RE = Object.keys(ENUM).join('|');
 const digits = (s) => String(s || '').replace(/[٠-٩]/g, (d) => String('٠١٢٣٤٥٦٧٨٩'.indexOf(d))).replace(/[۰-۹]/g, (d) => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
 // «(2)» في آخر عنوان نور: رقم الحصة (تحضير ثانٍ للدرس نفسه) — لا يدخل في رقم الدرس
-export const stripSessionSuffix = (s) => String(s || '').replace(/\s*[(（]\s*[0-9٠-٩]{1,2}\s*[)）]\s*$/, '');
-export function sessionSuffix(s) { const m = digits(s).match(/[(（]\s*(\d{1,2})\s*[)）]\s*$/); return m ? +m[1] : null; }
+// تحضير واحد لأكثر من حصة من الدرس نفسه (حصص الفصل أكثر من حصص المعلم): «اسم الدرس (2 و 3)»
+const MULTI_RE = /\s*[(（]\s*([0-9٠-٩]{1,2}(?:\s+و\s*[0-9٠-٩]{1,2})+)\s*[)）]\s*$/;
+export const stripSessionSuffix = (s) => { const t = String(s || ''); return MULTI_RE.test(t) ? t.replace(MULTI_RE, '') : t.replace(/\s*[(（]\s*[0-9٠-٩]{1,2}\s*[)）]\s*$/, ''); };
+export function sessionNums(s) { const m = String(s || '').match(MULTI_RE); if (m) return digits(m[1]).split(/\s*و\s*/).map(Number).filter(Boolean); const n = sessionSuffix(s); return n ? [n] : null; }
+export function sessionSuffix(s) { const mm = String(s || '').match(MULTI_RE); if (mm) return +digits(mm[1]).split(/\s*و\s*/)[0]; const m = digits(s).match(/[(（]\s*(\d{1,2})\s*[)）]\s*$/); return m ? +m[1] : null; }
 
 // ترقيم مزدوج في أول العنوان «1 - 4 الصيغة التربيعية» «2.5 …» «3/1 …»: الوحدة ثم الدرس — { u, l } أو null
 export function pairNums(s) {

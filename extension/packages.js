@@ -1,6 +1,6 @@
 // packages.js — مكتبة التحاضير: التخزين، التقدم (عُبّئ/حُفظ)، الإعدادات، النسخ الاحتياطي، والتعبئة في نموذج منصة نور
 import { hadirEngine } from './engine.js';
-import { bestLesson, rankLessons, lessonNum, unitNum, kwNorm, kwScore, titleSim, bestTreeLesson, unitMayHold, stripSessionSuffix, sessionSuffix } from './match.js';
+import { bestLesson, rankLessons, lessonNum, unitNum, kwNorm, kwScore, titleSim, bestTreeLesson, unitMayHold, stripSessionSuffix, sessionSuffix, sessionNums } from './match.js';
 import { parsePlanText, parsePlanBest, NOOR_STRATEGIES, NOOR_RESOURCES, NOOR_LEVELS, SAMPLE_PLAN, mapStrategies, mapResources } from './parse.js';
 import { AFAQ } from './afaq-config.js';
 import { remoteLesson, isRemote, REMOTE_ERR, noorCheck } from './remote.js';
@@ -10,7 +10,7 @@ export { isRemote, REMOTE_ERR, layoutDates, isIso, weekStart, weekEnd, inWeekOf,
 export const SERVICE = !!AFAQ.SERVICE;
 const SERVICE_ONLY = 'المواد تأتي من اشتراكك في «حاضر» — اخترها أو فعّلها من نافذة «حاضر».';
 
-export { bestLesson, rankLessons, lessonNum, kwNorm, stripSessionSuffix, sessionSuffix, parsePlanText, parsePlanBest, NOOR_STRATEGIES, NOOR_RESOURCES, NOOR_LEVELS, SAMPLE_PLAN, mapStrategies, mapResources };
+export { bestLesson, rankLessons, lessonNum, kwNorm, stripSessionSuffix, sessionSuffix, sessionNums, parsePlanText, parsePlanBest, NOOR_STRATEGIES, NOOR_RESOURCES, NOOR_LEVELS, SAMPLE_PLAN, mapStrategies, mapResources };
 
 // ---------- بنود نموذج التحضير في منصة نور (بالترتيب) ----------
 // match: عبارات يُعرف بها عنوان البند — mode: text نص منسّق، pick قائمة اختيار، auto قائمة أو نص، checkall تحديد كل المربعات
@@ -27,6 +27,7 @@ export const NOOR_FIELDS = [
   { key: 'notes', name: 'ملاحظات (خطة الدراسة الأسبوعية)', short: 'الملاحظات', match: ['ملاحظات ضمن خطة الدراسة', 'خطة الدراسة الأسبوعية', 'ملاحظات'], mode: 'text' },
 ];
 export const GLOBAL_CHECK = 'تعميم التحضير على كافة الجداول';
+export const PLAN_CHECK = 'خطة فصلية';   // خانة نور «خطة فصلية» تُحدَّد في كل تحضير
 export const GRADES = ['الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس', 'السابع', 'الثامن', 'التاسع', 'العاشر', 'الحادي عشر', 'الثاني عشر'];
 export const DAY_NAMES = ['الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
 
@@ -36,6 +37,7 @@ export const DEFAULT_SETTINGS = {
   driveLink: '',                 // رابط الدرايف الافتراضي للحزم الجديدة (يضبطه المعلم من الإعدادات)
   checkTimeslots: true,          // تحديد كل الصفوف (الحصص) الظاهرة
   ensureGlobal: true,            // «تعميم التحضير على كافة الجداول»
+  ensurePlan: true,              // «خطة فصلية»
   setWeek: true,                 // اختيار أسبوع العمل حسب التاريخ
   skipFilled: false,             // عدم تغيير الحقول المكتوبة
   fab: true,                     // زر «حاضر» داخل صفحة نور
@@ -654,6 +656,21 @@ function lessonText(pkg, lesson, key) {
   }
   return t;
 }
+// حصص الدرس نفسه في تحضير واحد: النصوص بالترتيب (سير الدرس يبدأ بعنوان كل حصة)، والاختيارات مجموعة بلا تكرار
+export function joinLessons(main, more) {
+  const all = [main, ...more];
+  const out = Object.assign({}, main);
+  NOOR_FIELDS.forEach((f) => {
+    const vals = all.map((l) => l[f.key]);
+    if (vals.some(Array.isArray)) { out[f.key] = [...new Set(vals.flatMap((v) => (Array.isArray(v) ? v : [])))]; return; }
+    if (!vals.some((v) => typeof v === 'string')) return;
+    const parts = all.map((l) => ({ t: String(l[f.key] == null ? '' : l[f.key]).trim(), title: String(l.title || '').trim() })).filter((x) => x.t);
+    const uniq = parts.filter((x, i) => parts.findIndex((y) => y.t === x.t) === i);
+    out[f.key] = uniq.map((x) => (f.key === 'procedures' && x.title && uniq.length > 1 ? x.title + '\n' + x.t : x.t)).join('\n\n');
+  });
+  out.title = all.map((l) => l.title).filter(Boolean).join(' + ');
+  return out;
+}
 export function buildItems(pkg, lesson) {
   const vals = lessonValues(pkg, lesson);
   // raw: النص كما في الملف — الحقل النصي العادي يأخذه (التنظيف الأمني يلزم المحرر الغني وحده، ويُسقط ذكر وسم مثل <img> في درس يشرح HTML)
@@ -677,6 +694,12 @@ export async function pageContext(tabId) {
     const mark = (parts.find((p) => p.mark) || {}).mark || null;
     return { isForm: found >= 5, found, title, mark, tree: parts.some((p) => p.tree), ready: parts.length > 0 && parts.every((p) => p.ready), url: (parts[0] || {}).url || '' };
   } catch (e) { return { isForm: false, found: 0, title: '', mark: null, ready: false, error: String(e.message || e) }; }
+}
+// جدول المعلم من نموذج «إضافة تحضير»: حصص كل تاريخ من التواريخ المعطاة كما يعرضها نور — [{ date, status: ok|none|unknown, groups, cap }]
+export async function probeDays(tabId, dates) {
+  const parts = await execNoor(tabId, 'probeDays', { dates });
+  const p = parts.find((x) => x && x.days && x.days.length);
+  return p ? p.days : [];
 }
 export async function noorLessonTitle(tabId) { return (await pageContext(tabId)).title; }
 
@@ -835,7 +858,7 @@ export async function pickTreeNode(tabId, node) {
 }
 
 // «(2)» لعنوان الحصة الثانية من الدرس — فقط إن كان العنوان هو اسم الدرس في الشجرة (لا نغيّر عنوانًا كتبه المعلم)
-export async function applyTitleSuffix(tabId, pkg, lesson) {
+export async function applyTitleSuffix(tabId, pkg, lesson, nums = null) {
   const st = await treeOp(tabId, { op: 'state' });
   if (!st.tree || !st.title || !st.selected) return null;
   // اسم الدرس نفسه قد ينتهي بـ«(1)» («الجمع (1)»): لا يُحذف منه، والحصة الثانية «الجمع (1) (2)»
@@ -844,7 +867,8 @@ export async function applyTitleSuffix(tabId, pkg, lesson) {
   const n = sessionNo(pkg, lesson);
   const base = ws(st.title) === ws(st.selected.text) || ws(stripSessionSuffix(st.title)) === ws(st.selected.text) ? (n >= 2 ? st.selected.text : st.title) : '';
   if (!base) return null;
-  const want = n >= 2 ? `${base} (${n})` : base;
+  const many = Array.isArray(nums) && nums.length > 1;
+  const want = many ? `${st.selected.text} (${nums.join(' و ')})` : n >= 2 ? `${base} (${n})` : base;
   if (want === st.title) return null;
   const r = await treeOp(tabId, { op: 'title', value: want });
   return r.ok ? want : null;
@@ -886,6 +910,20 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
   }
   // مدة الحصة حسب نوع المدرسة: فترتان ٣٥ دقيقة، فترة واحدة ٤٠
   lesson = fitLessonMinutes(lesson, pkg);
+  // تحضير واحد لأكثر من حصة من الدرس نفسه: محتوى كل حصة بعد الأخرى في الحقول نفسها
+  if (opts.merge && opts.merge.length) {
+    const more = [];
+    for (const m of opts.merge) {
+      let l = m;
+      if (isRemote(pkg)) {
+        const r = await remoteLesson(pkg, m);
+        if (!r.ok) return [{ key: 'remote', name: 'الاشتراك', short: 'الاشتراك', status: r.error === 'noor_wait' ? 'wait' : 'fail', blocked: true, remoteError: r.error, error: REMOTE_ERR[r.error] || REMOTE_ERR.network, values: [] }];
+        l = r.lesson;
+      }
+      more.push(fitLessonMinutes(l, pkg));
+    }
+    lesson = joinLessons(lesson, more);
+  }
   const settings = await getSettings();
   const skipFilled = opts.skipFilled != null ? !!opts.skipFilled : !!settings.skipFilled;
   const items = buildItems(pkg, lesson);
@@ -901,12 +939,12 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
     }
   }
   if (settings.titleSuffix !== false) {
-    const t = await applyTitleSuffix(tabId, pkg, lesson).catch(() => null);
+    const t = await applyTitleSuffix(tabId, pkg, lesson, opts.sessionNos).catch(() => null);
     if (t) { lessonRow = Object.assign(lessonRow || { status: 'ok', how: 'suffix' }, { values: [t] }); finalTitle = t; }
   }
   const parts = await execNoor(tabId, 'noor', {
     items, skipFilled, publishDate: opts.publishDate || '', allRows: true,
-    ensureChecks: settings.ensureGlobal ? [GLOBAL_CHECK] : [],
+    ensureChecks: (settings.ensureGlobal ? [GLOBAL_CHECK] : []).concat(settings.ensurePlan === false ? [] : [PLAN_CHECK]),
     checkTimeslots: settings.checkTimeslots !== false,
     slotNo: opts.slotNo || 1, slotFull: opts.slotFull || null, allowSection: !!opts.allowSection,   // تحضير لكل حصة: رقم حصة هذا التحضير في يومه
     setWeek: settings.setWeek !== false,
@@ -923,6 +961,8 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
   if (settings.checkTimeslots !== false) report.push(Object.assign({ key: 'timeslots', name: 'الصفوف (الحصص)', short: 'الصفوف' }, merged.timeslots || { status: 'nolabel' }));
   if (merged.week) report.push(Object.assign({ key: 'week', name: 'أسبوع العمل', short: 'الأسبوع' }, merged.week));
   if (settings.ensureGlobal) report.push(Object.assign({ key: 'global', name: GLOBAL_CHECK, short: 'التعميم' }, merged['check:' + GLOBAL_CHECK] || { status: 'nolabel' }));
+  // «خطة فصلية»: تُحدَّد حين تكون في النموذج؛ غيابها لا يمنع الحفظ ولا يُعرض
+  if (merged['check:' + PLAN_CHECK] && merged['check:' + PLAN_CHECK].status === 'ok') report.push(Object.assign({ key: 'plan', name: PLAN_CHECK, short: 'الخطة الفصلية' }, merged['check:' + PLAN_CHECK]));
   if (opts.publishDate) report.push(Object.assign({ key: 'publish', name: 'تاريخ النشر', short: 'التاريخ' }, merged.publish || { status: 'nolabel' }));
   if (lessonRow) report.unshift(Object.assign({ key: 'lesson', name: 'الدرس في نور', short: 'الدرس' }, lessonRow));
   if (merged.preflight) report.push(Object.assign({ key: 'preflight', name: 'جاهز للحفظ', short: 'جاهز للحفظ' }, merged.preflight));

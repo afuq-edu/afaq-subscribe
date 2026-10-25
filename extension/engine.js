@@ -1296,6 +1296,39 @@ export function hadirEngine(action, payload) {
     })();
   }
 
+  // جسّ جدول المعلم قبل التعبئة: لكل تاريخ يُكتب في خانة النشر ثم تُقرأ حصص ذلك اليوم كما يعرضها نور (بلا تحديد شيء)
+  if (action === 'probeDays') {
+    if (window !== window.top) return { frames, skipFrame: true };
+    const isSec = (el) => /\[section\]/.test(el.name || '');
+    const slotsOf = (sec) => {
+      const out = [];
+      for (const d of docs) d.doc.querySelectorAll('input[type="checkbox"].lecture_timeslots, input[type="checkbox"][name*="[timeslot]"], input[type="checkbox"][name*="[section]"]').forEach((el) => {
+        if (isSec(el) !== !!sec) return;
+        const lbl = el.closest('label') || (el.parentElement && el.parentElement.querySelector('label'));
+        if (isRendered(el) || (lbl && isRendered(lbl))) out.push(el);
+      });
+      return out;
+    };
+    const NO_PERIODS = /لا\s*(?:يوجد|توجد)\s*فترات\s*زمنية/;
+    const boxes = () => docs.flatMap((d) => Array.from(d.doc.querySelectorAll('.lecture_timeslots_div, .timeslots')));
+    const noPeriods = () => boxes().some((x) => isRendered(x) && NO_PERIODS.test(x.textContent || ''));
+    const sig = () => boxes().map((x) => x.innerHTML.length + ':' + (x.textContent || '').replace(/\s+/g, ' ').trim()).join('|');
+    const textOf = (el) => { const l = el.closest('label') || (el.id && el.ownerDocument.querySelector('label[for="' + CSS.escape(el.id) + '"]')) || (el.parentElement && el.parentElement.querySelector('label')); return clean((l || el.parentElement || {}).textContent || el.value || ''); };
+    const secOf = (el) => { const t = textOf(el), parts = t.split(/\s+-\s+/); return parts.length >= 4 ? parts.slice(0, -1).join(' - ') : t.replace(/\d+/g, ' ').replace(/\s+/g, ' ').trim(); };
+    return (async () => {
+      const out = [];
+      for (const iso of payload.dates || []) {
+        const before = sig();
+        for (const d of docs) setPublishDates(d.doc, iso, { allRows: false, format: payload.format });
+        const ready = () => sig() !== before && (slotsOf(false).length || slotsOf(true).length || noPeriods());
+        await waitDom(document.body, ready, { timeout: 6000, quiet: 300 });
+        const all = slotsOf(false), secs = slotsOf(true);
+        if (!all.length) out.push({ date: iso, status: noPeriods() || secs.length ? 'none' : 'unknown', sectionOnly: !!secs.length });
+        else { const groups = {}; all.forEach((el, i) => { const k = secOf(el) || '#' + i; groups[k] = (groups[k] || 0) + 1; }); out.push({ date: iso, status: 'ok', groups, cap: Math.max(1, ...Object.values(groups)) }); }
+      }
+      return { frames, days: out };
+    })();
+  }
   if (action === 'noor' || action === 'noorDiag') {
     const items = payload.items || [];
     // انتظار استقرار خيارات قائمة (قد تُحمَّل من الخادم بعد تحديد المخرجات، مثل قائمة المستوى)

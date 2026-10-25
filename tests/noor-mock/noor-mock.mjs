@@ -58,6 +58,7 @@ export function createNoor(cfg) {
     rejectAtFill: new Set(cfg.rejectAtFill || []),   // date popup «التاريخ مستخدم من قبل» right after typing it
     rejectAtSave: new Set(cfg.rejectAtSave || []),   // the save returns the form with that error
     uniqueDates: cfg.uniqueDates !== false,          // Noor refuses two preps with the same publish date in one course
+    noPast: cfg.noPast || '',                        // Noor refuses a publish date before this day (its «today»): the save returns the form with that error
     ambiguous: cfg.ambiguous || {},                  // { saveAttemptNo: 'form' | 'abort' | 'form-nosave' } — row saved (or not) but result unclear
     noClassDates: new Set(cfg.noClassDates || []),
     // the teacher's timetable: weekday → [[section, periods that day], …] (default: two sections, one period each, every day);
@@ -115,6 +116,7 @@ export function createNoor(cfg) {
  <div class="pub"><span>تاريخ النشر</span> <input type="text" class="pubDateClass" id="publishdate-1" name="data[Preparation][date1][publish_date]" autocomplete="off"></div>
  <div class="timeslots"><div class="lecture_timeslots_div" id="slots-1"></div></div>
  <label><input type="checkbox" name="data[Preparation][global]" value="1"> تعميم التحضير على كافة الجداول</label>
+ <label><input type="checkbox" name="data[Preparation][semester_plan]" value="1" id="semesterPlan"> خطة فصلية</label>
  <label class="ctl-label">المخرجات التعليمية</label>
  <div id="criteria-checkbox"></div>
  <label class="ctl-label">المستوى</label>
@@ -221,6 +223,7 @@ export function createNoor(cfg) {
     if (!want.length && !secOnly.length) missing.push('الصفوف');
     if (!all('objectives').length) missing.push('المخرجات');
     if (missing.length) { post.outcome = 'invalid:' + missing.join(','); return { kind: 'form', extra: { alert: 'يجب تعبئة: ' + missing.join('، ') } }; }
+    if (st.noPast && date && date < st.noPast) { post.outcome = 'date-past'; return { kind: 'form', extra: { swal: 'لا يمكن اختيار تاريخ سابق لليوم الحالي' } }; }
     if (st.rejectAtSave.has(date)) { post.outcome = 'date-rejected'; return { kind: 'form', extra: { swal: 'لا يمكن إضافة التحضير: التاريخ مستخدم من قبل' } }; }
     // Noor: a second prep on the same date only on a period that has none (a pre-existing prep holds every period of its day)
     if (st.uniqueDates && st.rows.some((r) => r.cid === cid && r.publishDate === date && (!r.slots || r.slots.some((x) => want.includes(x))))) { post.outcome = 'date-dup'; return { kind: 'form', extra: { swal: 'يوجد تحضير مسبق بنفس التاريخ' } }; }
@@ -229,7 +232,7 @@ export function createNoor(cfg) {
     const row = {
       id: String(++st.nextId), cid, title, lessonId, nodeText: node.text, unit: node.unit, term: node.term, publishDate: date, created: nowStamp(), post: n,
       concepts: g('concepts'), procedures: g('procedures').slice(0, 80), levels: all('levels'), strategies: all('strategies'), resources: all('resources'),
-      timeslots: want.length || secOnly.length, slots: want.length ? want : null, sectionOnly: !want.length, objectives: all('objectives').length, global: g('global') === '1',
+      timeslots: want.length || secOnly.length, slots: want.length ? want : null, sectionOnly: !want.length, objectives: all('objectives').length, global: g('global') === '1', semesterPlan: g('semester_plan') === '1',
     };
     st.rows.push(row);
     post.outcome = amb ? 'saved-' + amb : 'saved';
