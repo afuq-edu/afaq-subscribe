@@ -454,7 +454,7 @@ async function flowTerm(job, J, W) {
     // two periods on a day: the next session may share the date (on the next period); a shared prep: same date as its root
     const after = (a, b, x) => a > b || (((job.fault === 'twoper' || job.fault === 'oneper') || (x && tails.has(x.l.id))) && a === b);
     const flipsIn = [];
-    J.T.groups.forEach((g) => { const ss = g.sessions.filter((l) => dOf[l.id]); for (let i = 1; i < ss.length; i++) if (!after(dOf[ss[i].id], dOf[ss[i - 1].id])) flipsIn.push(`«${g.lesson}»: session ${i} ${ss[i - 1].id}@${dOf[ss[i - 1].id]} then session ${i + 1} ${ss[i].id}@${dOf[ss[i].id]}`); });
+    J.T.groups.forEach((g) => { const ss = g.sessions.filter((l) => dOf[l.id]); for (let i = 1; i < ss.length; i++) if (!after(dOf[ss[i].id], dOf[ss[i - 1].id], { l: ss[i] })) flipsIn.push(`«${g.lesson}»: session ${i} ${ss[i - 1].id}@${dOf[ss[i - 1].id]} then session ${i + 1} ${ss[i].id}@${dOf[ss[i].id]}`); });
     check(F, !flipsIn.length, 'order: within a lesson, session k+1 strictly after session k', flipsIn.slice(0, 10).join('\n'));
     // lesson order = Noor-tree order (unit by unit); within a unit the lessons follow each other, so lesson k+1 never starts before lesson k
     const flipsLess = [];
