@@ -31,3 +31,16 @@ The first full run on 4.10.3 (2026-10-20, 110 packages) found five extension bug
 - Date model: the extension lays the sessions out in the order of the official schedule (the file order, chronological),
   not lesson by lesson in tree order, so packages that interleave the sessions of different lessons (Quran units, poems)
   keep the schedule after a holiday/busy/rejected day. The expected-date check follows the same rule.
+
+## 2026-10-25 — 4.10.10 (fewer periods than the plan, «خطة فصلية»)
+
+- Full matrix 241 packages × term + pick with rotated faults: 10172 checks; oneper over all 241 (`--fault oneper --flows term`):
+  5543 checks, 239 pass; physics 9 and 10 end beyond the term by design (every lesson is one session, nothing can share a
+  prep) and the term-bounds check tolerates that only when nothing is mergeable and the late count is within the bound.
+- **H1 (harness) — end-of-plan merges under holidays/busy/reject.** When a blocked day pushes the last sessions past the
+  plan's last week, the extension joins the latest same-lesson pair into one prep «X (4 و 5)» so the plan still ends on
+  time; the harness expanded such preps only for `oneper`, so 12 term flows failed on content/title/complete/order. Now every
+  fault expands merged preps, a joined session is expected on its root's date (also in the within-lesson order check), and two
+  checks make sure sessions share a prep only when needed and exactly as many as the overrun, each pair from one lesson.
+  Re-run of the 12 packages: 275 checks, 0 failed. No extension change.
+- Format check (tests/rich-format.mjs): 240 packages, 90335 fields, 12927 anchors, 0 bad. Release gate 14/14 on both zips.
