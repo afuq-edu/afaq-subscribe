@@ -64,6 +64,8 @@ export function createNoor(cfg) {
     // the teacher's timetable: weekday → [[section, periods that day], …] (default: two sections, one period each, every day);
     // takenSlots: how the form shows a period that already has a prep on that date — 'disable' | 'hide' | 'show' (save then refuses)
     periods: cfg.periods || null,
+    partialForms: cfg.partialForms || 0,             // the first N «إضافة تحضير» pages show lessons under the first unit only (slow Noor tree)
+    formRenders: 0,
     takenSlots: cfg.takenSlots || 'disable',
     createdOld: cfg.createdOld || '2026-10-15 09:12',
     showCreated: cfg.showCreated !== false,
@@ -105,7 +107,8 @@ export function createNoor(cfg) {
   const union = (k) => [...new Set((cfg.pkg.lessons || []).flatMap((l) => l[k] || []))];
   const formPage = (cid, extra = {}) => {
     const c = course(cid);
-    const tree = { book: c.tree.book, terms: c.tree.terms.map((t) => ({ text: t.text, units: t.units.map((u) => ({ text: u.text, lessons: u.lessons.map((l) => ({ text: l.text, nodeId: l.nodeId })) })) })) };
+    const partial = ++st.formRenders <= st.partialForms;
+    const tree = { book: c.tree.book, terms: c.tree.terms.map((t) => ({ text: t.text, units: t.units.map((u, ui) => ({ text: u.text, lessons: partial && ui ? [] : u.lessons.map((l) => ({ text: l.text, nodeId: l.nodeId })) })) })) };
     const err = extra.swal ? `<div class="swal2-popup swal2-icon-error"><h2 class="swal2-title">خطأ</h2><div class="swal2-html-container">${esc(extra.swal)}</div><button type="button" class="swal2-confirm" onclick="this.closest('.swal2-popup').remove()">موافق</button></div>` : '';
     const alertBox = extra.alert ? `<div class="alert alert-danger">${esc(extra.alert)}</div>` : '';
     return page('إضافة تحضير', `${err}${alertBox}

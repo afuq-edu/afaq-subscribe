@@ -52,6 +52,7 @@ export function startAfaq(port = 0) {
       else if (fn === 'ext_pick') { pick(args.p_packages); st.shiftAsked.push(args.p_shift); out = { ok: true, request: 1001 }; }
       else if (fn === 'ext_noor') { st.noor.push(args); out = { ok: true }; }
       else if (fn === 'ext_tree') { st.trees.push(args.p_tree); out = { ok: true }; }
+      else if (fn === 'ext_tree_get') out = { ok: true, lessons: [] };
       else if (fn === 'ext_set_ref') out = { ok: true };
       else if (fn === 'ext_referral') out = { ok: true, request: 1001, invited: 0 };
       else if (fn === 'ext_contact') { st.status = 'requested'; out = { ok: true, request: 1001, name: 'سالم علي', status: 'requested', packages: ['الأحياء — التاسع'], shift: 'one', whatsapp: '96876506037' }; }

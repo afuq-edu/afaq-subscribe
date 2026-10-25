@@ -522,6 +522,24 @@ T(16, 'Mid-term start with fewer periods (2 a week for 3): the weeks that passed
   return b;
 });
 
+T(18, 'Slow Noor tree on a new device (only the first unit shows lessons): the tool takes the same subject\'s tree saved on the site from other teachers, and every session still gets its prep', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 24) }));
+  const tree = treeFromPackage(PKG);
+  const t1 = tree.terms[0];
+  check(t1.units.length > 1, `the package spans more than one unit (${t1.units.length})`);
+  const noor = env.noor({ tree, partialForms: 1 });
+  env.afaq.reset({ pkg: PKG, serverTree: t1.units.flatMap((u) => u.lessons.map((l) => ({ u: u.text, t: l.text }))) });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 20 * 60000, 'slow tree');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check(noor.st.formRenders >= 2 && env.afaq.st.calls.includes('ext_tree_get'), `the first tree read was partial and the site tree was asked for (form pages ${noor.st.formRenders})`, env.afaq.st.calls.join(','));
+  assertRows('S18', rows, tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
+  check(!env.afaq.st.trees.length, 'the site tree is not sent back to the site as if read from Noor', JSON.stringify(env.afaq.st.trees.map((t) => t.lessons.length)));
+  return b;
+});
+
 // ---------- main ----------
 const want = process.argv.slice(2).map(Number).filter(Boolean);
 const list = Object.keys(SC).map(Number).filter((n) => !want.length || want.includes(n));
