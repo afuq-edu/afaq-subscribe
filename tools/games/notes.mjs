@@ -10,15 +10,9 @@ const SITE = 'https://afuq-edu.github.io/afaq-subscribe/play.html?d=';
 const GAMES = path.join(path.dirname(new URL(import.meta.url).pathname), '../../site/games');
 export const MARK = 'play.html?d=';
 
-export function notesText(pkg, n, hunt) {
-  return [
-    'أنشطة الدرس التفاعلية (كل نشاط من ١٠ أسئلة، وفي النهاية شهادة باسم الطالب):',
-    '- صح أم خطأ: اقرأ العبارة واضغط صح أو خطأ.',
-    '- افتح الصناديق: أجب عن سؤال كل صندوق ليُفتح.',
-    ...(hunt ? ['- صياد الإجابة: اختر السرعة، واضغط على الإجابة الصحيحة وهي تتساقط.'] : []),
-    '- النشاط: اختر الإجابة الصحيحة.',
-    'الرابط: ' + SITE + pkg + '/' + n,
-  ].join('\n');
+// تعليمة قصيرة للطالب والرابط في سطر وحده (طلب المالك 2026-10-25: بلا شرح للأنشطة، وبالإنجليزية في مواد الإنجليزي)
+export function notesText(pkg, n, hunt, en = /^en-/.test(pkg)) {
+  return (en ? 'Students: complete the lesson activities using this link:' : 'للطالب: حلّ أنشطة الدرس من خلال الرابط:') + '\n' + SITE + pkg + '/' + n;
 }
 
 // اسم الدرس → نص الأنشطة، للدروس التي لها ملف سليم فقط

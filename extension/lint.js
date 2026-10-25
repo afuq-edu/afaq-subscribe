@@ -117,10 +117,7 @@ export function lintPackage(pkg, opts = {}) {
   if (good.length) {
     const off = good.filter((l) => !isSchoolDay(l.pubDate, days));
     if (off.length) add('info', 'offday-date', `${toArDigits(off.length)} ${off.length === 1 ? 'تاريخ يقع' : 'تواريخ تقع'} في يوم بلا حصص (${off.slice(0, 3).map((l) => dayLabel(l.pubDate, false)).join('، ')}) — يُنقل كلٌّ منها إلى يوم الحصة التالي تلقائيًا.`, off.map((l) => l.id));
-    const seen = new Map();
-    good.forEach((l) => { seen.set(l.pubDate, (seen.get(l.pubDate) || 0) + 1); });
-    const dup = [...seen].filter(([, n]) => n > 1).map(([d]) => d);
-    if (dup.length) add('warn', 'dup-date', `التاريخ نفسه لأكثر من حصة (${dup.slice(0, 3).map((d) => dayLabel(d, false)).join('، ')}) — نور لا تقبل تاريخين متطابقين للمادة؛ تُنقل الثانية إلى اليوم التالي تلقائيًا.`, good.filter((l) => dup.includes(l.pubDate)).map((l) => l.id));
+    // the same date twice is fine: Noor takes one prep per period, and two periods can fall on one day
     let back = 0;
     for (let i = 1; i < good.length; i++) if (good[i].pubDate < good[i - 1].pubDate) back++;
     if (back) add('info', 'order-date', `${toArDigits(back)} ${back === 1 ? 'تاريخ يسبق' : 'تواريخ تسبق'} تاريخ الحصة التي قبله في الملف — تُنشر بتواريخها كما كُتبت (الترتيب الزمني يختلف عن ترتيب الملف).`);

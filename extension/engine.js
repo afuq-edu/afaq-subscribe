@@ -36,6 +36,19 @@ export function hadirEngine(action, payload) {
 
   const winOf = (el) => (el && el.ownerDocument && el.ownerDocument.defaultView) || TOP;
 
+  // تسمية المربع نفسه: نور يضع مربعات الحصص كلها داخل <label> واحد كبير، فأقرب label يحوي نصوص الحصص كلها —
+  // يُقبل الأقرب فقط إن لم يحوِ مربعًا آخر، وإلا تسمية المربع المجاورة له في حاويته (div.checkbox)
+  const ownLabel = (el) => {
+    const solo = (l) => l && l.querySelectorAll('input[type="checkbox"], input[type="radio"]').length <= 1;
+    const c = el.closest && el.closest('label');
+    if (c && solo(c)) return c;
+    const f = el.id && el.ownerDocument.querySelector('label[for="' + CSS.escape(el.id) + '"]');
+    if (f) return f;
+    const p = el.parentElement;
+    if (p) { const sib = Array.from(p.children).find((x) => x.tagName === 'LABEL' && x !== c && solo(x)); if (sib) return sib; }
+    return null;
+  };
+  const soloBox = (p) => p && p.querySelectorAll('input[type="checkbox"], input[type="radio"]').length <= 1;
   const isRendered = (el) => {
     try {
       if (!el.isConnected) return false;
@@ -914,7 +927,7 @@ export function hadirEngine(action, payload) {
     if (isChecked(el)) return true;
     try { el.scrollIntoView({ block: 'nearest' }); } catch (e) {}
     if (el.tagName === 'INPUT') {
-      const lbl = el.closest('label') || (el.id && el.ownerDocument.querySelector('label[for="' + CSS.escape(el.id) + '"]'));
+      const lbl = ownLabel(el);
       if (!isRendered(el) && lbl && isRendered(lbl)) lbl.click(); else el.click();
       await sleep(40);
       if (!el.checked) { el.checked = true; fire(el, 'input'); fire(el, 'change'); }
@@ -1304,7 +1317,7 @@ export function hadirEngine(action, payload) {
       const out = [];
       for (const d of docs) d.doc.querySelectorAll('input[type="checkbox"].lecture_timeslots, input[type="checkbox"][name*="[timeslot]"], input[type="checkbox"][name*="[section]"]').forEach((el) => {
         if (isSec(el) !== !!sec) return;
-        const lbl = el.closest('label') || (el.parentElement && el.parentElement.querySelector('label'));
+        const lbl = ownLabel(el);
         if (isRendered(el) || (lbl && isRendered(lbl))) out.push(el);
       });
       return out;
@@ -1313,7 +1326,7 @@ export function hadirEngine(action, payload) {
     const boxes = () => docs.flatMap((d) => Array.from(d.doc.querySelectorAll('.lecture_timeslots_div, .timeslots')));
     const noPeriods = () => boxes().some((x) => isRendered(x) && NO_PERIODS.test(x.textContent || ''));
     const sig = () => boxes().map((x) => x.innerHTML.length + ':' + (x.textContent || '').replace(/\s+/g, ' ').trim()).join('|');
-    const textOf = (el) => { const l = el.closest('label') || (el.id && el.ownerDocument.querySelector('label[for="' + CSS.escape(el.id) + '"]')) || (el.parentElement && el.parentElement.querySelector('label')); return clean((l || el.parentElement || {}).textContent || el.value || ''); };
+    const textOf = (el) => { const l = ownLabel(el); return clean((l || (soloBox(el.parentElement) ? el.parentElement : null) || {}).textContent || el.value || ''); };
     const secOf = (el) => { const t = textOf(el), parts = t.split(/\s+-\s+/); return parts.length >= 4 ? parts.slice(0, -1).join(' - ') : t.replace(/\d+/g, ' ').replace(/\s+/g, ' ').trim(); };
     return (async () => {
       const out = [];
@@ -1455,7 +1468,7 @@ export function hadirEngine(action, payload) {
           for (const d of docs) {
             d.doc.querySelectorAll('input[type="checkbox"].lecture_timeslots, input[type="checkbox"][name*="[timeslot]"], input[type="checkbox"][name*="[section]"]').forEach((el) => {
               if ((el.disabled && !withOff) || isSec(el) !== !!sec) return;
-              const lbl = el.closest('label') || (el.parentElement && el.parentElement.querySelector('label'));
+              const lbl = ownLabel(el);
               if (isRendered(el) || (lbl && isRendered(lbl))) out.push(el);
             });
           }
@@ -1479,7 +1492,7 @@ export function hadirEngine(action, payload) {
             results.timeslots = { status: hits + already === secs.length ? 'ok' : 'partial', how: 'section', hits, already, total: secs.length, cap: 1 };
           } else results.timeslots = { status: 'nolabel', sectionOnly: !!secs.length, noPeriods: noPeriods() };
         } else {
-          const textOf = (el) => { const l = el.closest('label') || (el.id && el.ownerDocument.querySelector('label[for="' + CSS.escape(el.id) + '"]')) || (el.parentElement && el.parentElement.querySelector('label')); return clean((l || el.parentElement || {}).textContent || el.value || ''); };
+          const textOf = (el) => { const l = ownLabel(el); return clean((l || (soloBox(el.parentElement) ? el.parentElement : null) || {}).textContent || el.value || ''); };
           // الشعبة: «المادة - الصف - الشعبة - الحصة» بلا الجزء الأخير؛ وإلا النص بلا رقم الحصة ولا وقتها
           const secOf = (el) => {
             const t = textOf(el), parts = t.split(/\s+-\s+/);
@@ -1522,7 +1535,7 @@ export function hadirEngine(action, payload) {
           for (const d of docs) {
             const boxes = Array.from(d.doc.querySelectorAll('input[type="checkbox"]')).filter((el) => !el.disabled);
             hit = boxes.find((el) => {
-              const lbl = el.closest('label') || (el.id && d.doc.querySelector('label[for="' + CSS.escape(el.id) + '"]'));
+              const lbl = ownLabel(el);
               const t = nrm(lbl ? lbl.textContent : labelOf(el));
               return t && t.includes(want);
             });
@@ -1555,7 +1568,7 @@ export function hadirEngine(action, payload) {
           const pub = pubs[0];
           if (pub && !String(pub.value || '').trim()) miss.push('تاريخ النشر');
           const slots = Array.from(doc.querySelectorAll('input[type="checkbox"].lecture_timeslots')).filter((el) => {
-            if (el.disabled) return false; const lbl = el.closest('label'); return isRendered(el) || (lbl && isRendered(lbl));
+            if (el.disabled) return false; const lbl = ownLabel(el); return isRendered(el) || (lbl && isRendered(lbl));
           });
           if (pub && pub.value && slots.length && !slots.some((c) => c.checked)) miss.push('الصفوف (الحصص)');
           saveBtn = saveBtn || Array.from(doc.querySelectorAll('button, input[type="submit"]')).find((b) => isRendered(b) && nrm(b.textContent || b.value) === nrm('حفظ') && !b.closest('.swal2-popup, .modal'));
