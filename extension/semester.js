@@ -2213,6 +2213,8 @@ if (q.get('debug') === '1') {
 // (الدروس وتاريخ كل حصة) ← التعبئة والحفظ وحدهما. لا شاشات أخرى ولا اقتراحات.
 const SHIFT = { one: { name: 'فترة واحدة', min: 40 }, two: { name: 'فترتان', min: 35 } };
 const WZ_STEPS = ['mode', 'grade', 'subject', 'shift', 'lessons'];
+// «بداية الإدخال» في التحضير التلقائي: في النسخة الخاصة بالمالك فقط (اسم الإصدار فيه «خاصة»)
+const FROM_STEP = (() => { try { return /خاصة/.test(chrome.runtime.getManifest().version_name || ''); } catch (e) { return false; } })();
 const wz = { step: 'mode', hist: [], mode: '', grade: 0, subject: '', shift: '', pkg: null, sel: new Map(), catalog: null, link: null, status: null, busy: false };
 const ORD = ['الأولى', 'الثانية', 'الثالثة', 'الرابعة', 'الخامسة', 'السادسة', 'السابعة', 'الثامنة'];
 const wdone = (l) => { const x = sessionStatus(state, wz.pkg.id, l.id); return !!(x.saved || (x.filled && !x.failed)); };
@@ -2431,7 +2433,7 @@ function wzOpen(p) {
   if (p.remote && p.remote.trial && !p.remote.left) { payResume = 'open'; wzGo('pay'); return; }
   const ids = new Set((p.lessons || []).map((l) => l.id));
   [...wz.sel.keys()].forEach((k) => { if (!ids.has(k)) wz.sel.delete(k); });
-  if (wz.mode === 'term') wzGo('from'); else wzGo('lessons');
+  if (wz.mode === 'term') { if (FROM_STEP) wzGo('from'); else wzRun(); } else wzGo('lessons');
 }
 // بعد نوع المدرسة: مادة في مكتبتك ← wzOpen · مادة من الكتالوج ← تجربة (الاسم أول مرة)
 async function wzResolve(noName) {
