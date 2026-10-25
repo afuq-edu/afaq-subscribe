@@ -387,6 +387,7 @@
 
   // ================= الباقات والمحتوى =================
   function renderPackages() {
+    renderTrees();
     $('#pkgGrade').innerHTML = A.GRADES.slice(1).map((g, i) => `<option value="${i + 1}">${g}</option>`).join('');
     $('#subjList').innerHTML = [...new Set([...Object.keys(SUBJECT_IDS), ...D.packages.map((p) => p.subject)])].map((s) => `<option value="${esc(s)}">`).join('');
     const cnt = (id, t) => D.content.find((c) => c.package_id === id && c.term === t);
@@ -408,6 +409,37 @@
         if (!confirm('حذف الباقة ومحتواها؟ لا يمكن حذف باقة لها اشتراكات أو رموز — أخفِها بدلًا من ذلك.')) return;
         try { await db.remove('packages', { id: b.dataset.del }); await loadAll(); renderPackages(); A.toast('حُذفت الباقة.'); }
         catch (e) { A.toast(/foreign key|violates/i.test(String(e.message)) ? 'للباقة اشتراكات أو رموز — أخفِها بدلًا من حذفها.' : A.errText(e), 'bad'); }
+      };
+    });
+  }
+  // شجرات نور المحفوظة من أجهزة المعلمين: الأحدث أولًا، والدروس التي لا تحضير لها أولًا عند فتح الشجرة
+  async function renderTrees() {
+    const tb = $('#treeTable');
+    if (!tb) return;
+    let rows = [];
+    try { rows = await db.list('noor_trees', { select: 'id,package_id,term,term_text,units,lessons_n,orphans,seen,first_at,last_at,ver', order: [['last_at', false]], limit: 500 }); }
+    catch (e) { tb.innerHTML = `<tr><td class="empty">${/noor_trees|relation|schema/i.test(String(e.message)) ? 'لم يُفعَّل حفظ الشجرات في قاعدة البيانات بعد.' : esc(A.errText(e))}</td></tr>`; return; }
+    const title = (id) => (D.packages.find((p) => p.id === id) || {}).title || id;
+    tb.innerHTML = `<tr><th>المادة</th><th>الفصل</th><th>الدروس</th><th>بلا تحضير</th><th>رآها</th><th>آخر مرة</th><th></th></tr>` + (rows.length ? rows.map((r) => `<tr>
+      <td><b>${esc(title(r.package_id))}</b><br><small class="muted" dir="ltr">${esc(r.package_id)}</small></td>
+      <td>${esc(r.term_text || (r.term ? 'الفصل ' + toAr(r.term) : ''))}</td>
+      <td>${toAr(r.lessons_n || 0)} <small class="muted">في ${toAr(r.units || 0)} وحدة</small></td>
+      <td>${r.orphans ? `<span class="chip warn">${toAr(r.orphans)}</span>` : '<span class="chip ok">٠</span>'}</td>
+      <td>${toAr(r.seen || 1)} ${r.seen === 1 ? 'مرة' : 'مرات'}</td>
+      <td>${esc(ago(r.last_at))}<br><small class="muted" dir="ltr">${esc(r.ver || '')}</small></td>
+      <td><button class="btn ghost sm" data-tree="${r.id}" type="button">اعرض</button></td></tr>`).join('') : '<tr><td colspan="7" class="empty">لم تصل شجرة بعد — تصل حين يفتح معلم مادة في نور بالنسخة 4.10.11 أو أحدث.</td></tr>');
+    $$('[data-tree]').forEach((b) => {
+      b.onclick = async () => {
+        const v = $('#treeView');
+        try {
+          const [t] = await db.list('noor_trees', { select: 'package_id,term_text,lessons', eq: { id: +b.dataset.tree } });
+          const ls = (t && t.lessons) || [];
+          let unit = '';
+          v.innerHTML = `<b>${esc(title(t.package_id))}</b> — ${esc(t.term_text || '')}<div class="tablewrap" style="margin-top:8px"><table class="grid"><tr><th>الدرس في نور</th><th>من ملف المادة</th><th>الحصص</th></tr>` +
+            ls.map((l) => { const h = l.u !== unit ? `<tr><td colspan="3" style="background:var(--bg-soft,#f4f6f8)"><b>${esc(l.u)}</b></td></tr>` : ''; unit = l.u;
+              return h + `<tr><td>${esc(l.t)}</td><td>${l.f ? esc(l.f) : '<span class="chip warn">بلا تحضير</span>'}</td><td>${toAr(l.n || 0)}</td></tr>`; }).join('') + '</table></div>';
+          v.hidden = false; v.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } catch (e) { A.toast(A.errText(e), 'bad'); }
       };
     });
   }

@@ -285,6 +285,27 @@ async function flDo() {
   }
 }
 
+// ---------- شجرة نور ----------
+// أسماء وحدات المادة ودروسها في نور، وما رُبط بكل درس من ملف المادة — تُرسل بصمت في الخلفية (لا شيء عن المعلم)،
+// فيرى المدير شجرة كل مادة كما هي في نور. مرة لكل شجرة في اليوم على هذا الجهاز؛ أي خطأ يُتجاهل
+const TREES = 'afaqTreesSent';
+export async function sendNoorTree(tree) {
+  try {
+    const link = await getLink();
+    if (!link || !tree || !tree.package_id || !Array.isArray(tree.lessons) || !tree.lessons.length) return;
+    const key = tree.package_id + '|' + tree.term + '|' + tree.lessons.map((l) => l.u + '|' + l.t + '|' + l.f).join('\n').length + '|' + tree.lessons.length;
+    const sent = (await chrome.storage.local.get(TREES))[TREES] || {};
+    if (sent[key] && Date.now() - sent[key] < 864e5) return;
+    if (!tree.ver) { try { tree.ver = chrome.runtime.getManifest().version; } catch (e) { tree.ver = ''; } }
+    const r = await rpc('ext_tree', { p_token: link.token, p_tree: tree }, 8000);
+    if (r && r.ok === true) {
+      sent[key] = Date.now();
+      Object.keys(sent).forEach((k) => { if (Date.now() - sent[k] > 7 * 864e5) delete sent[k]; });
+      await chrome.storage.local.set({ [TREES]: sent }).catch(() => {});
+    }
+  } catch (e) {}
+}
+
 // ---------- نسخة جديدة ----------
 // حتى يُقبل المتجر: من ثبّت «حاضر» يدويًا (غير مضغوطة) يرى تنبيهًا بزر «حدّث الآن» إن نُشرت نسخة أحدث في الموقع
 const newer = (a, b) => { const x = String(a).split('.').map(Number), y = String(b).split('.').map(Number); for (let i = 0; i < 3; i++) { if ((x[i] || 0) !== (y[i] || 0)) return (x[i] || 0) > (y[i] || 0); } return false; };

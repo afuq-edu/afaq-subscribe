@@ -14,7 +14,7 @@ import {
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { diffDays, addDays } from './dates.js';
 import { AFAQ } from './afaq-config.js';
-import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck, installUrl, fillLog, flushFillLog } from './remote.js';
+import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck, installUrl, fillLog, flushFillLog, sendNoorTree } from './remote.js';
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -52,6 +52,7 @@ let useFile = false;       // تواريخ الملف تُستعمل (الماد
 let startAuto = '';        // «أول تاريخ نشر» كما اقترحته الأداة — إن اختلف عنه ما في الخانة فقد حددته أنت
 const dateNotes = new Set();   // ملاحظات نقل التواريخ التي سُجّلت (حتى لا تتكرر)
 let lintRes = null;
+let schedRead = false;   // قُرئ جدول حصص المعلم من نور (أو تعذّرت قراءته) في هذه التعبئة
 // المعالج (الخطوات البسيطة): القاعدة المختارة للتواريخ، وحد التجربة المجانية، وتواريخ التحاضير الموجودة في نور
 const WIZ = { on: false, rule: '', trialCap: null, trialOver: false, rid: 0, sum: 0, auto: 0, timer: null };
 let noorDates = new Set();
@@ -213,6 +214,13 @@ function assignDates() {
   const planEnd = pkgEnd(pkg) || termEndOf(settings, termNo);
   const termEnd = termEndOf(settings, termNo) || (pkg.remote && isIso(pkg.remote.ends_on) ? pkg.remote.ends_on : '') || planEnd;
   let loose = '';   // ضغط الفصل: من هذا التاريخ تلي كل حصة ما قبلها مباشرة بدل انتظار أسبوعها في الخطة
+  // الجمع يُحسب من جديد في كل توزيع: ما جُمع قبل قراءة جدول حصص المعلم (حصتان في يوم مثلًا) لا يبقى إن اتسع له الجدول.
+  // ما حُفظ في نور لا يدخل هنا (ليس من المرشحين)، فتبقى تحاضيره المجموعة كما هي
+  const candSet = new Set(cands);
+  cands.forEach((s) => {
+    if (s.merge && s.merge.length) { s.merge.forEach((x) => { if (candSet.has(x)) x.mergedInto = null; }); s.merge = null; }
+    if (s.mergedInto && candSet.has(s.mergedInto)) s.mergedInto = null;
+  });
   const lay = () => {
     const items = order.filter((s) => !s.mergedInto).map((s) => ({ s, fileDate: fileMode && isIso(s.lesson.pubDate) ? s.lesson.pubDate : '', fixed: s.fixed || '', after: after.get(s) || '' }));
     const notes = layoutDates(items, { start: startIso, days, taken, useFileDates: fileMode, skip: holidaySet(settings), exact: !!WIZ.pickDates, cap: capOf, weekly: fileMode && !WIZ.pickDates, loose, today: fromIso ? '' : todayIso() });
@@ -263,7 +271,8 @@ function assignDates() {
   // ميزانية الفصل: حصص ستقع بعد آخر يوم دراسي (تُعبَّأ بتواريخها، لكن تُنبَّه عليها)
   const late = items.filter((it) => it.s.afterTerm).length;
   const merged = cands.filter((x) => x.mergedInto).length;
-  if (merged && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', `حصص الفصل أكثر من حصصك في الجدول: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد، فتكتمل الخطة في أسابيعها (آخرها ${dayLabel(planEnd, false)})`); }
+  // يُذكر الجمع بعد قراءة جدول المعلم فقط: قبلها قد يُجمع ما يتسع له الجدول ثم يُفكّ
+  if (merged && schedRead && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', `حصص الفصل أكثر من حصصك في الجدول: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد، فتكتمل الخطة في أسابيعها (آخرها ${dayLabel(planEnd, false)})`); }
   if (!WIZ.on && termEnd && late && !dateNotes.has('late:' + late)) { dateNotes.add('late:' + late); logLine('info', `${toAr(late)} ${late === 1 ? 'حصة ستقع' : 'حصص ستقع'} بعد نهاية الفصل (${dayLabel(termEnd, false)}) — راجع ميزانية الفصل في «فحص ملف المادة»`); }
   cands.forEach((s) => { s.on = s.manual != null ? s.manual : inScope(s); });
   plan.forEach((p) => p.sessions.filter((s) => !s.eligible).forEach((s) => { s.on = false; s.date = s.date || ''; }));
@@ -878,6 +887,9 @@ async function waitForm(ms = 45000) {
 // جسّ جدول المعلم قبل التعبئة: يومٌ من كل يوم أسبوع في أسبوع البداية يُكتب تاريخه في النموذج وتُقرأ حصصه كما يعرضها نور —
 // فتُعرف من البداية الأيام التي لا حصة فيها (تُتخطّى) وعدد حصص الشعبة في كل يوم (تحضير لكل حصة)، وتُرتَّب الخطة عليها قبل أول حصة
 async function probeSchedule(addUrl) {
+  try { return await probeSchedule0(addUrl); } finally { schedRead = true; }
+}
+async function probeSchedule0(addUrl) {
   if (!useFile || WIZ.pickDates || !queue.length || stopFlag) return;
   const today = todayIso();
   const ws = weekStart(queue[0].date > today ? queue[0].date : today);
@@ -905,6 +917,7 @@ async function probeSchedule(addUrl) {
   renderDays();
   if (seen.length) logLine('info', `جدول حصصك في نور (أسبوع ${dayLabel(ws, false)}): ${seen.join(' · ')}${none.length ? ` — ولا حصة لك يوم ${none.map((wd) => DAY_NAMES[wd]).join(' و')}` : ''}`);
   try { const { state: st } = await getPackages(); st.pkgCaps = Object.assign({}, st.pkgCaps || {}, { [pkg.id]: Object.assign({}, caps) }); await savePkgState(st); state = st; } catch (e) {}
+  schedRead = true;
   assignDates(); renderPlan();
 }
 async function openForm(addUrl) {
@@ -1243,6 +1256,12 @@ async function buildPlan(nodes) {
   const cp0 = completion();
   if (orphans.length && orphans.length < nodes.length && !cp0.complete) logLine('info', `${toAr(orphans.length)} ${orphans.length === 1 ? 'درس في شجرة نور ليس له' : 'دروس في شجرة نور ليس لها'} تحضير في ملفك: ${orphans.slice(0, 5).map((n) => '«' + n.text + '»').join('، ')}${orphans.length > 5 ? '…' : ''} — اربطها يدويًا من «الخطة» إن كانت لدروس ملفك بأسماء مختلفة`);
   diag.orphans = orphans.map((n) => n.text);
+  // شجرة المادة في نور مع ما رُبط بكل درس — إلى لوحة المدير (في الخلفية، بصمت)
+  if (pkg.remote && nodes.length) {
+    const bound = new Map();
+    plan.forEach((p) => { if (p.node) { const b = bound.get(p.node.id) || { f: [], n: 0 }; b.f.push(p.group.lesson); b.n += p.group.sessions.length; bound.set(p.node.id, b); } });
+    sendNoorTree({ package_id: pkg.remote.package_id || pkg.id, term: pkg.remote.term || termNo, term_text: nodes[0].term || '', lessons: nodes.map((n) => { const b = bound.get(n.id); return { u: n.unit || '', t: n.text, f: b ? b.f.join(' ؛ ') : '', n: b ? b.n : 0 }; }) });
+  }
   // أسماء وحدات ملفك لا تشبه وحدات هذا المقرر: غالبًا المادة لصف أو كتاب آخر
   plan.mismatch = al.unitsNamed >= 2 && al.unitsByName / al.unitsNamed < 0.5;
   diag.plan = plan.map((p) => ({ unit: p.group.unit, lesson: p.group.lesson, sessions: p.sessions.length, node: p.node ? p.node.text : null, how: p.how || '', why: p.why || '', inNoor: p.sessions.filter((s) => s.inNoor).length }));

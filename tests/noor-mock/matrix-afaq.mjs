@@ -12,7 +12,7 @@ export function startAfaq(port = 0) {
     st = {
       pkg: o.pkg, pkgs: o.pkgs || null, catalog: o.catalog || null, meta: o.meta || {}, tag: o.tag || null, picked: [],
       active: o.trialLeft == null, left: o.trialLeft == null ? 0 : o.trialLeft, status: o.trialLeft == null ? 'active' : 'trial',
-      holidays: o.holidays || '', calls: [], sessions: [], noor: [], shiftAsked: [],
+      holidays: o.holidays || '', calls: [], sessions: [], noor: [], trees: [], shiftAsked: [],
     };
     return st;
   };
@@ -51,6 +51,7 @@ export function startAfaq(port = 0) {
       else if (fn === 'ext_structure') { const p = pkgOf(args.p_package); out = p ? { ok: true, pkg: JSON.parse(JSON.stringify(p)) } : { ok: false, error: 'packages' }; }
       else if (fn === 'ext_pick') { pick(args.p_packages); st.shiftAsked.push(args.p_shift); out = { ok: true, request: 1001 }; }
       else if (fn === 'ext_noor') { st.noor.push(args); out = { ok: true }; }
+      else if (fn === 'ext_tree') { st.trees.push(args.p_tree); out = { ok: true }; }
       else if (fn === 'ext_set_ref') out = { ok: true };
       else if (fn === 'ext_referral') out = { ok: true, request: 1001, invited: 0 };
       else if (fn === 'ext_contact') { st.status = 'requested'; out = { ok: true, request: 1001, name: 'سالم علي', status: 'requested', packages: ['الأحياء — التاسع'], shift: 'one', whatsapp: '96876506037' }; }
