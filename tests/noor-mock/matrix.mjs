@@ -45,6 +45,7 @@ const FLOWS = String(opt('flows', 'term,pick')).split(',');
 // twoper: section 1 has two periods every Sunday (real Noor: «… - 1 -  الحصة 7» and «… الحصة 8») — one prep per period
 // oneper: the teacher has fewer periods a week than the plan (one day less than the plan's weekly average needs, at least one:
 //   Sunday, Sunday+Monday, …) — consecutive sessions of a lesson share one prep «الدرس (2 و 3)» so nothing goes past the plan's last week
+const TREE_FN = process.env.TREE_OVERRIDE ? (await import(process.env.TREE_OVERRIDE)).default : null;
 const FAULTS = ['none', 'holidays', 'busy', 'reject', 'netcut', 'close', 'yearend', 'twoper', 'oneper'];
 const FIXED_NOW = '2026-09-05';   // the wizard's «today» in these runs (?now=): the day before every plan starts, so nothing has passed
 const onePer = (pkg) => { const ds = pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort(); const wks = Math.max(1, Math.round((new Date(ds[ds.length - 1]) - new Date(ds[0])) / 6048e5) + 1); const k = Math.max(1, Math.ceil(pkg.lessons.length / wks) - 1); return Object.fromEntries([0, 1, 2, 3, 4].map((d) => [d, d < k ? [['1', 1], ['2', 1]] : []])); };
@@ -336,6 +337,10 @@ function setupJob(job) {
   }
   const gradeName = GRADES[job.grade - 1];
   const T = buildTree(pkg, r, gradeName);
+  if (process.env.TREE_OVERRIDE) {   // exploration: a real Noor layout replaces the generated term-1 units
+    const fn = TREE_FN;
+    T.tree.terms[0].units = fn(T.tree.terms[0].units, pkg);
+  }
   const other = job.grade === 12 ? 11 : job.grade + 1;
   const otherSubject = ['المهارات الحياتية', 'التربية الموسيقية'].find((s) => !s.includes(pkg.subject) && !pkg.subject.includes(s));
   const cid = 'K' + String(hash(job.id) % 100000);
@@ -432,6 +437,7 @@ async function flowTerm(job, J, W) {
     }
     const s = await waitFinal(b, 120000 + n * 12000, tick, F.info);
     F.info.final = `${s.head} | ${s.text}`.slice(0, 300);
+    if (process.env.TREE_OVERRIDE) { const nb = new Map(); J.T.tree.terms[0].units.forEach((u) => u.lessons.forEach((l) => nb.set(l.nodeId, u.text + ' » ' + l.text))); noor.st.rows.filter((x) => !x.preexisting).sort((a, b) => (a.publishDate || '').localeCompare(b.publishDate || '')).forEach((x) => console.log('ROW', x.publishDate, '|', nb.get(x.lessonId) || x.lessonId, '|', x.title)); }
     if (process.env.DUMP_LOG) fs.writeFileSync(path.join(process.env.DUMP_LOG, `${job.id}-term1.log`), (await dumpLog(b.pg)).join('\n'));
     const rows0 = noor.st.rows.filter((x) => !x.preexisting), rows = splitMerged(rows0);   // a prep «(n و m)» counts once per session
     F.info.saved = rows0.length; F.info.posts = noor.st.posts.length;

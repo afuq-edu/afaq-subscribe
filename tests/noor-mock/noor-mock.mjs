@@ -114,7 +114,7 @@ export function createNoor(cfg) {
  <input type="hidden" id="lesson-id" name="data[Preparation][lesson_id]" value="0">
  <div id="jstree_node_tree"><ul class="jstree-container-ul"></ul></div>
  <div class="pub"><span>تاريخ النشر</span> <input type="text" class="pubDateClass" id="publishdate-1" name="data[Preparation][date1][publish_date]" autocomplete="off"></div>
- <div class="timeslots"><div class="lecture_timeslots_div" id="slots-1"></div></div>
+ <div class="timeslots"><label for="AssessmentAssessmentTasks" class="control-label"> <div class="lecture_timeslots_div" id="slots-1"></div> </label></div>
  <label><input type="checkbox" name="data[Preparation][global]" value="1"> تعميم التحضير على كافة الجداول</label>
  <label><input type="checkbox" name="data[Preparation][semester_plan]" value="1" id="semesterPlan"> خطة فصلية</label>
  <label class="ctl-label">المخرجات التعليمية</label>

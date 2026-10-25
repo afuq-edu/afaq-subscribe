@@ -413,6 +413,32 @@ for (const [n, mode] of [[11, 'disable'], [12, 'hide']]) T(n, `Two periods of on
   return b;
 });
 
+// real Noor 2026-10-25 (owner's page): every period box sits inside ONE big <label> around the whole list, so the nearest
+// label of a box holds the text of all four periods; 4.10.10 read them as one section with four periods → four preps on
+// that day, one period each. Timetable: Sun section 4 ×2 + sections 5 and 6 ×1 · Tue sections 4, 5, 6 ×1 · other days none
+T(17, 'Three sections on Sunday, one of them with two periods (real Noor wraps all period boxes in one label): two preps that day — sections 4+5+6, then section 4 again', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 18) }));
+  const tree = treeFromPackage(PKG);
+  const periods = { 0: [['4', 2], ['5', 1], ['6', 1]], 1: [], 2: [['4', 1], ['5', 1], ['6', 1]], 3: [], 4: [] };
+  const noor = env.noor({ tree, periods, takenSlots: 'disable' });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 20 * 60000, 'three sections term');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  const secs = (r) => [...new Set((r.slots || []).map((x) => String(x).split('|')[0]))].sort().join(',');
+  const byDay = rows.reduce((m, r) => { (m[r.publishDate] = m[r.publishDate] || []).push(r); return m; }, {});
+  const sundays = Object.entries(byDay).filter(([d]) => new Date(d + 'T12:00').getDay() === 0);
+  const show = JSON.stringify(Object.fromEntries(Object.entries(byDay).map(([d, v]) => [d, v.map((r) => (r.slots || []).join('+'))])));
+  check(sundays.length && sundays.every(([, v]) => v.length === 2), 'every Sunday has exactly two preps (not one per period box)', show);
+  check(sundays.every(([, v]) => v.some((r) => secs(r) === '4,5,6' && (r.slots || []).length === 3) && v.some((r) => secs(r) === '4' && (r.slots || []).length === 1)), 'first Sunday prep: sections 4, 5 and 6 together; second: section 4 only', show);
+  check(Object.entries(byDay).filter(([d]) => new Date(d + 'T12:00').getDay() === 2).every(([, v]) => v.length === 1 && secs(v[0]) === '4,5,6'), 'every Tuesday: one prep for sections 4, 5 and 6', show);
+  check(rows.length === PKG.lessons.length, `every session in its own prep (${rows.length} preps for ${PKG.lessons.length} sessions)`);
+  check(!noor.st.posts.some((p) => /date-dup/.test(p.outcome || '')), 'Noor never refused a save as a duplicate period');
+  return b;
+});
+
 for (const [n, left] of [[13, 0], [14, 2]]) T(n, `Reinstall: a new trial request (${left} free sessions left) on the Noor account of a paid subscriber with the same name → the subscription comes back by itself, the whole term is filled, no pay screen`, async (env) => {
   usePkg(derivePkg({ keep: range(1, 9) }));
   const tree = treeFromPackage(PKG);
