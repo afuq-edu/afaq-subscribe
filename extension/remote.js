@@ -289,6 +289,16 @@ async function flDo() {
 // أسماء وحدات المادة ودروسها في نور، وما رُبط بكل درس من ملف المادة — تُرسل بصمت في الخلفية (لا شيء عن المعلم)،
 // فيرى المدير شجرة كل مادة كما هي في نور. مرة لكل شجرة في اليوم على هذا الجهاز؛ أي خطأ يُتجاهل
 const TREES = 'afaqTreesSent';
+// آخر شجرة كاملة لهذه المادة والفصل قرأها أي معلم (للقراءة الناقصة أو الفارغة من نور) — null إن لم توجد
+export async function getNoorTree(packageId, term) {
+  try {
+    const link = await getLink();
+    if (!link || !packageId) return null;
+    const r = await rpc('ext_tree_get', { p_token: link.token, p_package: packageId, p_term: term || null }, 8000);
+    if (!r || r.ok !== true || !Array.isArray(r.lessons) || !r.lessons.length) return null;
+    return { at: Number(r.at) || Date.now(), seen: r.seen || 1, lessons: r.lessons.filter((l) => l && l.t).map((l) => ({ text: l.t, unit: l.u || '' })) };
+  } catch (e) { return null; }
+}
 export async function sendNoorTree(tree) {
   try {
     const link = await getLink();

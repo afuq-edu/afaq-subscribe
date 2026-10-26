@@ -14,7 +14,7 @@ import {
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { diffDays, addDays } from './dates.js';
 import { AFAQ } from './afaq-config.js';
-import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck, installUrl, fillLog, flushFillLog, sendNoorTree } from './remote.js';
+import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck, installUrl, fillLog, flushFillLog, sendNoorTree, getNoorTree } from './remote.js';
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -53,6 +53,7 @@ let startAuto = '';        // «أول تاريخ نشر» كما اقترحته
 const dateNotes = new Set();   // ملاحظات نقل التواريخ التي سُجّلت (حتى لا تتكرر)
 let lintRes = null;
 let schedRead = false;   // قُرئ جدول حصص المعلم من نور (أو تعذّرت قراءته) في هذه التعبئة
+let treeFromServer = false;   // دروس هذه الجولة من شجرة الموقع لا من نور: لا تُحفظ ولا تُرسل كأنها قُرئت
 // المعالج (الخطوات البسيطة): القاعدة المختارة للتواريخ، وحد التجربة المجانية، وتواريخ التحاضير الموجودة في نور
 const WIZ = { on: false, rule: '', trialCap: null, trialOver: false, rid: 0, sum: 0, auto: 0, timer: null };
 let noorDates = new Set();
@@ -969,9 +970,15 @@ async function stepTree(addUrl) {
   if (!t.terms.length) throw new Error('لم تظهر الفصول الدراسية في شجرة نور — افتح «الكتاب» في الشجرة بنفسك ثم اضغط «ابدأ».');
   if (!term) throw new Error(`لم أجد الفصل ${termName(termNo)} في الشجرة (الموجود: ${t.terms.join('، ')}).`);
   // الشجرة المحفوظة لهذا المقرر: تكشف القراءة الناقصة (بطء نور) وتغيّر الشجرة (دروس أُضيفت أو حُذفت أو تغيّر اسمها)
-  const stored = await loadNoorTree(courseCid, termNo).catch(() => null);
+  let stored = await loadNoorTree(courseCid, termNo).catch(() => null);
+  // لا شجرة محفوظة على هذا الجهاز والقراءة فارغة أو أقل من المعتاد: نأخذ شجرة المادة نفسها التي حفظها الموقع من قراءات المعلمين
+  treeFromServer = false; let usedStored = false;
+  if (!stored && pkg.remote && !stopFlag) {
+    const sv = await getNoorTree(pkg.remote.package_id || pkg.id, pkg.remote.term || termNo).catch(() => null);
+    if (sv && sv.lessons.length && (!lessons.length || lessons.length < sv.lessons.length * 0.9)) { stored = sv; treeFromServer = true; }
+  }
   if (!lessons.length && stored && stored.lessons.length && Date.now() - stored.at < 120 * 864e5) {
-    lessons = stored.lessons.map((l) => ({ text: l.text, unit: l.unit, term: term.text }));
+    lessons = stored.lessons.map((l) => ({ text: l.text, unit: l.unit, term: term.text })); usedStored = true;
     logLine('info', `لم تظهر دروس الشجرة الآن — أعتمد شجرة هذا المقرر المحفوظة (${toAr(lessons.length)} درسًا، ${dayLabel(isoOf(new Date(stored.at)), false)})`);
   }
   if (!lessons.length) throw new Error(`لم تظهر دروس تحت الفصل «${term.text}» — ربما بطء في نور. اضغط «ابدأ» مرة أخرى.`);
@@ -981,10 +988,11 @@ async function stepTree(addUrl) {
     if (again.length > lessons.length) lessons = again;
     if (lessons.length < stored.lessons.length * 0.9 && Date.now() - stored.at < 120 * 864e5) {
       logLine('info', `الشجرة جاءت ناقصة (${toAr(lessons.length)} من ${toAr(stored.lessons.length)} درسًا) — أعتمد النسخة المحفوظة الكاملة لهذا المقرر`);
-      lessons = stored.lessons.map((l) => ({ text: l.text, unit: l.unit, term: term.text }));
+      lessons = stored.lessons.map((l) => ({ text: l.text, unit: l.unit, term: term.text })); usedStored = true;
     }
   }
-  if (!stored || lessons.length >= stored.lessons.length * 0.9) {
+  if (!usedStored) treeFromServer = false;   // نور أعطت الشجرة كاملة في المحاولة الثانية
+  if (!treeFromServer && (!stored || lessons.length >= stored.lessons.length * 0.9)) {
     const sv = await storeNoorTree({ cid: courseCid, termNo, termText: term.text, lessons, pkgId: pkg.id, title: pkg.title }).catch(() => ({}));
     if (!sv.prev && courseCid) logLine('info', `حفظت شجرة دروس هذا المقرر (الفصل ${termName(termNo)}) — تُستعمل لكشف أي تغيير لاحق فيها`);
     const d = sv.diff;
@@ -1257,7 +1265,7 @@ async function buildPlan(nodes) {
   if (orphans.length && orphans.length < nodes.length && !cp0.complete) logLine('info', `${toAr(orphans.length)} ${orphans.length === 1 ? 'درس في شجرة نور ليس له' : 'دروس في شجرة نور ليس لها'} تحضير في ملفك: ${orphans.slice(0, 5).map((n) => '«' + n.text + '»').join('، ')}${orphans.length > 5 ? '…' : ''} — اربطها يدويًا من «الخطة» إن كانت لدروس ملفك بأسماء مختلفة`);
   diag.orphans = orphans.map((n) => n.text);
   // شجرة المادة في نور مع ما رُبط بكل درس — إلى لوحة المدير (في الخلفية، بصمت)
-  if (pkg.remote && nodes.length) {
+  if (pkg.remote && nodes.length && !treeFromServer) {
     const bound = new Map();
     plan.forEach((p) => { if (p.node) { const b = bound.get(p.node.id) || { f: [], n: 0 }; b.f.push(p.group.lesson); b.n += p.group.sessions.length; bound.set(p.node.id, b); } });
     sendNoorTree({ package_id: pkg.remote.package_id || pkg.id, term: pkg.remote.term || termNo, term_text: nodes[0].term || '', lessons: nodes.map((n) => { const b = bound.get(n.id); return { u: n.unit || '', t: n.text, f: b ? b.f.join(' ؛ ') : '', n: b ? b.n : 0 }; }) });
