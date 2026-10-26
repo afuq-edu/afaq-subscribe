@@ -380,8 +380,10 @@ function traceRows(F, J, rows) {
     const g = J.T.groups.find((x) => x.key === (l.unit || '') + '|' + (l.lesson || ''));
     return J.T.nodeOf.get(g.key).text + ` (${r.mergedTags.map((t) => g.sessions.findIndex((x) => x.id === t) + 1).join(' و ')})`;
   };
-  const badTitle = rows.filter((r) => { const l = byId.get(tagOf(r.concepts)); return l && norm(r.title) !== norm(titleOf(r, l)); });   // whitespace-insensitive: Noor trims the title
-  check(F, !badTitle.length, 'title: Noor lesson name + «(n)» for session n', badTitle.slice(0, 8).map((r) => { const l = byId.get(tagOf(r.concepts)); return `${l.id}: «${r.title}» expected «${titleOf(r, l)}»`; }).join('\n'));
+  // Noor adds « (j)» itself to the j-th prep of one lesson on one date: the tool sends the bare name when j is the session number
+  const wantTitle = (r, l) => { const t = titleOf(r, l), j = r.dayRank; if (!j || j < 2) return t; const base = J.T.nodeOf.get((l.unit || '') + '|' + (l.lesson || '')).text; return !r.mergedTags && t === `${base} (${j})` ? t : `${t} (${j})`; };
+  const badTitle = rows.filter((r) => { const l = byId.get(tagOf(r.concepts)); return l && norm(r.title) !== norm(wantTitle(r, l)); });   // whitespace-insensitive: Noor trims the title
+  check(F, !badTitle.length, 'title: Noor lesson name + «(n)» for session n', badTitle.slice(0, 8).map((r) => { const l = byId.get(tagOf(r.concepts)); return `${l.id}: «${r.title}» expected «${wantTitle(r, l)}»`; }).join('\n'));
   const wk = rows.filter((r) => !isSchool(r.publishDate));
   check(F, !wk.length, 'weekdays: no publish date on Friday/Saturday', wk.map((r) => fmtRow(r, byId.get(tagOf(r.concepts)))).join('\n'));
   return { byId, cnt };

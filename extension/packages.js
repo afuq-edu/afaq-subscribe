@@ -858,7 +858,7 @@ export async function pickTreeNode(tabId, node) {
 }
 
 // «(2)» لعنوان الحصة الثانية من الدرس — فقط إن كان العنوان هو اسم الدرس في الشجرة (لا نغيّر عنوانًا كتبه المعلم)
-export async function applyTitleSuffix(tabId, pkg, lesson, nums = null) {
+export async function applyTitleSuffix(tabId, pkg, lesson, nums = null, dayRank = 1) {
   const st = await treeOp(tabId, { op: 'state' });
   if (!st.tree || !st.title || !st.selected) return null;
   // اسم الدرس نفسه قد ينتهي بـ«(1)» («الجمع (1)»): لا يُحذف منه، والحصة الثانية «الجمع (1) (2)»
@@ -868,7 +868,10 @@ export async function applyTitleSuffix(tabId, pkg, lesson, nums = null) {
   const base = ws(st.title) === ws(st.selected.text) || ws(stripSessionSuffix(st.title)) === ws(st.selected.text) ? (n >= 2 ? st.selected.text : st.title) : '';
   if (!base) return null;
   const many = Array.isArray(nums) && nums.length > 1;
-  const want = many ? `${st.selected.text} (${nums.join(' و ')})` : n >= 2 ? `${base} (${n})` : base;
+  let want = many ? `${st.selected.text} (${nums.join(' و ')})` : n >= 2 ? `${base} (${n})` : base;
+  // نور تضيف «(j)» بنفسها للتحضير رقم j من الدرس نفسه في اليوم نفسه (حصتان للدرس في يوم واحد): إن كان j هو رقم الحصة
+  // نكتب اسم الدرس وحده فيصير العنوان «X (2)» لا «X (2) (2)»
+  if (!many && n >= 2 && +dayRank === n) want = st.selected.text;
   if (want === st.title) return null;
   const r = await treeOp(tabId, { op: 'title', value: want });
   return r.ok ? want : null;
@@ -939,7 +942,7 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
     }
   }
   if (settings.titleSuffix !== false) {
-    const t = await applyTitleSuffix(tabId, pkg, lesson, opts.sessionNos).catch(() => null);
+    const t = await applyTitleSuffix(tabId, pkg, lesson, opts.sessionNos, opts.dayRank || 1).catch(() => null);
     if (t) { lessonRow = Object.assign(lessonRow || { status: 'ok', how: 'suffix' }, { values: [t] }); finalTitle = t; }
   }
   const parts = await execNoor(tabId, 'noor', {

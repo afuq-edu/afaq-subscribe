@@ -64,6 +64,7 @@ export function createNoor(cfg) {
     // the teacher's timetable: weekday → [[section, periods that day], …] (default: two sections, one period each, every day);
     // takenSlots: how the form shows a period that already has a prep on that date — 'disable' | 'hide' | 'show' (save then refuses)
     periods: cfg.periods || null,
+    sameDaySuffix: cfg.sameDaySuffix !== false,       // Noor numbers a second prep of one lesson on one date itself: «X (2)» sent → «X (2) (2)» stored
     partialForms: cfg.partialForms || 0,             // the first N «إضافة تحضير» pages show lessons under the first unit only (slow Noor tree)
     formRenders: 0,
     takenSlots: cfg.takenSlots || 'disable',
@@ -232,8 +233,11 @@ export function createNoor(cfg) {
     if (st.uniqueDates && st.rows.some((r) => r.cid === cid && r.publishDate === date && (!r.slots || r.slots.some((x) => want.includes(x))))) { post.outcome = 'date-dup'; return { kind: 'form', extra: { swal: 'يوجد تحضير مسبق بنفس التاريخ' } }; }
     const amb = st.ambiguous[n];
     if (amb === 'form-nosave') { post.outcome = 'ambiguous-not-saved'; return { kind: 'form', extra: {} }; }
+    // real Noor (owner's list 2026-10-26): the second prep of the same lesson on the same date gets « (2)» added to its title
+    const sameDay = st.rows.filter((r) => r.cid === cid && r.lessonId === lessonId && r.publishDate === date).length;
+    const stored = st.sameDaySuffix && sameDay ? `${title} (${sameDay + 1})` : title;
     const row = {
-      id: String(++st.nextId), cid, title, lessonId, nodeText: node.text, unit: node.unit, term: node.term, publishDate: date, created: nowStamp(), post: n,
+      id: String(++st.nextId), cid, title: stored, sentTitle: title, dayRank: sameDay + 1, lessonId, nodeText: node.text, unit: node.unit, term: node.term, publishDate: date, created: nowStamp(), post: n,
       concepts: g('concepts'), procedures: g('procedures').slice(0, 80), levels: all('levels'), strategies: all('strategies'), resources: all('resources'),
       timeslots: want.length || secOnly.length, slots: want.length ? want : null, sectionOnly: !want.length, objectives: all('objectives').length, global: g('global') === '1', semesterPlan: g('semester_plan') === '1',
     };
