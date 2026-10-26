@@ -39,7 +39,7 @@
     $$('[data-tab]').forEach((b) => b.setAttribute('aria-selected', b.dataset.tab === t));
     $$('[data-pane]').forEach((p) => { p.hidden = p.dataset.pane !== t; });
     history.replaceState(null, '', '#' + t);
-    ({ home: renderHome, stats: renderStats, requests: renderRequests, teachers: renderTeachers, packages: renderPackages, terms: renderTerms, settings: renderSettings })[t]();
+    ({ home: renderHome, stats: renderStats, requests: renderRequests, teachers: renderTeachers, packages: renderPackages, trees: renderTrees, terms: renderTerms, settings: renderSettings })[t]();
   }
   $$('[data-tab]').forEach((b) => { b.onclick = () => showTab(b.dataset.tab); });
 
@@ -387,7 +387,6 @@
 
   // ================= الباقات والمحتوى =================
   function renderPackages() {
-    renderTrees();
     $('#pkgGrade').innerHTML = A.GRADES.slice(1).map((g, i) => `<option value="${i + 1}">${g}</option>`).join('');
     $('#subjList').innerHTML = [...new Set([...Object.keys(SUBJECT_IDS), ...D.packages.map((p) => p.subject)])].map((s) => `<option value="${esc(s)}">`).join('');
     const cnt = (id, t) => D.content.find((c) => c.package_id === id && c.term === t);
