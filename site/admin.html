@@ -44,6 +44,7 @@
       <button role="tab" data-tab="stats">الإحصاءات</button>
       <button role="tab" data-tab="teachers">المعلمون</button>
       <button role="tab" data-tab="packages">الباقات والتحاضير</button>
+      <button role="tab" data-tab="trees">شجرات نور</button>
       <button role="tab" data-tab="terms">الفصول</button>
       <button role="tab" data-tab="settings">الإعدادات</button>
     </div>
@@ -135,7 +136,11 @@
           <input type="file" id="pkgFile" accept=".hadir,.json,application/json" hidden>
         </div>
       </div>
-      <div class="panel" style="margin-top:16px">
+    </section>
+
+    <!-- شجرات نور -->
+    <section data-pane="trees" hidden>
+      <div class="panel">
         <h2 style="font-size:20px;margin-bottom:6px">شجرات نور</h2>
         <p class="muted small" style="margin-bottom:10px">كلما فتح معلم مادة في نور حفظت «حاضر» شجرة دروسها هنا (أسماء الوحدات والدروس فقط). «بلا تحضير» = دروس في نور لم يُربط بها شيء من ملف المادة.</p>
         <div class="tablewrap"><table class="grid" id="treeTable"></table></div>
@@ -199,6 +204,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script src="assets/common.js"></script>
-<script src="assets/admin.js"></script>
+<script src="assets/admin.js?v=4.10.13"></script>
 </body>
 </html>
