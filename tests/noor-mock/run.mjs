@@ -53,6 +53,9 @@ const sid = (n) => 'bio-9-t1-' + String(n).padStart(3, '0');
 const range = (a, b) => Array.from({ length: b - a + 1 }, (_, i) => sid(a + i));
 const nodeFor = (tree, l) => { for (const u of tree.terms[0].units) for (const n of u.lessons) if (u.text === l.unit && n.fileLesson === l.lesson) return { ...n, unit: u.text }; return null; };
 const titleFor = (tree, l) => { const n = nodeFor(tree, l); const k = sessNo(l); return n.text + (k > 1 ? ` (${k})` : ''); };
+// Noor adds « (j)» itself to the j-th prep of one lesson on one date: the tool then sends the bare name when j is the session number
+// («X» → «X (2)»), else its own «(n)» stays and Noor's follows («X (5) (2)»)
+const withDayRank = (want, base, j) => (!j || j < 2 ? want : want === `${base} (${j})` ? want : `${want} (${j})`);
 const existingFor = (tree, ids, extra = {}) => ids.map((id) => ({ title: titleFor(tree, S[id]), publishDate: S[id].pubDate, nodeId: nodeFor(tree, S[id]).nodeId, ...extra }));
 const sessionOfRow = (r) => PKG.lessons.find((l) => norm(l.concepts) === norm(r.concepts)) || null;
 
@@ -86,8 +89,9 @@ function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], same
   }
   const wrong = rows.filter((r) => { const l = sessionOfRow(r); if (!l) return false; const n = nodeFor(tree, l); return !n || r.lessonId !== n.nodeId; });
   check(!wrong.length, `${name}: every session went into its own Noor lesson (tree node)`, wrong.map((r) => { const l = sessionOfRow(r); const n = l && nodeFor(tree, l); return `${l.id} «${l.lesson}» → saved in «${r.nodeText}» [${r.unit}] (expected «${n ? n.text : 'none'}» [${n ? n.unit : ''}])`; }).join('\n'));
-  const badTitle = rows.filter((r) => { const l = sessionOfRow(r); return l && nodeFor(tree, l) && r.title !== titleFor(tree, l); });
-  check(!badTitle.length, `${name}: titles use the Noor lesson name + «(n)» for session n`, badTitle.map((r) => `${sessionOfRow(r).id}: «${r.title}» expected «${titleFor(tree, sessionOfRow(r))}»`).join('\n'));
+  const wantTitle = (r, l) => withDayRank(titleFor(tree, l), nodeFor(tree, l).text, r.dayRank);
+  const badTitle = rows.filter((r) => { const l = sessionOfRow(r); return l && nodeFor(tree, l) && r.title !== wantTitle(r, l); });
+  check(!badTitle.length, `${name}: titles use the Noor lesson name + «(n)» for session n (Noor numbers a second prep of one lesson on one day)`, badTitle.map((r) => `${sessionOfRow(r).id}: «${r.title}» expected «${wantTitle(r, sessionOfRow(r))}»`).join('\n'));
   if (dates) {
     const off = rows.filter((r) => { const l = sessionOfRow(r); return l && dates[l.id] && r.publishDate !== dates[l.id]; });
     check(!off.length, `${name}: publish dates as expected`, off.map((r) => `${sessionOfRow(r).id}: got ${r.publishDate}, expected ${dates[sessionOfRow(r).id]}`).join('\n'));

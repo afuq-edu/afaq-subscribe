@@ -453,7 +453,13 @@ function haveMap(h) {
   (h.titles || []).forEach((t, i) => {
     let k = kwNorm(t), ns = [1];
     // «X (2 و 3)»: تحضير واحد لحصتين من الدرس نفسه — يُحسب للحصتين
-    if (!own.has(k)) { k = kwNorm(stripSessionSuffix(t)); ns = sessionNums(t) || [1]; }
+    if (!own.has(k)) {
+      // نور تضيف «(j)» بنفسها لتحضير ثانٍ للدرس نفسه في اليوم نفسه: «X (2) (2)» — رقم الحصة هو الأقرب لاسم الدرس
+      let base = t, inner = t;
+      for (let i = 0; i < 3 && !own.has(kwNorm(base)) && stripSessionSuffix(base) !== base; i++) { inner = base; base = stripSessionSuffix(base); }
+      if (own.has(kwNorm(base))) { k = kwNorm(base); ns = sessionNums(inner) || [1]; }
+      else { k = kwNorm(stripSessionSuffix(t)); ns = sessionNums(t) || [1]; }
+    }
     if (!k) return;
     const list = counts.get(k) || [];
     if (!rows.has(k)) rows.set(k, []);
@@ -1420,7 +1426,9 @@ async function fillOnce(item, c) {
   const s = item.s;
   setSt(s, 'run', 'تعبئة…');
   setBox('run', `أعبّئ «${shortT(s.lesson.title)}»…`, `الدرس: ${item.node.text}\nالنشر: ${dayLabel(s.date)}`);
-  const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title, slotNo: s.slot || 1, slotFull: slotSeen.get(s.date) || null, allowSection: !!WIZ.allowSection,
+  // ترتيب هذا التحضير بين تحاضير الدرس نفسه في اليوم نفسه (حصتان للدرس في يوم واحد) — نور ترقّم الثاني بنفسها
+  const dayRank = () => 1 + savedThisRun.filter((x) => x.s !== s && x.s.date === s.date && x.s.p && s.p && x.s.p.node && s.p.node && x.s.p.node.id === s.p.node.id).length;
+  const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title, dayRank: dayRank(), slotNo: s.slot || 1, slotFull: slotSeen.get(s.date) || null, allowSection: !!WIZ.allowSection,
     merge: s.merge && s.merge.length ? s.merge.map((x) => x.lesson) : null, sessionNos: s.merge && s.merge.length && s.p ? [s, ...s.merge].map((x) => s.p.sessions.indexOf(x) + 1) : null });
   let rep = await fillNoor(tabId, pkg, s.lesson, opts());
   let blk = rep.find((x) => x.key === 'remote');
