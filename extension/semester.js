@@ -1088,7 +1088,33 @@ function alignBySimilarity(gs, ns) {
   }
   return out;
 }
+// «لب» اسم الدرس للمقارنة: دون عنوان القسم («الأنشطة النحوية والصرفية:»، «التعبير:»…) ودون «الدرس الأول» وأل التعريف،
+// مع إبقاء الحروف المفردة («خط الرقعة: (ط، ظ)» = «خط الرقعة: ط- ظ» لا «ف- ق»)
+const SECT = /^(?:(?:ال)?انشطه (?:ال)?(?:نحويه|صرفيه|املاييه)(?: و ?(?:ال)?(?:نحويه|صرفيه|املاييه))?|(?:ال)?تعبير(?: (?:ال)?(?:شفوي|كتابي))?|(?:ال)?استماع|(?:ال)?تحدث|(?:ال)?قراءه|(?:ال)?نص (?:ال)?ادبي) /;
+const ORDS = '(?:الاول|الاولي|الثاني|الثانيه|الثالث|الثالثه|الرابع|الرابعه|الخامس|الخامسه|السادس|السادسه|السابع|السابعه|الثامن|الثامنه|التاسع|التاسعه|العاشر|العاشره|\\d+)';
+const coreOf = (t) => {
+  let k = kwNorm(String(t || '').replace(/[،؛؟]/g, ' '));
+  for (let i = 0; i < 3; i++) k = k.replace(SECT, '').replace(new RegExp(`(?:^| )(?:ال)?(?:درس|وحده) ${ORDS}(?= |$)`, 'g'), ' ').trim();
+  return k.split(' ').filter(Boolean).map((w) => (w.length > 3 && w.startsWith('ال') ? w.slice(2) : w));
+};
+const coreKey = (t) => coreOf(t).join(' ');
+// كلمات الاسم كلها مع عنوان القسم (لأسماء نور التي لا يميّزها إلا قسمها: «الأنشطة الإملائية: تطبيقات»)
+const fullWords = (t) => kwNorm(String(t || '').replace(/[،؛؟]/g, ' ')).replace(new RegExp(`(?:^| )(?:ال)?(?:درس|وحده) ${ORDS}(?= |$)`, 'g'), ' ')
+  .split(' ').filter(Boolean).map((w) => (w.length > 3 && w.startsWith('ال') ? w.slice(2) : w)).map((w) => (/^و.{3,}/.test(w) && !/^و[اوي]/.test(w) ? w.slice(1) : w));
+// بلا ما بين القوسين («المشروع (تنظيم البيانات…)» = «المشروع»)
+const coreKeyBare = (t) => coreKey(String(t || '').replace(/\([^()]*\)/g, ' '));
+const unitsOfList = (arr) => { const m = new Map(); arr.forEach((x, i) => { const k = x.unit || ''; if (!m.has(k)) m.set(k, []); m.get(k).push(i); }); return m; };
+// «الدرس الأول/الثاني…» في اسم الدرس
+const LNUM = /(?:ال)?درس\s+(?:رقم\s*)?(?:\d+|(?:ال)?(?:[أاإ]ول[ىي]?|ثاني[ةه]?|ثالث[ةه]?|رابع[ةه]?|خامس[ةه]?|سادس[ةه]?|سابع[ةه]?|ثامن[ةه]?|تاسع[ةه]?|عاشر[ةه]?))(?![\u0621-\u064a])\s*[:：\-–]?\s*/g;
 function alignGroups(groups, nodes, known) {
+  // ملفك يبدأ العدّ من جديد في كل قسم من الوحدة (نحوية: الدرس الأول، إملائية: الدرس الأول، تعبير: الدرس الأول) ونور يعدّ دروس الوحدة كلها:
+  // رقم الدرس في هذه الوحدة لا يدل على درس نور — يُقارن بالاسم وحده
+  const perSect = new Set();
+  unitsOfList(groups).forEach((gis, u) => {
+    const seen = new Map();
+    gis.forEach((gi) => { const n = lessonNum(groups[gi].lesson); if (n == null) return; const k = coreKey(groups[gi].lesson); if (seen.has(n) && seen.get(n) !== k) perSect.add(u); seen.set(n, k); });
+  });
+  if (perSect.size) groups = groups.map((g) => { if (!perSect.has(g.unit || '')) return g; const t = String(g.lesson || '').replace(LNUM, ' ').replace(/\s+/g, ' ').replace(/^[\s:：\-–]+|[\s:：\-–]+$/g, '').replace(/:\s*:/g, ':'); return t ? { ...g, lesson: t } : g; });
   const res = groups.map(() => ({ node: null, how: '', why: '' }));
   const used = new Set();
   const put = (gi, node, how) => { res[gi] = { node, how, why: '' }; used.add(node.id); };
@@ -1117,6 +1143,22 @@ function alignGroups(groups, nodes, known) {
   };
   // اسم الدرس يكاد يطابق درس نور، ولا يشبهه بهذه القوة درس آخر في الشجرة كلها ولا درس آخر في ملفك: ربط بالاسم مهما كانت طريقة ربط الوحدة
   const strong = (a, b) => titleSim(nameOnly(a) || a, nameOnly(b) || b) >= 0.85;
+  // رقم الدرس نفسه لكن الاسمين مختلفان تمامًا («الأنشطة الإملائية: الدرس الأول: الحروف التي تُكتب ولا تُنطق» و«الدرس الأول: الممنوع من الصرف 1»):
+  // ملفك يبدأ العدّ من جديد في كل قسم ونور يعدّ دروس الوحدة كلها — لا يُربط بالرقم، فلا تذهب حصة إلى درس غير درسها
+  const clash = (gi, node) => {
+    const g = groups[gi], a = lessonNum(g.lesson), b = lessonNum(node.text);
+    if (a == null || b == null || !(a === b || swappedPair(g.lesson, node.text))) return false;
+    const x = nameOnly(stripSessionSuffix(g.lesson)) || '', y = nameOnly(node.text) || '';
+    return keywords(x).length >= 2 && keywords(y).length >= 1 && titleSim(x, y) < 0.2 && !coreOf(node.text).some((w) => coreOf(g.lesson).includes(w));
+  };
+  // بلا رقم يجمعهما: الاسم وحده يجب أن يشبه (لا يكفي تشابه اسم الوحدة)
+  const thin = (gi, node) => lessonNum(groups[gi].lesson) == null && titleSim(stripSessionSuffix(groups[gi].lesson), node.text) < 0.34
+    && !coreOf(node.text).some((w) => w.length > 2 && coreOf(groups[gi].lesson).includes(w));
+  // اسمان حقيقيان لا يشتركان في شيء: لا يُربطان بالترتيب
+  const differ = (gi, node) => {
+    const x = nameOnly(stripSessionSuffix(groups[gi].lesson)) || '', y = nameOnly(node.text) || '';
+    return keywords(x).length >= 2 && keywords(y).length >= 1 && titleSim(x, y) < 0.2 && !coreOf(node.text).some((w) => w.length > 2 && coreOf(groups[gi].lesson).includes(w));
+  };
   const sureName = (gi, node) => {
     const nm = stripSessionSuffix(groups[gi].lesson || '');
     return strong(nm, node.text) && nodes.filter((n) => strong(nm, n.text)).length === 1 && groups.filter((g) => strong(stripSessionSuffix(g.lesson || ''), node.text)).length === 1;
@@ -1145,7 +1187,7 @@ function alignGroups(groups, nodes, known) {
       const wants = [];
       pending.forEach((gi) => {
         const g = groups[gi];
-        const m = bestTreeLesson(free, { unit: unitName(g.unit), lesson: g.lesson });
+        const m = bestTreeLesson(free.filter((n) => !clash(gi, n) && !thin(gi, n)), { unit: unitName(g.unit), lesson: g.lesson });
         if (m) wants.push({ gi, idx: pool.indexOf(m.node), score: m.score });
       });
       if (!wants.length) break;
@@ -1163,8 +1205,8 @@ function alignGroups(groups, nodes, known) {
       const gg = gis.slice(k1 + 1, k2);
       if (!gg.length) continue;
       const nn = p2 > p1 ? pool.slice(p1 + 1, p2).filter((n) => !used.has(n.id)) : [];
-      if (nn.length && gg.length === nn.length && gg.every((gi, j) => numOk(gi, nn[j]))) { gg.forEach((gi, j) => put(gi, nn[j], 'order')); continue; }
-      const pairs = alignBySimilarity(gg.map((gi) => groups[gi]), nn);
+      if (nn.length && gg.length === nn.length && gg.every((gi, j) => numOk(gi, nn[j]) && !differ(gi, nn[j]))) { gg.forEach((gi, j) => put(gi, nn[j], 'order')); continue; }
+      const pairs = alignBySimilarity(gg.map((gi) => groups[gi]), nn).filter(([a, b]) => !clash(gg[a], nn[b]));
       pairs.forEach(([a, b]) => put(gg[a], nn[b], 'fuzzy'));
       gg.forEach((gi) => { if (!res[gi].node) left.push(gi); });
     }
@@ -1172,7 +1214,7 @@ function alignGroups(groups, nodes, known) {
     if (!left.length) return;
     const free = pool.filter((n) => !used.has(n.id));
     const cand = [];
-    left.forEach((gi) => free.forEach((n) => { const v = pairScore(groups[gi], n); if (v >= 0.45) cand.push({ gi, n, v }); }));
+    left.forEach((gi) => free.forEach((n) => { const v = clash(gi, n) ? 0 : pairScore(groups[gi], n); if (v >= 0.45) cand.push({ gi, n, v }); }));
     cand.sort((a, b) => b.v - a.v).forEach((c) => { if (!res[c.gi].node && !used.has(c.n.id)) put(c.gi, c.n, 'near'); });
     left.forEach((gi) => fail(gi, whyMiss(gi, fullPool, left.length, free.length)));
   }
@@ -1211,6 +1253,21 @@ function alignGroups(groups, nodes, known) {
     taken.add(t.k);
     pairs.push({ gis, t, how, ui });
   });
+  // وحدة نور الكبيرة («الباب الأول: الأدب والنصوص») تقابل عدة وحدات في ملفك («المؤنس: الأدب والنصوص - المحور الخامس: …»):
+  // كلمات اسمها كلها في اسم وحدتك، ولا تشبهها بذلك وحدة أخرى في نور
+  const uWords = (t) => kwNorm(t).split(' ').filter((w) => w && !ORDW[w] && !/^(?:ال)?(?:باب|وحده|محور|جزء)$|^\d+$|^(?:اولا|ثانيا|ثالثا|رابعا|خامسا|سادسا)$/.test(w))
+    .map((w) => (w.length > 3 && w.startsWith('ال') ? w.slice(2) : w)).map((w) => (/^و.{3,}/.test(w) && !/^و[اوي]/.test(w) ? w.slice(1) : w)).map((w) => (w.length > 3 && w.startsWith('ال') ? w.slice(2) : w));
+  if (leftovers.length) {
+    const byU = new Map();
+    leftovers.forEach((gi) => { const u = groups[gi].unit || ''; if (!byU.has(u)) byU.set(u, []); byU.get(u).push(gi); });
+    const keep = [];
+    byU.forEach((gis, gu) => {
+      const gw = new Set(uWords(gu));
+      const c = gu ? tList.filter((x) => { const w = uWords(x.text); return w.length >= 2 && w.every((y) => gw.has(y)); }) : [];
+      if (c.length === 1) { pairs.push({ gis, t: c[0], how: 'name', ui: gUnits.size + pairs.length }); byName++; } else keep.push(...gis);
+    });
+    leftovers.length = 0; leftovers.push(...keep);
+  }
   // الوحدات المؤكدة بالاسم أو باختيارك تأخذ دروسها أولًا، ثم المربوطة برقمها فقط (كعناوين فرعية في ملفك تحمل «Unit 4»)
   const rank = { pick: 0, name: 1, number: 2 };
   pairs.sort((x, y) => rank[x.how] - rank[y.how] || x.ui - y.ui).forEach((p) => alignRange(p.gis, p.t.idx.map((i) => nodes[i]), p.how));
@@ -1224,6 +1281,76 @@ function alignGroups(groups, nodes, known) {
     const sc = nodes.filter((n) => !used.has(n.id)).map((n) => ({ n, v: titleSim(nm, nameOnly(n.text) || n.text) })).sort((a, b) => b.v - a.v);
     if (sc[0] && sc[0].v >= 0.85 && (!sc[1] || sc[0].v - sc[1].v >= 0.25)) { put(gi, sc[0].n, 'name'); res[gi].cross = true; }
   });
+  // لب الاسم: اسم الدرس في نور هو اسمه في ملفك بعد حذف عنوان القسم ورقم الدرس وأل («التعبير: الدرس الأول: كتابة النص العلمي»
+  // = «الدرس الرابع: كتابة نص علمي»)، أو كل كلمات اسم نور داخل اسم ملفك — في وحدة نور المقابلة أولًا، ثم في الشجرة كلها، ويُقبل إن انفرد
+  const unitOfG = new Map();
+  pairs.forEach((p) => p.gis.forEach((gi) => unitOfG.set(gi, p.t.idx.map((i) => nodes[i]))));
+  const coreN = new Map(nodes.map((n) => [n.id, coreKey(n.text)]));
+  const coreTry = (gi, test) => {
+    for (const pool of [unitOfG.get(gi), nodes]) {
+      if (!pool) continue;
+      const c = pool.filter((n) => !used.has(n.id) && test(n));
+      if (c.length === 1) return c[0];
+      if (c.length > 1) return null;
+    }
+    return null;
+  };
+  for (const exact of [true, false]) {
+    groups.forEach((g, gi) => {
+      if (res[gi].node) return;
+      const ks = [coreKey(g.lesson), coreKeyBare(g.lesson)].filter(Boolean);
+      const gw = new Set(coreOf(g.lesson));
+      const n = exact
+        ? coreTry(gi, (x) => ks.includes(coreN.get(x.id)))
+        : coreTry(gi, (x) => { const w = coreN.get(x.id).split(' ').filter(Boolean); return w.length >= 2 && w.every((y) => gw.has(y)); });
+      if (n) put(gi, n, 'name');
+    });
+  }
+  // أسماء متكررة في نور («الأنشطة الإملائية: تطبيقات» ثلاث مرات): كل كلمات اسم نور في اسم ملفك — بالترتيب، الأول في ملفك للأول في الشجرة
+  const fw = new Map(nodes.map((n) => [n.id, fullWords(n.text)]));
+  const holds = (g, n) => { const w = fw.get(n.id), gw = new Set(fullWords(g.lesson)); return w.length >= 2 && w.every((y) => gw.has(y)); };
+  // ثم بفرق حرف واحد في الكلمة («إملاء اختباري» = «إملاء اختياري»، «النشطة» = «الأنشطة»)
+  const near = (a, b) => {
+    if (a === b) return true;
+    if (Math.min(a.length, b.length) < 4 || Math.abs(a.length - b.length) > 1) return false;
+    let i = 0, j = 0;
+    while (i < a.length && a[i] === b[i]) i++;
+    while (j < a.length - i && j < b.length - i && a[a.length - 1 - j] === b[b.length - 1 - j]) j++;
+    return Math.max(a.length, b.length) - i - j <= 1;
+  };
+  const nearHolds = (g, n) => { const w = fw.get(n.id), gw = fullWords(g.lesson); return w.length >= 2 && w.every((y) => gw.some((z) => near(y, z))); };
+  for (const test of [holds, nearHolds]) {
+    groups.forEach((g, gi) => {
+      if (res[gi].node) return;
+      const n = nodes.find((x) => !used.has(x.id) && test(g, x));
+      if (n) put(gi, n, 'name');
+    });
+  }
+  // درس في ملفك لا مقابل له في نور، ووحدته في نور دروسها كلها مربوطة (أو لا وحدة له فيها): حصصه تُضم إلى درس نور
+  // لدرس من ملفك في موضوعه نفسه («الحروف التي تُكتب ولا تُنطق» إلى «إملاء اختباري (الحروف التي تُكتب ولا تُنطق)»)،
+  // وإن كان مراجعة أو مشروعًا أو تدريبات أو قراءة حرة فإلى الدرس الذي قبله (أو الذي بعده إن كان أولها) — فلا تضيع حصة من خطة المعلم
+  const EXTRA = /مراجع|مشروع|تدريب|تطبيقات|قراءه حره|review|revision|consolidation|practice|project|end of (?:semester|term|unit)/i;
+  const INTRO = /(?:^| )(?:ال)?تمهيد|^(?:ال)?مقدمه$|introduction|warm.?up/i;
+  const tie = (a, b) => { const y = new Set(coreOf(groups[a].lesson)); return coreOf(groups[b].lesson).filter((w) => w.length > 2 && !/^(?:unit|lesson|\d+)$/.test(w) && y.has(w)).length; };
+  if (!(named >= 2 && byName / named < 0.5)) {
+    groups.forEach((g, gi) => {
+      if (res[gi].node || nodes.some((x) => !used.has(x.id) && holds(g, x))) return;
+      const un = unitOfG.get(gi);
+      if (un && un.some((n) => !used.has(n.id))) return;
+      const linked = groups.map((x, i) => i).filter((i) => i !== gi && res[i].node && !res[i].joined && (!un || un.includes(res[i].node)));
+      const same = linked.filter((i) => groups[i].unit === g.unit);
+      const mates = !un || same.length ? (un ? same : linked) : linked;
+      let host = null;
+      const before = mates.filter((i) => i < gi).pop(), after = mates.find((i) => i > gi);
+      // تمهيد أو مقدمة: إلى الدرس الذي بعده
+      if (INTRO.test(kwNorm(g.lesson))) host = after != null ? after : before;
+      else if (EXTRA.test(kwNorm(g.lesson))) host = before != null ? before : after;
+      else { const tops = mates.map((i) => ({ i, t: tie(gi, i) })).filter((x) => x.t >= 2).sort((x, y) => y.t - x.t || Math.abs(x.i - gi) - Math.abs(y.i - gi)); if (tops.length) host = tops[0].i; }
+      if (host == null) return;
+      res[gi] = { node: res[host].node, how: 'name', why: '', shared: true, joined: true };
+      res[host].shared = true;
+    });
+  }
   res.unitsByName = byName; res.unitsNamed = named;
   return res;
 }
