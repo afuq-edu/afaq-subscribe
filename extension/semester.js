@@ -190,8 +190,11 @@ function assignDates() {
   let seqAll = ordered.flatMap((p) => p.sessions);
   if (fileMode) {
     let d0 = '';
+    // حصتان في اليوم نفسه: بترتيب ملفك (شجرة نور قد ترتّب دروسها غير ترتيبه)
+    const fi = new Map(((pkg && pkg.lessons) || []).map((l, i) => [l.id, i]));
+    const fo = (x) => (fi.has(x.s.lesson.id) ? fi.get(x.s.lesson.id) : 1e9);
     seqAll = seqAll.map((s, i) => { if (isIso(s.lesson.pubDate)) d0 = s.lesson.pubDate; return { s, i, d: d0 }; })
-      .sort((a, b) => a.d.localeCompare(b.d) || a.i - b.i).map((x) => x.s);
+      .sort((a, b) => a.d.localeCompare(b.d) || fo(a) - fo(b) || a.i - b.i).map((x) => x.s);
   }
   const cands = seqAll.filter((s) => s.eligible);
   // «حسب النشرة الرسمية»: حصص كل أسبوع في أسبوعها وبترتيبها، فلا يُنشر درس سابق بعد درس لاحق.

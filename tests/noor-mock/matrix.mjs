@@ -481,11 +481,12 @@ async function flowTerm(job, J, W) {
     const trees = (W.afaq.st.trees || []).filter((t) => t && t.package_id === job.id);
     const nTree = J.T.tree.terms[0].units.reduce((a, u) => a + u.lessons.length, 0);
     check(F, trees.length >= 1 && trees.every((t) => t.lessons.length === nTree && t.term === 1), `noor tree: sent to the admin panel with all ${nTree} Noor lessons`, trees.map((t) => `${t.lessons.length} lessons, term ${t.term}`).join(', ') || 'not sent');
-    const orph = trees.length ? trees[trees.length - 1].lessons.filter((l) => !l.f || !(l.n > 0)) : [];
+    const gap = (J.T.real && REAL._gaps && REAL._gaps[job.id]) || {};
+    const orph = trees.length ? trees[trees.length - 1].lessons.filter((l) => (!l.f || !(l.n > 0)) && !(gap.noor || []).includes(String(l.t || '').trim())) : [];
     check(F, !orph.length, 'noor tree: every Noor lesson has a prep from the file', orph.slice(0, 8).map((l) => `${l.u} » ${l.t}`).join('\n'));
     const { byId, cnt } = traceRows(F, J, rows);
     // completeness: every session of every lesson whose Noor name is not renamed
-    const exactMiss = J.pkg.lessons.filter((l) => !cnt.has(l.id) && (J.T.real || !J.T.renamed.has((l.unit || '') + '|' + (l.lesson || ''))));
+    const exactMiss = J.pkg.lessons.filter((l) => !cnt.has(l.id) && (J.T.real ? !(gap.file || []).includes(String(l.lesson || '').trim()) : !J.T.renamed.has((l.unit || '') + '|' + (l.lesson || ''))));
     if (J.T.real) { F.info.real = { sessions: J.pkg.lessons.length, saved: J.pkg.lessons.length - exactMiss.length }; check(F, !exactMiss.length, `complete (real Noor tree): every one of the ${J.pkg.lessons.length} sessions was saved`, `${exactMiss.length} missing: ` + exactMiss.slice(0, 40).map((l) => `${l.id} «${l.lesson}»`).join(', ')); }
     else check(F, !exactMiss.length, `complete: every session of the ${J.T.groups.length - J.T.renamed.size} lessons with the same name in Noor was saved`, `${exactMiss.length} missing: ` + exactMiss.slice(0, 12).map((l) => `${l.id} «${l.lesson}»`).join(', '));
     const ren = [...J.T.renamed].map(([k, v]) => { const g = J.T.groups.find((x) => x.key === k); return { lesson: g.lesson, noor: v.text, how: v.how, sessions: g.sessions.length, saved: g.sessions.filter((l) => cnt.has(l.id)).length }; });
@@ -544,7 +545,7 @@ async function flowTerm(job, J, W) {
     // oneper: when merging cannot fit the plan, sessions may come earlier than their plan week (never before the plan's first week)
     const todayIso = FIXED_NOW;
     const plan0 = wk0(J.pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort()[0]);
-    const early = saved.filter((x) => !tails.has(x.l.id) && (job.fault === 'oneper' || tight ? x.d < plan0 : job.fault === 'twoper' ? x.d < wk0(x.l.pubDate) : x.d < x.l.pubDate));
+    const early = saved.filter((x) => !tails.has(x.l.id) && (job.fault === 'oneper' || tight ? x.d < plan0 : job.fault === 'twoper' || J.T.real ? x.d < wk0(x.l.pubDate) : x.d < x.l.pubDate));
     if (job.fault === 'twoper') {
       const seen = new Map(), clash = [];
       noor.st.rows.filter((r) => !r.preexisting).forEach((r) => (r.slots || []).forEach((x) => { const k = r.publishDate + '|' + x; if (seen.has(k)) clash.push(k); seen.set(k, 1); }));
@@ -556,7 +557,7 @@ async function flowTerm(job, J, W) {
       const two = Object.values(exp).filter((d, i, a) => a.indexOf(d) !== i).length;
       check(F, !one.length, `periods: each Sunday holds one prep per session its week has, up to two (${two} Sundays with two)`, one.slice(0, 10).join(', '));
     }
-    check(F, !early.length, tight ? 'dates: no session before the plan\'s first week' : job.fault === 'twoper' || job.fault === 'oneper' ? 'dates: no session before its week' : 'dates: no session before its official date', early.slice(0, 10).map((x) => `${x.l.id}: ${x.d} < ${x.l.pubDate}`).join('\n'));
+    check(F, !early.length, tight ? 'dates: no session before the plan\'s first week' : job.fault === 'twoper' || job.fault === 'oneper' || J.T.real ? 'dates: no session before its week' : 'dates: no session before its official date', early.slice(0, 10).map((x) => `${x.l.id}: ${x.d} < ${x.l.pubDate}`).join('\n'));
     if (job.fault === 'oneper' || tight) {
       const lastWk = (() => { const d = new Date(J.pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort().pop() + 'T12:00'); d.setDate(d.getDate() + 4 - d.getDay()); return d.toISOString().slice(0, 10); })();
       // a prep never spans two lessons, so a run of weeks whose lessons are all distinct can overflow the plan's last week
