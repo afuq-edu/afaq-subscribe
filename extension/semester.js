@@ -515,15 +515,24 @@ const haveOf = (h, node) => (h && node ? (haveMap(h).get(node.id) || []) : []);
 const keyCount = (h, p) => { if (!h || !p.node) return 0; haveMap(h); return (h.keyCounts.get(kwNorm(p.node.text)) || []).length; };
 // المتوقع الآن = العدد الخام للاسم عند بدء التشغيل (keyInit، يشمل صفوفًا لم تُنسب لأي حصة) + ما حفظه هذا التشغيل للاسم
 const keyWant = (p) => { const k = kwNorm(p.node.text); const ps = plan.filter((x) => x.node && kwNorm(x.node.text) === k); return (ps[0] ? ps[0].keyInit || 0 : 0) + ps.reduce((a, x) => a + (x.savedNow || 0), 0); };
+// رقم الحصة بين حصص درس نور كله: درس واحد في نور قد يقابل أكثر من درس في ملفك (وحدة التلاوة في نور درس واحد لسورها كلها)،
+// فتُرقَّم حصصها كلها معًا بترتيب الملف — ولدرس عادي هو رقمها في درسها
+function nodeNo(s) {
+  const k = s.p ? s.p.sessions.indexOf(s) + 1 : 1;
+  const L = s.p && s.p.node ? nodeLs.get(s.p.node.id) : null;
+  const i = L ? L.indexOf(s.lesson) : -1;
+  return i >= 0 ? i + 1 : k;
+}
 function presence(p) {
   const have = haveOf(noorHave, p.node);
   const ambSet = noorHave && p.node && noorHave.ambNode ? noorHave.ambNode.get(p.node.id) : null;
-  p.sessions.forEach((s, k) => {
+  p.sessions.forEach((s) => {
     s.p = p;
+    const no = nodeNo(s);
     const pend = pendingSave[s.lesson.id];
-    const maybe = !!(ambSet && ambSet.has(k + 1));   // تحضير بالاسم نفسه في نور قد يكون لهذه الحصة (لا دليل تاريخ): تُعدّ موجودة
-    if (noorTrust && p.node && !have.includes(k + 1) && !maybe && !savedIds.has(s.lesson.id) && !pend && (semSaved[s.lesson.id] || done(s.lesson))) { delete semSaved[s.lesson.id]; forgotten.add(s.lesson.id); }
-    s.inNoor = have.includes(k + 1) || maybe || !!pend || savedIds.has(s.lesson.id) || (!noorTrust && !!semSaved[s.lesson.id]);
+    const maybe = !!(ambSet && ambSet.has(no));   // تحضير بالاسم نفسه في نور قد يكون لهذه الحصة (لا دليل تاريخ): تُعدّ موجودة
+    if (noorTrust && p.node && !have.includes(no) && !maybe && !savedIds.has(s.lesson.id) && !pend && (semSaved[s.lesson.id] || done(s.lesson))) { delete semSaved[s.lesson.id]; forgotten.add(s.lesson.id); }
+    s.inNoor = have.includes(no) || maybe || !!pend || savedIds.has(s.lesson.id) || (!noorTrust && !!semSaved[s.lesson.id]);
     s.eligible = !!p.node && !s.inNoor && !s.savedNow && (noorHave || forgotten.has(s.lesson.id) ? true : !done(s.lesson));
     if (!s.eligible) s.on = false;
   });
@@ -1045,6 +1054,12 @@ const digitsOf = (t) => {
   return out;
 };
 const sameDigits = (a, b) => a.size === b.size && [...a].every((v) => b.has(v));
+// وحدة اسمها رقمها فقط («الوحدة (1)»، «الوحدة الأولى»، «Unit 3»): رقمها هو اسمها — ﻓ«الوحدة الأولى» هي «الوحدة (1)»
+const numberOnlyUnit = (t) => {
+  const ws = kwNorm(unitName(t)).split(' ').filter(Boolean);
+  const d = digitsOf(t);
+  return d.size === 1 && ws.every((w) => /^(?:ال)?وحد[هة]$|^unit$|^\d+$|^عشره?$/.test(w) || ORDW[w]) ? [...d][0] : null;
+};
 // محاذاة تحفظ الترتيب (برمجة ديناميكية): أكبر مجموع تشابه بين دروس الملف ودروس نور، مع السماح بتخطي درس من أي جهة.
 // زوج يُقبل فقط إن كان تشابهه ≥ ٠٫٤٥ ولا يناقض رقم الدرس. يعيد [[فهرس درس الملف، فهرس درس نور]]
 function pairScore(g, node) {
@@ -1100,11 +1115,22 @@ function alignGroups(groups, nodes, known) {
     if (a === b) return (b === 1 ? 'بقي في نور درس واحد بلا تحضير لكن اسمه لا يشبهه' : `بقي في نور ${toAr(b)} دروس بلا تحضير لكن أسماءها لا تشبهه`) + near;
     return `عدد الدروس هنا لا يتساوى (${toAr(a)} في ملفك و${toAr(b)} في نور)` + near;
   };
+  // اسم الدرس يكاد يطابق درس نور، ولا يشبهه بهذه القوة درس آخر في الشجرة كلها ولا درس آخر في ملفك: ربط بالاسم مهما كانت طريقة ربط الوحدة
+  const strong = (a, b) => titleSim(nameOnly(a) || a, nameOnly(b) || b) >= 0.85;
+  const sureName = (gi, node) => {
+    const nm = stripSessionSuffix(groups[gi].lesson || '');
+    return strong(nm, node.text) && nodes.filter((n) => strong(nm, n.text)).length === 1 && groups.filter((g) => strong(stripSessionSuffix(g.lesson || ''), node.text)).length === 1;
+  };
   function alignRange(gisIn, fullPool, unitHow) {
     if (!gisIn.length) return;
     // دروس الوحدة بأرقامها إن كانت كلها مرقّمة (ترتيب ملفك قد يختلف)، وإلا بترتيب الملف
     const nums = gisIn.map((gi) => lessonNum(groups[gi].lesson));
     const gis = nums.every((x) => x != null) ? gisIn.slice().sort((x, y) => lessonNum(groups[x].lesson) - lessonNum(groups[y].lesson) || x - y) : gisIn;
+    // وحدة في نور فيها درس واحد (التلاوة والحفظ: «سورتي المدثر والمزمل») ووحدتها في ملفك أكثر من درس: دروسها كلها لذلك الدرس
+    if (unitHow !== 'order' && fullPool.length === 1 && gis.length > 1 && !used.has(fullPool[0].id)) {
+      gis.forEach((gi) => { put(gi, fullPool[0], unitHow === 'number' ? 'number' : 'name'); res[gi].shared = true; });
+      return;
+    }
     const pool = fullPool.filter((n) => !used.has(n.id));
     if (!pool.length) { gis.forEach((gi) => fail(gi, whyMiss(gi, fullPool, gis.length, 0))); return; }
     // ١) المراسي — لا تعتمد على الترتيب: اختيارك السابق أولًا، ثم أقوى تطابق بالاسم لكل درس على دروس الوحدة كلها.
@@ -1125,7 +1151,7 @@ function alignGroups(groups, nodes, known) {
       if (!wants.length) break;
       wants.sort((a, b) => b.score - a.score);
       const losers = [];
-      wants.forEach((w) => { if (takenIdx.has(w.idx)) losers.push(w.gi); else claim(w.gi, w.idx, unitHow === 'number' ? 'number' : 'name'); });
+      wants.forEach((w) => { if (takenIdx.has(w.idx)) losers.push(w.gi); else claim(w.gi, w.idx, unitHow === 'number' && !sureName(w.gi, pool[w.idx]) ? 'number' : 'name'); });
       pending = losers;
     }
     anc.forEach((idx, gi) => put(gi, pool[idx], how.get(gi)));
@@ -1165,6 +1191,7 @@ function alignGroups(groups, nodes, known) {
     if (/[a-z\u0621-\u064a]{3,}/i.test(unitName(gu).replace(/\b(?:unit|lesson)\b/gi, ''))) named++;
     // الاسم نفسه حرفيًا (بعد التوحيد) — قبل أي تشابه، فوحدات لا تختلف إلا بكلمة ترتيب تُميَّز
     if (!t) { const k = kwNorm(unitName(gu)); const ex = k ? tList.filter((x) => !taken.has(x.k) && kwNorm(unitName(x.text)) === k) : []; if (ex.length === 1) { t = ex[0]; byName++; } }
+    if (!t) { const no = numberOnlyUnit(gu); const ex = no == null ? [] : tList.filter((x) => !taken.has(x.k) && numberOnlyUnit(x.text) === no); if (ex.length === 1) { t = ex[0]; byName++; } }
     if (!t) {
       const sc = tList.map((x) => ({ x, v: kwScore(unitName(gu), unitName(x.text)) })).filter((y) => y.v >= 0.5).sort((p, q) => q.v - p.v);
       if (sc.length) {
@@ -1232,15 +1259,18 @@ async function buildPlan(nodes) {
   const al = alignGroups(groups, nodes, known);
   nodeSes = new Map(); nodeLs = new Map();
   al.forEach((r, i) => { if (r.node) { nodeSes.set(r.node.id, (nodeSes.get(r.node.id) || 0) + groups[i].sessions.length); nodeLs.set(r.node.id, (nodeLs.get(r.node.id) || []).concat(groups[i].sessions)); } });
+  const fileIdx = new Map(pkg.lessons.map((l, i) => [l.id, i]));
+  nodeLs.forEach((L) => L.sort((a, b) => (fileIdx.get(a.id) ?? 0) - (fileIdx.get(b.id) ?? 0)));
   pendingSave = await loadPending();
   // حفظ غير مؤكد من مرة سابقة: يُحذف إن مضت عليه ساعات وقائمة نور الموثوقة لا تُظهره (لم يُحفظ فعلًا)، أو إن ظهر فيها
   if (Object.keys(pendingSave).length) {
     const drop = [];
     al.forEach((r, i) => groups[i].sessions.forEach((l, k) => {
       const pd = pendingSave[l.id];
+      const L = r.node ? nodeLs.get(r.node.id) : null, no = L && L.includes(l) ? L.indexOf(l) + 1 : k + 1;
       if (pd && Date.now() - (pd.at || 0) > 7 * 864e5) { drop.push(l.id); return; }
       if (!pd || !noorTrust || !r.node) return;
-      const shown = haveOf(noorHave, r.node).includes(k + 1);
+      const shown = haveOf(noorHave, r.node).includes(no);
       if (shown || Date.now() - (pd.at || 0) > 3 * 3600e3) drop.push(l.id);
     }));
     if (drop.length) await setPending((m) => drop.forEach((id) => delete m[id]));
@@ -1249,8 +1279,8 @@ async function buildPlan(nodes) {
   const ov = dateOverrides(state, pkg.id);
   forgotten.clear();
   plan = groups.map((group, i) => {
-    const { node, how, why } = al[i];
-    const p = { i, group, node, how, miss: !node, why, sessions: group.sessions.map((l) => (WIZ.pickDates
+    const { node, how, why, shared } = al[i];
+    const p = { i, group, node, how, shared: !!shared, miss: !node, why, sessions: group.sessions.map((l) => (WIZ.pickDates
       // «أختار الدروس بنفسي»: الحصص التي اختارها المعلم فقط، بالتاريخ الذي كتبه لكل حصة
       ? { lesson: l, on: false, inNoor: false, date: '', st: null, cur: false, fixed: WIZ.pickDates[l.id] || '', manualDate: !!WIZ.pickDates[l.id], manual: !!WIZ.pickDates[l.id] }
       : { lesson: l, on: false, inNoor: false, date: '', st: null, cur: false, fixed: isIso(ov[l.id]) ? ov[l.id] : '', manualDate: isIso(ov[l.id]) })) };
@@ -1338,7 +1368,10 @@ const noorCountLoose = (h, p) => { if (!h || !p.node) return 0; const k = kwNorm
 function listReliable(h) {
   if (!h) return false;
   let want = 0, seen = 0;
-  plan.forEach((p) => { if (p.savedNow) { want += p.savedNow; seen += Math.min(p.savedNow, Math.max(0, noorCount(h, p) - p.initial)); } });
+  // لكل درس في نور مرة واحدة (قد يقابل أكثر من درس في ملفك)
+  const byNode = new Map();
+  plan.forEach((p) => { if (p.savedNow && p.node) { const x = byNode.get(p.node.id) || { n: 0, p }; x.n += p.savedNow; byNode.set(p.node.id, x); } });
+  byNode.forEach(({ n, p }) => { want += n; seen += Math.min(n, Math.max(0, noorCount(h, p) - p.initial)); });
   if (want) return seen / want >= 0.8;
   return plan.some((p) => p.initial > 0);   // لم نحفظ بعد: موثوقة إن طابقت تحاضير موجودة مسبقًا دروسَ الخطة
 }
@@ -1429,7 +1462,7 @@ async function fillOnce(item, c) {
   // ترتيب هذا التحضير بين تحاضير الدرس نفسه في اليوم نفسه (حصتان للدرس في يوم واحد) — نور ترقّم الثاني بنفسها
   const dayRank = () => 1 + savedThisRun.filter((x) => x.s !== s && x.s.date === s.date && x.s.p && s.p && x.s.p.node && s.p.node && x.s.p.node.id === s.p.node.id).length;
   const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title, dayRank: dayRank(), slotNo: s.slot || 1, slotFull: slotSeen.get(s.date) || null, allowSection: !!WIZ.allowSection,
-    merge: s.merge && s.merge.length ? s.merge.map((x) => x.lesson) : null, sessionNos: s.merge && s.merge.length && s.p ? [s, ...s.merge].map((x) => s.p.sessions.indexOf(x) + 1) : null });
+    merge: s.merge && s.merge.length ? s.merge.map((x) => x.lesson) : null, sessionNos: s.merge && s.merge.length && s.p ? [s, ...s.merge].map(nodeNo) : null, sessionNo: nodeNo(s) });
   let rep = await fillNoor(tabId, pkg, s.lesson, opts());
   let blk = rep.find((x) => x.key === 'remote');
   if (blk && blk.remoteError === 'noor_wait') {
@@ -1718,7 +1751,7 @@ function safeLinks() {
   });
   const by = new Map();
   plan.forEach((p) => { if (p.node) { const l = by.get(p.node.id) || []; l.push(p); by.set(p.node.id, l); } });
-  by.forEach((l) => { if (l.length < 2) return; l.sort((x, y) => sim(y) - sim(x)).slice(1).forEach((p) => { drop(p); n++; }); });
+  by.forEach((l) => { if (l.length < 2 || l.every((p) => p.shared)) return; l.sort((x, y) => sim(y) - sim(x)).slice(1).forEach((p) => { drop(p); n++; }); });
   if (n) logLine('info', `${toAr(n)} ${n === 1 ? 'درس لم أتأكد من مقابله' : 'دروس لم أتأكد من مقابلها'} في نور — لم أعبّئها حتى لا يقع تحضير مكان آخر`);
 }
 function waitGo(autoMs, lbl) {

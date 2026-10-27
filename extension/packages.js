@@ -858,13 +858,13 @@ export async function pickTreeNode(tabId, node) {
 }
 
 // «(2)» لعنوان الحصة الثانية من الدرس — فقط إن كان العنوان هو اسم الدرس في الشجرة (لا نغيّر عنوانًا كتبه المعلم)
-export async function applyTitleSuffix(tabId, pkg, lesson, nums = null, dayRank = 1) {
+export async function applyTitleSuffix(tabId, pkg, lesson, nums = null, dayRank = 1, no = 0) {
   const st = await treeOp(tabId, { op: 'state' });
   if (!st.tree || !st.title || !st.selected) return null;
   // اسم الدرس نفسه قد ينتهي بـ«(1)» («الجمع (1)»): لا يُحذف منه، والحصة الثانية «الجمع (1) (2)»
   // المقارنة بعد توحيد المسافات: نور يضع اسم الشجرة بمسافاته الأصلية (قد تكون مزدوجة) وقراءتنا للشجرة توحّدها
   const ws = (x) => String(x || '').replace(/\s+/g, ' ').trim();
-  const n = sessionNo(pkg, lesson);
+  const n = no || sessionNo(pkg, lesson);
   const base = ws(st.title) === ws(st.selected.text) || ws(stripSessionSuffix(st.title)) === ws(st.selected.text) ? (n >= 2 ? st.selected.text : st.title) : '';
   if (!base) return null;
   const many = Array.isArray(nums) && nums.length > 1;
@@ -942,7 +942,7 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
     }
   }
   if (settings.titleSuffix !== false) {
-    const t = await applyTitleSuffix(tabId, pkg, lesson, opts.sessionNos, opts.dayRank || 1).catch(() => null);
+    const t = await applyTitleSuffix(tabId, pkg, lesson, opts.sessionNos, opts.dayRank || 1, opts.sessionNo || 0).catch(() => null);
     if (t) { lessonRow = Object.assign(lessonRow || { status: 'ok', how: 'suffix' }, { values: [t] }); finalTitle = t; }
   }
   const parts = await execNoor(tabId, 'noor', {

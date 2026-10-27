@@ -544,6 +544,62 @@ T(18, 'Slow Noor tree on a new device (only the first unit shows lessons): the t
   return b;
 });
 
+// real Noor 2026-10-27 (owner's report, Islamic grade 6 «فترتان», tree read from Noor): units «الوحدة (1)…(4)» where the file says
+// «الوحدة الأولى…الرابعة», and the recitation unit is ONE Noor lesson «سورتي المدثر والمزمل» for the file's two surahs.
+// 4.10.13 saved only the 8 «المدثر» sessions (every other lesson linked «by unit number only» and dropped). Start from that state.
+const IS6_TREE = [['مقرر التلاوة والحفظ', ['سورتي المدثر والمزمل']],
+  ['الوحدة (1)', ['مخارج الحروف', 'سورة البقرة (183 - 185', 'ثواب العمل الصالح (حديث)', 'من دلائل وحدانية الله تعالى', 'أنواع الصيام', 'التخطيط للهجرة النبوية', 'من آداب الأسواق']],
+  ['الوحدة (2)', ['مقدمة في أحكام النون الساكنة والتنوين', 'سورة المدثر 11 -27', 'أترك ما لا يعنيني (حديث)', 'معجزات الرسل عليهم السلام', 'زكاة الفطر', 'الهجرة المباركة', 'الاعتدال منهجي في الحياة']],
+  ['الوحدة (3)', ['الإظهار الحلقي في أحكام النون الساكنة والتنوين', 'سورة الحجرات ( 10 -13 )', 'من فضائل الأعمال ( حديث)', 'الله الحليم', 'من أحكام صلاة الجمعة', 'بناء المسجد', 'ألتزم الحق']],
+  ['الوحدة (4)', ['الإدغام في النون الساكنة والتنوين', 'سورة المزمل (20)', 'هجر المسلم حرام (حديث)', 'القرأن الكريم معجزة خالدة', 'الإستدراك في الصلاة', 'الصحابي عبدالله بن عمر رضي الله عنه']]];
+T(19, 'Real Noor tree of Islamic grade 6: units «الوحدة (1)» vs the file\'s «الوحدة الأولى», and one Noor lesson for the two recitation surahs — every lesson of the term gets its preps (8 recitation preps already in Noor from 4.10.13)', async (env) => {
+  const file = JSON.parse(fs.readFileSync('/mnt/project-files/afaq-platform/preps/g6-10/is-6-2-t1.json', 'utf8'));
+  file.lessons.forEach((l) => { l.pubDate = l.pubDate || l.publishDate; });
+  usePkg(file);
+  // file units in order ↔ Noor units in order; lessons by position inside the unit; the recitation unit's lessons all on its one Noor lesson
+  const fUnits = [];
+  PKG.lessons.forEach((l) => { let u = fUnits.find((x) => x.name === l.unit); if (!u) fUnits.push(u = { name: l.unit, lessons: [] }); if (!u.lessons.includes(l.lesson)) u.lessons.push(l.lesson); });
+  check(fUnits.length === IS6_TREE.length && fUnits.every((u, i) => i === 0 || u.lessons.length === IS6_TREE[i][1].length), 'the file\'s units line up with the real Noor tree', fUnits.map((u) => `${u.name}:${u.lessons.length}`).join(' | '));
+  let nid = 5000;
+  const units = IS6_TREE.map(([text, ls], ui) => ({ text, lessons: ls.map((t, k) => ({ text: t, nodeId: String(++nid), fileLesson: ui === 0 ? null : fUnits[ui].lessons[k] })) }));
+  const tree = { book: 'التربية الإسلامية - الصف السادس', terms: [{ text: 'الفصل الدراسي الأول', units }, { text: 'الفصل الدراسي الثاني', units: [{ text: 'الوحدة (5)', lessons: [{ text: 'مخارج الحروف', nodeId: '7001' }] }] }] };
+  const recite = units[0].lessons[0];
+  const nodeOfL = (l) => (l.unit === fUnits[0].name ? recite : units.flatMap((u) => u.lessons).find((n) => n.fileLesson === l.lesson && units.find((u) => u.lessons.includes(n)).text === units[fUnits.findIndex((u) => u.name === l.unit)].text));
+  const reciteSes = PKG.lessons.filter((l) => l.unit === fUnits[0].name);
+  const titleOfL = (l) => { const n = nodeOfL(l); const list = n === recite ? reciteSes : PKG.lessons.filter((x) => x.unit === l.unit && x.lesson === l.lesson); const k = list.indexOf(l) + 1; return n.text + (k > 1 ? ` (${k})` : ''); };
+  const pre = reciteSes.slice(0, 8).map((l) => ({ cid: 'IS6', title: titleOfL(l), publishDate: l.pubDate, nodeId: recite.nodeId, created: '2026-10-27 08:00' }));
+  const courses = [{ cid: 'IS6', title: 'التربية الإسلامية', level: 'الصف السادس', subject: 'التربية الإسلامية', grade: 'السادس', tree },
+    { cid: 'IS7', title: 'التربية الإسلامية', level: 'الصف السابع', subject: 'التربية الإسلامية', grade: 'السابع', tree }];
+  const noor = env.noor({ tree, courses, existing: pre });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 30 * 60000, 'islamic 6 real tree');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check(rows.every((r) => r.cid === 'IS6'), 'every save in the right course card (التربية الإسلامية — السادس)', rows.filter((r) => r.cid !== 'IS6').map((r) => r.cid).join(','));
+  const want = PKG.lessons.filter((l) => !reciteSes.slice(0, 8).includes(l));
+  const got = new Map();
+  rows.forEach((r) => { const l = sessionOfRow(r); if (l) got.set(l.id, (got.get(l.id) || []).concat(r)); });
+  check(rows.every((r) => sessionOfRow(r)), 'every saved row carries the content of a session from the file', fmtRows(rows.filter((r) => !sessionOfRow(r))));
+  const missing = want.filter((l) => !got.has(l.id));
+  check(!missing.length, `every session not yet in Noor was saved (${want.length})`, missing.map((l) => `${l.id} «${l.lesson}»`).join('\n'));
+  const again = reciteSes.slice(0, 8).filter((l) => got.has(l.id));
+  check(!again.length, 'the 8 recitation preps already in Noor were not saved again', again.map((l) => l.id).join(', '));
+  const twice = [...got].filter(([, v]) => v.length > 1);
+  check(!twice.length, 'no session saved twice', twice.map(([k, v]) => `${k} ×${v.length}`).join(', '));
+  const wrongNode = rows.filter((r) => { const l = sessionOfRow(r); return l && r.lessonId !== nodeOfL(l).nodeId; });
+  check(!wrongNode.length, 'every session went into its own Noor lesson (both surahs into «سورتي المدثر والمزمل»)', wrongNode.map((r) => { const l = sessionOfRow(r); return `${l.id} «${l.lesson}» → «${r.nodeText}» (expected «${nodeOfL(l).text}»)`; }).join('\n'));
+  const badTitle = rows.filter((r) => { const l = sessionOfRow(r); return l && norm(r.title) !== norm(withDayRank(titleOfL(l), nodeOfL(l).text, r.dayRank)); });
+  check(!badTitle.length, 'titles: Noor lesson name + «(n)», the recitation lesson numbered on from «(9)»', badTitle.map((r) => `${sessionOfRow(r).id}: «${r.title}» expected «${titleOfL(sessionOfRow(r))}»`).join('\n'));
+  const off = rows.filter((r) => { const l = sessionOfRow(r); return l && r.publishDate !== l.pubDate; });
+  check(!off.length, 'publish dates as in the file', off.map((r) => `${sessionOfRow(r).id}: ${r.publishDate} expected ${sessionOfRow(r).pubDate}`).join('\n'));
+  const n1 = noor.st.rows.length;
+  await rerun(b, 'manual re-run');
+  check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
+  return b;
+});
+
 // ---------- main ----------
 const want = process.argv.slice(2).map(Number).filter(Boolean);
 const list = Object.keys(SC).map(Number).filter((n) => !want.length || want.includes(n));
