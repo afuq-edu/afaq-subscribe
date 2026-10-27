@@ -1,0 +1,62 @@
+{
+  "pkg": "en-5",
+  "n": 4,
+  "lang": "en",
+  "pics": {
+    "shy": "😳", "confident": "😎", "lazy": "😴", "hard-working": "💪",
+    "friendly": "😊", "unfriendly": "😠", "kind": "🤗", "mean": "😈",
+    "polite": "🙏", "rude": "😝", "tidy": "🧹", "untidy": "🧦"
+  },
+  "picQs": [
+    { "pic": "😳", "s": "She is afraid to talk to new people. She is ___.", "a": "shy", "d": ["confident", "rude"] },
+    { "pic": "😴", "s": "He sleeps and doesn't like to work. He is ___.", "a": "lazy", "d": ["hard-working", "tidy"] },
+    { "pic": "🙏", "s": "He always says please and thank you. He is ___.", "a": "polite", "d": ["rude", "mean"] },
+    { "pic": "🧹", "s": "Her room is clean and all her things are in order. She is ___.", "a": "tidy", "d": ["untidy", "lazy"] }
+  ],
+  "summary": {
+    "title": "Personality adjectives",
+    "goals": [
+      "I can say twelve personality adjectives.",
+      "I can match adjectives to their opposites and notice the prefix un-.",
+      "I can say what personality a job needs."
+    ],
+    "pairs": [["shy", "confident"], ["lazy", "hard-working"], ["unfriendly", "friendly"], ["mean", "kind"], ["rude", "polite"], ["untidy", "tidy"]],
+    "defs": {
+      "shy": "afraid to talk to new people",
+      "confident": "not afraid in front of others",
+      "lazy": "doesn't like to work",
+      "hard-working": "works a lot and finishes the work",
+      "friendly": "nice to new people",
+      "unfriendly": "not nice to new people",
+      "kind": "smiles and helps everyone",
+      "mean": "is not nice and doesn't share",
+      "polite": "says please and thank you",
+      "rude": "doesn't say please or thank you",
+      "tidy": "all things are in order",
+      "untidy": "things are everywhere"
+    },
+    "prefix": { "note": "Add un- to make some opposites.", "items": [["friendly", "unfriendly"], ["tidy", "untidy"]], "other": "Some opposites are different words: kind – mean, polite – rude." },
+    "structure": { "rule": "In my job, I need to be + adjective.", "examples": ["I'm a doctor. In my job, I need to be kind and hard-working.", "I'm a waiter. In my job, I need to be polite and friendly."] },
+    "tip": "Think of the opposite when you learn a new word."
+  },
+  "exam": [
+    { "type": "pics", "marks": 2, "title": "Look and circle the correct word.", "items": [
+      { "pic": "😎", "o": ["confident", "shy"], "a": 0 },
+      { "pic": "🤗", "o": ["mean", "kind"], "a": 1 },
+      { "pic": "😴", "o": ["lazy", "hard-working"], "a": 0 },
+      { "pic": "🧦", "o": ["tidy", "untidy"], "a": 1 } ] },
+    { "type": "match", "marks": 2, "title": "Match each adjective to its opposite.", "left": ["shy", "polite", "kind", "lazy"], "right": ["hard-working", "mean", "confident", "rude"], "key": [2, 3, 1, 0] },
+    { "type": "tf", "marks": 2, "title": "Read and write ✓ (true) or ✗ (false).", "items": [
+      { "s": "The opposite of polite is rude.", "t": true },
+      { "s": "A tidy person has got all their things in a mess.", "t": false },
+      { "s": "We add un- to friendly to make its opposite.", "t": true },
+      { "s": "Mean is a positive adjective.", "t": false } ] },
+    { "type": "mcq", "marks": 2, "title": "Choose the correct answer.", "items": [
+      { "q": "In my job, I need ___ kind.", "o": ["to be", "be", "being"], "a": 0 },
+      { "q": "Ahmed leaves his books and clothes everywhere. He is ___.", "o": ["tidy", "untidy", "polite"], "a": 1 },
+      { "q": "Which adjective is NOT made with un-?", "o": ["unfriendly", "untidy", "rude"], "a": 2 },
+      { "q": "A person who talks easily on a stage is ___.", "o": ["shy", "confident", "lazy"], "a": 1 } ] },
+    { "type": "prefix", "marks": 1, "title": "Add un- and write the opposite.", "items": [["friendly", "unfriendly"], ["tidy", "untidy"]] },
+    { "type": "write", "marks": 1, "title": "Complete the sentence with two adjectives.", "s": "I'm a teacher. In my job, I need to be ________ and ________.", "a": "Any two positive adjectives, e.g. kind and hard-working (½ mark each)." }
+  ]
+}

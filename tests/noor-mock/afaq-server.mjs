@@ -8,13 +8,14 @@ export function startAfaq(port = 8765) {
   const reset = (o = {}) => {
     st = {
       pkg: o.pkg, active: o.trialLeft == null, left: o.trialLeft == null ? 0 : o.trialLeft, status: o.trialLeft == null ? 'active' : 'trial',
+      offer: o.offer || { id: 'bio-9', subject: 'الأحياء', grade: 9, title: 'الأحياء — التاسع', shift: 'one' },
       holidays: o.holidays || '', calls: [], sessions: [], noor: [], mergeOnNoor: !!o.mergeOnNoor, trees: [], serverTree: o.serverTree || null,
     };
     return st;
   };
   reset({});
   const sub = () => ({
-    package_id: 'bio-9', title: 'الأحياء — التاسع', subject: 'الأحياء', grade: 9, shift: 'one', year: '2026/2027', term: 1, ends_on: '2027-01-21', updated: 1792000000, ready: true,
+    package_id: st.offer.id, title: st.offer.title, subject: st.offer.subject, grade: st.offer.grade, shift: st.offer.shift, year: '2026/2027', term: 1, ends_on: '2027-01-21', updated: 1792000000, ready: true,
     ...(st.active ? {} : { trial: true, left: st.left }),
   });
   const srv = http.createServer((q, res) => {
@@ -31,9 +32,9 @@ export function startAfaq(port = 8765) {
       try { args = JSON.parse(d || '{}'); } catch (e) {}
       st.calls.push(fn);
       let out = { ok: false, error: 'server' };
-      if (fn === 'ext_catalog') out = { ok: true, term: 1, trial: 3, packages: [{ id: 'bio-9', subject: 'الأحياء', grade: 9, title: 'الأحياء — التاسع', shift: 'one' }] };
+      if (fn === 'ext_catalog') out = { ok: true, term: 1, trial: 3, packages: [{ ...st.offer }] };
       else if (fn === 'ext_start') out = { ok: true, token: 'b'.repeat(64), request: 1001, name: args.p_name || 'سالم علي' };
-      else if (fn === 'ext_me') out = { ok: true, name: 'سالم علي', subs: [sub()], request: { id: 1001, status: st.active ? 'active' : st.status, shift: 'one', packages: ['bio-9'] }, whatsapp: '96876506037', trial_lessons: 3, trial_left: st.active ? null : st.left };
+      else if (fn === 'ext_me') out = { ok: true, name: 'سالم علي', subs: [sub()], request: { id: 1001, status: st.active ? 'active' : st.status, shift: st.offer.shift, packages: [st.offer.id] }, whatsapp: '96876506037', trial_lessons: 3, trial_left: st.active ? null : st.left };
       else if (fn === 'ext_structure') out = { ok: true, pkg: JSON.parse(JSON.stringify(st.pkg)) };
       else if (fn === 'ext_pick') out = { ok: true, request: 1001 };
       else if (fn === 'ext_noor') { st.noor.push(args); if (st.mergeOnNoor && !st.active && args.p_noor) { st.active = true; st.status = 'active'; st.merged = (st.merged || 0) + 1; out = { ok: true, merged: true }; } else out = { ok: true }; }
@@ -41,7 +42,7 @@ export function startAfaq(port = 8765) {
       else if (fn === 'ext_tree_get') out = { ok: true, seen: 3, at: Date.now() - 864e5, lessons: st.serverTree || [] };
       else if (fn === 'ext_set_ref') out = { ok: true };
       else if (fn === 'ext_referral') out = { ok: true, request: 1001, invited: 0 };
-      else if (fn === 'ext_contact') { st.status = 'requested'; out = { ok: true, request: 1001, name: 'سالم علي', status: 'requested', packages: ['الأحياء — التاسع'], shift: 'one', whatsapp: '96876506037' }; }
+      else if (fn === 'ext_contact') { st.status = 'requested'; out = { ok: true, request: 1001, name: 'سالم علي', status: 'requested', packages: [st.offer.title], shift: st.offer.shift, whatsapp: '96876506037' }; }
       else if (fn === 'ext_session') {
         const l = (st.pkg.lessons || []).find((x) => x.id === args.p_lesson);
         st.sessions.push(args.p_lesson);

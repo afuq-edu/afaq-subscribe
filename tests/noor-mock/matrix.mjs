@@ -46,6 +46,11 @@ const FLOWS = String(opt('flows', 'term,pick')).split(',');
 // oneper: the teacher has fewer periods a week than the plan (one day less than the plan's weekly average needs, at least one:
 //   Sunday, Sunday+Monday, …) — consecutive sessions of a lesson share one prep «الدرس (2 و 3)» so nothing goes past the plan's last week
 const TREE_FN = process.env.TREE_OVERRIDE ? (await import(process.env.TREE_OVERRIDE)).default : null;
+// REAL_TREES=<trees.json>: run each package that has a real Noor tree (read on teachers' devices, table noor_trees) on THAT tree.
+// There is no oracle for which Noor lesson a file lesson belongs to, so the checks are: every session saved once, every Noor
+// lesson got a prep, dates/order/re-run as usual (own-lesson node and title checks are skipped)
+const REAL = process.env.REAL_TREES ? JSON.parse(fs.readFileSync(process.env.REAL_TREES, 'utf8')) : null;
+const realTree = (id) => { let t = REAL && REAL[id]; if (typeof t === 'string') t = REAL[t]; return Array.isArray(t) ? t : null; };
 const FAULTS = ['none', 'holidays', 'busy', 'reject', 'netcut', 'close', 'yearend', 'twoper', 'oneper'];
 const FIXED_NOW = '2026-09-05';   // the wizard's «today» in these runs (?now=): the day before every plan starts, so nothing has passed
 const onePer = (pkg) => { const ds = pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort(); const wks = Math.max(1, Math.round((new Date(ds[ds.length - 1]) - new Date(ds[0])) / 6048e5) + 1); const k = Math.max(1, Math.ceil(pkg.lessons.length / wks) - 1); return Object.fromEntries([0, 1, 2, 3, 4].map((d) => [d, d < k ? [['1', 1], ['2', 1]] : []])); };
@@ -145,11 +150,17 @@ const RENAMES = [
   ['case', (t) => (!AR.test(t) && /[a-z]/i.test(t) ? (t === t.toLowerCase() ? t.toUpperCase() : t.toLowerCase()) : null)],
   ['spacing', (t) => (/ /.test(t) ? t.replace(' ', '  ') + ' ' : null)],
 ];
+// real Noor (is-6, 2026-10-27) names number-only units «الوحدة (1)» where the files say «الوحدة الأولى»: every such unit gets that name
+const ORD_AR = ['الأولى', 'الثانية', 'الثالثة', 'الرابعة', 'الخامسة', 'السادسة', 'السابعة', 'الثامنة', 'التاسعة', 'العاشرة', 'الحادية عشرة', 'الثانية عشرة'];
+const unoNorm = (t) => String(t || '').trim().replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه').replace(/\s+/g, ' ');
+const noorUnitName = (t) => { const k = unoNorm(t).replace(/^ال/, ''); const i = ORD_AR.findIndex((o) => k === 'وحده ' + unoNorm(o)); return i >= 0 ? `الوحدة (${i + 1})` : t; };
 function buildTree(pkg, r, gradeName) {
   const groups = groupsOf(pkg);
+  // real Noor (is-4, is-6): the recitation unit «مقرر التلاوة والحفظ» is ONE lesson for all its surahs; the file has a lesson per surah
+  const recite = (u) => /^(?:مقرر )?التلاوة والحفظ/.test(u) && groups.filter((g) => g.unit === u).length > 1;
   const nameCount = groups.reduce((m, g) => m.set(g.lesson, (m.get(g.lesson) || 0) + 1), new Map());
   // two lessons renamed slightly (not those repeated across units, not «(n)»-suffixed ones: they stay exactly as in the file)
-  const cand = groups.filter((g) => nameCount.get(g.lesson) === 1 && !/\(\s*\d+\s*\)\s*$/.test(g.lesson) && stripNo(g.lesson).length >= 6);
+  const cand = groups.filter((g) => !recite(g.unit) && nameCount.get(g.lesson) === 1 && !/\(\s*\d+\s*\)\s*$/.test(g.lesson) && stripNo(g.lesson).length >= 6);
   const renamed = new Map();
   // the first renamed lesson: hamza → taa → article → case → spacing (whichever applies); the second starts at «article»;
   // every fifth package gets the double/trailing-space variant on its second lesson
@@ -162,8 +173,21 @@ function buildTree(pkg, r, gradeName) {
   let nid = 5000;
   const nodeOf = new Map();
   for (const g of groups) {
-    let u = units.find((x) => x.text === g.unit);
-    if (!u) { u = { text: g.unit, lessons: [] }; units.push(u); }
+    let u = units.find((x) => x.fileUnit === g.unit);
+    if (!u) { u = { text: noorUnitName(g.unit), fileUnit: g.unit, lessons: [] }; units.push(u); }
+    if (recite(g.unit) && u.lessons.length) {
+      const n0 = u.lessons[0], gs = groups.filter((x) => x.unit === g.unit);
+      g.nodeSessions = gs.flatMap((x) => x.sessions).sort((a, b) => a.idx - b.idx);
+      gs.forEach((x) => { x.nodeSessions = g.nodeSessions; });
+      nodeOf.set(g.key, Object.assign({ unit: u.text }, n0));
+      continue;
+    }
+    if (recite(g.unit)) {
+      const n = { text: stripNo(g.unit), nodeId: String(++nid), fileLesson: g.lesson, renamed: '', shared: true };
+      u.lessons.push(n);
+      nodeOf.set(g.key, Object.assign({ unit: u.text }, n));
+      continue;
+    }
     const rn = renamed.get(g.key);
     const n = { text: rn ? rn.text : stripNo(g.lesson), nodeId: String(++nid), fileLesson: g.lesson, renamed: rn ? rn.how : '' };
     u.lessons.push(n);
@@ -176,10 +200,10 @@ function buildTree(pkg, r, gradeName) {
     { text: 'الوحدة الثانية (الفصل الثاني)', lessons: [{ text: 'مراجعة عامة للفصل الثاني', nodeId: '7003' }] },
   ];
   // the lessons in Noor-tree order (unit by unit) — the order the extension lays the dates out in and keeps («لا يُنشر درس سابق بعد درس لاحق»)
-  const treeGroups = units.flatMap((u) => u.lessons.map((n) => groups.find((g) => g.unit === u.text && g.lesson === n.fileLesson)));
+  const treeGroups = units.flatMap((u) => u.lessons.map((n) => groups.find((g) => g.unit === u.fileUnit && g.lesson === n.fileLesson)));
   return { tree: { book: `${pkg.subject} - ${gradeName}`, terms: [{ text: 'الفصل الدراسي الأول', units }, { text: 'الفصل الدراسي الثاني', units: t2 }] }, nodeOf, renamed, groups, treeGroups };
 }
-const titleFor = (nodeOf, l, groups) => { const g = groups.find((x) => x.key === (l.unit || '') + '|' + (l.lesson || '')); const k = g.sessions.indexOf(l) + 1; const n = nodeOf.get(g.key); return n.text + (k > 1 ? ` (${k})` : ''); };
+const titleFor = (nodeOf, l, groups) => { const g = groups.find((x) => x.key === (l.unit || '') + '|' + (l.lesson || '')); const k = (g.nodeSessions || g.sessions).indexOf(l) + 1; const n = nodeOf.get(g.key); return n.text + (k > 1 ? ` (${k})` : ''); };
 
 // ---------- expected dates (full term) — the rule the extension documents for «حسب النشرة الرسمية» (semester.js assignDates,
 // dates.js layoutDates): sessions are laid out in the order of the official schedule (the file order, which is chronological —
@@ -337,6 +361,12 @@ function setupJob(job) {
   }
   const gradeName = GRADES[job.grade - 1];
   const T = buildTree(pkg, r, gradeName);
+  if (realTree(job.id)) {
+    let nid = 8000;
+    const units = [];
+    for (const [u, t] of realTree(job.id)) { let x = units.find((y) => y.text === u); if (!x) units.push(x = { text: u, lessons: [] }); x.lessons.push({ text: t, nodeId: String(++nid) }); }
+    T.tree.terms[0].units = units; T.real = true;
+  }
   if (process.env.TREE_OVERRIDE) {   // exploration: a real Noor layout replaces the generated term-1 units
     const fn = TREE_FN;
     T.tree.terms[0].units = fn(T.tree.terms[0].units, pkg);
@@ -369,8 +399,8 @@ function traceRows(F, J, rows) {
   const badContent = rows.filter((r) => { const l = byId.get(tagOf(r.concepts)); return l && norm(untag(r.concepts)) !== plain(l.concepts); });
   check(F, !badContent.length, 'content: «المفاهيم» in Noor = the session\'s own text (markup turned into plain text)', badContent.slice(0, 5).map((r) => { const l = byId.get(tagOf(r.concepts)); const a = norm(untag(r.concepts)), b = plain(l.concepts); let i = 0; while (i < a.length && a[i] === b[i]) i++; return `${l.id}: differ at ${i}: got «…${a.slice(Math.max(0, i - 40), i + 80)}» expected «…${b.slice(Math.max(0, i - 40), i + 80)}»`; }).join('\n'));
   check(F, rows.every((r) => r.cid === J.cid), 'course: every save in the right course card', rows.filter((r) => r.cid !== J.cid).map((r) => r.cid + ' ' + fmtRow(r, byId.get(tagOf(r.concepts)))).join('\n'));
-  const wrong = rows.filter((r) => { const l = byId.get(tagOf(r.concepts)); if (!l) return false; const n = J.T.nodeOf.get((l.unit || '') + '|' + (l.lesson || '')); return !n || r.lessonId !== n.nodeId; });
-  check(F, !wrong.length, 'own lesson: every row saved into its own session\'s Noor lesson (unit + lesson node)', wrong.map((r) => { const l = byId.get(tagOf(r.concepts)); const n = J.T.nodeOf.get((l.unit || '') + '|' + (l.lesson || '')); return `${l.id} «${l.unit} / ${l.lesson}» → saved in «${r.nodeText}» [${r.unit}] (expected «${n ? n.text : '-'}» [${n ? n.unit : ''}])`; }).join('\n'));
+  const wrong = J.T.real ? [] : rows.filter((r) => { const l = byId.get(tagOf(r.concepts)); if (!l) return false; const n = J.T.nodeOf.get((l.unit || '') + '|' + (l.lesson || '')); return !n || r.lessonId !== n.nodeId; });
+  if (!J.T.real) check(F, !wrong.length, 'own lesson: every row saved into its own session\'s Noor lesson (unit + lesson node)', wrong.map((r) => { const l = byId.get(tagOf(r.concepts)); const n = J.T.nodeOf.get((l.unit || '') + '|' + (l.lesson || '')); return `${l.id} «${l.unit} / ${l.lesson}» → saved in «${r.nodeText}» [${r.unit}] (expected «${n ? n.text : '-'}» [${n ? n.unit : ''}])`; }).join('\n'));
   const cnt = new Map();
   rows.forEach((r) => { const id = tagOf(r.concepts); if (id) cnt.set(id, (cnt.get(id) || []).concat(r)); });
   const dups = [...cnt].filter(([, v]) => v.length > 1);
@@ -378,12 +408,12 @@ function traceRows(F, J, rows) {
   const titleOf = (r, l) => {
     if (!r.mergedTags) return titleFor(J.T.nodeOf, l, J.T.groups);
     const g = J.T.groups.find((x) => x.key === (l.unit || '') + '|' + (l.lesson || ''));
-    return J.T.nodeOf.get(g.key).text + ` (${r.mergedTags.map((t) => g.sessions.findIndex((x) => x.id === t) + 1).join(' و ')})`;
+    return J.T.nodeOf.get(g.key).text + ` (${r.mergedTags.map((t) => (g.nodeSessions || g.sessions).findIndex((x) => x.id === t) + 1).join(' و ')})`;
   };
   // Noor adds « (j)» itself to the j-th prep of one lesson on one date: the tool sends the bare name when j is the session number
   const wantTitle = (r, l) => { const t = titleOf(r, l), j = r.dayRank; if (!j || j < 2) return t; const base = J.T.nodeOf.get((l.unit || '') + '|' + (l.lesson || '')).text; return !r.mergedTags && t === `${base} (${j})` ? t : `${t} (${j})`; };
-  const badTitle = rows.filter((r) => { const l = byId.get(tagOf(r.concepts)); return l && norm(r.title) !== norm(wantTitle(r, l)); });   // whitespace-insensitive: Noor trims the title
-  check(F, !badTitle.length, 'title: Noor lesson name + «(n)» for session n', badTitle.slice(0, 8).map((r) => { const l = byId.get(tagOf(r.concepts)); return `${l.id}: «${r.title}» expected «${wantTitle(r, l)}»`; }).join('\n'));
+  const badTitle = J.T.real ? [] : rows.filter((r) => { const l = byId.get(tagOf(r.concepts)); return l && norm(r.title) !== norm(wantTitle(r, l)); });   // whitespace-insensitive: Noor trims the title
+  if (!J.T.real) check(F, !badTitle.length, 'title: Noor lesson name + «(n)» for session n', badTitle.slice(0, 8).map((r) => { const l = byId.get(tagOf(r.concepts)); return `${l.id}: «${r.title}» expected «${wantTitle(r, l)}»`; }).join('\n'));
   const wk = rows.filter((r) => !isSchool(r.publishDate));
   check(F, !wk.length, 'weekdays: no publish date on Friday/Saturday', wk.map((r) => fmtRow(r, byId.get(tagOf(r.concepts)))).join('\n'));
   return { byId, cnt };
@@ -451,12 +481,14 @@ async function flowTerm(job, J, W) {
     const trees = (W.afaq.st.trees || []).filter((t) => t && t.package_id === job.id);
     const nTree = J.T.tree.terms[0].units.reduce((a, u) => a + u.lessons.length, 0);
     check(F, trees.length >= 1 && trees.every((t) => t.lessons.length === nTree && t.term === 1), `noor tree: sent to the admin panel with all ${nTree} Noor lessons`, trees.map((t) => `${t.lessons.length} lessons, term ${t.term}`).join(', ') || 'not sent');
-    const orph = trees.length ? trees[trees.length - 1].lessons.filter((l) => !l.f || !(l.n > 0)) : [];
+    const gap = (J.T.real && REAL._gaps && REAL._gaps[job.id]) || {};
+    const orph = trees.length ? trees[trees.length - 1].lessons.filter((l) => (!l.f || !(l.n > 0)) && !(gap.noor || []).includes(String(l.t || '').trim())) : [];
     check(F, !orph.length, 'noor tree: every Noor lesson has a prep from the file', orph.slice(0, 8).map((l) => `${l.u} » ${l.t}`).join('\n'));
     const { byId, cnt } = traceRows(F, J, rows);
     // completeness: every session of every lesson whose Noor name is not renamed
-    const exactMiss = J.pkg.lessons.filter((l) => !cnt.has(l.id) && !J.T.renamed.has((l.unit || '') + '|' + (l.lesson || '')));
-    check(F, !exactMiss.length, `complete: every session of the ${J.T.groups.length - J.T.renamed.size} lessons with the same name in Noor was saved`, `${exactMiss.length} missing: ` + exactMiss.slice(0, 12).map((l) => `${l.id} «${l.lesson}»`).join(', '));
+    const exactMiss = J.pkg.lessons.filter((l) => !cnt.has(l.id) && (J.T.real ? !(gap.file || []).includes(String(l.lesson || '').trim()) : !J.T.renamed.has((l.unit || '') + '|' + (l.lesson || ''))));
+    if (J.T.real) { F.info.real = { sessions: J.pkg.lessons.length, saved: J.pkg.lessons.length - exactMiss.length }; check(F, !exactMiss.length, `complete (real Noor tree): every one of the ${J.pkg.lessons.length} sessions was saved`, `${exactMiss.length} missing: ` + exactMiss.slice(0, 40).map((l) => `${l.id} «${l.lesson}»`).join(', ')); }
+    else check(F, !exactMiss.length, `complete: every session of the ${J.T.groups.length - J.T.renamed.size} lessons with the same name in Noor was saved`, `${exactMiss.length} missing: ` + exactMiss.slice(0, 12).map((l) => `${l.id} «${l.lesson}»`).join(', '));
     const ren = [...J.T.renamed].map(([k, v]) => { const g = J.T.groups.find((x) => x.key === k); return { lesson: g.lesson, noor: v.text, how: v.how, sessions: g.sessions.length, saved: g.sessions.filter((l) => cnt.has(l.id)).length }; });
     F.info.renamed = ren;
     // order + term + dates
@@ -472,8 +504,8 @@ async function flowTerm(job, J, W) {
     check(F, !flipsIn.length, 'order: within a lesson, session k+1 strictly after session k', flipsIn.slice(0, 10).join('\n'));
     // lesson order = Noor-tree order (unit by unit); within a unit the lessons follow each other, so lesson k+1 never starts before lesson k
     const flipsLess = [];
-    J.T.tree.terms[0].units.forEach((u) => {
-      const firsts = u.lessons.map((n) => J.T.groups.find((g) => g.unit === u.text && g.lesson === n.fileLesson)).map((g) => g.sessions.find((l) => dOf[l.id])).filter(Boolean);
+    if (!J.T.real) J.T.tree.terms[0].units.forEach((u) => {
+      const firsts = u.lessons.map((n) => J.T.groups.find((g) => g.unit === (u.fileUnit || u.text) && g.lesson === n.fileLesson)).map((g) => g.sessions.find((l) => dOf[l.id])).filter(Boolean);
       firsts.forEach((a, i) => { if (i && !after(dOf[a.id], dOf[firsts[i - 1].id])) flipsLess.push(`[${u.text}] lesson «${firsts[i - 1].lesson}» starts ${dOf[firsts[i - 1].id]}, the next lesson «${a.lesson}» starts ${dOf[a.id]}`); });
     });
     check(F, !flipsLess.length, 'order: within a unit, lesson k+1 never starts before lesson k', flipsLess.slice(0, 10).join('\n'));
@@ -513,7 +545,7 @@ async function flowTerm(job, J, W) {
     // oneper: when merging cannot fit the plan, sessions may come earlier than their plan week (never before the plan's first week)
     const todayIso = FIXED_NOW;
     const plan0 = wk0(J.pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort()[0]);
-    const early = saved.filter((x) => !tails.has(x.l.id) && (job.fault === 'oneper' || tight ? x.d < plan0 : job.fault === 'twoper' ? x.d < wk0(x.l.pubDate) : x.d < x.l.pubDate));
+    const early = saved.filter((x) => !tails.has(x.l.id) && (job.fault === 'oneper' || tight ? x.d < plan0 : job.fault === 'twoper' || J.T.real ? x.d < wk0(x.l.pubDate) : x.d < x.l.pubDate));
     if (job.fault === 'twoper') {
       const seen = new Map(), clash = [];
       noor.st.rows.filter((r) => !r.preexisting).forEach((r) => (r.slots || []).forEach((x) => { const k = r.publishDate + '|' + x; if (seen.has(k)) clash.push(k); seen.set(k, 1); }));
@@ -525,7 +557,7 @@ async function flowTerm(job, J, W) {
       const two = Object.values(exp).filter((d, i, a) => a.indexOf(d) !== i).length;
       check(F, !one.length, `periods: each Sunday holds one prep per session its week has, up to two (${two} Sundays with two)`, one.slice(0, 10).join(', '));
     }
-    check(F, !early.length, tight ? 'dates: no session before the plan\'s first week' : job.fault === 'twoper' || job.fault === 'oneper' ? 'dates: no session before its week' : 'dates: no session before its official date', early.slice(0, 10).map((x) => `${x.l.id}: ${x.d} < ${x.l.pubDate}`).join('\n'));
+    check(F, !early.length, tight ? 'dates: no session before the plan\'s first week' : job.fault === 'twoper' || job.fault === 'oneper' || J.T.real ? 'dates: no session before its week' : 'dates: no session before its official date', early.slice(0, 10).map((x) => `${x.l.id}: ${x.d} < ${x.l.pubDate}`).join('\n'));
     if (job.fault === 'oneper' || tight) {
       const lastWk = (() => { const d = new Date(J.pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort().pop() + 'T12:00'); d.setDate(d.getDate() + 4 - d.getDay()); return d.toISOString().slice(0, 10); })();
       // a prep never spans two lessons, so a run of weeks whose lessons are all distinct can overflow the plan's last week
@@ -709,6 +741,7 @@ if (FORCE_FAULT && !FAULTS.includes(FORCE_FAULT)) { console.log(`unknown fault �
 let jobs = files.map((f, i) => Object.assign(f, { i, fault: FORCE_FAULT || FAULTS[i % FAULTS.length] }));
 if (ONLY.length) jobs = jobs.filter((j) => ONLY.some((o) => j.id === o || j.rel.includes(o)));
 if (ONLY_FAULTS) jobs = jobs.filter((j) => ONLY_FAULTS.includes(j.fault));
+if (REAL) jobs = jobs.filter((j) => realTree(j.id));
 if (SAMPLE && SAMPLE < jobs.length) { const r = rng(SEED + '|sample'); jobs = pickN(r, jobs, SAMPLE).sort((a, b) => a.i - b.i); }
 const T0 = Date.now();
 const previous = [];   // --merge: results of the earlier run for the packages not in this run
