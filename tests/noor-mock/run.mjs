@@ -134,24 +134,24 @@ async function launch(extDir, noor, { now = FIXED_NOW } = {}) {
   return { ctx, sw, pg, id, errs };
 }
 const card = async (pg, t) => { await pg.locator('.wz-card:not([disabled])', { hasText: t }).first().click({ timeout: 20000 }); await sleep(500); };
-async function wizardTo(pg, mode, { name = true } = {}) {
+async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع', subject = 'الأحياء', shift = 'فترة واحدة' } = {}) {
   // each step only if the run has not started yet (once linked, a «من حسابك في نور» shortcut can skip steps)
   const started = () => pg.evaluate(() => document.body.classList.contains('wiz-run') || !!document.getElementById('wzName')).catch(() => false);
   const step = async (sel, t) => { if (await started()) return; await pg.locator(sel, { hasText: t }).first().click({ timeout: 20000 }); await sleep(600); };
   await step('.wz-card:not([disabled])', mode === 'pick' ? 'أختار الدروس بنفسي' : 'تحضير الفصل كاملًا');
-  await step('.wz-cards.grid3 .wz-card', 'الصف التاسع');
-  await step('.wz-card:not([disabled])', 'الأحياء');
-  await step('.wz-card:not([disabled])', 'فترة واحدة');
+  await step('.wz-cards.grid3 .wz-card', grade);
+  await step('.wz-card:not([disabled])', subject);
+  await step('.wz-card:not([disabled])', shift);
   if (!name) return;
   await pg.fill('#wzName', 'سالم علي', { timeout: 15000 });
   await pg.click('#wzNameGo');
 }
 // «open the tool again»: reload semester.html (fresh local record, as on every open) and run the full term again
-async function rerun(b, label) {
+async function rerun(b, label, wz = {}) {
   await b.pg.reload();
   await sleep(4000);
   const wizShown = await b.pg.evaluate(() => !document.getElementById('wizCard').hidden && !document.body.classList.contains('wiz-run'));
-  if (wizShown) await wizardTo(b.pg, 'term', { name: false });   // already linked: no name screen
+  if (wizShown) await wizardTo(b.pg, 'term', { ...wz, name: false });   // already linked: no name screen
   else console.log('    (the page resumed an unfinished run by itself)');
   return waitDone(b.pg, 10 * 60000, label);
 }
@@ -554,7 +554,8 @@ const IS6_TREE = [['مقرر التلاوة والحفظ', ['سورتي المد
   ['الوحدة (4)', ['الإدغام في النون الساكنة والتنوين', 'سورة المزمل (20)', 'هجر المسلم حرام (حديث)', 'القرأن الكريم معجزة خالدة', 'الإستدراك في الصلاة', 'الصحابي عبدالله بن عمر رضي الله عنه']]];
 T(19, 'Real Noor tree of Islamic grade 6: units «الوحدة (1)» vs the file\'s «الوحدة الأولى», and one Noor lesson for the two recitation surahs — every lesson of the term gets its preps (8 recitation preps already in Noor from 4.10.13)', async (env) => {
   const file = JSON.parse(fs.readFileSync('/mnt/project-files/afaq-platform/preps/g6-10/is-6-2-t1.json', 'utf8'));
-  file.lessons.forEach((l) => { l.pubDate = l.pubDate || l.publishDate; });
+  // sessions of one lesson share their «المفاهيم» in this file: tag each so a saved row maps back to ITS session
+  file.lessons.forEach((l) => { l.pubDate = l.pubDate || l.publishDate; l.concepts = `${l.concepts || ''} (${l.id})`; });
   usePkg(file);
   // file units in order ↔ Noor units in order; lessons by position inside the unit; the recitation unit's lessons all on its one Noor lesson
   const fUnits = [];
@@ -571,9 +572,9 @@ T(19, 'Real Noor tree of Islamic grade 6: units «الوحدة (1)» vs the file
   const courses = [{ cid: 'IS6', title: 'التربية الإسلامية', level: 'الصف السادس', subject: 'التربية الإسلامية', grade: 'السادس', tree },
     { cid: 'IS7', title: 'التربية الإسلامية', level: 'الصف السابع', subject: 'التربية الإسلامية', grade: 'السابع', tree }];
   const noor = env.noor({ tree, courses, existing: pre });
-  env.afaq.reset({ pkg: PKG });
+  env.afaq.reset({ pkg: PKG, offer: { id: 'is-6-2', subject: 'التربية الإسلامية', grade: 6, title: 'التربية الإسلامية — السادس', shift: 'two' } });
   const b = await env.launch(noor);
-  await wizardTo(b.pg, 'term');
+  await wizardTo(b.pg, 'term', { grade: 'الصف السادس', subject: 'التربية الإسلامية', shift: 'فترتان' });
   const s = await waitDone(b.pg, 30 * 60000, 'islamic 6 real tree');
   const rows = noor.st.rows.filter((r) => !r.preexisting);
   check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
@@ -595,7 +596,7 @@ T(19, 'Real Noor tree of Islamic grade 6: units «الوحدة (1)» vs the file
   const off = rows.filter((r) => { const l = sessionOfRow(r); return l && r.publishDate !== l.pubDate; });
   check(!off.length, 'publish dates as in the file', off.map((r) => `${sessionOfRow(r).id}: ${r.publishDate} expected ${sessionOfRow(r).pubDate}`).join('\n'));
   const n1 = noor.st.rows.length;
-  await rerun(b, 'manual re-run');
+  await rerun(b, 'manual re-run', { grade: 'الصف السادس', subject: 'التربية الإسلامية', shift: 'فترتان' });
   check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
   return b;
 });
