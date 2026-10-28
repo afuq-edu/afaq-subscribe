@@ -134,6 +134,8 @@ function fixedDates(cands) {
   return new Set(Object.entries(usedDates(pkg, state)).filter(([, arr]) => arr.some((u) => !ids.has(u.lessonId))).map(([d]) => d));
 }
 // هل الحصة ضمن النطاق المختار؟
+// حصة اختارها المعلم في «أختار الدروس بنفسي» (وكل الحصص في غيره)
+const pickedS = (s) => !WIZ.pickDates || !!WIZ.pickDates[s.lesson.id];
 function inScope(s) {
   const p = s.p;
   if (scope.kind === 'pick') return scope.picks ? scope.picks.has(p.group.key) : true;
@@ -323,7 +325,7 @@ function learnNoClass(iso) {
   }
 }
 
-const HOW = { fuzzy: ['ok', 'بالتشابه'], near: ['warn', 'بالتشابه — تأكد'], order: ['warn', 'بالترتيب — تأكد'], ordinal: ['ok', 'بترقيم الدرس'], pick: ['ok', 'اختيارك السابق'], manual: ['ok', 'اخترته أنت'], name: ['ok', ''], number: ['warn', 'برقم الوحدة فقط — تأكد'] };
+const HOW = { fuzzy: ['ok', 'بالتشابه'], near: ['warn', 'بالتشابه — تأكد'], order: ['warn', 'بالترتيب — تأكد'], seq: ['ok', 'بالترتيب بين درسين مطابقين'], ordinal: ['ok', 'بترقيم الدرس'], pick: ['ok', 'اختيارك السابق'], manual: ['ok', 'اخترته أنت'], name: ['ok', ''], number: ['warn', 'برقم الوحدة فقط — تأكد'] };
 function dupNodes() { const seen = new Map(); plan.forEach((p) => { if (p.node) seen.set(p.node.id, (seen.get(p.node.id) || 0) + 1); }); return new Set([...seen].filter(([, n]) => n > 1).map(([id]) => id)); }
 function conflicts() {
   const dup = dupNodes();
@@ -1106,10 +1108,109 @@ const fullWords = (t) => kwNorm(String(t || '').replace(/[،؛؟]/g, ' ')).repla
   .split(' ').filter(Boolean).map((w) => (w.length > 3 && w.startsWith('ال') ? w.slice(2) : w)).map((w) => (/^و.{3,}/.test(w) && !/^و[اوي]/.test(w) ? w.slice(1) : w));
 // بلا ما بين القوسين («المشروع (تنظيم البيانات…)» = «المشروع»)
 const coreKeyBare = (t) => coreKey(String(t || '').replace(/\([^()]*\)/g, ' '));
+// كلمتان متطابقتان أو بفرق حرف واحد («Appaling» = «Appalling»)
+const nearW = (a, b) => {
+  if (a === b) return true;
+  if (Math.min(a.length, b.length) < 4 || Math.abs(a.length - b.length) > 1) return false;
+  let i = 0, j = 0;
+  while (i < a.length && a[i] === b[i]) i++;
+  while (j < a.length - i && j < b.length - i && a[a.length - 1 - j] === b[b.length - 1 - j]) j++;
+  return Math.max(a.length, b.length) - i - j <= 1;
+};
+// وحدات ملفك أسماؤها أسماء دروس في نور (لا وحداته): درس نور لكل وحدة من ملفك تطابقه، أو null.
+// يُعتمد إن طابقت نصف وحدات ملفك على الأقل (ثلاث فأكثر) دروسًا مختلفة في نور بالاسم ورقم الوحدة، ولم تطابق وحدات نور نفسها
+function unitAsLesson(groups, nodes) {
+  const us = [...new Set(groups.map((g) => g.unit || ''))].filter(Boolean);
+  if (us.length < 3 || nodes.length < 3) return null;
+  const nuNames = [...new Set(nodes.map((n) => n.unit || ''))];
+  const words = (t) => kwNorm(String(t || '').replace(/\([^()]*\)/g, ' ')).split(' ').filter((w) => w && !/^(?:unit|lesson|theme|\d+)$/.test(w) && w.length > 2);
+  const numOf = (t) => { const m = toLat(String(t || '')).match(/\bunit\s*(\d+)/i); return m ? +m[1] : null; };
+  const fits = (u, x) => { const a = words(x), b = words(u); if (a.length < 1 || b.length < 1) return 0; const hit = a.filter((w) => b.some((z) => nearW(w, z))).length; return hit / a.length; };
+  const out = new Map(), taken = new Set();
+  let named = 0;
+  us.forEach((u) => {
+    // وحدة ملفك تطابق وحدة في نور: الطريقة العادية
+    if (nuNames.some((x) => fits(u, x) >= 0.8)) named++;
+    const nu = numOf(u);
+    const c = nodes.filter((n) => !taken.has(n.id) && (nu == null || numOf(n.text) == null || numOf(n.text) === nu)).map((n) => ({ n, v: fits(u, n.text) })).filter((x) => x.v >= 0.66).sort((x, y) => y.v - x.v);
+    if (c.length && (c.length === 1 || c[0].v - c[1].v >= 0.2)) { out.set(u, c[0].n); taken.add(c[0].n.id); }
+  });
+  if (!(out.size >= 3 && out.size * 2 >= us.length && named * 2 < us.length)) return null;
+  // دروس ملفك نفسها تطابق دروس نور: الطريقة العادية (وحدات ملفك لا تقوم مقام الدروس)
+  const own = groups.filter((g) => nodes.some((n) => fits(g.lesson, n.text) >= 0.8 || titleSim(stripSessionSuffix(g.lesson || ''), n.text) >= 0.85)).length;
+  return own * 5 >= groups.length ? null : out;
+}
 const unitsOfList = (arr) => { const m = new Map(); arr.forEach((x, i) => { const k = x.unit || ''; if (!m.has(k)) m.set(k, []); m.get(k).push(i); }); return m; };
 // «الدرس الأول/الثاني…» في اسم الدرس
 const LNUM = /(?:ال)?درس\s+(?:رقم\s*)?(?:\d+|(?:ال)?(?:[أاإ]ول[ىي]?|ثاني[ةه]?|ثالث[ةه]?|رابع[ةه]?|خامس[ةه]?|سادس[ةه]?|سابع[ةه]?|ثامن[ةه]?|تاسع[ةه]?|عاشر[ةه]?))(?![\u0621-\u064a])\s*[:：\-–]?\s*/g;
+// شجرة نور تكتب الوحدة داخل اسم الدرس تحت قسم كبير («1أ – الأعداد» » «2 المضاعفات والعوامل:2-1 المضاعفات والعوامل»):
+// يُقرأ ما قبل النقطتين وحدةً وما بعدها درسًا عند الربط فقط، والربط يعود إلى درس نور نفسه
+const UNIT_IN_NAME = /^\s*(\d{1,2}\s*[^\s\d:][^:]*?)\s*:\s*(\d{1,2}\s*-\s*\d{1,2}\s*\S.*)$/;
+// درس واحد في ملفك قسّمه نور أجزاءً («3 - 1 الكسور الجبرية: أ تبسيط…»، «…: ب ضرب وقسمة…»، «…: ج جمع…»):
+// حصصه تُوزَّع على الأجزاء بالترتيب، فلكل جزء في نور تحضيره (وتبقى الحصص كلها كما هي في ملفك)
+const PART = /^(.*\S)\s*:\s*\(?([أابجده])\)?\s+(\S.*)$/;
+function splitByParts(groups, nodes) {
+  const fam = new Map();
+  (nodes || []).forEach((n) => {
+    const t = (String(n.text || '').match(UNIT_IN_NAME) || [])[2] || String(n.text || '');
+    const m = t.match(PART);
+    if (!m) return;
+    const head = nameOnly(m[1]) || m[1], k = (n.unit || '') + '|' + kwNorm(head);
+    if (!fam.has(k)) fam.set(k, { head, parts: [] });
+    fam.get(k).parts.push({ n, name: (nameOnly(m[1]) || m[1]) + ': ' + m[2] + ' ' + m[3], tail: m[3] });
+  });
+  const fams = [...fam.values()].filter((f) => f.parts.length >= 2 && /^[أا]/.test(f.parts[0].name.slice(f.head.length + 2)));
+  if (!fams.length) return groups;
+  const nm = (g) => stripSessionSuffix(g.lesson || '');
+  const out = [];
+  groups.forEach((g) => {
+    const f = fams.find((x) => titleSim(nm(g), x.head) >= 0.9);
+    const ok = f && g.sessions.length >= f.parts.length
+      && groups.filter((y) => titleSim(nm(y), f.head) >= 0.9).length === 1
+      && !groups.some((y) => f.parts.some((pt) => titleSim(nm(y), pt.tail) >= 0.85));
+    if (!ok) { out.push(g); return; }
+    const m = f.parts.length, k = g.sessions.length;
+    let at = 0;
+    f.parts.forEach((pt, j) => {
+      const len = Math.floor(k / m) + (j < k % m ? 1 : 0);
+      out.push(Object.assign({}, g, { lesson: pt.name, sessions: g.sessions.slice(at, at + len) }));
+      at += len;
+    });
+  });
+  return out;
+}
 function alignGroups(groups, nodes, known) {
+  const hits = nodes.filter((n) => UNIT_IN_NAME.test(String(n.text || '')));
+  const sp1 = !(nodes.length < 3 || hits.length * 5 < nodes.length * 4);
+  const split = !sp1 ? nodes : nodes.map((n) => { const m = String(n.text || '').match(UNIT_IN_NAME); return m ? Object.assign({}, n, { unit: m[1].trim(), text: m[2].trim() }) : n; });
+  const byId = new Map(nodes.map((n) => [n.id, n])), sp = new Map(split.map((n) => [n.id, n]));
+  const kn = !sp1 ? known : new Map([...(known || new Map())].map(([k, n]) => [k, (n && sp.get(n.id)) || n]));
+  const res = alignGroups0(groups, split, kn);
+  promoteSeq(res, groups, split);
+  if (sp1) res.forEach((r) => { if (r.node) r.node = byId.get(r.node.id) || r.node; });
+  return res;
+}
+// ربط بالترتيب بين درسين مربوطين بالاسم في الوحدة نفسها وبالمسافة نفسها في نور وملفك («التبخر» أول وحدته وبعده
+// «لماذا يُعدّ التبخر مفيدًا؟» = «3-2 …»، فهو «3-1 حالات المادة» أول وحدته في نور): يُعدّ مؤكدًا
+function promoteSeq(res, groups, nodes) {
+  const ix = new Map(nodes.map((n, i) => [n.id, i]));
+  const strong = (r) => r && r.node && !r.joined && (r.how === 'name' || r.how === 'ordinal' || r.how === 'pick');
+  res.forEach((r, gi) => {
+    if (!r.node || r.how !== 'order' || r.joined) return;
+    const u = groups[gi].unit || '', nu = r.node.unit || '', ni = ix.get(r.node.id);
+    if (ni == null) return;
+    const sameU = (j) => j >= 0 && j < groups.length && (groups[j].unit || '') === u;
+    let p = gi - 1; while (sameU(p) && !strong(res[p])) p--;
+    let q = gi + 1; while (sameU(q) && !strong(res[q])) q++;
+    const side = (j, edge) => {
+      if (!sameU(j)) { const k = ni + edge; return j === gi + edge && (k < 0 || k >= nodes.length || (nodes[k].unit || '') !== nu) ? 'edge' : 'bad'; }
+      return (res[j].node.unit || '') === nu && ix.get(res[j].node.id) - ni === j - gi ? 'ok' : 'bad';
+    };
+    const a = side(p, -1), b = side(q, 1);
+    if (a !== 'bad' && b !== 'bad' && (a === 'ok' || b === 'ok')) r.how = 'seq';
+  });
+}
+function alignGroups0(groups, nodes, known) {
   // ملفك يبدأ العدّ من جديد في كل قسم من الوحدة (نحوية: الدرس الأول، إملائية: الدرس الأول، تعبير: الدرس الأول) ونور يعدّ دروس الوحدة كلها:
   // رقم الدرس في هذه الوحدة لا يدل على درس نور — يُقارن بالاسم وحده
   const perSect = new Set();
@@ -1121,6 +1222,21 @@ function alignGroups(groups, nodes, known) {
   const res = groups.map(() => ({ node: null, how: '', why: '' }));
   const used = new Set();
   const put = (gi, node, how) => { res[gi] = { node, how, why: '' }; used.add(node.id); };
+  // وحدات ملفك هي دروس نور (الإنجليزي ١٢: نور «Theme1 » Unit 1: A Fair Exchange» وملفك «Unit 1: A Fair Exchange (Reading)» وحصصها
+  // بأسماء أنشطتها): كل حصص وحدة ملفك لدرس نور الذي يحمل اسمها، وما لا درس له في نور («Across Cultures…») إلى درس نور الذي قبله
+  const byUnit = unitAsLesson(groups, nodes);
+  if (byUnit) {
+    groups.forEach((g, gi) => { const n = byUnit.get(g.unit || ''); if (n) { res[gi] = { node: n, how: 'name', why: '', shared: true }; used.add(n.id); } });
+    groups.forEach((g, gi) => {
+      if (res[gi].node) return;
+      let h = gi - 1; while (h >= 0 && (!res[h].node || res[h].joined)) h--;
+      if (h < 0) { h = gi + 1; while (h < groups.length && (!res[h].node || res[h].joined)) h++; }
+      if (h >= 0 && h < groups.length && res[h].node) res[gi] = { node: res[h].node, how: 'name', why: '', shared: true, joined: true };
+      else res[gi].why = 'لا يقابله درس في نور';
+    });
+    res.unitsByName = byUnit.size; res.unitsNamed = byUnit.size;
+    return res;
+  }
   const fail = (gi, why) => { if (!res[gi].node) res[gi].why = why; };
   const ords = groups.map((g) => ordinalOf({ lesson: g.lesson }));
   if (ords.some(Boolean) && ords.every(Boolean)) {
@@ -1329,10 +1445,29 @@ function alignGroups(groups, nodes, known) {
       if (n) put(gi, n, 'name');
     });
   }
+  // الكلمات المميزة بعد حذف الشائع في الشجرة («الأنشطة النحوية»، «تمارين تطبيقية»): «شبه الجملة (تمارين تطبيقية)» =
+  // «تمارين تطبيقية في شبه الجملة» — إن احتوت كلمات أحدهما كلمات الآخر، ولم يشبه أحدهما غير الآخر بين ما بقي بلا ربط
+  const df = new Map();
+  nodes.forEach((n) => new Set(fullWords(n.text)).forEach((w) => df.set(w, (df.get(w) || 0) + 1)));
+  const GEN = /^(?:تمارين|تطبيقيه|تطبيقات|تطبيقيه|تدريبات|انشطه|نشاط|على|في|من|الى|عن|مع|lesson|unit|review)$/;
+  const rare = (t) => [...new Set(fullWords(stripSessionSuffix(t || '')).filter((w) => w.length > 2 && !GEN.test(w) && !/^\d+$/.test(w) && (df.get(w) || 0) < 3))];
+  const within = (a, b) => a.length > 0 && b.length > 0 && a.every((w) => b.some((z) => nearW(w, z)));
+  const fitsR = (a, b) => within(a, b) || within(b, a);
+  const freeG = groups.map((g, gi) => gi).filter((gi) => !res[gi].node);
+  const rg = new Map(freeG.map((gi) => [gi, rare(groups[gi].lesson)]));
+  freeG.forEach((gi) => {
+    if (res[gi].node) return;
+    const a = rg.get(gi);
+    const c = nodes.filter((n) => !used.has(n.id) && fitsR(a, rare(n.text)));
+    if (c.length !== 1) return;
+    const b = rare(c[0].text);
+    if (freeG.filter((x) => !res[x].node && fitsR(rg.get(x), b)).length !== 1) return;
+    put(gi, c[0], 'name');
+  });
   // درس في ملفك لا مقابل له في نور، ووحدته في نور دروسها كلها مربوطة (أو لا وحدة له فيها): حصصه تُضم إلى درس نور
   // لدرس من ملفك في موضوعه نفسه («الحروف التي تُكتب ولا تُنطق» إلى «إملاء اختباري (الحروف التي تُكتب ولا تُنطق)»)،
   // وإن كان مراجعة أو مشروعًا أو تدريبات أو قراءة حرة فإلى الدرس الذي قبله (أو الذي بعده إن كان أولها) — فلا تضيع حصة من خطة المعلم
-  const EXTRA = /مراجع|مشروع|تدريب|تطبيقات|قراءه حره|review|revision|consolidation|practice|project|end of (?:semester|term|unit)/i;
+  const EXTRA = /مراجع|مشروع|تدريب|تطبيقات|قراءه (?:ال)?حره|review|revision|consolidation|practice|project|end of (?:semester|term|unit)/i;
   const INTRO = /(?:^| )(?:ال)?تمهيد|^(?:ال)?مقدمه$|introduction|warm.?up/i;
   const tie = (a, b) => { const y = new Set(coreOf(groups[a].lesson)); return coreOf(groups[b].lesson).filter((w) => w.length > 2 && !/^(?:unit|lesson|\d+)$/.test(w) && y.has(w)).length; };
   if (!(named >= 2 && byName / named < 0.5)) {
@@ -1349,6 +1484,14 @@ function alignGroups(groups, nodes, known) {
       if (INTRO.test(kwNorm(g.lesson))) host = after != null ? after : before;
       else if (EXTRA.test(kwNorm(g.lesson))) host = before != null ? before : after;
       else { const tops = mates.map((i) => ({ i, t: tie(gi, i) })).filter((x) => x.t >= 2).sort((x, y) => y.t - x.t || Math.abs(x.i - gi) - Math.abs(y.i - gi)); if (tops.length) host = tops[0].i; }
+      // وحدة نور أقل دروسًا من وحدتك («7 - 1 رسم المستقيمات» يجمع «ميل المستقيمات» و«إيجاد معادلة المستقيم»…): إلى درس نور
+      // الذي يسبقه في الوحدة نفسها (أو الذي يليه إن كان أولها)
+      if (host == null && un && same.length && un.length < groups.filter((x) => x.unit === g.unit).length) {
+        // وفي الفرع نفسه فقط («الأنشطة النحوية: …» لا تُضم إلى «النص الشعري: …»)
+        const br = (t) => { const m = String(t || '').match(/^\s*([^:]{2,30}?)\s*:/); return m && !/^(?:ال)?درس\b/.test(kwNorm(m[1])) ? kwNorm(m[1]) : ''; };
+        const h = before != null ? before : after;
+        if (h != null && br(groups[h].lesson) === br(g.lesson)) host = h;
+      }
       if (host == null) return;
       res[gi] = { node: res[host].node, how: 'name', why: '', shared: true, joined: true };
       res[host].shared = true;
@@ -1365,7 +1508,7 @@ async function buildPlan(nodes) {
   // قائمة نور لم تُقرأ كاملة، أو عناوينها بصيغة لا تطابق دروس الشجرة: ما حُفظ في مرات سابقة
   // (قبل تصفير السجل عند الفتح) يُعدّ موجودًا، فلا يتكرر
   if (WIZ.on && courseCid && !noorTrust) semSaved = Object.assign({}, savedBak, semSaved);
-  const groups = lessonGroups(pkg);
+  const groups = splitByParts(lessonGroups(pkg), nodes);
   // اختياراتك السابقة: عنوان درس نور ← حصة من المادة (الأحدث أولًا)
   const known = new Map(), usedNode = new Set(), stale = [];
   const picks = await getPicks().catch(() => ({}));
@@ -2007,7 +2150,7 @@ async function run() {
     if (WIZ.on && !$('optReview').checked) {
       if (nConf || plan.mismatch) { autoResolve(); await savePicks(); }
       safeLinks(); assignDates(); renderPlan();
-      if (!queue.length) { finished = true; throw new Error(plan.some((p) => p.sessions.some((s) => s.inNoor)) ? 'كل الحصص المختارة موجودة في نور ✓' : 'لا شيء ناقص ✓'); }
+      if (!queue.length) { finished = true; throw new Error(plan.some((p) => p.sessions.some((s) => s.inNoor && pickedS(s))) ? 'كل الحصص المختارة موجودة في نور ✓' : 'انتهى ✓'); }
       setBox('run', planLine(), WIZ.trialCap != null ? `من تجربتك المجانية. أبدأ الآن.` : 'أبدأ الآن.');
     } else if ($('optReview').checked || nConf || plan.mismatch || !queue.length) {
       if (WIZ.on) document.body.classList.add('showplan');
@@ -2171,7 +2314,8 @@ async function run() {
     msg(ok && !failed.length ? 'ok' : 'warn', head + (tail ? ` (${tail})` : ''));
     setBox(miss || skipped || failed.length || !ok ? 'warn' : 'ok', head, tail ? tail + ' — التفاصيل في السجل.' : '');
   }
-  const had = plan.flatMap((p) => p.sessions.filter((s) => s.inNoor)).length;
+  // «موجودة في نور»: في «أختار الدروس بنفسي» الحصص التي اختارها المعلم فقط — لا حصص دروس أخرى من المادة
+  const had = plan.flatMap((p) => p.sessions.filter((s) => s.inNoor && pickedS(s))).length;
   const report = await saveReport({ failed, had }).catch(() => null);
   if (WIZ.on) wizAfterRun({ report, ok, failed: failed.length, stopped: stopFlag, error: !!endMsg && endMsg[0] === 'bad' && !WIZ.trialOver ? (diag.log.filter((l) => l.startsWith('[bad] ')).pop() || '[bad]  ').slice(6) || ' ' : '', had, past: pastSkipped });
 }
@@ -2741,7 +2885,7 @@ async function wizAfterRun({ report, ok, failed, stopped, error, had, past = 0 }
   if (wz.mode === 'pick') $('wzMore').hidden = false;
   // نور لا تقبل تاريخًا مضى: ما مضى تاريخه تُرك بهدوء، ويُذكر للمعلم دون صيغة خطأ
   const pt = past ? ` ${past === 1 ? 'حصة واحدة مضى تاريخها' : `${countWord(past)} مضى تاريخها`} ونور لا تقبل نشرها بتاريخ ماضٍ، فتركتها.` : '';
-  if (!n) { setBox('ok', had ? '✓ هذه الحصص موجودة في نور' : past ? '✓ انتهى' : '✓ لا شيء ناقص', `${pt}${wz.mode === 'pick' ? ' هل تختار درسًا آخر؟' : ''}`.trim()); return; }
+  if (!n) { setBox('ok', had ? '✓ هذه الحصص موجودة في نور' : past || wz.mode === 'pick' ? '✓ انتهى' : '✓ لا شيء ناقص', `${pt}${wz.mode === 'pick' ? ' هل تختار درسًا آخر؟' : ''}`.trim()); return; }
   // ما لا يقابله درس في شجرة نور لا يُذكر للمعلم (يبقى في سجل المشرف وحده)
   setBox('ok', '✓ تمت التعبئة بنجاح', `نُشر ${countWord(n).replace('حصتان', 'حصتين')}${range}.${pt}${wz.mode === 'pick' ? ' هل تختار درسًا آخر؟' : ''}`);
 }
