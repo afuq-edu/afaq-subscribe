@@ -1325,6 +1325,10 @@ function alignGroups0(groups, nodes, known) {
       if (!gg.length) continue;
       const nn = p2 > p1 ? pool.slice(p1 + 1, p2).filter((n) => !used.has(n.id)) : [];
       if (nn.length && gg.length === nn.length && gg.every((gi, j) => numOk(gi, nn[j]) && !differ(gi, nn[j]))) { gg.forEach((gi, j) => put(gi, nn[j], 'order')); continue; }
+      // درس واحد بقي بين درسين مربوطين بالاسم، وفي نور درس واحد بقي بين مقابليهما («عاقبة نقض العهد» = «إجلاء بني قينقاع»):
+      // هو مقابله وإن اختلف الاسمان
+      const byName = (k) => k >= 0 && k < gis.length && ['name', 'pick'].includes(how.get(gis[k]));
+      if (gg.length === 1 && nn.length === 1 && p2 - p1 === 2 && byName(k1) && byName(k2) && numOk(gg[0], nn[0]) && !clash(gg[0], nn[0])) { put(gg[0], nn[0], 'seq'); continue; }
       const pairs = alignBySimilarity(gg.map((gi) => groups[gi]), nn).filter(([a, b]) => !clash(gg[a], nn[b]));
       pairs.forEach(([a, b]) => put(gg[a], nn[b], 'fuzzy'));
       gg.forEach((gi) => { if (!res[gi].node) left.push(gi); });
