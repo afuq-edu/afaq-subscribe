@@ -1,0 +1,23 @@
+name: حالة نسخ حاضر
+
+# يدويًا من تبويب Actions ← «حالة نسخ حاضر» ← Run workflow: نسخة المستودع، الموقع المنشور، متجر كروم، وmin_ext_version.
+# النتيجة في ملخص التشغيل. قراءة فقط (مفتاح anon العام من site/config.js).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  versions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: حالة النسخ
+        run: |
+          node tools/versions.mjs | tee out.txt
+          { echo '```'; cat out.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
