@@ -279,7 +279,7 @@
     const when = (x) => x.client_at || x.at, time = (x) => `${esc(ago(when(x)))} <small class="muted">${esc(hm(when(x)))}</small>`;
     const runs = new Map();   // الأسطر تأتي الأحدث أولًا، فأول ظهور لكل تشغيلة يرتّب التشغيلات
     rows.forEach((x) => { const k = x.run_id || '#' + x.id; if (!runs.has(k)) runs.set(k, []); runs.get(k).push(x); });
-    const head = `<div style="display:flex;gap:10px;align-items:baseline;margin-bottom:6px"><b>سجل التعبئة</b><small class="muted">${rows.length ? `${toAr(rows.length)} سطرًا في ${toAr(runs.size)} تشغيلة` : ''}</small><a href="#" class="small" data-logre="${id}" style="margin-inline-start:auto">تحديث</a></div>`;
+    const head = `<div style="display:flex;gap:10px;align-items:baseline;margin-bottom:6px"><b>سجل التعبئة</b><small class="muted">${rows.length ? `${toAr(rows.length)} سطرًا في ${toAr(runs.size)} تشغيلة` : ''}</small>${rows.length ? `<a href="#" class="small" data-logcopy style="margin-inline-start:auto" title="ينسخ السجل كاملًا (JSON) لتلصقه في محادثة Claude فيحلّله بـ tools/fill-log.mjs">نسخ للتحليل</a>` : ''}<a href="#" class="small" data-logre="${id}"${rows.length ? '' : ' style="margin-inline-start:auto"'}>تحديث</a></div>`;
     const body = rows.length ? `<table class="grid" style="font-size:13.5px"><tr><th>الوقت</th><th>المادة</th><th>الحصة ← درس نور</th><th>تاريخ النشر</th><th>الحالة</th><th>ملاحظة</th></tr>` + [...runs.values()].map((list) => {
       list.sort((a, b) => String(a.at).localeCompare(String(b.at)) || a.id - b.id);
       // حصة لها أكثر من صف نهائي في التشغيلة نفسها (أُعيدت بعد التحقق النهائي، أو في استئناف): الأحدث هو الحكم، وما قبله يُعرض باهتًا ولا يُعدّ
@@ -300,6 +300,12 @@
     }).join('') + '</table>' : '<p class="muted small" style="margin:0">لا سجل بعد.</p>';
     cell.innerHTML = head + body;
     $('[data-logre]', cell).onclick = (ev) => { ev.preventDefault(); drawFillLog(id, row); };
+    const cp = $('[data-logcopy]', cell);
+    if (cp) cp.onclick = async (ev) => {
+      ev.preventDefault();
+      try { await navigator.clipboard.writeText(JSON.stringify(rows)); A.toast(`نُسخ السجل (${toAr(rows.length)} سطرًا). الصقه في المحادثة لتحليله.`, 'ok'); }
+      catch (e) { A.toast('تعذّر النسخ من المتصفح.', 'bad'); }
+    };
   }
   $('#reqSearch').oninput = drawRequests;
   $('#reqFilter').onchange = drawRequests;
@@ -442,6 +448,14 @@
       };
     });
   }
+  // «نسخ كل الشجرات للاختبارات»: كل الشجرات بدروسها، لتُضاف إلى tests/noor-mock/real-trees/trees.json بـ tools/noor-tree.mjs
+  if ($('#treeCopy')) $('#treeCopy').onclick = async () => {
+    try {
+      const rows = await db.list('noor_trees', { select: 'id,package_id,term,term_text,seen,last_at,ver,lessons', order: [['last_at', false]], limit: 500 });
+      await navigator.clipboard.writeText(JSON.stringify(rows));
+      A.toast(`نُسخت ${toAr(rows.length)} شجرة. الصقها في المحادثة لتُضاف إلى الاختبارات.`, 'ok');
+    } catch (e) { A.toast(A.errText(e), 'bad'); }
+  };
   // اقتراح العنوان والرمز من المادة والصف
   const pf = $('#pkgForm');
   let idTouched = false, titleTouched = false;

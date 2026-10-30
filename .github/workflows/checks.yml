@@ -1,0 +1,29 @@
+name: فحص سريع
+
+# على كل طلب دمج وكل دفع إلى main: فحص المستودع (tools/doctor.mjs) واختبارات قاعدة البيانات (tests/db.test.mjs).
+# دقيقة واحدة تقريبًا. لا يحتاج أسرارًا ولا يلمس قاعدة البيانات الحية.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: فحص المستودع (صياغة، manifest، RPC، JSON)
+        run: node tools/doctor.mjs
+      - name: اختبارات قاعدة البيانات (PGlite)
+        working-directory: tests
+        run: |
+          npm install --no-audit --no-fund
+          node db.test.mjs
