@@ -1504,6 +1504,38 @@ function alignGroups0(groups, nodes, known) {
   res.unitsByName = byName; res.unitsNamed = named;
   return res;
 }
+// الاسم بلا اسم الوحدة («Unit2: Picnic Time!: Graded readers» = «Graded readers»، «Unit 2 – Graded readers: …» = «Graded readers: …»)
+const bareT = (t, unit) => {
+  let s = String(t || '');
+  if (unit && s.startsWith(unit)) s = s.slice(unit.length);
+  s = s.replace(/^\s*[:\-–—]\s*/, '').replace(/^\s*(?:unit|الوحدة)\s*\d+\s*[:\-–—]\s*/i, '').trim();
+  return s || String(t || '');
+};
+const linkSim = (g, n) => Math.max(titleSim(stripSessionSuffix(g.lesson || ''), n.text), titleSim(bareT(stripSessionSuffix(g.lesson || '')), bareT(n.text, n.unit)));
+// ما لا يُعبّأ دون مراجعة من الربط ({group, node, how, shared, edited}): الربط بالترتيب أو برقم الوحدة يبقى فقط إن وافق رقمُ الدرس
+// أو اسمُه درسَ نور؛ وبالتشابه لا يُقبل إن تناقض رقما الدرس؛ ودرسا ملف على درس نور واحد (غير مشتركين) يبقى أقربهما اسمًا
+function unsureLinks(rows) {
+  const sim = (p) => linkSim(p.group, p.node);
+  const out = new Set();
+  rows.forEach((p) => {
+    if (!p.node || p.edited) return;
+    const a = lessonNum(p.group.lesson), b = lessonNum(p.node.text);
+    // بالتشابه: لا يُقبل إن تناقض رقما الدرس والشبه غير قوي. وما رُبط خارج ترتيب الوحدة (أشبه درس حرّ) يحتاج شبهًا قويًا
+    // أو رقمًا متفقًا («الكسور العشرية» ليست «الكسور الاعتيادية»)
+    if (p.how === 'fuzzy' || p.how === 'near') {
+      if (a != null && b != null && a !== b && sim(p) < 0.85) { out.add(p); return; }
+      if (p.how === 'fuzzy' || (a != null && a === b) || sim(p) >= 0.7) return;
+      out.add(p); return;
+    }
+    if (p.how !== 'order' && p.how !== 'number') return;
+    if ((a != null && b != null && a === b) || sim(p) >= 0.5) return;
+    out.add(p);
+  });
+  const by = new Map();
+  rows.forEach((p) => { if (p.node && !out.has(p)) { const l = by.get(p.node.id) || []; l.push(p); by.set(p.node.id, l); } });
+  by.forEach((l) => { if (l.length < 2 || l.every((p) => p.shared)) return; l.sort((x, y) => sim(y) - sim(x)).slice(1).forEach((p) => out.add(p)); });
+  return [...out];
+}
 async function buildPlan(nodes) {
   treeNodes = nodes;
   nodeSes = new Map(); nodeLs = new Map();
@@ -2009,26 +2041,10 @@ function autoResolve() {
 // المعالج (دون مراجعة): لا يُعبَّأ درس في درس نور غير مؤكد أنه مقابله — حتى لا يقع تحضير درس مكان درس آخر.
 // الربط بالترتيب أو برقم الوحدة يبقى فقط إن وافق رقمُ الدرس أو اسمُه درسَ نور؛ ودرسا ملف على درس نور واحد يبقى أقربهما اسمًا
 function safeLinks() {
-  const sim = (p) => titleSim(stripSessionSuffix(p.group.lesson || ''), p.node.text);
   const drop = (p) => { p.node = null; p.miss = true; p.skipped = true; p.why = 'لم أتأكد من مقابله في نور'; presence(p); };
-  let n = 0;
-  plan.forEach((p) => {
-    if (!p.node || p.edited) return;
-    const a = lessonNum(p.group.lesson), b = lessonNum(p.node.text);
-    // بالتشابه: لا يُقبل إن تناقض رقما الدرس والشبه غير قوي. وما رُبط خارج ترتيب الوحدة (أشبه درس حرّ) يحتاج شبهًا قويًا
-    // أو رقمًا متفقًا («الكسور العشرية» ليست «الكسور الاعتيادية»)
-    if (p.how === 'fuzzy' || p.how === 'near') {
-      if (a != null && b != null && a !== b && sim(p) < 0.85) { drop(p); n++; return; }
-      if (p.how === 'fuzzy' || (a != null && a === b) || sim(p) >= 0.7) return;
-      drop(p); n++; return;
-    }
-    if (p.how !== 'order' && p.how !== 'number') return;
-    if ((a != null && b != null && a === b) || sim(p) >= 0.5) return;
-    drop(p); n++;
-  });
-  const by = new Map();
-  plan.forEach((p) => { if (p.node) { const l = by.get(p.node.id) || []; l.push(p); by.set(p.node.id, l); } });
-  by.forEach((l) => { if (l.length < 2 || l.every((p) => p.shared)) return; l.sort((x, y) => sim(y) - sim(x)).slice(1).forEach((p) => { drop(p); n++; }); });
+  const out = unsureLinks(plan);
+  out.forEach(drop);
+  const n = out.length;
   if (n) logLine('info', `${toAr(n)} ${n === 1 ? 'درس لم أتأكد من مقابله' : 'دروس لم أتأكد من مقابلها'} في نور — لم أعبّئها حتى لا يقع تحضير مكان آخر`);
 }
 function waitGo(autoMs, lbl) {
