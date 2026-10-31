@@ -310,12 +310,27 @@ async function ui(pg) {
     return { head: t('nowHead'), text: t('nowText'), stop: vis('stopBtn'), again: vis('wzAgain'), resume: vis('wzResume'), wiz: vis('wizCard'), wzHead: t('wzHead'), run: document.body.classList.contains('wiz-run'), msg: t('topMsg') };
   });
 }
+// the full-term start summary (4.10.19, the owner's one exception to «no confirmation»): kept for the checks, then «✓ ابدأ» —
+// or, when the tool advises picking the lessons, «أكمل التحضير الفصلي» (what a teacher who wants the whole term presses)
+async function confirmStart(b) {
+  const sm = await b.pg.evaluate(() => {
+    const acts = document.getElementById('nowActs'), card = document.getElementById('nowCard');
+    const go = acts && !acts.hidden && card && !card.hidden && acts.querySelector('button[data-act="go"]');
+    if (!go) return null;
+    const t = (id) => { const e = document.getElementById(id); return e ? e.textContent.replace(/\s+/g, ' ').trim() : ''; };
+    const r = { head: t('nowHead'), text: (document.getElementById('nowText') || {}).innerText || '', go: go.textContent.trim(), pick: !!acts.querySelector('button[data-act="pick"]') };
+    go.click();
+    return r;
+  }).catch(() => null);
+  if (sm) (b.summaries = b.summaries || []).push(sm);
+}
 // wait for the wizard's final state; tick(b) is called every poll (fault injection mid-run)
 async function waitDone(b, ms, tick) {
   const end = Date.now() + ms;
   let last = '', stable = 0, s = null;
   while (Date.now() < end) {
     if (tick) await tick(b);
+    await confirmStart(b);
     s = await ui(b.pg).catch(() => null);
     if (s) {
       const sig = JSON.stringify(s);
@@ -328,6 +343,7 @@ async function waitDone(b, ms, tick) {
   return Object.assign(s || {}, { timeout: true });
 }
 const OK_HEAD = /تمت التعبئة بنجاح|موجودة في نور|لا شيء ناقص|مكتمل/;
+const CALM_BAD = /خطأ|فشل|تعذّر|تعذر|غير موجود|ناقص|مشكلة|أكملها بنفسك/;   // wording the owner never wants the teacher to read
 // the wizard's final state; «أكمل الباقي» is pressed (up to twice) if sessions are left — what a teacher does
 async function waitFinal(b, ms, tick, note) {
   let s = null;
@@ -469,6 +485,10 @@ async function flowTerm(job, J, W) {
     }
     const s = await waitFinal(b, 120000 + n * 12000, tick, F.info);
     F.info.final = `${s.head} | ${s.text}`.slice(0, 300);
+    const sums = b.summaries || [];
+    F.info.summary = sums.map((x) => `${x.head} | ${x.text}`.slice(0, 300));
+    check(F, job.fault === 'close' ? sums.length >= 1 : sums.length === 1, 'start: the teacher confirms one start summary before the first prep (4.10.19)', JSON.stringify(sums));
+    check(F, sums.every((x) => x.pick && !CALM_BAD.test(x.head + ' ' + x.text)), 'start: the summary is calm and offers «أختار الدروس بنفسي»', JSON.stringify(sums));
     if (process.env.TREE_OVERRIDE) { const nb = new Map(); J.T.tree.terms[0].units.forEach((u) => u.lessons.forEach((l) => nb.set(l.nodeId, u.text + ' » ' + l.text))); noor.st.rows.filter((x) => !x.preexisting).sort((a, b) => (a.publishDate || '').localeCompare(b.publishDate || '')).forEach((x) => console.log('ROW', x.publishDate, '|', nb.get(x.lessonId) || x.lessonId, '|', x.title)); }
     if (process.env.DUMP_LOG) fs.writeFileSync(path.join(process.env.DUMP_LOG, `${job.id}-term1.log`), (await dumpLog(b.pg)).join('\n'));
     const rows0 = noor.st.rows.filter((x) => !x.preexisting), rows = splitMerged(rows0);   // a prep «(n و m)» counts once per session
@@ -524,7 +544,9 @@ async function flowTerm(job, J, W) {
     // end of plan (4.10.10): when blocked days would push the plan past its last week, the tool joins the latest same-lesson
     // pairs into one prep «(n و m)» — exactly as many as the sessions that would otherwise fall after the plan's last Thursday;
     // the remaining preps then follow the expected-date rule with the joined sessions taken out of the sequence
-    const planThu = (() => { const d = new Date(J.pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort().pop() + 'T12:00'); d.setDate(d.getDate() + 4 - d.getDay()); return d.toISOString().slice(0, 10); })();
+    // 4.10.19 (owner 2026-10-31): a prep per period; what a week cannot hold goes on to the next weeks until the TERM END, and two
+    // sessions of one lesson share a prep only when the periods left until the term end are fewer than the preps
+    const planThu = J.endsOn;
     const savedIds = new Set(saved.map((x) => x.l.id));
     const expAll = expectDates([{ sessions: J.pkg.lessons }], savedIds, blocked, capF);   // file order = official schedule
     const overrun = saved.filter((x) => expAll[x.l.id] > planThu).length;
@@ -538,14 +560,15 @@ async function flowTerm(job, J, W) {
     F.info.tight = tight;
     if (job.fault !== 'oneper') {
       if (tight) check(F, tails.size <= overrun, `end of plan (more sessions than periods): no more shared preps than the overrun (${overrun} needed, ${tails.size} shared)`, [...rootOfTail].slice(0, 6).map(([t, r]) => `${r}+${t}`).join(', '));
-      else check(F, tails.size === overrun, `end of plan: sessions share a prep only when a blocked day would push the plan past its last week (${planThu}), and exactly as many (${overrun} needed, ${tails.size} shared)`, [...rootOfTail].slice(0, 6).map(([t, r]) => `${r}+${t}`).join(', '));
+      else check(F, tails.size === overrun, `end of term: sessions share a prep only when the plan would otherwise pass the term end (${planThu}), and exactly as many (${overrun} needed, ${tails.size} shared)`, [...rootOfTail].slice(0, 6).map(([t, r]) => `${r}+${t}`).join(', '));
       const badPair = [...rootOfTail].filter(([t, r]) => { const a = byId.get(r), b = byId.get(t); return !a || !b || (a.unit || '') + '|' + (a.lesson || '') !== (b.unit || '') + '|' + (b.lesson || ''); });
       check(F, !badPair.length, 'end of plan: a shared prep holds sessions of one lesson only', badPair.map(([t, r]) => `${r}+${t}`).join(', '));
     }
     // oneper: when merging cannot fit the plan, sessions may come earlier than their plan week (never before the plan's first week)
     const todayIso = FIXED_NOW;
     const plan0 = wk0(J.pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort()[0]);
-    const early = saved.filter((x) => !tails.has(x.l.id) && (job.fault === 'oneper' || tight ? x.d < plan0 : job.fault === 'twoper' || J.T.real ? x.d < wk0(x.l.pubDate) : x.d < x.l.pubDate));
+    // a shared prep frees a period of its week: the week's later sessions move up into it (exact dates are checked below)
+    const early = saved.filter((x) => !tails.has(x.l.id) && (job.fault === 'oneper' || tight ? x.d < plan0 : job.fault === 'twoper' || J.T.real || tails.size ? x.d < wk0(x.l.pubDate) : x.d < x.l.pubDate));
     if (job.fault === 'twoper') {
       const seen = new Map(), clash = [];
       noor.st.rows.filter((r) => !r.preexisting).forEach((r) => (r.slots || []).forEach((x) => { const k = r.publishDate + '|' + x; if (seen.has(k)) clash.push(k); seen.set(k, 1); }));
@@ -557,9 +580,9 @@ async function flowTerm(job, J, W) {
       const two = Object.values(exp).filter((d, i, a) => a.indexOf(d) !== i).length;
       check(F, !one.length, `periods: each Sunday holds one prep per session its week has, up to two (${two} Sundays with two)`, one.slice(0, 10).join(', '));
     }
-    check(F, !early.length, tight ? 'dates: no session before the plan\'s first week' : job.fault === 'twoper' || job.fault === 'oneper' || J.T.real ? 'dates: no session before its week' : 'dates: no session before its official date', early.slice(0, 10).map((x) => `${x.l.id}: ${x.d} < ${x.l.pubDate}`).join('\n'));
+    check(F, !early.length, tight ? 'dates: no session before the plan\'s first week' : job.fault === 'twoper' || job.fault === 'oneper' || J.T.real || tails.size ? 'dates: no session before its week' : 'dates: no session before its official date', early.slice(0, 10).map((x) => `${x.l.id}: ${x.d} < ${x.l.pubDate}`).join('\n'));
     if (job.fault === 'oneper' || tight) {
-      const lastWk = (() => { const d = new Date(J.pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort().pop() + 'T12:00'); d.setDate(d.getDate() + 4 - d.getDay()); return d.toISOString().slice(0, 10); })();
+      const lastWk = J.endsOn;   // the bound is the term end (4.10.19), not the plan's last week
       // a prep never spans two lessons, so a run of weeks whose lessons are all distinct can overflow the plan's last week
       // (within the term): allowed only when the contiguous block of used days ending at the last prep holds no two preps
       // of one lesson (those could still have been merged)
@@ -592,7 +615,7 @@ async function flowTerm(job, J, W) {
           mergeable.push(`${k}: ${rootOf(p).id}+${rootOf(q).id} (${p.publishDate}/${q.publishDate})`);
         }
       }
-      check(F, !late.length || !mergeable.length, `${tight ? 'tight' : 'oneper'}: nothing after the plan's last week (${lastWk}) unless no two sessions of one lesson from today on could still share a prep (${late.length} late)`, late.slice(0, 6).map((x) => `${x.l.id}@${x.d}`).join(', ') + (mergeable.length ? ' · still mergeable: ' + mergeable.slice(0, 5).join('; ') : ''));
+      check(F, !late.length || !mergeable.length, `${tight ? 'tight' : 'oneper'}: nothing after the term end (${lastWk}) unless no two sessions of one lesson from today on could still share a prep (${late.length} late)`, late.slice(0, 6).map((x) => `${x.l.id}@${x.d}`).join(', ') + (mergeable.length ? ' · still mergeable: ' + mergeable.slice(0, 5).join('; ') : ''));
       const latePreps = rows0.filter((r) => r.publishDate > lastWk).length;
       check(F, latePreps <= bound, `${tight ? 'tight' : 'oneper'}: no more late preps than the overflow bound (${bound})`, `${latePreps} late preps: ` + late.slice(0, 6).map((x) => `${x.l.id}@${x.d}`).join(', '));
       if (job.fault === 'oneper') check(F, !termOut.length || (!mergeable.length && latePreps <= bound), `term: every date within the term (… ${J.endsOn}) unless the plan cannot fit the periods at all (nothing left to merge)`, termOut.slice(0, 6).map((x) => `${x.l.id}@${x.d}`).join(', ') + (mergeable.length ? ' · still mergeable: ' + mergeable.slice(0, 3).join('; ') : ''));
@@ -636,7 +659,9 @@ async function flowPick(job, J, W) {
   if (job.fault === 'busy') { const b2 = [at(0.3), at(0.6)]; b2.forEach((d) => blocked.add(d)); cfg.existing = [{ cid: J.cid, title: 'نشاط إثرائي', publishDate: b2[0] }, { cid: J.cid, title: 'اختبار قصير', publishDate: b2[1] }]; F.info.busy = b2; }
   if (job.fault === 'netcut') { cfg.ambiguous = { 1: 'abort' }; F.info.netcutPosts = [1]; }
   // 3 random lessons; in a lesson with several sessions keep a random 1–3 of them (not always the first)
-  const gs = pickN(r, J.T.groups, 3).sort((a, b) => a.sessions[0].idx - b.sessions[0].idx);
+  // a real tree: file lessons that Noor does not have (trees.json _gaps.file) are left out silently, as in the full term
+  const gapFile = new Set(((J.T.real && REAL._gaps && REAL._gaps[job.id]) || {}).file || []);
+  const gs = pickN(r, J.T.groups.filter((g) => !gapFile.has(String(g.lesson || '').trim())), 3).sort((a, b) => a.sessions[0].idx - b.sessions[0].idx);
   const chosen = [];
   gs.forEach((g) => { const k = g.sessions.length === 1 ? 1 : 1 + Math.floor(r() * Math.min(3, g.sessions.length)); pickN(r, g.sessions, k).sort((a, b) => a.idx - b.idx).forEach((l) => chosen.push(l)); });
   // typed dates: distinct school days inside the term (around the new year for «yearend»), never a holiday / busy day, ascending
@@ -676,6 +701,19 @@ async function flowPick(job, J, W) {
       }
       for (const l of g.sessions) if (!want[l.id] && g.sessions.length > 1) { await b.pg.evaluate((id) => { const cb = [...document.querySelectorAll('input[data-s]')].find((x) => x.dataset.s === id); if (cb && cb.checked) cb.click(); }, l.id); await sleep(150); }
     }
+    // 4.10.19: one typed date gives the following CHOSEN sessions consecutive class days (no other lesson gets a box)
+    if (!F.info.chain) {
+      const ids0 = await b.pg.$$eval('input[data-d]', (a) => a.map((x) => x.dataset.d));
+      const d0 = want[ids0[0]];
+      if (d0) {
+        await b.pg.evaluate(([id, d]) => { const el = [...document.querySelectorAll('input[data-d]')].find((x) => x.dataset.d === id); el.value = d; el.dispatchEvent(new Event('change', { bubbles: true })); }, [ids0[0], d0]);
+        await sleep(200);
+        const vals = await b.pg.$$eval('input[data-d]', (a) => a.map((x) => [x.dataset.d, x.value]));
+        F.info.chain = vals.map(([, v]) => v);
+        const bad = vals.filter(([, v], i) => !/^\d{4}-\d\d-\d\d$/.test(v) || !isSchool(v) || (i && v < vals[i - 1][1]));
+        check(F, vals.length === chosen.length && !bad.length && vals.every(([id]) => want[id] !== undefined), `pick list: after the first typed date the other ${vals.length - 1} chosen sessions get consecutive class days`, JSON.stringify(vals));
+      }
+    }
     for (const [id, d] of Object.entries(want)) await b.pg.evaluate(([id, d]) => { const el = [...document.querySelectorAll('input[data-d]')].find((x) => x.dataset.d === id); if (el) { el.value = d; el.dispatchEvent(new Event('change', { bubbles: true })); } }, [id, d]);
     await sleep(300);
     const shown = await b.pg.$$eval('input[data-d]', (a) => a.map((x) => [x.dataset.d, x.value]));
@@ -693,6 +731,7 @@ async function flowPick(job, J, W) {
     F.info.saved = rows.length; F.info.posts = noor.st.posts.length;
     check(F, !s.timeout, 'finished: the run ended (no timeout)', JSON.stringify(s));
     check(F, OK_HEAD.test(s.head), 'finished: wizard shows success', `${s.head} | ${s.text}`);
+    check(F, !(b.summaries || []).length, 'pick: no start summary (only «تحضير الفصل كاملًا» asks)', JSON.stringify(b.summaries || []));
     const { byId, cnt } = traceRows(F, J, rows);
     const got = [...cnt.keys()].sort(), exp = Object.keys(want).sort();
     // a renamed lesson may be left out (unsure link) — then the tool must say so; anything else must be saved
