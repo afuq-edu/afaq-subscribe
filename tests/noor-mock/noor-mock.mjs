@@ -278,7 +278,7 @@ ${flag('private', 'private_check_box')}${flag('random_questions', 'AssignmentRan
 <input type="radio" name="data[Assignment][publish_to]" class="publish_to" value="0"><input type="radio" name="data[Assignment][publish_to]" class="publish_to" value="1"><input type="radio" name="data[Assignment][publish_to]" class="publish_to" value="2">
 <div id="sections_list"><input type="checkbox" id="sections_select_all" value="select_all"><div class="lecture-container">${lects}</div></div>
 <input type="hidden" name="data[User][selected_students][60427035]" id="UserSelectedStudents60427035_" value="0"><input type="checkbox" name="data[User][selected_students][60427035]" value="1">
-<button type="submit">حفظ</button></form>`);
+<div class="alert alert-danger popup-windows" style="display:none">Please make Sure Popups are allowed</div><input type="submit" name="data[Save]" value="إضافة" class="btn"></form>`);
   };
   const qIndexPage = (cid, aid) => page('قائمة المفردات', `<a href="${HOST}/teacher/questions/add_bulk_questions/cid:${cid}/aid:${aid}/type:${HWT}">إضافة مجموعة مفردات دفعة واحدة</a>
 <a href="${HOST}/teacher/questions/add_existing_mine_to_qb/aid:NAVAID123">بنك</a><table id="q"></table>`);
@@ -305,6 +305,8 @@ ${flag('private', 'private_check_box')}${flag('random_questions', 'AssignmentRan
     if (last('data[Token][csrf_token]') !== 'csrf-' + cid) errs.push('csrf');
     const title = last('data[Assignment][title]') || '';
     if (!title.trim()) errs.push('title');
+    // نور لا يحفظ إلا إن جاء زر «إضافة» (data[Save]) مع النموذج — كإرسال المعلم
+    if (last('data[Save]') == null) errs.push('nosave');
     const publish = last('data[Assignment][publishing_datetime]') || '', due = last('data[Assignment][due_datetime]') || '', cutoff = last('data[Assignment][cutoff_datetime]') || '';
     if (![publish, due, cutoff].every((x) => DT.test(x))) errs.push('dates');
     if (!(publish <= due && due <= cutoff)) errs.push('order');

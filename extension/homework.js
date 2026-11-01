@@ -277,6 +277,15 @@ export async function hwPageOp(op) {
 // (الإرسال من الخلفية رفضه نور: صفحته تكمل نموذجها بسكربتاتها قبل الإرسال)
 // يُحقن في صفحة «إضافة واجب جديد» (MAIN): يعبّئ النموذج ثم يرسله بعد لحظة، ويرجع ما اختاره
 export function hwCreateFill(op) {
+  const hwPress = (f, re, wait) => {
+    let left = false; window.addEventListener('beforeunload', () => { left = true; }, { once: true });
+    const btns = [...f.querySelectorAll('input[type=submit], button[type=submit], button:not([type])')];
+    const b = btns.find((x) => re.test((x.value || x.textContent || '').trim())) || btns[0];
+    setTimeout(() => {
+      try { if (b) b.click(); } catch (e) {}
+      setTimeout(() => { if (left) return; try { if (b && b.name) { const h = document.createElement('input'); h.type = 'hidden'; h.name = b.name; h.value = b.value || ''; f.appendChild(h); } HTMLFormElement.prototype.submit.call(f); } catch (e) {} }, 4000);
+    }, wait);
+  };
   const norm = (s) => String(s || '').replace(/[ً-ْـ]/g, '').replace(/[إأآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه').replace(/[^\p{L}\p{N}]+/gu, ' ').trim().toLowerCase();
   const peel = (s) => { let t = String(s || '').trim(); for (let i = 0; i < 4; i++) { const u = t.replace(/\s*\((\d+(\s*و\s*\d+)*)\)\s*$/, '').trim(); if (u === t) break; t = u; } return t; };
   try {
@@ -319,20 +328,24 @@ export function hwCreateFill(op) {
       lsel.disabled = !!prep;
     }
     // النشر للشعب: شعب التحضير إن عُرفت، وإلا كلها
+    // «نشر لفصول» ثم «اختيار الكل» تحت «نشر الاختبار للفصول التالية» (بنقرات حقيقية: نور يربط بها ما يلزم)
     const pt = [...f.querySelectorAll('input[type=radio][name="data[Assignment][publish_to]"]')];
-    pt.forEach((r) => { r.checked = r.value === '0'; });
+    const pt0 = pt.find((r) => r.value === '0'); if (pt0 && !pt0.checked) pt0.click(); pt.forEach((r) => { r.checked = r === pt0; });
     const digit = (s) => (String(s || '').match(/(\d+)\s*$/) || [])[1] || '';
     const boxes = [...f.querySelectorAll('input[type=checkbox][name^="data[Lecture][checkbox]"]')].map((el) => { const lab = el.closest('label') || f.querySelector(`label[for="${el.id}"]`); return { el, label: lab ? lab.textContent.replace(/\s+/g, ' ').trim() : '' }; });
     const wantSec = (op.secs || []).map(digit).filter(Boolean);
     let use = boxes;
     if (wantSec.length) { const m = boxes.filter((x) => wantSec.includes(digit(x.label))); if (m.length) use = m; }
     if (!use.length) return { err: 'nosections' };
-    boxes.forEach((x) => { x.el.checked = use.includes(x); });
     const sl = document.getElementById('sections_list'); if (sl) sl.style.display = 'block';
+    const all = document.getElementById('sections_select_all');
+    if (use.length === boxes.length && all && !all.checked) all.click();
+    boxes.forEach((x) => { const want = use.includes(x); if (x.el.checked !== want) x.el.click(); if (x.el.checked !== want) x.el.checked = want; });
     // الإجابات الصحيحة تظهر بعد التسليم المتأخر
     const va = [...f.querySelectorAll('input[type=radio][name="data[Assignment][view_answers_radio]"]')];
-    const vaPick = va.find((r) => r.value === 'view_answers_after_cutoff'); if (vaPick) va.forEach((r) => { r.checked = r === vaPick; });
-    setTimeout(() => { try { HTMLFormElement.prototype.submit.call(f); } catch (e) {} }, 60);
+    const vaPick = va.find((r) => r.value === 'view_answers_after_cutoff'); if (vaPick) { if (!vaPick.checked) vaPick.click(); va.forEach((r) => { r.checked = r === vaPick; }); }
+    // زر «إضافة» كما يضغطه المعلم (فيدخل نور إلى إضافة المفردات)؛ إن لم تنتقل الصفحة يُرسل النموذج مباشرة
+    hwPress(f, /إضافة|اضافة|add|save/i, 1500);
     return { ok: true, prepId: prep ? prep.id : '', lessonId, sections: use.length };
   } catch (e) { return { err: 'crash', msg: String((e && e.message) || e).slice(0, 160) }; }
 }
@@ -349,19 +362,29 @@ export function hwAfterCreate() {
 }
 // يُحقن في صفحة «إضافة مجموعة مفردات دفعة واحدة»: يضع الأسئلة صفوفًا في نموذجها ويرسله
 export function hwBulkFill(op) {
+  const hwPress = (f, re, wait) => {
+    let left = false; window.addEventListener('beforeunload', () => { left = true; }, { once: true });
+    const btns = [...f.querySelectorAll('input[type=submit], button[type=submit], button:not([type])')];
+    const b = btns.find((x) => re.test((x.value || x.textContent || '').trim())) || btns[0];
+    setTimeout(() => {
+      try { if (b) b.click(); } catch (e) {}
+      setTimeout(() => { if (left) return; try { if (b && b.name) { const h = document.createElement('input'); h.type = 'hidden'; h.name = b.name; h.value = b.value || ''; f.appendChild(h); } HTMLFormElement.prototype.submit.call(f); } catch (e) {} }, 4000);
+    }, wait);
+  };
   try {
     if (document.querySelector('input[type="password"]')) return { err: 'login' };
     const f = document.getElementById('the_form') || document.querySelector('form[action*="add_bulk_questions"]');
     if (!f) return { err: 'nobulk', url: location.pathname.slice(0, 120) };
     // صفوف الصفحة وقوالبها تُزال، ثم تُضاف صفوفنا
     [...f.querySelectorAll('[name]')].forEach((el) => { if (/^data\[(type|mark|text|correct_answer|number_of_choices|option|difficulty)\]/.test(el.name)) el.remove(); });
+    document.querySelectorAll('#the_body tr').forEach((tr) => tr.remove());
     const add = (n, v) => { const i = document.createElement('input'); i.type = 'hidden'; i.name = n; i.value = String(v); f.appendChild(i); };
     (op.qs || []).forEach((q, i) => {
       add(`data[type][${i}]`, q.type); add(`data[mark][${i}]`, op.mark || 2); add(`data[text][${i}]`, q.text); add(`data[correct_answer][${i}]`, q.correct);
       if (q.type === 'mcq') { add(`data[number_of_choices][${i}]`, q.options.length); q.options.forEach((o, k) => add(`data[option][${i}][${k + 1}]`, o)); }
     });
     const qn = f.querySelector('input[name="data[Question][number]"]'); if (qn) qn.value = String((op.qs || []).length);
-    setTimeout(() => { try { HTMLFormElement.prototype.submit.call(f); } catch (e) {} }, 60);
+    hwPress(f, /إنشاء|انشاء|حفظ|إضافة|اضافة|create|save/i, 300);
     return { ok: true };
   } catch (e) { return { err: 'crash', msg: String((e && e.message) || e).slice(0, 160) }; }
 }
