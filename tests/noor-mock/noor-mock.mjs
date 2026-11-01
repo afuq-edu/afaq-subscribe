@@ -370,10 +370,10 @@ ${flag('private', 'private_check_box')}${flag('random_questions', 'AssignmentRan
     // «المهام الإلكترونية»
     const xhr = /xmlhttprequest/i.test(req.headers()['x-requested-with'] || '');
     const json = (o) => route.fulfill({ status: 200, contentType: 'application/json; charset=utf-8', body: JSON.stringify(o) });
-    const go = (to) => route.fulfill({ status: 302, headers: { Location: to }, body: '' });
+    // نور يحوّل (302) إلى قائمة مفردات الواجب؛ Playwright لا يمرّر طلب fetch المحوَّل على هذا المسار فتُعاد الصفحة مباشرة
     m = p.match(/^\/teacher\/homeworks\/create\/cid:([A-Za-z0-9_-]+)$/);
     if (m && course(m[1])) {
-      if (req.method() === 'POST') { const r = hwCreate(m[1], req); return r.aid ? go(`${HOST}/teacher/questions/index/cid:${m[1]}/aid:${r.aid}/type:${HWT}`) : html(hwCreatePage(m[1]).replace('<form', `<div class="alert alert-danger">${esc(r.err)}</div><form`)); }
+      if (req.method() === 'POST') { const r = hwCreate(m[1], req); return r.aid ? html(qIndexPage(m[1], r.aid)) : html(hwCreatePage(m[1]).replace('<form', `<div class="alert alert-danger">${esc(r.err)}</div><form`)); }
       return html(hwCreatePage(m[1]));
     }
     m = p.match(/^\/teacher\/homeworks\/index\/cid:([A-Za-z0-9_-]+)$/);
@@ -395,7 +395,7 @@ ${flag('private', 'private_check_box')}${flag('random_questions', 'AssignmentRan
     }
     m = p.match(/^\/teacher\/questions\/add_bulk_questions\/cid:([A-Za-z0-9_-]+)\/aid:([A-Za-z0-9_-]+)\/type:([A-Za-z0-9_-]+)$/);
     if (m) {
-      if (req.method() === 'POST') { const r = hwBulk(m[2], req.postData()); return r.ok ? go(`${HOST}/teacher/questions/index/cid:${m[1]}/aid:${m[2]}/type:${m[3]}`) : html(bulkPage(m[1], m[2]).replace('<form', `<div class="alert alert-danger">${esc(r.err)}</div><form`)); }
+      if (req.method() === 'POST') { const r = hwBulk(m[2], req.postData()); return r.ok ? html(qIndexPage(m[1], m[2])) : html(bulkPage(m[1], m[2]).replace('<form', `<div class="alert alert-danger">${esc(r.err)}</div><form`)); }
       return html(bulkPage(m[1], m[2]));
     }
     return html(page('غير موجود', '<p>الصفحة غير موجودة</p>'), 404);

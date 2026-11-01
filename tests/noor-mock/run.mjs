@@ -808,7 +808,7 @@ T(23, '«الواجبات فقط»: preps already in Noor (made by the teacher) 
   check(!added.length && !noor.st.posts.length, `no prep saved (${noor.st.posts.length} prep posts)`, fmtRows(added));
   const want = groups.filter((g) => g.sessions[0].pubDate >= now).map((g) => { const l = g.sessions[0]; const node = nodeFor(tree, l); const r = noor.st.rows.find((x) => x.preexisting && x.lessonId === node.nodeId && x.title === node.text); return { node, prepId: r && r.id, date: l.pubDate }; });
   hwChecks(noor, tree, want, { pubOf: (w) => w.date });
-  check(new RegExp(`أضفت ${toAr(want.length)} واجب`).test(s.head) || (want.length === 1 && /واجبًا واحدًا/.test(s.head)), `the wizard says how many homeworks were added («أضفت ${toAr(want.length)} واجبات»)`, `${s.head} | ${s.text}`);
+  check(new RegExp(`أضفت ${toAr(want.length)} واجب`).test(s.head) || (want.length === 1 && /واجبًا واحدًا/.test(s.head)) || (want.length === 2 && /أضفت واجبين/.test(s.head)), `the wizard says how many homeworks were added («أضفت ${toAr(want.length)} واجبات»)`, `${s.head} | ${s.text}`);
   check(!CALM_BAD_RE.test(s.head + ' ' + s.text), 'calm wording (no error words)', `${s.head} | ${s.text}`);
   return b;
 });
