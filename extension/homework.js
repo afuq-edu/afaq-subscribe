@@ -5,7 +5,7 @@
 export const GAMES_BASE = 'https://afuq-edu.github.io/afaq-subscribe/games/';
 // ملفات الواجبات (مثل ملفات التحضير): لكل باقة ملف فيه لكل درس أسئلته الخمسة وإجاباتها — site/homework/<الباقة>.json
 export const HW_BASE = 'https://afuq-edu.github.io/afaq-subscribe/homework/';
-export const HW_MARK = 2;          // درجتان لكل سؤال — المجموع ١٠
+export const HW_MARK = 1;          // درجة لكل سؤال (المالك 2026-11-01) — المجموع ٥
 export const HW_DUE_DAYS = 3;      // التسليم بعد ٣ أيام من النشر (كما يقترح نور)
 export const HW_LATE_DAYS = 2;     // التسليم المتأخر بعد التسليم بيومين
 
@@ -93,20 +93,36 @@ export function buildQuestions(game) {
   return out.slice(0, 5);
 }
 // سؤال من ملف الواجبات ← صف في «إضافة مجموعة مفردات دفعة واحدة» (النص بصيغة محرر نور)
+// كل الأسئلة «اختيار من متعدد» كما يدخلها المالك (2026-11-01): صح/خطأ يصير خيارين، وموضع الجواب الصحيح يتنقّل بين الخيارات
+// (ثابت لا عشوائي: الإعادة تعطي الواجب نفسه)
 export function toNoorRows(qs) {
   const p = (s) => `<p${isAr(s) ? ' dir="rtl"' : ''}>${esc(String(s).trim())}</p>`;
-  return (qs || []).filter((x) => x && x.q && (x.t === 'tf' ? typeof x.a === 'boolean' : Array.isArray(x.o) && x.o.length >= 2 && x.a >= 1 && x.a <= x.o.length))
-    .map((x) => (x.t === 'tf' ? { type: 'tfq', text: p(x.q), correct: x.a ? 1 : 2 } : { type: 'mcq', text: p(x.q), options: x.o.slice(0, 6).map((o) => String(o).trim()), correct: x.a }));
+  const hash = (s) => { let h = 0; for (const c of String(s)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; };
+  const ok = (qs || []).filter((x) => x && x.q && (x.t === 'tf' ? typeof x.a === 'boolean' : Array.isArray(x.o) && x.o.length >= 2 && x.a >= 1 && x.a <= x.o.length));
+  const h0 = ok.length ? hash(ok[0].q) : 0;
+  return ok.map((x, i) => {
+    if (x.t === 'tf') {
+      const opts = isAr(x.q) ? ['صح', 'خطأ'] : ['True', 'False'];
+      return { type: 'mcq', text: p(x.q), options: opts, correct: x.a ? 1 : 2 };
+    }
+    const o = x.o.slice(0, 6).map((v) => String(v).trim());
+    const right = o[x.a - 1];
+    const rest = o.filter((_, k) => k !== x.a - 1);
+    const at = (h0 + i * 3) % o.length;
+    rest.splice(at, 0, right);
+    return { type: 'mcq', text: p(x.q), options: rest, correct: at + 1 };
+  });
 }
-
 const pad = (n) => String(n).padStart(2, '0');
 export function noorDT(d) { return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}:00`; }
 // النشر بتاريخ التحضير (السابعة صباحًا)، ولا يسبق الآن (نور تقترح بعد ربع ساعة)
-export function hwDates(iso, now = new Date()) {
+// تاريخ تسليم يكتبه المعلم («الواجبات فقط»): نهاية ذلك اليوم، وإن لم يأتِ بعد النشر فبعده بثلاثة أيام
+export function hwDates(iso, now = new Date(), dueIso = '') {
   let pub = new Date(iso + 'T07:00:00');
   const soon = new Date(now.getTime() + 15 * 60000); soon.setSeconds(0, 0);
   if (!(pub > soon)) pub = soon;
-  const due = new Date(pub.getTime() + HW_DUE_DAYS * 86400000);
+  let due = /^\d{4}-\d{2}-\d{2}$/.test(dueIso || '') ? new Date(dueIso + 'T23:59:00') : null;
+  if (!due || !(due > pub)) due = new Date(pub.getTime() + HW_DUE_DAYS * 86400000);
   const cut = new Date(due.getTime() + HW_LATE_DAYS * 86400000);
   return { publish: noorDT(pub), due: noorDT(due), cutoff: noorDT(cut) };
 }
@@ -172,22 +188,31 @@ export async function hwPageOp(op) {
       const hits = fm.preps.filter((p) => want.includes(norm(peel(p.title))) || want.includes(norm(p.title)));
       if (hits.length) prep = op.newest ? hits.reduce((a, b) => (+b.id > +a.id ? b : a)) : hits.reduce((a, b) => (+b.id < +a.id ? b : a));
     }
-    if (!prep) return { err: 'noprep', preps: fm.preps.length };
+    if (!prep && !op.noPrep) return { err: 'noprep', preps: fm.preps.length };
     // الدرس في الشجرة: كما تربطه نور بالتحضير، وإلا بالاسم
     let lessonId = '';
-    try {
+    if (prep) try {
       const r = await fetch(`${origin}/teacher/attachments/get_prep_lessons`, { method: 'POST', credentials: 'include', headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8', 'X-Requested-With': 'XMLHttpRequest' }, body: 'selectedPreps=' + encodeURIComponent(prep.id) });
       const t = (await r.text()).trim().replace(/^"|"$/g, '');
       if (/^\d+$/.test(t) && fm.lessons.some((l) => l.id === t)) lessonId = t;
     } catch (e) {}
-    if (!lessonId && want.length) { const l = fm.lessons.find((x) => want.includes(norm(x.title)) || want.some((w) => norm(x.title).endsWith(' ' + w))); if (l) lessonId = l.id; }
+    // بالاسم: «الوحدة: الدرس» في قائمة دروس النموذج — الاسم نفسه في وحدتين يُفرّق بالوحدة، ثم بترتيبه
+    if (!lessonId && want.length) {
+      const hits = fm.lessons.filter((x) => want.includes(norm(x.title)) || want.some((w) => norm(x.title).endsWith(' ' + w)));
+      const u = norm(op.unit || '');
+      const inUnit = u ? hits.filter((x) => norm(x.title).startsWith(u + ' ') || norm(x.title) === u) : [];
+      const pool = inUnit.length ? inUnit : hits;
+      const l = pool[Math.min(op.nth || 0, pool.length - 1)];
+      if (l) lessonId = l.id;
+    }
+    if (!prep && !lessonId) return { err: 'nolesson', lessons: fm.lessons.length };
     const fd = new FormData(fm.f);
     const set = (k, v) => fd.set(k, v);
     set('data[Assignment][title]', op.title);
     set('data[Assignment][publishing_datetime]', op.publish);
     set('data[Assignment][due_datetime]', op.due);
     set('data[Assignment][cutoff_datetime]', op.cutoff);
-    set('data[Assignment][preparation_id]', prep.id);
+    set('data[Assignment][preparation_id]', prep ? prep.id : '');
     fd.delete('data[Assignment][lessons][]');
     if (lessonId) fd.append('data[Assignment][lessons][]', lessonId);
     set('data[Assignment][publish_to]', '0');
@@ -210,7 +235,7 @@ export async function hwPageOp(op) {
     if (!m) { const a = [...d.querySelectorAll('a[href*="add_bulk_questions/cid:"]')].map((x) => x.getAttribute('href')).find((h) => aidRe.test(h)); if (a) m = a.match(aidRe); }
     if (!m) {
       const errs = [...d.querySelectorAll('.alert-danger, .error-message, .alert.alert-error, .has-error .help-block')].map((x) => x.textContent.replace(/\s+/g, ' ').trim()).filter(Boolean);
-      return { err: errs.length ? 'noor' : 'noaid', msg: errs.join(' | ').slice(0, 200), prepId: prep.id };
+      return { err: errs.length ? 'noor' : 'noaid', msg: errs.join(' | ').slice(0, 200), prepId: prep ? prep.id : '' };
     }
     const qcid = m[1], aid = m[2], qtype = m[3] || '';
     const bulkUrl = `${origin}/teacher/questions/add_bulk_questions/cid:${qcid}/aid:${aid}${qtype ? '/type:' + qtype : ''}`;
@@ -218,7 +243,7 @@ export async function hwPageOp(op) {
     const bd = parse(b.html);
     if (isLogin(bd, b.url)) return { err: 'login', aid };
     const bf = bd.getElementById('the_form') || bd.querySelector('form[action*="add_bulk_questions"]#the_form');
-    if (!bf) return { err: 'nobulk', aid, prepId: prep.id };
+    if (!bf) return { err: 'nobulk', aid, prepId: prep ? prep.id : '' };
     const body = new URLSearchParams();
     bf.querySelectorAll('input[type=hidden]').forEach((el) => { if (el.name && !/^data\[(type|mark|text|correct_answer|number_of_choices|option|Question)\]/.test(el.name)) body.append(el.name, el.value); });
     (op.qs || []).forEach((q, i) => {
@@ -240,10 +265,145 @@ export async function hwPageOp(op) {
       const j = JSON.parse(await v.text());
       n = +(j.recordsTotal != null ? j.recordsTotal : j.iTotalRecords != null ? j.iTotalRecords : (Array.isArray(j.data) ? j.data.length : -1));
     } catch (e) {}
-    if (!pr.ok) return { err: 'bulk', aid, prepId: prep.id, status: pr.status };
-    if (n === 0) return { err: 'noq', aid, prepId: prep.id };
-    return { ok: true, aid, prepId: prep.id, lessonId, n, sections: lects.length, bulkStatus: pr.status, len: ph.length };
+    if (!pr.ok) return { err: 'bulk', aid, prepId: prep ? prep.id : '', status: pr.status };
+    if (n === 0) return { err: 'noq', aid, prepId: prep ? prep.id : '' };
+    return { ok: true, aid, prepId: prep ? prep.id : '', lessonId, n, sections: lects.length, bulkStatus: pr.status, len: ph.length };
   } catch (e) {
     return { err: 'crash', msg: String((e && e.message) || e).slice(0, 160) };
   }
+}
+
+// ——— الإنشاء كما يفعل المعلم (4.10.25): تُفتح صفحة «إضافة واجب جديد» في تبويب نور، تُعبّأ حقولها، ويُضغط «إضافة» ———
+// (الإرسال من الخلفية رفضه نور: صفحته تكمل نموذجها بسكربتاتها قبل الإرسال)
+// يُحقن في صفحة «إضافة واجب جديد» (MAIN): يعبّئ النموذج ثم يرسله بعد لحظة، ويرجع ما اختاره
+export function hwCreateFill(op) {
+  const hwPress = (f, re, wait) => {
+    let left = false; window.addEventListener('beforeunload', () => { left = true; }, { once: true });
+    const btns = [...f.querySelectorAll('input[type=submit], button[type=submit], button:not([type])')];
+    const b = btns.find((x) => re.test((x.value || x.textContent || '').trim())) || btns[0];
+    setTimeout(() => {
+      try { if (b) b.click(); } catch (e) {}
+      setTimeout(() => { if (left) return; try { if (b && b.name) { const h = document.createElement('input'); h.type = 'hidden'; h.name = b.name; h.value = b.value || ''; f.appendChild(h); } HTMLFormElement.prototype.submit.call(f); } catch (e) {} }, 4000);
+    }, wait);
+  };
+  const norm = (s) => String(s || '').replace(/[ً-ْـ]/g, '').replace(/[إأآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه').replace(/[^\p{L}\p{N}]+/gu, ' ').trim().toLowerCase();
+  const peel = (s) => { let t = String(s || '').trim(); for (let i = 0; i < 4; i++) { const u = t.replace(/\s*\((\d+(\s*و\s*\d+)*)\)\s*$/, '').trim(); if (u === t) break; t = u; } return t; };
+  try {
+    if (document.querySelector('input[type="password"]') || /\/users\/login|\/login\b/i.test(location.href)) return { err: 'login' };
+    const f = document.getElementById('AssignmentCreateForm') || document.querySelector('form[action*="homeworks/create"]');
+    if (!f) return { err: 'noform', url: location.pathname };
+    const q = (sel) => f.querySelector(sel);
+    const setVal = (el, v) => { if (!el) return false; el.removeAttribute('readonly'); el.value = v; el.setAttribute('value', v); el.dispatchEvent(new Event('input', { bubbles: true })); return true; };
+    const title = q('#AssignmentTitle, input[name="data[Assignment][title]"]');
+    if (!setVal(title, op.title)) return { err: 'nofield', which: 'title' };
+    const pub = q('#publishdate, input[name="data[Assignment][publishing_datetime]"]'), due = q('#duedate, input[name="data[Assignment][due_datetime]"]'), cut = q('#cutoffdate, input[name="data[Assignment][cutoff_datetime]"]');
+    if (!setVal(pub, op.publish) || !setVal(due, op.due) || !setVal(cut, op.cutoff)) return { err: 'nofield', which: 'dates' };
+    const later = q('input[type=checkbox][name="data[Assignment][publish_later]"]'); if (later) later.checked = false;
+    // التحضير (إن رُبط) ثم الدرس
+    const want = (op.match || []).map(norm).filter(Boolean);
+    const psel = q('#AssignmentPreparationId, select[name="data[Assignment][preparation_id]"]');
+    const preps = psel ? [...psel.options].filter((o) => o.value).map((o) => ({ id: o.value, title: o.textContent.replace(/\s+/g, ' ').trim() })) : [];
+    let prep = op.prepId ? preps.find((p) => p.id === String(op.prepId)) : null;
+    if (!prep && !op.noPrep && want.length) {
+      const hits = preps.filter((p) => want.includes(norm(peel(p.title))) || want.includes(norm(p.title)));
+      if (hits.length) prep = op.newest ? hits.reduce((a, b) => (+b.id > +a.id ? b : a)) : hits.reduce((a, b) => (+b.id < +a.id ? b : a));
+    }
+    if (!prep && !op.noPrep) return { err: 'noprep', preps: preps.length };
+    if (psel) psel.value = prep ? prep.id : '';
+    const lsel = q('#lesson_title, select[name="data[Assignment][lessons][]"]');
+    const lessons = lsel ? [...lsel.options].filter((o) => o.value) : [];
+    let lessonId = '';
+    if (want.length) {
+      const hits = lessons.filter((x) => { const t = norm(x.textContent); return want.includes(t) || want.some((w) => t.endsWith(' ' + w)); });
+      const u = norm(op.unit || '');
+      const inUnit = u ? hits.filter((x) => norm(x.textContent).startsWith(u + ' ')) : [];
+      const pool = inUnit.length ? inUnit : hits;
+      const l = pool[Math.min(op.nth || 0, pool.length - 1)];
+      if (l) lessonId = l.value;
+    }
+    if (!prep && !lessonId) return { err: 'nolesson', lessons: lessons.length };
+    if (lsel) {
+      lessons.forEach((o) => { o.selected = o.value === lessonId; });
+      // كما يفعل نور: مع التحضير تُقفل قائمة الدروس (يأخذ الدرس من التحضير)
+      lsel.disabled = !!prep;
+    }
+    // النشر للشعب: شعب التحضير إن عُرفت، وإلا كلها
+    // «نشر لفصول» ثم «اختيار الكل» تحت «نشر الاختبار للفصول التالية» (بنقرات حقيقية: نور يربط بها ما يلزم)
+    const pt = [...f.querySelectorAll('input[type=radio][name="data[Assignment][publish_to]"]')];
+    const pt0 = pt.find((r) => r.value === '0'); if (pt0 && !pt0.checked) pt0.click(); pt.forEach((r) => { r.checked = r === pt0; });
+    const digit = (s) => (String(s || '').match(/(\d+)\s*$/) || [])[1] || '';
+    const boxes = [...f.querySelectorAll('input[type=checkbox][name^="data[Lecture][checkbox]"]')].map((el) => { const lab = el.closest('label') || f.querySelector(`label[for="${el.id}"]`); return { el, label: lab ? lab.textContent.replace(/\s+/g, ' ').trim() : '' }; });
+    const wantSec = (op.secs || []).map(digit).filter(Boolean);
+    let use = boxes;
+    if (wantSec.length) { const m = boxes.filter((x) => wantSec.includes(digit(x.label))); if (m.length) use = m; }
+    if (!use.length) return { err: 'nosections' };
+    const sl = document.getElementById('sections_list'); if (sl) sl.style.display = 'block';
+    const all = document.getElementById('sections_select_all');
+    if (use.length === boxes.length && all && !all.checked) all.click();
+    boxes.forEach((x) => { const want = use.includes(x); if (x.el.checked !== want) x.el.click(); if (x.el.checked !== want) x.el.checked = want; });
+    // الإجابات الصحيحة تظهر بعد التسليم المتأخر
+    const va = [...f.querySelectorAll('input[type=radio][name="data[Assignment][view_answers_radio]"]')];
+    const vaPick = va.find((r) => r.value === 'view_answers_after_cutoff'); if (vaPick) { if (!vaPick.checked) vaPick.click(); va.forEach((r) => { r.checked = r === vaPick; }); }
+    // زر «إضافة» كما يضغطه المعلم (فيدخل نور إلى إضافة المفردات)؛ إن لم تنتقل الصفحة يُرسل النموذج مباشرة
+    hwPress(f, /إضافة|اضافة|add|save/i, 1500);
+    return { ok: true, prepId: prep ? prep.id : '', lessonId, sections: use.length };
+  } catch (e) { return { err: 'crash', msg: String((e && e.message) || e).slice(0, 160) }; }
+}
+// يُحقن بعد «إضافة»: معرّف الواجب من العنوان أو من روابط قائمة مفرداته، وإلا ما تعرضه الصفحة من أخطاء
+export function hwAfterCreate() {
+  const aidRe = /\/questions\/(?:index|add_bulk_questions)\/cid:([A-Za-z0-9_-]+)\/aid:([A-Za-z0-9_-]+)(?:\/type:([A-Za-z0-9_-]+))?/;
+  let m = location.href.match(aidRe);
+  if (!m) { const a = [...document.querySelectorAll('a[href*="add_bulk_questions/cid:"]')].map((x) => x.getAttribute('href')).find((h) => aidRe.test(h)); if (a) m = a.match(aidRe); }
+  if (m) return { ok: true, cid: m[1], aid: m[2], type: m[3] || '' };
+  const errs = [...document.querySelectorAll('.alert-danger:not(.popup-windows), .error-message, .alert-error, .has-error .help-block, #flashMessage, .message.error')]
+    .filter((x) => x.offsetParent !== null || x.id === 'flashMessage').map((x) => x.textContent.replace(/\s+/g, ' ').trim()).filter(Boolean);
+  const sw = [...document.scripts].map((s) => s.textContent).join('\n').match(/swal\(\s*\{?[^)]{0,200}/g) || [];
+  return { err: 'noaid', url: location.pathname.slice(0, 120), title: document.title.slice(0, 80), msg: errs.concat(sw.slice(0, 2)).join(' | ').slice(0, 220) };
+}
+// يُحقن في صفحة «إضافة مجموعة مفردات دفعة واحدة»: يضع الأسئلة صفوفًا في نموذجها ويرسله
+export function hwBulkFill(op) {
+  const hwPress = (f, re, wait) => {
+    let left = false; window.addEventListener('beforeunload', () => { left = true; }, { once: true });
+    const btns = [...f.querySelectorAll('input[type=submit], button[type=submit], button:not([type])')];
+    const b = btns.find((x) => re.test((x.value || x.textContent || '').trim())) || btns[0];
+    setTimeout(() => {
+      try { if (b) b.click(); } catch (e) {}
+      setTimeout(() => { if (left) return; try { if (b && b.name) { const h = document.createElement('input'); h.type = 'hidden'; h.name = b.name; h.value = b.value || ''; f.appendChild(h); } HTMLFormElement.prototype.submit.call(f); } catch (e) {} }, 4000);
+    }, wait);
+  };
+  try {
+    if (document.querySelector('input[type="password"]')) return { err: 'login' };
+    const f = document.getElementById('the_form') || document.querySelector('form[action*="add_bulk_questions"]');
+    if (!f) return { err: 'nobulk', url: location.pathname.slice(0, 120) };
+    // صفوف الصفحة وقوالبها تُزال، ثم تُضاف صفوفنا
+    [...f.querySelectorAll('[name]')].forEach((el) => { if (/^data\[(type|mark|text|correct_answer|number_of_choices|option|difficulty)\]/.test(el.name)) el.remove(); });
+    document.querySelectorAll('#the_body tr').forEach((tr) => tr.remove());
+    const add = (n, v) => { const i = document.createElement('input'); i.type = 'hidden'; i.name = n; i.value = String(v); f.appendChild(i); };
+    (op.qs || []).forEach((q, i) => {
+      add(`data[type][${i}]`, q.type); add(`data[mark][${i}]`, op.mark || 2); add(`data[text][${i}]`, q.text); add(`data[correct_answer][${i}]`, q.correct);
+      if (q.type === 'mcq') { add(`data[number_of_choices][${i}]`, q.options.length); q.options.forEach((o, k) => add(`data[option][${i}][${k + 1}]`, o)); }
+    });
+    const qn = f.querySelector('input[name="data[Question][number]"]'); if (qn) qn.value = String((op.qs || []).length);
+    hwPress(f, /إنشاء|انشاء|حفظ|إضافة|اضافة|create|save/i, 300);
+    return { ok: true };
+  } catch (e) { return { err: 'crash', msg: String((e && e.message) || e).slice(0, 160) }; }
+}
+// يُحقن في أي صفحة من نور: عدد مفردات الواجب (قائمة المفردات تُجلب بطلب جدول) — ‎-1 إن تعذّر
+export async function hwCount(op) {
+  try {
+    const v = await fetch(`${location.origin}/teacher/questions/index/cid:${op.cid}/aid:${op.aid}/type:${op.type || 'Homework'}?start=0&page=1&length=50&draw=1`, { credentials: 'include', headers: { 'X-Requested-With': 'XMLHttpRequest', Accept: 'application/json, text/javascript, */*' } });
+    const j = JSON.parse(await v.text());
+    return +(j.recordsTotal != null ? j.recordsTotal : j.iTotalRecords != null ? j.iTotalRecords : (Array.isArray(j.data) ? j.data.length : -1));
+  } catch (e) { return -1; }
+}
+// يُحقن في أي صفحة من نور: عناوين واجبات المقرر (لمنع التكرار) — null إن تعذّر
+export async function hwExisting(op) {
+  try {
+    const r = await fetch(`${location.origin}/teacher/homeworks/index/cid:${op.cid}?draw=1&start=0&length=1000`, { credentials: 'include', headers: { 'X-Requested-With': 'XMLHttpRequest', Accept: 'application/json, text/javascript, */*' } });
+    let j = null; try { j = JSON.parse(await r.text()); } catch (e) { return null; }
+    const out = [];
+    const walk = (v) => { if (typeof v === 'string') { const s = v.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); if (s) out.push(s); } else if (v && typeof v === 'object') Object.values(v).forEach(walk); };
+    walk(j);
+    return out;
+  } catch (e) { return null; }
 }
