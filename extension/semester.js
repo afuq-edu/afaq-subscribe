@@ -282,6 +282,9 @@ function assignDates() {
   // «تحضير الفصل كاملًا» (المالك 2026-11-01): التحاضير من أول يوم دراسي بتواريخ الخطة ولو مضت — وإلا لا يبدأ أبدًا (انظر confirmStart وprocessItem)
   const fromIso = fileMode && !WIZ.pickDates && isIso(WIZ.fromDate) ? WIZ.fromDate : '';
   if (fromIso) cands.forEach((s) => { const a = after.get(s) || ''; if (fromIso > a) after.set(s, fromIso); });
+  // الفصل كاملًا يكمل تشغيلًا سابقًا على هذا الجهاز (في نور تحاضير المادة): ما بقي يأتي بعد آخر تحضير في نور، فلا تُملأ حصة
+  // فارغة قبله بدرس لاحق (لا يُنشر درس لاحق قبل درس سابق)
+  if (seqTerm && noorDates.size) { const top = [...noorDates].sort().pop(); cands.forEach((s) => { const a = after.get(s) || ''; if (top > a) after.set(s, top); }); }
   // حدّان: آخر أسبوع في خطة المادة، ونهاية الفصل الفعلية. تحضير لكل حصة (المالك 2026-10-31): ما لا يتسع له أسبوعه يمضي إلى
   // حصص الأسابيع التالية حتى نهاية الفصل، ولا تُجمع حصتان إلا من الدرس نفسه وحين تكون الحصص الباقية حتى نهاية الفصل أقل من التحاضير
   const planEnd = pkgEnd(pkg) || termEndOf(settings, termNo);

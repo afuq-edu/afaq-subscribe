@@ -382,7 +382,11 @@ T(9, 'Same lesson name in two units: unit 1 is in Noor, unit 2 still filled once
   const s = await waitDone(b.pg, 10 * 60000, 'first run');
   check(/تمت التعبئة بنجاح/.test(s.head), 'first run finishes with success', `${s.head} | ${s.text}`);
   const want = [sid(16), sid(17), 'rev-2'];
-  const dates = Object.fromEntries(want.map((id) => [id, S[id].pubDate]));
+  // the teacher's own earlier term run (4.10.23): what is left follows the last prep already in Noor, period after period
+  // (the mock's timetable: a period every school day) — a free period before it never takes a later lesson
+  let d = pre.map((x) => x.publishDate).sort().pop();
+  const dates = {};
+  for (const id of want) { do d = addDaysIso(d, 1); while ([5, 6].includes(new Date(d + 'T12:00').getDay())); dates[id] = d; }
   assertRows('S9 run 1', noor.st.rows.filter((r) => !r.preexisting), tree, { expectIds: want, dates, preexisting: pre });
   const n1 = noor.st.rows.length;
   const s2 = await rerun(b, 'second run');
