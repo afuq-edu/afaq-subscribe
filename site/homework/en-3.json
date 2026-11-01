@@ -1,0 +1,2348 @@
+{
+ "key": "en-3",
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثالث",
+ "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ)",
+ "lessons": {
+  "Welcome – Lesson 1: Classroom language": [
+   {
+    "t": "mcq",
+    "q": "Which instruction means give a book to every pupil?",
+    "o": [
+     "Put away the books.",
+     "Hold up the books.",
+     "Tidy up the books.",
+     "Hand out the books."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The opposite of Put up your hand is Put down your hand.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which pair are opposites?",
+    "o": [
+     "go to / ask",
+     "tidy up / hand out",
+     "take out / put away",
+     "put up / hold up"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The opposite of Turn on the AC is Turn up the AC.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence has the right word order?",
+    "o": [
+     "Go the to board.",
+     "Go to the board.",
+     "To the board go.",
+     "The board go to."
+    ],
+    "a": 2
+   }
+  ],
+  "Welcome – Lesson 2: Back to school, alphabet and spelling names": [
+   {
+    "t": "mcq",
+    "q": "Which question do we use to ask about a name?",
+    "o": [
+     "How many pencils?",
+     "What colour is it?",
+     "Where's Polly?",
+     "What's your name?"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Polly is a parrot.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is the right way to spell pen?",
+    "o": [
+     "b-e-n",
+     "p-e-m",
+     "p-e-n",
+     "p-a-n"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Atomic is a dog.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Listen: L-i-l-y. Which name is it?",
+    "o": [
+     "Jack",
+     "Lily",
+     "Polly",
+     "Sami"
+    ],
+    "a": 2
+   }
+  ],
+  "Welcome – Lesson 3: This / These / That / Those and numbers 11–20": [
+   {
+    "t": "mcq",
+    "q": "Which word means more than one thing near you?",
+    "o": [
+     "this",
+     "that",
+     "those",
+     "these"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We use this for one thing near us.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which numbers are in the right order?",
+    "o": [
+     "thirteen, twelve, eleven",
+     "eleven, thirteen, twelve",
+     "eleven, twelve, thirteen",
+     "twelve, eleven, thirteen"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We use those for one thing far away.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "There are 14 chairs. Answer: How many chairs can you see?",
+    "o": [
+     "I can see fifteen chairs.",
+     "I can see fourteen chairs.",
+     "I can see forty chairs.",
+     "I can see four chairs."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 1: Vocabulary and Grammar (daily routines)": [
+   {
+    "t": "mcq",
+    "q": "Which word do we use to say no?",
+    "o": [
+     "do",
+     "have",
+     "play",
+     "don't"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We get up in the morning.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which routine is about eating eggs and bread in the morning?",
+    "o": [
+     "go to bed",
+     "have art lessons",
+     "have breakfast",
+     "have dinner"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Go to bed is the first routine of the day.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is correct?",
+    "o": [
+     "We no play tennis.",
+     "We don't play tennis.",
+     "We not play tennis.",
+     "We play don't tennis."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 2: Story (Atomic is colourful!)": [
+   {
+    "t": "mcq",
+    "q": "Who gets paint on him in the story?",
+    "o": [
+     "Polly",
+     "Jack",
+     "Sami",
+     "Atomic"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Blue and yellow make green.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does What a mess! mean?",
+    "o": [
+     "It is time for bed.",
+     "It is a nice picture.",
+     "Things are not tidy.",
+     "Things are very clean."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Jack and Sami have tennis lessons at school.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which picture shows seeing beauty?",
+    "o": [
+     "A cat sleeps on a book.",
+     "A family enjoys music together.",
+     "A boy breaks a pencil.",
+     "A girl drops her bag."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 3: Vocabulary and Grammar (times of the day)": [
+   {
+    "t": "mcq",
+    "q": "Which are the four times of the day in order?",
+    "o": [
+     "night, morning, evening, afternoon",
+     "afternoon, morning, night, evening",
+     "evening, night, morning, afternoon",
+     "morning, afternoon, evening, night"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We say at night, not in night.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which time of the day do we have lunch?",
+    "o": [
+     "evening",
+     "morning",
+     "afternoon",
+     "night"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say at the morning.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: We have art lessons ___ the afternoon.",
+    "o": [
+     "to",
+     "in",
+     "at",
+     "on"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 4: Skills (listening, speaking, reading, writing)": [
+   {
+    "t": "mcq",
+    "q": "What do Jasim and Yasir do in the morning?",
+    "o": [
+     "They have dinner.",
+     "They play.",
+     "They go to bed.",
+     "They have art lessons at school."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Jasim and Yasir are brothers.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is the writing frame for your day?",
+    "o": [
+     "In the ... I at ...",
+     "I at the morning ...",
+     "I ... in the ... / I ... at night.",
+     "I ... on night."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Jasim and Yasir are friends, not brothers.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "When do you play tennis? Choose a correct answer.",
+    "o": [
+     "We play tennis in night.",
+     "We play tennis in the afternoon.",
+     "We play tennis at the afternoon.",
+     "We tennis play afternoon."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 5: Culture (traditional breakfasts)": [
+   {
+    "t": "mcq",
+    "q": "Which foods are from a Japanese breakfast?",
+    "o": [
+     "toast and tea",
+     "Khubz Rakhal with eggs",
+     "corn porridge with milk",
+     "fish, pickles, rice and soup"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Breakfasts are different around the world.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word is NOT a breakfast food from the lesson?",
+    "o": [
+     "soup",
+     "porridge",
+     "board",
+     "toast"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In Oman, we have Khubz Rakhal with fish and pickles.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your friend likes porridge with sugar and milk. Which country has this breakfast?",
+    "o": [
+     "the UK",
+     "South Africa",
+     "Japan",
+     "Oman"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 6: English in action (saying the time)": [
+   {
+    "t": "mcq",
+    "q": "What do we say when the minute hand is on 6?",
+    "o": [
+     "o'clock",
+     "quarter to",
+     "quarter past",
+     "half past"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "When the minute hand is on 12, we say o'clock.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do they say when they are late?",
+    "o": [
+     "Snap!",
+     "Tidy up!",
+     "Oh, no! Let's hurry!",
+     "Good morning!"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "When the minute hand is on 6, we say quarter past.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "The minute hand is on 3 and the hour hand is just after 10. What time is it?",
+    "o": [
+     "ten o'clock",
+     "quarter past ten",
+     "quarter to ten",
+     "half past ten"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 7: Phonics (wh, ph)": [
+   {
+    "t": "mcq",
+    "q": "Which word has the /f/ sound with ph?",
+    "o": [
+     "whale",
+     "wheel",
+     "white",
+     "phone"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The letters wh make the /w/ sound in whale.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How do you spell the tricky word?",
+    "o": [
+     "g-w-o",
+     "g-u",
+     "g-o",
+     "g-o-e"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The letters ph make the /p/ sound in phone.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your teacher says a word with /f/ but it has ph. Which word is it?",
+    "o": [
+     "white",
+     "dolphin",
+     "fish",
+     "wheel"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 8: Review": [
+   {
+    "t": "mcq",
+    "q": "Which routine is in the evening?",
+    "o": [
+     "get up",
+     "have breakfast",
+     "go to school",
+     "have dinner"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Two children are eating breakfast. We say We have breakfast.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word do we spell b-e-d?",
+    "o": [
+     "bet",
+     "red",
+     "bed",
+     "bad"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We use I when we talk about two children.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "When do you have dinner? Write one word: In the ___.",
+    "o": [
+     "nights",
+     "evening",
+     "eveninng",
+     "morning"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 9: Get ready for … Pre A1 Starters": [
+   {
+    "t": "mcq",
+    "q": "What is a good tip before you listen?",
+    "o": [
+     "Close your eyes.",
+     "Write a story.",
+     "Talk to your friend.",
+     "Look at the clocks in the pictures."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Before listening, we look at the clocks in the pictures.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which phrase do we use when the minute hand is on 3?",
+    "o": [
+     "half past",
+     "o'clock",
+     "quarter past",
+     "quarter to"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In the listening test, we listen only one time.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Minute hand on 9, hour hand just before 8. Which picture do you tick?",
+    "o": [
+     "half past eight",
+     "quarter to eight",
+     "quarter past eight",
+     "quarter to seven"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 10: Fun corner": [
+   {
+    "t": "mcq",
+    "q": "Which numbers stand for vowels in the code?",
+    "o": [
+     "1, 2, 3, 4, 5",
+     "7, 8, 9, 10, 11",
+     "0, 1, 7, 8, 9",
+     "5, 4, 2, 6, 3"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In the secret code, 5 means the letter a.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word is spelled correctly?",
+    "o": [
+     "homewerk",
+     "hommework",
+     "homework",
+     "homwork"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In the secret code, 6 means the letter u.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Write When in the code.",
+    "o": [
+     "Wh6n",
+     "Wh4n",
+     "Wh5n",
+     "Wh2n"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Graded readers": [
+   {
+    "t": "mcq",
+    "q": "Which sentence is from Welcome to Robot School!?",
+    "o": [
+     "I don't go to school. I play!",
+     "I sing in the evening.",
+     "It's ten o'clock. I go to bed.",
+     "It's half past twelve. It's time for lunch."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The robots go to school at eight o'clock.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do the robots drink with lunch?",
+    "o": [
+     "juice",
+     "milk",
+     "water",
+     "tea"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The robots have art lessons in the morning.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Lunch at Robot School is at half past twelve. Where is the minute hand?",
+    "o": [
+     "on 9",
+     "on 6",
+     "on 12",
+     "on 3"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 1: Vocabulary and Grammar (clothes)": [
+   {
+    "t": "mcq",
+    "q": "Which word is NOT a clothes word?",
+    "o": [
+     "shirt",
+     "jeans",
+     "coat",
+     "kite"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We wear pyjamas in bed.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is correct?",
+    "o": [
+     "They're wear trainers.",
+     "They is wearing trainers.",
+     "They're wearing trainers.",
+     "They wearing trainers."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "They're is the short form of They have.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You and your partner are in jeans. What do you say?",
+    "o": [
+     "I wearing jeans.",
+     "We're wearing jeans.",
+     "They're wearing jeans.",
+     "You're wearing jeans."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 2: Story (The school show)": [
+   {
+    "t": "mcq",
+    "q": "What are Jack and Sami wearing in the show?",
+    "o": [
+     "dresses and hats",
+     "coats and jumpers",
+     "jeans and trainers",
+     "pyjamas, baseball caps and slippers"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The school show is at three o'clock.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a short answer from the story questions?",
+    "o": [
+     "No, they not.",
+     "Yes, it are.",
+     "Yes, they are.",
+     "Yes, they is."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Jack and Sami are wearing trainers in the show.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Describe Lily and Fatma.",
+    "o": [
+     "They wearing dresses.",
+     "They're wearing dresses and hats.",
+     "We're wearing dresses and hats.",
+     "They're wearing slippers."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 3: Vocabulary and Grammar (personal possessions)": [
+   {
+    "t": "mcq",
+    "q": "Which six words are personal possessions?",
+    "o": [
+     "coat, jeans, shirt, hijab, jumper, slippers",
+     "morning, evening, night, afternoon, lunch, bed",
+     "whale, wheel, phone, dolphin, white, wheat",
+     "glasses, handbag, phone, keys, backpack, computer"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We see with glasses.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How do you spell keys?",
+    "o": [
+     "k-i-s",
+     "k-a-y-s",
+     "k-e-y-s",
+     "k-e-e-s"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We open a door with a phone.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You talk to two girls about their red handbags. What do you say?",
+    "o": [
+     "You handbags are red.",
+     "Your handbags are red.",
+     "Their handbags are red.",
+     "Our handbags are red."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 4: Skills": [
+   {
+    "t": "mcq",
+    "q": "What is the dad wearing in A birthday party?",
+    "o": [
+     "a tracksuit and trainers",
+     "pyjamas and slippers",
+     "a coat and jeans",
+     "a dishdasha and a hat"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In the example, their hijabs are red.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is the writing frame?",
+    "o": [
+     "What time is it?",
+     "How many desks can you see?",
+     "I'm wearing a ... and ... My ... is ...",
+     "When do you go to bed?"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In the example, their baseball caps are green.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Two friends wear white dishdashas. Write two sentences.",
+    "o": [
+     "Their wearing dishdashas. They're dishdashas are white.",
+     "They're wearing dishdashas. Their dishdashas are white.",
+     "They wearing dishdashas. They dishdashas are white.",
+     "We're wearing dishdashas. Our dishdasha is white."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 5: Culture (special days in Oman)": [
+   {
+    "t": "mcq",
+    "q": "What is Eid Al-Fitr?",
+    "o": [
+     "A shop",
+     "A kind of food",
+     "A school subject",
+     "A special day in Oman"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Eid Al-Fitr is a very special day in Oman.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means a party for a happy day?",
+    "o": [
+     "listen",
+     "find",
+     "celebrate",
+     "carry"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "People celebrate Eid Al-Fitr for one week.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Label the white clothes an Omani man wears at Eid.",
+    "o": [
+     "jumper",
+     "dishdasha",
+     "hijab",
+     "dress"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 6: English in action (asking the price)": [
+   {
+    "t": "mcq",
+    "q": "How do we ask about a price?",
+    "o": [
+     "How old are you?",
+     "Where is it?",
+     "What colour is it?",
+     "How much is this?"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We say Excuse me to start talking to the shopkeeper.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does the shopkeeper say after Excuse me?",
+    "o": [
+     "Here you are.",
+     "How much is this jumper?",
+     "Yes, can I help you?",
+     "Thank you."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The last line of the dialogue is Excuse me.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct order.",
+    "o": [
+     "Yes, can I help you? → Thank you. → Excuse me.",
+     "Excuse me. → Yes, can I help you? → How much is this jumper?",
+     "How much is this jumper? → Excuse me. → Yes, can I help you?",
+     "Thank you. → Excuse me. → How much is this jumper?"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 7: Phonics (ear, ure)": [
+   {
+    "t": "mcq",
+    "q": "Which two words have the same ending sound?",
+    "o": [
+     "hear and picture",
+     "beard and vulture",
+     "year and mixture",
+     "hear and beard"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Beard and hear have the sound ear.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Complete the tongue twister: I can hear a vulture and I can see a ___ of a man with a beard.",
+    "o": [
+     "year",
+     "vulture",
+     "picture",
+     "mixture"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Year has the sound ure.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which word fits? I can h___ a vulture.",
+    "o": [
+     "are",
+     "ear",
+     "ure",
+     "air"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 8: Review": [
+   {
+    "t": "mcq",
+    "q": "Which word goes before wearing?",
+    "o": [
+     "Our",
+     "Their",
+     "Your",
+     "We're"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We use They're before wearing: They're wearing pyjamas.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which pair is correct?",
+    "o": [
+     "I'm – His",
+     "We're – My",
+     "He's – His",
+     "He's – Our"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say: Our wearing tracksuits.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Order the words: red. / handbag / Your / is",
+    "o": [
+     "Red is your handbag.",
+     "Your handbag is red.",
+     "Your is handbag red.",
+     "Handbag your red is."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 9: Get ready for … Pre A1 Starters": [
+   {
+    "t": "mcq",
+    "q": "What does a tick mean?",
+    "o": [
+     "The sentence is wrong.",
+     "Listen again.",
+     "Draw a line.",
+     "The sentence is correct."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In the reading test, we put a tick for a correct sentence.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What are the steps for each sentence?",
+    "o": [
+     "Sing, clap, sit",
+     "Read, sleep, play",
+     "Who? What? Tick or cross?",
+     "Colour, draw, cut"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Picture: one boy in a cap. They're wearing caps. This is correct.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You hear: He's wearing a baseball cap. Who do you look for?",
+    "o": [
+     "Two girls in jeans",
+     "A boy with a cap",
+     "A girl with a hijab",
+     "A man in a coat"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 10: Fun corner": [
+   {
+    "t": "mcq",
+    "q": "What do you say when you roll and get three?",
+    "o": [
+     "My turn!",
+     "Well done!",
+     "Here you are.",
+     "Three!"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We say My turn! before we roll the dice.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which of these is a possession word from the unit?",
+    "o": [
+     "coat",
+     "jumper",
+     "keys",
+     "jeans"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say: You wearing a hijab.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your teacher puts on glasses. What is different?",
+    "o": [
+     "Nothing",
+     "Now the teacher is wearing glasses.",
+     "The teacher is wearing pyjamas.",
+     "The teacher has keys."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Graded readers": [
+   {
+    "t": "mcq",
+    "q": "In 'The Clothes Game', what do the girls say first?",
+    "o": [
+     "How much is this?",
+     "Thank you.",
+     "Good night!",
+     "Let's play a game!"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In 'The Clothes Game', the girls close their eyes and count to ten.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What are the team wearing in the picture?",
+    "o": [
+     "Coats and glasses",
+     "Dishdashas",
+     "Tracksuits and trainers",
+     "Pyjamas and slippers"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "At the end of the game, the girls' clothes are the same.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose: ___ wearing slippers. (talking to your friend)",
+    "o": [
+     "Their",
+     "You're",
+     "Your",
+     "Our"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Revision": [
+   {
+    "t": "mcq",
+    "q": "Which word goes before wearing?",
+    "o": [
+     "Your",
+     "Their",
+     "Our",
+     "You're"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We say: They're wearing coats.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which pair goes together?",
+    "o": [
+     "We're – Your",
+     "You're – Their",
+     "They're – Their",
+     "They're – Our"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Keys are clothes.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence about your classmates.",
+    "o": [
+     "They wearing white dishdashas.",
+     "They're wearing white dishdashas.",
+     "Their wearing white dishdashas.",
+     "They're wear white dishdashas."
+    ],
+    "a": 2
+   }
+  ],
+  "Learning Club 1 – Lesson 1: Language booster 1 (numbers 21–30 and tens)": [
+   {
+    "t": "mcq",
+    "q": "How do we say 30?",
+    "o": [
+     "thirteen",
+     "three-ten",
+     "twenty-ten",
+     "thirty"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Twenty-five comes after twenty-four.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which spelling is correct?",
+    "o": [
+     "fifteey",
+     "fifthy",
+     "fifty",
+     "fivety"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We spell 40 as fourty.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Find the missing number: 30, 29, 28, ___",
+    "o": [
+     "31",
+     "27",
+     "26",
+     "29"
+    ],
+    "a": 2
+   }
+  ],
+  "Learning Club 1 – Lesson 2: Maths – How do we measure things?": [
+   {
+    "t": "mcq",
+    "q": "What do the small lines between 0 and 1 on a ruler show?",
+    "o": [
+     "metres",
+     "minutes",
+     "days",
+     "millimetres"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "There are 10 millimetres in 1 centimetre.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What are the three steps in the project?",
+    "o": [
+     "Sing, clap, sit",
+     "Read, write, sleep",
+     "Estimate, measure, compare",
+     "Draw, colour, cut"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "There are 10 centimetres in 1 metre.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A rubber is 3 cm long. How many mm is that?",
+    "o": [
+     "13",
+     "30",
+     "3",
+     "300"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 1: Vocabulary and Grammar (activities)": [
+   {
+    "t": "mcq",
+    "q": "Which is an activity from the lesson?",
+    "o": [
+     "beard",
+     "jumper",
+     "Monday",
+     "skateboard"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "With he and she, the verb takes -s: He plays tennis.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which verb takes -es with he?",
+    "o": [
+     "ride",
+     "read",
+     "watch",
+     "play"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say: She doesn't plays tennis.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A boy in a picture does karate with a red cross. Write it.",
+    "o": [
+     "He don't do karate.",
+     "He doesn't do karate.",
+     "He does karate.",
+     "He doesn't does karate."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 2: Story (Where's Fatma?)": [
+   {
+    "t": "mcq",
+    "q": "Who has tennis lessons at 9 o'clock?",
+    "o": [
+     "Polly",
+     "Atomic",
+     "Jack",
+     "Fatma"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Fatma has tennis lessons at 9 o'clock.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which of these is a friend in the story?",
+    "o": [
+     "Anas",
+     "Bayan",
+     "Lily",
+     "Qais"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Fatma plays tennis at 10 o'clock.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which picture shows Have fun?",
+    "o": [
+     "A child running on the road",
+     "Friends playing a game together",
+     "A child alone and sad",
+     "Children fighting"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 3: Vocabulary and Grammar (days of the week)": [
+   {
+    "t": "mcq",
+    "q": "Which list is in the correct order?",
+    "o": [
+     "Monday, Sunday, Tuesday",
+     "Tuesday, Monday, Sunday",
+     "Sunday, Tuesday, Monday",
+     "Sunday, Monday, Tuesday"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Wednesday comes after Tuesday.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word is spelled correctly?",
+    "o": [
+     "Satarday",
+     "Saturdy",
+     "Saturday",
+     "Saterday"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Thursday comes between Friday and Saturday.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A girl listens to music on Thursday. Choose the question and answer.",
+    "o": [
+     "Does she listen to music on Thursdays? No, she doesn't.",
+     "Does she listen to music on Thursdays? Yes, she does.",
+     "Do she listen to music on Thursdays? Yes, she do.",
+     "Does she listens to music on Thursdays? Yes, she does."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 4: Skills": [
+   {
+    "t": "mcq",
+    "q": "Which is correct?",
+    "o": [
+     "at Mondays",
+     "in Mondays",
+     "by Mondays",
+     "on Mondays"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We say on + day: on Mondays.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does Bayan do on Tuesdays?",
+    "o": [
+     "She plays tennis.",
+     "She does karate.",
+     "She skateboards.",
+     "She roller-skates."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say: I play football at Sundays.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence.",
+    "o": [
+     "I watch TV in Sundays.",
+     "I watch TV at the weekend.",
+     "I watch TV on the weekend day.",
+     "I watches TV at the weekend."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 5: Culture (traditional sports in Oman)": [
+   {
+    "t": "mcq",
+    "q": "Which two are traditional sports in Oman?",
+    "o": [
+     "Video games and TV",
+     "Skateboarding and roller-skating",
+     "Karate and tennis",
+     "Camel racing and dhow racing"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Camel racing is a traditional sport in Oman.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What has Anas got?",
+    "o": [
+     "A dhow",
+     "A bike and a helmet",
+     "A racket and tennis balls",
+     "A camel"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Camel racing is a new sport in Oman.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Riddle: He's got a racket and a ball. What sport is it?",
+    "o": [
+     "dhow racing",
+     "tennis",
+     "camel racing",
+     "cycling"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 6: English in action (saying how often)": [
+   {
+    "t": "mcq",
+    "q": "What does often mean?",
+    "o": [
+     "no days",
+     "every day",
+     "one day",
+     "many days"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Always means every day.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What question do we ask in the dialogue?",
+    "o": [
+     "How old are you?",
+     "Where is Fatma?",
+     "What do you do on Saturdays?",
+     "How much is it?"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Never means every day.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You don't play basketball on Saturdays at all. Choose the sentence.",
+    "o": [
+     "I play never basketball on Saturdays.",
+     "I never play basketball on Saturdays.",
+     "I always play basketball on Saturdays.",
+     "I often play basketball on Saturdays."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 7: Phonics (i-e, a-e, o-e, u-e)": [
+   {
+    "t": "mcq",
+    "q": "Which word has the same vowel sound as gate?",
+    "o": [
+     "bike",
+     "tube",
+     "stone",
+     "cake"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In bike, the e at the end is silent.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a tricky word in this lesson?",
+    "o": [
+     "bike",
+     "stone",
+     "does",
+     "cube"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Cake has the split vowel o-e.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete the word: k_t_ (it flies in the sky)",
+    "o": [
+     "u, e",
+     "i, e",
+     "a, e",
+     "o, e"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 8: Review": [
+   {
+    "t": "mcq",
+    "q": "Which is correct?",
+    "o": [
+     "Do she play tennis on Saturdays?",
+     "Does she plays tennis on Saturdays?",
+     "She does play tennis Saturdays?",
+     "Does she play tennis on Saturdays?"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We write Yes, she does.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "When does Mohammed often watch TV?",
+    "o": [
+     "At school",
+     "On Fridays only",
+     "In the afternoon",
+     "In the morning"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We write Yes, she do.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Answer: Does he play basketball? (no)",
+    "o": [
+     "No, she doesn't.",
+     "No, he doesn't.",
+     "No, he don't.",
+     "Yes, he does."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 9: Get ready for … Pre A1 Starters": [
+   {
+    "t": "mcq",
+    "q": "In Reading and Writing Part 2, what do you write?",
+    "o": [
+     "Y or N",
+     "A or B",
+     "1 or 2",
+     "Yes or No"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In this test, you write Yes or No, not Y or N.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means 'every time'?",
+    "o": [
+     "often",
+     "Sunday",
+     "always",
+     "never"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You can write Y for Yes in this test.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Picture: he watches TV on Wednesdays. Answer: What does he do on Wednesdays?",
+    "o": [
+     "He is TV.",
+     "He watches TV.",
+     "He watch TV.",
+     "He watching TV."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 10: Fun corner": [
+   {
+    "t": "mcq",
+    "q": "Which is a question for the guessing game?",
+    "o": [
+     "Areej rides a bike on Fridays.",
+     "Areej, ride a bike!",
+     "Areej is Friday?",
+     "Does Areej ride a bike on Fridays?"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We ask: Does Faisal play tennis on Mondays?",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which list has only days?",
+    "o": [
+     "always, Friday, never",
+     "bike, book, kite",
+     "Monday, Friday, Sunday",
+     "Monday, tennis, Sunday"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We ask: Does Faisal plays tennis on Mondays?",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Follow the line: Faisal – always – tennis – Wednesdays. Which sentence is right?",
+    "o": [
+     "Faisal plays always tennis on Wednesdays.",
+     "Faisal always plays tennis on Wednesdays.",
+     "Faisal always play tennis on Wednesdays.",
+     "Faisal always plays tennis on wednesdays."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Graded readers": [
+   {
+    "t": "mcq",
+    "q": "What day is it in 'Fun at the Park'?",
+    "o": [
+     "Saturday",
+     "Monday",
+     "Wednesday",
+     "Friday"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Maryam and Badriya are good friends.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What day is camel racing day in the story?",
+    "o": [
+     "Sunday",
+     "Tuesday",
+     "Saturday",
+     "Friday"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Badriya has got a basketball.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence matches 'Fun at the Park'?",
+    "o": [
+     "Badriya has got a basketball.",
+     "Maryam has got a basketball.",
+     "Maryam has got a camel.",
+     "Badriya has got a peach."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 1: Vocabulary and Grammar (jobs)": [
+   {
+    "t": "mcq",
+    "q": "Which word is a job?",
+    "o": [
+     "plane",
+     "palette",
+     "brush",
+     "nurse"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A chef cooks food.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How many jobs are in this lesson?",
+    "o": [
+     "four",
+     "two",
+     "ten",
+     "six"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say: I want to be a artist.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your friend loves cooking. What can she say?",
+    "o": [
+     "I want to be a builder.",
+     "I want to be a chef.",
+     "I want to be a pilot.",
+     "I want to be an astronaut."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 2: Story (The job fair)": [
+   {
+    "t": "mcq",
+    "q": "Who is the chef in the story?",
+    "o": [
+     "Mr Ahmed",
+     "Mrs Shahad",
+     "Lisa",
+     "Mr Ibrahim"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Mr Ibrahim is a chef.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: Aunt Aseel, these are my ___.",
+    "o": [
+     "planes",
+     "medicine",
+     "friends",
+     "jobs"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Mr Ahmed is a doctor.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your friend doesn't feel well. What can you say?",
+    "o": [
+     "Goodbye!",
+     "Don't worry. Let's get the doctor.",
+     "I want to be a pilot.",
+     "This is Mr Ibrahim."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 3: Vocabulary and Grammar (transport)": [
+   {
+    "t": "mcq",
+    "q": "Which transport goes under the ground?",
+    "o": [
+     "a boat",
+     "a car",
+     "a motorbike",
+     "the underground"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A boat goes on water.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word goes after goes to work?",
+    "o": [
+     "of",
+     "with a",
+     "by",
+     "at"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say: He goes to work by a bus.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your mum drives to work. What do you say?",
+    "o": [
+     "My mum goes to work by a car.",
+     "My mum goes to work by car.",
+     "My mum goes to work by boat.",
+     "My mum go to work by car."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 4: Skills": [
+   {
+    "t": "mcq",
+    "q": "What is the short form of He is?",
+    "o": [
+     "His",
+     "He'is",
+     "Hes",
+     "He's"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "He's means He is.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word is a family member?",
+    "o": [
+     "motorbike",
+     "train",
+     "uncle",
+     "chef"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "She's means She has.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Circle: My brother goes to work by car / motorbike.",
+    "o": [
+     "train",
+     "motorbike",
+     "car",
+     "bus"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 5: Culture (the yellow school bus)": [
+   {
+    "t": "mcq",
+    "q": "Where are all the school buses yellow?",
+    "o": [
+     "only in the sea",
+     "in the underground",
+     "in a park",
+     "in the United States"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "All school buses in the United States are yellow.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do we draw to show how our group goes to school?",
+    "o": [
+     "a story",
+     "a clock",
+     "a bar graph",
+     "a map"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Cars don't stop for school buses in the United States.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "True or False: Bus drivers drive the school buses.",
+    "o": [
+     "Yellow",
+     "True",
+     "False",
+     "Yes, he does."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 6: English in action (talking on the phone)": [
+   {
+    "t": "mcq",
+    "q": "What does Manar say after Who is this?",
+    "o": [
+     "Who is Manar?",
+     "Manar's not here.",
+     "Thanks, Manar.",
+     "This is Manar."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We ask: Hello, can I speak to Emily, please?",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means 'not now, after some time'?",
+    "o": [
+     "please",
+     "hello",
+     "later",
+     "here"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "To say who you are on the phone, we say: I'm is Alice.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You are Basim (16543408). What do you say?",
+    "o": [
+     "This is Basim. My phone number is 16543480.",
+     "This is Basim. My phone number is 16543408.",
+     "I'm is Basim. My number 16543408.",
+     "Who is Basim? My phone is 16543408."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 7: Phonics (ea, ea)": [
+   {
+    "t": "mcq",
+    "q": "Which word has a short ea?",
+    "o": [
+     "beach",
+     "sea",
+     "leaf",
+     "weather"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The ea in beach is long, like in read.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How do you spell the tricky word?",
+    "o": [
+     "wnat",
+     "whant",
+     "want",
+     "wont"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The ea in bread is long, like in sea.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Answer: What do you want to do?",
+    "o": [
+     "I want to sees the sea.",
+     "I want to see the sea.",
+     "I wants to see the sea.",
+     "I want see the sea."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 8: Review": [
+   {
+    "t": "mcq",
+    "q": "How many jobs are in the word search?",
+    "o": [
+     "four",
+     "six",
+     "two",
+     "ten"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A doctor works in a hospital.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which job starts with the letter b?",
+    "o": [
+     "chef",
+     "pilot",
+     "builder",
+     "doctor"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The underground goes on the road.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "The notes say: Friday, Saturday. When does she work?",
+    "o": [
+     "in the morning only",
+     "at the weekend",
+     "on Mondays",
+     "every night"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 9: Get ready for … Pre A1 Starters": [
+   {
+    "t": "mcq",
+    "q": "What do you put next to a correct sentence in Part 1?",
+    "o": [
+     "a cross",
+     "a number",
+     "a letter",
+     "a tick"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In Reading and Writing Part 1, you put a tick for a correct sentence.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word completes: I want to be an ___?",
+    "o": [
+     "pilot",
+     "doctor",
+     "astronaut",
+     "firefighter"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You mark a wrong sentence with a tick.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: I want to be a ___. (bubble: fire helmet)",
+    "o": [
+     "astronaut",
+     "firefighter",
+     "chef",
+     "artist"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 10: Fun corner": [
+   {
+    "t": "mcq",
+    "q": "Which word is a job?",
+    "o": [
+     "bus",
+     "train",
+     "motorbike",
+     "builder"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We say: I want to travel by train.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do you say for the spinner: nurse?",
+    "o": [
+     "I want to travel by nurse.",
+     "I want nurse.",
+     "I want to be a nurse.",
+     "I want to be an nurse."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say: I want to travel by a motorbike.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Make two sentences about your dream.",
+    "o": [
+     "I want be an astronaut. I want to travel by a boat.",
+     "I want to be an astronaut. I want to travel by boat.",
+     "I want to be a astronaut. I want to travel by boat.",
+     "I want to be an astronaut. I want travel by boat."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Graded readers": [
+   {
+    "t": "mcq",
+    "q": "What does Qais say about a favourite job?",
+    "o": [
+     "No, I don't.",
+     "I want to be a chef!",
+     "I don't like jobs.",
+     "Yes, I do! I want to be a teacher!"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In 'It's Jobs Day', the children wear clothes for their favourite jobs.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Where does the family want to go?",
+    "o": [
+     "to the park",
+     "to the hospital",
+     "to the beach",
+     "to school"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Noora is wearing a red hat and a red jacket.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence matches the story?",
+    "o": [
+     "The boat goes under the ground.",
+     "The boat goes fast on the water.",
+     "The train goes on the water.",
+     "The bus goes on the water."
+    ],
+    "a": 2
+   }
+  ],
+  "Learning Club 2 – Lesson 1: Language booster 2 (seasons)": [
+   {
+    "t": "mcq",
+    "q": "Which list has the four seasons?",
+    "o": [
+     "winter, Monday, summer, June",
+     "spring, sun, wind, cold",
+     "summer, beach, boat, train",
+     "winter, spring, summer, autumn"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "There are four seasons.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How do you spell autumn?",
+    "o": [
+     "o-t-u-m-n",
+     "a-u-t-m-n",
+     "a-u-t-u-m-n",
+     "a-u-t-u-m"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Summer is cold and it isn't sunny.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Describe winter in two sentences.",
+    "o": [
+     "It's windy. The trees are brown.",
+     "It's cold. It isn't sunny.",
+     "It's hot. It's sunny.",
+     "There are flowers. It's fun."
+    ],
+    "a": 2
+   }
+  ],
+  "Learning Club 2 – Lesson 2: Social Studies – Important months": [
+   {
+    "t": "mcq",
+    "q": "Which list is in the right order?",
+    "o": [
+     "January, March, February, April",
+     "April, March, February, January",
+     "February, January, April, March",
+     "January, February, March, April"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "There are twelve months in a year.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How many months are there from January to June?",
+    "o": [
+     "four",
+     "twelve",
+     "six",
+     "five"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "National Day is in July.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Graph: May 2, June 5, July 0. Which month has the most birthdays?",
+    "o": [
+     "August",
+     "June",
+     "May",
+     "July"
+    ],
+    "a": 2
+   }
+  ]
+ }
+}

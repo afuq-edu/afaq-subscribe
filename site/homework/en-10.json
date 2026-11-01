@@ -1,0 +1,1268 @@
+{
+ "key": "en-10",
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف العاشر",
+ "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ)",
+ "lessons": {
+  "Unit 1: New Media – Introducing New Media": [
+   {
+    "t": "mcq",
+    "q": "New media are types of media that are ...",
+    "o": [
+     "silent",
+     "always printed",
+     "only for adults",
+     "interactive"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "New media are types of media that are interactive.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means 'to join or link with other people'?",
+    "o": [
+     "print",
+     "wind up",
+     "connect",
+     "download"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A printed newspaper is a good example of new media.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Ali reads the news on his phone and writes comments. What is he using?",
+    "o": [
+     "a radio",
+     "an online news site",
+     "a printed newspaper",
+     "a stereo"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1: New Media – Reading and Understanding": [
+   {
+    "t": "mcq",
+    "q": "According to the article, how many hours a day do teenagers spend online?",
+    "o": [
+     "three",
+     "six",
+     "twelve",
+     "nine"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Screenager' is a blend of 'screen' and 'teenager'.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means 'unwilling and slow to do something'?",
+    "o": [
+     "interactive",
+     "glued",
+     "reluctant",
+     "awesome"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The article says excessive screen time is negative regardless of content.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You want to know the general idea of five texts quickly. What should you do?",
+    "o": [
+     "read only the last line",
+     "skim them for key words",
+     "read every word slowly",
+     "translate every word"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1: New Media – Grammar and Vocabulary": [
+   {
+    "t": "mcq",
+    "q": "What is a phrasal verb?",
+    "o": [
+     "a verb in the past tense",
+     "a long adjective",
+     "a question word",
+     "a verb with an adverb or preposition that makes a new meaning"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "After 'not as … as' we use the base form of the adjective.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'NG' mean in a True/False/Not Given task?",
+    "o": [
+     "The statement is true.",
+     "The chart is wrong.",
+     "There is no information to decide.",
+     "The statement is false."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Ahmed is not as tall as Salim' means Ahmed is taller.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence.",
+    "o": [
+     "Watching swimming not as exciting than watching football.",
+     "Watching swimming is not as exciting as watching football.",
+     "Watching swimming is not as more exciting as watching football.",
+     "Watching swimming is not exciting as as watching football."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1: New Media – Listening and Speaking": [
+   {
+    "t": "mcq",
+    "q": "What does 'trust' mean in 'We trust this news source'?",
+    "o": [
+     "never read it",
+     "delete it",
+     "print it",
+     "believe it is honest and true"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A journalist is a person who reports the news.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "According to Dr David, what can journalists do to compete with social media?",
+    "o": [
+     "write shorter newspapers",
+     "work only on the radio",
+     "develop technological skills",
+     "stop using the Internet"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In the interview, the journalist says journalism is faster than social media at reporting news.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: 'Online newspapers are better ___ I can read them anywhere.'",
+    "o": [
+     "or",
+     "because",
+     "but",
+     "so"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1: New Media – Writing: Describing Charts": [
+   {
+    "t": "mcq",
+    "q": "Which of these is NOT one of the four chart types in the lesson?",
+    "o": [
+     "a pie chart",
+     "a line graph",
+     "a column chart",
+     "a map"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A pie chart is a circle divided into slices.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do we write in the first sentence of a chart summary?",
+    "o": [
+     "the conclusion",
+     "a question to the reader",
+     "the type of chart, its topic, who and when",
+     "our favourite sport"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A column chart has horizontal bars.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Use 'while' to compare boys and girls correctly.",
+    "o": [
+     "While boys prefers football, girls prefers swimming.",
+     "While boys prefer football, girls prefer swimming.",
+     "While boys football, girls swimming prefer.",
+     "Boys while prefer football girls."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1: New Media – Project: Design a Blog": [
+   {
+    "t": "mcq",
+    "q": "What does a blog homepage show?",
+    "o": [
+     "only one comment",
+     "the blogger's address",
+     "nothing but a photo",
+     "the menu and recent posts"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Someone who writes a blog is a blogger.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means 'what is written and shown on the blog'?",
+    "o": [
+     "layout",
+     "technical",
+     "content",
+     "menu"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The blog post page shows the menu and all recent posts.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which two things does a good presentation need?",
+    "o": [
+     "one person doing everything",
+     "a clear voice and good timing",
+     "a quiet voice and no eye contact",
+     "reading very fast and no plan"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1: New Media – Review": [
+   {
+    "t": "mcq",
+    "q": "What is a phrasal verb?",
+    "o": [
+     "a verb in the future tense",
+     "a type of chart",
+     "a long noun",
+     "a verb + adverb or preposition with its own meaning"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A blog is a regular online record of your thoughts.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which expression makes a suggestion?",
+    "o": [
+     "One example of this is…",
+     "Overall, …",
+     "Why don't we…?",
+     "I'm sorry but I don't agree."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say 'click in the link'.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the best sentence for a pie chart summary.",
+    "o": [
+     "Overall, YouTube is popularer.",
+     "Overall, YouTube is the most popular platform.",
+     "Overall, I love YouTube so much.",
+     "Overall, YouTube were the most popular."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2: Climate Change – Introducing Climate Change": [
+   {
+    "t": "mcq",
+    "q": "What is climate?",
+    "o": [
+     "today's rain",
+     "the temperature this morning",
+     "a strong wind",
+     "the weather in one place over a long period of time"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A drought is a long period without rain.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which of these is an effect of climate change?",
+    "o": [
+     "colder summers everywhere",
+     "lower temperatures",
+     "melting ice",
+     "more snow in deserts"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Weather and climate mean exactly the same thing.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence describes Oman's climate, not today's weather?",
+    "o": [
+     "Today is cloudy.",
+     "Summers in Oman are hot and dry.",
+     "It is windy this afternoon.",
+     "It rained in Muscat this morning."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2: Climate Change – Reading and Understanding": [
+   {
+    "t": "mcq",
+    "q": "What trend does the chart show?",
+    "o": [
+     "Temperatures are falling.",
+     "Temperatures never change.",
+     "Rain is increasing every year.",
+     "Average global temperatures are rising."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The chart shows that average global temperatures have risen since 1881.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which three animals are in the texts?",
+    "o": [
+     "lions, tigers and eagles",
+     "dolphins, whales and sharks",
+     "polar bears, turtles and koalas",
+     "camels, goats and cows"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The horizontal axis of the chart shows the temperatures.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence with 'will have to'.",
+    "o": [
+     "We have will to use less energy.",
+     "We will have to use less energy.",
+     "We will has to use less energy.",
+     "We will have use less energy."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2: Climate Change – Grammar and Vocabulary": [
+   {
+    "t": "mcq",
+    "q": "Which connectors introduce a cause?",
+    "o": [
+     "so, therefore",
+     "consequently, so",
+     "therefore, consequently",
+     "because of, due to"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In 'Ice caps melt, so sea levels rise', the melting ice caps are the cause.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a climate compound noun?",
+    "o": [
+     "tea-bag",
+     "football",
+     "greenhouse gas",
+     "fireman"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Because of' comes before the effect.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence.",
+    "o": [
+     "Drought consequence is of rising temperatures.",
+     "Drought is a consequence of rising temperatures.",
+     "Rising temperatures is a consequence of drought.",
+     "Drought is consequence rising temperatures of."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2: Climate Change – Listening and Speaking: Debate": [
+   {
+    "t": "mcq",
+    "q": "What is the topic of the debate in Listening 2.3?",
+    "o": [
+     "Plastic bags should be free.",
+     "Students should have more homework.",
+     "Cars are better than buses.",
+     "Governments are responsible for stopping global warming."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A consumer is a person who buys goods or services.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which expression ends a debate argument?",
+    "o": [
+     "I see your point",
+     "That's a good point",
+     "To sum up…",
+     "We believe that…"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'To regulate' means to ignore something.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your opponent makes a strong argument. You agree with it. What do you say?",
+    "o": [
+     "Switch off.",
+     "That's a good point.",
+     "I'm sorry but I disagree.",
+     "To sum up…"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2: Climate Change – Writing: Opinion Essay": [
+   {
+    "t": "mcq",
+    "q": "Why does plastic end up in the ocean?",
+    "o": [
+     "It is very heavy.",
+     "People throw it into rivers on purpose only.",
+     "It is made in the ocean.",
+     "It is lightweight, so wind and water carry it there."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Plastic ends up in the ocean because it is lightweight and can be blown or washed there.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'throw away' mean?",
+    "o": [
+     "buy something new",
+     "fill something",
+     "get rid of something",
+     "keep something safe"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In the essay, the writer gives his opinion in the last paragraph only.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Join with a connector: 'Plastic ends up in the sea. Fish swallow it.'",
+    "o": [
+     "Therefore plastic, fish swallow sea.",
+     "Plastic ends up in the sea; therefore, fish swallow it.",
+     "Plastic ends up in the sea because of fish swallow it.",
+     "Due to fish, plastic ends up."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2: Climate Change – Project: Reusable Shopping Bag": [
+   {
+    "t": "mcq",
+    "q": "What is a slogan?",
+    "o": [
+     "the material of a bag",
+     "a kind of plastic",
+     "the price of a bag",
+     "a short phrase with a message"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A slogan is a short phrase on a bag.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means 'what something is made of'?",
+    "o": [
+     "image",
+     "vote",
+     "material",
+     "slogan"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Material' means a picture on the bag.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence describes your contribution to the project?",
+    "o": [
+     "Explanation me.",
+     "I wrote the explanation.",
+     "I am the explanation.",
+     "I written the explanation."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2: Climate Change – Review": [
+   {
+    "t": "mcq",
+    "q": "What does climate change mean?",
+    "o": [
+     "It rains every day.",
+     "Temperatures are falling.",
+     "The weather never changes.",
+     "Average global temperatures are rising."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Climate is the weather in one place over a long period of time.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Why does plastic end up in the ocean?",
+    "o": [
+     "It is made in the sea.",
+     "Fish bring it.",
+     "It is lightweight and is blown or washed there.",
+     "It is very heavy."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Therefore' comes before the cause.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which is an argument FOR 'It is easy to live a more eco-friendly lifestyle'?",
+    "o": [
+     "Nobody cares about the planet.",
+     "We can reuse bags and turn off lights.",
+     "Eco-friendly products can be expensive.",
+     "It takes too much time."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3: Renewable Energy – Introducing Renewable Energy": [
+   {
+    "t": "mcq",
+    "q": "Which of these is a renewable energy source?",
+    "o": [
+     "coal",
+     "oil",
+     "natural gas",
+     "solar power"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Solar power comes from the sun.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which group contains only non-renewable sources?",
+    "o": [
+     "oil, wind, sun",
+     "biofuel, coal, wind",
+     "coal, oil, gas",
+     "wind, sun, water"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Coal, oil and gas are renewable energy sources.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Sara says: 'This energy will never run out.' Which energy is she talking about?",
+    "o": [
+     "gas",
+     "solar power",
+     "oil",
+     "coal"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3: Renewable Energy – Reading and Understanding": [
+   {
+    "t": "mcq",
+    "q": "What are the main parts of an email?",
+    "o": [
+     "title, chapter, index",
+     "map, key, scale",
+     "question, answer, score",
+     "greeting, message, closing"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Dear Mr Brown' is a formal greeting.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a compound noun?",
+    "o": [
+     "a word that describes a verb",
+     "a short question",
+     "two words that make one noun",
+     "a verb that ends in -ing"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "An email that starts with 'Hi' and ends with 'Take care' is formal.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You want to find the capacity of a wind farm in the text. What should you look for?",
+    "o": [
+     "a picture of the sea",
+     "a number in megawatts",
+     "the name of the writer",
+     "the greeting"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3: Renewable Energy – Grammar and Vocabulary": [
+   {
+    "t": "mcq",
+    "q": "Which conjunction introduces a reason?",
+    "o": [
+     "so",
+     "also",
+     "but",
+     "because"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'So' introduces a result.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a suffix?",
+    "o": [
+     "a type of sentence",
+     "a punctuation mark",
+     "letters added to the end of a word",
+     "letters added to the start of a word"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Because' introduces a contrast.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: Solar power is clean. ___, it is expensive to build.",
+    "o": [
+     "Therefore",
+     "However",
+     "Moreover",
+     "In addition"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3: Renewable Energy – Listening and Speaking": [
+   {
+    "t": "mcq",
+    "q": "What do mirrors do in a solar power project like Mir'aah?",
+    "o": [
+     "They make wind.",
+     "They store natural gas.",
+     "They cool the water.",
+     "They focus the sun's energy."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The project in the presentation is called Mir'aah.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a disadvantage of solar power?",
+    "o": [
+     "It is clean.",
+     "It uses free sunlight.",
+     "It works only in daylight.",
+     "It is renewable."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'It is expensive to build' is an advantage of solar power.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Before listening, you see slides with mirrors and the sun. What do you predict?",
+    "o": [
+     "The presentation is about a library.",
+     "The presentation is about a solar project.",
+     "The presentation is about football.",
+     "The presentation is about coal mines."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3: Renewable Energy – Writing: A Formal Request Email": [
+   {
+    "t": "mcq",
+    "q": "Which is the correct order of a formal email?",
+    "o": [
+     "closing, greeting, purpose, details",
+     "details, closing, greeting, purpose",
+     "purpose, closing, details, greeting",
+     "greeting, purpose, details and request, closing"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Dear Mr Brown' is a formal greeting.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How should a formal email begin?",
+    "o": [
+     "What's up?",
+     "See you soon",
+     "Dear Mr/Ms … or To whom it may concern",
+     "Hey!"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Yours sincerely' is an informal closing.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Correct the sentence: 'i would like request a visit.'",
+    "o": [
+     "I like would to request a visit.",
+     "I would like to request a visit.",
+     "i would like request a visit.",
+     "I would like requesting visit."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3: Renewable Energy – Project: An Invention Powered by Renewable Energy": [
+   {
+    "t": "mcq",
+    "q": "Which sentence welcomes the audience?",
+    "o": [
+     "Thank you for listening.",
+     "Any questions?",
+     "Goodbye, everyone.",
+     "Welcome to our presentation about…"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Good morning, everyone' is a good way to start a presentation.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What should a poster include?",
+    "o": [
+     "the date of your birthday",
+     "nothing but colours",
+     "a title, a picture, the advantages and the purpose",
+     "only a long paragraph"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Thank you for listening' is used at the start of a presentation.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You liked a team's idea but they spoke quietly. What do you say?",
+    "o": [
+     "You must start again.",
+     "Your idea is clear. You could speak louder.",
+     "Your idea is bad.",
+     "I did not listen."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3: Renewable Energy – Review": [
+   {
+    "t": "mcq",
+    "q": "Which of these is a renewable energy source?",
+    "o": [
+     "coal",
+     "oil",
+     "gas",
+     "hydropower"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'However' shows contrast.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence opens a presentation?",
+    "o": [
+     "Yours sincerely.",
+     "Kind regards.",
+     "Good morning, everyone.",
+     "Thank you for listening."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Therefore' introduces a reason.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Rewrite formally: 'Can you send me some info?'",
+    "o": [
+     "You send me info.",
+     "I would like to request some information.",
+     "Send info now.",
+     "Hey, info please!"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4: Civilisation – Introducing Civilisation": [
+   {
+    "t": "mcq",
+    "q": "What is a civilisation?",
+    "o": [
+     "a type of energy",
+     "a modern machine",
+     "a kind of weather",
+     "the culture and way of life of a society at a particular time"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A civilisation is the culture and way of life of a society at a particular time.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "When did Egyptian civilisation last, according to the listening?",
+    "o": [
+     "30 BC–3000 BC",
+     "146 BC–800 BC",
+     "3000 BC–30 BC",
+     "800 BC–146 BC"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Ancient' means very modern.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: Greek civilisation was known for ______.",
+    "o": [
+     "shipbuilding only",
+     "philosophy and architecture",
+     "pyramids",
+     "copper"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4: Civilisation – Reading and Understanding": [
+   {
+    "t": "mcq",
+    "q": "What does the map on page 38 show?",
+    "o": [
+     "the weather in Oman",
+     "modern cities",
+     "football stadiums",
+     "six ancient civilisations with their names, locations and dates"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Trade is the buying and selling of goods.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'Not Given' mean in a T / F / NG task?",
+    "o": [
+     "The statement is true.",
+     "The text is missing a page.",
+     "The text has no information about it.",
+     "The statement is false."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Not Given' means the statement is false.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A paragraph describes farms, crops and water channels. Which subheading fits best?",
+    "o": [
+     "Religion",
+     "Agriculture",
+     "Trade with other countries",
+     "Famous leaders"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4: Civilisation – Grammar and Vocabulary": [
+   {
+    "t": "mcq",
+    "q": "How is the past passive formed?",
+    "o": [
+     "will + verb",
+     "have + verb-ing",
+     "do + verb",
+     "was/were + past participle"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The past passive is formed with was/were + past participle.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is in the past passive?",
+    "o": [
+     "The Mayans are inventing a calendar.",
+     "The Mayans will invent a calendar.",
+     "The calendar was invented by the Mayans.",
+     "The Mayans invent the calendar."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'The pyramids was built by the Egyptians.' is correct.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the best sentence: The pyramids are ___.",
+    "o": [
+     "a bit extremely impressive",
+     "extremely impressive",
+     "extreme impressive",
+     "impressive extremely very"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4: Civilisation – Listening and Speaking": [
+   {
+    "t": "mcq",
+    "q": "What is a global citizen?",
+    "o": [
+     "a person who travels every day",
+     "a leader of a country",
+     "a person who only cares about one city",
+     "a person who cares about the whole world"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Equality' means treating everyone the same and giving them the same rights.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means 'treating everyone the same'?",
+    "o": [
+     "war",
+     "environment",
+     "equality",
+     "revenge"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Diversity' means everyone is exactly the same.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Ali picks up rubbish at the beach and learns about other cultures. What is he being?",
+    "o": [
+     "a pharaoh",
+     "a global citizen",
+     "a leader of an empire",
+     "an archaeologist"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4: Civilisation – Writing: A Biography": [
+   {
+    "t": "mcq",
+    "q": "What is a biography?",
+    "o": [
+     "a description of a place",
+     "a formal request email",
+     "a list of facts about energy",
+     "a written account of someone's life"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A biography is a written account of someone's life.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What should a biography plan include?",
+    "o": [
+     "a greeting and a closing",
+     "the weather on the day",
+     "birth, childhood, achievements and importance",
+     "only the person's favourite food"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Chronological order' means from the newest event to the oldest.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You want to say the most important thing a person did. Which phrase do you use?",
+    "o": [
+     "One year later…",
+     "His greatest achievement was…",
+     "At a young age…",
+     "He was born in…"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4: Civilisation – Project: An Archaeological Site in Oman": [
+   {
+    "t": "mcq",
+    "q": "What is an archaeological site?",
+    "o": [
+     "a place where new cars are sold",
+     "a modern power plant",
+     "a sports club",
+     "a place where evidence of the past is found"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "An archaeological site is a place where evidence of the past is found.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'reliable' mean?",
+    "o": [
+     "short",
+     "expensive",
+     "accurate and trustworthy",
+     "very old"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A travel blog is always a reliable source.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which comment is a helpful review of another team's leaflet?",
+    "o": [
+     "Start again.",
+     "The design is clear, but you could add the site's location.",
+     "It is bad.",
+     "I don't care."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4: Civilisation – Review": [
+   {
+    "t": "mcq",
+    "q": "How do we form the past passive?",
+    "o": [
+     "will + verb",
+     "am/is/are + verb-ing",
+     "had + verb",
+     "was/were + past participle"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Old coins were found at the site.' is correct.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "In which order is a biography usually written?",
+    "o": [
+     "random order",
+     "from the end to the start",
+     "chronological order",
+     "alphabetical order"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Very' is stronger than 'extremely'.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: If I ___ an archaeologist, I ___ study ancient sites in Oman.",
+    "o": [
+     "will be / would",
+     "were / would",
+     "am / would",
+     "were / will"
+    ],
+    "a": 2
+   }
+  ]
+ }
+}

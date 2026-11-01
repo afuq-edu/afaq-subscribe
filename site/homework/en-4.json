@@ -1,0 +1,2798 @@
+{
+ "key": "en-4",
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الرابع",
+ "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ)",
+ "lessons": {
+  "Welcome Lesson 1: New neighbours – Countries and nationalities": [
+   {
+    "t": "mcq",
+    "q": "Who is the new girl in the story?",
+    "o": [
+     "Fatma",
+     "Sami",
+     "Noora",
+     "Lottie"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Lottie is the new neighbour.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which of these is a nationality?",
+    "o": [
+     "Brazil",
+     "Oman",
+     "Chinese",
+     "China"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Lottie is from Britain.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct answer: 'Where's she from?'",
+    "o": [
+     "She's from Egyptian.",
+     "She's from Egypt.",
+     "She's Egypt.",
+     "She's nine."
+    ],
+    "a": 2
+   }
+  ],
+  "Welcome Lesson 2: Hobbies and numbers 50–100": [
+   {
+    "t": "mcq",
+    "q": "Which number is 'eighty'?",
+    "o": [
+     "18",
+     "8",
+     "90",
+     "80"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Swimming is a hobby.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What number comes after ninety when we count in tens?",
+    "o": [
+     "ninety-one",
+     "seventy",
+     "one hundred",
+     "eighty"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Forty plus sixty equals ninety.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Solve: fifty-seven minus four equals ___.",
+    "o": [
+     "forty-three",
+     "fifty-three",
+     "fifty-one",
+     "sixty-one"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 1: Vocabulary 1 (school subjects and places)": [
+   {
+    "t": "mcq",
+    "q": "Which of these is a school subject?",
+    "o": [
+     "school nurse",
+     "science lab",
+     "headteacher",
+     "Social Studies"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "ICT is a school subject.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which subject uses computers?",
+    "o": [
+     "Islamic Studies",
+     "Arabic",
+     "ICT",
+     "P.E."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The headteacher is a school subject.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Noora likes Maths and ICT. Which sentence is correct?",
+    "o": [
+     "Noora is like Maths and ICT.",
+     "Noora likes Maths and ICT.",
+     "Noora like Maths and ICT.",
+     "Noora liking Maths and ICT."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 2: Story – First day at a new school!": [
+   {
+    "t": "mcq",
+    "q": "Where is the headteacher's office in the story?",
+    "o": [
+     "It is in the ICT classroom.",
+     "It is in Lottie's house.",
+     "It is in the park.",
+     "Fatma shows Lottie the office."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Lottie feels nervous at the start of the story.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is the last sequencing word?",
+    "o": [
+     "then",
+     "after that",
+     "finally",
+     "first"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The loud noise is in the science lab.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A new pupil looks nervous. What can you say?",
+    "o": [
+     "Sit alone.",
+     "Come and meet my friends.",
+     "Don't talk to me.",
+     "You are late!"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 3: Grammar 1 (present simple with days and times)": [
+   {
+    "t": "mcq",
+    "q": "Which time is 'quarter past'?",
+    "o": [
+     "four forty-five (4.45)",
+     "four thirty (4.30)",
+     "four o'clock (4.00)",
+     "four fifteen (4.15)"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "10.15 is 'quarter past ten'.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What time is half past ten?",
+    "o": [
+     "9.30",
+     "10.45",
+     "10.30",
+     "10.15"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "12.45 is 'quarter past twelve'.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Make it negative: 'Azza has P.E. at quarter to ten.'",
+    "o": [
+     "Azza not have P.E. at quarter to ten.",
+     "Azza doesn't have P.E. at quarter to ten.",
+     "Azza don't have P.E. at quarter to ten.",
+     "Azza doesn't has P.E. at quarter to ten."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 4: Vocabulary and Grammar 2 (adverbs of frequency)": [
+   {
+    "t": "mcq",
+    "q": "Which word means 'all the time'?",
+    "o": [
+     "sometimes",
+     "never",
+     "once",
+     "always"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Twice a week' means two days a week.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "'Every day' means ___ days a week.",
+    "o": [
+     "one",
+     "three",
+     "seven",
+     "two"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Never' means every day.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Put 'always' in the sentence: 'She is busy.'",
+    "o": [
+     "She is busy always.",
+     "She is always busy.",
+     "She always is busy.",
+     "Always she is busy."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 5: Culture – Unusual schools around the world": [
+   {
+    "t": "mcq",
+    "q": "Where do some children study on a boat?",
+    "o": [
+     "in the USA",
+     "in Indonesia",
+     "in Britain",
+     "in Bangladesh"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In Bangladesh, some children study at school on a boat.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do children use at the school in the USA?",
+    "o": [
+     "paper",
+     "leaves",
+     "computers",
+     "books"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The boat school is in the USA.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Write about your perfect school: we go outside two days a week.",
+    "o": [
+     "We have an outdoor lesson every day.",
+     "We have an outdoor lesson twice a week.",
+     "We have an outdoor lesson once a week.",
+     "We never have an outdoor lesson."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 6: English in action – Making arrangements": [
+   {
+    "t": "mcq",
+    "q": "Which phrase invites a friend?",
+    "o": [
+     "Sorry, I can't.",
+     "See you then!",
+     "I'm not free.",
+     "Do you want to play football?"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Ryan and Alex arrange to meet at quarter to five.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word starts a suggestion?",
+    "o": [
+     "Free",
+     "Then",
+     "Let's",
+     "Sorry"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Sorry, I can't.' is a way to say yes.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose a suggestion with a time and a place.",
+    "o": [
+     "I'm not free.",
+     "Let's meet at half past four in the park.",
+     "Sorry, I can't.",
+     "Do you want to?"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 7: Skills – Reading (Maryam's diary)": [
+   {
+    "t": "mcq",
+    "q": "Why is Maryam changing schools?",
+    "o": [
+     "She doesn't like her old teacher.",
+     "Her old school is on a boat.",
+     "She wants to study Art.",
+     "Her dad's got a job in this town."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Maryam is changing schools because her dad's got a job in this town.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a diary?",
+    "o": [
+     "a story about robots",
+     "a poster of a school",
+     "a book where you write about your days",
+     "a school timetable"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "School starts at quarter to nine.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence best describes the text?",
+    "o": [
+     "Maryam stays at her old school.",
+     "Maryam is worried, but she makes friends and enjoys Art.",
+     "Maryam is happy all the time.",
+     "Maryam doesn't like her new school."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 8: Skills – Listening, Speaking and Writing": [
+   {
+    "t": "mcq",
+    "q": "Why does Ammar like Maths?",
+    "o": [
+     "He likes drawing.",
+     "He likes swimming.",
+     "He likes computers.",
+     "He likes learning about numbers."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Saeed has swimming lessons after school.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which question asks about after-school activities?",
+    "o": [
+     "How old are you?",
+     "What's your name?",
+     "What do you do after school?",
+     "Where are you from?"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Ammar's favourite lesson is Maths.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete the plan: 'My favourite lesson is Art. I like it ___ we draw pictures.'",
+    "o": [
+     "then",
+     "because",
+     "but",
+     "or"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 9: Phonics (ie, igh, i-e, y)": [
+   {
+    "t": "mcq",
+    "q": "Which word has the ie spelling?",
+    "o": [
+     "time",
+     "night",
+     "shy",
+     "tie"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Night' has the long i sound.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word does NOT have the long i sound?",
+    "o": [
+     "lie",
+     "time",
+     "sit",
+     "shy"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Pin' has the long i sound.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct spelling: I ride my ___.",
+    "o": [
+     "byk",
+     "bike",
+     "bighk",
+     "biek"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 10: Review": [
+   {
+    "t": "mcq",
+    "q": "Which list is in alphabetical order?",
+    "o": [
+     "Science, Maths, Art, English",
+     "Maths, Art, Science, English",
+     "English, Art, Science, Maths",
+     "Art, English, Maths, Science"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Art, Maths, Science is in alphabetical order.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What time do the Discovery Team always have English?",
+    "o": [
+     "at quarter to five",
+     "at twelve o'clock",
+     "at half past eight",
+     "at quarter past eleven"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Adam has swimming lessons once a week.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Say the time: I have Art at 10.15.",
+    "o": [
+     "I have Art at ten o'clock.",
+     "I have Art at quarter past ten.",
+     "I have Art at quarter to ten.",
+     "I have Art at half past ten."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 11: Get ready for A1 Movers & Fun corner": [
+   {
+    "t": "mcq",
+    "q": "What should you write for each answer in Listening Part 2?",
+    "o": [
+     "a long sentence",
+     "a picture",
+     "two sentences",
+     "one word or a number"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In Listening Part 2, you write one word or a number for each answer.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means 'two times'?",
+    "o": [
+     "never",
+     "always",
+     "twice",
+     "once"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'How often? ___ a week' needs a time like 'half past eight'.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Board game square: 'What time is it? (12.45)'",
+    "o": [
+     "It's quarter to twelve.",
+     "It's quarter to one.",
+     "It's quarter past twelve.",
+     "It's half past twelve."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Graded readers: Welcome to Our School & Hippo's Kite": [
+   {
+    "t": "mcq",
+    "q": "Which places do the children show in their school video?",
+    "o": [
+     "the park, the beach and the shop",
+     "the boat and the forest",
+     "the cinema and the park",
+     "the science lab, the classroom and the garden"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In Welcome to Our School, the video is for friends in Brazil.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do the friends in Brazil want to do?",
+    "o": [
+     "grow vegetables",
+     "fly a kite",
+     "make a video about their school, too",
+     "visit Oman tomorrow"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "They water the plants every day before school.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "True or false: 'They water the plants every day before school.' Choose the correct sentence.",
+    "o": [
+     "They water the plants every night.",
+     "They water the plants every day after school.",
+     "They water the plants once a week.",
+     "They never water the plants."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 1: Vocabulary 1 (food and drinks)": [
+   {
+    "t": "mcq",
+    "q": "Which of these is savoury?",
+    "o": [
+     "cupcakes",
+     "milkshake",
+     "lemonade",
+     "crisps"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Cupcakes are sweet.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word is spelled correctly?",
+    "o": [
+     "capcakes",
+     "cupkakes",
+     "cupcakes",
+     "cupcaks"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Noodles are sweet.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your friend says: 'It's food. It's savoury. It's long.' What is it?",
+    "o": [
+     "milkshake",
+     "noodles",
+     "lemonade",
+     "cupcakes"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 2: Story – The secret shed": [
+   {
+    "t": "mcq",
+    "q": "What do the children form in the story?",
+    "o": [
+     "a band",
+     "a football club",
+     "a school",
+     "a team, the Discovery Team"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Fatma can't make sandwiches because there isn't any bread.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is the Discovery Team symbol?",
+    "o": [
+     "a robot",
+     "a kite",
+     "a dinosaur model",
+     "a lemon tree"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "There's some bread in Fatma's kitchen.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which food comes from an animal?",
+    "o": [
+     "noodles",
+     "butter",
+     "lemons",
+     "bread"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 3: Grammar 1 (there is / there are with countable and uncountable nouns)": [
+   {
+    "t": "mcq",
+    "q": "Which word goes with countable nouns?",
+    "o": [
+     "a little",
+     "much",
+     "any bread",
+     "a few"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We say: There are a few sandwiches.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which list has only uncountable nouns?",
+    "o": [
+     "cupcakes, bread, sandwiches",
+     "noodles, crisps, grapes",
+     "tea, salad, lemonade",
+     "grapes, crisps, tea"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say: There is a few lemonade.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Correct: 'There are a little vegetables.'",
+    "o": [
+     "There is a few vegetables.",
+     "There are a few vegetables.",
+     "There is a little vegetables.",
+     "There are a little vegetable."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 4: Vocabulary and Grammar 2 (containers; Is there any ...? / Are there any ...?)": [
+   {
+    "t": "mcq",
+    "q": "Which phrase is correct?",
+    "o": [
+     "a plate of water",
+     "a bowl of cereal box",
+     "a bag of milk",
+     "a bottle of water"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We say: a bowl of soup.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which container goes with fruit?",
+    "o": [
+     "a cup",
+     "a glass",
+     "a bag",
+     "a can"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The plural of 'a cup of coffee' is 'two cup of coffees'.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Is there any cheese? (✓) Choose the answer.",
+    "o": [
+     "Yes, it is.",
+     "Yes, there is.",
+     "Yes, there are.",
+     "No, there isn't."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 5: Culture – Food around the world": [
+   {
+    "t": "mcq",
+    "q": "Which dish is a drink?",
+    "o": [
+     "sushi",
+     "bunny chow",
+     "fondue",
+     "bubble tea"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Bubble tea has jelly balls in it.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do people eat at Eid in Oman?",
+    "o": [
+     "bubble tea",
+     "fondue",
+     "shuwa",
+     "sushi"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The fish in sushi is cooked.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct poster sentence.",
+    "o": [
+     "There's a lot rice in it.",
+     "There's a lot of rice in it.",
+     "There's a lot of rices in it.",
+     "There are a lot of rice in it."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 6: English in action – Shopping for food": [
+   {
+    "t": "mcq",
+    "q": "What does Adam buy?",
+    "o": [
+     "Four apples and six oranges",
+     "Six bananas and some grapes",
+     "Some apples and two lemons",
+     "Six apples, four oranges and some grapes"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Adam pays four rials.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Who says 'Can I help you?'",
+    "o": [
+     "the teacher",
+     "Adam's friend",
+     "the shopkeeper",
+     "the customer"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Adam buys ten apples.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Apples 2 + lemonade 1 + cereal 2 + sandwiches 4 + crisps 1 + milk 1. What is the total?",
+    "o": [
+     "12 rials",
+     "11 rials",
+     "10 rials",
+     "9 rials"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 7: Skills – Reading (a recipe: Let's cook!)": [
+   {
+    "t": "mcq",
+    "q": "Who is Rasha?",
+    "o": [
+     "A teacher at a school",
+     "A shopkeeper",
+     "A TV doctor",
+     "A 10-year-old winner of Kids Cook!"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Rasha is ten years old.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a part of a recipe?",
+    "o": [
+     "a map",
+     "a timetable",
+     "ingredients",
+     "a price list"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Harees is a sweet cake.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "How much butter do you need for harees?",
+    "o": [
+     "no butter",
+     "a little butter",
+     "a lot of butter",
+     "ten bottles of butter"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 8: Skills – Listening, Speaking and Writing (a recipe)": [
+   {
+    "t": "mcq",
+    "q": "What does Malik not like?",
+    "o": [
+     "fruit",
+     "vegetables",
+     "fruit and vegetables",
+     "sweet things like ice cream"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Anas loves cheese.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What are the parts of a recipe?",
+    "o": [
+     "a price and a shop",
+     "a map and a title",
+     "name, time, people, ingredients, steps",
+     "only the name"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Anas likes bread very much.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: Anas loves cheese ___ he doesn't like bread.",
+    "o": [
+     "or",
+     "but",
+     "and",
+     "so"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 9: Phonics (oa, o-e, ow)": [
+   {
+    "t": "mcq",
+    "q": "Which group of words all use 'oa'?",
+    "o": [
+     "nose, rose, home",
+     "snow, grow, blow",
+     "boat, nose, snow",
+     "boat, coat, goat"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Boat' has the long o sound.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is the tricky word in this lesson?",
+    "o": [
+     "snow",
+     "home",
+     "any",
+     "boat"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Dog' has the long o sound.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence.",
+    "o": [
+     "Are there a boats on the river?",
+     "Are there any boats on the river?",
+     "Are there any boat on the river?",
+     "Is there any boats on the river?"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 10: Review": [
+   {
+    "t": "mcq",
+    "q": "Which word is NOT a container?",
+    "o": [
+     "can",
+     "bowl",
+     "plate",
+     "sandwich"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We say 'Are there any apples?'",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How can you eat soup?",
+    "o": [
+     "With chopsticks",
+     "With sticks",
+     "With a spoon",
+     "With a straw"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'There is a few sandwiches.' is correct.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Dad: Do we need anything else? Zaid: ...",
+    "o": [
+     "Yes, it is.",
+     "Yes, we do.",
+     "Yes, there are.",
+     "Yes, I can."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 11: Get ready for A1 Movers & Fun corner": [
+   {
+    "t": "mcq",
+    "q": "Dad: Is there any milk? Zaid: ...",
+    "o": [
+     "Yes, there are.",
+     "Yes, I can.",
+     "Yes, we do.",
+     "Yes, there is."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A shopping list tells you what to buy.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What should you do with each answer option in the exam?",
+    "o": [
+     "Draw it.",
+     "Read only the first one.",
+     "Read it and say it in your head.",
+     "Skip it."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Is there any water?' 'Yes, there are.' is correct.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Picture A has three apples. Picture B has two apples. Which sentence is right?",
+    "o": [
+     "In Picture A there are two apples.",
+     "In Picture A there are three apples.",
+     "In Picture A there is three apples.",
+     "In Picture B there are three apples."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Graded readers: The New Shop & A Bowl of Soup": [
+   {
+    "t": "mcq",
+    "q": "Whose book of recipes is it?",
+    "o": [
+     "Hamzah's",
+     "the shopkeeper's",
+     "Hamzah's cousin's",
+     "Grandad's"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "At the start, the new shop is empty.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means steps for cooking a dish?",
+    "o": [
+     "window",
+     "shop",
+     "recipe",
+     "bookcase"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The new shop only has milkshakes.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Write two steps of the soup with sequence words.",
+    "o": [
+     "After that, eat. First, boil the bowl.",
+     "First, put the noodles in a pan. Then, add a little water.",
+     "Then, put the noodles in a pan. First, add water.",
+     "Last, put the noodles in a pan. First, eat."
+    ],
+    "a": 2
+   }
+  ],
+  "Bo's Learning Club 1 – Lesson 1: Maths – Sizes and shapes": [
+   {
+    "t": "mcq",
+    "q": "Which shape has three sides?",
+    "o": [
+     "square",
+     "round",
+     "rectangular",
+     "triangular"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A triangular shape has three sides.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means big?",
+    "o": [
+     "round",
+     "square",
+     "large",
+     "small"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Books are round.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A window has four equal sides and it is big. What is it?",
+    "o": [
+     "a small rectangular window",
+     "a large square window",
+     "a small round window",
+     "a large triangular window"
+    ],
+    "a": 2
+   }
+  ],
+  "Bo's Learning Club 1 – Lesson 2: Language booster 1 (locations and question words)": [
+   {
+    "t": "mcq",
+    "q": "Which is NOT a location word?",
+    "o": [
+     "above",
+     "below",
+     "bottom",
+     "party"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The opposite of 'up' is 'down'.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which answer goes with 'When is the party?'",
+    "o": [
+     "At school.",
+     "Because it's fun.",
+     "It's tomorrow.",
+     "It's my sister."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The opposite of 'top' is 'above'.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which question asks a friend about the weekend?",
+    "o": [
+     "Why is it red?",
+     "Where do you go at the weekend?",
+     "Who is she?",
+     "What is it?"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 1: Vocabulary 1 (landscapes and adjectives)": [
+   {
+    "t": "mcq",
+    "q": "Which word is an adjective?",
+    "o": [
+     "river",
+     "city",
+     "island",
+     "wide"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A lake has water.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "It's got a lot of buildings and people. It's very big. What is it?",
+    "o": [
+     "island",
+     "hill",
+     "city",
+     "forest"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A forest has a lot of buildings.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the best phrase for Jabal Akhdar.",
+    "o": [
+     "a deep forest",
+     "a high mountain",
+     "a deep mountain",
+     "a wide island"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 2: Story – The great clean-up": [
+   {
+    "t": "mcq",
+    "q": "Where is the Great Clean-up?",
+    "o": [
+     "At a city school",
+     "On an island",
+     "In a supermarket",
+     "At Wadi Darbat"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The Great Clean-up is at Wadi Darbat.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What can we reuse a bottle for?",
+    "o": [
+     "a glove",
+     "a hat",
+     "a plant pot",
+     "a sandwich"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "There's a lot of fruit by the wadi.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence.",
+    "o": [
+     "My gloves are dirtier then yours!",
+     "My gloves are dirtier than yours!",
+     "My gloves are dirtyer than yours!",
+     "My gloves are more dirty than yours!"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 3: Grammar 1 (comparatives with short adjectives)": [
+   {
+    "t": "mcq",
+    "q": "Which is the correct comparative of 'big'?",
+    "o": [
+     "biger",
+     "more big",
+     "bigest",
+     "bigger"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A mountain is higher than a hill.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Is the table wider than the chair?",
+    "o": [
+     "No, they aren't.",
+     "Yes, it does.",
+     "Yes, it is.",
+     "Yes, they are."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A hill is higher than a mountain.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "The desk is 60 cm wide. The book is 20 cm wide. Which is true?",
+    "o": [
+     "The desk is shorter than the book.",
+     "The desk is wider than the book.",
+     "The book is wider than the desk.",
+     "The book is longer than the desk."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 4: Vocabulary and Grammar 2 (superlatives)": [
+   {
+    "t": "mcq",
+    "q": "Complete: Everest is the ___ mountain in the world. (high)",
+    "o": [
+     "higher",
+     "most high",
+     "highiest",
+     "highest"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The Nile is the longest river in the world.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Ask about the biggest city in Oman.",
+    "o": [
+     "Do you know the big city in Oman than?",
+     "Do you know biggest city Oman?",
+     "Do you know the biggest city in Oman?",
+     "Do you know the bigger city in Oman?"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Mount Everest is the lowest mountain in the world.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: The ___ person in my family is my grandad. (old)",
+    "o": [
+     "oldiest",
+     "oldest",
+     "older",
+     "most old"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 5: Culture – Nature reserves in Oman": [
+   {
+    "t": "mcq",
+    "q": "Which three reserves are in the lesson?",
+    "o": [
+     "Jabal Shams, Wadi Darbat, Muscat",
+     "Greenland, Japan, Canada",
+     "Wadi Shab, the Nile, Everest",
+     "Daymaniyat Islands, Jabal Samhan, Khawr Ruri"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "There are nine Daymaniyat Islands.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which animals lay eggs on the Daymaniyat beaches?",
+    "o": [
+     "wolves",
+     "gazelles",
+     "turtles",
+     "leopards"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You can visit the Daymaniyat Islands from May to October.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose a superlative sentence for a leaflet.",
+    "o": [
+     "The Arabian leopard rarer animal.",
+     "The Arabian leopard is one of the rarest animals.",
+     "The Arabian leopard is rare than a cat.",
+     "The Arabian leopard is the most rare."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 6: English in action – Asking the way": [
+   {
+    "t": "mcq",
+    "q": "Who wants to go to the park?",
+    "o": [
+     "Jasim",
+     "Dina",
+     "Saif",
+     "Razan"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We start with 'Excuse me' when we ask the way.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which place has old things to see?",
+    "o": [
+     "chemist",
+     "restaurant",
+     "museum",
+     "bank"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Razan wants to go to the museum.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You want the cinema. Which question is correct?",
+    "o": [
+     "Where the cinema is, please?",
+     "Excuse me, can you tell me the way to the cinema, please?",
+     "Excuse me, can you tell me the cinema way?",
+     "Can you say me the way to the cinema?"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 7: Skills – Reading (a story: Wadi rescue!)": [
+   {
+    "t": "mcq",
+    "q": "Who is Amjed?",
+    "o": [
+     "Jasim's teacher",
+     "Jasim's dad",
+     "Jasim's little brother",
+     "Jasim's older cousin"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Jasim visits Amjed in Sur.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which story word is a small boat?",
+    "o": [
+     "rock",
+     "whistle",
+     "canoe",
+     "helicopter"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Amjed is Jasim's younger brother.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct verb: Jasim ___ the whistle loudly.",
+    "o": [
+     "visits",
+     "blows",
+     "swims",
+     "sees"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 8: Skills – Listening, Speaking and Writing (a fact file)": [
+   {
+    "t": "mcq",
+    "q": "Which are the fact file headings?",
+    "o": [
+     "Name, Age, Class, Teacher",
+     "Breakfast, Lunch, Dinner",
+     "Monday, Tuesday, Wednesday",
+     "Capital city, Landscape, Highest mountain, Longest river, My favourite place"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Dina is from Cairo, in Egypt.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which question asks where someone is from?",
+    "o": [
+     "What's your favourite place?",
+     "How old are you?",
+     "Where are you from?",
+     "What's the landscape like?"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Dina's favourite place is the beach.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which notes go under 'Landscape' for Oman?",
+    "o": [
+     "My favourite place",
+     "mountains, wadis, beaches, desert",
+     "Muscat",
+     "Jabal Shams only"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 9: Phonics (ei, eigh)": [
+   {
+    "t": "mcq",
+    "q": "Which word has the same sound as 'day'?",
+    "o": [
+     "egg",
+     "bed",
+     "ten",
+     "eight"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Eight' has the same sound as 'day'.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which group has only eigh words?",
+    "o": [
+     "eight, reins, vein",
+     "beige, sleigh, reins",
+     "eight, weigh, eighteen",
+     "reins, vein, beige"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Reins' is spelled with eigh.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct spelling.",
+    "o": [
+     "reendeer",
+     "reindeer",
+     "raindeer",
+     "reighndeer"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 10: Review": [
+   {
+    "t": "mcq",
+    "q": "What's the comparative of 'sweet'?",
+    "o": [
+     "sweetest",
+     "more sweet",
+     "sweetter",
+     "sweeter"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A giraffe is taller than a camel.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word describes a place with a lot of trees?",
+    "o": [
+     "lake",
+     "beach",
+     "forest",
+     "waterfall"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A bike is faster than a car.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "'Is a cheetah faster than a horse?' Choose the answer.",
+    "o": [
+     "No, they aren't.",
+     "Yes, it is.",
+     "No, it isn't.",
+     "Yes, it does."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 11: Get ready for A1 Movers & Fun corner": [
+   {
+    "t": "mcq",
+    "q": "What should you do before you listen?",
+    "o": [
+     "Write your name.",
+     "Close the book.",
+     "Talk to a friend.",
+     "Look at the picture carefully."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Before you listen, look at the picture carefully.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'Go forward two spaces' mean?",
+    "o": [
+     "Miss two turns.",
+     "Spin two times.",
+     "Move ahead two squares.",
+     "Move back two squares."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Miss a turn' means you play two times.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Picture A: three mountains. Picture B: four mountains. Choose the best sentence.",
+    "o": [
+     "There are no mountains in picture B.",
+     "In picture A there are three mountains, but in picture B there are four.",
+     "In picture A there are four mountains, but in picture B there are three.",
+     "In picture A and picture B there are three mountains."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Graded readers: The Boat Race & The Baby Bird": [
+   {
+    "t": "mcq",
+    "q": "Which words are from 'The Boat Race'?",
+    "o": [
+     "forest, nets, rubbish",
+     "police, burglar, keys",
+     "reindeer, sleigh, snow",
+     "boat, race, waterfall"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In 'The Boat Race', Mrs Aseel has the longest boat.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'The Baby Bird' teach us?",
+    "o": [
+     "Never help others.",
+     "Stay at home all day.",
+     "Clean the forest and help animals.",
+     "Always win every race."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In 'The Baby Bird', the family has nets to catch fish.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "How can you help nature like Azza and Muna?",
+    "o": [
+     "I can scare the birds.",
+     "I can pick up rubbish in the park.",
+     "I can throw rubbish in the river.",
+     "I can break tree branches."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 1: Vocabulary 1 (jobs)": [
+   {
+    "t": "mcq",
+    "q": "Which word is a job?",
+    "o": [
+     "forest",
+     "mountain",
+     "lake",
+     "lawyer"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A chef works in a restaurant.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Who works in a science lab?",
+    "o": [
+     "a chef",
+     "a bus driver",
+     "a scientist",
+     "a farmer"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A mechanic helps you with your teeth.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You want to guess 'chef'. Which question is best?",
+    "o": [
+     "Does this person drive a bus?",
+     "Does this person work in a restaurant?",
+     "Does this person fix cars?",
+     "Does this person help animals?"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 2: Story – The burglar": [
+   {
+    "t": "mcq",
+    "q": "Where are Lottie and her family?",
+    "o": [
+     "They are at the police station.",
+     "They are upstairs.",
+     "They are at school.",
+     "They are visiting friends."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Lottie and her family are visiting friends.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Who is in Lottie's family photo?",
+    "o": [
+     "Fatma",
+     "Bo",
+     "Alesha",
+     "Sami"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The person in the house is eating some food.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence from the story.",
+    "o": [
+     "He isn't eat any food!",
+     "He isn't eating any food!",
+     "He aren't eating any food!",
+     "He not eating any food!"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 3: Grammar 1 (present continuous)": [
+   {
+    "t": "mcq",
+    "q": "How do we make the present continuous?",
+    "o": [
+     "verb + -ed",
+     "will + verb",
+     "do/does + verb",
+     "am/is/are + verb-ing"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We make the present continuous with am, is or are + verb-ing.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Answer: Are you wearing a green jacket? (No)",
+    "o": [
+     "No, you aren't.",
+     "No, I isn't.",
+     "No, I'm not.",
+     "No, I don't."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The -ing form of 'run' is 'runing'.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: A police officer ___ (help) a cat in a tree.",
+    "o": [
+     "is help",
+     "is helping",
+     "are helping",
+     "helping"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 4: Vocabulary and Grammar 2 (rules: must / mustn't)": [
+   {
+    "t": "mcq",
+    "q": "What does 'mustn't' mean?",
+    "o": [
+     "Do it.",
+     "Do it later.",
+     "Do it twice.",
+     "Don't do it."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'You must be quiet in class' is a good school rule.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is the opposite of 'be late'?",
+    "o": [
+     "drop litter",
+     "break the rules",
+     "arrive on time",
+     "shout in class"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The opposite of 'follow the rules' is 'put litter in the bin'.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Rule: 'You must arrive on time to take the bus.' Where is it?",
+    "o": [
+     "in the library",
+     "at the bus stop",
+     "at the cinema",
+     "in the nurse's room"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 5: Culture – Some unusual jobs": [
+   {
+    "t": "mcq",
+    "q": "Which job is in a cave?",
+    "o": [
+     "tea taster",
+     "professional sleeper",
+     "doctor",
+     "boat driver"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The boat driver works in a cave.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which three questions are in the job book project?",
+    "o": [
+     "How old are you? Where do you live? What do you like?",
+     "What's the weather? What time is it? What day is it?",
+     "What's the job? What must the person do? Where does the person work?",
+     "What's your name? What's your address? What's your phone number?"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A tea taster tries three cups of tea every day.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the best page for the job book.",
+    "o": [
+     "Job: doctor. A doctor works in a cave.",
+     "Job: doctor. A doctor must help people. A doctor works in a hospital.",
+     "Job: doctor. A doctor must fix cars. A doctor works in a garage.",
+     "Job: doctor. A doctor mustn't help people."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 6: English in action – Calling the emergency services": [
+   {
+    "t": "mcq",
+    "q": "Which are the three emergency services?",
+    "o": [
+     "chef, vet, dentist",
+     "bus, taxi, train",
+     "school, park, cinema",
+     "police, fire brigade, ambulance"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The emergency phone number is 9999.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'The ambulance is on its way' mean?",
+    "o": [
+     "The ambulance is at the hospital.",
+     "There is no ambulance.",
+     "The ambulance is coming.",
+     "The ambulance is broken."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "For a broken leg, you need the police.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: What's your ___ ? It's 92 345 678.",
+    "o": [
+     "emergency",
+     "phone number",
+     "address",
+     "name"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 7: Skills – Reading (I love my job!)": [
+   {
+    "t": "mcq",
+    "q": "What does Warren do?",
+    "o": [
+     "He takes care of animals.",
+     "He builds rockets.",
+     "He makes sounds for films.",
+     "He draws the people in video games and makes them move."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Warren draws the people in video games and makes them move.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which animals does Martina see?",
+    "o": [
+     "fish and sharks only",
+     "horses and cows only",
+     "birds, snakes, turtles, giraffes and elephants",
+     "cats and dogs only"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Drawing people in video games is very quick.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You are a video game animator. Which sentence is right?",
+    "o": [
+     "I make sounds with gloves.",
+     "I draw people in video games. I must work slowly and carefully.",
+     "I build rockets for space.",
+     "I take care of zoo animals."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 8: Skills – Listening, Speaking and Writing (a report)": [
+   {
+    "t": "mcq",
+    "q": "What question do you ask in the survey?",
+    "o": [
+     "What's your address?",
+     "How often do you watch TV?",
+     "What's the emergency?",
+     "What do you want to be when you grow up? Why?"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Hamzah is a farmer.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Why does Talal want to be a video game animator?",
+    "o": [
+     "because he likes cars",
+     "because he wants to help people",
+     "because he loves video games",
+     "because he likes animals"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Hamzah is twenty years old.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A survey shows: 3 doctors, 2 chefs, 1 vet. Which job is the most popular?",
+    "o": [
+     "animator",
+     "doctor",
+     "chef",
+     "vet"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 9: Phonics (oo, ue, ew)": [
+   {
+    "t": "mcq",
+    "q": "Which word has the long 'oo' sound?",
+    "o": [
+     "book",
+     "bag",
+     "bed",
+     "moon"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Blue' and 'moon' have the same long 'oo' sound.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which two words are spelled with ue?",
+    "o": [
+     "chew, stew",
+     "boots, noon",
+     "blue, glue",
+     "moon, food"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Glue' is spelled with oo.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which is the correct spelling of the word for things we eat?",
+    "o": [
+     "fude",
+     "food",
+     "fewd",
+     "fued"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 10: Review": [
+   {
+    "t": "mcq",
+    "q": "Which sentence is present continuous?",
+    "o": [
+     "The bus driver drives every day.",
+     "The bus driver drove a bus.",
+     "The bus driver will drive.",
+     "The bus driver is driving a bus."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'What is the bus driver doing?' – 'He's driving a bus.'",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do sound artists do?",
+    "o": [
+     "They fix cars.",
+     "They grow vegetables.",
+     "They make sounds for TV programmes and films.",
+     "They build rockets."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In the park, you must swim in the river.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Order the words: mustn't / You / in the river / swim",
+    "o": [
+     "You in the river mustn't swim.",
+     "You mustn't swim in the river.",
+     "You swim mustn't in the river.",
+     "Mustn't you swim in the river."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Lesson 11: Get ready for A1 Movers & Fun corner": [
+   {
+    "t": "mcq",
+    "q": "What is the Reading and Writing Part 1 tip?",
+    "o": [
+     "Only read the first word.",
+     "Write very fast.",
+     "Don't read the sentences.",
+     "Read all the sentences carefully; some are very similar."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'This person is cooking some food' is a chef.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which definition is for 'a firefighter'?",
+    "o": [
+     "This person is working in a field.",
+     "This person is repairing a car.",
+     "This person is working for the fire brigade.",
+     "This person is cooking some food."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'This car is taking a person to the hospital' is a police car.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Square: 'You must arrive on time.' What do you do?",
+    "o": [
+     "Stop the game.",
+     "Go forward.",
+     "Go back home.",
+     "Miss a turn."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 4 – Graded readers: My Dad's a Mechanic & I Want to Be a Scientist!": [
+   {
+    "t": "mcq",
+    "q": "Where does the story 'My Dad's a Mechanic' happen?",
+    "o": [
+     "in a science lab",
+     "at the park",
+     "at a zoo",
+     "at a garage"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Shahad's dad is a mechanic.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is Dad's problem?",
+    "o": [
+     "He can't find the garage.",
+     "The car is blue.",
+     "He's under the car and can't get his tools and screws.",
+     "His skateboard is broken."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Shahad is helping her dad at the park.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: 'You mustn't use your skateboard, Shahad. We're working. We ___ playing!'",
+    "o": [
+     "don't",
+     "aren't",
+     "isn't",
+     "not"
+    ],
+    "a": 2
+   }
+  ],
+  "Bo's Learning Club 2 – Lesson 1: Science – Health": [
+   {
+    "t": "mcq",
+    "q": "Which one is an illness?",
+    "o": [
+     "a white coat",
+     "a skateboard",
+     "a garage",
+     "a sore throat"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "With a stomachache, you should drink lots of water.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do healthy children do?",
+    "o": [
+     "They never sleep.",
+     "They never play outside.",
+     "They play sports and eat fruit and vegetables.",
+     "They eat lots of sweets."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "With a stomachache, you should eat a lot.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "The girl has a sore throat. What shouldn't she do?",
+    "o": [
+     "She shouldn't sleep.",
+     "She shouldn't shout.",
+     "She shouldn't drink water.",
+     "She shouldn't rest."
+    ],
+    "a": 2
+   }
+  ],
+  "Bo's Learning Club 2 – Lesson 2: Language booster 2 (at the doctor's)": [
+   {
+    "t": "mcq",
+    "q": "What does the doctor say first?",
+    "o": [
+     "Thank you, doctor.",
+     "You shouldn't go to school.",
+     "I have a cold.",
+     "Hello. What's the problem?"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The doctor says first: 'Hello. What's the problem?'",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do you say when you feel ill?",
+    "o": [
+     "I'm very happy.",
+     "I'm a doctor.",
+     "I don't feel well.",
+     "I feel very well."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'I don't feel well' means I feel very good.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct chart line.",
+    "o": [
+     "Sore throat – You should go to school – You shouldn't sleep.",
+     "Sore throat – You should have some medicine – You shouldn't shout.",
+     "Sore throat – You should shout – You shouldn't rest.",
+     "Sore throat – You should play video games – You shouldn't drink water."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 11: Get ready for A1 Movers": [
+   {
+    "t": "mcq",
+    "q": "In the picture, what is the girl reading a book about?",
+    "o": [
+     "Maths",
+     "Science",
+     "Art",
+     "Music"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "In Listening Part 2, you write one word or a number for each answer.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word completes: We have English ___ a week.",
+    "o": [
+     "tall",
+     "happy",
+     "twice",
+     "green"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The girl's mother has got a book.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which one is a frequency word?",
+    "o": [
+     "bag",
+     "tree",
+     "book",
+     "once"
+    ],
+    "a": 4
+   }
+  ],
+  "Unit 1 – Optional lesson": [
+   {
+    "t": "mcq",
+    "q": "8.30 - What time is it?",
+    "o": [
+     "It's half past eight.",
+     "It's eight o'clock.",
+     "It's half past nine.",
+     "It's quarter past eight."
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "Twice a week means two times a week.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which one is a school subject?",
+    "o": [
+     "Monday",
+     "Morning",
+     "Maths",
+     "Market"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We do P.E. twice a week means we do it three times a week.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Do you want to play football tomorrow?",
+    "o": [
+     "It's eight.",
+     "Twice a week.",
+     "Science.",
+     "Yes, please."
+    ],
+    "a": 4
+   }
+  ],
+  "Unit 2 – Lesson 11: Get ready for A1 Movers": [
+   {
+    "t": "mcq",
+    "q": "Dad: Is there any milk? Zaid: ...",
+    "o": [
+     "Yes, there are.",
+     "Yes, there is.",
+     "Yes, I am.",
+     "Bye!"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "A good answer to 'Are there any eggs?' is 'Yes, there are.'",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Dad: Can you go to the shops for me? Zaid: ...",
+    "o": [
+     "Yes, there is.",
+     "Yes, we do.",
+     "Yes, I can.",
+     "Bye!"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'A bottle of cheese' is correct.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Dad: Do we need anything else? Zaid: ...",
+    "o": [
+     "Yes, I can.",
+     "Yes, there are.",
+     "Bye!",
+     "Yes, we do."
+    ],
+    "a": 4
+   }
+  ],
+  "Unit 2 – Optional lesson": [
+   {
+    "t": "mcq",
+    "q": "How do you ask for water politely?",
+    "o": [
+     "Can I have a bottle of water, please?",
+     "Water give me.",
+     "I have water you.",
+     "Here you are water."
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "When you give something to someone, you can say 'Here you are.'",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which one is healthier?",
+    "o": [
+     "a cupcake",
+     "sweets",
+     "fruit",
+     "chocolate"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A cupcake is very healthy.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which item is good for a healthy shopping list?",
+    "o": [
+     "cupcakes",
+     "sweets",
+     "crisps",
+     "vegetables"
+    ],
+    "a": 4
+   }
+  ],
+  "Unit 3 – Lesson 11: Get ready for A1 Movers": [
+   {
+    "t": "mcq",
+    "q": "Before you listen, what should you do?",
+    "o": [
+     "Look at the picture carefully",
+     "Close your book",
+     "Write a story",
+     "Sing a song"
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "The word 'but' joins two different facts.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "In picture A there are three mountains, ___ in picture B there are four.",
+    "o": [
+     "and",
+     "so",
+     "but",
+     "or"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In this Speaking task you find two differences.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "In picture A the river is wide, but in picture B it's ___.",
+    "o": [
+     "long",
+     "narrow",
+     "high",
+     "deep"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Optional lesson": [
+   {
+    "t": "mcq",
+    "q": "The path is ___ than the road.",
+    "o": [
+     "shorter",
+     "shortest",
+     "short",
+     "more short"
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "'Miss a turn' means you don't play in the next turn.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "You climb the ___ hill. (high)",
+    "o": [
+     "high",
+     "higher",
+     "more high",
+     "highest"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Go forward two spaces' means you go back.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which one is a landscape word?",
+    "o": [
+     "lake",
+     "chef",
+     "bag",
+     "clock"
+    ],
+    "a": 1
+   }
+  ],
+  "Unit 4 – Lesson 11: Get ready for A1 Movers": [
+   {
+    "t": "mcq",
+    "q": "This person is repairing a car.",
+    "o": [
+     "a chef",
+     "a mechanic",
+     "a farmer",
+     "a dentist"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "An ambulance takes a person to the hospital.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "This person is cooking some food.",
+    "o": [
+     "a firefighter",
+     "a farmer",
+     "a chef",
+     "a mechanic"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A farmer works for the fire brigade.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Why must you listen to the whole dialogue in Part 4?",
+    "o": [
+     "It is very short",
+     "There are no pictures",
+     "You write a story",
+     "The first answer may change later"
+    ],
+    "a": 4
+   }
+  ],
+  "Unit 4 – Optional lesson": [
+   {
+    "t": "mcq",
+    "q": "Where does a scientist work in the game?",
+    "o": [
+     "the farm",
+     "the science lab",
+     "the restaurant",
+     "the hospital"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "'You must arrive on time' is a good rule.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "You ___ be late!",
+    "o": [
+     "mustn't",
+     "can",
+     "must",
+     "are"
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "In the game, a chef works on the farm.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is in the present continuous?",
+    "o": [
+     "You make sandwiches.",
+     "You made sandwiches.",
+     "You will make sandwiches.",
+     "You're making sandwiches."
+    ],
+    "a": 4
+   }
+  ]
+ }
+}
