@@ -245,24 +245,23 @@ function secAssign(seqAll) {
   WIZ.fit = { merged: 0, late: termEnd ? queue.filter((q) => q.date > termEnd).length : 0, fitEnd: termEnd, from: '' };
   if (!dateNotes.has('secs')) { dateNotes.add('secs'); logLine('info', `حصص شعبك تختلف بين الأيام: لكل شعبة دروسها بالترتيب على حصصها (${L.join(' · ')})`); }
 }
-// حدّ كل درس من تحاضير نور (المادة فيها تحاضير): لكل موضع في شجرة الفصل آخر تاريخ نشر لتحضير في نور يحمل اسم درس
-// عند هذا الموضع أو قبله (مع «(n)» أو بدونه). حصة درس تأتي بعده في الشجرة لا تُنشر قبله؛ ودرس قبله لا يتأخر بسبب ما بعده.
-function noorLessonFloors(h) {
-  const out = new Array(treeNodes.length).fill('');
-  if (!h || !h.dates || !h.dates.length) return out;
+// تحاضير نور التي تحمل اسم درس من شجرة الفصل: موضع الدرس في الشجرة ورقم الحصة («(n)»، بلا رقم = الأولى) وتاريخ النشر.
+// حصة تأتي بعد أحدها في ترتيب الفصل (درس لاحق، أو حصة لاحقة من الدرس نفسه) لا تُنشر قبله؛ وما قبله لا يتأخر بسببه.
+function noorLessonMarks(h) {
+  if (!h || !h.dates || !h.dates.length) return [];
   const first = new Map();
   treeNodes.forEach((n, i) => { const k = kwNorm(n.text); if (k && !first.has(k)) first.set(k, i); });
-  const at = new Array(treeNodes.length).fill('');
+  const out = [];
   (h.titles || []).forEach((t, i) => {
     const d = h.dates[i];
     if (!isIso(d)) return;
-    let b = t;
-    for (let j = 0; j < 3 && !first.has(kwNorm(b)) && stripSessionSuffix(b) !== b; j++) b = stripSessionSuffix(b);
+    let b = t, inner = '';
+    for (let j = 0; j < 3 && !first.has(kwNorm(b)) && stripSessionSuffix(b) !== b; j++) { inner = b; b = stripSessionSuffix(b); }
     const k = first.get(kwNorm(b));
-    if (k != null && d > at[k]) at[k] = d;
+    if (k == null) return;
+    const ns = inner ? sessionNums(inner) : null;
+    out.push({ k, n: ns && ns.length ? Math.max(...ns) : 1, d });
   });
-  let m = '';
-  at.forEach((d, i) => { if (d > m) m = d; out[i] = m; });
   return out;
 }
 function assignDates() {
@@ -305,14 +304,20 @@ function assignDates() {
   // الفصل كاملًا يكمل تشغيلًا سابقًا على هذا الجهاز (في نور تحاضير المادة): حصة كل درس تأتي بعد آخر تحضير في نور لدرس قبله أو له، فلا تُملأ حصة
   // فارغة قبله بدرس لاحق (لا يُنشر درس لاحق قبل درس سابق). تحضير ليس باسم درس من الشجرة (نشاط، اختبار) لا يُحسب
   if (seqTerm) {
-    const fl = noorLessonFloors(noorHave), at = new Map();
-    plan.forEach((p) => { if (p.node) p.sessions.forEach((x) => at.set(x, treeNodes.indexOf(p.node))); });
-    cands.forEach((s) => {
-      const k = at.has(s) ? at.get(s) : -1;
-      const f = k >= 0 ? fl[k] : '';
-      const a = after.get(s) || '';
-      if (f > a) after.set(s, f);
-    });
+    const marks = noorLessonMarks(noorHave);
+    if (marks.length) {
+      const at = new Map(), cnt = new Map();
+      plan.forEach((p) => { if (p.node) p.sessions.forEach((x) => at.set(x, treeNodes.indexOf(p.node))); });
+      seqAll.forEach((x) => { if (!at.has(x)) return; const k = at.get(x), n = (cnt.get(k) || 0) + 1; cnt.set(k, n); x._nth = n; });
+      cands.forEach((s) => {
+        if (!at.has(s)) return;
+        const k = at.get(s);
+        let f = '';
+        marks.forEach((m) => { if ((m.k < k || (m.k === k && m.n < s._nth)) && m.d > f) f = m.d; });
+        const a = after.get(s) || '';
+        if (f > a) after.set(s, f);
+      });
+    }
   }
   // حدّان: آخر أسبوع في خطة المادة، ونهاية الفصل الفعلية. تحضير لكل حصة (المالك 2026-10-31): ما لا يتسع له أسبوعه يمضي إلى
   // حصص الأسابيع التالية حتى نهاية الفصل، ولا تُجمع حصتان إلا من الدرس نفسه وحين تكون الحصص الباقية حتى نهاية الفصل أقل من التحاضير
