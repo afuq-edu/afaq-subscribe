@@ -245,6 +245,20 @@ function secAssign(seqAll) {
   WIZ.fit = { merged: 0, late: termEnd ? queue.filter((q) => q.date > termEnd).length : 0, fitEnd: termEnd, from: '' };
   if (!dateNotes.has('secs')) { dateNotes.add('secs'); logLine('info', `حصص شعبك تختلف بين الأيام: لكل شعبة دروسها بالترتيب على حصصها (${L.join(' · ')})`); }
 }
+// آخر تاريخ نشر لتحضير في نور يحمل اسم درس من شجرة الفصل (مع «(n)» أو بدونه)
+function noorLessonTop(h) {
+  if (!h || !h.dates || !h.dates.length) return '';
+  const own = new Set(treeNodes.map((n) => kwNorm(n.text)).filter(Boolean));
+  let top = '';
+  (h.titles || []).forEach((t, i) => {
+    const d = h.dates[i];
+    if (!isIso(d) || d <= top) return;
+    let b = t;
+    for (let j = 0; j < 3 && !own.has(kwNorm(b)) && stripSessionSuffix(b) !== b; j++) b = stripSessionSuffix(b);
+    if (own.has(kwNorm(b))) top = d;
+  });
+  return top;
+}
 function assignDates() {
   const pos = (p) => (p.node ? treeNodes.indexOf(p.node) : 1e9);
   const ordered = plan.slice().sort((a, b) => pos(a) - pos(b) || a.i - b.i);
@@ -283,8 +297,9 @@ function assignDates() {
   const fromIso = fileMode && !WIZ.pickDates && isIso(WIZ.fromDate) ? WIZ.fromDate : '';
   if (fromIso) cands.forEach((s) => { const a = after.get(s) || ''; if (fromIso > a) after.set(s, fromIso); });
   // الفصل كاملًا يكمل تشغيلًا سابقًا على هذا الجهاز (في نور تحاضير المادة): ما بقي يأتي بعد آخر تحضير في نور، فلا تُملأ حصة
-  // فارغة قبله بدرس لاحق (لا يُنشر درس لاحق قبل درس سابق)
-  if (seqTerm && noorDates.size) { const top = [...noorDates].sort().pop(); cands.forEach((s) => { const a = after.get(s) || ''; if (top > a) after.set(s, top); }); }
+  // فارغة قبله بدرس لاحق (لا يُنشر درس لاحق قبل درس سابق). تحضير ليس باسم درس من الشجرة (نشاط، اختبار) لا يُحسب
+  const top = seqTerm ? noorLessonTop(noorHave) : '';
+  if (top) cands.forEach((s) => { const a = after.get(s) || ''; if (top > a) after.set(s, top); });
   // حدّان: آخر أسبوع في خطة المادة، ونهاية الفصل الفعلية. تحضير لكل حصة (المالك 2026-10-31): ما لا يتسع له أسبوعه يمضي إلى
   // حصص الأسابيع التالية حتى نهاية الفصل، ولا تُجمع حصتان إلا من الدرس نفسه وحين تكون الحصص الباقية حتى نهاية الفصل أقل من التحاضير
   const planEnd = pkgEnd(pkg) || termEndOf(settings, termNo);

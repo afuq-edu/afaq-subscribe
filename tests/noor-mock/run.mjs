@@ -59,6 +59,9 @@ const withDayRank = (want, base, j) => (!j || j < 2 ? want : want === `${base} (
 const existingFor = (tree, ids, extra = {}) => ids.map((id) => ({ title: titleFor(tree, S[id]), publishDate: S[id].pubDate, nodeId: nodeFor(tree, S[id]).nodeId, ...extra }));
 const toAr = (n) => String(n).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d]);
 const addDaysIso = (iso, n) => { const d = new Date(iso + 'T12:00'); d.setDate(d.getDate() + n); return d.toISOString().slice(0, 10); };
+// the teacher's class days as the tool takes them without a Noor timetable: the weekdays of the plan's dates
+const classDaysOf = (pkg) => new Set(pkg.lessons.map((l) => l.pubDate || l.publishDate).filter(Boolean).map((d) => new Date(d + 'T12:00').getDay()));
+const nextClassDays = (from, n, days) => { const out = []; for (let d = from; out.length < n;) { d = addDaysIso(d, 1); if (days.has(new Date(d + 'T12:00').getDay())) out.push(d); } return out; };
 // the package's lessons in file order, each with its sessions (as the wizard groups them)
 const lessonGroups = (p) => { const m = new Map(); p.lessons.forEach((l) => { const k = l.unit + '|' + l.lesson; if (!m.has(k)) m.set(k, { key: k, sessions: [] }); m.get(k).sessions.push(l); }); return [...m.values()]; };
 const sessionOfRow = (r) => PKG.lessons.find((l) => norm(l.concepts) === norm(r.concepts)) || null;
@@ -383,10 +386,9 @@ T(9, 'Same lesson name in two units: unit 1 is in Noor, unit 2 still filled once
   check(/تمت التعبئة بنجاح/.test(s.head), 'first run finishes with success', `${s.head} | ${s.text}`);
   const want = [sid(16), sid(17), 'rev-2'];
   // the teacher's own earlier term run (4.10.23): what is left follows the last prep already in Noor, period after period
-  // (the mock's timetable: a period every school day) — a free period before it never takes a later lesson
-  let d = pre.map((x) => x.publishDate).sort().pop();
-  const dates = {};
-  for (const id of want) { do d = addDaysIso(d, 1); while ([5, 6].includes(new Date(d + 'T12:00').getDay())); dates[id] = d; }
+  // on the class days — a free period before it never takes a later lesson
+  const nd = nextClassDays(pre.map((x) => x.publishDate).sort().pop(), want.length, classDaysOf(PKG));
+  const dates = Object.fromEntries(want.map((id, i) => [id, nd[i]]));
   assertRows('S9 run 1', noor.st.rows.filter((r) => !r.preexisting), tree, { expectIds: want, dates, preexisting: pre });
   const n1 = noor.st.rows.length;
   const s2 = await rerun(b, 'second run');
@@ -685,7 +687,11 @@ T(19, 'Real Noor tree of Islamic grade 6: units «الوحدة (1)» vs the file
   const nodeOfL = (l) => (l.unit === fUnits[0].name ? recite : units.flatMap((u) => u.lessons).find((n) => n.fileLesson === l.lesson && units.find((u) => u.lessons.includes(n)).text === units[fUnits.findIndex((u) => u.name === l.unit)].text));
   const reciteSes = PKG.lessons.filter((l) => l.unit === fUnits[0].name);
   const titleOfL = (l) => { const n = nodeOfL(l); const list = n === recite ? reciteSes : PKG.lessons.filter((x) => x.unit === l.unit && x.lesson === l.lesson); const k = list.indexOf(l) + 1; return n.text + (k > 1 ? ` (${k})` : ''); };
-  const pre = reciteSes.slice(0, 8).map((l) => ({ cid: 'IS6', title: titleOfL(l), publishDate: l.pubDate, nodeId: recite.nodeId, created: '2026-10-27 08:00' }));
+  // the teacher's own earlier full-term run (4.10.20+): its first 8 preps (the recitation lesson, first in the Noor tree) on the
+  // first 8 class periods from the first school day
+  const days = classDaysOf(PKG);
+  const preDays = nextClassDays('2026-09-05', 8, days);
+  const pre = reciteSes.slice(0, 8).map((l, i) => ({ cid: 'IS6', title: titleOfL(l), publishDate: preDays[i], nodeId: recite.nodeId, created: '2026-10-27 08:00' }));
   const courses = [{ cid: 'IS6', title: 'التربية الإسلامية', level: 'الصف السادس', subject: 'التربية الإسلامية', grade: 'السادس', tree },
     { cid: 'IS7', title: 'التربية الإسلامية', level: 'الصف السابع', subject: 'التربية الإسلامية', grade: 'السابع', tree }];
   const noor = env.noor({ tree, courses, existing: pre });
@@ -710,8 +716,12 @@ T(19, 'Real Noor tree of Islamic grade 6: units «الوحدة (1)» vs the file
   check(!wrongNode.length, 'every session went into its own Noor lesson (both surahs into «سورتي المدثر والمزمل»)', wrongNode.map((r) => { const l = sessionOfRow(r); return `${l.id} «${l.lesson}» → «${r.nodeText}» (expected «${nodeOfL(l).text}»)`; }).join('\n'));
   const badTitle = rows.filter((r) => { const l = sessionOfRow(r); return l && norm(r.title) !== norm(withDayRank(titleOfL(l), nodeOfL(l).text, r.dayRank)); });
   check(!badTitle.length, 'titles: Noor lesson name + «(n)», the recitation lesson numbered on from «(9)»', badTitle.map((r) => `${sessionOfRow(r).id}: «${r.title}» expected «${titleOfL(sessionOfRow(r))}»`).join('\n'));
-  const off = rows.filter((r) => { const l = sessionOfRow(r); return l && r.publishDate !== l.pubDate; });
-  check(!off.length, 'publish dates as in the file', off.map((r) => `${sessionOfRow(r).id}: ${r.publishDate} expected ${sessionOfRow(r).pubDate}`).join('\n'));
+  // the rest continues after the last prep in Noor, period after period, in Noor tree order (the recitation lesson first)
+  const order = reciteSes.slice(8).concat(PKG.lessons.filter((l) => !reciteSes.includes(l)));
+  const nd = nextClassDays(preDays[7], order.length, days);
+  const expD = new Map(order.map((l, i) => [l.id, nd[i]]));
+  const off = rows.filter((r) => { const l = sessionOfRow(r); return l && r.publishDate !== expD.get(l.id); });
+  check(!off.length, 'dates: the rest follows the last prep in Noor, period after period in Noor tree order', off.slice(0, 12).map((r) => `${sessionOfRow(r).id}: ${r.publishDate} expected ${expD.get(sessionOfRow(r).id)}`).join('\n'));
   const n1 = noor.st.rows.length;
   await rerun(b, 'manual re-run', { grade: 'الصف السادس', subject: 'التربية الإسلامية', shift: 'فترتان' });
   check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
