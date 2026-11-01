@@ -14,9 +14,6 @@ begin
      or exists (select 1 from unnest(p_packages) x where x not in (select id from public.packages where active)) then
     return jsonb_build_object('ok', false, 'error', 'packages');
   end if;
-  if (select count(*) from public.ext_requests where ip_hash = v_ip and created_at > now() - interval '1 day') >= 6 then
-    return jsonb_build_object('ok', false, 'error', 'too_many');
-  end if;
   -- عودة مشترك باسمه الرباعي
   v_norm := public.ar_name_norm(v_name);
   if cardinality(string_to_array(v_norm, ' ')) >= 4 then
@@ -44,6 +41,10 @@ begin
       returning id into v_req;
       return jsonb_build_object('ok', true, 'token', v_tok, 'request', v_req, 'name', v_name, 'returned', true);
     end if;
+  end if;
+  -- حد التسجيل اليومي للشبكة يخص الطلبات الجديدة فقط، لا عودة المشترك
+  if (select count(*) from public.ext_requests where ip_hash = v_ip and created_at > now() - interval '1 day') >= 6 then
+    return jsonb_build_object('ok', false, 'error', 'too_many');
   end if;
   insert into auth.users (instance_id, id, aud, role, is_anonymous, raw_app_meta_data, raw_user_meta_data, created_at, updated_at)
   values ('00000000-0000-0000-0000-000000000000', v_uid, 'authenticated', 'authenticated', true,

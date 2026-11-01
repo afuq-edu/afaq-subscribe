@@ -38,4 +38,10 @@ const d2 = await start('خالد بن علي بن سالم البلوشي', ['p1
 const B = (await q(`select user_id from public.ext_requests where id=$1`, [d2.request]))[0].user_id;
 await db.exec(`update public.ext_requests set name = 'عيسى سعيد محمد الحارثي' where user_id='${B}'; insert into public.subscriptions (user_id, package_id, term_id) values ('${B}', 'p1', (select id from public.terms limit 1));`);
 ok(!(await start(NAME, ['p1'])).returned, 'two subscribers with the same name → normal trial (no guessing)');
+await db.exec(`update public.ext_requests set name = 'سالم بن احمد بن خميس الكندي' where user_id='${B}'`);
+for (let i = 0; i < 8; i++) await start('معلم جديد رقم ' + i + ' تجربة', ['p1']);
+const lim = await start('معلم جديد اخر تجربة', ['p1']);
+ok(!lim.ok && lim.error === 'too_many', 'new sign-ups are still limited per network', lim);
+const back = await start(NAME, ['p1']);
+ok(back.ok && back.returned, 'a returning subscriber is never blocked by the daily network limit', back);
 console.log(`${pass} passed, ${fail} failed`); process.exit(fail ? 1 : 0);
