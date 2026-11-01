@@ -1713,6 +1713,51 @@
     ],
     "a": 2
    }
+  ],
+  "Graded reader 1: A Surprise at the Bookshop": [
+   {
+    "t": "mcq",
+    "q": "What is an author?",
+    "o": [
+     "A person who writes books",
+     "A person who sells books",
+     "A price tag",
+     "A bookmark"
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "Dana wants to exchange the headphones because they don't work.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How does Dana pay for the book?",
+    "o": [
+     "with cash",
+     "with a cheque",
+     "with contactless",
+     "with a voucher"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The people in the long queue are waiting to meet a famous footballer.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "What does the author give Dana?",
+    "o": [
+     "a sleeve",
+     "a price tag",
+     "headphones",
+     "a bookmark"
+    ],
+    "a": 4
+   }
   ]
  }
 }

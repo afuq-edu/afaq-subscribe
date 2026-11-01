@@ -2433,6 +2433,366 @@
     ],
     "a": 2
    }
+  ],
+  "Unit 1 – Lesson 11: Get ready for A1 Movers": [
+   {
+    "t": "mcq",
+    "q": "In the picture, what is the girl reading a book about?",
+    "o": [
+     "Maths",
+     "Science",
+     "Art",
+     "Music"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "In Listening Part 2, you write one word or a number for each answer.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word completes: We have English ___ a week.",
+    "o": [
+     "tall",
+     "happy",
+     "twice",
+     "green"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The girl's mother has got a book.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which one is a frequency word?",
+    "o": [
+     "bag",
+     "tree",
+     "book",
+     "once"
+    ],
+    "a": 4
+   }
+  ],
+  "Unit 1 – Optional lesson": [
+   {
+    "t": "mcq",
+    "q": "8.30 - What time is it?",
+    "o": [
+     "It's half past eight.",
+     "It's eight o'clock.",
+     "It's half past nine.",
+     "It's quarter past eight."
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "Twice a week means two times a week.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which one is a school subject?",
+    "o": [
+     "Monday",
+     "Morning",
+     "Maths",
+     "Market"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We do P.E. twice a week means we do it three times a week.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Do you want to play football tomorrow?",
+    "o": [
+     "It's eight.",
+     "Twice a week.",
+     "Science.",
+     "Yes, please."
+    ],
+    "a": 4
+   }
+  ],
+  "Unit 2 – Lesson 11: Get ready for A1 Movers": [
+   {
+    "t": "mcq",
+    "q": "Dad: Is there any milk? Zaid: ...",
+    "o": [
+     "Yes, there are.",
+     "Yes, there is.",
+     "Yes, I am.",
+     "Bye!"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "A good answer to 'Are there any eggs?' is 'Yes, there are.'",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Dad: Can you go to the shops for me? Zaid: ...",
+    "o": [
+     "Yes, there is.",
+     "Yes, we do.",
+     "Yes, I can.",
+     "Bye!"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'A bottle of cheese' is correct.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Dad: Do we need anything else? Zaid: ...",
+    "o": [
+     "Yes, I can.",
+     "Yes, there are.",
+     "Bye!",
+     "Yes, we do."
+    ],
+    "a": 4
+   }
+  ],
+  "Unit 2 – Optional lesson": [
+   {
+    "t": "mcq",
+    "q": "How do you ask for water politely?",
+    "o": [
+     "Can I have a bottle of water, please?",
+     "Water give me.",
+     "I have water you.",
+     "Here you are water."
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "When you give something to someone, you can say 'Here you are.'",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which one is healthier?",
+    "o": [
+     "a cupcake",
+     "sweets",
+     "fruit",
+     "chocolate"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A cupcake is very healthy.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which item is good for a healthy shopping list?",
+    "o": [
+     "cupcakes",
+     "sweets",
+     "crisps",
+     "vegetables"
+    ],
+    "a": 4
+   }
+  ],
+  "Unit 3 – Lesson 11: Get ready for A1 Movers": [
+   {
+    "t": "mcq",
+    "q": "Before you listen, what should you do?",
+    "o": [
+     "Look at the picture carefully",
+     "Close your book",
+     "Write a story",
+     "Sing a song"
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "The word 'but' joins two different facts.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "In picture A there are three mountains, ___ in picture B there are four.",
+    "o": [
+     "and",
+     "so",
+     "but",
+     "or"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In this Speaking task you find two differences.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "In picture A the river is wide, but in picture B it's ___.",
+    "o": [
+     "long",
+     "narrow",
+     "high",
+     "deep"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Optional lesson": [
+   {
+    "t": "mcq",
+    "q": "The path is ___ than the road.",
+    "o": [
+     "shorter",
+     "shortest",
+     "short",
+     "more short"
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "'Miss a turn' means you don't play in the next turn.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "You climb the ___ hill. (high)",
+    "o": [
+     "high",
+     "higher",
+     "more high",
+     "highest"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Go forward two spaces' means you go back.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which one is a landscape word?",
+    "o": [
+     "lake",
+     "chef",
+     "bag",
+     "clock"
+    ],
+    "a": 1
+   }
+  ],
+  "Unit 4 – Lesson 11: Get ready for A1 Movers": [
+   {
+    "t": "mcq",
+    "q": "This person is repairing a car.",
+    "o": [
+     "a chef",
+     "a mechanic",
+     "a farmer",
+     "a dentist"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "An ambulance takes a person to the hospital.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "This person is cooking some food.",
+    "o": [
+     "a firefighter",
+     "a farmer",
+     "a chef",
+     "a mechanic"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A farmer works for the fire brigade.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Why must you listen to the whole dialogue in Part 4?",
+    "o": [
+     "It is very short",
+     "There are no pictures",
+     "You write a story",
+     "The first answer may change later"
+    ],
+    "a": 4
+   }
+  ],
+  "Unit 4 – Optional lesson": [
+   {
+    "t": "mcq",
+    "q": "Where does a scientist work in the game?",
+    "o": [
+     "the farm",
+     "the science lab",
+     "the restaurant",
+     "the hospital"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "'You must arrive on time' is a good rule.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "You ___ be late!",
+    "o": [
+     "mustn't",
+     "can",
+     "must",
+     "are"
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "In the game, a chef works on the farm.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is in the present continuous?",
+    "o": [
+     "You make sandwiches.",
+     "You made sandwiches.",
+     "You will make sandwiches.",
+     "You're making sandwiches."
+    ],
+    "a": 4
+   }
   ]
  }
 }

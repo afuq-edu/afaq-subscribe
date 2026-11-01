@@ -4593,6 +4593,366 @@
     ],
     "a": 2
    }
+  ],
+  "Workbook grammar: choosing tenses, multiple choice and passive gap-fill": [
+   {
+    "t": "mcq",
+    "q": "The list ______ (publish) in 2013.",
+    "o": [
+     "published",
+     "was published",
+     "is publishing",
+     "has publish"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "'Apple remained in first place' is in the past simple active.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the passive of 'They designed the iPhone in California'.",
+    "o": [
+     "The iPhone designed in California.",
+     "The iPhone is designing in California.",
+     "The iPhone was designed in California.",
+     "The iPhone were designed in California."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In 'Apple was founded in 1976', the focus is on who founded the company.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "The first iPad ______ (release) in 2010.",
+    "o": [
+     "released",
+     "was releasing",
+     "is released",
+     "was released"
+    ],
+    "a": 4
+   }
+  ],
+  "Lead-in, malls and markets, predicting vocabulary": [
+   {
+    "t": "mcq",
+    "q": "In a souq you can ______ (discuss the price) with the shopkeeper.",
+    "o": [
+     "borrow",
+     "bargain",
+     "park",
+     "deliver"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "Predicting likely vocabulary makes a listening text easier to understand.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which feature is typical of a mall rather than a souq?",
+    "o": [
+     "wide walkways",
+     "bargaining",
+     "narrow passages",
+     "a traditional market"
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "Malls and markets have nothing in common.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Another word for a traditional market is ______.",
+    "o": [
+     "mall",
+     "car park",
+     "walkway",
+     "souq"
+    ],
+    "a": 4
+   }
+  ],
+  "Hard-sell and soft-sell; discussing TV adverts; planning an evaluation": [
+   {
+    "t": "mcq",
+    "q": "In advertising, 'copy' means ______.",
+    "o": [
+     "a photo",
+     "the words in an advert",
+     "the price",
+     "the TV channel"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "A soft-sell technique focuses on how a product makes consumers feel.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "A washing machine ad that stresses what the machine can do uses ______.",
+    "o": [
+     "soft-sell",
+     "copy",
+     "hard-sell",
+     "a slogan only"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Adverts never combine hard-sell and soft-sell techniques.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which word describes an ad that keeps saying the same thing?",
+    "o": [
+     "memorable",
+     "misleading",
+     "soft-sell",
+     "repetitive"
+    ],
+    "a": 4
+   }
+  ],
+  "Skimming and the first tips for faster reading": [
+   {
+    "t": "mcq",
+    "q": "What is the focus of this unit?",
+    "o": [
+     "Improving reading speed",
+     "Writing formal letters",
+     "Learning new grammar",
+     "Listening to lectures"
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "Pictures and sub-headings can help you skim a text.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Skimming means reading quickly for the ______.",
+    "o": [
+     "details",
+     "gist",
+     "spelling",
+     "grammar"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "When skimming, you should look up every new word.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Why is title d the best title for the text?",
+    "o": [
+     "It covers the challenges of university and how to cope",
+     "It is the shortest title",
+     "It is about someone's first year",
+     "It talks about exams only"
+    ],
+    "a": 1
+   }
+  ],
+  "Listening and chart completion; choosing past forms": [
+   {
+    "t": "mcq",
+    "q": "Which sentence uses the past perfect?",
+    "o": [
+     "I expect the campus to be large.",
+     "I'd expected the campus to be large.",
+     "I'm expecting a large campus.",
+     "I'll expect a large campus."
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "The past perfect is used for the earlier of two past events.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is Zaher's favourite activity?",
+    "o": [
+     "chess",
+     "reading",
+     "volleyball",
+     "painting"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The past perfect is correct for every past action.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "What had Sara expected?",
+    "o": [
+     "A small campus",
+     "No foreign teachers",
+     "Very few clubs",
+     "A huge number of students"
+    ],
+    "a": 4
+   }
+  ],
+  "Lead-in and Listening 2.4.1: how the SQU Rovers help new students": [
+   {
+    "t": "mcq",
+    "q": "Who are the SQU Rovers?",
+    "o": [
+     "University teachers",
+     "Students who help new students at SQU",
+     "A football club",
+     "Bus drivers"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "Students who lose their ID cards should go to the Administration Office.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a common problem for new students?",
+    "o": [
+     "Finding their way around the campus",
+     "Finding the exams too easy",
+     "Having too much free time",
+     "Having too many friends"
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "The Rovers tell homesick students that nobody else feels the same.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Where can the Rovers be found?",
+    "o": [
+     "Only in the library",
+     "At their homes",
+     "In the city centre",
+     "At stations such as the cafeteria"
+    ],
+    "a": 4
+   }
+  ],
+  "Formal and informal language; drafting the letter": [
+   {
+    "t": "mcq",
+    "q": "Which ending is formal?",
+    "o": [
+     "Love from",
+     "See ya!",
+     "Yours faithfully",
+     "Bye for now"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'See ya!' is informal.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Why do we use formal language in this letter?",
+    "o": [
+     "It is addressed to a teacher",
+     "It is to a close friend",
+     "It is a text message",
+     "It is a diary entry"
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "'Best wishes' can never be used in a formal letter.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a good formal opening sentence?",
+    "o": [
+     "Hi! What's up?",
+     "I am writing to introduce myself to you.",
+     "See ya soon!",
+     "Love you lots!"
+    ],
+    "a": 2
+   }
+  ],
+  "For and since; congestion discussion; Activate Your English": [
+   {
+    "t": "mcq",
+    "q": "I haven't been to Dubai ______ 2011.",
+    "o": [
+     "for",
+     "since",
+     "from",
+     "during"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "We use 'for' with a period of time.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "I was stuck in traffic ______ half an hour.",
+    "o": [
+     "for",
+     "at",
+     "since",
+     "on"
+    ],
+    "a": 1
+   },
+   {
+    "t": "tf",
+    "q": "'Since' is used with a length of time, such as two hours.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is correct?",
+    "o": [
+     "I've been waiting for 3 o'clock.",
+     "I've been waiting since an hour.",
+     "I've been waiting since two hours.",
+     "I've been waiting since 3 o'clock."
+    ],
+    "a": 4
+   }
   ]
  }
 }

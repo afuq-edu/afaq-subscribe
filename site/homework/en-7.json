@@ -1803,6 +1803,51 @@
     ],
     "a": 2
    }
+  ],
+  "Graded reader 1: The Game on the Train": [
+   {
+    "t": "mcq",
+    "q": "Circus tickets are 10 rials. On Monday they are half-price. How much is a ticket on Monday?",
+    "o": [
+     "10 rials",
+     "5 rials",
+     "2 rials",
+     "20 rials"
+    ],
+    "a": 2
+   },
+   {
+    "t": "tf",
+    "q": "Exam tip: in Reading Part 1, think where you might see each text.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Why does Zahran ask Nawaf to buy a guidebook?",
+    "o": [
+     "He doesn't like reading",
+     "The shop is closed",
+     "His wallet is empty",
+     "Nawaf wrote it"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The airport notice says you have to take off your shoes.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "At the airport, there are boxes to put ___ in.",
+    "o": [
+     "shoes",
+     "tickets",
+     "food",
+     "devices"
+    ],
+    "a": 4
+   }
   ]
  }
 }

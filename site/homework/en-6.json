@@ -1893,6 +1893,51 @@
     ],
     "a": 2
    }
+  ],
+  "Unit 3 – Graded reader 1: ‘Be an Architect’ Day": [
+   {
+    "t": "mcq",
+    "q": "A skyscraper is a tall building which has lots of ___.",
+    "o": [
+     "gardens",
+     "rivers",
+     "floors",
+     "fields"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Exam tip: when you finish a cloze task, read the whole text again.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "There are ___ in some skyscrapers.",
+    "o": [
+     "factories",
+     "castles",
+     "farms",
+     "apartments"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Exam tip: do not look at the picture or text before you listen.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "I don't like going up and down in a ___.",
+    "o": [
+     "lift",
+     "roof",
+     "floor",
+     "park"
+    ],
+    "a": 1
+   }
   ]
  }
 }
