@@ -3242,7 +3242,7 @@ function wzPayRender() {
   // يُسجَّل الطلب «بانتظار التفعيل» في لوحة الإدارة (مرة واحدة)
   if (!payAsked && req.status !== 'requested' && req.status !== 'active') { payAsked = true; contactRequest().then((r) => { if (r && r.ok) wz.status = Object.assign({}, st, { request: Object.assign({}, req, { id: r.request || req.id, status: r.status || 'requested' }) }); }).catch(() => {}); }
   clearInterval(payTimer);
-  if (req.status !== 'active') payTimer = setInterval(wzPoll, 20000);   // يفتح وحده متى فعّله المشرف
+  payTimer = setInterval(wzPoll, 10000);   // يفتح وحده متى فعّله المشرف (ولو بدا الطلب مفعّلًا: المادة قد تصل بعده)
 }
 async function wzPoll() {
   if (wz.step !== 'pay') { clearInterval(payTimer); return; }
@@ -3255,9 +3255,18 @@ async function wzPoll() {
 }
 async function wzActivated() {
   clearInterval(payTimer);
+  await afaqSync({ force: true }).catch(() => {});
   await wzReload();
-  const how = payResume; payResume = '';
+  const how = payResume;
   const p = wz.pkg && packages.find((x) => x.id === wz.pkg.id);
+  // فُعّل الطلب ولم تصل المادة إلى الجهاز بعد: لا شاشة تطلب «ابدأ» أو «رجوع» — ننتظر بهدوء ونكمل وحدنا متى وصلت
+  if (how && p && p.remote && p.remote.trial && wz.step === 'pay') {
+    $('wzHead').textContent = '✓ فُعّل اشتراكك';
+    $('wzBody').innerHTML = '<p class="wz-note big"><span class="spin"></span>أجهّز مادتك، ويبدأ التحضير وحده بعد لحظات.</p>';
+    payTimer = setInterval(wzPoll, 8000);
+    return;
+  }
+  payResume = '';
   if (how && p && !(p.remote && p.remote.trial)) {
     // التحضير يكمل وحده من حيث توقف، بالاختيارات نفسها (ما نُشر لا يتكرر: يُقرأ من قائمة نور)
     wz.pkg = p;
@@ -3274,7 +3283,7 @@ async function wzActivated() {
   }
   $('wzHead').textContent = '✓ فُعّل اشتراكك';
   $('wzBody').innerHTML = `<p class="wz-note big">موادك جاهزة الآن.</p><button class="btn primary big" id="wzCont">ابدأ</button>`;
-  $('wzCont').onclick = () => { wz.hist = []; wzAgain(); };
+  $('wzCont').onclick = () => { wz.hist = []; if (p && !(p.remote && p.remote.trial)) wzOpen(p); else wzAgain(); };
 }
 
 // كل فتح للأداة يبدأ بسجل نظيف: ما أُدخل من قبل لا يُعدّ (ربما حذفه المعلم من نور ويريد إدخاله من جديد).
