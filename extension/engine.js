@@ -1327,7 +1327,14 @@ export function hadirEngine(action, payload) {
     const noPeriods = () => boxes().some((x) => isRendered(x) && NO_PERIODS.test(x.textContent || ''));
     const sig = () => boxes().map((x) => x.innerHTML.length + ':' + (x.textContent || '').replace(/\s+/g, ' ').trim()).join('|');
     const textOf = (el) => { const l = ownLabel(el); return clean((l || (soloBox(el.parentElement) ? el.parentElement : null) || {}).textContent || el.value || ''); };
-    const secOf = (el) => { const t = textOf(el), parts = t.split(/\s+-\s+/); return parts.length >= 4 ? parts.slice(0, -1).join(' - ') : t.replace(/\d+/g, ' ').replace(/\s+/g, ' ').trim(); };
+    // الشعبة كما تقرؤها التعبئة (الكتلة «noor» أدناه) حرفيًا: تسلسل كل شعبة (4.10.22) يربط جدول الجسّ بحصص النموذج بهذا المفتاح
+    const secOf = (el) => {
+      const t = textOf(el), parts = t.split(/\s+-\s+/);
+      if (parts.length >= 4) return parts.slice(0, -1).join(' - ');
+      return t.replace(/[٠-٩]/g, (c) => '٠١٢٣٤٥٦٧٨٩'.indexOf(c))
+        .replace(/(?:ال)?(?:حصة|حصه|فترة|فتره)\s*(?:رقم|ال)?\s*[:：]?\s*\(?\s*(?:\d+|الأولى|الاولى|الثانية|الثانيه|الثالثة|الرابعة|الخامسة|السادسة|السابعة|الثامنة)\s*\)?/g, ' ')
+        .replace(/\d{1,2}\s*[:：.]\s*\d{2}(?:\s*(?:ص|م|am|pm))?/gi, ' ').replace(/[—–\-|،,()]+/g, ' ').replace(/\s+/g, ' ').trim();
+    };
     return (async () => {
       const out = [];
       for (const iso of payload.dates || []) {
@@ -1505,19 +1512,24 @@ export function hadirEngine(action, payload) {
           const groups = new Map();
           all.forEach((el, i) => { const key = secOf(el) || '#' + i; if (!groups.has(key)) groups.set(key, []); groups.get(key).push(el); });
           const k = Math.max(1, +payload.slotNo || 1), full = payload.slotFull || {};
+          // تسلسل كل شعبة (4.10.22): هذا التحضير لشعب بعينها فقط، كل منها في أول حصة حرة لها في اليوم
+          const only = Array.isArray(payload.onlySecs) && payload.onlySecs.length ? new Set(payload.onlySecs) : null;
           const pick = [];
           groups.forEach((els, key) => {
+            if (only && !only.has(key)) return;
             const open = els.filter((el) => !el.disabled);
             if (!open.length) return;                                                                   // حصص الشعبة كلها محضّرة اليوم
             let el;
-            if (k === 1 || open.length < els.length) el = open[0];                                     // المحجوزة معطّلة: أول حصة حرة
+            if (only || k === 1 || open.length < els.length) el = open[0];                             // المحجوزة معطّلة: أول حصة حرة
             else if (full[key] && els.length < full[key]) el = open[0];                                 // المحجوزة اختفت: الباقية حرة
             else el = els[k - 1] || null;                                                               // كلها ظاهرة: الحصة رقم k
             if (el) pick.push(el);
           });
           const cnt = {}; groups.forEach((els, key) => { cnt[key] = els.length; });
           const cap = Math.max(1, ...Object.values(cnt));
-          if (!pick.length) results.timeslots = { status: 'noslot', groups: cnt, cap, total: all.length };
+          // تسلسل كل شعبة: شعبة مطلوبة بلا حصة حرة في هذا اليوم ← لا يُحفظ تحضير ناقص (ينتقل إلى يوم حصتها)
+          const lacking = only ? [...only].filter((key) => !(groups.get(key) || []).some((el) => !el.disabled)) : [];
+          if (!pick.length || lacking.length) results.timeslots = { status: 'noslot', groups: cnt, cap, total: all.length, lacking };
           else {
             // ما ليس من هذا التحضير يبقى بلا تحديد (الحصة الثانية للشعبة لها تحضيرها)
             for (const el of all) if (!pick.includes(el) && el.checked && !el.disabled) { try { el.click(); } catch (e) {} if (el.checked) { el.checked = false; fire(el, 'change'); } }

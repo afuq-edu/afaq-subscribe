@@ -121,7 +121,7 @@ function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], same
 const FIXED_NOW = '2026-09-05';   // the wizard's «today» (?now=): the day before the plan starts, unless a scenario says otherwise
 // cont: Noor already holds preps of this subject made by an earlier «تحضير الفصل كاملًا» on this device (?cont=1, test only) —
 // the run continues it; without it the tool refuses a full term over existing preps (owner 2026-11-01, scenario 20)
-async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some((r) => r.preexisting && r.nodeId) } = {}) {
+async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some((r) => r.preexisting) } = {}) {
   const ctx = await chromium.launchPersistentContext('', {
     headless: !process.env.HEADFUL, executablePath: '/opt/pw-browsers/chromium',
     args: [`--disable-extensions-except=${extDir}`, `--load-extension=${extDir}`, ...(process.env.HEADFUL ? [] : ['--headless=new'])],
@@ -221,7 +221,8 @@ T(1, 'Full term, official dates, empty Noor', async (env) => {
 
 T(2, 'Noor rejects dates (used/holiday): at typing time and at save time', async (env) => {
   const tree = treeFromPackage(PKG);
-  const pre = existingFor(tree, range(10, 45));
+  // empty Noor: since 4.10.20 a full term over another run's preps does not start, and lessons go period after period
+  const pre = [];
   const noor = env.noor({ tree, existing: pre, rejectAtFill: ['2026-09-14'], rejectAtSave: ['2026-09-21'] });
   env.afaq.reset({ pkg: PKG });
   const b = await env.launch(noor);
@@ -229,11 +230,12 @@ T(2, 'Noor rejects dates (used/holiday): at typing time and at save time', async
   const s = await waitDone(b.pg, 12 * 60000, 'term with rejected dates');
   const rows = noor.st.rows.filter((r) => !r.preexisting);
   check(/تمت التعبئة بنجاح/.test(s.head), 'wizard finishes with success', `${s.head} | ${s.text}`);
-  const keep = { [sid(1)]: '2026-09-06', [sid(2)]: '2026-09-07', [sid(3)]: '2026-09-08', [sid(4)]: '2026-09-13', [sid(7)]: '2026-09-20' };
-  assertRows('S2', rows, tree, { expectIds: range(1, 9), dates: keep, preexisting: pre });
+  // period after period (Sun/Mon/Tue): 14/9 refused while typing and 21/9 refused at save are skipped, the rest follow in order
+  const keep = Object.fromEntries(['2026-09-06', '2026-09-07', '2026-09-08', '2026-09-13', '2026-09-15', '2026-09-20', '2026-09-22', '2026-09-27', '2026-09-28'].map((d, i) => [sid(i + 1), d]));
+  assertRows('S2', rows, tree, { expectIds: range(1, 45), dates: keep, preexisting: pre });
   const d = (n) => (rows.find((r) => sessionOfRow(r) && sessionOfRow(r).id === sid(n)) || {}).publishDate;
-  check(d(5) && d(5) !== '2026-09-14', `session 005 moved off the rejected 2026-09-14 (got ${d(5)})`);
-  check(d(8) && d(8) !== '2026-09-21', `session 008 moved off the save-rejected 2026-09-21 (got ${d(8)})`);
+  check(!rows.some((r) => r.publishDate === '2026-09-14' || r.publishDate === '2026-09-21'), 'nothing saved on the refused 14/9 and 21/9', fmtRows(rows));
+  check(noor.st.posts.some((p) => p.date === '2026-09-21'), 'Noor refused one save on 21/9 (save-time refusal exercised)');
   console.log(`    observed moves: 005→${d(5)} 006→${d(6)} 008→${d(8)} 009→${d(9)}`);
   return b;
 });
@@ -277,7 +279,8 @@ T(5, 'Pick mode: chosen lessons/sessions on chosen dates', async (env) => {
   const b = await env.launch(noor);
   await wizardTo(b.pg, 'pick');
   await b.pg.waitForSelector('input[data-k]', { timeout: 30000 });
-  const want = { [sid(9)]: '2026-10-29', [sid(10)]: '2026-11-02', [sid(12)]: '2026-11-04' };
+  // typed dates on the teacher's class days (the mock's periods = Sun/Mon/Tue); a typed day without a period is moved (scenario 20)
+  const want = { [sid(9)]: '2026-10-27', [sid(10)]: '2026-11-02', [sid(12)]: '2026-11-03' };
   const keyOf = (l) => l.unit + '|' + l.lesson;
   const clickK = (k) => b.pg.evaluate((k) => { const cb = [...document.querySelectorAll('input[data-k]')].find((x) => x.dataset.k === k); cb.click(); }, k);
   await clickK(keyOf(S[sid(9)])); await sleep(400);
@@ -407,10 +410,41 @@ T(10, 'Empty course, first save response lost (connection drop after the click):
   return b;
 });
 
+// sections with different periods on a day (owner 2026-11-01, «تسلسل لكل شعبة»): each section takes the lessons in order on its
+// OWN periods, period after period from the first school day; one prep holds the sections that reached the same session on
+// the same day. Checks, per section: every session once, in order, on exactly the next periods of its timetable; no period
+// used twice; no prep on a day without a period of its sections
+function checkPerSection(name, rows, periods) {
+  const secOfSlot = (x) => String(x).split('|')[0];
+  const sessOf = (r) => PKG.lessons.find((l) => norm(r.concepts).includes(norm(l.concepts)));
+  const secs = [...new Set(Object.values(periods).flatMap((v) => v.map(([sec]) => sec)))].sort();
+  const day1 = PKG.lessons.map((l) => l.pubDate).sort()[0];
+  const want = (sec, n) => { const out = []; for (let d = day1; out.length < n; d = addDaysIso(d, 1)) { const wd = new Date(d + 'T12:00').getDay(); const c = (periods[wd] || []).filter(([x]) => x === sec).reduce((a, [, k]) => a + k, 0); for (let i = 0; i < c && out.length < n; i++) out.push(d); } return out; };
+  const bad = [], orphan = rows.filter((r) => !sessOf(r));
+  check(!orphan.length, `${name}: every prep carries a session of the plan`, orphan.map((r) => r.title).join(' | '));
+  for (const sec of secs) {
+    const mine = rows.filter((r) => (r.slots || []).some((x) => secOfSlot(x) === sec)).map((r) => ({ r, l: sessOf(r) })).filter((x) => x.l);
+    const ids = mine.map((x) => x.l.id);
+    const dupIds = ids.filter((id, i) => ids.indexOf(id) !== i);
+    const missing = PKG.lessons.filter((l) => !ids.includes(l.id)).map((l) => l.id);
+    if (dupIds.length || missing.length) bad.push(`section ${sec}: missing ${missing.join(',')} twice ${dupIds.join(',')}`);
+    const ord = mine.slice().sort((x, y) => x.l.idx - y.l.idx).map((x) => x.r.publishDate);
+    const exp = want(sec, ord.length);
+    if (JSON.stringify(ord) !== JSON.stringify(exp)) bad.push(`section ${sec}: got ${ord.join(' ')}\n  want ${exp.join(' ')}`);
+  }
+  check(!bad.length, `${name}: every section gets every session once, in order, on exactly its next periods (${secs.join(', ')})`, bad.join('\n'));
+  const seen = new Map(), clash = [];
+  rows.forEach((r) => (r.slots || []).forEach((x) => { const k = r.publishDate + '|' + x; if (seen.has(k)) clash.push(k); seen.set(k, 1); }));
+  check(!clash.length, `${name}: no period holds two preps`, clash.join(', '));
+  check(rows.every((r) => !r.sectionOnly && (r.slots || []).length), `${name}: every prep on a period (no section-only prep)`, rows.filter((r) => r.sectionOnly).map((r) => r.publishDate).join(', '));
+  const byKey = rows.reduce((m, r) => { const l = sessOf(r); if (l) { const k = l.id + '|' + r.publishDate; m[k] = (m[k] || 0) + 1; } return m; }, {});
+  check(Object.values(byKey).every((n) => n === 1), `${name}: one prep per session and day (sections that reached it together share it)`, JSON.stringify(Object.entries(byKey).filter(([, n]) => n > 1)));
+}
+
 // two periods of the same section on one day (real Noor 2026-10-24: «تقنية المعلومات - التاسع - 1 -  الحصة 7» and «… الحصة 8»;
-// a period that already has a prep on that date is disabled, or hidden): one prep per period, each week's sessions on the
-// teacher's real periods of that week. Timetable: Sun section 1 ×2 + section 2 ×1 · Tue both ×1 · Wed section 1 ×1 · Mon/Thu none
-for (const [n, mode] of [[11, 'disable'], [12, 'hide']]) T(n, `Two periods of one section on Sunday (taken period ${mode === 'disable' ? 'disabled' : 'hidden'}): a prep for each period, each week on its real periods, no duplicates`, async (env) => {
+// a period that already has a prep on that date is disabled, or hidden). Timetable: Sun section 1 ×2 + section 2 ×1 · Tue both ×1 ·
+// Wed section 1 ×1 · Mon/Thu none — section 1 has 4 periods a week, section 2 two: each goes its own pace
+for (const [n, mode] of [[11, 'disable'], [12, 'hide']]) T(n, `Sections with different periods (section 1 twice on Sunday and on Wednesday, section 2 once; taken period ${mode === 'disable' ? 'disabled' : 'hidden'}): each section takes the lessons in order on its own periods, no duplicates`, async (env) => {
   usePkg(derivePkg({ keep: range(1, 18) }));
   const tree = treeFromPackage(PKG);
   const periods = { 0: [['1', 2], ['2', 1]], 1: [], 2: [['1', 1], ['2', 1]], 3: [['1', 1]], 4: [] };
@@ -418,29 +452,20 @@ for (const [n, mode] of [[11, 'disable'], [12, 'hide']]) T(n, `Two periods of on
   env.afaq.reset({ pkg: PKG });
   const b = await env.launch(noor);
   await wizardTo(b.pg, 'term');
-  const s = await waitDone(b.pg, 20 * 60000, 'two-period term');
+  const s = await waitDone(b.pg, 30 * 60000, 'per-section term');
   const rows = noor.st.rows.filter((r) => !r.preexisting);
   check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
-  // file: 3 sessions a week dated Sun, Mon, Tue → teacher: Sun (period 1), Sun (period 2), Tue
-  const exp = {};
-  PKG.lessons.forEach((l, i) => { const ws = new Date(l.pubDate + 'T12:00'); ws.setDate(ws.getDate() - ws.getDay()); const d = new Date(ws); d.setDate(d.getDate() + (i % 3 === 2 ? 2 : 0)); exp[l.id] = d.toISOString().slice(0, 10); });
-  assertRows(`S${n}`, rows, tree, { expectIds: PKG.lessons.map((l) => l.id), dates: exp, sameDay: true });
-  const sun = rows.filter((r) => new Date(r.publishDate + 'T12:00').getDay() === 0);
-  const byDay = sun.reduce((m, r) => { (m[r.publishDate] = m[r.publishDate] || []).push(r); return m; }, {});
-  check(Object.values(byDay).every((v) => v.length === 2), 'every Sunday has two preps (one per period of section 1)', JSON.stringify(Object.fromEntries(Object.entries(byDay).map(([d, v]) => [d, v.map((r) => (r.slots || []).join('+'))]))));
-  check(Object.values(byDay).every((v) => v.some((r) => (r.slots || []).length === 2) && v.some((r) => (r.slots || []).join() === '1|2')), 'first Sunday prep: section 1 period 1 + section 2; second: section 1 period 2 only', JSON.stringify(Object.values(byDay).map((v) => v.map((r) => r.slots))));
-  check(rows.every((r) => !r.sectionOnly && (r.slots || []).length), 'no prep on a day without periods (Mon/Thu)', rows.filter((r) => r.sectionOnly).map((r) => r.publishDate).join(', '));
+  checkPerSection(`S${n}`, rows, periods);
   check(!noor.st.posts.some((p) => /date-dup/.test(p.outcome || '')), 'Noor never refused a save as a duplicate period', noor.st.posts.filter((p) => /dup/.test(p.outcome || '')).map((p) => p.date).join(', '));
   const n1 = noor.st.rows.length;
-  const s2 = await rerun(b, 'manual re-run');
+  await rerun(b, 'manual re-run');
   check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
   return b;
 });
 
 // real Noor 2026-10-25 (owner's page): every period box sits inside ONE big <label> around the whole list, so the nearest
-// label of a box holds the text of all four periods; 4.10.10 read them as one section with four periods → four preps on
-// that day, one period each. Timetable: Sun section 4 ×2 + sections 5 and 6 ×1 · Tue sections 4, 5, 6 ×1 · other days none
-T(17, 'Three sections on Sunday, one of them with two periods (real Noor wraps all period boxes in one label): two preps that day — sections 4+5+6, then section 4 again', async (env) => {
+// label of a box holds the text of all four periods. Timetable: Sun section 4 ×2 + sections 5 and 6 ×1 · Tue sections 4, 5, 6 ×1
+T(17, 'Three sections, section 4 twice on Sunday (real Noor wraps all period boxes in one label): each section on its own periods in order — sections 5 and 6 share their preps, section 4 goes faster', async (env) => {
   usePkg(derivePkg({ keep: range(1, 18) }));
   const tree = treeFromPackage(PKG);
   const periods = { 0: [['4', 2], ['5', 1], ['6', 1]], 1: [], 2: [['4', 1], ['5', 1], ['6', 1]], 3: [], 4: [] };
@@ -448,17 +473,12 @@ T(17, 'Three sections on Sunday, one of them with two periods (real Noor wraps a
   env.afaq.reset({ pkg: PKG });
   const b = await env.launch(noor);
   await wizardTo(b.pg, 'term');
-  const s = await waitDone(b.pg, 20 * 60000, 'three sections term');
+  const s = await waitDone(b.pg, 30 * 60000, 'three sections term');
   const rows = noor.st.rows.filter((r) => !r.preexisting);
   check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  checkPerSection('S17', rows, periods);
   const secs = (r) => [...new Set((r.slots || []).map((x) => String(x).split('|')[0]))].sort().join(',');
-  const byDay = rows.reduce((m, r) => { (m[r.publishDate] = m[r.publishDate] || []).push(r); return m; }, {});
-  const sundays = Object.entries(byDay).filter(([d]) => new Date(d + 'T12:00').getDay() === 0);
-  const show = JSON.stringify(Object.fromEntries(Object.entries(byDay).map(([d, v]) => [d, v.map((r) => (r.slots || []).join('+'))])));
-  check(sundays.length && sundays.every(([, v]) => v.length === 2), 'every Sunday has exactly two preps (not one per period box)', show);
-  check(sundays.every(([, v]) => v.some((r) => secs(r) === '4,5,6' && (r.slots || []).length === 3) && v.some((r) => secs(r) === '4' && (r.slots || []).length === 1)), 'first Sunday prep: sections 4, 5 and 6 together; second: section 4 only', show);
-  check(Object.entries(byDay).filter(([d]) => new Date(d + 'T12:00').getDay() === 2).every(([, v]) => v.length === 1 && secs(v[0]) === '4,5,6'), 'every Tuesday: one prep for sections 4, 5 and 6', show);
-  check(rows.length === PKG.lessons.length, `every session in its own prep (${rows.length} preps for ${PKG.lessons.length} sessions)`);
+  check(rows.every((r) => secs(r) !== '5' && secs(r) !== '6'), 'sections 5 and 6 (same periods) always share a prep', rows.filter((r) => secs(r) === '5' || secs(r) === '6').map((r) => r.publishDate + ' ' + secs(r)).join(', '));
   check(!noor.st.posts.some((p) => /date-dup/.test(p.outcome || '')), 'Noor never refused a save as a duplicate period');
   return b;
 });
@@ -587,8 +607,13 @@ T(20, 'Noor already has preps of this subject (lessons 1–2 and 5–6 done, 3�
     const s = await waitDone(b.pg, 10 * 60000, 'pick after advice');
     const rows = noor.st.rows.filter((r) => !r.preexisting);
     check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
-    const got = rows.map((r) => r.publishDate).sort();
-    check(rows.length === ids.length && JSON.stringify(got) === JSON.stringify(want), 'the chosen sessions are saved on those consecutive days', got.join(', '));
+    // saved on the teacher's real periods (the mock's class days = the plan's weekdays): a derived date with no period moves
+    // to the next period and the chosen sessions after it follow in order (no session jumps past a later one)
+    const wds = new Set(PKG.lessons.map((l) => new Date(l.pubDate + 'T12:00').getDay()));
+    const wantP = []; for (let d = d0; wantP.length < ids.length; d = addDaysIso(d, 1)) if (wds.has(new Date(d + 'T12:00').getDay())) wantP.push(d);
+    const order = PKG.lessons.map((l) => l.id);
+    const got = rows.slice().sort((x, y) => order.indexOf(sessionOfRow(x).id) - order.indexOf(sessionOfRow(y).id)).map((r) => r.publishDate);
+    check(rows.length === ids.length && JSON.stringify(got) === JSON.stringify(wantP), 'the chosen sessions are saved in order on the next class periods from the typed date', `got ${got.join(', ')}\nwant ${wantP.join(', ')}`);
     check(!(b.pg.__summaries || []).length, 'pick mode asks nothing before saving', JSON.stringify(b.pg.__summaries || []));
   }
   return b;

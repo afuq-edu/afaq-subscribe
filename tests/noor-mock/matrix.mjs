@@ -42,7 +42,8 @@ const SAMPLE = opt('sample', 0) ? +opt('sample') : 0;
 const ONLY = opt('only', '') ? String(opt('only')).split(',').map((s) => s.trim()).filter(Boolean) : [];
 const JOBS = Math.max(1, +opt('jobs', Math.max(1, Math.min(4, os.cpus().length))));
 const FLOWS = String(opt('flows', 'term,pick')).split(',');
-// twoper: section 1 has two periods every Sunday (real Noor: «… - 1 -  الحصة 7» and «… الحصة 8») — one prep per period
+// twoper: both sections have two periods every Sunday (real Noor: «… - 1 -  الحصة 7» and «… الحصة 8») — one prep per period.
+// (Sections with DIFFERENT periods take their own lesson sequence since 4.10.22 — run.mjs scenarios 11, 12 and 17)
 // oneper: the teacher has fewer periods a week than the plan (one day less than the plan's weekly average needs, at least one:
 //   Sunday, Sunday+Monday, …) — consecutive sessions of a lesson share one prep «الدرس (2 و 3)» so nothing goes past the plan's last week
 const TREE_FN = process.env.TREE_OVERRIDE ? (await import(process.env.TREE_OVERRIDE)).default : null;
@@ -54,7 +55,7 @@ const realTree = (id) => { let t = REAL && REAL[id]; if (typeof t === 'string') 
 const FAULTS = ['none', 'holidays', 'busy', 'reject', 'netcut', 'close', 'yearend', 'twoper', 'oneper'];
 const FIXED_NOW = '2026-09-05';   // the wizard's «today» in these runs (?now=): the day before every plan starts, so nothing has passed
 const onePer = (pkg) => { const ds = pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort(); const wks = Math.max(1, Math.round((new Date(ds[ds.length - 1]) - new Date(ds[0])) / 6048e5) + 1); const k = Math.max(1, Math.ceil(pkg.lessons.length / wks) - 1); return Object.fromEntries([0, 1, 2, 3, 4].map((d) => [d, d < k ? [['1', 1], ['2', 1]] : []])); };
-const TWOPER = { 0: [['1', 2], ['2', 1]], 1: [['1', 1], ['2', 1]], 2: [['1', 1], ['2', 1]], 3: [['1', 1], ['2', 1]], 4: [['1', 1], ['2', 1]] };
+const TWOPER = { 0: [['1', 2], ['2', 2]], 1: [['1', 1], ['2', 1]], 2: [['1', 1], ['2', 1]], 3: [['1', 1], ['2', 1]], 4: [['1', 1], ['2', 1]] };
 const ONLY_FAULTS = opt('faults', '') ? String(opt('faults')).split(',') : null;   // keep only the packages whose rotated fault is one of these
 const FORCE_FAULT = opt('fault', '') ? String(opt('fault')) : '';                     // give every selected package this fault instead of the rotated one
 const SEED = String(opt('seed', 'hadir'));

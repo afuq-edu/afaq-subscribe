@@ -59,6 +59,22 @@ const WIZ = { on: false, rule: '', trialCap: null, trialOver: false, rid: 0, sum
 let noorDates = new Set();
 let noorDateN = new Map();   // تاريخ نشر ← عدد تحاضير المقرر عليه في نور
 let caps = {};               // يوم الأسبوع ← عدد حصص الشعبة نفسها فيه (يُعرف من نور، ويُحفظ لكل مادة)
+// تسلسل كل شعبة (المالك 2026-11-01): حين تختلف حصص الشعب في يوم (الخامس ١ حصتان والخامس ٢ حصة) تأخذ كل شعبة دروسها بالترتيب على
+// حصصها هي، ويجمع التحضير الواحد الشعب التي وصلت إلى الحصة نفسها في اليوم نفسه
+let secCaps = {};            // يوم الأسبوع ← { الشعبة: عدد حصصها } كما يعرضها نور
+let secOff = new Set();      // «تاريخ|شعبة» لا حصة حرة لها فيه (عرفناه من نور أثناء التعبئة)
+let secCache = new Map();    // «درس|شعب» ← عنصر التحضير (تبقى حالته عبر إعادة التوزيع)
+let secDone = new Map();     // معرّف الحصة ← { الشعبة: تاريخ حفظها } — يبقى على الجهاز لإكمال الفصل نفسه
+const SEC_KEY = 'secDone';
+const secList = () => { const out = new Set(); Object.values(secCaps).forEach((g) => Object.keys(g || {}).forEach((k) => out.add(k))); return [...out]; };
+// الشعب تختلف في عدد حصصها في يوم ما؟ (مفاتيح بلا اسم شعبة «#» لا تُميَّز فلا يُعتمد عليها)
+function multiSec() {
+  const L = secList();
+  if (L.length < 2 || L.some((k) => k.startsWith('#'))) return false;
+  return Object.values(secCaps).some((g) => { const v = L.map((k) => (g && g[k]) || 0); return v.some((x) => x !== v[0]); });
+}
+async function secLoad() { try { const o = (await chrome.storage.local.get(SEC_KEY))[SEC_KEY] || {}; secDone = new Map(Object.entries(o[pkg.id + '|' + termNo] || {})); } catch (e) { secDone = new Map(); } }
+async function secSave() { try { const o = (await chrome.storage.local.get(SEC_KEY))[SEC_KEY] || {}; o[pkg.id + '|' + termNo] = Object.fromEntries(secDone); await chrome.storage.local.set({ [SEC_KEY]: o }); } catch (e) {} }
 let slotSeen = new Map();    // تاريخ ← حصص كل شعبة كما ظهرت في أول تحضير عليه (لاختيار الحصة الثانية)
 const wdOf = (iso) => new Date(iso + 'T12:00').getDay();
 const capOf = (iso) => (isIso(iso) && caps[wdOf(iso)] >= 1 ? caps[wdOf(iso)] : 1);
@@ -188,6 +204,47 @@ function mergePairs(items, max = 3, today = '', lost = null) {
   // في أسبوع فقد حصة أولًا (أوّلها أولًا)، ثم الأفضل، ثم الأقرب إلى آخر الفصل (أقل تغيير في أسابيع الخطة)
   return out.sort((x, y) => (y.inLost - x.inLost) || (x.inLost && y.inLost ? x.score - y.score || x.i - y.i : x.score - y.score || y.i - x.i));
 }
+// الفصل كاملًا حين تختلف حصص الشعب: لكل شعبة تسلسلها من أول يوم دراسي على حصصها هي (حصة بعد حصة بترتيب شجرة نور)،
+// ثم تحضير لكل «حصة من درس + تاريخ» يجمع الشعب التي وصلت إليها في ذلك اليوم
+function secAssign(seqAll) {
+  const day1 = ((pkg && pkg.lessons) || []).map((l) => l.pubDate).filter(isIso).sort()[0] || $('start').value || todayIso();
+  const hol = holidaySet(settings);
+  const L = secList();
+  const capS = (iso, sec) => (hol.has(iso) || secOff.has(iso + '|' + sec) ? 0 : ((secCaps[wdOf(iso)] || {})[sec] || 0));
+  const base = seqAll.filter((s) => s.p && s.p.node && !s.p.skipped && (s.eligible || s.inNoor || secDone.has(s.lesson.id)));
+  const idx = new Map(base.map((s, i) => [s, i]));
+  const doneOf = (s, sec) => { const r = secDone.get(s.lesson.id); if (r) return r[sec] || ''; return s.inNoor ? 'x' : ''; };
+  const at = new Map();
+  for (const sec of L) {
+    if (![0, 1, 2, 3, 4, 5, 6].some((wd) => ((secCaps[wd] || {})[sec] || 0) > 0)) continue;
+    let d = day1, used = 0;
+    for (const s of base) {
+      const r = doneOf(s, sec);
+      if (r) { if (isIso(r)) { if (r > d) { d = r; used = 0; } if (r === d) used++; } continue; }
+      for (let g = 0; g < 1500 && used >= capS(d, sec); g++) { d = addDays(d, 1); used = 0; }
+      if (!at.has(s)) at.set(s, new Map());
+      at.get(s).set(sec, d); used++;
+    }
+  }
+  const out = [];
+  base.forEach((s) => { s.on = at.has(s); if (at.has(s)) s.date = [...at.get(s).values()].sort()[0]; });
+  at.forEach((m, s) => {
+    const byD = new Map();
+    m.forEach((d, sec) => { if (!byD.has(d)) byD.set(d, []); byD.get(d).push(sec); });
+    byD.forEach((secs, d) => {
+      secs.sort();
+      const key = s.lesson.id + '|' + secs.join('،');
+      let c = secCache.get(key);
+      if (!c) { c = Object.create(s); c.base = s; c.secs = secs; c.merge = null; c.mergedInto = null; c.fixed = ''; secCache.set(key, c); }
+      c.date = d; c.slot = 1; c.on = true; c.afterTerm = false;
+      if (!c.savedNow && !c.done) out.push(c);
+    });
+  });
+  queue = out.sort((a, b) => a.date.localeCompare(b.date) || idx.get(a.base) - idx.get(b.base) || a.secs.join().localeCompare(b.secs.join()));
+  const termEnd = termEndOf(settings, termNo) || (pkg.remote && isIso(pkg.remote.ends_on) ? pkg.remote.ends_on : '') || pkgEnd(pkg);
+  WIZ.fit = { merged: 0, late: termEnd ? queue.filter((q) => q.date > termEnd).length : 0, fitEnd: termEnd, from: '' };
+  if (!dateNotes.has('secs')) { dateNotes.add('secs'); logLine('info', `حصص شعبك تختلف بين الأيام: لكل شعبة دروسها بالترتيب على حصصها (${L.join(' · ')})`); }
+}
 function assignDates() {
   const pos = (p) => (p.node ? treeNodes.indexOf(p.node) : 1e9);
   const ordered = plan.slice().sort((a, b) => pos(a) - pos(b) || a.i - b.i);
@@ -206,6 +263,7 @@ function assignDates() {
       .sort((a, b) => a.d.localeCompare(b.d) || fo(a) - fo(b) || a.i - b.i).map((x) => x.s);
   }
   const cands = seqAll.filter((s) => s.eligible);
+  if (seqTerm && multiSec()) { secAssign(seqAll); return; }
   // «حسب النشرة الرسمية»: حصص كل أسبوع في أسبوعها وبترتيبها، فلا يُنشر درس سابق بعد درس لاحق.
   // تحضير لكل حصة: يوم فيه حصتان للشعبة يتسع لتحضيرين، وما عليه تحاضير في نور يأخذ ما بقي من حصصه فقط
   const taken = [...takenCounts(cands)].flatMap(([d, n]) => Array(n).fill(d));
@@ -310,14 +368,31 @@ function assignDates() {
 // تأجيل حصة إلى يوم الحصة التالي المتاح (رفضت نور تاريخها أو لا صفوف فيه): يثبت تاريخها الجديد، وما بعدها بلا تاريخ ملف يتبعها
 function shiftDate(s) {
   const fixed = takenCounts(plan.flatMap((p) => p.sessions.filter((x) => x.eligible)));
+  // «أختار الدروس بنفسي»: الحصص المختارة بعد هذه التي أخذت تاريخها من تاريخ كتبه المعلم (لا بيده) تتبعها بالترتيب
+  const chain = pickChain(s);
   // المثبّت بيد المعلم أو بتأجيل سابق فقط؛ تواريخ الملف لما بعدها تتزحزح خلفها (لا قفز إلى أول فجوة بعيدة)
-  queue.forEach((x) => { if (x !== s && x.date && x.fixed) fixed.set(x.date, (fixed.get(x.date) || 0) + 1); });
+  queue.forEach((x) => { if (x !== s && x.date && x.fixed && !chain.includes(x)) fixed.set(x.date, (fixed.get(x.date) || 0) + 1); });
   const hol = holidaySet(settings);
-  let c = nextSchoolDay(s.date, days, false);
-  for (let i = 0; i < 60 && ((fixed.get(c) || 0) >= capOf(c) || hol.has(c)); i++) c = nextSchoolDay(c, days, false);
+  const next = (d) => { let c = nextSchoolDay(d, days, false); for (let i = 0; i < 60 && ((fixed.get(c) || 0) >= capOf(c) || hol.has(c)); i++) c = nextSchoolDay(c, days, false); return c; };
+  const c = next(s.date);
   s.fixed = c;
+  fixed.set(c, (fixed.get(c) || 0) + 1);
+  let prev = c;
+  chain.forEach((x) => { const d = (fixed.get(prev) || 0) < capOf(prev) && !hol.has(prev) ? prev : next(prev); x.fixed = d; fixed.set(d, (fixed.get(d) || 0) + 1); prev = d; });
   assignDates();
   renderPlan();
+}
+// الحصص المختارة بعد s (بترتيب الدروس) التي لم يكتب المعلم تاريخها بيده — حتى أول تاريخ كتبه، فهو يبقى كما كتبه
+function pickChain(s) {
+  if (!WIZ.pickDates || !Array.isArray(WIZ.pickTyped)) return [];
+  const typed = new Set(WIZ.pickTyped);
+  const all = plan.flatMap((p) => p.sessions).filter((x) => WIZ.pickDates[x.lesson.id]);
+  const out = [];
+  for (const x of all.slice(all.indexOf(s) + 1)) {
+    if (typed.has(x.lesson.id)) break;
+    if (!x.savedNow && !x.done && !x.inNoor) out.push(x);
+  }
+  return all.includes(s) ? out : [];
 }
 // سعة يوم الأسبوع (حصص الشعبة نفسها فيه) كما عرضها نور — تُحفظ لهذه المادة فتعرفها المرات القادمة من البداية
 async function setCap(iso, n) {
@@ -942,8 +1017,8 @@ async function probeSchedule0(addUrl) {
   const seen = [], none = [];
   for (const r of res) {
     const wd = wdOf(r.date);
-    if (r.status === 'ok') { classOk.add(wd); caps[wd] = Math.max(1, Math.min(6, r.cap || 1)); seen.push(`${DAY_NAMES[wd]}: ${countWord(caps[wd])}`); }
-    else if (r.status === 'none') none.push(wd);
+    if (r.status === 'ok') { classOk.add(wd); caps[wd] = Math.max(1, Math.min(6, r.cap || 1)); if (r.groups) secCaps[wd] = Object.assign({}, r.groups); seen.push(`${DAY_NAMES[wd]}: ${countWord(caps[wd])}`); }
+    else if (r.status === 'none') { none.push(wd); secCaps[wd] = {}; }
   }
   if (seen.length && none.length) {
     const keep = days.filter((d) => !none.includes(d));
@@ -1785,7 +1860,7 @@ async function fillOnce(item, c) {
   setBox('run', `أعبّئ «${shortT(s.lesson.title)}»…`, `الدرس: ${item.node.text}\nالنشر: ${dayLabel(s.date)}`);
   // ترتيب هذا التحضير بين تحاضير الدرس نفسه في اليوم نفسه (حصتان للدرس في يوم واحد) — نور ترقّم الثاني بنفسها
   const dayRank = () => 1 + savedThisRun.filter((x) => x.s !== s && x.s.date === s.date && x.s.p && s.p && x.s.p.node && s.p.node && x.s.p.node.id === s.p.node.id).length;
-  const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title, dayRank: dayRank(), slotNo: s.slot || 1, slotFull: slotSeen.get(s.date) || null, allowSection: !!WIZ.allowSection,
+  const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title, dayRank: dayRank(), slotNo: s.slot || 1, slotFull: slotSeen.get(s.date) || null, allowSection: !!WIZ.allowSection, onlySecs: s.secs || null,
     merge: s.merge && s.merge.length ? s.merge.map((x) => x.lesson) : null, sessionNos: s.merge && s.merge.length && s.p ? [s, ...s.merge].map(nodeNo) : null, sessionNo: nodeNo(s) });
   let rep = await fillNoor(tabId, pkg, s.lesson, opts());
   let blk = rep.find((x) => x.key === 'remote');
@@ -1809,6 +1884,15 @@ async function fillOnce(item, c) {
     // لا حصة باقية للشعبة في ذلك اليوم (حصصه أقل مما قدّرت، أو حُجزت كلها): اليوم لا يتسع لأكثر مما أُخذ منه
     const dayFull = !usedDay && ts && ts.status === 'noslot' && (!pb || pb.status === 'ok');
     if (!usedDay && !noClassDay && !dayFull) break;
+    // تسلسل كل شعبة: لا حصة حرة لهذه الشعب في هذا اليوم ← يُعلَّم اليوم لها ويُعاد التوزيع، ويأتي دور التحضير التالي
+    if (s.secs) {
+      if (noClassDay) learnNoClass(s.date);
+      (dayFull && ts.lacking && ts.lacking.length ? ts.lacking : s.secs).forEach((sec) => secOff.add(s.date + '|' + sec));
+      if (ts && ts.groups && !usedDay) secCaps[wdOf(s.date)] = secCaps[wdOf(s.date)] || {};
+      logLine('info', `لا حصة حرة يوم ${dayLabel(s.date, false)} لـ${s.secs.join(' و')} — أعيد ترتيب الحصص التالية`);
+      assignDates(); renderPlan();
+      return { ok: false, cls: 'requeue', why: '' };
+    }
     // لا جدول حصص للمعلم في نور أصلًا (أيام الأسبوع الخمسة كلها «لا يوجد فترات زمنية» ولم تظهر حصة قط): يُنشر للشعبة بلا حصة كما تعرض نور
     if (noClassDay && ts.sectionOnly && !classOk.size && WIZ.noPeriodDays.add(wdOf(s.date)).size >= 5) {
       WIZ.allowSection = true;
@@ -1828,7 +1912,13 @@ async function fillOnce(item, c) {
   if (ts && ts.status === 'ok' && ts.how !== 'section') {
     classOk.add(new Date(s.date + 'T12:00').getDay());
     // جدول المعلم من نور: أول تحضير على يوم لم يُحضَّر فيه شيء يرى كل حصصه — عدد حصص الشعبة فيه يصير سعة هذا اليوم من الأسبوع
-    if (ts.groups && !slotSeen.has(s.date) && (s.slot || 1) === 1 && !(takenCounts(plan.flatMap((p) => p.sessions.filter((x) => x.eligible))).get(s.date))) {
+    // تسلسل كل شعبة: أول تحضير في يوم يرى كل حصص الشعب فيه — إن اختلفت عما قرأناه من الجدول يُعاد التوزيع
+    if (s.secs && ts.groups && !slotSeen.has(s.date) && !savedThisRun.some((x) => x.s.date === s.date)) {
+      slotSeen.set(s.date, ts.groups);
+      const was = JSON.stringify(secCaps[wdOf(s.date)] || {});
+      if (was !== JSON.stringify(ts.groups)) { secCaps[wdOf(s.date)] = Object.assign({}, ts.groups); assignDates(); renderPlan(); if (!queue.includes(s)) return { ok: false, cls: 'requeue', why: '' }; }
+    }
+    if (!s.secs && ts.groups && !slotSeen.has(s.date) && (s.slot || 1) === 1 && !(takenCounts(plan.flatMap((p) => p.sessions.filter((x) => x.eligible))).get(s.date))) {
       slotSeen.set(s.date, ts.groups);
       if ((ts.cap || 1) !== capOf(s.date)) { await setCap(s.date, ts.cap || 1); assignDates(); renderPlan(); }
     }
@@ -1869,6 +1959,7 @@ async function recordSaved(item) {
   const tails = s.merge || [];
   item.p.savedNow += 1 + tails.length;
   savedThisRun.push(item);
+  if (s.secs) { const r = Object.assign({}, secDone.get(s.lesson.id) || {}); s.secs.forEach((sec) => { r[sec] = s.date; }); secDone.set(s.lesson.id, r); await secSave(); }
   // سجل هذا المقرر: لا تُعاد هذه الحصة فيه أبدًا (حتى لو لم تظهر بعد في قائمة نور) — ولا حصص الدرس التي جُمعت معها
   [s, ...tails].forEach((x) => { semSaved[x.lesson.id] = s.date; savedIds.add(x.lesson.id); x.on = false; x.eligible = false; x.savedNow = true; x.date = s.date; });
   tails.forEach((x) => setSt(x, 'ok', `✓ مع الحصة السابقة · ${dayLabel(s.date, false)}`));
@@ -1966,6 +2057,7 @@ async function processItem(item, addUrl, maxTries = 4) {
     if (r.err === 'timeout') attemptGen++;   // ما بقي من المحاولة المعلّقة يتوقف عند أول خطوة
     if (r.ok) return 'saved';
     if (stopFlag || r.err === 'stop') return 'stop';
+    if (r.err === 'requeue') return { requeue: true };
     if (r.err === 'fatal') return { fatal: r.msg };
     if (r.err === 'skip') { await markSaveFailed(pkg.id, s.lesson.id, 'unsaved'); return 'skip'; }
     if (r.err === 'past') {
@@ -2003,6 +2095,11 @@ async function processItem(item, addUrl, maxTries = 4) {
         return { defer: true, why: 'حُفظت على الأرجح ولم أستطع التأكد من قائمة نور', verifyOnly: true };
       }
     }
+    if (r.err === 'date' && s.secs) {   // تسلسل كل شعبة: التاريخ مرفوض لهذه الشعب ← اليوم التالي لها وإعادة التوزيع
+      s.secs.forEach((sec) => secOff.add(s.date + '|' + sec));
+      assignDates(); renderPlan();
+      return { requeue: true };
+    }
     if (r.err === 'date' && moves < 10) {
       moves++;
       const old = s.date;
@@ -2037,7 +2134,7 @@ function heartbeat(on) {
 // نقطة استئناف: إن أُغلقت النافذة أو تعطّل كروم يُتابَع التشغيل عند فتحها
 async function checkpoint(active) {
   const sc = { kind: scope.kind, picks: [...(scope.picks || [])], units: [...scope.units], weekDay: scope.weekDay, from: scope.from, to: scope.to, dateFrom: scope.dateFrom, dateTo: scope.dateTo, dsrc: useFile ? 'file' : 'seq' };
-  await chrome.storage.local.set({ semesterRun: active ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
+  await chrome.storage.local.set({ semesterRun: active ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, typed: WIZ.pickTyped || null, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
 }
 function setRunning(on) {
   running = on;
@@ -2195,6 +2292,7 @@ async function run() {
   fillRid = String(WIZ.on && WIZ.rid ? WIZ.rid : Date.now()); fillN = 0; fillCnt = {}; fillLogged.clear();
   days = daysFor(state, settings, pkg.id);
   caps = Object.assign({}, (state.pkgCaps || {})[pkg.id] || {});
+  secCaps = {}; secOff = new Set(); secCache = new Map(); await secLoad();
   logN = 0; diag.log = []; diag.tree = null; diag.plan = null; diag.failed = null;
   $('log').innerHTML = ''; $('logCard').hidden = true; $('prog').style.width = '0%'; renderPlan();
   setRunning(true);
@@ -2280,6 +2378,8 @@ async function run() {
       if (v === 'pick') { WIZ.toPick = true; throw new Error('stop'); }
       if (v !== 'go') throw new Error('stop');
       WIZ.confirmed = WIZ.rid; await termMark();
+      // تحضير فصلي جديد (نور خالية): ما سُجّل لتسلسل الشعب من قبل لا يُعتدّ به
+      if (!WIZ.termOwn && secDone.size) { secDone = new Map(); await secSave(); assignDates(); renderPlan(); }
       setBox('run', 'أبدأ الآن…');
     }
     // عدد تحاضير كل درس في نور قبل البدء (أساس التحقق)، وما وُجد في نور يُسجَّل «محفوظًا» في مكتبتك
@@ -2292,7 +2392,7 @@ async function run() {
     flRow('start', null, `${flMode() || scope.kind} · ${total} حصة`); flStarted = true;
     if (WIZ.on) plan.filter((p) => p.miss && p.sessions[0] && inScope(p.sessions[0])).forEach(flMissRow);
     flushFillLog().catch(() => {});
-    const itemOf = (s) => { const p = plan.find((x) => x.sessions.includes(s)); return { s, p, node: p.node, first: p.sessions[0] }; };
+    const itemOf = (s) => { const p = plan.find((x) => x.sessions.includes(s.base || s)); return { s, p, node: p.node, first: p.sessions[0] }; };
     const onSaved = async (item, note) => {
       ok += 1 + ((item.s.merge || []).length); await recordSaved(item);
       if (WIZ.trialCap != null && !(WIZ.fetched0 && WIZ.fetched0.has(item.s.lesson.id))) WIZ.trialCap = Math.max(0, WIZ.trialCap - 1);
@@ -2305,15 +2405,21 @@ async function run() {
     };
     // الجولة الأولى
     const runList = queue.slice();   // نسخة ثابتة: تعديل التواريخ أثناء التشغيل لا يغيّر ترتيب التنفيذ
-    for (let k = 0; k < runList.length && !stopFlag; k++) {
-      if (runList[k].mergedInto || runList[k].savedNow) continue;   // جُمعت مع حصة قبلها في تحضير واحد
-      const item = itemOf(runList[k]);
+    // تسلسل كل شعبة: التالي دائمًا أول تحضير لم يُنجز في التوزيع الحالي (إعادة التوزيع تبني عناصر التحاضير من جديد)
+    const secMode = queue.some((q) => q.secs);
+    for (let k = 0; (secMode ? k < 5000 : k < runList.length) && !stopFlag; k++) {
+      const cur = secMode ? queue.find((q) => q.secs && !q.savedNow && !q.done && !q.deferred) : runList[k];
+      if (!cur) break;
+      if (cur.mergedInto || cur.savedNow) continue;   // جُمعت مع حصة قبلها في تحضير واحد
+      const item = itemOf(cur);
       plan.forEach((x) => x.sessions.forEach((y) => { y.cur = y === item.s; }));
       renderPlan();
       const out = await processItem(item, addUrl, 4);
       item.s.cur = false;
       // ما مرّ دوره ولم يُؤجَّل لا يُجمع معه شيء لاحقًا (لن تعود إليه الأداة)
-      if (out !== 'saved' && !(out && out.defer)) [item.s, ...(item.s.merge || [])].forEach((x) => { x.done = true; });
+      if (out !== 'saved' && !(out && (out.defer || out.requeue))) [item.s, ...(item.s.merge || [])].forEach((x) => { x.done = true; });
+      if (out && out.requeue) continue;
+      if (out && out.defer) item.s.deferred = true;
       if (out === 'saved') await onSaved(item);
       else if (out === 'skip') { skipped++; setSt(item.s, 'skip', '— تُخطّيت'); logLine('skip', `— تُخطّيت: ${item.s.lesson.title}`); flRow('skipped', item, 'تخطّاها المعلم'); }
       else if (out && out.block) { flRow('skipped', item, out.why); WIZ.toPick = true; throw new Error('stop'); }
@@ -2345,6 +2451,7 @@ async function run() {
           else if (out === 'skip') { skipped++; setSt(item.s, 'skip', '— تُخطّيت'); flRow('skipped', item, 'تخطّاها المعلم'); }
           else if (out && out.skipped) { skipped++; pastSkipped++; setSt(item.s, 'skip', '— تاريخها مضى'); flRow('skipped', item, out.why); }
           else if (out && out.defer) deferred.push(Object.assign(item, { why: out.why, verifyOnly: !!out.verifyOnly }));
+          else if (out && out.requeue) { const c = queue.find((q) => q.secs && q.base === item.s.base && !q.savedNow && !q.done); if (c) { c.deferred = true; deferred.push(Object.assign(itemOf(c), { why: item.why })); } }
           else { deferred.push(item); break; }
         }
       } finally { deferred.push(...list.slice(i + 1)); }   // ما لم تصل إليه الجولة (إيقاف أو عطل قاطع) يبقى مؤجلًا فيأخذ صفه النهائي في سجل المشرف
@@ -2638,7 +2745,7 @@ async function offerResume() {
   const radio = document.querySelector(`input[name=term][value="${run0.term}"]`); if (radio) radio.checked = true;
   if (run0.startTouched && run0.start) { $('start').value = run0.start; startTouched = true; renderDays(); }
   if (run0.scope && init.restoreScope) init.restoreScope(run0.scope);
-  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; WIZ.seq = !!run0.wiz.seq; WIZ.pickDates = run0.wiz.pick || null; WIZ.rid = run0.wiz.rid || Date.now(); if (run0.wiz.conf) WIZ.confirmed = WIZ.rid; WIZ.sum = run0.wiz.sum || 0; WIZ.resumed = true; WIZ.auto = run0.wiz.auto || 0; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
+  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; WIZ.seq = !!run0.wiz.seq; WIZ.pickDates = run0.wiz.pick || null; WIZ.pickTyped = run0.wiz.typed || null; WIZ.rid = run0.wiz.rid || Date.now(); if (run0.wiz.conf) WIZ.confirmed = WIZ.rid; WIZ.sum = run0.wiz.sum || 0; WIZ.resumed = true; WIZ.auto = run0.wiz.auto || 0; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
   let left = 10, cancelled = false;
   const tick = () => {
     if (cancelled) return;
@@ -2958,6 +3065,7 @@ async function wzRun() {
   const pick = wz.mode === 'pick';
   // اختيار المعلم: الحصص التي وضع عليها علامة، كلٌّ بتاريخها كما كتبه (لا نشرة ولا خطة أسبوعية)
   WIZ.pickDates = pick ? Object.fromEntries(wz.sel) : null;
+  WIZ.pickTyped = pick ? [...wz.typed] : null;
   scope.kind = pick ? 'pick' : 'term';
   scope.picks = new Set(pick ? lessonGroups(p).filter((g) => g.sessions.some((l) => wz.sel.has(l.id))).map((g) => g.key) : []);
   // الفصل كاملًا: بتواريخ النشرة الرسمية إن كانت في ملف المادة، وإلا متتابعًا من أول يوم دراسي قادم
@@ -3081,7 +3189,7 @@ function wzResumeBtn(label) {
 function wzAgain() {
   clearTimeout(WIZ.timer);
   document.body.classList.remove('wiz-run', 'showplan');
-  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null;
+  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null;
   $('wizCard').hidden = false;
   $('nowCard').hidden = true; $('planCard').hidden = true; $('logCard').hidden = true;
   $('topMsg').className = 'msg';
@@ -3092,7 +3200,7 @@ function wzAgain() {
 function wzMore() {
   clearTimeout(WIZ.timer);
   document.body.classList.remove('wiz-run', 'showplan');
-  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null;
+  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null;
   $('wizCard').hidden = false;
   $('nowCard').hidden = true; $('planCard').hidden = true; $('logCard').hidden = true;
   $('topMsg').className = 'msg';
