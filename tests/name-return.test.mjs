@@ -37,7 +37,8 @@ await db.exec(`update public.subscriptions set revoked = false where user_id='${
 const d2 = await start('خالد بن علي بن سالم البلوشي', ['p1']);
 const B = (await q(`select user_id from public.ext_requests where id=$1`, [d2.request]))[0].user_id;
 await db.exec(`update public.ext_requests set name = 'عيسى سعيد محمد الحارثي' where user_id='${B}'; insert into public.subscriptions (user_id, package_id, term_id) values ('${B}', 'p1', (select id from public.terms limit 1));`);
-ok(!(await start(NAME, ['p1'])).returned, 'two subscribers with the same name → normal trial (no guessing)');
+const two = await start(NAME, ['p1']);
+ok(two.returned && (await q(`select * from public.ext_device($1)`, [two.token]))[0].user_id === B, 'two subscribed accounts with the same name (an earlier reinstall) → back to the newest subscription', two);
 await db.exec(`update public.ext_requests set name = 'سالم بن احمد بن خميس الكندي' where user_id='${B}'`);
 for (let i = 0; i < 8; i++) await start('معلم جديد رقم ' + i + ' تجربة', ['p1']);
 const lim = await start('معلم جديد اخر تجربة', ['p1']);
