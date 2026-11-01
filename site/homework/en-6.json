@@ -1,0 +1,1898 @@
+{
+ "key": "en-6",
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف السادس",
+ "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ)",
+ "lessons": {
+  "Welcome – Lesson 1: Meet the WOW! Magazine": [
+   {
+    "t": "mcq",
+    "q": "How many members are in the WOW! Team?",
+    "o": [
+     "two",
+     "six",
+     "ten",
+     "four"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "WOW! stands for World of Wonder!",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What did Omaima get from her dad?",
+    "o": [
+     "a recipe book",
+     "a museum ticket",
+     "a new computer",
+     "a new bike"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You can buy the WOW! Magazine in the shops.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You love adventures. Which sentence can you say?",
+    "o": [
+     "I love adventures because I'm eleven.",
+     "I want to read about camping because I love adventures.",
+     "I want to read about recipes because I love adventures.",
+     "I'm medium height because I love adventures."
+    ],
+    "a": 2
+   }
+  ],
+  "Welcome – Lesson 2: The WOW! Team (adjectives)": [
+   {
+    "t": "mcq",
+    "q": "Which adjective means \"not tall and not short\"?",
+    "o": [
+     "handsome",
+     "energetic",
+     "chatty",
+     "medium height"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "\"Medium height\" means not tall and not short.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which group has only appearance adjectives?",
+    "o": [
+     "chatty, noisy, friendly",
+     "creative, fun, energetic",
+     "tall, pretty, handsome",
+     "kind, brave, clever"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A chatty person never talks.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence describes personality?",
+    "o": [
+     "He's medium height.",
+     "She's brave and kind.",
+     "She's tall.",
+     "He's handsome."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 1: Vocabulary – Sports": [
+   {
+    "t": "mcq",
+    "q": "Which verb do we use with volleyball, hockey and badminton?",
+    "o": [
+     "go",
+     "do",
+     "make",
+     "play"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We say \"go swimming\".",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "In Julia's post, which sport uses wheels and a helmet?",
+    "o": [
+     "table tennis",
+     "volleyball",
+     "cycling",
+     "karate"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say \"do volleyball\".",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "\"You do it in water. You don't need a ball.\" Which sport is it?",
+    "o": [
+     "skiing",
+     "swimming",
+     "volleyball",
+     "cycling"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 2: Team Talk – How often do you do sports?": [
+   {
+    "t": "mcq",
+    "q": "Which is a frequency expression?",
+    "o": [
+     "by scooter",
+     "a helmet",
+     "very tall",
+     "once a week"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Arlo goes to school by scooter.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does \"I'm learning to swim\" mean?",
+    "o": [
+     "I never swim.",
+     "I swim every Monday.",
+     "I'm starting to swim and I'm not good at it yet.",
+     "I swim very well."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Sultan does more sports than Arlo.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is correct?",
+    "o": [
+     "I play football once twice.",
+     "I play football twice a week.",
+     "I play football two a week.",
+     "I twice play football a week."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 3: Grammar – Present simple and Present continuous": [
+   {
+    "t": "mcq",
+    "q": "Which tense is \"I'm reading the WOW! Quiz\"?",
+    "o": [
+     "Present simple",
+     "Past simple",
+     "Future",
+     "Present continuous"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We use the Present simple for habits and routines.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which group has only Present simple time words?",
+    "o": [
+     "now, every week, today",
+     "at the moment, after school, now",
+     "every week, once a week, after school",
+     "now, today, at the moment"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "\"I'm reading the WOW! Quiz\" is in the Present simple.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct pair: routine, then now.",
+    "o": [
+     "I goes to school every day. I'm write now.",
+     "I go to school by bus every day. I'm writing now.",
+     "I'm going to school every day. I write now.",
+     "I going to school every day. I writing now."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 4: Book club – A picture story": [
+   {
+    "t": "mcq",
+    "q": "What are two features of a picture story?",
+    "o": [
+     "There are no pictures and one character.",
+     "It has only photos.",
+     "It is a song with no words.",
+     "Pictures tell the story and there are many characters."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In a picture story, pictures tell the story.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a collocation with do?",
+    "o": [
+     "do swimming",
+     "do cycling",
+     "do photography",
+     "do football"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A picture story usually has only one character.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "What happens first in the story?",
+    "o": [
+     "Amani makes invitations.",
+     "There's no Wi-Fi.",
+     "The friends sing.",
+     "They put on a show."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 5: Vocabulary and Grammar – Hobbies and state verbs": [
+   {
+    "t": "mcq",
+    "q": "Which list has only state verbs?",
+    "o": [
+     "run, jump, swim, play",
+     "make, write, watch, collect",
+     "go, do, play, make",
+     "like, love, hate, prefer"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We say \"collect cards\".",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is the rule for state verbs?",
+    "o": [
+     "They are only used in questions.",
+     "They are only used in the past.",
+     "They are not usually used in continuous tenses.",
+     "They always end in -ing."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say \"play a diary\".",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence with prefer is correct?",
+    "o": [
+     "I prefers doing puzzles.",
+     "I prefer doing puzzles to watching cartoons.",
+     "I'm preferring doing puzzles.",
+     "I prefer do puzzles to watch cartoons."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 6: Culture and Project – Sports and hobbies around the world": [
+   {
+    "t": "mcq",
+    "q": "Which country is famous for Rippa Rugby?",
+    "o": [
+     "Oman",
+     "Canada",
+     "Japan",
+     "New Zealand"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Rugby is popular in New Zealand.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence uses the project language?",
+    "o": [
+     "In Oman, hiking is very uphill.",
+     "In Oman, hiking is very wheels.",
+     "In Oman, hiking is very popular.",
+     "In Oman, hiking is very snowy."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "People go windsurfing when there is no wind.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which three things should each mini-book page tell readers?",
+    "o": [
+     "the weather, the time and the day",
+     "when, where and what people have to do",
+     "the price, the shop and the colour",
+     "your name, age and class"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 7: English in action – Making and responding to suggestions": [
+   {
+    "t": "mcq",
+    "q": "Which is a way to make a suggestion?",
+    "o": [
+     "That sounds good.",
+     "No, I don't think so.",
+     "Yes, I could.",
+     "How about going to the video club?"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "\"Why don't you play hockey?\" is a suggestion.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "When is can usually strong?",
+    "o": [
+     "never",
+     "only in questions",
+     "in short answers like \"Yes, I can!\"",
+     "in every sentence"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "\"No, I don't think so\" means you agree.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct suggestion.",
+    "o": [
+     "How about to make models?",
+     "How about making models?",
+     "How about make models?",
+     "How about makes models?"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 8: Literacy – Reading an interview": [
+   {
+    "t": "mcq",
+    "q": "What does \"altitude\" mean?",
+    "o": [
+     "a cheap hotel",
+     "the way to a place",
+     "the food you eat",
+     "how high a place is above sea level"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Henry and Cody are visiting Argentina and Chile.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is an interview?",
+    "o": [
+     "a poem",
+     "a list of words",
+     "questions and answers with a person",
+     "a story with pictures"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "There is a lot of oxygen high in the Andes.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence plans a cycling route in Oman?",
+    "o": [
+     "We're going to cycle to Chile.",
+     "We're going to start in Muscat and cycle to Sur.",
+     "We're going to ski in Muscat.",
+     "We camp in the Andes."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 9: Writing – An interview": [
+   {
+    "t": "mcq",
+    "q": "What is Hashim's hobby?",
+    "o": [
+     "making videos",
+     "collecting cards",
+     "doing photography",
+     "making models"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A good interview uses lots of different question words.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is the structure of an interview?",
+    "o": [
+     "only answers",
+     "pictures and speech bubbles",
+     "introduction, questions, answers",
+     "title, poem, pictures"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Questions about \"the best\" or \"the biggest\" make interviews boring.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which question is written correctly?",
+    "o": [
+     "who helps you make videos",
+     "Who helps you make videos?",
+     "who helps you make videos?",
+     "Who helps you make videos."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 10: Over to you! and Review": [
+   {
+    "t": "mcq",
+    "q": "Which comment is not about sport?",
+    "o": [
+     "the karate club comment",
+     "the cycling book comment",
+     "the snorkelling in Oman comment",
+     "the comment about painting and art classes"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "John is reading a book about cycling.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is a good opinion comment?",
+    "o": [
+     "I like because.",
+     "The interview about.",
+     "I liked the interview about cycling because it was exciting.",
+     "Cycling interview liked."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The comment about painting and art classes is about sport.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Make a sentence: my parents / eat / sandwiches / every day.",
+    "o": [
+     "My parents eating sandwiches every day.",
+     "My parents eat sandwiches every day.",
+     "My parents eats sandwiches every day.",
+     "My parents are eating sandwiches every day."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Lesson 11: Get ready for… (exam practice)": [
+   {
+    "t": "mcq",
+    "q": "Why should you read the whole text first?",
+    "o": [
+     "to finish quickly",
+     "to count the words",
+     "to find the title",
+     "to understand the meaning before choosing answers"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In a gap text, you should read the whole text first.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which adjectives give opinions?",
+    "o": [
+     "tall, short, medium height",
+     "first, second, third",
+     "interesting, boring, exciting",
+     "blue, red, green"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say \"Some people don't like take photos of flowers.\"",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a good exam-style answer about a hobby?",
+    "o": [
+     "I like because.",
+     "I like making videos because it's creative and fun.",
+     "Videos.",
+     "Yes."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Graded reader 1: Let’s Play Volleyball!": [
+   {
+    "t": "mcq",
+    "q": "Which sport is each girl good at?",
+    "o": [
+     "Huda – karate, Maryam – gymnastics, Arwa – volleyball",
+     "Huda – volleyball, Maryam – karate, Arwa – gymnastics",
+     "All three are good at volleyball.",
+     "Huda – gymnastics, Maryam – volleyball, Arwa – karate"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The girls are at the sports centre.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What happens when Huda tries karate?",
+    "o": [
+     "She kicks really well.",
+     "She loves it.",
+     "She falls over.",
+     "She wins."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Huda never misses the ball.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Is can strong or weak in \"Yes, I can!\"?",
+    "o": [
+     "it changes to can't",
+     "strong",
+     "weak",
+     "silent"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 1 – Graded reader 2: The Blue Butterfly": [
+   {
+    "t": "mcq",
+    "q": "Which hobbies do people do in the park?",
+    "o": [
+     "skiing, karate, swimming, cycling",
+     "making models, cooking, writing a diary, gardening",
+     "playing video games, watching cartoons, hockey, rugby",
+     "doing puzzles, putting on a show, doing photography, playing table tennis"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Jood and Hassan are doing photography in the park.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a crown?",
+    "o": [
+     "an insect with wings",
+     "a pencil",
+     "something a king or queen wears on the head",
+     "a small table tennis ball"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Hassan wants to take a photo of a red butterfly.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence uses the Present continuous from the story?",
+    "o": [
+     "The boys putting on a show.",
+     "The boys are putting on a show.",
+     "The boys put on a show every day.",
+     "The boys puts on a show."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 1: Vocabulary – Devices": [
+   {
+    "t": "mcq",
+    "q": "Which list has three devices with screens?",
+    "o": [
+     "speaker, headphones, printer",
+     "password, app, website",
+     "headphones, speaker, password",
+     "smartphone, laptop, e-reader"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A laptop is a small computer you can carry.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a website?",
+    "o": [
+     "a kind of printer",
+     "a secret word",
+     "a place on the internet with information",
+     "a device for music"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Headphones let everyone in the room hear your music.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is correct?",
+    "o": [
+     "I use my printer to take photos.",
+     "I use my laptop to do my homework.",
+     "I use my headphones to print my homework.",
+     "I use my speaker to read books."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 2: Team Talk – A problem with technology": [
+   {
+    "t": "mcq",
+    "q": "What was Arlo's first problem?",
+    "o": [
+     "He forgot his password.",
+     "He lost his pen.",
+     "He was ill.",
+     "His laptop stopped working."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Arlo's laptop stopped working.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What was the problem after Arlo used his brother's computer?",
+    "o": [
+     "His brother was angry.",
+     "He forgot his name.",
+     "The Wi-Fi didn't work.",
+     "The pen didn't work."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Arlo forgot his password.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A: I lost my school bag. B: ___",
+    "o": [
+     "Why don't you?",
+     "Oh, dear! Where did you lose it?",
+     "You're so funny!",
+     "That sounds good!"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 3: Grammar – could/couldn’t, had to/didn’t have to": [
+   {
+    "t": "mcq",
+    "q": "What is the past of can't?",
+    "o": [
+     "can't",
+     "didn't",
+     "hadn't to",
+     "couldn't"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The past of can is could.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How did Hanan's mum thank her?",
+    "o": [
+     "She cooked her dinner.",
+     "She sent her an email.",
+     "She read her a story.",
+     "She gave her a new phone."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The past of don't have to is doesn't have to.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence about the past is correct?",
+    "o": [
+     "In the past people have to wrote letters.",
+     "In the past people had to write letters.",
+     "In the past people has to write letters.",
+     "In the past people can write emails."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 4: Book club – A poem": [
+   {
+    "t": "mcq",
+    "q": "What are the features of a poem?",
+    "o": [
+     "long paragraphs and no rhyme",
+     "questions and answers",
+     "pictures and speech bubbles",
+     "short lines, rhyme and verses"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The lines in poems are usually short.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a use of the smartphone in the poem?",
+    "o": [
+     "drive a car",
+     "wash clothes",
+     "take a selfie",
+     "cook dinner"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "\"Phone\" rhymes with \"map\".",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: The baby is sleeping, so talk ___.",
+    "o": [
+     "quietness",
+     "quietly",
+     "quiet",
+     "quieter"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 5: Vocabulary and Grammar – Using technology and comparative adverbs": [
+   {
+    "t": "mcq",
+    "q": "Which phrase means to put a photo on the internet?",
+    "o": [
+     "download a photo",
+     "take a photo",
+     "turn off a photo",
+     "upload a photo"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "\"Upload a photo\" means to put a photo on the internet.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which group is all technology actions?",
+    "o": [
+     "write a diary, collect cards, make models",
+     "go home, eat lunch, sleep",
+     "go online, search the internet, send a message",
+     "go skiing, play hockey, do karate"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The comparative of fast is more fast.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "\"I can play basketball well.\" What is the best comeback in the game?",
+    "o": [
+     "I can play basketball good than you!",
+     "I can play basketball better than you!",
+     "I can play basketball weller than you!",
+     "I can play basketball more well than you!"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 6: Culture and Project – Technology helps us": [
+   {
+    "t": "mcq",
+    "q": "How can children who are deaf wake up in the morning?",
+    "o": [
+     "with very loud music",
+     "with headphones",
+     "with a printer",
+     "with special alarm clocks that use lights and vibrations"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Some deaf children use special alarm clocks with lights and vibrations.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a spider diagram?",
+    "o": [
+     "a story with pictures",
+     "a poem with rhymes",
+     "a poster with the main idea in the middle and branches",
+     "a list of spiders"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Children in Oman who are deaf use the special alarm clocks in the text.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence about learning with a device is correct?",
+    "o": [
+     "I can learn science when I turn off everything.",
+     "I can watch videos on my computer to learn about science.",
+     "I can watch videos on my alarm clock to learn science.",
+     "I can print videos on my speaker."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 7: English in action – Asking for help": [
+   {
+    "t": "mcq",
+    "q": "What does the girl ask her mum to help with?",
+    "o": [
+     "Cooking dinner and cleaning",
+     "Buying a new phone",
+     "Playing a computer game",
+     "Printing her English homework and revising for an exam"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "“Could you show me how to use this?” is more polite than “Show me how to use this!”",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which question uses the language from the lesson to ask for help?",
+    "o": [
+     "Do you have a sister?",
+     "Is it raining?",
+     "Do you have time to help me?",
+     "What time is it?"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Mum helps the girl revise for her exam before dinner.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A: Do you have time to help me? B: Sorry, not now. What can A say next?",
+    "o": [
+     "Yes, I have time.",
+     "Could you help me after dinner?",
+     "Of course, it’s easy!",
+     "Thank you for helping me now."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 8: Literacy – Reading reviews": [
+   {
+    "t": "mcq",
+    "q": "What is GameFan’s bad point about TopCity?",
+    "o": [
+     "The graphics are bad.",
+     "It is too easy.",
+     "You can’t play online.",
+     "The game isn’t free."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In TopCity, players are looking for treasure.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do we call the things a reviewer likes and doesn’t like?",
+    "o": [
+     "questions and answers",
+     "words and letters",
+     "good points and bad points",
+     "titles and pictures"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "GameFan says TopCity is a free game.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence.",
+    "o": [
+     "Most of us is play games online at the weekend.",
+     "Most of us play games online at the weekend.",
+     "Most of us plays games online at the weekend.",
+     "Most of us playing games online at the weekend."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 9: Writing – A review": [
+   {
+    "t": "mcq",
+    "q": "What does an adverb do in a review?",
+    "o": [
+     "It names a thing.",
+     "It is always the title.",
+     "It asks a question.",
+     "It tells us how something happens."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A review should start with a short introduction.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a good introduction sentence for a review?",
+    "o": [
+     "Thank you for reading.",
+     "You can upload photos.",
+     "This is a great app for children who like learning languages.",
+     "It opens slowly."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "“Slowly” and “easily” are adjectives.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is a bad point?",
+    "o": [
+     "It helps you learn quickly.",
+     "It works slowly on my old phone.",
+     "It has brilliant drawing tools.",
+     "You can upload photos easily."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 10: Over to you! and Review": [
+   {
+    "t": "mcq",
+    "q": "What was the last verse of Katya’s poem about?",
+    "o": [
+     "playing football",
+     "cooking dinner",
+     "going to the beach",
+     "making videos"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Nadia’s app tells her if she says a word right.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which group of words is all devices?",
+    "o": [
+     "download, upload, print",
+     "football, tennis, volleyball",
+     "tablet, laptop, smartphone",
+     "screen, slowly, faster"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Katya changed the first verse of the poem.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "In the past, there were no computers at school. Which sentence fits?",
+    "o": [
+     "Students could use computers.",
+     "Students couldn’t use computers.",
+     "Students can use computers.",
+     "Students don’t have to use computers today."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 11: Get ready for… (exam practice)": [
+   {
+    "t": "mcq",
+    "q": "Why shouldn’t you choose the first thing you hear?",
+    "o": [
+     "The first thing is always wrong.",
+     "The dialogue is too short.",
+     "You only hear one picture.",
+     "The correct answer isn’t always at the beginning or the end."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In a listening test, you should listen to the whole dialogue before you choose.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which of these words is a device?",
+    "o": [
+     "café",
+     "volleyball",
+     "laptop",
+     "theatre"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The first picture you hear about is always the correct answer.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Definition: “You can watch a play here.” Which word is correct?",
+    "o": [
+     "printer",
+     "theatre",
+     "café",
+     "laptop"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Graded reader 1: The Lost Phone": [
+   {
+    "t": "mcq",
+    "q": "What could the boys see from the window?",
+    "o": [
+     "the sea and boats",
+     "tall buildings and shops",
+     "a desert and camels",
+     "fields, hills and lots of cows"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Jake and Finn are going to London.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Who saw the rabbit?",
+    "o": [
+     "Mum",
+     "The coach driver",
+     "Finn",
+     "Jake"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "From the window, the boys could see lots of camels.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence about the story.",
+    "o": [
+     "They has to take a coach.",
+     "They had to take a coach.",
+     "They have to took a coach.",
+     "They had to taking a coach."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Graded reader 2: The Animal App": [
+   {
+    "t": "mcq",
+    "q": "What does Dana’s new app do?",
+    "o": [
+     "It tells her the names of birds.",
+     "It plays music.",
+     "It takes photos of the sky.",
+     "It tells her the names of small animals."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Dana downloaded the Animal App on Friday.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is a comparative sentence from the story?",
+    "o": [
+     "It can fly.",
+     "It lives in the grass.",
+     "It can jump higher than a frog.",
+     "It is green."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Dana’s app tells her the names of birds.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which facts belong in a fact file about the grasshopper?",
+    "o": [
+     "It is a plant. It has petals.",
+     "It’s green with long legs. It can jump higher than a frog.",
+     "It’s yellow and black. It can fly.",
+     "It lives in a hedge. It has a big nose."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Lesson 12: Fun corner (optional lesson)": [
+   {
+    "t": "mcq",
+    "q": "Which is a good definition of “password”?",
+    "o": [
+     "It’s a thing you wear on your ears.",
+     "It’s a place where you watch films.",
+     "It’s a machine that prints paper.",
+     "It’s a secret word you type to open an app or computer."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "“It’s a thing you use to print your homework” defines a printer.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence starter is for a definition?",
+    "o": [
+     "Sorry, not now.",
+     "Of course.",
+     "It’s a thing you use to …",
+     "Do you have time to …?"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You put headphones on your eyes to watch a film.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the best diary sentence.",
+    "o": [
+     "I am play the game yesterday.",
+     "Today, I played the definitions game and I learnt to describe devices.",
+     "Tomorrow I play game.",
+     "Game definitions today I."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 2 – Consolidation: Grammar, vocabulary and progress": [
+   {
+    "t": "mcq",
+    "q": "Which is the correct form for the past?",
+    "o": [
+     "have to / doesn’t have to",
+     "has to / don’t have to",
+     "can / can’t",
+     "had to / didn’t have to"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Could is the past form of can.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence talks about now?",
+    "o": [
+     "People couldn’t send emails.",
+     "Children had to write with a pen.",
+     "I have to use a password.",
+     "My grandfather didn’t have to use passwords."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "“People didn’t could send emails.” is correct.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Last week I couldn’t go online. I ___ finish my homework at my cousin’s house.",
+    "o": [
+     "didn’t have to",
+     "had to",
+     "have to",
+     "has to"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 1: Vocabulary – Places and buildings": [
+   {
+    "t": "mcq",
+    "q": "Which place has kind doctors and nurses?",
+    "o": [
+     "the stadium",
+     "the factory",
+     "the palace",
+     "the hospital"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Big boats stop at a harbour.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is an old building in Oman that tells us about history?",
+    "o": [
+     "an office building",
+     "a sports centre",
+     "Nizwa castle",
+     "a skyscraper"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A skyscraper is a very small, old house.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "“I stayed there with my family. We could see the sea and the boats.” Which place is near?",
+    "o": [
+     "a hospital",
+     "a harbour",
+     "a factory",
+     "a stadium"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 2: Team Talk – Finding the sports centre": [
+   {
+    "t": "mcq",
+    "q": "Which places do the girls talk about?",
+    "o": [
+     "castle, harbour, palace, tower",
+     "cinema, library, café, bus",
+     "school, park, beach, market",
+     "apartment building, stadium, hospital, factory"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Reem and Julia are looking for the sports centre.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which expression shows surprise?",
+    "o": [
+     "Please.",
+     "Of course.",
+     "No way!",
+     "Right!"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Julia went to hospital because she fell off her bike.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence about a place you have been to.",
+    "o": [
+     "I going to the harbour last week.",
+     "I went to the harbour. I saw big boats.",
+     "I go to the harbour yesterday.",
+     "I goed to the harbour."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 3: Grammar – Relative pronouns": [
+   {
+    "t": "mcq",
+    "q": "Which rule is correct?",
+    "o": [
+     "who – things; where – time; when – people",
+     "where – people; who – places",
+     "when – places; which – people",
+     "that/which – things; where – places; when – time; who – people"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We use who for people.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence uses where correctly?",
+    "o": [
+     "Friday is a day where we rest.",
+     "A pen is a thing where you write.",
+     "A stadium is a place where you can watch matches.",
+     "A teacher is a person where helps us."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We use where for things.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Join: “I remember the day. We visited the chocolate factory that day.”",
+    "o": [
+     "I remember the day what we visited the chocolate factory.",
+     "I remember the day when we visited the chocolate factory.",
+     "I remember the day who we visited the chocolate factory.",
+     "I remember the day where we visited the chocolate factory."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 4: Book club – A mystery story": [
+   {
+    "t": "mcq",
+    "q": "Which two features does a mystery story have?",
+    "o": [
+     "a song and a dance",
+     "a recipe and a shopping list",
+     "a map and a timetable",
+     "a puzzle to solve and a kind of detective"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A mystery story usually has a puzzle to solve.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word is NOT a compound noun?",
+    "o": [
+     "classroom",
+     "football",
+     "palace",
+     "bookcase"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The painting showed three windows in the tower, but there are only two.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Define “guide” with a relative pronoun.",
+    "o": [
+     "A guide is a time when you travel.",
+     "A guide is a person who shows visitors around a place.",
+     "A guide is a place where you sleep.",
+     "A guide is a thing which you eat."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 5: Vocabulary and Grammar – Parts of buildings and the Past continuous": [
+   {
+    "t": "mcq",
+    "q": "Which group is all parts of buildings?",
+    "o": [
+     "castle, harbour, palace, stadium",
+     "coach, bush, tail, wind",
+     "printer, screen, laptop, icon",
+     "ceiling, wall, corridor, lift"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The ceiling is above your head in a room.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which building words are in the mystery story?",
+    "o": [
+     "harbour, stadium, factory, hospital",
+     "kitchen, garden, garage, bathroom",
+     "entrance, stairs, corridor, tower",
+     "lift, escalator, exit, roof"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You go out of a building through the entrance.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "“Were you sleeping when I called?” Choose the short answer.",
+    "o": [
+     "Yes, I am.",
+     "Yes, I was.",
+     "Yes, I were.",
+     "Yes, I did."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 6: Culture and Project – Ancient cities in our region": [
+   {
+    "t": "mcq",
+    "q": "What can you still see in Carthage today?",
+    "o": [
+     "skyscrapers and shopping malls",
+     "a new airport",
+     "only sand",
+     "city walls, Roman baths, statues and a theatre"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Baalbek is in Lebanon.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which three cities are in the culture texts?",
+    "o": [
+     "London, Paris and Rome",
+     "Bat, Qalhat and Ubar",
+     "Baalbek, Carthage and Petra",
+     "Muscat, Nizwa and Sur"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Carthage is in Jordan.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "“Carthage is in Lebanon.” True, false or doesn’t say?",
+    "o": [
+     "False – it’s in Jordan.",
+     "False – it’s in Tunisia.",
+     "True",
+     "Doesn’t say"
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 7: English in action – Giving directions in a building": [
+   {
+    "t": "mcq",
+    "q": "Where is the café?",
+    "o": [
+     "On the second floor, on the right",
+     "Upstairs, next to the bookshop",
+     "Outside the mall",
+     "On the ground floor, along the corridor and around the corner, on the left"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In the dialogue, it is the boy’s first visit to the shopping mall.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which phrase is NOT a direction?",
+    "o": [
+     "It’s on the left.",
+     "Take the escalator.",
+     "Sorry, not now.",
+     "Go straight on."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The bookshop is downstairs on the right.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Directions from the classroom: which sentence is clear and correct?",
+    "o": [
+     "Go down the corridor up the roof.",
+     "Go along the corridor, go down the stairs and it’s the first door on the left.",
+     "Go along the stairs on the ceiling.",
+     "It’s the first door in the left."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 8: Literacy – Reading a short story": [
+   {
+    "t": "mcq",
+    "q": "What does “whispered” mean?",
+    "o": [
+     "shouted loudly",
+     "drew quickly",
+     "flew fast",
+     "said very quietly"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "At the start, Rasha had no ideas for a story.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How can you guess the meaning of a new word in a story?",
+    "o": [
+     "Always ask a friend first.",
+     "Close the book.",
+     "Look at the pictures and the words around it.",
+     "Skip the whole page."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "To whisper means to shout very loudly.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct story sentence.",
+    "o": [
+     "The bird flying over the city when Rasha was yell.",
+     "The bird was flying over the city when Rasha yelled.",
+     "The bird were flying over the city when Rasha yelled.",
+     "The bird was fly over the city when Rasha yelled."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lesson 9: Writing – A short story": [
+   {
+    "t": "mcq",
+    "q": "What was Ammar’s problem in the story?",
+    "o": [
+     "He lost his ticket.",
+     "He was late for the match.",
+     "He couldn’t find Qais.",
+     "He fell down some steps and broke his foot."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In the model story, Ammar and Qais were at the stadium.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do we put around direct speech?",
+    "o": [
+     "numbers",
+     "question marks only",
+     "quotation marks",
+     "brackets"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Amjed Rashid is Ammar’s brother.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence uses an adverb well?",
+    "o": [
+     "‘Thank you!’ said happy Ammar happily.",
+     "‘Thank you!’ said Ammar happily.",
+     "‘Thank you!’ said Ammar happy.",
+     "‘Thank you!’ happily Ammar."
+    ],
+    "a": 2
+   }
+  ],
+  "Unit 3 – Lessons 10–11: Over to you!, Review and Get ready for…": [
+   {
+    "t": "mcq",
+    "q": "What did the girls use to make models?",
+    "o": [
+     "stones, sand and water",
+     "only paper",
+     "wood and metal",
+     "cardboard boxes, plastic bottles, paper straws, paint and glue"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In Petra, the writer walked along streets where people walked 2,000 years ago.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is the Unit 3 WOW! Question?",
+    "o": [
+     "What hobbies do you have?",
+     "How do animals live?",
+     "Why are some places and buildings important to us?",
+     "How can technology help us?"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "When you finish a cloze task, you should never read the text again.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct relative pronoun: An architect is a person ___ designs buildings.",
+    "o": [
+     "which",
+     "who",
+     "where",
+     "when"
+    ],
+    "a": 2
+   }
+  ],
+  "Learning Club 1 – Lesson 1: Language booster – Places and directions": [
+   {
+    "t": "mcq",
+    "q": "Which group shows the new town places?",
+    "o": [
+     "ceiling, wall, corridor, lift",
+     "printer, screen, laptop, icon",
+     "grass, hedge, flower, bee",
+     "college, airport, bridge, fire station"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Firefighters work at a fire station.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a direction, not a place?",
+    "o": [
+     "square",
+     "office",
+     "Take the second left.",
+     "fire station"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A bridge is a place where planes land.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct directions.",
+    "o": [
+     "Go past on the left of straight.",
+     "Turn left, go past the hospital and go straight on.",
+     "Turn left, go past at the hospital straight.",
+     "Left turn hospital past go."
+    ],
+    "a": 2
+   }
+  ],
+  "Learning Club 1 – Lessons 2–3: CLIL Science – How can we classify technology?": [
+   {
+    "t": "mcq",
+    "q": "Which ways of classifying technology are in the text?",
+    "o": [
+     "colour, size and price",
+     "big, small, heavy and light",
+     "hot, cold, wet and dry",
+     "uses the internet, uses machines, for cooking/cleaning, old and new"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Technology uses science to make things that help us.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do we use to organise technology into groups in this lesson?",
+    "o": [
+     "a brochure",
+     "a review",
+     "a tree diagram",
+     "a story plan"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A steam train is new technology.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Write two ways to classify technology. Which answer is best?",
+    "o": [
+     "by price only",
+     "by use (internet/machines) and by age (old/new)",
+     "by colour and by smell",
+     "by name and by letter"
+    ],
+    "a": 2
+   }
+  ]
+ }
+}

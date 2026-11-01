@@ -123,7 +123,7 @@ function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], same
 
 // ---------- browser + wizard driving ----------
 const FIXED_NOW = '2026-09-05';   // the wizard's «today» (?now=): the day before the plan starts, unless a scenario says otherwise
-const GAMES = 'https://games.test/';   // lesson activities (homework questions), served by launch()
+const GAMES = 'https://games.test/';   // homework files (five questions per lesson), served by launch()
 // cont: Noor already holds preps of this subject made by an earlier «تحضير الفصل كاملًا» on this device (?cont=1, test only) —
 // the run continues it; without it the tool refuses a full term over existing preps (owner 2026-11-01, scenario 20)
 async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some((r) => r.preexisting) } = {}) {
@@ -133,14 +133,11 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
     viewport: { width: 1100, height: 900 },
   });
   await ctx.route('https://lms.moe.gov.om/**', (r) => noor.handle(r).catch((e) => { console.log('    route error', e.message); return r.abort().catch(() => {}); }));
-  // lesson activities for the homework questions (?games=): every lesson of the running package → a real activity file
+  // homework files (?games=): <key>.json with five questions for every lesson of the running package (from a real file)
   await ctx.route(GAMES + '**', (r) => {
-    const u = new URL(r.request().url()).pathname.split('/').filter(Boolean);
-    const cors = { 'Access-Control-Allow-Origin': '*' };
-    if (u[u.length - 1] === 'index.json') return r.fulfill({ status: 200, contentType: 'application/json', headers: cors, body: JSON.stringify(Object.fromEntries(lessonGroups(PKG).map((g, i) => [g.sessions[0].lesson, i + 1]))) });
-    const n = parseInt(u[u.length - 1], 10);
-    const f = path.join(REPO, 'site/games/en-5', `${((n - 1) % 20) + 1}.json`);
-    return r.fulfill({ status: 200, contentType: 'application/json', headers: cors, body: fs.readFileSync(f, 'utf8') });
+    const src = Object.values(JSON.parse(fs.readFileSync(path.join(REPO, 'site/homework/en-5.json'), 'utf8')).lessons);
+    const lessons = Object.fromEntries(lessonGroups(PKG).map((g, i) => [g.sessions[0].lesson, src[i % src.length]]));
+    return r.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({ key: 'test', lessons }) });
   });
   let [sw] = ctx.serviceWorkers();
   if (!sw) sw = await ctx.waitForEvent('serviceworker');

@@ -13,7 +13,7 @@ import {
 } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { diffDays, addDays } from './dates.js';
-import { lessonGame, buildQuestions, hwDates, hwTitle, hwPageOp, HW_MARK } from './homework.js';
+import { lessonHomework, hwDates, hwTitle, hwPageOp, HW_MARK } from './homework.js';
 import { AFAQ } from './afaq-config.js';
 import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck, installUrl, fillLog, flushFillLog, sendNoorTree, getNoorTree } from './remote.js';
 
@@ -33,7 +33,7 @@ const NOW_FIXED = q.get('debug') === '1' && /^\d{4}-\d{2}-\d{2}$/.test(q.get('no
 const todayIso = () => NOW_FIXED || isoOf(new Date());
 // الآن للواجبات: مع التاريخ الثابت للاختبار يكون الوقت السادسة صباحًا من ذلك اليوم
 const nowDate = () => (NOW_FIXED ? new Date(NOW_FIXED + 'T06:00:00') : new Date());
-// مصدر أسئلة الواجبات للاختبار الآلي فقط (?debug=1&games=…)
+// مصدر ملفات الواجبات للاختبار الآلي فقط (?debug=1&games=…)
 const GAMES_DEBUG = q.get('debug') === '1' && /^https?:\/\//.test(q.get('games') || '') ? q.get('games') : '';
 
 let packages = [], pkg = null, state = null, settings = null;
@@ -2322,12 +2322,12 @@ async function hwMark(key, aid) {
 async function execMain(func, ...args) {
   try { const r = await chrome.scripting.executeScript({ target: { tabId }, world: 'MAIN', func, args }); return r && r[0] ? r[0].result : null; } catch (e) { return null; }
 }
-// أسئلة الدرس: من أي حصة في الدرس تحمل رابط أنشطته
+// أسئلة الدرس من ملف واجبات المادة (باسم الدرس في ملف التحضير)
 async function hwQuestions(p) {
   const seen = new Set();
   for (const s of (p && p.sessions) || []) {
-    const k = s.lesson.lesson + '|' + (s.lesson.notes ? 1 : 0); if (seen.has(k)) continue; seen.add(k);
-    const qs = buildQuestions(await lessonGame(pkg, s.lesson, WIZ.gamesBase || undefined));
+    const k = s.lesson.lesson; if (seen.has(k)) continue; seen.add(k);
+    const qs = await lessonHomework(pkg, s.lesson, WIZ.gamesBase || undefined);
     if (qs.length) return qs;
   }
   return [];

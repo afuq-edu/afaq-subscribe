@@ -3,6 +3,8 @@
 // نور (Classera): «إضافة واجب جديد» ← homeworks/create/cid:… ثم «إضافة مجموعة مفردات دفعة واحدة» ← questions/add_bulk_questions/cid/aid/type
 
 export const GAMES_BASE = 'https://afuq-edu.github.io/afaq-subscribe/games/';
+// ملفات الواجبات (مثل ملفات التحضير): لكل باقة ملف فيه لكل درس أسئلته الخمسة وإجاباتها — site/homework/<الباقة>.json
+export const HW_BASE = 'https://afuq-edu.github.io/afaq-subscribe/homework/';
 export const HW_MARK = 2;          // درجتان لكل سؤال — المجموع ١٠
 export const HW_DUE_DAYS = 3;      // التسليم بعد ٣ أيام من النشر (كما يقترح نور)
 export const HW_LATE_DAYS = 2;     // التسليم المتأخر بعد التسليم بيومين
@@ -17,28 +19,27 @@ export function gameRef(lesson) {
 // باقة الأنشطة: معرّف الباقة دون «-2» (الفترتان تشتركان في أنشطة واحدة) ولا «-tN»
 export function gameKey(pkg) {
   const id = String((pkg && pkg.remote && pkg.remote.package_id) || (pkg && pkg.id) || '');
-  return id.replace(/-t\d+(-\d+)?$/, '').replace(/-2$/, '');
+  // «ar-2» الصف الثاني فترة واحدة · «ar-2-2» فترتان · «bio-9-t1» ملف الفصل الأول
+  return id.replace(/-t\d+$/, '').replace(/^([a-z]+-\d+)-2$/, '$1');
 }
-const idxCache = new Map();
-// فهرس أنشطة الباقة: اسم الدرس في الملف ← رقمه (site/games/<pkg>/index.json)
-export async function fetchGameIndex(key, base = GAMES_BASE) {
+const hwCache = new Map();
+// ملف واجبات الباقة: { key, subject, grade, lessons: { «اسم الدرس في الملف»: [ { t: 'mcq'|'tf', q, o?, a } ×5 ] } }
+export async function fetchHomeworkFile(key, base = HW_BASE) {
   if (!key) return null;
-  const url = `${base}${key}/index.json`;
-  if (idxCache.has(url)) return idxCache.get(url);
+  const url = `${base}${key}.json`;
+  if (hwCache.has(url)) return hwCache.get(url);
   let j = null;
   for (let i = 0; i < 3 && !j; i++) {
     try { const r = await fetch(url, { cache: 'no-cache' }); if (r.ok) j = await r.json(); else if (r.status === 404) break; } catch (e) { await new Promise((res) => setTimeout(res, 800 * (i + 1))); }
   }
-  idxCache.set(url, j);
+  hwCache.set(url, j);
   return j;
 }
-export async function lessonGame(pkg, lesson, base = GAMES_BASE) {
-  const ref = gameRef(lesson);
-  if (ref) return fetchGame(ref, base);
-  const key = gameKey(pkg);
-  const idx = await fetchGameIndex(key, base);
-  const n = idx && lesson ? idx[lesson.lesson] : null;
-  return n ? fetchGame({ pkg: key, n }, base) : null;
+// أسئلة درس من ملف الواجبات، جاهزة لنموذج نور
+export async function lessonHomework(pkg, lesson, base = HW_BASE) {
+  const f = await fetchHomeworkFile(gameKey(pkg), base);
+  const qs = f && f.lessons && lesson ? f.lessons[lesson.lesson] : null;
+  return Array.isArray(qs) ? toNoorRows(qs) : [];
 }
 const gameCache = new Map();
 export async function fetchGame(ref, base = GAMES_BASE) {
@@ -62,7 +63,8 @@ const isAr = (s) => /[؀-ۿ]/.test(String(s || ''));
 // ترتيب ثابت للخيارات (لا عشوائية: الإعادة تعطي الواجب نفسه)، والجواب الصحيح ليس الأول دائمًا
 function rotate(arr, k) { const n = arr.length; return arr.map((_, i) => arr[(i + k) % n]); }
 
-// خمسة أسئلة: ثلاثة اختيار من متعدد (من مستويات مختلفة) وصح وخطأ اثنان (واحد صحيح وواحد خاطئ إن وُجدا)
+// خمسة أسئلة من أنشطة الدرس: ثلاثة اختيار من متعدد (من مستويات مختلفة) وصح وخطأ اثنان (واحد صحيح وواحد خاطئ إن وُجدا)
+// بصيغة ملف الواجبات: { t: 'mcq', q, o: [..], a: رقم الصحيح من 1 } · { t: 'tf', q, a: true|false } — بالترتيب: اختيار، صح وخطأ، اختيار، صح وخطأ، اختيار
 export function buildQuestions(game) {
   if (!game) return [];
   const mcq = (game.mcq || []).filter((q) => q && q.q && Array.isArray(q.o) && q.o.length >= 2 && q.o.every((o) => String(o || '').trim()));
@@ -74,32 +76,27 @@ export function buildQuestions(game) {
     return out;
   };
   const m = pickSpread(mcq, Math.min(3, mcq.length));
-  let t = [];
   const tt = tf.filter((q) => q.t), tff = tf.filter((q) => !q.t);
-  if (tt.length && tff.length) t = [tt[0], tff[0]];
-  else t = tf.slice(0, 2);
+  const t = tt.length && tff.length ? [tt[0], tff[0]] : tf.slice(0, 2);
   // ينقص نوع: يكمل الآخر حتى خمسة
-  const need = 5 - m.length - t.length;
-  if (need > 0) {
-    const moreM = mcq.filter((q) => !m.includes(q)).slice(0, need);
-    m.push(...moreM);
-    const need2 = 5 - m.length - t.length;
-    if (need2 > 0) t.push(...tf.filter((q) => !t.includes(q)).slice(0, need2));
-  }
-  const p = (s) => `<p${isAr(s) ? ' dir="rtl"' : ''}>${esc(String(s).trim())}</p>`;
-  const rows = [];
-  m.forEach((q, i) => {
-    const opts = q.o.slice(0, 6).map((o) => String(o).trim());
-    const k = (i + 1) % opts.length;   // الصحيح أولًا في الملف ← يدور إلى موضع مختلف في كل سؤال
-    const rot = rotate(opts, k);
-    rows.push({ type: 'mcq', text: p(q.q), options: rot, correct: rot.indexOf(opts[0]) + 1 });
+  if (m.length + t.length < 5) m.push(...mcq.filter((q) => !m.includes(q)).slice(0, 5 - m.length - t.length));
+  if (m.length + t.length < 5) t.push(...tf.filter((q) => !t.includes(q)).slice(0, 5 - m.length - t.length));
+  const clean = (x) => String(x).replace(/\s+/g, ' ').trim();
+  const mc = m.map((q, i) => {
+    const opts = q.o.slice(0, 6).map(clean);
+    const rot = rotate(opts, (i + 1) % opts.length);   // الصحيح أولًا في الأنشطة ← موضع مختلف في كل سؤال (ثابت لا عشوائي)
+    return { t: 'mcq', q: clean(q.q), o: rot, a: rot.indexOf(opts[0]) + 1 };
   });
-  t.forEach((q) => rows.push({ type: 'tfq', text: p(q.s), correct: q.t ? 1 : 2 }));
-  // الترتيب: اختيار، صح وخطأ، اختيار، صح وخطأ، اختيار
-  const mc = rows.filter((r) => r.type === 'mcq'), tq = rows.filter((r) => r.type === 'tfq');
+  const tq = t.map((q) => ({ t: 'tf', q: clean(q.s), a: !!q.t }));
   const out = [];
   while (mc.length || tq.length) { if (mc.length) out.push(mc.shift()); if (tq.length) out.push(tq.shift()); }
   return out.slice(0, 5);
+}
+// سؤال من ملف الواجبات ← صف في «إضافة مجموعة مفردات دفعة واحدة» (النص بصيغة محرر نور)
+export function toNoorRows(qs) {
+  const p = (s) => `<p${isAr(s) ? ' dir="rtl"' : ''}>${esc(String(s).trim())}</p>`;
+  return (qs || []).filter((x) => x && x.q && (x.t === 'tf' ? typeof x.a === 'boolean' : Array.isArray(x.o) && x.o.length >= 2 && x.a >= 1 && x.a <= x.o.length))
+    .map((x) => (x.t === 'tf' ? { type: 'tfq', text: p(x.q), correct: x.a ? 1 : 2 } : { type: 'mcq', text: p(x.q), options: x.o.slice(0, 6).map((o) => String(o).trim()), correct: x.a }));
 }
 
 const pad = (n) => String(n).padStart(2, '0');

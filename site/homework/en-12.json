@@ -1,0 +1,4598 @@
+{
+ "key": "en-12",
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثاني عشر",
+ "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ)",
+ "lessons": {
+  "Lead-in: ‘retail therapy’ and the core words of Theme 1": [
+   {
+    "t": "mcq",
+    "q": "What does 'retail therapy' mean?",
+    "o": [
+     "a treatment for illness in a shop",
+     "a job in a hospital shop",
+     "a long illness caused by shopping",
+     "a way to feel better by shopping"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Therapy' means the treatment of an illness or a disease over a long period.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Why is 'retail therapy' a good title for Theme 1?",
+    "o": [
+     "The units are about sports",
+     "The units are about history only",
+     "The units are about shopping, buying and selling",
+     "The units are about hospitals"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Retail therapy' is a medical treatment that doctors give in hospitals.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "'Just do it' is a short phrase used by a company in its adverts. It is a ______.",
+    "o": [
+     "therapy",
+     "slogan",
+     "logo",
+     "mall"
+    ],
+    "a": 2
+   }
+  ],
+  "Dhow and tanker: comparing pictures; skimming a text": [
+   {
+    "t": "mcq",
+    "q": "What is skimming used for?",
+    "o": [
+     "to learn every new word",
+     "to write a summary",
+     "to check spelling",
+     "to get the gist of a text"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The tanker is the ship that carries oil.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What can you look at first when you skim?",
+    "o": [
+     "the page numbers",
+     "only the pictures' colours",
+     "the title and first lines",
+     "only the last word"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The tanker is made of wood and has a triangular sail.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You are looking for articles for a school project. How can skimming help?",
+    "o": [
+     "It helps you draw pictures",
+     "It helps you choose useful articles fast",
+     "It helps you spell words",
+     "It helps you write faster"
+    ],
+    "a": 2
+   }
+  ],
+  "Matching headings, vocabulary development and Time to Talk": [
+   {
+    "t": "mcq",
+    "q": "What is a topic sentence?",
+    "o": [
+     "the last sentence of the text",
+     "a sentence with a new word",
+     "the title of the text",
+     "the sentence that gives the main idea of a paragraph"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A topic sentence gives the main idea of a paragraph.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Is the topic sentence always the first sentence?",
+    "o": [
+     "No, it is always the last",
+     "There is no topic sentence",
+     "No, usually but not always",
+     "Yes, always"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The topic sentence is always the last sentence of a paragraph.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your friend offers you his pen for your notebook, and you are happy. What do you say?",
+    "o": [
+     "I need a dictionary.",
+     "That's a fair deal.",
+     "What will you give me?",
+     "Where is it from?"
+    ],
+    "a": 2
+   }
+  ],
+  "Workbook practice: skimming a Fact File and multiple choice": [
+   {
+    "t": "mcq",
+    "q": "Which organisation deals with the rules of trade between countries?",
+    "o": [
+     "the Silk Road",
+     "Oman Air",
+     "the United Nations Bank",
+     "the World Trade Organisation"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The World Trade Organisation deals with the rules of trade between countries.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "When did Oman become a member of the WTO?",
+    "o": [
+     "19 November 2000",
+     "9 October 2000",
+     "9 November 2000",
+     "9 November 1999"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In Activity 1 you may write as many words as you like for each answer.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "How were goods carried in modern times, according to Activity 1?",
+    "o": [
+     "by plane only",
+     "by gigantic supertankers",
+     "by wooden dhows only",
+     "by camel only"
+    ],
+    "a": 2
+   }
+  ],
+  "Branding: discussion and reading ‘A Short History of Branding’ / Grammar Recall: past simple and past simple passive": [
+   {
+    "t": "mcq",
+    "q": "What does 'logo' mean?",
+    "o": [
+     "a long advert on TV",
+     "the price of a product",
+     "a shop in a mall",
+     "a small design that is the official symbol of a company"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A logo is a small design that is the official symbol of a company.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Where does the name 'Adidas' come from?",
+    "o": [
+     "a type of shoe",
+     "the Spanish word for sport",
+     "Adi (Adolf Dassler's nickname) + Das from Dassler",
+     "a city in Germany"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The Chevrolet Nova sold very well in Latin America.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence has a negative past simple verb?",
+    "o": [
+     "He made shoes.",
+     "The car did not sell well.",
+     "The logo was created.",
+     "The name was shortened."
+    ],
+    "a": 2
+   }
+  ],
+  "Past simple and passive practice: irregular verbs and rewriting": [
+   {
+    "t": "mcq",
+    "q": "What is the past simple of 'freeze'?",
+    "o": [
+     "freezed",
+     "frozen",
+     "freeze",
+     "froze"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The past simple of 'tear' is 'tore'.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which tense is 'Apple remained in first place'?",
+    "o": [
+     "present simple",
+     "present perfect",
+     "past simple active",
+     "past simple passive"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The past simple of 'freeze' is 'freezed'.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Fill in: The first iPad ______ (release) in 2010.",
+    "o": [
+     "is released",
+     "was released",
+     "released",
+     "were released"
+    ],
+    "a": 2
+   }
+  ],
+  "Activate Your English: asking and answering questions to complete a task": [
+   {
+    "t": "mcq",
+    "q": "Which auxiliary do we use with active past simple questions?",
+    "o": [
+     "was",
+     "were",
+     "has",
+     "did"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In an information-gap task, each partner has information the other needs.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which question is passive?",
+    "o": [
+     "Who first created jeans?",
+     "Where did he go?",
+     "What was the cloth coloured with?",
+     "What did he make for the miners?"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We use 'did' with passive questions in the past.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your partner's answer is 'He made trousers for the miners.' What was your question?",
+    "o": [
+     "What he make for the miners?",
+     "What did he make for the miners?",
+     "What was he made for the miners?",
+     "What did he made for the miners?"
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in, prediction and skimming: what is a ‘shopaholic’?": [
+   {
+    "t": "mcq",
+    "q": "What is a shopaholic?",
+    "o": [
+     "someone who works in a shop",
+     "someone who hates shopping",
+     "someone who sells online",
+     "someone who is a compulsive buyer and addicted to shopping"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A shopaholic is someone who is addicted to shopping.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "According to the lesson discussion, what do men enjoy about shopping?",
+    "o": [
+     "bargaining all day",
+     "window-shopping",
+     "the result",
+     "the whole experience"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A compulsive buyer can easily control how much they spend.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which is the best way to find the meaning of 'shopaholic' in 2 minutes?",
+    "o": [
+     "translate every line",
+     "skim the article",
+     "read every word twice",
+     "learn the article by heart"
+    ],
+    "a": 2
+   }
+  ],
+  "Reading in detail: comprehension and reasons for over-shopping": [
+   {
+    "t": "mcq",
+    "q": "How can the women afford to spend so much money?",
+    "o": [
+     "They found money",
+     "Their shops are free",
+     "They sell their clothes",
+     "They have very good jobs"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The women can afford to spend a lot because they have very good jobs.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'consolation' mean?",
+    "o": [
+     "a credit card",
+     "a shopping list",
+     "comfort for someone who is sad",
+     "a big discount"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Katy feels bad about spending because she thinks she does not deserve a treat.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which person is most likely to get credit card debt?",
+    "o": [
+     "someone who pays in cash only",
+     "someone who buys things they cannot pay for",
+     "someone who saves every month",
+     "someone who never shops"
+    ],
+    "a": 2
+   }
+  ],
+  "Guessing vocabulary from context and make/do collocations": [
+   {
+    "t": "mcq",
+    "q": "What is a collocation?",
+    "o": [
+     "a word with no meaning",
+     "a type of punctuation",
+     "a long paragraph",
+     "a group of words that often go together"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The words before and after an unknown word can help you guess its meaning.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Why must you learn make/do collocations by heart?",
+    "o": [
+     "They are only used in writing",
+     "They change every year",
+     "There are no rules about which words go with each verb",
+     "They are very long"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A collocation is a word that has no meaning.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: My father ______ the shopping every Thursday.",
+    "o": [
+     "did made",
+     "does",
+     "makes",
+     "make"
+    ],
+    "a": 2
+   }
+  ],
+  "Listening for specific information; word variables; vocabulary practice": [
+   {
+    "t": "mcq",
+    "q": "Who are the three speakers in the listening?",
+    "o": [
+     "Vanessa, Katy and the presenter",
+     "Juliet, Adi and Levi",
+     "three shop assistants",
+     "the presenter, Dr Michael Thrift and Susan Spender"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'-holic' in words like 'workaholic' means addicted to something.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a synonym?",
+    "o": [
+     "a long sentence",
+     "a type of question",
+     "a word with the same or similar meaning",
+     "a word with the opposite meaning"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A synonym is a word with the opposite meaning.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a feature of a souq rather than a mall?",
+    "o": [
+     "big fashion chain stores",
+     "bargaining with friendly shopkeepers",
+     "a multi-level car park",
+     "wide walkways"
+    ],
+    "a": 2
+   }
+  ],
+  "Predicting the content of a talk (Listening 1.4.1)": [
+   {
+    "t": "mcq",
+    "q": "According to the guide, which place is best for quick, easy shopping?",
+    "o": [
+     "souqs",
+     "street stalls",
+     "online shops",
+     "shopping malls"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The tour guide talks about shopping in malls and souqs in Muscat.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do tourists love about souqs?",
+    "o": [
+     "big fashion chains",
+     "wide walkways",
+     "narrow passages, tiny shops and friendly shopkeepers",
+     "multi-level car parks"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Opportunities for bargaining exist mainly in shopping malls.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A tourist wants a traditional shopping experience and likes to bargain. Where should she go?",
+    "o": [
+     "an airport",
+     "a souq",
+     "a mall",
+     "a car park"
+    ],
+    "a": 2
+   }
+  ],
+  "Predicting and listening for specific information; Soundbites": [
+   {
+    "t": "mcq",
+    "q": "Where does Tom like to shop?",
+    "o": [
+     "at the Muttrah souq",
+     "online",
+     "at a street market",
+     "at the City Mall"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Tom likes to shop at the City Mall.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which things does Carol like at the souq?",
+    "o": [
+     "cinemas and cafés",
+     "car parks and lifts",
+     "jewellery, antiques, pashminas and bargaining",
+     "electronics and sales"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Tom is really into jewellery and antiques.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You love computer games. Which sentence sounds most natural?",
+    "o": [
+     "I'm into not computer games.",
+     "I'm really into computer games.",
+     "I'm not a fan of computer games.",
+     "I'd rather computer games."
+    ],
+    "a": 2
+   }
+  ],
+  "Expressing likes, dislikes and preferences: Activity 4, class survey and discussion": [
+   {
+    "t": "mcq",
+    "q": "Which phrase is used to ask for someone's opinion?",
+    "o": [
+     "Personally speaking...",
+     "In my view...",
+     "I think that...",
+     "How do you feel about...?"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'I'm not very keen on eating out' expresses a dislike.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Where can you find helpful phrases for writing about the results?",
+    "o": [
+     "the answer key",
+     "the dictionary only",
+     "the Useful language box",
+     "the cover of the book"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'I'd rather shop in a souq than in a mall' expresses a dislike of souqs.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You want your friend's opinion after giving yours. What do you say?",
+    "o": [
+     "In my view.",
+     "How about you?",
+     "I'm not keen on it.",
+     "I'd rather not."
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in: advertising, appealing or appalling? and slogans": [
+   {
+    "t": "mcq",
+    "q": "What is the main purpose of advertising?",
+    "o": [
+     "to give free gifts",
+     "to teach grammar",
+     "to report the news",
+     "to persuade people to buy a product or service"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The main purpose of advertising is to persuade people to buy a product or service.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Besides products, what can adverts promote?",
+    "o": [
+     "only cars",
+     "nothing else",
+     "services or organisations such as charities",
+     "only food"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Appealing' means very bad or shocking.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "An advert makes you feel your phone is old and you must buy a new one. What is it trying to do?",
+    "o": [
+     "teach you spelling",
+     "persuade you",
+     "inform you about history",
+     "make you laugh only"
+    ],
+    "a": 2
+   }
+  ],
+  "Vocabulary of advertising and evaluating adverts": [
+   {
+    "t": "mcq",
+    "q": "What part of speech are words like 'stylish' and 'nutritious'?",
+    "o": [
+     "verbs",
+     "nouns",
+     "adverbs",
+     "adjectives"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Words like 'stylish', 'refreshing' and 'luxurious' are adjectives.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which technique is used in a washing machine ad that shows what the machine can do?",
+    "o": [
+     "window-shopping",
+     "bargaining",
+     "hard-sell",
+     "soft-sell"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Nutritious' is a good adjective for a mobile phone.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which is an example of an advert that gives a false impression?",
+    "o": [
+     "A timetable of buses",
+     "A car ad suggesting your life will become more exciting if you buy the car",
+     "A label showing the price",
+     "A list of ingredients"
+    ],
+    "a": 2
+   }
+  ],
+  "Writing an evaluation of an advertisement": [
+   {
+    "t": "mcq",
+    "q": "What must an evaluation include besides a description?",
+    "o": [
+     "a list of prices",
+     "a picture",
+     "a slogan only",
+     "the writer's opinion supported by reasons"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "An evaluation includes the writer's opinion supported by reasons.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What are the parts of the model evaluation?",
+    "o": [
+     "question, answer, quiz",
+     "price, logo, slogan",
+     "introduction, description, opinion with reasons",
+     "title, poem, ending"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "An evaluation only describes the advert.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your partner's draft has spelling mistakes. What should they do?",
+    "o": [
+     "delete the opinion",
+     "correct them in a second draft",
+     "ignore them",
+     "start a new topic"
+    ],
+    "a": 2
+   }
+  ],
+  "Across Cultures: Country Focus – Egypt": [
+   {
+    "t": "mcq",
+    "q": "Which seas border Egypt?",
+    "o": [
+     "the Black Sea and the Red Sea",
+     "the Arabian Sea and the North Sea",
+     "the Caspian Sea and the Mediterranean Sea",
+     "the Mediterranean Sea and the Red Sea"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Egypt is bordered by the Mediterranean Sea and the Red Sea.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which of these is a source of income in Egypt?",
+    "o": [
+     "the Amazon River",
+     "the Etihad Rail",
+     "the Suez Canal",
+     "the Silk Road"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Egypt's land is mostly forests and lakes.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: Al-Azhar is a ______ university that students from many countries want to join.",
+    "o": [
+     "refreshing",
+     "prestigious",
+     "fertile",
+     "nutritious"
+    ],
+    "a": 2
+   }
+  ],
+  "Reading for Pleasure: The Ethics of Advertising": [
+   {
+    "t": "mcq",
+    "q": "What does 'Caveat emptor' mean?",
+    "o": [
+     "The seller is always right",
+     "Free for everyone",
+     "Buy now, pay later",
+     "Let the buyer beware"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Caveat emptor' means 'Let the buyer beware'.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a mock-up?",
+    "o": [
+     "the price label",
+     "a TV channel",
+     "a copy made to look like the real product",
+     "the real product"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A TV advert usually lasts several hours.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A food ad shows a burger that is much bigger than the real one. Which word fits?",
+    "o": [
+     "honest",
+     "misleading",
+     "ethical",
+     "regulated"
+    ],
+    "a": 2
+   }
+  ],
+  "Review and Reference: Theme 1 learning objectives and core words test": [
+   {
+    "t": "mcq",
+    "q": "What does 'excessive' mean?",
+    "o": [
+     "too little",
+     "very cheap",
+     "very old",
+     "too much"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Excessive' means too much.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which core word means 'rich'?",
+    "o": [
+     "economic",
+     "ritual",
+     "affluent",
+     "compulsive"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Export' means buying goods from another country.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence uses 'mislead' correctly?",
+    "o": [
+     "She is mislead to shopping.",
+     "Some adverts mislead customers about what a product can do.",
+     "He misleaded the ball into the goal.",
+     "The mall was mislead."
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in: starting university and the core words of Theme 2": [
+   {
+    "t": "mcq",
+    "q": "What does 'apprehensive' mean?",
+    "o": [
+     "very confident",
+     "happy and relaxed",
+     "tired and hungry",
+     "worried or nervous about something"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Apprehensive' means worried or nervous about something.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What can help you skim a text?",
+    "o": [
+     "reading backwards",
+     "counting full stops",
+     "pictures and sub-headings",
+     "looking up every word"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Rewarding' means boring and useless.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Mona lives alone abroad, cooks and plans her own studies. She is becoming more ______.",
+    "o": [
+     "foreign",
+     "independent",
+     "apprehensive",
+     "scary"
+    ],
+    "a": 2
+   }
+  ],
+  "Vocabulary development and comprehension: new students’ worries": [
+   {
+    "t": "mcq",
+    "q": "What does 'campus' mean?",
+    "o": [
+     "A long holiday",
+     "A university exam",
+     "A student club",
+     "The grounds and buildings of a university"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Homesickness' is sadness because you miss your home and family.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "According to the text, who can new students ask for help?",
+    "o": [
+     "Nobody at university",
+     "Only shop assistants",
+     "Other students, tutors or support services",
+     "Only their younger brothers"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Apprehensive' and 'excited' have the same meaning.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Mona forgot to hand in her project on time. What did she miss?",
+    "o": [
+     "A society",
+     "A deadline",
+     "A campus",
+     "An emotion"
+    ],
+    "a": 2
+   }
+  ],
+  "Types of reading and reading speeds; calculating words per minute": [
+   {
+    "t": "mcq",
+    "q": "Close reading is below how many words per minute?",
+    "o": [
+     "250",
+     "400",
+     "50",
+     "100"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Close reading is slower than 100 words per minute.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "In the example, 546 words in 3 minutes 25 seconds is about...",
+    "o": [
+     "546 wpm",
+     "100 wpm",
+     "160 wpm",
+     "182 wpm"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Skimming is the slowest type of reading.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A student looks quickly through an article at 450 wpm to get the main idea. What is this?",
+    "o": [
+     "Casual reading",
+     "Skimming",
+     "Close reading",
+     "Academic reading"
+    ],
+    "a": 2
+   }
+  ],
+  "Timed reading practice and Time to Talk: ranking the tips": [
+   {
+    "t": "mcq",
+    "q": "Why must you answer the questions after reading, not during?",
+    "o": [
+     "The questions are too short",
+     "The timer stops",
+     "The teacher reads them",
+     "Answering during reading distracts you"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In timed reading, you should aim for 75% accuracy.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "After ranking the tips alone, what do students do?",
+    "o": [
+     "Write an essay",
+     "Read a new text",
+     "Compare their rankings in groups",
+     "Throw away their lists"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You should answer the questions while you are reading the text.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Salim answered 12 of 16 questions correctly. What is his score?",
+    "o": [
+     "12%, below the target",
+     "75%, he reached the target",
+     "60%, below the target",
+     "80%, above the target"
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in and dialogue: coping with university life": [
+   {
+    "t": "mcq",
+    "q": "What problem does Faisal have with time?",
+    "o": [
+     "He finishes everything a week early",
+     "He has no essays to write",
+     "He has too much free time",
+     "He leaves essays to the last minute and is late for class"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Faisal leaves his essays to the last minute.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'independent' mean?",
+    "o": [
+     "Living with your family",
+     "Studying in a group",
+     "Able to look after yourself without help",
+     "Always needing help"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Faisal is always early for class.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: 'I ___ three essays this term so far.'",
+    "o": [
+     "writing",
+     "have written",
+     "was writing",
+     "write"
+    ],
+    "a": 2
+   }
+  ],
+  "Grammar Recall: the past perfect tense": [
+   {
+    "t": "mcq",
+    "q": "What does the past perfect show?",
+    "o": [
+     "An action happening now",
+     "A future plan",
+     "A daily habit",
+     "An action before another past action"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The past perfect is formed with had + past participle.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "In the listening, what had Sara expected?",
+    "o": [
+     "No teachers at all",
+     "A tiny campus",
+     "A huge number of students",
+     "Very few students"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The past perfect shows the later of two past actions.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: 'She ___ the sea before she visited Sur.'",
+    "o": [
+     "was never seeing",
+     "had never seen",
+     "has never seen",
+     "never sees"
+    ],
+    "a": 2
+   }
+  ],
+  "Reported speech with the past perfect; Activate Your English": [
+   {
+    "t": "mcq",
+    "q": "Why do verbs move back a tense in reported speech?",
+    "o": [
+     "Because the speaker is angry",
+     "Because it is a question",
+     "Because the verb is irregular",
+     "Because the reporting verb is in the past"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'I forgot my keys,' he said. → He said he had forgotten his keys.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "'I saw a film,' he said. Which report is correct?",
+    "o": [
+     "He said he has saw a film.",
+     "He said he will see a film.",
+     "He said he had seen a film.",
+     "He said he sees a film."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Verbs move back a tense because the reporting verb is in the present.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Sara is sorry she didn't call her grandmother. What does she say?",
+    "o": [
+     "I wish I calling my grandmother.",
+     "I wish I had called my grandmother.",
+     "I wish I call my grandmother.",
+     "I wish I will call my grandmother."
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in and reading for detail: preparing to study abroad": [
+   {
+    "t": "mcq",
+    "q": "Which is a disadvantage of studying abroad?",
+    "o": [
+     "Learning about a new culture",
+     "Improving language skills",
+     "Better job opportunities",
+     "Culture shock"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Studying abroad can help you improve your language skills.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does the text say about doing your own washing and ironing before leaving?",
+    "o": [
+     "The university does it for you",
+     "It causes homesickness",
+     "It helps you feel confident about coping alone",
+     "It is a waste of time"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Culture shock is an advantage of studying abroad.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Ali has one minute to find the main idea of a paragraph. What should he do?",
+    "o": [
+     "Learn it by heart",
+     "Skim it",
+     "Read every word slowly",
+     "Translate every word"
+    ],
+    "a": 2
+   }
+  ],
+  "Guessing vocabulary from context (Activity 3)": [
+   {
+    "t": "mcq",
+    "q": "Which three strategies did students list for dealing with new words?",
+    "o": [
+     "Copy it, delete it, shout it",
+     "Draw it, sing it, spell it",
+     "Skip the page, close the book, stop reading",
+     "Ignore it, use a dictionary, guess from context"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Guessing from context means using the words around the new word.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "When is a dictionary better than guessing?",
+    "o": [
+     "Never",
+     "Only when reading fast",
+     "When the word is essential and the context gives few clues",
+     "Always, for every word"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You must always look up every new word in a dictionary.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "'The instructions were ambiguous, so nobody knew what to do.' 'Ambiguous' means...",
+    "o": [
+     "Printed",
+     "Unclear",
+     "Very clear",
+     "Very short"
+    ],
+    "a": 2
+   }
+  ],
+  "Listening for specific information; grouping words (Top Tip)": [
+   {
+    "t": "mcq",
+    "q": "What does Majid want to study?",
+    "o": [
+     "Medicine",
+     "Engineering",
+     "Cooking",
+     "Airport management"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Majid is in Grade 12.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What should you do before you listen for specific information?",
+    "o": [
+     "Write the answers",
+     "Leave the room",
+     "Read the statements first",
+     "Close your eyes"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In London, the father thinks Majid would speak English all the time.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You are listening for specific information. What are you listening for?",
+    "o": [
+     "Every single word",
+     "Facts like names, places and numbers",
+     "Only the speakers' feelings",
+     "The music"
+    ],
+    "a": 2
+   }
+  ],
+  "Grouping lexical items and describing a place": [
+   {
+    "t": "mcq",
+    "q": "What three things do you mention when describing a place?",
+    "o": [
+     "Price, colour and size",
+     "The names of all the people",
+     "Only the weather",
+     "Location, features and what people can do there"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "When describing a place, you can talk about its location and features.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which group of words is connected with travel?",
+    "o": [
+     "goal, team, match, player",
+     "flour, oven, recipe, cake",
+     "airport, passport, ticket, flight",
+     "campus, lecture, degree, tutor"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A plan makes a description less clear.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You say: 'My town is on the coast, 50 km from Muscat.' Which section is this?",
+    "o": [
+     "Questions",
+     "Location",
+     "Features",
+     "Things to do"
+    ],
+    "a": 2
+   }
+  ],
+  "Listening 2.4.2 and Soundbites: asking for, checking and confirming clarification": [
+   {
+    "t": "mcq",
+    "q": "Who is Nadia?",
+    "o": [
+     "A new student",
+     "A Maths teacher",
+     "A bus driver",
+     "A third-year student who is a Rover"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'I understand.' is a phrase for confirming.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which phrase asks someone to say something again?",
+    "o": [
+     "Are you with me?",
+     "I understand.",
+     "Could you repeat that?",
+     "Got it!"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Nadia is a first-year student.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "After a clear explanation, you want to show you understand. You say:",
+    "o": [
+     "Do you mean the left one?",
+     "Got it, thanks!",
+     "Sorry, I'm not sure I follow you.",
+     "Are you clear about that?"
+    ],
+    "a": 2
+   }
+  ],
+  "Verb forms and scanning; listening for true/false (Listening 2.4.4)": [
+   {
+    "t": "mcq",
+    "q": "Why is Ali worried?",
+    "o": [
+     "He failed his exams",
+     "He has no friends",
+     "He lost his ID card",
+     "His father wants him to be a doctor, but he wants to be an engineer"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Ali wants to study engineering.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What should you do with a false statement in this activity?",
+    "o": [
+     "Copy it again",
+     "Ignore it",
+     "Rewrite it correctly",
+     "Delete it"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Ali's father is an engineer.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose: 'Ali's father wants him ___ medicine.'",
+    "o": [
+     "studies",
+     "to study",
+     "study",
+     "studying"
+    ],
+    "a": 2
+   }
+  ],
+  "Interviewing about future plans and the poem ‘Goodbye, School’": [
+   {
+    "t": "mcq",
+    "q": "Why shouldn't you answer only 'yes' or 'no' in an interview?",
+    "o": [
+     "To finish faster",
+     "Because talking is rude",
+     "To confuse your partner",
+     "To give more information and keep the conversation going"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Giving details keeps the conversation going.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which two feelings does the poet have?",
+    "o": [
+     "Fear and hate",
+     "No feelings at all",
+     "Hope for the future and affection for school",
+     "Anger and boredom"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In an interview, you should answer only 'yes' or 'no'.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: 'Getting a scholarship was a great ___ for her.'",
+    "o": [
+     "emotion",
+     "achievement",
+     "patience",
+     "prospect"
+    ],
+    "a": 2
+   }
+  ],
+  "Reading a formal letter and discussing its tone and punctuation": [
+   {
+    "t": "mcq",
+    "q": "How does the letter begin and end?",
+    "o": [
+     "'Hi!' and 'See ya!'",
+     "'Hello' and 'Bye'",
+     "'Dear…' and 'Love from'",
+     "'Dear…' and 'Best wishes'"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The letter begins with 'Dear…'.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "In 'She's late', why is there an apostrophe?",
+    "o": [
+     "To end the sentence",
+     "To show a name",
+     "To show that 'is' is shortened",
+     "To show a question"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The letter ends with 'Love from'.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is best for a formal letter to a teacher?",
+    "o": [
+     "Yo, teacher!",
+     "I am writing to introduce myself.",
+     "Hey! What's up?",
+     "See ya later!"
+    ],
+    "a": 2
+   }
+  ],
+  "Error correction and planning with notes (Top Tip)": [
+   {
+    "t": "mcq",
+    "q": "Which four things must students write about?",
+    "o": [
+     "Food, sport, weather and shopping",
+     "Films, music, games and cars",
+     "History, maths, science and art",
+     "Family, spare time, future plans and learning English"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Yours faithfully' is a formal ending.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How should the letter be organised?",
+    "o": [
+     "One long paragraph",
+     "Only a list of words",
+     "Introduction, family, spare time, plans, learning English, conclusion",
+     "Conclusion first, then introduction"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Notes should be written in complete sentences.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is too informal for a letter to a teacher?",
+    "o": [
+     "I hope to improve my English.",
+     "See ya!",
+     "I am writing to introduce myself.",
+     "I would like to tell you about my family."
+    ],
+    "a": 2
+   }
+  ],
+  "Checking and editing a partner’s letter; writing the second draft": [
+   {
+    "t": "mcq",
+    "q": "What do you check first in a partner's letter?",
+    "o": [
+     "The colour of the paper",
+     "The handwriting only",
+     "The number of words",
+     "Meaning and content"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "You check meaning and content first in a partner's letter.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which part of the checklist has questions 1–7?",
+    "o": [
+     "The title",
+     "The address",
+     "The Language section",
+     "Part 1 (meaning)"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You underline unclear ideas in pen.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You got five comments, but one would change your meaning wrongly. What do you do?",
+    "o": [
+     "Start a new topic",
+     "Disregard that comment and use the useful ones",
+     "Accept all five",
+     "Ignore all the comments"
+    ],
+    "a": 2
+   }
+  ],
+  "Across Cultures: Country Focus – France": [
+   {
+    "t": "mcq",
+    "q": "Which of these belongs to France's history in the text?",
+    "o": [
+     "Mont Blanc and the Loire",
+     "The Chunnel and high-speed trains",
+     "Tennis tournaments and the Tour de France",
+     "Napoleon and the French Revolution"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The Eiffel Tower is a famous landmark in France.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How is Paris described in the text?",
+    "o": [
+     "A desert town",
+     "A mountain village",
+     "A city of parks and gardens",
+     "A small fishing village"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The Chunnel is a bridge over the sea.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your group is making a Fact File about another country. Which fact is best to include?",
+    "o": [
+     "Today's homework",
+     "Its famous landmarks",
+     "Your favourite colour",
+     "Your teacher's name"
+    ],
+    "a": 2
+   }
+  ],
+  "Reading for Pleasure: interview with Rumaitha Al Busaidi": [
+   {
+    "t": "mcq",
+    "q": "Where did Rumaitha Al Busaidi travel?",
+    "o": [
+     "The Sahara",
+     "The Amazon",
+     "The Arctic",
+     "Antarctica"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Rumaitha Al Busaidi travelled to Antarctica.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which two things make Antarctica important?",
+    "o": [
+     "It is warm and crowded",
+     "It has many roads",
+     "It affects the climate and has unique wildlife",
+     "It has big cities and factories"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The text is a story, not an interview.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: 'We must ___ Antarctica for future generations.'",
+    "o": [
+     "forget",
+     "preserve",
+     "destroy",
+     "pollute"
+    ],
+    "a": 2
+   }
+  ],
+  "Review and Reference: Theme 2 learning objectives and core words test": [
+   {
+    "t": "mcq",
+    "q": "What does 'cope with' mean?",
+    "o": [
+     "Make something smaller",
+     "Check writing",
+     "Miss home",
+     "Deal successfully with a difficult situation"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Homesick' describes a feeling of missing home.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a placement test?",
+    "o": [
+     "A sports test",
+     "A test after graduation",
+     "A test that finds your level",
+     "A driving test"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Reduce' means make larger.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose: 'Before last holiday, Sami ___ the south.'",
+    "o": [
+     "is never visiting",
+     "had never visited",
+     "has never visited",
+     "never visits"
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in: tourism and hospitality; core words of Theme 3": [
+   {
+    "t": "mcq",
+    "q": "Who are the people in the picture?",
+    "o": [
+     "Cabin crew on a plane",
+     "Tourists on a cruise",
+     "Footballers in training",
+     "Trainee chefs with their trainer at the National Hospitality Institute"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Hospitality' means friendly treatment of visitors and guests.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What are 'professionals'?",
+    "o": [
+     "People who never work",
+     "Young children",
+     "People with special training and skills for their job",
+     "People on holiday"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The people in the picture are cabin crew on a plane.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a good alternative title for six tourists' views of Oman?",
+    "o": [
+     "The History of France",
+     "Six Views of Oman",
+     "How to Cook Rice",
+     "My School Day"
+    ],
+    "a": 2
+   }
+  ],
+  "Vocabulary development and Time to Talk: a place I would like to visit": [
+   {
+    "t": "mcq",
+    "q": "Which word means 'a long deep valley with steep sides'?",
+    "o": [
+     "trek",
+     "wildlife",
+     "explore",
+     "canyon"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Trek' means to go on a long, difficult walk.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do listeners do in Time to Talk?",
+    "o": [
+     "Write an essay",
+     "Sleep",
+     "Ask questions about the place",
+     "Leave the room"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Wildlife' means pets that live in people's homes.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Sara saw a deep valley with steep rock walls. What did she see?",
+    "o": [
+     "A beach",
+     "A canyon",
+     "A trek",
+     "Wildlife"
+    ],
+    "a": 2
+   }
+  ],
+  "Oman quiz and the dolphin centre narrative": [
+   {
+    "t": "mcq",
+    "q": "Which countries border Oman?",
+    "o": [
+     "Iran, Iraq and Kuwait",
+     "Egypt, Jordan and Qatar",
+     "India, Pakistan and Iran",
+     "Saudi Arabia, Yemen and the UAE"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Oman's coastline is over 3000 kilometres long.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a 'host' in a quiz show?",
+    "o": [
+     "The prize for the winner",
+     "The place where the show is filmed",
+     "The person who presents the show and asks questions",
+     "The person who answers the questions"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Bears are one of the wild animals found in Oman.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which question would a quiz host ask about Oman's islands?",
+    "o": [
+     "Where did you buy that bag?",
+     "How far is Masirah Island from the mainland?",
+     "What is your favourite colour?",
+     "Can I sit here, please?"
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in: jobs in tourism and hospitality; reading five job texts": [
+   {
+    "t": "mcq",
+    "q": "Which job needs 'a mixture of skills' like a nurse, chef, waiter and cleaner?",
+    "o": [
+     "Travel agent",
+     "Tour guide",
+     "Hotel manager",
+     "Airline cabin crew"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A tour guide needs good communication skills and languages.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which skills does a tour guide need?",
+    "o": [
+     "Computer repair",
+     "Driving trucks",
+     "Communication, languages and public speaking",
+     "Cooking and cleaning"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A travel agent does not need computer skills.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Sara is very organised, good with computers and likes selling. Which job suits her best?",
+    "o": [
+     "Tour guide",
+     "Travel agent",
+     "Chef",
+     "Cabin crew"
+    ],
+    "a": 2
+   }
+  ],
+  "Grammar Recall: first conditional and first conditional with modals": [
+   {
+    "t": "mcq",
+    "q": "How do we form the first conditional?",
+    "o": [
+     "If + past simple, would + base verb",
+     "If + will, present simple",
+     "If + past perfect, would have",
+     "If + present simple, will + base verb"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The first conditional is formed with if + present simple, will + base verb.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which form comes after a modal verb?",
+    "o": [
+     "The past form",
+     "to + verb",
+     "The base verb",
+     "The -ing form"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'If it will rain tomorrow, we stay at home' is correct.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete about your future job: 'If I study hard, I ___ a chef.'",
+    "o": [
+     "would became",
+     "will become",
+     "became",
+     "becoming"
+    ],
+    "a": 2
+   }
+  ],
+  "Listening 3.2.1, conditional practice and the island puzzle": [
+   {
+    "t": "mcq",
+    "q": "Who does Salima talk to in Listening 3.2.1?",
+    "o": [
+     "A chef",
+     "A hotel manager",
+     "A pilot",
+     "A travel agent"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In the listening, Salima is celebrating her wedding anniversary.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a key word?",
+    "o": [
+     "A word you must learn by heart",
+     "The title of the text",
+     "A word in the question that leads you to the answer in the text",
+     "The longest word in a text"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "On the EdgeWalk, people walk inside the tower near the restaurant.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct verb: 'If you ___ to see wild animals, you should take a boat trip.'",
+    "o": [
+     "wanting",
+     "want",
+     "will want",
+     "wanted"
+    ],
+    "a": 2
+   }
+  ],
+  "Parts of speech Top Tip, vocabulary matching and sentences": [
+   {
+    "t": "mcq",
+    "q": "Which of these words is a noun?",
+    "o": [
+     "steadily",
+     "quickly",
+     "beautiful",
+     "architecture"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Steadily' is an adverb.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means 'the design of a building'?",
+    "o": [
+     "flagship",
+     "interest",
+     "architecture",
+     "variety"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A meaning can match a headword even if it is a different part of speech.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence uses 'draw' in the sense of 'attract'?",
+    "o": [
+     "Draw a circle on the board.",
+     "The new museum draws thousands of visitors.",
+     "Please draw a map of your town.",
+     "He draws pictures in his book."
+    ],
+    "a": 2
+   }
+  ],
+  "Cruises: reading, vocabulary matching and crossword": [
+   {
+    "t": "mcq",
+    "q": "Why are cruise ships called floating hotels?",
+    "o": [
+     "They are made of wood",
+     "They never leave the port",
+     "They are very cheap",
+     "They offer luxurious accommodation at sea"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A cruise is a holiday on a large ship.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'staff' mean?",
+    "o": [
+     "The rooms on a ship",
+     "The food in a restaurant",
+     "The people who work for a company or ship",
+     "The passengers on a cruise"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Voyage' means a short walk in a city.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the best word: 'The food was ___; it was the best meal of my life.'",
+    "o": [
+     "maintenance",
+     "superb",
+     "massive",
+     "security"
+    ],
+    "a": 2
+   }
+  ],
+  "Oman as a tourist destination; Listening 3.4.1: choosing a course": [
+   {
+    "t": "mcq",
+    "q": "What does an events management course teach?",
+    "o": [
+     "Cooking in a hotel kitchen",
+     "Flying aeroplanes",
+     "Repairing cars",
+     "Planning, designing and organising events"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Over a million tourists visit Oman every year.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which institute gives the four-year degree?",
+    "o": [
+     "Selfridge's",
+     "The CN Tower",
+     "The Dublin Institute of Technology",
+     "The World Tourism Organisation"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The diploma course in the listening lasts four years.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Before Listening 3.4.1 you read the statements. What are you doing?",
+    "o": [
+     "Scoring your partner",
+     "Predicting the information you will hear",
+     "Checking your spelling",
+     "Writing a narrative essay"
+    ],
+    "a": 2
+   }
+  ],
+  "Vocabulary matching and Listening 3.4.2: training to be a chef": [
+   {
+    "t": "mcq",
+    "q": "What does 'day release' mean?",
+    "o": [
+     "Leaving your job for a holiday",
+     "Studying only at night",
+     "Finishing the course in one day",
+     "Attending the Institute one day a week while continuing in a job"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Hassan's appointment is at 9.30.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'facilities' mean?",
+    "o": [
+     "A short summary",
+     "Reasons for a choice",
+     "Buildings and equipment provided for a purpose",
+     "Future chances of success"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The chef's course lasts three years.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the best word: 'With so many new hotels, the job ___ for chefs are excellent.'",
+    "o": [
+     "release",
+     "prospects",
+     "facilities",
+     "overview"
+    ],
+    "a": 2
+   }
+  ],
+  "Listening 3.4.3 and Soundbites: complaining and responding to complaints": [
+   {
+    "t": "mcq",
+    "q": "What does the guest complain about?",
+    "o": [
+     "The price of the room only",
+     "The noise from the swimming pool",
+     "The rude taxi driver",
+     "No sea view, dirty towels, a faulty air conditioner and the wrong sandwich"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The guest complains that his room has no sea view.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Why do companies use the phrase 'The customer is always right'?",
+    "o": [
+     "To stop customers complaining",
+     "To make staff work less",
+     "To convince customers they will get good service and to encourage staff to give it",
+     "To make customers pay more"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The guest is happy with the towels in his room.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your tour group's bus breaks down. Which phrase introduces a hypothetical solution?",
+    "o": [
+     "I can only apologise.",
+     "I think I would call another bus company.",
+     "I've got a complaint about the bus.",
+     "It's most disappointing."
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in: eating out; Listening 3.5.1 on favourite restaurants": [
+   {
+    "t": "mcq",
+    "q": "Why does Voice C like buffet restaurants?",
+    "o": [
+     "They are quiet and romantic",
+     "They are very fast",
+     "They have a French chef",
+     "Good value for money; kids can eat as much as they want"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Voice A is looking for special food and efficient waiters.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Where did Voice D eat in Istanbul?",
+    "o": [
+     "On a boat by the sea",
+     "In a French restaurant",
+     "In an ancient cistern built by the Romans",
+     "In a fast-food takeaway"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Voice B prefers a big, noisy restaurant.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which is the best first sentence for a narrative essay about eating out?",
+    "o": [
+     "This essay is about a restaurant.",
+     "I will never forget the night our dinner arrived on fire!",
+     "There are many restaurants.",
+     "Food is food."
+    ],
+    "a": 2
+   }
+  ],
+  "Ordering paragraphs of a narrative essay and the stages of essay writing": [
+   {
+    "t": "mcq",
+    "q": "What does 'draft' mean?",
+    "o": [
+     "The title of an essay",
+     "A list of mistakes",
+     "The last paragraph",
+     "A piece of writing that is not yet in its final form"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The first stage of essay writing is making sure you understand the title.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How many stages of essay writing are there in the lesson?",
+    "o": [
+     "Five",
+     "Twelve",
+     "Eight",
+     "Three"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You should hand in your first draft without changing it.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Ali finds three spelling mistakes in his finished essay. Which stage is he doing?",
+    "o": [
+     "Understanding the title",
+     "Proofreading",
+     "Planning",
+     "Gathering ideas"
+    ],
+    "a": 2
+   }
+  ],
+  "Writing an ending; good and bad restaurants; analysing essay structure": [
+   {
+    "t": "mcq",
+    "q": "What is a topic sentence?",
+    "o": [
+     "The title of the essay",
+     "The last word of the essay",
+     "A sentence with no verb",
+     "Usually the first sentence of a paragraph that gives the main idea"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Delicious food' and 'reasonable prices' describe a good restaurant.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What are the main parts of a narrative essay?",
+    "o": [
+     "Questions and answers",
+     "A menu and a bill",
+     "Introduction, body paragraphs and conclusion",
+     "Only a title and a list"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Attentive service' describes a bad restaurant.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You see a small restaurant with soft lights and comfortable chairs. Which word describes it?",
+    "o": [
+     "Massive",
+     "Cosy",
+     "Rude",
+     "Dirty"
+    ],
+    "a": 2
+   }
+  ],
+  "Planning and writing a narrative essay about an eating-out experience": [
+   {
+    "t": "mcq",
+    "q": "What should a narrative essay have at the beginning?",
+    "o": [
+     "The conclusion of the story",
+     "A list of linking words",
+     "The bill from the restaurant",
+     "An introduction that gives background and catches the reader's attention"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A narrative essay should begin with an introduction that gives background and catches the reader's attention.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a first draft?",
+    "o": [
+     "The title only",
+     "A group discussion",
+     "Your first full try at writing the essay",
+     "The final essay you hand in"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A narrative essay does not need a title.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the best word: '___, the waiter brought the wrong dish.' (the middle of the story)",
+    "o": [
+     "First of all",
+     "Then",
+     "Finally",
+     "In conclusion"
+    ],
+    "a": 2
+   }
+  ],
+  "Across Cultures: Country Focus – Canada": [
+   {
+    "t": "mcq",
+    "q": "Which wild animals are found in Canada?",
+    "o": [
+     "Lions, zebras and giraffes",
+     "Camels, goats and oryx",
+     "Kangaroos and koalas",
+     "Black bears, caribou, moose, red foxes and Arctic hares"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The capital of Canada is Ottawa.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which tower is in Toronto?",
+    "o": [
+     "The Burj Khalifa",
+     "Bahla Fort",
+     "The CN Tower",
+     "The Eiffel Tower"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The capital of Canada is Toronto.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You are making a Fact File about Canada. Which fact is correct?",
+    "o": [
+     "Famous for: hot deserts",
+     "Capital: Ottawa",
+     "Capital: Toronto",
+     "Language: only Spanish"
+    ],
+    "a": 2
+   }
+  ],
+  "Reading for Pleasure: interview with celebrity chef Issa Al Lamki": [
+   {
+    "t": "mcq",
+    "q": "What is fusion cooking?",
+    "o": [
+     "Cooking food very quickly",
+     "Cooking without any ingredients",
+     "Eating food from one country only",
+     "Blending Omani ingredients with classic recipes from other countries"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Issa Al Lamki trained at the National Hospitality Institute (NHI) in Muscat.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What was Issa Al Lamki's aim when he returned to Oman?",
+    "o": [
+     "To open a fast-food chain abroad",
+     "To become a tour guide",
+     "To promote Omani cooking",
+     "To stop cooking"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "It took him ten years to become a top executive chef.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your group wants to promote Omani food to tourists, like Issa Al Lamki. Which idea fits best?",
+    "o": [
+     "Hide Omani recipes",
+     "Offer tourists tasting menus of Omani fusion dishes",
+     "Serve only foreign fast food",
+     "Close Omani restaurants"
+    ],
+    "a": 2
+   }
+  ],
+  "Review and Reference: Theme 3 learning objectives and core words test": [
+   {
+    "t": "mcq",
+    "q": "What is the difference between 'revise' and 'proofread'?",
+    "o": [
+     "Revise checks spelling; proofread adds new ideas",
+     "They mean exactly the same",
+     "Both mean handing in your essay",
+     "Revise improves content and organisation; proofread checks for mistakes"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Voyage' means a journey by sea.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which group contains only Theme 3 core words?",
+    "o": [
+     "voyage, congestion, biofuels, menu",
+     "trek, network, statistics, chef",
+     "canyon, luxury, voyage, security",
+     "canyon, moose, cutlery, buffet"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Trek' means a short, easy walk to the shop.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the best word: 'Muscat is a popular tourist ___.'",
+    "o": [
+     "proofread",
+     "destination",
+     "trek",
+     "draft"
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in: transport then and now; core words; conventional vs solar-powered planes": [
+   {
+    "t": "mcq",
+    "q": "What does 'congestion' mean?",
+    "o": [
+     "A fast, empty road",
+     "A kind of plane fuel",
+     "A group of airports",
+     "Crowding together of vehicles so that they can't move"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Congestion means vehicles crowding together so they can't move.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'road rage' mean?",
+    "o": [
+     "A race between cars",
+     "Rules for parking",
+     "Violent and angry behaviour by drivers towards other drivers",
+     "A long, empty road"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The cartoon shows that congestion happens only on roads, never in the sky.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A report says '60% of drivers are late because of traffic'. What kind of information is this?",
+    "o": [
+     "Air traffic control",
+     "Statistics",
+     "Road rage",
+     "Biofuels"
+    ],
+    "a": 2
+   }
+  ],
+  "Skimming, True/False/Not Given and vocabulary development": [
+   {
+    "t": "mcq",
+    "q": "What should you note carefully in True/False/Not Given tasks?",
+    "o": [
+     "The colour of the text",
+     "The number of paragraphs",
+     "The author's name",
+     "Adverbs and qualifying words, like 'partly' and 'entirely'"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Skimming means reading quickly to get the general idea of a text.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which airlines are mentioned in the text?",
+    "o": [
+     "KLM and Qatar Airways",
+     "Only Virgin Atlantic",
+     "Virgin Atlantic and KLM",
+     "Oman Air and Emirates"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A title that is too general is the best choice for a text.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You have one minute to choose a title for a long text. What should you do?",
+    "o": [
+     "Look up every word in a dictionary",
+     "Skim the text for the main idea",
+     "Read every word carefully",
+     "Read only the last line"
+    ],
+    "a": 2
+   }
+  ],
+  "Pronouns as cohesive devices, the Wright brothers and timed reading": [
+   {
+    "t": "mcq",
+    "q": "What do pronouns do in a text?",
+    "o": [
+     "They give the title of the text",
+     "They always start a new paragraph",
+     "They show the past tense",
+     "They link phrases and sentences and make a text read smoothly"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Pronouns link phrases and sentences and help a text read smoothly.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which pair shows a noun and its verb?",
+    "o": [
+     "inventor – invention",
+     "invented – invent",
+     "invention – invent",
+     "invent – inventive"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In 'The airlines are trying to reduce emissions. They want to protect the environment.', 'They' refers to the emissions.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You read 600 words in 3 minutes. What is your reading speed?",
+    "o": [
+     "60 WPM",
+     "200 WPM",
+     "300 WPM",
+     "1800 WPM"
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in: traffic congestion; the cartoon; a letter to a council director": [
+   {
+    "t": "mcq",
+    "q": "Which feelings do drivers stuck in traffic have?",
+    "o": [
+     "Happy, calm and relaxed",
+     "Bored but delighted",
+     "Proud and excited",
+     "Frustrated, angry and stressed"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A traffic jam happens when too many vehicles are crowded together and can't move.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which list shows problems caused by congestion?",
+    "o": [
+     "Cheaper food and more holidays",
+     "Fewer cars and quiet roads",
+     "Stress, road rage, pollution and businesses affected",
+     "Clean air and short journeys"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Congestion lowers the risk of road rage because drivers relax.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Ahmed leaves home at 5.30 a.m. to avoid busy roads. What is he trying to do?",
+    "o": [
+     "Car-share",
+     "Beat the traffic",
+     "Cause road rage",
+     "Pay a congestion charge"
+    ],
+    "a": 2
+   }
+  ],
+  "Grammar Recall: present perfect and present perfect continuous; verb forms": [
+   {
+    "t": "mcq",
+    "q": "How do we form the present perfect continuous?",
+    "o": [
+     "have/has + past participle",
+     "was/were + verb-ing",
+     "will have + verb",
+     "have/has been + verb-ing"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The present perfect continuous is formed with have/has been + verb-ing.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does the text say drivers do to make up time?",
+    "o": [
+     "They take a train",
+     "They walk",
+     "They speed",
+     "They stop for coffee"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'I've lost my phone' focuses on how long the action lasted.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence.",
+    "o": [
+     "Miss Smith is got up earlier since weeks.",
+     "Miss Smith has been getting up earlier for weeks.",
+     "Miss Smith has been getting up earlier since weeks.",
+     "Miss Smith have been get up earlier for weeks."
+    ],
+    "a": 2
+   }
+  ],
+  "Road safety: discussion, vocabulary and multiple-choice strategy": [
+   {
+    "t": "mcq",
+    "q": "What does the Traffic Safety Institute teach people about?",
+    "o": [
+     "cooking",
+     "farming",
+     "shopping",
+     "road safety"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The simulator car shows people why wearing a seatbelt is important.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is NOT advice the ROP gives to new drivers?",
+    "o": [
+     "avoid busy times",
+     "go out with an experienced driver",
+     "drive fast to gain confidence",
+     "practise what they learned"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In 2014 there were 836 road accidents in Oman.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A man drives with no licence. What can happen to him?",
+    "o": [
+     "nothing at all",
+     "a 75-rial fine and at least 48 hours in jail",
+     "a warning only",
+     "a free driving lesson"
+    ],
+    "a": 2
+   }
+  ],
+  "The language of trends: increase, decrease and describing a table": [
+   {
+    "t": "mcq",
+    "q": "Which group contains only 'up' words?",
+    "o": [
+     "fall, drop, reduce",
+     "rise, drop, grow",
+     "fall, expand, reduce",
+     "rise, grow, expand"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A trend is the way a situation changes over a period of time.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which adjective means 'happening slowly, step by step'?",
+    "o": [
+     "sharp",
+     "dramatic",
+     "gradual",
+     "sudden"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Drop' and 'fall' describe something going up.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Accidents went from 7,000 to 6,900. Which word fits best?",
+    "o": [
+     "steep",
+     "slight",
+     "dramatic",
+     "sharp"
+    ],
+    "a": 2
+   }
+  ],
+  "Road rage: Listening 4.3.2, advice and role play": [
+   {
+    "t": "mcq",
+    "q": "Which behaviour is an example of road rage?",
+    "o": [
+     "waiting calmly at a red light",
+     "using your indicators",
+     "letting another car pass",
+     "shouting and flashing lights at drivers"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Road rage is violent or aggressive behaviour by drivers.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which phrase means the same as 'stay calm'?",
+    "o": [
+     "speed up",
+     "tailgate",
+     "keep cool",
+     "cut in"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The driver who is tailgated feels relaxed and safe.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A driver suddenly moves in front of you. What is this called?",
+    "o": [
+     "overtaking slowly",
+     "cutting in",
+     "tailgating",
+     "signalling"
+    ],
+    "a": 2
+   }
+  ],
+  "Jobs in airports: matching, Listening 4.4.1 and asking for/giving explanations": [
+   {
+    "t": "mcq",
+    "q": "Which is a quality needed to be an air traffic controller?",
+    "o": [
+     "a love of cooking",
+     "being good at drawing",
+     "a fear of planes",
+     "a passion for aviation"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Tariq Al Kharousi works as an air traffic controller.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Where does an air traffic controller work?",
+    "o": [
+     "in the plane's kitchen",
+     "at the ticket desk",
+     "in the control tower",
+     "on the runway"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Tariq says his job is easy and has short hours.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "The airport will grow from 12 million to 48 million passengers. How many times bigger is that?",
+    "o": [
+     "forty times",
+     "four times",
+     "two times",
+     "twelve times"
+    ],
+    "a": 2
+   }
+  ],
+  "Explanations practice, choosing a job, Listening 4.4.3 and a talk from a Fact File": [
+   {
+    "t": "mcq",
+    "q": "Which reward does Steve NOT mention?",
+    "o": [
+     "good pay",
+     "travel",
+     "discounts for family",
+     "good job security"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The bonnet protects the engine of a car.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What type of conjunction is 'but'?",
+    "o": [
+     "result",
+     "time",
+     "contrast",
+     "addition"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The headlight is used to signal which way the car is turning.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the best conjunction: 'Many people drive. ___, roads are crowded.'",
+    "o": [
+     "But",
+     "As a result",
+     "Although",
+     "However"
+    ],
+    "a": 2
+   }
+  ],
+  "Analysing the Etihad Rail essay and collecting information": [
+   {
+    "t": "mcq",
+    "q": "What is a safety campaign?",
+    "o": [
+     "a type of train",
+     "a race between buses",
+     "a railway ticket",
+     "a planned set of activities to make people safer"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The vital message of the Etihad Rail campaign was to put safety first.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do you call the sentences that give details about the main idea?",
+    "o": [
+     "titles",
+     "headings",
+     "supporting sentences",
+     "topic sentences"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "People are told to cross the railway track wherever they like.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which is the best topic sentence for a paragraph about trains' benefits?",
+    "o": [
+     "The end.",
+     "Trains have many economic benefits.",
+     "I like red.",
+     "For example, it was late."
+    ],
+    "a": 2
+   }
+  ],
+  "Planning and writing an informative essay; peer editing": [
+   {
+    "t": "mcq",
+    "q": "What is the correct order of writing steps in this lesson?",
+    "o": [
+     "second draft, plan, first draft",
+     "peer editing, plan, title",
+     "first draft, hand in, plan",
+     "plan, first draft, peer editing, second draft"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "An informative essay usually has an introduction, three main body paragraphs and a conclusion.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does the introduction of an informative essay do?",
+    "o": [
+     "lists the references",
+     "asks the reader to buy something",
+     "introduces the topic",
+     "gives the final summary"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "When peer editing, you should only look at spelling.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your partner's essay has a good idea in every paragraph but some spelling mistakes. What feedback comes first?",
+    "o": [
+     "give no feedback",
+     "comment on the meaning and ideas",
+     "only list the spelling mistakes",
+     "rewrite the essay for them"
+    ],
+    "a": 2
+   }
+  ],
+  "Across Cultures: Spain and Reading for Pleasure: the Shanghai Maglev Train": [
+   {
+    "t": "mcq",
+    "q": "What is La Tomatina?",
+    "o": [
+     "a famous Spanish book",
+     "a type of train",
+     "a city in Spain",
+     "a festival where people throw tomatoes"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "General Francisco Franco ruled Spain after the Civil War.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Who was General Francisco Franco?",
+    "o": [
+     "a famous matador",
+     "a train driver",
+     "the ruler of Spain after the Civil War",
+     "the writer of Don Quixote"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Don Quixote was written by General Franco.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A train travels very fast without touching the track. What kind of train is it?",
+    "o": [
+     "a toy train",
+     "a Maglev train",
+     "a steam train",
+     "a freight train"
+    ],
+    "a": 2
+   }
+  ],
+  "Review and Reference: Theme 4 learning objectives and core words test": [
+   {
+    "t": "mcq",
+    "q": "Which is the correct spelling?",
+    "o": [
+     "frieght",
+     "fraight",
+     "freigth",
+     "freight"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Freight' means goods carried by trains or lorries.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word is spelled correctly?",
+    "o": [
+     "conventionel",
+     "conventinal",
+     "conventional",
+     "convensional"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Conventional' means new and unusual.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is correct?",
+    "o": [
+     "My car is been getting older.",
+     "My car has been getting older, so I've got a new one.",
+     "My car have been get older.",
+     "My car been getting older."
+    ],
+    "a": 2
+   }
+  ],
+  "Matching headings, vocabulary development and Time to Talk / Workbook practice: skimming a Fact File and multiple choice": [
+   {
+    "t": "mcq",
+    "q": "Where is the topic sentence usually found?",
+    "o": [
+     "in the title",
+     "in the last line of the text",
+     "in the pictures",
+     "at the start of the paragraph"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A topic sentence gives the main idea of a paragraph.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means 'connected with trade, industry and money'?",
+    "o": [
+     "ritual",
+     "location",
+     "economic",
+     "gigantic"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The topic sentence is always the last sentence of a paragraph.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You want to swap your pen for your partner's book. What do you say?",
+    "o": [
+     "Where is my pen?",
+     "What will you give me for my pen?",
+     "That's because my pen is blue.",
+     "OK, let me explain."
+    ],
+    "a": 2
+   }
+  ],
+  "Workbook grammar: choosing tenses, multiple choice and passive gap-fill / Activate Your English: asking and answering questions to complete a task": [
+   {
+    "t": "mcq",
+    "q": "How do we form the past simple passive?",
+    "o": [
+     "did + base verb",
+     "have + been + -ing",
+     "will + base verb",
+     "was/were + past participle"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'The list was published in 2013' is in the past simple passive.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is an information-gap task?",
+    "o": [
+     "a reading with no words",
+     "a writing task alone",
+     "partners ask questions to get information the other has",
+     "a test with no questions"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say 'Apple was founded in 1976' because the focus is on who founded it.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Make a question about the past: Levi Strauss made jeans for the miners. (What)",
+    "o": [
+     "What did Levi Strauss made for the miners?",
+     "What did Levi Strauss make for the miners?",
+     "What was Levi Strauss make for the miners?",
+     "What Levi Strauss made for the miners?"
+    ],
+    "a": 2
+   }
+  ],
+  "Reading in detail: comprehension and reasons for over-shopping / Guessing vocabulary from context and make/do collocations": [
+   {
+    "t": "mcq",
+    "q": "What jobs do the two women in the article have?",
+    "o": [
+     "a teacher and a doctor",
+     "a pilot and a driver",
+     "a shopkeeper and a cook",
+     "a corporate lawyer and an accountant"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The women in the article can spend a lot because they have very good jobs.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which list contains only 'make' collocations?",
+    "o": [
+     "a favour, the washing-up, a joke",
+     "some exercise, dinner, a promise",
+     "a promise, an enemy, dinner",
+     "the shopping, your duty, a crossword"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Katy feels bad about spending because she thinks it is wrong.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "'After losing his job, he went shopping for consolation.' What does 'consolation' mean here?",
+    "o": [
+     "a holiday",
+     "comfort",
+     "money",
+     "a gift card"
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in, malls and markets, predicting vocabulary / Predicting the content of a talk (Listening 1.4.1)": [
+   {
+    "t": "mcq",
+    "q": "Which features belong to a mall?",
+    "o": [
+     "narrow passages and tiny shops",
+     "bargaining and street stalls",
+     "friendly shopkeepers in old alleys",
+     "fashion shops, a multi-level car park and wide walkways"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Predicting the content of a talk makes it easier to understand.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "According to the guide, what kind of shopping do malls offer?",
+    "o": [
+     "shopping with no parking",
+     "shopping only at night",
+     "quick and easy shopping",
+     "bargaining in narrow passages"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Souqs usually have multi-level car parks and wide walkways.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You will hear a talk about shopping in Muscat. Which words should you predict?",
+    "o": [
+     "peninsula, monarchy, cape",
+     "souq, bargaining, parking",
+     "runway, pilot, control tower",
+     "seatbelt, speed limit, fine"
+    ],
+    "a": 2
+   }
+  ],
+  "Predicting and listening for specific information; Soundbites / Expressing likes, dislikes and preferences: Activity 4, class survey and discussion": [
+   {
+    "t": "mcq",
+    "q": "Why does Tom like the City Mall?",
+    "o": [
+     "the bargaining",
+     "the narrow passages",
+     "the antiques",
+     "the variety of shops and good sales"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Tom likes to shop at the City Mall.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What did you do before listening to the interviews?",
+    "o": [
+     "draw a map",
+     "read a story",
+     "predict the information in the chart",
+     "write an essay"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Carol says the only problem with the souq is the high prices.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Three of five students in your group prefer malls. How do you report it?",
+    "o": [
+     "Five of three students prefer malls.",
+     "Three of the five students prefer shopping in malls.",
+     "Three of the five student prefers mall.",
+     "Malls prefer three students."
+    ],
+    "a": 2
+   }
+  ],
+  "Hard-sell and soft-sell; discussing TV adverts; planning an evaluation / Writing an evaluation of an advertisement": [
+   {
+    "t": "mcq",
+    "q": "What is the main aim of an advertisement?",
+    "o": [
+     "to tell a long story",
+     "to teach grammar",
+     "to give the news",
+     "to get its message across quickly and persuade"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "An advert must get its message across quickly.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do you do after writing your first draft at school?",
+    "o": [
+     "copy a friend's",
+     "hand it in without reading",
+     "edit it at home and bring a second draft",
+     "throw it away"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A hard-sell advert focuses on how a product makes you feel.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence gives an opinion with a reason?",
+    "o": [
+     "There is a shampoo in the ad.",
+     "In my opinion, the ad is misleading because it promises things the product can't do.",
+     "The ad is on TV.",
+     "The ad lasts 30 seconds."
+    ],
+    "a": 2
+   }
+  ],
+  "Reading for Pleasure: The Ethics of Advertising / Review and Reference: Theme 1 learning objectives and core words test": [
+   {
+    "t": "mcq",
+    "q": "What are 'side-effects'?",
+    "o": [
+     "the main benefits",
+     "the sides of a box",
+     "free gifts",
+     "unwanted effects of something, such as a medicine"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Caveat emptor' means 'let the buyer beware'.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is the correct spelling?",
+    "o": [
+     "shopperholic",
+     "shopahollic",
+     "shopaholic",
+     "shopaholik"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A TV advert usually lasts several minutes, so it can give all the information.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the sentence that uses 'mislead' correctly.",
+    "o": [
+     "She misleads very fast in the race.",
+     "Some adverts mislead customers about what a product can do.",
+     "I mislead my lunch at noon.",
+     "The train misleads at six."
+    ],
+    "a": 2
+   }
+  ],
+  "Skimming and the first tips for faster reading / Vocabulary development and comprehension: new students’ worries": [
+   {
+    "t": "mcq",
+    "q": "What is the focus of this unit?",
+    "o": [
+     "learning to cook",
+     "writing poems",
+     "spelling numbers",
+     "improving reading speed"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "This unit aims to improve your reading speed.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which two problems does the text mention for new students?",
+    "o": [
+     "getting sick and failing exams",
+     "losing a phone and a car",
+     "getting lost and forgetting a deadline",
+     "losing money and missing meals"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "When skimming, you should look up every new word in a dictionary.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A new student has five tasks and little time. What should he do?",
+    "o": [
+     "look up every word",
+     "prioritise the most important tasks",
+     "do nothing",
+     "join every club"
+    ],
+    "a": 2
+   }
+  ],
+  "Types of reading and reading speeds; calculating words per minute / Timed reading practice and Time to Talk: ranking the tips": [
+   {
+    "t": "mcq",
+    "q": "What type of reading do newspapers and magazines need?",
+    "o": [
+     "close reading",
+     "academic reading",
+     "no reading",
+     "casual or informal reading"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We read different types of texts at different speeds.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a way to improve reading speed?",
+    "o": [
+     "read every line twice",
+     "stop reading",
+     "practise regularly",
+     "look up every word"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Skimming is the slowest type of reading.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You need to read a contract carefully before signing. Which reading do you use?",
+    "o": [
+     "no reading",
+     "close reading",
+     "skimming",
+     "casual reading"
+    ],
+    "a": 2
+   }
+  ],
+  "Listening and chart completion; choosing past forms / Reported speech with the past perfect; Activate Your English": [
+   {
+    "t": "mcq",
+    "q": "When do we use the past perfect?",
+    "o": [
+     "for future plans",
+     "for habits now",
+     "for things happening right now",
+     "for the earlier of two past events"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Sara had expected a huge number of students.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which phrase do we use with the past perfect to express regret?",
+    "o": [
+     "I'm going to",
+     "I usually",
+     "I wish",
+     "I will"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Zaher's favourite activity is swimming in the sea.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence.",
+    "o": [
+     "Before I come here I had never used a library.",
+     "Before I came here I had never used a library.",
+     "Before I came here I have never use a library.",
+     "Before I had came here I never used a library."
+    ],
+    "a": 2
+   }
+  ],
+  "Guessing vocabulary from context (Activity 3) / Listening for specific information; grouping words (Top Tip)": [
+   {
+    "t": "mcq",
+    "q": "Which are strategies for dealing with new words?",
+    "o": [
+     "close the book",
+     "ask the teacher to remove it",
+     "read only the title",
+     "ignore it, use a dictionary or guess from context"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Guessing from context means using the words around an unknown word.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What should you do before listening to the father–son dialogue?",
+    "o": [
+     "close your book",
+     "guess the answers without reading",
+     "read the seven statements",
+     "write an essay"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Guessing from context wastes time and stops you reading.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You meet a new word, and the sentence still makes sense without it. What is the best strategy?",
+    "o": [
+     "copy the whole page",
+     "keep reading and guess from context",
+     "stop and look up every word",
+     "stop reading the text"
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in and Listening 2.4.1: how the SQU Rovers help new students / Listening 2.4.2 and Soundbites: asking for, checking and confirming clarification": [
+   {
+    "t": "mcq",
+    "q": "Who is Nadia?",
+    "o": [
+     "a new student",
+     "a maths teacher",
+     "a tour guide",
+     "a third-year student who is a Rover"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The SQU Rovers are a team of students who help new students.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence tells the speaker you need an explanation?",
+    "o": [
+     "Are you with me?",
+     "I understand.",
+     "I'm not clear what that is.",
+     "Got it!"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Fatma is looking for the library.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your friend explains which door to use and now you understand. What do you say?",
+    "o": [
+     "I'm not sure I follow you.",
+     "Got it!",
+     "Do you mean...?",
+     "Are you clear about...?"
+    ],
+    "a": 2
+   }
+  ],
+  "Verb forms and scanning; listening for true/false (Listening 2.4.4) / Interviewing about future plans and the poem ‘Goodbye, School’": [
+   {
+    "t": "mcq",
+    "q": "What is scanning?",
+    "o": [
+     "Reading every word slowly",
+     "Writing a summary of a text",
+     "Listening for the main idea",
+     "Reading quickly to find specific information"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Scanning means reading quickly to find specific information, such as names.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Why shouldn't you answer only 'yes' or 'no' in an interview?",
+    "o": [
+     "Because 'yes' and 'no' are rude words",
+     "To avoid answering the question",
+     "To give more information and keep the conversation going",
+     "To finish the interview quickly"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Ali and his father agree about his future job.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Maha wants to design smart applications. Which subject fits her plan best?",
+    "o": [
+     "Cooking",
+     "IT",
+     "Medicine",
+     "History"
+    ],
+    "a": 2
+   }
+  ],
+  "Formal and informal language; drafting the letter / Checking and editing a partner’s letter; writing the second draft": [
+   {
+    "t": "mcq",
+    "q": "Which list shows the correct order of the letter's paragraphs?",
+    "o": [
+     "Conclusion, family, introduction, plans, spare time, learning English",
+     "Plans, introduction, conclusion, family, spare time, learning English",
+     "Family, conclusion, spare time, introduction, plans, learning English",
+     "Introduction, family, spare time, plans, learning English, conclusion"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Yours faithfully' is a formal ending.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is 'Best wishes' useful for?",
+    "o": [
+     "Asking a question",
+     "Writing an address",
+     "Ending a formal letter with a friendly tone",
+     "Starting a text message"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Love from' is a good ending for a letter to a director.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence suits a formal letter?",
+    "o": [
+     "Love from your student.",
+     "I would be grateful if you could help me with my writing.",
+     "Hi there! Help me with writing, OK?",
+     "See ya in class!"
+    ],
+    "a": 2
+   }
+  ],
+  "Reading for Pleasure: interview with Rumaitha Al Busaidi / Review and Reference: Theme 2 learning objectives and core words test": [
+   {
+    "t": "mcq",
+    "q": "What kind of text is the reading about Rumaitha Al Busaidi?",
+    "o": [
+     "A poem",
+     "A letter",
+     "A recipe",
+     "An interview"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Rumaitha Al Busaidi travelled to Antarctica.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which helping verb do we use to form the past perfect?",
+    "o": [
+     "have",
+     "was",
+     "had",
+     "has"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The text about Rumaitha is a story.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence uses 'cope with' correctly?",
+    "o": [
+     "They coped with a holiday they enjoyed.",
+     "She learned to cope with the difficult weather.",
+     "She coped with a delicious meal.",
+     "He copes with his favourite song every day."
+    ],
+    "a": 2
+   }
+  ],
+  "Reading six tourists’ views and multiple choice": [
+   {
+    "t": "mcq",
+    "q": "Why is Oman attractive to tourists?",
+    "o": [
+     "Cold weather and snow",
+     "Only its big cities",
+     "Only its shopping malls",
+     "Wonderful scenery, friendly people, variety and safety"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In 2015 the New York Times listed Oman as Number 20 of 52 top destinations.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do groups suggest after reading the texts?",
+    "o": [
+     "Recipes",
+     "Travel prices",
+     "Alternative titles",
+     "New hotel names"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Oman has very few things to see and do.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the best alternative title for the six views.",
+    "o": [
+     "A Day at School",
+     "Why Visitors Love Oman",
+     "How to Build a Hotel",
+     "Football in Europe"
+    ],
+    "a": 2
+   }
+  ],
+  "Vocabulary development and Time to Talk: a place I would like to visit / Oman quiz and the dolphin centre narrative": [
+   {
+    "t": "mcq",
+    "q": "Which countries border Oman?",
+    "o": [
+     "Iraq, Iran and Qatar",
+     "Egypt, Sudan and Libya",
+     "Kuwait, Bahrain and Jordan",
+     "Saudi Arabia, Yemen and the UAE"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Trek' means to go on a long, difficult walk.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is Bahla Fort?",
+    "o": [
+     "A canyon",
+     "An island",
+     "A UNESCO heritage site",
+     "A dolphin centre"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Oman's coastline is less than 1000 kilometres long.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your friend says: 'I'd like to visit Jebel Shams.' Which follow-up question is best?",
+    "o": [
+     "Is it a name?",
+     "What can visitors do there?",
+     "Do you?",
+     "Yes or no?"
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in: jobs in tourism and hospitality; reading five job texts / Grammar Recall: first conditional and first conditional with modals": [
+   {
+    "t": "mcq",
+    "q": "How do we form the first conditional?",
+    "o": [
+     "If + past simple, would + base verb",
+     "If + will, present simple",
+     "If + past perfect, would have",
+     "If + present simple, will + base verb"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Communication and languages are useful skills for a tour guide.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which modal verbs can replace 'will' in the first conditional?",
+    "o": [
+     "was, were and been",
+     "had, has and have",
+     "may, might, could and should",
+     "did, does and do"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Every job in tourism needs exactly the same skills.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: If you visit Muscat next week, where ___ you go?",
+    "o": [
+     "had",
+     "might",
+     "did",
+     "were"
+    ],
+    "a": 2
+   }
+  ],
+  "The world’s most visited countries: reading and scanning": [
+   {
+    "t": "mcq",
+    "q": "Which countries are among the most visited in the text?",
+    "o": [
+     "Chad, Niger and Mali",
+     "Nepal, Bhutan and Laos",
+     "Fiji, Tonga and Samoa",
+     "France, Spain and Italy"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The text is about the world's most visited countries.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which phrase is closest in meaning to 'destination'?",
+    "o": [
+     "ticket",
+     "suitcase",
+     "place to go",
+     "traveller"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Destination' means the person who travels.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You want to know quickly when a museum opens from a leaflet. What should you do?",
+    "o": [
+     "Write a summary first",
+     "Scan for times and numbers",
+     "Read every word slowly",
+     "Learn all new words first"
+    ],
+    "a": 2
+   }
+  ],
+  "Parts of speech Top Tip, vocabulary matching and sentences / Cruises: reading, vocabulary matching and crossword": [
+   {
+    "t": "mcq",
+    "q": "What is the Top Tip for matching meanings?",
+    "o": [
+     "Choose the longest meaning",
+     "Always choose the first meaning",
+     "Choose any meaning you like",
+     "Choose a meaning with the same part of speech as the headword"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Steadily' is an adverb.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which amenities does the text say cruise ships have?",
+    "o": [
+     "Airports and railways",
+     "Deserts and mountains",
+     "Shops and fitness centres",
+     "Farms and factories"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Flock' means to stay at home alone.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence uses 'steadily' correctly?",
+    "o": [
+     "Steadily is my favourite food.",
+     "The number of tourists has grown steadily.",
+     "The steadily ship is big.",
+     "She steadily the door."
+    ],
+    "a": 2
+   }
+  ],
+  "Oman as a tourist destination; Listening 3.4.1: choosing a course / Vocabulary matching and Listening 3.4.2: training to be a chef": [
+   {
+    "t": "mcq",
+    "q": "Which list gives examples of events?",
+    "o": [
+     "Kitchens, ovens and plates",
+     "Diplomas, degrees and certificates",
+     "Hotels, rooms and beds",
+     "Conferences, festivals and sporting events"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Over a million tourists visit Oman every year.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'overview' mean?",
+    "o": [
+     "A final exam",
+     "A part-time job",
+     "A general description of the main points",
+     "A very small detail"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The events management diploma takes four years.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A student loves organising festivals and sporting events. Which course suits him best?",
+    "o": [
+     "A swimming course",
+     "Events management",
+     "The advanced chef certificate",
+     "A cooking club"
+    ],
+    "a": 2
+   }
+  ],
+  "Role play, tour-guide problems and ‘The customer is always right’": [
+   {
+    "t": "mcq",
+    "q": "Which phrases introduce a hypothetical solution?",
+    "o": [
+     "Yesterday I went… / Last week I saw…",
+     "Hi there! / See ya!",
+     "Yours faithfully / Love from",
+     "I think I would… / The best idea would be to…"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Harry Gordon Selfridge founded the store Selfridge's.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a 'solution'?",
+    "o": [
+     "A complaint",
+     "A customer",
+     "A way to deal with a problem",
+     "A new problem"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A good waiter should argue loudly with an unhappy customer.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: If a tourist lost his passport, I think I ___ help him call the embassy.",
+    "o": [
+     "am",
+     "would",
+     "will to",
+     "did"
+    ],
+    "a": 2
+   }
+  ],
+  "Lead-in: eating out; Listening 3.5.1 on favourite restaurants / Ordering paragraphs of a narrative essay and the stages of essay writing": [
+   {
+    "t": "mcq",
+    "q": "Why does Voice C like buffet restaurants?",
+    "o": [
+     "They are small and quiet",
+     "They are very fast",
+     "They are in ancient buildings",
+     "They are good value and kids can eat as much as they want"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Revise' means to change and improve your writing.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'proofread' mean?",
+    "o": [
+     "Choose a title",
+     "Gather ideas",
+     "Read through to correct mistakes",
+     "Write the first draft"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Voice C dislikes buffet restaurants.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A family with many children wants good value. Which restaurant suits them best?",
+    "o": [
+     "No restaurant at all",
+     "A buffet restaurant",
+     "A small, quiet romantic restaurant",
+     "An expensive restaurant with special food"
+    ],
+    "a": 2
+   }
+  ],
+  "Writing an ending; good and bad restaurants; analysing essay structure / Planning and writing a narrative essay about an eating-out experience": [
+   {
+    "t": "mcq",
+    "q": "What is a topic sentence?",
+    "o": [
+     "The last sentence of the essay",
+     "A sentence that lists prices",
+     "The title of the essay",
+     "Usually the first sentence of a paragraph that gives the main idea"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Delicious food' and 'reasonable prices' describe a good restaurant.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do you do before writing your first draft?",
+    "o": [
+     "Proofread the final draft",
+     "Nothing at all",
+     "Make notes and share ideas with a group",
+     "Hand in the essay"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Attentive service' describes a bad restaurant.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the linking word: 'First, we found a table. ___, we ordered our food.'",
+    "o": [
+     "Unless",
+     "Then",
+     "Because",
+     "Although"
+    ],
+    "a": 2
+   }
+  ],
+  "Skimming, True/False/Not Given and vocabulary development / Pronouns as cohesive devices, the Wright brothers and timed reading": [
+   {
+    "t": "mcq",
+    "q": "What do pronouns do in a text?",
+    "o": [
+     "They give the title",
+     "They show numbers",
+     "They end paragraphs",
+     "They link phrases and sentences so the text reads smoothly"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Skimming means reading quickly to get the general idea.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What was the Virgin Atlantic flight?",
+    "o": [
+     "A KLM flight with 171 passengers",
+     "A flight with no fuel",
+     "The world's first commercial biofuel flight",
+     "The Wright brothers' first flight"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The KLM flight carried 117 passengers.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which word is the verb of 'invention'?",
+    "o": [
+     "inventions",
+     "invent",
+     "inventor",
+     "inventive"
+    ],
+    "a": 2
+   }
+  ],
+  "Grammar Recall: present perfect and present perfect continuous; verb forms / For and since; congestion discussion; Activate Your English": [
+   {
+    "t": "mcq",
+    "q": "When do we use 'for'?",
+    "o": [
+     "With a starting point",
+     "With a place",
+     "With a person",
+     "With a length of time"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The present perfect continuous is formed with have/has been + verb-ing.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which time phrases go with 'since'?",
+    "o": [
+     "an hour, three days, a year",
+     "a long time, ten minutes, a week",
+     "3 o'clock, 2011, last week",
+     "two hours, a month, ages"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'I've lost my keys' is in the present perfect continuous.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete the dialogue: 'Have you studied for the exam?' '___'",
+    "o": [
+     "Yes, I studying all week.",
+     "Yes, I've been studying all week!",
+     "Yes, I study since Monday.",
+     "No, I've been study."
+    ],
+    "a": 2
+   }
+  ],
+  "The language of trends: increase, decrease and describing a table / Road rage: Listening 4.3.2, advice and role play": [
+   {
+    "t": "mcq",
+    "q": "Which list contains only verbs for going up?",
+    "o": [
+     "decrease, drop, fall, reduce",
+     "rise, fall, grow, drop",
+     "reduce, expand, drop, increase",
+     "increase, rise, grow, expand"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A trend is the way a situation changes over a period of time.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which adjective describes a slow, regular change?",
+    "o": [
+     "sharp",
+     "dramatic",
+     "gradual",
+     "sudden"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Rise' and 'grow' describe something going down.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A driver is tailgating you and you feel nervous. What is the best advice?",
+    "o": [
+     "Drive faster and faster",
+     "Stay calm and let the other driver pass",
+     "Brake suddenly to teach him a lesson",
+     "Flash your lights at him"
+    ],
+    "a": 2
+   }
+  ],
+  "Reading an informative essay on Oman Rail; analysing structure; conjunctions": [
+   {
+    "t": "mcq",
+    "q": "Which list shows the parts of the essay in order?",
+    "o": [
+     "Conclusion, introduction, main body",
+     "Main body, conclusion, introduction",
+     "Introduction, conclusion, main body",
+     "Introduction, main body (three paragraphs), conclusion"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The Oman Rail essay has five paragraphs.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is the job of paragraph 1?",
+    "o": [
+     "To give the environmental benefits",
+     "To list all conjunctions",
+     "To introduce the topic",
+     "To sum up the essay"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Paragraph 1 of the essay is the conclusion.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose: Trains carry many passengers. ___, there are fewer cars on the roads.",
+    "o": [
+     "For example",
+     "As a result",
+     "Although",
+     "But"
+    ],
+    "a": 2
+   }
+  ],
+  "Analysing the Etihad Rail essay and collecting information / Planning and writing an informative essay; peer editing": [
+   {
+    "t": "mcq",
+    "q": "What was the vital message of the campaign?",
+    "o": [
+     "Trains are always late",
+     "Never travel by train",
+     "Buy your tickets early",
+     "Put safety first and respect the railway at all times"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The Etihad Rail essay has five paragraphs.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do you check first in a partner's essay?",
+    "o": [
+     "Only handwriting",
+     "Only the length",
+     "Meaning and content",
+     "Only spelling"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "People should cross the railway track anywhere they like.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You want to write about buses. What should you do first?",
+    "o": [
+     "Hand in the essay",
+     "Collect information about buses and plan your paragraphs",
+     "Write the conclusion",
+     "Proofread the final draft"
+    ],
+    "a": 2
+   }
+  ],
+  "Across Cultures: Spain and Reading for Pleasure: the Shanghai Maglev Train / Review and Reference: Theme 4 learning objectives and core words test": [
+   {
+    "t": "mcq",
+    "q": "What is special about a Maglev train?",
+    "o": [
+     "It is pulled by horses",
+     "It runs on normal wheels and is very slow",
+     "It only carries freight",
+     "It uses magnets to float above the track, so it is fast, smooth and quiet"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Miguel de Cervantes wrote Don Quixote.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'squashy' mean?",
+    "o": [
+     "Very sweet",
+     "Very dry",
+     "Soft and easy to press flat",
+     "Hard as stone"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A Maglev train runs on wheels like a conventional train.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the best word: Old cars ___ a lot of harmful gas.",
+    "o": [
+     "currently",
+     "emit",
+     "benefit",
+     "inedible"
+    ],
+    "a": 2
+   }
+  ]
+ }
+}

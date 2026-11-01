@@ -1,0 +1,1718 @@
+{
+ "key": "en-8",
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الثامن",
+ "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ)",
+ "lessons": {
+  "Lesson 1: Let’s get started! (WOW! Magazine)": [
+   {
+    "t": "mcq",
+    "q": "What is the WOW! Magazine full of?",
+    "o": [
+     "Photos of shops",
+     "Football results",
+     "Recipes",
+     "Articles for students"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "WOW! stands for World of Wonder!",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does Jasiek prefer?",
+    "o": [
+     "Writing letters",
+     "Playing online games",
+     "Talking to friends face-to-face",
+     "Texting his friends"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Jasiek prefers texting his friends to talking face-to-face.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your friend says: “I want to know how to do better in my studies.” Which reader has the same idea?",
+    "o": [
+     "Luisa",
+     "Amir",
+     "Razan",
+     "Jasiek"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 2: WOW! Team Talk – Question words": [
+   {
+    "t": "mcq",
+    "q": "What does Rosie do for the magazine?",
+    "o": [
+     "Photos",
+     "Design",
+     "Science articles",
+     "Writing"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Ali comes from Sur.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is the word order in a question like “Where do you live?”",
+    "o": [
+     "auxiliary + subject + question word",
+     "subject + auxiliary + question word",
+     "question word + auxiliary + subject",
+     "subject + question word + auxiliary"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Ali still lives in Sur now.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which question is correct?",
+    "o": [
+     "Is what your favourite subject?",
+     "What is your favourite subject?",
+     "What your favourite subject is?",
+     "Your favourite subject what is?"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 1: Vocabulary – The environment": [
+   {
+    "t": "mcq",
+    "q": "What does “switch off lights” mean?",
+    "o": [
+     "Buy new lights",
+     "Turn on more lights",
+     "Clean the lights",
+     "Turn off the lights so they stop using electricity"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Global warming is a problem for our planet.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which phrase means keeping nature safe?",
+    "o": [
+     "destroy the rainforests",
+     "pollution",
+     "protect the environment",
+     "waste energy"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Planting trees is one of our planet’s problems.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence shows a way you can help the environment?",
+    "o": [
+     "I leave the tap running.",
+     "I recycle plastic bottles.",
+     "I leave the lights on all day.",
+     "I throw rubbish on the beach."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 2: WOW! Team Talk – Saving energy": [
+   {
+    "t": "mcq",
+    "q": "What competition are the children going to take part in?",
+    "o": [
+     "A running race",
+     "A shopping competition",
+     "A writing competition",
+     "A competition to see which school can save the most energy"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The competition is to see which school can save the most energy.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does “Brilliant!” show?",
+    "o": [
+     "You do the same thing.",
+     "You don’t understand.",
+     "You think something is great.",
+     "You are angry."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The children are going to close doors to keep the classroom warm.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A: “How can we save water?” B: “___ We can have quick showers.”",
+    "o": [
+     "Goodbye!",
+     "I know!",
+     "Me too!",
+     "Brilliant!"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 3: Grammar – Modal verbs of obligation": [
+   {
+    "t": "mcq",
+    "q": "Which modal verbs mean something is necessary?",
+    "o": [
+     "needn’t and should",
+     "mustn’t and needn’t",
+     "shouldn’t and needn’t",
+     "must and need to"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "“Needn’t” means it is not necessary.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do we use “should” for?",
+    "o": [
+     "To talk about the past",
+     "To ask a question about time",
+     "To say the right thing to do",
+     "To say something is not allowed"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "“Mustn’t” means it is not necessary, but you can do it.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which is the best advice to save water?",
+    "o": [
+     "You should leave the tap running.",
+     "You should turn off the tap when you brush your teeth.",
+     "You must have a long shower.",
+     "You needn’t turn off the tap."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 4: WOW! Book Club – A diary": [
+   {
+    "t": "mcq",
+    "q": "Which is a feature of a diary?",
+    "o": [
+     "It is always very formal.",
+     "It is written in the third person.",
+     "It has no dates or events.",
+     "It is about the writer’s life and feelings."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A diary is usually written in the first person.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Why did the family go to the dining room?",
+    "o": [
+     "It was the biggest room.",
+     "It had a big window.",
+     "It was the safest place in the house.",
+     "It was time for dinner."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A diary is usually very formal.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence sounds like a diary entry?",
+    "o": [
+     "Turn left at the end of the road.",
+     "Today I woke up early and felt really scared.",
+     "Cyclones are storms with strong winds.",
+     "Dear Sir, I am writing to complain."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 5: Vocabulary and Grammar – Extreme weather & reported speech": [
+   {
+    "t": "mcq",
+    "q": "Which word means heavy snow with strong winds?",
+    "o": [
+     "heatwave",
+     "drought",
+     "sandstorm",
+     "snowstorm"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Thunder, lightning and flood are weather words in Khalid’s diary.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How do we report a Wh- question?",
+    "o": [
+     "told + to + question word",
+     "asked + verb + subject",
+     "asked + question word + subject + verb",
+     "asked + if + question word"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A heatwave is a period of very cold weather.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Report: ‘Don’t start a forest fire!’ (He told me)",
+    "o": [
+     "He told me don’t start a forest fire.",
+     "He told me not to start a forest fire.",
+     "He told me to not starting a forest fire.",
+     "He asked me if start a forest fire."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 6: WOW! Culture – Climate change and animals (Project)": [
+   {
+    "t": "mcq",
+    "q": "Which ideas could groups research to help an endangered animal?",
+    "o": [
+     "Shopping malls, cars and computers",
+     "Cutting down forests and building roads",
+     "Hunting and fishing trips",
+     "A sponsored event, a second-hand sale and wildlife centres"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The Arctic sea ice is now 30% smaller than in 1979.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which of these is a second-hand sale?",
+    "o": [
+     "Giving free food",
+     "Buying tickets online",
+     "Selling things people used before",
+     "Selling new phones"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Polar bears are in danger because there is more sea ice.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your group chose the Arabian oryx. Which question could another group ask you?",
+    "o": [
+     "Where did you buy your bag?",
+     "How will you get money for the charity?",
+     "What is your favourite colour?",
+     "When is your birthday?"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 7: English in action – Giving advice": [
+   {
+    "t": "mcq",
+    "q": "What does Eliza want to do?",
+    "o": [
+     "Buy a present",
+     "Pass a Maths test",
+     "Go to a party",
+     "Help animals that are in danger"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Eliza wants to help animals that are in danger.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which letter is silent in “mustn’t”?",
+    "o": [
+     "the s",
+     "the u",
+     "the t in “must”",
+     "the m"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say “If I was you, I would…” in the lesson phrase.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: A: “I want to buy a present.” B: “___ buy a book?”",
+    "o": [
+     "Why not you",
+     "Why don’t you",
+     "Why you don’t",
+     "Why do you not to"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 8: Literacy – Reading a report": [
+   {
+    "t": "mcq",
+    "q": "What is the main topic of the report?",
+    "o": [
+     "Extreme sports",
+     "Shopping online",
+     "Giant pandas",
+     "Plastic pollution in the sea"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "By 2050, there will be more plastic than fish in the sea.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What should you read first to get the main idea of a report?",
+    "o": [
+     "Only the page numbers",
+     "Nothing – start in the middle",
+     "The title, the first paragraph and the diagrams",
+     "Only the last word"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Most plastics are recycled.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: “The government and ___ must work together to stop plastic pollution.”",
+    "o": [
+     "fish",
+     "businesses",
+     "tonnes",
+     "pieces"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 9: Literacy – Writing a report": [
+   {
+    "t": "mcq",
+    "q": "What does paragraph one of the report do?",
+    "o": [
+     "Gives the results",
+     "Explains what the results show",
+     "Gives the writer’s opinion",
+     "Says what the survey was about"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "453 students answered the survey “Young people and the environment”.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Why do reports often use diagrams?",
+    "o": [
+     "They replace the title.",
+     "They show the writer’s opinion.",
+     "You can see the answers quickly.",
+     "They make reports longer."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Planting trees was the most popular way to help the environment in the survey.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: “Many students said recycling, ___ only a few said planting trees.”",
+    "o": [
+     "in conclusion",
+     "while",
+     "however",
+     "firstly"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 10: Over to you! – Unit review": [
+   {
+    "t": "mcq",
+    "q": "What did Leo say about floods in his town?",
+    "o": [
+     "There was no rain for a long time.",
+     "The sand covered all the cars.",
+     "The snow closed the schools.",
+     "It rained so much that the river water destroyed a lot of homes."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Harriet gave her birthday money to a panda charity.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Who has helped an endangered animal?",
+    "o": [
+     "Faris",
+     "Nobody",
+     "Harriet",
+     "Leo"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Leo said a sandstorm destroyed a lot of homes in his town.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Make a sentence with a modal verb using the flashcard “plant trees”.",
+    "o": [
+     "We should planted trees.",
+     "We should plant trees.",
+     "We should to plant trees.",
+     "We planting should trees."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 11: Get ready for… B1 Preliminary": [
+   {
+    "t": "mcq",
+    "q": "What is the reading tip for the gap-fill task (Reading Part 5)?",
+    "o": [
+     "Choose the longest word every time.",
+     "Read only the first sentence.",
+     "Guess without reading.",
+     "Read the whole text first, then each gap."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Green turtles live on the Great Barrier Reef in Australia.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Where do the green turtles in the text live?",
+    "o": [
+     "In the Arctic",
+     "In a rainforest",
+     "On the Great Barrier Reef",
+     "In the Hajar Mountains"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "In a gap-fill task, you should read only the words next to the gap.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the word for the gap: “Green turtles are in danger ___ temperatures are rising.”",
+    "o": [
+     "or",
+     "because",
+     "but",
+     "so"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 12: Fun corner (Optional lesson)": [
+   {
+    "t": "mcq",
+    "q": "Which sentence about saving energy is correct?",
+    "o": [
+     "We should to switch off lights.",
+     "We should switching off lights.",
+     "We should switched off lights.",
+     "We should switch off lights."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "“We should switch off lights” is a sentence about saving energy.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which phrase is a way to help the planet?",
+    "o": [
+     "pollution",
+     "climate change",
+     "pick up rubbish",
+     "waste energy"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "‘What is a heatwave?’ is reported as “She asked me what is a heatwave.”",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Report: ‘Please plant a tree.’ (The teacher / us)",
+    "o": [
+     "The teacher told us to planting a tree.",
+     "The teacher told us to plant a tree.",
+     "The teacher told us plant a tree.",
+     "The teacher asked us if plant a tree."
+    ],
+    "a": 2
+   }
+  ],
+  "Graded reader 1: The Cyclone": [
+   {
+    "t": "mcq",
+    "q": "What did Marwa and her dad do after the cyclone?",
+    "o": [
+     "They went shopping.",
+     "They went on holiday.",
+     "They stayed at home all week.",
+     "They did a beach clean-up."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The cyclone in the story happened at the coast.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a “sight”?",
+    "o": [
+     "A loud noise",
+     "A type of storm",
+     "Something you see",
+     "Something you eat"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Marwa was worried about a cyclone in the mountains.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which word has a silent letter, like “should”?",
+    "o": [
+     "sea",
+     "could",
+     "turtle",
+     "beach"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 1: Vocabulary – Extreme sports": [
+   {
+    "t": "mcq",
+    "q": "Which sports does Ali talk about?",
+    "o": [
+     "Go-karting only",
+     "Horse riding only",
+     "Rock climbing and caving",
+     "Water skiing, surfboarding, paragliding and diving"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Diving is a sport you do under the water.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which group of sports are usually up high?",
+    "o": [
+     "go-karting, motor racing, horse riding",
+     "caving, diving, sandboarding",
+     "paragliding, rock climbing, abseiling",
+     "diving, water skiing, surfboarding"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Rosie loves all extreme sports.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence tells where and who with?",
+    "o": [
+     "Do you like football?",
+     "I play football in the park with my brother.",
+     "I like football.",
+     "Football is a sport."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 2: WOW! Team Talk – Are extreme sports dangerous?": [
+   {
+    "t": "mcq",
+    "q": "What do Ali and Eric disagree about?",
+    "o": [
+     "Which team is the best",
+     "Where to go on holiday",
+     "What to eat for lunch",
+     "Whether extreme sports are too dangerous for children"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Ali and Eric disagree about whether extreme sports are too dangerous for children.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which expression shows you agree but not strongly?",
+    "o": [
+     "Not really.",
+     "Brilliant!",
+     "I suppose so.",
+     "I told you so!"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Eric hurt himself when he was go-karting.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A: “Maybe we should take a helmet, just in case.” B (agreeing a little): “___”",
+    "o": [
+     "No way!",
+     "I suppose so.",
+     "I told you so!",
+     "Not really."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 3: Grammar – Reflexive pronouns": [
+   {
+    "t": "mcq",
+    "q": "When do we use reflexive pronouns?",
+    "o": [
+     "When we talk about the future",
+     "When we ask a question",
+     "When the subject is plural only",
+     "When the subject and the object of the verb are the same"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "We use reflexive pronouns when the subject and the object are the same.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Why does Saeed feel proud?",
+    "o": [
+     "He found his trainers.",
+     "He went diving.",
+     "He was scared about rock climbing, but he did it.",
+     "He won a go-karting race."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "“She hurt himself in the swimming pool” is correct.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: “They cut ___ when they were go-karting.”",
+    "o": [
+     "himself",
+     "themselves",
+     "theirselves",
+     "them"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 4: WOW! Book Club – An adventure story": [
+   {
+    "t": "mcq",
+    "q": "Which is a feature of an adventure story?",
+    "o": [
+     "It has no characters.",
+     "It is a list of facts.",
+     "It has no setting.",
+     "It has exciting events."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In a story, a character is a person.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How do we make a compound adjective?",
+    "o": [
+     "two words with no hyphen ever",
+     "word + -ly",
+     "word + hyphen + word",
+     "word + -ing only"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "An adventure story usually has boring events.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: “My mum’s ___ bread is delicious.”",
+    "o": [
+     "world-famous",
+     "home-made",
+     "English-speaking",
+     "nine-hour"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 5: Vocabulary and Grammar – Geography & Past perfect": [
+   {
+    "t": "mcq",
+    "q": "How do we form the Past perfect?",
+    "o": [
+     "has + past participle",
+     "was + verb-ing",
+     "did + verb",
+     "had + past participle"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A valley is a low place between hills or mountains.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "In which part of Oman is Sur?",
+    "o": [
+     "the south",
+     "the north",
+     "the east",
+     "the west"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Sunset is when the sun comes up in the morning.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Join: He brushed his teeth. Then he put on his pyjamas.",
+    "o": [
+     "Before he puts on his pyjamas, he brushed his teeth.",
+     "Before he put on his pyjamas, he had brushed his teeth.",
+     "Before he had put on his pyjamas, he brushed his teeth.",
+     "After he put on his pyjamas, he had brushed his teeth."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 6: WOW! Culture – Unusual sports (Project)": [
+   {
+    "t": "mcq",
+    "q": "How many players are in an underwater hockey team?",
+    "o": [
+     "four",
+     "eight",
+     "eleven",
+     "six"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Underwater hockey is played at the bottom of a swimming pool.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "When did cycleball start?",
+    "o": [
+     "1,000 years ago",
+     "last year",
+     "1893",
+     "the 1950s"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Underwater hockey is played on ice.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Use the Past perfect: After we ___ our sport, we wrote the descriptions.",
+    "o": [
+     "had choose",
+     "had chosen",
+     "have chosen",
+     "chose had"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 7: English in action – Asking and saying what you prefer": [
+   {
+    "t": "mcq",
+    "q": "Which question asks about a preference?",
+    "o": [
+     "Did you watch the sunset?",
+     "Where is the sunset?",
+     "When is the sunrise?",
+     "Would you rather watch the sunrise or the sunset?"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Would you rather go caving or abseiling?' asks about a preference.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which part of a Past perfect sentence with 'd is NOT stressed?",
+    "o": [
+     "the nouns",
+     "the important words",
+     "'d",
+     "the main verb"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We say 'I'd prefer go hiking.'",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Join: We ate our breakfast. We showered.",
+    "o": [
+     "After we had eat our breakfast, we showered.",
+     "After we had eaten our breakfast, we showered.",
+     "After we ate our breakfast, we had showered.",
+     "After we have eaten breakfast, we shower."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 8: Literacy – Reading brochures and adverts": [
+   {
+    "t": "mcq",
+    "q": "What is the purpose of the Adams' Adventures text?",
+    "o": [
+     "to tell a story about a family",
+     "to teach you science",
+     "to give news about sport",
+     "to get you to go on an adventure holiday"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A brochure often tries to get you to buy something or go somewhere.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which group of words are all persuasive adjectives?",
+    "o": [
+     "safari, polar, climbing",
+     "brochure, advert, reader",
+     "stunning, amazing, perfect, terrific",
+     "Spain, Oman, Antarctic"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You can watch penguins on the safari holiday.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You want the main idea of a brochure in one minute. What should you do?",
+    "o": [
+     "read only the last line",
+     "skim the title, headings and pictures",
+     "read every word slowly",
+     "count the words"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 9: Literacy – Writing a brochure": [
+   {
+    "t": "mcq",
+    "q": "What is the purpose of the model brochure?",
+    "o": [
+     "to tell a story about a trip",
+     "to report the news",
+     "to teach grammar",
+     "to get people to come water skiing at Qantab Beach"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The model brochure wants people to come water skiing at Qantab Beach.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which two adjectives are in the model brochure?",
+    "o": [
+     "small, slow",
+     "cold, wet",
+     "brilliant, gorgeous",
+     "terrible, awful"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Brochures should use long paragraphs.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence speaks directly to the reader?",
+    "o": [
+     "It was a beach.",
+     "You will love our gorgeous beach!",
+     "The beach is there.",
+     "People went to the beach."
+    ],
+    "a": 2
+   }
+  ],
+  "Graded reader 1: A Sandboarding Adventure": [
+   {
+    "t": "mcq",
+    "q": "What did Laith and Aliyah have in the Sharqiyah Sands?",
+    "o": [
+     "a swimming lesson",
+     "a camel race",
+     "a football match",
+     "a sandboarding lesson"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Laith and Aliyah went sandboarding in the Sharqiyah Sands.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What had Laith wanted to do for a long time?",
+    "o": [
+     "climb a cliff",
+     "visit a market",
+     "go sandboarding",
+     "go diving"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The Sharqiyah Sands are in the west of Oman.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence uses the Past perfect correctly?",
+    "o": [
+     "Laith wanted had to go sandboarding.",
+     "Laith had wanted to go sandboarding for a long time.",
+     "Laith had want to go sandboarding.",
+     "Laith has wanted go sandboarding."
+    ],
+    "a": 2
+   }
+  ],
+  "Graded reader 2: A Rock Climbing Adventure": [
+   {
+    "t": "mcq",
+    "q": "What is a falcon?",
+    "o": [
+     "a kind of fish",
+     "a climbing rope",
+     "a kind of tent",
+     "a kind of bird"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The boys went rock climbing in the north of Oman.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What was the falcon's mother doing?",
+    "o": [
+     "sleeping",
+     "swimming",
+     "making noises",
+     "building a house"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The boys saw the sunset before they got to the cliffs.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence uses the Past perfect correctly?",
+    "o": [
+     "The baby falcon falling had out of its nest.",
+     "The baby falcon had fallen out of its nest.",
+     "The baby falcon had fell out of its nest.",
+     "The baby falcon has fall out of its nest."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 1: Vocabulary – Shopping": [
+   {
+    "t": "mcq",
+    "q": "What do you call a line of people waiting to pay?",
+    "o": [
+     "a till",
+     "a receipt",
+     "a refund",
+     "a queue"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A queue is a line of people waiting.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word has a silent p?",
+    "o": [
+     "shop",
+     "spend",
+     "receipt",
+     "pay"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A receipt is the machine where you pay.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence.",
+    "o": [
+     "I receipt money at the shop.",
+     "I'm better at saving money than spending it.",
+     "I'm better at queue money.",
+     "I till my money every week."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 2: WOW! Team Talk – Online shopping": [
+   {
+    "t": "mcq",
+    "q": "Do Rosie and Manar both like online shopping?",
+    "o": [
+     "Yes, they both love it.",
+     "No, neither of them likes it.",
+     "Yes, but only for books.",
+     "No, Rosie likes it but Manar prefers shops."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Manar invites Rosie to come shopping at the weekend.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which expression means you are joking?",
+    "o": [
+     "No chance!",
+     "Excuse me.",
+     "I'm only kidding!",
+     "That's true."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Rosie and Manar both like online shopping.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A: 'Shops are busy at the weekend.' B agrees. What does B say?",
+    "o": [
+     "Goodbye!",
+     "That's true.",
+     "No chance!",
+     "I'm only kidding!"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 3: Grammar – Zero and first conditionals": [
+   {
+    "t": "mcq",
+    "q": "What is the form of the first conditional?",
+    "o": [
+     "if + Present simple, Present simple",
+     "if + Past simple, would + verb",
+     "if + will, will",
+     "if + Present simple, will + verb"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The zero conditional talks about things that are always true.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'buy locally' mean?",
+    "o": [
+     "buy second-hand things only",
+     "buy things on sale",
+     "buy things made or grown near where you live",
+     "buy everything online"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The zero conditional uses will in both parts.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: If you heat ice, it ___.",
+    "o": [
+     "would melt",
+     "melts",
+     "will melted",
+     "melted"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 4: WOW! Book Club – A poem": [
+   {
+    "t": "mcq",
+    "q": "Which four places would the speaker like to visit?",
+    "o": [
+     "Spain, China, Oman, the UK",
+     "the beach, the desert, a valley, a bay",
+     "Paris, Rome, Dubai, Muscat",
+     "Ancient Egypt, London, the Arctic, the Moon"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The poem has four verses.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a pharaoh?",
+    "o": [
+     "a polar bear",
+     "an astronaut",
+     "a ruler of Ancient Egypt",
+     "a detective"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The speaker would like to visit the Sahara Desert.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Your group writes a new verse. How should it start?",
+    "o": [
+     "Yours sincerely ...",
+     "If you could ...",
+     "Dear Sir ...",
+     "Once upon a time ..."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 5: Vocabulary and Grammar – Imaginary situations & second conditional": [
+   {
+    "t": "mcq",
+    "q": "What is the form of the second conditional?",
+    "o": [
+     "if + Present simple, will + verb",
+     "if + Present simple, Present simple",
+     "if + would, would",
+     "if + Past simple, would + verb"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The second conditional is for imaginary situations.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which phrase is NOT an imaginary situation?",
+    "o": [
+     "travel back in time",
+     "become a film character",
+     "eat breakfast",
+     "be invisible"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'If you could travel back in time' is a real situation.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Continue the chain: If I became an inventor, ...",
+    "o": [
+     "I'd had have good ideas.",
+     "I'd have lots of good ideas.",
+     "I have lots of good ideas yesterday.",
+     "I will had good ideas."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 6: WOW! Culture – Interesting markets (Project)": [
+   {
+    "t": "mcq",
+    "q": "What can you buy at the Muara Kuin Floating Market?",
+    "o": [
+     "leather bags and shoes",
+     "computers and phones",
+     "cars and bikes",
+     "fruit, vegetables, flowers and fish"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The Muara Kuin Floating Market is in Indonesia.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "When is the Flower Market in Hong Kong open?",
+    "o": [
+     "only after sunset",
+     "on weekends only",
+     "7am to 7pm every day",
+     "only before sunrise"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You should get to the floating market after sunset.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: If I could visit one market, I ___ go to Djemaa el Fna.",
+    "o": [
+     "did",
+     "'d",
+     "'ll",
+     "am"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 7: English in action – Making a complaint": [
+   {
+    "t": "mcq",
+    "q": "Where is the conversation?",
+    "o": [
+     "in a bank",
+     "at a market",
+     "at school",
+     "in a clothes shop"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The conversation takes place in a clothes shop.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a complaint?",
+    "o": [
+     "paying with contactless",
+     "waiting in a queue",
+     "telling someone that something is wrong",
+     "buying something on sale"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The customer and the shop assistant are old friends.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: They're damaged here. I need to ___ them.",
+    "o": [
+     "queue",
+     "exchange",
+     "receipt",
+     "complain them"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 8: Literacy – Reading emails": [
+   {
+    "t": "mcq",
+    "q": "What else can you do at the shopping centre if you get bored of shopping?",
+    "o": [
+     "climb a cliff",
+     "go sandboarding",
+     "ride a camel",
+     "visit the underwater zoo, the ice rink or the cinema"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The two emails are informal emails between friends.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'incredible' mean?",
+    "o": [
+     "boring",
+     "angry",
+     "amazing, hard to believe",
+     "very small"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Nawal loves shopping and bought lots of things.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Find the opposites: hate, sell, first.",
+    "o": [
+     "hate, buy, first",
+     "love, buy, last",
+     "like, pay, next",
+     "love, spend, second"
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 9: Literacy – Writing an informal email": [
+   {
+    "t": "mcq",
+    "q": "What does an informal email start with?",
+    "o": [
+     "Dear Sir or Madam",
+     "Yours faithfully",
+     "The date only",
+     "Hi + the person's name"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The subject line tells the reader why you are writing.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'unless' mean?",
+    "o": [
+     "because",
+     "so that",
+     "if not",
+     "when"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We start an informal email with 'Dear Sir'.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct sentence.",
+    "o": [
+     "Unless stop raining, we won't go.",
+     "Unless it stops raining, we won't go out.",
+     "Unless it doesn't stop raining, we won't go out.",
+     "Unless it will stop raining, we go out."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 1: Language booster – Polar bears & big numbers": [
+   {
+    "t": "mcq",
+    "q": "What are Rashid and Anas talking about in their dialogue?",
+    "o": [
+     "shopping online",
+     "rock climbing",
+     "a poem",
+     "helping polar bears"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Some male polar bears are up to three metres long.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'by myself' mean?",
+    "o": [
+     "with my family",
+     "very fast",
+     "alone, on my own",
+     "with my friends"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A polar bear's skin is white.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Go Green: 'recycle plastic bottles'. Make a sentence.",
+    "o": [
+     "We recycle shouldn't bottles.",
+     "We should recycle plastic bottles.",
+     "We shouldn't recycle plastic bottles.",
+     "We should waste plastic bottles."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 2: CLIL Science – Think like a scientist!": [
+   {
+    "t": "mcq",
+    "q": "What is an explanation?",
+    "o": [
+     "a story with characters",
+     "a list of prices",
+     "a poem with rhyme",
+     "a text that tells how or why something happens"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "An explanation tells us how or why something happens.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word means the result of a cause?",
+    "o": [
+     "explanation",
+     "note",
+     "effect",
+     "cause"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Explanations tell us when and where something happens.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence uses 'so' correctly?",
+    "o": [
+     "Global warming, so, so.",
+     "Using fossil fuels causes global warming, so our planet gets hotter.",
+     "Our planet gets hotter, so we use fossil fuels to cool it.",
+     "So global warming, fossil fuels."
+    ],
+    "a": 2
+   }
+  ],
+  "Lesson 3: CLIL Science – Let’s practise! (Rainforests)": [
+   {
+    "t": "mcq",
+    "q": "Which of these is a cause, not an effect, in the rainforest text?",
+    "o": [
+     "Plants die.",
+     "Animals move away.",
+     "Animals lose habitat.",
+     "Trees are cut down."
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Rainforests have more plants and animals than any other habitat.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Why do forest workers sometimes burn the trees?",
+    "o": [
+     "to cook food",
+     "to stop pollution",
+     "so farmers can have new land for crops and farm animals",
+     "to make light at night"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Burning trees makes the air cleaner.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "For the plastic rubbish presentation, which is a cause-and-effect plan?",
+    "o": [
+     "plastic → plastic",
+     "plastic in the sea → sea animals are hurt",
+     "plastic is a word → it has seven letters",
+     "plastic is blue → it is nice"
+    ],
+    "a": 2
+   }
+  ]
+ }
+}

@@ -1,0 +1,908 @@
+{
+ "key": "en-11",
+ "subject": "اللغة الإنجليزية",
+ "grade": "الصف الحادي عشر",
+ "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ)",
+ "lessons": {
+  "Theme 1 - Unit 1: Body Language": [
+   {
+    "t": "mcq",
+    "q": "Which of these is one of the new communication technologies in the text?",
+    "o": [
+     "printing",
+     "newspapers",
+     "the telephone",
+     "wireless systems"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Body language means sending a message with movements, gestures or facial expressions.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word is a pronoun?",
+    "o": [
+     "send",
+     "nervously",
+     "we",
+     "gestures"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Printing is one of the new communication technologies in the text.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Rashid walked in slowly, looked at the floor and crossed his arms. Which title fits best?",
+    "o": [
+     "A Busy Teacher",
+     "A Nervous Visitor",
+     "A Confident Speaker",
+     "A Happy Winner"
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 1 - Unit 2: The Internet": [
+   {
+    "t": "mcq",
+    "q": "Who was Tim Berners-Lee?",
+    "o": [
+     "the owner of a coffee shop",
+     "a famous blogger",
+     "a mobile phone seller",
+     "the computer scientist who created the worldwide web"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Tim Berners-Lee created the worldwide web in 1991.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What are 'these services' in the text?",
+    "o": [
+     "free laptops",
+     "blog comments",
+     "high-speed connections and wireless systems",
+     "coffee and food"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "We use the present continuous for habits and routines.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Complete: In the classroom I usually ___ but now I ___.",
+    "o": [
+     "sit / stand",
+     "sit / am standing",
+     "am sitting / stand",
+     "sits / standing"
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 1 - Unit 3: Mobile Phones": [
+   {
+    "t": "mcq",
+    "q": "What does 'emergency' mean?",
+    "o": [
+     "a quiet place",
+     "a cheap phone",
+     "a long holiday",
+     "a sudden dangerous situation that needs action"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "'Noise pollution' means loud and unpleasant sound.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'blab' mean?",
+    "o": [
+     "write a letter",
+     "walk slowly",
+     "talk too much, often about secrets",
+     "stay silent"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Marvellous' means terrible.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence uses 'constant' correctly?",
+    "o": [
+     "Constant is my favourite phone.",
+     "The constant noise made me want to get rid of my old phone.",
+     "I constant my phone every day.",
+     "She is very constant to buy a phone."
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 1 - Unit 4: Communication Skills": [
+   {
+    "t": "mcq",
+    "q": "Why is it important to express our feelings?",
+    "o": [
+     "Feelings are not important",
+     "It makes other people angry",
+     "It stops us from talking",
+     "Negative feelings can get trapped inside and make us unhappy or angry"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Communication involves talking and listening.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which phrase is one of the Soundbites?",
+    "o": [
+     "I don't care.",
+     "Be quick.",
+     "That's interesting.",
+     "Leave me alone."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Ahmed communicates better than Laila.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "In a conversation, your partner speaks and you want to show you are listening. What should you do?",
+    "o": [
+     "Say 'whatever'",
+     "Make eye contact and say 'mm' or 'really?'",
+     "Look at your phone",
+     "Start a new topic at once"
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 1 - Unit 5: E-Mail": [
+   {
+    "t": "mcq",
+    "q": "Which rule says to keep e-mails short?",
+    "o": [
+     "Always write in capitals",
+     "Use many smileys",
+     "Never use a subject line",
+     "Use short sentences in one or two paragraphs"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "You should include a subject line in an e-mail.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Why should you not send confidential information by e-mail?",
+    "o": [
+     "E-mails are too slow",
+     "E-mails have no subject line",
+     "E-mails are not private",
+     "E-mails are too short"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You should always use smileys in every e-mail.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You are planning an informal e-mail to a friend. Which plan is best?",
+    "o": [
+     "news only, no greeting",
+     "greeting, news, a question, closing",
+     "closing, news, greeting",
+     "subject only"
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 2 - Unit 1: Goodbye to Childhood": [
+   {
+    "t": "mcq",
+    "q": "At what age can girls begin their growth spurt?",
+    "o": [
+     "at 20",
+     "at 17 only",
+     "at 5",
+     "as young as 10"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Adolescence is the period between childhood and adulthood.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does 'suspicious' describe in the introduction?",
+    "o": [
+     "friends who help each other",
+     "teachers who give homework",
+     "parents who do not fully trust their teens",
+     "teens who are very happy"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Boys usually start their growth spurt earlier than girls.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the sentence that uses 'conflict' correctly.",
+    "o": [
+     "The conflict is a red spot.",
+     "A conflict started between the brothers.",
+     "I conflict my homework every day.",
+     "She is very conflict today."
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 2 - Unit 2: Teens and Adults": [
+   {
+    "t": "mcq",
+    "q": "What advice does Mr Hamed give Nasser?",
+    "o": [
+     "to buy a new computer",
+     "to chat more online",
+     "to leave school",
+     "to get more sleep because he has exams soon"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Nasser was falling asleep in class because he was chatting on the Internet all night.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which word introduces a shorter action that interrupts a longer one?",
+    "o": [
+     "always",
+     "usually",
+     "when",
+     "while"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Nasser really went to sleep at ten o'clock.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence is correct?",
+    "o": [
+     "We were have dinner when the lights go out.",
+     "We were having dinner when the lights went out.",
+     "We had dinner when the lights were going out.",
+     "We have dinner when the lights went out."
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 2 - Unit 3: Teenage Friendships": [
+   {
+    "t": "mcq",
+    "q": "What qualities are important to Emily in a friend?",
+    "o": [
+     "being rich and famous",
+     "living near her house only",
+     "speaking only English",
+     "similar interests, and being loyal, dependable and honest"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A loyal friend always supports you.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "How long have Hilary and her friend been best friends?",
+    "o": [
+     "since Grade One",
+     "for one day",
+     "since Grade Nine",
+     "since last week"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Emily attends a local village school in Nizwa.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the sentence that describes a friend with two positive adjectives.",
+    "o": [
+     "My best friend is rude and cheerful.",
+     "My best friend is honest and cheerful.",
+     "My best friend is lazy and rude.",
+     "My best friend is honest and lazy."
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 2 - Unit 4: Western Influence": [
+   {
+    "t": "mcq",
+    "q": "Why do teenagers see fast food outlets as attractive?",
+    "o": [
+     "they are very quiet",
+     "they sell only traditional food",
+     "they are far away",
+     "they are cool places to hang out with friends"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The talk is about changing tastes in eating and shopping.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which phrase is a Soundbite for asking questions?",
+    "o": [
+     "Take care.",
+     "Thank you.",
+     "Why do you think…?",
+     "See you soon."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The speaker says teenagers mostly want rice and fish at fast food outlets.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Someone says, 'Tastes are changing.' You don't understand. What do you say?",
+    "o": [
+     "I'm hungry.",
+     "How do you mean?",
+     "That's the end.",
+     "Bye for now."
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 2 - Unit 5: Teenage Angst": [
+   {
+    "t": "mcq",
+    "q": "Which sentences go with Letter B (Taha)?",
+    "o": [
+     "2, 3 and 4",
+     "5, 7 and 9",
+     "1, 2 and 3",
+     "1, 6 and 8"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A counsellor gives advice to people with problems.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which advice sentence goes with Letter A?",
+    "o": [
+     "Set yourself time limits for your homework tasks.",
+     "Write a PS at the end.",
+     "Why don't you just watch your friends play?",
+     "Give yourself more time to decide."
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Set yourself time limits for your homework tasks' goes with Letter A (Nabil).",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which phrase can go at the end of an informal letter?",
+    "o": [
+     "Dear Auntie",
+     "Take care, speak soon.",
+     "Hi there!",
+     "How are you?"
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 3 - Unit 1: Types of Tourism": [
+   {
+    "t": "mcq",
+    "q": "Which two phrases belong to cultural tourism?",
+    "o": [
+     "bungee jumping and rafting",
+     "safari and whale watching",
+     "yacht hire and crews",
+     "local festivals and museums and theatres"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A cruise is a holiday on a big ship.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a benefit of foreign tourism?",
+    "o": [
+     "it changes local traditions",
+     "it makes noise",
+     "it helps the economy",
+     "it causes crowding"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "A camping trip is usually very expensive.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which phrase from Activity 4 matches the safari advert?",
+    "o": [
+     "accommodation that disappears",
+     "wild animals",
+     "creating a work of art",
+     "visiting local markets"
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 3 - Unit 2: Getting There": [
+   {
+    "t": "mcq",
+    "q": "Which paragraph begins the bus brochure?",
+    "o": [
+     "paragraph f – the flight leaves",
+     "paragraph d – arriving at the hotel",
+     "paragraph h – the plane lands",
+     "paragraph c – boarding the bus at Dubai bus station"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "On the bus trip, passengers buy a travel permit at the border.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What kind of message do you listen to in this lesson?",
+    "o": [
+     "a song",
+     "a teacher's lesson",
+     "a message on an answering machine",
+     "a news report on TV"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The bus has lunch in Nizwa.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which sentence shows a decision made at the moment of speaking?",
+    "o": [
+     "I am going to study medicine next year.",
+     "I'll have the blue one.",
+     "I'm meeting Ali at six.",
+     "I went home."
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 3 - Unit 3: Destinations": [
+   {
+    "t": "mcq",
+    "q": "What does 'luxurious' describe?",
+    "o": [
+     "something old and broken",
+     "something small and cheap",
+     "something wild and natural",
+     "something very comfortable and expensive"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "A honeymoon couple would like a secluded, romantic place.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which of these are hotel facilities?",
+    "o": [
+     "wooden dhows and forts",
+     "souks and museums",
+     "a swimming pool and sports facilities",
+     "sand dunes and mountains"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Unspoilt' means damaged by tourism.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which adjective is best in a brochure for an adventure holiday?",
+    "o": [
+     "first-class",
+     "adventurous",
+     "secluded",
+     "romantic"
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 3 - Unit 4: Tourist Information": [
+   {
+    "t": "mcq",
+    "q": "How wide is Tawi Attair?",
+    "o": [
+     "30 metres",
+     "10 metres",
+     "220 kilometres",
+     "over 100 metres"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Tawi Attair is a natural sinkhole that is home to many birds.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which is a phrase for responding with a different plan?",
+    "o": [
+     "Why don't you…?",
+     "How about…?",
+     "Let's… instead",
+     "May I suggest…"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Mirbat Fort is famous because it was destroyed in 1970.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Choose the correct suggestion.",
+    "o": [
+     "How about visited Mughsayl?",
+     "How about visiting Mughsayl?",
+     "How about visit Mughsayl?",
+     "How about to visit Mughsayl?"
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 3 - Unit 5: Designing a Tour": [
+   {
+    "t": "mcq",
+    "q": "Name two reasons why people travel.",
+    "o": [
+     "to stay at home and sleep",
+     "to do homework and exams",
+     "to stop seeing new places",
+     "to relax and to learn about other cultures"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Sultanahmet is the old part of Istanbul.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What is a 'package holiday'?",
+    "o": [
+     "a holiday at home",
+     "a school trip only",
+     "a holiday where travel and hotel are arranged together",
+     "a holiday to send parcels"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The walking tour starts at the Arasta Bazaar.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which is the best first sentence for a tour of Nizwa?",
+    "o": [
+     "I like Istanbul.",
+     "Our tour starts at Nizwa Fort at 9 a.m.",
+     "Our final stop will be the hotel.",
+     "Finally, we will go home."
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 4 - Unit 1: Smart Homes": [
+   {
+    "t": "mcq",
+    "q": "What happens when you walk into a room in a smart home?",
+    "o": [
+     "the doors lock forever",
+     "the fridge turns off",
+     "nothing happens",
+     "the lights come on and the temperature adjusts"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "In a smart home, appliances have computers inside and are controlled by a computer.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do electronic cupboards and fridges do in a smart home?",
+    "o": [
+     "clean the house",
+     "play football",
+     "talk to shops over the Internet",
+     "cook food by themselves"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You cannot turn things on and off in a smart home when you are away.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Which smart feature could be most useful in a school?",
+    "o": [
+     "doors that never open",
+     "lights that turn off when classrooms are empty",
+     "fridges that order pizza",
+     "beds that make themselves"
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 4 - Unit 2: Questions and Answers": [
+   {
+    "t": "mcq",
+    "q": "How is the past passive formed?",
+    "o": [
+     "will + base verb",
+     "is + -ing",
+     "did + base verb",
+     "was/were + past participle"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Romeo and Juliet was written by William Shakespeare.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What are the passive verbs in the quiz questions?",
+    "o": [
+     "is destroying, is writing",
+     "will destroy, will write",
+     "was destroyed, was written, was sent",
+     "destroys, writes, sends"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "'Edison invented the bulb' is a passive sentence.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Rewrite: Tim Berners-Lee invented the world wide web.",
+    "o": [
+     "Tim Berners-Lee was invented by the world wide web.",
+     "The world wide web was invented by Tim Berners-Lee.",
+     "The world wide web invented Tim Berners-Lee.",
+     "The world wide web is invent by Tim Berners-Lee."
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 4 - Unit 3: The Best and the Worst": [
+   {
+    "t": "mcq",
+    "q": "Which list shows the writer's five helpful inventions?",
+    "o": [
+     "cigarettes, cars, guns, paper, money",
+     "cars, guns, medicine, the wheel, phones",
+     "money, cigarettes, paper, guns, cars",
+     "writing systems, paper, money, medicine, the wheel"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "The writer lists the wheel as a helpful invention.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "Which ending often makes an adjective?",
+    "o": [
+     "-or",
+     "-ery",
+     "-ful",
+     "-tion"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "The writer lists money as a harmful invention.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "You want to argue that paper is helpful. Which reason is best?",
+    "o": [
+     "It is a kind of medicine.",
+     "It allows us to keep and share information.",
+     "It is very heavy.",
+     "It causes traffic accidents."
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 4 - Unit 4: Virtual Reality": [
+   {
+    "t": "mcq",
+    "q": "What limitation does virtual reality have?",
+    "o": [
+     "It is too real",
+     "It cannot be used for games",
+     "It has no sound",
+     "It is difficult to make it seem real"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "Virtual reality is an interactive environment made using a computer.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What do we usually use to control a computer in the text?",
+    "o": [
+     "a remote key",
+     "a pencil",
+     "a keyboard and mouse",
+     "a steering wheel"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "Virtual reality today seems completely real.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "A hospital wants doctors to practise without danger to patients. How can virtual reality help?",
+    "o": [
+     "by sending e-mails",
+     "by training doctors in a copy of the real world",
+     "by playing PacMan",
+     "by selling DVDs"
+    ],
+    "a": 2
+   }
+  ],
+  "Theme 4 - Unit 5: E-Shopping": [
+   {
+    "t": "mcq",
+    "q": "Do you have to buy the recommended DVDs?",
+    "o": [
+     "Yes, always",
+     "Only if you are 19",
+     "Only in the first month",
+     "No"
+    ],
+    "a": 4
+   },
+   {
+    "t": "tf",
+    "q": "You must be 18 or over to buy DVDs from the Online DVD Club.",
+    "a": true
+   },
+   {
+    "t": "mcq",
+    "q": "What does the customer want?",
+    "o": [
+     "to become a manager",
+     "to change his password",
+     "to return the DVDs and not pay the extra 10 percent",
+     "to buy more DVDs"
+    ],
+    "a": 3
+   },
+   {
+    "t": "tf",
+    "q": "You can return any DVD after you have watched it.",
+    "a": false
+   },
+   {
+    "t": "mcq",
+    "q": "Correct: 'dear sir i am not happy about you're service'.",
+    "o": [
+     "DEAR SIR I AM NOT HAPPY ABOUT YOUR SERVICE",
+     "Dear Sir, I am not happy about your service.",
+     "dear Sir, i am not happy about you're service.",
+     "Dear sir i am not happy about youre service."
+    ],
+    "a": 2
+   }
+  ]
+ }
+}
