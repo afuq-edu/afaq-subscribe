@@ -13,7 +13,7 @@ import {
 } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { diffDays, addDays } from './dates.js';
-import { lessonHomework, hwDates, hwTitle, hwPageOp, HW_MARK } from './homework.js';
+import { lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, HW_MARK } from './homework.js';
 import { AFAQ } from './afaq-config.js';
 import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck, installUrl, fillLog, flushFillLog, sendNoorTree, getNoorTree } from './remote.js';
 
@@ -2353,7 +2353,7 @@ async function homeworkOnly() {
       if (r === 'ok') n++;
     }
     WIZ.hwHead = n ? `✓ أضفت ${hw(n)}` : '✓ انتهى';
-    WIZ.hwSub = n ? 'لكل واجب خمسة أسئلة في «المهام الإلكترونية»، بتاريخي النشر والتسليم اللذين اخترتهما.' : 'واجبات هذه الدروس موجودة في نور.';
+    WIZ.hwSub = n ? 'لكل واجب خمسة أسئلة في «المهام الإلكترونية»، بتاريخي النشر والتسليم اللذين اخترتهما.' : WIZ.hwFail ? 'الواجبات لم تُضف بعد. أعد المحاولة بعد قليل.' : 'واجبات هذه الدروس موجودة في نور.';
     logLine('ok', WIZ.hwHead);
     return;
   }
@@ -2390,6 +2390,31 @@ async function homeworkOnly() {
     : 'الواجبات تُضاف لدروس محضّرة في نور. حضّر الدروس أولًا ثم أضف واجباتها.';
   logLine('ok', WIZ.hwHead + (past ? ` — ${toAr(past)} درسًا مضى تاريخ تحضيره` : ''));
 }
+// واجب واحد كما ينشئه المعلم بيده في تبويب نور: «إضافة واجب جديد» ← «إضافة» ← «إضافة مجموعة مفردات دفعة واحدة» ← «حفظ»
+async function noorOrigin() { try { return new URL((await chrome.tabs.get(tabId)).url).origin; } catch (e) { return 'https://lms.moe.gov.om'; } }
+async function hwCreateLive(op) {
+  const origin = await noorOrigin();
+  const ex = await withTimeout(execMain(hwExisting, { cid: op.cid }), 20000, null);
+  if (Array.isArray(ex) && ex.some((t) => kwNorm(t) === kwNorm(op.title))) return { ok: true, dup: true };
+  if (!(await nav(`${origin}/teacher/homeworks/create/cid:${op.cid}`))) return { err: 'nav' };
+  await waitComplete(8000);
+  const nv = waitNavigation(60000);
+  const f = await execMain(hwCreateFill, op);
+  if (!f || !f.ok) return f || { err: 'nofill' };
+  await nv; await waitComplete(10000); await sleep(500);
+  const a = await execMain(hwAfterCreate);
+  if (!a || !a.ok) return Object.assign({ sent: true }, a || { err: 'noaid' });
+  const bulk = `${origin}/teacher/questions/add_bulk_questions/cid:${a.cid}/aid:${a.aid}${a.type ? '/type:' + a.type : ''}`;
+  if (!(await nav(bulk))) return { err: 'nav', aid: a.aid };
+  await waitComplete(8000);
+  const nv2 = waitNavigation(60000);
+  const b = await execMain(hwBulkFill, { qs: op.qs, mark: op.mark });
+  if (!b || !b.ok) return Object.assign({ aid: a.aid }, b || { err: 'nobulk' });
+  await nv2; await waitComplete(10000); await sleep(500);
+  const n = await execMain(hwCount, { cid: a.cid, aid: a.aid, type: a.type });
+  if (n === 0) return { err: 'noq', aid: a.aid };
+  return { ok: true, aid: a.aid, n, prepId: f.prepId, lessonId: f.lessonId };
+}
 async function addHomework(item, opts = {}) {
   if (!item || !item.node || !courseCid) return 'off';
   const key = hwKeyOf(item.node);
@@ -2400,11 +2425,11 @@ async function addHomework(item, opts = {}) {
   const d = hwDates(opts.date || item.s.date, nowDate(), opts.due || '');
   const op = { kind: 'create', cid: courseCid, title: hwName(item.node), match: [item.node.text], unit: item.node.unit || '', nth: item.node.nth || 0, noPrep: !!opts.noPrep, newest: !opts.prepId, prepId: opts.prepId || '', secs: null, qs, mark: HW_MARK, publish: d.publish, due: d.due, cutoff: d.cutoff };
   let r = null;
+  // قبل «إضافة» فقط تُعاد المحاولة (بعدها قد يكون الواجب أُنشئ — لا تكرار)
   for (let i = 0; i < 2 && !stopFlag; i++) {
-    r = await withTimeout(execMain(hwPageOp, op), 90000, { err: 'timeout' });
-    if (r && (r.ok || ['noprep', 'nolesson', 'noq', 'nobulk', 'noform', 'nosections', 'noor'].includes(r.err))) break;
-    if (r && r.err === 'login') break;
-    if (r && r.aid) break;   // أُنشئ الواجب: لا يُعاد (لا تكرار)
+    r = await withTimeout(hwCreateLive(op), 180000, { err: 'timeout', sent: true });
+    if (!r || r.ok || r.sent || r.aid || r.err === 'login') break;
+    if (['noprep', 'nolesson', 'nosections'].includes(r.err)) break;
     await sleep(2500);
   }
   if (r && r.ok) {
@@ -2413,7 +2438,8 @@ async function addHomework(item, opts = {}) {
     return r.dup ? 'had' : 'ok';
   }
   if (r && r.aid) { done[key] = r.aid; await hwMark(key, r.aid); }   // أُنشئ ولم تُضف أسئلته كلها: لا يُنشأ ثانية
-  hwNoteRow(item, (r && (r.err + (r.msg ? ' ' + r.msg : ''))) || 'لا نتيجة');
+  hwNoteRow(item, (r && [r.err, r.which, r.msg, r.title, r.url].filter(Boolean).join(' · ')) || 'لا نتيجة');
+  WIZ.hwFail = (WIZ.hwFail || 0) + 1;
   return 'fail';
 }
 async function run() {
@@ -3274,7 +3300,7 @@ async function wzRun() {
   $('optStep').checked = false;
   $('optNoor').checked = true; $('optAuto').checked = true;
   WIZ.on = true; WIZ.rule = fileOk ? 'official' : ''; WIZ.seq = !fileOk;
-  WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = WIZ.hwOnly || !!wz.hw; WIZ.hwN = 0; WIZ.hwDone = null;
+  WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = WIZ.hwOnly || !!wz.hw; WIZ.hwN = 0; WIZ.hwFail = 0; WIZ.hwDone = null;
   WIZ.hwPick = WIZ.hwOnly ? Object.fromEntries([...wz.hsel].map(([k, v]) => [k, { pub: v.pub, due: v.due }])) : null;
   WIZ.rid = Date.now(); WIZ.sum = 0; WIZ.auto = 0;
   wizRunning();

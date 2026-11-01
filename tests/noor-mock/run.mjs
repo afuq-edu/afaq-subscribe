@@ -764,10 +764,12 @@ const hwChecks = (noor, tree, want, { pubOf, label = '' }) => {
     if (h.view !== 'view_answers_after_cutoff') why.push(`view ${h.view}`);
     if (h.lectures.length !== 2) why.push(`sections ${h.lectures.join(',')}`);
     const types = h.qs.map((q) => q.type).join(',');
-    if (h.qs.length !== 5 || types !== 'mcq,tfq,mcq,tfq,mcq' || h.qs.some((q) => q.mark !== 2)) why.push(`questions ${h.qs.length} [${types}] marks ${h.qs.map((q) => q.mark).join(',')}`);
+    if (h.qs.length !== 5 || types !== 'mcq,mcq,mcq,mcq,mcq' || h.qs.some((q) => q.mark !== 1)) why.push(`questions ${h.qs.length} [${types}] marks ${h.qs.map((q) => q.mark).join(',')}`);
     if (why.length) bad.push(`«${w.node.text}»: ${why.join('; ')}`);
   }
-  check(!bad.length, `${label}each homework: its lesson's prep + Noor lesson, published on the prep's date (due +3, late +5 days, answers after the late date), both sections, 5 questions (3 MCQ + 2 T/F, 2 marks each)`, bad.join('\n'));
+  const pos = new Set(hws.flatMap((h) => h.qs.filter((q) => q.options && q.options.length > 2).map((q) => q.correct)));
+  check(pos.size >= 2, `${label}the right answer is not always the same choice (positions used: ${[...pos].sort().join(',')})`, '');
+  check(!bad.length, `${label}each homework: its lesson's prep + Noor lesson, published on the prep's date (due +3, late +5 days, answers after the late date), both sections, 5 multiple-choice questions (true/false as two choices), 1 mark each`, bad.join('\n'));
 };
 
 T(22, 'Full term with «أضف واجبًا لكل درس»: every lesson gets one homework of five questions on its first prep, and a re-run adds none', async (env) => {
@@ -842,10 +844,10 @@ T(23, '«الواجبات فقط»: the teacher picks lessons and types a publis
     if (h.view !== 'view_answers_after_cutoff') why.push(`view ${h.view}`);
     if (h.lectures.length !== 2) why.push(`sections ${h.lectures.join(',')}`);
     const types = h.qs.map((q) => q.type).join(',');
-    if (h.qs.length !== 5 || types !== 'mcq,tfq,mcq,tfq,mcq' || h.qs.some((q) => q.mark !== 2)) why.push(`questions ${h.qs.length} [${types}]`);
+    if (h.qs.length !== 5 || types !== 'mcq,mcq,mcq,mcq,mcq' || h.qs.some((q) => q.mark !== 1)) why.push(`questions ${h.qs.length} [${types}]`);
     if (why.length) bad.push(`«${node.text}»: ${why.join('; ')}`);
   }
-  check(!bad.length, 'each homework: its Noor lesson only (no prep), the typed publish date (07:00) and due date (end of day; empty → +3 days), late +2 days, both sections, 5 questions (3 MCQ + 2 T/F, 2 marks each)', bad.join('\n'));
+  check(!bad.length, 'each homework: its Noor lesson only (no prep), the typed publish date (07:00) and due date (end of day; empty → +3 days), late +2 days, both sections, 5 multiple-choice questions (true/false as two choices), 1 mark each', bad.join('\n'));
   check(/أضفت ٣ واجبات/.test(s.head), 'the wizard says how many homeworks were added («أضفت ٣ واجبات»)', `${s.head} | ${s.text}`);
   check(!CALM_BAD_RE.test(s.head + ' ' + s.text), 'calm wording (no error words)', `${s.head} | ${s.text}`);
   // the teacher opens the tool again and picks the same lessons: Noor already has them → nothing new

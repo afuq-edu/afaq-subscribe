@@ -310,7 +310,9 @@ ${flag('private', 'private_check_box')}${flag('random_questions', 'AssignmentRan
     if (!(publish <= due && due <= cutoff)) errs.push('order');
     const prepId = last('data[Assignment][preparation_id]') || '';
     if (prepId && !st.rows.some((r) => r.cid === cid && r.id === prepId)) errs.push('prep');
-    const lessons = f.filter(([n]) => n === 'data[Assignment][lessons][]').map(([, v]) => v);
+    let lessons = f.filter(([n]) => n === 'data[Assignment][lessons][]').map(([, v]) => v);
+    // نور يأخذ الدرس من التحضير حين تُقفل قائمة الدروس
+    if (prepId && !lessons.length) { const r = st.rows.find((x) => x.cid === cid && x.id === prepId); if (r && r.lessonId) lessons = [String(r.lessonId)]; }
     const lectures = lectureLabels(cid).filter((x) => last(`data[Lecture][checkbox][${x.id}]`) === '1').map((x) => x.label);
     if (last('data[Assignment][publish_to]') !== '0' || !lectures.length) errs.push('publish_to');
     if (errs.length) { st.hwPosts.push({ kind: 'create', outcome: 'error ' + errs.join(',') }); return { err: errs.join(',') }; }
