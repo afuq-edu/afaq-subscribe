@@ -1,0 +1,41 @@
+// عودة مشترك باسمه الرباعي (hader-name-return.sql): PGlite مع schema.sql وملفات نور
+import { PGlite } from '@electric-sql/pglite';
+import fs from 'fs';
+const db = new PGlite();
+await db.exec(`create schema auth;
+  create table auth.users (instance_id uuid, id uuid primary key, aud text, role text, is_anonymous bool, email text, raw_app_meta_data jsonb, raw_user_meta_data jsonb default '{}', created_at timestamptz, updated_at timestamptz);
+  create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub', true), '')::uuid $$;
+  create role anon nologin; create role authenticated nologin;`);
+const R = (f) => fs.readFileSync(new URL('../site/supabase/' + f, import.meta.url), 'utf8');
+await db.exec(R('schema.sql'));
+for (const f of ['hader-noor-bind.sql','hader-audit-4104.sql','hader-name-return.sql']) { try { await db.exec(R(f)); console.log('loaded', f); } catch (e) { console.log('FAIL load', f, e.message); } }
+let pass=0, fail=0; const ok=(c,n,x)=>{ if(c){pass++;console.log('  ✓',n);} else {fail++;console.log('  ✗',n,JSON.stringify(x));} };
+const q = async (s, p) => (await db.query(s, p)).rows;
+await db.exec(`insert into public.packages (id, title, grade, subject, active) values ('p1','x',5,'s',true),('p2','y',5,'t',true);`);
+const start = async (name, pk=['p1']) => (await q(`select public.ext_start($1,'', 'one', $2::text[], 'Chrome') as r`, [name, pk]))[0].r;
+// fixtures
+await db.exec(`insert into public.terms (year, term, starts_on, ends_on) values ('2026/2027', 1, current_date - 60, current_date + 60);`);
+const NAME = 'عيسى بن سعيد بن محمد الحارثي';
+const a = await start(NAME);
+ok(a.ok && !a.returned, 'first sign-up is a normal trial request', a);
+const A = (await q(`select user_id from public.ext_requests where id=$1`, [a.request]))[0].user_id;
+ok(!(await start('عيسى سعيد محمد الحارثي')).returned, 'no subscription yet → normal trial');
+await db.exec(`insert into public.subscriptions (user_id, package_id, term_id) values ('${A}', 'p1', (select id from public.terms limit 1));`);
+const b = await start('عيسى سعيد محمد الحارثى', ['p1']);
+ok(b.ok && b.returned && b.request === a.request, 'same four-part name (spelling variant) → back to his subscription, same request', b);
+const dev = (await q(`select * from public.ext_device($1)`, [b.token]))[0];
+ok(dev.user_id === A, 'the new device token belongs to the subscriber', dev);
+ok((await q(`select name from public.ext_requests where id=$1`, [a.request]))[0].name === 'عيسى سعيد محمد الحارثى', 'the typed name is saved on his request');
+const c = await start(NAME, ['p1']);
+ok(c.returned, 'third device returns too');
+ok(Number((await q(`select count(*) n from public.devices where user_id=$1 and revoked_at is null`, [A]))[0].n) === 2, 'device limit kept (oldest revoked)');
+ok(!(await start('عيسى سعيد الحارثي', ['p1'])).returned, 'three names only → normal trial');
+ok(!(await start(NAME, ['p2'])).returned, 'subject he is not subscribed to → normal trial');
+await db.exec(`update public.subscriptions set revoked = true where user_id='${A}'`);
+ok(!(await start(NAME, ['p1'])).returned, 'revoked subscription → normal trial');
+await db.exec(`update public.subscriptions set revoked = false where user_id='${A}'`);
+const d2 = await start('خالد بن علي بن سالم البلوشي', ['p1']);
+const B = (await q(`select user_id from public.ext_requests where id=$1`, [d2.request]))[0].user_id;
+await db.exec(`update public.ext_requests set name = 'عيسى سعيد محمد الحارثي' where user_id='${B}'; insert into public.subscriptions (user_id, package_id, term_id) values ('${B}', 'p1', (select id from public.terms limit 1));`);
+ok(!(await start(NAME, ['p1'])).returned, 'two subscribers with the same name → normal trial (no guessing)');
+console.log(`${pass} passed, ${fail} failed`); process.exit(fail ? 1 : 0);
