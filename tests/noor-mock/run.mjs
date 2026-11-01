@@ -119,7 +119,9 @@ function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], same
 
 // ---------- browser + wizard driving ----------
 const FIXED_NOW = '2026-09-05';   // the wizard's «today» (?now=): the day before the plan starts, unless a scenario says otherwise
-async function launch(extDir, noor, { now = FIXED_NOW } = {}) {
+// cont: Noor already holds preps of this subject made by an earlier «تحضير الفصل كاملًا» on this device (?cont=1, test only) —
+// the run continues it; without it the tool refuses a full term over existing preps (owner 2026-11-01, scenario 20)
+async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some((r) => r.preexisting && r.nodeId) } = {}) {
   const ctx = await chromium.launchPersistentContext('', {
     headless: !process.env.HEADFUL, executablePath: '/opt/pw-browsers/chromium',
     args: [`--disable-extensions-except=${extDir}`, `--load-extension=${extDir}`, ...(process.env.HEADFUL ? [] : ['--headless=new'])],
@@ -134,7 +136,7 @@ async function launch(extDir, noor, { now = FIXED_NOW } = {}) {
   const errs = [];
   const pg = await ctx.newPage();
   pg.on('pageerror', (e) => errs.push(e.message));
-  await pg.goto(`chrome-extension://${id}/semester.html?debug=1&now=${now}`);
+  await pg.goto(`chrome-extension://${id}/semester.html?debug=1&now=${now}${cont ? '&cont=1' : ''}`);
   return { ctx, sw, pg, id, errs };
 }
 const card = async (pg, t) => { await pg.locator('.wz-card:not([disabled])', { hasText: t }).first().click({ timeout: 20000 }); await sleep(500); };
@@ -489,7 +491,7 @@ T(15, 'Fewer periods than the plan (2 a week for 3 sessions a week): every sessi
   const rows = noor.st.rows.filter((r) => !r.preexisting);
   check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
   const sums = b.pg.__summaries || [];
-  check(sums.length === 1 && sums[0].pick && /أنشر ١٨ تحضيرًا/.test(sums[0].text), 'one calm start summary, confirmed once («أنشر ١٨ تحضيرًا …», with «أختار الدروس بنفسي»)', JSON.stringify(sums));
+  check(sums.length === 2 && sums.every((x) => x.pick) && /تأكد أنه لا توجد عندك/.test(sums[0].text) && /أول يوم دراسي/.test(sums[1].text) && /أنشر ١٨ تحضيرًا/.test(sums[1].text), 'two calm start alerts, confirmed once each («تأكد أنه لا توجد عندك…», then «ستبدأ التحاضير من … أول يوم دراسي … أنشر ١٨ تحضيرًا», both with «أختار الدروس بنفسي»)', JSON.stringify(sums));
   check(rows.length === PKG.lessons.length, `one prep per session (${rows.length} preps for ${PKG.lessons.length} sessions)`, rows.map((r) => r.title).join(' | '));
   check(rows.every((r) => !/\(\d+(?: و \d+)+\)$/.test(r.title)), 'no shared prep «(n و m)» while the term has periods left', rows.map((r) => r.title).join(' | '));
   check(rows.every((r) => r.publishDate <= '2027-01-21'), 'nothing after the term end (21 January)', rows.filter((r) => r.publishDate > '2027-01-21').map((r) => r.publishDate).join(', '));
@@ -504,44 +506,38 @@ T(15, 'Fewer periods than the plan (2 a week for 3 sessions a week): every sessi
   return b;
 });
 
-T(16, 'Late start (today 6 December, the whole plan has passed, 2 periods a week): the missed sessions are published from today first, in order; sessions of the SAME lesson share a prep only as far as needed to end by the term end, different lessons never', async (env) => {
-  usePkg(derivePkg({ keep: range(1, 30) }));   // 10 weeks × 3 sessions, the last one in November
+T(16, 'Late start (today 6 December) on a Noor that REFUSES past dates: the full term starts on the first school day or not at all — Noor refuses the first date once, nothing is saved, and the teacher is calmly sent to «أختار الدروس بنفسي»', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 30) }));
   const tree = treeFromPackage(PKG);
   const periods = { 0: [['1', 1], ['2', 1]], 1: [], 2: [['1', 1], ['2', 1]], 3: [], 4: [] };
-  const today = '2026-12-06';   // a Sunday; until 21 January: 7 weeks × 2 periods = 14 preps for 30 sessions
+  const today = '2026-12-06';
   const noor = env.noor({ tree, periods, noPast: today });
   env.afaq.reset({ pkg: PKG });
   const b = await env.launch(noor, { now: today });
   await wizardTo(b.pg, 'term');
-  const s = await waitDone(b.pg, 20 * 60000, 'late start');
-  const rows = noor.st.rows.filter((r) => !r.preexisting);
-  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  // the two start alerts, then the calm stop card after Noor refuses the first (past) date
+  let stop = null;
+  for (let i = 0; i < 400 && !stop; i++) {
+    await confirmStart(b.pg);
+    stop = await b.pg.evaluate(() => { const a = document.getElementById('nowActs'), c = document.getElementById('nowCard'); const p = a && !a.hidden && c && !c.hidden && a.querySelector('button[data-act="pick"]'); return p && !a.querySelector('button[data-act="go"]') ? { head: document.getElementById('nowHead').textContent, text: document.getElementById('nowText').innerText } : null; }).catch(() => null);
+    if (!stop) await sleep(1000);
+  }
   const sums = b.pg.__summaries || [];
-  check(sums.length === 1 && /فات|فات موعدها/.test(sums[0].text) && /الدرس نفسه/.test(sums[0].text), 'the start summary says calmly that the missed sessions go first from today and some sessions of one lesson share a prep', JSON.stringify(sums));
-  check(rows.every((r) => r.publishDate >= today), 'no prep before today', rows.filter((r) => r.publishDate < today).map((r) => r.publishDate + ' ' + r.title).join(', '));
-  check(rows.every((r) => r.publishDate <= '2027-01-21'), 'nothing after the term end (21 January)', rows.filter((r) => r.publishDate > '2027-01-21').map((r) => r.publishDate + ' ' + r.title).join(', '));
-  check(rows.every((r) => [0, 2].includes(new Date(r.publishDate + 'T12:00').getDay())), 'every prep on a day with periods (Sun/Tue)', rows.map((r) => r.publishDate).join(', '));
-  const cover = new Map();
-  rows.forEach((r) => PKG.lessons.forEach((l) => { if (norm(r.concepts).includes(norm(l.concepts))) cover.set(l.id, (cover.get(l.id) || []).concat(r)); }));
-  const missing = PKG.lessons.filter((l) => !cover.has(l.id)).map((l) => l.id), twice = [...cover].filter(([, v]) => v.length > 1).map(([k]) => k);
-  check(!missing.length, 'every session of the plan is in a prep', missing.join(', '));
-  check(!twice.length, 'no session in two preps', twice.join(', '));
-  const lessonsOf = (r) => new Set(PKG.lessons.filter((l) => (cover.get(l.id) || []).includes(r)).map((l) => l.unit + '|' + l.lesson));
-  const mixed = rows.filter((r) => lessonsOf(r).size > 1);
-  check(!mixed.length, 'a shared prep never holds two different lessons', mixed.map((r) => r.title).join(' | '));
-  const first = PKG.lessons.map((l) => (cover.get(l.id) || [{}])[0].publishDate || '');
-  check(first.every((d, i) => !i || d >= first[i - 1]), 'the plan order is kept from today on', first.join(', '));
-  const extra = rows.reduce((a, r) => { const m = r.title.match(/\((\d+(?: و \d+)+)\)$/); return a + (m ? m[1].split(' و ').length - 1 : 0); }, 0);
-  check(extra === PKG.lessons.length - rows.length, `shared preps carry «(n و m)» for every extra session (${extra})`, rows.map((r) => r.title).join(' | '));
-  const byDay = rows.reduce((m, r) => { m[r.publishDate] = (m[r.publishDate] || 0) + 1; return m; }, {});
-  check(Object.values(byDay).every((n) => n === 1), 'one prep per day (one period per section)', JSON.stringify(byDay));
-  const n1 = noor.st.rows.length;
-  await rerun(b, 'manual re-run');
-  check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
+  check(sums.length === 2 && /أول يوم دراسي/.test(sums[1].text), 'two start alerts; the second says the preps start on the first school day', JSON.stringify(sums));
+  check(!!stop && /تاريخ مضى/.test(stop.text) && /أول يوم دراسي/.test(stop.text), 'after Noor refuses the past date: one calm card that sends the teacher to «أختار الدروس بنفسي»', JSON.stringify(stop));
+  check(!!stop && !/خطأ|فشل|تعذّر|غير موجود|ناقص|مشكلة/.test(stop.head + stop.text), 'no error wording', JSON.stringify(stop));
+  const refused = noor.st.posts.filter((x) => x.outcome === 'date-past').length;
+  check(refused === 1, `Noor was asked for a past date once only (${refused})`, '');
+  check(noor.st.rows.filter((r) => !r.preexisting).length === 0, 'nothing saved: no prep out of the plan dates', fmtRows(noor.st.rows));
+  if (stop) {
+    await b.pg.evaluate(() => document.querySelector('#nowActs button[data-act="pick"]').click());
+    const onLessons = await b.pg.waitForSelector('input[data-k]', { timeout: 60000 }).then(() => true).catch(() => false);
+    check(onLessons, '«أختار الدروس بنفسي» opens the lessons screen of the same subject', '');
+  }
   return b;
 });
 
-T(20, 'Noor already has preps out of the plan order (lessons 1–2 and 5–6 done, 3–4 not, today mid-October): the start summary counts what is in Noor and calmly advises «أختار الدروس بنفسي»; choosing it opens the lessons screen with nothing saved', async (env) => {
+T(20, 'Noor already has preps of this subject (lessons 1–2 and 5–6 done, 3–4 not, today mid-October): the full term does not start; one calm card counts what is in Noor and offers only «أختار الدروس بنفسي», which opens the lessons screen with nothing saved', async (env) => {
   usePkg(derivePkg({ keep: range(1, 24) }));
   const tree = treeFromPackage(PKG);
   const g = lessonGroups(PKG);
@@ -549,18 +545,18 @@ T(20, 'Noor already has preps out of the plan order (lessons 1–2 and 5–6 don
   const pre = existingFor(tree, doneIds);
   const noor = env.noor({ tree, existing: pre });
   env.afaq.reset({ pkg: PKG });
-  const b = await env.launch(noor, { now: '2026-10-11' });
+  const b = await env.launch(noor, { now: '2026-10-11', cont: false });
   await wizardTo(b.pg, 'term');
   // wait for the summary and read it without confirming
   let sm = null;
   for (let i = 0; i < 240 && !sm; i++) {
-    sm = await b.pg.evaluate(() => { const a = document.getElementById('nowActs'); const p = a && !a.hidden && a.querySelector('button[data-act="pick"]'); return p ? { head: document.getElementById('nowHead').textContent, text: document.getElementById('nowText').innerText, primary: p.classList.contains('primary') } : null; }).catch(() => null);
+    sm = await b.pg.evaluate(() => { const a = document.getElementById('nowActs'); const p = a && !a.hidden && a.querySelector('button[data-act="pick"]'); return p ? { head: document.getElementById('nowHead').textContent, text: document.getElementById('nowText').innerText, primary: p.classList.contains('primary'), go: !!a.querySelector('button[data-act="go"]') } : null; }).catch(() => null);
     if (!sm) await sleep(1000);
   }
   check(!!sm, 'the term run stops on a start summary before any prep', '');
   if (sm) {
     check(new RegExp(`وجدت في نور ${toAr(doneIds.length)}`).test(sm.text), `the summary counts the ${doneIds.length} preps already in Noor`, sm.text);
-    check(/الأنسب/.test(sm.text) && sm.primary, 'it calmly advises «أختار الدروس بنفسي» (the highlighted button)', JSON.stringify(sm));
+    check(/اختر الدروس التي تريدها بنفسك/.test(sm.text) && sm.primary && !sm.go, 'it calmly offers only «أختار الدروس بنفسي» (no way to start the full term)', JSON.stringify(sm));
     check(!/خطأ|فشل|تعذّر|غير موجود|ناقص|مشكلة/.test(sm.head + sm.text), 'no error wording', sm.head + ' | ' + sm.text);
   }
   check(noor.st.rows.filter((r) => !r.preexisting).length === 0, 'nothing saved before the teacher answers', '');
@@ -594,6 +590,26 @@ T(20, 'Noor already has preps out of the plan order (lessons 1–2 and 5–6 don
     check(rows.length === ids.length && JSON.stringify(got) === JSON.stringify(want), 'the chosen sessions are saved on those consecutive days', got.join(', '));
     check(!(b.pg.__summaries || []).length, 'pick mode asks nothing before saving', JSON.stringify(b.pg.__summaries || []));
   }
+  return b;
+});
+
+T(21, 'Late start on a Noor that accepts past dates (today 1 November, empty Noor): after the two start alerts every session is published on its plan date from the first school day (6 September), in order, one prep per session; a re-run adds nothing', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 18) }));
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now: '2026-11-01' });
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 20 * 60000, 'late start, past dates accepted');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  const sums = b.pg.__summaries || [];
+  check(sums.length === 2 && /تأكد أنه لا توجد عندك/.test(sums[0].text) && /أول يوم دراسي/.test(sums[1].text) && /اختيار الدروس بنفسك أفضل/.test(sums[1].text), 'alert 1: make sure there are no earlier preps; alert 2: the preps start on the first school day, else picking is better', JSON.stringify(sums));
+  check(sums.every((x) => x.pick && !/خطأ|فشل|تعذّر|غير موجود|ناقص|مشكلة/.test(x.head + x.text)), 'both alerts are calm and offer «أختار الدروس بنفسي»', JSON.stringify(sums));
+  assertRows('S21', rows, tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
+  const n1 = noor.st.rows.length;
+  await rerun(b, 'manual re-run');
+  check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
   return b;
 });
 

@@ -487,8 +487,8 @@ async function flowTerm(job, J, W) {
     F.info.final = `${s.head} | ${s.text}`.slice(0, 300);
     const sums = b.summaries || [];
     F.info.summary = sums.map((x) => `${x.head} | ${x.text}`.slice(0, 300));
-    check(F, job.fault === 'close' ? sums.length >= 1 : sums.length === 1, 'start: the teacher confirms one start summary before the first prep (4.10.19)', JSON.stringify(sums));
-    check(F, sums.every((x) => x.pick && !CALM_BAD.test(x.head + ' ' + x.text)), 'start: the summary is calm and offers «أختار الدروس بنفسي»', JSON.stringify(sums));
+    check(F, job.fault === 'close' ? sums.length >= 2 : sums.length === 2, 'start: the teacher confirms the two start alerts before the first prep (no earlier preps; start on the first school day)', JSON.stringify(sums));
+    check(F, sums.every((x) => x.pick && !CALM_BAD.test(x.head + ' ' + x.text)), 'start: the alerts are calm and offer «أختار الدروس بنفسي»', JSON.stringify(sums));
     if (process.env.TREE_OVERRIDE) { const nb = new Map(); J.T.tree.terms[0].units.forEach((u) => u.lessons.forEach((l) => nb.set(l.nodeId, u.text + ' » ' + l.text))); noor.st.rows.filter((x) => !x.preexisting).sort((a, b) => (a.publishDate || '').localeCompare(b.publishDate || '')).forEach((x) => console.log('ROW', x.publishDate, '|', nb.get(x.lessonId) || x.lessonId, '|', x.title)); }
     if (process.env.DUMP_LOG) fs.writeFileSync(path.join(process.env.DUMP_LOG, `${job.id}-term1.log`), (await dumpLog(b.pg)).join('\n'));
     const rows0 = noor.st.rows.filter((x) => !x.preexisting), rows = splitMerged(rows0);   // a prep «(n و m)» counts once per session
