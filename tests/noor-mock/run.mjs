@@ -57,6 +57,7 @@ const titleFor = (tree, l) => { const n = nodeFor(tree, l); const k = sessNo(l);
 // («X» → «X (2)»), else its own «(n)» stays and Noor's follows («X (5) (2)»)
 const withDayRank = (want, base, j) => (!j || j < 2 ? want : want === `${base} (${j})` ? want : `${want} (${j})`);
 const existingFor = (tree, ids, extra = {}) => ids.map((id) => ({ title: titleFor(tree, S[id]), publishDate: S[id].pubDate, nodeId: nodeFor(tree, S[id]).nodeId, ...extra }));
+const CALM_BAD_RE = /خطأ|فشل|تعذّر|غير موجود|لم أستطع|✗/;
 const toAr = (n) => String(n).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d]);
 const addDaysIso = (iso, n) => { const d = new Date(iso + 'T12:00'); d.setDate(d.getDate() + n); return d.toISOString().slice(0, 10); };
 // the teacher's class days as the tool takes them without a Noor timetable: the weekdays of the plan's dates
@@ -122,6 +123,7 @@ function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], same
 
 // ---------- browser + wizard driving ----------
 const FIXED_NOW = '2026-09-05';   // the wizard's «today» (?now=): the day before the plan starts, unless a scenario says otherwise
+const GAMES = 'https://games.test/';   // lesson activities (homework questions), served by launch()
 // cont: Noor already holds preps of this subject made by an earlier «تحضير الفصل كاملًا» on this device (?cont=1, test only) —
 // the run continues it; without it the tool refuses a full term over existing preps (owner 2026-11-01, scenario 20)
 async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some((r) => r.preexisting) } = {}) {
@@ -131,6 +133,15 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
     viewport: { width: 1100, height: 900 },
   });
   await ctx.route('https://lms.moe.gov.om/**', (r) => noor.handle(r).catch((e) => { console.log('    route error', e.message); return r.abort().catch(() => {}); }));
+  // lesson activities for the homework questions (?games=): every lesson of the running package → a real activity file
+  await ctx.route(GAMES + '**', (r) => {
+    const u = new URL(r.request().url()).pathname.split('/').filter(Boolean);
+    const cors = { 'Access-Control-Allow-Origin': '*' };
+    if (u[u.length - 1] === 'index.json') return r.fulfill({ status: 200, contentType: 'application/json', headers: cors, body: JSON.stringify(Object.fromEntries(lessonGroups(PKG).map((g, i) => [g.sessions[0].lesson, i + 1]))) });
+    const n = parseInt(u[u.length - 1], 10);
+    const f = path.join(REPO, 'site/games/en-5', `${((n - 1) % 20) + 1}.json`);
+    return r.fulfill({ status: 200, contentType: 'application/json', headers: cors, body: fs.readFileSync(f, 'utf8') });
+  });
   let [sw] = ctx.serviceWorkers();
   if (!sw) sw = await ctx.waitForEvent('serviceworker');
   const id = sw.url().split('/')[2];
@@ -139,15 +150,17 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
   const errs = [];
   const pg = await ctx.newPage();
   pg.on('pageerror', (e) => errs.push(e.message));
-  await pg.goto(`chrome-extension://${id}/semester.html?debug=1&now=${now}${cont ? '&cont=1' : ''}`);
+  await pg.goto(`chrome-extension://${id}/semester.html?debug=1&now=${now}${cont ? '&cont=1' : ''}&games=${encodeURIComponent(GAMES)}`);
   return { ctx, sw, pg, id, errs };
 }
 const card = async (pg, t) => { await pg.locator('.wz-card:not([disabled])', { hasText: t }).first().click({ timeout: 20000 }); await sleep(500); };
-async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع', subject = 'الأحياء', shift = 'فترة واحدة' } = {}) {
+async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع', subject = 'الأحياء', shift = 'فترة واحدة', hw = false } = {}) {
   // each step only if the run has not started yet (once linked, a «من حسابك في نور» shortcut can skip steps)
   const started = () => pg.evaluate(() => document.body.classList.contains('wiz-run') || !!document.getElementById('wzName')).catch(() => false);
   const step = async (sel, t) => { if (await started()) return; await pg.locator(sel, { hasText: t }).first().click({ timeout: 20000 }); await sleep(600); };
-  await step('.wz-card:not([disabled])', mode === 'pick' ? 'أختار الدروس بنفسي' : 'تحضير الفصل كاملًا');
+  // «أضف واجبًا لكل درس» (4.10.24, ticked by default): the older scenarios run without homework
+  if (!(await started())) await pg.evaluate((on) => { const c = document.getElementById('wzHw'); if (c && c.checked !== on) c.click(); }, !!hw).catch(() => {});
+  await step('.wz-card:not([disabled])', mode === 'pick' ? 'أختار الدروس بنفسي' : mode === 'hw' ? 'الواجبات فقط' : 'تحضير الفصل كاملًا');
   await step('.wz-cards.grid3 .wz-card', grade);
   await step('.wz-card:not([disabled])', subject);
   await step('.wz-card:not([disabled])', shift);
@@ -725,6 +738,81 @@ T(19, 'Real Noor tree of Islamic grade 6: units «الوحدة (1)» vs the file
   const n1 = noor.st.rows.length;
   await rerun(b, 'manual re-run', { grade: 'الصف السادس', subject: 'التربية الإسلامية', shift: 'فترتان' });
   check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
+  return b;
+});
+
+// ---------- homework (4.10.24, owner 2026-11-01): five questions per lesson in «المهام الإلكترونية» ----------
+const hwChecks = (noor, tree, want, { pubOf, label = '' }) => {
+  const hws = noor.st.homeworks;
+  const errs = noor.st.hwPosts.filter((x) => !/^ok/.test(x.outcome));
+  check(!errs.length, `${label}every homework form Noor received was valid (create + bulk questions)`, errs.map((x) => `${x.kind} ${x.aid || ''}: ${x.outcome}`).join('\n'));
+  const byTitle = new Map();
+  hws.forEach((h) => byTitle.set(h.title, (byTitle.get(h.title) || []).concat(h)));
+  const dup = [...byTitle].filter(([, v]) => v.length > 1);
+  check(!dup.length, `${label}one homework per lesson (no duplicate)`, dup.map(([t, v]) => `«${t}» ×${v.length}`).join('\n'));
+  const missing = want.filter((w) => !byTitle.has('واجب: ' + w.node.text));
+  check(!missing.length && hws.length === want.length, `${label}a homework for each lesson (${want.length}), titled «واجب: <Noor lesson>»`, `got ${hws.length}: ${hws.map((h) => h.title).join(' | ')}\nmissing: ${missing.map((w) => w.node.text).join(' | ')}`);
+  const bad = [];
+  for (const w of want) {
+    const h = (byTitle.get('واجب: ' + w.node.text) || [])[0];
+    if (!h) continue;
+    const prep = noor.st.rows.find((r) => r.id === h.prepId);
+    const why = [];
+    if (!prep || prep.lessonId !== w.node.nodeId) why.push(`prep ${h.prepId} → ${prep ? prep.nodeText : 'none'}`);
+    if (prep && w.prepId && prep.id !== w.prepId) why.push(`prep ${prep.id} expected ${w.prepId} (the lesson's first prep)`);
+    if (!h.lessons.includes(w.node.nodeId)) why.push(`lessons ${h.lessons.join(',')}`);
+    const d = pubOf(w);
+    if (h.publish !== `${d} 07:00:00`) why.push(`publish ${h.publish} expected ${d} 07:00:00`);
+    if (h.due !== `${addDaysIso(d, 3)} 07:00:00` || h.cutoff !== `${addDaysIso(d, 5)} 07:00:00`) why.push(`due ${h.due} cutoff ${h.cutoff}`);
+    if (h.view !== 'view_answers_after_cutoff') why.push(`view ${h.view}`);
+    if (h.lectures.length !== 2) why.push(`sections ${h.lectures.join(',')}`);
+    const types = h.qs.map((q) => q.type).join(',');
+    if (h.qs.length !== 5 || types !== 'mcq,tfq,mcq,tfq,mcq' || h.qs.some((q) => q.mark !== 2)) why.push(`questions ${h.qs.length} [${types}] marks ${h.qs.map((q) => q.mark).join(',')}`);
+    if (why.length) bad.push(`«${w.node.text}»: ${why.join('; ')}`);
+  }
+  check(!bad.length, `${label}each homework: its lesson's prep + Noor lesson, published on the prep's date (due +3, late +5 days, answers after the late date), both sections, 5 questions (3 MCQ + 2 T/F, 2 marks each)`, bad.join('\n'));
+};
+
+T(22, 'Full term with «أضف واجبًا لكل درس»: every lesson gets one homework of five questions on its first prep, and a re-run adds none', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 9) }));
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term', { hw: true });
+  const s = await waitDone(b.pg, 25 * 60000, 'full term + homework');
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  assertRows('term+homework', rows, tree, { expectIds: PKG.lessons.map((l) => l.id) });
+  const want = lessonGroups(PKG).map((g) => { const l = g.sessions[0]; const r = rows.find((x) => sessionOfRow(x) === l); return { node: nodeFor(tree, l), prepId: r && r.id, date: r && r.publishDate }; });
+  hwChecks(noor, tree, want, { pubOf: (w) => w.date });
+  const log = (await dumpLog(b.pg)).join('\n');
+  check(!/واجب لم يُضف/.test(log), 'no homework line the teacher could read as a problem', log.split('\n').filter((x) => /واجب/.test(x)).join('\n'));
+  const n1 = noor.st.homeworks.length, r1 = noor.st.rows.length;
+  await b.pg.reload(); await sleep(4000);
+  await wizardTo(b.pg, 'term', { hw: true, name: false });
+  await waitDone(b.pg, 10 * 60000, 're-run');
+  check(noor.st.homeworks.length === n1 && noor.st.rows.length === r1, `re-run adds no prep and no homework (homeworks ${n1} → ${noor.st.homeworks.length}, preps ${r1} → ${noor.st.rows.length})`);
+  return b;
+});
+
+T(23, '«الواجبات فقط»: preps already in Noor (made by the teacher) — a homework for each lesson whose first prep is today or later, with that prep\'s date; no prep saved, nothing for past lessons', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 12) }));
+  const tree = treeFromPackage(PKG);
+  const groups = lessonGroups(PKG);
+  // «today» = the first day of the third lesson: lessons 1–2 are past, the rest still to come
+  const now = groups[2].sessions[0].pubDate;
+  const noor = env.noor({ tree, existing: existingFor(tree, PKG.lessons.map((l) => l.id)) });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now, cont: false });
+  await wizardTo(b.pg, 'hw');
+  const s = await waitDone(b.pg, 15 * 60000, 'homework only');
+  const added = noor.st.rows.filter((r) => !r.preexisting);
+  check(!added.length && !noor.st.posts.length, `no prep saved (${noor.st.posts.length} prep posts)`, fmtRows(added));
+  const want = groups.filter((g) => g.sessions[0].pubDate >= now).map((g) => { const l = g.sessions[0]; const node = nodeFor(tree, l); const r = noor.st.rows.find((x) => x.preexisting && x.lessonId === node.nodeId && x.title === node.text); return { node, prepId: r && r.id, date: l.pubDate }; });
+  hwChecks(noor, tree, want, { pubOf: (w) => w.date });
+  check(new RegExp(`أضفت ${toAr(want.length)} واجب`).test(s.head) || (want.length === 1 && /واجبًا واحدًا/.test(s.head)), `the wizard says how many homeworks were added («أضفت ${toAr(want.length)} واجبات»)`, `${s.head} | ${s.text}`);
+  check(!CALM_BAD_RE.test(s.head + ' ' + s.text), 'calm wording (no error words)', `${s.head} | ${s.text}`);
   return b;
 });
 
