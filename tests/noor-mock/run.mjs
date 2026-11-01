@@ -793,23 +793,67 @@ T(22, 'Full term with «أضف واجبًا لكل درس»: every lesson gets o
   return b;
 });
 
-T(23, '«الواجبات فقط»: preps already in Noor (made by the teacher) — a homework for each lesson whose first prep is today or later, with that prep\'s date; no prep saved, nothing for past lessons', async (env) => {
+T(23, '«الواجبات فقط»: the teacher picks lessons and types a publish date and a due date for each — homework linked to the Noor lesson only (no prep), no prep saved; a re-run with the same lessons adds none', async (env) => {
   usePkg(derivePkg({ keep: range(1, 12) }));
   const tree = treeFromPackage(PKG);
   const groups = lessonGroups(PKG);
-  // «today» = the first day of the third lesson: lessons 1–2 are past, the rest still to come
-  const now = groups[2].sessions[0].pubDate;
-  const noor = env.noor({ tree, existing: existingFor(tree, PKG.lessons.map((l) => l.id)) });
+  const now = groups[0].sessions[0].pubDate;
+  const noor = env.noor({ tree, existing: existingFor(tree, PKG.lessons.slice(0, 3).map((l) => l.id)) });
   env.afaq.reset({ pkg: PKG });
   const b = await env.launch(noor, { now, cont: false });
+  // two lessons with both dates, one with the publish date only (due → 3 days later)
+  const picks = [{ g: groups[1], pub: addDaysIso(now, 4), due: addDaysIso(now, 8) }, { g: groups[3], pub: addDaysIso(now, 14), due: '' }, { g: groups[2], pub: addDaysIso(now, 21), due: addDaysIso(now, 21) }];
+  const pickAndGo = async (first) => {
+    await b.pg.waitForSelector('input[data-hk]', { timeout: 60000 });
+    const boxes = await b.pg.evaluate(() => [...document.querySelectorAll('.wz-date')].length);
+    check(boxes === 0, `${first ? '' : 're-run: '}no date box before a lesson is chosen (no suggested date)`, `${boxes} boxes`);
+    for (const x of picks) { await b.pg.evaluate((k) => [...document.querySelectorAll('input[data-hk]')].find((c) => c.dataset.hk === k).click(), x.g.key); await sleep(300); }
+    const pre = await b.pg.evaluate(() => [...document.querySelectorAll('input[data-hp],input[data-hd]')].map((d) => d.value));
+    check(pre.length === picks.length * 2 && pre.every((v) => !v), `${first ? '' : 're-run: '}each chosen lesson shows an empty publish box and an empty due box`, JSON.stringify(pre));
+    for (const x of picks) {
+      await b.pg.evaluate(({ k, pub, due }) => {
+        const set = (sel, v) => { const d = document.querySelector(sel); d.value = v; d.dispatchEvent(new Event('change')); };
+        set(`input[data-hp="${CSS.escape(k)}"]`, pub); if (due) set(`input[data-hd="${CSS.escape(k)}"]`, due);
+      }, { k: x.g.key, pub: x.pub, due: x.due });
+    }
+    await b.pg.click('#wzHwGo');
+    return waitDone(b.pg, 15 * 60000, 'homework only');
+  };
   await wizardTo(b.pg, 'hw');
-  const s = await waitDone(b.pg, 15 * 60000, 'homework only');
+  const s = await pickAndGo(true);
   const added = noor.st.rows.filter((r) => !r.preexisting);
   check(!added.length && !noor.st.posts.length, `no prep saved (${noor.st.posts.length} prep posts)`, fmtRows(added));
-  const want = groups.filter((g) => g.sessions[0].pubDate >= now).map((g) => { const l = g.sessions[0]; const node = nodeFor(tree, l); const r = noor.st.rows.find((x) => x.preexisting && x.lessonId === node.nodeId && x.title === node.text); return { node, prepId: r && r.id, date: l.pubDate }; });
-  hwChecks(noor, tree, want, { pubOf: (w) => w.date });
-  check(new RegExp(`أضفت ${toAr(want.length)} واجب`).test(s.head) || (want.length === 1 && /واجبًا واحدًا/.test(s.head)) || (want.length === 2 && /أضفت واجبين/.test(s.head)), `the wizard says how many homeworks were added («أضفت ${toAr(want.length)} واجبات»)`, `${s.head} | ${s.text}`);
+  const errs = noor.st.hwPosts.filter((x) => !/^ok/.test(x.outcome));
+  check(!errs.length, 'every homework form Noor received was valid (create + bulk questions)', errs.map((x) => `${x.kind} ${x.aid || ''}: ${x.outcome}`).join('\n'));
+  const hws = noor.st.homeworks;
+  check(hws.length === picks.length, `a homework for each chosen lesson only (${picks.length})`, hws.map((h) => h.title).join(' | '));
+  const bad = [];
+  for (const x of picks) {
+    const node = nodeFor(tree, x.g.sessions[0]);
+    const h = hws.find((y) => y.title === 'واجب: ' + node.text);
+    if (!h) { bad.push(`«${node.text}»: none`); continue; }
+    const why = [];
+    if (h.prepId) why.push(`prep ${h.prepId} (expected none)`);
+    if (h.lessons.join() !== node.nodeId) why.push(`lessons ${h.lessons.join(',')} expected ${node.nodeId}`);
+    if (h.publish !== `${x.pub} 07:00:00`) why.push(`publish ${h.publish}`);
+    const due = x.due ? `${x.due} 23:59:00` : `${addDaysIso(x.pub, 3)} 07:00:00`;
+    const cut = x.due ? `${addDaysIso(x.due, 2)} 23:59:00` : `${addDaysIso(x.pub, 5)} 07:00:00`;
+    if (h.due !== due || h.cutoff !== cut) why.push(`due ${h.due} cutoff ${h.cutoff} expected ${due} / ${cut}`);
+    if (h.view !== 'view_answers_after_cutoff') why.push(`view ${h.view}`);
+    if (h.lectures.length !== 2) why.push(`sections ${h.lectures.join(',')}`);
+    const types = h.qs.map((q) => q.type).join(',');
+    if (h.qs.length !== 5 || types !== 'mcq,tfq,mcq,tfq,mcq' || h.qs.some((q) => q.mark !== 2)) why.push(`questions ${h.qs.length} [${types}]`);
+    if (why.length) bad.push(`«${node.text}»: ${why.join('; ')}`);
+  }
+  check(!bad.length, 'each homework: its Noor lesson only (no prep), the typed publish date (07:00) and due date (end of day; empty → +3 days), late +2 days, both sections, 5 questions (3 MCQ + 2 T/F, 2 marks each)', bad.join('\n'));
+  check(/أضفت ٣ واجبات/.test(s.head), 'the wizard says how many homeworks were added («أضفت ٣ واجبات»)', `${s.head} | ${s.text}`);
   check(!CALM_BAD_RE.test(s.head + ' ' + s.text), 'calm wording (no error words)', `${s.head} | ${s.text}`);
+  // the teacher opens the tool again and picks the same lessons: Noor already has them → nothing new
+  await b.pg.reload(); await sleep(4000);
+  await wizardTo(b.pg, 'hw', { name: false });
+  const s2 = await pickAndGo(false);
+  check(noor.st.homeworks.length === picks.length, `re-run adds no homework (${picks.length} → ${noor.st.homeworks.length})`, `${s2.head} | ${s2.text}`);
+  check(!CALM_BAD_RE.test(s2.head + ' ' + s2.text), 're-run: calm wording', `${s2.head} | ${s2.text}`);
   return b;
 });
 
