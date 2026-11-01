@@ -852,7 +852,7 @@ export async function termAllLessons(tabId, term) {
 
 // اختيار درس محدد من الشجرة (من قائمة الاختيار في النافذة) — node: { id, text, unit, term }
 export async function pickTreeNode(tabId, node) {
-  const sel = await treeOp(tabId, { op: 'select', id: node.id, text: node.text, unit: node.unit, term: node.term });
+  const sel = await treeOp(tabId, { op: 'select', id: node.id, text: node.text, unit: node.unit, term: node.term, nth: node.nth || 0 });
   if (!sel.ok) return { status: 'fail', text: node.text };
   return { status: 'picked', text: node.text, title: sel.title, outcomes: sel.outcomes };
 }

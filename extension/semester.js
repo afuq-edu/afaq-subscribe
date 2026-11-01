@@ -1115,7 +1115,9 @@ async function stepTree(addUrl) {
   const units = [...new Set(lessons.map((l) => l.unit))];
   diag.tree = { term: term.text, terms: t.terms, units: units.map((u) => ({ text: u, lessons: lessons.filter((l) => l.unit === u).map((l) => l.text) })) };
   logLine('info', `شجرة نور — الفصل «${term.text}»: ${toAr(units.length)} وحدة و${toAr(lessons.length)} درسًا: ${units.map((u) => `${u} (${toAr(lessons.filter((l) => l.unit === u).length)})`).join('، ')}`);
-  return lessons.map((l, i) => ({ id: 't' + i, text: l.text, unit: l.unit, unitId: l.unit, term: l.term || term.text }));
+  // درسان بالاسم نفسه في وحدة واحدة (نور: «الأنشطة الإملائية: تطبيقات» ثلاث مرات): nth يميّز كل واحد عند اختياره في الشجرة
+  const seen = new Map();
+  return lessons.map((l, i) => { const k = (l.term || term.text) + '|' + l.unit + '|' + l.text; const nth = seen.get(k) || 0; seen.set(k, nth + 1); return { id: 't' + i, text: l.text, unit: l.unit, unitId: l.unit, term: l.term || term.text, nth }; });
 }
 
 // ================= مطابقة دروس المكتبة بدروس الشجرة =================
@@ -1798,7 +1800,7 @@ async function refreshNode(item) {
   const sameUnit = (x) => kwNorm(x.unit) === kwNorm(item.node.unit);
   const dup = treeNodes.filter((x) => kwNorm(x.text) === k).length > 1;
   const byName = fresh.filter((x) => kwNorm(x.text) === k);
-  const n = byName.find(sameUnit) || (!dup && byName.length === 1 ? byName[0] : null) || (ln != null ? fresh.find((x) => sameUnit(x) && lessonNum(x.text) === ln) : null);
+  const n = byName.filter(sameUnit)[item.node.nth || 0] || byName.find(sameUnit) || (!dup && byName.length === 1 ? byName[0] : null) || (ln != null ? fresh.find((x) => sameUnit(x) && lessonNum(x.text) === ln) : null);
   if (!n) return false;
   if (n.text !== item.node.text || n.unit !== item.node.unit) {
     logLine('info', `تغيّر الدرس في شجرة نور: «${item.node.text}» ← «${n.text}»`);
@@ -1812,7 +1814,7 @@ async function selectLesson(node) {
   for (let a = 0; a < 2 && !stopFlag; a++) {
     if (a) await sleep(2500);
     await noorTerms(tabId).catch(() => null);
-    r = await pickTreeNode(tabId, { text: node.text, unit: node.unit, term: node.term }).catch(() => ({ status: 'fail' }));
+    r = await pickTreeNode(tabId, { text: node.text, unit: node.unit, term: node.term, nth: node.nth || 0 }).catch(() => ({ status: 'fail' }));
     if (r.status === 'picked') return r;
   }
   return r;

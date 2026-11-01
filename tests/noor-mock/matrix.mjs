@@ -508,6 +508,15 @@ async function flowTerm(job, J, W) {
     const orph = trees.length ? trees[trees.length - 1].lessons.filter((l) => (!l.f || !(l.n > 0)) && !(gap.noor || []).includes(String(l.t || '').trim())) : [];
     check(F, !orph.length, 'noor tree: every Noor lesson has a prep from the file', orph.slice(0, 8).map((l) => `${l.u} » ${l.t}`).join('\n'));
     const { byId, cnt } = traceRows(F, J, rows);
+    // real tree: every Noor lesson the tool planned really got a prep in Noor — also when one unit holds two lessons of the same
+    // name (ar-5/ar-6 «تطبيقات» ×3): each one is chosen in the tree, not always the first
+    if (J.T.real) {
+      const got = new Set(rows0.map((r) => r.lessonId));
+      const planned = trees.length ? trees[trees.length - 1].lessons : [];
+      const flat = J.T.tree.terms[0].units.flatMap((u) => u.lessons.map((l) => ({ u: u.text, t: l.text, id: l.nodeId })));
+      const empty = flat.filter((x, i) => planned[i] && planned[i].f && planned[i].n > 0 && !got.has(x.id));
+      check(F, !empty.length, 'noor tree: every Noor lesson with a prep in the plan received it (same-named lessons of one unit each get their own)', empty.slice(0, 8).map((x) => `${x.u} » ${x.t} (${x.id})`).join('\n'));
+    }
     // completeness: every session of every lesson whose Noor name is not renamed
     const exactMiss = J.pkg.lessons.filter((l) => !cnt.has(l.id) && (J.T.real ? !(gap.file || []).includes(String(l.lesson || '').trim()) : !J.T.renamed.has((l.unit || '') + '|' + (l.lesson || ''))));
     if (J.T.real) { F.info.real = { sessions: J.pkg.lessons.length, saved: J.pkg.lessons.length - exactMiss.length }; check(F, !exactMiss.length, `complete (real Noor tree): every one of the ${J.pkg.lessons.length} sessions was saved`, `${exactMiss.length} missing: ` + exactMiss.slice(0, 40).map((l) => `${l.id} «${l.lesson}»`).join(', ')); }

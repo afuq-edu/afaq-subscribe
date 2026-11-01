@@ -1271,7 +1271,9 @@ export function hadirEngine(action, payload) {
         const findLesson = () => {
           const byIdLi = payload.id && byId(payload.id);
           if (byIdLi && txt(byIdLi) === payload.text) return byIdLi;
-          return nodes(LESSON).find((li) => txt(li) === payload.text && (!payload.unit || txt(li.parentElement && li.parentElement.closest('li.jstree-node')) === payload.unit)) || null;
+          // الاسم نفسه أكثر من مرة في الوحدة: الدرس رقم nth منها بترتيب الشجرة (لا الأول دائمًا)
+          const same = nodes(LESSON).filter((li) => txt(li) === payload.text && (!payload.unit || txt(li.parentElement && li.parentElement.closest('li.jstree-node')) === payload.unit));
+          return same[+payload.nth || 0] || null;
         };
         let li = findLesson();
         if (!li && payload.unit) { await openUnit({ text: payload.unit, term: payload.term }); li = findLesson(); }
