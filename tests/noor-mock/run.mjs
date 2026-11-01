@@ -189,7 +189,7 @@ async function waitDone(pg, ms, label) {
     if (s) {
       const sig = JSON.stringify(s);
       if (sig !== last) { last = sig; stable = 0; if (process.env.VERBOSE) console.log('    ui:', s.head, '|', s.text.slice(0, 80)); } else stable++;
-      const fin = (s.again && !s.stop && !/أكملها الآن|أكمل التحضير/.test(s.head)) || (s.wiz && /انتهت تجربتك/.test(s.wzHead));
+      const fin = (s.again && !s.stop && !/أكملها الآن|أكمل التحضير/.test(s.head)) || (s.wiz && /انتهت تجربتك|تفعيل اشتراكك/.test(s.wzHead));
       if (fin && stable >= 2) return s;
     }
     await sleep(1500);
@@ -319,28 +319,29 @@ T(6, 'Noor tree: duplicate lesson names in other units + one renamed lesson', as
   return b;
 });
 
-T(7, 'Trial cap: 2 free sessions left → only 2 saved, then the pay screen; after activation the run continues by itself', async (env) => {
+T(7, 'No free trial (owner 2026-11-01): a new teacher\'s request waits for the admin — nothing is saved, the activation screen asks to contact the admin; after activation the full term starts by itself', async (env) => {
   const tree = treeFromPackage(PKG);
   const noor = env.noor({ tree });
-  env.afaq.reset({ pkg: PKG, trialLeft: 2 });
+  env.afaq.reset({ pkg: PKG, trialLeft: 3 });
   const b = await env.launch(noor);
   await wizardTo(b.pg, 'term');
-  const s = await waitDone(b.pg, 6 * 60000, 'trial cap');
-  const rows = noor.st.rows.filter((r) => !r.preexisting);
-  check(s.wiz && /انتهت تجربتك المجانية/.test(s.wzHead), 'pay screen «انتهت تجربتك المجانية» is shown', JSON.stringify(s));
-  assertRows('S7', rows, tree, { expectIds: [sid(1), sid(2)], dates: { [sid(1)]: S[sid(1)].pubDate, [sid(2)]: S[sid(2)].pubDate } });
+  const s = await waitDone(b.pg, 6 * 60000, 'waiting for activation');
+  check(s.wiz && /تفعيل اشتراكك/.test(s.wzHead), 'activation screen «تفعيل اشتراكك» is shown at once', JSON.stringify(s));
+  check(noor.st.rows.filter((r) => !r.preexisting).length === 0, 'nothing saved before the admin activates (no free sessions)', fmtRows(noor.st.rows));
+  check(env.afaq.st.left === 3, `no trial session was used (left ${env.afaq.st.left})`);
   check(env.afaq.st.calls.includes('ext_contact'), 'request marked «بانتظار التفعيل» (ext_contact called)');
-  check(s.wiz && /يكمل التحضير وحده/.test(s.wzBody || s.text || ''), 'pay screen says the preparation continues by itself after activation', JSON.stringify(s));
-  // the admin activates the request: the run continues by itself (no button), with the same choices, nothing saved twice
+  check(s.wiz && /يكمل التحضير وحده/.test(s.wzBody || s.text || ''), 'the screen says the preparation starts by itself after activation', JSON.stringify(s));
+  check(s.wiz && !/مجان|تجرب/.test((s.wzHead || '') + (s.wzBody || '')), 'no free-trial wording', JSON.stringify(s));
+  // the admin activates the request: the run starts by itself (no button), with the same choices
   env.afaq.st.active = true; env.afaq.st.status = 'active';
   const t0 = Date.now();
   let left = null;
-  while (Date.now() - t0 < 90000) { const u = await ui(b.pg).catch(() => null); if (u && !(u.wiz && /انتهت تجربتك/.test(u.wzHead))) { left = u; break; } await sleep(1500); }
-  check(!!left, 'activation is picked up without any click (pay screen closes by itself)');
+  while (Date.now() - t0 < 90000) { const u = await ui(b.pg).catch(() => null); if (u && !(u.wiz && /تفعيل اشتراكك/.test(u.wzHead))) { left = u; break; } await sleep(1500); }
+  check(!!left, 'activation is picked up without any click (the screen closes by itself)');
   const s2 = await waitDone(b.pg, 10 * 60000, 'after activation');
   check(/تمت التعبئة بنجاح|نُشر/.test(s2.head), 'run finishes after activation', `${s2.head} | ${s2.text}`);
   const rows2 = noor.st.rows.filter((r) => !r.preexisting);
-  assertRows('S7b', rows2, tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
+  assertRows('S7', rows2, tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
   return b;
 });
 
@@ -701,7 +702,10 @@ for (const n of list) {
   console.log(`\n=== Scenario ${n}: ${SC[n].title}`);
   const t0 = Date.now();
   let b = null;
-  const env = { afaq, noor: (cfg) => (env.noorInst = createNoor(Object.assign({ pkg: PKG }, cfg))), launch: async (noor, o) => (b = await launch(extDir, noor, o)) };
+  // the teacher's timetable by default: two sections with one period on each weekday the scenario's plan uses (Sun/Mon/Tue for
+  // the base package), so «period after period from the first school day» (4.10.20) lands every session on its plan date
+  const planDays = () => { const w = new Set(PKG.lessons.map((l) => new Date(l.pubDate + 'T12:00').getDay())); return Object.fromEntries([0, 1, 2, 3, 4].map((d) => [d, w.has(d) ? [['1', 1], ['2', 1]] : []])); };
+  const env = { afaq, noor: (cfg) => (env.noorInst = createNoor(Object.assign({ pkg: PKG, periods: planDays() }, cfg))), launch: async (noor, o) => (b = await launch(extDir, noor, o)) };
   try {
     await SC[n].fn(env);
   } catch (e) {

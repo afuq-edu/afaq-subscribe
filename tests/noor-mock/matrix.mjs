@@ -221,7 +221,9 @@ function expectDates(groups, saved, blocked, cap = () => 1) {
   let last = null;
   for (const g of groups) for (const s of g.sessions) {
     if (!saved.has(s.id)) continue;
-    let at = wkStart(s.pubDate);
+    // 4.10.20 (owner 2026-11-01): the full term goes period after period from the first school day, in Noor tree order — a
+    // session never waits for its plan week, so every period of the teacher's timetable takes the next session
+    let at = wkStart(first);
     if (last && at < last) at = last;
     let d = nextSchool(at, true);
     for (let i = 0; i < 300 && (used.get(d) || 0) >= cap(d); i++) d = nextSchool(d, false);
@@ -335,7 +337,7 @@ async function waitDone(b, ms, tick) {
     if (s) {
       const sig = JSON.stringify(s);
       if (sig !== last) { last = sig; stable = 0; if (VERBOSE) console.log(`    [${new Date().toISOString().slice(11, 19)}] ui: ${s.head} | ${s.text.slice(0, 90)}`); } else stable++;
-      const fin = (s.again && !s.stop && !/أكملها الآن|أكمل التحضير/.test(s.head)) || (s.wiz && /انتهت تجربتك/.test(s.wzHead));
+      const fin = (s.again && !s.stop && !/أكملها الآن|أكمل التحضير/.test(s.head)) || (s.wiz && /انتهت تجربتك|تفعيل اشتراكك/.test(s.wzHead));
       if (fin && stable >= 2) return s;
     }
     await sleep(500);
@@ -548,9 +550,16 @@ async function flowTerm(job, J, W) {
     // sessions of one lesson share a prep only when the periods left until the term end are fewer than the preps
     const planThu = J.endsOn;
     const savedIds = new Set(saved.map((x) => x.l.id));
-    const expAll = expectDates([{ sessions: J.pkg.lessons }], savedIds, blocked, capF);   // file order = official schedule
+    // the order of the full term (4.10.20): Noor tree order — lesson by lesson as the tree lists them (the node each session was
+    // saved into), sessions of one lesson in file order; plan lessons sharing one Noor lesson one after the other
+    const tIdx = new Map(J.T.tree.terms[0].units.flatMap((u) => u.lessons).map((n, i) => [n.nodeId, i]));
+    const gFirst = new Map(); J.pkg.lessons.forEach((l, i) => { const k = (l.unit || '') + '|' + (l.lesson || ''); if (!gFirst.has(k)) gFirst.set(k, i); });
+    const fIdx = new Map(J.pkg.lessons.map((l, i) => [l.id, i]));
+    const tk = (l) => { const r = cnt.get(l.id); const t = r ? tIdx.get(r[0].lessonId) : undefined; return [t == null ? 1e9 : t, gFirst.get((l.unit || '') + '|' + (l.lesson || '')), fIdx.get(l.id)]; };
+    const treeOrder = (ls) => ls.slice().sort((a, b) => { const x = tk(a), y = tk(b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; });
+    const expAll = expectDates([{ sessions: treeOrder(J.pkg.lessons) }], savedIds, blocked, capF);
     const overrun = saved.filter((x) => expAll[x.l.id] > planThu).length;
-    const expRoots = expectDates([{ sessions: J.pkg.lessons.filter((l) => !tails.has(l.id)) }], savedIds, blocked, capF);
+    const expRoots = expectDates([{ sessions: treeOrder(J.pkg.lessons.filter((l) => !tails.has(l.id))) }], savedIds, blocked, capF);
     const exp = Object.fromEntries(saved.map((x) => [x.l.id, tails.has(x.l.id) ? expRoots[rootOfTail.get(x.l.id)] : expRoots[x.l.id]]));
     // a plan with more sessions than the teacher's periods until its last week (two plan periods on a day the teacher has one
     // period, 4.10.11 split days): even after the joins some preps would fall after the plan — then the tool also lets sessions
@@ -568,7 +577,7 @@ async function flowTerm(job, J, W) {
     const todayIso = FIXED_NOW;
     const plan0 = wk0(J.pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort()[0]);
     // a shared prep frees a period of its week: the week's later sessions move up into it (exact dates are checked below)
-    const early = saved.filter((x) => !tails.has(x.l.id) && (job.fault === 'oneper' || tight ? x.d < plan0 : job.fault === 'twoper' || J.T.real || tails.size ? x.d < wk0(x.l.pubDate) : x.d < x.l.pubDate));
+    const early = saved.filter((x) => !tails.has(x.l.id) && x.d < plan0);   // period after period: never before the plan's first week
     if (job.fault === 'twoper') {
       const seen = new Map(), clash = [];
       noor.st.rows.filter((r) => !r.preexisting).forEach((r) => (r.slots || []).forEach((x) => { const k = r.publishDate + '|' + x; if (seen.has(k)) clash.push(k); seen.set(k, 1); }));
@@ -580,7 +589,7 @@ async function flowTerm(job, J, W) {
       const two = Object.values(exp).filter((d, i, a) => a.indexOf(d) !== i).length;
       check(F, !one.length, `periods: each Sunday holds one prep per session its week has, up to two (${two} Sundays with two)`, one.slice(0, 10).join(', '));
     }
-    check(F, !early.length, tight ? 'dates: no session before the plan\'s first week' : job.fault === 'twoper' || job.fault === 'oneper' || J.T.real || tails.size ? 'dates: no session before its week' : 'dates: no session before its official date', early.slice(0, 10).map((x) => `${x.l.id}: ${x.d} < ${x.l.pubDate}`).join('\n'));
+    check(F, !early.length, 'dates: no session before the plan\'s first week', early.slice(0, 10).map((x) => `${x.l.id}: ${x.d} < ${x.l.pubDate}`).join('\n'));
     if (job.fault === 'oneper' || tight) {
       const lastWk = J.endsOn;   // the bound is the term end (4.10.19), not the plan's last week
       // a prep never spans two lessons, so a run of weeks whose lessons are all distinct can overflow the plan's last week
@@ -627,7 +636,7 @@ async function flowTerm(job, J, W) {
       F.info.oneper = { preps: rows0.length, sessions: rows.length, shared: rows0.filter((r) => /و \d+\)$/.test(r.title)).length, lastWk, bound, from0, mergeable: mergeable.slice(0, 12), table: rows0.map((r) => `${planWk(r) || '?'}→${r.publishDate}×${sizeOf(r)}`) };
     }
     const off = job.fault === 'oneper' || tight ? [] : saved.filter((x) => x.d !== exp[x.l.id]);
-    check(F, !off.length, blocked.size ? 'dates: official date, or the next free school day when blocked (later sessions follow)' : 'dates: every session on its official date', `${off.length} differ: ` + off.slice(0, 10).map((x) => `${x.l.id}: got ${x.d}, expected ${exp[x.l.id]} (file ${x.l.pubDate})`).join('\n'));
+    check(F, !off.length, blocked.size ? 'dates: period after period from the first school day in Noor tree order, the next free period when blocked' : 'dates: period after period from the first school day, in Noor tree order', `${off.length} differ: ` + off.slice(0, 10).map((x) => `${x.l.id}: got ${x.d}, expected ${exp[x.l.id]} (file ${x.l.pubDate})`).join('\n'));
     if (job.fault === 'busy') check(F, cfg.existing.every((e) => noor.st.rows.filter((x) => x.preexisting && x.publishDate === e.publishDate).length === 1), 'busy: the existing preps are untouched');
     // second run (reload): nothing added
     const n1 = noor.st.rows.length;

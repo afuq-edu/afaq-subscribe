@@ -195,7 +195,9 @@ function assignDates() {
   // ترتيب التوزيع: بتواريخ الملف (النشرة) حين تُعتمد — فدروس تتداخل حصصها عبر الوحدات (سور القرآن، القصائد) تبقى على
   // تسلسل النشرة بعد أي تأجيل — وما بلا تاريخ يتبع ما قبله؛ وإلا بترتيب شجرة نور
   let seqAll = ordered.flatMap((p) => p.sessions);
-  if (fileMode) {
+  // «تحضير الفصل كاملًا» (المالك 2026-11-01): بترتيب شجرة نور دائمًا — لا يُحضَّر درس قبل درس يسبقه في الشجرة
+  const seqTerm = WIZ.on && fileMode && !WIZ.pickDates;
+  if (fileMode && !seqTerm) {
     let d0 = '';
     // حصتان في اليوم نفسه: بترتيب ملفك (شجرة نور قد ترتّب دروسها غير ترتيبه)
     const fi = new Map(((pkg && pkg.lessons) || []).map((l, i) => [l.id, i]));
@@ -227,6 +229,9 @@ function assignDates() {
   const planEnd = pkgEnd(pkg) || termEndOf(settings, termNo);
   const termEnd = termEndOf(settings, termNo) || (pkg.remote && isIso(pkg.remote.ends_on) ? pkg.remote.ends_on : '') || planEnd;
   const fitEnd = termEnd || planEnd;
+  // «تحضير الفصل كاملًا» (المالك 2026-11-01): كل حصة في جدول المعلم تأخذ الحصة التالية من الخطة، يومًا بعد يوم من أول يوم دراسي،
+  // حتى تنتهي الحصص والدروس كلها — لا تنتظر الحصة أسبوعها في الخطة (حصة الاثنين لا تبقى فارغة لأن الخطة وضعت درس الأسبوع يوم الأحد)
+  const day1 = ((pkg && pkg.lessons) || []).map((l) => l.pubDate).filter(isIso).sort()[0] || '';
   let loose = '';   // ضغط الفصل: من هذا التاريخ تلي كل حصة ما قبلها مباشرة بدل انتظار أسبوعها في الخطة
   // الجمع يُحسب من جديد في كل توزيع: ما جُمع قبل قراءة جدول حصص المعلم (حصتان في يوم مثلًا) لا يبقى إن اتسع له الجدول.
   // ما حُفظ في نور لا يدخل هنا (ليس من المرشحين)، فتبقى تحاضيره المجموعة كما هي
@@ -236,8 +241,9 @@ function assignDates() {
     if (s.mergedInto && candSet.has(s.mergedInto)) s.mergedInto = null;
   });
   const lay = () => {
-    const items = order.filter((s) => !s.mergedInto).map((s) => ({ s, fileDate: fileMode && isIso(s.lesson.pubDate) ? s.lesson.pubDate : '', fixed: s.fixed || '', after: after.get(s) || '' }));
-    const notes = layoutDates(items, { start: startIso, days, taken, useFileDates: fileMode, skip: holidaySet(settings), exact: !!WIZ.pickDates, cap: capOf, weekly: fileMode && !WIZ.pickDates, loose, today: fromIso ? '' : todayIso() });
+    // الفصل كاملًا: بلا تاريخ ملف — كل حصة تلي ما قبلها على أول حصة حرة في جدول المعلم، من أول يوم دراسي
+    const items = order.filter((s) => !s.mergedInto).map((s) => ({ s, fileDate: fileMode && !seqTerm && isIso(s.lesson.pubDate) ? s.lesson.pubDate : '', fixed: s.fixed || '', after: after.get(s) || '' }));
+    const notes = layoutDates(items, { start: seqTerm && day1 ? day1 : startIso, days, taken, useFileDates: fileMode, skip: holidaySet(settings), exact: !!WIZ.pickDates, cap: capOf, weekly: fileMode && !WIZ.pickDates, loose, today: fromIso || seqTerm ? '' : todayIso() });
     return { items, notes };
   };
   let { items, notes } = lay();
@@ -263,7 +269,7 @@ function assignDates() {
       }
     };
     if (lateN(items)) tryMerges();
-    if (lateN(items)) {
+    if (lateN(items) && !seqTerm) {
       loose = nextSchoolDay(today, days, true);
       ({ items, notes } = lay());
       if (lateN(items)) tryMerges();
@@ -2073,7 +2079,7 @@ function startSummary() {
   const advise = tree;
   // التنبيه الثاني
   const b = [];
-  if (ds.length) b.push(`ستبدأ التحاضير من ${dayLabel(ds[0])}${ds[0] === day1 ? '، أول يوم دراسي،' : ''} بترتيب الخطة: أنشر ${prepWord(n)}${nS > n ? ` (${countWord(nS)})` : ''}${ds[ds.length - 1] !== ds[0] ? ` حتى ${dayLabel(ds[ds.length - 1])}` : ''}${nS > n ? '' : '، لكل حصة تحضيرها'}.`);
+  if (ds.length) b.push(`ستبدأ التحاضير من ${day1 && weekStart(ds[0]) === weekStart(day1) ? `أول يوم دراسي (${dayLabel(ds[0])})` : dayLabel(ds[0])}، حصة بعد حصة على جدولك وبترتيب دروس نور: أنشر ${prepWord(n)}${nS > n ? ` (${countWord(nS)})` : ''}${ds[ds.length - 1] !== ds[0] ? ` حتى ${dayLabel(ds[ds.length - 1])}` : ''}${nS > n ? '' : '، لكل حصة تحضيرها'}.`);
   if (past) b.push(past === nS ? 'موعد هذه الحصص في الخطة قد فات، فأنشرها من اليوم بترتيبها.' : `${past === 1 ? 'حصة واحدة فات موعدها' : `${countWord(past)} فات موعدها`} في الخطة، أنشرها من اليوم أولًا بترتيبها ثم يليها الباقي.`);
   if (fit.merged) b.push(`حصصك الباقية حتى نهاية الفصل أقل من التحاضير، فجمعت ${countWord(fit.merged)} مع حصة قبلها من الدرس نفسه.`);
   b.push('إن لم يناسبك هذا فاختيار الدروس بنفسك أفضل لك.');
@@ -2184,7 +2190,7 @@ async function run() {
   // حصص تجربة جُلب محتواها ولم يكتمل حفظها: يسمح الخادم بجلبها ثانية دون احتساب، فتُكمل ولا تضيع على المعلم
   WIZ.fetched = WIZ.trialCap != null ? new Set((await chrome.storage.local.get('trialFetched').catch(() => ({}))).trialFetched || []) : new Set();
   WIZ.fetched0 = new Set(WIZ.fetched);
-  if (WIZ.trialCap === 0 && !WIZ.fetched.size) { if (WIZ.on) payResume = 'run'; showPay(pkg); return; }
+  if (WIZ.trialCap != null) { if (WIZ.on) payResume = 'run'; showPay(pkg); return; }   // لا تجربة مجانية (المالك 2026-11-01)
   plan = []; queue = []; treeNodes = []; noorHave = null; noClass = new Map(); classOk = new Set(); editable = false; courseCid = ''; coursePrepUrl = ''; semSaved = {}; savedThisRun = []; listBase = { n: -1, saved: 0 }; lastVerify = ''; dateNotes.clear();
   fillRid = String(WIZ.on && WIZ.rid ? WIZ.rid : Date.now()); fillN = 0; fillCnt = {}; fillLogged.clear();
   days = daysFor(state, settings, pkg.id);
@@ -2714,8 +2720,9 @@ function wzTrialLeft() {
   if (wz.status && wz.status.trialLeft != null) return wz.status.trialLeft;
   return (wz.catalog && wz.catalog.trial) || 3;
 }
-const wzBadge = (o) => (o.src === 'cat' ? (wzTrialLeft() ? '<em class="bdg free">ضمن تجربتك المجانية</em>' : '')
-  : o.pkg.remote && o.pkg.remote.trial ? `<em class="bdg ${o.pkg.remote.left ? 'free' : 'end'}">${o.pkg.remote.left ? 'تجربة: بقي ' + countWord(o.pkg.remote.left) : 'انتهت التجربة'}</em>`
+// لا تجربة مجانية (المالك 2026-11-01): مادة الطلب تنتظر تفعيل المشرف
+const wzBadge = (o) => (o.src === 'cat' ? ''
+  : o.pkg.remote && o.pkg.remote.trial ? '<em class="bdg free">بانتظار التفعيل</em>'
     : o.pkg.remote ? '<em class="bdg sub">مشترك ✓</em>' : '');
 
 function wzGo(step, push = true) {
@@ -2771,13 +2778,13 @@ function wzRender() {
     body.innerHTML = wzCards(list);
   } else if (wz.step === 'name') {
     head.textContent = 'اسمك كما في نور';
-    body.innerHTML = `<p class="wz-note">تبدأ تجربتك المجانية الآن: ${toAr((wz.catalog && wz.catalog.trial) || 3)} حصص مجانًا في المواد كلها معًا، دون دفع ولا تواصل.</p>
+    body.innerHTML = `<p class="wz-note">يصل اسمك إلى المشرف، وبعد التواصل معه وتفعيل اشتراكك يبدأ التحضير وحده.</p>
       <p class="wz-note big"><b>اكتب اسمك كما هو مسجّل في منصة نور</b> — اشتراكك يكون باسمك، ويعمل لحساب نور الذي يحمل هذا الاسم.</p>
       <input class="input big" id="wzName" placeholder="اسمك كما في نور" autocomplete="name">
       <input class="input big" id="wzPhone" placeholder="رقم الهاتف (اختياري)" inputmode="tel" dir="ltr" style="text-align:right">
       <p class="wz-note" id="wzRefNote" hidden>دعاك زميلك ✓ — إذا اشتركت تحصلان كلاكما على خصم.</p>
       <details class="wz-code" id="wzRefBox"><summary>دعاني زميل (رقم الدعوة)</summary><input class="input big" id="wzRef" placeholder="رقم طلب زميلك، مثل 1003" inputmode="numeric" dir="ltr"></details>
-      <button class="btn primary big" id="wzNameGo">ابدأ التجربة المجانية</button>`;
+      <button class="btn primary big" id="wzNameGo">أرسل طلب التفعيل</button>`;
     $('wzName').focus();
     chrome.storage.local.get('afaqRef').then((v) => { if (v && v.afaqRef) { $('wzRefNote').hidden = false; $('wzRefBox').hidden = true; } }).catch(() => {});
     $('wzNameGo').onclick = async () => {
@@ -2787,7 +2794,7 @@ function wzRender() {
       if (!o) return;
       const ref = ($('wzRef').value || '').replace(/[^\d]/g, '');
       if (ref) await setRef(ref).catch(() => {});
-      await wzBusy('أجهّز تجربتك…', async () => {
+      await wzBusy('أرسل طلبك…', async () => {
         const r = await startTrial(name, $('wzPhone').value.trim(), wz.shift, [o.id]);
         if (!r.ok && r.error === 'too_many') {
           // شبكة سجّل منها كثيرون اليوم: مسار هادئ — رسالة واتساب جاهزة باسمه ومادته، ونفتح له من لوحة الإدارة
@@ -2893,7 +2900,7 @@ function groupByUnit(groups) {
 }
 function wzTrialNote() {
   const r = wz.pkg && wz.pkg.remote;
-  return r && r.trial ? `<p class="wz-note">${r.left ? `تجربتك المجانية: بقي لك ${countWord(r.left)} (في كل المواد معًا).` : 'انتهت حصصك المجانية.'}</p>` : '';
+  return r && r.trial ? '<p class="wz-note">هذه المادة بانتظار تفعيل اشتراكك.</p>' : '';
 }
 function wzPickOffer() {
   const mine = wzOffers().filter((o) => o.grade === wz.grade && o.subject === wz.subject && fitsShift(o.shift, wz.shift));
@@ -2905,7 +2912,8 @@ function wzPickOffer() {
 // المادة جاهزة: «أختار الدروس بنفسي» ← قائمة الدروس · «الفصل كاملًا» ← التعبئة مباشرة
 function wzOpen(p) {
   wz.pkg = p;
-  if (p.remote && p.remote.trial && !p.remote.left) { payResume = 'open'; wzGo('pay'); return; }
+  // لا تجربة مجانية (المالك 2026-11-01): الطلب ينتظر تفعيل المشرف، وبعده يكمل التحضير وحده
+  if (p.remote && p.remote.trial) { payResume = 'open'; wzGo('pay'); return; }
   const ids = new Set((p.lessons || []).map((l) => l.id));
   [...wz.sel.keys()].forEach((k) => { if (!ids.has(k)) wz.sel.delete(k); });
   if (wz.mode === 'term') { if (FROM_STEP) wzGo('from'); else wzRun(); } else wzGo('lessons');
@@ -2916,7 +2924,7 @@ async function wzResolve(noName) {
   if (!o) return;
   if (o.src === 'lib') { wzOpen(o.pkg); return; }
   if (!wz.link) { if (noName) { wzMsg('bad', 'لم تظهر المادة بعد التسجيل — أعد المحاولة.'); return; } wzGo('name'); return; }
-  await wzBusy('أضيف المادة إلى تجربتك…', async () => {
+  await wzBusy('أضيف المادة إلى طلبك…', async () => {
     const r = await pickPackages([o.id], wz.shift);
     if (!r.ok) { wzMsg('bad', wzErr(r.error)); return; }
     await wzReload();
@@ -3057,7 +3065,7 @@ async function wzInviteFill(el) {
     <div class="row"><input class="input" readonly value="${esc(r.url)}"><button class="btn sm" type="button" data-copy>نسخ</button><button class="btn sm wa" type="button" data-wa>واتساب</button></div>
     ${r.invited ? `<small class="hint">دعوت ${toAr(r.invited)}${r.invited_active ? `، واشترك ${toAr(r.invited_active)} — خصمك محفوظ لك` : ''}.</small>` : ''}`;
   el.querySelector('[data-copy]').onclick = async (e) => { try { await navigator.clipboard.writeText(r.url); e.target.textContent = '✓ نُسخ'; } catch (x) { el.querySelector('input').select(); } };
-  el.querySelector('[data-wa]').onclick = () => openUrl('https://wa.me/?text=' + encodeURIComponent(`جرّب «حاضر»: يعبّئ تحاضيرك في نور ويحفظها وحده. أول ٣ حصص مجانًا${r.discount ? `، وإذا اشتركت نحصل كلانا على خصم ${r.discount}` : ''}:\n${r.url}`), '_blank');
+  el.querySelector('[data-wa]').onclick = () => openUrl('https://wa.me/?text=' + encodeURIComponent(`جرّب «حاضر»: يعبّئ تحاضيرك في نور ويحفظها وحده${r.discount ? `، وإذا اشتركت نحصل كلانا على خصم ${r.discount}` : ''}:\n${r.url}`), '_blank');
 }
 async function showUpdate() {
   const u = await updateInfo().catch(() => null);
@@ -3116,8 +3124,8 @@ function wzPayRender() {
   }
   const st = wz.status || {};
   const req = st.request || {};
-  $('wzHead').textContent = 'انتهت تجربتك المجانية';
-  $('wzBody').innerHTML = `<p class="wz-note big">لتفعيل اشتراكك تواصل معنا على واتساب، واذكر اسمك والمواد التي تريدها.</p>
+  $('wzHead').textContent = 'تفعيل اشتراكك';
+  $('wzBody').innerHTML = `<p class="wz-note big">وصل اسمك إلى المشرف. لتفعيل اشتراكك تواصل معنا على واتساب، واذكر اسمك والمواد التي تريدها.</p>
     <div class="wz-wa"><span>واتساب</span><b dir="ltr">${esc(waShow(st.whatsapp))}</b></div>
     ${req.id ? `<p class="wz-line">رقم طلبك: <b>${toAr(req.id)}</b></p>` : ''}
     <p class="hint">${payResume ? 'اطلب التفعيل، وبعده يكمل التحضير وحده من حيث توقف — أبقِ هذه النافذة ونور مفتوحتين.' : 'بعد التفعيل تظهر موادك هنا وحدها.'}</p>
