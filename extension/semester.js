@@ -2280,21 +2280,35 @@ async function wipeNoorPreps() {
   logLine('info', `مسح تحاضير نور: حُذف ${toAr(done)}${bad ? ` وتعذّر ${toAr(bad)}` : ''}`);
   return done > 0;
 }
+// بطاقة «في نور تحاضير لهذه المادة»: اختيار الدروس بنفسك، أو مسح تحاضير المادة من نور (بتأكيدين) والبدء من جديد
+async function wipeOffer(text, n, okBtn) {
+  const pick = (primary) => ({ id: 'pick', label: 'أختار الدروس بنفسي', primary });
+  const v = await ask({ kind: 'info', head: 'اختر الدروس بنفسك', text, bar: false, buttons: [pick(true), { id: 'wipe', label: 'أمسح تحاضير هذه المادة من نور وأبدأ الفصل' }].concat(okBtn ? [{ id: 'ok', label: 'حسنًا' }] : []) });
+  if (v !== 'wipe') return v;
+  const c = await ask({ kind: 'warn', head: 'مسح تحاضير هذه المادة', bar: false,
+    text: `سأحذف من نور ${prepWord(n)} في هذه المادة (كل ما فيها)، ثم أنشر الفصل كاملًا من أول يوم دراسي.\nالحذف لا يمكن التراجع عنه.`,
+    buttons: [pick(true), { id: 'wipe2', label: `نعم، امسح ${prepWord(n)}` }] });
+  return c === 'wipe2' ? 'wipe' : c;
+}
+// الفصل كاملًا ومادة المعلم كاملة في نور: لا حصص ناقصة فينتهي التشغيل — قبل أن ينتهي تُعرض البطاقة نفسها (مسح وبدء من جديد، أو اختيار الدروس)
+async function termFullOffer() {
+  if (!WIZ.on || WIZ.pickDates || WIZ.hwOnly || wz.mode !== 'term' || scope.kind !== 'term' || queue.length || stopFlag) return;
+  const had = plan.flatMap((p) => p.sessions.filter((s) => s.inNoor)).length;
+  if (!had || await termOwn()) return;
+  const n = (noorHave && noorHave.titles && noorHave.titles.length) || had;
+  running = false;
+  const v = await wipeOffer(`وجدت في نور ${prepWord(n)} لهذه المادة، وحصص الخطة كلها فيها.\nإن أردت البدء من جديد فامسح تحاضير هذه المادة من نور وأنشر الفصل كاملًا، أو اختر الدروس بنفسك.`, n, true);
+  running = true;
+  if (v === 'pick') { WIZ.toPick = true; throw new Error('stop'); }
+  if (v === 'wipe') { WIZ.rerun = await wipeNoorPreps().catch(() => false); if (!WIZ.rerun) WIZ.toPick = true; throw new Error('stop'); }
+}
 async function confirmStart() {
   WIZ.termOwn = (q.get('debug') === '1' && q.get('cont') === '1') || await termOwn();
   if (WIZ.termOwn) return 'go';
   const sm = startSummary();
   WIZ.summary = sm;
   const pick = (primary) => ({ id: 'pick', label: 'أختار الدروس بنفسي', primary });
-  if (sm.block) {
-    const v = await ask({ kind: 'info', head: 'اختر الدروس بنفسك', text: sm.block, bar: false, buttons: [pick(true), { id: 'wipe', label: 'أمسح تحاضير هذه المادة من نور وأبدأ الفصل' }] });
-    if (v !== 'wipe') return v;
-    const n = (noorHave && noorHave.titles && noorHave.titles.length) || sm.had;
-    const c = await ask({ kind: 'warn', head: 'مسح تحاضير هذه المادة', bar: false,
-      text: `سأحذف من نور ${prepWord(n)} في هذه المادة (كل ما فيها)، ثم أنشر الفصل كاملًا من أول يوم دراسي.\nالحذف لا يمكن التراجع عنه.`,
-      buttons: [pick(true), { id: 'wipe2', label: `نعم، امسح ${prepWord(n)}` }] });
-    return c === 'wipe2' ? 'wipe' : c;
-  }
+  if (sm.block) return wipeOffer(sm.block, (noorHave && noorHave.titles && noorHave.titles.length) || sm.had);
   const v = await ask({ kind: 'info', head: sm.first.head, text: sm.first.text, bar: false,
     buttons: sm.first.advise ? [pick(true), { id: 'go', label: 'أكمل التحضير الفصلي' }] : [{ id: 'go', label: '✓ لا توجد عندي تحاضير، تابع', primary: true }, pick(false)] });
   if (v !== 'go') return v;
@@ -2574,7 +2588,7 @@ async function run() {
     renderPlan();
     if (WIZ.hwOnly) { await homeworkOnly(); finished = true; throw new Error(WIZ.hwHead); }
     // المادة مكتملة في نور: لا مراجعة ولا اقتراحات — «مكتمل» فقط
-    { const cp = completion(); if (cp.complete && !queue.length) { finished = true; logLine('ok', completeText(cp)); throw new Error(completeText(cp)); } }
+    { const cp = completion(); if (cp.complete && !queue.length) { await termFullOffer(); finished = true; logLine('ok', completeText(cp)); throw new Error(completeText(cp)); } }
     // تعارض بين ملفك ونور: تُعرض الخطة للمراجعة، وتبدأ وحدها بعد مهلة (أطول كلما كان التعارض أخطر) ما لم تطلب المراجعة اليدوية
     const c = conflicts();
     const nConf = c.miss.length + c.weak.length + c.dup.length;
@@ -2583,6 +2597,7 @@ async function run() {
     if (WIZ.on && !$('optReview').checked) {
       if (nConf || plan.mismatch) { autoResolve(); await savePicks(); }
       safeLinks(); assignDates(); renderPlan();
+      if (!queue.length) await termFullOffer();
       if (!queue.length) { finished = true; throw new Error(plan.some((p) => p.sessions.some((s) => s.inNoor && pickedS(s))) ? 'كل الحصص المختارة موجودة في نور ✓' : 'انتهى ✓'); }
       setBox('run', planLine(), WIZ.trialCap != null ? `من تجربتك المجانية. أبدأ الآن.` : 'أبدأ الآن.');
     } else if ($('optReview').checked || nConf || plan.mismatch || !queue.length) {

@@ -659,7 +659,7 @@ T(26, 'Noor already has preps and the teacher wants a fresh start: «أمسح ت
   env.afaq.reset({ pkg: PKG });
   const b = await env.launch(noor, { now: '2026-10-11', cont: false });
   await wizardTo(b.pg, 'term');
-  const card = async (act) => { for (let i = 0; i < 240; i++) { const t = await b.pg.evaluate((a) => { const e = document.querySelector(`#nowActs button[data-act="${a}"]`); const acts = document.getElementById('nowActs'); return e && acts && !acts.hidden ? document.getElementById('nowText').innerText : null; }, act).catch(() => null); if (t) return t; await sleep(1000); } return null; };
+  const card = async (act) => { for (let i = 0; i < 60; i++) { const t = await b.pg.evaluate((a) => { const e = document.querySelector(`#nowActs button[data-act="${a}"]`); const acts = document.getElementById('nowActs'); return e && acts && !acts.hidden ? document.getElementById('nowText').innerText : null; }, act).catch(() => null); if (t) return t; await sleep(1000); } return null; };
   const press = (act) => b.pg.evaluate((a) => document.querySelector(`#nowActs button[data-act="${a}"]`).click(), act);
   const t1 = await card('wipe');
   check(!!t1 && /وجدت في نور/.test(t1), 'the block card offers «أمسح تحاضير هذه المادة من نور وأبدأ الفصل» next to «أختار الدروس بنفسي»', String(t1));
@@ -698,6 +698,48 @@ T(27, 'Declining at the second card: «لا، أختار الدروس بنفسي
   const onLessons = await b.pg.waitForSelector('input[data-k]', { timeout: 30000 }).then(() => true).catch(() => false);
   check(onLessons, '«أختار الدروس بنفسي» opens the lessons screen', '');
   check(noor.st.rows.length === n0 && !(noor.st.deleted || []).length, 'nothing deleted', `${noor.st.rows.length}/${n0}`);
+  return b;
+});
+
+T(28, 'The whole subject is already in Noor (the owner\'s screenshot): the full term no longer just says «موجودة في نور» — the same card offers «أمسح تحاضير هذه المادة…»; «حسنًا» keeps everything, the wipe (two confirmations) republishes the whole plan', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 24) }));
+  const tree = treeFromPackage(PKG);
+  const pre = existingFor(tree, PKG.lessons.map((l) => l.id));
+  const noor = env.noor({ tree, existing: pre });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now: '2026-10-11', cont: false });
+  await wizardTo(b.pg, 'term');
+  const card = async (act) => { for (let i = 0; i < 60; i++) { const t = await b.pg.evaluate((a) => { const e = document.querySelector(`#nowActs button[data-act="${a}"]`); const acts = document.getElementById('nowActs'); return e && acts && !acts.hidden ? document.getElementById('nowText').innerText : null; }, act).catch(() => null); if (t) return t; await sleep(1000); } return null; };
+  const press = (act) => b.pg.evaluate((a) => document.querySelector(`#nowActs button[data-act="${a}"]`).click(), act);
+  const t1 = await card('wipe');
+  check(!!t1 && /وجدت في نور/.test(t1) && /كلها فيها/.test(t1), 'a card appears (not just «موجودة في نور») with the wipe button', String(t1));
+  check(!!(await b.pg.evaluate(() => document.querySelector('#nowActs button[data-act="ok"]'))), 'it also has a neutral «حسنًا»', '');
+  const n0 = noor.st.rows.length;
+  await press('wipe');
+  const t2 = await card('wipe2');
+  check(!!t2 && new RegExp(toAr(n0)).test(t2) && /لا يمكن التراجع/.test(t2), `the second card names the count (${n0})`, String(t2));
+  check(noor.st.rows.length === n0, 'nothing deleted yet', '');
+  await press('wipe2');
+  const s = await waitDone(b.pg, 25 * 60000, 'wipe all then term');
+  check(/تمت التعبئة بنجاح/.test(s.head), 'after the wipe the full term runs to «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check((noor.st.deleted || []).length === n0 && noor.st.rows.every((r) => !r.preexisting), `all ${n0} old preps deleted`, String((noor.st.deleted || []).length));
+  check(noor.st.rows.length === PKG.lessons.length, `the whole plan (${PKG.lessons.length}) is published again`, `rows ${noor.st.rows.length}`);
+  return b;
+});
+
+T(29, 'The whole subject is already in Noor and the teacher presses «حسنًا»: nothing is deleted and the usual «هذه الحصص موجودة في نور» ending shows', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 24) }));
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree, existing: existingFor(tree, PKG.lessons.map((l) => l.id)) });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now: '2026-10-11', cont: false });
+  await wizardTo(b.pg, 'term');
+  let ok = false;
+  for (let i = 0; i < 60 && !ok; i++) { ok = await b.pg.evaluate(() => { const e = document.querySelector('#nowActs button[data-act="ok"]'); const a = document.getElementById('nowActs'); if (e && a && !a.hidden) { e.click(); return true; } return false; }).catch(() => false); if (!ok) await sleep(1000); }
+  check(ok, 'the card appears with «حسنًا»', '');
+  const s = await waitDone(b.pg, 40000, 'ok');
+  check(/موجودة في نور|لا شيء ناقص|مكتمل/.test(s.head + s.text), 'the usual ending shows', `${s.head} | ${s.text}`);
+  check(!(noor.st.deleted || []).length && noor.st.rows.every((r) => r.preexisting), 'nothing deleted or added', '');
   return b;
 });
 
