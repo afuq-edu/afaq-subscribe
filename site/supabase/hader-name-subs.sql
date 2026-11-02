@@ -189,6 +189,7 @@ end $$;
 create or replace function public.admin_name_sub_add(p_name text, p_plan text, p_all boolean, p_packages text[], p_service text, p_note text default null) returns jsonb
 language plpgsql security definer set search_path = public as $$
 declare v_name text := left(trim(regexp_replace(coalesce(p_name, ''), '\s+', ' ', 'g')), 80); v_norm text; v_id bigint; v_ids text[] := coalesce(p_packages, '{}');
+  v_uid uuid; v_req bigint;
 begin
   if not public.is_admin() then raise exception 'غير مسموح'; end if;
   if coalesce(p_plan, '') not in ('term', 'year') then raise exception 'نوع الاشتراك فصلي أو سنوي'; end if;
@@ -200,6 +201,18 @@ begin
   if exists (select 1 from public.name_subs where name_norm = v_norm and claimed_user is null and hidden_at is null) then raise exception 'هذا الاسم مضاف وينتظر صاحبه'; end if;
   insert into public.name_subs (name, name_norm, plan, all_subjects, service, package_ids, note)
   values (v_name, v_norm, p_plan, coalesce(p_all, false), p_service, v_ids, nullif(trim(coalesce(p_note, '')), '')) returning id into v_id;
+  -- معلم فتح «حاضر» وكتب اسمه قبل أن يُضاف القيد (طلب تجربة أو انتظار قائم): يتفعّل طلبه القائم الآن دون إعادة تثبيت.
+  -- أحدث طلب بالاسم نفسه، لغير المدير ومن لا اشتراك فعّال عنده؛ وحماية حساب نور تبقى كما هي.
+  select r.user_id, r.id into v_uid, v_req from public.ext_requests r
+   where r.status in ('trial', 'requested') and public.ar_name_norm(r.name) = v_norm
+     and not coalesce((select pr.is_admin from public.profiles pr where pr.id = r.user_id), false)
+     and not exists (select 1 from public.subscriptions s join public.terms t on t.id = s.term_id
+                     where s.user_id = r.user_id and not s.revoked and public.today_muscat() <= t.ends_on)
+   order by r.created_at desc limit 1;
+  if v_uid is not null then
+    perform public.name_sub_apply(v_uid, v_id);
+    return jsonb_build_object('ok', true, 'id', v_id, 'applied', true, 'request', v_req);
+  end if;
   return jsonb_build_object('ok', true, 'id', v_id);
 end $$;
 
