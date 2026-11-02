@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e9f2f8"><meta name="description" content="بنك عبارات وصفية عامة لمادة اللغة الإنجليزية، خمسة مستويات إيجابية مع نسخ كل عبارة أو المستوى أو البنك كاملًا.">
+<title>بنك العبارات الوصفية | اللغة الإنجليزية</title>
+<style>
+:root{--ink:#18344a;--muted:#5c7486;--navy:#164569;--blue:#2673a6;--light:#f3f8fc;--line:#dce8f0;--white:#fff;--shadow:0 9px 30px rgba(28,65,91,.06)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tahoma,"Segoe UI",Arial,sans-serif;background:linear-gradient(180deg,#eaf3f9 0,#f8fbfd 360px,#f8fbfd 100%);color:var(--ink);line-height:1.85}
+button,input{font:inherit}button{cursor:pointer;transition:.18s}button:focus-visible,input:focus-visible{outline:3px solid #79bee7;outline-offset:3px}
+.container{max-width:1120px;margin:auto;padding:0 18px}.hero{padding:48px 0 25px}.eyebrow{display:inline-block;border:1px solid #bad3e4;border-radius:25px;background:#fff9;padding:2px 14px;color:var(--blue);font-size:.85rem;font-weight:bold}
+h1{font-size:clamp(1.7rem,4vw,2.8rem);margin:12px 0 5px;line-height:1.5;letter-spacing:-.6px}p.lead{max-width:790px;color:var(--muted);margin:8px 0 20px}
+.toolbar{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.action{border:1px solid #b7cfe0;background:#fff;color:var(--navy);border-radius:11px;padding:9px 17px;font-weight:bold}
+.action:hover{background:#eaf4fb}.primary{background:var(--navy);border-color:var(--navy);color:white}.primary:hover{background:#0f3653}
+.search{flex:1 1 280px;min-width:160px;padding:11px 15px;border:1px solid #cbdce8;border-radius:11px;color:var(--ink);background:#fff}
+.counter{font-size:.86rem;color:var(--muted)}.tabs{display:flex;gap:8px;overflow-x:auto;padding:18px 1px 8px;scrollbar-width:thin}
+.tab{flex:0 0 auto;border:1px solid #d1e1ec;color:#285672;background:white;border-radius:100px;padding:8px 16px;font-weight:bold}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:28px 0 16px}
+.section-title{margin:0;font-size:1.25rem}.section-title small{display:block;color:var(--muted);font-size:.85rem;font-weight:normal}.count-bubble{font-size:.8rem;border-radius:100px;background:#e7f1f7;padding:3px 11px;color:#2b607e}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.phrase{background:#fff;border:1px solid #deebf3;border-radius:17px;padding:17px 18px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;box-shadow:0 5px 15px rgba(40,77,103,.035)}
+.phrase p{margin:0;font-size:.99rem;color:#253d4e;line-height:2}.phrase-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #eef3f6;padding-top:11px}
+.num{font-size:.8rem;color:#8aa0ae}.copy{border:1px solid #d2e3ee;background:#f7fbfe;color:#225a7e;border-radius:9px;padding:5px 13px;font-size:.86rem;font-weight:bold}.copy:hover{background:#e5f3fc}
+.empty{padding:35px;background:white;border:1px dashed #adc9d9;border-radius:18px;text-align:center;color:var(--muted)}footer{text-align:center;color:#7890a0;font-size:.82rem;padding:40px 10px 35px}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:#143950;color:white;padding:9px 22px;border-radius:12px;font-size:.9rem;opacity:0;pointer-events:none;transition:.2s;z-index:10;white-space:nowrap}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:690px){.hero{padding-top:28px}.grid{grid-template-columns:1fr}.toolbar{padding:13px}.search{flex-basis:100%}.toolbar .action{flex:1 1 auto}.section-head{align-items:flex-start}.phrase{padding:15px}.container{padding:0 13px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="container">
+<header class="hero">
+<span class="eyebrow">اللغة الإنجليزية • عبارات وصفية عامة</span>
+<h1>بنك العبارات الوصفية</h1>
+<p class="lead">١٠٠ عبارة إيجابية موزعة على خمسة مستويات متدرجة؛ صيغ دبلوماسية تُبرز الجوانب المشجعة في أداء الطالب وتناسب تدوين الملاحظات العامة في البوابة التعليمية.</p>
+</header>
+<section class="toolbar" aria-label="أدوات البحث والنسخ">
+<input id="search" class="search" type="search" placeholder="ابحث في جميع العبارات..." aria-label="البحث في العبارات">
+<button class="action primary" id="copyAll" type="button">نسخ البنك كاملًا (١٠٠ عبارة)</button>
+<button class="action" id="copyLevel" type="button">نسخ المستوى المعروض</button>
+<span class="counter" id="counter"></span>
+</section>
+<nav id="tabs" class="tabs" aria-label="اختيار المستوى"></nav>
+<section id="results" aria-live="polite"></section>
+<footer>عبارات عامة قابلة للنسخ والتكييف حسب واقع أداء الطالب.</footer>
+</main><div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+"use strict";
+const levels=[{"title":"المستوى الأول","subtitle":"بداية واعدة","phrases":["يبدي اهتمامًا طيبًا بمادة اللغة الإنجليزية، وتظهر لديه بوادر تقدم مشجعة مع استمرار المتابعة.","يتعامل مع أنشطة المادة بروح إيجابية، ويستفيد من التوجيه الذي يساعده على المضي قدمًا.","يُظهر استعدادًا جميلًا للتعلم، وتزداد ثقته تدريجيًا مع الممارسة المنتظمة.","له خطوات إيجابية تستحق التشجيع، ويستفيد من فرص التعلم المتاحة داخل الصف.","يتجاوب بصورة طيبة مع التشجيع، ويواصل بناء خبراته في المادة بخطوات متدرجة.","يُقدّر الجهد المبذول في التعلم، وتبدو لديه فرص واعدة لمزيد من التطور.","يشارك حسب إمكاناته، وتُعد محاولاته المستمرة أساسًا مشجعًا لتقدمه.","يُظهر رغبة طيبة في تحسين أدائه، ويستفيد من الدعم والتشجيع المستمرين.","يسير في مسار تعليمي مشجع، وتُسهم الممارسة المنتظمة في تعزيز ثقته وتقدمه.","يُبدي تقبلًا إيجابيًا للتعلم، وتساعده المتابعة الهادئة على تعزيز مكتسباته.","تظهر لديه محاولات جادة تستحق التقدير، ويواصل تطوير أدائه بصورة متدرجة.","يمتلك قابلية جيدة للاستفادة من التوجيه، ويخطو خطوات طيبة نحو مزيد من التقدم.","يحرص على الاستفادة من الأنشطة الصفية، ويُظهر استعدادًا لمواصلة التعلم.","يتفاعل مع الفرص التعليمية المقدمة له، وتبدو لديه إمكانات مشجعة للنمو.","تستحق جهوده المبذولة الثناء، وتساعده الاستمرارية على توسيع خبراته وثقته.","يُظهر تجاوبًا محمودًا مع الملاحظات الإيجابية، ويستفيد منها في تحسين أدائه.","تتضح لديه روح المحاولة والمثابرة، وهي نقطة انطلاق طيبة لتقدم مستمر.","يحقق خطوات متدرجة في تعلم المادة، ويستحق التشجيع على مواصلة جهوده.","يحافظ على توجه إيجابي نحو التعلم، ويتقدم بصورة مشجعة مع الممارسة.","يُظهر إمكانات قابلة للنمو، وتساعده المواظبة والتشجيع على إبراز أفضل ما لديه."]},{"title":"المستوى الثاني","subtitle":"تقدم متنامٍ","phrases":["يُظهر تقدمًا طيبًا في مادة اللغة الإنجليزية، ويواصل تنمية مستواه باهتمام واضح.","يبذل جهودًا محمودة، وتنعكس مثابرته بصورة إيجابية على مسيرته التعليمية.","يتميز بروح متعاونة ورغبة في التعلم، ويحقق تقدمًا متدرجًا يستحق التقدير.","يتعامل مع متطلبات المادة بإيجابية، ويُظهر تحسنًا مشجعًا مع الاستمرار.","يواصل بناء مستواه بثبات، وتبرز لديه مؤشرات إيجابية نحو أداء أكثر تمكنًا.","يُظهر حرصًا جيدًا على التعلم، وتساعده متابعته المستمرة على توسيع مكتسباته.","يحقق تقدمًا ملحوظًا في مسيرته التعليمية، ويستحق التشجيع على مواصلة هذا النهج.","يتفاعل بصورة طيبة مع أنشطة المادة، ويستفيد من الخبرات الصفية المتنوعة.","يُبدي اهتمامًا واضحًا بالتطور، وتظهر ثمار جهوده في خطواته المتقدمة.","يتحسن أداؤه تدريجيًا، وتبرز لديه روح إيجابية تعزز فرص نجاحه.","يُظهر استجابة جيدة للتوجيهات، وينعكس ذلك على تطور مستواه بمرور الوقت.","يمتلك دافعية طيبة للتعلم، ويتقدم في المادة بصورة تستحق الإشادة.","يواصل تعزيز فهمه العام للمادة، ويُظهر استعدادًا لتطوير أدائه باستمرار.","يستثمر فرص التعلم بصورة إيجابية، ويتجه نحو مزيد من الاستقرار في الأداء.","تتضح آثار جهوده ومتابعته في تطوره، مما يبشر بمزيد من الإنجاز.","يتمتع بروح مثابرة، ويحقق خطوات جيدة في تطوير مستواه التعليمي.","يُظهر تحسنًا تدريجيًا في أدائه العام، ويستفيد من التوجيه والتغذية الراجعة.","يسير بخطى جيدة نحو تحقيق تقدم أكبر، وتستحق استمراريته التقدير.","يُظهر التزامًا محمودًا بفرص التعلم، وتتنامى ثقته مع الخبرة والممارسة.","تبدو لديه ملامح تطور إيجابية، ويواصل تعزيز مستواه بعزيمة مشجعة."]},{"title":"المستوى الثالث","subtitle":"أداء جيد ومتوازن","phrases":["يقدم أداءً جيدًا في مادة اللغة الإنجليزية، ويُظهر اهتمامًا واضحًا بمواصلة التطور.","يتمتع بمستوى جيد يعكس حرصه على التعلم واستفادته من الأنشطة التعليمية.","يُظهر فهمًا عامًا جيدًا لمتطلبات المادة، ويواصل تعزيز مستواه بثقة.","يحافظ على أداء جيد ومتوازن، وتبرز لديه رغبة إيجابية في تحقيق المزيد.","يُبدي التزامًا طيبًا بالتعلم، وينعكس ذلك على جودة أدائه العام.","يحقق نتائج جيدة تعكس جهوده، ولديه فرص واعدة لمزيد من التميز.","يتعامل مع المادة بثقة متنامية، ويُظهر مستوى جيدًا في مجمل أدائه.","يتميز بحرصه على المشاركة الإيجابية، ويحافظ على مستوى تعليمي مرضٍ.","يُظهر تقدمًا متوازنًا، ويستفيد بصورة جيدة من الخبرات التعليمية المقدمة.","مستواه في المادة جيد، وتساعده استمراريته على تطوير أدائه بصورة أوسع.","يقدم جهودًا واضحة وأداءً مشجعًا، ويواصل بناء مكتسباته بثبات.","يتميز بتفاعل إيجابي مع الدروس، ويُظهر استيعابًا جيدًا لمتطلبات التعلم.","يحافظ على نسق جيد في التعلم، ويُظهر استعدادًا للارتقاء بمستواه.","يحقق تقدمًا مناسبًا في المادة، وتتضح لديه مؤشرات إيجابية للاستمرار.","يمتلك قاعدة جيدة في تعلم المادة، ويعمل على تعزيزها بمزيد من الممارسة.","يُظهر اهتمامًا ومتابعة جيدين، مما يسهم في استقرار أدائه وتقدمه.","يُبدي قدرة جيدة على الاستفادة من التعلم، ويحقق مستوى يستحق التقدير.","أداؤه العام جيد، وتبرز لديه نقاط قوة يمكن البناء عليها لتحقيق مزيد من الإنجاز.","يتمتع بحضور تعليمي إيجابي، ويحرز تقدمًا جيدًا على امتداد تعلمه.","يواصل العمل بروح جادة، ويحافظ على مستوى جيد يدعم تطوره المستقبلي."]},{"title":"المستوى الرابع","subtitle":"أداء متقدم","phrases":["يقدم أداءً متقدمًا في مادة اللغة الإنجليزية، ويُظهر حرصًا واضحًا على جودة تعلمه.","يتميز بمستوى قوي يعكس اهتمامه ومثابرته وتفاعله الإيجابي مع المادة.","يُظهر تمكنًا جيدًا جدًا من متطلبات المادة، ويواصل تحقيق تقدم لافت.","يحافظ على مستوى متقدم، ويُظهر ثقة ومبادرة إيجابيتين في تعلمه.","أداؤه متميز بصورة واضحة، ويعكس جهودًا مستمرة تستحق الثناء.","يُبدي استيعابًا قويًا للمادة، ويوظف خبراته التعليمية بصورة إيجابية.","يتسم أداؤه بالاتزان والجودة، ويُظهر استعدادًا واضحًا لمزيد من التميز.","يحقق إنجازًا متقدمًا في المادة، وتبرز لديه دافعية عالية نحو التعلم.","يتميز بتفاعل بناء ومستوى جيد جدًا، مما يعزز مسيرته التعليمية.","يواصل تقديم أداء متقن في المجمل، وتبدو لديه إمكانات واعدة لمزيد من التألق.","يمتلك مستوى تعليميًا متقدمًا، ويُظهر عناية واضحة بتطوير قدراته.","يُظهر إجادة لافتة في تعلم المادة، ويحقق نتائج تعكس جديته واجتهاده.","أداؤه العام قوي ومتطور، ويستحق الإشادة على التزامه الإيجابي.","يتميز بثقة واضحة في التعامل مع متطلبات المادة، ويحافظ على مستوى رفيع.","يحقق تقدمًا متسارعًا بصورة متوازنة، ويبرز اهتمامه بجودة الإنجاز.","يُظهر قدرة متميزة على متابعة التعلم، ويستثمر فرص التطور بفاعلية.","مستواه جيد جدًا، وتنعكس جهوده بصورة إيجابية على أدائه وإنجازه.","يتميز بمبادرة طيبة وحضور تعليمي فاعل، ويواصل أداءه المتقدم.","يُظهر نضجًا ملحوظًا في التعلم، ويقدم مستوى يستحق التقدير والثناء.","يحافظ على جودة أدائه، ويُظهر استعدادًا كبيرًا لتحقيق مستويات أعلى."]},{"title":"المستوى الخامس","subtitle":"تميّز لافت","phrases":["يقدم أداءً متميزًا في مادة اللغة الإنجليزية، ويُظهر تمكنًا رفيعًا يستحق الإشادة.","يتميز بمستوى ممتاز يعكس جديته وشغفه بالتعلم وحرصه على الإتقان.","يحقق إنجازات لافتة في المادة، ويُعد مثالًا جميلًا للمثابرة والتميز.","يُظهر تفوقًا واضحًا في أدائه العام، ويواصل التعلم بثقة وطموح.","يتمتع بمستوى رفيع وثابت، وتبرز لديه روح المبادرة والحرص على الجودة.","يقدم نموذجًا مشرفًا في الاهتمام بالتعلم، ويحقق أداءً يفوق التوقعات المعتادة.","يتميز بتمكن واضح من متطلبات المادة، ويُظهر رغبة دائمة في التوسع والتطور.","يعكس أداؤه تميزًا وجهدًا محمودين، ويستحق الثناء على إنجازاته المتواصلة.","يُظهر إجادة عالية وثقة في التعلم، ويُسهم تفاعله الإيجابي في إثراء الصف.","يحافظ على أداء ممتاز، وتبرز لديه إمكانات كبيرة لمزيد من الإبداع والإنجاز.","يتسم أداؤه بالدقة والجودة والتميز، ويعكس التزامًا ملحوظًا بالتعلم.","يحقق مستوى متفوقًا في المادة، ويواصل البناء على نجاحاته بروح إيجابية.","يتميز بطموح تعليمي واضح وأداء رفيع، مما يجعله محل تقدير وإشادة.","يُظهر فهمًا متينًا وثقة عالية، ويقدم مستوى يعكس اجتهاده المستمر.","يواصل تحقيق نتائج متميزة، ويجسد قيمة المثابرة والحرص على التفوق.","يمتلك قدرات تعليمية بارزة، ويوظفها بصورة متميزة في مسيرته الدراسية.","يقدم أداءً متألقًا في مجمل تعلمه، ويحافظ على دافعية عالية نحو الإنجاز.","يتميز بحضور تعليمي مؤثر ومستوى ممتاز، ويستحق التقدير على جهوده.","يُظهر تميزًا مستمرًا في المادة، ويفتح أمامه اجتهاده آفاقًا أوسع للنجاح.","أداؤه العام ممتاز ويبعث على الفخر، مع تطلع دائم إلى مزيد من التألق."]}];
+let selected=-1, query="";
+const $=id=>document.getElementById(id), tabs=$("tabs"), results=$("results");
+const numbers=n=>String(n).replace(/[0-9]/g,d=>"٠١٢٣٤٥٦٧٨٩"[+d]);
+function allText(items){return items.map(l=>l.title+" — "+l.subtitle+"\n"+l.phrases.map((p,i)=>numbers(i+1)+". "+p).join("\n")).join("\n\n");}
+async function copyText(value,success){
+  let ok=false;
+  try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(value);ok=true;}}catch(e){}
+  if(!ok){const t=document.createElement("textarea");t.value=value;t.style.position="fixed";t.style.opacity="0";t.style.top="0";document.body.appendChild(t);t.focus();t.select();try{ok=document.execCommand("copy");}catch(e){}t.remove();}
+  notice(ok?success:"تعذر النسخ التلقائي؛ افتح الموقع عبر HTTPS وحاول مجددًا.");
+}
+let noticeTimer;
+function notice(message){const t=$("toast");t.textContent=message;t.classList.add("show");clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>t.classList.remove("show"),2400);}
+function makeButton(text,cls,onClick){const b=document.createElement("button");b.type="button";b.className=cls;b.textContent=text;b.addEventListener("click",onClick);return b;}
+function render(){
+ tabs.replaceChildren();
+ const all=makeButton("جميع المستويات","tab"+(selected<0?" active":""),()=>{selected=-1;render();});
+ all.setAttribute("aria-pressed",String(selected<0));tabs.appendChild(all);
+ levels.forEach((l,i)=>{const b=makeButton(l.title+" · "+l.subtitle,"tab"+(selected===i?" active":""),()=>{selected=i;render();});b.setAttribute("aria-pressed",String(selected===i));tabs.appendChild(b)});
+ results.replaceChildren();
+ const chosen=levels.map((l,i)=>({...l,index:i})).filter(x=>selected<0||x.index===selected);
+ let total=0;
+ chosen.forEach(l=>{
+  const filtered=l.phrases.map((text,i)=>({text,i})).filter(v=>v.text.includes(query));
+  if(!filtered.length)return;
+  total+=filtered.length;
+  const head=document.createElement("div");head.className="section-head";
+  const h=document.createElement("h2");h.className="section-title";h.textContent=l.title+" — "+l.subtitle;
+  const sub=document.createElement("small");sub.textContent="عبارات عامة لمستوى الأداء";h.appendChild(sub);head.appendChild(h);
+  const right=document.createElement("div");right.style.display="flex";right.style.gap="8px";right.style.alignItems="center";
+  const count=document.createElement("span");count.className="count-bubble";count.textContent=numbers(filtered.length)+" عبارة";
+  right.appendChild(count);
+  right.appendChild(makeButton("نسخ المستوى","copy",()=>copyText(allText([l]),"تم نسخ جميع عبارات المستوى")));
+  head.appendChild(right);results.appendChild(head);
+  const grid=document.createElement("div");grid.className="grid";
+  filtered.forEach(({text,i})=>{const card=document.createElement("article");card.className="phrase";const p=document.createElement("p");p.textContent=text;card.appendChild(p);
+   const foot=document.createElement("div");foot.className="phrase-foot";const number=document.createElement("span");number.className="num";number.textContent="العبارة "+numbers(i+1);foot.appendChild(number);
+   foot.appendChild(makeButton("نسخ العبارة","copy",()=>copyText(text,"تم نسخ العبارة")));card.appendChild(foot);grid.appendChild(card);});
+  results.appendChild(grid);
+ });
+ $("counter").textContent="المعروض: "+numbers(total)+" من ١٠٠";
+ $("copyLevel").textContent=selected<0?"نسخ المستويات المعروضة":"نسخ المستوى المعروض";
+ if(!total){const p=document.createElement("p");p.className="empty";p.textContent="لا توجد عبارات مطابقة للبحث. جرّب كلمة أخرى.";results.appendChild(p);}
+}
+$("search").addEventListener("input",e=>{query=e.target.value.trim();render();});
+$("copyAll").addEventListener("click",()=>copyText(allText(levels),"تم نسخ البنك كاملًا — ١٠٠ عبارة"));
+$("copyLevel").addEventListener("click",()=>copyText(allText(selected<0?levels:[levels[selected]]),"تم نسخ جميع عبارات المستوى المعروض"));
+render();
+</script>
+</body></html>
