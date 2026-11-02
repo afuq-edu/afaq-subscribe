@@ -29,3 +29,4 @@ jobs:
           node db.test.mjs
           node name-return.test.mjs
           node name-subs.test.mjs
+          node open-access.test.mjs
