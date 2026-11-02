@@ -41,6 +41,7 @@
     <div class="admin-tabs" role="tablist">
       <button role="tab" data-tab="home" aria-selected="true">نظرة عامة</button>
       <button role="tab" data-tab="requests">طلبات «حاضر» <span class="chip warn" id="reqBadge" hidden></span></button>
+      <button role="tab" data-tab="names">مشتركون بالاسم</button>
       <button role="tab" data-tab="stats">الإحصاءات</button>
       <button role="tab" data-tab="teachers">المعلمون</button>
       <button role="tab" data-tab="packages">الباقات والتحاضير</button>
@@ -58,6 +59,28 @@
         <p class="muted">حسابك كمدير تُفتح له كل المواد في «حاضر» دون تجربة ولا تفعيل. اضغط الزر من المتصفح الذي ثبّتّ فيه «حاضر».</p>
         <button class="btn primary" id="ownerLink" type="button">افتح كل المواد في «حاضر» على هذا الجهاز</button>
       </div>
+    </section>
+
+    <!-- مشتركون بالاسم: اشتراك جاهز بالاسم الرباعي قبل تثبيت الإضافة -->
+    <section data-pane="names" hidden>
+      <div class="panel" style="margin-bottom:22px">
+        <h2>إضافة مشترك بالاسم</h2>
+        <p class="muted">اكتب اسم المعلم الرباعي كما في نور واختر مواده (أو «كل المواد»). عندما يكتب الاسم نفسه في «حاضر» يتفعّل اشتراكه وحده دون «فعّل»، ولا يضيع بحذف الإضافة أو تحديثها أو تغيير الجهاز. لا يعمل التحضير إلا في حساب نور الذي اسمه هذا الاسم؛ أي حساب نور آخر ينتظر ولا يُعبَّأ له شيء.</p>
+        <form class="form" id="nameForm" novalidate>
+          <label class="field"><span>الاسم الرباعي</span><input name="name" id="nsName" placeholder="مثال: عيسى بن سعيد بن محمد الحارثي" autocomplete="off"></label>
+          <div class="row2">
+            <label class="field"><span>نوع الاشتراك</span><select name="plan" id="nsPlan"><option value="term">فصلي (الفصل الجاري)</option><option value="year">سنوي (الفصلان)</option></select></label>
+            <label class="field"><span>ملاحظة (اختياري)</span><input name="note" id="nsNote" placeholder="رقم الهاتف أو أي تذكير"></label>
+          </div>
+          <label class="field" style="flex-direction:row;gap:8px;align-items:center"><input type="checkbox" id="nsAll"> <span>كل المواد (وتلحقه المواد الجديدة تلقائيًا)</span></label>
+          <div class="field" id="nsPkgsWrap"><span>أو اختر المواد</span><div class="pkgpick" id="nsPkgs"></div></div>
+          <div class="msg" id="nsMsg" hidden></div>
+          <button class="btn primary" type="submit">أضف</button>
+        </form>
+      </div>
+      <h2 style="font-size:20px;margin-bottom:6px">القائمة</h2>
+      <p class="muted small" style="margin-bottom:12px">«ينتظر صاحبه» يعني لم يكتب المعلم اسمه في «حاضر» بعد. الحذف يزيل القيد من القائمة فقط، أما اشتراك من أخذه فيبقى حتى تسحبه من «المعلمون».</p>
+      <div class="tablewrap"><table class="grid" id="nsTable"></table></div>
     </section>
 
     <!-- الإحصاءات: المعلمون، المواد الأكثر طلبًا، من توقف بعد التجربة، والدعوات -->

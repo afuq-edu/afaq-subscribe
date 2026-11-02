@@ -39,7 +39,7 @@
     $$('[data-tab]').forEach((b) => b.setAttribute('aria-selected', b.dataset.tab === t));
     $$('[data-pane]').forEach((p) => { p.hidden = p.dataset.pane !== t; });
     history.replaceState(null, '', '#' + t);
-    ({ home: renderHome, stats: renderStats, requests: renderRequests, teachers: renderTeachers, packages: renderPackages, trees: renderTrees, terms: renderTerms, settings: renderSettings })[t]();
+    ({ home: renderHome, stats: renderStats, requests: renderRequests, names: renderNames, teachers: renderTeachers, packages: renderPackages, trees: renderTrees, terms: renderTerms, settings: renderSettings })[t]();
   }
   $$('[data-tab]').forEach((b) => { b.onclick = () => showTab(b.dataset.tab); });
 
@@ -418,6 +418,40 @@
     });
   }
   // شجرات نور المحفوظة من أجهزة المعلمين: الأحدث أولًا، والدروس التي لا تحضير لها أولًا عند فتح الشجرة
+
+  // مشتركون بالاسم: اشتراك جاهز بالاسم الرباعي يتفعّل وحده حين يكتبه المعلم في «حاضر»
+  async function renderNames() {
+    const tb = $('#nsTable');
+    pkgPicker($('#nsPkgs'), $$('#nsPkgs input:checked').map((i) => i.value));
+    $('#nsPkgsWrap').hidden = $('#nsAll').checked;
+    let rows = [];
+    try { rows = await db.rpc('admin_name_subs'); }
+    catch (e) { tb.innerHTML = `<tr><td class="empty">${/admin_name_subs|function/i.test(String(e.message)) ? 'الاشتراك بالاسم غير مفعّل في قاعدة البيانات بعد (hader-name-subs.sql).' : esc(A.errText(e))}</td></tr>`; return; }
+    const title = (id) => (D.packages.find((p) => p.id === id) || {}).title || id;
+    const day = (x) => (x ? new Date(x).toLocaleDateString('ar-OM') : '');
+    tb.innerHTML = '<tr><th>الاسم</th><th>المواد</th><th>النوع</th><th>الحالة</th><th></th></tr>' + (rows.length ? rows.map((r) => `<tr>
+      <td><b>${esc(r.name)}</b>${r.note ? `<br><small class="muted">${esc(r.note)}</small>` : ''}</td>
+      <td>${r.all_subjects ? '<span class="chip ok">كل المواد</span>' : esc((r.package_ids || []).map(title).join('، '))}</td>
+      <td>${r.plan === 'year' ? 'سنوي' : 'فصلي'}</td>
+      <td>${r.claimed_at ? `<span class="chip ok">فُعّل ${esc(day(r.claimed_at))}</span><br><small class="muted">${r.request ? 'طلب ' + toAr(r.request) + ' · ' : ''}${toAr(r.devices || 0)} جهاز · ${r.noor_bound ? 'مربوط بحساب نور' : 'لم يُفتح نور بعد'}</small>` : '<span class="chip warn">ينتظر صاحبه</span>'}</td>
+      <td><button class="btn ghost sm" data-nsdel="${r.id}" type="button">حذف</button></td></tr>`).join('') : '<tr><td class="empty">لا قيود بعد.</td></tr>');
+    $$('[data-nsdel]').forEach((b) => {
+      b.onclick = async () => {
+        if (!confirm('حذف القيد من القائمة؟ لا يُلغى اشتراك من أخذه.')) return;
+        try { await db.rpc('admin_name_sub_delete', { p_id: +b.dataset.nsdel }); renderNames(); } catch (e) { A.toast(A.errText(e), 'bad'); }
+      };
+    });
+  }
+  $('#nsAll').onchange = () => { $('#nsPkgsWrap').hidden = $('#nsAll').checked; };
+  $('#nameForm').onsubmit = async (e) => {
+    e.preventDefault();
+    const all = $('#nsAll').checked, ids = $$('#nsPkgs input:checked').map((i) => i.value), msg = $('#nsMsg');
+    try {
+      await db.rpc('admin_name_sub_add', { p_name: $('#nsName').value, p_plan: $('#nsPlan').value, p_all: all, p_packages: all ? [] : ids, p_note: $('#nsNote').value });
+      msg.hidden = true; $('#nsName').value = ''; $('#nsNote').value = ''; $$('#nsPkgs input:checked').forEach((i) => { i.checked = false; });
+      A.toast('أُضيف. يتفعّل اشتراكه فور كتابته الاسم في «حاضر».', 'ok'); renderNames();
+    } catch (err) { setMsg(msg, 'bad', esc(A.errText(err))); }
+  };
   async function renderTrees() {
     const tb = $('#treeTable');
     if (!tb) return;

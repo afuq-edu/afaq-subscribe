@@ -28,3 +28,4 @@ jobs:
           npm install --no-audit --no-fund
           node db.test.mjs
           node name-return.test.mjs
+          node name-subs.test.mjs
