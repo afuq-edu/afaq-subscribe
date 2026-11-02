@@ -3008,9 +3008,13 @@ function wzTrialLeft() {
   return (wz.catalog && wz.catalog.trial) || 3;
 }
 // لا تجربة مجانية (المالك 2026-11-01): مادة الطلب تنتظر تفعيل المشرف
+// نوع الخدمة في الاشتراك (المالك 2026-11-02): تحضير فقط · تحضير مع واجب · واجب فقط — يحدده المدير لكل مادة؛ والتجربة تشمل الكل
+const SVC_LABEL = { prep: 'تحضير فقط', hw: 'واجبات فقط' };
+const offerSvc = (o) => (o.src === 'lib' && o.pkg.remote && !o.pkg.remote.trial && o.pkg.remote.service) || 'both';
+const offerAllows = (o, mode) => { const sv = offerSvc(o); return mode === 'hw' ? sv !== 'prep' : mode ? sv !== 'hw' : true; };
 const wzBadge = (o) => (o.src === 'cat' ? ''
   : o.pkg.remote && o.pkg.remote.trial ? '<em class="bdg free">بانتظار التفعيل</em>'
-    : o.pkg.remote ? '<em class="bdg sub">مشترك ✓</em>' : '');
+    : o.pkg.remote ? `<em class="bdg sub">مشترك ✓${SVC_LABEL[offerSvc(o)] ? ' · ' + SVC_LABEL[offerSvc(o)] : ''}</em>` : '');
 
 function wzGo(step, push = true) {
   if (push && wz.step !== step) wz.hist.push(wz.step);
@@ -3049,7 +3053,7 @@ function wzRender() {
     const nSub = (n) => (n === 1 ? 'مادة واحدة' : n === 2 ? 'مادتان' : n <= 10 ? toAr(n) + ' مواد' : toAr(n) + ' مادة');
     list = gs.map((g) => ({ title: gradeName(g), sub: nSub(new Set(offers.filter((o) => o.grade === g).map((o) => o.subject)).size), on: g === wz.grade, go: () => { wz.grade = g; wzGo('subject'); } }));
     // موادك في نور (من بطاقات الصفحة الرئيسية): اختيار بلمسة واحدة
-    const mine = wzFromNoor(offers).map((m) => ({ title: esc(m.subject), sub: gradeName(m.grade), go: () => {
+    const mine = wzFromNoor(offers.filter((o) => offerAllows(o, wz.mode))).map((m) => ({ title: esc(m.subject), sub: gradeName(m.grade), go: () => {
       wz.grade = m.grade; wz.subject = m.subject;
       const fit = offers.some((o) => o.grade === m.grade && o.subject === m.subject && wz.shift && fitsShift(o.shift, wz.shift));
       if (fit) { wz.hist.push('grade', 'subject'); wz.step = 'shift'; wzSavePrefs(); wzResolve(); } else wzGo('shift');
@@ -3060,11 +3064,12 @@ function wzRender() {
   } else if (wz.step === 'subject') {
     head.textContent = `اختر المادة — ${gradeName(wz.grade)}`;
     const subs = [...new Set(offers.filter((o) => o.grade === wz.grade).map((o) => o.subject))];
-    list = subs.map((sj) => { const o = offers.find((x) => x.grade === wz.grade && x.subject === sj && x.src === 'lib') || offers.find((x) => x.grade === wz.grade && x.subject === sj); return { title: esc(sj), sub: wzBadge(o), on: sj === wz.subject, go: () => { wz.subject = sj; wzGo('shift'); } }; });
+    list = subs.map((sj) => { const o = offers.find((x) => x.grade === wz.grade && x.subject === sj && x.src === 'lib') || offers.find((x) => x.grade === wz.grade && x.subject === sj); const okMode = offers.some((x) => x.grade === wz.grade && x.subject === sj && offerAllows(x, wz.mode));
+      return { title: esc(sj), sub: wzBadge(o), on: sj === wz.subject, disabled: !okMode, go: () => { wz.subject = sj; wzGo('shift'); } }; });
     body.innerHTML = wzCards(list);
   } else if (wz.step === 'shift') {
     head.textContent = 'نوع مدرستك';
-    const mine = offers.filter((o) => o.grade === wz.grade && o.subject === wz.subject);
+    const mine = offers.filter((o) => o.grade === wz.grade && o.subject === wz.subject && offerAllows(o, wz.mode));
     list = ['one', 'two'].map((k) => { const has = mine.some((o) => fitsShift(o.shift, k)); return { title: SHIFT[k].name, sub: has ? `الحصة ${toAr(SHIFT[k].min)} دقيقة` : 'تحضير هذا النوع غير جاهز بعد', disabled: !has, on: k === wz.shift, go: () => { wz.shift = k; wzSavePrefs(); wzResolve(); } }; });
     body.innerHTML = wzCards(list);
   } else if (wz.step === 'name') {
@@ -3231,7 +3236,15 @@ function wzTrialNote() {
   return r && r.trial ? '<p class="wz-note">هذه المادة بانتظار تفعيل اشتراكك.</p>' : '';
 }
 function wzPickOffer() {
-  const mine = wzOffers().filter((o) => o.grade === wz.grade && o.subject === wz.subject && fitsShift(o.shift, wz.shift));
+  const all = wzOffers().filter((o) => o.grade === wz.grade && o.subject === wz.subject && fitsShift(o.shift, wz.shift));
+  const mine = all.filter((o) => offerAllows(o, wz.mode));
+  // اشتراكه في المادة من النوع الآخر (تحضير فقط / واجبات فقط): نعيده إلى اختيار ما يحضّره بهدوء
+  if (!mine.length && all.length) {
+    const hwSub = all.every((o) => offerSvc(o) === 'hw');
+    wzGo('mode');
+    wzMsg('ok', hwSub ? 'اشتراكك في هذه المادة للواجبات — اختر «الواجبات فقط».' : 'اشتراكك في هذه المادة للتحضير — اختر «أختار الدروس بنفسي» أو «تحضير الفصل كاملًا».');
+    return null;
+  }
   // المطابقة التامة لنوع المدرسة أولًا، ثم مكتبتك، ثم الفصل الجاري
   mine.sort((a, b) => (b.shift === wz.shift) - (a.shift === wz.shift) || (b.src === 'lib') - (a.src === 'lib') || (b.term === curTermNo()) - (a.term === curTermNo()));
   if (!mine.length) { wzMsg('bad', 'لم أجد تحضير هذه المادة لهذا النوع من المدارس.'); return null; }
@@ -3300,7 +3313,7 @@ async function wzRun() {
   $('optStep').checked = false;
   $('optNoor').checked = true; $('optAuto').checked = true;
   WIZ.on = true; WIZ.rule = fileOk ? 'official' : ''; WIZ.seq = !fileOk;
-  WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = WIZ.hwOnly || !!wz.hw; WIZ.hwN = 0; WIZ.hwFail = 0; WIZ.hwDone = null;
+  WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = WIZ.hwOnly || (!!wz.hw && !(p.remote && !p.remote.trial && p.remote.service === 'prep')); WIZ.hwN = 0; WIZ.hwFail = 0; WIZ.hwDone = null;
   WIZ.hwPick = WIZ.hwOnly ? Object.fromEntries([...wz.hsel].map(([k, v]) => [k, { pub: v.pub, due: v.due }])) : null;
   WIZ.rid = Date.now(); WIZ.sum = 0; WIZ.auto = 0;
   wizRunning();

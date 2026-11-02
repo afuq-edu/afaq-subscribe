@@ -859,6 +859,52 @@ T(23, '«الواجبات فقط»: the teacher picks lessons and types a publis
   return b;
 });
 
+// ---------- نوع الخدمة في الاشتراك (المالك 2026-11-02): تحضير فقط · واجب فقط ----------
+const cardState = (pg, text) => pg.evaluate((t) => { const c = [...document.querySelectorAll('.wz-card')].find((x) => x.textContent.includes(t)); return c ? { found: true, disabled: c.disabled } : { found: false }; }, text);
+const clickCard = async (pg, sel, t) => { await pg.locator(sel, { hasText: t }).first().click({ timeout: 20000 }); await sleep(600); };
+
+T(24, 'Subscription «تحضير فقط»: the term runs with the homework box ticked and adds NO homework; «الواجبات فقط» shows the subject but not selectable', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 6) }));
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree });
+  env.afaq.reset({ pkg: PKG, service: 'prep' });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term', { hw: true });
+  const s = await waitDone(b.pg, 25 * 60000, 'term, prep-only subscription');
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(rows.length >= PKG.lessons.length, `the preps were saved (${rows.length})`, '');
+  check(noor.st.homeworks.length === 0 && noor.st.hwPosts.length === 0, `no homework added although the box was ticked (${noor.st.homeworks.length})`, noor.st.homeworks.map((h) => h.title).join(' | '));
+  await b.pg.reload(); await sleep(4000);
+  await clickCard(b.pg, '.wz-card:not([disabled])', 'الواجبات فقط');
+  await clickCard(b.pg, '.wz-cards.grid3 .wz-card', 'الصف التاسع');
+  const st = await cardState(b.pg, 'الأحياء');
+  check(st.found && st.disabled, 'in «الواجبات فقط» the prep-only subject is shown but not selectable', JSON.stringify(st));
+  const txt = await b.pg.evaluate(() => document.getElementById('wzBody').textContent);
+  check(/تحضير فقط/.test(txt) && !/خطأ|فشل|غير موجود/.test(txt), 'the card says «تحضير فقط», with no error-like wording', txt.slice(0, 160));
+  return b;
+});
+
+T(25, 'Subscription «واجبات فقط»: a prep mode sends the teacher back calmly (nothing saved); «الواجبات فقط» lists the subject', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 6) }));
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree });
+  env.afaq.reset({ pkg: PKG, service: 'hw' });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term');
+  await sleep(6000);
+  const u = await ui(b.pg);
+  check(!noor.st.rows.filter((r) => !r.preexisting).length && !noor.st.posts.length, 'no prep was saved', '');
+  check(u.wiz && /الواجبات فقط/.test(u.wzHead + ' ' + u.wzBody) , 'the teacher is back at the choice screen (full term is not part of his subscription)', `${u.wzHead} | ${u.wzBody}`.slice(0, 200));
+  const msg = await b.pg.evaluate(() => document.getElementById('wzMsg').textContent);
+  check(/للواجبات/.test(msg) && !/خطأ|فشل|غير موجود|لم أجد/.test(msg), 'a calm note explains the subscription covers homework', msg);
+  await clickCard(b.pg, '.wz-card:not([disabled])', 'الواجبات فقط');
+  await clickCard(b.pg, '.wz-cards.grid3 .wz-card', 'الصف التاسع');
+  const st = await cardState(b.pg, 'الأحياء');
+  check(st.found && !st.disabled, 'in «الواجبات فقط» the subject is selectable', JSON.stringify(st));
+  return b;
+});
+
 // ---------- main ----------
 const want = process.argv.slice(2).map(Number).filter(Boolean);
 const list = Object.keys(SC).map(Number).filter((n) => !want.length || want.includes(n));
