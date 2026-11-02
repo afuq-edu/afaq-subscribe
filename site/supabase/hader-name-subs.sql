@@ -19,8 +19,10 @@ create table if not exists public.name_subs (
   note text,
   created_at timestamptz not null default now(),
   claimed_user uuid,
-  claimed_at timestamptz
+  claimed_at timestamptz,
+  hidden_at timestamptz   -- «حذف» من القائمة إخفاء لا مسح: يبقى القيد محفوظًا
 );
+alter table public.name_subs add column if not exists hidden_at timestamptz;
 create index if not exists name_subs_norm_idx on public.name_subs (name_norm);
 alter table public.name_subs enable row level security;   -- بلا سياسات: الوصول عبر الدوال فقط
 
@@ -138,7 +140,7 @@ begin
         status = case when ext_requests.status = 'cancelled' then 'active' else ext_requests.status end
       returning id into v_req;
       -- قيود المدير للاسم نفسه: «كل المواد» تلحقها المواد الجديدة، وقيد لم يؤخذ بعد يُؤخذ لهذا الحساب
-      for v_ns in select id from public.name_subs where name_norm = v_norm and (claimed_user is null or claimed_user = v_one) loop
+      for v_ns in select id from public.name_subs where name_norm = v_norm and hidden_at is null and (claimed_user is null or claimed_user = v_one) loop
         perform public.name_sub_apply(v_one, v_ns);
       end loop;
       return jsonb_build_object('ok', true, 'token', v_tok, 'request', v_req, 'name', v_name, 'returned', true);
@@ -147,7 +149,7 @@ begin
   -- اسم أضافه المدير ولم يُؤخذ بعد: اشتراك جاهز لا يخضع لحد التسجيل اليومي للشبكة
   v_ns := null;
   if v_four then
-    select id into v_ns from public.name_subs where name_norm = v_norm and claimed_user is null order by created_at limit 1;
+    select id into v_ns from public.name_subs where name_norm = v_norm and claimed_user is null and hidden_at is null order by created_at limit 1;
   end if;
   -- حد التسجيل اليومي للشبكة يخص الطلبات الجديدة فقط، لا عودة المشترك ولا اشتراكًا أضافه المدير
   if v_ns is null and (select count(*) from public.ext_requests where ip_hash = v_ip and created_at > now() - interval '1 day') >= 6 then
@@ -181,7 +183,7 @@ begin
     'request', (select r.id from public.ext_requests r where r.user_id = ns.claimed_user),
     'devices', (select count(*) from public.devices d where d.user_id = ns.claimed_user and d.revoked_at is null),
     'noor_bound', exists (select 1 from public.noor_bind nb where nb.user_id = ns.claimed_user and nb.noor_hash <> '')
-  ) order by (ns.claimed_user is null) desc, ns.created_at desc) from public.name_subs ns), '[]'::jsonb);
+  ) order by (ns.claimed_user is null) desc, ns.created_at desc) from public.name_subs ns where ns.hidden_at is null), '[]'::jsonb);
 end $$;
 
 create or replace function public.admin_name_sub_add(p_name text, p_plan text, p_all boolean, p_packages text[], p_service text, p_note text default null) returns jsonb
@@ -195,7 +197,7 @@ begin
   if cardinality(string_to_array(v_norm, ' ')) < 4 then raise exception 'اكتب الاسم الرباعي كما في نور (أربعة أسماء على الأقل)'; end if;
   if not coalesce(p_all, false) and cardinality(v_ids) = 0 then raise exception 'اختر مادة واحدة على الأقل أو «كل المواد»'; end if;
   if exists (select 1 from unnest(v_ids) x where x not in (select id from public.packages)) then raise exception 'باقة غير موجودة'; end if;
-  if exists (select 1 from public.name_subs where name_norm = v_norm and claimed_user is null) then raise exception 'هذا الاسم مضاف وينتظر صاحبه'; end if;
+  if exists (select 1 from public.name_subs where name_norm = v_norm and claimed_user is null and hidden_at is null) then raise exception 'هذا الاسم مضاف وينتظر صاحبه'; end if;
   insert into public.name_subs (name, name_norm, plan, all_subjects, service, package_ids, note)
   values (v_name, v_norm, p_plan, coalesce(p_all, false), p_service, v_ids, nullif(trim(coalesce(p_note, '')), '')) returning id into v_id;
   return jsonb_build_object('ok', true, 'id', v_id);
@@ -205,7 +207,7 @@ create or replace function public.admin_name_sub_delete(p_id bigint) returns jso
 language plpgsql security definer set search_path = public as $$
 begin
   if not public.is_admin() then raise exception 'غير مسموح'; end if;
-  delete from public.name_subs where id = p_id;   -- يحذف القيد من القائمة فقط؛ اشتراكات من أُخذ قيده تبقى حتى تُسحب من «المعلمون»
+  update public.name_subs set hidden_at = coalesce(hidden_at, now()) where id = p_id;   -- يُخفي القيد من القائمة فقط؛ اشتراكات من أُخذ قيده تبقى حتى تُسحب من «المعلمون»
   return jsonb_build_object('ok', true);
 end $$;
 

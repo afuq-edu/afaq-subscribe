@@ -69,6 +69,8 @@ await db.exec(`select set_config('request.jwt.claim.sub','00000000-0000-0000-000
 const list = (await q(`select public.admin_name_subs() as r`))[0].r;
 ok(Array.isArray(list) && list.length >= 2 && list.some((x) => x.request === s1.request), 'admin list shows taken entries with the request', list.length);
 await q(`select public.admin_name_sub_delete($1)`, [list.find((x) => x.request === s1.request).id]);
+ok(Number((await q(`select count(*) n from public.name_subs where id = $1`, [list.find((x) => x.request === s1.request).id]))[0].n) === 1, '«delete» hides the entry, it stays stored');
+ok(!(await q(`select public.admin_name_subs() as r`))[0].r.some((x) => x.request === s1.request), 'a hidden entry is not listed');
 ok(Number((await q(`select count(*) n from public.subscriptions where user_id=$1 and not revoked`, [U]))[0].n) >= 3, 'deleting the entry does not cancel taken subscriptions');
 let eAnon = null; await db.exec(`select set_config('request.jwt.claim.sub','', false)`);
 try { await q(`select public.admin_name_subs()`); } catch (e) { eAnon = e.message; }
