@@ -809,6 +809,32 @@ function readVisiblePrepTitles() {
   const info = (document.getElementById('preparations_grid_info') || {}).textContent || '';
   return { rows, info, empty: !!document.querySelector('td.dataTables_empty') };
 }
+// يُحقن في صفحة «تحضير الدروس» (عالم الصفحة): روابط حذف كل التحاضير الظاهرة في جدول هذا المقرر (بعد توسيع عدد الصفوف)
+async function readDeleteLinks(cidNum) {
+  if (!new RegExp('preparations_index/cid:' + cidNum + '(?![A-Za-z0-9_-])').test(location.href)) return { ok: false, why: 'page' };
+  const jq = window.jQuery;
+  const el = document.getElementById('preparations_grid');
+  if (!jq || !jq.fn || !jq.fn.dataTable || !el || !jq.fn.dataTable.isDataTable(el)) return { ok: false, why: 'table' };
+  const dt = jq(el).DataTable();
+  const total = dt.page.info().recordsTotal;
+  if (dt.page.info().length !== -1 && dt.page.info().length < Math.max(total, 1)) {
+    await new Promise((res) => { const t = setTimeout(res, 25000); dt.one('draw', () => { clearTimeout(t); res(); }); dt.page.len(2000).draw(); });
+  }
+  const links = Array.from(el.querySelectorAll('tbody tr a[href*="/delete_preparation/"]')).map((a) => a.getAttribute('href')).filter((h) => /\/teacher\/courses\/delete_preparation\/[A-Za-z0-9_-]+\/cid:[A-Za-z0-9_-]+$/.test(h));
+  return { ok: true, total, links: Array.from(new Set(links)) };
+}
+// يُحقن (عالم الصفحة): يطلب حذف دفعة من التحاضير بروابطها (الجلسة الحالية في نور)، ويعيد عدد ما قبله نور
+async function deleteLinks(hrefs) {
+  let done = 0, bad = 0;
+  for (const h of hrefs) {
+    try {
+      const r = await fetch(h, { credentials: 'include', redirect: 'follow' });
+      if (r.ok) done++; else bad++;
+    } catch (e) { bad++; }
+    await new Promise((res) => setTimeout(res, 150));
+  }
+  return { done, bad };
+}
 // شريط علوي في صفحة نور بأزرار تعود إلى هذه النافذة
 function pageBar(opts) {
   const old = document.getElementById('hadir-sem-bar');
@@ -2233,13 +2259,42 @@ const prepWord = (n) => { const r = n % 100; return n === 1 ? 'تحضيرًا و
 const TERM_KEY = 'termRuns';
 async function termOwn() { try { const o = (await chrome.storage.local.get(TERM_KEY))[TERM_KEY] || {}; return !!o[pkg.id + '|' + termNo]; } catch (e) { return false; } }
 async function termMark() { try { const o = (await chrome.storage.local.get(TERM_KEY))[TERM_KEY] || {}; o[pkg.id + '|' + termNo] = Date.now(); await chrome.storage.local.set({ [TERM_KEY]: o }); } catch (e) {} }
+// مسح تحاضير هذه المادة من نور (المالك 2026-11-02): بعد تأكيدين من المعلم، كل تحاضير بطاقة المادة المفتوحة وحدها
+async function wipeNoorPreps() {
+  const cidNum = ((coursePrepUrl || '').match(/preparations_index\/cid:([A-Za-z0-9_-]+)/) || [])[1] || '';
+  if (!cidNum) return false;
+  setPhase('list');
+  setBox('run', 'أمسح تحاضير هذه المادة من نور…', 'لحظات وأبدأ الفصل من أوله.');
+  await nav(coursePrepUrl);
+  let got = null;
+  for (let i = 0; i < 3 && !stopFlag && !(got && got.ok); i++) { if (i) await sleep(2000); got = await execMain(readDeleteLinks, cidNum); }
+  if (!got || !got.ok) { logLine('info', 'مسح تحاضير نور: لم أقرأ الجدول'); return false; }
+  const links = got.links;
+  logLine('info', `مسح تحاضير نور: ${toAr(links.length)} من ${toAr(got.total)} في هذه المادة`);
+  let done = 0, bad = 0;
+  for (let i = 0; i < links.length && !stopFlag; i += 8) {
+    const r = await execMain(deleteLinks, links.slice(i, i + 8));
+    if (r) { done += r.done; bad += r.bad; } else bad += Math.min(8, links.length - i);
+    setBox('run', 'أمسح تحاضير هذه المادة من نور…', `${toAr(Math.min(i + 8, links.length))} من ${toAr(links.length)}`);
+  }
+  logLine('info', `مسح تحاضير نور: حُذف ${toAr(done)}${bad ? ` وتعذّر ${toAr(bad)}` : ''}`);
+  return done > 0;
+}
 async function confirmStart() {
   WIZ.termOwn = (q.get('debug') === '1' && q.get('cont') === '1') || await termOwn();
   if (WIZ.termOwn) return 'go';
   const sm = startSummary();
   WIZ.summary = sm;
   const pick = (primary) => ({ id: 'pick', label: 'أختار الدروس بنفسي', primary });
-  if (sm.block) return ask({ kind: 'info', head: 'اختر الدروس بنفسك', text: sm.block, bar: false, buttons: [pick(true)] });
+  if (sm.block) {
+    const v = await ask({ kind: 'info', head: 'اختر الدروس بنفسك', text: sm.block, bar: false, buttons: [pick(true), { id: 'wipe', label: 'أمسح تحاضير هذه المادة من نور وأبدأ الفصل' }] });
+    if (v !== 'wipe') return v;
+    const n = (noorHave && noorHave.titles && noorHave.titles.length) || sm.had;
+    const c = await ask({ kind: 'warn', head: 'مسح تحاضير هذه المادة', bar: false,
+      text: `سأحذف من نور ${prepWord(n)} في هذه المادة (كل ما فيها)، ثم أنشر الفصل كاملًا من أول يوم دراسي.\nالحذف لا يمكن التراجع عنه.`,
+      buttons: [pick(true), { id: 'wipe2', label: `نعم، امسح ${prepWord(n)}` }] });
+    return c === 'wipe2' ? 'wipe' : c;
+  }
   const v = await ask({ kind: 'info', head: sm.first.head, text: sm.first.text, bar: false,
     buttons: sm.first.advise ? [pick(true), { id: 'go', label: 'أكمل التحضير الفصلي' }] : [{ id: 'go', label: '✓ لا توجد عندي تحاضير، تابع', primary: true }, pick(false)] });
   if (v !== 'go') return v;
@@ -2557,6 +2612,7 @@ async function run() {
       const v = await confirmStart();
       running = true;
       if (v === 'pick') { WIZ.toPick = true; throw new Error('stop'); }
+      if (v === 'wipe') { running = true; WIZ.rerun = await wipeNoorPreps().catch(() => false); if (!WIZ.rerun) WIZ.toPick = true; throw new Error('stop'); }
       if (v !== 'go') throw new Error('stop');
       WIZ.confirmed = WIZ.rid; await termMark();
       // تحضير فصلي جديد (نور خالية): ما سُجّل لتسلسل الشعب من قبل لا يُعتدّ به
@@ -2718,6 +2774,7 @@ async function run() {
   const had = plan.flatMap((p) => p.sessions.filter((s) => s.inNoor && pickedS(s))).length;
   const report = await saveReport({ failed, had }).catch(() => null);
   if (WIZ.on && WIZ.toPick) { WIZ.toPick = false; wzToPick(); return; }
+  if (WIZ.on && WIZ.rerun) { WIZ.rerun = false; setTimeout(() => run(), 400); return; }
   if (WIZ.on) wizAfterRun({ report, ok, failed: failed.length, stopped: stopFlag, error: !!endMsg && endMsg[0] === 'bad' && !WIZ.trialOver ? (diag.log.filter((l) => l.startsWith('[bad] ')).pop() || '[bad]  ').slice(6) || ' ' : '', had, past: pastSkipped });
 }
 

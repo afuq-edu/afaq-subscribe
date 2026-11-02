@@ -649,6 +649,58 @@ T(20, 'Noor already has preps of this subject (lessons 1–2 and 5–6 done, 3�
   return b;
 });
 
+T(26, 'Noor already has preps and the teacher wants a fresh start: «أمسح تحاضير هذه المادة من نور وأبدأ الفصل» asks twice, deletes only this subject\'s preps in Noor, then the full term runs from the first school day; declining at the second card deletes nothing', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 24) }));
+  const tree = treeFromPackage(PKG);
+  const g = lessonGroups(PKG);
+  const doneIds = [0, 1, 4, 5].flatMap((k) => g[k].sessions.map((l) => l.id));
+  const pre = existingFor(tree, doneIds);
+  const noor = env.noor({ tree, existing: pre });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now: '2026-10-11', cont: false });
+  await wizardTo(b.pg, 'term');
+  const card = async (act) => { for (let i = 0; i < 240; i++) { const t = await b.pg.evaluate((a) => { const e = document.querySelector(`#nowActs button[data-act="${a}"]`); const acts = document.getElementById('nowActs'); return e && acts && !acts.hidden ? document.getElementById('nowText').innerText : null; }, act).catch(() => null); if (t) return t; await sleep(1000); } return null; };
+  const press = (act) => b.pg.evaluate((a) => document.querySelector(`#nowActs button[data-act="${a}"]`).click(), act);
+  const t1 = await card('wipe');
+  check(!!t1 && /وجدت في نور/.test(t1), 'the block card offers «أمسح تحاضير هذه المادة من نور وأبدأ الفصل» next to «أختار الدروس بنفسي»', String(t1));
+  const n0 = noor.st.rows.length;
+  await press('wipe');
+  const t2 = await card('wipe2');
+  check(!!t2 && new RegExp(toAr(n0)).test(t2) && /لا يمكن التراجع/.test(t2), `the second card names the count (${n0}) and says it cannot be undone`, String(t2));
+  check(noor.st.rows.length === n0 && !(noor.st.deleted || []).length, 'nothing deleted before the second confirmation', `${noor.st.rows.length}/${n0}`);
+  await press('wipe2');
+  const s = await waitDone(b.pg, 20 * 60000, 'wipe then term');
+  check(/تمت التعبئة بنجاح/.test(s.head), 'after the wipe the full term runs to «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check((noor.st.deleted || []).length === n0 && noor.st.rows.every((r) => !r.preexisting), `all ${n0} old preps were deleted (${(noor.st.deleted || []).length})`, '');
+  const rows = noor.st.rows;
+  check(rows.length === PKG.lessons.length, `the whole plan (${PKG.lessons.length} sessions) is published after the wipe`, `rows ${rows.length}`);
+  const sums = b.pg.__summaries || [];
+  check(sums.length >= 1 && /أول يوم دراسي/.test(sums[sums.length - 1].text) && !/خطأ|فشل|تعذّر/.test(sums.map((x) => x.text).join(' ')), 'the start summary after the wipe is calm and says the preps begin on the first school day', JSON.stringify(sums));
+  return b;
+});
+
+T(27, 'Declining at the second card: «لا، أختار الدروس بنفسي» deletes nothing and opens the lessons screen', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 24) }));
+  const tree = treeFromPackage(PKG);
+  const g = lessonGroups(PKG);
+  const pre = existingFor(tree, [0, 1, 4, 5].flatMap((k) => g[k].sessions.map((l) => l.id)));
+  const noor = env.noor({ tree, existing: pre });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now: '2026-10-11', cont: false });
+  await wizardTo(b.pg, 'term');
+  const card = async (act) => { for (let i = 0; i < 240; i++) { const t = await b.pg.evaluate((a) => { const e = document.querySelector(`#nowActs button[data-act="${a}"]`); const acts = document.getElementById('nowActs'); return e && acts && !acts.hidden ? 1 : 0; }, act).catch(() => 0); if (t) return true; await sleep(1000); } return false; };
+  const press = (act) => b.pg.evaluate((a) => document.querySelector(`#nowActs button[data-act="${a}"]`).click(), act);
+  const n0 = noor.st.rows.length;
+  check(await card('wipe'), 'the block card shows the wipe button', '');
+  await press('wipe');
+  check(await card('wipe2'), 'the second confirmation card appears', '');
+  await press('pick');
+  const onLessons = await b.pg.waitForSelector('input[data-k]', { timeout: 30000 }).then(() => true).catch(() => false);
+  check(onLessons, '«أختار الدروس بنفسي» opens the lessons screen', '');
+  check(noor.st.rows.length === n0 && !(noor.st.deleted || []).length, 'nothing deleted', `${noor.st.rows.length}/${n0}`);
+  return b;
+});
+
 T(21, 'Late start on a Noor that accepts past dates (today 1 November, empty Noor): after the two start alerts every session is published on its plan date from the first school day (6 September), in order, one prep per session; a re-run adds nothing', async (env) => {
   usePkg(derivePkg({ keep: range(1, 18) }));
   const tree = treeFromPackage(PKG);
