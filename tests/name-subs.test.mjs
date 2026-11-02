@@ -108,4 +108,22 @@ ok((await q(`select count(*) n from public.subscriptions where user_id=$1 and se
 await db.exec(`insert into public.terms (year, term, starts_on, ends_on) values ('2026/2027', 2, current_date + 61, current_date + 160)`);
 const yr2 = await q(`select count(*) n from public.subscriptions where user_id=$1`, [HW]);
 ok(true, 'second term inserted (term plan: no extension)', yr2);
+// ---------- معلم فتح الأداة قبل أن يُضاف قيده: يتفعّل طلبه القائم عند الإضافة ----------
+const LATE = 'سالم بن ناصر بن حمد الكلباني';
+await db.exec(`update public.ext_requests set ip_hash = 'other'`);   // حد الشبكة لا يخص هذا الاختبار
+const tr = await start('سالم ناصر حمد الكلباني', ['p1']);
+ok(tr.ok && !tr.returned, 'before the entry exists he is an ordinary trial', tr);
+ok((await q(`select status from public.ext_requests where id=$1`, [tr.request]))[0].status !== 'active', 'his request is not active yet');
+await db.exec(`select set_config('request.jwt.claim.sub','00000000-0000-0000-0000-0000000000aa', false)`);
+const late = await add(LATE, 'term', true, [], null, 'prep');
+await db.exec(`select set_config('request.jwt.claim.sub','', false)`);
+ok(late.applied && late.request === tr.request, 'adding the entry activates his existing request', late);
+const LU = (await q(`select user_id from public.ext_requests where id=$1`, [tr.request]))[0].user_id;
+ok((await q(`select status from public.ext_requests where id=$1`, [tr.request]))[0].status === 'active', 'the request is active');
+ok(Number((await q(`select count(*) n from public.subscriptions where user_id=$1 and not revoked and service='prep'`, [LU]))[0].n) >= 4, 'all subjects granted with the chosen service');
+ok((await q(`select claimed_user from public.name_subs where name_norm = public.ar_name_norm($1)`, [LATE]))[0].claimed_user === LU, 'the entry is marked taken by him');
+const trMe = (await q(`select public.ext_me($1) as r`, [tr.token]))[0].r;
+ok(trMe.subs && trMe.subs.length >= 4, 'his device (same token) now sees the subscriptions', trMe.subs && trMe.subs.length);
+const nl = (await q(`select public.ext_noor($1,$2,$3) as r`, [tr.token, 'c'.repeat(64), 'خالد علي سالم البلوشي']))[0].r;
+ok(!nl.ok && nl.error === 'noor_wait', 'a different Noor account still waits (protection unchanged)', nl);
 console.log(`${pass} passed, ${fail} failed`); process.exit(fail ? 1 : 0);

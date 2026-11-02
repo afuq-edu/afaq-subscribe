@@ -452,9 +452,9 @@
     e.preventDefault();
     const all = $('#nsAll').checked, ids = $$('#nsPkgs input:checked').map((i) => i.value), msg = $('#nsMsg');
     try {
-      await db.rpc('admin_name_sub_add', { p_name: $('#nsName').value, p_plan: $('#nsPlan').value, p_all: all, p_packages: all ? [] : ids, p_service: $('#nsSvc').value, p_note: $('#nsNote').value });
+      const res = await db.rpc('admin_name_sub_add', { p_name: $('#nsName').value, p_plan: $('#nsPlan').value, p_all: all, p_packages: all ? [] : ids, p_service: $('#nsSvc').value, p_note: $('#nsNote').value });
       msg.hidden = true; $('#nsName').value = ''; $('#nsNote').value = ''; $$('#nsPkgs input:checked').forEach((i) => { i.checked = false; });
-      A.toast('أُضيف. يتفعّل اشتراكه فور كتابته الاسم في «حاضر».', 'ok'); renderNames();
+      A.toast(res && res.applied ? 'أُضيف وفُعّل طلبه القائم' + (res.request ? ' (طلب ' + toAr(res.request) + ')' : '') + ' — يكمل من حيث وقف.' : 'أُضيف. يتفعّل اشتراكه فور كتابته الاسم في «حاضر».', 'ok'); renderNames();
     } catch (err) { setMsg(msg, 'bad', esc(A.errText(err))); }
   };
   async function renderTrees() {
