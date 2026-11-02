@@ -297,7 +297,7 @@ const started = (pg) => pg.evaluate(() => document.body.classList.contains('wiz-
 async function wizardTo(pg, job, mode, { name = true } = {}) {
   const step = async (t) => { if (await started(pg)) return; await clickCard(pg, t); };
   // «أضف واجبًا لكل درس» (4.10.24) off: the matrix checks preps only (homework: run.mjs scenarios 22–23)
-  if (!(await started(pg))) await pg.evaluate(() => { const c = document.getElementById('wzHw'); if (c && c.checked) c.click(); }).catch(() => {});
+  if (!(await started(pg))) await pg.evaluate(() => { const b = document.querySelector('.wz-seg-b[data-svc="prep"]'); if (b && !b.classList.contains('on')) b.click(); }).catch(() => {});
   await step(mode === 'pick' ? 'أختار الدروس بنفسي' : 'تحضير الفصل كاملًا');
   await step('الصف ' + GRADES[job.grade - 1]);
   await step(job.subject);
@@ -560,7 +560,7 @@ async function flowTerm(job, J, W) {
     // the remaining preps then follow the expected-date rule with the joined sessions taken out of the sequence
     // 4.10.19 (owner 2026-10-31): a prep per period; what a week cannot hold goes on to the next weeks until the TERM END, and two
     // sessions of one lesson share a prep only when the periods left until the term end are fewer than the preps
-    const planThu = J.endsOn;
+    const planThu = (() => { const d = new Date(J.pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort().pop() + 'T12:00'); d.setDate(d.getDate() + 4 - d.getDay()); return d.toISOString().slice(0, 10); })();   // 4.10.28 (owner 2026-11-02): fewer periods than the plan → same-lesson sessions share a prep so the plan ends in its last week
     const savedIds = new Set(saved.map((x) => x.l.id));
     // the order of the full term (4.10.20): Noor tree order — lesson by lesson as the tree lists them (the node each session was
     // saved into), sessions of one lesson in file order; plan lessons sharing one Noor lesson one after the other
@@ -603,7 +603,7 @@ async function flowTerm(job, J, W) {
     }
     check(F, !early.length, 'dates: no session before the plan\'s first week', early.slice(0, 10).map((x) => `${x.l.id}: ${x.d} < ${x.l.pubDate}`).join('\n'));
     if (job.fault === 'oneper' || tight) {
-      const lastWk = J.endsOn;   // the bound is the term end (4.10.19), not the plan's last week
+      const lastWk = planThu;   // the bound is the plan's last week again (4.10.28)
       // a prep never spans two lessons, so a run of weeks whose lessons are all distinct can overflow the plan's last week
       // (within the term): allowed only when the contiguous block of used days ending at the last prep holds no two preps
       // of one lesson (those could still have been merged)

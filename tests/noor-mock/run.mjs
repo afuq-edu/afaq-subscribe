@@ -151,13 +151,20 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
   return { ctx, sw, pg, id, errs };
 }
 const card = async (pg, t) => { await pg.locator('.wz-card:not([disabled])', { hasText: t }).first().click({ timeout: 20000 }); await sleep(500); };
+// the service choice on the first wizard screen (not part of a run once it has started)
+async function svcPick(pg, k, started) {
+  if (started && (await started())) return;
+  await pg.evaluate((k) => { const b = document.querySelector(`.wz-seg-b[data-svc="${k}"]`); if (b && !b.classList.contains('on')) b.click(); }, k).catch(() => {});
+  await sleep(300);
+}
 async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع', subject = 'الأحياء', shift = 'فترة واحدة', hw = false } = {}) {
   // each step only if the run has not started yet (once linked, a «من حسابك في نور» shortcut can skip steps)
   const started = () => pg.evaluate(() => document.body.classList.contains('wiz-run') || !!document.getElementById('wzName')).catch(() => false);
   const step = async (sel, t) => { if (await started()) return; await pg.locator(sel, { hasText: t }).first().click({ timeout: 20000 }); await sleep(600); };
   // «أضف واجبًا لكل درس» (4.10.24, ticked by default): the older scenarios run without homework
-  if (!(await started())) await pg.evaluate((on) => { const c = document.getElementById('wzHw'); if (c && c.checked !== on) c.click(); }, !!hw).catch(() => {});
-  await step('.wz-card:not([disabled])', mode === 'pick' ? 'أختار الدروس بنفسي' : mode === 'hw' ? 'الواجبات فقط' : 'تحضير الفصل كاملًا');
+  // 4.10.28: three explicit choices at the top: تحضير · تحضير مع واجبات · واجبات فقط
+  await svcPick(pg, mode === 'hw' ? 'hw' : hw ? 'both' : 'prep', started);
+  await step('.wz-card:not([disabled])', mode === 'pick' || mode === 'hw' ? 'أختار الدروس بنفسي' : 'تحضير الفصل كاملًا');
   await step('.wz-cards.grid3 .wz-card', grade);
   await step('.wz-card:not([disabled])', subject);
   await step('.wz-card:not([disabled])', shift);
@@ -516,7 +523,7 @@ for (const [n, left] of [[13, 0], [14, 2]]) T(n, `Reinstall: a new trial request
   return b;
 });
 
-T(15, 'Fewer periods than the plan (2 a week for 3 sessions a week): every session gets its own prep on the teacher\'s periods, in order, going on past the plan\'s last week while the term has room (nothing shared), a re-run adds nothing', async (env) => {
+T(15, 'Fewer periods than the plan (2 a week for 3 sessions a week): sessions of the same lesson share one prep «(2 و 3)» so the plan ends in its last week (owner 2026-11-02), a re-run adds nothing', async (env) => {
   usePkg(derivePkg({ keep: range(1, 18) }));
   const tree = treeFromPackage(PKG);
   const periods = { 0: [['1', 1], ['2', 1]], 1: [], 2: [['1', 1], ['2', 1]], 3: [], 4: [] };
@@ -528,13 +535,20 @@ T(15, 'Fewer periods than the plan (2 a week for 3 sessions a week): every sessi
   const rows = noor.st.rows.filter((r) => !r.preexisting);
   check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
   const sums = b.pg.__summaries || [];
-  check(sums.length === 2 && sums.every((x) => x.pick) && /تأكد أنه لا توجد عندك/.test(sums[0].text) && /أول يوم دراسي/.test(sums[1].text) && /أنشر ١٨ تحضيرًا/.test(sums[1].text), 'two calm start alerts, confirmed once each («تأكد أنه لا توجد عندك…», then «ستبدأ التحاضير من … أول يوم دراسي … أنشر ١٨ تحضيرًا», both with «أختار الدروس بنفسي»)', JSON.stringify(sums));
-  check(rows.length === PKG.lessons.length, `one prep per session (${rows.length} preps for ${PKG.lessons.length} sessions)`, rows.map((r) => r.title).join(' | '));
-  check(rows.every((r) => !/\(\d+(?: و \d+)+\)$/.test(r.title)), 'no shared prep «(n و m)» while the term has periods left', rows.map((r) => r.title).join(' | '));
-  check(rows.every((r) => r.publishDate <= '2027-01-21'), 'nothing after the term end (21 January)', rows.filter((r) => r.publishDate > '2027-01-21').map((r) => r.publishDate).join(', '));
+  check(sums.length === 2 && sums.every((x) => x.pick) && /تأكد أنه لا توجد عندك/.test(sums[0].text) && /أول يوم دراسي/.test(sums[1].text) && /أنشر ١٢ تحضيرًا \(١٨ حصة\)/.test(sums[1].text) && /فجمعت/.test(sums[1].text), 'two calm start alerts, confirmed once each («تأكد أنه لا توجد عندك…», then «ستبدأ التحاضير من … أول يوم دراسي … أنشر ١٢ تحضيرًا (١٨ حصة)», both with «أختار الدروس بنفسي»)', JSON.stringify(sums));
+  const lastFile = PKG.lessons.map((l) => l.pubDate).sort().pop();
+  const end = new Date(lastFile + 'T12:00'); end.setDate(end.getDate() + (4 - end.getDay())); const endIso = end.toISOString().slice(0, 10);
+  check(rows.every((r) => r.publishDate <= endIso), `no prep after the plan's last week (${endIso})`, rows.filter((r) => r.publishDate > endIso).map((r) => r.publishDate + ' ' + r.title).join(', '));
+  const cover = new Map();
+  rows.forEach((r) => PKG.lessons.forEach((l) => { if (norm(r.concepts).includes(norm(l.concepts))) cover.set(l.id, (cover.get(l.id) || []).concat(r.title)); }));
+  const missing = PKG.lessons.filter((l) => !cover.has(l.id)).map((l) => l.id), twice = [...cover].filter(([, v]) => v.length > 1).map(([k]) => k);
+  check(!missing.length, 'every session of the plan is in a prep in Noor', missing.join(', '));
+  check(!twice.length, 'no session in two preps', twice.join(', '));
+  const extra = rows.reduce((a, r) => { const m = r.title.match(/\((\d+(?: و \d+)+)\)$/); return a + (m ? m[1].split(' و ').length - 1 : 0); }, 0);
+  check(extra === PKG.lessons.length - rows.length && extra > 0, `shared preps carry «(n و m)» in the title for every extra session (${extra})`, rows.map((r) => r.title).join(' | '));
   check(rows.every((r) => [0, 2].includes(new Date(r.publishDate + 'T12:00').getDay())), 'every prep on a day with periods (Sun/Tue)', rows.map((r) => r.publishDate).join(', '));
   const order = PKG.lessons.map((l) => { const r = rows.find((x) => norm(x.concepts).includes(norm(l.concepts))); return r ? r.publishDate : ''; });
-  check(order.every((d, i) => d && (!i || d > order[i - 1])), 'the sessions follow the plan order, one period after another', order.join(', '));
+  check(order.every((d, i) => d && (!i || d >= order[i - 1])), 'the sessions follow the plan order', order.join(', '));
   const byDay = rows.reduce((m, r) => { m[r.publishDate] = (m[r.publishDate] || 0) + 1; return m; }, {});
   check(Object.values(byDay).every((n) => n === 1), 'one prep per day (one period per section)', JSON.stringify(byDay));
   const n1 = noor.st.rows.length;
@@ -876,7 +890,8 @@ T(24, 'Subscription «تحضير فقط»: the term runs with the homework box t
   check(rows.length >= PKG.lessons.length, `the preps were saved (${rows.length})`, '');
   check(noor.st.homeworks.length === 0 && noor.st.hwPosts.length === 0, `no homework added although the box was ticked (${noor.st.homeworks.length})`, noor.st.homeworks.map((h) => h.title).join(' | '));
   await b.pg.reload(); await sleep(4000);
-  await clickCard(b.pg, '.wz-card:not([disabled])', 'الواجبات فقط');
+  await svcPick(b.pg, 'hw');
+  await clickCard(b.pg, '.wz-card:not([disabled])', 'أختار الدروس بنفسي');
   await clickCard(b.pg, '.wz-cards.grid3 .wz-card', 'الصف التاسع');
   const st = await cardState(b.pg, 'الأحياء');
   check(st.found && st.disabled, 'in «الواجبات فقط» the prep-only subject is shown but not selectable', JSON.stringify(st));
@@ -898,7 +913,8 @@ T(25, 'Subscription «واجبات فقط»: a prep mode sends the teacher back 
   check(u.wiz && /الواجبات فقط/.test(u.wzHead + ' ' + u.wzBody) , 'the teacher is back at the choice screen (full term is not part of his subscription)', `${u.wzHead} | ${u.wzBody}`.slice(0, 200));
   const msg = await b.pg.evaluate(() => document.getElementById('wzMsg').textContent);
   check(/للواجبات/.test(msg) && !/خطأ|فشل|غير موجود|لم أجد/.test(msg), 'a calm note explains the subscription covers homework', msg);
-  await clickCard(b.pg, '.wz-card:not([disabled])', 'الواجبات فقط');
+  await svcPick(b.pg, 'hw');
+  await clickCard(b.pg, '.wz-card:not([disabled])', 'أختار الدروس بنفسي');
   await clickCard(b.pg, '.wz-cards.grid3 .wz-card', 'الصف التاسع');
   const st = await cardState(b.pg, 'الأحياء');
   check(st.found && !st.disabled, 'in «الواجبات فقط» the subject is selectable', JSON.stringify(st));
