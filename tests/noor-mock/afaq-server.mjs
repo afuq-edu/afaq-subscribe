@@ -9,14 +9,14 @@ export function startAfaq(port = 8765) {
     st = {
       pkg: o.pkg, active: o.trialLeft == null, left: o.trialLeft == null ? 0 : o.trialLeft, status: o.trialLeft == null ? 'active' : 'trial',
       offer: o.offer || { id: 'bio-9', subject: 'الأحياء', grade: 9, title: 'الأحياء — التاسع', shift: 'one' },
-      holidays: o.holidays || '', calls: [], sessions: [], noor: [], mergeOnNoor: !!o.mergeOnNoor, trees: [], serverTree: o.serverTree || null,
+      holidays: o.holidays || '', service: o.service || '', calls: [], sessions: [], noor: [], mergeOnNoor: !!o.mergeOnNoor, trees: [], serverTree: o.serverTree || null,
     };
     return st;
   };
   reset({});
   const sub = () => ({
     package_id: st.offer.id, title: st.offer.title, subject: st.offer.subject, grade: st.offer.grade, shift: st.offer.shift, year: '2026/2027', term: 1, ends_on: '2027-01-21', updated: 1792000000, ready: true,
-    ...(st.active ? {} : { trial: true, left: st.left }),
+    ...(st.active ? (st.service ? { service: st.service } : {}) : { trial: true, left: st.left }),
   });
   const srv = http.createServer((q, res) => {
     let d = '';

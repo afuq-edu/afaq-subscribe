@@ -3,12 +3,18 @@
 -- عندما يكتب المعلم الاسم نفسه في «حاضر» يتفعّل اشتراكه مباشرة دون «فعّل»: الحذف وإعادة التثبيت والجهاز الجديد لا تلغي شيئًا.
 -- الحماية كما هي: لا يعمل التحضير إلا في حساب نور الذي يطابق اسمه الاسم المكتوب (ext_noor / noor_bind)؛
 -- فمن كتب اسم غيره ثم فتح حساب نور باسم آخر ينتظر ولا يُعبَّأ له شيء.
+-- نوع الخدمة (المالك 2026-11-02): الاشتراك يحدد هل المعلم له «تحضير فقط» أو «تحضير مع واجب» أو «واجب فقط»، لا اشتراكًا مطلقًا:
+-- prep = تحضير فقط · both = تحضير مع واجب (الافتراضي، فلا يتغير شيء لمن اشترك قبل) · hw = واجب فقط.
+-- الإضافة تعرض للمعلم ما يغطيه اشتراكه فقط؛ والخادم يمنع محتوى التحضير (ext_session) عن اشتراك «واجب فقط».
+alter table public.subscriptions add column if not exists service text not null default 'both' check (service in ('prep', 'both', 'hw'));
+
 create table if not exists public.name_subs (
   id bigserial primary key,
   name text not null,
   name_norm text not null,
   plan text not null default 'term' check (plan in ('term', 'year')),
   all_subjects boolean not null default false,
+  service text not null default 'both' check (service in ('prep', 'both', 'hw')),
   package_ids text[] not null default '{}',
   note text,
   created_at timestamptz not null default now(),
@@ -17,6 +23,56 @@ create table if not exists public.name_subs (
 );
 create index if not exists name_subs_norm_idx on public.name_subs (name_norm);
 alter table public.name_subs enable row level security;   -- بلا سياسات: الوصول عبر الدوال فقط
+
+-- نوع خدمة المعلم في باقة وفصل: both إن وُجد اشتراك واحد بها، ثم prep، ثم hw؛ null بلا اشتراك فعّال
+create or replace function public.sub_service(p_uid uuid, p_package text, p_term smallint) returns text
+language sql stable security definer set search_path = public as $$
+  select case when bool_or(s.service = 'both') then 'both' when bool_or(s.service = 'prep') then 'prep' when count(*) > 0 then 'hw' end
+  from public.subscriptions s join public.terms t on t.id = s.term_id
+  where s.user_id = p_uid and s.package_id = p_package and t.term = p_term and not s.revoked and public.today_muscat() <= t.ends_on
+$$;
+revoke execute on function public.sub_service(uuid, text, smallint) from public, anon, authenticated;
+
+-- يضبط نوع الخدمة لاشتراكات المعلم في المواد المحددة (وصفّيها الآخر من نوع المدرسة نفسه) في كل فصول اشتراكه
+create or replace function public.set_service(p_uid uuid, p_package_ids text[], p_service text) returns void
+language sql security definer set search_path = public as $$
+  update public.subscriptions s set service = p_service
+   where s.user_id = p_uid and p_service in ('prep', 'both', 'hw') and s.package_id in (
+     select q.id from public.packages p join public.packages q on q.subject = p.subject and q.grade = p.grade
+      where p.id = any (p_package_ids))
+$$;
+revoke execute on function public.set_service(uuid, text[], text) from public, anon, authenticated;
+
+-- النسخ الجديدة من اشتراكات النوع الآخر والفصل الثاني ترث نوع الخدمة
+create or replace function public.sub_mirror_shift() returns trigger
+language plpgsql security definer set search_path = public as $$
+begin
+  if pg_trigger_depth() > 1 then return new; end if;
+  if tg_op = 'INSERT' then
+    insert into public.subscriptions (user_id, package_id, term_id, plan, revoked, service)
+    select new.user_id, q.id, new.term_id, new.plan, new.revoked, new.service
+      from public.packages p join public.packages q on q.subject = p.subject and q.grade = p.grade and q.id <> p.id
+     where p.id = new.package_id
+    on conflict (user_id, package_id, term_id) do nothing;
+  elsif tg_op = 'UPDATE' and new.revoked is distinct from old.revoked then
+    update public.subscriptions s set revoked = new.revoked
+      from public.packages p, public.packages q
+     where p.id = new.package_id and q.subject = p.subject and q.grade = p.grade and q.id <> p.id
+       and s.package_id = q.id and s.user_id = new.user_id and s.term_id = new.term_id;
+  end if;
+  return new;
+end $$;
+
+create or replace function public.extend_year_subs() returns trigger
+language plpgsql security definer set search_path = public as $$
+begin
+  insert into public.subscriptions (user_id, package_id, term_id, code, plan, service)
+  select distinct on (s.user_id, s.package_id) s.user_id, s.package_id, new.id, s.code, 'year', s.service
+  from public.subscriptions s join public.terms t on t.id = s.term_id
+  where s.plan = 'year' and not s.revoked and t.year = new.year and t.id <> new.id
+  on conflict (user_id, package_id, term_id) do nothing;
+  return new;
+end $$;
 
 -- يمنح المعلم مواد القيد (كل المواد الجاهزة النشطة إن كان «كل المواد») للفصل الجاري، ويفعّل طلبه ويعلّم القيد مأخوذًا
 create or replace function public.name_sub_apply(p_uid uuid, p_ns bigint) returns void
@@ -28,6 +84,7 @@ begin
   v_ids := case when ns.all_subjects then coalesce((select array_agg(id) from public.packages where active), '{}') else ns.package_ids end;
   if v_t is not null and cardinality(v_ids) > 0 then
     perform public.grant_subscriptions(p_uid, ns.plan, v_t, v_ids, null);
+    perform public.set_service(p_uid, v_ids, ns.service);
   end if;
   update public.ext_requests set status = 'active', activated_at = coalesce(activated_at, now()),
     package_ids = case when ns.all_subjects or cardinality(ns.package_ids) = 0 then package_ids
@@ -119,7 +176,7 @@ language plpgsql security definer set search_path = public as $$
 begin
   if not public.is_admin() then raise exception 'غير مسموح'; end if;
   return coalesce((select jsonb_agg(jsonb_build_object(
-    'id', ns.id, 'name', ns.name, 'plan', ns.plan, 'all_subjects', ns.all_subjects, 'package_ids', to_jsonb(ns.package_ids),
+    'id', ns.id, 'name', ns.name, 'plan', ns.plan, 'all_subjects', ns.all_subjects, 'service', ns.service, 'package_ids', to_jsonb(ns.package_ids),
     'note', ns.note, 'created_at', ns.created_at, 'claimed_at', ns.claimed_at,
     'request', (select r.id from public.ext_requests r where r.user_id = ns.claimed_user),
     'devices', (select count(*) from public.devices d where d.user_id = ns.claimed_user and d.revoked_at is null),
@@ -127,19 +184,20 @@ begin
   ) order by (ns.claimed_user is null) desc, ns.created_at desc) from public.name_subs ns), '[]'::jsonb);
 end $$;
 
-create or replace function public.admin_name_sub_add(p_name text, p_plan text, p_all boolean, p_packages text[], p_note text default null) returns jsonb
+create or replace function public.admin_name_sub_add(p_name text, p_plan text, p_all boolean, p_packages text[], p_service text, p_note text default null) returns jsonb
 language plpgsql security definer set search_path = public as $$
 declare v_name text := left(trim(regexp_replace(coalesce(p_name, ''), '\s+', ' ', 'g')), 80); v_norm text; v_id bigint; v_ids text[] := coalesce(p_packages, '{}');
 begin
   if not public.is_admin() then raise exception 'غير مسموح'; end if;
   if coalesce(p_plan, '') not in ('term', 'year') then raise exception 'نوع الاشتراك فصلي أو سنوي'; end if;
+  if coalesce(p_service, '') not in ('prep', 'both', 'hw') then raise exception 'اختر نوع الخدمة: تحضير فقط أو تحضير مع واجب أو واجب فقط'; end if;
   v_norm := public.ar_name_norm(v_name);
   if cardinality(string_to_array(v_norm, ' ')) < 4 then raise exception 'اكتب الاسم الرباعي كما في نور (أربعة أسماء على الأقل)'; end if;
   if not coalesce(p_all, false) and cardinality(v_ids) = 0 then raise exception 'اختر مادة واحدة على الأقل أو «كل المواد»'; end if;
   if exists (select 1 from unnest(v_ids) x where x not in (select id from public.packages)) then raise exception 'باقة غير موجودة'; end if;
   if exists (select 1 from public.name_subs where name_norm = v_norm and claimed_user is null) then raise exception 'هذا الاسم مضاف وينتظر صاحبه'; end if;
-  insert into public.name_subs (name, name_norm, plan, all_subjects, package_ids, note)
-  values (v_name, v_norm, p_plan, coalesce(p_all, false), v_ids, nullif(trim(coalesce(p_note, '')), '')) returning id into v_id;
+  insert into public.name_subs (name, name_norm, plan, all_subjects, service, package_ids, note)
+  values (v_name, v_norm, p_plan, coalesce(p_all, false), p_service, v_ids, nullif(trim(coalesce(p_note, '')), '')) returning id into v_id;
   return jsonb_build_object('ok', true, 'id', v_id);
 end $$;
 
@@ -151,5 +209,41 @@ begin
   return jsonb_build_object('ok', true);
 end $$;
 
-revoke execute on function public.admin_name_subs(), public.admin_name_sub_add(text, text, boolean, text[], text), public.admin_name_sub_delete(bigint) from public, anon;
-grant execute on function public.admin_name_subs(), public.admin_name_sub_add(text, text, boolean, text[], text), public.admin_name_sub_delete(bigint) to authenticated;
+-- يغيّر نوع خدمة اشتراك قائم (من لوحة الإدارة بعد «فعّل» أو من المعلمين)
+create or replace function public.admin_set_service(p_user uuid, p_package_ids text[], p_service text) returns jsonb
+language plpgsql security definer set search_path = public as $$
+begin
+  if not public.is_admin() then raise exception 'غير مسموح'; end if;
+  if coalesce(p_service, '') not in ('prep', 'both', 'hw') then raise exception 'اختر نوع الخدمة'; end if;
+  perform public.set_service(p_user, p_package_ids, p_service);
+  return jsonb_build_object('ok', true);
+end $$;
+
+-- «حاضر» يعرف نوع الخدمة من ext_me، والخادم يحجب محتوى التحضير عن اشتراك «واجب فقط». يُعدَّل ما هو قائم في القاعدة بنصه الحالي.
+do $$
+declare r record; d text; n text; v_patched int := 0;
+begin
+  for r in select p.oid, p.proname from pg_proc p where p.pronamespace = 'public'::regnamespace and p.proname in ('ext_me', 'ext_session') loop
+    d := pg_get_functiondef(r.oid);
+    if r.proname = 'ext_me' then
+      if d like '%''service'', s.service%' then continue; end if;
+      n := replace(d, $q$'ready', exists (select 1 from public.package_content c where c.package_id = p.id and c.term = t.term)) x$q$,
+                      $q$'ready', exists (select 1 from public.package_content c where c.package_id = p.id and c.term = t.term), 'service', s.service) x$q$);
+    else
+      if d like '%sub_service(%' then continue; end if;
+      n := replace(d, $q$if v_acc is null then return jsonb_build_object('ok', false, 'error', 'expired'); end if;$q$,
+                      $q$if v_acc is null then return jsonb_build_object('ok', false, 'error', 'expired'); end if;
+  if v_acc = 'sub' and public.sub_service(d.user_id, p_package, p_term) = 'hw' then return jsonb_build_object('ok', false, 'error', 'hw_only'); end if;$q$);
+    end if;
+    if n <> d then execute n; v_patched := v_patched + 1; end if;
+  end loop;
+  if not exists (select 1 from pg_proc p where p.proname = 'ext_me' and pg_get_functiondef(p.oid) like '%''service'', s.service%') then
+    raise exception 'لم يُعثر على موضع تعديل ext_me';
+  end if;
+  if not exists (select 1 from pg_proc p where p.proname = 'ext_session' and pg_get_functiondef(p.oid) like '%sub_service(%') then
+    raise exception 'لم يُعثر على موضع تعديل ext_session';
+  end if;
+end $$;
+
+revoke execute on function public.admin_name_subs(), public.admin_name_sub_add(text, text, boolean, text[], text, text), public.admin_name_sub_delete(bigint), public.admin_set_service(uuid, text[], text) from public, anon;
+grant execute on function public.admin_name_subs(), public.admin_name_sub_add(text, text, boolean, text[], text, text), public.admin_name_sub_delete(bigint), public.admin_set_service(uuid, text[], text) to authenticated;

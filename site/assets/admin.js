@@ -4,6 +4,7 @@
   const { $, $$, esc, toAr, db } = A;
   const D = { packages: [], terms: [], content: [], codes: [], teachers: [] };
   const SITE = location.origin + location.pathname.replace(/admin\.html$/, '');
+  const SVC = { prep: 'تحضير فقط', both: 'تحضير مع واجب', hw: 'واجب فقط' };
   const setMsg = (el, kind, html) => { el.hidden = !html; el.className = 'msg ' + (kind || ''); el.innerHTML = html || ''; };
   const termLabel = (t) => (t ? `${A.termName(t.term)} ${toAr(t.year)}` : '');
   const today = () => new Date().toISOString().slice(0, 10);
@@ -197,6 +198,7 @@
           <b>اختر المواد التي تفعّلها لـ${esc(r.name || 'المعلم')}</b>
           <div class="pkgpick" data-actpk="${r.id}"></div>
           <div class="inline-acts"><select data-actplan="${r.id}" style="max-width:160px"><option value="term">اشتراك فصلي</option><option value="year">اشتراك سنوي</option></select>
+            <select data-actsvc="${r.id}" style="max-width:190px" title="نوع الخدمة"><option value="both">تحضير مع واجب</option><option value="prep">تحضير فقط</option><option value="hw">واجب فقط</option></select>
             <button class="btn primary" data-actgo="${r.id}" type="button">فعّل المواد المختارة</button><button class="btn ghost" data-actx="${r.id}" type="button">إلغاء</button></div>
         </div></td></tr>
         <tr class="actrow" data-logrow="${r.id}" hidden><td colspan="5"></td></tr>`;
@@ -231,6 +233,8 @@
         b.disabled = true;
         try {
           await db.rpc('admin_activate_request', { p_id: r.id, p_plan: $(`[data-actplan="${r.id}"]`).value, p_package_ids: ids });
+          const sv = $(`[data-actsvc="${r.id}"]`).value;
+          try { if (r.user_id) await db.rpc('admin_set_service', { p_user: r.user_id, p_package_ids: ids, p_service: sv }); } catch (e) { A.toast('فُعّلت المواد لكن تعذّر ضبط نوع الخدمة: ' + A.errText(e), 'bad'); }
           A.toast(`فُعّل لـ${r.name || 'المعلم'}: ${ids.map(pkgTitle).join('، ')}. تظهر في «حاضر» عنده خلال دقيقة.`, 'ok');
           renderRequests();
         } catch (e) { b.disabled = false; A.toast(A.errText(e), 'bad'); }
@@ -351,6 +355,7 @@
     const t = D.teachers.find((x) => x.id === f.user.value);
     try {
       await db.rpc('admin_grant', { p_user: f.user.value, p_plan: f.plan.value, p_term_id: +f.term.value, p_package_ids: ids });
+      try { await db.rpc('admin_set_service', { p_user: f.user.value, p_package_ids: ids, p_service: $('#grantSvc').value }); } catch (e2) { A.toast('أُنشئ الاشتراك لكن تعذّر ضبط نوع الخدمة: ' + A.errText(e2), 'bad'); }
       setMsg(msg, 'ok', `أُنشئ ${f.plan.value === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي'} لـ«${esc(t ? t.full_name : '')}» في: ${esc(ids.map(pkgTitle).join('، '))}.`);
       $$('#grantPkgs input:checked').forEach((i) => { i.checked = false; });
       await renderTeachers();
@@ -432,7 +437,7 @@
     tb.innerHTML = '<tr><th>الاسم</th><th>المواد</th><th>النوع</th><th>الحالة</th><th></th></tr>' + (rows.length ? rows.map((r) => `<tr>
       <td><b>${esc(r.name)}</b>${r.note ? `<br><small class="muted">${esc(r.note)}</small>` : ''}</td>
       <td>${r.all_subjects ? '<span class="chip ok">كل المواد</span>' : esc((r.package_ids || []).map(title).join('، '))}</td>
-      <td>${r.plan === 'year' ? 'سنوي' : 'فصلي'}</td>
+      <td>${r.plan === 'year' ? 'سنوي' : 'فصلي'}<br><small class="muted">${esc(SVC[r.service] || SVC.both)}</small></td>
       <td>${r.claimed_at ? `<span class="chip ok">فُعّل ${esc(day(r.claimed_at))}</span><br><small class="muted">${r.request ? 'طلب ' + toAr(r.request) + ' · ' : ''}${toAr(r.devices || 0)} جهاز · ${r.noor_bound ? 'مربوط بحساب نور' : 'لم يُفتح نور بعد'}</small>` : '<span class="chip warn">ينتظر صاحبه</span>'}</td>
       <td><button class="btn ghost sm" data-nsdel="${r.id}" type="button">حذف</button></td></tr>`).join('') : '<tr><td class="empty">لا قيود بعد.</td></tr>');
     $$('[data-nsdel]').forEach((b) => {
@@ -447,7 +452,7 @@
     e.preventDefault();
     const all = $('#nsAll').checked, ids = $$('#nsPkgs input:checked').map((i) => i.value), msg = $('#nsMsg');
     try {
-      await db.rpc('admin_name_sub_add', { p_name: $('#nsName').value, p_plan: $('#nsPlan').value, p_all: all, p_packages: all ? [] : ids, p_note: $('#nsNote').value });
+      await db.rpc('admin_name_sub_add', { p_name: $('#nsName').value, p_plan: $('#nsPlan').value, p_all: all, p_packages: all ? [] : ids, p_service: $('#nsSvc').value, p_note: $('#nsNote').value });
       msg.hidden = true; $('#nsName').value = ''; $('#nsNote').value = ''; $$('#nsPkgs input:checked').forEach((i) => { i.checked = false; });
       A.toast('أُضيف. يتفعّل اشتراكه فور كتابته الاسم في «حاضر».', 'ok'); renderNames();
     } catch (err) { setMsg(msg, 'bad', esc(A.errText(err))); }

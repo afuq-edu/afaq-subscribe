@@ -70,6 +70,9 @@
           <label class="field"><span>الاسم الرباعي</span><input name="name" id="nsName" placeholder="مثال: عيسى بن سعيد بن محمد الحارثي" autocomplete="off"></label>
           <div class="row2">
             <label class="field"><span>نوع الاشتراك</span><select name="plan" id="nsPlan"><option value="term">فصلي (الفصل الجاري)</option><option value="year">سنوي (الفصلان)</option></select></label>
+            <label class="field"><span>نوع الخدمة</span><select name="svc" id="nsSvc"><option value="both">تحضير مع واجب</option><option value="prep">تحضير فقط</option><option value="hw">واجب فقط</option></select></label>
+          </div>
+          <div class="row2">
             <label class="field"><span>ملاحظة (اختياري)</span><input name="note" id="nsNote" placeholder="رقم الهاتف أو أي تذكير"></label>
           </div>
           <label class="field" style="flex-direction:row;gap:8px;align-items:center"><input type="checkbox" id="nsAll"> <span>كل المواد (وتلحقه المواد الجديدة تلقائيًا)</span></label>
@@ -113,6 +116,7 @@
             <label class="field"><span>نوع الاشتراك</span><select name="plan" id="grantPlan"><option value="term">فصلي</option><option value="year">سنوي (الفصلان)</option></select></label>
             <label class="field"><span id="grantTermLbl">الفصل</span><select name="term" id="grantTerm"></select></label>
           </div>
+          <label class="field"><span>نوع الخدمة</span><select id="grantSvc"><option value="both">تحضير مع واجب</option><option value="prep">تحضير فقط</option><option value="hw">واجب فقط</option></select></label>
           <div class="field"><span>الباقات</span><div class="pkgpick" id="grantPkgs"></div></div>
           <div class="msg" id="grantMsg" hidden></div>
           <button class="btn primary" type="submit">أنشئ الاشتراك</button>

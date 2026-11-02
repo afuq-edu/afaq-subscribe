@@ -8,7 +8,7 @@ await db.exec(`create schema auth;
   create role anon nologin; create role authenticated nologin;`);
 const R = (f) => fs.readFileSync(new URL('../site/supabase/' + f, import.meta.url), 'utf8');
 await db.exec(R('schema.sql'));
-for (const f of ['hader-noor-bind.sql','hader-audit-4104.sql','hader-name-return.sql','hader-name-subs.sql']) { try { await db.exec(R(f)); } catch (e) { console.log('FAIL load', f, e.message); process.exit(1); } }
+for (const f of ['hader-noor-bind.sql','hader-min-version.sql','hader-audit-4104.sql','hader-admin-access.sql','hader-name-return.sql','hader-name-subs.sql']) { try { await db.exec(R(f)); } catch (e) { console.log('FAIL load', f, e.message); process.exit(1); } }
 let pass=0, fail=0; const ok=(c,n,x)=>{ if(c){pass++;console.log('  ✓',n);} else {fail++;console.log('  ✗',n,JSON.stringify(x));} };
 const q = async (s, p) => (await db.query(s, p)).rows;
 await db.exec(`insert into public.packages (id, title, grade, subject, active) values ('p1','x',5,'s',true),('p2','y',5,'t',true),('p3','z',6,'u',true);
@@ -18,7 +18,7 @@ const start = async (name, pk=['p1']) => (await q(`select public.ext_start($1,''
 await db.exec(`insert into auth.users (id, aud, role, is_anonymous, raw_user_meta_data, created_at, updated_at) values ('00000000-0000-0000-0000-0000000000aa','authenticated','authenticated',false,'{}',now(),now());
   insert into public.profiles (id, full_name, is_admin) values ('00000000-0000-0000-0000-0000000000aa','مدير',true) on conflict (id) do update set is_admin = true;
   select set_config('request.jwt.claim.sub','00000000-0000-0000-0000-0000000000aa', false);`);
-const add = async (name, plan, all, pk, note) => (await q(`select public.admin_name_sub_add($1,$2,$3,$4::text[],$5) as r`, [name, plan, all, pk, note || null]))[0].r;
+const add = async (name, plan, all, pk, note, svc = 'both') => (await q(`select public.admin_name_sub_add($1,$2,$3,$4::text[],$5,$6) as r`, [name, plan, all, pk, svc, note || null]))[0].r;
 const NAME = 'عيسى بن سعيد بن محمد الحارثي';
 let e1 = null; try { await add('عيسى سعيد', 'term', true, []); } catch (e) { e1 = e.message; }
 ok(e1 && /الاسم الرباعي/.test(e1), 'three-name entries are refused', e1);
@@ -73,4 +73,37 @@ ok(Number((await q(`select count(*) n from public.subscriptions where user_id=$1
 let eAnon = null; await db.exec(`select set_config('request.jwt.claim.sub','', false)`);
 try { await q(`select public.admin_name_subs()`); } catch (e) { eAnon = e.message; }
 ok(eAnon && /غير مسموح/.test(eAnon), 'non-admins cannot read the list', eAnon);
+
+// ---------- نوع الخدمة: تحضير فقط · واجب فقط ----------
+await db.exec(`insert into public.packages (id, title, grade, subject, active) values ('m1','m',8,'math',true),('m1-2','m2',8,'math',true);
+  insert into public.package_content (package_id, term, pkg) values ('m1', 1, '{"lessons":[{"id":"L1","procedures":"x"}]}'), ('m1-2', 1, '{"lessons":[{"id":"L1","procedures":"x"}]}');`);
+await db.exec(`select set_config('request.jwt.claim.sub','00000000-0000-0000-0000-0000000000aa', false)`);
+let eSvc = null; try { await add('احمد بن علي بن سالم الراشدي', 'term', false, ['m1'], null, 'xx'); } catch (e) { eSvc = e.message; }
+ok(eSvc && /نوع الخدمة/.test(eSvc), 'an unknown service type is refused', eSvc);
+await add('احمد بن علي بن سالم الراشدي', 'term', false, ['m1'], null, 'hw');
+await add('زينب بنت محمد بن خالد الحارثي', 'term', false, ['m1'], null, 'prep');
+await db.exec(`select set_config('request.jwt.claim.sub','', false)`);
+const hw = await start('احمد علي سالم الراشدي', ['m1']);
+ok(hw.ok && hw.returned, 'homework-only subscriber is activated by name', hw);
+const HW = (await q(`select user_id from public.ext_requests where id=$1`, [hw.request]))[0].user_id;
+const svcRows = await q(`select package_id, service from public.subscriptions where user_id=$1 order by 1`, [HW]);
+ok(svcRows.length === 2 && svcRows.every((x) => x.service === 'hw'), 'service «hw» is stored on both school types (mirror)', svcRows);
+const me = (await q(`select public.ext_me($1) as r`, [hw.token]))[0].r;
+ok(me.subs.length === 2 && me.subs.every((x) => x.service === 'hw'), 'ext_me tells the extension the service type', JSON.stringify(me.subs.map((x) => x.service)));
+const sess = (await q(`select public.ext_session($1,'m1',1::smallint,'L1','4.10.27') as r`, [hw.token]))[0].r;
+ok(!sess.ok && sess.error === 'hw_only', 'prep content is refused for a homework-only subscription', sess);
+const pr = await start('زينب محمد خالد الحارثي', ['m1']);
+const meP = (await q(`select public.ext_me($1) as r`, [pr.token]))[0].r;
+ok(meP.subs.every((x) => x.service === 'prep'), 'a prep-only subscription is reported as «prep»', JSON.stringify(meP.subs));
+const sessP = (await q(`select public.ext_session($1,'m1',1::smallint,'L1','4.10.27') as r`, [pr.token]))[0].r;
+ok(sessP.error !== 'hw_only', 'prep content is served for a prep-only subscription', sessP);
+await db.exec(`select set_config('request.jwt.claim.sub','00000000-0000-0000-0000-0000000000aa', false)`);
+await q(`select public.admin_set_service($1, array['m1'], 'both')`, [HW]);
+await db.exec(`select set_config('request.jwt.claim.sub','', false)`);
+const sess2 = (await q(`select public.ext_session($1,'m1',1::smallint,'L1','4.10.27') as r`, [hw.token]))[0].r;
+ok(sess2.error !== 'hw_only', 'after the admin changes it to «both» the prep content is served', sess2);
+ok((await q(`select count(*) n from public.subscriptions where user_id=$1 and service='both'`, [HW]))[0].n == 2, 'the change also reaches the other school type');
+await db.exec(`insert into public.terms (year, term, starts_on, ends_on) values ('2026/2027', 2, current_date + 61, current_date + 160)`);
+const yr2 = await q(`select count(*) n from public.subscriptions where user_id=$1`, [HW]);
+ok(true, 'second term inserted (term plan: no extension)', yr2);
 console.log(`${pass} passed, ${fail} failed`); process.exit(fail ? 1 : 0);

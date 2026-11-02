@@ -69,7 +69,7 @@ async function doSync({ force } = {}) {
     if (!s.ready) { notes.push({ title: s.title, term: s.term, why: 'not_ready' }); continue; }
     const id = remoteId(s.package_id, s.term);
     const old = all.find((p) => p.id === id);
-    const meta = { package_id: s.package_id, term: s.term, year: s.year, ends_on: s.ends_on, updated: s.updated, shift: s.shift || 'both', trial: !!s.trial, left: s.trial ? Math.max(0, +s.left || 0) : null };
+    const meta = { package_id: s.package_id, term: s.term, year: s.year, ends_on: s.ends_on, updated: s.updated, shift: s.shift || 'both', service: ['prep', 'hw'].includes(s.service) ? s.service : 'both', trial: !!s.trial, left: s.trial ? Math.max(0, +s.left || 0) : null };
     if (old && !force && old.remote && old.remote.updated === s.updated) { next.push(Object.assign(old, { remote: meta })); continue; }
     const st = await rpc('ext_structure', { p_token: link.token, p_package: s.package_id, p_term: s.term });
     if (!st || !st.ok || !st.pkg) { if (old) next.push(old); continue; }
