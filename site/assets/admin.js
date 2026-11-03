@@ -164,10 +164,15 @@
   const REQ_ST = { trial: ['warn', 'يجرّب'], requested: ['bad', 'بانتظار التفعيل'], active: ['ok', 'مفعّل'], cancelled: ['off', 'ملغى'] };
   // إشعار بالأسماء الجديدة (المالك 2026-11-03): كل اسم يصل وينتظر «فعّل» يظهر تنبيهًا، وعدده في عنوان الصفحة وعلى التبويب
   let seenReq = null;
+  // «الطلبات الجديدة» (المالك 2026-11-03): ما لم يُفعَّل بعد من آخر ٣ أيام، الأحدث أولًا؛ والباقي في «كل الطلبات»
+  const reqAt = (r) => new Date(r.requested_at || r.created_at || 0).getTime();
+  const isNewReq = (r) => (r.status === 'requested' || r.status === 'trial' || !!r.noor_wait) && Date.now() - reqAt(r) < 3 * 86400000;
+  let reqTab = 'new';
   function reqBadge() {
-    const open = (D.requests || []).filter((r) => r.status === 'requested' || r.status === 'trial' || r.noor_wait);
+    const open = (D.requests || []).filter(isNewReq);
     const n = open.length;
     $('#reqBadge').hidden = !n; $('#reqBadge').textContent = toAr(n);
+    $('#reqNewN').textContent = n ? `(${toAr(n)})` : '';
     document.title = (n ? `(${toAr(n)}) ` : '') + document.title.replace(/^\([^)]*\)\s*/, '');
     const ids = new Set(open.map((r) => r.id));
     if (seenReq) {
@@ -188,8 +193,8 @@
   const ago = (iso) => { if (!iso) return ''; const m = Math.round((Date.now() - new Date(iso).getTime()) / 60000); return m < 2 ? 'الآن' : m < 60 ? `قبل ${toAr(m)} دقيقة` : m < 1440 ? `قبل ${toAr(Math.round(m / 60))} ساعة` : A.dateAr(iso.slice(0, 10)); };
   function drawRequests() {
     const q = $('#reqSearch').value.trim().toLowerCase(), f = $('#reqFilter').value;
-    const list = (D.requests || []).filter((r) => (f === 'all' || (f === 'open' ? ['trial', 'requested'].includes(r.status) || !!r.noor_wait : r.status === f))
-      && (!q || String(r.id).includes(q) || (r.name || '').toLowerCase().includes(q) || (r.phone || '').includes(q)));
+    const list = (D.requests || []).filter((r) => (reqTab === 'new' ? isNewReq(r) : (f === 'all' || (f === 'open' ? ['trial', 'requested'].includes(r.status) || !!r.noor_wait : r.status === f)))
+      && (!q || String(r.id).includes(q) || (r.name || '').toLowerCase().includes(q) || (r.phone || '').includes(q))).sort((a, b) => reqAt(b) - reqAt(a));
     $('#reqTable').innerHTML = `<tr><th>الطلب</th><th>المعلم</th><th>المواد (حصص التجربة)</th><th>الحالة</th><th></th></tr>` + (list.length ? list.map((r) => {
       const [cls, lbl] = REQ_ST[r.status] || ['', r.status];
       const pend = r.packages.filter((p) => !p.active);
@@ -218,7 +223,7 @@
             <div><button class="btn" data-actgo="${r.id}" type="button">فعّل المواد المختارة فقط</button></div></div>
         </div></td></tr>
         <tr class="actrow" data-logrow="${r.id}" hidden><td colspan="5"></td></tr>`;
-    }).join('') : '<tr><td colspan="5" class="empty">لا طلبات هنا.</td></tr>');
+    }).join('') : `<tr><td colspan="5" class="empty">${reqTab === 'new' ? 'لا طلبات جديدة الآن.' : 'لا طلبات هنا.'}</td></tr>`);
     // «فعّل مواد»: يختار المدير المواد (مادة وصف) التي يريدها المعلم، فتفتح له في «حاضر» وحدها
     $$('[data-act]').forEach((b) => {
       b.onclick = () => {
@@ -341,6 +346,16 @@
     };
   }
   $('#reqSearch').oninput = drawRequests;
+  $$('[data-reqtab]').forEach((b) => {
+    b.onclick = () => {
+      reqTab = b.dataset.reqtab;
+      $$('[data-reqtab]').forEach((x) => { x.classList.toggle('primary', x === b); x.classList.toggle('ghost', x !== b); });
+      const all = reqTab === 'all';
+      $('#reqFilter').hidden = !all; $('#reqSearch').hidden = !all; $('#reqAllNote').hidden = !all; $('#reqNewNote').hidden = all;
+      if (!all) $('#reqSearch').value = '';
+      drawRequests();
+    };
+  });
   $('#reqFilter').onchange = drawRequests;
   // التحديث الدوري لا يعيد بناء الجدول وسجل تعبئة أو مربع تفعيل مفتوح (حتى لا يُغلق في وجه المدير)
   setInterval(() => { if (!$('[data-pane="requests"]').hidden && !$$('.actrow:not([hidden])').length) renderRequests(); }, 60000);
