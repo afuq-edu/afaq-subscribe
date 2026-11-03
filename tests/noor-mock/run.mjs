@@ -78,8 +78,15 @@ function check(ok, what, detail = '') {
 const fmtRows = (rows) => rows.map((r) => { const l = sessionOfRow(r); return `#${r.post} ${l ? l.id.slice(-3) : '???'} «${r.title}» node=${r.nodeText} [${r.unit}] date=${r.publishDate}`; }).join('\n');
 
 // ---------- common assertions on what Noor received ----------
-function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], sameDay = false }) {
-  const unknown = rows.filter((r) => !sessionOfRow(r));
+function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], sameDay = false, maxJoins = 0 }) {
+  // a joined prep «X (n و m)» of one Noor lesson (4.10.29: when Noor has fewer free periods than the plan, sessions of the SAME lesson
+  // share a prep so the plan still ends in its last week): it stands for sessions n, m of that lesson; allowed only up to maxJoins
+  const joinedOf = (r) => { const m = r.title.match(/ \((\d+(?: و \d+)+)\)$/); if (!m) return null; const ns = m[1].split(' و ').map(Number);
+    const ls = PKG.lessons.filter((l) => { const n = nodeFor(tree, l); return n && n.nodeId === r.lessonId && ns.includes(sessNo(l)); }); return ls.length === ns.length ? ls : null; };
+  const joined = rows.filter((r) => !sessionOfRow(r) && joinedOf(r));
+  check(joined.length <= maxJoins, `${name}: same-lesson joined preps «(n و m)» only where the plan overruns (${joined.length} ≤ ${maxJoins})`, joined.map((r) => `«${r.title}» date=${r.publishDate}`).join('\n'));
+  const jIds = new Set(joined.flatMap((r) => joinedOf(r).map((l) => l.id)));
+  const unknown = rows.filter((r) => !sessionOfRow(r) && !joinedOf(r));
   check(!unknown.length, `${name}: every saved row carries the content of a session from the file`, fmtRows(unknown));
   const byId = new Map();
   rows.forEach((r) => { const l = sessionOfRow(r); if (l) byId.set(l.id, (byId.get(l.id) || []).concat(r)); });
@@ -91,7 +98,7 @@ function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], same
   const resaved = rows.filter((r) => pre.has(r.lessonId + '|' + r.title));
   check(!resaved.length, `${name}: nothing already in Noor was saved again`, fmtRows(resaved));
   if (expectIds) {
-    const got = [...byId.keys()].sort(), want = expectIds.slice().sort();
+    const got = [...new Set([...byId.keys(), ...jIds])].sort(), want = expectIds.slice().sort();
     check(JSON.stringify(got) === JSON.stringify(want), `${name}: exactly the expected sessions were saved (${want.length})`,
       `missing: ${want.filter((x) => !got.includes(x)).join(', ') || '-'}\nextra: ${got.filter((x) => !want.includes(x)).join(', ') || '-'}`);
   }
@@ -105,7 +112,7 @@ function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], same
     check(!off.length, `${name}: publish dates as expected`, off.map((r) => `${sessionOfRow(r).id}: got ${r.publishDate}, expected ${dates[sessionOfRow(r).id]}`).join('\n'));
   }
   // chronological: curriculum order ⇒ strictly increasing publish dates (new rows and rows that were already in Noor)
-  const all = rows.map((r) => ({ l: sessionOfRow(r), d: r.publishDate })).filter((x) => x.l)
+  const all = rows.flatMap((r) => (sessionOfRow(r) ? [sessionOfRow(r)] : joinedOf(r) ? joinedOf(r).slice(0, 1) : []).map((l) => ({ l, d: r.publishDate })))
     .concat(preexisting.map((p) => ({ l: PKG.lessons.find((x) => x.pubDate === p.publishDate && titleFor(tree, x) === p.title), d: p.publishDate })).filter((x) => x.l));
   all.sort((a, b) => a.l.idx - b.l.idx);
   const flips = [];
@@ -153,6 +160,8 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
 const card = async (pg, t) => { await pg.locator('.wz-card:not([disabled])', { hasText: t }).first().click({ timeout: 20000 }); await sleep(500); };
 // the service choice on the first wizard screen (not part of a run once it has started)
 async function svcPick(pg, k, started) {
+  if (started && (await started())) return;
+  await pg.waitForSelector(`.wz-seg-b[data-svc="${k}"]`, { timeout: 20000 }).catch(() => {});
   if (started && (await started())) return;
   await pg.evaluate((k) => { const b = document.querySelector(`.wz-seg-b[data-svc="${k}"]`); if (b && !b.classList.contains('on')) b.click(); }, k).catch(() => {});
   await sleep(300);
@@ -252,7 +261,8 @@ T(2, 'Noor rejects dates (used/holiday): at typing time and at save time', async
   check(/تمت التعبئة بنجاح/.test(s.head), 'wizard finishes with success', `${s.head} | ${s.text}`);
   // period after period (Sun/Mon/Tue): 14/9 refused while typing and 21/9 refused at save are skipped, the rest follow in order
   const keep = Object.fromEntries(['2026-09-06', '2026-09-07', '2026-09-08', '2026-09-13', '2026-09-15', '2026-09-20', '2026-09-22', '2026-09-27', '2026-09-28'].map((d, i) => [sid(i + 1), d]));
-  assertRows('S2', rows, tree, { expectIds: range(1, 45), dates: keep, preexisting: pre });
+  // two refused days push two sessions past the plan's last week: at most two same-lesson joins keep the plan inside it (4.10.29)
+  assertRows('S2', rows, tree, { expectIds: range(1, 45), dates: keep, preexisting: pre, maxJoins: 2 });
   const d = (n) => (rows.find((r) => sessionOfRow(r) && sessionOfRow(r).id === sid(n)) || {}).publishDate;
   check(!rows.some((r) => r.publishDate === '2026-09-14' || r.publishDate === '2026-09-21'), 'nothing saved on the refused 14/9 and 21/9', fmtRows(rows));
   check(noor.st.posts.some((p) => p.date === '2026-09-21'), 'Noor refused one save on 21/9 (save-time refusal exercised)');
@@ -1033,7 +1043,7 @@ T(25, 'Subscription «واجبات فقط»: a prep mode sends the teacher back 
   await sleep(6000);
   const u = await ui(b.pg);
   check(!noor.st.rows.filter((r) => !r.preexisting).length && !noor.st.posts.length, 'no prep was saved', '');
-  check(u.wiz && /الواجبات فقط/.test(u.wzHead + ' ' + u.wzBody) , 'the teacher is back at the choice screen (full term is not part of his subscription)', `${u.wzHead} | ${u.wzBody}`.slice(0, 200));
+  check(u.wiz && /واجبات فقط/.test(u.wzHead + ' ' + u.wzBody) && /ماذا تريد/.test(u.wzHead), 'the teacher is back at the choice screen (full term is not part of his subscription)', `${u.wzHead} | ${u.wzBody}`.slice(0, 200));
   const msg = await b.pg.evaluate(() => document.getElementById('wzMsg').textContent);
   check(/للواجبات/.test(msg) && !/خطأ|فشل|غير موجود|لم أجد/.test(msg), 'a calm note explains the subscription covers homework', msg);
   await svcPick(b.pg, 'hw');
