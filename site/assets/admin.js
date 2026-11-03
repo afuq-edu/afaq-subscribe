@@ -466,7 +466,7 @@
     const day = (x) => (x ? new Date(x).toLocaleDateString('ar-OM') : '');
     const state = (r) => r.live === false ? '<span class="chip">انتهى فصله</span>'
       : r.claimed_at ? `<span class="chip ok">مفعّل منذ ${esc(day(r.claimed_at))}</span>${r.noor_name ? `<br><small class="muted">حساب نور: ${esc(r.noor_name)}</small>` : ''}`
-      : '<span class="chip warn">ينتظر</span>';
+      : '<span class="chip ok">مفعّل</span><br><small class="muted">يعمل له فور فتح «حاضر» على حساب نور بهذا الاسم</small>';
     tb.innerHTML = '<tr><th>الاسم</th><th>الاشتراك</th><th>التفعيل</th><th></th></tr>' + (rows.length ? rows.map((r) => `<tr>
       <td><b>${esc(r.name)}</b>${r.note ? `<br><small class="muted">${esc(r.note)}</small>` : ''}</td>
       <td>${r.plan === 'year' ? 'سنوي' : 'فصلي'}<br><small class="muted">${esc(SVC[r.service] || SVC.both)}</small></td>
@@ -490,7 +490,7 @@
     try {
       const res = await db.rpc('admin_name_sub_add', { p_name: $('#nsName').value, p_plan: $('#nsPlan').value, p_all: true, p_packages: [], p_service: $('#nsSvc').value, p_note: $('#nsNote').value });
       msg.hidden = true; $('#nsName').value = ''; $('#nsNote').value = '';
-      A.toast(res && res.applied ? 'سُجّل وفُعّل الآن: كان قد فتح «حاضر» بهذا الاسم.' : 'سُجّل. يتفعّل حين يفتح «حاضر» على حساب نور بهذا الاسم.', 'ok'); renderNames();
+      A.toast(res && res.applied ? 'فُعّل الآن: «حاضر» مفتوح له بكل موادّه.' : 'فُعّل. يعمل له «حاضر» فور فتحه على حساب نور بهذا الاسم.', 'ok'); renderNames();
     } catch (err) { setMsg(msg, 'bad', esc(A.errText(err))); }
   };
   async function renderTrees() {

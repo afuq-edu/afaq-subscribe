@@ -8,7 +8,7 @@ await db.exec(`create schema auth;
   create role anon nologin; create role authenticated nologin;`);
 const R = (f) => fs.readFileSync(new URL('../site/supabase/' + f, import.meta.url), 'utf8');
 await db.exec(R('schema.sql'));
-for (const f of ['hader-noor-bind.sql','hader-min-version.sql','hader-audit-4104.sql','hader-admin-access.sql','hader-name-return.sql','hader-name-subs.sql','hader-open-access.sql','hader-noor-name.sql','hader-noor-home.sql']) { try { await db.exec(R(f)); } catch (e) { console.log('FAIL load', f, e.message); process.exit(1); } }
+for (const f of ['hader-noor-bind.sql','hader-min-version.sql','hader-audit-4104.sql','hader-admin-access.sql','hader-name-return.sql','hader-name-subs.sql','hader-open-access.sql','hader-noor-name.sql','hader-noor-home.sql','hader-name-add-now.sql']) { try { await db.exec(R(f)); } catch (e) { console.log('FAIL load', f, e.message); process.exit(1); } }
 let pass=0, fail=0; const ok=(c,n,x)=>{ if(c){pass++;console.log('  ✓',n);} else {fail++;console.log('  ✗',n,JSON.stringify(x));} };
 const q = async (s, p) => (await db.query(s, p)).rows;
 const one = async (s, p) => (await q(s, p))[0];
@@ -153,6 +153,27 @@ const nz2 = await noor(st2.token, H('8'), 'سلمى ناصر حمد الريام
 ok(nz2 && nz2.ok !== false, 'her own Noor account keeps working', nz2);
 const nz3 = await noor(st2.token, H('9'), 'شخص آخر تماما هنا');
 ok(nz3 && nz3.ok === false, 'another Noor account on her device is not served', nz3);
+
+// ---------- المالك 2026-11-03 16:42: «أضف» يفعّل فورًا ولو كان عند المعلم اشتراك سابق (hader-name-add-now.sql) ----------
+await db.exec(`update public.ext_requests set created_at = now() - interval '2 days'`);
+const st3 = await start('هلال سيف ناصر الكندي');
+await noor(st3.token, H('a1'), 'هلال سيف ناصر الكندي');
+const u3 = await userOf(st3.token);
+await asAdmin(true); await q(`select public.admin_request_activate((select id from public.ext_requests where user_id=$1),'prep')`, [u3]);
+await db.exec(`update public.name_subs set hidden_at = now() where claimed_user = '${u3}'`); await asAdmin(false);
+const a3 = await add('هلال سيف ناصر الكندي', 'both');
+ok(a3 && a3.applied, 'adding the name of a teacher who already has a subscription activates him at once', a3);
+const subs3 = await q(`select distinct service from public.subscriptions where user_id = $1 and not revoked`, [u3]);
+ok(subs3.length === 1 && subs3[0].service === 'both', 'his subjects take the service chosen now', subs3);
+const c3 = await one(`select claimed_user from public.name_subs where id = $1`, [a3.id]);
+ok(c3.claimed_user === u3, 'the entry shows activated (claimed), not waiting', c3);
+const st4 = await start('ريا خميس سالم البادي');
+const a4 = await add('ريا خميس سالم البادي');
+ok(a4 && a4.applied, 'a typed-name request whose Noor is not read yet is activated at once', a4);
+const st5 = await start('منى علي حمد السيابي');
+await q(`insert into public.noor_bind (user_id, noor_hash, noor_name, bound_at) values ($1,$2,'شخص آخر اسمه مختلف',now())`, [await userOf(st5.token), H('a5')]);
+const a5 = await add('منى علي حمد السيابي');
+ok(a5 && !a5.applied, 'a typed name whose device already reads a DIFFERENT Noor name is not activated', a5);
 
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
