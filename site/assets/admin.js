@@ -424,37 +424,40 @@
   }
   // شجرات نور المحفوظة من أجهزة المعلمين: الأحدث أولًا، والدروس التي لا تحضير لها أولًا عند فتح الشجرة
 
-  // مشتركون بالاسم: اشتراك جاهز بالاسم الرباعي يتفعّل وحده حين يكتبه المعلم في «حاضر»
+  // المسجّلون بالاسم: «حاضر» يتفعّل وحده لمن يفتحه على حساب نور بالاسم المسجّل (hader-noor-name.sql)
   async function renderNames() {
     const tb = $('#nsTable');
-    pkgPicker($('#nsPkgs'), $$('#nsPkgs input:checked').map((i) => i.value));
-    $('#nsPkgsWrap').hidden = $('#nsAll').checked;
     let rows = [];
     try { rows = await db.rpc('admin_name_subs'); }
-    catch (e) { tb.innerHTML = `<tr><td class="empty">${/admin_name_subs|function/i.test(String(e.message)) ? 'الاشتراك بالاسم غير مفعّل في قاعدة البيانات بعد (hader-name-subs.sql).' : esc(A.errText(e))}</td></tr>`; return; }
-    const title = (id) => (D.packages.find((p) => p.id === id) || {}).title || id;
+    catch (e) { tb.innerHTML = `<tr><td class="empty">${esc(A.errText(e))}</td></tr>`; return; }
     const day = (x) => (x ? new Date(x).toLocaleDateString('ar-OM') : '');
-    tb.innerHTML = '<tr><th>الاسم</th><th>المواد</th><th>النوع</th><th>الحالة</th><th></th></tr>' + (rows.length ? rows.map((r) => `<tr>
+    const state = (r) => r.live === false ? '<span class="chip">انتهى فصله</span>'
+      : r.claimed_at ? `<span class="chip ok">مفعّل منذ ${esc(day(r.claimed_at))}</span>${r.noor_name ? `<br><small class="muted">حساب نور: ${esc(r.noor_name)}</small>` : ''}`
+      : '<span class="chip warn">ينتظر</span>';
+    tb.innerHTML = '<tr><th>الاسم</th><th>الاشتراك</th><th>التفعيل</th><th></th></tr>' + (rows.length ? rows.map((r) => `<tr>
       <td><b>${esc(r.name)}</b>${r.note ? `<br><small class="muted">${esc(r.note)}</small>` : ''}</td>
-      <td>${r.all_subjects ? '<span class="chip ok">كل المواد</span>' : esc((r.package_ids || []).map(title).join('، '))}</td>
       <td>${r.plan === 'year' ? 'سنوي' : 'فصلي'}<br><small class="muted">${esc(SVC[r.service] || SVC.both)}</small></td>
-      <td>${r.claimed_at ? `<span class="chip ok">فُعّل ${esc(day(r.claimed_at))}</span><br><small class="muted">${r.request ? 'طلب ' + toAr(r.request) + ' · ' : ''}${toAr(r.devices || 0)} جهاز · ${r.noor_bound ? 'مربوط بحساب نور' : 'لم يُفتح نور بعد'}</small>` : '<span class="chip warn">ينتظر صاحبه</span>'}</td>
-      <td><button class="btn ghost sm" data-nsdel="${r.id}" type="button">حذف</button></td></tr>`).join('') : '<tr><td class="empty">لا قيود بعد.</td></tr>');
+      <td>${state(r)}</td>
+      <td>${r.live === false ? `<button class="btn sm" data-nsrenew="${r.id}" type="button">جدّد</button> ` : ''}<button class="btn ghost sm" data-nsdel="${r.id}" type="button">حذف</button></td></tr>`).join('') : '<tr><td class="empty">لم تسجّل أحدًا بعد.</td></tr>');
     $$('[data-nsdel]').forEach((b) => {
       b.onclick = async () => {
-        if (!confirm('حذف القيد من القائمة؟ لا يُلغى اشتراك من أخذه.')) return;
+        if (!confirm('حذف الاسم من القائمة؟')) return;
         try { await db.rpc('admin_name_sub_delete', { p_id: +b.dataset.nsdel }); renderNames(); } catch (e) { A.toast(A.errText(e), 'bad'); }
       };
     });
+    $$('[data-nsrenew]').forEach((b) => {
+      b.onclick = async () => {
+        try { await db.rpc('admin_name_sub_renew', { p_id: +b.dataset.nsrenew }); A.toast('جُدّد للفصل الجاري.', 'ok'); renderNames(); } catch (e) { A.toast(A.errText(e), 'bad'); }
+      };
+    });
   }
-  $('#nsAll').onchange = () => { $('#nsPkgsWrap').hidden = $('#nsAll').checked; };
   $('#nameForm').onsubmit = async (e) => {
     e.preventDefault();
-    const all = $('#nsAll').checked, ids = $$('#nsPkgs input:checked').map((i) => i.value), msg = $('#nsMsg');
+    const msg = $('#nsMsg');
     try {
-      const res = await db.rpc('admin_name_sub_add', { p_name: $('#nsName').value, p_plan: $('#nsPlan').value, p_all: all, p_packages: all ? [] : ids, p_service: $('#nsSvc').value, p_note: $('#nsNote').value });
-      msg.hidden = true; $('#nsName').value = ''; $('#nsNote').value = ''; $$('#nsPkgs input:checked').forEach((i) => { i.checked = false; });
-      A.toast(res && res.applied ? 'أُضيف وفُعّل طلبه القائم' + (res.request ? ' (طلب ' + toAr(res.request) + ')' : '') + ' — يكمل من حيث وقف.' : 'أُضيف. يتفعّل اشتراكه فور كتابته الاسم في «حاضر».', 'ok'); renderNames();
+      const res = await db.rpc('admin_name_sub_add', { p_name: $('#nsName').value, p_plan: $('#nsPlan').value, p_all: true, p_packages: [], p_service: $('#nsSvc').value, p_note: $('#nsNote').value });
+      msg.hidden = true; $('#nsName').value = ''; $('#nsNote').value = '';
+      A.toast(res && res.applied ? 'سُجّل وفُعّل الآن: كان قد فتح «حاضر» بهذا الاسم.' : 'سُجّل. يتفعّل حين يفتح «حاضر» على حساب نور بهذا الاسم.', 'ok'); renderNames();
     } catch (err) { setMsg(msg, 'bad', esc(A.errText(err))); }
   };
   async function renderTrees() {
