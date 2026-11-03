@@ -162,9 +162,23 @@
   // ================= طلبات «حاضر» =================
   const SHIFT_AR = { one: 'فترة واحدة', two: 'فترتان' };
   const REQ_ST = { trial: ['warn', 'يجرّب'], requested: ['bad', 'بانتظار التفعيل'], active: ['ok', 'مفعّل'], cancelled: ['off', 'ملغى'] };
+  // إشعار بالأسماء الجديدة (المالك 2026-11-03): كل اسم يصل وينتظر «فعّل» يظهر تنبيهًا، وعدده في عنوان الصفحة وعلى التبويب
+  let seenReq = null;
   function reqBadge() {
-    const n = (D.requests || []).filter((r) => r.status === 'requested' || r.status === 'trial' || r.noor_wait).length;
+    const open = (D.requests || []).filter((r) => r.status === 'requested' || r.status === 'trial' || r.noor_wait);
+    const n = open.length;
     $('#reqBadge').hidden = !n; $('#reqBadge').textContent = toAr(n);
+    document.title = (n ? `(${toAr(n)}) ` : '') + document.title.replace(/^\([^)]*\)\s*/, '');
+    const ids = new Set(open.map((r) => r.id));
+    if (seenReq) {
+      const fresh = open.filter((r) => !seenReq.has(r.id));
+      if (fresh.length) {
+        const names = fresh.map((r) => r.noor_name || r.name || ('طلب ' + toAr(r.id))).join('، ');
+        A.toast(`وصل ${fresh.length === 1 ? 'اسم جديد' : toAr(fresh.length) + ' أسماء جديدة'}: ${names} — افتح «طلبات حاضر» واضغط «فعّل».`, 'ok');
+        try { if (window.Notification && Notification.permission === 'granted') new Notification('«حاضر»: اسم جديد ينتظر التفعيل', { body: names }); } catch (e) {}
+      }
+    }
+    seenReq = ids;
   }
   async function renderRequests() {
     try { D.requests = await db.rpc('admin_requests'); } catch (e) { D.requests = []; A.toast(/admin_requests|function/i.test(String(e.message)) ? 'طلبات «حاضر» غير مفعّلة في قاعدة البيانات بعد (hader-direct.sql).' : A.errText(e), 'bad'); }
@@ -186,7 +200,7 @@
         <td>${r.packages.map((p) => `<div style="margin-bottom:3px"><span class="tag">${esc(p.title)}</span> ${p.active ? '<span class="chip ok">مشترك</span>' : `<small class="muted">${A.sessionsWord(p.used)}</small>`}</div>`).join('') || '<span class="muted small">—</span>'}</td>
         <td><span class="chip ${cls}">${lbl}</span></td>
         <td><div class="inline-acts">
-          ${r.status !== 'cancelled' ? `<button class="btn sm primary" data-act="${r.id}" type="button">${pend.length || r.status !== 'active' ? 'فعّل مواد' : 'أضف مواد'}</button>` : ''}
+          ${r.status !== 'cancelled' ? `<button class="btn sm primary" data-act="${r.id}" type="button">${r.status !== 'active' ? 'فعّل' : 'أضف مواد'}</button>` : ''}
           ${r.phone ? `<a class="btn sm wa" target="_blank" rel="noopener" href="${esc(A.waLink(r.phone.replace(/^0+/, '').length === 8 ? '968' + r.phone.replace(/^0+/, '') : r.phone, `السلام عليكم أ. ${r.name}، بخصوص طلبك رقم ${r.id} في «حاضر».`))}">واتساب</a>` : ''}
           <button class="btn ghost sm" data-log="${r.id}" type="button" title="ما عبّأته «حاضر» لهذا المعلم حصةً حصة وما حدث لكل منها (لا يراه المعلم)">سجل التعبئة</button>
           <button class="btn ghost sm" data-unl="${r.id}" type="button" title="يصفّر محاولات التسجيل اليوم لجهاز هذا الطلب وشبكته">تصفير المحاولات</button>
@@ -195,11 +209,13 @@
           ${r.status === 'cancelled' ? `<button class="btn ghost sm" data-rst="${r.id}" data-to="trial" type="button">استعادة</button>` : `<button class="btn ghost sm danger" data-rst="${r.id}" data-to="cancelled" type="button">إلغاء</button>`}
         </div></td></tr>
         <tr class="actrow" data-actrow="${r.id}" hidden><td colspan="5"><div style="display:grid;gap:10px;padding:6px 0">
-          <b>اختر المواد التي تفعّلها لـ${esc(r.name || 'المعلم')}</b>
-          <div class="pkgpick" data-actpk="${r.id}"></div>
+          <b>فعّل ${esc(r.noor_name || r.name || 'المعلم')}${r.noor_name ? ' <small class="muted">(الاسم كما في نور)</small>' : ''}</b>
           <div class="inline-acts"><select data-actplan="${r.id}" style="max-width:160px"><option value="term">اشتراك فصلي</option><option value="year">اشتراك سنوي</option></select>
             <select data-actsvc="${r.id}" style="max-width:190px" title="نوع الخدمة"><option value="both">تحضير مع واجب</option><option value="prep">تحضير فقط</option><option value="hw">واجب فقط</option></select>
-            <button class="btn primary" data-actgo="${r.id}" type="button">فعّل المواد المختارة</button><button class="btn ghost" data-actx="${r.id}" type="button">إلغاء</button></div>
+            <button class="btn primary" data-actall="${r.id}" type="button" title="كل مواده: لا يستفيد المعلم إلا من مواده في نور، ويُسجَّل اسمه في «المسجّلون بالاسم»">فعّل كل موادّه</button>
+            <button class="btn ghost" data-actsome="${r.id}" type="button">مواد محددة…</button><button class="btn ghost" data-actx="${r.id}" type="button">إلغاء</button></div>
+          <div data-actsomebox="${r.id}" hidden style="display:grid;gap:8px"><div class="pkgpick" data-actpk="${r.id}"></div>
+            <div><button class="btn" data-actgo="${r.id}" type="button">فعّل المواد المختارة فقط</button></div></div>
         </div></td></tr>
         <tr class="actrow" data-logrow="${r.id}" hidden><td colspan="5"></td></tr>`;
     }).join('') : '<tr><td colspan="5" class="empty">لا طلبات هنا.</td></tr>');
@@ -213,6 +229,19 @@
         const want = new Set(r.packages.filter((p) => !p.active).map((p) => { const k = D.packages.find((x) => x.id === p.id); return k ? k.subject + '|' + k.grade : ''; }));
         pkgPicker($(`[data-actpk="${r.id}"]`), D.packages.filter((p) => want.has(p.subject + '|' + p.grade)).map((p) => p.id));
         row.hidden = false;
+      };
+    });
+    $$('[data-actsome]').forEach((b) => { b.onclick = () => { const x = $(`[data-actsomebox="${b.dataset.actsome}"]`); x.hidden = !x.hidden; }; });
+    // «فعّل كل موادّه» (المالك 2026-11-03): نوع الاشتراك فقط، وكل مواد المعلم تُفتح له الآن ويُسجَّل اسمه
+    $$('[data-actall]').forEach((b) => {
+      b.onclick = async () => {
+        const r = D.requests.find((x) => x.id === +b.dataset.actall);
+        b.disabled = true;
+        try {
+          const res = await db.rpc('admin_request_activate', { p_id: r.id, p_service: $(`[data-actsvc="${r.id}"]`).value, p_plan: $(`[data-actplan="${r.id}"]`).value });
+          A.toast(`فُعّل «${(res && res.name) || r.name || 'المعلم'}» لكل موادّه. يفتح له «حاضر» وحده خلال ثوانٍ.`, 'ok');
+          renderRequests();
+        } catch (e) { b.disabled = false; A.toast(A.errText(e), 'bad'); }
       };
     });
     $$('[data-actx]').forEach((b) => { b.onclick = () => { $(`[data-actrow="${b.dataset.actx}"]`).hidden = true; }; });
@@ -315,6 +344,10 @@
   $('#reqFilter').onchange = drawRequests;
   // التحديث الدوري لا يعيد بناء الجدول وسجل تعبئة أو مربع تفعيل مفتوح (حتى لا يُغلق في وجه المدير)
   setInterval(() => { if (!$('[data-pane="requests"]').hidden && !$$('.actrow:not([hidden])').length) renderRequests(); }, 60000);
+  // الأسماء الجديدة تصل وأنت في أي تبويب: فحص خفيف كل 30 ثانية للعدد والتنبيه
+  setInterval(async () => { if (!$('[data-pane="requests"]').hidden) return; try { D.requests = await db.rpc('admin_requests'); reqBadge(); } catch (e) {} }, 30000);
+  // إذن إشعارات المتصفح (مرة، بضغطة على تبويب الطلبات)
+  document.addEventListener('click', (e) => { if (e.target.closest && e.target.closest('[data-tab="requests"]') && window.Notification && Notification.permission === 'default') Notification.requestPermission().catch(() => {}); });
 
   // ================= أدوات مشتركة =================
   function pkgPicker(box, selected) {
@@ -433,7 +466,7 @@
     const day = (x) => (x ? new Date(x).toLocaleDateString('ar-OM') : '');
     const state = (r) => r.live === false ? '<span class="chip">انتهى فصله</span>'
       : r.claimed_at ? `<span class="chip ok">مفعّل منذ ${esc(day(r.claimed_at))}</span>${r.noor_name ? `<br><small class="muted">حساب نور: ${esc(r.noor_name)}</small>` : ''}`
-      : '<span class="chip warn">ينتظر</span>';
+      : '<span class="chip ok">مفعّل</span><br><small class="muted">يعمل له فور فتح «حاضر» على حساب نور بهذا الاسم</small>';
     tb.innerHTML = '<tr><th>الاسم</th><th>الاشتراك</th><th>التفعيل</th><th></th></tr>' + (rows.length ? rows.map((r) => `<tr>
       <td><b>${esc(r.name)}</b>${r.note ? `<br><small class="muted">${esc(r.note)}</small>` : ''}</td>
       <td>${r.plan === 'year' ? 'سنوي' : 'فصلي'}<br><small class="muted">${esc(SVC[r.service] || SVC.both)}</small></td>
@@ -457,7 +490,7 @@
     try {
       const res = await db.rpc('admin_name_sub_add', { p_name: $('#nsName').value, p_plan: $('#nsPlan').value, p_all: true, p_packages: [], p_service: $('#nsSvc').value, p_note: $('#nsNote').value });
       msg.hidden = true; $('#nsName').value = ''; $('#nsNote').value = '';
-      A.toast(res && res.applied ? 'سُجّل وفُعّل الآن: كان قد فتح «حاضر» بهذا الاسم.' : 'سُجّل. يتفعّل حين يفتح «حاضر» على حساب نور بهذا الاسم.', 'ok'); renderNames();
+      A.toast(res && res.applied ? 'فُعّل الآن: «حاضر» مفتوح له بكل موادّه.' : 'فُعّل. يعمل له «حاضر» فور فتحه على حساب نور بهذا الاسم.', 'ok'); renderNames();
     } catch (err) { setMsg(msg, 'bad', esc(A.errText(err))); }
   };
   async function renderTrees() {

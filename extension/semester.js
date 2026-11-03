@@ -9,7 +9,7 @@ import {
   gradeNumber, gradeOfName, sameSubject, unsavedText, kwNorm, ordinalOf, getPicks,
   noorTerms, termAllLessons, pickTreeNode, stripSessionSuffix, sessionSuffix, sessionNums, lessonNum,
   layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, lintPackage, lintLevel, knownCourse, rememberCourse, resetProgress, packageProgress, clearSession,
-  holidaySet, termEndOf, countSchoolDays, loadNoorTree, storeNoorTree, dateOverrides, setDateOverride, GRADES, noorWho, probeDays,
+  holidaySet, termEndOf, countSchoolDays, loadNoorTree, storeNoorTree, dateOverrides, setDateOverride, GRADES, noorWho, noorWhoScan, probeDays,
 } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { diffDays, addDays } from './dates.js';
@@ -719,7 +719,8 @@ async function ensureTab() {
   if (tabId) { try { await chrome.tabs.get(tabId); return; } catch (e) { tabId = null; } }
   try {
     const tabs = await chrome.tabs.query({ url: ['https://*.moe.gov.om/*', 'http://*.moe.gov.om/*'] });
-    const t = tabs.find((x) => noorWin && x.windowId === noorWin) || tabs[0];
+    const lms = tabs.filter((x) => /\blms\.moe\.gov\.om/.test(x.url || ''));   // منصة نور قبل مواقع الوزارة الأخرى
+    const t = lms.find((x) => noorWin && x.windowId === noorWin) || lms[0] || tabs.find((x) => noorWin && x.windowId === noorWin) || tabs[0];
     if (t) { tabId = t.id; return; }
   } catch (e) {}
   // لا تبويب لنور: نفتحه في نافذة عادية (لا في نافذة «حاضر» المنبثقة)
@@ -732,12 +733,29 @@ async function ensureTab() {
 }
 // بعد إعادة تثبيت «حاضر» يبدأ الجهاز بطلب تجربة جديد. إن كان حساب نور المفتوح هو حساب صاحب اشتراك فعّال وباسمه،
 // يعود الجهاز إلى اشتراكه وحده (من الخادم) دون «فعّل» ودون أن تُستهلك التجربة
-async function reclaim(openTab = true) {
-  try {
+let homeTried = false;   // صفحة نور الرئيسية فُتحت مرة لقراءة اسم المعلم (لكل شاشة تفعيل)
+// حساب نور المفتوح (رقم المعلم واسمه): تبويب نور الحالي، ثم كل تبويبات نور، ثم صفحة نور الرئيسية تُفتح مرة في تبويب جديد
+async function noorAccount(openTab = true) {
     if (openTab) await ensureTab();
     // نور تُفتح الآن أو ما زالت تُحمَّل: نقرأ حسابها حتى يظهر (مهلة قصيرة)
     let who = tabId ? await noorWho(tabId) : null;
     for (let i = 0; openTab && !who && tabId && i < 15 && !stopFlag; i++) { if (i === 3 || i === 9) await chrome.tabs.reload(tabId).catch(() => {}); await sleep(1000); who = await noorWho(tabId); }
+    // اسم المعلم في ترحيب صفحة نور الرئيسية: نبحث في كل تبويبات نور، وإن لم يظهر نفتح الرئيسية مرة واحدة في تبويب جديد
+    // (لا ننقل تبويبًا يعمل فيه المعلم) ونقرأها حتى يظهر الاسم
+    if (!who || !who.name) { const s = await noorWhoScan(tabId); if (s && (s.who.name || !who)) { who = s.who; if (s.who.name) tabId = s.tabId; } }
+    if (openTab && (!who || !who.name) && !homeTried && !stopFlag) {
+      homeTried = true;
+      try {
+        const t = await chrome.tabs.create(Object.assign({ url: HOME, active: true }, noorWin ? { windowId: noorWin } : {}));
+        tabId = t.id; await waitComplete(25000);
+        for (let i = 0; i < 20 && !stopFlag; i++) { if (i === 4 || i === 12) await chrome.tabs.reload(tabId).catch(() => {}); const w = await noorWhoScan(tabId); if (w && w.who.name) { who = w.who; tabId = w.tabId; break; } if (w && !who) who = w.who; await sleep(1000); }
+      } catch (e) {}
+    }
+    return who;
+}
+async function reclaim(openTab = true) {
+  try {
+    const who = await noorAccount(openTab);
     const r = await noorCheck(who || ((await chrome.storage.local.get('noorWho').catch(() => ({}))).noorWho || null));
     if (!r || !r.merged) return false;
     const g = await getPackages(); packages = g.packages; state = g.state;
@@ -1563,7 +1581,8 @@ function alignGroups0(groups, nodes, known) {
         if (top.length === 1) { t = top[0].x; byName++; }
       }
     }
-    if (!t) { const no = bookNo(gu); if (no != null) { const c = tList.filter((x) => x.no === no); if (c.length === 1) { t = c[0]; how = 'number'; } } }
+    // وحدة نور بلا اسم («الوحدة (1)») ووحدة ملفك برقمها نفسه («الوحدة الأولى: قيمنا»): رقمها هو اسمها في نور، فلا تُعدّ أسماءً لا تتشابه
+    if (!t) { const no = bookNo(gu); if (no != null) { const c = tList.filter((x) => x.no === no); if (c.length === 1) { t = c[0]; how = 'number'; if (numberOnlyUnit(t.text) === no) byName++; } } }
     if (!t && gUnits.size === tList.length && !taken.has(tList[ui].k)) { t = tList[ui]; how = 'number'; }   // العدد نفسه من الوحدات: بالترتيب
     if (!t) { leftovers.push(...gis); return; }
     taken.add(t.k);
@@ -3185,37 +3204,27 @@ function wzRender() {
     list = ['one', 'two'].map((k) => { const has = mine.some((o) => fitsShift(o.shift, k)); return { title: SHIFT[k].name, sub: has ? `الحصة ${toAr(SHIFT[k].min)} دقيقة` : 'تحضير هذا النوع غير جاهز بعد', disabled: !has, on: k === wz.shift, go: () => { wz.shift = k; wzSavePrefs(); wzResolve(); } }; });
     body.innerHTML = wzCards(list);
   } else if (wz.step === 'name') {
-    head.textContent = 'اسمك كما في نور';
-    body.innerHTML = `<p class="wz-note">يصل اسمك إلى المشرف، وبعد التواصل معه وتفعيل اشتراكك يبدأ التحضير وحده.</p>
-      <p class="wz-note big"><b>اكتب اسمك كما هو مسجّل في منصة نور</b> — اشتراكك يكون باسمك، ويعمل لحساب نور الذي يحمل هذا الاسم.</p>
+    // المالك 2026-11-03: لا يكتب المعلم اسمه ولا ينتظر المشرف — «حاضر» يقرأ اسمه من صفحة نور الرئيسية، ويسأل الموقع:
+    // إن كان المشرف قد سجّل هذا الاسم فُتحت له الأداة باشتراكه فورًا، وإلا عرض له التواصل مع المشرف
+    head.textContent = 'أتعرّف على حسابك في نور';
+    body.innerHTML = `<p class="wz-note big" id="wzWhoNote"><span class="spin"></span>افتح منصة نور على صفحتها الرئيسية بعد تسجيل دخولك: منها يقرأ «حاضر» اسمك ويفتح لك اشتراكك.</p>
+      <button class="btn" id="wzNoorOpen">افتح نور</button>
+      <details class="wz-code" id="wzSelf"><summary>أكتب اسمي بنفسي</summary>
+      <p class="wz-note">اكتب اسمك كما هو في نور تمامًا، بعدد كلماته نفسه.</p>
       <input class="input big" id="wzName" placeholder="اسمك كما في نور" autocomplete="name">
       <input class="input big" id="wzPhone" placeholder="رقم الهاتف (اختياري)" inputmode="tel" dir="ltr" style="text-align:right">
-      <p class="wz-note" id="wzRefNote" hidden>دعاك زميلك ✓ — إذا اشتركت تحصلان كلاكما على خصم.</p>
-      <details class="wz-code" id="wzRefBox"><summary>دعاني زميل (رقم الدعوة)</summary><input class="input big" id="wzRef" placeholder="رقم طلب زميلك، مثل 1003" inputmode="numeric" dir="ltr"></details>
-      <button class="btn primary big" id="wzNameGo">أرسل طلب التفعيل</button>`;
-    $('wzName').focus();
-    chrome.storage.local.get('afaqRef').then((v) => { if (v && v.afaqRef) { $('wzRefNote').hidden = false; $('wzRefBox').hidden = true; } }).catch(() => {});
+      <button class="btn primary big" id="wzNameGo">أرسل اسمي</button></details>`;
+    $('wzNoorOpen').onclick = () => { homeTried = false; wzWhoLoop(true); };
     $('wzNameGo').onclick = async () => {
       const name = $('wzName').value.replace(/\s+/g, ' ').trim();
-      if (name.split(' ').length < 2) { wzMsg('bad', 'اكتب اسمك كاملًا (اسمين على الأقل) كما في نور.'); return; }
-      const o = wzPickOffer();
-      if (!o) return;
-      const ref = ($('wzRef').value || '').replace(/[^\d]/g, '');
-      if (ref) await setRef(ref).catch(() => {});
-      await wzBusy('أرسل طلبك…', async () => {
-        const r = await startTrial(name, $('wzPhone').value.trim(), wz.shift, [o.id]);
-        if (!r.ok && r.error === 'too_many') {
-          // شبكة سجّل منها كثيرون اليوم: مسار هادئ — رسالة واتساب جاهزة باسمه ومادته، ونفتح له من لوحة الإدارة
-          const wa = whatsappUrl('', `السلام عليكم، أنا ${name}، أريد تجربة «حاضر» في ${o.title || o.subject || 'مادتي'}.`);
-          wzMsg('info', `نجهّز لك «حاضر» مباشرة عبر واتساب. <a class="btn wa" href="#" id="wzTooWa">راسلنا على واتساب</a>`);
-          $('wzTooWa').onclick = (e) => { e.preventDefault(); openUrl(wa); };
-          return;
-        }
-        if (!r.ok) { wzMsg('bad', wzErr(r.error)); return; }
-        await wzReload();
-        wzResolve(true);
-      });
+      if (name.split(' ').length < 2) { wzMsg('info', 'اكتب اسمك كاملًا كما هو في نور (اسمين على الأقل).'); return; }
+      // ظهر حساب نور الآن: يُرسَل اسمه كما في نور، لا المكتوب
+      const w = await noorAccount(false).catch(() => null);
+      if (w && w.id && w.name && w.name.split(' ').length >= 2) { wzNameSend(w.name, $('wzPhone').value.trim(), w); return; }
+      wzNameSend(name, $('wzPhone').value.trim(), null);
     };
+    homeTried = false;
+    wzWhoLoop(true);
     return;
   } else if (wz.step === 'from') {
     head.textContent = 'بداية الإدخال';
@@ -3384,6 +3393,37 @@ async function wzResolve(noName) {
     await wzReload();
     const o2 = wzPickOffer();
     if (o2 && o2.src === 'lib') wzOpen(o2.pkg); else wzMsg('bad', 'لم تظهر المادة في مكتبتك بعد — أعد المحاولة بعد قليل.');
+  });
+}
+// خطوة الاسم: نقرأ حساب نور حتى يظهر الاسم (كل ثلاث ثوانٍ ما دامت الخطوة ظاهرة)، ثم نرسله وحده
+let whoLoop = 0;
+async function wzWhoLoop(openHome) {
+  const my = ++whoLoop;
+  for (let first = true; my === whoLoop && wz.step === 'name' && !wz.busy; first = false) {
+    const who = await noorAccount(first && openHome).catch(() => null);
+    if (my !== whoLoop || wz.step !== 'name' || wz.busy) return;
+    if (who && who.id && who.name && who.name.split(' ').length >= 2) { await wzNameSend(who.name, '', who); return; }
+    await sleep(3000);
+  }
+}
+// الاسم (من نور أو مكتوبًا) ← طلب في الموقع؛ ومع حساب نور يسأل الموقع فورًا إن كان المشرف سجّل هذا الاسم فيفتح الاشتراك
+async function wzNameSend(name, phone, who) {
+  const o = wzPickOffer();
+  if (!o) return;
+  whoLoop++;
+  await wzBusy(who ? 'أتحقق من اسمك في «حاضر»…' : 'أرسل اسمك…', async () => {
+    const r = await startTrial(name, phone, wz.shift, [o.id]);
+    if (!r.ok && r.error === 'too_many') {
+      // شبكة سجّل منها كثيرون اليوم: مسار هادئ — رسالة واتساب جاهزة باسمه ومادته، ونفتح له من لوحة الإدارة
+      const wa = whatsappUrl('', `السلام عليكم، أنا ${name}، أريد تفعيل «حاضر» في ${o.title || o.subject || 'مادتي'}.`);
+      wzMsg('info', `نجهّز لك «حاضر» مباشرة عبر واتساب. <a class="btn wa" href="#" id="wzTooWa">راسلنا على واتساب</a>`);
+      $('wzTooWa').onclick = (e) => { e.preventDefault(); openUrl(wa); };
+      return;
+    }
+    if (!r.ok) { wzMsg('bad', wzErr(r.error)); return; }
+    if (who) await noorCheck(who).catch(() => null);   // الاسم مسجّل في الموقع: يُفتح الاشتراك الآن (merged)
+    await wzReload();
+    wzResolve(true);
   });
 }
 const wzErr = (e) => ({ name: 'اكتب اسمك كاملًا.', shift: 'اختر نوع المدرسة.', packages: 'المادة غير متاحة الآن.', too_many: 'too_many', unlinked: 'انتهى ربط هذا الجهاز — أعد فتح النافذة.', expired: 'انتهى هذا الاشتراك.', devices: 'بلغت الحد الأقصى للأجهزة (جهازان) — راسلنا على واتساب.', network: 'تعذّر الاتصال بالإنترنت — تحقق ثم أعد المحاولة.', server: 'الخادم لم يستجب — أعد المحاولة بعد قليل.' }[e] || 'تعذّر إكمال الطلب — أعد المحاولة.');
@@ -3564,6 +3604,7 @@ function showPay(p) {
   document.body.classList.remove('wiz-run');
   $('wizCard').hidden = false;
   wz.hist = [];
+  homeTried = false;
   wzGo('pay', false);
 }
 let payTimer = null;
@@ -3583,8 +3624,9 @@ function wzPayRender() {
   const st = wz.status || {};
   const req = st.request || {};
   $('wzHead').textContent = 'تفعيل اشتراكك';
-  $('wzBody').innerHTML = `<p class="wz-note big">وصل اسمك إلى المشرف. لتفعيل اشتراكك تواصل معنا على واتساب، واذكر اسمك والمواد التي تريدها.</p>
+  $('wzBody').innerHTML = `<p class="wz-note big">${st.name ? `وصل اسمك «${esc(st.name)}» إلى المشرف` : 'وصل اسمك إلى المشرف'}، ويُفتح اشتراكك هنا وحده فور تفعيله. للتواصل معه: واتساب، واذكر اسمك كما هو في نور تمامًا.</p>
     <div class="wz-wa"><span>واتساب</span><b dir="ltr">${esc(waShow(st.whatsapp))}</b></div>
+    <p class="wz-note">افتح منصة نور على صفحتها الرئيسية وأبقها مفتوحة: منها يتعرّف «حاضر» على اسمك، فيتفعّل اشتراكك وحده متى سجّل المشرف اسمك.</p>
     ${req.id ? `<p class="wz-line">رقم طلبك: <b>${toAr(req.id)}</b></p>` : ''}
     <p class="hint">${payResume ? 'اطلب التفعيل، وبعده يكمل التحضير وحده من حيث توقف — أبقِ هذه النافذة ونور مفتوحتين.' : 'بعد التفعيل تظهر موادك هنا وحدها.'}</p>
     <button class="btn sm" id="wzOther">رجوع</button>`;

@@ -885,6 +885,20 @@ export async function noorWho(tabId) {
   const { noorWho: c } = await chrome.storage.local.get('noorWho').catch(() => ({}));
   return c && c.id && Date.now() - c.at < 12 * 3600e3 ? { id: c.id, name: c.name || '' } : null;
 }
+// كل تبويبات نور (المالك 2026-11-03: معلمة فتحت نور على صفحة غير الرئيسية فلم يُقرأ اسمها وبقي التفعيل ينتظر):
+// أول تبويب يظهر فيه رقم المعلم واسمه — الاسم في ترحيب الصفحة الرئيسية — وإلا تبويب فيه الرقم وحده، وإلا null
+export async function noorWhoScan(prefer) {
+  let tabs = [];
+  try { tabs = await chrome.tabs.query({ url: ['https://*.moe.gov.om/*', 'http://*.moe.gov.om/*'] }); } catch (e) {}
+  const ids = [...new Set([prefer].concat(tabs.map((t) => t.id)).filter((x) => x != null))];
+  let idOnly = null;
+  for (const id of ids) {
+    const w = await noorWhoRead(id);
+    if (w && w.name) { chrome.storage.local.set({ noorWho: Object.assign({ at: Date.now() }, w) }).catch(() => {}); return { who: w, tabId: id }; }
+    if (w && !idOnly) idOnly = { who: w, tabId: id };
+  }
+  return idOnly;
+}
 async function noorWhoRead(tabId) {
   try {
     const [res] = await chrome.scripting.executeScript({ target: { tabId }, func: () => {

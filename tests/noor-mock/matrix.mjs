@@ -294,6 +294,16 @@ async function clickCard(pg, text, ms = 20000) {
   throw new Error(`wizard card «${text}» not found`);
 }
 const started = (pg) => pg.evaluate(() => document.body.classList.contains('wiz-run') || !!document.getElementById('wzName') || !!document.querySelector('input[data-k]')).catch(() => false);
+// 4.10.36: the name step reads the teacher's name from Noor by itself (owner 2026-11-03); typing it is only the fallback
+async function nameStep(pg) {
+  const onName = () => pg.evaluate(() => /حسابك في نور/.test((document.getElementById('wzHead') || {}).textContent || '') && !document.body.classList.contains('wiz-run')).catch(() => false);
+  for (const t0 = Date.now(); Date.now() - t0 < 30000 && (await onName());) await new Promise((r) => setTimeout(r, 1000));
+  if (await onName()) {
+    await pg.evaluate(() => { const d = document.getElementById('wzSelf'); if (d) d.open = true; }).catch(() => {});
+    await pg.fill('#wzName', 'سالم علي', { timeout: 15000 });
+    await pg.click('#wzNameGo');
+  }
+}
 async function wizardTo(pg, job, mode, { name = true } = {}) {
   const step = async (t) => { if (await started(pg)) return; await clickCard(pg, t); };
   // «أضف واجبًا لكل درس» (4.10.24) off: the matrix checks preps only (homework: run.mjs scenarios 22–23)
@@ -303,10 +313,7 @@ async function wizardTo(pg, job, mode, { name = true } = {}) {
   await step(job.subject);
   await step(job.shift === 'two' ? 'فترتان' : 'فترة واحدة');
   if (!name) return;
-  if (await pg.evaluate(() => !!document.getElementById('wzName')).catch(() => false)) {
-    await pg.fill('#wzName', 'سالم علي', { timeout: 15000 });
-    await pg.click('#wzNameGo');
-  }
+  await nameStep(pg);
 }
 async function ui(pg) {
   return pg.evaluate(() => {

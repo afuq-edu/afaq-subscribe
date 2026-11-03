@@ -78,8 +78,15 @@ function check(ok, what, detail = '') {
 const fmtRows = (rows) => rows.map((r) => { const l = sessionOfRow(r); return `#${r.post} ${l ? l.id.slice(-3) : '???'} «${r.title}» node=${r.nodeText} [${r.unit}] date=${r.publishDate}`; }).join('\n');
 
 // ---------- common assertions on what Noor received ----------
-function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], sameDay = false }) {
-  const unknown = rows.filter((r) => !sessionOfRow(r));
+function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], sameDay = false, maxJoins = 0 }) {
+  // a joined prep «X (n و m)» of one Noor lesson (4.10.29: when Noor has fewer free periods than the plan, sessions of the SAME lesson
+  // share a prep so the plan still ends in its last week): it stands for sessions n, m of that lesson; allowed only up to maxJoins
+  const joinedOf = (r) => { const m = r.title.match(/ \((\d+(?: و \d+)+)\)$/); if (!m) return null; const ns = m[1].split(' و ').map(Number);
+    const ls = PKG.lessons.filter((l) => { const n = nodeFor(tree, l); return n && n.nodeId === r.lessonId && ns.includes(sessNo(l)); }); return ls.length === ns.length ? ls : null; };
+  const joined = rows.filter((r) => !sessionOfRow(r) && joinedOf(r));
+  check(joined.length <= maxJoins, `${name}: same-lesson joined preps «(n و m)» only where the plan overruns (${joined.length} ≤ ${maxJoins})`, joined.map((r) => `«${r.title}» date=${r.publishDate}`).join('\n'));
+  const jIds = new Set(joined.flatMap((r) => joinedOf(r).map((l) => l.id)));
+  const unknown = rows.filter((r) => !sessionOfRow(r) && !joinedOf(r));
   check(!unknown.length, `${name}: every saved row carries the content of a session from the file`, fmtRows(unknown));
   const byId = new Map();
   rows.forEach((r) => { const l = sessionOfRow(r); if (l) byId.set(l.id, (byId.get(l.id) || []).concat(r)); });
@@ -91,7 +98,7 @@ function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], same
   const resaved = rows.filter((r) => pre.has(r.lessonId + '|' + r.title));
   check(!resaved.length, `${name}: nothing already in Noor was saved again`, fmtRows(resaved));
   if (expectIds) {
-    const got = [...byId.keys()].sort(), want = expectIds.slice().sort();
+    const got = [...new Set([...byId.keys(), ...jIds])].sort(), want = expectIds.slice().sort();
     check(JSON.stringify(got) === JSON.stringify(want), `${name}: exactly the expected sessions were saved (${want.length})`,
       `missing: ${want.filter((x) => !got.includes(x)).join(', ') || '-'}\nextra: ${got.filter((x) => !want.includes(x)).join(', ') || '-'}`);
   }
@@ -105,7 +112,7 @@ function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], same
     check(!off.length, `${name}: publish dates as expected`, off.map((r) => `${sessionOfRow(r).id}: got ${r.publishDate}, expected ${dates[sessionOfRow(r).id]}`).join('\n'));
   }
   // chronological: curriculum order ⇒ strictly increasing publish dates (new rows and rows that were already in Noor)
-  const all = rows.map((r) => ({ l: sessionOfRow(r), d: r.publishDate })).filter((x) => x.l)
+  const all = rows.flatMap((r) => (sessionOfRow(r) ? [sessionOfRow(r)] : joinedOf(r) ? joinedOf(r).slice(0, 1) : []).map((l) => ({ l, d: r.publishDate })))
     .concat(preexisting.map((p) => ({ l: PKG.lessons.find((x) => x.pubDate === p.publishDate && titleFor(tree, x) === p.title), d: p.publishDate })).filter((x) => x.l));
   all.sort((a, b) => a.l.idx - b.l.idx);
   const flips = [];
@@ -154,8 +161,20 @@ const card = async (pg, t) => { await pg.locator('.wz-card:not([disabled])', { h
 // the service choice on the first wizard screen (not part of a run once it has started)
 async function svcPick(pg, k, started) {
   if (started && (await started())) return;
+  await pg.waitForSelector(`.wz-seg-b[data-svc="${k}"]`, { timeout: 20000 }).catch(() => {});
+  if (started && (await started())) return;
   await pg.evaluate((k) => { const b = document.querySelector(`.wz-seg-b[data-svc="${k}"]`); if (b && !b.classList.contains('on')) b.click(); }, k).catch(() => {});
   await sleep(300);
+}
+// 4.10.36: the name step reads the teacher's name from Noor by itself (owner 2026-11-03); typing it is only the fallback
+async function nameStep(pg) {
+  const onName = () => pg.evaluate(() => /حسابك في نور/.test((document.getElementById('wzHead') || {}).textContent || '') && !document.body.classList.contains('wiz-run')).catch(() => false);
+  for (const t0 = Date.now(); Date.now() - t0 < 30000 && (await onName());) await new Promise((r) => setTimeout(r, 1000));
+  if (await onName()) {
+    await pg.evaluate(() => { const d = document.getElementById('wzSelf'); if (d) d.open = true; }).catch(() => {});
+    await pg.fill('#wzName', 'سالم علي', { timeout: 15000 });
+    await pg.click('#wzNameGo');
+  }
 }
 async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع', subject = 'الأحياء', shift = 'فترة واحدة', hw = false } = {}) {
   // each step only if the run has not started yet (once linked, a «من حسابك في نور» shortcut can skip steps)
@@ -169,8 +188,7 @@ async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع'
   await step('.wz-card:not([disabled])', subject);
   await step('.wz-card:not([disabled])', shift);
   if (!name) return;
-  await pg.fill('#wzName', 'سالم علي', { timeout: 15000 });
-  await pg.click('#wzNameGo');
+  await nameStep(pg);
 }
 // «open the tool again»: reload semester.html (fresh local record, as on every open) and run the full term again
 async function rerun(b, label, wz = {}) {
@@ -252,7 +270,8 @@ T(2, 'Noor rejects dates (used/holiday): at typing time and at save time', async
   check(/تمت التعبئة بنجاح/.test(s.head), 'wizard finishes with success', `${s.head} | ${s.text}`);
   // period after period (Sun/Mon/Tue): 14/9 refused while typing and 21/9 refused at save are skipped, the rest follow in order
   const keep = Object.fromEntries(['2026-09-06', '2026-09-07', '2026-09-08', '2026-09-13', '2026-09-15', '2026-09-20', '2026-09-22', '2026-09-27', '2026-09-28'].map((d, i) => [sid(i + 1), d]));
-  assertRows('S2', rows, tree, { expectIds: range(1, 45), dates: keep, preexisting: pre });
+  // two refused days push two sessions past the plan's last week: at most two same-lesson joins keep the plan inside it (4.10.29)
+  assertRows('S2', rows, tree, { expectIds: range(1, 45), dates: keep, preexisting: pre, maxJoins: 2 });
   const d = (n) => (rows.find((r) => sessionOfRow(r) && sessionOfRow(r).id === sid(n)) || {}).publishDate;
   check(!rows.some((r) => r.publishDate === '2026-09-14' || r.publishDate === '2026-09-21'), 'nothing saved on the refused 14/9 and 21/9', fmtRows(rows));
   check(noor.st.posts.some((p) => p.date === '2026-09-21'), 'Noor refused one save on 21/9 (save-time refusal exercised)');
@@ -355,6 +374,7 @@ T(7, 'No free trial (owner 2026-11-01): a new teacher\'s request waits for the a
   check(env.afaq.st.calls.includes('ext_contact'), 'request marked «بانتظار التفعيل» (ext_contact called)');
   check(s.wiz && /يكمل التحضير وحده/.test(s.wzBody || s.text || ''), 'the screen says the preparation starts by itself after activation', JSON.stringify(s));
   check(s.wiz && !/مجان|تجرب/.test((s.wzHead || '') + (s.wzBody || '')), 'no free-trial wording', JSON.stringify(s));
+  check(s.wiz && /صفحتها الرئيسية/.test(s.wzBody || s.text || ''), 'the screen tells the teacher to keep Noor\'s home page open (the name is read there)', JSON.stringify(s));
   // the admin activates the request: the run starts by itself (no button), with the same choices
   env.afaq.st.active = true; env.afaq.st.status = 'active';
   const t0 = Date.now();
@@ -772,6 +792,51 @@ T(30, 'Pick mode near the term end (owner 2026-11-03): one typed date gives the 
   return b;
 });
 
+// owner 2026-11-03: a teacher registered by name stayed «waiting» because Noor was open on a page other than the home page (the name
+// is in the home page's welcome), so «حاضر» never read her Noor account and the server could not match her name
+T(31, 'Activation by the Noor name: Noor is open on a course page (no name there) — the tool opens Noor\'s home page itself, reads the name, the server activates by it and the full term runs; the waiting screen tells the teacher to keep Noor\'s home page open', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 6) }));
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree, whoHomeOnly: true });
+  env.afaq.reset({ pkg: PKG, trialLeft: 0, mergeOnNoor: true, mergeNeedsName: true });
+  const b = await env.launch(noor);
+  const np = await b.ctx.newPage();
+  await np.goto('https://lms.moe.gov.om/teacher/courses/preparations_index/cid:BIO9').catch(() => {});
+  await b.pg.bringToFront();
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 10 * 60000, 'activation by the Noor name');
+  const named = env.afaq.st.noor.filter((a) => a.p_name);
+  check(named.length >= 1 && named.every((a) => a.p_name === 'سالم علي'), `the tool sent the Noor name read from the home page (${named.length} calls with a name)`, JSON.stringify(env.afaq.st.noor));
+  check(env.afaq.st.merged >= 1, 'the server activated the subscription by the Noor name (ext_noor → merged)', env.afaq.st.calls.join(' '));
+  // the name is only on the home page here, so a call carrying it means the tool read Noor's home page
+  check(/https:\/\/lms\.moe\.gov\.om\/teacher\/courses\/preparations_index/.test(np.url()) || np.isClosed(), 'the teacher\'s own Noor tab was not taken over', np.isClosed() ? 'closed' : np.url());
+  check(/تمت التعبئة بنجاح/.test(s.head), 'the full term runs after the activation', `${s.head} | ${s.wzHead || ''} | ${s.text}`);
+  assertRows('S31', noor.st.rows.filter((r) => !r.preexisting), tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
+  return b;
+});
+
+// owner 2026-11-03: no typing, no waiting — the name comes from Noor's home page; a name the admin has not registered yet shows the
+// contact screen with that name, and once the admin registers it the subscription opens and the term runs by itself
+T(32, 'Name from Noor, not registered yet: no name to type — the request carries the Noor name, the waiting screen shows it; when the admin registers the name the term starts by itself', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 6) }));
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree, whoHomeOnly: true });
+  env.afaq.reset({ pkg: PKG, trialLeft: 0, mergeOnNoor: false, mergeNeedsName: true });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 6 * 60000, 'name not registered');
+  check(env.afaq.st.startName === 'سالم علي', `the request carries the name read from Noor («${env.afaq.st.startName}»), nothing typed`);
+  check(s.wiz && /تفعيل اشتراكك/.test(s.wzHead) && /سالم علي/.test(s.wzBody || ''), 'the waiting screen shows the teacher\'s Noor name', JSON.stringify(s));
+  check(noor.st.rows.filter((r) => !r.preexisting).length === 0, 'nothing saved before the name is registered');
+  env.afaq.st.mergeOnNoor = true;   // the admin adds the name in «المسجّلون بالاسم»
+  for (const t0 = Date.now(); Date.now() - t0 < 90000;) { const u = await ui(b.pg).catch(() => null); if (u && !(u.wiz && /تفعيل اشتراكك/.test(u.wzHead))) break; await sleep(1500); }
+  const s2 = await waitDone(b.pg, 10 * 60000, 'after the name is registered');
+  check(env.afaq.st.merged >= 1, 'the subscription opened by the Noor name (ext_noor → merged)', env.afaq.st.calls.join(' '));
+  check(/تمت التعبئة بنجاح/.test(s2.head), 'the full term runs by itself after the name is registered', `${s2.head} | ${s2.wzHead || ''} | ${s2.text}`);
+  assertRows('S32', noor.st.rows.filter((r) => !r.preexisting), tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
+  return b;
+});
+
 T(21, 'Late start on a Noor that accepts past dates (today 1 November, empty Noor): after the two start alerts every session is published on its plan date from the first school day (6 September), in order, one prep per session; a re-run adds nothing', async (env) => {
   usePkg(derivePkg({ keep: range(1, 18) }));
   const tree = treeFromPackage(PKG);
@@ -1033,7 +1098,7 @@ T(25, 'Subscription «واجبات فقط»: a prep mode sends the teacher back 
   await sleep(6000);
   const u = await ui(b.pg);
   check(!noor.st.rows.filter((r) => !r.preexisting).length && !noor.st.posts.length, 'no prep was saved', '');
-  check(u.wiz && /الواجبات فقط/.test(u.wzHead + ' ' + u.wzBody) , 'the teacher is back at the choice screen (full term is not part of his subscription)', `${u.wzHead} | ${u.wzBody}`.slice(0, 200));
+  check(u.wiz && /واجبات فقط/.test(u.wzHead + ' ' + u.wzBody) && /ماذا تريد/.test(u.wzHead), 'the teacher is back at the choice screen (full term is not part of his subscription)', `${u.wzHead} | ${u.wzBody}`.slice(0, 200));
   const msg = await b.pg.evaluate(() => document.getElementById('wzMsg').textContent);
   check(/للواجبات/.test(msg) && !/خطأ|فشل|غير موجود|لم أجد/.test(msg), 'a calm note explains the subscription covers homework', msg);
   await svcPick(b.pg, 'hw');
