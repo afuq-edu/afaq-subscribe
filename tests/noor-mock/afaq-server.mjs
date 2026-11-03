@@ -33,7 +33,7 @@ export function startAfaq(port = 8765) {
       st.calls.push(fn);
       let out = { ok: false, error: 'server' };
       if (fn === 'ext_catalog') out = { ok: true, term: 1, trial: 3, packages: [{ ...st.offer }] };
-      else if (fn === 'ext_start') out = { ok: true, token: 'b'.repeat(64), request: 1001, name: args.p_name || 'سالم علي' };
+      else if (fn === 'ext_start') { st.startName = args.p_name || ''; out = { ok: true, token: 'b'.repeat(64), request: 1001, name: args.p_name || 'سالم علي' }; }
       else if (fn === 'ext_me') out = { ok: true, name: 'سالم علي', subs: [sub()], request: { id: 1001, status: st.active ? 'active' : st.status, shift: st.offer.shift, packages: [st.offer.id] }, whatsapp: '96876506037', trial_lessons: 3, trial_left: st.active ? null : st.left };
       else if (fn === 'ext_structure') out = { ok: true, pkg: JSON.parse(JSON.stringify(st.pkg)) };
       else if (fn === 'ext_pick') out = { ok: true, request: 1001 };

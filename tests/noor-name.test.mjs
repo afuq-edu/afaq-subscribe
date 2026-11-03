@@ -8,7 +8,7 @@ await db.exec(`create schema auth;
   create role anon nologin; create role authenticated nologin;`);
 const R = (f) => fs.readFileSync(new URL('../site/supabase/' + f, import.meta.url), 'utf8');
 await db.exec(R('schema.sql'));
-for (const f of ['hader-noor-bind.sql','hader-min-version.sql','hader-audit-4104.sql','hader-admin-access.sql','hader-name-return.sql','hader-name-subs.sql','hader-open-access.sql','hader-noor-name.sql']) { try { await db.exec(R(f)); } catch (e) { console.log('FAIL load', f, e.message); process.exit(1); } }
+for (const f of ['hader-noor-bind.sql','hader-min-version.sql','hader-audit-4104.sql','hader-admin-access.sql','hader-name-return.sql','hader-name-subs.sql','hader-open-access.sql','hader-noor-name.sql','hader-noor-home.sql']) { try { await db.exec(R(f)); } catch (e) { console.log('FAIL load', f, e.message); process.exit(1); } }
 let pass=0, fail=0; const ok=(c,n,x)=>{ if(c){pass++;console.log('  ✓',n);} else {fail++;console.log('  ✗',n,JSON.stringify(x));} };
 const q = async (s, p) => (await db.query(s, p)).rows;
 const one = async (s, p) => (await q(s, p))[0];
@@ -118,6 +118,41 @@ ok(s6.ok, '«جدّد» → active again in the new term', s6);
 // ---------- المدير ----------
 let eAnon = null; try { await q(`select public.admin_name_sub_renew(1)`); } catch (e) { eAnon = e.message; }
 ok(eAnon && /غير مسموح/.test(eAnon), 'non-admins cannot renew', eAnon);
+
+// ---------- 4.10.36: الاسم من صفحة نور، وحدّ الشبكة لا يوقف اسمًا مسجّلًا (hader-noor-home.sql) ----------
+await db.exec(`update public.ext_requests set created_at = now() - interval '2 days'`);
+for (let i = 0; i < 6; i++) await start('معلم تجربة رقم ' + 'ابجدهو'[i]);
+const tooMany = await start('شخص غير مسجل هنا');
+ok(tooMany && tooMany.error === 'too_many', 'an unregistered name still meets the network daily limit', tooMany);
+const reg = await add('زينب خالد سعيد المعمري');
+ok(reg && reg.ok, 'admin registers a name', reg);
+const st = await start('زينب خالد سعيد المعمري');
+ok(st && st.ok && st.token, 'a registered name is never stopped by the network daily limit', st);
+const nsRow = await one(`select claimed_user from public.name_subs where name = 'زينب خالد سعيد المعمري' and hidden_at is null`);
+ok(nsRow && !nsRow.claimed_user, 'the name sent by the tool does not claim the entry by itself (the Noor account does)', nsRow);
+const mz = await noor(st.token, H('7'), 'زينب خالد سعيد المعمري');
+ok(mz && mz.merged, 'the Noor account with that name opens the subscription at once (merged)', mz);
+const subsZ = await q(`select package_id from public.subscriptions where user_id = $1 and not revoked`, [await userOf(st.token)]);
+ok(subsZ.length >= 2, `all subjects are opened for that teacher (${subsZ.length})`, subsZ);
+
+// ---------- «فعّل» على طلب: كل مواد المعلم ونوع الاشتراك، باسم حساب نور ----------
+await db.exec(`update public.ext_requests set created_at = now() - interval '2 days'`);
+const st2 = await start('سلمى ناصر حمد الريامي');
+ok(st2 && st2.ok, 'an unregistered teacher sends her name (request waits)', st2);
+await noor(st2.token, H('8'), 'سلمى ناصر حمد الريامي');
+const rq2 = (await one(`select id from public.ext_requests where user_id = $1`, [await userOf(st2.token)])).id;
+let eAct = null; try { await q(`select public.admin_request_activate($1,'both')`, [rq2]); } catch (e) { eAct = e.message; }
+ok(eAct && /غير مسموح/.test(eAct), 'non-admins cannot activate a request', eAct);
+await asAdmin(true); const act = (await one(`select public.admin_request_activate($1,'prep') as r`, [rq2])).r; await asAdmin(false);
+ok(act && act.ok && act.name === 'سلمى ناصر حمد الريامي', 'admin «فعّل» registers her Noor name', act);
+const subs2 = await q(`select package_id, service from public.subscriptions where user_id = $1 and not revoked`, [await userOf(st2.token)]);
+ok(subs2.length >= 2 && subs2.every((x) => x.service === 'prep'), `all her subjects open with the chosen service (${subs2.length}, ${[...new Set(subs2.map((x) => x.service))]})`, subs2);
+const rs2 = await one(`select status from public.ext_requests where id = $1`, [rq2]);
+ok(rs2.status === 'active', 'her request shows active', rs2);
+const nz2 = await noor(st2.token, H('8'), 'سلمى ناصر حمد الريامي');
+ok(nz2 && nz2.ok !== false, 'her own Noor account keeps working', nz2);
+const nz3 = await noor(st2.token, H('9'), 'شخص آخر تماما هنا');
+ok(nz3 && nz3.ok === false, 'another Noor account on her device is not served', nz3);
 
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

@@ -166,6 +166,16 @@ async function svcPick(pg, k, started) {
   await pg.evaluate((k) => { const b = document.querySelector(`.wz-seg-b[data-svc="${k}"]`); if (b && !b.classList.contains('on')) b.click(); }, k).catch(() => {});
   await sleep(300);
 }
+// 4.10.36: the name step reads the teacher's name from Noor by itself (owner 2026-11-03); typing it is only the fallback
+async function nameStep(pg) {
+  const onName = () => pg.evaluate(() => /حسابك في نور/.test((document.getElementById('wzHead') || {}).textContent || '') && !document.body.classList.contains('wiz-run')).catch(() => false);
+  for (const t0 = Date.now(); Date.now() - t0 < 30000 && (await onName());) await new Promise((r) => setTimeout(r, 1000));
+  if (await onName()) {
+    await pg.evaluate(() => { const d = document.getElementById('wzSelf'); if (d) d.open = true; }).catch(() => {});
+    await pg.fill('#wzName', 'سالم علي', { timeout: 15000 });
+    await pg.click('#wzNameGo');
+  }
+}
 async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع', subject = 'الأحياء', shift = 'فترة واحدة', hw = false } = {}) {
   // each step only if the run has not started yet (once linked, a «من حسابك في نور» shortcut can skip steps)
   const started = () => pg.evaluate(() => document.body.classList.contains('wiz-run') || !!document.getElementById('wzName')).catch(() => false);
@@ -178,8 +188,7 @@ async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع'
   await step('.wz-card:not([disabled])', subject);
   await step('.wz-card:not([disabled])', shift);
   if (!name) return;
-  await pg.fill('#wzName', 'سالم علي', { timeout: 15000 });
-  await pg.click('#wzNameGo');
+  await nameStep(pg);
 }
 // «open the tool again»: reload semester.html (fresh local record, as on every open) and run the full term again
 async function rerun(b, label, wz = {}) {
@@ -803,6 +812,28 @@ T(31, 'Activation by the Noor name: Noor is open on a course page (no name there
   check(/https:\/\/lms\.moe\.gov\.om\/teacher\/courses\/preparations_index/.test(np.url()) || np.isClosed(), 'the teacher\'s own Noor tab was not taken over', np.isClosed() ? 'closed' : np.url());
   check(/تمت التعبئة بنجاح/.test(s.head), 'the full term runs after the activation', `${s.head} | ${s.wzHead || ''} | ${s.text}`);
   assertRows('S31', noor.st.rows.filter((r) => !r.preexisting), tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
+  return b;
+});
+
+// owner 2026-11-03: no typing, no waiting — the name comes from Noor's home page; a name the admin has not registered yet shows the
+// contact screen with that name, and once the admin registers it the subscription opens and the term runs by itself
+T(32, 'Name from Noor, not registered yet: no name to type — the request carries the Noor name, the waiting screen shows it; when the admin registers the name the term starts by itself', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 6) }));
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree, whoHomeOnly: true });
+  env.afaq.reset({ pkg: PKG, trialLeft: 0, mergeOnNoor: false, mergeNeedsName: true });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 6 * 60000, 'name not registered');
+  check(env.afaq.st.startName === 'سالم علي', `the request carries the name read from Noor («${env.afaq.st.startName}»), nothing typed`);
+  check(s.wiz && /تفعيل اشتراكك/.test(s.wzHead) && /سالم علي/.test(s.wzBody || ''), 'the waiting screen shows the teacher\'s Noor name', JSON.stringify(s));
+  check(noor.st.rows.filter((r) => !r.preexisting).length === 0, 'nothing saved before the name is registered');
+  env.afaq.st.mergeOnNoor = true;   // the admin adds the name in «المسجّلون بالاسم»
+  for (const t0 = Date.now(); Date.now() - t0 < 90000;) { const u = await ui(b.pg).catch(() => null); if (u && !(u.wiz && /تفعيل اشتراكك/.test(u.wzHead))) break; await sleep(1500); }
+  const s2 = await waitDone(b.pg, 10 * 60000, 'after the name is registered');
+  check(env.afaq.st.merged >= 1, 'the subscription opened by the Noor name (ext_noor → merged)', env.afaq.st.calls.join(' '));
+  check(/تمت التعبئة بنجاح/.test(s2.head), 'the full term runs by itself after the name is registered', `${s2.head} | ${s2.wzHead || ''} | ${s2.text}`);
+  assertRows('S32', noor.st.rows.filter((r) => !r.preexisting), tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
   return b;
 });
 
