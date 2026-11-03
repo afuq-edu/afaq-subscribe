@@ -382,6 +382,32 @@ function assignDates() {
       if (!dateNotes.has('loose:' + loose)) { dateNotes.add('loose:' + loose); logLine('info', `حصصك في الجدول أقل من حصص الخطة: من ${dayLabel(loose, false)} تتابع الحصص على حصصك مباشرة حتى يكتمل الفصل قبل نهايته`); }
     }
   }
+  // «أختار الدروس بنفسي» (المالك 2026-11-03): حصة مختارة تقع بعد نهاية الفصل تُجمع إلى أقرب حصة قبلها من الدرس نفسه
+  // في تحضير واحد «الدرس (2 و 3)» (حتى أربع حصص)؛ لا يُجمع درسان مختلفان، وتواريخ المعلم الأخرى تبقى كما كتبها
+  if (WIZ.pickDates && termEnd && WIZ.trialCap == null) {
+    const size = (x) => 1 + ((x.merge || []).length);
+    const free = (x) => x && x.p && wanted(x) && !x.savedNow && !x.cur && !x.done;
+    const today = todayIso();
+    // يوم بلا حصة للمعلم (من جدوله في نور) يُنقل عند الحفظ إلى يوم حصته التالي: يُحسب هنا بموضعه بعد النقل
+    const eff = (d) => (isIso(d) && days.length && !days.includes(wdOf(d)) ? nextSchoolDay(d, days, false) : d);
+    for (let guard = 0; guard < 300; guard++) {
+      let joined = false;
+      for (let i = items.length - 1; i > 0 && !joined; i--) {
+        const b = items[i].s;
+        if (!(eff(items[i].date) > termEnd) || !free(b)) continue;
+        for (let j = i - 1; j >= 0; j--) {
+          const a = items[j].s;
+          if (a.p !== b.p) continue;
+          if (free(a) && !(items[j].date < today) && size(a) + size(b) <= 4) {
+            a.merge = (a.merge || []).concat(b, b.merge || []); b.mergedInto = a; b.merge = null; joined = true;
+          }
+          break;   // أقرب حصة قبلها من الدرس نفسه فقط
+        }
+      }
+      if (!joined) break;
+      ({ items, notes } = lay());
+    }
+  }
   items.forEach((it) => { it.s.date = it.date; it.s.slot = it.slot || 1; it.s.dateSrc = it.dateSrc; it.s.movedFrom = ''; it.s.afterTerm = !!(termEnd && it.date > termEnd); });
   cands.forEach((x) => { let r = x.mergedInto; while (r && r.mergedInto) r = r.mergedInto; if (r) { x.date = r.date; x.slot = r.slot; x.afterTerm = r.afterTerm; } });
   notes.forEach((n) => {
@@ -394,7 +420,8 @@ function assignDates() {
   const late = items.filter((it) => it.s.afterTerm).length;
   const merged = cands.filter((x) => x.mergedInto).length;
   // يُذكر الجمع بعد قراءة جدول المعلم فقط: قبلها قد يُجمع ما يتسع له الجدول ثم يُفكّ
-  if (merged && schedRead && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', fromIso ? `حصص الفصل أكثر من حصصك الباقية في الجدول: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد، فتكتمل قبل نهاية الفصل (${dayLabel(fitEnd, false)})` : `حصصك في نور أقل من حصص الخطة: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد، فتكتمل الخطة في أسابيعها (آخرها ${dayLabel(fitEnd, false)})`); }
+  if (merged && WIZ.pickDates && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', `حصص اختيارك بعد نهاية الفصل: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد`); }
+  else if (merged && schedRead && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', fromIso ? `حصص الفصل أكثر من حصصك الباقية في الجدول: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد، فتكتمل قبل نهاية الفصل (${dayLabel(fitEnd, false)})` : `حصصك في نور أقل من حصص الخطة: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد، فتكتمل الخطة في أسابيعها (آخرها ${dayLabel(fitEnd, false)})`); }
   WIZ.fit = { merged, late: items.filter((it) => it.date > fitEnd).length, fitEnd, from: fromIso };
   if (!WIZ.on && termEnd && late && !dateNotes.has('late:' + late)) { dateNotes.add('late:' + late); logLine('info', `${toAr(late)} ${late === 1 ? 'حصة ستقع' : 'حصص ستقع'} بعد نهاية الفصل (${dayLabel(termEnd, false)}) — راجع ميزانية الفصل في «فحص ملف المادة»`); }
   cands.forEach((s) => { s.on = s.manual != null ? s.manual : inScope(s); });
@@ -1071,7 +1098,11 @@ async function probeSchedule(addUrl) {
   try { return await probeSchedule0(addUrl); } finally { schedRead = true; }
 }
 async function probeSchedule0(addUrl) {
-  if (!useFile || WIZ.pickDates || !queue.length || stopFlag) return;
+  if (!queue.length || stopFlag) return;
+  if (WIZ.pickDates) {   // «أختار الدروس بنفسي»: يُقرأ الجدول فقط إن قاربت الحصص المختارة نهاية الفصل (لجمع ما يقع بعدها)
+    const tEnd = termEndOf(settings, termNo) || (pkg.remote && isIso(pkg.remote.ends_on) ? pkg.remote.ends_on : '');
+    if (!tEnd || !queue.some((q) => isIso(q.date) && q.date > addDays(tEnd, -14))) return;
+  } else if (!useFile) return;
   const today = todayIso();
   const ws = weekStart(queue[0].date > today ? queue[0].date : today);
   const hol = holidaySet(settings);
