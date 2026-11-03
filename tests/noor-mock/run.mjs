@@ -365,6 +365,7 @@ T(7, 'No free trial (owner 2026-11-01): a new teacher\'s request waits for the a
   check(env.afaq.st.calls.includes('ext_contact'), 'request marked «بانتظار التفعيل» (ext_contact called)');
   check(s.wiz && /يكمل التحضير وحده/.test(s.wzBody || s.text || ''), 'the screen says the preparation starts by itself after activation', JSON.stringify(s));
   check(s.wiz && !/مجان|تجرب/.test((s.wzHead || '') + (s.wzBody || '')), 'no free-trial wording', JSON.stringify(s));
+  check(s.wiz && /صفحتها الرئيسية/.test(s.wzBody || s.text || ''), 'the screen tells the teacher to keep Noor\'s home page open (the name is read there)', JSON.stringify(s));
   // the admin activates the request: the run starts by itself (no button), with the same choices
   env.afaq.st.active = true; env.afaq.st.status = 'active';
   const t0 = Date.now();
@@ -779,6 +780,29 @@ T(30, 'Pick mode near the term end (owner 2026-11-03): one typed date gives the 
   rows.forEach((r) => g.sessions.forEach((l) => { if (norm(r.concepts).includes(norm(l.concepts))) cover.set(l.id, (cover.get(l.id) || 0) + 1); }));
   check(g.sessions.every((l) => cover.get(l.id) === 1), `every chosen session (${g.sessions.length}) is in exactly one prep`, JSON.stringify([...cover]));
   check(rows.some((r) => /\(\d+(?: و \d+)+\)$/.test(r.title)), 'the joined prep carries «(n و m)» in its title', rows.map((r) => r.title).join(' | '));
+  return b;
+});
+
+// owner 2026-11-03: a teacher registered by name stayed «waiting» because Noor was open on a page other than the home page (the name
+// is in the home page's welcome), so «حاضر» never read her Noor account and the server could not match her name
+T(31, 'Activation by the Noor name: Noor is open on a course page (no name there) — the tool opens Noor\'s home page itself, reads the name, the server activates by it and the full term runs; the waiting screen tells the teacher to keep Noor\'s home page open', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 6) }));
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree, whoHomeOnly: true });
+  env.afaq.reset({ pkg: PKG, trialLeft: 0, mergeOnNoor: true, mergeNeedsName: true });
+  const b = await env.launch(noor);
+  const np = await b.ctx.newPage();
+  await np.goto('https://lms.moe.gov.om/teacher/courses/preparations_index/cid:BIO9').catch(() => {});
+  await b.pg.bringToFront();
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 10 * 60000, 'activation by the Noor name');
+  const named = env.afaq.st.noor.filter((a) => a.p_name);
+  check(named.length >= 1 && named.every((a) => a.p_name === 'سالم علي'), `the tool sent the Noor name read from the home page (${named.length} calls with a name)`, JSON.stringify(env.afaq.st.noor));
+  check(env.afaq.st.merged >= 1, 'the server activated the subscription by the Noor name (ext_noor → merged)', env.afaq.st.calls.join(' '));
+  // the name is only on the home page here, so a call carrying it means the tool read Noor's home page
+  check(/https:\/\/lms\.moe\.gov\.om\/teacher\/courses\/preparations_index/.test(np.url()) || np.isClosed(), 'the teacher\'s own Noor tab was not taken over', np.isClosed() ? 'closed' : np.url());
+  check(/تمت التعبئة بنجاح/.test(s.head), 'the full term runs after the activation', `${s.head} | ${s.wzHead || ''} | ${s.text}`);
+  assertRows('S31', noor.st.rows.filter((r) => !r.preexisting), tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
   return b;
 });
 

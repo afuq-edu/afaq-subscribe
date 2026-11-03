@@ -81,17 +81,18 @@ export function createNoor(cfg) {
     st.rows.push({ id: String(++st.nextId), cid: e.cid || 'BIO9', title: e.title, publishDate: e.publishDate || '', created: e.created || st.createdOld, preexisting: true, lessonId: e.nodeId || '', nodeText: e.title.replace(/\s*\(\d+\)$/, '') });
   }
 
-  const page = (title, body, head = '') => `<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>${esc(title)}</title>
+  // whoHomeOnly: the teacher's id and name show on the home page only (real Noor: the welcome «.wlc-section h1» is on the home page)
+  const page = (title, body, head = '', who = !cfg.whoHomeOnly) => `<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>${esc(title)}</title>
 <style>body{font:14px Tahoma,sans-serif;margin:16px}label{display:block;margin:4px 0}.ctl-label{font-weight:bold;margin-top:10px}textarea{width:90%;height:40px}
 .swal2-popup{position:fixed;top:30%;left:30%;background:#fff;border:2px solid #c00;padding:16px;display:block;z-index:99}
 .jstree-node{list-style:none}.jstree-anchor{cursor:pointer;display:inline-block;padding:1px 4px}.jstree-clicked{background:#bdf}
 .alert-danger{color:#a00;border:1px solid #a00;padding:6px}</style>${head}</head>
-<body><script>var user_id = '99887766';</script><div class="wlc-section"><h1>سالم علي</h1></div>${body}</body></html>`;
+<body>${who ? `<script>var user_id = '99887766';</script><div class="wlc-section"><h1>سالم علي</h1></div>` : ''}${body}</body></html>`;
 
   const loginPage = () => page('تسجيل الدخول', `<form method="post" action="${HOST}/users/login"><input name="u"><input type="password" name="p"><button>دخول</button></form>`);
 
   const homePage = () => page('الرئيسية', courses.map((c) => `<div class="course-box-in-teacher-dashbaord"><div class="main_category_stu_title">${esc(c.title)}</div>
-<div class="main_category_level_title">${esc(c.level)}</div><a href="${HOST}/teacher/courses/preparations_index/cid:${c.cid}">تحضير الدروس</a></div>`).join('\n'));
+<div class="main_category_level_title">${esc(c.level)}</div><a href="${HOST}/teacher/courses/preparations_index/cid:${c.cid}">تحضير الدروس</a></div>`).join('\n'), '', true);
 
   const listPage = (cid, extra = {}) => {
     const c = course(cid);

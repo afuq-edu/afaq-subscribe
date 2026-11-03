@@ -9,7 +9,7 @@ import {
   gradeNumber, gradeOfName, sameSubject, unsavedText, kwNorm, ordinalOf, getPicks,
   noorTerms, termAllLessons, pickTreeNode, stripSessionSuffix, sessionSuffix, sessionNums, lessonNum,
   layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, lintPackage, lintLevel, knownCourse, rememberCourse, resetProgress, packageProgress, clearSession,
-  holidaySet, termEndOf, countSchoolDays, loadNoorTree, storeNoorTree, dateOverrides, setDateOverride, GRADES, noorWho, probeDays,
+  holidaySet, termEndOf, countSchoolDays, loadNoorTree, storeNoorTree, dateOverrides, setDateOverride, GRADES, noorWho, noorWhoScan, probeDays,
 } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { diffDays, addDays } from './dates.js';
@@ -719,7 +719,8 @@ async function ensureTab() {
   if (tabId) { try { await chrome.tabs.get(tabId); return; } catch (e) { tabId = null; } }
   try {
     const tabs = await chrome.tabs.query({ url: ['https://*.moe.gov.om/*', 'http://*.moe.gov.om/*'] });
-    const t = tabs.find((x) => noorWin && x.windowId === noorWin) || tabs[0];
+    const lms = tabs.filter((x) => /\blms\.moe\.gov\.om/.test(x.url || ''));   // منصة نور قبل مواقع الوزارة الأخرى
+    const t = lms.find((x) => noorWin && x.windowId === noorWin) || lms[0] || tabs.find((x) => noorWin && x.windowId === noorWin) || tabs[0];
     if (t) { tabId = t.id; return; }
   } catch (e) {}
   // لا تبويب لنور: نفتحه في نافذة عادية (لا في نافذة «حاضر» المنبثقة)
@@ -732,12 +733,24 @@ async function ensureTab() {
 }
 // بعد إعادة تثبيت «حاضر» يبدأ الجهاز بطلب تجربة جديد. إن كان حساب نور المفتوح هو حساب صاحب اشتراك فعّال وباسمه،
 // يعود الجهاز إلى اشتراكه وحده (من الخادم) دون «فعّل» ودون أن تُستهلك التجربة
+let homeTried = false;   // صفحة نور الرئيسية فُتحت مرة لقراءة اسم المعلم (لكل شاشة تفعيل)
 async function reclaim(openTab = true) {
   try {
     if (openTab) await ensureTab();
     // نور تُفتح الآن أو ما زالت تُحمَّل: نقرأ حسابها حتى يظهر (مهلة قصيرة)
     let who = tabId ? await noorWho(tabId) : null;
     for (let i = 0; openTab && !who && tabId && i < 15 && !stopFlag; i++) { if (i === 3 || i === 9) await chrome.tabs.reload(tabId).catch(() => {}); await sleep(1000); who = await noorWho(tabId); }
+    // اسم المعلم في ترحيب صفحة نور الرئيسية: نبحث في كل تبويبات نور، وإن لم يظهر نفتح الرئيسية مرة واحدة في تبويب جديد
+    // (لا ننقل تبويبًا يعمل فيه المعلم) ونقرأها حتى يظهر الاسم
+    if (!who || !who.name) { const s = await noorWhoScan(tabId); if (s && (s.who.name || !who)) { who = s.who; if (s.who.name) tabId = s.tabId; } }
+    if (openTab && (!who || !who.name) && !homeTried && !stopFlag) {
+      homeTried = true;
+      try {
+        const t = await chrome.tabs.create(Object.assign({ url: HOME, active: true }, noorWin ? { windowId: noorWin } : {}));
+        tabId = t.id; await waitComplete(25000);
+        for (let i = 0; i < 20 && !stopFlag; i++) { if (i === 4 || i === 12) await chrome.tabs.reload(tabId).catch(() => {}); const w = await noorWhoScan(tabId); if (w && w.who.name) { who = w.who; tabId = w.tabId; break; } if (w && !who) who = w.who; await sleep(1000); }
+      } catch (e) {}
+    }
     const r = await noorCheck(who || ((await chrome.storage.local.get('noorWho').catch(() => ({}))).noorWho || null));
     if (!r || !r.merged) return false;
     const g = await getPackages(); packages = g.packages; state = g.state;
@@ -3565,6 +3578,7 @@ function showPay(p) {
   document.body.classList.remove('wiz-run');
   $('wizCard').hidden = false;
   wz.hist = [];
+  homeTried = false;
   wzGo('pay', false);
 }
 let payTimer = null;
@@ -3586,6 +3600,7 @@ function wzPayRender() {
   $('wzHead').textContent = 'تفعيل اشتراكك';
   $('wzBody').innerHTML = `<p class="wz-note big">وصل اسمك إلى المشرف. لتفعيل اشتراكك تواصل معنا على واتساب، واذكر اسمك والمواد التي تريدها.</p>
     <div class="wz-wa"><span>واتساب</span><b dir="ltr">${esc(waShow(st.whatsapp))}</b></div>
+    <p class="wz-note">افتح منصة نور على صفحتها الرئيسية وأبقها مفتوحة: منها يتعرّف «حاضر» على اسمك، فيتفعّل اشتراكك وحده متى سجّل المشرف اسمك.</p>
     ${req.id ? `<p class="wz-line">رقم طلبك: <b>${toAr(req.id)}</b></p>` : ''}
     <p class="hint">${payResume ? 'اطلب التفعيل، وبعده يكمل التحضير وحده من حيث توقف — أبقِ هذه النافذة ونور مفتوحتين.' : 'بعد التفعيل تظهر موادك هنا وحدها.'}</p>
     <button class="btn sm" id="wzOther">رجوع</button>`;
