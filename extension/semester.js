@@ -1563,7 +1563,8 @@ function alignGroups0(groups, nodes, known) {
         if (top.length === 1) { t = top[0].x; byName++; }
       }
     }
-    if (!t) { const no = bookNo(gu); if (no != null) { const c = tList.filter((x) => x.no === no); if (c.length === 1) { t = c[0]; how = 'number'; } } }
+    // وحدة نور بلا اسم («الوحدة (1)») ووحدة ملفك برقمها نفسه («الوحدة الأولى: قيمنا»): رقمها هو اسمها في نور، فلا تُعدّ أسماءً لا تتشابه
+    if (!t) { const no = bookNo(gu); if (no != null) { const c = tList.filter((x) => x.no === no); if (c.length === 1) { t = c[0]; how = 'number'; if (numberOnlyUnit(t.text) === no) byName++; } } }
     if (!t && gUnits.size === tList.length && !taken.has(tList[ui].k)) { t = tList[ui]; how = 'number'; }   // العدد نفسه من الوحدات: بالترتيب
     if (!t) { leftovers.push(...gis); return; }
     taken.add(t.k);
