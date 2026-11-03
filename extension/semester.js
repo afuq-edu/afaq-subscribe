@@ -328,7 +328,9 @@ function assignDates() {
   // حصص الأسابيع التالية حتى نهاية الفصل، ولا تُجمع حصتان إلا من الدرس نفسه وحين تكون الحصص الباقية حتى نهاية الفصل أقل من التحاضير
   const planEnd = pkgEnd(pkg) || termEndOf(settings, termNo);
   const termEnd = termEndOf(settings, termNo) || (pkg.remote && isIso(pkg.remote.ends_on) ? pkg.remote.ends_on : '') || planEnd;
-  const fitEnd = termEnd || planEnd;
+  // الحد الذي تُضغط الحصص لتنتهي قبله (المالك 2026-11-02): آخر أسبوع في خطة المادة؛ فإن كان جدول نور أقل من حصص الخطة جُمعت حصص الدرس نفسه
+  // لتكتمل الخطة في أسابيعها. وحين يبدأ التحضير من اليوم لأن نور ترفض ما مضى (fromIso) فالحد نهاية الفصل: الخطة نفسها قد مضت
+  const fitEnd = fromIso ? (termEnd || planEnd) : (planEnd || termEnd);
   // «تحضير الفصل كاملًا» (المالك 2026-11-01): كل حصة في جدول المعلم تأخذ الحصة التالية من الخطة، يومًا بعد يوم من أول يوم دراسي،
   // حتى تنتهي الحصص والدروس كلها — لا تنتظر الحصة أسبوعها في الخطة (حصة الاثنين لا تبقى فارغة لأن الخطة وضعت درس الأسبوع يوم الأحد)
   const day1 = ((pkg && pkg.lessons) || []).map((l) => l.pubDate).filter(isIso).sort()[0] || '';
@@ -380,6 +382,32 @@ function assignDates() {
       if (!dateNotes.has('loose:' + loose)) { dateNotes.add('loose:' + loose); logLine('info', `حصصك في الجدول أقل من حصص الخطة: من ${dayLabel(loose, false)} تتابع الحصص على حصصك مباشرة حتى يكتمل الفصل قبل نهايته`); }
     }
   }
+  // «أختار الدروس بنفسي» (المالك 2026-11-03): حصة مختارة تقع بعد نهاية الفصل تُجمع إلى أقرب حصة قبلها من الدرس نفسه
+  // في تحضير واحد «الدرس (2 و 3)» (حتى أربع حصص)؛ لا يُجمع درسان مختلفان، وتواريخ المعلم الأخرى تبقى كما كتبها
+  if (WIZ.pickDates && termEnd && WIZ.trialCap == null) {
+    const size = (x) => 1 + ((x.merge || []).length);
+    const free = (x) => x && x.p && wanted(x) && !x.savedNow && !x.cur && !x.done;
+    const today = todayIso();
+    // يوم بلا حصة للمعلم (من جدوله في نور) يُنقل عند الحفظ إلى يوم حصته التالي: يُحسب هنا بموضعه بعد النقل
+    const eff = (d) => (isIso(d) && days.length && !days.includes(wdOf(d)) ? nextSchoolDay(d, days, false) : d);
+    for (let guard = 0; guard < 300; guard++) {
+      let joined = false;
+      for (let i = items.length - 1; i > 0 && !joined; i--) {
+        const b = items[i].s;
+        if (!(eff(items[i].date) > termEnd) || !free(b)) continue;
+        for (let j = i - 1; j >= 0; j--) {
+          const a = items[j].s;
+          if (a.p !== b.p) continue;
+          if (free(a) && !(items[j].date < today) && size(a) + size(b) <= 4) {
+            a.merge = (a.merge || []).concat(b, b.merge || []); b.mergedInto = a; b.merge = null; joined = true;
+          }
+          break;   // أقرب حصة قبلها من الدرس نفسه فقط
+        }
+      }
+      if (!joined) break;
+      ({ items, notes } = lay());
+    }
+  }
   items.forEach((it) => { it.s.date = it.date; it.s.slot = it.slot || 1; it.s.dateSrc = it.dateSrc; it.s.movedFrom = ''; it.s.afterTerm = !!(termEnd && it.date > termEnd); });
   cands.forEach((x) => { let r = x.mergedInto; while (r && r.mergedInto) r = r.mergedInto; if (r) { x.date = r.date; x.slot = r.slot; x.afterTerm = r.afterTerm; } });
   notes.forEach((n) => {
@@ -392,7 +420,8 @@ function assignDates() {
   const late = items.filter((it) => it.s.afterTerm).length;
   const merged = cands.filter((x) => x.mergedInto).length;
   // يُذكر الجمع بعد قراءة جدول المعلم فقط: قبلها قد يُجمع ما يتسع له الجدول ثم يُفكّ
-  if (merged && schedRead && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', `حصص الفصل أكثر من حصصك الباقية في الجدول: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد، فتكتمل قبل نهاية الفصل (${dayLabel(fitEnd, false)})`); }
+  if (merged && WIZ.pickDates && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', `حصص اختيارك بعد نهاية الفصل: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد`); }
+  else if (merged && schedRead && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', fromIso ? `حصص الفصل أكثر من حصصك الباقية في الجدول: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد، فتكتمل قبل نهاية الفصل (${dayLabel(fitEnd, false)})` : `حصصك في نور أقل من حصص الخطة: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد، فتكتمل الخطة في أسابيعها (آخرها ${dayLabel(fitEnd, false)})`); }
   WIZ.fit = { merged, late: items.filter((it) => it.date > fitEnd).length, fitEnd, from: fromIso };
   if (!WIZ.on && termEnd && late && !dateNotes.has('late:' + late)) { dateNotes.add('late:' + late); logLine('info', `${toAr(late)} ${late === 1 ? 'حصة ستقع' : 'حصص ستقع'} بعد نهاية الفصل (${dayLabel(termEnd, false)}) — راجع ميزانية الفصل في «فحص ملف المادة»`); }
   cands.forEach((s) => { s.on = s.manual != null ? s.manual : inScope(s); });
@@ -807,6 +836,32 @@ function readVisiblePrepTitles() {
   const info = (document.getElementById('preparations_grid_info') || {}).textContent || '';
   return { rows, info, empty: !!document.querySelector('td.dataTables_empty') };
 }
+// يُحقن في صفحة «تحضير الدروس» (عالم الصفحة): روابط حذف كل التحاضير الظاهرة في جدول هذا المقرر (بعد توسيع عدد الصفوف)
+async function readDeleteLinks(cidNum) {
+  if (!new RegExp('preparations_index/cid:' + cidNum + '(?![A-Za-z0-9_-])').test(location.href)) return { ok: false, why: 'page' };
+  const jq = window.jQuery;
+  const el = document.getElementById('preparations_grid');
+  if (!jq || !jq.fn || !jq.fn.dataTable || !el || !jq.fn.dataTable.isDataTable(el)) return { ok: false, why: 'table' };
+  const dt = jq(el).DataTable();
+  const total = dt.page.info().recordsTotal;
+  if (dt.page.info().length !== -1 && dt.page.info().length < Math.max(total, 1)) {
+    await new Promise((res) => { const t = setTimeout(res, 25000); dt.one('draw', () => { clearTimeout(t); res(); }); dt.page.len(2000).draw(); });
+  }
+  const links = Array.from(el.querySelectorAll('tbody tr a[href*="/delete_preparation/"]')).map((a) => a.getAttribute('href')).filter((h) => /\/teacher\/courses\/delete_preparation\/[A-Za-z0-9_-]+\/cid:[A-Za-z0-9_-]+$/.test(h));
+  return { ok: true, total, links: Array.from(new Set(links)) };
+}
+// يُحقن (عالم الصفحة): يطلب حذف دفعة من التحاضير بروابطها (الجلسة الحالية في نور)، ويعيد عدد ما قبله نور
+async function deleteLinks(hrefs) {
+  let done = 0, bad = 0;
+  for (const h of hrefs) {
+    try {
+      const r = await fetch(h, { credentials: 'include', redirect: 'follow' });
+      if (r.ok) done++; else bad++;
+    } catch (e) { bad++; }
+    await new Promise((res) => setTimeout(res, 150));
+  }
+  return { done, bad };
+}
 // شريط علوي في صفحة نور بأزرار تعود إلى هذه النافذة
 function pageBar(opts) {
   const old = document.getElementById('hadir-sem-bar');
@@ -1043,7 +1098,11 @@ async function probeSchedule(addUrl) {
   try { return await probeSchedule0(addUrl); } finally { schedRead = true; }
 }
 async function probeSchedule0(addUrl) {
-  if (!useFile || WIZ.pickDates || !queue.length || stopFlag) return;
+  if (!queue.length || stopFlag) return;
+  if (WIZ.pickDates) {   // «أختار الدروس بنفسي»: يُقرأ الجدول فقط إن قاربت الحصص المختارة نهاية الفصل (لجمع ما يقع بعدها)
+    const tEnd = termEndOf(settings, termNo) || (pkg.remote && isIso(pkg.remote.ends_on) ? pkg.remote.ends_on : '');
+    if (!tEnd || !queue.some((q) => isIso(q.date) && q.date > addDays(tEnd, -14))) return;
+  } else if (!useFile) return;
   const today = todayIso();
   const ws = weekStart(queue[0].date > today ? queue[0].date : today);
   const hol = holidaySet(settings);
@@ -2222,7 +2281,7 @@ function startSummary() {
   const b = [];
   if (ds.length) b.push(`ستبدأ التحاضير من ${day1 && weekStart(ds[0]) === weekStart(day1) ? `أول يوم دراسي (${dayLabel(ds[0])})` : dayLabel(ds[0])}، حصة بعد حصة على جدولك وبترتيب دروس نور: أنشر ${prepWord(n)}${nS > n ? ` (${countWord(nS)})` : ''}${ds[ds.length - 1] !== ds[0] ? ` حتى ${dayLabel(ds[ds.length - 1])}` : ''}${nS > n ? '' : '، لكل حصة تحضيرها'}.`);
   if (past) b.push(past === nS ? 'موعد هذه الحصص في الخطة قد فات، فأنشرها من اليوم بترتيبها.' : `${past === 1 ? 'حصة واحدة فات موعدها' : `${countWord(past)} فات موعدها`} في الخطة، أنشرها من اليوم أولًا بترتيبها ثم يليها الباقي.`);
-  if (fit.merged) b.push(`حصصك الباقية حتى نهاية الفصل أقل من التحاضير، فجمعت ${countWord(fit.merged)} مع حصة قبلها من الدرس نفسه.`);
+  if (fit.merged) b.push(fit.from ? `حصصك الباقية حتى نهاية الفصل أقل من التحاضير، فجمعت ${countWord(fit.merged)} مع حصة قبلها من الدرس نفسه.` : `حصصك في نور أقل من حصص الخطة، فجمعت ${countWord(fit.merged)} مع حصة قبلها من الدرس نفسه لتكتمل الخطة في أسابيعها.`);
   b.push('إن لم يناسبك هذا فاختيار الدروس بنفسك أفضل لك.');
   return { block, first: { head: 'قبل أن أبدأ', text: a.join('\n'), advise }, second: { head: 'بداية التحضير', text: b.join('\n') }, advise, had: had.length, gaps, tree, past, n };
 }
@@ -2231,13 +2290,56 @@ const prepWord = (n) => { const r = n % 100; return n === 1 ? 'تحضيرًا و
 const TERM_KEY = 'termRuns';
 async function termOwn() { try { const o = (await chrome.storage.local.get(TERM_KEY))[TERM_KEY] || {}; return !!o[pkg.id + '|' + termNo]; } catch (e) { return false; } }
 async function termMark() { try { const o = (await chrome.storage.local.get(TERM_KEY))[TERM_KEY] || {}; o[pkg.id + '|' + termNo] = Date.now(); await chrome.storage.local.set({ [TERM_KEY]: o }); } catch (e) {} }
+// مسح تحاضير هذه المادة من نور (المالك 2026-11-02): بعد تأكيدين من المعلم، كل تحاضير بطاقة المادة المفتوحة وحدها
+async function wipeNoorPreps() {
+  const cidNum = ((coursePrepUrl || '').match(/preparations_index\/cid:([A-Za-z0-9_-]+)/) || [])[1] || '';
+  if (!cidNum) return false;
+  setPhase('list');
+  setBox('run', 'أمسح تحاضير هذه المادة من نور…', 'لحظات وأبدأ الفصل من أوله.');
+  await nav(coursePrepUrl);
+  let got = null;
+  for (let i = 0; i < 3 && !stopFlag && !(got && got.ok); i++) { if (i) await sleep(2000); got = await execMain(readDeleteLinks, cidNum); }
+  if (!got || !got.ok) { logLine('info', 'مسح تحاضير نور: لم أقرأ الجدول'); return false; }
+  const links = got.links;
+  logLine('info', `مسح تحاضير نور: ${toAr(links.length)} من ${toAr(got.total)} في هذه المادة`);
+  let done = 0, bad = 0;
+  for (let i = 0; i < links.length && !stopFlag; i += 8) {
+    const r = await execMain(deleteLinks, links.slice(i, i + 8));
+    if (r) { done += r.done; bad += r.bad; } else bad += Math.min(8, links.length - i);
+    setBox('run', 'أمسح تحاضير هذه المادة من نور…', `${toAr(Math.min(i + 8, links.length))} من ${toAr(links.length)}`);
+  }
+  logLine('info', `مسح تحاضير نور: حُذف ${toAr(done)}${bad ? ` وتعذّر ${toAr(bad)}` : ''}`);
+  return done > 0;
+}
+// بطاقة «في نور تحاضير لهذه المادة»: اختيار الدروس بنفسك، أو مسح تحاضير المادة من نور (بتأكيدين) والبدء من جديد
+async function wipeOffer(text, n, okBtn) {
+  const pick = (primary) => ({ id: 'pick', label: 'أختار الدروس بنفسي', primary });
+  const v = await ask({ kind: 'info', head: 'اختر الدروس بنفسك', text, bar: false, buttons: [pick(true), { id: 'wipe', label: 'أمسح تحاضير هذه المادة من نور وأبدأ الفصل' }].concat(okBtn ? [{ id: 'ok', label: 'حسنًا' }] : []) });
+  if (v !== 'wipe') return v;
+  const c = await ask({ kind: 'warn', head: 'مسح تحاضير هذه المادة', bar: false,
+    text: `سأحذف من نور ${prepWord(n)} في هذه المادة (كل ما فيها)، ثم أنشر الفصل كاملًا من أول يوم دراسي.\nالحذف لا يمكن التراجع عنه.`,
+    buttons: [pick(true), { id: 'wipe2', label: `نعم، امسح ${prepWord(n)}` }] });
+  return c === 'wipe2' ? 'wipe' : c;
+}
+// الفصل كاملًا ومادة المعلم كاملة في نور: لا حصص ناقصة فينتهي التشغيل — قبل أن ينتهي تُعرض البطاقة نفسها (مسح وبدء من جديد، أو اختيار الدروس)
+async function termFullOffer() {
+  if (!WIZ.on || WIZ.pickDates || WIZ.hwOnly || wz.mode !== 'term' || scope.kind !== 'term' || queue.length || stopFlag) return;
+  const had = plan.flatMap((p) => p.sessions.filter((s) => s.inNoor)).length;
+  if (!had || await termOwn()) return;
+  const n = (noorHave && noorHave.titles && noorHave.titles.length) || had;
+  running = false;
+  const v = await wipeOffer(`وجدت في نور ${prepWord(n)} لهذه المادة، وحصص الخطة كلها فيها.\nإن أردت البدء من جديد فامسح تحاضير هذه المادة من نور وأنشر الفصل كاملًا، أو اختر الدروس بنفسك.`, n, true);
+  running = true;
+  if (v === 'pick') { WIZ.toPick = true; throw new Error('stop'); }
+  if (v === 'wipe') { WIZ.rerun = await wipeNoorPreps().catch(() => false); if (!WIZ.rerun) WIZ.toPick = true; throw new Error('stop'); }
+}
 async function confirmStart() {
   WIZ.termOwn = (q.get('debug') === '1' && q.get('cont') === '1') || await termOwn();
   if (WIZ.termOwn) return 'go';
   const sm = startSummary();
   WIZ.summary = sm;
   const pick = (primary) => ({ id: 'pick', label: 'أختار الدروس بنفسي', primary });
-  if (sm.block) return ask({ kind: 'info', head: 'اختر الدروس بنفسك', text: sm.block, bar: false, buttons: [pick(true)] });
+  if (sm.block) return wipeOffer(sm.block, (noorHave && noorHave.titles && noorHave.titles.length) || sm.had);
   const v = await ask({ kind: 'info', head: sm.first.head, text: sm.first.text, bar: false,
     buttons: sm.first.advise ? [pick(true), { id: 'go', label: 'أكمل التحضير الفصلي' }] : [{ id: 'go', label: '✓ لا توجد عندي تحاضير، تابع', primary: true }, pick(false)] });
   if (v !== 'go') return v;
@@ -2517,7 +2619,7 @@ async function run() {
     renderPlan();
     if (WIZ.hwOnly) { await homeworkOnly(); finished = true; throw new Error(WIZ.hwHead); }
     // المادة مكتملة في نور: لا مراجعة ولا اقتراحات — «مكتمل» فقط
-    { const cp = completion(); if (cp.complete && !queue.length) { finished = true; logLine('ok', completeText(cp)); throw new Error(completeText(cp)); } }
+    { const cp = completion(); if (cp.complete && !queue.length) { await termFullOffer(); finished = true; logLine('ok', completeText(cp)); throw new Error(completeText(cp)); } }
     // تعارض بين ملفك ونور: تُعرض الخطة للمراجعة، وتبدأ وحدها بعد مهلة (أطول كلما كان التعارض أخطر) ما لم تطلب المراجعة اليدوية
     const c = conflicts();
     const nConf = c.miss.length + c.weak.length + c.dup.length;
@@ -2526,6 +2628,7 @@ async function run() {
     if (WIZ.on && !$('optReview').checked) {
       if (nConf || plan.mismatch) { autoResolve(); await savePicks(); }
       safeLinks(); assignDates(); renderPlan();
+      if (!queue.length) await termFullOffer();
       if (!queue.length) { finished = true; throw new Error(plan.some((p) => p.sessions.some((s) => s.inNoor && pickedS(s))) ? 'كل الحصص المختارة موجودة في نور ✓' : 'انتهى ✓'); }
       setBox('run', planLine(), WIZ.trialCap != null ? `من تجربتك المجانية. أبدأ الآن.` : 'أبدأ الآن.');
     } else if ($('optReview').checked || nConf || plan.mismatch || !queue.length) {
@@ -2555,6 +2658,7 @@ async function run() {
       const v = await confirmStart();
       running = true;
       if (v === 'pick') { WIZ.toPick = true; throw new Error('stop'); }
+      if (v === 'wipe') { running = true; WIZ.rerun = await wipeNoorPreps().catch(() => false); if (!WIZ.rerun) WIZ.toPick = true; throw new Error('stop'); }
       if (v !== 'go') throw new Error('stop');
       WIZ.confirmed = WIZ.rid; await termMark();
       // تحضير فصلي جديد (نور خالية): ما سُجّل لتسلسل الشعب من قبل لا يُعتدّ به
@@ -2716,6 +2820,7 @@ async function run() {
   const had = plan.flatMap((p) => p.sessions.filter((s) => s.inNoor && pickedS(s))).length;
   const report = await saveReport({ failed, had }).catch(() => null);
   if (WIZ.on && WIZ.toPick) { WIZ.toPick = false; wzToPick(); return; }
+  if (WIZ.on && WIZ.rerun) { WIZ.rerun = false; setTimeout(() => run(), 400); return; }
   if (WIZ.on) wizAfterRun({ report, ok, failed: failed.length, stopped: stopFlag, error: !!endMsg && endMsg[0] === 'bad' && !WIZ.trialOver ? (diag.log.filter((l) => l.startsWith('[bad] ')).pop() || '[bad]  ').slice(6) || ' ' : '', had, past: pastSkipped });
 }
 
@@ -3037,15 +3142,22 @@ function wzRender() {
   let list = [];
   if (wz.step === 'mode') {
     head.textContent = 'ماذا تريد أن تحضّر؟';
-    list = [
-      { title: 'أختار الدروس بنفسي', sub: 'تختار الدرس وتكتب تاريخه', on: wz.mode === 'pick', go: () => { wz.mode = 'pick'; wzGo('grade'); } },
-      { title: 'تحضير الفصل كاملًا', sub: 'كل دروس الفصل، درسًا بعد درس', on: wz.mode === 'term', go: () => { wz.mode = 'term'; wzGo('grade'); } },
-      { title: 'الواجبات فقط', sub: 'تختار الدروس وتاريخي النشر والتسليم، دون تحاضير', on: wz.mode === 'hw', go: () => { wz.mode = 'hw'; wzGo('grade'); } },
-    ];
-    // الواجبات (المالك 2026-11-01): خمسة أسئلة لكل درس في «المهام الإلكترونية» — باختيار المعلم، معلَّم مسبقًا
-    body.innerHTML = wzCards(list).replace('wz-cards', 'wz-cards big')
-      + `<label class="wz-check"><input type="checkbox" id="wzHw"${wz.hw ? ' checked' : ''}> أضف واجبًا لكل درس (٥ أسئلة في «المهام الإلكترونية»)</label>`;
-    $('wzHw').onchange = () => { wz.hw = $('wzHw').checked; wzSavePrefs(); };
+    // الخدمة (المالك 2026-11-02): تحضير · تحضير مع واجبات · واجبات فقط — ثلاثة خيارات صريحة؛ الواجبات خمسة أسئلة لكل درس في «المهام الإلكترونية»
+    const svc = wz.mode === 'hw' ? 'hw' : wz.hw ? 'both' : 'prep';
+    const SV = [['prep', 'تحضير'], ['both', 'تحضير مع واجبات'], ['hw', 'واجبات فقط']];
+    list = svc === 'hw'
+      ? [{ title: 'أختار الدروس بنفسي', sub: 'تختار الدروس وتاريخي النشر والتسليم', on: wz.mode === 'hw', go: () => { wz.mode = 'hw'; wzGo('grade'); } }]
+      : [
+        { title: 'أختار الدروس بنفسي', sub: 'تختار الدرس وتكتب تاريخه', on: wz.mode === 'pick', go: () => { wz.mode = 'pick'; wzGo('grade'); } },
+        { title: 'تحضير الفصل كاملًا', sub: 'كل دروس الفصل، درسًا بعد درس', on: wz.mode === 'term', go: () => { wz.mode = 'term'; wzGo('grade'); } },
+      ];
+    body.innerHTML = `<div class="wz-seg" role="group">${SV.map(([k, t]) => `<button type="button" class="wz-seg-b ${k === svc ? 'on' : ''}" data-svc="${k}" id="wzSvc-${k}">${t}</button>`).join('')}</div>`
+      + wzCards(list).replace('wz-cards', 'wz-cards big');
+    body.querySelectorAll('.wz-seg-b').forEach((bt) => { bt.onclick = () => {
+      const k = bt.dataset.svc;
+      if (k === 'hw') wz.mode = 'hw'; else { if (wz.mode === 'hw') wz.mode = 'term'; wz.hw = k === 'both'; }
+      wzSavePrefs(); wzRender();
+    }; });
   } else if (wz.step === 'grade') {
     head.textContent = 'اختر الصف';
     const gs = [...new Set(offers.map((o) => o.grade))].sort((a, b) => a - b);

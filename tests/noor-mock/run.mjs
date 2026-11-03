@@ -151,13 +151,20 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
   return { ctx, sw, pg, id, errs };
 }
 const card = async (pg, t) => { await pg.locator('.wz-card:not([disabled])', { hasText: t }).first().click({ timeout: 20000 }); await sleep(500); };
+// the service choice on the first wizard screen (not part of a run once it has started)
+async function svcPick(pg, k, started) {
+  if (started && (await started())) return;
+  await pg.evaluate((k) => { const b = document.querySelector(`.wz-seg-b[data-svc="${k}"]`); if (b && !b.classList.contains('on')) b.click(); }, k).catch(() => {});
+  await sleep(300);
+}
 async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع', subject = 'الأحياء', shift = 'فترة واحدة', hw = false } = {}) {
   // each step only if the run has not started yet (once linked, a «من حسابك في نور» shortcut can skip steps)
   const started = () => pg.evaluate(() => document.body.classList.contains('wiz-run') || !!document.getElementById('wzName')).catch(() => false);
   const step = async (sel, t) => { if (await started()) return; await pg.locator(sel, { hasText: t }).first().click({ timeout: 20000 }); await sleep(600); };
   // «أضف واجبًا لكل درس» (4.10.24, ticked by default): the older scenarios run without homework
-  if (!(await started())) await pg.evaluate((on) => { const c = document.getElementById('wzHw'); if (c && c.checked !== on) c.click(); }, !!hw).catch(() => {});
-  await step('.wz-card:not([disabled])', mode === 'pick' ? 'أختار الدروس بنفسي' : mode === 'hw' ? 'الواجبات فقط' : 'تحضير الفصل كاملًا');
+  // 4.10.28: three explicit choices at the top: تحضير · تحضير مع واجبات · واجبات فقط
+  await svcPick(pg, mode === 'hw' ? 'hw' : hw ? 'both' : 'prep', started);
+  await step('.wz-card:not([disabled])', mode === 'pick' || mode === 'hw' ? 'أختار الدروس بنفسي' : 'تحضير الفصل كاملًا');
   await step('.wz-cards.grid3 .wz-card', grade);
   await step('.wz-card:not([disabled])', subject);
   await step('.wz-card:not([disabled])', shift);
@@ -516,7 +523,7 @@ for (const [n, left] of [[13, 0], [14, 2]]) T(n, `Reinstall: a new trial request
   return b;
 });
 
-T(15, 'Fewer periods than the plan (2 a week for 3 sessions a week): every session gets its own prep on the teacher\'s periods, in order, going on past the plan\'s last week while the term has room (nothing shared), a re-run adds nothing', async (env) => {
+T(15, 'Fewer periods than the plan (2 a week for 3 sessions a week): sessions of the same lesson share one prep «(2 و 3)» so the plan ends in its last week (owner 2026-11-02), a re-run adds nothing', async (env) => {
   usePkg(derivePkg({ keep: range(1, 18) }));
   const tree = treeFromPackage(PKG);
   const periods = { 0: [['1', 1], ['2', 1]], 1: [], 2: [['1', 1], ['2', 1]], 3: [], 4: [] };
@@ -528,13 +535,20 @@ T(15, 'Fewer periods than the plan (2 a week for 3 sessions a week): every sessi
   const rows = noor.st.rows.filter((r) => !r.preexisting);
   check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
   const sums = b.pg.__summaries || [];
-  check(sums.length === 2 && sums.every((x) => x.pick) && /تأكد أنه لا توجد عندك/.test(sums[0].text) && /أول يوم دراسي/.test(sums[1].text) && /أنشر ١٨ تحضيرًا/.test(sums[1].text), 'two calm start alerts, confirmed once each («تأكد أنه لا توجد عندك…», then «ستبدأ التحاضير من … أول يوم دراسي … أنشر ١٨ تحضيرًا», both with «أختار الدروس بنفسي»)', JSON.stringify(sums));
-  check(rows.length === PKG.lessons.length, `one prep per session (${rows.length} preps for ${PKG.lessons.length} sessions)`, rows.map((r) => r.title).join(' | '));
-  check(rows.every((r) => !/\(\d+(?: و \d+)+\)$/.test(r.title)), 'no shared prep «(n و m)» while the term has periods left', rows.map((r) => r.title).join(' | '));
-  check(rows.every((r) => r.publishDate <= '2027-01-21'), 'nothing after the term end (21 January)', rows.filter((r) => r.publishDate > '2027-01-21').map((r) => r.publishDate).join(', '));
+  check(sums.length === 2 && sums.every((x) => x.pick) && /تأكد أنه لا توجد عندك/.test(sums[0].text) && /أول يوم دراسي/.test(sums[1].text) && /أنشر ١٢ تحضيرًا \(١٨ حصة\)/.test(sums[1].text) && /فجمعت/.test(sums[1].text), 'two calm start alerts, confirmed once each («تأكد أنه لا توجد عندك…», then «ستبدأ التحاضير من … أول يوم دراسي … أنشر ١٢ تحضيرًا (١٨ حصة)», both with «أختار الدروس بنفسي»)', JSON.stringify(sums));
+  const lastFile = PKG.lessons.map((l) => l.pubDate).sort().pop();
+  const end = new Date(lastFile + 'T12:00'); end.setDate(end.getDate() + (4 - end.getDay())); const endIso = end.toISOString().slice(0, 10);
+  check(rows.every((r) => r.publishDate <= endIso), `no prep after the plan's last week (${endIso})`, rows.filter((r) => r.publishDate > endIso).map((r) => r.publishDate + ' ' + r.title).join(', '));
+  const cover = new Map();
+  rows.forEach((r) => PKG.lessons.forEach((l) => { if (norm(r.concepts).includes(norm(l.concepts))) cover.set(l.id, (cover.get(l.id) || []).concat(r.title)); }));
+  const missing = PKG.lessons.filter((l) => !cover.has(l.id)).map((l) => l.id), twice = [...cover].filter(([, v]) => v.length > 1).map(([k]) => k);
+  check(!missing.length, 'every session of the plan is in a prep in Noor', missing.join(', '));
+  check(!twice.length, 'no session in two preps', twice.join(', '));
+  const extra = rows.reduce((a, r) => { const m = r.title.match(/\((\d+(?: و \d+)+)\)$/); return a + (m ? m[1].split(' و ').length - 1 : 0); }, 0);
+  check(extra === PKG.lessons.length - rows.length && extra > 0, `shared preps carry «(n و m)» in the title for every extra session (${extra})`, rows.map((r) => r.title).join(' | '));
   check(rows.every((r) => [0, 2].includes(new Date(r.publishDate + 'T12:00').getDay())), 'every prep on a day with periods (Sun/Tue)', rows.map((r) => r.publishDate).join(', '));
   const order = PKG.lessons.map((l) => { const r = rows.find((x) => norm(x.concepts).includes(norm(l.concepts))); return r ? r.publishDate : ''; });
-  check(order.every((d, i) => d && (!i || d > order[i - 1])), 'the sessions follow the plan order, one period after another', order.join(', '));
+  check(order.every((d, i) => d && (!i || d >= order[i - 1])), 'the sessions follow the plan order', order.join(', '));
   const byDay = rows.reduce((m, r) => { m[r.publishDate] = (m[r.publishDate] || 0) + 1; return m; }, {});
   check(Object.values(byDay).every((n) => n === 1), 'one prep per day (one period per section)', JSON.stringify(byDay));
   const n1 = noor.st.rows.length;
@@ -632,6 +646,129 @@ T(20, 'Noor already has preps of this subject (lessons 1–2 and 5–6 done, 3�
     check(rows.length === ids.length && JSON.stringify(got) === JSON.stringify(wantP), 'the chosen sessions are saved in order on the next class periods from the typed date', `got ${got.join(', ')}\nwant ${wantP.join(', ')}`);
     check(!(b.pg.__summaries || []).length, 'pick mode asks nothing before saving', JSON.stringify(b.pg.__summaries || []));
   }
+  return b;
+});
+
+T(26, 'Noor already has preps and the teacher wants a fresh start: «أمسح تحاضير هذه المادة من نور وأبدأ الفصل» asks twice, deletes only this subject\'s preps in Noor, then the full term runs from the first school day; declining at the second card deletes nothing', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 24) }));
+  const tree = treeFromPackage(PKG);
+  const g = lessonGroups(PKG);
+  const doneIds = [0, 1, 4, 5].flatMap((k) => g[k].sessions.map((l) => l.id));
+  const pre = existingFor(tree, doneIds);
+  const noor = env.noor({ tree, existing: pre });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now: '2026-10-11', cont: false });
+  await wizardTo(b.pg, 'term');
+  const card = async (act) => { for (let i = 0; i < 60; i++) { const t = await b.pg.evaluate((a) => { const e = document.querySelector(`#nowActs button[data-act="${a}"]`); const acts = document.getElementById('nowActs'); return e && acts && !acts.hidden ? document.getElementById('nowText').innerText : null; }, act).catch(() => null); if (t) return t; await sleep(1000); } return null; };
+  const press = (act) => b.pg.evaluate((a) => document.querySelector(`#nowActs button[data-act="${a}"]`).click(), act);
+  const t1 = await card('wipe');
+  check(!!t1 && /وجدت في نور/.test(t1), 'the block card offers «أمسح تحاضير هذه المادة من نور وأبدأ الفصل» next to «أختار الدروس بنفسي»', String(t1));
+  const n0 = noor.st.rows.length;
+  await press('wipe');
+  const t2 = await card('wipe2');
+  check(!!t2 && new RegExp(toAr(n0)).test(t2) && /لا يمكن التراجع/.test(t2), `the second card names the count (${n0}) and says it cannot be undone`, String(t2));
+  check(noor.st.rows.length === n0 && !(noor.st.deleted || []).length, 'nothing deleted before the second confirmation', `${noor.st.rows.length}/${n0}`);
+  await press('wipe2');
+  const s = await waitDone(b.pg, 20 * 60000, 'wipe then term');
+  check(/تمت التعبئة بنجاح/.test(s.head), 'after the wipe the full term runs to «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check((noor.st.deleted || []).length === n0 && noor.st.rows.every((r) => !r.preexisting), `all ${n0} old preps were deleted (${(noor.st.deleted || []).length})`, '');
+  const rows = noor.st.rows;
+  check(rows.length === PKG.lessons.length, `the whole plan (${PKG.lessons.length} sessions) is published after the wipe`, `rows ${rows.length}`);
+  const sums = b.pg.__summaries || [];
+  check(sums.length >= 1 && /أول يوم دراسي/.test(sums[sums.length - 1].text) && !/خطأ|فشل|تعذّر/.test(sums.map((x) => x.text).join(' ')), 'the start summary after the wipe is calm and says the preps begin on the first school day', JSON.stringify(sums));
+  return b;
+});
+
+T(27, 'Declining at the second card: «لا، أختار الدروس بنفسي» deletes nothing and opens the lessons screen', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 24) }));
+  const tree = treeFromPackage(PKG);
+  const g = lessonGroups(PKG);
+  const pre = existingFor(tree, [0, 1, 4, 5].flatMap((k) => g[k].sessions.map((l) => l.id)));
+  const noor = env.noor({ tree, existing: pre });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now: '2026-10-11', cont: false });
+  await wizardTo(b.pg, 'term');
+  const card = async (act) => { for (let i = 0; i < 240; i++) { const t = await b.pg.evaluate((a) => { const e = document.querySelector(`#nowActs button[data-act="${a}"]`); const acts = document.getElementById('nowActs'); return e && acts && !acts.hidden ? 1 : 0; }, act).catch(() => 0); if (t) return true; await sleep(1000); } return false; };
+  const press = (act) => b.pg.evaluate((a) => document.querySelector(`#nowActs button[data-act="${a}"]`).click(), act);
+  const n0 = noor.st.rows.length;
+  check(await card('wipe'), 'the block card shows the wipe button', '');
+  await press('wipe');
+  check(await card('wipe2'), 'the second confirmation card appears', '');
+  await press('pick');
+  const onLessons = await b.pg.waitForSelector('input[data-k]', { timeout: 30000 }).then(() => true).catch(() => false);
+  check(onLessons, '«أختار الدروس بنفسي» opens the lessons screen', '');
+  check(noor.st.rows.length === n0 && !(noor.st.deleted || []).length, 'nothing deleted', `${noor.st.rows.length}/${n0}`);
+  return b;
+});
+
+T(28, 'The whole subject is already in Noor (the owner\'s screenshot): the full term no longer just says «موجودة في نور» — the same card offers «أمسح تحاضير هذه المادة…»; «حسنًا» keeps everything, the wipe (two confirmations) republishes the whole plan', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 24) }));
+  const tree = treeFromPackage(PKG);
+  const pre = existingFor(tree, PKG.lessons.map((l) => l.id));
+  const noor = env.noor({ tree, existing: pre });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now: '2026-10-11', cont: false });
+  await wizardTo(b.pg, 'term');
+  const card = async (act) => { for (let i = 0; i < 60; i++) { const t = await b.pg.evaluate((a) => { const e = document.querySelector(`#nowActs button[data-act="${a}"]`); const acts = document.getElementById('nowActs'); return e && acts && !acts.hidden ? document.getElementById('nowText').innerText : null; }, act).catch(() => null); if (t) return t; await sleep(1000); } return null; };
+  const press = (act) => b.pg.evaluate((a) => document.querySelector(`#nowActs button[data-act="${a}"]`).click(), act);
+  const t1 = await card('wipe');
+  check(!!t1 && /وجدت في نور/.test(t1) && /كلها فيها/.test(t1), 'a card appears (not just «موجودة في نور») with the wipe button', String(t1));
+  check(!!(await b.pg.evaluate(() => document.querySelector('#nowActs button[data-act="ok"]'))), 'it also has a neutral «حسنًا»', '');
+  const n0 = noor.st.rows.length;
+  await press('wipe');
+  const t2 = await card('wipe2');
+  check(!!t2 && new RegExp(toAr(n0)).test(t2) && /لا يمكن التراجع/.test(t2), `the second card names the count (${n0})`, String(t2));
+  check(noor.st.rows.length === n0, 'nothing deleted yet', '');
+  await press('wipe2');
+  const s = await waitDone(b.pg, 25 * 60000, 'wipe all then term');
+  check(/تمت التعبئة بنجاح/.test(s.head), 'after the wipe the full term runs to «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check((noor.st.deleted || []).length === n0 && noor.st.rows.every((r) => !r.preexisting), `all ${n0} old preps deleted`, String((noor.st.deleted || []).length));
+  check(noor.st.rows.length === PKG.lessons.length, `the whole plan (${PKG.lessons.length}) is published again`, `rows ${noor.st.rows.length}`);
+  return b;
+});
+
+T(29, 'The whole subject is already in Noor and the teacher presses «حسنًا»: nothing is deleted and the usual «هذه الحصص موجودة في نور» ending shows', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 24) }));
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree, existing: existingFor(tree, PKG.lessons.map((l) => l.id)) });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now: '2026-10-11', cont: false });
+  await wizardTo(b.pg, 'term');
+  let ok = false;
+  for (let i = 0; i < 60 && !ok; i++) { ok = await b.pg.evaluate(() => { const e = document.querySelector('#nowActs button[data-act="ok"]'); const a = document.getElementById('nowActs'); if (e && a && !a.hidden) { e.click(); return true; } return false; }).catch(() => false); if (!ok) await sleep(1000); }
+  check(ok, 'the card appears with «حسنًا»', '');
+  const s = await waitDone(b.pg, 40000, 'ok');
+  check(/موجودة في نور|لا شيء ناقص|مكتمل/.test(s.head + s.text), 'the usual ending shows', `${s.head} | ${s.text}`);
+  check(!(noor.st.deleted || []).length && noor.st.rows.every((r) => r.preexisting), 'nothing deleted or added', '');
+  return b;
+});
+
+T(30, 'Pick mode near the term end (owner 2026-11-03): one typed date gives the chosen sessions consecutive class days; a session that would land after the term end (21 Jan) joins the nearest earlier session of the same lesson «(n و m)», so no prep is after the term', async (env) => {
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'pick');
+  await b.pg.waitForSelector('input[data-k]', { timeout: 30000 });
+  const g = lessonGroups(PKG).find((x) => x.sessions.length >= 4);
+  check(!!g, 'the package has a lesson with 4+ sessions', '');
+  if (!g) return b;
+  const keyOf = (l) => l.unit + '|' + l.lesson;
+  await b.pg.evaluate((k) => [...document.querySelectorAll('input[data-k]')].find((x) => x.dataset.k === k).click(), keyOf(g.sessions[0])); await sleep(400);
+  const ids = await b.pg.$$eval('input[data-d]', (a) => a.map((x) => x.dataset.d));
+  await b.pg.evaluate(([id, d]) => { const el = document.querySelector(`input[data-d="${id}"]`); el.value = d; el.dispatchEvent(new Event('change', { bubbles: true })); }, [ids[0], '2027-01-17']);
+  await sleep(300);
+  const vals = await b.pg.$$eval('input[data-d]', (a) => a.map((x) => x.value));
+  check(vals.length === g.sessions.length && vals[vals.length - 1] >= '2027-01-20', `the derived dates run up to the term end, the last ones on days without a period (Wed/Thu) that move past it at save (${vals.join(', ')})`, '');
+  await b.pg.click('#wzLessGo');
+  const s = await waitDone(b.pg, 10 * 60000, 'pick near term end');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check(rows.length && rows.every((r) => r.publishDate <= '2027-01-21'), 'no prep after the term end', rows.map((r) => r.publishDate + ' ' + r.title).join(' | '));
+  const cover = new Map();
+  rows.forEach((r) => g.sessions.forEach((l) => { if (norm(r.concepts).includes(norm(l.concepts))) cover.set(l.id, (cover.get(l.id) || 0) + 1); }));
+  check(g.sessions.every((l) => cover.get(l.id) === 1), `every chosen session (${g.sessions.length}) is in exactly one prep`, JSON.stringify([...cover]));
+  check(rows.some((r) => /\(\d+(?: و \d+)+\)$/.test(r.title)), 'the joined prep carries «(n و m)» in its title', rows.map((r) => r.title).join(' | '));
   return b;
 });
 
@@ -876,7 +1013,8 @@ T(24, 'Subscription «تحضير فقط»: the term runs with the homework box t
   check(rows.length >= PKG.lessons.length, `the preps were saved (${rows.length})`, '');
   check(noor.st.homeworks.length === 0 && noor.st.hwPosts.length === 0, `no homework added although the box was ticked (${noor.st.homeworks.length})`, noor.st.homeworks.map((h) => h.title).join(' | '));
   await b.pg.reload(); await sleep(4000);
-  await clickCard(b.pg, '.wz-card:not([disabled])', 'الواجبات فقط');
+  await svcPick(b.pg, 'hw');
+  await clickCard(b.pg, '.wz-card:not([disabled])', 'أختار الدروس بنفسي');
   await clickCard(b.pg, '.wz-cards.grid3 .wz-card', 'الصف التاسع');
   const st = await cardState(b.pg, 'الأحياء');
   check(st.found && st.disabled, 'in «الواجبات فقط» the prep-only subject is shown but not selectable', JSON.stringify(st));
@@ -898,7 +1036,8 @@ T(25, 'Subscription «واجبات فقط»: a prep mode sends the teacher back 
   check(u.wiz && /الواجبات فقط/.test(u.wzHead + ' ' + u.wzBody) , 'the teacher is back at the choice screen (full term is not part of his subscription)', `${u.wzHead} | ${u.wzBody}`.slice(0, 200));
   const msg = await b.pg.evaluate(() => document.getElementById('wzMsg').textContent);
   check(/للواجبات/.test(msg) && !/خطأ|فشل|غير موجود|لم أجد/.test(msg), 'a calm note explains the subscription covers homework', msg);
-  await clickCard(b.pg, '.wz-card:not([disabled])', 'الواجبات فقط');
+  await svcPick(b.pg, 'hw');
+  await clickCard(b.pg, '.wz-card:not([disabled])', 'أختار الدروس بنفسي');
   await clickCard(b.pg, '.wz-cards.grid3 .wz-card', 'الصف التاسع');
   const st = await cardState(b.pg, 'الأحياء');
   check(st.found && !st.disabled, 'in «الواجبات فقط» the subject is selectable', JSON.stringify(st));

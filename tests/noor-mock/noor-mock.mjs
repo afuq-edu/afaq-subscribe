@@ -97,7 +97,7 @@ export function createNoor(cfg) {
     const c = course(cid);
     const rows = st.rows.filter((r) => r.cid === cid).slice().reverse()   // newest first, like Noor
       .map((r) => [`<span class="title-text">${esc(r.title)}</span>`, esc(c.subject), esc(c.grade), st.showCreated ? esc(r.created) : '', esc(r.publishDate),
-        `<a href="${HOST}/teacher/courses/edit_preparation/${r.id}" data-prep-id="${r.id}">تعديل</a>`]);
+        `<a href="${HOST}/teacher/courses/edit_preparation/${r.id}" data-prep-id="${r.id}">تعديل</a> <a href="/teacher/courses/delete_preparation/${r.id}/cid:${cid}" onclick="return confirm('حذف؟')">حذف</a>`]);
     const ok = extra.ok ? `<div class="swal2-popup swal2-icon-success"><h2 class="swal2-title">${esc(extra.ok)}</h2><button type="button" class="swal2-confirm" onclick="this.closest('.swal2-popup').remove()">موافق</button></div>` : '';
     const moved = extra.url ? `<script>history.replaceState(null, '', ${JSON.stringify(extra.url)});</script>` : '';
     return page('تحضير الدروس', `${moved}${ok}<a class="btn" href="${HOST}/teacher/courses/add_preparation/cid:${cid}">إضافة تحضير</a>
@@ -358,6 +358,12 @@ ${flag('private', 'private_check_box')}${flag('random_questions', 'AssignmentRan
     if (p === '/teacher' || p === '/teacher/dashboard') return html(homePage());
     let m = p.match(/^\/teacher\/courses\/preparations_index\/cid:([A-Za-z0-9_-]+)$/);
     if (m && course(m[1])) return html(listPage(m[1]));
+    m = p.match(/^\/teacher\/courses\/delete_preparation\/([A-Za-z0-9_-]+)\/cid:([A-Za-z0-9_-]+)$/);
+    if (m && course(m[2])) {
+      const i = st.rows.findIndex((r) => r.cid === m[2] && r.id === m[1]);
+      if (i >= 0) { st.rows.splice(i, 1); (st.deleted = st.deleted || []).push(m[1]); }
+      return html(listPage(m[2]));
+    }
     m = p.match(/^\/teacher\/courses\/add_preparation\/cid:([A-Za-z0-9_-]+)$/);
     if (m && course(m[1])) {
       if (req.method() === 'POST') {
