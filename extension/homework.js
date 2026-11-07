@@ -108,16 +108,22 @@ export function toNoorRows(qs) {
   const p = (s) => `<p${isAr(s) ? ' dir="rtl"' : ''}>${esc(String(s).trim())}</p>`;
   const hash = (s) => { let h = 0; for (const c of String(s)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; };
   const ok = (qs || []).filter((x) => x && x.q && (x.t === 'tf' ? typeof x.a === 'boolean' : Array.isArray(x.o) && x.o.length >= 2 && x.a >= 1 && x.a <= x.o.length));
-  const h0 = ok.length ? hash(ok[0].q) : 0;
-  return ok.map((x, i) => {
+  // ترتيب ثابت لكل واجب (الإعادة تعطي الواجب نفسه) ومختلف بين الواجبات: الأسئلة مخلوطة، وموضع الجواب الصحيح يتغير من سؤال لآخر
+  let r = hash(ok.map((x) => x.q).join('|')) || 1;
+  const rnd = () => { r = (r + 0x6D2B79F5) >>> 0; let t = r; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const shuffle = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const order = shuffle(ok.slice());
+  const perms = {};
+  const slot = (n) => { const b = perms[n] || (perms[n] = { list: [], i: 0 }); if (b.i % n === 0) b.list = shuffle([...Array(n).keys()]); return b.list[b.i++ % n]; };
+  return order.map((x) => {
     if (x.t === 'tf') {
       const opts = isAr(x.q) ? ['صح', 'خطأ'] : ['True', 'False'];
       return { type: 'mcq', text: p(x.q), options: opts, correct: x.a ? 1 : 2 };
     }
     const o = x.o.slice(0, 6).map((v) => String(v).trim());
     const right = o[x.a - 1];
-    const rest = o.filter((_, k) => k !== x.a - 1);
-    const at = (h0 + i * 3) % o.length;
+    const rest = shuffle(o.filter((_, k) => k !== x.a - 1));
+    const at = slot(o.length);
     rest.splice(at, 0, right);
     return { type: 'mcq', text: p(x.q), options: rest, correct: at + 1 };
   });

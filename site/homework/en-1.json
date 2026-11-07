@@ -1506,8 +1506,8 @@
     },
     {
      "t": "tf",
-     "q": "Tom is a cat.",
-     "a": true
+     "q": "We say Goodbye! when we meet a friend.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1520,38 +1520,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say Goodbye! when we meet a friend.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch a cat's name.",
      "o": [
+      "Meg",
       "Sami",
       "Jack",
-      "Fatma",
-      "Meg"
+      "Fatma"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Tom is a cat.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "How many fingers hold the pencil with the thumb?",
-     "o": [
-      "five",
-      "two",
-      "one",
-      "four"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "We say Hello! when we meet a friend.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "How many fingers hold the pencil with the thumb?",
+     "o": [
+      "two",
+      "one",
+      "four",
+      "five"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -1596,8 +1596,8 @@
     },
     {
      "t": "tf",
-     "q": "Meg is Fatma's cat.",
-     "a": true
+     "q": "Snake starts with /t/.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1610,38 +1610,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Snake starts with /t/.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch the word that starts with /s/.",
      "o": [
+      "sun",
       "cat",
       "boy",
-      "girl",
-      "sun"
+      "girl"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Meg is Fatma's cat.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Who is Fatma's cat?",
-     "o": [
-      "Jack",
-      "Meg",
-      "Tom",
-      "Sami"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Sun starts with /s/.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Who is Fatma's cat?",
+     "o": [
+      "Meg",
+      "Tom",
+      "Sami",
+      "Jack"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -1686,8 +1686,8 @@
     },
     {
      "t": "tf",
-     "q": "Ant starts with the letter a.",
-     "a": true
+     "q": "We answer What's your name? with Goodbye!",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1700,38 +1700,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We answer What's your name? with Goodbye!",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch the /æ/ fruit.",
      "o": [
+      "apple",
       "sun",
       "snake",
-      "six",
-      "apple"
+      "six"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Ant starts with the letter a.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which one is a cat?",
-     "o": [
-      "Sami",
-      "Meg",
-      "Lily",
-      "Fatma"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "We answer What's your name? with My name's …",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which one is a cat?",
+     "o": [
+      "Meg",
+      "Lily",
+      "Fatma",
+      "Sami"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -1776,8 +1776,8 @@
     },
     {
      "t": "tf",
-     "q": "In the story, Fatma says: This is my friend, Lily.",
-     "a": true
+     "q": "Helping is a bad thing.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1790,38 +1790,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Helping is a bad thing.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch Sami's brother.",
      "o": [
+      "Mazin",
       "Fatma",
       "Lily",
-      "Meg",
-      "Mazin"
+      "Meg"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In the story, Fatma says: This is my friend, Lily.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which one is a family word?",
-     "o": [
-      "apple",
-      "mum",
-      "tree",
-      "sun"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "It is good to help our family.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which one is a family word?",
+     "o": [
+      "mum",
+      "tree",
+      "sun",
+      "apple"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -1863,24 +1863,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "Tree starts with the sound /t/.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Who's this? (a man in the family)",
      "o": [
+      "dad",
       "mum",
-      "sister",
-      "dad"
+      "sister"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "Dad is a sister.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "Tree starts with the sound /t/.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -1910,8 +1910,8 @@
     },
     {
      "t": "tf",
-     "q": "We answer Who's this? with This is my mum.",
-     "a": true
+     "q": "Pie starts with the letter t.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1924,38 +1924,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Pie starts with the letter t.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch the /p/ word you write with.",
      "o": [
+      "pen",
       "tree",
       "sun",
-      "apple",
-      "pen"
+      "apple"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We answer Who's this? with This is my mum.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Who's Fatma?",
-     "o": [
-      "Sami's brother",
-      "Sami's sister",
-      "Sami's mum",
-      "Jack's cat"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Pen starts with the sound /p/.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Who's Fatma?",
+     "o": [
+      "Sami's sister",
+      "Sami's mum",
+      "Jack's cat",
+      "Sami's brother"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -1997,24 +1997,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "t – a – p makes tap.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "_en: which letter is missing?",
      "o": [
+      "p",
       "t",
-      "s",
-      "p"
+      "s"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "A brother is a girl.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "t – a – p makes tap.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -2044,8 +2044,8 @@
     },
     {
      "t": "tf",
-     "q": "The /n/ action is touching your nose.",
-     "a": true
+     "q": "p – a – n makes nap.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2058,38 +2058,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "p – a – n makes nap.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch the /n/ word on your face.",
      "o": [
+      "nose",
       "pen",
       "sun",
-      "tree",
-      "nose"
+      "tree"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The /n/ action is touching your nose.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which letters did we learn in Unit 1?",
-     "o": [
-      "x, y, z, o, u",
-      "s, a, t, p, n",
-      "b, c, d, e, f",
-      "g, o, l, f, e"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "n – a – p makes nap.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which letters did we learn in Unit 1?",
+     "o": [
+      "s, a, t, p, n",
+      "b, c, d, e, f",
+      "g, o, l, f, e",
+      "x, y, z, o, u"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2134,8 +2134,8 @@
     },
     {
      "t": "tf",
-     "q": "Sad starts with /s/.",
-     "a": true
+     "q": "Ant and arrow start with /t/.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2148,38 +2148,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Ant and arrow start with /t/.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch a family word.",
      "o": [
+      "mum",
       "cat",
       "pen",
-      "sun",
-      "mum"
+      "sun"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Sad starts with /s/.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which letter makes the sound /p/?",
-     "o": [
-      "a",
-      "p",
-      "n",
-      "t"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Tin and teddy start with the same sound.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which letter makes the sound /p/?",
+     "o": [
+      "p",
+      "n",
+      "t",
+      "a"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2221,24 +2221,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "p – a – n makes pan.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "First letter of sad?",
      "o": [
+      "s",
       "t",
-      "a",
-      "s"
+      "a"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "Net starts with the letter t.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "p – a – n makes pan.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -2268,8 +2268,8 @@
     },
     {
      "t": "tf",
-     "q": "Pie and pen start with the letter p.",
-     "a": true
+     "q": "Mum and dad are friends, not family.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2282,38 +2282,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Mum and dad are friends, not family.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch the letter for /s/.",
      "o": [
+      "s",
       "n",
       "p",
-      "t",
-      "s"
+      "t"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Pie and pen start with the letter p.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which one is Tom?",
-     "o": [
-      "a sister",
-      "a cat",
-      "a girl",
-      "a dad"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "We can say: She's my sister.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which one is Tom?",
+     "o": [
+      "a cat",
+      "a girl",
+      "a dad",
+      "a sister"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2355,24 +2355,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "n – a – p makes nap.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Which word is for a boy?",
      "o": [
+      "he",
       "she",
-      "mum",
-      "he"
+      "mum"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "The word pan starts with n.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "n – a – p makes nap.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -2402,8 +2402,8 @@
     },
     {
      "t": "tf",
-     "q": "We use a ruler to draw straight lines.",
-     "a": true
+     "q": "Igloo starts with the letter a.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2416,38 +2416,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Igloo starts with the letter a.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch the school thing for writing.",
      "o": [
+      "pen",
       "bag",
       "ruler",
-      "eraser",
-      "pen"
+      "eraser"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use a ruler to draw straight lines.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which of these words starts with /ɪ/?",
-     "o": [
-      "sun",
-      "in",
-      "an",
-      "on"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Insect starts with the sound /ɪ/.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which of these words starts with /ɪ/?",
+     "o": [
+      "in",
+      "an",
+      "on",
+      "sun"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2492,8 +2492,8 @@
     },
     {
      "t": "tf",
-     "q": "The /m/ Phonics Card shows a mouse.",
-     "a": true
+     "q": "m – a – n makes mat.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2506,38 +2506,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "m – a – n makes mat.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch the /m/ word in the sky.",
      "o": [
+      "moon",
       "sun",
       "tree",
-      "nest",
-      "moon"
+      "nest"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The /m/ Phonics Card shows a mouse.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which is right?",
-     "o": [
-      "an ruler",
-      "an eraser",
-      "a eraser",
-      "an pen"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "m – a – p makes map.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which is right?",
+     "o": [
+      "an eraser",
+      "a eraser",
+      "an pen",
+      "an ruler"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2582,8 +2582,8 @@
     },
     {
      "t": "tf",
-     "q": "In the story, Meg has got the bag.",
-     "a": true
+     "q": "A crayon is a family word.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2596,38 +2596,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A crayon is a family word.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch the school thing we read.",
      "o": [
+      "book",
       "crayon",
       "pencil",
-      "ruler",
-      "book"
+      "ruler"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In the story, Meg has got the bag.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which of these words starts with /h/?",
-     "o": [
-      "pop",
-      "hop",
-      "mop",
-      "top"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "At the end, Fatma says: I look after my things!",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which of these words starts with /h/?",
+     "o": [
+      "hop",
+      "mop",
+      "top",
+      "pop"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2672,8 +2672,8 @@
     },
     {
      "t": "tf",
-     "q": "Our song is called I'm ready for school.",
-     "a": true
+     "q": "Kite starts with the letter h.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2686,38 +2686,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Kite starts with the letter h.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch the /k/ word that starts with k.",
      "o": [
+      "king",
       "cloud",
       "cat",
-      "cut",
-      "king"
+      "cut"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Our song is called I'm ready for school.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "How many school things did we learn in Unit 2?",
-     "o": [
-      "ten",
-      "eight",
-      "four",
-      "two"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "King starts with the sound /k/.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "How many school things did we learn in Unit 2?",
+     "o": [
+      "eight",
+      "four",
+      "two",
+      "ten"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2759,24 +2759,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "Cat starts with the sound /k/.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Which word starts with /k/?",
      "o": [
+      "kite",
       "hat",
-      "moon",
-      "kite"
+      "moon"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "A pencil case is a family word.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "Cat starts with the sound /k/.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -2806,8 +2806,8 @@
     },
     {
      "t": "tf",
-     "q": "We put the paper school things in the bag.",
-     "a": true
+     "q": "Red starts with the letter h.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2820,20 +2820,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Red starts with the letter h.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch the /r/ animal.",
      "o": [
+      "rabbit",
       "mouse",
       "horse",
-      "hen",
-      "rabbit"
+      "hen"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We put the paper school things in the bag.",
+     "a": true
     }
    ]
   ],
@@ -2852,8 +2852,8 @@
     },
     {
      "t": "tf",
-     "q": "Kite starts with the letter k.",
-     "a": true
+     "q": "Red starts with the letter h.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2866,38 +2866,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Red starts with the letter h.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch the /ɪ/ word.",
      "o": [
+      "insect",
       "mouse",
       "horse",
-      "rug",
-      "insect"
+      "rug"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Kite starts with the letter k.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which letters say /k/?",
-     "o": [
-      "m and n",
-      "c, k and ck",
-      "h and m",
-      "r and i"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Igloo starts with the letter i.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which letters say /k/?",
+     "o": [
+      "c, k and ck",
+      "h and m",
+      "r and i",
+      "m and n"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2942,8 +2942,8 @@
     },
     {
      "t": "tf",
-     "q": "What's this? is a question about a thing.",
-     "a": true
+     "q": "We answer What's this? with I'm six.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2956,38 +2956,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We answer What's this? with I'm six.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch the letter for /m/.",
      "o": [
+      "m",
       "h",
       "r",
-      "i",
-      "m"
+      "i"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "What's this? is a question about a thing.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which letters are in Unit 2?",
-     "o": [
-      "o, u, l, v, w",
-      "i, m, h, c, k, ck, r",
-      "s, a, t, p, n",
-      "b, d, f, g, j"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "We answer What's this? with It's a crayon.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which letters are in Unit 2?",
+     "o": [
+      "i, m, h, c, k, ck, r",
+      "s, a, t, p, n",
+      "b, d, f, g, j",
+      "o, u, l, v, w"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3029,24 +3029,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "For cat, the missing letter in c – a – _ is t.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "A has got a ruler. B hasn't got a ruler. What is different?",
      "o": [
+      "the ruler",
       "the bag",
-      "the pen",
-      "the ruler"
+      "the pen"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "Sack ends with the letter s.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "For cat, the missing letter in c – a – _ is t.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -3076,8 +3076,8 @@
     },
     {
      "t": "tf",
-     "q": "In 1, 2, ?, 4, the missing number is three.",
-     "a": true
+     "q": "Two comes before one.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3090,38 +3090,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Two comes before one.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Catch the number after one.",
      "o": [
+      "two",
       "four",
       "six",
-      "five",
-      "two"
+      "five"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In 1, 2, ?, 4, the missing number is three.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which number is six?",
-     "o": [
-      "2",
-      "6",
-      "5",
-      "3"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Six is the biggest number from one to six.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which number is six?",
+     "o": [
+      "6",
+      "5",
+      "3",
+      "2"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3166,8 +3166,8 @@
     },
     {
      "t": "tf",
-     "q": "In the listening, Mazin is five.",
-     "a": true
+     "q": "In the listening, Muna is six.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3180,38 +3180,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "In the listening, Muna is six.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "How old is Muna?",
      "o": [
+      "three",
       "five",
       "six",
-      "four",
-      "three"
+      "four"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In the listening, Mazin is five.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which is right?",
-     "o": [
-      "an crayons",
-      "five crayons",
-      "five crayon",
-      "a crayons"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "We say two rulers for more than one ruler.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which is right?",
+     "o": [
+      "five crayons",
+      "five crayon",
+      "a crayons",
+      "an crayons"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3256,8 +3256,8 @@
     },
     {
      "t": "tf",
-     "q": "We ask Who's this? about a person.",
-     "a": true
+     "q": "We ask Who's this? about a door.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3270,38 +3270,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We ask Who's this? about a door.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "It starts with f",
      "o": [
+      "frog",
       "rabbit",
       "cat",
-      "book",
-      "frog"
+      "book"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We ask Who's this? about a person.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What do we say to the teacher in the morning?",
-     "o": [
-      "It's my turn.",
-      "Good morning.",
-      "Goodbye!",
-      "I'm sorry."
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Sami's teacher is Miss Zahra.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What do we say to the teacher in the morning?",
+     "o": [
+      "Good morning.",
+      "Goodbye!",
+      "I'm sorry.",
+      "It's my turn."
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3343,24 +3343,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "f – i – t makes the word fit.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Which word starts with f?",
      "o": [
+      "fan",
       "cat",
-      "bag",
-      "fan"
+      "bag"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "A friend gives you a pen. You say Goodbye!",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "f – i – t makes the word fit.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -3390,8 +3390,8 @@
     },
     {
      "t": "tf",
-     "q": "Octopus starts with the o sound.",
-     "a": true
+     "q": "h – o – p makes the word mop.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3404,38 +3404,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "h – o – p makes the word mop.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "It starts with o",
      "o": [
+      "octopus",
       "fish",
       "rabbit",
-      "frog",
-      "octopus"
+      "frog"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Octopus starts with the o sound.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which of these words starts with o?",
-     "o": [
-      "mop",
-      "olive",
-      "fork",
-      "sock"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "s – o – ck makes the word sock.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which of these words starts with o?",
+     "o": [
+      "olive",
+      "fork",
+      "sock",
+      "mop"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3477,24 +3477,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "On starts with the letter o.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "m – o – p. What's the word?",
      "o": [
+      "mop",
       "hop",
-      "sock",
-      "mop"
+      "sock"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "We answer What's this? with Goodbye.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "On starts with the letter o.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -3524,8 +3524,8 @@
     },
     {
      "t": "tf",
-     "q": "At the end, the pens are in the pot.",
-     "a": true
+     "q": "Goat starts with the f sound.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3538,38 +3538,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Goat starts with the f sound.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "It starts with g",
      "o": [
+      "gate",
       "fan",
       "shop",
-      "octopus",
-      "gate"
+      "octopus"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "At the end, the pens are in the pot.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Where is the book in the story?",
-     "o": [
-      "On the whiteboard.",
-      "Under the chair.",
-      "On the wall.",
-      "In the pot."
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "The book is under the chair.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where is the book in the story?",
+     "o": [
+      "Under the chair.",
+      "On the wall.",
+      "In the pot.",
+      "On the whiteboard."
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3611,24 +3611,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "Being tidy is good.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Where do the pens go?",
      "o": [
+      "In the pot.",
       "On the floor.",
-      "Under the desk.",
-      "In the pot."
+      "Under the desk."
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "Grapes start with the o sound.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "Being tidy is good.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -3658,8 +3658,8 @@
     },
     {
      "t": "tf",
-     "q": "Pencils in the pot are inside the pot.",
-     "a": true
+     "q": "Sun starts with the sh sound.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3672,38 +3672,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Sun starts with the sh sound.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Inside the pot",
      "o": [
+      "in",
       "on",
       "under",
-      "up",
-      "in"
+      "up"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Pencils in the pot are inside the pot.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which one is part of the classroom?",
-     "o": [
-      "ship",
-      "wall",
-      "sheep",
-      "shark"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Ship starts with the sh sound.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which one is part of the classroom?",
+     "o": [
+      "wall",
+      "sheep",
+      "shark",
+      "ship"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3745,24 +3745,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "Fish ends with the sh sound.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Which word starts with sh?",
      "o": [
+      "sheep",
       "sun",
-      "fish",
-      "sheep"
+      "fish"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "Under and on mean the same.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "Fish ends with the sh sound.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -3792,8 +3792,8 @@
     },
     {
      "t": "tf",
-     "q": "We keep pens and pencils in a desk tidy.",
-     "a": true
+     "q": "b – i – n makes the word big.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3806,38 +3806,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "b – i – n makes the word big.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "It starts with b",
      "o": [
+      "bubble",
       "shell",
       "goat",
-      "fish",
-      "bubble"
+      "fish"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We keep pens and pencils in a desk tidy.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which word starts with the same sound as boy?",
-     "o": [
-      "shop",
-      "ball",
-      "goat",
-      "fork"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Ball starts with the b sound.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word starts with the same sound as boy?",
+     "o": [
+      "ball",
+      "goat",
+      "fork",
+      "shop"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3882,8 +3882,8 @@
     },
     {
      "t": "tf",
-     "q": "The pens are on the desk is a sentence with on.",
-     "a": true
+     "q": "Fish starts with the letters sh.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3896,38 +3896,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Fish starts with the letters sh.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "f – i – n",
      "o": [
+      "fin",
       "fit",
       "fig",
-      "bin",
-      "fin"
+      "bin"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The pens are on the desk is a sentence with on.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which word starts with sh?",
-     "o": [
-      "fog",
-      "shed",
-      "sock",
-      "bag"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "f – o – g makes the word fog.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word starts with sh?",
+     "o": [
+      "shed",
+      "sock",
+      "bag",
+      "fog"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3969,24 +3969,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "Bird starts with the b sound.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Write the first letter: _ish",
      "o": [
+      "f",
       "sh",
-      "b",
-      "f"
+      "b"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "We ask What's this? about a teacher.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "Bird starts with the b sound.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -4002,15 +4002,20 @@
    ],
    [
     {
+     "t": "tf",
+     "q": "Which word is a classroom thing? Answer: goat",
+     "a": false
+    },
+    {
      "t": "mcq",
      "q": "The books are on the floor. Where do you draw them?",
      "o": [
-      "On the window.",
       "On the floor.",
       "On the wall.",
-      "In the pot."
+      "In the pot.",
+      "On the window."
      ],
-     "a": 2
+     "a": 1
     },
     {
      "t": "tf",
@@ -4021,16 +4026,11 @@
      "t": "mcq",
      "q": "Blend: s – o – ck",
      "o": [
-      "sock",
       "shop",
-      "mop"
+      "mop",
+      "sock"
      ],
-     "a": 1
-    },
-    {
-     "t": "tf",
-     "q": "Shop starts with sh.",
-     "a": true
+     "a": 3
     },
     {
      "t": "mcq",
@@ -4060,8 +4060,8 @@
     },
     {
      "t": "tf",
-     "q": "We ask Who's this? about a boy or a girl.",
-     "a": true
+     "q": "On starts with the letter n.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4074,38 +4074,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "On starts with the letter n.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Odd one out: fan, fish, nut",
      "o": [
+      "nut",
       "fan",
       "fish",
-      "fig",
-      "nut"
+      "fig"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We ask Who's this? about a boy or a girl.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which word starts with f?",
-     "o": [
-      "on",
-      "fish",
-      "nut",
-      "teddy"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Colour the bag red means make the bag red.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word starts with f?",
+     "o": [
+      "fish",
+      "nut",
+      "teddy",
+      "on"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -4147,25 +4147,25 @@
      "a": 2
     },
     {
-     "t": "tf",
-     "q": "Olive and octopus both start with o.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "First letter of olive",
      "o": [
+      "f",
       "n",
       "o",
-      "l",
-      "f"
+      "l"
      ],
-     "a": 2
+     "a": 3
     },
     {
      "t": "tf",
      "q": "A pencil case is a person.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "Olive and octopus both start with o.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -4181,14 +4181,19 @@
    ],
    [
     {
+     "t": "tf",
+     "q": "Which word is a school thing? Answer: girl",
+     "a": false
+    },
+    {
      "t": "mcq",
      "q": "Which question asks about a colour?",
      "o": [
-      "Where's the bag?",
       "Who's this?",
-      "What colour is it?"
+      "What colour is it?",
+      "Where's the bag?"
      ],
-     "a": 3
+     "a": 2
     },
     {
      "t": "tf",
@@ -4199,17 +4204,12 @@
      "t": "mcq",
      "q": "Write: h – o – p",
      "o": [
-      "mop",
       "hip",
       "shop",
-      "hop"
+      "hop",
+      "mop"
      ],
-     "a": 4
-    },
-    {
-     "t": "tf",
-     "q": "b – a – t makes the word bat.",
-     "a": true
+     "a": 3
     },
     {
      "t": "mcq",
@@ -4239,8 +4239,8 @@
     },
     {
      "t": "tf",
-     "q": "Sami's robot is red.",
-     "a": true
+     "q": "Fish starts with the th sound.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4253,38 +4253,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Fish starts with the th sound.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A soft toy bear",
      "o": [
+      "teddy",
       "robot",
       "car",
-      "ball",
-      "teddy"
+      "ball"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Sami's robot is red.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What colour is Sami's robot?",
-     "o": [
-      "Yellow",
-      "Red",
-      "Blue",
-      "Green"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Three starts with the th sound.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What colour is Sami's robot?",
+     "o": [
+      "Red",
+      "Blue",
+      "Green",
+      "Yellow"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -4329,8 +4329,8 @@
     },
     {
      "t": "tf",
-     "q": "Is it a ball? is a question about a toy.",
-     "a": true
+     "q": "r – u – g makes the word bun.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4343,38 +4343,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "r – u – g makes the word bun.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "It starts with u",
      "o": [
+      "umbrella",
       "octopus",
       "fish",
-      "goat",
-      "umbrella"
+      "goat"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Is it a ball? is a question about a toy.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which of these words starts with u?",
-     "o": [
-      "ball",
-      "umbrella",
-      "octopus",
-      "thumb"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Umbrella starts with the u sound.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which of these words starts with u?",
+     "o": [
+      "umbrella",
+      "octopus",
+      "thumb",
+      "ball"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -4419,8 +4419,8 @@
     },
     {
      "t": "tf",
-     "q": "The story is about sharing toys.",
-     "a": true
+     "q": "Lion starts with the d sound.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4433,38 +4433,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Lion starts with the d sound.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "It starts with d",
      "o": [
+      "drum",
       "lion",
       "goat",
-      "ball",
-      "drum"
+      "ball"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The story is about sharing toys.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which word is a new toy in this story?",
-     "o": [
-      "desk",
-      "train",
-      "whiteboard",
-      "window"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "At the end, the children all play together.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word is a new toy in this story?",
+     "o": [
+      "train",
+      "whiteboard",
+      "window",
+      "desk"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -4509,8 +4509,8 @@
     },
     {
      "t": "tf",
-     "q": "Ladder starts with the letter l.",
-     "a": true
+     "q": "l – i – d makes the word lock.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4523,38 +4523,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "l – i – d makes the word lock.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "It starts with l",
      "o": [
+      "ladder",
       "dog",
       "drum",
-      "bed",
-      "ladder"
+      "bed"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Ladder starts with the letter l.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which of these is a toy?",
-     "o": [
-      "lemon",
-      "robot",
-      "leaf",
-      "ladder"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "A yo-yo is a toy.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which of these is a toy?",
+     "o": [
+      "robot",
+      "leaf",
+      "ladder",
+      "lemon"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -4596,24 +4596,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "Lion starts with the l sound.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Which word starts with l?",
      "o": [
+      "leaf",
       "dad",
-      "vet",
-      "leaf"
+      "vet"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "We answer What's your favourite toy? with It's blue.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "Lion starts with the l sound.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -4643,8 +4643,8 @@
     },
     {
      "t": "tf",
-     "q": "We answer What colour is it? with a colour.",
-     "a": true
+     "q": "ch – o – p makes the word chip.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4657,20 +4657,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "ch – o – p makes the word chip.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "It starts with ch",
      "o": [
+      "chain",
       "shell",
       "thumb",
-      "lion",
-      "chain"
+      "lion"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We answer What colour is it? with a colour.",
+     "a": true
     }
    ]
   ],
@@ -4689,8 +4689,8 @@
     },
     {
      "t": "tf",
-     "q": "p – a – n makes the word pan.",
-     "a": true
+     "q": "m – a – n makes the word van.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4703,38 +4703,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "m – a – n makes the word van.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "It starts with v",
      "o": [
+      "violin",
       "lemon",
       "drum",
-      "chair",
-      "violin"
+      "chair"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "p – a – n makes the word pan.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which word starts with d?",
-     "o": [
-      "up",
-      "drum",
-      "lock",
-      "thin"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Lemon starts with the letter l.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word starts with d?",
+     "o": [
+      "drum",
+      "lock",
+      "thin",
+      "up"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -4779,8 +4779,8 @@
     },
     {
      "t": "tf",
-     "q": "The girl's name is Muna.",
-     "a": true
+     "q": "We answer What's your name? with I'm six.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4793,38 +4793,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We answer What's your name? with I'm six.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "The girl's name",
      "o": [
+      "Muna",
       "Omar",
       "Lily",
-      "Sue",
-      "Muna"
+      "Sue"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The girl's name is Muna.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What colour is the robot?",
-     "o": [
-      "Brown",
-      "Yellow",
-      "Green",
-      "Orange"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Omar is Muna's brother.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What colour is the robot?",
+     "o": [
+      "Yellow",
+      "Green",
+      "Orange",
+      "Brown"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -4866,24 +4866,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "We answer What's your favourite toy? with It's my …",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "How old is Omar?",
      "o": [
+      "Three.",
       "Six.",
-      "Five.",
-      "Three."
+      "Five."
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "Van starts with the f sound.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "We answer What's your favourite toy? with It's my …",
+     "a": true
     },
     {
      "t": "mcq",
@@ -4913,8 +4913,8 @@
     },
     {
      "t": "tf",
-     "q": "A square has four sides.",
-     "a": true
+     "q": "A rectangle has three sides.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4927,20 +4927,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A rectangle has three sides.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Sides of a triangle",
      "o": [
+      "three",
       "four",
       "two",
-      "five",
-      "three"
+      "five"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A square has four sides.",
+     "a": true
     }
    ]
   ],
@@ -4959,8 +4959,8 @@
     },
     {
      "t": "tf",
-     "q": "We use What's this? for one thing.",
-     "a": true
+     "q": "They're planes. is about one plane.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4973,20 +4973,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "They're planes. is about one plane.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "One doll, two …",
      "o": [
+      "dolls",
       "doll",
       "dolles",
-      "teddy",
-      "dolls"
+      "teddy"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use What's this? for one thing.",
+     "a": true
     }
    ]
   ]

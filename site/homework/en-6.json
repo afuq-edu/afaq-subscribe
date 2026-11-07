@@ -1956,8 +1956,8 @@
     },
     {
      "t": "tf",
-     "q": "The WOW! Magazine is made by kids for kids.",
-     "a": true
+     "q": "There are six members in the WOW! Team.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1970,20 +1970,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "There are six members in the WOW! Team.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "WOW! = World of ...",
      "o": [
+      "Wonder",
       "Work",
       "Water",
-      "Words",
-      "Wonder"
+      "Words"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The WOW! Magazine is made by kids for kids.",
+     "a": true
     }
    ]
   ],
@@ -2002,8 +2002,8 @@
     },
     {
      "t": "tf",
-     "q": "Sultan designed the WOW! Magazine.",
-     "a": true
+     "q": "A brave person is scared of everything.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2016,20 +2016,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A brave person is scared of everything.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Not tall and not short",
      "o": [
+      "medium height",
       "handsome",
       "pretty",
-      "energetic",
-      "medium height"
+      "energetic"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Sultan designed the WOW! Magazine.",
+     "a": true
     }
    ]
   ],
@@ -2048,8 +2048,8 @@
     },
     {
      "t": "tf",
-     "q": "Sultan does gymnastics once a week.",
-     "a": true
+     "q": "\"You're so funny!\" is a way to say you are sad.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2062,20 +2062,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"You're so funny!\" is a way to say you are sad.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "One time a week",
      "o": [
+      "once a week",
       "twice a week",
       "every day",
-      "not very often",
-      "once a week"
+      "not very often"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Sultan does gymnastics once a week.",
+     "a": true
     }
    ]
   ],
@@ -2094,8 +2094,8 @@
     },
     {
      "t": "tf",
-     "q": "We use the Present continuous for things happening at the moment.",
-     "a": true
+     "q": "\"At the moment\" is a time word for the Present simple.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2108,20 +2108,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"At the moment\" is a time word for the Present simple.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Tense for habits",
      "o": [
+      "Present simple",
       "Present continuous",
       "Past simple",
-      "Future",
-      "Present simple"
+      "Future"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use the Present continuous for things happening at the moment.",
+     "a": true
     }
    ]
   ],
@@ -2140,8 +2140,8 @@
     },
     {
      "t": "tf",
-     "q": "Samar can't do athletics because it's raining.",
-     "a": true
+     "q": "Samar loves playing the piano at the start of the story.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2154,20 +2154,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Samar loves playing the piano at the start of the story.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Her idea: put on a show",
      "o": [
+      "Nawal",
       "Samar",
       "Amani",
-      "Rasha",
-      "Nawal"
+      "Rasha"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Samar can't do athletics because it's raining.",
+     "a": true
     }
    ]
   ],
@@ -2186,8 +2186,8 @@
     },
     {
      "t": "tf",
-     "q": "Like, love and hate are state verbs.",
-     "a": true
+     "q": "We usually use state verbs in continuous tenses.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2200,20 +2200,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We usually use state verbs in continuous tenses.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "What does Rasha think about singing?",
      "o": [
+      "She doesn't like it; she prefers acting.",
       "She loves it.",
       "She does it every day.",
-      "She prefers it to acting.",
-      "She doesn't like it; she prefers acting."
+      "She prefers it to acting."
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Like, love and hate are state verbs.",
+     "a": true
     }
    ]
   ],
@@ -2232,8 +2232,8 @@
     },
     {
      "t": "tf",
-     "q": "To go snorkelling, you need to be good at swimming.",
-     "a": true
+     "q": "Cross-country skiing is popular in Oman.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2246,20 +2246,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Cross-country skiing is popular in Oman.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Popular in New Zealand",
      "o": [
+      "rugby",
       "windsurfing",
       "skiing",
-      "snorkelling",
-      "rugby"
+      "snorkelling"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "To go snorkelling, you need to be good at swimming.",
+     "a": true
     }
    ]
   ],
@@ -2278,8 +2278,8 @@
     },
     {
      "t": "tf",
-     "q": "\"That sounds good\" is a positive response.",
-     "a": true
+     "q": "The boy plays the piano.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2292,20 +2292,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The boy plays the piano.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "___ don't you swim?",
      "o": [
+      "Why",
       "How",
       "What",
-      "Who",
-      "Why"
+      "Who"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"That sounds good\" is a positive response.",
+     "a": true
     }
    ]
   ],
@@ -2324,8 +2324,8 @@
     },
     {
      "t": "tf",
-     "q": "Henry and Cody are sleeping in a hostel tonight.",
-     "a": true
+     "q": "When there aren't any hostels, they sleep in a hotel.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2338,20 +2338,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "When there aren't any hostels, they sleep in a hotel.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A cheap, simple hotel",
      "o": [
+      "hostel",
       "route",
       "oxygen",
-      "altitude",
-      "hostel"
+      "altitude"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Henry and Cody are sleeping in a hostel tonight.",
+     "a": true
     }
    ]
   ],
@@ -2370,8 +2370,8 @@
     },
     {
      "t": "tf",
-     "q": "Hashim's biggest model is a model of a ship.",
-     "a": true
+     "q": "\"what do you like swimming?\" is a correct question.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2384,20 +2384,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"what do you like swimming?\" is a correct question.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Asks about a person",
      "o": [
+      "Who",
       "Where",
       "When",
-      "Why",
-      "Who"
+      "Why"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Hashim's biggest model is a model of a ship.",
+     "a": true
     }
    ]
   ],
@@ -2416,8 +2416,8 @@
     },
     {
      "t": "tf",
-     "q": "Henry wants to learn to ski after reading the article.",
-     "a": true
+     "q": "\"I am usually doing karate after school\" is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2430,20 +2430,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"I am usually doing karate after school\" is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Reading about cycling",
      "o": [
+      "John",
       "Henry",
       "Hashim",
-      "Cody",
-      "John"
+      "Cody"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Henry wants to learn to ski after reading the article.",
+     "a": true
     }
    ]
   ],
@@ -2462,8 +2462,8 @@
     },
     {
      "t": "tf",
-     "q": "\"Photos of people are easy to take because people smile\" is correct.",
-     "a": true
+     "q": "We use \"who\" for things and \"which\" for people.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2476,20 +2476,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We use \"who\" for things and \"which\" for people.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "For people: the boy ___",
      "o": [
+      "who",
       "which",
       "where",
-      "when",
-      "who"
+      "when"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Photos of people are easy to take because people smile\" is correct.",
+     "a": true
     }
    ]
   ],
@@ -2508,8 +2508,8 @@
     },
     {
      "t": "tf",
-     "q": "Maryam is good at volleyball.",
-     "a": true
+     "q": "Maryam can't play volleyball.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2522,20 +2522,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Maryam can't play volleyball.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Maryam's sport",
      "o": [
+      "volleyball",
       "karate",
       "gymnastics",
-      "swimming",
-      "volleyball"
+      "swimming"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Maryam is good at volleyball.",
+     "a": true
     }
    ]
   ],
@@ -2554,8 +2554,8 @@
     },
     {
      "t": "tf",
-     "q": "The first \"butterfly\" is really an eraser on a puzzle book.",
-     "a": true
+     "q": "Some girls are playing board games in the park.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2568,20 +2568,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Some girls are playing board games in the park.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Hassan wants a blue ...",
      "o": [
+      "butterfly",
       "bird",
       "flower",
-      "fish",
-      "butterfly"
+      "fish"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The first \"butterfly\" is really an eraser on a puzzle book.",
+     "a": true
     }
    ]
   ],
@@ -2600,8 +2600,8 @@
     },
     {
      "t": "tf",
-     "q": "You type a password to open your laptop or an app.",
-     "a": true
+     "q": "A printer is a device for taking photos.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2614,20 +2614,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A printer is a device for taking photos.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Small computer to carry",
      "o": [
+      "laptop",
       "printer",
       "speaker",
-      "app",
-      "laptop"
+      "app"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "You type a password to open your laptop or an app.",
+     "a": true
     }
    ]
   ],
@@ -2646,8 +2646,8 @@
     },
     {
      "t": "tf",
-     "q": "Arlo used his brother's computer.",
-     "a": true
+     "q": "Arlo used Mr Ammar's computer.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2660,20 +2660,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Arlo used Mr Ammar's computer.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Bad news reply",
      "o": [
+      "Oh, dear!",
       "Why not?",
       "Really good!",
-      "Well done!",
-      "Oh, dear!"
+      "Well done!"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Arlo used his brother's computer.",
+     "a": true
     }
    ]
   ],
@@ -2692,8 +2692,8 @@
     },
     {
      "t": "tf",
-     "q": "The past of have to is had to.",
-     "a": true
+     "q": "Hanan's dad listened to the news on the radio before.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2706,20 +2706,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Hanan's dad listened to the news on the radio before.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Past of can",
      "o": [
+      "could",
       "can't",
       "had to",
-      "has to",
-      "could"
+      "has to"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The past of have to is had to.",
+     "a": true
     }
    ]
   ],
@@ -2738,8 +2738,8 @@
     },
     {
      "t": "tf",
-     "q": "\"Lighter\" rhymes with \"brighter\".",
-     "a": true
+     "q": "The poem says the new phone's screen is much darker.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2752,20 +2752,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The poem says the new phone's screen is much darker.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Rhymes with brighter",
      "o": [
+      "lighter",
       "phone",
       "map",
-      "screen",
-      "lighter"
+      "screen"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Lighter\" rhymes with \"brighter\".",
+     "a": true
     }
    ]
   ],
@@ -2784,8 +2784,8 @@
     },
     {
      "t": "tf",
-     "q": "The comparative of well is better.",
-     "a": true
+     "q": "The comparative of badly is badder.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2798,20 +2798,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The comparative of badly is badder.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Comparative of fast",
      "o": [
+      "faster",
       "more fast",
       "fastly",
-      "fastest",
-      "faster"
+      "fastest"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The comparative of well is better.",
+     "a": true
     }
    ]
   ],
@@ -2830,8 +2830,8 @@
     },
     {
      "t": "tf",
-     "q": "E-readers can make letters very large.",
-     "a": true
+     "q": "Special alarm clocks for deaf children are very loud.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2844,20 +2844,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Special alarm clocks for deaf children are very loud.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Cannot hear",
      "o": [
+      "deaf",
       "blind",
       "tall",
-      "brave",
-      "deaf"
+      "brave"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "E-readers can make letters very large.",
+     "a": true
     }
    ]
   ],
@@ -2876,8 +2876,8 @@
     },
     {
      "t": "tf",
-     "q": "In the dialogue, the girl wants to print her English homework.",
-     "a": true
+     "q": "“Sorry, not now.” means you are happy to help right away.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2890,20 +2890,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "“Sorry, not now.” means you are happy to help right away.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Polite: ___ you help me, please?",
      "o": [
+      "Could",
       "Must",
       "Don’t",
-      "Stop",
-      "Could"
+      "Stop"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In the dialogue, the girl wants to print her English homework.",
+     "a": true
     }
    ]
   ],
@@ -2922,8 +2922,8 @@
     },
     {
      "t": "tf",
-     "q": "You move around TopCity by writing instructions, like programming a computer.",
-     "a": true
+     "q": "MrCool001 thinks TopCity is the best programming game of all.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2936,20 +2936,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "MrCool001 thinks TopCity is the best programming game of all.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "What are you looking for in TopCity?",
      "o": [
+      "treasure",
       "a password",
       "a friend",
-      "a phone",
-      "treasure"
+      "a phone"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "You move around TopCity by writing instructions, like programming a computer.",
+     "a": true
     }
    ]
   ],
@@ -2968,8 +2968,8 @@
     },
     {
      "t": "tf",
-     "q": "A good review gives good points and bad points.",
-     "a": true
+     "q": "The FunTimeforKids app opens very quickly.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2982,20 +2982,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The FunTimeforKids app opens very quickly.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "The adverb of easy",
      "o": [
+      "easily",
       "easy",
       "easier",
-      "easiest",
-      "easily"
+      "easiest"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A good review gives good points and bad points.",
+     "a": true
     }
    ]
   ],
@@ -3014,8 +3014,8 @@
     },
     {
      "t": "tf",
-     "q": "Najla downloaded a book onto her e-reader because she reads really slowly.",
-     "a": true
+     "q": "“We didn’t had to wear uniform.” is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3028,20 +3028,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "“We didn’t had to wear uniform.” is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Part of a tablet you look at",
      "o": [
+      "screen",
       "password",
       "printer",
-      "icon",
-      "screen"
+      "icon"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Najla downloaded a book onto her e-reader because she reads really slowly.",
+     "a": true
     }
    ]
   ],
@@ -3060,8 +3060,8 @@
     },
     {
      "t": "tf",
-     "q": "A café is a place where a waiter brings your food.",
-     "a": true
+     "q": "A printer is a small computer you can carry in a bag.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3074,20 +3074,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A printer is a small computer you can carry in a bag.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A small computer you can carry",
      "o": [
+      "laptop",
       "printer",
       "screen",
-      "theatre",
-      "laptop"
+      "theatre"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A café is a place where a waiter brings your food.",
+     "a": true
     }
    ]
   ],
@@ -3106,8 +3106,8 @@
     },
     {
      "t": "tf",
-     "q": "The family took a coach because they couldn’t take their car.",
-     "a": true
+     "q": "Finn saw a cat moving under a bush.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3120,20 +3120,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Finn saw a cat moving under a bush.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "City they are going to",
      "o": [
+      "London",
       "Paris",
       "Rome",
-      "Cairo",
-      "London"
+      "Cairo"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The family took a coach because they couldn’t take their car.",
+     "a": true
     }
    ]
   ],
@@ -3152,8 +3152,8 @@
     },
     {
      "t": "tf",
-     "q": "On Saturday, Dana looked after her little sister Laila.",
-     "a": true
+     "q": "A bee flies faster than a bird.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3166,20 +3166,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A bee flies faster than a bird.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Green with long legs",
      "o": [
+      "grasshopper",
       "bee",
       "spider",
-      "cat",
-      "grasshopper"
+      "cat"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "On Saturday, Dana looked after her little sister Laila.",
+     "a": true
     }
    ]
   ],
@@ -3198,8 +3198,8 @@
     },
     {
      "t": "tf",
-     "q": "The comparative of badly is worse.",
-     "a": true
+     "q": "The comparative of well is weller.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3212,38 +3212,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The comparative of well is weller.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "___ online",
      "o": [
+      "go",
       "take",
       "press",
-      "type",
-      "go"
+      "type"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The comparative of badly is worse.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which phrase is correct?",
-     "o": [
-      "take the internet",
-      "download an app",
-      "download a button",
-      "press an app"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "“Didn’t have to” means it was not necessary in the past.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which phrase is correct?",
+     "o": [
+      "download an app",
+      "download a button",
+      "press an app",
+      "take the internet"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3288,8 +3288,8 @@
     },
     {
      "t": "tf",
-     "q": "Doctors and nurses work in a hospital.",
-     "a": true
+     "q": "A king or queen lives in a factory.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3302,20 +3302,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A king or queen lives in a factory.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Doctors and nurses work here",
      "o": [
+      "hospital",
       "palace",
       "factory",
-      "harbour",
-      "hospital"
+      "harbour"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Doctors and nurses work in a hospital.",
+     "a": true
     }
    ]
   ],
@@ -3334,8 +3334,8 @@
     },
     {
      "t": "tf",
-     "q": "Sharifa lives in the apartment building.",
-     "a": true
+     "q": "“I went to the stadium” is in the present simple.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3348,20 +3348,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "“I went to the stadium” is in the present simple.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "The girls are looking for the…",
      "o": [
+      "sports centre",
       "stadium",
       "hospital",
-      "factory",
-      "sports centre"
+      "factory"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Sharifa lives in the apartment building.",
+     "a": true
     }
    ]
   ],
@@ -3380,8 +3380,8 @@
     },
     {
      "t": "tf",
-     "q": "We use when for time.",
-     "a": true
+     "q": "“Camels are animals who live in the desert.” is the best answer in the lesson.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3394,20 +3394,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "“Camels are animals who live in the desert.” is the best answer in the lesson.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Pronoun for people",
      "o": [
+      "who",
       "where",
       "when",
-      "which",
-      "who"
+      "which"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use when for time.",
+     "a": true
     }
    ]
   ],
@@ -3426,8 +3426,8 @@
     },
     {
      "t": "tf",
-     "q": "A mystery story often has a kind of detective.",
-     "a": true
+     "q": "Lord Bingley is angry because Eddie found the secret room.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3440,20 +3440,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Lord Bingley is angry because Eddie found the secret room.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Lost things Eddie found",
      "o": [
+      "paintings",
       "phones",
       "keys",
-      "coins",
-      "paintings"
+      "coins"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A mystery story often has a kind of detective.",
+     "a": true
     }
    ]
   ],
@@ -3472,8 +3472,8 @@
     },
     {
      "t": "tf",
-     "q": "An escalator is a set of moving stairs.",
-     "a": true
+     "q": "In the Past continuous, we say “They was watching TV.”",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3486,20 +3486,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "In the Past continuous, we say “They was watching TV.”",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Above your head in a room",
      "o": [
+      "ceiling",
       "floor",
       "corner",
-      "exit",
-      "ceiling"
+      "exit"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "An escalator is a set of moving stairs.",
+     "a": true
     }
    ]
   ],
@@ -3518,8 +3518,8 @@
     },
     {
      "t": "tf",
-     "q": "Baalbek is more than 2,000 years old.",
-     "a": true
+     "q": "There is a new theatre in Petra today.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3532,38 +3532,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "There is a new theatre in Petra today.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Ancient city in Lebanon",
      "o": [
+      "Baalbek",
       "Petra",
       "Carthage",
-      "Jerash",
-      "Baalbek"
+      "Jerash"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Baalbek is more than 2,000 years old.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which three things should your project notes include?",
-     "o": [
-      "the weather every day",
-      "how old the city is, the most important buildings, what you can see today",
-      "your name, age and phone number",
-      "the price of tickets only"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Carthage was an important harbour on the coast of Tunisia.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which three things should your project notes include?",
+     "o": [
+      "how old the city is, the most important buildings, what you can see today",
+      "your name, age and phone number",
+      "the price of tickets only",
+      "the weather every day"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3608,8 +3608,8 @@
     },
     {
      "t": "tf",
-     "q": "To get to the bookshop, you take the escalator to the second floor.",
-     "a": true
+     "q": "The café is on the second floor.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3622,20 +3622,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The café is on the second floor.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Opposite of upstairs",
      "o": [
+      "downstairs",
       "along",
       "around",
-      "straight on",
-      "downstairs"
+      "straight on"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "To get to the bookshop, you take the escalator to the second floor.",
+     "a": true
     }
    ]
   ],
@@ -3654,8 +3654,8 @@
     },
     {
      "t": "tf",
-     "q": "The bird in the story could speak to Rasha.",
-     "a": true
+     "q": "“Amazed” describes a thing, and “amazing” describes how a person feels.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3668,20 +3668,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "“Amazed” describes a thing, and “amazing” describes how a person feels.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Say very quietly",
      "o": [
+      "whisper",
       "yell",
       "zoom",
-      "sketch",
-      "whisper"
+      "sketch"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The bird in the story could speak to Rasha.",
+     "a": true
     }
    ]
   ],
@@ -3700,8 +3700,8 @@
     },
     {
      "t": "tf",
-     "q": "Ammar fell down some steps and broke his foot.",
-     "a": true
+     "q": "“Happily” and “quickly” are adjectives.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3714,20 +3714,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "“Happily” and “quickly” are adjectives.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Where Ammar and Qais were",
      "o": [
+      "stadium",
       "hospital",
       "harbour",
-      "palace",
-      "stadium"
+      "palace"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Ammar fell down some steps and broke his foot.",
+     "a": true
     }
    ]
   ],
@@ -3746,8 +3746,8 @@
     },
     {
      "t": "tf",
-     "q": "A skyscraper is a tall building which has lots of floors.",
-     "a": true
+     "q": "Only one student won the prize.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3760,20 +3760,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Only one student won the prize.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Unscramble: tessp",
      "o": [
+      "steps",
       "stops",
       "sets",
-      "tests",
-      "steps"
+      "tests"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A skyscraper is a tall building which has lots of floors.",
+     "a": true
     }
    ]
   ],
@@ -3792,8 +3792,8 @@
     },
     {
      "t": "tf",
-     "q": "Teenagers and adults study at a college.",
-     "a": true
+     "q": "On the way to the college, he walks past the fire station.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3806,20 +3806,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "On the way to the college, he walks past the fire station.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Firefighters work here",
      "o": [
+      "fire station",
       "airport",
       "college",
-      "square",
-      "fire station"
+      "square"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Teenagers and adults study at a college.",
+     "a": true
     }
    ]
   ],
@@ -3838,8 +3838,8 @@
     },
     {
      "t": "tf",
-     "q": "Virtual Reality (VR) is new technology.",
-     "a": true
+     "q": "We can only classify technology in one way.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3852,20 +3852,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We can only classify technology in one way.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Old or new: steam train",
      "o": [
+      "old",
       "new",
       "smart",
-      "online",
-      "old"
+      "online"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Virtual Reality (VR) is new technology.",
+     "a": true
     }
    ]
   ]

@@ -2361,8 +2361,8 @@
     },
     {
      "t": "tf",
-     "q": "In an instruction, the verb comes first.",
-     "a": true
+     "q": "Hand out the books means put the books in your bag.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2375,20 +2375,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Hand out the books means put the books in your bag.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Show your picture to the class",
      "o": [
+      "Hold up",
       "Put away",
       "Turn off",
-      "Go to",
-      "Hold up"
+      "Go to"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In an instruction, the verb comes first.",
+     "a": true
     }
    ]
   ],
@@ -2407,8 +2407,8 @@
     },
     {
      "t": "tf",
-     "q": "The letter H comes after G.",
-     "a": true
+     "q": "The letter M comes before L.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2421,20 +2421,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The letter M comes before L.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Letter after G",
      "o": [
+      "H",
       "F",
       "J",
-      "K",
-      "H"
+      "K"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The letter H comes after G.",
+     "a": true
     }
    ]
   ],
@@ -2453,8 +2453,8 @@
     },
     {
      "t": "tf",
-     "q": "These are pencils. The pencils are near me.",
-     "a": true
+     "q": "Those is a ball.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2467,20 +2467,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Those is a ball.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Write 12 in words",
      "o": [
+      "twelve",
       "twenty",
       "two",
-      "eleven",
-      "twelve"
+      "eleven"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "These are pencils. The pencils are near me.",
+     "a": true
     }
    ]
   ],
@@ -2499,8 +2499,8 @@
     },
     {
      "t": "tf",
-     "q": "We use don't to say no: I don't play.",
-     "a": true
+     "q": "The sentence I play don't is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2513,20 +2513,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The sentence I play don't is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "The morning meal",
      "o": [
+      "have breakfast",
       "have dinner",
       "have lunch",
-      "do homework",
-      "have breakfast"
+      "do homework"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use don't to say no: I don't play.",
+     "a": true
     }
    ]
   ],
@@ -2545,8 +2545,8 @@
     },
     {
      "t": "tf",
-     "q": "Sami and Jack play tennis in the park before school.",
-     "a": true
+     "q": "They don't have art lessons.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2559,20 +2559,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "They don't have art lessons.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Blue + yellow = ?",
      "o": [
+      "green",
       "red",
       "orange",
-      "purple",
-      "green"
+      "purple"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Sami and Jack play tennis in the park before school.",
+     "a": true
     }
    ]
   ],
@@ -2591,8 +2591,8 @@
     },
     {
      "t": "tf",
-     "q": "We see the moon at night.",
-     "a": true
+     "q": "The sun is setting in the morning.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2605,20 +2605,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The sun is setting in the morning.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "We go to bed ___ night.",
      "o": [
+      "at",
       "in",
       "on",
-      "to",
-      "at"
+      "to"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We see the moon at night.",
+     "a": true
     }
    ]
   ],
@@ -2637,8 +2637,8 @@
     },
     {
      "t": "tf",
-     "q": "Jasim and Yasir have art lessons at school in the morning.",
-     "a": true
+     "q": "Jasim and Yasir play in the afternoon.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2651,20 +2651,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Jasim and Yasir play in the afternoon.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Jasim and Yasir are ___",
      "o": [
+      "brothers",
       "friends",
       "sisters",
-      "cousins",
-      "brothers"
+      "cousins"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Jasim and Yasir have art lessons at school in the morning.",
+     "a": true
     }
    ]
   ],
@@ -2683,8 +2683,8 @@
     },
     {
      "t": "tf",
-     "q": "In Japan, some people have fish, pickles, rice and soup for breakfast.",
-     "a": true
+     "q": "Children in the UK often have soup and rice for breakfast.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2697,20 +2697,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Children in the UK often have soup and rice for breakfast.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Omani breakfast bread",
      "o": [
+      "Khubz Rakhal",
       "toast",
       "porridge",
-      "cereal",
-      "Khubz Rakhal"
+      "cereal"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In Japan, some people have fish, pickles, rice and soup for breakfast.",
+     "a": true
     }
    ]
   ],
@@ -2729,8 +2729,8 @@
     },
     {
      "t": "tf",
-     "q": "When the minute hand is on 3, we say quarter past.",
-     "a": true
+     "q": "Quarter past eight is earlier than quarter to eight.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2743,20 +2743,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Quarter past eight is earlier than quarter to eight.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Minute hand on 12",
      "o": [
+      "o'clock",
       "half past",
       "quarter past",
-      "quarter to",
-      "o'clock"
+      "quarter to"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "When the minute hand is on 3, we say quarter past.",
+     "a": true
     }
    ]
   ],
@@ -2775,8 +2775,8 @@
     },
     {
      "t": "tf",
-     "q": "Dolphin has the letters ph in it.",
-     "a": true
+     "q": "Wheel starts with the letters ph.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2789,20 +2789,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Wheel starts with the letters ph.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "___ale",
      "o": [
+      "wh",
       "ph",
       "f",
-      "w",
-      "wh"
+      "w"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Dolphin has the letters ph in it.",
+     "a": true
     }
    ]
   ],
@@ -2821,8 +2821,8 @@
     },
     {
      "t": "tf",
-     "q": "We go to bed at night.",
-     "a": true
+     "q": "Night is spelled n-i-t-e.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2835,20 +2835,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Night is spelled n-i-t-e.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "I ___ my homework.",
      "o": [
+      "do",
       "have",
       "go",
-      "play",
-      "do"
+      "play"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We go to bed at night.",
+     "a": true
     }
    ]
   ],
@@ -2867,8 +2867,8 @@
     },
     {
      "t": "tf",
-     "q": "A wrong picture shows a time that is different from the recording.",
-     "a": true
+     "q": "Miss a turn means you play two times.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2881,20 +2881,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Miss a turn means you play two times.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Minute hand on 3",
      "o": [
+      "quarter past",
       "quarter to",
       "half past",
-      "o'clock",
-      "quarter past"
+      "o'clock"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A wrong picture shows a time that is different from the recording.",
+     "a": true
     }
    ]
   ],
@@ -2913,8 +2913,8 @@
     },
     {
      "t": "tf",
-     "q": "The numbers in the code take the place of the vowels.",
-     "a": true
+     "q": "Homework is spelled h-o-m-w-o-r-k.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2927,20 +2927,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Homework is spelled h-o-m-w-o-r-k.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "5 in the code",
      "o": [
+      "a",
       "e",
       "i",
-      "o",
-      "a"
+      "o"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The numbers in the code take the place of the vowels.",
+     "a": true
     }
    ]
   ],
@@ -2959,8 +2959,8 @@
     },
     {
      "t": "tf",
-     "q": "At Robot School, it's time for lunch at half past twelve.",
-     "a": true
+     "q": "Robots sleep at night.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2973,20 +2973,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Robots sleep at night.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Robots go to school at ___",
      "o": [
+      "eight o'clock",
       "ten o'clock",
       "two o'clock",
-      "six o'clock",
-      "eight o'clock"
+      "six o'clock"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "At Robot School, it's time for lunch at half past twelve.",
+     "a": true
     }
    ]
   ],
@@ -3005,8 +3005,8 @@
     },
     {
      "t": "tf",
-     "q": "Trainers are shoes for sport.",
-     "a": true
+     "q": "A coat is for hot weather.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3019,38 +3019,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A coat is for hot weather.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Clothes for bed",
      "o": [
+      "pyjamas",
       "trainers",
       "coat",
-      "jeans",
-      "pyjamas"
+      "jeans"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Trainers are shoes for sport.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which clothes do we wear in bed?",
-     "o": [
-      "baseball cap",
-      "pyjamas",
-      "trainers",
-      "tracksuit"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "We're is the short form of We are.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which clothes do we wear in bed?",
+     "o": [
+      "pyjamas",
+      "trainers",
+      "tracksuit",
+      "baseball cap"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3095,8 +3095,8 @@
     },
     {
      "t": "tf",
-     "q": "Lily's dress is purple.",
-     "a": true
+     "q": "Lily and Fatma are wearing pyjamas and baseball caps.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3109,38 +3109,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Lily and Fatma are wearing pyjamas and baseball caps.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Time of the school show",
      "o": [
+      "three o'clock",
       "eight o'clock",
       "ten o'clock",
-      "two o'clock",
-      "three o'clock"
+      "two o'clock"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Lily's dress is purple.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What does Miss Razan say at the end?",
-     "o": [
-      "Tidy up!",
-      "Well done, everyone!",
-      "Oh, no!",
-      "Snap!"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "The jeans and shirts are too small.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What does Miss Razan say at the end?",
+     "o": [
+      "Well done, everyone!",
+      "Oh, no!",
+      "Snap!",
+      "Tidy up!"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3185,8 +3185,8 @@
     },
     {
      "t": "tf",
-     "q": "we goes with our.",
-     "a": true
+     "q": "they goes with your.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3199,38 +3199,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "they goes with your.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Use it to call people",
      "o": [
+      "phone",
       "keys",
       "glasses",
-      "handbag",
-      "phone"
+      "handbag"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "we goes with our.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which word means things we wear to see well?",
-     "o": [
-      "backpack",
-      "glasses",
-      "keys",
-      "computer"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "We say Our bags are red, not We bags are red.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word means things we wear to see well?",
+     "o": [
+      "glasses",
+      "keys",
+      "computer",
+      "backpack"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3275,8 +3275,8 @@
     },
     {
      "t": "tf",
-     "q": "In A birthday party, the dad is wearing a dishdasha.",
-     "a": true
+     "q": "The dad's dishdasha is black.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3289,20 +3289,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The dad's dishdasha is black.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Colour of their hijabs (listening)",
      "o": [
+      "red",
       "blue",
       "purple",
-      "white",
-      "red"
+      "white"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In A birthday party, the dad is wearing a dishdasha.",
+     "a": true
     }
    ]
   ],
@@ -3321,8 +3321,8 @@
     },
     {
      "t": "tf",
-     "q": "Eid Al-Fitr comes after Ramadan.",
-     "a": true
+     "q": "Eidiya is a kind of traditional hat.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3335,38 +3335,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Eidiya is a kind of traditional hat.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Eid Al-Fitr comes after …",
      "o": [
+      "Ramadan",
       "Shawwal",
       "Rajab",
-      "Muharram",
-      "Ramadan"
+      "Muharram"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Eid Al-Fitr comes after Ramadan.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What do many people wear at Eid?",
-     "o": [
-      "Slippers",
-      "Traditional clothes",
-      "Pyjamas",
-      "Tracksuits"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "People celebrate Eid Al-Fitr for the first three days of Shawwal.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What do many people wear at Eid?",
+     "o": [
+      "Traditional clothes",
+      "Pyjamas",
+      "Tracksuits",
+      "Slippers"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3411,8 +3411,8 @@
     },
     {
      "t": "tf",
-     "q": "We ask about the price with How much is this …?",
-     "a": true
+     "q": "We say Have you are when we give the money.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3425,20 +3425,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say Have you are when we give the money.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "First line in a shop",
      "o": [
+      "Excuse me.",
       "Thank you.",
       "Here you are.",
-      "Goodbye.",
-      "Excuse me."
+      "Goodbye."
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We ask about the price with How much is this …?",
+     "a": true
     }
    ]
   ],
@@ -3457,8 +3457,8 @@
     },
     {
      "t": "tf",
-     "q": "Picture and vulture end with ure.",
-     "a": true
+     "q": "A beard is hair on a man's head.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3471,20 +3471,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A beard is hair on a man's head.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Ending in picture",
      "o": [
+      "ure",
       "ear",
       "air",
-      "are",
-      "ure"
+      "are"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Picture and vulture end with ure.",
+     "a": true
     }
    ]
   ],
@@ -3503,8 +3503,8 @@
     },
     {
      "t": "tf",
-     "q": "We use Their before a thing: Their pyjamas are pink.",
-     "a": true
+     "q": "We wear trainers in bed.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3517,38 +3517,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We wear trainers in bed.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "___ wearing coats. (they)",
      "o": [
+      "They're",
       "Their",
       "Our",
-      "Your",
-      "They're"
+      "Your"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use Their before a thing: Their pyjamas are pink.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which is a possession, not clothes?",
-     "o": [
-      "hijab",
-      "computer",
-      "jumper",
-      "tracksuit"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "We carry our books, pens and pencil case in a backpack.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which is a possession, not clothes?",
+     "o": [
+      "computer",
+      "jumper",
+      "tracksuit",
+      "hijab"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3593,8 +3593,8 @@
     },
     {
      "t": "tf",
-     "q": "We put a cross when the sentence does not match the picture.",
-     "a": true
+     "q": "We only look at the colours, not the person.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3607,20 +3607,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We only look at the colours, not the person.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Mark for a correct sentence",
      "o": [
+      "tick",
       "cross",
       "circle",
-      "star",
-      "tick"
+      "star"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We put a cross when the sentence does not match the picture.",
+     "a": true
     }
    ]
   ],
@@ -3639,8 +3639,8 @@
     },
     {
      "t": "tf",
-     "q": "In the game we say: You're wearing a green T-shirt.",
-     "a": true
+     "q": "A difference is something that is the same in two pictures.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3653,20 +3653,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A difference is something that is the same in two pictures.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Before you roll, say …",
      "o": [
+      "My turn!",
       "Your turn!",
       "Well done!",
-      "Thank you!",
-      "My turn!"
+      "Thank you!"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In the game we say: You're wearing a green T-shirt.",
+     "a": true
     }
    ]
   ],
@@ -3685,8 +3685,8 @@
     },
     {
      "t": "tf",
-     "q": "The girls play the game in their bedroom.",
-     "a": true
+     "q": "Dad has got a beard in the picture.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3699,20 +3699,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Dad has got a beard in the picture.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "What does Dad show in 'Dad's Tracksuit'?",
      "o": [
+      "A special book with his football team",
       "A new phone",
       "A shop",
-      "A cake",
-      "A special book with his football team"
+      "A cake"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The girls play the game in their bedroom.",
+     "a": true
     }
    ]
   ],
@@ -3731,8 +3731,8 @@
     },
     {
      "t": "tf",
-     "q": "We write 21 as twenty-one, with a hyphen.",
-     "a": true
+     "q": "Sixteen is bigger than sixty.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3745,20 +3745,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Sixteen is bigger than sixty.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "After twenty-four",
      "o": [
+      "twenty-five",
       "twenty-three",
       "forty-two",
-      "fifty-two",
-      "twenty-five"
+      "fifty-two"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We write 21 as twenty-one, with a hyphen.",
+     "a": true
     }
    ]
   ],
@@ -3777,8 +3777,8 @@
     },
     {
      "t": "tf",
-     "q": "We use a ruler to measure things.",
-     "a": true
+     "q": "We use millimetres to measure a classroom.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3791,20 +3791,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We use millimetres to measure a classroom.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "mm in 1 cm",
      "o": [
+      "10",
       "100",
       "1",
-      "5",
-      "10"
+      "5"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use a ruler to measure things.",
+     "a": true
     }
    ]
   ],
@@ -3823,8 +3823,8 @@
     },
     {
      "t": "tf",
-     "q": "The he-form of watch is watches.",
-     "a": true
+     "q": "The he-form of do is dos.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3837,38 +3837,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The he-form of do is dos.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "He-form of watch",
      "o": [
+      "watches",
       "watchs",
       "watching",
-      "watch",
-      "watches"
+      "watch"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The he-form of watch is watches.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which sentence is correct?",
-     "o": [
-      "He not watch TV.",
-      "He doesn't watch TV.",
-      "He doesn't watches TV.",
-      "He don't watch TV."
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Ride a bike is an activity.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which sentence is correct?",
+     "o": [
+      "He doesn't watch TV.",
+      "He doesn't watches TV.",
+      "He don't watch TV.",
+      "He not watch TV."
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3913,8 +3913,8 @@
     },
     {
      "t": "tf",
-     "q": "Fatma skateboards at 10 o'clock.",
-     "a": true
+     "q": "Fatma watches TV at 11 o'clock.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3927,20 +3927,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Fatma watches TV at 11 o'clock.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Fatma at 9 o'clock",
      "o": [
+      "plays tennis",
       "skateboards",
       "roller-skates",
-      "watches TV",
-      "plays tennis"
+      "watches TV"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Fatma skateboards at 10 o'clock.",
+     "a": true
     }
    ]
   ],
@@ -3959,8 +3959,8 @@
     },
     {
      "t": "tf",
-     "q": "The weekend in Oman is Friday and Saturday.",
-     "a": true
+     "q": "We answer Does she roller-skate on Mondays? with No, she don't.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3973,38 +3973,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We answer Does she roller-skate on Mondays? with No, she don't.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "After Tuesday",
      "o": [
+      "Wednesday",
       "Monday",
       "Thursday",
-      "Sunday",
-      "Wednesday"
+      "Sunday"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The weekend in Oman is Friday and Saturday.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "How do we start the question about he?",
-     "o": [
-      "He does …?",
-      "Does he …?",
-      "Do he …?",
-      "Is he play …?"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "The week starts with Sunday in our list.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "How do we start the question about he?",
+     "o": [
+      "Does he …?",
+      "Do he …?",
+      "Is he play …?",
+      "He does …?"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -4049,8 +4049,8 @@
     },
     {
      "t": "tf",
-     "q": "We say at the weekend.",
-     "a": true
+     "q": "Adam plays basketball on Mondays.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4063,20 +4063,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Adam plays basketball on Mondays.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Adam plays tennis on …",
      "o": [
+      "Mondays",
       "Tuesdays",
       "Thursdays",
-      "Fridays",
-      "Mondays"
+      "Fridays"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say at the weekend.",
+     "a": true
     }
    ]
   ],
@@ -4095,8 +4095,8 @@
     },
     {
      "t": "tf",
-     "q": "A dhow is a traditional sailing boat.",
-     "a": true
+     "q": "A dhow is a traditional house.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4109,20 +4109,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A dhow is a traditional house.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A traditional sailing boat",
      "o": [
+      "dhow",
       "camel",
       "racket",
-      "bike",
-      "dhow"
+      "bike"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A dhow is a traditional sailing boat.",
+     "a": true
     }
    ]
   ],
@@ -4141,8 +4141,8 @@
     },
     {
      "t": "tf",
-     "q": "Often means many days.",
-     "a": true
+     "q": "A table with no ticks matches often.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4155,20 +4155,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A table with no ticks matches often.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Seven ticks",
      "o": [
+      "always",
       "often",
       "never",
-      "sometimes",
-      "always"
+      "sometimes"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Often means many days.",
+     "a": true
     }
    ]
   ],
@@ -4187,8 +4187,8 @@
     },
     {
      "t": "tf",
-     "q": "The magic e makes the vowel say its name.",
-     "a": true
+     "q": "Stone has i-e.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4201,20 +4201,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Stone has i-e.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Split vowel in bike",
      "o": [
+      "i-e",
       "a-e",
       "o-e",
-      "u-e",
-      "i-e"
+      "u-e"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The magic e makes the vowel say its name.",
+     "a": true
     }
    ]
   ],
@@ -4233,8 +4233,8 @@
     },
     {
      "t": "tf",
-     "q": "Riddle: It's the weekend. It's not Friday. It is Saturday.",
-     "a": true
+     "q": "Mohammed roller-skates on Saturdays.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4247,38 +4247,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Mohammed roller-skates on Saturdays.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "It's the weekend, not Friday",
      "o": [
+      "Saturday",
       "Sunday",
       "Thursday",
-      "Monday",
-      "Saturday"
+      "Monday"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Riddle: It's the weekend. It's not Friday. It is Saturday.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which is an activity word from Unit 3?",
-     "o": [
-      "Eidiya",
-      "roller-skate",
-      "jumper",
-      "picture"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Mohammed is the writer's cousin.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which is an activity word from Unit 3?",
+     "o": [
+      "roller-skate",
+      "jumper",
+      "picture",
+      "Eidiya"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -4323,8 +4323,8 @@
     },
     {
      "t": "tf",
-     "q": "For 'He plays tennis on Sundays', you check the day and the activity.",
-     "a": true
+     "q": "You only check the activity, not the day.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4337,20 +4337,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "You only check the activity, not the day.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Unscramble: e r d a",
      "o": [
+      "read",
       "red",
       "ride",
-      "road",
-      "read"
+      "road"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "For 'He plays tennis on Sundays', you check the day and the activity.",
+     "a": true
     }
    ]
   ],
@@ -4369,8 +4369,8 @@
     },
     {
      "t": "tf",
-     "q": "A short answer can be: No, he doesn't.",
-     "a": true
+     "q": "A short answer can be: No, he don't.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4383,20 +4383,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A short answer can be: No, he don't.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Days in the letter snake",
      "o": [
+      "6",
       "7",
       "5",
-      "4",
-      "6"
+      "4"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A short answer can be: No, he doesn't.",
+     "a": true
     }
    ]
   ],
@@ -4415,8 +4415,8 @@
     },
     {
      "t": "tf",
-     "q": "Maryam's basketball goes into a big tree.",
-     "a": true
+     "q": "'Fun at the Park' happens on a Monday.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4429,20 +4429,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'Fun at the Park' happens on a Monday.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Maryam's ball",
      "o": [
+      "basketball",
       "football",
       "tennis ball",
-      "volleyball",
-      "basketball"
+      "volleyball"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Maryam's basketball goes into a big tree.",
+     "a": true
     }
    ]
   ],
@@ -4461,8 +4461,8 @@
     },
     {
      "t": "tf",
-     "q": "A pilot flies a plane.",
-     "a": true
+     "q": "A firefighter needs a palette and a brush.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4475,20 +4475,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A firefighter needs a palette and a brush.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Fire boots belong to a …",
      "o": [
+      "firefighter",
       "chef",
       "teacher",
-      "pilot",
-      "firefighter"
+      "pilot"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A pilot flies a plane.",
+     "a": true
     }
    ]
   ],
@@ -4507,8 +4507,8 @@
     },
     {
      "t": "tf",
-     "q": "Aunt Aseel is a famous artist.",
-     "a": true
+     "q": "Aseel is Fatma's sister.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4521,20 +4521,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Aseel is Fatma's sister.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Mr Ibrahim's job",
      "o": [
+      "chef",
       "pilot",
       "doctor",
-      "artist",
-      "chef"
+      "artist"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Aunt Aseel is a famous artist.",
+     "a": true
     }
    ]
   ],
@@ -4553,8 +4553,8 @@
     },
     {
      "t": "tf",
-     "q": "The underground goes under the ground.",
-     "a": true
+     "q": "We say: He go to work by car.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4567,20 +4567,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say: He go to work by car.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Goes on water",
      "o": [
+      "boat",
       "car",
       "bus",
-      "train",
-      "boat"
+      "train"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The underground goes under the ground.",
+     "a": true
     }
    ]
   ],
@@ -4599,8 +4599,8 @@
     },
     {
      "t": "tf",
-     "q": "In 'My family', grandma is a chef.",
-     "a": true
+     "q": "In 'My family', grandma goes to work by bus.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4613,20 +4613,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "In 'My family', grandma goes to work by bus.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "He is = …",
      "o": [
+      "He's",
       "He's got",
       "His",
-      "He",
-      "He's"
+      "He"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In 'My family', grandma is a chef.",
+     "a": true
     }
    ]
   ],
@@ -4645,8 +4645,8 @@
     },
     {
      "t": "tf",
-     "q": "Bus drivers take students to school in the morning.",
-     "a": true
+     "q": "Bus drivers take students home at night.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4659,20 +4659,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Bus drivers take students home at night.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Colour of US school buses",
      "o": [
+      "yellow",
       "green",
       "red",
-      "white",
-      "yellow"
+      "white"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Bus drivers take students to school in the morning.",
+     "a": true
     }
    ]
   ],
@@ -4691,8 +4691,8 @@
     },
     {
      "t": "tf",
-     "q": "When someone isn't there, we say: Emily's not here.",
-     "a": true
+     "q": "We say a phone number as one big number.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4705,20 +4705,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say a phone number as one big number.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Who is calling Nawal?",
      "o": [
+      "Manar",
       "Emily",
       "Alice",
-      "Basim",
-      "Manar"
+      "Basim"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "When someone isn't there, we say: Emily's not here.",
+     "a": true
     }
    ]
   ],
@@ -4737,8 +4737,8 @@
     },
     {
      "t": "tf",
-     "q": "head and feather have the same ea sound.",
-     "a": true
+     "q": "leaf and weather have the same ea sound.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4751,20 +4751,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "leaf and weather have the same ea sound.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Long ea word",
      "o": [
+      "sea",
       "head",
       "bread",
-      "feather",
-      "sea"
+      "feather"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "head and feather have the same ea sound.",
+     "a": true
     }
    ]
   ],
@@ -4783,8 +4783,8 @@
     },
     {
      "t": "tf",
-     "q": "We use He for a man and She for a woman.",
-     "a": true
+     "q": "We say: She loves his job. (about a woman)",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4797,20 +4797,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say: She loves his job. (about a woman)",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Goes under the ground",
      "o": [
+      "underground",
       "boat",
       "car",
-      "bus",
-      "underground"
+      "bus"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use He for a man and She for a woman.",
+     "a": true
     }
    ]
   ],
@@ -4829,8 +4829,8 @@
     },
     {
      "t": "tf",
-     "q": "For 'She goes to work by car', you check the person and the transport.",
-     "a": true
+     "q": "Picture: a man on a train. 'She goes to work by train.' gets a tick.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4843,20 +4843,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Picture: a man on a train. 'She goes to work by train.' gets a tick.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Mark for a correct sentence",
      "o": [
+      "tick",
       "cross",
       "circle",
-      "line",
-      "tick"
+      "line"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "For 'She goes to work by car', you check the person and the transport.",
+     "a": true
     }
    ]
   ],
@@ -4875,8 +4875,8 @@
     },
     {
      "t": "tf",
-     "q": "We say: I want to be an astronaut.",
-     "a": true
+     "q": "We say: I want to be an chef.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4889,20 +4889,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say: I want to be an chef.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "I want to ___ by train.",
      "o": [
+      "travel",
       "be",
       "want",
-      "an",
-      "travel"
+      "an"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say: I want to be an astronaut.",
+     "a": true
     }
    ]
   ],
@@ -4921,8 +4921,8 @@
     },
     {
      "t": "tf",
-     "q": "Hamed is wearing a white hat and a white jacket.",
-     "a": true
+     "q": "Qais doesn't have a favourite job.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4935,20 +4935,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Qais doesn't have a favourite job.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Jobs Day: Hamed is a …",
      "o": [
+      "chef",
       "pilot",
       "teacher",
-      "nurse",
-      "chef"
+      "nurse"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Hamed is wearing a white hat and a white jacket.",
+     "a": true
     }
    ]
   ],
@@ -4967,8 +4967,8 @@
     },
     {
      "t": "tf",
-     "q": "Winter is cold.",
-     "a": true
+     "q": "In winter, it is sunny and hot.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4981,20 +4981,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "In winter, it is sunny and hot.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Cold season",
      "o": [
+      "winter",
       "summer",
       "spring",
-      "autumn",
-      "winter"
+      "autumn"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Winter is cold.",
+     "a": true
     }
    ]
   ],
@@ -5013,8 +5013,8 @@
     },
     {
      "t": "tf",
-     "q": "April comes after March.",
-     "a": true
+     "q": "We write: my birthday is in june.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5027,20 +5027,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We write: my birthday is in june.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Months in a year",
      "o": [
+      "twelve",
       "ten",
       "seven",
-      "four",
-      "twelve"
+      "four"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "April comes after March.",
+     "a": true
     }
    ]
   ]

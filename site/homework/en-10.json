@@ -1281,8 +1281,8 @@
     },
     {
      "t": "tf",
-     "q": "A blog lets readers comment and communicate with the writer.",
-     "a": true
+     "q": "All radios need batteries to work.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1295,20 +1295,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "All radios need batteries to work.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Media you read online, written by one person",
      "o": [
+      "blog",
       "radio",
       "stereo",
-      "magazine",
-      "blog"
+      "magazine"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A blog lets readers comment and communicate with the writer.",
+     "a": true
     }
    ]
   ],
@@ -1327,8 +1327,8 @@
     },
     {
      "t": "tf",
-     "q": "According to the article, teenagers spend about nine hours a day online.",
-     "a": true
+     "q": "The article says all video games contain violent content.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1341,38 +1341,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The article says all video games contain violent content.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "screen + teenager = ?",
      "o": [
+      "screenager",
       "teenscreen",
       "screener",
-      "teenager",
-      "screenager"
+      "teenager"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "According to the article, teenagers spend about nine hours a day online.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What does 'attention span' mean?",
-     "o": [
-      "a phone charger",
-      "the length of time you can concentrate",
-      "a type of video",
-      "a social media platform"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "YouTube is the most popular platform for this age group in the article.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What does 'attention span' mean?",
+     "o": [
+      "the length of time you can concentrate",
+      "a type of video",
+      "a social media platform",
+      "a phone charger"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -1417,8 +1417,8 @@
     },
     {
      "t": "tf",
-     "q": "'Not Given' means the chart or text gives no information to decide.",
-     "a": true
+     "q": "'I am not as taller as my brother' is a correct sentence.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1431,38 +1431,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'I am not as taller as my brother' is a correct sentence.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Not as ___ as (big)",
      "o": [
+      "big",
       "bigger",
       "biggest",
-      "more big",
-      "big"
+      "more big"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'Not Given' means the chart or text gives no information to decide.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which structure shows two things are equal?",
-     "o": [
-      "the most",
-      "as … as",
-      "not as … as",
-      "more … than"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "The meaning of a phrasal verb is not always the meaning of its separate words.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which structure shows two things are equal?",
+     "o": [
+      "as … as",
+      "not as … as",
+      "more … than",
+      "the most"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -1504,24 +1504,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "In the cartoon, 'bring up' can mean 'raise a child'.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Eating fast food is not as ___ as eating salad.",
      "o": [
+      "healthy",
       "healthier",
-      "healthiest",
-      "healthy"
+      "healthiest"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "'Log in' is a verb + preposition phrasal verb.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "In the cartoon, 'bring up' can mean 'raise a child'.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -1551,8 +1551,8 @@
     },
     {
      "t": "tf",
-     "q": "Fake news is news that is not based on facts.",
-     "a": true
+     "q": "Chart b shows printed newspaper sales going up and online readership going down.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1565,38 +1565,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Chart b shows printed newspaper sales going up and online readership going down.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A person who reports the news",
      "o": [
+      "journalist",
       "blogger",
       "follower",
-      "designer",
-      "journalist"
+      "designer"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Fake news is news that is not based on facts.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which chart shows the trend in Listening 1.4?",
-     "o": [
-      "none of them",
-      "chart b",
-      "chart a",
-      "chart c"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "In 'online', the stress is on the second syllable.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which chart shows the trend in Listening 1.4?",
+     "o": [
+      "chart b",
+      "chart a",
+      "chart c",
+      "none of them"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -1641,8 +1641,8 @@
     },
     {
      "t": "tf",
-     "q": "A chart summary uses the present simple.",
-     "a": true
+     "q": "A good chart summary includes the writer's personal opinion.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1655,38 +1655,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A good chart summary includes the writer's personal opinion.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A circle divided into slices",
      "o": [
+      "pie chart",
       "line graph",
       "column chart",
-      "bar chart",
-      "pie chart"
+      "bar chart"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A chart summary uses the present simple.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which words can compare two groups in one sentence?",
-     "o": [
-      "and / also",
-      "whereas / while",
-      "because / so",
-      "firstly / then"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "'Illustrate' has a similar meaning to 'show'.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which words can compare two groups in one sentence?",
+     "o": [
+      "whereas / while",
+      "because / so",
+      "firstly / then",
+      "and / also"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -1728,24 +1728,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "'However' is a linking word that shows contrast.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Which word is a synonym of 'illustrate'?",
      "o": [
+      "show",
       "hide",
-      "count",
-      "show"
+      "count"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "'The chart show football are popular' is a correct sentence.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "'However' is a linking word that shows contrast.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -1775,8 +1775,8 @@
     },
     {
      "t": "tf",
-     "q": "A menu helps readers move between pages.",
-     "a": true
+     "q": "'Blog regularly' is a Technical tip.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1789,38 +1789,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'Blog regularly' is a Technical tip.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A person who writes a blog",
      "o": [
+      "blogger",
       "reporter",
       "designer",
-      "follower",
-      "blogger"
+      "follower"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A menu helps readers move between pages.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What is the designer's role in the group?",
-     "o": [
-      "deleting comments",
-      "the creative side and the look of the blog",
-      "only reading the posts",
-      "keeping the time only"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "'Choose attractive colours' is a Design tip.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What is the designer's role in the group?",
+     "o": [
+      "the creative side and the look of the blog",
+      "only reading the posts",
+      "keeping the time only",
+      "deleting comments"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -1865,8 +1865,8 @@
     },
     {
      "t": "tf",
-     "q": "Floods happen when water covers the land or streets, often after heavy rain.",
-     "a": true
+     "q": "Climate change means average global temperatures are falling.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1879,20 +1879,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Climate change means average global temperatures are falling.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Long period without rain",
      "o": [
+      "drought",
       "flood",
       "heat wave",
-      "ice cap",
-      "drought"
+      "ice cap"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Floods happen when water covers the land or streets, often after heavy rain.",
+     "a": true
     }
    ]
   ],
@@ -1911,8 +1911,8 @@
     },
     {
      "t": "tf",
-     "q": "Burning fossil fuels produces greenhouse gases.",
-     "a": true
+     "q": "The Earth is getting hotter because there are more ice caps.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1925,38 +1925,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The Earth is getting hotter because there are more ice caps.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "The chart's first year",
      "o": [
+      "1881",
       "1981",
       "1801",
-      "2010",
-      "1881"
+      "2010"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Burning fossil fuels produces greenhouse gases.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which subheading matches the paragraph about stopping climate change?",
-     "o": [
-      "Why is it raining?",
-      "How can we stop climate change?",
-      "What causes climate change?",
-      "What is a drought?"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Countries at sea level are at risk from floods.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which subheading matches the paragraph about stopping climate change?",
+     "o": [
+      "How can we stop climate change?",
+      "What causes climate change?",
+      "What is a drought?",
+      "Why is it raining?"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2001,8 +2001,8 @@
     },
     {
      "t": "tf",
-     "q": "'Therefore' introduces a result.",
-     "a": true
+     "q": "'Football' is a compound noun written as two separate words.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2015,38 +2015,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'Football' is a compound noun written as two separate words.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Connector before a cause",
      "o": [
+      "because of",
       "so",
       "therefore",
-      "consequently",
-      "because of"
+      "consequently"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'Therefore' introduces a result.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What are the three ways to write compound nouns?",
-     "o": [
-      "cause, effect, result",
-      "one word, hyphenated, two separate words",
-      "big, small, medium",
-      "past, present, future"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "'Due to' and 'as a result of' introduce a cause.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What are the three ways to write compound nouns?",
+     "o": [
+      "one word, hyphenated, two separate words",
+      "big, small, medium",
+      "past, present, future",
+      "cause, effect, result"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2088,24 +2088,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "'Tea-bag' is an example of a hyphenated compound noun.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Too much plastic ends up in the ocean. ___, sea animals are in danger.",
      "o": [
+      "Therefore",
       "Because of",
-      "Due to",
-      "Therefore"
+      "Due to"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "All compound nouns are written as one word.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "'Tea-bag' is an example of a hyphenated compound noun.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -2135,8 +2135,8 @@
     },
     {
      "t": "tf",
-     "q": "A policy is a set of ideas officially agreed by a government.",
-     "a": true
+     "q": "'Governments can regulate factories' is an argument against the debate topic.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2149,38 +2149,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'Governments can regulate factories' is an argument against the debate topic.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A person who buys goods",
      "o": [
+      "consumer",
       "government",
       "policy",
-      "emission",
-      "consumer"
+      "emission"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A policy is a set of ideas officially agreed by a government.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What does 'eco-friendly' mean?",
-     "o": [
-      "controlled by a government",
-      "not harmful to the environment",
-      "very cheap",
-      "made of plastic"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "The topic of the debate in Listening 2.3 is that governments are responsible for stopping global warming.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What does 'eco-friendly' mean?",
+     "o": [
+      "not harmful to the environment",
+      "very cheap",
+      "made of plastic",
+      "controlled by a government"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2225,8 +2225,8 @@
     },
     {
      "t": "tf",
-     "q": "A reusable bottle is a bottle we use many times.",
-     "a": true
+     "q": "Plastic pollution is dangerous for sea animals but never for people.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2239,38 +2239,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Plastic pollution is dangerous for sea animals but never for people.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Used many times",
      "o": [
+      "reusable",
       "disposable",
       "plastic",
-      "lightweight",
-      "reusable"
+      "lightweight"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A reusable bottle is a bottle we use many times.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "In which paragraph is the writer's opinion given?",
-     "o": [
-      "paragraph 4",
-      "paragraph 1",
-      "paragraph 2",
-      "paragraph 3"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "A topic sentence states the main idea of a paragraph.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "In which paragraph is the writer's opinion given?",
+     "o": [
+      "paragraph 1",
+      "paragraph 2",
+      "paragraph 3",
+      "paragraph 4"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2312,24 +2312,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "'Throw away' means to get rid of something.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Using reusable bottles will ___ in less plastic in the ocean.",
      "o": [
+      "result",
       "cause",
-      "reduce",
-      "result"
+      "reduce"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "Examples make an opinion weaker.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "'Throw away' means to get rid of something.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -2359,8 +2359,8 @@
     },
     {
      "t": "tf",
-     "q": "Reusable bags can be used many times.",
-     "a": true
+     "q": "A disposable bag is a bag you use many times.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2373,38 +2373,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A disposable bag is a bag you use many times.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A short phrase on the bag",
      "o": [
+      "slogan",
       "material",
       "image",
-      "vote",
-      "slogan"
+      "vote"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Reusable bags can be used many times.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What is an illustration in this project?",
-     "o": [
-      "a type of material",
-      "a drawing that shows the bag design",
-      "a list of prices",
-      "a vote for the best team"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Each bag in Activity 1 has an environmental message.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What is an illustration in this project?",
+     "o": [
+      "a drawing that shows the bag design",
+      "a list of prices",
+      "a vote for the best team",
+      "a type of material"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2449,8 +2449,8 @@
     },
     {
      "t": "tf",
-     "q": "'Kind regards' is a closing for a formal email.",
-     "a": true
+     "q": "A hydroelectric dam uses the sun to generate electricity.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2463,38 +2463,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A hydroelectric dam uses the sun to generate electricity.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Formal greeting",
      "o": [
+      "Dear Mr Brown",
       "Hi Sam",
       "Hey you",
-      "Hello mate",
-      "Dear Mr Brown"
+      "Hello mate"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'Kind regards' is a closing for a formal email.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which of these is formal language?",
-     "o": [
-      "Take care, mate.",
-      "I am writing to request some information.",
-      "Hi! What's up?",
-      "See you soon!"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "An infographic shows information with pictures and short text.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which of these is formal language?",
+     "o": [
+      "I am writing to request some information.",
+      "Hi! What's up?",
+      "See you soon!",
+      "Take care, mate."
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2539,8 +2539,8 @@
     },
     {
      "t": "tf",
-     "q": "'Also' adds information.",
-     "a": true
+     "q": "'Moreover' shows a contrast.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2553,38 +2553,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'Moreover' shows a contrast.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Conjunction for a reason",
      "o": [
+      "because",
       "so",
       "also",
-      "but",
-      "because"
+      "but"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'Also' adds information.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which word is formed with the suffix -ous?",
-     "o": [
-      "useful",
-      "dangerous",
-      "powerful",
-      "effective"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "'However' shows a contrast between two ideas.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word is formed with the suffix -ous?",
+     "o": [
+      "dangerous",
+      "powerful",
+      "effective",
+      "useful"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2629,8 +2629,8 @@
     },
     {
      "t": "tf",
-     "q": "In the Mir'aah project, mirrors focus the sun's energy.",
-     "a": true
+     "q": "The noun 'PRESent' has the stress on the second syllable.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2643,38 +2643,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The noun 'PRESent' has the stress on the second syllable.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Omani solar project",
      "o": [
+      "Mir'aah",
       "Aviva",
       "Mineirão",
-      "ArenA",
-      "Mir'aah"
+      "ArenA"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In the Mir'aah project, mirrors focus the sun's energy.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "In words used as nouns and verbs, where is the stress in the noun?",
-     "o": [
-      "there is no stress",
-      "on the first syllable",
-      "on the second syllable",
-      "on the last letter"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "A presentation slide is a page that shows key information.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "In words used as nouns and verbs, where is the stress in the noun?",
+     "o": [
+      "on the first syllable",
+      "on the second syllable",
+      "on the last letter",
+      "there is no stress"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2719,8 +2719,8 @@
     },
     {
      "t": "tf",
-     "q": "The first paragraph of a formal email explains why you are writing.",
-     "a": true
+     "q": "'Take care' is a formal way to end an email.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2733,38 +2733,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'Take care' is a formal way to end an email.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Formal greeting",
      "o": [
+      "Dear Mr Brown",
       "Hi there",
       "Hey you",
-      "Hello mate",
-      "Dear Mr Brown"
+      "Hello mate"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The first paragraph of a formal email explains why you are writing.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Why do we use 'would' in formal emails?",
-     "o": [
-      "To show we are angry.",
-      "To make the request polite and indirect.",
-      "To talk about the past.",
-      "To make the email shorter."
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "'We would like to request a visit.' is a polite request.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Why do we use 'would' in formal emails?",
+     "o": [
+      "To make the request polite and indirect.",
+      "To talk about the past.",
+      "To make the email shorter.",
+      "To show we are angry."
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2806,24 +2806,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "'To whom it may concern' can start a formal email.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Which closing is formal?",
      "o": [
+      "Yours sincerely",
       "Bye",
-      "See you",
-      "Yours sincerely"
+      "See you"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "A formal email should start with 'Hey there!'.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "'To whom it may concern' can start a formal email.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -2853,8 +2853,8 @@
     },
     {
      "t": "tf",
-     "q": "In this project, the invention must run on renewable energy.",
-     "a": true
+     "q": "A good slide has a lot of long text and no pictures.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2867,20 +2867,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A good slide has a lot of long text and no pictures.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "What are the two criteria for the invention?",
      "o": [
+      "It runs on renewable energy and has two purposes.",
       "It is very big and uses oil.",
       "It is cheap and uses coal.",
-      "It has no purpose.",
-      "It runs on renewable energy and has two purposes."
+      "It has no purpose."
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In this project, the invention must run on renewable energy.",
+     "a": true
     }
    ]
   ],
@@ -2899,8 +2899,8 @@
     },
     {
      "t": "tf",
-     "q": "'Agriculture' means farming.",
-     "a": true
+     "q": "30 BC comes before 3000 BC.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2913,20 +2913,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "30 BC comes before 3000 BC.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Buying and selling goods",
      "o": [
+      "trade",
       "agriculture",
       "empire",
-      "religion",
-      "trade"
+      "religion"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'Agriculture' means farming.",
+     "a": true
     }
    ]
   ],
@@ -2945,8 +2945,8 @@
     },
     {
      "t": "tf",
-     "q": "'Bahla Fort was built long ago.' is a past passive sentence.",
-     "a": true
+     "q": "'The fort was build.' is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2959,20 +2959,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'The fort was build.' is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Plural past passive helper",
      "o": [
+      "were",
       "was",
       "is",
-      "am",
-      "were"
+      "am"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'Bahla Fort was built long ago.' is a past passive sentence.",
+     "a": true
     }
    ]
   ],
@@ -2991,8 +2991,8 @@
     },
     {
      "t": "tf",
-     "q": "The United Nations was created to encourage cooperation between countries.",
-     "a": true
+     "q": "A global citizen only cares about his or her own town.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3005,20 +3005,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A global citizen only cares about his or her own town.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Same rights for all",
      "o": [
+      "equality",
       "revenge",
       "war",
-      "diversity",
-      "equality"
+      "diversity"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The United Nations was created to encourage cooperation between countries.",
+     "a": true
     }
    ]
   ],
@@ -3037,8 +3037,8 @@
     },
     {
      "t": "tf",
-     "q": "A biography is usually written in chronological order.",
-     "a": true
+     "q": "'She was knowing for her inventions.' is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3051,38 +3051,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'She was knowing for her inventions.' is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Story of a person's life",
      "o": [
+      "biography",
       "leaflet",
       "recipe",
-      "email",
-      "biography"
+      "email"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A biography is usually written in chronological order.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which phrase introduces what a person will be remembered for?",
-     "o": [
-      "was born in…",
-      "will be remembered for…",
-      "at a young age",
-      "one year later"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "'He was born in Muscat.' uses the past passive.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which phrase introduces what a person will be remembered for?",
+     "o": [
+      "will be remembered for…",
+      "at a young age",
+      "one year later",
+      "was born in…"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3124,24 +3124,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "'At a young age' is a time phrase.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Chronological order means…",
      "o": [
+      "the order events happened",
       "alphabetical order",
-      "random order",
-      "the order events happened"
+      "random order"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "'In a young age, he loved reading.' is correct.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "'At a young age' is a time phrase.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -3157,15 +3157,20 @@
    ],
    [
     {
+     "t": "tf",
+     "q": "What is a biography? Answer: a description of a place",
+     "a": false
+    },
+    {
      "t": "mcq",
      "q": "Choose the correct sentence.",
      "o": [
-      "One later year, he moved to Muscat.",
       "One year later, he moved to Muscat.",
       "One year later, he move to Muscat.",
-      "One year later he moving to Muscat."
+      "One year later he moving to Muscat.",
+      "One later year, he moved to Muscat."
      ],
-     "a": 2
+     "a": 1
     },
     {
      "t": "tf",
@@ -3176,16 +3181,11 @@
      "t": "mcq",
      "q": "She was ___ for her inventions.",
      "o": [
-      "known",
       "knowing",
-      "know"
+      "know",
+      "known"
      ],
-     "a": 1
-    },
-    {
-     "t": "tf",
-     "q": "A biography plan can include birth, childhood, achievements and importance.",
-     "a": true
+     "a": 3
     },
     {
      "t": "mcq",
@@ -3215,8 +3215,8 @@
     },
     {
      "t": "tf",
-     "q": "Al Baleed Archaeological Park is an archaeological site in Oman.",
-     "a": true
+     "q": "'The fort were built in the 17th century.' is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3229,20 +3229,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'The fort were built in the 17th century.' is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Place with evidence of the past",
      "o": [
+      "archaeological site",
       "shopping mall",
       "car park",
-      "stadium",
-      "archaeological site"
+      "stadium"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Al Baleed Archaeological Park is an archaeological site in Oman.",
+     "a": true
     }
    ]
   ]

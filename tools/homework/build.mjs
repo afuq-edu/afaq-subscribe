@@ -50,6 +50,16 @@ const clean = (x) => String(x ?? '').replace(/\s+/g, ' ').trim();
 const rotate = (arr, k) => arr.map((_, i) => arr[(i + k) % arr.length]);
 // مجموعات أسئلة الحصص ٢…k من أنشطة الدرس: اختيار من متعدد (mcq ثم الصناديق ثم الصيد بالتناوب) وصح وخطأ، بنمط واجب الحصة الأولى
 // (اختيار، صح وخطأ، اختيار، صح وخطأ، اختيار)، دون ما في واجب الحصة الأولى؛ تدور على الأسئلة إن نفدت. ثابتة لا عشوائية
+// عبارة صح وخطأ من سؤال اختيار: الفراغ يُملأ بالخيار، وإلا «السؤال — الإجابة: الخيار»
+function tfFrom(q, opt) {
+  const blank = /_{2,}|\.{3,}|…+/;
+  if (blank.test(q)) return clean(q.replace(blank, opt));
+  const ar = /[\u0600-\u06FF]/.test(q);
+  if (/[؟?]\s*$/.test(q)) return `${q} ${ar ? 'الإجابة' : 'Answer'}: ${opt}`;
+  return `${q.replace(/[:：.]\s*$/, '')}: ${opt}`;
+}
+// أسئلة الحصص بعد الأولى: من أنشطة الدرس غير المستعملة في الحصة الأولى ولا في حصة سابقة ما أمكن؛
+// عدد أسئلة صح وخطأ وصحتها يختلفان من حصة لأخرى (لا هيكل ثابت)، وحين تنفد الأسئلة تُصاغ عبارات صح وخطأ من أسئلة الاختيار قبل أي تكرار
 export function sessionSets(game, first, count) {
   if (!game || count < 1) return [];
   const used = new Set((first || []).map((q) => clean(q.q)));
@@ -61,23 +71,36 @@ export function sessionSets(game, first, count) {
   ];
   const mc = []; for (let i = 0; src.some((l) => i < l.length); i++) src.forEach((l) => { if (i < l.length && !mc.some((y) => y.q === l[i].q)) mc.push(l[i]); });
   const tf = (game.tf || []).filter((x) => x && clean(x.s) && typeof x.t === 'boolean' && !used.has(clean(x.s))).map((x) => ({ q: clean(x.s), a: x.t }));
-  // صح وخطأ: صحيح وخاطئ بالتناوب ما أمكن
-  const tt = tf.filter((x) => x.a), tff = tf.filter((x) => !x.a), tfo = [];
-  for (let i = 0; i < Math.max(tt.length, tff.length); i++) { if (tt[i]) tfo.push(tt[i]); if (tff[i]) tfo.push(tff[i]); }
-  if (mc.length + tfo.length < 5) return [];
+  // عبارات مصاغة من أسئلة الاختيار (كلها، ومنها أسئلة الحصة الأولى): صحيحة بالجواب، وخاطئة بخيار آخر
+  const all = [...(first || []).filter((x) => x && x.t === 'mcq' && Array.isArray(x.o)).map((x) => ({ q: clean(x.q), o: [x.o[x.a - 1]].concat(x.o.filter((_, k) => k !== x.a - 1)).map(clean) })), ...mc];
+  const dt = [], df = [];
+  all.forEach((x) => dt.push({ q: tfFrom(x.q, x.o[0]), a: true }));
+  for (let k = 1; k < 6; k++) all.forEach((x) => { if (x.o[k]) df.push({ q: tfFrom(x.q, x.o[k]), a: false }); });
+  if (mc.length + tf.length < 5) return [];
+  const usedQ = new Set(used), last = new Map();
+  const fresh = (l, f) => l.find((x) => !usedQ.has(x.q) && (!f || f(x)));
+  const tfFor = (want) => fresh(tf, (y) => y.a === want) || fresh(want ? dt : df) || fresh(tf) || fresh(want ? df : dt);
+  // أنماط الحصص: m اختيار، T عبارة صحيحة، F عبارة خاطئة — تتبدل من حصة لأخرى (الحصة الأولى mTmFm)
+  const PAT = ['mFmmT', 'TmmFm', 'mmFTm', 'FmTmm', 'mTmmF', 'mFTmm', 'mmTmF', 'TmFmm', 'mFmTm', 'mmmTF', 'FmmTm', 'mTFmm', 'mmFmT', 'mTmFm'];
   const out = [];
-  let pm = 0, pt = 0;
   for (let s = 0; s < count; s++) {
     const set = [], seen = new Set();
-    const takeM = () => { for (let k = 0; k < mc.length; k++) { const x = mc[pm++ % mc.length]; if (!seen.has(x.q)) { seen.add(x.q); return x; } } return null; };
-    const takeT = () => { for (let k = 0; k < tfo.length; k++) { const x = tfo[pt++ % tfo.length]; if (!seen.has(x.q)) { seen.add(x.q); return x; } } return null; };
-    for (const want of ['m', 't', 'm', 't', 'm']) {
-      let x = want === 'm' ? takeM() : takeT();
-      let isM = want === 'm';
-      if (!x) { x = isM ? takeT() : takeM(); isM = !isM; }
+    const pat = PAT[s % PAT.length];
+    let nm = 0, nt = 0;
+    for (let i = 0; i < pat.length; i++) {
+      const want = pat[i];
+      let x = null, isM = want === 'm';
+      if (isM) {
+        x = fresh(mc);
+        // نفدت أسئلة الاختيار: سؤالان على الأقل منها (يعود أقدمها استعمالًا بترتيب خيارات آخر)، والباقي عبارات صح وخطأ جديدة
+        if (!x && nm >= 2) { x = tfFor(nt % 2 === 0); if (x) isM = false; }
+        if (!x) { const c = mc.filter((y) => !seen.has(y.q)).sort((u, v) => (last.get(u.q) ?? -1) - (last.get(v.q) ?? -1)); x = c[0] || null; }
+      } else x = tfFor(want === 'T');
+      if (!x) { const pool = tf.concat(dt, df).filter((y) => !seen.has(y.q)); x = pool[(s * 3 + set.length) % (pool.length || 1)] || null; isM = false; }
       if (!x) break;
-      if (isM) { const r = rotate(x.o, (s * 2 + set.length + 1) % x.o.length); set.push({ t: 'mcq', q: x.q, o: r, a: r.indexOf(x.o[0]) + 1 }); }
-      else set.push({ t: 'tf', q: x.q, a: !!x.a });
+      usedQ.add(x.q); seen.add(x.q); last.set(x.q, s);
+      if (isM) { nm++; const r = rotate(x.o, (s * 2 + set.length + 1) % x.o.length); set.push({ t: 'mcq', q: x.q, o: r, a: r.indexOf(x.o[0]) + 1 }); }
+      else { nt++; set.push({ t: 'tf', q: x.q, a: !!x.a }); }
     }
     if (set.length === 5) out.push(set);
   }

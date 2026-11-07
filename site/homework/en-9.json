@@ -1281,8 +1281,8 @@
     },
     {
      "t": "tf",
-     "q": "The past simple of 'swim' is 'swam'.",
-     "a": true
+     "q": "'Did you went to the beach?' is a correct question.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1295,38 +1295,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'Did you went to the beach?' is a correct question.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Past simple of 'swim'",
      "o": [
+      "swam",
       "swum",
       "swimmed",
-      "swims",
-      "swam"
+      "swims"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The past simple of 'swim' is 'swam'.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which is the past simple of 'play'?",
-     "o": [
-      "playing",
-      "played",
-      "plaied",
-      "plays"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "The past simple of 'take' is 'took'.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which is the past simple of 'play'?",
+     "o": [
+      "played",
+      "plaied",
+      "plays",
+      "playing"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -1368,24 +1368,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "We use 'a' before a singular countable noun mentioned for the first time.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "What is the past simple of 'go'?",
      "o": [
+      "went",
       "goed",
-      "gone",
-      "went"
+      "gone"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "In the model paragraph, the writer played the piano at an audition.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "We use 'a' before a singular countable noun mentioned for the first time.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -1415,8 +1415,8 @@
     },
     {
      "t": "tf",
-     "q": "Board D belongs to Osama.",
-     "a": true
+     "q": "Cody loves playing sport every day.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1429,38 +1429,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Cody loves playing sport every day.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Osama's photo board",
      "o": [
+      "D",
       "A",
       "C",
-      "G",
-      "D"
+      "G"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Board D belongs to Osama.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which phrasal verb completes: I need a racket because I'm going to ___ tennis.",
-     "o": [
-      "get together",
-      "take up",
-      "hang out",
-      "join in"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Hana's hobbies are cooking and travelling.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which phrasal verb completes: I need a racket because I'm going to ___ tennis.",
+     "o": [
+      "take up",
+      "hang out",
+      "join in",
+      "get together"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -1505,8 +1505,8 @@
     },
     {
      "t": "tf",
-     "q": "A confident person believes they can do things well.",
-     "a": true
+     "q": "A shy person loves talking to new people.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1519,20 +1519,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A shy person loves talking to new people.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "good ___",
      "o": [
+      "at",
       "on",
       "with",
-      "in",
-      "at"
+      "in"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A confident person believes they can do things well.",
+     "a": true
     }
    ]
   ],
@@ -1551,8 +1551,8 @@
     },
     {
      "t": "tf",
-     "q": "'Because', 'as' and 'one reason is' introduce a reason.",
-     "a": true
+     "q": "'For example' introduces a reason.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1565,20 +1565,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'For example' introduces a reason.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Introduces an example",
      "o": [
+      "for example",
       "because",
       "but",
-      "so",
-      "for example"
+      "so"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'Because', 'as' and 'one reason is' introduce a reason.",
+     "a": true
     }
    ]
   ],
@@ -1597,8 +1597,8 @@
     },
     {
      "t": "tf",
-     "q": "Some people learn new things from home with apps or video tutorials.",
-     "a": true
+     "q": "We say 'make a class' when we start a course.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1611,20 +1611,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say 'make a class' when we start a course.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "___ a car (fix it)",
      "o": [
+      "repair",
       "arrange",
       "take",
-      "make",
-      "repair"
+      "make"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Some people learn new things from home with apps or video tutorials.",
+     "a": true
     }
    ]
   ],
@@ -1643,8 +1643,8 @@
     },
     {
      "t": "tf",
-     "q": "In multiple choice, the right option often uses synonyms of words in the text.",
-     "a": true
+     "q": "When he was young, the writer loved learning French.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1657,38 +1657,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "When he was young, the writer loved learning French.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "In danger",
      "o": [
+      "at risk",
       "alive",
       "original",
-      "slightly",
-      "at risk"
+      "slightly"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In multiple choice, the right option often uses synonyms of words in the text.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What kind of texts are the 'Extra English lessons' text and Eliza's text?",
-     "o": [
-      "a recipe and an advert",
-      "a school notice and a phone message",
-      "a story and a poem",
-      "an email and a diary"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Eliza sent Anna a message about paying for the trip.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What kind of texts are the 'Extra English lessons' text and Eliza's text?",
+     "o": [
+      "a school notice and a phone message",
+      "a story and a poem",
+      "an email and a diary",
+      "a recipe and an advert"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -1733,8 +1733,8 @@
     },
     {
      "t": "tf",
-     "q": "We say 'tell someone something', like 'Tell me a story.'",
-     "a": true
+     "q": "We say 'We say two languages at home.'",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1747,20 +1747,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say 'We say two languages at home.'",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Change into another language",
      "o": [
+      "translate",
       "explain",
       "repeat",
-      "mean",
-      "translate"
+      "mean"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say 'tell someone something', like 'Tell me a story.'",
+     "a": true
     }
    ]
   ],
@@ -1779,8 +1779,8 @@
     },
     {
      "t": "tf",
-     "q": "We can start a photo description with 'This photo shows ...'.",
-     "a": true
+     "q": "A good description only names the objects in the photo.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1793,20 +1793,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A good description only names the objects in the photo.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Shows a guess",
      "o": [
+      "might",
       "definitely",
       "always",
-      "never",
-      "might"
+      "never"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We can start a photo description with 'This photo shows ...'.",
+     "a": true
     }
    ]
   ],
@@ -1825,8 +1825,8 @@
     },
     {
      "t": "tf",
-     "q": "Jack seemed relaxed about a week without his phone.",
-     "a": true
+     "q": "'I'd' is the short form of 'I will'.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1839,20 +1839,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'I'd' is the short form of 'I will'.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Writes to people offline",
      "o": [
+      "Maxwell",
       "Sophie",
       "Jack",
-      "Zoe",
-      "Maxwell"
+      "Zoe"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Jack seemed relaxed about a week without his phone.",
+     "a": true
     }
    ]
   ],
@@ -1871,8 +1871,8 @@
     },
     {
      "t": "tf",
-     "q": "We can use the -ing form as the subject of a sentence: 'Swimming is fun.'",
-     "a": true
+     "q": "The past simple question of 'you saw' is 'Did you saw?'",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1885,20 +1885,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The past simple question of 'you saw' is 'Did you saw?'",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Past simple of 'see'",
      "o": [
+      "saw",
       "seed",
       "seen",
-      "sees",
-      "saw"
+      "sees"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We can use the -ing form as the subject of a sentence: 'Swimming is fun.'",
+     "a": true
     }
    ]
   ],
@@ -1917,8 +1917,8 @@
     },
     {
      "t": "tf",
-     "q": "We use the present continuous for fixed arrangements: 'I'm meeting my aunt at 8 p.m.'",
-     "a": true
+     "q": "'The flight arriving at 7 tomorrow' is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1931,38 +1931,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'The flight arriving at 7 tomorrow' is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Form for timetables",
      "o": [
+      "present simple",
       "past simple",
       "be going to",
-      "past continuous",
-      "present simple"
+      "past continuous"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use the present continuous for fixed arrangements: 'I'm meeting my aunt at 8 p.m.'",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which sentence is an arrangement?",
-     "o": [
-      "The film starts at 9.",
-      "I'm meeting my uncle at 5 p.m.",
-      "I think robots will drive cars.",
-      "I'll answer the door."
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "'I'll lend you some money' is an offer.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which sentence is an arrangement?",
+     "o": [
+      "I'm meeting my uncle at 5 p.m.",
+      "I think robots will drive cars.",
+      "I'll answer the door.",
+      "The film starts at 9."
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2007,8 +2007,8 @@
     },
     {
      "t": "tf",
-     "q": "The girl's printer has stopped working.",
-     "a": true
+     "q": "The girl's games controller is still broken.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2021,38 +2021,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The girl's games controller is still broken.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Stopped working (girl)",
      "o": [
+      "printer",
       "controller",
       "tablet",
-      "smart watch",
-      "printer"
+      "smart watch"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The girl's printer has stopped working.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which phrase makes an offer?",
-     "o": [
-      "You shouldn't ...",
-      "Shall I ...?",
-      "How about ...?",
-      "You ought to ..."
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "The woman agrees to buy batteries for the boy's torch.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which phrase makes an offer?",
+     "o": [
+      "Shall I ...?",
+      "How about ...?",
+      "You ought to ...",
+      "You shouldn't ..."
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2097,8 +2097,8 @@
     },
     {
      "t": "tf",
-     "q": "'What do you think?' asks for someone's opinion.",
-     "a": true
+     "q": "In a collaborative task, you should only give your own ideas and ignore your partner.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2111,20 +2111,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "In a collaborative task, you should only give your own ideas and ignore your partner.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Giving opinion: In my ___",
      "o": [
+      "view",
       "point",
       "sure",
-      "right",
-      "view"
+      "right"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'What do you think?' asks for someone's opinion.",
+     "a": true
     }
    ]
   ],
@@ -2143,8 +2143,8 @@
     },
     {
      "t": "tf",
-     "q": "Jood's reply covers all four points from her notes.",
-     "a": true
+     "q": "'I hope you're feeling better now' gives advice.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2157,38 +2157,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'I hope you're feeling better now' gives advice.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "You ___ to help them.",
      "o": [
+      "ought",
       "should",
       "could",
-      "shall",
-      "ought"
+      "shall"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Jood's reply covers all four points from her notes.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "How many paragraphs does Jood's email have?",
-     "o": [
-      "ten",
-      "three",
-      "one",
-      "five"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "'I think you ought to help a local business go digital' gives advice.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "How many paragraphs does Jood's email have?",
+     "o": [
+      "three",
+      "one",
+      "five",
+      "ten"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2233,8 +2233,8 @@
     },
     {
      "t": "tf",
-     "q": "We can use the present continuous for future arrangements.",
-     "a": true
+     "q": "We use a kettle to wash clothes.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2247,38 +2247,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We use a kettle to wash clothes.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "'I'll carry those books for you' is…",
      "o": [
+      "an offer",
       "a prediction",
       "an arrangement",
-      "a fact",
-      "an offer"
+      "a fact"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We can use the present continuous for future arrangements.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which phrasal verb means 'start a machine'?",
-     "o": [
-      "set off",
-      "switch on",
-      "go off",
-      "come off"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "We say 'Our electricity often goes off during a storm.'",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which phrasal verb means 'start a machine'?",
+     "o": [
+      "switch on",
+      "go off",
+      "come off",
+      "set off"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2320,24 +2320,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "Adverbs of frequency go after the verb be.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Complete: Please switch ___ the TV. I'm going to bed.",
      "o": [
+      "off",
       "up",
-      "in",
-      "off"
+      "in"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "The correct phrase is 'keen at football'.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "Adverbs of frequency go after the verb be.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -2353,15 +2353,20 @@
    ],
    [
     {
+     "t": "tf",
+     "q": "What is the function of 'I'm meeting my friends at the mall at five'? Answer: An offer",
+     "a": false
+    },
+    {
      "t": "mcq",
      "q": "Choose the correct sentence.",
      "o": [
-      "Now and then volleyball Fatima and Raya play.",
       "Fatima and Raya play volleyball now and then.",
       "Fatima and Raya play now and then volleyball.",
-      "Fatima and Raya now and then volleyball play."
+      "Fatima and Raya now and then volleyball play.",
+      "Now and then volleyball Fatima and Raya play."
      ],
-     "a": 2
+     "a": 1
     },
     {
      "t": "tf",
@@ -2372,16 +2377,11 @@
      "t": "mcq",
      "q": "Complete: How ___ watching a film tonight?",
      "o": [
-      "about",
       "why",
-      "to"
+      "to",
+      "about"
      ],
-     "a": 1
-    },
-    {
-     "t": "tf",
-     "q": "'Brilliant at' is a correct adjective + preposition pair.",
-     "a": true
+     "a": 3
     },
     {
      "t": "mcq",
@@ -2409,7 +2409,7 @@
     },
     {
      "t": "tf",
-     "q": "We can use the present continuous for future arrangements.",
+     "q": "'Brilliant at' is a correct adjective + preposition pair.",
      "a": true
     },
     {
@@ -2423,20 +2423,20 @@
      "a": 2
     },
     {
-     "t": "tf",
-     "q": "We use a kettle to wash clothes.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A strange light c___ on.",
      "o": [
+      "came",
       "went",
       "set",
-      "put",
-      "came"
+      "put"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Which of these is a stative verb? Answer: cook",
+     "a": false
     }
    ],
    [
@@ -2453,23 +2453,23 @@
     },
     {
      "t": "tf",
-     "q": "We say 'Our electricity often goes off during a storm.'",
+     "q": "Complete: I'm not keen in / with cooking, but I'm brilliant ___ drawing.",
+     "a": false
+    },
+    {
+     "t": "tf",
+     "q": "What is the function of 'I'm meeting my friends at the mall at five'? Answer: An arrangement",
      "a": true
     },
     {
      "t": "mcq",
      "q": "Choose: That smells nice! What ___?",
      "o": [
-      "do you cook",
       "you cook",
-      "are you cooking"
+      "are you cooking",
+      "do you cook"
      ],
-     "a": 3
-    },
-    {
-     "t": "tf",
-     "q": "Stative verbs like 'understand' are usually used in the continuous form.",
-     "a": false
+     "a": 2
     },
     {
      "t": "mcq",
@@ -2496,68 +2496,68 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "Adverbs of frequency go after the verb be.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Which preposition goes with 'excited'?",
      "o": [
+      "on",
       "about",
-      "at",
-      "on"
+      "at"
      ],
-     "a": 1
+     "a": 2
     },
     {
      "t": "tf",
-     "q": "The correct phrase is 'keen at football'.",
-     "a": false
+     "q": "Which of these is a stative verb? Answer: understand",
+     "a": true
     },
     {
      "t": "mcq",
      "q": "I'm keen ___ football.",
      "o": [
+      "on",
       "at",
       "of",
-      "with",
-      "on"
-     ],
-     "a": 4
-    }
-   ],
-   [
-    {
-     "t": "mcq",
-     "q": "Which sentence is correct?",
-     "o": [
-      "Osama is never late for school.",
-      "Osama never is late for school.",
-      "Osama is late never for school."
+      "with"
      ],
      "a": 1
     },
     {
      "t": "tf",
-     "q": "A sociable person enjoys being with other people.",
+     "q": "Which word means 'something difficult that tests your skill'? Answer: preference",
+     "a": false
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "Complete: I'm not keen on / at cooking, but I'm brilliant ___ drawing.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which sentence is correct?",
+     "o": [
+      "Osama never is late for school.",
+      "Osama is late never for school.",
+      "Osama is never late for school."
+     ],
+     "a": 3
+    },
+    {
+     "t": "tf",
+     "q": "Which sentence is an offer? Answer: I'm meeting Ali at six.",
+     "a": false
     },
     {
      "t": "mcq",
      "q": "I'm terrible ___ maths.",
      "o": [
-      "on",
       "with",
       "of",
-      "at"
+      "at",
+      "on"
      ],
-     "a": 4
-    },
-    {
-     "t": "tf",
-     "q": "'Brilliant at' is a correct adjective + preposition pair.",
-     "a": true
+     "a": 3
     },
     {
      "t": "mcq",
@@ -2586,8 +2586,8 @@
     },
     {
      "t": "tf",
-     "q": "Speakers often say the same idea in different words.",
-     "a": true
+     "q": "Adverbs of frequency usually go after main verbs.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2600,38 +2600,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Adverbs of frequency usually go after main verbs.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A question with 'both' asks for…",
      "o": [
+      "agreement",
       "suggestion",
       "feelings",
-      "a reason",
-      "agreement"
+      "a reason"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Speakers often say the same idea in different words.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "'You will hear two friends. What do they both think?' This question asks for…",
-     "o": [
-      "a place",
-      "agreement",
-      "a suggestion",
-      "feelings"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Adverbs of frequency usually go after the verb be.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "'You will hear two friends. What do they both think?' This question asks for…",
+     "o": [
+      "agreement",
+      "a suggestion",
+      "feelings",
+      "a place"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2676,8 +2676,8 @@
     },
     {
      "t": "tf",
-     "q": "We say 'a very good film'.",
-     "a": true
+     "q": "We can say 'I was very terrified'.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2690,38 +2690,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We can say 'I was very terrified'.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Linking word for a contrast",
      "o": [
+      "but",
       "and",
       "so",
-      "because",
-      "but"
+      "because"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say 'a very good film'.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which phrase is correct?",
-     "o": [
-      "quite a old village",
-      "a very old village",
-      "a quite old village",
-      "very terrified"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "'But' introduces a contrast.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which phrase is correct?",
+     "o": [
+      "a very old village",
+      "a quite old village",
+      "very terrified",
+      "quite a old village"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2766,8 +2766,8 @@
     },
     {
      "t": "tf",
-     "q": "A cochlear implant changes sounds into electronic signals.",
-     "a": true
+     "q": "In the project vote, students can vote for their own group.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2780,20 +2780,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "In the project vote, students can vote for their own group.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Talk to a doctor by video call",
      "o": [
+      "telemedicine",
       "prosthetics",
       "drones",
-      "vaccines",
-      "telemedicine"
+      "vaccines"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A cochlear implant changes sounds into electronic signals.",
+     "a": true
     }
    ]
   ],
@@ -2812,8 +2812,8 @@
     },
     {
      "t": "tf",
-     "q": "'The train leaves at 6.30 tomorrow' uses the present simple for a timetable.",
-     "a": true
+     "q": "'You should see a doctor' is a suggestion.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2826,20 +2826,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'You should see a doctor' is a suggestion.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Offer: ___ I open the window?",
      "o": [
+      "Shall",
       "Do",
       "Am",
-      "Are",
-      "Shall"
+      "Are"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'The train leaves at 6.30 tomorrow' uses the present simple for a timetable.",
+     "a": true
     }
    ]
   ],
@@ -2858,8 +2858,8 @@
     },
     {
      "t": "tf",
-     "q": "We use the present continuous for actions happening now.",
-     "a": true
+     "q": "'My school day is starting at eight every day' is the best way to talk about a routine.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2872,20 +2872,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'My school day is starting at eight every day' is the best way to talk about a routine.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "I ___ football every Tuesday.",
      "o": [
+      "play",
       "plays",
       "playing",
-      "to play",
-      "play"
+      "to play"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use the present continuous for actions happening now.",
+     "a": true
     }
    ]
   ],
@@ -2904,8 +2904,8 @@
     },
     {
      "t": "tf",
-     "q": "In Brazil, dolphins chase fish towards the nets.",
-     "a": true
+     "q": "'Swim is really good for you' is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2918,38 +2918,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'Swim is really good for you' is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "-ing form of 'make'",
      "o": [
+      "making",
       "makeing",
       "makking",
-      "maked",
-      "making"
+      "maked"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In Brazil, dolphins chase fish towards the nets.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What is the spelling rule for 'come → coming'?",
-     "o": [
-      "Add -s",
-      "Drop the final -e",
-      "Double the final consonant",
-      "Change -ie to -y"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Experts in Africa use sounds to keep elephants away from villages.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What is the spelling rule for 'come → coming'?",
+     "o": [
+      "Drop the final -e",
+      "Double the final consonant",
+      "Change -ie to -y",
+      "Add -s"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2994,8 +2994,8 @@
     },
     {
      "t": "tf",
-     "q": "We use the past continuous for background actions in a story.",
-     "a": true
+     "q": "We can say 'very fantastic'.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3008,38 +3008,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We can say 'very fantastic'.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Strong word for 'very funny'",
      "o": [
+      "hilarious",
       "furious",
       "huge",
-      "miserable",
-      "hilarious"
+      "miserable"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use the past continuous for background actions in a story.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which word can go with both ordinary and strong adjectives?",
-     "o": [
-      "extremely",
-      "really",
-      "very",
-      "absolutely"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "We say 'proud of myself'.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word can go with both ordinary and strong adjectives?",
+     "o": [
+      "really",
+      "very",
+      "absolutely",
+      "extremely"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3081,24 +3081,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "'Hilarious' means very funny.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Complete: While she ___, I picked up my laptop.",
      "o": [
+      "was presenting",
       "presents",
-      "is presenting",
-      "was presenting"
+      "is presenting"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "'Miserable' means very happy.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "'Hilarious' means very funny.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -3128,8 +3128,8 @@
     },
     {
      "t": "tf",
-     "q": "One skimming method is to read the first one or two lines of each paragraph.",
-     "a": true
+     "q": "'Lifelike' is a verb.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3142,38 +3142,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'Lifelike' is a verb.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Change completely",
      "o": [
+      "transform",
       "consume",
       "create",
-      "swallow",
-      "transform"
+      "swallow"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "One skimming method is to read the first one or two lines of each paragraph.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which word means 'what you like more than other things'?",
-     "o": [
-      "specialist",
-      "preference",
-      "challenge",
-      "version"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "In some interactive content, viewers can choose between different endings.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word means 'what you like more than other things'?",
+     "o": [
+      "preference",
+      "challenge",
+      "version",
+      "specialist"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3218,8 +3218,8 @@
     },
     {
      "t": "tf",
-     "q": "The past simple of 'grow' is 'grew'.",
-     "a": true
+     "q": "The past simple of 'stop' is 'stoped'.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3232,20 +3232,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The past simple of 'stop' is 'stoped'.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Past simple of 'win'",
      "o": [
+      "won",
       "winned",
       "wan",
-      "wined",
-      "won"
+      "wined"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The past simple of 'grow' is 'grew'.",
+     "a": true
     }
    ]
   ],
@@ -3264,8 +3264,8 @@
     },
     {
      "t": "tf",
-     "q": "With a separable phrasal verb, a pronoun goes between the verb and the particle.",
-     "a": true
+     "q": "'Go off' and 'come on' can be separated.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3278,20 +3278,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'Go off' and 'come on' can be separated.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "It makes coffee",
      "o": [
+      "coffee maker",
       "kettle",
       "speaker",
-      "microwave",
-      "coffee maker"
+      "microwave"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "With a separable phrasal verb, a pronoun goes between the verb and the particle.",
+     "a": true
     }
    ]
   ]

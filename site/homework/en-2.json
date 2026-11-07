@@ -4161,8 +4161,8 @@
     },
     {
      "t": "tf",
-     "q": "We use a pencil to write.",
-     "a": true
+     "q": "Close your book means open it.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4175,20 +4175,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Close your book means open it.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Use your ears.",
      "o": [
+      "Listen",
       "Draw",
       "Write",
-      "Point",
-      "Listen"
+      "Point"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use a pencil to write.",
+     "a": true
     }
    ]
   ],
@@ -4207,8 +4207,8 @@
     },
     {
      "t": "tf",
-     "q": "It's Sami's birthday in the story.",
-     "a": true
+     "q": "We say Goodbye when we meet a new friend.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4221,20 +4221,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say Goodbye when we meet a new friend.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "The parrot in the story",
      "o": [
+      "Polly",
       "Sami",
       "Jack",
-      "Lily",
-      "Polly"
+      "Lily"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "It's Sami's birthday in the story.",
+     "a": true
     }
    ]
   ],
@@ -4253,8 +4253,8 @@
     },
     {
      "t": "tf",
-     "q": "The word eight means 8.",
-     "a": true
+     "q": "The word four means 5.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4267,20 +4267,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The word four means 5.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Number 6",
      "o": [
+      "six",
       "seven",
       "nine",
-      "two",
-      "six"
+      "two"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The word eight means 8.",
+     "a": true
     }
    ]
   ],
@@ -4299,8 +4299,8 @@
     },
     {
      "t": "tf",
-     "q": "We say It's an action figure.",
-     "a": true
+     "q": "The word cat has ai in it.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4313,20 +4313,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The word cat has ai in it.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A soft toy bear",
      "o": [
+      "teddy",
       "car",
       "plane",
-      "yo-yo",
-      "teddy"
+      "yo-yo"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say It's an action figure.",
+     "a": true
     }
    ]
   ],
@@ -4345,8 +4345,8 @@
     },
     {
      "t": "tf",
-     "q": "Jack says It's a car. Sami says No, it's a plane.",
-     "a": true
+     "q": "The big toy they make is a teddy.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4359,20 +4359,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The big toy they make is a teddy.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "The dinosaur's colour",
      "o": [
+      "green",
       "red",
       "pink",
-      "white",
-      "green"
+      "white"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Jack says It's a car. Sami says No, it's a plane.",
+     "a": true
     }
    ]
   ],
@@ -4391,8 +4391,8 @@
     },
     {
      "t": "tf",
-     "q": "We ride a bike.",
-     "a": true
+     "q": "Is it a scooter? (a bike) Yes, it is.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4405,20 +4405,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Is it a scooter? (a bike) Yes, it is.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "It flies on a string.",
      "o": [
+      "kite",
       "slide",
       "swing",
-      "ball",
-      "kite"
+      "ball"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We ride a bike.",
+     "a": true
     }
    ]
   ],
@@ -4437,8 +4437,8 @@
     },
     {
      "t": "tf",
-     "q": "game, snake and lake have a-e.",
-     "a": true
+     "q": "Is it a red car? (a blue car) Yes, it is.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4451,20 +4451,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Is it a red car? (a blue car) Yes, it is.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Read: c - a - k - e",
      "o": [
+      "cake",
       "lake",
       "game",
-      "rake",
-      "cake"
+      "rake"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "game, snake and lake have a-e.",
+     "a": true
     }
    ]
   ],
@@ -4483,8 +4483,8 @@
     },
     {
      "t": "tf",
-     "q": "It's a museum for children.",
-     "a": true
+     "q": "The museum is in a different country.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4497,20 +4497,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The museum is in a different country.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "The museum is in ...",
      "o": [
+      "Muscat",
       "the lake",
       "the park",
-      "school",
-      "Muscat"
+      "school"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "It's a museum for children.",
+     "a": true
     }
    ]
   ],
@@ -4529,8 +4529,8 @@
     },
     {
      "t": "tf",
-     "q": "Sharing toys makes friends happy.",
-     "a": true
+     "q": "It's good to take a friend's toy without asking.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4543,37 +4543,37 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "It's good to take a friend's toy without asking.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "What does the friend answer?",
      "o": [
+      "Yes, of course.",
       "No, it isn't.",
       "It's red.",
-      "I'm seven.",
-      "Yes, of course."
-     ],
-     "a": 4
-    }
-   ],
-   [
-    {
-     "t": "mcq",
-     "q": "Yes, of ...",
-     "o": [
-      "course",
-      "play",
-      "toys"
+      "I'm seven."
      ],
      "a": 1
     },
     {
      "t": "tf",
+     "q": "Sharing toys makes friends happy.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
      "q": "We say please when we want something.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Yes, of ...",
+     "o": [
+      "play",
+      "toys",
+      "course"
+     ],
+     "a": 3
     },
     {
      "t": "mcq",
@@ -4618,8 +4618,8 @@
     },
     {
      "t": "tf",
-     "q": "We say These are for more than one thing.",
-     "a": true
+     "q": "A ruler is a toy.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4632,20 +4632,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A ruler is a toy.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "It cuts paper.",
      "o": [
+      "scissors",
       "ruler",
       "eraser",
-      "bag",
-      "scissors"
+      "bag"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say These are for more than one thing.",
+     "a": true
     }
    ]
   ],
@@ -4664,8 +4664,8 @@
     },
     {
      "t": "tf",
-     "q": "Lily says: This is my desk.",
-     "a": true
+     "q": "A tidy room has toys all over the floor.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4678,20 +4678,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A tidy room has toys all over the floor.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "What does Lily show?",
      "o": [
+      "her desk and her books",
       "her bike",
       "her kite",
-      "her goat",
-      "her desk and her books"
+      "her goat"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Lily says: This is my desk.",
+     "a": true
     }
    ]
   ],
@@ -4710,8 +4710,8 @@
     },
     {
      "t": "tf",
-     "q": "A pencil in the pencil case is inside it.",
-     "a": true
+     "q": "A cupboard is a toy.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4724,20 +4724,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A cupboard is a toy.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Inside the box",
      "o": [
+      "in",
       "on",
       "under",
-      "at",
-      "in"
+      "at"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A pencil in the pencil case is inside it.",
+     "a": true
     }
    ]
   ],
@@ -4756,8 +4756,8 @@
     },
     {
      "t": "tf",
-     "q": "What colour is it? It's pink. is a good answer.",
-     "a": true
+     "q": "The teddy is on the chair. means it is under the chair.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4770,20 +4770,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The teddy is on the chair. means it is under the chair.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Inside the pencil case",
      "o": [
+      "in",
       "on",
       "under",
-      "at",
-      "in"
+      "at"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "What colour is it? It's pink. is a good answer.",
+     "a": true
     }
    ]
   ],
@@ -4802,8 +4802,8 @@
     },
     {
      "t": "tf",
-     "q": "The playground in Wafa's school is big.",
-     "a": true
+     "q": "We play football in the library.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4816,20 +4816,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We play football in the library.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Wafa's teacher",
      "o": [
+      "Mrs Asma",
       "Mrs Lily",
       "Mrs Fatma",
-      "Mrs Polly",
-      "Mrs Asma"
+      "Mrs Polly"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The playground in Wafa's school is big.",
+     "a": true
     }
    ]
   ],
@@ -4848,8 +4848,8 @@
     },
     {
      "t": "tf",
-     "q": "\"Can I borrow it, please?\" is a polite question.",
-     "a": true
+     "q": "br + oo + m makes the word \"boom\".",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4862,20 +4862,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "br + oo + m makes the word \"boom\".",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Blend: st + or + m",
      "o": [
+      "storm",
       "stem",
       "star",
-      "stop",
-      "storm"
+      "stop"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Can I borrow it, please?\" is a polite question.",
+     "a": true
     }
    ]
   ],
@@ -4894,8 +4894,8 @@
     },
     {
      "t": "tf",
-     "q": "\"It's on the desk\" tells us where a thing is.",
-     "a": true
+     "q": "A picture of one computer matches \"These are computers.\"",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4908,20 +4908,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A picture of one computer matches \"These are computers.\"",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Many things: ___ are",
      "o": [
+      "These",
       "This",
       "It",
-      "Is",
-      "These"
+      "Is"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"It's on the desk\" tells us where a thing is.",
+     "a": true
     }
    ]
   ],
@@ -4940,8 +4940,8 @@
     },
     {
      "t": "tf",
-     "q": "A good answer is \"My favourite book is Cinderella.\"",
-     "a": true
+     "q": "\"Snow White\" is the name of a colour in this lesson.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4954,20 +4954,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"Snow White\" is the name of a colour in this lesson.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A very loud thing is very ___",
      "o": [
+      "noisy",
       "small",
       "book",
-      "quiet",
-      "noisy"
+      "quiet"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A good answer is \"My favourite book is Cinderella.\"",
+     "a": true
     }
    ]
   ],
@@ -4986,8 +4986,8 @@
     },
     {
      "t": "tf",
-     "q": "We can smell with our noses.",
-     "a": true
+     "q": "Sight is the sense we use with our ears.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5000,20 +5000,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Sight is the sense we use with our ears.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "We see with our ...",
      "o": [
+      "eyes",
       "ears",
       "nose",
-      "feet",
-      "eyes"
+      "feet"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We can smell with our noses.",
+     "a": true
     }
    ]
   ],
@@ -5032,8 +5032,8 @@
     },
     {
      "t": "tf",
-     "q": "I've got ten toes.",
-     "a": true
+     "q": "I've got three legs.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5046,20 +5046,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "I've got three legs.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Plural of foot",
      "o": [
+      "feet",
       "foots",
       "feets",
-      "foot",
-      "feet"
+      "foot"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "I've got ten toes.",
+     "a": true
     }
    ]
   ],
@@ -5078,8 +5078,8 @@
     },
     {
      "t": "tf",
-     "q": "We stamp with our feet.",
-     "a": true
+     "q": "\"Blue\" is spelled b-l-o-o.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5092,20 +5092,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"Blue\" is spelled b-l-o-o.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Which is the tricky word in this lesson?",
      "o": [
+      "give",
       "glue",
       "clap",
-      "blue",
-      "give"
+      "blue"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We stamp with our feet.",
+     "a": true
     }
    ]
   ],
@@ -5124,8 +5124,8 @@
     },
     {
      "t": "tf",
-     "q": "In the text, there is a parade.",
-     "a": true
+     "q": "A uniform is a kind of food.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5138,20 +5138,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A uniform is a kind of food.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Faisal's favourite day",
      "o": [
+      "National Day",
       "Monday",
       "Friday",
-      "Sunday",
-      "National Day"
+      "Sunday"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In the text, there is a parade.",
+     "a": true
     }
    ]
   ],
@@ -5170,8 +5170,8 @@
     },
     {
      "t": "tf",
-     "q": "\"I've got six legs\" can describe a silly monster.",
-     "a": true
+     "q": "\"Put the pink pencil on the purple robot\" means put the pencil under the robot.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5184,20 +5184,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"Put the pink pencil on the purple robot\" means put the pencil under the robot.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "I've got two ___. (knees)",
      "o": [
+      "knees",
       "knee",
       "toes",
-      "arms",
-      "knees"
+      "arms"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"I've got six legs\" can describe a silly monster.",
+     "a": true
     }
    ]
   ],
@@ -5216,8 +5216,8 @@
     },
     {
      "t": "tf",
-     "q": "My mum's sister is my aunt.",
-     "a": true
+     "q": "My uncle is a girl.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5230,20 +5230,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "My uncle is a girl.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Mum's dad",
      "o": [
+      "grandad",
       "uncle",
       "brother",
-      "cousin",
-      "grandad"
+      "cousin"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "My mum's sister is my aunt.",
+     "a": true
     }
    ]
   ],
@@ -5262,8 +5262,8 @@
     },
     {
      "t": "tf",
-     "q": "We say She's got for a girl.",
-     "a": true
+     "q": "We say She's got for a boy.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5276,20 +5276,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say She's got for a boy.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "We see with them.",
      "o": [
+      "eyes",
       "ears",
       "nose",
-      "hair",
-      "eyes"
+      "hair"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say She's got for a girl.",
+     "a": true
     }
    ]
   ],
@@ -5308,8 +5308,8 @@
     },
     {
      "t": "tf",
-     "q": "Ahmed is 7 today.",
-     "a": true
+     "q": "Ahmed is Eman's sister.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5322,20 +5322,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Ahmed is Eman's sister.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Eman's present",
      "o": [
+      "yo-yo",
       "ball",
       "kite",
-      "bike",
-      "yo-yo"
+      "bike"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Ahmed is 7 today.",
+     "a": true
     }
    ]
   ],
@@ -5354,8 +5354,8 @@
     },
     {
      "t": "tf",
-     "q": "In \"The goat herd\", a boy and his mum go out.",
-     "a": true
+     "q": "The boy and his mum do not like to go out.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5368,20 +5368,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The boy and his mum do not like to go out.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Mum's sister",
      "o": [
+      "aunt",
       "uncle",
       "cousin",
-      "brother",
-      "aunt"
+      "brother"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In \"The goat herd\", a boy and his mum go out.",
+     "a": true
     }
    ]
   ],
@@ -5400,8 +5400,8 @@
     },
     {
      "t": "tf",
-     "q": "We say There are for more than one.",
-     "a": true
+     "q": "There are a head.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5414,20 +5414,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "There are a head.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "There ___ one nose.",
      "o": [
+      "is",
       "are",
       "am",
-      "be",
-      "is"
+      "be"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say There are for more than one.",
+     "a": true
     }
    ]
   ],

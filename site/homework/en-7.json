@@ -1866,8 +1866,8 @@
     },
     {
      "t": "tf",
-     "q": "The new WOW! Team has four members.",
-     "a": true
+     "q": "Juma wants to read about architects because he is going on holiday.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1880,20 +1880,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Juma wants to read about architects because he is going on holiday.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Team member: M _ _ _ d",
      "o": [
+      "Majid",
       "Basim",
       "Juma",
-      "Salim",
-      "Majid"
+      "Salim"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The new WOW! Team has four members.",
+     "a": true
     }
    ]
   ],
@@ -1912,8 +1912,8 @@
     },
     {
      "t": "tf",
-     "q": "Majid usually wears an Omani hat and a dishdasha.",
-     "a": true
+     "q": "Majid has been camping in dangerous places.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1926,20 +1926,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Majid has been camping in dangerous places.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Complete: All the students in Majid's class know some ___.",
      "o": [
+      "first aid",
       "French",
       "football",
-      "cooking",
-      "first aid"
+      "cooking"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Majid usually wears an Omani hat and a dishdasha.",
+     "a": true
     }
    ]
   ],
@@ -1958,8 +1958,8 @@
     },
     {
      "t": "tf",
-     "q": "A comedian makes people laugh by telling jokes.",
-     "a": true
+     "q": "A camera operator usually performs on the stage.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -1972,20 +1972,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A camera operator usually performs on the stage.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "He works with puppets.",
      "o": [
+      "puppeteer",
       "presenter",
       "comedian",
-      "animator",
-      "puppeteer"
+      "animator"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A comedian makes people laugh by telling jokes.",
+     "a": true
     }
    ]
   ],
@@ -2004,8 +2004,8 @@
     },
     {
      "t": "tf",
-     "q": "Frank's costume is a bit small now.",
-     "a": true
+     "q": "We say “I get it” when we don't understand a joke.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2018,20 +2018,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say “I get it” when we don't understand a joke.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "You don't know: I've no ___.",
      "o": [
+      "idea",
       "joke",
       "clue",
-      "answer",
-      "idea"
+      "answer"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Frank's costume is a bit small now.",
+     "a": true
     }
    ]
   ],
@@ -2050,8 +2050,8 @@
     },
     {
      "t": "tf",
-     "q": "We use for with a period of time, like five years.",
-     "a": true
+     "q": "“I haven't been to the cinema for I was seven” is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2064,20 +2064,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "“I haven't been to the cinema for I was seven” is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "I've lived here ___ 5 years.",
      "o": [
+      "for",
       "since",
       "at",
-      "in",
-      "for"
+      "in"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use for with a period of time, like five years.",
+     "a": true
     }
    ]
   ],
@@ -2096,8 +2096,8 @@
     },
     {
      "t": "tf",
-     "q": "A diary is usually written in the first person (I, we).",
-     "a": true
+     "q": "Dad has had the Royal Opera House tickets since December.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2110,20 +2110,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Dad has had the Royal Opera House tickets since December.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Family's home town",
      "o": [
+      "Khasab",
       "Sur",
       "Nizwa",
-      "Salalah",
-      "Khasab"
+      "Salalah"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A diary is usually written in the first person (I, we).",
+     "a": true
     }
    ]
   ],
@@ -2142,8 +2142,8 @@
     },
     {
      "t": "tf",
-     "q": "You can see fish, sharks and turtles at an aquarium.",
-     "a": true
+     "q": "“I'm flying to Cairo on Monday” is about now.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2156,20 +2156,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "“I'm flying to Cairo on Monday” is about now.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Place to skate",
      "o": [
+      "ice rink",
       "aquarium",
       "art gallery",
-      "planetarium",
-      "ice rink"
+      "planetarium"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "You can see fish, sharks and turtles at an aquarium.",
+     "a": true
     }
    ]
   ],
@@ -2188,8 +2188,8 @@
     },
     {
      "t": "tf",
-     "q": "Al Haboot is especially popular in Dhofar governorate.",
-     "a": true
+     "q": "Cirque du Soleil started in 1994.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2202,20 +2202,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Cirque du Soleil started in 1994.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Country of Al Haboot",
      "o": [
+      "Oman",
       "Canada",
       "Egypt",
-      "Spain",
-      "Oman"
+      "Spain"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Al Haboot is especially popular in Dhofar governorate.",
+     "a": true
     }
    ]
   ],
@@ -2234,8 +2234,8 @@
     },
     {
      "t": "tf",
-     "q": "We ask “How much is a guide?” to find out the price.",
-     "a": true
+     "q": "“That's 19 rials on total” is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2248,20 +2248,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "“That's 19 rials on total” is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Can I ___ two tickets?",
      "o": [
+      "have",
       "has",
       "take",
-      "do",
-      "have"
+      "do"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We ask “How much is a guide?” to find out the price.",
+     "a": true
     }
    ]
   ],
@@ -2280,8 +2280,8 @@
     },
     {
      "t": "tf",
-     "q": "The climbing wall is 15 metres high.",
-     "a": true
+     "q": "The special offer is three tickets for the price of one.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2294,20 +2294,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The special offer is three tickets for the price of one.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Height of the climbing wall",
      "o": [
+      "15 metres",
       "50 metres",
       "5 metres",
-      "25 metres",
-      "15 metres"
+      "25 metres"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The climbing wall is 15 metres high.",
+     "a": true
     }
    ]
   ],
@@ -2326,8 +2326,8 @@
     },
     {
      "t": "tf",
-     "q": "The slogan of City Beach Aquarium is “See the sea in the city!”",
-     "a": true
+     "q": "“Our museum.” is a good, exciting slogan.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2340,20 +2340,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "“Our museum.” is a good, exciting slogan.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Short catchy line in an advert",
      "o": [
+      "slogan",
       "logo",
       "title",
-      "bullet",
-      "slogan"
+      "bullet"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The slogan of City Beach Aquarium is “See the sea in the city!”",
+     "a": true
     }
    ]
   ],
@@ -2372,8 +2372,8 @@
     },
     {
      "t": "tf",
-     "q": "The girl who wants to be a make-up artist loves art.",
-     "a": true
+     "q": "You go bowling at an ice rink.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2386,38 +2386,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "You go bowling at an ice rink.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "I've lived here ___ 2015.",
      "o": [
+      "since",
       "for",
       "at",
-      "ago",
-      "since"
+      "ago"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The girl who wants to be a make-up artist loves art.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which place do you go to for bowling?",
-     "o": [
-      "A planetarium",
-      "A bowling alley",
-      "An ice rink",
-      "An aquarium"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "“In July we are flying to Cairo” is a future arrangement.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which place do you go to for bowling?",
+     "o": [
+      "A bowling alley",
+      "An ice rink",
+      "An aquarium",
+      "A planetarium"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2459,24 +2459,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "“Ali has played football for five years” is correct.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Where do you go bowling?",
      "o": [
+      "a bowling alley",
       "a planetarium",
-      "an art gallery",
-      "a bowling alley"
+      "an art gallery"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "A comedian works behind the camera and videos the show.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "“Ali has played football for five years” is correct.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -2492,15 +2492,20 @@
    ],
    [
     {
+     "t": "tf",
+     "q": "What is the Unit 1 WOW! question? Answer: Why are animals so awesome?",
+     "a": false
+    },
+    {
      "t": "mcq",
      "q": "Write a sentence about a friend with the Present perfect and for.",
      "o": [
-      "Ali is playing football for 2020.",
       "Ali has played football for five years.",
       "Ali played football for five years ago.",
-      "Ali has played football since five years."
+      "Ali has played football since five years.",
+      "Ali is playing football for 2020."
      ],
-     "a": 2
+     "a": 1
     },
     {
      "t": "tf",
@@ -2511,16 +2516,11 @@
      "t": "mcq",
      "q": "Which comment talks about clothes?",
      "o": [
-      "the costume designer's",
       "the comedian's",
-      "the camera operator's"
+      "the camera operator's",
+      "the costume designer's"
      ],
-     "a": 1
-    },
-    {
-     "t": "tf",
-     "q": "Planetariums and museums can help us learn in a fun way.",
-     "a": true
+     "a": 3
     },
     {
      "t": "mcq",
@@ -2548,7 +2548,7 @@
     },
     {
      "t": "tf",
-     "q": "The girl who wants to be a make-up artist loves art.",
+     "q": "Planetariums and museums can help us learn in a fun way.",
      "a": true
     },
     {
@@ -2562,20 +2562,20 @@
      "a": 2
     },
     {
-     "t": "tf",
-     "q": "You go bowling at an ice rink.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "She paints actors' faces.",
      "o": [
+      "make-up artist",
       "animator",
       "writer",
-      "presenter",
-      "make-up artist"
+      "presenter"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Which form is used for future arrangements in Unit 1? Answer: Present perfect",
+     "a": false
     }
    ]
   ],
@@ -2594,8 +2594,8 @@
     },
     {
      "t": "tf",
-     "q": "“I'm going to the 3D cinema tomorrow” is a plan.",
-     "a": true
+     "q": "The boys meet the guide at the Science Museum at four o'clock.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2608,38 +2608,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The boys meet the guide at the Science Museum at four o'clock.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "The boys' teacher",
      "o": [
+      "Mr Talal",
       "Mr Frank",
       "Mr Majid",
-      "Mr Ali",
-      "Mr Talal"
+      "Mr Ali"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "“I'm going to the 3D cinema tomorrow” is a plan.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What do the boys buy in the gift shop?",
-     "o": [
-      "A hot-air balloon",
-      "A postcard",
-      "A camera",
-      "A sculpture"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "A costume designer designs costumes for films.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What do the boys buy in the gift shop?",
+     "o": [
+      "A postcard",
+      "A camera",
+      "A sculpture",
+      "A hot-air balloon"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2684,8 +2684,8 @@
     },
     {
      "t": "tf",
-     "q": "The boys take a photo in front of an amazing galaxy.",
-     "a": true
+     "q": "The lion at the door is a real lion.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2698,38 +2698,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The lion at the door is a real lion.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Hazim's lost item",
      "o": [
+      "camera",
       "postcard",
       "ticket",
-      "phone",
-      "camera"
+      "phone"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The boys take a photo in front of an amazing galaxy.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What does sculpture mean?",
-     "o": [
-      "A gift shop card",
-      "Art made from stone, metal or wood that you can walk around",
-      "A picture of stars",
-      "A kind of bus"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Faisal says they can do another tour with their parents tomorrow.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What does sculpture mean?",
+     "o": [
+      "Art made from stone, metal or wood that you can walk around",
+      "A picture of stars",
+      "A kind of bus",
+      "A gift shop card"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2771,24 +2771,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "A sculpture is a piece of art you can walk around.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "How long have Samar and Basma been at the show?",
      "o": [
+      "two hours",
       "two days",
-      "two weeks",
-      "two hours"
+      "two weeks"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "Backstage is where the audience sits.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "A sculpture is a piece of art you can walk around.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -2818,8 +2818,8 @@
     },
     {
      "t": "tf",
-     "q": "A bird uses its beak to eat.",
-     "a": true
+     "q": "Birds have scales, like snakes.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2832,20 +2832,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Birds have scales, like snakes.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Camel's back",
      "o": [
+      "hump",
       "fin",
       "beak",
-      "horn",
-      "hump"
+      "horn"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A bird uses its beak to eat.",
+     "a": true
     }
    ]
   ],
@@ -2864,8 +2864,8 @@
     },
     {
      "t": "tf",
-     "q": "We say “Watch out!” to warn someone of danger.",
-     "a": true
+     "q": "The animal has wings.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2878,20 +2878,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The animal has wings.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Warning of danger",
      "o": [
+      "Watch out!",
       "It's so cute!",
       "Wow!",
-      "I get it.",
-      "Watch out!"
+      "I get it."
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say “Watch out!” to warn someone of danger.",
+     "a": true
     }
    ]
   ],
@@ -2910,8 +2910,8 @@
     },
     {
      "t": "tf",
-     "q": "We use can't when we are sure something is not true.",
-     "a": true
+     "q": "It has flippers but no fins. It must be a fish.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2924,38 +2924,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "It has flippers but no fins. It must be a fish.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Sure it's true",
      "o": [
+      "must",
       "can't",
       "might",
-      "could",
-      "must"
+      "could"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use can't when we are sure something is not true.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which group of modals means we are not sure?",
-     "o": [
-      "can't, mustn't",
-      "may, might, could",
-      "must, can't",
-      "must, will"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "May, might and could mean we are not sure.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which group of modals means we are not sure?",
+     "o": [
+      "may, might, could",
+      "must, can't",
+      "must, will",
+      "can't, mustn't"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3000,8 +3000,8 @@
     },
     {
      "t": "tf",
-     "q": "The platypus has fur and a beak, lays eggs and swims.",
-     "a": true
+     "q": "The platypus can breathe underwater like the fish.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3014,20 +3014,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The platypus can breathe underwater like the fish.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Noun from swim",
      "o": [
+      "swimmer",
       "swimer",
       "swiming",
-      "swims",
-      "swimmer"
+      "swims"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The platypus has fur and a beak, lays eggs and swims.",
+     "a": true
     }
    ]
   ],
@@ -3046,8 +3046,8 @@
     },
     {
      "t": "tf",
-     "q": "A hedgehog curls up to make itself into a ball.",
-     "a": true
+     "q": "Dig means to fly high in the sky.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3060,38 +3060,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Dig means to fly high in the sky.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A lion does this loudly.",
      "o": [
+      "roar",
       "dig",
       "dive",
-      "hide",
-      "roar"
+      "hide"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A hedgehog curls up to make itself into a ball.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which animal verb means 'cut into something with your teeth'?",
-     "o": [
-      "lay eggs",
-      "bite",
-      "sting",
-      "dive"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Bees sting with their tail.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which animal verb means 'cut into something with your teeth'?",
+     "o": [
+      "bite",
+      "sting",
+      "dive",
+      "lay eggs"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3136,8 +3136,8 @@
     },
     {
      "t": "tf",
-     "q": "The ring-tailed lemur is the national animal of Madagascar.",
-     "a": true
+     "q": "Ring-tailed lemurs live in the wild in Oman.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3150,20 +3150,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Ring-tailed lemurs live in the wild in Oman.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Oman's national animal",
      "o": [
+      "Arabian oryx",
       "Komodo dragon",
       "lemur",
-      "bald eagle",
-      "Arabian oryx"
+      "bald eagle"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The ring-tailed lemur is the national animal of Madagascar.",
+     "a": true
     }
    ]
   ],
@@ -3182,8 +3182,8 @@
     },
     {
      "t": "tf",
-     "q": "I can't stand spiders is stronger than I'm not keen on spiders.",
-     "a": true
+     "q": "In elephant, the stress is on the last syllable.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3196,20 +3196,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "In elephant, the stress is on the last syllable.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "I'm crazy ___ horses.",
      "o": [
+      "about",
       "on",
       "for",
-      "at",
-      "about"
+      "at"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "I can't stand spiders is stronger than I'm not keen on spiders.",
+     "a": true
     }
    ]
   ],
@@ -3228,8 +3228,8 @@
     },
     {
      "t": "tf",
-     "q": "The mata mata turtle is a reptile.",
-     "a": true
+     "q": "The mata mata turtle lives in cold seas near the North Pole.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3242,20 +3242,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The mata mata turtle lives in cold seas near the North Pole.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Animal with a backbone",
      "o": [
+      "vertebrate",
       "invertebrate",
       "insect",
-      "fact file",
-      "vertebrate"
+      "fact file"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The mata mata turtle is a reptile.",
+     "a": true
     }
    ]
   ],
@@ -3274,8 +3274,8 @@
     },
     {
      "t": "tf",
-     "q": "Hammerhead shark babies are called pups.",
-     "a": true
+     "q": "The hammerhead shark's favourite food is seaweed.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3288,20 +3288,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The hammerhead shark's favourite food is seaweed.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Hammerhead babies",
      "o": [
+      "pups",
       "cubs",
       "calves",
-      "chicks",
-      "pups"
+      "chicks"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Hammerhead shark babies are called pups.",
+     "a": true
     }
    ]
   ],
@@ -3320,8 +3320,8 @@
     },
     {
      "t": "tf",
-     "q": "Thuriya has been a writer for twenty years.",
-     "a": true
+     "q": "In a one-word gap task, you can write two or three words.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3334,38 +3334,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "In a one-word gap task, you can write two or three words.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Thuriya's job",
      "o": [
+      "writer",
       "doctor",
       "pilot",
-      "teacher",
-      "writer"
+      "teacher"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Thuriya has been a writer for twenty years.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What type of word is missing? The camel has a big ___ on its back.",
-     "o": [
-      "an adverb",
-      "a noun",
-      "a verb",
-      "a preposition"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Thuriya is going to Africa next.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What type of word is missing? The camel has a big ___ on its back.",
+     "o": [
+      "a noun",
+      "a verb",
+      "a preposition",
+      "an adverb"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3410,8 +3410,8 @@
     },
     {
      "t": "tf",
-     "q": "The gazelles use their long horns to fight with.",
-     "a": true
+     "q": "In The Nature Hunt, the flamingos have antennae.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3424,38 +3424,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "In The Nature Hunt, the flamingos have antennae.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Family vehicle on the safari",
      "o": [
+      "truck",
       "bus",
       "train",
-      "boat",
-      "truck"
+      "boat"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The gazelles use their long horns to fight with.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "How does The Desert Safari end?",
-     "o": [
-      "The eagle catches the leopard.",
-      "The leopard catches the meat and runs away.",
-      "The leopard gets into the truck.",
-      "The family gets lost in the desert."
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Khalid's family see an Arabian leopard on the safari.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "How does The Desert Safari end?",
+     "o": [
+      "The leopard catches the meat and runs away.",
+      "The leopard gets into the truck.",
+      "The family gets lost in the desert.",
+      "The eagle catches the leopard."
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3497,24 +3497,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "The flamingos are the animals that lay eggs in The Nature Hunt.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Why does Khalid's mum look worried?",
      "o": [
+      "The leopard runs to the truck, roaring.",
       "The truck is very slow.",
-      "She can't see any animals.",
-      "The leopard runs to the truck, roaring."
+      "She can't see any animals."
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "The girls don't win the prize.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "The flamingos are the animals that lay eggs in The Nature Hunt.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -3544,8 +3544,8 @@
     },
     {
      "t": "tf",
-     "q": "You use shampoo to wash your hair.",
-     "a": true
+     "q": "You wear flip-flops on your head.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3558,20 +3558,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "You wear flip-flops on your head.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "You need it to visit another country",
      "o": [
+      "passport",
       "pillow",
       "soap",
-      "charger",
-      "passport"
+      "charger"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "You use shampoo to wash your hair.",
+     "a": true
     }
    ]
   ],
@@ -3590,8 +3590,8 @@
     },
     {
      "t": "tf",
-     "q": "Frank is going to take a small rucksack.",
-     "a": true
+     "q": "Majid needs to bring toothpaste, soap and shampoo.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3604,20 +3604,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Majid needs to bring toothpaste, soap and shampoo.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "City they are flying to",
      "o": [
+      "London",
       "Muscat",
       "Paris",
-      "Edinburgh",
-      "London"
+      "Edinburgh"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Frank is going to take a small rucksack.",
+     "a": true
     }
    ]
   ],
@@ -3636,8 +3636,8 @@
     },
     {
      "t": "tf",
-     "q": "We use will for decisions we make at the time of speaking.",
-     "a": true
+     "q": "We bought the tickets. We will visit London is the best choice.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3650,20 +3650,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We bought the tickets. We will visit London is the best choice.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Plan: I ___ visit my uncle.",
      "o": [
+      "am going to",
       "will to",
       "going",
-      "am will",
-      "am going to"
+      "am will"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use will for decisions we make at the time of speaking.",
+     "a": true
     }
    ]
   ],
@@ -3682,8 +3682,8 @@
     },
     {
      "t": "tf",
-     "q": "When a plane comes down to the ground, it lands.",
-     "a": true
+     "q": "What time the train leaves? is a correct question.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3696,20 +3696,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "What time the train leaves? is a correct question.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A plane leaves the ground",
      "o": [
+      "take off",
       "land",
       "get off",
-      "explore",
-      "take off"
+      "explore"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "When a plane comes down to the ground, it lands.",
+     "a": true
     }
    ]
   ],
@@ -3728,8 +3728,8 @@
     },
     {
      "t": "tf",
-     "q": "Haramain trains can travel at 300 kilometres an hour.",
-     "a": true
+     "q": "The Trans-Siberian journey starts and finishes in Africa.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3742,20 +3742,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The Trans-Siberian journey starts and finishes in Africa.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "The path a train takes",
      "o": [
+      "route",
       "ticket",
       "station",
-      "seat",
-      "route"
+      "seat"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Haramain trains can travel at 300 kilometres an hour.",
+     "a": true
     }
    ]
   ],
@@ -3774,8 +3774,8 @@
     },
     {
      "t": "tf",
-     "q": "Helen is worried because she doesn't like long car journeys.",
-     "a": true
+     "q": "Katy is going to travel to Salalah by plane.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3788,38 +3788,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Katy is going to travel to Salalah by plane.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "I'm excited ___ camping.",
      "o": [
+      "about",
       "to",
       "for",
-      "on",
-      "about"
+      "on"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Helen is worried because she doesn't like long car journeys.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "How long is Katy's journey to Salalah?",
-     "o": [
-      "about ninety minutes",
-      "about nine hours",
-      "about two hours",
-      "about twenty hours"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "I can't wait for the holidays! means I'm very excited about them.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "How long is Katy's journey to Salalah?",
+     "o": [
+      "about nine hours",
+      "about two hours",
+      "about twenty hours",
+      "about ninety minutes"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3864,8 +3864,8 @@
     },
     {
      "t": "tf",
-     "q": "The trip lasts three days: Sunday, Monday and Tuesday.",
-     "a": true
+     "q": "Students need a raincoat because it often rains in Bahla.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3878,20 +3878,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Students need a raincoat because it often rains in Bahla.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "The coach leaves at …",
      "o": [
+      "4.30 p.m.",
       "4 p.m.",
       "7 p.m.",
-      "5.30 p.m.",
-      "4.30 p.m."
+      "5.30 p.m."
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The trip lasts three days: Sunday, Monday and Tuesday.",
+     "a": true
     }
    ]
   ],
@@ -3910,8 +3910,8 @@
     },
     {
      "t": "tf",
-     "q": "The subject box tells the reader the topic of the email.",
-     "a": true
+     "q": "Express means slow.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3924,20 +3924,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Express means slow.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Email greeting",
      "o": [
+      "Dear",
       "Yours",
       "Subject",
-      "Bye",
-      "Dear"
+      "Bye"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The subject box tells the reader the topic of the email.",
+     "a": true
     }
    ]
   ],
@@ -3956,8 +3956,8 @@
     },
     {
      "t": "tf",
-     "q": "April comes after March.",
-     "a": true
+     "q": "It is the same time everywhere in the world.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3970,20 +3970,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "It is the same time everywhere in the world.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "4:15",
      "o": [
+      "quarter past four",
       "quarter to four",
       "half past four",
-      "four o'clock",
-      "quarter past four"
+      "four o'clock"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "April comes after March.",
+     "a": true
     }
    ]
   ]

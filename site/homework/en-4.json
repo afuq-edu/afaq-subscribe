@@ -2811,8 +2811,8 @@
     },
     {
      "t": "tf",
-     "q": "Lottie is nine years old.",
-     "a": true
+     "q": "A person from Egypt is Egyptish.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2825,20 +2825,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A person from Egypt is Egyptish.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "China → nationality?",
      "o": [
+      "Chinese",
       "Chinaian",
       "Chinish",
-      "Chinan",
-      "Chinese"
+      "Chinan"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Lottie is nine years old.",
+     "a": true
     }
    ]
   ],
@@ -2857,8 +2857,8 @@
     },
     {
      "t": "tf",
-     "q": "We write 70 as 'seventy'.",
-     "a": true
+     "q": "We say: He like swimming.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2871,20 +2871,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say: He like swimming.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "70 in words?",
      "o": [
+      "seventy",
       "seventeen",
       "sixty",
-      "eighty",
-      "seventy"
+      "eighty"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We write 70 as 'seventy'.",
+     "a": true
     }
    ]
   ],
@@ -2903,8 +2903,8 @@
     },
     {
      "t": "tf",
-     "q": "We learn about numbers in Maths.",
-     "a": true
+     "q": "The school nurse is a place.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2917,20 +2917,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The school nurse is a place.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "💻 subject?",
      "o": [
+      "ICT",
       "Art",
       "Maths",
-      "Arabic",
-      "ICT"
+      "Arabic"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We learn about numbers in Maths.",
+     "a": true
     }
    ]
   ],
@@ -2949,8 +2949,8 @@
     },
     {
      "t": "tf",
-     "q": "The headteacher is Mrs Safa.",
-     "a": true
+     "q": "A magnet attracts paper.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2963,20 +2963,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A magnet attracts paper.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Lottie feels...?",
      "o": [
+      "nervous",
       "happy",
       "angry",
-      "sleepy",
-      "nervous"
+      "sleepy"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The headteacher is Mrs Safa.",
+     "a": true
     }
    ]
   ],
@@ -2995,8 +2995,8 @@
     },
     {
      "t": "tf",
-     "q": "We say: We have Maths on Tuesdays.",
-     "a": true
+     "q": "We say: We have English in nine o'clock.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3009,20 +3009,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say: We have English in nine o'clock.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "10.15 = ?",
      "o": [
+      "quarter past ten",
       "quarter to ten",
       "half past ten",
-      "ten o'clock",
-      "quarter past ten"
+      "ten o'clock"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say: We have Maths on Tuesdays.",
+     "a": true
     }
    ]
   ],
@@ -3041,8 +3041,8 @@
     },
     {
      "t": "tf",
-     "q": "'She is always busy' is correct.",
-     "a": true
+     "q": "'She plays always tennis' is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3055,20 +3055,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'She plays always tennis' is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "2 days a week?",
      "o": [
+      "twice a week",
       "once a week",
       "every day",
-      "never",
-      "twice a week"
+      "never"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'She is always busy' is correct.",
+     "a": true
     }
    ]
   ],
@@ -3087,8 +3087,8 @@
     },
     {
      "t": "tf",
-     "q": "At a boarding school, children sleep at school on weekdays.",
-     "a": true
+     "q": "The school in the USA uses a lot of books and paper.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3101,20 +3101,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The school in the USA uses a lot of books and paper.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Boat school country?",
      "o": [
+      "Bangladesh",
       "Indonesia",
       "the USA",
-      "Oman",
-      "Bangladesh"
+      "Oman"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "At a boarding school, children sleep at school on weekdays.",
+     "a": true
     }
    ]
   ],
@@ -3133,8 +3133,8 @@
     },
     {
      "t": "tf",
-     "q": "Ryan goes swimming on Friday mornings.",
-     "a": true
+     "q": "We say: Do you want play football?",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3147,20 +3147,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say: Do you want play football?",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Meeting time?",
      "o": [
+      "quarter to five",
       "half past four",
       "five o'clock",
-      "quarter past five",
-      "quarter to five"
+      "quarter past five"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Ryan goes swimming on Friday mornings.",
+     "a": true
     }
    ]
   ],
@@ -3179,8 +3179,8 @@
     },
     {
      "t": "tf",
-     "q": "Maryam walks to school.",
-     "a": true
+     "q": "Maryam is in Grade 3.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3193,20 +3193,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Maryam is in Grade 3.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Maryam's new friend?",
      "o": [
+      "Muna",
       "Azza",
       "Lottie",
-      "Fatma",
-      "Muna"
+      "Fatma"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Maryam walks to school.",
+     "a": true
     }
    ]
   ],
@@ -3225,8 +3225,8 @@
     },
     {
      "t": "tf",
-     "q": "Azza's Quran lesson is at quarter past four.",
-     "a": true
+     "q": "A sentence ends with a capital letter.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3239,20 +3239,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A sentence ends with a capital letter.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Ammar's favourite lesson?",
      "o": [
+      "English",
       "Maths",
       "Art",
-      "Science",
-      "English"
+      "Science"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Azza's Quran lesson is at quarter past four.",
+     "a": true
     }
    ]
   ],
@@ -3271,8 +3271,8 @@
     },
     {
      "t": "tf",
-     "q": "Adam has English homework on Wednesdays.",
-     "a": true
+     "q": "'Osamah play tennis twice a week' is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3285,38 +3285,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'Osamah play tennis twice a week' is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Adam: karate how often?",
      "o": [
+      "every day",
       "once a week",
       "twice a week",
-      "never",
-      "every day"
+      "never"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Adam has English homework on Wednesdays.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What do we call the outdoor lesson in some schools in Britain?",
-     "o": [
-      "ICT",
-      "Forest School",
-      "boarding school",
-      "boat school"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Adam practises karate every day.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What do we call the outdoor lesson in some schools in Britain?",
+     "o": [
+      "Forest School",
+      "boarding school",
+      "boat school",
+      "ICT"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3361,8 +3361,8 @@
     },
     {
      "t": "tf",
-     "q": "They have Science lessons on Tuesdays and Thursdays at nine o'clock.",
-     "a": true
+     "q": "Snake is free this afternoon.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3375,20 +3375,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Snake is free this afternoon.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Video for friends in...?",
      "o": [
+      "Brazil",
       "China",
       "Egypt",
-      "Britain",
-      "Brazil"
+      "Britain"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "They have Science lessons on Tuesdays and Thursdays at nine o'clock.",
+     "a": true
     }
    ]
   ],
@@ -3407,8 +3407,8 @@
     },
     {
      "t": "tf",
-     "q": "Salad is savoury.",
-     "a": true
+     "q": "Crisps are a drink.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3421,20 +3421,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Crisps are a drink.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Sweet drink with milk?",
      "o": [
+      "milkshake",
       "coffee",
       "tea",
-      "salad",
-      "milkshake"
+      "salad"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Salad is savoury.",
+     "a": true
     }
    ]
   ],
@@ -3453,8 +3453,8 @@
     },
     {
      "t": "tf",
-     "q": "Bo puts lemonade on the noodles.",
-     "a": true
+     "q": "Lemonade comes from a lemonade lake.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3467,38 +3467,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Lemonade comes from a lemonade lake.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "No bread, so no...?",
      "o": [
+      "sandwiches",
       "noodles",
       "lemonade",
-      "cheese",
-      "sandwiches"
+      "cheese"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Bo puts lemonade on the noodles.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which foods are in the story?",
-     "o": [
-      "fish, chips, milk",
-      "cheese, bread, noodles, lemonade",
-      "pizza, rice, tea",
-      "cupcakes, coffee, salad"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "There is some bread at Lottie's house.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which foods are in the story?",
+     "o": [
+      "cheese, bread, noodles, lemonade",
+      "pizza, rice, tea",
+      "cupcakes, coffee, salad",
+      "fish, chips, milk"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3543,8 +3543,8 @@
     },
     {
      "t": "tf",
-     "q": "Bread is an uncountable noun.",
-     "a": true
+     "q": "Grapes are uncountable.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3557,20 +3557,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Grapes are uncountable.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Countable: a few or a little?",
      "o": [
+      "a few",
       "a little",
       "any",
-      "much",
-      "a few"
+      "much"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Bread is an uncountable noun.",
+     "a": true
     }
    ]
   ],
@@ -3589,8 +3589,8 @@
     },
     {
      "t": "tf",
-     "q": "We say: a box of cereal.",
-     "a": true
+     "q": "We ask: Are there any coffee?",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3603,38 +3603,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We ask: Are there any coffee?",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "___ of soup",
      "o": [
+      "a bowl",
       "a can",
       "a box",
-      "a bag",
-      "a bowl"
+      "a bag"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say: a box of cereal.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which is the correct short answer to 'Are there any apples?' (✗)",
-     "o": [
-      "No, it isn't.",
-      "No, there aren't.",
-      "No, there isn't.",
-      "Yes, there is."
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "We ask: Are there any apples?",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which is the correct short answer to 'Are there any apples?' (✗)",
+     "o": [
+      "No, there aren't.",
+      "No, there isn't.",
+      "Yes, there is.",
+      "No, it isn't."
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3679,8 +3679,8 @@
     },
     {
      "t": "tf",
-     "q": "Shuwa is meat with spices.",
-     "a": true
+     "q": "You need a plate to eat bunny chow.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3693,38 +3693,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "You need a plate to eat bunny chow.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Sushi is from...",
      "o": [
+      "Japan",
       "Switzerland",
       "South Africa",
-      "Oman",
-      "Japan"
+      "Oman"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Shuwa is meat with spices.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Where is fondue from?",
-     "o": [
-      "Oman",
-      "Switzerland",
-      "Japan",
-      "South Africa"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "In Oman we eat shuwa at Eid.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where is fondue from?",
+     "o": [
+      "Switzerland",
+      "Japan",
+      "South Africa",
+      "Oman"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3769,8 +3769,8 @@
     },
     {
      "t": "tf",
-     "q": "The shopkeeper says 'Anything else?' to ask if you want more.",
-     "a": true
+     "q": "Adam buys four bananas.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3783,20 +3783,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Adam buys four bananas.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Adam buys six...",
      "o": [
+      "apples",
       "oranges",
       "lemons",
-      "bananas",
-      "apples"
+      "bananas"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The shopkeeper says 'Anything else?' to ask if you want more.",
+     "a": true
     }
    ]
   ],
@@ -3815,8 +3815,8 @@
     },
     {
      "t": "tf",
-     "q": "Rasha is the winner of the TV show Kids Cook!",
-     "a": true
+     "q": "The recipe is for ten people.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3829,20 +3829,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The recipe is for ten people.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Rasha's age",
      "o": [
+      "10",
       "12",
       "8",
-      "4",
-      "10"
+      "4"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Rasha is the winner of the TV show Kids Cook!",
+     "a": true
     }
    ]
   ],
@@ -3861,8 +3861,8 @@
     },
     {
      "t": "tf",
-     "q": "Malik likes fruit and vegetables.",
-     "a": true
+     "q": "Malik loves ice cream.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3875,38 +3875,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Malik loves ice cream.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Anas loves...",
      "o": [
+      "cheese",
       "bread",
       "cake",
-      "crisps",
-      "cheese"
+      "crisps"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Malik likes fruit and vegetables.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Put the sequence words in order.",
-     "o": [
-      "After that, First, Then, Last",
-      "First, Then, After that, Last",
-      "Last, Then, First, After that",
-      "Then, First, Last, After that"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Yousuf loves crisps and cake.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Put the sequence words in order.",
+     "o": [
+      "First, Then, After that, Last",
+      "Last, Then, First, After that",
+      "Then, First, Last, After that",
+      "After that, First, Then, Last"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3951,8 +3951,8 @@
     },
     {
      "t": "tf",
-     "q": "We say 'Is there any coffee?'",
-     "a": true
+     "q": "A bottle of cheese is a good answer.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3965,38 +3965,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A bottle of cheese is a good answer.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "milk + ___ = a drink",
      "o": [
+      "shake",
       "cake",
       "box",
-      "bag",
-      "shake"
+      "bag"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say 'Is there any coffee?'",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What does Rasha cook with chicken, wheat, butter and spices?",
-     "o": [
-      "bubble tea",
-      "harees",
-      "sushi",
-      "fondue"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "'There isn't any bread.' is correct.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What does Rasha cook with chicken, wheat, butter and spices?",
+     "o": [
+      "harees",
+      "sushi",
+      "fondue",
+      "bubble tea"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -4041,8 +4041,8 @@
     },
     {
      "t": "tf",
-     "q": "Hamzah's cousins go to the new shop.",
-     "a": true
+     "q": "At the end, the shop is still empty.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4055,20 +4055,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "At the end, the shop is still empty.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "At the start, the shop is...",
      "o": [
+      "empty",
       "popular",
       "busy",
-      "big",
-      "empty"
+      "big"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Hamzah's cousins go to the new shop.",
+     "a": true
     }
    ]
   ],
@@ -4087,8 +4087,8 @@
     },
     {
      "t": "tf",
-     "q": "A square has four equal sides.",
-     "a": true
+     "q": "A rectangle has four equal sides.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4101,20 +4101,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A rectangle has four equal sides.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Sides of a triangle",
      "o": [
+      "three",
       "four",
       "two",
-      "five",
-      "three"
+      "five"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A square has four equal sides.",
+     "a": true
     }
    ]
   ],
@@ -4133,8 +4133,8 @@
     },
     {
      "t": "tf",
-     "q": "The juice is on the bottom shelf.",
-     "a": true
+     "q": "The juice is above the bread.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4147,20 +4147,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The juice is above the bread.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Opposite of up",
      "o": [
+      "down",
       "top",
       "above",
-      "below",
-      "down"
+      "below"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The juice is on the bottom shelf.",
+     "a": true
     }
    ]
   ],
@@ -4179,8 +4179,8 @@
     },
     {
      "t": "tf",
-     "q": "A city has a lot of buildings and a lot of people.",
-     "a": true
+     "q": "A mountain is easy to climb.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4193,20 +4193,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A mountain is easy to climb.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Water all around it",
      "o": [
+      "island",
       "city",
       "hill",
-      "forest",
-      "island"
+      "forest"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A city has a lot of buildings and a lot of people.",
+     "a": true
     }
    ]
   ],
@@ -4225,8 +4225,8 @@
     },
     {
      "t": "tf",
-     "q": "The children wear gloves on their hands.",
-     "a": true
+     "q": "First they pick up the rubbish, then they put their gloves on.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4239,20 +4239,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "First they pick up the rubbish, then they put their gloves on.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Wet, soft ground",
      "o": [
+      "mud",
       "wood",
       "can",
-      "bag",
-      "mud"
+      "bag"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The children wear gloves on their hands.",
+     "a": true
     }
    ]
   ],
@@ -4271,8 +4271,8 @@
     },
     {
      "t": "tf",
-     "q": "Molt Town is bigger than Trock Town.",
-     "a": true
+     "q": "We say 'Molt Town is more big than Trock Town.'",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4285,20 +4285,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say 'Molt Town is more big than Trock Town.'",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "tall → ...",
      "o": [
+      "taller",
       "tallest",
       "more tall",
-      "tallier",
-      "taller"
+      "tallier"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Molt Town is bigger than Trock Town.",
+     "a": true
     }
    ]
   ],
@@ -4317,8 +4317,8 @@
     },
     {
      "t": "tf",
-     "q": "Jabal Shams is the highest mountain in Oman.",
-     "a": true
+     "q": "The superlative of 'big' is 'the bigest'.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4331,20 +4331,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The superlative of 'big' is 'the bigest'.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "long → the...",
      "o": [
+      "longest",
       "longer",
       "most long",
-      "longgest",
-      "longest"
+      "longgest"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Jabal Shams is the highest mountain in Oman.",
+     "a": true
     }
    ]
   ],
@@ -4363,8 +4363,8 @@
     },
     {
      "t": "tf",
-     "q": "The Arabian leopard lives in Jabal Samhan.",
-     "a": true
+     "q": "The world's largest nature reserve is in Oman.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4377,38 +4377,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The world's largest nature reserve is in Oman.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Daymaniyat: how many islands?",
      "o": [
+      "nine",
       "seven",
       "three",
-      "twelve",
-      "nine"
+      "twelve"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The Arabian leopard lives in Jabal Samhan.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What is a nature reserve?",
-     "o": [
-      "a busy city",
-      "a place where animals and plants are protected",
-      "a big shopping centre",
-      "a school for animals"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "At Khawr Ruri you can see the ruins of the old city of Samharam.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What is a nature reserve?",
+     "o": [
+      "a place where animals and plants are protected",
+      "a big shopping centre",
+      "a school for animals",
+      "a busy city"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -4453,8 +4453,8 @@
     },
     {
      "t": "tf",
-     "q": "The opposite of 'turn left' is 'turn right'.",
-     "a": true
+     "q": "The park is on the right.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4467,20 +4467,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The park is on the right.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Opposite of left",
      "o": [
+      "right",
       "up",
       "top",
-      "down",
-      "right"
+      "down"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The opposite of 'turn left' is 'turn right'.",
+     "a": true
     }
    ]
   ],
@@ -4499,8 +4499,8 @@
     },
     {
      "t": "tf",
-     "q": "The canoe turns over because of a big tree across the wadi.",
-     "a": true
+     "q": "Jasim blows the whistle quietly five times.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4513,20 +4513,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Jasim blows the whistle quietly five times.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Amjed is Jasim's older...",
      "o": [
+      "cousin",
       "brother",
       "teacher",
-      "friend",
-      "cousin"
+      "friend"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The canoe turns over because of a big tree across the wadi.",
+     "a": true
     }
    ]
   ],
@@ -4545,8 +4545,8 @@
     },
     {
      "t": "tf",
-     "q": "In Egypt there are deserts, beautiful mountains and beaches.",
-     "a": true
+     "q": "We write 'cairo' with a small c.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4559,38 +4559,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We write 'cairo' with a small c.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "We visit Wadi Shab in...",
      "o": [
+      "Sur",
       "Cairo",
       "Greenland",
-      "Japan",
-      "Sur"
+      "Japan"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In Egypt there are deserts, beautiful mountains and beaches.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which word must always start with a capital letter?",
-     "o": [
-      "mountain",
-      "Oman",
-      "love",
-      "beach"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "Names of places start with a capital letter.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word must always start with a capital letter?",
+     "o": [
+      "Oman",
+      "love",
+      "beach",
+      "mountain"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -4635,8 +4635,8 @@
     },
     {
      "t": "tf",
-     "q": "A whale is the largest animal.",
-     "a": true
+     "q": "The comparative of 'sweet' is 'more sweet'.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4649,20 +4649,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The comparative of 'sweet' is 'more sweet'.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Comparative of 'tall'",
      "o": [
+      "taller",
       "tallest",
       "more tall",
-      "talls",
-      "taller"
+      "talls"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A whale is the largest animal.",
+     "a": true
     }
    ]
   ],
@@ -4681,8 +4681,8 @@
     },
     {
      "t": "tf",
-     "q": "In 'The Boat Race', the class is on a river.",
-     "a": true
+     "q": "The baby bird can fly very well.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4695,20 +4695,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The baby bird can fly very well.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Who has the longest boat?",
      "o": [
+      "Mrs Aseel",
       "Qais",
       "Yasir",
-      "Muna",
-      "Mrs Aseel"
+      "Muna"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In 'The Boat Race', the class is on a river.",
+     "a": true
     }
    ]
   ],
@@ -4727,8 +4727,8 @@
     },
     {
      "t": "tf",
-     "q": "A vet works with animals.",
-     "a": true
+     "q": "A farmer works mostly inside an office.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4741,20 +4741,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A farmer works mostly inside an office.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Fixes cars",
      "o": [
+      "mechanic",
       "chef",
       "vet",
-      "lawyer",
-      "mechanic"
+      "lawyer"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A vet works with animals.",
+     "a": true
     }
    ]
   ],
@@ -4773,8 +4773,8 @@
     },
     {
      "t": "tf",
-     "q": "The person in the house is wearing jeans and a yellow jacket.",
-     "a": true
+     "q": "The emergency number in the story is 999.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4787,20 +4787,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The emergency number in the story is 999.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Emergency number in the story",
      "o": [
+      "9999",
       "1111",
       "5555",
-      "1234",
-      "9999"
+      "1234"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The person in the house is wearing jeans and a yellow jacket.",
+     "a": true
     }
    ]
   ],
@@ -4819,8 +4819,8 @@
     },
     {
      "t": "tf",
-     "q": "The -ing form of 'open' is 'opening'.",
-     "a": true
+     "q": "'They isn't playing cards' is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4833,20 +4833,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'They isn't playing cards' is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "-ing form of 'open'",
      "o": [
+      "opening",
       "openning",
       "open",
-      "opens",
-      "opening"
+      "opens"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The -ing form of 'open' is 'opening'.",
+     "a": true
     }
    ]
   ],
@@ -4865,8 +4865,8 @@
     },
     {
      "t": "tf",
-     "q": "The opposite of 'arrive on time' is 'be late'.",
-     "a": true
+     "q": "'You must play with fire' is a good rule.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4879,20 +4879,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'You must play with fire' is a good rule.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Opposite of 'arrive on time'",
      "o": [
+      "be late",
       "be quiet",
       "drop litter",
-      "shout in class",
-      "be late"
+      "shout in class"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The opposite of 'arrive on time' is 'be late'.",
+     "a": true
     }
    ]
   ],
@@ -4911,8 +4911,8 @@
     },
     {
      "t": "tf",
-     "q": "Visitors in the cave must wear a special hard hat.",
-     "a": true
+     "q": "A professional sleeper works in a cave.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4925,20 +4925,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A professional sleeper works in a cave.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Boat driver works in a ...",
      "o": [
+      "cave",
       "school",
       "hospital",
-      "shop",
-      "cave"
+      "shop"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Visitors in the cave must wear a special hard hat.",
+     "a": true
     }
    ]
   ],
@@ -4957,8 +4957,8 @@
     },
     {
      "t": "tf",
-     "q": "For a house on fire, you need the fire brigade.",
-     "a": true
+     "q": "'Someone's robbing the bank!' – call an ambulance.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -4971,20 +4971,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "'Someone's robbing the bank!' – call an ambulance.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Emergency number",
      "o": [
+      "9999",
       "1234",
       "5555",
-      "1111",
-      "9999"
+      "1111"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "For a house on fire, you need the fire brigade.",
+     "a": true
     }
    ]
   ],
@@ -5003,8 +5003,8 @@
     },
     {
      "t": "tf",
-     "q": "Martina takes care of animals.",
-     "a": true
+     "q": "Mike moves a pair of shoes to make the sound of a bird's wings.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5017,20 +5017,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Mike moves a pair of shoes to make the sound of a bird's wings.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Video game animator",
      "o": [
+      "Warren",
       "Mike",
       "Alison",
-      "Martina",
-      "Warren"
+      "Martina"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Martina takes care of animals.",
+     "a": true
     }
    ]
   ],
@@ -5049,8 +5049,8 @@
     },
     {
      "t": "tf",
-     "q": "Hamzah is working on his uncle's farm.",
-     "a": true
+     "q": "Hamzah's uncle only grows tomatoes.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5063,20 +5063,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Hamzah's uncle only grows tomatoes.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Hamzah's job",
      "o": [
+      "farmer",
       "mechanic",
       "doctor",
-      "chef",
-      "farmer"
+      "chef"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Hamzah is working on his uncle's farm.",
+     "a": true
     }
    ]
   ],
@@ -5095,8 +5095,8 @@
     },
     {
      "t": "tf",
-     "q": "A firefighter is a job that helps people.",
-     "a": true
+     "q": "The boat driver works in a hospital.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5109,20 +5109,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The boat driver works in a hospital.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Driving a bus",
      "o": [
+      "bus driver",
       "chef",
       "vet",
-      "dentist",
-      "bus driver"
+      "dentist"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A firefighter is a job that helps people.",
+     "a": true
     }
    ]
   ],
@@ -5141,8 +5141,8 @@
     },
     {
      "t": "tf",
-     "q": "At first, Shahad mustn't use her skateboard.",
-     "a": true
+     "q": "Mrs Sumaiya is a mechanic.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5155,20 +5155,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Mrs Sumaiya is a mechanic.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Shahad's dad's job",
      "o": [
+      "mechanic",
       "scientist",
       "chef",
-      "farmer",
-      "mechanic"
+      "farmer"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "At first, Shahad mustn't use her skateboard.",
+     "a": true
     }
    ]
   ],
@@ -5187,8 +5187,8 @@
     },
     {
      "t": "tf",
-     "q": "With a sore throat, you shouldn't shout.",
-     "a": true
+     "q": "With a headache, you should play video games.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -5201,20 +5201,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "With a headache, you should play video games.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Pain in your head",
      "o": [
+      "a headache",
       "a cough",
       "a cold",
-      "a sore throat",
-      "a headache"
+      "a sore throat"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "With a sore throat, you shouldn't shout.",
+     "a": true
     }
    ]
   ]

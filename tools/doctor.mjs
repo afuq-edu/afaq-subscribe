@@ -7,7 +7,7 @@
 // الفحوص: صياغة كل ملف JavaScript (الإضافة، الموقع، الاختبارات، الأدوات) · manifest.json (الإصدار، كل ملف يشير إليه موجود،
 // key للنسخة غير المضغوطة، رابط الموقع في externally_connectable) · ملفات <script>/<link> في صفحات HTML · تطابق إعدادات Supabase
 // بين الموقع والإضافة ومعرّفَي الإضافة · كل دالة RPC وجدول يناديهما الموقع أو الإضافة معرّفان في site/supabase/*.sql ·
-// صحة ملفات JSON (أنشطة الدروس، شجرات نور الحقيقية و_gaps) · كل مسار في جدول الأقسام في README.md موجود.
+// صحة ملفات JSON (أنشطة الدروس، شجرات نور الحقيقية و_gaps) · الواجبات (كل واجب صالح ومتنوّع) · كل مسار في جدول الأقسام في README.md موجود.
 // يخرج بالرمز 1 إن وُجد خطأ (التحذيرات لا تُفشل). لا يعدّل أي ملف.
 import fs from 'node:fs';
 import os from 'node:os';
@@ -184,6 +184,33 @@ function checkReadme() {
   if (!miss.length) ok(`${paths.length} مسارًا في جدول الأقسام، كلها موجودة`);
 }
 
+// ملفات الواجبات: كل سؤال صالح، وكل واجب كما يصل نور: خمسة أسئلة بلا تكرار داخله، والجواب الصحيح لا يأتي في الموضع نفسه دائمًا
+async function checkHomework() {
+  section('الواجبات (site/homework)');
+  const { toNoorRows, sessionQuestions } = await import(path.join(REPO, 'extension/homework.js'));
+  const files = walk('site/homework', (p) => p.endsWith('.json'));
+  let hw = 0, broken = 0, fixed = 0, rep = 0, tot = 0; const pos = new Set();
+  for (const f of files) {
+    let d; try { d = JSON.parse(read(f)); } catch { continue; }
+    for (const name of Object.keys(d.lessons || {})) {
+      const k = 1 + ((d.sessions || {})[name] || []).length, seen = new Set();
+      for (let n = 1; n <= k; n++) {
+        const rows = toNoorRows(sessionQuestions(d, name, n)); hw++;
+        const texts = rows.map((r) => r.text);
+        if (rows.length !== 5 || new Set(texts).size !== 5 || rows.some((r) => r.options.some((o) => !String(o).trim()) || new Set(r.options).size !== r.options.length || !(r.correct >= 1 && r.correct <= r.options.length))) { broken++; if (broken <= 3) bad(`${rel(path.join(REPO, f))} «${name}» الحصة ${n}: واجب غير صالح`); }
+        const mc = rows.filter((r) => r.options.length > 2); mc.forEach((r) => pos.add(r.correct));
+        if (mc.length >= 3 && new Set(mc.map((r) => r.correct)).size === 1) fixed++;
+        texts.forEach((t) => { tot++; if (seen.has(t)) rep++; seen.add(t); });
+      }
+    }
+  }
+  if (broken > 3) bad(`${broken} واجبًا غير صالح`);
+  if (pos.size < 3) bad('الجواب الصحيح في الموضع نفسه في كل الواجبات');
+  if (fixed > hw * 0.02) bad(`${fixed} واجبًا كل إجاباته الصحيحة في الموضع نفسه`);
+  if (rep > tot * 0.03) warn(`أسئلة مكررة بين حصص الدرس: ${rep} من ${tot}`);
+  if (!broken) ok(`${hw} واجبًا في ${files.length} ملفًا: كلها صالحة، ${rep} سؤالًا مكررًا بين الحصص من ${tot}`);
+}
+
 const t0 = Date.now();
 console.log('afaq doctor — فحص سريع للمستودع');
 await checkSyntax();
@@ -193,5 +220,6 @@ checkConfig();
 checkRpc();
 checkJson();
 checkReadme();
+await checkHomework();
 console.log(`\n${errors ? 'DOCTOR FAILED' : 'DOCTOR OK'} — ${oks} سليم · ${errors} خطأ · ${warnings} تحذير · «حاضر» ${m ? m.version : '؟'} (${((Date.now() - t0) / 1000).toFixed(1)}s)`);
 process.exit(errors ? 1 : 0);

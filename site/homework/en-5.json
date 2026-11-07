@@ -2001,8 +2001,8 @@
     },
     {
      "t": "tf",
-     "q": "We put a comma after the first part when a sentence starts with when, before or after.",
-     "a": true
+     "q": "\"I wash my hands after I eat\" is the healthy way to say we wash our hands first.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2015,20 +2015,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"I wash my hands after I eat\" is the healthy way to say we wash our hands first.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Shower first, then school: shower ___ school",
      "o": [
+      "before",
       "after",
       "when",
-      "then",
-      "before"
+      "then"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We put a comma after the first part when a sentence starts with when, before or after.",
+     "a": true
     }
    ]
   ],
@@ -2047,8 +2047,8 @@
     },
     {
      "t": "tf",
-     "q": "The cat in the story is very friendly.",
-     "a": true
+     "q": "The cat's name is Rayner.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2061,20 +2061,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The cat's name is Rayner.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Tameem is great at ___.",
      "o": [
+      "karate",
       "juggling",
       "singing",
-      "chess",
-      "karate"
+      "chess"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The cat in the story is very friendly.",
+     "a": true
     }
    ]
   ],
@@ -2093,8 +2093,8 @@
     },
     {
      "t": "tf",
-     "q": "We use more with long adjectives: more hard-working.",
-     "a": true
+     "q": "\"She is the most short girl in the class\" is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2107,20 +2107,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"She is the most short girl in the class\" is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "short → ___ (comparative)",
      "o": [
+      "shorter",
       "shortest",
       "more short",
-      "shortter",
-      "shorter"
+      "shortter"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use more with long adjectives: more hard-working.",
+     "a": true
     }
    ]
   ],
@@ -2139,8 +2139,8 @@
     },
     {
      "t": "tf",
-     "q": "Great at is better than good at.",
-     "a": true
+     "q": "Terrible at means you do something very well.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2153,20 +2153,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Terrible at means you do something very well.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "bake → ___",
      "o": [
+      "baking",
       "bakeing",
       "bakking",
-      "bakes",
-      "baking"
+      "bakes"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Great at is better than good at.",
+     "a": true
     }
    ]
   ],
@@ -2185,8 +2185,8 @@
     },
     {
      "t": "tf",
-     "q": "In Oman, you take off your shoes when you go inside someone's house.",
-     "a": true
+     "q": "In Japan, it's polite to laugh with your mouth wide open.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2199,20 +2199,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "In Japan, it's polite to laugh with your mouth wide open.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Rude to laugh with your mouth wide open",
      "o": [
+      "Japan",
       "China",
       "the UK",
-      "Oman",
-      "Japan"
+      "Oman"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In Oman, you take off your shoes when you go inside someone's house.",
+     "a": true
     }
    ]
   ],
@@ -2231,8 +2231,8 @@
     },
     {
      "t": "tf",
-     "q": "In our description, we can say why the person is important to us.",
-     "a": true
+     "q": "We start each sentence with a small letter.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2245,20 +2245,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We start each sentence with a small letter.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Linking word for a reason",
      "o": [
+      "because",
       "or",
       "and",
-      "but",
-      "because"
+      "but"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In our description, we can say why the person is important to us.",
+     "a": true
     }
    ]
   ],
@@ -2277,8 +2277,8 @@
     },
     {
      "t": "tf",
-     "q": "The opposite of polite is rude.",
-     "a": true
+     "q": "\"My sister is tidyer than I am\" is spelled correctly.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2291,38 +2291,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"My sister is tidyer than I am\" is spelled correctly.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Opposite of polite",
      "o": [
+      "rude",
       "kind",
       "tidy",
-      "shy",
-      "rude"
+      "shy"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The opposite of polite is rude.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which sentence helps you check your progress?",
-     "o": [
-      "Who's that boy over there?",
-      "Now I can … / I need to work more on …",
-      "On Mondays, I …",
-      "Before I go to school, …"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "\"He is good at doing experiments\" is correct.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which sentence helps you check your progress?",
+     "o": [
+      "Now I can … / I need to work more on …",
+      "On Mondays, I …",
+      "Before I go to school, …",
+      "Who's that boy over there?"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2364,24 +2364,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "An exam tip: read each word to see which one fits best.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "He is shorter than me, but he is not the ___ person in our family.",
      "o": [
+      "shortest",
       "most short",
-      "shorter",
-      "shortest"
+      "shorter"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "The superlative of short is the most short.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "An exam tip: read each word to see which one fits best.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -2411,8 +2411,8 @@
     },
     {
      "t": "tf",
-     "q": "\"Which is the hottest month in the year?\" is correct.",
-     "a": true
+     "q": "\"Are you confidenter than your best friend?\" is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2425,38 +2425,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"Are you confidenter than your best friend?\" is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "easy → ___",
      "o": [
+      "easier",
       "easyer",
       "more easy",
-      "easiest",
-      "easier"
+      "easiest"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Which is the hottest month in the year?\" is correct.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which word do we put before a superlative?",
-     "o": [
-      "because",
-      "the",
-      "than",
-      "a"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "We use because to give a reason for our answer.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word do we put before a superlative?",
+     "o": [
+      "the",
+      "than",
+      "a",
+      "because"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2498,25 +2498,25 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "\"Who is the kindest person you know?\" uses a superlative.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "difficult → ___",
      "o": [
+      "most difficult",
       "difficultest",
       "more difficult",
-      "difficulter",
-      "most difficult"
+      "difficulter"
      ],
-     "a": 2
+     "a": 3
     },
     {
      "t": "tf",
      "q": "It's better to be rude than polite.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "\"Who is the kindest person you know?\" uses a superlative.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -2546,8 +2546,8 @@
     },
     {
      "t": "tf",
-     "q": "Arwa is more confident than Areej.",
-     "a": true
+     "q": "The recipe was for eighty people.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2560,38 +2560,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The recipe was for eighty people.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "The biggest bowl",
      "o": [
+      "red",
       "blue",
       "green",
-      "yellow",
-      "red"
+      "yellow"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Arwa is more confident than Areej.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "What are the names of the two graded readers?",
-     "o": [
-      "My Granny and My family's unusual",
-      "The Baking Day and The Tennis Lesson",
-      "Talent show and Welcome back",
-      "Stop, thief! and The Space Race"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "In The Tennis Lesson, the boys are playing tennis.",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What are the names of the two graded readers?",
+     "o": [
+      "The Baking Day and The Tennis Lesson",
+      "Talent show and Welcome back",
+      "Stop, thief! and The Space Race",
+      "My Granny and My family's unusual"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -2633,24 +2633,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "Hamed is the best at tennis in the class.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Why is the cake so big?",
      "o": [
+      "They counted badly.",
       "They used a big oven.",
-      "They wanted a party for the school.",
-      "They counted badly."
+      "They wanted a party for the school."
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "At the start of the story, Hisham is good at tennis.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "Hamed is the best at tennis in the class.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -2666,15 +2666,20 @@
    ],
    [
     {
+     "t": "tf",
+     "q": "Hisham's ball always hits the net because the net is broken.",
+     "a": false
+    },
+    {
      "t": "mcq",
      "q": "Sort the adjectives: shy, kind, polite, hard-working. Which is correct?",
      "o": [
-      "Hisham: all four. Hamed: none.",
       "Hisham: shy, hard-working. Hamed: kind, polite.",
       "Hisham: kind, polite. Hamed: shy, hard-working.",
-      "Hisham: shy, polite. Hamed: kind, hard-working."
+      "Hisham: shy, polite. Hamed: kind, hard-working.",
+      "Hisham: all four. Hamed: none."
      ],
-     "a": 2
+     "a": 1
     },
     {
      "t": "tf",
@@ -2685,16 +2690,11 @@
      "t": "mcq",
      "q": "Which is a food in the recipe?",
      "o": [
-      "flour",
       "bananas",
-      "milk"
+      "milk",
+      "flour"
      ],
-     "a": 1
-    },
-    {
-     "t": "tf",
-     "q": "Hisham's ball always hits the net because the net is broken.",
-     "a": false
+     "a": 3
     },
     {
      "t": "mcq",
@@ -2722,7 +2722,7 @@
     },
     {
      "t": "tf",
-     "q": "Arwa is more confident than Areej.",
+     "q": "Which foods are in the Baking Day recipe? Answer: eggs, sugar, butter, flour",
      "a": true
     },
     {
@@ -2736,20 +2736,20 @@
      "a": 2
     },
     {
-     "t": "tf",
-     "q": "The recipe was for eighty people.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A food in the recipe",
      "o": [
+      "eggs",
       "bananas",
       "milk",
-      "rice",
-      "eggs"
+      "rice"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Which foods are in the Baking Day recipe? Answer: milk, eggs, bananas, sugar",
+     "a": false
     }
    ]
   ],
@@ -2768,8 +2768,8 @@
     },
     {
      "t": "tf",
-     "q": "A mobile phone is a small telephone you carry with you.",
-     "a": true
+     "q": "We say \"study the doctor\".",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2782,20 +2782,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say \"study the doctor\".",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "You type on it.",
      "o": [
+      "keyboard",
       "mouse",
       "letter",
-      "CD player",
-      "keyboard"
+      "CD player"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A mobile phone is a small telephone you carry with you.",
+     "a": true
     }
    ]
   ],
@@ -2814,8 +2814,8 @@
     },
     {
      "t": "tf",
-     "q": "Over 100 years ago, people in big houses used speaking tubes.",
-     "a": true
+     "q": "The children make a speaking tube with two bottles.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2828,20 +2828,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The children make a speaking tube with two bottles.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Old phone in big houses",
      "o": [
+      "speaking tube",
       "mobile phone",
       "tablet",
-      "keyboard",
-      "speaking tube"
+      "keyboard"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Over 100 years ago, people in big houses used speaking tubes.",
+     "a": true
     }
    ]
   ],
@@ -2860,8 +2860,8 @@
     },
     {
      "t": "tf",
-     "q": "\"Did you have a phone?\" \"Yes, we did.\" is correct.",
-     "a": true
+     "q": "\"They didn't drank water.\" is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2874,20 +2874,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"They didn't drank water.\" is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "have → ___",
      "o": [
+      "had",
       "haved",
       "has",
-      "hid",
-      "had"
+      "hid"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Did you have a phone?\" \"Yes, we did.\" is correct.",
+     "a": true
     }
    ]
   ],
@@ -2906,8 +2906,8 @@
     },
     {
      "t": "tf",
-     "q": "Could is the same for I, you, he, she, we and they.",
-     "a": true
+     "q": "We say \"post an email\" and \"send a letter\" in this lesson.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2920,20 +2920,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say \"post an email\" and \"send a letter\" in this lesson.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "___ a letter",
      "o": [
+      "post",
       "tie",
       "hold",
-      "win",
-      "post"
+      "win"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Could is the same for I, you, he, she, we and they.",
+     "a": true
     }
    ]
   ],
@@ -2952,8 +2952,8 @@
     },
     {
      "t": "tf",
-     "q": "You can learn about robot design at the Shanghai Museum of Science and Technology.",
-     "a": true
+     "q": "Bait Al Zubair is in a modern building.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -2966,20 +2966,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Bait Al Zubair is in a modern building.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "City of the Natural History Museum",
      "o": [
+      "London",
       "Shanghai",
       "Muscat",
-      "Manah",
-      "London"
+      "Manah"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "You can learn about robot design at the Shanghai Museum of Science and Technology.",
+     "a": true
     }
    ]
   ],
@@ -2998,8 +2998,8 @@
     },
     {
      "t": "tf",
-     "q": "A report about a visit starts with the date.",
-     "a": true
+     "q": "A report is written in one long line with no paragraphs.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3012,20 +3012,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A report is written in one long line with no paragraphs.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Osama's museum",
      "o": [
+      "Louvre Abu Dhabi",
       "British Museum",
       "Car Museum",
-      "Science Museum",
-      "Louvre Abu Dhabi"
+      "Science Museum"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A report about a visit starts with the date.",
+     "a": true
     }
    ]
   ],
@@ -3044,8 +3044,8 @@
     },
     {
      "t": "tf",
-     "q": "In the exam, the answers are often very similar, so read each one carefully.",
-     "a": true
+     "q": "\"Yes, I painted a picture.\" is a good answer to \"Did you make a rocket?\"",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3058,38 +3058,38 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"Yes, I painted a picture.\" is a good answer to \"Did you make a rocket?\"",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Odd one out: computer, tablet, phone, letter",
      "o": [
+      "letter",
       "computer",
       "tablet",
-      "phone",
-      "letter"
+      "phone"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In the exam, the answers are often very similar, so read each one carefully.",
+     "a": true
     }
    ],
    [
     {
-     "t": "mcq",
-     "q": "Which words help you tell a story from pictures?",
-     "o": [
-      "big, bigger, biggest",
-      "first, then, next, finally",
-      "who, which, where",
-      "will, won't"
-     ],
-     "a": 2
-    },
-    {
      "t": "tf",
      "q": "To explain your choice, you can say: This picture is different because …",
      "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which words help you tell a story from pictures?",
+     "o": [
+      "first, then, next, finally",
+      "who, which, where",
+      "will, won't",
+      "big, bigger, biggest"
+     ],
+     "a": 1
     },
     {
      "t": "mcq",
@@ -3131,24 +3131,24 @@
      "a": 4
     },
     {
-     "t": "tf",
-     "q": "When you tell a story from pictures, you can use first, then, next and finally.",
-     "a": true
-    },
-    {
      "t": "mcq",
      "q": "Complete: Sometimes I listen to ______ on my computer.",
      "o": [
+      "music",
       "a comet",
-      "a bag",
-      "music"
+      "a bag"
      ],
-     "a": 3
+     "a": 1
     },
     {
      "t": "tf",
      "q": "You need electricity to write a letter.",
      "a": false
+    },
+    {
+     "t": "tf",
+     "q": "When you tell a story from pictures, you can use first, then, next and finally.",
+     "a": true
     },
     {
      "t": "mcq",
@@ -3178,8 +3178,8 @@
     },
     {
      "t": "tf",
-     "q": "A rocket is something people make.",
-     "a": true
+     "q": "It is safe to look at the Sun.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3192,20 +3192,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "It is safe to look at the Sun.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Astronauts fly into space in it",
      "o": [
+      "rocket",
       "comet",
       "star",
-      "planet",
-      "rocket"
+      "planet"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A rocket is something people make.",
+     "a": true
     }
    ]
   ],
@@ -3224,8 +3224,8 @@
     },
     {
      "t": "tf",
-     "q": "Bo breaks the model.",
-     "a": true
+     "q": "The Moon is about a thousand kilometres from the Earth.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3238,20 +3238,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The Moon is about a thousand kilometres from the Earth.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "The children's first model",
      "o": [
+      "solar system",
       "space station",
       "rocket",
-      "telescope",
-      "solar system"
+      "telescope"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Bo breaks the model.",
+     "a": true
     }
    ]
   ],
@@ -3270,8 +3270,8 @@
     },
     {
      "t": "tf",
-     "q": "\"Won't\" is the short form of \"will not\".",
-     "a": true
+     "q": "We use will to talk about yesterday.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3284,20 +3284,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We use will to talk about yesterday.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Short form of \"I will\"",
      "o": [
+      "I'll",
       "I'm",
       "I've",
-      "I'd",
-      "I'll"
+      "I'd"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Won't\" is the short form of \"will not\".",
+     "a": true
     }
    ]
   ],
@@ -3316,8 +3316,8 @@
     },
     {
      "t": "tf",
-     "q": "We ask about the sea with \"How deep …?\"",
-     "a": true
+     "q": "We ask about the distance from Muscat to Salalah with \"How tall …?\"",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3330,20 +3330,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We ask about the distance from Muscat to Salalah with \"How tall …?\"",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Write: 50,000",
      "o": [
+      "fifty thousand",
       "five thousand",
       "five hundred",
-      "fifteen thousand",
-      "fifty thousand"
+      "fifteen thousand"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We ask about the sea with \"How deep …?\"",
+     "a": true
     }
    ]
   ],
@@ -3362,8 +3362,8 @@
     },
     {
      "t": "tf",
-     "q": "Many frankincense trees grow in Wadi Dawkah in the south of Oman.",
-     "a": true
+     "q": "The Museum of Frankincense Land is in Wadi Dawkah.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3376,20 +3376,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The Museum of Frankincense Land is in Wadi Dawkah.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Frankincense comes from …",
      "o": [
+      "trees",
       "rocks",
       "the sea",
-      "animals",
-      "trees"
+      "animals"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Many frankincense trees grow in Wadi Dawkah in the south of Oman.",
+     "a": true
     }
    ]
   ],
@@ -3408,8 +3408,8 @@
     },
     {
      "t": "tf",
-     "q": "Astronauts have three meals a day.",
-     "a": true
+     "q": "Astronauts wear a spacesuit outside the ISS because it is very hot.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3422,20 +3422,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Astronauts wear a spacesuit outside the ISS because it is very hot.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Topic of Ali's blog post",
      "o": [
+      "food",
       "clothes",
       "hobbies",
-      "repairs",
-      "food"
+      "repairs"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Astronauts have three meals a day.",
+     "a": true
     }
    ]
   ],
@@ -3454,8 +3454,8 @@
     },
     {
      "t": "tf",
-     "q": "You can buy medicine at the pharmacy.",
-     "a": true
+     "q": "A jeweller's sells footballs.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3468,20 +3468,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "A jeweller's sells footballs.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Buy fish here",
      "o": [
+      "fishmonger's",
       "butcher's",
       "jeweller's",
-      "kiosk",
-      "fishmonger's"
+      "kiosk"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "You can buy medicine at the pharmacy.",
+     "a": true
     }
    ]
   ],
@@ -3500,8 +3500,8 @@
     },
     {
      "t": "tf",
-     "q": "An escalator is a machine which carries you upstairs and downstairs.",
-     "a": true
+     "q": "The thief is carrying a red school bag.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3514,20 +3514,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "The thief is carrying a red school bag.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "A person who steals",
      "o": [
+      "thief",
       "shopkeeper",
       "teacher",
-      "friend",
-      "thief"
+      "friend"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "An escalator is a machine which carries you upstairs and downstairs.",
+     "a": true
     }
    ]
   ],
@@ -3546,8 +3546,8 @@
     },
     {
      "t": "tf",
-     "q": "We use \"where\" for places.",
-     "a": true
+     "q": "\"It's the man which we saw earlier.\" is correct.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3560,20 +3560,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"It's the man which we saw earlier.\" is correct.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Relative word for people",
      "o": [
+      "who",
       "which",
       "where",
-      "what",
-      "who"
+      "what"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use \"where\" for places.",
+     "a": true
     }
    ]
   ],
@@ -3592,8 +3592,8 @@
     },
     {
      "t": "tf",
-     "q": "\"Have to\" means it is necessary.",
-     "a": true
+     "q": "We say \"He have to get some pocket money.\"",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3606,20 +3606,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We say \"He have to get some pocket money.\"",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Opposite of buy",
      "o": [
+      "sell",
       "save",
       "spend",
-      "get",
-      "sell"
+      "get"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Have to\" means it is necessary.",
+     "a": true
     }
    ]
   ],
@@ -3638,8 +3638,8 @@
     },
     {
      "t": "tf",
-     "q": "In New York, a corner shop is called a bodega.",
-     "a": true
+     "q": "In Detroit, a corner shop is called a milk bar.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3652,20 +3652,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "In Detroit, a corner shop is called a milk bar.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Corner shop in Australia",
      "o": [
+      "milk bar",
       "dairy",
       "bodega",
-      "party shop",
-      "milk bar"
+      "party shop"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In New York, a corner shop is called a bodega.",
+     "a": true
     }
    ]
   ],
@@ -3684,8 +3684,8 @@
     },
     {
      "t": "tf",
-     "q": "Razan didn't have enough money for the shoes.",
-     "a": true
+     "q": "Razan's friend Rasha bought the shoes.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3698,20 +3698,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "Razan's friend Rasha bought the shoes.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Razan's friend",
      "o": [
+      "Rasha",
       "Nada",
       "Huda",
-      "Fatma",
-      "Rasha"
+      "Fatma"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Razan didn't have enough money for the shoes.",
+     "a": true
     }
    ]
   ],
@@ -3730,8 +3730,8 @@
     },
     {
      "t": "tf",
-     "q": "Nada likes to buy apples and pears from the greengrocer's.",
-     "a": true
+     "q": "\"Kiosk\" needs 's at the end.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3744,20 +3744,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"Kiosk\" needs 's at the end.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "Westport shopping mall",
      "o": [
+      "Smith Centre",
       "Queen Street",
       "Kids Toys",
-      "Dream Gifts",
-      "Smith Centre"
+      "Dream Gifts"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Nada likes to buy apples and pears from the greengrocer's.",
+     "a": true
     }
    ]
   ],
@@ -3776,8 +3776,8 @@
     },
     {
      "t": "tf",
-     "q": "\"When I was one, I could walk, but I couldn't talk.\" uses could for the past.",
-     "a": true
+     "q": "We use \"which\" for people.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3790,20 +3790,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "We use \"which\" for people.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "good → better → ___",
      "o": [
+      "best",
       "goodest",
       "more good",
-      "gooder",
-      "best"
+      "gooder"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"When I was one, I could walk, but I couldn't talk.\" uses could for the past.",
+     "a": true
     }
    ]
   ],
@@ -3822,8 +3822,8 @@
     },
     {
      "t": "tf",
-     "q": "\"Shall we visit my granny?\" is correct.",
-     "a": true
+     "q": "\"Yes, that's a great idea!\" is a way to say no.",
+     "a": false
     },
     {
      "t": "mcq",
@@ -3836,20 +3836,20 @@
      "a": 1
     },
     {
-     "t": "tf",
-     "q": "\"Yes, that's a great idea!\" is a way to say no.",
-     "a": false
-    },
-    {
      "t": "mcq",
      "q": "How about ___ a pizza?",
      "o": [
+      "making",
       "make",
       "made",
-      "makes",
-      "making"
+      "makes"
      ],
-     "a": 4
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Shall we visit my granny?\" is correct.",
+     "a": true
     }
    ]
   ]
