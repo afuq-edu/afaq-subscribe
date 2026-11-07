@@ -13,7 +13,7 @@ import {
 } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { diffDays, addDays } from './dates.js';
-import { lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, HW_MARK } from './homework.js';
+import { lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, hwHush, HW_MARK } from './homework.js';
 import { AFAQ } from './afaq-config.js';
 import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck, installUrl, fillLog, flushFillLog, sendNoorTree, getNoorTree } from './remote.js';
 
@@ -2559,7 +2559,9 @@ async function hwCreateLive(op) {
   const nv = waitNavigation(60000);
   const f = await execMain(hwCreateFill, op);
   if (!f || !f.ok) return f || { err: 'nofill' };
-  await nv; await waitComplete(10000); await sleep(500);
+  await nv; await waitComplete(10000);
+  execMain(hwHush).catch(() => {});   // رسالة نور «لم يتم إيجاد مفردات مضافة» على قائمة الواجب الفارغة: تُغلق بهدوء
+  await sleep(500);
   const a = await execMain(hwAfterCreate);
   if (!a || !a.ok) return Object.assign({ sent: true }, a || { err: 'noaid' });
   const bulk = `${origin}/teacher/questions/add_bulk_questions/cid:${a.cid}/aid:${a.aid}${a.type ? '/type:' + a.type : ''}`;
@@ -2568,7 +2570,9 @@ async function hwCreateLive(op) {
   const nv2 = waitNavigation(60000);
   const b = await execMain(hwBulkFill, { qs: op.qs, mark: op.mark });
   if (!b || !b.ok) return Object.assign({ aid: a.aid }, b || { err: 'nobulk' });
-  await nv2; await waitComplete(10000); await sleep(500);
+  await nv2; await waitComplete(10000);
+  execMain(hwHush).catch(() => {});
+  await sleep(500);
   const n = await execMain(hwCount, { cid: a.cid, aid: a.aid, type: a.type });
   if (n === 0) return { err: 'noq', aid: a.aid };
   return { ok: true, aid: a.aid, n, prepId: f.prepId, lessonId: f.lessonId };

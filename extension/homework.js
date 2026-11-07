@@ -359,6 +359,24 @@ export function hwCreateFill(op) {
   } catch (e) { return { err: 'crash', msg: String((e && e.message) || e).slice(0, 160) }; }
 }
 // يُحقن بعد «إضافة»: معرّف الواجب من العنوان أو من روابط قائمة مفرداته، وإلا ما تعرضه الصفحة من أخطاء
+// نور تفتح بعد «إضافة» قائمة مفردات الواجب وهي فارغة بعد، فتنبثق رسالة «لم يتم إيجاد مفردات مضافة» قبل أن تضيف الأداة الأسئلة
+// (المالك 2026-11-07: الواجب يُضاف لكن الرسالة تظهر): تُغلق بهدوء كلما ظهرت في هذه الصفحة خلال ثوانٍ
+export function hwHush() {
+  const close = () => {
+    const pops = [...document.querySelectorAll('.swal2-popup, .sweet-alert, .modal, .bootbox, .jconfirm, [role="dialog"], [role="alertdialog"]')]
+      .filter((x) => x.offsetParent !== null && /(?:لم يتم|لا يوجد|لا توجد)[^.!؟]{0,40}مفرد|no (?:items|questions)/i.test(x.textContent || ''));
+    pops.forEach((x) => {
+      const b = x.querySelector('.swal2-confirm, .confirm, .btn-primary, .btn-default, [data-dismiss="modal"], .close, button');
+      try { if (b) b.click(); } catch (e) {}
+      try { if (window.swal && window.swal.close) window.swal.close(); } catch (e) {}
+      try { if (window.Swal && window.Swal.close) window.Swal.close(); } catch (e) {}
+    });
+    return pops.length;
+  };
+  let n = 0; close();
+  const t = setInterval(() => { close(); if (++n > 40) clearInterval(t); }, 250);
+  return true;
+}
 export function hwAfterCreate() {
   const aidRe = /\/questions\/(?:index|add_bulk_questions)\/cid:([A-Za-z0-9_-]+)\/aid:([A-Za-z0-9_-]+)(?:\/type:([A-Za-z0-9_-]+))?/;
   let m = location.href.match(aidRe);
@@ -371,13 +389,13 @@ export function hwAfterCreate() {
 }
 // يُحقن في صفحة «إضافة مجموعة مفردات دفعة واحدة»: يضع الأسئلة صفوفًا في نموذجها ويرسله
 export function hwBulkFill(op) {
-  const hwPress = (f, re, wait) => {
-    let left = false; window.addEventListener('beforeunload', () => { left = true; }, { once: true });
+  // الإرسال مباشرة دون زر الحفظ: تحقّق الصفحة يعدّ الصفوف التي تُضاف بزرها هي (questions_count)، فيرى صفوفنا صفرًا ويُظهر
+  // «لم يتم إيجاد مفردات مضافة» ثم يُرسل النموذج بعد ثوانٍ (المالك 2026-11-07). الخادم يقبل النموذج نفسه، فلا داعي للرسالة
+  const hwSubmit = (f, re, wait) => {
     const btns = [...f.querySelectorAll('input[type=submit], button[type=submit], button:not([type])')];
     const b = btns.find((x) => re.test((x.value || x.textContent || '').trim())) || btns[0];
     setTimeout(() => {
-      try { if (b) b.click(); } catch (e) {}
-      setTimeout(() => { if (left) return; try { if (b && b.name) { const h = document.createElement('input'); h.type = 'hidden'; h.name = b.name; h.value = b.value || ''; f.appendChild(h); } HTMLFormElement.prototype.submit.call(f); } catch (e) {} }, 4000);
+      try { if (b && b.name) { const h = document.createElement('input'); h.type = 'hidden'; h.name = b.name; h.value = b.value || ''; f.appendChild(h); } HTMLFormElement.prototype.submit.call(f); } catch (e) { try { if (b) b.click(); } catch (e2) {} }
     }, wait);
   };
   try {
@@ -393,7 +411,7 @@ export function hwBulkFill(op) {
       if (q.type === 'mcq') { add(`data[number_of_choices][${i}]`, q.options.length); q.options.forEach((o, k) => add(`data[option][${i}][${k + 1}]`, o)); }
     });
     const qn = f.querySelector('input[name="data[Question][number]"]'); if (qn) qn.value = String((op.qs || []).length);
-    hwPress(f, /إنشاء|انشاء|حفظ|إضافة|اضافة|create|save/i, 300);
+    hwSubmit(f, /إنشاء|انشاء|حفظ|إضافة|اضافة|create|save/i, 300);
     return { ok: true };
   } catch (e) { return { err: 'crash', msg: String((e && e.message) || e).slice(0, 160) }; }
 }
