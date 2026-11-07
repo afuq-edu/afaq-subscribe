@@ -2,7 +2,7 @@
  "key": "en-6",
  "subject": "اللغة الإنجليزية",
  "grade": "الصف السادس",
- "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ)",
+ "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ) · sessions = أسئلة الحصة الثانية فما بعدها لكل درس (lessons = الحصة الأولى)",
  "lessons": {
   "Welcome – Lesson 1: Meet the WOW! Magazine": [
    {
@@ -1938,6 +1938,1936 @@
     ],
     "a": 1
    }
+  ]
+ },
+ "sessions": {
+  "Welcome – Lesson 1: Meet the WOW! Magazine": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which list has the WOW! Team members?",
+     "o": [
+      "Huda, Basil, Rahaf and Faisal",
+      "Reem, Huda, Arlo and Omaima",
+      "Sultan, Hisham, Julia and Basil",
+      "Reem, Sultan, Arlo and Julia"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The WOW! Magazine is made by kids for kids.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What does WOW! stand for?",
+     "o": [
+      "World of Wonder!",
+      "World of Work!",
+      "Words of Wonder!"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "There are six members in the WOW! Team.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "WOW! = World of ...",
+     "o": [
+      "Work",
+      "Water",
+      "Words",
+      "Wonder"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Welcome – Lesson 2: The WOW! Team (adjectives)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which WOW! Team member is energetic?",
+     "o": [
+      "Julia",
+      "Sultan",
+      "Reem",
+      "Arlo"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Sultan designed the WOW! Magazine.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "She has lots of new ideas. She's ___.",
+     "o": [
+      "creative",
+      "tall",
+      "noisy"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A brave person is scared of everything.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Not tall and not short",
+     "o": [
+      "handsome",
+      "pretty",
+      "energetic",
+      "medium height"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 2: Team Talk – How often do you do sports?": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which expression do you use when something makes you laugh?",
+     "o": [
+      "I don't believe it!",
+      "Really?",
+      "Once a week.",
+      "You're so funny!"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Sultan does gymnastics once a week.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "How does Arlo get to school?",
+     "o": [
+      "by scooter",
+      "by bus",
+      "by bike"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"You're so funny!\" is a way to say you are sad.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "One time a week",
+     "o": [
+      "twice a week",
+      "every day",
+      "not very often",
+      "once a week"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 3: Grammar – Present simple and Present continuous": [
+   [
+    {
+     "t": "mcq",
+     "q": "We use the ___ for habits and routines.",
+     "o": [
+      "Present continuous",
+      "Past continuous",
+      "Future",
+      "Present simple"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We use the Present continuous for things happening at the moment.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "I ___ volleyball every Monday.",
+     "o": [
+      "play",
+      "am playing",
+      "playing"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"At the moment\" is a time word for the Present simple.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Tense for habits",
+     "o": [
+      "Present continuous",
+      "Past simple",
+      "Future",
+      "Present simple"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 4: Book club – A picture story": [
+   [
+    {
+     "t": "mcq",
+     "q": "In a picture story, what shows the words a character says?",
+     "o": [
+      "the title",
+      "the cover",
+      "a page number",
+      "a speech bubble"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Samar can't do athletics because it's raining.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Why can't Samar do athletics?",
+     "o": [
+      "It's raining.",
+      "She is ill.",
+      "It's night."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Samar loves playing the piano at the start of the story.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Her idea: put on a show",
+     "o": [
+      "Samar",
+      "Amani",
+      "Rasha",
+      "Nawal"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 5: Vocabulary and Grammar – Hobbies and state verbs": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which hobby is correct?",
+     "o": [
+      "collect a diary",
+      "watch a diary",
+      "make a diary",
+      "write a diary"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Like, love and hate are state verbs.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "___ a diary",
+     "o": [
+      "write",
+      "collect",
+      "play"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We usually use state verbs in continuous tenses.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "What does Rasha think about singing?",
+     "o": [
+      "She loves it.",
+      "She does it every day.",
+      "She prefers it to acting.",
+      "She doesn't like it; she prefers acting."
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 6: Culture and Project – Sports and hobbies around the world": [
+   [
+    {
+     "t": "mcq",
+     "q": "What do you need to be good at to go snorkelling?",
+     "o": [
+      "skiing",
+      "running",
+      "singing",
+      "swimming"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "To go snorkelling, you need to be good at swimming.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which sport is popular in New Zealand?",
+     "o": [
+      "rugby",
+      "windsurfing",
+      "skiing"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Cross-country skiing is popular in Oman.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Popular in New Zealand",
+     "o": [
+      "windsurfing",
+      "skiing",
+      "snorkelling",
+      "rugby"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 7: English in action – Making and responding to suggestions": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which response means no?",
+     "o": [
+      "That's a good idea.",
+      "That sounds good.",
+      "Yes, I could.",
+      "No, I don't think so."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "\"That sounds good\" is a positive response.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "___ don't you learn a musical instrument?",
+     "o": [
+      "Why",
+      "How",
+      "What"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The boy plays the piano.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "___ don't you swim?",
+     "o": [
+      "How",
+      "What",
+      "Who",
+      "Why"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 8: Literacy – Reading an interview": [
+   [
+    {
+     "t": "mcq",
+     "q": "What is a hostel?",
+     "o": [
+      "a big mountain",
+      "a bike shop",
+      "a kind of tent",
+      "a very cheap and simple hotel"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Henry and Cody are sleeping in a hostel tonight.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which countries are Henry and Cody visiting?",
+     "o": [
+      "Argentina and Chile",
+      "Oman and Canada",
+      "New Zealand and Chile"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "When there aren't any hostels, they sleep in a hotel.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "A cheap, simple hotel",
+     "o": [
+      "route",
+      "oxygen",
+      "altitude",
+      "hostel"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 9: Writing – An interview": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which list has only question words?",
+     "o": [
+      "what, and, but, who, how, why",
+      "the, best, most, big, how, why",
+      "is, are, do, does, can, could",
+      "what, when, where, who, how, why"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Hashim's biggest model is a model of a ship.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "___ did you start this hobby? – When I was six.",
+     "o": [
+      "When",
+      "Where",
+      "Who"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"what do you like swimming?\" is a correct question.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Asks about a person",
+     "o": [
+      "Where",
+      "When",
+      "Why",
+      "Who"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 10: Over to you! and Review": [
+   [
+    {
+     "t": "mcq",
+     "q": "Who wants to learn to ski after reading the article?",
+     "o": [
+      "John",
+      "Hashim",
+      "Sultan",
+      "Henry"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Henry wants to learn to ski after reading the article.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which child is reading a book about cycling?",
+     "o": [
+      "John",
+      "Henry",
+      "Hashim"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"I am usually doing karate after school\" is correct.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Reading about cycling",
+     "o": [
+      "Henry",
+      "Hashim",
+      "Cody",
+      "John"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 11: Get ready for… (exam practice)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which girl is Katy?",
+     "o": [
+      "the one who is cycling",
+      "the one who is swimming",
+      "the one with the blue helmet",
+      "the one who is running"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "\"Photos of people are easy to take because people smile\" is correct.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "There are lots of things ___ you can photograph.",
+     "o": [
+      "which",
+      "who",
+      "where"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use \"who\" for things and \"which\" for people.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "For people: the boy ___",
+     "o": [
+      "which",
+      "where",
+      "when",
+      "who"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Graded reader 1: Let’s Play Volleyball!": [
+   [
+    {
+     "t": "mcq",
+     "q": "What does Huda's mum say to her?",
+     "o": [
+      "You can't do anything, Huda!",
+      "Stop playing sport, Huda!",
+      "Go home, Huda!",
+      "You can do lots of things, Huda!"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Maryam is good at volleyball.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where are the girls?",
+     "o": [
+      "at the sports centre",
+      "at the beach",
+      "at school"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Maryam can't play volleyball.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Maryam's sport",
+     "o": [
+      "karate",
+      "gymnastics",
+      "swimming",
+      "volleyball"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Graded reader 2: The Blue Butterfly": [
+   [
+    {
+     "t": "mcq",
+     "q": "What is the second \"butterfly\"?",
+     "o": [
+      "an eraser on a puzzle book",
+      "a real butterfly",
+      "a crown",
+      "a badge on a costume"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The first \"butterfly\" is really an eraser on a puzzle book.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What are Jood and Hassan doing?",
+     "o": [
+      "photography",
+      "puzzles",
+      "karate"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Some girls are playing board games in the park.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Hassan wants a blue ...",
+     "o": [
+      "bird",
+      "flower",
+      "fish",
+      "butterfly"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 1: Vocabulary – Devices": [
+   [
+    {
+     "t": "mcq",
+     "q": "What is a password?",
+     "o": [
+      "a device for music",
+      "a big screen",
+      "a kind of printer",
+      "something you type to open your laptop or app"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "You type a password to open your laptop or an app.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "A small computer you can carry:",
+     "o": [
+      "laptop",
+      "printer",
+      "speaker"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A printer is a device for taking photos.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Small computer to carry",
+     "o": [
+      "printer",
+      "speaker",
+      "app",
+      "laptop"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 2: Team Talk – A problem with technology": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which expression do we use for bad news?",
+     "o": [
+      "Why not?",
+      "That sounds good.",
+      "How about…?",
+      "Oh, dear!"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Arlo used his brother's computer.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What happened to Arlo's laptop?",
+     "o": [
+      "It stopped working.",
+      "He lost it.",
+      "It was new."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Arlo used Mr Ammar's computer.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Bad news reply",
+     "o": [
+      "Why not?",
+      "Really good!",
+      "Well done!",
+      "Oh, dear!"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 3: Grammar – could/couldn’t, had to/didn’t have to": [
+   [
+    {
+     "t": "mcq",
+     "q": "What is the past of has to?",
+     "o": [
+      "has had",
+      "have to",
+      "haded to",
+      "had to"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The past of have to is had to.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "The past of can is ___.",
+     "o": [
+      "could",
+      "can't",
+      "had"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Hanan's dad listened to the news on the radio before.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Past of can",
+     "o": [
+      "can't",
+      "had to",
+      "has to",
+      "could"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 4: Book club – A poem": [
+   [
+    {
+     "t": "mcq",
+     "q": "What does the poem say about the new phone?",
+     "o": [
+      "It is bigger and heavier.",
+      "It has no screen.",
+      "It is very old.",
+      "It is thinner, lighter and brighter."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "\"Lighter\" rhymes with \"brighter\".",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word rhymes with \"brighter\"?",
+     "o": [
+      "lighter",
+      "phone",
+      "map"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The poem says the new phone's screen is much darker.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Rhymes with brighter",
+     "o": [
+      "phone",
+      "map",
+      "screen",
+      "lighter"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 5: Vocabulary and Grammar – Using technology and comparative adverbs": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which list has only irregular comparatives?",
+     "o": [
+      "faster, harder",
+      "more quickly, more easily",
+      "faster, more clearly",
+      "better, worse"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The comparative of well is better.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "___ the computer (start it)",
+     "o": [
+      "turn on",
+      "turn off",
+      "upload"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The comparative of badly is badder.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Comparative of fast",
+     "o": [
+      "more fast",
+      "fastly",
+      "fastest",
+      "faster"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 6: Culture and Project – Technology helps us": [
+   [
+    {
+     "t": "mcq",
+     "q": "What does VR stand for?",
+     "o": [
+      "Very Real",
+      "Video Radio",
+      "Visual Reader",
+      "Virtual Reality"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "E-readers can make letters very large.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which words mean a person needs extra help?",
+     "o": [
+      "special needs",
+      "password",
+      "website"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Special alarm clocks for deaf children are very loud.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Cannot hear",
+     "o": [
+      "blind",
+      "tall",
+      "brave",
+      "deaf"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 7: English in action – Asking for help": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which of these is a response, not a question?",
+     "o": [
+      "Could you help me?",
+      "Do you have time to help me?",
+      "Can you show me how to …?",
+      "Sorry, not now."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "In the dialogue, the girl wants to print her English homework.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: Can you show me ___ to turn it on?",
+     "o": [
+      "how",
+      "what",
+      "who"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "“Sorry, not now.” means you are happy to help right away.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Polite: ___ you help me, please?",
+     "o": [
+      "Must",
+      "Don’t",
+      "Stop",
+      "Could"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 8: Literacy – Reading reviews": [
+   [
+    {
+     "t": "mcq",
+     "q": "How do you move around the city in TopCity?",
+     "o": [
+      "You draw a map.",
+      "You talk to the screen.",
+      "You press one button only.",
+      "You write instructions."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "You move around TopCity by writing instructions, like programming a computer.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What score did GameFan get last night?",
+     "o": [
+      "50,000 points",
+      "5,000 points",
+      "500 points"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "MrCool001 thinks TopCity is the best programming game of all.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "What are you looking for in TopCity?",
+     "o": [
+      "a password",
+      "a friend",
+      "a phone",
+      "treasure"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 9: Writing – A review": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which of these is NOT a usual part of a review?",
+     "o": [
+      "an introduction",
+      "good points",
+      "bad points",
+      "a shopping list"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "A good review gives good points and bad points.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "How long does FunTimeforKids take to open?",
+     "o": [
+      "two minutes",
+      "two seconds",
+      "two hours"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The FunTimeforKids app opens very quickly.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "The adverb of easy",
+     "o": [
+      "easy",
+      "easier",
+      "easiest",
+      "easily"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 10: Over to you! and Review": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which sentence is from the dictation?",
+     "o": [
+      "They can’t use computers today.",
+      "They didn’t like the computers.",
+      "They had new computers.",
+      "They couldn’t use the computers yesterday."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Najla downloaded a book onto her e-reader because she reads really slowly.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: I read ___ than my sister. (fast)",
+     "o": [
+      "faster",
+      "more fast",
+      "fastly"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "“We didn’t had to wear uniform.” is correct.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Part of a tablet you look at",
+     "o": [
+      "password",
+      "printer",
+      "icon",
+      "screen"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 11: Get ready for… (exam practice)": [
+   [
+    {
+     "t": "mcq",
+     "q": "What should you check when you write words in Reading and Writing Part 1?",
+     "o": [
+      "your drawing",
+      "the page colour",
+      "your name only",
+      "your spelling"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "A café is a place where a waiter brings your food.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Write the word: a small computer you can carry in a bag.",
+     "o": [
+      "a laptop",
+      "a printer",
+      "a screen"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A printer is a small computer you can carry in a bag.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "A small computer you can carry",
+     "o": [
+      "printer",
+      "screen",
+      "theatre",
+      "laptop"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Graded reader 1: The Lost Phone": [
+   [
+    {
+     "t": "mcq",
+     "q": "How did Jake lose his phone?",
+     "o": [
+      "He left it in a café.",
+      "Finn took it.",
+      "He dropped it in the sea.",
+      "A strong wind came and it fell out of the window."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The family took a coach because they couldn’t take their car.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where are Jake and Finn going?",
+     "o": [
+      "London",
+      "Paris",
+      "Muscat"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Finn saw a cat moving under a bush.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "City they are going to",
+     "o": [
+      "Paris",
+      "Rome",
+      "Cairo",
+      "London"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Graded reader 2: The Animal App": [
+   [
+    {
+     "t": "mcq",
+     "q": "Where was Laila looking at a small animal?",
+     "o": [
+      "in the kitchen",
+      "in the car",
+      "at school",
+      "in the grass"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "On Saturday, Dana looked after her little sister Laila.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What is green with long legs?",
+     "o": [
+      "a grasshopper",
+      "a bee",
+      "a cat"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A bee flies faster than a bird.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Green with long legs",
+     "o": [
+      "bee",
+      "spider",
+      "cat",
+      "grasshopper"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Consolidation: Grammar, vocabulary and progress": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which comparative adverb is irregular?",
+     "o": [
+      "more quietly",
+      "more carefully",
+      "more clearly",
+      "better"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The comparative of badly is worse.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: Jood’s grandma ___ send emails to her friends.",
+     "o": [
+      "couldn’t",
+      "can’t",
+      "doesn’t have to"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The comparative of well is weller.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "___ online",
+     "o": [
+      "take",
+      "press",
+      "type",
+      "go"
+     ],
+     "a": 4
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Which phrase is correct?",
+     "o": [
+      "take the internet",
+      "download an app",
+      "download a button",
+      "press an app"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "“Didn’t have to” means it was not necessary in the past.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: Jood ___ remember lots of passwords!",
+     "o": [
+      "had to",
+      "has to",
+      "have to"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "We say “Jood have to remember lots of passwords.”",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "___ a selfie",
+     "o": [
+      "type",
+      "take",
+      "go",
+      "search"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Unit 3 – Lesson 1: Vocabulary – Places and buildings": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which group of places is all for sport?",
+     "o": [
+      "palace, castle, tower",
+      "factory, office building, hospital",
+      "harbour, apartment building, palace",
+      "stadium, sports centre, swimming pool"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Doctors and nurses work in a hospital.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where do big boats stop?",
+     "o": [
+      "at a harbour",
+      "at a stadium",
+      "at a palace"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A king or queen lives in a factory.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Doctors and nurses work here",
+     "o": [
+      "palace",
+      "factory",
+      "harbour",
+      "hospital"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 3 – Lesson 2: Team Talk – Finding the sports centre": [
+   [
+    {
+     "t": "mcq",
+     "q": "Why didn’t Julia like hospital?",
+     "o": [
+      "The nurses were not nice.",
+      "The food was bad.",
+      "She had to stay there for a year.",
+      "She was bored and couldn’t go online."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Sharifa lives in the apartment building.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where does Sharifa live?",
+     "o": [
+      "in the apartment building",
+      "in the hospital",
+      "in the stadium"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "“I went to the stadium” is in the present simple.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "The girls are looking for the…",
+     "o": [
+      "stadium",
+      "hospital",
+      "factory",
+      "sports centre"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 3 – Lesson 3: Grammar – Relative pronouns": [
+   [
+    {
+     "t": "mcq",
+     "q": "Where is the new cinema?",
+     "o": [
+      "next to the hospital",
+      "behind the sports centre",
+      "at the harbour",
+      "next to the office building where Dad works"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We use when for time.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which pronoun do we use for people?",
+     "o": [
+      "who",
+      "where",
+      "when"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "“Camels are animals who live in the desert.” is the best answer in the lesson.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Pronoun for people",
+     "o": [
+      "where",
+      "when",
+      "which",
+      "who"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 3 – Lesson 4: Book club – A mystery story": [
+   [
+    {
+     "t": "mcq",
+     "q": "Whose paintings were lost?",
+     "o": [
+      "Eddie’s",
+      "Lord Bingley’s",
+      "the guide’s",
+      "Lady Charlotte’s"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "A mystery story often has a kind of detective.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Who is Lady Charlotte?",
+     "o": [
+      "a woman who lived in the palace long ago",
+      "the guide",
+      "Eddie’s teacher"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Lord Bingley is angry because Eddie found the secret room.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Lost things Eddie found",
+     "o": [
+      "phones",
+      "keys",
+      "coins",
+      "paintings"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 3 – Lesson 5: Vocabulary and Grammar – Parts of buildings and the Past continuous": [
+   [
+    {
+     "t": "mcq",
+     "q": "“You use this to go up a floor. It uses electricity.” What is it?",
+     "o": [
+      "the steps",
+      "a wall",
+      "a corner",
+      "a lift"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "An escalator is a set of moving stairs.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What is above your head in a room?",
+     "o": [
+      "the ceiling",
+      "the floor",
+      "the corner"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In the Past continuous, we say “They was watching TV.”",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Above your head in a room",
+     "o": [
+      "floor",
+      "corner",
+      "exit",
+      "ceiling"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 3 – Lesson 6: Culture and Project – Ancient cities in our region": [
+   [
+    {
+     "t": "mcq",
+     "q": "Where did the spices in Petra come from?",
+     "o": [
+      "only Jordan",
+      "Tunisia and Lebanon",
+      "Europe",
+      "India, China and Egypt"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Baalbek is more than 2,000 years old.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "How old is Baalbek?",
+     "o": [
+      "more than 2,000 years old",
+      "about 20 years old",
+      "about 200 years old"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "There is a new theatre in Petra today.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Ancient city in Lebanon",
+     "o": [
+      "Petra",
+      "Carthage",
+      "Jerash",
+      "Baalbek"
+     ],
+     "a": 4
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Which three things should your project notes include?",
+     "o": [
+      "the weather every day",
+      "how old the city is, the most important buildings, what you can see today",
+      "your name, age and phone number",
+      "the price of tickets only"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "Carthage was an important harbour on the coast of Tunisia.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which country is Petra in?",
+     "o": [
+      "Lebanon",
+      "Jordan",
+      "Tunisia"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "“Ancient” means very new and modern.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Ancient city in Tunisia",
+     "o": [
+      "Jerash",
+      "Carthage",
+      "Petra",
+      "Baalbek"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Unit 3 – Lesson 7: English in action – Giving directions in a building": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which question asks for directions politely?",
+     "o": [
+      "Where’s the bookshop? Tell me now!",
+      "Bookshop?",
+      "You go to the bookshop.",
+      "Excuse me. Can you tell me where the bookshop is, please?"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "To get to the bookshop, you take the escalator to the second floor.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where is the shoe shop?",
+     "o": [
+      "the third shop on the right",
+      "upstairs on the left",
+      "next to the exit"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The café is on the second floor.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Opposite of upstairs",
+     "o": [
+      "along",
+      "around",
+      "straight on",
+      "downstairs"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 3 – Lesson 8: Literacy – Reading a short story": [
+   [
+    {
+     "t": "mcq",
+     "q": "What did Rasha sketch?",
+     "o": [
+      "a small green frog",
+      "a tall skyscraper",
+      "a red car",
+      "a big orange bird with a long blue tail"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The bird in the story could speak to Rasha.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What was Rasha’s problem?",
+     "o": [
+      "She had no ideas for a story.",
+      "She lost her bird.",
+      "She was late for school."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "“Amazed” describes a thing, and “amazing” describes how a person feels.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Say very quietly",
+     "o": [
+      "yell",
+      "zoom",
+      "sketch",
+      "whisper"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 3 – Lesson 9: Writing – A short story": [
+   [
+    {
+     "t": "mcq",
+     "q": "How does the story end?",
+     "o": [
+      "Ammar goes home sad.",
+      "Ammar becomes a football player.",
+      "Qais breaks his foot.",
+      "Amjed Rashid gives Ammar two tickets for a match in April."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Ammar fell down some steps and broke his foot.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where were Ammar and Qais?",
+     "o": [
+      "at the stadium",
+      "at the hospital",
+      "at the harbour"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "“Happily” and “quickly” are adjectives.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Where Ammar and Qais were",
+     "o": [
+      "hospital",
+      "harbour",
+      "palace",
+      "stadium"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 3 – Lessons 10–11: Over to you!, Review and Get ready for…": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which exam tip helps with cloze tasks?",
+     "o": [
+      "Choose the first answer you see.",
+      "Leave all the gaps empty.",
+      "Read only the title.",
+      "When you finish, read the whole text again."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "A skyscraper is a tall building which has lots of floors.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Unscramble the building word: tessp",
+     "o": [
+      "steps",
+      "stairs",
+      "stops"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Only one student won the prize.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Unscramble: tessp",
+     "o": [
+      "stops",
+      "sets",
+      "tests",
+      "steps"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Learning Club 1 – Lesson 1: Language booster – Places and directions": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which question asks for directions politely?",
+     "o": [
+      "College where?",
+      "Tell me the college now.",
+      "Where college you?",
+      "Excuse me. Can you tell me where the college is, please?"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Teenagers and adults study at a college.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where do firefighters work?",
+     "o": [
+      "at a fire station",
+      "at a college",
+      "at an airport"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "On the way to the college, he walks past the fire station.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Firefighters work here",
+     "o": [
+      "airport",
+      "college",
+      "square",
+      "fire station"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Learning Club 1 – Lessons 2–3: CLIL Science – How can we classify technology?": [
+   [
+    {
+     "t": "mcq",
+     "q": "What is an identification key?",
+     "o": [
+      "a key to open a door",
+      "a password for a computer",
+      "a list of prices",
+      "Yes/No questions that help you identify something"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Virtual Reality (VR) is new technology.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Is Virtual Reality old or new technology?",
+     "o": [
+      "new",
+      "old",
+      "neither"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We can only classify technology in one way.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Old or new: steam train",
+     "o": [
+      "new",
+      "smart",
+      "online",
+      "old"
+     ],
+     "a": 4
+    }
+   ]
   ]
  }
 }

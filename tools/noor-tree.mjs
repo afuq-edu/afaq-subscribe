@@ -58,7 +58,7 @@ for (const [id, r] of [...best].sort((a, b) => a[0].localeCompare(b[0]))) {
 }
 const aliases = [];
 if (ALIAS) for (const id of [...added, ...changed]) {
-  const other = /-2$/.test(id) ? id.replace(/-2$/, '') : id + '-2';
+  const other = /^[a-z]+-\d+-2$/.test(id) ? id.replace(/-2$/, '') : id + '-2'; // ar-2 = grade 2 (its other shift is ar-2-2), ar-2-2 = grade 2 shift 2
   if (!(other in T)) { aliases.push(`${other} → ${id}`); if (WRITE) T[other] = id; }
 }
 aliases.forEach((a) => console.log(`= ${a} (الفترة الأخرى تستعمل الشجرة نفسها)`));

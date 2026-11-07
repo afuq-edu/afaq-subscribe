@@ -2,7 +2,7 @@
  "key": "en-5",
  "subject": "اللغة الإنجليزية",
  "grade": "الصف الخامس",
- "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ)",
+ "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ) · sessions = أسئلة الحصة الثانية فما بعدها لكل درس (lessons = الحصة الأولى)",
  "lessons": {
   "Lesson 1: Welcome back (story and freetime activities)": [
    {
@@ -1983,6 +1983,1875 @@
     ],
     "a": 2
    }
+  ]
+ },
+ "sessions": {
+  "Lesson 2: Grammar – Present simple with when / before / after": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which sentence is correct?",
+     "o": [
+      "When Arwa get home, she does her homework.",
+      "When Arwa gets home, she do her homework.",
+      "When Arwa getting home, she does her homework.",
+      "When Arwa gets home, she does her homework."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We put a comma after the first part when a sentence starts with when, before or after.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "I have a shower ___ I go to school.",
+     "o": [
+      "before",
+      "after",
+      "when"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"I wash my hands after I eat\" is the healthy way to say we wash our hands first.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Shower first, then school: shower ___ school",
+     "o": [
+      "after",
+      "when",
+      "then",
+      "before"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 2: Story – Talent show": [
+   [
+    {
+     "t": "mcq",
+     "q": "Complete: Sami and Lottie meet a friendly ___ at the talent show.",
+     "o": [
+      "dog",
+      "teacher",
+      "robot",
+      "cat"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The cat in the story is very friendly.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which fruit does Fatma eat?",
+     "o": [
+      "a banana",
+      "an apple",
+      "an orange"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The cat's name is Rayner.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Tameem is great at ___.",
+     "o": [
+      "juggling",
+      "singing",
+      "chess",
+      "karate"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 3: Grammar – Comparative and superlative adjectives": [
+   [
+    {
+     "t": "mcq",
+     "q": "How do long adjectives make the superlative?",
+     "o": [
+      "add -est",
+      "add -er",
+      "the more + adjective",
+      "the most + adjective"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We use more with long adjectives: more hard-working.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "big → bigger → ___",
+     "o": [
+      "the biggest",
+      "the bigest",
+      "the most big"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"She is the most short girl in the class\" is correct.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "short → ___ (comparative)",
+     "o": [
+      "shortest",
+      "more short",
+      "shortter",
+      "shorter"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 4: Vocabulary and Grammar – Hobbies and be good at": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which list has only hobby phrases from the lesson?",
+     "o": [
+      "curly hair, a beard, tall",
+      "kind, shy, rude",
+      "Monday, Tuesday, Friday",
+      "fix toys, juggle, bake a cake"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Great at is better than good at.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "I'm good at ___ cakes. (bake)",
+     "o": [
+      "baking",
+      "bake",
+      "bakeing"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Terrible at means you do something very well.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "bake → ___",
+     "o": [
+      "bakeing",
+      "bakking",
+      "bakes",
+      "baking"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 5: Culture – Good manners around the world": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which phrase can start a rule in the good manners book?",
+     "o": [
+      "Yesterday I …",
+      "I'm good at …",
+      "He's got …",
+      "In Oman, you must …"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "In Oman, you take off your shoes when you go inside someone's house.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "It's polite ___ say \"thank you\".",
+     "o": [
+      "to",
+      "for",
+      "at"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In Japan, it's polite to laugh with your mouth wide open.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Rude to laugh with your mouth wide open",
+     "o": [
+      "China",
+      "the UK",
+      "Oman",
+      "Japan"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 8: Skills – Listening, speaking and writing a description": [
+   [
+    {
+     "t": "mcq",
+     "q": "What doesn't Maite's granny like?",
+     "o": [
+      "making sushi",
+      "her family",
+      "cooking",
+      "watching cooking shows or films about cooks"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "In our description, we can say why the person is important to us.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What's more delicious: chocolate ___ a cupcake?",
+     "o": [
+      "or",
+      "so",
+      "because"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We start each sentence with a small letter.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Linking word for a reason",
+     "o": [
+      "or",
+      "and",
+      "but",
+      "because"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 9: Review": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which form is correct?",
+     "o": [
+      "the hard-workingest",
+      "the more hard-working",
+      "the most hardest-working",
+      "the most hard-working"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The opposite of polite is rude.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "My brother always says ___ and thank you.",
+     "o": [
+      "please",
+      "yes",
+      "why"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"My sister is tidyer than I am\" is spelled correctly.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Opposite of polite",
+     "o": [
+      "kind",
+      "tidy",
+      "shy",
+      "rude"
+     ],
+     "a": 4
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Which sentence helps you check your progress?",
+     "o": [
+      "Who's that boy over there?",
+      "Now I can … / I need to work more on …",
+      "On Mondays, I …",
+      "Before I go to school, …"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "\"He is good at doing experiments\" is correct.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "My sister is ___ than I am. (tidy)",
+     "o": [
+      "more tidy",
+      "tidier",
+      "tidyer"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "\"He likes making pizza\" answers \"What's he like?\"",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Opposite of shy",
+     "o": [
+      "rude",
+      "confident",
+      "lazy",
+      "mean"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Write about your avatar's appearance and personality. Which is best?",
+     "o": [
+      "My avatar is good at bake.",
+      "My avatar has got kind hair.",
+      "My avatar is the most tall.",
+      "My avatar has got short, curly hair. She's confident and hard-working."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "An exam tip: read each word to see which one fits best.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "He is shorter than me, but he is not the ___ person in our family.",
+     "o": [
+      "most short",
+      "shorter",
+      "shortest"
+     ],
+     "a": 3
+    },
+    {
+     "t": "tf",
+     "q": "The superlative of short is the most short.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "mean → the ___",
+     "o": [
+      "most mean",
+      "meaner",
+      "meanst",
+      "meanest"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Fun corner (optional lesson)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which is the correct superlative?",
+     "o": [
+      "the hotest",
+      "the most hot",
+      "the hotter",
+      "the hottest"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "\"Which is the hottest month in the year?\" is correct.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Are you ___ than your best friend? (confident)",
+     "o": [
+      "more confident",
+      "confidenter",
+      "most confident"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Are you confidenter than your best friend?\" is correct.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "easy → ___",
+     "o": [
+      "easyer",
+      "more easy",
+      "easiest",
+      "easier"
+     ],
+     "a": 4
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Which word do we put before a superlative?",
+     "o": [
+      "because",
+      "the",
+      "than",
+      "a"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "We use because to give a reason for our answer.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which is the ___ month in the year? (hot)",
+     "o": [
+      "most hot",
+      "hottest",
+      "hotest"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "The superlative of interesting is the interestingest.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "hot → the ___",
+     "o": [
+      "hotter",
+      "hottest",
+      "hotest",
+      "most hot"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Write a new game question with a superlative.",
+     "o": [
+      "What is more interesting book you know?",
+      "What is the interestingest book you know?",
+      "What is interesting than book you know?",
+      "What is the most interesting book you know? Why?"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "\"Who is the kindest person you know?\" uses a superlative.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "difficult → ___",
+     "o": [
+      "difficultest",
+      "more difficult",
+      "difficulter",
+      "most difficult"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "It's better to be rude than polite.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Answer with a reason: Is it better to be polite or rude?",
+     "o": [
+      "It's better to be rude because people like it.",
+      "It's gooder to be polite.",
+      "It's better polite.",
+      "It's better to be polite because people like polite people."
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Graded readers 1 and 2": [
+   [
+    {
+     "t": "mcq",
+     "q": "What is Hisham good at at the start of The Tennis Lesson?",
+     "o": [
+      "tennis and football",
+      "karate and juggling",
+      "baking and cooking",
+      "painting and doing experiments"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Arwa is more confident than Areej.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which bowl is the biggest?",
+     "o": [
+      "the red bowl",
+      "the blue bowl",
+      "the green bowl"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The recipe was for eighty people.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "The biggest bowl",
+     "o": [
+      "blue",
+      "green",
+      "yellow",
+      "red"
+     ],
+     "a": 4
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "What are the names of the two graded readers?",
+     "o": [
+      "My Granny and My family's unusual",
+      "The Baking Day and The Tennis Lesson",
+      "Talent show and Welcome back",
+      "Stop, thief! and The Space Race"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "In The Tennis Lesson, the boys are playing tennis.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "The blue bowl is ___ than the red bowl.",
+     "o": [
+      "the smallest",
+      "smaller",
+      "bigger"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "Milk and bananas are foods in the recipe.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "The recipe was for ___ people.",
+     "o": [
+      "two",
+      "eight",
+      "eighty",
+      "eighteen"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Retell The Baking Day with a superlative. Which sentence is correct?",
+     "o": [
+      "The red bowl is the bigger.",
+      "The red bowl is biggest than the blue bowl.",
+      "The red bowl is the most big.",
+      "The red bowl is the biggest."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Hamed is the best at tennis in the class.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Why is the cake so big?",
+     "o": [
+      "They used a big oven.",
+      "They wanted a party for the school.",
+      "They counted badly."
+     ],
+     "a": 3
+    },
+    {
+     "t": "tf",
+     "q": "At the start of the story, Hisham is good at tennis.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "The cake was for ___ people.",
+     "o": [
+      "eight",
+      "eighteen",
+      "twelve",
+      "eighty"
+     ],
+     "a": 4
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Sort the adjectives: shy, kind, polite, hard-working. Which is correct?",
+     "o": [
+      "Hisham: all four. Hamed: none.",
+      "Hisham: shy, hard-working. Hamed: kind, polite.",
+      "Hisham: kind, polite. Hamed: shy, hard-working.",
+      "Hisham: shy, polite. Hamed: kind, hard-working."
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "One main idea of The Tennis Lesson is: friends help each other.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which is a food in the recipe?",
+     "o": [
+      "flour",
+      "bananas",
+      "milk"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Hisham's ball always hits the net because the net is broken.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "More confident: Arwa or Areej?",
+     "o": [
+      "Hamed",
+      "Arwa",
+      "Areej",
+      "Hisham"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Why does Hisham's ball always hit the net?",
+     "o": [
+      "The ball is too big.",
+      "Hamed moves the net.",
+      "He doesn't like tennis.",
+      "He isn't good at hitting the ball with his racquet yet."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Arwa is more confident than Areej.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What sport are the boys playing?",
+     "o": [
+      "karate",
+      "tennis",
+      "football"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "The recipe was for eighty people.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "A food in the recipe",
+     "o": [
+      "bananas",
+      "milk",
+      "rice",
+      "eggs"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 1: Vocabulary – Technology": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which three verbs are in this lesson?",
+     "o": [
+      "juggle, bake, fix",
+      "run, swim, jump",
+      "buy, sell, pay",
+      "carry, call, study"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "A mobile phone is a small telephone you carry with you.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "You touch the letters on it to write. What is it?",
+     "o": [
+      "a keyboard",
+      "a mouse",
+      "a CD player"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say \"study the doctor\".",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "You type on it.",
+     "o": [
+      "mouse",
+      "letter",
+      "CD player",
+      "keyboard"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 2: Story – Then and now": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which words are from the story?",
+     "o": [
+      "diamond, magnet, suspect, circus",
+      "stage, karate, banana, juggling",
+      "bowl, flour, eggs, sugar",
+      "speaking tube, can, hose, string, code"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Over 100 years ago, people in big houses used speaking tubes.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What do the children use to make a speaking tube?",
+     "o": [
+      "two cans, a hose and some string",
+      "two bottles and a box",
+      "a tablet and a mouse"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The children make a speaking tube with two bottles.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Old phone in big houses",
+     "o": [
+      "mobile phone",
+      "tablet",
+      "keyboard",
+      "speaking tube"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 3: Grammar – Past simple": [
+   [
+    {
+     "t": "mcq",
+     "q": "What is the past simple of drink?",
+     "o": [
+      "drinked",
+      "drinks",
+      "drinking",
+      "drank"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "\"Did you have a phone?\" \"Yes, we did.\" is correct.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "play → ___",
+     "o": [
+      "played",
+      "plaid",
+      "plaied"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"They didn't drank water.\" is correct.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "have → ___",
+     "o": [
+      "haved",
+      "has",
+      "hid",
+      "had"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 4: Vocabulary and Grammar – Verbs and could / couldn’t": [
+   [
+    {
+     "t": "mcq",
+     "q": "What comes after could?",
+     "o": [
+      "verb + -ing",
+      "verb + -ed",
+      "to + verb",
+      "the base verb"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Could is the same for I, you, he, she, we and they.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "win ___",
+     "o": [
+      "a race",
+      "a letter",
+      "a face"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say \"post an email\" and \"send a letter\" in this lesson.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "___ a letter",
+     "o": [
+      "tie",
+      "hold",
+      "win",
+      "post"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 5: Culture – World museums": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which words are from this lesson?",
+     "o": [
+      "keyboard, mouse, tablet, CD player",
+      "kind, shy, polite, rude",
+      "juggle, karate, stage, banana",
+      "ancient tools, inventions, explore, volcano"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "You can learn about robot design at the Shanghai Museum of Science and Technology.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where is the Natural History Museum?",
+     "o": [
+      "in London",
+      "in Shanghai",
+      "in Manah"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Bait Al Zubair is in a modern building.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "City of the Natural History Museum",
+     "o": [
+      "Shanghai",
+      "Muscat",
+      "Manah",
+      "London"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 8: Skills – Listening, speaking and writing a report": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which are the four report headings?",
+     "o": [
+      "Who? What's he like? Where's he from? How old?",
+      "Breakfast, lunch, dinner, snack",
+      "Monday, Tuesday, Wednesday, Thursday",
+      "When and where? What's special? What could you do? What did you learn?"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "A report about a visit starts with the date.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where did Osama go?",
+     "o": [
+      "the Louvre Abu Dhabi",
+      "the British Museum",
+      "the Car Museum"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A report is written in one long line with no paragraphs.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Osama's museum",
+     "o": [
+      "British Museum",
+      "Car Museum",
+      "Science Museum",
+      "Louvre Abu Dhabi"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 10: Get ready for A1 Movers": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which sentence do we use in Speaking Part 3?",
+     "o": [
+      "This picture is my favourite.",
+      "I can't see the picture.",
+      "The picture is big.",
+      "This picture is different because …"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "In the exam, the answers are often very similar, so read each one carefully.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: I use my computer to send ______.",
+     "o": [
+      "emails",
+      "rockets",
+      "shoelaces"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Yes, I painted a picture.\" is a good answer to \"Did you make a rocket?\"",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Odd one out: computer, tablet, phone, letter",
+     "o": [
+      "computer",
+      "tablet",
+      "phone",
+      "letter"
+     ],
+     "a": 4
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Which words help you tell a story from pictures?",
+     "o": [
+      "big, bigger, biggest",
+      "first, then, next, finally",
+      "who, which, where",
+      "will, won't"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "To explain your choice, you can say: This picture is different because …",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: I want to win a ______.",
+     "o": [
+      "tablet",
+      "race",
+      "letter"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "In Speaking Part 4, one word like \"Yes\" is the best answer.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "First word to start a story",
+     "o": [
+      "then",
+      "first",
+      "finally",
+      "next"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Malik: Will you go to Space Club this afternoon? Choose the best answer.",
+     "o": [
+      "No, I didn't go yesterday.",
+      "Yes, I went there last week.",
+      "Yes, it is a club.",
+      "No, I don't think I'll go today. I've got a lot of homework."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "When you tell a story from pictures, you can use first, then, next and finally.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: Sometimes I listen to ______ on my computer.",
+     "o": [
+      "a comet",
+      "a bag",
+      "music"
+     ],
+     "a": 3
+    },
+    {
+     "t": "tf",
+     "q": "You need electricity to write a letter.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Relative word for people",
+     "o": [
+      "which",
+      "where",
+      "when",
+      "who"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 1: Vocabulary – Space": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which thing do people make?",
+     "o": [
+      "a comet",
+      "a star",
+      "the Moon",
+      "a satellite"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "A rocket is something people make.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Astronauts fly into space in it. What is it?",
+     "o": [
+      "a rocket",
+      "a telescope",
+      "a comet"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "It is safe to look at the Sun.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Astronauts fly into space in it",
+     "o": [
+      "comet",
+      "star",
+      "planet",
+      "rocket"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 2: Story – The Science Fair": [
+   [
+    {
+     "t": "mcq",
+     "q": "What happens to the first model?",
+     "o": [
+      "It wins a prize.",
+      "It floats away.",
+      "It goes to the Moon.",
+      "It breaks."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Bo breaks the model.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What are the children making for the Science Fair at first?",
+     "o": [
+      "a model of the solar system",
+      "a rocket cake",
+      "a telescope"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The Moon is about a thousand kilometres from the Earth.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "The children's first model",
+     "o": [
+      "space station",
+      "rocket",
+      "telescope",
+      "solar system"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 3: Grammar – will / won’t": [
+   [
+    {
+     "t": "mcq",
+     "q": "What comes after will?",
+     "o": [
+      "a verb with -s",
+      "a verb with -ed",
+      "a verb with -ing",
+      "the base verb"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "\"Won't\" is the short form of \"will not\".",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: It's Hilal's birthday tomorrow. I ______ get him a present later.",
+     "o": [
+      "will",
+      "did",
+      "was"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use will to talk about yesterday.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Short form of \"I will\"",
+     "o": [
+      "I'm",
+      "I've",
+      "I'd",
+      "I'll"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 4: Vocabulary and Grammar – Big numbers and How …?": [
+   [
+    {
+     "t": "mcq",
+     "q": "How deep is the Sea of Oman?",
+     "o": [
+      "370 metres",
+      "37,000 metres",
+      "3,474 kilometres",
+      "3,700 metres"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We ask about the sea with \"How deep …?\"",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Write in numbers: five thousand",
+     "o": [
+      "5,000",
+      "50,000",
+      "500"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We ask about the distance from Muscat to Salalah with \"How tall …?\"",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Write: 50,000",
+     "o": [
+      "five thousand",
+      "five hundred",
+      "fifteen thousand",
+      "fifty thousand"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 5: Culture – Frankincense Land": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which two places were important frankincense ports?",
+     "o": [
+      "Bat and Nizwa",
+      "Bahla and Nizwa",
+      "Wadi Dawkah and Bat",
+      "Al Balid and Khawr Ruri"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Many frankincense trees grow in Wadi Dawkah in the south of Oman.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where do many frankincense trees grow?",
+     "o": [
+      "Wadi Dawkah",
+      "Bat",
+      "Nizwa"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The Museum of Frankincense Land is in Wadi Dawkah.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Frankincense comes from …",
+     "o": [
+      "rocks",
+      "the sea",
+      "animals",
+      "trees"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 8: Skills – Listening, speaking and writing a blog post": [
+   [
+    {
+     "t": "mcq",
+     "q": "What do we use at the end of a question?",
+     "o": [
+      "a full stop",
+      "a comma",
+      "an exclamation mark",
+      "a question mark"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Astronauts have three meals a day.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What is Astronaut Ali's blog post about?",
+     "o": [
+      "food on the ISS",
+      "sport on Earth",
+      "a corner shop"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Astronauts wear a spacesuit outside the ISS because it is very hot.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Topic of Ali's blog post",
+     "o": [
+      "clothes",
+      "hobbies",
+      "repairs",
+      "food"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 1: Vocabulary – Shops": [
+   [
+    {
+     "t": "mcq",
+     "q": "What can you buy at the fishmonger's?",
+     "o": [
+      "meat",
+      "medicine",
+      "toys",
+      "fish"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "You can buy medicine at the pharmacy.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where can you buy meat?",
+     "o": [
+      "at the butcher's",
+      "at the pharmacy",
+      "at the toy shop"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A jeweller's sells footballs.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Buy fish here",
+     "o": [
+      "butcher's",
+      "jeweller's",
+      "kiosk",
+      "fishmonger's"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 2: Story – Stop, thief!": [
+   [
+    {
+     "t": "mcq",
+     "q": "How do the children know the man?",
+     "o": [
+      "He is their teacher.",
+      "He works in the phone shop.",
+      "He is Sami's uncle.",
+      "He is the rude man who walked into Fatma earlier."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "An escalator is a machine which carries you upstairs and downstairs.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What does Sami want to buy for his mum?",
+     "o": [
+      "a phone case",
+      "a necklace",
+      "a football"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The thief is carrying a red school bag.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "A person who steals",
+     "o": [
+      "shopkeeper",
+      "teacher",
+      "friend",
+      "thief"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 3: Grammar – Relative clauses (who, which, where)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which sentence has a relative clause?",
+     "o": [
+      "My mum wants a phone case.",
+      "I like phones.",
+      "Mum is happy.",
+      "That's the phone case which my mum wants."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We use \"where\" for places.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word do we use for things?",
+     "o": [
+      "which",
+      "who",
+      "where"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"It's the man which we saw earlier.\" is correct.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Relative word for people",
+     "o": [
+      "which",
+      "where",
+      "what",
+      "who"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 4: Vocabulary and Grammar – Money and have to / don’t have to": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which group has only money words?",
+     "o": [
+      "comet, rocket, star",
+      "port, fort, ruins",
+      "escalator, thief, steal",
+      "purse, wallet, save, spend"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "\"Have to\" means it is necessary.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where do you keep money at home?",
+     "o": [
+      "in a money box",
+      "in a purse at the shop",
+      "in the fridge"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say \"He have to get some pocket money.\"",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Opposite of buy",
+     "o": [
+      "save",
+      "spend",
+      "get",
+      "sell"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 5: Culture – The world of the corner shop": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which country uses the name \"milk bar\"?",
+     "o": [
+      "New Zealand",
+      "Canada",
+      "the UK",
+      "Australia"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "In New York, a corner shop is called a bodega.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What is a corner shop called in Australia?",
+     "o": [
+      "a milk bar",
+      "a dairy",
+      "a party shop"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In Detroit, a corner shop is called a milk bar.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Corner shop in Australia",
+     "o": [
+      "dairy",
+      "bodega",
+      "party shop",
+      "milk bar"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 7: Skills – Reading: an email": [
+   [
+    {
+     "t": "mcq",
+     "q": "Why was Razan sad the next week?",
+     "o": [
+      "She lost her money.",
+      "Rasha was angry.",
+      "The shoes didn't fit.",
+      "The shop assistant sold the shoes."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Razan didn't have enough money for the shoes.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Who did Razan first go to the shoe shop with?",
+     "o": [
+      "her friend Rasha",
+      "her teacher",
+      "her brother"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Razan's friend Rasha bought the shoes.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Razan's friend",
+     "o": [
+      "Nada",
+      "Huda",
+      "Fatma",
+      "Rasha"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 8: Skills – Listening, speaking and writing an email": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which is a friendly start for an email?",
+     "o": [
+      "Love from Ali",
+      "Goodbye, Ali.",
+      "The end.",
+      "Hi Ali,"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Nada likes to buy apples and pears from the greengrocer's.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What is the shopping mall in Westport called?",
+     "o": [
+      "the Smith Centre",
+      "Queen Street",
+      "Kids Toys"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Kiosk\" needs 's at the end.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Westport shopping mall",
+     "o": [
+      "Queen Street",
+      "Kids Toys",
+      "Dream Gifts",
+      "Smith Centre"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Semester review: Grammar reference, Solve it and Progress path": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which grammar is in Unit 4?",
+     "o": [
+      "will and How …?",
+      "past simple and could",
+      "comparatives and be good at",
+      "who / which / where and have to"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "\"When I was one, I could walk, but I couldn't talk.\" uses could for the past.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: Hamed is the ______ (good) tennis player in the class.",
+     "o": [
+      "best",
+      "goodest",
+      "better"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use \"which\" for people.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "good → better → ___",
+     "o": [
+      "goodest",
+      "more good",
+      "gooder",
+      "best"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 1: Language booster – Hobbies and making suggestions": [
+   [
+    {
+     "t": "mcq",
+     "q": "What comes after \"Let's\"?",
+     "o": [
+      "a verb with -ing",
+      "a verb with -ed",
+      "a verb with -s",
+      "the base verb"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "\"Shall we visit my granny?\" is correct.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Choose: How about (play / playing) board games?",
+     "o": [
+      "playing",
+      "play",
+      "played"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Yes, that's a great idea!\" is a way to say no.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "How about ___ a pizza?",
+     "o": [
+      "make",
+      "made",
+      "makes",
+      "making"
+     ],
+     "a": 4
+    }
+   ]
   ]
  }
 }

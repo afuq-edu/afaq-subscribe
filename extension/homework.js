@@ -1,5 +1,5 @@
-// الواجبات في «المهام الإلكترونية» بنور (المالك 2026-11-01): لكل درس واجب من خمسة أسئلة،
-// مربوط بتحضير الدرس ودرسه في الشجرة، ويُنشر بتاريخ نشر التحضير. الأسئلة من أنشطة الدرس في موقع أفق (site/games).
+// الواجبات في «المهام الإلكترونية» بنور (المالك 2026-11-01): لكل حصة واجب من خمسة أسئلة (المالك 2026-11-07: «لكل حصة واجب
+// وليس لكل عنوان واجب»)، مربوط بتحضير تلك الحصة ودرسها في الشجرة، ويُنشر بتاريخ نشر التحضير. الأسئلة من أنشطة الدرس في موقع أفق (site/games).
 // نور (Classera): «إضافة واجب جديد» ← homeworks/create/cid:… ثم «إضافة مجموعة مفردات دفعة واحدة» ← questions/add_bulk_questions/cid/aid/type
 
 export const GAMES_BASE = 'https://afuq-edu.github.io/afaq-subscribe/games/';
@@ -23,7 +23,8 @@ export function gameKey(pkg) {
   return id.replace(/-t\d+$/, '').replace(/^([a-z]+-\d+)-2$/, '$1');
 }
 const hwCache = new Map();
-// ملف واجبات الباقة: { key, subject, grade, lessons: { «اسم الدرس في الملف»: [ { t: 'mcq'|'tf', q, o?, a } ×5 ] } }
+// ملف واجبات الباقة: { key, subject, grade, lessons: { «اسم الدرس في الملف»: [ { t: 'mcq'|'tf', q, o?, a } ×5 ] },
+//   sessions: { «اسم الدرس»: [ [٥ أسئلة الحصة الثانية], [الثالثة], … ] } } — lessons هي أسئلة الحصة الأولى
 export async function fetchHomeworkFile(key, base = HW_BASE) {
   if (!key) return null;
   const url = `${base}${key}.json`;
@@ -35,10 +36,18 @@ export async function fetchHomeworkFile(key, base = HW_BASE) {
   hwCache.set(url, j);
   return j;
 }
-// أسئلة درس من ملف الواجبات، جاهزة لنموذج نور
-export async function lessonHomework(pkg, lesson, base = HW_BASE) {
+// أسئلة حصة من ملف الواجبات، جاهزة لنموذج نور: n رقم الحصة بين حصص الدرس في ملف التحضير (١ = الأولى).
+// حصص أكثر مما في الملف تدور على مجموعاته (لا حصة بلا واجب ما دام للدرس أسئلة)
+export function sessionQuestions(f, name, n = 1) {
+  const one = f && f.lessons ? f.lessons[name] : null;
+  const more = (f && f.sessions && Array.isArray(f.sessions[name]) ? f.sessions[name] : []).filter((x) => Array.isArray(x) && x.length);
+  if (n <= 1 || !more.length) return Array.isArray(one) ? one : null;
+  const all = (Array.isArray(one) ? [one] : []).concat(more);
+  return all[Array.isArray(one) ? (n - 1) % all.length : (n - 2) % all.length];
+}
+export async function lessonHomework(pkg, lesson, base = HW_BASE, n = 1) {
   const f = await fetchHomeworkFile(gameKey(pkg), base);
-  const qs = f && f.lessons && lesson ? f.lessons[lesson.lesson] : null;
+  const qs = lesson ? sessionQuestions(f, lesson.lesson, n) : null;
   return Array.isArray(qs) ? toNoorRows(qs) : [];
 }
 const gameCache = new Map();

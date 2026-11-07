@@ -2,7 +2,7 @@
  "key": "en-2",
  "subject": "اللغة الإنجليزية",
  "grade": "الصف الثاني",
- "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ)",
+ "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ) · sessions = أسئلة الحصة الثانية فما بعدها لكل درس (lessons = الحصة الأولى)",
  "lessons": {
   "Welcome – Lesson 1: Classroom language": [
    {
@@ -4143,6 +4143,1787 @@
     ],
     "a": 4
    }
+  ]
+ },
+ "sessions": {
+  "Welcome – Lesson 1: Classroom language": [
+   [
+    {
+     "t": "mcq",
+     "q": "What do we do with a book?",
+     "o": [
+      "Wave",
+      "Stand",
+      "Listen",
+      "Read"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We use a pencil to write.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Hand to ear. What is it?",
+     "o": [
+      "Listen",
+      "Draw",
+      "Write"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Close your book means open it.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Use your ears.",
+     "o": [
+      "Draw",
+      "Write",
+      "Point",
+      "Listen"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Welcome – Lesson 2: Hello! (Story and meeting new friends)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Whose birthday is it in the story?",
+     "o": [
+      "Fatma's",
+      "Polly's",
+      "Jack's",
+      "Sami's"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "It's Sami's birthday in the story.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Who is the parrot?",
+     "o": [
+      "Polly",
+      "Sami",
+      "Fatma"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say Goodbye when we meet a new friend.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "The parrot in the story",
+     "o": [
+      "Sami",
+      "Jack",
+      "Lily",
+      "Polly"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Welcome – Lesson 3: Numbers and colours": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which one is NOT a colour?",
+     "o": [
+      "purple",
+      "brown",
+      "pink",
+      "five"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The word eight means 8.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "3 + 2 = ?",
+     "o": [
+      "five",
+      "four",
+      "six"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The word four means 5.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Number 6",
+     "o": [
+      "seven",
+      "nine",
+      "two",
+      "six"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 1: Vocabulary and Grammar (Indoor toys)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which word has the sound /eɪ/ with ai?",
+     "o": [
+      "pen",
+      "dog",
+      "cup",
+      "nail"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We say It's an action figure.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What's this? (a car)",
+     "o": [
+      "It's a car.",
+      "It's an car.",
+      "It's car a."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The word cat has ai in it.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "A soft toy bear",
+     "o": [
+      "car",
+      "plane",
+      "yo-yo",
+      "teddy"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 2: Story \"New toys\"": [
+   [
+    {
+     "t": "mcq",
+     "q": "Who says No, it's a plane.?",
+     "o": [
+      "Jack",
+      "Polly",
+      "Lily",
+      "Sami"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Jack says It's a car. Sami says No, it's a plane.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What's this? (a dinosaur)",
+     "o": [
+      "It's a dinosaur.",
+      "It's an dinosaur.",
+      "It's dinosaur a."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The big toy they make is a teddy.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "The dinosaur's colour",
+     "o": [
+      "red",
+      "pink",
+      "white",
+      "green"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 3: Vocabulary and Grammar (Outdoor toys)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which one is an outdoor toy?",
+     "o": [
+      "doll",
+      "robot",
+      "puzzle",
+      "swing"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We ride a bike.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which toy flies in the sky?",
+     "o": [
+      "kite",
+      "slide",
+      "bike"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Is it a scooter? (a bike) Yes, it is.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "It flies on a string.",
+     "o": [
+      "slide",
+      "swing",
+      "ball",
+      "kite"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 4: Skills (Listening and speaking)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which is the tricky word in: I have got a cake?",
+     "o": [
+      "got",
+      "cake",
+      "a",
+      "have"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "game, snake and lake have a-e.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What's this? It's a ... (a ball)",
+     "o": [
+      "ball",
+      "kite",
+      "bike"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Is it a red car? (a blue car) Yes, it is.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Read: c - a - k - e",
+     "o": [
+      "lake",
+      "game",
+      "rake",
+      "cake"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 5: Culture and Project (Oman’s Children Museum)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Where is the museum?",
+     "o": [
+      "In the lake",
+      "In the classroom",
+      "In the park",
+      "In Muscat"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "It's a museum for children.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where is Oman's Children Museum?",
+     "o": [
+      "In Muscat",
+      "In the sea",
+      "At the lake"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The museum is in a different country.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "The museum is in ...",
+     "o": [
+      "the lake",
+      "the park",
+      "school",
+      "Muscat"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1 – Lesson 6: English in action (Sharing your toys)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which word is polite?",
+     "o": [
+      "car",
+      "seven",
+      "red",
+      "please"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Sharing toys makes friends happy.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Can I play with it, ...?",
+     "o": [
+      "please",
+      "goodbye",
+      "seven"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "It's good to take a friend's toy without asking.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "What does the friend answer?",
+     "o": [
+      "No, it isn't.",
+      "It's red.",
+      "I'm seven.",
+      "Yes, of course."
+     ],
+     "a": 4
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Yes, of ...",
+     "o": [
+      "course",
+      "play",
+      "toys"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say please when we want something.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Your friend has a new kite. You want to play. You say...",
+     "o": [
+      "It's my kite.",
+      "Goodbye.",
+      "No, it isn't.",
+      "Can I play with it, please?"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Is it a car? (a ball) Yes, it is.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Let's play ...",
+     "o": [
+      "please",
+      "new",
+      "together"
+     ],
+     "a": 3
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 1: Vocabulary and Grammar (Classroom objects)": [
+   [
+    {
+     "t": "mcq",
+     "q": "How many classroom objects do we learn?",
+     "o": [
+      "Six",
+      "Two",
+      "Four",
+      "Ten"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We say These are for more than one thing.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What's this? (a ruler)",
+     "o": [
+      "It's a ruler.",
+      "It's a pen.",
+      "It's a bag."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A ruler is a toy.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "It cuts paper.",
+     "o": [
+      "ruler",
+      "eraser",
+      "bag",
+      "scissors"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 2: Story \"The computer\"": [
+   [
+    {
+     "t": "mcq",
+     "q": "Who is Atomic?",
+     "o": [
+      "Lily's parrot",
+      "Lily's friend Sami",
+      "Lily's teacher",
+      "Lily's cat"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Lily says: This is my desk.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Oh! It's a ...",
+     "o": [
+      "computer",
+      "cake",
+      "kite"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A tidy room has toys all over the floor.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "What does Lily show?",
+     "o": [
+      "her bike",
+      "her kite",
+      "her goat",
+      "her desk and her books"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 3: Vocabulary and Grammar (Where’s the pencil?)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which word means inside?",
+     "o": [
+      "on",
+      "under",
+      "where",
+      "in"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "A pencil in the pencil case is inside it.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "The pencil is inside the box. It's ... the box.",
+     "o": [
+      "in",
+      "on",
+      "under"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A cupboard is a toy.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Inside the box",
+     "o": [
+      "on",
+      "under",
+      "at",
+      "in"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 4: Skills (Listening and speaking)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which question asks about a colour?",
+     "o": [
+      "Where's the bag?",
+      "Who is it?",
+      "Is it a desk?",
+      "What colour is it?"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "What colour is it? It's pink. is a good answer.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "The bag is under the chair. Where's the bag?",
+     "o": [
+      "It's under the chair.",
+      "It's on the chair.",
+      "It's in the bag."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The teddy is on the chair. means it is under the chair.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Inside the pencil case",
+     "o": [
+      "on",
+      "under",
+      "at",
+      "in"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 5: Culture and Project (My school)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which three places are in a school?",
+     "o": [
+      "lake, road, boat",
+      "kite, bike, swing",
+      "cake, pie, soap",
+      "classroom, playground, library"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The playground in Wafa's school is big.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Who is Wafa's teacher?",
+     "o": [
+      "Mrs Asma",
+      "Lily",
+      "Fatma"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We play football in the library.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Wafa's teacher",
+     "o": [
+      "Mrs Lily",
+      "Mrs Fatma",
+      "Mrs Polly",
+      "Mrs Asma"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 6: English in action (Borrowing things)": [
+   [
+    {
+     "t": "mcq",
+     "q": "What do we say when we give something?",
+     "o": [
+      "Goodbye.",
+      "I'm fine.",
+      "Good night.",
+      "Here you are."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "\"Can I borrow it, please?\" is a polite question.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "This is my ___. (one ruler)",
+     "o": [
+      "ruler",
+      "rulers",
+      "ruleses"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "br + oo + m makes the word \"boom\".",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Blend: st + or + m",
+     "o": [
+      "stem",
+      "star",
+      "stop",
+      "storm"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 2 – Lesson 7: Review and Get ready for Starters": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which question asks about a thing?",
+     "o": [
+      "Where are you?",
+      "How old are you?",
+      "Who is it?",
+      "What's this?"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "\"It's on the desk\" tells us where a thing is.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "___ my pens.",
+     "o": [
+      "These are",
+      "This is",
+      "It is"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A picture of one computer matches \"These are computers.\"",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Many things: ___ are",
+     "o": [
+      "This",
+      "It",
+      "Is",
+      "These"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Learning Club 1 – Lesson 1: Language booster 1": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which word goes before an adjective to make it stronger?",
+     "o": [
+      "my",
+      "is",
+      "book",
+      "very"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "A good answer is \"My favourite book is Cinderella.\"",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What's your favourite book?",
+     "o": [
+      "My favourite book is Snow White.",
+      "I'm seven.",
+      "It's a pen."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Snow White\" is the name of a colour in this lesson.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "A very loud thing is very ___",
+     "o": [
+      "small",
+      "book",
+      "quiet",
+      "noisy"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Learning Club 1 – Lesson 2: CLIL Natural Science (Our senses)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which body part do we use for sight?",
+     "o": [
+      "ears",
+      "nose",
+      "tongue",
+      "eyes"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We can smell with our noses.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "How many senses have we got?",
+     "o": [
+      "five",
+      "three",
+      "ten"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Sight is the sense we use with our ears.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "We see with our ...",
+     "o": [
+      "ears",
+      "nose",
+      "feet",
+      "eyes"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 3 – Lesson 1: Vocabulary and Grammar (The body)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which is the plural of foot?",
+     "o": [
+      "foots",
+      "footes",
+      "feets",
+      "feet"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "I've got ten toes.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "I've got ten ___. (on my feet)",
+     "o": [
+      "toes",
+      "knees",
+      "arms"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "I've got three legs.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Plural of foot",
+     "o": [
+      "foots",
+      "feets",
+      "foot",
+      "feet"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 3 – Lesson 3: Vocabulary and Grammar (Move your body!)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which letters make the sound in \"glue\"?",
+     "o": [
+      "oi",
+      "ou",
+      "ai",
+      "ue"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We stamp with our feet.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "___ your hands!",
+     "o": [
+      "Clap",
+      "Stamp",
+      "Bend"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Blue\" is spelled b-l-o-o.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which is the tricky word in this lesson?",
+     "o": [
+      "glue",
+      "clap",
+      "blue",
+      "give"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 3 – Lesson 5: Culture and Project (National Day)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which word means people walking together in a celebration?",
+     "o": [
+      "uniform",
+      "festival",
+      "dress",
+      "parade"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "In the text, there is a parade.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What is Faisal's favourite day?",
+     "o": [
+      "National Day",
+      "his birthday",
+      "Monday"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A uniform is a kind of food.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Faisal's favourite day",
+     "o": [
+      "Monday",
+      "Friday",
+      "Sunday",
+      "National Day"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 3 – Lesson 7: Review and Get ready for Starters": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which is a movement instruction?",
+     "o": [
+      "I've got two arms.",
+      "What a cool robot!",
+      "Here you are.",
+      "Move your arms!"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "\"I've got six legs\" can describe a silly monster.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "I've got two ___. (knees picture)",
+     "o": [
+      "knees",
+      "knee",
+      "heads"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "\"Put the pink pencil on the purple robot\" means put the pencil under the robot.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "I've got two ___. (knees)",
+     "o": [
+      "knee",
+      "toes",
+      "arms",
+      "knees"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 4 – Lesson 1: Vocabulary and Grammar (The family)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Who's this? (picture of a grandad)",
+     "o": [
+      "It's my sister.",
+      "It's my aunt.",
+      "It's my cousin.",
+      "It's my grandad."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "My mum's sister is my aunt.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Who is your mum's sister?",
+     "o": [
+      "my aunt",
+      "my uncle",
+      "my cousin"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "My uncle is a girl.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Mum's dad",
+     "o": [
+      "uncle",
+      "brother",
+      "cousin",
+      "grandad"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 4 – Lesson 3: Vocabulary and Grammar (The face)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which is a hair colour in this lesson?",
+     "o": [
+      "purple",
+      "pink",
+      "orange",
+      "fair"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We say She's got for a girl.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "We smell with our ___.",
+     "o": [
+      "nose",
+      "ears",
+      "hair"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say She's got for a boy.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "We see with them.",
+     "o": [
+      "ears",
+      "nose",
+      "hair",
+      "eyes"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 4 – Lesson 5: Culture and Project (My brother’s birthday)": [
+   [
+    {
+     "t": "mcq",
+     "q": "What is Eman's present for Ahmed?",
+     "o": [
+      "a cake",
+      "a robot",
+      "a kite",
+      "a yo-yo"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Ahmed is 7 today.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Whose birthday is it?",
+     "o": [
+      "Eman's brother's",
+      "Eman's mum's",
+      "Eman's dad's"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Ahmed is Eman's sister.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Eman's present",
+     "o": [
+      "ball",
+      "kite",
+      "bike",
+      "yo-yo"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 4 – Lesson 7: Review and Get ready for Starters": [
+   [
+    {
+     "t": "mcq",
+     "q": "What is the name of the graded reader?",
+     "o": [
+      "The game",
+      "The robot",
+      "My bike",
+      "The goat herd"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "In \"The goat herd\", a boy and his mum go out.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "This is my ___. (dad's brother)",
+     "o": [
+      "uncle",
+      "aunt",
+      "cousin"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The boy and his mum do not like to go out.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Mum's sister",
+     "o": [
+      "uncle",
+      "cousin",
+      "brother",
+      "aunt"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Learning Club 2 – Lesson 1: Language booster 2": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which is the right answer? Are there three legs?",
+     "o": [
+      "Yes, there is.",
+      "Yes, it is.",
+      "Yes, I am.",
+      "Yes, there are."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We say There are for more than one.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "There ___ a head.",
+     "o": [
+      "is",
+      "are",
+      "am"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "There are a head.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "There ___ one nose.",
+     "o": [
+      "are",
+      "am",
+      "be",
+      "is"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 1: (Sounds and Spelling): Lesson5": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which word has ai?",
+     "o": [
+      "sail",
+      "tie",
+      "goat"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The word boat has oa.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Choose: My ___ is on the lake.",
+     "o": [
+      "tie",
+      "cake",
+      "boat",
+      "pie"
+     ],
+     "a": 3
+    },
+    {
+     "t": "tf",
+     "q": "The word tie has ai.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "In the story, the girl says: My ___ is on the gate.",
+     "o": [
+      "boat",
+      "coat",
+      "pie"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "How old is the boy in \"I am six!\"?",
+     "o": [
+      "five",
+      "six",
+      "seven",
+      "eight"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "Blend s – oa – p. The word is soap.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What is on the birthday cake?",
+     "o": [
+      "A tie",
+      "A game",
+      "A boat",
+      "A kite"
+     ],
+     "a": 3
+    },
+    {
+     "t": "tf",
+     "q": "The boy is sad because it is his birthday.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which word has a-e?",
+     "o": [
+      "game",
+      "boat",
+      "sail",
+      "tie"
+     ],
+     "a": 1
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Look at the soap. Which sentence is right?",
+     "o": [
+      "It is a tie.",
+      "It is a cake.",
+      "It is a game.",
+      "It is soap."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The word tie has the sound ie.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: What is ___ it? It is a game!",
+     "o": [
+      "in",
+      "on",
+      "at"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The picture shows a game, so the sentence \"It is a cake.\" is right.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which present is in the story \"I am six!\"?",
+     "o": [
+      "a bike",
+      "a tie",
+      "a kite"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Unit 2: (Sounds and Spelling): Lesson8": [
+   [
+    {
+     "t": "mcq",
+     "q": "Complete: It is a big ___.",
+     "o": [
+      "moon",
+      "tooth",
+      "roof",
+      "torch"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "The boy sings in the story \"My tooth\".",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What happens first in the story?",
+     "o": [
+      "He puts the tooth on the roof.",
+      "He sings.",
+      "He waits for the sun.",
+      "He has got a tooth in his hand."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The words tooth, roof and moon have or.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which word has or?",
+     "o": [
+      "torch",
+      "moon",
+      "roof"
+     ],
+     "a": 1
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Who is the story \"Where Is My Food?\" about?",
+     "o": [
+      "The king",
+      "A duck",
+      "A girl"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The king makes popcorn.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Blend k – i – ng.",
+     "o": [
+      "kick",
+      "king",
+      "kite",
+      "ring"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "The king cannot cook at the end of the story.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which word has oo?",
+     "o": [
+      "corn",
+      "pot",
+      "king",
+      "food"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 3: (Sounds and Spelling): Lesson6": [
+   [
+    {
+     "t": "mcq",
+     "q": "Choose: The boy likes to ___ in the soil.",
+     "o": [
+      "shout",
+      "dig",
+      "swim",
+      "sing"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "In \"I like to dig.\" the tricky word is to.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word is a tricky word in: I dig all the time!",
+     "o": [
+      "dig",
+      "time",
+      "all"
+     ],
+     "a": 3
+    },
+    {
+     "t": "tf",
+     "q": "The word soil has ou.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: I like to dig in the ___.",
+     "o": [
+      "soil",
+      "coin",
+      "shout",
+      "glue"
+     ],
+     "a": 1
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Unscramble: v / i / d / e",
+     "o": [
+      "vide",
+      "dive",
+      "devi",
+      "idve"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "The words bike, kite and dive have i-e.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Where are the boy and his dad in \"My bike\"?",
+     "o": [
+      "In the park",
+      "At the lake",
+      "In Dad's shed",
+      "At school"
+     ],
+     "a": 3
+    },
+    {
+     "t": "tf",
+     "q": "The words glue and blue have oi.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "What does the boy put on the chain?",
+     "o": [
+      "Some oil",
+      "Some glue",
+      "Some soap",
+      "Some soil"
+     ],
+     "a": 1
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Match: Dad can fix ___",
+     "o": [
+      "the kite.",
+      "the shed.",
+      "the bike.",
+      "the soil."
+     ],
+     "a": 3
+    },
+    {
+     "t": "tf",
+     "q": "The bike is in the shed.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: Look at my ___!",
+     "o": [
+      "kite",
+      "coin",
+      "goat",
+      "tooth"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Mum can fix the bike.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which word has ue?",
+     "o": [
+      "bike",
+      "oil",
+      "shed",
+      "glue"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Unit 4: (Sounds and Spelling): Lesson7": [
+   [
+    {
+     "t": "mcq",
+     "q": "Complete: I put my boots on my ___.",
+     "o": [
+      "nose",
+      "feet",
+      "farm",
+      "bag"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "In \"I have some goat food.\" the tricky words are have and some.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word has ee?",
+     "o": [
+      "herd",
+      "farm",
+      "nose",
+      "sheep"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The word herd has ar.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Find the tricky word: Mum and I like to go out.",
+     "o": [
+      "to",
+      "Mum",
+      "out",
+      "like"
+     ],
+     "a": 1
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Who is in the park at the start of \"Where Is Our Shark?\"?",
+     "o": [
+      "A boy and his dad",
+      "A girl and her grandma",
+      "A king and a cook"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "The note says: Our shark is not in its home in the zoo.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word has ar?",
+     "o": [
+      "ferns",
+      "note",
+      "dark",
+      "duck"
+     ],
+     "a": 3
+    },
+    {
+     "t": "tf",
+     "q": "The word ferns has ar.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "What do the girl and her grandma find in the park?",
+     "o": [
+      "A note",
+      "A shark",
+      "A coin",
+      "A kite"
+     ],
+     "a": 1
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "She is my mum's mum. She is my ___.",
+     "o": [
+      "sister",
+      "grandma",
+      "brother",
+      "dad"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "We say \"Her name's Amna.\" for a girl.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Choose: ___ name's Faris. (a boy)",
+     "o": [
+      "Her",
+      "She",
+      "His"
+     ],
+     "a": 3
+    },
+    {
+     "t": "tf",
+     "q": "We see with our nose.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: He's got blue ___.",
+     "o": [
+      "eyes",
+      "sister",
+      "farm",
+      "herd"
+     ],
+     "a": 1
+    }
+   ]
   ]
  }
 }
