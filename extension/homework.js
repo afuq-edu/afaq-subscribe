@@ -1,5 +1,5 @@
-// الواجبات في «المهام الإلكترونية» بنور (المالك 2026-11-01): لكل درس واجب من خمسة أسئلة،
-// مربوط بتحضير الدرس ودرسه في الشجرة، ويُنشر بتاريخ نشر التحضير. الأسئلة من أنشطة الدرس في موقع أفق (site/games).
+// الواجبات في «المهام الإلكترونية» بنور (المالك 2026-11-01): لكل حصة واجب من خمسة أسئلة (المالك 2026-11-07: «لكل حصة واجب
+// وليس لكل عنوان واجب»)، مربوط بتحضير تلك الحصة ودرسها في الشجرة، ويُنشر بتاريخ نشر التحضير. الأسئلة من أنشطة الدرس في موقع أفق (site/games).
 // نور (Classera): «إضافة واجب جديد» ← homeworks/create/cid:… ثم «إضافة مجموعة مفردات دفعة واحدة» ← questions/add_bulk_questions/cid/aid/type
 
 export const GAMES_BASE = 'https://afuq-edu.github.io/afaq-subscribe/games/';
@@ -23,7 +23,8 @@ export function gameKey(pkg) {
   return id.replace(/-t\d+$/, '').replace(/^([a-z]+-\d+)-2$/, '$1');
 }
 const hwCache = new Map();
-// ملف واجبات الباقة: { key, subject, grade, lessons: { «اسم الدرس في الملف»: [ { t: 'mcq'|'tf', q, o?, a } ×5 ] } }
+// ملف واجبات الباقة: { key, subject, grade, lessons: { «اسم الدرس في الملف»: [ { t: 'mcq'|'tf', q, o?, a } ×5 ] },
+//   sessions: { «اسم الدرس»: [ [٥ أسئلة الحصة الثانية], [الثالثة], … ] } } — lessons هي أسئلة الحصة الأولى
 export async function fetchHomeworkFile(key, base = HW_BASE) {
   if (!key) return null;
   const url = `${base}${key}.json`;
@@ -35,10 +36,18 @@ export async function fetchHomeworkFile(key, base = HW_BASE) {
   hwCache.set(url, j);
   return j;
 }
-// أسئلة درس من ملف الواجبات، جاهزة لنموذج نور
-export async function lessonHomework(pkg, lesson, base = HW_BASE) {
+// أسئلة حصة من ملف الواجبات، جاهزة لنموذج نور: n رقم الحصة بين حصص الدرس في ملف التحضير (١ = الأولى).
+// حصص أكثر مما في الملف تدور على مجموعاته (لا حصة بلا واجب ما دام للدرس أسئلة)
+export function sessionQuestions(f, name, n = 1) {
+  const one = f && f.lessons ? f.lessons[name] : null;
+  const more = (f && f.sessions && Array.isArray(f.sessions[name]) ? f.sessions[name] : []).filter((x) => Array.isArray(x) && x.length);
+  if (n <= 1 || !more.length) return Array.isArray(one) ? one : null;
+  const all = (Array.isArray(one) ? [one] : []).concat(more);
+  return all[Array.isArray(one) ? (n - 1) % all.length : (n - 2) % all.length];
+}
+export async function lessonHomework(pkg, lesson, base = HW_BASE, n = 1) {
   const f = await fetchHomeworkFile(gameKey(pkg), base);
-  const qs = f && f.lessons && lesson ? f.lessons[lesson.lesson] : null;
+  const qs = lesson ? sessionQuestions(f, lesson.lesson, n) : null;
   return Array.isArray(qs) ? toNoorRows(qs) : [];
 }
 const gameCache = new Map();
@@ -99,16 +108,22 @@ export function toNoorRows(qs) {
   const p = (s) => `<p${isAr(s) ? ' dir="rtl"' : ''}>${esc(String(s).trim())}</p>`;
   const hash = (s) => { let h = 0; for (const c of String(s)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; };
   const ok = (qs || []).filter((x) => x && x.q && (x.t === 'tf' ? typeof x.a === 'boolean' : Array.isArray(x.o) && x.o.length >= 2 && x.a >= 1 && x.a <= x.o.length));
-  const h0 = ok.length ? hash(ok[0].q) : 0;
-  return ok.map((x, i) => {
+  // ترتيب ثابت لكل واجب (الإعادة تعطي الواجب نفسه) ومختلف بين الواجبات: الأسئلة مخلوطة، وموضع الجواب الصحيح يتغير من سؤال لآخر
+  let r = hash(ok.map((x) => x.q).join('|')) || 1;
+  const rnd = () => { r = (r + 0x6D2B79F5) >>> 0; let t = r; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const shuffle = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const order = shuffle(ok.slice());
+  const perms = {};
+  const slot = (n) => { const b = perms[n] || (perms[n] = { list: [], i: 0 }); if (b.i % n === 0) b.list = shuffle([...Array(n).keys()]); return b.list[b.i++ % n]; };
+  return order.map((x) => {
     if (x.t === 'tf') {
       const opts = isAr(x.q) ? ['صح', 'خطأ'] : ['True', 'False'];
       return { type: 'mcq', text: p(x.q), options: opts, correct: x.a ? 1 : 2 };
     }
     const o = x.o.slice(0, 6).map((v) => String(v).trim());
     const right = o[x.a - 1];
-    const rest = o.filter((_, k) => k !== x.a - 1);
-    const at = (h0 + i * 3) % o.length;
+    const rest = shuffle(o.filter((_, k) => k !== x.a - 1));
+    const at = slot(o.length);
     rest.splice(at, 0, right);
     return { type: 'mcq', text: p(x.q), options: rest, correct: at + 1 };
   });
@@ -350,6 +365,24 @@ export function hwCreateFill(op) {
   } catch (e) { return { err: 'crash', msg: String((e && e.message) || e).slice(0, 160) }; }
 }
 // يُحقن بعد «إضافة»: معرّف الواجب من العنوان أو من روابط قائمة مفرداته، وإلا ما تعرضه الصفحة من أخطاء
+// نور تفتح بعد «إضافة» قائمة مفردات الواجب وهي فارغة بعد، فتنبثق رسالة «لم يتم إيجاد مفردات مضافة» قبل أن تضيف الأداة الأسئلة
+// (المالك 2026-11-07: الواجب يُضاف لكن الرسالة تظهر): تُغلق بهدوء كلما ظهرت في هذه الصفحة خلال ثوانٍ
+export function hwHush() {
+  const close = () => {
+    const pops = [...document.querySelectorAll('.swal2-popup, .sweet-alert, .modal, .bootbox, .jconfirm, [role="dialog"], [role="alertdialog"]')]
+      .filter((x) => x.offsetParent !== null && /(?:لم يتم|لا يوجد|لا توجد)[^.!؟]{0,40}مفرد|no (?:items|questions)/i.test(x.textContent || ''));
+    pops.forEach((x) => {
+      const b = x.querySelector('.swal2-confirm, .confirm, .btn-primary, .btn-default, [data-dismiss="modal"], .close, button');
+      try { if (b) b.click(); } catch (e) {}
+      try { if (window.swal && window.swal.close) window.swal.close(); } catch (e) {}
+      try { if (window.Swal && window.Swal.close) window.Swal.close(); } catch (e) {}
+    });
+    return pops.length;
+  };
+  let n = 0; close();
+  const t = setInterval(() => { close(); if (++n > 40) clearInterval(t); }, 250);
+  return true;
+}
 export function hwAfterCreate() {
   const aidRe = /\/questions\/(?:index|add_bulk_questions)\/cid:([A-Za-z0-9_-]+)\/aid:([A-Za-z0-9_-]+)(?:\/type:([A-Za-z0-9_-]+))?/;
   let m = location.href.match(aidRe);
@@ -362,13 +395,13 @@ export function hwAfterCreate() {
 }
 // يُحقن في صفحة «إضافة مجموعة مفردات دفعة واحدة»: يضع الأسئلة صفوفًا في نموذجها ويرسله
 export function hwBulkFill(op) {
-  const hwPress = (f, re, wait) => {
-    let left = false; window.addEventListener('beforeunload', () => { left = true; }, { once: true });
+  // الإرسال مباشرة دون زر الحفظ: تحقّق الصفحة يعدّ الصفوف التي تُضاف بزرها هي (questions_count)، فيرى صفوفنا صفرًا ويُظهر
+  // «لم يتم إيجاد مفردات مضافة» ثم يُرسل النموذج بعد ثوانٍ (المالك 2026-11-07). الخادم يقبل النموذج نفسه، فلا داعي للرسالة
+  const hwSubmit = (f, re, wait) => {
     const btns = [...f.querySelectorAll('input[type=submit], button[type=submit], button:not([type])')];
     const b = btns.find((x) => re.test((x.value || x.textContent || '').trim())) || btns[0];
     setTimeout(() => {
-      try { if (b) b.click(); } catch (e) {}
-      setTimeout(() => { if (left) return; try { if (b && b.name) { const h = document.createElement('input'); h.type = 'hidden'; h.name = b.name; h.value = b.value || ''; f.appendChild(h); } HTMLFormElement.prototype.submit.call(f); } catch (e) {} }, 4000);
+      try { if (b && b.name) { const h = document.createElement('input'); h.type = 'hidden'; h.name = b.name; h.value = b.value || ''; f.appendChild(h); } HTMLFormElement.prototype.submit.call(f); } catch (e) { try { if (b) b.click(); } catch (e2) {} }
     }, wait);
   };
   try {
@@ -384,7 +417,7 @@ export function hwBulkFill(op) {
       if (q.type === 'mcq') { add(`data[number_of_choices][${i}]`, q.options.length); q.options.forEach((o, k) => add(`data[option][${i}][${k + 1}]`, o)); }
     });
     const qn = f.querySelector('input[name="data[Question][number]"]'); if (qn) qn.value = String((op.qs || []).length);
-    hwPress(f, /إنشاء|انشاء|حفظ|إضافة|اضافة|create|save/i, 300);
+    hwSubmit(f, /إنشاء|انشاء|حفظ|إضافة|اضافة|create|save/i, 300);
     return { ok: true };
   } catch (e) { return { err: 'crash', msg: String((e && e.message) || e).slice(0, 160) }; }
 }

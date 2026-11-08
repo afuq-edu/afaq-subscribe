@@ -140,11 +140,14 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
     viewport: { width: 1100, height: 900 },
   });
   await ctx.route('https://lms.moe.gov.om/**', (r) => noor.handle(r).catch((e) => { console.log('    route error', e.message); return r.abort().catch(() => {}); }));
-  // homework files (?games=): <key>.json with five questions for every lesson of the running package (from a real file)
+  // homework files (?games=): <key>.json with five questions for every session of the running package (from a real file):
+  // lessons = the first session's set, sessions = one more set for each further session (4.10.37: a homework per session)
   await ctx.route(GAMES + '**', (r) => {
     const src = Object.values(JSON.parse(fs.readFileSync(path.join(REPO, 'site/homework/en-5.json'), 'utf8')).lessons);
-    const lessons = Object.fromEntries(lessonGroups(PKG).map((g, i) => [g.sessions[0].lesson, src[i % src.length]]));
-    return r.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({ key: 'test', lessons }) });
+    const gs = lessonGroups(PKG);
+    const lessons = Object.fromEntries(gs.map((g, i) => [g.sessions[0].lesson, src[i % src.length]]));
+    const sessions = Object.fromEntries(gs.filter((g) => g.sessions.length > 1).map((g, i) => [g.sessions[0].lesson, g.sessions.slice(1).map((_, j) => src[(i * 7 + j + 1 + gs.length) % src.length])]));
+    return r.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({ key: 'test', lessons, sessions }) });
   });
   let [sw] = ctx.serviceWorkers();
   if (!sw) sw = await ctx.waitForEvent('serviceworker');
@@ -948,17 +951,20 @@ const hwChecks = (noor, tree, want, { pubOf, label = '' }) => {
   const byTitle = new Map();
   hws.forEach((h) => byTitle.set(h.title, (byTitle.get(h.title) || []).concat(h)));
   const dup = [...byTitle].filter(([, v]) => v.length > 1);
-  check(!dup.length, `${label}one homework per lesson (no duplicate)`, dup.map(([t, v]) => `«${t}» ×${v.length}`).join('\n'));
-  const missing = want.filter((w) => !byTitle.has('واجب: ' + w.node.text));
-  check(!missing.length && hws.length === want.length, `${label}a homework for each lesson (${want.length}), titled «واجب: <Noor lesson>»`, `got ${hws.length}: ${hws.map((h) => h.title).join(' | ')}\nmissing: ${missing.map((w) => w.node.text).join(' | ')}`);
+  check(!dup.length, `${label}one homework per session (no duplicate)`, dup.map(([t, v]) => `«${t}» ×${v.length}`).join('\n'));
+  const missing = want.filter((w) => !byTitle.has(w.title));
+  check(!missing.length && hws.length === want.length, `${label}a homework for each saved prep (${want.length}), titled «واجب: <Noor lesson>» and «… — الحصة الثانية»…`, `got ${hws.length}: ${hws.map((h) => h.title).join(' | ')}\nmissing: ${missing.map((w) => w.title).join(' | ')}`);
+  // each session's homework has its own questions (the file gives every session a set)
+  const same = want.filter((w) => w.m > 1).filter((w) => { const a = (byTitle.get(w.title) || [])[0], b = (byTitle.get(w.first) || [])[0]; return a && b && JSON.stringify(a.qs.map((q) => q.text)) === JSON.stringify(b.qs.map((q) => q.text)); });
+  check(!same.length, `${label}a later session's homework has other questions than the lesson's first`, same.map((w) => w.title).join(' | '));
   const bad = [];
   for (const w of want) {
-    const h = (byTitle.get('واجب: ' + w.node.text) || [])[0];
+    const h = (byTitle.get(w.title) || [])[0];
     if (!h) continue;
     const prep = noor.st.rows.find((r) => r.id === h.prepId);
     const why = [];
     if (!prep || prep.lessonId !== w.node.nodeId) why.push(`prep ${h.prepId} → ${prep ? prep.nodeText : 'none'}`);
-    if (prep && w.prepId && prep.id !== w.prepId) why.push(`prep ${prep.id} expected ${w.prepId} (the lesson's first prep)`);
+    if (prep && w.prepId && prep.id !== w.prepId) why.push(`prep ${prep.id} expected ${w.prepId} (this session's prep)`);
     if (!h.lessons.includes(w.node.nodeId)) why.push(`lessons ${h.lessons.join(',')}`);
     const d = pubOf(w);
     if (h.publish !== `${d} 07:00:00`) why.push(`publish ${h.publish} expected ${d} 07:00:00`);
@@ -967,14 +973,22 @@ const hwChecks = (noor, tree, want, { pubOf, label = '' }) => {
     if (h.lectures.length !== 2) why.push(`sections ${h.lectures.join(',')}`);
     const types = h.qs.map((q) => q.type).join(',');
     if (h.qs.length !== 5 || types !== 'mcq,mcq,mcq,mcq,mcq' || h.qs.some((q) => q.mark !== 1)) why.push(`questions ${h.qs.length} [${types}] marks ${h.qs.map((q) => q.mark).join(',')}`);
-    if (why.length) bad.push(`«${w.node.text}»: ${why.join('; ')}`);
+    if (why.length) bad.push(`«${w.title}»: ${why.join('; ')}`);
   }
   const pos = new Set(hws.flatMap((h) => h.qs.filter((q) => q.options && q.options.length > 2).map((q) => q.correct)));
   check(pos.size >= 2, `${label}the right answer is not always the same choice (positions used: ${[...pos].sort().join(',')})`, '');
   check(!bad.length, `${label}each homework: its lesson's prep + Noor lesson, published on the prep's date (due +3, late +5 days, answers after the late date), both sections, 5 multiple-choice questions (true/false as two choices), 1 mark each`, bad.join('\n'));
 };
 
-T(22, 'Full term with «أضف واجبًا لكل درس»: every lesson gets one homework of five questions on its first prep, and a re-run adds none', async (env) => {
+// title of a session's homework (as the tool writes it): the lesson's first session «واجب: <Noor lesson>», then «… — الحصة الثانية»…
+const HW_ORD = ['الأولى', 'الثانية', 'الثالثة', 'الرابعة', 'الخامسة', 'السادسة', 'السابعة', 'الثامنة'];
+const hwTitleOf = (node, m) => 'واجب: ' + node.text + (m > 1 ? ' — الحصة ' + (HW_ORD[m - 1] || String(m).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d])) : '');
+const hwWant = (tree, l, extra) => {
+  const node = nodeFor(tree, l), g = lessonGroups(PKG).find((x) => x.sessions.some((y) => y.id === l.id));
+  const m = g ? g.sessions.findIndex((y) => y.id === l.id) + 1 : 1;
+  return Object.assign({ node, m, title: hwTitleOf(node, m), first: hwTitleOf(node, 1) }, extra);
+};
+T(22, 'Full term with «أضف واجبًا لكل درس»: every saved prep (session) gets its own homework of five questions, and a re-run adds none', async (env) => {
   usePkg(derivePkg({ keep: range(1, 9) }));
   const tree = treeFromPackage(PKG);
   const noor = env.noor({ tree });
@@ -985,7 +999,8 @@ T(22, 'Full term with «أضف واجبًا لكل درس»: every lesson gets o
   check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
   const rows = noor.st.rows.filter((r) => !r.preexisting);
   assertRows('term+homework', rows, tree, { expectIds: PKG.lessons.map((l) => l.id) });
-  const want = lessonGroups(PKG).map((g) => { const l = g.sessions[0]; const r = rows.find((x) => sessionOfRow(x) === l); return { node: nodeFor(tree, l), prepId: r && r.id, date: r && r.publishDate }; });
+  const want = rows.map((r) => sessionOfRow(r)).filter(Boolean).map((l) => { const r = rows.find((x) => sessionOfRow(x) === l); return hwWant(tree, l, { prepId: r.id, date: r.publishDate }); });
+  check(want.length > lessonGroups(PKG).length, `the package has lessons of several sessions (${want.length} preps for ${lessonGroups(PKG).length} lessons)`);
   hwChecks(noor, tree, want, { pubOf: (w) => w.date });
   const log = (await dumpLog(b.pg)).join('\n');
   check(!/واجب لم يُضف/.test(log), 'no homework line the teacher could read as a problem', log.split('\n').filter((x) => /واجب/.test(x)).join('\n'));
@@ -997,7 +1012,7 @@ T(22, 'Full term with «أضف واجبًا لكل درس»: every lesson gets o
   return b;
 });
 
-T(23, '«الواجبات فقط»: the teacher picks lessons and types a publish date and a due date for each — homework linked to the Noor lesson only (no prep), no prep saved; a re-run with the same lessons adds none', async (env) => {
+T(23, '«الواجبات فقط»: the teacher picks sessions and types a publish date and a due date for each — a homework per chosen session, linked to the Noor lesson only (no prep), no prep saved; a re-run with the same sessions adds none', async (env) => {
   usePkg(derivePkg({ keep: range(1, 12) }));
   const tree = treeFromPackage(PKG);
   const groups = lessonGroups(PKG);
@@ -1005,20 +1020,30 @@ T(23, '«الواجبات فقط»: the teacher picks lessons and types a publis
   const noor = env.noor({ tree, existing: existingFor(tree, PKG.lessons.slice(0, 3).map((l) => l.id)) });
   env.afaq.reset({ pkg: PKG });
   const b = await env.launch(noor, { now, cont: false });
-  // two lessons with both dates, one with the publish date only (due → 3 days later)
-  const picks = [{ g: groups[1], pub: addDaysIso(now, 4), due: addDaysIso(now, 8) }, { g: groups[3], pub: addDaysIso(now, 14), due: '' }, { g: groups[2], pub: addDaysIso(now, 21), due: addDaysIso(now, 21) }];
+  // three lessons: every session of each gets its own homework, except the last session of the first multi-session lesson,
+  // which the teacher unticks; sessions with both dates, and some with the publish date only (due → 3 days later)
+  const lessons = [groups[1], groups[3], groups[2]];
+  const multi = lessons.find((g) => g.sessions.length > 1);
+  check(!!multi, 'a chosen lesson has several sessions', lessons.map((g) => g.sessions.length).join(','));
+  const drop = multi ? multi.sessions[multi.sessions.length - 1].id : '';
+  const picks = [];
+  lessons.forEach((g, gi) => g.sessions.forEach((l, k) => { if (l.id === drop) return; const pub = addDaysIso(now, 4 + gi * 7 + k); picks.push({ g, l, pub, due: (gi + k) % 2 ? '' : addDaysIso(pub, gi === 2 ? 0 : 4) }); }));
   const pickAndGo = async (first) => {
     await b.pg.waitForSelector('input[data-hk]', { timeout: 60000 });
     const boxes = await b.pg.evaluate(() => [...document.querySelectorAll('.wz-date')].length);
     check(boxes === 0, `${first ? '' : 're-run: '}no date box before a lesson is chosen (no suggested date)`, `${boxes} boxes`);
-    for (const x of picks) { await b.pg.evaluate((k) => [...document.querySelectorAll('input[data-hk]')].find((c) => c.dataset.hk === k).click(), x.g.key); await sleep(300); }
+    for (const g of lessons) { await b.pg.evaluate((k) => [...document.querySelectorAll('input[data-hk]')].find((c) => c.dataset.hk === k).click(), g.key); await sleep(300); }
+    const nAll = lessons.reduce((a, g) => a + g.sessions.length, 0);
     const pre = await b.pg.evaluate(() => [...document.querySelectorAll('input[data-hp],input[data-hd]')].map((d) => d.value));
-    check(pre.length === picks.length * 2 && pre.every((v) => !v), `${first ? '' : 're-run: '}each chosen lesson shows an empty publish box and an empty due box`, JSON.stringify(pre));
+    check(pre.length === nAll * 2 && pre.every((v) => !v), `${first ? '' : 're-run: '}choosing a lesson chooses all its sessions, each with an empty publish box and an empty due box`, `${pre.length} boxes for ${nAll} sessions: ${JSON.stringify(pre)}`);
+    if (drop) { await b.pg.evaluate((id) => document.querySelector(`input[data-hs="${CSS.escape(id)}"]`).click(), drop); await sleep(300); }
+    const after = await b.pg.evaluate(() => document.querySelectorAll('input[data-hp]').length);
+    check(after === picks.length, `${first ? '' : 're-run: '}an unticked session loses its date boxes (${picks.length} left)`, `${after}`);
     for (const x of picks) {
       await b.pg.evaluate(({ k, pub, due }) => {
         const set = (sel, v) => { const d = document.querySelector(sel); d.value = v; d.dispatchEvent(new Event('change')); };
         set(`input[data-hp="${CSS.escape(k)}"]`, pub); if (due) set(`input[data-hd="${CSS.escape(k)}"]`, due);
-      }, { k: x.g.key, pub: x.pub, due: x.due });
+      }, { k: x.l.id, pub: x.pub, due: x.due });
     }
     await b.pg.click('#wzHwGo');
     return waitDone(b.pg, 15 * 60000, 'homework only');
@@ -1030,12 +1055,12 @@ T(23, '«الواجبات فقط»: the teacher picks lessons and types a publis
   const errs = noor.st.hwPosts.filter((x) => !/^ok/.test(x.outcome));
   check(!errs.length, 'every homework form Noor received was valid (create + bulk questions)', errs.map((x) => `${x.kind} ${x.aid || ''}: ${x.outcome}`).join('\n'));
   const hws = noor.st.homeworks;
-  check(hws.length === picks.length, `a homework for each chosen lesson only (${picks.length})`, hws.map((h) => h.title).join(' | '));
+  check(hws.length === picks.length, `a homework for each chosen session only (${picks.length})`, hws.map((h) => h.title).join(' | '));
   const bad = [];
   for (const x of picks) {
-    const node = nodeFor(tree, x.g.sessions[0]);
-    const h = hws.find((y) => y.title === 'واجب: ' + node.text);
-    if (!h) { bad.push(`«${node.text}»: none`); continue; }
+    const w = hwWant(tree, x.l), node = w.node;
+    const h = hws.find((y) => y.title === w.title);
+    if (!h) { bad.push(`«${w.title}»: none`); continue; }
     const why = [];
     if (h.prepId) why.push(`prep ${h.prepId} (expected none)`);
     if (h.lessons.join() !== node.nodeId) why.push(`lessons ${h.lessons.join(',')} expected ${node.nodeId}`);
@@ -1047,10 +1072,14 @@ T(23, '«الواجبات فقط»: the teacher picks lessons and types a publis
     if (h.lectures.length !== 2) why.push(`sections ${h.lectures.join(',')}`);
     const types = h.qs.map((q) => q.type).join(',');
     if (h.qs.length !== 5 || types !== 'mcq,mcq,mcq,mcq,mcq' || h.qs.some((q) => q.mark !== 1)) why.push(`questions ${h.qs.length} [${types}]`);
-    if (why.length) bad.push(`«${node.text}»: ${why.join('; ')}`);
+    if (why.length) bad.push(`«${w.title}»: ${why.join('; ')}`);
   }
+  const qsOf = (t) => JSON.stringify(((hws.find((y) => y.title === t) || {}).qs || []).map((q) => q.text));
+  const same = picks.map((x) => hwWant(tree, x.l)).filter((w) => w.m > 1 && qsOf(w.title) === qsOf(w.first));
+  check(!same.length, 'a later session\'s homework has other questions than the lesson\'s first', same.map((w) => w.title).join(' | '));
   check(!bad.length, 'each homework: its Noor lesson only (no prep), the typed publish date (07:00) and due date (end of day; empty → +3 days), late +2 days, both sections, 5 multiple-choice questions (true/false as two choices), 1 mark each', bad.join('\n'));
-  check(/أضفت ٣ واجبات/.test(s.head), 'the wizard says how many homeworks were added («أضفت ٣ واجبات»)', `${s.head} | ${s.text}`);
+  const nAr = String(picks.length).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d]);
+  check(new RegExp(`أضفت ${nAr} واجب`).test(s.head), `the wizard says how many homeworks were added («أضفت ${nAr} واجبات»)`, `${s.head} | ${s.text}`);
   check(!CALM_BAD_RE.test(s.head + ' ' + s.text), 'calm wording (no error words)', `${s.head} | ${s.text}`);
   // the teacher opens the tool again and picks the same lessons: Noor already has them → nothing new
   await b.pg.reload(); await sleep(4000);

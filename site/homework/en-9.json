@@ -2,7 +2,7 @@
  "key": "en-9",
  "subject": "اللغة الإنجليزية",
  "grade": "الصف التاسع",
- "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ)",
+ "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ) · sessions = أسئلة الحصة الثانية فما بعدها لكل درس (lessons = الحصة الأولى)",
  "lessons": {
   "Starter: Fun times!": [
    {
@@ -1263,6 +1263,2037 @@
     ],
     "a": 2
    }
+  ]
+ },
+ "sessions": {
+  "Starter: Fun times!": [
+   [
+    {
+     "t": "mcq",
+     "q": "Who has decided about their future job in the posts?",
+     "o": [
+      "Ryan",
+      "Nancy",
+      "Laith",
+      "Dana"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "'Did you went to the beach?' is a correct question.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: I bought ___ new camera last week.",
+     "o": [
+      "a",
+      "an",
+      "the"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Past simple of 'swim'",
+     "o": [
+      "swam",
+      "swum",
+      "swimmed",
+      "swims"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The past simple of 'swim' is 'swam'.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "The past simple of 'take' is 'took'.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which is the past simple of 'play'?",
+     "o": [
+      "played",
+      "plaied",
+      "plays",
+      "playing"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: I visited ___ old castle.",
+     "o": [
+      "the",
+      "an",
+      "a"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "'Writing a blog takes the time' is the correct sentence.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Past simple of 'take'",
+     "o": [
+      "takes",
+      "took",
+      "taked",
+      "taken"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Choose the correct sentence.",
+     "o": [
+      "The communication is really important.",
+      "A communication is really important.",
+      "An communication is really important.",
+      "Communication is really important."
+     ],
+     "a": 4
+    },
+    {
+     "t": "mcq",
+     "q": "What is the past simple of 'go'?",
+     "o": [
+      "went",
+      "goed",
+      "gone"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In the model paragraph, the writer played the piano at an audition.",
+     "a": false
+    },
+    {
+     "t": "tf",
+     "q": "We use 'a' before a singular countable noun mentioned for the first time.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Past simple of 'go'",
+     "o": [
+      "goed",
+      "gone",
+      "goes",
+      "went"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 1: Reading – identities": [
+   [
+    {
+     "t": "mcq",
+     "q": "What does Cody like?",
+     "o": [
+      "Playing football",
+      "Cooking",
+      "Hiking",
+      "Watching sport"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Cody loves playing sport every day.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which photo board belongs to Hana?",
+     "o": [
+      "G",
+      "D",
+      "A"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Osama's photo board",
+     "o": [
+      "D",
+      "A",
+      "C",
+      "G"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Board D belongs to Osama.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "Hana's hobbies are cooking and travelling.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which phrasal verb completes: I need a racket because I'm going to ___ tennis.",
+     "o": [
+      "take up",
+      "hang out",
+      "join in",
+      "get together"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Who is having karate lessons at the moment?",
+     "o": [
+      "Kim",
+      "Osama",
+      "Cody"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "'Take up' means to stop doing a hobby.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Basil's photo board",
+     "o": [
+      "I",
+      "A",
+      "C",
+      "H"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Lesson 3: Vocabulary – personality adjectives": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which preposition goes with 'terrible'?",
+     "o": [
+      "on",
+      "in",
+      "with",
+      "at"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "A shy person loves talking to new people.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: She's very good ___ listening.",
+     "o": [
+      "at",
+      "on",
+      "in"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "good ___",
+     "o": [
+      "at",
+      "on",
+      "with",
+      "in"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A confident person believes they can do things well.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 5: Speaking – giving personal information": [
+   [
+    {
+     "t": "mcq",
+     "q": "How do you ask someone to spell the name of their town?",
+     "o": [
+      "What do you spell the town?",
+      "Who spells the town?",
+      "Where is the town spell?",
+      "How do you spell the name of the town?"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "'For example' introduces a reason.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which word introduces an example?",
+     "o": [
+      "for example",
+      "because",
+      "but"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Introduces an example",
+     "o": [
+      "for example",
+      "because",
+      "but",
+      "so"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'Because', 'as' and 'one reason is' introduce a reason.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 7: Switch On – Learning is fun (video and project)": [
+   [
+    {
+     "t": "mcq",
+     "q": "How do some people learn new things from home?",
+     "o": [
+      "They go to a stadium",
+      "They visit a museum every day",
+      "They don't learn at home",
+      "They use apps or watch video tutorials"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We say 'make a class' when we start a course.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: My dad wants to ___ our car himself.",
+     "o": [
+      "repair",
+      "arrange",
+      "take"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "___ a car (fix it)",
+     "o": [
+      "repair",
+      "arrange",
+      "take",
+      "make"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Some people learn new things from home with apps or video tutorials.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 1: Reading – the importance of languages": [
+   [
+    {
+     "t": "mcq",
+     "q": "How did the writer feel about learning French when he was young?",
+     "o": [
+      "Excited, because he loved French",
+      "Bored, because it was too easy",
+      "Afraid of his teacher",
+      "Unhappy, because it didn't seem necessary"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "When he was young, the writer loved learning French.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which word means 'in danger'?",
+     "o": [
+      "at risk",
+      "alive",
+      "original"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "In danger",
+     "o": [
+      "at risk",
+      "alive",
+      "original",
+      "slightly"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In multiple choice, the right option often uses synonyms of words in the text.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "Eliza sent Anna a message about paying for the trip.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What kind of texts are the 'Extra English lessons' text and Eliza's text?",
+     "o": [
+      "a school notice and a phone message",
+      "a story and a poem",
+      "an email and a diary",
+      "a recipe and an advert"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Where might you see an 'Extra English lessons' text?",
+     "o": [
+      "on a bus ticket",
+      "on a school noticeboard",
+      "in a cookbook"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "'At risk' means safe and protected.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "A little",
+     "o": [
+      "original",
+      "slightly",
+      "at risk",
+      "alive"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Lesson 3: Vocabulary – language and communication": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which pattern is correct?",
+     "o": [
+      "say someone something",
+      "tell to someone something",
+      "talk someone something",
+      "say something to someone"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We say 'We say two languages at home.'",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Choose: She didn't ___ me the answer.",
+     "o": [
+      "tell",
+      "talk",
+      "say"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Change into another language",
+     "o": [
+      "translate",
+      "explain",
+      "repeat",
+      "mean"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say 'tell someone something', like 'Tell me a story.'",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 5: Speaking – describing a photo": [
+   [
+    {
+     "t": "mcq",
+     "q": "Why do we say 'The friends might be watching a film'?",
+     "o": [
+      "We are sure",
+      "It happened yesterday",
+      "It is a command",
+      "We are guessing"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "A good description only names the objects in the photo.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which phrase introduces a photo?",
+     "o": [
+      "This photo shows ...",
+      "In the end ...",
+      "Once upon a time ..."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Shows a guess",
+     "o": [
+      "might",
+      "definitely",
+      "always",
+      "never"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We can start a photo description with 'This photo shows ...'.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 7: Switch On – You and your phone (video interviews and project)": [
+   [
+    {
+     "t": "mcq",
+     "q": "What does the video ask the speakers about?",
+     "o": [
+      "their favourite food",
+      "their first school day",
+      "a trip to the 1980s",
+      "a week without their phone"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "'I'd' is the short form of 'I will'.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which speaker mentions writing to people offline?",
+     "o": [
+      "Maxwell",
+      "Sophie",
+      "Jack"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Writes to people offline",
+     "o": [
+      "Maxwell",
+      "Sophie",
+      "Jack",
+      "Zoe"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Jack seemed relaxed about a week without his phone.",
+     "a": true
+    }
+   ]
+  ],
+  "Unit 2 Consolidation: Grammar file and Practice Guide": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which is the correct past continuous question?",
+     "o": [
+      "What did you doing?",
+      "What was you doing?",
+      "What you were doing?",
+      "What were you doing?"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The past simple question of 'you saw' is 'Did you saw?'",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: I ___ the message because I ___.",
+     "o": [
+      "didn't see / was sleeping",
+      "wasn't seeing / slept",
+      "didn't saw / was sleep"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Past simple of 'see'",
+     "o": [
+      "saw",
+      "seed",
+      "seen",
+      "sees"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We can use the -ing form as the subject of a sentence: 'Swimming is fun.'",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 2: Grammar – talking about the future": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which sentence is about a timetable?",
+     "o": [
+      "I'll carry your bag.",
+      "I'm going to study hard.",
+      "I think it will be sunny.",
+      "The train leaves at 7 a.m."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "'The flight arriving at 7 tomorrow' is correct.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: The show ___ late tonight. (timetable)",
+     "o": [
+      "finishes",
+      "is finishing to",
+      "will finishing"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Form for timetables",
+     "o": [
+      "present simple",
+      "past simple",
+      "be going to",
+      "past continuous"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use the present continuous for fixed arrangements: 'I'm meeting my aunt at 8 p.m.'",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "'I'll lend you some money' is an offer.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which sentence is an arrangement?",
+     "o": [
+      "I'm meeting my uncle at 5 p.m.",
+      "I think robots will drive cars.",
+      "I'll answer the door.",
+      "The film starts at 9."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: I ___ my aunt at the cinema at 8 p.m. (arrangement)",
+     "o": [
+      "going meet",
+      "'m meeting",
+      "meet will"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "'Many people going to her shows' is a correct prediction.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Form for arrangements",
+     "o": [
+      "past continuous",
+      "present continuous",
+      "present simple",
+      "past simple"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Lesson 4: Listening – discussing technology": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which phrase is followed by -ing?",
+     "o": [
+      "Why don't you",
+      "You should",
+      "You ought to",
+      "How about"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The girl's games controller is still broken.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: How about ___ a toasted sandwich?",
+     "o": [
+      "making",
+      "make",
+      "to make"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Stopped working (girl)",
+     "o": [
+      "printer",
+      "controller",
+      "tablet",
+      "smart watch"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The girl's printer has stopped working.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "The woman agrees to buy batteries for the boy's torch.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which phrase makes an offer?",
+     "o": [
+      "Shall I ...?",
+      "How about ...?",
+      "You ought to ...",
+      "You shouldn't ..."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: You ___ to look for it properly.",
+     "o": [
+      "could",
+      "ought",
+      "should"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "We say 'You ought look for it properly.'",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Woman agrees to buy",
+     "o": [
+      "a tablet",
+      "batteries",
+      "headphones",
+      "a charger"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Lesson 5: Speaking – the future of technology": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which phrase is used for asking for an opinion?",
+     "o": [
+      "In my view, ...",
+      "That's true, but ...",
+      "You're right.",
+      "What's your view on ...?"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "In a collaborative task, you should only give your own ideas and ignore your partner.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: What's your view ___ the AI doctor?",
+     "o": [
+      "on",
+      "at",
+      "with"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Giving opinion: In my ___",
+     "o": [
+      "view",
+      "point",
+      "sure",
+      "right"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'What do you think?' asks for someone's opinion.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 6: Writing – an email (giving advice)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which phrase in Jood's email gives advice?",
+     "o": [
+      "I hope you're feeling better now.",
+      "Something like a local café or bakery.",
+      "Hi Arwa!",
+      "I think you ought to help a local business go digital."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "'I hope you're feeling better now' gives advice.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: ___ don't you offer to help people with their devices?",
+     "o": [
+      "Why",
+      "How",
+      "Shall"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "You ___ to help them.",
+     "o": [
+      "ought",
+      "should",
+      "could",
+      "shall"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Jood's reply covers all four points from her notes.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "'I think you ought to help a local business go digital' gives advice.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "How many paragraphs does Jood's email have?",
+     "o": [
+      "three",
+      "one",
+      "five",
+      "ten"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: How about ___ people set up websites?",
+     "o": [
+      "to help",
+      "helping",
+      "help"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "We say 'You ought help with a recycling project.'",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "How about ___ (help)?",
+     "o": [
+      "helped",
+      "helping",
+      "help",
+      "to help"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Lesson 8: Unit Check": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which word means 'something difficult that tests your skill'?",
+     "o": [
+      "preference",
+      "version",
+      "plug",
+      "challenge"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We use a kettle to wash clothes.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which sentence is an offer?",
+     "o": [
+      "I'll help you with your bag.",
+      "I'm meeting Ali at six.",
+      "It will be sunny tomorrow."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "'I'll carry those books for you' is…",
+     "o": [
+      "an offer",
+      "a prediction",
+      "an arrangement",
+      "a fact"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We can use the present continuous for future arrangements.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "We say 'Our electricity often goes off during a storm.'",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which phrasal verb means 'start a machine'?",
+     "o": [
+      "switch on",
+      "go off",
+      "come off",
+      "set off"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Which machine keeps food cold?",
+     "o": [
+      "microwave",
+      "fridge-freezer",
+      "kettle"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "Stative verbs like 'understand' are usually used in the continuous form.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Machine that washes plates",
+     "o": [
+      "microwave",
+      "dishwasher",
+      "kettle",
+      "fridge-freezer"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Your friend is carrying a heavy box. What do you say?",
+     "o": [
+      "I'm helping you last week.",
+      "I help you every Monday.",
+      "I'm going to helped you.",
+      "I'll help you."
+     ],
+     "a": 4
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: Please switch ___ the TV. I'm going to bed.",
+     "o": [
+      "off",
+      "up",
+      "in"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The correct phrase is 'keen at football'.",
+     "a": false
+    },
+    {
+     "t": "tf",
+     "q": "Adverbs of frequency go after the verb be.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Machine that boils water",
+     "o": [
+      "dishwasher",
+      "washing machine",
+      "TV",
+      "kettle"
+     ],
+     "a": 4
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "What is the function of 'I'm meeting my friends at the mall at five'? Answer: An offer",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Choose the correct sentence.",
+     "o": [
+      "Fatima and Raya play volleyball now and then.",
+      "Fatima and Raya play now and then volleyball.",
+      "Fatima and Raya now and then volleyball play.",
+      "Now and then volleyball Fatima and Raya play."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A sociable person enjoys being with other people.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: How ___ watching a film tonight?",
+     "o": [
+      "why",
+      "to",
+      "about"
+     ],
+     "a": 3
+    },
+    {
+     "t": "mcq",
+     "q": "It keeps a room cool",
+     "o": [
+      "plug",
+      "air conditioning",
+      "kettle",
+      "microwave"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Why is 'I'm not thinking that's a good idea' wrong?",
+     "o": [
+      "'Think' always needs 'will' before it.",
+      "'Think' can never be negative.",
+      "We must use the past simple.",
+      "'Think' is an opinion here, so we use the present simple."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "'Brilliant at' is a correct adjective + preposition pair.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word means 'looking very real, like life'?",
+     "o": [
+      "challenge",
+      "lifelike",
+      "version"
+     ],
+     "a": 2
+    },
+    {
+     "t": "mcq",
+     "q": "A strange light c___ on.",
+     "o": [
+      "came",
+      "went",
+      "set",
+      "put"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Which of these is a stative verb? Answer: cook",
+     "a": false
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Look at those dark clouds! Which sentence fits best?",
+     "o": [
+      "I'm raining soon.",
+      "It's going to rain soon.",
+      "I'll rain soon.",
+      "It rains soon every day."
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "Complete: I'm not keen in / with cooking, but I'm brilliant ___ drawing.",
+     "a": false
+    },
+    {
+     "t": "tf",
+     "q": "What is the function of 'I'm meeting my friends at the mall at five'? Answer: An arrangement",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Choose: That smells nice! What ___?",
+     "o": [
+      "you cook",
+      "are you cooking",
+      "do you cook"
+     ],
+     "a": 2
+    },
+    {
+     "t": "mcq",
+     "q": "The electricity often ___ off.",
+     "o": [
+      "makes",
+      "goes",
+      "sets",
+      "puts"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "A student writes: 'I learnt phrasal verbs well. I need to revise will and be going to.' What is the student doing?",
+     "o": [
+      "Making an offer",
+      "Predicting the weather",
+      "Making an arrangement",
+      "Checking progress and planning revision"
+     ],
+     "a": 4
+    },
+    {
+     "t": "mcq",
+     "q": "Which preposition goes with 'excited'?",
+     "o": [
+      "on",
+      "about",
+      "at"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "Which of these is a stative verb? Answer: understand",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "I'm keen ___ football.",
+     "o": [
+      "on",
+      "at",
+      "of",
+      "with"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Which word means 'something difficult that tests your skill'? Answer: preference",
+     "a": false
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "Complete: I'm not keen on / at cooking, but I'm brilliant ___ drawing.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which sentence is correct?",
+     "o": [
+      "Osama never is late for school.",
+      "Osama is late never for school.",
+      "Osama is never late for school."
+     ],
+     "a": 3
+    },
+    {
+     "t": "tf",
+     "q": "Which sentence is an offer? Answer: I'm meeting Ali at six.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "I'm terrible ___ maths.",
+     "o": [
+      "with",
+      "of",
+      "at",
+      "on"
+     ],
+     "a": 3
+    },
+    {
+     "t": "mcq",
+     "q": "Complete the advice: You ___ ask your teacher for help.",
+     "o": [
+      "going to",
+      "are",
+      "should"
+     ],
+     "a": 3
+    }
+   ]
+  ],
+  "Lesson 4: Listening – cities": [
+   [
+    {
+     "t": "mcq",
+     "q": "What should you do before you listen?",
+     "o": [
+      "Write all the answers",
+      "Close your book",
+      "Read the script",
+      "Underline key words in the questions"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Adverbs of frequency usually go after main verbs.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which word shows that a question asks for a suggestion?",
+     "o": [
+      "should",
+      "both",
+      "feel"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "A question with 'both' asks for…",
+     "o": [
+      "agreement",
+      "suggestion",
+      "feelings",
+      "a reason"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Speakers often say the same idea in different words.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "Adverbs of frequency usually go after the verb be.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "'You will hear two friends. What do they both think?' This question asks for…",
+     "o": [
+      "agreement",
+      "a suggestion",
+      "feelings",
+      "a place"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Which question asks about feelings?",
+     "o": [
+      "What should Juma do?",
+      "How does Dylan feel about his new city?",
+      "What do they both think?"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "'Rarely' has a similar meaning to 'frequently'.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "A question with 'should' asks for…",
+     "o": [
+      "a reason",
+      "a suggestion",
+      "agreement",
+      "feelings"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Lesson 6: Writing – an email (a personal profile)": [
+   [
+    {
+     "t": "mcq",
+     "q": "What are the four content points in the Channel 1 email?",
+     "o": [
+      "Your age, your phone, your food, your bus",
+      "Your teacher, your marks, your bag, your desk",
+      "The weather, the news, sport, music",
+      "Where you live, your personality, what you enjoy, why they should choose you"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We can say 'I was very terrified'.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which linking word gives a reason?",
+     "o": [
+      "because",
+      "but",
+      "or"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Linking word for a contrast",
+     "o": [
+      "but",
+      "and",
+      "so",
+      "because"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say 'a very good film'.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "'But' introduces a contrast.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which phrase is correct?",
+     "o": [
+      "a very old village",
+      "a quite old village",
+      "very terrified",
+      "quite a old village"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Which linking word gives a result?",
+     "o": [
+      "because",
+      "so",
+      "or"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "'So' gives a reason.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Linking word for a reason",
+     "o": [
+      "so",
+      "because",
+      "but",
+      "or"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Lesson 7: Switch On – Technology helps everyone (video and project)": [
+   [
+    {
+     "t": "mcq",
+     "q": "In step 1, what should you find out about existing technologies?",
+     "o": [
+      "Only their colour",
+      "Who sells them",
+      "How heavy they are",
+      "What services they provide and how they help"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "In the project vote, students can vote for their own group.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "What can a smartwatch track?",
+     "o": [
+      "sleep",
+      "vaccines",
+      "paperwork"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Talk to a doctor by video call",
+     "o": [
+      "telemedicine",
+      "prosthetics",
+      "drones",
+      "vaccines"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A cochlear implant changes sounds into electronic signals.",
+     "a": true
+    }
+   ]
+  ],
+  "Unit 3 Consolidation: Grammar file and Practice Guide": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which sentence makes an offer?",
+     "o": [
+      "Why don't we go out?",
+      "You should rest.",
+      "It will rain.",
+      "Shall I carry your bag?"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "'You should see a doctor' is a suggestion.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Bader and I arranged it. Complete: Bader and I ___ to the cinema tonight.",
+     "o": [
+      "are going",
+      "go",
+      "will to go"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Offer: ___ I open the window?",
+     "o": [
+      "Shall",
+      "Do",
+      "Am",
+      "Are"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'The train leaves at 6.30 tomorrow' uses the present simple for a timetable.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 2: Grammar – present simple and present continuous": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which verb is usually NOT used in the continuous form?",
+     "o": [
+      "play",
+      "write",
+      "study",
+      "know"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "'My school day is starting at eight every day' is the best way to talk about a routine.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: Look! The children ___ in the garden.",
+     "o": [
+      "are playing",
+      "play",
+      "plays"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "I ___ football every Tuesday.",
+     "o": [
+      "play",
+      "plays",
+      "playing",
+      "to play"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use the present continuous for actions happening now.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 4: Listening – communicating with animals": [
+   [
+    {
+     "t": "mcq",
+     "q": "When do we use the -ing form?",
+     "o": [
+      "Only after 'will'",
+      "Only in the past simple",
+      "Before every noun",
+      "As a subject or object, and after prepositions"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "'Swim is really good for you' is correct.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "What kind of word is missing in 'when he was ___ years old'?",
+     "o": [
+      "a number",
+      "a place",
+      "a feeling"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "-ing form of 'make'",
+     "o": [
+      "making",
+      "makeing",
+      "makking",
+      "maked"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "In Brazil, dolphins chase fish towards the nets.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "Experts in Africa use sounds to keep elephants away from villages.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What is the spelling rule for 'come → coming'?",
+     "o": [
+      "Drop the final -e",
+      "Double the final consonant",
+      "Change -ie to -y",
+      "Add -s"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Monty Roberts watched how horses behaved in ___.",
+     "o": [
+      "a school",
+      "the wild",
+      "the nets"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "The -ing form of 'swim' is 'swiming'.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "-ing form of 'get'",
+     "o": [
+      "gotting",
+      "getting",
+      "geting",
+      "getteing"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Lesson 6: Writing – a story": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which questions help you plan a story?",
+     "o": [
+      "Only 'how much?'",
+      "Only 'why?'",
+      "Only 'what time?'",
+      "When, where, who, what and the ending"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We can say 'very fantastic'.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Replace 'very bad to eat' with a strong adjective.",
+     "o": [
+      "disgusting",
+      "delicious",
+      "hilarious"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Strong word for 'very funny'",
+     "o": [
+      "hilarious",
+      "furious",
+      "huge",
+      "miserable"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use the past continuous for background actions in a story.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "We say 'proud of myself'.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word can go with both ordinary and strong adjectives?",
+     "o": [
+      "really",
+      "very",
+      "absolutely",
+      "extremely"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Replace 'very angry' with a strong adjective.",
+     "o": [
+      "huge",
+      "furious",
+      "miserable"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "'Huge' means very small.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Strong word for 'so sad'",
+     "o": [
+      "huge",
+      "miserable",
+      "hilarious",
+      "delicious"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Complete: We ___ for the bus when it started to rain.",
+     "o": [
+      "wait",
+      "are waiting",
+      "waits",
+      "were waiting"
+     ],
+     "a": 4
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: While she ___, I picked up my laptop.",
+     "o": [
+      "was presenting",
+      "presents",
+      "is presenting"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "'Miserable' means very happy.",
+     "a": false
+    },
+    {
+     "t": "tf",
+     "q": "'Hilarious' means very funny.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Strong word for 'really big'",
+     "o": [
+      "terrible",
+      "furious",
+      "delicious",
+      "huge"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 1: Reading – the future of entertainment": [
+   [
+    {
+     "t": "mcq",
+     "q": "What does 'consume' mean when we talk about entertainment?",
+     "o": [
+      "make something new",
+      "change completely",
+      "follow the progress of something",
+      "use or take in films and content"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "'Lifelike' is a verb.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which word means 'change completely'?",
+     "o": [
+      "transform",
+      "consume",
+      "create"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Change completely",
+     "o": [
+      "transform",
+      "consume",
+      "create",
+      "swallow"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "One skimming method is to read the first one or two lines of each paragraph.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "In some interactive content, viewers can choose between different endings.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which word means 'what you like more than other things'?",
+     "o": [
+      "preference",
+      "challenge",
+      "version",
+      "specialist"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Which word means 'make something new'?",
+     "o": [
+      "transform",
+      "create",
+      "consume"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "'Consume' is a noun.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Looking like a real person",
+     "o": [
+      "virtual",
+      "lifelike",
+      "tiny",
+      "interactive"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Lesson 2: Grammar – past simple and past continuous": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which verb is NOT usually used in the past continuous?",
+     "o": [
+      "play",
+      "clean",
+      "walk",
+      "like"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The past simple of 'stop' is 'stoped'.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: I ___ my homework when my auntie rang.",
+     "o": [
+      "was doing",
+      "do",
+      "am doing"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Past simple of 'win'",
+     "o": [
+      "won",
+      "winned",
+      "wan",
+      "wined"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The past simple of 'grow' is 'grew'.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 3: Vocabulary – technology in the home": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which items are written as one word?",
+     "o": [
+      "washing machine and coffee maker",
+      "air conditioning and coffee maker",
+      "washing machine and air conditioning",
+      "dishwasher and microwave"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "'Go off' and 'come on' can be separated.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which machine heats food quickly?",
+     "o": [
+      "microwave",
+      "kettle",
+      "dishwasher"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "It makes coffee",
+     "o": [
+      "coffee maker",
+      "kettle",
+      "speaker",
+      "microwave"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "With a separable phrasal verb, a pronoun goes between the verb and the particle.",
+     "a": true
+    }
+   ]
   ]
  }
 }

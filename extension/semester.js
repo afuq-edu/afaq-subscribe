@@ -13,7 +13,7 @@ import {
 } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { diffDays, addDays } from './dates.js';
-import { lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, HW_MARK } from './homework.js';
+import { lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, hwHush, HW_MARK } from './homework.js';
 import { AFAQ } from './afaq-config.js';
 import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck, installUrl, fillLog, flushFillLog, sendNoorTree, getNoorTree } from './remote.js';
 
@@ -1251,6 +1251,11 @@ const unitName = (t) => {
   const rest = x.replace(/^(?:ال)?وحد[ةه]\s*\d+\s*[:：\-–—]?\s*/, '');
   return rest !== x && /[a-z]/i.test(rest) ? rest.trim() : x;
 };
+// «الوحدة الأولى» / «الوحدة الثانية عشرة» بكلمات الترتيب (لا بالأرقام) كما تُكتب بعد التوحيد
+function unitPhrase(t) {
+  const m = kwNorm(t).match(/(?:^| )((?:ال)?وحد[هة]) (\S+)(?: (عشر[هة]?))?(?= |$)/);
+  return m && ORDW[m[2]] ? [m[1], m[2], m[3]].filter(Boolean).join(' ') : '';
+}
 function bookNo(t) {
   const n = unitName(t);
   const m = kwNorm(n).match(/(?:^|[^a-z])unit\s*(\d+)/);
@@ -1356,7 +1361,9 @@ const unitsOfList = (arr) => { const m = new Map(); arr.forEach((x, i) => { cons
 const LNUM = /(?:ال)?درس\s+(?:رقم\s*)?(?:\d+|(?:ال)?(?:[أاإ]ول[ىي]?|ثاني[ةه]?|ثالث[ةه]?|رابع[ةه]?|خامس[ةه]?|سادس[ةه]?|سابع[ةه]?|ثامن[ةه]?|تاسع[ةه]?|عاشر[ةه]?))(?![\u0621-\u064a])\s*[:：\-–]?\s*/g;
 // شجرة نور تكتب الوحدة داخل اسم الدرس تحت قسم كبير («1أ – الأعداد» » «2 المضاعفات والعوامل:2-1 المضاعفات والعوامل»):
 // يُقرأ ما قبل النقطتين وحدةً وما بعدها درسًا عند الربط فقط، والربط يعود إلى درس نور نفسه
-const UNIT_IN_NAME = /^\s*(\d{1,2}\s*[^\s\d:][^:]*?)\s*:\s*(\d{1,2}\s*-\s*\d{1,2}\s*\S.*)$/;
+// وقد تأتي بعد رقم الوحدة نقطتان («1: العدّ حتى العشرة:1-2 العدّ حتى العشرة») أو تسقط النقطتان قبل رقم الدرس
+// («4استخدام خط الاعداد 2-4 تقريب الأعداد»، «6 الجمع والطرح (1)6-3 المتساوي»)، وقد يكون في اسم الوحدة نقطتان («13: الجمع والطرح: الإضافة والحذف:13-1 …»)
+const UNIT_IN_NAME = /^\s*(\d{1,2}\s*:?\s*[^\s\d:].*?)(?:\s*:\s*|\s+|(?<=\)))(\d{1,2}\s*-\s*\d{1,2}\s*\S.*)$/;
 // درس واحد في ملفك قسّمه نور أجزاءً («3 - 1 الكسور الجبرية: أ تبسيط…»، «…: ب ضرب وقسمة…»، «…: ج جمع…»):
 // حصصه تُوزَّع على الأجزاء بالترتيب، فلكل جزء في نور تحضيره (وتبقى الحصص كلها كما هي في ملفك)
 const PART = /^(.*\S)\s*:\s*\(?([أابجده])\)?\s+(\S.*)$/;
@@ -1581,6 +1588,9 @@ function alignGroups0(groups, nodes, known) {
         if (top.length === 1) { t = top[0].x; byName++; }
       }
     }
+    // وحدة نور بدرس واحد يجمعها («التهيئة (الوحدة الأولى)» » «أنشطة الوحدة الأولى وتقييمها») ووحدة ملفك «الوحدة الأولى: الأعداد حتى ٥…»:
+    // عبارة «الوحدة الأولى» نفسها فيهما — هي وحدتها بالاسم، ودروس ملفك فيها كلها لذلك الدرس
+    if (!t) { const ph = unitPhrase(gu); const c = ph ? tList.filter((x) => !taken.has(x.k) && x.idx.length === 1 && (' ' + kwNorm(x.text) + ' ' + kwNorm(nodes[x.idx[0]].text) + ' ').includes(' ' + ph + ' ')) : []; if (c.length === 1) { t = c[0]; byName++; } }
     // وحدة نور بلا اسم («الوحدة (1)») ووحدة ملفك برقمها نفسه («الوحدة الأولى: قيمنا»): رقمها هو اسمها في نور، فلا تُعدّ أسماءً لا تتشابه
     if (!t) { const no = bookNo(gu); if (no != null) { const c = tList.filter((x) => x.no === no); if (c.length === 1) { t = c[0]; how = 'number'; if (numberOnlyUnit(t.text) === no) byName++; } } }
     if (!t && gUnits.size === tList.length && !taken.has(tList[ui].k)) { t = tList[ui]; how = 'number'; }   // العدد نفسه من الوحدات: بالترتيب
@@ -2431,7 +2441,8 @@ function flRow(status, item, note) {
 const flMissRow = (p) => flRow('skipped', { s: { lesson: { id: p.sessions[0].lesson.id, title: [p.group.unit, p.group.lesson].filter(Boolean).join(' / ') || p.sessions[0].lesson.title }, date: '', movedFrom: '' }, node: null }, p.why ? `لم أجد مقابله في نور: ${p.why}` : 'لم أجد مقابله في نور');
 
 // ================= الواجبات (المالك 2026-11-01) =================
-// لكل درس واجب واحد من خمسة أسئلة في «المهام الإلكترونية»، مربوط بأول تحضير للدرس ويُنشر بتاريخه.
+// لكل حصة واجب من خمسة أسئلة في «المهام الإلكترونية» (المالك 2026-11-07: «لكل حصة واجب وليس لكل عنوان واجب»)، مربوط بتحضير
+// تلك الحصة ويُنشر بتاريخه. واجب الحصة الأولى بعنوان الدرس ومفتاحه كما كان (ما أُضيف قبل ذلك لا يتكرر)، وما بعدها «… — الحصة الثانية».
 // كل شيء بهدوء: ما تعذّر لا يظهر للمعلم ولا يوقف التحضير (يُسجَّل للمشرف فقط)
 const HW_KEY = 'hwDone';
 const hwKeyOf = (node) => kwNorm([node.unit || '', node.text || '', node.nth || 0].join('|'));
@@ -2443,34 +2454,46 @@ async function hwMark(key, aid) {
 async function execMain(func, ...args) {
   try { const r = await chrome.scripting.executeScript({ target: { tabId }, world: 'MAIN', func, args }); return r && r[0] ? r[0].result : null; } catch (e) { return null; }
 }
-// أسئلة الدرس من ملف واجبات المادة (باسم الدرس في ملف التحضير)
-async function hwQuestions(p) {
-  const seen = new Set();
+// رقم الحصة بين حصص درسها في ملف التحضير (١ = الأولى) — به تُختار أسئلة واجبها
+const hwFileN = (lesson) => { const all = ((pkg && pkg.lessons) || []).filter((l) => l.lesson === lesson.lesson); const i = all.findIndex((l) => l.id === lesson.id); return i < 0 ? 1 : i + 1; };
+// رقم الحصة بين كل الحصص المربوطة بدرس نور هذا (دروس ملفك المجموعة في درس واحد بنور تتتابع) — به عنوان الواجب ومفتاحه
+function hwNodeN(node, lesson) {
+  let m = 0;
+  for (const p of plan) { if (p.node !== node) continue; for (const x of p.sessions) { m++; if (x.lesson.id === lesson.id) return m; } }
+  return 1;
+}
+// أسئلة الحصة من ملف واجبات المادة (باسم درسها في ملف التحضير وترتيبها فيه)
+async function hwQuestions(p, lesson) {
+  const qs = await lessonHomework(pkg, lesson, WIZ.gamesBase || undefined, hwFileN(lesson));
+  if (qs.length) return qs;
+  // درس مقسوم أجزاءً أو مجموع مع غيره: أسئلة درس آخر في المجموعة نفسها
+  const seen = new Set([lesson.lesson]);
   for (const s of (p && p.sessions) || []) {
     const k = s.lesson.lesson; if (seen.has(k)) continue; seen.add(k);
-    const qs = await lessonHomework(pkg, s.lesson, WIZ.gamesBase || undefined);
-    if (qs.length) return qs;
+    const q2 = await lessonHomework(pkg, s.lesson, WIZ.gamesBase || undefined, hwFileN(s.lesson));
+    if (q2.length) return q2;
   }
   return [];
 }
 const hwNoteRow = (item, why) => flRow('skipped', item, ('واجب لم يُضف: ' + why).slice(0, 300));
 // اسم الدرس في عنوان الواجب (درسان بالاسم نفسه في وحدة: رقم يميّزهما)
-const hwName = (node) => hwTitle(node.text + (node.nth ? ` (${toAr(node.nth + 1)})` : ''));
-// «الواجبات فقط»: لكل درس من الشجرة له تحضير في نور (أول تحضير له، بتاريخ قادم) واجبه بتاريخ ذلك التحضير
+const hwName = (node, m = 1) => hwTitle(node.text + (node.nth ? ` (${toAr(node.nth + 1)})` : '') + (m > 1 ? ` — الحصة ${ORD[m - 1] || toAr(m)}` : ''));
+// «الواجبات فقط»: لكل تحضير في نور بتاريخ قادم (حصة من حصص الدرس) واجبه بتاريخ ذلك التحضير
 async function homeworkOnly() {
   const nConf = conflicts(); if (nConf.miss.length + nConf.weak.length + nConf.dup.length || plan.mismatch) autoResolve();
   safeLinks();
   setPhase('fill');
   const hw = (k) => (k === 1 ? 'واجبًا واحدًا' : k === 2 ? 'واجبين' : k <= 10 ? toAr(k) + ' واجبات' : toAr(k) + ' واجبًا');
   if (WIZ.hwPick) {
-    // الدروس التي اختارها المعلم بتاريخيها، مربوطة بدرس الشجرة وحده (بلا تحضير)
-    const groups = plan.filter((p) => p.node && WIZ.hwPick[p.group.key]);
+    // الحصص التي اختارها المعلم بتاريخيها، مربوطة بدرس الشجرة وحده (بلا تحضير) — لكل حصة واجبها
+    const picks = [];
+    plan.forEach((p) => { if (p.node) p.sessions.forEach((x) => { const v = WIZ.hwPick[x.lesson.id]; if (v) picks.push({ p, x, v }); }); });
     let n = 0;
-    for (let gi = 0; gi < groups.length && !stopFlag; gi++) {
-      const p = groups[gi], v = WIZ.hwPick[p.group.key];
-      setBox('run', `أضيف واجب «${shortT(p.node.text)}»…`, `${toAr(gi + 1)} من ${toAr(groups.length)}`);
-      $('prog').style.width = (Math.min(1, (gi + 1) / groups.length) * 100) + '%';
-      const r = await addHomework({ s: { lesson: p.sessions[0].lesson, date: v.pub, secs: null, movedFrom: '' }, p, node: p.node }, { date: v.pub, due: v.due, noPrep: true });
+    for (let gi = 0; gi < picks.length && !stopFlag; gi++) {
+      const { p, x, v } = picks[gi];
+      setBox('run', `أضيف واجب «${shortT(p.node.text)}»…`, `${toAr(gi + 1)} من ${toAr(picks.length)}`);
+      $('prog').style.width = (Math.min(1, (gi + 1) / picks.length) * 100) + '%';
+      const r = await addHomework({ s: { lesson: x.lesson, date: v.pub, secs: null, movedFrom: '' }, p, node: p.node }, { date: v.pub, due: v.due, noPrep: true });
       if (r === 'ok') n++;
     }
     WIZ.hwHead = n ? `✓ أضفت ${hw(n)}` : '✓ انتهى';
@@ -2484,32 +2507,46 @@ async function homeworkOnly() {
   const prepIds = (info && info.preps) || [];
   const titles = (h && h.titles) || [], dates = (h && h.dates) || [];
   const peelT = (t) => { let b = t; for (let j = 0; j < 4 && stripSessionSuffix(b) !== b; j++) b = stripSessionSuffix(b); return b; };
-  // أول تحضير لكل اسم درس: الأقدم تاريخًا (ولكل اسم مكرر في الشجرة، بترتيب التواريخ)
-  const firstBy = new Map();
-  titles.forEach((t, i) => { const k = kwNorm(peelT(t)); if (!k) return; const d = isIso(dates[i]) ? dates[i] : ''; if (!firstBy.has(k)) firstBy.set(k, []); firstBy.get(k).push({ t, d, own: peelT(t) === t }); });
+  // تحاضير كل اسم درس بترتيب تواريخها: الأول للحصة الأولى، والثاني للثانية… (ولكل اسم مكرر في الشجرة، بترتيب التواريخ)
+  const prepsBy = new Map();
+  titles.forEach((t, i) => { const k = kwNorm(peelT(t)); if (!k) return; const d = isIso(dates[i]) ? dates[i] : ''; if (!prepsBy.has(k)) prepsBy.set(k, []); prepsBy.get(k).push({ t, d }); });
   const idsBy = new Map();
   prepIds.forEach((x) => { const k = kwNorm(peelT(x.title)); if (!idsBy.has(k)) idsBy.set(k, []); idsBy.get(k).push(x); });
   const today = todayIso();
   let n = 0, past = 0, none = 0;
-  const groups = plan.filter((p) => p.node && !p.skipped && !p.miss);
-  for (let gi = 0; gi < groups.length && !stopFlag; gi++) {
-    const p = groups[gi], node = p.node, k = kwNorm(node.text);
-    const rows = (firstBy.get(k) || []).filter((r) => r.own).sort((a, b) => (a.d || '9').localeCompare(b.d || '9'));
-    const row = rows[node.nth || 0] || null;
-    if (!row) { none++; continue; }
-    if (!row.d || row.d < today) { past++; continue; }
-    const ids = (idsBy.get(k) || []).filter((x) => peelT(x.title) === x.title).sort((a, b) => +a.id - +b.id);
-    const pid = (ids[node.nth || 0] || ids[0] || {}).id || '';
-    setBox('run', `أضيف واجب «${shortT(node.text)}»…`, `${toAr(gi + 1)} من ${toAr(groups.length)}`);
-    $('prog').style.width = (Math.min(1, (gi + 1) / groups.length) * 100) + '%';
-    const r = await addHomework({ s: { lesson: p.sessions[0].lesson, date: row.d, secs: null, movedFrom: '' }, p, node }, { date: row.d, prepId: pid });
+  // كل درس نور مرة واحدة، وحصصه كل الحصص المربوطة به بالترتيب
+  const nodes = [...new Set(plan.filter((p) => p.node && !p.skipped && !p.miss).map((p) => p.node))];
+  const work = [];
+  nodes.forEach((node) => {
+    const k = kwNorm(node.text);
+    const ses = []; plan.forEach((p) => { if (p.node === node) p.sessions.forEach((x) => ses.push({ p, x })); });
+    const rows = (prepsBy.get(k) || []).slice().sort((a, b) => (a.d || '9').localeCompare(b.d || '9'));
+    // درسان بالاسم نفسه في الشجرة: تحاضير الاسم تتقاسمها بالترتيب
+    const twins = nodes.filter((y) => kwNorm(y.text) === k).sort((a, b) => (a.nth || 0) - (b.nth || 0));
+    const per = twins.length > 1 ? Math.ceil(rows.length / twins.length) : rows.length;
+    const mine = twins.length > 1 ? rows.slice(twins.indexOf(node) * per, twins.indexOf(node) * per + per) : rows;
+    if (!mine.length) { none++; return; }
+    const ids = (idsBy.get(k) || []).slice();
+    mine.forEach((row, j) => {
+      const at = ids.findIndex((x) => x.title === row.t); const pid = at >= 0 ? ids.splice(at, 1)[0].id : '';
+      const it = ses[Math.min(j, ses.length - 1)];
+      if (!it) return;
+      if (!row.d || row.d < today) { past++; return; }
+      work.push({ node, it, row, pid, m: j + 1 });
+    });
+  });
+  for (let gi = 0; gi < work.length && !stopFlag; gi++) {
+    const { node, it, row, pid } = work[gi];
+    setBox('run', `أضيف واجب «${shortT(node.text)}»…`, `${toAr(gi + 1)} من ${toAr(work.length)}`);
+    $('prog').style.width = (Math.min(1, (gi + 1) / work.length) * 100) + '%';
+    const r = await addHomework({ s: { lesson: it.x.lesson, date: row.d, secs: null, movedFrom: '' }, p: it.p, node }, { date: row.d, prepId: pid });
     if (r === 'ok') n++;
   }
   WIZ.hwHead = n ? `✓ أضفت ${hw(n)}` : '✓ انتهى';
-  WIZ.hwSub = n ? 'لكل درس خمسة أسئلة في «المهام الإلكترونية»، ويُنشر الواجب بتاريخ تحضير درسه.'
+  WIZ.hwSub = n ? 'لكل حصة خمسة أسئلة في «المهام الإلكترونية»، ويُنشر الواجب بتاريخ تحضير حصته.'
     : past && !none ? 'الواجبات تُضاف للدروس القادمة، ودروسك المحضّرة في نور كلها مضى تاريخها.'
     : 'الواجبات تُضاف لدروس محضّرة في نور. حضّر الدروس أولًا ثم أضف واجباتها.';
-  logLine('ok', WIZ.hwHead + (past ? ` — ${toAr(past)} درسًا مضى تاريخ تحضيره` : ''));
+  logLine('ok', WIZ.hwHead + (past ? ` — ${toAr(past)} تحضيرًا مضى تاريخه` : ''));
 }
 // واجب واحد كما ينشئه المعلم بيده في تبويب نور: «إضافة واجب جديد» ← «إضافة» ← «إضافة مجموعة مفردات دفعة واحدة» ← «حفظ»
 async function noorOrigin() { try { return new URL((await chrome.tabs.get(tabId)).url).origin; } catch (e) { return 'https://lms.moe.gov.om'; } }
@@ -2522,7 +2559,9 @@ async function hwCreateLive(op) {
   const nv = waitNavigation(60000);
   const f = await execMain(hwCreateFill, op);
   if (!f || !f.ok) return f || { err: 'nofill' };
-  await nv; await waitComplete(10000); await sleep(500);
+  await nv; await waitComplete(10000);
+  execMain(hwHush).catch(() => {});   // رسالة نور «لم يتم إيجاد مفردات مضافة» على قائمة الواجب الفارغة: تُغلق بهدوء
+  await sleep(500);
   const a = await execMain(hwAfterCreate);
   if (!a || !a.ok) return Object.assign({ sent: true }, a || { err: 'noaid' });
   const bulk = `${origin}/teacher/questions/add_bulk_questions/cid:${a.cid}/aid:${a.aid}${a.type ? '/type:' + a.type : ''}`;
@@ -2531,20 +2570,24 @@ async function hwCreateLive(op) {
   const nv2 = waitNavigation(60000);
   const b = await execMain(hwBulkFill, { qs: op.qs, mark: op.mark });
   if (!b || !b.ok) return Object.assign({ aid: a.aid }, b || { err: 'nobulk' });
-  await nv2; await waitComplete(10000); await sleep(500);
+  await nv2; await waitComplete(10000);
+  execMain(hwHush).catch(() => {});
+  await sleep(500);
   const n = await execMain(hwCount, { cid: a.cid, aid: a.aid, type: a.type });
   if (n === 0) return { err: 'noq', aid: a.aid };
   return { ok: true, aid: a.aid, n, prepId: f.prepId, lessonId: f.lessonId };
 }
 async function addHomework(item, opts = {}) {
   if (!item || !item.node || !courseCid) return 'off';
-  const key = hwKeyOf(item.node);
+  const lesson = item.s.lesson;
+  const m = hwNodeN(item.node, lesson);
+  const key = hwKeyOf(item.node) + (m > 1 ? '#' + m : '');
   const done = WIZ.hwDone || (WIZ.hwDone = await hwLoad());
   if (done[key] && !opts.noPrep) return 'had';
-  const qs = await hwQuestions(item.p);
+  const qs = await hwQuestions(item.p, lesson);
   if (qs.length < 5) { hwNoteRow(item, 'لا أسئلة جاهزة لهذا الدرس'); return 'noq'; }
   const d = hwDates(opts.date || item.s.date, nowDate(), opts.due || '');
-  const op = { kind: 'create', cid: courseCid, title: hwName(item.node), match: [item.node.text], unit: item.node.unit || '', nth: item.node.nth || 0, noPrep: !!opts.noPrep, newest: !opts.prepId, prepId: opts.prepId || '', secs: null, qs, mark: HW_MARK, publish: d.publish, due: d.due, cutoff: d.cutoff };
+  const op = { kind: 'create', cid: courseCid, title: hwName(item.node, m), match: [item.node.text], unit: item.node.unit || '', nth: item.node.nth || 0, noPrep: !!opts.noPrep, newest: !opts.prepId, prepId: opts.prepId || '', secs: null, qs, mark: HW_MARK, publish: d.publish, due: d.due, cutoff: d.cutoff };
   let r = null;
   // قبل «إضافة» فقط تُعاد المحاولة (بعدها قد يكون الواجب أُنشئ — لا تكرار)
   for (let i = 0; i < 2 && !stopFlag; i++) {
@@ -2555,7 +2598,7 @@ async function addHomework(item, opts = {}) {
   }
   if (r && r.ok) {
     done[key] = r.aid || 1; await hwMark(key, r.aid);
-    if (!r.dup) { WIZ.hwN = (WIZ.hwN || 0) + 1; logLine('ok', `✓ واجب «${item.node.text}» — ${toAr(qs.length)} أسئلة · ${dayLabel(d.publish.slice(0, 10), false)}`); }
+    if (!r.dup) { WIZ.hwN = (WIZ.hwN || 0) + 1; logLine('ok', `✓ واجب «${item.node.text}»${m > 1 ? ` (الحصة ${ORD[m - 1] || toAr(m)})` : ''} — ${toAr(qs.length)} أسئلة · ${dayLabel(d.publish.slice(0, 10), false)}`); }
     return r.dup ? 'had' : 'ok';
   }
   if (r && r.aid) { done[key] = r.aid; await hwMark(key, r.aid); }   // أُنشئ ولم تُضف أسئلته كلها: لا يُنشأ ثانية
@@ -3296,26 +3339,37 @@ function wzLessons() {
   };
 }
 // «الواجبات فقط» (المالك 2026-11-01): يختار المعلم الدروس، ولكل درس تاريخ نشر وتاريخ تسليم يكتبهما هو (لا يُقترح تاريخ)؛
-// الواجب يُربط بدرس الشجرة وحده دون تحضير. تسليم فارغ ← بعد النشر بثلاثة أيام
+// الواجب يُربط بدرس الشجرة وحده دون تحضير. تسليم فارغ ← بعد النشر بثلاثة أيام.
+// لكل حصة واجبها (المالك 2026-11-07): اختيار الدرس يختار حصصه كلها، ولكل حصة مختارة تاريخاها
 function wzHwLessons() {
   const body = $('wzBody');
   const keep = body.querySelector('.wz-list'); const top = keep ? keep.scrollTop : 0;
-  $('wzHead').textContent = 'اختر الدروس وتواريخ واجباتها';
+  $('wzHead').textContent = 'اختر الحصص وتواريخ واجباتها';
   const gs = groupByUnit(lessonGroups(wz.pkg));
   let u = null;
+  const dates = (id) => { const v = wz.hsel.get(id) || {}; return `<label class="wz-s"><span>تاريخ النشر</span><input class="input wz-date" type="date" data-hp="${esc(id)}" value="${esc(v.pub || '')}"></label>
+      <label class="wz-s"><span>تاريخ التسليم</span><input class="input wz-date" type="date" data-hd="${esc(id)}" value="${esc(v.due || '')}"></label>`; };
   body.innerHTML = wzTrialNote() + '<div class="wz-list">' + gs.map((g) => {
-    const v = wz.hsel.get(g.key);
+    const on = g.sessions.some((l) => wz.hsel.has(l.id)), one = g.sessions.length === 1;
     const uh = g.unit !== u ? `<div class="wz-unit">${esc(g.unit || 'دروس')}</div>` : ''; u = g.unit;
-    const dates = v ? `<div class="wz-ses"><label class="wz-s"><span>تاريخ النشر</span><input class="input wz-date" type="date" data-hp="${esc(g.key)}" value="${esc(v.pub || '')}"></label>
-      <label class="wz-s"><span>تاريخ التسليم</span><input class="input wz-date" type="date" data-hd="${esc(g.key)}" value="${esc(v.due || '')}"></label></div>` : '';
-    return `${uh}<div class="wz-les ${v ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-hk="${esc(g.key)}" ${v ? 'checked' : ''}><span>${esc(g.lesson || 'درس')}</span><em></em></label>${dates}</div>`;
+    const ses = on && one ? `<div class="wz-ses">${dates(g.sessions[0].id)}</div>`
+      : on ? `<div class="wz-ses">${g.sessions.map((l, k) => `<div class="wz-hs"><label class="wz-s"><input type="checkbox" data-hs="${esc(l.id)}" ${wz.hsel.has(l.id) ? 'checked' : ''}><span>الحصة ${ORD[k] || toAr(k + 1)}</span></label>${wz.hsel.has(l.id) ? dates(l.id) : ''}</div>`).join('')}</div>` : '';
+    return `${uh}<div class="wz-les ${on ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-hk="${esc(g.key)}" ${on ? 'checked' : ''}><span>${esc(g.lesson || 'درس')}</span><em>${one ? '' : countWord(g.sessions.length)}</em></label>${ses}</div>`;
   }).join('') + '</div>';
   const n = wz.hsel.size;
   const hwW = (k) => (k === 1 ? 'واجبًا واحدًا' : k === 2 ? 'واجبين' : k <= 10 ? toAr(k) + ' واجبات' : toAr(k) + ' واجبًا');
   body.insertAdjacentHTML('beforeend', `<p class="wz-note">لكل واجب خمسة أسئلة من الدرس في «المهام الإلكترونية». إن تركت تاريخ التسليم فارغًا يكون بعد النشر بثلاثة أيام.</p><button class="btn primary big" id="wzHwGo" ${n ? '' : 'disabled'}>${n ? `أضف ${hwW(n)} في نور` : 'اختر درسًا'}</button>`);
   const list = body.querySelector('.wz-list'); list.scrollTop = top;
   body.querySelectorAll('input[data-hk]').forEach((cb) => {
-    cb.onchange = () => { if (cb.checked) wz.hsel.set(cb.dataset.hk, { pub: '', due: '' }); else wz.hsel.delete(cb.dataset.hk); wzHwLessons(); };
+    cb.onchange = () => {
+      const g = gs.find((x) => x.key === cb.dataset.hk);
+      if (cb.checked) g.sessions.forEach((l) => { if (!wz.hsel.has(l.id)) wz.hsel.set(l.id, { pub: '', due: '' }); });
+      else g.sessions.forEach((l) => wz.hsel.delete(l.id));
+      wzHwLessons();
+    };
+  });
+  body.querySelectorAll('input[data-hs]').forEach((cb) => {
+    cb.onchange = () => { if (cb.checked) wz.hsel.set(cb.dataset.hs, { pub: '', due: '' }); else wz.hsel.delete(cb.dataset.hs); wzHwLessons(); };
   });
   const bindD = (attr, f) => body.querySelectorAll(`input[${attr}]`).forEach((d) => {
     d.onclick = (e) => e.stopPropagation();

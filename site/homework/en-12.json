@@ -2,7 +2,7 @@
  "key": "en-12",
  "subject": "اللغة الإنجليزية",
  "grade": "الصف الثاني عشر",
- "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ)",
+ "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ) · sessions = أسئلة الحصة الثانية فما بعدها لكل درس (lessons = الحصة الأولى)",
  "lessons": {
   "Lead-in: ‘retail therapy’ and the core words of Theme 1": [
    {
@@ -4953,6 +4953,54 @@
     ],
     "a": 4
    }
+  ]
+ },
+ "sessions": {
+  "Pronouns as cohesive devices, the Wright brothers and timed reading": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which person is the best example of a pioneer?",
+     "o": [
+      "A passenger on a normal flight",
+      "Someone who reads about planes",
+      "A person who copies an old idea",
+      "The first person to fly a new kind of plane"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "In timed reading, you should answer the questions while you are reading.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "'The airlines... They want to...' What does 'They' refer to?",
+     "o": [
+      "The airlines",
+      "The emissions",
+      "The passengers"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Verb of 'invention'",
+     "o": [
+      "invent",
+      "inventor",
+      "inventive",
+      "invented"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A pioneer is a person who is among the first to do something new.",
+     "a": true
+    }
+   ]
   ]
  }
 }

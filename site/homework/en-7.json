@@ -2,7 +2,7 @@
  "key": "en-7",
  "subject": "اللغة الإنجليزية",
  "grade": "الصف السابع",
- "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ)",
+ "note": "خمسة أسئلة لكل درس: a = رقم الخيار الصحيح (اختيار من متعدد) أو true/false (صح وخطأ) · sessions = أسئلة الحصة الثانية فما بعدها لكل درس (lessons = الحصة الأولى)",
  "lessons": {
   "Welcome – Lesson 1: The WOW! Team": [
    {
@@ -1848,6 +1848,2144 @@
     ],
     "a": 4
    }
+  ]
+ },
+ "sessions": {
+  "Welcome – Lesson 1: The WOW! Team": [
+   [
+    {
+     "t": "mcq",
+     "q": "What were the three topics of last year's magazine?",
+     "o": [
+      "animals, travel, jobs",
+      "writers, entertainment, animals",
+      "food, sport, music",
+      "happy homes, different clothes, keeping safe outdoors"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Juma wants to read about architects because he is going on holiday.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "How many members are in the new WOW! Team?",
+     "o": [
+      "four",
+      "three",
+      "six"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Team member: M _ _ _ d",
+     "o": [
+      "Majid",
+      "Basim",
+      "Juma",
+      "Salim"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The new WOW! Team has four members.",
+     "a": true
+    }
+   ]
+  ],
+  "Welcome – Lesson 2: Team Talk": [
+   [
+    {
+     "t": "mcq",
+     "q": "Who is thirteen and likes travelling with his parents?",
+     "o": [
+      "Majid",
+      "Basim",
+      "Juma",
+      "Frank"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Majid has been camping in dangerous places.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Who is thirteen?",
+     "o": [
+      "Frank",
+      "Majid",
+      "Bayan"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: All the students in Majid's class know some ___.",
+     "o": [
+      "first aid",
+      "French",
+      "football",
+      "cooking"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Majid usually wears an Omani hat and a dishdasha.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 1: Vocabulary – Jobs in entertainment": [
+   [
+    {
+     "t": "mcq",
+     "q": "Write the job: She puts make-up on actors' faces.",
+     "o": [
+      "costume designer",
+      "animator",
+      "presenter",
+      "make-up artist"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "A camera operator usually performs on the stage.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Who works with puppets?",
+     "o": [
+      "a puppeteer",
+      "a presenter",
+      "a writer"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "He works with puppets.",
+     "o": [
+      "puppeteer",
+      "presenter",
+      "comedian",
+      "animator"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A comedian makes people laugh by telling jokes.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 2: Team Talk – I’ve no idea! I get it!": [
+   [
+    {
+     "t": "mcq",
+     "q": "How long has Frank been a puppeteer?",
+     "o": [
+      "For two days.",
+      "Since lunchtime.",
+      "Since last week.",
+      "Since he was eight."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We say “I get it” when we don't understand a joke.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "What's the capital of Peru? – ___",
+     "o": [
+      "I've no idea.",
+      "That's cool!",
+      "I get it."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "You don't know: I've no ___.",
+     "o": [
+      "idea",
+      "joke",
+      "clue",
+      "answer"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Frank's costume is a bit small now.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 3: Grammar – Present perfect with since and for": [
+   [
+    {
+     "t": "mcq",
+     "q": "When do we use for?",
+     "o": [
+      "with a point in time",
+      "with names",
+      "with places",
+      "with a period of time"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "“I haven't been to the cinema for I was seven” is correct.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "I've lived here ___ five years.",
+     "o": [
+      "for",
+      "since",
+      "at"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "I've lived here ___ 5 years.",
+     "o": [
+      "for",
+      "since",
+      "at",
+      "in"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use for with a period of time, like five years.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 4: Book club – My Muscat diary": [
+   [
+    {
+     "t": "mcq",
+     "q": "When did the family arrive in Muscat?",
+     "o": [
+      "On Monday morning",
+      "On Sunday afternoon",
+      "In September",
+      "On Saturday 29th December, in the evening"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Dad has had the Royal Opera House tickets since December.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Where is the family flying home to?",
+     "o": [
+      "Khasab",
+      "Sur",
+      "Nizwa"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Family's home town",
+     "o": [
+      "Khasab",
+      "Sur",
+      "Nizwa",
+      "Salalah"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A diary is usually written in the first person (I, we).",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 5: Vocabulary and Grammar – Places of entertainment; Present continuous for future arrangements": [
+   [
+    {
+     "t": "mcq",
+     "q": "Where can you see fish, sharks and turtles?",
+     "o": [
+      "at an art gallery",
+      "at a bowling alley",
+      "at a 3D cinema",
+      "at an aquarium"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "“I'm flying to Cairo on Monday” is about now.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Where do you skate?",
+     "o": [
+      "at an ice rink",
+      "at a planetarium",
+      "at an art gallery"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Place to skate",
+     "o": [
+      "ice rink",
+      "aquarium",
+      "art gallery",
+      "planetarium"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "You can see fish, sharks and turtles at an aquarium.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 6: Culture and Project – Performers around the world": [
+   [
+    {
+     "t": "mcq",
+     "q": "What does Cirque du Soleil mean?",
+     "o": [
+      "Circus of the moon",
+      "Circus of the world",
+      "Circus of the stars",
+      "Circus of the sun"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Cirque du Soleil started in 1994.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which country does Al Haboot come from?",
+     "o": [
+      "Oman",
+      "Canada",
+      "Egypt"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Country of Al Haboot",
+     "o": [
+      "Oman",
+      "Canada",
+      "Egypt",
+      "Spain"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Al Haboot is especially popular in Dhofar governorate.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 7: English in action – Buying tickets": [
+   [
+    {
+     "t": "mcq",
+     "q": "How many tickets does the boy buy?",
+     "o": [
+      "One ticket",
+      "Two tickets",
+      "Ten tickets",
+      "Four tickets"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "“That's 19 rials on total” is correct.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Can I ___ four tickets, please?",
+     "o": [
+      "have",
+      "has",
+      "having"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Can I ___ two tickets?",
+     "o": [
+      "have",
+      "has",
+      "take",
+      "do"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We ask “How much is a guide?” to find out the price.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 8: Literacy – Reading an advert": [
+   [
+    {
+     "t": "mcq",
+     "q": "How can you buy tickets?",
+     "o": [
+      "Only at the gate",
+      "At the post office",
+      "From a teacher",
+      "On the website or by phoning"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The special offer is three tickets for the price of one.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "How high is the climbing wall?",
+     "o": [
+      "15 metres",
+      "50 metres",
+      "5 metres"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Height of the climbing wall",
+     "o": [
+      "15 metres",
+      "50 metres",
+      "5 metres",
+      "25 metres"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The climbing wall is 15 metres high.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 9: Literacy – Writing an advert": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which list shows features of a good advert?",
+     "o": [
+      "long paragraphs, no pictures",
+      "a diary date and first person",
+      "questions and answers only",
+      "logo, slogan, bullet points, special offer"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "“Our museum.” is a good, exciting slogan.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "___ through the glass tunnel and see sharks.",
+     "o": [
+      "Walk",
+      "Walking",
+      "Walked"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Short catchy line in an advert",
+     "o": [
+      "slogan",
+      "logo",
+      "title",
+      "bullet"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The slogan of City Beach Aquarium is “See the sea in the city!”",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 10: Over to you!": [
+   [
+    {
+     "t": "mcq",
+     "q": "Who wants to be a make-up artist, and why?",
+     "o": [
+      "The boy who loves trains",
+      "The girl who tells jokes",
+      "The boy who plays football",
+      "The girl who loves art and painted faces at a family party"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "You go bowling at an ice rink.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "I've written a diary ___ I was seven.",
+     "o": [
+      "since",
+      "for",
+      "ago"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "I've lived here ___ 2015.",
+     "o": [
+      "since",
+      "for",
+      "at",
+      "ago"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The girl who wants to be a make-up artist loves art.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "“In July we are flying to Cairo” is a future arrangement.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which place do you go to for bowling?",
+     "o": [
+      "A bowling alley",
+      "An ice rink",
+      "An aquarium",
+      "A planetarium"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "In July we ___ (fly) to Cairo.",
+     "o": [
+      "flying",
+      "are flying",
+      "is flying"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "The Present continuous for plans is have + past participle.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "I've had it ___ a year.",
+     "o": [
+      "ago",
+      "for",
+      "since",
+      "at"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Complete: I've written a diary ___ I was seven.",
+     "o": [
+      "for",
+      "in",
+      "ago",
+      "since"
+     ],
+     "a": 4
+    },
+    {
+     "t": "mcq",
+     "q": "Where do you go bowling?",
+     "o": [
+      "a bowling alley",
+      "a planetarium",
+      "an art gallery"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A comedian works behind the camera and videos the show.",
+     "a": false
+    },
+    {
+     "t": "tf",
+     "q": "“Ali has played football for five years” is correct.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Place for bowling",
+     "o": [
+      "ice rink",
+      "aquarium",
+      "circus",
+      "bowling alley"
+     ],
+     "a": 4
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "What is the Unit 1 WOW! question? Answer: Why are animals so awesome?",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Write a sentence about a friend with the Present perfect and for.",
+     "o": [
+      "Ali has played football for five years.",
+      "Ali played football for five years ago.",
+      "Ali has played football since five years.",
+      "Ali is playing football for 2020."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A costume designer makes clothes for performers.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which comment talks about clothes?",
+     "o": [
+      "the comedian's",
+      "the camera operator's",
+      "the costume designer's"
+     ],
+     "a": 3
+    },
+    {
+     "t": "mcq",
+     "q": "Place for skating",
+     "o": [
+      "museum",
+      "ice rink",
+      "planetarium",
+      "art gallery"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Which answer to the WOW! question is the best?",
+     "o": [
+      "Animals have wings and claws.",
+      "We travel by plane and bus.",
+      "I don't like entertainment.",
+      "Performers make us laugh, and places like museums help us learn in a fun way."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Planetariums and museums can help us learn in a fun way.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Ali has played football ___ five years.",
+     "o": [
+      "at",
+      "for",
+      "since"
+     ],
+     "a": 2
+    },
+    {
+     "t": "mcq",
+     "q": "She paints actors' faces.",
+     "o": [
+      "make-up artist",
+      "animator",
+      "writer",
+      "presenter"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Which form is used for future arrangements in Unit 1? Answer: Present perfect",
+     "a": false
+    }
+   ]
+  ],
+  "Lesson 12: Optional lesson – Fun corner": [
+   [
+    {
+     "t": "mcq",
+     "q": "What time are they meeting the guide at the Science Museum?",
+     "o": [
+      "At one o'clock",
+      "At four o'clock",
+      "At midnight",
+      "At ten o'clock"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The boys meet the guide at the Science Museum at four o'clock.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Mr Talal is the boys' ___.",
+     "o": [
+      "teacher",
+      "guide",
+      "father"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "The boys' teacher",
+     "o": [
+      "Mr Talal",
+      "Mr Frank",
+      "Mr Majid",
+      "Mr Ali"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "“I'm going to the 3D cinema tomorrow” is a plan.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "A costume designer designs costumes for films.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What do the boys buy in the gift shop?",
+     "o": [
+      "A postcard",
+      "A camera",
+      "A sculpture",
+      "A hot-air balloon"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "What time do they catch the bus back to school?",
+     "o": [
+      "one o'clock",
+      "four o'clock",
+      "ten o'clock"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "The boys visit the art gallery before the Science Museum.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Who loses his camera?",
+     "o": [
+      "Majid",
+      "Hazim",
+      "Faisal",
+      "Mr Talal"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Graded readers 1 and 2: The Entertainment Tour / The School Show": [
+   [
+    {
+     "t": "mcq",
+     "q": "Whose dream is to become a make-up artist?",
+     "o": [
+      "Samar's",
+      "Hazim's",
+      "Faisal's",
+      "Basma's"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The lion at the door is a real lion.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Where did Hazim learn how hot-air balloons fly?",
+     "o": [
+      "at the Science Museum",
+      "at the art gallery",
+      "on the bus"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Hazim's lost item",
+     "o": [
+      "camera",
+      "postcard",
+      "ticket",
+      "phone"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The boys take a photo in front of an amazing galaxy.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "Faisal says they can do another tour with their parents tomorrow.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What does sculpture mean?",
+     "o": [
+      "Art made from stone, metal or wood that you can walk around",
+      "A picture of stars",
+      "A kind of bus",
+      "A gift shop card"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "What do they take a photo in front of?",
+     "o": [
+      "a bus",
+      "a galaxy",
+      "a lion"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "The performer has wanted to be a performer for a few days.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Hazim's friend",
+     "o": [
+      "Majid",
+      "Faisal",
+      "Fahad",
+      "Frank"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Find a Present continuous sentence for the future in the story.",
+     "o": [
+      "We visited the museum.",
+      "Hazim has been excited.",
+      "They take a photo.",
+      "We're visiting an art gallery at one o'clock."
+     ],
+     "a": 4
+    },
+    {
+     "t": "mcq",
+     "q": "How long have Samar and Basma been at the show?",
+     "o": [
+      "two hours",
+      "two days",
+      "two weeks"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Backstage is where the audience sits.",
+     "a": false
+    },
+    {
+     "t": "tf",
+     "q": "A sculpture is a piece of art you can walk around.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Photo in front of a…",
+     "o": [
+      "lion",
+      "bus",
+      "shop",
+      "galaxy"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 1: Vocabulary – Animal body parts": [
+   [
+    {
+     "t": "mcq",
+     "q": "Write the body part: the feet of a cat or a bear.",
+     "o": [
+      "fins",
+      "flippers",
+      "horns",
+      "paws"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Birds have scales, like snakes.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "What does a camel have on its back?",
+     "o": [
+      "a hump",
+      "a fin",
+      "flippers"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Camel's back",
+     "o": [
+      "hump",
+      "fin",
+      "beak",
+      "horn"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A bird uses its beak to eat.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 2: Team Talk – Watch out! It’s so cute!": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which body parts does the hedgehog have?",
+     "o": [
+      "Scales, fins and a tail",
+      "Wings, a beak and feathers",
+      "A hump, horns and hooves",
+      "Spines, small paws and whiskers"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The animal has wings.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "There's a scorpion near your foot! – ___",
+     "o": [
+      "Watch out!",
+      "It's so cute!",
+      "I get it."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Warning of danger",
+     "o": [
+      "Watch out!",
+      "It's so cute!",
+      "Wow!",
+      "I get it."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We say “Watch out!” to warn someone of danger.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 3: Grammar – may, might, could, can’t, must": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which modal do we use when we are sure something is true?",
+     "o": [
+      "may",
+      "might",
+      "could",
+      "must"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "It has flippers but no fins. It must be a fish.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "It has a hump and lives in the desert. It ___ be a camel.",
+     "o": [
+      "must",
+      "can't",
+      "might not"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Sure it's true",
+     "o": [
+      "must",
+      "can't",
+      "might",
+      "could"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use can't when we are sure something is not true.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "May, might and could mean we are not sure.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which group of modals means we are not sure?",
+     "o": [
+      "may, might, could",
+      "must, can't",
+      "must, will",
+      "can't, mustn't"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "It doesn't have wings. It ___ be a bird.",
+     "o": [
+      "could",
+      "can't",
+      "must"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "“It might be a cat” and “It must be a cat” mean the same.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Sure it's not true",
+     "o": [
+      "might",
+      "can't",
+      "must",
+      "may"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Lesson 4: Book club – The platypus (a folk tale)": [
+   [
+    {
+     "t": "mcq",
+     "q": "What is the message of the story?",
+     "o": [
+      "Lions are the best animals.",
+      "Birds can't swim.",
+      "Never go to sleep.",
+      "Everyone is special in different ways."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The platypus can breathe underwater like the fish.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "What is the noun from write?",
+     "o": [
+      "writer",
+      "writter",
+      "writeer"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Noun from swim",
+     "o": [
+      "swimmer",
+      "swimer",
+      "swiming",
+      "swims"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The platypus has fur and a beak, lays eggs and swims.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 5: Vocabulary and Grammar – Animal verbs; First conditional": [
+   [
+    {
+     "t": "mcq",
+     "q": "What is the correct form of the first conditional?",
+     "o": [
+      "If + will, … present simple",
+      "If + past simple, … will + verb",
+      "If + will, … will + verb",
+      "If + present simple, … will + verb"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Dig means to fly high in the sky.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "A hedgehog makes itself into a ball. It …",
+     "o": [
+      "curls up",
+      "roars",
+      "dives"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "A lion does this loudly.",
+     "o": [
+      "roar",
+      "dig",
+      "dive",
+      "hide"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "A hedgehog curls up to make itself into a ball.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "Bees sting with their tail.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Which animal verb means 'cut into something with your teeth'?",
+     "o": [
+      "bite",
+      "sting",
+      "dive",
+      "lay eggs"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: If you come with us, you ___ with the best animals.",
+     "o": [
+      "was",
+      "will be",
+      "are being"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "If I will see a lion, I will run away.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "A bee does this with its tail.",
+     "o": [
+      "dive",
+      "sting",
+      "roar",
+      "curl up"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Lesson 6: Culture and Project – National animals": [
+   [
+    {
+     "t": "mcq",
+     "q": "How does the Arabian oryx get water in the desert?",
+     "o": [
+      "from the sea",
+      "from rivers every day",
+      "from other animals",
+      "from its food"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Ring-tailed lemurs live in the wild in Oman.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "What colour is the Arabian oryx's fur?",
+     "o": [
+      "white",
+      "brown",
+      "black"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Oman's national animal",
+     "o": [
+      "Arabian oryx",
+      "Komodo dragon",
+      "lemur",
+      "bald eagle"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The ring-tailed lemur is the national animal of Madagascar.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 7: English in action – Saying what you like and don’t like": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which list goes from most positive to most negative?",
+     "o": [
+      "can't stand – don't mind – quite like – crazy about",
+      "quite like – crazy about – can't stand – don't mind",
+      "don't mind – crazy about – can't stand – quite like",
+      "crazy about – quite like – don't mind – can't stand"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "In elephant, the stress is on the last syllable.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: I'm crazy ___ sea animals.",
+     "o": [
+      "about",
+      "on",
+      "with"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "I'm crazy ___ horses.",
+     "o": [
+      "about",
+      "on",
+      "for",
+      "at"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "I can't stand spiders is stronger than I'm not keen on spiders.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 8: Literacy – Reading an information text": [
+   [
+    {
+     "t": "mcq",
+     "q": "Where does the mata mata turtle live?",
+     "o": [
+      "in the desert",
+      "in cold seas",
+      "in tall trees",
+      "in warm lakes, ponds and rivers"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The mata mata turtle lives in cold seas near the North Pole.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Is the mata mata turtle a vertebrate or an invertebrate?",
+     "o": [
+      "a vertebrate",
+      "an invertebrate",
+      "an insect"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Animal with a backbone",
+     "o": [
+      "vertebrate",
+      "invertebrate",
+      "insect",
+      "fact file"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The mata mata turtle is a reptile.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 9: Literacy – Writing an information text": [
+   [
+    {
+     "t": "mcq",
+     "q": "Under which heading do you write 'stingrays'?",
+     "o": [
+      "Size",
+      "Home",
+      "Body",
+      "Food"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The hammerhead shark's favourite food is seaweed.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Pups are a fact for which heading?",
+     "o": [
+      "Family",
+      "Food",
+      "Home"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Hammerhead babies",
+     "o": [
+      "pups",
+      "cubs",
+      "calves",
+      "chicks"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Hammerhead shark babies are called pups.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 11: Get ready for… A2 Key for Schools": [
+   [
+    {
+     "t": "mcq",
+     "q": "Why will Thuriya be happier in Africa?",
+     "o": [
+      "Because it's colder there.",
+      "Because she can cook every day.",
+      "Because there are penguins.",
+      "Because it's warmer there."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "In a one-word gap task, you can write two or three words.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "How long has Thuriya been a writer?",
+     "o": [
+      "for twenty years",
+      "for three weeks",
+      "for two years"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Thuriya's job",
+     "o": [
+      "writer",
+      "doctor",
+      "pilot",
+      "teacher"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Thuriya has been a writer for twenty years.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "Thuriya is going to Africa next.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "What type of word is missing? The camel has a big ___ on its back.",
+     "o": [
+      "a noun",
+      "a verb",
+      "a preposition",
+      "an adverb"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "How often does Thuriya cook dinner?",
+     "o": [
+      "once a month",
+      "twice a week",
+      "every day"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "Only a few children read Wild Kids magazine.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Years as a writer",
+     "o": [
+      "ten",
+      "twenty",
+      "two",
+      "three"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Graded readers 1 and 2: The Desert Safari / The Nature Hunt": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which four animals does Khalid's family see on the desert safari?",
+     "o": [
+      "a hedgehog, a beetle, fish and flamingos",
+      "a lion, a shark, a bee and a turtle",
+      "a camel, a horse, a goat and a cat",
+      "an eagle, gazelles, a scorpion and a leopard"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "In The Nature Hunt, the flamingos have antennae.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "What does the eagle catch in The Desert Safari?",
+     "o": [
+      "a rabbit",
+      "a snake",
+      "a fish"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Family vehicle on the safari",
+     "o": [
+      "truck",
+      "bus",
+      "train",
+      "boat"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The gazelles use their long horns to fight with.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "Khalid's family see an Arabian leopard on the safari.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "How does The Desert Safari end?",
+     "o": [
+      "The leopard catches the meat and runs away.",
+      "The leopard gets into the truck.",
+      "The family gets lost in the desert.",
+      "The eagle catches the leopard."
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "What does the Arabian leopard have?",
+     "o": [
+      "fins and scales",
+      "big paws and long whiskers",
+      "wings and feathers"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "In The Nature Hunt, the girls find the hedgehog in the lake.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "The eagle catches a …",
+     "o": [
+      "gazelle",
+      "rabbit",
+      "fish",
+      "scorpion"
+     ],
+     "a": 2
+    }
+   ],
+   [
+    {
+     "t": "mcq",
+     "q": "Which is the guide's sentence with if?",
+     "o": [
+      "If you will look over there, you see an Arabian leopard!",
+      "If you looked over there, you'll see an Arabian leopard!",
+      "If you look over there, you saw an Arabian leopard!",
+      "If you look over there, you'll see an Arabian leopard!"
+     ],
+     "a": 4
+    },
+    {
+     "t": "mcq",
+     "q": "Why does Khalid's mum look worried?",
+     "o": [
+      "The leopard runs to the truck, roaring.",
+      "The truck is very slow.",
+      "She can't see any animals."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The girls don't win the prize.",
+     "a": false
+    },
+    {
+     "t": "tf",
+     "q": "The flamingos are the animals that lay eggs in The Nature Hunt.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "Desert animal that stings",
+     "o": [
+      "gazelle",
+      "eagle",
+      "leopard",
+      "scorpion"
+     ],
+     "a": 4
+    }
+   ]
+  ],
+  "Lesson 1: Vocabulary – Holiday equipment": [
+   [
+    {
+     "t": "mcq",
+     "q": "Why does Frank say not to take guidebooks?",
+     "o": [
+      "They are too expensive.",
+      "They are not allowed on planes.",
+      "They have no pictures.",
+      "They are heavy and you can use apps."
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "You wear flip-flops on your head.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which item can you get as an app on your phone?",
+     "o": [
+      "a guidebook",
+      "a pillow",
+      "a suitcase"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "You need it to visit another country",
+     "o": [
+      "passport",
+      "pillow",
+      "soap",
+      "charger"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "You use shampoo to wash your hair.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 2: Team Talk – Of course! Good plan!": [
+   [
+    {
+     "t": "mcq",
+     "q": "What does Majid NOT need to pack?",
+     "o": [
+      "his passport",
+      "his clothes",
+      "his phone",
+      "toothpaste, soap and shampoo"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Majid needs to bring toothpaste, soap and shampoo.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Who is going to take a small rucksack?",
+     "o": [
+      "Frank",
+      "Majid",
+      "Majid's mum"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "City they are flying to",
+     "o": [
+      "London",
+      "Muscat",
+      "Paris",
+      "Edinburgh"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Frank is going to take a small rucksack.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 3: Grammar – going to and will": [
+   [
+    {
+     "t": "mcq",
+     "q": "When do we use will?",
+     "o": [
+      "for plans we made last week",
+      "for actions happening now",
+      "for things in the past",
+      "for decisions at the time of speaking"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "We bought the tickets. We will visit London is the best choice.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "The phone is ringing. I ___ answer it.",
+     "o": [
+      "'ll",
+      "'m going to",
+      "did"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Plan: I ___ visit my uncle.",
+     "o": [
+      "am going to",
+      "will to",
+      "going",
+      "am will"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "We use will for decisions we make at the time of speaking.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 5: Vocabulary and Grammar – Transport verbs; Present simple for the future": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which verb is the opposite of take off?",
+     "o": [
+      "arrive",
+      "pack",
+      "explore",
+      "land"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "What time the train leaves? is a correct question.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Which verb means 'get to a place at the end of a journey'?",
+     "o": [
+      "arrive",
+      "leave",
+      "pack"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "A plane leaves the ground",
+     "o": [
+      "take off",
+      "land",
+      "get off",
+      "explore"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "When a plane comes down to the ground, it lands.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 6: Culture and Project – Famous railways": [
+   [
+    {
+     "t": "mcq",
+     "q": "What can you see from the Trans-Siberian train?",
+     "o": [
+      "the Pyramids",
+      "the Moon train",
+      "the Empty Quarter",
+      "Lake Baikal"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "The Trans-Siberian journey starts and finishes in Africa.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "In which country is the Haramain railway?",
+     "o": [
+      "Saudi Arabia",
+      "Russia",
+      "Oman"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "The path a train takes",
+     "o": [
+      "route",
+      "ticket",
+      "station",
+      "seat"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Haramain trains can travel at 300 kilometres an hour.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 7: English in action – Saying how you feel about the future": [
+   [
+    {
+     "t": "mcq",
+     "q": "In Wh- questions with going to, which words are stressed?",
+     "o": [
+      "are and you",
+      "going and to",
+      "all the words equally",
+      "the question word and the main verb"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Katy is going to travel to Salalah by plane.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: I can't ___ for the summer holidays!",
+     "o": [
+      "wait",
+      "worry",
+      "forward"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "I'm excited ___ camping.",
+     "o": [
+      "about",
+      "to",
+      "for",
+      "on"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "Helen is worried because she doesn't like long car journeys.",
+     "a": true
+    }
+   ],
+   [
+    {
+     "t": "tf",
+     "q": "I can't wait for the holidays! means I'm very excited about them.",
+     "a": true
+    },
+    {
+     "t": "mcq",
+     "q": "How long is Katy's journey to Salalah?",
+     "o": [
+      "about nine hours",
+      "about two hours",
+      "about twenty hours",
+      "about ninety minutes"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: I'm really looking forward ___ the trip.",
+     "o": [
+      "for",
+      "to",
+      "about"
+     ],
+     "a": 2
+    },
+    {
+     "t": "tf",
+     "q": "Katy's journey to Salalah is very short.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Looking forward ___ the trip",
+     "o": [
+      "at",
+      "to",
+      "about",
+      "on"
+     ],
+     "a": 2
+    }
+   ]
+  ],
+  "Lesson 8: Literacy – Reading an email": [
+   [
+    {
+     "t": "mcq",
+     "q": "What can students do at the hotel?",
+     "o": [
+      "ride horses",
+      "watch a football match",
+      "go skiing",
+      "swim in the brand-new pool"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Students need a raincoat because it often rains in Bahla.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "On which day does the trip start?",
+     "o": [
+      "Sunday",
+      "Monday",
+      "Tuesday"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "The coach leaves at …",
+     "o": [
+      "4.30 p.m.",
+      "4 p.m.",
+      "7 p.m.",
+      "5.30 p.m."
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The trip lasts three days: Sunday, Monday and Tuesday.",
+     "a": true
+    }
+   ]
+  ],
+  "Lesson 9: Literacy – Writing an email": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which list shows the right order of an email?",
+     "o": [
+      "Yours – Dear … – Subject – To",
+      "Dear … – Yours – To – Subject",
+      "Subject – Yours – paragraphs – Dear …",
+      "To – Subject – Dear … – paragraphs – Yours"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "Express means slow.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Complete: We're going to travel by ___ rocket to the Moon.",
+     "o": [
+      "express",
+      "delicious",
+      "heavy"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Email greeting",
+     "o": [
+      "Dear",
+      "Yours",
+      "Subject",
+      "Bye"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "The subject box tells the reader the topic of the email.",
+     "a": true
+    }
+   ]
+  ],
+  "Learning club 1 – Lesson 1: Language booster (months, seasons, telling the time)": [
+   [
+    {
+     "t": "mcq",
+     "q": "Which months are winter in Europe?",
+     "o": [
+      "June, July and August",
+      "March, April and May",
+      "September, October and November",
+      "December, January and February"
+     ],
+     "a": 4
+    },
+    {
+     "t": "tf",
+     "q": "It is the same time everywhere in the world.",
+     "a": false
+    },
+    {
+     "t": "mcq",
+     "q": "Write 12:45 in words.",
+     "o": [
+      "quarter to one",
+      "quarter past twelve",
+      "quarter to twelve"
+     ],
+     "a": 1
+    },
+    {
+     "t": "mcq",
+     "q": "4:15",
+     "o": [
+      "quarter past four",
+      "quarter to four",
+      "half past four",
+      "four o'clock"
+     ],
+     "a": 1
+    },
+    {
+     "t": "tf",
+     "q": "April comes after March.",
+     "a": true
+    }
+   ]
   ]
  }
 }
