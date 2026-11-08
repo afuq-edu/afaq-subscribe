@@ -1204,7 +1204,10 @@ async function stepTree(addUrl) {
   treeFromServer = false; let usedStored = false;
   if (!stored && pkg.remote && !stopFlag) {
     const sv = await getNoorTree(pkg.remote.package_id || pkg.id, pkg.remote.term || termNo).catch(() => null);
-    if (sv && sv.lessons.length && (!lessons.length || lessons.length < sv.lessons.length * 0.9)) { stored = sv; treeFromServer = true; }
+    // قراءة نور الناقصة جزء من شجرة الموقع (أسماء دروسها فيها): وإلا فهي شجرة أخرى (كتاب آخر، أو شجرة حفظها معلم من صف آخر) والقراءة الحية هي الصحيحة
+    const svNames = new Set((sv ? sv.lessons : []).map((l) => kwNorm(l.text)));
+    const partOf = (ls) => ls.filter((l) => svNames.has(kwNorm(l.text))).length >= ls.length * 0.8;
+    if (sv && sv.lessons.length && (!lessons.length || (lessons.length < sv.lessons.length * 0.9 && partOf(lessons)))) { stored = sv; treeFromServer = true; }
   }
   if (!lessons.length && stored && stored.lessons.length && Date.now() - stored.at < 120 * 864e5) {
     lessons = stored.lessons.map((l) => ({ text: l.text, unit: l.unit, term: term.text })); usedStored = true;

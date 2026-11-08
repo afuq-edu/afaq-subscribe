@@ -878,6 +878,27 @@ T(18, 'Slow Noor tree on a new device (only the first unit shows lessons): the t
   return b;
 });
 
+// real 2026-11-08 (owner's report, Islamic grade 10): the site held a tree a grade-11 teacher read under the grade-10 subject (29 other
+// lessons). The grade-10 teacher's full Noor tree (fewer lessons) looked «partial» next to it, so 4.10.37 took the site tree, matched
+// nothing and ended at once with nothing saved, every run.
+T(33, 'The site holds a bigger tree of another book for this subject: the teacher\'s full Noor tree is used (not the site\'s), every session gets its prep, and the real tree is sent to the site', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 24) }));
+  const tree = treeFromPackage(PKG);
+  const n = tree.terms[0].units.reduce((a, u) => a + u.lessons.length, 0);
+  const other = Array.from({ length: n * 2 + 5 }, (_, i) => ({ u: `الوحدة (${1 + Math.floor(i / 5)})`, t: `درس من كتاب آخر رقم ${i + 1}` }));
+  const noor = env.noor({ tree });
+  env.afaq.reset({ pkg: PKG, serverTree: other });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 20 * 60000, 'other site tree');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check(env.afaq.st.calls.includes('ext_tree_get'), 'the site tree was asked for (the live tree has fewer lessons)', env.afaq.st.calls.join(','));
+  assertRows('S33', rows, tree, { expectIds: PKG.lessons.map((l) => l.id), dates: Object.fromEntries(PKG.lessons.map((l) => [l.id, l.pubDate])) });
+  check(env.afaq.st.trees.length === 1 && env.afaq.st.trees[0].lessons.length === n, `the teacher's real Noor tree (${n} lessons) is sent to the site`, JSON.stringify(env.afaq.st.trees.map((t) => t.lessons.length)));
+  return b;
+});
+
 // real Noor 2026-10-27 (owner's report, Islamic grade 6 «فترتان», tree read from Noor): units «الوحدة (1)…(4)» where the file says
 // «الوحدة الأولى…الرابعة», and the recitation unit is ONE Noor lesson «سورتي المدثر والمزمل» for the file's two surahs.
 // 4.10.13 saved only the 8 «المدثر» sessions (every other lesson linked «by unit number only» and dropped). Start from that state.
