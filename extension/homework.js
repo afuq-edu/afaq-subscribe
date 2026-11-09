@@ -312,7 +312,19 @@ export function hwCreateFill(op) {
     const title = q('#AssignmentTitle, input[name="data[Assignment][title]"]');
     if (!setVal(title, op.title)) return { err: 'nofield', which: 'title' };
     const pub = q('#publishdate, input[name="data[Assignment][publishing_datetime]"]'), due = q('#duedate, input[name="data[Assignment][due_datetime]"]'), cut = q('#cutoffdate, input[name="data[Assignment][cutoff_datetime]"]');
-    if (!setVal(pub, op.publish) || !setVal(due, op.due) || !setVal(cut, op.cutoff)) return { err: 'nofield', which: 'dates' };
+    // نور ترفض نشرًا «في الماضي» بساعتها هي، وتقترح في النموذج وقتًا قريبًا بعد الآن. ساعة جهاز المعلم قد تتأخر عنها (أو منطقته الزمنية غير عُمان)،
+    // فإن سبق تاريخُ النشر المحسوب اقتراحَ نور يُنشر الواجب بوقت نور المقترح، ويتأخر التسليم والإغلاق بالقدر نفسه
+    let P = op.publish, D = op.due, C = op.cutoff;
+    const DT = /^(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d)/;
+    const dflt = pub && DT.test(pub.value || '') ? pub.value.match(DT)[0] : '';
+    if (dflt && DT.test(P) && P.slice(0, 16) < dflt) {
+      const at = (x) => { const m = x.match(DT); return Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]); };
+      const z = (n) => String(n).padStart(2, '0');
+      const fmt = (t) => { const d = new Date(t); return `${d.getUTCFullYear()}-${z(d.getUTCMonth() + 1)}-${z(d.getUTCDate())} ${z(d.getUTCHours())}:${z(d.getUTCMinutes())}:00`; };
+      const shift = at(dflt) + 5 * 60000 - at(P);   // خمس دقائق بعد اقتراح نور: لا يصير «ماضيًا» قبل أن يصل
+      P = fmt(at(P) + shift); if (DT.test(D)) D = fmt(at(D) + shift); if (DT.test(C)) C = fmt(at(C) + shift);
+    }
+    if (!setVal(pub, P) || !setVal(due, D) || !setVal(cut, C)) return { err: 'nofield', which: 'dates' };
     const later = q('input[type=checkbox][name="data[Assignment][publish_later]"]'); if (later) later.checked = false;
     // التحضير (إن رُبط) ثم الدرس
     const want = (op.match || []).map(norm).filter(Boolean);
@@ -361,7 +373,7 @@ export function hwCreateFill(op) {
     const vaPick = va.find((r) => r.value === 'view_answers_after_cutoff'); if (vaPick) { if (!vaPick.checked) vaPick.click(); va.forEach((r) => { r.checked = r === vaPick; }); }
     // زر «إضافة» كما يضغطه المعلم (فيدخل نور إلى إضافة المفردات)؛ إن لم تنتقل الصفحة يُرسل النموذج مباشرة
     hwPress(f, /إضافة|اضافة|add|save/i, 1500);
-    return { ok: true, prepId: prep ? prep.id : '', lessonId, sections: use.length };
+    return { ok: true, prepId: prep ? prep.id : '', lessonId, sections: use.length, publish: P };
   } catch (e) { return { err: 'crash', msg: String((e && e.message) || e).slice(0, 160) }; }
 }
 // يُحقن بعد «إضافة»: معرّف الواجب من العنوان أو من روابط قائمة مفرداته، وإلا ما تعرضه الصفحة من أخطاء

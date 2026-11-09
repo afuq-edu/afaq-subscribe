@@ -73,7 +73,13 @@ export function createNoor(cfg) {
     homeworks: [],     // «المهام الإلكترونية»: { aid, cid, title, prepId, lessons, lectures, publish, due, cutoff, view, qs: [] }
     hwPosts: [],       // every POST to homeworks/create and add_bulk_questions: { kind, aid, outcome }
     nextAid: 300,
+    // ساعة نور للواجبات ('YYYY-MM-DD HH:MM'): نور يقترح في النموذج النشر بعد ربع ساعة منها، ويرفض نشرًا قبلها («في الماضي»).
+    // بلا ضبط: الحقل فارغ ولا رفض (ساعة الاختبار الثابتة في الأداة قد تسبق ساعة الجهاز)
+    hwNow: cfg.hwNow || '',
+    // the «إضافة تحضير» page holds a picture that never finishes loading: the page stays «interactive» (never «complete»)
+    hangForm: !!cfg.hangForm,
   };
+  const hwAt = (x, min) => { const m = String(x).match(/^(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d)/); const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]) + min * 60000); return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}`; };
   const course = (cid) => courses.find((c) => c.cid === cid);
   const takenOf = (cid) => { const m = {}; st.rows.filter((r) => r.cid === cid && r.publishDate).forEach((r) => { m[r.publishDate] = (m[r.publishDate] || []).concat(r.slots || ['*']); }); return m; };
   const nodeById = (c, id) => { for (const t of c.tree.terms) for (const u of t.units) for (const l of u.lessons) if (l.nodeId === id) return { term: t.text, unit: u.text, ...l }; return null; };
@@ -266,7 +272,7 @@ export function createNoor(cfg) {
 <div style="display:none;"><input type="hidden" name="_method" value="POST"></div><input type="hidden" name="data[Token][csrf_token]" id="TokenCsrfToken" value="csrf-${cid}">
 <label for="AssignmentTitle">العنوان</label><input name="data[Assignment][title]" id="AssignmentTitle" required>
 <input type="hidden" name="data[Assignment][type]" id="AssignmentType" value="Homework">
-<input type="text" name="data[Assignment][publishing_datetime]" id="publishdate" class="datetimepicker" value="${nowStamp()}:00">
+<input type="text" name="data[Assignment][publishing_datetime]" id="publishdate" class="datetimepicker" value="${st.hwNow ? hwAt(st.hwNow, 15) + ':00' : ''}">
 <input type="text" name="data[Assignment][due_datetime]" id="duedate" class="datetimepicker" value="">
 <input type="text" name="data[Assignment][cutoff_datetime]" id="cutoffdate" class="datetimepicker" value="">
 ${flag('publish_later', 'publish_later')}
@@ -311,6 +317,7 @@ ${flag('private', 'private_check_box')}${flag('random_questions', 'AssignmentRan
     const publish = last('data[Assignment][publishing_datetime]') || '', due = last('data[Assignment][due_datetime]') || '', cutoff = last('data[Assignment][cutoff_datetime]') || '';
     if (![publish, due, cutoff].every((x) => DT.test(x))) errs.push('dates');
     if (!(publish <= due && due <= cutoff)) errs.push('order');
+    if (st.hwNow && publish.slice(0, 16) < st.hwNow) errs.push('تاريخ النشر يجب ألا يكون في الماضي');
     const prepId = last('data[Assignment][preparation_id]') || '';
     if (prepId && !st.rows.some((r) => r.cid === cid && r.id === prepId)) errs.push('prep');
     let lessons = f.filter(([n]) => n === 'data[Assignment][lessons][]').map(([, v]) => v);
@@ -356,6 +363,7 @@ ${flag('private', 'private_check_box')}${flag('random_questions', 'AssignmentRan
     const html = (body, status = 200) => route.fulfill({ status, contentType: 'text/html; charset=utf-8', body });
     st.events.push(req.method() + ' ' + p);
     if (!st.loggedIn && /^\/teacher/.test(p)) return html(loginPage());
+    if (p === '/img/hang.png') return new Promise((res) => { st.hung = (st.hung || 0) + 1; const t = setTimeout(res, 15 * 60000); if (t.unref) t.unref(); });   // never answered (until the test is long over)
     if (p === '/teacher' || p === '/teacher/dashboard') return html(homePage());
     let m = p.match(/^\/teacher\/courses\/preparations_index\/cid:([A-Za-z0-9_-]+)$/);
     if (m && course(m[1])) return html(listPage(m[1]));
@@ -375,7 +383,7 @@ ${flag('private', 'private_check_box')}${flag('random_questions', 'AssignmentRan
         if (r.kind === 'redirect') return html(listPage(m[1], { ok: 'تم حفظ التحضير بنجاح', url: r.to }));
         return html(formPage(m[1], r.extra));
       }
-      return html(formPage(m[1]));
+      return html(st.hangForm ? formPage(m[1]).replace('</body>', `<img src="${HOST}/img/hang.png" alt=""></body>`) : formPage(m[1]));
     }
 
     // «المهام الإلكترونية»

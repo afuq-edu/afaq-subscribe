@@ -692,7 +692,12 @@ export async function pageContext(tabId) {
     const found = Math.max(0, ...parts.map((p) => p.found || 0));
     const title = (parts.find((p) => p.title) || {}).title || '';
     const mark = (parts.find((p) => p.mark) || {}).mark || null;
-    return { isForm: found >= 5, found, title, mark, tree: parts.some((p) => p.tree), ready: parts.length > 0 && parts.every((p) => p.ready), url: (parts[0] || {}).url || '' };
+    // جاهزية النموذج: كل الإطارات، أو على الأقل الإطار الذي فيه حقول النموذج (إطار آخر عالق في التحميل لا يمنع التعبئة)
+    const formPart = found >= 5 ? parts.find((p) => (p.found || 0) === found) : null;
+    const ready = parts.length > 0 && (parts.every((p) => p.ready) || !!(formPart && formPart.ready));
+    // أسباب عدم الجاهزية (لسجل المشرف فقط): حالة تحميل كل إطار ومحررات النص فيه
+    const why = parts.map((p) => `${p.found || 0}/${p.rs || '?'}${p.cks ? '/ck:' + p.cks : ''}`).join(' ');
+    return { isForm: found >= 5, found, title, mark, tree: parts.some((p) => p.tree), ready, formRs: formPart ? formPart.rs : '', formCk: formPart ? formPart.ck !== false : false, why, url: (parts[0] || {}).url || '' };
   } catch (e) { return { isForm: false, found: 0, title: '', mark: null, ready: false, error: String(e.message || e) }; }
 }
 // جدول المعلم من نموذج «إضافة تحضير»: حصص كل تاريخ من التواريخ المعطاة كما يعرضها نور — [{ date, status: ok|none|unknown, groups, cap }]

@@ -1099,14 +1099,19 @@ async function readNoorList(quiet) {
   have.dates = byRow.length === titles.length ? byRow : [];   // تاريخ نشر كل صف (لتمييز الاسم المكرر في أكثر من وحدة)
   return have;
 }
+let formDiag = '';   // آخر ما رأته الأداة في نموذج لم يكتمل (لسجل المشرف فقط)
 async function waitForm(ms = 45000) {
-  const end = Date.now() + ms;
+  const t0 = Date.now(), end = t0 + ms;
+  let c = {};
   while (Date.now() < end && !stopFlag) {
-    const c = await pageContext(tabId).catch(() => ({ isForm: false }));
+    c = await pageContext(tabId).catch(() => ({ isForm: false }));
     if (c.isForm && c.ready) return c;
+    // حقول النموذج ظاهرة ومحرراته جاهزة، لكن الصفحة ما زالت «تُحمّل» (صورة أو ملف عالق): لا تُنتظر إلى ما لا نهاية
+    if (c.isForm && c.formCk && c.formRs === 'interactive' && Date.now() - t0 > 20000) return Object.assign(c, { ready: true });
     if (!c.isForm) { const al = await pageAlerts(tabId).catch(() => null); if (al && al.login) return { login: true }; }
     await sleep(700);
   }
+  formDiag = `form ${c.isForm ? 'fields' : 'nofields'} found=${c.found || 0} [${c.why || c.error || ''}] ${String(c.url || '').replace(/^https?:\/\/[^/]+/, '').slice(0, 60)}`.slice(0, 140);
   return null;
 }
 // فتح نموذج جديد: يعيد المحاولة وحده بانتظار متدرّج (بطء نور أو انقطاع)، دون سؤالك
@@ -2578,7 +2583,7 @@ async function hwCreateLive(op) {
   await sleep(500);
   const n = await execMain(hwCount, { cid: a.cid, aid: a.aid, type: a.type });
   if (n === 0) return { err: 'noq', aid: a.aid };
-  return { ok: true, aid: a.aid, n, prepId: f.prepId, lessonId: f.lessonId };
+  return { ok: true, aid: a.aid, n, prepId: f.prepId, lessonId: f.lessonId, publish: f.publish || '' };
 }
 async function addHomework(item, opts = {}) {
   if (!item || !item.node || !courseCid) return 'off';
@@ -2601,7 +2606,7 @@ async function addHomework(item, opts = {}) {
   }
   if (r && r.ok) {
     done[key] = r.aid || 1; await hwMark(key, r.aid);
-    if (!r.dup) { WIZ.hwN = (WIZ.hwN || 0) + 1; logLine('ok', `✓ واجب «${item.node.text}»${m > 1 ? ` (الحصة ${ORD[m - 1] || toAr(m)})` : ''} — ${toAr(qs.length)} أسئلة · ${dayLabel(d.publish.slice(0, 10), false)}`); }
+    if (!r.dup) { WIZ.hwN = (WIZ.hwN || 0) + 1; logLine('ok', `✓ واجب «${item.node.text}»${m > 1 ? ` (الحصة ${ORD[m - 1] || toAr(m)})` : ''} — ${toAr(qs.length)} أسئلة · ${dayLabel((r.publish || d.publish).slice(0, 10), false)}`); }
     return r.dup ? 'had' : 'ok';
   }
   if (r && r.aid) { done[key] = r.aid; await hwMark(key, r.aid); }   // أُنشئ ولم تُضف أسئلته كلها: لا يُنشأ ثانية
@@ -2853,7 +2858,8 @@ async function run() {
   failed.forEach(({ item, why, verifyOnly }) => { if (!fillLogged.has(item.s)) flRow(verifyOnly ? 'unconfirmed' : 'failed', item, why); });
   deferred.forEach((item) => { if (!fillLogged.has(item.s)) flRow(item.verifyOnly ? 'unconfirmed' : 'failed', item, item.why); });
   if (!flStarted) flRow('start', null, `${flMode() || scope.kind} · لم تبدأ التعبئة`);   // توقف قبل مرحلة التعبئة: لكل نهاية بداية في السجل
-  flRow('end', null, `حُفظ ${ok} · غير مؤكد ${fillCnt.unconfirmed || 0} · لم تكتمل ${fillCnt.failed || 0} · تُخطّيت ${fillCnt.skipped || 0}${stopFlag ? ' · أوقفه المعلم' : ''}${endWhy ? ` · ${finished ? '' : 'توقف: '}${endWhy}` : ''}`);
+  flRow('end', null, `حُفظ ${ok} · غير مؤكد ${fillCnt.unconfirmed || 0} · لم تكتمل ${fillCnt.failed || 0} · تُخطّيت ${fillCnt.skipped || 0}${stopFlag ? ' · أوقفه المعلم' : ''}${endWhy ? ` · ${finished ? '' : 'توقف: '}${endWhy}` : ''}${!finished && formDiag && /إضافة تحضير/.test(endWhy) ? ' · ' + formDiag : ''}`);
+  formDiag = '';
   flushFillLog().catch(() => {});
   await hideBar();
   setRunning(false);

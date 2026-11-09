@@ -899,6 +899,46 @@ T(33, 'The site holds a bigger tree of another book for this subject: the teache
   return b;
 });
 
+T(35, 'The «إضافة تحضير» page never finishes loading (a picture on it hangs) but its fields and editors are ready: the tool fills anyway instead of stopping with «تعذّر فتح نموذج إضافة تحضير», and every session is saved', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 4) }));
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree, hangForm: true });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 25 * 60000, 'full term, form page never complete');
+  check((noor.st.hung || 0) > 0, `the form page really kept loading (${noor.st.hung || 0} hung requests)`);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح» (not «تعذّر فتح نموذج»)', `${s.head} | ${s.text}`);
+  assertRows('form never complete', noor.st.rows.filter((r) => !r.preexisting), tree, { expectIds: PKG.lessons.map((l) => l.id) });
+  return b;
+});
+
+T(34, 'Noor\'s clock is ahead of the teacher\'s computer (or another time zone): a homework whose computed publish time Noor sees as past is published at Noor\'s own suggested time instead, due and late dates moved with it, and every saved prep still gets its homework', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 5) }));
+  const tree = treeFromPackage(PKG);
+  const hwNow = '2027-06-01 10:00';   // after every date of the term: every publish time the tool computes is «in the past» for Noor
+  const noor = env.noor({ tree, hwNow });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term', { hw: true });
+  const s = await waitDone(b.pg, 25 * 60000, 'full term + homework, Noor clock ahead');
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  assertRows('term+homework (Noor clock ahead)', rows, tree, { expectIds: PKG.lessons.map((l) => l.id) });
+  const errs = noor.st.hwPosts.filter((x) => !/^ok/.test(x.outcome));
+  check(!errs.length, 'Noor refused no homework («تاريخ النشر يجب ألا يكون في الماضي» never came back)', errs.map((x) => `${x.kind} ${x.aid || ''}: ${x.outcome}`).join('\n'));
+  const want = rows.map((r) => sessionOfRow(r)).filter(Boolean).map((l) => hwWant(tree, l));
+  const titles = new Set(noor.st.homeworks.map((h) => h.title));
+  const missing = want.filter((w) => !titles.has(w.title));
+  check(!missing.length && noor.st.homeworks.length === want.length, `a homework for each saved prep (${want.length})`, `got ${noor.st.homeworks.length}; missing: ${missing.map((w) => w.title).join(' | ')}`);
+  const t = (x) => Date.parse(String(x).slice(0, 16).replace(' ', 'T') + 'Z');
+  const bad = noor.st.homeworks.filter((h) => !(h.publish.slice(0, 16) >= hwNow && t(h.publish) - t(hwNow) <= 30 * 60000 && t(h.due) - t(h.publish) === 3 * 86400000 && t(h.cutoff) - t(h.publish) === 5 * 86400000));
+  check(!bad.length, 'each homework published within half an hour after Noor\'s «now» (its suggestion + 5 minutes), due 3 days and late 5 days after the publish time', bad.map((h) => `«${h.title}»: ${h.publish} / ${h.due} / ${h.cutoff}`).join('\n'));
+  const log = (await dumpLog(b.pg)).join('\n');
+  check(!/واجب لم يُضف/.test(log), 'no homework line the teacher could read as a problem', log.split('\n').filter((x) => /واجب/.test(x)).join('\n'));
+  return b;
+});
+
 // real Noor 2026-10-27 (owner's report, Islamic grade 6 «فترتان», tree read from Noor): units «الوحدة (1)…(4)» where the file says
 // «الوحدة الأولى…الرابعة», and the recitation unit is ONE Noor lesson «سورتي المدثر والمزمل» for the file's two surahs.
 // 4.10.13 saved only the 8 «المدثر» sessions (every other lesson linked «by unit number only» and dropped). Start from that state.
