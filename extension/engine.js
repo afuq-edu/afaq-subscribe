@@ -1108,15 +1108,15 @@ export function hadirEngine(action, payload) {
       const el = d.doc.querySelector('#PreparationTitle, input[name="data[Preparation][title]"]');
       if (el && el.value && !title) title = el.value;
     }
-    let ck = true;
-    try { if (window.CKEDITOR) ck = Object.values(window.CKEDITOR.instances || {}).every((i) => i.status === 'ready'); } catch (e) {}
+    let ck = true, cks = '';
+    try { if (window.CKEDITOR) { const ins = Object.values(window.CKEDITOR.instances || {}); ck = ins.every((i) => i.status === 'ready'); cks = ins.map((i) => i.status).join(','); } } catch (e) {}
     // علامة تتركها التعبئة على الصفحة: أي حصة عُبّئت في هذه النسخة من النموذج
     let mark = null;
     for (const d of docs) {
       const a = d.doc.documentElement && d.doc.documentElement.getAttribute('data-hadir-filled');
       if (a) { try { mark = JSON.parse(a); } catch (e) {} break; }
     }
-    return { frames, found, title, mark, tree: !!document.getElementById('jstree_node_tree'), ready: document.readyState === 'complete' && ck, url: location.href };
+    return { frames, found, title, mark, tree: !!document.getElementById('jstree_node_tree'), ready: document.readyState === 'complete' && ck, rs: document.readyState, ck, cks, url: location.href };
   }
 
   if (action === 'saveForm') {
