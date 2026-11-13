@@ -913,6 +913,26 @@ T(35, 'The «إضافة تحضير» page never finishes loading (a picture on i
   return b;
 });
 
+T(36, 'Noor\'s home page opens but shows no course cards (one teacher, 2026-11-11): the run ends calmly with nothing saved, and what the tool saw on that page goes to the admin\'s fill log only — never onto the teacher\'s screen', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 3) }));
+  const tree = treeFromPackage(PKG);
+  const noor = env.noor({ tree, noCards: true });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term');
+  const s = await waitDone(b.pg, 25 * 60000, 'full term, no course cards on the home page');
+  const seen = await b.pg.evaluate(() => document.body.innerText);
+  check(!noor.st.rows.filter((r) => !r.preexisting).length, 'nothing was saved in Noor');
+  check(!/home a=|cid=\d|box=\d/.test(seen), 'the page summary is not shown to the teacher', (seen.match(/.{0,40}home a=.{0,60}/) || [''])[0]);
+  let rows = [];
+  for (let i = 0; i < 40 && !rows.some((r) => r.status === 'end'); i++) { rows = env.afaq.st.logRows || []; await sleep(500); }
+  const st = rows.find((r) => r.status === 'start') || {}, en = rows.find((r) => r.status === 'end') || {};
+  check(/بطاقات المواد/.test(en.note || ''), 'the fill log\'s end row says why the run stopped', `${s.head} | ${en.note}`);
+  check(/home a=\d+ cid=1 prep=0 box=0 /.test(st.note || '') && /\/teacher\/courses\/view\/cid:\*/.test(st.note || '') && /\/teacher\/messages\/index\/#/.test(st.note || ''), 'the start row carries what the home page held: link counts and link shapes without ids', st.note);
+  check((st.note || '').length <= 300 && !/XYZ9/.test(st.note || ''), 'the summary fits the log and carries no course id', st.note);
+  return b;
+});
+
 T(34, 'Noor\'s clock is ahead of the teacher\'s computer (or another time zone): a homework whose computed publish time Noor sees as past is published at Noor\'s own suggested time instead, due and late dates moved with it, and every saved prep still gets its homework', async (env) => {
   usePkg(derivePkg({ keep: range(1, 5) }));
   const tree = treeFromPackage(PKG);

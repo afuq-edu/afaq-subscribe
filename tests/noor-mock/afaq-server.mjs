@@ -9,7 +9,7 @@ export function startAfaq(port = 8765) {
     st = {
       pkg: o.pkg, active: o.trialLeft == null, left: o.trialLeft == null ? 0 : o.trialLeft, status: o.trialLeft == null ? 'active' : 'trial',
       offer: o.offer || { id: 'bio-9', subject: 'الأحياء', grade: 9, title: 'الأحياء — التاسع', shift: 'one' },
-      holidays: o.holidays || '', service: o.service || '', calls: [], sessions: [], noor: [], mergeOnNoor: !!o.mergeOnNoor, mergeNeedsName: !!o.mergeNeedsName, trees: [], serverTree: o.serverTree || null,
+      holidays: o.holidays || '', service: o.service || '', calls: [], sessions: [], noor: [], mergeOnNoor: !!o.mergeOnNoor, mergeNeedsName: !!o.mergeNeedsName, trees: [], serverTree: o.serverTree || null, logRows: [],
     };
     return st;
   };
@@ -39,6 +39,7 @@ export function startAfaq(port = 8765) {
       else if (fn === 'ext_pick') out = { ok: true, request: 1001 };
       else if (fn === 'ext_noor') { st.noor.push(args); if (st.mergeOnNoor && !st.active && args.p_noor && (!st.mergeNeedsName || args.p_name)) { st.active = true; st.status = 'active'; st.merged = (st.merged || 0) + 1; out = { ok: true, merged: true }; } else out = { ok: true }; }
       else if (fn === 'ext_tree') { st.trees.push(args.p_tree); out = { ok: true }; }
+      else if (fn === 'ext_log') { st.logRows.push(...(Array.isArray(args.p_rows) ? args.p_rows : [])); out = { ok: true }; }   // سجل التعبئة (للمشرف): يُحفظ ليفحصه السيناريو
       else if (fn === 'ext_tree_get') out = { ok: true, seen: 3, at: Date.now() - 864e5, lessons: st.serverTree || [] };
       else if (fn === 'ext_set_ref') out = { ok: true };
       else if (fn === 'ext_referral') out = { ok: true, request: 1001, invited: 0 };
