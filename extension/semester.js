@@ -816,7 +816,14 @@ function readHomePage() {
     if (out.some((x) => x.cid === cid)) return;
     out.push({ title, levels, cid, prepUrl: a.href });
   });
-  return { login: !!document.querySelector('input[type="password"]'), url: location.href, courses: out };
+  // لا بطاقات: ملخّص قصير لما في الصفحة (لسجل المشرف فقط) — عدد الروابط وأشكالها بلا معرّفات، ليُفهم لماذا لم تُقرأ
+  let sig = '';
+  if (!out.length) {
+    const hrefs = Array.from(document.querySelectorAll('a[href]')).map((x) => x.getAttribute('href') || '');
+    const pats = [...new Set(hrefs.filter((h) => /\/teacher\/|cid:/.test(h)).map((h) => h.replace(/^https?:\/\/[^/]+/, '').split(/[?#]/)[0].replace(/cid:[A-Za-z0-9_-]+/g, 'cid:*').replace(/\/\d+(?=\/|$)/g, '/#')))].slice(0, 6);
+    sig = `home a=${hrefs.length} cid=${hrefs.filter((h) => /cid:/.test(h)).length} prep=${hrefs.filter((h) => /prepar/i.test(h)).length} box=${document.querySelectorAll('.course-box-in-teacher-dashbaord, .main-category-stu-box').length} ${document.readyState} «${clean(document.title).slice(0, 24)}» ${location.pathname.slice(0, 30)} | ${pats.join(' ')}`.slice(0, 250);
+  }
+  return { login: !!document.querySelector('input[type="password"]'), url: location.href, courses: out, sig };
 }
 // يُحقن في صفحة «تحضير الدروس»: رابط «إضافة تحضير»
 function readPrepList() {
@@ -969,8 +976,10 @@ async function loginWait(url) {
 }
 
 // ================= مراحل ما قبل التعبئة =================
+let homeDiag = '';   // ما رأته الأداة في رئيسية نور حين لم تجد بطاقات المواد (لسجل المشرف فقط)
 async function stepHome() {
   setPhase('home');
+  let lastHome = null;
   for (let i = 0; i < 6 && !stopFlag; i++) {
     if (!(await waitOnline())) return null;
     setBox('run', 'أفتح الصفحة الرئيسية في نور…');
@@ -978,6 +987,7 @@ async function stepHome() {
     let r = null;
     for (let j = 0; j < 4 && !stopFlag; j++) {
       r = await exec(readHomePage);
+      if (r) lastHome = r;
       if (r && r.login) { await focusNoor(); if (!(await loginWait(HOME))) return null; j = -1; continue; }
       if (r && r.courses.length) { chrome.storage.local.set({ noorCourses: { at: Date.now(), courses: r.courses } }).catch(() => {}); noorWho(tabId).catch(() => {}); return r.courses; }
       await sleep(1500);
@@ -989,6 +999,7 @@ async function stepHome() {
     await backoff(i + 1, 'لم تظهر بطاقات المواد بعد — أعيد فتح الرئيسية');
   }
   if (stopFlag) return null;
+  homeDiag = lastHome ? (lastHome.sig || `home nosig ${String(lastHome.url || '').replace(/^https?:\/\/[^/]+/, '').slice(0, 60)}`) : 'home noread';
   throw new Error('لم أجد بطاقات المواد في الصفحة الرئيسية (رابط «تحضير الدروس»).');
 }
 // الصف من عنوان مستوى البطاقة: «الخامس» أو «الصف الخامس» أو «صف خامس»
@@ -2857,9 +2868,9 @@ async function run() {
   // سجل المشرف: ما بقي مؤجلًا أو لم يكتمل يأخذ صفه النهائي (مرة واحدة)، ثم صف النهاية بالحصيلة وسببها
   failed.forEach(({ item, why, verifyOnly }) => { if (!fillLogged.has(item.s)) flRow(verifyOnly ? 'unconfirmed' : 'failed', item, why); });
   deferred.forEach((item) => { if (!fillLogged.has(item.s)) flRow(item.verifyOnly ? 'unconfirmed' : 'failed', item, item.why); });
-  if (!flStarted) flRow('start', null, `${flMode() || scope.kind} · لم تبدأ التعبئة`);   // توقف قبل مرحلة التعبئة: لكل نهاية بداية في السجل
+  if (!flStarted) flRow('start', null, `${flMode() || scope.kind} · لم تبدأ التعبئة${!finished && homeDiag && /بطاقات المواد/.test(endWhy) ? ' · ' + homeDiag : ''}`);   // توقف قبل مرحلة التعبئة: لكل نهاية بداية في السجل
   flRow('end', null, `حُفظ ${ok} · غير مؤكد ${fillCnt.unconfirmed || 0} · لم تكتمل ${fillCnt.failed || 0} · تُخطّيت ${fillCnt.skipped || 0}${stopFlag ? ' · أوقفه المعلم' : ''}${endWhy ? ` · ${finished ? '' : 'توقف: '}${endWhy}` : ''}${!finished && formDiag && /إضافة تحضير/.test(endWhy) ? ' · ' + formDiag : ''}`);
-  formDiag = '';
+  formDiag = ''; homeDiag = '';
   flushFillLog().catch(() => {});
   await hideBar();
   setRunning(false);

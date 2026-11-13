@@ -97,7 +97,8 @@ export function createNoor(cfg) {
 
   const loginPage = () => page('تسجيل الدخول', `<form method="post" action="${HOST}/users/login"><input name="u"><input type="password" name="p"><button>دخول</button></form>`);
 
-  const homePage = () => page('الرئيسية', courses.map((c) => `<div class="course-box-in-teacher-dashbaord"><div class="main_category_stu_title">${esc(c.title)}</div>
+  // noCards: the home page opens (name and all) but shows no course cards — a teacher account whose dashboard the tool cannot read
+  const homePage = () => page('الرئيسية', cfg.noCards ? '<div class="dash"><a href="' + HOST + '/teacher/messages/index/12">الرسائل</a> <a href="' + HOST + '/teacher/courses/view/cid:XYZ9">المقرر</a></div>' : courses.map((c) => `<div class="course-box-in-teacher-dashbaord"><div class="main_category_stu_title">${esc(c.title)}</div>
 <div class="main_category_level_title">${esc(c.level)}</div><a href="${HOST}/teacher/courses/preparations_index/cid:${c.cid}">تحضير الدروس</a></div>`).join('\n'), '', true);
 
   const listPage = (cid, extra = {}) => {
