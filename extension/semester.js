@@ -15,6 +15,7 @@ import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedP
 import { diffDays, addDays } from './dates.js';
 import { roomTitle, roomInstructions, topicTitle, topicHtml, discussQuestions, playLink, roomsRead, roomCreateFill, topicsRead, topicFill } from './rooms.js';
 import { YT_ORIGIN, lessonTopic, pickVideo, ytSearch, ytUrl, vidLibRead, vidFill } from './videos.js';
+import { buildScorm, scormFill, toB64 } from './scorm.js';
 import { gameRef, gameKey, GAMES_BASE, fetchGame, noorDT, lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, hwHush, HW_MARK } from './homework.js';
 import { AFAQ } from './afaq-config.js';
 import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck, installUrl, fillLog, flushFillLog, sendNoorTree, getNoorTree } from './remote.js';
@@ -2426,7 +2427,7 @@ function heartbeat(on) {
 // نقطة استئناف: إن أُغلقت النافذة أو تعطّل كروم يُتابَع التشغيل عند فتحها
 async function checkpoint(active) {
   const sc = { kind: scope.kind, picks: [...(scope.picks || [])], units: [...scope.units], weekDay: scope.weekDay, from: scope.from, to: scope.to, dateFrom: scope.dateFrom, dateTo: scope.dateTo, dsrc: useFile ? 'file' : 'seq' };
-  await chrome.storage.local.set({ semesterRun: active && !WIZ.hwOnly && !WIZ.roomsOnly && !WIZ.videosOnly ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, typed: WIZ.pickTyped || null, join: WIZ.pickJoin || null, skill: !!WIZ.skillJoin, tag: !!WIZ.skillTag, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
+  await chrome.storage.local.set({ semesterRun: active && !WIZ.hwOnly && !WIZ.roomsOnly && !WIZ.videosOnly && !WIZ.scormOnly ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, typed: WIZ.pickTyped || null, join: WIZ.pickJoin || null, skill: !!WIZ.skillJoin, tag: !!WIZ.skillTag, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
 }
 function setRunning(on) {
   running = on;
@@ -2512,7 +2513,7 @@ async function wipeOffer(text, n, okBtn) {
 }
 // الفصل كاملًا ومادة المعلم كاملة في نور: لا حصص ناقصة فينتهي التشغيل — قبل أن ينتهي تُعرض البطاقة نفسها (مسح وبدء من جديد، أو اختيار الدروس)
 async function termFullOffer() {
-  if (!WIZ.on || WIZ.pickDates || WIZ.hwOnly || WIZ.roomsOnly || WIZ.videosOnly || wz.mode !== 'term' || scope.kind !== 'term' || queue.length || stopFlag) return;
+  if (!WIZ.on || WIZ.pickDates || WIZ.hwOnly || WIZ.roomsOnly || WIZ.videosOnly || WIZ.scormOnly || wz.mode !== 'term' || scope.kind !== 'term' || queue.length || stopFlag) return;
   const had = plan.flatMap((p) => p.sessions.filter((s) => s.inNoor)).length;
   if (!had || await termOwn()) return;
   const n = (noorHave && noorHave.titles && noorHave.titles.length) || had;
@@ -2583,7 +2584,7 @@ let lastVerify = '';   // التحقق النهائي من قائمة نور: ok
 // لا يظهر منه شيء للمعلم ولا ينتظره أحد: الصف يُضاف فورًا ويُرسل في الخلفية كل ١٠ صفوف
 let fillRid = '', fillN = 0, fillCnt = {};
 const fillLogged = new Set();   // حصص هذا التشغيل التي أخذت صفها النهائي (حتى لا يتكرر عند جمع النهاية)
-const flMode = () => (WIZ.on ? (wz.mode === 'pick' || wz.mode === 'term' ? wz.mode : wz.mode === 'hw' || wz.mode === 'rooms' || wz.mode === 'video' ? 'term' : scope.kind === 'pick' ? 'pick' : 'term') : '');
+const flMode = () => (WIZ.on ? (wz.mode === 'pick' || wz.mode === 'term' ? wz.mode : ['hw', 'rooms', 'video', 'scorm'].includes(wz.mode) ? 'term' : scope.kind === 'pick' ? 'pick' : 'term') : '');
 function flRow(status, item, note) {
   const s = item && item.s, n = item && item.node;
   fillLog({
@@ -2807,28 +2808,16 @@ async function roomsLive(op) {
   }
   return { ok: true, made, added, had };
 }
-async function roomsOnly() {
-  const nConf = conflicts(); if (nConf.miss.length + nConf.weak.length + nConf.dup.length || plan.mismatch) autoResolve();
-  safeLinks();
-  setPhase('fill');
-  const c = WIZ.course || {};
-  const grade = ((c.levels || []).filter((x) => /الصف/.test(x)).pop() || (c.levels || []).slice(-1)[0] || '').replace(/^الصف\s+/, '');
-  // دروس كل وحدة بترتيب الشجرة، كل درس نور مرة واحدة
-  const units = new Map();
-  plan.forEach((p) => {
-    if (!p.node || p.skipped || p.miss) return;
-    if (WIZ.roomPick && !WIZ.roomPick.has(kwNorm(p.group.unit || ''))) return;   // الوحدات التي اختارها المعلم وحدها
-    const u = p.node.unit || '';
-    if (!units.has(u)) units.set(u, []);
-    const arr = units.get(u);
-    if (!arr.some((x) => x.node === p.node)) arr.push({ node: p.node, lesson: p.sessions[0] && p.sessions[0].lesson, file: p.group.lesson || '', fileUnit: p.group.unit || '' });
-  });
-  // اسم المعلم في شهادة الطالب (من حساب نور المفتوح، أو آخر ما قرأناه)
+// اسم المعلم في شهادة الطالب (من حساب نور المفتوح، أو آخر ما قرأناه)
+async function teacherName() {
   let who = null; try { who = tabId ? await noorWho(tabId) : null; } catch (e) {}
   if (!who || !who.name) { try { const w = await noorWhoScan(tabId); if (w && w.who && w.who.name) who = w.who; } catch (e) {} }
   if (!who || !who.name) who = (await chrome.storage.local.get('noorWho').catch(() => ({}))).noorWho || who;
-  const teacher = (who && who.name) || '';
-  // أنشطة الدروس في الموقع: games/<الباقة>/index.json (اسم الدرس في الملف ← رقم ملف أنشطته). محتوى الدرس لا يصل «حاضر» قبل التعبئة،
+  return (who && who.name) || '';
+}
+// أنشطة الدروس في الموقع لكل درس من الخطة ({ lesson, file, fileUnit } ← { pkg, n }) — للغرف والدروس التفاعلية
+async function gameFinder() {
+  // games/<الباقة>/units.json أو index.json (اسم الدرس في الملف ← رقم ملف أنشطته). محتوى الدرس لا يصل «حاضر» قبل التعبئة،
   // فالرابط من الفهرس، أو من رابط الدرس في ملف التحضير إن وُجد
   const gk = gameKey(pkg), gBase = WIZ.gamesBase || GAMES_BASE;
   const getJson = async (u) => { for (let i = 0; i < 3; i++) { try { const r = await fetch(u, { cache: 'no-cache' }); if (r.ok) return await r.json(); if (r.status === 404) return null; } catch (e) { await sleep(800); } } return null; };
@@ -2845,6 +2834,26 @@ async function roomsOnly() {
     if (row) return { pkg: gk, n: row[2] };
     return gIdxN.has(ln) ? { pkg: gk, n: gIdxN.get(ln), idx: true } : null;
   };
+  return { refOf, sameUnit, gk };
+}
+async function roomsOnly() {
+  const nConf = conflicts(); if (nConf.miss.length + nConf.weak.length + nConf.dup.length || plan.mismatch) autoResolve();
+  safeLinks();
+  setPhase('fill');
+  const c = WIZ.course || {};
+  const grade = ((c.levels || []).filter((x) => /الصف/.test(x)).pop() || (c.levels || []).slice(-1)[0] || '').replace(/^الصف\s+/, '');
+  // دروس كل وحدة بترتيب الشجرة، كل درس نور مرة واحدة
+  const units = new Map();
+  plan.forEach((p) => {
+    if (!p.node || p.skipped || p.miss) return;
+    if (WIZ.roomPick && !WIZ.roomPick.has(kwNorm(p.group.unit || ''))) return;   // الوحدات التي اختارها المعلم وحدها
+    const u = p.node.unit || '';
+    if (!units.has(u)) units.set(u, []);
+    const arr = units.get(u);
+    if (!arr.some((x) => x.node === p.node)) arr.push({ node: p.node, lesson: p.sessions[0] && p.sessions[0].lesson, file: p.group.lesson || '', fileUnit: p.group.unit || '' });
+  });
+  const teacher = await teacherName();
+  const { refOf, sameUnit } = await gameFinder();
   let rooms = 0, topics = 0, fail = 0, k = 0;
   for (const [unit, ls] of units) {
     if (stopFlag) break;
@@ -2936,6 +2945,61 @@ async function videosOnly() {
     : fail ? 'الفيديوهات لم تُضف بعد. أعد المحاولة بعد قليل.' : had ? 'فيديوهات هذه الدروس موجودة في نور.' : 'لم أجد في يوتيوب عناوين قريبة من أسماء هذه الدروس، فلم أضف فيديو.';
   logLine('ok', WIZ.vidHead);
 }
+// «درس تفاعلي» (المالك 2026-11-14): لكل درس اختاره المعلم درس SCORM في «مكتبة الدروس التفاعلية» — خمسة أسئلة من أنشطة الدرس،
+// ثم شهادة باسم الطالب ومدرسته ومعلمه ونتيجته يحمّلها. درس بلا أنشطة في الموقع لا يُضاف (يُسجَّل للمشرف فقط)
+async function scormOnly() {
+  const nConf = conflicts(); if (nConf.miss.length + nConf.weak.length + nConf.dup.length || plan.mismatch) autoResolve();
+  safeLinks();
+  setPhase('fill');
+  const origin = await noorOrigin();
+  const readLib = async (u) => { if (!(await nav(u))) return null; await waitComplete(10000); await sleep(800); return execMain(vidLibRead); };
+  let libUrl = `${origin}/teacher/attachments/index/Scorm/cid:${courseCid}`;
+  let lib = await readLib(libUrl);
+  if (!lib || !lib.ok || !/\/upload\/Scorm\//.test(lib.upload)) {
+    // المكتبة برقم المادة المشفّر: من رابطها في قائمة مكتبة الفيديو
+    const v = await readLib(`${origin}/teacher/attachments/index/BVideo/cid:${courseCid}`);
+    const href = v && (v.links || []).find((h) => /\/attachments\/index\/Scorm\//.test(h));
+    if (href) { libUrl = href.replace(/#.*$/, ''); lib = await readLib(libUrl); }
+  }
+  if (!lib || !lib.ok || !/\/upload\/Scorm\//.test(lib.upload)) { WIZ.scHead = '✓ انتهى'; WIZ.scSub = 'مكتبة الدروس التفاعلية لم تفتح الآن. أعد المحاولة بعد قليل.'; flRow('skipped', null, 'مكتبة الدروس التفاعلية: ' + ((lib && lib.url) || 'لا صفحة')); return; }
+  const have = new Set(lib.titles.map(kwNorm));
+  const { refOf, sameUnit } = await gameFinder();
+  const teacher = await teacherName();
+  const items = [];
+  plan.forEach((p) => {
+    if (!p.node || p.skipped || p.miss || (WIZ.scormPick && !WIZ.scormPick.has(p.group.key)) || items.some((x) => x.node === p.node)) return;
+    items.push({ node: p.node, lesson: p.sessions[0] && p.sessions[0].lesson, file: p.group.lesson || '', fileUnit: p.group.unit || '' });
+  });
+  let n = 0, had = 0, none = 0, fail = 0;
+  for (let i = 0; i < items.length && !stopFlag; i++) {
+    const x = items[i], node = x.node;
+    const title = ('درس تفاعلي: ' + node.text + (node.nth ? ` (${toAr(node.nth + 1)})` : '')).slice(0, 250);
+    if (have.has(kwNorm(title))) { had++; continue; }
+    setBox('run', `أجهّز الدرس التفاعلي «${shortT(node.text)}»…`, `${toAr(i + 1)} من ${toAr(items.length)}`);
+    $('prog').style.width = (Math.min(1, (i + 1) / items.length) * 100) + '%';
+    const ref = refOf(x);
+    let game = ref ? await fetchGame(ref, WIZ.gamesBase || undefined) : null;
+    if (game && ref.idx && !sameUnit(game.unit, x.fileUnit)) game = null;
+    const bytes = game ? await buildScorm(game, { id: `afaq-${ref.pkg}-${ref.n}`, teacher, base: chrome.runtime.getURL('') }).catch(() => null) : null;
+    if (!bytes) { none++; flRow('skipped', { s: { lesson: x.lesson, date: '' }, node }, 'درس تفاعلي: لا أنشطة لهذا الدرس في الموقع'); continue; }
+    const pub = new Date(nowDate().getTime() + 15 * 60000);
+    const op = { title, lang: /[؀-ۿ]/.test(game.lesson || node.text) ? '2' : '1', comments: 'خمسة أسئلة من الدرس، ثم شهادة باسم الطالب ونتيجته يحمّلها.', b64: toB64(bytes), fileName: `${ref.pkg}-${ref.n}.zip`, publish: noorDT(pub), match: `${node.unit}: ${node.text}`, lesson: node.text };
+    if (!(await nav(lib.upload))) { fail++; continue; }
+    await waitComplete(10000);
+    const nv = waitNavigation(120000);
+    const f = await execMain(scormFill, op);
+    if (!f || !f.ok) { fail++; flRow('skipped', { s: null, node }, 'درس تفاعلي لم يُضف: ' + ((f && f.err) || 'لا نموذج')); continue; }
+    await nv; await waitComplete(15000);
+    lib = await readLib(libUrl);
+    if (lib && lib.titles.some((t) => kwNorm(t) === kwNorm(title))) { n++; have.add(kwNorm(title)); logLine('ok', `✓ درس تفاعلي «${node.text}»`); }
+    else { fail++; flRow('skipped', { s: null, node }, 'درس تفاعلي أُرسل ولم يظهر في المكتبة'); }
+  }
+  const w = (k) => (k === 1 ? 'درسًا تفاعليًا واحدًا' : k === 2 ? 'درسين تفاعليين' : k <= 10 ? toAr(k) + ' دروس تفاعلية' : toAr(k) + ' درسًا تفاعليًا');
+  WIZ.scHead = n ? `✓ أضفت ${w(n)}` : '✓ انتهى';
+  WIZ.scSub = n ? 'في «مكتبة الدروس التفاعلية» لشعب المادة: خمسة أسئلة من الدرس، ثم شهادة باسم الطالب ومدرسته ومعلمه ونتيجته يحمّلها.'
+    : fail ? 'الدروس التفاعلية لم تُضف بعد. أعد المحاولة بعد قليل.' : had ? 'الدروس التفاعلية لهذه الدروس موجودة في نور.' : 'اختر دروسًا أخرى لإضافة دروسها التفاعلية.';
+  logLine('ok', WIZ.scHead);
+}
 async function run() {
   if (running) return;
   // تشغيل آخر في نافذة أخرى؟ (يمنع تعبئتين متزامنتين في نور)
@@ -3012,6 +3076,7 @@ async function run() {
     if (WIZ.hwOnly) { await homeworkOnly(); finished = true; throw new Error(WIZ.hwHead); }
     if (WIZ.roomsOnly) { await roomsOnly(); finished = true; throw new Error(WIZ.roomHead); }
     if (WIZ.videosOnly) { await videosOnly(); finished = true; throw new Error(WIZ.vidHead); }
+    if (WIZ.scormOnly) { await scormOnly(); finished = true; throw new Error(WIZ.scHead); }
     // المادة مكتملة في نور: لا مراجعة ولا اقتراحات — «مكتمل» فقط
     { const cp = completion(); if (cp.complete && !queue.length) { await termFullOffer(); finished = true; logLine('ok', completeText(cp)); throw new Error(completeText(cp)); } }
     // تعارض بين ملفك ونور: تُعرض الخطة للمراجعة، وتبدأ وحدها بعد مهلة (أطول كلما كان التعارض أخطر) ما لم تطلب المراجعة اليدوية
@@ -3456,7 +3521,7 @@ const SHIFT = { one: { name: 'فترة واحدة', min: 40 }, two: { name: 'ف�
 const WZ_STEPS = ['mode', 'grade', 'subject', 'shift', 'lessons'];
 // «بداية الإدخال» في التحضير التلقائي: في النسخة الخاصة بالمالك فقط (اسم الإصدار فيه «خاصة»)
 const FROM_STEP = (() => { try { return /خاصة/.test(chrome.runtime.getManifest().version_name || ''); } catch (e) { return false; } })();
-const wz = { hw: true, join: false, step: 'mode', hist: [], mode: '', grade: 0, subject: '', shift: '', pkg: null, sel: new Map(), typed: new Set(), hsel: new Map(), rsel: new Set(), vsel: new Set(), catalog: null, link: null, status: null, busy: false };
+const wz = { hw: true, join: false, step: 'mode', hist: [], mode: '', grade: 0, subject: '', shift: '', pkg: null, sel: new Map(), typed: new Set(), hsel: new Map(), rsel: new Set(), vsel: new Set(), ssel: new Set(), catalog: null, link: null, status: null, busy: false };
 const ORD = ['الأولى', 'الثانية', 'الثالثة', 'الرابعة', 'الخامسة', 'السادسة', 'السابعة', 'الثامنة'];
 const wdone = (l) => { const x = sessionStatus(state, wz.pkg.id, l.id); return !!(x.saved || (x.filled && !x.failed)); };
 const gradeName = (n) => 'الصف ' + (GRADES[n - 1] || toAr(n));
@@ -3511,7 +3576,7 @@ function wzTrialLeft() {
 // نوع الخدمة في الاشتراك (المالك 2026-11-02): تحضير فقط · تحضير مع واجب · واجب فقط — يحدده المدير لكل مادة؛ والتجربة تشمل الكل
 const SVC_LABEL = { prep: 'تحضير فقط', hw: 'واجبات فقط' };
 const offerSvc = (o) => (o.src === 'lib' && o.pkg.remote && !o.pkg.remote.trial && o.pkg.remote.service) || 'both';
-const offerAllows = (o, mode) => { const sv = offerSvc(o); return mode === 'rooms' || mode === 'video' ? true : mode === 'hw' ? sv !== 'prep' : mode ? sv !== 'hw' : true; };
+const offerAllows = (o, mode) => { const sv = offerSvc(o); return ['rooms', 'video', 'scorm'].includes(mode) ? true : mode === 'hw' ? sv !== 'prep' : mode ? sv !== 'hw' : true; };
 const wzBadge = (o) => (o.src === 'cat' ? ''
   : o.pkg.remote && o.pkg.remote.trial ? '<em class="bdg free">بانتظار التفعيل</em>'
     : o.pkg.remote ? `<em class="bdg sub">مشترك ✓${SVC_LABEL[offerSvc(o)] ? ' · ' + SVC_LABEL[offerSvc(o)] : ''}</em>` : '');
@@ -3530,7 +3595,7 @@ function wzBind(list) { $('wzBody').querySelectorAll('.wz-card').forEach((b) => 
 
 function wzRender() {
   const i = WZ_STEPS.indexOf(wz.step === 'name' || wz.step === 'style' ? 'shift' : wz.step);
-  $('wzDots').innerHTML = (['term', 'hw', 'rooms', 'video'].includes(wz.mode) ? WZ_STEPS.slice(0, 4) : WZ_STEPS).map((_, k) => `<i class="${k < i ? 'done' : k === i ? 'on' : ''}"></i>`).join('');
+  $('wzDots').innerHTML = (['term', 'hw', 'rooms', 'video', 'scorm'].includes(wz.mode) ? WZ_STEPS.slice(0, 4) : WZ_STEPS).map((_, k) => `<i class="${k < i ? 'done' : k === i ? 'on' : ''}"></i>`).join('');
   $('wzBack').hidden = !wz.hist.length || ['pay', 'wait'].includes(wz.step);
   const head = $('wzHead'), body = $('wzBody');
   const offers = wzOffers();
@@ -3538,11 +3603,14 @@ function wzRender() {
   if (wz.step === 'mode') {
     head.textContent = 'ماذا تريد أن تحضّر؟';
     // الخدمة (المالك 2026-11-02): تحضير · تحضير مع واجبات · واجبات فقط — ثلاثة خيارات صريحة؛ الواجبات خمسة أسئلة لكل درس في «المهام الإلكترونية»
-    const svc = wz.mode === 'rooms' || wz.mode === 'video' ? wz.mode : wz.mode === 'hw' ? 'hw' : wz.hw ? 'both' : 'prep';
-    const SV = [['prep', 'تحضير'], ['both', 'تحضير مع واجبات'], ['hw', 'واجبات فقط'], ['rooms', 'غرف النقاش'], ['video', 'فيديو']];
+    const svc = ['rooms', 'video', 'scorm'].includes(wz.mode) ? wz.mode : wz.mode === 'hw' ? 'hw' : wz.hw ? 'both' : 'prep';
+    const SV = [['prep', 'تحضير'], ['both', 'تحضير مع واجبات'], ['hw', 'واجبات فقط'], ['rooms', 'غرف النقاش'], ['video', 'فيديو'], ['scorm', 'درس تفاعلي']];
     // غرف النقاش (المالك 2026-11-14): غرفة لكل وحدة، وفيها موضوع لكل درس (نشاطه وسؤالان للنقاش)
     // فيديو (المالك 2026-11-14): إذن يوتيوب يُطلب هنا مرة واحدة (يحتاج ضغطة المعلم)
-    list = svc === 'video'
+    // درس تفاعلي (SCORM) (المالك 2026-11-14): خمسة أسئلة ثم شهادة باسم الطالب ومدرسته ومعلمه
+    list = svc === 'scorm'
+      ? [{ title: 'درس تفاعلي لكل درس', sub: 'خمسة أسئلة ثم شهادة باسم الطالب ونتيجته', on: wz.mode === 'scorm', go: () => { wz.mode = 'scorm'; wzGo('grade'); } }]
+      : svc === 'video'
       ? [{ title: 'فيديو لكل درس', sub: 'من يوتيوب، بعنوان قريب من اسم الدرس', on: wz.mode === 'video', go: () => {
         const go = () => { wz.mode = 'video'; wzGo('grade'); };
         if (YT_DEBUG || !chrome.permissions || !chrome.permissions.request) { go(); return; }
@@ -3560,7 +3628,7 @@ function wzRender() {
       + wzCards(list).replace('wz-cards', 'wz-cards big');
     body.querySelectorAll('.wz-seg-b').forEach((bt) => { bt.onclick = () => {
       const k = bt.dataset.svc;
-      if (['hw', 'rooms', 'video'].includes(k)) wz.mode = k; else { if (['hw', 'rooms', 'video'].includes(wz.mode)) wz.mode = 'term'; wz.hw = k === 'both'; }
+      if (['hw', 'rooms', 'video', 'scorm'].includes(k)) wz.mode = k; else { if (['hw', 'rooms', 'video', 'scorm'].includes(wz.mode)) wz.mode = 'term'; wz.hw = k === 'both'; }
       wzSavePrefs(); wzRender();
     }; });
   } else if (wz.step === 'grade') {
@@ -3771,8 +3839,9 @@ function wzRoomUnits() {
   body.querySelectorAll('input[data-ru]').forEach((cb) => { cb.onchange = () => { if (cb.checked) wz.rsel.add(cb.dataset.ru); else wz.rsel.delete(cb.dataset.ru); wzRoomUnits(); }; });
   $('wzRoomGo').onclick = () => { if (wz.rsel.size) wzRun(); };
 }
-// «فيديو» (المالك 2026-11-14): يختار المعلم الدروس بنفسه؛ لكل درس مختار فيديو من يوتيوب إن وُجد عنوان مناسب
+// «فيديو» و«درس تفاعلي» (المالك 2026-11-14): يختار المعلم الدروس بنفسه؛ لكل درس مختار فيديو من يوتيوب إن وُجد عنوان مناسب، أو درس SCORM
 function wzVidLessons() {
+  const sc = wz.mode === 'scorm', sel = sc ? wz.ssel : wz.vsel;   // الدرس التفاعلي يختار دروسه بالقائمة نفسها
   const body = $('wzBody');
   const keep = body.querySelector('.wz-list'); const top = keep ? keep.scrollTop : 0;
   $('wzHead').textContent = 'اختر الدروس';
@@ -3780,14 +3849,17 @@ function wzVidLessons() {
   let u = null;
   body.innerHTML = wzTrialNote() + '<div class="wz-list">' + gs.map((g) => {
     const uh = g.unit !== u ? `<div class="wz-unit">${esc(g.unit || 'دروس')}</div>` : ''; u = g.unit;
-    return `${uh}<div class="wz-les ${wz.vsel.has(g.key) ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-vk="${esc(g.key)}" ${wz.vsel.has(g.key) ? 'checked' : ''}><span>${esc(g.lesson || 'درس')}</span></label></div>`;
+    return `${uh}<div class="wz-les ${sel.has(g.key) ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-vk="${esc(g.key)}" ${sel.has(g.key) ? 'checked' : ''}><span>${esc(g.lesson || 'درس')}</span></label></div>`;
   }).join('') + '</div>';
-  const n = wz.vsel.size;
+  const n = sel.size;
   const vw = (k) => (k === 1 ? 'لدرس واحد' : k === 2 ? 'لدرسين' : k <= 10 ? 'لـ' + toAr(k) + ' دروس' : 'لـ' + toAr(k) + ' درسًا');
-  body.insertAdjacentHTML('beforeend', `<p class="wz-note">أبحث في يوتيوب عن فيديو عنوانه قريب من اسم الدرس، وأضيفه في «مكتبة الفيديو» لشعب المادة. الدرس الذي لا أجد له عنوانًا مناسبًا يبقى بلا فيديو.</p><button class="btn primary big" id="wzVidGo" ${n ? '' : 'disabled'}>${n ? `أضف فيديو ${vw(n)}` : 'اختر درسًا'}</button>`);
+  const scW = (k) => (k === 1 ? 'درسًا تفاعليًا واحدًا' : k === 2 ? 'درسين تفاعليين' : k <= 10 ? toAr(k) + ' دروس تفاعلية' : toAr(k) + ' درسًا تفاعليًا');
+  const note = sc ? 'لكل درس تختاره درس تفاعلي في «مكتبة الدروس التفاعلية»: خمسة أسئلة من الدرس، ثم شهادة باسم الطالب ومدرسته ومعلمه ونتيجته يحمّلها.'
+    : 'أبحث في يوتيوب عن فيديو عنوانه قريب من اسم الدرس، وأضيفه في «مكتبة الفيديو» لشعب المادة. الدرس الذي لا أجد له عنوانًا مناسبًا يبقى بلا فيديو.';
+  body.insertAdjacentHTML('beforeend', `<p class="wz-note">${note}</p><button class="btn primary big" id="wzVidGo" ${n ? '' : 'disabled'}>${n ? (sc ? `أضف ${scW(n)} في نور` : `أضف فيديو ${vw(n)}`) : 'اختر درسًا'}</button>`);
   const list = body.querySelector('.wz-list'); list.scrollTop = top;
-  body.querySelectorAll('input[data-vk]').forEach((cb) => { cb.onchange = () => { if (cb.checked) wz.vsel.add(cb.dataset.vk); else wz.vsel.delete(cb.dataset.vk); wzVidLessons(); }; });
-  $('wzVidGo').onclick = () => { if (wz.vsel.size) wzRun(); };
+  body.querySelectorAll('input[data-vk]').forEach((cb) => { cb.onchange = () => { if (cb.checked) sel.add(cb.dataset.vk); else sel.delete(cb.dataset.vk); wzVidLessons(); }; });
+  $('wzVidGo').onclick = () => { if (sel.size) wzRun(); };
 }
 // تواريخ متتالية في «أختار الدروس بنفسي» (المالك 2026-10-31): الحصص المختارة وحدها، بترتيب القائمة؛ ما كتبه المعلم يبقى كما كتبه،
 // وكل حصة مختارة بعده بلا تاريخ منه تأخذ الحصة التالية في أيام حصصه (حصتان في يوم له فيه حصتان، ولا إجازة). ما قبل أول تاريخ يبقى فارغًا
@@ -3862,6 +3934,7 @@ function wzOpen(p) {
   [...wz.sel.keys()].forEach((k) => { if (!ids.has(k)) wz.sel.delete(k); });
   if (wz.mode === 'hw') { const ks = new Set(lessonGroups(p).map((g) => g.key)); [...wz.hsel.keys()].forEach((k) => { if (!ks.has(k)) wz.hsel.delete(k); }); wzGo('hwLessons'); }
   else if (wz.mode === 'rooms') { const us = new Set(lessonGroups(p).map((g) => kwNorm(g.unit || ''))); [...wz.rsel].forEach((k) => { if (!us.has(k)) wz.rsel.delete(k); }); wzGo('roomUnits'); }
+  else if (wz.mode === 'scorm') { const ks = new Set(lessonGroups(p).map((g) => g.key)); [...wz.ssel].forEach((k) => { if (!ks.has(k)) wz.ssel.delete(k); }); wzGo('vidLessons'); }
   else if (wz.mode === 'video') { const ks = new Set(lessonGroups(p).map((g) => g.key)); [...wz.vsel].forEach((k) => { if (!ks.has(k)) wz.vsel.delete(k); }); wzGo('vidLessons'); }
   else if (wz.mode === 'term') { if (isArabicPkg(p)) wzGo('style'); else wzTermGo(); } else wzGo('lessons');
 }
@@ -3958,11 +4031,12 @@ async function wzRun() {
   $('optStep').checked = false;
   $('optNoor').checked = true; $('optAuto').checked = true;
   WIZ.on = true; WIZ.rule = fileOk ? 'official' : ''; WIZ.seq = !fileOk;
-  WIZ.roomsOnly = wz.mode === 'rooms'; WIZ.videosOnly = wz.mode === 'video'; WIZ.course = null;
+  WIZ.roomsOnly = wz.mode === 'rooms'; WIZ.videosOnly = wz.mode === 'video'; WIZ.scormOnly = wz.mode === 'scorm'; WIZ.course = null;
   // المعلم يختار الوحدات (الغرف) والدروس (الفيديو) بنفسه (المالك 2026-11-14)
   WIZ.roomPick = WIZ.roomsOnly ? new Set(wz.rsel) : null;
   WIZ.vidPick = WIZ.videosOnly ? new Set(wz.vsel) : null;
-  WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = !WIZ.roomsOnly && !WIZ.videosOnly && (WIZ.hwOnly || (!!wz.hw && !(p.remote && !p.remote.trial && p.remote.service === 'prep'))); WIZ.hwN = 0; WIZ.hwFail = 0; WIZ.hwDone = null;
+  WIZ.scormPick = WIZ.scormOnly ? new Set(wz.ssel) : null;
+  WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = !WIZ.roomsOnly && !WIZ.videosOnly && !WIZ.scormOnly && (WIZ.hwOnly || (!!wz.hw && !(p.remote && !p.remote.trial && p.remote.service === 'prep'))); WIZ.hwN = 0; WIZ.hwFail = 0; WIZ.hwDone = null;
   WIZ.hwPick = WIZ.hwOnly ? Object.fromEntries([...wz.hsel].map(([k, v]) => [k, { pub: v.pub, due: v.due }])) : null;
   WIZ.rid = Date.now(); WIZ.sum = 0; WIZ.auto = 0;
   wizRunning();
@@ -4029,6 +4103,7 @@ async function wizAfterRun({ report, ok, failed, stopped, error, had, past = 0 }
   if (WIZ.hwOnly) { setBox('ok', WIZ.hwHead || '✓ انتهى', WIZ.hwSub || ''); return; }
   if (WIZ.roomsOnly) { setBox('ok', WIZ.roomHead || '✓ انتهى', WIZ.roomSub || ''); return; }
   if (WIZ.videosOnly) { setBox('ok', WIZ.vidHead || '✓ انتهى', WIZ.vidSub || ''); return; }
+  if (WIZ.scormOnly) { setBox('ok', WIZ.scHead || '✓ انتهى', WIZ.scSub || ''); return; }
   if (wz.mode === 'pick') $('wzMore').hidden = false;
   // نور لا تقبل تاريخًا مضى: ما مضى تاريخه تُرك بهدوء، ويُذكر للمعلم دون صيغة خطأ
   const pt = past ? ` ${past === 1 ? 'حصة واحدة مضى تاريخها' : `${countWord(past)} مضى تاريخها`} ونور لا تقبل نشرها بتاريخ ماضٍ، فتركتها.` : '';

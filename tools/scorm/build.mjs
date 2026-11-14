@@ -9,6 +9,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url)), ROOT = path.resolve(HERE, '../..');
+const ASSETS = path.join(ROOT, 'extension/scorm');   // القالب والخطوط: الملفات نفسها التي تبني منها «حاضر» درس كل معلم
 const arg = (k, d = '') => { const i = process.argv.indexOf('--' + k); return i > 0 && process.argv[i + 1] && !process.argv[i + 1].startsWith('--') ? process.argv[i + 1] : d; };
 const has = (k) => process.argv.includes('--' + k);
 const pkg = arg('pkg'), n = arg('n'), out = path.resolve(arg('out', '.'));
@@ -27,10 +28,10 @@ export function pickFive(g) {
 const q = pickFive(G);
 if (q.length < 5) { console.error(`${pkg}/${n}: ${q.length} أسئلة فقط`); process.exit(1); }
 
-const font = (f) => fs.readFileSync(path.join(HERE, 'fonts', f)).toString('base64');
+const font = (f) => fs.readFileSync(path.join(ASSETS, 'fonts', f)).toString('base64');
 const data = { subject: G.subject, grade: G.grade, unit: G.unit || '', lesson: G.lesson, teacher: arg('teacher'), school: arg('school'), q };
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const html = fs.readFileSync(path.join(HERE, 'template.html'), 'utf8')
+const html = fs.readFileSync(path.join(ASSETS, 'template.html'), 'utf8')
   .replace('__TITLE__', esc(G.lesson))
   .replace('__F_ALEX_AR__', font('alexandria-700-ar.woff2')).replace('__F_ALEX_LAT__', font('alexandria-700-lat.woff2'))
   .replace('__F_PLEX_AR__', font('plex-500-ar.woff2')).replace('__F_PLEX_LAT__', font('plex-500-lat.woff2'))
