@@ -16,6 +16,7 @@
 //   scenarios  tests/noor-mock/run.mjs — السيناريوهات كاملة (~30 دقيقة)
 //   matrix     tests/noor-mock/matrix.mjs — كل الباقات (full) أو عينة 24 (short)
 //   oneper     matrix --fault oneper --flows term — حصص أقل من الخطة (full فقط، ~75 دقيقة)
+//   skill      matrix --fault skill --flows term — مواد اللغة العربية بـ«تحضير لكل مهارة» في الفصل كاملًا (full فقط)
 //   real       matrix على شجرات نور الحقيقية --fault none (full فقط)
 //   gate       tests/build-release.sh <version> — يبني zipين ويجرّبهما (فقط مع --version وبعد نجاح كل ما قبله)
 // قاعدة الإصدار: لا يُسلَّم zip إلا بعد نجاح كل الخطوات، ومعه سطر الخلاصة.
@@ -71,6 +72,7 @@ const STEPS = {
   },
   matrix: { cmd: node('tests/noor-mock/matrix.mjs', '--jobs', JOBS, ...(TIER === 'short' ? ['--sample', '24'] : [])), env: TIER === 'short' ? { REPORT: path.join(LOGS, 'matrix-report') } : {}, sum: matrixSum('matrix') },
   oneper: { cmd: node('tests/noor-mock/matrix.mjs', '--jobs', JOBS, '--fault', 'oneper', '--flows', 'term'), env: { REPORT: path.join(LOGS, 'oneper-report') }, sum: matrixSum('oneper') },
+  skill: { cmd: node('tests/noor-mock/matrix.mjs', '--jobs', JOBS, '--fault', 'skill', '--flows', 'term'), env: { REPORT: path.join(LOGS, 'skill-report') }, sum: matrixSum('skill') },
   real: { cmd: node('tests/noor-mock/matrix.mjs', '--jobs', JOBS, '--fault', 'none'), env: { REAL_TREES: path.join(REPO, 'tests/noor-mock/real-trees/trees.json'), REPORT: path.join(LOGS, 'real-report') }, sum: matrixSum('real') },
   gate: {
     cmd: ['bash', ['tests/build-release.sh', VERSION]],
@@ -78,7 +80,7 @@ const STEPS = {
   },
 };
 const order = opt('steps', '') ? opt('steps').split(',') :
-  TIER === 'full' ? ['doctor', 'align', 'rich', 'matrix', 'oneper', 'real', 'scenarios', ...(VERSION ? ['gate'] : [])]
+  TIER === 'full' ? ['doctor', 'align', 'rich', 'matrix', 'oneper', 'skill', 'real', 'scenarios', ...(VERSION ? ['gate'] : [])]
     : ['doctor', 'align', 'scenarios', 'matrix', ...(VERSION ? ['gate'] : [])];
 const unknown = order.filter((s) => !STEPS[s]);
 if (unknown.length) { console.error(`خطوات غير معروفة: ${unknown.join(', ')} — المتاح: ${Object.keys(STEPS).join(', ')}`); process.exit(2); }

@@ -55,6 +55,11 @@ const realTree = (id) => { let t = REAL && REAL[id]; if (typeof t === 'string') 
 const FAULTS = ['none', 'holidays', 'busy', 'reject', 'netcut', 'close', 'yearend', 'twoper', 'oneper'];
 const FIXED_NOW = '2026-09-05';   // the wizard's «today» in these runs (?now=): the day before every plan starts, so nothing has passed
 const onePer = (pkg) => { const ds = pkg.lessons.map((l) => l.pubDate).filter(Boolean).sort(); const wks = Math.max(1, Math.round((new Date(ds[ds.length - 1]) - new Date(ds[0])) / 6048e5) + 1); const k = Math.max(1, Math.ceil(pkg.lessons.length / wks) - 1); return Object.fromEntries([0, 1, 2, 3, 4].map((d) => [d, d < k ? [['1', 1], ['2', 1]] : []])); };
+// skill (4.10.41, Arabic subjects, `--fault skill`): the full term with «تحضير لكل مهارة» on a timetable that holds the plan (both
+// sections k periods every school day, k = the plan's busiest week ÷ 5) — a prep per skill group of a lesson on the date of its
+// first session, every session keeping its own period
+const skillK = (pkg) => { const wk = {}; pkg.lessons.forEach((l) => { if (!l.pubDate) return; const d = new Date(l.pubDate + 'T12:00'); d.setDate(d.getDate() - d.getDay()); const k = d.toISOString().slice(0, 10); wk[k] = (wk[k] || 0) + 1; }); return Math.max(1, Math.ceil(Math.max(1, ...Object.values(wk)) / 5)); };
+const skillPer = (pkg) => { const k = skillK(pkg); return Object.fromEntries([0, 1, 2, 3, 4].map((d) => [d, [['1', k], ['2', k]]])); };
 const TWOPER = { 0: [['1', 2], ['2', 2]], 1: [['1', 1], ['2', 1]], 2: [['1', 1], ['2', 1]], 3: [['1', 1], ['2', 1]], 4: [['1', 1], ['2', 1]] };
 const ONLY_FAULTS = opt('faults', '') ? String(opt('faults')).split(',') : null;   // keep only the packages whose rotated fault is one of these
 const FORCE_FAULT = opt('fault', '') ? String(opt('fault')) : '';                     // give every selected package this fault instead of the rotated one
@@ -135,6 +140,8 @@ function listPackages() {
 // the extension flips «lesson-unit» numbering («2-1 القلب» → «1-2 القلب», match.js fixPairOrder) when it loads a package, and the
 // wizard's pick screen keys (data-k) use the flipped names — the harness uses the extension's own function so the keys agree
 const { fixPairOrder } = await import(pathToFileURL(path.join(EXT_SRC, 'match.js')).href);
+globalThis.chrome = globalThis.chrome || { storage: { local: { get: async () => ({}), set: async () => {} } }, runtime: {} };
+const { joinRuns } = await import(pathToFileURL(path.join(EXT_SRC, 'packages.js')).href);
 const loadPkg = (f) => { const p = JSON.parse(fs.readFileSync(f, 'utf8')); p.lessons.forEach((l) => { l.pubDate = l.pubDate || l.publishDate; }); fixPairOrder(p.lessons); return p; };
 function groupsOf(pkg) {
   const m = new Map();
@@ -312,8 +319,18 @@ async function wizardTo(pg, job, mode, { name = true } = {}) {
   await step('الصف ' + GRADES[job.grade - 1]);
   await step(job.subject);
   await step(job.shift === 'two' ? 'فترتان' : 'فترة واحدة');
-  if (!name) return;
-  await nameStep(pg);
+  if (name) await nameStep(pg);
+  if (mode !== 'pick' && /العربية/.test(job.subject)) await styleStep(pg, job.fault === 'skill' ? 'skill' : 'session');
+}
+// 4.10.41: an Arabic subject in the full term asks once for the prep style; the matrix keeps «تحضير لكل حصة» (as before)
+async function styleStep(pg, style = 'session') {
+  const at = () => pg.evaluate(() => (document.body.classList.contains('wiz-run') ? 'run' : /شكل تحضير/.test((document.getElementById('wzHead') || {}).textContent || '') ? 'style' : '')).catch(() => '');
+  for (const t0 = Date.now(); Date.now() - t0 < 60000;) {
+    const w = await at();
+    if (w === 'run') return;
+    if (w === 'style') { await clickCard(pg, style === 'skill' ? 'تحضير لكل مهارة' : 'تحضير لكل حصة'); return; }
+    await sleep(500);
+  }
 }
 async function ui(pg) {
   return pg.evaluate(() => {
@@ -460,6 +477,7 @@ async function flowTerm(job, J, W) {
   if (job.fault === 'reject') { const rj = [at(0.4), at(0.75)]; rj.forEach((d) => blocked.add(d)); cfg.rejectAtSave = rj; F.info.rejectAtSave = rj; }
   if (job.fault === 'netcut') { cfg.ambiguous = { 2: 'abort', [Math.max(3, Math.floor(n / 2))]: 'abort' }; F.info.netcutPosts = Object.keys(cfg.ambiguous).map(Number); }
   if (job.fault === 'oneper') { cfg.periods = onePer(J.pkg); F.info.oneperDays = Object.values(cfg.periods).filter((v) => v.length).length; }
+  if (job.fault === 'skill') { cfg.periods = skillPer(J.pkg); F.info.skillK = skillK(J.pkg); }
   if (job.fault === 'twoper') { cfg.periods = TWOPER; cfg.takenSlots = n % 2 ? 'hide' : 'disable'; F.info.twoper = cfg.takenSlots; }
   const noor = createNoor(cfg);
   W.afaq.reset({ pkgs: J.pkgs, catalog: J.catalog, meta: J.meta, tag: TAG });
@@ -539,7 +557,7 @@ async function flowTerm(job, J, W) {
     const rootOfTail = new Map(rows.filter((r) => r.mergedTags && r.mergedTags[0] !== tagOf(r.concepts)).map((r) => [tagOf(r.concepts), r.mergedTags[0]]));
     const tails = new Set(rootOfTail.keys());
     // two periods on a day: the next session may share the date (on the next period); a shared prep: same date as its root
-    const after = (a, b, x) => a > b || (((job.fault === 'twoper' || job.fault === 'oneper') || (x && tails.has(x.l.id))) && a === b);
+    const after = (a, b, x) => a > b || (((job.fault === 'twoper' || job.fault === 'oneper' || job.fault === 'skill') || (x && tails.has(x.l.id))) && a === b);
     const flipsIn = [];
     J.T.groups.forEach((g) => { const ss = g.sessions.filter((l) => dOf[l.id]); for (let i = 1; i < ss.length; i++) if (!after(dOf[ss[i].id], dOf[ss[i - 1].id], { l: ss[i] })) flipsIn.push(`«${g.lesson}»: session ${i} ${ss[i - 1].id}@${dOf[ss[i - 1].id]} then session ${i + 1} ${ss[i].id}@${dOf[ss[i].id]}`); });
     check(F, !flipsIn.length, 'order: within a lesson, session k+1 strictly after session k', flipsIn.slice(0, 10).join('\n'));
@@ -560,7 +578,7 @@ async function flowTerm(job, J, W) {
     if (job.fault !== 'oneper') check(F, !out.length, `term: every date within the term (${t1} … ${J.endsOn})`, out.slice(0, 10).map((x) => `${x.l.id}@${x.d}`).join('\n'));
     const onBlocked = saved.filter((x) => blocked.has(x.d));
     if (blocked.size) check(F, !onBlocked.length, `blocked days: nothing on a ${job.fault} day (${[...blocked].join(', ')})`, onBlocked.map((x) => `${x.l.id}@${x.d}`).join('\n'));
-    const capF = job.fault === 'twoper' ? (d) => (new Date(d + 'T12:00').getDay() === 0 ? 2 : 1) : () => 1;
+    const capF = job.fault === 'skill' ? () => skillK(J.pkg) : job.fault === 'twoper' ? (d) => (new Date(d + 'T12:00').getDay() === 0 ? 2 : 1) : () => 1;
     const wk0 = (iso) => { const d = new Date(iso + 'T12:00'); d.setDate(d.getDate() - d.getDay()); return d.toISOString().slice(0, 10); };
     // end of plan (4.10.10): when blocked days would push the plan past its last week, the tool joins the latest same-lesson
     // pairs into one prep «(n و m)» — exactly as many as the sessions that would otherwise fall after the plan's last Thursday;
@@ -579,14 +597,28 @@ async function flowTerm(job, J, W) {
     const expAll = expectDates([{ sessions: treeOrder(J.pkg.lessons) }], savedIds, blocked, capF);
     const overrun = saved.filter((x) => expAll[x.l.id] > planThu).length;
     const expRoots = expectDates([{ sessions: treeOrder(J.pkg.lessons.filter((l) => !tails.has(l.id))) }], savedIds, blocked, capF);
-    const exp = Object.fromEntries(saved.map((x) => [x.l.id, tails.has(x.l.id) ? expRoots[rootOfTail.get(x.l.id)] : expRoots[x.l.id]]));
+    // skill: every session keeps its own period, so a prep's date is the period of its first session in the full sequence
+    const exp = Object.fromEntries(saved.map((x) => [x.l.id, job.fault === 'skill' ? expAll[rootOfTail.get(x.l.id) || x.l.id] : tails.has(x.l.id) ? expRoots[rootOfTail.get(x.l.id)] : expRoots[x.l.id]]));
     // a plan with more sessions than the teacher's periods until its last week (two plan periods on a day the teacher has one
     // period, 4.10.11 split days): even after the joins some preps would fall after the plan — then the tool also lets sessions
     // follow one another (compaction), so it is judged like «oneper»: joins only as many as needed, the plan fits or nothing is
     // left to join, never before the plan's first week
-    const tight = job.fault !== 'oneper' && saved.some((x) => !tails.has(x.l.id) && expRoots[x.l.id] > planThu);
+    const tight = job.fault !== 'oneper' && job.fault !== 'skill' && saved.some((x) => !tails.has(x.l.id) && expRoots[x.l.id] > planThu);
     F.info.tight = tight;
-    if (job.fault !== 'oneper') {
+    if (job.fault === 'skill') {
+      // the preps of each lesson = its skill groups (consecutive sessions of one skill, at most eight in a prep)
+      const partOf = (g) => joinRuns(J.pkg, g.sessions).map((r) => r.ls.map((l) => l.id).join('+'));
+      const wantParts = new Set(J.T.groups.flatMap(partOf)), gotParts = new Set(rows0.map((r) => { const t = (String(r.concepts || '').match(/\[\[trace:([^\]]+)\]\]/g) || []).map((x) => x.replace(/^\[\[trace:|\]\]$/g, '')); return t.join('+'); }));
+      const missP = [...wantParts].filter((x) => !gotParts.has(x)), extraP = [...gotParts].filter((x) => !wantParts.has(x));
+      F.info.skill = { sessions: J.pkg.lessons.length, preps: rows0.length, k: skillK(J.pkg) };
+      check(F, !missP.length && !extraP.length, `skill: a prep per skill group of each lesson (${wantParts.size} preps for ${J.pkg.lessons.length} sessions)`, `missing: ${missP.slice(0, 8).join(' | ')}\nextra: ${extraP.slice(0, 8).join(' | ')}`);
+      const seen = new Map(), clash = [];
+      rows0.forEach((r) => (r.slots || []).forEach((x) => { const k = r.publishDate + '|' + x; if (seen.has(k)) clash.push(k); seen.set(k, 1); }));
+      check(F, !clash.length, 'skill: no period holds two preps', clash.slice(0, 10).join('\n'));
+      // the prep covers the periods of its own sessions that fall on its day (both sections)
+      const badSpan = rows0.filter((r) => { const t = (String(r.concepts || '').match(/\[\[trace:([^\]]+)\]\]/g) || []).map((x) => x.replace(/^\[\[trace:|\]\]$/g, '')); const n = t.filter((id) => expAll[id] === r.publishDate).length; const per = {}; (r.slots || []).forEach((x) => { const sec = String(x).split('|')[0]; per[sec] = (per[sec] || 0) + 1; }); return !(Object.keys(per).length === 2 && Object.values(per).every((v) => v === n)); });
+      check(F, !badSpan.length, 'skill: a prep takes, for both sections, as many periods of its day as it has sessions on that day', badSpan.slice(0, 8).map((r) => `${r.title} @${r.publishDate} slots ${(r.slots || []).join(',')}`).join('\n'));
+    } else if (job.fault !== 'oneper') {
       if (tight) check(F, tails.size <= overrun, `end of plan (more sessions than periods): no more shared preps than the overrun (${overrun} needed, ${tails.size} shared)`, [...rootOfTail].slice(0, 6).map(([t, r]) => `${r}+${t}`).join(', '));
       else check(F, tails.size === overrun, `end of term: sessions share a prep only when the plan would otherwise pass the term end (${planThu}), and exactly as many (${overrun} needed, ${tails.size} shared)`, [...rootOfTail].slice(0, 6).map(([t, r]) => `${r}+${t}`).join(', '));
       const badPair = [...rootOfTail].filter(([t, r]) => { const a = byId.get(r), b = byId.get(t); return !a || !b || (a.unit || '') + '|' + (a.lesson || '') !== (b.unit || '') + '|' + (b.lesson || ''); });
@@ -806,6 +838,7 @@ async function finishFlow(F, b, noor, t0) {
 const { files, skipped } = listPackages();
 if (FORCE_FAULT && !FAULTS.includes(FORCE_FAULT)) { console.log(`unknown fault «${FORCE_FAULT}» — one of ${FAULTS.join(', ')}`); process.exit(2); }
 let jobs = files.map((f, i) => Object.assign(f, { i, fault: FORCE_FAULT || FAULTS[i % FAULTS.length] }));
+if (FORCE_FAULT === 'skill') jobs = jobs.filter((j) => /^ar-\d/.test(j.id));   // «تحضير لكل مهارة» exists for Arabic subjects only
 if (ONLY.length) jobs = jobs.filter((j) => ONLY.some((o) => j.id === o || j.rel.includes(o)));
 if (ONLY_FAULTS) jobs = jobs.filter((j) => ONLY_FAULTS.includes(j.fault));
 if (REAL) jobs = jobs.filter((j) => realTree(j.id));

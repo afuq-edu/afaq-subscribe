@@ -179,7 +179,7 @@ async function nameStep(pg) {
     await pg.click('#wzNameGo');
   }
 }
-async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع', subject = 'الأحياء', shift = 'فترة واحدة', hw = false } = {}) {
+async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع', subject = 'الأحياء', shift = 'فترة واحدة', hw = false, style = 'session' } = {}) {
   // each step only if the run has not started yet (once linked, a «من حسابك في نور» shortcut can skip steps)
   const started = () => pg.evaluate(() => document.body.classList.contains('wiz-run') || !!document.getElementById('wzName')).catch(() => false);
   const step = async (sel, t) => { if (await started()) return; await pg.locator(sel, { hasText: t }).first().click({ timeout: 20000 }); await sleep(600); };
@@ -190,8 +190,18 @@ async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع'
   await step('.wz-cards.grid3 .wz-card', grade);
   await step('.wz-card:not([disabled])', subject);
   await step('.wz-card:not([disabled])', shift);
-  if (!name) return;
-  await nameStep(pg);
+  if (name) await nameStep(pg);
+  if (mode === 'term' && /العربية/.test(subject)) await styleStep(pg, style);
+}
+// 4.10.41: an Arabic subject in the full term asks once for the prep style — «تحضير لكل حصة» (as before) or «تحضير لكل مهارة»
+async function styleStep(pg, style = 'session') {
+  const at = () => pg.evaluate(() => (document.body.classList.contains('wiz-run') ? 'run' : /شكل تحضير/.test((document.getElementById('wzHead') || {}).textContent || '') ? 'style' : '')).catch(() => '');
+  for (const t0 = Date.now(); Date.now() - t0 < 60000;) {
+    const w = await at();
+    if (w === 'run') return;
+    if (w === 'style') { await pg.locator('.wz-card', { hasText: style === 'skill' ? 'تحضير لكل مهارة' : 'تحضير لكل حصة' }).first().click({ timeout: 20000 }); await sleep(600); return; }
+    await sleep(500);
+  }
 }
 // «open the tool again»: reload semester.html (fresh local record, as on every open) and run the full term again
 async function rerun(b, label, wz = {}) {
@@ -901,6 +911,113 @@ T(38, 'Arabic grade 4, pick mode, «تحضير لكل مهارة» (owner 2026-1
     check(row.publishDate === shown[i], `…on ${shown[i]}`, row.publishDate);
     check(r.every((n) => row.concepts.includes(`(${g.sessions[n - 1].id})`)) && g.sessions.filter((l, k) => !r.includes(k + 1)).every((l) => !row.concepts.includes(`(${l.id})`)), `…with the content of sessions ${r.join(', ')} only`, row.concepts.slice(0, 300));
   });
+  return b;
+});
+
+// «تحضير لكل مهارة» in the full term (owner 2026-11-14, Arabic subjects): the consecutive sessions of one skill in a lesson are ONE
+// prep on the date of the first of them; every session still keeps its own period of the timetable (so the term keeps its pace),
+// and the prep covers the periods of its sessions that fall on its own day. Expected rows are computed per section from the
+// timetable: each session takes the section's next period; a prep holds the sections whose first session of the group fell on
+// the same day
+async function arabic4(n = 41) {
+  const file = JSON.parse(fs.readFileSync('/mnt/project-files/afaq-platform/preps/g1-5/ar-4-t1.json', 'utf8'));
+  file.lessons = file.lessons.slice(0, n);
+  file.lessons.forEach((l) => { l.pubDate = l.pubDate || l.publishDate; l.concepts = `${l.concepts || ''} (${l.id})`; });
+  usePkg(file);
+  globalThis.chrome = globalThis.chrome || { storage: { local: { get: async () => ({}), set: async () => {} } }, runtime: {} };
+  const { joinRuns } = await import(path.join(REPO, 'extension/packages.js'));
+  const tree = treeFromPackage(PKG, { keepNumbers: true });
+  const courses = [{ cid: 'AR4', title: 'اللغة العربية', level: 'الصف الرابع', subject: 'اللغة العربية', grade: 'الرابع', tree }];
+  const offer = { id: PKG.id, subject: 'اللغة العربية', grade: 4, title: 'اللغة العربية — الرابع', shift: 'one' };
+  const runs = lessonGroups(PKG).flatMap((g) => joinRuns(PKG, g.sessions).map((r) => ({ g, ls: r.ls, skill: r.skill })));
+  return { tree, courses, offer, runs, wz: { grade: 'الصف الرابع', subject: 'اللغة العربية', shift: 'فترة واحدة', style: 'skill' } };
+}
+function skillWant(A, periods) {
+  const secs = [...new Set(Object.values(periods).flatMap((v) => v.map(([sec]) => sec)))].sort();
+  const day1 = PKG.lessons.map((l) => l.pubDate).sort()[0];
+  const at = {};
+  for (const sec of secs) {
+    at[sec] = {};
+    let d = day1, used = 0;
+    const cap = (iso) => (periods[new Date(iso + 'T12:00').getDay()] || []).filter(([x]) => x === sec).reduce((a, [, k]) => a + k, 0);
+    for (const l of PKG.lessons) { for (let i = 0; i < 400 && used >= cap(d); i++) { d = addDaysIso(d, 1); used = 0; } at[sec][l.id] = d; used++; }
+  }
+  const want = [];
+  for (const r of A.runs) {
+    const byD = {};
+    secs.forEach((sec) => { const d = at[sec][r.ls[0].id]; (byD[d] = byD[d] || []).push(sec); });
+    const ns = r.ls.map((l) => r.g.sessions.indexOf(l) + 1), node = nodeFor(A.tree, r.ls[0]).text;
+    for (const [d, ss] of Object.entries(byD)) want.push({ title: ns.length > 1 ? `${node} (${ns.join(' و ')})` : ns[0] > 1 ? `${node} (${ns[0]})` : node, date: d, ids: r.ls.map((l) => l.id),
+      slots: Object.fromEntries(ss.map((sec) => [sec, r.ls.filter((l) => at[sec][l.id] === d).length])) });
+  }
+  return want;
+}
+function checkSkillTerm(name, rows, A, periods) {
+  const want = skillWant(A, periods);
+  const secN = (r) => (r.slots || []).reduce((m, x) => { const k = String(x).split('|')[0]; m[k] = (m[k] || 0) + 1; return m; }, {});
+  const sig = (t, d, sl) => `${t} @${d} ${Object.entries(sl).sort().map(([k, n]) => `${k}×${n}`).join(' ')}`;
+  // Noor adds « (j)» itself to the j-th prep of one lesson on one date (the tool sends the bare name when j is the session number)
+  const sent = (r) => { const j = r.dayRank, suf = ` (${j})`; return !j || j < 2 || r.title === r.nodeText + suf || !r.title.endsWith(suf) ? r.title : r.title.slice(0, -suf.length); };
+  const got = rows.map((r) => sig(sent(r), r.publishDate, secN(r))).sort();
+  const exp = want.map((w) => sig(w.title, w.date, w.slots)).sort();
+  const miss = exp.filter((x) => !got.includes(x)), extra = got.filter((x) => !exp.includes(x));
+  check(rows.length === want.length, `${name}: ${want.length} preps for the ${PKG.lessons.length} sessions (${rows.length})`, '');
+  check(!miss.length && !extra.length, `${name}: a prep per skill group on the date of its first session, covering that day's periods of its sessions; every session keeps its own period`, `missing:\n${miss.slice(0, 12).join('\n')}\nextra:\n${extra.slice(0, 12).join('\n')}`);
+  const bad = want.filter((w) => { const rs = rows.filter((r) => r.publishDate === w.date && w.ids.every((id) => r.concepts.includes(`(${id})`))); return rs.length !== 1 || PKG.lessons.some((l) => !w.ids.includes(l.id) && rs[0].concepts.includes(`(${l.id})`)); });
+  check(!bad.length, `${name}: each prep holds the content of exactly its sessions`, bad.slice(0, 8).map((w) => `${w.title} @${w.date}`).join('\n'));
+  const seen = new Map(), clash = [];
+  rows.forEach((r) => (r.slots || []).forEach((x) => { const k = r.publishDate + '|' + x; if (seen.has(k)) clash.push(k); seen.set(k, 1); }));
+  check(!clash.length, `${name}: no period holds two preps`, clash.join(', '));
+  return want;
+}
+T(39, 'Arabic grade 4, full term, «تحضير لكل مهارة» (owner 2026-11-14): two sections with the same timetable (two periods on Sunday): a prep per skill group in tree order, each on the date of its first session, the 20-session reading lesson = 8 preps; the wizard asks the style once; a re-run adds nothing', async (env) => {
+  const A = await arabic4();
+  const periods = { 0: [['1', 2], ['2', 2]], 1: [['1', 1], ['2', 1]], 2: [['1', 1], ['2', 1]], 3: [['1', 1], ['2', 1]], 4: [['1', 1], ['2', 1]] };
+  const noor = env.noor({ tree: A.tree, courses: A.courses, periods });
+  env.afaq.reset({ pkg: PKG, offer: A.offer });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term', A.wz);
+  const s = await waitDone(b.pg, 25 * 60000, 'arabic term by skill');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check(!CALM_BAD_RE.test(`${s.head} ${s.text}`), 'the ending is calm', `${s.head} | ${s.text}`);
+  checkSkillTerm('S39', rows, A, periods);
+  const n1 = noor.st.rows.length;
+  await rerun(b, 'manual re-run', A.wz);
+  check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
+  return b;
+});
+T(40, 'Arabic grade 4, full term, «تحضير لكل مهارة», sections with DIFFERENT periods (section 1 twice on Sunday and on Wednesday, section 2 on Thursday): each section keeps its own sequence period after period; a skill prep is saved for the sections whose group starts on the same day', async (env) => {
+  const A = await arabic4();
+  const periods = { 0: [['1', 2], ['2', 1]], 1: [['1', 1], ['2', 1]], 2: [['1', 1], ['2', 1]], 3: [['1', 1]], 4: [['2', 1]] };
+  const noor = env.noor({ tree: A.tree, courses: A.courses, periods });
+  env.afaq.reset({ pkg: PKG, offer: A.offer });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term', A.wz);
+  const s = await waitDone(b.pg, 40 * 60000, 'arabic term by skill, per section');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  checkSkillTerm('S40', rows, A, periods);
+  const n1 = noor.st.rows.length;
+  await rerun(b, 'manual re-run', A.wz);
+  check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
+  return b;
+});
+T(41, 'Arabic grade 4, full term, «تحضير لكل مهارة», the tool is closed after a few preps and opened again (fresh local record): the term continues, and the periods of the sessions inside the preps already in Noor stay theirs — the final dates are those of an uninterrupted run', async (env) => {
+  const A = await arabic4();
+  const periods = { 0: [['1', 2]], 1: [['1', 1]], 2: [['1', 1]], 3: [['1', 1]], 4: [['1', 1]] };
+  const noor = env.noor({ tree: A.tree, courses: A.courses, periods });
+  env.afaq.reset({ pkg: PKG, offer: A.offer });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term', A.wz);
+  for (const t0 = Date.now(); Date.now() - t0 < 10 * 60000 && noor.st.rows.length < 5;) { await confirmStart(b.pg); await sleep(700); }
+  const cut = noor.st.rows.length;
+  check(cut >= 5, `the tool is closed after ${cut} preps`, '');
+  await b.pg.evaluate(() => chrome.storage.local.remove('semesterRun')).catch(() => {});   // closed for good: no unfinished run to resume
+  const s = await rerun(b, 'opened again', A.wz);
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح|موجودة في نور/.test(s.head), 'the second opening finishes the term', `${s.head} | ${s.text}`);
+  checkSkillTerm('S41', rows, A, periods);
   return b;
 });
 
