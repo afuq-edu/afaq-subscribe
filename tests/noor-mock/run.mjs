@@ -189,11 +189,25 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
 const card = async (pg, t) => { await pg.locator('.wz-card:not([disabled])', { hasText: t }).first().click({ timeout: 20000 }); await sleep(500); };
 // the service choice on the first wizard screen (not part of a run once it has started)
 async function svcPick(pg, k, started) {
+  // 4.10.48: the services are ticked one by one (any combination). k: 'prep' · 'both' (prep + homework) · 'hw' · 'rooms' · 'video' ·
+  // 'scorm' · or a list such as 'prep,hw,rooms' — exactly these end up ticked
+  const want = (k === 'both' ? 'prep,hw' : k).split(',');
   if (started && (await started())) return;
-  await pg.waitForSelector(`.wz-seg-b[data-svc="${k}"]`, { timeout: 20000 }).catch(() => {});
+  await pg.waitForSelector('.wz-seg-b[data-svc]', { timeout: 20000 }).catch(() => {});
   if (started && (await started())) return;
-  await pg.evaluate((k) => { const b = document.querySelector(`.wz-seg-b[data-svc="${k}"]`); if (b && !b.classList.contains('on')) b.click(); }, k).catch(() => {});
-  await sleep(300);
+  for (let i = 0; i < 6; i++) {
+    const done = await pg.evaluate((want) => {
+      const bs = [...document.querySelectorAll('.wz-seg-b[data-svc]')];
+      if (!bs.length) return true;
+      const off = bs.find((b) => want.includes(b.dataset.svc) && !b.classList.contains('on') && !b.disabled);
+      const extra = bs.find((b) => !want.includes(b.dataset.svc) && b.classList.contains('on'));
+      const b = off || extra;   // tick what is wanted first, so the list is never empty
+      if (b) b.click();
+      return !b;
+    }, want).catch(() => true);
+    await sleep(250);
+    if (done) break;
+  }
 }
 // 4.10.36: the name step reads the teacher's name from Noor by itself (owner 2026-11-03); typing it is only the fallback
 async function nameStep(pg) {
@@ -1433,7 +1447,7 @@ T(23, '«الواجبات فقط»: the teacher picks sessions and types a publi
 // ---------- «غرف النقاش» (المالك 2026-11-14): غرفة لكل وحدة، وفيها موضوع لكل درس ----------
 // قائمة اختيار الوحدات (الغرف) أو الدروس (الفيديو): يضع علامة على الكل إلا ما في except، ثم يضغط زر البدء
 const tickAll = async (pg, attr, go, except = []) => {
-  await pg.waitForSelector(`input[${attr}]`, { timeout: 120000 });
+  await pg.waitForSelector(`input[${attr}]`, { timeout: 60000 });
   const n = await pg.locator(`input[${attr}]`).count();
   for (let i = 0; i < n; i++) {
     const cb = pg.locator(`input[${attr}]`).nth(i);
@@ -1615,7 +1629,7 @@ T(44, '«درس تفاعلي»: for each lesson the teacher ticks, a SCORM 1.2 z
 const cardState = (pg, text) => pg.evaluate((t) => { const c = [...document.querySelectorAll('.wz-card')].find((x) => x.textContent.includes(t)); return c ? { found: true, disabled: c.disabled } : { found: false }; }, text);
 const clickCard = async (pg, sel, t) => { await pg.locator(sel, { hasText: t }).first().click({ timeout: 20000 }); await sleep(600); };
 
-T(24, 'Subscription «تحضير فقط»: the term runs with the homework box ticked and adds NO homework; «الواجبات فقط» shows the subject but not selectable', async (env) => {
+T(24, 'Subscription «تحضير فقط»: the term runs with the homework box ticked and adds NO homework; afterwards «واجبات» cannot be ticked', async (env) => {
   usePkg(derivePkg({ keep: range(1, 6) }));
   const tree = treeFromPackage(PKG);
   const noor = env.noor({ tree });
@@ -1627,18 +1641,17 @@ T(24, 'Subscription «تحضير فقط»: the term runs with the homework box t
   const rows = noor.st.rows.filter((r) => !r.preexisting);
   check(rows.length >= PKG.lessons.length, `the preps were saved (${rows.length})`, '');
   check(noor.st.homeworks.length === 0 && noor.st.hwPosts.length === 0, `no homework added although the box was ticked (${noor.st.homeworks.length})`, noor.st.homeworks.map((h) => h.title).join(' | '));
+  // 4.10.48: the services are ticked on the first screen; one outside the subscription cannot be ticked
   await b.pg.reload(); await sleep(4000);
-  await svcPick(b.pg, 'hw');
-  await clickCard(b.pg, '.wz-card:not([disabled])', 'أختار الدروس بنفسي');
-  await clickCard(b.pg, '.wz-cards.grid3 .wz-card', 'الصف التاسع');
-  const st = await cardState(b.pg, 'الأحياء');
-  check(st.found && st.disabled, 'in «الواجبات فقط» the prep-only subject is shown but not selectable', JSON.stringify(st));
+  await b.pg.waitForSelector('.wz-seg-b[data-svc]', { timeout: 20000 });
+  const st = await b.pg.evaluate(() => Object.fromEntries([...document.querySelectorAll('.wz-seg-b[data-svc]')].map((x) => [x.dataset.svc, { off: x.disabled, on: x.classList.contains('on'), title: x.title }])));
+  check(st.hw.off && !st.hw.on && !st.prep.off && st.prep.on && /اشتراكك/.test(st.hw.title), 'after the run «واجبات» cannot be ticked (not in the subscription) and «تحضير» stays', JSON.stringify(st));
   const txt = await b.pg.evaluate(() => document.getElementById('wzBody').textContent);
-  check(/تحضير فقط/.test(txt) && !/خطأ|فشل|غير موجود/.test(txt), 'the card says «تحضير فقط», with no error-like wording', txt.slice(0, 160));
+  check(!/خطأ|فشل|غير موجود/.test(txt), 'no error-like wording on the screen', txt.slice(0, 160));
   return b;
 });
 
-T(25, 'Subscription «واجبات فقط»: a prep mode sends the teacher back calmly (nothing saved); «الواجبات فقط» lists the subject', async (env) => {
+T(25, 'Subscription «واجبات فقط»: a prep mode sends the teacher back calmly (nothing saved) with «واجبات» ticked for him; the subject is then selectable', async (env) => {
   usePkg(derivePkg({ keep: range(1, 6) }));
   const tree = treeFromPackage(PKG);
   const noor = env.noor({ tree });
@@ -1648,14 +1661,116 @@ T(25, 'Subscription «واجبات فقط»: a prep mode sends the teacher back 
   await sleep(6000);
   const u = await ui(b.pg);
   check(!noor.st.rows.filter((r) => !r.preexisting).length && !noor.st.posts.length, 'no prep was saved', '');
-  check(u.wiz && /واجبات فقط/.test(u.wzHead + ' ' + u.wzBody) && /ماذا تريد/.test(u.wzHead), 'the teacher is back at the choice screen (full term is not part of his subscription)', `${u.wzHead} | ${u.wzBody}`.slice(0, 200));
+  check(u.wiz && /ماذا تريد/.test(u.wzHead), 'the teacher is back at the choice screen (prep is not part of his subscription)', `${u.wzHead} | ${u.wzBody}`.slice(0, 200));
   const msg = await b.pg.evaluate(() => document.getElementById('wzMsg').textContent);
-  check(/للواجبات/.test(msg) && !/خطأ|فشل|غير موجود|لم أجد/.test(msg), 'a calm note explains the subscription covers homework', msg);
-  await svcPick(b.pg, 'hw');
+  check(/يشمل: واجبات/.test(msg) && !/خطأ|فشل|غير موجود|لم أجد/.test(msg), 'a calm note says what the subscription covers', msg);
+  const sv = await b.pg.evaluate(() => Object.fromEntries([...document.querySelectorAll('.wz-seg-b[data-svc]')].map((x) => [x.dataset.svc, { off: x.disabled, on: x.classList.contains('on') }])));
+  check(sv.hw.on && !sv.hw.off && sv.prep.off && !sv.prep.on && sv.video.off, '«واجبات» is ticked for him and the services outside the subscription cannot be ticked', JSON.stringify(sv));
   await clickCard(b.pg, '.wz-card:not([disabled])', 'أختار الدروس بنفسي');
   await clickCard(b.pg, '.wz-cards.grid3 .wz-card', 'الصف التاسع');
   const st = await cardState(b.pg, 'الأحياء');
-  check(st.found && !st.disabled, 'in «الواجبات فقط» the subject is selectable', JSON.stringify(st));
+  check(st.found && !st.disabled, 'with «واجبات» the subject is selectable', JSON.stringify(st));
+  return b;
+});
+
+// ---------- أكثر من خدمة في تشغيل واحد (المالك 2026-11-14) وخدمات الاشتراك من الموقع ----------
+const svcState = (pg) => pg.evaluate(() => Object.fromEntries([...document.querySelectorAll('.wz-seg-b[data-svc]')].map((x) => [x.dataset.svc, { off: x.disabled, on: x.classList.contains('on') }])));
+const waitHead = async (pg, re, ms = 30000) => { for (const t0 = Date.now(); Date.now() - t0 < ms;) { if (re.test(await pg.evaluate(() => (document.getElementById('wzHead') || {}).textContent || '').catch(() => ''))) return true; await sleep(400); } return false; };
+const extrasCounts = (noor) => ({ rows: noor.st.rows.filter((r) => !r.preexisting).length, hw: noor.st.homeworks.length, rooms: noor.st.rooms.length, topics: noor.st.rooms.reduce((a, r) => a + r.topics.length, 0), videos: noor.st.videos.length, scorms: noor.st.scorms.length });
+
+T(45, 'One run, every service (4.10.48): the teacher ticks تحضير + واجبات + غرف النقاش + فيديو + درس تفاعلي, picks the units and lessons once, and «تحضير الفصل كاملًا» then does the preps and homework, then the rooms, the videos and the SCORM lessons in the same run; the closing line names what else was done; a re-run adds nothing', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 8) }));
+  const tree = treeFromPackage(PKG);
+  const units = tree.terms[0].units.filter((u) => u.lessons.length);
+  const lessonsT = units.flatMap((u) => u.lessons.map((l) => ({ u, l })));
+  const noor = env.noor({ tree });
+  env.afaq.reset({ pkg: PKG, service: 'all' });
+  const b = await env.launch(noor);
+  const skipV = lessonsT[lessonsT.length - 1], skipS = lessonsT[0];
+  const flow = async (first) => {
+    await svcPick(b.pg, 'prep,hw,rooms,video,scorm');
+    if (first) {
+      const st = await svcState(b.pg);
+      check(['prep', 'hw', 'rooms', 'video', 'scorm'].every((k) => st[k] && st[k].on && !st[k].off), 'the five services are ticked together on the first screen', JSON.stringify(st));
+      const plus = await b.pg.evaluate(() => (document.getElementById('wzPlus') || {}).textContent || '');
+      check(/غرف/.test(plus) && /فيديو/.test(plus) && /تفاعلي/.test(plus), 'the first screen says what else is done in the same run', plus);
+    }
+    await clickCard(b.pg, '.wz-card:not([disabled])', 'تحضير الفصل كاملًا');
+    await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }).catch(() => {}); await sleep(600);
+    await card(b.pg, 'الأحياء').catch(() => {}); await card(b.pg, 'فترة واحدة').catch(() => {});
+    if (first) await nameStep(b.pg);
+    const h1 = await waitHead(b.pg, /وحدات غرف النقاش/);
+    const nU = await tickAll(b.pg, 'data-ru', '#wzRoomGo');
+    const h2 = await waitHead(b.pg, /دروس الفيديو/);
+    const nV = await tickAll(b.pg, 'data-vk', '#wzVidGo', [skipV.l.text]);
+    const h3 = await waitHead(b.pg, /الدرس التفاعلي/);
+    const nS = await tickAll(b.pg, 'data-vk', '#wzVidGo', [skipS.l.text]);
+    if (first) check(h1 && h2 && h3 && nU === units.length && nV >= lessonsT.length - 1 && nS >= lessonsT.length - 1, `the choices come one after the other, each named: room units (${nU}), video lessons (${nV}), SCORM lessons (${nS})`, `${h1} ${h2} ${h3}`);
+    return waitDone(b.pg, 40 * 60000, first ? 'every service in one run' : 'every service again');
+  };
+  const s = await flow(true);
+  const c = extrasCounts(noor);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check(c.rows >= PKG.lessons.length, `the preps were saved (${c.rows})`, '');
+  const hwErr = noor.st.hwPosts.filter((x) => !/^ok/.test(x.outcome));
+  check(c.hw >= lessonGroups(PKG).length && !hwErr.length, `the homework was added with the preps (${c.hw})`, hwErr.map((x) => x.outcome).join('\n'));
+  const rErr = noor.st.roomPosts.filter((x) => x.outcome !== 'ok');
+  check(c.rooms === units.length && c.topics >= units.length && !rErr.length, `a room for each unit with its lesson topics (${c.rooms} rooms, ${c.topics} topics)`, rErr.map((x) => x.outcome).join('\n'));
+  const vErr = noor.st.vidPosts.filter((x) => x.outcome !== 'ok');
+  check(c.videos >= 1 && !vErr.length && !noor.st.videos.some((y) => y.title === 'فيديو: ' + skipV.l.text), `videos for the ticked lessons only (${c.videos})`, vErr.map((x) => x.outcome).join('\n'));
+  const sErr = noor.st.scPosts.filter((x) => x.outcome !== 'ok');
+  check(c.scorms === lessonsT.length - 1 && !sErr.length && !noor.st.scorms.some((y) => y.title === 'درس تفاعلي: ' + skipS.l.text), `a SCORM lesson for each ticked lesson only (${c.scorms} / ${lessonsT.length - 1})`, sErr.map((x) => x.outcome).join('\n'));
+  check(/ومعه:/.test(s.text) && /غرف/.test(s.text) && /فيديو/.test(s.text) && !CALM_BAD_RE.test(s.head + ' ' + s.text), 'the closing line names what else was done, calmly', `${s.head} | ${s.text}`);
+  await b.pg.reload(); await sleep(4000);
+  const wizShown = await b.pg.evaluate(() => !document.getElementById('wizCard').hidden && !document.body.classList.contains('wiz-run'));
+  const s2 = wizShown ? await flow(false) : await waitDone(b.pg, 20 * 60000, 'every service again (resumed)');
+  const c2 = extrasCounts(noor);
+  check(JSON.stringify(c2) === JSON.stringify(c), 're-run with the same choices adds nothing in any service', `${JSON.stringify(c)} → ${JSON.stringify(c2)}`);
+  check(!CALM_BAD_RE.test(s2.head + ' ' + s2.text), 're-run: calm wording', `${s2.head} | ${s2.text}`);
+  return b;
+});
+
+T(46, 'Subscription «واجبات + فيديو» set from the site: the teacher picks homework lessons then video lessons, and one run adds both; no prep, no room, no SCORM lesson; afterwards only these two can be ticked', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 12) }));
+  const tree = treeFromPackage(PKG);
+  const groups = lessonGroups(PKG);
+  const lessonsT = tree.terms[0].units.flatMap((u) => u.lessons.map((l) => ({ u, l })));
+  const now = groups[0].sessions[0].pubDate;
+  const noor = env.noor({ tree });
+  env.afaq.reset({ pkg: PKG, service: 'hw,video' });
+  const b = await env.launch(noor, { now, cont: false });
+  await svcPick(b.pg, 'hw,video');
+  await clickCard(b.pg, '.wz-card:not([disabled])', 'أختار الدروس بنفسي');
+  await clickCard(b.pg, '.wz-cards.grid3 .wz-card', 'الصف التاسع');
+  await card(b.pg, 'الأحياء'); await card(b.pg, 'فترة واحدة');
+  await nameStep(b.pg);
+  const g = groups[1];
+  await b.pg.waitForSelector('input[data-hk]', { timeout: 60000 });
+  await b.pg.evaluate((k) => [...document.querySelectorAll('input[data-hk]')].find((x) => x.dataset.hk === k).click(), g.key); await sleep(300);
+  for (const [i, l] of g.sessions.entries()) {
+    await b.pg.evaluate(({ k, pub }) => { const d = document.querySelector(`input[data-hp="${CSS.escape(k)}"]`); d.value = pub; d.dispatchEvent(new Event('change')); }, { k: l.id, pub: addDaysIso(now, 4 + i) });
+  }
+  const goT = await b.pg.evaluate(() => document.getElementById('wzHwGo').textContent.trim());
+  check(/التالي/.test(goT), 'the homework list leads to the next choice («التالي»), not to a start', goT);
+  await b.pg.click('#wzHwGo'); await sleep(600);
+  const hv = await waitHead(b.pg, /دروس الفيديو/);
+  const skip = lessonsT.filter((x) => !/انتشار/.test(x.l.text)).pop();
+  await tickAll(b.pg, 'data-vk', '#wzVidGo', [skip.l.text]);
+  const s = await waitDone(b.pg, 20 * 60000, 'homework + video');
+  check(hv, 'then the video lessons are chosen', '');
+  const hwErr = noor.st.hwPosts.filter((x) => !/^ok/.test(x.outcome));
+  check(noor.st.homeworks.length === g.sessions.length && !hwErr.length, `a homework for each chosen session (${g.sessions.length})`, `${noor.st.homeworks.length} | ${hwErr.map((x) => x.outcome).join(' / ')}`);
+  const vErr = noor.st.vidPosts.filter((x) => x.outcome !== 'ok');
+  check(noor.st.videos.length >= 1 && !vErr.length && !noor.st.videos.some((y) => y.title === 'فيديو: ' + skip.l.text), `videos for the ticked lessons in the same run (${noor.st.videos.length})`, vErr.map((x) => x.outcome).join('\n'));
+  check(!noor.st.posts.length && !noor.st.rows.filter((r) => !r.preexisting).length && !noor.st.rooms.length && !noor.st.scorms.length, 'no prep, no room, no SCORM lesson', `${noor.st.posts.length} / ${noor.st.rooms.length} / ${noor.st.scorms.length}`);
+  check(/واجب/.test(s.head) && /ومعه:/.test(s.text) && /فيديو/.test(s.text) && !CALM_BAD_RE.test(s.head + ' ' + s.text), 'the closing line: the homework added, and with it the videos', `${s.head} | ${s.text}`);
+  // the device now knows the subscription: on the next open the services outside it cannot be ticked
+  await b.pg.reload(); await sleep(4000);
+  await b.pg.waitForSelector('.wz-seg-b[data-svc]', { timeout: 20000 });
+  const st = await svcState(b.pg);
+  check(st.prep.off && st.rooms.off && st.scorm.off && !st.hw.off && !st.video.off && st.hw.on && st.video.on, 'on the next open the services outside the subscription cannot be ticked (تحضير، غرف النقاش، درس تفاعلي); واجبات and فيديو stay ticked', JSON.stringify(st));
+  const txt0 = await b.pg.evaluate(() => document.getElementById('wzBody').textContent);
+  check(!CALM_BAD_RE.test(txt0), 'the first screen stays calm', txt0.slice(0, 200));
   return b;
 });
 

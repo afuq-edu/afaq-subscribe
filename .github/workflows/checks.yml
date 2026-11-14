@@ -31,3 +31,4 @@ jobs:
           node name-subs.test.mjs
           node open-access.test.mjs
           node noor-name.test.mjs
+          node services.test.mjs
