@@ -293,8 +293,9 @@ export function layoutDates(items, { start, days, taken, useFileDates = true, sk
     // السبب: إجازة، يوم بلا حصص، يوم مشغول، أو «order» (تأخّرت الحصة التي قبلها فتبعتها — اليوم نفسه حرّ)
     if (moved && !pulled && !pastStay) notes.push({ i, from, to: d, why: hol.has(want) ? 'holiday' : !isSchoolDay(want, days) ? 'offday' : pushed && !full(want) ? 'order' : 'taken', src });
     s.date = d; s.dateSrc = src;
-    used.set(d, (used.get(d) || 0) + 1);
-    s.slot = used.get(d);
+    // تحضير يجمع حصص درس في يوم واحد (span): يبدأ من أول حصة باقية في اليوم ويأخذ من حصصه بعدد حصصه
+    s.slot = (used.get(d) || 0) + 1;
+    used.set(d, (used.get(d) || 0) + Math.max(1, Math.min(Number(s.span) || 1, capOf(d) - (s.slot - 1))));
     last = { plan, date: d };
     // التسلسل يتبع آخر تاريخ (الأكبر) حتى لا نعود للخلف بعد مرساة متأخرة
     prev = prev && prev > d ? prev : d;

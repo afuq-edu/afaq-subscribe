@@ -98,6 +98,12 @@ const ENUM_RE = Object.keys(ENUM).join('|');
 const digits = (s) => String(s || '').replace(/[٠-٩]/g, (d) => String('٠١٢٣٤٥٦٧٨٩'.indexOf(d))).replace(/[۰-۹]/g, (d) => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
 // «(2)» في آخر عنوان نور: رقم الحصة (تحضير ثانٍ للدرس نفسه) — لا يدخل في رقم الدرس
 // تحضير واحد لأكثر من حصة من الدرس نفسه (حصص الفصل أكثر من حصص المعلم): «اسم الدرس (2 و 3)»
+// «مهارة الإملاء: الدرس الأول … (13 و 14 و 15)»: اسم المهارة في أول عنوان التحضير (مواد اللغة العربية، «تحضير لكل مهارة») —
+// يُكتب قبل اسم درس نور ويُنزع عند قراءة عناوين نور، فيبقى التعرف على الدرس ورقم الحصة كما هو
+export const SKILL_TAGS = ['التحدث', 'الاستماع', 'القراءة', 'الأنماط اللغوية', 'الإملاء', 'الخط', 'التعبير', 'الكتابة'];
+const SKILL_TAG_RE = new RegExp('^\\s*مهارة\\s+(?:' + SKILL_TAGS.join('|') + ')\\s*[:：]\\s*(?=\\S)');
+export const skillTag = (skill) => (SKILL_TAGS.includes(skill) ? `مهارة ${skill}: ` : '');
+export const stripSkillTag = (s) => String(s || '').replace(SKILL_TAG_RE, '');
 const MULTI_RE = /\s*[(（]\s*([0-9٠-٩]{1,2}(?:\s+و\s*[0-9٠-٩]{1,2})+)\s*[)）]\s*$/;
 export const stripSessionSuffix = (s) => { const t = String(s || ''); return MULTI_RE.test(t) ? t.replace(MULTI_RE, '') : t.replace(/\s*[(（]\s*[0-9٠-٩]{1,2}\s*[)）]\s*$/, ''); };
 export function sessionNums(s) { const m = String(s || '').match(MULTI_RE); if (m) return digits(m[1]).split(/\s*و\s*/).map(Number).filter(Boolean); const n = sessionSuffix(s); return n ? [n] : null; }

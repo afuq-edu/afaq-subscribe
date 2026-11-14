@@ -130,7 +130,8 @@ function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], same
 
 // ---------- browser + wizard driving ----------
 const FIXED_NOW = '2026-09-05';   // the wizard's «today» (?now=): the day before the plan starts, unless a scenario says otherwise
-const GAMES = 'https://games.test/';   // homework files (five questions per lesson), served by launch()
+const GAMES = 'https://games.test/';
+const YT = 'https://yt.test/';   // YouTube search (?yt=): results built from the query, see launch()   // homework files (five questions per lesson), served by launch()
 // cont: Noor already holds preps of this subject made by an earlier «تحضير الفصل كاملًا» on this device (?cont=1, test only) —
 // the run continues it; without it the tool refuses a full term over existing preps (owner 2026-11-01, scenario 20)
 async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some((r) => r.preexisting) } = {}) {
@@ -143,11 +144,26 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
   // homework files (?games=): <key>.json with five questions for every session of the running package (from a real file):
   // lessons = the first session's set, sessions = one more set for each further session (4.10.37: a homework per session)
   await ctx.route(GAMES + '**', (r) => {
+    // lesson activities (site/games/<pkg>/<n>.json): the real file
+    const gm = r.request().url().match(/\/([a-z0-9-]+)\/(\d+)\.json$/);
+    if (gm) { const f = path.join(REPO, 'site/games', gm[1], gm[2] + '.json'); return fs.existsSync(f) ? r.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: fs.readFileSync(f, 'utf8') }) : r.fulfill({ status: 404, body: '' }); }
     const src = Object.values(JSON.parse(fs.readFileSync(path.join(REPO, 'site/homework/en-5.json'), 'utf8')).lessons);
     const gs = lessonGroups(PKG);
     const lessons = Object.fromEntries(gs.map((g, i) => [g.sessions[0].lesson, src[i % src.length]]));
     const sessions = Object.fromEntries(gs.filter((g) => g.sessions.length > 1).map((g, i) => [g.sessions[0].lesson, g.sessions.slice(1).map((_, j) => src[(i * 7 + j + 1 + gs.length) % src.length])]));
     return r.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({ key: 'test', lessons, sessions }) });
+  });
+  // YouTube search: for a query «<topic> <subject> <grade>» — a fitting video «<topic> - شرح …» (5 min), a Short with the same title,
+  // a 2-hour live with the same title and an unrelated video; queries containing «انتشار» get only unrelated videos (no fitting title)
+  await ctx.route(YT + '**', (r) => {
+    const q = new URL(r.request().url()).searchParams.get('search_query') || '';
+    const topic = q.replace(/\s*الأحياء.*$/, '').trim();
+    const vr = (id, title, len, url = '/watch?v=' + id) => ({ videoRenderer: { videoId: id, title: { runs: [{ text: title }] }, lengthText: len ? { simpleText: len } : undefined, navigationEndpoint: { commandMetadata: { webCommandMetadata: { url } } }, ownerText: { runs: [{ text: 'قناة' }] } } });
+    const id = (k) => (k + Buffer.from(topic).toString('hex')).replace(/[^a-z0-9]/gi, '').slice(0, 11).padEnd(11, 'x');
+    const items = /انتشار/.test(q) ? [vr(id('u'), 'رحلة إلى البحر كرتون', '7:10')]
+      : [vr(id('s'), topic + ' #shorts', '0:40', '/shorts/' + id('s')), vr(id('l'), topic + ' بث', '2:05:00'), vr(id('u'), 'أغنية الأطفال', '3:00'), vr(id('g'), topic + ' - شرح درس الأحياء الصف التاسع', '5:12')];
+    const data = { contents: { twoColumnSearchResultsRenderer: { primaryContents: { sectionListRenderer: { contents: [{ itemSectionRenderer: { contents: items } }] } } } } };
+    return r.fulfill({ status: 200, contentType: 'text/html; charset=utf-8', headers: { 'Access-Control-Allow-Origin': '*' }, body: `<html><body><script>var ytInitialData = ${JSON.stringify(data)};</script></body></html>` });
   });
   let [sw] = ctx.serviceWorkers();
   if (!sw) sw = await ctx.waitForEvent('serviceworker');
@@ -157,7 +173,7 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
   const errs = [];
   const pg = await ctx.newPage();
   pg.on('pageerror', (e) => errs.push(e.message));
-  await pg.goto(`chrome-extension://${id}/semester.html?debug=1&now=${now}${cont ? '&cont=1' : ''}&games=${encodeURIComponent(GAMES)}`);
+  await pg.goto(`chrome-extension://${id}/semester.html?debug=1&now=${now}${cont ? '&cont=1' : ''}&games=${encodeURIComponent(GAMES)}&yt=${encodeURIComponent(YT)}`);
   return { ctx, sw, pg, id, errs };
 }
 const card = async (pg, t) => { await pg.locator('.wz-card:not([disabled])', { hasText: t }).first().click({ timeout: 20000 }); await sleep(500); };
@@ -179,7 +195,7 @@ async function nameStep(pg) {
     await pg.click('#wzNameGo');
   }
 }
-async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع', subject = 'الأحياء', shift = 'فترة واحدة', hw = false } = {}) {
+async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع', subject = 'الأحياء', shift = 'فترة واحدة', hw = false, style = 'session' } = {}) {
   // each step only if the run has not started yet (once linked, a «من حسابك في نور» shortcut can skip steps)
   const started = () => pg.evaluate(() => document.body.classList.contains('wiz-run') || !!document.getElementById('wzName')).catch(() => false);
   const step = async (sel, t) => { if (await started()) return; await pg.locator(sel, { hasText: t }).first().click({ timeout: 20000 }); await sleep(600); };
@@ -190,8 +206,18 @@ async function wizardTo(pg, mode, { name = true, grade = 'الصف التاسع'
   await step('.wz-cards.grid3 .wz-card', grade);
   await step('.wz-card:not([disabled])', subject);
   await step('.wz-card:not([disabled])', shift);
-  if (!name) return;
-  await nameStep(pg);
+  if (name) await nameStep(pg);
+  if (mode === 'term' && /العربية/.test(subject)) await styleStep(pg, style);
+}
+// 4.10.41: an Arabic subject in the full term asks once for the prep style — «تحضير لكل حصة» (as before) or «تحضير لكل مهارة»
+async function styleStep(pg, style = 'session') {
+  const at = () => pg.evaluate(() => (document.body.classList.contains('wiz-run') ? 'run' : /شكل تحضير/.test((document.getElementById('wzHead') || {}).textContent || '') ? 'style' : '')).catch(() => '');
+  for (const t0 = Date.now(); Date.now() - t0 < 60000;) {
+    const w = await at();
+    if (w === 'run') return;
+    if (w === 'style') { await pg.locator('.wz-card', { hasText: style === 'skill' ? 'تحضير لكل مهارة' : 'تحضير لكل حصة' }).first().click({ timeout: 20000 }); await sleep(600); return; }
+    await sleep(500);
+  }
 }
 // «open the tool again»: reload semester.html (fresh local record, as on every open) and run the full term again
 async function rerun(b, label, wz = {}) {
@@ -795,6 +821,229 @@ T(30, 'Pick mode near the term end (owner 2026-11-03): one typed date gives the 
   return b;
 });
 
+// owner 2026-11-14: in «أختار الدروس بنفسي» the teacher chooses «كل حصة في تحضير» (as before) or «حصص الدرس في تحضير واحد»
+T(37, 'Pick mode, «حصص الدرس في تحضير واحد» (owner 2026-11-14): the chosen sessions of a lesson are saved in ONE prep on one date «(n و m)» (five sessions → 3 + 2), different lessons never share a prep, a joined prep takes both periods of a section that has two that day, and a later separate run sees the joined sessions as already in Noor', async (env) => {
+  const tree = treeFromPackage(PKG);
+  const periods = { 0: [['1', 2], ['2', 1]], 1: [['1', 1], ['2', 1]], 2: [['1', 1], ['2', 1]], 3: [], 4: [] };
+  const noor = env.noor({ tree, periods });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'pick');
+  await b.pg.waitForSelector('input[data-k]', { timeout: 30000 });
+  const keyOf = (l) => l.unit + '|' + l.lesson;
+  const clickK = (k) => b.pg.evaluate((k) => { const cb = [...document.querySelectorAll('input[data-k]')].find((x) => x.dataset.k === k); cb.click(); }, k);
+  const typeD = (id, d) => b.pg.evaluate(([id, d]) => { const el = document.querySelector(`input[data-d="${id}"]`); el.value = d; el.dispatchEvent(new Event('change', { bubbles: true })); }, [id, d]);
+  const boxes = () => b.pg.$$eval('input[data-d]', (a) => a.map((x) => x.dataset.d + '=' + x.value));
+  check(await b.pg.$$eval('#wzJoin .wz-seg-b.on', (a) => a.length === 1 && a[0].dataset.j === '0'), 'the lessons screen opens on «كل حصة في تحضير» (as before)', '');
+  await clickK(keyOf(S[sid(4)])); await sleep(300);    // «1-2 الخلايا»: five sessions
+  await clickK(keyOf(S[sid(9)])); await sleep(300);    // «1-3»: one session
+  await clickK(keyOf(S[sid(10)])); await sleep(300);   // «2-1 الانتشار»: three sessions
+  await b.pg.evaluate((id) => document.querySelector(`input[data-s="${id}"]`).click(), sid(12)); await sleep(300);   // without its third session
+  check((await boxes()).length === 8, 'separate: a date box for each of the 8 chosen sessions', (await boxes()).join(', '));
+  await b.pg.click('#wzJoin [data-j="1"]'); await sleep(400);
+  const heads = [sid(4), sid(7), sid(9), sid(10)];
+  check(JSON.stringify((await boxes()).map((x) => x.split('=')[0])) === JSON.stringify(heads), 'joined: one date box for each prep — «الخلايا» 3 + 2, «1-3» alone, «الانتشار» 1 و 2', (await boxes()).join(', '));
+  await typeD(sid(4), '2026-12-06'); await sleep(300);
+  check(JSON.stringify((await boxes()).map((x) => x.split('=')[1]).slice(0, 3)) === JSON.stringify(['2026-12-06', '2026-12-07', '2026-12-08']), 'one typed date: the next preps take the next class days, a day each', (await boxes()).join(', '));
+  await typeD(sid(10), '2026-12-13'); await sleep(300);
+  await b.pg.click('#wzLessGo');
+  const s = await waitDone(b.pg, 10 * 60000, 'pick joined');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  const nt = (id) => nodeFor(tree, S[id]).text;
+  const want = [
+    { ids: [4, 5, 6], title: `${nt(sid(4))} (1 و 2 و 3)`, date: '2026-12-06', slots: ['1|1', '1|2', '2|4'] },
+    { ids: [7, 8], title: `${nt(sid(4))} (4 و 5)`, date: '2026-12-07', slots: ['1|1', '2|3'] },
+    { ids: [9], title: nt(sid(9)), date: '2026-12-08', slots: ['1|1', '2|3'] },
+    { ids: [10, 11], title: `${nt(sid(10))} (1 و 2)`, date: '2026-12-13', slots: ['1|1', '1|2', '2|4'] },
+  ];
+  check(rows.length === want.length, `exactly ${want.length} preps for the 8 chosen sessions (${rows.length})`, fmtRows(rows));
+  for (const w of want) {
+    const r = rows.find((x) => x.title === w.title);
+    check(!!r, `prep «${w.title}» saved`, rows.map((x) => x.title).join(' | '));
+    if (!r) continue;
+    check(r.publishDate === w.date, `«${w.title}» on ${w.date}`, r.publishDate);
+    check(w.ids.every((n) => norm(r.concepts).includes(norm(S[sid(n)].concepts))), `«${w.title}» holds the content of its ${w.ids.length} session(s)`, r.concepts.slice(0, 200));
+    check(JSON.stringify((r.slots || []).slice().sort()) === JSON.stringify(w.slots), `«${w.title}» takes periods ${w.slots.join(', ')}`, JSON.stringify(r.slots));
+  }
+  check(!rows.some((r) => norm(r.concepts).includes(norm(S[sid(12)].concepts)) && !norm(S[sid(10)].concepts).includes(norm(S[sid(12)].concepts))), 'the unticked third session of «الانتشار» is in no prep', '');
+  // a later run, separate again: sessions 1 and 2 of «الانتشار» are in Noor inside «(1 و 2)» — only the third is saved
+  const n1 = noor.st.rows.length;
+  await b.pg.reload(); await sleep(4000);
+  await wizardTo(b.pg, 'pick', { name: false });
+  await b.pg.waitForSelector('input[data-k]', { timeout: 30000 });
+  check(await b.pg.$$eval('#wzJoin .wz-seg-b.on', (a) => a.length === 1 && a[0].dataset.j === '1'), 'the choice «حصص الدرس في تحضير واحد» is remembered on the next open', '');
+  await b.pg.click('#wzJoin [data-j="0"]'); await sleep(400);
+  await clickK(keyOf(S[sid(10)])); await sleep(300);
+  await typeD(sid(10), '2026-12-14'); await typeD(sid(11), '2026-12-15'); await typeD(sid(12), '2026-12-20'); await sleep(300);
+  await b.pg.click('#wzLessGo');
+  const s2 = await waitDone(b.pg, 8 * 60000, 'separate run after the joined one');
+  const more = noor.st.rows.slice(n1);
+  console.log(`    second run: ${s2.head} | ${s2.text}`);
+  check(more.length === 1 && more[0].title === `${nt(sid(10))} (3)` && more[0].publishDate === '2026-12-20', 'the separate run saves only session 3 of «الانتشار» — 1 و 2 are already in Noor', fmtRows(more));
+  return b;
+});
+
+// owner 2026-11-14: Arabic subjects — «تحضير لكل مهارة»: the consecutive sessions of one skill inside a lesson share a prep
+T(38, 'Arabic grade 4, pick mode, «تحضير لكل مهارة» (owner 2026-11-14): the 20 sessions of a reading lesson are saved as one prep per skill in order — التحدث · القراءة (2–9) · الأنماط اللغوية · الإملاء · الخط · التعبير · القراءة · المراجعة — each on its own day, every session once', async (env) => {
+  const file = JSON.parse(fs.readFileSync('/mnt/project-files/afaq-platform/preps/g1-5/ar-4-t1.json', 'utf8'));
+  file.lessons = file.lessons.slice(0, 41);   // the review lesson, listening, the visual document, the first reading lesson, the poem
+  file.lessons.forEach((l) => { l.pubDate = l.pubDate || l.publishDate; l.concepts = `${l.concepts || ''} (${l.id})`; });
+  usePkg(file);
+  const tree = treeFromPackage(PKG, { keepNumbers: true });
+  const courses = [{ cid: 'AR4', title: 'اللغة العربية', level: 'الصف الرابع', subject: 'اللغة العربية', grade: 'الرابع', tree }];
+  const periods = { 0: [['1', 1]], 1: [['1', 1]], 2: [['1', 1]], 3: [['1', 1]], 4: [['1', 1]] };
+  const noor = env.noor({ tree, courses, periods });
+  env.afaq.reset({ pkg: PKG, offer: { id: PKG.id, subject: 'اللغة العربية', grade: 4, title: 'اللغة العربية — الرابع', shift: 'one' } });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'pick', { grade: 'الصف الرابع', subject: 'اللغة العربية', shift: 'فترة واحدة' });
+  await b.pg.waitForSelector('input[data-k]', { timeout: 30000 });
+  const g = lessonGroups(PKG).find((x) => x.sessions.length === 20);
+  check(!!g, 'the file has the 20-session reading lesson', '');
+  if (!g) return b;
+  check(await b.pg.$eval('#wzJoin [data-j="1"]', (x) => x.textContent.trim() === 'تحضير لكل مهارة'), 'an Arabic subject offers «تحضير لكل مهارة»', '');
+  await b.pg.evaluate((k) => [...document.querySelectorAll('input[data-k]')].find((x) => x.dataset.k === k).click(), g.key); await sleep(400);
+  await b.pg.click('#wzJoin [data-j="1"]'); await sleep(400);
+  const runs = [[1], [2, 3, 4, 5, 6, 7, 8, 9], [10, 11, 12], [13, 14, 15], [16], [17, 18], [19], [20]];
+  const labels = await b.pg.$$eval('.wz-j span', (a) => a.map((x) => x.textContent.trim()));
+  const boxIds = await b.pg.$$eval('input[data-d]', (a) => a.map((x) => x.dataset.d));
+  check(JSON.stringify(boxIds) === JSON.stringify(runs.map((r) => g.sessions[r[0] - 1].id)), 'one date box per skill prep, in the lesson\'s order', labels.join(' | '));
+  check(['التحدث', 'القراءة', 'الأنماط اللغوية', 'الإملاء', 'الخط', 'التعبير', 'القراءة', 'المراجعة والتقويم'].every((k, i) => (labels[i] || '').startsWith(k)), 'each box names its skill', labels.join(' | '));
+  await b.pg.evaluate(([id, d]) => { const el = document.querySelector(`input[data-d="${id}"]`); el.value = d; el.dispatchEvent(new Event('change', { bubbles: true })); }, [boxIds[0], '2026-12-06']);
+  await sleep(300);
+  const shown = await b.pg.$$eval('input[data-d]', (a) => a.map((x) => x.value));
+  check(shown.every((x) => /^\d{4}-\d\d-\d\d$/.test(x)) && new Set(shown).size === runs.length && shown.join() === shown.slice().sort().join(), 'one typed date: each following skill prep on the next class day', shown.join(', '));
+  await b.pg.click('#wzLessGo');
+  const s = await waitDone(b.pg, 15 * 60000, 'arabic by skill');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check(rows.length === runs.length, `exactly ${runs.length} preps for the 20 sessions (${rows.length})`, fmtRows(rows));
+  const node = nodeFor(tree, g.sessions[0]).text;
+  runs.forEach((r, i) => {
+    const sk = ['التحدث', 'القراءة', 'الأنماط اللغوية', 'الإملاء', 'الخط', 'التعبير', 'القراءة', ''][i];
+    const title = (sk ? `مهارة ${sk}: ` : '') + (r.length > 1 ? `${node} (${r.join(' و ')})` : r[0] > 1 ? `${node} (${r[0]})` : node);
+    const row = rows.find((x) => x.title === title);
+    check(!!row, `prep «${title.slice(-34)}» saved`, rows.map((x) => x.title).join(' | '));
+    if (!row) return;
+    check(row.publishDate === shown[i], `…on ${shown[i]}`, row.publishDate);
+    check(r.every((n) => row.concepts.includes(`(${g.sessions[n - 1].id})`)) && g.sessions.filter((l, k) => !r.includes(k + 1)).every((l) => !row.concepts.includes(`(${l.id})`)), `…with the content of sessions ${r.join(', ')} only`, row.concepts.slice(0, 300));
+  });
+  return b;
+});
+
+// «تحضير لكل مهارة» in the full term (owner 2026-11-14, Arabic subjects): the consecutive sessions of one skill in a lesson are ONE
+// prep on the date of the first of them; every session still keeps its own period of the timetable (so the term keeps its pace),
+// and the prep covers the periods of its sessions that fall on its own day. Expected rows are computed per section from the
+// timetable: each session takes the section's next period; a prep holds the sections whose first session of the group fell on
+// the same day
+async function arabic4(n = 41) {
+  const file = JSON.parse(fs.readFileSync('/mnt/project-files/afaq-platform/preps/g1-5/ar-4-t1.json', 'utf8'));
+  file.lessons = file.lessons.slice(0, n);
+  file.lessons.forEach((l) => { l.pubDate = l.pubDate || l.publishDate; l.concepts = `${l.concepts || ''} (${l.id})`; });
+  usePkg(file);
+  globalThis.chrome = globalThis.chrome || { storage: { local: { get: async () => ({}), set: async () => {} } }, runtime: {} };
+  const { joinRuns } = await import(path.join(REPO, 'extension/packages.js'));
+  const tree = treeFromPackage(PKG, { keepNumbers: true });
+  const courses = [{ cid: 'AR4', title: 'اللغة العربية', level: 'الصف الرابع', subject: 'اللغة العربية', grade: 'الرابع', tree }];
+  const offer = { id: PKG.id, subject: 'اللغة العربية', grade: 4, title: 'اللغة العربية — الرابع', shift: 'one' };
+  const runs = lessonGroups(PKG).flatMap((g) => joinRuns(PKG, g.sessions).map((r) => ({ g, ls: r.ls, skill: r.skill })));
+  return { tree, courses, offer, runs, wz: { grade: 'الصف الرابع', subject: 'اللغة العربية', shift: 'فترة واحدة', style: 'skill' } };
+}
+// 4.10.41: in «تحضير لكل مهارة» the prep title starts with its skill — «مهارة الإملاء: الدرس … (13 و 14 و 15)» (review preps: no skill name)
+const TAGGED = ['التحدث', 'الاستماع', 'القراءة', 'الأنماط اللغوية', 'الإملاء', 'الخط', 'التعبير', 'الكتابة'];
+function skillWant(A, periods) {
+  const secs = [...new Set(Object.values(periods).flatMap((v) => v.map(([sec]) => sec)))].sort();
+  const day1 = PKG.lessons.map((l) => l.pubDate).sort()[0];
+  const at = {};
+  for (const sec of secs) {
+    at[sec] = {};
+    let d = day1, used = 0;
+    const cap = (iso) => (periods[new Date(iso + 'T12:00').getDay()] || []).filter(([x]) => x === sec).reduce((a, [, k]) => a + k, 0);
+    for (const l of PKG.lessons) { for (let i = 0; i < 400 && used >= cap(d); i++) { d = addDaysIso(d, 1); used = 0; } at[sec][l.id] = d; used++; }
+  }
+  const want = [];
+  for (const r of A.runs) {
+    const byD = {};
+    secs.forEach((sec) => { const d = at[sec][r.ls[0].id]; (byD[d] = byD[d] || []).push(sec); });
+    const ns = r.ls.map((l) => r.g.sessions.indexOf(l) + 1), node = nodeFor(A.tree, r.ls[0]).text;
+    // the periods of the prep: for each of its sections, the periods (by their order in the day) of its sessions that fall on its day
+    const rank = (sec, l, d) => PKG.lessons.filter((x) => at[sec][x.id] === d).indexOf(l) + 1;
+    // the mock numbers a day's periods section after section, leaving one number between sections (noor-mock.mjs)
+    const p0 = (sec, d) => { let n = 1; for (const [x, k] of periods[new Date(d + 'T12:00').getDay()] || []) { if (x === sec) return n; n += k + 1; } return n; };
+    const tag = TAGGED.includes(r.skill) ? `مهارة ${r.skill}: ` : '';
+    for (const [d, ss] of Object.entries(byD)) want.push({ title: tag + (ns.length > 1 ? `${node} (${ns.join(' و ')})` : ns[0] > 1 ? `${node} (${ns[0]})` : node), date: d, ids: r.ls.map((l) => l.id),
+      slots: ss.flatMap((sec) => r.ls.filter((l) => at[sec][l.id] === d).map((l) => `${sec}|${p0(sec, d) + rank(sec, l, d) - 1}`)) });
+  }
+  return want;
+}
+function checkSkillTerm(name, rows, A, periods) {
+  const want = skillWant(A, periods);
+  const sig = (t, d, sl) => `${t} @${d} periods ${sl.map(String).sort().join(' ')}`;
+  // Noor adds « (j)» itself to the j-th prep of one lesson on one date (the tool sends the bare name when j is the session number)
+  const sent = (r) => { const j = r.dayRank, suf = ` (${j})`; return !j || j < 2 || r.title.replace(/^مهارة [^:]+: /, '') === r.nodeText + suf || !r.title.endsWith(suf) ? r.title : r.title.slice(0, -suf.length); };
+  const got = rows.map((r) => sig(sent(r), r.publishDate, r.slots || [])).sort();
+  const exp = want.map((w) => sig(w.title, w.date, w.slots)).sort();
+  const miss = exp.filter((x) => !got.includes(x)), extra = got.filter((x) => !exp.includes(x));
+  check(rows.length === want.length, `${name}: ${want.length} preps for the ${PKG.lessons.length} sessions (${rows.length})`, '');
+  check(!miss.length && !extra.length, `${name}: a prep per skill group on the date of its first session, on exactly the periods of its sessions of that day (per section); every session keeps its own period`, `missing:\n${miss.slice(0, 12).join('\n')}\nextra:\n${extra.slice(0, 12).join('\n')}`);
+  const bad = want.filter((w) => { const rs = rows.filter((r) => r.publishDate === w.date && w.ids.every((id) => r.concepts.includes(`(${id})`))); return rs.length !== 1 || PKG.lessons.some((l) => !w.ids.includes(l.id) && rs[0].concepts.includes(`(${l.id})`)); });
+  check(!bad.length, `${name}: each prep holds the content of exactly its sessions`, bad.slice(0, 8).map((w) => `${w.title} @${w.date}`).join('\n'));
+  const seen = new Map(), clash = [];
+  rows.forEach((r) => (r.slots || []).forEach((x) => { const k = r.publishDate + '|' + x; if (seen.has(k)) clash.push(k); seen.set(k, 1); }));
+  check(!clash.length, `${name}: no period holds two preps`, clash.join(', '));
+  return want;
+}
+T(39, 'Arabic grade 4, full term, «تحضير لكل مهارة» (owner 2026-11-14): two sections with the same timetable (two periods a day: the ten sessions a week of the plan): a prep per skill group in tree order, each on the date of its first session, the 20-session reading lesson = 8 preps; the wizard asks the style once; a re-run adds nothing', async (env) => {
+  const A = await arabic4();
+  const periods = Object.fromEntries([0, 1, 2, 3, 4].map((d) => [d, [['1', 2], ['2', 2]]]));
+  const noor = env.noor({ tree: A.tree, courses: A.courses, periods });
+  env.afaq.reset({ pkg: PKG, offer: A.offer });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term', A.wz);
+  const s = await waitDone(b.pg, 25 * 60000, 'arabic term by skill');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check(!CALM_BAD_RE.test(`${s.head} ${s.text}`), 'the ending is calm', `${s.head} | ${s.text}`);
+  checkSkillTerm('S39', rows, A, periods);
+  const n1 = noor.st.rows.length;
+  await rerun(b, 'manual re-run', A.wz);
+  check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
+  return b;
+});
+T(40, 'Arabic grade 4, full term, «تحضير لكل مهارة», sections with DIFFERENT periods (ten a week each: section 1 three on Sunday and one on Thursday, section 2 two a day): each section keeps its own sequence period after period; a skill prep is saved for the sections whose group starts on the same day', async (env) => {
+  const A = await arabic4();
+  const periods = { 0: [['1', 3], ['2', 2]], 1: [['1', 2], ['2', 2]], 2: [['1', 2], ['2', 2]], 3: [['1', 2], ['2', 2]], 4: [['1', 1], ['2', 2]] };
+  const noor = env.noor({ tree: A.tree, courses: A.courses, periods });
+  env.afaq.reset({ pkg: PKG, offer: A.offer });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term', A.wz);
+  const s = await waitDone(b.pg, 40 * 60000, 'arabic term by skill, per section');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  checkSkillTerm('S40', rows, A, periods);
+  const n1 = noor.st.rows.length;
+  await rerun(b, 'manual re-run', A.wz);
+  check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
+  return b;
+});
+T(41, 'Arabic grade 4, full term, «تحضير لكل مهارة», the tool is closed after a few preps and opened again (fresh local record): the term continues, and the periods of the sessions inside the preps already in Noor stay theirs — the final dates are those of an uninterrupted run', async (env) => {
+  const A = await arabic4();
+  const periods = Object.fromEntries([0, 1, 2, 3, 4].map((d) => [d, [['1', 2]]]));
+  const noor = env.noor({ tree: A.tree, courses: A.courses, periods });
+  env.afaq.reset({ pkg: PKG, offer: A.offer });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'term', A.wz);
+  for (const t0 = Date.now(); Date.now() - t0 < 10 * 60000 && noor.st.rows.length < 5;) { await confirmStart(b.pg); await sleep(700); }
+  const cut = noor.st.rows.length;
+  check(cut >= 5, `the tool is closed after ${cut} preps`, '');
+  await b.pg.evaluate(() => chrome.storage.local.remove('semesterRun')).catch(() => {});   // closed for good: no unfinished run to resume
+  const s = await rerun(b, 'opened again', A.wz);
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح|موجودة في نور/.test(s.head), 'the second opening finishes the term', `${s.head} | ${s.text}`);
+  checkSkillTerm('S41', rows, A, periods);
+  return b;
+});
+
 // owner 2026-11-03: a teacher registered by name stayed «waiting» because Noor was open on a page other than the home page (the name
 // is in the home page's welcome), so «حاضر» never read her Noor account and the server could not match her name
 T(31, 'Activation by the Noor name: Noor is open on a course page (no name there) — the tool opens Noor\'s home page itself, reads the name, the server activates by it and the full term runs; the waiting screen tells the teacher to keep Noor\'s home page open', async (env) => {
@@ -1168,6 +1417,135 @@ T(23, '«الواجبات فقط»: the teacher picks sessions and types a publi
   const s2 = await pickAndGo(false);
   check(noor.st.homeworks.length === picks.length, `re-run adds no homework (${picks.length} → ${noor.st.homeworks.length})`, `${s2.head} | ${s2.text}`);
   check(!CALM_BAD_RE.test(s2.head + ' ' + s2.text), 're-run: calm wording', `${s2.head} | ${s2.text}`);
+  return b;
+});
+
+// ---------- «غرف النقاش» (المالك 2026-11-14): غرفة لكل وحدة، وفيها موضوع لكل درس ----------
+// قائمة اختيار الوحدات (الغرف) أو الدروس (الفيديو): يضع علامة على الكل إلا ما في except، ثم يضغط زر البدء
+const tickAll = async (pg, attr, go, except = []) => {
+  await pg.waitForSelector(`input[${attr}]`, { timeout: 120000 });
+  const n = await pg.locator(`input[${attr}]`).count();
+  for (let i = 0; i < n; i++) {
+    const cb = pg.locator(`input[${attr}]`).nth(i);
+    const t = String(await cb.evaluate((x) => x.closest('label').textContent)).trim();
+    if (except.some((e) => t.includes(e))) continue;
+    if (!(await cb.isChecked())) { await cb.check(); await sleep(150); }
+  }
+  await pg.click(go); await sleep(600);
+  return n;
+};
+T(42, '«غرف النقاش»: a room for each unit of the Noor tree (title «<unit> — <subject> <grade>», ≤ 50 chars), shared with every student of the subject\'s sections only, holding a topic for each lesson (its activity link and two discussion questions when the lesson has an activity); a room already in Noor is reused and gets only its missing topics; a re-run adds nothing; no prep, no homework', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 12) }));
+  // the first lessons carry an activity link (as the real prep files do in item 10)
+  PKG.lessons.forEach((l, i) => { if (i < 6) l.notes = (l.notes || '') + `\nhttps://afuq-edu.github.io/afaq-subscribe/play.html?d=en-5/${i + 1}`; });
+  const tree = treeFromPackage(PKG);
+  const units = tree.terms[0].units.filter((u) => u.lessons.length);
+  const now = lessonGroups(PKG)[0].sessions[0].pubDate;
+  // the teacher already made the first unit's room with one topic in it
+  const u0 = units[0];
+  const t0 = `${u0.text} — الأحياء التاسع`.length <= 50 ? `${u0.text} — الأحياء التاسع` : null;
+  const noor = env.noor({ tree, rooms: t0 ? [{ title: t0, topics: [{ title: u0.lessons[0].text, html: '<p>موضوعي</p>' }] }] : [] });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now, cont: false });
+  await svcPick(b.pg, 'rooms');
+  await card(b.pg, 'غرفة لكل وحدة');
+  await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }); await sleep(600);
+  await card(b.pg, 'الأحياء'); await card(b.pg, 'فترة واحدة');
+  await nameStep(b.pg);
+  // المعلم يختار الوحدات: كلها إلا الأخيرة
+  const uLast = units[units.length - 1];
+  const nU = await tickAll(b.pg, 'data-ru', '#wzRoomGo', [uLast.text]);
+  check(units.length >= 2 && nU === units.length, `the teacher picks the units: one box per unit (${nU} / ${units.length})`, '');
+  const s = await waitDone(b.pg, 15 * 60000, 'rooms');
+  const errs = noor.st.roomPosts.filter((x) => x.outcome !== 'ok');
+  check(!errs.length, 'every room and topic form Noor received was valid', errs.map((x) => `${x.kind}: ${x.outcome}`).join('\n'));
+  const rooms = noor.st.rooms;
+  check(rooms.length === units.length - 1 && !rooms.some((r) => r.title.startsWith(uLast.text.slice(0, 20))), `one room per chosen unit only (${units.length - 1}), none for the unit left unticked`, rooms.map((r) => r.title).join(' | '));
+  check(rooms.every((r) => r.title.length <= 50 && /الأحياء/.test(r.title)), 'each room title ≤ 50 chars and names the subject', rooms.map((r) => `${r.title.length} ${r.title}`).join(' | '));
+  const made = rooms.filter((r) => r.students);
+  check(made.every((r) => r.lectures.length === 2 && r.lectures.every((x) => /^الأحياء - التاسع - /.test(x)) && r.students === 4), 'a new room is shared with the two sections of this subject and grade (all their students) and no other course', made.map((r) => `${r.title}: ${r.lectures.join(',')} · ${r.students}`).join(' | '));
+  const bad = [];
+  units.slice(0, -1).forEach((u) => {
+    const r = rooms.find((x) => x.title.startsWith(u.text.slice(0, 20)));
+    if (!r) { bad.push(`${u.text}: no room`); return; }
+    const want = [...new Set(u.lessons.map((l) => l.text))];
+    const got = r.topics.map((t) => t.title);
+    if (want.some((t) => !got.includes(t)) || got.length !== new Set(got).size) bad.push(`${u.text}: topics ${got.join(' / ')} want ${want.join(' / ')}`);
+  });
+  check(!bad.length, 'every lesson of the unit has exactly one topic in its room (the existing topic is not repeated)', bad.join('\n'));
+  const withLink = rooms.flatMap((r) => r.topics).filter((t) => /play\.html\?d=en-5\//.test(t.html));
+  check(withLink.length >= 1 && withLink.every((t) => /سؤال للنقاش/.test(t.html) && /شهادتك/.test(t.html) && /نتيجتك/.test(t.html) && /href="https:\/\/afuq-edu\.github\.io\/afaq-subscribe\/play\.html\?d=en-5\/\d+(&amp;t=[^"]+)?"/.test(t.html)), `lessons with an activity get its clickable link (with the teacher's name for the certificate when known), the certificate and result steps, and a discussion question (${withLink.length})`, withLink.map((t) => t.title + ': ' + t.html.slice(0, 160)).join('\n'));
+  check(!noor.st.posts.length && !noor.st.homeworks.length, 'no prep and no homework', `${noor.st.posts.length} / ${noor.st.homeworks.length}`);
+  check(/غرف|غرفة|انتهى/.test(s.head) && !CALM_BAD_RE.test(s.head + ' ' + s.text), 'a calm closing line', `${s.head} | ${s.text}`);
+  const n1 = rooms.length, k1 = rooms.reduce((a, r) => a + r.topics.length, 0);
+  await b.pg.reload(); await sleep(4000);
+  await svcPick(b.pg, 'rooms');
+  await card(b.pg, 'غرفة لكل وحدة');
+  await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }).catch(() => {}); await sleep(600);
+  await card(b.pg, 'الأحياء').catch(() => {}); await card(b.pg, 'فترة واحدة').catch(() => {});
+  await tickAll(b.pg, 'data-ru', '#wzRoomGo');
+  const s2 = await waitDone(b.pg, 15 * 60000, 'rooms again');
+  const k2 = noor.st.rooms.reduce((a, r) => a + r.topics.length, 0);
+  const rl = noor.st.rooms.find((r) => r.title.startsWith(uLast.text.slice(0, 20)));
+  const wantL = new Set(uLast.lessons.map((l) => l.text)).size;
+  check(noor.st.rooms.length === n1 + 1 && rl && rl.topics.length === wantL && k2 === k1 + wantL, `second run with every unit: only the missing unit's room is added with its ${wantL} topics; the earlier rooms get nothing new (${n1} rooms, ${k1} topics before)`, `${noor.st.rooms.length} rooms, ${k2} topics | ${s2.head}`);
+  return b;
+});
+
+// ---------- «فيديو لكل درس» (المالك 2026-11-14): من يوتيوب بعنوان قريب من اسم الدرس، وإلا فلا فيديو ----------
+T(43, '«فيديو لكل درس»: for each Noor lesson a YouTube video whose title is close to the lesson name (not a Short, not a 2-hour live, not an unrelated video), in «مكتبة الفيديو» linked to that lesson and both sections; a lesson with no fitting title gets no video; a video already in the library is not repeated; a re-run adds nothing; no prep, no homework, calm wording', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 12) }));
+  const tree = treeFromPackage(PKG);
+  const lessonsT = tree.terms[0].units.flatMap((u) => u.lessons.map((l) => ({ u, l })));
+  const now = lessonGroups(PKG)[0].sessions[0].pubDate;
+  const first = lessonsT[0];
+  const noor = env.noor({ tree, videos: [{ title: 'فيديو: ' + first.l.text, url: 'https://www.youtube.com/watch?v=already0001', lang: '2', publish: '2026-09-01 07:00:00' }] });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now, cont: false });
+  await svcPick(b.pg, 'video');
+  await card(b.pg, 'فيديو لكل درس');
+  await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }); await sleep(600);
+  await card(b.pg, 'الأحياء'); await card(b.pg, 'فترة واحدة');
+  await nameStep(b.pg);
+  // المعلم يختار الدروس: كلها إلا درسًا له عنوان مناسب
+  const skip = lessonsT.filter((x) => x !== first && !/انتشار/.test(x.l.text)).pop();
+  const nL = await tickAll(b.pg, 'data-vk', '#wzVidGo', [skip.l.text]);
+  check(nL >= lessonsT.length - 1, `the teacher picks the lessons: one box per lesson (${nL})`, '');
+  const s = await waitDone(b.pg, 15 * 60000, 'videos');
+  const errs = noor.st.vidPosts.filter((x) => x.outcome !== 'ok');
+  check(!errs.length, 'every video form Noor received was valid', errs.map((x) => x.outcome).join('\n'));
+  const vids = noor.st.videos;
+  const noFit = lessonsT.filter((x) => /انتشار/.test(x.l.text));
+  const want = lessonsT.filter((x) => x !== first && x !== skip && !noFit.includes(x));
+  check(!vids.some((y) => y.title === 'فيديو: ' + skip.l.text), 'a lesson the teacher did not tick gets no video', skip.l.text);
+  check(noFit.length >= 1 && want.length >= 1, `the test tree has lessons with and without a fitting title (${want.length} / ${noFit.length})`, lessonsT.map((x) => x.l.text).join(' | '));
+  const bad = [];
+  want.forEach((x) => {
+    const v = vids.find((y) => y.title === 'فيديو: ' + x.l.text);
+    if (!v) { bad.push(`${x.l.text}: none`); return; }
+    const why = [];
+    if (!/^https:\/\/www\.youtube\.com\/watch\?v=g/.test(v.url)) why.push('url ' + v.url + ' (not the fitting video)');
+    if (v.lessons.join() !== String(x.l.nodeId)) why.push(`lessons ${v.lessons.join(',')} expected ${x.l.nodeId}`);
+    if (v.lectures.length !== 2) why.push('sections ' + v.lectures.join(','));
+    if (v.lang !== '2') why.push('lang ' + v.lang);
+    if (!v.publish.startsWith(now)) why.push('publish ' + v.publish);
+    if (why.length) bad.push(`${x.l.text}: ${why.join('; ')}`);
+  });
+  check(!bad.length, 'each lesson with a fitting title: one video (the fitting one: no Short, no live, no unrelated), linked to its Noor lesson, both sections, Arabic, published today', bad.join('\n'));
+  check(noFit.every((x) => !vids.some((y) => y.title === 'فيديو: ' + x.l.text)), 'a lesson with no fitting YouTube title gets no video', noFit.map((x) => x.l.text).join(' | '));
+  check(vids.filter((y) => y.title === 'فيديو: ' + first.l.text).length === 1, 'the video already in the library is not added again', '');
+  check(!noor.st.posts.length && !noor.st.homeworks.length && !noor.st.rooms.length, 'no prep, no homework, no room', '');
+  const nAr = String(want.length).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d]);
+  check(new RegExp(want.length === 1 ? 'فيديو واحد' : want.length === 2 ? 'فيديوين' : nAr).test(s.head) && !CALM_BAD_RE.test(s.head + ' ' + s.text), `the closing line says how many videos were added (${nAr}) calmly`, `${s.head} | ${s.text}`);
+  const n1 = vids.length;
+  await b.pg.reload(); await sleep(4000);
+  await svcPick(b.pg, 'video');
+  await card(b.pg, 'فيديو لكل درس');
+  await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }).catch(() => {}); await sleep(600);
+  await card(b.pg, 'الأحياء').catch(() => {}); await card(b.pg, 'فترة واحدة').catch(() => {});
+  await tickAll(b.pg, 'data-vk', '#wzVidGo');
+  const s2 = await waitDone(b.pg, 15 * 60000, 'videos again');
+  check(noor.st.videos.length === n1 + 1 && noor.st.videos.some((y) => y.title === 'فيديو: ' + skip.l.text) && !CALM_BAD_RE.test(s2.head + ' ' + s2.text), `second run with every lesson: only the lesson left out before gets its video (${n1} → ${n1 + 1})`, `${noor.st.videos.length} | ${s2.head} | ${s2.text}`);
   return b;
 });
 

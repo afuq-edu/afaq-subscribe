@@ -10,10 +10,12 @@ import {
   noorTerms, termAllLessons, pickTreeNode, stripSessionSuffix, sessionSuffix, sessionNums, lessonNum,
   layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, lintPackage, lintLevel, knownCourse, rememberCourse, resetProgress, packageProgress, clearSession,
   holidaySet, termEndOf, countSchoolDays, loadNoorTree, storeNoorTree, dateOverrides, setDateOverride, GRADES, noorWho, noorWhoScan, probeDays,
-} from './packages.js';
+ joinRuns, lessonSkills, isArabicPkg, stripSkillTag } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { diffDays, addDays } from './dates.js';
-import { lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, hwHush, HW_MARK } from './homework.js';
+import { roomTitle, roomInstructions, topicTitle, topicHtml, discussQuestions, playLink, roomsRead, roomCreateFill, topicsRead, topicFill } from './rooms.js';
+import { YT_ORIGIN, lessonTopic, pickVideo, ytSearch, ytUrl, vidLibRead, vidFill } from './videos.js';
+import { gameRef, fetchGame, noorDT, lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, hwHush, HW_MARK } from './homework.js';
 import { AFAQ } from './afaq-config.js';
 import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck, installUrl, fillLog, flushFillLog, sendNoorTree, getNoorTree } from './remote.js';
 
@@ -35,6 +37,8 @@ const todayIso = () => NOW_FIXED || isoOf(new Date());
 const nowDate = () => (NOW_FIXED ? new Date(NOW_FIXED + 'T06:00:00') : new Date());
 // مصدر ملفات الواجبات للاختبار الآلي فقط (?debug=1&games=…)
 const GAMES_DEBUG = q.get('debug') === '1' && /^https?:\/\//.test(q.get('games') || '') ? q.get('games') : '';
+// اختبارات نور المحاكى: بحث يوتيوب من خادم محاكى (?yt=)
+const YT_DEBUG = q.get('debug') === '1' && /^https?:\/\//.test(q.get('yt') || '') ? q.get('yt') : '';
 
 let packages = [], pkg = null, state = null, settings = null;
 let tabId = Number(q.get('tab')) || null;
@@ -233,7 +237,55 @@ function secAssign(seqAll) {
   }
   const out = [];
   base.forEach((s) => { s.on = at.has(s); if (at.has(s)) s.date = [...at.get(s).values()].sort()[0]; });
-  at.forEach((m, s) => {
+  // «تحضير لكل مهارة» (مواد اللغة العربية): لكل شعبة، حصص الدرس المتتالية من المهارة نفسها في تحضير واحد بتاريخ أولاها عندها،
+  // وكل حصة تبقى لها حصتها في جدول الشعبة؛ والتحضير الواحد يجمع الشعب التي وصلت إلى المجموعة نفسها في اليوم نفسه
+  if (WIZ.skillJoin) {
+    const sk = skillsNow(), byP = new Map(), units = new Map(), headD = new Map();
+    base.forEach((s) => { if (!byP.has(s.p)) byP.set(s.p, []); byP.get(s.p).push(s); });
+    for (const sec of L) byP.forEach((ss) => {
+      const pend = ss.filter((s) => at.has(s) && at.get(s).has(sec));
+      if (!pend.length) return;
+      const byL = new Map(pend.map((s) => [s.lesson, s]));
+      joinRuns(pkg, pend.map((s) => s.lesson), sk).forEach((r) => {
+        const g = r.ls.map((l) => byL.get(l)), d = at.get(g[0]).get(sec), key = g.map((x) => x.lesson.id).join(',') + '@' + d;
+        if (!units.has(key)) units.set(key, { g, d, secs: [] });
+        units.get(key).secs.push(sec);
+        g.forEach((x) => { if (!headD.has(x)) headD.set(x, {}); headD.get(x)[sec] = d; });
+      });
+    });
+    units.forEach((u) => {
+      const h = u.g[0], secs = u.secs.sort();
+      const key = u.g.map((x) => x.lesson.id).join(',') + '|' + secs.join('،');
+      let c = secCache.get(key);
+      if (!c) {
+        c = Object.create(h); c.base = h; c.secs = secs; c.mergedInto = null; c.fixed = '';
+        c.merge = u.g.slice(1).map((t) => { const x = Object.create(t); x.base = t; x.mergedInto = c; return x; });
+        if (!c.merge.length) c.merge = null;
+        secCache.set(key, c);
+      }
+      // تاريخ حصة كل شعبة لكل حصة تالية في التحضير: يُسجَّل عند الحفظ فتبقى حصتها محجوزة في تسلسل الشعبة
+      c.tailAt = new Map((c.merge || []).map((x) => [x, Object.fromEntries(secs.map((sec) => [sec, at.get(x.base).get(sec)]))]));
+      c.span = 1 + Math.max(0, ...secs.map((sec) => (c.merge || []).filter((x) => at.get(x.base).get(sec) === u.d).length));
+      // لكل شعبة: كم حصة حرة في هذا اليوم تسبق حصة التحضير (حصص محجوزة لحصص تحضير تاريخه قبل هذا اليوم)، وكم حصة يأخذ
+      const hi = idx.get(h);
+      c.secSlots = Object.fromEntries(secs.map((sec) => {
+        let skip = 0;
+        for (let i = 0; i < hi; i++) {
+          const x = base[i], r = secDone.get(x.lesson.id);
+          const own = at.has(x) && at.get(x).has(sec) ? at.get(x).get(sec) : r && isIso(r[sec]) ? r[sec] : '';
+          if (own !== u.d) continue;
+          const prep = at.has(x) && at.get(x).has(sec) ? (headD.get(x) || {})[sec] : r['~' + sec] || r[sec];
+          if (prep !== u.d) skip++;
+        }
+        return [sec, [skip, 1 + (c.merge || []).filter((x) => at.get(x.base).get(sec) === u.d).length]];
+      }));
+      c.date = u.d; c.slot = 1; c.on = true; c.afterTerm = false;
+      (c.merge || []).forEach((x) => { x.date = u.d; });
+      if (!c.savedNow && !c.done) out.push(c);
+    });
+    if (!dateNotes.has('skill')) { dateNotes.add('skill'); logLine('info', 'كما اخترت: حصص المهارة الواحدة في كل درس في تحضير واحد بتاريخ أولاها'); }
+  }
+  else at.forEach((m, s) => {
     const byD = new Map();
     m.forEach((d, sec) => { if (!byD.has(d)) byD.set(d, []); byD.get(d).push(sec); });
     byD.forEach((secs, d) => {
@@ -265,9 +317,45 @@ function noorLessonMarks(h) {
     const k = first.get(kwNorm(b));
     if (k == null) return;
     const ns = inner ? sessionNums(inner) : null;
-    out.push({ k, n: ns && ns.length ? Math.max(...ns) : 1, d });
+    out.push({ k, n: ns && ns.length ? Math.max(...ns) : 1, d, ns: ns && ns.length ? ns.slice().sort((a, b) => a - b) : [1] });
   });
   return out;
+}
+// «تحضير لكل مهارة» في الفصل كاملًا (مواد اللغة العربية، المالك 2026-11-14): مهارات حصص المادة (تُحسب مرة لكل مادة)
+function skillsNow() {
+  if (WIZ.skillsOf !== pkg) { WIZ.skillsOf = pkg; WIZ.skills = lessonSkills(pkg); }
+  return WIZ.skills;
+}
+// تحضير المهارة يُنشر بتاريخ أولى حصصه، وحصصه التالية تبقى لها حصصها في جدول المعلم (لا يأخذها التحضير التالي):
+// الحصص المحجوزة لتحاضير مهارات حُفظت — في هذا التشغيل، أو في نور بعنوان «الدرس (2 و 3 و 4)» — تُحسب مأخوذة يومًا بعد يوم من تاريخ التحضير
+function skillTaken(cands) {
+  const G = new Map(), tails = [];
+  savedThisRun.forEach((it) => {
+    const x = it.s;
+    if (!x.merge || !x.merge.length || !x.p || !x.p.node) return;
+    x.merge.forEach((t) => tails.push(t));
+    G.set(kwNorm(x.p.node.text) + '|' + x.date + '|' + Math.max(...[x, ...x.merge].map(nodeNo)), { d: x.date, c: x.resN || 1 + x.merge.length });
+  });
+  noorLessonMarks(noorHave).forEach((mk) => {
+    if (mk.ns.length < 2) return;
+    const L = treeNodes[mk.k] ? nodeLs.get(treeNodes[mk.k].id) : null;
+    if (L) mk.ns.slice(1).forEach((n) => { if (L[n - 1]) tails.push({ lesson: L[n - 1] }); });
+    const key = kwNorm(treeNodes[mk.k].text) + '|' + mk.d + '|' + mk.n;
+    if (!G.has(key)) G.set(key, { d: mk.d, c: mk.ns.length });
+  });
+  const m = takenCounts((cands || []).concat(tails));
+  const hol = holidaySet(settings);
+  [...G.values()].filter((g) => isIso(g.d)).sort((a, b) => a.d.localeCompare(b.d)).forEach((g) => {
+    if (!m.get(g.d)) m.set(g.d, 1);
+    let rem = g.c - 1, day = g.d;
+    for (let i = 0; i < 400 && rem > 0; i++) {
+      const free = hol.has(day) ? 0 : Math.max(0, capOf(day) - (m.get(day) || 0));
+      const take = Math.min(free, rem);
+      if (take) { m.set(day, (m.get(day) || 0) + take); rem -= take; }
+      if (rem > 0) day = nextSchoolDay(day, days, false);
+    }
+  });
+  return m;
 }
 function assignDates() {
   const pos = (p) => (p.node ? treeNodes.indexOf(p.node) : 1e9);
@@ -290,7 +378,8 @@ function assignDates() {
   if (seqTerm && multiSec()) { secAssign(seqAll); return; }
   // «حسب النشرة الرسمية»: حصص كل أسبوع في أسبوعها وبترتيبها، فلا يُنشر درس سابق بعد درس لاحق.
   // تحضير لكل حصة: يوم فيه حصتان للشعبة يتسع لتحضيرين، وما عليه تحاضير في نور يأخذ ما بقي من حصصه فقط
-  const taken = [...takenCounts(cands)].flatMap(([d, n]) => Array(n).fill(d));
+  const skillOn = seqTerm && !!WIZ.skillJoin;
+  const taken = [...(skillOn ? skillTaken(cands) : takenCounts(cands))].flatMap(([d, n]) => Array(n).fill(d));
   // تواريخ متتابعة: الحصص المختارة أولًا على أيام متتالية، ثم ما لم يُختر بعدها — حتى لا تتباعد المختارة بحصص لن تُنشر
   const picked = (s) => (s.manual != null ? s.manual : inScope(s));
   const order = !fileMode && !['week', 'dates'].includes(scope.kind) ? cands.filter(picked).concat(cands.filter((s) => !picked(s))) : cands;
@@ -341,10 +430,43 @@ function assignDates() {
   cands.forEach((s) => {
     if (s.merge && s.merge.length) { s.merge.forEach((x) => { if (candSet.has(x)) x.mergedInto = null; }); s.merge = null; }
     if (s.mergedInto && candSet.has(s.mergedInto)) s.mergedInto = null;
+    s.span = 0; s.resOf = null; s.resN = 0;
   });
+  // «أختار الدروس بنفسي» مدمجًا (المالك 2026-11-14): الحصص التي اختارها المعلم من الدرس نفسه تُحفظ في تحضير واحد بتاريخ واحد
+  // (المجموعات كما عرضها المعالج: حتى أربع حصص في التحضير)، ودرسان مختلفان لا يُجمعان. الجمع اختيار المعلم فيبقى ثابتًا
+  // في كل توزيع (حتى والتحضير يُعبَّأ الآن)، والتحضير يغطي من حصص الشعبة في يومه بعدد حصصه (span)
+  if (WIZ.pickDates && WIZ.pickJoin) {
+    const heads = new Map();
+    cands.forEach((x) => {
+      const h = WIZ.pickJoin[x.lesson.id];
+      if (!h || !x.p || !wanted(x) || x.savedNow || x.done) return;
+      const a = heads.get(h);
+      if (!a) { heads.set(h, x); return; }
+      if (a.p !== x.p) return;
+      a.merge = (a.merge || []).concat(x); x.mergedInto = a;
+    });
+    heads.forEach((a) => { if (a.merge && a.merge.length) a.span = 1 + a.merge.length; });
+  }
+  // الفصل كاملًا «تحضير لكل مهارة» (مواد اللغة العربية، المالك 2026-11-14): حصص الدرس المتتالية من المهارة نفسها في تحضير واحد
+  // بتاريخ أولاها. كل حصة تبقى لها حصتها في جدول المعلم (فيبقى سير الفصل كما هو: درس القراءة بثماني حصص يأخذ ثماني حصص)،
+  // وإن لم يتسع الفصل لذلك قلّ ما يُحجز لكل تحضير (R) حتى يتسع
+  const skG = [];
+  if (skillOn) {
+    const sk = skillsNow(), byL = new Map(cands.map((x) => [x.lesson, x]));
+    ordered.forEach((p) => {
+      const free = p.sessions.filter((x) => candSet.has(x) && wanted(x) && !x.savedNow && !x.done);
+      if (free.length > 1) joinRuns(pkg, free.map((x) => x.lesson), sk).forEach((r) => { if (r.ls.length > 1) skG.push(r.ls.map((l) => byL.get(l))); });
+    });
+  }
+  const reserve = (R) => skG.forEach((g) => {
+    const h = g[0];
+    g.slice(1).forEach((x, i) => { x.mergedInto = i + 1 >= R ? h : null; x.resOf = i + 1 < R ? h : null; });
+    h.merge = g.slice(1).filter((x) => x.mergedInto); if (!h.merge.length) h.merge = null;
+  });
+  reserve(99);
   const lay = () => {
     // الفصل كاملًا: بلا تاريخ ملف — كل حصة تلي ما قبلها على أول حصة حرة في جدول المعلم، من أول يوم دراسي
-    const items = order.filter((s) => !s.mergedInto).map((s) => ({ s, fileDate: fileMode && !seqTerm && isIso(s.lesson.pubDate) ? s.lesson.pubDate : '', fixed: s.fixed || '', after: after.get(s) || '' }));
+    const items = order.filter((s) => !s.mergedInto).map((s) => ({ s, fileDate: fileMode && !seqTerm && isIso(s.lesson.pubDate) ? s.lesson.pubDate : '', fixed: s.fixed || '', after: after.get(s) || '', span: s.span || 1 }));
     const notes = layoutDates(items, { start: seqTerm && day1 ? day1 : startIso, days, taken, useFileDates: fileMode, skip: holidaySet(settings), exact: !!WIZ.pickDates, cap: capOf, weekly: fileMode && !WIZ.pickDates, loose, today: fromIso || seqTerm ? '' : todayIso() });
     return { items, notes };
   };
@@ -354,7 +476,10 @@ function assignDates() {
   //    (جمع في أسبوع فيه متسع لا يفيد؛ ما بعده لا يتقدّم إلى أسبوع قبل أسبوعه)
   // ٢) فإن بقيت حصص بعد الخطة (آخر أسابيعها دروس مختلفة لا تُجمع): ما بعد اليوم يُضغط فتلي كل حصة ما قبلها مباشرة
   //    (لا تسبق اليوم ولا ترتيبها)، ويُجمع ما يلزم بعدها، ثم يُعاد ما أمكن إلى أسابيعه فلا يبدأ الضغط إلا من حيث يلزم
-  if (planEnd && fileMode && !WIZ.pickDates && WIZ.trialCap == null) {   // التجربة (٣ حصص) لا تحتاج ضغط الفصل
+  if (skG.length && fitEnd) {
+    for (const R of [6, 4, 3, 2, 1]) { if (!items.some((it) => it.date > fitEnd)) break; reserve(R); ({ items, notes } = lay()); }
+  }
+  if (planEnd && fileMode && !WIZ.pickDates && WIZ.trialCap == null && !skillOn) {   // التجربة (٣ حصص) لا تحتاج ضغط الفصل
     const today = fromIso || todayIso();
     const lateN = (its) => its.filter((it) => it.date > fitEnd).length;
     const join = (a, b) => { const was = { am: a.merge, bm: b.merge }; a.merge = (a.merge || []).concat(b, b.merge || []); b.mergedInto = a; b.merge = null; return () => { a.merge = was.am; b.merge = was.bm; b.mergedInto = null; }; };
@@ -410,6 +535,13 @@ function assignDates() {
   }
   items.forEach((it) => { it.s.date = it.date; it.s.slot = it.slot || 1; it.s.dateSrc = it.dateSrc; it.s.movedFrom = ''; it.s.afterTerm = !!(termEnd && it.date > termEnd); });
   cands.forEach((x) => { let r = x.mergedInto; while (r && r.mergedInto) r = r.mergedInto; if (r) { x.date = r.date; x.slot = r.slot; x.afterTerm = r.afterTerm; } });
+  // تحضير المهارة: حصصه التي أخذت حصصها في الجدول تنضم الآن إلى تحضير أولاها (بتاريخه)، وما وقع منها في يومه يغطيه التحضير (span)
+  skG.forEach((g) => {
+    const h = g[0];
+    let same = 0, res = 1;
+    g.slice(1).forEach((x) => { if (x.resOf) { res++; if (x.date === h.date) same++; x.mergedInto = h; x.date = h.date; x.slot = h.slot; x.afterTerm = h.afterTerm; } x.resOf = null; });
+    h.merge = g.slice(1); h.span = 1 + same; h.resN = res;
+  });
   notes.forEach((n) => {
     const s = items[n.i].s;
     if (n.src === 'file' || n.src === 'fixed') s.movedFrom = n.from;
@@ -420,9 +552,11 @@ function assignDates() {
   const late = items.filter((it) => it.s.afterTerm).length;
   const merged = cands.filter((x) => x.mergedInto).length;
   // يُذكر الجمع بعد قراءة جدول المعلم فقط: قبلها قد يُجمع ما يتسع له الجدول ثم يُفكّ
-  if (merged && WIZ.pickDates && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', `حصص اختيارك بعد نهاية الفصل: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد`); }
+  if (skillOn) { if (skG.length && !dateNotes.has('skill')) { dateNotes.add('skill'); logLine('info', 'كما اخترت: حصص المهارة الواحدة في كل درس في تحضير واحد بتاريخ أولاها'); } }
+  else if (merged && WIZ.pickDates && WIZ.pickJoin) { if (!dateNotes.has('join')) { dateNotes.add('join'); logLine('info', 'كما اخترت: حصص الدرس التي اخترتها في تحضير واحد بتاريخ واحد'); } }
+  else if (merged && WIZ.pickDates && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', `حصص اختيارك بعد نهاية الفصل: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد`); }
   else if (merged && schedRead && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', fromIso ? `حصص الفصل أكثر من حصصك الباقية في الجدول: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد، فتكتمل قبل نهاية الفصل (${dayLabel(fitEnd, false)})` : `حصصك في نور أقل من حصص الخطة: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد، فتكتمل الخطة في أسابيعها (آخرها ${dayLabel(fitEnd, false)})`); }
-  WIZ.fit = { merged, late: items.filter((it) => it.date > fitEnd).length, fitEnd, from: fromIso };
+  WIZ.fit = { merged: skillOn ? 0 : merged, late: items.filter((it) => it.date > fitEnd).length, fitEnd, from: fromIso };
   if (!WIZ.on && termEnd && late && !dateNotes.has('late:' + late)) { dateNotes.add('late:' + late); logLine('info', `${toAr(late)} ${late === 1 ? 'حصة ستقع' : 'حصص ستقع'} بعد نهاية الفصل (${dayLabel(termEnd, false)}) — راجع ميزانية الفصل في «فحص ملف المادة»`); }
   cands.forEach((s) => { s.on = s.manual != null ? s.manual : inScope(s); });
   plan.forEach((p) => p.sessions.filter((s) => !s.eligible).forEach((s) => { s.on = false; s.date = s.date || ''; }));
@@ -460,6 +594,7 @@ function pickChain(s) {
   const all = plan.flatMap((p) => p.sessions).filter((x) => WIZ.pickDates[x.lesson.id]);
   const out = [];
   for (const x of all.slice(all.indexOf(s) + 1)) {
+    if (x.mergedInto) continue;   // حصة جُمعت في تحضير حصة قبلها: تاريخها تاريخه
     if (typed.has(x.lesson.id)) break;
     if (!x.savedNow && !x.done && !x.inNoor) out.push(x);
   }
@@ -1096,6 +1231,8 @@ async function readNoorList(quiet) {
     if (!quiet) logLine('info', `قرأت الصفحة المعروضة فقط من قائمة التحاضير (${toAr(titles.length)}) — ${v.info}`);
     total = -2;   // جزئية
   } else if (!quiet) logLine('info', `قائمة التحاضير في نور: ${toAr(titles.length)} تحضيرًا${total > titles.length ? ` (من ${toAr(total)} — لم تُقرأ كلها)` : ''}.`);
+  // «مهارة الإملاء: الدرس …»: اسم المهارة الذي كتبته «حاضر» في أول العنوان يُنزع، فيُعرف الدرس ورقم الحصة كما في غيره
+  titles = titles.map(stripSkillTag);
   // العنوان الموحّد للدرس ← أرقام حصصه الموجودة («X» = الأولى، «X (2)» = الثانية؛ والمكرر بلا رقم يُحسب حصة تالية)
   const have = new Map();
   titles.forEach((t) => {
@@ -2011,7 +2148,7 @@ async function fillOnce(item, c) {
   setBox('run', `أعبّئ «${shortT(s.lesson.title)}»…`, `الدرس: ${item.node.text}\nالنشر: ${dayLabel(s.date)}`);
   // ترتيب هذا التحضير بين تحاضير الدرس نفسه في اليوم نفسه (حصتان للدرس في يوم واحد) — نور ترقّم الثاني بنفسها
   const dayRank = () => 1 + savedThisRun.filter((x) => x.s !== s && x.s.date === s.date && x.s.p && s.p && x.s.p.node && s.p.node && x.s.p.node.id === s.p.node.id).length;
-  const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title, dayRank: dayRank(), slotNo: s.slot || 1, slotFull: slotSeen.get(s.date) || null, allowSection: !!WIZ.allowSection, onlySecs: s.secs || null,
+  const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title, dayRank: dayRank(), slotNo: s.slot || 1, slotSpan: s.span || 1, slotFull: slotSeen.get(s.date) || null, allowSection: !!WIZ.allowSection, onlySecs: s.secs || null, secSlots: s.secSlots || null, skill: WIZ.skillTag ? skillsNow().get(s.lesson.id) || '' : '',
     merge: s.merge && s.merge.length ? s.merge.map((x) => x.lesson) : null, sessionNos: s.merge && s.merge.length && s.p ? [s, ...s.merge].map(nodeNo) : null, sessionNo: nodeNo(s) });
   let rep = await fillNoor(tabId, pkg, s.lesson, opts());
   let blk = rep.find((x) => x.key === 'remote');
@@ -2110,7 +2247,11 @@ async function recordSaved(item) {
   const tails = s.merge || [];
   item.p.savedNow += 1 + tails.length;
   savedThisRun.push(item);
-  if (s.secs) { const r = Object.assign({}, secDone.get(s.lesson.id) || {}); s.secs.forEach((sec) => { r[sec] = s.date; }); secDone.set(s.lesson.id, r); await secSave(); }
+  if (s.secs) {
+    // تسلسل الشعب: حصة جُمعت في تحضير مهارة تُسجَّل بتاريخ حصتها هي عند كل شعبة (تبقى حصتها محجوزة لها)
+    [s, ...tails].forEach((x) => { const r = Object.assign({}, secDone.get(x.lesson.id) || {}); const own = x !== s && s.tailAt ? s.tailAt.get(x) : null; s.secs.forEach((sec) => { r[sec] = (own && own[sec]) || s.date; if (x !== s) r['~' + sec] = s.date; }); secDone.set(x.lesson.id, r); });
+    await secSave();
+  }
   // سجل هذا المقرر: لا تُعاد هذه الحصة فيه أبدًا (حتى لو لم تظهر بعد في قائمة نور) — ولا حصص الدرس التي جُمعت معها
   [s, ...tails].forEach((x) => { semSaved[x.lesson.id] = s.date; savedIds.add(x.lesson.id); x.on = false; x.eligible = false; x.savedNow = true; x.date = s.date; });
   tails.forEach((x) => setSt(x, 'ok', `✓ مع الحصة السابقة · ${dayLabel(s.date, false)}`));
@@ -2285,7 +2426,7 @@ function heartbeat(on) {
 // نقطة استئناف: إن أُغلقت النافذة أو تعطّل كروم يُتابَع التشغيل عند فتحها
 async function checkpoint(active) {
   const sc = { kind: scope.kind, picks: [...(scope.picks || [])], units: [...scope.units], weekDay: scope.weekDay, from: scope.from, to: scope.to, dateFrom: scope.dateFrom, dateTo: scope.dateTo, dsrc: useFile ? 'file' : 'seq' };
-  await chrome.storage.local.set({ semesterRun: active && !WIZ.hwOnly ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, typed: WIZ.pickTyped || null, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
+  await chrome.storage.local.set({ semesterRun: active && !WIZ.hwOnly && !WIZ.roomsOnly && !WIZ.videosOnly ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, typed: WIZ.pickTyped || null, join: WIZ.pickJoin || null, skill: !!WIZ.skillJoin, tag: !!WIZ.skillTag, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
 }
 function setRunning(on) {
   running = on;
@@ -2371,7 +2512,7 @@ async function wipeOffer(text, n, okBtn) {
 }
 // الفصل كاملًا ومادة المعلم كاملة في نور: لا حصص ناقصة فينتهي التشغيل — قبل أن ينتهي تُعرض البطاقة نفسها (مسح وبدء من جديد، أو اختيار الدروس)
 async function termFullOffer() {
-  if (!WIZ.on || WIZ.pickDates || WIZ.hwOnly || wz.mode !== 'term' || scope.kind !== 'term' || queue.length || stopFlag) return;
+  if (!WIZ.on || WIZ.pickDates || WIZ.hwOnly || WIZ.roomsOnly || WIZ.videosOnly || wz.mode !== 'term' || scope.kind !== 'term' || queue.length || stopFlag) return;
   const had = plan.flatMap((p) => p.sessions.filter((s) => s.inNoor)).length;
   if (!had || await termOwn()) return;
   const n = (noorHave && noorHave.titles && noorHave.titles.length) || had;
@@ -2442,7 +2583,7 @@ let lastVerify = '';   // التحقق النهائي من قائمة نور: ok
 // لا يظهر منه شيء للمعلم ولا ينتظره أحد: الصف يُضاف فورًا ويُرسل في الخلفية كل ١٠ صفوف
 let fillRid = '', fillN = 0, fillCnt = {};
 const fillLogged = new Set();   // حصص هذا التشغيل التي أخذت صفها النهائي (حتى لا يتكرر عند جمع النهاية)
-const flMode = () => (WIZ.on ? (wz.mode === 'pick' || wz.mode === 'term' ? wz.mode : wz.mode === 'hw' ? 'term' : scope.kind === 'pick' ? 'pick' : 'term') : '');
+const flMode = () => (WIZ.on ? (wz.mode === 'pick' || wz.mode === 'term' ? wz.mode : wz.mode === 'hw' || wz.mode === 'rooms' || wz.mode === 'video' ? 'term' : scope.kind === 'pick' ? 'pick' : 'term') : '');
 function flRow(status, item, note) {
   const s = item && item.s, n = item && item.node;
   fillLog({
@@ -2525,7 +2666,7 @@ async function homeworkOnly() {
   const info = await withTimeout(execMain(hwPageOp, { kind: 'preps', cid: courseCid }), 60000, null);
   const prepIds = (info && info.preps) || [];
   const titles = (h && h.titles) || [], dates = (h && h.dates) || [];
-  const peelT = (t) => { let b = t; for (let j = 0; j < 4 && stripSessionSuffix(b) !== b; j++) b = stripSessionSuffix(b); return b; };
+  const peelT = (t) => { let b = stripSkillTag(t); for (let j = 0; j < 4 && stripSessionSuffix(b) !== b; j++) b = stripSessionSuffix(b); return b; };
   // تحاضير كل اسم درس بترتيب تواريخها: الأول للحصة الأولى، والثاني للثانية… (ولكل اسم مكرر في الشجرة، بترتيب التواريخ)
   const prepsBy = new Map();
   titles.forEach((t, i) => { const k = kwNorm(peelT(t)); if (!k) return; const d = isIso(dates[i]) ? dates[i] : ''; if (!prepsBy.has(k)) prepsBy.set(k, []); prepsBy.get(k).push({ t, d }); });
@@ -2547,7 +2688,7 @@ async function homeworkOnly() {
     if (!mine.length) { none++; return; }
     const ids = (idsBy.get(k) || []).slice();
     mine.forEach((row, j) => {
-      const at = ids.findIndex((x) => x.title === row.t); const pid = at >= 0 ? ids.splice(at, 1)[0].id : '';
+      const at = ids.findIndex((x) => stripSkillTag(x.title) === row.t); const pid = at >= 0 ? ids.splice(at, 1)[0].id : '';
       const it = ses[Math.min(j, ses.length - 1)];
       if (!it) return;
       if (!row.d || row.d < today) { past++; return; }
@@ -2625,6 +2766,155 @@ async function addHomework(item, opts = {}) {
   WIZ.hwFail = (WIZ.hwFail || 0) + 1;
   return 'fail';
 }
+// «غرف النقاش» (المالك 2026-11-14): لكل وحدة في شجرة نور غرفة، وفيها موضوع لكل درس (رابط نشاطه وسؤالا نقاش)، منشورة لكل طلبة
+// شعب المادة. ما في نور بالعنوان نفسه لا يتكرر. يُنفَّذ كما يفعل المعلم بيده في تبويب نور، وما تعذّر لا يظهر له.
+async function roomsLive(op) {
+  const origin = await noorOrigin();
+  if (!(await nav(`${origin}/teacher/posts/view`))) return { err: 'nav' };
+  await waitComplete(8000);
+  let list = await execMain(roomsRead);
+  if (!list || !list.ok) return { err: 'noroomspage', url: list && list.url };
+  let room = list.rooms.find((r) => kwNorm(r.title) === kwNorm(op.title));
+  let made = false;
+  if (!room) {
+    const nv = waitNavigation(60000);
+    const f = await execMain(roomCreateFill, op);
+    if (!f || !f.ok) return f || { err: 'nofill' };
+    await nv; await waitComplete(10000);
+    if (!/\/posts\/view/.test(String((await chrome.tabs.get(tabId).catch(() => ({}))).url || ''))) { await nav(`${origin}/teacher/posts/view`); await waitComplete(8000); }
+    list = await execMain(roomsRead);
+    room = list && list.rooms.find((r) => kwNorm(r.title) === kwNorm(op.title));
+    if (!room) return { err: 'noroom', sent: true };
+    made = true;
+  }
+  if (!(await nav(room.url))) return { err: 'nav', room: room.url };
+  await waitComplete(8000);
+  const tp = await execMain(topicsRead);
+  if (!tp || !tp.ok) return { err: 'notopicform', made };
+  const have = new Set(tp.titles.map(kwNorm));
+  let added = 0, had = 0;
+  for (const t of op.topics) {
+    if (stopFlag) break;
+    if (have.has(kwNorm(t.title))) { had++; continue; }
+    setBox('run', `أضيف موضوع «${shortT(t.title)}»…`, op.label || '');
+    const nv = waitNavigation(60000);
+    const f = await execMain(topicFill, t);
+    if (!f || !f.ok) return { err: (f && f.err) || 'nofill', made, added };
+    await nv; await waitComplete(10000);
+    const after = await execMain(topicsRead);
+    if (after && after.titles.some((x) => kwNorm(x) === kwNorm(t.title))) { added++; have.add(kwNorm(t.title)); }
+    else if (!/\/posts\/(article|reply)/.test(String((after && after.url) || ''))) { await nav(room.url); await waitComplete(8000); }
+  }
+  return { ok: true, made, added, had };
+}
+async function roomsOnly() {
+  const nConf = conflicts(); if (nConf.miss.length + nConf.weak.length + nConf.dup.length || plan.mismatch) autoResolve();
+  safeLinks();
+  setPhase('fill');
+  const c = WIZ.course || {};
+  const grade = ((c.levels || []).filter((x) => /الصف/.test(x)).pop() || (c.levels || []).slice(-1)[0] || '').replace(/^الصف\s+/, '');
+  // دروس كل وحدة بترتيب الشجرة، كل درس نور مرة واحدة
+  const units = new Map();
+  plan.forEach((p) => {
+    if (!p.node || p.skipped || p.miss) return;
+    if (WIZ.roomPick && !WIZ.roomPick.has(kwNorm(p.group.unit || ''))) return;   // الوحدات التي اختارها المعلم وحدها
+    const u = p.node.unit || '';
+    if (!units.has(u)) units.set(u, []);
+    const arr = units.get(u);
+    if (!arr.some((x) => x.node === p.node)) arr.push({ node: p.node, lesson: p.sessions[0] && p.sessions[0].lesson });
+  });
+  // اسم المعلم في شهادة الطالب (من حساب نور المفتوح، أو آخر ما قرأناه)
+  let who = null; try { who = tabId ? await noorWho(tabId) : null; } catch (e) {}
+  if (!who || !who.name) { try { const w = await noorWhoScan(tabId); if (w && w.who && w.who.name) who = w.who; } catch (e) {} }
+  if (!who || !who.name) who = (await chrome.storage.local.get('noorWho').catch(() => ({}))).noorWho || who;
+  const teacher = (who && who.name) || '';
+  let rooms = 0, topics = 0, fail = 0, k = 0;
+  for (const [unit, ls] of units) {
+    if (stopFlag) break;
+    k++;
+    setBox('run', `أجهّز غرفة «${shortT(unit || 'دروس الفصل')}»…`, `${toAr(k)} من ${toAr(units.size)}`);
+    $('prog').style.width = (Math.min(1, k / units.size) * 100) + '%';
+    const topics0 = [];
+    for (const x of ls) {
+      const ref = x.lesson ? gameRef(x.lesson) : null;
+      const game = ref ? await fetchGame(ref, WIZ.gamesBase || undefined) : null;
+      const title = topicTitle(x.node.text + (x.node.nth ? ` (${toAr(x.node.nth + 1)})` : ''));
+      // رابط النشاط فقط حين تكون أنشطة الدرس منشورة في الموقع
+      topics0.push({ title, html: topicHtml({ link: game ? playLink(ref, teacher) : '', questions: discussQuestions(game) }) });
+    }
+    const op = { title: roomTitle(unit, c.title || pkg.subject || '', grade), post: roomInstructions(), subject: c.title || pkg.subject || '', grades: c.levels || [], topics: topics0, label: `${toAr(k)} من ${toAr(units.size)}` };
+    let r = null;
+    for (let i = 0; i < 2 && !stopFlag; i++) {
+      r = await withTimeout(roomsLive(op), 600000, { err: 'timeout', sent: true });
+      if (!r || r.ok || r.sent || r.made || ['nosections', 'nostudents'].includes(r.err)) break;
+      await sleep(2500);
+    }
+    if (r && r.ok) {
+      if (r.made) rooms++;
+      topics += r.added || 0;
+      if (r.made || r.added) logLine('ok', `✓ غرفة «${op.title}» — ${toAr(r.added || 0)} موضوعًا جديدًا`);
+    } else {
+      fail++;
+      flRow('skipped', { s: { lesson: ls[0] && ls[0].lesson, date: '' }, node: ls[0] && ls[0].node }, ('غرفة لم تكتمل: ' + [r && r.err, r && r.labels && r.labels.join(' | ')].filter(Boolean).join(' · ')).slice(0, 300));
+      if (r && ['nosections', 'nostudents'].includes(r.err)) break;   // لا شعب لهذه المادة في نموذج الغرف: الوحدات الباقية مثلها
+    }
+  }
+  const w = (n, one, two, few, many) => (n === 1 ? one : n === 2 ? two : n <= 10 ? toAr(n) + ' ' + few : toAr(n) + ' ' + many);
+  WIZ.roomHead = rooms || topics ? `✓ ${rooms ? 'أنشأت ' + w(rooms, 'غرفة واحدة', 'غرفتين', 'غرف', 'غرفة') : 'أكملت الغرف'}` : '✓ انتهى';
+  WIZ.roomSub = topics ? `أضفت ${w(topics, 'موضوعًا واحدًا', 'موضوعين', 'مواضيع', 'موضوعًا')}: لكل درس نشاطه وسؤالان للنقاش، ويراها طلبة شعب المادة في «غرف النقاش».`
+    : fail ? 'الغرف لم تكتمل بعد. أعد المحاولة بعد قليل.' : 'غرف هذه المادة ومواضيعها موجودة في نور.';
+  logLine('ok', WIZ.roomHead);
+}
+// «فيديو لكل درس» (المالك 2026-11-14): من يوتيوب بعنوان قريب من اسم الدرس؛ لا عنوان مناسب ← لا فيديو لذلك الدرس
+async function videosOnly() {
+  const nConf = conflicts(); if (nConf.miss.length + nConf.weak.length + nConf.dup.length || plan.mismatch) autoResolve();
+  safeLinks();
+  setPhase('fill');
+  const allowed = YT_DEBUG || await chrome.permissions.contains({ origins: [YT_ORIGIN] }).catch(() => false);
+  if (!allowed) {
+    WIZ.vidHead = '✓ انتهى'; WIZ.vidSub = 'البحث في يوتيوب يحتاج موافقتك مرة واحدة: اختر «فيديو لكل درس» من جديد ثم اضغط «سماح».';
+    return;
+  }
+  const c = WIZ.course || {};
+  const grade = ((c.levels || []).filter((x) => /الصف/.test(x)).pop() || '');
+  const subject = c.title || pkg.subject || '';
+  const origin = await noorOrigin();
+  const libUrl = `${origin}/teacher/attachments/index/BVideo/cid:${courseCid}`;
+  const readLib = async () => { if (!(await nav(libUrl))) return null; await waitComplete(10000); await sleep(800); return execMain(vidLibRead); };
+  let lib = await readLib();
+  if (!lib || !lib.ok) { WIZ.vidHead = '✓ انتهى'; WIZ.vidSub = 'مكتبة الفيديو لم تفتح الآن. أعد المحاولة بعد قليل.'; flRow('skipped', null, 'مكتبة الفيديو: ' + ((lib && lib.url) || 'لا صفحة')); return; }
+  const have = new Set(lib.titles.map(kwNorm));
+  const nodes = [];
+  plan.forEach((p) => { if (p.node && !p.skipped && !p.miss && !nodes.includes(p.node) && (!WIZ.vidPick || WIZ.vidPick.has(p.group.key))) nodes.push(p.node); });
+  let n = 0, none = 0, had = 0, fail = 0;
+  for (let i = 0; i < nodes.length && !stopFlag; i++) {
+    const node = nodes[i];
+    const title = ('فيديو: ' + node.text + (node.nth ? ` (${toAr(node.nth + 1)})` : '')).slice(0, 250);
+    if (have.has(kwNorm(title))) { had++; continue; }
+    setBox('run', `أبحث عن فيديو «${shortT(node.text)}»…`, `${toAr(i + 1)} من ${toAr(nodes.length)}`);
+    $('prog').style.width = (Math.min(1, (i + 1) / nodes.length) * 100) + '%';
+    const topic = lessonTopic(node.text);
+    const res = await ytSearch(`${topic} ${subject} ${grade}`.trim(), YT_DEBUG || undefined);
+    const v = res ? pickVideo(topic, res, `${subject} ${grade}`) : null;
+    if (!v) { none++; flRow('skipped', { s: null, node }, res ? 'فيديو: لا عنوان مناسب' : 'فيديو: يوتيوب لم يستجب'); continue; }
+    const pub = new Date(nowDate().getTime() + 15 * 60000);
+    const op = { title, lang: /[؀-ۿ]/.test(node.text) ? '2' : '1', url: ytUrl(v.id), comments: v.title, publish: noorDT(pub), match: `${node.unit}: ${node.text}`, lesson: node.text };
+    if (!(await nav(lib.upload))) { fail++; continue; }
+    await waitComplete(10000);
+    const nv = waitNavigation(90000);
+    const f = await execMain(vidFill, op);
+    if (!f || !f.ok) { fail++; flRow('skipped', { s: null, node }, 'فيديو لم يُضف: ' + ((f && f.err) || 'لا نموذج')); continue; }
+    await nv; await waitComplete(10000);
+    lib = await readLib();
+    if (lib && lib.titles.some((t) => kwNorm(t) === kwNorm(title))) { n++; have.add(kwNorm(title)); logLine('ok', `✓ فيديو «${node.text}» — ${v.title}`); }
+    else { fail++; flRow('skipped', { s: null, node }, 'فيديو أُرسل ولم يظهر في المكتبة'); }
+  }
+  const w = (k) => (k === 1 ? 'فيديو واحدًا' : k === 2 ? 'فيديوين' : k <= 10 ? toAr(k) + ' فيديوهات' : toAr(k) + ' فيديو');
+  WIZ.vidHead = n ? `✓ أضفت ${w(n)}` : '✓ انتهى';
+  WIZ.vidSub = n ? `لكل درس فيديو من يوتيوب عنوانه قريب من اسم الدرس، في «مكتبة الفيديو» لشعب المادة.${none ? ` ودروس لم أجد لها عنوانًا مناسبًا تركتها بلا فيديو.` : ''}`
+    : fail ? 'الفيديوهات لم تُضف بعد. أعد المحاولة بعد قليل.' : had ? 'فيديوهات هذه الدروس موجودة في نور.' : 'لم أجد في يوتيوب عناوين قريبة من أسماء هذه الدروس، فلم أضف فيديو.';
+  logLine('ok', WIZ.vidHead);
+}
 async function run() {
   if (running) return;
   // تشغيل آخر في نافذة أخرى؟ (يمنع تعبئتين متزامنتين في نور)
@@ -2669,7 +2959,7 @@ async function run() {
         if (!courses) throw new Error('stop');
         const course = await pickCourse(courses);
         if (!course) throw new Error('stop');
-        courseCid = course.cid || '';
+        courseCid = course.cid || ''; WIZ.course = course;
         semSaved = courseCid ? (((await chrome.storage.local.get('semesterSaved').catch(() => ({}))).semesterSaved || {})[courseCid] || {}) : {};
         Object.keys(semSaved).forEach((id) => savedIds.add(id));   // سجل هذا الفتح (يُصفَّر عند كل فتح): حُفظ فعلًا
         if (WIZ.resumed) { WIZ.sum = Math.max(WIZ.sum, Object.keys(semSaved).length); WIZ.resumed = false; }   // ما نُشر قبل الانقطاع يُحسب في السطر الختامي
@@ -2699,6 +2989,8 @@ async function run() {
     await buildPlan(nodes);
     renderPlan();
     if (WIZ.hwOnly) { await homeworkOnly(); finished = true; throw new Error(WIZ.hwHead); }
+    if (WIZ.roomsOnly) { await roomsOnly(); finished = true; throw new Error(WIZ.roomHead); }
+    if (WIZ.videosOnly) { await videosOnly(); finished = true; throw new Error(WIZ.vidHead); }
     // المادة مكتملة في نور: لا مراجعة ولا اقتراحات — «مكتمل» فقط
     { const cp = completion(); if (cp.complete && !queue.length) { await termFullOffer(); finished = true; logLine('ok', completeText(cp)); throw new Error(completeText(cp)); } }
     // تعارض بين ملفك ونور: تُعرض الخطة للمراجعة، وتبدأ وحدها بعد مهلة (أطول كلما كان التعارض أخطر) ما لم تطلب المراجعة اليدوية
@@ -3112,7 +3404,7 @@ async function offerResume() {
   const radio = document.querySelector(`input[name=term][value="${run0.term}"]`); if (radio) radio.checked = true;
   if (run0.startTouched && run0.start) { $('start').value = run0.start; startTouched = true; renderDays(); }
   if (run0.scope && init.restoreScope) init.restoreScope(run0.scope);
-  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; WIZ.seq = !!run0.wiz.seq; WIZ.pickDates = run0.wiz.pick || null; WIZ.pickTyped = run0.wiz.typed || null; WIZ.rid = run0.wiz.rid || Date.now(); if (run0.wiz.conf) WIZ.confirmed = WIZ.rid; WIZ.sum = run0.wiz.sum || 0; WIZ.resumed = true; WIZ.auto = run0.wiz.auto || 0; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
+  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; WIZ.seq = !!run0.wiz.seq; WIZ.pickDates = run0.wiz.pick || null; WIZ.pickTyped = run0.wiz.typed || null; WIZ.pickJoin = run0.wiz.join || null; WIZ.skillJoin = !!run0.wiz.skill; WIZ.skillTag = !!run0.wiz.tag; WIZ.rid = run0.wiz.rid || Date.now(); if (run0.wiz.conf) WIZ.confirmed = WIZ.rid; WIZ.sum = run0.wiz.sum || 0; WIZ.resumed = true; WIZ.auto = run0.wiz.auto || 0; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
   let left = 10, cancelled = false;
   const tick = () => {
     if (cancelled) return;
@@ -3143,7 +3435,7 @@ const SHIFT = { one: { name: 'فترة واحدة', min: 40 }, two: { name: 'ف�
 const WZ_STEPS = ['mode', 'grade', 'subject', 'shift', 'lessons'];
 // «بداية الإدخال» في التحضير التلقائي: في النسخة الخاصة بالمالك فقط (اسم الإصدار فيه «خاصة»)
 const FROM_STEP = (() => { try { return /خاصة/.test(chrome.runtime.getManifest().version_name || ''); } catch (e) { return false; } })();
-const wz = { hw: true, step: 'mode', hist: [], mode: '', grade: 0, subject: '', shift: '', pkg: null, sel: new Map(), typed: new Set(), hsel: new Map(), catalog: null, link: null, status: null, busy: false };
+const wz = { hw: true, join: false, step: 'mode', hist: [], mode: '', grade: 0, subject: '', shift: '', pkg: null, sel: new Map(), typed: new Set(), hsel: new Map(), rsel: new Set(), vsel: new Set(), catalog: null, link: null, status: null, busy: false };
 const ORD = ['الأولى', 'الثانية', 'الثالثة', 'الرابعة', 'الخامسة', 'السادسة', 'السابعة', 'الثامنة'];
 const wdone = (l) => { const x = sessionStatus(state, wz.pkg.id, l.id); return !!(x.saved || (x.filled && !x.failed)); };
 const gradeName = (n) => 'الصف ' + (GRADES[n - 1] || toAr(n));
@@ -3198,7 +3490,7 @@ function wzTrialLeft() {
 // نوع الخدمة في الاشتراك (المالك 2026-11-02): تحضير فقط · تحضير مع واجب · واجب فقط — يحدده المدير لكل مادة؛ والتجربة تشمل الكل
 const SVC_LABEL = { prep: 'تحضير فقط', hw: 'واجبات فقط' };
 const offerSvc = (o) => (o.src === 'lib' && o.pkg.remote && !o.pkg.remote.trial && o.pkg.remote.service) || 'both';
-const offerAllows = (o, mode) => { const sv = offerSvc(o); return mode === 'hw' ? sv !== 'prep' : mode ? sv !== 'hw' : true; };
+const offerAllows = (o, mode) => { const sv = offerSvc(o); return mode === 'rooms' || mode === 'video' ? true : mode === 'hw' ? sv !== 'prep' : mode ? sv !== 'hw' : true; };
 const wzBadge = (o) => (o.src === 'cat' ? ''
   : o.pkg.remote && o.pkg.remote.trial ? '<em class="bdg free">بانتظار التفعيل</em>'
     : o.pkg.remote ? `<em class="bdg sub">مشترك ✓${SVC_LABEL[offerSvc(o)] ? ' · ' + SVC_LABEL[offerSvc(o)] : ''}</em>` : '');
@@ -3216,8 +3508,8 @@ function wzCards(list, from = 0) {
 function wzBind(list) { $('wzBody').querySelectorAll('.wz-card').forEach((b) => { b.onclick = () => { if (!wz.busy) list[+b.dataset.i].go(); }; }); }
 
 function wzRender() {
-  const i = WZ_STEPS.indexOf(wz.step === 'name' ? 'shift' : wz.step);
-  $('wzDots').innerHTML = (wz.mode === 'term' || wz.mode === 'hw' ? WZ_STEPS.slice(0, 4) : WZ_STEPS).map((_, k) => `<i class="${k < i ? 'done' : k === i ? 'on' : ''}"></i>`).join('');
+  const i = WZ_STEPS.indexOf(wz.step === 'name' || wz.step === 'style' ? 'shift' : wz.step);
+  $('wzDots').innerHTML = (['term', 'hw', 'rooms', 'video'].includes(wz.mode) ? WZ_STEPS.slice(0, 4) : WZ_STEPS).map((_, k) => `<i class="${k < i ? 'done' : k === i ? 'on' : ''}"></i>`).join('');
   $('wzBack').hidden = !wz.hist.length || ['pay', 'wait'].includes(wz.step);
   const head = $('wzHead'), body = $('wzBody');
   const offers = wzOffers();
@@ -3225,9 +3517,19 @@ function wzRender() {
   if (wz.step === 'mode') {
     head.textContent = 'ماذا تريد أن تحضّر؟';
     // الخدمة (المالك 2026-11-02): تحضير · تحضير مع واجبات · واجبات فقط — ثلاثة خيارات صريحة؛ الواجبات خمسة أسئلة لكل درس في «المهام الإلكترونية»
-    const svc = wz.mode === 'hw' ? 'hw' : wz.hw ? 'both' : 'prep';
-    const SV = [['prep', 'تحضير'], ['both', 'تحضير مع واجبات'], ['hw', 'واجبات فقط']];
-    list = svc === 'hw'
+    const svc = wz.mode === 'rooms' || wz.mode === 'video' ? wz.mode : wz.mode === 'hw' ? 'hw' : wz.hw ? 'both' : 'prep';
+    const SV = [['prep', 'تحضير'], ['both', 'تحضير مع واجبات'], ['hw', 'واجبات فقط'], ['rooms', 'غرف النقاش'], ['video', 'فيديو']];
+    // غرف النقاش (المالك 2026-11-14): غرفة لكل وحدة، وفيها موضوع لكل درس (نشاطه وسؤالان للنقاش)
+    // فيديو (المالك 2026-11-14): إذن يوتيوب يُطلب هنا مرة واحدة (يحتاج ضغطة المعلم)
+    list = svc === 'video'
+      ? [{ title: 'فيديو لكل درس', sub: 'من يوتيوب، بعنوان قريب من اسم الدرس', on: wz.mode === 'video', go: () => {
+        const go = () => { wz.mode = 'video'; wzGo('grade'); };
+        if (YT_DEBUG || !chrome.permissions || !chrome.permissions.request) { go(); return; }
+        chrome.permissions.request({ origins: [YT_ORIGIN] }).then((ok) => { if (ok) go(); else wzMsg('ok', 'البحث في يوتيوب يحتاج موافقتك. اضغط «فيديو لكل درس» ثم «سماح».'); }).catch(() => go());
+      } }]
+      : svc === 'rooms'
+      ? [{ title: 'غرفة لكل وحدة', sub: 'في كل غرفة موضوع لكل درس: نشاطه وسؤالان للنقاش', on: wz.mode === 'rooms', go: () => { wz.mode = 'rooms'; wzGo('grade'); } }]
+      : svc === 'hw'
       ? [{ title: 'أختار الدروس بنفسي', sub: 'تختار الدروس وتاريخي النشر والتسليم', on: wz.mode === 'hw', go: () => { wz.mode = 'hw'; wzGo('grade'); } }]
       : [
         { title: 'أختار الدروس بنفسي', sub: 'تختار الدرس وتكتب تاريخه', on: wz.mode === 'pick', go: () => { wz.mode = 'pick'; wzGo('grade'); } },
@@ -3237,7 +3539,7 @@ function wzRender() {
       + wzCards(list).replace('wz-cards', 'wz-cards big');
     body.querySelectorAll('.wz-seg-b').forEach((bt) => { bt.onclick = () => {
       const k = bt.dataset.svc;
-      if (k === 'hw') wz.mode = 'hw'; else { if (wz.mode === 'hw') wz.mode = 'term'; wz.hw = k === 'both'; }
+      if (['hw', 'rooms', 'video'].includes(k)) wz.mode = k; else { if (['hw', 'rooms', 'video'].includes(wz.mode)) wz.mode = 'term'; wz.hw = k === 'both'; }
       wzSavePrefs(); wzRender();
     }; });
   } else if (wz.step === 'grade') {
@@ -3289,6 +3591,14 @@ function wzRender() {
     homeTried = false;
     wzWhoLoop(true);
     return;
+  } else if (wz.step === 'style') {
+    // مواد اللغة العربية (المالك 2026-11-14): شكلان للتحضير — لكل حصة تحضيرها كما في السابق، أو تحضير لكل مهارة في الدرس
+    head.textContent = 'شكل تحضير اللغة العربية';
+    list = [
+      { title: 'تحضير لكل حصة', sub: 'كما في السابق: لكل حصة تحضيرها', on: !wz.join, go: () => { wz.join = false; wzSavePrefs(); wzTermGo(); } },
+      { title: 'تحضير لكل مهارة', sub: 'حصص المهارة الواحدة في الدرس في تحضير واحد: التحدث، القراءة، الأنماط اللغوية، الإملاء، الخط، التعبير', on: !!wz.join, go: () => { wz.join = true; wzSavePrefs(); wzTermGo(); } },
+    ];
+    body.innerHTML = wzCards(list).replace('wz-cards', 'wz-cards big');
   } else if (wz.step === 'from') {
     head.textContent = 'بداية الإدخال';
     body.innerHTML = `<p class="wz-note big">من أي تاريخ تبدأ التحاضير؟ اتركه فارغًا لتبدأ من أول الخطة.</p>
@@ -3302,6 +3612,12 @@ function wzRender() {
     return;
   } else if (wz.step === 'hwLessons') {
     wzHwLessons();
+    return;
+  } else if (wz.step === 'roomUnits') {
+    wzRoomUnits();
+    return;
+  } else if (wz.step === 'vidLessons') {
+    wzVidLessons();
     return;
   } else if (wz.step === 'pay') {
     wzPayRender();
@@ -3319,19 +3635,34 @@ function wzLessons() {
   // لا تاريخ مقترح قبل أن يكتب المعلم تاريخًا؛ بعده تأخذ الحصص المختارة التالية أيام حصصه متتالية (4.10.19)
   wzChain(gs);
   let u = null;
-  body.innerHTML = wzTrialNote() + '<div class="wz-list">' + gs.map((g) => {
+  // «مدمج أو منفصل» (المالك 2026-11-14): يظهر حين يكون في المادة درس بأكثر من حصة؛ الافتراضي منفصل كما كان
+  const multi = gs.some((g) => g.sessions.length > 1);
+  const seg = multi ? `<div class="wz-seg wz-seg2" id="wzJoin"><button class="wz-seg-b ${wz.join ? '' : 'on'}" data-j="0">كل حصة في تحضير</button><button class="wz-seg-b ${wz.join ? 'on' : ''}" data-j="1">${isArabicPkg(wz.pkg) ? 'تحضير لكل مهارة' : 'حصص الدرس في تحضير واحد'}</button></div>` : '';
+  const units = wz.join ? wzUnits(gs) : [];
+  body.innerHTML = wzTrialNote() + seg + '<div class="wz-list">' + gs.map((g) => {
     const on = g.sessions.some((l) => wz.sel.has(l.id));
     const uh = g.unit !== u ? `<div class="wz-unit">${esc(g.unit || 'دروس')}</div>` : ''; u = g.unit;
     const one = g.sessions.length === 1;
     const dateIn = (l) => `<input class="input wz-date" type="date" data-d="${esc(l.id)}" value="${esc(wz.sel.get(l.id) || '')}">`;
     // خانة التاريخ تحت الدرس بالشكل نفسه للحصة الواحدة وللحصص المتعددة
+    // مدمج: مربعات الحصص بلا تواريخ، ثم خانة تاريخ واحدة لكل تحضير يجمع حصص الدرس المختارة
+    const joinRows = () => units.filter((x) => x.g === g).map((x) => `<label class="wz-s wz-j"><span>${x.ls.length > 1 ? `${esc(x.skill || 'تحضير واحد')} (الحصص ${x.ls.map((l) => toAr(g.sessions.indexOf(l) + 1)).join(' و ')})` : `${x.skill ? esc(x.skill) + ': ' : 'تاريخ '}الحصة ${ORD[g.sessions.indexOf(x.ls[0])] || toAr(g.sessions.indexOf(x.ls[0]) + 1)}`}</span>${dateIn(x.ls[0])}</label>`).join('');
     const ses = on && one ? `<div class="wz-ses"><label class="wz-s"><span>تاريخ النشر</span>${dateIn(g.sessions[0])}</label></div>`
+      : on && wz.join ? `<div class="wz-ses">${g.sessions.map((l, k) => `<label class="wz-s"><input type="checkbox" data-s="${esc(l.id)}" ${wz.sel.has(l.id) ? 'checked' : ''}><span>الحصة ${ORD[k] || toAr(k + 1)}</span></label>`).join('')}${joinRows()}</div>`
       : on && !one ? `<div class="wz-ses">${g.sessions.map((l, k) => `<label class="wz-s"><input type="checkbox" data-s="${esc(l.id)}" ${wz.sel.has(l.id) ? 'checked' : ''}><span>الحصة ${ORD[k] || toAr(k + 1)}</span>${wz.sel.has(l.id) ? dateIn(l) : ''}</label>`).join('')}</div>` : '';
     return `${uh}<div class="wz-les ${on ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-k="${esc(g.key)}" ${on ? 'checked' : ''}><span>${esc(g.lesson || 'درس')}</span><em>${one ? '' : countWord(g.sessions.length)}</em></label>${ses}</div>`;
   }).join('') + '</div>';
   const n = wz.sel.size;
   body.insertAdjacentHTML('beforeend', `<button class="btn primary big" id="wzLessGo" ${n ? '' : 'disabled'}>${n ? `عبّئ ${countWord(n).replace('حصتان', 'الحصتين')} في نور` : 'اختر درسًا'}</button>`);
   const list = body.querySelector('.wz-list'); list.scrollTop = top;
+  body.querySelectorAll('#wzJoin [data-j]').forEach((b) => {
+    b.onclick = () => {
+      const j = b.dataset.j === '1';
+      if (j === wz.join) return;
+      wz.join = j; wzSavePrefs();
+      wzLessons();
+    };
+  });
   body.querySelectorAll('input[data-k]').forEach((cb) => {
     cb.onchange = () => {
       const g = gs.find((x) => x.key === cb.dataset.k);
@@ -3403,22 +3734,78 @@ function wzHwLessons() {
     wzRun();
   };
 }
+// «غرف النقاش» (المالك 2026-11-14): يختار المعلم الوحدات بنفسه، ولكل وحدة مختارة غرفة فيها موضوع لكل درس
+function wzRoomUnits() {
+  const body = $('wzBody');
+  const keep = body.querySelector('.wz-list'); const top = keep ? keep.scrollTop : 0;
+  $('wzHead').textContent = 'اختر الوحدات';
+  const units = new Map();
+  groupByUnit(lessonGroups(wz.pkg)).forEach((g) => { const k = kwNorm(g.unit || ''); if (!units.has(k)) units.set(k, { name: g.unit || 'دروس الفصل', n: 0 }); units.get(k).n++; });
+  const lw = (k) => (k === 1 ? 'درس واحد' : k === 2 ? 'درسان' : k <= 10 ? toAr(k) + ' دروس' : toAr(k) + ' درسًا');
+  body.innerHTML = wzTrialNote() + '<div class="wz-list">' + [...units].map(([k, u]) => `<div class="wz-les ${wz.rsel.has(k) ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-ru="${esc(k)}" ${wz.rsel.has(k) ? 'checked' : ''}><span>${esc(u.name)}</span><em>${lw(u.n)}</em></label></div>`).join('') + '</div>';
+  const n = wz.rsel.size;
+  const rw = (k) => (k === 1 ? 'غرفة واحدة' : k === 2 ? 'غرفتين' : k <= 10 ? toAr(k) + ' غرف' : toAr(k) + ' غرفة');
+  body.insertAdjacentHTML('beforeend', `<p class="wz-note">لكل وحدة غرفة نقاش لطلبة شعب المادة، وفيها موضوع لكل درس: رابط نشاطه وسؤالان للنقاش.</p><button class="btn primary big" id="wzRoomGo" ${n ? '' : 'disabled'}>${n ? `أنشئ ${rw(n)} في نور` : 'اختر وحدة'}</button>`);
+  const list = body.querySelector('.wz-list'); list.scrollTop = top;
+  body.querySelectorAll('input[data-ru]').forEach((cb) => { cb.onchange = () => { if (cb.checked) wz.rsel.add(cb.dataset.ru); else wz.rsel.delete(cb.dataset.ru); wzRoomUnits(); }; });
+  $('wzRoomGo').onclick = () => { if (wz.rsel.size) wzRun(); };
+}
+// «فيديو» (المالك 2026-11-14): يختار المعلم الدروس بنفسه؛ لكل درس مختار فيديو من يوتيوب إن وُجد عنوان مناسب
+function wzVidLessons() {
+  const body = $('wzBody');
+  const keep = body.querySelector('.wz-list'); const top = keep ? keep.scrollTop : 0;
+  $('wzHead').textContent = 'اختر الدروس';
+  const gs = groupByUnit(lessonGroups(wz.pkg));
+  let u = null;
+  body.innerHTML = wzTrialNote() + '<div class="wz-list">' + gs.map((g) => {
+    const uh = g.unit !== u ? `<div class="wz-unit">${esc(g.unit || 'دروس')}</div>` : ''; u = g.unit;
+    return `${uh}<div class="wz-les ${wz.vsel.has(g.key) ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-vk="${esc(g.key)}" ${wz.vsel.has(g.key) ? 'checked' : ''}><span>${esc(g.lesson || 'درس')}</span></label></div>`;
+  }).join('') + '</div>';
+  const n = wz.vsel.size;
+  const vw = (k) => (k === 1 ? 'لدرس واحد' : k === 2 ? 'لدرسين' : k <= 10 ? 'لـ' + toAr(k) + ' دروس' : 'لـ' + toAr(k) + ' درسًا');
+  body.insertAdjacentHTML('beforeend', `<p class="wz-note">أبحث في يوتيوب عن فيديو عنوانه قريب من اسم الدرس، وأضيفه في «مكتبة الفيديو» لشعب المادة. الدرس الذي لا أجد له عنوانًا مناسبًا يبقى بلا فيديو.</p><button class="btn primary big" id="wzVidGo" ${n ? '' : 'disabled'}>${n ? `أضف فيديو ${vw(n)}` : 'اختر درسًا'}</button>`);
+  const list = body.querySelector('.wz-list'); list.scrollTop = top;
+  body.querySelectorAll('input[data-vk]').forEach((cb) => { cb.onchange = () => { if (cb.checked) wz.vsel.add(cb.dataset.vk); else wz.vsel.delete(cb.dataset.vk); wzVidLessons(); }; });
+  $('wzVidGo').onclick = () => { if (wz.vsel.size) wzRun(); };
+}
 // تواريخ متتالية في «أختار الدروس بنفسي» (المالك 2026-10-31): الحصص المختارة وحدها، بترتيب القائمة؛ ما كتبه المعلم يبقى كما كتبه،
 // وكل حصة مختارة بعده بلا تاريخ منه تأخذ الحصة التالية في أيام حصصه (حصتان في يوم له فيه حصتان، ولا إجازة). ما قبل أول تاريخ يبقى فارغًا
 function wzChain(gs) {
-  if (!wz.pkg || !wz.typed.size) return;
+  if (!wz.pkg) return;
+  const us = wzUnits(gs);
+  // مدمج: حصص التحضير الواحد بتاريخ أولاها، والتاريخ المكتوب باليد يُحسب لها وحدها
+  if (wz.join) us.forEach((x) => x.ls.slice(1).forEach((l) => { wz.sel.set(l.id, wz.sel.get(x.ls[0].id) || ''); wz.typed.delete(l.id); }));
+  if (!wz.typed.size) return;
   const ds = daysFor(state, settings, wz.pkg.id), hol = holidaySet(settings), cap = ((state && state.pkgCaps) || {})[wz.pkg.id] || {};
   const capN = (iso) => Math.max(1, +cap[wdOf(iso)] || 1);
   let prev = '', used = 0;
-  for (const g of gs) for (const l of g.sessions) {
-    if (!wz.sel.has(l.id)) continue;
-    const v = wz.sel.get(l.id);
-    if (wz.typed.has(l.id) && isIso(v)) { used = v === prev ? used + 1 : 1; prev = v; continue; }
-    if (!prev) { wz.sel.set(l.id, ''); continue; }
-    let d = prev;
-    if (used >= capN(prev)) { d = nextSchoolDay(prev, ds, false); for (let i = 0; i < 60 && hol.has(d); i++) d = nextSchoolDay(d, ds, false); used = 0; }
-    wz.sel.set(l.id, d); used++; prev = d;
+  for (const x of us) {
+    const h = x.ls[0].id, v = wz.sel.get(h);
+    // التحضير المدمج يأخذ من حصص يومه بعدد حصصه (حصتان في يوم له فيه حصتان)
+    const w = (iso) => Math.max(1, Math.min(x.ls.length, capN(iso)));
+    let d = '';
+    if (wz.typed.has(h) && isIso(v)) { d = v; used = v === prev ? used + w(v) : w(v); prev = v; }
+    else if (prev) {
+      d = prev;
+      if (used >= capN(prev)) { d = nextSchoolDay(prev, ds, false); for (let i = 0; i < 60 && hol.has(d); i++) d = nextSchoolDay(d, ds, false); used = 0; }
+      used += w(d); prev = d;
+    }
+    x.ls.forEach((l) => wz.sel.set(l.id, d));
   }
+}
+// تحاضير «أختار الدروس بنفسي» بترتيب القائمة: منفصل = لكل حصة مختارة تحضيرها؛ مدمج = حصص الدرس المختارة في تحضير واحد
+// (حتى أربع حصص في التحضير؛ ما زاد يتوزع على تحاضير متقاربة العدد). درسان مختلفان لا يُجمعان
+// مواد اللغة العربية (المالك 2026-11-14): الجمع حسب المهارة — الحصص المتتالية المختارة من المهارة نفسها في تحضير (حتى ثمانٍ)
+function wzUnits(gs) {
+  const out = [];
+  if (wz.skillsOf !== wz.pkg) { wz.skillsOf = wz.pkg; wz.skills = lessonSkills(wz.pkg); }
+  for (const g of gs) {
+    const ch = g.sessions.filter((l) => wz.sel.has(l.id));
+    if (!ch.length) continue;
+    if (!wz.join) { ch.forEach((l) => out.push({ g, ls: [l], skill: '' })); continue; }
+    joinRuns(wz.pkg, ch, wz.skills).forEach((r) => out.push({ g, ls: r.ls, skill: r.skill }));
+  }
+  return out;
 }
 // الوحدات بترتيب أول ظهورها، ودروس كل وحدة بترتيب ظهورها (لا ترتيب رقمي: أرقام العناوين قد تكون مسافات أو أعدادًا من المحتوى)
 function groupByUnit(groups) {
@@ -3453,8 +3840,11 @@ function wzOpen(p) {
   const ids = new Set((p.lessons || []).map((l) => l.id));
   [...wz.sel.keys()].forEach((k) => { if (!ids.has(k)) wz.sel.delete(k); });
   if (wz.mode === 'hw') { const ks = new Set(lessonGroups(p).map((g) => g.key)); [...wz.hsel.keys()].forEach((k) => { if (!ks.has(k)) wz.hsel.delete(k); }); wzGo('hwLessons'); }
-  else if (wz.mode === 'term') { if (FROM_STEP) wzGo('from'); else wzRun(); } else wzGo('lessons');
+  else if (wz.mode === 'rooms') { const us = new Set(lessonGroups(p).map((g) => kwNorm(g.unit || ''))); [...wz.rsel].forEach((k) => { if (!us.has(k)) wz.rsel.delete(k); }); wzGo('roomUnits'); }
+  else if (wz.mode === 'video') { const ks = new Set(lessonGroups(p).map((g) => g.key)); [...wz.vsel].forEach((k) => { if (!ks.has(k)) wz.vsel.delete(k); }); wzGo('vidLessons'); }
+  else if (wz.mode === 'term') { if (isArabicPkg(p)) wzGo('style'); else wzTermGo(); } else wzGo('lessons');
 }
+function wzTermGo() { if (FROM_STEP) wzGo('from'); else wzRun(); }
 // بعد نوع المدرسة: مادة في مكتبتك ← wzOpen · مادة من الكتالوج ← تجربة (الاسم أول مرة)
 async function wzResolve(noName) {
   const o = wzPickOffer();
@@ -3511,7 +3901,7 @@ async function wzReload() {
   wz.link = await getLink(); wz.status = await getStatus();
   await init();
 }
-async function wzSavePrefs() { await chrome.storage.local.set({ wizPrefs: { grade: wz.grade, subject: wz.subject, shift: wz.shift, hw: wz.hw } }).catch(() => {}); }
+async function wzSavePrefs() { await chrome.storage.local.set({ wizPrefs: { grade: wz.grade, subject: wz.subject, shift: wz.shift, hw: wz.hw, join: !!wz.join } }).catch(() => {}); }
 
 // «ابدأ»: المعالج يضبط المحرّك (المخفي) ثم يشغّله
 async function wzRun() {
@@ -3527,6 +3917,14 @@ async function wzRun() {
   // اختيار المعلم: الحصص التي وضع عليها علامة، كلٌّ بتاريخها كما كتبه (لا نشرة ولا خطة أسبوعية)
   WIZ.pickDates = pick ? Object.fromEntries(wz.sel) : null;
   WIZ.pickTyped = pick ? [...wz.typed] : null;
+  // مدمج: كل حصة ← أول حصة في تحضيرها؛ والتاريخ المكتوب لتحضير مكتوب لحصصه كلها
+  const joined = pick && wz.join ? wzUnits(groupByUnit(lessonGroups(p))).filter((x) => x.ls.length > 1) : [];
+  WIZ.pickJoin = joined.length ? Object.fromEntries(joined.flatMap((x) => x.ls.map((l) => [l.id, x.ls[0].id]))) : null;
+  joined.forEach((x) => { if (wz.typed.has(x.ls[0].id)) x.ls.forEach((l) => WIZ.pickTyped.push(l.id)); });
+  // الفصل كاملًا لمادة عربية: «تحضير لكل مهارة» كما اختار المعلم في خطوة شكل التحضير
+  WIZ.skillJoin = wz.mode === 'term' && isArabicPkg(p) && !!wz.join;
+  // وفي الشكل نفسه (الفصل كاملًا أو اختيار الدروس) يحمل عنوان كل تحضير اسم مهارته: «مهارة الإملاء: الدرس …»
+  WIZ.skillTag = (pick || wz.mode === 'term') && isArabicPkg(p) && !!wz.join;
   scope.kind = pick ? 'pick' : 'term';
   scope.picks = new Set(pick ? lessonGroups(p).filter((g) => g.sessions.some((l) => wz.sel.has(l.id))).map((g) => g.key) : []);
   // الفصل كاملًا: بتواريخ النشرة الرسمية إن كانت في ملف المادة، وإلا متتابعًا من أول يوم دراسي قادم
@@ -3539,7 +3937,11 @@ async function wzRun() {
   $('optStep').checked = false;
   $('optNoor').checked = true; $('optAuto').checked = true;
   WIZ.on = true; WIZ.rule = fileOk ? 'official' : ''; WIZ.seq = !fileOk;
-  WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = WIZ.hwOnly || (!!wz.hw && !(p.remote && !p.remote.trial && p.remote.service === 'prep')); WIZ.hwN = 0; WIZ.hwFail = 0; WIZ.hwDone = null;
+  WIZ.roomsOnly = wz.mode === 'rooms'; WIZ.videosOnly = wz.mode === 'video'; WIZ.course = null;
+  // المعلم يختار الوحدات (الغرف) والدروس (الفيديو) بنفسه (المالك 2026-11-14)
+  WIZ.roomPick = WIZ.roomsOnly ? new Set(wz.rsel) : null;
+  WIZ.vidPick = WIZ.videosOnly ? new Set(wz.vsel) : null;
+  WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = !WIZ.roomsOnly && !WIZ.videosOnly && (WIZ.hwOnly || (!!wz.hw && !(p.remote && !p.remote.trial && p.remote.service === 'prep'))); WIZ.hwN = 0; WIZ.hwFail = 0; WIZ.hwDone = null;
   WIZ.hwPick = WIZ.hwOnly ? Object.fromEntries([...wz.hsel].map(([k, v]) => [k, { pub: v.pub, due: v.due }])) : null;
   WIZ.rid = Date.now(); WIZ.sum = 0; WIZ.auto = 0;
   wizRunning();
@@ -3604,6 +4006,8 @@ async function wizAfterRun({ report, ok, failed, stopped, error, had, past = 0 }
     return;
   }
   if (WIZ.hwOnly) { setBox('ok', WIZ.hwHead || '✓ انتهى', WIZ.hwSub || ''); return; }
+  if (WIZ.roomsOnly) { setBox('ok', WIZ.roomHead || '✓ انتهى', WIZ.roomSub || ''); return; }
+  if (WIZ.videosOnly) { setBox('ok', WIZ.vidHead || '✓ انتهى', WIZ.vidSub || ''); return; }
   if (wz.mode === 'pick') $('wzMore').hidden = false;
   // نور لا تقبل تاريخًا مضى: ما مضى تاريخه تُرك بهدوء، ويُذكر للمعلم دون صيغة خطأ
   const pt = past ? ` ${past === 1 ? 'حصة واحدة مضى تاريخها' : `${countWord(past)} مضى تاريخها`} ونور لا تقبل نشرها بتاريخ ماضٍ، فتركتها.` : '';
@@ -3653,7 +4057,7 @@ function wzResumeBtn(label) {
 function wzAgain() {
   clearTimeout(WIZ.timer);
   document.body.classList.remove('wiz-run', 'showplan');
-  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null;
+  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null; WIZ.pickJoin = null; WIZ.skillJoin = false; WIZ.skillTag = false;
   $('wizCard').hidden = false;
   $('nowCard').hidden = true; $('planCard').hidden = true; $('logCard').hidden = true;
   $('topMsg').className = 'msg';
@@ -3664,7 +4068,7 @@ function wzAgain() {
 function wzMore() {
   clearTimeout(WIZ.timer);
   document.body.classList.remove('wiz-run', 'showplan');
-  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null;
+  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null; WIZ.pickJoin = null; WIZ.skillJoin = false; WIZ.skillTag = false;
   $('wizCard').hidden = false;
   $('nowCard').hidden = true; $('planCard').hidden = true; $('logCard').hidden = true;
   $('topMsg').className = 'msg';
@@ -3782,7 +4186,7 @@ async function wizBoot() {
   await freshRecord();
   wz.link = await getLink(); wz.status = await getStatus();
   const pf = (await chrome.storage.local.get('wizPrefs').catch(() => ({}))).wizPrefs || {};
-  wz.grade = pf.grade || 0; wz.subject = pf.subject || ''; wz.shift = pf.shift || ''; wz.hw = pf.hw !== false;
+  wz.grade = pf.grade || 0; wz.subject = pf.subject || ''; wz.shift = pf.shift || ''; wz.hw = pf.hw !== false; wz.join = !!pf.join;
   wzRender();
   const [cat] = await Promise.all([afaqCatalog().catch(() => null), wz.link ? afaqSync().catch(() => {}) : null, loadNoorCourses()]);
   settings = await getSettings();   // إجازات التقويم الرسمي وصلت مع الكتالوج

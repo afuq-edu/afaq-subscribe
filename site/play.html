@@ -190,6 +190,8 @@ label.f { display: block; font-weight: 600; margin-bottom: 6px; }
     <ul class="goals" id="sGoals"></ul>
     <label class="f" for="name">اكتب اسمك كما تريده في الشهادة</label>
     <input class="input" id="name" autocomplete="name" maxlength="40" placeholder="الاسم الثلاثي">
+    <label class="f" for="school">اسم مدرستك (يظهر في الشهادة)</label>
+    <input class="input" id="school" autocomplete="organization" maxlength="60" placeholder="مثال: مدرسة الأفق للتعليم الأساسي">
     <div class="seg" role="group" aria-label="طالب أو طالبة">
       <button type="button" data-g="m" aria-pressed="true">طالب</button>
       <button type="button" data-g="f" aria-pressed="false">طالبة</button>
@@ -266,10 +268,12 @@ label.f { display: block; font-weight: 600; margin-bottom: 6px; }
     <div class="cert"><canvas id="cv" width="1600" height="1130" aria-label="الشهادة"></canvas></div>
     <div class="row" style="justify-content:center">
       <button class="btn" id="dl">حفظ الشهادة صورة</button>
+      <button class="btn ghost" id="cp">انسخ نتيجتي</button>
       <button class="btn ghost" id="share" hidden>مشاركة</button>
       <button class="btn ghost" id="pr">طباعة</button>
       <button class="btn ghost" id="again">أعد الأنشطة</button>
     </div>
+    <p class="muted" id="rNote" style="text-align:center;margin:10px 0 0">احفظ شهادتك، ثم اكتب نتيجتك في غرفة النقاش وأرفق صورة الشهادة.</p>
     <div class="review" id="rev" hidden><h3>راجع هذه الإجابات</h3><ol id="revList"></ol></div>
   </section>
 
@@ -290,7 +294,12 @@ label.f { display: block; font-weight: 600; margin-bottom: 6px; }
   const cheer = () => ['أحسنت!', 'إجابة صحيحة!', 'رائع!', 'ممتاز!'][Math.floor(Math.random() * 4)];
 
   // ?d=sc-8/1-1  →  games/sc-8/1-1.json
-  const id = (new URLSearchParams(location.search).get('d') || '').replace(/[^\w\-\/]/g, '');
+  const Q = new URLSearchParams(location.search);
+  const id = (Q.get('d') || '').replace(/[^\w\-\/]/g, '');
+  // اسم المعلم (من رابط «حاضر» في غرفة النقاش) ومدرسة الطالب: يظهران في الشهادة
+  const clip = (v, n) => String(v || '').replace(/[<>]/g, '').replace(/\s+/g, ' ').trim().slice(0, n);
+  const TEACHER = clip(Q.get('t'), 60);
+  const school = () => clip(store.get('afaq.school'), 60);
   const SCREENS = ['load', 'start', 'hub', 'tf', 'bx', 'ht', 'mc', 'res'];
   const show = (s) => { SCREENS.forEach((x) => { $(x).hidden = x !== s; }); window.scrollTo({ top: 0 }); };
   let G, gender = store.get('afaq.g') || 'm', PARTS = [], done = {}, misses = [];
@@ -318,6 +327,7 @@ label.f { display: block; font-weight: 600; margin-bottom: 6px; }
     $('sSub').textContent = AR(PARTS.length) + ' أنشطة قصيرة، وفي النهاية شهادة باسمك.';
     $('sGoals').innerHTML = (G.outcomes || []).map((o) => '<li>' + esc(o) + '</li>').join('');
     $('name').value = store.get('afaq.name') || '';
+    $('school').value = school() || clip(Q.get('s'), 60);
     setGender(gender);
     $('go').disabled = $('name').value.trim().length < 2;
     show('start');
@@ -329,7 +339,7 @@ label.f { display: block; font-weight: 600; margin-bottom: 6px; }
   document.querySelectorAll('.seg button').forEach((b) => (b.onclick = () => setGender(b.dataset.g)));
   $('name').oninput = () => { $('go').disabled = $('name').value.trim().length < 2; };
   $('name').onkeydown = (e) => { if (e.key === 'Enter' && !$('go').disabled) $('go').click(); };
-  $('go').onclick = () => { store.set('afaq.name', $('name').value.trim()); store.set('afaq.g', gender); done = {}; misses = []; hub(); };
+  $('go').onclick = () => { store.set('afaq.name', $('name').value.trim()); store.set('afaq.school', clip($('school').value, 60)); store.set('afaq.g', gender); done = {}; misses = []; hub(); };
 
   // ---------- قائمة الأنشطة ----------
   function hub() {
@@ -510,8 +520,21 @@ label.f { display: block; font-weight: 600; margin-bottom: 6px; }
     $('rSc').innerHTML = PARTS.map((p) => '<div><b>' + AR(done[p.key] || 0) + ' من ' + AR(p.list.length) + '</b>' + p.name + '</div>').join('');
     $('rev').hidden = !misses.length;
     $('revList').innerHTML = misses.map((m) => '<li>' + esc(m.q) + '<span>' + esc(m.a) + '</span></li>').join('');
+    LAST = { got, max, R };
     drawCert(name, R, got, max);
   }
+  let LAST = null;
+  // نص النتيجة للصقه في غرفة النقاش
+  $('cp').onclick = async () => {
+    if (!LAST) return;
+    const t = 'نتيجتي في أنشطة درس «' + lessonName() + '»: ' + AR(LAST.got) + ' من ' + AR(LAST.max) + ' — بتقدير «' + LAST.R.word + '»' + (store.get('afaq.name') ? ' — ' + store.get('afaq.name') : '');
+    let ok = false;
+    try { await navigator.clipboard.writeText(t); ok = true; } catch (e) {
+      try { const ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select(); ok = document.execCommand('copy'); ta.remove(); } catch (e2) {}
+    }
+    $('cp').textContent = ok ? 'نُسخت النتيجة ✓' : t;
+    setTimeout(() => { $('cp').textContent = 'انسخ نتيجتي'; }, 2500);
+  };
 
   // ---------- الشهادة ----------
   async function drawCert(name, R, got, max) {
@@ -545,14 +568,20 @@ label.f { display: block; font-weight: 600; margin-bottom: 6px; }
       T(p.name, 772, '500 28px "IBM Plex Sans Arabic"', '#5D7083', cx, bw - 20);
     });
     // المجموع
-    x.fillStyle = '#FBF1DC'; x.beginPath(); x.roundRect ? x.roundRect(W / 2 - 330, 835, 660, 96, 48) : x.rect(W / 2 - 330, 835, 660, 96); x.fill();
-    T('المجموع ' + AR(got) + ' من ' + AR(max) + ' — بتقدير «' + R.word + '»', 883, '700 40px Alexandria', '#7A5310');
+    // خلفية المجموع بطول نصه
+    const sc = 'المجموع ' + AR(got) + ' من ' + AR(max) + ' — بتقدير «' + R.word + '»';
+    x.font = '700 40px Alexandria'; const pw = Math.min(W - 260, Math.max(660, x.measureText(sc).width + 110));
+    x.fillStyle = '#FBF1DC'; x.beginPath(); x.roundRect ? x.roundRect(W / 2 - pw / 2, 835, pw, 96, 48) : x.rect(W / 2 - pw / 2, 835, pw, 96); x.fill();
+    T(sc, 883, '700 40px Alexandria', '#7A5310', W / 2, pw - 60);
     for (let k = 0; k < 3; k++) star(x, W / 2 + (k - 1) * 66, 980, 24, k < R.stars ? '#D99A2B' : '#E5E9EE');
     const d = new Date().toLocaleDateString('ar-OM', { year: 'numeric', month: 'long', day: 'numeric' });
     x.font = '500 26px "IBM Plex Sans Arabic"'; x.fillStyle = '#5D7083';
     x.textAlign = 'right'; x.fillText('التاريخ: ' + d, W - 120, 1040);
     x.textAlign = 'left'; x.fillText('منصة أفق التعليمية', 120, 1040);
     x.textAlign = 'center';
+    // المدرسة والمعلم (إن عُرفا)
+    const who = [school() ? 'المدرسة: ' + school() : '', TEACHER ? 'المعلم: ' + TEACHER : ''].filter(Boolean).join('  ·  ');
+    if (who) T(who, 1040, '600 27px "IBM Plex Sans Arabic"', '#13263F', W / 2, 640);
   }
   function star(x, cx, cy, r, color) {
     x.fillStyle = color; x.beginPath();

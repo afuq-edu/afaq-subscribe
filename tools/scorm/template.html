@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__TITLE__</title>
+<style>
+@font-face { font-family: 'Alexandria'; font-weight: 700; src: url(data:font/woff2;base64,__F_ALEX_AR__) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC; }
+@font-face { font-family: 'Alexandria'; font-weight: 700; src: url(data:font/woff2;base64,__F_ALEX_LAT__) format('woff2'); unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: 'Plex'; font-weight: 500; src: url(data:font/woff2;base64,__F_PLEX_AR__) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC; }
+@font-face { font-family: 'Plex'; font-weight: 500; src: url(data:font/woff2;base64,__F_PLEX_LAT__) format('woff2'); unicode-range: U+0000-00FF, U+2000-206F; }
+:root { --ink: #13263F; --mute: #5D7083; --gold: #D99A2B; --teal: #1C6E7D; --ok: #1F7A4D; --okbg: #E5F4EC; --no: #A8402F; --nobg: #FBEAE6; --bg: #F4F7FA; --card: #fff; --line: #DDE4EB; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font: 500 18px/1.7 'Plex', Tahoma, 'Segoe UI', sans-serif; min-height: 100vh; }
+main { max-width: 760px; margin: 0 auto; padding: 20px 16px 40px; }
+.top { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.logo { width: 46px; height: 46px; flex: none; }
+.top h1 { font: 700 22px/1.35 'Alexandria', Tahoma, sans-serif; margin: 0; }
+.top p { margin: 0; color: var(--mute); font-size: 15px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px; box-shadow: 0 6px 22px rgba(19, 38, 63, .06); }
+h2 { font: 700 21px/1.5 'Alexandria', Tahoma, sans-serif; margin: 0 0 14px; }
+label.f { display: block; font-size: 15px; color: var(--mute); margin: 12px 0 4px; }
+input[type=text] { width: 100%; font: inherit; padding: 10px 14px; border: 1.5px solid var(--line); border-radius: 12px; background: #fff; color: var(--ink); }
+input[type=text]:focus { outline: none; border-color: var(--teal); }
+.seg { display: flex; gap: 8px; margin-top: 6px; }
+.seg button { flex: 1; }
+.btn { font: 700 18px 'Alexandria', Tahoma, sans-serif; border: 0; border-radius: 14px; padding: 12px 20px; background: var(--ink); color: #fff; cursor: pointer; }
+.btn.alt { background: #E9EEF3; color: var(--ink); }
+.btn.on { background: var(--teal); color: #fff; }
+.btn:disabled { opacity: .45; cursor: default; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.dots { display: flex; gap: 8px; justify-content: center; margin: 0 0 14px; }
+.dots i { width: 34px; height: 8px; border-radius: 6px; background: var(--line); }
+.dots i.cur { background: var(--gold); }
+.dots i.ok { background: var(--ok); }
+.dots i.no { background: var(--no); }
+.qn { color: var(--mute); font-size: 15px; margin: 0 0 4px; }
+.opts { display: grid; gap: 10px; }
+.opt { text-align: start; font: 500 18px/1.6 'Plex', Tahoma, sans-serif; border: 1.5px solid var(--line); background: #fff; color: var(--ink); border-radius: 14px; padding: 12px 16px; cursor: pointer; display: flex; gap: 12px; align-items: center; }
+.opt b { flex: none; width: 32px; height: 32px; border-radius: 50%; background: #EEF3F7; display: grid; place-items: center; font: 700 16px 'Alexandria', Tahoma, sans-serif; }
+.opt:hover:not(:disabled) { border-color: var(--teal); }
+.opt.ok { border-color: var(--ok); background: var(--okbg); }
+.opt.ok b { background: var(--ok); color: #fff; }
+.opt.no { border-color: var(--no); background: var(--nobg); }
+.opt.no b { background: var(--no); color: #fff; }
+.opt:disabled { cursor: default; }
+.why { margin-top: 14px; padding: 12px 16px; border-radius: 12px; background: #FBF1DC; color: #6A4710; display: none; }
+.why.show { display: block; }
+.score { text-align: center; }
+.score .big { font: 700 44px 'Alexandria', Tahoma, sans-serif; color: var(--teal); margin: 4px 0; }
+.stars { font-size: 34px; letter-spacing: 6px; color: var(--gold); }
+.stars s { text-decoration: none; color: #E2E7EC; }
+.cert { margin-top: 18px; }
+.cert canvas, .cert img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); display: block; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
+.grid .wide { grid-column: 1 / -1; }
+.note { color: var(--mute); font-size: 14px; margin-top: 10px; }
+[hidden] { display: none !important; }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } body { font-size: 17px; } .card { padding: 16px; } }
+@media print { body { background: #fff; } main > *:not(#done) { display: none !important; } #done > *:not(.cert) { display: none !important; } .card { border: 0; box-shadow: none; padding: 0; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#13263F"/><path d="M10 31h28" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M15 31a9 9 0 0 1 18 0" fill="#D99A2B"/><path d="M24 12v5M14 16l3 3M34 16l-3 3" stroke="#D99A2B" stroke-width="2.6" stroke-linecap="round"/></svg>
+    <div><h1 id="hL"></h1><p id="hS"></p></div>
+  </div>
+
+  <section class="card" id="start">
+    <h2>خمسة أسئلة قصيرة، وفي النهاية شهادة باسمك</h2>
+    <label class="f" for="name">اسمك كما تريده في الشهادة</label>
+    <input type="text" id="name" maxlength="60" autocomplete="name">
+    <div class="seg" role="group" aria-label="طالب أو طالبة">
+      <button type="button" class="btn alt" data-g="m">طالب</button>
+      <button type="button" class="btn alt" data-g="f">طالبة</button>
+    </div>
+    <div class="row"><button class="btn" id="go" disabled>ابدأ</button></div>
+  </section>
+
+  <section class="card" id="quiz" hidden>
+    <div class="dots" id="dots"></div>
+    <p class="qn" id="qn"></p>
+    <h2 id="qt"></h2>
+    <div class="opts" id="opts"></div>
+    <div class="why" id="why"></div>
+    <div class="row"><button class="btn" id="next" hidden>التالي</button></div>
+  </section>
+
+  <section class="card" id="done" hidden>
+    <div class="score">
+      <div id="msg"></div>
+      <div class="big" id="big"></div>
+      <div class="stars" id="stars"></div>
+    </div>
+    <div class="grid">
+      <div class="wide"><label class="f" for="cName">اسم الطالب</label><input type="text" id="cName" maxlength="60"></div>
+      <div><label class="f" for="cSchool">اسم المدرسة</label><input type="text" id="cSchool" maxlength="70"></div>
+      <div><label class="f" for="cTeacher">اسم المعلم</label><input type="text" id="cTeacher" maxlength="60"></div>
+    </div>
+    <div class="cert"><canvas id="cv" width="1600" height="1130" aria-label="الشهادة"></canvas><img id="cvImg" alt="الشهادة" hidden></div>
+    <div class="row">
+      <button class="btn" id="dl">تحميل الشهادة</button>
+      <button class="btn alt" id="pr">طباعة</button>
+      <button class="btn alt" id="again">حل الأسئلة مرة أخرى</button>
+    </div>
+    <p class="note" id="dlNote" hidden>إن لم يبدأ التحميل: اضغط على الشهادة مطولًا أو بالزر الأيمن واختر حفظ الصورة.</p>
+  </section>
+</main>
+<script>
+const D = __DATA__;
+(function () {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const AR = (n) => String(n).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d]);
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const store = { get: (k) => { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} } };
+
+  // ---------- SCORM 1.2 (نور) ----------
+  const API = (() => {
+    let w = window;
+    for (let i = 0; i < 12 && w; i++) { try { if (w.API) return w.API; if (w.parent === w) break; w = w.parent; } catch (e) { break; } }
+    try { if (window.opener && window.opener.API) return window.opener.API; } catch (e) {}
+    return null;
+  })();
+  const S = {
+    on: false,
+    init() { if (!API) return; try { this.on = String(API.LMSInitialize('')) === 'true'; } catch (e) {} },
+    get(k) { if (!this.on) return ''; try { return String(API.LMSGetValue(k) || ''); } catch (e) { return ''; } },
+    set(k, v) { if (!this.on) return; try { API.LMSSetValue(k, String(v)); } catch (e) {} },
+    commit() { if (!this.on) return; try { API.LMSCommit(''); } catch (e) {} },
+    finish() { if (!this.on) return; try { API.LMSFinish(''); } catch (e) {} this.on = false; },
+  };
+  S.init();
+  if (S.on && !/^(passed|completed)$/.test(S.get('cmi.core.lesson_status'))) { S.set('cmi.core.lesson_status', 'incomplete'); S.commit(); }
+  window.addEventListener('pagehide', () => S.finish());
+  window.addEventListener('beforeunload', () => S.finish());
+  // «الاسم الأخير، الاسم الأول» في بعض المنصات ← الاسم كما يُكتب
+  const lmsName = (() => { const n = S.get('cmi.core.student_name').trim(); const m = n.split(/\s*[,،]\s*/); return m.length === 2 && m[0] && m[1] ? m[1] + ' ' + m[0] : n; })();
+
+  $('hL').textContent = D.lesson;
+  $('hS').textContent = D.subject + ' · ' + D.grade;
+  document.title = D.lesson;
+
+  // ---------- البداية ----------
+  let gender = store.get('afaq.g') || '';
+  const nm = $('name');
+  nm.value = store.get('afaq.name') || lmsName;
+  const ready = () => { $('go').disabled = !(nm.value.trim().length >= 2 && gender); };
+  document.querySelectorAll('[data-g]').forEach((b) => {
+    if (b.dataset.g === gender) b.classList.add('on');
+    b.onclick = () => { gender = b.dataset.g; store.set('afaq.g', gender); document.querySelectorAll('[data-g]').forEach((x) => x.classList.toggle('on', x === b)); ready(); };
+  });
+  nm.oninput = ready; ready();
+
+  // ---------- الأسئلة ----------
+  const shuffle = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  let Q = [], at = 0, got = 0, marks = [];
+  const LET = ['أ', 'ب', 'ج', 'د', 'هـ'];
+  function begin() {
+    store.set('afaq.name', nm.value.trim());
+    Q = D.q.map((x) => ({ q: x.q, why: x.why, right: x.o[0], o: shuffle(x.o) }));
+    at = 0; got = 0; marks = [];
+    $('start').hidden = true; $('done').hidden = true; $('quiz').hidden = false;
+    show();
+  }
+  function show() {
+    const x = Q[at];
+    $('dots').innerHTML = Q.map((_, i) => '<i class="' + (i < at ? (marks[i] ? 'ok' : 'no') : i === at ? 'cur' : '') + '"></i>').join('');
+    $('qn').textContent = 'السؤال ' + AR(at + 1) + ' من ' + AR(Q.length);
+    $('qt').textContent = x.q;
+    $('why').className = 'why'; $('why').textContent = '';
+    $('next').hidden = true;
+    $('opts').innerHTML = x.o.map((o, i) => '<button class="opt" data-i="' + i + '"><b>' + LET[i] + '</b><span>' + esc(o) + '</span></button>').join('');
+    $('opts').querySelectorAll('.opt').forEach((b) => { b.onclick = () => pick(+b.dataset.i); });
+    $('qt').focus && $('qt').setAttribute('tabindex', '-1');
+  }
+  function pick(i) {
+    const x = Q[at], ok = x.o[i] === x.right;
+    marks[at] = ok; if (ok) got++;
+    $('opts').querySelectorAll('.opt').forEach((b, k) => { b.disabled = true; if (x.o[k] === x.right) b.classList.add('ok'); else if (k === i) b.classList.add('no'); });
+    $('why').textContent = (ok ? 'أحسنت! ' : 'الإجابة الصحيحة: «' + x.right + '». ') + (x.why || '');
+    $('why').className = 'why show';
+    $('next').textContent = at + 1 < Q.length ? 'التالي' : 'النتيجة والشهادة';
+    $('next').hidden = false; $('next').focus();
+    if (S.on) { const n = 'cmi.interactions.' + at + '.'; S.set(n + 'id', 'q' + (at + 1)); S.set(n + 'type', 'choice'); S.set(n + 'result', ok ? 'correct' : 'wrong'); }
+  }
+  $('next').onclick = () => { at++; if (at < Q.length) show(); else finish(); };
+
+  // ---------- النتيجة ----------
+  const RATE = (g, n) => { const p = g / n; return p === 1 ? { w: 'ممتاز', s: 3 } : p >= .8 ? { w: 'ممتاز', s: 3 } : p >= .6 ? { w: 'جيد جدًا', s: 2 } : p >= .4 ? { w: 'جيد', s: 1 } : { w: 'مشارك', s: 0 }; };
+  function finish() {
+    const n = Q.length, r = RATE(got, n), pct = Math.round(got / n * 100);
+    S.set('cmi.core.score.min', 0); S.set('cmi.core.score.max', 100); S.set('cmi.core.score.raw', pct);
+    S.set('cmi.core.lesson_status', got / n >= .6 ? 'passed' : 'failed'); S.commit();
+    $('quiz').hidden = true; $('done').hidden = false;
+    $('msg').textContent = got === n ? 'رائع! أجبت عن الأسئلة كلها إجابة صحيحة' : got / n >= .6 ? 'أحسنت! أكملت أسئلة الدرس' : 'أكملت الأسئلة، وتستطيع أن تحاول مرة أخرى';
+    $('big').textContent = AR(got) + ' من ' + AR(n);
+    $('stars').innerHTML = [0, 1, 2].map((k) => (k < r.s ? '★' : '<s>★</s>')).join('');
+    $('cName').value = nm.value.trim();
+    $('cSchool').value = store.get('afaq.school') || D.school || '';
+    $('cTeacher').value = D.teacher || store.get('afaq.teacher') || '';
+    draw();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  ['cName', 'cSchool', 'cTeacher'].forEach((id) => { $(id).oninput = () => { if (id === 'cSchool') store.set('afaq.school', $(id).value.trim()); if (id === 'cTeacher' && !D.teacher) store.set('afaq.teacher', $(id).value.trim()); draw(); }; });
+
+  // ---------- الشهادة ----------
+  async function draw() {
+    try { await Promise.all(['700 80px Alexandria', '500 34px Plex'].map((f) => document.fonts.load(f))); } catch (e) {}
+    const c = $('cv'), x = c.getContext('2d'), W = c.width, H = c.height, n = Q.length, r = RATE(got, n);
+    const F1 = (s) => '700 ' + s + 'px Alexandria, Tahoma, sans-serif', F2 = (s) => '500 ' + s + 'px Plex, Tahoma, sans-serif';
+    x.direction = 'rtl'; x.textAlign = 'center'; x.textBaseline = 'middle';
+    x.fillStyle = '#FFFDF8'; x.fillRect(0, 0, W, H);
+    x.strokeStyle = '#13263F'; x.lineWidth = 10; x.strokeRect(36, 36, W - 72, H - 72);
+    x.strokeStyle = '#D99A2B'; x.lineWidth = 3; x.strokeRect(62, 62, W - 124, H - 124);
+    [[62, 62], [W - 62, 62], [62, H - 62], [W - 62, H - 62]].forEach(([a, b]) => { x.fillStyle = '#D99A2B'; x.beginPath(); x.arc(a, b, 12, 0, 7); x.fill(); });
+    x.save(); x.translate(W / 2, 150);
+    x.strokeStyle = '#13263F'; x.lineWidth = 7; x.lineCap = 'round'; x.beginPath(); x.moveTo(-66, 26); x.lineTo(66, 26); x.stroke();
+    x.fillStyle = '#D99A2B'; x.beginPath(); x.arc(0, 26, 36, Math.PI, 0); x.fill();
+    x.strokeStyle = '#D99A2B'; x.lineWidth = 6;
+    [[0, -36, 0, -20], [-38, -16, -28, -6], [38, -16, 28, -6]].forEach(([a, b, d, e]) => { x.beginPath(); x.moveTo(a, b); x.lineTo(d, e); x.stroke(); });
+    x.restore();
+    const T = (t, y, f, col, cx = W / 2, mw = W - 260) => { x.font = f; x.fillStyle = col; x.fillText(t, cx, y, mw); };
+    const f = gender === 'f';
+    T('شهادة إنجاز', 255, F1(80), '#13263F');
+    T('تُمنح هذه الشهادة ' + (f ? 'للطالبة' : 'للطالب'), 345, F2(34), '#5D7083');
+    T($('cName').value.trim() || '—', 432, F1(84), '#1C6E7D');
+    x.strokeStyle = '#D99A2B'; x.lineWidth = 3; x.beginPath(); x.moveTo(W / 2 - 330, 495); x.lineTo(W / 2 + 330, 495); x.stroke();
+    T((f ? 'لإنجازها' : 'لإنجازه') + ' أسئلة درس «' + D.lesson + '»', 560, F1(40), '#13263F');
+    T(D.subject + ' — ' + D.grade, 618, F2(32), '#5D7083');
+    // خلفية سطر الدرجة على قدر نصه (لا تقصر عن التقدير الطويل)
+    const sc = 'الدرجة ' + AR(got) + ' من ' + AR(n) + ' — بتقدير «' + r.w + '»';
+    x.font = F1(40); const pw = Math.min(W - 260, Math.max(560, x.measureText(sc).width + 110));
+    x.fillStyle = '#FBF1DC'; x.beginPath(); x.roundRect ? x.roundRect(W / 2 - pw / 2, 665, pw, 96, 48) : x.rect(W / 2 - pw / 2, 665, pw, 96); x.fill();
+    T(sc, 713, F1(40), '#7A5310', W / 2, pw - 60);
+    for (let k = 0; k < 3; k++) star(x, W / 2 + (k - 1) * 66, 812, 24, k < r.s ? '#D99A2B' : '#E5E9EE');
+    const school = $('cSchool').value.trim(), teacher = $('cTeacher').value.trim();
+    const col = (label, val, cx) => { T(label, 905, F2(28), '#5D7083', cx, 560); T(val || '—', 955, F1(36), '#13263F', cx, 560); x.strokeStyle = '#DDE4EB'; x.lineWidth = 2; x.beginPath(); x.moveTo(cx - 240, 990); x.lineTo(cx + 240, 990); x.stroke(); };
+    col('المدرسة', school, W - 420);
+    col(f ? 'المعلمة / المعلم' : 'المعلم / المعلمة', teacher, 420);
+    const d = new Date().toLocaleDateString('ar-OM', { year: 'numeric', month: 'long', day: 'numeric' });
+    T('التاريخ: ' + d, 1040, F2(26), '#5D7083');
+    try { $('cvImg').src = c.toDataURL('image/png'); } catch (e) {}
+  }
+  function star(x, cx, cy, r, color) {
+    x.fillStyle = color; x.beginPath();
+    for (let k = 0; k < 10; k++) { const a = -Math.PI / 2 + k * Math.PI / 5, rr = k % 2 ? r * .45 : r; x.lineTo(cx + rr * Math.cos(a), cy + rr * Math.sin(a)); }
+    x.closePath(); x.fill();
+  }
+  const fileName = () => 'شهادة ' + ($('cName').value.trim() || 'الطالب') + ' - ' + D.lesson.replace(/[\\/:*?"<>|]/g, '') + '.png';
+  $('dl').onclick = () => {
+    $('cv').toBlob((b) => {
+      try {
+        const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = fileName(); document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+      } catch (e) {}
+      // نور يعرض الدرس داخل إطار قد يمنع التحميل: تظهر الشهادة صورة يحفظها الطالب بنفسه
+      setTimeout(() => { $('cv').hidden = true; $('cvImg').hidden = false; $('dlNote').hidden = false; }, 1200);
+    });
+  };
+  $('pr').onclick = () => window.print();
+  $('again').onclick = begin;
+  $('go').onclick = begin;
+})();
+</script>
+</body>
+</html>
