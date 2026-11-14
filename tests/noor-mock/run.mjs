@@ -970,9 +970,9 @@ function checkSkillTerm(name, rows, A, periods) {
   check(!clash.length, `${name}: no period holds two preps`, clash.join(', '));
   return want;
 }
-T(39, 'Arabic grade 4, full term, «تحضير لكل مهارة» (owner 2026-11-14): two sections with the same timetable (two periods on Sunday): a prep per skill group in tree order, each on the date of its first session, the 20-session reading lesson = 8 preps; the wizard asks the style once; a re-run adds nothing', async (env) => {
+T(39, 'Arabic grade 4, full term, «تحضير لكل مهارة» (owner 2026-11-14): two sections with the same timetable (two periods a day: the ten sessions a week of the plan): a prep per skill group in tree order, each on the date of its first session, the 20-session reading lesson = 8 preps; the wizard asks the style once; a re-run adds nothing', async (env) => {
   const A = await arabic4();
-  const periods = { 0: [['1', 2], ['2', 2]], 1: [['1', 1], ['2', 1]], 2: [['1', 1], ['2', 1]], 3: [['1', 1], ['2', 1]], 4: [['1', 1], ['2', 1]] };
+  const periods = Object.fromEntries([0, 1, 2, 3, 4].map((d) => [d, [['1', 2], ['2', 2]]]));
   const noor = env.noor({ tree: A.tree, courses: A.courses, periods });
   env.afaq.reset({ pkg: PKG, offer: A.offer });
   const b = await env.launch(noor);
@@ -987,9 +987,9 @@ T(39, 'Arabic grade 4, full term, «تحضير لكل مهارة» (owner 2026-1
   check(noor.st.rows.length === n1, `re-run adds nothing (rows ${n1} → ${noor.st.rows.length})`, fmtRows(noor.st.rows.slice(n1)));
   return b;
 });
-T(40, 'Arabic grade 4, full term, «تحضير لكل مهارة», sections with DIFFERENT periods (section 1 twice on Sunday and on Wednesday, section 2 on Thursday): each section keeps its own sequence period after period; a skill prep is saved for the sections whose group starts on the same day', async (env) => {
+T(40, 'Arabic grade 4, full term, «تحضير لكل مهارة», sections with DIFFERENT periods (ten a week each: section 1 three on Sunday and one on Thursday, section 2 two a day): each section keeps its own sequence period after period; a skill prep is saved for the sections whose group starts on the same day', async (env) => {
   const A = await arabic4();
-  const periods = { 0: [['1', 2], ['2', 1]], 1: [['1', 1], ['2', 1]], 2: [['1', 1], ['2', 1]], 3: [['1', 1]], 4: [['2', 1]] };
+  const periods = { 0: [['1', 3], ['2', 2]], 1: [['1', 2], ['2', 2]], 2: [['1', 2], ['2', 2]], 3: [['1', 2], ['2', 2]], 4: [['1', 1], ['2', 2]] };
   const noor = env.noor({ tree: A.tree, courses: A.courses, periods });
   env.afaq.reset({ pkg: PKG, offer: A.offer });
   const b = await env.launch(noor);
@@ -1005,7 +1005,7 @@ T(40, 'Arabic grade 4, full term, «تحضير لكل مهارة», sections wit
 });
 T(41, 'Arabic grade 4, full term, «تحضير لكل مهارة», the tool is closed after a few preps and opened again (fresh local record): the term continues, and the periods of the sessions inside the preps already in Noor stay theirs — the final dates are those of an uninterrupted run', async (env) => {
   const A = await arabic4();
-  const periods = { 0: [['1', 2]], 1: [['1', 1]], 2: [['1', 1]], 3: [['1', 1]], 4: [['1', 1]] };
+  const periods = Object.fromEntries([0, 1, 2, 3, 4].map((d) => [d, [['1', 2]]]));
   const noor = env.noor({ tree: A.tree, courses: A.courses, periods });
   env.afaq.reset({ pkg: PKG, offer: A.offer });
   const b = await env.launch(noor);
