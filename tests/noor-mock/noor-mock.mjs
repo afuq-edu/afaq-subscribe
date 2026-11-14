@@ -359,6 +359,20 @@ ${st.rooms.map((r) => `<div class="discussion-block teacher-tile"><a class="uppe
 <input type="checkbox" class="add-post-checkbox" id="add_post_checkbox" name="add_post_checkbox"><div class="add-post"><form action="${HOST}/teacher/posts/reply" id="PostReplyForm" method="post" accept-charset="utf-8"><div><input type="hidden" name="_method" value="POST"><input type="hidden" name="data[Token][csrf_token]" value="csrf-rooms" id="TokenCsrfToken"></div>
 <input name="data[Post][title]" maxlength="255" required="required" type="text" id="PostTitle"><input type="text" id="PostDescriptionRequired" required="required" value="" aria-hidden="true"><textarea name="data[Post][post]" id="post" class="form-control add-comment" rows="6"></textarea>
 <input type="hidden" name="data[Post][parentid]" value="${r.id}" id="PostParentid"><input type="hidden" name="data[Post][user_id]" value="99887766" id="PostUserId"><button type="submit" class="btn btn-primary">إضافة</button></form></div>
+${cfg.topicAjax === false ? '' : `<script>
+// real Noor (owner's screenshot 2026-11-14): the topic is added in the page itself, with no navigation, and the form is not sent twice
+document.getElementById('PostReplyForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = this; if (f.getAttribute('submitted')) return; f.setAttribute('submitted', 'true');
+  fetch(f.action, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest' }, body: new URLSearchParams(new FormData(f)).toString() })
+    .then(function (r) { return r.json(); }).then(function (j) {
+      if (!j || !j.ok) return;
+      var d = document.createElement('div'); d.className = 'media comment-holder mainComment';
+      var t = document.createElement('div'); t.className = 'topic-title'; t.textContent = j.title; d.appendChild(t);
+      setTimeout(function () { f.parentNode.parentNode.insertBefore(d, f.parentNode.nextSibling); }, 1500);
+    });
+});
+</script>`}
 ${r.topics.map((t, i) => `<div class="media comment-holder mainComment" data-post-id="${7000 + i}"><div class="topic-title">${esc(t.title)}</div><div class="media-text"><div id="body_${7000 + i}">${t.html}</div></div></div>`).join('')}`);
   // ---------- «مكتبة الفيديو» (owner's saved pages, 2026-11-14) ----------
   const VT = 'TID3ETr';
@@ -586,6 +600,7 @@ ${[1, 2].map((k) => `<input type="hidden" name="data[User][selected_students][${
     if (p === '/teacher/posts/add' && req.method() === 'POST') { const r = roomAdd(req.postData()); return html(r.err ? roomsPage(`<div class="alert alert-danger">${esc(r.err)}</div>`) : roomsPage()); }
     m = p.match(/^\/teacher\/posts\/article\/pid:([A-Za-z0-9_-]+)$/);
     if (m) { const r = st.rooms.find((x) => x.pid === m[1]); if (r) return html(articlePage(r)); }
+    if (p === '/teacher/posts/reply' && req.method() === 'POST' && /xmlhttprequest/i.test(req.headers()['x-requested-with'] || '')) { const x = roomReply(req.postData()); return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ ok: !x.err, title: x.r && !x.err ? x.r.topics[0].title : '' }) }); }
     if (p === '/teacher/posts/reply' && req.method() === 'POST') { const x = roomReply(req.postData()); if (x.r) return html(articlePage(x.r, x.err ? `<div class="alert alert-danger">${esc(x.err)}</div>` : '')); }
     return html(page('غير موجود', '<p>الصفحة غير موجودة</p>'), 404);
   }

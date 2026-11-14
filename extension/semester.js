@@ -2797,14 +2797,27 @@ async function roomsLive(op) {
   for (const t of op.topics) {
     if (stopFlag) break;
     if (have.has(kwNorm(t.title))) { had++; continue; }
-    setBox('run', `أضيف موضوع «${shortT(t.title)}»…`, op.label || '');
-    const nv = waitNavigation(60000);
+    // اسم الدرس (آخر جزء من «Unit3: Let's explore!: Lesson2») وترتيب الموضوع بين مواضيع الغرفة، ليرى المعلم التقدم
+    const tl = String(t.title).split(/[:：]/).map((x) => x.trim()).filter(Boolean).pop() || t.title;
+    setBox('run', `أضيف موضوع «${tl.length <= 40 ? tl : tl.slice(0, 40) + '…'}»…`, `الموضوع ${toAr(op.topics.indexOf(t) + 1)} من ${toAr(op.topics.length)}${op.units > 1 ? ' · الغرفة ' + op.label : ''}`);
     const f = await execMain(topicFill, t);
     if (!f || !f.ok) return { err: (f && f.err) || 'nofill', made, added };
-    await nv; await waitComplete(10000);
-    const after = await execMain(topicsRead);
-    if (after && after.titles.some((x) => kwNorm(x) === kwNorm(t.title))) { added++; have.add(kwNorm(t.title)); }
-    else if (!/\/posts\/(article|reply)/.test(String((after && after.url) || ''))) { await nav(room.url); await waitComplete(8000); }
+    // نور تضيف الموضوع في الصفحة نفسها بلا انتقال (المالك 2026-11-14: الأداة بقيت تدور بعد إضافة الموضوع): ننتظر ظهور عنوانه
+    // في الغرفة، لا انتقال الصفحة. وإن انتقلت الصفحة فالقراءة التالية تجده فيها.
+    let seen = false;
+    for (const t0 = Date.now(); Date.now() - t0 < 40000 && !stopFlag && !seen;) {
+      await sleep(1000);
+      const a = await execMain(topicsRead);
+      seen = !!(a && a.titles.some((x) => kwNorm(x) === kwNorm(t.title)));
+    }
+    if (seen) { added++; have.add(kwNorm(t.title)); }
+    // نموذج جديد للموضوع التالي: نموذج نور لا يُرسَل مرتين في الصفحة نفسها
+    if (op.topics.some((x) => !have.has(kwNorm(x.title))) && !stopFlag) {
+      if (!(await nav(room.url))) return { err: 'nav', made, added, sent: true };
+      await waitComplete(8000);
+      if (!seen) { const a = await execMain(topicsRead); if (a && a.titles.some((x) => kwNorm(x) === kwNorm(t.title))) { added++; have.add(kwNorm(t.title)); seen = true; } }
+    }
+    if (!seen) have.add(kwNorm(t.title));   // لم يظهر: لا نعيده في هذه الجولة (جولة لاحقة تضيف ما ينقص)
   }
   return { ok: true, made, added, had };
 }
@@ -2872,7 +2885,7 @@ async function roomsOnly() {
       topics0.push({ title, html: topicHtml({ link: playLink(ref, teacher), questions: discussQuestions(game) }) });
     }
     if (!topics0.length) continue;   // وحدة بلا أنشطة: لا غرفة فارغة
-    const op = { title: roomTitle(unit, c.title || pkg.subject || '', grade), post: roomInstructions(), subject: c.title || pkg.subject || '', grades: c.levels || [], topics: topics0, label: `${toAr(k)} من ${toAr(units.size)}` };
+    const op = { title: roomTitle(unit, c.title || pkg.subject || '', grade), post: roomInstructions(), subject: c.title || pkg.subject || '', grades: c.levels || [], topics: topics0, label: `${toAr(k)} من ${toAr(units.size)}`, units: units.size };
     let r = null;
     for (let i = 0; i < 2 && !stopFlag; i++) {
       r = await withTimeout(roomsLive(op), 600000, { err: 'timeout', sent: true });
