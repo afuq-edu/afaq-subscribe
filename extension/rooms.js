@@ -22,7 +22,7 @@ export function roomTitle(unit, subject, grade) {
   return u.slice(0, ROOM_TITLE_MAX - 1) + '…';
 }
 export function roomInstructions() {
-  return 'لكل درس موضوع فيه نشاطه وسؤالان للنقاش. حلّ النشاط، ثم اكتب نتيجتك ورأيك في موضوع الدرس، واقرأ ردود زملائك وعلّق عليها بأدب.';
+  return 'لكل درس موضوع فيه رابط نشاطه وسؤالان للنقاش. افتح الرابط وحلّ الأنشطة، فتظهر لك شهادة باسمك ونتيجتك. حمّل الشهادة، ثم اكتب نتيجتك في موضوع الدرس وأرفق صورة شهادتك، وأجب عن سؤال النقاش، واقرأ ردود زملائك وعلّق عليها بأدب.';
 }
 // عنوان الموضوع: اسم الدرس كما في شجرة نور
 export const topicTitle = (lessonName) => clean(lessonName).slice(0, 255);
@@ -43,15 +43,22 @@ export function discussQuestions(game, k = 2) {
   for (const x of pool) { const q = clean(x.q); if (q && !out.includes(q)) out.push(q); if (out.length >= k) break; }
   return out;
 }
-export const playLink = (ref) => (ref && ref.pkg && ref.n ? `${PLAY_BASE}${ref.pkg}/${ref.n}` : '');
+// رابط نشاط الدرس؛ ومعه اسم المعلم ليظهر في شهادة الطالب (المالك 2026-11-14)
+export const playLink = (ref, teacher = '') => (ref && ref.pkg && ref.n ? `${PLAY_BASE}${ref.pkg}/${ref.n}${clean(teacher) ? '&t=' + encodeURIComponent(clean(teacher)) : ''}` : '');
 
-// نص الموضوع (يقبله محرر نور): رابط النشاط في سطره، ثم طلب النتيجة، ثم سؤالا النقاش
+// نص الموضوع (يقبله محرر نور): رابط النشاط رابطًا يُضغط في سطره (كما يكتبه المعلم بزر «رابط» في المحرر)، ثم الخطوات:
+// الأنشطة ← الشهادة باسمه ونتيجته ← تحميلها ← النتيجة وصورة الشهادة في الرد ← سؤالا النقاش
 export function topicHtml({ link = '', questions = [] } = {}) {
   const rows = [];
-  if (link) rows.push(`<p><strong>نشاط الدرس:</strong></p><p><a href="${esc(link)}" target="_blank">${esc(link)}</a></p>`);
-  rows.push(`<p>${link ? 'حلّ النشاط ثم اكتب نتيجتك هنا.' : 'اكتب هنا ما تعلمته في هذا الدرس.'}</p>`);
-  questions.forEach((q, i) => rows.push(`<p><strong>${i ? 'سؤال آخر' : 'سؤال للنقاش'}:</strong> <span dir="${isAr(q) ? 'rtl' : 'ltr'}">${esc(q)}</span></p>`));
-  return rows.join('\n');
+  const q = questions.map((x, i) => `<p><strong>${i ? 'سؤال آخر' : 'سؤال للنقاش'}:</strong> <span dir="${isAr(x) ? 'rtl' : 'ltr'}">${esc(x)}</span></p>`);
+  if (link) {
+    rows.push(`<p><strong>نشاط الدرس:</strong></p>`, `<p><a href="${esc(link)}" target="_blank">${esc(link)}</a></p>`);
+    rows.push('<p>١- افتح الرابط وحلّ أنشطة الدرس. في آخرها تظهر شهادتك باسمك ونتيجتك.</p>');
+    rows.push('<p>٢- اضغط «حفظ الشهادة صورة» لتحميلها.</p>');
+    rows.push('<p>٣- اكتب نتيجتك هنا في ردك، وأرفق صورة شهادتك.</p>');
+    if (q.length) rows.push('<p>٤- أجب عن سؤال النقاش، واقرأ ردود زملائك وعلّق عليها.</p>');
+  } else rows.push('<p>اكتب هنا ما تعلمته في هذا الدرس، وأجب عن سؤال النقاش.</p>');
+  return rows.concat(q).join('\n');
 }
 
 // ———— دوال تُنفَّذ في صفحة نور (MAIN world): لا تعتمد على شيء خارجها ————

@@ -1474,7 +1474,7 @@ T(42, '«غرف النقاش»: a room for each unit of the Noor tree (title «<
   });
   check(!bad.length, 'every lesson of the unit has exactly one topic in its room (the existing topic is not repeated)', bad.join('\n'));
   const withLink = rooms.flatMap((r) => r.topics).filter((t) => /play\.html\?d=en-5\//.test(t.html));
-  check(withLink.length >= 1 && withLink.every((t) => /سؤال للنقاش/.test(t.html) && /href="https:\/\/afuq-edu\.github\.io\/afaq-subscribe\/play\.html/.test(t.html)), `lessons with an activity get its clickable link and a discussion question (${withLink.length})`, withLink.map((t) => t.title + ': ' + t.html.slice(0, 160)).join('\n'));
+  check(withLink.length >= 1 && withLink.every((t) => /سؤال للنقاش/.test(t.html) && /شهادتك/.test(t.html) && /نتيجتك/.test(t.html) && /href="https:\/\/afuq-edu\.github\.io\/afaq-subscribe\/play\.html\?d=en-5\/\d+(&amp;t=[^"]+)?"/.test(t.html)), `lessons with an activity get its clickable link (with the teacher's name for the certificate when known), the certificate and result steps, and a discussion question (${withLink.length})`, withLink.map((t) => t.title + ': ' + t.html.slice(0, 160)).join('\n'));
   check(!noor.st.posts.length && !noor.st.homeworks.length, 'no prep and no homework', `${noor.st.posts.length} / ${noor.st.homeworks.length}`);
   check(/غرف|غرفة|انتهى/.test(s.head) && !CALM_BAD_RE.test(s.head + ' ' + s.text), 'a calm closing line', `${s.head} | ${s.text}`);
   const n1 = rooms.length, k1 = rooms.reduce((a, r) => a + r.topics.length, 0);

@@ -2823,6 +2823,11 @@ async function roomsOnly() {
     const arr = units.get(u);
     if (!arr.some((x) => x.node === p.node)) arr.push({ node: p.node, lesson: p.sessions[0] && p.sessions[0].lesson });
   });
+  // اسم المعلم في شهادة الطالب (من حساب نور المفتوح، أو آخر ما قرأناه)
+  let who = null; try { who = tabId ? await noorWho(tabId) : null; } catch (e) {}
+  if (!who || !who.name) { try { const w = await noorWhoScan(tabId); if (w && w.who && w.who.name) who = w.who; } catch (e) {} }
+  if (!who || !who.name) who = (await chrome.storage.local.get('noorWho').catch(() => ({}))).noorWho || who;
+  const teacher = (who && who.name) || '';
   let rooms = 0, topics = 0, fail = 0, k = 0;
   for (const [unit, ls] of units) {
     if (stopFlag) break;
@@ -2834,7 +2839,8 @@ async function roomsOnly() {
       const ref = x.lesson ? gameRef(x.lesson) : null;
       const game = ref ? await fetchGame(ref, WIZ.gamesBase || undefined) : null;
       const title = topicTitle(x.node.text + (x.node.nth ? ` (${toAr(x.node.nth + 1)})` : ''));
-      topics0.push({ title, html: topicHtml({ link: playLink(ref), questions: discussQuestions(game) }) });
+      // رابط النشاط فقط حين تكون أنشطة الدرس منشورة في الموقع
+      topics0.push({ title, html: topicHtml({ link: game ? playLink(ref, teacher) : '', questions: discussQuestions(game) }) });
     }
     const op = { title: roomTitle(unit, c.title || pkg.subject || '', grade), post: roomInstructions(), subject: c.title || pkg.subject || '', grades: c.levels || [], topics: topics0, label: `${toAr(k)} من ${toAr(units.size)}` };
     let r = null;
