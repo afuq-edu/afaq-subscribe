@@ -57,7 +57,7 @@ export function topicHtml({ link = '', questions = [] } = {}) {
     rows.push('<p>٢- اضغط «حفظ الشهادة صورة» لتحميلها.</p>');
     rows.push('<p>٣- اكتب نتيجتك هنا في ردك، وأرفق صورة شهادتك.</p>');
     if (q.length) rows.push('<p>٤- أجب عن سؤال النقاش، واقرأ ردود زملائك وعلّق عليها.</p>');
-  } else rows.push('<p>اكتب هنا ما تعلمته في هذا الدرس، وأجب عن سؤال النقاش.</p>');
+  }
   return rows.concat(q).join('\n');
 }
 

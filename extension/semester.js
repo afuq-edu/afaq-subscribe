@@ -15,7 +15,7 @@ import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedP
 import { diffDays, addDays } from './dates.js';
 import { roomTitle, roomInstructions, topicTitle, topicHtml, discussQuestions, playLink, roomsRead, roomCreateFill, topicsRead, topicFill } from './rooms.js';
 import { YT_ORIGIN, lessonTopic, pickVideo, ytSearch, ytUrl, vidLibRead, vidFill } from './videos.js';
-import { gameRef, fetchGame, noorDT, lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, hwHush, HW_MARK } from './homework.js';
+import { gameRef, gameKey, GAMES_BASE, fetchGame, noorDT, lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, hwHush, HW_MARK } from './homework.js';
 import { AFAQ } from './afaq-config.js';
 import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck, installUrl, fillLog, flushFillLog, sendNoorTree, getNoorTree } from './remote.js';
 
@@ -2821,13 +2821,30 @@ async function roomsOnly() {
     const u = p.node.unit || '';
     if (!units.has(u)) units.set(u, []);
     const arr = units.get(u);
-    if (!arr.some((x) => x.node === p.node)) arr.push({ node: p.node, lesson: p.sessions[0] && p.sessions[0].lesson });
+    if (!arr.some((x) => x.node === p.node)) arr.push({ node: p.node, lesson: p.sessions[0] && p.sessions[0].lesson, file: p.group.lesson || '', fileUnit: p.group.unit || '' });
   });
   // اسم المعلم في شهادة الطالب (من حساب نور المفتوح، أو آخر ما قرأناه)
   let who = null; try { who = tabId ? await noorWho(tabId) : null; } catch (e) {}
   if (!who || !who.name) { try { const w = await noorWhoScan(tabId); if (w && w.who && w.who.name) who = w.who; } catch (e) {} }
   if (!who || !who.name) who = (await chrome.storage.local.get('noorWho').catch(() => ({}))).noorWho || who;
   const teacher = (who && who.name) || '';
+  // أنشطة الدروس في الموقع: games/<الباقة>/index.json (اسم الدرس في الملف ← رقم ملف أنشطته). محتوى الدرس لا يصل «حاضر» قبل التعبئة،
+  // فالرابط من الفهرس، أو من رابط الدرس في ملف التحضير إن وُجد
+  const gk = gameKey(pkg), gBase = WIZ.gamesBase || GAMES_BASE;
+  const getJson = async (u) => { for (let i = 0; i < 3; i++) { try { const r = await fetch(u, { cache: 'no-cache' }); if (r.ok) return await r.json(); if (r.status === 404) return null; } catch (e) { await sleep(800); } } return null; };
+  // units.json: [[الوحدة, الدرس, رقم]] — الدرس الذي يتكرر اسمه في وحدات كثيرة يصل إلى أنشطة وحدته هو؛ index.json (اسم الدرس ← رقم) احتياطًا
+  const gRows = (await getJson(`${gBase}${gk}/units.json`)) || [];
+  const gIdx = gRows.length ? {} : ((await getJson(`${gBase}${gk}/index.json`)) || {});
+  const sameUnit = (a, b) => { a = kwNorm(a || ''); b = kwNorm(b || ''); return !a || !b || a.includes(b) || b.includes(a); };
+  const gIdxN = new Map(Object.entries(gIdx).map(([k2, v]) => [kwNorm(k2), v]));
+  const refOf = (x) => {
+    if (x.lesson && gameRef(x.lesson)) return gameRef(x.lesson);
+    const ln = kwNorm(x.file);
+    const rows = gRows.filter((r) => kwNorm(r[1]) === ln);
+    const row = rows.find((r) => sameUnit(r[0], x.fileUnit)) || (rows.length === 1 && !x.fileUnit ? rows[0] : null);
+    if (row) return { pkg: gk, n: row[2] };
+    return gIdxN.has(ln) ? { pkg: gk, n: gIdxN.get(ln), idx: true } : null;
+  };
   let rooms = 0, topics = 0, fail = 0, k = 0;
   for (const [unit, ls] of units) {
     if (stopFlag) break;
@@ -2836,12 +2853,16 @@ async function roomsOnly() {
     $('prog').style.width = (Math.min(1, k / units.size) * 100) + '%';
     const topics0 = [];
     for (const x of ls) {
-      const ref = x.lesson ? gameRef(x.lesson) : null;
-      const game = ref ? await fetchGame(ref, WIZ.gamesBase || undefined) : null;
+      const ref = refOf(x);
+      let game = ref ? await fetchGame(ref, WIZ.gamesBase || undefined) : null;
+      // اسم درس يتكرر في وحدات كثيرة («Lesson 9: Review»): الفهرس يحمل واحدًا منها، فلا نربط نشاط وحدة أخرى
+      if (game && ref.idx && !sameUnit(game.unit, x.fileUnit)) game = null;
+      // موضوع الدرس لا يكون إلا بنشاطه (المالك 2026-11-14: لا نص عام مكرر)؛ درس بلا أنشطة في الموقع يُسجَّل للمشرف فقط
+      if (!game) { flRow('skipped', { s: { lesson: x.lesson, date: '' }, node: x.node }, 'غرفة النقاش: لا أنشطة لهذا الدرس في الموقع'); continue; }
       const title = topicTitle(x.node.text + (x.node.nth ? ` (${toAr(x.node.nth + 1)})` : ''));
-      // رابط النشاط فقط حين تكون أنشطة الدرس منشورة في الموقع
-      topics0.push({ title, html: topicHtml({ link: game ? playLink(ref, teacher) : '', questions: discussQuestions(game) }) });
+      topics0.push({ title, html: topicHtml({ link: playLink(ref, teacher), questions: discussQuestions(game) }) });
     }
+    if (!topics0.length) continue;   // وحدة بلا أنشطة: لا غرفة فارغة
     const op = { title: roomTitle(unit, c.title || pkg.subject || '', grade), post: roomInstructions(), subject: c.title || pkg.subject || '', grades: c.levels || [], topics: topics0, label: `${toAr(k)} من ${toAr(units.size)}` };
     let r = null;
     for (let i = 0; i < 2 && !stopFlag; i++) {

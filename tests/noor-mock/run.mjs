@@ -145,8 +145,18 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
   // lessons = the first session's set, sessions = one more set for each further session (4.10.37: a homework per session)
   await ctx.route(GAMES + '**', (r) => {
     // lesson activities (site/games/<pkg>/<n>.json): the real file
+    // games/<key>/index.json and <n>.json; a key with no folder in site/games (the test package «bio-9») reads the real biology 9 activities
+    const gdir = (k) => (fs.existsSync(path.join(REPO, 'site/games', k)) ? k : 'bi-9');
+    // its units.json then lists the test package's own lessons (units and names as in PKG) on the biology 9 activity files, in order
+    const gi = r.request().url().match(/\/([a-z0-9-]+)\/(index|units)\.json$/);
+    if (gi) {
+      const real = gdir(gi[1]) === gi[1];
+      const body = real ? fs.readFileSync(path.join(REPO, 'site/games', gi[1], gi[2] + '.json'), 'utf8')
+        : gi[2] === 'units' ? JSON.stringify(lessonGroups(PKG).map((g, i) => [g.sessions[0].unit, g.sessions[0].lesson, i + 1])) : JSON.stringify(Object.fromEntries(lessonGroups(PKG).map((g, i) => [g.sessions[0].lesson, i + 1])));
+      return r.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body });
+    }
     const gm = r.request().url().match(/\/([a-z0-9-]+)\/(\d+)\.json$/);
-    if (gm) { const f = path.join(REPO, 'site/games', gm[1], gm[2] + '.json'); return fs.existsSync(f) ? r.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: fs.readFileSync(f, 'utf8') }) : r.fulfill({ status: 404, body: '' }); }
+    if (gm) { const f = path.join(REPO, 'site/games', gdir(gm[1]), gm[2] + '.json'); return fs.existsSync(f) ? r.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: fs.readFileSync(f, 'utf8') }) : r.fulfill({ status: 404, body: '' }); }
     const src = Object.values(JSON.parse(fs.readFileSync(path.join(REPO, 'site/homework/en-5.json'), 'utf8')).lessons);
     const gs = lessonGroups(PKG);
     const lessons = Object.fromEntries(gs.map((g, i) => [g.sessions[0].lesson, src[i % src.length]]));
@@ -1436,8 +1446,7 @@ const tickAll = async (pg, attr, go, except = []) => {
 };
 T(42, '«غرف النقاش»: a room for each unit of the Noor tree (title «<unit> — <subject> <grade>», ≤ 50 chars), shared with every student of the subject\'s sections only, holding a topic for each lesson (its activity link and two discussion questions when the lesson has an activity); a room already in Noor is reused and gets only its missing topics; a re-run adds nothing; no prep, no homework', async (env) => {
   usePkg(derivePkg({ keep: range(1, 12) }));
-  // the first lessons carry an activity link (as the real prep files do in item 10)
-  PKG.lessons.forEach((l, i) => { if (i < 6) l.notes = (l.notes || '') + `\nhttps://afuq-edu.github.io/afaq-subscribe/play.html?d=en-5/${i + 1}`; });
+  // lesson content does not reach the extension before a fill: the activity is found through the site's games/<key>/index.json
   const tree = treeFromPackage(PKG);
   const units = tree.terms[0].units.filter((u) => u.lessons.length);
   const now = lessonGroups(PKG)[0].sessions[0].pubDate;
@@ -1473,8 +1482,9 @@ T(42, '«غرف النقاش»: a room for each unit of the Noor tree (title «<
     if (want.some((t) => !got.includes(t)) || got.length !== new Set(got).size) bad.push(`${u.text}: topics ${got.join(' / ')} want ${want.join(' / ')}`);
   });
   check(!bad.length, 'every lesson of the unit has exactly one topic in its room (the existing topic is not repeated)', bad.join('\n'));
-  const withLink = rooms.flatMap((r) => r.topics).filter((t) => /play\.html\?d=en-5\//.test(t.html));
-  check(withLink.length >= 1 && withLink.every((t) => /سؤال للنقاش/.test(t.html) && /شهادتك/.test(t.html) && /نتيجتك/.test(t.html) && /href="https:\/\/afuq-edu\.github\.io\/afaq-subscribe\/play\.html\?d=en-5\/\d+(&amp;t=[^"]+)?"/.test(t.html)), `lessons with an activity get its clickable link (with the teacher's name for the certificate when known), the certificate and result steps, and a discussion question (${withLink.length})`, withLink.map((t) => t.title + ': ' + t.html.slice(0, 160)).join('\n'));
+  const mine = rooms.flatMap((r) => r.topics).filter((t) => t.html !== '<p>موضوعي</p>');
+  const withLink = mine.filter((t) => /play\.html\?d=[a-z0-9-]+\/\d+/.test(t.html));
+  check(mine.length >= 2 && withLink.length === mine.length && !mine.some((t) => /اكتب هنا ما تعلمته/.test(t.html)) && withLink.every((t) => /سؤال للنقاش/.test(t.html) && /شهادتك/.test(t.html) && /نتيجتك/.test(t.html) && /<a href="https:\/\/afuq-edu\.github\.io\/afaq-subscribe\/play\.html\?d=[a-z0-9-]+\/\d+(&amp;t=[^"]+)?"/.test(t.html)), `every topic «حاضر» adds has its lesson's activity as a clickable link (found through the site's activity index; with the teacher's name when known), the certificate and result steps and a discussion question; no generic placeholder text (${withLink.length}/${mine.length})`, mine.map((t) => t.title + ': ' + t.html.slice(0, 200)).join('\n'));
   check(!noor.st.posts.length && !noor.st.homeworks.length, 'no prep and no homework', `${noor.st.posts.length} / ${noor.st.homeworks.length}`);
   check(/غرف|غرفة|انتهى/.test(s.head) && !CALM_BAD_RE.test(s.head + ' ' + s.text), 'a calm closing line', `${s.head} | ${s.text}`);
   const n1 = rooms.length, k1 = rooms.reduce((a, r) => a + r.topics.length, 0);
