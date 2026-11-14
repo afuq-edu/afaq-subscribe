@@ -10,7 +10,7 @@ import {
   noorTerms, termAllLessons, pickTreeNode, stripSessionSuffix, sessionSuffix, sessionNums, lessonNum,
   layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, lintPackage, lintLevel, knownCourse, rememberCourse, resetProgress, packageProgress, clearSession,
   holidaySet, termEndOf, countSchoolDays, loadNoorTree, storeNoorTree, dateOverrides, setDateOverride, GRADES, noorWho, noorWhoScan, probeDays,
- joinRuns, lessonSkills, isArabicPkg } from './packages.js';
+ joinRuns, lessonSkills, isArabicPkg, stripSkillTag } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { diffDays, addDays } from './dates.js';
 import { lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, hwHush, HW_MARK } from './homework.js';
@@ -1227,6 +1227,8 @@ async function readNoorList(quiet) {
     if (!quiet) logLine('info', `قرأت الصفحة المعروضة فقط من قائمة التحاضير (${toAr(titles.length)}) — ${v.info}`);
     total = -2;   // جزئية
   } else if (!quiet) logLine('info', `قائمة التحاضير في نور: ${toAr(titles.length)} تحضيرًا${total > titles.length ? ` (من ${toAr(total)} — لم تُقرأ كلها)` : ''}.`);
+  // «مهارة الإملاء: الدرس …»: اسم المهارة الذي كتبته «حاضر» في أول العنوان يُنزع، فيُعرف الدرس ورقم الحصة كما في غيره
+  titles = titles.map(stripSkillTag);
   // العنوان الموحّد للدرس ← أرقام حصصه الموجودة («X» = الأولى، «X (2)» = الثانية؛ والمكرر بلا رقم يُحسب حصة تالية)
   const have = new Map();
   titles.forEach((t) => {
@@ -2142,7 +2144,7 @@ async function fillOnce(item, c) {
   setBox('run', `أعبّئ «${shortT(s.lesson.title)}»…`, `الدرس: ${item.node.text}\nالنشر: ${dayLabel(s.date)}`);
   // ترتيب هذا التحضير بين تحاضير الدرس نفسه في اليوم نفسه (حصتان للدرس في يوم واحد) — نور ترقّم الثاني بنفسها
   const dayRank = () => 1 + savedThisRun.filter((x) => x.s !== s && x.s.date === s.date && x.s.p && s.p && x.s.p.node && s.p.node && x.s.p.node.id === s.p.node.id).length;
-  const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title, dayRank: dayRank(), slotNo: s.slot || 1, slotSpan: s.span || 1, slotFull: slotSeen.get(s.date) || null, allowSection: !!WIZ.allowSection, onlySecs: s.secs || null, secSlots: s.secSlots || null,
+  const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title, dayRank: dayRank(), slotNo: s.slot || 1, slotSpan: s.span || 1, slotFull: slotSeen.get(s.date) || null, allowSection: !!WIZ.allowSection, onlySecs: s.secs || null, secSlots: s.secSlots || null, skill: WIZ.skillTag ? skillsNow().get(s.lesson.id) || '' : '',
     merge: s.merge && s.merge.length ? s.merge.map((x) => x.lesson) : null, sessionNos: s.merge && s.merge.length && s.p ? [s, ...s.merge].map(nodeNo) : null, sessionNo: nodeNo(s) });
   let rep = await fillNoor(tabId, pkg, s.lesson, opts());
   let blk = rep.find((x) => x.key === 'remote');
@@ -2420,7 +2422,7 @@ function heartbeat(on) {
 // نقطة استئناف: إن أُغلقت النافذة أو تعطّل كروم يُتابَع التشغيل عند فتحها
 async function checkpoint(active) {
   const sc = { kind: scope.kind, picks: [...(scope.picks || [])], units: [...scope.units], weekDay: scope.weekDay, from: scope.from, to: scope.to, dateFrom: scope.dateFrom, dateTo: scope.dateTo, dsrc: useFile ? 'file' : 'seq' };
-  await chrome.storage.local.set({ semesterRun: active && !WIZ.hwOnly ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, typed: WIZ.pickTyped || null, join: WIZ.pickJoin || null, skill: !!WIZ.skillJoin, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
+  await chrome.storage.local.set({ semesterRun: active && !WIZ.hwOnly ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, typed: WIZ.pickTyped || null, join: WIZ.pickJoin || null, skill: !!WIZ.skillJoin, tag: !!WIZ.skillTag, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
 }
 function setRunning(on) {
   running = on;
@@ -2660,7 +2662,7 @@ async function homeworkOnly() {
   const info = await withTimeout(execMain(hwPageOp, { kind: 'preps', cid: courseCid }), 60000, null);
   const prepIds = (info && info.preps) || [];
   const titles = (h && h.titles) || [], dates = (h && h.dates) || [];
-  const peelT = (t) => { let b = t; for (let j = 0; j < 4 && stripSessionSuffix(b) !== b; j++) b = stripSessionSuffix(b); return b; };
+  const peelT = (t) => { let b = stripSkillTag(t); for (let j = 0; j < 4 && stripSessionSuffix(b) !== b; j++) b = stripSessionSuffix(b); return b; };
   // تحاضير كل اسم درس بترتيب تواريخها: الأول للحصة الأولى، والثاني للثانية… (ولكل اسم مكرر في الشجرة، بترتيب التواريخ)
   const prepsBy = new Map();
   titles.forEach((t, i) => { const k = kwNorm(peelT(t)); if (!k) return; const d = isIso(dates[i]) ? dates[i] : ''; if (!prepsBy.has(k)) prepsBy.set(k, []); prepsBy.get(k).push({ t, d }); });
@@ -2682,7 +2684,7 @@ async function homeworkOnly() {
     if (!mine.length) { none++; return; }
     const ids = (idsBy.get(k) || []).slice();
     mine.forEach((row, j) => {
-      const at = ids.findIndex((x) => x.title === row.t); const pid = at >= 0 ? ids.splice(at, 1)[0].id : '';
+      const at = ids.findIndex((x) => stripSkillTag(x.title) === row.t); const pid = at >= 0 ? ids.splice(at, 1)[0].id : '';
       const it = ses[Math.min(j, ses.length - 1)];
       if (!it) return;
       if (!row.d || row.d < today) { past++; return; }
@@ -3247,7 +3249,7 @@ async function offerResume() {
   const radio = document.querySelector(`input[name=term][value="${run0.term}"]`); if (radio) radio.checked = true;
   if (run0.startTouched && run0.start) { $('start').value = run0.start; startTouched = true; renderDays(); }
   if (run0.scope && init.restoreScope) init.restoreScope(run0.scope);
-  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; WIZ.seq = !!run0.wiz.seq; WIZ.pickDates = run0.wiz.pick || null; WIZ.pickTyped = run0.wiz.typed || null; WIZ.pickJoin = run0.wiz.join || null; WIZ.skillJoin = !!run0.wiz.skill; WIZ.rid = run0.wiz.rid || Date.now(); if (run0.wiz.conf) WIZ.confirmed = WIZ.rid; WIZ.sum = run0.wiz.sum || 0; WIZ.resumed = true; WIZ.auto = run0.wiz.auto || 0; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
+  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; WIZ.seq = !!run0.wiz.seq; WIZ.pickDates = run0.wiz.pick || null; WIZ.pickTyped = run0.wiz.typed || null; WIZ.pickJoin = run0.wiz.join || null; WIZ.skillJoin = !!run0.wiz.skill; WIZ.skillTag = !!run0.wiz.tag; WIZ.rid = run0.wiz.rid || Date.now(); if (run0.wiz.conf) WIZ.confirmed = WIZ.rid; WIZ.sum = run0.wiz.sum || 0; WIZ.resumed = true; WIZ.auto = run0.wiz.auto || 0; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
   let left = 10, cancelled = false;
   const tick = () => {
     if (cancelled) return;
@@ -3714,6 +3716,8 @@ async function wzRun() {
   joined.forEach((x) => { if (wz.typed.has(x.ls[0].id)) x.ls.forEach((l) => WIZ.pickTyped.push(l.id)); });
   // الفصل كاملًا لمادة عربية: «تحضير لكل مهارة» كما اختار المعلم في خطوة شكل التحضير
   WIZ.skillJoin = wz.mode === 'term' && isArabicPkg(p) && !!wz.join;
+  // وفي الشكل نفسه (الفصل كاملًا أو اختيار الدروس) يحمل عنوان كل تحضير اسم مهارته: «مهارة الإملاء: الدرس …»
+  WIZ.skillTag = (pick || wz.mode === 'term') && isArabicPkg(p) && !!wz.join;
   scope.kind = pick ? 'pick' : 'term';
   scope.picks = new Set(pick ? lessonGroups(p).filter((g) => g.sessions.some((l) => wz.sel.has(l.id))).map((g) => g.key) : []);
   // الفصل كاملًا: بتواريخ النشرة الرسمية إن كانت في ملف المادة، وإلا متتابعًا من أول يوم دراسي قادم
@@ -3840,7 +3844,7 @@ function wzResumeBtn(label) {
 function wzAgain() {
   clearTimeout(WIZ.timer);
   document.body.classList.remove('wiz-run', 'showplan');
-  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null; WIZ.pickJoin = null; WIZ.skillJoin = false;
+  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null; WIZ.pickJoin = null; WIZ.skillJoin = false; WIZ.skillTag = false;
   $('wizCard').hidden = false;
   $('nowCard').hidden = true; $('planCard').hidden = true; $('logCard').hidden = true;
   $('topMsg').className = 'msg';
@@ -3851,7 +3855,7 @@ function wzAgain() {
 function wzMore() {
   clearTimeout(WIZ.timer);
   document.body.classList.remove('wiz-run', 'showplan');
-  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null; WIZ.pickJoin = null; WIZ.skillJoin = false;
+  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null; WIZ.pickJoin = null; WIZ.skillJoin = false; WIZ.skillTag = false;
   $('wizCard').hidden = false;
   $('nowCard').hidden = true; $('planCard').hidden = true; $('logCard').hidden = true;
   $('topMsg').className = 'msg';

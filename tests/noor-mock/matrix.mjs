@@ -141,7 +141,7 @@ function listPackages() {
 // wizard's pick screen keys (data-k) use the flipped names — the harness uses the extension's own function so the keys agree
 const { fixPairOrder } = await import(pathToFileURL(path.join(EXT_SRC, 'match.js')).href);
 globalThis.chrome = globalThis.chrome || { storage: { local: { get: async () => ({}), set: async () => {} } }, runtime: {} };
-const { joinRuns } = await import(pathToFileURL(path.join(EXT_SRC, 'packages.js')).href);
+const { joinRuns, lessonSkills, skillTag } = await import(pathToFileURL(path.join(EXT_SRC, 'packages.js')).href);
 const loadPkg = (f) => { const p = JSON.parse(fs.readFileSync(f, 'utf8')); p.lessons.forEach((l) => { l.pubDate = l.pubDate || l.publishDate; }); fixPairOrder(p.lessons); return p; };
 function groupsOf(pkg) {
   const m = new Map();
@@ -457,8 +457,10 @@ function traceRows(F, J, rows) {
   };
   // Noor adds « (j)» itself to the j-th prep of one lesson on one date: the tool sends the bare name when j is the session number
   const wantTitle = (r, l) => { const t = titleOf(r, l), j = r.dayRank; if (!j || j < 2) return t; const base = J.T.nodeOf.get((l.unit || '') + '|' + (l.lesson || '')).text; return !r.mergedTags && t === `${base} (${j})` ? t : `${t} (${j})`; };
-  const badTitle = J.T.real ? [] : rows.filter((r) => { const l = byId.get(tagOf(r.concepts)); return l && norm(r.title) !== norm(wantTitle(r, l)); });   // whitespace-insensitive: Noor trims the title
-  if (!J.T.real) check(F, !badTitle.length, 'title: Noor lesson name + «(n)» for session n', badTitle.slice(0, 8).map((r) => { const l = byId.get(tagOf(r.concepts)); return `${l.id}: «${r.title}» expected «${wantTitle(r, l)}»`; }).join('\n'));
+  // «تحضير لكل مهارة» (4.10.41): the title starts with the skill's name — «مهارة الإملاء: الدرس … (13 و 14)»
+  const SK = J.skill ? lessonSkills(J.pkg) : null, skTag = (l) => (SK ? skillTag(SK.get(l.id) || '') : '');
+  const badTitle = J.T.real ? [] : rows.filter((r) => { const l = byId.get(tagOf(r.concepts)); return l && norm(r.title) !== norm(skTag(l) + wantTitle(r, l)); });   // whitespace-insensitive: Noor trims the title
+  if (!J.T.real) check(F, !badTitle.length, 'title: Noor lesson name + «(n)» for session n', badTitle.slice(0, 8).map((r) => { const l = byId.get(tagOf(r.concepts)); return `${l.id}: «${r.title}» expected «${skTag(l) + wantTitle(r, l)}»`; }).join('\n'));
   const wk = rows.filter((r) => !isSchool(r.publishDate));
   check(F, !wk.length, 'weekdays: no publish date on Friday/Saturday', wk.map((r) => fmtRow(r, byId.get(tagOf(r.concepts)))).join('\n'));
   return { byId, cnt };
@@ -869,7 +871,7 @@ async function worker(w) {
     for (let round = 0; round < 2; round++) {
       res.flows = [];
       try {
-        const J = setupJob(job);
+        const J = setupJob(job); J.skill = job.fault === 'skill';
         res.tree = { lessons: J.T.groups.length, renamed: [...J.T.renamed].map(([k, v]) => `${k.split('|')[1]} → ${v.text} (${v.how})`), shiftWeeks: job.shiftWeeks || 0 };
         if (FLOWS.includes('term')) res.flows.push(await flowTerm(job, J, W));
         if (FLOWS.includes('pick')) res.flows.push(await flowPick(job, J, W));

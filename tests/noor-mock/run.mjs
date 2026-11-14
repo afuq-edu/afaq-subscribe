@@ -904,7 +904,8 @@ T(38, 'Arabic grade 4, pick mode, «تحضير لكل مهارة» (owner 2026-1
   check(rows.length === runs.length, `exactly ${runs.length} preps for the 20 sessions (${rows.length})`, fmtRows(rows));
   const node = nodeFor(tree, g.sessions[0]).text;
   runs.forEach((r, i) => {
-    const title = r.length > 1 ? `${node} (${r.join(' و ')})` : r[0] > 1 ? `${node} (${r[0]})` : node;
+    const sk = ['التحدث', 'القراءة', 'الأنماط اللغوية', 'الإملاء', 'الخط', 'التعبير', 'القراءة', ''][i];
+    const title = (sk ? `مهارة ${sk}: ` : '') + (r.length > 1 ? `${node} (${r.join(' و ')})` : r[0] > 1 ? `${node} (${r[0]})` : node);
     const row = rows.find((x) => x.title === title);
     check(!!row, `prep «${title.slice(-34)}» saved`, rows.map((x) => x.title).join(' | '));
     if (!row) return;
@@ -932,6 +933,8 @@ async function arabic4(n = 41) {
   const runs = lessonGroups(PKG).flatMap((g) => joinRuns(PKG, g.sessions).map((r) => ({ g, ls: r.ls, skill: r.skill })));
   return { tree, courses, offer, runs, wz: { grade: 'الصف الرابع', subject: 'اللغة العربية', shift: 'فترة واحدة', style: 'skill' } };
 }
+// 4.10.41: in «تحضير لكل مهارة» the prep title starts with its skill — «مهارة الإملاء: الدرس … (13 و 14 و 15)» (review preps: no skill name)
+const TAGGED = ['التحدث', 'الاستماع', 'القراءة', 'الأنماط اللغوية', 'الإملاء', 'الخط', 'التعبير', 'الكتابة'];
 function skillWant(A, periods) {
   const secs = [...new Set(Object.values(periods).flatMap((v) => v.map(([sec]) => sec)))].sort();
   const day1 = PKG.lessons.map((l) => l.pubDate).sort()[0];
@@ -949,8 +952,11 @@ function skillWant(A, periods) {
     const ns = r.ls.map((l) => r.g.sessions.indexOf(l) + 1), node = nodeFor(A.tree, r.ls[0]).text;
     // the periods of the prep: for each of its sections, the periods (by their order in the day) of its sessions that fall on its day
     const rank = (sec, l, d) => PKG.lessons.filter((x) => at[sec][x.id] === d).indexOf(l) + 1;
-    for (const [d, ss] of Object.entries(byD)) want.push({ title: ns.length > 1 ? `${node} (${ns.join(' و ')})` : ns[0] > 1 ? `${node} (${ns[0]})` : node, date: d, ids: r.ls.map((l) => l.id),
-      slots: ss.flatMap((sec) => r.ls.filter((l) => at[sec][l.id] === d).map((l) => `${sec}|${rank(sec, l, d)}`)) });
+    // the mock numbers a day's periods section after section, leaving one number between sections (noor-mock.mjs)
+    const p0 = (sec, d) => { let n = 1; for (const [x, k] of periods[new Date(d + 'T12:00').getDay()] || []) { if (x === sec) return n; n += k + 1; } return n; };
+    const tag = TAGGED.includes(r.skill) ? `مهارة ${r.skill}: ` : '';
+    for (const [d, ss] of Object.entries(byD)) want.push({ title: tag + (ns.length > 1 ? `${node} (${ns.join(' و ')})` : ns[0] > 1 ? `${node} (${ns[0]})` : node), date: d, ids: r.ls.map((l) => l.id),
+      slots: ss.flatMap((sec) => r.ls.filter((l) => at[sec][l.id] === d).map((l) => `${sec}|${p0(sec, d) + rank(sec, l, d) - 1}`)) });
   }
   return want;
 }
@@ -958,7 +964,7 @@ function checkSkillTerm(name, rows, A, periods) {
   const want = skillWant(A, periods);
   const sig = (t, d, sl) => `${t} @${d} periods ${sl.map(String).sort().join(' ')}`;
   // Noor adds « (j)» itself to the j-th prep of one lesson on one date (the tool sends the bare name when j is the session number)
-  const sent = (r) => { const j = r.dayRank, suf = ` (${j})`; return !j || j < 2 || r.title === r.nodeText + suf || !r.title.endsWith(suf) ? r.title : r.title.slice(0, -suf.length); };
+  const sent = (r) => { const j = r.dayRank, suf = ` (${j})`; return !j || j < 2 || r.title.replace(/^مهارة [^:]+: /, '') === r.nodeText + suf || !r.title.endsWith(suf) ? r.title : r.title.slice(0, -suf.length); };
   const got = rows.map((r) => sig(sent(r), r.publishDate, r.slots || [])).sort();
   const exp = want.map((w) => sig(w.title, w.date, w.slots)).sort();
   const miss = exp.filter((x) => !got.includes(x)), extra = got.filter((x) => !exp.includes(x));

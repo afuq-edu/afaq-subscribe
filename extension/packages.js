@@ -1,6 +1,6 @@
 // packages.js — مكتبة التحاضير: التخزين، التقدم (عُبّئ/حُفظ)، الإعدادات، النسخ الاحتياطي، والتعبئة في نموذج منصة نور
 import { hadirEngine } from './engine.js';
-import { bestLesson, rankLessons, lessonNum, unitNum, kwNorm, kwScore, titleSim, bestTreeLesson, unitMayHold, stripSessionSuffix, sessionSuffix, sessionNums } from './match.js';
+import { bestLesson, rankLessons, lessonNum, unitNum, kwNorm, kwScore, titleSim, bestTreeLesson, unitMayHold, stripSessionSuffix, sessionSuffix, sessionNums, skillTag, stripSkillTag } from './match.js';
 import { parsePlanText, parsePlanBest, NOOR_STRATEGIES, NOOR_RESOURCES, NOOR_LEVELS, SAMPLE_PLAN, mapStrategies, mapResources } from './parse.js';
 import { AFAQ } from './afaq-config.js';
 import { remoteLesson, isRemote, REMOTE_ERR, noorCheck } from './remote.js';
@@ -10,7 +10,7 @@ export { isRemote, REMOTE_ERR, layoutDates, isIso, weekStart, weekEnd, inWeekOf,
 export const SERVICE = !!AFAQ.SERVICE;
 const SERVICE_ONLY = 'المواد تأتي من اشتراكك في «حاضر» — اخترها أو فعّلها من نافذة «حاضر».';
 
-export { bestLesson, rankLessons, lessonNum, kwNorm, stripSessionSuffix, sessionSuffix, sessionNums, parsePlanText, parsePlanBest, NOOR_STRATEGIES, NOOR_RESOURCES, NOOR_LEVELS, SAMPLE_PLAN, mapStrategies, mapResources };
+export { bestLesson, rankLessons, lessonNum, kwNorm, stripSessionSuffix, sessionSuffix, sessionNums, skillTag, stripSkillTag, parsePlanText, parsePlanBest, NOOR_STRATEGIES, NOOR_RESOURCES, NOOR_LEVELS, SAMPLE_PLAN, mapStrategies, mapResources };
 
 // ---------- بنود نموذج التحضير في منصة نور (بالترتيب) ----------
 // match: عبارات يُعرف بها عنوان البند — mode: text نص منسّق، pick قائمة اختيار، auto قائمة أو نص، checkall تحديد كل المربعات
@@ -275,7 +275,7 @@ const SKILL_RULES = [
 ];
 const bareTitle = (t) => String(t || '').replace(/[ً-ْٰ]/g, '').replace(/^\s*الحصة\s+[^:：]{1,24}[:：]\s*/, '').replace(/\s+/g, ' ').trim();
 // المهارة التي يبدأ بها العنوان أولًا («تفسير أفكار النص ومحاكاة التعبير» قراءة، و«الإملاء: أكتب ما يملى» إملاء)
-const skillOfText = (t) => {
+export const skillOfText = (t) => {
   const b = bareTitle(t);
   let best = '', at = 1e9;
   for (const [k, re] of SKILL_RULES) { const m = re.exec(b); if (m && m.index < at) { best = k; at = m.index; } }
@@ -716,10 +716,37 @@ function lessonText(pkg, lesson, key) {
   return t;
 }
 // حصص الدرس نفسه في تحضير واحد: النصوص بالترتيب (سير الدرس يبدأ بعنوان كل حصة)، والاختيارات مجموعة بلا تكرار
-export function joinLessons(main, more) {
+// مخرجات حصص المهارة في قائمة واحدة مرقّمة بلا تكرار، و«مخرج تعليمي آخر» في آخرها. null إن لم تكن كل الأسطر بنودًا مرقّمة
+const OUT_ITEM = /^\s*[\d٠-٩]+\s*[.\-)ـ]\s*(\S.*)$/, OUT_OTHER = /^\s*مخرج(?:ات)?\s+تعليمي(?:ة)?\s+(?:آخر|أخرى)\s*[:：]?\s*$/;
+export function joinOutcomes(texts) {
+  const main = [], other = [], seen = new Set();
+  for (const t of texts) {
+    let to = main;
+    for (const line of String(t || '').replace(/\r/g, '').split('\n')) {
+      if (!line.trim()) continue;
+      if (OUT_OTHER.test(line)) { to = other; continue; }
+      const m = OUT_ITEM.exec(line);
+      if (!m) return null;
+      const k = m[1].replace(/\s+/g, ' ').trim();
+      if (!seen.has(k)) { seen.add(k); to.push(k); }
+    }
+  }
+  if (!main.length && !other.length) return null;
+  const rows = main.map((x, i) => `${i + 1}. ${x}`);
+  if (other.length) rows.push('', 'مخرج تعليمي آخر:', ...other.map((x, i) => `${main.length + i + 1}. ${x}`));
+  return rows.join('\n');
+}
+// opts.skill: تحضير مهارة (حصصها كلها في تحضير واحد) — مخرجاته قائمة واحدة، وتهيئته تهيئة أولى حصصه (تهيئة كل حصة تالية في سير درسها)
+export function joinLessons(main, more, opts = {}) {
   const all = [main, ...more];
   const out = Object.assign({}, main);
+  const sq = (v) => String(v == null ? '' : v).replace(/\s+/g, ' ').trim();
   NOOR_FIELDS.forEach((f) => {
+    if (opts.skill && f.key === 'outcomes' && all.every((l) => typeof l.outcomes === 'string' || l.outcomes == null)) {
+      const one = joinOutcomes(all.map((l) => l.outcomes));
+      if (one) { out.outcomes = one; return; }
+    }
+    if (opts.skill && f.key === 'intro' && sq(main.intro) && more.every((l) => !sq(l.intro) || sq(l.procedures).includes(sq(l.intro)))) { out.intro = main.intro; return; }
     const vals = all.map((l) => l[f.key]);
     if (vals.some(Array.isArray)) { out[f.key] = [...new Set(vals.flatMap((v) => (Array.isArray(v) ? v : [])))]; return; }
     if (!vals.some((v) => typeof v === 'string')) return;
@@ -922,20 +949,23 @@ export async function pickTreeNode(tabId, node) {
 }
 
 // «(2)» لعنوان الحصة الثانية من الدرس — فقط إن كان العنوان هو اسم الدرس في الشجرة (لا نغيّر عنوانًا كتبه المعلم)
-export async function applyTitleSuffix(tabId, pkg, lesson, nums = null, dayRank = 1, no = 0) {
+export async function applyTitleSuffix(tabId, pkg, lesson, nums = null, dayRank = 1, no = 0, skill = '') {
   const st = await treeOp(tabId, { op: 'state' });
   if (!st.tree || !st.title || !st.selected) return null;
   // اسم الدرس نفسه قد ينتهي بـ«(1)» («الجمع (1)»): لا يُحذف منه، والحصة الثانية «الجمع (1) (2)»
   // المقارنة بعد توحيد المسافات: نور يضع اسم الشجرة بمسافاته الأصلية (قد تكون مزدوجة) وقراءتنا للشجرة توحّدها
   const ws = (x) => String(x || '').replace(/\s+/g, ' ').trim();
   const n = no || sessionNo(pkg, lesson);
-  const base = ws(st.title) === ws(st.selected.text) || ws(stripSessionSuffix(st.title)) === ws(st.selected.text) ? (n >= 2 ? st.selected.text : st.title) : '';
+  // «تحضير لكل مهارة»: اسم المهارة يسبق اسم الدرس («مهارة الإملاء: …»)؛ عنوان كُتب به من قبل (إعادة تعبئة) يُقرأ بدونه
+  const tag = skillTag(skill), cur = stripSkillTag(st.title);
+  const base = ws(cur) === ws(st.selected.text) || ws(stripSessionSuffix(cur)) === ws(st.selected.text) ? (n >= 2 ? st.selected.text : cur) : '';
   if (!base) return null;
   const many = Array.isArray(nums) && nums.length > 1;
   let want = many ? `${st.selected.text} (${nums.join(' و ')})` : n >= 2 ? `${base} (${n})` : base;
   // نور تضيف «(j)» بنفسها للتحضير رقم j من الدرس نفسه في اليوم نفسه (حصتان للدرس في يوم واحد): إن كان j هو رقم الحصة
   // نكتب اسم الدرس وحده فيصير العنوان «X (2)» لا «X (2) (2)»
   if (!many && n >= 2 && +dayRank === n) want = st.selected.text;
+  want = tag + want;
   if (want === st.title) return null;
   const r = await treeOp(tabId, { op: 'title', value: want });
   return r.ok ? want : null;
@@ -1003,7 +1033,7 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
       }
       more.push(fitLessonMinutes(l, pkg));
     }
-    lesson = joinLessons(lesson, more);
+    lesson = joinLessons(lesson, more, { skill: !!opts.skill });
   }
   const settings = await getSettings();
   const skipFilled = opts.skipFilled != null ? !!opts.skipFilled : !!settings.skipFilled;
@@ -1020,7 +1050,7 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
     }
   }
   if (settings.titleSuffix !== false) {
-    const t = await applyTitleSuffix(tabId, pkg, lesson, opts.sessionNos, opts.dayRank || 1, opts.sessionNo || 0).catch(() => null);
+    const t = await applyTitleSuffix(tabId, pkg, lesson, opts.sessionNos, opts.dayRank || 1, opts.sessionNo || 0, opts.skill || '').catch(() => null);
     if (t) { lessonRow = Object.assign(lessonRow || { status: 'ok', how: 'suffix' }, { values: [t] }); finalTitle = t; }
   }
   const parts = await execNoor(tabId, 'noor', {
@@ -1100,15 +1130,16 @@ export async function syncNoorList(rows) {
     });
     if (!pk.length) continue;
     const asSession = suffixIsSession(pk);
-    const base = asSession ? stripSessionSuffix(row.title) : row.title;
+    const rowT = stripSkillTag(row.title);
+    const base = asSession ? stripSessionSuffix(rowT) : rowT;
     // تأكيدك اليدوي للتوافق أولًا، ثم المطابقة التلقائية الواضحة فقط
     let m = null;
-    const pkd = picks[kwNorm(row.title)] || picks[kwNorm(base)];
+    const pkd = picks[kwNorm(rowT)] || picks[kwNorm(base)];
     if (pkd) { const p = pk.find((x) => x.id === pkd.pkgId); const l = p && p.lessons.find((x) => x.id === pkd.lessonId); if (l) m = { pkg: p, lesson: l, score: 9 }; }
     if (!m) { m = bestLesson(pk, base); if (m && m.score < 0.6) m = null; }
     if (!m) continue;
     const sessions = m.pkg.lessons.filter((l) => groupKey(l) === groupKey(m.lesson));
-    const target = sessions[((asSession && sessionSuffix(row.title)) || 1) - 1];
+    const target = sessions[((asSession && sessionSuffix(rowT)) || 1) - 1];
     if (!target || sessionStatus(state, m.pkg.id, target.id).saved) continue;
     if (found.some((x) => x.lessonId === target.id && x.pkgId === m.pkg.id)) continue;
     found.push({ pkgId: m.pkg.id, pkg: m.pkg.title, lessonId: target.id, lesson: target.title, unitLesson: target.lesson, noor: row.title, id: row.id });

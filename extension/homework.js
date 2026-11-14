@@ -148,7 +148,7 @@ export function hwTitle(lessonName) { return 'واجب: ' + String(lessonName ||
 // op.kind = 'create' ← إنشاء الواجب وإضافة أسئلته دفعة واحدة
 export async function hwPageOp(op) {
   const norm = (s) => String(s || '').replace(/[ً-ْـ]/g, '').replace(/[إأآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه').replace(/[^\p{L}\p{N}]+/gu, ' ').trim().toLowerCase();
-  const peel = (s) => { let t = String(s || '').trim(); for (let i = 0; i < 4; i++) { const u = t.replace(/\s*\((\d+(\s*و\s*\d+)*)\)\s*$/, '').trim(); if (u === t) break; t = u; } return t; };
+  const peel = (s) => { let t = String(s || '').trim().replace(/^مهارة\s+(?:التحدث|الاستماع|القراءة|الأنماط اللغوية|الإملاء|الخط|التعبير|الكتابة)\s*[:：]\s*(?=\S)/, ''); for (let i = 0; i < 4; i++) { const u = t.replace(/\s*\((\d+(\s*و\s*\d+)*)\)\s*$/, '').trim(); if (u === t) break; t = u; } return t; };
   const origin = location.origin;
   const get = async (url) => {
     const r = await fetch(url, { credentials: 'include', redirect: 'follow' });
@@ -302,7 +302,7 @@ export function hwCreateFill(op) {
     }, wait);
   };
   const norm = (s) => String(s || '').replace(/[ً-ْـ]/g, '').replace(/[إأآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه').replace(/[^\p{L}\p{N}]+/gu, ' ').trim().toLowerCase();
-  const peel = (s) => { let t = String(s || '').trim(); for (let i = 0; i < 4; i++) { const u = t.replace(/\s*\((\d+(\s*و\s*\d+)*)\)\s*$/, '').trim(); if (u === t) break; t = u; } return t; };
+  const peel = (s) => { let t = String(s || '').trim().replace(/^مهارة\s+(?:التحدث|الاستماع|القراءة|الأنماط اللغوية|الإملاء|الخط|التعبير|الكتابة)\s*[:：]\s*(?=\S)/, ''); for (let i = 0; i < 4; i++) { const u = t.replace(/\s*\((\d+(\s*و\s*\d+)*)\)\s*$/, '').trim(); if (u === t) break; t = u; } return t; };
   try {
     if (document.querySelector('input[type="password"]') || /\/users\/login|\/login\b/i.test(location.href)) return { err: 'login' };
     const f = document.getElementById('AssignmentCreateForm') || document.querySelector('form[action*="homeworks/create"]');
