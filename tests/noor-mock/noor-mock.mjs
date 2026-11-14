@@ -78,6 +78,9 @@ export function createNoor(cfg) {
     roomPosts: [],
     videos: cfg.videos ? cfg.videos.map((v) => ({ cid: 'BIO9', lessons: [], lectures: [], ...v })) : [],   // «مكتبة الفيديو»: { cid, title, url, lang, publish, lessons, lectures }
     vidPosts: [],     // every POST to posts/add and posts/reply: { kind, outcome }
+    // «مكتبة الدروس التفاعلية» (SCORM, owner's saved pages 2026-11-14): { cid, title, lang, type, file, size, manifest, index, publish, lessons, lectures, students }
+    scorms: cfg.scorms ? cfg.scorms.map((v) => ({ cid: 'BIO9', lessons: [], lectures: [], ...v })) : [],
+    scPosts: [],
     nextRoom: 950,
     // ساعة نور للواجبات ('YYYY-MM-DD HH:MM'): نور يقترح في النموذج النشر بعد ربع ساعة منها، ويرفض نشرًا قبلها («في الماضي»).
     // بلا ضبط: الحقل فارغ ولا رفض (ساعة الاختبار الثابتة في الأداة قد تسبق ساعة الجهاز)
@@ -360,7 +363,57 @@ ${r.topics.map((t, i) => `<div class="media comment-holder mainComment" data-pos
   // ---------- «مكتبة الفيديو» (owner's saved pages, 2026-11-14) ----------
   const VT = 'TID3ETr';
   const vidLibPage = (cid) => page('مكتبة الفيديو', `<script>var current_url = '/teacher/attachments/index/BVideo/cid:${cid}/tid:0';</script><a class="btn btn-primary" href="${HOST}/teacher/attachments/upload/BVideo/cid:ENC${cid}/tid:${VT}/tuid:${VT}" id="uploadAttachmentBtn">رفع ملف فيديو جديد</a>
+<ul class="side-menu"><li><a href="${HOST}/teacher/attachments/index/Scorm/cid:ENC${cid}/tid:${VT}">مكتبة الدروس التفاعلية</a></li></ul>
 <table id="grid"><tbody></tbody></table>`);   // rows come by XHR (DataTable), as on Noor
+  // مكتبة الدروس التفاعلية: تُفتح برقم المادة المشفّر فقط (من قائمة المكتبات)، كما في روابط نور المحفوظة
+  const scLibPage = (cid) => page('مكتبة الدروس التفاعلية', `<a class="btn btn-primary" href="${HOST}/teacher/attachments/upload/Scorm/cid:ENC${cid}/tid:${VT}/tuid:${VT}" id="uploadAttachmentBtn">رفع درس تفاعلي جديد</a>
+<table id="grid"><tbody></tbody></table>`);
+  const scUploadPage = (cid) => { const c = course(cid); const lects = lectureLabels(cid); return page('رفع درس تفاعلي جديد', `<form action="${HOST}/teacher/attachments/upload/Scorm/cid:ENC${cid}/prep:${VT}" enctype="multipart/form-data" id="AttachmentUploadForm" method="post" accept-charset="utf-8">
+<div style="display:none;"><input type="hidden" name="_method" value="POST"><input type="hidden" name="data[Token][csrf_token]" value="csrf-${cid}" id="TokenCsrfToken"></div>
+<input name="data[Attachment][title]" id="attach_title" required type="text"><textarea name="data[Attachment][comments]" id="AttachmentComments"></textarea>
+<select name="data[Attachment][language_id]" id="AttachmentLanguageId"><option value="">إختر</option><option value="1">إنجليزي</option><option value="2">عربي</option></select>
+<input type="hidden" name="data[Attachment][upload_from]" value="2" id="AttachmentUploadFrom">
+<input type="file" name="data[UploadedFile][file][]" id="ScormFiles" accept=",.zip,.ZIP">
+<input type="hidden" name="data[Attachment][interactive_lesson_type]" id="AttachmentInteractiveLessonType_" value=""><input type="radio" name="data[Attachment][interactive_lesson_type]" id="AttachmentInteractiveLessonType1" value="1" required><input type="radio" name="data[Attachment][interactive_lesson_type]" id="AttachmentInteractiveLessonType2" value="2" required>
+<input type="file" name="data[Base64Image][file]" id="Base64ImageFile" accept=".jpg,.jpeg,.png">
+<input name="data[Attachment][publish_date]" id="publish_date" required type="text">
+<input type="hidden" name="data[Attachment][preparation_id]" value="" id="prep_title_"><select name="data[Attachment][preparation_id][]" id="prep_title" multiple></select>
+<input type="hidden" name="data[Attachment][lessons]" value="" id="lesson_title_"><select name="data[Attachment][lessons][]" id="lesson_title" multiple>${treeLessons(c).map((l) => `<option value="${l.id}">${esc(l.title)}</option>`).join('')}</select>
+<select name="data[Attachment][sharing_status]" id="AttachmentSharingStatus"><option value="0">لا شيء</option><option value="1" selected>المدرسة</option></select>
+<input style="display:none" id="publish_to_val" value="0" name="data[publish_to]">
+<input type="hidden" name="data[Attachment][480493]" value="0"><input type="checkbox" name="data[Attachment][480493]" class="stages_checkbox" value="1" id="Attachment480493">
+<input type="hidden" name="data[Attachment][588712]" value="0"><input type="checkbox" name="data[Attachment][588712]" class="levels_checkbox 480493" value="1" id="Attachment588712">
+${lects.map((x) => `<input type="hidden" name="data[Attachment][${x.id}]" value="0"><input type="checkbox" name="data[Attachment][${x.id}]" data-lecture="${x.id}" title="${esc(x.label)}" class="sections_checkbox 588712" value="1" id="Attachment${x.id}">
+${[1, 2].map((k) => `<input type="hidden" name="data[User][selected_students][${x.id}${k}]" value="0"><input type="checkbox" name="data[User][selected_students][${x.id}${k}]" class="${x.id} searchable_record" value="1" id="UserSelectedStudents${x.id}${k}">`).join('')}`).join('\n')}
+<input id="submission_button" type="submit" value="رفع"></form>`); };
+  function scAdd(cid, req) {
+    const f = multipart(req);
+    const last = (k) => { const v = f.filter(([n]) => n === k); return v.length ? v[v.length - 1][1] : undefined; };
+    const errs = [];
+    if (last('data[Token][csrf_token]') !== 'csrf-' + cid) errs.push('csrf');
+    const title = (last('data[Attachment][title]') || '').trim(), publish = last('data[Attachment][publish_date]') || '', type = last('data[Attachment][interactive_lesson_type]') || '';
+    if (!title) errs.push('title');
+    if (type !== '1') errs.push('type ' + type);
+    if (!DT.test(publish)) errs.push('publish ' + publish);
+    const lang = last('data[Attachment][language_id]') || '';
+    if (!['1', '2'].includes(lang)) errs.push('lang');
+    // the zip: stored entries keep their names readable
+    const ct = req.headers()['content-type'] || '', bnd = (ct.match(/boundary=(.+)$/) || [])[1] || '';
+    const raw = req.postDataBuffer() ? req.postDataBuffer().toString('latin1') : '';
+    const part = raw.split('--' + bnd).find((x) => /name="data\[UploadedFile\]\[file\]\[\]"; filename="[^"]+\.zip"/.test(x)) || '';
+    const file = (part.match(/filename="([^"]+)"/) || [])[1] || '';
+    const body = part.replace(/^[\s\S]*?\r\n\r\n/, '').replace(/\r\n$/, '');
+    const manifest = body.startsWith('PK') && body.includes('imsmanifest.xml') && /adlcp:scormtype="sco"/.test(body), index = body.includes('index.html') && /API\.LMSSetValue|LMSSetValue/.test(body);
+    if (!file || !manifest || !index) errs.push(`file ${file} manifest=${manifest} index=${index}`);
+    const lessons = f.filter(([n]) => n === 'data[Attachment][lessons][]').map(([, v]) => v);
+    const lectures = lectureLabels(cid).filter((x) => last(`data[Attachment][${x.id}]`) === '1').map((x) => x.label);
+    const students = f.filter(([n, v]) => /^data\[User\]\[selected_students\]/.test(n) && v === '1').length;
+    if (last('data[publish_to]') !== '0' || !lectures.length || !students) errs.push('sections');
+    if (errs.length) { st.scPosts.push({ outcome: 'error ' + errs.join(',') }); return { err: errs.join(',') }; }
+    st.scorms.push({ cid, title, lang, type, file, size: body.length, manifest, index, publish, lessons, lectures, students, comments: last('data[Attachment][comments]') || '', teacherInFile: body });
+    st.scPosts.push({ outcome: 'ok' });
+    return { ok: true };
+  }
   const vidUploadPage = (cid) => { const c = course(cid); return page('إضافة  فيديو جديد', `<form action="${HOST}/teacher/attachments/upload/BVideo/cid:ENC${cid}/prep:${VT}" enctype="multipart/form-data" id="AttachmentUploadForm" method="post" accept-charset="utf-8">
 <div style="display:none;"><input type="hidden" name="_method" value="POST"><input type="hidden" name="data[Token][csrf_token]" value="csrf-${cid}" id="TokenCsrfToken"></div>
 <input name="data[Attachment][title]" id="attach_title" required type="text"><textarea name="data[Attachment][comments]" id="AttachmentComments"></textarea>
@@ -518,6 +571,16 @@ ${r.topics.map((t, i) => `<div class="media comment-holder mainComment" data-pos
     if (m && course(m[1])) {
       if (req.method() === 'POST') { const r = vidAdd(m[1], req); return r.ok ? html(vidLibPage(m[1])) : html(vidUploadPage(m[1]).replace('<form', `<div class="alert alert-danger">${esc(r.err)}</div><form`)); }
       return html(vidUploadPage(m[1]));
+    }
+    m = p.match(/^\/teacher\/attachments\/index\/Scorm\/cid:ENC([A-Za-z0-9_-]+)(?:\/tid:\w+)?$/);
+    if (m && course(m[1])) {
+      if (xhr) return json({ draw: 1, data: st.scorms.filter((v) => v.cid === m[1]).map((v) => [`<a href="#">${esc(v.title)}</a>`, esc(v.comments || ''), v.publish]) });
+      return html(scLibPage(m[1]));
+    }
+    m = p.match(/^\/teacher\/attachments\/upload\/Scorm\/cid:ENC([A-Za-z0-9_-]+)\/(?:tid:\w+\/tuid:\w+|prep:\w+)$/);
+    if (m && course(m[1])) {
+      if (req.method() === 'POST') { const r = scAdd(m[1], req); return r.ok ? html(scLibPage(m[1])) : html(scUploadPage(m[1]).replace('<form', `<div class="alert alert-danger">${esc(r.err)}</div><form`)); }
+      return html(scUploadPage(m[1]));
     }
     if (p === '/teacher/posts/view') return html(roomsPage());
     if (p === '/teacher/posts/add' && req.method() === 'POST') { const r = roomAdd(req.postData()); return html(r.err ? roomsPage(`<div class="alert alert-danger">${esc(r.err)}</div>`) : roomsPage()); }

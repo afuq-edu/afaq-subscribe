@@ -145,8 +145,18 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
   // lessons = the first session's set, sessions = one more set for each further session (4.10.37: a homework per session)
   await ctx.route(GAMES + '**', (r) => {
     // lesson activities (site/games/<pkg>/<n>.json): the real file
+    // games/<key>/index.json and <n>.json; a key with no folder in site/games (the test package «bio-9») reads the real biology 9 activities
+    const gdir = (k) => (fs.existsSync(path.join(REPO, 'site/games', k)) ? k : 'bi-9');
+    // its units.json then lists the test package's own lessons (units and names as in PKG) on the biology 9 activity files, in order
+    const gi = r.request().url().match(/\/([a-z0-9-]+)\/(index|units)\.json$/);
+    if (gi) {
+      const real = gdir(gi[1]) === gi[1];
+      const body = real ? fs.readFileSync(path.join(REPO, 'site/games', gi[1], gi[2] + '.json'), 'utf8')
+        : gi[2] === 'units' ? JSON.stringify(lessonGroups(PKG).map((g, i) => [g.sessions[0].unit, g.sessions[0].lesson, i + 1])) : JSON.stringify(Object.fromEntries(lessonGroups(PKG).map((g, i) => [g.sessions[0].lesson, i + 1])));
+      return r.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body });
+    }
     const gm = r.request().url().match(/\/([a-z0-9-]+)\/(\d+)\.json$/);
-    if (gm) { const f = path.join(REPO, 'site/games', gm[1], gm[2] + '.json'); return fs.existsSync(f) ? r.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: fs.readFileSync(f, 'utf8') }) : r.fulfill({ status: 404, body: '' }); }
+    if (gm) { const f = path.join(REPO, 'site/games', gdir(gm[1]), gm[2] + '.json'); return fs.existsSync(f) ? r.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: fs.readFileSync(f, 'utf8') }) : r.fulfill({ status: 404, body: '' }); }
     const src = Object.values(JSON.parse(fs.readFileSync(path.join(REPO, 'site/homework/en-5.json'), 'utf8')).lessons);
     const gs = lessonGroups(PKG);
     const lessons = Object.fromEntries(gs.map((g, i) => [g.sessions[0].lesson, src[i % src.length]]));
@@ -1436,8 +1446,7 @@ const tickAll = async (pg, attr, go, except = []) => {
 };
 T(42, '«غرف النقاش»: a room for each unit of the Noor tree (title «<unit> — <subject> <grade>», ≤ 50 chars), shared with every student of the subject\'s sections only, holding a topic for each lesson (its activity link and two discussion questions when the lesson has an activity); a room already in Noor is reused and gets only its missing topics; a re-run adds nothing; no prep, no homework', async (env) => {
   usePkg(derivePkg({ keep: range(1, 12) }));
-  // the first lessons carry an activity link (as the real prep files do in item 10)
-  PKG.lessons.forEach((l, i) => { if (i < 6) l.notes = (l.notes || '') + `\nhttps://afuq-edu.github.io/afaq-subscribe/play.html?d=en-5/${i + 1}`; });
+  // lesson content does not reach the extension before a fill: the activity is found through the site's games/<key>/index.json
   const tree = treeFromPackage(PKG);
   const units = tree.terms[0].units.filter((u) => u.lessons.length);
   const now = lessonGroups(PKG)[0].sessions[0].pubDate;
@@ -1473,8 +1482,9 @@ T(42, '«غرف النقاش»: a room for each unit of the Noor tree (title «<
     if (want.some((t) => !got.includes(t)) || got.length !== new Set(got).size) bad.push(`${u.text}: topics ${got.join(' / ')} want ${want.join(' / ')}`);
   });
   check(!bad.length, 'every lesson of the unit has exactly one topic in its room (the existing topic is not repeated)', bad.join('\n'));
-  const withLink = rooms.flatMap((r) => r.topics).filter((t) => /play\.html\?d=en-5\//.test(t.html));
-  check(withLink.length >= 1 && withLink.every((t) => /سؤال للنقاش/.test(t.html) && /شهادتك/.test(t.html) && /نتيجتك/.test(t.html) && /href="https:\/\/afuq-edu\.github\.io\/afaq-subscribe\/play\.html\?d=en-5\/\d+(&amp;t=[^"]+)?"/.test(t.html)), `lessons with an activity get its clickable link (with the teacher's name for the certificate when known), the certificate and result steps, and a discussion question (${withLink.length})`, withLink.map((t) => t.title + ': ' + t.html.slice(0, 160)).join('\n'));
+  const mine = rooms.flatMap((r) => r.topics).filter((t) => t.html !== '<p>موضوعي</p>');
+  const withLink = mine.filter((t) => /play\.html\?d=[a-z0-9-]+\/\d+/.test(t.html));
+  check(mine.length >= 2 && withLink.length === mine.length && !mine.some((t) => /اكتب هنا ما تعلمته/.test(t.html)) && withLink.every((t) => /سؤال للنقاش/.test(t.html) && /شهادتك/.test(t.html) && /نتيجتك/.test(t.html) && /<a href="https:\/\/afuq-edu\.github\.io\/afaq-subscribe\/play\.html\?d=[a-z0-9-]+\/\d+(&amp;t=[^"]+)?"/.test(t.html)), `every topic «حاضر» adds has its lesson's activity as a clickable link (found through the site's activity index; with the teacher's name when known), the certificate and result steps and a discussion question; no generic placeholder text (${withLink.length}/${mine.length})`, mine.map((t) => t.title + ': ' + t.html.slice(0, 200)).join('\n'));
   check(!noor.st.posts.length && !noor.st.homeworks.length, 'no prep and no homework', `${noor.st.posts.length} / ${noor.st.homeworks.length}`);
   check(/غرف|غرفة|انتهى/.test(s.head) && !CALM_BAD_RE.test(s.head + ' ' + s.text), 'a calm closing line', `${s.head} | ${s.text}`);
   const n1 = rooms.length, k1 = rooms.reduce((a, r) => a + r.topics.length, 0);
@@ -1546,6 +1556,58 @@ T(43, '«فيديو لكل درس»: for each Noor lesson a YouTube video whose 
   await tickAll(b.pg, 'data-vk', '#wzVidGo');
   const s2 = await waitDone(b.pg, 15 * 60000, 'videos again');
   check(noor.st.videos.length === n1 + 1 && noor.st.videos.some((y) => y.title === 'فيديو: ' + skip.l.text) && !CALM_BAD_RE.test(s2.head + ' ' + s2.text), `second run with every lesson: only the lesson left out before gets its video (${n1} → ${n1 + 1})`, `${noor.st.videos.length} | ${s2.head} | ${s2.text}`);
+  return b;
+});
+
+T(44, '«درس تفاعلي»: for each lesson the teacher ticks, a SCORM 1.2 zip (imsmanifest + index.html built from the lesson\'s activities) uploaded to «مكتبة الدروس التفاعلية» as type Scorm, linked to its Noor lesson, both sections and all their students; the library is reached through its encoded link; an unticked lesson gets none; one already in the library is not repeated; a second run with every lesson adds only the missing one; no prep, no homework, calm wording', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 12) }));
+  const tree = treeFromPackage(PKG);
+  const lessonsT = tree.terms[0].units.flatMap((u) => u.lessons.map((l) => ({ u, l })));
+  const now = lessonGroups(PKG)[0].sessions[0].pubDate;
+  const first = lessonsT[0];
+  const noor = env.noor({ tree, scorms: [{ title: 'درس تفاعلي: ' + first.l.text, lang: '2', type: '1', publish: '2026-09-01 07:00:00' }] });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now, cont: false });
+  await svcPick(b.pg, 'scorm');
+  await card(b.pg, 'درس تفاعلي لكل درس');
+  await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }); await sleep(600);
+  await card(b.pg, 'الأحياء'); await card(b.pg, 'فترة واحدة');
+  await nameStep(b.pg);
+  const skip = lessonsT[lessonsT.length - 1];
+  const nL = await tickAll(b.pg, 'data-vk', '#wzVidGo', [skip.l.text]);
+  check(nL >= lessonsT.length - 1, `the teacher picks the lessons: one box per lesson (${nL})`, '');
+  const s = await waitDone(b.pg, 15 * 60000, 'scorm');
+  const errs = noor.st.scPosts.filter((x) => x.outcome !== 'ok');
+  check(!errs.length, 'every SCORM form Noor received was valid (title, Scorm type, zip with imsmanifest.xml and index.html, publish date, language, sections and students)', errs.map((x) => x.outcome).join('\n'));
+  const sc = noor.st.scorms;
+  const want = lessonsT.filter((x) => x !== first && x !== skip);
+  check(want.length >= 1, `the test tree has lessons to add (${want.length})`, '');
+  const bad = [];
+  want.forEach((x) => {
+    const v = sc.filter((y) => y.title === 'درس تفاعلي: ' + x.l.text);
+    if (v.length !== 1) { bad.push(`${x.l.text}: ${v.length}`); return; }
+    const why = [], y = v[0];
+    if (y.lessons.join() !== String(x.l.nodeId)) why.push(`lessons ${y.lessons.join(',')} expected ${x.l.nodeId}`);
+    if (y.lectures.length !== 2 || y.students !== 4) why.push(`sections ${y.lectures.join(',')} students ${y.students}`);
+    if (y.lang !== '2') why.push('lang ' + y.lang);
+    if (!y.publish.startsWith(now)) why.push('publish ' + y.publish);
+    if (!/\.zip$/.test(y.file) || y.size < 50000) why.push(`file ${y.file} ${y.size}`);
+    if (why.length) bad.push(`${x.l.text}: ${why.join('; ')}`);
+  });
+  check(!bad.length, 'each ticked lesson: one SCORM lesson (a real zip with its fonts), linked to its Noor lesson, both sections with all students, Arabic, published today', bad.join('\n'));
+  check(!sc.some((y) => y.title === 'درس تفاعلي: ' + skip.l.text), 'a lesson the teacher did not tick gets no SCORM lesson', skip.l.text);
+  check(sc.filter((y) => y.title === 'درس تفاعلي: ' + first.l.text).length === 1, 'the lesson already in the library is not added again', '');
+  check(!noor.st.posts.length && !noor.st.homeworks.length && !noor.st.rooms.length && !noor.st.videos.length, 'no prep, no homework, no room, no video', '');
+  check(/أضفت/.test(s.head) && !CALM_BAD_RE.test(s.head + ' ' + s.text), 'a calm closing line that says what was added', `${s.head} | ${s.text}`);
+  const n1 = sc.length;
+  await b.pg.reload(); await sleep(4000);
+  await svcPick(b.pg, 'scorm');
+  await card(b.pg, 'درس تفاعلي لكل درس');
+  await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }).catch(() => {}); await sleep(600);
+  await card(b.pg, 'الأحياء').catch(() => {}); await card(b.pg, 'فترة واحدة').catch(() => {});
+  await tickAll(b.pg, 'data-vk', '#wzVidGo');
+  const s2 = await waitDone(b.pg, 15 * 60000, 'scorm again');
+  check(noor.st.scorms.length === n1 + 1 && noor.st.scorms.some((y) => y.title === 'درس تفاعلي: ' + skip.l.text) && !CALM_BAD_RE.test(s2.head + ' ' + s2.text), `second run with every lesson: only the lesson left out before is added (${n1} → ${n1 + 1})`, `${noor.st.scorms.length} | ${s2.head} | ${s2.text}`);
   return b;
 });
 

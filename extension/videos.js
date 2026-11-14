@@ -90,7 +90,9 @@ export async function vidLibRead() {
     const j = await r.json();
     (j.data || []).forEach((row) => (Array.isArray(row) ? row : Object.values(row)).forEach((c) => { const d = document.createElement('div'); d.innerHTML = String(c == null ? '' : c); const t = d.textContent.replace(/\s+/g, ' ').trim(); if (t) titles.add(t); }));
   } catch (e) {}
-  return { ok: !!up, upload: up ? up.href : '', titles: [...titles], url: location.href };
+  // روابط المكتبات الأخرى في القائمة الجانبية (مكتبة الدروس التفاعلية Scorm تُفتح من هنا برقمها المشفّر)
+  const links = [...new Set([...document.querySelectorAll('a[href*="/attachments/index/"]')].map((a) => a.href))];
+  return { ok: !!up, upload: up ? up.href : '', titles: [...titles], url: location.href, links };
 }
 // «إضافة فيديو جديد»: العنوان واللغة ورابط يوتيوب وتاريخ النشر والدرس وكل شعب المادة، ثم «رفع»
 export function vidFill(op) {
