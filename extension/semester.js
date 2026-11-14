@@ -236,7 +236,7 @@ function secAssign(seqAll) {
   // «تحضير لكل مهارة» (مواد اللغة العربية): لكل شعبة، حصص الدرس المتتالية من المهارة نفسها في تحضير واحد بتاريخ أولاها عندها،
   // وكل حصة تبقى لها حصتها في جدول الشعبة؛ والتحضير الواحد يجمع الشعب التي وصلت إلى المجموعة نفسها في اليوم نفسه
   if (WIZ.skillJoin) {
-    const sk = skillsNow(), byP = new Map(), units = new Map();
+    const sk = skillsNow(), byP = new Map(), units = new Map(), headD = new Map();
     base.forEach((s) => { if (!byP.has(s.p)) byP.set(s.p, []); byP.get(s.p).push(s); });
     for (const sec of L) byP.forEach((ss) => {
       const pend = ss.filter((s) => at.has(s) && at.get(s).has(sec));
@@ -246,6 +246,7 @@ function secAssign(seqAll) {
         const g = r.ls.map((l) => byL.get(l)), d = at.get(g[0]).get(sec), key = g.map((x) => x.lesson.id).join(',') + '@' + d;
         if (!units.has(key)) units.set(key, { g, d, secs: [] });
         units.get(key).secs.push(sec);
+        g.forEach((x) => { if (!headD.has(x)) headD.set(x, {}); headD.get(x)[sec] = d; });
       });
     });
     units.forEach((u) => {
@@ -261,6 +262,19 @@ function secAssign(seqAll) {
       // تاريخ حصة كل شعبة لكل حصة تالية في التحضير: يُسجَّل عند الحفظ فتبقى حصتها محجوزة في تسلسل الشعبة
       c.tailAt = new Map((c.merge || []).map((x) => [x, Object.fromEntries(secs.map((sec) => [sec, at.get(x.base).get(sec)]))]));
       c.span = 1 + Math.max(0, ...secs.map((sec) => (c.merge || []).filter((x) => at.get(x.base).get(sec) === u.d).length));
+      // لكل شعبة: كم حصة حرة في هذا اليوم تسبق حصة التحضير (حصص محجوزة لحصص تحضير تاريخه قبل هذا اليوم)، وكم حصة يأخذ
+      const hi = idx.get(h);
+      c.secSlots = Object.fromEntries(secs.map((sec) => {
+        let skip = 0;
+        for (let i = 0; i < hi; i++) {
+          const x = base[i], r = secDone.get(x.lesson.id);
+          const own = at.has(x) && at.get(x).has(sec) ? at.get(x).get(sec) : r && isIso(r[sec]) ? r[sec] : '';
+          if (own !== u.d) continue;
+          const prep = at.has(x) && at.get(x).has(sec) ? (headD.get(x) || {})[sec] : r['~' + sec] || r[sec];
+          if (prep !== u.d) skip++;
+        }
+        return [sec, [skip, 1 + (c.merge || []).filter((x) => at.get(x.base).get(sec) === u.d).length]];
+      }));
       c.date = u.d; c.slot = 1; c.on = true; c.afterTerm = false;
       (c.merge || []).forEach((x) => { x.date = u.d; });
       if (!c.savedNow && !c.done) out.push(c);
@@ -2128,7 +2142,7 @@ async function fillOnce(item, c) {
   setBox('run', `أعبّئ «${shortT(s.lesson.title)}»…`, `الدرس: ${item.node.text}\nالنشر: ${dayLabel(s.date)}`);
   // ترتيب هذا التحضير بين تحاضير الدرس نفسه في اليوم نفسه (حصتان للدرس في يوم واحد) — نور ترقّم الثاني بنفسها
   const dayRank = () => 1 + savedThisRun.filter((x) => x.s !== s && x.s.date === s.date && x.s.p && s.p && x.s.p.node && s.p.node && x.s.p.node.id === s.p.node.id).length;
-  const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title, dayRank: dayRank(), slotNo: s.slot || 1, slotSpan: s.span || 1, slotFull: slotSeen.get(s.date) || null, allowSection: !!WIZ.allowSection, onlySecs: s.secs || null,
+  const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title, dayRank: dayRank(), slotNo: s.slot || 1, slotSpan: s.span || 1, slotFull: slotSeen.get(s.date) || null, allowSection: !!WIZ.allowSection, onlySecs: s.secs || null, secSlots: s.secSlots || null,
     merge: s.merge && s.merge.length ? s.merge.map((x) => x.lesson) : null, sessionNos: s.merge && s.merge.length && s.p ? [s, ...s.merge].map(nodeNo) : null, sessionNo: nodeNo(s) });
   let rep = await fillNoor(tabId, pkg, s.lesson, opts());
   let blk = rep.find((x) => x.key === 'remote');
@@ -2229,7 +2243,7 @@ async function recordSaved(item) {
   savedThisRun.push(item);
   if (s.secs) {
     // تسلسل الشعب: حصة جُمعت في تحضير مهارة تُسجَّل بتاريخ حصتها هي عند كل شعبة (تبقى حصتها محجوزة لها)
-    [s, ...tails].forEach((x) => { const r = Object.assign({}, secDone.get(x.lesson.id) || {}); const own = x !== s && s.tailAt ? s.tailAt.get(x) : null; s.secs.forEach((sec) => { r[sec] = (own && own[sec]) || s.date; }); secDone.set(x.lesson.id, r); });
+    [s, ...tails].forEach((x) => { const r = Object.assign({}, secDone.get(x.lesson.id) || {}); const own = x !== s && s.tailAt ? s.tailAt.get(x) : null; s.secs.forEach((sec) => { r[sec] = (own && own[sec]) || s.date; if (x !== s) r['~' + sec] = s.date; }); secDone.set(x.lesson.id, r); });
     await secSave();
   }
   // سجل هذا المقرر: لا تُعاد هذه الحصة فيه أبدًا (حتى لو لم تظهر بعد في قائمة نور) — ولا حصص الدرس التي جُمعت معها

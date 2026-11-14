@@ -1027,7 +1027,7 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
     items, skipFilled, publishDate: opts.publishDate || '', allRows: true,
     ensureChecks: (settings.ensureGlobal ? [GLOBAL_CHECK] : []).concat(settings.ensurePlan === false ? [] : [PLAN_CHECK]),
     checkTimeslots: settings.checkTimeslots !== false,
-    slotNo: opts.slotNo || 1, slotSpan: opts.slotSpan || 1, slotFull: opts.slotFull || null, allowSection: !!opts.allowSection, onlySecs: opts.onlySecs || null,   // تحضير لكل حصة: رقم حصة هذا التحضير في يومه
+    slotNo: opts.slotNo || 1, slotSpan: opts.slotSpan || 1, slotFull: opts.slotFull || null, allowSection: !!opts.allowSection, onlySecs: opts.onlySecs || null, secSlots: opts.secSlots || null,   // تحضير لكل حصة: رقم حصة هذا التحضير في يومه
     setWeek: settings.setWeek !== false,
     mark: { pkgId: pkg.id, lessonId: lesson.id, date: opts.publishDate || '', at: Date.now() },
   });

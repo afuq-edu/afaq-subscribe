@@ -947,22 +947,23 @@ function skillWant(A, periods) {
     const byD = {};
     secs.forEach((sec) => { const d = at[sec][r.ls[0].id]; (byD[d] = byD[d] || []).push(sec); });
     const ns = r.ls.map((l) => r.g.sessions.indexOf(l) + 1), node = nodeFor(A.tree, r.ls[0]).text;
+    // the periods of the prep: for each of its sections, the periods (by their order in the day) of its sessions that fall on its day
+    const rank = (sec, l, d) => PKG.lessons.filter((x) => at[sec][x.id] === d).indexOf(l) + 1;
     for (const [d, ss] of Object.entries(byD)) want.push({ title: ns.length > 1 ? `${node} (${ns.join(' و ')})` : ns[0] > 1 ? `${node} (${ns[0]})` : node, date: d, ids: r.ls.map((l) => l.id),
-      slots: Object.fromEntries(ss.map((sec) => [sec, r.ls.filter((l) => at[sec][l.id] === d).length])) });
+      slots: ss.flatMap((sec) => r.ls.filter((l) => at[sec][l.id] === d).map((l) => `${sec}|${rank(sec, l, d)}`)) });
   }
   return want;
 }
 function checkSkillTerm(name, rows, A, periods) {
   const want = skillWant(A, periods);
-  const secN = (r) => (r.slots || []).reduce((m, x) => { const k = String(x).split('|')[0]; m[k] = (m[k] || 0) + 1; return m; }, {});
-  const sig = (t, d, sl) => `${t} @${d} ${Object.entries(sl).sort().map(([k, n]) => `${k}×${n}`).join(' ')}`;
+  const sig = (t, d, sl) => `${t} @${d} periods ${sl.map(String).sort().join(' ')}`;
   // Noor adds « (j)» itself to the j-th prep of one lesson on one date (the tool sends the bare name when j is the session number)
   const sent = (r) => { const j = r.dayRank, suf = ` (${j})`; return !j || j < 2 || r.title === r.nodeText + suf || !r.title.endsWith(suf) ? r.title : r.title.slice(0, -suf.length); };
-  const got = rows.map((r) => sig(sent(r), r.publishDate, secN(r))).sort();
+  const got = rows.map((r) => sig(sent(r), r.publishDate, r.slots || [])).sort();
   const exp = want.map((w) => sig(w.title, w.date, w.slots)).sort();
   const miss = exp.filter((x) => !got.includes(x)), extra = got.filter((x) => !exp.includes(x));
   check(rows.length === want.length, `${name}: ${want.length} preps for the ${PKG.lessons.length} sessions (${rows.length})`, '');
-  check(!miss.length && !extra.length, `${name}: a prep per skill group on the date of its first session, covering that day's periods of its sessions; every session keeps its own period`, `missing:\n${miss.slice(0, 12).join('\n')}\nextra:\n${extra.slice(0, 12).join('\n')}`);
+  check(!miss.length && !extra.length, `${name}: a prep per skill group on the date of its first session, on exactly the periods of its sessions of that day (per section); every session keeps its own period`, `missing:\n${miss.slice(0, 12).join('\n')}\nextra:\n${extra.slice(0, 12).join('\n')}`);
   const bad = want.filter((w) => { const rs = rows.filter((r) => r.publishDate === w.date && w.ids.every((id) => r.concepts.includes(`(${id})`))); return rs.length !== 1 || PKG.lessons.some((l) => !w.ids.includes(l.id) && rs[0].concepts.includes(`(${l.id})`)); });
   check(!bad.length, `${name}: each prep holds the content of exactly its sessions`, bad.slice(0, 8).map((w) => `${w.title} @${w.date}`).join('\n'));
   const seen = new Map(), clash = [];

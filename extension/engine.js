@@ -1524,11 +1524,15 @@ export function hadirEngine(action, payload) {
             const open = els.filter((el) => !el.disabled);
             if (!open.length) return;                                                                   // حصص الشعبة كلها محضّرة اليوم
             let el;
-            if (only || k === 1 || open.length < els.length) el = open[0];                             // المحجوزة معطّلة: أول حصة حرة
+            // تحضير مهارة في تسلسل الشعب: لكل شعبة موضع حصتها بين الحرة في اليوم (حصص قبلها محجوزة لحصص تحضير سابق بلا تحضير في هذا اليوم) وعدد حصصها
+            const ss = only && payload.secSlots && payload.secSlots[key] ? payload.secSlots[key] : null;
+            if (ss) el = open[Math.max(0, +ss[0] || 0)] || open[0];
+            else if (only || k === 1 || open.length < els.length) el = open[0];                        // المحجوزة معطّلة: أول حصة حرة
             else if (full[key] && els.length < full[key]) el = open[0];                                 // المحجوزة اختفت: الباقية حرة
             else el = els[k - 1] || null;                                                               // كلها ظاهرة: الحصة رقم k
             if (el) pick.push(el);
-            if (el && span > 1) { const at = open.indexOf(el); if (at >= 0) pick.push(...open.slice(at + 1, at + span)); }
+            const n = ss ? Math.max(1, +ss[1] || 1) : span;
+            if (el && n > 1) { const at = open.indexOf(el); if (at >= 0) pick.push(...open.slice(at + 1, at + n)); }
           });
           const cnt = {}; groups.forEach((els, key) => { cnt[key] = els.length; });
           const cap = Math.max(1, ...Object.values(cnt));
