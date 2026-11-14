@@ -10,7 +10,7 @@ import {
   noorTerms, termAllLessons, pickTreeNode, stripSessionSuffix, sessionSuffix, sessionNums, lessonNum,
   layoutDates, isIso, inWeekOf, weekStart, weekEnd, hasFileDates, datedCount, lintPackage, lintLevel, knownCourse, rememberCourse, resetProgress, packageProgress, clearSession,
   holidaySet, termEndOf, countSchoolDays, loadNoorTree, storeNoorTree, dateOverrides, setDateOverride, GRADES, noorWho, noorWhoScan, probeDays,
-} from './packages.js';
+ joinRuns, lessonSkills, isArabicPkg } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { diffDays, addDays } from './dates.js';
 import { lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, hwHush, HW_MARK } from './homework.js';
@@ -3339,7 +3339,7 @@ function wzLessons() {
   let u = null;
   // «مدمج أو منفصل» (المالك 2026-11-14): يظهر حين يكون في المادة درس بأكثر من حصة؛ الافتراضي منفصل كما كان
   const multi = gs.some((g) => g.sessions.length > 1);
-  const seg = multi ? `<div class="wz-seg wz-seg2" id="wzJoin"><button class="wz-seg-b ${wz.join ? '' : 'on'}" data-j="0">كل حصة في تحضير</button><button class="wz-seg-b ${wz.join ? 'on' : ''}" data-j="1">حصص الدرس في تحضير واحد</button></div>` : '';
+  const seg = multi ? `<div class="wz-seg wz-seg2" id="wzJoin"><button class="wz-seg-b ${wz.join ? '' : 'on'}" data-j="0">كل حصة في تحضير</button><button class="wz-seg-b ${wz.join ? 'on' : ''}" data-j="1">${isArabicPkg(wz.pkg) ? 'تحضير لكل مهارة' : 'حصص الدرس في تحضير واحد'}</button></div>` : '';
   const units = wz.join ? wzUnits(gs) : [];
   body.innerHTML = wzTrialNote() + seg + '<div class="wz-list">' + gs.map((g) => {
     const on = g.sessions.some((l) => wz.sel.has(l.id));
@@ -3348,7 +3348,7 @@ function wzLessons() {
     const dateIn = (l) => `<input class="input wz-date" type="date" data-d="${esc(l.id)}" value="${esc(wz.sel.get(l.id) || '')}">`;
     // خانة التاريخ تحت الدرس بالشكل نفسه للحصة الواحدة وللحصص المتعددة
     // مدمج: مربعات الحصص بلا تواريخ، ثم خانة تاريخ واحدة لكل تحضير يجمع حصص الدرس المختارة
-    const joinRows = () => units.filter((x) => x.g === g).map((x) => `<label class="wz-s wz-j"><span>${x.ls.length > 1 ? `تحضير واحد (الحصص ${x.ls.map((l) => toAr(g.sessions.indexOf(l) + 1)).join(' و ')})` : `تاريخ الحصة ${ORD[g.sessions.indexOf(x.ls[0])] || toAr(g.sessions.indexOf(x.ls[0]) + 1)}`}</span>${dateIn(x.ls[0])}</label>`).join('');
+    const joinRows = () => units.filter((x) => x.g === g).map((x) => `<label class="wz-s wz-j"><span>${x.ls.length > 1 ? `${esc(x.skill || 'تحضير واحد')} (الحصص ${x.ls.map((l) => toAr(g.sessions.indexOf(l) + 1)).join(' و ')})` : `${x.skill ? esc(x.skill) + ': ' : 'تاريخ '}الحصة ${ORD[g.sessions.indexOf(x.ls[0])] || toAr(g.sessions.indexOf(x.ls[0]) + 1)}`}</span>${dateIn(x.ls[0])}</label>`).join('');
     const ses = on && one ? `<div class="wz-ses"><label class="wz-s"><span>تاريخ النشر</span>${dateIn(g.sessions[0])}</label></div>`
       : on && wz.join ? `<div class="wz-ses">${g.sessions.map((l, k) => `<label class="wz-s"><input type="checkbox" data-s="${esc(l.id)}" ${wz.sel.has(l.id) ? 'checked' : ''}><span>الحصة ${ORD[k] || toAr(k + 1)}</span></label>`).join('')}${joinRows()}</div>`
       : on && !one ? `<div class="wz-ses">${g.sessions.map((l, k) => `<label class="wz-s"><input type="checkbox" data-s="${esc(l.id)}" ${wz.sel.has(l.id) ? 'checked' : ''}><span>الحصة ${ORD[k] || toAr(k + 1)}</span>${wz.sel.has(l.id) ? dateIn(l) : ''}</label>`).join('')}</div>` : '';
@@ -3463,15 +3463,15 @@ function wzChain(gs) {
 }
 // تحاضير «أختار الدروس بنفسي» بترتيب القائمة: منفصل = لكل حصة مختارة تحضيرها؛ مدمج = حصص الدرس المختارة في تحضير واحد
 // (حتى أربع حصص في التحضير؛ ما زاد يتوزع على تحاضير متقاربة العدد). درسان مختلفان لا يُجمعان
-const JOIN_MAX = 4;
+// مواد اللغة العربية (المالك 2026-11-14): الجمع حسب المهارة — الحصص المتتالية المختارة من المهارة نفسها في تحضير (حتى ثمانٍ)
 function wzUnits(gs) {
   const out = [];
+  if (wz.skillsOf !== wz.pkg) { wz.skillsOf = wz.pkg; wz.skills = lessonSkills(wz.pkg); }
   for (const g of gs) {
     const ch = g.sessions.filter((l) => wz.sel.has(l.id));
     if (!ch.length) continue;
-    if (!wz.join) { ch.forEach((l) => out.push({ g, ls: [l] })); continue; }
-    const n = Math.ceil(ch.length / JOIN_MAX), size = Math.ceil(ch.length / n);
-    for (let i = 0; i < ch.length; i += size) out.push({ g, ls: ch.slice(i, i + size) });
+    if (!wz.join) { ch.forEach((l) => out.push({ g, ls: [l], skill: '' })); continue; }
+    joinRuns(wz.pkg, ch, wz.skills).forEach((r) => out.push({ g, ls: r.ls, skill: r.skill }));
   }
   return out;
 }

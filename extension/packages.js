@@ -257,6 +257,65 @@ export function lessonGroups(pkg) {
   return [...map.values()];
 }
 
+// ---------- تحضير يجمع حصصًا (المالك 2026-11-14) ----------
+// مواد اللغة العربية: مهارة كل حصة من عنوانها — التحدث، الاستماع، القراءة، الأنماط اللغوية، الإملاء، الخط، التعبير، الكتابة،
+// والمراجعة والتقويم. عنوان لا يدل على مهارة يأخذ مهارة الحصة التي قبله في الدرس (تطبيقات النمط نفسه)، وإلا مهارة اسم الدرس
+// («الأنشطة النحوية: …»)، وإلا يبقى بلا مهارة (حصص الدرس كلها نوع واحد)
+const AR_B = '(?:^|[\\s«(:،])', AR_E = '(?=$|[\\s:،)»])';
+const SKILL_RULES = [
+  ['المراجعة والتقويم', new RegExp('^(?:مراجعة|تقويم|تقييم|اختبار|أقيم|أقيّم|خطة)')],
+  ['الخط', new RegExp(AR_B + 'الخط' + AR_E + '|بخط |خط النسخ|خط الرقعة')],
+  ['الإملاء', /إملا|الإملائ/],
+  ['الأنماط اللغوية', /النمط اللغوي|الأنماط اللغوية|أنماط لغوية|النحو|الصرف/],
+  ['التحدث', /أتحدث|التحدث|التعبير الشفوي|الشفوي|المحادثة|أشاهد/],
+  ['الاستماع', /الاستماع|أستمع|المسموع|السمعي/],
+  ['التعبير', /التعبير(?! الشفوي)|تحرير/],
+  ['الكتابة', new RegExp(AR_B + 'أكتب' + AR_E + '|^الكتابة' + AR_E)],
+  ['القراءة', /القراء|أقرأ|قراءة|أتصفح|المستوى ال|المستويان|المفردات|فهم |الفهم القرائي|تفسير أفكار|أحلل وأرك|التحليل والتركيب|التعرف البصري|ألاحظ|إنشاد|نشيد|أنشودة|حفظ |تلاوة|تسميع|إلقاء/],
+];
+const bareTitle = (t) => String(t || '').replace(/[ً-ْٰ]/g, '').replace(/^\s*الحصة\s+[^:：]{1,24}[:：]\s*/, '').replace(/\s+/g, ' ').trim();
+// المهارة التي يبدأ بها العنوان أولًا («تفسير أفكار النص ومحاكاة التعبير» قراءة، و«الإملاء: أكتب ما يملى» إملاء)
+const skillOfText = (t) => {
+  const b = bareTitle(t);
+  let best = '', at = 1e9;
+  for (const [k, re] of SKILL_RULES) { const m = re.exec(b); if (m && m.index < at) { best = k; at = m.index; } }
+  return best;
+};
+// معرّف الباقة «ar-4» أو «ar-4-2»؛ مادة الاشتراك تحمله في remote.package_id (معرّفها المحلي «afaq:…»)
+export const isArabicPkg = (pkg) => /^ar-\d/.test(String((pkg && ((pkg.remote && pkg.remote.package_id) || pkg.id)) || ''));
+// مهارة كل حصة في مادة عربية: Map من معرّف الحصة إلى اسم المهارة ('' = بلا مهارة ظاهرة)
+export function lessonSkills(pkg) {
+  const out = new Map();
+  if (!isArabicPkg(pkg)) return out;
+  for (const g of lessonGroups(pkg)) {
+    const byName = skillOfText(g.lesson);
+    let prev = '';
+    for (const l of g.sessions) {
+      const k = skillOfText(l.title) || prev || (byName === 'المراجعة والتقويم' ? '' : byName);
+      out.set(l.id, k); prev = k === 'المراجعة والتقويم' ? '' : k;
+    }
+  }
+  return out;
+}
+// التحاضير المجموعة لحصص درس واحد (بترتيبها): مادة عربية = الحصص المتتالية من المهارة نفسها في تحضير (حتى ثمانٍ)، وغيرها =
+// حصص الدرس في تحضير (حتى أربع). ما زاد يتوزع على تحاضير متقاربة العدد. يعيد [{ ls: [حصص], skill }]
+export const JOIN_MAX = 4, SKILL_MAX = 8;
+export function joinRuns(pkg, sessions, skills = null) {
+  const sk = skills || lessonSkills(pkg), ar = isArabicPkg(pkg), max = ar ? SKILL_MAX : JOIN_MAX;
+  const runs = [];
+  for (const l of sessions) {
+    const k = ar ? sk.get(l.id) || '' : '';
+    const last = runs[runs.length - 1];
+    if (last && last.skill === k) last.ls.push(l); else runs.push({ ls: [l], skill: k });
+  }
+  const out = [];
+  for (const r of runs) {
+    const n = Math.ceil(r.ls.length / max), size = Math.ceil(r.ls.length / n);
+    for (let i = 0; i < r.ls.length; i += size) out.push({ ls: r.ls.slice(i, i + size), skill: r.skill });
+  }
+  return out;
+}
+
 // اختيار المعلم اليدوي لدرس نور يُحفظ، فلا تعود المطابقة التلقائية لتغييره
 export async function getPicks() { const r = await chrome.storage.local.get('picks'); return r.picks || {}; }
 export async function rememberPick(noorTitle, pkgId, lessonId) {
