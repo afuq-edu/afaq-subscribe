@@ -1421,6 +1421,19 @@ T(23, '«الواجبات فقط»: the teacher picks sessions and types a publi
 });
 
 // ---------- «غرف النقاش» (المالك 2026-11-14): غرفة لكل وحدة، وفيها موضوع لكل درس ----------
+// قائمة اختيار الوحدات (الغرف) أو الدروس (الفيديو): يضع علامة على الكل إلا ما في except، ثم يضغط زر البدء
+const tickAll = async (pg, attr, go, except = []) => {
+  await pg.waitForSelector(`input[${attr}]`, { timeout: 120000 });
+  const n = await pg.locator(`input[${attr}]`).count();
+  for (let i = 0; i < n; i++) {
+    const cb = pg.locator(`input[${attr}]`).nth(i);
+    const t = String(await cb.evaluate((x) => x.closest('label').textContent)).trim();
+    if (except.some((e) => t.includes(e))) continue;
+    if (!(await cb.isChecked())) { await cb.check(); await sleep(150); }
+  }
+  await pg.click(go); await sleep(600);
+  return n;
+};
 T(42, '«غرف النقاش»: a room for each unit of the Noor tree (title «<unit> — <subject> <grade>», ≤ 50 chars), shared with every student of the subject\'s sections only, holding a topic for each lesson (its activity link and two discussion questions when the lesson has an activity); a room already in Noor is reused and gets only its missing topics; a re-run adds nothing; no prep, no homework', async (env) => {
   usePkg(derivePkg({ keep: range(1, 12) }));
   // the first lessons carry an activity link (as the real prep files do in item 10)
@@ -1439,16 +1452,20 @@ T(42, '«غرف النقاش»: a room for each unit of the Noor tree (title «<
   await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }); await sleep(600);
   await card(b.pg, 'الأحياء'); await card(b.pg, 'فترة واحدة');
   await nameStep(b.pg);
+  // المعلم يختار الوحدات: كلها إلا الأخيرة
+  const uLast = units[units.length - 1];
+  const nU = await tickAll(b.pg, 'data-ru', '#wzRoomGo', [uLast.text]);
+  check(units.length >= 2 && nU === units.length, `the teacher picks the units: one box per unit (${nU} / ${units.length})`, '');
   const s = await waitDone(b.pg, 15 * 60000, 'rooms');
   const errs = noor.st.roomPosts.filter((x) => x.outcome !== 'ok');
   check(!errs.length, 'every room and topic form Noor received was valid', errs.map((x) => `${x.kind}: ${x.outcome}`).join('\n'));
   const rooms = noor.st.rooms;
-  check(rooms.length === units.length, `one room per unit (${units.length})`, rooms.map((r) => r.title).join(' | '));
+  check(rooms.length === units.length - 1 && !rooms.some((r) => r.title.startsWith(uLast.text.slice(0, 20))), `one room per chosen unit only (${units.length - 1}), none for the unit left unticked`, rooms.map((r) => r.title).join(' | '));
   check(rooms.every((r) => r.title.length <= 50 && /الأحياء/.test(r.title)), 'each room title ≤ 50 chars and names the subject', rooms.map((r) => `${r.title.length} ${r.title}`).join(' | '));
   const made = rooms.filter((r) => r.students);
   check(made.every((r) => r.lectures.length === 2 && r.lectures.every((x) => /^الأحياء - التاسع - /.test(x)) && r.students === 4), 'a new room is shared with the two sections of this subject and grade (all their students) and no other course', made.map((r) => `${r.title}: ${r.lectures.join(',')} · ${r.students}`).join(' | '));
   const bad = [];
-  units.forEach((u) => {
+  units.slice(0, -1).forEach((u) => {
     const r = rooms.find((x) => x.title.startsWith(u.text.slice(0, 20)));
     if (!r) { bad.push(`${u.text}: no room`); return; }
     const want = [...new Set(u.lessons.map((l) => l.text))];
@@ -1466,9 +1483,12 @@ T(42, '«غرف النقاش»: a room for each unit of the Noor tree (title «<
   await card(b.pg, 'غرفة لكل وحدة');
   await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }).catch(() => {}); await sleep(600);
   await card(b.pg, 'الأحياء').catch(() => {}); await card(b.pg, 'فترة واحدة').catch(() => {});
+  await tickAll(b.pg, 'data-ru', '#wzRoomGo');
   const s2 = await waitDone(b.pg, 15 * 60000, 'rooms again');
   const k2 = noor.st.rooms.reduce((a, r) => a + r.topics.length, 0);
-  check(noor.st.rooms.length === n1 && k2 === k1, `re-run adds no room and no topic (${n1} rooms, ${k1} topics)`, `${noor.st.rooms.length} rooms, ${k2} topics | ${s2.head}`);
+  const rl = noor.st.rooms.find((r) => r.title.startsWith(uLast.text.slice(0, 20)));
+  const wantL = new Set(uLast.lessons.map((l) => l.text)).size;
+  check(noor.st.rooms.length === n1 + 1 && rl && rl.topics.length === wantL && k2 === k1 + wantL, `second run with every unit: only the missing unit's room is added with its ${wantL} topics; the earlier rooms get nothing new (${n1} rooms, ${k1} topics before)`, `${noor.st.rooms.length} rooms, ${k2} topics | ${s2.head}`);
   return b;
 });
 
@@ -1487,12 +1507,17 @@ T(43, '«فيديو لكل درس»: for each Noor lesson a YouTube video whose 
   await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }); await sleep(600);
   await card(b.pg, 'الأحياء'); await card(b.pg, 'فترة واحدة');
   await nameStep(b.pg);
+  // المعلم يختار الدروس: كلها إلا درسًا له عنوان مناسب
+  const skip = lessonsT.filter((x) => x !== first && !/انتشار/.test(x.l.text)).pop();
+  const nL = await tickAll(b.pg, 'data-vk', '#wzVidGo', [skip.l.text]);
+  check(nL >= lessonsT.length - 1, `the teacher picks the lessons: one box per lesson (${nL})`, '');
   const s = await waitDone(b.pg, 15 * 60000, 'videos');
   const errs = noor.st.vidPosts.filter((x) => x.outcome !== 'ok');
   check(!errs.length, 'every video form Noor received was valid', errs.map((x) => x.outcome).join('\n'));
   const vids = noor.st.videos;
   const noFit = lessonsT.filter((x) => /انتشار/.test(x.l.text));
-  const want = lessonsT.filter((x) => x !== first && !noFit.includes(x));
+  const want = lessonsT.filter((x) => x !== first && x !== skip && !noFit.includes(x));
+  check(!vids.some((y) => y.title === 'فيديو: ' + skip.l.text), 'a lesson the teacher did not tick gets no video', skip.l.text);
   check(noFit.length >= 1 && want.length >= 1, `the test tree has lessons with and without a fitting title (${want.length} / ${noFit.length})`, lessonsT.map((x) => x.l.text).join(' | '));
   const bad = [];
   want.forEach((x) => {
@@ -1518,8 +1543,9 @@ T(43, '«فيديو لكل درس»: for each Noor lesson a YouTube video whose 
   await card(b.pg, 'فيديو لكل درس');
   await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }).catch(() => {}); await sleep(600);
   await card(b.pg, 'الأحياء').catch(() => {}); await card(b.pg, 'فترة واحدة').catch(() => {});
+  await tickAll(b.pg, 'data-vk', '#wzVidGo');
   const s2 = await waitDone(b.pg, 15 * 60000, 'videos again');
-  check(noor.st.videos.length === n1 && !CALM_BAD_RE.test(s2.head + ' ' + s2.text), `re-run adds no video (${n1})`, `${noor.st.videos.length} | ${s2.head} | ${s2.text}`);
+  check(noor.st.videos.length === n1 + 1 && noor.st.videos.some((y) => y.title === 'فيديو: ' + skip.l.text) && !CALM_BAD_RE.test(s2.head + ' ' + s2.text), `second run with every lesson: only the lesson left out before gets its video (${n1} → ${n1 + 1})`, `${noor.st.videos.length} | ${s2.head} | ${s2.text}`);
   return b;
 });
 

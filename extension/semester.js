@@ -2817,6 +2817,7 @@ async function roomsOnly() {
   const units = new Map();
   plan.forEach((p) => {
     if (!p.node || p.skipped || p.miss) return;
+    if (WIZ.roomPick && !WIZ.roomPick.has(kwNorm(p.group.unit || ''))) return;   // الوحدات التي اختارها المعلم وحدها
     const u = p.node.unit || '';
     if (!units.has(u)) units.set(u, []);
     const arr = units.get(u);
@@ -2878,7 +2879,7 @@ async function videosOnly() {
   if (!lib || !lib.ok) { WIZ.vidHead = '✓ انتهى'; WIZ.vidSub = 'مكتبة الفيديو لم تفتح الآن. أعد المحاولة بعد قليل.'; flRow('skipped', null, 'مكتبة الفيديو: ' + ((lib && lib.url) || 'لا صفحة')); return; }
   const have = new Set(lib.titles.map(kwNorm));
   const nodes = [];
-  plan.forEach((p) => { if (p.node && !p.skipped && !p.miss && !nodes.includes(p.node)) nodes.push(p.node); });
+  plan.forEach((p) => { if (p.node && !p.skipped && !p.miss && !nodes.includes(p.node) && (!WIZ.vidPick || WIZ.vidPick.has(p.group.key))) nodes.push(p.node); });
   let n = 0, none = 0, had = 0, fail = 0;
   for (let i = 0; i < nodes.length && !stopFlag; i++) {
     const node = nodes[i];
@@ -3428,7 +3429,7 @@ const SHIFT = { one: { name: 'فترة واحدة', min: 40 }, two: { name: 'ف�
 const WZ_STEPS = ['mode', 'grade', 'subject', 'shift', 'lessons'];
 // «بداية الإدخال» في التحضير التلقائي: في النسخة الخاصة بالمالك فقط (اسم الإصدار فيه «خاصة»)
 const FROM_STEP = (() => { try { return /خاصة/.test(chrome.runtime.getManifest().version_name || ''); } catch (e) { return false; } })();
-const wz = { hw: true, join: false, step: 'mode', hist: [], mode: '', grade: 0, subject: '', shift: '', pkg: null, sel: new Map(), typed: new Set(), hsel: new Map(), catalog: null, link: null, status: null, busy: false };
+const wz = { hw: true, join: false, step: 'mode', hist: [], mode: '', grade: 0, subject: '', shift: '', pkg: null, sel: new Map(), typed: new Set(), hsel: new Map(), rsel: new Set(), vsel: new Set(), catalog: null, link: null, status: null, busy: false };
 const ORD = ['الأولى', 'الثانية', 'الثالثة', 'الرابعة', 'الخامسة', 'السادسة', 'السابعة', 'الثامنة'];
 const wdone = (l) => { const x = sessionStatus(state, wz.pkg.id, l.id); return !!(x.saved || (x.filled && !x.failed)); };
 const gradeName = (n) => 'الصف ' + (GRADES[n - 1] || toAr(n));
@@ -3606,6 +3607,12 @@ function wzRender() {
   } else if (wz.step === 'hwLessons') {
     wzHwLessons();
     return;
+  } else if (wz.step === 'roomUnits') {
+    wzRoomUnits();
+    return;
+  } else if (wz.step === 'vidLessons') {
+    wzVidLessons();
+    return;
   } else if (wz.step === 'pay') {
     wzPayRender();
     return;
@@ -3721,6 +3728,40 @@ function wzHwLessons() {
     wzRun();
   };
 }
+// «غرف النقاش» (المالك 2026-11-14): يختار المعلم الوحدات بنفسه، ولكل وحدة مختارة غرفة فيها موضوع لكل درس
+function wzRoomUnits() {
+  const body = $('wzBody');
+  const keep = body.querySelector('.wz-list'); const top = keep ? keep.scrollTop : 0;
+  $('wzHead').textContent = 'اختر الوحدات';
+  const units = new Map();
+  groupByUnit(lessonGroups(wz.pkg)).forEach((g) => { const k = kwNorm(g.unit || ''); if (!units.has(k)) units.set(k, { name: g.unit || 'دروس الفصل', n: 0 }); units.get(k).n++; });
+  const lw = (k) => (k === 1 ? 'درس واحد' : k === 2 ? 'درسان' : k <= 10 ? toAr(k) + ' دروس' : toAr(k) + ' درسًا');
+  body.innerHTML = wzTrialNote() + '<div class="wz-list">' + [...units].map(([k, u]) => `<div class="wz-les ${wz.rsel.has(k) ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-ru="${esc(k)}" ${wz.rsel.has(k) ? 'checked' : ''}><span>${esc(u.name)}</span><em>${lw(u.n)}</em></label></div>`).join('') + '</div>';
+  const n = wz.rsel.size;
+  const rw = (k) => (k === 1 ? 'غرفة واحدة' : k === 2 ? 'غرفتين' : k <= 10 ? toAr(k) + ' غرف' : toAr(k) + ' غرفة');
+  body.insertAdjacentHTML('beforeend', `<p class="wz-note">لكل وحدة غرفة نقاش لطلبة شعب المادة، وفيها موضوع لكل درس: رابط نشاطه وسؤالان للنقاش.</p><button class="btn primary big" id="wzRoomGo" ${n ? '' : 'disabled'}>${n ? `أنشئ ${rw(n)} في نور` : 'اختر وحدة'}</button>`);
+  const list = body.querySelector('.wz-list'); list.scrollTop = top;
+  body.querySelectorAll('input[data-ru]').forEach((cb) => { cb.onchange = () => { if (cb.checked) wz.rsel.add(cb.dataset.ru); else wz.rsel.delete(cb.dataset.ru); wzRoomUnits(); }; });
+  $('wzRoomGo').onclick = () => { if (wz.rsel.size) wzRun(); };
+}
+// «فيديو» (المالك 2026-11-14): يختار المعلم الدروس بنفسه؛ لكل درس مختار فيديو من يوتيوب إن وُجد عنوان مناسب
+function wzVidLessons() {
+  const body = $('wzBody');
+  const keep = body.querySelector('.wz-list'); const top = keep ? keep.scrollTop : 0;
+  $('wzHead').textContent = 'اختر الدروس';
+  const gs = groupByUnit(lessonGroups(wz.pkg));
+  let u = null;
+  body.innerHTML = wzTrialNote() + '<div class="wz-list">' + gs.map((g) => {
+    const uh = g.unit !== u ? `<div class="wz-unit">${esc(g.unit || 'دروس')}</div>` : ''; u = g.unit;
+    return `${uh}<div class="wz-les ${wz.vsel.has(g.key) ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-vk="${esc(g.key)}" ${wz.vsel.has(g.key) ? 'checked' : ''}><span>${esc(g.lesson || 'درس')}</span></label></div>`;
+  }).join('') + '</div>';
+  const n = wz.vsel.size;
+  const vw = (k) => (k === 1 ? 'لدرس واحد' : k === 2 ? 'لدرسين' : k <= 10 ? 'لـ' + toAr(k) + ' دروس' : 'لـ' + toAr(k) + ' درسًا');
+  body.insertAdjacentHTML('beforeend', `<p class="wz-note">أبحث في يوتيوب عن فيديو عنوانه قريب من اسم الدرس، وأضيفه في «مكتبة الفيديو» لشعب المادة. الدرس الذي لا أجد له عنوانًا مناسبًا يبقى بلا فيديو.</p><button class="btn primary big" id="wzVidGo" ${n ? '' : 'disabled'}>${n ? `أضف فيديو ${vw(n)}` : 'اختر درسًا'}</button>`);
+  const list = body.querySelector('.wz-list'); list.scrollTop = top;
+  body.querySelectorAll('input[data-vk]').forEach((cb) => { cb.onchange = () => { if (cb.checked) wz.vsel.add(cb.dataset.vk); else wz.vsel.delete(cb.dataset.vk); wzVidLessons(); }; });
+  $('wzVidGo').onclick = () => { if (wz.vsel.size) wzRun(); };
+}
 // تواريخ متتالية في «أختار الدروس بنفسي» (المالك 2026-10-31): الحصص المختارة وحدها، بترتيب القائمة؛ ما كتبه المعلم يبقى كما كتبه،
 // وكل حصة مختارة بعده بلا تاريخ منه تأخذ الحصة التالية في أيام حصصه (حصتان في يوم له فيه حصتان، ولا إجازة). ما قبل أول تاريخ يبقى فارغًا
 function wzChain(gs) {
@@ -3793,7 +3834,8 @@ function wzOpen(p) {
   const ids = new Set((p.lessons || []).map((l) => l.id));
   [...wz.sel.keys()].forEach((k) => { if (!ids.has(k)) wz.sel.delete(k); });
   if (wz.mode === 'hw') { const ks = new Set(lessonGroups(p).map((g) => g.key)); [...wz.hsel.keys()].forEach((k) => { if (!ks.has(k)) wz.hsel.delete(k); }); wzGo('hwLessons'); }
-  else if (wz.mode === 'rooms' || wz.mode === 'video') wzRun();
+  else if (wz.mode === 'rooms') { const us = new Set(lessonGroups(p).map((g) => kwNorm(g.unit || ''))); [...wz.rsel].forEach((k) => { if (!us.has(k)) wz.rsel.delete(k); }); wzGo('roomUnits'); }
+  else if (wz.mode === 'video') { const ks = new Set(lessonGroups(p).map((g) => g.key)); [...wz.vsel].forEach((k) => { if (!ks.has(k)) wz.vsel.delete(k); }); wzGo('vidLessons'); }
   else if (wz.mode === 'term') { if (isArabicPkg(p)) wzGo('style'); else wzTermGo(); } else wzGo('lessons');
 }
 function wzTermGo() { if (FROM_STEP) wzGo('from'); else wzRun(); }
@@ -3890,6 +3932,9 @@ async function wzRun() {
   $('optNoor').checked = true; $('optAuto').checked = true;
   WIZ.on = true; WIZ.rule = fileOk ? 'official' : ''; WIZ.seq = !fileOk;
   WIZ.roomsOnly = wz.mode === 'rooms'; WIZ.videosOnly = wz.mode === 'video'; WIZ.course = null;
+  // المعلم يختار الوحدات (الغرف) والدروس (الفيديو) بنفسه (المالك 2026-11-14)
+  WIZ.roomPick = WIZ.roomsOnly ? new Set(wz.rsel) : null;
+  WIZ.vidPick = WIZ.videosOnly ? new Set(wz.vsel) : null;
   WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = !WIZ.roomsOnly && !WIZ.videosOnly && (WIZ.hwOnly || (!!wz.hw && !(p.remote && !p.remote.trial && p.remote.service === 'prep'))); WIZ.hwN = 0; WIZ.hwFail = 0; WIZ.hwDone = null;
   WIZ.hwPick = WIZ.hwOnly ? Object.fromEntries([...wz.hsel].map(([k, v]) => [k, { pub: v.pub, due: v.due }])) : null;
   WIZ.rid = Date.now(); WIZ.sum = 0; WIZ.auto = 0;
