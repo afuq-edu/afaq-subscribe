@@ -341,10 +341,26 @@ function assignDates() {
   cands.forEach((s) => {
     if (s.merge && s.merge.length) { s.merge.forEach((x) => { if (candSet.has(x)) x.mergedInto = null; }); s.merge = null; }
     if (s.mergedInto && candSet.has(s.mergedInto)) s.mergedInto = null;
+    s.span = 0;
   });
+  // «أختار الدروس بنفسي» مدمجًا (المالك 2026-11-14): الحصص التي اختارها المعلم من الدرس نفسه تُحفظ في تحضير واحد بتاريخ واحد
+  // (المجموعات كما عرضها المعالج: حتى أربع حصص في التحضير)، ودرسان مختلفان لا يُجمعان. الجمع اختيار المعلم فيبقى ثابتًا
+  // في كل توزيع (حتى والتحضير يُعبَّأ الآن)، والتحضير يغطي من حصص الشعبة في يومه بعدد حصصه (span)
+  if (WIZ.pickDates && WIZ.pickJoin) {
+    const heads = new Map();
+    cands.forEach((x) => {
+      const h = WIZ.pickJoin[x.lesson.id];
+      if (!h || !x.p || !wanted(x) || x.savedNow || x.done) return;
+      const a = heads.get(h);
+      if (!a) { heads.set(h, x); return; }
+      if (a.p !== x.p) return;
+      a.merge = (a.merge || []).concat(x); x.mergedInto = a;
+    });
+    heads.forEach((a) => { if (a.merge && a.merge.length) a.span = 1 + a.merge.length; });
+  }
   const lay = () => {
     // الفصل كاملًا: بلا تاريخ ملف — كل حصة تلي ما قبلها على أول حصة حرة في جدول المعلم، من أول يوم دراسي
-    const items = order.filter((s) => !s.mergedInto).map((s) => ({ s, fileDate: fileMode && !seqTerm && isIso(s.lesson.pubDate) ? s.lesson.pubDate : '', fixed: s.fixed || '', after: after.get(s) || '' }));
+    const items = order.filter((s) => !s.mergedInto).map((s) => ({ s, fileDate: fileMode && !seqTerm && isIso(s.lesson.pubDate) ? s.lesson.pubDate : '', fixed: s.fixed || '', after: after.get(s) || '', span: s.span || 1 }));
     const notes = layoutDates(items, { start: seqTerm && day1 ? day1 : startIso, days, taken, useFileDates: fileMode, skip: holidaySet(settings), exact: !!WIZ.pickDates, cap: capOf, weekly: fileMode && !WIZ.pickDates, loose, today: fromIso || seqTerm ? '' : todayIso() });
     return { items, notes };
   };
@@ -420,7 +436,8 @@ function assignDates() {
   const late = items.filter((it) => it.s.afterTerm).length;
   const merged = cands.filter((x) => x.mergedInto).length;
   // يُذكر الجمع بعد قراءة جدول المعلم فقط: قبلها قد يُجمع ما يتسع له الجدول ثم يُفكّ
-  if (merged && WIZ.pickDates && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', `حصص اختيارك بعد نهاية الفصل: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد`); }
+  if (merged && WIZ.pickDates && WIZ.pickJoin) { if (!dateNotes.has('join')) { dateNotes.add('join'); logLine('info', 'كما اخترت: حصص الدرس التي اخترتها في تحضير واحد بتاريخ واحد'); } }
+  else if (merged && WIZ.pickDates && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', `حصص اختيارك بعد نهاية الفصل: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد`); }
   else if (merged && schedRead && !dateNotes.has('merge:' + merged)) { dateNotes.add('merge:' + merged); logLine('info', fromIso ? `حصص الفصل أكثر من حصصك الباقية في الجدول: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد، فتكتمل قبل نهاية الفصل (${dayLabel(fitEnd, false)})` : `حصصك في نور أقل من حصص الخطة: جمعت ${countWord(merged)} مع حصة قبلها من الدرس نفسه في تحضير واحد، فتكتمل الخطة في أسابيعها (آخرها ${dayLabel(fitEnd, false)})`); }
   WIZ.fit = { merged, late: items.filter((it) => it.date > fitEnd).length, fitEnd, from: fromIso };
   if (!WIZ.on && termEnd && late && !dateNotes.has('late:' + late)) { dateNotes.add('late:' + late); logLine('info', `${toAr(late)} ${late === 1 ? 'حصة ستقع' : 'حصص ستقع'} بعد نهاية الفصل (${dayLabel(termEnd, false)}) — راجع ميزانية الفصل في «فحص ملف المادة»`); }
@@ -460,6 +477,7 @@ function pickChain(s) {
   const all = plan.flatMap((p) => p.sessions).filter((x) => WIZ.pickDates[x.lesson.id]);
   const out = [];
   for (const x of all.slice(all.indexOf(s) + 1)) {
+    if (x.mergedInto) continue;   // حصة جُمعت في تحضير حصة قبلها: تاريخها تاريخه
     if (typed.has(x.lesson.id)) break;
     if (!x.savedNow && !x.done && !x.inNoor) out.push(x);
   }
@@ -2011,7 +2029,7 @@ async function fillOnce(item, c) {
   setBox('run', `أعبّئ «${shortT(s.lesson.title)}»…`, `الدرس: ${item.node.text}\nالنشر: ${dayLabel(s.date)}`);
   // ترتيب هذا التحضير بين تحاضير الدرس نفسه في اليوم نفسه (حصتان للدرس في يوم واحد) — نور ترقّم الثاني بنفسها
   const dayRank = () => 1 + savedThisRun.filter((x) => x.s !== s && x.s.date === s.date && x.s.p && s.p && x.s.p.node && s.p.node && x.s.p.node.id === s.p.node.id).length;
-  const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title, dayRank: dayRank(), slotNo: s.slot || 1, slotFull: slotSeen.get(s.date) || null, allowSection: !!WIZ.allowSection, onlySecs: s.secs || null,
+  const opts = () => ({ publishDate: s.date, pickLesson: false, skipFilled: false, noorTitle: c.title, dayRank: dayRank(), slotNo: s.slot || 1, slotSpan: s.span || 1, slotFull: slotSeen.get(s.date) || null, allowSection: !!WIZ.allowSection, onlySecs: s.secs || null,
     merge: s.merge && s.merge.length ? s.merge.map((x) => x.lesson) : null, sessionNos: s.merge && s.merge.length && s.p ? [s, ...s.merge].map(nodeNo) : null, sessionNo: nodeNo(s) });
   let rep = await fillNoor(tabId, pkg, s.lesson, opts());
   let blk = rep.find((x) => x.key === 'remote');
@@ -2285,7 +2303,7 @@ function heartbeat(on) {
 // نقطة استئناف: إن أُغلقت النافذة أو تعطّل كروم يُتابَع التشغيل عند فتحها
 async function checkpoint(active) {
   const sc = { kind: scope.kind, picks: [...(scope.picks || [])], units: [...scope.units], weekDay: scope.weekDay, from: scope.from, to: scope.to, dateFrom: scope.dateFrom, dateTo: scope.dateTo, dsrc: useFile ? 'file' : 'seq' };
-  await chrome.storage.local.set({ semesterRun: active && !WIZ.hwOnly ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, typed: WIZ.pickTyped || null, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
+  await chrome.storage.local.set({ semesterRun: active && !WIZ.hwOnly ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, typed: WIZ.pickTyped || null, join: WIZ.pickJoin || null, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
 }
 function setRunning(on) {
   running = on;
@@ -3112,7 +3130,7 @@ async function offerResume() {
   const radio = document.querySelector(`input[name=term][value="${run0.term}"]`); if (radio) radio.checked = true;
   if (run0.startTouched && run0.start) { $('start').value = run0.start; startTouched = true; renderDays(); }
   if (run0.scope && init.restoreScope) init.restoreScope(run0.scope);
-  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; WIZ.seq = !!run0.wiz.seq; WIZ.pickDates = run0.wiz.pick || null; WIZ.pickTyped = run0.wiz.typed || null; WIZ.rid = run0.wiz.rid || Date.now(); if (run0.wiz.conf) WIZ.confirmed = WIZ.rid; WIZ.sum = run0.wiz.sum || 0; WIZ.resumed = true; WIZ.auto = run0.wiz.auto || 0; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
+  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; WIZ.seq = !!run0.wiz.seq; WIZ.pickDates = run0.wiz.pick || null; WIZ.pickTyped = run0.wiz.typed || null; WIZ.pickJoin = run0.wiz.join || null; WIZ.rid = run0.wiz.rid || Date.now(); if (run0.wiz.conf) WIZ.confirmed = WIZ.rid; WIZ.sum = run0.wiz.sum || 0; WIZ.resumed = true; WIZ.auto = run0.wiz.auto || 0; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
   let left = 10, cancelled = false;
   const tick = () => {
     if (cancelled) return;
@@ -3143,7 +3161,7 @@ const SHIFT = { one: { name: 'فترة واحدة', min: 40 }, two: { name: 'ف�
 const WZ_STEPS = ['mode', 'grade', 'subject', 'shift', 'lessons'];
 // «بداية الإدخال» في التحضير التلقائي: في النسخة الخاصة بالمالك فقط (اسم الإصدار فيه «خاصة»)
 const FROM_STEP = (() => { try { return /خاصة/.test(chrome.runtime.getManifest().version_name || ''); } catch (e) { return false; } })();
-const wz = { hw: true, step: 'mode', hist: [], mode: '', grade: 0, subject: '', shift: '', pkg: null, sel: new Map(), typed: new Set(), hsel: new Map(), catalog: null, link: null, status: null, busy: false };
+const wz = { hw: true, join: false, step: 'mode', hist: [], mode: '', grade: 0, subject: '', shift: '', pkg: null, sel: new Map(), typed: new Set(), hsel: new Map(), catalog: null, link: null, status: null, busy: false };
 const ORD = ['الأولى', 'الثانية', 'الثالثة', 'الرابعة', 'الخامسة', 'السادسة', 'السابعة', 'الثامنة'];
 const wdone = (l) => { const x = sessionStatus(state, wz.pkg.id, l.id); return !!(x.saved || (x.filled && !x.failed)); };
 const gradeName = (n) => 'الصف ' + (GRADES[n - 1] || toAr(n));
@@ -3319,19 +3337,34 @@ function wzLessons() {
   // لا تاريخ مقترح قبل أن يكتب المعلم تاريخًا؛ بعده تأخذ الحصص المختارة التالية أيام حصصه متتالية (4.10.19)
   wzChain(gs);
   let u = null;
-  body.innerHTML = wzTrialNote() + '<div class="wz-list">' + gs.map((g) => {
+  // «مدمج أو منفصل» (المالك 2026-11-14): يظهر حين يكون في المادة درس بأكثر من حصة؛ الافتراضي منفصل كما كان
+  const multi = gs.some((g) => g.sessions.length > 1);
+  const seg = multi ? `<div class="wz-seg wz-seg2" id="wzJoin"><button class="wz-seg-b ${wz.join ? '' : 'on'}" data-j="0">كل حصة في تحضير</button><button class="wz-seg-b ${wz.join ? 'on' : ''}" data-j="1">حصص الدرس في تحضير واحد</button></div>` : '';
+  const units = wz.join ? wzUnits(gs) : [];
+  body.innerHTML = wzTrialNote() + seg + '<div class="wz-list">' + gs.map((g) => {
     const on = g.sessions.some((l) => wz.sel.has(l.id));
     const uh = g.unit !== u ? `<div class="wz-unit">${esc(g.unit || 'دروس')}</div>` : ''; u = g.unit;
     const one = g.sessions.length === 1;
     const dateIn = (l) => `<input class="input wz-date" type="date" data-d="${esc(l.id)}" value="${esc(wz.sel.get(l.id) || '')}">`;
     // خانة التاريخ تحت الدرس بالشكل نفسه للحصة الواحدة وللحصص المتعددة
+    // مدمج: مربعات الحصص بلا تواريخ، ثم خانة تاريخ واحدة لكل تحضير يجمع حصص الدرس المختارة
+    const joinRows = () => units.filter((x) => x.g === g).map((x) => `<label class="wz-s wz-j"><span>${x.ls.length > 1 ? `تحضير واحد (الحصص ${x.ls.map((l) => toAr(g.sessions.indexOf(l) + 1)).join(' و ')})` : `تاريخ الحصة ${ORD[g.sessions.indexOf(x.ls[0])] || toAr(g.sessions.indexOf(x.ls[0]) + 1)}`}</span>${dateIn(x.ls[0])}</label>`).join('');
     const ses = on && one ? `<div class="wz-ses"><label class="wz-s"><span>تاريخ النشر</span>${dateIn(g.sessions[0])}</label></div>`
+      : on && wz.join ? `<div class="wz-ses">${g.sessions.map((l, k) => `<label class="wz-s"><input type="checkbox" data-s="${esc(l.id)}" ${wz.sel.has(l.id) ? 'checked' : ''}><span>الحصة ${ORD[k] || toAr(k + 1)}</span></label>`).join('')}${joinRows()}</div>`
       : on && !one ? `<div class="wz-ses">${g.sessions.map((l, k) => `<label class="wz-s"><input type="checkbox" data-s="${esc(l.id)}" ${wz.sel.has(l.id) ? 'checked' : ''}><span>الحصة ${ORD[k] || toAr(k + 1)}</span>${wz.sel.has(l.id) ? dateIn(l) : ''}</label>`).join('')}</div>` : '';
     return `${uh}<div class="wz-les ${on ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-k="${esc(g.key)}" ${on ? 'checked' : ''}><span>${esc(g.lesson || 'درس')}</span><em>${one ? '' : countWord(g.sessions.length)}</em></label>${ses}</div>`;
   }).join('') + '</div>';
   const n = wz.sel.size;
   body.insertAdjacentHTML('beforeend', `<button class="btn primary big" id="wzLessGo" ${n ? '' : 'disabled'}>${n ? `عبّئ ${countWord(n).replace('حصتان', 'الحصتين')} في نور` : 'اختر درسًا'}</button>`);
   const list = body.querySelector('.wz-list'); list.scrollTop = top;
+  body.querySelectorAll('#wzJoin [data-j]').forEach((b) => {
+    b.onclick = () => {
+      const j = b.dataset.j === '1';
+      if (j === wz.join) return;
+      wz.join = j; wzSavePrefs();
+      wzLessons();
+    };
+  });
   body.querySelectorAll('input[data-k]').forEach((cb) => {
     cb.onchange = () => {
       const g = gs.find((x) => x.key === cb.dataset.k);
@@ -3406,19 +3439,41 @@ function wzHwLessons() {
 // تواريخ متتالية في «أختار الدروس بنفسي» (المالك 2026-10-31): الحصص المختارة وحدها، بترتيب القائمة؛ ما كتبه المعلم يبقى كما كتبه،
 // وكل حصة مختارة بعده بلا تاريخ منه تأخذ الحصة التالية في أيام حصصه (حصتان في يوم له فيه حصتان، ولا إجازة). ما قبل أول تاريخ يبقى فارغًا
 function wzChain(gs) {
-  if (!wz.pkg || !wz.typed.size) return;
+  if (!wz.pkg) return;
+  const us = wzUnits(gs);
+  // مدمج: حصص التحضير الواحد بتاريخ أولاها، والتاريخ المكتوب باليد يُحسب لها وحدها
+  if (wz.join) us.forEach((x) => x.ls.slice(1).forEach((l) => { wz.sel.set(l.id, wz.sel.get(x.ls[0].id) || ''); wz.typed.delete(l.id); }));
+  if (!wz.typed.size) return;
   const ds = daysFor(state, settings, wz.pkg.id), hol = holidaySet(settings), cap = ((state && state.pkgCaps) || {})[wz.pkg.id] || {};
   const capN = (iso) => Math.max(1, +cap[wdOf(iso)] || 1);
   let prev = '', used = 0;
-  for (const g of gs) for (const l of g.sessions) {
-    if (!wz.sel.has(l.id)) continue;
-    const v = wz.sel.get(l.id);
-    if (wz.typed.has(l.id) && isIso(v)) { used = v === prev ? used + 1 : 1; prev = v; continue; }
-    if (!prev) { wz.sel.set(l.id, ''); continue; }
-    let d = prev;
-    if (used >= capN(prev)) { d = nextSchoolDay(prev, ds, false); for (let i = 0; i < 60 && hol.has(d); i++) d = nextSchoolDay(d, ds, false); used = 0; }
-    wz.sel.set(l.id, d); used++; prev = d;
+  for (const x of us) {
+    const h = x.ls[0].id, v = wz.sel.get(h);
+    // التحضير المدمج يأخذ من حصص يومه بعدد حصصه (حصتان في يوم له فيه حصتان)
+    const w = (iso) => Math.max(1, Math.min(x.ls.length, capN(iso)));
+    let d = '';
+    if (wz.typed.has(h) && isIso(v)) { d = v; used = v === prev ? used + w(v) : w(v); prev = v; }
+    else if (prev) {
+      d = prev;
+      if (used >= capN(prev)) { d = nextSchoolDay(prev, ds, false); for (let i = 0; i < 60 && hol.has(d); i++) d = nextSchoolDay(d, ds, false); used = 0; }
+      used += w(d); prev = d;
+    }
+    x.ls.forEach((l) => wz.sel.set(l.id, d));
   }
+}
+// تحاضير «أختار الدروس بنفسي» بترتيب القائمة: منفصل = لكل حصة مختارة تحضيرها؛ مدمج = حصص الدرس المختارة في تحضير واحد
+// (حتى أربع حصص في التحضير؛ ما زاد يتوزع على تحاضير متقاربة العدد). درسان مختلفان لا يُجمعان
+const JOIN_MAX = 4;
+function wzUnits(gs) {
+  const out = [];
+  for (const g of gs) {
+    const ch = g.sessions.filter((l) => wz.sel.has(l.id));
+    if (!ch.length) continue;
+    if (!wz.join) { ch.forEach((l) => out.push({ g, ls: [l] })); continue; }
+    const n = Math.ceil(ch.length / JOIN_MAX), size = Math.ceil(ch.length / n);
+    for (let i = 0; i < ch.length; i += size) out.push({ g, ls: ch.slice(i, i + size) });
+  }
+  return out;
 }
 // الوحدات بترتيب أول ظهورها، ودروس كل وحدة بترتيب ظهورها (لا ترتيب رقمي: أرقام العناوين قد تكون مسافات أو أعدادًا من المحتوى)
 function groupByUnit(groups) {
@@ -3511,7 +3566,7 @@ async function wzReload() {
   wz.link = await getLink(); wz.status = await getStatus();
   await init();
 }
-async function wzSavePrefs() { await chrome.storage.local.set({ wizPrefs: { grade: wz.grade, subject: wz.subject, shift: wz.shift, hw: wz.hw } }).catch(() => {}); }
+async function wzSavePrefs() { await chrome.storage.local.set({ wizPrefs: { grade: wz.grade, subject: wz.subject, shift: wz.shift, hw: wz.hw, join: !!wz.join } }).catch(() => {}); }
 
 // «ابدأ»: المعالج يضبط المحرّك (المخفي) ثم يشغّله
 async function wzRun() {
@@ -3527,6 +3582,10 @@ async function wzRun() {
   // اختيار المعلم: الحصص التي وضع عليها علامة، كلٌّ بتاريخها كما كتبه (لا نشرة ولا خطة أسبوعية)
   WIZ.pickDates = pick ? Object.fromEntries(wz.sel) : null;
   WIZ.pickTyped = pick ? [...wz.typed] : null;
+  // مدمج: كل حصة ← أول حصة في تحضيرها؛ والتاريخ المكتوب لتحضير مكتوب لحصصه كلها
+  const joined = pick && wz.join ? wzUnits(groupByUnit(lessonGroups(p))).filter((x) => x.ls.length > 1) : [];
+  WIZ.pickJoin = joined.length ? Object.fromEntries(joined.flatMap((x) => x.ls.map((l) => [l.id, x.ls[0].id]))) : null;
+  joined.forEach((x) => { if (wz.typed.has(x.ls[0].id)) x.ls.forEach((l) => WIZ.pickTyped.push(l.id)); });
   scope.kind = pick ? 'pick' : 'term';
   scope.picks = new Set(pick ? lessonGroups(p).filter((g) => g.sessions.some((l) => wz.sel.has(l.id))).map((g) => g.key) : []);
   // الفصل كاملًا: بتواريخ النشرة الرسمية إن كانت في ملف المادة، وإلا متتابعًا من أول يوم دراسي قادم
@@ -3653,7 +3712,7 @@ function wzResumeBtn(label) {
 function wzAgain() {
   clearTimeout(WIZ.timer);
   document.body.classList.remove('wiz-run', 'showplan');
-  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null;
+  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null; WIZ.pickJoin = null;
   $('wizCard').hidden = false;
   $('nowCard').hidden = true; $('planCard').hidden = true; $('logCard').hidden = true;
   $('topMsg').className = 'msg';
@@ -3664,7 +3723,7 @@ function wzAgain() {
 function wzMore() {
   clearTimeout(WIZ.timer);
   document.body.classList.remove('wiz-run', 'showplan');
-  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null;
+  WIZ.on = false; WIZ.rule = ''; WIZ.seq = false; WIZ.trialCap = null; WIZ.pickDates = null; WIZ.pickTyped = null; WIZ.pickJoin = null;
   $('wizCard').hidden = false;
   $('nowCard').hidden = true; $('planCard').hidden = true; $('logCard').hidden = true;
   $('topMsg').className = 'msg';
@@ -3782,7 +3841,7 @@ async function wizBoot() {
   await freshRecord();
   wz.link = await getLink(); wz.status = await getStatus();
   const pf = (await chrome.storage.local.get('wizPrefs').catch(() => ({}))).wizPrefs || {};
-  wz.grade = pf.grade || 0; wz.subject = pf.subject || ''; wz.shift = pf.shift || ''; wz.hw = pf.hw !== false;
+  wz.grade = pf.grade || 0; wz.subject = pf.subject || ''; wz.shift = pf.shift || ''; wz.hw = pf.hw !== false; wz.join = !!pf.join;
   wzRender();
   const [cat] = await Promise.all([afaqCatalog().catch(() => null), wz.link ? afaqSync().catch(() => {}) : null, loadNoorCourses()]);
   settings = await getSettings();   // إجازات التقويم الرسمي وصلت مع الكتالوج

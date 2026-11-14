@@ -795,6 +795,69 @@ T(30, 'Pick mode near the term end (owner 2026-11-03): one typed date gives the 
   return b;
 });
 
+// owner 2026-11-14: in «أختار الدروس بنفسي» the teacher chooses «كل حصة في تحضير» (as before) or «حصص الدرس في تحضير واحد»
+T(37, 'Pick mode, «حصص الدرس في تحضير واحد» (owner 2026-11-14): the chosen sessions of a lesson are saved in ONE prep on one date «(n و m)» (five sessions → 3 + 2), different lessons never share a prep, a joined prep takes both periods of a section that has two that day, and a later separate run sees the joined sessions as already in Noor', async (env) => {
+  const tree = treeFromPackage(PKG);
+  const periods = { 0: [['1', 2], ['2', 1]], 1: [['1', 1], ['2', 1]], 2: [['1', 1], ['2', 1]], 3: [], 4: [] };
+  const noor = env.noor({ tree, periods });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'pick');
+  await b.pg.waitForSelector('input[data-k]', { timeout: 30000 });
+  const keyOf = (l) => l.unit + '|' + l.lesson;
+  const clickK = (k) => b.pg.evaluate((k) => { const cb = [...document.querySelectorAll('input[data-k]')].find((x) => x.dataset.k === k); cb.click(); }, k);
+  const typeD = (id, d) => b.pg.evaluate(([id, d]) => { const el = document.querySelector(`input[data-d="${id}"]`); el.value = d; el.dispatchEvent(new Event('change', { bubbles: true })); }, [id, d]);
+  const boxes = () => b.pg.$$eval('input[data-d]', (a) => a.map((x) => x.dataset.d + '=' + x.value));
+  check(await b.pg.$$eval('#wzJoin .wz-seg-b.on', (a) => a.length === 1 && a[0].dataset.j === '0'), 'the lessons screen opens on «كل حصة في تحضير» (as before)', '');
+  await clickK(keyOf(S[sid(4)])); await sleep(300);    // «1-2 الخلايا»: five sessions
+  await clickK(keyOf(S[sid(9)])); await sleep(300);    // «1-3»: one session
+  await clickK(keyOf(S[sid(10)])); await sleep(300);   // «2-1 الانتشار»: three sessions
+  await b.pg.evaluate((id) => document.querySelector(`input[data-s="${id}"]`).click(), sid(12)); await sleep(300);   // without its third session
+  check((await boxes()).length === 8, 'separate: a date box for each of the 8 chosen sessions', (await boxes()).join(', '));
+  await b.pg.click('#wzJoin [data-j="1"]'); await sleep(400);
+  const heads = [sid(4), sid(7), sid(9), sid(10)];
+  check(JSON.stringify((await boxes()).map((x) => x.split('=')[0])) === JSON.stringify(heads), 'joined: one date box for each prep — «الخلايا» 3 + 2, «1-3» alone, «الانتشار» 1 و 2', (await boxes()).join(', '));
+  await typeD(sid(4), '2026-12-06'); await sleep(300);
+  check(JSON.stringify((await boxes()).map((x) => x.split('=')[1]).slice(0, 3)) === JSON.stringify(['2026-12-06', '2026-12-07', '2026-12-08']), 'one typed date: the next preps take the next class days, a day each', (await boxes()).join(', '));
+  await typeD(sid(10), '2026-12-13'); await sleep(300);
+  await b.pg.click('#wzLessGo');
+  const s = await waitDone(b.pg, 10 * 60000, 'pick joined');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  const nt = (id) => nodeFor(tree, S[id]).text;
+  const want = [
+    { ids: [4, 5, 6], title: `${nt(sid(4))} (1 و 2 و 3)`, date: '2026-12-06', slots: ['1|1', '1|2', '2|4'] },
+    { ids: [7, 8], title: `${nt(sid(4))} (4 و 5)`, date: '2026-12-07', slots: ['1|1', '2|3'] },
+    { ids: [9], title: nt(sid(9)), date: '2026-12-08', slots: ['1|1', '2|3'] },
+    { ids: [10, 11], title: `${nt(sid(10))} (1 و 2)`, date: '2026-12-13', slots: ['1|1', '1|2', '2|4'] },
+  ];
+  check(rows.length === want.length, `exactly ${want.length} preps for the 8 chosen sessions (${rows.length})`, fmtRows(rows));
+  for (const w of want) {
+    const r = rows.find((x) => x.title === w.title);
+    check(!!r, `prep «${w.title}» saved`, rows.map((x) => x.title).join(' | '));
+    if (!r) continue;
+    check(r.publishDate === w.date, `«${w.title}» on ${w.date}`, r.publishDate);
+    check(w.ids.every((n) => norm(r.concepts).includes(norm(S[sid(n)].concepts))), `«${w.title}» holds the content of its ${w.ids.length} session(s)`, r.concepts.slice(0, 200));
+    check(JSON.stringify((r.slots || []).slice().sort()) === JSON.stringify(w.slots), `«${w.title}» takes periods ${w.slots.join(', ')}`, JSON.stringify(r.slots));
+  }
+  check(!rows.some((r) => norm(r.concepts).includes(norm(S[sid(12)].concepts)) && !norm(S[sid(10)].concepts).includes(norm(S[sid(12)].concepts))), 'the unticked third session of «الانتشار» is in no prep', '');
+  // a later run, separate again: sessions 1 and 2 of «الانتشار» are in Noor inside «(1 و 2)» — only the third is saved
+  const n1 = noor.st.rows.length;
+  await b.pg.reload(); await sleep(4000);
+  await wizardTo(b.pg, 'pick', { name: false });
+  await b.pg.waitForSelector('input[data-k]', { timeout: 30000 });
+  check(await b.pg.$$eval('#wzJoin .wz-seg-b.on', (a) => a.length === 1 && a[0].dataset.j === '1'), 'the choice «حصص الدرس في تحضير واحد» is remembered on the next open', '');
+  await b.pg.click('#wzJoin [data-j="0"]'); await sleep(400);
+  await clickK(keyOf(S[sid(10)])); await sleep(300);
+  await typeD(sid(10), '2026-12-14'); await typeD(sid(11), '2026-12-15'); await typeD(sid(12), '2026-12-20'); await sleep(300);
+  await b.pg.click('#wzLessGo');
+  const s2 = await waitDone(b.pg, 8 * 60000, 'separate run after the joined one');
+  const more = noor.st.rows.slice(n1);
+  console.log(`    second run: ${s2.head} | ${s2.text}`);
+  check(more.length === 1 && more[0].title === `${nt(sid(10))} (3)` && more[0].publishDate === '2026-12-20', 'the separate run saves only session 3 of «الانتشار» — 1 و 2 are already in Noor', fmtRows(more));
+  return b;
+});
+
 // owner 2026-11-03: a teacher registered by name stayed «waiting» because Noor was open on a page other than the home page (the name
 // is in the home page's welcome), so «حاضر» never read her Noor account and the server could not match her name
 T(31, 'Activation by the Noor name: Noor is open on a course page (no name there) — the tool opens Noor\'s home page itself, reads the name, the server activates by it and the full term runs; the waiting screen tells the teacher to keep Noor\'s home page open', async (env) => {
