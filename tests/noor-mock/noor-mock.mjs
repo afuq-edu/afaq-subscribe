@@ -75,7 +75,9 @@ export function createNoor(cfg) {
     nextAid: 300,
     // «غرف النقاش» (global, not per course): { pid, id, title, post, lectures: [labels], students: n, topics: [{ title, html }] }
     rooms: cfg.rooms ? cfg.rooms.map((r, i) => ({ pid: 'PID' + (900 + i), id: String(6211000 + i), post: '', lectures: [], students: 0, topics: [], ...r })) : [],
-    roomPosts: [],     // every POST to posts/add and posts/reply: { kind, outcome }
+    roomPosts: [],
+    videos: cfg.videos ? cfg.videos.map((v) => ({ cid: 'BIO9', lessons: [], lectures: [], ...v })) : [],   // «مكتبة الفيديو»: { cid, title, url, lang, publish, lessons, lectures }
+    vidPosts: [],     // every POST to posts/add and posts/reply: { kind, outcome }
     nextRoom: 950,
     // ساعة نور للواجبات ('YYYY-MM-DD HH:MM'): نور يقترح في النموذج النشر بعد ربع ساعة منها، ويرفض نشرًا قبلها («في الماضي»).
     // بلا ضبط: الحقل فارغ ولا رفض (ساعة الاختبار الثابتة في الأداة قد تسبق ساعة الجهاز)
@@ -355,6 +357,41 @@ ${st.rooms.map((r) => `<div class="discussion-block teacher-tile"><a class="uppe
 <input name="data[Post][title]" maxlength="255" required="required" type="text" id="PostTitle"><input type="text" id="PostDescriptionRequired" required="required" value="" aria-hidden="true"><textarea name="data[Post][post]" id="post" class="form-control add-comment" rows="6"></textarea>
 <input type="hidden" name="data[Post][parentid]" value="${r.id}" id="PostParentid"><input type="hidden" name="data[Post][user_id]" value="99887766" id="PostUserId"><button type="submit" class="btn btn-primary">إضافة</button></form></div>
 ${r.topics.map((t, i) => `<div class="media comment-holder mainComment" data-post-id="${7000 + i}"><div class="topic-title">${esc(t.title)}</div><div class="media-text"><div id="body_${7000 + i}">${t.html}</div></div></div>`).join('')}`);
+  // ---------- «مكتبة الفيديو» (owner's saved pages, 2026-11-14) ----------
+  const VT = 'TID3ETr';
+  const vidLibPage = (cid) => page('مكتبة الفيديو', `<script>var current_url = '/teacher/attachments/index/BVideo/cid:${cid}/tid:0';</script><a class="btn btn-primary" href="${HOST}/teacher/attachments/upload/BVideo/cid:ENC${cid}/tid:${VT}/tuid:${VT}" id="uploadAttachmentBtn">رفع ملف فيديو جديد</a>
+<table id="grid"><tbody></tbody></table>`);   // rows come by XHR (DataTable), as on Noor
+  const vidUploadPage = (cid) => { const c = course(cid); return page('إضافة  فيديو جديد', `<form action="${HOST}/teacher/attachments/upload/BVideo/cid:ENC${cid}/prep:${VT}" enctype="multipart/form-data" id="AttachmentUploadForm" method="post" accept-charset="utf-8">
+<div style="display:none;"><input type="hidden" name="_method" value="POST"><input type="hidden" name="data[Token][csrf_token]" value="csrf-${cid}" id="TokenCsrfToken"></div>
+<input name="data[Attachment][title]" id="attach_title" required type="text"><textarea name="data[Attachment][comments]" id="AttachmentComments"></textarea>
+<select name="data[Attachment][language_id]" id="AttachmentLanguageId"><option value="">إختر</option><option value="1">إنجليزي</option><option value="2">عربي</option></select>
+<ul class="video-type"><li class="youtube active">YouTube</li></ul><input name="data[Youtube][url]" type="text" id="YoutubeUrl" class="youtube-url video-input youtube"><input type="hidden" name="data[Attachment][upload_from]" value="2" id="AttachmentUploadFrom">
+<input name="data[Attachment][publish_date]" id="publish_date" required type="text">
+<input type="hidden" name="data[Attachment][preparation_id]" value="" id="prep_title_"><select name="data[Attachment][preparation_id][]" id="prep_title" multiple></select>
+<input type="hidden" name="data[Attachment][lessons]" value="" id="lesson_title_"><select name="data[Attachment][lessons][]" id="lesson_title" multiple>${treeLessons(c).map((l) => `<option value="${l.id}">${esc(l.title)}</option>`).join('')}</select>
+<select name="data[Attachment][sharing_status]" id="AttachmentSharingStatus"><option value="0">لا شيء</option><option value="1" selected>المدرسة</option></select>
+<a href="#" id="publish_to_sections">نشر لفصول</a><input id="publish_to_val" value="0" name="data[publish_to]">
+<div id="sections_list">${lectureLabels(cid).map((x) => `<div><label><input type="hidden" name="data[Lecture][checkbox][${x.id}]" id="checkbox_${x.id}_" value="0"><input type="checkbox" name="data[Lecture][checkbox][${x.id}]" id="checkbox_${x.id}" value="1">${esc(x.label)}</label></div>`).join('')}</div>
+<input id="submission_button" type="submit" value="رفع" disabled></form>`); };
+  function vidAdd(cid, req) {
+    const f = multipart(req);
+    const last = (k) => { const v = f.filter(([n]) => n === k); return v.length ? v[v.length - 1][1] : undefined; };
+    const errs = [];
+    if (last('data[Token][csrf_token]') !== 'csrf-' + cid) errs.push('csrf');
+    const title = (last('data[Attachment][title]') || '').trim(), url = last('data[Youtube][url]') || '', publish = last('data[Attachment][publish_date]') || '';
+    if (!title) errs.push('title');
+    if (!/^https:\/\/www\.youtube\.com\/watch\?v=[\w-]{6,}$/.test(url)) errs.push('youtube ' + url);
+    if (!DT.test(publish)) errs.push('publish ' + publish);
+    const lang = last('data[Attachment][language_id]') || '';
+    if (!['1', '2'].includes(lang)) errs.push('lang');
+    const lessons = f.filter(([n]) => n === 'data[Attachment][lessons][]').map(([, v]) => v);
+    const lectures = lectureLabels(cid).filter((x) => last(`data[Lecture][checkbox][${x.id}]`) === '1').map((x) => x.label);
+    if (last('data[publish_to]') !== '0' || !lectures.length) errs.push('sections');
+    if (errs.length) { st.vidPosts.push({ outcome: 'error ' + errs.join(',') }); return { err: errs.join(',') }; }
+    st.videos.push({ cid, title, url, lang, publish, lessons, lectures, comments: last('data[Attachment][comments]') || '' });
+    st.vidPosts.push({ outcome: 'ok' });
+    return { ok: true };
+  }
   function roomAdd(body) {
     const f = new URLSearchParams(body || ''), errs = [];
     const title = (f.get('data[Post][title]') || '').trim();
@@ -471,6 +508,17 @@ ${r.topics.map((t, i) => `<div class="media comment-holder mainComment" data-pos
       return html(bulkPage(m[1], m[2]));
     }
     // «غرف النقاش»: إنشاء غرفة يعيد قائمة الغرف، وإضافة موضوع تعيد صفحة الغرفة (نور يحوّل 302؛ انظر ملاحظة الحفظ أعلاه)
+    m = p.match(/^\/teacher\/attachments\/index\/BVideo\/cid:([A-Za-z0-9_-]+)(?:\/tid:\w+)?$/);
+    if (m && course(m[1].replace(/^ENC/, ''))) {
+      const cid = m[1].replace(/^ENC/, '');
+      if (xhr) return json({ draw: 1, data: st.videos.filter((v) => v.cid === cid).map((v) => [`<a href="#">${esc(v.title)}</a>`, esc(v.comments || ''), v.publish]) });
+      return html(vidLibPage(cid));
+    }
+    m = p.match(/^\/teacher\/attachments\/upload\/BVideo\/cid:ENC([A-Za-z0-9_-]+)\/(?:tid:\w+\/tuid:\w+|prep:\w+)$/);
+    if (m && course(m[1])) {
+      if (req.method() === 'POST') { const r = vidAdd(m[1], req); return r.ok ? html(vidLibPage(m[1])) : html(vidUploadPage(m[1]).replace('<form', `<div class="alert alert-danger">${esc(r.err)}</div><form`)); }
+      return html(vidUploadPage(m[1]));
+    }
     if (p === '/teacher/posts/view') return html(roomsPage());
     if (p === '/teacher/posts/add' && req.method() === 'POST') { const r = roomAdd(req.postData()); return html(r.err ? roomsPage(`<div class="alert alert-danger">${esc(r.err)}</div>`) : roomsPage()); }
     m = p.match(/^\/teacher\/posts\/article\/pid:([A-Za-z0-9_-]+)$/);

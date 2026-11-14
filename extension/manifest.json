@@ -85,5 +85,8 @@
     "matches": [
       "https://afuq-edu.github.io/afaq-subscribe/*"
     ]
-  }
+  },
+  "optional_host_permissions": [
+    "https://www.youtube.com/*"
+  ]
 }

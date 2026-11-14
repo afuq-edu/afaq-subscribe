@@ -130,7 +130,8 @@ function assertRows(name, rows, tree, { expectIds, dates, preexisting = [], same
 
 // ---------- browser + wizard driving ----------
 const FIXED_NOW = '2026-09-05';   // the wizard's «today» (?now=): the day before the plan starts, unless a scenario says otherwise
-const GAMES = 'https://games.test/';   // homework files (five questions per lesson), served by launch()
+const GAMES = 'https://games.test/';
+const YT = 'https://yt.test/';   // YouTube search (?yt=): results built from the query, see launch()   // homework files (five questions per lesson), served by launch()
 // cont: Noor already holds preps of this subject made by an earlier «تحضير الفصل كاملًا» on this device (?cont=1, test only) —
 // the run continues it; without it the tool refuses a full term over existing preps (owner 2026-11-01, scenario 20)
 async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some((r) => r.preexisting) } = {}) {
@@ -152,6 +153,18 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
     const sessions = Object.fromEntries(gs.filter((g) => g.sessions.length > 1).map((g, i) => [g.sessions[0].lesson, g.sessions.slice(1).map((_, j) => src[(i * 7 + j + 1 + gs.length) % src.length])]));
     return r.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({ key: 'test', lessons, sessions }) });
   });
+  // YouTube search: for a query «<topic> <subject> <grade>» — a fitting video «<topic> - شرح …» (5 min), a Short with the same title,
+  // a 2-hour live with the same title and an unrelated video; queries containing «انتشار» get only unrelated videos (no fitting title)
+  await ctx.route(YT + '**', (r) => {
+    const q = new URL(r.request().url()).searchParams.get('search_query') || '';
+    const topic = q.replace(/\s*الأحياء.*$/, '').trim();
+    const vr = (id, title, len, url = '/watch?v=' + id) => ({ videoRenderer: { videoId: id, title: { runs: [{ text: title }] }, lengthText: len ? { simpleText: len } : undefined, navigationEndpoint: { commandMetadata: { webCommandMetadata: { url } } }, ownerText: { runs: [{ text: 'قناة' }] } } });
+    const id = (k) => (k + Buffer.from(topic).toString('hex')).replace(/[^a-z0-9]/gi, '').slice(0, 11).padEnd(11, 'x');
+    const items = /انتشار/.test(q) ? [vr(id('u'), 'رحلة إلى البحر كرتون', '7:10')]
+      : [vr(id('s'), topic + ' #shorts', '0:40', '/shorts/' + id('s')), vr(id('l'), topic + ' بث', '2:05:00'), vr(id('u'), 'أغنية الأطفال', '3:00'), vr(id('g'), topic + ' - شرح درس الأحياء الصف التاسع', '5:12')];
+    const data = { contents: { twoColumnSearchResultsRenderer: { primaryContents: { sectionListRenderer: { contents: [{ itemSectionRenderer: { contents: items } }] } } } } };
+    return r.fulfill({ status: 200, contentType: 'text/html; charset=utf-8', headers: { 'Access-Control-Allow-Origin': '*' }, body: `<html><body><script>var ytInitialData = ${JSON.stringify(data)};</script></body></html>` });
+  });
   let [sw] = ctx.serviceWorkers();
   if (!sw) sw = await ctx.waitForEvent('serviceworker');
   const id = sw.url().split('/')[2];
@@ -160,7 +173,7 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
   const errs = [];
   const pg = await ctx.newPage();
   pg.on('pageerror', (e) => errs.push(e.message));
-  await pg.goto(`chrome-extension://${id}/semester.html?debug=1&now=${now}${cont ? '&cont=1' : ''}&games=${encodeURIComponent(GAMES)}`);
+  await pg.goto(`chrome-extension://${id}/semester.html?debug=1&now=${now}${cont ? '&cont=1' : ''}&games=${encodeURIComponent(GAMES)}&yt=${encodeURIComponent(YT)}`);
   return { ctx, sw, pg, id, errs };
 }
 const card = async (pg, t) => { await pg.locator('.wz-card:not([disabled])', { hasText: t }).first().click({ timeout: 20000 }); await sleep(500); };
@@ -1456,6 +1469,57 @@ T(42, '«غرف النقاش»: a room for each unit of the Noor tree (title «<
   const s2 = await waitDone(b.pg, 15 * 60000, 'rooms again');
   const k2 = noor.st.rooms.reduce((a, r) => a + r.topics.length, 0);
   check(noor.st.rooms.length === n1 && k2 === k1, `re-run adds no room and no topic (${n1} rooms, ${k1} topics)`, `${noor.st.rooms.length} rooms, ${k2} topics | ${s2.head}`);
+  return b;
+});
+
+// ---------- «فيديو لكل درس» (المالك 2026-11-14): من يوتيوب بعنوان قريب من اسم الدرس، وإلا فلا فيديو ----------
+T(43, '«فيديو لكل درس»: for each Noor lesson a YouTube video whose title is close to the lesson name (not a Short, not a 2-hour live, not an unrelated video), in «مكتبة الفيديو» linked to that lesson and both sections; a lesson with no fitting title gets no video; a video already in the library is not repeated; a re-run adds nothing; no prep, no homework, calm wording', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 12) }));
+  const tree = treeFromPackage(PKG);
+  const lessonsT = tree.terms[0].units.flatMap((u) => u.lessons.map((l) => ({ u, l })));
+  const now = lessonGroups(PKG)[0].sessions[0].pubDate;
+  const first = lessonsT[0];
+  const noor = env.noor({ tree, videos: [{ title: 'فيديو: ' + first.l.text, url: 'https://www.youtube.com/watch?v=already0001', lang: '2', publish: '2026-09-01 07:00:00' }] });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now, cont: false });
+  await svcPick(b.pg, 'video');
+  await card(b.pg, 'فيديو لكل درس');
+  await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }); await sleep(600);
+  await card(b.pg, 'الأحياء'); await card(b.pg, 'فترة واحدة');
+  await nameStep(b.pg);
+  const s = await waitDone(b.pg, 15 * 60000, 'videos');
+  const errs = noor.st.vidPosts.filter((x) => x.outcome !== 'ok');
+  check(!errs.length, 'every video form Noor received was valid', errs.map((x) => x.outcome).join('\n'));
+  const vids = noor.st.videos;
+  const noFit = lessonsT.filter((x) => /انتشار/.test(x.l.text));
+  const want = lessonsT.filter((x) => x !== first && !noFit.includes(x));
+  check(noFit.length >= 1 && want.length >= 1, `the test tree has lessons with and without a fitting title (${want.length} / ${noFit.length})`, lessonsT.map((x) => x.l.text).join(' | '));
+  const bad = [];
+  want.forEach((x) => {
+    const v = vids.find((y) => y.title === 'فيديو: ' + x.l.text);
+    if (!v) { bad.push(`${x.l.text}: none`); return; }
+    const why = [];
+    if (!/^https:\/\/www\.youtube\.com\/watch\?v=g/.test(v.url)) why.push('url ' + v.url + ' (not the fitting video)');
+    if (v.lessons.join() !== String(x.l.nodeId)) why.push(`lessons ${v.lessons.join(',')} expected ${x.l.nodeId}`);
+    if (v.lectures.length !== 2) why.push('sections ' + v.lectures.join(','));
+    if (v.lang !== '2') why.push('lang ' + v.lang);
+    if (!v.publish.startsWith(now)) why.push('publish ' + v.publish);
+    if (why.length) bad.push(`${x.l.text}: ${why.join('; ')}`);
+  });
+  check(!bad.length, 'each lesson with a fitting title: one video (the fitting one: no Short, no live, no unrelated), linked to its Noor lesson, both sections, Arabic, published today', bad.join('\n'));
+  check(noFit.every((x) => !vids.some((y) => y.title === 'فيديو: ' + x.l.text)), 'a lesson with no fitting YouTube title gets no video', noFit.map((x) => x.l.text).join(' | '));
+  check(vids.filter((y) => y.title === 'فيديو: ' + first.l.text).length === 1, 'the video already in the library is not added again', '');
+  check(!noor.st.posts.length && !noor.st.homeworks.length && !noor.st.rooms.length, 'no prep, no homework, no room', '');
+  const nAr = String(want.length).replace(/\d/g, (d) => '٠١٢٣٤٥٦٧٨٩'[d]);
+  check(new RegExp(want.length === 1 ? 'فيديو واحد' : want.length === 2 ? 'فيديوين' : nAr).test(s.head) && !CALM_BAD_RE.test(s.head + ' ' + s.text), `the closing line says how many videos were added (${nAr}) calmly`, `${s.head} | ${s.text}`);
+  const n1 = vids.length;
+  await b.pg.reload(); await sleep(4000);
+  await svcPick(b.pg, 'video');
+  await card(b.pg, 'فيديو لكل درس');
+  await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }).catch(() => {}); await sleep(600);
+  await card(b.pg, 'الأحياء').catch(() => {}); await card(b.pg, 'فترة واحدة').catch(() => {});
+  const s2 = await waitDone(b.pg, 15 * 60000, 'videos again');
+  check(noor.st.videos.length === n1 && !CALM_BAD_RE.test(s2.head + ' ' + s2.text), `re-run adds no video (${n1})`, `${noor.st.videos.length} | ${s2.head} | ${s2.text}`);
   return b;
 });
 
