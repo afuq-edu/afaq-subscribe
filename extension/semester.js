@@ -2427,7 +2427,7 @@ function heartbeat(on) {
 // نقطة استئناف: إن أُغلقت النافذة أو تعطّل كروم يُتابَع التشغيل عند فتحها
 async function checkpoint(active) {
   const sc = { kind: scope.kind, picks: [...(scope.picks || [])], units: [...scope.units], weekDay: scope.weekDay, from: scope.from, to: scope.to, dateFrom: scope.dateFrom, dateTo: scope.dateTo, dsrc: useFile ? 'file' : 'seq' };
-  await chrome.storage.local.set({ semesterRun: active && !WIZ.hwOnly && !WIZ.roomsOnly && !WIZ.videosOnly && !WIZ.scormOnly ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, typed: WIZ.pickTyped || null, join: WIZ.pickJoin || null, skill: !!WIZ.skillJoin, tag: !!WIZ.skillTag, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
+  await chrome.storage.local.set({ semesterRun: active && !WIZ.hwOnly && !WIZ.roomsOnly && !WIZ.videosOnly && !WIZ.scormOnly ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, typed: WIZ.pickTyped || null, join: WIZ.pickJoin || null, skill: !!WIZ.skillJoin, tag: !!WIZ.skillTag, ex: WIZ.extras || [], exd: [...(WIZ.extraDone || [])], rp: WIZ.roomPick ? [...WIZ.roomPick] : null, vp: WIZ.vidPick ? [...WIZ.vidPick] : null, sp: WIZ.scormPick ? [...WIZ.scormPick] : null, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
 }
 function setRunning(on) {
   running = on;
@@ -2909,6 +2909,23 @@ async function roomsOnly() {
   logLine('ok', WIZ.roomHead);
 }
 // «فيديو لكل درس» (المالك 2026-11-14): من يوتيوب بعنوان قريب من اسم الدرس؛ لا عنوان مناسب ← لا فيديو لذلك الدرس
+// الخدمات الأخرى في التشغيل نفسه، كلٌّ مرة واحدة: ما تعذّر منها لا يوقف ما بعده
+async function runExtras() {
+  for (const k of WIZ.extras || []) {
+    if (stopFlag) break;
+    if (WIZ.extraDone && WIZ.extraDone.has(k)) continue;
+    try { if (k === 'rooms') await roomsOnly(); else if (k === 'video') await videosOnly(); else if (k === 'scorm') await scormOnly(); } catch (e) { logLine('info', `${k}: ${String((e && e.message) || e).slice(0, 120)}`); }
+    if (!stopFlag) (WIZ.extraDone = WIZ.extraDone || new Set()).add(k);
+  }
+}
+// ما أُنجز من الخدمات الأخرى في سطر الختام: «أنشأت غرفتين · أضفت ٣ فيديوهات»
+function extrasText() {
+  return (WIZ.extras || []).filter((k) => WIZ.extraDone && WIZ.extraDone.has(k)).map((k) => {
+    const [h, sub] = k === 'rooms' ? [WIZ.roomHead, WIZ.roomSub] : k === 'video' ? [WIZ.vidHead, WIZ.vidSub] : [WIZ.scHead, WIZ.scSub];
+    const t = String(h || '').replace(/^✓\s*/, '').trim();
+    return t && t !== 'انتهى' ? t : `${SVC_NAME[k]}: ${String(sub || 'انتهى').replace(/\.$/, '')}`;
+  }).join(' · ');
+}
 async function videosOnly() {
   const nConf = conflicts(); if (nConf.miss.length + nConf.weak.length + nConf.dup.length || plan.mismatch) autoResolve();
   safeLinks();
@@ -3046,7 +3063,7 @@ async function run() {
   $('log').innerHTML = ''; $('logCard').hidden = true; $('prog').style.width = '0%'; renderPlan();
   setRunning(true);
   await checkpoint(true);
-  let ok = 0, skipped = 0, pastSkipped = 0, total = 0, endMsg = null, finished = false, endWhy = '', flStarted = false;
+  let ok = 0, skipped = 0, pastSkipped = 0, total = 0, endMsg = null, finished = false, endWhy = '', flStarted = false, halted = false;
   const failed = [], deferred = [];   // المؤجَّل خارج try: يأخذ صفه في سجل المشرف ولو انقطع التشغيل قبل جولة الإكمال
   try {
     // ما قبل التعبئة (الرئيسية ← البطاقة ← القائمة ← النموذج ← الشجرة): أي عطل فيه يُعاد من أوله حتى ثلاث مرات قبل التوقف
@@ -3086,10 +3103,10 @@ async function run() {
     if (stopFlag || !nodes) throw new Error('stop');
     await buildPlan(nodes);
     renderPlan();
-    if (WIZ.hwOnly) { await homeworkOnly(); finished = true; throw new Error(WIZ.hwHead); }
-    if (WIZ.roomsOnly) { await roomsOnly(); finished = true; throw new Error(WIZ.roomHead); }
-    if (WIZ.videosOnly) { await videosOnly(); finished = true; throw new Error(WIZ.vidHead); }
-    if (WIZ.scormOnly) { await scormOnly(); finished = true; throw new Error(WIZ.scHead); }
+    if (WIZ.hwOnly) { await homeworkOnly(); await runExtras(); finished = true; throw new Error(WIZ.hwHead); }
+    if (WIZ.roomsOnly) { await roomsOnly(); await runExtras(); finished = true; throw new Error(WIZ.roomHead); }
+    if (WIZ.videosOnly) { await videosOnly(); await runExtras(); finished = true; throw new Error(WIZ.vidHead); }
+    if (WIZ.scormOnly) { await scormOnly(); await runExtras(); finished = true; throw new Error(WIZ.scHead); }
     // المادة مكتملة في نور: لا مراجعة ولا اقتراحات — «مكتمل» فقط
     { const cp = completion(); if (cp.complete && !queue.length) { await termFullOffer(); finished = true; logLine('ok', completeText(cp)); throw new Error(completeText(cp)); } }
     // تعارض بين ملفك ونور: تُعرض الخطة للمراجعة، وتبدأ وحدها بعد مهلة (أطول كلما كان التعارض أخطر) ما لم تطلب المراجعة اليدوية
@@ -3252,10 +3269,14 @@ async function run() {
     finished = !stopFlag;
   } catch (e) {
     const m = String((e && e.message) || e);
-    endWhy = m === 'stop' ? '' : m;
+    endWhy = m === 'stop' ? '' : m; halted = m === 'stop';
     if (m !== 'stop' && !finished) { endMsg = ['bad', `توقف: ${esc(m)}<br>ما حُفظ قبلها بقي محفوظًا. اضغط «ابدأ» ليكمل من حيث توقف (المحفوظ لا يتكرر).`]; logLine('bad', 'توقف: ' + m); if (!WIZ.on) setBox('bad', 'توقف', m); }
     else if (finished && m !== 'stop') { endMsg = ['ok', esc(m)]; setBox('ok', m, ''); }
   }
+  // خدمات أخرى اختارها المعلم مع التحضير (غرف النقاش · فيديو · درس تفاعلي): بعد اكتمال التحضير، في التشغيل نفسه.
+  // لا تبدأ إن أُوقف التشغيل أو انتقل إلى اختيار الدروس أو بقيت حصص تُكمَل في جولة قادمة (تبدأ بعد تلك الجولة)
+  if (WIZ.on && !WIZ.hwOnly && !WIZ.roomsOnly && !WIZ.videosOnly && !WIZ.scormOnly && (WIZ.extras || []).length && plan.length && courseCid && !stopFlag && !halted
+      && !WIZ.toPick && !WIZ.rerun && !WIZ.trialOver && !(endMsg && endMsg[0] === 'bad') && (!failed.length || WIZ.auto >= 1)) await runExtras().catch(() => {});
   // سجل المشرف: ما بقي مؤجلًا أو لم يكتمل يأخذ صفه النهائي (مرة واحدة)، ثم صف النهاية بالحصيلة وسببها
   failed.forEach(({ item, why, verifyOnly }) => { if (!fillLogged.has(item.s)) flRow(verifyOnly ? 'unconfirmed' : 'failed', item, why); });
   deferred.forEach((item) => { if (!fillLogged.has(item.s)) flRow(item.verifyOnly ? 'unconfirmed' : 'failed', item, item.why); });
@@ -3503,7 +3524,7 @@ async function offerResume() {
   const radio = document.querySelector(`input[name=term][value="${run0.term}"]`); if (radio) radio.checked = true;
   if (run0.startTouched && run0.start) { $('start').value = run0.start; startTouched = true; renderDays(); }
   if (run0.scope && init.restoreScope) init.restoreScope(run0.scope);
-  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; WIZ.seq = !!run0.wiz.seq; WIZ.pickDates = run0.wiz.pick || null; WIZ.pickTyped = run0.wiz.typed || null; WIZ.pickJoin = run0.wiz.join || null; WIZ.skillJoin = !!run0.wiz.skill; WIZ.skillTag = !!run0.wiz.tag; WIZ.rid = run0.wiz.rid || Date.now(); if (run0.wiz.conf) WIZ.confirmed = WIZ.rid; WIZ.sum = run0.wiz.sum || 0; WIZ.resumed = true; WIZ.auto = run0.wiz.auto || 0; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
+  if (run0.wiz) { WIZ.on = true; WIZ.rule = run0.wiz.rule || ''; WIZ.seq = !!run0.wiz.seq; WIZ.pickDates = run0.wiz.pick || null; WIZ.pickTyped = run0.wiz.typed || null; WIZ.pickJoin = run0.wiz.join || null; WIZ.skillJoin = !!run0.wiz.skill; WIZ.skillTag = !!run0.wiz.tag; WIZ.extras = run0.wiz.ex || []; WIZ.extraDone = new Set(run0.wiz.exd || []); WIZ.roomPick = run0.wiz.rp ? new Set(run0.wiz.rp) : null; WIZ.vidPick = run0.wiz.vp ? new Set(run0.wiz.vp) : null; WIZ.scormPick = run0.wiz.sp ? new Set(run0.wiz.sp) : null; WIZ.rid = run0.wiz.rid || Date.now(); if (run0.wiz.conf) WIZ.confirmed = WIZ.rid; WIZ.sum = run0.wiz.sum || 0; WIZ.resumed = true; WIZ.auto = run0.wiz.auto || 0; $('optStep').checked = !!run0.wiz.step; $('optReview').checked = !!run0.wiz.review; $('optNoor').checked = true; $('optAuto').checked = true; wizRunning(); }
   let left = 10, cancelled = false;
   const tick = () => {
     if (cancelled) return;
@@ -3534,7 +3555,7 @@ const SHIFT = { one: { name: 'فترة واحدة', min: 40 }, two: { name: 'ف�
 const WZ_STEPS = ['mode', 'grade', 'subject', 'shift', 'lessons'];
 // «بداية الإدخال» في التحضير التلقائي: في النسخة الخاصة بالمالك فقط (اسم الإصدار فيه «خاصة»)
 const FROM_STEP = (() => { try { return /خاصة/.test(chrome.runtime.getManifest().version_name || ''); } catch (e) { return false; } })();
-const wz = { hw: true, join: false, step: 'mode', hist: [], mode: '', grade: 0, subject: '', shift: '', pkg: null, sel: new Map(), typed: new Set(), hsel: new Map(), rsel: new Set(), vsel: new Set(), ssel: new Set(), catalog: null, link: null, status: null, busy: false };
+const wz = { hw: true, join: false, step: 'mode', hist: [], mode: '', grade: 0, subject: '', shift: '', pkg: null, sel: new Map(), typed: new Set(), hsel: new Map(), rsel: new Set(), vsel: new Set(), ssel: new Set(), svcs: new Set(['prep', 'hw']), extras: [], chain: [], catalog: null, link: null, status: null, busy: false };
 const ORD = ['الأولى', 'الثانية', 'الثالثة', 'الرابعة', 'الخامسة', 'السادسة', 'السابعة', 'الثامنة'];
 const wdone = (l) => { const x = sessionStatus(state, wz.pkg.id, l.id); return !!(x.saved || (x.filled && !x.failed)); };
 const gradeName = (n) => 'الصف ' + (GRADES[n - 1] || toAr(n));
@@ -3588,11 +3609,21 @@ function wzTrialLeft() {
 // لا تجربة مجانية (المالك 2026-11-01): مادة الطلب تنتظر تفعيل المشرف
 // نوع الخدمة في الاشتراك (المالك 2026-11-02): تحضير فقط · تحضير مع واجب · واجب فقط — يحدده المدير لكل مادة؛ والتجربة تشمل الكل
 const SVC_LABEL = { prep: 'تحضير فقط', hw: 'واجبات فقط' };
-const offerSvc = (o) => (o.src === 'lib' && o.pkg.remote && !o.pkg.remote.trial && o.pkg.remote.service) || 'both';
-const offerAllows = (o, mode) => { const sv = offerSvc(o); return ['rooms', 'video', 'scorm'].includes(mode) ? true : mode === 'hw' ? sv !== 'prep' : mode ? sv !== 'hw' : true; };
+// خدمات الاشتراك (المالك 2026-11-14): يحددها المدير من الموقع — كل الخدمات أو بعضها: تحضير · واجبات · غرف النقاش · فيديو · درس تفاعلي.
+// في القاعدة: «prep» · «hw» · «both» (تحضير وواجبات) · «all» · أو قائمة بفواصل «prep,video»؛ وبلا قيمة (حساب المدير) = كل الخدمات
+const SVC_KEYS = ['prep', 'hw', 'rooms', 'video', 'scorm'];
+const SVC_EXTRA = ['rooms', 'video', 'scorm'];
+const SVC_NAME = { prep: 'تحضير', hw: 'واجبات', rooms: 'غرف النقاش', video: 'فيديو', scorm: 'درس تفاعلي' };
+const svcSet = (v) => new Set(String(v || 'all').replace(/both/g, 'prep,hw').replace(/all/g, SVC_KEYS.join(',')).split(/[,\s]+/).filter((k) => SVC_KEYS.includes(k)));
+const pkgSvc = (p) => svcSet(p && p.remote && !p.remote.trial ? p.remote.service : '');
+const offerSvc = (o) => (o.src === 'lib' && o.pkg.remote && !o.pkg.remote.trial && o.pkg.remote.service) || 'all';
+const offerHas = (o, k) => svcSet(offerSvc(o)).has(k);
+// وضع المعالج ← خدمته: اختيار الدروس والفصل كاملًا = تحضير؛ وإن لم يختر تحضيرًا ولا واجبًا فأي خدمة اختارها مما يشمله الاشتراك
+const offerAllows = (o, mode) => (!mode ? true : mode === 'pick' || mode === 'term' ? offerHas(o, 'prep') : mode === 'hw' ? offerHas(o, 'hw') : SVC_EXTRA.some((k) => wz.svcs.has(k) && offerHas(o, k)));
+const svcBadge = (o) => { const raw = offerSvc(o), st = svcSet(raw); return SVC_LABEL[raw] || (raw === 'both' || st.size === SVC_KEYS.length ? '' : [...st].map((k) => SVC_NAME[k]).join(' · ')); };
 const wzBadge = (o) => (o.src === 'cat' ? ''
   : o.pkg.remote && o.pkg.remote.trial ? '<em class="bdg free">بانتظار التفعيل</em>'
-    : o.pkg.remote ? `<em class="bdg sub">مشترك ✓${SVC_LABEL[offerSvc(o)] ? ' · ' + SVC_LABEL[offerSvc(o)] : ''}</em>` : '');
+    : o.pkg.remote ? `<em class="bdg sub">مشترك ✓${svcBadge(o) ? ' · ' + svcBadge(o) : ''}</em>` : '');
 
 function wzGo(step, push = true) {
   if (push && wz.step !== step) wz.hist.push(wz.step);
@@ -3615,33 +3646,38 @@ function wzRender() {
   let list = [];
   if (wz.step === 'mode') {
     head.textContent = 'ماذا تريد أن تحضّر؟';
-    // الخدمة (المالك 2026-11-02): تحضير · تحضير مع واجبات · واجبات فقط — ثلاثة خيارات صريحة؛ الواجبات خمسة أسئلة لكل درس في «المهام الإلكترونية»
-    const svc = ['rooms', 'video', 'scorm'].includes(wz.mode) ? wz.mode : wz.mode === 'hw' ? 'hw' : wz.hw ? 'both' : 'prep';
-    const SV = [['prep', 'تحضير'], ['both', 'تحضير مع واجبات'], ['hw', 'واجبات فقط'], ['rooms', 'غرف النقاش'], ['video', 'فيديو'], ['scorm', 'درس تفاعلي']];
-    // غرف النقاش (المالك 2026-11-14): غرفة لكل وحدة، وفيها موضوع لكل درس (نشاطه وسؤالان للنقاش)
-    // فيديو (المالك 2026-11-14): إذن يوتيوب يُطلب هنا مرة واحدة (يحتاج ضغطة المعلم)
-    // درس تفاعلي (SCORM) (المالك 2026-11-14): خمسة أسئلة ثم شهادة باسم الطالب ومدرسته ومعلمه
-    list = svc === 'scorm'
-      ? [{ title: 'درس تفاعلي لكل درس', sub: 'خمسة أسئلة ثم شهادة باسم الطالب ونتيجته', on: wz.mode === 'scorm', go: () => { wz.mode = 'scorm'; wzGo('grade'); } }]
-      : svc === 'video'
-      ? [{ title: 'فيديو لكل درس', sub: 'من يوتيوب، بعنوان قريب من اسم الدرس', on: wz.mode === 'video', go: () => {
-        const go = () => { wz.mode = 'video'; wzGo('grade'); };
-        if (YT_DEBUG || !chrome.permissions || !chrome.permissions.request) { go(); return; }
-        chrome.permissions.request({ origins: [YT_ORIGIN] }).then((ok) => { if (ok) go(); else wzMsg('ok', 'البحث في يوتيوب يحتاج موافقتك. اضغط «فيديو لكل درس» ثم «سماح».'); }).catch(() => go());
-      } }]
-      : svc === 'rooms'
-      ? [{ title: 'غرفة لكل وحدة', sub: 'في كل غرفة موضوع لكل درس: نشاطه وسؤالان للنقاش', on: wz.mode === 'rooms', go: () => { wz.mode = 'rooms'; wzGo('grade'); } }]
-      : svc === 'hw'
-      ? [{ title: 'أختار الدروس بنفسي', sub: 'تختار الدروس وتاريخي النشر والتسليم', on: wz.mode === 'hw', go: () => { wz.mode = 'hw'; wzGo('grade'); } }]
-      : [
-        { title: 'أختار الدروس بنفسي', sub: 'تختار الدرس وتكتب تاريخه', on: wz.mode === 'pick', go: () => { wz.mode = 'pick'; wzGo('grade'); } },
-        { title: 'تحضير الفصل كاملًا', sub: 'كل دروس الفصل، درسًا بعد درس', on: wz.mode === 'term', go: () => { wz.mode = 'term'; wzGo('grade'); } },
-      ];
-    body.innerHTML = `<div class="wz-seg" role="group">${SV.map(([k, t]) => `<button type="button" class="wz-seg-b ${k === svc ? 'on' : ''}" data-svc="${k}" id="wzSvc-${k}">${t}</button>`).join('')}</div>`
-      + wzCards(list).replace('wz-cards', 'wz-cards big');
+    // الخدمات (المالك 2026-11-14): يختار المعلم واحدة أو أكثر — تحضير · واجبات · غرف النقاش · فيديو · درس تفاعلي — وتُنجز كلها في
+    // تشغيل واحد. ما لا يشمله اشتراكه (يحدده المدير من الموقع) يظهر غير مفعّل بهدوء.
+    const subs = offers.filter((o) => o.src === 'lib' && o.pkg.remote && !o.pkg.remote.trial);
+    const can = (k) => !subs.length || subs.some((o) => offerHas(o, k));
+    SVC_KEYS.forEach((k) => { if (!can(k)) wz.svcs.delete(k); });
+    if (!wz.svcs.size) { const k = SVC_KEYS.find(can); if (k) wz.svcs.add(k); }
+    wz.hw = wz.svcs.has('hw');
+    const has = (k) => wz.svcs.has(k);
+    const exs = SVC_EXTRA.filter(has);
+    // غرف النقاش: غرفة لكل وحدة وفيها موضوع لكل درس · فيديو: من يوتيوب · درس تفاعلي (SCORM): خمسة أسئلة ثم شهادة
+    const EX = { rooms: ['غرفة لكل وحدة', 'في كل غرفة موضوع لكل درس: نشاطه وسؤالان للنقاش'], video: ['فيديو لكل درس', 'من يوتيوب، بعنوان قريب من اسم الدرس'], scorm: ['درس تفاعلي لكل درس', 'خمسة أسئلة ثم شهادة باسم الطالب ونتيجته'] };
+    // إذن يوتيوب يُطلب مرة واحدة حين يكون الفيديو مما اختاره المعلم (يحتاج ضغطته)
+    const start = (mode) => {
+      const go = () => { wz.mode = mode; wzGo('grade'); };
+      if (!has('video') || YT_DEBUG || !chrome.permissions || !chrome.permissions.request) { go(); return; }
+      chrome.permissions.request({ origins: [YT_ORIGIN] }).then((ok) => { if (ok) go(); else wzMsg('ok', 'البحث في يوتيوب يحتاج موافقتك. اضغط اختيارك من جديد ثم «سماح».'); }).catch(() => go());
+    };
+    list = has('prep') ? [
+      { title: 'أختار الدروس بنفسي', sub: 'تختار الدرس وتكتب تاريخه', on: wz.mode === 'pick', go: () => start('pick') },
+      { title: 'تحضير الفصل كاملًا', sub: 'كل دروس الفصل، درسًا بعد درس', on: wz.mode === 'term', go: () => start('term') },
+    ]
+      : has('hw') ? [{ title: 'أختار الدروس بنفسي', sub: 'تختار الدروس وتاريخي النشر والتسليم', on: wz.mode === 'hw', go: () => start('hw') }]
+      : exs.length === 1 ? [{ title: EX[exs[0]][0], sub: EX[exs[0]][1], on: wz.mode === exs[0], go: () => start(exs[0]) }]
+      : exs.length ? [{ title: 'اختر المادة', sub: exs.map((k) => EX[k][0]).join(' · '), on: exs.includes(wz.mode), go: () => start(exs[0]) }] : [];
+    const plus = (has('prep') || has('hw')) && exs.length ? `<p class="wz-note" id="wzPlus">ومعه في التشغيل نفسه: ${exs.map((k) => EX[k][0]).join(' · ')}</p>` : '';
+    body.innerHTML = `<p class="wz-note">اختر خدمة أو أكثر، وتُنجز كلها في تشغيل واحد.</p><div class="wz-seg multi" role="group">${SVC_KEYS.map((k) => `<button type="button" class="wz-seg-b ${has(k) ? 'on' : ''}" data-svc="${k}" id="wzSvc-${k}" aria-pressed="${has(k)}" ${can(k) ? '' : 'disabled title="غير مشمولة في اشتراكك"'}>${has(k) ? '✓ ' : ''}${SVC_NAME[k]}</button>`).join('')}</div>${plus}`
+      + (list.length ? wzCards(list).replace('wz-cards', 'wz-cards big') : '<p class="wz-note">اختر خدمة واحدة على الأقل.</p>');
     body.querySelectorAll('.wz-seg-b').forEach((bt) => { bt.onclick = () => {
       const k = bt.dataset.svc;
-      if (['hw', 'rooms', 'video', 'scorm'].includes(k)) wz.mode = k; else { if (['hw', 'rooms', 'video', 'scorm'].includes(wz.mode)) wz.mode = 'term'; wz.hw = k === 'both'; }
+      if (wz.svcs.has(k)) wz.svcs.delete(k); else wz.svcs.add(k);
+      wz.hw = wz.svcs.has('hw');
+      if (!(wz.svcs.has('prep') && ['pick', 'term'].includes(wz.mode))) wz.mode = '';
       wzSavePrefs(); wzRender();
     }; });
   } else if (wz.step === 'grade') {
@@ -3697,8 +3733,8 @@ function wzRender() {
     // مواد اللغة العربية (المالك 2026-11-14): شكلان للتحضير — لكل حصة تحضيرها كما في السابق، أو تحضير لكل مهارة في الدرس
     head.textContent = 'شكل تحضير اللغة العربية';
     list = [
-      { title: 'تحضير لكل حصة', sub: 'كما في السابق: لكل حصة تحضيرها', on: !wz.join, go: () => { wz.join = false; wzSavePrefs(); wzTermGo(); } },
-      { title: 'تحضير لكل مهارة', sub: 'حصص المهارة الواحدة في الدرس في تحضير واحد: التحدث، القراءة، الأنماط اللغوية، الإملاء، الخط، التعبير', on: !!wz.join, go: () => { wz.join = true; wzSavePrefs(); wzTermGo(); } },
+      { title: 'تحضير لكل حصة', sub: 'كما في السابق: لكل حصة تحضيرها', on: !wz.join, go: () => { wz.join = false; wzSavePrefs(); wzNext(); } },
+      { title: 'تحضير لكل مهارة', sub: 'حصص المهارة الواحدة في الدرس في تحضير واحد: التحدث، القراءة، الأنماط اللغوية، الإملاء، الخط، التعبير', on: !!wz.join, go: () => { wz.join = true; wzSavePrefs(); wzNext(); } },
     ];
     body.innerHTML = wzCards(list).replace('wz-cards', 'wz-cards big');
   } else if (wz.step === 'from') {
@@ -3718,7 +3754,7 @@ function wzRender() {
   } else if (wz.step === 'roomUnits') {
     wzRoomUnits();
     return;
-  } else if (wz.step === 'vidLessons') {
+  } else if (wz.step === 'vidLessons' || wz.step === 'scLessons') {
     wzVidLessons();
     return;
   } else if (wz.step === 'pay') {
@@ -3755,7 +3791,7 @@ function wzLessons() {
     return `${uh}<div class="wz-les ${on ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-k="${esc(g.key)}" ${on ? 'checked' : ''}><span>${esc(g.lesson || 'درس')}</span><em>${one ? '' : countWord(g.sessions.length)}</em></label>${ses}</div>`;
   }).join('') + '</div>';
   const n = wz.sel.size;
-  body.insertAdjacentHTML('beforeend', `<button class="btn primary big" id="wzLessGo" ${n ? '' : 'disabled'}>${n ? `عبّئ ${countWord(n).replace('حصتان', 'الحصتين')} في نور` : 'اختر درسًا'}</button>`);
+  body.insertAdjacentHTML('beforeend', `<button class="btn primary big" id="wzLessGo" ${n ? '' : 'disabled'}>${n ? (wzMore1() ? 'التالي' : `عبّئ ${countWord(n).replace('حصتان', 'الحصتين')} في نور`) : 'اختر درسًا'}</button>`);
   const list = body.querySelector('.wz-list'); list.scrollTop = top;
   body.querySelectorAll('#wzJoin [data-j]').forEach((b) => {
     b.onclick = () => {
@@ -3788,7 +3824,7 @@ function wzLessons() {
   });
   $('wzLessGo').onclick = () => {
     if ([...wz.sel.values()].some((v) => !isIso(v))) { wzMsg('info', 'اكتب تاريخ كل حصة اخترتها.'); return; }
-    wzRun();
+    wzNext();
   };
 }
 // «الواجبات فقط» (المالك 2026-11-01): يختار المعلم الدروس، ولكل درس تاريخ نشر وتاريخ تسليم يكتبهما هو (لا يُقترح تاريخ)؛
@@ -3811,7 +3847,7 @@ function wzHwLessons() {
   }).join('') + '</div>';
   const n = wz.hsel.size;
   const hwW = (k) => (k === 1 ? 'واجبًا واحدًا' : k === 2 ? 'واجبين' : k <= 10 ? toAr(k) + ' واجبات' : toAr(k) + ' واجبًا');
-  body.insertAdjacentHTML('beforeend', `<p class="wz-note">لكل واجب خمسة أسئلة من الدرس في «المهام الإلكترونية». إن تركت تاريخ التسليم فارغًا يكون بعد النشر بثلاثة أيام.</p><button class="btn primary big" id="wzHwGo" ${n ? '' : 'disabled'}>${n ? `أضف ${hwW(n)} في نور` : 'اختر درسًا'}</button>`);
+  body.insertAdjacentHTML('beforeend', `<p class="wz-note">لكل واجب خمسة أسئلة من الدرس في «المهام الإلكترونية». إن تركت تاريخ التسليم فارغًا يكون بعد النشر بثلاثة أيام.</p><button class="btn primary big" id="wzHwGo" ${n ? '' : 'disabled'}>${n ? (wzMore1() ? 'التالي' : `أضف ${hwW(n)} في نور`) : 'اختر درسًا'}</button>`);
   const list = body.querySelector('.wz-list'); list.scrollTop = top;
   body.querySelectorAll('input[data-hk]').forEach((cb) => {
     cb.onchange = () => {
@@ -3833,31 +3869,31 @@ function wzHwLessons() {
     const vs = [...wz.hsel.values()];
     if (vs.some((v) => !isIso(v.pub))) { wzMsg('info', 'اكتب تاريخ نشر كل واجب اخترته.'); return; }
     if (vs.some((v) => isIso(v.due) && v.due < v.pub)) { wzMsg('info', 'اجعل تاريخ التسليم في يوم النشر أو بعده.'); return; }
-    wzRun();
+    wzNext();
   };
 }
 // «غرف النقاش» (المالك 2026-11-14): يختار المعلم الوحدات بنفسه، ولكل وحدة مختارة غرفة فيها موضوع لكل درس
 function wzRoomUnits() {
   const body = $('wzBody');
   const keep = body.querySelector('.wz-list'); const top = keep ? keep.scrollTop : 0;
-  $('wzHead').textContent = 'اختر الوحدات';
+  $('wzHead').textContent = wz.chain.length > 1 ? 'اختر وحدات غرف النقاش' : 'اختر الوحدات';
   const units = new Map();
   groupByUnit(lessonGroups(wz.pkg)).forEach((g) => { const k = kwNorm(g.unit || ''); if (!units.has(k)) units.set(k, { name: g.unit || 'دروس الفصل', n: 0 }); units.get(k).n++; });
   const lw = (k) => (k === 1 ? 'درس واحد' : k === 2 ? 'درسان' : k <= 10 ? toAr(k) + ' دروس' : toAr(k) + ' درسًا');
   body.innerHTML = wzTrialNote() + '<div class="wz-list">' + [...units].map(([k, u]) => `<div class="wz-les ${wz.rsel.has(k) ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-ru="${esc(k)}" ${wz.rsel.has(k) ? 'checked' : ''}><span>${esc(u.name)}</span><em>${lw(u.n)}</em></label></div>`).join('') + '</div>';
   const n = wz.rsel.size;
   const rw = (k) => (k === 1 ? 'غرفة واحدة' : k === 2 ? 'غرفتين' : k <= 10 ? toAr(k) + ' غرف' : toAr(k) + ' غرفة');
-  body.insertAdjacentHTML('beforeend', `<p class="wz-note">لكل وحدة غرفة نقاش لطلبة شعب المادة، وفيها موضوع لكل درس: رابط نشاطه وسؤالان للنقاش.</p><button class="btn primary big" id="wzRoomGo" ${n ? '' : 'disabled'}>${n ? `أنشئ ${rw(n)} في نور` : 'اختر وحدة'}</button>`);
+  body.insertAdjacentHTML('beforeend', `<p class="wz-note">لكل وحدة غرفة نقاش لطلبة شعب المادة، وفيها موضوع لكل درس: رابط نشاطه وسؤالان للنقاش.</p><button class="btn primary big" id="wzRoomGo" ${n ? '' : 'disabled'}>${n ? (wzMore1() ? 'التالي' : `أنشئ ${rw(n)} في نور`) : 'اختر وحدة'}</button>`);
   const list = body.querySelector('.wz-list'); list.scrollTop = top;
   body.querySelectorAll('input[data-ru]').forEach((cb) => { cb.onchange = () => { if (cb.checked) wz.rsel.add(cb.dataset.ru); else wz.rsel.delete(cb.dataset.ru); wzRoomUnits(); }; });
-  $('wzRoomGo').onclick = () => { if (wz.rsel.size) wzRun(); };
+  $('wzRoomGo').onclick = () => { if (wz.rsel.size) wzNext(); };
 }
 // «فيديو» و«درس تفاعلي» (المالك 2026-11-14): يختار المعلم الدروس بنفسه؛ لكل درس مختار فيديو من يوتيوب إن وُجد عنوان مناسب، أو درس SCORM
 function wzVidLessons() {
-  const sc = wz.mode === 'scorm', sel = sc ? wz.ssel : wz.vsel;   // الدرس التفاعلي يختار دروسه بالقائمة نفسها
+  const sc = wz.step === 'scLessons', sel = sc ? wz.ssel : wz.vsel;   // الدرس التفاعلي يختار دروسه بالقائمة نفسها
   const body = $('wzBody');
   const keep = body.querySelector('.wz-list'); const top = keep ? keep.scrollTop : 0;
-  $('wzHead').textContent = 'اختر الدروس';
+  $('wzHead').textContent = wz.chain.length > 1 ? (sc ? 'اختر دروس الدرس التفاعلي' : 'اختر دروس الفيديو') : 'اختر الدروس';
   const gs = groupByUnit(lessonGroups(wz.pkg));
   let u = null;
   body.innerHTML = wzTrialNote() + '<div class="wz-list">' + gs.map((g) => {
@@ -3869,10 +3905,10 @@ function wzVidLessons() {
   const scW = (k) => (k === 1 ? 'درسًا تفاعليًا واحدًا' : k === 2 ? 'درسين تفاعليين' : k <= 10 ? toAr(k) + ' دروس تفاعلية' : toAr(k) + ' درسًا تفاعليًا');
   const note = sc ? 'لكل درس تختاره درس تفاعلي في «مكتبة الدروس التفاعلية»: خمسة أسئلة من الدرس، ثم شهادة باسم الطالب ومدرسته ومعلمه ونتيجته يحمّلها.'
     : 'أبحث في يوتيوب عن فيديو عنوانه قريب من اسم الدرس، وأضيفه في «مكتبة الفيديو» لشعب المادة. الدرس الذي لا أجد له عنوانًا مناسبًا يبقى بلا فيديو.';
-  body.insertAdjacentHTML('beforeend', `<p class="wz-note">${note}</p><button class="btn primary big" id="wzVidGo" ${n ? '' : 'disabled'}>${n ? (sc ? `أضف ${scW(n)} في نور` : `أضف فيديو ${vw(n)}`) : 'اختر درسًا'}</button>`);
+  body.insertAdjacentHTML('beforeend', `<p class="wz-note">${note}</p><button class="btn primary big" id="wzVidGo" ${n ? '' : 'disabled'}>${n ? (wzMore1() ? 'التالي' : sc ? `أضف ${scW(n)} في نور` : `أضف فيديو ${vw(n)}`) : 'اختر درسًا'}</button>`);
   const list = body.querySelector('.wz-list'); list.scrollTop = top;
   body.querySelectorAll('input[data-vk]').forEach((cb) => { cb.onchange = () => { if (cb.checked) sel.add(cb.dataset.vk); else sel.delete(cb.dataset.vk); wzVidLessons(); }; });
-  $('wzVidGo').onclick = () => { if (sel.size) wzRun(); };
+  $('wzVidGo').onclick = () => { if (sel.size) wzNext(); };
 }
 // تواريخ متتالية في «أختار الدروس بنفسي» (المالك 2026-10-31): الحصص المختارة وحدها، بترتيب القائمة؛ ما كتبه المعلم يبقى كما كتبه،
 // وكل حصة مختارة بعده بلا تاريخ منه تأخذ الحصة التالية في أيام حصصه (حصتان في يوم له فيه حصتان، ولا إجازة). ما قبل أول تاريخ يبقى فارغًا
@@ -3926,11 +3962,15 @@ function wzTrialNote() {
 function wzPickOffer() {
   const all = wzOffers().filter((o) => o.grade === wz.grade && o.subject === wz.subject && fitsShift(o.shift, wz.shift));
   const mine = all.filter((o) => offerAllows(o, wz.mode));
-  // اشتراكه في المادة من النوع الآخر (تحضير فقط / واجبات فقط): نعيده إلى اختيار ما يحضّره بهدوء
+  // ما اختاره ليس مما يشمله اشتراكه في هذه المادة (يحدده المدير من الموقع): نعيده إلى اختيار الخدمات بهدوء، وقد اختيرت له خدمات اشتراكه
   if (!mine.length && all.length) {
-    const hwSub = all.every((o) => offerSvc(o) === 'hw');
+    const allow = new Set(all.flatMap((o) => [...svcSet(offerSvc(o))]));
+    const keep = SVC_KEYS.filter((k) => wz.svcs.has(k) && allow.has(k));
+    wz.svcs = new Set(keep.length ? keep : SVC_KEYS.filter((k) => allow.has(k)));
+    wz.hw = wz.svcs.has('hw'); wz.mode = '';
+    wzSavePrefs();
     wzGo('mode');
-    wzMsg('ok', hwSub ? 'اشتراكك في هذه المادة للواجبات — اختر «الواجبات فقط».' : 'اشتراكك في هذه المادة للتحضير — اختر «أختار الدروس بنفسي» أو «تحضير الفصل كاملًا».');
+    wzMsg('ok', `اشتراكك في هذه المادة يشمل: ${SVC_KEYS.filter((k) => allow.has(k)).map((k) => SVC_NAME[k]).join(' · ')}.`);
     return null;
   }
   // المطابقة التامة لنوع المدرسة أولًا، ثم مكتبتك، ثم الفصل الجاري
@@ -3945,12 +3985,29 @@ function wzOpen(p) {
   if (p.remote && p.remote.trial) { payResume = 'open'; wzGo('pay'); return; }
   const ids = new Set((p.lessons || []).map((l) => l.id));
   [...wz.sel.keys()].forEach((k) => { if (!ids.has(k)) wz.sel.delete(k); });
-  if (wz.mode === 'hw') { const ks = new Set(lessonGroups(p).map((g) => g.key)); [...wz.hsel.keys()].forEach((k) => { if (!ks.has(k)) wz.hsel.delete(k); }); wzGo('hwLessons'); }
-  else if (wz.mode === 'rooms') { const us = new Set(lessonGroups(p).map((g) => kwNorm(g.unit || ''))); [...wz.rsel].forEach((k) => { if (!us.has(k)) wz.rsel.delete(k); }); wzGo('roomUnits'); }
-  else if (wz.mode === 'scorm') { const ks = new Set(lessonGroups(p).map((g) => g.key)); [...wz.ssel].forEach((k) => { if (!ks.has(k)) wz.ssel.delete(k); }); wzGo('vidLessons'); }
-  else if (wz.mode === 'video') { const ks = new Set(lessonGroups(p).map((g) => g.key)); [...wz.vsel].forEach((k) => { if (!ks.has(k)) wz.vsel.delete(k); }); wzGo('vidLessons'); }
-  else if (wz.mode === 'term') { if (isArabicPkg(p)) wzGo('style'); else wzTermGo(); } else wzGo('lessons');
+  // خدمات هذا التشغيل: ما اختاره المعلم مما يشمله اشتراك المادة. بلا تحضير ولا واجب تكون أولى الخدمات هي وضع التشغيل والباقي بعدها
+  const allow = pkgSvc(p);
+  let ex = SVC_EXTRA.filter((k) => wz.svcs.has(k) && allow.has(k));
+  if (SVC_EXTRA.includes(wz.mode)) { wz.mode = ex[0] || wz.mode; ex = ex.slice(1); }
+  if (wz.noExtras) { ex = []; wz.noExtras = false; }   // «اختر درسًا آخر»: الخدمات الأخرى أُنجزت في التشغيل السابق
+  wz.extras = ex;
+  const ks = new Set(lessonGroups(p).map((g) => g.key)), us = new Set(lessonGroups(p).map((g) => kwNorm(g.unit || '')));
+  if (wz.mode === 'hw') [...wz.hsel.keys()].forEach((k) => { if (!ks.has(k)) wz.hsel.delete(k); });
+  [...wz.rsel].forEach((k) => { if (!us.has(k)) wz.rsel.delete(k); });
+  [...wz.vsel].forEach((k) => { if (!ks.has(k)) wz.vsel.delete(k); });
+  [...wz.ssel].forEach((k) => { if (!ks.has(k)) wz.ssel.delete(k); });
+  // خطوات الاختيار بالترتيب: دروس التحضير أو الواجب (أو شكل تحضير العربية)، ثم وحدات الغرف ودروس الفيديو ودروس الدرس التفاعلي
+  const PS = { rooms: 'roomUnits', video: 'vidLessons', scorm: 'scLessons' };
+  const main = wz.mode === 'hw' ? ['hwLessons'] : wz.mode === 'pick' ? ['lessons'] : wz.mode === 'term' ? (isArabicPkg(p) ? ['style'] : []) : [PS[wz.mode]];
+  wz.chain = [...main, ...ex.map((k) => PS[k])];
+  wzNext(true);
 }
+// الخطوة التالية في اختيارات المعلم، وبعد آخرها يبدأ التشغيل
+function wzNext(first) {
+  const next = wz.chain[(first ? -1 : wz.chain.indexOf(wz.step)) + 1];
+  if (next) wzGo(next); else if (wz.mode === 'term') wzTermGo(); else wzRun();
+}
+const wzMore1 = () => { const i = wz.chain.indexOf(wz.step); return i >= 0 && i < wz.chain.length - 1; };
 function wzTermGo() { if (FROM_STEP) wzGo('from'); else wzRun(); }
 // بعد نوع المدرسة: مادة في مكتبتك ← wzOpen · مادة من الكتالوج ← تجربة (الاسم أول مرة)
 async function wzResolve(noName) {
@@ -4008,7 +4065,7 @@ async function wzReload() {
   wz.link = await getLink(); wz.status = await getStatus();
   await init();
 }
-async function wzSavePrefs() { await chrome.storage.local.set({ wizPrefs: { grade: wz.grade, subject: wz.subject, shift: wz.shift, hw: wz.hw, join: !!wz.join } }).catch(() => {}); }
+async function wzSavePrefs() { await chrome.storage.local.set({ wizPrefs: { grade: wz.grade, subject: wz.subject, shift: wz.shift, hw: wz.hw, join: !!wz.join, svcs: [...wz.svcs] } }).catch(() => {}); }
 
 // «ابدأ»: المعالج يضبط المحرّك (المخفي) ثم يشغّله
 async function wzRun() {
@@ -4046,10 +4103,13 @@ async function wzRun() {
   WIZ.on = true; WIZ.rule = fileOk ? 'official' : ''; WIZ.seq = !fileOk;
   WIZ.roomsOnly = wz.mode === 'rooms'; WIZ.videosOnly = wz.mode === 'video'; WIZ.scormOnly = wz.mode === 'scorm'; WIZ.course = null;
   // المعلم يختار الوحدات (الغرف) والدروس (الفيديو) بنفسه (المالك 2026-11-14)
-  WIZ.roomPick = WIZ.roomsOnly ? new Set(wz.rsel) : null;
-  WIZ.vidPick = WIZ.videosOnly ? new Set(wz.vsel) : null;
-  WIZ.scormPick = WIZ.scormOnly ? new Set(wz.ssel) : null;
-  WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = !WIZ.roomsOnly && !WIZ.videosOnly && !WIZ.scormOnly && (WIZ.hwOnly || (!!wz.hw && !(p.remote && !p.remote.trial && p.remote.service === 'prep'))); WIZ.hwN = 0; WIZ.hwFail = 0; WIZ.hwDone = null;
+  // خدمات أخرى مع وضع التشغيل (المالك 2026-11-14): تُنجز بعده في التشغيل نفسه
+  const ex = (wz.extras || []).filter((k) => SVC_EXTRA.includes(k) && k !== wz.mode);
+  WIZ.extras = ex; WIZ.extraDone = new Set();
+  WIZ.roomPick = WIZ.roomsOnly || ex.includes('rooms') ? new Set(wz.rsel) : null;
+  WIZ.vidPick = WIZ.videosOnly || ex.includes('video') ? new Set(wz.vsel) : null;
+  WIZ.scormPick = WIZ.scormOnly || ex.includes('scorm') ? new Set(wz.ssel) : null;
+  WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = !WIZ.roomsOnly && !WIZ.videosOnly && !WIZ.scormOnly && (WIZ.hwOnly || (wz.svcs.has('hw') && pkgSvc(p).has('hw'))); WIZ.hwN = 0; WIZ.hwFail = 0; WIZ.hwDone = null;
   WIZ.hwPick = WIZ.hwOnly ? Object.fromEntries([...wz.hsel].map(([k, v]) => [k, { pub: v.pub, due: v.due }])) : null;
   WIZ.rid = Date.now(); WIZ.sum = 0; WIZ.auto = 0;
   wizRunning();
@@ -4062,6 +4122,7 @@ function wzToPick() {
   $('wizCard').hidden = false;
   $('nowActs').innerHTML = ''; $('nowActs').hidden = true;
   wz.mode = 'pick'; wz.sel = new Map(); wz.typed = new Set();
+  wz.chain = ['lessons'];   // الخدمات الأخرى اختيرت وحداتها ودروسها قبل قليل
   wzGo('lessons');
 }
 function wizRunning() {
@@ -4113,16 +4174,17 @@ async function wizAfterRun({ report, ok, failed, stopped, error, had, past = 0 }
     wzResumeBtn('▶ أكمل الباقي');
     return;
   }
-  if (WIZ.hwOnly) { setBox('ok', WIZ.hwHead || '✓ انتهى', WIZ.hwSub || ''); return; }
-  if (WIZ.roomsOnly) { setBox('ok', WIZ.roomHead || '✓ انتهى', WIZ.roomSub || ''); return; }
-  if (WIZ.videosOnly) { setBox('ok', WIZ.vidHead || '✓ انتهى', WIZ.vidSub || ''); return; }
-  if (WIZ.scormOnly) { setBox('ok', WIZ.scHead || '✓ انتهى', WIZ.scSub || ''); return; }
+  const exT = extrasText(), plusEx = (t) => [String(t || '').trim(), exT ? `ومعه: ${exT}.` : ''].filter(Boolean).join(' ');
+  if (WIZ.hwOnly) { setBox('ok', WIZ.hwHead || '✓ انتهى', plusEx(WIZ.hwSub)); return; }
+  if (WIZ.roomsOnly) { setBox('ok', WIZ.roomHead || '✓ انتهى', plusEx(WIZ.roomSub)); return; }
+  if (WIZ.videosOnly) { setBox('ok', WIZ.vidHead || '✓ انتهى', plusEx(WIZ.vidSub)); return; }
+  if (WIZ.scormOnly) { setBox('ok', WIZ.scHead || '✓ انتهى', plusEx(WIZ.scSub)); return; }
   if (wz.mode === 'pick') $('wzMore').hidden = false;
   // نور لا تقبل تاريخًا مضى: ما مضى تاريخه تُرك بهدوء، ويُذكر للمعلم دون صيغة خطأ
   const pt = past ? ` ${past === 1 ? 'حصة واحدة مضى تاريخها' : `${countWord(past)} مضى تاريخها`} ونور لا تقبل نشرها بتاريخ ماضٍ، فتركتها.` : '';
-  if (!n) { setBox('ok', had ? '✓ هذه الحصص موجودة في نور' : past || wz.mode === 'pick' ? '✓ انتهى' : '✓ لا شيء ناقص', `${pt}${wz.mode === 'pick' ? ' هل تختار درسًا آخر؟' : ''}`.trim()); return; }
+  if (!n) { setBox('ok', had ? '✓ هذه الحصص موجودة في نور' : past || wz.mode === 'pick' ? '✓ انتهى' : '✓ لا شيء ناقص', plusEx(`${pt}${wz.mode === 'pick' ? ' هل تختار درسًا آخر؟' : ''}`)); return; }
   // ما لا يقابله درس في شجرة نور لا يُذكر للمعلم (يبقى في سجل المشرف وحده)
-  setBox('ok', '✓ تمت التعبئة بنجاح', `نُشر ${countWord(n).replace('حصتان', 'حصتين')}${range}.${pt}${wz.mode === 'pick' ? ' هل تختار درسًا آخر؟' : ''}`);
+  setBox('ok', '✓ تمت التعبئة بنجاح', plusEx(`نُشر ${countWord(n).replace('حصتان', 'حصتين')}${range}.${pt}${wz.mode === 'pick' ? ' هل تختار درسًا آخر؟' : ''}`));
 }
 // ما يفعله المعلم ليكمل، دون عرض نص الخطأ (يبقى في السجل والتقرير)
 function wzHint(e) {
@@ -4182,7 +4244,7 @@ function wzMore() {
   $('nowCard').hidden = true; $('planCard').hidden = true; $('logCard').hidden = true;
   $('topMsg').className = 'msg';
   wz.sel = new Map(); wz.typed = new Set();
-  wzReload().then(() => { const o = wzPickOffer(); wz.hist = ['mode', 'grade', 'subject', 'shift']; if (o && o.src === 'lib') wzOpen(o.pkg); else wzGo('mode', false); });
+  wzReload().then(() => { const o = wzPickOffer(); wz.hist = ['mode', 'grade', 'subject', 'shift']; if (o && o.src === 'lib') { wz.noExtras = true; wzOpen(o.pkg); } else wzGo('mode', false); });
 }
 
 // ---------- انتهت التجربة: واتساب، ثم التفعيل يصل وحده ----------
@@ -4296,6 +4358,7 @@ async function wizBoot() {
   wz.link = await getLink(); wz.status = await getStatus();
   const pf = (await chrome.storage.local.get('wizPrefs').catch(() => ({}))).wizPrefs || {};
   wz.grade = pf.grade || 0; wz.subject = pf.subject || ''; wz.shift = pf.shift || ''; wz.hw = pf.hw !== false; wz.join = !!pf.join;
+  wz.svcs = new Set(Array.isArray(pf.svcs) && pf.svcs.some((k) => SVC_KEYS.includes(k)) ? pf.svcs.filter((k) => SVC_KEYS.includes(k)) : wz.hw ? ['prep', 'hw'] : ['prep']); wz.hw = wz.svcs.has('hw');
   wzRender();
   const [cat] = await Promise.all([afaqCatalog().catch(() => null), wz.link ? afaqSync().catch(() => {}) : null, loadNoorCourses()]);
   settings = await getSettings();   // إجازات التقويم الرسمي وصلت مع الكتالوج

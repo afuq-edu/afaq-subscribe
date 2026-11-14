@@ -209,6 +209,9 @@ table.grid tr:last-child td { border-bottom: 0; }
 .pkgpick .subj b { display: block; font-size: 14px; margin-bottom: 4px; }
 .pkgpick label { display: inline-flex; gap: 6px; align-items: center; margin: 0 0 4px 14px; font-size: 14px; cursor: pointer; }
 .pkgpick input { width: auto; }
+.svcpick { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.svcpick label { display: inline-flex; gap: 6px; align-items: center; font-size: 14px; font-weight: 500; cursor: pointer; }
+.svcpick input { width: auto; }
 .issued { border: 2px dashed var(--amber); border-radius: var(--r); padding: 16px; display: grid; gap: 10px; background: #FFFBF2; }
 .issued .code { font: 700 26px var(--display); letter-spacing: .08em; direction: ltr; text-align: center; }
 .cols { display: grid; grid-template-columns: 1fr 1.2fr; gap: 22px; align-items: start; }

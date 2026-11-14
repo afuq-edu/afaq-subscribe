@@ -314,7 +314,13 @@ async function nameStep(pg) {
 async function wizardTo(pg, job, mode, { name = true } = {}) {
   const step = async (t) => { if (await started(pg)) return; await clickCard(pg, t); };
   // «أضف واجبًا لكل درس» (4.10.24) off: the matrix checks preps only (homework: run.mjs scenarios 22–23)
-  if (!(await started(pg))) await pg.evaluate(() => { const b = document.querySelector('.wz-seg-b[data-svc="prep"]'); if (b && !b.classList.contains('on')) b.click(); }).catch(() => {});
+  if (!(await started(pg))) await pg.evaluate(() => {
+    // 4.10.48: services are ticked one by one — prep on, every other service off
+    const on = (k) => { const b = document.querySelector(`.wz-seg-b[data-svc="${k}"]`); return b && b.classList.contains('on'); };
+    const tap = (k) => { const b = document.querySelector(`.wz-seg-b[data-svc="${k}"]`); if (b) b.click(); };
+    if (!on('prep')) tap('prep');
+    ['hw', 'rooms', 'video', 'scorm'].forEach((k) => { if (on(k)) tap(k); });
+  }).catch(() => {});
   await step(mode === 'pick' ? 'أختار الدروس بنفسي' : 'تحضير الفصل كاملًا');
   await step('الصف ' + GRADES[job.grade - 1]);
   await step(job.subject);

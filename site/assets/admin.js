@@ -4,7 +4,19 @@
   const { $, $$, esc, toAr, db } = A;
   const D = { packages: [], terms: [], content: [], codes: [], teachers: [] };
   const SITE = location.origin + location.pathname.replace(/admin\.html$/, '');
-  const SVC = { prep: 'تحضير فقط', both: 'تحضير مع واجب', hw: 'واجب فقط' };
+  // خدمات الاشتراك (hader-services.sql): أي مجموعة من الخمس. الصيغة: prep · hw · both (تحضير وواجبات) · all (الكل) · أو قائمة بفواصل
+  const SVC_KEYS = ['prep', 'hw', 'rooms', 'video', 'scorm'];
+  const SVC_NAME = { prep: 'تحضير', hw: 'واجبات', rooms: 'غرف النقاش', video: 'فيديو', scorm: 'درس تفاعلي' };
+  const svcList = (v) => { const s = String(v || 'both').replace('both', 'prep,hw').replace('all', SVC_KEYS.join(',')).split(',').map((x) => x.trim()); return SVC_KEYS.filter((k) => s.includes(k)); };
+  const svcCanon = (l) => { const k = SVC_KEYS.filter((x) => l.includes(x)); return k.length === 5 ? 'all' : k.join(',') === 'prep,hw' ? 'both' : k.join(','); };
+  const svcText = (v) => { const l = svcList(v); return l.length === 5 ? 'الباقة الكاملة' : l.map((k) => SVC_NAME[k]).join(' + '); };
+  const svcPickHtml = (v) => `<span class="svcpick">${SVC_KEYS.map((k) => `<label><input type="checkbox" value="${k}"${svcList(v).includes(k) ? ' checked' : ''}> ${SVC_NAME[k]}</label>`).join('')}<button class="btn ghost sm" type="button" data-svcall>الباقة الكاملة</button></span>`;
+  const svcVal = (root) => svcCanon([...root.querySelectorAll('.svcpick input:checked')].map((x) => x.value));
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest && e.target.closest('[data-svcall]');
+    if (b) b.closest('.svcpick').querySelectorAll('input').forEach((x) => { x.checked = true; });
+  });
+  $$('[data-svcbox]').forEach((el) => { el.innerHTML = svcPickHtml('both'); });
   const setMsg = (el, kind, html) => { el.hidden = !html; el.className = 'msg ' + (kind || ''); el.innerHTML = html || ''; };
   const termLabel = (t) => (t ? `${A.termName(t.term)} ${toAr(t.year)}` : '');
   const today = () => new Date().toISOString().slice(0, 10);
@@ -216,7 +228,7 @@
         <tr class="actrow" data-actrow="${r.id}" hidden><td colspan="5"><div style="display:grid;gap:10px;padding:6px 0">
           <b>فعّل ${esc(r.noor_name || r.name || 'المعلم')}${r.noor_name ? ' <small class="muted">(الاسم كما في نور)</small>' : ''}</b>
           <div class="inline-acts"><select data-actplan="${r.id}" style="max-width:160px"><option value="term">اشتراك فصلي</option><option value="year">اشتراك سنوي</option></select>
-            <select data-actsvc="${r.id}" style="max-width:190px" title="نوع الخدمة"><option value="both">تحضير مع واجب</option><option value="prep">تحضير فقط</option><option value="hw">واجب فقط</option></select>
+            <span data-actsvc="${r.id}" title="الخدمات">${svcPickHtml('both')}</span>
             <button class="btn primary" data-actall="${r.id}" type="button" title="كل مواده: لا يستفيد المعلم إلا من مواده في نور، ويُسجَّل اسمه في «المسجّلون بالاسم»">فعّل كل موادّه</button>
             <button class="btn ghost" data-actsome="${r.id}" type="button">مواد محددة…</button><button class="btn ghost" data-actx="${r.id}" type="button">إلغاء</button></div>
           <div data-actsomebox="${r.id}" hidden style="display:grid;gap:8px"><div class="pkgpick" data-actpk="${r.id}"></div>
@@ -243,7 +255,7 @@
         const r = D.requests.find((x) => x.id === +b.dataset.actall);
         b.disabled = true;
         try {
-          const res = await db.rpc('admin_request_activate', { p_id: r.id, p_service: $(`[data-actsvc="${r.id}"]`).value, p_plan: $(`[data-actplan="${r.id}"]`).value });
+          const res = await db.rpc('admin_request_activate', { p_id: r.id, p_service: svcVal($(`[data-actsvc="${r.id}"]`)), p_plan: $(`[data-actplan="${r.id}"]`).value });
           A.toast(`فُعّل «${(res && res.name) || r.name || 'المعلم'}» لكل موادّه. يفتح له «حاضر» وحده خلال ثوانٍ.`, 'ok');
           renderRequests();
         } catch (e) { b.disabled = false; A.toast(A.errText(e), 'bad'); }
@@ -267,7 +279,7 @@
         b.disabled = true;
         try {
           await db.rpc('admin_activate_request', { p_id: r.id, p_plan: $(`[data-actplan="${r.id}"]`).value, p_package_ids: ids });
-          const sv = $(`[data-actsvc="${r.id}"]`).value;
+          const sv = svcVal($(`[data-actsvc="${r.id}"]`));
           try { if (r.user_id) await db.rpc('admin_set_service', { p_user: r.user_id, p_package_ids: ids, p_service: sv }); } catch (e) { A.toast('فُعّلت المواد لكن تعذّر ضبط نوع الخدمة: ' + A.errText(e), 'bad'); }
           A.toast(`فُعّل لـ${r.name || 'المعلم'}: ${ids.map(pkgTitle).join('، ')}. تظهر في «حاضر» عنده خلال دقيقة.`, 'ok');
           renderRequests();
@@ -403,7 +415,7 @@
     const t = D.teachers.find((x) => x.id === f.user.value);
     try {
       await db.rpc('admin_grant', { p_user: f.user.value, p_plan: f.plan.value, p_term_id: +f.term.value, p_package_ids: ids });
-      try { await db.rpc('admin_set_service', { p_user: f.user.value, p_package_ids: ids, p_service: $('#grantSvc').value }); } catch (e2) { A.toast('أُنشئ الاشتراك لكن تعذّر ضبط نوع الخدمة: ' + A.errText(e2), 'bad'); }
+      try { await db.rpc('admin_set_service', { p_user: f.user.value, p_package_ids: ids, p_service: svcVal($('#grantSvc')) }); } catch (e2) { A.toast('أُنشئ الاشتراك لكن تعذّر ضبط نوع الخدمة: ' + A.errText(e2), 'bad'); }
       setMsg(msg, 'ok', `أُنشئ ${f.plan.value === 'year' ? 'اشتراك سنوي' : 'اشتراك فصلي'} لـ«${esc(t ? t.full_name : '')}» في: ${esc(ids.map(pkgTitle).join('، '))}.`);
       $$('#grantPkgs input:checked').forEach((i) => { i.checked = false; });
       await renderTeachers();
@@ -484,13 +496,26 @@
       : '<span class="chip ok">مفعّل</span><br><small class="muted">يعمل له فور فتح «حاضر» على حساب نور بهذا الاسم</small>';
     tb.innerHTML = '<tr><th>الاسم</th><th>الاشتراك</th><th>التفعيل</th><th></th></tr>' + (rows.length ? rows.map((r) => `<tr>
       <td><b>${esc(r.name)}</b>${r.note ? `<br><small class="muted">${esc(r.note)}</small>` : ''}</td>
-      <td>${r.plan === 'year' ? 'سنوي' : 'فصلي'}<br><small class="muted">${esc(SVC[r.service] || SVC.both)}</small></td>
+      <td>${r.plan === 'year' ? 'سنوي' : 'فصلي'}<br><small class="muted">${esc(svcText(r.service))}</small>
+        <div data-nssvcbox="${r.id}" hidden style="display:grid;gap:8px;margin-top:8px">${svcPickHtml(r.service)}<div class="inline-acts"><button class="btn sm primary" data-nssvcgo="${r.id}" type="button">احفظ الخدمات</button><button class="btn ghost sm" data-nssvcx="${r.id}" type="button">إلغاء</button></div></div></td>
       <td>${state(r)}</td>
-      <td>${r.live === false ? `<button class="btn sm" data-nsrenew="${r.id}" type="button">جدّد</button> ` : ''}<button class="btn ghost sm" data-nsdel="${r.id}" type="button">حذف</button></td></tr>`).join('') : '<tr><td class="empty">لم تسجّل أحدًا بعد.</td></tr>');
+      <td>${r.live === false ? `<button class="btn sm" data-nsrenew="${r.id}" type="button">جدّد</button> ` : ''}<button class="btn ghost sm" data-nssvc="${r.id}" type="button" title="غيّر ما يشمله اشتراكه: تحضير، واجبات، غرف النقاش، فيديو، درس تفاعلي">الخدمات</button> <button class="btn ghost sm" data-nsdel="${r.id}" type="button">حذف</button></td></tr>`).join('') : '<tr><td class="empty">لم تسجّل أحدًا بعد.</td></tr>');
     $$('[data-nsdel]').forEach((b) => {
       b.onclick = async () => {
         if (!confirm('حذف الاسم من القائمة؟')) return;
         try { await db.rpc('admin_name_sub_delete', { p_id: +b.dataset.nsdel }); renderNames(); } catch (e) { A.toast(A.errText(e), 'bad'); }
+      };
+    });
+    $$('[data-nssvc]').forEach((b) => { b.onclick = () => { const x = $(`[data-nssvcbox="${b.dataset.nssvc}"]`); x.hidden = !x.hidden; }; });
+    $$('[data-nssvcx]').forEach((b) => { b.onclick = () => { $(`[data-nssvcbox="${b.dataset.nssvcx}"]`).hidden = true; }; });
+    $$('[data-nssvcgo]').forEach((b) => {
+      b.onclick = async () => {
+        const v = svcVal($(`[data-nssvcbox="${b.dataset.nssvcgo}"]`));
+        if (!v) { A.toast('اختر خدمة واحدة على الأقل.', 'bad'); return; }
+        try {
+          const res = await db.rpc('admin_name_sub_service', { p_id: +b.dataset.nssvcgo, p_service: v });
+          A.toast(res && res.applied ? 'حُفظت الخدمات، وتسري على «حاضر» عنده عند فتحه.' : 'حُفظت الخدمات.', 'ok'); renderNames();
+        } catch (e) { A.toast(A.errText(e), 'bad'); }
       };
     });
     $$('[data-nsrenew]').forEach((b) => {
@@ -503,7 +528,7 @@
     e.preventDefault();
     const msg = $('#nsMsg');
     try {
-      const res = await db.rpc('admin_name_sub_add', { p_name: $('#nsName').value, p_plan: $('#nsPlan').value, p_all: true, p_packages: [], p_service: $('#nsSvc').value, p_note: $('#nsNote').value });
+      const res = await db.rpc('admin_name_sub_add', { p_name: $('#nsName').value, p_plan: $('#nsPlan').value, p_all: true, p_packages: [], p_service: svcVal($('#nsSvc')), p_note: $('#nsNote').value });
       msg.hidden = true; $('#nsName').value = ''; $('#nsNote').value = '';
       A.toast(res && res.applied ? 'فُعّل الآن: «حاضر» مفتوح له بكل موادّه.' : 'فُعّل. يعمل له «حاضر» فور فتحه على حساب نور بهذا الاسم.', 'ok'); renderNames();
     } catch (err) { setMsg(msg, 'bad', esc(A.errText(err))); }
