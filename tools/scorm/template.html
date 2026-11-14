@@ -189,7 +189,7 @@ const D = __DATA__;
   $('next').onclick = () => { at++; if (at < Q.length) show(); else finish(); };
 
   // ---------- النتيجة ----------
-  const RATE = (g, n) => { const p = g / n; return p === 1 ? { w: 'ممتاز', s: 3 } : p >= .8 ? { w: 'ممتاز', s: 3 } : p >= .6 ? { w: 'جيد جدًا', s: 2 } : p >= .4 ? { w: 'جيد', s: 1 } : { w: 'حاول مرة أخرى', s: 0 }; };
+  const RATE = (g, n) => { const p = g / n; return p === 1 ? { w: 'ممتاز', s: 3 } : p >= .8 ? { w: 'ممتاز', s: 3 } : p >= .6 ? { w: 'جيد جدًا', s: 2 } : p >= .4 ? { w: 'جيد', s: 1 } : { w: 'مشارك', s: 0 }; };
   function finish() {
     const n = Q.length, r = RATE(got, n), pct = Math.round(got / n * 100);
     S.set('cmi.core.score.min', 0); S.set('cmi.core.score.max', 100); S.set('cmi.core.score.raw', pct);
@@ -230,8 +230,11 @@ const D = __DATA__;
     x.strokeStyle = '#D99A2B'; x.lineWidth = 3; x.beginPath(); x.moveTo(W / 2 - 330, 495); x.lineTo(W / 2 + 330, 495); x.stroke();
     T((f ? 'لإنجازها' : 'لإنجازه') + ' أسئلة درس «' + D.lesson + '»', 560, F1(40), '#13263F');
     T(D.subject + ' — ' + D.grade, 618, F2(32), '#5D7083');
-    x.fillStyle = '#FBF1DC'; x.beginPath(); x.roundRect ? x.roundRect(W / 2 - 330, 665, 660, 96, 48) : x.rect(W / 2 - 330, 665, 660, 96); x.fill();
-    T('الدرجة ' + AR(got) + ' من ' + AR(n) + ' — بتقدير «' + r.w + '»', 713, F1(40), '#7A5310');
+    // خلفية سطر الدرجة على قدر نصه (لا تقصر عن التقدير الطويل)
+    const sc = 'الدرجة ' + AR(got) + ' من ' + AR(n) + ' — بتقدير «' + r.w + '»';
+    x.font = F1(40); const pw = Math.min(W - 260, Math.max(560, x.measureText(sc).width + 110));
+    x.fillStyle = '#FBF1DC'; x.beginPath(); x.roundRect ? x.roundRect(W / 2 - pw / 2, 665, pw, 96, 48) : x.rect(W / 2 - pw / 2, 665, pw, 96); x.fill();
+    T(sc, 713, F1(40), '#7A5310', W / 2, pw - 60);
     for (let k = 0; k < 3; k++) star(x, W / 2 + (k - 1) * 66, 812, 24, k < r.s ? '#D99A2B' : '#E5E9EE');
     const school = $('cSchool').value.trim(), teacher = $('cTeacher').value.trim();
     const col = (label, val, cx) => { T(label, 905, F2(28), '#5D7083', cx, 560); T(val || '—', 955, F1(36), '#13263F', cx, 560); x.strokeStyle = '#DDE4EB'; x.lineWidth = 2; x.beginPath(); x.moveTo(cx - 240, 990); x.lineTo(cx + 240, 990); x.stroke(); };
