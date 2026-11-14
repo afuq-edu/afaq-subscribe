@@ -143,6 +143,9 @@ async function launch(extDir, noor, { now = FIXED_NOW, cont = noor.st.rows.some(
   // homework files (?games=): <key>.json with five questions for every session of the running package (from a real file):
   // lessons = the first session's set, sessions = one more set for each further session (4.10.37: a homework per session)
   await ctx.route(GAMES + '**', (r) => {
+    // lesson activities (site/games/<pkg>/<n>.json): the real file
+    const gm = r.request().url().match(/\/([a-z0-9-]+)\/(\d+)\.json$/);
+    if (gm) { const f = path.join(REPO, 'site/games', gm[1], gm[2] + '.json'); return fs.existsSync(f) ? r.fulfill({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: fs.readFileSync(f, 'utf8') }) : r.fulfill({ status: 404, body: '' }); }
     const src = Object.values(JSON.parse(fs.readFileSync(path.join(REPO, 'site/homework/en-5.json'), 'utf8')).lessons);
     const gs = lessonGroups(PKG);
     const lessons = Object.fromEntries(gs.map((g, i) => [g.sessions[0].lesson, src[i % src.length]]));
@@ -1401,6 +1404,58 @@ T(23, '«الواجبات فقط»: the teacher picks sessions and types a publi
   const s2 = await pickAndGo(false);
   check(noor.st.homeworks.length === picks.length, `re-run adds no homework (${picks.length} → ${noor.st.homeworks.length})`, `${s2.head} | ${s2.text}`);
   check(!CALM_BAD_RE.test(s2.head + ' ' + s2.text), 're-run: calm wording', `${s2.head} | ${s2.text}`);
+  return b;
+});
+
+// ---------- «غرف النقاش» (المالك 2026-11-14): غرفة لكل وحدة، وفيها موضوع لكل درس ----------
+T(42, '«غرف النقاش»: a room for each unit of the Noor tree (title «<unit> — <subject> <grade>», ≤ 50 chars), shared with every student of the subject\'s sections only, holding a topic for each lesson (its activity link and two discussion questions when the lesson has an activity); a room already in Noor is reused and gets only its missing topics; a re-run adds nothing; no prep, no homework', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 12) }));
+  // the first lessons carry an activity link (as the real prep files do in item 10)
+  PKG.lessons.forEach((l, i) => { if (i < 6) l.notes = (l.notes || '') + `\nhttps://afuq-edu.github.io/afaq-subscribe/play.html?d=en-5/${i + 1}`; });
+  const tree = treeFromPackage(PKG);
+  const units = tree.terms[0].units.filter((u) => u.lessons.length);
+  const now = lessonGroups(PKG)[0].sessions[0].pubDate;
+  // the teacher already made the first unit's room with one topic in it
+  const u0 = units[0];
+  const t0 = `${u0.text} — الأحياء التاسع`.length <= 50 ? `${u0.text} — الأحياء التاسع` : null;
+  const noor = env.noor({ tree, rooms: t0 ? [{ title: t0, topics: [{ title: u0.lessons[0].text, html: '<p>موضوعي</p>' }] }] : [] });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now, cont: false });
+  await svcPick(b.pg, 'rooms');
+  await card(b.pg, 'غرفة لكل وحدة');
+  await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }); await sleep(600);
+  await card(b.pg, 'الأحياء'); await card(b.pg, 'فترة واحدة');
+  await nameStep(b.pg);
+  const s = await waitDone(b.pg, 15 * 60000, 'rooms');
+  const errs = noor.st.roomPosts.filter((x) => x.outcome !== 'ok');
+  check(!errs.length, 'every room and topic form Noor received was valid', errs.map((x) => `${x.kind}: ${x.outcome}`).join('\n'));
+  const rooms = noor.st.rooms;
+  check(rooms.length === units.length, `one room per unit (${units.length})`, rooms.map((r) => r.title).join(' | '));
+  check(rooms.every((r) => r.title.length <= 50 && /الأحياء/.test(r.title)), 'each room title ≤ 50 chars and names the subject', rooms.map((r) => `${r.title.length} ${r.title}`).join(' | '));
+  const made = rooms.filter((r) => r.students);
+  check(made.every((r) => r.lectures.length === 2 && r.lectures.every((x) => /^الأحياء - التاسع - /.test(x)) && r.students === 4), 'a new room is shared with the two sections of this subject and grade (all their students) and no other course', made.map((r) => `${r.title}: ${r.lectures.join(',')} · ${r.students}`).join(' | '));
+  const bad = [];
+  units.forEach((u) => {
+    const r = rooms.find((x) => x.title.startsWith(u.text.slice(0, 20)));
+    if (!r) { bad.push(`${u.text}: no room`); return; }
+    const want = [...new Set(u.lessons.map((l) => l.text))];
+    const got = r.topics.map((t) => t.title);
+    if (want.some((t) => !got.includes(t)) || got.length !== new Set(got).size) bad.push(`${u.text}: topics ${got.join(' / ')} want ${want.join(' / ')}`);
+  });
+  check(!bad.length, 'every lesson of the unit has exactly one topic in its room (the existing topic is not repeated)', bad.join('\n'));
+  const withLink = rooms.flatMap((r) => r.topics).filter((t) => /play\.html\?d=en-5\//.test(t.html));
+  check(withLink.length >= 1 && withLink.every((t) => /سؤال للنقاش/.test(t.html) && /href="https:\/\/afuq-edu\.github\.io\/afaq-subscribe\/play\.html/.test(t.html)), `lessons with an activity get its clickable link and a discussion question (${withLink.length})`, withLink.map((t) => t.title + ': ' + t.html.slice(0, 160)).join('\n'));
+  check(!noor.st.posts.length && !noor.st.homeworks.length, 'no prep and no homework', `${noor.st.posts.length} / ${noor.st.homeworks.length}`);
+  check(/غرف|غرفة|انتهى/.test(s.head) && !CALM_BAD_RE.test(s.head + ' ' + s.text), 'a calm closing line', `${s.head} | ${s.text}`);
+  const n1 = rooms.length, k1 = rooms.reduce((a, r) => a + r.topics.length, 0);
+  await b.pg.reload(); await sleep(4000);
+  await svcPick(b.pg, 'rooms');
+  await card(b.pg, 'غرفة لكل وحدة');
+  await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }).catch(() => {}); await sleep(600);
+  await card(b.pg, 'الأحياء').catch(() => {}); await card(b.pg, 'فترة واحدة').catch(() => {});
+  const s2 = await waitDone(b.pg, 15 * 60000, 'rooms again');
+  const k2 = noor.st.rooms.reduce((a, r) => a + r.topics.length, 0);
+  check(noor.st.rooms.length === n1 && k2 === k1, `re-run adds no room and no topic (${n1} rooms, ${k1} topics)`, `${noor.st.rooms.length} rooms, ${k2} topics | ${s2.head}`);
   return b;
 });
 

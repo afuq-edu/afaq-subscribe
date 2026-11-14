@@ -13,7 +13,8 @@ import {
  joinRuns, lessonSkills, isArabicPkg, stripSkillTag } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { diffDays, addDays } from './dates.js';
-import { lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, hwHush, HW_MARK } from './homework.js';
+import { roomTitle, roomInstructions, topicTitle, topicHtml, discussQuestions, playLink, roomsRead, roomCreateFill, topicsRead, topicFill } from './rooms.js';
+import { gameRef, fetchGame, lessonHomework, hwDates, hwTitle, hwPageOp, hwCreateFill, hwAfterCreate, hwBulkFill, hwCount, hwExisting, hwHush, HW_MARK } from './homework.js';
 import { AFAQ } from './afaq-config.js';
 import { siteUrl, sync as afaqSync, getLink, getStatus, catalog as afaqCatalog, startTrial, pickPackages, contactRequest, whatsappUrl, setRef, referral, updateInfo, noorCheck, installUrl, fillLog, flushFillLog, sendNoorTree, getNoorTree } from './remote.js';
 
@@ -2422,7 +2423,7 @@ function heartbeat(on) {
 // نقطة استئناف: إن أُغلقت النافذة أو تعطّل كروم يُتابَع التشغيل عند فتحها
 async function checkpoint(active) {
   const sc = { kind: scope.kind, picks: [...(scope.picks || [])], units: [...scope.units], weekDay: scope.weekDay, from: scope.from, to: scope.to, dateFrom: scope.dateFrom, dateTo: scope.dateTo, dsrc: useFile ? 'file' : 'seq' };
-  await chrome.storage.local.set({ semesterRun: active && !WIZ.hwOnly ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, typed: WIZ.pickTyped || null, join: WIZ.pickJoin || null, skill: !!WIZ.skillJoin, tag: !!WIZ.skillTag, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
+  await chrome.storage.local.set({ semesterRun: active && !WIZ.hwOnly && !WIZ.roomsOnly ? { pkgId: pkg.id, term: termNo, at: Date.now(), start: $('start').value, startTouched, scope: sc, wiz: WIZ.on ? { rid: WIZ.rid, conf: WIZ.confirmed === WIZ.rid, sum: WIZ.sum, auto: WIZ.auto, rule: WIZ.rule, seq: !!WIZ.seq, pick: WIZ.pickDates || null, typed: WIZ.pickTyped || null, join: WIZ.pickJoin || null, skill: !!WIZ.skillJoin, tag: !!WIZ.skillTag, step: $('optStep').checked, review: $('optReview').checked } : null } : null }).catch(() => {});
 }
 function setRunning(on) {
   running = on;
@@ -2508,7 +2509,7 @@ async function wipeOffer(text, n, okBtn) {
 }
 // الفصل كاملًا ومادة المعلم كاملة في نور: لا حصص ناقصة فينتهي التشغيل — قبل أن ينتهي تُعرض البطاقة نفسها (مسح وبدء من جديد، أو اختيار الدروس)
 async function termFullOffer() {
-  if (!WIZ.on || WIZ.pickDates || WIZ.hwOnly || wz.mode !== 'term' || scope.kind !== 'term' || queue.length || stopFlag) return;
+  if (!WIZ.on || WIZ.pickDates || WIZ.hwOnly || WIZ.roomsOnly || wz.mode !== 'term' || scope.kind !== 'term' || queue.length || stopFlag) return;
   const had = plan.flatMap((p) => p.sessions.filter((s) => s.inNoor)).length;
   if (!had || await termOwn()) return;
   const n = (noorHave && noorHave.titles && noorHave.titles.length) || had;
@@ -2579,7 +2580,7 @@ let lastVerify = '';   // التحقق النهائي من قائمة نور: ok
 // لا يظهر منه شيء للمعلم ولا ينتظره أحد: الصف يُضاف فورًا ويُرسل في الخلفية كل ١٠ صفوف
 let fillRid = '', fillN = 0, fillCnt = {};
 const fillLogged = new Set();   // حصص هذا التشغيل التي أخذت صفها النهائي (حتى لا يتكرر عند جمع النهاية)
-const flMode = () => (WIZ.on ? (wz.mode === 'pick' || wz.mode === 'term' ? wz.mode : wz.mode === 'hw' ? 'term' : scope.kind === 'pick' ? 'pick' : 'term') : '');
+const flMode = () => (WIZ.on ? (wz.mode === 'pick' || wz.mode === 'term' ? wz.mode : wz.mode === 'hw' || wz.mode === 'rooms' ? 'term' : scope.kind === 'pick' ? 'pick' : 'term') : '');
 function flRow(status, item, note) {
   const s = item && item.s, n = item && item.node;
   fillLog({
@@ -2762,6 +2763,98 @@ async function addHomework(item, opts = {}) {
   WIZ.hwFail = (WIZ.hwFail || 0) + 1;
   return 'fail';
 }
+// «غرف النقاش» (المالك 2026-11-14): لكل وحدة في شجرة نور غرفة، وفيها موضوع لكل درس (رابط نشاطه وسؤالا نقاش)، منشورة لكل طلبة
+// شعب المادة. ما في نور بالعنوان نفسه لا يتكرر. يُنفَّذ كما يفعل المعلم بيده في تبويب نور، وما تعذّر لا يظهر له.
+async function roomsLive(op) {
+  const origin = await noorOrigin();
+  if (!(await nav(`${origin}/teacher/posts/view`))) return { err: 'nav' };
+  await waitComplete(8000);
+  let list = await execMain(roomsRead);
+  if (!list || !list.ok) return { err: 'noroomspage', url: list && list.url };
+  let room = list.rooms.find((r) => kwNorm(r.title) === kwNorm(op.title));
+  let made = false;
+  if (!room) {
+    const nv = waitNavigation(60000);
+    const f = await execMain(roomCreateFill, op);
+    if (!f || !f.ok) return f || { err: 'nofill' };
+    await nv; await waitComplete(10000);
+    if (!/\/posts\/view/.test(String((await chrome.tabs.get(tabId).catch(() => ({}))).url || ''))) { await nav(`${origin}/teacher/posts/view`); await waitComplete(8000); }
+    list = await execMain(roomsRead);
+    room = list && list.rooms.find((r) => kwNorm(r.title) === kwNorm(op.title));
+    if (!room) return { err: 'noroom', sent: true };
+    made = true;
+  }
+  if (!(await nav(room.url))) return { err: 'nav', room: room.url };
+  await waitComplete(8000);
+  const tp = await execMain(topicsRead);
+  if (!tp || !tp.ok) return { err: 'notopicform', made };
+  const have = new Set(tp.titles.map(kwNorm));
+  let added = 0, had = 0;
+  for (const t of op.topics) {
+    if (stopFlag) break;
+    if (have.has(kwNorm(t.title))) { had++; continue; }
+    setBox('run', `أضيف موضوع «${shortT(t.title)}»…`, op.label || '');
+    const nv = waitNavigation(60000);
+    const f = await execMain(topicFill, t);
+    if (!f || !f.ok) return { err: (f && f.err) || 'nofill', made, added };
+    await nv; await waitComplete(10000);
+    const after = await execMain(topicsRead);
+    if (after && after.titles.some((x) => kwNorm(x) === kwNorm(t.title))) { added++; have.add(kwNorm(t.title)); }
+    else if (!/\/posts\/(article|reply)/.test(String((after && after.url) || ''))) { await nav(room.url); await waitComplete(8000); }
+  }
+  return { ok: true, made, added, had };
+}
+async function roomsOnly() {
+  const nConf = conflicts(); if (nConf.miss.length + nConf.weak.length + nConf.dup.length || plan.mismatch) autoResolve();
+  safeLinks();
+  setPhase('fill');
+  const c = WIZ.course || {};
+  const grade = ((c.levels || []).filter((x) => /الصف/.test(x)).pop() || (c.levels || []).slice(-1)[0] || '').replace(/^الصف\s+/, '');
+  // دروس كل وحدة بترتيب الشجرة، كل درس نور مرة واحدة
+  const units = new Map();
+  plan.forEach((p) => {
+    if (!p.node || p.skipped || p.miss) return;
+    const u = p.node.unit || '';
+    if (!units.has(u)) units.set(u, []);
+    const arr = units.get(u);
+    if (!arr.some((x) => x.node === p.node)) arr.push({ node: p.node, lesson: p.sessions[0] && p.sessions[0].lesson });
+  });
+  let rooms = 0, topics = 0, fail = 0, k = 0;
+  for (const [unit, ls] of units) {
+    if (stopFlag) break;
+    k++;
+    setBox('run', `أجهّز غرفة «${shortT(unit || 'دروس الفصل')}»…`, `${toAr(k)} من ${toAr(units.size)}`);
+    $('prog').style.width = (Math.min(1, k / units.size) * 100) + '%';
+    const topics0 = [];
+    for (const x of ls) {
+      const ref = x.lesson ? gameRef(x.lesson) : null;
+      const game = ref ? await fetchGame(ref, WIZ.gamesBase || undefined) : null;
+      const title = topicTitle(x.node.text + (x.node.nth ? ` (${toAr(x.node.nth + 1)})` : ''));
+      topics0.push({ title, html: topicHtml({ link: playLink(ref), questions: discussQuestions(game) }) });
+    }
+    const op = { title: roomTitle(unit, c.title || pkg.subject || '', grade), post: roomInstructions(), subject: c.title || pkg.subject || '', grades: c.levels || [], topics: topics0, label: `${toAr(k)} من ${toAr(units.size)}` };
+    let r = null;
+    for (let i = 0; i < 2 && !stopFlag; i++) {
+      r = await withTimeout(roomsLive(op), 600000, { err: 'timeout', sent: true });
+      if (!r || r.ok || r.sent || r.made || ['nosections', 'nostudents'].includes(r.err)) break;
+      await sleep(2500);
+    }
+    if (r && r.ok) {
+      if (r.made) rooms++;
+      topics += r.added || 0;
+      if (r.made || r.added) logLine('ok', `✓ غرفة «${op.title}» — ${toAr(r.added || 0)} موضوعًا جديدًا`);
+    } else {
+      fail++;
+      flRow('skipped', { s: { lesson: ls[0] && ls[0].lesson, date: '' }, node: ls[0] && ls[0].node }, ('غرفة لم تكتمل: ' + [r && r.err, r && r.labels && r.labels.join(' | ')].filter(Boolean).join(' · ')).slice(0, 300));
+      if (r && ['nosections', 'nostudents'].includes(r.err)) break;   // لا شعب لهذه المادة في نموذج الغرف: الوحدات الباقية مثلها
+    }
+  }
+  const w = (n, one, two, few, many) => (n === 1 ? one : n === 2 ? two : n <= 10 ? toAr(n) + ' ' + few : toAr(n) + ' ' + many);
+  WIZ.roomHead = rooms || topics ? `✓ ${rooms ? 'أنشأت ' + w(rooms, 'غرفة واحدة', 'غرفتين', 'غرف', 'غرفة') : 'أكملت الغرف'}` : '✓ انتهى';
+  WIZ.roomSub = topics ? `أضفت ${w(topics, 'موضوعًا واحدًا', 'موضوعين', 'مواضيع', 'موضوعًا')}: لكل درس نشاطه وسؤالان للنقاش، ويراها طلبة شعب المادة في «غرف النقاش».`
+    : fail ? 'الغرف لم تكتمل بعد. أعد المحاولة بعد قليل.' : 'غرف هذه المادة ومواضيعها موجودة في نور.';
+  logLine('ok', WIZ.roomHead);
+}
 async function run() {
   if (running) return;
   // تشغيل آخر في نافذة أخرى؟ (يمنع تعبئتين متزامنتين في نور)
@@ -2806,7 +2899,7 @@ async function run() {
         if (!courses) throw new Error('stop');
         const course = await pickCourse(courses);
         if (!course) throw new Error('stop');
-        courseCid = course.cid || '';
+        courseCid = course.cid || ''; WIZ.course = course;
         semSaved = courseCid ? (((await chrome.storage.local.get('semesterSaved').catch(() => ({}))).semesterSaved || {})[courseCid] || {}) : {};
         Object.keys(semSaved).forEach((id) => savedIds.add(id));   // سجل هذا الفتح (يُصفَّر عند كل فتح): حُفظ فعلًا
         if (WIZ.resumed) { WIZ.sum = Math.max(WIZ.sum, Object.keys(semSaved).length); WIZ.resumed = false; }   // ما نُشر قبل الانقطاع يُحسب في السطر الختامي
@@ -2836,6 +2929,7 @@ async function run() {
     await buildPlan(nodes);
     renderPlan();
     if (WIZ.hwOnly) { await homeworkOnly(); finished = true; throw new Error(WIZ.hwHead); }
+    if (WIZ.roomsOnly) { await roomsOnly(); finished = true; throw new Error(WIZ.roomHead); }
     // المادة مكتملة في نور: لا مراجعة ولا اقتراحات — «مكتمل» فقط
     { const cp = completion(); if (cp.complete && !queue.length) { await termFullOffer(); finished = true; logLine('ok', completeText(cp)); throw new Error(completeText(cp)); } }
     // تعارض بين ملفك ونور: تُعرض الخطة للمراجعة، وتبدأ وحدها بعد مهلة (أطول كلما كان التعارض أخطر) ما لم تطلب المراجعة اليدوية
@@ -3335,7 +3429,7 @@ function wzTrialLeft() {
 // نوع الخدمة في الاشتراك (المالك 2026-11-02): تحضير فقط · تحضير مع واجب · واجب فقط — يحدده المدير لكل مادة؛ والتجربة تشمل الكل
 const SVC_LABEL = { prep: 'تحضير فقط', hw: 'واجبات فقط' };
 const offerSvc = (o) => (o.src === 'lib' && o.pkg.remote && !o.pkg.remote.trial && o.pkg.remote.service) || 'both';
-const offerAllows = (o, mode) => { const sv = offerSvc(o); return mode === 'hw' ? sv !== 'prep' : mode ? sv !== 'hw' : true; };
+const offerAllows = (o, mode) => { const sv = offerSvc(o); return mode === 'rooms' ? true : mode === 'hw' ? sv !== 'prep' : mode ? sv !== 'hw' : true; };
 const wzBadge = (o) => (o.src === 'cat' ? ''
   : o.pkg.remote && o.pkg.remote.trial ? '<em class="bdg free">بانتظار التفعيل</em>'
     : o.pkg.remote ? `<em class="bdg sub">مشترك ✓${SVC_LABEL[offerSvc(o)] ? ' · ' + SVC_LABEL[offerSvc(o)] : ''}</em>` : '');
@@ -3354,7 +3448,7 @@ function wzBind(list) { $('wzBody').querySelectorAll('.wz-card').forEach((b) => 
 
 function wzRender() {
   const i = WZ_STEPS.indexOf(wz.step === 'name' || wz.step === 'style' ? 'shift' : wz.step);
-  $('wzDots').innerHTML = (wz.mode === 'term' || wz.mode === 'hw' ? WZ_STEPS.slice(0, 4) : WZ_STEPS).map((_, k) => `<i class="${k < i ? 'done' : k === i ? 'on' : ''}"></i>`).join('');
+  $('wzDots').innerHTML = (wz.mode === 'term' || wz.mode === 'hw' || wz.mode === 'rooms' ? WZ_STEPS.slice(0, 4) : WZ_STEPS).map((_, k) => `<i class="${k < i ? 'done' : k === i ? 'on' : ''}"></i>`).join('');
   $('wzBack').hidden = !wz.hist.length || ['pay', 'wait'].includes(wz.step);
   const head = $('wzHead'), body = $('wzBody');
   const offers = wzOffers();
@@ -3362,9 +3456,12 @@ function wzRender() {
   if (wz.step === 'mode') {
     head.textContent = 'ماذا تريد أن تحضّر؟';
     // الخدمة (المالك 2026-11-02): تحضير · تحضير مع واجبات · واجبات فقط — ثلاثة خيارات صريحة؛ الواجبات خمسة أسئلة لكل درس في «المهام الإلكترونية»
-    const svc = wz.mode === 'hw' ? 'hw' : wz.hw ? 'both' : 'prep';
-    const SV = [['prep', 'تحضير'], ['both', 'تحضير مع واجبات'], ['hw', 'واجبات فقط']];
-    list = svc === 'hw'
+    const svc = wz.mode === 'rooms' ? 'rooms' : wz.mode === 'hw' ? 'hw' : wz.hw ? 'both' : 'prep';
+    const SV = [['prep', 'تحضير'], ['both', 'تحضير مع واجبات'], ['hw', 'واجبات فقط'], ['rooms', 'غرف النقاش']];
+    // غرف النقاش (المالك 2026-11-14): غرفة لكل وحدة، وفيها موضوع لكل درس (نشاطه وسؤالان للنقاش)
+    list = svc === 'rooms'
+      ? [{ title: 'غرفة لكل وحدة', sub: 'في كل غرفة موضوع لكل درس: نشاطه وسؤالان للنقاش', on: wz.mode === 'rooms', go: () => { wz.mode = 'rooms'; wzGo('grade'); } }]
+      : svc === 'hw'
       ? [{ title: 'أختار الدروس بنفسي', sub: 'تختار الدروس وتاريخي النشر والتسليم', on: wz.mode === 'hw', go: () => { wz.mode = 'hw'; wzGo('grade'); } }]
       : [
         { title: 'أختار الدروس بنفسي', sub: 'تختار الدرس وتكتب تاريخه', on: wz.mode === 'pick', go: () => { wz.mode = 'pick'; wzGo('grade'); } },
@@ -3374,7 +3471,7 @@ function wzRender() {
       + wzCards(list).replace('wz-cards', 'wz-cards big');
     body.querySelectorAll('.wz-seg-b').forEach((bt) => { bt.onclick = () => {
       const k = bt.dataset.svc;
-      if (k === 'hw') wz.mode = 'hw'; else { if (wz.mode === 'hw') wz.mode = 'term'; wz.hw = k === 'both'; }
+      if (k === 'hw' || k === 'rooms') wz.mode = k; else { if (wz.mode === 'hw' || wz.mode === 'rooms') wz.mode = 'term'; wz.hw = k === 'both'; }
       wzSavePrefs(); wzRender();
     }; });
   } else if (wz.step === 'grade') {
@@ -3635,6 +3732,7 @@ function wzOpen(p) {
   const ids = new Set((p.lessons || []).map((l) => l.id));
   [...wz.sel.keys()].forEach((k) => { if (!ids.has(k)) wz.sel.delete(k); });
   if (wz.mode === 'hw') { const ks = new Set(lessonGroups(p).map((g) => g.key)); [...wz.hsel.keys()].forEach((k) => { if (!ks.has(k)) wz.hsel.delete(k); }); wzGo('hwLessons'); }
+  else if (wz.mode === 'rooms') wzRun();
   else if (wz.mode === 'term') { if (isArabicPkg(p)) wzGo('style'); else wzTermGo(); } else wzGo('lessons');
 }
 function wzTermGo() { if (FROM_STEP) wzGo('from'); else wzRun(); }
@@ -3730,7 +3828,8 @@ async function wzRun() {
   $('optStep').checked = false;
   $('optNoor').checked = true; $('optAuto').checked = true;
   WIZ.on = true; WIZ.rule = fileOk ? 'official' : ''; WIZ.seq = !fileOk;
-  WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = WIZ.hwOnly || (!!wz.hw && !(p.remote && !p.remote.trial && p.remote.service === 'prep')); WIZ.hwN = 0; WIZ.hwFail = 0; WIZ.hwDone = null;
+  WIZ.roomsOnly = wz.mode === 'rooms'; WIZ.course = null;
+  WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = !WIZ.roomsOnly && (WIZ.hwOnly || (!!wz.hw && !(p.remote && !p.remote.trial && p.remote.service === 'prep'))); WIZ.hwN = 0; WIZ.hwFail = 0; WIZ.hwDone = null;
   WIZ.hwPick = WIZ.hwOnly ? Object.fromEntries([...wz.hsel].map(([k, v]) => [k, { pub: v.pub, due: v.due }])) : null;
   WIZ.rid = Date.now(); WIZ.sum = 0; WIZ.auto = 0;
   wizRunning();
@@ -3795,6 +3894,7 @@ async function wizAfterRun({ report, ok, failed, stopped, error, had, past = 0 }
     return;
   }
   if (WIZ.hwOnly) { setBox('ok', WIZ.hwHead || '✓ انتهى', WIZ.hwSub || ''); return; }
+  if (WIZ.roomsOnly) { setBox('ok', WIZ.roomHead || '✓ انتهى', WIZ.roomSub || ''); return; }
   if (wz.mode === 'pick') $('wzMore').hidden = false;
   // نور لا تقبل تاريخًا مضى: ما مضى تاريخه تُرك بهدوء، ويُذكر للمعلم دون صيغة خطأ
   const pt = past ? ` ${past === 1 ? 'حصة واحدة مضى تاريخها' : `${countWord(past)} مضى تاريخها`} ونور لا تقبل نشرها بتاريخ ماضٍ، فتركتها.` : '';
