@@ -62,18 +62,20 @@ language sql security definer set search_path = public as $$
 $$;
 revoke execute on function public.set_service(uuid, text[], text) from public, anon, authenticated;
 
+-- ext_session: المادة بلا صف اشتراك (حساب المدير، أو الوصول المفتوح) = كل الخدمات، كما في «حاضر».
 -- دوال الإدارة تقبل أي قائمة خدمات، و«حاضر» يُحجب عنه محتوى التحضير حين لا يشمل الاشتراك التحضير. يُعدَّل القائم في القاعدة بنصه الحالي.
 do $$
 declare r record; d text; n text;
   v_new text := $q$p_service := public.svc_norm(p_service);
   if p_service is null then raise exception 'اختر خدمة واحدة على الأقل'; end if;$q$;
+  v_gate text := $q$not public.svc_has(coalesce(public.sub_service(d.user_id, p_package, p_term), 'all'), 'prep') then$q$;
 begin
   for r in select p.oid, p.proname from pg_proc p where p.pronamespace = 'public'::regnamespace
             and p.proname in ('admin_name_sub_add', 'admin_request_activate', 'admin_set_service', 'ext_session') loop
     d := pg_get_functiondef(r.oid);
     if r.proname = 'ext_session' then
-      n := replace(d, $q$public.sub_service(d.user_id, p_package, p_term) = 'hw' then$q$,
-                      $q$not public.svc_has(public.sub_service(d.user_id, p_package, p_term), 'prep') then$q$);
+      n := replace(d, $q$public.sub_service(d.user_id, p_package, p_term) = 'hw' then$q$, v_gate);
+      n := replace(n, $q$not public.svc_has(public.sub_service(d.user_id, p_package, p_term), 'prep') then$q$, v_gate);
     else
       n := regexp_replace(d, $q$if coalesce\(p_service, ''\) not in \('prep', 'both', 'hw'\) then raise exception '[^']*'; end if;$q$, v_new);
     end if;
@@ -84,7 +86,7 @@ begin
     if r.d not like '%svc_norm(p_service)%' then raise exception 'لم يُعثر على موضع تعديل %', r.proname; end if;
   end loop;
   if exists (select 1 from pg_proc p where p.pronamespace = 'public'::regnamespace and p.proname = 'ext_session'
-              and pg_get_functiondef(p.oid) like '%sub_service(%' and pg_get_functiondef(p.oid) not like '%svc_has(public.sub_service(%') then
+              and pg_get_functiondef(p.oid) like '%sub_service(%' and pg_get_functiondef(p.oid) not like '%svc_has(coalesce(public.sub_service(%') then
     raise exception 'لم يُعثر على موضع تعديل ext_session';
   end if;
 end $$;

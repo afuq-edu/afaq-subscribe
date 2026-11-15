@@ -3733,8 +3733,8 @@ function wzRender() {
     // مواد اللغة العربية (المالك 2026-11-14): شكلان للتحضير — لكل حصة تحضيرها كما في السابق، أو تحضير لكل مهارة في الدرس
     head.textContent = 'شكل تحضير اللغة العربية';
     list = [
-      { title: 'تحضير لكل حصة', sub: 'كما في السابق: لكل حصة تحضيرها', on: !wz.join, go: () => { wz.join = false; wzSavePrefs(); wzNext(); } },
-      { title: 'تحضير لكل مهارة', sub: 'حصص المهارة الواحدة في الدرس في تحضير واحد: التحدث، القراءة، الأنماط اللغوية، الإملاء، الخط، التعبير', on: !!wz.join, go: () => { wz.join = true; wzSavePrefs(); wzNext(); } },
+      { title: 'تحضير لكل حصة', sub: 'كما في السابق: لكل حصة تحضيرها', on: wz.join !== true, go: () => { wz.join = false; wzSavePrefs(); wzNext(); } },
+      { title: 'تحضير لكل مهارة', sub: 'حصص المهارة الواحدة في الدرس في تحضير واحد: التحدث، القراءة، الأنماط اللغوية، الإملاء، الخط، التعبير', on: wz.join === true, go: () => { wz.join = true; wzSavePrefs(); wzNext(); } },
     ];
     body.innerHTML = wzCards(list).replace('wz-cards', 'wz-cards big');
   } else if (wz.step === 'from') {
@@ -3775,7 +3775,10 @@ function wzLessons() {
   let u = null;
   // «مدمج أو منفصل» (المالك 2026-11-14): يظهر حين يكون في المادة درس بأكثر من حصة؛ الافتراضي منفصل كما كان
   const multi = gs.some((g) => g.sessions.length > 1);
-  const seg = multi ? `<div class="wz-seg wz-seg2" id="wzJoin"><button class="wz-seg-b ${wz.join ? '' : 'on'}" data-j="0">كل حصة في تحضير</button><button class="wz-seg-b ${wz.join ? 'on' : ''}" data-j="1">${isArabicPkg(wz.pkg) ? 'تحضير لكل مهارة' : 'حصص الدرس في تحضير واحد'}</button></div>` : '';
+  // العربي (المالك 2026-11-15): ثلاثة خيارات — كل حصة في تحضير، أو حصص الدرس في تحضير واحد (تحضيران أو أكثر في يوم واحد)، أو تحضير لكل مهارة
+  const ar = isArabicPkg(wz.pkg);
+  const segB = (v, t) => `<button class="wz-seg-b ${String(wz.join || 0) === v ? 'on' : ''}" data-j="${v}">${t}</button>`;
+  const seg = multi ? `<div class="wz-seg ${ar ? 'wz-seg3' : 'wz-seg2'}" id="wzJoin">${segB('0', 'كل حصة في تحضير')}${ar ? segB('lesson', 'حصص الدرس في تحضير واحد') + segB('true', 'تحضير لكل مهارة') : segB('true', 'حصص الدرس في تحضير واحد')}</div>` : '';
   const units = wz.join ? wzUnits(gs) : [];
   body.innerHTML = wzTrialNote() + seg + '<div class="wz-list">' + gs.map((g) => {
     const on = g.sessions.some((l) => wz.sel.has(l.id));
@@ -3795,8 +3798,8 @@ function wzLessons() {
   const list = body.querySelector('.wz-list'); list.scrollTop = top;
   body.querySelectorAll('#wzJoin [data-j]').forEach((b) => {
     b.onclick = () => {
-      const j = b.dataset.j === '1';
-      if (j === wz.join) return;
+      const j = b.dataset.j === 'true' ? true : b.dataset.j === 'lesson' ? 'lesson' : false;
+      if (j === (wz.join || false)) return;
       wz.join = j; wzSavePrefs();
       wzLessons();
     };
@@ -3945,7 +3948,7 @@ function wzUnits(gs) {
     const ch = g.sessions.filter((l) => wz.sel.has(l.id));
     if (!ch.length) continue;
     if (!wz.join) { ch.forEach((l) => out.push({ g, ls: [l], skill: '' })); continue; }
-    joinRuns(wz.pkg, ch, wz.skills).forEach((r) => out.push({ g, ls: r.ls, skill: r.skill }));
+    joinRuns(wz.pkg, ch, wz.skills, wz.join !== 'lesson').forEach((r) => out.push({ g, ls: r.ls, skill: r.skill }));
   }
   return out;
 }
@@ -4065,7 +4068,7 @@ async function wzReload() {
   wz.link = await getLink(); wz.status = await getStatus();
   await init();
 }
-async function wzSavePrefs() { await chrome.storage.local.set({ wizPrefs: { grade: wz.grade, subject: wz.subject, shift: wz.shift, hw: wz.hw, join: !!wz.join, svcs: [...wz.svcs] } }).catch(() => {}); }
+async function wzSavePrefs() { await chrome.storage.local.set({ wizPrefs: { grade: wz.grade, subject: wz.subject, shift: wz.shift, hw: wz.hw, join: wz.join === 'lesson' ? 'lesson' : !!wz.join, svcs: [...wz.svcs] } }).catch(() => {}); }
 
 // «ابدأ»: المعالج يضبط المحرّك (المخفي) ثم يشغّله
 async function wzRun() {
@@ -4086,9 +4089,9 @@ async function wzRun() {
   WIZ.pickJoin = joined.length ? Object.fromEntries(joined.flatMap((x) => x.ls.map((l) => [l.id, x.ls[0].id]))) : null;
   joined.forEach((x) => { if (wz.typed.has(x.ls[0].id)) x.ls.forEach((l) => WIZ.pickTyped.push(l.id)); });
   // الفصل كاملًا لمادة عربية: «تحضير لكل مهارة» كما اختار المعلم في خطوة شكل التحضير
-  WIZ.skillJoin = wz.mode === 'term' && isArabicPkg(p) && !!wz.join;
+  WIZ.skillJoin = wz.mode === 'term' && isArabicPkg(p) && wz.join === true;
   // وفي الشكل نفسه (الفصل كاملًا أو اختيار الدروس) يحمل عنوان كل تحضير اسم مهارته: «مهارة الإملاء: الدرس …»
-  WIZ.skillTag = (pick || wz.mode === 'term') && isArabicPkg(p) && !!wz.join;
+  WIZ.skillTag = (pick || wz.mode === 'term') && isArabicPkg(p) && wz.join === true;
   scope.kind = pick ? 'pick' : 'term';
   scope.picks = new Set(pick ? lessonGroups(p).filter((g) => g.sessions.some((l) => wz.sel.has(l.id))).map((g) => g.key) : []);
   // الفصل كاملًا: بتواريخ النشرة الرسمية إن كانت في ملف المادة، وإلا متتابعًا من أول يوم دراسي قادم
@@ -4357,7 +4360,7 @@ async function wizBoot() {
   await freshRecord();
   wz.link = await getLink(); wz.status = await getStatus();
   const pf = (await chrome.storage.local.get('wizPrefs').catch(() => ({}))).wizPrefs || {};
-  wz.grade = pf.grade || 0; wz.subject = pf.subject || ''; wz.shift = pf.shift || ''; wz.hw = pf.hw !== false; wz.join = !!pf.join;
+  wz.grade = pf.grade || 0; wz.subject = pf.subject || ''; wz.shift = pf.shift || ''; wz.hw = pf.hw !== false; wz.join = pf.join === 'lesson' ? 'lesson' : !!pf.join;
   wz.svcs = new Set(Array.isArray(pf.svcs) && pf.svcs.some((k) => SVC_KEYS.includes(k)) ? pf.svcs.filter((k) => SVC_KEYS.includes(k)) : wz.hw ? ['prep', 'hw'] : ['prep']); wz.hw = wz.svcs.has('hw');
   wzRender();
   const [cat] = await Promise.all([afaqCatalog().catch(() => null), wz.link ? afaqSync().catch(() => {}) : null, loadNoorCourses()]);
