@@ -106,5 +106,13 @@ await asAdmin(false);
 const subs4 = await q(`select distinct service from public.subscriptions where user_id=$1 and not revoked`, [U4]);
 ok(act && act.ok && subs4.length === 1 && subs4[0].service === 'prep,hw,rooms', 'a request is activated with a chosen set of services', { act, subs4 });
 
+// حساب المدير (بلا صف اشتراك) يأخذ كل الخدمات: محتوى التحضير يصله (المالك 2026-11-15: «لا يعبي التحضير»)
+const s5 = await start('خالد سالم محمد العامري');
+const U5 = await userOf(s5.token);
+await db.exec(`update public.profiles set is_admin = true where id = '${U5}'`);
+ok((await one(`select public.sub_service($1,'p1',1::smallint) as r`, [U5])).r === null, 'the admin account has no subscription row');
+const se5 = await sess(s5.token);
+ok(se5 && se5.ok !== false && se5.error !== 'hw_only', 'the admin account gets the prep content (no subscription row = every service)', se5);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

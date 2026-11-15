@@ -300,8 +300,9 @@ export function lessonSkills(pkg) {
 // التحاضير المجموعة لحصص درس واحد (بترتيبها): مادة عربية = الحصص المتتالية من المهارة نفسها في تحضير (حتى ثمانٍ)، وغيرها =
 // حصص الدرس في تحضير (حتى أربع). ما زاد يتوزع على تحاضير متقاربة العدد. يعيد [{ ls: [حصص], skill }]
 export const JOIN_MAX = 4, SKILL_MAX = 8;
-export function joinRuns(pkg, sessions, skills = null) {
-  const sk = skills || lessonSkills(pkg), ar = isArabicPkg(pkg), max = ar ? SKILL_MAX : JOIN_MAX;
+// bySkill=false: حصص الدرس معًا دون النظر إلى المهارة (حتى في العربي: «حصص الدرس في تحضير واحد»)
+export function joinRuns(pkg, sessions, skills = null, bySkill = true) {
+  const ar = bySkill && isArabicPkg(pkg), sk = ar ? skills || lessonSkills(pkg) : null, max = ar ? SKILL_MAX : JOIN_MAX;
   const runs = [];
   for (const l of sessions) {
     const k = ar ? sk.get(l.id) || '' : '';
