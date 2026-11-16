@@ -1326,7 +1326,7 @@ const hwChecks = (noor, tree, want, { pubOf, label = '' }) => {
     if (h.view !== 'view_answers_after_cutoff') why.push(`view ${h.view}`);
     if (h.lectures.length !== 2) why.push(`sections ${h.lectures.join(',')}`);
     const types = h.qs.map((q) => q.type).join(',');
-    if (h.qs.length !== 5 || types !== 'mcq,mcq,mcq,mcq,mcq' || h.qs.some((q) => q.mark !== 1)) why.push(`questions ${h.qs.length} [${types}] marks ${h.qs.map((q) => q.mark).join(',')}`);
+    if (h.qs.length !== 5 || types !== 'mcq,mcq,mcq,mcq,mcq' || h.qs.some((q) => q.mark !== 10)) why.push(`questions ${h.qs.length} [${types}] marks ${h.qs.map((q) => q.mark).join(',')}`);
     if (why.length) bad.push(`«${w.title}»: ${why.join('; ')}`);
   }
   const pos = new Set(hws.flatMap((h) => h.qs.filter((q) => q.options && q.options.length > 2).map((q) => q.correct)));
@@ -1425,7 +1425,7 @@ T(23, '«الواجبات فقط»: the teacher picks sessions and types a publi
     if (h.view !== 'view_answers_after_cutoff') why.push(`view ${h.view}`);
     if (h.lectures.length !== 2) why.push(`sections ${h.lectures.join(',')}`);
     const types = h.qs.map((q) => q.type).join(',');
-    if (h.qs.length !== 5 || types !== 'mcq,mcq,mcq,mcq,mcq' || h.qs.some((q) => q.mark !== 1)) why.push(`questions ${h.qs.length} [${types}]`);
+    if (h.qs.length !== 5 || types !== 'mcq,mcq,mcq,mcq,mcq' || h.qs.some((q) => q.mark !== 10)) why.push(`questions ${h.qs.length} [${types}]`);
     if (why.length) bad.push(`«${w.title}»: ${why.join('; ')}`);
   }
   const qsOf = (t) => JSON.stringify(((hws.find((y) => y.title === t) || {}).qs || []).map((q) => q.text));

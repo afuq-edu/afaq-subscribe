@@ -5,7 +5,7 @@
 export const GAMES_BASE = 'https://afuq-edu.github.io/afaq-subscribe/games/';
 // ملفات الواجبات (مثل ملفات التحضير): لكل باقة ملف فيه لكل درس أسئلته الخمسة وإجاباتها — site/homework/<الباقة>.json
 export const HW_BASE = 'https://afuq-edu.github.io/afaq-subscribe/homework/';
-export const HW_MARK = 1;          // درجة لكل سؤال (المالك 2026-11-01) — المجموع ٥
+export const HW_MARK = 10;         // درجة لكل سؤال (المالك 2026-11-16: ١٠ بدل ١) — المجموع ٥٠
 export const HW_DUE_DAYS = 3;      // التسليم بعد ٣ أيام من النشر (كما يقترح نور)
 export const HW_LATE_DAYS = 2;     // التسليم المتأخر بعد التسليم بيومين
 
