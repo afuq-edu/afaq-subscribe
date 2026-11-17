@@ -2624,8 +2624,8 @@ function hwNodeN(node, lesson) {
   return 1;
 }
 // أسئلة الحصة من ملف واجبات المادة (باسم درسها في ملف التحضير وترتيبها فيه)
-async function hwQuestions(p, lesson) {
-  const qs = await lessonHomework(pkg, lesson, WIZ.gamesBase || undefined, hwFileN(lesson));
+async function hwQuestions(p, lesson, first = false) {
+  const qs = await lessonHomework(pkg, lesson, WIZ.gamesBase || undefined, first ? 1 : hwFileN(lesson));
   if (qs.length) return qs;
   // درس مقسوم أجزاءً أو مجموع مع غيره: أسئلة درس آخر في المجموعة نفسها
   const seen = new Set([lesson.lesson]);
@@ -2693,6 +2693,7 @@ async function homeworkOnly() {
       const it = ses[Math.min(j, ses.length - 1)];
       if (!it) return;
       if (!row.d || row.d < today) { past++; return; }
+      if (WIZ.hwPer === 'lesson' && work.some((w) => w.node === node)) return;
       work.push({ node, it, row, pid, m: j + 1 });
     });
   });
@@ -2704,7 +2705,7 @@ async function homeworkOnly() {
     if (r === 'ok') n++;
   }
   WIZ.hwHead = n ? `✓ أضفت ${hw(n)}` : '✓ انتهى';
-  WIZ.hwSub = n ? 'لكل حصة خمسة أسئلة في «المهام الإلكترونية»، ويُنشر الواجب بتاريخ تحضير حصته.'
+  WIZ.hwSub = n ? (WIZ.hwPer === 'lesson' ? 'لكل درس واجب من خمسة أسئلة في «المهام الإلكترونية»، يُنشر بتاريخ أول تحضير له.' : 'لكل حصة خمسة أسئلة في «المهام الإلكترونية»، ويُنشر الواجب بتاريخ تحضير حصته.')
     : past && !none ? 'الواجبات تُضاف للدروس القادمة، ودروسك المحضّرة في نور كلها مضى تاريخها.'
     : 'الواجبات تُضاف لدروس محضّرة في نور. حضّر الدروس أولًا ثم أضف واجباتها.';
   logLine('ok', WIZ.hwHead + (past ? ` — ${toAr(past)} تحضيرًا مضى تاريخه` : ''));
@@ -2741,11 +2742,13 @@ async function hwCreateLive(op) {
 async function addHomework(item, opts = {}) {
   if (!item || !item.node || !courseCid) return 'off';
   const lesson = item.s.lesson;
-  const m = hwNodeN(item.node, lesson);
+  // واجب لكل عنوان (المالك 2026-11-17): واجب واحد لدرس نور، بتاريخ أول تحضير له، بلا «الحصة …» في عنوانه
+  const perLesson = WIZ.hwPer === 'lesson';
+  const m = perLesson ? 1 : hwNodeN(item.node, lesson);
   const key = hwKeyOf(item.node) + (m > 1 ? '#' + m : '');
   const done = WIZ.hwDone || (WIZ.hwDone = await hwLoad());
   if (done[key] && !opts.noPrep) return 'had';
-  const qs = await hwQuestions(item.p, lesson);
+  const qs = await hwQuestions(item.p, lesson, perLesson);
   if (qs.length < 5) { hwNoteRow(item, 'لا أسئلة جاهزة لهذا الدرس'); return 'noq'; }
   const d = hwDates(opts.date || item.s.date, nowDate(), opts.due || '');
   const op = { kind: 'create', cid: courseCid, title: hwName(item.node, m), match: [item.node.text], unit: item.node.unit || '', nth: item.node.nth || 0, noPrep: !!opts.noPrep, newest: !opts.prepId, prepId: opts.prepId || '', secs: null, qs, mark: HW_MARK, publish: d.publish, due: d.due, cutoff: d.cutoff };
@@ -3555,7 +3558,7 @@ const SHIFT = { one: { name: 'فترة واحدة', min: 40 }, two: { name: 'ف�
 const WZ_STEPS = ['mode', 'grade', 'subject', 'shift', 'lessons'];
 // «بداية الإدخال» في التحضير التلقائي: في النسخة الخاصة بالمالك فقط (اسم الإصدار فيه «خاصة»)
 const FROM_STEP = (() => { try { return /خاصة/.test(chrome.runtime.getManifest().version_name || ''); } catch (e) { return false; } })();
-const wz = { hw: true, join: false, step: 'mode', hist: [], mode: '', grade: 0, subject: '', shift: '', pkg: null, sel: new Map(), typed: new Set(), hsel: new Map(), rsel: new Set(), vsel: new Set(), ssel: new Set(), svcs: new Set(['prep', 'hw']), extras: [], chain: [], catalog: null, link: null, status: null, busy: false };
+const wz = { hw: true, hwPer: 'session', join: false, step: 'mode', hist: [], mode: '', grade: 0, subject: '', shift: '', pkg: null, sel: new Map(), typed: new Set(), hsel: new Map(), rsel: new Set(), vsel: new Set(), ssel: new Set(), svcs: new Set(['prep', 'hw']), extras: [], chain: [], catalog: null, link: null, status: null, busy: false };
 const ORD = ['الأولى', 'الثانية', 'الثالثة', 'الرابعة', 'الخامسة', 'السادسة', 'السابعة', 'الثامنة'];
 const wdone = (l) => { const x = sessionStatus(state, wz.pkg.id, l.id); return !!(x.saved || (x.filled && !x.failed)); };
 const gradeName = (n) => 'الصف ' + (GRADES[n - 1] || toAr(n));
@@ -3670,10 +3673,12 @@ function wzRender() {
       : has('hw') ? [{ title: 'أختار الدروس بنفسي', sub: 'تختار الدروس وتاريخي النشر والتسليم', on: wz.mode === 'hw', go: () => start('hw') }]
       : exs.length === 1 ? [{ title: EX[exs[0]][0], sub: EX[exs[0]][1], on: wz.mode === exs[0], go: () => start(exs[0]) }]
       : exs.length ? [{ title: 'اختر المادة', sub: exs.map((k) => EX[k][0]).join(' · '), on: exs.includes(wz.mode), go: () => start(exs[0]) }] : [];
-    const plus = (has('prep') || has('hw')) && exs.length ? `<p class="wz-note" id="wzPlus">ومعه في التشغيل نفسه: ${exs.map((k) => EX[k][0]).join(' · ')}</p>` : '';
+    const plus = ((has('prep') || has('hw')) && exs.length ? `<p class="wz-note" id="wzPlus">ومعه في التشغيل نفسه: ${exs.map((k) => EX[k][0]).join(' · ')}</p>` : '')
+      + (has('hw') ? wzHwPerSeg() : '');
     body.innerHTML = `<p class="wz-note">اختر خدمة أو أكثر، وتُنجز كلها في تشغيل واحد.</p><div class="wz-seg multi" role="group">${SVC_KEYS.map((k) => `<button type="button" class="wz-seg-b ${has(k) ? 'on' : ''}" data-svc="${k}" id="wzSvc-${k}" aria-pressed="${has(k)}" ${can(k) ? '' : 'disabled title="غير مشمولة في اشتراكك"'}>${has(k) ? '✓ ' : ''}${SVC_NAME[k]}</button>`).join('')}</div>${plus}`
       + (list.length ? wzCards(list).replace('wz-cards', 'wz-cards big') : '<p class="wz-note">اختر خدمة واحدة على الأقل.</p>');
-    body.querySelectorAll('.wz-seg-b').forEach((bt) => { bt.onclick = () => {
+    wzHwPerBind(body, wzRender);
+    body.querySelectorAll('.wz-seg-b[data-svc]').forEach((bt) => { bt.onclick = () => {
       const k = bt.dataset.svc;
       if (wz.svcs.has(k)) wz.svcs.delete(k); else wz.svcs.add(k);
       wz.hw = wz.svcs.has('hw');
@@ -3830,19 +3835,32 @@ function wzLessons() {
     wzNext();
   };
 }
+// الواجبات (المالك 2026-11-17): «واجب لكل حصة» (كما كان) أو «واجب لكل عنوان» (واجب واحد لكل درس في نور)
+function wzHwPerSeg() {
+  const b = (v, t) => `<button type="button" class="wz-seg-b ${(wz.hwPer || 'session') === v ? 'on' : ''}" data-hper="${v}">${t}</button>`;
+  return `<div class="wz-seg wz-seg2" id="wzHwPer">${b('session', 'واجب لكل حصة')}${b('lesson', 'واجب لكل عنوان')}</div>`;
+}
+function wzHwPerBind(root, after) {
+  root.querySelectorAll('#wzHwPer .wz-seg-b').forEach((bt) => { bt.onclick = () => {
+    const v = bt.dataset.hper === 'lesson' ? 'lesson' : 'session';
+    if (v === (wz.hwPer || 'session')) return;
+    wz.hwPer = v; wzSavePrefs(); after();
+  }; });
+}
 // «الواجبات فقط» (المالك 2026-11-01): يختار المعلم الدروس، ولكل درس تاريخ نشر وتاريخ تسليم يكتبهما هو (لا يُقترح تاريخ)؛
 // الواجب يُربط بدرس الشجرة وحده دون تحضير. تسليم فارغ ← بعد النشر بثلاثة أيام.
 // لكل حصة واجبها (المالك 2026-11-07): اختيار الدرس يختار حصصه كلها، ولكل حصة مختارة تاريخاها
 function wzHwLessons() {
   const body = $('wzBody');
   const keep = body.querySelector('.wz-list'); const top = keep ? keep.scrollTop : 0;
-  $('wzHead').textContent = 'اختر الحصص وتواريخ واجباتها';
+  const per = wz.hwPer === 'lesson';
+  $('wzHead').textContent = per ? 'اختر الدروس وتواريخ واجباتها' : 'اختر الحصص وتواريخ واجباتها';
   const gs = groupByUnit(lessonGroups(wz.pkg));
   let u = null;
   const dates = (id) => { const v = wz.hsel.get(id) || {}; return `<label class="wz-s"><span>تاريخ النشر</span><input class="input wz-date" type="date" data-hp="${esc(id)}" value="${esc(v.pub || '')}"></label>
       <label class="wz-s"><span>تاريخ التسليم</span><input class="input wz-date" type="date" data-hd="${esc(id)}" value="${esc(v.due || '')}"></label>`; };
-  body.innerHTML = wzTrialNote() + '<div class="wz-list">' + gs.map((g) => {
-    const on = g.sessions.some((l) => wz.hsel.has(l.id)), one = g.sessions.length === 1;
+  body.innerHTML = wzTrialNote() + wzHwPerSeg() + '<div class="wz-list">' + gs.map((g) => {
+    const on = g.sessions.some((l) => wz.hsel.has(l.id)), one = g.sessions.length === 1 || per;
     const uh = g.unit !== u ? `<div class="wz-unit">${esc(g.unit || 'دروس')}</div>` : ''; u = g.unit;
     const ses = on && one ? `<div class="wz-ses">${dates(g.sessions[0].id)}</div>`
       : on ? `<div class="wz-ses">${g.sessions.map((l, k) => `<div class="wz-hs"><label class="wz-s"><input type="checkbox" data-hs="${esc(l.id)}" ${wz.hsel.has(l.id) ? 'checked' : ''}><span>الحصة ${ORD[k] || toAr(k + 1)}</span></label>${wz.hsel.has(l.id) ? dates(l.id) : ''}</div>`).join('')}</div>` : '';
@@ -3855,7 +3873,7 @@ function wzHwLessons() {
   body.querySelectorAll('input[data-hk]').forEach((cb) => {
     cb.onchange = () => {
       const g = gs.find((x) => x.key === cb.dataset.hk);
-      if (cb.checked) g.sessions.forEach((l) => { if (!wz.hsel.has(l.id)) wz.hsel.set(l.id, { pub: '', due: '' }); });
+      if (cb.checked) (per ? g.sessions.slice(0, 1) : g.sessions).forEach((l) => { if (!wz.hsel.has(l.id)) wz.hsel.set(l.id, { pub: '', due: '' }); });
       else g.sessions.forEach((l) => wz.hsel.delete(l.id));
       wzHwLessons();
     };
@@ -3868,6 +3886,11 @@ function wzHwLessons() {
     d.onchange = () => { const k = d.getAttribute(attr), v = wz.hsel.get(k); if (v) v[f] = isIso(d.value) ? d.value : ''; };
   });
   bindD('data-hp', 'pub'); bindD('data-hd', 'due');
+  wzHwPerBind(body, () => {
+    // لكل عنوان: يبقى للدرس اختيار واحد (أول حصة) بتاريخي أول حصة اختارها
+    if (wz.hwPer === 'lesson') gs.forEach((g) => { const k = g.sessions.find((l) => wz.hsel.has(l.id)); if (!k) return; const v = wz.hsel.get(k.id); g.sessions.forEach((l) => wz.hsel.delete(l.id)); wz.hsel.set(g.sessions[0].id, v); });
+    wzHwLessons();
+  });
   $('wzHwGo').onclick = () => {
     const vs = [...wz.hsel.values()];
     if (vs.some((v) => !isIso(v.pub))) { wzMsg('info', 'اكتب تاريخ نشر كل واجب اخترته.'); return; }
@@ -4068,7 +4091,7 @@ async function wzReload() {
   wz.link = await getLink(); wz.status = await getStatus();
   await init();
 }
-async function wzSavePrefs() { await chrome.storage.local.set({ wizPrefs: { grade: wz.grade, subject: wz.subject, shift: wz.shift, hw: wz.hw, join: wz.join === 'lesson' ? 'lesson' : !!wz.join, svcs: [...wz.svcs] } }).catch(() => {}); }
+async function wzSavePrefs() { await chrome.storage.local.set({ wizPrefs: { grade: wz.grade, subject: wz.subject, shift: wz.shift, hw: wz.hw, hwPer: wz.hwPer === 'lesson' ? 'lesson' : 'session', join: wz.join === 'lesson' ? 'lesson' : !!wz.join, svcs: [...wz.svcs] } }).catch(() => {}); }
 
 // «ابدأ»: المعالج يضبط المحرّك (المخفي) ثم يشغّله
 async function wzRun() {
@@ -4113,6 +4136,7 @@ async function wzRun() {
   WIZ.vidPick = WIZ.videosOnly || ex.includes('video') ? new Set(wz.vsel) : null;
   WIZ.scormPick = WIZ.scormOnly || ex.includes('scorm') ? new Set(wz.ssel) : null;
   WIZ.hwOnly = wz.mode === 'hw'; WIZ.hw = !WIZ.roomsOnly && !WIZ.videosOnly && !WIZ.scormOnly && (WIZ.hwOnly || (wz.svcs.has('hw') && pkgSvc(p).has('hw'))); WIZ.hwN = 0; WIZ.hwFail = 0; WIZ.hwDone = null;
+  WIZ.hwPer = wz.hwPer === 'lesson' ? 'lesson' : 'session';
   WIZ.hwPick = WIZ.hwOnly ? Object.fromEntries([...wz.hsel].map(([k, v]) => [k, { pub: v.pub, due: v.due }])) : null;
   WIZ.rid = Date.now(); WIZ.sum = 0; WIZ.auto = 0;
   wizRunning();
@@ -4360,7 +4384,7 @@ async function wizBoot() {
   await freshRecord();
   wz.link = await getLink(); wz.status = await getStatus();
   const pf = (await chrome.storage.local.get('wizPrefs').catch(() => ({}))).wizPrefs || {};
-  wz.grade = pf.grade || 0; wz.subject = pf.subject || ''; wz.shift = pf.shift || ''; wz.hw = pf.hw !== false; wz.join = pf.join === 'lesson' ? 'lesson' : !!pf.join;
+  wz.grade = pf.grade || 0; wz.subject = pf.subject || ''; wz.shift = pf.shift || ''; wz.hw = pf.hw !== false; wz.hwPer = pf.hwPer === 'lesson' ? 'lesson' : 'session'; wz.join = pf.join === 'lesson' ? 'lesson' : !!pf.join;
   wz.svcs = new Set(Array.isArray(pf.svcs) && pf.svcs.some((k) => SVC_KEYS.includes(k)) ? pf.svcs.filter((k) => SVC_KEYS.includes(k)) : wz.hw ? ['prep', 'hw'] : ['prep']); wz.hw = wz.svcs.has('hw');
   wzRender();
   const [cat] = await Promise.all([afaqCatalog().catch(() => null), wz.link ? afaqSync().catch(() => {}) : null, loadNoorCourses()]);
