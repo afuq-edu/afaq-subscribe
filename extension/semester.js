@@ -2899,7 +2899,7 @@ async function roomsOnly() {
   const units = new Map();
   plan.forEach((p) => {
     if (!p.node || p.skipped || p.miss) return;
-    if (WIZ.roomPick && !WIZ.roomPick.has(kwNorm(p.group.unit || ''))) return;   // الوحدات التي اختارها المعلم وحدها
+    if (WIZ.roomPick && !WIZ.roomPick.has(p.group.key) && !WIZ.roomPick.has(kwNorm(p.group.unit || ''))) return;   // الدروس التي اختارها المعلم وحدها (ووحدة كاملة من تشغيل محفوظ قبل 4.10.53)
     const u = p.node.unit || '';
     if (!units.has(u)) units.set(u, []);
     const arr = units.get(u);
@@ -3696,7 +3696,7 @@ function wzRender() {
     const has = (k) => wz.svcs.has(k);
     const exs = SVC_EXTRA.filter(has);
     // غرف النقاش: غرفة لكل وحدة وفيها موضوع لكل درس · فيديو: من يوتيوب · درس تفاعلي (SCORM): خمسة أسئلة ثم شهادة
-    const EX = { rooms: ['غرفة لكل وحدة', 'في كل غرفة موضوع لكل درس: نشاطه وسؤالان للنقاش'], video: ['فيديو لكل درس', 'من يوتيوب، بعنوان قريب من اسم الدرس'], scorm: ['درس تفاعلي لكل درس', 'خمسة أسئلة ثم شهادة باسم الطالب ونتيجته'] };
+    const EX = { rooms: ['غرفة لكل وحدة', 'تختار الدروس، ولكل درس موضوع فيه نشاطه وسؤالان للنقاش'], video: ['فيديو لكل درس', 'من يوتيوب، بعنوان قريب من اسم الدرس'], scorm: ['درس تفاعلي لكل درس', 'خمسة أسئلة ثم شهادة باسم الطالب ونتيجته'] };
     // إذن يوتيوب يُطلب مرة واحدة حين يكون الفيديو مما اختاره المعلم (يحتاج ضغطته)
     const start = (mode) => {
       const go = () => { wz.mode = mode; wzGo('grade'); };
@@ -3935,20 +3935,26 @@ function wzHwLessons() {
     wzNext();
   };
 }
-// «غرف النقاش» (المالك 2026-11-14): يختار المعلم الوحدات بنفسه، ولكل وحدة مختارة غرفة فيها موضوع لكل درس
+// «غرف النقاش» (المالك 2026-11-14، والدروس 2026-11-18): يختار المعلم الدروس بنفسه، ومربع كل وحدة يختار دروسها كلها؛
+// لكل وحدة فيها درس مختار غرفة، وفيها موضوع لكل درس مختار فقط
 function wzRoomUnits() {
   const body = $('wzBody');
   const keep = body.querySelector('.wz-list'); const top = keep ? keep.scrollTop : 0;
-  $('wzHead').textContent = wz.chain.length > 1 ? 'اختر وحدات غرف النقاش' : 'اختر الوحدات';
+  $('wzHead').textContent = wz.chain.length > 1 ? 'اختر دروس غرف النقاش' : 'اختر الدروس';
   const units = new Map();
-  groupByUnit(lessonGroups(wz.pkg)).forEach((g) => { const k = kwNorm(g.unit || ''); if (!units.has(k)) units.set(k, { name: g.unit || 'دروس الفصل', n: 0 }); units.get(k).n++; });
-  const lw = (k) => (k === 1 ? 'درس واحد' : k === 2 ? 'درسان' : k <= 10 ? toAr(k) + ' دروس' : toAr(k) + ' درسًا');
-  body.innerHTML = wzTrialNote() + '<div class="wz-list">' + [...units].map(([k, u]) => `<div class="wz-les ${wz.rsel.has(k) ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-ru="${esc(k)}" ${wz.rsel.has(k) ? 'checked' : ''}><span>${esc(u.name)}</span><em>${lw(u.n)}</em></label></div>`).join('') + '</div>';
+  groupByUnit(lessonGroups(wz.pkg)).forEach((g) => { const k = kwNorm(g.unit || ''); if (!units.has(k)) units.set(k, { name: g.unit || 'دروس الفصل', keys: [], gs: [] }); const u = units.get(k); u.keys.push(g.key); u.gs.push(g); });
+  body.innerHTML = wzTrialNote() + '<div class="wz-list">' + [...units].map(([k, u]) => {
+    const all = u.keys.every((x) => wz.rsel.has(x)), some = u.keys.some((x) => wz.rsel.has(x));
+    return `<div class="wz-les wz-ru ${all ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-ru="${esc(k)}" ${all ? 'checked' : ''} ${some && !all ? 'data-some="1"' : ''}><span><b>${esc(u.name)}</b></span><em>الوحدة كاملة</em></label></div>`
+      + u.gs.map((g) => `<div class="wz-les ${wz.rsel.has(g.key) ? 'on' : ''}"><label class="wz-row"><input type="checkbox" data-rk="${esc(g.key)}" ${wz.rsel.has(g.key) ? 'checked' : ''}><span>${esc(g.lesson || 'درس')}</span></label></div>`).join('');
+  }).join('') + '</div>';
+  body.querySelectorAll('input[data-some]').forEach((cb) => { cb.indeterminate = true; });
   const n = wz.rsel.size;
-  const rw = (k) => (k === 1 ? 'غرفة واحدة' : k === 2 ? 'غرفتين' : k <= 10 ? toAr(k) + ' غرف' : toAr(k) + ' غرفة');
-  body.insertAdjacentHTML('beforeend', `<p class="wz-note">لكل وحدة غرفة نقاش لطلبة شعب المادة، وفيها موضوع لكل درس: رابط نشاطه وسؤالان للنقاش.</p><button class="btn primary big" id="wzRoomGo" ${n ? '' : 'disabled'}>${n ? (wzMore1() ? 'التالي' : `أنشئ ${rw(n)} في نور`) : 'اختر وحدة'}</button>`);
+  const lw = (k) => (k === 1 ? 'درسًا واحدًا' : k === 2 ? 'درسين' : k <= 10 ? toAr(k) + ' دروس' : toAr(k) + ' درسًا');
+  body.insertAdjacentHTML('beforeend', `<p class="wz-note">لكل وحدة غرفة نقاش لطلبة شعب المادة، وفيها موضوع لكل درس تختاره: رابط نشاطه وسؤالان للنقاش.</p><button class="btn primary big" id="wzRoomGo" ${n ? '' : 'disabled'}>${n ? (wzMore1() ? 'التالي' : `أضف ${lw(n)} في غرف النقاش`) : 'اختر درسًا'}</button>`);
   const list = body.querySelector('.wz-list'); list.scrollTop = top;
-  body.querySelectorAll('input[data-ru]').forEach((cb) => { cb.onchange = () => { if (cb.checked) wz.rsel.add(cb.dataset.ru); else wz.rsel.delete(cb.dataset.ru); wzRoomUnits(); }; });
+  body.querySelectorAll('input[data-ru]').forEach((cb) => { cb.onchange = () => { const u = units.get(cb.dataset.ru); u.keys.forEach((x) => { if (cb.checked) wz.rsel.add(x); else wz.rsel.delete(x); }); wzRoomUnits(); }; });
+  body.querySelectorAll('input[data-rk]').forEach((cb) => { cb.onchange = () => { if (cb.checked) wz.rsel.add(cb.dataset.rk); else wz.rsel.delete(cb.dataset.rk); wzRoomUnits(); }; });
   $('wzRoomGo').onclick = () => { if (wz.rsel.size) wzNext(); };
 }
 // «فيديو» و«درس تفاعلي» (المالك 2026-11-14): يختار المعلم الدروس بنفسه؛ لكل درس مختار فيديو من يوتيوب إن وُجد عنوان مناسب، أو درس SCORM
@@ -4054,9 +4060,9 @@ function wzOpen(p) {
   if (SVC_EXTRA.includes(wz.mode)) { wz.mode = ex[0] || wz.mode; ex = ex.slice(1); }
   if (wz.noExtras) { ex = []; wz.noExtras = false; }   // «اختر درسًا آخر»: الخدمات الأخرى أُنجزت في التشغيل السابق
   wz.extras = ex;
-  const ks = new Set(lessonGroups(p).map((g) => g.key)), us = new Set(lessonGroups(p).map((g) => kwNorm(g.unit || '')));
+  const ks = new Set(lessonGroups(p).map((g) => g.key));
   if (wz.mode === 'hw') [...wz.hsel.keys()].forEach((k) => { if (!ks.has(k)) wz.hsel.delete(k); });
-  [...wz.rsel].forEach((k) => { if (!us.has(k)) wz.rsel.delete(k); });
+  [...wz.rsel].forEach((k) => { if (!ks.has(k)) wz.rsel.delete(k); });
   [...wz.vsel].forEach((k) => { if (!ks.has(k)) wz.vsel.delete(k); });
   [...wz.ssel].forEach((k) => { if (!ks.has(k)) wz.ssel.delete(k); });
   // خطوات الاختيار بالترتيب: دروس التحضير أو الواجب (أو شكل تحضير العربية)، ثم وحدات الغرف ودروس الفيديو ودروس الدرس التفاعلي

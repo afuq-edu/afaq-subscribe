@@ -1627,6 +1627,51 @@ T(42, '«غرف النقاش»: a room for each unit of the Noor tree (title «<
   return b;
 });
 
+T(51, '«غرف النقاش» by lesson (owner 2026-11-18 «استطيع اختيار الدروس وليس كل شي دفعه واحده»): the list shows each unit with its lessons; a unit box ticks all its lessons and unticking one lesson leaves the others; the teacher picks two lessons of one unit and one of another → two rooms, each holding the chosen lessons only', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 12) }));
+  const tree = treeFromPackage(PKG);
+  const withL = tree.terms[0].units.filter((u) => u.lessons.length);
+  const uA0 = withL.find((u) => new Set(u.lessons.map((l) => l.text)).size >= 3) || withL[0];
+  const units = [uA0, ...withL.filter((u) => u !== uA0)];
+  const now = lessonGroups(PKG)[0].sessions[0].pubDate;
+  const noor = env.noor({ tree, rooms: [] });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor, { now, cont: false });
+  await svcPick(b.pg, 'rooms');
+  await card(b.pg, 'غرفة لكل وحدة');
+  await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }); await sleep(600);
+  await card(b.pg, 'الأحياء'); await card(b.pg, 'فترة واحدة');
+  await nameStep(b.pg);
+  await b.pg.waitForSelector('input[data-ru]', { timeout: 60000 });
+  const nRu = await b.pg.locator('input[data-ru]').count(), nRk = await b.pg.locator('input[data-rk]').count();
+  check(nRu >= 2 && nRk >= lessonGroups(PKG).length, `one box per unit and one per lesson (${nRu} units, ${nRk} lessons)`, '');
+  const [uA, uB] = units;
+  // مربع الوحدة يختار دروسها كلها، ثم يلغي المعلم الدرس الأخير منها
+  const ruA = b.pg.locator('input[data-ru]').nth(withL.indexOf(uA0));
+  await ruA.check(); await sleep(400);
+  const ticked = await b.pg.evaluate(() => [...document.querySelectorAll('input[data-rk]:checked')].map((x) => x.closest('label').textContent.trim()));
+  const lA = [...new Set(uA.lessons.map((l) => l.text))];
+  check(ticked.length === lA.length, `the unit box ticks every lesson of that unit (${ticked.length}/${lA.length})`, ticked.join(' | ') + ' ‖ ' + lA.join(' | '));
+  const boxOf = async (t) => { const n = await b.pg.locator('input[data-rk]').count(); for (let i = 0; i < n; i++) { const cb = b.pg.locator('input[data-rk]').nth(i); if (String(await cb.evaluate((x) => x.closest('label').textContent)).trim().replace(/^[\d٠-٩]+[-–][\d٠-٩]+\s+/, '') === t) return cb; } return null; };
+  const keepA = lA.slice(0, 2);
+  for (const t of lA.slice(2)) { const cb = await boxOf(t); if (cb) { await cb.uncheck(); await sleep(250); } }
+  const lB = [...new Set(uB.lessons.map((l) => l.text))];
+  const cbB = await boxOf(lB[0]); if (cbB) { await cbB.check(); await sleep(250); }
+  const some = await b.pg.evaluate((i) => { const cb = document.querySelectorAll('input[data-ru]')[i]; return cb && cb.indeterminate && !cb.checked; }, withL.indexOf(uA0));
+  check(lA.length <= 2 || some, 'a unit with only some lessons ticked shows its box half-ticked', '');
+  await b.pg.click('#wzRoomGo'); await sleep(600);
+  await waitDone(b.pg, 15 * 60000, 'rooms by lesson');
+  const errs = noor.st.roomPosts.filter((x) => x.outcome !== 'ok');
+  check(!errs.length, 'every room and topic form Noor received was valid', errs.map((x) => `${x.kind}: ${x.outcome}`).join('\n'));
+  const rooms = noor.st.rooms;
+  const rA = rooms.find((r) => r.title.startsWith(uA.text.slice(0, 20))), rB = rooms.find((r) => r.title.startsWith(uB.text.slice(0, 20)));
+  check(rooms.length === 2 && rA && rB, `two rooms: one for each unit with a chosen lesson (${rooms.length})`, rooms.map((r) => r.title).join(' | '));
+  const tA = rA ? rA.topics.map((t) => t.title) : [], tB = rB ? rB.topics.map((t) => t.title) : [];
+  check(tA.length === keepA.length && keepA.every((t) => tA.includes(t)) && tB.length === 1 && tB[0] === lB[0], 'each room holds the chosen lessons only, one topic each', `A: ${tA.join(' / ')} want ${keepA.join(' / ')} · B: ${tB.join(' / ')} want ${lB[0]}`);
+  check(!noor.st.posts.length && !noor.st.homeworks.length, 'no prep and no homework', `${noor.st.posts.length} / ${noor.st.homeworks.length}`);
+  return b;
+});
+
 // ---------- «فيديو لكل درس» (المالك 2026-11-14): من يوتيوب بعنوان قريب من اسم الدرس، وإلا فلا فيديو ----------
 T(43, '«فيديو لكل درس»: for each Noor lesson a YouTube video whose title is close to the lesson name (not a Short, not a 2-hour live, not an unrelated video), in «مكتبة الفيديو» linked to that lesson and both sections; a lesson with no fitting title gets no video; a video already in the library is not repeated; a re-run adds nothing; no prep, no homework, calm wording', async (env) => {
   usePkg(derivePkg({ keep: range(1, 12) }));
@@ -1810,7 +1855,7 @@ T(45, 'One run, every service (4.10.48): the teacher ticks تحضير + واجب
     await b.pg.locator('.wz-cards.grid3 .wz-card', { hasText: 'الصف التاسع' }).first().click({ timeout: 20000 }).catch(() => {}); await sleep(600);
     await card(b.pg, 'الأحياء').catch(() => {}); await card(b.pg, 'فترة واحدة').catch(() => {});
     if (first) await nameStep(b.pg);
-    const h1 = await waitHead(b.pg, /وحدات غرف النقاش/);
+    const h1 = await waitHead(b.pg, /دروس غرف النقاش/);
     const nU = await tickAll(b.pg, 'data-ru', '#wzRoomGo');
     const h2 = await waitHead(b.pg, /دروس الفيديو/);
     const nV = await tickAll(b.pg, 'data-vk', '#wzVidGo', [skipV.l.text]);
