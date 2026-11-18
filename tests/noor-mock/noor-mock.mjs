@@ -90,7 +90,7 @@ export function createNoor(cfg) {
   };
   const hwAt = (x, min) => { const m = String(x).match(/^(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d)/); const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]) + min * 60000); return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}`; };
   const course = (cid) => courses.find((c) => c.cid === cid);
-  const takenOf = (cid) => { const m = {}; st.rows.filter((r) => r.cid === cid && r.publishDate).forEach((r) => { m[r.publishDate] = (m[r.publishDate] || []).concat(r.slots || ['*']); }); return m; };
+  const takenOf = (cid) => { const m = {}; st.rows.filter((r) => r.cid === cid && r.publishDate).forEach((r) => { m[r.publishDate] = (m[r.publishDate] || []).concat(r.slots || ['*']); (r.more || []).forEach((x) => { m[x.date] = (m[x.date] || []).concat(x.slots); }); }); return m; };
   const nodeById = (c, id) => { for (const t of c.tree.terms) for (const u of t.units) for (const l of u.lessons) if (l.nodeId === id) return { term: t.text, unit: u.text, ...l }; return null; };
   for (const e of cfg.existing || []) {
     st.rows.push({ id: String(++st.nextId), cid: e.cid || 'BIO9', title: e.title, publishDate: e.publishDate || '', created: e.created || st.createdOld, preexisting: true, lessonId: e.nodeId || '', nodeText: e.title.replace(/\s*\(\d+\)$/, '') });
@@ -137,8 +137,10 @@ export function createNoor(cfg) {
  <div><span>عنوان الدرس</span> <input id="PreparationTitle" name="data[Preparation][title]" value=""></div>
  <input type="hidden" id="lesson-id" name="data[Preparation][lesson_id]" value="0">
  <div id="jstree_node_tree"><ul class="jstree-container-ul"></ul></div>
- <div class="pub"><span>تاريخ النشر</span> <input type="text" class="pubDateClass" id="publishdate-1" name="data[Preparation][date1][publish_date]" autocomplete="off"></div>
- <div class="timeslots"><label for="AssessmentAssessmentTasks" class="control-label"> <div class="lecture_timeslots_div" id="slots-1"></div> </label></div>
+ <div class="share2 section_publish_div"><h6>أضف تاريخ النشر لكل فصل</h6><div class="image_link"><a href="#add_sections" class="add_new_button" id="addDate">إضافة</a></div>
+ <div id="sections">${[1, 2, 3, 4, 5].map((j) => `<div class="default_list_container section${j > 1 ? j : ' 1'}"${j > 1 ? ' style="display:none;"' : ''}>
+ <div class="pub"><span>تاريخ النشر</span> <input type="text" class="pubDateClass" id="publishdate-${j}" name="data[Preparation][date${j}][publish_date]" autocomplete="off"></div>
+ <div class="timeslots"><label for="AssessmentAssessmentTasks" class="control-label"> <div class="lecture_timeslots_div" id="slots-${j}"></div> </label></div></div>`).join('')}</div></div>
  <label><input type="checkbox" name="data[Preparation][global]" value="1"> تعميم التحضير على كافة الجداول</label>
  <label><input type="checkbox" name="data[Preparation][semester_plan]" value="1" id="semesterPlan"> خطة فصلية</label>
  <label class="ctl-label">المخرجات التعليمية</label>
@@ -197,10 +199,16 @@ export function createNoor(cfg) {
       }, 200);
     }
   });
-  var pub = document.getElementById('publishdate-1');
+  var addAt = 2;
+  document.getElementById('addDate').addEventListener('click', function (e) { e.preventDefault(); var b = document.querySelector('.section' + addAt); if (b) { b.style.display = 'block'; addAt++; } });
+  [1, 2, 3, 4, 5].forEach(function (J) {
+  var pub = document.getElementById('publishdate-' + J);
   pub.addEventListener('change', function () {
-    var v = pub.value, slots = document.getElementById('slots-1');
+    var v = pub.value, slots = document.getElementById('slots-' + J);
     slots.innerHTML = '';
+    if (!v) return;
+    // real Noor: the same date twice in one prep → «تم اختيار هذا التاريخ من قبل»
+    for (var q = 1; q <= 5; q++) { if (q !== J && document.getElementById('publishdate-' + q).value === v) { pub.value = ''; var sw = document.createElement('div'); sw.className = 'swal2-popup swal2-icon-error'; sw.innerHTML = '<div class="swal2-html-container">تم اختيار هذا التاريخ من قبل يرجى اختيار تاريخ اخر</div><button type="button" class="swal2-confirm">موافق</button>'; sw.querySelector('.swal2-confirm').onclick = function () { sw.remove(); }; document.body.appendChild(sw); return; } }
     if (REJECT.indexOf(v) >= 0) {
       pub.value = '';
       var p = document.createElement('div'); p.className = 'swal2-popup swal2-icon-error';
@@ -211,7 +219,7 @@ export function createNoor(cfg) {
     }
     // as real Noor (saved pages 2026-10-24): a day without periods shows the notice and a section-only box
     var wd0 = new Date(v + 'T12:00').getDay();
-    if (NOCLASS.indexOf(v) >= 0 || (PERIODS && !(PERIODS[wd0] || []).length)) { setTimeout(function () { slots.innerHTML = '<label style="color:#DC143C">لا يوجد فترات زمنية مرتبطة بهذه الحصص </label> <br><label><input style="margin: 0 13px" type="checkbox" class="lecture_timeslots" name="data[plane][date1][section][]" value="8026942">' + CTITLE + ' - 1</label>'; }, 150); return; }
+    if (NOCLASS.indexOf(v) >= 0 || (PERIODS && !(PERIODS[wd0] || []).length)) { setTimeout(function () { slots.innerHTML = '<label style="color:#DC143C">لا يوجد فترات زمنية مرتبطة بهذه الحصص </label> <br><label><input style="margin: 0 13px" type="checkbox" class="lecture_timeslots" name="data[plane][date' + J + '][section][]" value="8026942">' + CTITLE + ' - 1</label>'; }, 150); return; }
     setTimeout(function () {
       var wd = new Date(v + 'T12:00').getDay(), per = PERIODS ? (PERIODS[wd] || []) : [['1', 1], ['2', 1]], html = '', p0 = 1;
       var tk = TAKEN[v] || [];
@@ -219,12 +227,13 @@ export function createNoor(cfg) {
         for (var k = 0; k < x[1]; k++) {
           var val = x[0] + '|' + (p0 + k), taken = tk.indexOf('*') >= 0 || tk.indexOf(val) >= 0;
           if (taken && TAKENMODE === 'hide') continue;
-          html += '<div class="checkbox"><input type="checkbox" class="lecture_timeslots' + (taken && TAKENMODE === 'disable' ? ' disabled" disabled="true' : '') + '" name="data[plane][date1][timeslot][]" date-i="1" value="' + val + '"/><label>' + CTITLE + ' - ' + x[0] + ' -  الحصة ' + (p0 + k) + ' </label>' + (taken && TAKENMODE === 'disable' ? '<div style="color: red; font-size: 12px">لا يمكنك نشر التحضير لهذه الحصة في التاريخ المحدد لأن تحضيرًا آخر نُشر عليه</div>' : '') + '</div>';
+          html += '<div class="checkbox"><input type="checkbox" class="lecture_timeslots' + (taken && TAKENMODE === 'disable' ? ' disabled" disabled="true' : '') + '" name="data[plane][date' + J + '][timeslot][]" date-i="' + J + '" value="' + val + '"/><label>' + CTITLE + ' - ' + x[0] + ' -  الحصة ' + (p0 + k) + ' </label>' + (taken && TAKENMODE === 'disable' ? '<div style="color: red; font-size: 12px">لا يمكنك نشر التحضير لهذه الحصة في التاريخ المحدد لأن تحضيرًا آخر نُشر عليه</div>' : '') + '</div>';
         }
         p0 += x[1] + 1;
       });
       slots.innerHTML = html;
     }, 150);
+  });
   });
 })();
 </script>`);
@@ -245,6 +254,15 @@ export function createNoor(cfg) {
     if (!date) missing.push('تاريخ النشر');
     const want = f.getAll('data[plane][date1][timeslot][]'), secOnly = f.getAll('data[plane][date1][section][]');
     if (!want.length && !secOnly.length) missing.push('الصفوف');
+    const more = [];
+    for (let j = 2; j <= 5; j++) {
+      const dj = f.get(`data[Preparation][date${j}][publish_date]`) || '';
+      const wj = f.getAll(`data[plane][date${j}][timeslot][]`);
+      if (!dj && !wj.length) continue;
+      if (!dj || !wj.length) { missing.push('الصفوف'); continue; }
+      more.push({ date: dj, slots: wj });
+    }
+    post.more = more;
     if (!all('objectives').length) missing.push('المخرجات');
     if (missing.length) { post.outcome = 'invalid:' + missing.join(','); return { kind: 'form', extra: { alert: 'يجب تعبئة: ' + missing.join('، ') } }; }
     if (st.noPast && date && date < st.noPast) { post.outcome = 'date-past'; return { kind: 'form', extra: { swal: 'لا يمكن اختيار تاريخ سابق لليوم الحالي' } }; }
@@ -259,7 +277,7 @@ export function createNoor(cfg) {
     const row = {
       id: String(++st.nextId), cid, title: stored, sentTitle: title, dayRank: sameDay + 1, lessonId, nodeText: node.text, unit: node.unit, term: node.term, publishDate: date, created: nowStamp(), post: n,
       concepts: g('concepts'), procedures: g('procedures').slice(0, 80), levels: all('levels'), strategies: all('strategies'), resources: all('resources'),
-      timeslots: want.length || secOnly.length, slots: want.length ? want : null, sectionOnly: !want.length, objectives: all('objectives').length, global: g('global') === '1', semesterPlan: g('semester_plan') === '1',
+      timeslots: want.length || secOnly.length, slots: want.length ? want : null, sectionOnly: !want.length, more: more.length ? more : null, objectives: all('objectives').length, global: g('global') === '1', semesterPlan: g('semester_plan') === '1',
     };
     st.rows.push(row);
     post.outcome = amb ? 'saved-' + amb : 'saved';

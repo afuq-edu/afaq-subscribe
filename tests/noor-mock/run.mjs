@@ -512,9 +512,14 @@ T(10, 'Empty course, first save response lost (connection drop after the click):
 // OWN periods, period after period from the first school day; one prep holds the sections that reached the same session on
 // the same day. Checks, per section: every session once, in order, on exactly the next periods of its timetable; no period
 // used twice; no prep on a day without a period of its sections
-function checkPerSection(name, rows, periods) {
+function checkPerSection(name, rows0, periods) {
   const secOfSlot = (x) => String(x).split('|')[0];
   const sessOf = (r) => PKG.lessons.find((l) => norm(r.concepts).includes(norm(l.concepts)));
+  // 4.10.52 (owner 2026-11-17): ONE prep per session; sections that reach it on another day are extra publish dates of that prep
+  const perSess = rows0.reduce((m, r) => { const l = sessOf(r); if (l) m[l.id] = (m[l.id] || 0) + 1; return m; }, {});
+  check(Object.values(perSess).every((n) => n === 1), `${name}: one prep per session, whatever the sections' days (other days are added publish dates)`, JSON.stringify(Object.entries(perSess).filter(([, n]) => n > 1)));
+  check(rows0.some((r) => (r.more || []).length), `${name}: some prep carries an added publish date`, '');
+  const rows = rows0.flatMap((r) => [r, ...(r.more || []).map((m) => Object.assign(Object.create(r), { publishDate: m.date, slots: m.slots, more: null }))]);
   const secs = [...new Set(Object.values(periods).flatMap((v) => v.map(([sec]) => sec)))].sort();
   const day1 = PKG.lessons.map((l) => l.pubDate).sort()[0];
   const want = (sec, n) => { const out = []; for (let d = day1; out.length < n; d = addDaysIso(d, 1)) { const wd = new Date(d + 'T12:00').getDay(); const c = (periods[wd] || []).filter(([x]) => x === sec).reduce((a, [, k]) => a + k, 0); for (let i = 0; i < c && out.length < n; i++) out.push(d); } return out; };
@@ -1427,6 +1432,47 @@ T(49, '«الواجبات فقط» with «واجب لكل عنوان»: choosing
   });
   check(!bad.length, 'each: «واجب: <Noor lesson>», the typed date, five questions', bad.join('\n'));
   check(!noor.st.rows.some((r) => !r.preexisting), 'no prep saved');
+  check(!CALM_BAD_RE.test(s.head + ' ' + s.text), 'calm wording', `${s.head} | ${s.text}`);
+  return b;
+});
+
+T(50, 'Pick mode, sections on different days (owner 2026-11-17): section 1 has Sunday, section 2 Tuesday, both Wednesday; the teacher types Sunday — the prep is published to section 1 on Sunday AND gets an added publish date (Noor «إضافة») for section 2 on its next class day, Tuesday; every section gets every chosen session once, no period twice', async (env) => {
+  usePkg(derivePkg({ keep: range(1, 9) }));
+  const tree = treeFromPackage(PKG);
+  const periods = { 0: [['1', 1]], 1: [], 2: [['2', 1]], 3: [['1', 1], ['2', 1]], 4: [] };
+  const noor = env.noor({ tree, periods, takenSlots: 'disable' });
+  env.afaq.reset({ pkg: PKG });
+  const b = await env.launch(noor);
+  await wizardTo(b.pg, 'pick');
+  await b.pg.waitForSelector('input[data-k]', { timeout: 30000 });
+  const g = lessonGroups(PKG).find((x) => x.sessions.length >= 2);
+  check(!!g, 'a lesson of several sessions', '');
+  if (!g) return b;
+  const ses = g.sessions.slice(0, 2);
+  await b.pg.evaluate((k) => [...document.querySelectorAll('input[data-k]')].find((x) => x.dataset.k === k).click(), g.key); await sleep(400);
+  for (const l of g.sessions.slice(2)) await b.pg.evaluate((id) => document.querySelector(`input[data-s="${CSS.escape(id)}"]`).click(), l.id);
+  await sleep(300);
+  await b.pg.evaluate(([id, d]) => { const el = document.querySelector(`input[data-d="${id}"]`); el.value = d; el.dispatchEvent(new Event('change', { bubbles: true })); }, [ses[0].id, '2026-12-06']);
+  await sleep(300);
+  await b.pg.click('#wzLessGo');
+  const s = await waitDone(b.pg, 15 * 60000, 'pick, sections on different days');
+  const rows = noor.st.rows.filter((r) => !r.preexisting);
+  check(/تمت التعبئة بنجاح/.test(s.head), 'wizard shows «تمت التعبئة بنجاح»', `${s.head} | ${s.text}`);
+  check(rows.length === ses.length, `one prep per chosen session (${ses.length})`, fmtRows(rows));
+  const first = rows.find((r) => r.publishDate === '2026-12-06');
+  check(!!first && (first.slots || []).every((x) => x.startsWith('1|')) && (first.more || []).length === 1 && first.more[0].date === '2026-12-08' && first.more[0].slots.every((x) => x.startsWith('2|')),
+    'the Sunday prep: section 1 on Sunday + an added publish date for section 2 on Tuesday', first ? `${first.publishDate} ${first.slots} more ${JSON.stringify(first.more)}` : fmtRows(rows));
+  const pubs = rows.flatMap((r) => [{ r, d: r.publishDate, slots: r.slots || [] }, ...(r.more || []).map((m) => ({ r, d: m.date, slots: m.slots }))]);
+  const bad = [];
+  for (const sec of ['1', '2']) {
+    const got = pubs.filter((x) => x.slots.some((y) => y.startsWith(sec + '|'))).map((x) => x.r.id);
+    if (got.length !== ses.length || new Set(got).size !== got.length) bad.push(`section ${sec}: ${got.join(',')}`);
+  }
+  check(!bad.length, 'each section gets each chosen session exactly once', bad.join('\n'));
+  const seen = new Set(), clash = [];
+  pubs.forEach((x) => x.slots.forEach((y) => { const k = x.d + '|' + y; if (seen.has(k)) clash.push(k); seen.add(k); }));
+  check(!clash.length, 'no period holds two preps', clash.join(', '));
+  check(!noor.st.posts.some((p) => /invalid|dup/.test(p.outcome || '')), 'Noor never refused a save', noor.st.posts.map((p) => p.outcome).join(', '));
   check(!CALM_BAD_RE.test(s.head + ' ' + s.text), 'calm wording', `${s.head} | ${s.text}`);
   return b;
 });

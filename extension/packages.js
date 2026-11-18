@@ -1058,7 +1058,7 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
     items, skipFilled, publishDate: opts.publishDate || '', allRows: true,
     ensureChecks: (settings.ensureGlobal ? [GLOBAL_CHECK] : []).concat(settings.ensurePlan === false ? [] : [PLAN_CHECK]),
     checkTimeslots: settings.checkTimeslots !== false,
-    slotNo: opts.slotNo || 1, slotSpan: opts.slotSpan || 1, slotFull: opts.slotFull || null, allowSection: !!opts.allowSection, onlySecs: opts.onlySecs || null, secSlots: opts.secSlots || null,   // تحضير لكل حصة: رقم حصة هذا التحضير في يومه
+    slotNo: opts.slotNo || 1, slotSpan: opts.slotSpan || 1, slotFull: opts.slotFull || null, allowSection: !!opts.allowSection, onlySecs: opts.onlySecs || null, secSlots: opts.secSlots || null, moreDates: opts.moreDates || null,   // تحضير لكل حصة: رقم حصة هذا التحضير في يومه
     setWeek: settings.setWeek !== false,
     mark: { pkgId: pkg.id, lessonId: lesson.id, date: opts.publishDate || '', at: Date.now() },
   });
@@ -1072,6 +1072,8 @@ export async function fillNoor(tabId, pkg, lesson, opts = {}) {
   });
   if (settings.checkTimeslots !== false) report.push(Object.assign({ key: 'timeslots', name: 'الصفوف (الحصص)', short: 'الصفوف' }, merged.timeslots || { status: 'nolabel' }));
   if (merged.week) report.push(Object.assign({ key: 'week', name: 'أسبوع العمل', short: 'الأسبوع' }, merged.week));
+  // تواريخ النشر المضافة (شعب حصتها في يوم آخر): للعلم فقط — ما لم يُضف منها يأخذ تحضيرًا خاصًا به
+  if (merged.moreDates) report.push({ key: 'moreDates', name: 'تواريخ نشر أخرى', short: 'تواريخ أخرى', status: 'ok', dates: merged.moreDates.dates || [] });
   if (settings.ensureGlobal) report.push(Object.assign({ key: 'global', name: GLOBAL_CHECK, short: 'التعميم' }, merged['check:' + GLOBAL_CHECK] || { status: 'nolabel' }));
   // «خطة فصلية»: تُحدَّد حين تكون في النموذج؛ غيابها لا يمنع الحفظ ولا يُعرض
   if (merged['check:' + PLAN_CHECK] && merged['check:' + PLAN_CHECK].status === 'ok') report.push(Object.assign({ key: 'plan', name: PLAN_CHECK, short: 'الخطة الفصلية' }, merged['check:' + PLAN_CHECK]));

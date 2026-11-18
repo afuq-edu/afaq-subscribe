@@ -955,6 +955,7 @@ export function hadirEngine(action, payload) {
 
   // ---------- تاريخ النشر ----------
   const PUB_SEL = 'input[name*="publish_date"], input.pubDateClass, input[id^="publishdate"], input[placeholder*="تاريخ النشر"]';
+  const NO_PERIODS_RE = /لا\s*(?:يوجد|توجد)\s*فترات\s*زمنية/;
   function fmtDate(d, fmt) {
     const dd = String(d.getDate()).padStart(2, '0'), mm = String(d.getMonth() + 1).padStart(2, '0'), yy = String(d.getFullYear());
     return String(fmt || 'yyyy-mm-dd').toLowerCase().replace(/yyyy|yy/, yy).replace('mm', mm).replace('dd', dd);
@@ -969,8 +970,12 @@ export function hadirEngine(action, payload) {
     let inputs = allPub.filter((el) => isRendered(el));
     if (!inputs.length) inputs = allPub.slice(0, 1);
     if (!opts.allRows) inputs = inputs.slice(0, 1);
-    const out = [];
-    for (const el of inputs) {
+    return inputs.map((el) => setDateEl(el, iso, opts));
+  }
+  function setDateEl(el, iso, opts = {}) {
+    const [y, m, d] = iso.split('-').map(Number);
+    const date = new Date(y, m - 1, d, 8, 0, 0);
+    {
       const w = winOf(el);
       const $ = w.jQuery;
       let method = 'text';
@@ -996,10 +1001,9 @@ export function hadirEngine(action, payload) {
       if (!el.value) setNative(el, fmtDate(date, opts.format));
       fire(el, 'input', 'InputEvent'); fire(el, 'change'); fire(el, 'blur', 'FocusEvent');
       try { if ($) $(el).trigger('change'); } catch (e) {}
-      out.push({ value: el.value, method });
       flash({ el });
+      return { value: el.value, method };
     }
-    return out;
   }
 
   if (action === 'setPublishDate') {
@@ -1451,6 +1455,7 @@ export function hadirEngine(action, payload) {
           const pubs = Array.from(d.doc.querySelectorAll(PUB_SEL)).filter((el) => isRendered(el));
           for (const pi of pubs) {
             const m = (pi.id || '').match(/(\d+)$/) || (pi.name || '').match(/date(\d+)/);
+            if (m && m[1] !== '1' && /publishdate-|\[date\d+\]/.test((pi.id || '') + (pi.name || ''))) continue;   // التواريخ المضافة: أسبوعها في خطوتها
             const ws = m ? (d.doc.getElementById('week_id-' + m[1]) || d.doc.querySelector('select[name*="date' + m[1] + '][week_id]"]')) : null;
             if (!ws) continue;
             const opt = Array.from(ws.options).find((o) => {
@@ -1477,6 +1482,8 @@ export function hadirEngine(action, payload) {
           for (const d of docs) {
             d.doc.querySelectorAll('input[type="checkbox"].lecture_timeslots, input[type="checkbox"][name*="[timeslot]"], input[type="checkbox"][name*="[section]"]').forEach((el) => {
               if ((el.disabled && !withOff) || isSec(el) !== !!sec) return;
+              const dm = (el.name || '').match(/\[date(\d+)\]/);
+              if (dm && dm[1] !== '1') return;   // حصص التواريخ المضافة (date2…) لها خطوتها
               const lbl = ownLabel(el);
               if (isRendered(el) || (lbl && isRendered(lbl))) out.push(el);
             });
@@ -1547,6 +1554,64 @@ export function hadirEngine(action, payload) {
             results.timeslots = { status: hits + already === pick.length ? 'ok' : 'partial', how: 'checks', hits, already, total: pick.length, groups: cnt, cap, slotNo: k };
           }
         }
+      }
+      // تواريخ نشر أخرى في التحضير نفسه (المالك 2026-11-17): شعب حصتها في يوم آخر. زر «إضافة» في نور يفتح تاريخًا جديدًا
+      // (حتى ٢٠، ولا يتكرر التاريخ) يحمّل حصص يومه — لكل شعبة مطلوبة أول حصة حرة لها. تاريخ لا حصة حرة فيه لشعبه يُمسح ويُبلَّغ عنه
+      if (action === 'noor' && Array.isArray(payload.moreDates) && payload.moreDates.length && results.timeslots && /^(ok|partial)$/.test(results.timeslots.status) && results.timeslots.how !== 'section') {
+        const host = (docs.find((d) => d.doc.getElementById('publishdate-1')) || docs[0]).doc;
+        const secOf2 = (el) => { const l = ownLabel(el); const t = clean((l || {}).textContent || el.value || ''); const parts = t.split(/\s+-\s+/); return parts.length >= 4 ? parts.slice(0, -1).join(' - ') : t; };
+        const blockOf = (j) => { const el = host.getElementById('publishdate-' + j); return el ? el.closest('.default_list_container') || el.parentElement.parentElement : null; };
+        const out = [];
+        let j = 2;
+        for (const md of payload.moreDates) {
+          // تعبئة ثانية للنموذج نفسه: التاريخ المضاف من قبل يُعاد استعماله (نور لا تقبل التاريخ مرتين)
+          let again = 0;
+          for (let q = 2; q <= 20; q++) { const x = host.getElementById('publishdate-' + q); if (x && x.value === md.date) { again = q; break; } }
+          while (!again && j <= 20 && host.getElementById('publishdate-' + j) && String(host.getElementById('publishdate-' + j).value || '').trim()) j++;
+          if (again) j = again;
+          const pub = host.getElementById('publishdate-' + j);
+          if (!pub || j > 20) { out.push({ date: md.date, ok: false, why: 'noblock' }); continue; }
+          const blk = blockOf(j);
+          if (!isRendered(pub)) {
+            const add = Array.from(host.querySelectorAll('a.add_new_button')).find((a) => /إضافة/.test(a.textContent || '')) || host.querySelector('a.add_new_button');
+            if (add) { try { add.click(); } catch (e) {} }
+            await waitDom(host.body, () => isRendered(pub), { timeout: 1200, poll: 100 });
+            if (!isRendered(pub) && blk) blk.style.display = 'block';
+          }
+          const boxesIn = () => (blk ? Array.from(blk.querySelectorAll('input[type="checkbox"].lecture_timeslots')) : []);
+          const r = again ? { value: pub.value } : setDateEl(pub, md.date, payload);
+          await waitDom(document.body, () => alertsNow().errs.length > 0, { timeout: 400 });
+          if (alertsNow().errs.length || !r.value) { try { host.querySelectorAll('.swal2-popup .swal2-confirm').forEach((b) => { if (isRendered(b)) b.click(); }); } catch (e) {} out.push({ date: md.date, ok: false, why: 'date' }); continue; }
+          // أسبوع العمل لهذا التاريخ
+          const ws = host.getElementById('week_id-' + j) || host.querySelector('select[name*="date' + j + '][week_id]"]');
+          if (ws) {
+            const opt = Array.from(ws.options).find((o) => { const ds = (o.textContent.match(/\d{4}-\d{2}-\d{2}/g) || []); return ds.length >= 2 && ds[0] <= md.date && md.date <= ds[1]; });
+            if (opt) { setNative(ws, opt.value); opt.selected = true; fire(ws, 'change'); jqRefresh(ws); const st = ws.nextElementSibling; if (st && /select-styled|select-selected/.test(st.className || '')) st.textContent = opt.textContent.trim(); }
+          }
+          const t0 = Date.now();
+          await waitDom(document.body, () => boxesIn().length || (Date.now() - t0 > 2000 && NO_PERIODS_RE.test((blk && blk.textContent) || '')), { timeout: 6000, quiet: 300 });
+          const els = boxesIn().filter((el) => !/\[section\]/.test(el.name || ''));
+          const want = Array.isArray(md.secs) ? md.secs : [];
+          const pick = [], lacking = [];
+          for (const sec of want) {
+            const open = els.filter((el) => !el.disabled && secOf2(el) === sec);
+            const k = md.secSlots && md.secSlots[sec] ? Math.max(0, +md.secSlots[sec][0] || 0) : 0;
+            const el = open[k] || open[0];
+            if (el) pick.push(el); else lacking.push(sec);
+          }
+          if (!pick.length || lacking.length) {
+            // لا يُترك تاريخ ناقص في التحضير: يُمسح وتنتقل شعبه إلى تحضير خاص بها
+            for (const el of pick) if (el.checked) { el.checked = false; fire(el, 'change'); }
+            setNative(pub, ''); fire(pub, 'change'); try { const $ = winOf(pub).jQuery; if ($) $(pub).trigger('change'); } catch (e) {}
+            out.push({ date: md.date, ok: false, why: 'noslot', lacking });
+            continue;
+          }
+          let hits = 0;
+          for (const c of pick) if (await checkOne(c)) hits++;
+          out.push({ date: md.date, ok: hits === pick.length, secs: want, block: j });
+          j++;
+        }
+        results.moreDates = { status: out.every((x) => x.ok) ? 'ok' : out.some((x) => x.ok) ? 'partial' : 'fail', dates: out };
       }
       // خيارات يجب أن تكون محددة دائمًا (مثل: تعميم التحضير على كافة الجداول)
       if (action === 'noor' && (payload.ensureChecks || []).length) {

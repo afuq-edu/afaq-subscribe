@@ -844,7 +844,7 @@ async function finishFlow(F, b, noor, t0) {
 
 // ---------- main ----------
 const { files, skipped } = listPackages();
-if (FORCE_FAULT && !FAULTS.includes(FORCE_FAULT)) { console.log(`unknown fault «${FORCE_FAULT}» — one of ${FAULTS.join(', ')}`); process.exit(2); }
+if (FORCE_FAULT && ![...FAULTS, 'skill'].includes(FORCE_FAULT)) { console.log(`unknown fault «${FORCE_FAULT}» — one of ${FAULTS.join(', ')}`); process.exit(2); }
 let jobs = files.map((f, i) => Object.assign(f, { i, fault: FORCE_FAULT || FAULTS[i % FAULTS.length] }));
 if (FORCE_FAULT === 'skill') jobs = jobs.filter((j) => /^ar-\d/.test(j.id));   // «تحضير لكل مهارة» exists for Arabic subjects only
 if (ONLY.length) jobs = jobs.filter((j) => ONLY.some((o) => j.id === o || j.rel.includes(o)));
