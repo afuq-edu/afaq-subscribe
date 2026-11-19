@@ -167,7 +167,10 @@
 <link rel="stylesheet" href="theme.css">
 </head>
 <body class="wiz">
-<header class="hero" role="banner" aria-label="حاضر — أداة التحضير الذكي لمنصة نور"><h1>حاضر</h1><i class="tw t1"></i><i class="tw t2"></i><i class="tw t3"></i><small id="ver"></small></header>
+<header class="hd">
+  <div class="brand"><div class="brand-icon"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M6 10c6-1 10 1 14 5v18c-4-4-8-6-14-5V10Z" fill="#aebbe0"/><path d="M20 15c4-4 8-6 14-5v18c-6-1-10 1-14 5V15Z" fill="#6478b5"/><path d="m23 19 3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h1>حاضر</h1><p>أداة التحضير الذكي لمنصة نور</p></div></div>
+  <div class="version"><span>الإصدار</span><b id="ver"></b></div>
+</header>
 <div class="upd-bar" id="updBar" hidden><span id="updText"></span><a class="btn sm primary" id="updGo" target="_blank" rel="noopener">حدّث الآن</a></div>
 <main>
   <div class="msg" id="topMsg"></div>
@@ -244,14 +247,22 @@
     <div class="lint" id="lint" hidden></div>
   </section>
 
-  <section class="card" id="stepsCard">
-    <div class="steps" id="steps"></div>
-    <div class="prog"><i id="prog"></i></div>
-  </section>
-
-  <section class="card" id="nowCard" hidden>
-    <div class="now" id="nowBox"><b id="nowHead"></b><p id="nowText"></p><div class="acts" id="nowActs" hidden></div></div>
-    <div class="acts"><button class="btn primary" id="goBtn" hidden>✓ الخطة مناسبة — ابدأ التعبئة</button><button class="btn danger" id="stopBtn" hidden>■ إيقاف</button><button class="btn primary" id="wzResume" hidden>▶ أكمل من حيث توقف</button><button class="btn primary" id="wzMore" hidden>اختر درسًا آخر</button><button class="btn" id="wzAgain" hidden>رجوع للبداية</button></div>
+  <section class="workspace" id="workspace" aria-label="مسار التحضير">
+    <div class="workflow" id="stepsCard">
+      <div class="section-label"><span>مراحل التحضير</span><span class="subtle" id="stepSummary"></span></div>
+      <ol class="steps" id="steps"></ol>
+    </div>
+    <div class="wmain">
+      <div class="stagebar"><span class="stagelabel" id="stageLbl"></span><div class="progressgroup"><div class="track" role="progressbar" aria-label="تقدم التعبئة" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="prog"></i></div><span id="progPct" class="percent" aria-hidden="true"></span></div></div>
+      <article class="statuscard" id="nowCard" hidden>
+        <div class="content">
+          <span class="status" id="nowBadge"><i class="st-ic" aria-hidden="true"></i><span class="b-run">قيد التنفيذ</span><span class="b-ok">اكتمل</span><span class="b-ready">جاهز للإكمال</span><span class="b-wait">بانتظارك</span></span>
+          <div class="now" id="nowBox"><b id="nowHead"></b><p id="nowText"></p><div class="acts" id="nowActs" hidden></div></div>
+          <div class="acts" id="nowMain"><button class="btn primary" id="goBtn" hidden>✓ الخطة مناسبة — ابدأ التعبئة</button><button class="btn danger" id="stopBtn" hidden>■ إيقاف</button><button class="btn primary" id="wzResume" hidden>▶ أكمل من حيث توقف</button><button class="btn primary" id="wzMore" hidden>اختر درسًا آخر</button><button class="btn" id="wzAgain" hidden>رجوع للبداية</button></div>
+        </div>
+        <svg class="illustration" viewBox="0 0 280 216" aria-hidden="true"><defs><linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#dfe4f3" stop-opacity=".8"/></linearGradient><linearGradient id="back" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e5e6f5"/><stop offset="1" stop-color="#c9d4eb"/></linearGradient><linearGradient id="badgegrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8e9bc9"/><stop offset="1" stop-color="#6478b5"/></linearGradient><filter id="shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="10" stdDeviation="11" flood-color="#687ba6" flood-opacity=".14"/></filter></defs><ellipse cx="140" cy="187" rx="96" ry="14" fill="#dce2ef" opacity=".36"/><circle cx="142" cy="103" r="89" fill="#e9ecf6" opacity=".62"/><rect x="100" y="37" width="105" height="139" rx="14" fill="url(#back)" stroke="#fff" transform="rotate(12 152 106)"/><rect x="73" y="28" width="110" height="151" rx="14" fill="url(#glass)" stroke="#fff" stroke-width="1.5" transform="rotate(-9 128 103)" filter="url(#shadow)"/><g transform="rotate(-9 128 103)"><rect x="89" y="49" width="37" height="7" rx="3.5" fill="#aab6d6"/><rect x="89" y="64" width="66" height="4" rx="2" fill="#d1d8ea"/><g fill="none" stroke="#788dbb" stroke-width="1.5"><rect x="90" y="83" width="13" height="13" rx="4"/><rect x="90" y="106" width="13" height="13" rx="4"/><rect x="90" y="129" width="13" height="13" rx="4"/><path d="m93 89 3 3 5-6m-8 26 3 3 5-6m-8 26 3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></g><g fill="#c4cee3"><rect x="110" y="87" width="49" height="5" rx="2.5"/><rect x="110" y="110" width="41" height="5" rx="2.5"/><rect x="110" y="133" width="45" height="5" rx="2.5"/></g></g><rect x="157" y="125" width="55" height="55" rx="17" fill="url(#badgegrad)" stroke="#fff" stroke-width="2" filter="url(#shadow)"/><path d="m174 151 8 8 15-17" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="218" cy="56" r="4" fill="#b3bdda" opacity=".7"/><circle cx="54" cy="128" r="3" fill="#c3cce4"/></svg>
+      </article>
+    </div>
   </section>
 
   <section class="card" id="planCard" hidden>

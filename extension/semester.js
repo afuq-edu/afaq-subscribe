@@ -94,28 +94,43 @@ let running = false, stopFlag = false;
 const stopHooks = [];
 let askCur = null, logN = 0;
 const diag = { log: [] };   // تقرير التشغيل (يُنسخ بزر «نسخ تقرير التشغيل» ليُرسل للمطوّر)
-// أيقونات خطوات المسار (كحلي وذهبي)
-const SVG = (b) => `<svg viewBox="0 0 32 32" fill="none" stroke="#25357a" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">${b}</svg>`;
+// أيقونات مراحل التحضير: خطية بلون واحد (تصميم المالك 2026-11-19 «hader-refined»)
+const LINE = (b, size = 19, sw = 1.6) => `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${b}</svg>`;
 const STEP_IC = {
-  home: SVG('<path d="M5 15 16 6l11 9" stroke="#c9a043" stroke-width="2.4"/><path d="M8 13v13h16V13" fill="#f6e3b0"/><path d="M13.5 26v-7h5v7" fill="#fff"/>'),
-  course: SVG('<path d="m16 5 11 5.5L16 16 5 10.5z" fill="#dfe4f7"/><path d="m5 15.5 11 5.5 11-5.5" /><path d="m5 20.5 11 5.5 11-5.5" stroke="#c9a043"/>'),
-  list: SVG('<path d="M16 9c-3-2-7-2.5-11-2v17c4-.5 8 0 11 2 3-2 7-2.5 11-2V7c-4-.5-8 0-11 2z" fill="#eef1fb"/><path d="M16 9v17" stroke="#c9a043"/>'),
-  form: SVG('<path d="M8 4h11l6 6v18H8z" fill="#f6e3b0" stroke="#c9a043"/><path d="M19 4v6h6" stroke="#c9a043"/><path d="M16.5 14v9M12 18.5h9"/>'),
-  tree: SVG('<rect x="5" y="6" width="5" height="21" rx="1" fill="#dfe4f7"/><rect x="11" y="9" width="5" height="18" rx="1" fill="#f6e3b0" stroke="#c9a043"/><path d="m18 10 4.5-1.3 4.5 16.6-4.5 1.3z" fill="#dfe4f7"/>'),
-  fill: SVG('<path d="M9 23a6 6 0 0 1-.6-12 8 8 0 0 1 15.4 2A5 5 0 0 1 23 23" fill="#eef1fb"/><path d="M16 15v10m-3.5-3.5L16 25l3.5-3.5" stroke="#c9a043" stroke-width="2.2"/>'),
+  home: '<path d="m3 10 9-7 9 7v10h-6v-6H9v6H3z"/>',
+  course: '<path d="m12 3 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 16l9 5 9-5"/>',
+  list: '<path d="M12 5C9 3 6 3 3 4v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15"/>',
+  form: '<path d="M13 3H5v18h14V9l-6-6Zm0 0v6h6M9 14h6m-3-3v6"/>',
+  tree: '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/>',
+  fill: '<path d="M5 3h12l4 4v14H3V3h2Zm2 0v7h10V3M7 21v-7h10v7"/>',
 };
+const CHECK = '<path d="m5 12 4 4L19 6"/>';
 const STEPS = [['home', 'الرئيسية'], ['course', 'بطاقة المادة'], ['list', 'تحضير الدروس'], ['form', 'إضافة تحضير'], ['tree', 'دروس الفصل'], ['fill', 'التعبئة والحفظ']];
 
 // ================= واجهة =================
 function msg(type, html) { const el = $('topMsg'); el.className = 'msg show ' + type; el.innerHTML = html; }
 function setPhase(p) {
-  const idx = STEPS.findIndex(([k]) => k === p);
-  $('steps').innerHTML = STEPS.map(([k, n], i) => `<span class="step ${i < idx ? 'done' : i === idx ? 'on' : ''}${i === STEPS.length - 1 ? ' last' : ''}">${STEP_IC[k] || ''}<b>${n}</b>${i < idx ? '<i class="tick">✓</i>' : ''}</span>`).join('');
+  const idx = STEPS.findIndex(([k]) => k === p), pre = STEPS.slice(0, -1), last = STEPS[STEPS.length - 1];
+  // المراحل الخمس التمهيدية في صف موصول بخط، و«التعبئة والحفظ» شارةٌ بجانب شريط التقدم
+  $('steps').innerHTML = pre.map(([k, n], i) => `<li class="step ${i < idx ? 'done' : i === idx ? 'on' : ''}"${i === idx ? ' aria-current="step"' : ''}><div class="step-icon">${LINE(STEP_IC[k])}${i < idx ? `<span class="check">${LINE(CHECK, 10, 2.4)}</span>` : ''}</div><span class="name">${n}</span></li>`).join('');
+  const done = idx >= pre.length;
+  $('stepSummary').innerHTML = idx < 0 ? '' : done ? LINE(CHECK, 14, 2) + 'اكتملت المراحل التمهيدية' : esc(STEPS[idx][1]);
+  $('stepSummary').classList.toggle('done', done);
+  $('stageLbl').innerHTML = LINE(STEP_IC[last[0]], 15) + last[1];
+  $('stageLbl').classList.toggle('on', done);
+}
+// نسبة التقدم بجانب الشريط: تُقرأ من عرض الشريط نفسه أينما غُيّر
+function watchProg() {
+  const bar = $('prog'), out = $('progPct');
+  const show = () => { const v = Math.round(parseFloat(bar.style.width) || 0); out.textContent = toAr(v) + '٪'; bar.parentElement.setAttribute('aria-valuenow', v); };
+  new MutationObserver(show).observe(bar, { attributes: true, attributeFilter: ['style'] });
+  show();
 }
 function setBox(kind, head, text, buttons = []) {
   if (WIZ.on && (kind === 'warn' || kind === 'bad')) kind = buttons.length ? 'info' : 'run';
   $('nowCard').hidden = false;
   $('nowBox').className = 'now ' + kind;
+  $('nowCard').dataset.kind = kind;
   // علامة «✓» في أول العنوان تبقى في النص (للقارئ الآلي) وتُرسم دائرةً خضراء في الطابع الجديد
   $('nowHead').innerHTML = (kind === 'run' ? '<span class="spin"></span>' : '') + (kind === 'ok' ? esc(head).replace(/^✓ /, '<span class="vh">✓ </span>') : esc(head));
   $('nowText').textContent = text || '';
@@ -3394,7 +3409,8 @@ function openReport() {
 
 // ================= التهيئة =================
 async function init() {
-  $('ver').textContent = 'الإصدار ' + chrome.runtime.getManifest().version;
+  $('ver').textContent = chrome.runtime.getManifest().version;
+  watchProg();
   const r = await getPackages();
   packages = r.packages; state = r.state;
   settings = await getSettings();
