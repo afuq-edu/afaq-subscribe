@@ -13,6 +13,7 @@ import {
  joinRuns, lessonSkills, isArabicPkg, stripSkillTag } from './packages.js';
 import { unitNum, bestTreeLesson, closestTreeLesson, kwScore, titleSim, swappedPair, nameOnly, keywords } from './match.js';
 import { diffDays, addDays } from './dates.js';
+import { tile, subjectIcon } from './ui-icons.js';
 import { roomTitle, roomInstructions, topicTitle, topicHtml, discussQuestions, playLink, roomsRead, roomCreateFill, topicsRead, topicFill } from './rooms.js';
 import { YT_ORIGIN, lessonTopic, pickVideo, ytSearch, ytUrl, vidLibRead, vidFill } from './videos.js';
 import { buildScorm, scormFill, toB64 } from './scorm.js';
@@ -93,19 +94,45 @@ let running = false, stopFlag = false;
 const stopHooks = [];
 let askCur = null, logN = 0;
 const diag = { log: [] };   // تقرير التشغيل (يُنسخ بزر «نسخ تقرير التشغيل» ليُرسل للمطوّر)
+// أيقونات مراحل التحضير: خطية بلون واحد (تصميم المالك 2026-11-19 «hader-refined»)
+const LINE = (b, size = 19, sw = 1.6) => `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${b}</svg>`;
+const STEP_IC = {
+  home: '<path d="m3 10 9-7 9 7v10h-6v-6H9v6H3z"/>',
+  course: '<path d="m12 3 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 16l9 5 9-5"/>',
+  list: '<path d="M12 5C9 3 6 3 3 4v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15"/>',
+  form: '<path d="M13 3H5v18h14V9l-6-6Zm0 0v6h6M9 14h6m-3-3v6"/>',
+  tree: '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/>',
+  fill: '<path d="M5 3h12l4 4v14H3V3h2Zm2 0v7h10V3M7 21v-7h10v7"/>',
+};
+const CHECK = '<path d="m5 12 4 4L19 6"/>';
 const STEPS = [['home', 'الرئيسية'], ['course', 'بطاقة المادة'], ['list', 'تحضير الدروس'], ['form', 'إضافة تحضير'], ['tree', 'دروس الفصل'], ['fill', 'التعبئة والحفظ']];
 
 // ================= واجهة =================
 function msg(type, html) { const el = $('topMsg'); el.className = 'msg show ' + type; el.innerHTML = html; }
 function setPhase(p) {
-  const idx = STEPS.findIndex(([k]) => k === p);
-  $('steps').innerHTML = STEPS.map(([, n], i) => `<span class="step ${i < idx ? 'done' : i === idx ? 'on' : ''}">${i < idx ? '✓ ' : ''}${n}</span>`).join('');
+  const idx = STEPS.findIndex(([k]) => k === p), pre = STEPS.slice(0, -1), last = STEPS[STEPS.length - 1];
+  // المراحل الخمس التمهيدية في صف موصول بخط، و«التعبئة والحفظ» شارةٌ بجانب شريط التقدم
+  $('steps').innerHTML = pre.map(([k, n], i) => `<li class="step ${i < idx ? 'done' : i === idx ? 'on' : ''}"${i === idx ? ' aria-current="step"' : ''}><div class="step-icon">${LINE(STEP_IC[k])}${i < idx ? `<span class="check">${LINE(CHECK, 10, 2.4)}</span>` : ''}</div><span class="name">${n}</span></li>`).join('');
+  const done = idx >= pre.length;
+  $('stepSummary').innerHTML = idx < 0 ? '' : done ? LINE(CHECK, 14, 2) + 'اكتملت المراحل التمهيدية' : esc(STEPS[idx][1]);
+  $('stepSummary').classList.toggle('done', done);
+  $('stageLbl').innerHTML = LINE(STEP_IC[last[0]], 15) + last[1];
+  $('stageLbl').classList.toggle('on', done);
+}
+// نسبة التقدم بجانب الشريط: تُقرأ من عرض الشريط نفسه أينما غُيّر
+function watchProg() {
+  const bar = $('prog'), out = $('progPct');
+  const show = () => { const v = Math.round(parseFloat(bar.style.width) || 0); out.textContent = toAr(v) + '٪'; bar.parentElement.setAttribute('aria-valuenow', v); };
+  new MutationObserver(show).observe(bar, { attributes: true, attributeFilter: ['style'] });
+  show();
 }
 function setBox(kind, head, text, buttons = []) {
   if (WIZ.on && (kind === 'warn' || kind === 'bad')) kind = buttons.length ? 'info' : 'run';
   $('nowCard').hidden = false;
   $('nowBox').className = 'now ' + kind;
-  $('nowHead').innerHTML = (kind === 'run' ? '<span class="spin"></span>' : '') + esc(head);
+  $('nowCard').dataset.kind = kind;
+  // علامة «✓» في أول العنوان تبقى في النص (للقارئ الآلي) وتُرسم دائرةً خضراء في الطابع الجديد
+  $('nowHead').innerHTML = (kind === 'run' ? '<span class="spin"></span>' : '') + (kind === 'ok' ? esc(head).replace(/^✓ /, '<span class="vh">✓ </span>') : esc(head));
   $('nowText').textContent = text || '';
   $('nowText').hidden = !text;
   const acts = $('nowActs');
@@ -3382,7 +3409,8 @@ function openReport() {
 
 // ================= التهيئة =================
 async function init() {
-  $('ver').textContent = 'الإصدار ' + chrome.runtime.getManifest().version;
+  $('ver').textContent = chrome.runtime.getManifest().version;
+  watchProg();
   const r = await getPackages();
   packages = r.packages; state = r.state;
   settings = await getSettings();
@@ -3673,11 +3701,19 @@ function wzGo(step, push = true) {
 }
 function wzBack() { const s = wz.hist.pop(); if (s) { wz.step = s; wzMsg('', ''); wzRender(); } }
 function wzCards(list, from = 0) {
-  return `<div class="wz-cards">${list.map((c, i) => `<button type="button" class="wz-card ${c.on ? 'on' : ''}" data-i="${from + i}" ${c.disabled ? 'disabled' : ''}><b>${c.title}</b>${c.sub ? `<small>${c.sub}</small>` : ''}</button>`).join('')}</div>`;
+  return `<div class="wz-cards">${list.map((c, i) => `<button type="button" class="wz-card ${c.on ? 'on' : ''}${c.ic ? ' has-ic' : ''}" data-i="${from + i}" ${c.disabled ? 'disabled' : ''}>${tile(c.ic)}<b>${c.title}</b>${c.sub ? `<small>${c.sub}</small>` : ''}</button>`).join('')}</div>`;
 }
 function wzBind(list) { $('wzBody').querySelectorAll('.wz-card').forEach((b) => { b.onclick = () => { if (!wz.busy) list[+b.dataset.i].go(); }; }); }
 
+let wzShown = '';   // آخر خطوة رُسمت: حركة الدخول عند تغيّر الخطوة فقط، لا عند كل نقرة داخلها
+function wzEnter() {
+  if (wzShown === wz.step) return;
+  wzShown = wz.step;
+  const b = $('wzBody'); b.classList.remove('enter'); void b.offsetWidth; b.classList.add('enter');
+  setTimeout(() => b.classList.remove('enter'), 700);
+}
 function wzRender() {
+  wzEnter();
   const i = WZ_STEPS.indexOf(wz.step === 'name' || wz.step === 'style' ? 'shift' : wz.step);
   $('wzDots').innerHTML = (['term', 'hw', 'rooms', 'video', 'scorm'].includes(wz.mode) ? WZ_STEPS.slice(0, 4) : WZ_STEPS).map((_, k) => `<i class="${k < i ? 'done' : k === i ? 'on' : ''}"></i>`).join('');
   $('wzBack').hidden = !wz.hist.length || ['pay', 'wait'].includes(wz.step);
@@ -3704,15 +3740,15 @@ function wzRender() {
       chrome.permissions.request({ origins: [YT_ORIGIN] }).then((ok) => { if (ok) go(); else wzMsg('ok', 'البحث في يوتيوب يحتاج موافقتك. اضغط اختيارك من جديد ثم «سماح».'); }).catch(() => go());
     };
     list = has('prep') ? [
-      { title: 'أختار الدروس بنفسي', sub: 'تختار الدرس وتكتب تاريخه', on: wz.mode === 'pick', go: () => start('pick') },
-      { title: 'تحضير الفصل كاملًا', sub: 'كل دروس الفصل، درسًا بعد درس', on: wz.mode === 'term', go: () => start('term') },
+      { ic: 'pick', title: 'أختار الدروس بنفسي', sub: 'تختار الدرس وتكتب تاريخه', on: wz.mode === 'pick', go: () => start('pick') },
+      { ic: 'term', title: 'تحضير الفصل كاملًا', sub: 'كل دروس الفصل، درسًا بعد درس', on: wz.mode === 'term', go: () => start('term') },
     ]
-      : has('hw') ? [{ title: 'أختار الدروس بنفسي', sub: 'تختار الدروس وتاريخي النشر والتسليم', on: wz.mode === 'hw', go: () => start('hw') }]
-      : exs.length === 1 ? [{ title: EX[exs[0]][0], sub: EX[exs[0]][1], on: wz.mode === exs[0], go: () => start(exs[0]) }]
-      : exs.length ? [{ title: 'اختر المادة', sub: exs.map((k) => EX[k][0]).join(' · '), on: exs.includes(wz.mode), go: () => start(exs[0]) }] : [];
+      : has('hw') ? [{ ic: 'hw', title: 'أختار الدروس بنفسي', sub: 'تختار الدروس وتاريخي النشر والتسليم', on: wz.mode === 'hw', go: () => start('hw') }]
+      : exs.length === 1 ? [{ ic: exs[0], title: EX[exs[0]][0], sub: EX[exs[0]][1], on: wz.mode === exs[0], go: () => start(exs[0]) }]
+      : exs.length ? [{ ic: 'book', title: 'اختر المادة', sub: exs.map((k) => EX[k][0]).join(' · '), on: exs.includes(wz.mode), go: () => start(exs[0]) }] : [];
     const plus = ((has('prep') || has('hw')) && exs.length ? `<p class="wz-note" id="wzPlus">ومعه في التشغيل نفسه: ${exs.map((k) => EX[k][0]).join(' · ')}</p>` : '')
       + (has('hw') ? wzHwPerSeg() : '');
-    body.innerHTML = `<p class="wz-note">اختر خدمة أو أكثر، وتُنجز كلها في تشغيل واحد.</p><div class="wz-seg multi" role="group">${SVC_KEYS.map((k) => `<button type="button" class="wz-seg-b ${has(k) ? 'on' : ''}" data-svc="${k}" id="wzSvc-${k}" aria-pressed="${has(k)}" ${can(k) ? '' : 'disabled title="غير مشمولة في اشتراكك"'}>${has(k) ? '✓ ' : ''}${SVC_NAME[k]}</button>`).join('')}</div>${plus}`
+    body.innerHTML = `<p class="wz-note">اختر خدمة أو أكثر، وتُنجز كلها في تشغيل واحد.</p><div class="wz-seg multi" role="group">${SVC_KEYS.map((k) => `<button type="button" class="wz-seg-b ${has(k) ? 'on' : ''}" data-svc="${k}" id="wzSvc-${k}" aria-pressed="${has(k)}" ${can(k) ? '' : 'disabled title="غير مشمولة في اشتراكك"'}>${tile(k)}${has(k) ? '✓ ' : ''}${SVC_NAME[k]}</button>`).join('')}</div>${plus}`
       + (list.length ? wzCards(list).replace('wz-cards', 'wz-cards big') : '<p class="wz-note">اختر خدمة واحدة على الأقل.</p>');
     wzHwPerBind(body, wzRender);
     body.querySelectorAll('.wz-seg-b[data-svc]').forEach((bt) => { bt.onclick = () => {
@@ -3727,9 +3763,9 @@ function wzRender() {
     const gs = [...new Set(offers.map((o) => o.grade))].sort((a, b) => a - b);
     if (!gs.length) { body.innerHTML = '<p class="empty">لا مواد جاهزة الآن. تأكد من اتصالك بالإنترنت ثم أعد فتح هذه النافذة.</p>'; return; }
     const nSub = (n) => (n === 1 ? 'مادة واحدة' : n === 2 ? 'مادتان' : n <= 10 ? toAr(n) + ' مواد' : toAr(n) + ' مادة');
-    list = gs.map((g) => ({ title: gradeName(g), sub: nSub(new Set(offers.filter((o) => o.grade === g).map((o) => o.subject)).size), on: g === wz.grade, go: () => { wz.grade = g; wzGo('subject'); } }));
+    list = gs.map((g) => ({ ic: '#' + toAr(g), title: gradeName(g), sub: nSub(new Set(offers.filter((o) => o.grade === g).map((o) => o.subject)).size), on: g === wz.grade, go: () => { wz.grade = g; wzGo('subject'); } }));
     // موادك في نور (من بطاقات الصفحة الرئيسية): اختيار بلمسة واحدة
-    const mine = wzFromNoor(offers.filter((o) => offerAllows(o, wz.mode))).map((m) => ({ title: esc(m.subject), sub: gradeName(m.grade), go: () => {
+    const mine = wzFromNoor(offers.filter((o) => offerAllows(o, wz.mode))).map((m) => ({ ic: subjectIcon(m.subject), title: esc(m.subject), sub: gradeName(m.grade), go: () => {
       wz.grade = m.grade; wz.subject = m.subject;
       const fit = offers.some((o) => o.grade === m.grade && o.subject === m.subject && wz.shift && fitsShift(o.shift, wz.shift));
       if (fit) { wz.hist.push('grade', 'subject'); wz.step = 'shift'; wzSavePrefs(); wzResolve(); } else wzGo('shift');
@@ -3741,12 +3777,12 @@ function wzRender() {
     head.textContent = `اختر المادة — ${gradeName(wz.grade)}`;
     const subs = [...new Set(offers.filter((o) => o.grade === wz.grade).map((o) => o.subject))];
     list = subs.map((sj) => { const o = offers.find((x) => x.grade === wz.grade && x.subject === sj && x.src === 'lib') || offers.find((x) => x.grade === wz.grade && x.subject === sj); const okMode = offers.some((x) => x.grade === wz.grade && x.subject === sj && offerAllows(x, wz.mode));
-      return { title: esc(sj), sub: wzBadge(o), on: sj === wz.subject, disabled: !okMode, go: () => { wz.subject = sj; wzGo('shift'); } }; });
+      return { ic: subjectIcon(sj), title: esc(sj), sub: wzBadge(o), on: sj === wz.subject, disabled: !okMode, go: () => { wz.subject = sj; wzGo('shift'); } }; });
     body.innerHTML = wzCards(list);
   } else if (wz.step === 'shift') {
     head.textContent = 'نوع مدرستك';
     const mine = offers.filter((o) => o.grade === wz.grade && o.subject === wz.subject && offerAllows(o, wz.mode));
-    list = ['one', 'two'].map((k) => { const has = mine.some((o) => fitsShift(o.shift, k)); return { title: SHIFT[k].name, sub: has ? `الحصة ${toAr(SHIFT[k].min)} دقيقة` : 'تحضير هذا النوع غير جاهز بعد', disabled: !has, on: k === wz.shift, go: () => { wz.shift = k; wzSavePrefs(); wzResolve(); } }; });
+    list = ['one', 'two'].map((k) => { const has = mine.some((o) => fitsShift(o.shift, k)); return { ic: k, title: SHIFT[k].name, sub: has ? `الحصة ${toAr(SHIFT[k].min)} دقيقة` : 'تحضير هذا النوع غير جاهز بعد', disabled: !has, on: k === wz.shift, go: () => { wz.shift = k; wzSavePrefs(); wzResolve(); } }; });
     body.innerHTML = wzCards(list);
   } else if (wz.step === 'name') {
     // المالك 2026-11-03: لا يكتب المعلم اسمه ولا ينتظر المشرف — «حاضر» يقرأ اسمه من صفحة نور الرئيسية، ويسأل الموقع:
@@ -3775,8 +3811,8 @@ function wzRender() {
     // مواد اللغة العربية (المالك 2026-11-14): شكلان للتحضير — لكل حصة تحضيرها كما في السابق، أو تحضير لكل مهارة في الدرس
     head.textContent = 'شكل تحضير اللغة العربية';
     list = [
-      { title: 'تحضير لكل حصة', sub: 'كما في السابق: لكل حصة تحضيرها', on: wz.join !== true, go: () => { wz.join = false; wzSavePrefs(); wzNext(); } },
-      { title: 'تحضير لكل مهارة', sub: 'حصص المهارة الواحدة في الدرس في تحضير واحد: التحدث، القراءة، الأنماط اللغوية، الإملاء، الخط، التعبير', on: wz.join === true, go: () => { wz.join = true; wzSavePrefs(); wzNext(); } },
+      { ic: 'prep', title: 'تحضير لكل حصة', sub: 'كما في السابق: لكل حصة تحضيرها', on: wz.join !== true, go: () => { wz.join = false; wzSavePrefs(); wzNext(); } },
+      { ic: 'ar', title: 'تحضير لكل مهارة', sub: 'حصص المهارة الواحدة في الدرس في تحضير واحد: التحدث، القراءة، الأنماط اللغوية، الإملاء، الخط، التعبير', on: wz.join === true, go: () => { wz.join = true; wzSavePrefs(); wzNext(); } },
     ];
     body.innerHTML = wzCards(list).replace('wz-cards', 'wz-cards big');
   } else if (wz.step === 'from') {

@@ -8,7 +8,7 @@ await db.exec(`create schema auth;
   create role anon nologin; create role authenticated nologin;`);
 const R = (f) => fs.readFileSync(new URL('../site/supabase/' + f, import.meta.url), 'utf8');
 await db.exec(R('schema.sql'));
-for (const f of ['hader-noor-bind.sql','hader-min-version.sql','hader-audit-4104.sql','hader-admin-access.sql','hader-name-return.sql','hader-name-subs.sql','hader-open-access.sql','hader-noor-name.sql','hader-noor-home.sql','hader-name-add-now.sql','hader-services.sql','hader-services.sql']) { try { await db.exec(R(f)); } catch (e) { console.log('FAIL load', f, e.message); process.exit(1); } }
+for (const f of ['hader-noor-bind.sql','hader-min-version.sql','hader-audit-4104.sql','hader-admin-access.sql','hader-name-return.sql','hader-name-subs.sql','hader-open-access.sql','hader-noor-name.sql','hader-noor-home.sql','hader-name-add-now.sql','hader-services.sql','hader-services.sql','hader-name-keep-service.sql','hader-name-keep-service.sql']) { try { await db.exec(R(f)); } catch (e) { console.log('FAIL load', f, e.message); process.exit(1); } }
 let pass=0, fail=0; const ok=(c,n,x)=>{ if(c){pass++;console.log('  ✓',n);} else {fail++;console.log('  ✗',n,JSON.stringify(x));} };
 const q = async (s, p) => (await db.query(s, p)).rows;
 const one = async (s, p) => (await q(s, p))[0];
@@ -113,6 +113,35 @@ await db.exec(`update public.profiles set is_admin = true where id = '${U5}'`);
 ok((await one(`select public.sub_service($1,'p1',1::smallint) as r`, [U5])).r === null, 'the admin account has no subscription row');
 const se5 = await sess(s5.token);
 ok(se5 && se5.ok !== false && se5.error !== 'hw_only', 'the admin account gets the prep content (no subscription row = every service)', se5);
+
+// ---------- ما يمنحه المدير لمادة يبقى بعد تثبيت جديد (بلاغ المالك 2026-11-19) ----------
+const a6 = await add('عيسى سعيد سليمان الجهضمي', 'both');
+const s6 = await start('عيسى سعيد سليمان الجهضمي');
+await noor(s6.token, H('6'), 'عيسى سعيد سليمان الجهضمي');
+const U6 = await userOf(s6.token);
+const svc6 = async () => Object.fromEntries((await q(`select package_id, service from public.subscriptions where user_id=$1 and not revoked order by 1`, [U6])).map((r) => [r.package_id, r.service]));
+ok((await svc6()).p1 === 'both' && (await svc6()).p2 === 'both', 'a registered name starts with its own services on every subject', await svc6());
+await asAdmin(true);
+await db.query(`select public.admin_grant($1,'term',(select id from public.terms limit 1),array['p1'])`, [U6]);
+await db.query(`select public.admin_set_service($1,array['p1'],'all')`, [U6]);
+await asAdmin(false);
+ok((await svc6()).p1 === 'all', 'the admin grants the full package for one subject', await svc6());
+const s6b = await start('عيسى سعيد سليمان الجهضمي');          // تثبيت جديد: جهاز جديد يعود إلى الاشتراك نفسه
+const n6b = await noor(s6b.token, H('6'), 'عيسى سعيد سليمان الجهضمي');
+ok(await userOf(s6b.token) === U6, 'a new install returns to the same subscription', n6b);
+ok((await svc6()).p1 === 'all' && (await svc6()).p2 === 'both', 'the new install keeps what the admin granted (no reset to the name\'s services)', await svc6());
+const me6 = (await one(`select public.ext_me($1) as r`, [s6b.token])).r;
+ok(me6.subs.find((x) => x.package_id === 'p1').service === 'all', 'the tool reads the full package after the new install', me6.subs);
+await db.exec(`insert into public.packages (id, title, grade, subject, active) values ('p9','z',7,'u',true)`);
+const s6c = await start('عيسى سعيد سليمان الجهضمي');
+await noor(s6c.token, H('6'), 'عيسى سعيد سليمان الجهضمي');
+ok((await svc6()).p9 === 'both' && (await svc6()).p1 === 'all', 'a subject added later takes the name\'s services, the rest stay', await svc6());
+await asAdmin(true);
+const ch6 = (await one(`select public.admin_name_sub_service($1,'prep') as r`, [a6.id])).r;
+await asAdmin(false);
+ok(ch6.ok && Object.values(await svc6()).every((v) => v === 'prep'), '«الخدمات» beside the name still sets every subject at once', await svc6());
+await asAdmin(true); await db.query(`select public.admin_name_sub_renew($1)`, [a6.id]); await asAdmin(false);
+ok(Object.values(await svc6()).every((v) => v === 'prep'), '«جدّد» keeps the services', await svc6());
 
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
