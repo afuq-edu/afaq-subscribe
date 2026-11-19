@@ -1,12 +1,20 @@
 /* theme.css — طابع «حاضر» كما اعتمده المالك (2026-11-19، ملف «hader-refined»): لؤلؤي هادئ، أزرق بنفسجي واحد، حدود رفيعة،
    وتباين مريح للقراءة. لا صور ولا حركة سوى انتقالات قصيرة. الألوان والمقاسات من ملفه، وطُبّقت على كل شاشات المعالج. */
+/* الخط (المالك 2026-11-19): مضمّن في الأداة ليظهر نفسه على كل الأجهزة — IBM Plex Sans Arabic للنصوص، Alexandria للعناوين الكبيرة */
+@font-face{font-family:'Hader';font-weight:100 599;font-display:swap;src:url(scorm/fonts/plex-500-ar.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+200C-200E,U+FB50-FDFF,U+FE70-FEFC}
+@font-face{font-family:'Hader';font-weight:100 599;font-display:swap;src:url(scorm/fonts/plex-500-lat.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:'Hader';font-weight:600 900;font-display:swap;src:url(fonts/plex-700-ar.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+200C-200E,U+FB50-FDFF,U+FE70-FEFC}
+@font-face{font-family:'Hader';font-weight:600 900;font-display:swap;src:url(fonts/plex-700-lat.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:'Hader Head';font-weight:100 900;font-display:swap;src:url(scorm/fonts/alexandria-700-ar.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+200C-200E,U+FB50-FDFF,U+FE70-FEFC}
+@font-face{font-family:'Hader Head';font-weight:100 900;font-display:swap;src:url(scorm/fonts/alexandria-700-lat.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F}
 :root{
   --pearl:#f8f9fc;--ice:#e8edf5;--lavender:#dcdcf0;--blue:#6478b5;--blue-d:#596da7;--blue-dd:#4e619b;--ink:#293449;--muted:#56647a;--line:#dce2ed;--green:#286b54;
+  --ft:'Hader',"SF Arabic","Noto Sans Arabic UI","Segoe UI",Tahoma,Arial,sans-serif;--fh:'Hader Head','Hader',"SF Arabic","Segoe UI",Tahoma,sans-serif;
   --chip:#edf0f9;--chip-line:#dce3f1;--chip-ink:#485b90;--soft:#f5f7fc;
   /* أسماء الطابع القديم التي يستعملها تنسيق الصفحة */
   --teal:#596da7;--teal-d:#4e619b;--bg:#f5f6fa;--card:#ffffffde;--info:#485b90;--ok:#286b54;
 }
-body{min-height:100vh;color:var(--ink);font:400 14px/1.65 "SF Arabic","Noto Sans Arabic UI","Segoe UI",Tahoma,Arial,sans-serif;
+body{min-height:100vh;color:var(--ink);font:400 14px/1.65 var(--ft);
   background:radial-gradient(ellipse at 88% 9%,#dcdcf066 0,transparent 52%),radial-gradient(ellipse at 8% 100%,#e8edf5 0,transparent 56%),#f5f6fa;background-attachment:fixed}
 button{-webkit-tap-highlight-color:transparent}
 svg{flex-shrink:0}
@@ -15,7 +23,7 @@ svg{flex-shrink:0}
 header.hd{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:820px;margin:0 auto;padding:24px 22px 4px;background:none;color:var(--ink)}
 .brand{display:flex;align-items:center;gap:12px}
 .brand-icon{width:49px;height:49px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#f9f9fe,#dcdcf0);border:1px solid #fff;box-shadow:0 3px 8px #4a568b11}
-.brand h1{margin:0;font-size:31px;line-height:1.18;font-weight:800;letter-spacing:-1px}
+.brand h1{margin:0;font-family:var(--fh);font-size:29px;line-height:1.25;font-weight:700}
 .brand p{margin:3px 0 0;font-size:13px;color:var(--muted)}
 .version{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
 .version b{font:600 12px/1.4 Arial,sans-serif;letter-spacing:.4px;background:#fff9;border:1px solid var(--line);border-radius:7px;padding:4px 9px;color:#56637b;direction:ltr}
@@ -78,7 +86,7 @@ main{max-width:820px;margin:0 auto;padding:18px 18px 36px;gap:14px}
   mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 4 4L19 6'/%3E%3C/svg%3E")}
 #nowCard[data-kind=run] .st-ic{background:none;-webkit-mask:none;mask:none;border:2px solid #b8c4df;border-top-color:var(--blue-d);border-radius:50%;animation:sp .9s linear infinite}
 .now{border:0!important;padding:0;gap:0;display:block}
-#nowHead,.now b,body.wiz-run .now b{display:block;margin:12px 0 7px;font-size:27px;line-height:1.5;font-weight:800;letter-spacing:-.6px;color:var(--ink)}
+#nowHead,.now b,body.wiz-run .now b{display:block;margin:12px 0 7px;font-family:var(--fh);font-size:24px;line-height:1.6;font-weight:700;color:var(--ink)}
 #nowHead .spin{display:none}
 .now p{margin:0;max-width:490px;font-size:15px;line-height:1.9;color:#536179;white-space:pre-line}
 #nowActs{margin-top:18px}
@@ -122,7 +130,7 @@ main{max-width:820px;margin:0 auto;padding:18px 18px 36px;gap:14px}
 
 /* ===== المعالج ===== */
 #wizCard{gap:16px;padding:22px 22px 24px}
-#wzHead{margin:0;font-size:25px;line-height:1.5;font-weight:800;letter-spacing:-.6px;color:var(--ink)}
+#wzHead{margin:0;font-family:var(--fh);font-size:22px;line-height:1.6;font-weight:700;color:var(--ink)}
 .wz-dots i{width:8px;height:8px;background:#d9dfea;transition:width .2s,background .2s}
 .wz-dots i.on{width:22px;background:var(--blue)}
 .wz-dots i.done{background:#a4b3d6}
@@ -148,7 +156,7 @@ main{max-width:820px;margin:0 auto;padding:18px 18px 36px;gap:14px}
 /* بطاقات الاختيار */
 .wz-cards{gap:10px}
 .wz-card{border:1px solid var(--line);border-radius:13px;background:#fff9;padding:16px;transition:background .18s,border-color .18s,box-shadow .18s}
-.wz-card b{font-size:17px;font-weight:800;color:var(--ink);letter-spacing:-.2px}
+.wz-card b{font-size:17px;font-weight:700;color:var(--ink)}
 .wz-card small{font-size:13px;color:var(--muted)}
 .wz-card:hover:not(:disabled){background:#f1f4fa;border-color:#bfcce5}
 .wz-card.on{border-color:var(--blue);background:var(--chip)}
@@ -192,14 +200,14 @@ main{max-width:820px;margin:0 auto;padding:18px 18px 36px;gap:14px}
 .lesson{border-color:var(--line)}
 
 @media(max-width:519px){
-  header.hd{padding:18px 16px 2px}.brand-icon{width:42px;height:42px}.brand h1{font-size:26px}.brand p{font-size:11px}.version{font-size:11px}
+  header.hd{padding:18px 16px 2px}.brand-icon{width:42px;height:42px}.brand h1{font-size:24px}.brand p{font-size:11px}.version{font-size:11px}
   main{padding:14px 12px 28px}
   .workflow{padding:16px 10px 17px}.wmain{padding:15px 11px 14px}
   .step-icon{width:31px;height:31px;border-radius:9px}.step-icon>svg{width:17px;height:17px}.steps::before{top:15px}
   .step .name{font-size:11px;line-height:1.5;white-space:normal}
   .statuscard{grid-template-columns:1fr;gap:8px;padding:18px 17px 20px;min-height:0}
   .illustration{grid-row:1;max-width:140px}
-  #nowHead,.now b,body.wiz-run .now b{font-size:23px}
+  #nowHead,.now b,body.wiz-run .now b{font-size:21px}
   #nowMain{display:grid;grid-template-columns:1fr}#nowMain .btn{width:100%}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
